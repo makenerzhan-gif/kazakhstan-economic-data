@@ -346,3 +346,192 @@ indicators:
     unit: "KZT"
     category: labor
     source_status: confirmed
+
+  - id: TAX_REVENUE
+    name_ru: "Налоговые поступления республиканского бюджета"
+    name_en: "Republican Budget Tax Revenue"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: CORPORATE_TAX
+    name_ru: "Корпоративный подоходный налог"
+    name_en: "Corporate Income Tax Revenue"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: VAT_REVENUE
+    name_ru: "Налог на добавленную стоимость"
+    name_en: "Value Added Tax Revenue"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_DEFENSE_SPENDING
+    name_ru: "Расходы республиканского бюджета на оборону"
+    name_en: "Republican Budget Defense Spending"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_GENERAL_SERVICES_SPENDING
+    name_ru: "Расходы республиканского бюджета на государственные услуги общего характера"
+    name_en: "Republican Budget General Government Services Spending"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_TRANSPORT_SPENDING
+    name_ru: "Расходы республиканского бюджета на транспорт и связь"
+    name_en: "Republican Budget Transport and Communications Spending"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_DEBT_SERVICING
+    name_ru: "Расходы республиканского бюджета на обслуживание долга"
+    name_en: "Republican Budget Debt Servicing"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: NET_BUDGET_LENDING
+    name_ru: "Чистое бюджетное кредитование"
+    name_en: "Net Budget Lending"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: BUDGET_DEFICIT
+    name_ru: "Дефицит (профицит) республиканского бюджета"
+    name_en: "Republican Budget Deficit (Surplus)"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: NON_OIL_BUDGET_DEFICIT
+    name_ru: "Ненефтяной дефицит бюджета"
+    name_en: "Non-Oil Budget Deficit"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GDP_INCOME_METHOD
+    name_ru: "ВВП, методом доходов"
+    name_en: "GDP, Income Method"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: GROSS_OUTPUT
+    name_ru: "Валовой выпуск"
+    name_en: "Gross Output"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: TAXES_ON_PRODUCTS
+    name_ru: "Налоги на продукты"
+    name_en: "Taxes on Products"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: NET_TAXES_ON_PRODUCTS
+    name_ru: "Чистые налоги на продукты"
+    name_en: "Net Taxes on Products"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: SUBSIDIES
+    name_ru: "Субсидии на производство и импорт"
+    name_en: "Subsidies on Production and Imports"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: INTERMEDIATE_CONSUMPTION
+    name_ru: "Промежуточное потребление"
+    name_en: "Intermediate Consumption"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: GROSS_ACCUMULATION
+    name_ru: "Валовое накопление"
+    name_en: "Gross Accumulation"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: IMPORT_VOLUME_INDEX
+    name_ru: "Индекс физического объема импорта товаров и услуг"
+    name_en: "Import Physical Volume Index"
+    agency: bns
+    frequency: annual
+    unit: "% change vs previous period"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: EXPORT_VOLUME_INDEX
+    name_ru: "Индекс физического объема экспорта товаров и услуг"
+    name_en: "Export Physical Volume Index"
+    agency: bns
+    frequency: annual
+    unit: "% change vs previous period"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: TOTAL_CONSUMPTION_EXPENDITURE
+    name_ru: "Расходы на конечное потребление"
+    name_en: "Total Final Consumption Expenditure"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: CAPITAL_CONSUMPTION
+    name_ru: "Потребление основного капитала"
+    name_en: "Consumption of Fixed Capital"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: national_accounts
+    source_status: confirmed

@@ -39,6 +39,17 @@ FETCHERS = {
     "HOUSEHOLD_CONSUMPTION": bns_fetchers.fetch_household_consumption,
     "COMPENSATION_EMPLOYEES": bns_fetchers.fetch_compensation_employees,
     "AVG_WAGE": bns_fetchers.fetch_avg_wage,
+    "GDP_INCOME_METHOD": bns_fetchers.fetch_gdp_income_method,
+    "GROSS_OUTPUT": bns_fetchers.fetch_gross_output,
+    "TAXES_ON_PRODUCTS": bns_fetchers.fetch_taxes_on_products,
+    "NET_TAXES_ON_PRODUCTS": bns_fetchers.fetch_net_taxes_on_products,
+    "SUBSIDIES": bns_fetchers.fetch_subsidies,
+    "INTERMEDIATE_CONSUMPTION": bns_fetchers.fetch_intermediate_consumption,
+    "GROSS_ACCUMULATION": bns_fetchers.fetch_gross_accumulation,
+    "IMPORT_VOLUME_INDEX": bns_fetchers.fetch_import_volume_index,
+    "EXPORT_VOLUME_INDEX": bns_fetchers.fetch_export_volume_index,
+    "TOTAL_CONSUMPTION_EXPENDITURE": bns_fetchers.fetch_total_consumption_expenditure,
+    "CAPITAL_CONSUMPTION": bns_fetchers.fetch_capital_consumption,
 }
 
 INDICATOR_IDS = [
@@ -46,6 +57,10 @@ INDICATOR_IDS = [
     "INVESTMENT", "EXPORTS", "IMPORTS",
     "GDP_PER_CAPITA", "GDP_DEFLATOR", "GFCF", "GFCF_VOLUME_INDEX",
     "NET_EXPORTS", "HOUSEHOLD_CONSUMPTION", "COMPENSATION_EMPLOYEES", "AVG_WAGE",
+    "GDP_INCOME_METHOD", "GROSS_OUTPUT", "TAXES_ON_PRODUCTS", "NET_TAXES_ON_PRODUCTS",
+    "SUBSIDIES", "INTERMEDIATE_CONSUMPTION", "GROSS_ACCUMULATION",
+    "IMPORT_VOLUME_INDEX", "EXPORT_VOLUME_INDEX", "TOTAL_CONSUMPTION_EXPENDITURE",
+    "CAPITAL_CONSUMPTION",
 ]
 
 

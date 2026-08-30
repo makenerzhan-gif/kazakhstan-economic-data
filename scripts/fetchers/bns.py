@@ -653,3 +653,70 @@ def fetch_avg_wage() -> tuple[list[dict], dict]:
         measure_id="1", dic_ids="68,859,776,2813,576",
         terms="741880,741885,741917,3629946,741935",
     )
+
+
+# More single-region-dimension Taldau national-accounts indices (same simple mechanism as
+# GDP_REAL: measure_id=7, dicIds=67), verified live 2026-08-30 -- indexIds sourced from the
+# same GetIndustryByID/700894 category list gathered during the GDP_REAL research.
+def fetch_gdp_income_method() -> tuple[list[dict], dict]:
+    """GDP, income method, KZT. Cross-checked: matches GDP_NOMINAL (production method)
+    exactly for 2025 (159,608,552,900,000 both) -- as expected, since both are the same
+    total GDP measured two different ways. Taldau indexId 2709435."""
+    return _fetch_taldau_annual_index(
+        "2709435", "GDP_INCOME_METHOD",
+        note="GDP, income method, KZT. Taldau indexId 2709435.",
+    )
+
+
+def fetch_gross_output() -> tuple[list[dict], dict]:
+    """Gross output, production account, KZT. Taldau indexId 700912."""
+    return _fetch_taldau_annual_index("700912", "GROSS_OUTPUT", note="Gross output, production account, KZT. Taldau indexId 700912.")
+
+
+def fetch_taxes_on_products() -> tuple[list[dict], dict]:
+    """Taxes on products, production account, KZT. Taldau indexId 700928."""
+    return _fetch_taldau_annual_index("700928", "TAXES_ON_PRODUCTS", note="Taxes on products, production account, KZT. Taldau indexId 700928.")
+
+
+def fetch_net_taxes_on_products() -> tuple[list[dict], dict]:
+    """Net taxes on products (taxes minus subsidies), production account, KZT. Taldau indexId 700925."""
+    return _fetch_taldau_annual_index("700925", "NET_TAXES_ON_PRODUCTS", note="Net taxes on products, production account, KZT. Taldau indexId 700925.")
+
+
+def fetch_subsidies() -> tuple[list[dict], dict]:
+    """Subsidies on production and imports, KZT. Taldau indexId 2709434."""
+    return _fetch_taldau_annual_index("2709434", "SUBSIDIES", note="Subsidies on production and imports, KZT. Taldau indexId 2709434.")
+
+
+def fetch_intermediate_consumption() -> tuple[list[dict], dict]:
+    """Intermediate consumption, production account, KZT. Taldau indexId 700914."""
+    return _fetch_taldau_annual_index("700914", "INTERMEDIATE_CONSUMPTION", note="Intermediate consumption, production account, KZT. Taldau indexId 700914.")
+
+
+def fetch_gross_accumulation() -> tuple[list[dict], dict]:
+    """Gross accumulation, national accounts, KZT. Same 2010-2013 gap as GFCF/NET_EXPORTS/
+    HOUSEHOLD_CONSUMPTION (22 of 26 possible years). Taldau indexId 2709376."""
+    return _fetch_taldau_annual_index("2709376", "GROSS_ACCUMULATION", note="Gross accumulation, national accounts, KZT. Same 2010-2013 gap as GFCF. Taldau indexId 2709376.")
+
+
+def fetch_import_volume_index() -> tuple[list[dict], dict]:
+    """Physical volume index of imports of goods and services, % of prior period.
+    Same 2010-2013 gap as GFCF. Taldau indexId 700982."""
+    return _fetch_taldau_annual_index("700982", "IMPORT_VOLUME_INDEX", note="Physical volume index of imports of goods and services, % of prior period. Same 2010-2013 gap as GFCF. Taldau indexId 700982.")
+
+
+def fetch_export_volume_index() -> tuple[list[dict], dict]:
+    """Physical volume index of exports of goods and services, % of prior period.
+    Same 2010-2013 gap as GFCF. Taldau indexId 700983."""
+    return _fetch_taldau_annual_index("700983", "EXPORT_VOLUME_INDEX", note="Physical volume index of exports of goods and services, % of prior period. Same 2010-2013 gap as GFCF. Taldau indexId 700983.")
+
+
+def fetch_total_consumption_expenditure() -> tuple[list[dict], dict]:
+    """Total final consumption expenditure (households + government), KZT.
+    Same 2010-2013 gap as GFCF. Taldau indexId 700965."""
+    return _fetch_taldau_annual_index("700965", "TOTAL_CONSUMPTION_EXPENDITURE", note="Total final consumption expenditure, KZT. Same 2010-2013 gap as GFCF. Taldau indexId 700965.")
+
+
+def fetch_capital_consumption() -> tuple[list[dict], dict]:
+    """Consumption of fixed capital (depreciation), income account, KZT. Taldau indexId 700944."""
+    return _fetch_taldau_annual_index("700944", "CAPITAL_CONSUMPTION", note="Consumption of fixed capital (depreciation), income account, KZT. Taldau indexId 700944.")

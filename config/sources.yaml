@@ -286,6 +286,84 @@ agencies:
           2026-08-30. Not researched this session (deprioritized after PPI and retail trade
           both required more effort than budgeted for this batch) -- no claim of unavailability,
           simply not yet attempted.
+      GDP_INCOME_METHOD:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 2709435
+        format: json
+        notes: >
+          2026-08-30. Same single-region-dimension Taldau mechanism as GDP_REAL (measure_id=7,
+          dicIds=67). Cross-checked: 2025 value matches GDP_NOMINAL (production method)
+          EXACTLY (159,608,552,900,000 both) -- strong independent confirmation both series
+          are correct, since GDP by income and by production must equal the same total.
+          fetch_gdp_income_method.
+      GROSS_OUTPUT:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 700912
+        format: json
+        notes: "Same mechanism. fetch_gross_output."
+      TAXES_ON_PRODUCTS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 700928
+        format: json
+        notes: "Same mechanism. fetch_taxes_on_products."
+      NET_TAXES_ON_PRODUCTS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 700925
+        format: json
+        notes: >
+          Same mechanism. NOTE (sanity-checked 2026-08-30): TAXES_ON_PRODUCTS minus SUBSIDIES
+          does NOT equal this series exactly (e.g. 2025: 9,903,977.6 - 1,304,819.6 =
+          8,599,158.0 vs this series' 9,329,876.3) -- not a bug. SNA methodology distinguishes
+          "subsidies on PRODUCTS" (which nets against taxes on products, this series) from the
+          broader "subsidies on production and imports" (our SUBSIDIES indicator, which also
+          includes other production subsidies). Do not naively compute one from the other two.
+          fetch_net_taxes_on_products.
+      SUBSIDIES:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 2709434
+        format: json
+        notes: "Same mechanism. See NET_TAXES_ON_PRODUCTS note above re: this being the broader production+import subsidies concept. fetch_subsidies."
+      INTERMEDIATE_CONSUMPTION:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 700914
+        format: json
+        notes: "Same mechanism. fetch_intermediate_consumption."
+      GROSS_ACCUMULATION:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 2709376
+        format: json
+        notes: "Same mechanism. Same 2010-2013 gap as GFCF (22 of 26 years). fetch_gross_accumulation."
+      IMPORT_VOLUME_INDEX:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 700982
+        format: json
+        notes: "Same mechanism. Same 2010-2013 gap as GFCF. fetch_import_volume_index."
+      EXPORT_VOLUME_INDEX:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 700983
+        format: json
+        notes: "Same mechanism. Same 2010-2013 gap as GFCF. fetch_export_volume_index."
+      TOTAL_CONSUMPTION_EXPENDITURE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 700965
+        format: json
+        notes: "Same mechanism. Same 2010-2013 gap as GFCF. fetch_total_consumption_expenditure."
+      CAPITAL_CONSUMPTION:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 700944
+        format: json
+        notes: "Same mechanism. fetch_capital_consumption."
 
   nbk:
     name: "Национальный Банк Республики Казахстан"
@@ -533,6 +611,95 @@ agencies:
         format: xls
         frequency: annual
         notes: "Same file, row 'Social assistance and social security'. fetch_gov_social_spending."
+      TAX_REVENUE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "Tax revenues, including:"
+        format: xls
+        frequency: annual
+        notes: "2026-08-30. Same Dynamics file. fetch_tax_revenue."
+      CORPORATE_TAX:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "corporate income tax"
+        format: xls
+        frequency: annual
+        notes: "Same Dynamics file. fetch_corporate_tax."
+      VAT_REVENUE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "value added tax"
+        format: xls
+        frequency: annual
+        notes: "Same Dynamics file. fetch_vat_revenue."
+      GOV_DEFENSE_SPENDING:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "2. Defense"
+        format: xls
+        frequency: annual
+        notes: "Same Dynamics file. fetch_gov_defense_spending."
+      GOV_GENERAL_SERVICES_SPENDING:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "1. General government services"
+        format: xls
+        frequency: annual
+        notes: "Same Dynamics file. fetch_gov_general_services_spending."
+      GOV_TRANSPORT_SPENDING:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "12. Transport and communications"
+        format: xls
+        frequency: annual
+        notes: "Same Dynamics file. fetch_gov_transport_spending."
+      GOV_DEBT_SERVICING:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "14.  Debt servicing"
+        format: xls
+        frequency: annual
+        notes: "Same Dynamics file. fetch_gov_debt_servicing."
+      NET_BUDGET_LENDING:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "III.NET BUDGET LENDING"
+        format: xls
+        frequency: annual
+        notes: "Same Dynamics file. fetch_net_budget_lending."
+      BUDGET_DEFICIT:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "V. BUDGET DEFICIT (SURPLUS)"
+        format: xls
+        frequency: annual
+        notes: >
+          Same Dynamics file. Matched with the more specific substring 'V. BUDGET DEFICIT'
+          (not just 'BUDGET DEFICIT (SURPLUS)') since that shorter phrase would ambiguously
+          match both this row and 'VI. NON-OIL BUDGET DEFICIT (SURPLUS)' below. Negative =
+          deficit, matching the source's own sign convention (matches, roughly, the
+          revenue-minus-expenditure gap computed independently during sanity-checking, with
+          the residual explained by net lending and financial-asset operations). fetch_budget_deficit.
+      NON_OIL_BUDGET_DEFICIT:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "VI. NON-OIL BUDGET DEFICIT (SURPLUS)"
+        format: xls
+        frequency: annual
+        notes: >
+          Same Dynamics file. Only 5 years of data exist (2021-2025) -- the source itself
+          leaves this row blank for 2014-2020, not a parsing gap (confirmed by inspecting the
+          raw cell values directly). fetch_non_oil_budget_deficit.
 
   imf:
     name: "International Monetary Fund"

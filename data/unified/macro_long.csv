@@ -31,139 +31,249 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2000-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.800298,% change,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_INFLATION,13.153821,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,12.752905,%,imf,2026-08-30,level,2026-08-30
+2000-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,420520200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2000-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,931774600000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2000-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,127.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2000-12-31,KZ,national,annual,GDP_DEFLATOR,117.4,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2000-12-31,KZ,national,annual,GDP_INCOME_METHOD,2599901600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2000-12-31,KZ,national,annual,GDP_PER_CAPITA,174700.0,KZT,bns,2026-08-30,level,2026-08-30
 2000-12-31,KZ,national,annual,GDP_REAL,109.8,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2000-12-31,KZ,national,annual,GFCF,450258400000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2000-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,116.1,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2000-12-31,KZ,national,annual,GROSS_ACCUMULATION,471597400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2000-12-31,KZ,national,annual,GROSS_OUTPUT,5441726600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2000-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,1589061600000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2000-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,128.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2000-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,2990847400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2000-12-31,KZ,national,annual,NET_EXPORTS,195126800000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2000-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,172682400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2000-12-31,KZ,national,annual,SUBSIDIES,1848100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2000-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,174530500000.0,KZT,bns,2026-08-30,level,2026-08-30
+2000-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,1922972700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-6.272451,% of GDP,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_GDP_GROWTH,13.499461,% change,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_INFLATION,8.372812,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,10.475,%,imf,2026-08-30,level,2026-08-30
+2001-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,498159100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2001-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,1167110000000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2001-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,98.2,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2001-12-31,KZ,national,annual,GDP_DEFLATOR,110.1,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2001-12-31,KZ,national,annual,GDP_INCOME_METHOD,3250593300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2001-12-31,KZ,national,annual,GDP_PER_CAPITA,218800.0,KZT,bns,2026-08-30,level,2026-08-30
 2001-12-31,KZ,national,annual,GDP_REAL,113.5,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2001-12-31,KZ,national,annual,GFCF,771384600000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2001-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,125.3,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2001-12-31,KZ,national,annual,GROSS_ACCUMULATION,873643200000.0,KZT,bns,2026-08-30,level,2026-08-30
+2001-12-31,KZ,national,annual,GROSS_OUTPUT,6958070300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2001-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,1850799100000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2001-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,98.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2001-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,3894764000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2001-12-31,KZ,national,annual,NET_EXPORTS,-34424800000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2001-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,224626500000.0,KZT,bns,2026-08-30,level,2026-08-30
+2001-12-31,KZ,national,annual,SUBSIDIES,4074600000.0,KZT,bns,2026-08-30,level,2026-08-30
+2001-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,228701100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2001-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,2318529900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-4.157803,% of GDP,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.799076,% change,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GOV_BALANCE,1.923888,% of GDP,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GOV_DEBT,17.59187,% of GDP,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_INFLATION,5.959302,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,9.35,%,imf,2026-08-30,level,2026-08-30
+2002-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,576876600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2002-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,1237247000000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2002-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,116.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2002-12-31,KZ,national,annual,GDP_DEFLATOR,105.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2002-12-31,KZ,national,annual,GDP_INCOME_METHOD,3776277300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2002-12-31,KZ,national,annual,GDP_PER_CAPITA,254100.0,KZT,bns,2026-08-30,level,2026-08-30
 2002-12-31,KZ,national,annual,GDP_REAL,109.8,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2002-12-31,KZ,national,annual,GFCF,907126000000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2002-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,110.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2002-12-31,KZ,national,annual,GROSS_ACCUMULATION,1030460100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2002-12-31,KZ,national,annual,GROSS_OUTPUT,7542053900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2002-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,1993710800000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2002-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,103.1,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2002-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,3981855500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2002-12-31,KZ,national,annual,NET_EXPORTS,-1903400000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2002-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,271781700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2002-12-31,KZ,national,annual,SUBSIDIES,1941000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2002-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,273722700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2002-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,2500213400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-0.884199,% of GDP,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.300232,% change,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GOV_BALANCE,3.996049,% of GDP,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GOV_DEBT,14.962494,% of GDP,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_INFLATION,6.378601,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,8.8,%,imf,2026-08-30,level,2026-08-30
+2003-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,666015200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2003-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,1517919000000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2003-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,107.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2003-12-31,KZ,national,annual,GDP_DEFLATOR,111.7,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2003-12-31,KZ,national,annual,GDP_INCOME_METHOD,4611975300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2003-12-31,KZ,national,annual,GDP_PER_CAPITA,309300.0,KZT,bns,2026-08-30,level,2026-08-30
 2003-12-31,KZ,national,annual,GDP_REAL,109.3,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2003-12-31,KZ,national,annual,GFCF,1062657700000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2003-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,108.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2003-12-31,KZ,national,annual,GROSS_ACCUMULATION,1185458100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2003-12-31,KZ,national,annual,GROSS_OUTPUT,8930920400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2003-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,2434434100000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2003-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,92.4,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2003-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,4560635700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2003-12-31,KZ,national,annual,NET_EXPORTS,247695900000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2003-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,313022700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2003-12-31,KZ,national,annual,SUBSIDIES,3628900000.0,KZT,bns,2026-08-30,level,2026-08-30
+2003-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,316651600000.0,KZT,bns,2026-08-30,level,2026-08-30
+2003-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,3032033000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.777323,% of GDP,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.598631,% change,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GOV_BALANCE,3.28732,% of GDP,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GOV_DEBT,11.391569,% of GDP,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_INFLATION,6.995487,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,8.375,%,imf,2026-08-30,level,2026-08-30
+2004-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,822513200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2004-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,1955071700000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2004-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,111.2,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2004-12-31,KZ,national,annual,GDP_DEFLATOR,116.1,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2004-12-31,KZ,national,annual,GDP_INCOME_METHOD,5870134300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2004-12-31,KZ,national,annual,GDP_PER_CAPITA,391000.0,KZT,bns,2026-08-30,level,2026-08-30
 2004-12-31,KZ,national,annual,GDP_REAL,109.6,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2004-12-31,KZ,national,annual,GFCF,1472424200000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2004-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,122.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2004-12-31,KZ,national,annual,GROSS_ACCUMULATION,1544496300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2004-12-31,KZ,national,annual,GROSS_OUTPUT,11669306200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2004-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,3053657900000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2004-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,114.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2004-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,6042494900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2004-12-31,KZ,national,annual,NET_EXPORTS,504339700000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2004-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,353323300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2004-12-31,KZ,national,annual,SUBSIDIES,4868900000.0,KZT,bns,2026-08-30,level,2026-08-30
+2004-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,358192200000.0,KZT,bns,2026-08-30,level,2026-08-30
+2004-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,3824244000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.628099,% of GDP,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.700176,% change,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GOV_BALANCE,6.077755,% of GDP,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GOV_DEBT,8.104407,% of GDP,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_INFLATION,7.411871,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,8.1,%,imf,2026-08-30,level,2026-08-30
+2005-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,1049146300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2005-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,2507682800000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2005-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,100.4,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2005-12-31,KZ,national,annual,GDP_DEFLATOR,117.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2005-12-31,KZ,national,annual,GDP_INCOME_METHOD,7590593500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2005-12-31,KZ,national,annual,GDP_PER_CAPITA,501100.0,KZT,bns,2026-08-30,level,2026-08-30
 2005-12-31,KZ,national,annual,GDP_REAL,109.7,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2005-12-31,KZ,national,annual,GFCF,2122679100000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2005-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,128.1,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2005-12-31,KZ,national,annual,GROSS_ACCUMULATION,2350789200000.0,KZT,bns,2026-08-30,level,2026-08-30
+2005-12-31,KZ,national,annual,GROSS_OUTPUT,15181970100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2005-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,3685763300000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2005-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,112.1,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2005-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,7893525800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2005-12-31,KZ,national,annual,NET_EXPORTS,654780800000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2005-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,467849900000.0,KZT,bns,2026-08-30,level,2026-08-30
+2005-12-31,KZ,national,annual,SUBSIDIES,6731000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2005-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,474580900000.0,KZT,bns,2026-08-30,level,2026-08-30
+2005-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,4638271100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.016006,% of GDP,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GDP_GROWTH,10.701546,% change,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GOV_BALANCE,7.652629,% of GDP,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GOV_DEBT,6.676952,% of GDP,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_INFLATION,8.611501,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,7.75,%,imf,2026-08-30,level,2026-08-30
+2006-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,1422050600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2006-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,3228965600000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2006-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,106.8,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2006-12-31,KZ,national,annual,GDP_DEFLATOR,121.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2006-12-31,KZ,national,annual,GDP_INCOME_METHOD,10213731200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2006-12-31,KZ,national,annual,GDP_PER_CAPITA,667200.0,KZT,bns,2026-08-30,level,2026-08-30
 2006-12-31,KZ,national,annual,GDP_REAL,110.7,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2006-12-31,KZ,national,annual,GFCF,3084388000000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2006-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,129.7,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2006-12-31,KZ,national,annual,GROSS_ACCUMULATION,3462535700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2006-12-31,KZ,national,annual,GROSS_OUTPUT,20036064200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2006-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,4547334500000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2006-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,112.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2006-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,10182133300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2006-12-31,KZ,national,annual,NET_EXPORTS,1072142400000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2006-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,665834200000.0,KZT,bns,2026-08-30,level,2026-08-30
+2006-12-31,KZ,national,annual,SUBSIDIES,8905100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2006-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,674739300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2006-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,5709745200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-4.54688,% of GDP,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GDP_GROWTH,8.9,% change,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GOV_BALANCE,5.134415,% of GDP,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GOV_DEBT,4.091989,% of GDP,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_INFLATION,10.795455,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,7.275,%,imf,2026-08-30,level,2026-08-30
+2007-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,1744054100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2007-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,4433689700000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2007-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,109.1,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2007-12-31,KZ,national,annual,GDP_DEFLATOR,115.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2007-12-31,KZ,national,annual,GDP_INCOME_METHOD,12849794000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2007-12-31,KZ,national,annual,GDP_PER_CAPITA,829900.0,KZT,bns,2026-08-30,level,2026-08-30
 2007-12-31,KZ,national,annual,GDP_REAL,108.9,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2007-12-31,KZ,national,annual,GFCF,3857191900000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2007-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,117.3,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2007-12-31,KZ,national,annual,GROSS_ACCUMULATION,4565107700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2007-12-31,KZ,national,annual,GROSS_OUTPUT,24236034500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2007-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,5641240900000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2007-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,126.1,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2007-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,11691870700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2007-12-31,KZ,national,annual,NET_EXPORTS,830611800000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2007-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,919585000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2007-12-31,KZ,national,annual,SUBSIDIES,10043300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2007-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,929628300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2007-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,7215844700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.964616,% of GDP,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.3,% change,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GOV_BALANCE,1.227135,% of GDP,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GOV_DEBT,6.76587,% of GDP,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_INFLATION,17.156177,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,6.625,%,imf,2026-08-30,level,2026-08-30
+2008-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,2124974300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2008-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,5258583300000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2008-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,100.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2008-12-31,KZ,national,annual,GDP_DEFLATOR,121.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2008-12-31,KZ,national,annual,GDP_INCOME_METHOD,16052919200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2008-12-31,KZ,national,annual,GDP_PER_CAPITA,1024200.0,KZT,bns,2026-08-30,level,2026-08-30
 2008-12-31,KZ,national,annual,GDP_REAL,103.3,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2008-12-31,KZ,national,annual,GFCF,4308792900000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2008-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,101.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2008-12-31,KZ,national,annual,GROSS_ACCUMULATION,4415593700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2008-12-31,KZ,national,annual,GROSS_OUTPUT,29795141500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2008-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,6970468500000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2008-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,88.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2008-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,14116108100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2008-12-31,KZ,national,annual,NET_EXPORTS,3210257200000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2008-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,1125255400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2008-12-31,KZ,national,annual,SUBSIDIES,13585000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2008-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,1138840400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2008-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,8764943000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-0.116557,% of GDP,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GDP_GROWTH,1.2,% change,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.328049,% of GDP,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GOV_DEBT,10.227029,% of GDP,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_INFLATION,7.302029,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,6.525,%,imf,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,2382550800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,5765398700000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,88.1,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,GDP_DEFLATOR,104.7,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,GDP_INCOME_METHOD,17007647000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,GDP_PER_CAPITA,1056900.0,KZT,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,GDP_REAL,101.2,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,GFCF,4726718700000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,99.2,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,GROSS_ACCUMULATION,5002725300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,GROSS_OUTPUT,30746805500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,7912607000000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,84.3,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,IND_PROD,102.7,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,13981759400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,NET_EXPORTS,1345437100000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,782282700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,SUBSIDIES,25989400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,808272100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,10066102700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,1.808611,% of GDP,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GDP_GROWTH,7.3,% change,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GOV_BALANCE,1.469692,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -173,12 +283,19 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-03-31,KZ,national,quarterly,GDP_NOMINAL,4020878400000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2010-06-30,KZ,national,quarterly,GDP_NOMINAL,8712143851205.14,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2010-09-30,KZ,national,quarterly,GDP_NOMINAL,14135228100000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2010-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,3001706300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,7492514900000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,GDP_DEFLATOR,119.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2010-12-31,KZ,national,annual,GDP_INCOME_METHOD,21815517000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,quarterly,GDP_NOMINAL,21815517000000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2010-12-31,KZ,national,annual,GDP_PER_CAPITA,1336580.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,GDP_REAL,107.3,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
+2010-12-31,KZ,national,annual,GROSS_OUTPUT,36357713000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,IND_PROD,109.6,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2010-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,15241822000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2010-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,1166485400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2010-12-31,KZ,national,annual,SUBSIDIES,60484800000.0,KZT,bns,2026-08-30,level,2026-08-30
+2010-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,1226970200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,monthly,CPI,101.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,7.302994,% of GDP,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GDP_GROWTH,7.5,% change,imf,2026-08-30,level,2026-08-30
@@ -200,12 +317,19 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-10-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2011-11-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2011-12-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2011-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,3588238500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,9225682300000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,GDP_DEFLATOR,118.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2011-12-31,KZ,national,annual,GDP_INCOME_METHOD,28243052700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,quarterly,GDP_NOMINAL,28243052700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2011-12-31,KZ,national,annual,GDP_PER_CAPITA,1705790.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,GDP_REAL,107.4,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
+2011-12-31,KZ,national,annual,GROSS_OUTPUT,45446908900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,IND_PROD,103.8,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2011-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,19705034100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2011-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,2501177900000.0,KZT,bns,2026-08-30,level,2026-08-30
+2011-12-31,KZ,national,annual,SUBSIDIES,80340300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2011-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,2581518200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,1.263711,% of GDP,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.000001,% change,imf,2026-08-30,level,2026-08-30
@@ -228,12 +352,19 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-11-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2012-12-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,AVG_WAGE,101263.0,KZT,bns,2026-08-30,level,2026-08-30
+2012-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,3732517100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,10133606000000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,GDP_DEFLATOR,104.8,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2012-12-31,KZ,national,annual,GDP_INCOME_METHOD,31015186600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,quarterly,GDP_NOMINAL,31015186600000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2012-12-31,KZ,national,annual,GDP_PER_CAPITA,1847010.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,GDP_REAL,104.8,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
+2012-12-31,KZ,national,annual,GROSS_OUTPUT,49657988400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,IND_PROD,100.7,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2012-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,21129898300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2012-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,2487096500000.0,KZT,bns,2026-08-30,level,2026-08-30
+2012-12-31,KZ,national,annual,SUBSIDIES,97924300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2012-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,2585020800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,1.913203,% of GDP,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.9,% change,imf,2026-08-30,level,2026-08-30
@@ -256,12 +387,19 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-11-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2013-12-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,AVG_WAGE,109140.8,KZT,bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,4352759900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,11060875800000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,GDP_DEFLATOR,109.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,annual,GDP_INCOME_METHOD,35999025100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,quarterly,GDP_NOMINAL,35999025100000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2013-12-31,KZ,national,annual,GDP_PER_CAPITA,2113170.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,GDP_REAL,106.0,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,annual,GROSS_OUTPUT,56160882300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,IND_PROD,102.5,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,23264281300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,3102424100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,annual,SUBSIDIES,91525000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,3193949100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.288437,% of GDP,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.3,% change,imf,2026-08-30,level,2026-08-30
@@ -284,21 +422,41 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-11-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2014-12-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,AVG_WAGE,121020.6,KZT,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,BUDGET_DEFICIT,-1081239.73636403,million KZT,minfin,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,4869370700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,12474013600000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,CORPORATE_TAX,1169666.8064632,million KZT,minfin,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,97.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,GDP_DEFLATOR,105.8,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,GDP_INCOME_METHOD,39675832900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,quarterly,GDP_NOMINAL,39675832900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2014-12-31,KZ,national,annual,GDP_PER_CAPITA,2294950.0,KZT,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,GDP_REAL,104.2,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,GFCF,8552487100000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,104.4,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,GOV_DEBT_SERVICING,231986.99407981,million KZT,minfin,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,413038.07620537,million KZT,minfin,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,464533.01436316,million KZT,minfin,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,GOV_EXPENDITURE,6471183.19623585,million KZT,minfin,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,391635.72301001,million KZT,minfin,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,641680.46166013,million KZT,minfin,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,GOV_REVENUE,5908848.90208609,million KZT,minfin,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,1441706.59752064,million KZT,minfin,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,474422.45814349,million KZT,minfin,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,GROSS_ACCUMULATION,10232495400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,GROSS_OUTPUT,61860129600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,18805873900000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,96.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,IND_PROD,100.3,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,25208557400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,NET_BUDGET_LENDING,39452.06622459,million KZT,minfin,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,NET_EXPORTS,5440144500000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,3024260700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,SUBSIDIES,116315000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,3140575700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,TAX_REVENUE,3666092.67696642,million KZT,minfin,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,23477055500000.0,KZT,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,VAT_REVENUE,1198169.86741276,million KZT,minfin,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-5.412162,% of GDP,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GDP_GROWTH,0.999999,% change,imf,2026-08-30,level,2026-08-30
@@ -321,21 +479,41 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-11-01,KZ,national,monthly,CPI,103.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2015-12-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,AVG_WAGE,126020.764588996,KZT,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,BUDGET_DEFICIT,-912134.05699162,million KZT,minfin,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,5199146500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,13161352400000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,CORPORATE_TAX,1224645.23027333,million KZT,minfin,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,95.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,GDP_DEFLATOR,101.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,GDP_INCOME_METHOD,40884133600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,quarterly,GDP_NOMINAL,40884133600000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2015-12-31,KZ,national,annual,GDP_PER_CAPITA,2330540.0,KZT,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,GDP_REAL,101.2,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,GFCF,9354911600000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,104.2,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,GOV_DEBT_SERVICING,296521.44413584,million KZT,minfin,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,440823.90635285,million KZT,minfin,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,443735.07593826,million KZT,minfin,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,GOV_EXPENDITURE,6789829.43243587,million KZT,minfin,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,643263.147279,million KZT,minfin,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,657535.90121448,million KZT,minfin,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,GOV_REVENUE,6136967.56952076,million KZT,minfin,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,1602380.23018652,million KZT,minfin,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,493916.15331659,million KZT,minfin,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,GROSS_ACCUMULATION,11409909500000.0,KZT,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,GROSS_OUTPUT,63958086200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,21491895400000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,99.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,IND_PROD,98.4,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,25174185800000.0,KZT,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,NET_BUDGET_LENDING,78007.09602019,million KZT,minfin,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,NET_EXPORTS,1628696000000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,2100233200000.0,KZT,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,SUBSIDIES,122810600000.0,KZT,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,2223043800000.0,KZT,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,TAX_REVENUE,3332925.04968725,million KZT,minfin,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,26718002200000.0,KZT,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,VAT_REVENUE,944438.0303032,million KZT,minfin,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,monthly,CPI,101.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-5.073343,% of GDP,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GDP_GROWTH,0.9,% change,imf,2026-08-30,level,2026-08-30
@@ -358,22 +536,42 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-11-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2016-12-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,AVG_WAGE,142898.486382364,KZT,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,BUDGET_DEFICIT,-741185.2309437799,million KZT,minfin,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,5009473700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,14253989500000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,CORPORATE_TAX,1437364.5143039802,million KZT,minfin,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,95.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,GDP_DEFLATOR,113.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,GDP_INCOME_METHOD,46971150000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,quarterly,GDP_NOMINAL,46971150000000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2016-12-31,KZ,national,annual,GDP_PER_CAPITA,2639700.0,KZT,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,GDP_REAL,101.1,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,GFCF,10671499700000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,103.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,GOV_DEBT_SERVICING,523210.60895779997,million KZT,minfin,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,423701.87900578,million KZT,minfin,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,531082.25475674,million KZT,minfin,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,GOV_EXPENDITURE,7899800.07782939,million KZT,minfin,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,542902.05917749,million KZT,minfin,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,791915.4226811,million KZT,minfin,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,GOV_REVENUE,7662220.26060212,million KZT,minfin,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,1838194.7584988798,million KZT,minfin,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,579811.01802177,million KZT,minfin,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,GROSS_ACCUMULATION,13070935700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,GROSS_OUTPUT,74731304600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,25087440100000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,98.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,IND_PROD,98.9,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,30393719100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,INVESTMENT,7762302972000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,NET_BUDGET_LENDING,221428.4238677,million KZT,minfin,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,NET_EXPORTS,1585830900000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,2633564500000.0,KZT,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,SUBSIDIES,143451800000.0,KZT,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,2777016300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,TAX_REVENUE,4275886.70365502,million KZT,minfin,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,31083238500000.0,KZT,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,VAT_REVENUE,1495681.95848907,million KZT,minfin,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.054124,% of GDP,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.900001,% change,imf,2026-08-30,level,2026-08-30
@@ -396,22 +594,42 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-11-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2017-12-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,AVG_WAGE,150826.931241499,KZT,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,BUDGET_DEFICIT,-1356975.10457842,million KZT,minfin,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,5726334400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,16610443300000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,CORPORATE_TAX,1538785.45160939,million KZT,minfin,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,108.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,GDP_DEFLATOR,108.4,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,GDP_INCOME_METHOD,54378857800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,quarterly,GDP_NOMINAL,54378857800000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2017-12-31,KZ,national,annual,GDP_PER_CAPITA,3014720.0,KZT,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,GDP_REAL,104.1,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,GFCF,11798875100000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,104.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,GOV_DEBT_SERVICING,458101.91130856,million KZT,minfin,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,428745.69963707,million KZT,minfin,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,464568.9498922,million KZT,minfin,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,GOV_EXPENDITURE,10677506.430812,million KZT,minfin,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,493887.8022798,million KZT,minfin,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,1018627.58831411,million KZT,minfin,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,GOV_REVENUE,9691789.1434347,million KZT,minfin,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,2129992.84783841,million KZT,minfin,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,675902.21529846,million KZT,minfin,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,GROSS_ACCUMULATION,14330178900000.0,KZT,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,GROSS_OUTPUT,95418867600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,27986614700000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,101.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,IND_PROD,107.3,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,44223008300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,INVESTMENT,8770572291000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,NET_BUDGET_LENDING,174970.85359285,million KZT,minfin,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,NET_EXPORTS,4334058800000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,3182998500000.0,KZT,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,SUBSIDIES,188984900000.0,KZT,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,3371983400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,TAX_REVENUE,4848028.3186229,million KZT,minfin,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,34326070300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,VAT_REVENUE,1664699.27011816,million KZT,minfin,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,monthly,FX_RESERVES,30996.649283570427,USD million,nbk,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-0.984499,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -459,22 +677,42 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-12-01,KZ,national,monthly,FX_RESERVES,30146.45025175503,USD million,nbk,2026-08-30,level,2026-08-30
 2018-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,56753.231754260145,USD million,nbk,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,AVG_WAGE,162673.0,KZT,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,BUDGET_DEFICIT,-729188.09148399,million KZT,minfin,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,6394457400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,18825518400000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,CORPORATE_TAX,1687576.9781008,million KZT,minfin,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,109.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,GDP_DEFLATOR,109.2,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,GDP_INCOME_METHOD,61819536400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,quarterly,GDP_NOMINAL,61819536400000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2018-12-31,KZ,national,annual,GDP_PER_CAPITA,3382470.0,KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,GDP_REAL,104.1,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,GFCF,13091415800000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,105.4,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,GOV_DEBT_SERVICING,585909.35860896,million KZT,minfin,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,516580.84069688,million KZT,minfin,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,473825.26745379,million KZT,minfin,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,GOV_EXPENDITURE,9334732.6746915,million KZT,minfin,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,442403.42665899,million KZT,minfin,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,1071174.70305748,million KZT,minfin,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,GOV_REVENUE,8789004.51938719,million KZT,minfin,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,2578844.00281521,million KZT,minfin,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,552959.3401532,million KZT,minfin,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,GROSS_ACCUMULATION,15614509700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,GROSS_OUTPUT,102753424600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,31514400600000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,106.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,IND_PROD,104.4,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,45046871300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,INVESTMENT,11179036042000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,NET_BUDGET_LENDING,131653.83127052,million KZT,minfin,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,NET_EXPORTS,7246783000000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,4112983100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,SUBSIDIES,164369200000.0,KZT,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,4277352300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,TAX_REVENUE,5694904.40012893,million KZT,minfin,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,37350907100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,VAT_REVENUE,2034313.93481333,million KZT,minfin,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,monthly,EXPORTS,5351587.74833999,thousand USD,bns,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,monthly,FX_RESERVES,30927.02695042712,USD million,nbk,2026-08-30,level,2026-08-30
@@ -548,22 +786,42 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-01,KZ,national,monthly,IMPORTS,3525114.554460005,thousand USD,bns,2026-08-30,level,2026-08-30
 2019-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60445.20769224796,USD million,nbk,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,AVG_WAGE,186815.0,KZT,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,BUDGET_DEFICIT,-1296265.92006654,million KZT,minfin,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,7372240600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,21199133200000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,CORPORATE_TAX,1974763.4865675,million KZT,minfin,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,102.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,GDP_DEFLATOR,107.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,GDP_INCOME_METHOD,69532626500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,quarterly,GDP_NOMINAL,69532626500000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2019-12-31,KZ,national,annual,GDP_PER_CAPITA,3755700.0,KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,GDP_REAL,104.5,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,GFCF,16317522500000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,113.8,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,GOV_DEBT_SERVICING,677834.10684758,million KZT,minfin,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,709872.38433151,million KZT,minfin,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,611258.45367259,million KZT,minfin,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,GOV_EXPENDITURE,11469071.4392714,million KZT,minfin,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,562706.00737248,million KZT,minfin,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,1197099.53072796,million KZT,minfin,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,GOV_REVENUE,10592324.0649824,million KZT,minfin,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,3270193.38000493,million KZT,minfin,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,628272.80929799,million KZT,minfin,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,GROSS_ACCUMULATION,19210178500000.0,KZT,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,GROSS_OUTPUT,111674103000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,35570705800000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,114.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,IND_PROD,104.1,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,46992498200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,INVESTMENT,12576793455000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,NET_BUDGET_LENDING,250348.08525519,million KZT,minfin,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,NET_EXPORTS,5576070000000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,4851021700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,SUBSIDIES,206349300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,5057371000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,TAX_REVENUE,6835513.38122905,million KZT,minfin,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,42700693700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,VAT_REVENUE,2693127.19348285,million KZT,minfin,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,monthly,EXPORTS,4558391.945129985,thousand USD,bns,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,monthly,FX_RESERVES,28957.509887228625,USD million,nbk,2026-08-30,level,2026-08-30
@@ -634,22 +892,42 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-01,KZ,national,monthly,IMPORTS,3582678.383110009,thousand USD,bns,2026-08-30,level,2026-08-30
 2020-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57997.486669803555,USD million,nbk,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,AVG_WAGE,213003.0,KZT,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,BUDGET_DEFICIT,-2185253.31915518,million KZT,minfin,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,7579915900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,22038361400000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,CORPORATE_TAX,1562091.88779989,million KZT,minfin,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,88.7,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,GDP_DEFLATOR,104.2,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,GDP_INCOME_METHOD,70649033200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,quarterly,GDP_NOMINAL,70649033200000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2020-12-31,KZ,national,annual,GDP_PER_CAPITA,3766810.0,KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,GDP_REAL,97.5,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,GFCF,17463439500000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,99.8,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,GOV_DEBT_SERVICING,762131.92380421,million KZT,minfin,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,640917.63355656,million KZT,minfin,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,954637.17768033,million KZT,minfin,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,GOV_EXPENDITURE,13699876.3911152,million KZT,minfin,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,687586.81019893,million KZT,minfin,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,1664302.99999331,million KZT,minfin,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,GOV_REVENUE,11928461.794236,million KZT,minfin,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,3869600.3595287,million KZT,minfin,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,558719.40322726,million KZT,minfin,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,GROSS_ACCUMULATION,20351807200000.0,KZT,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,GROSS_OUTPUT,109694845800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,36660980900000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,91.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,IND_PROD,99.5,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,42866610700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,INVESTMENT,12270144010000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,NET_BUDGET_LENDING,217716.55633366,million KZT,minfin,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,NET_EXPORTS,2848124800000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,3820798100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,SUBSIDIES,248281800000.0,KZT,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,4069079900000.0,KZT,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,TAX_REVENUE,5575862.76305024,million KZT,minfin,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,46448870300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,VAT_REVENUE,2532523.64954988,million KZT,minfin,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,monthly,EXPORTS,3270134.2324499944,thousand USD,bns,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,monthly,FX_RESERVES,35638.084976284,USD million,nbk,2026-08-30,level,2026-08-30
@@ -729,22 +1007,43 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-01,KZ,national,monthly,MONETARY_BASE,10476191.53480374,million KZT,nbk,2026-08-30,level,2026-08-30
 2021-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,54918.71230951723,USD million,nbk,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,AVG_WAGE,250311.0,KZT,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,BUDGET_DEFICIT,-2526271.2171565,million KZT,minfin,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,8983559300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,26151537800000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,CORPORATE_TAX,2095759.61536381,million KZT,minfin,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,102.3,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,GDP_DEFLATOR,113.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,GDP_INCOME_METHOD,83951587900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,quarterly,GDP_NOMINAL,83951587900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2021-12-31,KZ,national,annual,GDP_PER_CAPITA,4418300.0,KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,GDP_REAL,104.3,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,GFCF,19341582200000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,102.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,GOV_DEBT_SERVICING,977714.73671875,million KZT,minfin,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,715107.41201645,million KZT,minfin,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,1382004.73509389,million KZT,minfin,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,GOV_EXPENDITURE,14786770.6682228,million KZT,minfin,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,645016.36510919,million KZT,minfin,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,2095218.10420549,million KZT,minfin,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,GOV_REVENUE,12504629.0786283,million KZT,minfin,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,3883824.84876221,million KZT,minfin,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,595719.67420091,million KZT,minfin,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,GROSS_ACCUMULATION,22275240500000.0,KZT,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,GROSS_OUTPUT,141092181200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,42419295900000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,99.7,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,IND_PROD,103.6,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,61996110900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,INVESTMENT,13242233420000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,NET_BUDGET_LENDING,213356.29830906,million KZT,minfin,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,NET_EXPORTS,7237563500000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,4855517600000.0,KZT,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,NON_OIL_BUDGET_DEFICIT,2526271.2171565,million KZT,minfin,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,SUBSIDIES,305616400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,5161134000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,TAX_REVENUE,7057943.92913867,million KZT,minfin,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,52814472900000.0,KZT,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,VAT_REVENUE,2807690.80407635,million KZT,minfin,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,monthly,EXPORTS,6093897.247329982,thousand USD,bns,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,monthly,FX_RESERVES,34377.97403821167,USD million,nbk,2026-08-30,level,2026-08-30
@@ -875,22 +1174,43 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-01,KZ,national,monthly,MONETARY_BASE,11719901.7989044,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,55826.82560162082,USD million,nbk,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,AVG_WAGE,309697.0,KZT,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,BUDGET_DEFICIT,-2390848.16405056,million KZT,minfin,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,11092784800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,31556468900000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,CORPORATE_TAX,2920802.77481614,million KZT,minfin,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,109.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,GDP_DEFLATOR,119.7,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,GDP_INCOME_METHOD,103765518200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,quarterly,GDP_NOMINAL,103765518200000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2022-12-31,KZ,national,annual,GDP_PER_CAPITA,5284700.0,KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,GDP_REAL,103.2,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,GFCF,22958808400000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,103.8,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,GOV_DEBT_SERVICING,1297405.83459559,million KZT,minfin,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,1073075.86488158,million KZT,minfin,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,1976904.03253934,million KZT,minfin,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,GOV_EXPENDITURE,17791797.2409359,million KZT,minfin,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,1047843.99067102,million KZT,minfin,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,1971568.97703245,million KZT,minfin,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,GOV_REVENUE,15963398.4731306,million KZT,minfin,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,4339946.26230523,million KZT,minfin,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,838861.6713178,million KZT,minfin,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,GROSS_ACCUMULATION,25916382000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,GROSS_OUTPUT,170926658900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,50951517700000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,113.1,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,IND_PROD,101.2,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,74559143400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,INVESTMENT,15251104090000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,NET_BUDGET_LENDING,477376.10534981,million KZT,minfin,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,NET_EXPORTS,15361139200000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,7398002700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,NON_OIL_BUDGET_DEFICIT,-8592225.68932949,million KZT,minfin,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,SUBSIDIES,381405800000.0,KZT,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,7779408500000.0,KZT,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,TAX_REVENUE,10026825.0326842,million KZT,minfin,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,62193315900000.0,KZT,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,VAT_REVENUE,4226358.8257289,million KZT,minfin,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,monthly,EXPORTS,6016945.658610005,thousand USD,bns,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,monthly,FX_RESERVES,35076.02886017335,USD million,nbk,2026-08-30,level,2026-08-30
@@ -1024,22 +1344,43 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-01,KZ,national,monthly,MONETARY_BASE,10126463.5645,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58642.20391232207,USD million,nbk,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,AVG_WAGE,364295.0,KZT,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,BUDGET_DEFICIT,-3120850.28546301,million KZT,minfin,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,12448870500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,36821377300000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,CORPORATE_TAX,3889594.50796711,million KZT,minfin,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,101.8,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,GDP_DEFLATOR,111.2,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,GDP_INCOME_METHOD,119442289700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,quarterly,GDP_NOMINAL,119442289700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2023-12-31,KZ,national,annual,GDP_PER_CAPITA,6002030.0,KZT,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,GDP_REAL,105.1,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,GFCF,29811815900000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,117.1,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,GOV_DEBT_SERVICING,1808139.55666852,million KZT,minfin,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,1100070.89208516,million KZT,minfin,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,1284728.34177321,million KZT,minfin,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,GOV_EXPENDITURE,21547818.8924491,million KZT,minfin,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,1137687.18514648,million KZT,minfin,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,2214672.16684863,million KZT,minfin,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,GOV_REVENUE,19037979.0300365,million KZT,minfin,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,4660172.80091873,million KZT,minfin,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,823766.3300022,million KZT,minfin,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,GROSS_ACCUMULATION,33631527400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,GROSS_OUTPUT,183415086800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,61348463000000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,115.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,IND_PROD,104.4,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,72813967800000.0,KZT,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,NET_BUDGET_LENDING,402804.9704923,million KZT,minfin,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,NET_EXPORTS,8321390400000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,8841170700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,NON_OIL_BUDGET_DEFICIT,-8763995.14536183,million KZT,minfin,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,SUBSIDIES,980720000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,9180745300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,TAX_REVENUE,12912428.2566707,million KZT,minfin,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,75154867300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,VAT_REVENUE,5674110.63979825,million KZT,minfin,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,monthly,EXPORTS,5947011.362290002,thousand USD,bns,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,monthly,FX_RESERVES,35944.0531031745,USD million,nbk,2026-08-30,level,2026-08-30
@@ -1177,21 +1518,42 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60885.06549524569,USD million,nbk,2026-08-30,level,2026-08-30
 2024-12-02,KZ,national,daily,BASE_RATE,15.25,% p.a.,nbk,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,AVG_WAGE,405416.0,KZT,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,BUDGET_DEFICIT,-3648890.50318894,million KZT,minfin,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,14396607800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,42403123300000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,CORPORATE_TAX,3653190.79919306,million KZT,minfin,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,100.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,GDP_DEFLATOR,109.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,GDP_INCOME_METHOD,136693318300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,quarterly,GDP_NOMINAL,136693318300000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2024-12-31,KZ,national,annual,GDP_PER_CAPITA,6780890.0,KZT,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,GDP_REAL,105.0,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,GFCF,33469209900000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,106.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,GOV_DEBT_SERVICING,2181991.4826103,million KZT,minfin,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,1038491.17342789,million KZT,minfin,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,1687045.69283749,million KZT,minfin,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,GOV_EXPENDITURE,23106551.9754642,million KZT,minfin,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,1293447.3212767,million KZT,minfin,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,2234191.08313655,million KZT,minfin,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,GOV_REVENUE,19624012.0548043,million KZT,minfin,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,5330622.58729598,million KZT,minfin,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,891930.41746684,million KZT,minfin,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,GROSS_ACCUMULATION,37457431100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,GROSS_OUTPUT,206264410500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,73171015400000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,105.8,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,77857582400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,NET_BUDGET_LENDING,116738.4461162,million KZT,minfin,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,NET_EXPORTS,7454952100000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,8286490200000.0,KZT,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,NON_OIL_BUDGET_DEFICIT,-10847264.2478702,million KZT,minfin,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,SUBSIDIES,1122348400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,8713991300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,TAX_REVENUE,12307809.76802,million KZT,minfin,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,88245450300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,VAT_REVENUE,5179378.10249218,million KZT,minfin,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,monthly,EXPORTS,5121405.036090004,thousand USD,bns,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,monthly,FX_RESERVES,45823.48534821276,USD million,nbk,2026-08-30,level,2026-08-30
@@ -1334,20 +1696,41 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-01,KZ,national,monthly,MONETARY_BASE,13765314.1045,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,63689.295170959944,USD million,nbk,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,AVG_WAGE,443315.0,KZT,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,BUDGET_DEFICIT,-4065222.8754779,million KZT,minfin,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,16924065500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,49384094700000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,CORPORATE_TAX,4532987.45772564,million KZT,minfin,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,101.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,GDP_DEFLATOR,109.7,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,GDP_INCOME_METHOD,159608552900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,quarterly,GDP_NOMINAL,159608552900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2025-12-31,KZ,national,annual,GDP_PER_CAPITA,7827200.0,KZT,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,GDP_REAL,106.5,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,GFCF,39170101300000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,110.4,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,GOV_DEBT_SERVICING,2607867.07141594,million KZT,minfin,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,1149535.09118012,million KZT,minfin,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,1459703.22708499,million KZT,minfin,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,GOV_EXPENDITURE,24958708.7677466,million KZT,minfin,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,1334753.39315083,million KZT,minfin,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,2427736.72266266,million KZT,minfin,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,GOV_REVENUE,21090148.2775434,million KZT,minfin,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,5935107.02942839,million KZT,minfin,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,1208280.88449697,million KZT,minfin,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,GROSS_ACCUMULATION,45016860600000.0,KZT,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,GROSS_OUTPUT,244197701500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,88162257500000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,109.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,93919024900000.0,KZT,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,NET_BUDGET_LENDING,149771.08565277,million KZT,minfin,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,NET_EXPORTS,5173993200000.0,million KZT,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,9329876300000.0,KZT,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,NON_OIL_BUDGET_DEFICIT,-11074831.2012809,million KZT,minfin,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,SUBSIDIES,1304819600000.0,KZT,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,9903977600000.0,KZT,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,TAX_REVENUE,14463081.1377124,million KZT,minfin,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,105045369900000.0,KZT,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,VAT_REVENUE,6111842.33836617,million KZT,minfin,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,monthly,EXPORTS,6471046.012700029,thousand USD,bns,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,monthly,FX_RESERVES,65414.43553814808,USD million,nbk,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,quarterly,GOV_DEBT,38743138.97677609,million KZT,minfin,2026-08-30,level,2026-08-30

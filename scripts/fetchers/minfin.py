@@ -319,3 +319,51 @@ def fetch_gov_debt() -> tuple[list[dict], dict]:
         ),
     }
     return records, manifest
+
+
+# More rows from the same "Dynamics" file (see GOV_REVENUE/GOV_EXPENDITURE above), verified
+# 2026-08-30 by listing every row label in the sheet and picking substrings that match
+# exactly one row each -- 'BUDGET DEFICIT (SURPLUS)' alone would ambiguously match BOTH
+# 'V. BUDGET DEFICIT (SURPLUS)' and 'VI. NON-OIL BUDGET DEFICIT (SURPLUS)', so the more
+# specific 'V. BUDGET DEFICIT' / 'NON-OIL BUDGET DEFICIT' substrings are used instead.
+def fetch_tax_revenue() -> tuple[list[dict], dict]:
+    return _fetch_dynamics_row("Tax revenues, including:", "TAX_REVENUE")
+
+
+def fetch_corporate_tax() -> tuple[list[dict], dict]:
+    return _fetch_dynamics_row("corporate income tax", "CORPORATE_TAX")
+
+
+def fetch_vat_revenue() -> tuple[list[dict], dict]:
+    return _fetch_dynamics_row("value added tax", "VAT_REVENUE")
+
+
+def fetch_gov_defense_spending() -> tuple[list[dict], dict]:
+    return _fetch_dynamics_row("2. Defense", "GOV_DEFENSE_SPENDING")
+
+
+def fetch_gov_general_services_spending() -> tuple[list[dict], dict]:
+    return _fetch_dynamics_row("1. General government services", "GOV_GENERAL_SERVICES_SPENDING")
+
+
+def fetch_gov_transport_spending() -> tuple[list[dict], dict]:
+    return _fetch_dynamics_row("Transport and communications", "GOV_TRANSPORT_SPENDING")
+
+
+def fetch_gov_debt_servicing() -> tuple[list[dict], dict]:
+    return _fetch_dynamics_row("Debt servicing", "GOV_DEBT_SERVICING")
+
+
+def fetch_net_budget_lending() -> tuple[list[dict], dict]:
+    return _fetch_dynamics_row("NET BUDGET LENDING", "NET_BUDGET_LENDING")
+
+
+def fetch_budget_deficit() -> tuple[list[dict], dict]:
+    """Republican budget deficit (surplus). Negative = deficit, matching the source's own sign convention."""
+    return _fetch_dynamics_row("V. BUDGET DEFICIT", "BUDGET_DEFICIT")
+
+
+def fetch_non_oil_budget_deficit() -> tuple[list[dict], dict]:
+    """Non-oil budget deficit -- a standard, KZ-specific fiscal indicator given the economy's
+    oil-revenue dependence (excludes National Fund transfers from the balance)."""
+    return _fetch_dynamics_row("NON-OIL BUDGET DEFICIT", "NON_OIL_BUDGET_DEFICIT")

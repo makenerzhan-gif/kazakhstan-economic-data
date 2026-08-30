@@ -24,11 +24,24 @@ FETCHERS = {
     "GOV_HEALTH_SPENDING": minfin_fetchers.fetch_gov_health_spending,
     "GOV_EDUCATION_SPENDING": minfin_fetchers.fetch_gov_education_spending,
     "GOV_SOCIAL_SPENDING": minfin_fetchers.fetch_gov_social_spending,
+    "TAX_REVENUE": minfin_fetchers.fetch_tax_revenue,
+    "CORPORATE_TAX": minfin_fetchers.fetch_corporate_tax,
+    "VAT_REVENUE": minfin_fetchers.fetch_vat_revenue,
+    "GOV_DEFENSE_SPENDING": minfin_fetchers.fetch_gov_defense_spending,
+    "GOV_GENERAL_SERVICES_SPENDING": minfin_fetchers.fetch_gov_general_services_spending,
+    "GOV_TRANSPORT_SPENDING": minfin_fetchers.fetch_gov_transport_spending,
+    "GOV_DEBT_SERVICING": minfin_fetchers.fetch_gov_debt_servicing,
+    "NET_BUDGET_LENDING": minfin_fetchers.fetch_net_budget_lending,
+    "BUDGET_DEFICIT": minfin_fetchers.fetch_budget_deficit,
+    "NON_OIL_BUDGET_DEFICIT": minfin_fetchers.fetch_non_oil_budget_deficit,
 }
 
 INDICATOR_IDS = [
     "GOV_REVENUE", "GOV_EXPENDITURE", "GOV_DEBT",
     "GOV_HEALTH_SPENDING", "GOV_EDUCATION_SPENDING", "GOV_SOCIAL_SPENDING",
+    "TAX_REVENUE", "CORPORATE_TAX", "VAT_REVENUE",
+    "GOV_DEFENSE_SPENDING", "GOV_GENERAL_SERVICES_SPENDING", "GOV_TRANSPORT_SPENDING",
+    "GOV_DEBT_SERVICING", "NET_BUDGET_LENDING", "BUDGET_DEFICIT", "NON_OIL_BUDGET_DEFICIT",
 ]
 
 

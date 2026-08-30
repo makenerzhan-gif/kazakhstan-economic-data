@@ -163,3 +163,36 @@ methodology revision that left those specific series unpublished for that window
 confirmed NET_EXPORTS' 2001-2002 negative values are real (pre-oil-boom Kazakhstan), not a
 sign error. `pytest tests/ -q` — 24/24 passing (still no network calls). **37/37 confirmed
 indicators connected end-to-end.**
+
+## 2026-08-30 — second scale-up batch: 37 -> 58 indicators
+User said to continue. This round prioritized near-zero-risk extensions of sources already
+proven in the previous two batches, rather than new research: unused rows in the Minfin
+"Dynamics" file already downloaded, and unused Taldau national-accounts indexIds already
+found while researching GDP_REAL.
+
+**Connected (21), all reusing already-proven mechanisms, no new source discovery:**
+- 10 more Minfin fiscal indicators from the SAME Dynamics file as GOV_REVENUE/EXPENDITURE/
+  health/education/social spending -- TAX_REVENUE, CORPORATE_TAX, VAT_REVENUE,
+  GOV_DEFENSE_SPENDING, GOV_GENERAL_SERVICES_SPENDING, GOV_TRANSPORT_SPENDING,
+  GOV_DEBT_SERVICING, NET_BUDGET_LENDING, BUDGET_DEFICIT, NON_OIL_BUDGET_DEFICIT. Had to be
+  careful with substring matching -- 'BUDGET DEFICIT (SURPLUS)' alone would have ambiguously
+  matched both 'V. BUDGET DEFICIT (SURPLUS)' and 'VI. NON-OIL BUDGET DEFICIT (SURPLUS)'.
+- 11 more BNS national-accounts indicators via the same single-region-dimension Taldau
+  mechanism as GDP_REAL (measure_id=7, dicIds=67) -- GDP_INCOME_METHOD, GROSS_OUTPUT,
+  TAXES_ON_PRODUCTS, NET_TAXES_ON_PRODUCTS, SUBSIDIES, INTERMEDIATE_CONSUMPTION,
+  GROSS_ACCUMULATION, IMPORT_VOLUME_INDEX, EXPORT_VOLUME_INDEX,
+  TOTAL_CONSUMPTION_EXPENDITURE, CAPITAL_CONSUMPTION.
+
+**Sanity-checked before committing:**
+- GDP_INCOME_METHOD's 2025 value matches GDP_NOMINAL (production method) EXACTLY
+  (159,608,552,900,000 both) -- GDP measured two different ways landing on the identical
+  total is a strong independent cross-check, not a coincidence.
+- Confirmed TAXES_ON_PRODUCTS minus SUBSIDIES does NOT equal NET_TAXES_ON_PRODUCTS exactly
+  (documented in sources.yaml) -- this is real SNA methodology (SUBSIDIES here is the
+  broader production+import concept, not the narrower product-specific one that actually
+  nets against NET_TAXES_ON_PRODUCTS), not a data error. Flagged so nobody tries to
+  reconcile the three and concludes something's broken.
+- Idempotency re-check: re-running update_all.py touched only manifests/logs/reports (which
+  carry timestamps) and the regenerated unified dataset -- zero actual data-file churn.
+
+**58/58 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 24/24 passing.

@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/uploads/2026/4/22/df7f71644666a6fd54cf11fcebb8c972_original.97280.xls",
+  "dataset_id": "gov.kz-doc-1001046",
+  "indicator_id": "NON_OIL_BUDGET_DEFICIT",
+  "indicator_name": "Non-Oil Budget Deficit",
+  "description": "Ненефтяной дефицит бюджета",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Annual totals (calendar-year report), stamped at Dec 31 of the reporting year. Source: 'Dynamics of execution of the republican budget' document, discovered dynamically each run rather than a hardcoded URL.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2021-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
