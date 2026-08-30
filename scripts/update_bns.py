@@ -31,11 +31,21 @@ FETCHERS = {
     "INVESTMENT": bns_fetchers.fetch_investment,
     "EXPORTS": bns_fetchers.fetch_exports,
     "IMPORTS": bns_fetchers.fetch_imports,
+    "GDP_PER_CAPITA": bns_fetchers.fetch_gdp_per_capita,
+    "GDP_DEFLATOR": bns_fetchers.fetch_gdp_deflator,
+    "GFCF": bns_fetchers.fetch_gfcf,
+    "GFCF_VOLUME_INDEX": bns_fetchers.fetch_gfcf_volume_index,
+    "NET_EXPORTS": bns_fetchers.fetch_net_exports,
+    "HOUSEHOLD_CONSUMPTION": bns_fetchers.fetch_household_consumption,
+    "COMPENSATION_EMPLOYEES": bns_fetchers.fetch_compensation_employees,
+    "AVG_WAGE": bns_fetchers.fetch_avg_wage,
 }
 
 INDICATOR_IDS = [
     "GDP_REAL", "GDP_NOMINAL", "IND_PROD", "CPI", "UNEMPLOYMENT",
     "INVESTMENT", "EXPORTS", "IMPORTS",
+    "GDP_PER_CAPITA", "GDP_DEFLATOR", "GFCF", "GFCF_VOLUME_INDEX",
+    "NET_EXPORTS", "HOUSEHOLD_CONSUMPTION", "COMPENSATION_EMPLOYEES", "AVG_WAGE",
 ]
 
 

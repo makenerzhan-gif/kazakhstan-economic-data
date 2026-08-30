@@ -112,3 +112,54 @@ straightforward once actually attempted).
 - **18/18 stage-1 indicators now connected end-to-end.** `pytest tests/ -q` — 24/24 passing.
 - Also corrected GOV_REVENUE/GOV_EXPENDITURE frequency from monthly to annual once their
   real source was found (see above).
+
+## 2026-08-30 — first scale-up batch: 18 -> 37 indicators
+User asked to scale toward the master task's eventual 100-150 indicator list. Proposed a
+categorized ~25-indicator next batch (shared before researching, per the user's preference);
+19 were connected, 4 hit genuine dead ends (documented, not silently dropped).
+
+**Research method note:** the 4 parallel research subagents launched for this batch all
+failed immediately on a session usage limit ("You've hit your session limit"). Rather than
+retry the subagent mechanism, did the remaining research directly (Bash/WebSearch/WebFetch)
+for the rest of this batch -- same rigor, just no subagent parallelism.
+
+**Connected (19):**
+- 8 BNS national-accounts indicators via Taldau, reusing (and generalizing) the exact
+  mechanism cracked for GDP_REAL: GDP_PER_CAPITA, GDP_DEFLATOR, GFCF, GFCF_VOLUME_INDEX,
+  NET_EXPORTS, HOUSEHOLD_CONSUMPTION, COMPENSATION_EMPLOYEES, AVG_WAGE. The last one
+  (AVG_WAGE) needed a second round of browser XHR capture -- it's classified across 5
+  dictionaries at once (region+industry+locality+size+sex), not just region, so the
+  single-dimension GDP_REAL params (measure_id=7, dicIds=67) 500'd; captured the real
+  5-dictionary request the same way as GDP_REAL and generalized `_fetch_taldau_annual_index`
+  to accept measure_id/terms/dic_ids overrides.
+- 5 NBK indicators: MONETARY_BASE/M0/M1 (same formId=51 dataset as M2/M3, just different
+  row_code, verified against the human table the same way). FX_RESERVES and
+  NATIONAL_FUND_ASSETS were both found in a single new dataset (formId=34) discovered while
+  researching reserves -- confirmed via an exact internal-sum check (monetary gold + assets
+  in CFC = the total row, to the cent, for a sample date).
+- 3 Minfin indicators: GOV_HEALTH_SPENDING, GOV_EDUCATION_SPENDING, GOV_SOCIAL_SPENDING --
+  functional-breakdown rows from the same small "Dynamics" file already used for
+  GOV_REVENUE/GOV_EXPENDITURE, no new source needed.
+- 3 IMF WEO indicators: IMF_UNEMPLOYMENT (LUR), IMF_GOV_BALANCE (GGXCNL_NGDP),
+  IMF_GOV_DEBT (GGXWDG_NGDP) -- all standard WEO codes, verified live, worked on first try.
+
+**Not connected, documented in `config/sources.yaml` (4):**
+- PPI (industrial producer price index): the confirmed page/elementId (1626) is stale in
+  CSV (data stops in 2013) and the JSON variant is malformed at the source (confirmed via a
+  full, untruncated download matching Content-Length exactly -- not a network issue on our
+  end). Checked 3 nearby elementIds; all are other price indices, not industrial PPI.
+- DEPOSIT_RATE / LENDING_RATE: both NBK datasets (formId 268, 486) are real and live but
+  have no aggregate/total row across their dimensions (agent x currency x term, etc.) --
+  picking one specific cross-tab cell and calling it "the" rate would be misleading without
+  further research into which combination is the conventional headline figure.
+- RETAIL_TRADE, CONSTRUCTION: not resolved to a working source this session (retail trade's
+  Taldau category didn't show an obvious turnover series; construction wasn't researched at
+  all, deprioritized after the above took longer than budgeted).
+
+**Sanity-checked before committing:** confirmed a real (not fabricated) 2010-2013 gap
+present consistently across GFCF/NET_EXPORTS/HOUSEHOLD_CONSUMPTION but absent from
+GDP_DEFLATOR/GDP_PER_CAPITA in the same Taldau category (likely a national-accounts
+methodology revision that left those specific series unpublished for that window);
+confirmed NET_EXPORTS' 2001-2002 negative values are real (pre-oil-boom Kazakhstan), not a
+sign error. `pytest tests/ -q` — 24/24 passing (still no network calls). **37/37 confirmed
+indicators connected end-to-end.**

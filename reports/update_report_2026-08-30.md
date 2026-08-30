@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T14:42:14.715401
+Run timestamp: 2026-08-30T18:17:30.686788
 Unified dataset updated: True
 Tests passed: True
 
@@ -77,6 +77,34 @@ Tests passed: True
   - warning: Unexpected jump of 51.5% between 2019-03-01 (3433642.2448500046) and 2019-04-01 (5201089.066599997).
   - warning: Unexpected jump of 59.5% between 2026-05-01 (6147393.583650006) and 2026-06-01 (9807366.906380022).
 - **bns/IMPORTS** — fetch+validate+process: ok (downloaded=90, processed=90)
+- **bns/GDP_PER_CAPITA** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/GDP_DEFLATOR** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/GFCF** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 71.3% between 2000-12-31 (450258400000.0) and 2001-12-31 (771384600000.0).
+  - warning: Unexpected jump of 80.9% between 2009-12-31 (4726718700000.0) and 2014-12-31 (8552487100000.0).
+- **bns/GFCF_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/NET_EXPORTS** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 117.6% between 2000-12-31 (195126800000.0) and 2001-12-31 (-34424800000.0).
+  - warning: Unexpected jump of 94.5% between 2001-12-31 (-34424800000.0) and 2002-12-31 (-1903400000.0).
+  - warning: Unexpected jump of 13113.3% between 2002-12-31 (-1903400000.0) and 2003-12-31 (247695900000.0).
+  - warning: Unexpected jump of 103.6% between 2003-12-31 (247695900000.0) and 2004-12-31 (504339700000.0).
+  - warning: Unexpected jump of 63.7% between 2005-12-31 (654780800000.0) and 2006-12-31 (1072142400000.0).
+  - warning: Unexpected jump of 286.5% between 2007-12-31 (830611800000.0) and 2008-12-31 (3210257200000.0).
+  - warning: Unexpected jump of 58.1% between 2008-12-31 (3210257200000.0) and 2009-12-31 (1345437100000.0).
+  - warning: Unexpected jump of 304.3% between 2009-12-31 (1345437100000.0) and 2014-12-31 (5440144500000.0).
+  - warning: Unexpected jump of 70.1% between 2014-12-31 (5440144500000.0) and 2015-12-31 (1628696000000.0).
+  - warning: Unexpected jump of 173.3% between 2016-12-31 (1585830900000.0) and 2017-12-31 (4334058800000.0).
+  - warning: Unexpected jump of 67.2% between 2017-12-31 (4334058800000.0) and 2018-12-31 (7246783000000.0).
+  - warning: Unexpected jump of 154.1% between 2020-12-31 (2848124800000.0) and 2021-12-31 (7237563500000.0).
+  - warning: Unexpected jump of 112.2% between 2021-12-31 (7237563500000.0) and 2022-12-31 (15361139200000.0).
+- **bns/HOUSEHOLD_CONSUMPTION** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 137.7% between 2009-12-31 (7912607000000.0) and 2014-12-31 (18805873900000.0).
+- **bns/COMPENSATION_EMPLOYEES** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/AVG_WAGE** — fetch+validate+process: ok (downloaded=14, processed=14)
 - **nbk/BASE_RATE** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Gap of 49 days between 2024-10-14 and 2024-12-02 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2024-12-02 and 2025-01-20 is outside expected range for frequency=daily (1-4d).
@@ -99,6 +127,14 @@ Tests passed: True
 - **nbk/M3** — fetch+validate+process: ok (downloaded=56, processed=56)
   - warning: Unexpected jump of 328.7% between 2021-12-01 (4500005.07139634) and 2022-01-01 (19290696.82147032).
   - warning: Unexpected jump of 66.7% between 2022-12-01 (20574132.3513075) and 2023-01-01 (34295954.59776597).
+- **nbk/MONETARY_BASE** — fetch+validate+process: ok (downloaded=56, processed=56)
+- **nbk/M0** — fetch+validate+process: ok (downloaded=56, processed=56)
+- **nbk/M1** — fetch+validate+process: ok (downloaded=56, processed=56)
+  - warning: Unexpected jump of 65.2% between 2021-12-01 (3855815.72850374) and 2022-01-01 (6368114.35895143).
+- **nbk/FX_RESERVES** — fetch+validate+process: ok (downloaded=102, processed=102)
+  - warning: Gap of 61 days between 2026-05-01 and 2026-07-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/NATIONAL_FUND_ASSETS** — fetch+validate+process: ok (downloaded=102, processed=102)
+  - warning: Gap of 61 days between 2026-05-01 and 2026-07-01 is outside expected range for frequency=monthly (25-40d).
 - **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)
@@ -106,6 +142,10 @@ Tests passed: True
   - warning: Gap of 181 days between 2019-01-01 and 2019-07-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 458 days between 2019-10-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 1004 days between 2021-10-01 and 2024-07-01 is outside expected range for frequency=quarterly (80-100d).
+- **minfin/GOV_HEALTH_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_EDUCATION_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 56.2% between 2019-12-31 (611258.45367259) and 2020-12-31 (954637.17768033).
+- **minfin/GOV_SOCIAL_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% between 1995-01-01 (-8.2) and 1996-01-01 (0.5).
   - warning: Unexpected jump of 240.0% between 1996-01-01 (0.5) and 1997-01-01 (1.7).
@@ -159,3 +199,23 @@ Tests passed: True
   - warning: Unexpected jump of 224.6% between 2022-01-01 (2.854326) and 2023-01-01 (-3.557706).
   - warning: Unexpected jump of 73.2% between 2025-01-01 (-3.912392) and 2026-01-01 (-1.046644).
   - warning: Unexpected jump of 94.1% between 2026-01-01 (-1.046644) and 2027-01-01 (-2.031753).
+- **imf/IMF_UNEMPLOYMENT** — fetch+validate+process: ok (downloaded=38, processed=38)
+- **imf/IMF_GOV_BALANCE** — fetch+validate+process: ok (downloaded=30, processed=30)
+  - warning: Unexpected jump of 107.7% between 2002-01-01 (1.923888) and 2003-01-01 (3.996049).
+  - warning: Unexpected jump of 84.9% between 2004-01-01 (3.28732) and 2005-01-01 (6.077755).
+  - warning: Unexpected jump of 76.1% between 2007-01-01 (5.134415) and 2008-01-01 (1.227135).
+  - warning: Unexpected jump of 208.2% between 2008-01-01 (1.227135) and 2009-01-01 (-1.328049).
+  - warning: Unexpected jump of 210.7% between 2009-01-01 (-1.328049) and 2010-01-01 (1.469692).
+  - warning: Unexpected jump of 295.4% between 2010-01-01 (1.469692) and 2011-01-01 (5.811036).
+  - warning: Unexpected jump of 352.2% between 2014-01-01 (2.481848) and 2015-01-01 (-6.259289).
+  - warning: Unexpected jump of 160.5% between 2017-01-01 (-4.265509) and 2018-01-01 (2.579564).
+  - warning: Unexpected jump of 122.1% between 2018-01-01 (2.579564) and 2019-01-01 (-0.569543).
+  - warning: Unexpected jump of 1135.5% between 2019-01-01 (-0.569543) and 2020-01-01 (-7.036965).
+  - warning: Unexpected jump of 102.1% between 2021-01-01 (-4.966052) and 2022-01-01 (0.105381).
+  - warning: Unexpected jump of 1440.3% between 2022-01-01 (0.105381) and 2023-01-01 (-1.41244).
+  - warning: Unexpected jump of 143.1% between 2023-01-01 (-1.41244) and 2024-01-01 (-3.434168).
+  - warning: Unexpected jump of 56.8% between 2025-01-01 (-3.113865) and 2026-01-01 (-1.343847).
+- **imf/IMF_GOV_DEBT** — fetch+validate+process: ok (downloaded=30, processed=30)
+  - warning: Unexpected jump of 65.3% between 2007-01-01 (4.091989) and 2008-01-01 (6.76587).
+  - warning: Unexpected jump of 51.2% between 2008-01-01 (6.76587) and 2009-01-01 (10.227029).
+  - warning: Unexpected jump of 50.9% between 2014-01-01 (14.496344) and 2015-01-01 (21.881937).

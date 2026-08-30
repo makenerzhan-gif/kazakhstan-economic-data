@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=34",
+  "dataset_id": "formId=34,subtype=national_fund_fx_assets",
+  "indicator_id": "NATIONAL_FUND_ASSETS",
+  "indicator_name": "National Fund of Kazakhstan -- Foreign Currency Assets",
+  "description": "Активы Национального фонда РК (иностранная валюта)",
+  "frequency": "monthly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million. Foreign currency assets of the National Fund of Kazakhstan (sovereign wealth fund).",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2018-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

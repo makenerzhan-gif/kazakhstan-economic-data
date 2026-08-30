@@ -22,9 +22,17 @@ FETCHERS = {
     "EXCHANGE_RATE": nbk_fetchers.fetch_exchange_rate_usd,
     "M2": nbk_fetchers.fetch_m2,
     "M3": nbk_fetchers.fetch_m3,
+    "MONETARY_BASE": nbk_fetchers.fetch_monetary_base,
+    "M0": nbk_fetchers.fetch_m0,
+    "M1": nbk_fetchers.fetch_m1,
+    "FX_RESERVES": nbk_fetchers.fetch_fx_reserves,
+    "NATIONAL_FUND_ASSETS": nbk_fetchers.fetch_national_fund_assets,
 }
 
-INDICATOR_IDS = ["BASE_RATE", "EXCHANGE_RATE", "M2", "M3"]
+INDICATOR_IDS = [
+    "BASE_RATE", "EXCHANGE_RATE", "M2", "M3", "MONETARY_BASE", "M0", "M1",
+    "FX_RESERVES", "NATIONAL_FUND_ASSETS",
+]
 
 
 def _indicator_meta(indicator_id: str) -> dict:

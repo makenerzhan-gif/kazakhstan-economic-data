@@ -19,9 +19,15 @@ FETCHERS = {
     "IMF_GDP_GROWTH": imf_fetchers.fetch_gdp_growth,
     "IMF_INFLATION": imf_fetchers.fetch_inflation,
     "IMF_CURRENT_ACCOUNT": imf_fetchers.fetch_current_account,
+    "IMF_UNEMPLOYMENT": imf_fetchers.fetch_unemployment,
+    "IMF_GOV_BALANCE": imf_fetchers.fetch_gov_balance,
+    "IMF_GOV_DEBT": imf_fetchers.fetch_gov_debt,
 }
 
-INDICATOR_IDS = ["IMF_GDP_GROWTH", "IMF_INFLATION", "IMF_CURRENT_ACCOUNT"]
+INDICATOR_IDS = [
+    "IMF_GDP_GROWTH", "IMF_INFLATION", "IMF_CURRENT_ACCOUNT",
+    "IMF_UNEMPLOYMENT", "IMF_GOV_BALANCE", "IMF_GOV_DEBT",
+]
 
 
 def _indicator_meta(indicator_id: str) -> dict:

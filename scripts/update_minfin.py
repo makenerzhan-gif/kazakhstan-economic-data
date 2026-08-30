@@ -21,9 +21,15 @@ FETCHERS = {
     "GOV_REVENUE": minfin_fetchers.fetch_gov_revenue,
     "GOV_EXPENDITURE": minfin_fetchers.fetch_gov_expenditure,
     "GOV_DEBT": minfin_fetchers.fetch_gov_debt,
+    "GOV_HEALTH_SPENDING": minfin_fetchers.fetch_gov_health_spending,
+    "GOV_EDUCATION_SPENDING": minfin_fetchers.fetch_gov_education_spending,
+    "GOV_SOCIAL_SPENDING": minfin_fetchers.fetch_gov_social_spending,
 }
 
-INDICATOR_IDS = ["GOV_REVENUE", "GOV_EXPENDITURE", "GOV_DEBT"]
+INDICATOR_IDS = [
+    "GOV_REVENUE", "GOV_EXPENDITURE", "GOV_DEBT",
+    "GOV_HEALTH_SPENDING", "GOV_EDUCATION_SPENDING", "GOV_SOCIAL_SPENDING",
+]
 
 
 def _indicator_meta(indicator_id: str) -> dict:

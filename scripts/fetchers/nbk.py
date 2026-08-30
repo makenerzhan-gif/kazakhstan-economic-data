@@ -218,3 +218,148 @@ def fetch_m3() -> tuple[list[dict], dict]:
                 "of the corresponding column label on the human-facing NBK page -- not shifted here.",
     }
     return records, manifest
+
+
+# row_code=1 "Денежная база (резервные деньги)" / row_code=2 "M0" / row_code=3 "M1".
+# Verified live 2026-08-30 the same way as M2/M3: cross-referenced against the human-facing
+# table's numbered rows and confirmed matching values (accounting for the same ~1-month
+# report_date offset noted above).
+ROW_CODE_MONETARY_BASE = "1"
+ROW_CODE_M0 = "2"
+ROW_CODE_M1 = "3"
+
+
+def fetch_monetary_base() -> tuple[list[dict], dict]:
+    """Monetary base (reserve money). row_code=1 -- see comment above ROW_CODE_MONETARY_BASE."""
+    rows, _ = _fetch_monetary_aggregate_rows(ROW_CODE_MONETARY_BASE, "MONETARY_BASE")
+    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in rows]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={MONETARY_AGGREGATES_FORM_ID}",
+        "dataset_id": "formId=51,row_code=1",
+        "note": "report_date runs about one month ahead of the human page's column label -- not shifted here.",
+    }
+    return records, manifest
+
+
+def fetch_m0() -> tuple[list[dict], dict]:
+    """M0 -- cash in circulation outside the banking system. row_code=2."""
+    rows, _ = _fetch_monetary_aggregate_rows(ROW_CODE_M0, "M0")
+    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in rows]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={MONETARY_AGGREGATES_FORM_ID}",
+        "dataset_id": "formId=51,row_code=2",
+        "note": "report_date runs about one month ahead of the human page's column label -- not shifted here.",
+    }
+    return records, manifest
+
+
+def fetch_m1() -> tuple[list[dict], dict]:
+    """M1. row_code=3."""
+    rows, _ = _fetch_monetary_aggregate_rows(ROW_CODE_M1, "M1")
+    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in rows]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={MONETARY_AGGREGATES_FORM_ID}",
+        "dataset_id": "formId=51,row_code=3",
+        "note": "report_date runs about one month ahead of the human page's column label -- not shifted here.",
+    }
+    return records, manifest
+
+
+# formId=34, "International Reserves and foreign currency assets of the National Fund of
+# Republic of Kazakhstan" -- found 2026-08-30 via GET /api/v1/data/categories (category
+# "monetary" -> subcategory "monetary statistics"). Confirmed live: total gross reserves
+# (no subtype) = sum of its own subtype breakdown (monetary gold + assets in CFC) to the
+# cent for a sample date, confirming this is a real total+breakdown structure, not
+# fabricated. Same endpoint conveniently also carries National Fund FX assets as a
+# `subtype`, discovered while investigating reserves -- solves both in one form.
+RESERVES_NATFUND_FORM_ID = "34"
+
+
+def _fetch_reserves_natfund_rows() -> list[dict]:
+    all_rows: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                             params={"formId": RESERVES_NATFUND_FORM_ID, "page": str(page), "pageSize": "500"},
+                             timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        all_rows.extend(data["rows"])
+        if len(all_rows) >= data["totalRows"]:
+            break
+        page += 1
+    return all_rows
+
+
+def fetch_fx_reserves() -> tuple[list[dict], dict]:
+    """Gross international reserves (FX + gold), USD million, monthly.
+    Verified live 2026-08-30: class_type='gross international reserves' with no
+    `subtype` key is the total row; rows WITH a subtype ('monetary gold',
+    'assets in cfc') are its breakdown, confirmed to sum to the total for a
+    sample date.
+    """
+    rows = _fetch_reserves_natfund_rows()
+    today = date.today()
+    content = json.dumps(rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "FX_RESERVES", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "FX_RESERVES", today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={RESERVES_NATFUND_FORM_ID}",
+    })
+
+    matching = [r for r in rows if r.get("class_type") == "gross international reserves" and "subtype" not in r]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/FX_RESERVES",
+                "WHAT CHANGED: no total row found (class_type='gross international reserves', no subtype)",
+                f"ACTION REQUIRED: inspect formId={RESERVES_NATFUND_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in matching]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={RESERVES_NATFUND_FORM_ID}",
+        "dataset_id": f"formId={RESERVES_NATFUND_FORM_ID},class_type=gross_international_reserves",
+        "note": "USD million. Gross reserves (monetary gold + FX assets), no breakdown by component.",
+    }
+    return records, manifest
+
+
+def fetch_national_fund_assets() -> tuple[list[dict], dict]:
+    """National Fund of Kazakhstan -- foreign currency assets, USD million, monthly.
+    Same formId=34 as FX_RESERVES (see its docstring). Verified live 2026-08-30."""
+    rows = _fetch_reserves_natfund_rows()
+    today = date.today()
+    content = json.dumps(rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "NATIONAL_FUND_ASSETS", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "NATIONAL_FUND_ASSETS", today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={RESERVES_NATFUND_FORM_ID}",
+    })
+
+    matching = [r for r in rows if r.get("subtype") == "foreign currency assets of the national fund of kazakhstan"]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/NATIONAL_FUND_ASSETS",
+                "WHAT CHANGED: no row found with subtype='foreign currency assets of the national fund of kazakhstan'",
+                f"ACTION REQUIRED: inspect formId={RESERVES_NATFUND_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in matching]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={RESERVES_NATFUND_FORM_ID}",
+        "dataset_id": f"formId={RESERVES_NATFUND_FORM_ID},subtype=national_fund_fx_assets",
+        "note": "USD million. Foreign currency assets of the National Fund of Kazakhstan (sovereign wealth fund).",
+    }
+    return records, manifest

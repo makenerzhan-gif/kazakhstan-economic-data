@@ -183,6 +183,21 @@ def fetch_gov_expenditure() -> tuple[list[dict], dict]:
     return _fetch_dynamics_row("II.Expences", "GOV_EXPENDITURE")
 
 
+# Functional budget-expenditure breakdown rows from the same "Dynamics" file, verified
+# live 2026-08-30: row labels 'Education', 'Healthcare', 'Social assistance and social
+# security' each appear exactly once in the sheet, under section II (Expenses).
+def fetch_gov_health_spending() -> tuple[list[dict], dict]:
+    return _fetch_dynamics_row("Healthcare", "GOV_HEALTH_SPENDING")
+
+
+def fetch_gov_education_spending() -> tuple[list[dict], dict]:
+    return _fetch_dynamics_row("Education", "GOV_EDUCATION_SPENDING")
+
+
+def fetch_gov_social_spending() -> tuple[list[dict], dict]:
+    return _fetch_dynamics_row("Social assistance and social security", "GOV_SOCIAL_SPENDING")
+
+
 # ---------------------------------------------------------------------------
 # GOV_DEBT: quarterly point-in-time snapshot documents, one file per quarter
 # (no combined "dynamics" file exists for debt, unlike the budget). Verified

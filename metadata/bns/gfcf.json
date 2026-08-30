@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-700906",
+  "indicator_id": "GFCF",
+  "indicator_name": "Gross Fixed Capital Formation",
+  "description": "Валовое накопление основного капитала",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Gross fixed capital formation, national accounts, KZT. Distinct from the BNS/INVESTMENT enterprise-survey series. Taldau indexId 700906.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2000-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

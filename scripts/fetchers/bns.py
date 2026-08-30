@@ -484,18 +484,45 @@ def fetch_gdp_real() -> tuple[list[dict], dict]:
     give quarterly granularity, but that variant's response shape was not
     captured/verified this session -- left for a future pass rather than guessed.
     """
+    return _fetch_taldau_annual_index(
+        GDP_REAL_INDEX_ID, "GDP_REAL",
+        note="Physical volume index of GDP, production method, % of prior period (100=no change). "
+             "A final-use-method variant also exists on Taldau (indexId 700974) but is not fetched here.",
+    )
+
+
+def _fetch_taldau_annual_index(index_id: str, indicator_id: str, note: str,
+                                measure_id: str = "7", terms: str | None = None,
+                                dic_ids: str = REGIONS_DIC_ID) -> tuple[list[dict], dict]:
+    """Shared fetcher for any Taldau "NewIndex" indicator following the pattern
+    discovered for GDP_REAL: national annual series, root term id 741880. See
+    fetch_gdp_real's docstring for how this mechanism was cracked. Each new
+    index_id used here was verified live this session (real HTTP 200, at least
+    one parsed year) before being wired into update_bns.py -- not assumed to
+    work by analogy alone.
+
+    Some indicators (e.g. average wage) are classified across MULTIPLE
+    dictionaries at once (region + industry + locality-type + enterprise-size +
+    sex, etc.) rather than just region -- for those, `measure_id`, `terms`
+    (comma-joined term ids, one per dictionary, each defaulting to its "Всего"/
+    total value), and `dic_ids` (comma-joined dictionary ids, same order) must
+    be captured from a real browser session (same technique as GDP_REAL) rather
+    than guessed -- guessing measure_id=7 and a single dic_ids for a
+    multi-dictionary index reliably returns HTTP 500, not wrong data, so this
+    fails loudly rather than silently.
+    """
     body = {
-        "p_parent_id": "", "p_index_id": GDP_REAL_INDEX_ID, "p_keyword": "",
-        "p_period_id": "7", "p_measure_id": "7", "p_term_id": NATIONAL_TERM_ID,
-        "p_terms": NATIONAL_TERM_ID, "p_dicIds": REGIONS_DIC_ID, "idx": "0",
+        "p_parent_id": "", "p_index_id": index_id, "p_keyword": "",
+        "p_period_id": "7", "p_measure_id": measure_id, "p_term_id": NATIONAL_TERM_ID,
+        "p_terms": terms or NATIONAL_TERM_ID, "p_dicIds": dic_ids, "idx": "0",
         "filter": '[{"property":null,"value":null}]', "id": "",
     }
     resp = requests.post(TALDAU_TREE_DATA_URL, data=body,
                           headers={**HEADERS, "X-Requested-With": "XMLHttpRequest"}, timeout=30)
     resp.raise_for_status()
     content = resp.content
-    _save_raw("GDP_REAL", content, "json", {
-        "source_url": TALDAU_TREE_DATA_URL, "index_id": GDP_REAL_INDEX_ID, "request_body": body,
+    _save_raw(indicator_id, content, "json", {
+        "source_url": TALDAU_TREE_DATA_URL, "index_id": index_id, "request_body": body,
     })
 
     data = json.loads(content)
@@ -503,11 +530,11 @@ def fetch_gdp_real() -> tuple[list[dict], dict]:
     if match is None:
         raise validation.StructuralChangeError(
             "\n".join([
-                "STRUCTURAL CHANGE DETECTED in bns/GDP_REAL",
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
                 f"WHAT CHANGED: no tree node with id={NATIONAL_TERM_ID!r} in the response",
-                "EXPECTED: the РЕСПУБЛИКА КАЗАХСТАН root node",
+                "EXPECTED: the national root node",
                 f"ACTUAL: {[e.get('id') for e in data]}",
-                f"ACTION REQUIRED: inspect {TALDAU_TREE_DATA_URL} and update scripts/fetchers/bns.py",
+                f"ACTION REQUIRED: inspect {TALDAU_TREE_DATA_URL} (index_id={index_id}) and update scripts/fetchers/bns.py",
             ])
         )
 
@@ -526,10 +553,10 @@ def fetch_gdp_real() -> tuple[list[dict], dict]:
     if not records:
         raise validation.StructuralChangeError(
             "\n".join([
-                "STRUCTURAL CHANGE DETECTED in bns/GDP_REAL",
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
                 "WHAT CHANGED: zero year/value pairs extracted from the national node",
                 f"ACTUAL keys present: {list(match.keys())}",
-                f"ACTION REQUIRED: inspect {TALDAU_TREE_DATA_URL} and update scripts/fetchers/bns.py",
+                f"ACTION REQUIRED: inspect {TALDAU_TREE_DATA_URL} (index_id={index_id}) and update scripts/fetchers/bns.py",
             ])
         )
 
@@ -537,8 +564,92 @@ def fetch_gdp_real() -> tuple[list[dict], dict]:
     manifest = {
         "frequency": "annual",
         "source_url": TALDAU_TREE_DATA_URL,
-        "dataset_id": f"taldau-index-{GDP_REAL_INDEX_ID}",
-        "note": "Physical volume index of GDP, production method, % of prior period (100=no change). "
-                "A final-use-method variant also exists on Taldau (indexId 700974) but is not fetched here.",
+        "dataset_id": f"taldau-index-{index_id}",
+        "note": note,
     }
     return records, manifest
+
+
+def fetch_gdp_per_capita() -> tuple[list[dict], dict]:
+    """Nominal GDP per capita, production method. Verified live 2026-08-30 via
+    the shared Taldau mechanism (see fetch_gdp_real)."""
+    return _fetch_taldau_annual_index(
+        "2709380", "GDP_PER_CAPITA",
+        note="Nominal GDP per capita, production method, KZT. Taldau indexId 2709380.",
+    )
+
+
+def fetch_gdp_deflator() -> tuple[list[dict], dict]:
+    """GDP deflator, production method. Verified live 2026-08-30."""
+    return _fetch_taldau_annual_index(
+        "2970978", "GDP_DEFLATOR",
+        note="GDP deflator, production method, % of prior period. Taldau indexId 2970978.",
+    )
+
+
+def fetch_gfcf() -> tuple[list[dict], dict]:
+    """Gross fixed capital formation, national-accounts investment concept, KZT.
+    Distinct from INVESTMENT (BNS's enterprise-survey 'investment in fixed
+    capital' series). Verified live 2026-08-30."""
+    return _fetch_taldau_annual_index(
+        "700906", "GFCF",
+        note="Gross fixed capital formation, national accounts, KZT. Distinct from the BNS/"
+             "INVESTMENT enterprise-survey series. Taldau indexId 700906.",
+    )
+
+
+def fetch_gfcf_volume_index() -> tuple[list[dict], dict]:
+    """Physical volume index of gross fixed capital formation. Verified live 2026-08-30."""
+    return _fetch_taldau_annual_index(
+        "700981", "GFCF_VOLUME_INDEX",
+        note="Physical volume index of gross fixed capital formation, % of prior period. Taldau indexId 700981.",
+    )
+
+
+def fetch_net_exports() -> tuple[list[dict], dict]:
+    """Net exports of goods and services, national accounts, KZT. Verified live 2026-08-30."""
+    return _fetch_taldau_annual_index(
+        "2709378", "NET_EXPORTS",
+        note="Net exports of goods and services, national accounts, KZT. Taldau indexId 2709378.",
+    )
+
+
+def fetch_household_consumption() -> tuple[list[dict], dict]:
+    """Household final consumption expenditure, national accounts, KZT. Verified live 2026-08-30."""
+    return _fetch_taldau_annual_index(
+        "700966", "HOUSEHOLD_CONSUMPTION",
+        note="Household final consumption expenditure, national accounts, KZT. Taldau indexId 700966.",
+    )
+
+
+def fetch_compensation_employees() -> tuple[list[dict], dict]:
+    """Compensation of employees, income-side national accounts, KZT. Verified live 2026-08-30."""
+    return _fetch_taldau_annual_index(
+        "700938", "COMPENSATION_EMPLOYEES",
+        note="Compensation of employees, income account, KZT. Taldau indexId 700938.",
+    )
+
+
+def fetch_avg_wage() -> tuple[list[dict], dict]:
+    """Average monthly nominal wage per worker, KZT. Taldau indexId 702972 (found
+    under Taldau's "Статистика труда и занятости" category, GetIndustryByID/702832).
+
+    Unlike the national-accounts indicators above, this one is classified across
+    5 dictionaries at once (region, economic activity, locality type, enterprise
+    size, sex) -- blind measure_id=7/dicIds=67 guessing (by analogy to GDP_REAL)
+    returned HTTP 500. Cracked the same way as GDP_REAL: instrumented XHR in a
+    real browser session to capture the actual request
+    (measure_id=1; terms=741880,741885,741917,3629946,741935 -- the "Всего"/
+    total value in each of the 5 dictionaries; dic_ids=68,859,776,2813,576).
+    Verified live 2026-08-30 with a plain, stateless requests.post using these
+    captured params. Values (KZT/month) are consistent with independently
+    reported figures (e.g. ~150K KZT in 2017 rising to ~443K KZT average for
+    2025, in the same range as BNS's own Q4-2025 press figure of 473K KZT --
+    plausible since Q4 sits above the annual average in an up-trending series).
+    """
+    return _fetch_taldau_annual_index(
+        "702972", "AVG_WAGE",
+        note="Average monthly nominal wage per worker, KZT. Taldau indexId 702972.",
+        measure_id="1", dic_ids="68,859,776,2813,576",
+        terms="741880,741885,741917,3629946,741935",
+    )

@@ -165,6 +165,127 @@ agencies:
         notes: >
           Same structure/mechanism as EXPORTS (see its notes) -- even larger (93MB currently).
           Also Git-LFS-tracked. Now implemented in scripts/fetchers/bns.py:fetch_imports and connected.
+      GDP_PER_CAPITA:
+        status: confirmed
+        page_url: "https://taldau.stat.gov.kz/ru/Industry/GetIndustryByID/700894"
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 2709380
+        format: json
+        notes: >
+          2026-08-30. Same Taldau mechanism as GDP_REAL (see its notes for how this was
+          cracked) -- indexId found in the same national-accounts index list. Live-verified:
+          HTTP 200, values in plausible KZT range for nominal GDP per capita. Implemented via
+          scripts/fetchers/bns.py:_fetch_taldau_annual_index, wrapper fetch_gdp_per_capita.
+      GDP_DEFLATOR:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 2970978
+        format: json
+        notes: "Same mechanism as GDP_PER_CAPITA. fetch_gdp_deflator."
+      GFCF:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 700906
+        format: json
+        notes: >
+          Same mechanism. This is the NATIONAL-ACCOUNTS gross fixed capital formation
+          aggregate (счет товаров и услуг), distinct from the INVESTMENT indicator above
+          (which is BNS's enterprise-survey-based "investment in fixed capital"). Both are
+          legitimate but conceptually different series -- kept separate rather than merged.
+          DATA GAP (sanity-checked 2026-08-30): years 2010-2013 are missing from this series
+          (22 of 26 possible years present, 2000-2025) -- confirmed this is a real gap in the
+          source, not a parsing bug (the SAME 4 years are missing from NET_EXPORTS and
+          HOUSEHOLD_CONSUMPTION below too, consistently, while GDP_DEFLATOR/GDP_PER_CAPITA
+          from the same category have no gap). Likely a national-accounts methodology/base-
+          year revision that left these specific expenditure-side series unpublished for that
+          window. fetch_gfcf.
+      GFCF_VOLUME_INDEX:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 700981
+        format: json
+        notes: "Same mechanism. fetch_gfcf_volume_index."
+      NET_EXPORTS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 2709378
+        format: json
+        notes: >
+          Same mechanism. Same 2010-2013 gap as GFCF (see its notes). Negative values in
+          2001-2002 are real (pre-oil-boom period, sanity-checked against known Kazakhstan
+          economic history), not a sign error.
+          fetch_net_exports.
+      HOUSEHOLD_CONSUMPTION:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 700966
+        format: json
+        notes: "Same mechanism. Same 2010-2013 gap as GFCF (see its notes). fetch_household_consumption."
+      COMPENSATION_EMPLOYEES:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 700938
+        format: json
+        notes: "Same mechanism. fetch_compensation_employees."
+      GVA_TRIED_NOT_CONNECTED:
+        status: not_connected
+        notes: >
+          Валовая добавленная стоимость (Gross Value Added, indexId 700916) was tried with
+          the same mechanism and returned HTTP 500 (not empty-but-200 like the others before
+          they were fixed) -- GetIndexPeriods and getMeasureTreeNodes both returned empty for
+          this index_id with p_measure_id=7, suggesting it needs a different measure_id not
+          yet identified. Not in config/indicators.yaml as a real indicator (no id assigned);
+          noting here only so a future attempt doesn't re-discover this from scratch.
+      AVG_WAGE:
+        status: confirmed
+        page_url: "https://taldau.stat.gov.kz/ru/Industry/GetIndustryByID/702832"
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 702972
+        format: json
+        notes: >
+          2026-08-30. Found under Taldau's labor-statistics category (GetIndustryByID/702832),
+          title "Среднемесячная номинальная заработная плата одного работника". Unlike the
+          national-accounts indicators, this index is classified across 5 dictionaries at once
+          (region, economic activity, locality type, enterprise size, sex), not just region --
+          blind measure_id=7/dicIds=67 (by analogy to GDP_REAL) returned HTTP 500. Cracked with
+          the same browser-XHR-instrumentation technique as GDP_REAL: real request captured as
+          measure_id=1, terms=741880,741885,741917,3629946,741935 (the "Всего" value in each of
+          the 5 dictionaries), dic_ids=68,859,776,2813,576. Independently re-verified stateless
+          via plain requests.post. Values plausible against an independently found BNS press
+          figure (Q4 2025 = 473,158 KZT vs. this series' 2025 annual average = 443,315 KZT --
+          consistent, since Q4 sits above the yearly average in an up-trending series). The
+          _fetch_taldau_annual_index helper was generalized to accept measure_id/terms/dic_ids
+          overrides for this. fetch_avg_wage.
+      PPI_NOT_CONNECTED:
+        status: not_connected
+        notes: >
+          2026-08-30. Page found (stat.gov.kz/ru/open-data/stat-prices/474296/, "13.2 Индекс
+          цен производителей"), elementId=1626 confirmed as the real download link (a second
+          id on the page, 280695, 404s). BUT: the CSV variant only contains data through Q4
+          2013 (12 rows total for the national/QoQ/whole-industry filter) -- stale, not a
+          current series. The JSON variant (13MB) is MALFORMED at the source -- json.loads
+          fails with "Unterminated string" partway through, confirmed reproducible with a full,
+          untruncated 13,129,766-byte download matching Content-Length exactly (so this is a
+          source-side data quality issue, not a network truncation on our end). Checked nearby
+          elementIds on the /ru/industries/economy/prices/ page (1642, 1632, 1644) -- all
+          resolve but are OTHER price indices (forestry products, commercial real estate
+          rental, agricultural producer prices), not industrial PPI. Not connected -- no
+          working current source found this session.
+      RETAIL_TRADE_NOT_CONNECTED:
+        status: not_connected
+        notes: >
+          2026-08-30. Searched Taldau's domestic-trade category (GetIndustryByID/702017) --
+          it lists commodity-exchange statistics (exchange count, trade volume, market count)
+          but no direct retail/wholesale turnover series. A candidate indexId (704502) surfaced
+          via web search but its actual content wasn't confirmed as retail turnover before time
+          was allocated elsewhere in this session. Not connected -- needs a more targeted
+          search (e.g. the specific "Товарооборот розничной торговли" page) in a future pass.
+      CONSTRUCTION_NOT_CONNECTED:
+        status: not_connected
+        notes: >
+          2026-08-30. Not researched this session (deprioritized after PPI and retail trade
+          both required more effort than budgeted for this batch) -- no claim of unavailability,
+          simply not yet attempted.
 
   nbk:
     name: "Национальный Банк Республики Казахстан"
@@ -240,6 +361,68 @@ agencies:
         download_url: "https://data.nationalbank.kz/api/v1/data?formId=51"
         format: json
         notes: "row_code=5. See M2 notes above for how the mapping was verified, and for the 2021-12-01 data quality flag that applies here too. Now implemented in scripts/fetchers/nbk.py:fetch_m3 and connected."
+      MONETARY_BASE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=51"
+        format: json
+        notes: >
+          2026-08-30. Same formId=51 dataset as M2/M3, row_code=1 ("Денежная база
+          (резервные деньги)"). Verified against the human-facing table the same way as M2/M3
+          -- matching values confirmed. fetch_monetary_base.
+      M0:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=51"
+        format: json
+        notes: "row_code=2 (\"M0\", cash in circulation outside the banking system). Same verification as MONETARY_BASE. fetch_m0."
+      M1:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=51"
+        format: json
+        notes: "row_code=3 (\"M1\"). Same verification as MONETARY_BASE. fetch_m1."
+      FX_RESERVES:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=34"
+        format: json
+        notes: >
+          2026-08-30. Found via GET /api/v1/data/categories (category "monetary" ->
+          subcategory "monetary statistics") -> formId=34, "International Reserves and
+          foreign currency assets of the National Fund of Republic of Kazakhstan". Confirmed
+          live: the row with class_type='gross international reserves' and NO subtype key is
+          the total (USD million); rows WITH a subtype ('monetary gold', 'assets in cfc') sum
+          to it exactly for a sample date (2026-07-01: 47572.42 + 14256.21 = 61828.64,
+          matching the no-subtype total to the cent) -- confirms real total+breakdown
+          structure, not a coincidence. A separate 'net international reserves' class_type
+          also exists (gross minus liabilities) but was not used here. fetch_fx_reserves.
+      NATIONAL_FUND_ASSETS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=34"
+        format: json
+        notes: >
+          2026-08-30. SAME formId=34 as FX_RESERVES -- discovered incidentally while
+          researching reserves (this form conveniently bundles both). Row identified by
+          subtype='foreign currency assets of the national fund of kazakhstan'. Agency is
+          listed as nbk (not minfin) here because NBK is the actual API source, even though
+          the National Fund itself is a fiscal/sovereign-wealth-fund concept -- category
+          tagged 'fiscal' in indicators.yaml to reflect its economic meaning. fetch_national_fund_assets.
+      DEPOSIT_RATE_NOT_CONNECTED:
+        status: not_connected
+        notes: >
+          Investigated 2026-08-30. formId=268 ("Weighted average interest rates of
+          second-tier banks on attracted deposits") is real and live-verified, but every row
+          is a specific cross-tab cell (agent x currency x deposit_term x deposit_type) with
+          NO aggregate/total row in any dimension (confirmed via /api/v1/data/filter-options
+          -- no "Total"/"All" value exists for any of the 4 dimensions). Picking one specific
+          combination and presenting it as "the" deposit rate would be misleading without
+          further research into which combination NBK or analysts treat as the headline
+          figure. Not in config/indicators.yaml as a real indicator; noted here so a future
+          attempt starts from formId=268 rather than re-discovering it.
+      LENDING_RATE_NOT_CONNECTED:
+        status: not_connected
+        notes: >
+          Same situation as DEPOSIT_RATE_NOT_CONNECTED: formId=486 ("Interest rates on loans
+          issued by STB") is real and live-verified but has no aggregate row across its
+          currency x maturity_detailed x subject_type_detailed dimensions. Not connected for
+          the same reason.
     publication_calendar_url: "https://nationalbank.kz/ru/statisticalinformation/grafik-vypuska-statisticheskoy-informacii"
     publication_calendar_notes: >
       Verified live HTML page, filterable by year/category, with an XLSX export button
@@ -323,6 +506,33 @@ agencies:
           the resulting series, e.g. 2019-10 to 2021-01 and 2021-10 to 2024-07 -- not
           fabricated/interpolated). Now implemented in
           scripts/fetchers/minfin.py:fetch_gov_debt and connected.
+      GOV_HEALTH_SPENDING:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "Healthcare"
+        format: xls
+        frequency: annual
+        notes: >
+          2026-08-30. Same "Dynamics of execution of the republican budget" file as
+          GOV_REVENUE/GOV_EXPENDITURE -- functional breakdown row 'Healthcare' (under
+          section II. Expenses), appears exactly once in the sheet. fetch_gov_health_spending.
+      GOV_EDUCATION_SPENDING:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "Education"
+        format: xls
+        frequency: annual
+        notes: "Same file, row 'Education'. fetch_gov_education_spending."
+      GOV_SOCIAL_SPENDING:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "Social assistance and social security"
+        format: xls
+        frequency: annual
+        notes: "Same file, row 'Social assistance and social security'. fetch_gov_social_spending."
 
   imf:
     name: "International Monetary Fund"
@@ -377,3 +587,41 @@ agencies:
           than the separate BOP dataset (agency IMF.STA) that also exists -- BOP's exact
           indicator key was not resolved to a working query this session, only its dataflow
           existence was confirmed. BCA_NGDPD is % of GDP; BCA (same URL pattern) is USD level.
+      IMF_UNEMPLOYMENT:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: LUR
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.LUR"
+        notes: >
+          2026-08-30. Verified live via CSV response (Accept: application/vnd.sdmx.data+csv).
+          Standard WEO code, worked on first try. Cross-check: WEO unemployment ~4.4% is
+          close to (not identical to, different methodology/source) BNS's own UNEMPLOYMENT
+          series (~4.6-4.8%) -- consistent, not contradictory.
+      IMF_GOV_BALANCE:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: GGXCNL_NGDP
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.GGXCNL_NGDP"
+        notes: "General government net lending/borrowing, % of GDP. Verified live 2026-08-30, standard WEO code."
+      IMF_GOV_DEBT:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: GGXWDG_NGDP
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.GGXWDG_NGDP"
+        notes: >
+          General government gross debt, % of GDP -- note this is a BROADER concept than
+          Minfin's GOV_DEBT (which is specifically Republican + local government + guaranteed
+          debt, KZT). Both are legitimate but not directly comparable without reconciling
+          definitions; kept as separate indicators rather than merged. Verified live 2026-08-30.

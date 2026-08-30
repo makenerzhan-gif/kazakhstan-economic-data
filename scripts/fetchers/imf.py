@@ -114,3 +114,20 @@ def fetch_inflation() -> tuple[list[dict], dict]:
 
 def fetch_current_account() -> tuple[list[dict], dict]:
     return _fetch_weo_series("IMF_CURRENT_ACCOUNT", "WEO", "IMF.RES", "9.0.0", "KAZ", "BCA_NGDPD")
+
+
+def fetch_unemployment() -> tuple[list[dict], dict]:
+    """WEO unemployment rate. Verified live 2026-08-30: indicator code LUR."""
+    return _fetch_weo_series("IMF_UNEMPLOYMENT", "WEO", "IMF.RES", "9.0.0", "KAZ", "LUR")
+
+
+def fetch_gov_balance() -> tuple[list[dict], dict]:
+    """WEO general government net lending/borrowing, % of GDP.
+    Verified live 2026-08-30: indicator code GGXCNL_NGDP."""
+    return _fetch_weo_series("IMF_GOV_BALANCE", "WEO", "IMF.RES", "9.0.0", "KAZ", "GGXCNL_NGDP")
+
+
+def fetch_gov_debt() -> tuple[list[dict], dict]:
+    """WEO general government gross debt, % of GDP.
+    Verified live 2026-08-30: indicator code GGXWDG_NGDP."""
+    return _fetch_weo_series("IMF_GOV_DEBT", "WEO", "IMF.RES", "9.0.0", "KAZ", "GGXWDG_NGDP")

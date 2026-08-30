@@ -173,3 +173,176 @@ indicators:
     unit: "% of GDP"
     category: international_projection
     source_status: confirmed
+
+  # --- Second batch (2026-08-30): national-accounts, monetary, and fiscal detail ---
+
+  - id: GDP_PER_CAPITA
+    name_ru: "ВВП на душу населения, номинальный"
+    name_en: "Nominal GDP per capita"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: GDP_DEFLATOR
+    name_ru: "Дефлятор ВВП, методом производства"
+    name_en: "GDP Deflator (production method)"
+    agency: bns
+    frequency: annual
+    unit: "% change vs previous period"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: GFCF
+    name_ru: "Валовое накопление основного капитала"
+    name_en: "Gross Fixed Capital Formation"
+    agency: bns
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: GFCF_VOLUME_INDEX
+    name_ru: "Индекс физического объема валового накопления основного капитала"
+    name_en: "GFCF Physical Volume Index"
+    agency: bns
+    frequency: annual
+    unit: "% change vs previous period"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: NET_EXPORTS
+    name_ru: "Чистый экспорт"
+    name_en: "Net Exports"
+    agency: bns
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: HOUSEHOLD_CONSUMPTION
+    name_ru: "Расходы на конечное потребление домашних хозяйств"
+    name_en: "Household Final Consumption Expenditure"
+    agency: bns
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: COMPENSATION_EMPLOYEES
+    name_ru: "Оплата труда"
+    name_en: "Compensation of Employees"
+    agency: bns
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: MONETARY_BASE
+    name_ru: "Денежная база (резервные деньги)"
+    name_en: "Monetary Base (Reserve Money)"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: M0
+    name_ru: "Наличные деньги в обращении (M0)"
+    name_en: "Cash in Circulation (M0)"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: M1
+    name_ru: "Денежный агрегат M1"
+    name_en: "Money Supply M1"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: GOV_HEALTH_SPENDING
+    name_ru: "Расходы республиканского бюджета на здравоохранение"
+    name_en: "Republican Budget Healthcare Spending"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_EDUCATION_SPENDING
+    name_ru: "Расходы республиканского бюджета на образование"
+    name_en: "Republican Budget Education Spending"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_SOCIAL_SPENDING
+    name_ru: "Расходы республиканского бюджета на социальную помощь и соцобеспечение"
+    name_en: "Republican Budget Social Assistance Spending"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: IMF_UNEMPLOYMENT
+    name_ru: "IMF WEO: уровень безработицы, Казахстан"
+    name_en: "IMF WEO: Unemployment Rate, Kazakhstan"
+    agency: imf
+    frequency: annual
+    unit: "%"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_GOV_BALANCE
+    name_ru: "IMF WEO: сальдо бюджета сектора госуправления, Казахстан"
+    name_en: "IMF WEO: General Government Net Lending/Borrowing, Kazakhstan"
+    agency: imf
+    frequency: annual
+    unit: "% of GDP"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_GOV_DEBT
+    name_ru: "IMF WEO: валовой долг сектора госуправления, Казахстан"
+    name_en: "IMF WEO: General Government Gross Debt, Kazakhstan"
+    agency: imf
+    frequency: annual
+    unit: "% of GDP"
+    category: international_projection
+    source_status: confirmed
+
+  - id: FX_RESERVES
+    name_ru: "Валовые международные резервы НБ РК"
+    name_en: "Gross International Reserves"
+    agency: nbk
+    frequency: monthly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: NATIONAL_FUND_ASSETS
+    name_ru: "Активы Национального фонда РК (иностранная валюта)"
+    name_en: "National Fund of Kazakhstan -- Foreign Currency Assets"
+    agency: nbk
+    frequency: monthly
+    unit: "USD million"
+    category: fiscal
+    source_status: confirmed
+
+  - id: AVG_WAGE
+    name_ru: "Среднемесячная номинальная заработная плата одного работника"
+    name_en: "Average Monthly Nominal Wage per Worker"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: labor
+    source_status: confirmed
