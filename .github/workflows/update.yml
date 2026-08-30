@@ -1,0 +1,50 @@
+name: Update Kazakhstan Economic Data
+
+on:
+  schedule:
+    # Deliberate default: once daily, 06:00 UTC (~11:00/12:00 Almaty time). Not a
+    # placeholder -- this is the concrete value that runs. Rationale, confirmed
+    # against config/sources.yaml's research (NBK's publication calendar at
+    # nationalbank.kz/ru/statisticalinformation/grafik-vypuska-statisticheskoy-informacii,
+    # BNS/Minfin's observed release cadence): the daily NBK USD/KZT rate and base-rate
+    # feed need same-day freshness; BNS (monthly/quarterly), Minfin (monthly/quarterly),
+    # and IMF (biannual WEO) change far less often, but re-checking them daily is cheap
+    # -- the job commits nothing when nothing actually changed -- and this guarantees we
+    # never miss a monthly/quarterly release by more than a day. Revisit only if daily
+    # runs prove wasteful in practice, or if EXCHANGE_RATE ever needs its own faster cron.
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          # Populate with `secrets.<NAME>` here if/when any source ends up requiring
+          # an API key. Never hardcode a key in this file or in raw data.
+          PYTHONUNBUFFERED: "1"
+        run: python scripts/update_all.py
+
+      - name: Commit and push if there are changes
+        run: |
+          git config user.name "kz-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ metadata/ dictionaries/ project_knowledge/ reports/ logs/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Automated data update $(date -u +'%Y-%m-%d')"
+            git push
+          fi
