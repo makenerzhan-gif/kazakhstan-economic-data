@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T23:38:22.904883
+Run timestamp: 2026-08-30T19:04:45.144859
 Unified dataset updated: True
 Tests passed: True
 
@@ -277,6 +277,31 @@ Tests passed: True
   - warning: Unexpected jump of 106.4% between 2026-01-31 (66067.6032816) and 2026-02-28 (136357.89648719).
   - warning: Unexpected jump of 164.6% between 2026-02-28 (136357.89648719) and 2026-03-31 (360761.31747095).
   - warning: Unexpected jump of 133.4% between 2026-03-31 (360761.31747095) and 2026-05-31 (841966.76921362).
+- **minfin/GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Unexpected jump of 56.4% between 2025-02-28 (180170.77747968) and 2025-03-31 (281769.04392764).
+  - warning: Unexpected jump of 102.3% between 2025-03-31 (281769.04392764) and 2025-06-30 (570045.14241107).
+  - warning: Unexpected jump of 93.9% between 2025-11-30 (1015393.44607841) and 2026-01-31 (61529.58985924).
+  - warning: Unexpected jump of 151.5% between 2026-01-31 (61529.58985924) and 2026-02-28 (154771.97288396).
+  - warning: Unexpected jump of 59.3% between 2026-02-28 (154771.97288396) and 2026-03-31 (246566.9662505).
+  - warning: Unexpected jump of 62.4% between 2026-03-31 (246566.9662505) and 2026-05-31 (400318.17793383).
+- **minfin/GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Unexpected jump of 115.2% between 2025-02-28 (96555.86459701) and 2025-03-31 (207819.60611552).
+  - warning: Unexpected jump of 178.5% between 2025-03-31 (207819.60611552) and 2025-06-30 (578778.1846126).
+  - warning: Unexpected jump of 57.8% between 2025-07-31 (585956.90578026) and 2025-08-31 (924451.68804013).
+  - warning: Unexpected jump of 99.9% between 2025-11-30 (1597148.16659897) and 2026-01-31 (1038.25063271).
+  - warning: Unexpected jump of 6099.5% between 2026-01-31 (1038.25063271) and 2026-02-28 (64366.01472542).
+  - warning: Unexpected jump of 339.7% between 2026-03-31 (84218.42274457) and 2026-05-31 (370313.62007573).
+- **minfin/GOV_PENSIONS_EXPENDITURE** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Unexpected jump of 98.0% between 2025-03-31 (1090312.542) and 2025-06-30 (2158513.735).
+  - warning: Unexpected jump of 89.1% between 2025-11-30 (3949043.456) and 2026-01-31 (430646.023).
+  - warning: Unexpected jump of 94.6% between 2026-01-31 (430646.023) and 2026-02-28 (837970.387).
+  - warning: Unexpected jump of 65.1% between 2026-03-31 (1240814.106) and 2026-05-31 (2048661.101).
+- **minfin/GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Unexpected jump of 235.4% between 2025-03-31 (38684.86812658) and 2025-06-30 (129731.75751781).
+  - warning: Unexpected jump of 64.0% between 2025-10-31 (252240.18289344) and 2025-11-30 (413622.6786086).
+  - warning: Unexpected jump of 98.5% between 2025-11-30 (413622.6786086) and 2026-01-31 (6318.84247).
+  - warning: Unexpected jump of 445.9% between 2026-01-31 (6318.84247) and 2026-02-28 (34496.21587).
+  - warning: Unexpected jump of 481.3% between 2026-03-31 (35310.83917) and 2026-05-31 (205261.99334018).
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% between 1995-01-01 (-8.2) and 1996-01-01 (0.5).
   - warning: Unexpected jump of 240.0% between 1996-01-01 (0.5) and 1997-01-01 (1.7).
