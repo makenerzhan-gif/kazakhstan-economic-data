@@ -495,3 +495,176 @@ def fetch_deposits_total() -> tuple[list[dict], dict]:
         "note": "Million KZT. report_date runs about one month ahead of the human page's column label -- not shifted here.",
     }
     return records, manifest
+
+
+# formId=353, "Абсолютные и относительные параметры внешнего долга" (Absolute and relative
+# parameters of external debt), found 2026-08-30 via GET /api/v1/data/categories -> category
+# "external sector" -> subcategory "external debt". Resolves the gap logged earlier as
+# EXTERNAL_DEBT_NOT_CONNECTED (formIds 358/293 checked then had no clean total row): this
+# form's ed_code='Absolute indicators - External debt' with period='quarter' is a genuinely
+# pre-aggregated single headline total, 85 rows, one per quarter, 2005-Q2 onward, no other
+# dimension to sum across. (period='Year' rows for the same dates/values also exist and are
+# excluded here to avoid mixing two granularities of the same already-aggregated series.)
+EXTERNAL_DEBT_FORM_ID = "353"
+
+
+def fetch_external_debt() -> tuple[list[dict], dict]:
+    """Total gross external debt (public + private), USD million, quarterly.
+    Verified live 2026-08-30. See EXTERNAL_DEBT_FORM_ID comment for how the clean
+    aggregate row was found after two prior forms (358, 293) turned out to have
+    no total row at all."""
+    all_rows: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                             params={"formId": EXTERNAL_DEBT_FORM_ID, "page": str(page), "pageSize": "500"},
+                             timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        all_rows.extend(data["rows"])
+        if len(all_rows) >= data["totalRows"]:
+            break
+        page += 1
+
+    today = date.today()
+    content = json.dumps(all_rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "EXTERNAL_DEBT", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "EXTERNAL_DEBT", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={EXTERNAL_DEBT_FORM_ID}",
+    })
+
+    matching = [r for r in all_rows
+                if r.get("ed_code") == "Absolute indicators - External debt" and r.get("period") == "quarter"]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT",
+                "WHAT CHANGED: no rows found with ed_code='Absolute indicators - External debt', period='quarter'",
+                f"ACTION REQUIRED: inspect formId={EXTERNAL_DEBT_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in matching], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "quarterly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={EXTERNAL_DEBT_FORM_ID}",
+        "dataset_id": f"formId={EXTERNAL_DEBT_FORM_ID},ed_code=Absolute indicators - External debt,period=quarter",
+        "note": "USD million. Gross external debt total (public + private), no further breakdown.",
+    }
+    return records, manifest
+
+
+# formId=27, "Кредиты банковского сектора экономике - ставки" (loan-market category).
+# Found 2026-08-30 via the same categories endpoint. Resolves LOANS_TO_ECONOMY's sibling
+# gap for rates: unlike the raw loan-volume forms (4, 445, 488, 493 -- all checked this
+# session, all pure microdata with zero aggregate rows), this rates form carries its own
+# `agg_level` field, and agg_level='1' rows have every other dimension (maturity, purpose,
+# region, subject_type, enterprise_type, funding_type, residency) null except currency --
+# i.e. NBK's own pre-computed, currency-only-split weighted average. 'National currency' is
+# used as the headline figure (matches how KZT-denominated rates are conventionally quoted
+# in NBK's own commentary); the foreign-currency variant also exists at the same agg_level
+# but is not fetched here.
+LENDING_RATE_FORM_ID = "27"
+
+
+def fetch_lending_rate() -> tuple[list[dict], dict]:
+    """Weighted average lending rate, second-tier banks, national currency, %, monthly.
+    Verified live 2026-08-30. See LENDING_RATE_FORM_ID comment for how the aggregate
+    was found via the form's own agg_level field rather than summing raw microdata."""
+    all_rows: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                             params={"formId": LENDING_RATE_FORM_ID, "page": str(page), "pageSize": "500"},
+                             timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        all_rows.extend(data["rows"])
+        if len(all_rows) >= data["totalRows"]:
+            break
+        page += 1
+
+    today = date.today()
+    content = json.dumps(all_rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "LENDING_RATE", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "LENDING_RATE", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={LENDING_RATE_FORM_ID}",
+    })
+
+    matching = [r for r in all_rows if r.get("agg_level") == "1" and r.get("currency") == "National currency"]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/LENDING_RATE",
+                "WHAT CHANGED: no rows found with agg_level='1', currency='National currency'",
+                f"ACTION REQUIRED: inspect formId={LENDING_RATE_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in matching], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={LENDING_RATE_FORM_ID}",
+        "dataset_id": f"formId={LENDING_RATE_FORM_ID},agg_level=1,currency=National currency",
+        "note": "%. Weighted average lending rate, national-currency loans only, all other dimensions "
+                "(maturity/purpose/region/subject/entity size/funding source) aggregated by NBK itself.",
+    }
+    return records, manifest
+
+
+# formId=268, "Средневзвешенные ставки вознаграждения банков второго уровня по привлеченным
+# депозитам" (deposit-market category). Found 2026-08-30 via the same categories endpoint.
+# Unlike form 27, this one has no explicit agg_level field, but deposit_term and
+# deposit_type both take a null value for some rows -- confirmed this null represents
+# NBK's own "all terms"/"all types" aggregation (not missing data) by checking that,
+# within a given agent+currency, exactly one row per report_date has both fields null.
+# 'Individuals' + 'National currency' is used as the headline figure (retail KZT deposits,
+# the rate conventionally cited in NBK commentary); the other 3 agent/currency combinations
+# exist at the same aggregation level but are not fetched here.
+DEPOSIT_RATE_FORM_ID = "268"
+
+
+def fetch_deposit_rate() -> tuple[list[dict], dict]:
+    """Weighted average deposit rate, second-tier banks, individuals, national currency,
+    %, monthly. Verified live 2026-08-30. See DEPOSIT_RATE_FORM_ID comment for how the
+    aggregate was found. Sanity check: sits below LENDING_RATE and below BASE_RATE for
+    the same recent months -- the expected deposit < lending spread direction."""
+    all_rows: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                             params={"formId": DEPOSIT_RATE_FORM_ID, "page": str(page), "pageSize": "500"},
+                             timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        all_rows.extend(data["rows"])
+        if len(all_rows) >= data["totalRows"]:
+            break
+        page += 1
+
+    today = date.today()
+    content = json.dumps(all_rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "DEPOSIT_RATE", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "DEPOSIT_RATE", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={DEPOSIT_RATE_FORM_ID}",
+    })
+
+    matching = [r for r in all_rows
+                if r.get("deposit_term") is None and r.get("deposit_type") is None
+                and r.get("agent") == "Individuals" and r.get("currency") == "National currency"]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/DEPOSIT_RATE",
+                "WHAT CHANGED: no rows found with deposit_term=None, deposit_type=None, "
+                "agent='Individuals', currency='National currency'",
+                f"ACTION REQUIRED: inspect formId={DEPOSIT_RATE_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in matching], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={DEPOSIT_RATE_FORM_ID}",
+        "dataset_id": f"formId={DEPOSIT_RATE_FORM_ID},agent=Individuals,currency=National currency",
+        "note": "%. Weighted average deposit rate, individuals, national-currency deposits only, "
+                "all terms/types aggregated by NBK itself.",
+    }
+    return records, manifest

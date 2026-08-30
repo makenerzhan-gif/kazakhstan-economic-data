@@ -670,3 +670,165 @@ indicators:
     unit: "KZT"
     category: trade
     source_status: confirmed
+
+  - id: IMF_GDP_PER_CAPITA_PPP
+    name_ru: "IMF WEO: ВВП на душу населения по ППС"
+    name_en: "IMF WEO: GDP per Capita, PPP"
+    agency: imf
+    frequency: annual
+    unit: "international dollars"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_GDP_WORLD_SHARE_PPP
+    name_ru: "IMF WEO: доля Казахстана в мировом ВВП по ППС"
+    name_en: "IMF WEO: Share of World GDP, PPP"
+    agency: imf
+    frequency: annual
+    unit: "% of world total"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_INFLATION_EOP
+    name_ru: "IMF WEO: инфляция на конец периода"
+    name_en: "IMF WEO: Inflation, End of Period"
+    agency: imf
+    frequency: annual
+    unit: "% change"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_GOV_NET_DEBT_RATIO
+    name_ru: "IMF WEO: чистый долг сектора госуправления, % ВВП"
+    name_en: "IMF WEO: General Government Net Debt, % of GDP"
+    agency: imf
+    frequency: annual
+    unit: "% of GDP"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_GDP_DEFLATOR_INDEX
+    name_ru: "IMF WEO: дефлятор ВВП, индекс"
+    name_en: "IMF WEO: GDP Deflator, Index"
+    agency: imf
+    frequency: annual
+    unit: "index"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_REAL_GDP
+    name_ru: "IMF WEO: реальный ВВП, национальная валюта"
+    name_en: "IMF WEO: Real GDP, National Currency"
+    agency: imf
+    frequency: annual
+    unit: "KZT"
+    category: international_projection
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT
+    name_ru: "Валовой внешний долг РК"
+    name_en: "Gross External Debt"
+    agency: nbk
+    frequency: quarterly
+    unit: "million USD"
+    category: monetary
+    source_status: confirmed
+
+  - id: LENDING_RATE
+    name_ru: "Средневзвешенная ставка вознаграждения по кредитам БВУ (тенге)"
+    name_en: "Weighted Average Lending Rate, Second-Tier Banks (National Currency)"
+    agency: nbk
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: DEPOSIT_RATE
+    name_ru: "Средневзвешенная ставка вознаграждения по депозитам физических лиц (тенге)"
+    name_en: "Weighted Average Deposit Rate, Individuals (National Currency)"
+    agency: nbk
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: CONSTRUCTION
+    name_ru: "Объем выполненных строительных работ (услуг)"
+    name_en: "Volume of Construction Works Performed"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: production
+    source_status: confirmed
+
+  - id: POPULATION_BNS
+    name_ru: "Среднегодовая численность населения"
+    name_en: "Average Annual Population"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: demographic
+    source_status: confirmed
+
+  - id: REAL_WAGE_INDEX
+    name_ru: "Индекс реальной заработной платы"
+    name_en: "Real Wage Index"
+    agency: bns
+    frequency: annual
+    unit: "% of prior period"
+    category: labor
+    source_status: confirmed
+
+  - id: EMPLOYED_TOTAL
+    name_ru: "Занятое население"
+    name_en: "Total Employed Population"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: labor
+    source_status: confirmed
+
+  - id: BIRTHS_TOTAL
+    name_ru: "Число родившихся (живыми)"
+    name_en: "Number of Live Births"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: demographic
+    source_status: confirmed
+
+  - id: DEATHS_TOTAL
+    name_ru: "Число умерших"
+    name_en: "Number of Deaths"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: demographic
+    source_status: confirmed
+
+  - id: EXCISE_TAX_REVENUE
+    name_ru: "Поступления акцизного налога"
+    name_en: "Excise Tax Revenue"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_DEBT_DOMESTIC
+    name_ru: "Государственный долг РК, внутренний"
+    name_en: "Government Debt, Domestic"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_DEBT_EXTERNAL
+    name_ru: "Государственный долг РК, внешний"
+    name_en: "Government Debt, External"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed

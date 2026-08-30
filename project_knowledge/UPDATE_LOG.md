@@ -293,3 +293,68 @@ figures for the sector (~7%) -- expected, since this series is in value/nominal 
 therefore also reflects price inflation, not a discrepancy.
 
 **73/73 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-30 — fifth scale-up batch: 73 -> 91 indicators
+Broadest single batch so far, spanning all four agencies. Proposed a ~23-candidate list
+across BNS/NBK/Minfin/IMF up front, researched each live, connected 18 (2 candidates from
+the original list -- POVERTY_RATE, individual-income/property/customs taxes, and
+HOUSING_COMMISSIONED -- turned out not to have a clean matching series or fetcher-ready
+structure and were left not_connected rather than forced in; NATIONAL_FUND_TRANSFERS wasn't
+reached given time budget).
+
+**IMF WEO (6), same proven mechanism, all standard codes:** IMF_GDP_PER_CAPITA_PPP (PPPPC),
+IMF_GDP_WORLD_SHARE_PPP (PPPSH), IMF_INFLATION_EOP (PCPIEPCH), IMF_GOV_NET_DEBT_RATIO
+(GGXWDN_NGDP), IMF_GDP_DEFLATOR_INDEX (NGDP_D), IMF_REAL_GDP (NGDP_R). Tried LE (employment
+level) first -- returned 2 rows with empty OBS_VALUE for Kazakhstan in this vintage, dropped
+rather than forced in. Cross-check: IMF_GOV_NET_DEBT_RATIO (8.99% of GDP, 2031) sits well
+below IMF_GOV_DEBT's gross figure (32.11%), consistent with Kazakhstan's National Fund
+assets offsetting gross liabilities.
+
+**NBK (3), resolving three gaps explicitly logged as not_connected in earlier batches:**
+- EXTERNAL_DEBT: found via `GET /api/v1/data/categories` (a full form catalog by human name,
+  not used in earlier attempts) -- formId=353's "Absolute indicators - External debt" row
+  (period='quarter' only) is a genuinely pre-aggregated headline total, unlike the two forms
+  checked previously (358, 293). 85 rows, 2005-Q2 to 2026-Q2.
+- LENDING_RATE / DEPOSIT_RATE: re-investigated the same forms flagged not_connected before
+  (486, 268) plus a new one (27) -- found that formId=27 carries an explicit `agg_level`
+  field (agg_level='1' = NBK's own currency-only-split aggregate) and formId=268's null
+  deposit_term/deposit_type values are NBK's own "all terms/types" aggregation, not missing
+  data. Used national-currency headline figures for both (56 and 43 monthly rows
+  respectively). Sanity-checked: DEPOSIT_RATE (~14.7%) < BASE_RATE (16.75%) <
+  LENDING_RATE (~20.8%) -- correct spread ordering.
+- Caught and fixed a pagination bug during EXTERNAL_DEBT research: the API's `page` param is
+  0-indexed and must be driven by the response's own `totalRows` field -- an off-by-one
+  manual-testing script (page starting at 1) silently truncated results by ~500 rows before
+  being caught by comparing against `totalRows`. The actual codebase's existing pagination
+  (in fetch_fx_reserves etc.) was already correct; only ad-hoc research scripts had the bug.
+- LOANS_TO_ECONOMY remains not_connected: also checked formIds 488/493 ("analytical
+  representation") this batch -- both are pure microdata with no agg_level-style field and
+  no null-as-aggregate pattern. No further formIds identified to try.
+
+**BNS (6), all via Taldau's site search API (proven for RETAIL_TRADE) plus the live-ExtJS-
+tree param-recovery technique (proven for AVG_WAGE/RETAIL_TRADE) for each multi-dictionary
+index:** CONSTRUCTION (701885, resolves the "not researched" gap), POPULATION_BNS (703834,
+average annual population), REAL_WAGE_INDEX (702976, inflation-adjusted companion to
+AVG_WAGE), EMPLOYED_TOTAL (702840, companion to UNEMPLOYMENT), BIRTHS_TOTAL (703839),
+DEATHS_TOTAL (703847). Cross-check: POPULATION_BNS's 2025 value (20,391,610.5) matches the
+already-confirmed IMF_POPULATION (20,380,366) to within 0.06% -- two independent agencies
+agreeing almost exactly. HOUSING_COMMISSIONED (701938) was found but left not_connected: its
+period_id is 8 (monthly-cumulative) rather than 7 (annual) like every other connected BNS
+Taldau indicator, and its date keys don't fit the shared annual-index helper's parsing logic
+without a real risk of silent date collisions -- left for a dedicated parser in a future
+session rather than rushed in.
+
+**Minfin (3), same "Dynamics" file as TAX_REVENUE/CORPORATE_TAX/VAT_REVENUE and same
+quarterly debt-snapshot documents as GOV_DEBT:** EXCISE_TAX_REVENUE (the third and last
+tax-type row in the Dynamics file). GOV_DEBT_DOMESTIC / GOV_DEBT_EXTERNAL (the "1.1.
+internal:" / "1.2. external:" breakdown of the "Republic of Kazakhstan Government Debt"
+line -- found by printing every column of a real document, since the descriptive label
+lives in the row's second cell, not the first). Verified: domestic (28.47T KZT) + external
+(8.35T KZT) = 36.82T KZT, matching that line's own total to 5 decimal places -- but
+explicitly documented as a NARROWER concept than GOV_DEBT itself (40.92T KZT, which also
+includes State Guarantees and Subsidiary Liabilities), so the three won't sum together.
+Individual income tax, property tax, and customs duties are not present in the Dynamics
+file and would require the much larger (50-sheet) monthly Statistical Bulletin -- not
+attempted this session given its documented structural-shift risk.
+
+**91/91 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

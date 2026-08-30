@@ -321,6 +321,130 @@ def fetch_gov_debt() -> tuple[list[dict], dict]:
     return records, manifest
 
 
+# GOV_DEBT_DOMESTIC / GOV_DEBT_EXTERNAL: same quarterly snapshot documents as GOV_DEBT
+# (DEBT_DIRECTION_ID/DEBT_ACTIVITY_ID), but a different, more specific row -- the "1.1.
+# internal:" / "1.2. external:" breakdown of row "1. Republic of Kazakhstan Government
+# Debt" (itself a sub-item of "I. State Debt"). Verified live 2026-08-30 by printing every
+# row and column of a real document: the row label lives in the SECOND column (index 1),
+# not the first (which instead holds the "1.1."/"1.2." item number) -- confirmed by summing
+# internal (28,471,879,428.3) + external (8,352,366,460.626) = 36,824,245,888.926, matching
+# row "1. Republic of Kazakhstan Government Debt" (36,824,245,888.92599) to 5 decimal places.
+# IMPORTANT: this internal+external sum is NARROWER than GOV_DEBT itself, which sources from
+# "Total State and State Guaranteed debt" (State Debt + State Guarantees + Subsidiary
+# Liabilities, i.e. I+II+III) -- GOV_DEBT_DOMESTIC + GOV_DEBT_EXTERNAL will NOT reconcile to
+# GOV_DEBT; they reconcile only to the core "Republic of Kazakhstan Government Debt" line.
+# Documented here so nobody assumes the three should sum and concludes something's broken.
+DOMESTIC_DEBT_LABEL = "internal:"
+EXTERNAL_DEBT_LABEL = "external:"
+
+
+def _parse_debt_component_document(doc: dict, label: str) -> dict | None:
+    """Same shape as _parse_debt_document, but matches a row by an EXACT (trimmed)
+    match on the row's SECOND cell (index 1) rather than a substring match on the
+    first cell -- this document's sub-rows carry their item number ('1.1.', '1.2.')
+    in column 0 and their descriptive label in column 1."""
+    file_path = doc["full_text"][0]["document"]
+    content = _download(file_path)
+    kind, wb = _open_workbook(content, file_path)
+
+    rows = list(_iter_rows(kind, wb))
+    as_of_date = None
+    target_values = None
+    for row in rows:
+        for cell in row:
+            if not cell:
+                continue
+            m = AS_OF_RE.search(str(cell))
+            if m:
+                month = EN_MONTHS.get(m.group(1).lower())
+                if month:
+                    as_of_date = f"{int(m.group(3)):04d}-{month:02d}-{int(m.group(2)):02d}"
+        if row and len(row) > 1 and isinstance(row[1], str) and row[1].strip() == label:
+            numeric_cells = [c for c in row if isinstance(c, (int, float))]
+            if len(numeric_cells) >= 1:
+                target_values = numeric_cells
+
+    if as_of_date is None or not target_values:
+        return None
+
+    tenge_thousands = target_values[-2] if len(target_values) >= 2 else target_values[-1]
+    tenge_million = float(tenge_thousands) / 1000.0
+    return {
+        "date": as_of_date,
+        "value": tenge_million,
+        "_ext": "xls" if file_path.lower().endswith(".xls") else "xlsx",
+        "_content": content,
+    }
+
+
+def _fetch_debt_component_series(label: str, indicator_id: str) -> tuple[list[dict], dict]:
+    docs = _list_documents(directions=DEBT_DIRECTION_ID, activities=DEBT_ACTIVITY_ID)
+    today = date.today()
+
+    records: list[dict] = []
+    skipped: list[int] = []
+    seen_dates: set[str] = set()
+
+    for doc in docs:
+        try:
+            parsed = _parse_debt_component_document(doc, label)
+        except Exception:  # noqa: BLE001
+            parsed = None
+        if parsed is None:
+            skipped.append(doc["id"])
+            continue
+        if parsed["date"] in seen_dates:
+            continue
+        seen_dates.add(parsed["date"])
+
+        raw_store.save_raw_bytes(SOURCE, f"{indicator_id}_{parsed['date']}", today, parsed["_ext"], parsed["_content"])
+        records.append({"date": parsed["date"], "value": parsed["value"]})
+
+    if not records:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: zero of the listed debt documents could be parsed for label {label!r}",
+                f"ACTION REQUIRED: inspect a recent document and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "n_documents_listed": len(docs), "n_parsed": len(records), "skipped_document_ids": skipped,
+        "source_url": f"{LISTING_URL}?directions={DEBT_DIRECTION_ID}&activities={DEBT_ACTIVITY_ID}",
+    })
+
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "quarterly",
+        "source_url": f"{LISTING_URL}?directions={DEBT_DIRECTION_ID}&activities={DEBT_ACTIVITY_ID}",
+        "dataset_id": f"gov.kz-debt-listing,row={label}",
+        "note": (
+            f"Built from {len(records)} of {len(docs)} listed quarterly snapshot documents "
+            f"({len(skipped)} skipped). Sub-component of 'Republic of Kazakhstan Government "
+            "Debt' (row 1 under 'I. State Debt'), NOT of the broader GOV_DEBT total (which "
+            "also includes State Guarantees and Subsidiary Liabilities, rows II+III) -- "
+            "GOV_DEBT_DOMESTIC + GOV_DEBT_EXTERNAL will not sum to GOV_DEBT. Million KZT."
+        ),
+    }
+    return records, manifest
+
+
+def fetch_gov_debt_domestic() -> tuple[list[dict], dict]:
+    """Domestic (internal) portion of the Republic of Kazakhstan Government Debt,
+    million KZT, quarterly. See DOMESTIC_DEBT_LABEL comment above for the row
+    location and the important GOV_DEBT scope caveat."""
+    return _fetch_debt_component_series(DOMESTIC_DEBT_LABEL, "GOV_DEBT_DOMESTIC")
+
+
+def fetch_gov_debt_external() -> tuple[list[dict], dict]:
+    """External portion of the Republic of Kazakhstan Government Debt, million
+    KZT, quarterly. See DOMESTIC_DEBT_LABEL comment above for the row location
+    and the important GOV_DEBT scope caveat."""
+    return _fetch_debt_component_series(EXTERNAL_DEBT_LABEL, "GOV_DEBT_EXTERNAL")
+
+
 # More rows from the same "Dynamics" file (see GOV_REVENUE/GOV_EXPENDITURE above), verified
 # 2026-08-30 by listing every row label in the sheet and picking substrings that match
 # exactly one row each -- 'BUDGET DEFICIT (SURPLUS)' alone would ambiguously match BOTH
@@ -336,6 +460,13 @@ def fetch_corporate_tax() -> tuple[list[dict], dict]:
 
 def fetch_vat_revenue() -> tuple[list[dict], dict]:
     return _fetch_dynamics_row("value added tax", "VAT_REVENUE")
+
+
+def fetch_excise_tax_revenue() -> tuple[list[dict], dict]:
+    """Excise tax revenue -- companion to CORPORATE_TAX/VAT_REVENUE, third and
+    last tax-type breakdown row in the same Dynamics file. Verified live
+    2026-08-30 by re-listing every row label in the sheet."""
+    return _fetch_dynamics_row("excise taxes", "EXCISE_TAX_REVENUE")
 
 
 def fetch_gov_defense_spending() -> tuple[list[dict], dict]:

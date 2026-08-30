@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=27",
+  "dataset_id": "formId=27,agg_level=1,currency=National currency",
+  "indicator_id": "LENDING_RATE",
+  "indicator_name": "Weighted Average Lending Rate, Second-Tier Banks (National Currency)",
+  "description": "Средневзвешенная ставка вознаграждения по кредитам БВУ (тенге)",
+  "frequency": "monthly",
+  "unit": "%",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "%. Weighted average lending rate, national-currency loans only, all other dimensions (maturity/purpose/region/subject/entity size/funding source) aggregated by NBK itself.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2022-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

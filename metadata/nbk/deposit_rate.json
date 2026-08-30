@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=268",
+  "dataset_id": "formId=268,agent=Individuals,currency=National currency",
+  "indicator_id": "DEPOSIT_RATE",
+  "indicator_name": "Weighted Average Deposit Rate, Individuals (National Currency)",
+  "description": "Средневзвешенная ставка вознаграждения по депозитам физических лиц (тенге)",
+  "frequency": "monthly",
+  "unit": "%",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "%. Weighted average deposit rate, individuals, national-currency deposits only, all terms/types aggregated by NBK itself.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2023-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

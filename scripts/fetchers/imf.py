@@ -198,3 +198,45 @@ def fetch_current_account_usd() -> tuple[list[dict], dict]:
     (-$9.953bn) / IMF_NOMINAL_GDP_USD's 2031 value ($501.68bn) = -1.984%, matching
     IMF_CURRENT_ACCOUNT's own 2031 value (-1.984%) essentially exactly."""
     return _fetch_weo_series("IMF_CURRENT_ACCOUNT_USD", "WEO", "IMF.RES", "9.0.0", "KAZ", "BCA")
+
+
+def fetch_gdp_per_capita_ppp() -> tuple[list[dict], dict]:
+    """WEO GDP per capita, PPP (international dollars). Verified live 2026-08-30:
+    indicator code PPPPC."""
+    return _fetch_weo_series("IMF_GDP_PER_CAPITA_PPP", "WEO", "IMF.RES", "9.0.0", "KAZ", "PPPPC")
+
+
+def fetch_gdp_world_share_ppp() -> tuple[list[dict], dict]:
+    """WEO share of world GDP based on PPP, %. Verified live 2026-08-30: indicator
+    code PPPSH."""
+    return _fetch_weo_series("IMF_GDP_WORLD_SHARE_PPP", "WEO", "IMF.RES", "9.0.0", "KAZ", "PPPSH")
+
+
+def fetch_inflation_eop() -> tuple[list[dict], dict]:
+    """WEO inflation, end of period consumer prices, % change (companion to
+    IMF_INFLATION, which is average-period). Verified live 2026-08-30: indicator
+    code PCPIEPCH."""
+    return _fetch_weo_series("IMF_INFLATION_EOP", "WEO", "IMF.RES", "9.0.0", "KAZ", "PCPIEPCH")
+
+
+def fetch_gov_net_debt_ratio() -> tuple[list[dict], dict]:
+    """WEO general government net debt, % of GDP (companion to IMF_GOV_DEBT, which
+    is gross debt). Verified live 2026-08-30: indicator code GGXWDN_NGDP.
+    Cross-checked: 2031 value (8.99% of GDP) sits well below IMF_GOV_DEBT's own
+    2031 gross-debt value (32.11%) -- expected direction given Kazakhstan's large
+    National Fund financial assets offset gross liabilities in the net calculation."""
+    return _fetch_weo_series("IMF_GOV_NET_DEBT_RATIO", "WEO", "IMF.RES", "9.0.0", "KAZ", "GGXWDN_NGDP")
+
+
+def fetch_nominal_gdp_deflator() -> tuple[list[dict], dict]:
+    """WEO GDP deflator, index. Verified live 2026-08-30: indicator code NGDP_D."""
+    return _fetch_weo_series("IMF_GDP_DEFLATOR_INDEX", "WEO", "IMF.RES", "9.0.0", "KAZ", "NGDP_D")
+
+
+def fetch_real_gdp_national_currency() -> tuple[list[dict], dict]:
+    """WEO real GDP, national currency, constant prices (companion to IMF_GDP_GROWTH,
+    which is the % change of this same underlying series). Verified live 2026-08-30:
+    indicator code NGDP_R. (Tried LE -- WEO employment level -- first; it returned
+    zero populated rows for Kazakhstan in this vintage, so it was dropped rather
+    than forced in with empty data.)"""
+    return _fetch_weo_series("IMF_REAL_GDP", "WEO", "IMF.RES", "9.0.0", "KAZ", "NGDP_R")

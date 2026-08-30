@@ -51,6 +51,12 @@ FETCHERS = {
     "TOTAL_CONSUMPTION_EXPENDITURE": bns_fetchers.fetch_total_consumption_expenditure,
     "CAPITAL_CONSUMPTION": bns_fetchers.fetch_capital_consumption,
     "RETAIL_TRADE": bns_fetchers.fetch_retail_trade,
+    "CONSTRUCTION": bns_fetchers.fetch_construction,
+    "POPULATION_BNS": bns_fetchers.fetch_population_bns,
+    "REAL_WAGE_INDEX": bns_fetchers.fetch_real_wage_index,
+    "EMPLOYED_TOTAL": bns_fetchers.fetch_employed_total,
+    "BIRTHS_TOTAL": bns_fetchers.fetch_births_total,
+    "DEATHS_TOTAL": bns_fetchers.fetch_deaths_total,
 }
 
 INDICATOR_IDS = [
@@ -62,6 +68,8 @@ INDICATOR_IDS = [
     "SUBSIDIES", "INTERMEDIATE_CONSUMPTION", "GROSS_ACCUMULATION",
     "IMPORT_VOLUME_INDEX", "EXPORT_VOLUME_INDEX", "TOTAL_CONSUMPTION_EXPENDITURE",
     "CAPITAL_CONSUMPTION", "RETAIL_TRADE",
+    "CONSTRUCTION", "POPULATION_BNS", "REAL_WAGE_INDEX", "EMPLOYED_TOTAL",
+    "BIRTHS_TOTAL", "DEATHS_TOTAL",
 ]
 
 

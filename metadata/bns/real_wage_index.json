@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-702976",
+  "indicator_id": "REAL_WAGE_INDEX",
+  "indicator_name": "Real Wage Index",
+  "description": "Индекс реальной заработной платы",
+  "frequency": "annual",
+  "unit": "% of prior period",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Real wage index, % of prior period. Taldau indexId 702976.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2013-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

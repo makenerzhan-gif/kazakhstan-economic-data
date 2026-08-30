@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=261&activities=14610",
+  "dataset_id": "gov.kz-debt-listing,row=external:",
+  "indicator_id": "GOV_DEBT_EXTERNAL",
+  "indicator_name": "Government Debt, External",
+  "description": "Государственный долг РК, внешний",
+  "frequency": "quarterly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Built from 11 of 23 listed quarterly snapshot documents (12 skipped). Sub-component of 'Republic of Kazakhstan Government Debt' (row 1 under 'I. State Debt'), NOT of the broader GOV_DEBT total (which also includes State Guarantees and Subsidiary Liabilities, rows II+III) -- GOV_DEBT_DOMESTIC + GOV_DEBT_EXTERNAL will not sum to GOV_DEBT. Million KZT.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2021-07-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

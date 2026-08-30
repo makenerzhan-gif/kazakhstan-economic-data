@@ -33,6 +33,12 @@ FETCHERS = {
     "IMF_EXPORT_VOLUME_GROWTH": imf_fetchers.fetch_export_volume_growth,
     "IMF_IMPORT_VOLUME_GROWTH": imf_fetchers.fetch_import_volume_growth,
     "IMF_CURRENT_ACCOUNT_USD": imf_fetchers.fetch_current_account_usd,
+    "IMF_GDP_PER_CAPITA_PPP": imf_fetchers.fetch_gdp_per_capita_ppp,
+    "IMF_GDP_WORLD_SHARE_PPP": imf_fetchers.fetch_gdp_world_share_ppp,
+    "IMF_INFLATION_EOP": imf_fetchers.fetch_inflation_eop,
+    "IMF_GOV_NET_DEBT_RATIO": imf_fetchers.fetch_gov_net_debt_ratio,
+    "IMF_GDP_DEFLATOR_INDEX": imf_fetchers.fetch_nominal_gdp_deflator,
+    "IMF_REAL_GDP": imf_fetchers.fetch_real_gdp_national_currency,
 }
 
 INDICATOR_IDS = [
@@ -42,6 +48,8 @@ INDICATOR_IDS = [
     "IMF_GDP_PPP", "IMF_INVESTMENT_RATIO", "IMF_SAVINGS_RATIO",
     "IMF_GOV_REVENUE_RATIO", "IMF_GOV_EXPENDITURE_RATIO",
     "IMF_EXPORT_VOLUME_GROWTH", "IMF_IMPORT_VOLUME_GROWTH", "IMF_CURRENT_ACCOUNT_USD",
+    "IMF_GDP_PER_CAPITA_PPP", "IMF_GDP_WORLD_SHARE_PPP", "IMF_INFLATION_EOP",
+    "IMF_GOV_NET_DEBT_RATIO", "IMF_GDP_DEFLATOR_INDEX", "IMF_REAL_GDP",
 ]
 
 

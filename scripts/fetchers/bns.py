@@ -750,3 +750,114 @@ def fetch_retail_trade() -> tuple[list[dict], dict]:
         measure_id="1", dic_ids="67,59,676",
         terms="741880,741907,741894",
     )
+
+
+def fetch_construction() -> tuple[list[dict], dict]:
+    """Volume of construction works (services) performed, KZT. Taldau indexId
+    701885 (code 162101, "Объем выполненных строительных работ (услуг)"), found
+    under Taldau's "Статистика инвестиций и строительства" category via the
+    site's own keyword search API (keyword="объем строительных работ") --
+    resolves the CONSTRUCTION_NOT_CONNECTED gap logged as "not researched" in
+    an earlier session.
+
+    Classified across 4 dictionaries (region, ownership form, activity type, a
+    4th unlabeled dimension) -- the default single-dimension guess 500'd.
+    Params recovered via the same live-ExtJS-tree technique as RETAIL_TRADE
+    (Ext.ComponentQuery.query('indexTreeGrid')[0].store.getProxy().extraParams)
+    rather than a fresh XHR capture. Verified live 2026-08-30: ~4.9 trillion KZT
+    (2020) rising to ~10.8 trillion KZT (2025), a plausible scale and trend for
+    total construction works volume.
+    """
+    return _fetch_taldau_annual_index(
+        "701885", "CONSTRUCTION",
+        note="Volume of construction works (services) performed, KZT. Taldau indexId 701885.",
+        measure_id="1", dic_ids="68,60,71,2987",
+        terms="741880,741908,741919,18753820",
+    )
+
+
+def fetch_population_bns() -> tuple[list[dict], dict]:
+    """Average annual population, persons. Taldau indexId 703834 (code 611104,
+    "Среднегодовая численность населения"), found under Taldau's demographic
+    statistics via keyword search ("численность населения") -- picked over
+    the "at start of period" variant (703831) as the more standard annual
+    figure. Classified across 4 dictionaries; params recovered via the live
+    ExtJS component tree, same technique as RETAIL_TRADE/CONSTRUCTION.
+    Verified live 2026-08-30 and cross-checked: 2025 value (20,391,610.5)
+    matches the already-confirmed IMF_POPULATION series (2025: 20,380,366) to
+    within 0.06% -- strong independent confirmation, two different agencies'
+    figures agreeing almost exactly.
+    """
+    return _fetch_taldau_annual_index(
+        "703834", "POPULATION_BNS",
+        note="Average annual population, persons. Taldau indexId 703834.",
+        measure_id="23", dic_ids="67,749,576,1433",
+        terms="741880,741917,741935,3699122",
+    )
+
+
+def fetch_real_wage_index() -> tuple[list[dict], dict]:
+    """Real wage index, % of prior period (100 = no change). Taldau indexId
+    702976 (code 25210103, "индекс реальной заработной платы") -- companion to
+    AVG_WAGE (nominal KZT level); this is the inflation-adjusted growth rate.
+    Found via keyword search ("индекс реальной заработной платы"). Classified
+    across 5 dictionaries, same shape as AVG_WAGE; params recovered via the
+    live ExtJS component tree. Verified live 2026-08-30: values in the
+    98-108% range, consistent with real wages roughly tracking (slightly
+    above or below) the prior year in most years -- plausible.
+    """
+    return _fetch_taldau_annual_index(
+        "702976", "REAL_WAGE_INDEX",
+        note="Real wage index, % of prior period. Taldau indexId 702976.",
+        measure_id="7", dic_ids="68,859,2813,576,848",
+        terms="741880,741885,3629946,741935,2695730",
+    )
+
+
+def fetch_employed_total() -> tuple[list[dict], dict]:
+    """Total employed population, persons. Taldau indexId 702840 (code 251201,
+    "Занятое население") -- companion to UNEMPLOYMENT (a rate, not a count).
+    Found via keyword search ("занятое население"), picked over the many
+    narrower breakdowns (by sector, by additional-work status, etc.) returned
+    by the same search as the clean headline total. Classified across 6
+    dictionaries; params recovered via the live ExtJS component tree.
+    Verified live 2026-08-30: ~9.3 million (2025), a plausible employed-
+    population figure for Kazakhstan given its ~20.4 million total population.
+    """
+    return _fetch_taldau_annual_index(
+        "702840", "EMPLOYED_TOTAL",
+        note="Total employed population, persons. Taldau indexId 702840.",
+        measure_id="23", dic_ids="67,749,576,1773,1793,3028",
+        terms="741880,741917,741935,3805694,4197331,741885",
+    )
+
+
+def fetch_births_total() -> tuple[list[dict], dict]:
+    """Number of live births, persons/year. Taldau indexId 703839 (code
+    612101, "Число родившихся (живыми)"), found via keyword search
+    ("родившихся"). Classified across 3 dictionaries; params recovered via
+    the live ExtJS component tree. Verified live 2026-08-30: ~403,893 (2022)
+    declining to ~335,005 (2025), a plausible birth-count trajectory and
+    magnitude for Kazakhstan's ~20 million population.
+    """
+    return _fetch_taldau_annual_index(
+        "703839", "BIRTHS_TOTAL",
+        note="Number of live births, persons/year. Taldau indexId 703839.",
+        measure_id="23", dic_ids="67,749,576",
+        terms="741880,741917,741935",
+    )
+
+
+def fetch_deaths_total() -> tuple[list[dict], dict]:
+    """Number of deaths, persons/year. Taldau indexId 703847 (code 612201,
+    "Число умерших"), found via keyword search ("умерших"). Same 3-dictionary
+    shape as BIRTHS_TOTAL; params recovered via the live ExtJS component tree.
+    Verified live 2026-08-30: ~130,000-135,000/year (2022-2025), a plausible
+    death-count magnitude for Kazakhstan's ~20 million population.
+    """
+    return _fetch_taldau_annual_index(
+        "703847", "DEATHS_TOTAL",
+        note="Number of deaths, persons/year. Taldau indexId 703847.",
+        measure_id="23", dic_ids="67,749,576",
+        terms="741880,741917,741935",
+    )

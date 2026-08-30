@@ -34,6 +34,9 @@ FETCHERS = {
     "NET_BUDGET_LENDING": minfin_fetchers.fetch_net_budget_lending,
     "BUDGET_DEFICIT": minfin_fetchers.fetch_budget_deficit,
     "NON_OIL_BUDGET_DEFICIT": minfin_fetchers.fetch_non_oil_budget_deficit,
+    "EXCISE_TAX_REVENUE": minfin_fetchers.fetch_excise_tax_revenue,
+    "GOV_DEBT_DOMESTIC": minfin_fetchers.fetch_gov_debt_domestic,
+    "GOV_DEBT_EXTERNAL": minfin_fetchers.fetch_gov_debt_external,
 }
 
 INDICATOR_IDS = [
@@ -42,6 +45,7 @@ INDICATOR_IDS = [
     "TAX_REVENUE", "CORPORATE_TAX", "VAT_REVENUE",
     "GOV_DEFENSE_SPENDING", "GOV_GENERAL_SERVICES_SPENDING", "GOV_TRANSPORT_SPENDING",
     "GOV_DEBT_SERVICING", "NET_BUDGET_LENDING", "BUDGET_DEFICIT", "NON_OIL_BUDGET_DEFICIT",
+    "EXCISE_TAX_REVENUE", "GOV_DEBT_DOMESTIC", "GOV_DEBT_EXTERNAL",
 ]
 
 

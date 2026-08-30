@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=353",
+  "dataset_id": "formId=353,ed_code=Absolute indicators - External debt,period=quarter",
+  "indicator_id": "EXTERNAL_DEBT",
+  "indicator_name": "Gross External Debt",
+  "description": "Валовой внешний долг РК",
+  "frequency": "quarterly",
+  "unit": "million USD",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million. Gross external debt total (public + private), no further breakdown.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2005-04-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
