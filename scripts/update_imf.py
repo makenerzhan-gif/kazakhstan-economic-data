@@ -39,6 +39,9 @@ FETCHERS = {
     "IMF_GOV_NET_DEBT_RATIO": imf_fetchers.fetch_gov_net_debt_ratio,
     "IMF_GDP_DEFLATOR_INDEX": imf_fetchers.fetch_nominal_gdp_deflator,
     "IMF_REAL_GDP": imf_fetchers.fetch_real_gdp_national_currency,
+    "IMF_GOV_EXPENDITURE": imf_fetchers.fetch_gov_expenditure_level,
+    "IMF_GOV_REVENUE": imf_fetchers.fetch_gov_revenue_level,
+    "IMF_CPI_INDEX": imf_fetchers.fetch_cpi_index,
 }
 
 INDICATOR_IDS = [
@@ -50,6 +53,7 @@ INDICATOR_IDS = [
     "IMF_EXPORT_VOLUME_GROWTH", "IMF_IMPORT_VOLUME_GROWTH", "IMF_CURRENT_ACCOUNT_USD",
     "IMF_GDP_PER_CAPITA_PPP", "IMF_GDP_WORLD_SHARE_PPP", "IMF_INFLATION_EOP",
     "IMF_GOV_NET_DEBT_RATIO", "IMF_GDP_DEFLATOR_INDEX", "IMF_REAL_GDP",
+    "IMF_GOV_EXPENDITURE", "IMF_GOV_REVENUE", "IMF_CPI_INDEX",
 ]
 
 

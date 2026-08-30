@@ -668,3 +668,155 @@ def fetch_deposit_rate() -> tuple[list[dict], dict]:
                 "all terms/types aggregated by NBK itself.",
     }
     return records, manifest
+
+
+# TONIA (Tenge OverNight Index Average), interbank overnight rate. Found 2026-08-30 via
+# GET /api/v1/data/indicators, the same small endpoint that backs the homepage's headline
+# indicators widget (base rate, inflation target, annual inflation, TONIA) -- NOT one of the
+# formId-keyed Open Data forms. Supports from/to query params for history, but only returns
+# data from late February 2026 onward (a rolling window, not the full API's usual multi-year
+# depth) -- confirmed by testing 2020 and 2015 date ranges, both empty. Documented as a real
+# limitation, not treated as broken.
+INDICATORS_URL = "https://data.nationalbank.kz/api/v1/data/indicators"
+
+
+def fetch_tonia() -> tuple[list[dict], dict]:
+    """TONIA overnight interbank rate, %, daily. Verified live 2026-08-30: 184
+    rows, 2026-02-24 to 2026-08-30, no gaps in that window. Only a rolling
+    ~6-month history is available from this endpoint -- do not assume deeper
+    history exists."""
+    resp = requests.get(INDICATORS_URL, headers=HEADERS,
+                         params={"from": "2000-01-01", "to": date.today().isoformat()}, timeout=30)
+    resp.raise_for_status()
+    rows = resp.json()
+
+    today = date.today()
+    content = json.dumps(rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "TONIA", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "TONIA", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": INDICATORS_URL,
+    })
+
+    matching = [r for r in rows if r.get("tonia") is not None]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/TONIA",
+                "WHAT CHANGED: no rows with a non-null 'tonia' field",
+                f"ACTION REQUIRED: inspect {INDICATORS_URL} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["date"], "value": float(r["tonia"])} for r in matching], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "daily",
+        "source_url": INDICATORS_URL,
+        "dataset_id": "indicators-widget,field=tonia",
+        "note": "%. Only a rolling ~6-month history is available from this endpoint -- do not "
+                "assume deeper history exists; a gap in earlier years is expected, not a bug.",
+    }
+    return records, manifest
+
+
+# formId=470, "Operations of the National fund and financial instruments of kazakhstani
+# issuers". Found 2026-08-30 via GET /api/v1/data/categories. data_type='Transfers from
+# National fund' is a clean single-dimension monthly series (30 rows, all unique dates,
+# 2024-02 to 2026-07), no further breakdown to sum across.
+NATIONAL_FUND_OPS_FORM_ID = "470"
+NATIONAL_FUND_TRANSFERS_DATA_TYPE = "Transfers from National fund"
+
+
+def fetch_national_fund_transfers() -> tuple[list[dict], dict]:
+    """Transfers from the National Fund to the republican budget, billion KZT,
+    monthly. Verified live 2026-08-30: 30 rows, 2024-02 to 2026-07, values
+    230-600 bln KZT/month -- plausible scale given Kazakhstan's guaranteed
+    annual transfer runs in the low trillions of KZT."""
+    all_rows: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                             params={"formId": NATIONAL_FUND_OPS_FORM_ID, "page": str(page), "pageSize": "500"},
+                             timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        all_rows.extend(data["rows"])
+        if len(all_rows) >= data["totalRows"]:
+            break
+        page += 1
+
+    today = date.today()
+    content = json.dumps(all_rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "NATIONAL_FUND_TRANSFERS", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "NATIONAL_FUND_TRANSFERS", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={NATIONAL_FUND_OPS_FORM_ID}",
+    })
+
+    matching = [r for r in all_rows if r.get("data_type") == NATIONAL_FUND_TRANSFERS_DATA_TYPE]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/NATIONAL_FUND_TRANSFERS",
+                f"WHAT CHANGED: no rows found with data_type={NATIONAL_FUND_TRANSFERS_DATA_TYPE!r}",
+                f"ACTION REQUIRED: inspect formId={NATIONAL_FUND_OPS_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in matching], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={NATIONAL_FUND_OPS_FORM_ID}",
+        "dataset_id": f"formId={NATIONAL_FUND_OPS_FORM_ID},data_type={NATIONAL_FUND_TRANSFERS_DATA_TYPE}",
+        "note": "Billion KZT.",
+    }
+    return records, manifest
+
+
+# formId=35, "Results of trades on KASE". Found 2026-08-30 via the same categories endpoint.
+# Multi-dimensional (type x currency), but picking a single currency ('US dollars') and a
+# single type ('Volume of trade on KASE for the period (units of currency)') gives a clean,
+# unambiguous single series -- no aggregation across categories needed or attempted.
+KASE_FORM_ID = "35"
+KASE_USD_VOLUME_TYPE = "Volume of trade on KASE for the period (units of currency)"
+KASE_USD_CURRENCY = "US dollars"
+
+
+def fetch_kase_usd_volume() -> tuple[list[dict], dict]:
+    """USD/KZT trading volume on KASE (Kazakhstan Stock Exchange), USD,
+    monthly. Verified live 2026-08-30: 20 rows, 2025-01 to 2026-08, values
+    $6.7-9.7 billion/month -- plausible for Kazakhstan's FX market."""
+    all_rows: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                             params={"formId": KASE_FORM_ID, "page": str(page), "pageSize": "500"},
+                             timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        all_rows.extend(data["rows"])
+        if len(all_rows) >= data["totalRows"]:
+            break
+        page += 1
+
+    today = date.today()
+    content = json.dumps(all_rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "KASE_USD_VOLUME", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "KASE_USD_VOLUME", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={KASE_FORM_ID}",
+    })
+
+    matching = [r for r in all_rows if r.get("type") == KASE_USD_VOLUME_TYPE and r.get("currency") == KASE_USD_CURRENCY]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/KASE_USD_VOLUME",
+                f"WHAT CHANGED: no rows found with type={KASE_USD_VOLUME_TYPE!r}, currency={KASE_USD_CURRENCY!r}",
+                f"ACTION REQUIRED: inspect formId={KASE_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in matching], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={KASE_FORM_ID}",
+        "dataset_id": f"formId={KASE_FORM_ID},type={KASE_USD_VOLUME_TYPE},currency={KASE_USD_CURRENCY}",
+        "note": "USD. Trading volume for the USD/KZT pair specifically, not total KASE FX turnover "
+                "across all currency pairs.",
+    }
+    return records, manifest

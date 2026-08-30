@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T21:56:22.895856
+Run timestamp: 2026-08-30T22:11:58.063668
 Unified dataset updated: True
 Tests passed: True
 
@@ -143,6 +143,8 @@ Tests passed: True
 - **bns/EMPLOYED_TOTAL** — fetch+validate+process: ok (downloaded=7, processed=7)
 - **bns/BIRTHS_TOTAL** — fetch+validate+process: ok (downloaded=26, processed=26)
 - **bns/DEATHS_TOTAL** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/HOUSING_COMMISSIONED** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **bns/PPI** — fetch+validate+process: ok (downloaded=15, processed=15)
 - **nbk/BASE_RATE** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Gap of 49 days between 2024-10-14 and 2024-12-02 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2024-12-02 and 2025-01-20 is outside expected range for frequency=daily (1-4d).
@@ -181,6 +183,12 @@ Tests passed: True
 - **nbk/EXTERNAL_DEBT** — fetch+validate+process: ok (downloaded=85, processed=85)
 - **nbk/LENDING_RATE** — fetch+validate+process: ok (downloaded=56, processed=56)
 - **nbk/DEPOSIT_RATE** — fetch+validate+process: ok (downloaded=43, processed=43)
+- **nbk/TONIA** — fetch+validate+process: ok (downloaded=184, processed=184)
+- **nbk/NATIONAL_FUND_TRANSFERS** — fetch+validate+process: ok (downloaded=30, processed=30)
+  - warning: Unexpected jump of 80.0% between 2024-08-01 (250.0) and 2024-09-01 (450.0).
+  - warning: Unexpected jump of 51.8% between 2024-12-01 (635.0) and 2025-01-01 (306.0).
+  - warning: Unexpected jump of 79.7% between 2025-01-01 (306.0) and 2025-02-01 (550.0).
+- **nbk/KASE_USD_VOLUME** — fetch+validate+process: ok (downloaded=20, processed=20)
 - **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)
@@ -430,3 +438,13 @@ Tests passed: True
   - warning: Unexpected jump of 1521.1% between 1993-01-01 (0.584972) and 1994-01-01 (9.482983).
   - warning: Unexpected jump of 160.9% between 1994-01-01 (9.482983) and 1995-01-01 (24.740016).
 - **imf/IMF_REAL_GDP** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=30, processed=30)
+  - warning: Unexpected jump of 50.6% between 2006-01-01 (2022298111000.0) and 2007-01-01 (3045990034000.0).
+- **imf/IMF_GOV_REVENUE** — fetch+validate+process: ok (downloaded=38, processed=38)
+  - warning: Unexpected jump of 81.9% between 1994-01-01 (94000000000.0) and 1995-01-01 (171000000000.0).
+  - warning: Unexpected jump of 60.7% between 1999-01-01 (353651189000.0) and 2000-01-01 (568200000000.0).
+  - warning: Unexpected jump of 57.7% between 2021-01-01 (14358746726000.0) and 2022-01-01 (22644736046000.0).
+- **imf/IMF_CPI_INDEX** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 1662.2% between 1992-01-01 (0.013482) and 1993-01-01 (0.237583).
+  - warning: Unexpected jump of 1402.0% between 1993-01-01 (0.237583) and 1994-01-01 (3.568466).
+  - warning: Unexpected jump of 176.4% between 1994-01-01 (3.568466) and 1995-01-01 (9.862497).

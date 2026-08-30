@@ -1,0 +1,21 @@
+{
+  "source": "imf",
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.GGX",
+  "dataset_id": "WEO/9.0.0",
+  "indicator_id": "IMF_GOV_EXPENDITURE",
+  "indicator_name": "IMF WEO: General Government Expenditure, Level",
+  "description": "IMF WEO: расходы сектора госуправления, уровень",
+  "frequency": "annual",
+  "unit": "KZT",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "IMF World Economic Outlook (WEO), biannual exercise (April/October vintages)",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2002-01-01",
+  "period_end": "2031-01-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

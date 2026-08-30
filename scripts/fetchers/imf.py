@@ -240,3 +240,32 @@ def fetch_real_gdp_national_currency() -> tuple[list[dict], dict]:
     zero populated rows for Kazakhstan in this vintage, so it was dropped rather
     than forced in with empty data.)"""
     return _fetch_weo_series("IMF_REAL_GDP", "WEO", "IMF.RES", "9.0.0", "KAZ", "NGDP_R")
+
+
+def fetch_gov_expenditure_level() -> tuple[list[dict], dict]:
+    """WEO general government total expenditure, national currency level
+    (companion to IMF_GOV_EXPENDITURE_RATIO, which is % of GDP). Verified live
+    2026-08-30: indicator code GGX. Cross-checked: 2031 value
+    (69,450,172,320,000 KZT) / IMF_NOMINAL_GDP's 2031 value
+    (326,326,260,159,000 KZT) = 21.284%, matching IMF_GOV_EXPENDITURE_RATIO's
+    own 2031 value (21.282%) to within rounding. (Tried NID -- WEO total
+    investment level -- and NGSD -- national savings level -- first; both
+    returned zero populated rows for Kazakhstan, only their _NGDP ratio
+    variants exist, so neither was forced in.)"""
+    return _fetch_weo_series("IMF_GOV_EXPENDITURE", "WEO", "IMF.RES", "9.0.0", "KAZ", "GGX")
+
+
+def fetch_gov_revenue_level() -> tuple[list[dict], dict]:
+    """WEO general government total revenue, national currency level
+    (companion to IMF_GOV_REVENUE_RATIO, which is % of GDP). Verified live
+    2026-08-30: indicator code GGR. Cross-checked: 2031 value
+    (63,848,275,603,000 KZT) / IMF_NOMINAL_GDP's 2031 value matches
+    IMF_GOV_REVENUE_RATIO's own 2031 value (19.566%) to within rounding."""
+    return _fetch_weo_series("IMF_GOV_REVENUE", "WEO", "IMF.RES", "9.0.0", "KAZ", "GGR")
+
+
+def fetch_cpi_index() -> tuple[list[dict], dict]:
+    """WEO consumer price index, level (companion to IMF_INFLATION, which is
+    the % change of this same underlying series). Verified live 2026-08-30:
+    indicator code PCPI."""
+    return _fetch_weo_series("IMF_CPI_INDEX", "WEO", "IMF.RES", "9.0.0", "KAZ", "PCPI")

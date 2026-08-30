@@ -358,3 +358,55 @@ file and would require the much larger (50-sheet) monthly Statistical Bulletin -
 attempted this session given its documented structural-shift risk.
 
 **91/91 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-30 — sixth scale-up batch: 91 -> 99 indicators
+Proposed ~15 candidates across BNS/NBK/IMF up front (Minfin dropped from the proposal after
+NBK's National Fund research turned up a better answer than a Minfin-side search would
+have). Connected 8; industrial-production sub-indices (mining/manufacturing/electricity) and
+POVERTY_RATE were searched for on Taldau with several phrasings and not found, left
+not_connected rather than guessed.
+
+**BNS (2), both resolving indicators found in the previous batch but left not_connected
+because they didn't fit the existing annual-index parser:**
+- PPI: abandoned the stat.gov.kz open-data route entirely (stale/malformed at the source,
+  per the original not_connected notes) in favor of Taldau, found via site search (indexId
+  703039). Same period_id=8 ("month with accumulation") complication as
+  HOUSING_COMMISSIONED, but a cumulative AVERAGE not a SUM here -- confirmed non-monotonic
+  within a year (2025: Jan=109.4 declining to Dec=107.1), which is itself the confirmation
+  that December is BNS's own standard annual PPI figure (same convention as CPI's annual
+  number).
+- HOUSING_COMMISSIONED: built a shared `_fetch_taldau_annual_from_monthly_cumulative` helper
+  (used by both PPI and this) that extracts only the December year-to-date-cumulative key
+  per year as the annual total, instead of forcing period_id=8 data through the plain-annual
+  helper (which would have silently collided multiple months onto one date). Confirmed this
+  series is a genuine cumulative SUM (monotonically non-decreasing within 2025: Jan=38 ...
+  Dec=986.2), a different cumulation type than PPI -- documented explicitly since the two
+  indicators route through the same helper but mean different things.
+
+**NBK (3), all newly discovered this batch, none previously attempted:**
+- TONIA: NOT a formId-keyed Open Data form -- found via `/api/v1/data/indicators`, the small
+  endpoint backing the homepage's own headline widget. Only a rolling ~6-month history is
+  available (confirmed empty for 2020/2015 date ranges) -- documented as a real endpoint
+  limitation, not a bug.
+- NATIONAL_FUND_TRANSFERS: formId=470's `data_type='Transfers from National fund'` is a
+  clean single-dimension series once the right data_type value was identified from the
+  form's own catalog listing.
+- KASE_USD_VOLUME: formId=35 (KASE trading results) is multi-dimensional overall, but
+  picking type='Volume of trade...' + currency='US dollars' isolates a clean single series
+  without summing across currencies.
+
+**IMF WEO (3), level-value companions to ratios already connected:**
+IMF_GOV_EXPENDITURE (GGX) and IMF_GOV_REVENUE (GGR) -- national-currency levels behind
+IMF_GOV_EXPENDITURE_RATIO/IMF_GOV_REVENUE_RATIO, cross-checked by dividing through
+IMF_NOMINAL_GDP and matching the ratio series to within rounding. IMF_CPI_INDEX (PCPI) --
+index level behind IMF_INFLATION's % change. Tried NID/NGSD (investment/savings levels)
+first; both returned zero populated rows for Kazakhstan (only their _NGDP ratio variants
+exist), so neither was forced in.
+
+**Sanity-checked before committing:** GGX/NGDP and GGR/NGDP both reproduce their respective
+ratio series' 2031 values to within rounding. HOUSING_COMMISSIONED's December key confirmed
+monotonic within-year (a sum); PPI's confirmed non-monotonic within-year (a cumulative
+average) -- the two behaviors distinguished explicitly rather than assumed identical just
+because they share a fetcher.
+
+**99/99 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

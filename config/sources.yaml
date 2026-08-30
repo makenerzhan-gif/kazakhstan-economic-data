@@ -256,21 +256,40 @@ agencies:
           consistent, since Q4 sits above the yearly average in an up-trending series). The
           _fetch_taldau_annual_index helper was generalized to accept measure_id/terms/dic_ids
           overrides for this. fetch_avg_wage.
-      PPI_NOT_CONNECTED:
-        status: not_connected
+      PPI:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 703039
+        format: json
         notes: >
-          2026-08-30. Page found (stat.gov.kz/ru/open-data/stat-prices/474296/, "13.2 Индекс
-          цен производителей"), elementId=1626 confirmed as the real download link (a second
-          id on the page, 280695, 404s). BUT: the CSV variant only contains data through Q4
-          2013 (12 rows total for the national/QoQ/whole-industry filter) -- stale, not a
-          current series. The JSON variant (13MB) is MALFORMED at the source -- json.loads
-          fails with "Unterminated string" partway through, confirmed reproducible with a full,
-          untruncated 13,129,766-byte download matching Content-Length exactly (so this is a
-          source-side data quality issue, not a network truncation on our end). Checked nearby
-          elementIds on the /ru/industries/economy/prices/ page (1642, 1632, 1644) -- all
-          resolve but are OTHER price indices (forestry products, commercial real estate
-          rental, agricultural producer prices), not industrial PPI. Not connected -- no
-          working current source found this session.
+          2026-08-30. Resolved in a later session by abandoning the stat.gov.kz open-data
+          route entirely (elementId=1626's CSV was stale through Q4 2013 and its JSON
+          malformed at the source -- see the original not_connected notes below, kept for
+          context) and using Taldau instead, the same system RETAIL_TRADE/CONSTRUCTION were
+          resolved through. Found via site search (keyword="индекс цен производителей
+          промышленной продукции") -- id=703039, code 261201, "Индекс цен
+          предприятий-производителей промышленной продукции (товаров, услуг)". This index's
+          period_id is 8 ("month with accumulation"), same complication as
+          HOUSING_COMMISSIONED -- values are NOT monotonic within a year (2025: Jan=109.4
+          declining to Dec=107.1), confirming this is a year-to-date CUMULATIVE AVERAGE, not
+          a sum, and that December is genuinely BNS's own "the year's PPI" figure (same
+          convention as CPI's annual figure). Classified across 5 dictionaries; params
+          recovered via the live ExtJS component tree (measure_id=1,
+          dicIds=67,848,2513,2854,3068, terms=741880,2695732,4150464,15698719,18716910).
+          fetch_ppi. See scripts/fetchers/bns.py's
+          _fetch_taldau_annual_from_monthly_cumulative for the shared December-only
+          extraction mechanism (also used by HOUSING_COMMISSIONED).
+
+          Original not_connected notes (stat.gov.kz route, abandoned): Page found
+          (stat.gov.kz/ru/open-data/stat-prices/474296/, "13.2 Индекс цен производителей"),
+          elementId=1626 confirmed as the real download link (a second id on the page,
+          280695, 404s). BUT: the CSV variant only contains data through Q4 2013 (12 rows
+          total for the national/QoQ/whole-industry filter) -- stale, not a current series.
+          The JSON variant (13MB) is MALFORMED at the source -- json.loads fails with
+          "Unterminated string" partway through, confirmed reproducible with a full,
+          untruncated 13,129,766-byte download matching Content-Length exactly (so this was
+          a source-side data quality issue, not a network truncation). Checked nearby
+          elementIds (1642, 1632, 1644) -- all OTHER price indices, not industrial PPI.
       RETAIL_TRADE:
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
@@ -365,20 +384,24 @@ agencies:
           2026-08-30. code 612201, "Число умерших". Same 3-dictionary shape as BIRTHS_TOTAL
           (measure_id=23, dicIds=67,749,576, terms=741880,741917,741935). Verified live:
           ~130,000-135,000/year (2022-2025), plausible magnitude. fetch_deaths_total.
-      HOUSING_COMMISSIONED_NOT_CONNECTED:
-        status: not_connected
+      HOUSING_COMMISSIONED:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 701938
+        format: json
         notes: >
-          2026-08-30. Found via keyword search: indexId 701938, code 163212, "Ввод в
-          эксплуатацию общей площади жилых домов в расчете на 1000 человек населения" --
-          only a per-1000-population variant exists on Taldau, no absolute-total variant
-          found. More importantly, this index's own period_id is 8 ("month with
-          accumulation"), not 7 (annual) like every other BNS Taldau indicator connected so
-          far -- its year keys are formatted differently (e.g. 'y042026' = April 2026, not a
-          plain year suffix) and would silently collide/overwrite under the shared
-          _fetch_taldau_annual_index helper's date-parsing logic (which takes the last 4
-          characters as a year and stamps everything at Dec 31). Rather than rush a new
-          monthly-cumulative date-parsing path to force this one indicator in, left
-          not_connected pending a dedicated parser in a future session.
+          2026-08-30. Resolved in a later pass of the same session that first logged this as
+          not_connected. indexId 701938, code 163212, "Ввод в эксплуатацию общей площади
+          жилых домов в расчете на 1000 человек населения" -- only a per-1000-population
+          variant exists on Taldau, no absolute-total variant found. This index's period_id
+          is 8 ("month with accumulation"), not 7 (annual) -- built a dedicated shared helper
+          (_fetch_taldau_annual_from_monthly_cumulative in scripts/fetchers/bns.py, also used
+          by PPI) that takes ONLY the December ('y12{YYYY}') key per year as the annual
+          total, rather than forcing all 12 monthly-cumulative keys through the plain-annual
+          helper (which would have silently produced duplicate/colliding dates). Verified the
+          December key is a genuine year-to-date SUM here (monotonically non-decreasing
+          within 2025: Jan=38 ... Dec=986.2). Values: 441.2 (2014) to 986.2 (2025)
+          m2/1000 population. fetch_housing_commissioned.
       GDP_INCOME_METHOD:
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
@@ -675,6 +698,42 @@ agencies:
           promising -- both are pure region x industry x maturity x currency x entity-size
           microdata with no agg_level-style field and no null-as-aggregate pattern either.
           Still not connected; no further formIds identified to try.
+      TONIA:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data/indicators"
+        format: json
+        notes: >
+          2026-08-30. NOT one of the formId-keyed Open Data forms -- found via GET
+          /api/v1/data/indicators, the small endpoint backing the homepage's headline
+          indicators widget (base rate, inflation target, annual inflation, TONIA). Supports
+          from/to query params. Verified live: 184 daily rows, but only from 2026-02-24
+          onward -- confirmed by testing 2020 and 2015 date ranges, both returned zero rows.
+          This is a real rolling-window limitation of this specific endpoint, not a bug; do
+          not assume deeper history is available. fetch_tonia.
+      NATIONAL_FUND_TRANSFERS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=470"
+        format: json
+        notes: >
+          2026-08-30. formId=470 ("Operations of the National fund and financial instruments
+          of kazakhstani issuers"), found via GET /api/v1/data/categories.
+          data_type='Transfers from National fund' is a clean single-dimension monthly
+          series, no further breakdown to sum across. Verified live: 30 rows, 2024-02 to
+          2026-07, all unique dates, values 230-600 bln KZT/month -- plausible given
+          Kazakhstan's guaranteed annual transfer runs in the low trillions of KZT.
+          fetch_national_fund_transfers.
+      KASE_USD_VOLUME:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=35"
+        format: json
+        notes: >
+          2026-08-30. formId=35 ("Results of trades on KASE"), found via the same categories
+          endpoint. Multi-dimensional (type x currency), but type='Volume of trade on KASE
+          for the period (units of currency)' + currency='US dollars' gives a clean,
+          unambiguous single series -- the USD/KZT pair specifically, not total KASE FX
+          turnover across all pairs. Verified live: 20 rows, 2025-01 to 2026-08, all unique
+          dates, values $6.7-9.7 billion/month -- plausible for Kazakhstan's FX market.
+          fetch_kase_usd_volume.
     publication_calendar_url: "https://nationalbank.kz/ru/statisticalinformation/grafik-vypuska-statisticheskoy-informacii"
     publication_calendar_notes: >
       Verified live HTML page, filterable by year/category, with an XLSX export button
@@ -1199,3 +1258,44 @@ agencies:
           level) first; it returned 2 rows with empty OBS_VALUE for Kazakhstan in this
           vintage, so it was dropped rather than forced in with empty data. Standard WEO
           code, verified live (40 rows returned).
+      IMF_GOV_EXPENDITURE:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: GGX
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.GGX"
+        notes: >
+          2026-08-30. National currency level companion to IMF_GOV_EXPENDITURE_RATIO (%
+          GDP). Cross-checked: 2031 value (69,450,172,320,000 KZT) / IMF_NOMINAL_GDP's 2031
+          value (326,326,260,159,000 KZT) = 21.284%, matching IMF_GOV_EXPENDITURE_RATIO's own
+          2031 value (21.282%) to within rounding. Tried NID (WEO total investment level) and
+          NGSD (national savings level) first; both returned zero populated rows for
+          Kazakhstan -- only their _NGDP ratio variants exist -- so neither was forced in.
+      IMF_GOV_REVENUE:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: GGR
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.GGR"
+        notes: >
+          2026-08-30. National currency level companion to IMF_GOV_REVENUE_RATIO. Cross-
+          checked: 2031 value (63,848,275,603,000 KZT) / IMF_NOMINAL_GDP's 2031 value matches
+          IMF_GOV_REVENUE_RATIO's own 2031 value (19.566%) to within rounding.
+      IMF_CPI_INDEX:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: PCPI
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.PCPI"
+        notes: >
+          2026-08-30. CPI index level, companion to IMF_INFLATION (% change of this same
+          series). Standard WEO code, verified live (40 rows returned).

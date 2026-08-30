@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-701938",
+  "indicator_id": "HOUSING_COMMISSIONED",
+  "indicator_name": "Housing Commissioned, per 1000 Population",
+  "description": "Ввод в эксплуатацию общей площади жилых домов на 1000 человек населения",
+  "frequency": "annual",
+  "unit": "m2 per 1000 population",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "m2 per 1000 population. Full-year total taken from the December year-to-date-cumulative key; intermediate months not emitted.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2014-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

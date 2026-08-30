@@ -33,12 +33,16 @@ FETCHERS = {
     "EXTERNAL_DEBT": nbk_fetchers.fetch_external_debt,
     "LENDING_RATE": nbk_fetchers.fetch_lending_rate,
     "DEPOSIT_RATE": nbk_fetchers.fetch_deposit_rate,
+    "TONIA": nbk_fetchers.fetch_tonia,
+    "NATIONAL_FUND_TRANSFERS": nbk_fetchers.fetch_national_fund_transfers,
+    "KASE_USD_VOLUME": nbk_fetchers.fetch_kase_usd_volume,
 }
 
 INDICATOR_IDS = [
     "BASE_RATE", "EXCHANGE_RATE", "M2", "M3", "MONETARY_BASE", "M0", "M1",
     "FX_RESERVES", "NATIONAL_FUND_ASSETS", "REER", "NEER", "DEPOSITS_TOTAL",
     "EXTERNAL_DEBT", "LENDING_RATE", "DEPOSIT_RATE",
+    "TONIA", "NATIONAL_FUND_TRANSFERS", "KASE_USD_VOLUME",
 ]
 
 

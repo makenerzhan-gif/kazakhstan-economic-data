@@ -861,3 +861,134 @@ def fetch_deaths_total() -> tuple[list[dict], dict]:
         measure_id="23", dic_ids="67,749,576",
         terms="741880,741917,741935",
     )
+
+
+MONTH_CUMULATIVE_DECEMBER_KEY_RE = re.compile(r"^y12(\d{4})$")
+
+
+def _fetch_taldau_annual_from_monthly_cumulative(
+    index_id: str, indicator_id: str, note: str, unit_note: str,
+    measure_id: str, dic_ids: str, terms: str,
+) -> tuple[list[dict], dict]:
+    """Shared fetcher for Taldau indicators published as period_id=8 ("month
+    with accumulation" / year-to-date cumulative) rather than period_id=7
+    (plain annual) -- discovered for HOUSING_COMMISSIONED and PPI, both left
+    not_connected in an earlier session because their keys are 'y{MM}{YYYY}'
+    (e.g. 'y042026' = cumulative Jan-Apr 2026), which the plain-annual
+    _fetch_taldau_annual_index helper's date-parsing logic would silently
+    mis-handle (it takes the LAST 4 characters of any 'y...' key as the year
+    and stamps every match at Dec 31, so multiple months in the same year
+    would collide onto one date rather than erroring loudly).
+
+    This helper instead takes ONLY the December key ('y12{YYYY}') per year as
+    that year's annual total -- BNS's own convention for both a genuine
+    year-to-date SUM (HOUSING_COMMISSIONED: monotonically increasing through
+    the year) and a year-to-date cumulative AVERAGE (PPI: not monotonic,
+    moves toward the eventual December figure which is the number BNS itself
+    publishes as "the" annual PPI). The intermediate monthly values are
+    intentionally NOT emitted as independent monthly datapoints in either
+    case, since presenting a cumulative figure as if it were a monthly
+    increment would misrepresent the series.
+    """
+    body = {
+        "p_parent_id": "", "p_index_id": index_id, "p_keyword": "",
+        "p_period_id": "8", "p_measure_id": measure_id, "p_term_id": NATIONAL_TERM_ID,
+        "p_terms": terms, "p_dicIds": dic_ids, "idx": "0",
+        "filter": '[{"property":null,"value":null}]', "id": "",
+    }
+    resp = requests.post(TALDAU_TREE_DATA_URL, data=body,
+                          headers={**HEADERS, "X-Requested-With": "XMLHttpRequest"}, timeout=30)
+    resp.raise_for_status()
+    content = resp.content
+    _save_raw(indicator_id, content, "json", {
+        "source_url": TALDAU_TREE_DATA_URL, "index_id": index_id, "request_body": body,
+    })
+
+    data = json.loads(content)
+    match = next((entry for entry in data if entry.get("id") == NATIONAL_TERM_ID), None)
+    if match is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: no tree node with id={NATIONAL_TERM_ID!r} in the response",
+                "EXPECTED: the national root node",
+                f"ACTUAL: {[e.get('id') for e in data]}",
+                f"ACTION REQUIRED: inspect {TALDAU_TREE_DATA_URL} (index_id={index_id}) and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = []
+    for key, value in match.items():
+        m = MONTH_CUMULATIVE_DECEMBER_KEY_RE.match(key) if isinstance(key, str) else None
+        if not m:
+            continue
+        year = int(m.group(1))
+        try:
+            v = float(value)
+        except (TypeError, ValueError):
+            continue
+        records.append({"date": f"{year:04d}-12-31", "value": v})
+
+    if not records:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                "WHAT CHANGED: zero December ('y12{YYYY}') keys found on the national node",
+                f"ACTUAL keys present: {list(match.keys())}",
+                f"ACTION REQUIRED: inspect {TALDAU_TREE_DATA_URL} (index_id={index_id}) and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "annual",
+        "source_url": TALDAU_TREE_DATA_URL,
+        "dataset_id": f"taldau-index-{index_id}",
+        "note": f"{unit_note} Full-year total taken from the December year-to-date-cumulative "
+                "key; intermediate months not emitted.",
+    }
+    return records, manifest
+
+
+def fetch_housing_commissioned() -> tuple[list[dict], dict]:
+    """Housing commissioned, total floor area, m2 per 1000 population, annual.
+    Taldau indexId 701938 (code 163212, "Ввод в эксплуатацию общей площади
+    жилых домов в расчете на 1000 человек населения"). Only a per-1000-
+    population variant exists on Taldau, no absolute-total variant was found.
+    Verified live 2026-08-30 that the December key is a genuine year-to-date
+    SUM (confirmed monotonically non-decreasing month-over-month within 2025:
+    Jan=38 ... Dec=986.2). Values: 441.2 (2014) rising to 986.2 (2025)
+    m2/1000 population, a plausible trend for housing construction intensity
+    over a decade. See _fetch_taldau_annual_from_monthly_cumulative for why
+    this needed a dedicated (period_id=8) mechanism.
+    """
+    return _fetch_taldau_annual_from_monthly_cumulative(
+        "701938", "HOUSING_COMMISSIONED",
+        note="Housing commissioned, total floor area, m2 per 1000 population. Taldau indexId 701938.",
+        unit_note="m2 per 1000 population.",
+        measure_id="1", dic_ids="68", terms=NATIONAL_TERM_ID,
+    )
+
+
+def fetch_ppi() -> tuple[list[dict], dict]:
+    """Producer price index (industrial products), % of same period prior
+    year, cumulative from start of year -- BNS's own standard annual PPI
+    figure (the December value). Taldau indexId 703039 (code 261201, "Индекс
+    цен предприятий-производителей промышленной продукции (товаров, услуг)"),
+    found via Taldau's site search API. Resolves the PPI gap logged earlier
+    as not_connected (the gov.kz CSV/JSON route was found stale/malformed at
+    the source). Classified across 5 dictionaries; params recovered via the
+    live ExtJS component tree, same technique as CONSTRUCTION/RETAIL_TRADE.
+    Verified live 2026-08-30: values NOT monotonic within a year (2025:
+    Jan=109.4 declining to Dec=107.1, a cumulative average rather than a
+    cumulative sum, unlike HOUSING_COMMISSIONED) -- confirming December is
+    genuinely BNS's own "the year's PPI" figure, same convention as how CPI's
+    annual figure is reported, not an artifact of picking an arbitrary month.
+    """
+    return _fetch_taldau_annual_from_monthly_cumulative(
+        "703039", "PPI",
+        note="Producer price index, industrial products, % of same period prior year. Taldau indexId 703039.",
+        unit_note="% of same period prior year (cumulative from start of year).",
+        measure_id="1", dic_ids="67,848,2513,2854,3068",
+        terms="741880,2695732,4150464,15698719,18716910",
+    )
