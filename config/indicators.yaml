@@ -1120,3 +1120,39 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+
+  - id: IND_PROD_MINING
+    name_ru: "Индекс промышленного производства: горнодобывающая промышленность"
+    name_en: "Industrial Production Index: Mining and Quarrying"
+    agency: bns
+    frequency: annual
+    unit: "% of prior period"
+    category: production
+    source_status: confirmed
+
+  - id: IND_PROD_MANUFACTURING
+    name_ru: "Индекс промышленного производства: обрабатывающая промышленность"
+    name_en: "Industrial Production Index: Manufacturing"
+    agency: bns
+    frequency: annual
+    unit: "% of prior period"
+    category: production
+    source_status: confirmed
+
+  - id: IND_PROD_ELECTRICITY
+    name_ru: "Индекс промышленного производства: снабжение электроэнергией, газом, паром"
+    name_en: "Industrial Production Index: Electricity, Gas, Steam Supply"
+    agency: bns
+    frequency: annual
+    unit: "% of prior period"
+    category: production
+    source_status: confirmed
+
+  - id: IMF_GDP_PER_CAPITA_NATIONAL
+    name_ru: "IMF WEO: ВВП на душу населения, национальная валюта"
+    name_en: "IMF WEO: GDP per Capita, National Currency"
+    agency: imf
+    frequency: annual
+    unit: "KZT"
+    category: international_projection
+    source_status: confirmed

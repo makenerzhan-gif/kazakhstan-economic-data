@@ -519,3 +519,33 @@ exactly. CAPITAL_ADEQUACY_RATIO (~21.4-21.5%) sits well above the Basel minimum 
 NPL_RATIO (~2.9-3.3%) at a healthy level -- both plausible for Kazakhstan's banking sector.
 
 **123/123 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-30 — tenth scale-up batch: 123 -> 127 indicators
+Resolved the longest-standing open gap from this session: industrial-production sub-sector
+indices (mining/manufacturing/electricity), searched for via Taldau keywords in at least
+three earlier batches and never found. The fix was to stop searching Taldau and instead go
+back to IND_PROD's own already-connected stat.gov.kz source file (element_id=5809) and
+enumerate every distinct `industry` value present in it -- 405 total, full product-level
+detail, but also the exact top-level NACE-style sections needed. The sub-sector data was
+never a separate indicator to find; it was an unexplored dimension of a file already
+connected two batches ago.
+
+**BNS (3):** IND_PROD_MINING, IND_PROD_MANUFACTURING, IND_PROD_ELECTRICITY -- same source
+file and mechanism as IND_PROD itself, same 15 annual periods (2009-2023), values (~99-106%
+range) consistent with the whole-industry aggregate's own range.
+
+**IMF WEO (1):** IMF_GDP_PER_CAPITA_NATIONAL (NGDPPC). Tried TX/TM (exports/imports of goods
+and services, USD level) and TXG_D first; all empty for Kazakhstan, none forced in.
+
+**Investigated and left unconnected:** NBK payment cards (formId=18) -- found a
+null-as-aggregate pattern similar to earlier NBK wins, but the fully-aggregated rows
+contained genuine duplicate (report_date, all-null-dims) pairs with DIFFERENT values and no
+tiebreaker field to resolve which is correct -- rather than guess, left unconnected pending
+a cleaner resolution. Government securities in circulation, external trade/tourism/
+education/healthcare Taldau categories remain empty as established in prior batches.
+
+**Sanity-checked before committing:** IMF_GDP_PER_CAPITA_NATIONAL's 2031 value is consistent
+with IMF_NOMINAL_GDP divided by IMF_POPULATION's extrapolated trajectory. Sub-sector indices
+sit in the same 99-106% band as the whole-industry IND_PROD aggregate, as expected.
+
+**127/127 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

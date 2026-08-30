@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T22:41:37.944932
+Run timestamp: 2026-08-30T22:50:26.092111
 Unified dataset updated: True
 Tests passed: True
 
@@ -160,6 +160,9 @@ Tests passed: True
 - **bns/ENERGY_CONSUMPTION** — fetch+validate+process: ok (downloaded=11, processed=11)
 - **bns/ELECTRICITY_PRODUCTION** — fetch+validate+process: ok (downloaded=9, processed=9)
   - warning: Unexpected jump of 99.9% between 2020-12-31 (108629093000000.0) and 2021-12-31 (115078200000.0).
+- **bns/IND_PROD_MINING** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **bns/IND_PROD_MANUFACTURING** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **bns/IND_PROD_ELECTRICITY** — fetch+validate+process: ok (downloaded=15, processed=15)
 - **nbk/BASE_RATE** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Gap of 49 days between 2024-10-14 and 2024-12-02 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2024-12-02 and 2025-01-20 is outside expected range for frequency=daily (1-4d).
@@ -514,3 +517,7 @@ Tests passed: True
   - warning: Unexpected jump of 2165.0% between 1992-01-01 (0.033765) and 1993-01-01 (0.764775).
   - warning: Unexpected jump of 854.6% between 1993-01-01 (0.764775) and 1994-01-01 (7.300427).
   - warning: Unexpected jump of 60.4% between 1994-01-01 (7.300427) and 1995-01-01 (11.709034).
+- **imf/IMF_GDP_PER_CAPITA_NATIONAL** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 1137.8% between 1992-01-01 (142.842263) and 1993-01-01 (1768.128324).
+  - warning: Unexpected jump of 1415.8% between 1993-01-01 (1768.128324) and 1994-01-01 (26801.860179).
+  - warning: Unexpected jump of 141.4% between 1994-01-01 (26801.860179) and 1995-01-01 (64697.874176).

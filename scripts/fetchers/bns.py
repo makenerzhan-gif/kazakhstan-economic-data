@@ -1213,3 +1213,81 @@ def fetch_electricity_production() -> tuple[list[dict], dict]:
         "19197226", "ELECTRICITY_PRODUCTION",
         note="Electricity production, kWh. Taldau indexId 19197226.",
     )
+
+
+def _fetch_ind_prod_sub_sector(industry_name: str, indicator_id: str) -> tuple[list[dict], dict]:
+    """Shared fetcher for industrial-production sub-sector indices -- the SAME
+    stat.gov.kz open-data file (element_id=5809) used by fetch_ind_prod for the
+    whole-industry aggregate ('Промышленность') turns out to also carry sub-
+    sector cube slices for the same region/comparison_type, discovered by
+    enumerating every distinct `industry` (termNames[1]) value in the file
+    rather than searching for a separate indicator. This resolves the mining/
+    manufacturing/electricity sub-sector gap noted in earlier sessions as "not
+    found" -- it was never a separate indicator to find, just an unexplored
+    dimension of one already-connected file.
+    """
+    element_id = 5809
+    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/json/file/ru/"
+    content = _download(url)
+    _save_raw(indicator_id, content, "json", {"source_url": url, "element_id": element_id})
+
+    import json
+    data = json.loads(content)
+
+    TARGET = ["РЕСПУБЛИКА КАЗАХСТАН", industry_name, "отчетный период к предыдущему периоду"]
+    match = next((entry for entry in data if entry.get("termNames") == TARGET), None)
+    if match is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                "WHAT CHANGED: no cube slice matched the expected national/sub-sector combo",
+                f"EXPECTED termNames: {TARGET}",
+                "ACTUAL: no matching entry in the downloaded file",
+                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = []
+    for p in match["periods"]:
+        try:
+            records.append({"date": _dd_mm_yyyy_to_iso(p["date"]), "value": float(p["value"])})
+        except (ValueError, KeyError):
+            continue
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "annual",
+        "source_url": url,
+        "dataset_id": str(element_id),
+        "note": f"Sub-sector ({industry_name!r}) slice of the same file used by IND_PROD. "
+                "Physical volume index, % of prior period.",
+    }
+    return records, manifest
+
+
+def fetch_ind_prod_mining() -> tuple[list[dict], dict]:
+    """Industrial production index, mining and quarrying sub-sector, % of
+    prior period, annual. Same source file as IND_PROD (element_id=5809),
+    industry='Горнодобывающая промышленность и разработка карьеров'.
+    Verified live 2026-08-30: 15 periods (2009-2023), values ~99-106% range,
+    consistent with the whole-industry aggregate's own range."""
+    return _fetch_ind_prod_sub_sector("Горнодобывающая промышленность и разработка карьеров", "IND_PROD_MINING")
+
+
+def fetch_ind_prod_manufacturing() -> tuple[list[dict], dict]:
+    """Industrial production index, manufacturing sub-sector, % of prior
+    period, annual. Same source file as IND_PROD (element_id=5809),
+    industry='Обрабатывающая промышленность'. Verified live 2026-08-30: 15
+    periods (2009-2023), values ~100-105% range."""
+    return _fetch_ind_prod_sub_sector("Обрабатывающая промышленность", "IND_PROD_MANUFACTURING")
+
+
+def fetch_ind_prod_electricity() -> tuple[list[dict], dict]:
+    """Industrial production index, electricity/gas/steam/air-conditioning
+    supply sub-sector, % of prior period, annual. Same source file as
+    IND_PROD (element_id=5809), industry='Снабжение электроэнергией, газом,
+    паром, горячей водой и кондиционированным воздухом'. Verified live
+    2026-08-30: 15 periods (2009-2023), values ~100-106% range."""
+    return _fetch_ind_prod_sub_sector(
+        "Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",
+        "IND_PROD_ELECTRICITY",
+    )

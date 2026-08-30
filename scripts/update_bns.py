@@ -72,6 +72,9 @@ FETCHERS = {
     "ENERGY_INTENSITY": bns_fetchers.fetch_energy_intensity,
     "ENERGY_CONSUMPTION": bns_fetchers.fetch_energy_consumption,
     "ELECTRICITY_PRODUCTION": bns_fetchers.fetch_electricity_production,
+    "IND_PROD_MINING": bns_fetchers.fetch_ind_prod_mining,
+    "IND_PROD_MANUFACTURING": bns_fetchers.fetch_ind_prod_manufacturing,
+    "IND_PROD_ELECTRICITY": bns_fetchers.fetch_ind_prod_electricity,
 }
 
 INDICATOR_IDS = [
@@ -90,6 +93,7 @@ INDICATOR_IDS = [
     "AGRICULTURE_OUTPUT", "PER_CAPITA_INCOME", "REAL_INCOME_INDEX",
     "TELECOM_SERVICES", "DOCTORS_TOTAL",
     "ENERGY_INTENSITY", "ENERGY_CONSUMPTION", "ELECTRICITY_PRODUCTION",
+    "IND_PROD_MINING", "IND_PROD_MANUFACTURING", "IND_PROD_ELECTRICITY",
 ]
 
 

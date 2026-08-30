@@ -4,6 +4,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1992-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-51.659721,% of GDP,imf,2026-08-30,level,2026-08-30
 1992-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-1485277000.0,USD,imf,2026-08-30,level,2026-08-30
 1992-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,0.043287,index,imf,2026-08-30,level,2026-08-30
+1992-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,142.842263,KZT,imf,2026-08-30,level,2026-08-30
 1992-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,6828.395911,international dollars,imf,2026-08-30,level,2026-08-30
 1992-01-01,KZ,national,annual,IMF_GDP_PPP,116412840000.0,international dollars,imf,2026-08-30,level,2026-08-30
 1992-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.352044,% of world total,imf,2026-08-30,level,2026-08-30
@@ -21,6 +22,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1993-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,41.18507,% change,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,0.584972,index,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_GDP_GROWTH,-9.2,% change,imf,2026-08-30,level,2026-08-30
+1993-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,1768.128324,KZT,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,6402.844708,international dollars,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_GDP_PPP,108208073000.0,international dollars,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.313844,% of world total,imf,2026-08-30,level,2026-08-30
@@ -41,6 +43,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1994-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,-30.20871,% change,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,9.482983,index,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_GDP_GROWTH,-12.57976,% change,imf,2026-08-30,level,2026-08-30
+1994-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,26801.860179,KZT,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,6114.924976,international dollars,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_GDP_PPP,96615815000.0,international dollars,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.266785,% of world total,imf,2026-08-30,level,2026-08-30
@@ -64,6 +67,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1995-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,24.822242,% change,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,24.740016,index,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_GDP_GROWTH,-8.2,% change,imf,2026-08-30,level,2026-08-30
+1995-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,64697.874176,KZT,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,5776.591919,international dollars,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_GDP_PPP,90552700000.0,international dollars,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.236348,% of world total,imf,2026-08-30,level,2026-08-30
@@ -111,6 +115,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1996-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,10.52635,% change,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,34.363798,index,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_GDP_GROWTH,0.5,% change,imf,2026-08-30,level,2026-08-30
+1996-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,91453.258053,KZT,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,5986.310537,international dollars,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_GDP_PPP,92671679000.0,international dollars,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.228871,% of world total,imf,2026-08-30,level,2026-08-30
@@ -158,6 +163,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1997-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,15.526554,% change,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,39.90858,index,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_GDP_GROWTH,1.7,% change,imf,2026-08-30,level,2026-08-30
+1997-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,110094.780371,KZT,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,6312.287298,international dollars,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_GDP_PPP,95872282000.0,international dollars,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.223615,% of world total,imf,2026-08-30,level,2026-08-30
@@ -205,6 +211,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1998-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,6.817857,% change,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,42.168518,index,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_GDP_GROWTH,-1.9,% change,imf,2026-08-30,level,2026-08-30
+1998-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,115896.143818,KZT,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,6359.473454,international dollars,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_GDP_PPP,95107833000.0,international dollars,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.213758,% of world total,imf,2026-08-30,level,2026-08-30
@@ -252,6 +259,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1999-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,-8.291821,% change,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,47.768741,index,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_GDP_GROWTH,2.7,% change,imf,2026-08-30,level,2026-08-30
+1999-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,135318.479963,KZT,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,6647.466105,international dollars,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_GDP_PPP,99057881000.0,international dollars,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.212164,% of world total,imf,2026-08-30,level,2026-08-30
@@ -299,6 +307,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2000-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,57.497322,% change,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,56.092824,index,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.800298,% change,imf,2026-08-30,level,2026-08-30
+2000-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,174682.056609,KZT,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,7473.287939,international dollars,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_GDP_PPP,111229623000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.221585,% of world total,imf,2026-08-30,level,2026-08-30
@@ -370,6 +379,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2001-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.109161,% change,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,61.790123,index,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_GDP_GROWTH,13.499461,% change,imf,2026-08-30,level,2026-08-30
+2001-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,218772.359083,KZT,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,8687.890024,international dollars,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_GDP_PPP,129087580000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.245516,% of world total,imf,2026-08-30,level,2026-08-30
@@ -442,6 +452,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2002-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,9.178136,% change,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,65.376493,index,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.799076,% change,imf,2026-08-30,level,2026-08-30
+2002-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,254141.612179,KZT,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,9687.06627,international dollars,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GDP_PPP,143939614000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.262333,% of world total,imf,2026-08-30,level,2026-08-30
@@ -521,6 +532,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2003-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,12.851903,% change,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,73.050575,index,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.300232,% change,imf,2026-08-30,level,2026-08-30
+2003-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,309341.29934,KZT,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,10760.75521,international dollars,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GDP_PPP,160432293000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.276651,% of world total,imf,2026-08-30,level,2026-08-30
@@ -600,6 +612,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2004-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,32.806964,% change,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,84.835882,index,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.598631,% change,imf,2026-08-30,level,2026-08-30
+2004-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,391003.787721,KZT,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,12026.888754,international dollars,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GDP_PPP,180559500000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.288393,% of world total,imf,2026-08-30,level,2026-08-30
@@ -679,6 +692,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2005-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,27.254613,% change,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,100.0,index,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.700176,% change,imf,2026-08-30,level,2026-08-30
+2005-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,501127.580861,KZT,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,13486.825638,international dollars,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GDP_PPP,204285339000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.302396,% of world total,imf,2026-08-30,level,2026-08-30
@@ -762,6 +776,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2006-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,10.047385,% change,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,121.550001,index,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GDP_GROWTH,10.701546,% change,imf,2026-08-30,level,2026-08-30
+2006-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,667211.585722,KZT,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,15228.629283,international dollars,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GDP_PPP,233121136000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.318282,% of world total,imf,2026-08-30,level,2026-08-30
@@ -845,6 +860,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2007-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,15.284495,% change,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,140.423191,index,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GDP_GROWTH,8.9,% change,imf,2026-08-30,level,2026-08-30
+2007-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,829865.323292,KZT,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,16839.555528,international dollars,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GDP_PPP,260746911000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.329411,% of world total,imf,2026-08-30,level,2026-08-30
@@ -928,6 +944,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2008-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,7.076718,% change,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,169.822944,index,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.3,% change,imf,2026-08-30,level,2026-08-30
+2008-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,1024175.00319,KZT,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,17515.6551,international dollars,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GDP_PPP,274540378000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.33098,% of world total,imf,2026-08-30,level,2026-08-30
@@ -1011,6 +1028,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2009-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.546137,% change,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,177.789485,index,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GDP_GROWTH,1.2,% change,imf,2026-08-30,level,2026-08-30
+2009-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,1056850.64771,KZT,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,17371.062245,international dollars,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GDP_PPP,279548388000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.337168,% of world total,imf,2026-08-30,level,2026-08-30
@@ -1077,6 +1095,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2009-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,7912607000000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,84.3,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,IND_PROD,102.7,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,99.0,% of prior period,bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,97.1,% of prior period,bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,IND_PROD_MINING,107.2,% of prior period,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,13981759400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,NET_EXPORTS,1345437100000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,782282700000.0,KZT,bns,2026-08-30,level,2026-08-30
@@ -1095,6 +1116,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,0.884379,% change,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,212.533613,index,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GDP_GROWTH,7.3,% change,imf,2026-08-30,level,2026-08-30
+2010-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,1336594.735087,KZT,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,18601.048973,international dollars,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GDP_PPP,303601001000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.344097,% of world total,imf,2026-08-30,level,2026-08-30
@@ -1160,6 +1182,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-12-31,KZ,national,annual,GDP_REAL,107.3,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,GROSS_OUTPUT,36357713000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,IND_PROD,109.6,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2010-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,104.9,% of prior period,bns,2026-08-30,level,2026-08-30
+2010-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,113.9,% of prior period,bns,2026-08-30,level,2026-08-30
+2010-12-31,KZ,national,annual,IND_PROD_MINING,107.2,% of prior period,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,15241822000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,1166485400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,PER_CAPITA_INCOME,39014.0713415945,KZT/month,bns,2026-08-30,level,2026-08-30
@@ -1177,6 +1202,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,13.625383,% change,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,255.955989,index,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GDP_GROWTH,7.5,% change,imf,2026-08-30,level,2026-08-30
+2011-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,1705812.647004,KZT,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,20118.738118,international dollars,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GDP_PPP,333104921000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.35629,% of world total,imf,2026-08-30,level,2026-08-30
@@ -1253,6 +1279,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-12-31,KZ,national,annual,GDP_REAL,107.4,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,GROSS_OUTPUT,45446908900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,IND_PROD,103.8,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2011-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,108.6,% of prior period,bns,2026-08-30,level,2026-08-30
+2011-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,107.7,% of prior period,bns,2026-08-30,level,2026-08-30
+2011-12-31,KZ,national,annual,IND_PROD_MINING,101.0,% of prior period,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,19705034100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,2501177900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,PER_CAPITA_INCOME,45918.079326354,KZT/month,bns,2026-08-30,level,2026-08-30
@@ -1271,6 +1300,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.452397,% change,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,267.694072,index,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.000001,% change,imf,2026-08-30,level,2026-08-30
+2012-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,1847052.306312,KZT,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,21217.150263,international dollars,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GDP_PPP,356272468000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.362411,% of world total,imf,2026-08-30,level,2026-08-30
@@ -1348,6 +1378,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-12-31,KZ,national,annual,GDP_REAL,104.8,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,GROSS_OUTPUT,49657988400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,IND_PROD,100.7,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2012-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,103.5,% of prior period,bns,2026-08-30,level,2026-08-30
+2012-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,101.2,% of prior period,bns,2026-08-30,level,2026-08-30
+2012-12-31,KZ,national,annual,IND_PROD_MINING,100.4,% of prior period,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,21129898300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,2487096500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,PER_CAPITA_INCOME,51859.7573510886,KZT/month,bns,2026-08-30,level,2026-08-30
@@ -1366,6 +1399,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,3.254597,% change,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,293.399339,index,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.9,% change,imf,2026-08-30,level,2026-08-30
+2013-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,2113237.679344,KZT,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,22525.02813,international dollars,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GDP_PPP,383714079000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.371439,% of world total,imf,2026-08-30,level,2026-08-30
@@ -1444,6 +1478,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-12-31,KZ,national,annual,GDP_REAL,106.0,"index (physical volume, % of previous period)",bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,GROSS_OUTPUT,56160882300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,IND_PROD,102.5,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,100.5,% of prior period,bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,101.9,% of prior period,bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,annual,IND_PROD_MINING,103.3,% of prior period,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,23264281300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,3102424100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,PER_CAPITA_INCOME,56452.7553065554,KZT/month,bns,2026-08-30,level,2026-08-30
@@ -1463,6 +1500,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,-11.234065,% change,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,310.03458,index,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.3,% change,imf,2026-08-30,level,2026-08-30
+2014-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,2295051.862166,KZT,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,23553.613714,international dollars,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GDP_PPP,407184369000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.374399,% of world total,imf,2026-08-30,level,2026-08-30
@@ -1561,6 +1599,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-31,KZ,national,annual,HOUSING_COMMISSIONED,441.2,m2 per 1000 population,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,96.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,IND_PROD,100.3,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,102.6,% of prior period,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,101.1,% of prior period,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,IND_PROD_MINING,99.7,% of prior period,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,25208557400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,NET_BUDGET_LENDING,39452.06622459,million KZT,minfin,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,NET_EXPORTS,5440144500000.0,million KZT,bns,2026-08-30,level,2026-08-30
@@ -1586,6 +1627,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,-2.989522,% change,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,316.313345,index,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GDP_GROWTH,0.999999,% change,imf,2026-08-30,level,2026-08-30
+2015-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,2330668.727116,KZT,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,23661.927049,international dollars,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GDP_PPP,415072887000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.365924,% of world total,imf,2026-08-30,level,2026-08-30
@@ -1686,6 +1728,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-31,KZ,national,annual,HOUSING_COMMISSIONED,509.844810105416,m2 per 1000 population,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,99.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,IND_PROD,98.4,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,98.5,% of prior period,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,100.2,% of prior period,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,IND_PROD_MINING,97.5,% of prior period,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,25174185800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,NET_BUDGET_LENDING,78007.09602019,million KZT,minfin,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,NET_EXPORTS,1628696000000.0,million KZT,bns,2026-08-30,level,2026-08-30
@@ -1711,6 +1756,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.578905,% change,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,360.166021,index,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GDP_GROWTH,0.9,% change,imf,2026-08-30,level,2026-08-30
+2016-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,2639915.466322,KZT,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,23761.926252,international dollars,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GDP_PPP,422788160000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.35803,% of world total,imf,2026-08-30,level,2026-08-30
@@ -1825,6 +1871,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-31,KZ,national,annual,HOUSING_COMMISSIONED,590.999072686586,m2 per 1000 population,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,98.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,IND_PROD,98.9,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,100.5,% of prior period,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,100.6,% of prior period,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,IND_PROD_MINING,97.3,% of prior period,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,30393719100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,INVESTMENT,7762302972000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,NET_BUDGET_LENDING,221428.4238677,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -1851,6 +1900,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,11.360109,% change,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,401.315631,index,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.900001,% change,imf,2026-08-30,level,2026-08-30
+2017-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,3014980.18654,KZT,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,24791.434554,international dollars,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GDP_PPP,447143867000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.358476,% of world total,imf,2026-08-30,level,2026-08-30
@@ -1966,6 +2016,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-12-31,KZ,national,annual,HOUSING_COMMISSIONED,619.486846155301,m2 per 1000 population,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,101.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,IND_PROD,107.3,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,105.3,% of prior period,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,105.6,% of prior period,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,IND_PROD_MINING,109.3,% of prior period,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,44223008300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,INVESTMENT,8770572291000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,NET_BUDGET_LENDING,174970.85359285,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -1993,6 +2046,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.515169,% change,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,438.259167,index,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.099999,% change,imf,2026-08-30,level,2026-08-30
+2018-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,3382694.819814,KZT,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,25999.019996,international dollars,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GDP_PPP,475138148000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.358096,% of world total,imf,2026-08-30,level,2026-08-30
@@ -2132,6 +2186,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-12-31,KZ,national,annual,HOUSING_COMMISSIONED,685.460952771722,m2 per 1000 population,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,106.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,IND_PROD,104.4,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,102.4,% of prior period,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,104.5,% of prior period,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,IND_PROD_MINING,104.6,% of prior period,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,45046871300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,INVESTMENT,11179036042000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,NET_BUDGET_LENDING,131653.83127052,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -2162,6 +2219,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,6.420229,% change,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,471.712751,index,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.5,% change,imf,2026-08-30,level,2026-08-30
+2019-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,3755925.541387,KZT,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,29769.062506,international dollars,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GDP_PPP,551108135000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.392043,% of world total,imf,2026-08-30,level,2026-08-30
@@ -2326,6 +2384,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-31,KZ,national,annual,HOUSING_COMMISSIONED,709.8,m2 per 1000 population,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,114.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,IND_PROD,104.1,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,100.6,% of prior period,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,105.8,% of prior period,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,IND_PROD_MINING,103.1,% of prior period,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,46992498200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,INVESTMENT,12576793455000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,NET_BUDGET_LENDING,250348.08525519,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -2357,6 +2418,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,-9.651769,% change,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,492.080598,index,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GDP_GROWTH,-2.6,% change,imf,2026-08-30,level,2026-08-30
+2020-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,3766955.356782,KZT,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,30165.766274,international dollars,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GDP_PPP,565757227000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.403423,% of world total,imf,2026-08-30,level,2026-08-30
@@ -2537,6 +2599,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-31,KZ,national,annual,HOUSING_COMMISSIONED,817.9,m2 per 1000 population,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,91.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,IND_PROD,99.5,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,99.9,% of prior period,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,104.1,% of prior period,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,IND_PROD_MINING,96.3,% of prior period,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,42866610700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,INVESTMENT,12270144010000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,NET_BUDGET_LENDING,217716.55633366,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -2568,6 +2633,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,-3.783407,% change,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,561.704888,index,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.100001,% change,imf,2026-08-30,level,2026-08-30
+2021-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,4418344.87353,KZT,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,34234.015576,international dollars,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GDP_PPP,650469815000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.414088,% of world total,imf,2026-08-30,level,2026-08-30
@@ -2769,6 +2835,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-31,KZ,national,annual,HOUSING_COMMISSIONED,899.2,m2 per 1000 population,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,99.7,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,IND_PROD,103.6,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,105.9,% of prior period,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,104.7,% of prior period,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,IND_PROD_MINING,101.9,% of prior period,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,61996110900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,INVESTMENT,13242233420000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,NET_BUDGET_LENDING,213356.29830906,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -2803,6 +2872,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.127327,% change,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,672.748366,index,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.199999,% change,imf,2026-08-30,level,2026-08-30
+2022-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,5284726.653443,KZT,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,36619.812802,international dollars,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GDP_PPP,719029402000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.412252,% of world total,imf,2026-08-30,level,2026-08-30
@@ -3090,6 +3160,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-31,KZ,national,annual,HOUSING_COMMISSIONED,785.9,m2 per 1000 population,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,113.1,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,IND_PROD,101.2,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,100.4,% of prior period,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,103.6,% of prior period,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,IND_PROD_MINING,99.1,% of prior period,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,74559143400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,INVESTMENT,15251104090000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,NET_BUDGET_LENDING,477376.10534981,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -3125,6 +3198,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,16.763316,% change,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,736.809132,index,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.1,% change,imf,2026-08-30,level,2026-08-30
+2023-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,6002027.102572,KZT,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,39379.309024,international dollars,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GDP_PPP,783661048000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.419616,% of world total,imf,2026-08-30,level,2026-08-30
@@ -3427,6 +3501,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,HOUSING_COMMISSIONED,881.7,m2 per 1000 population,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,115.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,IND_PROD,104.4,"index, % to previous period",bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,105.4,% of prior period,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,104.0,% of prior period,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,IND_PROD_MINING,104.9,% of prior period,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,72813967800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,NET_BUDGET_LENDING,402804.9704923,million KZT,minfin,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,NET_EXPORTS,8321390400000.0,million KZT,bns,2026-08-30,level,2026-08-30
@@ -3462,6 +3539,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.376243,% change,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,803.072705,index,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.0,% change,imf,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,6780886.351303,KZT,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,41831.80846,international dollars,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GDP_PPP,843271572000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.426269,% of world total,imf,2026-08-30,level,2026-08-30
@@ -3815,6 +3893,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,6.389339,% change,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,870.288185,index,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GDP_GROWTH,6.485254,% change,imf,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,7739858.195286,KZT,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,45309.927679,international dollars,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GDP_PPP,923432902000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.439047,% of world total,imf,2026-08-30,level,2026-08-30
@@ -4178,6 +4257,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,5.119479,% change,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,992.521081,index,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.609374,% change,imf,2026-08-30,level,2026-08-30
+2026-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,9137848.256566,KZT,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,48249.704242,international dollars,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GDP_PPP,993671763000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.446074,% of world total,imf,2026-08-30,level,2026-08-30
@@ -4551,6 +4631,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2027-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,4.537186,% change,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,1091.12937,index,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.400226,% change,imf,2026-08-30,level,2026-08-30
+2027-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,10378762.382955,KZT,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,50944.02535,international dollars,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GDP_PPP,1060175757000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.4513,% of world total,imf,2026-08-30,level,2026-08-30
@@ -4581,6 +4662,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2028-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,1.487022,% change,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,1188.108681,index,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.308862,% change,imf,2026-08-30,level,2026-08-30
+2028-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,11559570.487005,KZT,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,52963.9127,international dollars,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GDP_PPP,1113232934000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.451736,% of world total,imf,2026-08-30,level,2026-08-30
@@ -4611,6 +4693,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2029-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,4.844065,% change,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,1281.861532,index,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.596039,% change,imf,2026-08-30,level,2026-08-30
+2029-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,12792293.608663,KZT,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,55291.225011,international dollars,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GDP_PPP,1173771528000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.453779,% of world total,imf,2026-08-30,level,2026-08-30
@@ -4641,6 +4724,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2030-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,3.969561,% change,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,1362.461818,index,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.59838,% change,imf,2026-08-30,level,2026-08-30
+2030-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,13946435.846015,KZT,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,57755.805494,international dollars,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GDP_PPP,1238352763000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.456218,% of world total,imf,2026-08-30,level,2026-08-30
@@ -4671,6 +4755,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2031-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.808034,% change,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GDP_DEFLATOR_INDEX,1434.987636,index,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.613475,% change,imf,2026-08-30,level,2026-08-30
+2031-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_NATIONAL,15068912.724216,KZT,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GDP_PER_CAPITA_PPP,60319.940733,international dollars,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GDP_PPP,1306264163000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.458749,% of world total,imf,2026-08-30,level,2026-08-30

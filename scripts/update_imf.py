@@ -46,6 +46,7 @@ FETCHERS = {
     "IMF_PPP_EXCHANGE_RATE": imf_fetchers.fetch_ppp_exchange_rate,
     "IMF_STRUCTURAL_BALANCE": imf_fetchers.fetch_structural_balance,
     "IMF_CPI_EOP_INDEX": imf_fetchers.fetch_cpi_eop_index,
+    "IMF_GDP_PER_CAPITA_NATIONAL": imf_fetchers.fetch_gdp_per_capita_national_currency,
 }
 
 INDICATOR_IDS = [
@@ -59,7 +60,7 @@ INDICATOR_IDS = [
     "IMF_GOV_NET_DEBT_RATIO", "IMF_GDP_DEFLATOR_INDEX", "IMF_REAL_GDP",
     "IMF_GOV_EXPENDITURE", "IMF_GOV_REVENUE", "IMF_CPI_INDEX",
     "IMF_GOV_BALANCE_LEVEL", "IMF_PPP_EXCHANGE_RATE", "IMF_STRUCTURAL_BALANCE",
-    "IMF_CPI_EOP_INDEX",
+    "IMF_CPI_EOP_INDEX", "IMF_GDP_PER_CAPITA_NATIONAL",
 ]
 
 

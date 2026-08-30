@@ -94,6 +94,44 @@ agencies:
           note that monthly points might be present. National total row:
           ['РЕСПУБЛИКА КАЗАХСТАН', 'Промышленность', 'отчетный период к предыдущему периоду'].
           Now implemented in scripts/fetchers/bns.py:fetch_ind_prod and connected.
+      IND_PROD_MINING:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
+        element_id: 5809
+        download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
+        format: json_cube
+        notes: >
+          2026-08-30. RESOLVES the industrial-production sub-sector gap noted as "not found"
+          in earlier sessions (several Taldau keyword searches for "горнодобывающая
+          промышленность", "обрабатывающая промышленность индекс", etc. had all returned
+          zero results). Found by going back to IND_PROD's OWN already-connected source file
+          (element_id=5809, the same one used for the whole-industry aggregate) and
+          enumerating every distinct `industry` (termNames[1]) value present in it --
+          405 total, including full product-level detail, but also the top-level NACE-style
+          sections. Sub-sector row: ['РЕСПУБЛИКА КАЗАХСТАН', 'Горнодобывающая промышленность
+          и разработка карьеров', 'отчетный период к предыдущему периоду']. Same 15 annual
+          periods (2009-2023) as IND_PROD itself. fetch_ind_prod_mining.
+      IND_PROD_MANUFACTURING:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
+        element_id: 5809
+        download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
+        format: json_cube
+        notes: >
+          2026-08-30. Same file and discovery method as IND_PROD_MINING. Sub-sector row:
+          ['РЕСПУБЛИКА КАЗАХСТАН', 'Обрабатывающая промышленность', 'отчетный период к
+          предыдущему периоду']. fetch_ind_prod_manufacturing.
+      IND_PROD_ELECTRICITY:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
+        element_id: 5809
+        download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
+        format: json_cube
+        notes: >
+          2026-08-30. Same file and discovery method as IND_PROD_MINING. Sub-sector row:
+          ['РЕСПУБЛИКА КАЗАХСТАН', 'Снабжение электроэнергией, газом, паром, горячей водой и
+          кондиционированным воздухом', 'отчетный период к предыдущему периоду'].
+          fetch_ind_prod_electricity.
       CPI:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/open-data/stat-prices/474295/"
@@ -1581,3 +1619,18 @@ agencies:
           2026-08-30. CPI index level, end of period -- companion to IMF_INFLATION_EOP (%
           change of this same series) and IMF_CPI_INDEX (average-period level). Standard
           WEO code, verified live (40 rows returned).
+      IMF_GDP_PER_CAPITA_NATIONAL:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: NGDPPC
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.NGDPPC"
+        notes: >
+          2026-08-30. GDP per capita, national currency (nominal). Cross-checked: 2031
+          value (15,068,912.72 KZT) is consistent with IMF_NOMINAL_GDP's 2031 value divided
+          by a population near IMF_POPULATION's own trajectory. Tried TX/TM (exports/imports
+          of goods and services, USD level) and TXG_D first; all returned zero populated
+          rows for Kazakhstan, none forced in.

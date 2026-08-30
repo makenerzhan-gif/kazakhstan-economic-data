@@ -313,3 +313,16 @@ def fetch_cpi_eop_index() -> tuple[list[dict], dict]:
     series, and to IMF_CPI_INDEX, which is the average-period level).
     Verified live 2026-08-30: indicator code PCPIE."""
     return _fetch_weo_series("IMF_CPI_EOP_INDEX", "WEO", "IMF.RES", "9.0.0", "KAZ", "PCPIE")
+
+
+def fetch_gdp_per_capita_national_currency() -> tuple[list[dict], dict]:
+    """WEO GDP per capita, national currency (nominal). Verified live
+    2026-08-30: indicator code NGDPPC. Cross-checked: 2031 value
+    (15,068,912.72 KZT) is consistent with IMF_NOMINAL_GDP's 2031 value
+    (326,326,260,159,000 KZT) divided by a population near IMF_POPULATION's
+    own trajectory (~21.6M by 2031, extrapolated) -- 326,326,260,159,000 /
+    21,650,000 ~= 15,072,000, matching to within rounding. (Tried TX/TM --
+    WEO exports/imports of goods and services, USD level -- and TXG_D first;
+    all returned zero populated rows for Kazakhstan, so none were forced in.)
+    """
+    return _fetch_weo_series("IMF_GDP_PER_CAPITA_NATIONAL", "WEO", "IMF.RES", "9.0.0", "KAZ", "NGDPPC")
