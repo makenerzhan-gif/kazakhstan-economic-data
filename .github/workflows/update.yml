@@ -2,14 +2,16 @@ name: Update Kazakhstan Economic Data
 
 on:
   schedule:
-    # Daily at 06:00 UTC (~11:00/12:00 Almaty time) to catch the daily NBK USD/KZT
-    # rate and base-rate feed promptly. Monthly/quarterly BNS, Minfin and annual IMF
-    # series don't change this often, but re-checking daily is cheap (the job is a
-    # no-op commit-wise unless something actually changed) and guarantees we never
-    # miss a monthly/quarterly release by more than a day.
-    # TODO once NBK's publication calendar and BNS/Minfin release patterns are
-    # confirmed by the source-research step: consider narrowing this if daily runs
-    # turn out to be wasteful, or split into a separate faster cron for EXCHANGE_RATE.
+    # Deliberate default: once daily, 06:00 UTC (~11:00/12:00 Almaty time). Not a
+    # placeholder -- this is the concrete value that runs. Rationale, confirmed
+    # against config/sources.yaml's research (NBK's publication calendar at
+    # nationalbank.kz/ru/statisticalinformation/grafik-vypuska-statisticheskoy-informacii,
+    # BNS/Minfin's observed release cadence): the daily NBK USD/KZT rate and base-rate
+    # feed need same-day freshness; BNS (monthly/quarterly), Minfin (monthly/quarterly),
+    # and IMF (biannual WEO) change far less often, but re-checking them daily is cheap
+    # -- the job commits nothing when nothing actually changed -- and this guarantees we
+    # never miss a monthly/quarterly release by more than a day. Revisit only if daily
+    # runs prove wasteful in practice, or if EXCHANGE_RATE ever needs its own faster cron.
     - cron: "0 6 * * *"
   workflow_dispatch: {}
 

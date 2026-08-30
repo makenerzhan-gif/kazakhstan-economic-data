@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/",
+  "dataset_id": "5809",
+  "indicator_id": "IND_PROD",
+  "indicator_name": "Industrial Production Index",
+  "description": "Индекс промышленного производства",
+  "frequency": "annual",
+  "unit": "index, % to previous period",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "file contains only annual points, not monthly, despite the indicator being conceptually a monthly release",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2009-12-31",
+  "period_end": "2023-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

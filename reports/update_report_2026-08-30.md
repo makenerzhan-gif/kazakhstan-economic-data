@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T13:57:29.388148
+Run timestamp: 2026-08-30T14:13:51.944461
 Unified dataset updated: True
 Tests passed: True
 
@@ -70,12 +70,10 @@ Tests passed: True
   - warning: Unexpected jump of 60.0% between 2025-09-30 (99724898500000.0) and 2025-12-31 (159608552900000.0).
   - warning: Unexpected jump of 78.6% between 2025-12-31 (159608552900000.0) and 2026-03-31 (34102358100000.0).
   - warning: Unexpected jump of 108.0% between 2026-03-31 (34102358100000.0) and 2026-06-30 (70948693300000.0).
-- **bns/IND_PROD** — fetch: skipped (downloaded=0, processed=0)
-  - warning: No confirmed source yet for this indicator (see config/sources.yaml agencies.bns.endpoints). Run/extend the source-research step before enabling.
+- **bns/IND_PROD** — fetch+validate+process: ok (downloaded=15, processed=15)
 - **bns/CPI** — fetch+validate+process: ok (downloaded=178, processed=178)
 - **bns/UNEMPLOYMENT** — fetch+validate+process: ok (downloaded=10, processed=10)
-- **bns/INVESTMENT** — fetch: skipped (downloaded=0, processed=0)
-  - warning: No confirmed source yet for this indicator (see config/sources.yaml agencies.bns.endpoints). Run/extend the source-research step before enabling.
+- **bns/INVESTMENT** — fetch+validate+process: ok (downloaded=7, processed=7)
 - **bns/EXPORTS** — fetch: skipped (downloaded=0, processed=0)
   - warning: No confirmed source yet for this indicator (see config/sources.yaml agencies.bns.endpoints). Run/extend the source-research step before enabling.
 - **bns/IMPORTS** — fetch: skipped (downloaded=0, processed=0)

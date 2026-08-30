@@ -2,20 +2,23 @@
 # Exactly the 15-20 indicators approved for the end-to-end pilot (see MASTER TASK section 0).
 # `source_status` is filled in only after the source-research step confirms (or fails to confirm)
 # a real machine-readable official source. Never set it to "confirmed" without a verified URL
-# in config/sources.yaml.
+# in config/sources.yaml. `frequency` reflects what the confirmed source actually publishes,
+# not our original assumption -- IND_PROD and INVESTMENT were originally guessed as
+# monthly/quarterly before the source was inspected; the confirmed BNS files only contain
+# annual points, so frequency was corrected here on 2026-08-30.
 #
 # frequency: daily | monthly | quarterly | annual
-# source_status: pending_research | confirmed_api | confirmed_csv | confirmed_xlsx | unavailable_automatic
+# source_status: pending_research | confirmed | not_found | found_but_not_yet_parseable
 
 indicators:
   - id: GDP_REAL
     name_ru: "ВВП, реальный (в ценах предыдущего года / физический объем)"
     name_en: "Real GDP"
     agency: bns
-    frequency: quarterly
-    unit: "million KZT (real)"
+    frequency: annual
+    unit: "index (physical volume, % of previous period)"
     category: national_accounts
-    source_status: pending_research
+    source_status: found_but_not_yet_parseable
 
   - id: GDP_NOMINAL
     name_ru: "ВВП, номинальный"
@@ -24,16 +27,16 @@ indicators:
     frequency: quarterly
     unit: "million KZT"
     category: national_accounts
-    source_status: pending_research
+    source_status: confirmed
 
   - id: IND_PROD
     name_ru: "Индекс промышленного производства"
     name_en: "Industrial Production Index"
     agency: bns
-    frequency: monthly
-    unit: "index, % to corresponding period"
+    frequency: annual
+    unit: "index, % to previous period"
     category: production
-    source_status: pending_research
+    source_status: confirmed
 
   - id: CPI
     name_ru: "Индекс потребительских цен (инфляция)"
@@ -42,7 +45,7 @@ indicators:
     frequency: monthly
     unit: "% change vs previous month"
     category: prices
-    source_status: pending_research
+    source_status: confirmed
 
   - id: UNEMPLOYMENT
     name_ru: "Уровень безработицы"
@@ -51,16 +54,16 @@ indicators:
     frequency: quarterly
     unit: "% of labor force"
     category: labor
-    source_status: pending_research
+    source_status: confirmed
 
   - id: INVESTMENT
     name_ru: "Инвестиции в основной капитал"
     name_en: "Investment in Fixed Capital"
     agency: bns
-    frequency: quarterly
+    frequency: annual
     unit: "million KZT"
     category: investment
-    source_status: pending_research
+    source_status: confirmed
 
   - id: EXPORTS
     name_ru: "Экспорт (итого)"
@@ -69,7 +72,7 @@ indicators:
     frequency: monthly
     unit: "thousand USD"
     category: trade
-    source_status: pending_research
+    source_status: found_but_not_yet_parseable
 
   - id: IMPORTS
     name_ru: "Импорт (итого)"
@@ -78,7 +81,7 @@ indicators:
     frequency: monthly
     unit: "thousand USD"
     category: trade
-    source_status: pending_research
+    source_status: found_but_not_yet_parseable
 
   - id: BASE_RATE
     name_ru: "Базовая ставка НБ РК"
@@ -87,7 +90,7 @@ indicators:
     frequency: daily
     unit: "% p.a."
     category: monetary
-    source_status: pending_research
+    source_status: confirmed
 
   - id: EXCHANGE_RATE
     name_ru: "Официальный курс USD/KZT"
@@ -96,7 +99,7 @@ indicators:
     frequency: daily
     unit: "KZT per 1 USD"
     category: monetary
-    source_status: pending_research
+    source_status: confirmed
 
   - id: M2
     name_ru: "Денежная масса M2"
@@ -105,7 +108,7 @@ indicators:
     frequency: monthly
     unit: "million KZT"
     category: monetary
-    source_status: pending_research
+    source_status: found_but_not_yet_parseable
 
   - id: M3
     name_ru: "Денежная масса M3"
@@ -114,7 +117,7 @@ indicators:
     frequency: monthly
     unit: "million KZT"
     category: monetary
-    source_status: pending_research
+    source_status: found_but_not_yet_parseable
 
   - id: GOV_REVENUE
     name_ru: "Доходы республиканского бюджета"
@@ -123,7 +126,7 @@ indicators:
     frequency: monthly
     unit: "million KZT"
     category: fiscal
-    source_status: pending_research
+    source_status: found_but_not_yet_parseable
 
   - id: GOV_EXPENDITURE
     name_ru: "Расходы республиканского бюджета"
@@ -132,7 +135,7 @@ indicators:
     frequency: monthly
     unit: "million KZT"
     category: fiscal
-    source_status: pending_research
+    source_status: found_but_not_yet_parseable
 
   - id: GOV_DEBT
     name_ru: "Государственный долг РК"
@@ -141,7 +144,7 @@ indicators:
     frequency: quarterly
     unit: "million KZT"
     category: fiscal
-    source_status: pending_research
+    source_status: found_but_not_yet_parseable
 
   - id: IMF_GDP_GROWTH
     name_ru: "IMF WEO: реальный рост ВВП Казахстана"
@@ -150,7 +153,7 @@ indicators:
     frequency: annual
     unit: "% change"
     category: international_projection
-    source_status: pending_research
+    source_status: confirmed
 
   - id: IMF_INFLATION
     name_ru: "IMF WEO: инфляция, Казахстан"
@@ -159,7 +162,7 @@ indicators:
     frequency: annual
     unit: "% change, average consumer prices"
     category: international_projection
-    source_status: pending_research
+    source_status: confirmed
 
   - id: IMF_CURRENT_ACCOUNT
     name_ru: "IMF: Счет текущих операций, Казахстан"
@@ -168,4 +171,4 @@ indicators:
     frequency: annual
     unit: "% of GDP"
     category: international_projection
-    source_status: pending_research
+    source_status: confirmed

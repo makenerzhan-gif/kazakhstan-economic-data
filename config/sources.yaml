@@ -39,20 +39,54 @@ agencies:
           National total row presence not yet confirmed — must check termNames for a
           "РЕСПУБЛИКА КАЗАХСТАН" entry vs summing regions; verify before trusting a parsed total.
       GDP_REAL:
-        status: not_found
+        status: found_but_not_yet_parseable
         notes: >
-          Real GDP (constant prices / physical volume index) was NOT located in the
-          GDP-by-production open-data file or its two sibling files (474290 final-use
-          method, 474291 income method) during this research pass. Needs a follow-up
-          search specifically on Taldau or another BNS national-accounts page before
-          this indicator can be marked confirmed or unavailable.
+          RE-CHECKED 2026-08-30 after being told "real GDP is too basic a series to be
+          genuinely missing" -- correct call, it was a premature conclusion the first time.
+          It DOES exist: BNS's Taldau catalog (a separate system from the /open-data/ file API
+          used for the other BNS indicators) lists it explicitly under "Статистика национальных
+          счетов" as two series: "индекс физического объема валового внутреннего продукта
+          методом производства" (indexId 2979005, production method) and "Индекс физического
+          объема валового внутреннего продукта методом конечного использования" (indexId
+          700974, final-use method) -- confirmed by fetching
+          https://taldau.stat.gov.kz/ru/Industry/GetIndustryByID/700894 and reading its real
+          link list, not guessed.
+          BUT Taldau's "NewIndex" delivery mechanism is a full internal ExtJS 4.1.1 single-page
+          app, not a simple parameterized file download like stat.gov.kz/api/iblock/. Reverse-
+          engineered this far: term tree confirmed single-dimension (region only), root id
+          741880 = "РЕСПУБЛИКА КАЗАХСТАН" with hasData:true (via POST
+          https://taldau.stat.gov.kz/ru/NewIndex/getTermBranch, params termId/terms/dicCount/
+          orderNum/idx/periodId/indexId). A real data-export endpoint exists and responds
+          correctly (GET https://taldau.stat.gov.kz/ru/Api/GetIndexData/{indexId}?period=
+          {periodId}&dics={termId} -> confirmed HTTP 200, Content-Type application/json, so NOT
+          blocked by CAPTCHA/login) but returned an empty array `[]` for every (period, dics)
+          combination tried (periods 4/7/8/9, dics=741880/0), including with a warmed-up
+          session and a matching Referer header. The POST-based NewIndex/GetDynamics endpoint
+          (params dicIds/indexId/periodId/terms/filters_dates) returned HTTP 500 rather than
+          data, suggesting the client-side app accumulates additional state across several
+          prior AJAX calls (GetIndexPeriods, getTermBranch, etc.) before GetDynamics/
+          GetIndexData will return real data -- not a single-shot call like the /open-data/ cube
+          files. This is a materially bigger reverse-engineering task than IND_PROD/INVESTMENT
+          turned out to be (see their notes below) -- genuinely more work, not "didn't get to it".
+          NEXT STEP if pursued: replay the exact AJAX call sequence the page itself makes
+          (e.g. via browser devtools network capture) rather than guessing parameters blind.
       IND_PROD:
-        status: confirmed_url_unconfirmed_structure
+        status: confirmed
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
         element_id: 5809
         download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
         format: json_cube
-        notes: "22.6MB file, region x industry x comparison-type cube, 1990-2025. Contains annual points at minimum; presence/labeling of monthly points not yet verified by full parse."
+        notes: >
+          RE-CHECKED 2026-08-30 (full content downloaded and parsed, not just HEAD-checked).
+          Confirmed to be the EXACT SAME simple json_cube format as GDP_NOMINAL/UNEMPLOYMENT
+          (list of {terms, termNames, periods} slices) -- not a merged-cell pivot table, and
+          not materially harder to parse than the other cube-format indicators. Was simply not
+          gotten to in the first pass. 3 dims: [region, industry, comparison_type];
+          comparison_type has only one value in this file ('отчетный период к предыдущему
+          периоду'); ALL periods are annual (2009-2023) -- correcting the earlier unverified
+          note that monthly points might be present. National total row:
+          ['РЕСПУБЛИКА КАЗАХСТАН', 'Промышленность', 'отчетный период к предыдущему периоду'].
+          Now implemented in scripts/fetchers/bns.py:fetch_ind_prod and connected.
       CPI:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/open-data/stat-prices/474295/"
@@ -69,12 +103,23 @@ agencies:
         format: json_cube
         notes: "Downloaded and parsed this session. Quarterly (LFS/ILO methodology). terms include region, locality, sex, age group -- filter for national/total/total/total row."
       INVESTMENT:
-        status: confirmed_url_unconfirmed_structure
+        status: confirmed
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-invest/"
         element_id: 5546
         download_url: "https://stat.gov.kz/api/iblock/element/5546/json/file/ru/"
         format: json_cube
-        notes: "Redirect confirmed via HEAD only; file content not downloaded/parsed this session."
+        notes: >
+          RE-CHECKED 2026-08-30 (full content downloaded and parsed). Same simple json_cube
+          format again, not a harder structure -- was also just not gotten to in the first pass.
+          4 dims: [region, locality, enterprise_size, cost_type]; national total row =
+          ['РЕСПУБЛИКА КАЗАХСТАН', 'Всего', 'Всего', 'Всего']. Real caveat found: there are TWO
+          cube slices with that exact combo, covering non-overlapping years 2016-2018 and
+          2019-2022 respectively -- looks like a classification/methodology break rather than a
+          bug; the fetcher concatenates both (they don't overlap) and records the break in
+          metadata rather than hiding it. Also: this file's actual coverage (2016-2022) is
+          narrower than the "2003-2025" advertised on the human-facing page -- the older
+          history was not located here and may live in a separate file. Now implemented in
+          scripts/fetchers/bns.py:fetch_investment and connected.
       EXPORTS:
         status: confirmed_xlsx_only
         page_url: "https://stat.gov.kz/ru/open-data/international-trade/474298/"

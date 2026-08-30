@@ -200,3 +200,129 @@ def fetch_gdp_nominal() -> tuple[list[dict], dict]:
         "transformation": "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",
     }
     return records, manifest
+
+
+def fetch_ind_prod() -> tuple[list[dict], dict]:
+    """Industrial production index, national, whole-industry aggregate, annual.
+
+    Verified live 2026-08-30: SAME list-of-cube-slices JSON format as GDP_NOMINAL/
+    UNEMPLOYMENT (terms/termNames/periods per entry) -- not a merged-cell pivot
+    table. 3 dimensions: [region, industry/activity, comparison_type]. The
+    comparison_type dimension has exactly one value in this file
+    ('отчетный период к предыдущему периоду'), and all periods are ANNUAL only
+    (2009-2023) -- there is no monthly granularity in this particular file,
+    correcting our earlier unverified guess that it might contain monthly points.
+    Filtered to region='РЕСПУБЛИКА КАЗАХСТАН', industry='Промышленность' (the
+    whole-industry aggregate, as opposed to sub-sectors like manufacturing).
+    """
+    element_id = 5809
+    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/json/file/ru/"
+    content = _download(url)
+    _save_raw("IND_PROD", content, "json", {"source_url": url, "element_id": element_id})
+
+    import json
+    data = json.loads(content)
+
+    TARGET = ["РЕСПУБЛИКА КАЗАХСТАН", "Промышленность", "отчетный период к предыдущему периоду"]
+    match = next((entry for entry in data if entry.get("termNames") == TARGET), None)
+    if match is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in bns/IND_PROD",
+                "WHAT CHANGED: no cube slice matched the expected national/whole-industry combo",
+                f"EXPECTED termNames: {TARGET}",
+                "ACTUAL: no matching entry in the downloaded file",
+                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = []
+    for p in match["periods"]:
+        try:
+            records.append({"date": _dd_mm_yyyy_to_iso(p["date"]), "value": float(p["value"])})
+        except (ValueError, KeyError):
+            continue
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "annual",
+        "source_url": url,
+        "dataset_id": str(element_id),
+        "note": "file contains only annual points, not monthly, despite the indicator being conceptually a monthly release",
+    }
+    return records, manifest
+
+
+def fetch_investment() -> tuple[list[dict], dict]:
+    """Investment in fixed capital, national, all enterprise sizes/localities, total, annual.
+
+    Verified live 2026-08-30: SAME list-of-cube-slices JSON format again. 4
+    dimensions: [region, locality, enterprise_size, cost_type]. Filtered to
+    region='РЕСПУБЛИКА КАЗАХСТАН', locality='Всего', enterprise_size='Всего',
+    cost_type='Всего' (the fully-aggregated national total).
+
+    IMPORTANT caveat found this session: there are TWO cube entries with this
+    exact same termNames combo -- one covering 2016-2018, another covering
+    2019-2022, with no overlapping years. This looks like a classification/
+    methodology break (BNS re-published under what appears to be a revised
+    structure starting 2019) rather than a data error. We concatenate both
+    since their periods don't overlap, but flag it in the manifest note rather
+    than silently presenting it as one continuous, unbroken methodology. Also
+    note: this file's actual coverage (2016-2022) is narrower than the
+    "2003-2025" range advertised on the human-facing page -- that longer
+    history may live in a different, not-yet-identified file.
+    """
+    element_id = 5546
+    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/json/file/ru/"
+    content = _download(url)
+    _save_raw("INVESTMENT", content, "json", {"source_url": url, "element_id": element_id})
+
+    import json
+    data = json.loads(content)
+
+    TARGET = ["РЕСПУБЛИКА КАЗАХСТАН", "Всего", "Всего", "Всего"]
+    matches = [entry for entry in data if entry.get("termNames") == TARGET]
+    if not matches:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in bns/INVESTMENT",
+                "WHAT CHANGED: no cube slice matched the expected fully-aggregated national combo",
+                f"EXPECTED termNames: {TARGET}",
+                "ACTUAL: no matching entry in the downloaded file",
+                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = []
+    for match in matches:
+        for p in match["periods"]:
+            try:
+                records.append({"date": _dd_mm_yyyy_to_iso(p["date"]), "value": float(p["value"])})
+            except (ValueError, KeyError):
+                continue
+    records.sort(key=lambda r: r["date"])
+
+    dates = [r["date"] for r in records]
+    if len(dates) != len(set(dates)):
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in bns/INVESTMENT",
+                "WHAT CHANGED: multiple cube slices for the national total now overlap on the same date(s)",
+                "EXPECTED: the known methodology-break slices (2016-2018 / 2019-2022) to cover disjoint years",
+                f"ACTUAL: duplicate dates found across {len(matches)} matching slices",
+                "ACTION REQUIRED: inspect the raw file and decide how to reconcile overlapping values "
+                "before trusting this series -- do not silently pick one.",
+            ])
+        )
+
+    manifest = {
+        "frequency": "annual",
+        "source_url": url,
+        "dataset_id": str(element_id),
+        "note": (
+            f"{len(matches)} cube slices concatenated for the national total (methodology break "
+            "observed between them, exact years found: " + ", ".join(sorted({r['date'][:4] for r in records})) +
+            "). Coverage is narrower than the 2003-2025 advertised on the source page -- "
+            "the older history was not located in this file."
+        ),
+    }
+    return records, manifest

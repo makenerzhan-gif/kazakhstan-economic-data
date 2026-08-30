@@ -38,3 +38,40 @@
 - Wrote `scripts/build_project_knowledge.py` to auto-regenerate DATA_CATALOG.md,
   DATA_DICTIONARY.md, SOURCES.md, and latest/{macro_latest.csv,macro_metadata.json} from
   the current metadata/ + config/ state after every pipeline run.
+
+## 2026-08-30 — re-verified 3 open questions before widening scope, 10/18 connected
+Prompted by a review asking to check three specific claims rather than accept them at
+face value. All three were re-checked live rather than reasoned about from memory:
+- **GDP_REAL**: the earlier "not found" conclusion was premature. Taldau (a separate
+  system from the /open-data/ file API) does publish it as "индекс физического объема
+  ВВП" (indexId 2979005 production-method, 700974 final-use-method) — confirmed by
+  reading Taldau's own category page. However its delivery mechanism is a full internal
+  ExtJS single-page app with a stateful, multi-step AJAX protocol, not a one-shot file
+  download. Reverse-engineered the term tree and found a real JSON export endpoint that
+  responds HTTP 200 (so not CAPTCHA/login-blocked), but every parameter combination tried
+  returned an empty result — the client evidently accumulates state across several prior
+  AJAX calls before that endpoint returns data. Status is now `found_but_not_yet_parseable`
+  (not `not_found`) in `config/sources.yaml`, with the exact endpoints/params tried recorded
+  so the next attempt doesn't repeat this work blind.
+- **IND_PROD / INVESTMENT**: re-checked by actually downloading and parsing the full files
+  (previously only HEAD-checked). Both turned out to be the identical simple json_cube
+  format already used for GDP_NOMINAL/UNEMPLOYMENT — not a harder merged-cell pivot table.
+  This was genuinely "didn't get to it yet," not a harder technical problem, so both are
+  now implemented (`scripts/fetchers/bns.py:fetch_ind_prod`, `fetch_investment`) and
+  connected. Two real findings surfaced by actually parsing the data: both files contain
+  only annual points (not monthly/quarterly as originally assumed in `indicators.yaml` —
+  corrected); INVESTMENT's national-total combo appears as two non-overlapping cube slices
+  (2016-2018 and 2019-2022), which looks like a methodology break — concatenated with the
+  break recorded in metadata rather than silently smoothed over.
+- **Cron schedule**: confirmed `.github/workflows/update.yml` already had a concrete value
+  (`0 6 * * *`, daily at 06:00 UTC) — describing it as a "placeholder" in the stage-1 summary
+  was imprecise phrasing on my part, not an actual gap. Reworded the comment so it reads as
+  the deliberate default it is, and grounded the rationale in the confirmed NBK publication
+  calendar and observed BNS/Minfin cadence from `config/sources.yaml`.
+- 10/18 indicators now connected end-to-end (up from 8/18): added BNS IND_PROD and
+  INVESTMENT. Remaining 8 not connected: GDP_REAL (found, not yet parseable — see above),
+  BNS EXPORTS/IMPORTS (XLSX-only), NBK M2/M3 (row_code mapping unresolved), Minfin
+  GOV_REVENUE/GOV_EXPENDITURE/GOV_DEBT (XLSX, cell-level parsing not yet implemented).
+- `pytest tests/ -q` — 24/24 passing after the changes.
+- Pushed to https://github.com/makenerzhan-gif/kazakhstan-economic-data (private repo,
+  already existed empty under the user's account).
