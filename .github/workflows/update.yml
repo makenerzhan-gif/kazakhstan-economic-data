@@ -37,6 +37,23 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: python scripts/update_all.py
 
+      - name: Upload diagnostics artifact
+        # Runs regardless of whether "Run pipeline" succeeded or failed -- this is what
+        # actually fixes the observability gap. Without `if: always()`, GitHub Actions
+        # skips every subsequent step once a step fails, so logs/ and reports/ written
+        # by update_all.py on the runner's disk were previously lost when the runner
+        # was torn down (never committed, since "Commit and push" below only runs on
+        # success, and never uploaded anywhere else). This step does not touch the
+        # pipeline's exit code or the repository -- it only copies logs/ and reports/
+        # (if present) into a downloadable build artifact.
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kz-economic-data-diagnostics-${{ github.run_id }}
+          path: |
+            logs/
+            reports/
+
       - name: Commit and push if there are changes
         run: |
           git config user.name "kz-data-bot"
