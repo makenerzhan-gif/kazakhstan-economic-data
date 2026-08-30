@@ -1228,3 +1228,39 @@ indicators:
     unit: "persons"
     category: demographic
     source_status: confirmed
+
+  - id: GOV_WAGES_EXPENDITURE
+    name_ru: "Расходы республиканского бюджета на заработную плату"
+    name_en: "Republican Budget Wages Expenditure"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_CAPITAL_EXPENDITURE
+    name_ru: "Капитальные затраты республиканского бюджета"
+    name_en: "Republican Budget Capital Expenditure"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_PENSIONS_EXPENDITURE
+    name_ru: "Расходы республиканского бюджета на пенсии"
+    name_en: "Republican Budget Pension Expenditure"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_SUBSIDIES_EXPENDITURE
+    name_ru: "Бюджетные субсидии республиканского бюджета"
+    name_en: "Republican Budget Subsidies Expenditure"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed

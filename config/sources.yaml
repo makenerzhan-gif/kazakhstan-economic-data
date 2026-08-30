@@ -1241,6 +1241,69 @@ agencies:
           listing (2025: ~212bn KZT Feb to ~2,003bn KZT Nov; 2026: ~66bn Jan to ~1,165bn
           Jun). No document currently covers a full Jan-Dec year -- a real gap, not
           fabricated/interpolated. fetch_customs_duties.
+      GOV_WAGES_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 10"
+        target_row_label: "Заработная плата (economic category 110)"
+        format: xlsx
+        frequency: irregular
+        notes: >
+          2026-08-30. Found immediately after CUSTOMS_DUTIES in the same "Statistical
+          bulletin" document, sheet "табл 10" ("ИСПОЛНЕНИЕ РЕСПУБЛИКАНСКОГО БЮДЖЕТА ПО
+          ЭКОНОМИЧЕСКОЙ КЛАССИФИКАЦИИ РАСХОДОВ" -- execution of the republican budget by
+          ECONOMIC classification, i.e. by type of spending: wages/capital/transfers/
+          subsidies -- a genuinely different dimension from the FUNCTIONAL classification
+          (health/education/defense) already covered by GOV_HEALTH_SPENDING etc. from the
+          Dynamics file). Same multi-document, period-parsed-from-internal-text mechanism as
+          CUSTOMS_DUTIES (see its notes for the full explanation of why document titles are
+          untrusted and why the series is year-to-date cumulative). Row matched by exact
+          Russian name 'Заработная плата', confirmed to appear exactly once across all 13
+          bulletin documents. Verified live: monotonic within each year (2025: ~180bn Feb to
+          ~1,015bn Nov; 2026: ~62bn Jan to ~489bn Jun). fetch_gov_wages_expenditure.
+      GOV_CAPITAL_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 10"
+        target_row_label: "Капитальные затраты (top-level economic category 2)"
+        format: xlsx
+        frequency: irregular
+        notes: >
+          2026-08-30. Same document, sheet, and mechanism as GOV_WAGES_EXPENDITURE, row
+          matched by exact Russian name 'Капитальные затраты'. Verified live: monotonic
+          within each year (2025: ~97bn Feb to ~1,597bn Nov; 2026: ~1bn Jan to ~440bn Jun --
+          the very low January figure is plausible, capital projects often front-load
+          spending later in the fiscal year). fetch_gov_capital_expenditure.
+      GOV_PENSIONS_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 10"
+        target_row_label: "Пенсии (economic category 323)"
+        format: xlsx
+        frequency: irregular
+        notes: >
+          2026-08-30. Same document, sheet, and mechanism as GOV_WAGES_EXPENDITURE, row
+          matched by exact Russian name 'Пенсии'. Verified live: monotonic within each year
+          (2025: ~737bn Feb to ~3,949bn Nov; 2026: ~431bn Jan to ~2,454bn Jun).
+          fetch_gov_pensions_expenditure.
+      GOV_SUBSIDIES_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 10"
+        target_row_label: "Бюджетные субсидии (economic category 310)"
+        format: xlsx
+        frequency: irregular
+        notes: >
+          2026-08-30. Same document, sheet, and mechanism as GOV_WAGES_EXPENDITURE, row
+          matched by exact Russian name 'Бюджетные субсидии' -- an economic-classification
+          view of subsidies, distinct from BNS's national-accounts SUBSIDIES indicator (a
+          different agency, different concept, different measurement approach; not expected
+          to reconcile). Verified live: monotonic within each year (2025: ~34bn Feb to
+          ~414bn Nov; 2026: ~6bn Jan to ~259bn Jun). fetch_gov_subsidies_expenditure.
       GOV_HEALTH_SPENDING:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"

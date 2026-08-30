@@ -1,7 +1,7 @@
 {
   "source": "minfin",
   "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448",
-  "dataset_id": "gov.kz-statistical-bulletin-listing",
+  "dataset_id": "gov.kz-statistical-bulletin-listing,sheet=табл 8 (дох)",
   "indicator_id": "CUSTOMS_DUTIES",
   "indicator_name": "Customs Duties (Republican Budget)",
   "description": "Таможенные платежи (республиканский бюджет)",

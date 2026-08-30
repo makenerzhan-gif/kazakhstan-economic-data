@@ -688,19 +688,22 @@ RU_MONTH_TO_NUM = {
 CUSTOMS_DUTIES_ROW_LABEL = "Таможенные платежи"
 
 
-def fetch_customs_duties() -> tuple[list[dict], dict]:
-    """Customs duties (import + export), republican budget, million KZT,
-    year-to-date cumulative (resets each January -- see the module comment
-    above for why this is a real pattern, not a bug). Verified live
-    2026-08-30: 13 documents parsed, values genuinely monotonic within each
-    year (2025: ~212bn in Feb to ~2,003bn in Nov; 2026: ~66bn in Jan to
-    ~1,165bn in Jun)."""
+def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str) -> tuple[list[dict], dict]:
+    """Shared fetcher for any single row in one of the "Statistical bulletin"
+    document's sheets, across all listed bulletin vintages. `row_matcher` is
+    a callable(row) -> bool that identifies the target row within the sheet
+    (each sheet's column layout differs, so this is left to the caller
+    rather than a fixed column index). See CUSTOMS_DUTIES's module comment
+    above for the full explanation of why this needs multi-document
+    iteration, why document titles are not trusted, and why the result is
+    genuinely year-to-date cumulative with real gaps.
+    """
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
     bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
-                "STRUCTURAL CHANGE DETECTED in minfin/CUSTOMS_DUTIES",
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
                 f"WHAT CHANGED: no document title under directions={BUDGET_DIRECTION_ID} contains {STATISTICAL_BULLETIN_TITLE_MARKER!r}",
                 "EXPECTED: at least one 'Statistical bulletin as of ...' document",
                 "ACTUAL: not found in the current listing",
@@ -718,12 +721,12 @@ def fetch_customs_duties() -> tuple[list[dict], dict]:
         content = _download(file_path)
         kind, wb = _open_workbook(content, file_path)
         sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
-        rev_sheet = next((s for s in sheet_names if s.strip() == BULLETIN_REVENUE_SHEET_NAME), None)
-        if rev_sheet is None:
+        target_sheet = next((s for s in sheet_names if s.strip() == sheet_name), None)
+        if target_sheet is None:
             skipped.append(doc["id"])
             continue
 
-        rows = list(_iter_rows(kind, wb, rev_sheet))
+        rows = list(_iter_rows(kind, wb, target_sheet))
         header_row = next((r for r in rows if r and any(
             isinstance(c, str) and BULLETIN_PERIOD_RE.search(c) for c in r if c
         )), None)
@@ -735,7 +738,7 @@ def fetch_customs_duties() -> tuple[list[dict], dict]:
                     if m:
                         period_match = m
                         break
-        target_row = next((r for r in rows if r and len(r) > 3 and r[3] == "1" and r[-1] == CUSTOMS_DUTIES_ROW_LABEL), None)
+        target_row = next((r for r in rows if r and row_matcher(r)), None)
         if period_match is None or target_row is None:
             skipped.append(doc["id"])
             continue
@@ -750,7 +753,7 @@ def fetch_customs_duties() -> tuple[list[dict], dict]:
 
         last_day = calendar.monthrange(year, end_month)[1]
         iso_date = f"{year:04d}-{end_month:02d}-{last_day:02d}"
-        raw_store.save_raw_bytes(SOURCE, f"CUSTOMS_DUTIES_{iso_date}", today,
+        raw_store.save_raw_bytes(SOURCE, f"{indicator_id}_{iso_date}", today,
                                   "xls" if file_path.lower().endswith(".xls") else "xlsx", content)
         if iso_date in seen_dates:
             continue
@@ -760,14 +763,14 @@ def fetch_customs_duties() -> tuple[list[dict], dict]:
     if not records:
         raise validation.StructuralChangeError(
             "\n".join([
-                "STRUCTURAL CHANGE DETECTED in minfin/CUSTOMS_DUTIES",
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
                 f"WHAT CHANGED: zero of {len(bulletins)} listed bulletin documents could be parsed",
                 f"ACTUAL: all skipped, ids: {skipped}",
                 "ACTION REQUIRED: inspect a recent bulletin and update scripts/fetchers/minfin.py",
             ])
         )
 
-    raw_store.write_download_manifest(SOURCE, "CUSTOMS_DUTIES", today, {
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
         "downloaded_at": datetime.now().isoformat(),
         "n_documents_listed": len(bulletins), "n_parsed": len(records), "skipped_document_ids": skipped,
         "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
@@ -777,7 +780,7 @@ def fetch_customs_duties() -> tuple[list[dict], dict]:
     manifest = {
         "frequency": "irregular (year-to-date cumulative, roughly monthly)",
         "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
-        "dataset_id": "gov.kz-statistical-bulletin-listing",
+        "dataset_id": f"gov.kz-statistical-bulletin-listing,sheet={sheet_name}",
         "note": (
             f"Built from {len(records)} of {len(bulletins)} listed 'Statistical bulletin' "
             f"documents ({len(skipped)} skipped -- missing sheet or unparseable period/row). "
@@ -791,3 +794,83 @@ def fetch_customs_duties() -> tuple[list[dict], dict]:
         ),
     }
     return records, manifest
+
+
+def fetch_customs_duties() -> tuple[list[dict], dict]:
+    """Customs duties (import + export), republican budget, million KZT,
+    year-to-date cumulative (resets each January -- see the module comment
+    above for why this is a real pattern, not a bug). Verified live
+    2026-08-30: 13 documents parsed, values genuinely monotonic within each
+    year (2025: ~212bn in Feb to ~2,003bn in Nov; 2026: ~66bn in Jan to
+    ~1,165bn in Jun)."""
+    return _fetch_bulletin_row(
+        BULLETIN_REVENUE_SHEET_NAME,
+        lambda r: len(r) > 3 and r[3] == "1" and r[-1] == CUSTOMS_DUTIES_ROW_LABEL,
+        "CUSTOMS_DUTIES",
+    )
+
+
+# ---------------------------------------------------------------------------
+# Republican budget expenditure by ECONOMIC classification (as opposed to the
+# FUNCTIONAL classification already covered by GOV_HEALTH_SPENDING/GOV_EDUCATION_
+# SPENDING/etc. from the Dynamics file) -- found 2026-08-30 in the same
+# "Statistical bulletin" document's "табл 10" sheet, immediately after resolving
+# CUSTOMS_DUTIES in the neighboring "табл 8 (дох)" sheet. Standard GFS-style
+# breakdown by TYPE of spending (wages, capital, transfers, subsidies) rather than
+# purpose. Confirmed the sheet and target rows are present with exactly one match
+# each across all 13 currently-listed bulletin documents, values monotonically
+# consistent with the same year-to-date cumulative pattern as CUSTOMS_DUTIES.
+# ---------------------------------------------------------------------------
+BULLETIN_EXPENDITURE_ECONOMIC_SHEET_NAME = "табл 10"
+
+
+def fetch_gov_wages_expenditure() -> tuple[list[dict], dict]:
+    """Republican budget wages expenditure (compensation category 110,
+    'Заработная плата'), million KZT, year-to-date cumulative. Verified live
+    2026-08-30: 13 documents parsed, monotonic within each year (2025:
+    ~180bn Feb to ~1,015bn Nov; 2026: ~62bn Jan to ~489bn Jun)."""
+    return _fetch_bulletin_row(
+        BULLETIN_EXPENDITURE_ECONOMIC_SHEET_NAME,
+        lambda r: r[-1] == "Заработная плата",
+        "GOV_WAGES_EXPENDITURE",
+    )
+
+
+def fetch_gov_capital_expenditure() -> tuple[list[dict], dict]:
+    """Republican budget capital expenditure (top-level economic category 2,
+    'Капитальные затраты'), million KZT, year-to-date cumulative. Verified
+    live 2026-08-30: 13 documents parsed, monotonic within each year (2025:
+    ~97bn Feb to ~1,597bn Nov; 2026: ~1bn Jan to ~440bn Jun -- note the very
+    low January figure is plausible: capital projects often front-load
+    spending later in the fiscal year)."""
+    return _fetch_bulletin_row(
+        BULLETIN_EXPENDITURE_ECONOMIC_SHEET_NAME,
+        lambda r: r[-1] == "Капитальные затраты",
+        "GOV_CAPITAL_EXPENDITURE",
+    )
+
+
+def fetch_gov_pensions_expenditure() -> tuple[list[dict], dict]:
+    """Republican budget pension expenditure (category 323, 'Пенсии'),
+    million KZT, year-to-date cumulative. Verified live 2026-08-30: 13
+    documents parsed, monotonic within each year (2025: ~737bn Feb to
+    ~3,949bn Nov; 2026: ~431bn Jan to ~2,454bn Jun)."""
+    return _fetch_bulletin_row(
+        BULLETIN_EXPENDITURE_ECONOMIC_SHEET_NAME,
+        lambda r: r[-1] == "Пенсии",
+        "GOV_PENSIONS_EXPENDITURE",
+    )
+
+
+def fetch_gov_subsidies_expenditure() -> tuple[list[dict], dict]:
+    """Republican budget budgetary subsidies (category 310, 'Бюджетные
+    субсидии'), million KZT, year-to-date cumulative -- an economic-
+    classification view of subsidies, distinct from BNS's national-accounts
+    SUBSIDIES indicator. Verified live 2026-08-30: 13 documents parsed,
+    monotonic within each year (2025: ~34bn Feb to ~414bn Nov; 2026: ~6bn
+    Jan to ~259bn Jun)."""
+    return _fetch_bulletin_row(
+        BULLETIN_EXPENDITURE_ECONOMIC_SHEET_NAME,
+        lambda r: r[-1] == "Бюджетные субсидии",
+        "GOV_SUBSIDIES_EXPENDITURE",
+    )

@@ -673,3 +673,28 @@ than the one-shot flat query every other Taldau indicator in this project uses. 
 future session with budget to build that capability rather than rushed in.
 
 **135/135 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — fifteenth scale-up batch: 135 -> 139 indicators
+Went back into the "Statistical bulletin" document (the one that resolved CUSTOMS_DUTIES
+last batch) to explore its other 48 sheets, having proven it worth the effort. Sheet
+"табл 10" -- republican budget expenditure by ECONOMIC classification (type of spending:
+wages/capital/transfers/subsidies), a genuinely different dimension from the FUNCTIONAL
+classification (health/education/defense) already covered by GOV_HEALTH_SPENDING etc.
+
+**Minfin (4):** GOV_WAGES_EXPENDITURE, GOV_CAPITAL_EXPENDITURE, GOV_PENSIONS_EXPENDITURE,
+GOV_SUBSIDIES_EXPENDITURE -- each a single, exact-name-matched row, confirmed present
+exactly once across all 13 currently-listed bulletin documents. Refactored CUSTOMS_DUTIES's
+implementation into a shared `_fetch_bulletin_row(sheet_name, row_matcher, indicator_id)`
+helper (verified the refactor preserves identical output before wiring in the new
+indicators) so all 5 bulletin-sourced indicators share the same period-parsing, multi-
+document iteration, and year-to-date-cumulative documentation established last batch.
+
+**Sanity-checked before committing:** all 4 new series are monotonic within each of the 13
+documents' years, consistent with the same cumulative pattern as CUSTOMS_DUTIES.
+GOV_CAPITAL_EXPENDITURE's very low January figure (~1bn KZT vs ~440bn by June) is plausible
+rather than alarming -- capital projects conventionally front-load spending later in the
+fiscal year. GOV_SUBSIDIES_EXPENDITURE is explicitly documented as NOT expected to
+reconcile with BNS's separate national-accounts SUBSIDIES indicator (different agency,
+different concept, different measurement approach).
+
+**139/139 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
