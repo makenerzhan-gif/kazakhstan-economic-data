@@ -108,7 +108,17 @@ agencies:
         element_id: 102790
         download_url: "https://stat.gov.kz/api/iblock/element/102790/json/file/ru/"
         format: json_cube
-        notes: "Downloaded and parsed this session. Quarterly (LFS/ILO methodology). terms include region, locality, sex, age group -- filter for national/total/total/total row."
+        notes: >
+          Downloaded and parsed this session. Quarterly (LFS/ILO methodology). terms include
+          region, locality, sex, age group, education -- filter for national/total/total/total/
+          total row. SANITY-CHECKED 2026-08-30: this specific file (element_id 102790) only
+          contains 10 quarters total (2023-03-31 .. 2025-06-30) for EVERY dimension combo, not
+          just the national total -- confirmed by scanning every combo's periods, not just ours.
+          This is a real limitation of this element_id, not a parsing bug. The page text says
+          data exists "с 2001 года" (since 2001), which likely refers to a coarser (less
+          dimensioned, no education breakdown) unemployment table elsewhere on BNS with much
+          longer history -- that table was not located this session. Flagging so a future pass
+          knows to look for it rather than assuming 2.5 years is all that exists.
       INVESTMENT:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-invest/"
@@ -213,11 +223,23 @@ agencies:
           API's report_date appears to run about one month ahead of the page's own column
           labels for the same number -- stored verbatim, not shifted. Now implemented in
           scripts/fetchers/nbk.py:fetch_m2 and connected.
+          DATA QUALITY FLAG (sanity check, 2026-08-30): the first published month of this
+          entire dataset, 2021-12-01, looks like a source-side anomaly rather than a real
+          reading -- M2 and M3 are nearly IDENTICAL that month (4,499,341 vs 4,500,005, a
+          0.015% gap) whereas every subsequent month shows a normal ~25-30% M2-to-M3 gap
+          (e.g. Jan 2022: M2=14,781,487, M3=19,290,697). row_code=3 (M1) also jumps
+          unusually that same month (3.86M -> 6.37M, +65%) while row_code=1 (monetary base)
+          and row_code=2 (M0, cash) move normally (~4-5%). Reads as a cold-start/
+          transition artifact in NBK's own first published data point for this specific
+          cross-tab, not a bug in our parser (verified: our processed value for that date
+          matches the raw API response exactly). NOT corrected or dropped here -- raw data
+          is never modified -- but flagged so downstream growth-rate calculations spanning
+          Dec 2021 -> Jan 2022 are not taken at face value.
       M3:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data?formId=51"
         format: json
-        notes: "row_code=5. See M2 notes above for how the mapping was verified. Now implemented in scripts/fetchers/nbk.py:fetch_m3 and connected."
+        notes: "row_code=5. See M2 notes above for how the mapping was verified, and for the 2021-12-01 data quality flag that applies here too. Now implemented in scripts/fetchers/nbk.py:fetch_m3 and connected."
     publication_calendar_url: "https://nationalbank.kz/ru/statisticalinformation/grafik-vypuska-statisticheskoy-informacii"
     publication_calendar_notes: >
       Verified live HTML page, filterable by year/category, with an XLSX export button

@@ -3,14 +3,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import update_imf
-from lib import pipeline_logging
 
 
-def test_run_logs_skipped_for_unconfirmed_indicators():
-    logger = pipeline_logging.RunLogger(run_timestamp="test-run-imf")
-    update_imf.run(logger)
-    assert len(logger.entries) == len(update_imf.INDICATOR_IDS)
-    for e in logger.entries:
-        if e.dataset not in update_imf.FETCHERS:
-            assert e.status == "skipped"
-    assert not logger.has_errors()
+def test_fetchers_registered_for_every_indicator():
+    """See tests/test_bns.py for why this doesn't call the fetchers themselves."""
+    assert set(update_imf.FETCHERS.keys()) == set(update_imf.INDICATOR_IDS)
+    for indicator_id, fn in update_imf.FETCHERS.items():
+        assert callable(fn), f"{indicator_id}'s fetcher is not callable"

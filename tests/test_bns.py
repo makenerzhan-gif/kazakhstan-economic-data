@@ -3,16 +3,15 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import update_bns
-from lib import pipeline_logging
 
 
-def test_run_logs_skipped_for_unconfirmed_indicators():
-    """Until config/sources.yaml has confirmed BNS endpoints, every indicator
-    must log status=skipped rather than error or silently doing nothing."""
-    logger = pipeline_logging.RunLogger(run_timestamp="test-run-bns")
-    update_bns.run(logger)
-    assert len(logger.entries) == len(update_bns.INDICATOR_IDS)
-    for e in logger.entries:
-        if e.dataset not in update_bns.FETCHERS:
-            assert e.status == "skipped"
-    assert not logger.has_errors()
+def test_fetchers_registered_for_every_indicator():
+    """All 8 BNS stage-1 indicators are confirmed and wired -- this catches a
+    typo'd key or an indicator silently falling out of FETCHERS. Does NOT call
+    the fetchers themselves (that would hit the network on every test run);
+    see tests/test_schema.py etc. for offline coverage of the shared logic
+    each fetcher relies on.
+    """
+    assert set(update_bns.FETCHERS.keys()) == set(update_bns.INDICATOR_IDS)
+    for indicator_id, fn in update_bns.FETCHERS.items():
+        assert callable(fn), f"{indicator_id}'s fetcher is not callable"
