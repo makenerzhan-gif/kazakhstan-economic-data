@@ -1083,3 +1083,26 @@ def fetch_npl_ratio() -> tuple[list[dict], dict]:
     Verified live 2026-08-30: 18 rows, all unique dates, ~2.9-3.3% recently
     -- a healthy level for a banking system."""
     return _fetch_fsi("Nonperforming loans to total gross loans", "NPL_RATIO")
+
+
+def fetch_loans_to_economy() -> tuple[list[dict], dict]:
+    """Total gross loans, second-tier banks (deposit takers), million KZT,
+    quarterly. Resolves the LOANS_TO_ECONOMY gap logged as not_connected in
+    an earlier batch (formIds 4/445/488/493 -- raw loan microdata with zero
+    aggregate rows in any of them). Found this batch by going back to the
+    SAME Financial Soundness Indicators form (314) already connected for
+    CAPITAL_ADEQUACY_RATIO/NPL_RATIO and checking its other `indicator`
+    values -- 'Total gross loans' is NBK's own already-aggregated headline
+    figure, no summation needed. Verified live 2026-08-30: 18 rows, all
+    unique dates, ~25.9-30.3 trillion KZT (2023-2024) -- a plausible scale
+    for Kazakhstan's total bank credit stock. Note the source unit is
+    thousand KZT; converted to million KZT here for consistency with other
+    KZT-denominated indicators in this project."""
+    records, manifest = _fetch_fsi("Total gross loans", "LOANS_TO_ECONOMY")
+    for r in records:
+        r["value"] = r["value"] / 1000.0
+    manifest["note"] = (
+        "Million KZT (converted from the source's thousand-KZT unit). Banking-sector "
+        "Financial Soundness Indicator, second-tier banks (deposit takers)."
+    )
+    return records, manifest

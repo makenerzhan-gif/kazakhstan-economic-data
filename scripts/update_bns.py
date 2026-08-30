@@ -75,6 +75,8 @@ FETCHERS = {
     "IND_PROD_MINING": bns_fetchers.fetch_ind_prod_mining,
     "IND_PROD_MANUFACTURING": bns_fetchers.fetch_ind_prod_manufacturing,
     "IND_PROD_ELECTRICITY": bns_fetchers.fetch_ind_prod_electricity,
+    "FINAL_ENERGY_CONSUMPTION": bns_fetchers.fetch_final_energy_consumption,
+    "RENEWABLE_ENERGY_SHARE": bns_fetchers.fetch_renewable_energy_share,
 }
 
 INDICATOR_IDS = [
@@ -94,6 +96,7 @@ INDICATOR_IDS = [
     "TELECOM_SERVICES", "DOCTORS_TOTAL",
     "ENERGY_INTENSITY", "ENERGY_CONSUMPTION", "ELECTRICITY_PRODUCTION",
     "IND_PROD_MINING", "IND_PROD_MANUFACTURING", "IND_PROD_ELECTRICITY",
+    "FINAL_ENERGY_CONSUMPTION", "RENEWABLE_ENERGY_SHARE",
 ]
 
 

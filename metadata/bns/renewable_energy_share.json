@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/8581/json/file/ru/",
+  "dataset_id": "8581",
+  "indicator_id": "RENEWABLE_ENERGY_SHARE",
+  "indicator_name": "Renewable Energy Share in Electricity Production",
+  "description": "Доля возобновляемых источников энергии в производстве электроэнергии",
+  "frequency": "annual",
+  "unit": "%",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "%. Excludes large hydroelectric power stations from the renewable total.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2021-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

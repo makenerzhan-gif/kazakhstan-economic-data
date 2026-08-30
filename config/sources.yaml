@@ -582,6 +582,34 @@ agencies:
           dicIds=68,4834, terms=741880,77356561). Verified live: matches the category
           page's own displayed 2025 figure (80,051 thousand toe, rounded) almost exactly
           (80,050.5). fetch_energy_consumption.
+      FINAL_ENERGY_CONSUMPTION:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-energy/"
+        element_id: 8582
+        download_url: "https://stat.gov.kz/api/iblock/element/8582/json/file/ru/"
+        format: json_cube
+        notes: >
+          2026-08-30. Found on the "Статистика энергетики" open-data page's own "Динамические
+          ряды" list -- a DIFFERENT delivery mechanism (stat.gov.kz json_cube, same family as
+          GDP_NOMINAL/IND_PROD) from the Taldau mechanism used for ENERGY_INTENSITY/
+          ENERGY_CONSUMPTION on the same page. Single cube slice
+          (['РЕСПУБЛИКА КАЗАХСТАН', 'Всего']), 11 annual periods (2015-2025). Verified live:
+          ~38,378 to ~48,483 thousand toe -- consistently below ENERGY_CONSUMPTION's primary-
+          consumption values for the same years, the expected direction since final
+          consumption excludes conversion/transformation losses. fetch_final_energy_consumption.
+      RENEWABLE_ENERGY_SHARE:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-energy/"
+        element_id: 8581
+        download_url: "https://stat.gov.kz/api/iblock/element/8581/json/file/ru/"
+        format: json_cube
+        notes: >
+          2026-08-30. Same open-data page and mechanism as FINAL_ENERGY_CONSUMPTION. Single
+          cube slice (['РЕСПУБЛИКА КАЗАХСТАН'], no further dimension), 5 annual periods
+          (2021-2025). Verified live: rising from 3.46% to 7.02%, matching the page's own
+          displayed "Key Indicator" figure (7.0%, rounded) for the latest year. Excludes
+          large hydroelectric power stations from the renewable total, per the source's own
+          label. fetch_renewable_energy_share.
       ELECTRICITY_PRODUCTION:
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
@@ -873,23 +901,24 @@ agencies:
           and must be driven by the response's own `totalRows` field, not by "stop when a
           page returns empty" -- an off-by-one start (page=1) silently truncated the series
           by ~500 rows before this was caught. fetch_external_debt.
-      LOANS_TO_ECONOMY_NOT_CONNECTED:
-        status: not_connected
+      LOANS_TO_ECONOMY:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=314"
+        format: json
         notes: >
-          2026-08-30. formId=445 ("Loans to economy in an expanded definition") is real and
-          live-verified (445 rows, all fetched in one page) but every single row is a
-          specific combination of business_entity_category x creditor_activities_type x
-          currency x maturity x subject_type -- zero rows have an empty/aggregate value in
-          any dimension (confirmed by testing directly, not just filter-options). Not
-          connected for the same reason as DEPOSIT_RATE/LENDING_RATE/EXTERNAL_DEBT (all three
-          later resolved -- see their now-confirmed entries above -- but through different
-          forms that happened to carry a real aggregation field/value; no such field exists
-          on this form). Follow-up check same day: also tried formId=488 ("Кредиты
+          2026-08-30. RESOLVED in a later session. formId=445 ("Loans to economy in an
+          expanded definition") is real and live-verified (445 rows, all fetched in one
+          page) but every single row is a specific combination of business_entity_category x
+          creditor_activities_type x currency x maturity x subject_type -- zero rows have an
+          empty/aggregate value in any dimension. Also tried formId=488 ("Кредиты
           банковского сектора экономике (аналитическое представление) - основной долг") and
-          formId=493 (same, "выдано за период") since "analytical representation" sounded
-          promising -- both are pure region x industry x maturity x currency x entity-size
-          microdata with no agg_level-style field and no null-as-aggregate pattern either.
-          Still not connected; no further formIds identified to try.
+          formId=493 (same, "выдано за период") -- both pure microdata, no aggregation field.
+          Resolution: went back to formId=314 (Financial Soundness Indicators, already
+          connected for CAPITAL_ADEQUACY_RATIO/NPL_RATIO) and checked its other `indicator`
+          values -- 'Total gross loans' under subject='Core FSIs for Deposit takers' is NBK's
+          own already-aggregated headline figure. Verified live: 18 rows, all unique dates,
+          ~25.9-30.3 trillion KZT (2023-2024, after converting from the source's thousand-KZT
+          unit to million KZT). fetch_loans_to_economy.
       TONIA:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data/indicators"

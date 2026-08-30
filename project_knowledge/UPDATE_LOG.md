@@ -549,3 +549,35 @@ with IMF_NOMINAL_GDP divided by IMF_POPULATION's extrapolated trajectory. Sub-se
 sit in the same 99-106% band as the whole-industry IND_PROD aggregate, as expected.
 
 **127/127 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-30 — eleventh scale-up batch: 127 -> 130 indicators
+Resolved another long-standing gap this batch: LOANS_TO_ECONOMY, previously not_connected
+across four separate raw-loan-microdata forms (445, 4, 488, 493), all lacking any
+aggregation field. The fix mirrored IND_PROD_MINING's resolution pattern from the prior
+batch -- go back to a form ALREADY connected for a different indicator (formId=314,
+Financial Soundness Indicators, used for CAPITAL_ADEQUACY_RATIO/NPL_RATIO) and check its
+other `indicator` values rather than searching for a new form. 'Total gross loans' was
+sitting right there, already aggregated by NBK itself.
+
+**NBK (1):** LOANS_TO_ECONOMY (formId=314, 'Total gross loans'), converted from the
+source's thousand-KZT unit to million KZT for consistency. Also re-investigated the
+NBK payment-cards duplicate-row issue flagged in the prior batch -- confirmed genuinely
+unresolvable (two rows, identical on every field including report_date, different values,
+no revision/vintage marker) -- left unconnected rather than guess.
+
+**BNS (2):** FINAL_ENERGY_CONSUMPTION and RENEWABLE_ENERGY_SHARE, both found on the
+"Статистика энергетики" open-data page's own "Динамические ряды" list -- a different
+delivery mechanism (stat.gov.kz json_cube, same family as GDP_NOMINAL/IND_PROD) from the
+Taldau mechanism used for ENERGY_INTENSITY/ENERGY_CONSUMPTION on the same page. Crude oil
+and natural gas production were searched for again this batch (including inside a 41MB,
+676-industry BNS open-data file) and still not found -- likely Ministry of Energy
+territory, out of BNS's own published scope.
+
+**Sanity-checked before committing:** FINAL_ENERGY_CONSUMPTION sits consistently below
+ENERGY_CONSUMPTION (primary) for the same years, the expected direction since final
+consumption excludes conversion/transformation losses. RENEWABLE_ENERGY_SHARE's 2025 value
+(7.02%) matches the energy page's own displayed "Key Indicator" figure (7.0%, rounded).
+LOANS_TO_ECONOMY (~25.9-30.3 trillion KZT) is a plausible scale for Kazakhstan's total bank
+credit stock.
+
+**130/130 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

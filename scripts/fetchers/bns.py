@@ -1291,3 +1291,101 @@ def fetch_ind_prod_electricity() -> tuple[list[dict], dict]:
         "Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",
         "IND_PROD_ELECTRICITY",
     )
+
+
+def fetch_final_energy_consumption() -> tuple[list[dict], dict]:
+    """Total final energy consumption, thousand tonnes of oil equivalent,
+    annual -- companion to ENERGY_CONSUMPTION (primary consumption, which
+    includes conversion losses this excludes). Found on the "Статистика
+    энергетики" open-data page's own "Динамические ряды" list (a stat.gov.kz
+    open-data json_cube file, element_id=8582 -- the SAME mechanism as
+    GDP_NOMINAL/IND_PROD, distinct from the Taldau mechanism used for
+    ENERGY_CONSUMPTION itself). Verified live 2026-08-30: single cube slice
+    (region='РЕСПУБЛИКА КАЗАХСТАН', 'Всего'), 11 annual periods (2015-2025),
+    values ~38,378 to ~48,483 thousand toe -- consistently below
+    ENERGY_CONSUMPTION's primary-consumption values (~70,252-80,050 for the
+    overlapping years), the expected direction since final consumption
+    excludes conversion/transformation losses.
+    """
+    element_id = 8582
+    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/json/file/ru/"
+    content = _download(url)
+    _save_raw("FINAL_ENERGY_CONSUMPTION", content, "json", {"source_url": url, "element_id": element_id})
+
+    import json
+    data = json.loads(content)
+
+    TARGET = ["РЕСПУБЛИКА КАЗАХСТАН", "Всего"]
+    match = next((entry for entry in data if entry.get("termNames") == TARGET), None)
+    if match is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in bns/FINAL_ENERGY_CONSUMPTION",
+                "WHAT CHANGED: no cube slice matched the expected national/total combo",
+                f"EXPECTED termNames: {TARGET}",
+                "ACTUAL: no matching entry in the downloaded file",
+                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = []
+    for p in match["periods"]:
+        try:
+            records.append({"date": _dd_mm_yyyy_to_iso(p["date"]), "value": float(p["value"])})
+        except (ValueError, KeyError):
+            continue
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "annual",
+        "source_url": url,
+        "dataset_id": str(element_id),
+        "note": "Thousand toe. Excludes conversion/transformation losses, unlike primary consumption (ENERGY_CONSUMPTION).",
+    }
+    return records, manifest
+
+
+def fetch_renewable_energy_share() -> tuple[list[dict], dict]:
+    """Share of renewable energy sources in electricity production
+    (excluding large hydro), %, annual. Found on the same "Статистика
+    энергетики" open-data page (element_id=8581, same json_cube mechanism as
+    FINAL_ENERGY_CONSUMPTION). Verified live 2026-08-30: single cube slice
+    (region='РЕСПУБЛИКА КАЗАХСТАН' only, no further dimension), 5 annual
+    periods (2021-2025), rising from 3.46% to 7.02% -- a plausible growth
+    trend for a rapidly expanding renewables sector, and matches the page's
+    own displayed "Key Indicator" figure (7.0%, rounded) for the latest year.
+    """
+    element_id = 8581
+    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/json/file/ru/"
+    content = _download(url)
+    _save_raw("RENEWABLE_ENERGY_SHARE", content, "json", {"source_url": url, "element_id": element_id})
+
+    import json
+    data = json.loads(content)
+
+    TARGET = ["РЕСПУБЛИКА КАЗАХСТАН"]
+    match = next((entry for entry in data if entry.get("termNames") == TARGET), None)
+    if match is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in bns/RENEWABLE_ENERGY_SHARE",
+                "WHAT CHANGED: no cube slice matched the expected national combo",
+                f"EXPECTED termNames: {TARGET}",
+                "ACTUAL: no matching entry in the downloaded file",
+                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = []
+    for p in match["periods"]:
+        try:
+            records.append({"date": _dd_mm_yyyy_to_iso(p["date"]), "value": float(p["value"])})
+        except (ValueError, KeyError):
+            continue
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "annual",
+        "source_url": url,
+        "dataset_id": str(element_id),
+        "note": "%. Excludes large hydroelectric power stations from the renewable total.",
+    }
+    return records, manifest

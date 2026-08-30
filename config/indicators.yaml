@@ -1156,3 +1156,30 @@ indicators:
     unit: "KZT"
     category: international_projection
     source_status: confirmed
+
+  - id: LOANS_TO_ECONOMY
+    name_ru: "Кредиты банковского сектора экономике (общий портфель)"
+    name_en: "Total Gross Loans, Second-Tier Banks"
+    agency: nbk
+    frequency: quarterly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: FINAL_ENERGY_CONSUMPTION
+    name_ru: "Общее конечное энергопотребление"
+    name_en: "Total Final Energy Consumption"
+    agency: bns
+    frequency: annual
+    unit: "thousand toe"
+    category: production
+    source_status: confirmed
+
+  - id: RENEWABLE_ENERGY_SHARE
+    name_ru: "Доля возобновляемых источников энергии в производстве электроэнергии"
+    name_en: "Renewable Energy Share in Electricity Production"
+    agency: bns
+    frequency: annual
+    unit: "%"
+    category: production
+    source_status: confirmed

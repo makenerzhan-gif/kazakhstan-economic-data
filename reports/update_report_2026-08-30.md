@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T22:50:26.092111
+Run timestamp: 2026-08-30T23:03:45.464942
 Unified dataset updated: True
 Tests passed: True
 
@@ -163,6 +163,8 @@ Tests passed: True
 - **bns/IND_PROD_MINING** — fetch+validate+process: ok (downloaded=15, processed=15)
 - **bns/IND_PROD_MANUFACTURING** — fetch+validate+process: ok (downloaded=15, processed=15)
 - **bns/IND_PROD_ELECTRICITY** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **bns/FINAL_ENERGY_CONSUMPTION** — fetch+validate+process: ok (downloaded=11, processed=11)
+- **bns/RENEWABLE_ENERGY_SHARE** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **nbk/BASE_RATE** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Gap of 49 days between 2024-10-14 and 2024-12-02 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2024-12-02 and 2025-01-20 is outside expected range for frequency=daily (1-4d).
@@ -218,6 +220,7 @@ Tests passed: True
 - **nbk/NON_CASH_PAYMENTS_SHARE** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **nbk/CAPITAL_ADEQUACY_RATIO** — fetch+validate+process: ok (downloaded=18, processed=18)
 - **nbk/NPL_RATIO** — fetch+validate+process: ok (downloaded=18, processed=18)
+- **nbk/LOANS_TO_ECONOMY** — fetch+validate+process: ok (downloaded=18, processed=18)
 - **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)
