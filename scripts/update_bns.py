@@ -26,8 +26,11 @@ FETCHERS = {
     "CPI": bns_fetchers.fetch_cpi,
     "UNEMPLOYMENT": bns_fetchers.fetch_unemployment,
     "GDP_NOMINAL": bns_fetchers.fetch_gdp_nominal,
+    "GDP_REAL": bns_fetchers.fetch_gdp_real,
     "IND_PROD": bns_fetchers.fetch_ind_prod,
     "INVESTMENT": bns_fetchers.fetch_investment,
+    "EXPORTS": bns_fetchers.fetch_exports,
+    "IMPORTS": bns_fetchers.fetch_imports,
 }
 
 INDICATOR_IDS = [

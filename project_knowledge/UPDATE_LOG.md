@@ -75,3 +75,40 @@ face value. All three were re-checked live rather than reasoned about from memor
 - `pytest tests/ -q` — 24/24 passing after the changes.
 - Pushed to https://github.com/makenerzhan-gif/kazakhstan-economic-data (private repo,
   already existed empty under the user's account).
+
+## 2026-08-30 — all 18/18 stage-1 indicators connected
+Tackled the remaining 8: GDP_REAL's Taldau AJAX flow, Minfin XLSX parsing (all 3), and
+NBK M2/M3 row mapping (BNS EXPORTS/IMPORTS were also outstanding but turned out
+straightforward once actually attempted).
+- **GDP_REAL** (the hard one): cracked by using the Claude Browser tool to instrument
+  XMLHttpRequest in a real session, load the Taldau page, and capture the ACTUAL request
+  its own ExtJS grid makes to `POST /ru/NewIndex/GetIndexTreeData`. The earlier blind
+  attempts had hit the wrong endpoint and were missing `p_measure_id` plus the real meaning
+  of `p_dicIds` (a classifier-dictionary id, not a term id). Independently re-verified with
+  a plain, cookie-less `requests.post` — fully stateless, no session/auth needed. Now
+  connected: physical volume index of GDP, production method, annual, 2000-2025.
+- **NBK M2/M3**: the row_code -> M2/M3 mapping wasn't in any API response or the metadata
+  XLSX (which explains the M0-M3 concepts but has no code column). Resolved by opening the
+  human-facing table at nationalbank.kz in a real browser: its numbered rows ("4. M2", "5.
+  M3") match `row_code` exactly, confirmed both structurally and by matching numeric values
+  1:1 against the API. row_code=4 -> M2, row_code=5 -> M3.
+- **BNS EXPORTS/IMPORTS**: XLSX-only, downloaded and parsed directly (54MB/93MB — large
+  because BNS republishes full history every month, not deltas). National monthly total is
+  literally row 4 of each year-sheet, labeled "Республики Казахстан". Set up **Git LFS** for
+  `data/raw/bns/*.xlsx` and `data/raw/minfin/*.xlsx` (user's choice, asked explicitly given
+  the ~1GB/year growth these two files alone would add to plain git history).
+- **Minfin GOV_REVENUE/GOV_EXPENDITURE**: found a much safer source than the 50-sheet
+  monthly bulletin — a small, purpose-built "Dynamics of execution of the republican budget"
+  document (97KB), with the republic-level total on stable row labels ('I. INCOME',
+  'II.Expences'). Discovered dynamically by title each run, not hardcoded. Frequency
+  corrected to annual (was assumed monthly).
+- **Minfin GOV_DEBT**: no combined dynamics file exists for debt, so this backfills from 23
+  individual quarterly snapshot documents. Cross-checked 3 vintages (2021/.xls, 2024/.xlsx,
+  2026/.xlsx) to confirm the target row's LABEL text is stable even though its position and
+  column offset shift between editions — so the parser searches by label, not a fixed index.
+  17/23 documents parsed (6 skipped — older/differently-templated files); real gaps exist in
+  the resulting series (not interpolated). Values converted from the source's thousand-KZT
+  unit to million KZT for consistency with revenue/expenditure.
+- **18/18 stage-1 indicators now connected end-to-end.** `pytest tests/ -q` — 24/24 passing.
+- Also corrected GOV_REVENUE/GOV_EXPENDITURE frequency from monthly to annual once their
+  real source was found (see above).

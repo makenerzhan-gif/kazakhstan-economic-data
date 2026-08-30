@@ -11,7 +11,7 @@ agencies:
   bns:
     name: "Бюро национальной статистики АСПиР РК"
     website: "https://stat.gov.kz"
-    status: partially_confirmed
+    status: confirmed
     notes: >
       Verified 2026-08-30 by live curl, not from memory. Download pattern is a
       redirect-based file API, no CAPTCHA/login/key required:
@@ -39,10 +39,31 @@ agencies:
           National total row presence not yet confirmed — must check termNames for a
           "РЕСПУБЛИКА КАЗАХСТАН" entry vs summing regions; verify before trusting a parsed total.
       GDP_REAL:
-        status: found_but_not_yet_parseable
+        status: confirmed
+        page_url: "https://taldau.stat.gov.kz/ru/Industry/GetIndustryByID/700894"
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 2979005
+        format: json
         notes: >
-          RE-CHECKED 2026-08-30 after being told "real GDP is too basic a series to be
-          genuinely missing" -- correct call, it was a premature conclusion the first time.
+          CRACKED 2026-08-30 by capturing the real browser request instead of guessing further.
+          The earlier "found but not parseable" conclusion (below, kept for the trail) was hitting
+          the WRONG endpoint (Api/GetIndexData) and missing p_measure_id plus the real meaning of
+          the dictionary id, so it returned empty results even at HTTP 200. Used the Claude Browser
+          tool to instrument XMLHttpRequest in a live session, load the page, and read the ACTUAL
+          POST body the page's own ExtJS grid sends to /ru/NewIndex/GetIndexTreeData:
+          p_parent_id=&p_index_id=2979005&p_keyword=&p_period_id=7&p_measure_id=7&
+          p_term_id=741880&p_terms=741880&p_dicIds=67&idx=0&filter=[{"property":null,"value":null}]&id=
+          (p_dicIds=67 is the REGIONS classifier dictionary id, not a term id -- previous attempts
+          conflated the two). Independently re-verified with a plain, cookie-less `requests.post`
+          -- confirmed fully stateless, no session/auth/CSRF needed at all.
+          Response: JSON list of tree nodes; the root node (id=741880, "РЕСПУБЛИКА КАЗАХСТАН")
+          carries annual values as keys like "y122009" (last 4 digits = year), representing the
+          physical volume index of GDP (% of prior period) by production method, 2000-2025.
+          A final-use-method variant also exists (indexId 700974, not fetched). A quarterly-
+          cumulative period option (periodId=9) was seen in GetPeriodList's response but its
+          data shape was not captured/verified -- left for a future pass. Now implemented in
+          scripts/fetchers/bns.py:fetch_gdp_real and connected.
+          --- Prior research trail (superseded, kept for context) ---
           It DOES exist: BNS's Taldau catalog (a separate system from the /open-data/ file API
           used for the other BNS indicators) lists it explicitly under "Статистика национальных
           счетов" as two series: "индекс физического объема валового внутреннего продукта
@@ -50,26 +71,12 @@ agencies:
           объема валового внутреннего продукта методом конечного использования" (indexId
           700974, final-use method) -- confirmed by fetching
           https://taldau.stat.gov.kz/ru/Industry/GetIndustryByID/700894 and reading its real
-          link list, not guessed.
-          BUT Taldau's "NewIndex" delivery mechanism is a full internal ExtJS 4.1.1 single-page
-          app, not a simple parameterized file download like stat.gov.kz/api/iblock/. Reverse-
-          engineered this far: term tree confirmed single-dimension (region only), root id
-          741880 = "РЕСПУБЛИКА КАЗАХСТАН" with hasData:true (via POST
-          https://taldau.stat.gov.kz/ru/NewIndex/getTermBranch, params termId/terms/dicCount/
-          orderNum/idx/periodId/indexId). A real data-export endpoint exists and responds
-          correctly (GET https://taldau.stat.gov.kz/ru/Api/GetIndexData/{indexId}?period=
-          {periodId}&dics={termId} -> confirmed HTTP 200, Content-Type application/json, so NOT
-          blocked by CAPTCHA/login) but returned an empty array `[]` for every (period, dics)
-          combination tried (periods 4/7/8/9, dics=741880/0), including with a warmed-up
-          session and a matching Referer header. The POST-based NewIndex/GetDynamics endpoint
-          (params dicIds/indexId/periodId/terms/filters_dates) returned HTTP 500 rather than
-          data, suggesting the client-side app accumulates additional state across several
-          prior AJAX calls (GetIndexPeriods, getTermBranch, etc.) before GetDynamics/
-          GetIndexData will return real data -- not a single-shot call like the /open-data/ cube
-          files. This is a materially bigger reverse-engineering task than IND_PROD/INVESTMENT
-          turned out to be (see their notes below) -- genuinely more work, not "didn't get to it".
-          NEXT STEP if pursued: replay the exact AJAX call sequence the page itself makes
-          (e.g. via browser devtools network capture) rather than guessing parameters blind.
+          link list, not guessed. Taldau's "NewIndex" delivery mechanism is a full internal ExtJS
+          4.1.1 single-page app, not a simple parameterized file download like
+          stat.gov.kz/api/iblock/. Reverse-engineered the term tree (single-dimension, region
+          only, root id 741880 = "РЕСПУБЛИКА КАЗАХСТАН" with hasData:true) but blind parameter
+          guesses against Api/GetIndexData and NewIndex/GetDynamics returned empty/500 -- resolved
+          above by capturing the real browser request instead of guessing further.
       IND_PROD:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
@@ -121,24 +128,38 @@ agencies:
           history was not located here and may live in a separate file. Now implemented in
           scripts/fetchers/bns.py:fetch_investment and connected.
       EXPORTS:
-        status: confirmed_xlsx_only
+        status: confirmed
         page_url: "https://stat.gov.kz/ru/open-data/international-trade/474298/"
         element_id: 446905
         download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
         format: xlsx
-        notes: "No CSV/JSON variant found for trade indicators, unlike the others. Content not parsed this session."
+        notes: >
+          RE-CHECKED 2026-08-30, full content downloaded and parsed. No CSV/JSON variant exists
+          for trade indicators, unlike the others -- and the file is LARGE (54MB currently,
+          growing over time since BNS re-publishes the full history every month, not deltas).
+          Structure: one sheet per year (plus a partial-year sheet for the current year, e.g.
+          'январь-июнь 2026 года') with 2 description sheets skipped ('Метаданные', 'Показатель').
+          Row 2 of each data sheet is a header with one label per month ('январь 2025 года',
+          trailing '*' for preliminary months), each spanning 3 columns [tonnes, additional unit,
+          thousand USD]. Row 4 is the national total, literally labeled 'Республики Казахстан' in
+          column A -- the very first data row, before any regional/product breakdown. Raw XLSX
+          archived via Git LFS (data/raw/bns/*.xlsx tracked) rather than plain git, given the file
+          size and monthly full-republish pattern -- see UPDATE_LOG for the reasoning. Now
+          implemented in scripts/fetchers/bns.py:fetch_exports and connected.
       IMPORTS:
-        status: confirmed_xlsx_only
+        status: confirmed
         page_url: "https://stat.gov.kz/ru/open-data/international-trade/474299/"
         element_id: 446906
         download_url: "https://stat.gov.kz/api/iblock/element/446906/file/ru/"
         format: xlsx
-        notes: "Same as EXPORTS. Content not parsed this session."
+        notes: >
+          Same structure/mechanism as EXPORTS (see its notes) -- even larger (93MB currently).
+          Also Git-LFS-tracked. Now implemented in scripts/fetchers/bns.py:fetch_imports and connected.
 
   nbk:
     name: "Национальный Банк Республики Казахстан"
     website: "https://nationalbank.kz"
-    status: partially_confirmed
+    status: confirmed
     notes: >
       Verified 2026-08-30 by live curl (real, current numbers matching public press),
       not from memory. Open Data Repository base: https://data.nationalbank.kz/api/v1
@@ -171,23 +192,32 @@ agencies:
           An XLSX bulk-export button exists on the human page but its underlying request URL
           was not captured this session -- not needed since the XML loop already works.
       M2:
-        status: confirmed_url_unconfirmed_row_mapping
+        status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data?formId=51"
         export_xlsx_url: "https://data.nationalbank.kz/api/v1/data/export?formId=51&format=xlsx"
         row_metadata_xlsx: "https://nationalbank.kz/file/download/133417"
         format: json
         notes: >
-          NBK does not label this dataset "M2/M3" -- it's formId 51, "Денежная база и
-          агрегаты широкой денежной массы" (monetary base and broad money aggregates),
-          monthly, 2021-12-01 onward, broken out by row_code (1, 1.1, 1.2, 2, 3, 4, 4.1,
-          4.2, 5, 5.1, 5.2, etc). The row_code -> "M2"/"M3"-equivalent mapping has NOT been
-          resolved yet -- the in-app metadata endpoint (/api/v1/data/metadata?formId=51) came
-          back empty; the row_metadata_xlsx above was downloaded but not yet parsed. DO NOT
-          guess a row_code -> M2/M3 mapping; parse that XLSX first.
+          RESOLVED 2026-08-30. NBK does not label this dataset "M2/M3" in the API -- it's
+          formId 51, "Денежная база и агрегаты широкой денежной массы" (monetary base and
+          broad money aggregates), monthly, 2021-12-01 onward, broken out by row_code (1,
+          1.1, 1.2, 2, 3, 4, 4.1, 4.2, 5, 5.1, 5.2, etc). The downloaded metadata XLSX
+          (row_metadata_xlsx above) explains the M0/M1/M2/M3 CONCEPTS but has no row_code
+          column -- it does NOT map codes to labels. Resolved instead by opening the
+          human-facing table at https://nationalbank.kz/ru/monetarybase/denezhnaya-baza-i-agregaty-shirokoy-denezhnoy-massy
+          in a real browser: its numbered rows ("4. M2", "5. M3 (денежная масса)") match
+          row_code exactly, and the actual amounts line up 1:1 with the API (e.g. row_code=4,
+          report_date=2026-07-01 -> 48128860.58 vs the page's M2 column for the corresponding
+          month -> 48128861). row_code="4" = M2, row_code="5" = M3 -- verified both
+          structurally (row numbering) and numerically (matching values), not guessed. Note:
+          API's report_date appears to run about one month ahead of the page's own column
+          labels for the same number -- stored verbatim, not shifted. Now implemented in
+          scripts/fetchers/nbk.py:fetch_m2 and connected.
       M3:
-        status: confirmed_url_unconfirmed_row_mapping
+        status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data?formId=51"
-        notes: "Same dataset/caveat as M2 -- both live in formId 51, distinguished only by row_code once the metadata XLSX is parsed."
+        format: json
+        notes: "row_code=5. See M2 notes above for how the mapping was verified. Now implemented in scripts/fetchers/nbk.py:fetch_m3 and connected."
     publication_calendar_url: "https://nationalbank.kz/ru/statisticalinformation/grafik-vypuska-statisticheskoy-informacii"
     publication_calendar_notes: >
       Verified live HTML page, filterable by year/category, with an XLSX export button
@@ -200,7 +230,7 @@ agencies:
   minfin:
     name: "Министерство финансов Республики Казахстан"
     website: "https://minfin.gov.kz"
-    status: partially_confirmed
+    status: confirmed
     notes: >
       Verified 2026-08-30 by live curl + actually downloading and unzipping the XLSX
       files to inspect real sheet/table names, not from memory. Minfin content is served
@@ -221,43 +251,56 @@ agencies:
     protection: none
     endpoints:
       GOV_REVENUE:
-        status: confirmed_source_parsing_not_implemented
-        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?sort-by=created_date:DESC&page=1&size=15&directions=448"
-        example_file_url: "https://www.gov.kz/uploads/2025/2/5/f955aea20efc623b3d64d379bb232981_original.1097532.xlsx"
-        example_title: "Статистический бюллетень на 1 января 2025 года"
-        target_sheet: "табл 8 (дох)"
-        format: xlsx
-        frequency: monthly
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "I. INCOME"
+        format: xls
+        frequency: annual
         notes: >
-          File downloaded and unzipped this session to confirm the sheet exists with real
-          revenue budget-classification line items. Automated parsing (picking the newest
-          bulletin, reading exactly the right cells for the republic-level total out of a
-          multi-sheet, multi-year-varying layout) is NOT implemented yet -- sheet/table
-          numbering can shift between bulletin editions per the research notes, and getting
-          the target row wrong would silently produce a wrong total, which is worse than not
-          having the indicator yet. Needs a careful one-time parser build + spot-check against
-          a published total before enabling.
+          RESOLVED 2026-08-30. Rather than parsing a row out of the monthly Statistical
+          Bulletin (a 50-sheet workbook where the target sheet name/index shifts between
+          editions -- what "confirmed_source_parsing_not_implemented" was waiting on), found
+          a much safer source: a small, purpose-built "Dynamics of execution of the republican
+          budget from 2014 to 2025" document under the same directions=448 listing (97KB .xls,
+          sheets ['Metadata', 'Dynamics 2014-2025']). Row 'I. INCOME' (col B onward = years
+          2014-2025) is the republic-level total, confirmed by reading the file directly.
+          Unit confirmed as "KZT million" from the file's own Metadata sheet. The document is
+          discovered dynamically each run (title contains "Dynamics of execution" /
+          "Динамика исполнения") rather than a hardcoded URL, so a future republished version
+          is picked up automatically. Frequency is ANNUAL (not monthly as originally assumed --
+          corrected in indicators.yaml). Now implemented in
+          scripts/fetchers/minfin.py:fetch_gov_revenue and connected.
       GOV_EXPENDITURE:
-        status: confirmed_source_parsing_not_implemented
-        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?sort-by=created_date:DESC&page=1&size=15&directions=448"
-        example_file_url: "https://www.gov.kz/uploads/2025/2/5/f955aea20efc623b3d64d379bb232981_original.1097532.xlsx"
-        target_sheet: "табл 8 (расх)"
-        format: xlsx
-        frequency: monthly
-        notes: "Same file/mechanism/caveat as GOV_REVENUE, expenditure sheet instead of revenue sheet."
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Dynamics of execution"
+        target_row: "II.Expences"
+        format: xls
+        frequency: annual
+        notes: "Same document/mechanism as GOV_REVENUE, row 'II.Expences' instead of 'I. INCOME'. Now implemented in scripts/fetchers/minfin.py:fetch_gov_expenditure and connected."
       GOV_DEBT:
-        status: confirmed_source_parsing_not_implemented
-        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?sort-by=created_date:DESC&page=1&size=20&directions=261&activities=14610"
-        example_file_url: "https://www.gov.kz/uploads/2026/7/31/1e82dcb3e58b26f4924c1413c7da30e2_original.18126.xlsx"
-        example_title: "Государственный и гарантированный государством долг... (по состоянию на 1 июля 2026 года)"
-        format: xlsx
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=261&activities=14610"
+        target_row_label: "Total State and State Guaranteed debt, State Guarantees Debt (Subsidiary Liabilities) (I + II + III)"
+        format: "xlsx (recent) / xls (older, pre-~2022)"
         frequency: quarterly
         notes: >
-          File downloaded and unzipped, confirmed internal text states "периодичность:
-          квартальная" plus full breakdown (govt debt domestic/external by instrument,
-          local-executive-body debt, state-guaranteed debt, in both mln KZT and mln USD).
-          Automated parsing not implemented yet for the same reason as GOV_REVENUE/EXPENDITURE
-          -- need to lock down exactly which total row/column to read before trusting it.
+          RESOLVED 2026-08-30. No combined "dynamics" file exists for debt (unlike revenue/
+          expenditure) -- it's one quarterly point-in-time snapshot document per quarter. Cross-
+          checked 3 vintages (Jan 2021 .xls, Jul 2024 .xlsx, Jul 2026 .xlsx): the target row's
+          label text is stable across all three even though its exact row POSITION and leading-
+          column offset shift (a debt sub-category was added/removed over time) -- so the
+          fetcher searches by label text and takes the row's last two numeric cells (tenge,
+          usd) rather than a fixed column index. Values are in thousand KZT at the source;
+          converted to million KZT in the fetcher for consistency with GOV_REVENUE/
+          GOV_EXPENDITURE. Backfilled from all 23 documents in the current listing
+          (directions=261&activities=14610): 17 parsed successfully (2018-04-01 through
+          2026-07-01), 6 skipped (ids 260596, 80760, 80683, 52793, 47876, 29643 -- older or
+          differently-templated files that didn't match the label search; real gaps exist in
+          the resulting series, e.g. 2019-10 to 2021-01 and 2021-10 to 2024-07 -- not
+          fabricated/interpolated). Now implemented in
+          scripts/fetchers/minfin.py:fetch_gov_debt and connected.
 
   imf:
     name: "International Monetary Fund"

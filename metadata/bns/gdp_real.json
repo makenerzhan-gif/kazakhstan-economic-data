@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-2979005",
+  "indicator_id": "GDP_REAL",
+  "indicator_name": "Real GDP",
+  "description": "ВВП, реальный (физический объем, методом производства)",
+  "frequency": "annual",
+  "unit": "index (physical volume, % of previous period)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Physical volume index of GDP, production method, % of prior period (100=no change). A final-use-method variant also exists on Taldau (indexId 700974) but is not fetched here.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2000-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

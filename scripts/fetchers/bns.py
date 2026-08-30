@@ -10,10 +10,13 @@ from __future__ import annotations
 
 import csv
 import io
+import json
+import re
 import sys
 from datetime import date, datetime
 from pathlib import Path
 
+import openpyxl
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -324,5 +327,218 @@ def fetch_investment() -> tuple[list[dict], dict]:
             "). Coverage is narrower than the 2003-2025 advertised on the source page -- "
             "the older history was not located in this file."
         ),
+    }
+    return records, manifest
+
+
+RU_MONTHS = {
+    "январь": 1, "февраль": 2, "март": 3, "апрель": 4, "май": 5, "июнь": 6,
+    "июль": 7, "август": 8, "сентябрь": 9, "октябрь": 10, "ноябрь": 11, "декабрь": 12,
+}
+MONTH_HEADER_RE = re.compile(r"^(\S+)\s+(\d{4})\s+года\*?$")
+TRADE_TOTAL_ROW_LABEL = "Республики Казахстан"
+
+
+def _parse_trade_workbook(content: bytes, indicator_id: str, url: str) -> list[dict]:
+    """Shared parser for the BNS exports/imports XLSX files.
+
+    Verified live 2026-08-30 by actually downloading and reading both files (56MB
+    exports, 93MB imports -- read in openpyxl read_only mode, only the first ~4
+    rows of each sheet are touched, so this stays fast despite the file size).
+    Structure: one sheet per year (plus a partial-year sheet for the current year,
+    e.g. 'январь-июнь 2026 года'), skipping two description sheets ('Метаданные',
+    'Показатель'). Each data sheet's row 2 (0-indexed row 1) is a header with one
+    label per month ('январь 2025 года', trailing '*' for preliminary months),
+    each spanning 3 columns [tonnes, additional unit, thousand USD]. Row 4
+    (0-indexed row 3) is the national total, literally labeled 'Республики
+    Казахстан' in column A -- confirmed to be the very first data row, before any
+    regional or product-level breakdown rows.
+    """
+    wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+    records: list[dict] = []
+
+    for sheet_name in wb.sheetnames:
+        if sheet_name in ("Метаданные", "Показатель"):
+            continue
+        ws = wb[sheet_name]
+        header_row = total_row = None
+        for i, row in enumerate(ws.iter_rows(values_only=True)):
+            if i == 1:
+                header_row = row
+            elif i == 3:
+                total_row = row
+                break
+
+        if header_row is None or total_row is None:
+            raise validation.StructuralChangeError(
+                "\n".join([
+                    f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                    f"WHAT CHANGED: sheet '{sheet_name}' has fewer than 4 rows",
+                    "EXPECTED: header row at index 1, national-total row at index 3",
+                    f"ACTUAL: header_row={header_row!r} total_row={total_row!r}",
+                    f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+                ])
+            )
+
+        label = (total_row[0] or "").strip()
+        if label != TRADE_TOTAL_ROW_LABEL:
+            raise validation.StructuralChangeError(
+                "\n".join([
+                    f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                    f"WHAT CHANGED: row 4 of sheet '{sheet_name}' is no longer the national total",
+                    f"EXPECTED column-A label: {TRADE_TOTAL_ROW_LABEL!r}",
+                    f"ACTUAL: {label!r}",
+                    f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+                ])
+            )
+
+        for col_idx, cell in enumerate(header_row):
+            if not cell:
+                continue
+            m = MONTH_HEADER_RE.match(str(cell).strip())
+            if not m:
+                continue
+            month_num = RU_MONTHS.get(m.group(1).lower())
+            if month_num is None:
+                continue
+            usd_col = col_idx + 2
+            value = total_row[usd_col] if usd_col < len(total_row) else None
+            if value is None:
+                continue
+            records.append({"date": f"{int(m.group(2)):04d}-{month_num:02d}-01", "value": float(value)})
+
+    if not records:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                "WHAT CHANGED: zero month/value pairs extracted from any sheet",
+                "EXPECTED: at least one parsed monthly total",
+                "ACTUAL: none",
+                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records.sort(key=lambda r: r["date"])
+    return records
+
+
+def fetch_exports() -> tuple[list[dict], dict]:
+    """Exports, national total, monthly, thousand USD. XLSX-only (no CSV/JSON
+    variant found for trade indicators). See _parse_trade_workbook docstring
+    for the structure this relies on.
+    """
+    element_id = 446905
+    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/file/ru/"
+    content = _download(url)
+    _save_raw("EXPORTS", content, "xlsx", {"source_url": url, "element_id": element_id})
+    records = _parse_trade_workbook(content, "EXPORTS", url)
+    manifest = {"frequency": "monthly", "source_url": url, "dataset_id": str(element_id)}
+    return records, manifest
+
+
+def fetch_imports() -> tuple[list[dict], dict]:
+    """Imports, national total, monthly, thousand USD. Same format as fetch_exports."""
+    element_id = 446906
+    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/file/ru/"
+    content = _download(url)
+    _save_raw("IMPORTS", content, "xlsx", {"source_url": url, "element_id": element_id})
+    records = _parse_trade_workbook(content, "IMPORTS", url)
+    manifest = {"frequency": "monthly", "source_url": url, "dataset_id": str(element_id)}
+    return records, manifest
+
+
+TALDAU_TREE_DATA_URL = "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+GDP_REAL_INDEX_ID = "2979005"  # "индекс физического объема ВВП методом производства"
+NATIONAL_TERM_ID = "741880"    # РЕСПУБЛИКА КАЗАХСТАН
+REGIONS_DIC_ID = "67"          # the classifier dictionary id for the region dimension
+
+
+def fetch_gdp_real() -> tuple[list[dict], dict]:
+    """Real GDP -- physical volume index (production method), national, annual.
+    Value is % of the corresponding prior period (100 = no change), matching
+    how BNS itself publishes it (not a rebased index level).
+
+    This is on Taldau (taldau.stat.gov.kz), a different system from the
+    stat.gov.kz /open-data/ file API used for the rest of BNS's indicators here
+    -- its "NewIndex" delivery is a stateful ExtJS single-page app, not a
+    one-shot file download. An earlier research pass (2026-08-30, same day)
+    concluded this indicator was reachable but not yet parseable after several
+    blind parameter guesses against the wrong endpoint (Api/GetIndexData)
+    returned empty results.
+
+    Cracked open this session by instrumenting XMLHttpRequest in a real browser
+    session (Claude Browser tool) to capture the ACTUAL request the page's own
+    ExtJS grid makes when it loads data -- not by guessing further. The two
+    parameters that were missing before: p_measure_id=7 and p_dicIds=67 (a
+    classifier-dictionary id, NOT the term id -- previous attempts conflated
+    the two). The captured call was independently re-verified with a plain,
+    cookie-less `requests.post` (confirmed stateless: no session/auth/CSRF
+    needed at all).
+
+    Endpoint: POST https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData
+    Response: a JSON list of tree nodes; the root node (id=741880, "РЕСПУБЛИКА
+    КАЗАХСТАН") carries the actual annual values as keys 'yDDDYYYY' (e.g.
+    'y122009') where the last 4 digits are the calendar year. periodId=7 means
+    annual ("Год") -- GetPeriodList also showed a periodId=9 "Квартал с
+    накоплением" (quarter, cumulative) option for this same index, which would
+    give quarterly granularity, but that variant's response shape was not
+    captured/verified this session -- left for a future pass rather than guessed.
+    """
+    body = {
+        "p_parent_id": "", "p_index_id": GDP_REAL_INDEX_ID, "p_keyword": "",
+        "p_period_id": "7", "p_measure_id": "7", "p_term_id": NATIONAL_TERM_ID,
+        "p_terms": NATIONAL_TERM_ID, "p_dicIds": REGIONS_DIC_ID, "idx": "0",
+        "filter": '[{"property":null,"value":null}]', "id": "",
+    }
+    resp = requests.post(TALDAU_TREE_DATA_URL, data=body,
+                          headers={**HEADERS, "X-Requested-With": "XMLHttpRequest"}, timeout=30)
+    resp.raise_for_status()
+    content = resp.content
+    _save_raw("GDP_REAL", content, "json", {
+        "source_url": TALDAU_TREE_DATA_URL, "index_id": GDP_REAL_INDEX_ID, "request_body": body,
+    })
+
+    data = json.loads(content)
+    match = next((entry for entry in data if entry.get("id") == NATIONAL_TERM_ID), None)
+    if match is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in bns/GDP_REAL",
+                f"WHAT CHANGED: no tree node with id={NATIONAL_TERM_ID!r} in the response",
+                "EXPECTED: the РЕСПУБЛИКА КАЗАХСТАН root node",
+                f"ACTUAL: {[e.get('id') for e in data]}",
+                f"ACTION REQUIRED: inspect {TALDAU_TREE_DATA_URL} and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = []
+    for key, value in match.items():
+        if not (isinstance(key, str) and key.startswith("y") and key[1:].isdigit()):
+            continue
+        year_str = key[-4:]
+        try:
+            year = int(year_str)
+            v = float(value)
+        except (TypeError, ValueError):
+            continue
+        records.append({"date": f"{year:04d}-12-31", "value": v})
+
+    if not records:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in bns/GDP_REAL",
+                "WHAT CHANGED: zero year/value pairs extracted from the national node",
+                f"ACTUAL keys present: {list(match.keys())}",
+                f"ACTION REQUIRED: inspect {TALDAU_TREE_DATA_URL} and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "annual",
+        "source_url": TALDAU_TREE_DATA_URL,
+        "dataset_id": f"taldau-index-{GDP_REAL_INDEX_ID}",
+        "note": "Physical volume index of GDP, production method, % of prior period (100=no change). "
+                "A final-use-method variant also exists on Taldau (indexId 700974) but is not fetched here.",
     }
     return records, manifest

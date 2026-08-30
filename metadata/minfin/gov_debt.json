@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=261&activities=14610",
+  "dataset_id": "gov.kz-debt-listing",
+  "indicator_id": "GOV_DEBT",
+  "indicator_name": "Government Debt",
+  "description": "Государственный долг РК",
+  "frequency": "quarterly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Built from 17 of 23 listed quarterly snapshot documents (6 skipped, ids: [260596, 80760, 80683, 52793, 47876, 29643] -- older/differently-templated files that didn't match our label-based parser; do not assume continuous quarterly coverage without checking data/unified for gaps). Values converted from the source's thousand-KZT unit to million KZT for consistency with GOV_REVENUE/GOV_EXPENDITURE.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2018-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

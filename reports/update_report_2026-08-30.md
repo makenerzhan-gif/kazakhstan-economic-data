@@ -1,13 +1,12 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T14:13:51.944461
+Run timestamp: 2026-08-30T14:42:14.715401
 Unified dataset updated: True
 Tests passed: True
 
 ## Per-dataset results
 
-- **bns/GDP_REAL** — fetch: skipped (downloaded=0, processed=0)
-  - warning: No confirmed source yet for this indicator (see config/sources.yaml agencies.bns.endpoints). Run/extend the source-research step before enabling.
+- **bns/GDP_REAL** — fetch+validate+process: ok (downloaded=26, processed=26)
 - **bns/GDP_NOMINAL** — fetch+validate+process: ok (downloaded=66, processed=66)
   - warning: Unexpected jump of 116.7% between 2010-03-31 (4020878400000.0) and 2010-06-30 (8712143851205.14).
   - warning: Unexpected jump of 62.2% between 2010-06-30 (8712143851205.14) and 2010-09-30 (14135228100000.0).
@@ -74,10 +73,10 @@ Tests passed: True
 - **bns/CPI** — fetch+validate+process: ok (downloaded=178, processed=178)
 - **bns/UNEMPLOYMENT** — fetch+validate+process: ok (downloaded=10, processed=10)
 - **bns/INVESTMENT** — fetch+validate+process: ok (downloaded=7, processed=7)
-- **bns/EXPORTS** — fetch: skipped (downloaded=0, processed=0)
-  - warning: No confirmed source yet for this indicator (see config/sources.yaml agencies.bns.endpoints). Run/extend the source-research step before enabling.
-- **bns/IMPORTS** — fetch: skipped (downloaded=0, processed=0)
-  - warning: No confirmed source yet for this indicator (see config/sources.yaml agencies.bns.endpoints). Run/extend the source-research step before enabling.
+- **bns/EXPORTS** — fetch+validate+process: ok (downloaded=90, processed=90)
+  - warning: Unexpected jump of 51.5% between 2019-03-01 (3433642.2448500046) and 2019-04-01 (5201089.066599997).
+  - warning: Unexpected jump of 59.5% between 2026-05-01 (6147393.583650006) and 2026-06-01 (9807366.906380022).
+- **bns/IMPORTS** — fetch+validate+process: ok (downloaded=90, processed=90)
 - **nbk/BASE_RATE** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Gap of 49 days between 2024-10-14 and 2024-12-02 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2024-12-02 and 2025-01-20 is outside expected range for frequency=daily (1-4d).
@@ -94,16 +93,19 @@ Tests passed: True
   - warning: Gap of 42 days between 2026-04-27 and 2026-06-08 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2026-06-08 and 2026-07-27 is outside expected range for frequency=daily (1-4d).
 - **nbk/EXCHANGE_RATE** — fetch+validate+process: ok (downloaded=14, processed=14)
-- **nbk/M2** — fetch: skipped (downloaded=0, processed=0)
-  - warning: No confirmed source yet for this indicator (see config/sources.yaml agencies.nbk.endpoints). Run/extend the source-research step before enabling.
-- **nbk/M3** — fetch: skipped (downloaded=0, processed=0)
-  - warning: No confirmed source yet for this indicator (see config/sources.yaml agencies.nbk.endpoints). Run/extend the source-research step before enabling.
-- **minfin/GOV_REVENUE** — fetch: skipped (downloaded=0, processed=0)
-  - warning: No confirmed source yet for this indicator. Run the source-research step first.
-- **minfin/GOV_EXPENDITURE** — fetch: skipped (downloaded=0, processed=0)
-  - warning: No confirmed source yet for this indicator. Run the source-research step first.
-- **minfin/GOV_DEBT** — fetch: skipped (downloaded=0, processed=0)
-  - warning: No confirmed source yet for this indicator. Run the source-research step first.
+- **nbk/M2** — fetch+validate+process: ok (downloaded=56, processed=56)
+  - warning: Unexpected jump of 228.5% between 2021-12-01 (4499341.39903034) and 2022-01-01 (14781486.94608868).
+  - warning: Unexpected jump of 74.1% between 2022-12-01 (16097866.70000907) and 2023-01-01 (28025383.91905973).
+- **nbk/M3** — fetch+validate+process: ok (downloaded=56, processed=56)
+  - warning: Unexpected jump of 328.7% between 2021-12-01 (4500005.07139634) and 2022-01-01 (19290696.82147032).
+  - warning: Unexpected jump of 66.7% between 2022-12-01 (20574132.3513075) and 2023-01-01 (34295954.59776597).
+- **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)
+  - warning: Gap of 275 days between 2018-04-01 and 2019-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 181 days between 2019-01-01 and 2019-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 458 days between 2019-10-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 1004 days between 2021-10-01 and 2024-07-01 is outside expected range for frequency=quarterly (80-100d).
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% between 1995-01-01 (-8.2) and 1996-01-01 (0.5).
   - warning: Unexpected jump of 240.0% between 1996-01-01 (0.5) and 1997-01-01 (1.7).

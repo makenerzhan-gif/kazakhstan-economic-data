@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/446906/file/ru/",
+  "dataset_id": "446906",
+  "indicator_id": "IMPORTS",
+  "indicator_name": "Imports (total)",
+  "description": "Импорт (итого)",
+  "frequency": "monthly",
+  "unit": "thousand USD",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Bureau of National Statistics official methodology",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2019-01-01",
+  "period_end": "2026-06-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

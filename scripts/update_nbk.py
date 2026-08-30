@@ -20,6 +20,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 FETCHERS = {
     "BASE_RATE": nbk_fetchers.fetch_base_rate,
     "EXCHANGE_RATE": nbk_fetchers.fetch_exchange_rate_usd,
+    "M2": nbk_fetchers.fetch_m2,
+    "M3": nbk_fetchers.fetch_m3,
 }
 
 INDICATOR_IDS = ["BASE_RATE", "EXCHANGE_RATE", "M2", "M3"]

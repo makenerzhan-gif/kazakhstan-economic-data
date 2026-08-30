@@ -13,10 +13,10 @@ UNIFIED DATASET → GitHub → (manual "Sync now") → Claude Project "Экон�
 
 ## Stage 1 scope
 
-~15-20 pilot indicators (see `config/indicators.yaml`) to prove the pipeline
-end-to-end before scaling to the full 100-150 indicator list. No econometric
-modeling in this stage — see MASTER TASK section 17 for the stage-1 exit
-criteria.
+18 pilot indicators (see `config/indicators.yaml`), all connected end-to-end
+against live official sources, to prove the pipeline before scaling to the
+full 100-150 indicator list. No econometric modeling in this stage — see
+MASTER TASK section 17 for the stage-1 exit criteria.
 
 ## Repository layout
 
@@ -36,6 +36,11 @@ config/                              indicators.yaml, sources.yaml, frequency.ya
 ```
 
 ## Running locally
+
+Requires [Git LFS](https://git-lfs.com/) — `data/raw/bns/*.xlsx` and
+`data/raw/minfin/*.xlsx` are LFS-tracked (BNS trade data alone is 50-90MB per
+file and republishes full history monthly; see `project_knowledge/UPDATE_LOG.md`
+for why). Run `git lfs install` once, then clone/pull as normal.
 
 ```bash
 pip install -r requirements.txt
