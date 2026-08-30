@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T22:21:52.321934
+Run timestamp: 2026-08-30T22:30:41.297104
 Unified dataset updated: True
 Tests passed: True
 
@@ -151,6 +151,11 @@ Tests passed: True
 - **bns/EMISSIONS** — fetch+validate+process: ok (downloaded=13, processed=13)
 - **bns/FREIGHT_TURNOVER** — fetch+validate+process: ok (downloaded=9, processed=9)
 - **bns/PASSENGER_TURNOVER** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/AGRICULTURE_OUTPUT** — fetch+validate+process: ok (downloaded=16, processed=16)
+- **bns/PER_CAPITA_INCOME** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/REAL_INCOME_INDEX** — fetch+validate+process: ok (downloaded=25, processed=25)
+- **bns/TELECOM_SERVICES** — fetch+validate+process: ok (downloaded=9, processed=9)
+- **bns/DOCTORS_TOTAL** — fetch+validate+process: ok (downloaded=11, processed=11)
 - **nbk/BASE_RATE** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Gap of 49 days between 2024-10-14 and 2024-12-02 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2024-12-02 and 2025-01-20 is outside expected range for frequency=daily (1-4d).
@@ -199,6 +204,10 @@ Tests passed: True
 - **nbk/REMITTANCES_RECEIVED** — fetch+validate+process: ok (downloaded=58, processed=58)
   - warning: Unexpected jump of 50.1% between 2021-12-01 (27253.83888086) and 2022-01-01 (13594.67906766).
   - warning: Unexpected jump of 105.1% between 2022-03-01 (25583.625044329) and 2022-04-01 (52467.054826664).
+- **nbk/INFLATION_EXPECTATIONS** — fetch+validate+process: ok (downloaded=126, processed=126)
+  - warning: Gap of 62 days between 2021-12-01 and 2022-02-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 89.6% between 2022-02-01 (9.6) and 2022-03-01 (18.2).
+- **nbk/BUSINESS_ACTIVITY_INDEX** — fetch+validate+process: ok (downloaded=79, processed=79)
 - **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)
@@ -478,3 +487,19 @@ Tests passed: True
   - warning: Unexpected jump of 1220.1% between 1992-01-01 (0.020919) and 1993-01-01 (0.276147).
   - warning: Unexpected jump of 1487.2% between 1993-01-01 (0.276147) and 1994-01-01 (4.383024).
   - warning: Unexpected jump of 155.5% between 1994-01-01 (4.383024) and 1995-01-01 (11.200008).
+- **imf/IMF_STRUCTURAL_BALANCE** — fetch+validate+process: ok (downloaded=30, processed=30)
+  - warning: Unexpected jump of 79.8% between 2002-01-01 (2.150103) and 2003-01-01 (3.864873).
+  - warning: Unexpected jump of 58.4% between 2004-01-01 (4.377403) and 2005-01-01 (6.934694).
+  - warning: Unexpected jump of 100.4% between 2007-01-01 (4.668896) and 2008-01-01 (-0.020555).
+  - warning: Unexpected jump of 1382.3% between 2008-01-01 (-0.020555) and 2009-01-01 (0.26358).
+  - warning: Unexpected jump of 299.6% between 2009-01-01 (0.26358) and 2010-01-01 (1.053312).
+  - warning: Unexpected jump of 183.8% between 2010-01-01 (1.053312) and 2011-01-01 (2.989738).
+  - warning: Unexpected jump of 54.1% between 2013-01-01 (3.196389) and 2014-01-01 (1.467274).
+  - warning: Unexpected jump of 440.4% between 2014-01-01 (1.467274) and 2015-01-01 (-4.993904).
+  - warning: Unexpected jump of 195.6% between 2017-01-01 (-3.422213) and 2018-01-01 (3.270655).
+  - warning: Unexpected jump of 88.2% between 2018-01-01 (3.270655) and 2019-01-01 (0.387022).
+  - warning: Unexpected jump of 989.9% between 2019-01-01 (0.387022) and 2020-01-01 (-3.444065).
+  - warning: Unexpected jump of 113.8% between 2021-01-01 (-2.721354) and 2022-01-01 (0.376596).
+  - warning: Unexpected jump of 588.6% between 2022-01-01 (0.376596) and 2023-01-01 (-1.840185).
+  - warning: Unexpected jump of 152.0% between 2023-01-01 (-1.840185) and 2024-01-01 (-4.637583).
+  - warning: Unexpected jump of 60.3% between 2025-01-01 (-4.833013) and 2026-01-01 (-1.917856).

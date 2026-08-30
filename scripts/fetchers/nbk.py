@@ -884,3 +884,96 @@ def fetch_remittances_received() -> tuple[list[dict], dict]:
     KZT, monthly. Verified live 2026-08-30: 58 rows, all unique dates,
     ~15-18 bln KZT/month recently (consistently below REMITTANCES_SENT)."""
     return _fetch_remittances("money transfers received", "REMITTANCES_RECEIVED")
+
+
+# formId=305, "Inflation expectations". Found 2026-08-30 via the same categories endpoint.
+# Single-dimension already (only one category value present: 'Inflation expectations') --
+# no aggregation needed or attempted.
+INFLATION_EXPECTATIONS_FORM_ID = "305"
+
+
+def fetch_inflation_expectations() -> tuple[list[dict], dict]:
+    """Consumer inflation expectations (survey-based), %, monthly. Verified
+    live 2026-08-30: 126 rows, 2016-01 to 2026-07, all unique dates, recent
+    values ~12-15% -- plausible given current actual annual inflation
+    (~10.2%, per NBK's own homepage figure)."""
+    resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                         params={"formId": INFLATION_EXPECTATIONS_FORM_ID, "page": "0", "pageSize": "500"}, timeout=30)
+    resp.raise_for_status()
+    data = resp.json()
+    rows = data["rows"]
+
+    today = date.today()
+    content = json.dumps(rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "INFLATION_EXPECTATIONS", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "INFLATION_EXPECTATIONS", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={INFLATION_EXPECTATIONS_FORM_ID}",
+    })
+
+    if not rows:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/INFLATION_EXPECTATIONS",
+                "WHAT CHANGED: zero rows returned",
+                f"ACTION REQUIRED: inspect formId={INFLATION_EXPECTATIONS_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in rows], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={INFLATION_EXPECTATIONS_FORM_ID}",
+        "dataset_id": f"formId={INFLATION_EXPECTATIONS_FORM_ID}",
+        "note": "%. Survey-based expected inflation over the next 12 months.",
+    }
+    return records, manifest
+
+
+# formId=339, "The Business Activity Index" -- NBK's own PMI-style survey indicator.
+# Multi-dimensional by sector (Trade, Mining, Construction, Service, Production), but
+# index_type='Business activity index by economy' is NBK's own clean pre-aggregated
+# headline row across all sectors.
+BUSINESS_ACTIVITY_FORM_ID = "339"
+BUSINESS_ACTIVITY_TOTAL_TYPE = "Business activity index by economy"
+
+
+def fetch_business_activity_index() -> tuple[list[dict], dict]:
+    """Business Activity Index (economy-wide, survey-based, ~50 = neutral),
+    monthly. Verified live 2026-08-30: 79 rows, all unique dates, recent
+    values ~49.5-51.6 -- hovering near the neutral 50 mark, plausible."""
+    all_rows: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                             params={"formId": BUSINESS_ACTIVITY_FORM_ID, "page": str(page), "pageSize": "500"},
+                             timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        all_rows.extend(data["rows"])
+        if len(all_rows) >= data["totalRows"]:
+            break
+        page += 1
+
+    today = date.today()
+    content = json.dumps(all_rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "BUSINESS_ACTIVITY_INDEX", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "BUSINESS_ACTIVITY_INDEX", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={BUSINESS_ACTIVITY_FORM_ID}",
+    })
+
+    matching = [r for r in all_rows if r.get("index_type") == BUSINESS_ACTIVITY_TOTAL_TYPE]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/BUSINESS_ACTIVITY_INDEX",
+                f"WHAT CHANGED: no rows found with index_type={BUSINESS_ACTIVITY_TOTAL_TYPE!r}",
+                f"ACTION REQUIRED: inspect formId={BUSINESS_ACTIVITY_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in matching], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={BUSINESS_ACTIVITY_FORM_ID}",
+        "dataset_id": f"formId={BUSINESS_ACTIVITY_FORM_ID},index_type={BUSINESS_ACTIVITY_TOTAL_TYPE}",
+        "note": "Index, ~50 = neutral (no change in business activity vs. prior period).",
+    }
+    return records, manifest

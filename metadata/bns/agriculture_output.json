@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-701189",
+  "indicator_id": "AGRICULTURE_OUTPUT",
+  "indicator_name": "Gross Agricultural Output",
+  "description": "Валовой выпуск продукции (услуг) сельского хозяйства",
+  "frequency": "annual",
+  "unit": "KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Gross agricultural output (crop + livestock), KZT. Taldau indexId 701189.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2010-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

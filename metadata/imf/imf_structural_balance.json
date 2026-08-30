@@ -1,0 +1,21 @@
+{
+  "source": "imf",
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.GGSB_NPGDP",
+  "dataset_id": "WEO/9.0.0",
+  "indicator_id": "IMF_STRUCTURAL_BALANCE",
+  "indicator_name": "IMF WEO: General Government Structural Balance, % of Potential GDP",
+  "description": "IMF WEO: структурное сальдо бюджета, % потенциального ВВП",
+  "frequency": "annual",
+  "unit": "% of potential GDP",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "IMF World Economic Outlook (WEO), biannual exercise (April/October vintages)",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2002-01-01",
+  "period_end": "2031-01-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

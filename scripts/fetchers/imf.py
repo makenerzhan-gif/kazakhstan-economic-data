@@ -292,3 +292,16 @@ def fetch_ppp_exchange_rate() -> tuple[list[dict], dict]:
     means fewer tenge are needed to buy the same PPP-comparable basket than
     the nominal market rate would suggest."""
     return _fetch_weo_series("IMF_PPP_EXCHANGE_RATE", "WEO", "IMF.RES", "9.0.0", "KAZ", "PPPEX")
+
+
+def fetch_structural_balance() -> tuple[list[dict], dict]:
+    """WEO general government structural balance, % of potential GDP
+    (excludes cyclical effects, unlike IMF_GOV_BALANCE's headline actual
+    balance). Verified live 2026-08-30: indicator code GGSB_NPGDP. Sanity-
+    checked: values are close to but not identical to IMF_GOV_BALANCE's
+    (e.g. 2029: -1.93% structural vs -1.97% actual) -- the expected small
+    gap between a structural and an actual/headline fiscal balance measure,
+    not a data error. (Tried NGAP_NPGDP -- WEO output gap -- first; it
+    returned 2 rows with empty OBS_VALUE for Kazakhstan, so it was dropped
+    rather than forced in.)"""
+    return _fetch_weo_series("IMF_STRUCTURAL_BALANCE", "WEO", "IMF.RES", "9.0.0", "KAZ", "GGSB_NPGDP")

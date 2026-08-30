@@ -1084,3 +1084,85 @@ def fetch_passenger_turnover() -> tuple[list[dict], dict]:
         measure_id="41", dic_ids="67,1214,90,59,230,681,2984",
         terms="741880,741335,741927,741907,741906,808076,17901749",
     )
+
+
+def fetch_agriculture_output() -> tuple[list[dict], dict]:
+    """Gross agricultural output (crop + livestock production), KZT, annual.
+    Taldau indexId 701189, found by browsing the "Статистика сельского,
+    лесного, охотничьего и рыбного хозяйства" category page directly
+    (GetIndustryByID/701185) rather than keyword search -- several keyword
+    phrasings for this indicator returned zero results even though the
+    category's own "main indicators" summary listed it as the very first
+    entry. Classified across 3 dictionaries; params recovered via the live
+    ExtJS component tree. Verified live 2026-08-30: value matches the
+    category page's own displayed 2025 figure (9,704,982.0 million KZT)
+    exactly once expressed in the same KZT units used throughout this
+    project's other BNS national-accounts-style indicators (no unit
+    conversion needed, unlike EMISSIONS).
+    """
+    return _fetch_taldau_annual_index(
+        "701189", "AGRICULTURE_OUTPUT",
+        note="Gross agricultural output (crop + livestock), KZT. Taldau indexId 701189.",
+        measure_id="1", dic_ids="67,488,773",
+        terms="741880,450122,734928",
+    )
+
+
+def fetch_per_capita_income() -> tuple[list[dict], dict]:
+    """Average per capita nominal money income, KZT/month, annual. Taldau
+    indexId 704447, found by browsing the "Статистика уровня жизни" category
+    page (GetIndustryByID/704444). Standard single-dimension mechanism worked
+    directly (measure_id=7, dicIds=67) -- no live ExtJS capture needed.
+    Verified live 2026-08-30: matches the category page's own displayed 2025
+    figure (238,070 KZT) exactly.
+    """
+    return _fetch_taldau_annual_index(
+        "704447", "PER_CAPITA_INCOME",
+        note="Average per capita nominal money income, KZT/month. Taldau indexId 704447.",
+    )
+
+
+def fetch_real_income_index() -> tuple[list[dict], dict]:
+    """Real money income index, % of prior period -- companion to
+    PER_CAPITA_INCOME (nominal level). Taldau indexId 704449, found the same
+    way as PER_CAPITA_INCOME. Standard single-dimension mechanism worked
+    directly. Verified live 2026-08-30: matches the category page's own
+    displayed 2025 figure (98.9%) exactly. POVERTY_RATE was searched for on
+    this same category page and not found -- only these two income
+    indicators have RK-wide totals shown at the category level.
+    """
+    return _fetch_taldau_annual_index(
+        "704449", "REAL_INCOME_INDEX",
+        note="Real money income index, % of prior period. Taldau indexId 704449.",
+    )
+
+
+def fetch_telecom_services() -> tuple[list[dict], dict]:
+    """Telecommunications services volume, KZT, annual. Taldau indexId
+    702379 (code 192101, "Объем услуг связи по видам"), found via keyword
+    search ("связи"). Classified across 4 dictionaries; params recovered via
+    the live ExtJS component tree. Verified live 2026-08-30: ~1.12-1.50
+    trillion KZT (2022-2025), a plausible scale for Kazakhstan's telecom
+    sector.
+    """
+    return _fetch_taldau_annual_index(
+        "702379", "TELECOM_SERVICES",
+        note="Telecommunications services volume, KZT. Taldau indexId 702379.",
+        measure_id="1", dic_ids="68,59,230,1693",
+        terms="741880,741907,741906,18064429",
+    )
+
+
+def fetch_doctors_total() -> tuple[list[dict], dict]:
+    """Total number of doctors (all specialties), persons, year-end, annual.
+    Taldau indexId 704315 (code 631501, "Списочная численность врачей всех
+    специальностей на конец года"), found via keyword search ("численность
+    врачей") -- picked over the per-10000-population variant (704316) as the
+    absolute headline count. Standard single-dimension mechanism worked
+    directly. Verified live 2026-08-30: ~78,227 (2021) rising to ~83,379
+    (2024), a plausible count and trend for Kazakhstan's medical workforce.
+    """
+    return _fetch_taldau_annual_index(
+        "704315", "DOCTORS_TOTAL",
+        note="Total number of doctors (all specialties), persons, year-end. Taldau indexId 704315.",
+    )

@@ -38,6 +38,8 @@ FETCHERS = {
     "KASE_USD_VOLUME": nbk_fetchers.fetch_kase_usd_volume,
     "REMITTANCES_SENT": nbk_fetchers.fetch_remittances_sent,
     "REMITTANCES_RECEIVED": nbk_fetchers.fetch_remittances_received,
+    "INFLATION_EXPECTATIONS": nbk_fetchers.fetch_inflation_expectations,
+    "BUSINESS_ACTIVITY_INDEX": nbk_fetchers.fetch_business_activity_index,
 }
 
 INDICATOR_IDS = [
@@ -46,6 +48,7 @@ INDICATOR_IDS = [
     "EXTERNAL_DEBT", "LENDING_RATE", "DEPOSIT_RATE",
     "TONIA", "NATIONAL_FUND_TRANSFERS", "KASE_USD_VOLUME",
     "REMITTANCES_SENT", "REMITTANCES_RECEIVED",
+    "INFLATION_EXPECTATIONS", "BUSINESS_ACTIVITY_INDEX",
 ]
 
 

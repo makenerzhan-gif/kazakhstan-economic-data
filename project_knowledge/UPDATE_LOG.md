@@ -450,3 +450,41 @@ consistently exceeds REMITTANCES_RECEIVED across all 58 months, a stable and pla
 pattern rather than noise.
 
 **108/108 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-30 — eighth scale-up batch: 108 -> 116 indicators
+Switched technique for the harder BNS gaps this batch: instead of guessing keyword
+phrasings (which had repeatedly failed for agriculture/industrial-sub-sector searches in
+earlier batches), browsed the relevant Taldau category pages directly
+(GetIndustryByID/<id>) and read off their "main indicators, RK totals" lists. This
+immediately found AGRICULTURE_OUTPUT, which multiple keyword phrasings had missed entirely
+despite being the very first item on its category's summary page.
+
+**BNS (5):**
+- AGRICULTURE_OUTPUT (701189) -- found via category browsing ("Статистика сельского,
+  лесного, охотничьего и рыбного хозяйства"). Verified live: matches the category page's
+  own displayed 2025 figure (9,704,982.0 million KZT) exactly.
+- PER_CAPITA_INCOME (704447) and REAL_INCOME_INDEX (704449) -- found via category browsing
+  ("Статистика уровня жизни"). Both worked with the plain single-dimension mechanism
+  (measure_id=7, dicIds=67) directly, no live-ExtJS capture needed. POVERTY_RATE was looked
+  for on this same category page and confirmed absent from the RK-totals list -- still not
+  connected.
+- TELECOM_SERVICES (702379) and DOCTORS_TOTAL (704315) -- found via keyword search
+  ("связи", "численность врачей"). Industrial-production sub-sector indices (mining/
+  manufacturing) were searched for again this batch with several phrasings and still not
+  found.
+
+**NBK (2):** INFLATION_EXPECTATIONS (formId=305, a genuinely single-dimension survey
+series) and BUSINESS_ACTIVITY_INDEX (formId=339, index_type='Business activity index by
+economy' is NBK's own pre-aggregated PMI-style headline). Government securities forms (17,
+16) remain not_connected, same no-aggregate problem as before.
+
+**IMF WEO (1):** IMF_STRUCTURAL_BALANCE (GGSB_NPGDP). Tried NGAP_NPGDP (output gap) first;
+empty for Kazakhstan, dropped.
+
+**Sanity-checked before committing:** PER_CAPITA_INCOME and REAL_INCOME_INDEX both match
+their category page's displayed 2025 figures exactly (238,070 KZT and 98.9% respectively).
+Business Activity Index hovers near the neutral 50 mark, as expected for a PMI-style survey
+index. Structural balance sits close to but not identical to the headline actual balance
+(-1.93% vs -1.97% for 2029) -- the expected small gap between the two measures.
+
+**116/116 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

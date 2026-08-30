@@ -985,3 +985,75 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+
+  - id: INFLATION_EXPECTATIONS
+    name_ru: "Инфляционные ожидания населения"
+    name_en: "Consumer Inflation Expectations"
+    agency: nbk
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BUSINESS_ACTIVITY_INDEX
+    name_ru: "Индекс деловой активности"
+    name_en: "Business Activity Index"
+    agency: nbk
+    frequency: monthly
+    unit: "index"
+    category: monetary
+    source_status: confirmed
+
+  - id: AGRICULTURE_OUTPUT
+    name_ru: "Валовой выпуск продукции (услуг) сельского хозяйства"
+    name_en: "Gross Agricultural Output"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: production
+    source_status: confirmed
+
+  - id: PER_CAPITA_INCOME
+    name_ru: "Среднедушевые номинальные денежные доходы населения"
+    name_en: "Average Per Capita Nominal Money Income"
+    agency: bns
+    frequency: annual
+    unit: "KZT/month"
+    category: labor
+    source_status: confirmed
+
+  - id: REAL_INCOME_INDEX
+    name_ru: "Индекс реальных денежных доходов"
+    name_en: "Real Money Income Index"
+    agency: bns
+    frequency: annual
+    unit: "% of prior period"
+    category: labor
+    source_status: confirmed
+
+  - id: TELECOM_SERVICES
+    name_ru: "Объем услуг связи"
+    name_en: "Telecommunications Services Volume"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: production
+    source_status: confirmed
+
+  - id: DOCTORS_TOTAL
+    name_ru: "Списочная численность врачей всех специальностей на конец года"
+    name_en: "Total Number of Doctors (year-end)"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: demographic
+    source_status: confirmed
+
+  - id: IMF_STRUCTURAL_BALANCE
+    name_ru: "IMF WEO: структурное сальдо бюджета, % потенциального ВВП"
+    name_en: "IMF WEO: General Government Structural Balance, % of Potential GDP"
+    agency: imf
+    frequency: annual
+    unit: "% of potential GDP"
+    category: international_projection
+    source_status: confirmed

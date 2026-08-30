@@ -462,6 +462,66 @@ agencies:
           (measure_id=41, dicIds=67,1214,90,59,230,681,2984,
           terms=741880,741335,741927,741907,741906,808076,17901749). Verified live:
           ~247-267 billion passenger-km (2014-2016). fetch_passenger_turnover.
+      AGRICULTURE_OUTPUT:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 701189
+        format: json
+        notes: >
+          2026-08-30. Found by browsing the "Статистика сельского, лесного, охотничьего и
+          рыбного хозяйства" category page directly (GetIndustryByID/701185) rather than
+          keyword search -- several keyword phrasings ("продукция сельского хозяйства",
+          "валовая продукция сельского хозяйства", "сельское хозяйство объем продукции")
+          all returned zero results even though the category's own "main indicators"
+          summary listed this indicator first. Classified across 3 dictionaries; params
+          recovered via live ExtJS tree (measure_id=1, dicIds=67,488,773,
+          terms=741880,450122,734928). Verified live: value matches the category page's own
+          displayed 2025 figure (9,704,982.0 million KZT) exactly, once expressed in the
+          same raw-KZT convention used throughout this project's other BNS national-
+          accounts-style indicators. fetch_agriculture_output.
+      PER_CAPITA_INCOME:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 704447
+        format: json
+        notes: >
+          2026-08-30. Found by browsing the "Статистика уровня жизни" category page
+          (GetIndustryByID/704444). Standard single-dimension mechanism worked directly
+          (measure_id=7, dicIds=67) -- no live ExtJS capture needed. Verified live: matches
+          the category page's own displayed 2025 figure (238,070 KZT) exactly.
+          fetch_per_capita_income.
+      REAL_INCOME_INDEX:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 704449
+        format: json
+        notes: >
+          2026-08-30. Same category page as PER_CAPITA_INCOME. Standard single-dimension
+          mechanism worked directly. Verified live: matches the category page's own
+          displayed 2025 figure (98.9%) exactly. POVERTY_RATE was looked for on this same
+          category page and not found -- only these two income indicators have RK-wide
+          totals shown there. fetch_real_income_index.
+      TELECOM_SERVICES:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 702379
+        format: json
+        notes: >
+          2026-08-30. code 192101, "Объем услуг связи по видам", found via keyword search
+          ("связи"). Classified across 4 dictionaries; params recovered via live ExtJS tree
+          (measure_id=1, dicIds=68,59,230,1693, terms=741880,741907,741906,18064429).
+          Verified live: ~1.12-1.50 trillion KZT (2022-2025). fetch_telecom_services.
+      DOCTORS_TOTAL:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 704315
+        format: json
+        notes: >
+          2026-08-30. code 631501, "Списочная численность врачей всех специальностей на
+          конец года", found via keyword search ("численность врачей") -- picked over the
+          per-10000-population variant (704316) as the absolute headline count. Standard
+          single-dimension mechanism worked directly. Verified live: ~78,227 (2021) to
+          ~83,379 (2024). fetch_doctors_total.
       GDP_INCOME_METHOD:
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
@@ -814,6 +874,27 @@ agencies:
           2026-08-30. Same form and mechanism as REMITTANCES_SENT, money_transfer_sign=
           'money transfers received'. Verified live: 58 rows, all unique dates, ~15-18 bln
           KZT/month recently -- consistently below REMITTANCES_SENT. fetch_remittances_received.
+      INFLATION_EXPECTATIONS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=305"
+        format: json
+        notes: >
+          2026-08-30. formId=305 ("Inflation expectations"), found via the categories
+          endpoint. Already single-dimension (only one category value present). Verified
+          live: 126 rows, 2016-01 to 2026-07, all unique dates, recent values ~12-15% --
+          plausible given current actual annual inflation (~10.2%, NBK's own homepage
+          figure). fetch_inflation_expectations.
+      BUSINESS_ACTIVITY_INDEX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=339"
+        format: json
+        notes: >
+          2026-08-30. formId=339 ("The Business Activity Index"), found via the categories
+          endpoint. Multi-dimensional (index_type=Trade/Mining/Construction/Service/
+          Production), but index_type='Business activity index by economy' is NBK's own
+          clean pre-aggregated headline row. Verified live: 79 rows, all unique dates,
+          recent values ~49.5-51.6 -- hovering near the neutral 50 mark, plausible for a
+          PMI-style survey index. fetch_business_activity_index.
     publication_calendar_url: "https://nationalbank.kz/ru/statisticalinformation/grafik-vypuska-statisticheskoy-informacii"
     publication_calendar_notes: >
       Verified live HTML page, filterable by year/category, with an XLSX export button
@@ -1408,3 +1489,18 @@ agencies:
           checked: 2031 value (~249.8) sits well below the market exchange rate (~486
           KZT/USD, NBK's own July 2026 reference rate) -- expected direction for a
           developing economy with a lower domestic price level.
+      IMF_STRUCTURAL_BALANCE:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: GGSB_NPGDP
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.GGSB_NPGDP"
+        notes: >
+          2026-08-30. Structural balance, % of potential GDP (excludes cyclical effects).
+          Sanity-checked: close to but not identical to IMF_GOV_BALANCE (e.g. 2029: -1.93%
+          structural vs -1.97% actual) -- the expected small gap between a structural and
+          headline fiscal balance measure. Tried NGAP_NPGDP (output gap) first; it returned
+          2 rows with empty OBS_VALUE for Kazakhstan, so it was dropped rather than forced in.

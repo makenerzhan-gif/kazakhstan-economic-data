@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=339",
+  "dataset_id": "formId=339,index_type=Business activity index by economy",
+  "indicator_id": "BUSINESS_ACTIVITY_INDEX",
+  "indicator_name": "Business Activity Index",
+  "description": "Индекс деловой активности",
+  "frequency": "monthly",
+  "unit": "index",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, ~50 = neutral (no change in business activity vs. prior period).",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2020-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
