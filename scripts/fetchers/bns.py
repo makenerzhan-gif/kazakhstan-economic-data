@@ -1166,3 +1166,50 @@ def fetch_doctors_total() -> tuple[list[dict], dict]:
         "704315", "DOCTORS_TOTAL",
         note="Total number of doctors (all specialties), persons, year-end. Taldau indexId 704315.",
     )
+
+
+def fetch_energy_intensity() -> tuple[list[dict], dict]:
+    """Energy intensity of GDP, tonnes of oil equivalent per thousand USD.
+    Taldau indexId 702139, found by browsing the "Статистика энергетики и
+    товарных рынков" category page (GetIndustryByID/18814801) -- external
+    trade, tourism, education, healthcare, and services category pages were
+    also browsed this session and found empty or stale (2008-only data),
+    unlike energy which had two live current indicators. Standard single-
+    dimension mechanism worked directly. Verified live 2026-08-30: ~0.30-0.32
+    toe/thousand USD (2023-2025).
+    """
+    return _fetch_taldau_annual_index(
+        "702139", "ENERGY_INTENSITY",
+        note="Energy intensity of GDP, toe per thousand USD. Taldau indexId 702139.",
+    )
+
+
+def fetch_energy_consumption() -> tuple[list[dict], dict]:
+    """Total primary energy consumption, thousand tonnes of oil equivalent,
+    annual -- companion to ENERGY_INTENSITY. Taldau indexId 77394629, same
+    category page. Classified across 2 dictionaries; params recovered via
+    the live ExtJS component tree. Verified live 2026-08-30: matches the
+    category page's own displayed 2025 figure (80,051 thousand toe, rounded)
+    almost exactly (80,050.5).
+    """
+    return _fetch_taldau_annual_index(
+        "77394629", "ENERGY_CONSUMPTION",
+        note="Total primary energy consumption, thousand toe. Taldau indexId 77394629.",
+        measure_id="2908", dic_ids="68,4834",
+        terms="741880,77356561",
+    )
+
+
+def fetch_electricity_production() -> tuple[list[dict], dict]:
+    """Electricity production, kWh, annual. Taldau indexId 19197226 (code
+    304132, "Производство электроэнергии в натуральном выражении"), found
+    via keyword search ("производство электроэнергии") after the energy
+    category page itself didn't list it among its two RK-total indicators.
+    Standard single-dimension mechanism worked directly. Verified live
+    2026-08-30: ~113.6 billion kWh (2022) to ~118.7 billion kWh (2024), a
+    plausible scale matching Kazakhstan's known annual generation.
+    """
+    return _fetch_taldau_annual_index(
+        "19197226", "ELECTRICITY_PRODUCTION",
+        note="Electricity production, kWh. Taldau indexId 19197226.",
+    )

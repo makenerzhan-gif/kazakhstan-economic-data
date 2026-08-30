@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-19197226",
+  "indicator_id": "ELECTRICITY_PRODUCTION",
+  "indicator_name": "Electricity Production",
+  "description": "Производство электроэнергии",
+  "frequency": "annual",
+  "unit": "kWh",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Electricity production, kWh. Taldau indexId 19197226.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2016-12-31",
+  "period_end": "2024-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

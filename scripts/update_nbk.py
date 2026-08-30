@@ -40,6 +40,9 @@ FETCHERS = {
     "REMITTANCES_RECEIVED": nbk_fetchers.fetch_remittances_received,
     "INFLATION_EXPECTATIONS": nbk_fetchers.fetch_inflation_expectations,
     "BUSINESS_ACTIVITY_INDEX": nbk_fetchers.fetch_business_activity_index,
+    "NON_CASH_PAYMENTS_SHARE": nbk_fetchers.fetch_non_cash_payments_share,
+    "CAPITAL_ADEQUACY_RATIO": nbk_fetchers.fetch_capital_adequacy_ratio,
+    "NPL_RATIO": nbk_fetchers.fetch_npl_ratio,
 }
 
 INDICATOR_IDS = [
@@ -49,6 +52,7 @@ INDICATOR_IDS = [
     "TONIA", "NATIONAL_FUND_TRANSFERS", "KASE_USD_VOLUME",
     "REMITTANCES_SENT", "REMITTANCES_RECEIVED",
     "INFLATION_EXPECTATIONS", "BUSINESS_ACTIVITY_INDEX",
+    "NON_CASH_PAYMENTS_SHARE", "CAPITAL_ADEQUACY_RATIO", "NPL_RATIO",
 ]
 
 

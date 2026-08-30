@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=303",
+  "dataset_id": "formId=303",
+  "indicator_id": "NON_CASH_PAYMENTS_SHARE",
+  "indicator_name": "Share of Non-Cash Payments (households)",
+  "description": "Доля безналичных платежей населения",
+  "frequency": "annual",
+  "unit": "%",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "%. From-the-beginning-of-the-year figure as of each report_date.",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2022-01-01",
+  "period_end": "2026-01-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T22:30:41.297104
+Run timestamp: 2026-08-30T22:41:37.944932
 Unified dataset updated: True
 Tests passed: True
 
@@ -156,6 +156,10 @@ Tests passed: True
 - **bns/REAL_INCOME_INDEX** — fetch+validate+process: ok (downloaded=25, processed=25)
 - **bns/TELECOM_SERVICES** — fetch+validate+process: ok (downloaded=9, processed=9)
 - **bns/DOCTORS_TOTAL** — fetch+validate+process: ok (downloaded=11, processed=11)
+- **bns/ENERGY_INTENSITY** — fetch+validate+process: ok (downloaded=11, processed=11)
+- **bns/ENERGY_CONSUMPTION** — fetch+validate+process: ok (downloaded=11, processed=11)
+- **bns/ELECTRICITY_PRODUCTION** — fetch+validate+process: ok (downloaded=9, processed=9)
+  - warning: Unexpected jump of 99.9% between 2020-12-31 (108629093000000.0) and 2021-12-31 (115078200000.0).
 - **nbk/BASE_RATE** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Gap of 49 days between 2024-10-14 and 2024-12-02 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2024-12-02 and 2025-01-20 is outside expected range for frequency=daily (1-4d).
@@ -208,6 +212,9 @@ Tests passed: True
   - warning: Gap of 62 days between 2021-12-01 and 2022-02-01 is outside expected range for frequency=monthly (25-40d).
   - warning: Unexpected jump of 89.6% between 2022-02-01 (9.6) and 2022-03-01 (18.2).
 - **nbk/BUSINESS_ACTIVITY_INDEX** — fetch+validate+process: ok (downloaded=79, processed=79)
+- **nbk/NON_CASH_PAYMENTS_SHARE** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **nbk/CAPITAL_ADEQUACY_RATIO** — fetch+validate+process: ok (downloaded=18, processed=18)
+- **nbk/NPL_RATIO** — fetch+validate+process: ok (downloaded=18, processed=18)
 - **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)
@@ -503,3 +510,7 @@ Tests passed: True
   - warning: Unexpected jump of 588.6% between 2022-01-01 (0.376596) and 2023-01-01 (-1.840185).
   - warning: Unexpected jump of 152.0% between 2023-01-01 (-1.840185) and 2024-01-01 (-4.637583).
   - warning: Unexpected jump of 60.3% between 2025-01-01 (-4.833013) and 2026-01-01 (-1.917856).
+- **imf/IMF_CPI_EOP_INDEX** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 2165.0% between 1992-01-01 (0.033765) and 1993-01-01 (0.764775).
+  - warning: Unexpected jump of 854.6% between 1993-01-01 (0.764775) and 1994-01-01 (7.300427).
+  - warning: Unexpected jump of 60.4% between 1994-01-01 (7.300427) and 1995-01-01 (11.709034).

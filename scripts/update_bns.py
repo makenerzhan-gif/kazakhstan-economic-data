@@ -69,6 +69,9 @@ FETCHERS = {
     "REAL_INCOME_INDEX": bns_fetchers.fetch_real_income_index,
     "TELECOM_SERVICES": bns_fetchers.fetch_telecom_services,
     "DOCTORS_TOTAL": bns_fetchers.fetch_doctors_total,
+    "ENERGY_INTENSITY": bns_fetchers.fetch_energy_intensity,
+    "ENERGY_CONSUMPTION": bns_fetchers.fetch_energy_consumption,
+    "ELECTRICITY_PRODUCTION": bns_fetchers.fetch_electricity_production,
 }
 
 INDICATOR_IDS = [
@@ -86,6 +89,7 @@ INDICATOR_IDS = [
     "FREIGHT_TURNOVER", "PASSENGER_TURNOVER",
     "AGRICULTURE_OUTPUT", "PER_CAPITA_INCOME", "REAL_INCOME_INDEX",
     "TELECOM_SERVICES", "DOCTORS_TOTAL",
+    "ENERGY_INTENSITY", "ENERGY_CONSUMPTION", "ELECTRICITY_PRODUCTION",
 ]
 
 

@@ -488,3 +488,34 @@ index. Structural balance sits close to but not identical to the headline actual
 (-1.93% vs -1.97% for 2029) -- the expected small gap between the two measures.
 
 **116/116 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-30 — ninth scale-up batch: 116 -> 123 indicators
+Systematically browsed every remaining untouched Taldau category page this batch (external
+trade, tourism, education, healthcare, services -- all empty or stale/2008-only) alongside
+energy, which had two live current indicators. On the NBK side, checked several forms not
+yet explored (Financial Soundness Indicators, non-cash payments, government securities in
+circulation) for clean single-value picks.
+
+**BNS (3):** ENERGY_INTENSITY and ENERGY_CONSUMPTION (found via category browsing --
+"Статистика энергетики и товарных рынков" was the only one of six browsed categories with
+live current data), ELECTRICITY_PRODUCTION (via keyword search, not on the category's own
+short RK-totals list). Crude oil/gas production was searched for with several phrasings and
+not found on Taldau.
+
+**NBK (3):** NON_CASH_PAYMENTS_SHARE (formId=303, a short but clean 5-row annual series),
+CAPITAL_ADEQUACY_RATIO and NPL_RATIO (both from formId=314, NBK's own IMF-standard
+Financial Soundness Indicators -- picked already-computed ratios rather than attempting any
+aggregation, since NBK publishes the ratios directly). Government securities in circulation
+(formId=430) was also checked and found to have the same no-aggregate problem as the loan/
+auction forms -- not connected.
+
+**IMF WEO (1):** IMF_CPI_EOP_INDEX (PCPIE), the third leg of the CPI trio alongside
+IMF_CPI_INDEX (average-period level) and IMF_INFLATION_EOP (% change).
+
+**Sanity-checked before committing:** ELECTRICITY_PRODUCTION (~113.6-118.7 billion kWh)
+matches Kazakhstan's known annual generation scale. ENERGY_CONSUMPTION's 2025 value
+(80,050.5) matches the category page's own displayed figure (80,051, rounded) almost
+exactly. CAPITAL_ADEQUACY_RATIO (~21.4-21.5%) sits well above the Basel minimum (~8%) and
+NPL_RATIO (~2.9-3.3%) at a healthy level -- both plausible for Kazakhstan's banking sector.
+
+**123/123 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

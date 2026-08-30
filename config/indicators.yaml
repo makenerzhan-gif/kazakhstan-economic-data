@@ -1057,3 +1057,66 @@ indicators:
     unit: "% of potential GDP"
     category: international_projection
     source_status: confirmed
+
+  - id: IMF_CPI_EOP_INDEX
+    name_ru: "IMF WEO: индекс потребительских цен на конец периода, уровень"
+    name_en: "IMF WEO: Consumer Price Index, End of Period, Level"
+    agency: imf
+    frequency: annual
+    unit: "index"
+    category: international_projection
+    source_status: confirmed
+
+  - id: ENERGY_INTENSITY
+    name_ru: "Энергоемкость ВВП"
+    name_en: "Energy Intensity of GDP"
+    agency: bns
+    frequency: annual
+    unit: "toe per thousand USD"
+    category: production
+    source_status: confirmed
+
+  - id: ENERGY_CONSUMPTION
+    name_ru: "Общее первичное энергопотребление"
+    name_en: "Total Primary Energy Consumption"
+    agency: bns
+    frequency: annual
+    unit: "thousand toe"
+    category: production
+    source_status: confirmed
+
+  - id: ELECTRICITY_PRODUCTION
+    name_ru: "Производство электроэнергии"
+    name_en: "Electricity Production"
+    agency: bns
+    frequency: annual
+    unit: "kWh"
+    category: production
+    source_status: confirmed
+
+  - id: NON_CASH_PAYMENTS_SHARE
+    name_ru: "Доля безналичных платежей населения"
+    name_en: "Share of Non-Cash Payments (households)"
+    agency: nbk
+    frequency: annual
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: CAPITAL_ADEQUACY_RATIO
+    name_ru: "Коэффициент достаточности капитала банков второго уровня"
+    name_en: "Bank Capital Adequacy Ratio"
+    agency: nbk
+    frequency: quarterly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: NPL_RATIO
+    name_ru: "Доля неработающих кредитов"
+    name_en: "Non-Performing Loans Ratio"
+    agency: nbk
+    frequency: quarterly
+    unit: "%"
+    category: monetary
+    source_status: confirmed

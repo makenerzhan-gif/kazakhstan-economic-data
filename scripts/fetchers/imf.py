@@ -305,3 +305,11 @@ def fetch_structural_balance() -> tuple[list[dict], dict]:
     returned 2 rows with empty OBS_VALUE for Kazakhstan, so it was dropped
     rather than forced in.)"""
     return _fetch_weo_series("IMF_STRUCTURAL_BALANCE", "WEO", "IMF.RES", "9.0.0", "KAZ", "GGSB_NPGDP")
+
+
+def fetch_cpi_eop_index() -> tuple[list[dict], dict]:
+    """WEO consumer price index, end-of-period level (companion to
+    IMF_INFLATION_EOP, which is the % change of this same underlying
+    series, and to IMF_CPI_INDEX, which is the average-period level).
+    Verified live 2026-08-30: indicator code PCPIE."""
+    return _fetch_weo_series("IMF_CPI_EOP_INDEX", "WEO", "IMF.RES", "9.0.0", "KAZ", "PCPIE")

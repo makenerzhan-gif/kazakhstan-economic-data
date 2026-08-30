@@ -977,3 +977,109 @@ def fetch_business_activity_index() -> tuple[list[dict], dict]:
         "note": "Index, ~50 = neutral (no change in business activity vs. prior period).",
     }
     return records, manifest
+
+
+# formId=303, "Non-cash payments". Found 2026-08-30 via the categories endpoint. Already
+# single-dimension (only one class_1 value present: 'Non-cash payments of the population')
+# -- no aggregation needed or attempted. Short series (5 annual rows) but real and clean.
+NON_CASH_PAYMENTS_FORM_ID = "303"
+
+
+def fetch_non_cash_payments_share() -> tuple[list[dict], dict]:
+    """Share of non-cash payments in total household payments, %, annual.
+    Verified live 2026-08-30: 5 rows (2022-2026), all unique dates, rising
+    from 73.6% (2022) to 89.0% (2025) before dipping to 82.9% (2026,
+    presumably a partial-year figure) -- plausible trend for a rapidly
+    digitalizing payments market."""
+    resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                         params={"formId": NON_CASH_PAYMENTS_FORM_ID, "page": "0", "pageSize": "500"}, timeout=30)
+    resp.raise_for_status()
+    data = resp.json()
+    rows = data["rows"]
+
+    today = date.today()
+    content = json.dumps(rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "NON_CASH_PAYMENTS_SHARE", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "NON_CASH_PAYMENTS_SHARE", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={NON_CASH_PAYMENTS_FORM_ID}",
+    })
+
+    if not rows:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/NON_CASH_PAYMENTS_SHARE",
+                "WHAT CHANGED: zero rows returned",
+                f"ACTION REQUIRED: inspect formId={NON_CASH_PAYMENTS_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in rows], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "annual",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={NON_CASH_PAYMENTS_FORM_ID}",
+        "dataset_id": f"formId={NON_CASH_PAYMENTS_FORM_ID}",
+        "note": "%. From-the-beginning-of-the-year figure as of each report_date.",
+    }
+    return records, manifest
+
+
+# formId=314, "Financial Soundness Indicators" -- IMF-standard FSI series. Found 2026-08-30
+# via the categories endpoint. Multi-dimensional (subject x indicator x sub_subject), but
+# subject='Core FSIs for Deposit takers' + a specific `indicator` value gives a clean,
+# already-computed ratio -- no aggregation needed, NBK computes these ratios itself.
+FSI_FORM_ID = "314"
+FSI_SUBJECT = "Core FSIs for Deposit takers"
+
+
+def _fetch_fsi(indicator_name: str, indicator_id: str) -> tuple[list[dict], dict]:
+    all_rows: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                             params={"formId": FSI_FORM_ID, "page": str(page), "pageSize": "500"},
+                             timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        all_rows.extend(data["rows"])
+        if len(all_rows) >= data["totalRows"]:
+            break
+        page += 1
+
+    today = date.today()
+    content = json.dumps(all_rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, indicator_id, today, "json", content)
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={FSI_FORM_ID}",
+    })
+
+    matching = [r for r in all_rows if r.get("indicator") == indicator_name and r.get("subject") == FSI_SUBJECT]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+                f"WHAT CHANGED: no rows found with indicator={indicator_name!r}, subject={FSI_SUBJECT!r}",
+                f"ACTION REQUIRED: inspect formId={FSI_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in matching], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "quarterly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={FSI_FORM_ID}",
+        "dataset_id": f"formId={FSI_FORM_ID},subject={FSI_SUBJECT},indicator={indicator_name}",
+        "note": "%. Banking-sector Financial Soundness Indicator, second-tier banks (deposit takers).",
+    }
+    return records, manifest
+
+
+def fetch_capital_adequacy_ratio() -> tuple[list[dict], dict]:
+    """Bank capital adequacy ratio (regulatory capital to risk-weighted
+    assets), %, quarterly. Verified live 2026-08-30: 18 rows, all unique
+    dates, ~21.4-21.5% recently -- well above the Basel minimum (~8%),
+    indicating a well-capitalized banking sector."""
+    return _fetch_fsi("Regulatory capital to risk-weighted assets", "CAPITAL_ADEQUACY_RATIO")
+
+
+def fetch_npl_ratio() -> tuple[list[dict], dict]:
+    """Non-performing loans ratio (NPLs to total gross loans), %, quarterly.
+    Verified live 2026-08-30: 18 rows, all unique dates, ~2.9-3.3% recently
+    -- a healthy level for a banking system."""
+    return _fetch_fsi("Nonperforming loans to total gross loans", "NPL_RATIO")
