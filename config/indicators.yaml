@@ -661,3 +661,12 @@ indicators:
     unit: "USD"
     category: international_projection
     source_status: confirmed
+
+  - id: RETAIL_TRADE
+    name_ru: "Объем розничной торговли в стоимостном выражении"
+    name_en: "Retail Trade Turnover (value terms)"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: trade
+    source_status: confirmed

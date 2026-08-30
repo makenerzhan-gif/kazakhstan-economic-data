@@ -271,15 +271,32 @@ agencies:
           resolve but are OTHER price indices (forestry products, commercial real estate
           rental, agricultural producer prices), not industrial PPI. Not connected -- no
           working current source found this session.
-      RETAIL_TRADE_NOT_CONNECTED:
-        status: not_connected
+      RETAIL_TRADE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 702038
+        format: json
         notes: >
-          2026-08-30. Searched Taldau's domestic-trade category (GetIndustryByID/702017) --
-          it lists commodity-exchange statistics (exchange count, trade volume, market count)
-          but no direct retail/wholesale turnover series. A candidate indexId (704502) surfaced
-          via web search but its actual content wasn't confirmed as retail turnover before time
-          was allocated elsewhere in this session. Not connected -- needs a more targeted
-          search (e.g. the specific "Товарооборот розничной торговли" page) in a future pass.
+          2026-08-30. Resolved in a later pass of the same session that first logged this as
+          not_connected. Taldau's domestic-trade category page (GetIndustryByID/702017) only
+          lists commodity-exchange/market statistics, not retail turnover directly -- and the
+          candidate indexIds found via plain web search (701830, 703076) were both wrong
+          (701830 turned out to be "Инвестиции в основной капитал по направлениям
+          использования", code 161103, an unrelated investment indicator; 703076 was never
+          identified). The correct indicator was found via Taldau's own site search API
+          (POST /ru/Search/getSearchPageGridData, body keyword="розничной торговли") --
+          id=702038, code 171202, "Объем розничной торговли в стоимостном выражении". Like
+          AVG_WAGE, this index is classified across 3 dictionaries at once (region 67,
+          ownership form 59, goods type 676) and returns HTTP 500 under the default
+          measure_id=7/dicIds=67 guess. Cracked without a fresh browser XHR capture: read the
+          already-loaded page's live ExtJS component tree directly via
+          Ext.ComponentQuery.query('treepanel') to find the indexTreeGrid store's
+          lastOptions.params (measure_id=1, terms=741880,741907,741894, dicIds=67,59,676) --
+          the exact params the page itself was already using successfully. Verified live with
+          a plain stateless requests.post using these params. Values are plausible KZT retail
+          turnover: ~558 billion (2000) rising to ~27.7 trillion (2025), consistent with BNS's
+          own published growth-rate commentary for domestic trade.
+          fetch_retail_trade.
       CONSTRUCTION_NOT_CONNECTED:
         status: not_connected
         notes: >

@@ -720,3 +720,33 @@ def fetch_total_consumption_expenditure() -> tuple[list[dict], dict]:
 def fetch_capital_consumption() -> tuple[list[dict], dict]:
     """Consumption of fixed capital (depreciation), income account, KZT. Taldau indexId 700944."""
     return _fetch_taldau_annual_index("700944", "CAPITAL_CONSUMPTION", note="Consumption of fixed capital (depreciation), income account, KZT. Taldau indexId 700944.")
+
+
+def fetch_retail_trade() -> tuple[list[dict], dict]:
+    """Retail trade turnover, value terms, KZT. Taldau indexId 702038 (code 171202,
+    "Объем розничной торговли в стоимостном выражении"), found under Taldau's
+    "Статистика внутренней торговли" category (GetIndustryByID/702017) via the
+    site's own keyword search API (POST /ru/Search/getSearchPageGridData,
+    keyword="розничной торговли") -- the two indexIds found earlier via a plain
+    web search (701830, 703076) both turned out to be wrong indicators entirely
+    (701830 is fixed-capital investment by use, code 161103; 703076 was never
+    identified) and were discarded rather than guessed into use.
+
+    Classified across 3 dictionaries at once (region, ownership form, goods
+    type) -- blind measure_id=7/dicIds=67 guessing returned HTTP 500, same
+    failure mode as AVG_WAGE. Cracked without a fresh XHR capture: queried the
+    already-loaded ExtJS page's live component tree directly
+    (Ext.ComponentQuery.query('treepanel') -> indexTreeGrid's store.lastOptions)
+    to read the exact params the page itself was already using
+    (measure_id=1; terms=741880,741907,741894 -- the "Всего" total in each of
+    the 3 dictionaries; dic_ids=67,59,676). Verified live 2026-08-30 with a
+    plain, stateless requests.post using these params. Values are plausible
+    KZT retail turnover: ~558 billion in 2000 rising to ~27.7 trillion in 2025,
+    consistent with BNS's own published growth-rate commentary for this series.
+    """
+    return _fetch_taldau_annual_index(
+        "702038", "RETAIL_TRADE",
+        note="Retail trade turnover, value terms, KZT. Taldau indexId 702038.",
+        measure_id="1", dic_ids="67,59,676",
+        terms="741880,741907,741894",
+    )

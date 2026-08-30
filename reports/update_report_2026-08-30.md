@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T21:18:22.108163
+Run timestamp: 2026-08-30T21:26:46.306337
 Unified dataset updated: True
 Tests passed: True
 
@@ -135,6 +135,7 @@ Tests passed: True
   - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: Unexpected jump of 133.2% between 2009-12-31 (10066102700000.0) and 2014-12-31 (23477055500000.0).
 - **bns/CAPITAL_CONSUMPTION** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/RETAIL_TRADE** — fetch+validate+process: ok (downloaded=26, processed=26)
 - **nbk/BASE_RATE** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Gap of 49 days between 2024-10-14 and 2024-12-02 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2024-12-02 and 2025-01-20 is outside expected range for frequency=daily (1-4d).

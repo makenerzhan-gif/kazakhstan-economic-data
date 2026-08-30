@@ -268,3 +268,28 @@ budget, or to be documented as `RETAIL_TRADE_NOT_CONNECTED` alongside the other
 no-clean-aggregate gaps if not resolved.
 
 **72/72 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-30 — resolved BNS retail trade: 72 -> 73 indicators
+Follow-up within the same day: went back to the investigation logged as "not connected"
+above and resolved it, per explicit instruction to finish it rather than move on.
+
+**Connected (1):**
+- RETAIL_TRADE: found the correct index via Taldau's own site search API (POST
+  /ru/Search/getSearchPageGridData, keyword="розничной торговли") rather than continuing to
+  guess from web-search indexIds -- the earlier candidates (701830, 703076) were both wrong
+  (701830 turned out to be an unrelated fixed-capital-investment series). The real
+  indicator, id=702038 ("Объем розничной торговли в стоимостном выражении", code 171202),
+  is classified across 3 dictionaries (region, ownership form, goods type) like AVG_WAGE,
+  and also 500'd under the default single-dimension guess. Cracked without a fresh XHR
+  capture this time: read the already-loaded page's live ExtJS component tree directly
+  (`Ext.ComponentQuery.query('treepanel')` -> the indexTreeGrid store's
+  `lastOptions.params`) to recover the exact working request params (measure_id=1,
+  dicIds=67,59,676, terms=741880,741907,741894) instead of trial-and-error guessing.
+
+**Sanity-checked before committing:** values run ~558 billion KZT (2000) to ~27.7 trillion
+KZT (2025) -- plausible scale and monotonic growth for nominal retail turnover. 2024->2025
+nominal growth (~17.6%) is higher than BNS's own cited *real* (inflation-adjusted) growth
+figures for the sector (~7%) -- expected, since this series is in value/nominal terms and
+therefore also reflects price inflation, not a discrepancy.
+
+**73/73 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

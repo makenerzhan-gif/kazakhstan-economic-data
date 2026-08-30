@@ -50,6 +50,7 @@ FETCHERS = {
     "EXPORT_VOLUME_INDEX": bns_fetchers.fetch_export_volume_index,
     "TOTAL_CONSUMPTION_EXPENDITURE": bns_fetchers.fetch_total_consumption_expenditure,
     "CAPITAL_CONSUMPTION": bns_fetchers.fetch_capital_consumption,
+    "RETAIL_TRADE": bns_fetchers.fetch_retail_trade,
 }
 
 INDICATOR_IDS = [
@@ -60,7 +61,7 @@ INDICATOR_IDS = [
     "GDP_INCOME_METHOD", "GROSS_OUTPUT", "TAXES_ON_PRODUCTS", "NET_TAXES_ON_PRODUCTS",
     "SUBSIDIES", "INTERMEDIATE_CONSUMPTION", "GROSS_ACCUMULATION",
     "IMPORT_VOLUME_INDEX", "EXPORT_VOLUME_INDEX", "TOTAL_CONSUMPTION_EXPENDITURE",
-    "CAPITAL_CONSUMPTION",
+    "CAPITAL_CONSUMPTION", "RETAIL_TRADE",
 ]
 
 
