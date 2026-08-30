@@ -1179,6 +1179,38 @@ agencies:
           2026-08-30. Same document and mechanism as GG_TAXES, row code 'CSD' ('Cash surplus
           / deficit [1-2-31 = 1-2M]') -- a broader fiscal balance measure than BUDGET_DEFICIT
           (republican-only). fetch_gg_cash_surplus_deficit.
+      CUSTOMS_DUTIES:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 8 (дох)"
+        target_row_label: "Таможенные платежи (class 06, subclass 1)"
+        format: xlsx
+        frequency: irregular
+        notes: >
+          2026-08-30. RESOLVED after finally opening the "Statistical bulletin" document (49
+          sheets, 1.5MB) that earlier sessions had set aside as too large/complex to attempt
+          -- turned out perfectly parseable. Sheet "табл 8 (дох)" is the full KBK (budget
+          classification code) breakdown of republican-budget revenue; 'Таможенные платежи'
+          (class 06/subclass 1) is a genuine, distinct line. SAME sheet also confirms
+          individual income tax and property tax do NOT appear anywhere in the republican
+          budget -- only 'Корпоративный подоходный налог' (corporate income tax) is present
+          under the income-tax category -- consistent with KZ's budget code assigning
+          individual income tax and property tax entirely to LOCAL government budgets. Not
+          pursued further (would require aggregating 17+ local budget execution reports, a
+          real methodological undertaking, not a search failure) -- documented here so a
+          future session doesn't re-search for them at the republican level.
+
+          CRITICAL: document TITLES ("Statistical bulletin as of {Month} 1, {YYYY}") are
+          UNRELIABLE -- three documents all titled "as of April 1, 2026" turned out to cover
+          three different periods (Jan-Feb, Jan-Mar, Jan-May 2026) on inspection of their
+          actual sheet content. Only the sheet's own internal period header text (e.g.
+          "январь-май отчет 2026 г.") is trustworthy and is what the fetcher actually parses.
+          The series is genuinely year-to-date cumulative (resets near zero every January);
+          confirmed monotonic within each year across all 13 documents in the current
+          listing (2025: ~212bn KZT Feb to ~2,003bn KZT Nov; 2026: ~66bn Jan to ~1,165bn
+          Jun). No document currently covers a full Jan-Dec year -- a real gap, not
+          fabricated/interpolated. fetch_customs_duties.
       GOV_HEALTH_SPENDING:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"

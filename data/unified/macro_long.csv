@@ -3987,6 +3987,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,REER,119.32943,index,nbk,2026-08-30,level,2026-08-30
 2025-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,15813.144032362,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-02-01,KZ,national,monthly,REMITTANCES_SENT,45008.2050012,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-02-28,KZ,national,irregular,CUSTOMS_DUTIES,211524.49517072,"million KZT, year-to-date cumulative",minfin,2026-08-30,level,2026-08-30
 2025-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-08-30,level,2026-08-30
 2025-03-01,KZ,national,monthly,CPI,101.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2025-03-01,KZ,national,monthly,DEPOSITS_TOTAL,40449630.68109766,million KZT,nbk,2026-08-30,level,2026-08-30
@@ -4009,6 +4010,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,16733.500870873,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-03-01,KZ,national,monthly,REMITTANCES_SENT,47328.856735897,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-03-11,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
+2025-03-31,KZ,national,irregular,CUSTOMS_DUTIES,391451.48775773,"million KZT, year-to-date cumulative",minfin,2026-08-30,level,2026-08-30
 2025-03-31,KZ,national,quarterly,GDP_NOMINAL,30467333700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2025-03-31,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-337893.34243903897,million KZT,minfin,2026-08-30,level,2026-08-30
 2025-03-31,KZ,national,quarterly,GG_SOCIAL_CONTRIBUTIONS,467184.10500000004,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -4083,6 +4085,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,18595.364206979,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-06-01,KZ,national,monthly,REMITTANCES_SENT,64712.184057815,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-06-09,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
+2025-06-30,KZ,national,irregular,CUSTOMS_DUTIES,1002267.64682282,"million KZT, year-to-date cumulative",minfin,2026-08-30,level,2026-08-30
 2025-06-30,KZ,national,quarterly,GDP_NOMINAL,61371821900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2025-06-30,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-1936306.6720745338,million KZT,minfin,2026-08-30,level,2026-08-30
 2025-06-30,KZ,national,quarterly,GG_SOCIAL_CONTRIBUTIONS,540837.6079999999,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -4114,6 +4117,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,monthly,REMITTANCES_RECEIVED,21264.962810764,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-07-01,KZ,national,monthly,REMITTANCES_SENT,70447.506300936,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-07-14,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
+2025-07-31,KZ,national,irregular,CUSTOMS_DUTIES,1199236.93435166,"million KZT, year-to-date cumulative",minfin,2026-08-30,level,2026-08-30
 2025-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.9,index,nbk,2026-08-30,level,2026-08-30
 2025-08-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2025-08-01,KZ,national,monthly,DEPOSITS_TOTAL,42392405.20091842,million KZT,nbk,2026-08-30,level,2026-08-30
@@ -4135,6 +4139,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,REER,108.41895,index,nbk,2026-08-30,level,2026-08-30
 2025-08-01,KZ,national,monthly,REMITTANCES_RECEIVED,20856.20042472,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-08-01,KZ,national,monthly,REMITTANCES_SENT,72705.211344807,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-08-31,KZ,national,irregular,CUSTOMS_DUTIES,1411349.86754375,"million KZT, year-to-date cumulative",minfin,2026-08-30,level,2026-08-30
 2025-09-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.8,index,nbk,2026-08-30,level,2026-08-30
 2025-09-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2025-09-01,KZ,national,monthly,DEPOSITS_TOTAL,42795877.34127415,million KZT,nbk,2026-08-30,level,2026-08-30
@@ -4157,6 +4162,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,20438.396964499,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-09-01,KZ,national,monthly,REMITTANCES_SENT,71570.869920804,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-09-02,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
+2025-09-30,KZ,national,irregular,CUSTOMS_DUTIES,1623527.8836656,"million KZT, year-to-date cumulative",minfin,2026-08-30,level,2026-08-30
 2025-09-30,KZ,national,quarterly,GDP_NOMINAL,99724898500000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2025-09-30,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,2420012.540493233,million KZT,minfin,2026-08-30,level,2026-08-30
 2025-09-30,KZ,national,quarterly,GG_SOCIAL_CONTRIBUTIONS,524215.13400000014,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -4187,6 +4193,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,20692.336550891,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-10-01,KZ,national,monthly,REMITTANCES_SENT,68092.222434033,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-10-13,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-30,level,2026-08-30
+2025-10-31,KZ,national,irregular,CUSTOMS_DUTIES,1808570.55602749,"million KZT, year-to-date cumulative",minfin,2026-08-30,level,2026-08-30
 2025-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.3,index,nbk,2026-08-30,level,2026-08-30
 2025-11-01,KZ,national,monthly,DEPOSITS_TOTAL,44679044.7624226,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-11-01,KZ,national,monthly,DEPOSIT_RATE,14.57885683950363,%,nbk,2026-08-30,level,2026-08-30
@@ -4207,6 +4214,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-01,KZ,national,monthly,REER,114.2761,index,nbk,2026-08-30,level,2026-08-30
 2025-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,17297.77484655,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-11-01,KZ,national,monthly,REMITTANCES_SENT,55540.770486322,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-11-30,KZ,national,irregular,CUSTOMS_DUTIES,2002525.13482824,"million KZT, year-to-date cumulative",minfin,2026-08-30,level,2026-08-30
 2025-12-01,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-30,level,2026-08-30
 2025-12-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.9,index,nbk,2026-08-30,level,2026-08-30
 2025-12-01,KZ,national,monthly,DEPOSITS_TOTAL,44457125.20502845,million KZT,nbk,2026-08-30,level,2026-08-30
@@ -4344,6 +4352,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,15392.881078525,million KZT,nbk,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,monthly,REMITTANCES_SENT,37885.147253329,million KZT,nbk,2026-08-30,level,2026-08-30
 2026-01-26,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-30,level,2026-08-30
+2026-01-31,KZ,national,irregular,CUSTOMS_DUTIES,66067.6032816,"million KZT, year-to-date cumulative",minfin,2026-08-30,level,2026-08-30
 2026-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.6,index,nbk,2026-08-30,level,2026-08-30
 2026-02-01,KZ,national,monthly,DEPOSITS_TOTAL,46163277.62036333,million KZT,nbk,2026-08-30,level,2026-08-30
 2026-02-01,KZ,national,monthly,DEPOSIT_RATE,15.336995860868887,%,nbk,2026-08-30,level,2026-08-30
@@ -4368,6 +4377,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-25,KZ,national,daily,TONIA,17.3,%,nbk,2026-08-30,level,2026-08-30
 2026-02-26,KZ,national,daily,TONIA,17.34,%,nbk,2026-08-30,level,2026-08-30
 2026-02-27,KZ,national,daily,TONIA,17.8,%,nbk,2026-08-30,level,2026-08-30
+2026-02-28,KZ,national,irregular,CUSTOMS_DUTIES,136357.89648719,"million KZT, year-to-date cumulative",minfin,2026-08-30,level,2026-08-30
 2026-02-28,KZ,national,daily,TONIA,17.97,%,nbk,2026-08-30,level,2026-08-30
 2026-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.5,index,nbk,2026-08-30,level,2026-08-30
 2026-03-01,KZ,national,monthly,DEPOSITS_TOTAL,46179213.57458906,million KZT,nbk,2026-08-30,level,2026-08-30
@@ -4420,6 +4430,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-28,KZ,national,daily,TONIA,17.81,%,nbk,2026-08-30,level,2026-08-30
 2026-03-29,KZ,national,daily,TONIA,17.81,%,nbk,2026-08-30,level,2026-08-30
 2026-03-30,KZ,national,daily,TONIA,17.81,%,nbk,2026-08-30,level,2026-08-30
+2026-03-31,KZ,national,irregular,CUSTOMS_DUTIES,360761.31747095,"million KZT, year-to-date cumulative",minfin,2026-08-30,level,2026-08-30
 2026-03-31,KZ,national,quarterly,GDP_NOMINAL,34102358100000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2026-03-31,KZ,national,daily,TONIA,17.79,%,nbk,2026-08-30,level,2026-08-30
 2026-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-08-30,level,2026-08-30
@@ -4523,6 +4534,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-28,KZ,national,daily,TONIA,18.12,%,nbk,2026-08-30,level,2026-08-30
 2026-05-29,KZ,national,daily,TONIA,18.42,%,nbk,2026-08-30,level,2026-08-30
 2026-05-30,KZ,national,daily,TONIA,18.71,%,nbk,2026-08-30,level,2026-08-30
+2026-05-31,KZ,national,irregular,CUSTOMS_DUTIES,841966.76921362,"million KZT, year-to-date cumulative",minfin,2026-08-30,level,2026-08-30
 2026-05-31,KZ,national,daily,TONIA,18.71,%,nbk,2026-08-30,level,2026-08-30
 2026-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.965806,index,nbk,2026-08-30,level,2026-08-30
 2026-06-01,KZ,national,monthly,DEPOSITS_TOTAL,47910515.95619293,million KZT,nbk,2026-08-30,level,2026-08-30
@@ -4572,6 +4584,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-27,KZ,national,daily,TONIA,16.83,%,nbk,2026-08-30,level,2026-08-30
 2026-06-28,KZ,national,daily,TONIA,16.83,%,nbk,2026-08-30,level,2026-08-30
 2026-06-29,KZ,national,daily,TONIA,16.83,%,nbk,2026-08-30,level,2026-08-30
+2026-06-30,KZ,national,irregular,CUSTOMS_DUTIES,1164587.90739074,"million KZT, year-to-date cumulative",minfin,2026-08-30,level,2026-08-30
 2026-06-30,KZ,national,quarterly,GDP_NOMINAL,70948693300000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2026-06-30,KZ,national,daily,TONIA,16.8,%,nbk,2026-08-30,level,2026-08-30
 2026-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.771858,index,nbk,2026-08-30,level,2026-08-30

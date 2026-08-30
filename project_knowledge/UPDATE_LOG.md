@@ -612,3 +612,35 @@ explicitly in both the fetcher and sources.yaml that these GG_* indicators shoul
 expected to reconcile with the republican-budget-only indicators already connected.
 
 **133/133 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-30 — thirteenth scale-up batch: 133 -> 134 indicators
+Finally opened the Minfin "Statistical bulletin" document (49 sheets, 1.5MB) that
+earlier sessions had explicitly set aside as too large/risky to attempt -- it turned out
+perfectly parseable, and resolved the batch's headline target: CUSTOMS_DUTIES.
+
+**Minfin (1):** CUSTOMS_DUTIES, from sheet "табл 8 (дох)" -- the full KBK (budget
+classification code) breakdown of republican-budget revenue by exact tax/fee type.
+'Таможенные платежи' (class 06/subclass 1) is a genuine, distinct line.
+
+**Structural finding, not a new indicator:** the SAME sheet definitively confirms
+individual income tax and property tax do not exist anywhere in the republican budget --
+only 'Корпоративный подоходный налог' (corporate income tax) appears under the income-tax
+category. This is consistent with Kazakhstan's budget code assigning individual income tax
+and property tax entirely to LOCAL government budgets, explaining why no republican-level
+document (Dynamics file, General Government IMF-methodology file, or this one) ever
+surfaced them across three separate sessions of searching. Not pursued further --
+extracting them would mean aggregating 17+ separate local budget execution reports, a real
+methodological undertaking distinct from what this project's fetchers do elsewhere, not a
+search failure. Documented in sources.yaml so a future session doesn't re-search for them
+at the republican level.
+
+**Critical data-quality catch:** this document series' TITLES ("Statistical bulletin as of
+{Month} 1, {YYYY}") are unreliable -- three documents all titled "as of April 1, 2026"
+turned out, on actually opening their sheets, to cover three different periods (Jan-Feb,
+Jan-Mar, Jan-May 2026). Built the fetcher to parse each document's own internal period
+header text instead ("январь-май отчет 2026 г."), never trusting the title. The resulting
+series is genuinely year-to-date cumulative (resets near zero every January) -- confirmed
+monotonic within each of the 13 available documents' respective years, and documented
+clearly so the expected sawtooth pattern across year boundaries isn't mistaken for a bug.
+
+**134/134 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

@@ -40,6 +40,7 @@ FETCHERS = {
     "GG_TAXES": minfin_fetchers.fetch_gg_taxes,
     "GG_SOCIAL_CONTRIBUTIONS": minfin_fetchers.fetch_gg_social_contributions,
     "GG_CASH_SURPLUS_DEFICIT": minfin_fetchers.fetch_gg_cash_surplus_deficit,
+    "CUSTOMS_DUTIES": minfin_fetchers.fetch_customs_duties,
 }
 
 INDICATOR_IDS = [
@@ -50,6 +51,7 @@ INDICATOR_IDS = [
     "GOV_DEBT_SERVICING", "NET_BUDGET_LENDING", "BUDGET_DEFICIT", "NON_OIL_BUDGET_DEFICIT",
     "EXCISE_TAX_REVENUE", "GOV_DEBT_DOMESTIC", "GOV_DEBT_EXTERNAL",
     "GG_TAXES", "GG_SOCIAL_CONTRIBUTIONS", "GG_CASH_SURPLUS_DEFICIT",
+    "CUSTOMS_DUTIES",
 ]
 
 

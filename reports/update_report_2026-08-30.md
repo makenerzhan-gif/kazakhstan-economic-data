@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T23:12:51.480313
+Run timestamp: 2026-08-30T23:27:51.611080
 Unified dataset updated: True
 Tests passed: True
 
@@ -268,6 +268,13 @@ Tests passed: True
 - **minfin/GG_CASH_SURPLUS_DEFICIT** — fetch+validate+process: ok (downloaded=4, processed=4)
   - warning: Unexpected jump of 473.1% between 2025-03-31 (-337893.34243903897) and 2025-06-30 (-1936306.6720745338).
   - warning: Unexpected jump of 225.0% between 2025-06-30 (-1936306.6720745338) and 2025-09-30 (2420012.540493233).
+- **minfin/CUSTOMS_DUTIES** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Unexpected jump of 85.1% between 2025-02-28 (211524.49517072) and 2025-03-31 (391451.48775773).
+  - warning: Unexpected jump of 156.0% between 2025-03-31 (391451.48775773) and 2025-06-30 (1002267.64682282).
+  - warning: Unexpected jump of 96.7% between 2025-11-30 (2002525.13482824) and 2026-01-31 (66067.6032816).
+  - warning: Unexpected jump of 106.4% between 2026-01-31 (66067.6032816) and 2026-02-28 (136357.89648719).
+  - warning: Unexpected jump of 164.6% between 2026-02-28 (136357.89648719) and 2026-03-31 (360761.31747095).
+  - warning: Unexpected jump of 133.4% between 2026-03-31 (360761.31747095) and 2026-05-31 (841966.76921362).
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% between 1995-01-01 (-8.2) and 1996-01-01 (0.5).
   - warning: Unexpected jump of 240.0% between 1996-01-01 (0.5) and 1997-01-01 (1.7).

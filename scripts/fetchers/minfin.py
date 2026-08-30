@@ -11,6 +11,7 @@ document Minfin publishes next without code changes.
 """
 from __future__ import annotations
 
+import calendar
 import io
 import json
 import re
@@ -639,3 +640,154 @@ def fetch_gg_cash_surplus_deficit() -> tuple[list[dict], dict]:
     volatility for a resource-revenue-dependent government's cash position.
     """
     return _fetch_gg_row("CSD", "GG_CASH_SURPLUS_DEFICIT")
+
+
+# ---------------------------------------------------------------------------
+# CUSTOMS_DUTIES: found 2026-08-30 while finally opening the "Statistical bulletin"
+# document (49 sheets, 1.5MB -- avoided in earlier sessions as too large/risky, but
+# turned out to be perfectly parseable) that was set aside as too complex to attempt.
+# Sheet "табл 8 (дох)" ("Table 8, revenues") is the full KBK (budget classification
+# code) breakdown of republican-budget revenue by exact tax/fee type, at whatever
+# granularity Minfin itself publishes -- and 'Таможенные платежи' (customs payments,
+# class 06/subclass 1, "Taxes on international trade and external operations") is a
+# genuine, distinct line in it.
+#
+# IMPORTANT structural finding from the SAME sheet: individual income tax and
+# property tax do NOT appear anywhere in this republican-budget table -- the only
+# "income tax" row present is explicitly 'Корпоративный подоходный налог' (corporate
+# income tax only). This is consistent with Kazakhstan's budget code assigning
+# individual income tax and property tax entirely to LOCAL government budgets, not
+# the republican budget -- explaining why no republican-level document (this one, the
+# Dynamics file, or the General Government IMF-methodology file) ever surfaced them.
+# Not pursued further: extracting them would require aggregating 17+ separate local
+# budget execution reports, a real methodological undertaking, not a search failure.
+#
+# CRITICAL discovery about this document series: the document TITLE ("Statistical
+# bulletin as of {Month} 1, {YYYY}") is UNRELIABLE -- three documents all titled
+# "as of April 1, 2026" turned out, on inspection of their actual sheet content, to
+# cover three ENTIRELY DIFFERENT periods (Jan-Feb, Jan-Mar, Jan-May 2026). The only
+# trustworthy period indicator is the sheet's own internal header text (e.g.
+# "январь-май отчет 2026 г." = "January-May 2026 report"), which is what this
+# fetcher actually parses -- never the document title.
+#
+# The series itself is genuinely YEAR-TO-DATE CUMULATIVE, resetting near zero every
+# January and growing through the year (confirmed: 2025 values climb monotonically
+# from ~211bn KZT in Feb to ~2,002bn KZT in Nov; 2026 from ~66bn in Jan to ~1,165bn
+# in Jun) -- NOT a data error when a naive chart shows a sawtooth pattern year over
+# year. No document in the current listing covers a full Jan-Dec year (the latest
+# available point for 2025 is Jan-Nov); this is a real gap, not fabricated/
+# interpolated into a fake annual figure.
+# ---------------------------------------------------------------------------
+STATISTICAL_BULLETIN_TITLE_MARKER = "Statistical bulletin"
+BULLETIN_REVENUE_SHEET_NAME = "табл 8 (дох)"
+BULLETIN_PERIOD_RE = re.compile(r"январь(?:-(\w+))?\s+отчет\s+(\d{4})", re.IGNORECASE)
+RU_MONTH_TO_NUM = {
+    "январь": 1, "февраль": 2, "март": 3, "апрель": 4, "май": 5, "июнь": 6,
+    "июль": 7, "август": 8, "сентябрь": 9, "октябрь": 10, "ноябрь": 11, "декабрь": 12,
+}
+CUSTOMS_DUTIES_ROW_LABEL = "Таможенные платежи"
+
+
+def fetch_customs_duties() -> tuple[list[dict], dict]:
+    """Customs duties (import + export), republican budget, million KZT,
+    year-to-date cumulative (resets each January -- see the module comment
+    above for why this is a real pattern, not a bug). Verified live
+    2026-08-30: 13 documents parsed, values genuinely monotonic within each
+    year (2025: ~212bn in Feb to ~2,003bn in Nov; 2026: ~66bn in Jan to
+    ~1,165bn in Jun)."""
+    docs = _list_documents(directions=BUDGET_DIRECTION_ID)
+    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    if not bulletins:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in minfin/CUSTOMS_DUTIES",
+                f"WHAT CHANGED: no document title under directions={BUDGET_DIRECTION_ID} contains {STATISTICAL_BULLETIN_TITLE_MARKER!r}",
+                "EXPECTED: at least one 'Statistical bulletin as of ...' document",
+                "ACTUAL: not found in the current listing",
+                f"ACTION REQUIRED: inspect {LISTING_URL}?directions={BUDGET_DIRECTION_ID} and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    today = date.today()
+    records: list[dict] = []
+    seen_dates: set[str] = set()
+    skipped: list[int] = []
+
+    for doc in bulletins:
+        file_path = doc["full_text"][0]["document"]
+        content = _download(file_path)
+        kind, wb = _open_workbook(content, file_path)
+        sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
+        rev_sheet = next((s for s in sheet_names if s.strip() == BULLETIN_REVENUE_SHEET_NAME), None)
+        if rev_sheet is None:
+            skipped.append(doc["id"])
+            continue
+
+        rows = list(_iter_rows(kind, wb, rev_sheet))
+        header_row = next((r for r in rows if r and any(
+            isinstance(c, str) and BULLETIN_PERIOD_RE.search(c) for c in r if c
+        )), None)
+        period_match = None
+        if header_row:
+            for cell in header_row:
+                if isinstance(cell, str):
+                    m = BULLETIN_PERIOD_RE.search(cell)
+                    if m:
+                        period_match = m
+                        break
+        target_row = next((r for r in rows if r and len(r) > 3 and r[3] == "1" and r[-1] == CUSTOMS_DUTIES_ROW_LABEL), None)
+        if period_match is None or target_row is None:
+            skipped.append(doc["id"])
+            continue
+
+        end_month_name = (period_match.group(1) or "январь").lower()
+        end_month = RU_MONTH_TO_NUM.get(end_month_name)
+        year = int(period_match.group(2))
+        value = target_row[-2]
+        if end_month is None or value in (None, ""):
+            skipped.append(doc["id"])
+            continue
+
+        last_day = calendar.monthrange(year, end_month)[1]
+        iso_date = f"{year:04d}-{end_month:02d}-{last_day:02d}"
+        raw_store.save_raw_bytes(SOURCE, f"CUSTOMS_DUTIES_{iso_date}", today,
+                                  "xls" if file_path.lower().endswith(".xls") else "xlsx", content)
+        if iso_date in seen_dates:
+            continue
+        seen_dates.add(iso_date)
+        records.append({"date": iso_date, "value": float(value)})
+
+    if not records:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in minfin/CUSTOMS_DUTIES",
+                f"WHAT CHANGED: zero of {len(bulletins)} listed bulletin documents could be parsed",
+                f"ACTUAL: all skipped, ids: {skipped}",
+                "ACTION REQUIRED: inspect a recent bulletin and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    raw_store.write_download_manifest(SOURCE, "CUSTOMS_DUTIES", today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "n_documents_listed": len(bulletins), "n_parsed": len(records), "skipped_document_ids": skipped,
+        "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
+    })
+
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "irregular (year-to-date cumulative, roughly monthly)",
+        "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
+        "dataset_id": "gov.kz-statistical-bulletin-listing",
+        "note": (
+            f"Built from {len(records)} of {len(bulletins)} listed 'Statistical bulletin' "
+            f"documents ({len(skipped)} skipped -- missing sheet or unparseable period/row). "
+            "Million KZT, republican budget only. YEAR-TO-DATE CUMULATIVE, resets near zero "
+            "each January -- do not read a January value as a sudden collapse from the prior "
+            "December's much larger cumulative figure; that is the expected pattern for a "
+            "cumulative-since-Jan-1 series, not a data error. No document currently covers a "
+            "full Jan-Dec year; real gaps exist and are not fabricated/interpolated. Document "
+            "TITLES ('as of {Month} 1') are NOT used to determine period -- they were found "
+            "unreliable; only each document's own internal period text is trusted."
+        ),
+    }
+    return records, manifest

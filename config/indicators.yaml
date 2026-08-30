@@ -1210,3 +1210,12 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+
+  - id: CUSTOMS_DUTIES
+    name_ru: "Таможенные платежи (республиканский бюджет)"
+    name_en: "Customs Duties (Republican Budget)"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
