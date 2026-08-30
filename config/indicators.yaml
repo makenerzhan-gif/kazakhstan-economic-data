@@ -904,3 +904,84 @@ indicators:
     unit: "index"
     category: international_projection
     source_status: confirmed
+
+  - id: IMF_GOV_BALANCE_LEVEL
+    name_ru: "IMF WEO: сальдо бюджета сектора госуправления, уровень"
+    name_en: "IMF WEO: General Government Net Lending/Borrowing, Level"
+    agency: imf
+    frequency: annual
+    unit: "KZT"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_PPP_EXCHANGE_RATE
+    name_ru: "IMF WEO: подразумеваемый курс ППС"
+    name_en: "IMF WEO: Implied PPP Conversion Rate"
+    agency: imf
+    frequency: annual
+    unit: "KZT per international dollar"
+    category: international_projection
+    source_status: confirmed
+
+  - id: WHOLESALE_TRADE
+    name_ru: "Объем оптовой торговли в стоимостном выражении"
+    name_en: "Wholesale Trade Turnover (value terms)"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: trade
+    source_status: confirmed
+
+  - id: RETAIL_TRADE_VOLUME_INDEX
+    name_ru: "Индекс физического объема розничной торговли"
+    name_en: "Retail Trade Physical Volume Index"
+    agency: bns
+    frequency: annual
+    unit: "% of prior period"
+    category: trade
+    source_status: confirmed
+
+  - id: EMISSIONS
+    name_ru: "Объем выбросов загрязняющих веществ в атмосферу"
+    name_en: "Atmospheric Pollutant Emissions"
+    agency: bns
+    frequency: annual
+    unit: "metric tonnes"
+    category: production
+    source_status: confirmed
+
+  - id: FREIGHT_TURNOVER
+    name_ru: "Грузооборот"
+    name_en: "Freight Turnover"
+    agency: bns
+    frequency: annual
+    unit: "tonne-km"
+    category: production
+    source_status: confirmed
+
+  - id: PASSENGER_TURNOVER
+    name_ru: "Пассажирооборот"
+    name_en: "Passenger Turnover"
+    agency: bns
+    frequency: annual
+    unit: "passenger-km"
+    category: production
+    source_status: confirmed
+
+  - id: REMITTANCES_SENT
+    name_ru: "Исходящие международные денежные переводы через СМДП"
+    name_en: "Outbound International Remittances (via money transfer systems)"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: REMITTANCES_RECEIVED
+    name_ru: "Входящие международные денежные переводы через СМДП"
+    name_en: "Inbound International Remittances (via money transfer systems)"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed

@@ -10,6 +10,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1992-01-01,KZ,national,annual,IMF_NOMINAL_GDP,2435224000.0,KZT,imf,2026-08-30,level,2026-08-30
 1992-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,2875117000.0,USD,imf,2026-08-30,level,2026-08-30
 1992-01-01,KZ,national,annual,IMF_POPULATION,17048344.0,persons,imf,2026-08-30,level,2026-08-30
+1992-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,0.020919,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 1992-01-01,KZ,national,annual,IMF_REAL_GDP,5625734435000.0,KZT,imf,2026-08-30,level,2026-08-30
 1992-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,7.50239,% of GDP,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_CPI_INDEX,0.237583,index,imf,2026-08-30,level,2026-08-30
@@ -28,6 +29,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1993-01-01,KZ,national,annual,IMF_NOMINAL_GDP,29881368000.0,KZT,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,5151960000.0,USD,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_POPULATION,16900000.0,persons,imf,2026-08-30,level,2026-08-30
+1993-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,0.276147,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_REAL_GDP,5108166867000.0,KZT,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,14.100873,% of GDP,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_CPI_INDEX,3.568466,index,imf,2026-08-30,level,2026-08-30
@@ -48,6 +50,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1994-01-01,KZ,national,annual,IMF_NOMINAL_GDP,423469391000.0,KZT,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,11881302000.0,USD,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_POPULATION,15800000.0,persons,imf,2026-08-30,level,2026-08-30
+1994-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,4.383024,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_REAL_GDP,4465571741000.0,KZT,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,20.9034,% of GDP,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,7.535613,%,imf,2026-08-30,level,2026-08-30
@@ -69,6 +72,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1995-01-01,KZ,national,annual,IMF_NOMINAL_GDP,1014190936000.0,KZT,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,16639493000.0,USD,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_POPULATION,15675800.0,persons,imf,2026-08-30,level,2026-08-30
+1995-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,11.200008,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_REAL_GDP,4099394859000.0,KZT,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,22.03837,% of GDP,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,10.982635,%,imf,2026-08-30,level,2026-08-30
@@ -114,6 +118,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1996-01-01,KZ,national,annual,IMF_NOMINAL_GDP,1415751307000.0,KZT,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,21035121000.0,USD,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_POPULATION,15480600.0,persons,imf,2026-08-30,level,2026-08-30
+1996-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,15.277065,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_REAL_GDP,4119891833000.0,KZT,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,12.576744,% of GDP,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,12.959477,%,imf,2026-08-30,level,2026-08-30
@@ -159,6 +164,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1997-01-01,KZ,national,annual,IMF_NOMINAL_GDP,1672141543000.0,KZT,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,22165919000.0,USD,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_POPULATION,15188200.0,persons,imf,2026-08-30,level,2026-08-30
+1997-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,17.441345,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_REAL_GDP,4189929994000.0,KZT,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,11.992632,% of GDP,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,13.00789,%,imf,2026-08-30,level,2026-08-30
@@ -204,6 +210,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1998-01-01,KZ,national,annual,IMF_NOMINAL_GDP,1733261600000.0,KZT,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,22135221000.0,USD,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_POPULATION,14955300.0,persons,imf,2026-08-30,level,2026-08-30
+1998-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,18.224173,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_REAL_GDP,4110321324000.0,KZT,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,10.270641,% of GDP,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,13.11573,%,imf,2026-08-30,level,2026-08-30
@@ -249,6 +256,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1999-01-01,KZ,national,annual,IMF_NOMINAL_GDP,2016461861000.0,KZT,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,16870511000.0,USD,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_POPULATION,14901600.0,persons,imf,2026-08-30,level,2026-08-30
+1999-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,20.3564,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_REAL_GDP,4221300000000.0,KZT,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,16.762557,% of GDP,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,13.464864,%,imf,2026-08-30,level,2026-08-30
@@ -294,6 +302,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2000-01-01,KZ,national,annual,IMF_NOMINAL_GDP,2599902399000.0,KZT,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,18291996000.0,USD,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_POPULATION,14883626.0,persons,imf,2026-08-30,level,2026-08-30
+2000-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,23.374191,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_REAL_GDP,4635000000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,20.141688,% of GDP,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,12.752905,%,imf,2026-08-30,level,2026-08-30
@@ -343,6 +352,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2000-12-31,KZ,national,annual,SUBSIDIES,1848100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2000-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,174530500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2000-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,1922972700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2000-12-31,KZ,national,annual,WHOLESALE_TRADE,703187423000.0,KZT,bns,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_CPI_INDEX,22.933333,index,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-6.272451,% of GDP,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-1389516000.0,USD,imf,2026-08-30,level,2026-08-30
@@ -361,6 +371,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2001-01-01,KZ,national,annual,IMF_NOMINAL_GDP,3250593000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,22152687000.0,USD,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_POPULATION,14858335.0,persons,imf,2026-08-30,level,2026-08-30
+2001-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,25.181299,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_REAL_GDP,5260700000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,20.603876,% of GDP,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,10.475,%,imf,2026-08-30,level,2026-08-30
@@ -410,6 +421,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2001-12-31,KZ,national,annual,SUBSIDIES,4074600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2001-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,228701100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2001-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,2318529900000.0,KZT,bns,2026-08-30,level,2026-08-30
+2001-12-31,KZ,national,annual,WHOLESALE_TRADE,926327218000.0,KZT,bns,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_CPI_INDEX,24.3,index,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-4.157803,% of GDP,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-1024341000.0,USD,imf,2026-08-30,level,2026-08-30
@@ -420,6 +432,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2002-01-01,KZ,national,annual,IMF_GDP_PPP,143939614000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.262333,% of world total,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GOV_BALANCE,1.923888,% of GDP,imf,2026-08-30,level,2026-08-30
+2002-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,72651331000.0,KZT,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GOV_DEBT,17.59187,% of GDP,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,775163204000.0,KZT,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.527181,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -433,6 +446,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2002-01-01,KZ,national,annual,IMF_NOMINAL_GDP,3776277000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,24636597000.0,USD,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_POPULATION,14858948.0,persons,imf,2026-08-30,level,2026-08-30
+2002-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,26.235147,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_REAL_GDP,5776200000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,23.12992,% of GDP,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,9.35,%,imf,2026-08-30,level,2026-08-30
@@ -482,6 +496,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2002-12-31,KZ,national,annual,SUBSIDIES,1941000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2002-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,273722700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2002-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,2500213400000.0,KZT,bns,2026-08-30,level,2026-08-30
+2002-12-31,KZ,national,annual,WHOLESALE_TRADE,1112615162000.0,KZT,bns,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_CPI_INDEX,25.85,index,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-0.884199,% of GDP,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-272631000.0,USD,imf,2026-08-30,level,2026-08-30
@@ -492,6 +507,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2003-01-01,KZ,national,annual,IMF_GDP_PPP,160432293000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.276651,% of world total,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GOV_BALANCE,3.996049,% of GDP,imf,2026-08-30,level,2026-08-30
+2003-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,184296769000.0,KZT,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GOV_DEBT,14.962494,% of GDP,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,984892412000.0,KZT,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.355112,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -505,6 +521,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2003-01-01,KZ,national,annual,IMF_NOMINAL_GDP,4611975000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,30833691000.0,USD,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_POPULATION,14909018.0,persons,imf,2026-08-30,level,2026-08-30
+2003-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,28.747174,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_REAL_GDP,6313400000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,24.819756,% of GDP,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,8.8,%,imf,2026-08-30,level,2026-08-30
@@ -554,6 +571,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2003-12-31,KZ,national,annual,SUBSIDIES,3628900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2003-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,316651600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2003-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,3032033000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2003-12-31,KZ,national,annual,WHOLESALE_TRADE,1565128050000.0,KZT,bns,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_CPI_INDEX,27.658333,index,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.777323,% of GDP,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,335428000.0,USD,imf,2026-08-30,level,2026-08-30
@@ -564,6 +582,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2004-01-01,KZ,national,annual,IMF_GDP_PPP,180559500000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.288393,% of world total,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GOV_BALANCE,3.28732,% of GDP,imf,2026-08-30,level,2026-08-30
+2004-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,192970091000.0,KZT,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GOV_DEBT,11.391569,% of GDP,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,1248152595000.0,KZT,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.262762,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -577,6 +596,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2004-01-01,KZ,national,annual,IMF_NOMINAL_GDP,5870134000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,43151645000.0,USD,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_POPULATION,15012985.0,persons,imf,2026-08-30,level,2026-08-30
+2004-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,32.510801,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_REAL_GDP,6919400000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,27.088307,% of GDP,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,8.375,%,imf,2026-08-30,level,2026-08-30
@@ -626,6 +646,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2004-12-31,KZ,national,annual,SUBSIDIES,4868900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2004-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,358192200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2004-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,3824244000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2004-12-31,KZ,national,annual,WHOLESALE_TRADE,2398103407000.0,KZT,bns,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_CPI_INDEX,29.708333,index,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.628099,% of GDP,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,358800000.0,USD,imf,2026-08-30,level,2026-08-30
@@ -636,6 +657,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2005-01-01,KZ,national,annual,IMF_GDP_PPP,204285339000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.302396,% of world total,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GOV_BALANCE,6.077755,% of GDP,imf,2026-08-30,level,2026-08-30
+2005-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,461337688000.0,KZT,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GOV_DEBT,8.104407,% of GDP,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,1670386428000.0,KZT,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,22.006004,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -649,6 +671,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2005-01-01,KZ,national,annual,IMF_NOMINAL_GDP,7590594000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,57124750000.0,USD,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_POPULATION,15147029.0,persons,imf,2026-08-30,level,2026-08-30
+2005-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,37.156822,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_REAL_GDP,7590594000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,31.597876,% of GDP,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,8.1,%,imf,2026-08-30,level,2026-08-30
@@ -701,6 +724,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2005-12-31,KZ,national,annual,SUBSIDIES,6731000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2005-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,474580900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2005-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,4638271100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2005-12-31,KZ,national,annual,WHOLESALE_TRADE,3021220458000.0,KZT,bns,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,quarterly,EXTERNAL_DEBT,43428.527753,million USD,nbk,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_CPI_INDEX,32.266667,index,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.016006,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -712,6 +736,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2006-01-01,KZ,national,annual,IMF_GDP_PPP,233121136000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.318282,% of world total,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GOV_BALANCE,7.652629,% of GDP,imf,2026-08-30,level,2026-08-30
+2006-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,781618891000.0,KZT,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GOV_DEBT,6.676952,% of GDP,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,2022298111000.0,KZT,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,19.799798,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -725,6 +750,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2006-01-01,KZ,national,annual,IMF_NOMINAL_GDP,10213731000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,81003498000.0,USD,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_POPULATION,15308084.0,persons,imf,2026-08-30,level,2026-08-30
+2006-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,43.812977,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_REAL_GDP,8402904900000.0,KZT,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,32.884829,% of GDP,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,7.75,%,imf,2026-08-30,level,2026-08-30
@@ -777,6 +803,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2006-12-31,KZ,national,annual,SUBSIDIES,8905100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2006-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,674739300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2006-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,5709745200000.0,KZT,bns,2026-08-30,level,2026-08-30
+2006-12-31,KZ,national,annual,WHOLESALE_TRADE,4128907323000.0,KZT,bns,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,quarterly,EXTERNAL_DEBT,74014.089947,million USD,nbk,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_CPI_INDEX,35.75,index,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-4.54688,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -788,6 +815,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2007-01-01,KZ,national,annual,IMF_GDP_PPP,260746911000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.329411,% of world total,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GOV_BALANCE,5.134415,% of GDP,imf,2026-08-30,level,2026-08-30
+2007-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,659761723000.0,KZT,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GOV_DEBT,4.091989,% of GDP,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,3045990034000.0,KZT,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,23.704583,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -801,6 +829,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2007-01-01,KZ,national,annual,IMF_NOMINAL_GDP,12849794000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,104849915000.0,USD,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_POPULATION,15484192.0,persons,imf,2026-08-30,level,2026-08-30
+2007-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,49.280714,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_REAL_GDP,9150763400000.0,KZT,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,30.979819,% of GDP,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,7.275,%,imf,2026-08-30,level,2026-08-30
@@ -853,6 +882,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2007-12-31,KZ,national,annual,SUBSIDIES,10043300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2007-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,929628300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2007-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,7215844700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2007-12-31,KZ,national,annual,WHOLESALE_TRADE,5814910166000.0,KZT,bns,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,quarterly,EXTERNAL_DEBT,96893.004177,million USD,nbk,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_CPI_INDEX,41.883333,index,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.964616,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -864,6 +894,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2008-01-01,KZ,national,annual,IMF_GDP_PPP,274540378000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.33098,% of world total,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GOV_BALANCE,1.227135,% of GDP,imf,2026-08-30,level,2026-08-30
+2008-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,196991013000.0,KZT,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GOV_DEBT,6.76587,% of GDP,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,4345252048000.0,KZT,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,27.068299,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -877,6 +908,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2008-01-01,KZ,national,annual,IMF_NOMINAL_GDP,16052919000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,133441648000.0,USD,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_POPULATION,15674000.0,persons,imf,2026-08-30,level,2026-08-30
+2008-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,58.471978,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_REAL_GDP,9452738600000.0,KZT,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,28.471101,% of GDP,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,6.625,%,imf,2026-08-30,level,2026-08-30
@@ -929,6 +961,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2008-12-31,KZ,national,annual,SUBSIDIES,13585000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2008-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,1138840400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2008-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,8764943000000.0,KZT,bns,2026-08-30,level,2026-08-30
+2008-12-31,KZ,national,annual,WHOLESALE_TRADE,6963186095000.0,KZT,bns,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,quarterly,EXTERNAL_DEBT,107933.377621,million USD,nbk,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_CPI_INDEX,44.941667,index,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-0.116557,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -940,6 +973,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2009-01-01,KZ,national,annual,IMF_GDP_PPP,279548388000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.337168,% of world total,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.328049,% of GDP,imf,2026-08-30,level,2026-08-30
+2009-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-225869840000.0,KZT,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GOV_DEBT,10.227029,% of GDP,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,3991720417000.0,KZT,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,23.470151,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -953,6 +987,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2009-01-01,KZ,national,annual,IMF_NOMINAL_GDP,17007647000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,115308687000.0,USD,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_POPULATION,16092763.0,persons,imf,2026-08-30,level,2026-08-30
+2009-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,60.839725,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_REAL_GDP,9566171500000.0,KZT,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,29.298008,% of GDP,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,6.525,%,imf,2026-08-30,level,2026-08-30
@@ -1006,6 +1041,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2009-12-31,KZ,national,annual,SUBSIDIES,25989400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,808272100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,10066102700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2009-12-31,KZ,national,annual,WHOLESALE_TRADE,6872312225000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,quarterly,EXTERNAL_DEBT,112866.889315,million USD,nbk,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_CPI_INDEX,48.133333,index,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,1.808611,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -1017,6 +1053,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-01-01,KZ,national,annual,IMF_GDP_PPP,303601001000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.344097,% of world total,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GOV_BALANCE,1.469692,% of GDP,imf,2026-08-30,level,2026-08-30
+2010-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,320621004000.0,KZT,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GOV_DEBT,10.682735,% of GDP,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,4902692826000.0,KZT,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,22.47342,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -1030,6 +1067,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-01-01,KZ,national,annual,IMF_NOMINAL_GDP,21815517000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,148047348000.0,USD,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_POPULATION,16321714.0,persons,imf,2026-08-30,level,2026-08-30
+2010-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,71.85588,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_REAL_GDP,10264502000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,27.18216,% of GDP,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,5.775,%,imf,2026-08-30,level,2026-08-30
@@ -1079,6 +1117,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-12-31,KZ,national,annual,RETAIL_TRADE,3197147799000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,SUBSIDIES,60484800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,1226970200000.0,KZT,bns,2026-08-30,level,2026-08-30
+2010-12-31,KZ,national,annual,WHOLESALE_TRADE,8152382420000.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,monthly,CPI,101.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,quarterly,EXTERNAL_DEBT,118222.763569,million USD,nbk,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_CPI_INDEX,52.166667,index,imf,2026-08-30,level,2026-08-30
@@ -1091,6 +1130,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-01-01,KZ,national,annual,IMF_GDP_PPP,333104921000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.35629,% of world total,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GOV_BALANCE,5.811036,% of GDP,imf,2026-08-30,level,2026-08-30
+2011-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,1641213908000.0,KZT,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GOV_DEBT,10.161007,% of GDP,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,5997105817000.0,KZT,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.233915,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -1104,6 +1144,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-01-01,KZ,national,annual,IMF_NOMINAL_GDP,28243053000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,192626466000.0,USD,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_POPULATION,16556949.0,persons,imf,2026-08-30,level,2026-08-30
+2011-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,84.787258,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_REAL_GDP,11034339600000.0,KZT,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,30.30114,% of GDP,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,5.4,%,imf,2026-08-30,level,2026-08-30
@@ -1165,6 +1206,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-12-31,KZ,national,annual,RETAIL_TRADE,3865840640000.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,SUBSIDIES,80340300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,2581518200000.0,KZT,bns,2026-08-30,level,2026-08-30
+2011-12-31,KZ,national,annual,WHOLESALE_TRADE,10234755285000.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,quarterly,EXTERNAL_DEBT,125320.777887,million USD,nbk,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_CPI_INDEX,54.841667,index,imf,2026-08-30,level,2026-08-30
@@ -1177,6 +1219,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-01-01,KZ,national,annual,IMF_GDP_PPP,356272468000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.362411,% of world total,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GOV_BALANCE,4.430882,% of GDP,imf,2026-08-30,level,2026-08-30
+2012-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,1374246209000.0,KZT,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GOV_DEBT,12.125267,% of GDP,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,6796054472000.0,KZT,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.912022,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -1190,6 +1233,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-01-01,KZ,national,annual,IMF_NOMINAL_GDP,31015187000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,207998572000.0,USD,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_POPULATION,16791721.0,persons,imf,2026-08-30,level,2026-08-30
+2012-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,87.054684,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_REAL_GDP,11586056700000.0,KZT,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,26.493371,% of GDP,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,5.3,%,imf,2026-08-30,level,2026-08-30
@@ -1252,6 +1296,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-12-31,KZ,national,annual,RETAIL_TRADE,4567661194000.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,SUBSIDIES,97924300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,2585020800000.0,KZT,bns,2026-08-30,level,2026-08-30
+2012-12-31,KZ,national,annual,WHOLESALE_TRADE,11832510744000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,quarterly,EXTERNAL_DEBT,136918.219279,million USD,nbk,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_CPI_INDEX,58.033333,index,imf,2026-08-30,level,2026-08-30
@@ -1264,6 +1309,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-01-01,KZ,national,annual,IMF_GDP_PPP,383714079000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.371439,% of world total,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GOV_BALANCE,4.945694,% of GDP,imf,2026-08-30,level,2026-08-30
+2013-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,1780401459000.0,KZT,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GOV_DEBT,12.602508,% of GDP,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,7130917075000.0,KZT,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,19.808639,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -1277,6 +1323,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-01-01,KZ,national,annual,IMF_NOMINAL_GDP,35999025000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,236634603000.0,USD,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_POPULATION,17035010.0,persons,imf,2026-08-30,level,2026-08-30
+2013-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,93.817316,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_REAL_GDP,12269634000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,26.482808,% of GDP,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,5.25,%,imf,2026-08-30,level,2026-08-30
@@ -1326,6 +1373,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,4352759900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,11060875800000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,DEATHS_TOTAL,136368.0,persons,bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,annual,EMISSIONS,2282700.885,metric tonnes,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,GDP_DEFLATOR,109.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,GDP_INCOME_METHOD,35999025100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,quarterly,GDP_NOMINAL,35999025100000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
@@ -1340,6 +1388,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-12-31,KZ,national,annual,RETAIL_TRADE,5474274033000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,SUBSIDIES,91525000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,3193949100000.0,KZT,bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,annual,WHOLESALE_TRADE,14170379812000.0,KZT,bns,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,quarterly,EXTERNAL_DEBT,150032.867457,million USD,nbk,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_CPI_INDEX,61.85,index,imf,2026-08-30,level,2026-08-30
@@ -1352,6 +1401,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-01-01,KZ,national,annual,IMF_GDP_PPP,407184369000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.374399,% of world total,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GOV_BALANCE,2.481848,% of GDP,imf,2026-08-30,level,2026-08-30
+2014-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,984693820000.0,KZT,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GOV_DEBT,14.496344,% of GDP,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,8435174387000.0,KZT,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.260233,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -1365,6 +1415,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-01-01,KZ,national,annual,IMF_NOMINAL_GDP,39675833000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,221415615000.0,USD,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_POPULATION,17287554.0,persons,imf,2026-08-30,level,2026-08-30
+2014-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,97.43948,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_REAL_GDP,12797228300000.0,KZT,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,24.50181,% of GDP,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,5.075,%,imf,2026-08-30,level,2026-08-30
@@ -1416,6 +1467,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,12474013600000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,CORPORATE_TAX,1169666.8064632,million KZT,minfin,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,DEATHS_TOTAL,132287.0,persons,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,EMISSIONS,2256674.137,metric tonnes,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,45673.58668505,million KZT,minfin,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,97.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,GDP_DEFLATOR,105.8,% change vs previous period,bns,2026-08-30,level,2026-08-30
@@ -1444,6 +1496,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-31,KZ,national,annual,NET_BUDGET_LENDING,39452.06622459,million KZT,minfin,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,NET_EXPORTS,5440144500000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,3024260700000.0,KZT,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,PASSENGER_TURNOVER,246958524700.0,passenger-km,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,PPI,109.5,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,REAL_WAGE_INDEX,103.9,% of prior period,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,RETAIL_TRADE,6332252984000.0,KZT,bns,2026-08-30,level,2026-08-30
@@ -1452,6 +1505,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-31,KZ,national,annual,TAX_REVENUE,3666092.67696642,million KZT,minfin,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,23477055500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,VAT_REVENUE,1198169.86741276,million KZT,minfin,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,WHOLESALE_TRADE,16209979605000.0,KZT,bns,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,quarterly,EXTERNAL_DEBT,157114.532271,million USD,nbk,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_CPI_INDEX,66.025,index,imf,2026-08-30,level,2026-08-30
@@ -1464,6 +1518,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-01-01,KZ,national,annual,IMF_GDP_PPP,415072887000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.365924,% of world total,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GOV_BALANCE,-6.259289,% of GDP,imf,2026-08-30,level,2026-08-30
+2015-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-2559056190000.0,KZT,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GOV_DEBT,21.881937,% of GDP,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,9350323220000.0,KZT,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,22.870298,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -1477,6 +1532,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-01-01,KZ,national,annual,IMF_NOMINAL_GDP,40884134000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,184388406000.0,USD,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_POPULATION,17541804.0,persons,imf,2026-08-30,level,2026-08-30
+2015-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,98.498686,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_REAL_GDP,12925200500000.0,KZT,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,22.495753,% of GDP,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.975,%,imf,2026-08-30,level,2026-08-30
@@ -1528,6 +1584,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,13161352400000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,CORPORATE_TAX,1224645.23027333,million KZT,minfin,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,DEATHS_TOTAL,130811.0,persons,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,EMISSIONS,2180039.014,metric tonnes,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,60807.48937294,million KZT,minfin,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,95.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,GDP_DEFLATOR,101.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
@@ -1556,6 +1613,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-31,KZ,national,annual,NET_BUDGET_LENDING,78007.09602019,million KZT,minfin,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,NET_EXPORTS,1628696000000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,2100233200000.0,KZT,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,PASSENGER_TURNOVER,251250827000.0,passenger-km,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,PPI,79.5,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,REAL_WAGE_INDEX,97.7122624505764,% of prior period,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,RETAIL_TRADE,6555820930000.0,KZT,bns,2026-08-30,level,2026-08-30
@@ -1564,6 +1622,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-31,KZ,national,annual,TAX_REVENUE,3332925.04968725,million KZT,minfin,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,26718002200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,VAT_REVENUE,944438.0303032,million KZT,minfin,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,WHOLESALE_TRADE,16240476161000.0,KZT,bns,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,monthly,CPI,101.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,quarterly,EXTERNAL_DEBT,153006.61261,million USD,nbk,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_CPI_INDEX,75.641667,index,imf,2026-08-30,level,2026-08-30
@@ -1576,6 +1635,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-01-01,KZ,national,annual,IMF_GDP_PPP,422788160000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.35803,% of world total,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GOV_BALANCE,-4.503217,% of GDP,imf,2026-08-30,level,2026-08-30
+2016-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-2115212774000.0,KZT,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GOV_DEBT,19.677354,% of GDP,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,10104278780000.0,KZT,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.51167,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -1589,6 +1649,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-01-01,KZ,national,annual,IMF_NOMINAL_GDP,46971150000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,137278320000.0,USD,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_POPULATION,17792672.0,persons,imf,2026-08-30,level,2026-08-30
+2016-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,111.098546,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_REAL_GDP,13041527300000.0,KZT,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,22.75424,% of GDP,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.975,%,imf,2026-08-30,level,2026-08-30
@@ -1641,6 +1702,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-31,KZ,national,annual,CONSTRUCTION,3258031007000.0,KZT,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,CORPORATE_TAX,1437364.5143039802,million KZT,minfin,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,DEATHS_TOTAL,131231.0,persons,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,EMISSIONS,2271609.952,metric tonnes,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,77844.26863845,million KZT,minfin,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,95.5,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,GDP_DEFLATOR,113.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
@@ -1670,6 +1732,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-31,KZ,national,annual,NET_BUDGET_LENDING,221428.4238677,million KZT,minfin,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,NET_EXPORTS,1585830900000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,2633564500000.0,KZT,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,PASSENGER_TURNOVER,266784211300.0,passenger-km,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,PPI,116.8,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,REAL_WAGE_INDEX,98.946605744881,% of prior period,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,RETAIL_TRADE,7974442118000.0,KZT,bns,2026-08-30,level,2026-08-30
@@ -1678,6 +1741,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-31,KZ,national,annual,TAX_REVENUE,4275886.70365502,million KZT,minfin,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,31083238500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,VAT_REVENUE,1495681.95848907,million KZT,minfin,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,WHOLESALE_TRADE,18011768560000.0,KZT,bns,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,quarterly,EXTERNAL_DEBT,163528.4924,million USD,nbk,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_CPI_INDEX,81.283333,index,imf,2026-08-30,level,2026-08-30
@@ -1690,6 +1754,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-01-01,KZ,national,annual,IMF_GDP_PPP,447143867000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.358476,% of world total,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GOV_BALANCE,-4.265509,% of GDP,imf,2026-08-30,level,2026-08-30
+2017-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-2319534930000.0,KZT,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GOV_DEBT,19.869432,% of GDP,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,13098734901000.0,KZT,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,24.087918,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -1703,6 +1768,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-01-01,KZ,national,annual,IMF_NOMINAL_GDP,54378858000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,166805886000.0,USD,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_POPULATION,18036224.0,persons,imf,2026-08-30,level,2026-08-30
+2017-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,121.613785,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_REAL_GDP,13550147000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,24.298358,% of GDP,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.9,%,imf,2026-08-30,level,2026-08-30
@@ -1755,8 +1821,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-12-31,KZ,national,annual,CONSTRUCTION,3509295878000.0,KZT,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,CORPORATE_TAX,1538785.45160939,million KZT,minfin,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,DEATHS_TOTAL,129009.0,persons,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,EMISSIONS,2357820.914,metric tonnes,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,80980.24179613,million KZT,minfin,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,108.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,FREIGHT_TURNOVER,563958611800.0,tonne-km,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,GDP_DEFLATOR,108.4,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,GDP_INCOME_METHOD,54378857800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,quarterly,GDP_NOMINAL,54378857800000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
@@ -1792,6 +1860,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-12-31,KZ,national,annual,TAX_REVENUE,4848028.3186229,million KZT,minfin,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,34326070300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,VAT_REVENUE,1664699.27011816,million KZT,minfin,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,WHOLESALE_TRADE,19485105769683.6,KZT,bns,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,quarterly,EXTERNAL_DEBT,167482.716088,million USD,nbk,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,monthly,FX_RESERVES,30996.649283570427,USD million,nbk,2026-08-30,level,2026-08-30
@@ -1805,6 +1874,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-01-01,KZ,national,annual,IMF_GDP_PPP,475138148000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.358096,% of world total,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GOV_BALANCE,2.579564,% of GDP,imf,2026-08-30,level,2026-08-30
+2018-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,1594674728000.0,KZT,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GOV_DEBT,20.25854,% of GDP,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,11650897932000.0,KZT,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,18.846628,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -1818,6 +1888,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-01-01,KZ,national,annual,IMF_NOMINAL_GDP,61819536000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,179339976000.0,USD,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_POPULATION,18275233.0,persons,imf,2026-08-30,level,2026-08-30
+2018-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,130.108551,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_REAL_GDP,14105702900000.0,KZT,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,24.273714,% of GDP,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.85,%,imf,2026-08-30,level,2026-08-30
@@ -1894,8 +1965,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-12-31,KZ,national,annual,CONSTRUCTION,3862994860000.0,KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,CORPORATE_TAX,1687576.9781008,million KZT,minfin,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,DEATHS_TOTAL,130448.0,persons,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,EMISSIONS,2446698.889,metric tonnes,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,95277.7034925,million KZT,minfin,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,109.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,FREIGHT_TURNOVER,609533174400.0,tonne-km,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,GDP_DEFLATOR,109.2,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,GDP_INCOME_METHOD,61819536400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,quarterly,GDP_NOMINAL,61819536400000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
@@ -1926,11 +1999,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-12-31,KZ,national,annual,PPI,119.0,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,REAL_WAGE_INDEX,101.749132649195,% of prior period,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,RETAIL_TRADE,10045772326672.8,KZT,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,105.673060466727,% of prior period,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,SUBSIDIES,164369200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,4277352300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,TAX_REVENUE,5694904.40012893,million KZT,minfin,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,37350907100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,VAT_REVENUE,2034313.93481333,million KZT,minfin,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,WHOLESALE_TRADE,23836694976996.6,KZT,bns,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,monthly,EXPORTS,5351587.74833999,thousand USD,bns,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,quarterly,EXTERNAL_DEBT,160331.291822,million USD,nbk,2026-08-30,level,2026-08-30
@@ -1946,6 +2021,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-01-01,KZ,national,annual,IMF_GDP_PPP,551108135000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.392043,% of world total,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GOV_BALANCE,-0.569543,% of GDP,imf,2026-08-30,level,2026-08-30
+2019-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-396017997000.0,KZT,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GOV_DEBT,19.943728,% of GDP,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,14079303842000.0,KZT,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.248485,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -1959,6 +2035,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-01-01,KZ,national,annual,IMF_NOMINAL_GDP,69532627000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,181667096000.0,USD,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_POPULATION,18512781.0,persons,imf,2026-08-30,level,2026-08-30
+2019-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,126.168755,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_REAL_GDP,14740459500000.0,KZT,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,23.75885,% of GDP,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.8,%,imf,2026-08-30,level,2026-08-30
@@ -2059,9 +2136,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-31,KZ,national,annual,CONSTRUCTION,4431666211000.0,KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,CORPORATE_TAX,1974763.4865675,million KZT,minfin,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,DEATHS_TOTAL,133128.0,persons,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,EMISSIONS,2483138.9716,metric tonnes,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,EMPLOYED_TOTAL,8780829.0,persons,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,106498.26050557,million KZT,minfin,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,102.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,FREIGHT_TURNOVER,597613853300.0,tonne-km,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,GDP_DEFLATOR,107.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,GDP_INCOME_METHOD,69532626500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,quarterly,GDP_NOMINAL,69532626500000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
@@ -2092,11 +2171,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-31,KZ,national,annual,PPI,105.1,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,REAL_WAGE_INDEX,109.060603631512,% of prior period,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,RETAIL_TRADE,11327580594424.2,KZT,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,105.877632544159,% of prior period,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,SUBSIDIES,206349300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,5057371000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,TAX_REVENUE,6835513.38122905,million KZT,minfin,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,42700693700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,VAT_REVENUE,2693127.19348285,million KZT,minfin,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,WHOLESALE_TRADE,27011905306454.1,KZT,bns,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,monthly,EXPORTS,4558391.945129985,thousand USD,bns,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,quarterly,EXTERNAL_DEBT,159544.21723,million USD,nbk,2026-08-30,level,2026-08-30
@@ -2111,6 +2192,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,annual,IMF_GDP_PPP,565757227000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.403423,% of world total,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GOV_BALANCE,-7.036965,% of GDP,imf,2026-08-30,level,2026-08-30
+2020-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-4971547795000.0,KZT,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GOV_DEBT,26.357133,% of GDP,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,17341503986000.0,KZT,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,24.545989,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -2124,6 +2206,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,annual,IMF_NOMINAL_GDP,70649033000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,171082365000.0,USD,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_POPULATION,18754943.0,persons,imf,2026-08-30,level,2026-08-30
+2020-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,124.875175,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_REAL_GDP,14357207600000.0,KZT,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,22.345233,% of GDP,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.925,%,imf,2026-08-30,level,2026-08-30
@@ -2222,9 +2305,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-31,KZ,national,annual,CONSTRUCTION,4934069181000.0,KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,CORPORATE_TAX,1562091.88779989,million KZT,minfin,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,DEATHS_TOTAL,161333.0,persons,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,EMISSIONS,2441044.4581999998,metric tonnes,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,EMPLOYED_TOTAL,8732040.0,persons,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,105144.3625886,million KZT,minfin,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,88.7,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,FREIGHT_TURNOVER,584025637450.253,tonne-km,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,GDP_DEFLATOR,104.2,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,GDP_INCOME_METHOD,70649033200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,quarterly,GDP_NOMINAL,70649033200000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
@@ -2254,11 +2339,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,3820798100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,PPI,92.0,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,RETAIL_TRADE,11729949741121.6,KZT,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,96.7776813427546,% of prior period,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,SUBSIDIES,248281800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,4069079900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,TAX_REVENUE,5575862.76305024,million KZT,minfin,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,46448870300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,VAT_REVENUE,2532523.64954988,million KZT,minfin,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,WHOLESALE_TRADE,27656470866681.9,KZT,bns,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,monthly,EXPORTS,3270134.2324499944,thousand USD,bns,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,quarterly,EXTERNAL_DEBT,163980.074825,million USD,nbk,2026-08-30,level,2026-08-30
@@ -2274,6 +2361,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,annual,IMF_GDP_PPP,650469815000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.414088,% of world total,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GOV_BALANCE,-4.966052,% of GDP,imf,2026-08-30,level,2026-08-30
+2021-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-4169079555000.0,KZT,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GOV_DEBT,25.100451,% of GDP,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,18527826281000.0,KZT,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,22.069656,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -2287,6 +2375,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,annual,IMF_NOMINAL_GDP,83951588000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,197112256000.0,USD,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_POPULATION,19000687.0,persons,imf,2026-08-30,level,2026-08-30
+2021-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,129.063004,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_REAL_GDP,14945853200000.0,KZT,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,25.174109,% of GDP,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.9,%,imf,2026-08-30,level,2026-08-30
@@ -2358,6 +2447,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-09-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,56862.96737923415,USD million,nbk,2026-08-30,level,2026-08-30
 2021-09-01,KZ,national,monthly,NEER,83.03027,index,nbk,2026-08-30,level,2026-08-30
 2021-09-01,KZ,national,monthly,REER,96.66794,index,nbk,2026-08-30,level,2026-08-30
+2021-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,24101.690156208,million KZT,nbk,2026-08-30,level,2026-08-30
+2021-09-01,KZ,national,monthly,REMITTANCES_SENT,97265.79009194,million KZT,nbk,2026-08-30,level,2026-08-30
 2021-09-30,KZ,national,quarterly,GDP_NOMINAL,53029365700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2021-10-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2021-10-01,KZ,national,monthly,EXPORTS,5848852.207840016,thousand USD,bns,2026-08-30,level,2026-08-30
@@ -2370,6 +2461,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,55058.18207939864,USD million,nbk,2026-08-30,level,2026-08-30
 2021-10-01,KZ,national,monthly,NEER,83.23922,index,nbk,2026-08-30,level,2026-08-30
 2021-10-01,KZ,national,monthly,REER,96.70118,index,nbk,2026-08-30,level,2026-08-30
+2021-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,23290.258204922,million KZT,nbk,2026-08-30,level,2026-08-30
+2021-10-01,KZ,national,monthly,REMITTANCES_SENT,93486.61029249,million KZT,nbk,2026-08-30,level,2026-08-30
 2021-11-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2021-11-01,KZ,national,monthly,EXPORTS,5407310.924800003,thousand USD,bns,2026-08-30,level,2026-08-30
 2021-11-01,KZ,national,monthly,FX_RESERVES,35820.42086272155,USD million,nbk,2026-08-30,level,2026-08-30
@@ -2377,6 +2470,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-11-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,55087.02106155323,USD million,nbk,2026-08-30,level,2026-08-30
 2021-11-01,KZ,national,monthly,NEER,83.382,index,nbk,2026-08-30,level,2026-08-30
 2021-11-01,KZ,national,monthly,REER,96.87982,index,nbk,2026-08-30,level,2026-08-30
+2021-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,22892.602420209,million KZT,nbk,2026-08-30,level,2026-08-30
+2021-11-01,KZ,national,monthly,REMITTANCES_SENT,87047.89202394,million KZT,nbk,2026-08-30,level,2026-08-30
 2021-12-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2021-12-01,KZ,national,monthly,DEPOSITS_TOTAL,1156435.64239634,million KZT,nbk,2026-08-30,level,2026-08-30
 2021-12-01,KZ,national,monthly,EXPORTS,5802857.496099986,thousand USD,bns,2026-08-30,level,2026-08-30
@@ -2390,6 +2485,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,54918.71230951723,USD million,nbk,2026-08-30,level,2026-08-30
 2021-12-01,KZ,national,monthly,NEER,83.63375,index,nbk,2026-08-30,level,2026-08-30
 2021-12-01,KZ,national,monthly,REER,96.99026,index,nbk,2026-08-30,level,2026-08-30
+2021-12-01,KZ,national,monthly,REMITTANCES_RECEIVED,27253.83888086,million KZT,nbk,2026-08-30,level,2026-08-30
+2021-12-01,KZ,national,monthly,REMITTANCES_SENT,88423.25061544,million KZT,nbk,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,AVG_WAGE,250311.0,KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,BIRTHS_TOTAL,446491.0,persons,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,BUDGET_DEFICIT,-2526271.2171565,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -2398,9 +2495,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-31,KZ,national,annual,CONSTRUCTION,5530680665000.0,KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,CORPORATE_TAX,2095759.61536381,million KZT,minfin,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,DEATHS_TOTAL,182403.0,persons,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,EMISSIONS,2407455.79129,metric tonnes,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,EMPLOYED_TOTAL,8807113.0,persons,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,111277.72455273,million KZT,minfin,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,102.3,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,FREIGHT_TURNOVER,607713919525.155,tonne-km,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,GDP_DEFLATOR,113.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,GDP_INCOME_METHOD,83951587900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,quarterly,GDP_NOMINAL,83951587900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
@@ -2433,11 +2532,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-31,KZ,national,annual,PPI,132.5,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,REAL_WAGE_INDEX,108.810413207534,% of prior period,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,RETAIL_TRADE,13709321565719.8,KZT,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,107.817815875171,% of prior period,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,SUBSIDIES,305616400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,5161134000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,TAX_REVENUE,7057943.92913867,million KZT,minfin,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,52814472900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,VAT_REVENUE,2807690.80407635,million KZT,minfin,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,WHOLESALE_TRADE,31097958278359.0,KZT,bns,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,monthly,DEPOSITS_TOTAL,15838981.76247032,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,monthly,EXPORTS,6093897.247329982,thousand USD,bns,2026-08-30,level,2026-08-30
@@ -2453,6 +2554,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,annual,IMF_GDP_PPP,719029402000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.412252,% of world total,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GOV_BALANCE,0.105381,% of GDP,imf,2026-08-30,level,2026-08-30
+2022-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,109348717000.0,KZT,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GOV_DEBT,23.524056,% of GDP,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,22535387329000.0,KZT,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.717607,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -2466,6 +2568,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,annual,IMF_NOMINAL_GDP,103765518000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,225496328000.0,USD,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_POPULATION,19634983.0,persons,imf,2026-08-30,level,2026-08-30
+2022-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,144.313317,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_REAL_GDP,15424120400000.0,KZT,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,27.830235,% of GDP,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.875,%,imf,2026-08-30,level,2026-08-30
@@ -2479,6 +2582,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,55324.062102130614,USD million,nbk,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,monthly,NEER,86.35498,index,nbk,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,monthly,REER,98.18849,index,nbk,2026-08-30,level,2026-08-30
+2022-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,13594.67906766,million KZT,nbk,2026-08-30,level,2026-08-30
+2022-01-01,KZ,national,monthly,REMITTANCES_SENT,45608.94774816,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-02-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2022-02-01,KZ,national,monthly,DEPOSITS_TOTAL,15723554.22219909,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-02-01,KZ,national,monthly,EXPORTS,6068517.096410005,thousand USD,bns,2026-08-30,level,2026-08-30
@@ -2493,6 +2598,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,53908.2957727797,USD million,nbk,2026-08-30,level,2026-08-30
 2022-02-01,KZ,national,monthly,NEER,86.62761,index,nbk,2026-08-30,level,2026-08-30
 2022-02-01,KZ,national,monthly,REER,98.3345,index,nbk,2026-08-30,level,2026-08-30
+2022-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,17973.720787752,million KZT,nbk,2026-08-30,level,2026-08-30
+2022-02-01,KZ,national,monthly,REMITTANCES_SENT,62763.54499673,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-03-01,KZ,national,monthly,CPI,103.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2022-03-01,KZ,national,monthly,DEPOSITS_TOTAL,16385342.33025119,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-03-01,KZ,national,monthly,EXPORTS,6976750.34171,thousand USD,bns,2026-08-30,level,2026-08-30
@@ -2507,6 +2614,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,53996.323883838384,USD million,nbk,2026-08-30,level,2026-08-30
 2022-03-01,KZ,national,monthly,NEER,83.37146,index,nbk,2026-08-30,level,2026-08-30
 2022-03-01,KZ,national,monthly,REER,95.31372,index,nbk,2026-08-30,level,2026-08-30
+2022-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,25583.625044329,million KZT,nbk,2026-08-30,level,2026-08-30
+2022-03-01,KZ,national,monthly,REMITTANCES_SENT,81120.43649446,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-03-31,KZ,national,quarterly,GDP_NOMINAL,19695592800000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2022-04-01,KZ,national,monthly,CPI,102.0,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2022-04-01,KZ,national,monthly,DEPOSITS_TOTAL,15256877.65174736,million KZT,nbk,2026-08-30,level,2026-08-30
@@ -2523,6 +2632,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,52985.65302352513,USD million,nbk,2026-08-30,level,2026-08-30
 2022-04-01,KZ,national,monthly,NEER,86.72132,index,nbk,2026-08-30,level,2026-08-30
 2022-04-01,KZ,national,monthly,REER,99.9233,index,nbk,2026-08-30,level,2026-08-30
+2022-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,52467.054826664,million KZT,nbk,2026-08-30,level,2026-08-30
+2022-04-01,KZ,national,monthly,REMITTANCES_SENT,103563.80431846,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-05-01,KZ,national,monthly,CPI,101.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2022-05-01,KZ,national,monthly,DEPOSITS_TOTAL,15077164.67590804,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-05-01,KZ,national,monthly,EXPORTS,7718603.470970001,thousand USD,bns,2026-08-30,level,2026-08-30
@@ -2537,6 +2648,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,52621.820583583496,USD million,nbk,2026-08-30,level,2026-08-30
 2022-05-01,KZ,national,monthly,NEER,88.01218,index,nbk,2026-08-30,level,2026-08-30
 2022-05-01,KZ,national,monthly,REER,102.28378,index,nbk,2026-08-30,level,2026-08-30
+2022-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,69177.523899436,million KZT,nbk,2026-08-30,level,2026-08-30
+2022-05-01,KZ,national,monthly,REMITTANCES_SENT,98361.294688306,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-06-01,KZ,national,monthly,CPI,101.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2022-06-01,KZ,national,monthly,DEPOSITS_TOTAL,15062733.52878488,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-06-01,KZ,national,monthly,EXPORTS,8158257.709339968,thousand USD,bns,2026-08-30,level,2026-08-30
@@ -2551,6 +2664,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-06-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,53940.08265777606,USD million,nbk,2026-08-30,level,2026-08-30
 2022-06-01,KZ,national,monthly,NEER,82.80766,index,nbk,2026-08-30,level,2026-08-30
 2022-06-01,KZ,national,monthly,REER,97.19417,index,nbk,2026-08-30,level,2026-08-30
+2022-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,91935.954853243,million KZT,nbk,2026-08-30,level,2026-08-30
+2022-06-01,KZ,national,monthly,REMITTANCES_SENT,104378.20840696,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-06-30,KZ,national,quarterly,GDP_NOMINAL,40034332600000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2022-07-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2022-07-01,KZ,national,monthly,DEPOSITS_TOTAL,15965258.83995444,million KZT,nbk,2026-08-30,level,2026-08-30
@@ -2567,6 +2682,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,51863.83706318833,USD million,nbk,2026-08-30,level,2026-08-30
 2022-07-01,KZ,national,monthly,NEER,79.42857,index,nbk,2026-08-30,level,2026-08-30
 2022-07-01,KZ,national,monthly,REER,93.93754,index,nbk,2026-08-30,level,2026-08-30
+2022-07-01,KZ,national,monthly,REMITTANCES_RECEIVED,88164.427847933,million KZT,nbk,2026-08-30,level,2026-08-30
+2022-07-01,KZ,national,monthly,REMITTANCES_SENT,86747.37221813,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-08-01,KZ,national,monthly,CPI,101.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2022-08-01,KZ,national,monthly,DEPOSITS_TOTAL,15897791.86152081,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-08-01,KZ,national,monthly,EXPORTS,7435768.832140009,thousand USD,bns,2026-08-30,level,2026-08-30
@@ -2581,6 +2698,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-08-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,53285.14874153724,USD million,nbk,2026-08-30,level,2026-08-30
 2022-08-01,KZ,national,monthly,NEER,80.57895,index,nbk,2026-08-30,level,2026-08-30
 2022-08-01,KZ,national,monthly,REER,96.42578,index,nbk,2026-08-30,level,2026-08-30
+2022-08-01,KZ,national,monthly,REMITTANCES_RECEIVED,71393.566389754,million KZT,nbk,2026-08-30,level,2026-08-30
+2022-08-01,KZ,national,monthly,REMITTANCES_SENT,103249.68209565,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-09-01,KZ,national,monthly,CPI,101.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2022-09-01,KZ,national,monthly,DEPOSITS_TOTAL,15758116.40300614,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-09-01,KZ,national,monthly,EXPORTS,7435243.3100000145,thousand USD,bns,2026-08-30,level,2026-08-30
@@ -2595,6 +2714,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-09-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,53806.77218419771,USD million,nbk,2026-08-30,level,2026-08-30
 2022-09-01,KZ,national,monthly,NEER,81.70148,index,nbk,2026-08-30,level,2026-08-30
 2022-09-01,KZ,national,monthly,REER,98.99754,index,nbk,2026-08-30,level,2026-08-30
+2022-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,70646.449138767,million KZT,nbk,2026-08-30,level,2026-08-30
+2022-09-01,KZ,national,monthly,REMITTANCES_SENT,93967.53495836,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-09-30,KZ,national,quarterly,GDP_NOMINAL,65487797900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2022-10-01,KZ,national,monthly,CPI,101.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2022-10-01,KZ,national,monthly,DEPOSITS_TOTAL,16137525.42648921,million KZT,nbk,2026-08-30,level,2026-08-30
@@ -2611,6 +2732,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,51587.7439285939,USD million,nbk,2026-08-30,level,2026-08-30
 2022-10-01,KZ,national,monthly,NEER,83.74855,index,nbk,2026-08-30,level,2026-08-30
 2022-10-01,KZ,national,monthly,REER,102.17974,index,nbk,2026-08-30,level,2026-08-30
+2022-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,74299.052368535,million KZT,nbk,2026-08-30,level,2026-08-30
+2022-10-01,KZ,national,monthly,REMITTANCES_SENT,89324.60107535,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-11-01,KZ,national,monthly,CPI,101.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2022-11-01,KZ,national,monthly,DEPOSITS_TOTAL,16473072.18224791,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-11-01,KZ,national,monthly,EXPORTS,6932983.36155,thousand USD,bns,2026-08-30,level,2026-08-30
@@ -2625,6 +2748,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-11-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,52456.089893242235,USD million,nbk,2026-08-30,level,2026-08-30
 2022-11-01,KZ,national,monthly,NEER,83.61444,index,nbk,2026-08-30,level,2026-08-30
 2022-11-01,KZ,national,monthly,REER,103.2937,index,nbk,2026-08-30,level,2026-08-30
+2022-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,62904.43740601,million KZT,nbk,2026-08-30,level,2026-08-30
+2022-11-01,KZ,national,monthly,REMITTANCES_SENT,90835.102049036,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-12-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2022-12-01,KZ,national,monthly,DEPOSITS_TOTAL,16873130.5563075,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-12-01,KZ,national,monthly,EXPORTS,6716117.178339988,thousand USD,bns,2026-08-30,level,2026-08-30
@@ -2639,6 +2764,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,55826.82560162082,USD million,nbk,2026-08-30,level,2026-08-30
 2022-12-01,KZ,national,monthly,NEER,83.03511,index,nbk,2026-08-30,level,2026-08-30
 2022-12-01,KZ,national,monthly,REER,103.47396,index,nbk,2026-08-30,level,2026-08-30
+2022-12-01,KZ,national,monthly,REMITTANCES_RECEIVED,43091.4641744,million KZT,nbk,2026-08-30,level,2026-08-30
+2022-12-01,KZ,national,monthly,REMITTANCES_SENT,74596.40557989,million KZT,nbk,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,AVG_WAGE,309697.0,KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,BIRTHS_TOTAL,403893.0,persons,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,BUDGET_DEFICIT,-2390848.16405056,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -2647,9 +2774,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-31,KZ,national,annual,CONSTRUCTION,6304274070000.0,KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,CORPORATE_TAX,2920802.77481614,million KZT,minfin,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,DEATHS_TOTAL,133523.0,persons,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,EMISSIONS,2314772.28087,metric tonnes,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,EMPLOYED_TOTAL,8971539.0,persons,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,153619.21504825,million KZT,minfin,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,109.6,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,FREIGHT_TURNOVER,596568690820.104,tonne-km,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,GDP_DEFLATOR,119.7,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,GDP_INCOME_METHOD,103765518200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,quarterly,GDP_NOMINAL,103765518200000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
@@ -2682,11 +2811,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-31,KZ,national,annual,PPI,127.1,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,REAL_WAGE_INDEX,107.586857601318,% of prior period,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,RETAIL_TRADE,16748110269401.7,KZT,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,105.771305328741,% of prior period,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,SUBSIDIES,381405800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,7779408500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,TAX_REVENUE,10026825.0326842,million KZT,minfin,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,62193315900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,VAT_REVENUE,4226358.8257289,million KZT,minfin,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,WHOLESALE_TRADE,36178420393631.1,KZT,bns,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,monthly,DEPOSITS_TOTAL,30935301.17686597,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,monthly,DEPOSIT_RATE,13.266522951693396,%,nbk,2026-08-30,level,2026-08-30
@@ -2703,6 +2834,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,annual,IMF_GDP_PPP,783661048000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.419616,% of world total,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.41244,% of GDP,imf,2026-08-30,level,2026-08-30
+2023-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-1687050564000.0,KZT,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GOV_DEBT,22.981963,% of GDP,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,27940288324000.0,KZT,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,23.392291,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -2716,6 +2848,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,annual,IMF_NOMINAL_GDP,119442290000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,261840102000.0,USD,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_POPULATION,19900325.0,persons,imf,2026-08-30,level,2026-08-30
+2023-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,152.415755,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_REAL_GDP,16210750500000.0,KZT,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,24.564518,% of GDP,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.725,%,imf,2026-08-30,level,2026-08-30
@@ -2729,6 +2862,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,55739.47491624338,USD million,nbk,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,monthly,NEER,84.61646,index,nbk,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,monthly,REER,105.11744,index,nbk,2026-08-30,level,2026-08-30
+2023-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,27576.65760503,million KZT,nbk,2026-08-30,level,2026-08-30
+2023-01-01,KZ,national,monthly,REMITTANCES_SENT,49174.65081019,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-02-01,KZ,national,monthly,CPI,101.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2023-02-01,KZ,national,monthly,DEPOSITS_TOTAL,30583280.77951101,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-02-01,KZ,national,monthly,DEPOSIT_RATE,13.723094976118087,%,nbk,2026-08-30,level,2026-08-30
@@ -2744,6 +2879,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57642.869427374,USD million,nbk,2026-08-30,level,2026-08-30
 2023-02-01,KZ,national,monthly,NEER,88.33169,index,nbk,2026-08-30,level,2026-08-30
 2023-02-01,KZ,national,monthly,REER,110.6251,index,nbk,2026-08-30,level,2026-08-30
+2023-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,25817.97488921,million KZT,nbk,2026-08-30,level,2026-08-30
+2023-02-01,KZ,national,monthly,REMITTANCES_SENT,59544.13816239,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-03-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2023-03-01,KZ,national,monthly,DEPOSITS_TOTAL,29786885.99202555,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-03-01,KZ,national,monthly,DEPOSIT_RATE,13.497047537134153,%,nbk,2026-08-30,level,2026-08-30
@@ -2759,6 +2896,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57185.66239738011,USD million,nbk,2026-08-30,level,2026-08-30
 2023-03-01,KZ,national,monthly,NEER,89.2841,index,nbk,2026-08-30,level,2026-08-30
 2023-03-01,KZ,national,monthly,REER,112.4428,index,nbk,2026-08-30,level,2026-08-30
+2023-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,29853.48505157,million KZT,nbk,2026-08-30,level,2026-08-30
+2023-03-01,KZ,national,monthly,REMITTANCES_SENT,74161.95870891,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-03-31,KZ,national,quarterly,GDP_NOMINAL,23582637000000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2023-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.8,% of labor force,bns,2026-08-30,level,2026-08-30
 2023-04-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
@@ -2777,6 +2916,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58426.09439684753,USD million,nbk,2026-08-30,level,2026-08-30
 2023-04-01,KZ,national,monthly,NEER,89.96932,index,nbk,2026-08-30,level,2026-08-30
 2023-04-01,KZ,national,monthly,REER,113.80852,index,nbk,2026-08-30,level,2026-08-30
+2023-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,26506.42192695,million KZT,nbk,2026-08-30,level,2026-08-30
+2023-04-01,KZ,national,monthly,REMITTANCES_SENT,76556.80289032,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-05-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2023-05-01,KZ,national,monthly,DEPOSITS_TOTAL,30280911.72420823,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-05-01,KZ,national,monthly,DEPOSIT_RATE,13.847582967678196,%,nbk,2026-08-30,level,2026-08-30
@@ -2792,6 +2933,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58775.23714682723,USD million,nbk,2026-08-30,level,2026-08-30
 2023-05-01,KZ,national,monthly,NEER,91.22016,index,nbk,2026-08-30,level,2026-08-30
 2023-05-01,KZ,national,monthly,REER,115.83861,index,nbk,2026-08-30,level,2026-08-30
+2023-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,28197.50763373,million KZT,nbk,2026-08-30,level,2026-08-30
+2023-05-01,KZ,national,monthly,REMITTANCES_SENT,90248.7620732,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-06-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2023-06-01,KZ,national,monthly,DEPOSITS_TOTAL,30629173.56219384,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-06-01,KZ,national,monthly,DEPOSIT_RATE,13.842162785863794,%,nbk,2026-08-30,level,2026-08-30
@@ -2807,6 +2950,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-06-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59181.10153303729,USD million,nbk,2026-08-30,level,2026-08-30
 2023-06-01,KZ,national,monthly,NEER,92.98425,index,nbk,2026-08-30,level,2026-08-30
 2023-06-01,KZ,national,monthly,REER,118.27238,index,nbk,2026-08-30,level,2026-08-30
+2023-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,26795.43654993,million KZT,nbk,2026-08-30,level,2026-08-30
+2023-06-01,KZ,national,monthly,REMITTANCES_SENT,87798.65888644,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-06-30,KZ,national,quarterly,GDP_NOMINAL,47244671500000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2023-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-30,level,2026-08-30
 2023-07-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
@@ -2825,6 +2970,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59789.240900753575,USD million,nbk,2026-08-30,level,2026-08-30
 2023-07-01,KZ,national,monthly,NEER,95.54142,index,nbk,2026-08-30,level,2026-08-30
 2023-07-01,KZ,national,monthly,REER,121.32515,index,nbk,2026-08-30,level,2026-08-30
+2023-07-01,KZ,national,monthly,REMITTANCES_RECEIVED,24242.938213334,million KZT,nbk,2026-08-30,level,2026-08-30
+2023-07-01,KZ,national,monthly,REMITTANCES_SENT,88804.51659105,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-08-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2023-08-01,KZ,national,monthly,DEPOSITS_TOTAL,30708945.95725391,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-08-01,KZ,national,monthly,DEPOSIT_RATE,13.923634274322602,%,nbk,2026-08-30,level,2026-08-30
@@ -2840,6 +2987,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-08-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60209.223709283295,USD million,nbk,2026-08-30,level,2026-08-30
 2023-08-01,KZ,national,monthly,NEER,95.92466,index,nbk,2026-08-30,level,2026-08-30
 2023-08-01,KZ,national,monthly,REER,121.75465,index,nbk,2026-08-30,level,2026-08-30
+2023-08-01,KZ,national,monthly,REMITTANCES_RECEIVED,22327.163019382,million KZT,nbk,2026-08-30,level,2026-08-30
+2023-08-01,KZ,national,monthly,REMITTANCES_SENT,99054.860802557,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-09-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2023-09-01,KZ,national,monthly,DEPOSITS_TOTAL,30972351.80900546,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-09-01,KZ,national,monthly,DEPOSIT_RATE,13.934250158895047,%,nbk,2026-08-30,level,2026-08-30
@@ -2855,6 +3004,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-09-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59893.90060693076,USD million,nbk,2026-08-30,level,2026-08-30
 2023-09-01,KZ,national,monthly,NEER,93.90999,index,nbk,2026-08-30,level,2026-08-30
 2023-09-01,KZ,national,monthly,REER,119.20947,index,nbk,2026-08-30,level,2026-08-30
+2023-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,24422.675364869,million KZT,nbk,2026-08-30,level,2026-08-30
+2023-09-01,KZ,national,monthly,REMITTANCES_SENT,93217.5520307,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-09-30,KZ,national,quarterly,GDP_NOMINAL,75546820300000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2023-09-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-30,level,2026-08-30
 2023-10-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
@@ -2873,6 +3024,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57858.378675153326,USD million,nbk,2026-08-30,level,2026-08-30
 2023-10-01,KZ,national,monthly,NEER,93.35106,index,nbk,2026-08-30,level,2026-08-30
 2023-10-01,KZ,national,monthly,REER,118.74299,index,nbk,2026-08-30,level,2026-08-30
+2023-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,23532.269879783,million KZT,nbk,2026-08-30,level,2026-08-30
+2023-10-01,KZ,national,monthly,REMITTANCES_SENT,89636.710716899,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-11-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2023-11-01,KZ,national,monthly,DEPOSITS_TOTAL,32034978.68445611,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-11-01,KZ,national,monthly,DEPOSIT_RATE,13.952560899758064,%,nbk,2026-08-30,level,2026-08-30
@@ -2888,6 +3041,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-11-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,56367.549726403646,USD million,nbk,2026-08-30,level,2026-08-30
 2023-11-01,KZ,national,monthly,NEER,93.4541,index,nbk,2026-08-30,level,2026-08-30
 2023-11-01,KZ,national,monthly,REER,119.78231,index,nbk,2026-08-30,level,2026-08-30
+2023-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,22530.622289574,million KZT,nbk,2026-08-30,level,2026-08-30
+2023-11-01,KZ,national,monthly,REMITTANCES_SENT,81252.23102924,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-12-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2023-12-01,KZ,national,monthly,DEPOSITS_TOTAL,32202659.86866336,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-12-01,KZ,national,monthly,DEPOSIT_RATE,13.858820785419695,%,nbk,2026-08-30,level,2026-08-30
@@ -2903,6 +3058,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58642.20391232207,USD million,nbk,2026-08-30,level,2026-08-30
 2023-12-01,KZ,national,monthly,NEER,94.05657,index,nbk,2026-08-30,level,2026-08-30
 2023-12-01,KZ,national,monthly,REER,120.98336,index,nbk,2026-08-30,level,2026-08-30
+2023-12-01,KZ,national,monthly,REMITTANCES_RECEIVED,27705.032608077,million KZT,nbk,2026-08-30,level,2026-08-30
+2023-12-01,KZ,national,monthly,REMITTANCES_SENT,79826.77450172,million KZT,nbk,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,AVG_WAGE,364295.0,KZT,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,BIRTHS_TOTAL,388428.0,persons,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,BUDGET_DEFICIT,-3120850.28546301,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -2911,9 +3068,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,CONSTRUCTION,7612810331000.0,KZT,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,CORPORATE_TAX,3889594.50796711,million KZT,minfin,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,DEATHS_TOTAL,130686.0,persons,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,EMISSIONS,2257453.18407,metric tonnes,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,EMPLOYED_TOTAL,9081920.0,persons,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,161890.42923258,million KZT,minfin,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,101.8,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,FREIGHT_TURNOVER,503529242424.721,tonne-km,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,GDP_DEFLATOR,111.2,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,GDP_INCOME_METHOD,119442289700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,quarterly,GDP_NOMINAL,119442289700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
@@ -2945,12 +3104,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,PPI,97.9,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,REAL_WAGE_INDEX,102.733178575318,% of prior period,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,RETAIL_TRADE,19959173845422.5,KZT,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,105.183311447593,% of prior period,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,SUBSIDIES,980720000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,9180745300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,TAX_REVENUE,12912428.2566707,million KZT,minfin,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,75154867300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,VAT_REVENUE,5674110.63979825,million KZT,minfin,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,WHOLESALE_TRADE,41701686605244.6,KZT,bns,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,monthly,DEPOSITS_TOTAL,34661910.19660757,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,monthly,DEPOSIT_RATE,13.702190953897857,%,nbk,2026-08-30,level,2026-08-30
@@ -2967,6 +3128,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,annual,IMF_GDP_PPP,843271572000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.426269,% of world total,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GOV_BALANCE,-3.434168,% of GDP,imf,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-4694277577000.0,KZT,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GOV_DEBT,24.376956,% of GDP,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,30984693053000.0,KZT,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,22.667306,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -2980,6 +3142,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,annual,IMF_NOMINAL_GDP,136693318000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,291480274000.0,USD,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_POPULATION,20158621.0,persons,imf,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,162.09881,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_REAL_GDP,17021288000000.0,KZT,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,24.628904,% of GDP,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.65,%,imf,2026-08-30,level,2026-08-30
@@ -2993,6 +3156,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60024.18771396999,USD million,nbk,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,monthly,NEER,95.28228,index,nbk,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,monthly,REER,123.06211,index,nbk,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,20624.2564639,million KZT,nbk,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,monthly,REMITTANCES_SENT,52480.93746954,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-02-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2024-02-01,KZ,national,monthly,DEPOSITS_TOTAL,33781017.1410395,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-02-01,KZ,national,monthly,DEPOSIT_RATE,13.953731953381173,%,nbk,2026-08-30,level,2026-08-30
@@ -3009,6 +3174,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-02-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,600.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2024-02-01,KZ,national,monthly,NEER,96.71582,index,nbk,2026-08-30,level,2026-08-30
 2024-02-01,KZ,national,monthly,REER,125.23512,index,nbk,2026-08-30,level,2026-08-30
+2024-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,19133.07141938,million KZT,nbk,2026-08-30,level,2026-08-30
+2024-02-01,KZ,national,monthly,REMITTANCES_SENT,58913.35848472,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-03-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2024-03-01,KZ,national,monthly,DEPOSITS_TOTAL,34131114.71289864,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-03-01,KZ,national,monthly,DEPOSIT_RATE,13.592687101005142,%,nbk,2026-08-30,level,2026-08-30
@@ -3025,6 +3192,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-03-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,400.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2024-03-01,KZ,national,monthly,NEER,96.93782,index,nbk,2026-08-30,level,2026-08-30
 2024-03-01,KZ,national,monthly,REER,126.09382,index,nbk,2026-08-30,level,2026-08-30
+2024-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,20061.6372356,million KZT,nbk,2026-08-30,level,2026-08-30
+2024-03-01,KZ,national,monthly,REMITTANCES_SENT,59265.15085536,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-03-31,KZ,national,quarterly,GDP_NOMINAL,26023903800000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2024-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-30,level,2026-08-30
 2024-04-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
@@ -3044,6 +3213,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,450.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2024-04-01,KZ,national,monthly,NEER,98.76039,index,nbk,2026-08-30,level,2026-08-30
 2024-04-01,KZ,national,monthly,REER,128.63669,index,nbk,2026-08-30,level,2026-08-30
+2024-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,20617.094405,million KZT,nbk,2026-08-30,level,2026-08-30
+2024-04-01,KZ,national,monthly,REMITTANCES_SENT,65855.31166946,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-05-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2024-05-01,KZ,national,monthly,DEPOSITS_TOTAL,34278948.66617175,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-05-01,KZ,national,monthly,DEPOSIT_RATE,13.674165827578664,%,nbk,2026-08-30,level,2026-08-30
@@ -3060,6 +3231,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-05-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,500.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2024-05-01,KZ,national,monthly,NEER,98.78101,index,nbk,2026-08-30,level,2026-08-30
 2024-05-01,KZ,national,monthly,REER,128.47414,index,nbk,2026-08-30,level,2026-08-30
+2024-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,20589.68625009,million KZT,nbk,2026-08-30,level,2026-08-30
+2024-05-01,KZ,national,monthly,REMITTANCES_SENT,73852.75716502,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-06-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2024-06-01,KZ,national,monthly,DEPOSITS_TOTAL,34457841.84655527,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-06-01,KZ,national,monthly,DEPOSIT_RATE,13.627832871227048,%,nbk,2026-08-30,level,2026-08-30
@@ -3076,6 +3249,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,500.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2024-06-01,KZ,national,monthly,NEER,95.25366,index,nbk,2026-08-30,level,2026-08-30
 2024-06-01,KZ,national,monthly,REER,124.04047,index,nbk,2026-08-30,level,2026-08-30
+2024-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,19320.10998654,million KZT,nbk,2026-08-30,level,2026-08-30
+2024-06-01,KZ,national,monthly,REMITTANCES_SENT,73024.65647627,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-06-30,KZ,national,quarterly,GDP_NOMINAL,52342740300000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2024-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-30,level,2026-08-30
 2024-07-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
@@ -3098,6 +3273,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,299.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2024-07-01,KZ,national,monthly,NEER,91.11614,index,nbk,2026-08-30,level,2026-08-30
 2024-07-01,KZ,national,monthly,REER,118.72476,index,nbk,2026-08-30,level,2026-08-30
+2024-07-01,KZ,national,monthly,REMITTANCES_RECEIVED,21636.00003842,million KZT,nbk,2026-08-30,level,2026-08-30
+2024-07-01,KZ,national,monthly,REMITTANCES_SENT,81915.56202099,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-08-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2024-08-01,KZ,national,monthly,DEPOSITS_TOTAL,36502637.06027923,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-08-01,KZ,national,monthly,DEPOSIT_RATE,13.49680671675873,%,nbk,2026-08-30,level,2026-08-30
@@ -3114,6 +3291,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-08-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,250.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2024-08-01,KZ,national,monthly,NEER,89.9752,index,nbk,2026-08-30,level,2026-08-30
 2024-08-01,KZ,national,monthly,REER,117.4856,index,nbk,2026-08-30,level,2026-08-30
+2024-08-01,KZ,national,monthly,REMITTANCES_RECEIVED,19983.35856108,million KZT,nbk,2026-08-30,level,2026-08-30
+2024-08-01,KZ,national,monthly,REMITTANCES_SENT,77262.21488625,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-09-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2024-09-01,KZ,national,monthly,DEPOSITS_TOTAL,36203854.14893407,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-09-01,KZ,national,monthly,DEPOSIT_RATE,13.452783271991205,%,nbk,2026-08-30,level,2026-08-30
@@ -3130,6 +3309,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,450.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2024-09-01,KZ,national,monthly,NEER,89.73777,index,nbk,2026-08-30,level,2026-08-30
 2024-09-01,KZ,national,monthly,REER,117.36981,index,nbk,2026-08-30,level,2026-08-30
+2024-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,18478.360031667,million KZT,nbk,2026-08-30,level,2026-08-30
+2024-09-01,KZ,national,monthly,REMITTANCES_SENT,63784.346106231,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-09-30,KZ,national,quarterly,GDP_NOMINAL,84962626100000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2024-09-30,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-30,level,2026-08-30
 2024-10-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
@@ -3152,6 +3333,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,570.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2024-10-01,KZ,national,monthly,NEER,90.53203,index,nbk,2026-08-30,level,2026-08-30
 2024-10-01,KZ,national,monthly,REER,118.90033,index,nbk,2026-08-30,level,2026-08-30
+2024-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,18913.89321278,million KZT,nbk,2026-08-30,level,2026-08-30
+2024-10-01,KZ,national,monthly,REMITTANCES_SENT,64809.14693075,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-10-14,KZ,national,daily,BASE_RATE,14.25,% p.a.,nbk,2026-08-30,level,2026-08-30
 2024-11-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2024-11-01,KZ,national,monthly,DEPOSITS_TOTAL,37858761.73608735,million KZT,nbk,2026-08-30,level,2026-08-30
@@ -3169,6 +3352,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-11-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,640.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2024-11-01,KZ,national,monthly,NEER,90.85457,index,nbk,2026-08-30,level,2026-08-30
 2024-11-01,KZ,national,monthly,REER,120.03158,index,nbk,2026-08-30,level,2026-08-30
+2024-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,17810.69840198,million KZT,nbk,2026-08-30,level,2026-08-30
+2024-11-01,KZ,national,monthly,REMITTANCES_SENT,60602.63071371,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-12-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2024-12-01,KZ,national,monthly,DEPOSITS_TOTAL,38550370.90590438,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-12-01,KZ,national,monthly,DEPOSIT_RATE,13.190457869536788,%,nbk,2026-08-30,level,2026-08-30
@@ -3185,6 +3370,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,635.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2024-12-01,KZ,national,monthly,NEER,88.09184,index,nbk,2026-08-30,level,2026-08-30
 2024-12-01,KZ,national,monthly,REER,116.87711,index,nbk,2026-08-30,level,2026-08-30
+2024-12-01,KZ,national,monthly,REMITTANCES_RECEIVED,19544.907231552,million KZT,nbk,2026-08-30,level,2026-08-30
+2024-12-01,KZ,national,monthly,REMITTANCES_SENT,56813.43594721,million KZT,nbk,2026-08-30,level,2026-08-30
 2024-12-02,KZ,national,daily,BASE_RATE,15.25,% p.a.,nbk,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,AVG_WAGE,405416.0,KZT,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,BIRTHS_TOTAL,365923.0,persons,bns,2026-08-30,level,2026-08-30
@@ -3194,9 +3381,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,CONSTRUCTION,9062096500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,CORPORATE_TAX,3653190.79919306,million KZT,minfin,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,DEATHS_TOTAL,132916.0,persons,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,EMISSIONS,2271435.3601100002,metric tonnes,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,EMPLOYED_TOTAL,9214184.0,persons,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,125189.66151049,million KZT,minfin,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,100.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,FREIGHT_TURNOVER,520920702065.322,tonne-km,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,GDP_DEFLATOR,109.0,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,GDP_INCOME_METHOD,136693318300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,quarterly,GDP_NOMINAL,136693318300000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
@@ -3227,12 +3416,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,PPI,105.0,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,REAL_WAGE_INDEX,102.380708296284,% of prior period,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,RETAIL_TRADE,23558796625282.5,KZT,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,111.039443780549,% of prior period,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,SUBSIDIES,1122348400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,8713991300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,TAX_REVENUE,12307809.76802,million KZT,minfin,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,88245450300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,VAT_REVENUE,5179378.10249218,million KZT,minfin,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,WHOLESALE_TRADE,47164111273837.5,KZT,bns,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,monthly,DEPOSITS_TOTAL,41285457.50285451,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,monthly,DEPOSIT_RATE,13.163087625892695,%,nbk,2026-08-30,level,2026-08-30
@@ -3252,6 +3443,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,annual,IMF_GDP_PPP,923432902000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.439047,% of world total,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GOV_BALANCE,-3.113865,% of GDP,imf,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-4911846796000.0,KZT,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GOV_DEBT,24.561214,% of GDP,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,34458489069000.0,KZT,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.84496,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -3265,6 +3457,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,annual,IMF_NOMINAL_GDP,157741141500000.0,KZT,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,302745769000.0,USD,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_POPULATION,20380366.0,persons,imf,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,170.820361,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_REAL_GDP,18125161775000.0,KZT,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,24.518675,% of GDP,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.638407,%,imf,2026-08-30,level,2026-08-30
@@ -3280,6 +3473,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,306.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,monthly,NEER,86.15251,index,nbk,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,monthly,REER,116.67894,index,nbk,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,15846.035589771,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,monthly,REMITTANCES_SENT,40748.10760782,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-01-20,KZ,national,daily,BASE_RATE,15.25,% p.a.,nbk,2026-08-30,level,2026-08-30
 2025-02-01,KZ,national,monthly,CPI,101.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2025-02-01,KZ,national,monthly,DEPOSITS_TOTAL,40402753.40371303,million KZT,nbk,2026-08-30,level,2026-08-30
@@ -3298,6 +3493,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,550.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2025-02-01,KZ,national,monthly,NEER,87.16019,index,nbk,2026-08-30,level,2026-08-30
 2025-02-01,KZ,national,monthly,REER,119.32943,index,nbk,2026-08-30,level,2026-08-30
+2025-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,15813.144032362,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-02-01,KZ,national,monthly,REMITTANCES_SENT,45008.2050012,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-03-01,KZ,national,monthly,CPI,101.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2025-03-01,KZ,national,monthly,DEPOSITS_TOTAL,40449630.68109766,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-03-01,KZ,national,monthly,DEPOSIT_RATE,13.322513225554022,%,nbk,2026-08-30,level,2026-08-30
@@ -3315,6 +3512,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,450.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2025-03-01,KZ,national,monthly,NEER,85.83091,index,nbk,2026-08-30,level,2026-08-30
 2025-03-01,KZ,national,monthly,REER,118.52597,index,nbk,2026-08-30,level,2026-08-30
+2025-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,16733.500870873,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-03-01,KZ,national,monthly,REMITTANCES_SENT,47328.856735897,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-03-11,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
 2025-03-31,KZ,national,quarterly,GDP_NOMINAL,30467333700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2025-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-30,level,2026-08-30
@@ -3339,6 +3538,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,450.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2025-04-01,KZ,national,monthly,NEER,81.54381,index,nbk,2026-08-30,level,2026-08-30
 2025-04-01,KZ,national,monthly,REER,113.52171,index,nbk,2026-08-30,level,2026-08-30
+2025-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,19311.921655523,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-04-01,KZ,national,monthly,REMITTANCES_SENT,57434.871770097,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-04-14,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
 2025-05-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2025-05-01,KZ,national,monthly,DEPOSITS_TOTAL,41304095.29203244,million KZT,nbk,2026-08-30,level,2026-08-30
@@ -3357,6 +3558,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-05-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,550.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2025-05-01,KZ,national,monthly,NEER,81.06572,index,nbk,2026-08-30,level,2026-08-30
 2025-05-01,KZ,national,monthly,REER,113.64216,index,nbk,2026-08-30,level,2026-08-30
+2025-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,19059.294785234,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-05-01,KZ,national,monthly,REMITTANCES_SENT,65933.3754131,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-06-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2025-06-01,KZ,national,monthly,DEPOSITS_TOTAL,41440760.24471729,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-06-01,KZ,national,monthly,DEPOSIT_RATE,14.240716911730122,%,nbk,2026-08-30,level,2026-08-30
@@ -3374,6 +3577,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,620.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2025-06-01,KZ,national,monthly,NEER,79.46586,index,nbk,2026-08-30,level,2026-08-30
 2025-06-01,KZ,national,monthly,REER,112.14037,index,nbk,2026-08-30,level,2026-08-30
+2025-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,18595.364206979,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-06-01,KZ,national,monthly,REMITTANCES_SENT,64712.184057815,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-06-09,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
 2025-06-30,KZ,national,quarterly,GDP_NOMINAL,61371821900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2025-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-30,level,2026-08-30
@@ -3398,6 +3603,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,500.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2025-07-01,KZ,national,monthly,NEER,77.05435,index,nbk,2026-08-30,level,2026-08-30
 2025-07-01,KZ,national,monthly,REER,108.90469,index,nbk,2026-08-30,level,2026-08-30
+2025-07-01,KZ,national,monthly,REMITTANCES_RECEIVED,21264.962810764,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-07-01,KZ,national,monthly,REMITTANCES_SENT,70447.506300936,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-07-14,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
 2025-08-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2025-08-01,KZ,national,monthly,DEPOSITS_TOTAL,42392405.20091842,million KZT,nbk,2026-08-30,level,2026-08-30
@@ -3416,6 +3623,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2025-08-01,KZ,national,monthly,NEER,76.0804,index,nbk,2026-08-30,level,2026-08-30
 2025-08-01,KZ,national,monthly,REER,108.41895,index,nbk,2026-08-30,level,2026-08-30
+2025-08-01,KZ,national,monthly,REMITTANCES_RECEIVED,20856.20042472,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-08-01,KZ,national,monthly,REMITTANCES_SENT,72705.211344807,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-09-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2025-09-01,KZ,national,monthly,DEPOSITS_TOTAL,42795877.34127415,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-09-01,KZ,national,monthly,DEPOSIT_RATE,14.322008493441647,%,nbk,2026-08-30,level,2026-08-30
@@ -3433,6 +3642,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2025-09-01,KZ,national,monthly,NEER,76.00634,index,nbk,2026-08-30,level,2026-08-30
 2025-09-01,KZ,national,monthly,REER,109.22656,index,nbk,2026-08-30,level,2026-08-30
+2025-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,20438.396964499,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-09-01,KZ,national,monthly,REMITTANCES_SENT,71570.869920804,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-09-02,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
 2025-09-30,KZ,national,quarterly,GDP_NOMINAL,99724898500000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
 2025-10-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
@@ -3456,6 +3667,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2025-10-01,KZ,national,monthly,NEER,76.31148,index,nbk,2026-08-30,level,2026-08-30
 2025-10-01,KZ,national,monthly,REER,109.81892,index,nbk,2026-08-30,level,2026-08-30
+2025-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,20692.336550891,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-10-01,KZ,national,monthly,REMITTANCES_SENT,68092.222434033,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-10-13,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-30,level,2026-08-30
 2025-11-01,KZ,national,monthly,DEPOSITS_TOTAL,44679044.7624226,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-11-01,KZ,national,monthly,DEPOSIT_RATE,14.57885683950363,%,nbk,2026-08-30,level,2026-08-30
@@ -3473,6 +3686,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2025-11-01,KZ,national,monthly,NEER,78.87861,index,nbk,2026-08-30,level,2026-08-30
 2025-11-01,KZ,national,monthly,REER,114.2761,index,nbk,2026-08-30,level,2026-08-30
+2025-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,17297.77484655,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-11-01,KZ,national,monthly,REMITTANCES_SENT,55540.770486322,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-12-01,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-30,level,2026-08-30
 2025-12-01,KZ,national,monthly,DEPOSITS_TOTAL,44457125.20502845,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-12-01,KZ,national,monthly,DEPOSIT_RATE,14.772806559284458,%,nbk,2026-08-30,level,2026-08-30
@@ -3490,6 +3705,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2025-12-01,KZ,national,monthly,NEER,79.55761,index,nbk,2026-08-30,level,2026-08-30
 2025-12-01,KZ,national,monthly,REER,115.97217,index,nbk,2026-08-30,level,2026-08-30
+2025-12-01,KZ,national,monthly,REMITTANCES_RECEIVED,20513.316510463,million KZT,nbk,2026-08-30,level,2026-08-30
+2025-12-01,KZ,national,monthly,REMITTANCES_SENT,59381.688402189,million KZT,nbk,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,AVG_WAGE,443315.0,KZT,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,BIRTHS_TOTAL,335005.0,persons,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,BUDGET_DEFICIT,-4065222.8754779,million KZT,minfin,2026-08-30,level,2026-08-30
@@ -3498,9 +3715,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,CONSTRUCTION,10846962615000.0,KZT,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,CORPORATE_TAX,4532987.45772564,million KZT,minfin,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,DEATHS_TOTAL,134735.0,persons,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,EMISSIONS,2280913.7341199997,metric tonnes,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,EMPLOYED_TOTAL,9320639.0,persons,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,117407.40095227,million KZT,minfin,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,101.9,% change vs previous period,bns,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,annual,FREIGHT_TURNOVER,512604002871.184,tonne-km,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,GDP_DEFLATOR,109.7,% change vs previous period,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,annual,GDP_INCOME_METHOD,159608552900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2025-12-31,KZ,national,quarterly,GDP_NOMINAL,159608552900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
@@ -3554,6 +3773,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,annual,IMF_GDP_PPP,993671763000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.446074,% of world total,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.343847,% of GDP,imf,2026-08-30,level,2026-08-30
+2026-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-2528960197000.0,KZT,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GOV_DEBT,24.931411,% of GDP,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,39028088847000.0,KZT,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.738868,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -3567,6 +3787,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,annual,IMF_NOMINAL_GDP,188188133626000.0,KZT,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,360455769000.0,USD,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_POPULATION,20594360.0,persons,imf,2026-08-30,level,2026-08-30
+2026-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,189.386617,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_REAL_GDP,18960618297000.0,KZT,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,27.939294,% of GDP,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.573558,%,imf,2026-08-30,level,2026-08-30
@@ -3582,6 +3803,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,230.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,monthly,NEER,78.69229,index,nbk,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,monthly,REER,116.80474,index,nbk,2026-08-30,level,2026-08-30
+2026-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,15392.881078525,million KZT,nbk,2026-08-30,level,2026-08-30
+2026-01-01,KZ,national,monthly,REMITTANCES_SENT,37885.147253329,million KZT,nbk,2026-08-30,level,2026-08-30
 2026-01-26,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-30,level,2026-08-30
 2026-02-01,KZ,national,monthly,DEPOSITS_TOTAL,46163277.62036333,million KZT,nbk,2026-08-30,level,2026-08-30
 2026-02-01,KZ,national,monthly,DEPOSIT_RATE,15.336995860868887,%,nbk,2026-08-30,level,2026-08-30
@@ -3599,6 +3822,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,230.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2026-02-01,KZ,national,monthly,NEER,80.0,index,nbk,2026-08-30,level,2026-08-30
 2026-02-01,KZ,national,monthly,REER,118.9,index,nbk,2026-08-30,level,2026-08-30
+2026-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,15422.671986291,million KZT,nbk,2026-08-30,level,2026-08-30
+2026-02-01,KZ,national,monthly,REMITTANCES_SENT,42243.33153742,million KZT,nbk,2026-08-30,level,2026-08-30
 2026-02-24,KZ,national,daily,TONIA,17.18,%,nbk,2026-08-30,level,2026-08-30
 2026-02-25,KZ,national,daily,TONIA,17.3,%,nbk,2026-08-30,level,2026-08-30
 2026-02-26,KZ,national,daily,TONIA,17.34,%,nbk,2026-08-30,level,2026-08-30
@@ -3620,6 +3845,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,340.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2026-03-01,KZ,national,monthly,NEER,83.06521,index,nbk,2026-08-30,level,2026-08-30
 2026-03-01,KZ,national,monthly,REER,123.66197,index,nbk,2026-08-30,level,2026-08-30
+2026-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,16016.74954245,million KZT,nbk,2026-08-30,level,2026-08-30
+2026-03-01,KZ,national,monthly,REMITTANCES_SENT,49355.088812281,million KZT,nbk,2026-08-30,level,2026-08-30
 2026-03-01,KZ,national,daily,TONIA,17.97,%,nbk,2026-08-30,level,2026-08-30
 2026-03-02,KZ,national,daily,TONIA,17.97,%,nbk,2026-08-30,level,2026-08-30
 2026-03-03,KZ,national,daily,TONIA,17.51,%,nbk,2026-08-30,level,2026-08-30
@@ -3673,6 +3900,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,270.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2026-04-01,KZ,national,monthly,NEER,84.81529,index,nbk,2026-08-30,level,2026-08-30
 2026-04-01,KZ,national,monthly,REER,126.46427,index,nbk,2026-08-30,level,2026-08-30
+2026-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,16253.918165772,million KZT,nbk,2026-08-30,level,2026-08-30
+2026-04-01,KZ,national,monthly,REMITTANCES_SENT,54935.409232604,million KZT,nbk,2026-08-30,level,2026-08-30
 2026-04-01,KZ,national,daily,TONIA,18.25,%,nbk,2026-08-30,level,2026-08-30
 2026-04-02,KZ,national,daily,TONIA,18.35,%,nbk,2026-08-30,level,2026-08-30
 2026-04-03,KZ,national,daily,TONIA,18.08,%,nbk,2026-08-30,level,2026-08-30
@@ -3719,6 +3948,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,330.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2026-05-01,KZ,national,monthly,NEER,83.68117,index,nbk,2026-08-30,level,2026-08-30
 2026-05-01,KZ,national,monthly,REER,125.31691,index,nbk,2026-08-30,level,2026-08-30
+2026-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,15052.325042056,million KZT,nbk,2026-08-30,level,2026-08-30
+2026-05-01,KZ,national,monthly,REMITTANCES_SENT,53534.625921444,million KZT,nbk,2026-08-30,level,2026-08-30
 2026-05-01,KZ,national,daily,TONIA,18.19,%,nbk,2026-08-30,level,2026-08-30
 2026-05-02,KZ,national,daily,TONIA,18.19,%,nbk,2026-08-30,level,2026-08-30
 2026-05-03,KZ,national,daily,TONIA,18.19,%,nbk,2026-08-30,level,2026-08-30
@@ -3761,6 +3992,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,460.0,billion KZT,nbk,2026-08-30,level,2026-08-30
 2026-06-01,KZ,national,monthly,NEER,81.56805,index,nbk,2026-08-30,level,2026-08-30
 2026-06-01,KZ,national,monthly,REER,122.99549,index,nbk,2026-08-30,level,2026-08-30
+2026-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,18330.809294514,million KZT,nbk,2026-08-30,level,2026-08-30
+2026-06-01,KZ,national,monthly,REMITTANCES_SENT,65182.523811301,million KZT,nbk,2026-08-30,level,2026-08-30
 2026-06-01,KZ,national,daily,TONIA,18.71,%,nbk,2026-08-30,level,2026-08-30
 2026-06-02,KZ,national,daily,TONIA,18.47,%,nbk,2026-08-30,level,2026-08-30
 2026-06-03,KZ,national,daily,TONIA,18.21,%,nbk,2026-08-30,level,2026-08-30
@@ -3897,6 +4130,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2027-01-01,KZ,national,annual,IMF_GDP_PPP,1060175757000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.4513,% of world total,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.777447,% of GDP,imf,2026-08-30,level,2026-08-30
+2027-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-3839076326000.0,KZT,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GOV_DEBT,26.310051,% of GDP,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,44854129069000.0,KZT,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.766928,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -3910,6 +4144,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2027-01-01,KZ,national,annual,IMF_NOMINAL_GDP,215988277105000.0,KZT,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,385965792000.0,USD,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_POPULATION,20810600.0,persons,imf,2026-08-30,level,2026-08-30
+2027-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,203.728746,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_REAL_GDP,19794928352000.0,KZT,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,27.891753,% of GDP,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.52698,%,imf,2026-08-30,level,2026-08-30
@@ -3923,6 +4158,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2028-01-01,KZ,national,annual,IMF_GDP_PPP,1113232934000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.451736,% of world total,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GOV_BALANCE,-2.018662,% of GDP,imf,2026-08-30,level,2026-08-30
+2028-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-4904685959000.0,KZT,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GOV_DEBT,27.990697,% of GDP,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,50826532344000.0,KZT,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.91909,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -3936,6 +4172,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2028-01-01,KZ,national,annual,IMF_NOMINAL_GDP,242967218792000.0,KZT,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,410770579000.0,USD,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_POPULATION,21018706.0,persons,imf,2026-08-30,level,2026-08-30
+2028-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,218.253711,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_REAL_GDP,20449915288000.0,KZT,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,28.651569,% of GDP,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.486974,%,imf,2026-08-30,level,2026-08-30
@@ -3949,6 +4186,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2029-01-01,KZ,national,annual,IMF_GDP_PPP,1173771528000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.453779,% of world total,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.966799,% of GDP,imf,2026-08-30,level,2026-08-30
+2029-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-5341162087000.0,KZT,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GOV_DEBT,29.515861,% of GDP,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,56505451413000.0,KZT,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.807245,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -3962,6 +4200,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2029-01-01,KZ,national,annual,IMF_NOMINAL_GDP,271566238867000.0,KZT,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,439139761000.0,USD,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_POPULATION,21228894.0,persons,imf,2026-08-30,level,2026-08-30
+2029-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,231.362094,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_REAL_GDP,21185302155000.0,KZT,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,29.906639,% of GDP,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.439061,%,imf,2026-08-30,level,2026-08-30
@@ -3975,6 +4214,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2030-01-01,KZ,national,annual,IMF_GDP_PPP,1238352763000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.456218,% of world total,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.739838,% of GDP,imf,2026-08-30,level,2026-08-30
+2030-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-5202603556000.0,KZT,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GOV_DEBT,30.828005,% of GDP,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,62595095080000.0,KZT,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.932849,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -3988,6 +4228,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2030-01-01,KZ,national,annual,IMF_NOMINAL_GDP,299028075543000.0,KZT,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,468832024000.0,USD,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_POPULATION,21441182.0,persons,imf,2026-08-30,level,2026-08-30
+2030-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,241.47245,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_REAL_GDP,21947629769000.0,KZT,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,30.55262,% of GDP,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.395838,%,imf,2026-08-30,level,2026-08-30
@@ -4001,6 +4242,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2031-01-01,KZ,national,annual,IMF_GDP_PPP,1306264163000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GDP_WORLD_SHARE_PPP,0.458749,% of world total,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.716655,% of GDP,imf,2026-08-30,level,2026-08-30
+2031-01-01,KZ,national,annual,IMF_GOV_BALANCE_LEVEL,-5601896717000.0,KZT,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GOV_DEBT,32.106012,% of GDP,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE,69450172320000.0,KZT,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.282434,% of GDP,imf,2026-08-30,level,2026-08-30
@@ -4014,6 +4256,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2031-01-01,KZ,national,annual,IMF_NOMINAL_GDP,326326260159000.0,KZT,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_NOMINAL_GDP_USD,501684006000.0,USD,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_POPULATION,21655594.0,persons,imf,2026-08-30,level,2026-08-30
+2031-01-01,KZ,national,annual,IMF_PPP_EXCHANGE_RATE,249.816438,KZT per international dollar,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_REAL_GDP,22740701871000.0,KZT,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,31.123266,% of GDP,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.352974,%,imf,2026-08-30,level,2026-08-30

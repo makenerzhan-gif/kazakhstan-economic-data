@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T22:11:58.063668
+Run timestamp: 2026-08-30T22:21:52.321934
 Unified dataset updated: True
 Tests passed: True
 
@@ -145,6 +145,12 @@ Tests passed: True
 - **bns/DEATHS_TOTAL** — fetch+validate+process: ok (downloaded=26, processed=26)
 - **bns/HOUSING_COMMISSIONED** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **bns/PPI** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **bns/WHOLESALE_TRADE** — fetch+validate+process: ok (downloaded=25, processed=25)
+  - warning: Unexpected jump of 53.2% between 2003-12-31 (1565128050000.0) and 2004-12-31 (2398103407000.0).
+- **bns/RETAIL_TRADE_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **bns/EMISSIONS** — fetch+validate+process: ok (downloaded=13, processed=13)
+- **bns/FREIGHT_TURNOVER** — fetch+validate+process: ok (downloaded=9, processed=9)
+- **bns/PASSENGER_TURNOVER** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **nbk/BASE_RATE** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Gap of 49 days between 2024-10-14 and 2024-12-02 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2024-12-02 and 2025-01-20 is outside expected range for frequency=daily (1-4d).
@@ -189,6 +195,10 @@ Tests passed: True
   - warning: Unexpected jump of 51.8% between 2024-12-01 (635.0) and 2025-01-01 (306.0).
   - warning: Unexpected jump of 79.7% between 2025-01-01 (306.0) and 2025-02-01 (550.0).
 - **nbk/KASE_USD_VOLUME** — fetch+validate+process: ok (downloaded=20, processed=20)
+- **nbk/REMITTANCES_SENT** — fetch+validate+process: ok (downloaded=58, processed=58)
+- **nbk/REMITTANCES_RECEIVED** — fetch+validate+process: ok (downloaded=58, processed=58)
+  - warning: Unexpected jump of 50.1% between 2021-12-01 (27253.83888086) and 2022-01-01 (13594.67906766).
+  - warning: Unexpected jump of 105.1% between 2022-03-01 (25583.625044329) and 2022-04-01 (52467.054826664).
 - **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)
@@ -448,3 +458,23 @@ Tests passed: True
   - warning: Unexpected jump of 1662.2% between 1992-01-01 (0.013482) and 1993-01-01 (0.237583).
   - warning: Unexpected jump of 1402.0% between 1993-01-01 (0.237583) and 1994-01-01 (3.568466).
   - warning: Unexpected jump of 176.4% between 1994-01-01 (3.568466) and 1995-01-01 (9.862497).
+- **imf/IMF_GOV_BALANCE_LEVEL** — fetch+validate+process: ok (downloaded=30, processed=30)
+  - warning: Unexpected jump of 153.7% between 2002-01-01 (72651331000.0) and 2003-01-01 (184296769000.0).
+  - warning: Unexpected jump of 139.1% between 2004-01-01 (192970091000.0) and 2005-01-01 (461337688000.0).
+  - warning: Unexpected jump of 69.4% between 2005-01-01 (461337688000.0) and 2006-01-01 (781618891000.0).
+  - warning: Unexpected jump of 70.1% between 2007-01-01 (659761723000.0) and 2008-01-01 (196991013000.0).
+  - warning: Unexpected jump of 214.7% between 2008-01-01 (196991013000.0) and 2009-01-01 (-225869840000.0).
+  - warning: Unexpected jump of 241.9% between 2009-01-01 (-225869840000.0) and 2010-01-01 (320621004000.0).
+  - warning: Unexpected jump of 411.9% between 2010-01-01 (320621004000.0) and 2011-01-01 (1641213908000.0).
+  - warning: Unexpected jump of 359.9% between 2014-01-01 (984693820000.0) and 2015-01-01 (-2559056190000.0).
+  - warning: Unexpected jump of 168.7% between 2017-01-01 (-2319534930000.0) and 2018-01-01 (1594674728000.0).
+  - warning: Unexpected jump of 124.8% between 2018-01-01 (1594674728000.0) and 2019-01-01 (-396017997000.0).
+  - warning: Unexpected jump of 1155.4% between 2019-01-01 (-396017997000.0) and 2020-01-01 (-4971547795000.0).
+  - warning: Unexpected jump of 102.6% between 2021-01-01 (-4169079555000.0) and 2022-01-01 (109348717000.0).
+  - warning: Unexpected jump of 1642.8% between 2022-01-01 (109348717000.0) and 2023-01-01 (-1687050564000.0).
+  - warning: Unexpected jump of 178.3% between 2023-01-01 (-1687050564000.0) and 2024-01-01 (-4694277577000.0).
+  - warning: Unexpected jump of 51.8% between 2026-01-01 (-2528960197000.0) and 2027-01-01 (-3839076326000.0).
+- **imf/IMF_PPP_EXCHANGE_RATE** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 1220.1% between 1992-01-01 (0.020919) and 1993-01-01 (0.276147).
+  - warning: Unexpected jump of 1487.2% between 1993-01-01 (0.276147) and 1994-01-01 (4.383024).
+  - warning: Unexpected jump of 155.5% between 1994-01-01 (4.383024) and 1995-01-01 (11.200008).

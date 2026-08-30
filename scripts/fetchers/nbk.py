@@ -820,3 +820,67 @@ def fetch_kase_usd_volume() -> tuple[list[dict], dict]:
                 "across all currency pairs.",
     }
     return records, manifest
+
+
+# formId=408, "International remittances by IMTS (by amounts)". Found 2026-08-30 via the
+# same categories endpoint. Multi-dimensional (imts=money transfer system x
+# money_transfer_sign=sent/received), but imts='Total' is NBK's own clean pre-aggregated row
+# across all money transfer systems -- confirmed present and usable, unlike the loan/rate
+# forms that had no such row at all.
+REMITTANCES_FORM_ID = "408"
+
+
+def _fetch_remittances(sign: str, indicator_id: str) -> tuple[list[dict], dict]:
+    all_rows: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                             params={"formId": REMITTANCES_FORM_ID, "page": str(page), "pageSize": "500"},
+                             timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        all_rows.extend(data["rows"])
+        if len(all_rows) >= data["totalRows"]:
+            break
+        page += 1
+
+    today = date.today()
+    content = json.dumps(all_rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, indicator_id, today, "json", content)
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={REMITTANCES_FORM_ID}",
+    })
+
+    matching = [r for r in all_rows if r.get("imts") == "Total" and r.get("money_transfer_sign") == sign]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+                f"WHAT CHANGED: no rows found with imts='Total', money_transfer_sign={sign!r}",
+                f"ACTION REQUIRED: inspect formId={REMITTANCES_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in matching], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={REMITTANCES_FORM_ID}",
+        "dataset_id": f"formId={REMITTANCES_FORM_ID},imts=Total,money_transfer_sign={sign}",
+        "note": "Million KZT. Total across all international money transfer systems (MoneyGram, "
+                "Unistream, Contact, Golden Crown, UPT, and others), via IMTS operators only -- "
+                "does not capture remittances through other channels (e.g. bank wire transfers).",
+    }
+    return records, manifest
+
+
+def fetch_remittances_sent() -> tuple[list[dict], dict]:
+    """Outbound international money transfers via IMTS operators, million
+    KZT, monthly. Verified live 2026-08-30: 58 rows, all unique dates,
+    ~54-65 bln KZT/month recently."""
+    return _fetch_remittances("money transfers sent", "REMITTANCES_SENT")
+
+
+def fetch_remittances_received() -> tuple[list[dict], dict]:
+    """Inbound international money transfers via IMTS operators, million
+    KZT, monthly. Verified live 2026-08-30: 58 rows, all unique dates,
+    ~15-18 bln KZT/month recently (consistently below REMITTANCES_SENT)."""
+    return _fetch_remittances("money transfers received", "REMITTANCES_RECEIVED")

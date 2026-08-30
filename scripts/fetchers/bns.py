@@ -992,3 +992,95 @@ def fetch_ppi() -> tuple[list[dict], dict]:
         measure_id="1", dic_ids="67,848,2513,2854,3068",
         terms="741880,2695732,4150464,15698719,18716910",
     )
+
+
+def fetch_wholesale_trade() -> tuple[list[dict], dict]:
+    """Wholesale trade turnover, value terms, KZT, annual -- companion to
+    RETAIL_TRADE. Taldau indexId 702020 (code 171101, "Объем оптовой торговли
+    в стоимостном выражении"), found via the same site search technique as
+    RETAIL_TRADE. Same 3-dictionary shape (region/ownership form/goods type),
+    same "Всего" terms. Verified live 2026-08-30: ~31.1 trillion KZT (2021)
+    to ~47.2 trillion KZT (2024). Cross-checked: wholesale/retail ratio for
+    2024 (47.164T / 23.559T ~= 2.0) matches the ~66%/33% wholesale/retail
+    split for Kazakhstan's domestic trade sector cited in independent BNS
+    commentary found during RETAIL_TRADE's own research.
+    """
+    return _fetch_taldau_annual_index(
+        "702020", "WHOLESALE_TRADE",
+        note="Wholesale trade turnover, value terms, KZT. Taldau indexId 702020.",
+        measure_id="1", dic_ids="68,59,676",
+        terms="741880,741907,741894",
+    )
+
+
+def fetch_retail_trade_volume_index() -> tuple[list[dict], dict]:
+    """Physical volume index of retail trade, % of prior period -- companion
+    to RETAIL_TRADE (which is in value/nominal terms). Taldau indexId 702041
+    (code 171203, "Индекс физического объема розничной торговли"). Classified
+    across 6 dictionaries; params recovered via the live ExtJS component
+    tree. Verified live 2026-08-30: 105-111% range (2021-2024), consistent
+    with the ~107% figure cited in independent BNS commentary for a recent
+    comparable period.
+    """
+    return _fetch_taldau_annual_index(
+        "702041", "RETAIL_TRADE_VOLUME_INDEX",
+        note="Physical volume index of retail trade, % of prior period. Taldau indexId 702041.",
+        measure_id="7", dic_ids="68,776,676,848,853,2985",
+        terms="741880,741917,741894,2695732,2658135,18121059",
+    )
+
+
+def fetch_emissions() -> tuple[list[dict], dict]:
+    """Volume of atmospheric pollutant emissions, metric tonnes, annual.
+    Taldau indexId 705070 (code 157502, "Объем выбросов загрязняющих веществ
+    в атмосферу"). Classified across 3 dictionaries; params recovered via the
+    live ExtJS component tree. IMPORTANT UNIT NOTE: the raw API value is in
+    KILOGRAMS, not the metric tonnes shown on Taldau's own human-facing
+    summary page -- confirmed by comparing the category page's displayed 2025
+    figure (2,280,913.734 tonnes) against this API call's raw 2025 value
+    (2,280,913,734.12), an exact /1000 relationship. Converted to tonnes here
+    to match the officially displayed unit, the same pattern as Minfin's
+    thousand-KZT-to-million-KZT conversion for GOV_DEBT.
+    """
+    records, manifest = _fetch_taldau_annual_index(
+        "705070", "EMISSIONS",
+        note="Volume of atmospheric pollutant emissions, metric tonnes (converted from the API's "
+             "raw kg values -- see fetch_emissions docstring). Taldau indexId 705070.",
+        measure_id="11", dic_ids="68,1212,3042",
+        terms="741880,741885,16194312",
+    )
+    for r in records:
+        r["value"] = r["value"] / 1000.0
+    manifest["note"] = manifest.get("note", "") + " Values converted from kg (source's raw unit) to metric tonnes."
+    return records, manifest
+
+
+def fetch_freight_turnover() -> tuple[list[dict], dict]:
+    """Freight turnover, tonne-km, annual -- companion to PASSENGER_TURNOVER.
+    Taldau indexId 702179 (code 181104, "Грузооборот"). Classified across 4
+    dictionaries; params recovered via the live ExtJS component tree.
+    Verified live 2026-08-30: ~504-597 billion tonne-km (2022-2025), a
+    plausible order of magnitude for Kazakhstan's freight transport sector.
+    """
+    return _fetch_taldau_annual_index(
+        "702179", "FREIGHT_TURNOVER",
+        note="Freight turnover, tonne-km. Taldau indexId 702179.",
+        measure_id="43", dic_ids="68,1214,59,4309",
+        terms="741880,741335,741907,19805998",
+    )
+
+
+def fetch_passenger_turnover() -> tuple[list[dict], dict]:
+    """Passenger turnover, passenger-km, annual -- companion to
+    FREIGHT_TURNOVER. Taldau indexId 702177 (code 181102, "Пассажирооборот").
+    Classified across 7 dictionaries; params recovered via the live ExtJS
+    component tree. Verified live 2026-08-30: ~247-267 billion passenger-km
+    (2014-2016), a plausible order of magnitude for Kazakhstan's passenger
+    transport sector.
+    """
+    return _fetch_taldau_annual_index(
+        "702177", "PASSENGER_TURNOVER",
+        note="Passenger turnover, passenger-km. Taldau indexId 702177.",
+        measure_id="41", dic_ids="67,1214,90,59,230,681,2984",
+        terms="741880,741335,741927,741907,741906,808076,17901749",
+    )

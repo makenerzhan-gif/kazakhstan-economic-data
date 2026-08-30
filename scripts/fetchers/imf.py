@@ -269,3 +269,26 @@ def fetch_cpi_index() -> tuple[list[dict], dict]:
     the % change of this same underlying series). Verified live 2026-08-30:
     indicator code PCPI."""
     return _fetch_weo_series("IMF_CPI_INDEX", "WEO", "IMF.RES", "9.0.0", "KAZ", "PCPI")
+
+
+def fetch_gov_balance_level() -> tuple[list[dict], dict]:
+    """WEO general government net lending/borrowing, national currency level
+    (companion to IMF_GOV_BALANCE, which is % of GDP). Verified live
+    2026-08-30: indicator code GGXCNL. Cross-checked: 2031 value
+    (-5,601,896,717,000 KZT) / IMF_NOMINAL_GDP's 2031 value
+    (326,326,260,159,000 KZT) = -1.717%, matching IMF_GOV_BALANCE's own 2031
+    value (-1.717%) almost exactly. (Tried BM/BX -- WEO imports/exports of
+    goods, USD level -- first; both returned zero populated rows for
+    Kazakhstan, so neither was forced in.)"""
+    return _fetch_weo_series("IMF_GOV_BALANCE_LEVEL", "WEO", "IMF.RES", "9.0.0", "KAZ", "GGXCNL")
+
+
+def fetch_ppp_exchange_rate() -> tuple[list[dict], dict]:
+    """WEO implied PPP conversion rate, national currency per international
+    dollar. Verified live 2026-08-30: indicator code PPPEX. Sanity-checked:
+    2031 value (~249.8 KZT/int'l$) sits well below the market exchange rate
+    (~486 KZT/USD, per NBK's own July 2026 reference rate) -- the expected
+    direction for a developing economy, where a lower domestic price level
+    means fewer tenge are needed to buy the same PPP-comparable basket than
+    the nominal market rate would suggest."""
+    return _fetch_weo_series("IMF_PPP_EXCHANGE_RATE", "WEO", "IMF.RES", "9.0.0", "KAZ", "PPPEX")

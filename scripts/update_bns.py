@@ -59,6 +59,11 @@ FETCHERS = {
     "DEATHS_TOTAL": bns_fetchers.fetch_deaths_total,
     "HOUSING_COMMISSIONED": bns_fetchers.fetch_housing_commissioned,
     "PPI": bns_fetchers.fetch_ppi,
+    "WHOLESALE_TRADE": bns_fetchers.fetch_wholesale_trade,
+    "RETAIL_TRADE_VOLUME_INDEX": bns_fetchers.fetch_retail_trade_volume_index,
+    "EMISSIONS": bns_fetchers.fetch_emissions,
+    "FREIGHT_TURNOVER": bns_fetchers.fetch_freight_turnover,
+    "PASSENGER_TURNOVER": bns_fetchers.fetch_passenger_turnover,
 }
 
 INDICATOR_IDS = [
@@ -72,6 +77,8 @@ INDICATOR_IDS = [
     "CAPITAL_CONSUMPTION", "RETAIL_TRADE",
     "CONSTRUCTION", "POPULATION_BNS", "REAL_WAGE_INDEX", "EMPLOYED_TOTAL",
     "BIRTHS_TOTAL", "DEATHS_TOTAL", "HOUSING_COMMISSIONED", "PPI",
+    "WHOLESALE_TRADE", "RETAIL_TRADE_VOLUME_INDEX", "EMISSIONS",
+    "FREIGHT_TURNOVER", "PASSENGER_TURNOVER",
 ]
 
 

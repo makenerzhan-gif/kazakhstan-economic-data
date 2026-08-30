@@ -410,3 +410,43 @@ average) -- the two behaviors distinguished explicitly rather than assumed ident
 because they share a fetcher.
 
 **99/99 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-30 — seventh scale-up batch: 99 -> 108 indicators
+Crossed the master task's 100-indicator mark this batch. Proposed BNS trade/transport/
+environment companions, NBK remittances, and IMF level-companions up front; agriculture
+output and education enrollment were searched for but not found, left unconnected.
+
+**BNS (5), all via Taldau site search + live-ExtJS-tree param recovery (by now a routine
+mechanism):**
+- WHOLESALE_TRADE (702020) -- direct companion to RETAIL_TRADE, same 3-dictionary shape.
+  Cross-checked: 2024 wholesale/retail ratio (~2.0) matches the ~66%/33% split cited in
+  independent BNS commentary found during RETAIL_TRADE's own research.
+- RETAIL_TRADE_VOLUME_INDEX (702041) -- physical volume companion to RETAIL_TRADE's value
+  series.
+- EMISSIONS (705070) -- required a real unit correction: the raw API value is in
+  KILOGRAMS, not the metric tonnes shown on Taldau's own human-facing summary page.
+  Confirmed via an exact /1000 relationship between the two, then converted in the fetcher
+  (only on the processed/derived values, raw bytes archived untouched, same pattern as
+  Minfin's thousand-to-million-KZT conversion).
+- FREIGHT_TURNOVER (702179) and PASSENGER_TURNOVER (702177) -- transport sector companions.
+
+**NBK (2), both via formId=408 ("International remittances by IMTS"):** REMITTANCES_SENT
+and REMITTANCES_RECEIVED. Unlike the loan/rate forms from earlier batches, this form
+genuinely has an `imts='Total'` pre-aggregated row across all money transfer systems
+(MoneyGram, Unistream, Contact, Golden Crown, UPT) -- confirmed present rather than assumed.
+Government securities forms (17, 16) were also checked this batch and found to have the same
+no-aggregate problem as the loan forms -- not connected.
+
+**IMF WEO (2), level-value companions to ratios already connected:** IMF_GOV_BALANCE_LEVEL
+(GGXCNL, national-currency level behind IMF_GOV_BALANCE's % of GDP) and
+IMF_PPP_EXCHANGE_RATE (PPPEX, implied PPP conversion rate). Tried BM/BX (imports/exports of
+goods, USD level) first; both returned zero populated rows for Kazakhstan, dropped rather
+than forced in.
+
+**Sanity-checked before committing:** GGXCNL/NGDP reproduces IMF_GOV_BALANCE's 2031 value
+almost exactly. PPPEX (~250 KZT/int'l$) sits well below the market exchange rate (~486
+KZT/USD) -- the expected direction for a developing economy's PPP discount. REMITTANCES_SENT
+consistently exceeds REMITTANCES_RECEIVED across all 58 months, a stable and plausible
+pattern rather than noise.
+
+**108/108 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

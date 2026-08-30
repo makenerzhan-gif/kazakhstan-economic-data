@@ -402,6 +402,66 @@ agencies:
           December key is a genuine year-to-date SUM here (monotonically non-decreasing
           within 2025: Jan=38 ... Dec=986.2). Values: 441.2 (2014) to 986.2 (2025)
           m2/1000 population. fetch_housing_commissioned.
+      WHOLESALE_TRADE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 702020
+        format: json
+        notes: >
+          2026-08-30. code 171101, "Объем оптовой торговли в стоимостном выражении" --
+          companion to RETAIL_TRADE, found the same way (site search). Same 3-dictionary
+          shape (measure_id=1, dicIds=68,59,676, terms=741880,741907,741894). Verified live:
+          ~31.1T KZT (2021) to ~47.2T KZT (2024). Cross-checked: wholesale/retail ratio for
+          2024 (~2.0) matches the ~66%/33% wholesale/retail split cited in independent BNS
+          commentary found during RETAIL_TRADE's research. fetch_wholesale_trade.
+      RETAIL_TRADE_VOLUME_INDEX:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 702041
+        format: json
+        notes: >
+          2026-08-30. code 171203, "Индекс физического объема розничной торговли" --
+          physical volume companion to RETAIL_TRADE (value terms). Classified across 6
+          dictionaries; params recovered via the live ExtJS component tree (measure_id=7,
+          dicIds=68,776,676,848,853,2985, terms=741880,741917,741894,2695732,2658135,
+          18121059). Verified live: 105-111% range (2021-2024), consistent with the ~107%
+          figure cited in independent BNS commentary. fetch_retail_trade_volume_index.
+      EMISSIONS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 705070
+        format: json
+        notes: >
+          2026-08-30. code 157502, "Объем выбросов загрязняющих веществ в атмосферу".
+          Classified across 3 dictionaries; params recovered via live ExtJS tree
+          (measure_id=11, dicIds=68,1212,3042, terms=741880,741885,16194312). IMPORTANT: raw
+          API values are in KILOGRAMS, not the metric tonnes shown on Taldau's own summary
+          page -- confirmed via exact /1000 match between the category page's displayed 2025
+          figure (2,280,913.734 t) and this API's raw 2025 value (2,280,913,734.12).
+          Converted to tonnes in the fetcher to match the officially displayed unit.
+          fetch_emissions.
+      FREIGHT_TURNOVER:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 702179
+        format: json
+        notes: >
+          2026-08-30. code 181104, "Грузооборот". Classified across 4 dictionaries; params
+          recovered via live ExtJS tree (measure_id=43, dicIds=68,1214,59,4309,
+          terms=741880,741335,741907,19805998). Verified live: ~504-597 billion tonne-km
+          (2022-2025), plausible for Kazakhstan's freight transport sector.
+          fetch_freight_turnover.
+      PASSENGER_TURNOVER:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 702177
+        format: json
+        notes: >
+          2026-08-30. code 181102, "Пассажирооборот" -- companion to FREIGHT_TURNOVER.
+          Classified across 7 dictionaries; params recovered via live ExtJS tree
+          (measure_id=41, dicIds=67,1214,90,59,230,681,2984,
+          terms=741880,741335,741927,741907,741906,808076,17901749). Verified live:
+          ~247-267 billion passenger-km (2014-2016). fetch_passenger_turnover.
       GDP_INCOME_METHOD:
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
@@ -734,6 +794,26 @@ agencies:
           turnover across all pairs. Verified live: 20 rows, 2025-01 to 2026-08, all unique
           dates, values $6.7-9.7 billion/month -- plausible for Kazakhstan's FX market.
           fetch_kase_usd_volume.
+      REMITTANCES_SENT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=408"
+        format: json
+        notes: >
+          2026-08-30. formId=408 ("International remittances by IMTS (by amounts)"), found
+          via the same categories endpoint. Multi-dimensional (imts=money transfer system x
+          money_transfer_sign=sent/received), but imts='Total' is NBK's own clean
+          pre-aggregated row across all systems (MoneyGram, Unistream, Contact, Golden
+          Crown, UPT, others) -- unlike the loan/rate forms, this one genuinely has a total.
+          Verified live: 58 rows for money_transfer_sign='money transfers sent', all unique
+          dates, ~54-65 bln KZT/month recently. fetch_remittances_sent.
+      REMITTANCES_RECEIVED:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=408"
+        format: json
+        notes: >
+          2026-08-30. Same form and mechanism as REMITTANCES_SENT, money_transfer_sign=
+          'money transfers received'. Verified live: 58 rows, all unique dates, ~15-18 bln
+          KZT/month recently -- consistently below REMITTANCES_SENT. fetch_remittances_received.
     publication_calendar_url: "https://nationalbank.kz/ru/statisticalinformation/grafik-vypuska-statisticheskoy-informacii"
     publication_calendar_notes: >
       Verified live HTML page, filterable by year/category, with an XLSX export button
@@ -1299,3 +1379,32 @@ agencies:
         notes: >
           2026-08-30. CPI index level, companion to IMF_INFLATION (% change of this same
           series). Standard WEO code, verified live (40 rows returned).
+      IMF_GOV_BALANCE_LEVEL:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: GGXCNL
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.GGXCNL"
+        notes: >
+          2026-08-30. National currency level companion to IMF_GOV_BALANCE (% GDP).
+          Cross-checked: 2031 value (-5,601,896,717,000 KZT) / IMF_NOMINAL_GDP's 2031 value
+          = -1.717%, matching IMF_GOV_BALANCE's own 2031 value (-1.717%) almost exactly.
+          Tried BM/BX (imports/exports of goods, USD level) first; both returned zero
+          populated rows for Kazakhstan, so neither was forced in.
+      IMF_PPP_EXCHANGE_RATE:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: PPPEX
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.PPPEX"
+        notes: >
+          2026-08-30. Implied PPP conversion rate, KZT per international dollar. Sanity-
+          checked: 2031 value (~249.8) sits well below the market exchange rate (~486
+          KZT/USD, NBK's own July 2026 reference rate) -- expected direction for a
+          developing economy with a lower domestic price level.
