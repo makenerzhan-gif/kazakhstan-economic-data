@@ -1135,6 +1135,50 @@ agencies:
         notes: >
           2026-08-30. Same document set and mechanism as GOV_DEBT_DOMESTIC -- see its notes
           for the full explanation, including the GOV_DEBT scope caveat. fetch_gov_debt_external.
+      GG_TAXES:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "General government data"
+        target_row_code: 11
+        format: xlsx
+        frequency: quarterly
+        notes: >
+          2026-08-30. Found while researching individual income tax / property tax / customs
+          duties (none of which turned out to be broken out here either -- 'Taxes' is a
+          single aggregate row in this file, not split by type). Document: "General
+          government data for the {N} quarter of {YYYY} (consolidated budget according to
+          IMF methodology)" under directions=448 -- a genuinely BROADER fiscal scope than
+          GOV_REVENUE/GOV_EXPENDITURE/TAX_REVENUE/BUDGET_DEFICIT above (all republican-
+          budget-only): this is IMF GFS-methodology general government (republican + local +
+          social security funds combined). Only ONE such document currently exists in the
+          listing (unlike GOV_DEBT's 23 quarterly snapshots), but it already contains all 4
+          quarters of its year as separate columns ('2025/1'..'2025/4'), so no historical
+          backfill across documents is needed for the current year. Values converted from
+          the source's billion-KZT unit to million KZT. Cross-checked: summing all 4 2025
+          quarters (~23.46 trillion KZT) exceeds TAX_REVENUE's republican-only 2025 annual
+          figure (~14.46 trillion KZT), the expected direction given the broader scope.
+          fetch_gg_taxes.
+      GG_SOCIAL_CONTRIBUTIONS:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "General government data"
+        target_row_code: 12
+        format: xlsx
+        frequency: quarterly
+        notes: >
+          2026-08-30. Same document and mechanism as GG_TAXES, row code 12 ('Social
+          contributions'). fetch_gg_social_contributions.
+      GG_CASH_SURPLUS_DEFICIT:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "General government data"
+        target_row_code: "CSD"
+        format: xlsx
+        frequency: quarterly
+        notes: >
+          2026-08-30. Same document and mechanism as GG_TAXES, row code 'CSD' ('Cash surplus
+          / deficit [1-2-31 = 1-2M]') -- a broader fiscal balance measure than BUDGET_DEFICIT
+          (republican-only). fetch_gg_cash_surplus_deficit.
       GOV_HEALTH_SPENDING:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"

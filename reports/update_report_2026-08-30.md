@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T23:03:45.464942
+Run timestamp: 2026-08-30T23:12:51.480313
 Unified dataset updated: True
 Tests passed: True
 
@@ -263,6 +263,11 @@ Tests passed: True
   - warning: Unexpected jump of 89.3% between 2021-10-01 (10664470.080022218) and 2024-07-01 (20186100.00286501).
 - **minfin/GOV_DEBT_EXTERNAL** — fetch+validate+process: ok (downloaded=11, processed=11)
   - warning: Gap of 1004 days between 2021-10-01 and 2024-07-01 is outside expected range for frequency=quarterly (80-100d).
+- **minfin/GG_TAXES** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/GG_SOCIAL_CONTRIBUTIONS** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/GG_CASH_SURPLUS_DEFICIT** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 473.1% between 2025-03-31 (-337893.34243903897) and 2025-06-30 (-1936306.6720745338).
+  - warning: Unexpected jump of 225.0% between 2025-06-30 (-1936306.6720745338) and 2025-09-30 (2420012.540493233).
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% between 1995-01-01 (-8.2) and 1996-01-01 (0.5).
   - warning: Unexpected jump of 240.0% between 1996-01-01 (0.5) and 1997-01-01 (1.7).

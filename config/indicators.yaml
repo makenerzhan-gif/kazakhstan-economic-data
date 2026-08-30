@@ -1183,3 +1183,30 @@ indicators:
     unit: "%"
     category: production
     source_status: confirmed
+
+  - id: GG_TAXES
+    name_ru: "Налоговые поступления сектора государственного управления (МВФ методология)"
+    name_en: "General Government Tax Revenue (IMF GFS Methodology)"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GG_SOCIAL_CONTRIBUTIONS
+    name_ru: "Социальные отчисления сектора государственного управления (МВФ методология)"
+    name_en: "General Government Social Contributions (IMF GFS Methodology)"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GG_CASH_SURPLUS_DEFICIT
+    name_ru: "Кассовый профицит/дефицит сектора государственного управления (МВФ методология)"
+    name_en: "General Government Cash Surplus/Deficit (IMF GFS Methodology)"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed

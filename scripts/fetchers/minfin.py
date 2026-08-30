@@ -498,3 +498,144 @@ def fetch_non_oil_budget_deficit() -> tuple[list[dict], dict]:
     """Non-oil budget deficit -- a standard, KZ-specific fiscal indicator given the economy's
     oil-revenue dependence (excludes National Fund transfers from the balance)."""
     return _fetch_dynamics_row("NON-OIL BUDGET DEFICIT", "NON_OIL_BUDGET_DEFICIT")
+
+
+# ---------------------------------------------------------------------------
+# "General government data ... (consolidated budget according to IMF methodology)":
+# a genuinely different, BROADER fiscal scope than GOV_REVENUE/GOV_EXPENDITURE/
+# TAX_REVENUE/BUDGET_DEFICIT above, which are all republican-budget-only. This is
+# IMF GFS-methodology general government (republican + local + social security
+# funds), published quarterly. Found 2026-08-30 while researching individual
+# income tax / property tax / customs duties (none of which turned out to be
+# broken out in this file either -- 'Taxes' here is a single aggregate row, not
+# split by type). Discovered under directions=448, title "General government
+# data for the {N} quarter of {YYYY} (consolidated budget according to IMF
+# methodology)" -- only ONE such document currently exists in the listing
+# (unlike GOV_DEBT's 23 quarterly snapshots), but that single document already
+# contains all 4 quarters of its year as separate columns (period labels like
+# '2025/1'..'2025/4'), not just the one quarter named in its title -- so no
+# historical backfill across multiple documents is needed for the current year.
+# Values in the source are billions of KZT; converted to million KZT here for
+# consistency with GOV_REVENUE/GOV_EXPENDITURE/GOV_DEBT.
+# ---------------------------------------------------------------------------
+GG_TITLE_MARKER = "General government data"
+GG_QUARTER_HEADER_RE = re.compile(r"^(\d{4})/(\d)$")
+GG_QUARTER_END_MONTH_DAY = {1: (3, 31), 2: (6, 30), 3: (9, 30), 4: (12, 31)}
+
+
+def _find_gg_document() -> dict:
+    docs = _list_documents(directions=BUDGET_DIRECTION_ID)
+    for d in docs:
+        title = d.get("title") or ""
+        if GG_TITLE_MARKER in title:
+            return d
+    raise validation.StructuralChangeError(
+        "\n".join([
+            "STRUCTURAL CHANGE DETECTED in minfin/GG_* indicators",
+            f"WHAT CHANGED: no document title under directions={BUDGET_DIRECTION_ID} contains {GG_TITLE_MARKER!r}",
+            "EXPECTED: a 'General government data ... (consolidated budget according to IMF methodology)' document",
+            "ACTUAL: not found in the current listing",
+            f"ACTION REQUIRED: inspect {LISTING_URL}?directions={BUDGET_DIRECTION_ID} and update scripts/fetchers/minfin.py",
+        ])
+    )
+
+
+def _fetch_gg_row(row_code, indicator_id: str) -> tuple[list[dict], dict]:
+    doc = _find_gg_document()
+    file_path = doc["full_text"][0]["document"]
+    content = _download(file_path)
+
+    today = date.today()
+    ext = "xls" if file_path.lower().endswith(".xls") else "xlsx"
+    raw_store.save_raw_bytes(SOURCE, indicator_id, today, ext, content)
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "source_document_id": doc["id"], "source_title": doc.get("title"),
+        "source_url": GOV_KZ_BASE + file_path,
+    })
+
+    kind, wb = _open_workbook(content, file_path)
+    sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
+    rows = list(_iter_rows(kind, wb, sheet_names[0]))
+
+    header_row = next((r for r in rows if r and any(
+        isinstance(c, str) and GG_QUARTER_HEADER_RE.match(c.strip()) for c in r if c
+    )), None)
+    target_row = next((r for r in rows if r and r[0] == row_code), None)
+    if header_row is None or target_row is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: could not find header row (quarter labels like '2025/1') or target row (code {row_code!r})",
+                "EXPECTED: both present in the sheet",
+                f"ACTUAL: header_row found={header_row is not None}, target_row found={target_row is not None}",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path} and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    records = []
+    for col_idx, header_cell in enumerate(header_row):
+        if not isinstance(header_cell, str):
+            continue
+        m = GG_QUARTER_HEADER_RE.match(header_cell.strip())
+        if not m:
+            continue
+        year, quarter = int(m.group(1)), int(m.group(2))
+        if quarter not in GG_QUARTER_END_MONTH_DAY:
+            continue
+        value = target_row[col_idx] if col_idx < len(target_row) else None
+        if value in (None, ""):
+            continue
+        month, day = GG_QUARTER_END_MONTH_DAY[quarter]
+        records.append({"date": f"{year:04d}-{month:02d}-{day:02d}", "value": float(value) * 1000.0})
+
+    if not records:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                "WHAT CHANGED: zero quarter/value pairs extracted",
+                "ACTION REQUIRED: inspect the sheet layout and update scripts/fetchers/minfin.py",
+            ])
+        )
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "quarterly",
+        "source_url": GOV_KZ_BASE + file_path,
+        "dataset_id": f"gov.kz-doc-{doc['id']}",
+        "note": (
+            "Million KZT (converted from the source's billion-KZT unit). General government "
+            "(IMF GFS methodology: republican + local + social security funds combined), "
+            "BROADER scope than GOV_REVENUE/GOV_EXPENDITURE/TAX_REVENUE/BUDGET_DEFICIT above, "
+            "which are all republican-budget-only -- do not expect these to reconcile."
+        ),
+    }
+    return records, manifest
+
+
+def fetch_gg_taxes() -> tuple[list[dict], dict]:
+    """General government tax revenue (IMF GFS methodology, all levels of
+    government combined), million KZT, quarterly. Row code 11 ('Taxes').
+    Verified live 2026-08-30: 4 quarters of 2025, ~5.15-7.02 trillion KZT --
+    larger than the republican-budget-only TAX_REVENUE for the same periods,
+    as expected since this also includes local and social-security-fund tax
+    collections."""
+    return _fetch_gg_row(11, "GG_TAXES")
+
+
+def fetch_gg_social_contributions() -> tuple[list[dict], dict]:
+    """General government social contributions received, million KZT,
+    quarterly. Row code 12 ('Social contributions'). Verified live
+    2026-08-30: 4 quarters of 2025, ~467-572 billion KZT."""
+    return _fetch_gg_row(12, "GG_SOCIAL_CONTRIBUTIONS")
+
+
+def fetch_gg_cash_surplus_deficit() -> tuple[list[dict], dict]:
+    """General government cash surplus/deficit (IMF GFS methodology, all
+    levels of government combined), million KZT, quarterly -- a broader
+    fiscal balance measure than BUDGET_DEFICIT (republican-budget-only).
+    Row code 'CSD' ('Cash surplus / deficit [1-2-31 = 1-2M]'). Verified live
+    2026-08-30: 4 quarters of 2025, ranging from -1.94 trillion (Q2 deficit)
+    to +2.42 trillion KZT (Q3 surplus) -- plausible quarter-to-quarter
+    volatility for a resource-revenue-dependent government's cash position.
+    """
+    return _fetch_gg_row("CSD", "GG_CASH_SURPLUS_DEFICIT")

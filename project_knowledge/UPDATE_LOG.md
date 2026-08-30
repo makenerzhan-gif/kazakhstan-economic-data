@@ -581,3 +581,34 @@ LOANS_TO_ECONOMY (~25.9-30.3 trillion KZT) is a plausible scale for Kazakhstan's
 credit stock.
 
 **130/130 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-30 — twelfth scale-up batch: 130 -> 133 indicators
+Two new-territory research threads this batch, one abandoned and one that paid off
+differently than intended.
+
+**Abandoned: IMF GFS dataset.** Tried IMF's Government Finance Statistics dataflow
+(IMF.STA:GFS_SOO) hoping for tax-type breakdowns (income/property/customs) to resolve the
+long-standing individual-income-tax/property-tax/customs-duties gap. Unlike WEO's trivial
+`{COUNTRY}.{CODE}` 2-key pattern, GFS has 8+ codelisted dimensions (SECTOR, GFS_GRP,
+INDICATOR, INSTR_ASSET, GFS_STO, COFOG, etc.) with no simple wildcard query -- querying it
+correctly would require substantial codelist research with real risk of guessing wrong
+dimension values. Abandoned rather than fabricate a query.
+
+**Minfin (3), a genuinely new fiscal scope found while chasing the same tax-breakdown
+question:** discovered a "General government data ... (consolidated budget according to
+IMF methodology)" document under Minfin's budget-document listing -- IMF GFS-methodology
+general government (republican + local + social security funds combined), a BROADER scope
+than every existing Minfin fiscal indicator (all republican-budget-only). Its own "Taxes"
+row is a single aggregate too (no type breakdown, so the original question stays
+unresolved), but the document itself is valuable: only one exists in the listing (unlike
+GOV_DEBT's 23 snapshots), yet it already contains all 4 quarters of 2025 as separate
+columns, so no historical backfill was needed. Connected: GG_TAXES, GG_SOCIAL_CONTRIBUTIONS,
+GG_CASH_SURPLUS_DEFICIT. Values converted from the source's billion-KZT unit to million KZT.
+
+**Sanity-checked before committing:** GG_TAXES summed across all 4 2025 quarters (~23.46
+trillion KZT) exceeds TAX_REVENUE's republican-only 2025 annual figure (~14.46 trillion
+KZT) -- the expected direction given the broader general-government scope. Documented
+explicitly in both the fetcher and sources.yaml that these GG_* indicators should NOT be
+expected to reconcile with the republican-budget-only indicators already connected.
+
+**133/133 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
