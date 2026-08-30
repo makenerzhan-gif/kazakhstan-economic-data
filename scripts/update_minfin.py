@@ -45,6 +45,7 @@ FETCHERS = {
     "GOV_CAPITAL_EXPENDITURE": minfin_fetchers.fetch_gov_capital_expenditure,
     "GOV_PENSIONS_EXPENDITURE": minfin_fetchers.fetch_gov_pensions_expenditure,
     "GOV_SUBSIDIES_EXPENDITURE": minfin_fetchers.fetch_gov_subsidies_expenditure,
+    "SUBVENTIONS_REPUBLICAN": minfin_fetchers.fetch_subventions_republican,
 }
 
 INDICATOR_IDS = [
@@ -58,6 +59,7 @@ INDICATOR_IDS = [
     "CUSTOMS_DUTIES",
     "GOV_WAGES_EXPENDITURE", "GOV_CAPITAL_EXPENDITURE",
     "GOV_PENSIONS_EXPENDITURE", "GOV_SUBSIDIES_EXPENDITURE",
+    "SUBVENTIONS_REPUBLICAN",
 ]
 
 

@@ -698,3 +698,34 @@ reconcile with BNS's separate national-accounts SUBSIDIES indicator (different a
 different concept, different measurement approach).
 
 **139/139 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — sixteenth scale-up batch: 139 -> 140 indicators (small, disciplined)
+Continued exploring the "Statistical bulletin" document's remaining sheets (табл 11, 13,
+15, 16, 17, 18). This batch's headline is less about what was added and more about what
+was deliberately NOT added, despite finding real candidate data.
+
+**Minfin (1):** SUBVENTIONS_REPUBLICAN (sheet "табл 18", "Республикалық бюджеттен
+субвенциялар") -- uses the SAME multi-year-annual-column layout as the small "Dynamics of
+execution" file, so only the single most recent bulletin was needed (no 13-document
+backfill), keeping this one low-risk despite coming from the same complex document as
+CUSTOMS_DUTIES/GOV_*_EXPENDITURE.
+
+**Investigated and explicitly declined:** "табл 13" (consolidated-budget execution report)
+would have given a genuinely new CONSOLIDATED-level (all government levels + funds) budget
+deficit measure -- a real, distinct fiscal indicator. Checked its structure across all 13
+bulletin vintages and found the column layout (target name sometimes in column 1, sometimes
+column 2) and row-label conventions (Roman-numeral prefixes present in some vintages,
+absent in others) both vary in ways that risk silently landing on the wrong column or row
+in some documents. This is the same category of risk that led to abandoning the IMF GFS
+dataset earlier in the session -- rather than build fragile heuristics to paper over
+inconsistent source structure, left it unconnected. Also re-confirmed from this table (a
+third, independent document) that individual income tax and property tax remain absent even
+at the broadest consolidated government level -- the local-budget-only conclusion from
+CUSTOMS_DUTIES's batch stands.
+
+Table 11 (local-budget economic classification, a mirror of табл 10) and table 17 (National
+Fund portfolio composition, quarterly, USD-denominated) were also found and look genuinely
+promising, but not pursued this batch given time already spent -- left for a future
+session.
+
+**140/140 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

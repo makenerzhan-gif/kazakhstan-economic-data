@@ -1304,6 +1304,37 @@ agencies:
           different agency, different concept, different measurement approach; not expected
           to reconcile). Verified live: monotonic within each year (2025: ~34bn Feb to
           ~414bn Nov; 2026: ~6bn Jan to ~259bn Jun). fetch_gov_subsidies_expenditure.
+      SUBVENTIONS_REPUBLICAN:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 18"
+        target_row_label: "Республикалық бюджеттен субвенциялар"
+        format: xlsx
+        frequency: annual
+        notes: >
+          2026-08-30. Sheet "табл 18" ("ТРАНСФЕРТЫ ОБЩЕГО ХАРАКТЕРА" / general-character
+          transfers) uses the SAME multi-year-annual-column layout as the small "Dynamics of
+          execution" file (GOV_REVENUE/TAX_REVENUE/etc.), unlike CUSTOMS_DUTIES/GOV_*_
+          EXPENDITURE above -- one document already contains 2023/2024/2025 as separate
+          annual columns, so only the single most recent bulletin is used, not a 13-document
+          backfill. The same document's Jan-Jun 2026 partial-year column is deliberately
+          excluded via a header regex that requires "ГГГГ ж. есеп" with no month-range text,
+          to avoid mixing a partial year into an annual series. Verified live: matched
+          exactly once, 3 genuine annual values (4,995,054.75 in 2023 to 5,755,110.61 in
+          2025 million KZT). fetch_subventions_republican.
+
+          Also investigated this pass, NOT connected: "табл 13" (consolidated-budget
+          execution report), which would have given a genuinely new CONSOLIDATED-level
+          (all government levels + funds) budget deficit measure. Its column layout (name
+          sometimes in column 1, sometimes column 2) and row-label conventions (whether "XV."
+          Roman-numeral prefixes are present) both vary across the 13 currently-listed
+          bulletin vintages in ways that risk silently landing on the wrong column/row in
+          some vintages -- the same category of risk that led to abandoning the IMF GFS
+          dataset earlier this session. Not pursued further; also confirmed (again) that this
+          table's own "НАЛОГОВЫЕ ПОСТУПЛЕНИЯ" (tax revenue) row is a single aggregate, not
+          broken down by type, even at this broadest consolidated level -- consistent with
+          individual income tax and property tax being purely local-budget taxes.
       GOV_HEALTH_SPENDING:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"

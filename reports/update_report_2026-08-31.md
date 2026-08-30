@@ -1,6 +1,6 @@
 # Update report — 2026-08-31
 
-Run timestamp: 2026-08-30T23:53:44.556988
+Run timestamp: 2026-08-31T00:13:21.556848
 Unified dataset updated: True
 Tests passed: True
 
@@ -302,6 +302,7 @@ Tests passed: True
   - warning: Unexpected jump of 98.5% between 2025-11-30 (413622.6786086) and 2026-01-31 (6318.84247).
   - warning: Unexpected jump of 445.9% between 2026-01-31 (6318.84247) and 2026-02-28 (34496.21587).
   - warning: Unexpected jump of 481.3% between 2026-03-31 (35310.83917) and 2026-05-31 (205261.99334018).
+- **minfin/SUBVENTIONS_REPUBLICAN** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% between 1995-01-01 (-8.2) and 1996-01-01 (0.5).
   - warning: Unexpected jump of 240.0% between 1996-01-01 (0.5) and 1997-01-01 (1.7).

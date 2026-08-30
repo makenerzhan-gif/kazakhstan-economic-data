@@ -874,3 +874,122 @@ def fetch_gov_subsidies_expenditure() -> tuple[list[dict], dict]:
         lambda r: r[-1] == "Бюджетные субсидии",
         "GOV_SUBSIDIES_EXPENDITURE",
     )
+
+
+# ---------------------------------------------------------------------------
+# SUBVENTIONS_REPUBLICAN: found 2026-08-30 while continuing to explore the
+# "Statistical bulletin" document -- sheet "табл 18" ("ТРАНСФЕРТЫ ОБЩЕГО
+# ХАРАКТЕРА" / general-character transfers). Unlike CUSTOMS_DUTIES/GOV_*_
+# EXPENDITURE above, this sheet uses the SAME multi-year-ANNUAL-column layout
+# as the small "Dynamics of execution" file (GOV_REVENUE/TAX_REVENUE/etc.) --
+# one document already contains 2023/2024/2025 as separate annual columns, so
+# only the single most recent bulletin is needed, not a 13-document backfill.
+#
+# A companion table, "табл 13" (consolidated-budget execution report, which
+# would have given a genuinely new CONSOLIDATED-level budget deficit measure)
+# was also investigated and explicitly NOT connected: its column layout and
+# row-label conventions (e.g. whether "XV." Roman-numeral prefixes are used)
+# vary across bulletin vintages in ways that risk silently landing on the
+# wrong column/row in some vintages -- the same category of risk that led to
+# abandoning the IMF GFS dataset earlier this session. Not pursued further.
+# ---------------------------------------------------------------------------
+BULLETIN_TRANSFERS_SHEET_NAME = "табл 18"
+SUBVENTIONS_ROW_LABEL = "Республикалық бюджеттен субвенциялар"
+ANNUAL_YEAR_HEADER_RE = re.compile(r"^\s*(\d{4})\s*ж\.\s*есеп")
+
+
+def fetch_subventions_republican() -> tuple[list[dict], dict]:
+    """Subventions (unconditional transfers) from the republican budget to
+    regional budgets, million KZT, annual. Verified live 2026-08-30: matched
+    exactly once in the most recent 'Statistical bulletin' document, 3
+    genuine annual columns (2023-2025) -- the same document's Jan-Jun 2026
+    partial-year column is deliberately excluded (its header contains a
+    month-range, detected and skipped) to avoid mixing a partial year into
+    an annual series. Values: 4,995,054.75 (2023) to 5,755,110.61 (2025)
+    million KZT.
+    """
+    docs = _list_documents(directions=BUDGET_DIRECTION_ID)
+    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    if not bulletins:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in minfin/SUBVENTIONS_REPUBLICAN",
+                f"WHAT CHANGED: no document title under directions={BUDGET_DIRECTION_ID} contains {STATISTICAL_BULLETIN_TITLE_MARKER!r}",
+                "EXPECTED: at least one 'Statistical bulletin as of ...' document",
+                "ACTUAL: not found in the current listing",
+                f"ACTION REQUIRED: inspect {LISTING_URL}?directions={BUDGET_DIRECTION_ID} and update scripts/fetchers/minfin.py",
+            ])
+        )
+    doc = bulletins[0]
+    file_path = doc["full_text"][0]["document"]
+    content = _download(file_path)
+
+    today = date.today()
+    ext = "xls" if file_path.lower().endswith(".xls") else "xlsx"
+    raw_store.save_raw_bytes(SOURCE, "SUBVENTIONS_REPUBLICAN", today, ext, content)
+    raw_store.write_download_manifest(SOURCE, "SUBVENTIONS_REPUBLICAN", today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "source_document_id": doc["id"], "source_title": doc.get("title"),
+        "source_url": GOV_KZ_BASE + file_path,
+    })
+
+    kind, wb = _open_workbook(content, file_path)
+    sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
+    target_sheet = next((s for s in sheet_names if s.strip() == BULLETIN_TRANSFERS_SHEET_NAME), None)
+    if target_sheet is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in minfin/SUBVENTIONS_REPUBLICAN",
+                f"WHAT CHANGED: no sheet named {BULLETIN_TRANSFERS_SHEET_NAME!r} in the latest bulletin",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path} and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    rows = list(_iter_rows(kind, wb, target_sheet))
+    header_row = next((r for r in rows if r and any(
+        isinstance(c, str) and ANNUAL_YEAR_HEADER_RE.match(c) for c in r if c
+    )), None)
+    target_row = next((r for r in rows if r and len(r) > 1 and r[1] == SUBVENTIONS_ROW_LABEL), None)
+    if header_row is None or target_row is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in minfin/SUBVENTIONS_REPUBLICAN",
+                f"WHAT CHANGED: could not find header row (annual year labels) or target row ({SUBVENTIONS_ROW_LABEL!r})",
+                f"ACTUAL: header_row found={header_row is not None}, target_row found={target_row is not None}",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path} and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    records = []
+    for col_idx, header_cell in enumerate(header_row):
+        if not isinstance(header_cell, str):
+            continue
+        m = ANNUAL_YEAR_HEADER_RE.match(header_cell)
+        if not m:
+            continue
+        year = int(m.group(1))
+        value = target_row[col_idx] if col_idx < len(target_row) else None
+        if value in (None, ""):
+            continue
+        records.append({"date": f"{year:04d}-12-31", "value": float(value)})
+
+    if not records:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in minfin/SUBVENTIONS_REPUBLICAN",
+                "WHAT CHANGED: zero year/value pairs extracted",
+                "ACTION REQUIRED: inspect the sheet layout and update scripts/fetchers/minfin.py",
+            ])
+        )
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "annual",
+        "source_url": GOV_KZ_BASE + file_path,
+        "dataset_id": f"gov.kz-doc-{doc['id']},sheet={BULLETIN_TRANSFERS_SHEET_NAME}",
+        "note": (
+            "Million KZT. Annual totals only (calendar-year reports); the same document's "
+            "current-year partial-period column is deliberately excluded to avoid mixing a "
+            "partial year into an annual series."
+        ),
+    }
+    return records, manifest
