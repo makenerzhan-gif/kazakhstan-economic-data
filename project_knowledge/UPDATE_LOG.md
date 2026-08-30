@@ -644,3 +644,32 @@ monotonic within each of the 13 available documents' respective years, and docum
 clearly so the expected sawtooth pattern across year boundaries isn't mistaken for a bug.
 
 **134/134 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-30 — fourteenth scale-up batch: 134 -> 135 indicators
+Resolved the last of the session's headline gaps: poverty. Confirmed absent from the
+"Статистика уровня жизни" category's own RK-totals list in an earlier batch, and multiple
+keyword phrasings ("уровень бедности", "черта бедности") had failed -- a more specific
+phrase ("доходами ниже величины прожиточного минимума") found it.
+
+**BNS (1):** POVERTY_HEADCOUNT (code 64410201, "Общая численность населения с доходами
+ниже величины прожиточного минимума") -- confirmed genuine via the indicator's own
+"Паспорт" page (household budget survey sourced, official BNS methodology cited), not a
+fabricated proxy. Values initially looked implausibly low (~90,000-147,000 persons against
+a ~20M population) compared to commonly-cited international poverty rates, but confirmed
+correct: they match the indicator's own displayed chart exactly, and BNS's national
+subsistence-minimum threshold (a specific, narrower definition than international poverty
+lines) genuinely produces a low measured share.
+
+**Deliberately NOT computed:** a population-SHARE (%) version of this indicator. No such
+series exists on Taldau (only headcounts and a households-count variant were found);
+dividing the headcount by POPULATION_BNS ourselves would have been a fabricated derived
+ratio, against this project's established practice of only publishing what the source
+agency itself computes and publishes.
+
+**Found but not implemented:** "Величина прожиточного минимума" (the subsistence-minimum
+threshold itself, KZT/month) -- its Taldau tree returns a hidden intermediate node
+requiring genuine parent/child recursion, a different and deeper API interaction pattern
+than the one-shot flat query every other Taldau indicator in this project uses. Left for a
+future session with budget to build that capability rather than rushed in.
+
+**135/135 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

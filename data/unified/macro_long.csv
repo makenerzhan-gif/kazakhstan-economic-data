@@ -1188,6 +1188,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,15241822000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,1166485400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,PER_CAPITA_INCOME,39014.0713415945,KZT/month,bns,2026-08-30,level,2026-08-30
+2010-12-31,KZ,national,annual,POVERTY_HEADCOUNT,146796.0,persons,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,REAL_INCOME_INDEX,106.257531646981,% of prior period,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,RETAIL_TRADE,3197147799000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-12-31,KZ,national,annual,SUBSIDIES,60484800000.0,KZT,bns,2026-08-30,level,2026-08-30
@@ -1285,6 +1286,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,19705034100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,2501177900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,PER_CAPITA_INCOME,45918.079326354,KZT/month,bns,2026-08-30,level,2026-08-30
+2011-12-31,KZ,national,annual,POVERTY_HEADCOUNT,125207.0,persons,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,PPI,127.2,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,REAL_INCOME_INDEX,108.676084693627,% of prior period,bns,2026-08-30,level,2026-08-30
 2011-12-31,KZ,national,annual,RETAIL_TRADE,3865840640000.0,KZT,bns,2026-08-30,level,2026-08-30
@@ -1384,6 +1386,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,21129898300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,2487096500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,PER_CAPITA_INCOME,51859.7573510886,KZT/month,bns,2026-08-30,level,2026-08-30
+2012-12-31,KZ,national,annual,POVERTY_HEADCOUNT,76375.0,persons,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,PPI,103.5,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,REAL_INCOME_INDEX,107.45931068392,% of prior period,bns,2026-08-30,level,2026-08-30
 2012-12-31,KZ,national,annual,RETAIL_TRADE,4567661194000.0,KZT,bns,2026-08-30,level,2026-08-30
@@ -1484,6 +1487,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,23264281300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,3102424100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,PER_CAPITA_INCOME,56452.7553065554,KZT/month,bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,annual,POVERTY_HEADCOUNT,64969.0,persons,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,PPI,99.7,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,REAL_INCOME_INDEX,102.889011650984,% of prior period,bns,2026-08-30,level,2026-08-30
 2013-12-31,KZ,national,annual,REAL_WAGE_INDEX,101.9,% of prior period,bns,2026-08-30,level,2026-08-30
@@ -1608,6 +1612,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,3024260700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,PASSENGER_TURNOVER,246958524700.0,passenger-km,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,PER_CAPITA_INCOME,62271.3886005521,KZT/month,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,annual,POVERTY_HEADCOUNT,47938.0,persons,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,PPI,109.5,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,REAL_INCOME_INDEX,103.380585455138,% of prior period,bns,2026-08-30,level,2026-08-30
 2014-12-31,KZ,national,annual,REAL_WAGE_INDEX,103.9,% of prior period,bns,2026-08-30,level,2026-08-30
@@ -1738,6 +1743,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,2100233200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,PASSENGER_TURNOVER,251250827000.0,passenger-km,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,PER_CAPITA_INCOME,67321.2749146786,KZT/month,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,annual,POVERTY_HEADCOUNT,40141.0,persons,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,PPI,79.5,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,REAL_INCOME_INDEX,101.416023282123,% of prior period,bns,2026-08-30,level,2026-08-30
 2015-12-31,KZ,national,annual,REAL_WAGE_INDEX,97.7122624505764,% of prior period,bns,2026-08-30,level,2026-08-30
@@ -1883,6 +1889,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,2633564500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,PASSENGER_TURNOVER,266784211300.0,passenger-km,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,PER_CAPITA_INCOME,76575.3717467177,KZT/month,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,annual,POVERTY_HEADCOUNT,45204.0,persons,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,PPI,116.8,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,REAL_INCOME_INDEX,99.2549475611537,% of prior period,bns,2026-08-30,level,2026-08-30
 2016-12-31,KZ,national,annual,REAL_WAGE_INDEX,98.946605744881,% of prior period,bns,2026-08-30,level,2026-08-30
@@ -2028,6 +2035,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-12-31,KZ,national,annual,NET_EXPORTS,4334058800000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,3182998500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,PER_CAPITA_INCOME,83709.8333333333,KZT/month,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,annual,POVERTY_HEADCOUNT,45777.0,persons,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,PPI,115.3,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,REAL_INCOME_INDEX,101.784998021819,% of prior period,bns,2026-08-30,level,2026-08-30
 2017-12-31,KZ,national,annual,REAL_WAGE_INDEX,98.2758898470945,% of prior period,bns,2026-08-30,level,2026-08-30
@@ -2199,6 +2207,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-12-31,KZ,national,annual,NET_EXPORTS,7246783000000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,4112983100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,PER_CAPITA_INCOME,93135.0,KZT/month,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,annual,POVERTY_HEADCOUNT,73318.0,persons,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,PPI,119.0,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,REAL_INCOME_INDEX,105.0,% of prior period,bns,2026-08-30,level,2026-08-30
 2018-12-31,KZ,national,annual,REAL_WAGE_INDEX,101.749132649195,% of prior period,bns,2026-08-30,level,2026-08-30
@@ -2398,6 +2407,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-31,KZ,national,annual,NET_EXPORTS,5576070000000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,4851021700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,PER_CAPITA_INCOME,104282.0,KZT/month,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,annual,POVERTY_HEADCOUNT,84626.0,persons,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,PPI,105.1,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,REAL_INCOME_INDEX,106.4,% of prior period,bns,2026-08-30,level,2026-08-30
 2019-12-31,KZ,national,annual,REAL_WAGE_INDEX,109.060603631512,% of prior period,bns,2026-08-30,level,2026-08-30
@@ -2618,6 +2628,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-31,KZ,national,annual,NET_EXPORTS,2848124800000.0,million KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,3820798100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,PER_CAPITA_INCOME,116126.0,KZT/month,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,annual,POVERTY_HEADCOUNT,111754.0,persons,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,PPI,92.0,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,REAL_INCOME_INDEX,104.3,% of prior period,bns,2026-08-30,level,2026-08-30
 2020-12-31,KZ,national,annual,RETAIL_TRADE,11729949741121.6,KZT,bns,2026-08-30,level,2026-08-30
@@ -2861,6 +2872,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-31,KZ,national,annual,NON_OIL_BUDGET_DEFICIT,2526271.2171565,million KZT,minfin,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,PER_CAPITA_INCOME,130616.0,KZT/month,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,POPULATION_BNS,19000987.5,persons,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,annual,POVERTY_HEADCOUNT,97774.0,persons,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,PPI,132.5,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,REAL_INCOME_INDEX,104.0,% of prior period,bns,2026-08-30,level,2026-08-30
 2021-12-31,KZ,national,annual,REAL_WAGE_INDEX,108.810413207534,% of prior period,bns,2026-08-30,level,2026-08-30
@@ -3192,6 +3204,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-31,KZ,national,annual,NON_OIL_BUDGET_DEFICIT,-8592225.68932949,million KZT,minfin,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,PER_CAPITA_INCOME,164438.0,KZT/month,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,POPULATION_BNS,19634983.0,persons,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,annual,POVERTY_HEADCOUNT,102873.0,persons,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,PPI,127.1,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,REAL_INCOME_INDEX,102.3,% of prior period,bns,2026-08-30,level,2026-08-30
 2022-12-31,KZ,national,annual,REAL_WAGE_INDEX,107.586857601318,% of prior period,bns,2026-08-30,level,2026-08-30
@@ -3538,6 +3551,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,NON_OIL_BUDGET_DEFICIT,-8763995.14536183,million KZT,minfin,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,PER_CAPITA_INCOME,189953.0,KZT/month,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,POPULATION_BNS,19900324.5,persons,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,annual,POVERTY_HEADCOUNT,100947.0,persons,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,PPI,97.9,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,REAL_INCOME_INDEX,100.9,% of prior period,bns,2026-08-30,level,2026-08-30
 2023-12-31,KZ,national,annual,REAL_WAGE_INDEX,102.733178575318,% of prior period,bns,2026-08-30,level,2026-08-30
@@ -3894,6 +3908,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,NON_OIL_BUDGET_DEFICIT,-10847264.2478702,million KZT,minfin,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,PER_CAPITA_INCOME,215979.0,KZT/month,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,POPULATION_BNS,20158620.5,persons,bns,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,annual,POVERTY_HEADCOUNT,89778.0,persons,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,PPI,105.0,% of same period prior year,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,REAL_INCOME_INDEX,104.6,% of prior period,bns,2026-08-30,level,2026-08-30
 2024-12-31,KZ,national,annual,REAL_WAGE_INDEX,102.380708296284,% of prior period,bns,2026-08-30,level,2026-08-30

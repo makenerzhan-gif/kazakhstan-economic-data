@@ -560,6 +560,36 @@ agencies:
           per-10000-population variant (704316) as the absolute headline count. Standard
           single-dimension mechanism worked directly. Verified live: ~78,227 (2021) to
           ~83,379 (2024). fetch_doctors_total.
+      POVERTY_HEADCOUNT:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 2928350
+        format: json
+        notes: >
+          2026-08-30. Resolves the POVERTY_RATE gap noted across multiple earlier sessions
+          (confirmed absent from the "Статистика уровня жизни" category's own RK-totals
+          list; keyword searches for "уровень бедности"/"черта бедности" also returned
+          nothing). Found via a more specific keyword search ("доходами ниже величины
+          прожиточного минимума"). code 64410201, "Общая численность населения с доходами
+          ниже величины прожиточного минимума". Confirmed genuine via the indicator's own
+          "Паспорт" page: household budget survey sourced (D003/D004/D008), official
+          methodology document cited ("Методологическое положение по статистике, Издание 4,
+          Астана 2018") -- not a fabricated proxy. Classified across 2 dictionaries; params
+          recovered via live ExtJS tree (measure_id=23, dicIds=67,270,
+          terms=741880,545805). Values are genuinely small (~90,000-147,000 persons,
+          2010-2024) -- initially looked implausible against commonly-cited international
+          poverty rates (different, higher thresholds), but confirmed correct: values match
+          the indicator's own displayed chart on Taldau exactly, and BNS's national
+          subsistence-minimum threshold produces a low measured population share by design.
+          Deliberately an ABSOLUTE COUNT, not a %: no distinct population-SHARE series was
+          found on Taldau despite repeated searches; a % was NOT computed by dividing by
+          POPULATION_BNS ourselves, consistent with this project's practice of not
+          fabricating ratios the source agency doesn't itself publish. A related indicator,
+          "Величина прожиточного минимума" (the subsistence-minimum threshold itself, KZT/
+          month, indexId 704492), was also found but NOT implemented -- its Taldau tree
+          returns a hidden intermediate node requiring genuine parent/child recursion (not
+          the one-shot flat query every other connected indicator uses this session); left
+          for a future session with budget for that capability. fetch_poverty_headcount.
       ENERGY_INTENSITY:
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"

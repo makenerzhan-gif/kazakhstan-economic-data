@@ -1389,3 +1389,46 @@ def fetch_renewable_energy_share() -> tuple[list[dict], dict]:
         "note": "%. Excludes large hydroelectric power stations from the renewable total.",
     }
     return records, manifest
+
+
+def fetch_poverty_headcount() -> tuple[list[dict], dict]:
+    """Total population with income below the national subsistence minimum
+    (величина прожиточного минимума) -- BNS's own official poverty headcount,
+    persons, annual. Taldau indexId 2928350 (code 64410201, "Общая
+    численность населения с доходами ниже величины прожиточного минимума"),
+    found via keyword search ("доходами ниже величины прожиточного
+    минимума"). Resolves the POVERTY_RATE gap noted in multiple earlier
+    sessions -- confirmed via the indicator's own "Паспорт" (passport) page
+    that this is the genuine national headline methodology (household budget
+    survey D003/D004/D008, "Методологическое положение по статистике,
+    Издание 4, Астана 2018"), not a fabricated proxy.
+
+    Deliberately an ABSOLUTE COUNT, not a %: only a headcount series was
+    found (this one, plus a parallel households-count variant and gender-of-
+    household-head breakdowns) -- no distinct population-SHARE (%) series was
+    found anywhere on Taldau despite repeated searches across multiple
+    sessions. Computing a % ourselves (headcount / POPULATION_BNS) was
+    deliberately NOT done, consistent with this project's practice of not
+    fabricating derived ratios the source agency doesn't itself publish.
+
+    Values are genuinely small (~90,000-147,000 range, 2010-2024) --
+    initially looked implausibly low against commonly-cited international
+    poverty-rate figures (which use different, higher thresholds), but
+    confirmed correct: BNS's own national subsistence-minimum threshold
+    produces a low measured population share by design, and the values
+    exactly match the indicator's own displayed chart on Taldau.
+
+    A related indicator, "Величина прожиточного минимума" (the subsistence
+    minimum threshold itself, KZT/month, indexId 704492), was also found but
+    NOT implemented -- its Taldau tree returns a hidden intermediate node
+    requiring genuine parent/child recursion (a different, deeper API
+    interaction pattern than every other indicator connected this session),
+    not a one-shot flat query. Left for a future session with budget for
+    that specific capability.
+    """
+    return _fetch_taldau_annual_index(
+        "2928350", "POVERTY_HEADCOUNT",
+        note="Population below the national subsistence minimum, persons. Taldau indexId 2928350.",
+        measure_id="23", dic_ids="67,270",
+        terms="741880,545805",
+    )

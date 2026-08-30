@@ -2812,5 +2812,26 @@
     "next_update_date": null,
     "transformation": "level",
     "revision_status": "original"
+  },
+  "POVERTY_HEADCOUNT": {
+    "source": "bns",
+    "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+    "dataset_id": "taldau-index-2928350",
+    "indicator_id": "POVERTY_HEADCOUNT",
+    "indicator_name": "Population Below the National Subsistence Minimum",
+    "description": "Общая численность населения с доходами ниже величины прожиточного минимума",
+    "frequency": "annual",
+    "unit": "persons",
+    "currency": "",
+    "geography": "Kazakhstan (national)",
+    "methodology": "Population below the national subsistence minimum, persons. Taldau indexId 2928350.",
+    "publication_date": null,
+    "last_update_date": "2026-08-30",
+    "download_date": "2026-08-30",
+    "period_start": "2010-12-31",
+    "period_end": "2024-12-31",
+    "next_update_date": null,
+    "transformation": "level",
+    "revision_status": "original"
   }
 }

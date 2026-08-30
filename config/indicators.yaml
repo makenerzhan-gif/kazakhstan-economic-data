@@ -1219,3 +1219,12 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+
+  - id: POVERTY_HEADCOUNT
+    name_ru: "Общая численность населения с доходами ниже величины прожиточного минимума"
+    name_en: "Population Below the National Subsistence Minimum"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: demographic
+    source_status: confirmed
