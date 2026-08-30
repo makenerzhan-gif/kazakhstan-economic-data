@@ -1,5 +1,6 @@
 date,country,region,frequency,variable,value,unit,source,source_version,transformation,last_updated
 1992-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-51.659721,% of GDP,imf,2026-08-30,level,2026-08-30
+1992-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-1485277000.0,USD,imf,2026-08-30,level,2026-08-30
 1992-01-01,KZ,national,annual,IMF_GDP_PPP,116412840000.0,international dollars,imf,2026-08-30,level,2026-08-30
 1992-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,40.91456,% of GDP,imf,2026-08-30,level,2026-08-30
 1992-01-01,KZ,national,annual,IMF_NOMINAL_GDP,2435224000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -7,8 +8,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1992-01-01,KZ,national,annual,IMF_POPULATION,17048344.0,persons,imf,2026-08-30,level,2026-08-30
 1992-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,7.50239,% of GDP,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-8.636585,% of GDP,imf,2026-08-30,level,2026-08-30
+1993-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-444953000.0,USD,imf,2026-08-30,level,2026-08-30
+1993-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,41.18507,% change,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_GDP_GROWTH,-9.2,% change,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_GDP_PPP,108208073000.0,international dollars,imf,2026-08-30,level,2026-08-30
+1993-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,13.087335,% change,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_INFLATION,1662.274815,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,26.849225,% of GDP,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_NOMINAL_GDP,29881368000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -16,8 +20,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1993-01-01,KZ,national,annual,IMF_POPULATION,16900000.0,persons,imf,2026-08-30,level,2026-08-30
 1993-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,14.100873,% of GDP,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-7.662874,% of GDP,imf,2026-08-30,level,2026-08-30
+1994-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-910449000.0,USD,imf,2026-08-30,level,2026-08-30
+1994-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,-30.20871,% change,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_GDP_GROWTH,-12.57976,% change,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_GDP_PPP,96615815000.0,international dollars,imf,2026-08-30,level,2026-08-30
+1994-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,22.197623,% of GDP,imf,2026-08-30,level,2026-08-30
+1994-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,-20.773372,% change,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_INFLATION,1401.986512,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,28.703784,% of GDP,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_NOMINAL_GDP,423469391000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -26,8 +34,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1994-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,20.9034,% of GDP,imf,2026-08-30,level,2026-08-30
 1994-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,7.535613,%,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.280688,% of GDP,imf,2026-08-30,level,2026-08-30
+1995-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-213100000.0,USD,imf,2026-08-30,level,2026-08-30
+1995-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,24.822242,% change,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_GDP_GROWTH,-8.2,% change,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_GDP_PPP,90552700000.0,international dollars,imf,2026-08-30,level,2026-08-30
+1995-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,16.860748,% of GDP,imf,2026-08-30,level,2026-08-30
+1995-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,23.122596,% change,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_INFLATION,176.37918,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,23.319073,% of GDP,imf,2026-08-30,level,2026-08-30
 1995-01-01,KZ,national,annual,IMF_NOMINAL_GDP,1014190936000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -60,8 +72,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1995-12-01,KZ,national,monthly,NEER,83.72584,index,nbk,2026-08-30,level,2026-08-30
 1995-12-01,KZ,national,monthly,REER,102.54349,index,nbk,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-3.570219,% of GDP,imf,2026-08-30,level,2026-08-30
+1996-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-751000000.0,USD,imf,2026-08-30,level,2026-08-30
+1996-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,10.52635,% change,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_GDP_GROWTH,0.5,% change,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_GDP_PPP,92671679000.0,international dollars,imf,2026-08-30,level,2026-08-30
+1996-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,13.222678,% of GDP,imf,2026-08-30,level,2026-08-30
+1996-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,21.600001,% change,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_INFLATION,39.1803,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,16.146974,% of GDP,imf,2026-08-30,level,2026-08-30
 1996-01-01,KZ,national,annual,IMF_NOMINAL_GDP,1415751307000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -94,8 +110,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1996-12-01,KZ,national,monthly,NEER,84.12981,index,nbk,2026-08-30,level,2026-08-30
 1996-12-01,KZ,national,monthly,REER,113.3129,index,nbk,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-3.605986,% of GDP,imf,2026-08-30,level,2026-08-30
+1997-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-799300000.0,USD,imf,2026-08-30,level,2026-08-30
+1997-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,15.526554,% change,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_GDP_GROWTH,1.7,% change,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_GDP_PPP,95872282000.0,international dollars,imf,2026-08-30,level,2026-08-30
+1997-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,13.470504,% of GDP,imf,2026-08-30,level,2026-08-30
+1997-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,17.288219,% change,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_INFLATION,17.401233,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,15.598629,% of GDP,imf,2026-08-30,level,2026-08-30
 1997-01-01,KZ,national,annual,IMF_NOMINAL_GDP,1672141543000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -128,8 +148,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1997-12-01,KZ,national,monthly,NEER,89.56214,index,nbk,2026-08-30,level,2026-08-30
 1997-12-01,KZ,national,monthly,REER,122.08451,index,nbk,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-5.533715,% of GDP,imf,2026-08-30,level,2026-08-30
+1998-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-1224900000.0,USD,imf,2026-08-30,level,2026-08-30
+1998-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,6.817857,% change,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_GDP_GROWTH,-1.9,% change,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_GDP_PPP,95107833000.0,international dollars,imf,2026-08-30,level,2026-08-30
+1998-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,18.187781,% of GDP,imf,2026-08-30,level,2026-08-30
+1998-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,2.049388,% change,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_INFLATION,7.132416,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,15.804366,% of GDP,imf,2026-08-30,level,2026-08-30
 1998-01-01,KZ,national,annual,IMF_NOMINAL_GDP,1733261600000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -162,8 +186,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1998-12-01,KZ,national,monthly,NEER,172.41876,index,nbk,2026-08-30,level,2026-08-30
 1998-12-01,KZ,national,monthly,REER,156.27045,index,nbk,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.013603,% of GDP,imf,2026-08-30,level,2026-08-30
+1999-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-171000000.0,USD,imf,2026-08-30,level,2026-08-30
+1999-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,-8.291821,% change,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_GDP_GROWTH,2.7,% change,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_GDP_PPP,99057881000.0,international dollars,imf,2026-08-30,level,2026-08-30
+1999-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,17.538254,% of GDP,imf,2026-08-30,level,2026-08-30
+1999-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,-6.165625,% change,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_INFLATION,8.322683,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,17.77617,% of GDP,imf,2026-08-30,level,2026-08-30
 1999-01-01,KZ,national,annual,IMF_NOMINAL_GDP,2016461861000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -196,8 +224,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 1999-12-01,KZ,national,monthly,NEER,135.01137,index,nbk,2026-08-30,level,2026-08-30
 1999-12-01,KZ,national,monthly,REER,109.82431,index,nbk,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,2.002567,% of GDP,imf,2026-08-30,level,2026-08-30
+2000-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,366309000.0,USD,imf,2026-08-30,level,2026-08-30
+2000-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,57.497322,% change,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.800298,% change,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_GDP_PPP,111229623000.0,international dollars,imf,2026-08-30,level,2026-08-30
+2000-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,21.854675,% of GDP,imf,2026-08-30,level,2026-08-30
+2000-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,29.963725,% change,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_INFLATION,13.153821,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,18.139132,% of GDP,imf,2026-08-30,level,2026-08-30
 2000-01-01,KZ,national,annual,IMF_NOMINAL_GDP,2599902399000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -249,8 +281,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2000-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,174530500000.0,KZT,bns,2026-08-30,level,2026-08-30
 2000-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,1922972700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-6.272451,% of GDP,imf,2026-08-30,level,2026-08-30
+2001-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-1389516000.0,USD,imf,2026-08-30,level,2026-08-30
+2001-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.109161,% change,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_GDP_GROWTH,13.499461,% change,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_GDP_PPP,129087580000.0,international dollars,imf,2026-08-30,level,2026-08-30
+2001-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,25.653781,% of GDP,imf,2026-08-30,level,2026-08-30
+2001-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,22.95061,% change,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_INFLATION,8.372812,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,26.876327,% of GDP,imf,2026-08-30,level,2026-08-30
 2001-01-01,KZ,national,annual,IMF_NOMINAL_GDP,3250593000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -302,10 +338,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2001-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,228701100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2001-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,2318529900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-4.157803,% of GDP,imf,2026-08-30,level,2026-08-30
+2002-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-1024341000.0,USD,imf,2026-08-30,level,2026-08-30
+2002-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,9.178136,% change,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.799076,% change,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GDP_PPP,143939614000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GOV_BALANCE,1.923888,% of GDP,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_GOV_DEBT,17.59187,% of GDP,imf,2026-08-30,level,2026-08-30
+2002-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.527181,% of GDP,imf,2026-08-30,level,2026-08-30
+2002-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,22.451068,% of GDP,imf,2026-08-30,level,2026-08-30
+2002-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,12.199099,% change,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_INFLATION,5.959302,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,27.287723,% of GDP,imf,2026-08-30,level,2026-08-30
 2002-01-01,KZ,national,annual,IMF_NOMINAL_GDP,3776277000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -357,10 +398,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2002-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,273722700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2002-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,2500213400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-0.884199,% of GDP,imf,2026-08-30,level,2026-08-30
+2003-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-272631000.0,USD,imf,2026-08-30,level,2026-08-30
+2003-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,12.851903,% change,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.300232,% change,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GDP_PPP,160432293000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GOV_BALANCE,3.996049,% of GDP,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_GOV_DEBT,14.962494,% of GDP,imf,2026-08-30,level,2026-08-30
+2003-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.355112,% of GDP,imf,2026-08-30,level,2026-08-30
+2003-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,25.35116,% of GDP,imf,2026-08-30,level,2026-08-30
+2003-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,2.577467,% change,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_INFLATION,6.378601,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,25.703955,% of GDP,imf,2026-08-30,level,2026-08-30
 2003-01-01,KZ,national,annual,IMF_NOMINAL_GDP,4611975000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -412,10 +458,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2003-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,316651600000.0,KZT,bns,2026-08-30,level,2026-08-30
 2003-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,3032033000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.777323,% of GDP,imf,2026-08-30,level,2026-08-30
+2004-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,335428000.0,USD,imf,2026-08-30,level,2026-08-30
+2004-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,32.806964,% change,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.598631,% change,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GDP_PPP,180559500000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GOV_BALANCE,3.28732,% of GDP,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_GOV_DEBT,11.391569,% of GDP,imf,2026-08-30,level,2026-08-30
+2004-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.262762,% of GDP,imf,2026-08-30,level,2026-08-30
+2004-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,24.550082,% of GDP,imf,2026-08-30,level,2026-08-30
+2004-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,28.165955,% change,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_INFLATION,6.995487,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,26.310984,% of GDP,imf,2026-08-30,level,2026-08-30
 2004-01-01,KZ,national,annual,IMF_NOMINAL_GDP,5870134000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -467,10 +518,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2004-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,358192200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2004-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,3824244000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.628099,% of GDP,imf,2026-08-30,level,2026-08-30
+2005-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,358800000.0,USD,imf,2026-08-30,level,2026-08-30
+2005-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,27.254613,% change,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.700176,% change,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GDP_PPP,204285339000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GOV_BALANCE,6.077755,% of GDP,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_GOV_DEBT,8.104407,% of GDP,imf,2026-08-30,level,2026-08-30
+2005-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,22.006004,% of GDP,imf,2026-08-30,level,2026-08-30
+2005-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,28.083759,% of GDP,imf,2026-08-30,level,2026-08-30
+2005-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,28.303354,% change,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_INFLATION,7.411871,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,30.969777,% of GDP,imf,2026-08-30,level,2026-08-30
 2005-01-01,KZ,national,annual,IMF_NOMINAL_GDP,7590594000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -522,10 +578,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2005-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,474580900000.0,KZT,bns,2026-08-30,level,2026-08-30
 2005-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,4638271100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.016006,% of GDP,imf,2026-08-30,level,2026-08-30
+2006-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-823000000.0,USD,imf,2026-08-30,level,2026-08-30
+2006-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,10.047385,% change,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GDP_GROWTH,10.701546,% change,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GDP_PPP,233121136000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GOV_BALANCE,7.652629,% of GDP,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_GOV_DEBT,6.676952,% of GDP,imf,2026-08-30,level,2026-08-30
+2006-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,19.799798,% of GDP,imf,2026-08-30,level,2026-08-30
+2006-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,27.452427,% of GDP,imf,2026-08-30,level,2026-08-30
+2006-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,10.89743,% change,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_INFLATION,8.611501,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,33.900834,% of GDP,imf,2026-08-30,level,2026-08-30
 2006-01-01,KZ,national,annual,IMF_NOMINAL_GDP,10213731000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -577,10 +638,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2006-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,674739300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2006-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,5709745200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-4.54688,% of GDP,imf,2026-08-30,level,2026-08-30
+2007-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-4767400000.0,USD,imf,2026-08-30,level,2026-08-30
+2007-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,15.284495,% change,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GDP_GROWTH,8.9,% change,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GDP_PPP,260746911000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GOV_BALANCE,5.134415,% of GDP,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_GOV_DEBT,4.091989,% of GDP,imf,2026-08-30,level,2026-08-30
+2007-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,23.704583,% of GDP,imf,2026-08-30,level,2026-08-30
+2007-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,28.838997,% of GDP,imf,2026-08-30,level,2026-08-30
+2007-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,24.411257,% change,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_INFLATION,10.795455,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,35.526699,% of GDP,imf,2026-08-30,level,2026-08-30
 2007-01-01,KZ,national,annual,IMF_NOMINAL_GDP,12849794000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -632,10 +698,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2007-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,929628300000.0,KZT,bns,2026-08-30,level,2026-08-30
 2007-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,7215844700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.964616,% of GDP,imf,2026-08-30,level,2026-08-30
+2008-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,1287200000.0,USD,imf,2026-08-30,level,2026-08-30
+2008-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,7.076718,% change,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.3,% change,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GDP_PPP,274540378000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GOV_BALANCE,1.227135,% of GDP,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_GOV_DEBT,6.76587,% of GDP,imf,2026-08-30,level,2026-08-30
+2008-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,27.068299,% of GDP,imf,2026-08-30,level,2026-08-30
+2008-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,28.295434,% of GDP,imf,2026-08-30,level,2026-08-30
+2008-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,6.152312,% change,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_INFLATION,17.156177,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,27.506485,% of GDP,imf,2026-08-30,level,2026-08-30
 2008-01-01,KZ,national,annual,IMF_NOMINAL_GDP,16052919000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -687,10 +758,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2008-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,1138840400000.0,KZT,bns,2026-08-30,level,2026-08-30
 2008-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,8764943000000.0,KZT,bns,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-0.116557,% of GDP,imf,2026-08-30,level,2026-08-30
+2009-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-134400000.0,USD,imf,2026-08-30,level,2026-08-30
+2009-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.546137,% change,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GDP_GROWTH,1.2,% change,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GDP_PPP,279548388000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.328049,% of GDP,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_GOV_DEBT,10.227029,% of GDP,imf,2026-08-30,level,2026-08-30
+2009-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,23.470151,% of GDP,imf,2026-08-30,level,2026-08-30
+2009-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,22.142102,% of GDP,imf,2026-08-30,level,2026-08-30
+2009-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,-10.988415,% change,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_INFLATION,7.302029,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,29.414565,% of GDP,imf,2026-08-30,level,2026-08-30
 2009-01-01,KZ,national,annual,IMF_NOMINAL_GDP,17007647000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -743,10 +819,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2009-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,808272100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2009-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,10066102700000.0,KZT,bns,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,1.808611,% of GDP,imf,2026-08-30,level,2026-08-30
+2010-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,2677600000.0,USD,imf,2026-08-30,level,2026-08-30
+2010-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,0.884379,% change,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GDP_GROWTH,7.3,% change,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GDP_PPP,303601001000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GOV_BALANCE,1.469692,% of GDP,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_GOV_DEBT,10.682735,% of GDP,imf,2026-08-30,level,2026-08-30
+2010-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,22.47342,% of GDP,imf,2026-08-30,level,2026-08-30
+2010-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,23.943113,% of GDP,imf,2026-08-30,level,2026-08-30
+2010-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,-5.88078,% change,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_INFLATION,7.101799,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,25.373549,% of GDP,imf,2026-08-30,level,2026-08-30
 2010-01-01,KZ,national,annual,IMF_NOMINAL_GDP,21815517000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -796,10 +877,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,1226970200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,monthly,CPI,101.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,7.302994,% of GDP,imf,2026-08-30,level,2026-08-30
+2011-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,14067500000.0,USD,imf,2026-08-30,level,2026-08-30
+2011-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,13.625383,% change,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GDP_GROWTH,7.5,% change,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GDP_PPP,333104921000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GOV_BALANCE,5.811036,% of GDP,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_GOV_DEBT,10.161007,% of GDP,imf,2026-08-30,level,2026-08-30
+2011-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.233915,% of GDP,imf,2026-08-30,level,2026-08-30
+2011-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,27.044951,% of GDP,imf,2026-08-30,level,2026-08-30
+2011-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,3.87992,% change,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_INFLATION,8.379501,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,22.998146,% of GDP,imf,2026-08-30,level,2026-08-30
 2011-01-01,KZ,national,annual,IMF_NOMINAL_GDP,28243053000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -860,10 +946,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,2581518200000.0,KZT,bns,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,1.263711,% of GDP,imf,2026-08-30,level,2026-08-30
+2012-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,2628500000.0,USD,imf,2026-08-30,level,2026-08-30
+2012-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.452397,% change,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.000001,% change,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GDP_PPP,356272468000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GOV_BALANCE,4.430882,% of GDP,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_GOV_DEBT,12.125267,% of GDP,imf,2026-08-30,level,2026-08-30
+2012-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.912022,% of GDP,imf,2026-08-30,level,2026-08-30
+2012-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,26.342903,% of GDP,imf,2026-08-30,level,2026-08-30
+2012-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,27.747337,% change,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_INFLATION,5.127796,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,25.22966,% of GDP,imf,2026-08-30,level,2026-08-30
 2012-01-01,KZ,national,annual,IMF_NOMINAL_GDP,31015187000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -925,10 +1016,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,2585020800000.0,KZT,bns,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,1.913203,% of GDP,imf,2026-08-30,level,2026-08-30
+2013-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,4527300000.0,USD,imf,2026-08-30,level,2026-08-30
+2013-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,3.254597,% change,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.9,% change,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GDP_PPP,383714079000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GOV_BALANCE,4.945694,% of GDP,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_GOV_DEBT,12.602508,% of GDP,imf,2026-08-30,level,2026-08-30
+2013-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,19.808639,% of GDP,imf,2026-08-30,level,2026-08-30
+2013-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,24.754333,% of GDP,imf,2026-08-30,level,2026-08-30
+2013-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,6.918568,% change,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_INFLATION,5.819784,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,24.569605,% of GDP,imf,2026-08-30,level,2026-08-30
 2013-01-01,KZ,national,annual,IMF_NOMINAL_GDP,35999025000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -990,10 +1086,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,3193949100000.0,KZT,bns,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.288437,% of GDP,imf,2026-08-30,level,2026-08-30
+2014-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-2852800000.0,USD,imf,2026-08-30,level,2026-08-30
+2014-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,-11.234065,% change,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.3,% change,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GDP_PPP,407184369000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GOV_BALANCE,2.481848,% of GDP,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_GOV_DEBT,14.496344,% of GDP,imf,2026-08-30,level,2026-08-30
+2014-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.260233,% of GDP,imf,2026-08-30,level,2026-08-30
+2014-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,23.74208,% of GDP,imf,2026-08-30,level,2026-08-30
+2014-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,-5.911134,% change,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_INFLATION,6.57668,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,25.790247,% of GDP,imf,2026-08-30,level,2026-08-30
 2014-01-01,KZ,national,annual,IMF_NOMINAL_GDP,39675833000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -1077,10 +1178,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-31,KZ,national,annual,VAT_REVENUE,1198169.86741276,million KZT,minfin,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-5.412162,% of GDP,imf,2026-08-30,level,2026-08-30
+2015-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-9979400000.0,USD,imf,2026-08-30,level,2026-08-30
+2015-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,-2.989522,% change,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GDP_GROWTH,0.999999,% change,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GDP_PPP,415072887000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GOV_BALANCE,-6.259289,% of GDP,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_GOV_DEBT,21.881937,% of GDP,imf,2026-08-30,level,2026-08-30
+2015-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,22.870298,% of GDP,imf,2026-08-30,level,2026-08-30
+2015-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,16.611009,% of GDP,imf,2026-08-30,level,2026-08-30
+2015-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,-5.271598,% change,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_INFLATION,6.750202,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,27.907915,% of GDP,imf,2026-08-30,level,2026-08-30
 2015-01-01,KZ,national,annual,IMF_NOMINAL_GDP,40884134000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -1164,10 +1270,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-31,KZ,national,annual,VAT_REVENUE,944438.0303032,million KZT,minfin,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,monthly,CPI,101.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-5.073343,% of GDP,imf,2026-08-30,level,2026-08-30
+2016-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-6964600000.0,USD,imf,2026-08-30,level,2026-08-30
+2016-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.578905,% change,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GDP_GROWTH,0.9,% change,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GDP_PPP,422788160000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GOV_BALANCE,-4.503217,% of GDP,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_GOV_DEBT,19.677354,% of GDP,imf,2026-08-30,level,2026-08-30
+2016-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.51167,% of GDP,imf,2026-08-30,level,2026-08-30
+2016-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,17.008453,% of GDP,imf,2026-08-30,level,2026-08-30
+2016-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,-13.804368,% change,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_INFLATION,14.56519,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,27.827583,% of GDP,imf,2026-08-30,level,2026-08-30
 2016-01-01,KZ,national,annual,IMF_NOMINAL_GDP,46971150000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -1252,10 +1363,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-31,KZ,national,annual,VAT_REVENUE,1495681.95848907,million KZT,minfin,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.054124,% of GDP,imf,2026-08-30,level,2026-08-30
+2017-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-3426400000.0,USD,imf,2026-08-30,level,2026-08-30
+2017-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,11.360109,% change,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.900001,% change,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GDP_PPP,447143867000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GOV_BALANCE,-4.265509,% of GDP,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_GOV_DEBT,19.869432,% of GDP,imf,2026-08-30,level,2026-08-30
+2017-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,24.087918,% of GDP,imf,2026-08-30,level,2026-08-30
+2017-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,19.82241,% of GDP,imf,2026-08-30,level,2026-08-30
+2017-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,4.98587,% change,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_INFLATION,7.458411,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,26.352482,% of GDP,imf,2026-08-30,level,2026-08-30
 2017-01-01,KZ,national,annual,IMF_NOMINAL_GDP,54378858000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -1341,10 +1457,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,monthly,FX_RESERVES,30996.649283570427,USD million,nbk,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-0.984499,% of GDP,imf,2026-08-30,level,2026-08-30
+2018-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-1765600000.0,USD,imf,2026-08-30,level,2026-08-30
+2018-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.515169,% change,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.099999,% change,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GDP_PPP,475138148000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GOV_BALANCE,2.579564,% of GDP,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_GOV_DEBT,20.25854,% of GDP,imf,2026-08-30,level,2026-08-30
+2018-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,18.846628,% of GDP,imf,2026-08-30,level,2026-08-30
+2018-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,21.426192,% of GDP,imf,2026-08-30,level,2026-08-30
+2018-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,8.426656,% change,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_INFLATION,6.007792,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,25.258212,% of GDP,imf,2026-08-30,level,2026-08-30
 2018-01-01,KZ,national,annual,IMF_NOMINAL_GDP,61819536000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -1456,10 +1577,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-01-01,KZ,national,monthly,FX_RESERVES,30927.02695042712,USD million,nbk,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,quarterly,GOV_DEBT,16045358.34352307,million KZT,minfin,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-3.868725,% of GDP,imf,2026-08-30,level,2026-08-30
+2019-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-7028200000.0,USD,imf,2026-08-30,level,2026-08-30
+2019-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,6.420229,% change,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.5,% change,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GDP_PPP,551108135000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GOV_BALANCE,-0.569543,% of GDP,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_GOV_DEBT,19.943728,% of GDP,imf,2026-08-30,level,2026-08-30
+2019-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.248485,% of GDP,imf,2026-08-30,level,2026-08-30
+2019-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,19.678943,% of GDP,imf,2026-08-30,level,2026-08-30
+2019-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,12.602936,% change,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_INFLATION,5.280464,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,27.627575,% of GDP,imf,2026-08-30,level,2026-08-30
 2019-01-01,KZ,national,annual,IMF_NOMINAL_GDP,69532627000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -1594,10 +1720,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,monthly,EXPORTS,4558391.945129985,thousand USD,bns,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,monthly,FX_RESERVES,28957.509887228625,USD million,nbk,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-6.461683,% of GDP,imf,2026-08-30,level,2026-08-30
+2020-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-11054800000.0,USD,imf,2026-08-30,level,2026-08-30
+2020-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,-9.651769,% change,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GDP_GROWTH,-2.6,% change,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GDP_PPP,565757227000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GOV_BALANCE,-7.036965,% of GDP,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_GOV_DEBT,26.357133,% of GDP,imf,2026-08-30,level,2026-08-30
+2020-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,24.545989,% of GDP,imf,2026-08-30,level,2026-08-30
+2020-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,17.509024,% of GDP,imf,2026-08-30,level,2026-08-30
+2020-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,-27.405784,% change,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_INFLATION,6.760977,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,28.806915,% of GDP,imf,2026-08-30,level,2026-08-30
 2020-01-01,KZ,national,annual,IMF_NOMINAL_GDP,70649033000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -1731,10 +1862,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,monthly,FX_RESERVES,35638.084976284,USD million,nbk,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,quarterly,GOV_DEBT,21548336.97585081,million KZT,minfin,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.359327,% of GDP,imf,2026-08-30,level,2026-08-30
+2021-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-2679400000.0,USD,imf,2026-08-30,level,2026-08-30
+2021-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,-3.783407,% change,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.100001,% change,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GDP_PPP,650469815000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GOV_BALANCE,-4.966052,% of GDP,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_GOV_DEBT,25.100451,% of GDP,imf,2026-08-30,level,2026-08-30
+2021-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,22.069656,% of GDP,imf,2026-08-30,level,2026-08-30
+2021-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,17.103603,% of GDP,imf,2026-08-30,level,2026-08-30
+2021-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,-10.813287,% change,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_INFLATION,8.002065,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,26.533436,% of GDP,imf,2026-08-30,level,2026-08-30
 2021-01-01,KZ,national,annual,IMF_NOMINAL_GDP,83951588000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -1878,10 +2014,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,monthly,EXPORTS,6093897.247329982,thousand USD,bns,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,monthly,FX_RESERVES,34377.97403821167,USD million,nbk,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,2.854326,% of GDP,imf,2026-08-30,level,2026-08-30
+2022-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,6436400000.0,USD,imf,2026-08-30,level,2026-08-30
+2022-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.127327,% change,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.199999,% change,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GDP_PPP,719029402000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GOV_BALANCE,0.105381,% of GDP,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_GOV_DEBT,23.524056,% of GDP,imf,2026-08-30,level,2026-08-30
+2022-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.717607,% of GDP,imf,2026-08-30,level,2026-08-30
+2022-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,21.822988,% of GDP,imf,2026-08-30,level,2026-08-30
+2022-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,14.507729,% change,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_INFLATION,14.98566,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,24.97591,% of GDP,imf,2026-08-30,level,2026-08-30
 2022-01-01,KZ,national,annual,IMF_NOMINAL_GDP,103765518000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -2087,10 +2228,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,monthly,EXPORTS,6016945.658610005,thousand USD,bns,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,monthly,FX_RESERVES,35076.02886017335,USD million,nbk,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-3.557706,% of GDP,imf,2026-08-30,level,2026-08-30
+2023-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-9315500000.0,USD,imf,2026-08-30,level,2026-08-30
+2023-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,16.763316,% change,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.1,% change,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GDP_PPP,783661048000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.41244,% of GDP,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_GOV_DEBT,22.981963,% of GDP,imf,2026-08-30,level,2026-08-30
+2023-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,23.392291,% of GDP,imf,2026-08-30,level,2026-08-30
+2023-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,21.979851,% of GDP,imf,2026-08-30,level,2026-08-30
+2023-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,25.145606,% change,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_INFLATION,14.522275,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,28.122224,% of GDP,imf,2026-08-30,level,2026-08-30
 2023-01-01,KZ,national,annual,IMF_NOMINAL_GDP,119442290000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -2299,10 +2445,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,monthly,EXPORTS,5947011.362290002,thousand USD,bns,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,monthly,FX_RESERVES,35944.0531031745,USD million,nbk,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.722483,% of GDP,imf,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-7935500000.0,USD,imf,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.376243,% change,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.0,% change,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GDP_PPP,843271572000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GOV_BALANCE,-3.434168,% of GDP,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_GOV_DEBT,24.376956,% of GDP,imf,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,22.667306,% of GDP,imf,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,19.233139,% of GDP,imf,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,2.500878,% change,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_INFLATION,8.675661,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,27.351386,% of GDP,imf,2026-08-30,level,2026-08-30
 2024-01-01,KZ,national,annual,IMF_NOMINAL_GDP,136693318000000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -2515,10 +2666,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,monthly,FX_RESERVES,45823.48534821276,USD million,nbk,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,quarterly,GOV_DEBT,33775798.64225829,million KZT,minfin,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-3.912392,% of GDP,imf,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-11844600000.0,USD,imf,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,6.389339,% change,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GDP_GROWTH,6.485254,% change,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GDP_PPP,923432902000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GOV_BALANCE,-3.113865,% of GDP,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_GOV_DEBT,24.561214,% of GDP,imf,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.84496,% of GDP,imf,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,18.731094,% of GDP,imf,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,6.380637,% change,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_INFLATION,11.378946,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,28.431067,% of GDP,imf,2026-08-30,level,2026-08-30
 2025-01-01,KZ,national,annual,IMF_NOMINAL_GDP,157741141500000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -2733,10 +2889,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,monthly,FX_RESERVES,65414.43553814808,USD million,nbk,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,quarterly,GOV_DEBT,38743138.97677609,million KZT,minfin,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.046644,% of GDP,imf,2026-08-30,level,2026-08-30
+2026-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-3772688000.0,USD,imf,2026-08-30,level,2026-08-30
+2026-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,5.119479,% change,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.609374,% change,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GDP_PPP,993671763000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.343847,% of GDP,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_GOV_DEBT,24.931411,% of GDP,imf,2026-08-30,level,2026-08-30
+2026-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.738868,% of GDP,imf,2026-08-30,level,2026-08-30
+2026-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,19.395021,% of GDP,imf,2026-08-30,level,2026-08-30
+2026-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,0.639714,% change,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_INFLATION,10.688503,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,28.985938,% of GDP,imf,2026-08-30,level,2026-08-30
 2026-01-01,KZ,national,annual,IMF_NOMINAL_GDP,188188133626000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -2844,10 +3005,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-29,KZ,national,daily,EXCHANGE_RATE,464.77,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
 2026-08-30,KZ,national,daily,EXCHANGE_RATE,464.77,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.031753,% of GDP,imf,2026-08-30,level,2026-08-30
+2027-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-7841870000.0,USD,imf,2026-08-30,level,2026-08-30
+2027-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,4.537186,% change,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.400226,% change,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GDP_PPP,1060175757000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.777447,% of GDP,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_GOV_DEBT,26.310051,% of GDP,imf,2026-08-30,level,2026-08-30
+2027-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.766928,% of GDP,imf,2026-08-30,level,2026-08-30
+2027-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,18.989481,% of GDP,imf,2026-08-30,level,2026-08-30
+2027-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,3.369352,% change,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_INFLATION,10.053376,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,29.923506,% of GDP,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_NOMINAL_GDP,215988277105000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -2856,10 +3022,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2027-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,27.891753,% of GDP,imf,2026-08-30,level,2026-08-30
 2027-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.52698,%,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.426629,% of GDP,imf,2026-08-30,level,2026-08-30
+2028-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-9967879000.0,USD,imf,2026-08-30,level,2026-08-30
+2028-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,1.487022,% change,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.308862,% change,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GDP_PPP,1113232934000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GOV_BALANCE,-2.018662,% of GDP,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_GOV_DEBT,27.990697,% of GDP,imf,2026-08-30,level,2026-08-30
+2028-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.91909,% of GDP,imf,2026-08-30,level,2026-08-30
+2028-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,18.900429,% of GDP,imf,2026-08-30,level,2026-08-30
+2028-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,0.771599,% change,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_INFLATION,8.782549,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,31.078198,% of GDP,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_NOMINAL_GDP,242967218792000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -2868,10 +3039,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2028-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,28.651569,% of GDP,imf,2026-08-30,level,2026-08-30
 2028-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.486974,%,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.293755,% of GDP,imf,2026-08-30,level,2026-08-30
+2029-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-10072789000.0,USD,imf,2026-08-30,level,2026-08-30
+2029-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,4.844065,% change,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.596039,% change,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GDP_PPP,1173771528000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.966799,% of GDP,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_GOV_DEBT,29.515861,% of GDP,imf,2026-08-30,level,2026-08-30
+2029-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.807245,% of GDP,imf,2026-08-30,level,2026-08-30
+2029-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,18.840446,% of GDP,imf,2026-08-30,level,2026-08-30
+2029-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,4.573309,% change,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_INFLATION,7.599685,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,32.200393,% of GDP,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_NOMINAL_GDP,271566238867000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -2880,10 +3056,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2029-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,29.906639,% of GDP,imf,2026-08-30,level,2026-08-30
 2029-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.439061,%,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.21105,% of GDP,imf,2026-08-30,level,2026-08-30
+2030-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-10366111000.0,USD,imf,2026-08-30,level,2026-08-30
+2030-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,3.969561,% change,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.59838,% change,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GDP_PPP,1238352763000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.739838,% of GDP,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_GOV_DEBT,30.828005,% of GDP,imf,2026-08-30,level,2026-08-30
+2030-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,20.932849,% of GDP,imf,2026-08-30,level,2026-08-30
+2030-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,19.193011,% of GDP,imf,2026-08-30,level,2026-08-30
+2030-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,2.794135,% change,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_INFLATION,5.848574,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,32.76367,% of GDP,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_NOMINAL_GDP,299028075543000.0,KZT,imf,2026-08-30,level,2026-08-30
@@ -2892,10 +3073,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2030-01-01,KZ,national,annual,IMF_SAVINGS_RATIO,30.55262,% of GDP,imf,2026-08-30,level,2026-08-30
 2030-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.395838,%,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.983981,% of GDP,imf,2026-08-30,level,2026-08-30
+2031-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT_USD,-9953315000.0,USD,imf,2026-08-30,level,2026-08-30
+2031-01-01,KZ,national,annual,IMF_EXPORT_VOLUME_GROWTH,2.808034,% change,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.613475,% change,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GDP_PPP,1306264163000.0,international dollars,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GOV_BALANCE,-1.716655,% of GDP,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_GOV_DEBT,32.106012,% of GDP,imf,2026-08-30,level,2026-08-30
+2031-01-01,KZ,national,annual,IMF_GOV_EXPENDITURE_RATIO,21.282434,% of GDP,imf,2026-08-30,level,2026-08-30
+2031-01-01,KZ,national,annual,IMF_GOV_REVENUE_RATIO,19.565779,% of GDP,imf,2026-08-30,level,2026-08-30
+2031-01-01,KZ,national,annual,IMF_IMPORT_VOLUME_GROWTH,1.568291,% change,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_INFLATION,4.999999,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_INVESTMENT_RATIO,33.107246,% of GDP,imf,2026-08-30,level,2026-08-30
 2031-01-01,KZ,national,annual,IMF_NOMINAL_GDP,326326260159000.0,KZT,imf,2026-08-30,level,2026-08-30

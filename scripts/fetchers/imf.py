@@ -166,3 +166,35 @@ def fetch_investment_ratio() -> tuple[list[dict], dict]:
 def fetch_savings_ratio() -> tuple[list[dict], dict]:
     """WEO gross national savings, % of GDP. Verified live 2026-08-30: indicator code NGSD_NGDP."""
     return _fetch_weo_series("IMF_SAVINGS_RATIO", "WEO", "IMF.RES", "9.0.0", "KAZ", "NGSD_NGDP")
+
+
+def fetch_gov_revenue_ratio() -> tuple[list[dict], dict]:
+    """WEO general government revenue, % of GDP. Verified live 2026-08-30: indicator
+    code GGR_NGDP. Cross-checked: 2031 value (19.57%) minus IMF_GOV_EXPENDITURE_RATIO's
+    2031 value (21.28%) = -1.71%, matching IMF_GOV_BALANCE's own 2031 value (-1.72%)
+    to within rounding -- internally consistent across three independently-fetched series."""
+    return _fetch_weo_series("IMF_GOV_REVENUE_RATIO", "WEO", "IMF.RES", "9.0.0", "KAZ", "GGR_NGDP")
+
+
+def fetch_gov_expenditure_ratio() -> tuple[list[dict], dict]:
+    """WEO general government expenditure, % of GDP. Verified live 2026-08-30: indicator
+    code GGX_NGDP. See fetch_gov_revenue_ratio for the cross-check against IMF_GOV_BALANCE."""
+    return _fetch_weo_series("IMF_GOV_EXPENDITURE_RATIO", "WEO", "IMF.RES", "9.0.0", "KAZ", "GGX_NGDP")
+
+
+def fetch_export_volume_growth() -> tuple[list[dict], dict]:
+    """WEO export volume growth, % change. Verified live 2026-08-30: indicator code TX_RPCH."""
+    return _fetch_weo_series("IMF_EXPORT_VOLUME_GROWTH", "WEO", "IMF.RES", "9.0.0", "KAZ", "TX_RPCH")
+
+
+def fetch_import_volume_growth() -> tuple[list[dict], dict]:
+    """WEO import volume growth, % change. Verified live 2026-08-30: indicator code TM_RPCH."""
+    return _fetch_weo_series("IMF_IMPORT_VOLUME_GROWTH", "WEO", "IMF.RES", "9.0.0", "KAZ", "TM_RPCH")
+
+
+def fetch_current_account_usd() -> tuple[list[dict], dict]:
+    """WEO current account balance, USD level (companion to IMF_CURRENT_ACCOUNT, which is
+    % of GDP). Verified live 2026-08-30: indicator code BCA. Cross-checked: 2031 value
+    (-$9.953bn) / IMF_NOMINAL_GDP_USD's 2031 value ($501.68bn) = -1.984%, matching
+    IMF_CURRENT_ACCOUNT's own 2031 value (-1.984%) essentially exactly."""
+    return _fetch_weo_series("IMF_CURRENT_ACCOUNT_USD", "WEO", "IMF.RES", "9.0.0", "KAZ", "BCA")

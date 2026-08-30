@@ -908,3 +908,59 @@ agencies:
         frequency: A
         url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.NGSD_NGDP"
         notes: "Verified live 2026-08-30, standard WEO code."
+      IMF_GOV_REVENUE_RATIO:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: GGR_NGDP
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.GGR_NGDP"
+        notes: >
+          Verified live 2026-08-30. Cross-checked: 2031 value (19.57%) minus
+          IMF_GOV_EXPENDITURE_RATIO's 2031 value (21.28%) = -1.71%, matching
+          IMF_GOV_BALANCE's own 2031 value (-1.72%) to within rounding.
+      IMF_GOV_EXPENDITURE_RATIO:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: GGX_NGDP
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.GGX_NGDP"
+        notes: "Verified live 2026-08-30. See IMF_GOV_REVENUE_RATIO for the cross-check."
+      IMF_EXPORT_VOLUME_GROWTH:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: TX_RPCH
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.TX_RPCH"
+        notes: "Verified live 2026-08-30, standard WEO code."
+      IMF_IMPORT_VOLUME_GROWTH:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: TM_RPCH
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.TM_RPCH"
+        notes: "Verified live 2026-08-30, standard WEO code."
+      IMF_CURRENT_ACCOUNT_USD:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: BCA
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.BCA"
+        notes: >
+          USD level companion to IMF_CURRENT_ACCOUNT (% of GDP). Cross-checked: 2031 value
+          (-$9.953bn) / IMF_NOMINAL_GDP_USD's 2031 value ($501.68bn) = -1.984%, matching
+          IMF_CURRENT_ACCOUNT's own 2031 value (-1.984%) essentially exactly.

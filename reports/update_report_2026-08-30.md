@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T20:57:12.077418
+Run timestamp: 2026-08-30T21:18:22.108163
 Unified dataset updated: True
 Tests passed: True
 
@@ -292,3 +292,94 @@ Tests passed: True
 - **imf/IMF_SAVINGS_RATIO** — fetch+validate+process: ok (downloaded=40, processed=40)
   - warning: Unexpected jump of 88.0% between 1992-01-01 (7.50239) and 1993-01-01 (14.100873).
   - warning: Unexpected jump of 63.2% between 1998-01-01 (10.270641) and 1999-01-01 (16.762557).
+- **imf/IMF_GOV_REVENUE_RATIO** — fetch+validate+process: ok (downloaded=38, processed=38)
+- **imf/IMF_GOV_EXPENDITURE_RATIO** — fetch+validate+process: ok (downloaded=30, processed=30)
+- **imf/IMF_EXPORT_VOLUME_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
+  - warning: Unexpected jump of 173.3% between 1993-01-01 (41.18507) and 1994-01-01 (-30.20871).
+  - warning: Unexpected jump of 182.2% between 1994-01-01 (-30.20871) and 1995-01-01 (24.822242).
+  - warning: Unexpected jump of 57.6% between 1995-01-01 (24.822242) and 1996-01-01 (10.52635).
+  - warning: Unexpected jump of 56.1% between 1997-01-01 (15.526554) and 1998-01-01 (6.817857).
+  - warning: Unexpected jump of 221.6% between 1998-01-01 (6.817857) and 1999-01-01 (-8.291821).
+  - warning: Unexpected jump of 793.4% between 1999-01-01 (-8.291821) and 2000-01-01 (57.497322).
+  - warning: Unexpected jump of 96.3% between 2000-01-01 (57.497322) and 2001-01-01 (2.109161).
+  - warning: Unexpected jump of 335.2% between 2001-01-01 (2.109161) and 2002-01-01 (9.178136).
+  - warning: Unexpected jump of 155.3% between 2003-01-01 (12.851903) and 2004-01-01 (32.806964).
+  - warning: Unexpected jump of 63.1% between 2005-01-01 (27.254613) and 2006-01-01 (10.047385).
+  - warning: Unexpected jump of 52.1% between 2006-01-01 (10.047385) and 2007-01-01 (15.284495).
+  - warning: Unexpected jump of 53.7% between 2007-01-01 (15.284495) and 2008-01-01 (7.076718).
+  - warning: Unexpected jump of 64.0% between 2008-01-01 (7.076718) and 2009-01-01 (2.546137).
+  - warning: Unexpected jump of 65.3% between 2009-01-01 (2.546137) and 2010-01-01 (0.884379).
+  - warning: Unexpected jump of 1440.7% between 2010-01-01 (0.884379) and 2011-01-01 (13.625383).
+  - warning: Unexpected jump of 82.0% between 2011-01-01 (13.625383) and 2012-01-01 (2.452397).
+  - warning: Unexpected jump of 445.2% between 2013-01-01 (3.254597) and 2014-01-01 (-11.234065).
+  - warning: Unexpected jump of 73.4% between 2014-01-01 (-11.234065) and 2015-01-01 (-2.989522).
+  - warning: Unexpected jump of 186.3% between 2015-01-01 (-2.989522) and 2016-01-01 (2.578905).
+  - warning: Unexpected jump of 340.5% between 2016-01-01 (2.578905) and 2017-01-01 (11.360109).
+  - warning: Unexpected jump of 77.9% between 2017-01-01 (11.360109) and 2018-01-01 (2.515169).
+  - warning: Unexpected jump of 155.3% between 2018-01-01 (2.515169) and 2019-01-01 (6.420229).
+  - warning: Unexpected jump of 250.3% between 2019-01-01 (6.420229) and 2020-01-01 (-9.651769).
+  - warning: Unexpected jump of 60.8% between 2020-01-01 (-9.651769) and 2021-01-01 (-3.783407).
+  - warning: Unexpected jump of 156.2% between 2021-01-01 (-3.783407) and 2022-01-01 (2.127327).
+  - warning: Unexpected jump of 688.0% between 2022-01-01 (2.127327) and 2023-01-01 (16.763316).
+  - warning: Unexpected jump of 85.8% between 2023-01-01 (16.763316) and 2024-01-01 (2.376243).
+  - warning: Unexpected jump of 168.9% between 2024-01-01 (2.376243) and 2025-01-01 (6.389339).
+  - warning: Unexpected jump of 67.2% between 2027-01-01 (4.537186) and 2028-01-01 (1.487022).
+  - warning: Unexpected jump of 225.8% between 2028-01-01 (1.487022) and 2029-01-01 (4.844065).
+- **imf/IMF_IMPORT_VOLUME_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
+  - warning: Unexpected jump of 258.7% between 1993-01-01 (13.087335) and 1994-01-01 (-20.773372).
+  - warning: Unexpected jump of 211.3% between 1994-01-01 (-20.773372) and 1995-01-01 (23.122596).
+  - warning: Unexpected jump of 88.1% between 1997-01-01 (17.288219) and 1998-01-01 (2.049388).
+  - warning: Unexpected jump of 400.9% between 1998-01-01 (2.049388) and 1999-01-01 (-6.165625).
+  - warning: Unexpected jump of 586.0% between 1999-01-01 (-6.165625) and 2000-01-01 (29.963725).
+  - warning: Unexpected jump of 78.9% between 2002-01-01 (12.199099) and 2003-01-01 (2.577467).
+  - warning: Unexpected jump of 992.8% between 2003-01-01 (2.577467) and 2004-01-01 (28.165955).
+  - warning: Unexpected jump of 61.5% between 2005-01-01 (28.303354) and 2006-01-01 (10.89743).
+  - warning: Unexpected jump of 124.0% between 2006-01-01 (10.89743) and 2007-01-01 (24.411257).
+  - warning: Unexpected jump of 74.8% between 2007-01-01 (24.411257) and 2008-01-01 (6.152312).
+  - warning: Unexpected jump of 278.6% between 2008-01-01 (6.152312) and 2009-01-01 (-10.988415).
+  - warning: Unexpected jump of 166.0% between 2010-01-01 (-5.88078) and 2011-01-01 (3.87992).
+  - warning: Unexpected jump of 615.2% between 2011-01-01 (3.87992) and 2012-01-01 (27.747337).
+  - warning: Unexpected jump of 75.1% between 2012-01-01 (27.747337) and 2013-01-01 (6.918568).
+  - warning: Unexpected jump of 185.4% between 2013-01-01 (6.918568) and 2014-01-01 (-5.911134).
+  - warning: Unexpected jump of 161.9% between 2015-01-01 (-5.271598) and 2016-01-01 (-13.804368).
+  - warning: Unexpected jump of 136.1% between 2016-01-01 (-13.804368) and 2017-01-01 (4.98587).
+  - warning: Unexpected jump of 69.0% between 2017-01-01 (4.98587) and 2018-01-01 (8.426656).
+  - warning: Unexpected jump of 317.5% between 2019-01-01 (12.602936) and 2020-01-01 (-27.405784).
+  - warning: Unexpected jump of 60.5% between 2020-01-01 (-27.405784) and 2021-01-01 (-10.813287).
+  - warning: Unexpected jump of 234.2% between 2021-01-01 (-10.813287) and 2022-01-01 (14.507729).
+  - warning: Unexpected jump of 73.3% between 2022-01-01 (14.507729) and 2023-01-01 (25.145606).
+  - warning: Unexpected jump of 90.1% between 2023-01-01 (25.145606) and 2024-01-01 (2.500878).
+  - warning: Unexpected jump of 155.1% between 2024-01-01 (2.500878) and 2025-01-01 (6.380637).
+  - warning: Unexpected jump of 90.0% between 2025-01-01 (6.380637) and 2026-01-01 (0.639714).
+  - warning: Unexpected jump of 426.7% between 2026-01-01 (0.639714) and 2027-01-01 (3.369352).
+  - warning: Unexpected jump of 77.1% between 2027-01-01 (3.369352) and 2028-01-01 (0.771599).
+  - warning: Unexpected jump of 492.7% between 2028-01-01 (0.771599) and 2029-01-01 (4.573309).
+- **imf/IMF_CURRENT_ACCOUNT_USD** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 70.0% between 1992-01-01 (-1485277000.0) and 1993-01-01 (-444953000.0).
+  - warning: Unexpected jump of 104.6% between 1993-01-01 (-444953000.0) and 1994-01-01 (-910449000.0).
+  - warning: Unexpected jump of 76.6% between 1994-01-01 (-910449000.0) and 1995-01-01 (-213100000.0).
+  - warning: Unexpected jump of 252.4% between 1995-01-01 (-213100000.0) and 1996-01-01 (-751000000.0).
+  - warning: Unexpected jump of 53.2% between 1997-01-01 (-799300000.0) and 1998-01-01 (-1224900000.0).
+  - warning: Unexpected jump of 86.0% between 1998-01-01 (-1224900000.0) and 1999-01-01 (-171000000.0).
+  - warning: Unexpected jump of 314.2% between 1999-01-01 (-171000000.0) and 2000-01-01 (366309000.0).
+  - warning: Unexpected jump of 479.3% between 2000-01-01 (366309000.0) and 2001-01-01 (-1389516000.0).
+  - warning: Unexpected jump of 73.4% between 2002-01-01 (-1024341000.0) and 2003-01-01 (-272631000.0).
+  - warning: Unexpected jump of 223.0% between 2003-01-01 (-272631000.0) and 2004-01-01 (335428000.0).
+  - warning: Unexpected jump of 329.4% between 2005-01-01 (358800000.0) and 2006-01-01 (-823000000.0).
+  - warning: Unexpected jump of 479.3% between 2006-01-01 (-823000000.0) and 2007-01-01 (-4767400000.0).
+  - warning: Unexpected jump of 127.0% between 2007-01-01 (-4767400000.0) and 2008-01-01 (1287200000.0).
+  - warning: Unexpected jump of 110.4% between 2008-01-01 (1287200000.0) and 2009-01-01 (-134400000.0).
+  - warning: Unexpected jump of 2092.3% between 2009-01-01 (-134400000.0) and 2010-01-01 (2677600000.0).
+  - warning: Unexpected jump of 425.4% between 2010-01-01 (2677600000.0) and 2011-01-01 (14067500000.0).
+  - warning: Unexpected jump of 81.3% between 2011-01-01 (14067500000.0) and 2012-01-01 (2628500000.0).
+  - warning: Unexpected jump of 72.2% between 2012-01-01 (2628500000.0) and 2013-01-01 (4527300000.0).
+  - warning: Unexpected jump of 163.0% between 2013-01-01 (4527300000.0) and 2014-01-01 (-2852800000.0).
+  - warning: Unexpected jump of 249.8% between 2014-01-01 (-2852800000.0) and 2015-01-01 (-9979400000.0).
+  - warning: Unexpected jump of 50.8% between 2016-01-01 (-6964600000.0) and 2017-01-01 (-3426400000.0).
+  - warning: Unexpected jump of 298.1% between 2018-01-01 (-1765600000.0) and 2019-01-01 (-7028200000.0).
+  - warning: Unexpected jump of 57.3% between 2019-01-01 (-7028200000.0) and 2020-01-01 (-11054800000.0).
+  - warning: Unexpected jump of 75.8% between 2020-01-01 (-11054800000.0) and 2021-01-01 (-2679400000.0).
+  - warning: Unexpected jump of 340.2% between 2021-01-01 (-2679400000.0) and 2022-01-01 (6436400000.0).
+  - warning: Unexpected jump of 244.7% between 2022-01-01 (6436400000.0) and 2023-01-01 (-9315500000.0).
+  - warning: Unexpected jump of 68.1% between 2025-01-01 (-11844600000.0) and 2026-01-01 (-3772688000.0).
+  - warning: Unexpected jump of 107.9% between 2026-01-01 (-3772688000.0) and 2027-01-01 (-7841870000.0).

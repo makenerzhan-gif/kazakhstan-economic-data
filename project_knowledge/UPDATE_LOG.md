@@ -230,3 +230,41 @@ DEPOSITS_TOTAL (50.1M) sits between M2 (48.1M) and M3 (55.0M) for the same date 
 structurally sensible given deposits-only vs. cash-inclusive aggregate definitions.
 
 **67/67 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-30 — fourth scale-up batch: 67 -> 72 indicators
+Continued via the same IMF WEO mechanism as the prior two batches (standard codes, no new
+source discovery needed). Also spent significant time on BNS retail trade turnover via
+Taldau, without success (see below) -- left undecided rather than guessed.
+
+**Connected (5), all standard IMF WEO codes, verified live:**
+- IMF_GOV_REVENUE_RATIO (GGR_NGDP) and IMF_GOV_EXPENDITURE_RATIO (GGX_NGDP), general
+  government revenue/expenditure as % of GDP.
+- IMF_EXPORT_VOLUME_GROWTH (TX_RPCH) and IMF_IMPORT_VOLUME_GROWTH (TM_RPCH), volume growth
+  rates (not values), % change.
+- IMF_CURRENT_ACCOUNT_USD (BCA), current account balance in USD level -- companion to the
+  already-connected IMF_CURRENT_ACCOUNT (% of GDP).
+
+**Sanity-checked before committing:**
+- GGR_NGDP minus GGX_NGDP reproduces IMF_GOV_BALANCE (GGXCNL_NGDP) to within rounding for
+  every shared year (e.g. 2031: 19.566% - 21.282% = -1.72%, matching GGXCNL_NGDP's own
+  -1.72%) -- three independently-fetched WEO series agreeing internally.
+- BCA (USD level) divided by NGDPD (nominal GDP, USD) reproduces BCA_NGDPD
+  (IMF_CURRENT_ACCOUNT, % of GDP) almost exactly for every shared year (e.g. 2031:
+  -$9.953bn / $501.68bn = -1.984%, matching -1.984% essentially exactly).
+- Idempotency: re-running update_all.py touched only manifests (fresh `downloaded_at`
+  timestamps, same-day content unchanged), logs, reports, and the regenerated unified
+  dataset -- zero raw content-file churn.
+
+**Investigated, not connected, no guess made:** BNS retail trade turnover ("Товарооборот
+розничной торговли") via Taldau. Found three candidate indexIds via web search (704502,
+701830, 703076). 704502 returns live data with the standard single-dimension mechanism
+(measure_id=7, dicIds=67) but the values (~0.27-0.34, dimensionless, 2001-2024) don't look
+like turnover in billions of tenge -- almost certainly a different indicator (a ratio or
+coefficient), not retail trade. 701830 and 703076 both return HTTP 500 under the standard
+mechanism, meaning (like AVG_WAGE) they likely need a non-default measure_id/dicIds
+combination discoverable only via live-page XHR capture. Did not guess a mechanism or
+substitute an unverified indexId. Left for a future session with fresh browser-capture
+budget, or to be documented as `RETAIL_TRADE_NOT_CONNECTED` alongside the other
+no-clean-aggregate gaps if not resolved.
+
+**72/72 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

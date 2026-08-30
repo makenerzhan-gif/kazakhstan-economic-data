@@ -616,3 +616,48 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+
+  - id: IMF_GOV_REVENUE_RATIO
+    name_ru: "IMF WEO: доходы сектора госуправления, % ВВП"
+    name_en: "IMF WEO: General Government Revenue, % of GDP"
+    agency: imf
+    frequency: annual
+    unit: "% of GDP"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_GOV_EXPENDITURE_RATIO
+    name_ru: "IMF WEO: расходы сектора госуправления, % ВВП"
+    name_en: "IMF WEO: General Government Expenditure, % of GDP"
+    agency: imf
+    frequency: annual
+    unit: "% of GDP"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_EXPORT_VOLUME_GROWTH
+    name_ru: "IMF WEO: рост физического объема экспорта"
+    name_en: "IMF WEO: Export Volume Growth"
+    agency: imf
+    frequency: annual
+    unit: "% change"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_IMPORT_VOLUME_GROWTH
+    name_ru: "IMF WEO: рост физического объема импорта"
+    name_en: "IMF WEO: Import Volume Growth"
+    agency: imf
+    frequency: annual
+    unit: "% change"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_CURRENT_ACCOUNT_USD
+    name_ru: "IMF WEO: счет текущих операций, Казахстан (USD)"
+    name_en: "IMF WEO: Current Account Balance, Kazakhstan (USD)"
+    agency: imf
+    frequency: annual
+    unit: "USD"
+    category: international_projection
+    source_status: confirmed

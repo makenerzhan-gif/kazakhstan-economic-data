@@ -28,6 +28,11 @@ FETCHERS = {
     "IMF_GDP_PPP": imf_fetchers.fetch_gdp_ppp,
     "IMF_INVESTMENT_RATIO": imf_fetchers.fetch_investment_ratio,
     "IMF_SAVINGS_RATIO": imf_fetchers.fetch_savings_ratio,
+    "IMF_GOV_REVENUE_RATIO": imf_fetchers.fetch_gov_revenue_ratio,
+    "IMF_GOV_EXPENDITURE_RATIO": imf_fetchers.fetch_gov_expenditure_ratio,
+    "IMF_EXPORT_VOLUME_GROWTH": imf_fetchers.fetch_export_volume_growth,
+    "IMF_IMPORT_VOLUME_GROWTH": imf_fetchers.fetch_import_volume_growth,
+    "IMF_CURRENT_ACCOUNT_USD": imf_fetchers.fetch_current_account_usd,
 }
 
 INDICATOR_IDS = [
@@ -35,6 +40,8 @@ INDICATOR_IDS = [
     "IMF_UNEMPLOYMENT", "IMF_GOV_BALANCE", "IMF_GOV_DEBT",
     "IMF_POPULATION", "IMF_NOMINAL_GDP", "IMF_NOMINAL_GDP_USD",
     "IMF_GDP_PPP", "IMF_INVESTMENT_RATIO", "IMF_SAVINGS_RATIO",
+    "IMF_GOV_REVENUE_RATIO", "IMF_GOV_EXPENDITURE_RATIO",
+    "IMF_EXPORT_VOLUME_GROWTH", "IMF_IMPORT_VOLUME_GROWTH", "IMF_CURRENT_ACCOUNT_USD",
 ]
 
 
