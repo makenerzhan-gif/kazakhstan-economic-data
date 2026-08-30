@@ -27,11 +27,14 @@ FETCHERS = {
     "M1": nbk_fetchers.fetch_m1,
     "FX_RESERVES": nbk_fetchers.fetch_fx_reserves,
     "NATIONAL_FUND_ASSETS": nbk_fetchers.fetch_national_fund_assets,
+    "REER": nbk_fetchers.fetch_reer,
+    "NEER": nbk_fetchers.fetch_neer,
+    "DEPOSITS_TOTAL": nbk_fetchers.fetch_deposits_total,
 }
 
 INDICATOR_IDS = [
     "BASE_RATE", "EXCHANGE_RATE", "M2", "M3", "MONETARY_BASE", "M0", "M1",
-    "FX_RESERVES", "NATIONAL_FUND_ASSETS",
+    "FX_RESERVES", "NATIONAL_FUND_ASSETS", "REER", "NEER", "DEPOSITS_TOTAL",
 ]
 
 

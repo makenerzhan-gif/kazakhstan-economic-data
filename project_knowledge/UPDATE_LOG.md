@@ -196,3 +196,37 @@ found while researching GDP_REAL.
   carry timestamps) and the regenerated unified dataset -- zero actual data-file churn.
 
 **58/58 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 24/24 passing.
+
+## 2026-08-30 — third scale-up batch: 58 -> 67 indicators
+Continued after the CI-observability and raw_store fixes were verified end-to-end (see the
+separate CI incident entries). This batch covers NBK's remaining monetary/external categories
+and 6 more IMF WEO series.
+
+**Connected (9):**
+- **IMF WEO** (6, standard codes, all worked first try): IMF_POPULATION (LP),
+  IMF_NOMINAL_GDP (NGDP, national currency), IMF_NOMINAL_GDP_USD (NGDPD), IMF_GDP_PPP
+  (PPPGDP), IMF_INVESTMENT_RATIO (NID_NGDP), IMF_SAVINGS_RATIO (NGSD_NGDP). Cross-check:
+  IMF_NOMINAL_GDP's 2024 value (136,693,318,000,000 KZT) matches our own BNS GDP_NOMINAL
+  series (136,693,318,300,000) to within 0.0000002%.
+- **NBK REER/NEER** (formId=299): unlike deposit/lending rates, the *effective* exchange
+  rate categories turned out to be clean basket-wide indices with no currency-pair
+  dimension -- no aggregation risk. Used "Including oil trade" as primary.
+- **NBK DEPOSITS_TOTAL** (formId=62, row_code=1): resolved the same way as the M2/M3/
+  monetary-base row_code mapping -- cross-referenced the human-facing table and confirmed
+  matching values (44,457,125.21 vs the page's 44,457,125).
+
+**Not connected, documented (3), all for the same underlying reason:**
+- NBK EXTERNAL_DEBT (checked both formId=358 and the plain-sounding formId=293 "External
+  Debt") and NBK LOANS_TO_ECONOMY (formId=445): neither has an aggregate/total row across
+  their dimensions, and EXTERNAL_DEBT's `investment_type` field shows what look like
+  duplicate categories differing only by trailing whitespace -- computing our own sum was
+  judged too risky (real double-counting risk, not just tedious). Same category of gap as
+  DEPOSIT_RATE/LENDING_RATE from the second batch.
+
+**Sanity-checked before committing:** REER (123) sits consistently above NEER (82) for the
+same recent months -- expected direction given Kazakhstan's inflation has generally
+exceeded its trading partners' over the base period, not a sign of a swapped calculation.
+DEPOSITS_TOTAL (50.1M) sits between M2 (48.1M) and M3 (55.0M) for the same date --
+structurally sensible given deposits-only vs. cash-inclusive aggregate definitions.
+
+**67/67 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

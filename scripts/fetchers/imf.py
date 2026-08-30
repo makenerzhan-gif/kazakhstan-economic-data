@@ -131,3 +131,38 @@ def fetch_gov_debt() -> tuple[list[dict], dict]:
     """WEO general government gross debt, % of GDP.
     Verified live 2026-08-30: indicator code GGXWDG_NGDP."""
     return _fetch_weo_series("IMF_GOV_DEBT", "WEO", "IMF.RES", "9.0.0", "KAZ", "GGXWDG_NGDP")
+
+
+def fetch_population() -> tuple[list[dict], dict]:
+    """WEO population. Verified live 2026-08-30: indicator code LP. Sanity-checked:
+    2025 value (20,380,366) matches Kazakhstan's known population trajectory."""
+    return _fetch_weo_series("IMF_POPULATION", "WEO", "IMF.RES", "9.0.0", "KAZ", "LP")
+
+
+def fetch_nominal_gdp() -> tuple[list[dict], dict]:
+    """WEO nominal GDP, national currency (KZT). Verified live 2026-08-30: indicator
+    code NGDP. Cross-checked: 2024 value (136,693,318,000,000) matches our own
+    BNS-sourced GDP_NOMINAL series (136,693,318,300,000) to within 0.0000002% --
+    independent confirmation both series are correct."""
+    return _fetch_weo_series("IMF_NOMINAL_GDP", "WEO", "IMF.RES", "9.0.0", "KAZ", "NGDP")
+
+
+def fetch_nominal_gdp_usd() -> tuple[list[dict], dict]:
+    """WEO nominal GDP, USD. Verified live 2026-08-30: indicator code NGDPD."""
+    return _fetch_weo_series("IMF_NOMINAL_GDP_USD", "WEO", "IMF.RES", "9.0.0", "KAZ", "NGDPD")
+
+
+def fetch_gdp_ppp() -> tuple[list[dict], dict]:
+    """WEO GDP, PPP-adjusted (international dollars). Verified live 2026-08-30:
+    indicator code PPPGDP."""
+    return _fetch_weo_series("IMF_GDP_PPP", "WEO", "IMF.RES", "9.0.0", "KAZ", "PPPGDP")
+
+
+def fetch_investment_ratio() -> tuple[list[dict], dict]:
+    """WEO total investment, % of GDP. Verified live 2026-08-30: indicator code NID_NGDP."""
+    return _fetch_weo_series("IMF_INVESTMENT_RATIO", "WEO", "IMF.RES", "9.0.0", "KAZ", "NID_NGDP")
+
+
+def fetch_savings_ratio() -> tuple[list[dict], dict]:
+    """WEO gross national savings, % of GDP. Verified live 2026-08-30: indicator code NGSD_NGDP."""
+    return _fetch_weo_series("IMF_SAVINGS_RATIO", "WEO", "IMF.RES", "9.0.0", "KAZ", "NGSD_NGDP")

@@ -535,3 +535,84 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+
+  - id: IMF_POPULATION
+    name_ru: "IMF WEO: население Казахстана"
+    name_en: "IMF WEO: Population, Kazakhstan"
+    agency: imf
+    frequency: annual
+    unit: "persons"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_NOMINAL_GDP
+    name_ru: "IMF WEO: номинальный ВВП, Казахстан (нац. валюта)"
+    name_en: "IMF WEO: Nominal GDP, Kazakhstan (national currency)"
+    agency: imf
+    frequency: annual
+    unit: "KZT"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_NOMINAL_GDP_USD
+    name_ru: "IMF WEO: номинальный ВВП, Казахстан (USD)"
+    name_en: "IMF WEO: Nominal GDP, Kazakhstan (USD)"
+    agency: imf
+    frequency: annual
+    unit: "USD"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_GDP_PPP
+    name_ru: "IMF WEO: ВВП по ППС, Казахстан"
+    name_en: "IMF WEO: GDP (PPP), Kazakhstan"
+    agency: imf
+    frequency: annual
+    unit: "international dollars"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_INVESTMENT_RATIO
+    name_ru: "IMF WEO: валовые инвестиции, % ВВП"
+    name_en: "IMF WEO: Total Investment, % of GDP"
+    agency: imf
+    frequency: annual
+    unit: "% of GDP"
+    category: international_projection
+    source_status: confirmed
+
+  - id: IMF_SAVINGS_RATIO
+    name_ru: "IMF WEO: валовые национальные сбережения, % ВВП"
+    name_en: "IMF WEO: Gross National Savings, % of GDP"
+    agency: imf
+    frequency: annual
+    unit: "% of GDP"
+    category: international_projection
+    source_status: confirmed
+
+  - id: REER
+    name_ru: "Реальный эффективный обменный курс тенге"
+    name_en: "Real Effective Exchange Rate (REER)"
+    agency: nbk
+    frequency: monthly
+    unit: "index"
+    category: monetary
+    source_status: confirmed
+
+  - id: NEER
+    name_ru: "Номинальный эффективный обменный курс тенге"
+    name_en: "Nominal Effective Exchange Rate (NEER)"
+    agency: nbk
+    frequency: monthly
+    unit: "index"
+    category: monetary
+    source_status: confirmed
+
+  - id: DEPOSITS_TOTAL
+    name_ru: "Депозиты резидентов в депозитных организациях, всего"
+    name_en: "Total Resident Deposits in Deposit-Taking Organizations"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed

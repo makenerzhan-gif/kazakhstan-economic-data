@@ -363,3 +363,135 @@ def fetch_national_fund_assets() -> tuple[list[dict], dict]:
         "note": "USD million. Foreign currency assets of the National Fund of Kazakhstan (sovereign wealth fund).",
     }
     return records, manifest
+
+
+# formId=299, "The real effective exchange rate (REER), The real exchange rate (RER),
+# The nominal effective exchange rate (NEER)". Verified live 2026-08-30: unlike the
+# bilateral 'Real exchange rate' category (which needs a fx_currency_pair), the
+# 'Real effective exchange rate' and 'The nominal effective exchange rate' categories
+# are already basket-wide indices with no currency-pair dimension -- clean single series,
+# distinguished only by `subcategory` (Including / Excluding oil trade). Using "Including
+# oil trade" as the primary series since oil dominates KZ's actual trade weights.
+REER_NEER_FORM_ID = "299"
+
+
+def _fetch_effective_rate_rows(category: str) -> list[dict]:
+    all_rows: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                             params={"formId": REER_NEER_FORM_ID, "page": str(page), "pageSize": "500"},
+                             timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        all_rows.extend(data["rows"])
+        if len(all_rows) >= data["totalRows"]:
+            break
+        page += 1
+    return [r for r in all_rows if r.get("category") == category and r.get("subcategory") == "Including oil trade"]
+
+
+def fetch_reer() -> tuple[list[dict], dict]:
+    """Real effective exchange rate (REER) index, including oil trade in the basket weights."""
+    rows = _fetch_effective_rate_rows("Real effective exchange rate")
+    today = date.today()
+    content = json.dumps(rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "REER", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "REER", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={REER_NEER_FORM_ID}",
+    })
+    if not rows:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/REER",
+                "WHAT CHANGED: no rows found for category='Real effective exchange rate', subcategory='Including oil trade'",
+                f"ACTION REQUIRED: inspect formId={REER_NEER_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in rows], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={REER_NEER_FORM_ID}",
+        "dataset_id": f"formId={REER_NEER_FORM_ID},category=REER,including_oil_trade",
+        "note": "Index. 'Excluding oil trade' variant also exists on the same form but is not fetched here.",
+    }
+    return records, manifest
+
+
+def fetch_neer() -> tuple[list[dict], dict]:
+    """Nominal effective exchange rate (NEER) index, including oil trade in the basket weights."""
+    rows = _fetch_effective_rate_rows("The nominal effective exchange rate")
+    today = date.today()
+    content = json.dumps(rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "NEER", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "NEER", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={REER_NEER_FORM_ID}",
+    })
+    if not rows:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/NEER",
+                "WHAT CHANGED: no rows found for category='The nominal effective exchange rate', subcategory='Including oil trade'",
+                f"ACTION REQUIRED: inspect formId={REER_NEER_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in rows], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={REER_NEER_FORM_ID}",
+        "dataset_id": f"formId={REER_NEER_FORM_ID},category=NEER,including_oil_trade",
+        "note": "Index. 'Excluding oil trade' variant also exists on the same form but is not fetched here.",
+    }
+    return records, manifest
+
+
+# formId=62, "Депозиты в депозитных организациях". Verified live 2026-08-30: row_code='1'
+# is "Всего депозитов" (total deposits) -- confirmed both structurally (first/headline row
+# on the human-facing table at
+# https://nationalbank.kz/ru/depositoryorganizationsdeposits/depozity-v-depozitnyh-organizaciyah-)
+# and numerically (row_code=1, report_date=2025-12-01 -> 44457125.21 matches the page's
+# "11.25" column exactly, same ~1-month report_date offset as formId=51).
+DEPOSITS_FORM_ID = "62"
+ROW_CODE_DEPOSITS_TOTAL = "1"
+
+
+def fetch_deposits_total() -> tuple[list[dict], dict]:
+    """Total resident deposits (individuals + non-bank legal entities) in second-tier
+    banks and NBK, excluding central government/interbank deposits. Million KZT, monthly."""
+    all_rows: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                             params={"formId": DEPOSITS_FORM_ID, "page": str(page), "pageSize": "500"},
+                             timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        all_rows.extend(data["rows"])
+        if len(all_rows) >= data["totalRows"]:
+            break
+        page += 1
+
+    today = date.today()
+    content = json.dumps(all_rows, ensure_ascii=False).encode("utf-8")
+    raw_store.save_raw_bytes(SOURCE, "DEPOSITS_TOTAL", today, "json", content)
+    raw_store.write_download_manifest(SOURCE, "DEPOSITS_TOTAL", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={DEPOSITS_FORM_ID}",
+    })
+
+    matching = [r for r in all_rows if r.get("row_code") == ROW_CODE_DEPOSITS_TOTAL]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/DEPOSITS_TOTAL",
+                f"WHAT CHANGED: no rows found with row_code={ROW_CODE_DEPOSITS_TOTAL!r}",
+                f"ACTION REQUIRED: inspect formId={DEPOSITS_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in matching], key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={DEPOSITS_FORM_ID}",
+        "dataset_id": f"formId={DEPOSITS_FORM_ID},row_code={ROW_CODE_DEPOSITS_TOTAL}",
+        "note": "Million KZT. report_date runs about one month ahead of the human page's column label -- not shifted here.",
+    }
+    return records, manifest

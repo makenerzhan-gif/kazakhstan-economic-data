@@ -501,6 +501,59 @@ agencies:
           issued by STB") is real and live-verified but has no aggregate row across its
           currency x maturity_detailed x subject_type_detailed dimensions. Not connected for
           the same reason.
+      REER:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: >
+          2026-08-30. formId=299, "The real effective exchange rate (REER), The real
+          exchange rate (RER), The nominal effective exchange rate (NEER)". Unlike the
+          bilateral 'Real exchange rate' category (which needs a fx_currency_pair dimension
+          and would have hit the same no-aggregate problem as deposit/lending rates), the
+          'Real effective exchange rate' category is already a clean basket-wide index with
+          only one other dimension: subcategory (Including / Excluding oil trade). Used
+          "Including oil trade" as primary since oil dominates KZ's actual trade weights.
+          fetch_reer.
+      NEER:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: "Same form as REER, category='The nominal effective exchange rate'. Same clean structure, same reasoning for 'Including oil trade'. fetch_neer."
+      DEPOSITS_TOTAL:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=62"
+        format: json
+        notes: >
+          2026-08-30. formId=62, "Депозиты в депозитных организациях". row_code='1' = "Всего
+          депозитов" (total deposits) -- confirmed both structurally (headline/first row on
+          https://nationalbank.kz/ru/depositoryorganizationsdeposits/depozity-v-depozitnyh-organizaciyah-)
+          and numerically (row_code=1, report_date=2025-12-01 -> 44,457,125.21 matches the
+          page's "11.25" column exactly, same ~1-month report_date offset as formId=51).
+          fetch_deposits_total.
+      EXTERNAL_DEBT_NOT_CONNECTED:
+        status: not_connected
+        notes: >
+          2026-08-30. Checked formId=358 ("External debt by debtor and creditor sectors")
+          and formId=293 ("External Debt", the plain headline-sounding form) -- both are
+          real and live-verified but neither has an aggregate/total row across their
+          dimensions (checked via filter-options: sector_economy_type, investment_type/
+          ed_code, maturity all have only granular values, no "Total"). Computing our own
+          sum was ruled out as too risky: investment_type's value list contains what look
+          like duplicate categories with/without trailing whitespace ('Currency and
+          deposits ' vs 'Currency and deposits'), suggesting inconsistent recording across
+          report vintages -- summing blind risks double-counting. Not connected; a future
+          attempt should look for a genuinely pre-aggregated "gross external debt" series
+          (formIds 340/348-357/376/393-396 all relate to external debt and weren't checked
+          this session) rather than starting from 358/293 again.
+      LOANS_TO_ECONOMY_NOT_CONNECTED:
+        status: not_connected
+        notes: >
+          2026-08-30. formId=445 ("Loans to economy in an expanded definition") is real and
+          live-verified (445 rows, all fetched in one page) but every single row is a
+          specific combination of business_entity_category x creditor_activities_type x
+          currency x maturity x subject_type -- zero rows have an empty/aggregate value in
+          any dimension (confirmed by testing directly, not just filter-options). Not
+          connected for the same reason as DEPOSIT_RATE/LENDING_RATE/EXTERNAL_DEBT.
     publication_calendar_url: "https://nationalbank.kz/ru/statisticalinformation/grafik-vypuska-statisticheskoy-informacii"
     publication_calendar_notes: >
       Verified live HTML page, filterable by year/category, with an XLSX export button
@@ -792,3 +845,66 @@ agencies:
           Minfin's GOV_DEBT (which is specifically Republican + local government + guaranteed
           debt, KZT). Both are legitimate but not directly comparable without reconciling
           definitions; kept as separate indicators rather than merged. Verified live 2026-08-30.
+      IMF_POPULATION:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: LP
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.LP"
+        notes: "Verified live 2026-08-30, standard WEO code, worked first try. Sanity-checked: 2025 value (20,380,366) consistent with Kazakhstan's known population."
+      IMF_NOMINAL_GDP:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: NGDP
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.NGDP"
+        notes: >
+          National currency (KZT). Cross-checked 2026-08-30: 2024 value (136,693,318,000,000)
+          matches our own BNS-sourced GDP_NOMINAL series (136,693,318,300,000) to within
+          0.0000002% -- strong independent confirmation both series are correct.
+      IMF_NOMINAL_GDP_USD:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: NGDPD
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.NGDPD"
+        notes: "Verified live 2026-08-30. 2024 value ($291.48bn) plausible for KZ actual GDP."
+      IMF_GDP_PPP:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: PPPGDP
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.PPPGDP"
+        notes: "Verified live 2026-08-30, standard WEO code."
+      IMF_INVESTMENT_RATIO:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: NID_NGDP
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.NID_NGDP"
+        notes: "Verified live 2026-08-30, standard WEO code."
+      IMF_SAVINGS_RATIO:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: NGSD_NGDP
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.NGSD_NGDP"
+        notes: "Verified live 2026-08-30, standard WEO code."

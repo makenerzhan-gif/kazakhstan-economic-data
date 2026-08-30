@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T14:54:52.504112
+Run timestamp: 2026-08-30T20:57:12.077418
 Unified dataset updated: True
 Tests passed: True
 
@@ -165,6 +165,11 @@ Tests passed: True
   - warning: Gap of 61 days between 2026-05-01 and 2026-07-01 is outside expected range for frequency=monthly (25-40d).
 - **nbk/NATIONAL_FUND_ASSETS** — fetch+validate+process: ok (downloaded=102, processed=102)
   - warning: Gap of 61 days between 2026-05-01 and 2026-07-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/REER** — fetch+validate+process: ok (downloaded=378, processed=378)
+- **nbk/NEER** — fetch+validate+process: ok (downloaded=379, processed=379)
+- **nbk/DEPOSITS_TOTAL** — fetch+validate+process: ok (downloaded=56, processed=56)
+  - warning: Unexpected jump of 1269.6% between 2021-12-01 (1156435.64239634) and 2022-01-01 (15838981.76247032).
+  - warning: Unexpected jump of 83.3% between 2022-12-01 (16873130.5563075) and 2023-01-01 (30935301.17686597).
 - **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)
@@ -274,3 +279,16 @@ Tests passed: True
   - warning: Unexpected jump of 65.3% between 2007-01-01 (4.091989) and 2008-01-01 (6.76587).
   - warning: Unexpected jump of 51.2% between 2008-01-01 (6.76587) and 2009-01-01 (10.227029).
   - warning: Unexpected jump of 50.9% between 2014-01-01 (14.496344) and 2015-01-01 (21.881937).
+- **imf/IMF_POPULATION** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_NOMINAL_GDP** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 1127.0% between 1992-01-01 (2435224000.0) and 1993-01-01 (29881368000.0).
+  - warning: Unexpected jump of 1317.2% between 1993-01-01 (29881368000.0) and 1994-01-01 (423469391000.0).
+  - warning: Unexpected jump of 139.5% between 1994-01-01 (423469391000.0) and 1995-01-01 (1014190936000.0).
+- **imf/IMF_NOMINAL_GDP_USD** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 79.2% between 1992-01-01 (2875117000.0) and 1993-01-01 (5151960000.0).
+  - warning: Unexpected jump of 130.6% between 1993-01-01 (5151960000.0) and 1994-01-01 (11881302000.0).
+- **imf/IMF_GDP_PPP** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_INVESTMENT_RATIO** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_SAVINGS_RATIO** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 88.0% between 1992-01-01 (7.50239) and 1993-01-01 (14.100873).
+  - warning: Unexpected jump of 63.2% between 1998-01-01 (10.270641) and 1999-01-01 (16.762557).
