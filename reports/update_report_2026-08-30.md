@@ -1,6 +1,6 @@
 # Update report — 2026-08-30
 
-Run timestamp: 2026-08-30T18:17:30.686788
+Run timestamp: 2026-08-30T14:54:52.504112
 Unified dataset updated: True
 Tests passed: True
 
@@ -105,6 +105,36 @@ Tests passed: True
   - warning: Unexpected jump of 137.7% between 2009-12-31 (7912607000000.0) and 2014-12-31 (18805873900000.0).
 - **bns/COMPENSATION_EMPLOYEES** — fetch+validate+process: ok (downloaded=26, processed=26)
 - **bns/AVG_WAGE** — fetch+validate+process: ok (downloaded=14, processed=14)
+- **bns/GDP_INCOME_METHOD** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/GROSS_OUTPUT** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/TAXES_ON_PRODUCTS** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 51.8% between 2009-12-31 (808272100000.0) and 2010-12-31 (1226970200000.0).
+  - warning: Unexpected jump of 110.4% between 2010-12-31 (1226970200000.0) and 2011-12-31 (2581518200000.0).
+  - warning: Unexpected jump of 50.7% between 2021-12-31 (5161134000000.0) and 2022-12-31 (7779408500000.0).
+- **bns/NET_TAXES_ON_PRODUCTS** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 114.4% between 2010-12-31 (1166485400000.0) and 2011-12-31 (2501177900000.0).
+  - warning: Unexpected jump of 52.4% between 2021-12-31 (4855517600000.0) and 2022-12-31 (7398002700000.0).
+- **bns/SUBSIDIES** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 120.5% between 2000-12-31 (1848100000.0) and 2001-12-31 (4074600000.0).
+  - warning: Unexpected jump of 52.4% between 2001-12-31 (4074600000.0) and 2002-12-31 (1941000000.0).
+  - warning: Unexpected jump of 87.0% between 2002-12-31 (1941000000.0) and 2003-12-31 (3628900000.0).
+  - warning: Unexpected jump of 91.3% between 2008-12-31 (13585000000.0) and 2009-12-31 (25989400000.0).
+  - warning: Unexpected jump of 132.7% between 2009-12-31 (25989400000.0) and 2010-12-31 (60484800000.0).
+  - warning: Unexpected jump of 157.1% between 2022-12-31 (381405800000.0) and 2023-12-31 (980720000000.0).
+- **bns/INTERMEDIATE_CONSUMPTION** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/GROSS_ACCUMULATION** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 85.3% between 2000-12-31 (471597400000.0) and 2001-12-31 (873643200000.0).
+  - warning: Unexpected jump of 52.2% between 2004-12-31 (1544496300000.0) and 2005-12-31 (2350789200000.0).
+  - warning: Unexpected jump of 104.5% between 2009-12-31 (5002725300000.0) and 2014-12-31 (10232495400000.0).
+- **bns/IMPORT_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/EXPORT_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/TOTAL_CONSUMPTION_EXPENDITURE** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 133.2% between 2009-12-31 (10066102700000.0) and 2014-12-31 (23477055500000.0).
+- **bns/CAPITAL_CONSUMPTION** — fetch+validate+process: ok (downloaded=26, processed=26)
 - **nbk/BASE_RATE** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Gap of 49 days between 2024-10-14 and 2024-12-02 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2024-12-02 and 2025-01-20 is outside expected range for frequency=daily (1-4d).
@@ -146,6 +176,31 @@ Tests passed: True
 - **minfin/GOV_EDUCATION_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
   - warning: Unexpected jump of 56.2% between 2019-12-31 (611258.45367259) and 2020-12-31 (954637.17768033).
 - **minfin/GOV_SOCIAL_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/TAX_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/CORPORATE_TAX** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/VAT_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 58.4% between 2015-12-31 (944438.0303032) and 2016-12-31 (1495681.95848907).
+  - warning: Unexpected jump of 50.5% between 2021-12-31 (2807690.80407635) and 2022-12-31 (4226358.8257289).
+- **minfin/GOV_DEFENSE_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 50.1% between 2021-12-31 (715107.41201645) and 2022-12-31 (1073075.86488158).
+- **minfin/GOV_GENERAL_SERVICES_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 64.3% between 2014-12-31 (391635.72301001) and 2015-12-31 (643263.147279).
+  - warning: Unexpected jump of 62.5% between 2021-12-31 (645016.36510919) and 2022-12-31 (1047843.99067102).
+- **minfin/GOV_TRANSPORT_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_DEBT_SERVICING** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 76.4% between 2015-12-31 (296521.44413584) and 2016-12-31 (523210.60895779997).
+- **minfin/NET_BUDGET_LENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 97.7% between 2014-12-31 (39452.06622459) and 2015-12-31 (78007.09602019).
+  - warning: Unexpected jump of 183.9% between 2015-12-31 (78007.09602019) and 2016-12-31 (221428.4238677).
+  - warning: Unexpected jump of 90.2% between 2018-12-31 (131653.83127052) and 2019-12-31 (250348.08525519).
+  - warning: Unexpected jump of 123.7% between 2021-12-31 (213356.29830906) and 2022-12-31 (477376.10534981).
+  - warning: Unexpected jump of 71.0% between 2023-12-31 (402804.9704923) and 2024-12-31 (116738.4461162).
+- **minfin/BUDGET_DEFICIT** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 83.1% between 2016-12-31 (-741185.2309437799) and 2017-12-31 (-1356975.10457842).
+  - warning: Unexpected jump of 77.8% between 2018-12-31 (-729188.09148399) and 2019-12-31 (-1296265.92006654).
+  - warning: Unexpected jump of 68.6% between 2019-12-31 (-1296265.92006654) and 2020-12-31 (-2185253.31915518).
+- **minfin/NON_OIL_BUDGET_DEFICIT** — fetch+validate+process: ok (downloaded=5, processed=5)
+  - warning: Unexpected jump of 440.1% between 2021-12-31 (2526271.2171565) and 2022-12-31 (-8592225.68932949).
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% between 1995-01-01 (-8.2) and 1996-01-01 (0.5).
   - warning: Unexpected jump of 240.0% between 1996-01-01 (0.5) and 1997-01-01 (1.7).
