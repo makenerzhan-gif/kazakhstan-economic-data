@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data/base-rate",
+  "dataset_id": "base-rate",
+  "indicator_id": "BASE_RATE",
+  "indicator_name": "NBK Base Rate",
+  "description": "Базовая ставка НБ РК",
+  "frequency": "daily",
+  "unit": "% p.a.",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "event-dated (rate valid until the next MPC decision), not literal daily observations",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2024-10-14",
+  "period_end": "2026-07-27",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

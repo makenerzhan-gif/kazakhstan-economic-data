@@ -1,0 +1,269 @@
+# Per-agency official source registry.
+# THIS FILE MUST NEVER CONTAIN A GUESSED URL, ENDPOINT, OR DATASET ID.
+# Every field is populated only after a research step actually confirms it (see
+# reports/source_research_*.md for the evidence trail). Until confirmed, leave as null
+# with status: pending_research.
+#
+# access_type: api | csv | xlsx | unavailable_automatic
+# protection: none | captcha | login | antibot
+
+agencies:
+  bns:
+    name: "Бюро национальной статистики АСПиР РК"
+    website: "https://stat.gov.kz"
+    status: partially_confirmed
+    notes: >
+      Verified 2026-08-30 by live curl, not from memory. Download pattern is a
+      redirect-based file API, no CAPTCHA/login/key required:
+        GET https://stat.gov.kz/api/iblock/element/{elementId}/json/file/ru/  -> 302 -> static .json
+        GET https://stat.gov.kz/api/iblock/element/{elementId}/csv/file/ru/   -> 302 -> static .csv (often actually TSV, UTF-8 BOM)
+        GET https://stat.gov.kz/api/iblock/element/{elementId}/file/ru/       -> 302 -> static .xlsx
+      elementId is per-indicator and was found by opening the indicator's page under
+      /ru/open-data/<category>/<pageId>/ (national accounts, prices, labor, trade) or,
+      for industrial production and investment, an /ru/industries/... section instead
+      (these two are NOT listed under /open-data/ at all). No generic search-by-name API
+      was found; taldau.stat.gov.kz appears to be an HTML search UI, not a JSON API — not tested as one.
+      data.egov.kz general catalog was checked and REJECTED: GET /api/v4/dataset returns
+      403 "API key is required", and no BNS datasets for these indicators were found listed there anyway.
+    access_type: api
+    protection: none
+    endpoints:
+      GDP_NOMINAL:
+        status: confirmed_json
+        page_url: "https://stat.gov.kz/ru/open-data/national-accounts/474289/"
+        element_id: 4439
+        download_url: "https://stat.gov.kz/api/iblock/element/4439/json/file/ru/"
+        format: json_cube
+        notes: >
+          Production-method nominal GDP, quarterly cumulative, by region (terms/termNames/periods cube).
+          National total row presence not yet confirmed — must check termNames for a
+          "РЕСПУБЛИКА КАЗАХСТАН" entry vs summing regions; verify before trusting a parsed total.
+      GDP_REAL:
+        status: not_found
+        notes: >
+          Real GDP (constant prices / physical volume index) was NOT located in the
+          GDP-by-production open-data file or its two sibling files (474290 final-use
+          method, 474291 income method) during this research pass. Needs a follow-up
+          search specifically on Taldau or another BNS national-accounts page before
+          this indicator can be marked confirmed or unavailable.
+      IND_PROD:
+        status: confirmed_url_unconfirmed_structure
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
+        element_id: 5809
+        download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
+        format: json_cube
+        notes: "22.6MB file, region x industry x comparison-type cube, 1990-2025. Contains annual points at minimum; presence/labeling of monthly points not yet verified by full parse."
+      CPI:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/open-data/stat-prices/474295/"
+        element_id: 1549
+        download_url: "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/"
+        format: tsv_utf8_bom
+        columns: ["NAM", "DAT", "PERIOD", "КАТО", "LКАТО", "ССП", "LССП", "category_code", "category_name", "VAL"]
+        notes: "Actually downloaded and parsed this session. PERIOD like 201911 = Nov 2019. Regional breakdown; filter LКАТО for national total."
+      UNEMPLOYMENT:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/open-data/labor-statistics/474294/"
+        element_id: 102790
+        download_url: "https://stat.gov.kz/api/iblock/element/102790/json/file/ru/"
+        format: json_cube
+        notes: "Downloaded and parsed this session. Quarterly (LFS/ILO methodology). terms include region, locality, sex, age group -- filter for national/total/total/total row."
+      INVESTMENT:
+        status: confirmed_url_unconfirmed_structure
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-invest/"
+        element_id: 5546
+        download_url: "https://stat.gov.kz/api/iblock/element/5546/json/file/ru/"
+        format: json_cube
+        notes: "Redirect confirmed via HEAD only; file content not downloaded/parsed this session."
+      EXPORTS:
+        status: confirmed_xlsx_only
+        page_url: "https://stat.gov.kz/ru/open-data/international-trade/474298/"
+        element_id: 446905
+        download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
+        format: xlsx
+        notes: "No CSV/JSON variant found for trade indicators, unlike the others. Content not parsed this session."
+      IMPORTS:
+        status: confirmed_xlsx_only
+        page_url: "https://stat.gov.kz/ru/open-data/international-trade/474299/"
+        element_id: 446906
+        download_url: "https://stat.gov.kz/api/iblock/element/446906/file/ru/"
+        format: xlsx
+        notes: "Same as EXPORTS. Content not parsed this session."
+
+  nbk:
+    name: "Национальный Банк Республики Казахстан"
+    website: "https://nationalbank.kz"
+    status: partially_confirmed
+    notes: >
+      Verified 2026-08-30 by live curl (real, current numbers matching public press),
+      not from memory. Open Data Repository base: https://data.nationalbank.kz/api/v1
+      (base URL extracted from the portal's JS bundle, not guessed). No auth/CAPTCHA on
+      any data-serving endpoint used below; the full Swagger spec at /api/v3/api-docs IS
+      gated behind login, but that's irrelevant since the actual data endpoints work anonymously.
+      Generic XLSX export also works for any formId: /api/v1/data/export?formId=<id>&format=xlsx.
+    access_type: api
+    protection: none
+    endpoints:
+      BASE_RATE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data/base-rate"
+        format: json
+        notes: >
+          Full history returned in one call (no working date-filter params found -- they're
+          silently ignored). Fields: effectiveDate, rate, corridorLower, corridorUpper.
+          History verified back to 2024-10-14. Also GET /api/v1/data/indicators gives a
+          small "latest snapshot" including baseRate for quick current-value checks.
+      EXCHANGE_RATE:
+        status: confirmed
+        current_url: "https://data.nationalbank.kz/api/v1/data/exchange-rates"
+        historical_url_pattern: "https://nationalbank.kz/rss/get_rates.cfm?fdate={DD.MM.YYYY}"
+        format: "json (current, today only) / xml (historical, per-date)"
+        notes: >
+          The JSON current-rate endpoint ignores every date-filter param tried and always
+          returns today's snapshot only -- NOT usable alone for a historical daily series.
+          Historical daily series must be built by looping get_rates.cfm?fdate=DD.MM.YYYY
+          per date (legacy XML endpoint, confirmed live with a real distinct historical value).
+          An XLSX bulk-export button exists on the human page but its underlying request URL
+          was not captured this session -- not needed since the XML loop already works.
+      M2:
+        status: confirmed_url_unconfirmed_row_mapping
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=51"
+        export_xlsx_url: "https://data.nationalbank.kz/api/v1/data/export?formId=51&format=xlsx"
+        row_metadata_xlsx: "https://nationalbank.kz/file/download/133417"
+        format: json
+        notes: >
+          NBK does not label this dataset "M2/M3" -- it's formId 51, "Денежная база и
+          агрегаты широкой денежной массы" (monetary base and broad money aggregates),
+          monthly, 2021-12-01 onward, broken out by row_code (1, 1.1, 1.2, 2, 3, 4, 4.1,
+          4.2, 5, 5.1, 5.2, etc). The row_code -> "M2"/"M3"-equivalent mapping has NOT been
+          resolved yet -- the in-app metadata endpoint (/api/v1/data/metadata?formId=51) came
+          back empty; the row_metadata_xlsx above was downloaded but not yet parsed. DO NOT
+          guess a row_code -> M2/M3 mapping; parse that XLSX first.
+      M3:
+        status: confirmed_url_unconfirmed_row_mapping
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=51"
+        notes: "Same dataset/caveat as M2 -- both live in formId 51, distinguished only by row_code once the metadata XLSX is parsed."
+    publication_calendar_url: "https://nationalbank.kz/ru/statisticalinformation/grafik-vypuska-statisticheskoy-informacii"
+    publication_calendar_notes: >
+      Verified live HTML page, filterable by year/category, with an XLSX export button
+      whose underlying URL wasn't captured (not blocking). Confirmed real entries seen:
+      avg exchange rates monthly (next release 2026-09-01), money supply monthly (next
+      release 2026-09-15). A second calendar URL (kalendar-rasprostraneniya-dannyh) and a
+      base-rate-decision-specific schedule page were found only via search, NOT fetched/
+      confirmed this session -- do not rely on either without verifying first.
+
+  minfin:
+    name: "Министерство финансов Республики Казахстан"
+    website: "https://minfin.gov.kz"
+    status: partially_confirmed
+    notes: >
+      Verified 2026-08-30 by live curl + actually downloading and unzipping the XLSX
+      files to inspect real sheet/table names, not from memory. Minfin content is served
+      through the gov.kz unified platform's public content-manager API, not a dedicated
+      minfin.gov.kz API. No auth/CAPTCHA -- plain curl works, no cookies/session needed.
+      This is a frontend/content API (no Swagger/OpenAPI spec found), so treat it as less
+      guaranteed-stable than a dedicated data API, though it worked consistently across
+      ~10 years of historical documents (2018-2026) during testing.
+      Pattern: GET https://www.gov.kz/api/v1/public/content-manager/documents?sort-by=created_date:DESC&page=1&size=N&directions=<id>[&activities=<id>]
+      -> JSON list of documents -> pick newest matching title -> file at
+      https://www.gov.kz + full_text[0].document (an .xlsx).
+      Rejected alternatives: data.egov.kz "respublikalyk_budzhet" dataset is archived
+      since 2019 (not current); data.egov.kz "external_debt21" is National Bank external
+      debt, not the broader government-debt concept needed here; openbudget.kz was
+      unreachable (connection reset/timeout) in every attempt this session -- unconfirmed,
+      do not rely on it without re-testing when unblocked.
+    access_type: xlsx
+    protection: none
+    endpoints:
+      GOV_REVENUE:
+        status: confirmed_source_parsing_not_implemented
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?sort-by=created_date:DESC&page=1&size=15&directions=448"
+        example_file_url: "https://www.gov.kz/uploads/2025/2/5/f955aea20efc623b3d64d379bb232981_original.1097532.xlsx"
+        example_title: "Статистический бюллетень на 1 января 2025 года"
+        target_sheet: "табл 8 (дох)"
+        format: xlsx
+        frequency: monthly
+        notes: >
+          File downloaded and unzipped this session to confirm the sheet exists with real
+          revenue budget-classification line items. Automated parsing (picking the newest
+          bulletin, reading exactly the right cells for the republic-level total out of a
+          multi-sheet, multi-year-varying layout) is NOT implemented yet -- sheet/table
+          numbering can shift between bulletin editions per the research notes, and getting
+          the target row wrong would silently produce a wrong total, which is worse than not
+          having the indicator yet. Needs a careful one-time parser build + spot-check against
+          a published total before enabling.
+      GOV_EXPENDITURE:
+        status: confirmed_source_parsing_not_implemented
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?sort-by=created_date:DESC&page=1&size=15&directions=448"
+        example_file_url: "https://www.gov.kz/uploads/2025/2/5/f955aea20efc623b3d64d379bb232981_original.1097532.xlsx"
+        target_sheet: "табл 8 (расх)"
+        format: xlsx
+        frequency: monthly
+        notes: "Same file/mechanism/caveat as GOV_REVENUE, expenditure sheet instead of revenue sheet."
+      GOV_DEBT:
+        status: confirmed_source_parsing_not_implemented
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?sort-by=created_date:DESC&page=1&size=20&directions=261&activities=14610"
+        example_file_url: "https://www.gov.kz/uploads/2026/7/31/1e82dcb3e58b26f4924c1413c7da30e2_original.18126.xlsx"
+        example_title: "Государственный и гарантированный государством долг... (по состоянию на 1 июля 2026 года)"
+        format: xlsx
+        frequency: quarterly
+        notes: >
+          File downloaded and unzipped, confirmed internal text states "периодичность:
+          квартальная" plus full breakdown (govt debt domestic/external by instrument,
+          local-executive-body debt, state-guaranteed debt, in both mln KZT and mln USD).
+          Automated parsing not implemented yet for the same reason as GOV_REVENUE/EXPENDITURE
+          -- need to lock down exactly which total row/column to read before trusting it.
+
+  imf:
+    name: "International Monetary Fund"
+    website: "https://api.imf.org"
+    status: confirmed
+    notes: >
+      Verified 2026-08-30 by live query (real HTTP 200 responses with data, not from memory).
+      Current API is IMF SDMX 3.0 REST API at api.imf.org/external/sdmx/3.0 (this is data.imf.org's
+      backend). The legacy dataservices.imf.org endpoint no longer resolves (DNS dead) -- confirmed
+      decommissioned, do not use in scripts or docs. No API key/auth required; use a normal
+      browser-like User-Agent (bare/no UA got edge-blocked on some imf.org subdomains, though not
+      on api.imf.org itself).
+      Pattern: https://api.imf.org/external/sdmx/3.0/data/dataflow/{AGENCY}/{DATAFLOW}/{VERSION}/{COUNTRY}.{INDICATOR}.{FREQ}
+      CSV also available via header Accept: application/vnd.sdmx.data+csv (tested, works).
+      WEO vintage caveat: response metadata (COUNTRY_UPDATE_DATE) showed the October 2025 WEO
+      vintage as of this check on 2026-08-30 -- an April 2026 WEO release would normally already
+      exist. NOT CONFIRMED whether api.imf.org's WEO/9.0.0 dataflow is simply not yet refreshed or
+      something else is going on. Re-verify vintage at each real run rather than assuming.
+    access_type: api
+    protection: none
+    endpoints:
+      IMF_GDP_GROWTH:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: NGDP_RPCH
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.NGDP_RPCH"
+      IMF_INFLATION:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: PCPIPCH
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.PCPIPCH"
+      IMF_CURRENT_ACCOUNT:
+        status: confirmed
+        dataset: WEO
+        agency_code: IMF.RES
+        version: "9.0.0"
+        indicator_code: BCA_NGDPD
+        indicator_code_alt: BCA
+        country_code: KAZ
+        frequency: A
+        url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.BCA_NGDPD"
+        notes: >
+          Used WEO (forecast-inclusive, consistent with the other two IMF series) rather
+          than the separate BOP dataset (agency IMF.STA) that also exists -- BOP's exact
+          indicator key was not resolved to a working query this session, only its dataflow
+          existence was confirmed. BCA_NGDPD is % of GDP; BCA (same URL pattern) is USD level.

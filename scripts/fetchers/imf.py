@@ -1,0 +1,116 @@
+"""IMF SDMX 3.0 API fetcher.
+
+Confirmed live 2026-08-30 (see config/sources.yaml -> agencies.imf for the full
+research trail). Base: https://api.imf.org/external/sdmx/3.0 . No auth required,
+but a real User-Agent is needed (bare requests get edge-blocked on some imf.org
+subdomains). We request the CSV representation rather than parsing the SDMX-JSON
+schema by hand -- the JSON structure was not verified in detail during research,
+whereas the CSV columns were confirmed to be clean and tabular.
+"""
+from __future__ import annotations
+
+import csv
+import io
+import sys
+from datetime import date, datetime
+from pathlib import Path
+
+import requests
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from lib import raw_store, validation  # noqa: E402
+
+BASE_URL = "https://api.imf.org/external/sdmx/3.0/data/dataflow"
+HEADERS = {
+    "Accept": "application/vnd.sdmx.data+csv",
+    "User-Agent": "Mozilla/5.0 (compatible; KZEconDataPipeline/1.0; +https://github.com/)",
+}
+
+DATE_COL_CANDIDATES = ["TIME_PERIOD", "PERIOD", "YEAR", "DATE"]
+VALUE_COL_CANDIDATES = ["OBS_VALUE", "VALUE", "VAL"]
+
+SOURCE = "imf"
+
+
+def _download(url: str) -> bytes:
+    resp = requests.get(url, headers=HEADERS, timeout=30)
+    resp.raise_for_status()
+    return resp.content
+
+
+def _parse_annual_csv(content: bytes, indicator_id: str, source_url: str) -> list[dict]:
+    text = content.decode("utf-8-sig")
+    rows = list(csv.DictReader(io.StringIO(text)))
+    if not rows:
+        raise ValueError(f"IMF API returned an empty CSV body for {source_url}")
+
+    columns = set(rows[0].keys())
+    date_col = next((c for c in DATE_COL_CANDIDATES if c in columns), None)
+    value_col = next((c for c in VALUE_COL_CANDIDATES if c in columns), None)
+    if date_col is None or value_col is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in imf/{indicator_id}",
+                "WHAT CHANGED: IMF SDMX CSV response no longer has a recognizable date/value column",
+                f"EXPECTED: a date column from {DATE_COL_CANDIDATES} and a value column from {VALUE_COL_CANDIDATES}",
+                f"ACTUAL COLUMNS: {sorted(columns)}",
+                "ACTION REQUIRED: inspect the live response at "
+                f"{source_url} and update scripts/fetchers/imf.py's column candidates.",
+            ])
+        )
+
+    records = []
+    for row in rows:
+        period = (row.get(date_col) or "").strip()
+        raw_val = (row.get(value_col) or "").strip()
+        if not period or not raw_val:
+            continue
+        # Annual WEO observations are labeled just by year (e.g. "2024"); we stamp them
+        # at Jan 1 of that year as a documented convention, not an implied in-year timing.
+        iso_date = f"{period}-01-01" if period.isdigit() and len(period) == 4 else period
+        try:
+            value = float(raw_val)
+        except ValueError:
+            continue
+        records.append({"date": iso_date, "value": value})
+
+    records.sort(key=lambda r: r["date"])
+    return records
+
+
+def _fetch_weo_series(indicator_id: str, dataflow: str, agency_code: str, version: str,
+                       country: str, code: str) -> tuple[list[dict], dict]:
+    url = f"{BASE_URL}/{agency_code}/{dataflow}/{version}/{country}.{code}"
+    content = _download(url)
+
+    today = date.today()
+    raw_store.save_raw_bytes(SOURCE, indicator_id, today, "csv", content)
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
+        "source_url": url,
+        "downloaded_at": datetime.now().isoformat(),
+        "dataflow": dataflow,
+        "agency_code": agency_code,
+        "version": version,
+        "country": country,
+        "indicator_code": code,
+    })
+
+    records = _parse_annual_csv(content, indicator_id, url)
+    manifest = {
+        "frequency": "annual",
+        "source_url": url,
+        "dataset_id": f"{dataflow}/{version}",
+    }
+    return records, manifest
+
+
+def fetch_gdp_growth() -> tuple[list[dict], dict]:
+    return _fetch_weo_series("IMF_GDP_GROWTH", "WEO", "IMF.RES", "9.0.0", "KAZ", "NGDP_RPCH")
+
+
+def fetch_inflation() -> tuple[list[dict], dict]:
+    return _fetch_weo_series("IMF_INFLATION", "WEO", "IMF.RES", "9.0.0", "KAZ", "PCPIPCH")
+
+
+def fetch_current_account() -> tuple[list[dict], dict]:
+    return _fetch_weo_series("IMF_CURRENT_ACCOUNT", "WEO", "IMF.RES", "9.0.0", "KAZ", "BCA_NGDPD")

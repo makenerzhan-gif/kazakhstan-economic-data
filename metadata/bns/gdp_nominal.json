@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/4439/json/file/ru/",
+  "dataset_id": "4439",
+  "indicator_id": "GDP_NOMINAL",
+  "indicator_name": "Nominal GDP",
+  "description": "ВВП, номинальный",
+  "frequency": "quarterly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Bureau of National Statistics official methodology",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2010-03-31",
+  "period_end": "2026-06-30",
+  "next_update_date": null,
+  "transformation": "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",
+  "revision_status": "original"
+}

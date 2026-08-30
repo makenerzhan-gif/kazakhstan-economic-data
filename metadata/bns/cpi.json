@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/",
+  "dataset_id": "1549",
+  "indicator_id": "CPI",
+  "indicator_name": "Consumer Price Index (Inflation)",
+  "description": "Индекс потребительских цен (инфляция)",
+  "frequency": "monthly",
+  "unit": "% change vs previous month",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Bureau of National Statistics official methodology",
+  "publication_date": null,
+  "last_update_date": "2026-08-30",
+  "download_date": "2026-08-30",
+  "period_start": "2011-01-01",
+  "period_end": "2025-10-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

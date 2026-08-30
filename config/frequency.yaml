@@ -1,0 +1,37 @@
+# Rules for temporal aggregation. Frequencies are never mixed automatically —
+# any cross-frequency alignment (e.g. daily exchange rate -> monthly average for a
+# monthly unified row) must go through one of these named methods and be recorded
+# in the record's `transformation` field.
+
+allowed_frequencies:
+  - daily
+  - monthly
+  - quarterly
+  - annual
+
+aggregation_methods:
+  mean:
+    description: "Arithmetic mean of sub-period observations."
+    typical_use: ["daily -> monthly for rates/prices (e.g. exchange rate, base rate)"]
+  sum:
+    description: "Sum of sub-period observations."
+    typical_use: ["monthly -> quarterly for flow variables (e.g. exports, revenue)"]
+  end_of_period:
+    description: "Last observation in the sub-period (stock variables)."
+    typical_use: ["monthly -> quarterly for money supply, government debt"]
+  growth:
+    description: "Compounded growth across sub-periods rather than simple aggregation."
+    typical_use: ["deriving quarterly growth from monthly index levels"]
+
+# Per-indicator override: which method to use when aggregating UP in frequency.
+# Populated as indicators are actually implemented; do not guess ahead of the data.
+indicator_aggregation:
+  EXCHANGE_RATE: mean
+  BASE_RATE: mean
+  EXPORTS: sum
+  IMPORTS: sum
+  GOV_REVENUE: sum
+  GOV_EXPENDITURE: sum
+  M2: end_of_period
+  M3: end_of_period
+  GOV_DEBT: end_of_period

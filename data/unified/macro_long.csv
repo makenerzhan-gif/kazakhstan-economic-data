@@ -1,0 +1,402 @@
+date,country,region,frequency,variable,value,unit,source,source_version,transformation,last_updated
+1992-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-51.659721,% of GDP,imf,2026-08-30,level,2026-08-30
+1993-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-8.636585,% of GDP,imf,2026-08-30,level,2026-08-30
+1993-01-01,KZ,national,annual,IMF_GDP_GROWTH,-9.2,% change,imf,2026-08-30,level,2026-08-30
+1993-01-01,KZ,national,annual,IMF_INFLATION,1662.274815,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+1994-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-7.662874,% of GDP,imf,2026-08-30,level,2026-08-30
+1994-01-01,KZ,national,annual,IMF_GDP_GROWTH,-12.57976,% change,imf,2026-08-30,level,2026-08-30
+1994-01-01,KZ,national,annual,IMF_INFLATION,1401.986512,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+1995-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.280688,% of GDP,imf,2026-08-30,level,2026-08-30
+1995-01-01,KZ,national,annual,IMF_GDP_GROWTH,-8.2,% change,imf,2026-08-30,level,2026-08-30
+1995-01-01,KZ,national,annual,IMF_INFLATION,176.37918,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+1996-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-3.570219,% of GDP,imf,2026-08-30,level,2026-08-30
+1996-01-01,KZ,national,annual,IMF_GDP_GROWTH,0.5,% change,imf,2026-08-30,level,2026-08-30
+1996-01-01,KZ,national,annual,IMF_INFLATION,39.1803,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+1997-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-3.605986,% of GDP,imf,2026-08-30,level,2026-08-30
+1997-01-01,KZ,national,annual,IMF_GDP_GROWTH,1.7,% change,imf,2026-08-30,level,2026-08-30
+1997-01-01,KZ,national,annual,IMF_INFLATION,17.401233,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+1998-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-5.533715,% of GDP,imf,2026-08-30,level,2026-08-30
+1998-01-01,KZ,national,annual,IMF_GDP_GROWTH,-1.9,% change,imf,2026-08-30,level,2026-08-30
+1998-01-01,KZ,national,annual,IMF_INFLATION,7.132416,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+1999-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.013603,% of GDP,imf,2026-08-30,level,2026-08-30
+1999-01-01,KZ,national,annual,IMF_GDP_GROWTH,2.7,% change,imf,2026-08-30,level,2026-08-30
+1999-01-01,KZ,national,annual,IMF_INFLATION,8.322683,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2000-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,2.002567,% of GDP,imf,2026-08-30,level,2026-08-30
+2000-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.800298,% change,imf,2026-08-30,level,2026-08-30
+2000-01-01,KZ,national,annual,IMF_INFLATION,13.153821,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2001-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-6.272451,% of GDP,imf,2026-08-30,level,2026-08-30
+2001-01-01,KZ,national,annual,IMF_GDP_GROWTH,13.499461,% change,imf,2026-08-30,level,2026-08-30
+2001-01-01,KZ,national,annual,IMF_INFLATION,8.372812,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2002-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-4.157803,% of GDP,imf,2026-08-30,level,2026-08-30
+2002-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.799076,% change,imf,2026-08-30,level,2026-08-30
+2002-01-01,KZ,national,annual,IMF_INFLATION,5.959302,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2003-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-0.884199,% of GDP,imf,2026-08-30,level,2026-08-30
+2003-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.300232,% change,imf,2026-08-30,level,2026-08-30
+2003-01-01,KZ,national,annual,IMF_INFLATION,6.378601,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2004-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.777323,% of GDP,imf,2026-08-30,level,2026-08-30
+2004-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.598631,% change,imf,2026-08-30,level,2026-08-30
+2004-01-01,KZ,national,annual,IMF_INFLATION,6.995487,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2005-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.628099,% of GDP,imf,2026-08-30,level,2026-08-30
+2005-01-01,KZ,national,annual,IMF_GDP_GROWTH,9.700176,% change,imf,2026-08-30,level,2026-08-30
+2005-01-01,KZ,national,annual,IMF_INFLATION,7.411871,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2006-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.016006,% of GDP,imf,2026-08-30,level,2026-08-30
+2006-01-01,KZ,national,annual,IMF_GDP_GROWTH,10.701546,% change,imf,2026-08-30,level,2026-08-30
+2006-01-01,KZ,national,annual,IMF_INFLATION,8.611501,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2007-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-4.54688,% of GDP,imf,2026-08-30,level,2026-08-30
+2007-01-01,KZ,national,annual,IMF_GDP_GROWTH,8.9,% change,imf,2026-08-30,level,2026-08-30
+2007-01-01,KZ,national,annual,IMF_INFLATION,10.795455,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2008-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.964616,% of GDP,imf,2026-08-30,level,2026-08-30
+2008-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.3,% change,imf,2026-08-30,level,2026-08-30
+2008-01-01,KZ,national,annual,IMF_INFLATION,17.156177,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2009-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-0.116557,% of GDP,imf,2026-08-30,level,2026-08-30
+2009-01-01,KZ,national,annual,IMF_GDP_GROWTH,1.2,% change,imf,2026-08-30,level,2026-08-30
+2009-01-01,KZ,national,annual,IMF_INFLATION,7.302029,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2010-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,1.808611,% of GDP,imf,2026-08-30,level,2026-08-30
+2010-01-01,KZ,national,annual,IMF_GDP_GROWTH,7.3,% change,imf,2026-08-30,level,2026-08-30
+2010-01-01,KZ,national,annual,IMF_INFLATION,7.101799,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2010-03-31,KZ,national,quarterly,GDP_NOMINAL,4020878400000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2010-06-30,KZ,national,quarterly,GDP_NOMINAL,8712143851205.14,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2010-09-30,KZ,national,quarterly,GDP_NOMINAL,14135228100000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2010-12-31,KZ,national,quarterly,GDP_NOMINAL,21815517000000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2011-01-01,KZ,national,monthly,CPI,101.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2011-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,7.302994,% of GDP,imf,2026-08-30,level,2026-08-30
+2011-01-01,KZ,national,annual,IMF_GDP_GROWTH,7.5,% change,imf,2026-08-30,level,2026-08-30
+2011-01-01,KZ,national,annual,IMF_INFLATION,8.379501,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2011-02-01,KZ,national,monthly,CPI,101.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2011-03-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2011-03-31,KZ,national,quarterly,GDP_NOMINAL,5240223500000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2011-04-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2011-05-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2011-06-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2011-06-30,KZ,national,quarterly,GDP_NOMINAL,11240030900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2011-07-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2011-08-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2011-09-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2011-09-30,KZ,national,quarterly,GDP_NOMINAL,18664939500000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2011-10-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2011-11-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2011-12-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2011-12-31,KZ,national,quarterly,GDP_NOMINAL,28243052700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2012-01-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2012-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,1.263711,% of GDP,imf,2026-08-30,level,2026-08-30
+2012-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.000001,% change,imf,2026-08-30,level,2026-08-30
+2012-01-01,KZ,national,annual,IMF_INFLATION,5.127796,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2012-02-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2012-03-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2012-03-31,KZ,national,quarterly,GDP_NOMINAL,6097729900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2012-04-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2012-05-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2012-06-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2012-06-30,KZ,national,quarterly,GDP_NOMINAL,12849001600000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2012-07-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2012-08-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2012-09-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2012-09-30,KZ,national,quarterly,GDP_NOMINAL,20848732600000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2012-10-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2012-11-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2012-12-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2012-12-31,KZ,national,quarterly,GDP_NOMINAL,31015186600000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2013-01-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2013-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,1.913203,% of GDP,imf,2026-08-30,level,2026-08-30
+2013-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.9,% change,imf,2026-08-30,level,2026-08-30
+2013-01-01,KZ,national,annual,IMF_INFLATION,5.819784,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2013-02-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2013-03-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2013-03-31,KZ,national,quarterly,GDP_NOMINAL,6966935000000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2013-04-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2013-05-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2013-06-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2013-06-30,KZ,national,quarterly,GDP_NOMINAL,14499992200000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2013-07-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2013-08-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2013-09-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2013-09-30,KZ,national,quarterly,GDP_NOMINAL,23767993400000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2013-10-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2013-11-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2013-12-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2013-12-31,KZ,national,quarterly,GDP_NOMINAL,35999025100000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2014-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2014-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.288437,% of GDP,imf,2026-08-30,level,2026-08-30
+2014-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.3,% change,imf,2026-08-30,level,2026-08-30
+2014-01-01,KZ,national,annual,IMF_INFLATION,6.57668,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2014-02-01,KZ,national,monthly,CPI,101.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2014-03-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2014-03-31,KZ,national,quarterly,GDP_NOMINAL,7933827500000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2014-04-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2014-05-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2014-06-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2014-06-30,KZ,national,quarterly,GDP_NOMINAL,16482952200000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2014-07-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2014-08-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2014-09-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2014-09-30,KZ,national,quarterly,GDP_NOMINAL,27040987300000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2014-10-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2014-11-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2014-12-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2014-12-31,KZ,national,quarterly,GDP_NOMINAL,39675832900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2015-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2015-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-5.412162,% of GDP,imf,2026-08-30,level,2026-08-30
+2015-01-01,KZ,national,annual,IMF_GDP_GROWTH,0.999999,% change,imf,2026-08-30,level,2026-08-30
+2015-01-01,KZ,national,annual,IMF_INFLATION,6.750202,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2015-02-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2015-03-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2015-03-31,KZ,national,quarterly,GDP_NOMINAL,8267517700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2015-04-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2015-05-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2015-06-01,KZ,national,monthly,CPI,99.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2015-06-30,KZ,national,quarterly,GDP_NOMINAL,16804418100000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2015-07-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2015-08-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2015-09-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2015-09-30,KZ,national,quarterly,GDP_NOMINAL,27436536700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2015-10-01,KZ,national,monthly,CPI,105.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2015-11-01,KZ,national,monthly,CPI,103.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2015-12-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2015-12-31,KZ,national,quarterly,GDP_NOMINAL,40884133600000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2016-01-01,KZ,national,monthly,CPI,101.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2016-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-5.073343,% of GDP,imf,2026-08-30,level,2026-08-30
+2016-01-01,KZ,national,annual,IMF_GDP_GROWTH,0.9,% change,imf,2026-08-30,level,2026-08-30
+2016-01-01,KZ,national,annual,IMF_INFLATION,14.56519,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2016-02-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2016-03-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2016-03-31,KZ,national,quarterly,GDP_NOMINAL,9309090900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2016-04-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2016-05-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2016-06-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2016-06-30,KZ,national,quarterly,GDP_NOMINAL,19357056900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2016-07-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2016-08-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2016-09-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2016-09-30,KZ,national,quarterly,GDP_NOMINAL,31355126100000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2016-10-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2016-11-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2016-12-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2016-12-31,KZ,national,quarterly,GDP_NOMINAL,46971150000000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2017-01-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2017-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.054124,% of GDP,imf,2026-08-30,level,2026-08-30
+2017-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.900001,% change,imf,2026-08-30,level,2026-08-30
+2017-01-01,KZ,national,annual,IMF_INFLATION,7.458411,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2017-02-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2017-03-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2017-03-31,KZ,national,quarterly,GDP_NOMINAL,10431358000000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2017-04-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2017-05-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2017-06-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2017-06-30,KZ,national,quarterly,GDP_NOMINAL,21546269700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2017-07-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2017-08-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2017-09-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2017-09-30,KZ,national,quarterly,GDP_NOMINAL,35142065200000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2017-10-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2017-11-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2017-12-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2017-12-31,KZ,national,quarterly,GDP_NOMINAL,54378857800000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2018-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2018-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-0.984499,% of GDP,imf,2026-08-30,level,2026-08-30
+2018-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.099999,% change,imf,2026-08-30,level,2026-08-30
+2018-01-01,KZ,national,annual,IMF_INFLATION,6.007792,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2018-02-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2018-03-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2018-03-31,KZ,national,quarterly,GDP_NOMINAL,11786166700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2018-04-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2018-05-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2018-06-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2018-06-30,KZ,national,quarterly,GDP_NOMINAL,24857119200000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2018-07-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2018-08-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2018-09-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2018-09-30,KZ,national,quarterly,GDP_NOMINAL,39767105700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2018-10-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2018-11-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2018-12-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2018-12-31,KZ,national,quarterly,GDP_NOMINAL,61819536400000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2019-01-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2019-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-3.868725,% of GDP,imf,2026-08-30,level,2026-08-30
+2019-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.5,% change,imf,2026-08-30,level,2026-08-30
+2019-01-01,KZ,national,annual,IMF_INFLATION,5.280464,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2019-02-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2019-03-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2019-03-31,KZ,national,quarterly,GDP_NOMINAL,13180857200000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2019-04-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2019-05-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2019-06-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2019-06-30,KZ,national,quarterly,GDP_NOMINAL,27908618100000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2019-07-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2019-08-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2019-09-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2019-09-30,KZ,national,quarterly,GDP_NOMINAL,44297912100000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2019-10-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2019-11-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2019-12-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2019-12-31,KZ,national,quarterly,GDP_NOMINAL,69532626500000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2020-01-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2020-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-6.461683,% of GDP,imf,2026-08-30,level,2026-08-30
+2020-01-01,KZ,national,annual,IMF_GDP_GROWTH,-2.6,% change,imf,2026-08-30,level,2026-08-30
+2020-01-01,KZ,national,annual,IMF_INFLATION,6.760977,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2020-02-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2020-03-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2020-03-31,KZ,national,quarterly,GDP_NOMINAL,15093342400000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2020-04-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2020-05-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2020-06-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2020-06-30,KZ,national,quarterly,GDP_NOMINAL,28399592700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2020-07-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2020-08-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2020-09-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2020-09-30,KZ,national,quarterly,GDP_NOMINAL,45803255200000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2020-10-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2020-11-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2020-12-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2020-12-31,KZ,national,quarterly,GDP_NOMINAL,70649033200000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2021-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2021-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.359327,% of GDP,imf,2026-08-30,level,2026-08-30
+2021-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.100001,% change,imf,2026-08-30,level,2026-08-30
+2021-01-01,KZ,national,annual,IMF_INFLATION,8.002065,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2021-02-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2021-03-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2021-03-31,KZ,national,quarterly,GDP_NOMINAL,15938671500000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2021-04-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2021-05-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2021-06-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2021-06-30,KZ,national,quarterly,GDP_NOMINAL,32265436500000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2021-07-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2021-08-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2021-09-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2021-09-30,KZ,national,quarterly,GDP_NOMINAL,53029365700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2021-10-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2021-11-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2021-12-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2021-12-31,KZ,national,quarterly,GDP_NOMINAL,83951587900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2022-01-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2022-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,2.854326,% of GDP,imf,2026-08-30,level,2026-08-30
+2022-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.199999,% change,imf,2026-08-30,level,2026-08-30
+2022-01-01,KZ,national,annual,IMF_INFLATION,14.98566,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2022-02-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2022-03-01,KZ,national,monthly,CPI,103.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2022-03-31,KZ,national,quarterly,GDP_NOMINAL,19695592800000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2022-04-01,KZ,national,monthly,CPI,102.0,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2022-05-01,KZ,national,monthly,CPI,101.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2022-06-01,KZ,national,monthly,CPI,101.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2022-06-30,KZ,national,quarterly,GDP_NOMINAL,40034332600000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2022-07-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2022-08-01,KZ,national,monthly,CPI,101.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2022-09-01,KZ,national,monthly,CPI,101.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2022-09-30,KZ,national,quarterly,GDP_NOMINAL,65487797900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2022-10-01,KZ,national,monthly,CPI,101.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2022-11-01,KZ,national,monthly,CPI,101.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2022-12-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2022-12-31,KZ,national,quarterly,GDP_NOMINAL,103765518200000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2023-01-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2023-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-3.557706,% of GDP,imf,2026-08-30,level,2026-08-30
+2023-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.1,% change,imf,2026-08-30,level,2026-08-30
+2023-01-01,KZ,national,annual,IMF_INFLATION,14.522275,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2023-02-01,KZ,national,monthly,CPI,101.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2023-03-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2023-03-31,KZ,national,quarterly,GDP_NOMINAL,23582637000000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2023-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.8,% of labor force,bns,2026-08-30,level,2026-08-30
+2023-04-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2023-05-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2023-06-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2023-06-30,KZ,national,quarterly,GDP_NOMINAL,47244671500000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2023-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-30,level,2026-08-30
+2023-07-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2023-08-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2023-09-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2023-09-30,KZ,national,quarterly,GDP_NOMINAL,75546820300000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2023-09-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-30,level,2026-08-30
+2023-10-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2023-11-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2023-12-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2023-12-31,KZ,national,quarterly,GDP_NOMINAL,119442289700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2023-12-31,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.722483,% of GDP,imf,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,annual,IMF_GDP_GROWTH,5.0,% change,imf,2026-08-30,level,2026-08-30
+2024-01-01,KZ,national,annual,IMF_INFLATION,8.675661,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2024-02-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2024-03-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2024-03-31,KZ,national,quarterly,GDP_NOMINAL,26023903800000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2024-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-30,level,2026-08-30
+2024-04-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2024-05-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2024-06-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2024-06-30,KZ,national,quarterly,GDP_NOMINAL,52342740300000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2024-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-30,level,2026-08-30
+2024-07-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2024-08-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2024-09-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2024-09-30,KZ,national,quarterly,GDP_NOMINAL,84962626100000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2024-09-30,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-30,level,2026-08-30
+2024-10-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2024-10-14,KZ,national,daily,BASE_RATE,14.25,% p.a.,nbk,2026-08-30,level,2026-08-30
+2024-11-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2024-12-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2024-12-02,KZ,national,daily,BASE_RATE,15.25,% p.a.,nbk,2026-08-30,level,2026-08-30
+2024-12-31,KZ,national,quarterly,GDP_NOMINAL,136693318300000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2024-12-31,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-3.912392,% of GDP,imf,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,annual,IMF_GDP_GROWTH,6.485254,% change,imf,2026-08-30,level,2026-08-30
+2025-01-01,KZ,national,annual,IMF_INFLATION,11.378946,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2025-01-20,KZ,national,daily,BASE_RATE,15.25,% p.a.,nbk,2026-08-30,level,2026-08-30
+2025-02-01,KZ,national,monthly,CPI,101.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2025-03-01,KZ,national,monthly,CPI,101.3,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2025-03-11,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
+2025-03-31,KZ,national,quarterly,GDP_NOMINAL,30467333700000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2025-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-30,level,2026-08-30
+2025-04-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2025-04-14,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
+2025-05-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2025-06-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2025-06-09,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
+2025-06-30,KZ,national,quarterly,GDP_NOMINAL,61371821900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2025-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-30,level,2026-08-30
+2025-07-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2025-07-14,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
+2025-08-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2025-09-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2025-09-02,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-30,level,2026-08-30
+2025-09-30,KZ,national,quarterly,GDP_NOMINAL,99724898500000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2025-10-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-30,level,2026-08-30
+2025-10-13,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-30,level,2026-08-30
+2025-12-01,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-30,level,2026-08-30
+2025-12-31,KZ,national,quarterly,GDP_NOMINAL,159608552900000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2026-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.046644,% of GDP,imf,2026-08-30,level,2026-08-30
+2026-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.609374,% change,imf,2026-08-30,level,2026-08-30
+2026-01-01,KZ,national,annual,IMF_INFLATION,10.688503,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2026-01-26,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-30,level,2026-08-30
+2026-03-10,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-30,level,2026-08-30
+2026-03-31,KZ,national,quarterly,GDP_NOMINAL,34102358100000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2026-04-27,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-30,level,2026-08-30
+2026-06-08,KZ,national,daily,BASE_RATE,17.0,% p.a.,nbk,2026-08-30,level,2026-08-30
+2026-06-30,KZ,national,quarterly,GDP_NOMINAL,70948693300000.0,million KZT,bns,2026-08-30,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-30
+2026-07-27,KZ,national,daily,BASE_RATE,16.75,% p.a.,nbk,2026-08-30,level,2026-08-30
+2026-08-17,KZ,national,daily,EXCHANGE_RATE,464.02,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2026-08-18,KZ,national,daily,EXCHANGE_RATE,461.39,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2026-08-19,KZ,national,daily,EXCHANGE_RATE,460.13,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2026-08-20,KZ,national,daily,EXCHANGE_RATE,462.22,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2026-08-21,KZ,national,daily,EXCHANGE_RATE,458.23,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2026-08-22,KZ,national,daily,EXCHANGE_RATE,456.88,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2026-08-23,KZ,national,daily,EXCHANGE_RATE,456.88,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2026-08-24,KZ,national,daily,EXCHANGE_RATE,456.88,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2026-08-25,KZ,national,daily,EXCHANGE_RATE,457.99,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2026-08-26,KZ,national,daily,EXCHANGE_RATE,458.48,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2026-08-27,KZ,national,daily,EXCHANGE_RATE,458.87,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2026-08-28,KZ,national,daily,EXCHANGE_RATE,462.3,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2026-08-29,KZ,national,daily,EXCHANGE_RATE,464.77,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2026-08-30,KZ,national,daily,EXCHANGE_RATE,464.77,KZT per 1 USD,nbk,2026-08-30,level,2026-08-30
+2027-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.031753,% of GDP,imf,2026-08-30,level,2026-08-30
+2027-01-01,KZ,national,annual,IMF_GDP_GROWTH,4.400226,% change,imf,2026-08-30,level,2026-08-30
+2027-01-01,KZ,national,annual,IMF_INFLATION,10.053376,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2028-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.426629,% of GDP,imf,2026-08-30,level,2026-08-30
+2028-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.308862,% change,imf,2026-08-30,level,2026-08-30
+2028-01-01,KZ,national,annual,IMF_INFLATION,8.782549,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2029-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.293755,% of GDP,imf,2026-08-30,level,2026-08-30
+2029-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.596039,% change,imf,2026-08-30,level,2026-08-30
+2029-01-01,KZ,national,annual,IMF_INFLATION,7.599685,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2030-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.21105,% of GDP,imf,2026-08-30,level,2026-08-30
+2030-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.59838,% change,imf,2026-08-30,level,2026-08-30
+2030-01-01,KZ,national,annual,IMF_INFLATION,5.848574,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
+2031-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.983981,% of GDP,imf,2026-08-30,level,2026-08-30
+2031-01-01,KZ,national,annual,IMF_GDP_GROWTH,3.613475,% change,imf,2026-08-30,level,2026-08-30
+2031-01-01,KZ,national,annual,IMF_INFLATION,4.999999,"% change, average consumer prices",imf,2026-08-30,level,2026-08-30
