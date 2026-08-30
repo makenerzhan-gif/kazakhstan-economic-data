@@ -3,12 +3,21 @@
 Raw files are never overwritten and never modified after being written. Every
 save is stamped with the download date so a source that revises history is
 captured as a new, separate file rather than clobbering what we already had.
+If a same-day re-download comes back byte-identical, nothing new is written
+(idempotent). If it comes back with DIFFERENT content -- the source
+republished intraday, e.g. a local run earlier today followed by a scheduled
+CI run later the same day picking up a fresh revision -- the new content is
+archived under a time-suffixed filename rather than raising: the old file is
+still never touched or lost, and the pipeline keeps running instead of
+hard-failing on a legitimate, expected event (MASTER TASK section 3: "если
+источник задним числом поменял ранее опубликованное значение — сохраняй
+новую версию отдельно, старую не трогай").
 """
 from __future__ import annotations
 
 import hashlib
 import json
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -21,10 +30,34 @@ def raw_path(agency: str, indicator_id: str, download_date: date, ext: str) -> P
     return RAW_ROOT / agency / fname
 
 
+def _versioned_raw_path(agency: str, indicator_id: str, download_date: date, ext: str) -> Path:
+    """A same-day, content-differing re-download gets a time-suffixed filename (HHMMSS)
+    so it never collides with, or overwrites, the file already archived for this date.
+    Falls back to a counter suffix in the pathologically unlikely case two such
+    revisions land in the same second.
+    """
+    suffix = datetime.now().strftime("%H%M%S")
+    fname = f"{agency}_{indicator_id.lower()}_{download_date.isoformat()}_{suffix}.{ext.lstrip('.')}"
+    path = RAW_ROOT / agency / fname
+    n = 1
+    while path.exists():
+        fname = f"{agency}_{indicator_id.lower()}_{download_date.isoformat()}_{suffix}-{n}.{ext.lstrip('.')}"
+        path = RAW_ROOT / agency / fname
+        n += 1
+    return path
+
+
 def save_raw_bytes(agency: str, indicator_id: str, download_date: date, ext: str, content: bytes) -> Path:
-    """Write raw content to disk. Refuses to overwrite an existing file for the same
-    (agency, indicator, date) — if a second download happens same day, the caller must
-    verify identical content (see is_identical_to_latest) rather than blindly re-saving.
+    """Write raw content to disk.
+
+    - No file yet for this (agency, indicator, date): write it normally.
+    - Existing file, byte-identical content: no-op, return the existing path
+      (idempotent re-run).
+    - Existing file, DIFFERENT content: archive the new content separately
+      under a time-suffixed filename (see _versioned_raw_path) and print a
+      visible note -- the old file is never modified or deleted. This is the
+      normal, expected path for "the source republished intraday," not an
+      error condition, so it does not raise.
     """
     path = raw_path(agency, indicator_id, download_date, ext)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -32,10 +65,14 @@ def save_raw_bytes(agency: str, indicator_id: str, download_date: date, ext: str
         existing = path.read_bytes()
         if existing == content:
             return path  # idempotent re-run same day, nothing to do
-        raise FileExistsError(
-            f"{path} already exists with different content for the same date. "
-            "Raw files are append-only; investigate before overwriting."
+        versioned_path = _versioned_raw_path(agency, indicator_id, download_date, ext)
+        versioned_path.write_bytes(content)
+        print(
+            f"raw_store: {path.name} already existed for {download_date.isoformat()} with "
+            f"different content -- archived the new version separately as "
+            f"{versioned_path.name} (original file untouched)."
         )
+        return versioned_path
     path.write_bytes(content)
     return path
 
