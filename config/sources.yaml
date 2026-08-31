@@ -1551,6 +1551,91 @@ agencies:
           vintages (қаңтарына/January and мамырына/May never appeared in the current listing) --
           an unobserved month name causes that one document to be safely skipped (logged, not a
           hard failure) rather than guessed at. fetch_gov_audit_violations_amount.
+      TAX_ARREARS_TOTAL:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 26 пг"
+        target_row_label: "БАРЛЫҒЫ (exact match, not substring -- see notes)"
+        format: xlsx
+        frequency: annual
+        notes: >
+          2026-08-31. "Недоимка по налогам и платежам в бюджет" (overdue tax/payment debt owed
+          TO the republican budget by taxpayers) -- genuinely distinct from GOV_ACCOUNTS_
+          RECEIVABLE (which is the budget's own settlement-level receivables, not unpaid
+          taxpayer tax debt). Present in all 13 vintages with a stable structure; only the
+          latest bulletin is used (via a generalized _fetch_bulletin_annual_row, now
+          parameterized with a `header_re` override since this sheet's "на 1 января {год} года"
+          point-in-time header differs from the "{год} ж. есеп" annual-report header used by
+          SUBVENTIONS_REPUBLICAN/GOV_ACCOUNTS_PAYABLE/RECEIVABLE -- also required a
+          `date_for_year` override to stamp records at YYYY-01-01, not the helper's Dec-31
+          default, since this is a Jan-1 snapshot, not a year-end report -- an initial
+          implementation got this date wrong and was caught and fixed before committing).
+          Row matched by an EXACT match on "БАРЛЫҒЫ" (not substring) to avoid the sheet's own
+          several subtotal rows that also contain "БАРЛЫҒЫ" as part of a longer compound label
+          (e.g. "Салықтық түсімдер, БАРЛЫҒЫ" = tax-revenue subtotal). Verified live: 434,785 (as
+          of 2025-01-01) to 522,067 (as of 2026-01-01) million KZT. fetch_tax_arrears_total.
+      PENSION_CONTRIBUTIONS_RECEIVED:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 27 пг"
+        target_row_label: "Жиыны (national total, above the sheet's own by-region breakdown)"
+        format: xlsx
+        frequency: annual
+        notes: >
+          2026-08-31. "Поступления и задолженность по обязательным пенсионным взносам в ЕНПФ"
+          (receipts and arrears on mandatory pension contributions to the accumulative pension
+          fund) -- a genuinely new pension-system indicator. IMPORTANT structural wrinkle: this
+          sheet's header row has the same two years appear TWICE -- once for the "Поступления"
+          (receipts) column pair, once for "Задолженность" (arrears) -- so the generic
+          _fetch_bulletin_annual_row helper (which assumes each year appears once) could not be
+          reused safely; a bespoke fetcher (_fetch_pension_row) collects all 4 year-header
+          matches in column order and takes the first pair for receipts, the second for arrears
+          -- confirmed live this ordering is stable. Verified live: 2,448,612.87 (as of
+          2025-01-01) to 2,548,511.48 (as of 2026-01-01) million KZT.
+          fetch_pension_contributions_received.
+      PENSION_CONTRIBUTIONS_ARREARS:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 27 пг"
+        target_row_label: "Жиыны (national total, above the sheet's own by-region breakdown)"
+        format: xlsx
+        frequency: annual
+        notes: >
+          2026-08-31. Same sheet and row as PENSION_CONTRIBUTIONS_RECEIVED, second column pair
+          (see that entry's notes for the header-ambiguity explanation). Verified live:
+          3,287,315.70 (as of 2025-01-01) to 4,486,885.77 (as of 2026-01-01) million KZT --
+          notably LARGER than contributions received, and growing faster, a real signal about
+          pension-contribution compliance worth having in the dataset.
+          fetch_pension_contributions_arrears.
+      GOV_PROCUREMENT_TOTAL_VALUE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 29 пг"
+        target_row_label: "ВСЕГО"
+        format: xlsx
+        frequency: annual
+        notes: >
+          2026-08-31. "Сведения о государственных закупках за {год} год" (state procurement
+          information for year Y) -- structurally unlike every other sheet used so far: it's
+          published only once a full calendar year has closed, present in just 3 of the 13
+          currently-listed bulletins, covering only 2 distinct years (2024, 2025) -- confirmed
+          via a 13-vintage scan. Uses the CUSTOMS_DUTIES-style multi-document iteration (not the
+          single-latest-document pattern) because the target YEAR changes between vintages, not
+          just the value. Row "ВСЕГО" matched the "Сумма заключенных договоров" (concluded
+          contracts sum) column specifically -- NOT the neighboring "Сумма утвержденных планов"
+          (budgeted plan) column, an easy mix-up given both are similar magnitudes; double-
+          checked by printing the full row from 3 separate vintages before finalizing the column
+          index. That column's own header states its unit is raw ТЕҢГЕ, not million tenge like
+          every other sheet in this document -- converted /1,000,000 here for consistency.
+          A separate "economy/savings" column in the same row was NOT extracted: its header
+          states a DIFFERENT unit (million tenge) than the value columns in the same row, and
+          extracting it risked a units error -- left for a future, more careful pass. Verified
+          live: 7,296,933.87 (2024) to 8,141,829.16 (2025) million KZT.
+          fetch_gov_procurement_total_value.
       GOV_HEALTH_SPENDING:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"

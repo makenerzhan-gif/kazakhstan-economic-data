@@ -1381,3 +1381,39 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+
+  - id: TAX_ARREARS_TOTAL
+    name_ru: "Недоимка по налогам и платежам в бюджет"
+    name_en: "Total Tax and Payment Arrears Owed to the Budget"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: PENSION_CONTRIBUTIONS_RECEIVED
+    name_ru: "Поступления обязательных пенсионных взносов"
+    name_en: "Mandatory Pension Contributions Received"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: PENSION_CONTRIBUTIONS_ARREARS
+    name_ru: "Задолженность по обязательным пенсионным взносам"
+    name_en: "Mandatory Pension Contributions Arrears"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_PROCUREMENT_TOTAL_VALUE
+    name_ru: "Сумма заключенных договоров государственных закупок"
+    name_en: "Total Value of Concluded State Procurement Contracts"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed

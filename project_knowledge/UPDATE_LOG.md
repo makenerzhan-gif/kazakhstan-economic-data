@@ -820,3 +820,42 @@ yet touched in this session.
   will safely skip rather than being guessed at if they ever appear.
 
 **152/152 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — twentieth scale-up batch: 152 -> 156 indicators (with a caught date bug)
+Explored the remaining previously-unlooked-at Statistical Bulletin sheets: табл 8 (расх)/9
+(republican expenditure by departmental classification -- conceptually redundant with the
+existing GOV_EXPENDITURE, not pursued), табл 26 (tax arrears), табл 27 (pension contribution
+arrears), and табл 29 (state procurement).
+
+**Important bug caught before committing:** the first implementation of TAX_ARREARS_TOTAL and
+the two PENSION_CONTRIBUTIONS_* indicators stamped their records at year-end (Dec 31), reusing
+_fetch_bulletin_annual_row's default date logic -- but these three sheets are explicitly "as of
+January 1" point-in-time snapshots, not year-end annual reports, so every record was mislabeled
+by up to 11 months. Caught by actually reading the test output's dates rather than just checking
+record counts. Fixed by generalizing _fetch_bulletin_annual_row with a `date_for_year` override
+(default preserves the existing Dec-31 behavior for every previously-shipped indicator) and
+re-verified live that all three now stamp at YYYY-01-01. A reminder that "records extracted
+successfully" and "records extracted correctly" are different checks -- worth eyeballing actual
+values, not just counts, especially when introducing a new header/date convention.
+
+**Minfin (4):**
+- TAX_ARREARS_TOTAL (табл 26 пг) -- total overdue tax/payment debt owed to the republican
+  budget by taxpayers, distinct from GOV_ACCOUNTS_RECEIVABLE (the budget's own settlement
+  arrears). Matched by an EXACT (not substring) label match to avoid several subtotal rows in
+  the same sheet that also contain "БАРЛЫҒЫ" as part of a longer compound label.
+- PENSION_CONTRIBUTIONS_RECEIVED / PENSION_CONTRIBUTIONS_ARREARS (табл 27 пг) -- a genuine
+  structural first: the same two years appear TWICE in this sheet's header (once for receipts,
+  once for arrears), so the shared annual-row helper couldn't be reused directly; a bespoke
+  fetcher partitions the 4 year-header matches into first-half (receipts) / second-half
+  (arrears) by column order, verified live. Arrears are notably larger than receipts and
+  growing faster -- a real pension-compliance signal.
+- GOV_PROCUREMENT_TOTAL_VALUE (табл 29 пг) -- total value of concluded state procurement
+  contracts. Structurally sparse: only published once a full calendar year closes (present in
+  just 3 of 13 listed bulletins, covering 2 distinct years), so uses CUSTOMS_DUTIES-style
+  multi-document iteration rather than the single-latest-document pattern. This sheet's value
+  columns are in raw tenge, not million tenge like the rest of the document -- converted for
+  consistency. A neighboring "savings/economy" column was left unextracted since its header
+  states yet another, different unit within the same row -- flagged for a future, more careful
+  pass rather than guessed at.
+
+**156/156 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

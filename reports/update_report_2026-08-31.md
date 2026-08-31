@@ -1,6 +1,6 @@
 # Update report — 2026-08-31
 
-Run timestamp: 2026-08-31T08:50:47.966178
+Run timestamp: 2026-08-31T09:24:33.365252
 Unified dataset updated: True
 Tests passed: True
 
@@ -345,6 +345,10 @@ Tests passed: True
   - warning: Unexpected jump of 95.0% between 2025-11-30 (395858.44862000004) and 2026-01-31 (19655.0).
   - warning: Unexpected jump of 234.5% between 2026-02-28 (29246.476010000002) and 2026-03-31 (97830.27543000001).
   - warning: Unexpected jump of 302.6% between 2026-03-31 (97830.27543000001) and 2026-05-31 (393908.82220000005).
+- **minfin/TAX_ARREARS_TOTAL** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **minfin/PENSION_CONTRIBUTIONS_RECEIVED** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **minfin/PENSION_CONTRIBUTIONS_ARREARS** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **minfin/GOV_PROCUREMENT_TOTAL_VALUE** — fetch+validate+process: ok (downloaded=2, processed=2)
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% between 1995-01-01 (-8.2) and 1996-01-01 (0.5).
   - warning: Unexpected jump of 240.0% between 1996-01-01 (0.5) and 1997-01-01 (1.7).

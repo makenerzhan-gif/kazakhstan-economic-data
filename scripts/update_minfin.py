@@ -58,6 +58,10 @@ FETCHERS = {
     "GOV_ACCOUNTS_RECEIVABLE": minfin_fetchers.fetch_gov_accounts_receivable,
     "GOV_FINANCIAL_ASSETS_SOLD": minfin_fetchers.fetch_gov_financial_assets_sold,
     "GOV_AUDIT_VIOLATIONS_AMOUNT": minfin_fetchers.fetch_gov_audit_violations_amount,
+    "TAX_ARREARS_TOTAL": minfin_fetchers.fetch_tax_arrears_total,
+    "PENSION_CONTRIBUTIONS_RECEIVED": minfin_fetchers.fetch_pension_contributions_received,
+    "PENSION_CONTRIBUTIONS_ARREARS": minfin_fetchers.fetch_pension_contributions_arrears,
+    "GOV_PROCUREMENT_TOTAL_VALUE": minfin_fetchers.fetch_gov_procurement_total_value,
 }
 
 INDICATOR_IDS = [
@@ -77,6 +81,8 @@ INDICATOR_IDS = [
     "NATIONAL_FUND_SAVINGS_BONDS", "NATIONAL_FUND_EQUITIES", "NATIONAL_FUND_GOLD",
     "GOV_ACCOUNTS_PAYABLE", "GOV_ACCOUNTS_RECEIVABLE",
     "GOV_FINANCIAL_ASSETS_SOLD", "GOV_AUDIT_VIOLATIONS_AMOUNT",
+    "TAX_ARREARS_TOTAL", "PENSION_CONTRIBUTIONS_RECEIVED", "PENSION_CONTRIBUTIONS_ARREARS",
+    "GOV_PROCUREMENT_TOTAL_VALUE",
 ]
 
 

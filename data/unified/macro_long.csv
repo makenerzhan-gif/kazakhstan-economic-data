@@ -3898,6 +3898,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,GOV_EXPENDITURE,23106551.9754642,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,1293447.3212767,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,2234191.08313655,million KZT,minfin,2026-08-31,level,2026-08-31
+2024-12-31,KZ,national,annual,GOV_PROCUREMENT_TOTAL_VALUE,7296933.86551862,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,GOV_REVENUE,19624012.0548043,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,5330622.58729598,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,891930.41746684,million KZT,minfin,2026-08-31,level,2026-08-31
@@ -3988,9 +3989,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,306.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,NEER,86.15251,index,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,annual,NON_CASH_PAYMENTS_SHARE,89.0,%,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,annual,PENSION_CONTRIBUTIONS_ARREARS,3287315.7021371904,million KZT,minfin,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,annual,PENSION_CONTRIBUTIONS_RECEIVED,2448612.8654,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,REER,116.67894,index,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,15846.035589771,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,REMITTANCES_SENT,40748.10760782,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,annual,TAX_ARREARS_TOTAL,434785.0,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-01-20,KZ,national,daily,BASE_RATE,15.25,% p.a.,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.2,index,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,CPI,101.5,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -4384,6 +4388,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,GOV_EXPENDITURE,24958708.7677466,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,GOV_GENERAL_SERVICES_SPENDING,1334753.39315083,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,GOV_HEALTH_SPENDING,2427736.72266266,million KZT,minfin,2026-08-31,level,2026-08-31
+2025-12-31,KZ,national,annual,GOV_PROCUREMENT_TOTAL_VALUE,8141829.163967678,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,GOV_REVENUE,21090148.2775434,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,GOV_SOCIAL_SPENDING,5935107.02942839,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,GOV_TRANSPORT_SPENDING,1208280.88449697,million KZT,minfin,2026-08-31,level,2026-08-31
@@ -4469,9 +4474,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,230.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,NEER,78.69229,index,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,annual,NON_CASH_PAYMENTS_SHARE,82.9,%,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,annual,PENSION_CONTRIBUTIONS_ARREARS,4486885.773051805,million KZT,minfin,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,annual,PENSION_CONTRIBUTIONS_RECEIVED,2548511.4772,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,REER,116.80474,index,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,15392.881078525,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,REMITTANCES_SENT,37885.147253329,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,annual,TAX_ARREARS_TOTAL,522067.4666522346,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-01-26,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-31,level,2026-08-31
 2026-01-31,KZ,national,irregular,CUSTOMS_DUTIES,66067.6032816,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-01-31,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,19655.0,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
