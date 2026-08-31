@@ -1085,6 +1085,27 @@ def fetch_npl_ratio() -> tuple[list[dict], dict]:
     return _fetch_fsi("Nonperforming loans to total gross loans", "NPL_RATIO")
 
 
+def fetch_bank_roa() -> tuple[list[dict], dict]:
+    """Bank return on assets (ROA), %, quarterly. Found 2026-08-31 in the
+    same formId=314 Financial Soundness Indicators form already connected
+    for CAPITAL_ADEQUACY_RATIO/NPL_RATIO/LOANS_TO_ECONOMY -- checked its
+    other `indicator` values under the same subject and found this is one
+    of many additional clean, single-valued (per-quarter) ratio indicators
+    present. Verified live: 18 rows, all unique dates, ~4.95-5.21% recently
+    -- consistent with the same 2024-Q2 data-currency cutoff as every other
+    indicator sourced from this specific NBK form/subject (not a new
+    staleness issue introduced here)."""
+    return _fetch_fsi("Return on assets", "BANK_ROA")
+
+
+def fetch_bank_roe() -> tuple[list[dict], dict]:
+    """Bank return on equity (ROE), %, quarterly. Same form/subject as
+    BANK_ROA. Verified live 2026-08-31: 18 rows, all unique dates,
+    ~31.7-36.8% recently -- high but plausible for Kazakhstan's banking
+    sector, known for wide margins."""
+    return _fetch_fsi("Return on equity", "BANK_ROE")
+
+
 def fetch_loans_to_economy() -> tuple[list[dict], dict]:
     """Total gross loans, second-tier banks (deposit takers), million KZT,
     quarterly. Resolves the LOANS_TO_ECONOMY gap logged as not_connected in
@@ -1400,5 +1421,57 @@ def fetch_current_account_balance() -> tuple[list[dict], dict]:
         "dataset_id": f"formId={CURRENT_ACCOUNT_FORM_ID},code={CURRENT_ACCOUNT_CODE}",
         "note": "USD million. Current account balance of the balance of payments. Negative "
                 "values indicate a deficit.",
+    }
+    return records, manifest
+
+
+# ---------------------------------------------------------------------------
+# PENSION_FUND_ASSETS: found 2026-08-31 in formId=25 "Information on the
+# volume of pension savings and the number of individual pension accounts
+# of contributors" (category "financial sector" -> pension funds). Most
+# rows in this form are receipts/disposals FLOWS (contributions, payouts,
+# fees) broken down by class_subtype1/2/3, plus a "Cost of one conventional
+# unit of pension assets" NAV-per-unit series and an account-count series --
+# but under class_type='Pension savings' specifically, one row per month has
+# every class_subtype field empty: the total STOCK of pension savings held
+# by Kazakhstan's Unified Accumulative Pension Fund (UAPF/ЕНПФ), roughly
+# consistent with (though not exactly equal to, likely a small residual
+# component not broken out) the sum of its own compulsory/voluntary/
+# compulsory-professional sub-rows for the same date. Verified live: 43
+# unique monthly dates, 2023-01 through 2026-08, thousand KZT -- 27.07
+# trillion KZT as of 2026-08, a plausible scale for Kazakhstan's national
+# pension fund (one of the country's largest institutional investors).
+# ---------------------------------------------------------------------------
+PENSION_FUND_FORM_ID = "25"
+PENSION_FUND_CLASS_TYPE = "Pension savings"
+
+
+def fetch_pension_fund_assets() -> tuple[list[dict], dict]:
+    """Total pension savings held by Kazakhstan's Unified Accumulative
+    Pension Fund (UAPF/ЕНПФ), million KZT, end of month."""
+    all_rows = _fetch_nbk_form_paginated(PENSION_FUND_FORM_ID, "PENSION_FUND_ASSETS")
+
+    matching = [r for r in all_rows if r.get("class_type") == PENSION_FUND_CLASS_TYPE
+                and not r.get("class_subtype1") and not r.get("class_subtype2") and not r.get("class_subtype3")]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/PENSION_FUND_ASSETS",
+                f"WHAT CHANGED: no unclassified rows found with class_type={PENSION_FUND_CLASS_TYPE!r} in formId={PENSION_FUND_FORM_ID}",
+                "EXPECTED: the top-level unclassified pension-savings total row",
+                "ACTUAL: zero matching rows",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={PENSION_FUND_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+
+    records = [{"date": r["report_date"], "value": float(r["amount"]) / 1000.0} for r in matching]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={PENSION_FUND_FORM_ID}",
+        "dataset_id": f"formId={PENSION_FUND_FORM_ID},class_type={PENSION_FUND_CLASS_TYPE}",
+        "note": "Million KZT (converted from the source's thousand-KZT unit). Total pension "
+                "savings held by Kazakhstan's Unified Accumulative Pension Fund (UAPF/ЕНПФ), "
+                "end of month.",
     }
     return records, manifest

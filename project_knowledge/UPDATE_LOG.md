@@ -1034,3 +1034,23 @@ throughout this session.
   FDI-related income outflows).
 
 **175/175 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — twenty-seventh scale-up batch: 175 -> 178 indicators (financial sector)
+Continued working the candidate backlog from the earlier ~50-100 list: financial-sector
+indicators (bank profitability, pension fund assets).
+
+**NBK (3):**
+- BANK_ROA / BANK_ROE (formId=314, same Financial Soundness Indicators form as
+  CAPITAL_ADEQUACY_RATIO/NPL_RATIO) -- checked the form's other ~35 `indicator` values and
+  found two more clean single-valued series. Also explicitly investigated and declined two
+  more from the same list: "Total assets" has three distinct values per date with no visible
+  disambiguating field (a genuine unresolved source ambiguity, not guessed at), and
+  "Residential real estate prices (% change/12mo)" is exactly 0.0 for all 18 periods -- an
+  unreported placeholder, not real data.
+- PENSION_FUND_ASSETS (formId=25) -- total pension savings held by Kazakhstan's Unified
+  Accumulative Pension Fund (UAPF/ЕНПФ). Most rows in this form are flow data (contributions,
+  payouts, fees); the total stock figure was found as the one row per month with every
+  sub-classification field empty. 43 monthly points, 2023-2026, 27.07 trillion KZT as of
+  2026-08 -- a plausible scale for Kazakhstan's largest institutional investor.
+
+**178/178 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

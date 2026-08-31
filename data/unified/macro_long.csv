@@ -2658,6 +2658,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,42700693700000.0,KZT,bns,2026-08-31,level,2026-08-31
 2019-12-31,KZ,national,annual,VAT_REVENUE,2693127.19348285,million KZT,minfin,2026-08-31,level,2026-08-31
 2019-12-31,KZ,national,annual,WHOLESALE_TRADE,27011905306454.1,KZT,bns,2026-08-31,level,2026-08-31
+2020-01-01,KZ,national,quarterly,BANK_ROA,3.65,%,nbk,2026-08-31,level,2026-08-31
+2020-01-01,KZ,national,quarterly,BANK_ROE,25.16,%,nbk,2026-08-31,level,2026-08-31
 2020-01-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.7,index,nbk,2026-08-31,level,2026-08-31
 2020-01-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,24.25,%,nbk,2026-08-31,level,2026-08-31
 2020-01-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -2725,6 +2727,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-03-01,KZ,national,monthly,NEER,86.02553,index,nbk,2026-08-31,level,2026-08-31
 2020-03-01,KZ,national,monthly,REER,94.70746,index,nbk,2026-08-31,level,2026-08-31
 2020-03-31,KZ,national,quarterly,GDP_NOMINAL,15093342400000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
+2020-04-01,KZ,national,quarterly,BANK_ROA,4.17,%,nbk,2026-08-31,level,2026-08-31
+2020-04-01,KZ,national,quarterly,BANK_ROE,27.02,%,nbk,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,36.4,index,nbk,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,24.57,%,nbk,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -2762,6 +2766,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-06-01,KZ,national,monthly,NEER,88.12461,index,nbk,2026-08-31,level,2026-08-31
 2020-06-01,KZ,national,monthly,REER,98.50318,index,nbk,2026-08-31,level,2026-08-31
 2020-06-30,KZ,national,quarterly,GDP_NOMINAL,28399592700000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
+2020-07-01,KZ,national,quarterly,BANK_ROA,3.04,%,nbk,2026-08-31,level,2026-08-31
+2020-07-01,KZ,national,quarterly,BANK_ROE,20.04,%,nbk,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,44.1,index,nbk,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,26.42,%,nbk,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -2799,6 +2805,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-09-01,KZ,national,monthly,NEER,83.40677,index,nbk,2026-08-31,level,2026-08-31
 2020-09-01,KZ,national,monthly,REER,93.53332,index,nbk,2026-08-31,level,2026-08-31
 2020-09-30,KZ,national,quarterly,GDP_NOMINAL,45803255200000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
+2020-10-01,KZ,national,quarterly,BANK_ROA,3.12,%,nbk,2026-08-31,level,2026-08-31
+2020-10-01,KZ,national,quarterly,BANK_ROE,21.39,%,nbk,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.1,index,nbk,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,25.25,%,nbk,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -2900,6 +2908,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,46448870300000.0,KZT,bns,2026-08-31,level,2026-08-31
 2020-12-31,KZ,national,annual,VAT_REVENUE,2532523.64954988,million KZT,minfin,2026-08-31,level,2026-08-31
 2020-12-31,KZ,national,annual,WHOLESALE_TRADE,27656470866681.9,KZT,bns,2026-08-31,level,2026-08-31
+2021-01-01,KZ,national,quarterly,BANK_ROA,3.06,%,nbk,2026-08-31,level,2026-08-31
+2021-01-01,KZ,national,quarterly,BANK_ROE,19.28,%,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.3,index,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,26.96,%,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -2972,6 +2982,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-03-01,KZ,national,monthly,NEER,83.6896,index,nbk,2026-08-31,level,2026-08-31
 2021-03-01,KZ,national,monthly,REER,95.32586,index,nbk,2026-08-31,level,2026-08-31
 2021-03-31,KZ,national,quarterly,GDP_NOMINAL,15938671500000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
+2021-04-01,KZ,national,quarterly,BANK_ROA,3.86,%,nbk,2026-08-31,level,2026-08-31
+2021-04-01,KZ,national,quarterly,BANK_ROE,28.31,%,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.7,index,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,26.76,%,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -3013,6 +3025,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-06-01,KZ,national,monthly,NEER,81.58859,index,nbk,2026-08-31,level,2026-08-31
 2021-06-01,KZ,national,monthly,REER,94.44436,index,nbk,2026-08-31,level,2026-08-31
 2021-06-30,KZ,national,quarterly,GDP_NOMINAL,32265436500000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
+2021-07-01,KZ,national,quarterly,BANK_ROA,4.37,%,nbk,2026-08-31,level,2026-08-31
+2021-07-01,KZ,national,quarterly,BANK_ROE,32.57,%,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,25.15,%,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -3058,6 +3072,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,24101.690156208,million KZT,nbk,2026-08-31,level,2026-08-31
 2021-09-01,KZ,national,monthly,REMITTANCES_SENT,97265.79009194,million KZT,nbk,2026-08-31,level,2026-08-31
 2021-09-30,KZ,national,quarterly,GDP_NOMINAL,53029365700000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
+2021-10-01,KZ,national,quarterly,BANK_ROA,4.11,%,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,quarterly,BANK_ROE,29.9,%,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.9,index,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,24.94,%,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -3181,6 +3197,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,52814472900000.0,KZT,bns,2026-08-31,level,2026-08-31
 2021-12-31,KZ,national,annual,VAT_REVENUE,2807690.80407635,million KZT,minfin,2026-08-31,level,2026-08-31
 2021-12-31,KZ,national,annual,WHOLESALE_TRADE,31097958278359.0,KZT,bns,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,quarterly,BANK_ROA,4.23,%,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,quarterly,BANK_ROE,30.65,%,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.0,index,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,23.38,%,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -3279,6 +3297,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,25583.625044329,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-03-01,KZ,national,monthly,REMITTANCES_SENT,81120.43649446,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-03-31,KZ,national,quarterly,GDP_NOMINAL,19695592800000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
+2022-04-01,KZ,national,quarterly,BANK_ROA,4.33,%,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,quarterly,BANK_ROE,31.32,%,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.9,index,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,22.8,%,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,CPI,102.0,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -3346,6 +3366,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,91935.954853243,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-06-01,KZ,national,monthly,REMITTANCES_SENT,104378.20840696,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-06-30,KZ,national,quarterly,GDP_NOMINAL,40034332600000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
+2022-07-01,KZ,national,quarterly,BANK_ROA,2.4,%,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,quarterly,BANK_ROE,15.55,%,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.4,index,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,19.84,%,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -3413,6 +3435,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,70646.449138767,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-09-01,KZ,national,monthly,REMITTANCES_SENT,93967.53495836,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-09-30,KZ,national,quarterly,GDP_NOMINAL,65487797900000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
+2022-10-01,KZ,national,quarterly,BANK_ROA,3.59,%,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,quarterly,BANK_ROE,25.74,%,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.7,index,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,20.92,%,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,CPI,101.6,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -3548,6 +3572,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,62193315900000.0,KZT,bns,2026-08-31,level,2026-08-31
 2022-12-31,KZ,national,annual,VAT_REVENUE,4226358.8257289,million KZT,minfin,2026-08-31,level,2026-08-31
 2022-12-31,KZ,national,annual,WHOLESALE_TRADE,36178420393631.1,KZT,bns,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,quarterly,BANK_ROA,4.2,%,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,quarterly,BANK_ROE,30.72,%,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.0,index,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,21.7,%,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -3606,6 +3632,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,monthly,NEER,84.61646,index,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,annual,NON_CASH_PAYMENTS_SHARE,83.0999984741211,%,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,quarterly,NPL_RATIO,3.36,%,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,monthly,PENSION_FUND_ASSETS,14663410.141,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,REER,105.11744,index,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,27576.65760503,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,REMITTANCES_SENT,49174.65081019,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3626,6 +3653,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-02-01,KZ,national,monthly,MONETARY_BASE,10678781.9439,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57642.869427374,USD million,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,NEER,88.33169,index,nbk,2026-08-31,level,2026-08-31
+2023-02-01,KZ,national,monthly,PENSION_FUND_ASSETS,14853794.078,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,REER,110.6251,index,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,25817.97488921,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,REMITTANCES_SENT,59544.13816239,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3646,11 +3674,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-03-01,KZ,national,monthly,MONETARY_BASE,10047215.38311,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57185.66239738011,USD million,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,NEER,89.2841,index,nbk,2026-08-31,level,2026-08-31
+2023-03-01,KZ,national,monthly,PENSION_FUND_ASSETS,15129613.382,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,REER,112.4428,index,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,29853.48505157,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,REMITTANCES_SENT,74161.95870891,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-03-31,KZ,national,quarterly,GDP_NOMINAL,23582637000000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2023-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.8,% of labor force,bns,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,quarterly,BANK_ROA,5.08,%,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,quarterly,BANK_ROE,37.38,%,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.0,index,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,22.59,%,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -3677,6 +3708,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58426.09439684753,USD million,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,NEER,89.96932,index,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,quarterly,NPL_RATIO,3.44,%,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,monthly,PENSION_FUND_ASSETS,15399643.605,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,REER,113.80852,index,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,26506.42192695,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,REMITTANCES_SENT,76556.80289032,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3697,6 +3729,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-05-01,KZ,national,monthly,MONETARY_BASE,9854370.65854,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58775.23714682723,USD million,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,NEER,91.22016,index,nbk,2026-08-31,level,2026-08-31
+2023-05-01,KZ,national,monthly,PENSION_FUND_ASSETS,15675889.399,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,REER,115.83861,index,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,28197.50763373,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,REMITTANCES_SENT,90248.7620732,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3717,11 +3750,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-06-01,KZ,national,monthly,MONETARY_BASE,9654031.0954,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59181.10153303729,USD million,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,NEER,92.98425,index,nbk,2026-08-31,level,2026-08-31
+2023-06-01,KZ,national,monthly,PENSION_FUND_ASSETS,15841449.026,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,REER,118.27238,index,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,26795.43654993,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,REMITTANCES_SENT,87798.65888644,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-06-30,KZ,national,quarterly,GDP_NOMINAL,47244671500000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2023-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,quarterly,BANK_ROA,5.19,%,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,quarterly,BANK_ROE,37.96,%,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.1,index,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,21.4,%,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -3748,6 +3784,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59789.240900753575,USD million,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,NEER,95.54142,index,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,quarterly,NPL_RATIO,3.29,%,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,monthly,PENSION_FUND_ASSETS,16074711.211,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,REER,121.32515,index,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,REMITTANCES_RECEIVED,24242.938213334,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,REMITTANCES_SENT,88804.51659105,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3768,6 +3805,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-08-01,KZ,national,monthly,MONETARY_BASE,9586966.9594,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60209.223709283295,USD million,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,NEER,95.92466,index,nbk,2026-08-31,level,2026-08-31
+2023-08-01,KZ,national,monthly,PENSION_FUND_ASSETS,16367874.294,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,REER,121.75465,index,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,REMITTANCES_RECEIVED,22327.163019382,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,REMITTANCES_SENT,99054.860802557,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3788,11 +3826,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-09-01,KZ,national,monthly,MONETARY_BASE,9068157.5302,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59893.90060693076,USD million,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,NEER,93.90999,index,nbk,2026-08-31,level,2026-08-31
+2023-09-01,KZ,national,monthly,PENSION_FUND_ASSETS,16761866.08,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,REER,119.20947,index,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,24422.675364869,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,REMITTANCES_SENT,93217.5520307,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-09-30,KZ,national,quarterly,GDP_NOMINAL,75546820300000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2023-09-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,quarterly,BANK_ROA,5.16,%,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,quarterly,BANK_ROE,36.84,%,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.7,index,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,21.4,%,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -3819,6 +3860,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57858.378675153326,USD million,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,NEER,93.35106,index,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,quarterly,NPL_RATIO,3.27,%,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,monthly,PENSION_FUND_ASSETS,17224927.075,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,REER,118.74299,index,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,23532.269879783,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,REMITTANCES_SENT,89636.710716899,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3839,6 +3881,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-11-01,KZ,national,monthly,MONETARY_BASE,9620615.0943,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,56367.549726403646,USD million,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,NEER,93.4541,index,nbk,2026-08-31,level,2026-08-31
+2023-11-01,KZ,national,monthly,PENSION_FUND_ASSETS,17211707.28,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,REER,119.78231,index,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,22530.622289574,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,REMITTANCES_SENT,81252.23102924,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3859,6 +3902,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-01,KZ,national,monthly,MONETARY_BASE,10126463.5645,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58642.20391232207,USD million,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,NEER,94.05657,index,nbk,2026-08-31,level,2026-08-31
+2023-12-01,KZ,national,monthly,PENSION_FUND_ASSETS,17362490.985,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,REER,120.98336,index,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,REMITTANCES_RECEIVED,27705.032608077,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,REMITTANCES_SENT,79826.77450172,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3939,6 +3983,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,VAT_REVENUE,5674110.63979825,million KZT,minfin,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,WHOLESALE_TRADE,41701686605244.6,KZT,bns,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,quarterly,BANK_ROA,5.21,%,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,quarterly,BANK_ROE,36.7,%,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.8,index,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,21.5,%,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -3997,6 +4043,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,monthly,NEER,95.28228,index,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,annual,NON_CASH_PAYMENTS_SHARE,88.6999969482422,%,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,quarterly,NPL_RATIO,2.89,%,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,monthly,PENSION_FUND_ASSETS,17864644.645,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,REER,123.06211,index,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,20624.2564639,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,REMITTANCES_SENT,52480.93746954,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4018,6 +4065,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59492.64758565239,USD million,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,600.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,NEER,96.71582,index,nbk,2026-08-31,level,2026-08-31
+2024-02-01,KZ,national,monthly,PENSION_FUND_ASSETS,18103998.684,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,REER,125.23512,index,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,19133.07141938,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,REMITTANCES_SENT,58913.35848472,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4039,11 +4087,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60169.43563169925,USD million,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,400.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,NEER,96.93782,index,nbk,2026-08-31,level,2026-08-31
+2024-03-01,KZ,national,monthly,PENSION_FUND_ASSETS,18486445.493,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,REER,126.09382,index,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,20061.6372356,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,REMITTANCES_SENT,59265.15085536,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-03-31,KZ,national,quarterly,GDP_NOMINAL,26023903800000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2024-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,quarterly,BANK_ROA,4.95,%,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,quarterly,BANK_ROE,31.7,%,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.5,index,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,21.44,%,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -4071,6 +4122,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,450.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,NEER,98.76039,index,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,quarterly,NPL_RATIO,3.06,%,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,monthly,PENSION_FUND_ASSETS,18846916.059,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,REER,128.63669,index,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,20617.094405,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,REMITTANCES_SENT,65855.31166946,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4092,6 +4144,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59074.958782943104,USD million,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,500.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,NEER,98.78101,index,nbk,2026-08-31,level,2026-08-31
+2024-05-01,KZ,national,monthly,PENSION_FUND_ASSETS,18923065.937,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,REER,128.47414,index,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,20589.68625009,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,REMITTANCES_SENT,73852.75716502,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4113,6 +4166,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,61045.06619097999,USD million,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,500.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,NEER,95.25366,index,nbk,2026-08-31,level,2026-08-31
+2024-06-01,KZ,national,monthly,PENSION_FUND_ASSETS,19167346.514,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,REER,124.04047,index,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,19320.10998654,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,REMITTANCES_SENT,73024.65647627,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4145,6 +4199,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,61490.21390998176,USD million,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,299.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,NEER,91.11614,index,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,monthly,PENSION_FUND_ASSETS,19876178.206,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,REER,118.72476,index,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,REMITTANCES_RECEIVED,21636.00003842,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,REMITTANCES_SENT,81915.56202099,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4166,6 +4221,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-08-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,61137.57097582994,USD million,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,250.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,NEER,89.9752,index,nbk,2026-08-31,level,2026-08-31
+2024-08-01,KZ,national,monthly,PENSION_FUND_ASSETS,20122295.655,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,REER,117.4856,index,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,REMITTANCES_RECEIVED,19983.35856108,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,REMITTANCES_SENT,77262.21488625,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4187,6 +4243,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,62548.45229177003,USD million,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,450.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,NEER,89.73777,index,nbk,2026-08-31,level,2026-08-31
+2024-09-01,KZ,national,monthly,PENSION_FUND_ASSETS,20739588.373,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,REER,117.36981,index,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,18478.360031667,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,REMITTANCES_SENT,63784.346106231,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4219,6 +4276,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,62611.422223420064,USD million,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,570.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,NEER,90.53203,index,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,monthly,PENSION_FUND_ASSETS,21004927.231,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,REER,118.90033,index,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,18913.89321278,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,REMITTANCES_SENT,64809.14693075,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4241,6 +4299,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-11-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60582.341938721176,USD million,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,640.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,NEER,90.85457,index,nbk,2026-08-31,level,2026-08-31
+2024-11-01,KZ,national,monthly,PENSION_FUND_ASSETS,21376543.654,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,REER,120.03158,index,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,17810.69840198,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,REMITTANCES_SENT,60602.63071371,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4262,6 +4321,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60885.06549524569,USD million,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,635.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,NEER,88.09184,index,nbk,2026-08-31,level,2026-08-31
+2024-12-01,KZ,national,monthly,PENSION_FUND_ASSETS,21885502.26,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,REER,116.87711,index,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,REMITTANCES_RECEIVED,19544.907231552,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,REMITTANCES_SENT,56813.43594721,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4407,6 +4467,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,annual,NON_CASH_PAYMENTS_SHARE,89.0,%,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,annual,PENSION_CONTRIBUTIONS_ARREARS,3287315.7021371904,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,annual,PENSION_CONTRIBUTIONS_RECEIVED,2448612.8654,million KZT,minfin,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,monthly,PENSION_FUND_ASSETS,22538905.615,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,REER,116.67894,index,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,15846.035589771,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,REMITTANCES_SENT,40748.10760782,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4431,6 +4492,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58477.64825862991,USD million,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,550.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,NEER,87.16019,index,nbk,2026-08-31,level,2026-08-31
+2025-02-01,KZ,national,monthly,PENSION_FUND_ASSETS,22352495.405,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,REER,119.32943,index,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,15813.144032362,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,REMITTANCES_SENT,45008.2050012,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4468,6 +4530,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58865.09691007011,USD million,nbk,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,450.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,NEER,85.83091,index,nbk,2026-08-31,level,2026-08-31
+2025-03-01,KZ,national,monthly,PENSION_FUND_ASSETS,22370872.142,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,REER,118.52597,index,nbk,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,16733.500870873,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,REMITTANCES_SENT,47328.856735897,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4525,6 +4588,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57866.530543789944,USD million,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,450.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,NEER,81.54381,index,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,monthly,PENSION_FUND_ASSETS,22420062.948,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,REER,113.52171,index,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,19311.921655523,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,REMITTANCES_SENT,57434.871770097,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4548,6 +4612,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58029.30212089003,USD million,nbk,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,550.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,NEER,81.06572,index,nbk,2026-08-31,level,2026-08-31
+2025-05-01,KZ,national,monthly,PENSION_FUND_ASSETS,22721578.815,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,REER,113.64216,index,nbk,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,19059.294785234,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,REMITTANCES_SENT,65933.3754131,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4570,6 +4635,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59624.733085559994,USD million,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,620.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,NEER,79.46586,index,nbk,2026-08-31,level,2026-08-31
+2025-06-01,KZ,national,monthly,PENSION_FUND_ASSETS,22921677.506,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,REER,112.14037,index,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,18595.364206979,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,REMITTANCES_SENT,64712.184057815,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4627,6 +4693,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60260.29798799996,USD million,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,500.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,NEER,77.05435,index,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,monthly,PENSION_FUND_ASSETS,23540814.08,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,REER,108.90469,index,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,REMITTANCES_RECEIVED,21264.962810764,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,REMITTANCES_SENT,70447.506300936,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4665,6 +4732,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60484.42936244998,USD million,nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,NEER,76.0804,index,nbk,2026-08-31,level,2026-08-31
+2025-08-01,KZ,national,monthly,PENSION_FUND_ASSETS,24334940.662,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,REER,108.41895,index,nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,REMITTANCES_RECEIVED,20856.20042472,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,REMITTANCES_SENT,72705.211344807,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4757,6 +4825,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,62738.94112556005,USD million,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,NEER,76.31148,index,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,monthly,PENSION_FUND_ASSETS,25134724.781,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,REER,109.81892,index,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,20692.336550891,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,REMITTANCES_SENT,68092.222434033,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4794,6 +4863,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,63394.858571585195,USD million,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,NEER,78.87861,index,nbk,2026-08-31,level,2026-08-31
+2025-11-01,KZ,national,monthly,PENSION_FUND_ASSETS,25198092.467,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,REER,114.2761,index,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,17297.77484655,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,REMITTANCES_SENT,55540.770486322,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4831,6 +4901,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,63689.295170959944,USD million,nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,NEER,79.55761,index,nbk,2026-08-31,level,2026-08-31
+2025-12-01,KZ,national,monthly,PENSION_FUND_ASSETS,25127873.375,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,REER,115.97217,index,nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,REMITTANCES_RECEIVED,20513.316510463,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,REMITTANCES_SENT,59381.688402189,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4971,6 +5042,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,annual,NON_CASH_PAYMENTS_SHARE,82.9,%,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,annual,PENSION_CONTRIBUTIONS_ARREARS,4486885.773051805,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,annual,PENSION_CONTRIBUTIONS_RECEIVED,2548511.4772,million KZT,minfin,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,monthly,PENSION_FUND_ASSETS,25213615.463,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,REER,116.80474,index,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,15392.881078525,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,REMITTANCES_SENT,37885.147253329,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5009,6 +5081,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,64801.56584049998,USD million,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,230.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,NEER,80.0,index,nbk,2026-08-31,level,2026-08-31
+2026-02-01,KZ,national,monthly,PENSION_FUND_ASSETS,25554168.179,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,REER,118.9,index,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,15422.671986291,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,REMITTANCES_SENT,42243.33153742,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5050,6 +5123,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,65584.66295435003,USD million,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,340.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,NEER,83.06521,index,nbk,2026-08-31,level,2026-08-31
+2026-03-01,KZ,national,monthly,PENSION_FUND_ASSETS,25987471.647,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,REER,123.66197,index,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,16016.74954245,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,REMITTANCES_SENT,49355.088812281,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5133,6 +5207,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,62395.954207779934,USD million,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,270.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,NEER,84.81529,index,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,monthly,PENSION_FUND_ASSETS,25874226.93,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,REER,126.46427,index,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,16253.918165772,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,REMITTANCES_SENT,54935.409232604,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5185,6 +5260,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,64823.338208291025,USD million,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,330.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,NEER,83.68117,index,nbk,2026-08-31,level,2026-08-31
+2026-05-01,KZ,national,monthly,PENSION_FUND_ASSETS,25712678.448,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,REER,125.31691,index,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,15052.325042056,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,REMITTANCES_SENT,53534.625921444,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5246,6 +5322,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,MONETARY_BASE,14840823.139114,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,460.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,NEER,81.56805,index,nbk,2026-08-31,level,2026-08-31
+2026-06-01,KZ,national,monthly,PENSION_FUND_ASSETS,26576309.172,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,REER,122.99549,index,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,18330.809294514,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,REMITTANCES_SENT,65182.523811301,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5315,6 +5392,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,65497.97934542998,USD million,nbk,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,460.0,billion KZT,nbk,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,monthly,NEER,85.32294,index,nbk,2026-08-31,level,2026-08-31
+2026-07-01,KZ,national,monthly,PENSION_FUND_ASSETS,26913614.438,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,daily,TONIA,16.24,%,nbk,2026-08-31,level,2026-08-31
 2026-07-02,KZ,national,daily,TONIA,16.36,%,nbk,2026-08-31,level,2026-08-31
 2026-07-03,KZ,national,daily,TONIA,16.59,%,nbk,2026-08-31,level,2026-08-31
@@ -5350,6 +5428,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,22366214.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-08-01,KZ,national,monthly,KASE_USD_VOLUME,9695953843.0,USD,nbk,2026-08-31,level,2026-08-31
 2026-08-01,KZ,national,monthly,LENDING_RATE,20.84661806814383,%,nbk,2026-08-31,level,2026-08-31
+2026-08-01,KZ,national,monthly,PENSION_FUND_ASSETS,27072102.566,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-08-01,KZ,national,daily,TONIA,15.72,%,nbk,2026-08-31,level,2026-08-31
 2026-08-02,KZ,national,daily,TONIA,15.72,%,nbk,2026-08-31,level,2026-08-31
 2026-08-03,KZ,national,daily,TONIA,15.72,%,nbk,2026-08-31,level,2026-08-31

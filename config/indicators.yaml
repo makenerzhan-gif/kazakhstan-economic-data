@@ -1220,6 +1220,33 @@ indicators:
     category: monetary
     source_status: confirmed
 
+  - id: BANK_ROA
+    name_ru: "Рентабельность активов банков (ROA)"
+    name_en: "Bank Return on Assets (ROA)"
+    agency: nbk
+    frequency: quarterly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_ROE
+    name_ru: "Рентабельность капитала банков (ROE)"
+    name_en: "Bank Return on Equity (ROE)"
+    agency: nbk
+    frequency: quarterly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: PENSION_FUND_ASSETS
+    name_ru: "Пенсионные накопления ЕНПФ"
+    name_en: "Unified Accumulative Pension Fund Assets"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

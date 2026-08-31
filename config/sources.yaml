@@ -1100,6 +1100,49 @@ agencies:
           through 2026-Q2, USD million, recently negative (e.g. -5,180.4 in 2026-Q1) -- a
           plausible current account deficit for Kazakhstan given large FDI-related income
           outflows even alongside a goods trade surplus. fetch_current_account_balance.
+      BANK_ROA:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=314"
+        format: json
+        notes: >
+          2026-08-31. Same formId=314 Financial Soundness Indicators form already connected
+          for CAPITAL_ADEQUACY_RATIO/NPL_RATIO/LOANS_TO_ECONOMY -- checked its other
+          `indicator` values under subject='Core FSIs for Deposit takers' and found ~35
+          distinct additional indicators, including this one ('Return on assets'), a clean
+          single-valued %-per-quarter series. Also checked and explicitly declined two others
+          found in the same list: 'Total assets' has THREE distinct values per report_date
+          with no visible field distinguishing them (a genuine unresolved ambiguity in the
+          source, not fabricated a pick), and 'Residential real estate prices (Percentage
+          change/last 12 months)' returns exactly 0.0 for all 18 periods (an unreported/
+          placeholder field, not real data). Verified live: 18 rows, all unique dates,
+          ~4.95-5.21% recently -- same 2024-Q2 data-currency cutoff as every other indicator
+          from this form/subject (a pre-existing characteristic of this source, not new).
+          fetch_bank_roa.
+      BANK_ROE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=314"
+        format: json
+        notes: >
+          2026-08-31. Same form/subject as BANK_ROA -- 'Return on equity'. Verified live: 18
+          rows, all unique dates, ~31.7-36.8% recently -- high but plausible for Kazakhstan's
+          banking sector. fetch_bank_roe.
+      PENSION_FUND_ASSETS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=25"
+        format: json
+        notes: >
+          2026-08-31. Found via GET /api/v1/data/categories -> "financial sector" -> pension
+          funds -> formId=25 "Information on the volume of pension savings and the number of
+          individual pension accounts of contributors". Most rows are receipts/disposals FLOWS
+          (contributions, payouts, fees) by sub-type, plus a NAV-per-unit series and an
+          account-count series -- but under class_type='Pension savings' specifically, one row
+          per month has every class_subtype field empty: the total STOCK of pension savings
+          held by the Unified Accumulative Pension Fund (UAPF/ЕНПФ), roughly consistent with
+          (though not exactly equal to -- a small residual component likely exists) the sum of
+          its own compulsory/voluntary/compulsory-professional sub-rows for the same date.
+          Verified live with full pagination: 43 unique monthly dates, 2023-01 through
+          2026-08, 27.07 trillion KZT (2026-08) -- a plausible scale for Kazakhstan's national
+          pension fund. fetch_pension_fund_assets.
       TONIA:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data/indicators"

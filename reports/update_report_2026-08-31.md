@@ -1,6 +1,6 @@
 # Update report — 2026-08-31
 
-Run timestamp: 2026-08-31T16:12:29.946642
+Run timestamp: 2026-08-31T16:45:22.577111
 Unified dataset updated: True
 Tests passed: True
 
@@ -307,6 +307,12 @@ Tests passed: True
   - warning: Unexpected jump of 177.8% between 2025-04-01 (-1030.042341) and 2025-07-01 (-2861.708944).
   - warning: Unexpected jump of 81.0% between 2025-07-01 (-2861.708944) and 2026-01-01 (-5180.443517).
   - warning: Unexpected jump of 61.2% between 2026-01-01 (-5180.443517) and 2026-04-01 (-2008.012157).
+- **nbk/BANK_ROA** — fetch+validate+process: ok (downloaded=18, processed=18)
+- **nbk/BANK_ROE** — fetch+validate+process: ok (downloaded=18, processed=18)
+  - warning: Unexpected jump of 50.4% between 2022-04-01 (31.32) and 2022-07-01 (15.55).
+  - warning: Unexpected jump of 65.5% between 2022-07-01 (15.55) and 2022-10-01 (25.74).
+- **nbk/PENSION_FUND_ASSETS** — fetch+validate+process: ok (downloaded=43, processed=43)
+  - warning: Gap of 61 days between 2025-08-01 and 2025-10-01 is outside expected range for frequency=monthly (25-40d).
 - **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)
