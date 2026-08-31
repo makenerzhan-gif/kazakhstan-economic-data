@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=26",
+  "dataset_id": "formId=26,class_type=Net foreign assets,code=Net foreign assets,row_code=Net foreign assets,type=Stocks (mln. tenge)",
+  "indicator_id": "OFC_NET_FOREIGN_ASSETS",
+  "indicator_name": "Other Financial Corporations: Net Foreign Assets",
+  "description": "Чистые иностранные активы прочих финорганизаций",
+  "frequency": "quarterly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT. NET FOREIGN ASSETS of other financial corporations (non-bank financial sector: pension fund, insurers, brokers, etc.), from NBK's analytical survey. Equals claims on nonresidents less liabilities to nonresidents.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2023-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

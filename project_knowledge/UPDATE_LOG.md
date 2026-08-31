@@ -1336,3 +1336,33 @@ capture, exactly as done here. The Taldau probe already lists them separately fr
 misses, so the work is enumerated rather than open-ended.
 
 **248/248 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — thirty-sixth batch: FX market and non-bank financial sector (248 -> 258)
+Started a systematic sweep of every NBK form not yet used. Enumerated them by diffing the
+API's own category tree (239 forms) against the form ids referenced in
+`scripts/fetchers/nbk.py` (42 in use), leaving 197 to probe — so remaining coverage is now
+an enumerated list rather than guesswork.
+
+**NBK (10):**
+- OTC foreign exchange market (formId=41, 44 monthly pts from 2023-01):
+  EXCHANGE_RATE_EUR_OTC, EXCHANGE_RATE_RUB_OTC, EXCHANGE_RATE_USD_OTC and the matching
+  turnover series FX_OTC_VOLUME_{USD,EUR,RUB}. This fills a real gap — until now the only
+  exchange rate in the dataset was the official USD/KZT rate, with no EUR or RUB at all.
+  These are market bid rates, a different concept from the official rate, and are labeled
+  as such so they are not mistaken for it.
+- Other financial corporations (formId=26, 15 quarterly pts from 2023-01):
+  OFC_NET_FOREIGN_ASSETS, OFC_CLAIMS_ON_NONRESIDENTS, OFC_LIABILITIES_TO_NONRESIDENTS,
+  OFC_CLAIMS_ON_BANKING_SYSTEM — the non-bank financial sector (pension fund, insurers,
+  brokers). Internal cross-check passed exactly: claims 12,029,184 − liabilities 3,308,881
+  = net 8,720,303 million KZT.
+
+**Self-inflicted failure worth recording.** The first verification run of this batch failed
+with 69 errors — a `ConnectionResetError` followed by cascading DNS `NameResolutionError`s.
+Cause was mine, not the source's: a 6-worker form probe was left running in the background
+against the same host while the pipeline fetched. Nothing was corrupted, and the pipeline
+behaved exactly as designed — it errored loudly and **refused to rebuild the unified
+dataset**, rather than writing a partial one. Re-ran with nothing else touching the API:
+104/104 ok. Lesson for future sweeps: never run the probe concurrently with a pipeline run.
+
+**258/258 confirmed indicators connected end-to-end** (104/104 NBK re-verified live in
+6m14s). `pytest tests/ -q` — 29/29 passing.

@@ -1877,6 +1877,96 @@ indicators:
     category: demography
     source_status: confirmed
 
+  - id: EXCHANGE_RATE_EUR_OTC
+    name_ru: "Средний курс евро на внебиржевом рынке (покупка)"
+    name_en: "EUR/KZT OTC Average Bid Rate"
+    agency: nbk
+    frequency: monthly
+    unit: "KZT per 1 EUR"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXCHANGE_RATE_RUB_OTC
+    name_ru: "Средний курс рубля на внебиржевом рынке (покупка)"
+    name_en: "RUB/KZT OTC Average Bid Rate"
+    agency: nbk
+    frequency: monthly
+    unit: "KZT per 1 RUB"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXCHANGE_RATE_USD_OTC
+    name_ru: "Средний курс доллара на внебиржевом рынке (покупка)"
+    name_en: "USD/KZT OTC Average Bid Rate"
+    agency: nbk
+    frequency: monthly
+    unit: "KZT per 1 USD"
+    category: monetary
+    source_status: confirmed
+
+  - id: FX_OTC_VOLUME_USD
+    name_ru: "Объём покупки долларов на внебиржевом рынке"
+    name_en: "FX OTC Market Volume, US Dollars (Bid)"
+    agency: nbk
+    frequency: monthly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: FX_OTC_VOLUME_EUR
+    name_ru: "Объём покупки евро на внебиржевом рынке"
+    name_en: "FX OTC Market Volume, Euro (Bid)"
+    agency: nbk
+    frequency: monthly
+    unit: "EUR million"
+    category: monetary
+    source_status: confirmed
+
+  - id: FX_OTC_VOLUME_RUB
+    name_ru: "Объём покупки рублей на внебиржевом рынке"
+    name_en: "FX OTC Market Volume, Russian Rubles (Bid)"
+    agency: nbk
+    frequency: monthly
+    unit: "RUB million"
+    category: monetary
+    source_status: confirmed
+
+  - id: OFC_NET_FOREIGN_ASSETS
+    name_ru: "Чистые иностранные активы прочих финорганизаций"
+    name_en: "Other Financial Corporations: Net Foreign Assets"
+    agency: nbk
+    frequency: quarterly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: OFC_CLAIMS_ON_NONRESIDENTS
+    name_ru: "Требования прочих финорганизаций к нерезидентам"
+    name_en: "Other Financial Corporations: Claims on Nonresidents"
+    agency: nbk
+    frequency: quarterly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: OFC_LIABILITIES_TO_NONRESIDENTS
+    name_ru: "Обязательства прочих финорганизаций перед нерезидентами"
+    name_en: "Other Financial Corporations: Liabilities to Nonresidents"
+    agency: nbk
+    frequency: quarterly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: OFC_CLAIMS_ON_BANKING_SYSTEM
+    name_ru: "Требования прочих финорганизаций к банковской системе"
+    name_en: "Other Financial Corporations: Claims on Banking System"
+    agency: nbk
+    frequency: quarterly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

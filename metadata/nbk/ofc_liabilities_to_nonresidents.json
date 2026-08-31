@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=26",
+  "dataset_id": "formId=26,class_type=Net foreign assets,code=Less: liabilities to nonresidents,row_code=Liabilities to nonresidents,subtype1=Liabilities to nonresidents,type=Stocks (mln. tenge)",
+  "indicator_id": "OFC_LIABILITIES_TO_NONRESIDENTS",
+  "indicator_name": "Other Financial Corporations: Liabilities to Nonresidents",
+  "description": "Обязательства прочих финорганизаций перед нерезидентами",
+  "frequency": "quarterly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT. Gross LIABILITIES TO NONRESIDENTS of other financial corporations -- the liability side of OFC_NET_FOREIGN_ASSETS.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2023-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

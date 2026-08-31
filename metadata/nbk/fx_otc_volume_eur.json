@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=41",
+  "dataset_id": "formId=41,currency=Euro,type=Volume - bid (mln. units of currency)",
+  "indicator_id": "FX_OTC_VOLUME_EUR",
+  "indicator_name": "FX OTC Market Volume, Euro (Bid)",
+  "description": "Объём покупки евро на внебиржевом рынке",
+  "frequency": "monthly",
+  "unit": "EUR million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million EUR. Purchase (bid) turnover in euro on Kazakhstan's over-the-counter FX market.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2023-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

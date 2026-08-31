@@ -112,6 +112,16 @@ FETCHERS = {
     "EXTERNAL_DEBT_BANKS_SECURITIES_LT": nbk_fetchers.fetch_external_debt_banks_securities_lt,
     "EXTERNAL_DEBT_OTHER_SECURITIES_LT": nbk_fetchers.fetch_external_debt_other_securities_lt,
     "GOV_SECURITIES_SECONDARY_NBK_NOTES": nbk_fetchers.fetch_gov_securities_secondary_nbk_notes,
+    "EXCHANGE_RATE_EUR_OTC": nbk_fetchers.fetch_exchange_rate_eur_otc,
+    "EXCHANGE_RATE_RUB_OTC": nbk_fetchers.fetch_exchange_rate_rub_otc,
+    "EXCHANGE_RATE_USD_OTC": nbk_fetchers.fetch_exchange_rate_usd_otc,
+    "FX_OTC_VOLUME_USD": nbk_fetchers.fetch_fx_otc_volume_usd,
+    "FX_OTC_VOLUME_EUR": nbk_fetchers.fetch_fx_otc_volume_eur,
+    "FX_OTC_VOLUME_RUB": nbk_fetchers.fetch_fx_otc_volume_rub,
+    "OFC_NET_FOREIGN_ASSETS": nbk_fetchers.fetch_ofc_net_foreign_assets,
+    "OFC_CLAIMS_ON_NONRESIDENTS": nbk_fetchers.fetch_ofc_claims_on_nonresidents,
+    "OFC_LIABILITIES_TO_NONRESIDENTS": nbk_fetchers.fetch_ofc_liabilities_to_nonresidents,
+    "OFC_CLAIMS_ON_BANKING_SYSTEM": nbk_fetchers.fetch_ofc_claims_on_banking_system,
 }
 
 INDICATOR_IDS = [
@@ -181,6 +191,16 @@ INDICATOR_IDS = [
     "EXTERNAL_DEBT_BANKS_SECURITIES_LT",
     "EXTERNAL_DEBT_OTHER_SECURITIES_LT",
     "GOV_SECURITIES_SECONDARY_NBK_NOTES",
+    "EXCHANGE_RATE_EUR_OTC",
+    "EXCHANGE_RATE_RUB_OTC",
+    "EXCHANGE_RATE_USD_OTC",
+    "FX_OTC_VOLUME_USD",
+    "FX_OTC_VOLUME_EUR",
+    "FX_OTC_VOLUME_RUB",
+    "OFC_NET_FOREIGN_ASSETS",
+    "OFC_CLAIMS_ON_NONRESIDENTS",
+    "OFC_LIABILITIES_TO_NONRESIDENTS",
+    "OFC_CLAIMS_ON_BANKING_SYSTEM",
 ]
 
 

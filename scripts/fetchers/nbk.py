@@ -2393,3 +2393,103 @@ def fetch_gov_securities_secondary_nbk_notes() -> tuple[list[dict], dict]:
         "Million KZT. Secondary-market transaction volume in NBK Notes -- a liquidity/turnover measure for the National Bank short-term sterilization instrument, distinct from the outstanding stock in GOV_SECURITIES_MEUKAM.",
         "monthly",
     )
+
+
+def fetch_exchange_rate_eur_otc() -> tuple[list[dict], dict]:
+    """EUR/KZT OTC Average Bid Rate (KZT per 1 EUR, monthly)."""
+    return _fetch_nbk_exact_row(
+        "41", {'currency': 'Euro', 'type': 'Average rate - bid'},
+        "EXCHANGE_RATE_EUR_OTC",
+        "KZT per 1 EUR. Average BID rate on Kazakhstan's over-the-counter FX market. Distinct from the official NBK rate (EXCHANGE_RATE, USD only) -- this is a market average, and the form also publishes a near-identical 'Average rate - offer' series.",
+        "monthly",
+    )
+
+
+def fetch_exchange_rate_rub_otc() -> tuple[list[dict], dict]:
+    """RUB/KZT OTC Average Bid Rate (KZT per 1 RUB, monthly)."""
+    return _fetch_nbk_exact_row(
+        "41", {'currency': 'Russian ruble', 'type': 'Average rate - bid'},
+        "EXCHANGE_RATE_RUB_OTC",
+        "KZT per 1 RUB. Average BID rate on Kazakhstan's over-the-counter FX market -- relevant given Russia's weight in Kazakhstan's trade and remittance flows.",
+        "monthly",
+    )
+
+
+def fetch_exchange_rate_usd_otc() -> tuple[list[dict], dict]:
+    """USD/KZT OTC Average Bid Rate (KZT per 1 USD, monthly)."""
+    return _fetch_nbk_exact_row(
+        "41", {'currency': 'US dollars', 'type': 'Average rate - bid'},
+        "EXCHANGE_RATE_USD_OTC",
+        "KZT per 1 USD. Average BID rate on Kazakhstan's over-the-counter FX market. Compare against EXCHANGE_RATE, which is the official NBK rate -- the two are different concepts and will not match exactly.",
+        "monthly",
+    )
+
+
+def fetch_fx_otc_volume_usd() -> tuple[list[dict], dict]:
+    """FX OTC Market Volume, US Dollars (Bid) (USD million, monthly)."""
+    return _fetch_nbk_exact_row(
+        "41", {'currency': 'US dollars', 'type': 'Volume - bid (mln. units of currency)'},
+        "FX_OTC_VOLUME_USD",
+        "Million USD. Purchase (bid) turnover in US dollars on Kazakhstan's over-the-counter FX market.",
+        "monthly",
+    )
+
+
+def fetch_fx_otc_volume_eur() -> tuple[list[dict], dict]:
+    """FX OTC Market Volume, Euro (Bid) (EUR million, monthly)."""
+    return _fetch_nbk_exact_row(
+        "41", {'currency': 'Euro', 'type': 'Volume - bid (mln. units of currency)'},
+        "FX_OTC_VOLUME_EUR",
+        "Million EUR. Purchase (bid) turnover in euro on Kazakhstan's over-the-counter FX market.",
+        "monthly",
+    )
+
+
+def fetch_fx_otc_volume_rub() -> tuple[list[dict], dict]:
+    """FX OTC Market Volume, Russian Rubles (Bid) (RUB million, monthly)."""
+    return _fetch_nbk_exact_row(
+        "41", {'currency': 'Russian ruble', 'type': 'Volume - bid (mln. units of currency)'},
+        "FX_OTC_VOLUME_RUB",
+        "Million RUB. Purchase (bid) turnover in Russian rubles on Kazakhstan's over-the-counter FX market.",
+        "monthly",
+    )
+
+
+def fetch_ofc_net_foreign_assets() -> tuple[list[dict], dict]:
+    """Other Financial Corporations: Net Foreign Assets (million KZT, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "26", {'class_type': 'Net foreign assets', 'type': 'Stocks (mln. tenge)', 'code': 'Net foreign assets', 'row_code': 'Net foreign assets'},
+        "OFC_NET_FOREIGN_ASSETS",
+        "Million KZT. NET FOREIGN ASSETS of other financial corporations (non-bank financial sector: pension fund, insurers, brokers, etc.), from NBK's analytical survey. Equals claims on nonresidents less liabilities to nonresidents.",
+        "quarterly",
+    )
+
+
+def fetch_ofc_claims_on_nonresidents() -> tuple[list[dict], dict]:
+    """Other Financial Corporations: Claims on Nonresidents (million KZT, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "26", {'class_type': 'Net foreign assets', 'type': 'Stocks (mln. tenge)', 'code': 'Claims on nonresidents', 'row_code': 'Claims on nonresidents', 'subtype1': 'Claims on nonresidents'},
+        "OFC_CLAIMS_ON_NONRESIDENTS",
+        "Million KZT. Gross CLAIMS ON NONRESIDENTS held by other financial corporations -- the asset side of OFC_NET_FOREIGN_ASSETS.",
+        "quarterly",
+    )
+
+
+def fetch_ofc_liabilities_to_nonresidents() -> tuple[list[dict], dict]:
+    """Other Financial Corporations: Liabilities to Nonresidents (million KZT, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "26", {'class_type': 'Net foreign assets', 'type': 'Stocks (mln. tenge)', 'code': 'Less: liabilities to nonresidents', 'row_code': 'Liabilities to nonresidents', 'subtype1': 'Liabilities to nonresidents'},
+        "OFC_LIABILITIES_TO_NONRESIDENTS",
+        "Million KZT. Gross LIABILITIES TO NONRESIDENTS of other financial corporations -- the liability side of OFC_NET_FOREIGN_ASSETS.",
+        "quarterly",
+    )
+
+
+def fetch_ofc_claims_on_banking_system() -> tuple[list[dict], dict]:
+    """Other Financial Corporations: Claims on Banking System (million KZT, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "26", {'class_type': 'Claims on banking system', 'code': 'Claims on banking system', 'row_code': 'Claims on banking system', 'type': 'Stocks (mln. tenge)'},
+        "OFC_CLAIMS_ON_BANKING_SYSTEM",
+        "Million KZT. Claims of other financial corporations on Kazakhstan's banking system -- the non-bank financial sector's exposure to banks.",
+        "quarterly",
+    )

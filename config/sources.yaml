@@ -2078,6 +2078,106 @@ agencies:
           classification field must be empty, exactly one row per date asserted;
           comparison is case-insensitive and whitespace-stripped because NBK label
           casing/padding is not stable across requests).
+      EXCHANGE_RATE_EUR_OTC:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=41"
+        format: json
+        notes: >
+          2026-09-01. Found by the structural probe sweeping every NBK form not yet used
+          (groups a form's rows by full classification signature, keeps only groups forming
+          exactly one row per report_date across >=90% of the form's dates).
+          Pinned fields: currency='Euro', type='Average rate - bid'. Fetched via _fetch_nbk_exact_row (all listed fields must match,
+          every other classification field must be empty, exactly one row per date asserted).
+      EXCHANGE_RATE_RUB_OTC:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=41"
+        format: json
+        notes: >
+          2026-09-01. Found by the structural probe sweeping every NBK form not yet used
+          (groups a form's rows by full classification signature, keeps only groups forming
+          exactly one row per report_date across >=90% of the form's dates).
+          Pinned fields: currency='Russian ruble', type='Average rate - bid'. Fetched via _fetch_nbk_exact_row (all listed fields must match,
+          every other classification field must be empty, exactly one row per date asserted).
+      EXCHANGE_RATE_USD_OTC:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=41"
+        format: json
+        notes: >
+          2026-09-01. Found by the structural probe sweeping every NBK form not yet used
+          (groups a form's rows by full classification signature, keeps only groups forming
+          exactly one row per report_date across >=90% of the form's dates).
+          Pinned fields: currency='US dollars', type='Average rate - bid'. Fetched via _fetch_nbk_exact_row (all listed fields must match,
+          every other classification field must be empty, exactly one row per date asserted).
+      FX_OTC_VOLUME_USD:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=41"
+        format: json
+        notes: >
+          2026-09-01. Found by the structural probe sweeping every NBK form not yet used
+          (groups a form's rows by full classification signature, keeps only groups forming
+          exactly one row per report_date across >=90% of the form's dates).
+          Pinned fields: currency='US dollars', type='Volume - bid (mln. units of currency)'. Fetched via _fetch_nbk_exact_row (all listed fields must match,
+          every other classification field must be empty, exactly one row per date asserted).
+      FX_OTC_VOLUME_EUR:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=41"
+        format: json
+        notes: >
+          2026-09-01. Found by the structural probe sweeping every NBK form not yet used
+          (groups a form's rows by full classification signature, keeps only groups forming
+          exactly one row per report_date across >=90% of the form's dates).
+          Pinned fields: currency='Euro', type='Volume - bid (mln. units of currency)'. Fetched via _fetch_nbk_exact_row (all listed fields must match,
+          every other classification field must be empty, exactly one row per date asserted).
+      FX_OTC_VOLUME_RUB:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=41"
+        format: json
+        notes: >
+          2026-09-01. Found by the structural probe sweeping every NBK form not yet used
+          (groups a form's rows by full classification signature, keeps only groups forming
+          exactly one row per report_date across >=90% of the form's dates).
+          Pinned fields: currency='Russian ruble', type='Volume - bid (mln. units of currency)'. Fetched via _fetch_nbk_exact_row (all listed fields must match,
+          every other classification field must be empty, exactly one row per date asserted).
+      OFC_NET_FOREIGN_ASSETS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=26"
+        format: json
+        notes: >
+          2026-09-01. Found by the structural probe sweeping every NBK form not yet used
+          (groups a form's rows by full classification signature, keeps only groups forming
+          exactly one row per report_date across >=90% of the form's dates).
+          Pinned fields: class_type='Net foreign assets', code='Net foreign assets', row_code='Net foreign assets', type='Stocks (mln. tenge)'. Fetched via _fetch_nbk_exact_row (all listed fields must match,
+          every other classification field must be empty, exactly one row per date asserted).
+      OFC_CLAIMS_ON_NONRESIDENTS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=26"
+        format: json
+        notes: >
+          2026-09-01. Found by the structural probe sweeping every NBK form not yet used
+          (groups a form's rows by full classification signature, keeps only groups forming
+          exactly one row per report_date across >=90% of the form's dates).
+          Pinned fields: class_type='Net foreign assets', code='Claims on nonresidents', row_code='Claims on nonresidents', subtype1='Claims on nonresidents', type='Stocks (mln. tenge)'. Fetched via _fetch_nbk_exact_row (all listed fields must match,
+          every other classification field must be empty, exactly one row per date asserted).
+      OFC_LIABILITIES_TO_NONRESIDENTS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=26"
+        format: json
+        notes: >
+          2026-09-01. Found by the structural probe sweeping every NBK form not yet used
+          (groups a form's rows by full classification signature, keeps only groups forming
+          exactly one row per report_date across >=90% of the form's dates).
+          Pinned fields: class_type='Net foreign assets', code='Less: liabilities to nonresidents', row_code='Liabilities to nonresidents', subtype1='Liabilities to nonresidents', type='Stocks (mln. tenge)'. Fetched via _fetch_nbk_exact_row (all listed fields must match,
+          every other classification field must be empty, exactly one row per date asserted).
+      OFC_CLAIMS_ON_BANKING_SYSTEM:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=26"
+        format: json
+        notes: >
+          2026-09-01. Found by the structural probe sweeping every NBK form not yet used
+          (groups a form's rows by full classification signature, keeps only groups forming
+          exactly one row per report_date across >=90% of the form's dates).
+          Pinned fields: class_type='Claims on banking system', code='Claims on banking system', row_code='Claims on banking system', type='Stocks (mln. tenge)'. Fetched via _fetch_nbk_exact_row (all listed fields must match,
+          every other classification field must be empty, exactly one row per date asserted).
       RESERVES_GUIDOTTI_RATIO (declined):
         status: declined
         notes: >
