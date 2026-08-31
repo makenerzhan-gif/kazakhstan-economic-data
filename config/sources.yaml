@@ -1213,6 +1213,47 @@ agencies:
           international reserves adequate for financing imports', value_type1='number of
           months'. Verified live with full pagination: 50 unique quarterly dates, 2014-Q1
           through 2026-Q2, smooth/continuous throughout. fetch_reserves_import_cover.
+      PRODUCTION_VOLUME_DIFFUSION_INDEX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=365"
+        format: json
+        notes: >
+          2026-08-31. Found via GET /api/v1/data/categories -> "Survey Results" -> "Enterprise
+          Monitoring" -> formId=365 "Production volume". This quarterly business-tendency
+          survey breaks its diffusion index down by `industry` (Professional services, Real
+          estate, IT, etc.) but ALSO publishes a genuine economy-wide `industry`='All sectors'
+          aggregate row for indicator_code='Production volume - Diffusion index' -- the
+          source's own aggregate, not computed by us. Verified live with full pagination and
+          zero duplicate dates: 42 quarterly points, 2016-Q2 through 2026-Q3.
+          fetch_production_volume_diffusion_index.
+      PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=365"
+        format: json
+        notes: >
+          2026-08-31. Same form/discovery as PRODUCTION_VOLUME_DIFFUSION_INDEX --
+          indicator_code='Production volume expectations - Diffusion index' instead. 42
+          quarterly points, 2016-Q2 through 2026-Q3.
+          fetch_production_expectations_diffusion_index.
+      DEMAND_DIFFUSION_INDEX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=366"
+        format: json
+        notes: >
+          2026-08-31. Found via GET /api/v1/data/categories -> "Survey Results" -> "Enterprise
+          Monitoring" -> formId=366 "Demand for goods/service". Same structure as formId=365:
+          `industry`='All sectors' + indicator_code='Demand - Diffusion index' is the source's
+          own economy-wide aggregate. Verified live with full pagination and zero duplicate
+          dates: 86 quarterly points, 2005-Q2 through 2026-Q3 -- the longest history found in
+          any NBK survey form so far. fetch_demand_diffusion_index.
+      DEMAND_EXPECTATIONS_DIFFUSION_INDEX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=366"
+        format: json
+        notes: >
+          2026-08-31. Same form/discovery as DEMAND_DIFFUSION_INDEX -- indicator_code='Demand
+          expectations - Diffusion index' instead. 86 quarterly points, 2005-Q2 through
+          2026-Q3. fetch_demand_expectations_diffusion_index.
       RESERVES_GUIDOTTI_RATIO (declined):
         status: declined
         notes: >

@@ -1119,3 +1119,34 @@ indicators plus two more confirmed declines.
   MASTER TASK rules forbid. Declined.
 
 **182/182 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — thirtieth scale-up batch: 182 -> 186 indicators (enterprise survey) + faster verification
+First pass through NBK's "Survey Results" -> "Enterprise Monitoring" category, which had
+been flagged as unexplored since the earlier gap analysis.
+
+**NBK (4):** the quarterly business-tendency survey breaks each diffusion index down by
+`industry`, but also publishes a genuine economy-wide `industry`='All sectors' aggregate
+row — the source's own aggregate, so no fabrication was needed. Diffusion index runs
+0-100 with 50 neutral (>50 expansion), the standard PMI-style convention, confirmed here
+by the actual/expectations pairing and the values oscillating around 50.
+- PRODUCTION_VOLUME_DIFFUSION_INDEX / PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX
+  (formId=365) — 42 quarterly points each, 2016-Q2 to 2026-Q3.
+- DEMAND_DIFFUSION_INDEX / DEMAND_EXPECTATIONS_DIFFUSION_INDEX (formId=366) — 86
+  quarterly points each, 2005-Q2 to 2026-Q3, the longest history found in any NBK survey
+  form so far.
+
+**Tooling: `scripts/update_agency.py` added.** Per-batch verification had been running
+`update_all.py`, which re-fetches all 186 indicators from all four agencies (~20 min,
+dominated by the Minfin XLSX bulletin downloads) even when a batch only touches one
+agency's fetchers. The new script runs just the named agency updater(s), then rebuilds
+the unified dataset and runs the tests exactly as `update_all.py` does — the unified
+rebuild stays correct because it reads `data/processed/`, where the untouched agencies'
+CSVs persist from the previous full run. Verified on this batch: 3m37s instead of ~20
+min, and the rebuilt unified dataset was confirmed to still carry all 186 indicators
+across all four agencies (imf/nbk/bns/minfin), not just the re-fetched NBK ones. This is
+a verification shortcut only — `update_all.py` remains the production/scheduled path,
+since only a full run refreshes every agency's data.
+
+**186/186 confirmed indicators connected end-to-end** (43/43 NBK re-verified live this
+run; other agencies unchanged since the 182/182 full run earlier today).
+`pytest tests/ -q` — 29/29 passing.

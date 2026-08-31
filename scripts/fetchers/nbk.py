@@ -1666,3 +1666,92 @@ def fetch_reserves_import_cover() -> tuple[list[dict], dict]:
         "Number of months of import cover provided by Kazakhstan's international reserves. "
         "NBK's own stated adequate level: at least 3 months.",
     )
+
+
+# ---------------------------------------------------------------------------
+# PRODUCTION_VOLUME_DIFFUSION_INDEX / PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX
+# / DEMAND_DIFFUSION_INDEX / DEMAND_EXPECTATIONS_DIFFUSION_INDEX: found
+# 2026-08-31 in NBK's "Survey Results" -> "Enterprise Monitoring" category
+# (quarterly business-tendency survey of Kazakhstani enterprises, similar
+# methodology to BUSINESS_ACTIVITY_INDEX/formId=339 but form-specific).
+# formId=365 "Production volume" and formId=366 "Demand for goods/service"
+# each break their diffusion index down by `industry` (Professional
+# services, Real estate, IT, etc.) AND publish a genuine economy-wide
+# `industry`='All sectors' aggregate row -- no fabrication needed, this
+# aggregate is the source's own. A diffusion index >50 signals expansion,
+# <50 contraction, =50 neutral (standard PMI-style convention, confirmed by
+# the "expectations" vs "actual" pairing and the values oscillating around
+# 50). Verified live with full pagination and zero duplicate dates: formId=365
+# series have 42 quarterly points each (2016-Q2 to 2026-Q3), formId=366
+# series have 86 quarterly points each (2005-Q2 to 2026-Q3, the longest
+# history found in any NBK survey form so far).
+# ---------------------------------------------------------------------------
+def _fetch_enterprise_survey_index(form_id: str, indicator_code: str, indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    all_rows = _fetch_nbk_form_paginated(form_id, indicator_id)
+
+    matching = [r for r in all_rows if r.get("industry") == "All sectors" and r.get("indicator_code") == indicator_code]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+                f"WHAT CHANGED: no rows found with industry='All sectors', indicator_code={indicator_code!r} in formId={form_id}",
+                "EXPECTED: the economy-wide aggregate diffusion-index row",
+                "ACTUAL: zero matching rows",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={form_id} and update scripts/fetchers/nbk.py",
+            ])
+        )
+
+    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in matching]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "quarterly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={form_id}",
+        "dataset_id": f"formId={form_id},industry=All sectors,indicator_code={indicator_code}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def fetch_production_volume_diffusion_index() -> tuple[list[dict], dict]:
+    """NBK enterprise monitoring survey: economy-wide diffusion index of
+    reported production volume change, quarterly. >50 expansion, <50
+    contraction, =50 neutral."""
+    return _fetch_enterprise_survey_index(
+        "365", "Production volume - Diffusion index", "PRODUCTION_VOLUME_DIFFUSION_INDEX",
+        "Diffusion index (0-100, 50=neutral). NBK enterprise monitoring survey, economy-wide "
+        "('All sectors') aggregate of enterprises' reported change in production volume over "
+        "the quarter.",
+    )
+
+
+def fetch_production_expectations_diffusion_index() -> tuple[list[dict], dict]:
+    """NBK enterprise monitoring survey: economy-wide diffusion index of
+    expected production volume change next quarter."""
+    return _fetch_enterprise_survey_index(
+        "365", "Production volume expectations - Diffusion index", "PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX",
+        "Diffusion index (0-100, 50=neutral). NBK enterprise monitoring survey, economy-wide "
+        "('All sectors') aggregate of enterprises' EXPECTED production volume change next "
+        "quarter.",
+    )
+
+
+def fetch_demand_diffusion_index() -> tuple[list[dict], dict]:
+    """NBK enterprise monitoring survey: economy-wide diffusion index of
+    reported demand for goods/services, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "366", "Demand - Diffusion index", "DEMAND_DIFFUSION_INDEX",
+        "Diffusion index (0-100, 50=neutral). NBK enterprise monitoring survey, economy-wide "
+        "('All sectors') aggregate of enterprises' reported change in demand for their "
+        "goods/services over the quarter.",
+    )
+
+
+def fetch_demand_expectations_diffusion_index() -> tuple[list[dict], dict]:
+    """NBK enterprise monitoring survey: economy-wide diffusion index of
+    expected demand for goods/services next quarter."""
+    return _fetch_enterprise_survey_index(
+        "366", "Demand expectations - Diffusion index", "DEMAND_EXPECTATIONS_DIFFUSION_INDEX",
+        "Diffusion index (0-100, 50=neutral). NBK enterprise monitoring survey, economy-wide "
+        "('All sectors') aggregate of enterprises' EXPECTED demand for their goods/services "
+        "next quarter.",
+    )

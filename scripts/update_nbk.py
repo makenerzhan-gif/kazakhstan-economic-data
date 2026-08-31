@@ -57,6 +57,10 @@ FETCHERS = {
     "INSURANCE_PREMIUMS_LIFE": nbk_fetchers.fetch_insurance_premiums_life,
     "PENSION_PAYMENTS": nbk_fetchers.fetch_pension_payments,
     "RESERVES_IMPORT_COVER": nbk_fetchers.fetch_reserves_import_cover,
+    "PRODUCTION_VOLUME_DIFFUSION_INDEX": nbk_fetchers.fetch_production_volume_diffusion_index,
+    "PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX": nbk_fetchers.fetch_production_expectations_diffusion_index,
+    "DEMAND_DIFFUSION_INDEX": nbk_fetchers.fetch_demand_diffusion_index,
+    "DEMAND_EXPECTATIONS_DIFFUSION_INDEX": nbk_fetchers.fetch_demand_expectations_diffusion_index,
 }
 
 INDICATOR_IDS = [
@@ -73,6 +77,8 @@ INDICATOR_IDS = [
     "BANK_ROA", "BANK_ROE", "PENSION_FUND_ASSETS",
     "INSURANCE_PREMIUMS_GENERAL", "INSURANCE_PREMIUMS_LIFE",
     "PENSION_PAYMENTS", "RESERVES_IMPORT_COVER",
+    "PRODUCTION_VOLUME_DIFFUSION_INDEX", "PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX",
+    "DEMAND_DIFFUSION_INDEX", "DEMAND_EXPECTATIONS_DIFFUSION_INDEX",
 ]
 
 

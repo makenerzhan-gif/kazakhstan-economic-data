@@ -1283,6 +1283,42 @@ indicators:
     category: monetary
     source_status: confirmed
 
+  - id: PRODUCTION_VOLUME_DIFFUSION_INDEX
+    name_ru: "Индекс диффузии объёма производства (опрос предприятий НБ РК)"
+    name_en: "Production Volume Diffusion Index (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50=neutral)"
+    category: monetary
+    source_status: confirmed
+
+  - id: PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX
+    name_ru: "Индекс диффузии ожиданий объёма производства (опрос предприятий НБ РК)"
+    name_en: "Production Volume Expectations Diffusion Index (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50=neutral)"
+    category: monetary
+    source_status: confirmed
+
+  - id: DEMAND_DIFFUSION_INDEX
+    name_ru: "Индекс диффузии спроса на товары/услуги (опрос предприятий НБ РК)"
+    name_en: "Demand Diffusion Index (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50=neutral)"
+    category: monetary
+    source_status: confirmed
+
+  - id: DEMAND_EXPECTATIONS_DIFFUSION_INDEX
+    name_ru: "Индекс диффузии ожиданий спроса (опрос предприятий НБ РК)"
+    name_en: "Demand Expectations Diffusion Index (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50=neutral)"
+    category: monetary
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"
