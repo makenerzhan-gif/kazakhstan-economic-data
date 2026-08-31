@@ -46,6 +46,10 @@ FETCHERS = {
     "LOANS_TO_ECONOMY": nbk_fetchers.fetch_loans_to_economy,
     "FDI_NET_INFLOW": nbk_fetchers.fetch_fdi_net_inflow,
     "GOV_SECURITIES_MEUKAM": nbk_fetchers.fetch_gov_securities_meukam,
+    "IIP_NET": nbk_fetchers.fetch_iip_net,
+    "IIP_ASSETS": nbk_fetchers.fetch_iip_assets,
+    "IIP_LIABILITIES": nbk_fetchers.fetch_iip_liabilities,
+    "CURRENT_ACCOUNT_BALANCE": nbk_fetchers.fetch_current_account_balance,
 }
 
 INDICATOR_IDS = [
@@ -58,6 +62,7 @@ INDICATOR_IDS = [
     "NON_CASH_PAYMENTS_SHARE", "CAPITAL_ADEQUACY_RATIO", "NPL_RATIO",
     "LOANS_TO_ECONOMY",
     "FDI_NET_INFLOW", "GOV_SECURITIES_MEUKAM",
+    "IIP_NET", "IIP_ASSETS", "IIP_LIABILITIES", "CURRENT_ACCOUNT_BALANCE",
 ]
 
 

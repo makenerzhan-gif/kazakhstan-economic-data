@@ -2728,6 +2728,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,36.4,index,nbk,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,24.57,%,nbk,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2020-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-597.1990194,million USD,nbk,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,monthly,EXPORTS,4636669.614490003,thousand USD,bns,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,quarterly,EXTERNAL_DEBT,155466.741677,million USD,nbk,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,quarterly,FDI_NET_INFLOW,1126.520761,million USD,nbk,2026-08-31,level,2026-08-31
@@ -2764,6 +2765,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,44.1,index,nbk,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,26.42,%,nbk,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2020-07-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-4394.67146,million USD,nbk,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,monthly,EXPORTS,2642269.725739999,thousand USD,bns,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,quarterly,EXTERNAL_DEBT,160585.792337,million USD,nbk,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,quarterly,FDI_NET_INFLOW,1425.519844,million USD,nbk,2026-08-31,level,2026-08-31
@@ -2800,6 +2802,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.1,index,nbk,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,25.25,%,nbk,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2020-10-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-4734.156817,million USD,nbk,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,monthly,EXPORTS,3823884.6395499846,thousand USD,bns,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,quarterly,EXTERNAL_DEBT,161706.536328,million USD,nbk,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,quarterly,FDI_NET_INFLOW,165.018106,million USD,nbk,2026-08-31,level,2026-08-31
@@ -2900,12 +2903,16 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.3,index,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,26.96,%,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2021-01-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-1329.008226,million USD,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,monthly,EXPORTS,3270134.2324499944,thousand USD,bns,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,quarterly,EXTERNAL_DEBT,163980.074825,million USD,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,quarterly,FDI_NET_INFLOW,952.584054,million USD,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,monthly,FX_RESERVES,35638.084976284,USD million,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,quarterly,GOV_DEBT,21548336.97585081,million KZT,minfin,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,7193549.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-01-01,KZ,national,quarterly,IIP_ASSETS,160536.113602,million USD,nbk,2026-08-31,level,2026-08-31
+2021-01-01,KZ,national,quarterly,IIP_LIABILITIES,232516.43027,million USD,nbk,2026-08-31,level,2026-08-31
+2021-01-01,KZ,national,quarterly,IIP_NET,-71980.316668,million USD,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,annual,IMF_CPI_EOP_INDEX,108.4,index,imf,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,annual,IMF_CPI_INDEX,104.6,index,imf,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.359327,% of GDP,imf,2026-08-31,level,2026-08-31
@@ -2968,12 +2975,16 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.7,index,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,26.76,%,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2021-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,113.3538939,million USD,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,monthly,EXPORTS,5020408.167069992,thousand USD,bns,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,quarterly,EXTERNAL_DEBT,163955.094816,million USD,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,quarterly,FDI_NET_INFLOW,206.280745,million USD,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,monthly,FX_RESERVES,33506.21559239921,USD million,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,quarterly,GOV_DEBT,23030756.062218312,million KZT,minfin,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,7724210.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-04-01,KZ,national,quarterly,IIP_ASSETS,160303.265061,million USD,nbk,2026-08-31,level,2026-08-31
+2021-04-01,KZ,national,quarterly,IIP_LIABILITIES,234779.664105,million USD,nbk,2026-08-31,level,2026-08-31
+2021-04-01,KZ,national,quarterly,IIP_NET,-74476.399043,million USD,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,monthly,IMPORTS,3455611.936039967,thousand USD,bns,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.7,%,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,quarterly,LOANS_TO_ECONOMY,15760785.608,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3005,6 +3016,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,25.15,%,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2021-07-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-844.9059404,million USD,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,monthly,EXPORTS,4971127.327699998,thousand USD,bns,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,quarterly,EXTERNAL_DEBT,166483.080062,million USD,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,quarterly,FDI_NET_INFLOW,1122.71464,million USD,nbk,2026-08-31,level,2026-08-31
@@ -3013,6 +3025,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,10305122.873276392,million KZT,minfin,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,7491981.064672005,million KZT,minfin,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,8083841.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-07-01,KZ,national,quarterly,IIP_ASSETS,164940.457763,million USD,nbk,2026-08-31,level,2026-08-31
+2021-07-01,KZ,national,quarterly,IIP_LIABILITIES,241094.588864,million USD,nbk,2026-08-31,level,2026-08-31
+2021-07-01,KZ,national,quarterly,IIP_NET,-76154.131101,million USD,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,monthly,IMPORTS,3554653.349179981,thousand USD,bns,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.4,%,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,quarterly,LOANS_TO_ECONOMY,16728535.932,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3046,6 +3061,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.9,index,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,24.94,%,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-1904.807968,million USD,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,monthly,EXPORTS,5848852.207840016,thousand USD,bns,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,quarterly,EXTERNAL_DEBT,165761.723503,million USD,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,quarterly,FDI_NET_INFLOW,2349.42844,million USD,nbk,2026-08-31,level,2026-08-31
@@ -3054,6 +3070,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,10664470.080022218,million KZT,minfin,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,7378454.438925441,million KZT,minfin,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,8513231.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,quarterly,IIP_ASSETS,164808.790195,million USD,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,quarterly,IIP_LIABILITIES,244511.956737,million USD,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,quarterly,IIP_NET,-79703.166542,million USD,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,monthly,IMPORTS,3680541.448179984,thousand USD,bns,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.8,%,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,quarterly,LOANS_TO_ECONOMY,18043831.161,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3165,12 +3184,16 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.0,index,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,23.38,%,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-43.09866828,million USD,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,monthly,DEPOSITS_TOTAL,15838981.76247032,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,monthly,EXPORTS,6093897.247329982,thousand USD,bns,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,quarterly,EXTERNAL_DEBT,164131.074503,million USD,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,quarterly,FDI_NET_INFLOW,-325.17931,million USD,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,monthly,FX_RESERVES,34377.97403821167,USD million,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,9056005.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,quarterly,IIP_ASSETS,167348.028052,million USD,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,quarterly,IIP_LIABILITIES,244277.840786,million USD,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,quarterly,IIP_NET,-76929.812735,million USD,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,annual,IMF_CPI_EOP_INDEX,130.5,index,imf,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,annual,IMF_CPI_INDEX,120.275,index,imf,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,2.854326,% of GDP,imf,2026-08-31,level,2026-08-31
@@ -3259,12 +3282,16 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.9,index,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,22.8,%,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,CPI,102.0,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,4420.288151,million USD,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,DEPOSITS_TOTAL,15256877.65174736,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,EXPORTS,7405848.191799973,thousand USD,bns,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,quarterly,EXTERNAL_DEBT,159896.772884,million USD,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,quarterly,FDI_NET_INFLOW,1771.28898,million USD,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,FX_RESERVES,33125.09938720851,USD million,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,9296961.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,quarterly,IIP_ASSETS,167864.474317,million USD,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,quarterly,IIP_LIABILITIES,239308.150952,million USD,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,quarterly,IIP_NET,-71443.676635,million USD,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,IMPORTS,3842605.44531001,thousand USD,bns,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.2,%,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,LENDING_RATE,16.13385058852557,%,nbk,2026-08-31,level,2026-08-31
@@ -3322,12 +3349,16 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.4,index,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,19.84,%,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,1236.914796,million USD,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,DEPOSITS_TOTAL,15965258.83995444,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,EXPORTS,6710232.980090019,thousand USD,bns,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,quarterly,EXTERNAL_DEBT,164152.245454,million USD,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,quarterly,FDI_NET_INFLOW,403.921307,million USD,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,FX_RESERVES,31960.657346680062,USD million,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,9459129.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,quarterly,IIP_ASSETS,169046.365461,million USD,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,quarterly,IIP_LIABILITIES,242621.7791,million USD,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,quarterly,IIP_NET,-73575.413639,million USD,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,IMPORTS,4001124.148159999,thousand USD,bns,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.5,%,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,LENDING_RATE,16.45827906840441,%,nbk,2026-08-31,level,2026-08-31
@@ -3385,12 +3416,16 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.7,index,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,20.92,%,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,CPI,101.6,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,1146.724615,million USD,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,DEPOSITS_TOTAL,16137525.42648921,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,EXPORTS,6940850.361629987,thousand USD,bns,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,quarterly,EXTERNAL_DEBT,161096.196502,million USD,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,quarterly,FDI_NET_INFLOW,4668.345663,million USD,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,FX_RESERVES,32638.671263871118,USD million,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10341880.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,quarterly,IIP_ASSETS,168016.314952,million USD,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,quarterly,IIP_LIABILITIES,243269.468854,million USD,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,quarterly,IIP_NET,-75253.153902,million USD,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,IMPORTS,4737748.965479971,thousand USD,bns,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,18.3,%,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,LENDING_RATE,17.063559038391393,%,nbk,2026-08-31,level,2026-08-31
@@ -3516,6 +3551,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.0,index,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,21.7,%,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-367.5249435,million USD,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,DEPOSITS_TOTAL,30935301.17686597,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,DEPOSIT_RATE,13.266522951693396,%,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,EXPORTS,6016945.658610005,thousand USD,bns,2026-08-31,level,2026-08-31
@@ -3523,6 +3559,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,quarterly,FDI_NET_INFLOW,-301.459891,million USD,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,FX_RESERVES,35076.02886017335,USD million,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10447907.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,quarterly,IIP_ASSETS,175615.021176,million USD,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,quarterly,IIP_LIABILITIES,242882.800715,million USD,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,quarterly,IIP_NET,-67267.779539,million USD,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,annual,IMF_CPI_EOP_INDEX,143.2,index,imf,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,annual,IMF_CPI_INDEX,137.741667,index,imf,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-3.557706,% of GDP,imf,2026-08-31,level,2026-08-31
@@ -3615,6 +3654,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.0,index,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,22.59,%,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-1632.68135,million USD,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,DEPOSITS_TOTAL,30682909.07566053,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,DEPOSIT_RATE,13.500336744419114,%,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,EXPORTS,6912025.0879799975,thousand USD,bns,2026-08-31,level,2026-08-31
@@ -3622,6 +3662,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,quarterly,FDI_NET_INFLOW,2662.456823,million USD,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,FX_RESERVES,36214.79977751212,USD million,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10882429.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,quarterly,IIP_ASSETS,183067.432287,million USD,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,quarterly,IIP_LIABILITIES,249674.880223,million USD,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,quarterly,IIP_NET,-66607.447936,million USD,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,IMPORTS,5052585.741619996,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.7,%,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,LENDING_RATE,19.31735883546762,%,nbk,2026-08-31,level,2026-08-31
@@ -3682,6 +3725,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.1,index,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,21.4,%,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-3422.078801,million USD,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,DEPOSITS_TOTAL,31218246.56419467,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,DEPOSIT_RATE,13.95635151405327,%,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,EXPORTS,6695082.794110002,thousand USD,bns,2026-08-31,level,2026-08-31
@@ -3689,6 +3733,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,quarterly,FDI_NET_INFLOW,1476.959941,million USD,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,FX_RESERVES,34456.779236480965,USD million,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12190667.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,quarterly,IIP_ASSETS,181838.035276,million USD,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,quarterly,IIP_LIABILITIES,251396.243081,million USD,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,quarterly,IIP_NET,-69558.207805,million USD,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,IMPORTS,5379963.523020003,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.9,%,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,LENDING_RATE,19.394703682405453,%,nbk,2026-08-31,level,2026-08-31
@@ -3749,6 +3796,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.7,index,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,21.4,%,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-1655.390208,million USD,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,DEPOSITS_TOTAL,31421878.95691412,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,DEPOSIT_RATE,14.001515272480114,%,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,EXPORTS,6985840.790389997,thousand USD,bns,2026-08-31,level,2026-08-31
@@ -3756,6 +3804,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,quarterly,FDI_NET_INFLOW,468.012017,million USD,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,FX_RESERVES,31883.450429953424,USD million,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12598933.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,quarterly,IIP_ASSETS,180504.925029,million USD,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,quarterly,IIP_LIABILITIES,253651.271677,million USD,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,quarterly,IIP_NET,-73146.346648,million USD,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,IMPORTS,4974475.408800002,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,18.0,%,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,LENDING_RATE,19.694344468944003,%,nbk,2026-08-31,level,2026-08-31
@@ -3891,6 +3942,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.8,index,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,21.5,%,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-2605.319332,million USD,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,DEPOSITS_TOTAL,34661910.19660757,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,DEPOSIT_RATE,13.702190953897857,%,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,EXPORTS,5947011.362290002,thousand USD,bns,2026-08-31,level,2026-08-31
@@ -3898,6 +3950,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,quarterly,FDI_NET_INFLOW,-1016.17856,million USD,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,FX_RESERVES,35944.0531031745,USD million,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12821636.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,quarterly,IIP_ASSETS,188366.348535,million USD,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,quarterly,IIP_LIABILITIES,256266.104964,million USD,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,quarterly,IIP_NET,-67899.756429,million USD,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,annual,IMF_CPI_EOP_INDEX,155.5,index,imf,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,annual,IMF_CPI_INDEX,149.691667,index,imf,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-2.722483,% of GDP,imf,2026-08-31,level,2026-08-31
@@ -3992,6 +4047,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.5,index,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,quarterly,CAPITAL_ADEQUACY_RATIO,21.44,%,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-253.4558463,million USD,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,DEPOSITS_TOTAL,34464345.91205878,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,DEPOSIT_RATE,13.761838716103005,%,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,EXPORTS,7092660.01442,thousand USD,bns,2026-08-31,level,2026-08-31
@@ -3999,6 +4055,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,quarterly,FDI_NET_INFLOW,2382.891878,million USD,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,FX_RESERVES,37847.046933613856,USD million,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,13644933.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,quarterly,IIP_ASSETS,194740.067321,million USD,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,quarterly,IIP_LIABILITIES,259434.496999,million USD,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,quarterly,IIP_NET,-64694.429678,million USD,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,IMPORTS,5230213.213970047,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.1,%,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,LENDING_RATE,19.085179999976837,%,nbk,2026-08-31,level,2026-08-31
@@ -4061,6 +4120,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.8,index,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-1673.210249,million USD,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,DEPOSITS_TOTAL,35740451.31542393,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,DEPOSIT_RATE,13.563269166900172,%,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,EXPORTS,6907750.070849999,thousand USD,bns,2026-08-31,level,2026-08-31
@@ -4071,6 +4131,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,20186100.00286501,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,7138685.328904026,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,14468049.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,quarterly,IIP_ASSETS,198402.746676,million USD,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,quarterly,IIP_LIABILITIES,259331.747088,million USD,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,quarterly,IIP_NET,-60929.000412,million USD,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,IMPORTS,5338647.023349996,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.4,%,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,LENDING_RATE,18.327872739821753,%,nbk,2026-08-31,level,2026-08-31
@@ -4131,6 +4194,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-30,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-2105.194182,million USD,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,DEPOSITS_TOTAL,36728503.95982933,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,DEPOSIT_RATE,13.375834385784112,%,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,EXPORTS,7110352.431069998,thousand USD,bns,2026-08-31,level,2026-08-31
@@ -4141,6 +4205,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,21567649.568551306,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,7217026.519217961,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15519546.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,quarterly,IIP_ASSETS,204878.070852,million USD,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,quarterly,IIP_LIABILITIES,257896.633262,million USD,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,quarterly,IIP_NET,-53018.56241,million USD,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,IMPORTS,5499970.321059992,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.5,%,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,LENDING_RATE,19.953287574027616,%,nbk,2026-08-31,level,2026-08-31
@@ -4280,6 +4347,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,WHOLESALE_TRADE,47164111273837.5,KZT,bns,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.5,index,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-3903.6348,million USD,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,DEPOSITS_TOTAL,41285457.50285451,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,DEPOSIT_RATE,13.163087625892695,%,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,EXPORTS,5121405.036090004,thousand USD,bns,2026-08-31,level,2026-08-31
@@ -4290,6 +4358,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,21765224.511810992,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8309718.93365078,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15704537.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,quarterly,IIP_ASSETS,199046.79927,million USD,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,quarterly,IIP_LIABILITIES,251804.865748,million USD,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,quarterly,IIP_NET,-52758.066477,million USD,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,annual,IMF_CPI_EOP_INDEX,174.7,index,imf,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,annual,IMF_CPI_INDEX,166.725,index,imf,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-3.912392,% of GDP,imf,2026-08-31,level,2026-08-31
@@ -4428,6 +4499,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.6,index,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-1030.042341,million USD,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,DEPOSITS_TOTAL,40471029.65318609,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,DEPOSIT_RATE,13.556356492025685,%,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,EXPORTS,6500230.803649997,thousand USD,bns,2026-08-31,level,2026-08-31
@@ -4438,6 +4510,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,22569797.17147042,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8005188.352843165,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,17041758.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,quarterly,IIP_ASSETS,216530.194395,million USD,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,quarterly,IIP_LIABILITIES,258328.474015,million USD,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,quarterly,IIP_NET,-41798.279619,million USD,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,IMPORTS,5431140.203080004,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.2,%,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,KASE_USD_VOLUME,4135038968.0,USD,nbk,2026-08-31,level,2026-08-31
@@ -4526,6 +4601,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.3,index,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-2861.708944,million USD,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,DEPOSITS_TOTAL,42171560.62140115,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,DEPOSIT_RATE,14.236610166490344,%,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,EXPORTS,6802835.536259998,thousand USD,bns,2026-08-31,level,2026-08-31
@@ -4536,6 +4612,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,23794008.22874087,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8397706.045038655,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,18208271.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,quarterly,IIP_ASSETS,222909.777831,million USD,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,quarterly,IIP_LIABILITIES,259227.509085,million USD,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,quarterly,IIP_NET,-36317.731254,million USD,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,IMPORTS,5516843.706599993,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.2,%,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,KASE_USD_VOLUME,4708212401.0,USD,nbk,2026-08-31,level,2026-08-31
@@ -4663,6 +4742,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,25222902.565,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8730378.771,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,19291932.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,quarterly,IIP_ASSETS,226327.757248,million USD,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,quarterly,IIP_LIABILITIES,258159.554052,million USD,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,quarterly,IIP_NET,-31831.796805,million USD,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,IMPORTS,5917727.658270003,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.6,%,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,KASE_USD_VOLUME,5281301237.0,USD,nbk,2026-08-31,level,2026-08-31
@@ -4829,6 +4911,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,105045369900000.0,KZT,bns,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,VAT_REVENUE,6111842.33836617,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-5180.443517,million USD,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,DEPOSITS_TOTAL,48002540.72331853,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,DEPOSIT_RATE,14.825187569338517,%,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,EXPORTS,6471046.012700029,thousand USD,bns,2026-08-31,level,2026-08-31
@@ -4839,6 +4922,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,26146859.151021335,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8698208.234496133,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,20222315.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,quarterly,IIP_ASSETS,238835.415389,million USD,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,quarterly,IIP_LIABILITIES,273294.163597,million USD,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,quarterly,IIP_NET,-34458.748207,million USD,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,annual,IMF_CPI_EOP_INDEX,194.013067,index,imf,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,annual,IMF_CPI_INDEX,184.545407,index,imf,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,annual,IMF_CURRENT_ACCOUNT,-1.046644,% of GDP,imf,2026-08-31,level,2026-08-31
@@ -5021,6 +5107,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-31,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,1084870.97191395,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,daily,TONIA,17.79,%,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-2008.012157,million USD,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,DEPOSITS_TOTAL,46630016.45337905,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,DEPOSIT_RATE,14.988567766845254,%,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,EXPORTS,5761887.189630023,thousand USD,bns,2026-08-31,level,2026-08-31
@@ -5031,6 +5118,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,27145138.06800939,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8185792.40162799,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,21295791.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,quarterly,IIP_ASSETS,243738.521853,million USD,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,quarterly,IIP_LIABILITIES,282480.226618,million USD,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,quarterly,IIP_NET,-38741.704766,million USD,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,IMPORTS,5953097.255370033,thousand USD,bns,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.4,%,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,KASE_USD_VOLUME,6728781904.0,USD,nbk,2026-08-31,level,2026-08-31

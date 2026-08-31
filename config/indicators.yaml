@@ -1184,6 +1184,42 @@ indicators:
     category: monetary
     source_status: confirmed
 
+  - id: IIP_NET
+    name_ru: "Чистая международная инвестиционная позиция"
+    name_en: "Net International Investment Position"
+    agency: nbk
+    frequency: quarterly
+    unit: "million USD"
+    category: monetary
+    source_status: confirmed
+
+  - id: IIP_ASSETS
+    name_ru: "Международная инвестиционная позиция: активы"
+    name_en: "International Investment Position: Assets"
+    agency: nbk
+    frequency: quarterly
+    unit: "million USD"
+    category: monetary
+    source_status: confirmed
+
+  - id: IIP_LIABILITIES
+    name_ru: "Международная инвестиционная позиция: обязательства"
+    name_en: "International Investment Position: Liabilities"
+    agency: nbk
+    frequency: quarterly
+    unit: "million USD"
+    category: monetary
+    source_status: confirmed
+
+  - id: CURRENT_ACCOUNT_BALANCE
+    name_ru: "Сальдо счета текущих операций"
+    name_en: "Current Account Balance"
+    agency: nbk
+    frequency: quarterly
+    unit: "million USD"
+    category: monetary
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

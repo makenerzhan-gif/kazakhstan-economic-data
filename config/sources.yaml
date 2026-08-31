@@ -1050,6 +1050,56 @@ agencies:
           not as "total government securities market". Verified live with full pagination:
           199 monthly points, 2010-02 through 2026-08, all unique dates, million KZT.
           fetch_gov_securities_meukam.
+      IIP_NET:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=309"
+        format: json
+        notes: >
+          2026-08-31. Found via GET /api/v1/data/categories -> "external sector" ->
+          "international investment position" -> formId=309 "International Investment
+          Position of Kazakhstan: standard presentation". This form has ~16 classification
+          dimensions for its detailed breakdown rows (by sector, instrument class x4 levels,
+          term type, etc.), but three completely UNCLASSIFIED headline rows also exist per
+          period -- found by filtering for rows with every classification field empty except
+          attribute_code (and, for the asset/liability pair, a matching class_type_code of the
+          same name). Cross-checked for internal consistency: Assets - Liabilities = Net to
+          the cent for multiple sample quarters (e.g. 2021-Q1: 160,536.11 - 232,516.43 =
+          -71,980.32). Verified live with full pagination: 22 quarterly points, 2021-Q1
+          through 2026-Q1 (shorter history than most NBK indicators -- this presentation
+          doesn't appear to extend further back on this endpoint), USD million.
+          fetch_iip_net.
+      IIP_ASSETS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=309"
+        format: json
+        notes: >
+          2026-08-31. Same form and discovery as IIP_NET -- the unclassified 'Assets' row
+          (attribute_code='Assets', class_type_code='Assets', all other classification fields
+          empty). 22 quarterly points, 2021-Q1 through 2026-Q1, USD million.
+          fetch_iip_assets.
+      IIP_LIABILITIES:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=309"
+        format: json
+        notes: >
+          2026-08-31. Same form and discovery as IIP_NET -- the unclassified 'Liabilities'
+          row. 22 quarterly points, 2021-Q1 through 2026-Q1, USD million.
+          fetch_iip_liabilities.
+      CURRENT_ACCOUNT_BALANCE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=324"
+        format: json
+        notes: >
+          2026-08-31. Found via GET /api/v1/data/categories -> "external sector" -> "balance
+          of payments" -> formId=324 "Current account of the balance of payments". Same shape
+          as the IIP forms -- many classified breakdown rows (by sector, instrument,
+          transaction type), plus one completely unclassified headline row per quarter
+          (code='Current account', account_type_code='Current account', every other
+          classification field empty) -- this was the very first row returned by the API, no
+          search needed. Verified live with full pagination: 24 quarterly points, 2020-Q2
+          through 2026-Q2, USD million, recently negative (e.g. -5,180.4 in 2026-Q1) -- a
+          plausible current account deficit for Kazakhstan given large FDI-related income
+          outflows even alongside a goods trade surplus. fetch_current_account_balance.
       TONIA:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data/indicators"

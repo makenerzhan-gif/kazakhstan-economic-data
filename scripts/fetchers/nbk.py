@@ -1135,17 +1135,24 @@ FDI_CODE = "Direct investment in reporting economy (net inflow)"
 FDI_DIRECTION = "Direct investment in Kazakhstan"
 
 
-def fetch_fdi_net_inflow() -> tuple[list[dict], dict]:
-    """Net foreign direct investment inflow to Kazakhstan, BPM6 directional
-    principle, USD million, quarterly. See FDI_FORM_ID module comment above
-    for how the row was disambiguated from several related FDI series in
-    the same form."""
+def _fetch_nbk_form_paginated(form_id: str, indicator_id: str) -> list[dict]:
+    """Shared full-pagination fetcher for any data.nationalbank.kz open-data
+    form. Loops page=0,1,2,... until all totalRows are collected (verified
+    live this session that page=0 and page=1 are NOT full duplicates at
+    production pageSize=500 -- adjacent pages just share one harmless
+    overlapping boundary row -- see the FDI_NET_INFLOW/GOV_SECURITIES_MEUKAM
+    module comments for the investigation that ruled out a data-loss bug
+    here). Saves every page as the raw archive and returns the flat row
+    list; callers filter for their own target row(s) and raise
+    StructuralChangeError themselves if nothing matches, since what
+    "matching" means is form-specific.
+    """
     all_rows: list[dict] = []
     raw_pages: list[dict] = []
     page = 0
     while True:
         resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
-                             params={"formId": FDI_FORM_ID, "page": str(page), "pageSize": "500"},
+                             params={"formId": form_id, "page": str(page), "pageSize": "500"},
                              timeout=30)
         resp.raise_for_status()
         data = resp.json()
@@ -1157,12 +1164,21 @@ def fetch_fdi_net_inflow() -> tuple[list[dict], dict]:
 
     raw_content = json.dumps(raw_pages, ensure_ascii=False).encode("utf-8")
     today = date.today()
-    raw_store.save_raw_bytes(SOURCE, "FDI_NET_INFLOW", today, "json", raw_content)
-    raw_store.write_download_manifest(SOURCE, "FDI_NET_INFLOW", today, {
+    raw_store.save_raw_bytes(SOURCE, indicator_id, today, "json", raw_content)
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
         "downloaded_at": datetime.now().isoformat(),
-        "source_url": MONETARY_AGGREGATES_URL, "form_id": FDI_FORM_ID,
+        "source_url": MONETARY_AGGREGATES_URL, "form_id": form_id,
         "n_pages": len(raw_pages), "total_rows": raw_pages[0]["totalRows"],
     })
+    return all_rows
+
+
+def fetch_fdi_net_inflow() -> tuple[list[dict], dict]:
+    """Net foreign direct investment inflow to Kazakhstan, BPM6 directional
+    principle, USD million, quarterly. See FDI_FORM_ID module comment above
+    for how the row was disambiguated from several related FDI series in
+    the same form."""
+    all_rows = _fetch_nbk_form_paginated(FDI_FORM_ID, "FDI_NET_INFLOW")
 
     matching = [r for r in all_rows if r.get("code") == FDI_CODE and r.get("direction_code") == FDI_DIRECTION]
     if not matching:
@@ -1223,29 +1239,7 @@ def fetch_gov_securities_meukam() -> tuple[list[dict], dict]:
     end of month. See GOV_SECURITIES_FORM_ID module comment above for why
     this single instrument was picked over a fabricated cross-instrument
     total."""
-    all_rows: list[dict] = []
-    raw_pages: list[dict] = []
-    page = 0
-    while True:
-        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
-                             params={"formId": GOV_SECURITIES_FORM_ID, "page": str(page), "pageSize": "500"},
-                             timeout=30)
-        resp.raise_for_status()
-        data = resp.json()
-        raw_pages.append(data)
-        all_rows.extend(data["rows"])
-        if len(all_rows) >= data["totalRows"]:
-            break
-        page += 1
-
-    raw_content = json.dumps(raw_pages, ensure_ascii=False).encode("utf-8")
-    today = date.today()
-    raw_store.save_raw_bytes(SOURCE, "GOV_SECURITIES_MEUKAM", today, "json", raw_content)
-    raw_store.write_download_manifest(SOURCE, "GOV_SECURITIES_MEUKAM", today, {
-        "downloaded_at": datetime.now().isoformat(),
-        "source_url": MONETARY_AGGREGATES_URL, "form_id": GOV_SECURITIES_FORM_ID,
-        "n_pages": len(raw_pages), "total_rows": raw_pages[0]["totalRows"],
-    })
+    all_rows = _fetch_nbk_form_paginated(GOV_SECURITIES_FORM_ID, "GOV_SECURITIES_MEUKAM")
 
     matching = [r for r in all_rows if r.get("sec_type") == GOV_SECURITIES_MEUKAM_TYPE]
     if not matching:
@@ -1271,5 +1265,140 @@ def fetch_gov_securities_meukam() -> tuple[list[dict], dict]:
                 "types include МЕККАМ, МЕОКАМ, METIKAM, Municipal Government Securities, Notes "
                 "of NBK -- the latter is a central-bank sterilization instrument, not strictly "
                 "a government security).",
+    }
+    return records, manifest
+
+
+# ---------------------------------------------------------------------------
+# IIP_NET / IIP_ASSETS / IIP_LIABILITIES: found 2026-08-31 via GET
+# /api/v1/data/categories -> "external sector" -> "international investment
+# position" -> formId=309 "International Investment Position of Kazakhstan:
+# standard presentation". This form has 16 classification dimensions
+# (sector, instrument class x4 sub-levels, term type, etc.) for its detailed
+# breakdown rows, but three completely UNCLASSIFIED headline rows also exist
+# per period: attribute_code='Net International Investment Position' (no
+# class_type_code at all), and attribute_code='Assets'/'Liabilities' each
+# paired with a matching class_type_code of the same name and nothing else
+# set -- found by filtering the full row set for entries with every
+# classification field empty except these two, which left exactly 3 unique
+# combinations. Verified live: Assets - Liabilities = Net to the cent for a
+# sample quarter (160,536.11 - 232,516.43 = -71,980.32, 2021-Q1) -- confirms
+# these are genuinely the top-level aggregates, not a coincidence. 22
+# quarterly points each, 2021-Q1 through 2026-Q1 (a shorter history than
+# most other NBK indicators -- this presentation format doesn't appear to
+# extend further back on this endpoint), USD million.
+# ---------------------------------------------------------------------------
+IIP_FORM_ID = "309"
+IIP_NET_ATTRIBUTE = "Net International Investment Position"
+IIP_ASSETS_ATTRIBUTE = "Assets"
+IIP_LIABILITIES_ATTRIBUTE = "Liabilities"
+
+
+def _fetch_iip_row(attribute: str, indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    all_rows = _fetch_nbk_form_paginated(IIP_FORM_ID, indicator_id)
+
+    matching = [r for r in all_rows if r.get("attribute_code") == attribute
+                and r.get("class_type_code") in (None, attribute)
+                and not r.get("sector_code") and not r.get("instrument_class_code")
+                and not r.get("functional_category_code")]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+                f"WHAT CHANGED: no unclassified rows found with attribute_code={attribute!r} in formId={IIP_FORM_ID}",
+                "EXPECTED: the top-level unclassified aggregate row",
+                "ACTUAL: zero matching rows",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={IIP_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+
+    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in matching]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "quarterly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={IIP_FORM_ID}",
+        "dataset_id": f"formId={IIP_FORM_ID},attribute_code={attribute}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def fetch_iip_net() -> tuple[list[dict], dict]:
+    """Net International Investment Position of Kazakhstan, USD million,
+    quarterly (foreign assets minus foreign liabilities). Negative = net
+    external liability position (typical for an FDI-heavy emerging
+    market)."""
+    return _fetch_iip_row(
+        IIP_NET_ATTRIBUTE, "IIP_NET",
+        "USD million. Net International Investment Position (total foreign assets held by "
+        "Kazakhstan residents minus total foreign liabilities owed by Kazakhstan residents). "
+        "Negative values indicate a net external liability position.",
+    )
+
+
+def fetch_iip_assets() -> tuple[list[dict], dict]:
+    """Total foreign assets held by Kazakhstan residents, USD million,
+    quarterly (IIP asset side)."""
+    return _fetch_iip_row(
+        IIP_ASSETS_ATTRIBUTE, "IIP_ASSETS",
+        "USD million. Total foreign assets held by Kazakhstan residents (International "
+        "Investment Position, asset side).",
+    )
+
+
+def fetch_iip_liabilities() -> tuple[list[dict], dict]:
+    """Total foreign liabilities owed by Kazakhstan residents, USD million,
+    quarterly (IIP liability side)."""
+    return _fetch_iip_row(
+        IIP_LIABILITIES_ATTRIBUTE, "IIP_LIABILITIES",
+        "USD million. Total foreign liabilities owed by Kazakhstan residents (International "
+        "Investment Position, liability side).",
+    )
+
+
+# ---------------------------------------------------------------------------
+# CURRENT_ACCOUNT_BALANCE: found 2026-08-31 via GET /api/v1/data/categories
+# -> "external sector" -> "balance of payments" -> formId=324 "Current
+# account of the balance of payments". Same shape as the IIP forms above:
+# many classified breakdown rows (by sector, instrument, transaction type),
+# plus one completely unclassified headline row per quarter -- code='Current
+# account', account_type_code='Current account', every other classification
+# field empty -- was the very first row returned by the API, no search
+# needed. Verified live: 24 quarterly points, 2020-Q2 through 2026-Q2, USD
+# million, recently negative (e.g. -5,180.4 in 2026-Q1) -- a current account
+# deficit, a plausible and well-known pattern for Kazakhstan given large
+# FDI-related income outflows even alongside a goods trade surplus.
+# ---------------------------------------------------------------------------
+CURRENT_ACCOUNT_FORM_ID = "324"
+CURRENT_ACCOUNT_CODE = "Current account"
+
+
+def fetch_current_account_balance() -> tuple[list[dict], dict]:
+    """Current account balance of the balance of payments, USD million,
+    quarterly. Negative = deficit."""
+    all_rows = _fetch_nbk_form_paginated(CURRENT_ACCOUNT_FORM_ID, "CURRENT_ACCOUNT_BALANCE")
+
+    matching = [r for r in all_rows if r.get("code") == CURRENT_ACCOUNT_CODE
+                and r.get("account_type_code") == CURRENT_ACCOUNT_CODE
+                and not r.get("instrument_type_code") and not r.get("sector_economy_type_code")]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/CURRENT_ACCOUNT_BALANCE",
+                f"WHAT CHANGED: no unclassified rows found with code={CURRENT_ACCOUNT_CODE!r} in formId={CURRENT_ACCOUNT_FORM_ID}",
+                "EXPECTED: the top-level unclassified current-account-balance row",
+                "ACTUAL: zero matching rows",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={CURRENT_ACCOUNT_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+
+    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in matching]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "quarterly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={CURRENT_ACCOUNT_FORM_ID}",
+        "dataset_id": f"formId={CURRENT_ACCOUNT_FORM_ID},code={CURRENT_ACCOUNT_CODE}",
+        "note": "USD million. Current account balance of the balance of payments. Negative "
+                "values indicate a deficit.",
     }
     return records, manifest

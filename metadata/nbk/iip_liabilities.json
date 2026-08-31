@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=309",
+  "dataset_id": "formId=309,attribute_code=Liabilities",
+  "indicator_id": "IIP_LIABILITIES",
+  "indicator_name": "International Investment Position: Liabilities",
+  "description": "Международная инвестиционная позиция: обязательства",
+  "frequency": "quarterly",
+  "unit": "million USD",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million. Total foreign liabilities owed by Kazakhstan residents (International Investment Position, liability side).",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2021-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

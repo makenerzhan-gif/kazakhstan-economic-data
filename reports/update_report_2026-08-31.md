@@ -1,6 +1,6 @@
 # Update report — 2026-08-31
 
-Run timestamp: 2026-08-31T12:42:15.427899
+Run timestamp: 2026-08-31T16:12:29.946642
 Unified dataset updated: True
 Tests passed: True
 
@@ -282,6 +282,31 @@ Tests passed: True
   - warning: Unexpected jump of 448.2% between 2025-10-01 (716.795427) and 2026-01-01 (-2495.592967).
   - warning: Unexpected jump of 223.0% between 2026-01-01 (-2495.592967) and 2026-04-01 (3069.95567).
 - **nbk/GOV_SECURITIES_MEUKAM** — fetch+validate+process: ok (downloaded=199, processed=199)
+- **nbk/IIP_NET** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **nbk/IIP_ASSETS** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **nbk/IIP_LIABILITIES** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **nbk/CURRENT_ACCOUNT_BALANCE** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 184 days between 2025-07-01 and 2026-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 635.9% between 2020-04-01 (-597.1990194) and 2020-07-01 (-4394.67146).
+  - warning: Unexpected jump of 71.9% between 2020-10-01 (-4734.156817) and 2021-01-01 (-1329.008226).
+  - warning: Unexpected jump of 108.5% between 2021-01-01 (-1329.008226) and 2021-04-01 (113.3538939).
+  - warning: Unexpected jump of 845.4% between 2021-04-01 (113.3538939) and 2021-07-01 (-844.9059404).
+  - warning: Unexpected jump of 125.4% between 2021-07-01 (-844.9059404) and 2021-10-01 (-1904.807968).
+  - warning: Unexpected jump of 97.7% between 2021-10-01 (-1904.807968) and 2022-01-01 (-43.09866828).
+  - warning: Unexpected jump of 10356.2% between 2022-01-01 (-43.09866828) and 2022-04-01 (4420.288151).
+  - warning: Unexpected jump of 72.0% between 2022-04-01 (4420.288151) and 2022-07-01 (1236.914796).
+  - warning: Unexpected jump of 132.0% between 2022-10-01 (1146.724615) and 2023-01-01 (-367.5249435).
+  - warning: Unexpected jump of 344.2% between 2023-01-01 (-367.5249435) and 2023-04-01 (-1632.68135).
+  - warning: Unexpected jump of 109.6% between 2023-04-01 (-1632.68135) and 2023-07-01 (-3422.078801).
+  - warning: Unexpected jump of 51.6% between 2023-07-01 (-3422.078801) and 2023-10-01 (-1655.390208).
+  - warning: Unexpected jump of 57.4% between 2023-10-01 (-1655.390208) and 2024-01-01 (-2605.319332).
+  - warning: Unexpected jump of 90.3% between 2024-01-01 (-2605.319332) and 2024-04-01 (-253.4558463).
+  - warning: Unexpected jump of 560.2% between 2024-04-01 (-253.4558463) and 2024-07-01 (-1673.210249).
+  - warning: Unexpected jump of 85.4% between 2024-10-01 (-2105.194182) and 2025-01-01 (-3903.6348).
+  - warning: Unexpected jump of 73.6% between 2025-01-01 (-3903.6348) and 2025-04-01 (-1030.042341).
+  - warning: Unexpected jump of 177.8% between 2025-04-01 (-1030.042341) and 2025-07-01 (-2861.708944).
+  - warning: Unexpected jump of 81.0% between 2025-07-01 (-2861.708944) and 2026-01-01 (-5180.443517).
+  - warning: Unexpected jump of 61.2% between 2026-01-01 (-5180.443517) and 2026-04-01 (-2008.012157).
 - **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)

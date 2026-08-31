@@ -1010,3 +1010,27 @@ moving on.
   instrument rather than overstated as "the market."
 
 **171/171 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — twenty-sixth scale-up batch: 171 -> 175 indicators
+User asked for a broad ~50-100 candidate list for a comprehensive economic analysis; responded
+with a categorized backlog (prices, labor detail, business demography, external sector, financial
+sector, tourism, ICT, demographics/social, energy, NBK survey results), honestly caveated that not
+all would pan out. This batch worked the external-sector portion of that list.
+
+Refactored FDI_NET_INFLOW/GOV_SECURITIES_MEUKAM's duplicated pagination loops into a shared
+`_fetch_nbk_form_paginated` helper (re-verified both indicators identical post-refactor) before
+adding new NBK forms on top of it -- same "factor out on the 3rd+ use" discipline applied
+throughout this session.
+
+**NBK (4):**
+- IIP_NET / IIP_ASSETS / IIP_LIABILITIES (formId=309, "International Investment Position:
+  standard presentation") -- found among ~16 classification dimensions by filtering for the
+  three completely UNCLASSIFIED headline rows per period. Cross-checked internal consistency
+  (Assets - Liabilities = Net to the cent for multiple quarters) before trusting the discovery.
+  22 quarterly points, 2021-2026, USD million.
+- CURRENT_ACCOUNT_BALANCE (formId=324, "Current account of the balance of payments") -- same
+  unclassified-headline-row pattern, was literally the first row returned by the API. 24
+  quarterly points, 2020-2026, USD million, recently in deficit (plausible for Kazakhstan given
+  FDI-related income outflows).
+
+**175/175 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
