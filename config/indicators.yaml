@@ -1247,6 +1247,24 @@ indicators:
     category: monetary
     source_status: confirmed
 
+  - id: INSURANCE_PREMIUMS_GENERAL
+    name_ru: "Страховые премии, общее страхование"
+    name_en: "Insurance Premiums, General Insurance Organizations"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT, year-to-date cumulative"
+    category: monetary
+    source_status: confirmed
+
+  - id: INSURANCE_PREMIUMS_LIFE
+    name_ru: "Страховые премии, страхование жизни"
+    name_en: "Insurance Premiums, Life Insurance Organizations"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT, year-to-date cumulative"
+    category: monetary
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

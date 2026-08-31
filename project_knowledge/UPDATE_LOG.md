@@ -1054,3 +1054,31 @@ indicators (bank profitability, pension fund assets).
   2026-08 -- a plausible scale for Kazakhstan's largest institutional investor.
 
 **178/178 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — twenty-eighth scale-up batch: 178 -> 180 indicators (insurance premiums)
+Continued working the candidate backlog: insurance-sector indicators.
+
+**NBK (2):**
+- INSURANCE_PREMIUMS_GENERAL / INSURANCE_PREMIUMS_LIFE (formId=132, "Total statement on
+  insurance premiums of insurance (reinsurance) organizations") -- matched rows where
+  `pnl_subtype` = "Insurance premiums accepted under insurance contracts",
+  `insurance_type` = "Total", `insurance_org_type` in {General, Life}, and no residency
+  breakdown applied. 31 monthly points each, 2023-02 to 2026-07, YTD-cumulative KZT
+  (confirmed cumulative by inspecting the within-year value pattern), converted
+  thousand -> million KZT. The form has no combined General+Life total row -- connected
+  both organization types separately rather than fabricate a sum, per the project's
+  standing no-fabricated-aggregates rule.
+- Also inspected formId=450 ("Main financial indicators of the insurance market") as a
+  candidate for claims/other insurance metrics; declined for now -- no clear
+  indicator-name field to key off safely without guessing row semantics.
+- Refactored `_fetch_iip_row`-style page loop usage; both new fetchers reuse the shared
+  `_fetch_nbk_form_paginated` helper directly (no new pagination code written).
+
+**Pipeline note:** the first full-pipeline verification run for this batch returned exit
+code 4 with no captured output (likely a transient issue with the background task
+runner or a momentary network blip on one of the ~180 live source fetches). Re-ran
+immediately in the foreground: completed cleanly, exit code 0, all 180/180 indicators
+`ok` in the run log, 29/29 tests passing. Treated as a one-off transient failure, not a
+regression -- both new fetchers were independently verified correct before and after.
+
+**180/180 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

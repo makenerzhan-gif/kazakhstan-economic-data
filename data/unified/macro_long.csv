@@ -3645,6 +3645,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10556824.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,IMPORTS,4591872.621629999,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.2,%,nbk,2026-08-31,level,2026-08-31
+2023-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,77958.268,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2023-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,32646.904,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,LENDING_RATE,19.271907297535602,%,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,M0,3251127.2802,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,M1,8890491.55506389,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3666,6 +3668,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10671555.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,IMPORTS,5415336.152409995,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.5,%,nbk,2026-08-31,level,2026-08-31
+2023-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,118423.413,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2023-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,68691.002,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,LENDING_RATE,19.796053918159934,%,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,M0,3196088.8968,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,M1,8606227.4453629,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3698,6 +3702,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,quarterly,IIP_NET,-66607.447936,million USD,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,IMPORTS,5052585.741619996,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.7,%,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,160450.274,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,97783.749,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,LENDING_RATE,19.31735883546762,%,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,quarterly,LOANS_TO_ECONOMY,24621763.321,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,M0,3219144.4818,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3721,6 +3727,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10941188.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,IMPORTS,5420413.836950004,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,17.0,%,nbk,2026-08-31,level,2026-08-31
+2023-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,207765.537,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2023-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,133282.214,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,LENDING_RATE,19.00074253500449,%,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,M0,3363522.4306,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,M1,8652229.3752943,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3742,6 +3750,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,11287475.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,IMPORTS,5149226.001070001,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,17.2,%,nbk,2026-08-31,level,2026-08-31
+2023-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,243470.659,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2023-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,173143.221,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,LENDING_RATE,19.34009129442089,%,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,M0,3351386.0614,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,M1,8948465.99999155,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3774,6 +3784,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,quarterly,IIP_NET,-69558.207805,million USD,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,IMPORTS,5379963.523020003,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.9,%,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,302456.225,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,213082.685,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,LENDING_RATE,19.394703682405453,%,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,quarterly,LOANS_TO_ECONOMY,25893324.059,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,M0,3495339.4315,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3797,6 +3809,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12442858.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,IMPORTS,5108872.958460003,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.4,%,nbk,2026-08-31,level,2026-08-31
+2023-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,341979.447,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2023-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,261221.026,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,LENDING_RATE,17.584178284111264,%,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,M0,3506866.1459,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,M1,9446279.48003656,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3818,6 +3832,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12511463.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,IMPORTS,4725258.53292,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,17.0,%,nbk,2026-08-31,level,2026-08-31
+2023-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,384148.277,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2023-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,305351.976,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,LENDING_RATE,19.949278808242905,%,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,M0,3514415.7074,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,M1,9358084.75879312,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3850,6 +3866,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,quarterly,IIP_NET,-73146.346648,million USD,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,IMPORTS,4974475.408800002,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,18.0,%,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,421781.599,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,346197.664,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,LENDING_RATE,19.694344468944003,%,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,quarterly,LOANS_TO_ECONOMY,27693954.341,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,M0,3553371.2098,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3873,6 +3891,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12719514.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,IMPORTS,5120196.54518,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.8,%,nbk,2026-08-31,level,2026-08-31
+2023-11-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,458288.094,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2023-11-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,389225.698,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,LENDING_RATE,19.60920986399095,%,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,M0,3531833.2414,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,M1,9421155.0934733,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -3894,6 +3914,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12807192.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,IMPORTS,5213096.903370003,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.4,%,nbk,2026-08-31,level,2026-08-31
+2023-12-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,496371.081,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2023-12-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,437764.843,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,LENDING_RATE,17.923222610329784,%,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,M0,3471925.5318,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,M1,9431065.67080307,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4032,6 +4054,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.65,%,imf,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,IMPORTS,4327102.32729002,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.4,%,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,553191.013,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,502731.559,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,LENDING_RATE,18.006679112045607,%,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,quarterly,LOANS_TO_ECONOMY,29853710.385,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,M0,3639661.6298,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4056,6 +4080,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12924904.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,IMPORTS,4102634.6040099906,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.6,%,nbk,2026-08-31,level,2026-08-31
+2024-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,85783.675,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2024-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,51543.463,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,LENDING_RATE,19.784331132048788,%,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,M0,3614418.8882,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,M1,9553001.86481155,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4078,6 +4104,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,13307589.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,IMPORTS,4608521.934100003,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.2,%,nbk,2026-08-31,level,2026-08-31
+2024-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,128290.972,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2024-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,105802.624,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,LENDING_RATE,18.395419601244416,%,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,M0,3620669.3962,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,M1,9658324.68746816,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4111,6 +4139,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,quarterly,IIP_NET,-64694.429678,million USD,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,IMPORTS,5230213.213970047,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.1,%,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,172731.451,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,158205.581,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,LENDING_RATE,19.085179999976837,%,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,quarterly,LOANS_TO_ECONOMY,30282924.098,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,M0,3639093.3215,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4135,6 +4165,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,14039489.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,IMPORTS,5175212.541670006,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.7,%,nbk,2026-08-31,level,2026-08-31
+2024-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,213618.125,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2024-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,231739.204,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,LENDING_RATE,19.60306213367616,%,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,M0,3638486.0338,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,M1,9960430.81431029,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4157,6 +4189,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,14032955.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,IMPORTS,4950400.068619998,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.3,%,nbk,2026-08-31,level,2026-08-31
+2024-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,250151.963,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2024-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,307060.839,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,LENDING_RATE,19.509679282669985,%,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,M0,3702852.7076,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,M1,10119370.81588932,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4190,6 +4224,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,quarterly,IIP_NET,-60929.000412,million USD,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,IMPORTS,5338647.023349996,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.4,%,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,295711.578,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,378374.216,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,LENDING_RATE,18.327872739821753,%,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,M0,3917267.1503,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,M1,10656953.30853039,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4212,6 +4248,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15278503.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,IMPORTS,5245461.333669998,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.1,%,nbk,2026-08-31,level,2026-08-31
+2024-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,345836.559,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2024-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,480043.779,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,LENDING_RATE,19.298256972824884,%,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,M0,3967485.4127,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,M1,11025171.18427048,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4234,6 +4272,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15411454.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,IMPORTS,4939879.5775399925,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.1,%,nbk,2026-08-31,level,2026-08-31
+2024-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,389268.479,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2024-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,582671.247,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,LENDING_RATE,19.232646917803372,%,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,M0,4047902.8916,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,M1,10805252.51160232,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4267,6 +4307,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,quarterly,IIP_NET,-53018.56241,million USD,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,IMPORTS,5499970.321059992,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.5,%,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,425808.399,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,672205.289,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,LENDING_RATE,19.953287574027616,%,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,M0,3991213.68,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,M1,10837432.58398421,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4290,6 +4332,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15678756.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,IMPORTS,5252876.853300056,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.1,%,nbk,2026-08-31,level,2026-08-31
+2024-11-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,464775.809,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2024-11-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,767338.435,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,LENDING_RATE,19.315141809438817,%,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,M0,4038230.2844,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,M1,10667790.93018357,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4312,6 +4356,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15704537.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,IMPORTS,5727049.585379954,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.6,%,nbk,2026-08-31,level,2026-08-31
+2024-12-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,506444.956,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2024-12-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,856059.891,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,LENDING_RATE,18.090577881947382,%,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,M0,4062416.5671,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,M1,10390724.4367454,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4454,6 +4500,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.638407,%,imf,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,IMPORTS,4369125.698819999,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.4,%,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,565148.456,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,974278.598,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,KASE_USD_VOLUME,5335884168.0,USD,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,LENDING_RATE,18.262499111701732,%,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,M0,4374545.5829,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5029,6 +5077,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,annual,IMF_UNEMPLOYMENT,4.573558,%,imf,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,IMPORTS,4688992.149860018,thousand USD,bns,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.2,%,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,685712.614,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,1065144.803,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,KASE_USD_VOLUME,7976520014.0,USD,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,LENDING_RATE,19.6221573126321,%,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,M0,4749199.36743725,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5071,6 +5121,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,20536377.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,IMPORTS,4959428.2790100025,thousand USD,bns,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.7,%,nbk,2026-08-31,level,2026-08-31
+2026-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,65238.985,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2026-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,82855.48,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,KASE_USD_VOLUME,5890188211.0,USD,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,LENDING_RATE,21.61993369671556,%,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,M0,4571140.35324655,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5113,6 +5165,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,20894160.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,IMPORTS,5277882.918239994,thousand USD,bns,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.6,%,nbk,2026-08-31,level,2026-08-31
+2026-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,108381.06,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2026-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,159541.754,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,KASE_USD_VOLUME,6783485791.0,USD,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,LENDING_RATE,21.161309683366508,%,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,M0,4485042.96326502,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5197,6 +5251,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,quarterly,IIP_NET,-38741.704766,million USD,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,IMPORTS,5953097.255370033,thousand USD,bns,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.4,%,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,169656.553,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,240772.281,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,KASE_USD_VOLUME,6728781904.0,USD,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,LENDING_RATE,21.324223612134443,%,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,M0,4479899.45165563,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5250,6 +5306,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,21617419.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,IMPORTS,5137288.100680034,thousand USD,bns,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.7,%,nbk,2026-08-31,level,2026-08-31
+2026-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,227726.191,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2026-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,345627.144,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,KASE_USD_VOLUME,8840953580.0,USD,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,LENDING_RATE,21.50224740718959,%,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,M0,4590886.18843654,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5313,6 +5371,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,22011488.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,IMPORTS,5443409.308769996,thousand USD,bns,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.4,%,nbk,2026-08-31,level,2026-08-31
+2026-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,278228.595,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2026-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,433074.004,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,KASE_USD_VOLUME,6838572326.0,USD,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,LENDING_RATE,21.661628124946557,%,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,M0,4764858.96015672,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5382,6 +5442,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8352366.460626001,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,22104699.0,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.1,%,nbk,2026-08-31,level,2026-08-31
+2026-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,341927.311,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
+2026-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,584071.888,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,monthly,KASE_USD_VOLUME,8763583632.0,USD,nbk,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,monthly,LENDING_RATE,20.268876944481192,%,nbk,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,monthly,M0,4864774.24909445,million KZT,nbk,2026-08-31,level,2026-08-31

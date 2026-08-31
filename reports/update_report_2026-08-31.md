@@ -1,6 +1,6 @@
 # Update report — 2026-08-31
 
-Run timestamp: 2026-08-31T16:45:22.577111
+Run timestamp: 2026-08-31T21:00:52.767150
 Unified dataset updated: True
 Tests passed: True
 
@@ -313,6 +313,21 @@ Tests passed: True
   - warning: Unexpected jump of 65.5% between 2022-07-01 (15.55) and 2022-10-01 (25.74).
 - **nbk/PENSION_FUND_ASSETS** — fetch+validate+process: ok (downloaded=43, processed=43)
   - warning: Gap of 61 days between 2025-08-01 and 2025-10-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/INSURANCE_PREMIUMS_GENERAL** — fetch+validate+process: ok (downloaded=31, processed=31)
+  - warning: Gap of 365 days between 2025-01-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 51.9% between 2023-02-01 (77958.268) and 2023-03-01 (118423.413).
+  - warning: Unexpected jump of 84.5% between 2024-01-01 (553191.013) and 2024-02-01 (85783.675).
+  - warning: Unexpected jump of 90.5% between 2026-01-01 (685712.614) and 2026-02-01 (65238.985).
+  - warning: Unexpected jump of 66.1% between 2026-02-01 (65238.985) and 2026-03-01 (108381.06).
+  - warning: Unexpected jump of 56.5% between 2026-03-01 (108381.06) and 2026-04-01 (169656.553).
+- **nbk/INSURANCE_PREMIUMS_LIFE** — fetch+validate+process: ok (downloaded=31, processed=31)
+  - warning: Gap of 365 days between 2025-01-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 110.4% between 2023-02-01 (32646.904) and 2023-03-01 (68691.002).
+  - warning: Unexpected jump of 89.7% between 2024-01-01 (502731.559) and 2024-02-01 (51543.463).
+  - warning: Unexpected jump of 105.3% between 2024-02-01 (51543.463) and 2024-03-01 (105802.624).
+  - warning: Unexpected jump of 92.2% between 2026-01-01 (1065144.803) and 2026-02-01 (82855.48).
+  - warning: Unexpected jump of 92.6% between 2026-02-01 (82855.48) and 2026-03-01 (159541.754).
+  - warning: Unexpected jump of 50.9% between 2026-03-01 (159541.754) and 2026-04-01 (240772.281).
 - **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)

@@ -1475,3 +1475,78 @@ def fetch_pension_fund_assets() -> tuple[list[dict], dict]:
                 "end of month.",
     }
     return records, manifest
+
+
+# ---------------------------------------------------------------------------
+# INSURANCE_PREMIUMS_GENERAL / INSURANCE_PREMIUMS_LIFE: found 2026-08-31 in
+# formId=132 "Total statement on insurance premiums of insurance
+# (reinsurance) organizations" (category "financial sector" -> insurance).
+# Row matched: pnl_subtype='Insurance premiums accepted under insurance
+# contracts' AND insurance_type='Total' (this dimension also has
+# 'Compulsory insurance'/'Voluntary personal insurance'/'Voluntary property
+# insurance' sub-values, correctly excluded) AND no residency filter set
+# (the residency dimension separately breaks the same total into
+# Residents/Non-residents sub-rows). insurance_org_type has only two
+# values, 'General' and 'Life' (general/non-life insurers vs life
+# insurers) -- NO combined-total value exists across this dimension, so
+# rather than fabricate a General+Life sum ourselves, this connects both
+# as separate, honestly-labeled indicators. Verified live with full
+# pagination: 31 unique monthly dates each, 2023-02 through 2026-07,
+# thousand KZT.
+# ---------------------------------------------------------------------------
+INSURANCE_PREMIUMS_FORM_ID = "132"
+INSURANCE_PREMIUMS_PNL_SUBTYPE = "Insurance premiums accepted under insurance contracts"
+
+
+def _fetch_insurance_premiums(org_type: str, indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    all_rows = _fetch_nbk_form_paginated(INSURANCE_PREMIUMS_FORM_ID, indicator_id)
+
+    matching = [r for r in all_rows if r.get("pnl_subtype") == INSURANCE_PREMIUMS_PNL_SUBTYPE
+                and r.get("insurance_type") == "Total" and r.get("insurance_org_type") == org_type
+                and not r.get("residency")]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+                f"WHAT CHANGED: no unclassified-residency rows found with pnl_subtype={INSURANCE_PREMIUMS_PNL_SUBTYPE!r}, "
+                f"insurance_type='Total', insurance_org_type={org_type!r} in formId={INSURANCE_PREMIUMS_FORM_ID}",
+                "EXPECTED: the top-level total-premiums row for this organization type",
+                "ACTUAL: zero matching rows",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={INSURANCE_PREMIUMS_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+
+    records = [{"date": r["report_date"], "value": float(r["amount"]) / 1000.0} for r in matching]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={INSURANCE_PREMIUMS_FORM_ID}",
+        "dataset_id": f"formId={INSURANCE_PREMIUMS_FORM_ID},insurance_org_type={org_type},insurance_type=Total",
+        "note": note,
+    }
+    return records, manifest
+
+
+def fetch_insurance_premiums_general() -> tuple[list[dict], dict]:
+    """Total insurance premiums accepted, general (non-life) insurance
+    organizations, million KZT, monthly (year-to-date cumulative within
+    each calendar year, per the source's own reporting convention)."""
+    return _fetch_insurance_premiums(
+        "General", "INSURANCE_PREMIUMS_GENERAL",
+        "Million KZT (converted from the source's thousand-KZT unit). Total insurance "
+        "premiums accepted under insurance and reinsurance contracts, GENERAL (non-life) "
+        "insurance organizations. Not the same total as INSURANCE_PREMIUMS_LIFE -- the "
+        "source provides no combined General+Life aggregate.",
+    )
+
+
+def fetch_insurance_premiums_life() -> tuple[list[dict], dict]:
+    """Total insurance premiums accepted, life insurance organizations,
+    million KZT, monthly."""
+    return _fetch_insurance_premiums(
+        "Life", "INSURANCE_PREMIUMS_LIFE",
+        "Million KZT (converted from the source's thousand-KZT unit). Total insurance "
+        "premiums accepted under insurance and reinsurance contracts, LIFE insurance "
+        "organizations. Not the same total as INSURANCE_PREMIUMS_GENERAL -- the source "
+        "provides no combined General+Life aggregate.",
+    )

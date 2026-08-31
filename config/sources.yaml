@@ -1143,6 +1143,33 @@ agencies:
           Verified live with full pagination: 43 unique monthly dates, 2023-01 through
           2026-08, 27.07 trillion KZT (2026-08) -- a plausible scale for Kazakhstan's national
           pension fund. fetch_pension_fund_assets.
+      INSURANCE_PREMIUMS_GENERAL:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=132"
+        format: json
+        notes: >
+          2026-08-31. Found via GET /api/v1/data/categories -> "financial sector" -> insurance
+          -> formId=132 "Total statement on insurance premiums of insurance (reinsurance)
+          organizations". Row matched: pnl_subtype='Insurance premiums accepted under
+          insurance contracts' AND insurance_type='Total' (also has 'Compulsory insurance'/
+          'Voluntary personal insurance'/'Voluntary property insurance' sub-values, correctly
+          excluded) AND no residency filter (a separate dimension breaks the same total into
+          Residents/Non-residents). insurance_org_type has only two values ('General'/'Life')
+          with NO combined total -- rather than fabricate a sum, connected both organization
+          types as separate indicators. Confirmed genuinely YEAR-TO-DATE CUMULATIVE by
+          checking the full series: values climb through each calendar year then reset near a
+          small figure in February (e.g. 2023: 77,958 (Feb) to 553,191 (Jan 2024); 2024:
+          85,784 (Feb) to 565,148 (Jan 2025)) -- also confirmed a real gap: no data at all for
+          Feb-Dec 2025 in this specific form. Verified live with full pagination: 31 unique
+          monthly dates, 2023-02 through 2026-07, thousand KZT. fetch_insurance_premiums_general.
+      INSURANCE_PREMIUMS_LIFE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=132"
+        format: json
+        notes: >
+          2026-08-31. Same form and discovery as INSURANCE_PREMIUMS_GENERAL --
+          insurance_org_type='Life' instead of 'General'. Verified live: 31 unique monthly
+          dates, 2023-02 through 2026-07, thousand KZT. fetch_insurance_premiums_life.
       TONIA:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data/indicators"

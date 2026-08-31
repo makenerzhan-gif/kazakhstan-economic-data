@@ -53,6 +53,8 @@ FETCHERS = {
     "BANK_ROA": nbk_fetchers.fetch_bank_roa,
     "BANK_ROE": nbk_fetchers.fetch_bank_roe,
     "PENSION_FUND_ASSETS": nbk_fetchers.fetch_pension_fund_assets,
+    "INSURANCE_PREMIUMS_GENERAL": nbk_fetchers.fetch_insurance_premiums_general,
+    "INSURANCE_PREMIUMS_LIFE": nbk_fetchers.fetch_insurance_premiums_life,
 }
 
 INDICATOR_IDS = [
@@ -67,6 +69,7 @@ INDICATOR_IDS = [
     "FDI_NET_INFLOW", "GOV_SECURITIES_MEUKAM",
     "IIP_NET", "IIP_ASSETS", "IIP_LIABILITIES", "CURRENT_ACCOUNT_BALANCE",
     "BANK_ROA", "BANK_ROE", "PENSION_FUND_ASSETS",
+    "INSURANCE_PREMIUMS_GENERAL", "INSURANCE_PREMIUMS_LIFE",
 ]
 
 
