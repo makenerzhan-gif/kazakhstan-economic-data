@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-77237384",
+  "indicator_id": "TOURISM_EMPLOYMENT_SHARE",
+  "indicator_name": "Tourism Employment, Share of Total Employment",
+  "description": "Доля занятых в туризме в общей численности занятых",
+  "frequency": "annual",
+  "unit": "% of total employed",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Percent of Kazakhstan's total employed population working in tourism industries (Taldau code 11560102).",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2011-12-31",
+  "period_end": "2024-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

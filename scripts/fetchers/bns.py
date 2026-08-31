@@ -1542,3 +1542,83 @@ def fetch_labor_productivity() -> tuple[list[dict], dict]:
         note="Labor productivity, national, KZT per employed person, annual. Taldau indexId "
         "4023003.",
     )
+
+
+def fetch_tourism_value_added() -> tuple[list[dict], dict]:
+    """Tourism Direct Gross Value Added (KZT, annual)."""
+    return _fetch_taldau_annual_index(
+        "77237375", "TOURISM_VALUE_ADDED",
+        note="KZT. Gross value added created directly by tourism, from BNS's Tourism Satellite Account (Taldau code 115103). Same KZT scale as GDP_INCOME_METHOD and the other BNS national-accounts series.",
+    )
+
+
+def fetch_tourism_gdp_share() -> tuple[list[dict], dict]:
+    """Tourism Direct Gross Value Added, Share of GDP (% of GDP, annual)."""
+    return _fetch_taldau_annual_index(
+        "77237377", "TOURISM_GDP_SHARE",
+        note="Percent of GDP contributed directly by tourism (Taldau code 115105), from BNS's Tourism Satellite Account.",
+    )
+
+
+def fetch_tourism_employment() -> tuple[list[dict], dict]:
+    """Employment in Tourism Industries (persons, annual)."""
+    return _fetch_taldau_annual_index(
+        "77237378", "TOURISM_EMPLOYMENT",
+        note="Number of persons employed in tourism industries (Taldau code 115604).",
+    )
+
+
+def fetch_tourism_employment_share() -> tuple[list[dict], dict]:
+    """Tourism Employment, Share of Total Employment (% of total employed, annual)."""
+    return _fetch_taldau_annual_index(
+        "77237384", "TOURISM_EMPLOYMENT_SHARE",
+        note="Percent of Kazakhstan's total employed population working in tourism industries (Taldau code 11560102).",
+    )
+
+
+def fetch_tourism_inbound_consumption() -> tuple[list[dict], dict]:
+    """Inbound Tourism Consumption (KZT, annual)."""
+    return _fetch_taldau_annual_index(
+        "77237367", "TOURISM_INBOUND_CONSUMPTION",
+        note="KZT. Consumption attributable to INBOUND tourism -- spending in Kazakhstan by non-resident visitors (Taldau code 11510104). The tourism-export side.",
+    )
+
+
+def fetch_tourism_outbound_consumption() -> tuple[list[dict], dict]:
+    """Outbound Tourism Consumption (KZT, annual)."""
+    return _fetch_taldau_annual_index(
+        "77237368", "TOURISM_OUTBOUND_CONSUMPTION",
+        note="KZT. Consumption attributable to OUTBOUND tourism -- spending abroad by Kazakhstani residents (Taldau code 11510105). The tourism-import side.",
+    )
+
+
+def fetch_tourism_inbound_trips() -> tuple[list[dict], dict]:
+    """Inbound Tourism Trips (trips, annual)."""
+    return _fetch_taldau_annual_index(
+        "2972978", "TOURISM_INBOUND_TRIPS",
+        note="Number of inbound tourism trips (Taldau code 115801). Short series -- the source publishes it only from 2020.",
+    )
+
+
+def fetch_tourism_domestic_trips() -> tuple[list[dict], dict]:
+    """Domestic Tourism Trips (trips, annual)."""
+    return _fetch_taldau_annual_index(
+        "3768950", "TOURISM_DOMESTIC_TRIPS",
+        note="Number of domestic tourism trips by residents within Kazakhstan (Taldau code 115803). Short series -- published only from 2020.",
+    )
+
+
+def fetch_tourism_outbound_trips() -> tuple[list[dict], dict]:
+    """Outbound Tourism Trips (trips, annual)."""
+    return _fetch_taldau_annual_index(
+        "3768952", "TOURISM_OUTBOUND_TRIPS",
+        note="Number of outbound tourism trips by Kazakhstani residents (Taldau code 115805). Short series -- published only from 2020.",
+    )
+
+
+def fetch_tourism_inbound_nights() -> tuple[list[dict], dict]:
+    """Inbound Tourism Nights Spent (nights, annual)."""
+    return _fetch_taldau_annual_index(
+        "2972979", "TOURISM_INBOUND_NIGHTS",
+        note="Number of nights spent in Kazakhstan by inbound visitors (Taldau code 115802). Short series -- published only from 2020.",
+    )

@@ -6,7 +6,7 @@
   "indicator_name": "Net Exports",
   "description": "Чистый экспорт",
   "frequency": "annual",
-  "unit": "million KZT",
+  "unit": "KZT",
   "currency": "KZT",
   "geography": "Kazakhstan (national)",
   "methodology": "Net exports of goods and services, national accounts, KZT. Taldau indexId 2709378.",

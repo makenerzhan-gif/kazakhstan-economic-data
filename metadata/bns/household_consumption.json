@@ -6,7 +6,7 @@
   "indicator_name": "Household Final Consumption Expenditure",
   "description": "Расходы на конечное потребление домашних хозяйств",
   "frequency": "annual",
-  "unit": "million KZT",
+  "unit": "KZT",
   "currency": "KZT",
   "geography": "Kazakhstan (national)",
   "methodology": "Household final consumption expenditure, national accounts, KZT. Taldau indexId 700966.",

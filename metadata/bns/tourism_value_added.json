@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-77237375",
+  "indicator_id": "TOURISM_VALUE_ADDED",
+  "indicator_name": "Tourism Direct Gross Value Added",
+  "description": "Валовая добавленная стоимость, создаваемая непосредственно в туризме",
+  "frequency": "annual",
+  "unit": "KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "KZT. Gross value added created directly by tourism, from BNS's Tourism Satellite Account (Taldau code 115103). Same KZT scale as GDP_INCOME_METHOD and the other BNS national-accounts series.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2003-12-31",
+  "period_end": "2024-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

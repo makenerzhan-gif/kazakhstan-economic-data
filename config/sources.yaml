@@ -590,6 +590,126 @@ agencies:
           returns a hidden intermediate node requiring genuine parent/child recursion (not
           the one-shot flat query every other connected indicator uses this session); left
           for a future session with budget for that capability. fetch_poverty_headcount.
+      TOURISM_VALUE_ADDED:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 77237375
+        format: json
+        notes: >
+          2026-08-31. Found by an automated Taldau probe: POST /ru/Search/getSearchPageGridData
+          with keyword + page/start/limit (the bare keyword body returns HTTP 500) to list
+          candidate indexIds, then a trial GetIndexTreeData call with the project's default
+          national params (term 741880, measure_id=7, dicIds=67, period_id=7) to see which
+          candidates actually resolve. This index resolved cleanly. From BNS's Tourism
+          Satellite Account. fetch_tourism_value_added.
+      TOURISM_GDP_SHARE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 77237377
+        format: json
+        notes: >
+          2026-08-31. Found by an automated Taldau probe: POST /ru/Search/getSearchPageGridData
+          with keyword + page/start/limit (the bare keyword body returns HTTP 500) to list
+          candidate indexIds, then a trial GetIndexTreeData call with the project's default
+          national params (term 741880, measure_id=7, dicIds=67, period_id=7) to see which
+          candidates actually resolve. This index resolved cleanly. From BNS's Tourism
+          Satellite Account. fetch_tourism_gdp_share.
+      TOURISM_EMPLOYMENT:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 77237378
+        format: json
+        notes: >
+          2026-08-31. Found by an automated Taldau probe: POST /ru/Search/getSearchPageGridData
+          with keyword + page/start/limit (the bare keyword body returns HTTP 500) to list
+          candidate indexIds, then a trial GetIndexTreeData call with the project's default
+          national params (term 741880, measure_id=7, dicIds=67, period_id=7) to see which
+          candidates actually resolve. This index resolved cleanly. From BNS's Tourism
+          Satellite Account. fetch_tourism_employment.
+      TOURISM_EMPLOYMENT_SHARE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 77237384
+        format: json
+        notes: >
+          2026-08-31. Found by an automated Taldau probe: POST /ru/Search/getSearchPageGridData
+          with keyword + page/start/limit (the bare keyword body returns HTTP 500) to list
+          candidate indexIds, then a trial GetIndexTreeData call with the project's default
+          national params (term 741880, measure_id=7, dicIds=67, period_id=7) to see which
+          candidates actually resolve. This index resolved cleanly. From BNS's Tourism
+          Satellite Account. fetch_tourism_employment_share.
+      TOURISM_INBOUND_CONSUMPTION:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 77237367
+        format: json
+        notes: >
+          2026-08-31. Found by an automated Taldau probe: POST /ru/Search/getSearchPageGridData
+          with keyword + page/start/limit (the bare keyword body returns HTTP 500) to list
+          candidate indexIds, then a trial GetIndexTreeData call with the project's default
+          national params (term 741880, measure_id=7, dicIds=67, period_id=7) to see which
+          candidates actually resolve. This index resolved cleanly. From BNS's Tourism
+          Satellite Account. fetch_tourism_inbound_consumption.
+      TOURISM_OUTBOUND_CONSUMPTION:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 77237368
+        format: json
+        notes: >
+          2026-08-31. Found by an automated Taldau probe: POST /ru/Search/getSearchPageGridData
+          with keyword + page/start/limit (the bare keyword body returns HTTP 500) to list
+          candidate indexIds, then a trial GetIndexTreeData call with the project's default
+          national params (term 741880, measure_id=7, dicIds=67, period_id=7) to see which
+          candidates actually resolve. This index resolved cleanly. From BNS's Tourism
+          Satellite Account. fetch_tourism_outbound_consumption.
+      TOURISM_INBOUND_TRIPS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 2972978
+        format: json
+        notes: >
+          2026-08-31. Found by an automated Taldau probe: POST /ru/Search/getSearchPageGridData
+          with keyword + page/start/limit (the bare keyword body returns HTTP 500) to list
+          candidate indexIds, then a trial GetIndexTreeData call with the project's default
+          national params (term 741880, measure_id=7, dicIds=67, period_id=7) to see which
+          candidates actually resolve. This index resolved cleanly. From BNS's Tourism
+          Satellite Account. fetch_tourism_inbound_trips.
+      TOURISM_DOMESTIC_TRIPS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 3768950
+        format: json
+        notes: >
+          2026-08-31. Found by an automated Taldau probe: POST /ru/Search/getSearchPageGridData
+          with keyword + page/start/limit (the bare keyword body returns HTTP 500) to list
+          candidate indexIds, then a trial GetIndexTreeData call with the project's default
+          national params (term 741880, measure_id=7, dicIds=67, period_id=7) to see which
+          candidates actually resolve. This index resolved cleanly. From BNS's Tourism
+          Satellite Account. fetch_tourism_domestic_trips.
+      TOURISM_OUTBOUND_TRIPS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 3768952
+        format: json
+        notes: >
+          2026-08-31. Found by an automated Taldau probe: POST /ru/Search/getSearchPageGridData
+          with keyword + page/start/limit (the bare keyword body returns HTTP 500) to list
+          candidate indexIds, then a trial GetIndexTreeData call with the project's default
+          national params (term 741880, measure_id=7, dicIds=67, period_id=7) to see which
+          candidates actually resolve. This index resolved cleanly. From BNS's Tourism
+          Satellite Account. fetch_tourism_outbound_trips.
+      TOURISM_INBOUND_NIGHTS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 2972979
+        format: json
+        notes: >
+          2026-08-31. Found by an automated Taldau probe: POST /ru/Search/getSearchPageGridData
+          with keyword + page/start/limit (the bare keyword body returns HTTP 500) to list
+          candidate indexIds, then a trial GetIndexTreeData call with the project's default
+          national params (term 741880, measure_id=7, dicIds=67, period_id=7) to see which
+          candidates actually resolve. This index resolved cleanly. From BNS's Tourism
+          Satellite Account. fetch_tourism_inbound_nights.
       MIGRATION_ARRIVALS:
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"

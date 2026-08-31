@@ -1259,3 +1259,51 @@ series under the probe and needs its own structural pass rather than a guess.
 
 **237/237 confirmed indicators connected end-to-end** (94/94 NBK re-verified live in
 4m23s; unified dataset confirmed to carry all 237). `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — thirty-fourth batch: unit-label bug FIXED, plus tourism (237 -> 247)
+
+### Corrected a shipped mislabeling: six BNS series were declared "million KZT" but hold KZT
+Found while checking units before adding new BNS indicators, not by chance. GFCF's stored
+value is 3.92e13; read as "million KZT" that implies 3.9e19 KZT, which is impossible
+(Kazakhstan's GDP is ~1.5e14 KZT). Read as plain KZT it is 39.2 trillion — the right order
+of magnitude for Kazakhstan's gross fixed capital formation.
+
+The decisive evidence was internal to the repo: BNS indicators added later already use
+`unit: "KZT"` and sit at the SAME magnitude — GDP_INCOME_METHOD 159.6 trillion labeled
+"KZT" next to HOUSEHOLD_CONSUMPTION 88.2 trillion labeled "million KZT". Same scale, two
+different labels; the later convention is the correct one, because Taldau publishes these
+in KZT.
+
+Corrected to `unit: "KZT"` (values untouched, since the values were never wrong — only the
+label was): **GDP_NOMINAL, INVESTMENT, GFCF, NET_EXPORTS, HOUSEHOLD_CONSUMPTION,
+COMPENSATION_EMPLOYEES**. Anyone who had compared BNS GDP_NOMINAL against NBK M3 using the
+declared units would have been off by a factor of 1,000,000. Re-ran the BNS pipeline so the
+fix propagated into `metadata/` and the unified dataset — verified in
+`data/unified/macro_long.csv` that all six now carry `unit=KZT`, matching GDP_INCOME_METHOD.
+
+### Automated Taldau (BNS) discovery
+Built the BNS counterpart to the NBK structural probe: search Taldau's own API
+(POST `/ru/Search/getSearchPageGridData`) for candidate indexIds, then trial-fetch each with
+the project's default national params to see which resolve. Note the search endpoint returns
+HTTP 500 for a bare `keyword` body — it needs `page`/`start`/`limit` too, which is why
+earlier sessions found "no generic search API". Indexes returning HTTP 500 on the trial
+fetch are reported separately: those are multi-dictionary indexes needing real params
+captured from a live page, NOT missing data.
+
+### BNS (10) — first tourism indicators, from BNS's Tourism Satellite Account
+TOURISM_VALUE_ADDED (1.42 trillion KZT) and TOURISM_GDP_SHARE (1% of GDP);
+TOURISM_EMPLOYMENT (613,802 persons) and TOURISM_EMPLOYMENT_SHARE (6.7% of all employed);
+TOURISM_INBOUND_CONSUMPTION (1.32 trillion KZT, the tourism-export side) and
+TOURISM_OUTBOUND_CONSUMPTION (1.90 trillion KZT, the import side — Kazakhstan is a net
+outbound-tourism spender); and the trip/night counts TOURISM_INBOUND_TRIPS,
+TOURISM_DOMESTIC_TRIPS, TOURISM_OUTBOUND_TRIPS, TOURISM_INBOUND_NIGHTS (published only from
+2020, so these are deliberately short series).
+
+Several tourism parent aggregates were **skipped as implausible**: Taldau reports code
+115301 "Промежуточное потребление в сфере туризма" as 79.2 trillion KZT while its own
+sub-item is 3.36 trillion, and 115701 as 33.0 trillion against a 1.65 trillion sub-item.
+Those parents cannot both be right and are not internally consistent, so they were left
+unconnected rather than published with a guess about which reading is intended.
+
+**247/247 confirmed indicators connected end-to-end** (68/68 BNS re-verified live in 53s).
+`pytest tests/ -q` — 29/29 passing.

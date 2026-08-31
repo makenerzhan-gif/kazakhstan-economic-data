@@ -26,7 +26,7 @@ indicators:
     name_en: "Nominal GDP"
     agency: bns
     frequency: quarterly
-    unit: "million KZT"
+    unit: "KZT"
     category: national_accounts
     source_status: confirmed
 
@@ -62,7 +62,7 @@ indicators:
     name_en: "Investment in Fixed Capital"
     agency: bns
     frequency: annual
-    unit: "million KZT"
+    unit: "KZT"
     category: investment
     source_status: confirmed
 
@@ -199,7 +199,7 @@ indicators:
     name_en: "Gross Fixed Capital Formation"
     agency: bns
     frequency: annual
-    unit: "million KZT"
+    unit: "KZT"
     category: national_accounts
     source_status: confirmed
 
@@ -217,7 +217,7 @@ indicators:
     name_en: "Net Exports"
     agency: bns
     frequency: annual
-    unit: "million KZT"
+    unit: "KZT"
     category: national_accounts
     source_status: confirmed
 
@@ -226,7 +226,7 @@ indicators:
     name_en: "Household Final Consumption Expenditure"
     agency: bns
     frequency: annual
-    unit: "million KZT"
+    unit: "KZT"
     category: national_accounts
     source_status: confirmed
 
@@ -235,7 +235,7 @@ indicators:
     name_en: "Compensation of Employees"
     agency: bns
     frequency: annual
-    unit: "million KZT"
+    unit: "KZT"
     category: national_accounts
     source_status: confirmed
 
@@ -1776,6 +1776,96 @@ indicators:
     frequency: monthly
     unit: "million KZT"
     category: monetary
+    source_status: confirmed
+
+  - id: TOURISM_VALUE_ADDED
+    name_ru: "Валовая добавленная стоимость, создаваемая непосредственно в туризме"
+    name_en: "Tourism Direct Gross Value Added"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: tourism
+    source_status: confirmed
+
+  - id: TOURISM_GDP_SHARE
+    name_ru: "Доля валовой добавленной стоимости туризма в ВВП"
+    name_en: "Tourism Direct Gross Value Added, Share of GDP"
+    agency: bns
+    frequency: annual
+    unit: "% of GDP"
+    category: tourism
+    source_status: confirmed
+
+  - id: TOURISM_EMPLOYMENT
+    name_ru: "Численность занятых в отраслях туризма"
+    name_en: "Employment in Tourism Industries"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: tourism
+    source_status: confirmed
+
+  - id: TOURISM_EMPLOYMENT_SHARE
+    name_ru: "Доля занятых в туризме в общей численности занятых"
+    name_en: "Tourism Employment, Share of Total Employment"
+    agency: bns
+    frequency: annual
+    unit: "% of total employed"
+    category: tourism
+    source_status: confirmed
+
+  - id: TOURISM_INBOUND_CONSUMPTION
+    name_ru: "Потребление, относящееся к въездному туризму"
+    name_en: "Inbound Tourism Consumption"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: tourism
+    source_status: confirmed
+
+  - id: TOURISM_OUTBOUND_CONSUMPTION
+    name_ru: "Потребление, относящееся к выездному туризму"
+    name_en: "Outbound Tourism Consumption"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: tourism
+    source_status: confirmed
+
+  - id: TOURISM_INBOUND_TRIPS
+    name_ru: "Количество поездок въездного туризма"
+    name_en: "Inbound Tourism Trips"
+    agency: bns
+    frequency: annual
+    unit: "trips"
+    category: tourism
+    source_status: confirmed
+
+  - id: TOURISM_DOMESTIC_TRIPS
+    name_ru: "Количество поездок внутреннего туризма"
+    name_en: "Domestic Tourism Trips"
+    agency: bns
+    frequency: annual
+    unit: "trips"
+    category: tourism
+    source_status: confirmed
+
+  - id: TOURISM_OUTBOUND_TRIPS
+    name_ru: "Количество поездок выездного туризма"
+    name_en: "Outbound Tourism Trips"
+    agency: bns
+    frequency: annual
+    unit: "trips"
+    category: tourism
+    source_status: confirmed
+
+  - id: TOURISM_INBOUND_NIGHTS
+    name_ru: "Количество проведенных ночей въездного туризма"
+    name_en: "Inbound Tourism Nights Spent"
+    agency: bns
+    frequency: annual
+    unit: "nights"
+    category: tourism
     source_status: confirmed
 
   - id: FINAL_ENERGY_CONSUMPTION

@@ -6,7 +6,7 @@
   "indicator_name": "Compensation of Employees",
   "description": "Оплата труда",
   "frequency": "annual",
-  "unit": "million KZT",
+  "unit": "KZT",
   "currency": "KZT",
   "geography": "Kazakhstan (national)",
   "methodology": "Compensation of employees, income account, KZT. Taldau indexId 700938.",

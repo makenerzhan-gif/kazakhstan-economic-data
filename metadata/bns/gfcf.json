@@ -6,7 +6,7 @@
   "indicator_name": "Gross Fixed Capital Formation",
   "description": "Валовое накопление основного капитала",
   "frequency": "annual",
-  "unit": "million KZT",
+  "unit": "KZT",
   "currency": "KZT",
   "geography": "Kazakhstan (national)",
   "methodology": "Gross fixed capital formation, national accounts, KZT. Distinct from the BNS/INVESTMENT enterprise-survey series. Taldau indexId 700906.",

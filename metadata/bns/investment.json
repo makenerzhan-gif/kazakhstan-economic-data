@@ -6,7 +6,7 @@
   "indicator_name": "Investment in Fixed Capital",
   "description": "Инвестиции в основной капитал",
   "frequency": "annual",
-  "unit": "million KZT",
+  "unit": "KZT",
   "currency": "KZT",
   "geography": "Kazakhstan (national)",
   "methodology": "2 cube slices concatenated for the national total (methodology break observed between them, exact years found: 2016, 2017, 2018, 2019, 2020, 2021, 2022). Coverage is narrower than the 2003-2025 advertised on the source page -- the older history was not located in this file.",

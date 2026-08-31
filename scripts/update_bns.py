@@ -81,6 +81,16 @@ FETCHERS = {
     "MIGRATION_ARRIVALS": bns_fetchers.fetch_migration_arrivals,
     "MIGRATION_DEPARTURES": bns_fetchers.fetch_migration_departures,
     "LABOR_PRODUCTIVITY": bns_fetchers.fetch_labor_productivity,
+    "TOURISM_VALUE_ADDED": bns_fetchers.fetch_tourism_value_added,
+    "TOURISM_GDP_SHARE": bns_fetchers.fetch_tourism_gdp_share,
+    "TOURISM_EMPLOYMENT": bns_fetchers.fetch_tourism_employment,
+    "TOURISM_EMPLOYMENT_SHARE": bns_fetchers.fetch_tourism_employment_share,
+    "TOURISM_INBOUND_CONSUMPTION": bns_fetchers.fetch_tourism_inbound_consumption,
+    "TOURISM_OUTBOUND_CONSUMPTION": bns_fetchers.fetch_tourism_outbound_consumption,
+    "TOURISM_INBOUND_TRIPS": bns_fetchers.fetch_tourism_inbound_trips,
+    "TOURISM_DOMESTIC_TRIPS": bns_fetchers.fetch_tourism_domestic_trips,
+    "TOURISM_OUTBOUND_TRIPS": bns_fetchers.fetch_tourism_outbound_trips,
+    "TOURISM_INBOUND_NIGHTS": bns_fetchers.fetch_tourism_inbound_nights,
 }
 
 INDICATOR_IDS = [
@@ -102,6 +112,16 @@ INDICATOR_IDS = [
     "IND_PROD_MINING", "IND_PROD_MANUFACTURING", "IND_PROD_ELECTRICITY",
     "FINAL_ENERGY_CONSUMPTION", "RENEWABLE_ENERGY_SHARE", "POVERTY_HEADCOUNT",
     "MIGRATION_ARRIVALS", "MIGRATION_DEPARTURES", "LABOR_PRODUCTIVITY",
+    "TOURISM_VALUE_ADDED",
+    "TOURISM_GDP_SHARE",
+    "TOURISM_EMPLOYMENT",
+    "TOURISM_EMPLOYMENT_SHARE",
+    "TOURISM_INBOUND_CONSUMPTION",
+    "TOURISM_OUTBOUND_CONSUMPTION",
+    "TOURISM_INBOUND_TRIPS",
+    "TOURISM_DOMESTIC_TRIPS",
+    "TOURISM_OUTBOUND_TRIPS",
+    "TOURISM_INBOUND_NIGHTS",
 ]
 
 
