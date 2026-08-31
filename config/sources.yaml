@@ -1636,6 +1636,81 @@ agencies:
           extracting it risked a units error -- left for a future, more careful pass. Verified
           live: 7,296,933.87 (2024) to 8,141,829.16 (2025) million KZT.
           fetch_gov_procurement_total_value.
+      INDIVIDUAL_INCOME_TAX:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 3"
+        target_row_label: "индивидуальный подоходный налог"
+        format: xlsx
+        frequency: annual
+        notes: >
+          2026-08-31. MAJOR finding: this tax was investigated repeatedly earlier this session
+          (see CUSTOMS_DUTIES's and SUBVENTIONS_REPUBLICAN's notes) and consistently found
+          absent from every REPUBLICAN-level document checked (the Dynamics file, табл 8 (дох))
+          and even the broadest CONSOLIDATED-government document (табл 13, not ultimately
+          connected for unrelated reasons) -- correctly concluded to be a genuinely local-
+          budget-only tax under Kazakhstan's budget code. табл 3 ("Исполнение государственного
+          бюджета" -- execution of the STATE budget specifically, i.e. republican + local
+          combined) does NOT contradict that: individual income tax legitimately appears here
+          as a real, distinct, non-zero line because it's collected at the LOCAL level and
+          rolled up INTO the state-level aggregate. Cross-checked against табл 7 ("Исполнение
+          РЕСПУБЛИКАНСКОГО бюджета" specifically): no individual-income-tax row appears there at
+          all, confirming republican-level absence still holds and this is genuinely a state-
+          level-only figure, not a contradiction of the earlier research. Same multi-year-
+          annual-column layout as SUBVENTIONS_REPUBLICAN (only the latest bulletin needed).
+          Verified live: 1,992,384.85 (2023) to 2,859,192.36 (2025) million KZT. Property tax
+          was also searched for in this same sheet's tax breakdown and was NOT found itemized
+          here either -- that specific question remains open. fetch_individual_income_tax.
+      STATE_BUDGET_REVENUE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 3"
+        target_row_label: "I. ДОХОДЫ"
+        format: xlsx
+        frequency: annual
+        notes: >
+          2026-08-31. Same "табл 3" sheet as INDIVIDUAL_INCOME_TAX. Total revenue, STATE budget
+          (republican + local combined) -- broader scope than GOV_REVENUE (republican-only, from
+          the separate "Dynamics of execution" file). Verified live: 24,917,246.14 (2023) to
+          29,871,047.82 (2025) million KZT. fetch_state_budget_revenue.
+      STATE_BUDGET_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 3"
+        target_row_label: "II. ЗАТРАТЫ"
+        format: xlsx
+        frequency: annual
+        notes: >
+          2026-08-31. Same sheet. Total expenditure, STATE budget -- broader scope than
+          GOV_EXPENDITURE (republican-only). Verified live: 26,760,000.29 (2023) to
+          33,442,828.77 (2025) million KZT. fetch_state_budget_expenditure.
+      STATE_BUDGET_DEFICIT:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 3"
+        target_row_label: "V. ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА"
+        format: xlsx
+        frequency: annual
+        notes: >
+          2026-08-31. Same sheet. State budget deficit (surplus) -- broader scope than
+          BUDGET_DEFICIT (republican-only). Verified live: -2,811,100.59 (2023) to
+          -4,383,871.07 (2025) million KZT. fetch_state_budget_deficit.
+      STATE_NON_OIL_DEFICIT:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 3"
+        target_row_label: "VI. НЕНЕФТЯНОЙ ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА"
+        format: xlsx
+        frequency: annual
+        notes: >
+          2026-08-31. Same sheet. State non-oil budget deficit (surplus) -- broader scope than
+          NON_OIL_BUDGET_DEFICIT (republican-only). Verified live: -8,454,245.45 (2023) to
+          -11,393,479.39 (2025) million KZT. fetch_state_non_oil_deficit.
       GOV_HEALTH_SPENDING:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"

@@ -1,6 +1,6 @@
 # Update report — 2026-08-31
 
-Run timestamp: 2026-08-31T09:24:33.365252
+Run timestamp: 2026-08-31T09:56:59.764770
 Unified dataset updated: True
 Tests passed: True
 
@@ -349,6 +349,11 @@ Tests passed: True
 - **minfin/PENSION_CONTRIBUTIONS_RECEIVED** — fetch+validate+process: ok (downloaded=2, processed=2)
 - **minfin/PENSION_CONTRIBUTIONS_ARREARS** — fetch+validate+process: ok (downloaded=2, processed=2)
 - **minfin/GOV_PROCUREMENT_TOTAL_VALUE** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **minfin/INDIVIDUAL_INCOME_TAX** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/STATE_BUDGET_REVENUE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/STATE_BUDGET_EXPENDITURE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/STATE_BUDGET_DEFICIT** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/STATE_NON_OIL_DEFICIT** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% between 1995-01-01 (-8.2) and 1996-01-01 (0.5).
   - warning: Unexpected jump of 240.0% between 1996-01-01 (0.5) and 1997-01-01 (1.7).

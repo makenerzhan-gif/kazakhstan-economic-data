@@ -62,6 +62,11 @@ FETCHERS = {
     "PENSION_CONTRIBUTIONS_RECEIVED": minfin_fetchers.fetch_pension_contributions_received,
     "PENSION_CONTRIBUTIONS_ARREARS": minfin_fetchers.fetch_pension_contributions_arrears,
     "GOV_PROCUREMENT_TOTAL_VALUE": minfin_fetchers.fetch_gov_procurement_total_value,
+    "INDIVIDUAL_INCOME_TAX": minfin_fetchers.fetch_individual_income_tax,
+    "STATE_BUDGET_REVENUE": minfin_fetchers.fetch_state_budget_revenue,
+    "STATE_BUDGET_EXPENDITURE": minfin_fetchers.fetch_state_budget_expenditure,
+    "STATE_BUDGET_DEFICIT": minfin_fetchers.fetch_state_budget_deficit,
+    "STATE_NON_OIL_DEFICIT": minfin_fetchers.fetch_state_non_oil_deficit,
 }
 
 INDICATOR_IDS = [
@@ -83,6 +88,8 @@ INDICATOR_IDS = [
     "GOV_FINANCIAL_ASSETS_SOLD", "GOV_AUDIT_VIOLATIONS_AMOUNT",
     "TAX_ARREARS_TOTAL", "PENSION_CONTRIBUTIONS_RECEIVED", "PENSION_CONTRIBUTIONS_ARREARS",
     "GOV_PROCUREMENT_TOTAL_VALUE",
+    "INDIVIDUAL_INCOME_TAX", "STATE_BUDGET_REVENUE", "STATE_BUDGET_EXPENDITURE",
+    "STATE_BUDGET_DEFICIT", "STATE_NON_OIL_DEFICIT",
 ]
 
 

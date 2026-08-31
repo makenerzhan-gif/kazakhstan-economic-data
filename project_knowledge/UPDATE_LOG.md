@@ -859,3 +859,34 @@ values, not just counts, especially when introducing a new header/date conventio
   pass rather than guessed at.
 
 **156/156 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — twenty-first scale-up batch: 156 -> 161 indicators (resolves a long-standing gap)
+Explored the remaining foundational Statistical Bulletin sheets (табл 1-7), left unlooked-at
+since earlier passes focused on more specialized tables further into the document.
+
+**Headline finding: individual income tax IS extractable after all.** Earlier this session
+(and in prior sessions, per CUSTOMS_DUTIES's and SUBVENTIONS_REPUBLICAN's module comments),
+individual income tax was investigated repeatedly and consistently found absent from every
+REPUBLICAN-level document checked (the "Dynamics of execution" file, табл 8 (дох)) and even
+the broadest CONSOLIDATED-government document (табл 13, ultimately not connected for unrelated
+structural reasons) -- correctly concluded to be a genuinely local-budget-only tax under
+Kazakhstan's budget code, and that conclusion was treated as closed. Opening табл 3
+("Исполнение государственного бюджета" -- execution of the STATE budget, i.e. republican +
+local combined, not just republican) this batch, individual income tax DOES appear there as a
+real, distinct, non-zero line -- because it's collected at the local level but rolled up INTO
+the state-level aggregate. This doesn't contradict the earlier research: cross-checked against
+табл 7 ("Исполнение РЕСПУБЛИКАНСКОГО бюджета" specifically), no individual-income-tax row
+appears there at all, confirming republican-level absence still holds. The lesson: "not found
+in every document we checked" is not the same as "structurally absent everywhere" -- there was
+still a STATE-level document not yet opened. Property tax was searched for in the same табл 3
+breakdown and was NOT found itemized there either -- that specific question remains open.
+
+**Minfin (5):**
+- INDIVIDUAL_INCOME_TAX (табл 3) -- 1,992,384.85 (2023) to 2,859,192.36 (2025) million KZT.
+- STATE_BUDGET_REVENUE / STATE_BUDGET_EXPENDITURE / STATE_BUDGET_DEFICIT /
+  STATE_NON_OIL_DEFICIT (same sheet) -- broader-scope (republican + local combined) companions
+  to the existing republican-only GOV_REVENUE/GOV_EXPENDITURE/BUDGET_DEFICIT/
+  NON_OIL_BUDGET_DEFICIT, using the same multi-year-annual-column single-latest-document
+  pattern established for SUBVENTIONS_REPUBLICAN.
+
+**161/161 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

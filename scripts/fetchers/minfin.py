@@ -1939,3 +1939,120 @@ def fetch_gov_procurement_total_value() -> tuple[list[dict], dict]:
         ),
     }
     return records, manifest
+
+
+# ---------------------------------------------------------------------------
+# INDIVIDUAL_INCOME_TAX: found 2026-08-31 in sheet "табл 3" ("Исполнение
+# государственного бюджета" -- execution of the STATE budget, i.e. republican
+# + local combined) -- and it MATTERS: individual income tax was investigated
+# repeatedly earlier this session (see CUSTOMS_DUTIES's and SUBVENTIONS_
+# REPUBLICAN's module comments) and consistently found ABSENT from every
+# republican-level document (the Dynamics file, табл 8 (дох)) and even the
+# broadest CONSOLIDATED-government document checked (табл 13, ultimately not
+# connected for unrelated structural reasons) -- correctly concluded to be a
+# genuinely local-budget-only tax under Kazakhstan's budget code. табл 3 does
+# NOT contradict that: it operates at the STATE budget level specifically
+# (republican + local combined, matching the same "state" framing already
+# used for GOV_ACCOUNTS_PAYABLE/RECEIVABLE and TAX_ARREARS_TOTAL above), so
+# individual income tax legitimately appears here as a real, non-zero,
+# distinct line -- consistent with it being collected AT the local level but
+# rolled up INTO the state-level aggregate. Cross-checked against табл 7
+# ("Исполнение РЕСПУБЛИКАНСКОГО бюджета" specifically): no individual-income-
+# tax row appears there at all, confirming republican-level absence still
+# holds and табл 3's figure is genuinely state-level, not a contradiction.
+# Property tax was searched for in the same табл 3 tax breakdown and was NOT
+# found itemized here either -- that specific question remains open.
+#
+# Same multi-year-annual-column layout as SUBVENTIONS_REPUBLICAN/
+# GOV_ACCOUNTS_PAYABLE (uses _fetch_bulletin_annual_row with its default
+# 'YYYY ж. есеп' header and Dec-31 dating), so only the single latest
+# bulletin is needed.
+# ---------------------------------------------------------------------------
+BULLETIN_STATE_BUDGET_SHEET_NAME = "табл 3"
+INDIVIDUAL_INCOME_TAX_LABEL = "индивидуальный подоходный налог"
+STATE_BUDGET_REVENUE_LABEL = "I. ДОХОДЫ"
+STATE_BUDGET_EXPENDITURE_LABEL = "II. ЗАТРАТЫ"
+STATE_BUDGET_DEFICIT_LABEL = "V. ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА"
+STATE_NON_OIL_DEFICIT_LABEL = "VI. НЕНЕФТЯНОЙ ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА"
+
+
+def _state_budget_row_matcher(label: str):
+    return lambda r: any(isinstance(c, str) and c.strip() == label for c in r if c)
+
+
+def fetch_individual_income_tax() -> tuple[list[dict], dict]:
+    """Individual income tax revenue, STATE budget (republican + local
+    combined), million KZT, annual. Verified live 2026-08-31: 1,992,384.85
+    (2023) to 2,859,192.36 (2025) million KZT -- resolves a question left
+    open earlier this session: this tax IS collectible at the state level,
+    just not the republican level, where every prior document searched
+    (Dynamics file, табл 8 (дох), the broader табл 13) correctly found it
+    absent."""
+    return _fetch_bulletin_annual_row(
+        BULLETIN_STATE_BUDGET_SHEET_NAME,
+        _state_budget_row_matcher(INDIVIDUAL_INCOME_TAX_LABEL),
+        "INDIVIDUAL_INCOME_TAX",
+        "Million KZT. Individual (personal) income tax revenue, STATE budget (republican + "
+        "local government combined) -- NOT available at the republican-budget-only level "
+        "(confirmed absent from GOV_REVENUE/TAX_REVENUE's source and табл 7's republican-only "
+        "breakdown); this is the local-government-collected portion rolled up into the state "
+        "total, per Kazakhstan's budget code assigning this tax to local budgets.",
+    )
+
+
+def fetch_state_budget_revenue() -> tuple[list[dict], dict]:
+    """Total revenue, STATE budget (republican + local combined), million
+    KZT, annual -- broader in scope than GOV_REVENUE (republican-budget-only,
+    from the separate 'Dynamics of execution' file). Verified live
+    2026-08-31: 24,917,246.14 (2023) to 29,871,047.82 (2025) million KZT."""
+    return _fetch_bulletin_annual_row(
+        BULLETIN_STATE_BUDGET_SHEET_NAME,
+        _state_budget_row_matcher(STATE_BUDGET_REVENUE_LABEL),
+        "STATE_BUDGET_REVENUE",
+        "Million KZT. Total revenue, STATE budget (republican + local government budgets "
+        "combined) -- broader scope than GOV_REVENUE, which is republican-budget-only.",
+    )
+
+
+def fetch_state_budget_expenditure() -> tuple[list[dict], dict]:
+    """Total expenditure, STATE budget (republican + local combined), million
+    KZT, annual -- broader in scope than GOV_EXPENDITURE. Verified live
+    2026-08-31: 26,760,000.29 (2023) to 33,442,828.77 (2025) million KZT."""
+    return _fetch_bulletin_annual_row(
+        BULLETIN_STATE_BUDGET_SHEET_NAME,
+        _state_budget_row_matcher(STATE_BUDGET_EXPENDITURE_LABEL),
+        "STATE_BUDGET_EXPENDITURE",
+        "Million KZT. Total expenditure, STATE budget (republican + local government budgets "
+        "combined) -- broader scope than GOV_EXPENDITURE, which is republican-budget-only.",
+    )
+
+
+def fetch_state_budget_deficit() -> tuple[list[dict], dict]:
+    """State budget deficit (surplus), STATE budget (republican + local
+    combined), million KZT, annual. Negative = deficit, matching the
+    source's own sign convention. Broader in scope than BUDGET_DEFICIT
+    (republican-only). Verified live 2026-08-31: -2,811,100.59 (2023) to
+    -4,383,871.07 (2025) million KZT."""
+    return _fetch_bulletin_annual_row(
+        BULLETIN_STATE_BUDGET_SHEET_NAME,
+        _state_budget_row_matcher(STATE_BUDGET_DEFICIT_LABEL),
+        "STATE_BUDGET_DEFICIT",
+        "Million KZT. State budget deficit (surplus), STATE budget (republican + local "
+        "government budgets combined) -- broader scope than BUDGET_DEFICIT, which is "
+        "republican-budget-only. Negative values indicate a deficit.",
+    )
+
+
+def fetch_state_non_oil_deficit() -> tuple[list[dict], dict]:
+    """State non-oil budget deficit (surplus), STATE budget (republican +
+    local combined), million KZT, annual -- broader in scope than
+    NON_OIL_BUDGET_DEFICIT (republican-only). Verified live 2026-08-31:
+    -8,454,245.45 (2023) to -11,393,479.39 (2025) million KZT."""
+    return _fetch_bulletin_annual_row(
+        BULLETIN_STATE_BUDGET_SHEET_NAME,
+        _state_budget_row_matcher(STATE_NON_OIL_DEFICIT_LABEL),
+        "STATE_NON_OIL_DEFICIT",
+        "Million KZT. State non-oil budget deficit (surplus), STATE budget (republican + local "
+        "government budgets combined) -- broader scope than NON_OIL_BUDGET_DEFICIT, which is "
+        "republican-budget-only. Negative values indicate a deficit.",
+    )

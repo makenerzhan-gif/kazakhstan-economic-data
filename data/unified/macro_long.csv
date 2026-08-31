@@ -3542,6 +3542,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,61348463000000.0,million KZT,bns,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,HOUSING_COMMISSIONED,881.7,m2 per 1000 population,bns,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,115.6,% change vs previous period,bns,2026-08-31,level,2026-08-31
+2023-12-31,KZ,national,annual,INDIVIDUAL_INCOME_TAX,1992384.85329928,million KZT,minfin,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,IND_PROD,104.4,"index, % to previous period",bns,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,105.4,% of prior period,bns,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,104.0,% of prior period,bns,2026-08-31,level,2026-08-31
@@ -3560,6 +3561,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,RENEWABLE_ENERGY_SHARE,5.9,%,bns,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,RETAIL_TRADE,19959173845422.5,KZT,bns,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,105.183311447593,% of prior period,bns,2026-08-31,level,2026-08-31
+2023-12-31,KZ,national,annual,STATE_BUDGET_DEFICIT,-2811100.5949108,million KZT,minfin,2026-08-31,level,2026-08-31
+2023-12-31,KZ,national,annual,STATE_BUDGET_EXPENDITURE,26760000.2949759,million KZT,minfin,2026-08-31,level,2026-08-31
+2023-12-31,KZ,national,annual,STATE_BUDGET_REVENUE,24917246.139965,million KZT,minfin,2026-08-31,level,2026-08-31
+2023-12-31,KZ,national,annual,STATE_NON_OIL_DEFICIT,-8454245.45480962,million KZT,minfin,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,SUBSIDIES,980720000000.0,KZT,bns,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,SUBVENTIONS_REPUBLICAN,4995054.752,million KZT,minfin,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,9180745300000.0,KZT,bns,2026-08-31,level,2026-08-31
@@ -3907,6 +3912,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,73171015400000.0,million KZT,bns,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,HOUSING_COMMISSIONED,941.1,m2 per 1000 population,bns,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,105.8,% change vs previous period,bns,2026-08-31,level,2026-08-31
+2024-12-31,KZ,national,annual,INDIVIDUAL_INCOME_TAX,2451639.95926796,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,77857582400000.0,KZT,bns,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,quarterly,NATIONAL_FUND_EQUITIES,20345643388.0,USD,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,quarterly,NATIONAL_FUND_GOLD,3314545578.0,USD,minfin,2026-08-31,level,2026-08-31
@@ -3926,6 +3932,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,RENEWABLE_ENERGY_SHARE,6.2,%,bns,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,RETAIL_TRADE,23558796625282.5,KZT,bns,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,111.039443780549,% of prior period,bns,2026-08-31,level,2026-08-31
+2024-12-31,KZ,national,annual,STATE_BUDGET_DEFICIT,-3586041.85373077,million KZT,minfin,2026-08-31,level,2026-08-31
+2024-12-31,KZ,national,annual,STATE_BUDGET_EXPENDITURE,30318236.4587978,million KZT,minfin,2026-08-31,level,2026-08-31
+2024-12-31,KZ,national,annual,STATE_BUDGET_REVENUE,27132164.9675629,million KZT,minfin,2026-08-31,level,2026-08-31
+2024-12-31,KZ,national,annual,STATE_NON_OIL_DEFICIT,-10784415.598412,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,SUBSIDIES,1122348400000.0,KZT,bns,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,SUBVENTIONS_REPUBLICAN,5265026.806,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,8713991300000.0,KZT,bns,2026-08-31,level,2026-08-31
@@ -4397,6 +4407,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,88162257500000.0,million KZT,bns,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,HOUSING_COMMISSIONED,986.2,m2 per 1000 population,bns,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,109.0,% change vs previous period,bns,2026-08-31,level,2026-08-31
+2025-12-31,KZ,national,annual,INDIVIDUAL_INCOME_TAX,2859192.3635777,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,93919024900000.0,KZT,bns,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,quarterly,NATIONAL_FUND_EQUITIES,22390532459.28,USD,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,quarterly,NATIONAL_FUND_GOLD,4223794282.72,USD,minfin,2026-08-31,level,2026-08-31
@@ -4414,6 +4425,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,REAL_WAGE_INDEX,98.1581469488405,% of prior period,bns,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,RENEWABLE_ENERGY_SHARE,7.02,%,bns,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,RETAIL_TRADE,27709302232409.5,KZT,bns,2026-08-31,level,2026-08-31
+2025-12-31,KZ,national,annual,STATE_BUDGET_DEFICIT,-4383871.06572581,million KZT,minfin,2026-08-31,level,2026-08-31
+2025-12-31,KZ,national,annual,STATE_BUDGET_EXPENDITURE,33442828.7686143,million KZT,minfin,2026-08-31,level,2026-08-31
+2025-12-31,KZ,national,annual,STATE_BUDGET_REVENUE,29871047.8198312,million KZT,minfin,2026-08-31,level,2026-08-31
+2025-12-31,KZ,national,annual,STATE_NON_OIL_DEFICIT,-11393479.3915288,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,SUBSIDIES,1304819600000.0,KZT,bns,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,SUBVENTIONS_REPUBLICAN,5755110.6055,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,9903977600000.0,KZT,bns,2026-08-31,level,2026-08-31
