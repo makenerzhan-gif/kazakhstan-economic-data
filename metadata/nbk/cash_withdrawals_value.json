@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=419",
+  "dataset_id": "formId=419,payment_instrument=cash withdrawals,period=Month,type=billions KZT",
+  "indicator_id": "CASH_WITHDRAWALS_VALUE",
+  "indicator_name": "Cash Withdrawals Value",
+  "description": "Объём снятия наличных",
+  "frequency": "monthly",
+  "unit": "billion KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Billion KZT. Value of cash withdrawals in the month -- the cash side of the payment mix.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2020-01-01",
+  "period_end": "2026-06-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

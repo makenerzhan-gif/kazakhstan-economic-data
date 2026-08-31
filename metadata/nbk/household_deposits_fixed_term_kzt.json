@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=261",
+  "dataset_id": "formId=261,currency=National currency,deposit_type=Fixed term,type=Balance (mln. tenge)",
+  "indicator_id": "HOUSEHOLD_DEPOSITS_FIXED_TERM_KZT",
+  "indicator_name": "Household Fixed-Term Deposits, Tenge",
+  "description": "Срочные депозиты физлиц в тенге",
+  "frequency": "monthly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT, end of month. Fixed-term deposits of INDIVIDUALS in second-tier banks, denominated in TENGE. Together with the _FX series this is the standard household deposit dollarization pair.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2023-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

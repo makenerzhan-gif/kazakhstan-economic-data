@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=419",
+  "dataset_id": "formId=419,payment_instrument=Total,period=Month,type=billions KZT",
+  "indicator_id": "PAYMENTS_TOTAL_VALUE",
+  "indicator_name": "Total Payments Value (All Instruments)",
+  "description": "Общий объём платежей (все инструменты)",
+  "frequency": "monthly",
+  "unit": "billion KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Billion KZT. Total value of all payments made through Kazakhstan payment instruments in the month (gross payment turnover, all instruments combined).",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2020-01-01",
+  "period_end": "2026-06-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

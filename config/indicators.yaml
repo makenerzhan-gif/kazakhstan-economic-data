@@ -1490,6 +1490,195 @@ indicators:
     category: monetary
     source_status: confirmed
 
+  - id: PAYMENTS_TOTAL_VALUE
+    name_ru: "Общий объём платежей (все инструменты)"
+    name_en: "Total Payments Value (All Instruments)"
+    agency: nbk
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: CASHLESS_PAYMENTS_VALUE
+    name_ru: "Объём безналичных платежей"
+    name_en: "Cashless Payments Value"
+    agency: nbk
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: CASH_WITHDRAWALS_VALUE
+    name_ru: "Объём снятия наличных"
+    name_en: "Cash Withdrawals Value"
+    agency: nbk
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: PAYMENT_CARDS_VALUE
+    name_ru: "Объём операций по платёжным картам"
+    name_en: "Payment Card Transactions Value"
+    agency: nbk
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: HOUSEHOLD_DEPOSITS_FIXED_TERM_KZT
+    name_ru: "Срочные депозиты физлиц в тенге"
+    name_en: "Household Fixed-Term Deposits, Tenge"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: HOUSEHOLD_DEPOSITS_FIXED_TERM_FX
+    name_ru: "Срочные депозиты физлиц в инвалюте"
+    name_en: "Household Fixed-Term Deposits, Foreign Currency"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: HOUSEHOLD_DEPOSITS_DEMAND_KZT
+    name_ru: "Текущие счета и депозиты до востребования физлиц в тенге"
+    name_en: "Household Current/Demand Deposits, Tenge"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: HOUSEHOLD_DEPOSITS_DEMAND_FX
+    name_ru: "Текущие счета и депозиты до востребования физлиц в инвалюте"
+    name_en: "Household Current/Demand Deposits, Foreign Currency"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: HOUSEHOLD_DEPOSITS_SAVING_KZT
+    name_ru: "Сберегательные депозиты физлиц в тенге"
+    name_en: "Household Savings Deposits, Tenge"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: HOUSEHOLD_DEPOSITS_SAVING_FX
+    name_ru: "Сберегательные депозиты физлиц в инвалюте"
+    name_en: "Household Savings Deposits, Foreign Currency"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: LOANS_BUSINESS_KZT
+    name_ru: "Кредиты банков бизнесу в тенге"
+    name_en: "Bank Loans to Business, Tenge"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: LOANS_BUSINESS_FX
+    name_ru: "Кредиты банков бизнесу в инвалюте"
+    name_en: "Bank Loans to Business, Foreign Currency"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: LOANS_INDIVIDUALS_KZT
+    name_ru: "Кредиты банков физлицам в тенге"
+    name_en: "Bank Loans to Individuals, Tenge"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: LOANS_INDIVIDUALS_FX
+    name_ru: "Кредиты банков физлицам в инвалюте"
+    name_en: "Bank Loans to Individuals, Foreign Currency"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: LOANS_MICROFINANCE_INDIVIDUALS
+    name_ru: "Микрокредиты физлицам в тенге"
+    name_en: "Microfinance Loans to Individuals, Tenge"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: LOANS_MICROFINANCE_BUSINESS
+    name_ru: "Микрокредиты бизнесу в тенге"
+    name_en: "Microfinance Loans to Business, Tenge"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_LONG_TERM
+    name_ru: "Внешний долг РК, долгосрочный"
+    name_en: "External Debt, Long-Term"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_SHORT_TERM
+    name_ru: "Внешний долг РК, краткосрочный"
+    name_en: "External Debt, Short-Term"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: PRIVATE_EXTERNAL_DEBT_INTERCOMPANY
+    name_ru: "Частный внешний долг: внутрифирменное кредитование"
+    name_en: "Private External Debt: Intercompany Lending"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT
+    name_ru: "Частный внешний долг: банки и прочие сектора, долгосрочный"
+    name_en: "Private External Debt: Banks and Other Sectors, Long-Term"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: GOLD_BULLION_SALES
+    name_ru: "Продажи мерных золотых слитков населению"
+    name_en: "Refined Gold Bullion Bars Sold to the Public"
+    agency: nbk
+    frequency: quarterly
+    unit: "pieces"
+    category: monetary
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

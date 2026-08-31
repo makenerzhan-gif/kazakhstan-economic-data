@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=445",
+  "dataset_id": "formId=445,creditors=Banking sector,currency=National currency,period=Month,subject_type=Individuals,type=mln. of KZT, end of period",
+  "indicator_id": "LOANS_INDIVIDUALS_KZT",
+  "indicator_name": "Bank Loans to Individuals, Tenge",
+  "description": "Кредиты банков физлицам в тенге",
+  "frequency": "monthly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT, end of month. Outstanding banking-sector loans to INDIVIDUALS, in TENGE -- Kazakhstan household credit stock.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2022-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

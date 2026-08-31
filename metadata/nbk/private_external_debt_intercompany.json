@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=340",
+  "dataset_id": "formId=340,class_type=Private Sector External Debt,matiruty=Long-term,name_eng=Direct investment: Intercompany lending,period=Quarter,type= mln USD",
+  "indicator_id": "PRIVATE_EXTERNAL_DEBT_INTERCOMPANY",
+  "indicator_name": "Private External Debt: Intercompany Lending",
+  "description": "Частный внешний долг: внутрифирменное кредитование",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million, end of quarter. Long-term private-sector external debt in the form of DIRECT INVESTMENT INTERCOMPANY LENDING -- the dominant component of Kazakhstan external debt, largely oil-sector parent-to-subsidiary financing rather than market borrowing.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2014-10-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

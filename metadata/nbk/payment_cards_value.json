@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=419",
+  "dataset_id": "formId=419,payment_instrument=Payment cards, including:,period=Month,type=billions KZT",
+  "indicator_id": "PAYMENT_CARDS_VALUE",
+  "indicator_name": "Payment Card Transactions Value",
+  "description": "Объём операций по платёжным картам",
+  "frequency": "monthly",
+  "unit": "billion KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Billion KZT. Value of payment-card transactions in the month (the source own 'Payment cards, including:' aggregate row, covering both cashless card payments and card cash withdrawals).",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2020-01-01",
+  "period_end": "2026-06-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

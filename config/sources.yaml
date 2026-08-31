@@ -1474,6 +1474,342 @@ agencies:
           mid-series frequency change as "quarterly" would mislabel the data, and the pipeline
           has no honest single frequency for it, so it is left unconnected. Found by printing
           the full date list rather than trusting the row's own period label.
+      PAYMENTS_TOTAL_VALUE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=419"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: payment_instrument='Total', period='Month', type='billions KZT'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      CASHLESS_PAYMENTS_VALUE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=419"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: payment_instrument='cashless payments', period='Month', type='billions KZT'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      CASH_WITHDRAWALS_VALUE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=419"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: payment_instrument='cash withdrawals', period='Month', type='billions KZT'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      PAYMENT_CARDS_VALUE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=419"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: payment_instrument='Payment cards, including:', period='Month', type='billions KZT'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      HOUSEHOLD_DEPOSITS_FIXED_TERM_KZT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=261"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: currency='National currency', deposit_type='Fixed term', type='Balance (mln. tenge)'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      HOUSEHOLD_DEPOSITS_FIXED_TERM_FX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=261"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: currency='Foreign currency', deposit_type='Fixed term', type='Balance (mln. tenge)'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      HOUSEHOLD_DEPOSITS_DEMAND_KZT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=261"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: currency='National currency', deposit_type='Current account and demand', type='Balance (mln. tenge)'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      HOUSEHOLD_DEPOSITS_DEMAND_FX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=261"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: currency='Foreign currency', deposit_type='Current account and demand', type='Balance (mln. tenge)'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      HOUSEHOLD_DEPOSITS_SAVING_KZT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=261"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: currency='National currency', deposit_type='Saving', type='Balance (mln. tenge)'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      HOUSEHOLD_DEPOSITS_SAVING_FX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=261"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: currency='Foreign currency', deposit_type='Saving', type='Balance (mln. tenge)'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      LOANS_BUSINESS_KZT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=445"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: creditors='Banking sector', currency='National currency', period='month', subject_type='Business', type='mln. of KZT, end of period'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      LOANS_BUSINESS_FX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=445"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: creditors='Banking sector', currency='Foreign currency', period='month', subject_type='Business', type='mln. of KZT, end of period'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      LOANS_INDIVIDUALS_KZT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=445"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: creditors='Banking sector', currency='National currency', period='month', subject_type='Individuals', type='mln. of KZT, end of period'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      LOANS_INDIVIDUALS_FX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=445"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: creditors='Banking sector', currency='Foreign currency', period='month', subject_type='Individuals', type='mln. of KZT, end of period'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      LOANS_MICROFINANCE_INDIVIDUALS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=445"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: creditors='Microfinance activities', currency='National currency', period='month', subject_type='Individuals', type='mln. of KZT, end of period'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      LOANS_MICROFINANCE_BUSINESS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=445"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: creditors='Microfinance activities', currency='National currency', period='month', subject_type='Business', type='mln. of KZT, end of period'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      EXTERNAL_DEBT_LONG_TERM:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=340"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: class_type='Total External debt of Kazakhstan', matiruty='Long-term', period='Quarter', type=' mln USD'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      EXTERNAL_DEBT_SHORT_TERM:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=340"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: class_type='Total External debt of Kazakhstan', matiruty='Short-term', period='Quarter', type=' mln USD'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      PRIVATE_EXTERNAL_DEBT_INTERCOMPANY:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=340"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: class_type='Private Sector External Debt', matiruty='Long-term', name_eng='Direct investment: Intercompany lending', period='Quarter', type=' mln USD'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=340"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: class_type='Private Sector External Debt', matiruty='Long-term', name_eng='Banks and Other Sectors', period='Quarter', type=' mln USD'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      GOLD_BULLION_SALES:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=476"
+        format: json
+        notes: >
+          2026-08-31. Discovered by an automated structural probe over the NBK form tree
+          that groups every row of a form by its full classification signature and reports
+          only groups forming exactly one row per report_date across the whole history.
+          Pinned fields: period='quarter', type='pieces'. Fetched via _fetch_nbk_exact_row, which requires these fields
+          to match AND every other classification field to be empty, then asserts exactly
+          one row per date -- so a breakdown dimension added upstream raises
+          StructuralChangeError instead of silently returning an arbitrary sub-row. Field values
+          are compared case-insensitively and whitespace-stripped, because the NBK API was
+          observed on 2026-08-31 returning the SAME field with different casing between
+          otherwise identical requests (formId=445 period came back as both 'month' and
+          'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
       RESERVES_GUIDOTTI_RATIO (declined):
         status: declined
         notes: >

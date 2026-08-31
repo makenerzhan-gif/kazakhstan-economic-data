@@ -1983,6 +1983,87 @@ def fetch_exporters_share() -> tuple[list[dict], dict]:
     )
 
 
+def _fetch_nbk_exact_row(form_id: str, match: dict, indicator_id: str, note: str,
+                          frequency: str) -> tuple[list[dict], dict]:
+    """Fetch one fully-pinned series out of an NBK form.
+
+    `match` names every classification field that must be set, and to what.
+    A row qualifies only if it matches all of them AND has NO other
+    classification field set -- so a row carrying an extra breakdown
+    dimension (by region, by counterparty, etc.) can never be silently
+    picked up as if it were the headline figure.
+
+    Requiring exactly one qualifying row per report_date is itself the
+    structural-change guard: if the source adds a new breakdown dimension to
+    this series, the count per date changes and this raises rather than
+    silently returning one arbitrary row of several.
+
+    Values are compared case-insensitively and whitespace-stripped. This is
+    NOT sloppiness: the NBK API was observed on 2026-08-31 returning the same
+    field with different casing between otherwise identical requests (formId=445
+    `period` came back as both 'month' and 'Month'), and some forms pad their
+    labels (formId=340 reports `type` as ' mln USD' with a leading space).
+    Only presentation differs -- the classification itself is the same -- so
+    exact-string pinning would break intermittently for no real reason.
+    """
+    all_rows = _fetch_nbk_form_paginated(form_id, indicator_id)
+
+    def norm(value) -> str:
+        return str(value).strip().casefold()
+
+    normalized_match = {k: norm(v) for k, v in match.items()}
+
+    def qualifies(row: dict) -> bool:
+        for key, want in normalized_match.items():
+            if key not in row or norm(row[key]) != want:
+                return False
+        for key, value in row.items():
+            if key in ("report_date", "amount") or key in match:
+                continue
+            if value not in (None, ""):
+                return False
+        return True
+
+    matching = [r for r in all_rows if qualifies(r)]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+                f"WHAT CHANGED: no rows in formId={form_id} match {match!r} with no other "
+                "classification field set",
+                "EXPECTED: one row per period for exactly this series",
+                "ACTUAL: zero matching rows",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={form_id} and update scripts/fetchers/nbk.py",
+            ])
+        )
+
+    dates = [r["report_date"] for r in matching]
+    duplicates = sorted({d for d in dates if dates.count(d) > 1})
+    if duplicates:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+                f"WHAT CHANGED: formId={form_id} now returns more than one row per date for "
+                f"{match!r} -- the source appears to have added a breakdown dimension",
+                f"EXPECTED: exactly one row per report_date",
+                f"ACTUAL: {len(duplicates)} duplicated date(s), e.g. {duplicates[:3]}",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={form_id}, identify the new "
+                "dimension, and pin it in the match dict in scripts/fetchers/nbk.py",
+            ])
+        )
+
+    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in matching]
+    records.sort(key=lambda r: r["date"])
+    pinned = ",".join(f"{k}={v}" for k, v in sorted(match.items()))
+    manifest = {
+        "frequency": frequency,
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={form_id}",
+        "dataset_id": f"formId={form_id},{pinned}",
+        "note": note,
+    }
+    return records, manifest
+
+
 def fetch_importers_share() -> tuple[list[dict], dict]:
     """NBK enterprise survey: share of enterprises engaged in import
     activity, percent, quarterly."""
@@ -1991,4 +2072,214 @@ def fetch_importers_share() -> tuple[list[dict], dict]:
         "Percent, share of surveyed respondents. NBK enterprise monitoring survey, economy-wide "
         "('All sectors'): share of enterprises engaged in IMPORT activity only (the survey "
         "reports export-only, import-only, both, and neither as four separate shares).",
+    )
+
+
+def fetch_payments_total_value() -> tuple[list[dict], dict]:
+    """Total Payments Value (All Instruments) (billion KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "419", {'period': 'Month', 'type': 'billions KZT', 'payment_instrument': 'Total'},
+        "PAYMENTS_TOTAL_VALUE",
+        "Billion KZT. Total value of all payments made through Kazakhstan payment instruments in the month (gross payment turnover, all instruments combined).",
+        "monthly",
+    )
+
+
+def fetch_cashless_payments_value() -> tuple[list[dict], dict]:
+    """Cashless Payments Value (billion KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "419", {'period': 'Month', 'type': 'billions KZT', 'payment_instrument': 'cashless payments'},
+        "CASHLESS_PAYMENTS_VALUE",
+        "Billion KZT. Value of cashless (non-cash) payments in the month. Read together with CASH_WITHDRAWALS_VALUE as a cash-vs-cashless split, and with NON_CASH_PAYMENTS_SHARE.",
+        "monthly",
+    )
+
+
+def fetch_cash_withdrawals_value() -> tuple[list[dict], dict]:
+    """Cash Withdrawals Value (billion KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "419", {'period': 'Month', 'type': 'billions KZT', 'payment_instrument': 'cash withdrawals'},
+        "CASH_WITHDRAWALS_VALUE",
+        "Billion KZT. Value of cash withdrawals in the month -- the cash side of the payment mix.",
+        "monthly",
+    )
+
+
+def fetch_payment_cards_value() -> tuple[list[dict], dict]:
+    """Payment Card Transactions Value (billion KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "419", {'period': 'Month', 'type': 'billions KZT', 'payment_instrument': 'Payment cards, including:'},
+        "PAYMENT_CARDS_VALUE",
+        "Billion KZT. Value of payment-card transactions in the month (the source own 'Payment cards, including:' aggregate row, covering both cashless card payments and card cash withdrawals).",
+        "monthly",
+    )
+
+
+def fetch_household_deposits_fixed_term_kzt() -> tuple[list[dict], dict]:
+    """Household Fixed-Term Deposits, Tenge (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "261", {'type': 'Balance (mln. tenge)', 'currency': 'National currency', 'deposit_type': 'Fixed term'},
+        "HOUSEHOLD_DEPOSITS_FIXED_TERM_KZT",
+        "Million KZT, end of month. Fixed-term deposits of INDIVIDUALS in second-tier banks, denominated in TENGE. Together with the _FX series this is the standard household deposit dollarization pair.",
+        "monthly",
+    )
+
+
+def fetch_household_deposits_fixed_term_fx() -> tuple[list[dict], dict]:
+    """Household Fixed-Term Deposits, Foreign Currency (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "261", {'type': 'Balance (mln. tenge)', 'currency': 'Foreign currency', 'deposit_type': 'Fixed term'},
+        "HOUSEHOLD_DEPOSITS_FIXED_TERM_FX",
+        "Million KZT equivalent, end of month. Fixed-term deposits of INDIVIDUALS in second-tier banks, denominated in FOREIGN CURRENCY.",
+        "monthly",
+    )
+
+
+def fetch_household_deposits_demand_kzt() -> tuple[list[dict], dict]:
+    """Household Current/Demand Deposits, Tenge (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "261", {'type': 'Balance (mln. tenge)', 'currency': 'National currency', 'deposit_type': 'Current account and demand'},
+        "HOUSEHOLD_DEPOSITS_DEMAND_KZT",
+        "Million KZT, end of month. Current-account and demand deposits of INDIVIDUALS in second-tier banks, in TENGE.",
+        "monthly",
+    )
+
+
+def fetch_household_deposits_demand_fx() -> tuple[list[dict], dict]:
+    """Household Current/Demand Deposits, Foreign Currency (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "261", {'type': 'Balance (mln. tenge)', 'currency': 'Foreign currency', 'deposit_type': 'Current account and demand'},
+        "HOUSEHOLD_DEPOSITS_DEMAND_FX",
+        "Million KZT equivalent, end of month. Current-account and demand deposits of INDIVIDUALS in second-tier banks, in FOREIGN CURRENCY.",
+        "monthly",
+    )
+
+
+def fetch_household_deposits_saving_kzt() -> tuple[list[dict], dict]:
+    """Household Savings Deposits, Tenge (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "261", {'type': 'Balance (mln. tenge)', 'currency': 'National currency', 'deposit_type': 'Saving'},
+        "HOUSEHOLD_DEPOSITS_SAVING_KZT",
+        "Million KZT, end of month. Savings deposits of INDIVIDUALS in second-tier banks, in TENGE.",
+        "monthly",
+    )
+
+
+def fetch_household_deposits_saving_fx() -> tuple[list[dict], dict]:
+    """Household Savings Deposits, Foreign Currency (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "261", {'type': 'Balance (mln. tenge)', 'currency': 'Foreign currency', 'deposit_type': 'Saving'},
+        "HOUSEHOLD_DEPOSITS_SAVING_FX",
+        "Million KZT equivalent, end of month. Savings deposits of INDIVIDUALS in second-tier banks, in FOREIGN CURRENCY.",
+        "monthly",
+    )
+
+
+def fetch_loans_business_kzt() -> tuple[list[dict], dict]:
+    """Bank Loans to Business, Tenge (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "445", {'period': 'Month', 'type': 'mln. of KZT, end of period', 'creditors': 'Banking sector', 'currency': 'National currency', 'subject_type': 'Business'},
+        "LOANS_BUSINESS_KZT",
+        "Million KZT, end of month. Outstanding banking-sector loans to BUSINESS borrowers, in TENGE.",
+        "monthly",
+    )
+
+
+def fetch_loans_business_fx() -> tuple[list[dict], dict]:
+    """Bank Loans to Business, Foreign Currency (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "445", {'period': 'Month', 'type': 'mln. of KZT, end of period', 'creditors': 'Banking sector', 'currency': 'Foreign currency', 'subject_type': 'Business'},
+        "LOANS_BUSINESS_FX",
+        "Million KZT equivalent, end of month. Outstanding banking-sector loans to BUSINESS borrowers, in FOREIGN CURRENCY -- the corporate side of credit dollarization.",
+        "monthly",
+    )
+
+
+def fetch_loans_individuals_kzt() -> tuple[list[dict], dict]:
+    """Bank Loans to Individuals, Tenge (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "445", {'period': 'Month', 'type': 'mln. of KZT, end of period', 'creditors': 'Banking sector', 'currency': 'National currency', 'subject_type': 'Individuals'},
+        "LOANS_INDIVIDUALS_KZT",
+        "Million KZT, end of month. Outstanding banking-sector loans to INDIVIDUALS, in TENGE -- Kazakhstan household credit stock.",
+        "monthly",
+    )
+
+
+def fetch_loans_individuals_fx() -> tuple[list[dict], dict]:
+    """Bank Loans to Individuals, Foreign Currency (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "445", {'period': 'Month', 'type': 'mln. of KZT, end of period', 'creditors': 'Banking sector', 'currency': 'Foreign currency', 'subject_type': 'Individuals'},
+        "LOANS_INDIVIDUALS_FX",
+        "Million KZT equivalent, end of month. Outstanding banking-sector loans to INDIVIDUALS, in FOREIGN CURRENCY (a very small residual stock since FX retail lending was restricted).",
+        "monthly",
+    )
+
+
+def fetch_loans_microfinance_individuals() -> tuple[list[dict], dict]:
+    """Microfinance Loans to Individuals, Tenge (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "445", {'period': 'Month', 'type': 'mln. of KZT, end of period', 'creditors': 'Microfinance activities', 'currency': 'National currency', 'subject_type': 'Individuals'},
+        "LOANS_MICROFINANCE_INDIVIDUALS",
+        "Million KZT, end of month. Outstanding MICROFINANCE-sector loans to INDIVIDUALS, in TENGE -- non-bank consumer credit, outside the banking-sector aggregates.",
+        "monthly",
+    )
+
+
+def fetch_loans_microfinance_business() -> tuple[list[dict], dict]:
+    """Microfinance Loans to Business, Tenge (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "445", {'period': 'Month', 'type': 'mln. of KZT, end of period', 'creditors': 'Microfinance activities', 'currency': 'National currency', 'subject_type': 'Business'},
+        "LOANS_MICROFINANCE_BUSINESS",
+        "Million KZT, end of month. Outstanding MICROFINANCE-sector loans to BUSINESS borrowers, in TENGE.",
+        "monthly",
+    )
+
+
+def fetch_external_debt_long_term() -> tuple[list[dict], dict]:
+    """External Debt, Long-Term (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "340", {'period': 'Quarter', 'type': ' mln USD', 'class_type': 'Total External debt of Kazakhstan', 'matiruty': 'Long-term'},
+        "EXTERNAL_DEBT_LONG_TERM",
+        "USD million, end of quarter. LONG-TERM portion of Kazakhstan total gross external debt. Together with EXTERNAL_DEBT_SHORT_TERM this is the maturity split behind EXTERNAL_DEBT.",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_short_term() -> tuple[list[dict], dict]:
+    """External Debt, Short-Term (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "340", {'period': 'Quarter', 'type': ' mln USD', 'class_type': 'Total External debt of Kazakhstan', 'matiruty': 'Short-term'},
+        "EXTERNAL_DEBT_SHORT_TERM",
+        "USD million, end of quarter. SHORT-TERM portion of Kazakhstan total gross external debt -- the rollover-risk component, and the numerator concept behind reserve-adequacy rules such as RESERVES_IMPORT_COVER.",
+        "quarterly",
+    )
+
+
+def fetch_private_external_debt_intercompany() -> tuple[list[dict], dict]:
+    """Private External Debt: Intercompany Lending (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "340", {'period': 'Quarter', 'type': ' mln USD', 'class_type': 'Private Sector External Debt', 'matiruty': 'Long-term', 'name_eng': 'Direct investment: Intercompany lending'},
+        "PRIVATE_EXTERNAL_DEBT_INTERCOMPANY",
+        "USD million, end of quarter. Long-term private-sector external debt in the form of DIRECT INVESTMENT INTERCOMPANY LENDING -- the dominant component of Kazakhstan external debt, largely oil-sector parent-to-subsidiary financing rather than market borrowing.",
+        "quarterly",
+    )
+
+
+def fetch_private_external_debt_banks_other_lt() -> tuple[list[dict], dict]:
+    """Private External Debt: Banks and Other Sectors, Long-Term (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "340", {'period': 'Quarter', 'type': ' mln USD', 'class_type': 'Private Sector External Debt', 'matiruty': 'Long-term', 'name_eng': 'Banks and Other Sectors'},
+        "PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT",
+        "USD million, end of quarter. Long-term private-sector external debt of BANKS AND OTHER SECTORS, excluding intercompany lending -- the market-borrowing part of private external debt.",
+        "quarterly",
+    )
+
+
+def fetch_gold_bullion_sales() -> tuple[list[dict], dict]:
+    """Refined Gold Bullion Bars Sold to the Public (pieces, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "476", {'period': 'quarter', 'type': 'pieces'},
+        "GOLD_BULLION_SALES",
+        "Number of bars. Refined gold bullion bars sold to the public by second-tier banks and non-bank exchange offices -- a retail gold-demand / household savings-behavior indicator.",
+        "quarterly",
     )

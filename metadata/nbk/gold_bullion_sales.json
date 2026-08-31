@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=476",
+  "dataset_id": "formId=476,period=quarter,type=pieces",
+  "indicator_id": "GOLD_BULLION_SALES",
+  "indicator_name": "Refined Gold Bullion Bars Sold to the Public",
+  "description": "Продажи мерных золотых слитков населению",
+  "frequency": "quarterly",
+  "unit": "pieces",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Number of bars. Refined gold bullion bars sold to the public by second-tier banks and non-bank exchange offices -- a retail gold-demand / household savings-behavior indicator.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2017-07-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

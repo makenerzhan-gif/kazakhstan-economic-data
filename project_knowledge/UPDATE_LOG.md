@@ -1187,3 +1187,49 @@ trusting the row's own `period` field.
 **205/205 confirmed indicators connected end-to-end** (62/62 NBK re-verified live via
 `scripts/update_agency.py nbk` in 4m01s; unified dataset confirmed to still carry all 205
 across imf/nbk/bns/minfin). `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — thirty-second scale-up batch: 205 -> 226 indicators (credit, deposits, payments, external debt)
+**Discovery method changed.** Instead of reading one form at a time, wrote a structural
+probe that fetches a form in full, groups every row by its complete classification
+signature, and reports only the groups that form exactly one row per report_date across
+the whole history. That turns "read the form and guess which row is the headline" into a
+mechanical check, and it surfaced far more usable series per form than manual reading had.
+
+**New shared fetcher `_fetch_nbk_exact_row(form_id, match, ...)`.** `match` pins every
+classification field that must be set; a row qualifies only if it matches all of them AND
+has no other classification field set, so a row carrying an extra breakdown dimension can
+never be mistaken for the headline figure. It then asserts exactly one row per date — which
+is itself the structural-change guard: a new upstream breakdown dimension raises
+`StructuralChangeError` rather than silently returning one arbitrary sub-row of several.
+
+**Real source defect found and handled honestly.** During verification four of the six
+loan series failed while two identical-shaped ones passed. Cause, confirmed by fetching
+formId=445 twice and diffing: the NBK API returns the SAME field with DIFFERENT CASING
+between otherwise identical requests — `period` came back as both `'month'` and `'Month'`.
+Some forms also pad labels (formId=340 reports `type` as `' mln USD'`, leading space). So
+exact-string pinning is fragile for reasons that have nothing to do with the data. The
+helper now compares values case-insensitively and whitespace-stripped; only presentation
+differs, the classification is identical. This was diagnosed by reproducing the difference,
+not by loosening the match until it passed.
+
+**NBK (21):**
+- Credit by borrower and currency (formId=445, 43 monthly pts from 2022-01):
+  LOANS_BUSINESS_KZT/FX, LOANS_INDIVIDUALS_KZT/FX, and the non-bank
+  LOANS_MICROFINANCE_INDIVIDUALS/BUSINESS — gives both the household-vs-corporate split and
+  the corporate side of credit dollarization.
+- Household deposits by currency and type (formId=261, 43 monthly pts from 2023-01):
+  HOUSEHOLD_DEPOSITS_{FIXED_TERM,DEMAND,SAVING}_{KZT,FX} — the standard deposit
+  dollarization pairs.
+- Payment system value (formId=419, 71 monthly pts from 2020-01): PAYMENTS_TOTAL_VALUE,
+  CASHLESS_PAYMENTS_VALUE, CASH_WITHDRAWALS_VALUE, PAYMENT_CARDS_VALUE — the KZT-value
+  counterpart to the existing NON_CASH_PAYMENTS_SHARE.
+- External debt maturity split (formId=340, 47 quarterly pts from 2014-Q4):
+  EXTERNAL_DEBT_LONG_TERM/SHORT_TERM (159.2 + 23.6 = 182.8 bn USD, consistent with the
+  known level), plus PRIVATE_EXTERNAL_DEBT_INTERCOMPANY (87.2 bn — the dominant component,
+  largely oil-sector parent-to-subsidiary financing rather than market borrowing) and
+  PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT.
+- GOLD_BULLION_SALES (formId=476, 36 quarterly pts from 2017-Q3) — retail gold demand.
+
+**226/226 confirmed indicators connected end-to-end** (83/83 NBK re-verified live in
+4m20s; unified dataset confirmed to carry all 226 across imf/nbk/bns/minfin).
+`pytest tests/ -q` — 29/29 passing.

@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=340",
+  "dataset_id": "formId=340,class_type=Total External debt of Kazakhstan,matiruty=Short-term,period=Quarter,type= mln USD",
+  "indicator_id": "EXTERNAL_DEBT_SHORT_TERM",
+  "indicator_name": "External Debt, Short-Term",
+  "description": "Внешний долг РК, краткосрочный",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million, end of quarter. SHORT-TERM portion of Kazakhstan total gross external debt -- the rollover-risk component, and the numerator concept behind reserve-adequacy rules such as RESERVES_IMPORT_COVER.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2014-10-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

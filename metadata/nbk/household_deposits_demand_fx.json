@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=261",
+  "dataset_id": "formId=261,currency=Foreign currency,deposit_type=Current account and demand,type=Balance (mln. tenge)",
+  "indicator_id": "HOUSEHOLD_DEPOSITS_DEMAND_FX",
+  "indicator_name": "Household Current/Demand Deposits, Foreign Currency",
+  "description": "Текущие счета и депозиты до востребования физлиц в инвалюте",
+  "frequency": "monthly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT equivalent, end of month. Current-account and demand deposits of INDIVIDUALS in second-tier banks, in FOREIGN CURRENCY.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2023-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
