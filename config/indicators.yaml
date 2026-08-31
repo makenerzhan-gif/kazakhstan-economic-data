@@ -1874,7 +1874,7 @@ indicators:
     agency: bns
     frequency: annual
     unit: "months (divide by 12 for years)"
-    category: demography
+    category: demographic
     source_status: confirmed
 
   - id: EXCHANGE_RATE_EUR_OTC

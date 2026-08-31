@@ -12,6 +12,7 @@ from __future__ import annotations
 import csv
 import io
 import sys
+import time
 from datetime import date, datetime
 from pathlib import Path
 
@@ -32,10 +33,33 @@ VALUE_COL_CANDIDATES = ["OBS_VALUE", "VALUE", "VAL"]
 SOURCE = "imf"
 
 
-def _download(url: str) -> bytes:
-    resp = requests.get(url, headers=HEADERS, timeout=30)
-    resp.raise_for_status()
-    return resp.content
+def _download(url: str, attempts: int = 3) -> bytes:
+    """Download with a retry on TRANSPORT-level failures only.
+
+    imf.org was observed on 2026-09-01 intermittently resetting connections
+    (ConnectionResetError 10054) on a couple of arbitrary indicators per run --
+    a different pair each time, which is the signature of flaky transport rather
+    than a problem with any one dataset.
+
+    Only ConnectionError/Timeout are retried. HTTP status errors are deliberately
+    NOT retried and NOT swallowed: a 404 or a 500 can mean the dataset moved or
+    changed shape, and the MASTER TASK rules require that to fail loudly rather
+    than be papered over by repetition. Retries are announced on stderr so a
+    flaky source stays visible in the run output instead of silently passing.
+    """
+    last_exc: Exception | None = None
+    for attempt in range(1, attempts + 1):
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=30)
+            resp.raise_for_status()
+            return resp.content
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as exc:
+            last_exc = exc
+            if attempt < attempts:
+                print(f"imf: transport error on {url} (attempt {attempt}/{attempts}), "
+                      f"retrying in {attempt}s: {type(exc).__name__}", file=sys.stderr)
+                time.sleep(attempt)
+    raise last_exc  # type: ignore[misc]
 
 
 def _parse_annual_csv(content: bytes, indicator_id: str, source_url: str) -> list[dict]:

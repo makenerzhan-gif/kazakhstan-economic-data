@@ -1462,3 +1462,43 @@ cut is ever wanted.
 Heuristic worth carrying forward: **forms with FEW clean series (5-8) are the top-level
 breakdowns; forms with hundreds are the granular tails.** That single ordering is what
 found the external-debt decomposition and the balance-of-payments comparative forms.
+
+## 2026-09-01 — reliability fix and two corrections found while verifying
+No new indicators in this entry; it records three things found by checking rather than by
+adding.
+
+### 1. imf.org transport flakiness — retry added (transport errors only)
+The full four-agency run at 280 indicators came back 279 ok / 1 error: IMF_POPULATION died
+on `ConnectionResetError 10054`. Re-running IMF alone then failed on a *different* pair
+(IMF_INVESTMENT_RATIO, IMF_GOV_NET_DEBT_RATIO) — a moving target, which is the signature of
+flaky transport rather than a problem with any one dataset.
+
+`imf._download` now retries up to 3 times with linear backoff, and **only** on
+`ConnectionError`/`Timeout`. HTTP status errors are deliberately NOT retried: a 404 or 500
+can mean the dataset moved or changed shape, and the MASTER TASK rules require that to fail
+loudly rather than be smoothed over by repetition. Retries print to stderr so a flaky
+source stays visible instead of silently passing. Verified: the next IMF run came back
+31/31 ok with exactly one retry message in the output — the reset happened and was
+recovered, rather than the problem simply not recurring.
+
+### 2. The pipeline's fail-loudly behaviour confirmed working
+Worth recording because it is the project's central safety property: on the run with the
+IMF error, `update_all.py` correctly refused to publish — `reports/update_report_2026-09-01.md`
+shows `Unified dataset updated: False`. The failed indicator did not reach the unified
+dataset, and no partial rebuild happened.
+
+### 3. A flaw in how these runs were being verified
+Runs had been checked with `python scripts/update_all.py 2>&1 | tail -N`. **That reports
+`tail`'s exit code, not the pipeline's** — so a non-zero exit from the pipeline would have
+been read as success. It did not cause a wrong conclusion here (the per-indicator run log
+and the report were also inspected, and they told the true story), but the habit was
+unsound. Verification should read the run log / report, or capture the exit status without
+a pipe, as done from here on.
+
+### 4. Category inconsistency corrected
+LIFE_EXPECTANCY had been added with `category: demography` while the seven existing
+population/health indicators use `category: demographic`. Corrected to `demographic`; the
+field is not consumed by the unified builder or metadata, so this is a catalogue-consistency
+fix only.
+
+**Still 280/280 indicators, all four agencies verified live.** `pytest tests/ -q` — 29/29.
