@@ -710,6 +710,22 @@ agencies:
           national params (term 741880, measure_id=7, dicIds=67, period_id=7) to see which
           candidates actually resolve. This index resolved cleanly. From BNS's Tourism
           Satellite Account. fetch_tourism_inbound_nights.
+      LIFE_EXPECTANCY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 703906
+        format: json
+        notes: >
+          2026-08-31. Taldau code 614101. Classified across three dictionaries at once
+          (region 67, locality type 64, sex 576) so it returns HTTP 500 under the default
+          single-dictionary params; real params captured from the live page ExtJS store
+          (measure_id=154, terms=741880,741917,741935, dicIds=67,64,576) and then verified
+          with a plain stateless requests.post. UNIT: the source returns MONTHS under
+          measure_id=154, not years. Verified rather than assumed -- dividing by 12
+          reproduces Kazakhstan published life expectancy across the whole series including
+          the COVID dip (2000: 65.45, 2016: 72.41, 2020: 71.37, 2024: 75.44 years). Stored
+          as returned, in months, rather than silently divided. 25 annual points, 2000-2024.
+          fetch_life_expectancy.
       MIGRATION_ARRIVALS:
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"

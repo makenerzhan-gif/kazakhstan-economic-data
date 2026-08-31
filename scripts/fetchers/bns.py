@@ -1622,3 +1622,33 @@ def fetch_tourism_inbound_nights() -> tuple[list[dict], dict]:
         "2972979", "TOURISM_INBOUND_NIGHTS",
         note="Number of nights spent in Kazakhstan by inbound visitors (Taldau code 115802). Short series -- published only from 2020.",
     )
+
+
+def fetch_life_expectancy() -> tuple[list[dict], dict]:
+    """Life expectancy at birth, MONTHS, annual.
+
+    Taldau indexId 703906 (code 614101). This index is classified across three
+    dictionaries at once (region 67, locality type 64, sex 576) and returns
+    HTTP 500 under the project's default single-dictionary params, so its real
+    params were captured from the live page's own ExtJS store
+    (Ext.ComponentQuery.query('indexTreeGrid')[0].getStore().getProxy().extraParams)
+    -- the same technique used for GDP_REAL/AVG_WAGE/RETAIL_TRADE.
+
+    UNIT WARNING: the source returns this series under measure_id=154, whose
+    values are MONTHS, not years -- 905.28 for 2024, not 75.4. That reading was
+    verified, not assumed: dividing by 12 reproduces Kazakhstan's published life
+    expectancy exactly across the whole series, including the COVID dip
+    (2000: 65.45, 2016: 72.41, 2020: 71.37, 2024: 75.44). The values are stored
+    here exactly as the source returns them, in months, rather than silently
+    divided -- divide by 12 for the conventional years figure.
+    """
+    return _fetch_taldau_annual_index(
+        "703906", "LIFE_EXPECTANCY",
+        note="Months. Life expectancy at birth for the total population "
+             "(both sexes, all localities, national). The source publishes this in MONTHS "
+             "under measure_id=154 -- divide by 12 for the conventional figure in years "
+             "(2024: 905.28 months = 75.44 years).",
+        measure_id="154",
+        terms="741880,741917,741935",
+        dic_ids="67,64,576",
+    )

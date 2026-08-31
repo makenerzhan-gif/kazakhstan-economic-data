@@ -91,6 +91,7 @@ FETCHERS = {
     "TOURISM_DOMESTIC_TRIPS": bns_fetchers.fetch_tourism_domestic_trips,
     "TOURISM_OUTBOUND_TRIPS": bns_fetchers.fetch_tourism_outbound_trips,
     "TOURISM_INBOUND_NIGHTS": bns_fetchers.fetch_tourism_inbound_nights,
+    "LIFE_EXPECTANCY": bns_fetchers.fetch_life_expectancy,
 }
 
 INDICATOR_IDS = [
@@ -122,6 +123,7 @@ INDICATOR_IDS = [
     "TOURISM_DOMESTIC_TRIPS",
     "TOURISM_OUTBOUND_TRIPS",
     "TOURISM_INBOUND_NIGHTS",
+    "LIFE_EXPECTANCY",
 ]
 
 

@@ -1307,3 +1307,32 @@ unconnected rather than published with a guess about which reading is intended.
 
 **247/247 confirmed indicators connected end-to-end** (68/68 BNS re-verified live in 53s).
 `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — thirty-fifth batch: life expectancy (247 -> 248), plus a full four-agency run
+Ran `update_all.py` across all four agencies for the first time since the per-agency
+verification shortcut was introduced: **247/247 ok, exit code 0**. That confirms the
+shortcut had not been hiding anything — BNS, NBK, Minfin and IMF all still work together,
+and the corrected KZT unit labels propagated correctly.
+
+**BNS (1): LIFE_EXPECTANCY** (Taldau indexId 703906, code 614101), 25 annual points
+2000-2024. This is a multi-dictionary index (region 67, locality type 64, sex 576) that
+returns HTTP 500 under the default params, so its real params were captured from the live
+page's own ExtJS store and then re-verified with a plain stateless request.
+
+**Unit caveat, verified rather than assumed.** The source returns this series under
+`measure_id=154`, and those values are MONTHS, not years — 905.28 for 2024, not 75.4.
+Confirmation is independent of any assumption: dividing by 12 reproduces Kazakhstan's
+published life expectancy across the entire series *including the COVID dip* — 65.45
+(2000), 72.41 (2016), 71.37 (2020), 75.44 (2024). A wrong scale factor would not reproduce
+that shape. The values are stored exactly as the source returns them, in months, with the
+unit label stating so and the note giving the /12 conversion; they are deliberately NOT
+silently divided, since the division is our inference and the months figure is the
+source's actual output.
+
+**Note for the next BNS sweep:** most remaining BNS gaps (fertility, birth/death rates,
+ICT household access, R&D, crime, environment) are multi-dictionary indexes that return
+HTTP 500 on the default params. They are not missing data — each needs one live-page param
+capture, exactly as done here. The Taldau probe already lists them separately from genuine
+misses, so the work is enumerated rather than open-ended.
+
+**248/248 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

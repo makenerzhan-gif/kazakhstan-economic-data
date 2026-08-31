@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703906",
+  "indicator_id": "LIFE_EXPECTANCY",
+  "indicator_name": "Life Expectancy at Birth",
+  "description": "Ожидаемая продолжительность жизни при рождении",
+  "frequency": "annual",
+  "unit": "months (divide by 12 for years)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Months. Life expectancy at birth for the total population (both sexes, all localities, national). The source publishes this in MONTHS under measure_id=154 -- divide by 12 for the conventional figure in years (2024: 905.28 months = 75.44 years).",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2000-12-31",
+  "period_end": "2024-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
