@@ -590,6 +590,39 @@ agencies:
           returns a hidden intermediate node requiring genuine parent/child recursion (not
           the one-shot flat query every other connected indicator uses this session); left
           for a future session with budget for that capability. fetch_poverty_headcount.
+      MIGRATION_ARRIVALS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 2929752
+        format: json
+        notes: >
+          2026-08-31. code 613201, "Внешняя миграция по всем потокам - прибытие" (external
+          migration arrivals, all flows combined). Found via keyword search ("миграция"),
+          which returned 21 related indicators (internal migration; migration by CIS/non-CIS
+          partner; external migration broken down by marital status, education, occupation) --
+          this "all flows" total was picked as the clean headline figure over the more granular
+          breakdowns. Classified across 4 dictionaries; params recovered via the live ExtJS
+          component tree (Ext.ComponentQuery.query('indexTreeGrid')[0].store.getProxy()
+          .extraParams) on the live index page (https://taldau.stat.gov.kz/ru/NewIndex/
+          GetIndex/2929752): measure_id=23, dicIds=67,749,76,576,
+          terms=741880,741917,39360,741935 -- the default single-dimension guess (measure_id=7,
+          dicIds=67) returned HTTP 500, same failure mode as AVG_WAGE/RETAIL_TRADE/CONSTRUCTION.
+          Verified live: 26 annual values (2000-2025), cross-checked against the page's own
+          rendered table -- exact match (2000: 47,442; 2025: 23,761 persons).
+          fetch_migration_arrivals.
+      MIGRATION_DEPARTURES:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 2929753
+        format: json
+        notes: >
+          2026-08-31. code 613202, "Внешняя миграция по всем потокам - выбытие" -- the paired
+          "departures" counterpart to MIGRATION_ARRIVALS, found in the same search, same
+          4-dictionary classification and params confirmed to work for this index too. Verified
+          live: 2000: 155,749 departures vs only 47,442 arrivals that same year -- a large net
+          outflow consistent with Kazakhstan's well-documented post-Soviet emigration wave --
+          falling to 7,608 by 2025, well below 2025 arrivals (23,761), a plausible reversal to
+          net inflow in recent years. fetch_migration_departures.
       ENERGY_INTENSITY:
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"

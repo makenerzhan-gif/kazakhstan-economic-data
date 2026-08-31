@@ -78,6 +78,8 @@ FETCHERS = {
     "FINAL_ENERGY_CONSUMPTION": bns_fetchers.fetch_final_energy_consumption,
     "RENEWABLE_ENERGY_SHARE": bns_fetchers.fetch_renewable_energy_share,
     "POVERTY_HEADCOUNT": bns_fetchers.fetch_poverty_headcount,
+    "MIGRATION_ARRIVALS": bns_fetchers.fetch_migration_arrivals,
+    "MIGRATION_DEPARTURES": bns_fetchers.fetch_migration_departures,
 }
 
 INDICATOR_IDS = [
@@ -98,6 +100,7 @@ INDICATOR_IDS = [
     "ENERGY_INTENSITY", "ENERGY_CONSUMPTION", "ELECTRICITY_PRODUCTION",
     "IND_PROD_MINING", "IND_PROD_MANUFACTURING", "IND_PROD_ELECTRICITY",
     "FINAL_ENERGY_CONSUMPTION", "RENEWABLE_ENERGY_SHARE", "POVERTY_HEADCOUNT",
+    "MIGRATION_ARRIVALS", "MIGRATION_DEPARTURES",
 ]
 
 

@@ -1432,3 +1432,57 @@ def fetch_poverty_headcount() -> tuple[list[dict], dict]:
         measure_id="23", dic_ids="67,270",
         terms="741880,545805",
     )
+
+
+def fetch_migration_arrivals() -> tuple[list[dict], dict]:
+    """External migration arrivals (immigration), national, annual, persons.
+    Taldau indexId 2929752 (code 613201, "Внешняя миграция по всем потокам -
+    прибытие"), found via the site's own keyword search API (keyword=
+    "миграция") among a cluster of related migration indicators (internal
+    migration, migration by CIS/non-CIS partner, migration broken down by
+    marital status/education/occupation) -- this "all flows" arrivals total
+    was picked as the clean headline external-migration figure over the
+    more granular partner/demographic breakdowns.
+
+    Classified across 4 dictionaries (region, plus 3 more) -- the default
+    single-dimension guess (measure_id=7, dic_ids=67) 500'd, same failure
+    mode as AVG_WAGE/RETAIL_TRADE/CONSTRUCTION. Params recovered via the
+    live ExtJS component tree technique (same as those indicators):
+    Ext.ComponentQuery.query('indexTreeGrid')[0].store.getProxy().extraParams
+    on the live page (https://taldau.stat.gov.kz/ru/NewIndex/GetIndex/2929752),
+    giving measure_id=23, dic_ids=67,749,76,576, terms=741880,741917,39360,741935.
+    Verified live 2026-08-31 with a plain, cookie-less requests.post using
+    these params, and cross-checked the extracted 2000-2025 values against
+    the page's own rendered chart/table -- exact match (e.g. 2000: 47,442;
+    2025: 23,761)."""
+    return _fetch_taldau_annual_index(
+        "2929752", "MIGRATION_ARRIVALS",
+        note="External migration arrivals (immigration), national total, persons. All migration "
+        "flows combined (not broken down by CIS/non-CIS partner or demographic group). Taldau "
+        "indexId 2929752.",
+        measure_id="23", dic_ids="67,749,76,576",
+        terms="741880,741917,39360,741935",
+    )
+
+
+def fetch_migration_departures() -> tuple[list[dict], dict]:
+    """External migration departures (emigration), national, annual, persons.
+    Taldau indexId 2929753 (code 613202, "Внешняя миграция по всем потокам -
+    выбытие") -- the paired "departures" counterpart to MIGRATION_ARRIVALS,
+    found in the same search. Same 4-dictionary classification and params as
+    MIGRATION_ARRIVALS confirmed to work for this index too (both indices
+    share the same underlying region/demographic dictionary structure, per
+    the site's own paired-indicator convention). Verified live 2026-08-31:
+    2000: 155,749 departures vs only 47,442 arrivals that same year (a large
+    net outflow, consistent with Kazakhstan's well-documented post-Soviet
+    emigration wave in that period) falling to 7,608 by 2025, well below
+    2025 arrivals (23,761) -- a plausible reversal to net inflow in recent
+    years."""
+    return _fetch_taldau_annual_index(
+        "2929753", "MIGRATION_DEPARTURES",
+        note="External migration departures (emigration), national total, persons. All migration "
+        "flows combined (not broken down by CIS/non-CIS partner or demographic group). Taldau "
+        "indexId 2929753.",
+        measure_id="23", dic_ids="67,749,76,576",
+        terms="741880,741917,39360,741935",
+    )

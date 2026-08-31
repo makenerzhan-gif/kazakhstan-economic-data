@@ -1229,6 +1229,24 @@ indicators:
     category: demographic
     source_status: confirmed
 
+  - id: MIGRATION_ARRIVALS
+    name_ru: "Внешняя миграция по всем потокам - прибытие"
+    name_en: "External Migration Arrivals"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: demographic
+    source_status: confirmed
+
+  - id: MIGRATION_DEPARTURES
+    name_ru: "Внешняя миграция по всем потокам - выбытие"
+    name_en: "External Migration Departures"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: demographic
+    source_status: confirmed
+
   - id: GOV_WAGES_EXPENDITURE
     name_ru: "Расходы республиканского бюджета на заработную плату"
     name_en: "Republican Budget Wages Expenditure"

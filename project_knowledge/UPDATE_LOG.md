@@ -923,3 +923,30 @@ subsidies trilogy already covered at republican and local level.
   LOCAL_GOV_*_EXPENDITURE indicators.
 
 **166/166 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — twenty-third scale-up batch: 166 -> 168 indicators (first new BNS pass this session)
+User asked directly what's still missing for a comprehensive analysis of Kazakhstan's economy.
+Answered by category breakdown of the current 166 indicators, and flagged migration and
+trade-by-partner/commodity as the most realistic gaps to close within the existing 4 sources
+(BNS/NBK/Minfin/IMF), as opposed to genuinely out-of-scope items (oil/gas production volumes,
+which live with KMG/the energy ministry, not these 4 statistical agencies).
+
+Checked trade-by-partner first: downloaded and inspected the actual EXPORTS/IMPORTS source
+files (56MB/93MB XLSX) already used for the existing totals -- confirmed they break down by
+HS/TNVED commodity code and by Kazakhstan REGION, but NOT by partner country. Trade-by-partner
+would need a genuinely different, not-yet-located BNS dataset -- left unpursued rather than
+searched further this batch.
+
+**BNS (2), the first new BNS indicators added this session (every prior batch was Minfin):**
+MIGRATION_ARRIVALS / MIGRATION_DEPARTURES -- found via Taldau's keyword search ("миграция"),
+which returned 21 related indicators (internal migration; CIS/non-CIS partner breakdown;
+demographic breakdowns by marital status/education/occupation); picked the "all flows" totals
+as the clean headline pair over the more granular variants. Classified across 4 dictionaries,
+cracked via the same live-ExtJS-component-tree technique established for AVG_WAGE/RETAIL_TRADE/
+CONSTRUCTION/POVERTY_HEADCOUNT (Claude Browser tool, reading the page's own already-loaded grid
+component's live request params rather than guessing). Verified live, then cross-checked against
+known history: 2000 shows 155,749 departures vs only 47,442 arrivals -- a large net outflow
+consistent with Kazakhstan's well-documented post-Soviet emigration wave -- reversing to a net
+inflow by 2025 (23,761 arrivals vs 7,608 departures).
+
+**168/168 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
