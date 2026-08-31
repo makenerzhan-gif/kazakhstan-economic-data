@@ -3526,6 +3526,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,GDP_REAL,105.1,"index (physical volume, % of previous period)",bns,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,GFCF,29811815900000.0,million KZT,bns,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,117.1,% change vs previous period,bns,2026-08-31,level,2026-08-31
+2023-12-31,KZ,national,annual,GOV_ACCOUNTS_PAYABLE,297690.4338,million KZT,minfin,2026-08-31,level,2026-08-31
+2023-12-31,KZ,national,annual,GOV_ACCOUNTS_RECEIVABLE,1555237.9028,million KZT,minfin,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,GOV_DEBT_SERVICING,1808139.55666852,million KZT,minfin,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,1100070.89208516,million KZT,minfin,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,1284728.34177321,million KZT,minfin,2026-08-31,level,2026-08-31
@@ -3888,6 +3890,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,GDP_REAL,105.0,"index (physical volume, % of previous period)",bns,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,GFCF,33469209900000.0,million KZT,bns,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,106.5,% change vs previous period,bns,2026-08-31,level,2026-08-31
+2024-12-31,KZ,national,annual,GOV_ACCOUNTS_PAYABLE,610473.9903,million KZT,minfin,2026-08-31,level,2026-08-31
+2024-12-31,KZ,national,annual,GOV_ACCOUNTS_RECEIVABLE,1868100.0978,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,GOV_DEBT_SERVICING,2181991.4826103,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,1038491.17342789,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,1687045.69283749,million KZT,minfin,2026-08-31,level,2026-08-31
@@ -4010,7 +4014,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,15813.144032362,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,REMITTANCES_SENT,45008.2050012,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-02-28,KZ,national,irregular,CUSTOMS_DUTIES,211524.49517072,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-02-28,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,18397.78606,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-02-28,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,96555.86459701,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-02-28,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,192.41,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-02-28,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,737170.079,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-02-28,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,33689.77497058,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-02-28,KZ,national,irregular,GOV_WAGES_EXPENDITURE,180170.77747968,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4044,7 +4050,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-31,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-337893.34243903897,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,quarterly,GG_SOCIAL_CONTRIBUTIONS,467184.10500000004,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,quarterly,GG_TAXES,5147342.0397996595,million KZT,minfin,2026-08-31,level,2026-08-31
+2025-03-31,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,43106.1,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,207819.60611552,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-03-31,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,239.71,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,1090312.542,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,38684.86812658,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,281769.04392764,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4131,7 +4139,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-30,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-1936306.6720745338,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,quarterly,GG_SOCIAL_CONTRIBUTIONS,540837.6079999999,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,quarterly,GG_TAXES,5613653.083724328,million KZT,minfin,2026-08-31,level,2026-08-31
+2025-06-30,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,310612.23612,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,578778.1846126,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-06-30,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,3457.9300000000003,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,2158513.735,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,129731.75751781,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,irregular,GOV_WAGES_EXPENDITURE,570045.14241107,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4171,7 +4181,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,monthly,REMITTANCES_SENT,70447.506300936,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-07-14,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-31,level,2026-08-31
 2025-07-31,KZ,national,irregular,CUSTOMS_DUTIES,1199236.93435166,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-07-31,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,325048.78472000005,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-07-31,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,585956.90578026,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-07-31,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,3598.2,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-07-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,2515548.831,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-07-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,139131.75751781,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-07-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,666220.08366026,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4200,7 +4212,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,REMITTANCES_RECEIVED,20856.20042472,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,REMITTANCES_SENT,72705.211344807,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-08-31,KZ,national,irregular,CUSTOMS_DUTIES,1411349.86754375,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-08-31,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,337534.1023,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-08-31,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,924451.68804013,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-08-31,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,3887.03,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-08-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,2873985.339,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-08-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,187096.88287821,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-08-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,757588.68915695,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4234,7 +4248,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-30,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,2420012.540493233,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,quarterly,GG_SOCIAL_CONTRIBUTIONS,524215.13400000014,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,quarterly,GG_TAXES,5685359.769993263,million KZT,minfin,2026-08-31,level,2026-08-31
+2025-09-30,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,348288.53260000004,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,1052568.03361307,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-09-30,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,4024.52,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,3231841.61,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,194472.40604145,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,irregular,GOV_WAGES_EXPENDITURE,844170.78636958,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4273,7 +4289,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,monthly,REMITTANCES_SENT,68092.222434033,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-10-13,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-31,level,2026-08-31
 2025-10-31,KZ,national,irregular,CUSTOMS_DUTIES,1808570.55602749,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-10-31,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,387808.0230800001,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-10-31,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,1228952.7836174,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-10-31,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,4224.26,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-10-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,3585790.894,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-10-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,252240.18289344,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-10-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,935910.22096525,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4301,7 +4319,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,17297.77484655,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,REMITTANCES_SENT,55540.770486322,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-11-30,KZ,national,irregular,CUSTOMS_DUTIES,2002525.13482824,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-11-30,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,395858.44862000004,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-11-30,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,1597148.16659897,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-11-30,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,4545.42,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-11-30,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,3949043.456,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-11-30,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,413622.6786086,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-11-30,KZ,national,irregular,GOV_WAGES_EXPENDITURE,1015393.44607841,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4356,6 +4376,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,2180188.231371036,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,quarterly,GG_SOCIAL_CONTRIBUTIONS,571828.1020000007,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,quarterly,GG_TAXES,7018565.730410015,million KZT,minfin,2026-08-31,level,2026-08-31
+2025-12-31,KZ,national,annual,GOV_ACCOUNTS_PAYABLE,1025433.3569,million KZT,minfin,2026-08-31,level,2026-08-31
+2025-12-31,KZ,national,annual,GOV_ACCOUNTS_RECEIVABLE,1359861.3963,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,GOV_DEBT_SERVICING,2607867.07141594,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,GOV_DEFENSE_SPENDING,1149535.09118012,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,GOV_EDUCATION_SPENDING,1459703.22708499,million KZT,minfin,2026-08-31,level,2026-08-31
@@ -4452,7 +4474,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,monthly,REMITTANCES_SENT,37885.147253329,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-01-26,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-31,level,2026-08-31
 2026-01-31,KZ,national,irregular,CUSTOMS_DUTIES,66067.6032816,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-01-31,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,19655.0,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-01-31,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,1038.25063271,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-01-31,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,27.3,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-01-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,430646.023,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-01-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,6318.84247,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-01-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,61529.58985924,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4484,7 +4508,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-26,KZ,national,daily,TONIA,17.34,%,nbk,2026-08-31,level,2026-08-31
 2026-02-27,KZ,national,daily,TONIA,17.8,%,nbk,2026-08-31,level,2026-08-31
 2026-02-28,KZ,national,irregular,CUSTOMS_DUTIES,136357.89648719,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-02-28,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,29246.476010000002,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-02-28,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,64366.01472542,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-02-28,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,579.73,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-02-28,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,837970.387,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-02-28,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,34496.21587,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-02-28,KZ,national,irregular,GOV_WAGES_EXPENDITURE,154771.97288396,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4545,7 +4571,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-30,KZ,national,daily,TONIA,17.81,%,nbk,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,irregular,CUSTOMS_DUTIES,360761.31747095,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,quarterly,GDP_NOMINAL,34102358100000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
+2026-03-31,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,97830.27543000001,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,84218.42274457,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-03-31,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,699.9100000000001,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,1240814.106,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,35310.83917,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,246566.9662505,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4611,6 +4639,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-27,KZ,national,daily,TONIA,17.71,%,nbk,2026-08-31,level,2026-08-31
 2026-04-28,KZ,national,daily,TONIA,17.87,%,nbk,2026-08-31,level,2026-08-31
 2026-04-29,KZ,national,daily,TONIA,18.0,%,nbk,2026-08-31,level,2026-08-31
+2026-04-30,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,2065.43,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-04-30,KZ,national,daily,TONIA,18.41,%,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.594739,index,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,DEPOSITS_TOTAL,47139660.7658384,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4660,6 +4689,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-29,KZ,national,daily,TONIA,18.42,%,nbk,2026-08-31,level,2026-08-31
 2026-05-30,KZ,national,daily,TONIA,18.71,%,nbk,2026-08-31,level,2026-08-31
 2026-05-31,KZ,national,irregular,CUSTOMS_DUTIES,841966.76921362,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-05-31,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,393908.82220000005,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-05-31,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,370313.62007573,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-05-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,2048661.101,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-05-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,205261.99334018,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4718,7 +4748,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-29,KZ,national,daily,TONIA,16.83,%,nbk,2026-08-31,level,2026-08-31
 2026-06-30,KZ,national,irregular,CUSTOMS_DUTIES,1164587.90739074,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-06-30,KZ,national,quarterly,GDP_NOMINAL,70948693300000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
+2026-06-30,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,455695.2147,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-06-30,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,440478.89100685,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-06-30,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,3394.45,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-06-30,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,2454119.434,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-06-30,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,259102.49153863,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-06-30,KZ,national,irregular,GOV_WAGES_EXPENDITURE,488809.26609373,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31

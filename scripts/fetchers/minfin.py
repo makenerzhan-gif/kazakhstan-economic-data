@@ -898,22 +898,24 @@ SUBVENTIONS_ROW_LABEL = "Республикалық бюджеттен субв�
 ANNUAL_YEAR_HEADER_RE = re.compile(r"^\s*(\d{4})\s*ж\.\s*есеп")
 
 
-def fetch_subventions_republican() -> tuple[list[dict], dict]:
-    """Subventions (unconditional transfers) from the republican budget to
-    regional budgets, million KZT, annual. Verified live 2026-08-30: matched
-    exactly once in the most recent 'Statistical bulletin' document, 3
-    genuine annual columns (2023-2025) -- the same document's Jan-Jun 2026
-    partial-year column is deliberately excluded (its header contains a
-    month-range, detected and skipped) to avoid mixing a partial year into
-    an annual series. Values: 4,995,054.75 (2023) to 5,755,110.61 (2025)
-    million KZT.
+def _fetch_bulletin_annual_row(sheet_name: str, row_matcher, indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    """Shared fetcher for the "single latest document, multi-year-ANNUAL-
+    column" layout used by several Statistical Bulletin sheets (as opposed to
+    _fetch_bulletin_row's "iterate all 13 vintages, year-to-date cumulative"
+    layout) -- one document already contains several full calendar years as
+    separate columns (e.g. '2023 ж. есеп', '2024 ж. есеп', '2025 ж. есеп'),
+    so only the single most recent bulletin is needed. A same-document
+    current-year PARTIAL-period column (e.g. '2026 ж. қаңтар-наурыз') is
+    deliberately excluded because its header text doesn't match the
+    'YYYY ж. есеп' pattern -- not via special-casing, just because the regex
+    requires the literal word 'есеп' (annual report) right after the year.
     """
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
     bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
-                "STRUCTURAL CHANGE DETECTED in minfin/SUBVENTIONS_REPUBLICAN",
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
                 f"WHAT CHANGED: no document title under directions={BUDGET_DIRECTION_ID} contains {STATISTICAL_BULLETIN_TITLE_MARKER!r}",
                 "EXPECTED: at least one 'Statistical bulletin as of ...' document",
                 "ACTUAL: not found in the current listing",
@@ -926,8 +928,8 @@ def fetch_subventions_republican() -> tuple[list[dict], dict]:
 
     today = date.today()
     ext = "xls" if file_path.lower().endswith(".xls") else "xlsx"
-    raw_store.save_raw_bytes(SOURCE, "SUBVENTIONS_REPUBLICAN", today, ext, content)
-    raw_store.write_download_manifest(SOURCE, "SUBVENTIONS_REPUBLICAN", today, {
+    raw_store.save_raw_bytes(SOURCE, indicator_id, today, ext, content)
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
         "downloaded_at": datetime.now().isoformat(),
         "source_document_id": doc["id"], "source_title": doc.get("title"),
         "source_url": GOV_KZ_BASE + file_path,
@@ -935,12 +937,12 @@ def fetch_subventions_republican() -> tuple[list[dict], dict]:
 
     kind, wb = _open_workbook(content, file_path)
     sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
-    target_sheet = next((s for s in sheet_names if s.strip() == BULLETIN_TRANSFERS_SHEET_NAME), None)
+    target_sheet = next((s for s in sheet_names if s.strip() == sheet_name), None)
     if target_sheet is None:
         raise validation.StructuralChangeError(
             "\n".join([
-                "STRUCTURAL CHANGE DETECTED in minfin/SUBVENTIONS_REPUBLICAN",
-                f"WHAT CHANGED: no sheet named {BULLETIN_TRANSFERS_SHEET_NAME!r} in the latest bulletin",
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: no sheet named {sheet_name!r} in the latest bulletin",
                 f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path} and update scripts/fetchers/minfin.py",
             ])
         )
@@ -949,12 +951,12 @@ def fetch_subventions_republican() -> tuple[list[dict], dict]:
     header_row = next((r for r in rows if r and any(
         isinstance(c, str) and ANNUAL_YEAR_HEADER_RE.match(c) for c in r if c
     )), None)
-    target_row = next((r for r in rows if r and len(r) > 1 and r[1] == SUBVENTIONS_ROW_LABEL), None)
+    target_row = next((r for r in rows if r and row_matcher(r)), None)
     if header_row is None or target_row is None:
         raise validation.StructuralChangeError(
             "\n".join([
-                "STRUCTURAL CHANGE DETECTED in minfin/SUBVENTIONS_REPUBLICAN",
-                f"WHAT CHANGED: could not find header row (annual year labels) or target row ({SUBVENTIONS_ROW_LABEL!r})",
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                "WHAT CHANGED: could not find header row (annual year labels) or target row",
                 f"ACTUAL: header_row found={header_row is not None}, target_row found={target_row is not None}",
                 f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path} and update scripts/fetchers/minfin.py",
             ])
@@ -976,7 +978,7 @@ def fetch_subventions_republican() -> tuple[list[dict], dict]:
     if not records:
         raise validation.StructuralChangeError(
             "\n".join([
-                "STRUCTURAL CHANGE DETECTED in minfin/SUBVENTIONS_REPUBLICAN",
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
                 "WHAT CHANGED: zero year/value pairs extracted",
                 "ACTION REQUIRED: inspect the sheet layout and update scripts/fetchers/minfin.py",
             ])
@@ -985,14 +987,30 @@ def fetch_subventions_republican() -> tuple[list[dict], dict]:
     manifest = {
         "frequency": "annual",
         "source_url": GOV_KZ_BASE + file_path,
-        "dataset_id": f"gov.kz-doc-{doc['id']},sheet={BULLETIN_TRANSFERS_SHEET_NAME}",
-        "note": (
-            "Million KZT. Annual totals only (calendar-year reports); the same document's "
-            "current-year partial-period column is deliberately excluded to avoid mixing a "
-            "partial year into an annual series."
-        ),
+        "dataset_id": f"gov.kz-doc-{doc['id']},sheet={sheet_name}",
+        "note": note,
     }
     return records, manifest
+
+
+def fetch_subventions_republican() -> tuple[list[dict], dict]:
+    """Subventions (unconditional transfers) from the republican budget to
+    regional budgets, million KZT, annual. Verified live 2026-08-30: matched
+    exactly once in the most recent 'Statistical bulletin' document, 3
+    genuine annual columns (2023-2025) -- the same document's Jan-Jun 2026
+    partial-year column is deliberately excluded (its header contains a
+    month-range, detected and skipped) to avoid mixing a partial year into
+    an annual series. Values: 4,995,054.75 (2023) to 5,755,110.61 (2025)
+    million KZT.
+    """
+    return _fetch_bulletin_annual_row(
+        BULLETIN_TRANSFERS_SHEET_NAME,
+        lambda r: len(r) > 1 and r[1] == SUBVENTIONS_ROW_LABEL,
+        "SUBVENTIONS_REPUBLICAN",
+        "Million KZT. Annual totals only (calendar-year reports); the same document's "
+        "current-year partial-period column is deliberately excluded to avoid mixing a "
+        "partial year into an annual series.",
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -1279,3 +1297,330 @@ def fetch_national_fund_gold() -> tuple[list[dict], dict]:
         "NATIONAL_FUND_GOLD",
         "National Fund savings-portfolio gold holdings (Алтын / Золото).",
     )
+
+
+# ---------------------------------------------------------------------------
+# GOV_ACCOUNTS_PAYABLE / GOV_ACCOUNTS_RECEIVABLE: state budget arrears --
+# found 2026-08-31 in sheets "табл 24 кв" (creditor/accounts-payable) and
+# "табл 25 кв" (debtor/accounts-receivable) of the Statistical Bulletin.
+# Same multi-year-annual-column layout as SUBVENTIONS_REPUBLICAN (uses
+# _fetch_bulletin_annual_row), so only the single latest bulletin is needed.
+# NOTE: unlike every other sheet used so far, these two are only published in
+# 3 of the 13 currently-listed bulletins (the latest, plus two ~1-year-old
+# ones) -- confirmed live via a 13-vintage scan -- but since only the latest
+# document is ever used, this doesn't affect the fetcher, only documents (for
+# anyone re-verifying) that this specific pair of sheets appears to be
+# published quarterly rather than monthly, unlike most of this document
+# family. Row matched: '3. Задолженность государственного бюджета (1+2)' --
+# the STATE BUDGET total (republican + local combined, rows 1+2 above it),
+# not either level alone. Verified live: matched exactly once per sheet.
+# ---------------------------------------------------------------------------
+BULLETIN_ACCOUNTS_PAYABLE_SHEET_NAME = "табл 24 кв"
+BULLETIN_ACCOUNTS_RECEIVABLE_SHEET_NAME = "табл 25 кв"
+STATE_BUDGET_ARREARS_TOTAL_LABEL = "3. Задолженность государственного бюджета (1+2)"
+
+
+def fetch_gov_accounts_payable() -> tuple[list[dict], dict]:
+    """State budget accounts payable (creditor arrears), republican + local
+    combined, million KZT, annual. Verified live 2026-08-31: 2023 (297,690),
+    2024 (610,474), 2025 (1,025,433) million KZT -- a striking ~3.4x rise
+    over 2 years, consistent with the run-up in local-budget arrears visible
+    in the sheet's own regional breakdown (not extracted here)."""
+    return _fetch_bulletin_annual_row(
+        BULLETIN_ACCOUNTS_PAYABLE_SHEET_NAME,
+        lambda r: any(isinstance(c, str) and c.strip() == STATE_BUDGET_ARREARS_TOTAL_LABEL for c in r if c),
+        "GOV_ACCOUNTS_PAYABLE",
+        "Million KZT. State budget accounts payable (creditor arrears) -- republican + local "
+        "budget arrears combined (rows 1+2 in the source). Annual totals only (calendar-year "
+        "reports); the same document's current-year partial-period column is deliberately "
+        "excluded to avoid mixing a partial year into an annual series.",
+    )
+
+
+def fetch_gov_accounts_receivable() -> tuple[list[dict], dict]:
+    """State budget accounts receivable (debtor arrears), republican + local
+    combined, million KZT, annual. Verified live 2026-08-31: 2023
+    (1,555,238), 2024 (1,868,100), 2025 (1,359,861) million KZT."""
+    return _fetch_bulletin_annual_row(
+        BULLETIN_ACCOUNTS_RECEIVABLE_SHEET_NAME,
+        lambda r: any(isinstance(c, str) and c.strip() == STATE_BUDGET_ARREARS_TOTAL_LABEL for c in r if c),
+        "GOV_ACCOUNTS_RECEIVABLE",
+        "Million KZT. State budget accounts receivable (debtor arrears) -- republican + local "
+        "budget arrears combined (rows 1+2 in the source). Annual totals only (calendar-year "
+        "reports); the same document's current-year partial-period column is deliberately "
+        "excluded to avoid mixing a partial year into an annual series.",
+    )
+
+
+# ---------------------------------------------------------------------------
+# GOV_FINANCIAL_ASSETS_SOLD: proceeds to the state budget from selling state
+# financial assets (equity stakes, securities, property), million KZT,
+# year-to-date cumulative -- found 2026-08-31 in sheet "табл 16"
+# ("Приобретение и продажа финансовых активов государства"). Same
+# multi-document-backfill pattern as CUSTOMS_DUTIES (_fetch_bulletin_row
+# doesn't fit directly because this sheet's period phrasing and value-column
+# position both differ, so this is a bespoke fetcher). Row matched:
+# 'II. Общая сумма поступлений в бюджет от продажи финансовых активов
+# государства' (row II -- proceeds from SALES; row I, acquisitions, was not
+# used since it was consistently blank/None in every vintage checked -- the
+# state apparently hasn't recorded any NEW financial-asset acquisitions in
+# this reporting window, a real gap not a parsing failure). Value taken from
+# column index 1 ("barlygy" / total state-owned, republican + communal
+# combined) -- confirmed by column index 2 + index 3 (republican + communal
+# sub-columns) summing exactly to index 1 in all 13 vintages checked.
+#
+# Period phrasing on this sheet is genuinely two DIFFERENT formats across
+# vintages: most say "на январь-{end_month} {year} года" (a Jan-anchored
+# range), but the single oldest vintage instead says just "на {month} {year}
+# года" (a lone month, no range prefix) -- confirmed live and handled by a
+# regex that captures 1 or 2 month tokens and uses the LAST one present as
+# the end-month, rather than assuming "январь" is always literally present.
+# ---------------------------------------------------------------------------
+BULLETIN_FINANCIAL_ASSETS_SHEET_NAME = "табл 16"
+FINANCIAL_ASSETS_SOLD_LABEL = "II. Общая сумма поступлений в бюджет от продажи финансовых активов государства"
+TABL16_PERIOD_RE = re.compile(r"на\s+(\w+)(?:-(\w+))?\s+(\d{4})\s+года", re.IGNORECASE)
+
+
+def fetch_gov_financial_assets_sold() -> tuple[list[dict], dict]:
+    """Proceeds to the state budget from selling state financial assets
+    (equity stakes, securities, property), million KZT, year-to-date
+    cumulative. Verified live 2026-08-31: 13 documents parsed, monotonic
+    within each year (2025: 192.41 Mar to 4,545.42 Nov; 2026: 27.30 Jan to
+    3,394.45 Jun)."""
+    docs = _list_documents(directions=BUDGET_DIRECTION_ID)
+    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    if not bulletins:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in minfin/GOV_FINANCIAL_ASSETS_SOLD",
+                f"WHAT CHANGED: no document title under directions={BUDGET_DIRECTION_ID} contains {STATISTICAL_BULLETIN_TITLE_MARKER!r}",
+                "EXPECTED: at least one 'Statistical bulletin as of ...' document",
+                "ACTUAL: not found in the current listing",
+                f"ACTION REQUIRED: inspect {LISTING_URL}?directions={BUDGET_DIRECTION_ID} and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    today = date.today()
+    records: list[dict] = []
+    seen_dates: set[str] = set()
+    skipped: list[int] = []
+
+    for doc in bulletins:
+        file_path = doc["full_text"][0]["document"]
+        content = _download(file_path)
+        kind, wb = _open_workbook(content, file_path)
+        sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
+        target_sheet = next((s for s in sheet_names if s.strip() == BULLETIN_FINANCIAL_ASSETS_SHEET_NAME), None)
+        if target_sheet is None:
+            skipped.append(doc["id"])
+            continue
+
+        rows = list(_iter_rows(kind, wb, target_sheet))
+        period_match = None
+        for row in rows:
+            for cell in row:
+                if isinstance(cell, str):
+                    m = TABL16_PERIOD_RE.search(cell)
+                    if m:
+                        period_match = m
+                        break
+            if period_match:
+                break
+        target_row = next((r for r in rows if r and any(
+            isinstance(c, str) and c.strip() == FINANCIAL_ASSETS_SOLD_LABEL for c in r if c
+        )), None)
+        if period_match is None or target_row is None:
+            skipped.append(doc["id"])
+            continue
+
+        end_month_name = (period_match.group(2) or period_match.group(1)).lower()
+        end_month = RU_MONTH_TO_NUM.get(end_month_name)
+        year = int(period_match.group(3))
+        value = target_row[1] if len(target_row) > 1 else None
+        if end_month is None or value in (None, ""):
+            skipped.append(doc["id"])
+            continue
+
+        last_day = calendar.monthrange(year, end_month)[1]
+        iso_date = f"{year:04d}-{end_month:02d}-{last_day:02d}"
+        raw_store.save_raw_bytes(SOURCE, f"GOV_FINANCIAL_ASSETS_SOLD_{iso_date}", today,
+                                  "xls" if file_path.lower().endswith(".xls") else "xlsx", content)
+        if iso_date in seen_dates:
+            continue
+        seen_dates.add(iso_date)
+        records.append({"date": iso_date, "value": float(value)})
+
+    if not records:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in minfin/GOV_FINANCIAL_ASSETS_SOLD",
+                f"WHAT CHANGED: zero of {len(bulletins)} listed bulletin documents could be parsed",
+                f"ACTUAL: all skipped, ids: {skipped}",
+                "ACTION REQUIRED: inspect a recent bulletin and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    raw_store.write_download_manifest(SOURCE, "GOV_FINANCIAL_ASSETS_SOLD", today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "n_documents_listed": len(bulletins), "n_parsed": len(records), "skipped_document_ids": skipped,
+        "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
+    })
+
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "irregular (year-to-date cumulative, roughly monthly)",
+        "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
+        "dataset_id": f"gov.kz-statistical-bulletin-listing,sheet={BULLETIN_FINANCIAL_ASSETS_SHEET_NAME}",
+        "note": (
+            f"Built from {len(records)} of {len(bulletins)} listed 'Statistical bulletin' "
+            f"documents ({len(skipped)} skipped). Million KZT, state property (republican + "
+            "communal combined). YEAR-TO-DATE CUMULATIVE, resets near zero each January. "
+            "Specifically proceeds from SELLING state financial assets (row II); the "
+            "corresponding row I, new ACQUISITIONS, was consistently blank in every vintage "
+            "checked -- a real gap in the source, not a parsing omission. Document TITLES are "
+            "NOT used to determine period -- only each document's own internal period text is "
+            "trusted."
+        ),
+    }
+    return records, manifest
+
+
+# ---------------------------------------------------------------------------
+# GOV_AUDIT_VIOLATIONS_AMOUNT: total amount of financial violations detected
+# by the Committee for Internal State Audit (Ministry of Finance), million
+# KZT, year-to-date cumulative -- found 2026-08-31 in sheet "28 табл" (note
+# the reversed numbering -- "28 табл" not "табл 28" -- confirmed a stable
+# quirk of this specific sheet's name, present in all 13 vintages). A
+# compliance/anti-corruption metric, structurally unlike any other minfin
+# indicator so far. Row matched: 'сумма выявленных нарушений, всего' (total
+# amount of detected violations); value at a FIXED column index (2), unlike
+# _fetch_bulletin_row's "second-to-last column" convention -- confirmed
+# stable in all 13 vintages checked.
+#
+# Period parsed from the sheet's own Kazakh header text, which uses an
+# "as of {month} 1, {year}" convention (e.g. "2026 жылдың 1 шілдесіне" = "as
+# of July 1, 2026") DIFFERENT from every other sheet in this file. Confirmed
+# via a 13-vintage value scan that this is genuinely YTD CUMULATIVE (2025:
+# 18,398 as of Mar 1 (=Jan-Feb) climbing monotonically to 395,858 as of Dec 1
+# (=Jan-Nov); resets for 2026: 19,655 as of Feb 1 climbing to 455,695 as of
+# Jul 1) -- so "as of month N" is read as covering through the END of month
+# N-1. Kazakh month names only mapped for the 10 forms actually observed live
+# (қаңтарына/January and мамырына/May never appeared in the current 13-
+# document listing) -- an unobserved month name simply causes that one
+# document to be skipped (logged, not a hard failure), consistent with this
+# file's "never guess a text pattern we haven't verified" discipline.
+# ---------------------------------------------------------------------------
+BULLETIN_AUDIT_SHEET_NAME = "28 табл"
+AUDIT_VIOLATIONS_LABEL = "сумма выявленных нарушений, всего"
+AUDIT_AS_OF_RE = re.compile(r"(\d{4})\s*жылдың\s+1\s+([a-zа-яәғқңөұүһі]+)", re.IGNORECASE)
+KZ_ASOF_MONTH_TO_NUM = {
+    "ақпанына": 2, "наурызына": 3, "сәуіріне": 4, "маусымына": 6, "шілдесіне": 7,
+    "тамызына": 8, "қыркүйегіне": 9, "қазанына": 10, "қарашасына": 11, "желтоқсанына": 12,
+}
+
+
+def fetch_gov_audit_violations_amount() -> tuple[list[dict], dict]:
+    """Total amount of financial violations detected by Minfin's Committee
+    for Internal State Audit, million KZT, year-to-date cumulative. Verified
+    live 2026-08-31: 13 documents parsed, monotonic within each year (2025:
+    18,398 Feb to 395,858 Nov; 2026: 19,655 Jan to 455,695 Jun)."""
+    docs = _list_documents(directions=BUDGET_DIRECTION_ID)
+    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    if not bulletins:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in minfin/GOV_AUDIT_VIOLATIONS_AMOUNT",
+                f"WHAT CHANGED: no document title under directions={BUDGET_DIRECTION_ID} contains {STATISTICAL_BULLETIN_TITLE_MARKER!r}",
+                "EXPECTED: at least one 'Statistical bulletin as of ...' document",
+                "ACTUAL: not found in the current listing",
+                f"ACTION REQUIRED: inspect {LISTING_URL}?directions={BUDGET_DIRECTION_ID} and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    today = date.today()
+    records: list[dict] = []
+    seen_dates: set[str] = set()
+    skipped: list[int] = []
+
+    for doc in bulletins:
+        file_path = doc["full_text"][0]["document"]
+        content = _download(file_path)
+        kind, wb = _open_workbook(content, file_path)
+        sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
+        target_sheet = next((s for s in sheet_names if s.strip() == BULLETIN_AUDIT_SHEET_NAME), None)
+        if target_sheet is None:
+            skipped.append(doc["id"])
+            continue
+
+        rows = list(_iter_rows(kind, wb, target_sheet))
+        period_match = None
+        for row in rows:
+            for cell in row:
+                if isinstance(cell, str):
+                    m = AUDIT_AS_OF_RE.search(cell)
+                    if m:
+                        period_match = m
+                        break
+            if period_match:
+                break
+        target_row = next((r for r in rows if r and any(
+            isinstance(c, str) and c.strip() == AUDIT_VIOLATIONS_LABEL for c in r if c
+        )), None)
+        if period_match is None or target_row is None:
+            skipped.append(doc["id"])
+            continue
+
+        as_of_month = KZ_ASOF_MONTH_TO_NUM.get(period_match.group(2).lower())
+        year = int(period_match.group(1))
+        value = target_row[2] if len(target_row) > 2 else None
+        if as_of_month is None or value in (None, ""):
+            skipped.append(doc["id"])
+            continue
+
+        covered_month = as_of_month - 1
+        covered_year = year
+        if covered_month == 0:
+            covered_month = 12
+            covered_year -= 1
+        last_day = calendar.monthrange(covered_year, covered_month)[1]
+        iso_date = f"{covered_year:04d}-{covered_month:02d}-{last_day:02d}"
+        raw_store.save_raw_bytes(SOURCE, f"GOV_AUDIT_VIOLATIONS_AMOUNT_{iso_date}", today,
+                                  "xls" if file_path.lower().endswith(".xls") else "xlsx", content)
+        if iso_date in seen_dates:
+            continue
+        seen_dates.add(iso_date)
+        records.append({"date": iso_date, "value": float(value)})
+
+    if not records:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in minfin/GOV_AUDIT_VIOLATIONS_AMOUNT",
+                f"WHAT CHANGED: zero of {len(bulletins)} listed bulletin documents could be parsed",
+                f"ACTUAL: all skipped, ids: {skipped}",
+                "ACTION REQUIRED: inspect a recent bulletin and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    raw_store.write_download_manifest(SOURCE, "GOV_AUDIT_VIOLATIONS_AMOUNT", today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "n_documents_listed": len(bulletins), "n_parsed": len(records), "skipped_document_ids": skipped,
+        "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
+    })
+
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "irregular (year-to-date cumulative, roughly monthly)",
+        "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
+        "dataset_id": f"gov.kz-statistical-bulletin-listing,sheet={BULLETIN_AUDIT_SHEET_NAME}",
+        "note": (
+            f"Built from {len(records)} of {len(bulletins)} listed 'Statistical bulletin' "
+            f"documents ({len(skipped)} skipped). Million KZT. Total amount of financial "
+            "violations detected by Minfin's Committee for Internal State Audit through on-site "
+            "audits, YEAR-TO-DATE CUMULATIVE, resets near zero each January. Source header reads "
+            "'as of {month} 1' (e.g. 'as of July 1' for a document covering January-June); "
+            "stamped here at the END of the month BEFORE the stated 'as of' month. Document "
+            "TITLES are NOT used to determine period -- only each document's own internal period "
+            "text is trusted."
+        ),
+    }
+    return records, manifest

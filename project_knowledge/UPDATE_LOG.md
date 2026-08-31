@@ -789,3 +789,34 @@ alone -- verified live that this correctly grabs the substantial savings-portfol
 (USD 30.8-32.4bn across quarters) rather than the always-near-zero stabilization one.
 
 **148/148 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — nineteenth scale-up batch: 148 -> 152 indicators
+Explored the remaining unmapped sheets of the "Statistical bulletin" document (табл 15, 16,
+19-29, 28), a mix of budget-execution, debt-servicing, procurement, and compliance tables not
+yet touched in this session.
+
+**Minfin (4):**
+- GOV_ACCOUNTS_PAYABLE / GOV_ACCOUNTS_RECEIVABLE (sheets "табл 24 кв" / "табл 25 кв", state
+  budget creditor/debtor arrears) -- same single-latest-document, multi-year-annual-column
+  pattern as SUBVENTIONS_REPUBLICAN, now factored into a shared `_fetch_bulletin_annual_row`
+  helper (SUBVENTIONS_REPUBLICAN refactored onto it too, output unchanged, re-verified live).
+  GOV_ACCOUNTS_PAYABLE shows a striking ~3.4x rise from 2023 to 2025 (297.7bn -> 1,025.4bn
+  million KZT) -- a genuine fiscal-health signal, not a data artifact (row label is an
+  explicit "(1+2)" sum of the republican+local sub-rows above it).
+- GOV_FINANCIAL_ASSETS_SOLD (sheet "табл 16", proceeds from selling state financial assets)
+  -- year-to-date cumulative, 13-document backfill like CUSTOMS_DUTIES. One genuine wrinkle:
+  the period phrasing differs between vintages (12 of 13 say "January-{end month}", the single
+  oldest says just "{month}" with no range) -- handled with a regex that accepts either form
+  rather than assuming the newer phrasing everywhere. The mirror row (new asset acquisitions)
+  was consistently blank across all 13 vintages -- a real gap in the source, left unextracted
+  rather than assumed to be always-zero.
+- GOV_AUDIT_VIOLATIONS_AMOUNT (sheet "28 табл" -- note the reversed numbering, confirmed
+  stable across all 13 vintages, not a typo) -- total amount of financial violations found by
+  Minfin's own internal audit committee, a compliance/anti-corruption metric structurally
+  unlike anything else connected so far. Confirmed genuinely YTD-cumulative (not point-in-
+  time) by checking that values climb monotonically within each year before resetting in
+  January. Uses an "as of {month} 1" Kazakh date convention unique to this sheet; only the 10
+  month-name forms actually observed live are hardcoded -- the 2 unobserved ones (January, May)
+  will safely skip rather than being guessed at if they ever appear.
+
+**152/152 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

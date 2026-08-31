@@ -1,6 +1,6 @@
 # Update report — 2026-08-31
 
-Run timestamp: 2026-08-31T07:50:38.687589
+Run timestamp: 2026-08-31T08:50:47.966178
 Unified dataset updated: True
 Tests passed: True
 
@@ -329,6 +329,22 @@ Tests passed: True
 - **minfin/NATIONAL_FUND_SAVINGS_BONDS** — fetch+validate+process: ok (downloaded=6, processed=6)
 - **minfin/NATIONAL_FUND_EQUITIES** — fetch+validate+process: ok (downloaded=6, processed=6)
 - **minfin/NATIONAL_FUND_GOLD** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **minfin/GOV_ACCOUNTS_PAYABLE** — fetch+validate+process: ok (downloaded=3, processed=3)
+  - warning: Unexpected jump of 105.1% between 2023-12-31 (297690.4338) and 2024-12-31 (610473.9903).
+  - warning: Unexpected jump of 68.0% between 2024-12-31 (610473.9903) and 2025-12-31 (1025433.3569).
+- **minfin/GOV_ACCOUNTS_RECEIVABLE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/GOV_FINANCIAL_ASSETS_SOLD** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Unexpected jump of 1342.5% between 2025-03-31 (239.71) and 2025-06-30 (3457.9300000000003).
+  - warning: Unexpected jump of 99.4% between 2025-11-30 (4545.42) and 2026-01-31 (27.3).
+  - warning: Unexpected jump of 2023.6% between 2026-01-31 (27.3) and 2026-02-28 (579.73).
+  - warning: Unexpected jump of 195.1% between 2026-03-31 (699.9100000000001) and 2026-04-30 (2065.43).
+  - warning: Unexpected jump of 64.3% between 2026-04-30 (2065.43) and 2026-06-30 (3394.45).
+- **minfin/GOV_AUDIT_VIOLATIONS_AMOUNT** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Unexpected jump of 134.3% between 2025-02-28 (18397.78606) and 2025-03-31 (43106.1).
+  - warning: Unexpected jump of 620.6% between 2025-03-31 (43106.1) and 2025-06-30 (310612.23612).
+  - warning: Unexpected jump of 95.0% between 2025-11-30 (395858.44862000004) and 2026-01-31 (19655.0).
+  - warning: Unexpected jump of 234.5% between 2026-02-28 (29246.476010000002) and 2026-03-31 (97830.27543000001).
+  - warning: Unexpected jump of 302.6% between 2026-03-31 (97830.27543000001) and 2026-05-31 (393908.82220000005).
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% between 1995-01-01 (-8.2) and 1996-01-01 (0.5).
   - warning: Unexpected jump of 240.0% between 1996-01-01 (0.5) and 1997-01-01 (1.7).

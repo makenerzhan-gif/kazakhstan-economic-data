@@ -1470,6 +1470,87 @@ agencies:
           2026-08-31. Same sheet. Row "Золото" (gold) not ambiguous, matched exactly once per
           vintage. Verified live: USD 3.31bn (2024-Q4) to USD 4.46bn (2026-Q1). fetch_national_
           fund_gold.
+      GOV_ACCOUNTS_PAYABLE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 24 кв"
+        target_row_label: "3. Задолженность государственного бюджета (1+2)"
+        format: xlsx
+        frequency: annual
+        notes: >
+          2026-08-31. "State budget accounts payable (creditor arrears)" -- same multi-year-
+          annual-column layout as SUBVENTIONS_REPUBLICAN (табл 18), so only the single latest
+          bulletin is needed. NOTE: unlike most sheets in this document, "табл 24 кв" is only
+          present in 3 of the 13 currently-listed bulletins (the latest, plus two ~1-year-old
+          ones) -- a genuinely quarterly (not monthly) publication cadence for this specific
+          sheet -- confirmed via a 13-vintage scan, though irrelevant to the fetcher since only
+          the latest document is ever used. Row "3. Задолженность государственного бюджета
+          (1+2)" is the STATE BUDGET total (republican + local combined, per the "(1+2)" in its
+          own label, summing the two rows above it), matched exactly once. Verified live:
+          297,690 (2023), 610,474 (2024), 1,025,433 (2025) million KZT -- a striking ~3.4x rise
+          over 2 years. fetch_gov_accounts_payable.
+      GOV_ACCOUNTS_RECEIVABLE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 25 кв"
+        target_row_label: "3. Задолженность государственного бюджета (1+2)"
+        format: xlsx
+        frequency: annual
+        notes: >
+          2026-08-31. "State budget accounts receivable (debtor arrears)" -- same structure and
+          same generic row label as GOV_ACCOUNTS_PAYABLE, but a DIFFERENT sheet ("табл 25 кв",
+          "СОСТОЯНИЕ ДЕБИТОРСКОЙ ЗАДОЛЖЕННОСТИ" vs табл 24's "КРЕДИТОРСКОЙ"), so no collision --
+          each fetcher searches only its own sheet. Verified live: 1,555,238 (2023), 1,868,100
+          (2024), 1,359,861 (2025) million KZT. fetch_gov_accounts_receivable.
+      GOV_FINANCIAL_ASSETS_SOLD:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 16"
+        target_row_label: "II. Общая сумма поступлений в бюджет от продажи финансовых активов государства"
+        format: xlsx
+        frequency: "irregular (year-to-date cumulative)"
+        notes: >
+          2026-08-31. "Acquisition and sale of state financial assets" -- proceeds to the state
+          budget from SELLING state financial assets (row II; row I, new ACQUISITIONS, was
+          consistently blank in every one of the 13 vintages checked -- a real gap in the
+          source, not a parsing failure). Value taken from column index 1 ("total state
+          property", republican + communal combined) -- confirmed live that column 2 + column 3
+          (the republican-only and communal-only sub-columns) sum EXACTLY to column 1 in all 13
+          vintages, confirming the column-index assumption. Period phrasing genuinely differs
+          across vintages: 12 of 13 say "на январь-{end_month} {year} года" (Jan-anchored
+          range), but the single oldest vintage instead says just "на {month} {year} года" (a
+          lone month, no range prefix) -- confirmed live and handled with a regex that captures
+          1 or 2 month tokens and uses whichever is present. Verified live: 13 documents parsed,
+          0 skipped, monotonic within each year (2025: 192.41 Feb to 4,545.42 Nov; 2026: 27.30
+          Jan to 3,394.45 Jun) million KZT. fetch_gov_financial_assets_sold.
+      GOV_AUDIT_VIOLATIONS_AMOUNT:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "28 табл (reversed numbering, not табл 28 -- confirmed stable across all 13 vintages)"
+        target_row_label: "сумма выявленных нарушений, всего"
+        format: xlsx
+        frequency: "irregular (year-to-date cumulative)"
+        notes: >
+          2026-08-31. "Results of audit measures and desk control conducted by the Committee for
+          Internal State Audit of the Ministry of Finance" -- a compliance/anti-corruption
+          metric, structurally unlike any other minfin indicator connected so far. Row "сумма
+          выявленных нарушений, всего" (total amount of violations detected) matched exactly
+          once per vintage; value at a FIXED column index (2), confirmed stable in all 13
+          vintages (unlike most other bulletin sheets, which use a "second-to-last column"
+          convention). Period parsed from the sheet's own "{year} жылдың 1 {month}ына/іне"
+          header ("as of {month} 1, {year}") -- a format unique to this sheet among everything
+          connected so far. Confirmed via a full 13-vintage value scan that this is genuinely
+          YEAR-TO-DATE CUMULATIVE (2025: 18,398 as of Mar 1 (=Jan-Feb) climbing monotonically to
+          395,858 as of Dec 1 (=Jan-Nov); resets for 2026: 19,655 as of Feb 1 to 455,695 as of
+          Jul 1) -- so "as of month N" is read as covering through the END of month N-1. Kazakh
+          month names are hardcoded only for the 10 forms actually observed live across the 13
+          vintages (қаңтарына/January and мамырына/May never appeared in the current listing) --
+          an unobserved month name causes that one document to be safely skipped (logged, not a
+          hard failure) rather than guessed at. fetch_gov_audit_violations_amount.
       GOV_HEALTH_SPENDING:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"

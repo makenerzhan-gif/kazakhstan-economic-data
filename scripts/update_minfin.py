@@ -54,6 +54,10 @@ FETCHERS = {
     "NATIONAL_FUND_SAVINGS_BONDS": minfin_fetchers.fetch_national_fund_savings_bonds,
     "NATIONAL_FUND_EQUITIES": minfin_fetchers.fetch_national_fund_equities,
     "NATIONAL_FUND_GOLD": minfin_fetchers.fetch_national_fund_gold,
+    "GOV_ACCOUNTS_PAYABLE": minfin_fetchers.fetch_gov_accounts_payable,
+    "GOV_ACCOUNTS_RECEIVABLE": minfin_fetchers.fetch_gov_accounts_receivable,
+    "GOV_FINANCIAL_ASSETS_SOLD": minfin_fetchers.fetch_gov_financial_assets_sold,
+    "GOV_AUDIT_VIOLATIONS_AMOUNT": minfin_fetchers.fetch_gov_audit_violations_amount,
 }
 
 INDICATOR_IDS = [
@@ -71,6 +75,8 @@ INDICATOR_IDS = [
     "LOCAL_GOV_WAGES_EXPENDITURE", "LOCAL_GOV_CAPITAL_EXPENDITURE", "LOCAL_GOV_SUBSIDIES_EXPENDITURE",
     "NATIONAL_FUND_STABILIZATION_PORTFOLIO", "NATIONAL_FUND_SAVINGS_PORTFOLIO",
     "NATIONAL_FUND_SAVINGS_BONDS", "NATIONAL_FUND_EQUITIES", "NATIONAL_FUND_GOLD",
+    "GOV_ACCOUNTS_PAYABLE", "GOV_ACCOUNTS_RECEIVABLE",
+    "GOV_FINANCIAL_ASSETS_SOLD", "GOV_AUDIT_VIOLATIONS_AMOUNT",
 ]
 
 

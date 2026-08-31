@@ -1345,3 +1345,39 @@ indicators:
     unit: "USD"
     category: fiscal
     source_status: confirmed
+
+  - id: GOV_ACCOUNTS_PAYABLE
+    name_ru: "Кредиторская задолженность государственного бюджета"
+    name_en: "State Budget Accounts Payable"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_ACCOUNTS_RECEIVABLE
+    name_ru: "Дебиторская задолженность государственного бюджета"
+    name_en: "State Budget Accounts Receivable"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_FINANCIAL_ASSETS_SOLD
+    name_ru: "Поступления в бюджет от продажи финансовых активов государства"
+    name_en: "Proceeds from Sale of State Financial Assets"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_AUDIT_VIOLATIONS_AMOUNT
+    name_ru: "Сумма нарушений, выявленных Комитетом внутреннего государственного аудита"
+    name_en: "Amount of Violations Detected by the Internal State Audit Committee"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
