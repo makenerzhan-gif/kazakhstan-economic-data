@@ -2178,6 +2178,246 @@ agencies:
           exactly one row per report_date across >=90% of the form's dates).
           Pinned fields: class_type='Claims on banking system', code='Claims on banking system', row_code='Claims on banking system', type='Stocks (mln. tenge)'. Fetched via _fetch_nbk_exact_row (all listed fields must match,
           every other classification field must be empty, exactly one row per date asserted).
+      EXTERNAL_DEBT_GENERAL_GOVERNMENT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=349"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=349. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - General Government',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_general_government.
+      EXTERNAL_DEBT_CENTRAL_BANK:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=349"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=349. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - Central Bank',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_central_bank.
+      EXTERNAL_DEBT_BANKS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=349"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=349. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - Banks',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_banks.
+      EXTERNAL_DEBT_OTHER_SECTORS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=349"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=349. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - Other Sectors',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_other_sectors.
+      EXTERNAL_DEBT_EX_INTERCOMPANY:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=349"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=349. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - Reference: ED not included intercompany lending',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_ex_intercompany.
+      EXTERNAL_DEBT_PUBLIC_SECTOR:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=350"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=350. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - Reference: Public sector ED',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_public_sector.
+      EXTERNAL_DEBT_PRIVATE_SECTOR:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=350"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=350. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - Private sector ED',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_private_sector.
+      EXTERNAL_DEBT_GOV_GUARANTEED:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=350"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=350. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - Reference: Government and government guaranteed ED',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_gov_guaranteed.
+      EXTERNAL_DEBT_LOANS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=351"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=351. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - Loans',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_loans.
+      EXTERNAL_DEBT_DEBT_SECURITIES:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=351"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=351. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - Debt securities',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_debt_securities.
+      EXTERNAL_DEBT_TRADE_CREDITS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=351"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=351. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - Trade credits and advances',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_trade_credits.
+      EXTERNAL_DEBT_CURRENCY_DEPOSITS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=351"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=351. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - Currency and deposits',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_currency_deposits.
+      EXTERNAL_DEBT_SDR:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=351"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=351. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - Special drawing rights',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_sdr.
+      EXTERNAL_DEBT_OTHER_LIABILITIES:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=351"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=351. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt - Other debt liabilities',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_other_liabilities.
+      EXTERNAL_DEBT_DUE_WITHIN_YEAR:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=348"
+        format: json
+        notes: >
+          2026-09-01. NBK external-debt analytical presentation, formId=348. Found by the
+          structural probe; these forms were picked out because they have only 5-8 clean
+          series each, which is the signature of a top-level breakdown rather than a
+          per-country/per-activity one. Pinned: class_type='Debt', ed_code='External Debt- Reference: ED due for payment within one year',
+          period='quarter', type='USD mln'. The total row is deliberately NOT re-added --
+          it is already held as EXTERNAL_DEBT (182,778.24 mln USD at 2026-04-01, identical).
+          Cross-checks verified against that total: the formId=349 sector split sums exactly
+          to EXTERNAL_DEBT_EX_INTERCOMPANY (16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 =
+          95,399.86), public + private (formId=350) sums exactly to the total, and the
+          formId=351 instrument split also sums exactly to the total. 49 quarterly points,
+          2014-Q2 to 2026-Q2. fetch_external_debt_due_within_year.
       RESERVES_GUIDOTTI_RATIO (declined):
         status: declined
         notes: >

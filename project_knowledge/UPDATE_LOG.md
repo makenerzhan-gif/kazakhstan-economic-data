@@ -1366,3 +1366,40 @@ dataset**, rather than writing a partial one. Re-ran with nothing else touching 
 
 **258/258 confirmed indicators connected end-to-end** (104/104 NBK re-verified live in
 6m14s). `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — thirty-seventh batch: full external-debt decomposition (258 -> 273)
+**Selection heuristic that worked.** The probe's second sweep flagged 47 forms with clean
+series, but most are per-country / per-region / per-activity breakdowns that would add
+hundreds of granular series. Sorting instead by *how few* clean series a form has turned
+out to identify the headline forms precisely: formIds 348/349/350/351 have only 5-8 each,
+which is the signature of a top-level breakdown rather than a long tail.
+
+**NBK (15)** — Kazakhstan's gross external debt, now decomposed three independent ways:
+- By resident sector (formId=349): EXTERNAL_DEBT_GENERAL_GOVERNMENT, _CENTRAL_BANK,
+  _BANKS, _OTHER_SECTORS, plus EXTERNAL_DEBT_EX_INTERCOMPANY — the market-borrowing
+  measure, which matters here because intercompany lending dominates the headline figure
+  (largely oil-sector parent-to-subsidiary financing rather than real market debt).
+- By government participation (formId=350): EXTERNAL_DEBT_PUBLIC_SECTOR,
+  _PRIVATE_SECTOR, _GOV_GUARANTEED.
+- By financial instrument (formId=351): EXTERNAL_DEBT_LOANS, _DEBT_SECURITIES,
+  _TRADE_CREDITS, _CURRENCY_DEPOSITS, _SDR, _OTHER_LIABILITIES.
+- Rollover risk (formId=348): EXTERNAL_DEBT_DUE_WITHIN_YEAR — debt due within a year on a
+  *remaining*-maturity basis (43.0 bn USD), deliberately distinct from the existing
+  EXTERNAL_DEBT_SHORT_TERM, which is on an *original*-maturity basis (23.6 bn USD).
+
+All 49 quarterly points each, 2014-Q2 to 2026-Q2.
+
+**The total row was deliberately not re-added.** It is already held as EXTERNAL_DEBT, and
+was checked to be identical (182,778.238991 mln USD at 2026-04-01) rather than assumed to
+be.
+
+**Three independent arithmetic cross-checks, all exact to the cent** — computed from the
+actually-fetched series, not from the source's presentation:
+- sector split: 16,541.49 + 2,381.79 + 19,152.14 + 57,324.44 = 95,399.86 = EX_INTERCOMPANY
+- public + private = 182,778.24 = EXTERNAL_DEBT
+- six instrument categories = 182,778.24 = EXTERNAL_DEBT
+
+Each difference came out to 0.0000, which is strong evidence the right rows were matched.
+
+**273/273 confirmed indicators connected end-to-end** (119/119 NBK re-verified live in
+6m20s). `pytest tests/ -q` — 29/29 passing.

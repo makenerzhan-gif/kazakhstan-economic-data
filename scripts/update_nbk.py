@@ -122,6 +122,21 @@ FETCHERS = {
     "OFC_CLAIMS_ON_NONRESIDENTS": nbk_fetchers.fetch_ofc_claims_on_nonresidents,
     "OFC_LIABILITIES_TO_NONRESIDENTS": nbk_fetchers.fetch_ofc_liabilities_to_nonresidents,
     "OFC_CLAIMS_ON_BANKING_SYSTEM": nbk_fetchers.fetch_ofc_claims_on_banking_system,
+    "EXTERNAL_DEBT_GENERAL_GOVERNMENT": nbk_fetchers.fetch_external_debt_general_government,
+    "EXTERNAL_DEBT_CENTRAL_BANK": nbk_fetchers.fetch_external_debt_central_bank,
+    "EXTERNAL_DEBT_BANKS": nbk_fetchers.fetch_external_debt_banks,
+    "EXTERNAL_DEBT_OTHER_SECTORS": nbk_fetchers.fetch_external_debt_other_sectors,
+    "EXTERNAL_DEBT_EX_INTERCOMPANY": nbk_fetchers.fetch_external_debt_ex_intercompany,
+    "EXTERNAL_DEBT_PUBLIC_SECTOR": nbk_fetchers.fetch_external_debt_public_sector,
+    "EXTERNAL_DEBT_PRIVATE_SECTOR": nbk_fetchers.fetch_external_debt_private_sector,
+    "EXTERNAL_DEBT_GOV_GUARANTEED": nbk_fetchers.fetch_external_debt_gov_guaranteed,
+    "EXTERNAL_DEBT_LOANS": nbk_fetchers.fetch_external_debt_loans,
+    "EXTERNAL_DEBT_DEBT_SECURITIES": nbk_fetchers.fetch_external_debt_debt_securities,
+    "EXTERNAL_DEBT_TRADE_CREDITS": nbk_fetchers.fetch_external_debt_trade_credits,
+    "EXTERNAL_DEBT_CURRENCY_DEPOSITS": nbk_fetchers.fetch_external_debt_currency_deposits,
+    "EXTERNAL_DEBT_SDR": nbk_fetchers.fetch_external_debt_sdr,
+    "EXTERNAL_DEBT_OTHER_LIABILITIES": nbk_fetchers.fetch_external_debt_other_liabilities,
+    "EXTERNAL_DEBT_DUE_WITHIN_YEAR": nbk_fetchers.fetch_external_debt_due_within_year,
 }
 
 INDICATOR_IDS = [
@@ -201,6 +216,21 @@ INDICATOR_IDS = [
     "OFC_CLAIMS_ON_NONRESIDENTS",
     "OFC_LIABILITIES_TO_NONRESIDENTS",
     "OFC_CLAIMS_ON_BANKING_SYSTEM",
+    "EXTERNAL_DEBT_GENERAL_GOVERNMENT",
+    "EXTERNAL_DEBT_CENTRAL_BANK",
+    "EXTERNAL_DEBT_BANKS",
+    "EXTERNAL_DEBT_OTHER_SECTORS",
+    "EXTERNAL_DEBT_EX_INTERCOMPANY",
+    "EXTERNAL_DEBT_PUBLIC_SECTOR",
+    "EXTERNAL_DEBT_PRIVATE_SECTOR",
+    "EXTERNAL_DEBT_GOV_GUARANTEED",
+    "EXTERNAL_DEBT_LOANS",
+    "EXTERNAL_DEBT_DEBT_SECURITIES",
+    "EXTERNAL_DEBT_TRADE_CREDITS",
+    "EXTERNAL_DEBT_CURRENCY_DEPOSITS",
+    "EXTERNAL_DEBT_SDR",
+    "EXTERNAL_DEBT_OTHER_LIABILITIES",
+    "EXTERNAL_DEBT_DUE_WITHIN_YEAR",
 ]
 
 

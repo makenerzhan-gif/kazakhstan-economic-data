@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=349",
+  "dataset_id": "formId=349,class_type=Debt,ed_code=External Debt - Banks,period=quarter,type=USD mln",
+  "indicator_id": "EXTERNAL_DEBT_BANKS",
+  "indicator_name": "External Debt: Banks",
+  "description": "Внешний долг: банки",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million, end of quarter. Gross external debt of BANKS (second-tier banking sector).",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2014-04-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=348",
+  "dataset_id": "formId=348,class_type=Debt,ed_code=External Debt- Reference: ED due for payment within one year,period=quarter,type=USD mln",
+  "indicator_id": "EXTERNAL_DEBT_DUE_WITHIN_YEAR",
+  "indicator_name": "External Debt Due Within One Year (Remaining Maturity)",
+  "description": "Внешний долг к погашению в течение года",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million, end of quarter. External debt DUE FOR PAYMENT WITHIN ONE YEAR on a remaining-maturity basis -- short-term debt plus the current portion of long-term debt. This is the rollover-risk measure, and is larger than EXTERNAL_DEBT_SHORT_TERM, which is on an original-maturity basis.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2014-04-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

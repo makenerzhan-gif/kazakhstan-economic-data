@@ -1967,6 +1967,141 @@ indicators:
     category: monetary
     source_status: confirmed
 
+  - id: EXTERNAL_DEBT_GENERAL_GOVERNMENT
+    name_ru: "Внешний долг: сектор государственного управления"
+    name_en: "External Debt: General Government"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_CENTRAL_BANK
+    name_ru: "Внешний долг: центральный банк"
+    name_en: "External Debt: Central Bank"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_BANKS
+    name_ru: "Внешний долг: банки"
+    name_en: "External Debt: Banks"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_OTHER_SECTORS
+    name_ru: "Внешний долг: прочие сектора"
+    name_en: "External Debt: Other Sectors"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_EX_INTERCOMPANY
+    name_ru: "Внешний долг без внутрифирменного кредитования"
+    name_en: "External Debt Excluding Intercompany Lending"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_PUBLIC_SECTOR
+    name_ru: "Внешний долг государственного сектора"
+    name_en: "External Debt: Public Sector"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_PRIVATE_SECTOR
+    name_ru: "Внешний долг частного сектора"
+    name_en: "External Debt: Private Sector"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_GOV_GUARANTEED
+    name_ru: "Государственный и гарантированный государством внешний долг"
+    name_en: "External Debt: Government and Government-Guaranteed"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_LOANS
+    name_ru: "Внешний долг: займы"
+    name_en: "External Debt: Loans"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_DEBT_SECURITIES
+    name_ru: "Внешний долг: долговые ценные бумаги"
+    name_en: "External Debt: Debt Securities"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_TRADE_CREDITS
+    name_ru: "Внешний долг: торговые кредиты и авансы"
+    name_en: "External Debt: Trade Credits and Advances"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_CURRENCY_DEPOSITS
+    name_ru: "Внешний долг: наличная валюта и депозиты"
+    name_en: "External Debt: Currency and Deposits"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_SDR
+    name_ru: "Внешний долг: специальные права заимствования"
+    name_en: "External Debt: Special Drawing Rights"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_OTHER_LIABILITIES
+    name_ru: "Внешний долг: прочие долговые обязательства"
+    name_en: "External Debt: Other Debt Liabilities"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_DUE_WITHIN_YEAR
+    name_ru: "Внешний долг к погашению в течение года"
+    name_en: "External Debt Due Within One Year (Remaining Maturity)"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

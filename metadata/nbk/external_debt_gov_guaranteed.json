@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=350",
+  "dataset_id": "formId=350,class_type=Debt,ed_code=External Debt - Reference: Government and government guaranteed ED,period=quarter,type=USD mln",
+  "indicator_id": "EXTERNAL_DEBT_GOV_GUARANTEED",
+  "indicator_name": "External Debt: Government and Government-Guaranteed",
+  "description": "Государственный и гарантированный государством внешний долг",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million, end of quarter. Government and GOVERNMENT-GUARANTEED external debt -- the sovereign's direct plus contingent external obligations.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2014-04-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

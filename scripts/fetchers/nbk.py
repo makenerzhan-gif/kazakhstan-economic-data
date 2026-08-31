@@ -2493,3 +2493,153 @@ def fetch_ofc_claims_on_banking_system() -> tuple[list[dict], dict]:
         "Million KZT. Claims of other financial corporations on Kazakhstan's banking system -- the non-bank financial sector's exposure to banks.",
         "quarterly",
     )
+
+
+def fetch_external_debt_general_government() -> tuple[list[dict], dict]:
+    """External Debt: General Government (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "349", {'class_type': 'Debt', 'ed_code': 'External Debt - General Government', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_GENERAL_GOVERNMENT",
+        "USD million, end of quarter. Gross external debt of the GENERAL GOVERNMENT. Part of the sector split that sums exactly to EXTERNAL_DEBT_EX_INTERCOMPANY.",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_central_bank() -> tuple[list[dict], dict]:
+    """External Debt: Central Bank (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "349", {'class_type': 'Debt', 'ed_code': 'External Debt - Central Bank', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_CENTRAL_BANK",
+        "USD million, end of quarter. Gross external debt of the CENTRAL BANK (National Bank of Kazakhstan).",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_banks() -> tuple[list[dict], dict]:
+    """External Debt: Banks (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "349", {'class_type': 'Debt', 'ed_code': 'External Debt - Banks', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_BANKS",
+        "USD million, end of quarter. Gross external debt of BANKS (second-tier banking sector).",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_other_sectors() -> tuple[list[dict], dict]:
+    """External Debt: Other Sectors (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "349", {'class_type': 'Debt', 'ed_code': 'External Debt - Other Sectors', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_OTHER_SECTORS",
+        "USD million, end of quarter. Gross external debt of OTHER SECTORS (non-bank corporates and households), excluding intercompany lending.",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_ex_intercompany() -> tuple[list[dict], dict]:
+    """External Debt Excluding Intercompany Lending (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "349", {'class_type': 'Debt', 'ed_code': 'External Debt - Reference: ED not included intercompany lending', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_EX_INTERCOMPANY",
+        "USD million, end of quarter. Gross external debt EXCLUDING direct-investment intercompany lending -- the market-borrowing measure. Intercompany lending dominates Kazakhstan's headline external debt (largely oil-sector parent-to-subsidiary financing), so this is the more comparable figure.",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_public_sector() -> tuple[list[dict], dict]:
+    """External Debt: Public Sector (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "350", {'class_type': 'Debt', 'ed_code': 'External Debt - Reference: Public sector ED', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_PUBLIC_SECTOR",
+        "USD million, end of quarter. PUBLIC SECTOR external debt (government, central bank, and entities controlled by government). With EXTERNAL_DEBT_PRIVATE_SECTOR this sums exactly to total EXTERNAL_DEBT.",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_private_sector() -> tuple[list[dict], dict]:
+    """External Debt: Private Sector (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "350", {'class_type': 'Debt', 'ed_code': 'External Debt - Private sector ED', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_PRIVATE_SECTOR",
+        "USD million, end of quarter. PRIVATE SECTOR external debt. With EXTERNAL_DEBT_PUBLIC_SECTOR this sums exactly to total EXTERNAL_DEBT.",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_gov_guaranteed() -> tuple[list[dict], dict]:
+    """External Debt: Government and Government-Guaranteed (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "350", {'class_type': 'Debt', 'ed_code': 'External Debt - Reference: Government and government guaranteed ED', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_GOV_GUARANTEED",
+        "USD million, end of quarter. Government and GOVERNMENT-GUARANTEED external debt -- the sovereign's direct plus contingent external obligations.",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_loans() -> tuple[list[dict], dict]:
+    """External Debt: Loans (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "351", {'class_type': 'Debt', 'ed_code': 'External Debt - Loans', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_LOANS",
+        "USD million, end of quarter. External debt in the form of LOANS -- the largest instrument category. Part of the instrument split that sums exactly to total EXTERNAL_DEBT.",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_debt_securities() -> tuple[list[dict], dict]:
+    """External Debt: Debt Securities (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "351", {'class_type': 'Debt', 'ed_code': 'External Debt - Debt securities', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_DEBT_SECURITIES",
+        "USD million, end of quarter. External debt in the form of DEBT SECURITIES (eurobonds and similar market instruments).",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_trade_credits() -> tuple[list[dict], dict]:
+    """External Debt: Trade Credits and Advances (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "351", {'class_type': 'Debt', 'ed_code': 'External Debt - Trade credits and advances', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_TRADE_CREDITS",
+        "USD million, end of quarter. External debt in the form of TRADE CREDITS AND ADVANCES.",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_currency_deposits() -> tuple[list[dict], dict]:
+    """External Debt: Currency and Deposits (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "351", {'class_type': 'Debt', 'ed_code': 'External Debt - Currency and deposits', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_CURRENCY_DEPOSITS",
+        "USD million, end of quarter. External debt in the form of CURRENCY AND DEPOSITS (mainly non-resident deposits held with Kazakhstani banks).",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_sdr() -> tuple[list[dict], dict]:
+    """External Debt: Special Drawing Rights (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "351", {'class_type': 'Debt', 'ed_code': 'External Debt - Special drawing rights', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_SDR",
+        "USD million, end of quarter. External debt in the form of SPECIAL DRAWING RIGHTS (the IMF SDR allocation, carried as a liability).",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_other_liabilities() -> tuple[list[dict], dict]:
+    """External Debt: Other Debt Liabilities (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "351", {'class_type': 'Debt', 'ed_code': 'External Debt - Other debt liabilities', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_OTHER_LIABILITIES",
+        "USD million, end of quarter. OTHER debt liabilities -- the residual instrument category completing the split.",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_due_within_year() -> tuple[list[dict], dict]:
+    """External Debt Due Within One Year (Remaining Maturity) (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "348", {'class_type': 'Debt', 'ed_code': 'External Debt- Reference: ED due for payment within one year', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_DUE_WITHIN_YEAR",
+        "USD million, end of quarter. External debt DUE FOR PAYMENT WITHIN ONE YEAR on a remaining-maturity basis -- short-term debt plus the current portion of long-term debt. This is the rollover-risk measure, and is larger than EXTERNAL_DEBT_SHORT_TERM, which is on an original-maturity basis.",
+        "quarterly",
+    )

@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=350",
+  "dataset_id": "formId=350,class_type=Debt,ed_code=External Debt - Private sector ED,period=quarter,type=USD mln",
+  "indicator_id": "EXTERNAL_DEBT_PRIVATE_SECTOR",
+  "indicator_name": "External Debt: Private Sector",
+  "description": "Внешний долг частного сектора",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million, end of quarter. PRIVATE SECTOR external debt. With EXTERNAL_DEBT_PUBLIC_SECTOR this sums exactly to total EXTERNAL_DEBT.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2014-04-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
