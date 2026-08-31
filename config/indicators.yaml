@@ -1273,3 +1273,39 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+
+  - id: LOCAL_GOV_WAGES_EXPENDITURE
+    name_ru: "Заработная плата местного бюджета"
+    name_en: "Local Budget Wages Expenditure"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
+
+  - id: LOCAL_GOV_CAPITAL_EXPENDITURE
+    name_ru: "Капитальные затраты местного бюджета"
+    name_en: "Local Budget Capital Expenditure"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
+
+  - id: LOCAL_GOV_SUBSIDIES_EXPENDITURE
+    name_ru: "Бюджетные субсидии местного бюджета"
+    name_en: "Local Budget Subsidies Expenditure"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
+
+  - id: NATIONAL_FUND_ASSETS
+    name_ru: "Активы Национального фонда РК"
+    name_en: "National Fund of Kazakhstan Total Assets"
+    agency: minfin
+    frequency: quarterly
+    unit: "USD"
+    category: fiscal
+    source_status: confirmed

@@ -1335,6 +1335,75 @@ agencies:
           table's own "НАЛОГОВЫЕ ПОСТУПЛЕНИЯ" (tax revenue) row is a single aggregate, not
           broken down by type, even at this broadest consolidated level -- consistent with
           individual income tax and property tax being purely local-budget taxes.
+      LOCAL_GOV_WAGES_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "таб 11"
+        target_row_label: "Заработная плата"
+        format: xlsx
+        frequency: "irregular (year-to-date cumulative)"
+        notes: >
+          2026-08-31. Local (regional) budget expenditure by economic classification -- the
+          direct local-budget counterpart to GOV_WAGES_EXPENDITURE (табл 10, republican).
+          IMPORTANT: this sheet's actual name is "таб 11" (missing the "л") -- confirmed via a
+          13-vintage scan to be a stable typo in Minfin's own sheet naming, not vintage-to-
+          vintage variance (unlike табл 17 below, where the name genuinely does vary). Row
+          "Заработная плата" matched exactly once across all 13 listed bulletin vintages.
+          Verified live: 13 documents parsed. fetch_local_gov_wages_expenditure.
+      LOCAL_GOV_CAPITAL_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "таб 11"
+        target_row_label: "Капитальные затраты"
+        format: xlsx
+        frequency: "irregular (year-to-date cumulative)"
+        notes: >
+          2026-08-31. Same "таб 11" local-budget sheet as LOCAL_GOV_WAGES_EXPENDITURE. Row
+          "Капитальные затраты" matched exactly once across all 13 vintages. Verified live: 13
+          documents parsed. fetch_local_gov_capital_expenditure.
+      LOCAL_GOV_SUBSIDIES_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "таб 11"
+        target_row_label: "Бюджетные субсидии"
+        format: xlsx
+        frequency: "irregular (year-to-date cumulative)"
+        notes: >
+          2026-08-31. Same "таб 11" local-budget sheet as LOCAL_GOV_WAGES_EXPENDITURE. Row
+          "Бюджетные субсидии" matched exactly once across all 13 vintages. Verified live: 13
+          documents parsed. NOTE: unlike табл 10 (republican), this local-budget sheet has NO
+          "Пенсии" (pensions) row at all -- pensions are not a local-budget expenditure category
+          in Kazakhstan, so no LOCAL_GOV_PENSIONS_EXPENDITURE indicator was added.
+          fetch_local_gov_subsidies_expenditure.
+      NATIONAL_FUND_ASSETS:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 17 кв+1мес (or табл 17 кв in older vintages)"
+        target_row_label: "БАРЛЫҒЫ / ВСЕГО"
+        format: xlsx
+        frequency: quarterly
+        notes: >
+          2026-08-31. "Composition of the portfolio and asset allocation of the National Fund of
+          the Republic of Kazakhstan" -- sourced by Minfin FROM the National Bank RK (per the
+          sheet's own "Источник" footer), republished in the Statistical Bulletin. Genuinely
+          different from every other minfin bulletin indicator: (a) a POINT-IN-TIME quarterly
+          snapshot, not a year-to-date cumulative flow -- iterating across the 13 listed
+          bulletins yields 6 distinct quarter-end dates (2024-Q4 through 2026-Q1), each bulletin
+          reporting whichever quarter had most recently closed as of its publication; (b) values
+          are already in USD, not KZT; (c) sheet name varies across vintages ("табл 17 кв+1мес"
+          in the 11 most recent, "табл 17 кв" in the 2 oldest) -- matched by prefix "табл 17",
+          not exact string. Total row matched by Kazakh label "БАРЛЫҒЫ" (mirrored by Russian
+          "ВСЕГО"), present in that same position in all 13 vintages. Period parsed from the
+          sheet's own "ЗА N КВАРТАЛ ГГГГ ГОДА" header text, never the document title. Verified
+          live: USD 57.87bn (2025-Q1) to USD 63.89bn (2025-Q4), broadly consistent with the
+          National Fund's publicly known size (~USD 55-65bn range in recent years). Sub-
+          portfolio breakdown (stabilization/savings/target-requirements, and within savings:
+          bonds/equities/gold/alternative instruments) is also present in the sheet but not
+          extracted -- only the grand total. fetch_national_fund_assets.
       GOV_HEALTH_SPENDING:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"

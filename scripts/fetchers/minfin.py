@@ -993,3 +993,187 @@ def fetch_subventions_republican() -> tuple[list[dict], dict]:
         ),
     }
     return records, manifest
+
+
+# ---------------------------------------------------------------------------
+# LOCAL_GOV_*_EXPENDITURE: local (regional) budget expenditure by ECONOMIC
+# classification -- the direct local-budget counterpart to GOV_WAGES_EXPENDITURE/
+# GOV_CAPITAL_EXPENDITURE/GOV_SUBSIDIES_EXPENDITURE above, found 2026-08-31 in
+# the same "Statistical bulletin" document's local-budget sheet. NOTE: this
+# sheet's actual name is "таб 11" (missing the "л") -- confirmed a stable typo,
+# not vintage-to-vintage variance, across all 13 currently-listed bulletins.
+# Row labels ('Заработная плата', 'Капитальные затраты', 'Бюджетные субсидии')
+# each matched exactly once across all 13 vintages. Unlike табл 10 (republican),
+# this local-budget sheet has NO 'Пенсии' (pensions) row at all -- pensions are
+# not a local-budget expenditure category in Kazakhstan, so no
+# LOCAL_GOV_PENSIONS_EXPENDITURE indicator exists. Same year-to-date cumulative
+# pattern as CUSTOMS_DUTIES/GOV_*_EXPENDITURE (see CUSTOMS_DUTIES module comment).
+# ---------------------------------------------------------------------------
+BULLETIN_LOCAL_EXPENDITURE_ECONOMIC_SHEET_NAME = "таб 11"
+
+
+def fetch_local_gov_wages_expenditure() -> tuple[list[dict], dict]:
+    """Local (regional) budget wages expenditure ('Заработная плата'), million
+    KZT, year-to-date cumulative. Verified live 2026-08-31: 13 documents
+    parsed, exactly one matching row in each."""
+    return _fetch_bulletin_row(
+        BULLETIN_LOCAL_EXPENDITURE_ECONOMIC_SHEET_NAME,
+        lambda r: r[-1] == "Заработная плата",
+        "LOCAL_GOV_WAGES_EXPENDITURE",
+    )
+
+
+def fetch_local_gov_capital_expenditure() -> tuple[list[dict], dict]:
+    """Local (regional) budget capital expenditure ('Капитальные затраты'),
+    million KZT, year-to-date cumulative. Verified live 2026-08-31: 13
+    documents parsed, exactly one matching row in each."""
+    return _fetch_bulletin_row(
+        BULLETIN_LOCAL_EXPENDITURE_ECONOMIC_SHEET_NAME,
+        lambda r: r[-1] == "Капитальные затраты",
+        "LOCAL_GOV_CAPITAL_EXPENDITURE",
+    )
+
+
+def fetch_local_gov_subsidies_expenditure() -> tuple[list[dict], dict]:
+    """Local (regional) budget budgetary subsidies ('Бюджетные субсидии'),
+    million KZT, year-to-date cumulative. Verified live 2026-08-31: 13
+    documents parsed, exactly one matching row in each."""
+    return _fetch_bulletin_row(
+        BULLETIN_LOCAL_EXPENDITURE_ECONOMIC_SHEET_NAME,
+        lambda r: r[-1] == "Бюджетные субсидии",
+        "LOCAL_GOV_SUBSIDIES_EXPENDITURE",
+    )
+
+
+# ---------------------------------------------------------------------------
+# NATIONAL_FUND_ASSETS: total market value (USD) of the National Fund of the
+# Republic of Kazakhstan's investment portfolio, quarterly point-in-time
+# snapshot -- found 2026-08-31 in the same "Statistical bulletin" document's
+# sheet "табл 17 кв+1мес" ("Composition of the portfolio and asset allocation
+# of the National Fund", sourced by Minfin FROM the National Bank RK). NOTE:
+# unlike CUSTOMS_DUTIES/GOV_*_EXPENDITURE, this sheet's name varies slightly
+# across vintages ("табл 17 кв+1мес" in the 11 most recent, "табл 17 кв" in the
+# 2 oldest) -- matched here by prefix ("табл 17") rather than exact string.
+# Structurally different from every other bulletin-sheet fetcher in this file:
+# (a) it's a POINT-IN-TIME snapshot (portfolio value as of quarter-end), not a
+# year-to-date cumulative flow -- each of the 13 listed bulletins reports
+# whichever quarter was most recently closed as of its publication, so
+# iterating across all 13 yields 6 distinct quarters (2024-Q4 through 2026-Q1),
+# not 13 growing partial-year figures; (b) values are already in USD (not
+# million KZT); (c) the row layout differs (label in column 0, value in
+# column 1, NOT the "value in the second-to-last column" convention used by
+# _fetch_bulletin_row), so this uses its own inline extraction rather than the
+# shared helper. Row matched by the Kazakh grand-total label 'БАРЛЫҒЫ' (mirrored
+# by Russian 'ВСЕГО' one column over) -- confirmed present, in that exact
+# position, in all 13 vintages. Period parsed from the sheet's own Russian
+# header text ('ЗА {N} КВАРТАЛ {YYYY} ГОДА'), never the unreliable document
+# title. Verified live 2026-08-31: 6 quarters, USD 57.9bn (2025-Q1) to USD
+# 63.9bn (2025-Q4), broadly consistent with the National Fund's publicly
+# reported size.
+# ---------------------------------------------------------------------------
+NF_SHEET_PREFIX = "табл 17"
+NF_QUARTER_RE = re.compile(r"ЗА\s+(\d)\s+КВАРТАЛ\s+(\d{4})\s+ГОДА", re.IGNORECASE)
+NF_QUARTER_END_MONTH_DAY = {1: (3, 31), 2: (6, 30), 3: (9, 30), 4: (12, 31)}
+NF_TOTAL_LABEL = "БАРЛЫҒЫ"
+
+
+def fetch_national_fund_assets() -> tuple[list[dict], dict]:
+    docs = _list_documents(directions=BUDGET_DIRECTION_ID)
+    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    if not bulletins:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in minfin/NATIONAL_FUND_ASSETS",
+                f"WHAT CHANGED: no document title under directions={BUDGET_DIRECTION_ID} contains {STATISTICAL_BULLETIN_TITLE_MARKER!r}",
+                "EXPECTED: at least one 'Statistical bulletin as of ...' document",
+                "ACTUAL: not found in the current listing",
+                f"ACTION REQUIRED: inspect {LISTING_URL}?directions={BUDGET_DIRECTION_ID} and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    today = date.today()
+    records: list[dict] = []
+    seen_dates: set[str] = set()
+    skipped: list[int] = []
+
+    for doc in bulletins:
+        file_path = doc["full_text"][0]["document"]
+        content = _download(file_path)
+        kind, wb = _open_workbook(content, file_path)
+        sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
+        target_sheet = next((s for s in sheet_names if s.strip().startswith(NF_SHEET_PREFIX)), None)
+        if target_sheet is None:
+            skipped.append(doc["id"])
+            continue
+
+        rows = list(_iter_rows(kind, wb, target_sheet))
+        period_match = None
+        for row in rows:
+            for cell in row:
+                if isinstance(cell, str):
+                    m = NF_QUARTER_RE.search(cell)
+                    if m:
+                        period_match = m
+                        break
+            if period_match:
+                break
+        target_row = next((r for r in rows if r and any(
+            isinstance(c, str) and c.strip() == NF_TOTAL_LABEL for c in r if c
+        )), None)
+        if period_match is None or target_row is None:
+            skipped.append(doc["id"])
+            continue
+
+        quarter = int(period_match.group(1))
+        year = int(period_match.group(2))
+        if quarter not in NF_QUARTER_END_MONTH_DAY:
+            skipped.append(doc["id"])
+            continue
+        value = target_row[1] if len(target_row) > 1 else None
+        if value in (None, ""):
+            skipped.append(doc["id"])
+            continue
+
+        month, day = NF_QUARTER_END_MONTH_DAY[quarter]
+        iso_date = f"{year:04d}-{month:02d}-{day:02d}"
+        raw_store.save_raw_bytes(SOURCE, f"NATIONAL_FUND_ASSETS_{iso_date}", today,
+                                  "xls" if file_path.lower().endswith(".xls") else "xlsx", content)
+        if iso_date in seen_dates:
+            continue
+        seen_dates.add(iso_date)
+        records.append({"date": iso_date, "value": float(value)})
+
+    if not records:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in minfin/NATIONAL_FUND_ASSETS",
+                f"WHAT CHANGED: zero of {len(bulletins)} listed bulletin documents could be parsed",
+                f"ACTUAL: all skipped, ids: {skipped}",
+                "ACTION REQUIRED: inspect a recent bulletin and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    raw_store.write_download_manifest(SOURCE, "NATIONAL_FUND_ASSETS", today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "n_documents_listed": len(bulletins), "n_parsed": len(records), "skipped_document_ids": skipped,
+        "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
+    })
+
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "quarterly",
+        "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
+        "dataset_id": f"gov.kz-statistical-bulletin-listing,sheet={NF_SHEET_PREFIX}*",
+        "note": (
+            f"Built from {len(records)} of {len(bulletins)} listed 'Statistical bulletin' "
+            f"documents ({len(skipped)} skipped). USD (not KZT). Total market value of the "
+            "National Fund of the Republic of Kazakhstan's investment portfolio (stabilization "
+            "+ savings + target-requirements sub-portfolios combined), as of each calendar "
+            "quarter-end -- a POINT-IN-TIME snapshot, not a cumulative flow (unlike most other "
+            "minfin bulletin-sourced indicators). Originally sourced by Minfin FROM the National "
+            "Bank RK, republished here in the Statistical Bulletin. Document TITLES are NOT used "
+            "to determine period -- only each document's own internal 'ЗА N КВАРТАЛ YYYY ГОДА' "
+            "header text is trusted."
+        ),
+    }
+    return records, manifest

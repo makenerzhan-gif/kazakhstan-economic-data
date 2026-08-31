@@ -1,6 +1,6 @@
 # Update report — 2026-08-31
 
-Run timestamp: 2026-08-31T00:26:19.933734
+Run timestamp: 2026-08-31T07:23:01.180460
 Unified dataset updated: True
 Tests passed: True
 
@@ -205,7 +205,7 @@ Tests passed: True
 - **nbk/EXTERNAL_DEBT** — fetch+validate+process: ok (downloaded=85, processed=85)
 - **nbk/LENDING_RATE** — fetch+validate+process: ok (downloaded=56, processed=56)
 - **nbk/DEPOSIT_RATE** — fetch+validate+process: ok (downloaded=43, processed=43)
-- **nbk/TONIA** — fetch+validate+process: ok (downloaded=184, processed=184)
+- **nbk/TONIA** — fetch+validate+process: ok (downloaded=185, processed=185)
 - **nbk/NATIONAL_FUND_TRANSFERS** — fetch+validate+process: ok (downloaded=30, processed=30)
   - warning: Unexpected jump of 80.0% between 2024-08-01 (250.0) and 2024-09-01 (450.0).
   - warning: Unexpected jump of 51.8% between 2024-12-01 (635.0) and 2025-01-01 (306.0).
@@ -303,6 +303,28 @@ Tests passed: True
   - warning: Unexpected jump of 445.9% between 2026-01-31 (6318.84247) and 2026-02-28 (34496.21587).
   - warning: Unexpected jump of 481.3% between 2026-03-31 (35310.83917) and 2026-05-31 (205261.99334018).
 - **minfin/SUBVENTIONS_REPUBLICAN** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/LOCAL_GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Unexpected jump of 54.5% between 2025-02-28 (511819.51571588) and 2025-03-31 (790903.36800855).
+  - warning: Unexpected jump of 142.9% between 2025-03-31 (790903.36800855) and 2025-06-30 (1921164.38839903).
+  - warning: Unexpected jump of 92.3% between 2025-11-30 (3106060.7387416) and 2026-01-31 (240414.189634).
+  - warning: Unexpected jump of 125.1% between 2026-01-31 (240414.189634) and 2026-02-28 (541282.98972523).
+  - warning: Unexpected jump of 54.9% between 2026-02-28 (541282.98972523) and 2026-03-31 (838304.00566345).
+  - warning: Unexpected jump of 74.8% between 2026-03-31 (838304.00566345) and 2026-05-31 (1465586.11105871).
+- **minfin/LOCAL_GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Unexpected jump of 93.5% between 2025-02-28 (209961.31519387) and 2025-03-31 (406270.93573776).
+  - warning: Unexpected jump of 268.1% between 2025-03-31 (406270.93573776) and 2025-06-30 (1495460.27388462).
+  - warning: Unexpected jump of 99.2% between 2025-11-30 (3715220.18835135) and 2026-01-31 (29938.10085496).
+  - warning: Unexpected jump of 729.4% between 2026-01-31 (29938.10085496) and 2026-02-28 (248315.06581528).
+  - warning: Unexpected jump of 107.0% between 2026-02-28 (248315.06581528) and 2026-03-31 (513956.9460623).
+  - warning: Unexpected jump of 111.4% between 2026-03-31 (513956.9460623) and 2026-05-31 (1086315.58317048).
+- **minfin/LOCAL_GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Unexpected jump of 60.1% between 2025-02-28 (258545.99070222) and 2025-03-31 (413981.43801995).
+  - warning: Unexpected jump of 87.1% between 2025-03-31 (413981.43801995) and 2025-06-30 (774743.89632074).
+  - warning: Unexpected jump of 95.8% between 2025-11-30 (1231082.18592623) and 2026-01-31 (51783.37820779).
+  - warning: Unexpected jump of 475.7% between 2026-01-31 (51783.37820779) and 2026-02-28 (298102.8651729).
+  - warning: Unexpected jump of 71.1% between 2026-02-28 (298102.8651729) and 2026-03-31 (510033.17495029).
+  - warning: Unexpected jump of 52.7% between 2026-03-31 (510033.17495029) and 2026-05-31 (778700.22239769).
+- **minfin/NATIONAL_FUND_ASSETS** — fetch+validate+process: ok (downloaded=6, processed=6)
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% between 1995-01-01 (-8.2) and 1996-01-01 (0.5).
   - warning: Unexpected jump of 240.0% between 1996-01-01 (0.5) and 1997-01-01 (1.7).

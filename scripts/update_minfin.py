@@ -46,6 +46,10 @@ FETCHERS = {
     "GOV_PENSIONS_EXPENDITURE": minfin_fetchers.fetch_gov_pensions_expenditure,
     "GOV_SUBSIDIES_EXPENDITURE": minfin_fetchers.fetch_gov_subsidies_expenditure,
     "SUBVENTIONS_REPUBLICAN": minfin_fetchers.fetch_subventions_republican,
+    "LOCAL_GOV_WAGES_EXPENDITURE": minfin_fetchers.fetch_local_gov_wages_expenditure,
+    "LOCAL_GOV_CAPITAL_EXPENDITURE": minfin_fetchers.fetch_local_gov_capital_expenditure,
+    "LOCAL_GOV_SUBSIDIES_EXPENDITURE": minfin_fetchers.fetch_local_gov_subsidies_expenditure,
+    "NATIONAL_FUND_ASSETS": minfin_fetchers.fetch_national_fund_assets,
 }
 
 INDICATOR_IDS = [
@@ -60,6 +64,8 @@ INDICATOR_IDS = [
     "GOV_WAGES_EXPENDITURE", "GOV_CAPITAL_EXPENDITURE",
     "GOV_PENSIONS_EXPENDITURE", "GOV_SUBSIDIES_EXPENDITURE",
     "SUBVENTIONS_REPUBLICAN",
+    "LOCAL_GOV_WAGES_EXPENDITURE", "LOCAL_GOV_CAPITAL_EXPENDITURE", "LOCAL_GOV_SUBSIDIES_EXPENDITURE",
+    "NATIONAL_FUND_ASSETS",
 ]
 
 

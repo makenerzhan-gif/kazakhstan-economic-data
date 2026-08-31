@@ -729,3 +729,29 @@ promising, but not pursued this batch given time already spent -- left for a fut
 session.
 
 **140/140 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — seventeenth scale-up batch: 140 -> 144 indicators
+Followed up on the two promising leads left unpursued at the end of the sixteenth batch:
+табл 11 (local-budget economic classification) and табл 17 (National Fund portfolio
+composition).
+
+**Minfin (4):**
+- LOCAL_GOV_WAGES_EXPENDITURE, LOCAL_GOV_CAPITAL_EXPENDITURE, LOCAL_GOV_SUBSIDIES_EXPENDITURE
+  -- the direct local (regional) budget counterparts to GOV_WAGES_EXPENDITURE/GOV_CAPITAL_
+  EXPENDITURE/GOV_SUBSIDIES_EXPENDITURE (табл 10, republican), sourced from sheet "таб 11"
+  (confirmed the missing "л" is a stable Minfin typo across all 13 bulletin vintages, not
+  edition-to-edition variance). Row labels each matched exactly once in all 13 vintages.
+  NOTE: this local-budget sheet has no "Пенсии" (pensions) row at all -- pensions are not a
+  local-budget expenditure category in Kazakhstan, so no LOCAL_GOV_PENSIONS_EXPENDITURE was
+  added (not an oversight).
+- NATIONAL_FUND_ASSETS -- total market value (USD) of the National Fund of Kazakhstan's
+  investment portfolio, sourced from sheet "табл 17 кв+1мес" (name varies slightly across
+  vintages -- "табл 17 кв" in the 2 oldest bulletins -- matched by prefix, not exact string).
+  Structurally distinct from every other bulletin-sourced indicator so far: a point-in-time
+  quarterly snapshot rather than a year-to-date cumulative flow, and denominated in USD, not
+  KZT. Iterating across the 13 listed bulletins yielded 6 distinct quarter-end values
+  (2024-Q4 through 2026-Q1, USD 57.9bn-63.9bn), each bulletin reporting whichever quarter had
+  most recently closed as of its own publication. Originally sourced by Minfin FROM the
+  National Bank RK per the sheet's own footer, republished in the Statistical Bulletin.
+
+**144/144 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
