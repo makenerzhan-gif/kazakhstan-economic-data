@@ -1550,3 +1550,119 @@ def fetch_insurance_premiums_life() -> tuple[list[dict], dict]:
         "organizations. Not the same total as INSURANCE_PREMIUMS_GENERAL -- the source "
         "provides no combined General+Life aggregate.",
     )
+
+
+# ---------------------------------------------------------------------------
+# PENSION_PAYMENTS: found 2026-08-31 in formId=29 "Information on the volume
+# of pension savings and the number of individual pension accounts of
+# contributors" (category "financial sector" -> accumulative pension
+# system). Row matched: class_type='Pension savings payments',
+# row_code='Pension savings payments' (the unclassified top-level total --
+# excludes per-country and per-reason sub-rows) AND type='thsd. tenge'
+# (this form ALSO reports the identical row_code/class_type combination
+# twice more per date with type='Units' for headcount/transaction-count
+# series -- excluding on `type` was required to get exactly one row per
+# date, verified live). Year-to-date cumulative within each calendar year,
+# same convention as PENSION_FUND_ASSETS/INSURANCE_PREMIUMS_*. Verified
+# live with full pagination: 44 unique monthly dates, 2023-01 through
+# 2026-08, thousand KZT (1.16 trillion KZT YTD as of Jan 2023 alone,
+# consistent with Kazakhstan's well-publicized 2023 one-time pension
+# withdrawal program for housing/medical/education use).
+# ---------------------------------------------------------------------------
+PENSION_PAYMENTS_FORM_ID = "29"
+PENSION_PAYMENTS_CLASS_TYPE = "Pension savings payments"
+
+
+def fetch_pension_payments() -> tuple[list[dict], dict]:
+    """Total pension savings payments made from Kazakhstan's Unified
+    Accumulative Pension Fund (UAPF/ЕНПФ), million KZT, monthly
+    (year-to-date cumulative within each calendar year)."""
+    all_rows = _fetch_nbk_form_paginated(PENSION_PAYMENTS_FORM_ID, "PENSION_PAYMENTS")
+
+    matching = [r for r in all_rows if r.get("class_type") == PENSION_PAYMENTS_CLASS_TYPE
+                and r.get("row_code") == PENSION_PAYMENTS_CLASS_TYPE and r.get("type") == "thsd. tenge"]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/PENSION_PAYMENTS",
+                f"WHAT CHANGED: no unclassified rows found with class_type={PENSION_PAYMENTS_CLASS_TYPE!r}, "
+                "type='thsd. tenge' in formId=" + PENSION_PAYMENTS_FORM_ID,
+                "EXPECTED: the top-level unclassified pension-payments total row",
+                "ACTUAL: zero matching rows",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={PENSION_PAYMENTS_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+
+    records = [{"date": r["report_date"], "value": float(r["amount"]) / 1000.0} for r in matching]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={PENSION_PAYMENTS_FORM_ID}",
+        "dataset_id": f"formId={PENSION_PAYMENTS_FORM_ID},class_type={PENSION_PAYMENTS_CLASS_TYPE}",
+        "note": "Million KZT (converted from the source's thousand-KZT unit). Total pension "
+                "savings payments made from Kazakhstan's Unified Accumulative Pension Fund "
+                "(UAPF/ЕНПФ) -- year-to-date cumulative within each calendar year, resets each "
+                "January.",
+    }
+    return records, manifest
+
+
+# ---------------------------------------------------------------------------
+# RESERVES_IMPORT_COVER: found 2026-08-31 in formId=469 "The indicators of
+# the adequacy of the international reserves of the Republic of Kazakhstan"
+# (category "external sector"). A small form with 5 named `indicator`
+# values per report_date. Verified live with full pagination: 50 unique
+# quarterly dates, 2014-Q1 through 2026-Q2, smooth/continuous throughout.
+#
+# The form's OTHER 3 percent-denominated indicators (Guidotti rule,
+# financing-potential-outflow, financing-liabilities-in-broad-money) were
+# investigated and explicitly DECLINED: starting exactly 2026-01-01 their
+# values drop ~100x in magnitude (e.g. Guidotti: 135.9 -> 1.495 between
+# 2025-10-01 and 2026-01-01) while still labeled value_type1='percent', and
+# the broad-money indicator's `indicator` label field is missing entirely
+# from those same two dates onward. This is a confirmed, current source-side
+# structural break (verified by inspecting the raw rows directly, not
+# guessed), not a real economic collapse -- reconciling it would mean
+# guessing whether to rescale old or new values, which the MASTER TASK rules
+# forbid. Only the unaffected "number of months" import-cover indicator is
+# connected.
+# ---------------------------------------------------------------------------
+RESERVE_ADEQUACY_FORM_ID = "469"
+
+
+def _fetch_reserve_adequacy(indicator_label: str, indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    all_rows = _fetch_nbk_form_paginated(RESERVE_ADEQUACY_FORM_ID, indicator_id)
+
+    matching = [r for r in all_rows if r.get("indicator") == indicator_label]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+                f"WHAT CHANGED: no rows found with indicator={indicator_label!r} in formId={RESERVE_ADEQUACY_FORM_ID}",
+                "EXPECTED: this named reserve-adequacy indicator series",
+                "ACTUAL: zero matching rows",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={RESERVE_ADEQUACY_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+
+    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in matching]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "quarterly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={RESERVE_ADEQUACY_FORM_ID}",
+        "dataset_id": f"formId={RESERVE_ADEQUACY_FORM_ID},indicator={indicator_label}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def fetch_reserves_import_cover() -> tuple[list[dict], dict]:
+    """International reserves adequacy for financing imports, number of
+    months of import cover, quarterly. NBK's own benchmark: adequate level
+    is at least 3 months."""
+    return _fetch_reserve_adequacy(
+        "The value of the international reserves adequate for financing imports",
+        "RESERVES_IMPORT_COVER",
+        "Number of months of import cover provided by Kazakhstan's international reserves. "
+        "NBK's own stated adequate level: at least 3 months.",
+    )

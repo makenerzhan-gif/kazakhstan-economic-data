@@ -1170,6 +1170,65 @@ agencies:
           2026-08-31. Same form and discovery as INSURANCE_PREMIUMS_GENERAL --
           insurance_org_type='Life' instead of 'General'. Verified live: 31 unique monthly
           dates, 2023-02 through 2026-07, thousand KZT. fetch_insurance_premiums_life.
+      INSURANCE_CLAIMS (declined):
+        status: declined
+        notes: >
+          2026-08-31. Investigated formId=133 "Total statement on insurance claims of
+          insurance (reinsurance) organizations" as a natural pairing with
+          INSURANCE_PREMIUMS_GENERAL/LIFE. Unlike the premiums form, the 'expense'='Net
+          expenses on insurance indemnitites' rows have NO insurance_type='Total' value --
+          only Compulsory/Voluntary personal/Voluntary property sub-totals exist per
+          org_type, with the source publishing no combined figure. Summing the three
+          ourselves would fabricate an aggregate the source doesn't publish, so declined per
+          the project's standing no-fabricated-aggregates rule (same principle as
+          INSURANCE_PREMIUMS_GENERAL/LIFE's General/Life split).
+      PENSION_PAYMENTS:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=29"
+        format: json
+        notes: >
+          2026-08-31. Found via GET /api/v1/data/categories -> "financial sector" ->
+          accumulative pension system -> formId=29 "Information on the volume of pension
+          savings and the number of individual pension accounts of contributors". Row
+          matched: class_type='Pension savings payments' AND row_code='Pension savings
+          payments' (the unclassified top-level total, excluding per-country and per-reason
+          sub-rows) AND type='thsd. tenge' (this exact row_code/class_type combination is
+          ALSO repeated twice more per date with type='Units' for headcount/transaction-count
+          series -- filtering on `type` was required to get exactly one row per date, found
+          by inspecting duplicate matches directly, not guessed). Year-to-date cumulative
+          within each calendar year, same convention as PENSION_FUND_ASSETS/
+          INSURANCE_PREMIUMS_*. Verified live with full pagination: 44 unique monthly dates,
+          2023-01 through 2026-08, thousand KZT (1.16 trillion KZT YTD as of Jan 2023 alone,
+          consistent with Kazakhstan's well-publicized 2023 one-time pension withdrawal
+          program). fetch_pension_payments.
+      RESERVES_IMPORT_COVER:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=469"
+        format: json
+        notes: >
+          2026-08-31. Found via GET /api/v1/data/categories -> "external sector" -> formId=469
+          "The indicators of the adequacy of the international reserves of the Republic of
+          Kazakhstan". A small form with exactly 5 named `indicator` values per report_date,
+          no further sub-classification. Row matched: indicator='The value of the
+          international reserves adequate for financing imports', value_type1='number of
+          months'. Verified live with full pagination: 50 unique quarterly dates, 2014-Q1
+          through 2026-Q2, smooth/continuous throughout. fetch_reserves_import_cover.
+      RESERVES_GUIDOTTI_RATIO (declined):
+        status: declined
+        notes: >
+          2026-08-31. Investigated the same formId=469 form's other percent-denominated
+          indicators (Guidotti rule, financing-potential-outflow,
+          financing-liabilities-in-broad-money) alongside RESERVES_IMPORT_COVER. Found a
+          confirmed, current source-side structural break: starting exactly the 2026-01-01
+          report, all three percent-type indicators' values drop ~100x in magnitude (Guidotti:
+          135.9 -> 1.495 between 2025-10-01 and 2026-01-01) while still labeled
+          value_type1='percent', and the broad-money indicator's `indicator` label field is
+          missing entirely from those two dates onward (verified by direct row inspection --
+          rows[242] and rows[247] in the raw formId=469 response lack the 'indicator' key
+          altogether). The unaffected "number of months" import-cover series shows no break
+          across the same dates, ruling out a fetcher bug. Reconciling this would mean
+          guessing whether to rescale old or new values, which MASTER TASK rules forbid.
+          Declined; only RESERVES_IMPORT_COVER connected from this form.
       TONIA:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data/indicators"

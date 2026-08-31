@@ -1,6 +1,6 @@
 # Update report — 2026-08-31
 
-Run timestamp: 2026-08-31T21:00:52.767150
+Run timestamp: 2026-08-31T21:45:04.415490
 Unified dataset updated: True
 Tests passed: True
 
@@ -328,6 +328,18 @@ Tests passed: True
   - warning: Unexpected jump of 92.2% between 2026-01-01 (1065144.803) and 2026-02-01 (82855.48).
   - warning: Unexpected jump of 92.6% between 2026-02-01 (82855.48) and 2026-03-01 (159541.754).
   - warning: Unexpected jump of 50.9% between 2026-03-01 (159541.754) and 2026-04-01 (240772.281).
+- **nbk/PENSION_PAYMENTS** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Unexpected jump of 97.3% between 2023-01-01 (1155398.586) and 2023-02-01 (31166.536).
+  - warning: Unexpected jump of 98.5% between 2023-02-01 (31166.536) and 2023-03-01 (61879.199).
+  - warning: Unexpected jump of 50.9% between 2023-03-01 (61879.199) and 2023-04-01 (93385.277).
+  - warning: Unexpected jump of 90.4% between 2024-01-01 (532558.563) and 2024-02-01 (51334.74).
+  - warning: Unexpected jump of 100.3% between 2024-02-01 (51334.74) and 2024-03-01 (102798.512).
+  - warning: Unexpected jump of 88.4% between 2025-01-01 (904922.77) and 2025-02-01 (104627.433).
+  - warning: Unexpected jump of 103.5% between 2025-02-01 (104627.433) and 2025-03-01 (212895.745).
+  - warning: Unexpected jump of 94.6% between 2026-01-01 (1610746.019) and 2026-02-01 (87285.341).
+  - warning: Unexpected jump of 88.3% between 2026-02-01 (87285.341) and 2026-03-01 (164394.849).
+  - warning: Unexpected jump of 52.1% between 2026-03-01 (164394.849) and 2026-04-01 (250083.32).
+- **nbk/RESERVES_IMPORT_COVER** — fetch+validate+process: ok (downloaded=50, processed=50)
 - **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)

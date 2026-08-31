@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=29",
+  "dataset_id": "formId=29,class_type=Pension savings payments",
+  "indicator_id": "PENSION_PAYMENTS",
+  "indicator_name": "Pension Savings Payments from UAPF",
+  "description": "Пенсионные выплаты из ЕНПФ",
+  "frequency": "monthly",
+  "unit": "million KZT, year-to-date cumulative",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT (converted from the source's thousand-KZT unit). Total pension savings payments made from Kazakhstan's Unified Accumulative Pension Fund (UAPF/ЕНПФ) -- year-to-date cumulative within each calendar year, resets each January.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2023-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

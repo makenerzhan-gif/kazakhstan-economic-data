@@ -55,6 +55,8 @@ FETCHERS = {
     "PENSION_FUND_ASSETS": nbk_fetchers.fetch_pension_fund_assets,
     "INSURANCE_PREMIUMS_GENERAL": nbk_fetchers.fetch_insurance_premiums_general,
     "INSURANCE_PREMIUMS_LIFE": nbk_fetchers.fetch_insurance_premiums_life,
+    "PENSION_PAYMENTS": nbk_fetchers.fetch_pension_payments,
+    "RESERVES_IMPORT_COVER": nbk_fetchers.fetch_reserves_import_cover,
 }
 
 INDICATOR_IDS = [
@@ -70,6 +72,7 @@ INDICATOR_IDS = [
     "IIP_NET", "IIP_ASSETS", "IIP_LIABILITIES", "CURRENT_ACCOUNT_BALANCE",
     "BANK_ROA", "BANK_ROE", "PENSION_FUND_ASSETS",
     "INSURANCE_PREMIUMS_GENERAL", "INSURANCE_PREMIUMS_LIFE",
+    "PENSION_PAYMENTS", "RESERVES_IMPORT_COVER",
 ]
 
 

@@ -1082,3 +1082,40 @@ immediately in the foreground: completed cleanly, exit code 0, all 180/180 indic
 regression -- both new fetchers were independently verified correct before and after.
 
 **180/180 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — twenty-ninth scale-up batch: 180 -> 182 indicators (pensions + reserve adequacy)
+Continued working the candidate backlog: explored the rest of NBK's category tree
+(`GET /api/v1/data/categories`) beyond formIds already used, and found two more clean
+indicators plus two more confirmed declines.
+
+**NBK (2):**
+- PENSION_PAYMENTS (formId=29, "Information on the volume of pension savings...") --
+  total pension savings payments made from UAPF/ЕНПФ. The unclassified top-level total
+  row (`class_type='Pension savings payments'`, `row_code='Pension savings payments'`)
+  is duplicated across `type` values (thsd. tenge / Units for headcount / Units for
+  transaction count) at the exact same row_code+class_type -- filtering on
+  `type='thsd. tenge'` was required to land on exactly one row per date. 44 monthly
+  points, 2023-01 to 2026-08, YTD-cumulative KZT.
+- RESERVES_IMPORT_COVER (formId=469, "The indicators of the adequacy of the
+  international reserves...") -- months of import cover provided by Kazakhstan's
+  reserves. A small, clean 5-indicator form. 50 quarterly points, 2014-Q1 to 2026-Q2,
+  smooth and continuous throughout.
+
+**Declined (2), both confirmed by direct inspection, not guessed:**
+- INSURANCE_CLAIMS (formId=133) -- the natural pairing with last batch's premiums
+  indicators. Unlike premiums, the net-claims-expense rows have no `insurance_type`
+  ='Total' value, only Compulsory/Voluntary-personal/Voluntary-property sub-totals with
+  no published combined figure. Summing them ourselves would fabricate an aggregate the
+  source doesn't publish.
+- RESERVES_GUIDOTTI_RATIO and the same form's other two percent-denominated indicators
+  (formId=469) -- found a genuine, CURRENT source-side structural break: starting
+  exactly the 2026-01-01 report, all three percent-type series drop ~100x in magnitude
+  while still labeled `value_type1='percent'` (e.g. Guidotti ratio: 135.9 -> 1.495
+  between 2025-10-01 and 2026-01-01), and one of them's `indicator` label field is
+  missing entirely from those two dates onward. The unaffected "months of import cover"
+  series (RESERVES_IMPORT_COVER, connected above) shows no break across the same
+  dates, ruling out a fetcher bug -- this is a live problem in NBK's own published data.
+  Reconciling it would require guessing whether to rescale old or new values, which the
+  MASTER TASK rules forbid. Declined.
+
+**182/182 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
