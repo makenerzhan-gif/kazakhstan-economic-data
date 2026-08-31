@@ -1679,6 +1679,105 @@ indicators:
     category: monetary
     source_status: confirmed
 
+  - id: REMITTANCES_SENT_USD
+    name_ru: "Переводы из РК, доллары США"
+    name_en: "Remittances Sent, US Dollars"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: REMITTANCES_SENT_KZT
+    name_ru: "Переводы из РК, тенге"
+    name_en: "Remittances Sent, Tenge"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: REMITTANCES_SENT_RUB
+    name_ru: "Переводы из РК, рубли"
+    name_en: "Remittances Sent, Russian Rubles"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: REMITTANCES_RECEIVED_USD
+    name_ru: "Переводы в РК, доллары США"
+    name_en: "Remittances Received, US Dollars"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: REMITTANCES_RECEIVED_KZT
+    name_ru: "Переводы в РК, тенге"
+    name_en: "Remittances Received, Tenge"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: REMITTANCES_RECEIVED_RUB
+    name_ru: "Переводы в РК, рубли"
+    name_en: "Remittances Received, Russian Rubles"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_GOV_LOANS_LT
+    name_ru: "Внешний долг: займы госсектора, долгосрочные"
+    name_en: "External Debt: General Government Loans, Long-Term"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_BANKS_LOANS_LT
+    name_ru: "Внешний долг: займы банков, долгосрочные"
+    name_en: "External Debt: Bank Loans, Long-Term"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_BANKS_SECURITIES_LT
+    name_ru: "Внешний долг: долговые ценные бумаги банков, долгосрочные"
+    name_en: "External Debt: Bank Debt Securities, Long-Term"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXTERNAL_DEBT_OTHER_SECURITIES_LT
+    name_ru: "Внешний долг: долговые ценные бумаги прочих секторов, долгосрочные"
+    name_en: "External Debt: Other Sectors Debt Securities, Long-Term"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: GOV_SECURITIES_SECONDARY_NBK_NOTES
+    name_ru: "Вторичный рынок ГЦБ: ноты НБ РК, объём сделок"
+    name_en: "Government Securities Secondary Market: NBK Notes Volume"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

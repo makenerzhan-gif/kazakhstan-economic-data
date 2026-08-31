@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=16",
+  "dataset_id": "formId=16,code=NBK Notes,type=Transactions volume (mln. tenge)",
+  "indicator_id": "GOV_SECURITIES_SECONDARY_NBK_NOTES",
+  "indicator_name": "Government Securities Secondary Market: NBK Notes Volume",
+  "description": "Вторичный рынок ГЦБ: ноты НБ РК, объём сделок",
+  "frequency": "monthly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT. Secondary-market transaction volume in NBK Notes -- a liquidity/turnover measure for the National Bank short-term sterilization instrument, distinct from the outstanding stock in GOV_SECURITIES_MEUKAM.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2023-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

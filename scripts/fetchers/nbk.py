@@ -2283,3 +2283,113 @@ def fetch_gold_bullion_sales() -> tuple[list[dict], dict]:
         "Number of bars. Refined gold bullion bars sold to the public by second-tier banks and non-bank exchange offices -- a retail gold-demand / household savings-behavior indicator.",
         "quarterly",
     )
+
+
+def fetch_remittances_sent_usd() -> tuple[list[dict], dict]:
+    """Remittances Sent, US Dollars (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "411", {'period': 'Month', 'type': 'mln. KZT', 'currency_code': 'US Dollar', 'money_transfer_sign': 'money transfers sent'},
+        "REMITTANCES_SENT_USD",
+        "Million KZT equivalent. Cross-border money transfers SENT from Kazakhstan denominated in US DOLLARS. Currency composition behind the REMITTANCES_SENT total.",
+        "monthly",
+    )
+
+
+def fetch_remittances_sent_kzt() -> tuple[list[dict], dict]:
+    """Remittances Sent, Tenge (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "411", {'period': 'Month', 'type': 'mln. KZT', 'currency_code': 'Tenge', 'money_transfer_sign': 'money transfers sent'},
+        "REMITTANCES_SENT_KZT",
+        "Million KZT. Cross-border money transfers SENT from Kazakhstan denominated in TENGE.",
+        "monthly",
+    )
+
+
+def fetch_remittances_sent_rub() -> tuple[list[dict], dict]:
+    """Remittances Sent, Russian Rubles (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "411", {'period': 'Month', 'type': 'mln. KZT', 'currency_code': 'Rubles', 'money_transfer_sign': 'money transfers sent'},
+        "REMITTANCES_SENT_RUB",
+        "Million KZT equivalent. Cross-border money transfers SENT from Kazakhstan denominated in RUSSIAN RUBLES.",
+        "monthly",
+    )
+
+
+def fetch_remittances_received_usd() -> tuple[list[dict], dict]:
+    """Remittances Received, US Dollars (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "411", {'period': 'Month', 'type': 'mln. KZT', 'currency_code': 'US Dollar', 'money_transfer_sign': 'money transfers received'},
+        "REMITTANCES_RECEIVED_USD",
+        "Million KZT equivalent. Cross-border money transfers RECEIVED in Kazakhstan denominated in US DOLLARS.",
+        "monthly",
+    )
+
+
+def fetch_remittances_received_kzt() -> tuple[list[dict], dict]:
+    """Remittances Received, Tenge (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "411", {'period': 'Month', 'type': 'mln. KZT', 'currency_code': 'Tenge', 'money_transfer_sign': 'money transfers received'},
+        "REMITTANCES_RECEIVED_KZT",
+        "Million KZT. Cross-border money transfers RECEIVED in Kazakhstan denominated in TENGE.",
+        "monthly",
+    )
+
+
+def fetch_remittances_received_rub() -> tuple[list[dict], dict]:
+    """Remittances Received, Russian Rubles (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "411", {'period': 'Month', 'type': 'mln. KZT', 'currency_code': 'Rubles', 'money_transfer_sign': 'money transfers received'},
+        "REMITTANCES_RECEIVED_RUB",
+        "Million KZT equivalent. Cross-border money transfers RECEIVED in Kazakhstan denominated in RUSSIAN RUBLES.",
+        "monthly",
+    )
+
+
+def fetch_external_debt_gov_loans_lt() -> tuple[list[dict], dict]:
+    """External Debt: General Government Loans, Long-Term (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "293", {'maturity': 'Long-term', 'period': 'quarter', 'type': 'USD mln', 'investment_type': 'Loans ', 'sector_economy_type': 'General Government'},
+        "EXTERNAL_DEBT_GOV_LOANS_LT",
+        "USD million, end of quarter. Long-term external debt of the GENERAL GOVERNMENT in the form of LOANS -- the sovereign borrowing component of external debt.",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_banks_loans_lt() -> tuple[list[dict], dict]:
+    """External Debt: Bank Loans, Long-Term (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "293", {'maturity': 'Long-term', 'period': 'quarter', 'type': 'USD mln', 'investment_type': 'Loans ', 'sector_economy_type': 'Banks'},
+        "EXTERNAL_DEBT_BANKS_LOANS_LT",
+        "USD million, end of quarter. Long-term external debt of BANKS in the form of LOANS.",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_banks_securities_lt() -> tuple[list[dict], dict]:
+    """External Debt: Bank Debt Securities, Long-Term (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "293", {'maturity': 'Long-term', 'period': 'quarter', 'type': 'USD mln', 'investment_type': 'Debt securities ', 'sector_economy_type': 'Banks'},
+        "EXTERNAL_DEBT_BANKS_SECURITIES_LT",
+        "USD million, end of quarter. Long-term external debt of BANKS in the form of DEBT SECURITIES (eurobond-style market borrowing).",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_other_securities_lt() -> tuple[list[dict], dict]:
+    """External Debt: Other Sectors Debt Securities, Long-Term (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "293", {'maturity': 'Long-term', 'period': 'quarter', 'type': 'USD mln', 'investment_type': 'Debt securities ', 'sector_economy_type': 'Other Sectors'},
+        "EXTERNAL_DEBT_OTHER_SECURITIES_LT",
+        "USD million, end of quarter. Long-term external debt of OTHER SECTORS (non-bank corporates) in the form of DEBT SECURITIES.",
+        "quarterly",
+    )
+
+
+def fetch_gov_securities_secondary_nbk_notes() -> tuple[list[dict], dict]:
+    """Government Securities Secondary Market: NBK Notes Volume (million KZT, monthly)."""
+    return _fetch_nbk_exact_row(
+        "16", {'code': 'NBK Notes', 'type': 'Transactions volume (mln. tenge)'},
+        "GOV_SECURITIES_SECONDARY_NBK_NOTES",
+        "Million KZT. Secondary-market transaction volume in NBK Notes -- a liquidity/turnover measure for the National Bank short-term sterilization instrument, distinct from the outstanding stock in GOV_SECURITIES_MEUKAM.",
+        "monthly",
+    )

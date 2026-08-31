@@ -3352,7 +3352,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,48.224127,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2020-01-01,KZ,national,monthly,EXPORTS,4558391.945129985,thousand USD,bns,2026-08-31,level,2026-08-31
 2020-01-01,KZ,national,quarterly,EXTERNAL_DEBT,159544.21723,million USD,nbk,2026-08-31,level,2026-08-31
+2020-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1607.179104,USD million,nbk,2026-08-31,level,2026-08-31
+2020-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1875.85289,USD million,nbk,2026-08-31,level,2026-08-31
+2020-01-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6269.274,USD million,nbk,2026-08-31,level,2026-08-31
 2020-01-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,150743.030965,USD million,nbk,2026-08-31,level,2026-08-31
+2020-01-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,9491.132902,USD million,nbk,2026-08-31,level,2026-08-31
 2020-01-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,8801.186266,USD million,nbk,2026-08-31,level,2026-08-31
 2020-01-01,KZ,national,quarterly,FDI_NET_INFLOW,1034.148034,million USD,nbk,2026-08-31,level,2026-08-31
 2020-01-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,56.230863,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -3462,7 +3466,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-04-01,KZ,national,quarterly,EXPORTERS_SHARE,6.358561,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,monthly,EXPORTS,4636669.614490003,thousand USD,bns,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,quarterly,EXTERNAL_DEBT,155466.741677,million USD,nbk,2026-08-31,level,2026-08-31
+2020-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1632.750104,USD million,nbk,2026-08-31,level,2026-08-31
+2020-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1870.77214,USD million,nbk,2026-08-31,level,2026-08-31
+2020-04-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,5932.036,USD million,nbk,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,147119.016416,USD million,nbk,2026-08-31,level,2026-08-31
+2020-04-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,8083.034305,USD million,nbk,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,8347.72526,USD million,nbk,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,quarterly,FDI_NET_INFLOW,1126.520761,million USD,nbk,2026-08-31,level,2026-08-31
 2020-04-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,55.645161,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -3542,7 +3550,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-07-01,KZ,national,quarterly,EXPORTERS_SHARE,6.392133,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,monthly,EXPORTS,2642269.725739999,thousand USD,bns,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,quarterly,EXTERNAL_DEBT,160585.792337,million USD,nbk,2026-08-31,level,2026-08-31
+2020-07-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1783.059104,USD million,nbk,2026-08-31,level,2026-08-31
+2020-07-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1841.199683,USD million,nbk,2026-08-31,level,2026-08-31
+2020-07-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,5873.75,USD million,nbk,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,151691.628066,USD million,nbk,2026-08-31,level,2026-08-31
+2020-07-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,9278.33948,USD million,nbk,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,8894.16427,USD million,nbk,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,quarterly,FDI_NET_INFLOW,1425.519844,million USD,nbk,2026-08-31,level,2026-08-31
 2020-07-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,53.918254,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -3622,7 +3634,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-10-01,KZ,national,quarterly,EXPORTERS_SHARE,6.562882,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,monthly,EXPORTS,3823884.6395499846,thousand USD,bns,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,quarterly,EXTERNAL_DEBT,161706.536328,million USD,nbk,2026-08-31,level,2026-08-31
+2020-10-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1711.713104,USD million,nbk,2026-08-31,level,2026-08-31
+2020-10-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1779.393813,USD million,nbk,2026-08-31,level,2026-08-31
+2020-10-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,5544.313,USD million,nbk,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,152555.253372,USD million,nbk,2026-08-31,level,2026-08-31
+2020-10-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,10235.876198,USD million,nbk,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,9151.282956,USD million,nbk,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,quarterly,FDI_NET_INFLOW,165.018106,million USD,nbk,2026-08-31,level,2026-08-31
 2020-10-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,56.379731,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -3766,7 +3782,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,quarterly,EXPORTERS_SHARE,6.297536,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,monthly,EXPORTS,3270134.2324499944,thousand USD,bns,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,quarterly,EXTERNAL_DEBT,163980.074825,million USD,nbk,2026-08-31,level,2026-08-31
+2021-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1712.762104,USD million,nbk,2026-08-31,level,2026-08-31
+2021-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1568.210965,USD million,nbk,2026-08-31,level,2026-08-31
+2021-01-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6657.761,USD million,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,154499.060197,USD million,nbk,2026-08-31,level,2026-08-31
+2021-01-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,10540.234414,USD million,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,9481.014629,USD million,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,quarterly,FDI_NET_INFLOW,952.584054,million USD,nbk,2026-08-31,level,2026-08-31
 2021-01-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,57.560085,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -3881,7 +3901,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-04-01,KZ,national,quarterly,EXPORTERS_SHARE,5.996366,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,monthly,EXPORTS,5020408.167069992,thousand USD,bns,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,quarterly,EXTERNAL_DEBT,163955.094816,million USD,nbk,2026-08-31,level,2026-08-31
+2021-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1551.157104,USD million,nbk,2026-08-31,level,2026-08-31
+2021-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1434.251533,USD million,nbk,2026-08-31,level,2026-08-31
+2021-04-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,7333.432,USD million,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,152999.883287,USD million,nbk,2026-08-31,level,2026-08-31
+2021-04-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,10391.682935,USD million,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,10955.211528,USD million,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,quarterly,FDI_NET_INFLOW,206.280745,million USD,nbk,2026-08-31,level,2026-08-31
 2021-04-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,59.38825,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -3965,7 +3989,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,quarterly,EXPORTERS_SHARE,6.161281,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,monthly,EXPORTS,4971127.327699998,thousand USD,bns,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,quarterly,EXTERNAL_DEBT,166483.080062,million USD,nbk,2026-08-31,level,2026-08-31
+2021-07-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1559.810104,USD million,nbk,2026-08-31,level,2026-08-31
+2021-07-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1859.707505,USD million,nbk,2026-08-31,level,2026-08-31
+2021-07-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,7288.465,USD million,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,154239.308904,USD million,nbk,2026-08-31,level,2026-08-31
+2021-07-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,10626.348077,USD million,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,12243.771158,USD million,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,quarterly,FDI_NET_INFLOW,1122.71464,million USD,nbk,2026-08-31,level,2026-08-31
 2021-07-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,60.872848,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -4036,7 +4064,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-09-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,8779.4434,billion KZT,nbk,2026-08-31,level,2026-08-31
 2021-09-01,KZ,national,monthly,REER,96.66794,index,nbk,2026-08-31,level,2026-08-31
 2021-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,24101.690156208,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,5571.35933476,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,1691.97740994,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,15586.063719348,million KZT,nbk,2026-08-31,level,2026-08-31
 2021-09-01,KZ,national,monthly,REMITTANCES_SENT,97265.79009194,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-09-01,KZ,national,monthly,REMITTANCES_SENT_KZT,8396.31725888,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-09-01,KZ,national,monthly,REMITTANCES_SENT_RUB,8753.78728317,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-09-01,KZ,national,monthly,REMITTANCES_SENT_USD,79011.41167972,million KZT,nbk,2026-08-31,level,2026-08-31
 2021-09-30,KZ,national,quarterly,GDP_NOMINAL,53029365700000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2021-10-01,KZ,national,quarterly,BANK_ROA,4.11,%,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,quarterly,BANK_ROE,29.9,%,nbk,2026-08-31,level,2026-08-31
@@ -4053,7 +4087,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,quarterly,EXPORTERS_SHARE,6.374023,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,monthly,EXPORTS,5848852.207840016,thousand USD,bns,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,quarterly,EXTERNAL_DEBT,165761.723503,million USD,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1619.775104,USD million,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1885.003045,USD million,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,7168.641,USD million,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,154176.720967,USD million,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,10467.445392,USD million,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,11585.002537,USD million,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,quarterly,FDI_NET_INFLOW,2349.42844,million USD,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,62.597715,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -4095,7 +4133,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,69.001804,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,monthly,REER,96.70118,index,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,23290.258204922,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,5857.10797452,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,1500.04929893,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,14798.436104062,million KZT,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,monthly,REMITTANCES_SENT,93486.61029249,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,monthly,REMITTANCES_SENT_KZT,6093.2091613,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,monthly,REMITTANCES_SENT_RUB,9367.74998046,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-10-01,KZ,national,monthly,REMITTANCES_SENT_USD,77038.47377608,million KZT,nbk,2026-08-31,level,2026-08-31
 2021-10-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,8.94829595034697,number of months,nbk,2026-08-31,level,2026-08-31
 2021-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.8,index,nbk,2026-08-31,level,2026-08-31
 2021-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,7401.637912,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -4112,7 +4156,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-11-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,9195.266525,billion KZT,nbk,2026-08-31,level,2026-08-31
 2021-11-01,KZ,national,monthly,REER,96.87982,index,nbk,2026-08-31,level,2026-08-31
 2021-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,22892.602420209,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,5084.67166266,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,1418.57487297,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,15282.332897209,million KZT,nbk,2026-08-31,level,2026-08-31
 2021-11-01,KZ,national,monthly,REMITTANCES_SENT,87047.89202394,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-11-01,KZ,national,monthly,REMITTANCES_SENT_KZT,5407.7607694,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-11-01,KZ,national,monthly,REMITTANCES_SENT_RUB,8778.41045152,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-11-01,KZ,national,monthly,REMITTANCES_SENT_USD,71919.61205716,million KZT,nbk,2026-08-31,level,2026-08-31
 2021-12-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.3,index,nbk,2026-08-31,level,2026-08-31
 2021-12-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,8043.897258,billion KZT,nbk,2026-08-31,level,2026-08-31
 2021-12-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2111.294259,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -4134,7 +4184,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,10155.19152,billion KZT,nbk,2026-08-31,level,2026-08-31
 2021-12-01,KZ,national,monthly,REER,96.99026,index,nbk,2026-08-31,level,2026-08-31
 2021-12-01,KZ,national,monthly,REMITTANCES_RECEIVED,27253.83888086,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,7228.53167229,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,1743.38269675,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,16959.3401103,million KZT,nbk,2026-08-31,level,2026-08-31
 2021-12-01,KZ,national,monthly,REMITTANCES_SENT,88423.25061544,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-12-01,KZ,national,monthly,REMITTANCES_SENT_KZT,7535.75044157,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-12-01,KZ,national,monthly,REMITTANCES_SENT_RUB,9105.12915053,million KZT,nbk,2026-08-31,level,2026-08-31
+2021-12-01,KZ,national,monthly,REMITTANCES_SENT_USD,70699.47695996,million KZT,nbk,2026-08-31,level,2026-08-31
 2021-12-31,KZ,national,annual,AGRICULTURE_OUTPUT,7515433451345.67,KZT,bns,2026-08-31,level,2026-08-31
 2021-12-31,KZ,national,annual,AVG_WAGE,250311.0,KZT,bns,2026-08-31,level,2026-08-31
 2021-12-31,KZ,national,annual,BIRTHS_TOTAL,446491.0,persons,bns,2026-08-31,level,2026-08-31
@@ -4220,7 +4276,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,quarterly,EXPORTERS_SHARE,6.750675,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,monthly,EXPORTS,6093897.247329982,thousand USD,bns,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,quarterly,EXTERNAL_DEBT,164131.074503,million USD,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1541.171104,USD million,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1888.762449,USD million,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,7086.29014,USD million,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,152121.454203,USD million,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,10724.088533,USD million,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,12009.620301,USD million,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,quarterly,FDI_NET_INFLOW,-325.17931,million USD,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,61.536154,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -4302,7 +4362,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,65.976598,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,monthly,REER,98.18849,index,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,13594.67906766,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3394.3982902,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,834.67709836,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,8693.34710886,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,monthly,REMITTANCES_SENT,45608.94774816,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,monthly,REMITTANCES_SENT_KZT,2616.94285723,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,monthly,REMITTANCES_SENT_RUB,4915.17819548,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-01-01,KZ,national,monthly,REMITTANCES_SENT_USD,37617.69584899,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-01-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,8.31774178964158,number of months,nbk,2026-08-31,level,2026-08-31
 2022-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.2,index,nbk,2026-08-31,level,2026-08-31
 2022-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,6857.361091,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -4326,7 +4392,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-02-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,8448.755384,billion KZT,nbk,2026-08-31,level,2026-08-31
 2022-02-01,KZ,national,monthly,REER,98.3345,index,nbk,2026-08-31,level,2026-08-31
 2022-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,17973.720787752,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3462.43920256,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,1181.43375686,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,12229.093836802,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-02-01,KZ,national,monthly,REMITTANCES_SENT,62763.54499673,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-02-01,KZ,national,monthly,REMITTANCES_SENT_KZT,4287.82910448,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-02-01,KZ,national,monthly,REMITTANCES_SENT_RUB,4921.3584205,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-02-01,KZ,national,monthly,REMITTANCES_SENT_USD,52696.2825509,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.2,index,nbk,2026-08-31,level,2026-08-31
 2022-03-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,8016.640985,billion KZT,nbk,2026-08-31,level,2026-08-31
 2022-03-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1838.748785,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -4349,7 +4421,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-03-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,9855.4,billion KZT,nbk,2026-08-31,level,2026-08-31
 2022-03-01,KZ,national,monthly,REER,95.31372,index,nbk,2026-08-31,level,2026-08-31
 2022-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,25583.625044329,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,4486.05744728,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2851.80089685,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,16433.033167949,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-03-01,KZ,national,monthly,REMITTANCES_SENT,81120.43649446,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-03-01,KZ,national,monthly,REMITTANCES_SENT_KZT,5095.81663903,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-03-01,KZ,national,monthly,REMITTANCES_SENT_RUB,8394.11491677,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-03-01,KZ,national,monthly,REMITTANCES_SENT_USD,66730.09816208,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-03-31,KZ,national,quarterly,GDP_NOMINAL,19695592800000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2022-04-01,KZ,national,quarterly,BANK_ROA,4.33,%,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,quarterly,BANK_ROE,31.32,%,nbk,2026-08-31,level,2026-08-31
@@ -4367,7 +4445,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,quarterly,EXPORTERS_SHARE,6.658668,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,EXPORTS,7405848.191799973,thousand USD,bns,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,quarterly,EXTERNAL_DEBT,159896.772884,million USD,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,3411.103104,USD million,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1758.050188,USD million,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6935.137,USD million,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,148176.716045,USD million,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,8546.915172,USD million,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,11720.056839,USD million,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,quarterly,FDI_NET_INFLOW,1771.28898,million USD,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,65.461908,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -4418,7 +4500,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,72.30054,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,REER,99.9233,index,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,52467.054826664,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,8713.61985846,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3076.33636768,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,38079.979214164,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,monthly,REMITTANCES_SENT,103563.80431846,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,monthly,REMITTANCES_SENT_KZT,9390.57069132,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,monthly,REMITTANCES_SENT_RUB,14209.19187954,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-04-01,KZ,national,monthly,REMITTANCES_SENT_USD,79109.2501418,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-04-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,7.71078271171951,number of months,nbk,2026-08-31,level,2026-08-31
 2022-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.1,index,nbk,2026-08-31,level,2026-08-31
 2022-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,7909.726513,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -4442,7 +4530,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-05-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,9694.960304,billion KZT,nbk,2026-08-31,level,2026-08-31
 2022-05-01,KZ,national,monthly,REER,102.28378,index,nbk,2026-08-31,level,2026-08-31
 2022-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,69177.523899436,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,14194.89113365,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3086.8859664,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,50550.403159666,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-05-01,KZ,national,monthly,REMITTANCES_SENT,98361.294688306,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-05-01,KZ,national,monthly,REMITTANCES_SENT_KZT,14339.6470739,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-05-01,KZ,national,monthly,REMITTANCES_SENT_RUB,14401.0687882,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-05-01,KZ,national,monthly,REMITTANCES_SENT_USD,69292.535867956,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.6,index,nbk,2026-08-31,level,2026-08-31
 2022-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,8815.999989,billion KZT,nbk,2026-08-31,level,2026-08-31
 2022-06-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1943.210876,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -4465,7 +4559,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-06-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,10759.21087,billion KZT,nbk,2026-08-31,level,2026-08-31
 2022-06-01,KZ,national,monthly,REER,97.19417,index,nbk,2026-08-31,level,2026-08-31
 2022-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,91935.954853243,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,15181.31978941,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3910.01779679,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,71400.221034993,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-06-01,KZ,national,monthly,REMITTANCES_SENT,104378.20840696,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-06-01,KZ,national,monthly,REMITTANCES_SENT_KZT,13597.55890139,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-06-01,KZ,national,monthly,REMITTANCES_SENT_RUB,20822.98247047,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-06-01,KZ,national,monthly,REMITTANCES_SENT_USD,69695.9031087,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-06-30,KZ,national,quarterly,GDP_NOMINAL,40034332600000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2022-07-01,KZ,national,quarterly,BANK_ROA,2.4,%,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,quarterly,BANK_ROE,15.55,%,nbk,2026-08-31,level,2026-08-31
@@ -4483,7 +4583,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,quarterly,EXPORTERS_SHARE,6.672651,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,EXPORTS,6710232.980090019,thousand USD,bns,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,quarterly,EXTERNAL_DEBT,164152.245454,million USD,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,4404.157104,USD million,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1403.247439,USD million,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6720.249,USD million,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,150001.840268,USD million,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,7708.869923,USD million,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,14150.405186,USD million,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,quarterly,FDI_NET_INFLOW,403.921307,million USD,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,65.544584,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -4534,7 +4638,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,72.336924,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,REER,93.93754,index,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,REMITTANCES_RECEIVED,88164.427847933,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,25995.12395873,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,4485.05138258,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,56731.262903883,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,monthly,REMITTANCES_SENT,86747.37221813,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,monthly,REMITTANCES_SENT_KZT,24396.72373385,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,monthly,REMITTANCES_SENT_RUB,11485.89842313,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-07-01,KZ,national,monthly,REMITTANCES_SENT_USD,50622.98384053,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-07-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,7.14278472199835,number of months,nbk,2026-08-31,level,2026-08-31
 2022-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.4,index,nbk,2026-08-31,level,2026-08-31
 2022-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,9509.307459,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -4558,7 +4668,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-08-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,11365.23397,billion KZT,nbk,2026-08-31,level,2026-08-31
 2022-08-01,KZ,national,monthly,REER,96.42578,index,nbk,2026-08-31,level,2026-08-31
 2022-08-01,KZ,national,monthly,REMITTANCES_RECEIVED,71393.566389754,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-08-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,18315.05200077,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-08-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3796.79748196,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-08-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,48215.975725524,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-08-01,KZ,national,monthly,REMITTANCES_SENT,103249.68209565,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-08-01,KZ,national,monthly,REMITTANCES_SENT_KZT,21916.74338212,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-08-01,KZ,national,monthly,REMITTANCES_SENT_RUB,10347.19749024,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-08-01,KZ,national,monthly,REMITTANCES_SENT_USD,70771.77589502,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-09-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.6,index,nbk,2026-08-31,level,2026-08-31
 2022-09-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,9299.50369,billion KZT,nbk,2026-08-31,level,2026-08-31
 2022-09-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1756.036428,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -4581,7 +4697,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-09-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,11055.54012,billion KZT,nbk,2026-08-31,level,2026-08-31
 2022-09-01,KZ,national,monthly,REER,98.99754,index,nbk,2026-08-31,level,2026-08-31
 2022-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,70646.449138767,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,19131.94428865,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3875.398110404,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,46314.943307493,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-09-01,KZ,national,monthly,REMITTANCES_SENT,93967.53495836,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-09-01,KZ,national,monthly,REMITTANCES_SENT_KZT,21032.91422529,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-09-01,KZ,national,monthly,REMITTANCES_SENT_RUB,12345.80175594,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-09-01,KZ,national,monthly,REMITTANCES_SENT_USD,60313.18689702,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-09-30,KZ,national,quarterly,GDP_NOMINAL,65487797900000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2022-10-01,KZ,national,quarterly,BANK_ROA,3.59,%,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,quarterly,BANK_ROE,25.74,%,nbk,2026-08-31,level,2026-08-31
@@ -4599,7 +4721,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,quarterly,EXPORTERS_SHARE,6.085132,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,EXPORTS,6940850.361629987,thousand USD,bns,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,quarterly,EXTERNAL_DEBT,161096.196502,million USD,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1697.076104,USD million,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1361.222322,USD million,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6486.716763,USD million,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,145568.436531,USD million,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,7401.657208,USD million,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,15527.759971,USD million,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,quarterly,FDI_NET_INFLOW,4668.345663,million USD,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,63.669065,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -4650,7 +4776,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,69.574341,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,REER,102.17974,index,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,74299.052368535,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,23011.10147132,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,5112.60050902,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,45124.277880885,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,monthly,REMITTANCES_SENT,89324.60107535,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,monthly,REMITTANCES_SENT_KZT,17497.44507619,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,monthly,REMITTANCES_SENT_RUB,12311.31899044,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-10-01,KZ,national,monthly,REMITTANCES_SENT_USD,59256.25099407,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-10-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,6.92825593702098,number of months,nbk,2026-08-31,level,2026-08-31
 2022-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.1,index,nbk,2026-08-31,level,2026-08-31
 2022-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,10222.94376,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -4674,7 +4806,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-11-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,12020.03111,billion KZT,nbk,2026-08-31,level,2026-08-31
 2022-11-01,KZ,national,monthly,REER,103.2937,index,nbk,2026-08-31,level,2026-08-31
 2022-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,62904.43740601,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,11807.56234695,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,7606.10707027,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,42354.1059631,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-11-01,KZ,national,monthly,REMITTANCES_SENT,90835.102049036,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-11-01,KZ,national,monthly,REMITTANCES_SENT_KZT,14651.39193255,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-11-01,KZ,national,monthly,REMITTANCES_SENT_RUB,14000.54541222,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-11-01,KZ,national,monthly,REMITTANCES_SENT_USD,61609.624247126,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-12-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.0,index,nbk,2026-08-31,level,2026-08-31
 2022-12-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,11312.54787,billion KZT,nbk,2026-08-31,level,2026-08-31
 2022-12-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2023.762501,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -4697,7 +4835,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,13336.31037,billion KZT,nbk,2026-08-31,level,2026-08-31
 2022-12-01,KZ,national,monthly,REER,103.47396,index,nbk,2026-08-31,level,2026-08-31
 2022-12-01,KZ,national,monthly,REMITTANCES_RECEIVED,43091.4641744,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,10797.44889426,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,5609.97626579,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,25335.0732667,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-12-01,KZ,national,monthly,REMITTANCES_SENT,74596.40557989,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-12-01,KZ,national,monthly,REMITTANCES_SENT_KZT,14712.28719689,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-12-01,KZ,national,monthly,REMITTANCES_SENT_RUB,12272.84606747,million KZT,nbk,2026-08-31,level,2026-08-31
+2022-12-01,KZ,national,monthly,REMITTANCES_SENT_USD,47320.54191277,million KZT,nbk,2026-08-31,level,2026-08-31
 2022-12-31,KZ,national,annual,AGRICULTURE_OUTPUT,9481179839177.98,KZT,bns,2026-08-31,level,2026-08-31
 2022-12-31,KZ,national,annual,AVG_WAGE,309697.0,KZT,bns,2026-08-31,level,2026-08-31
 2022-12-31,KZ,national,annual,BIRTHS_TOTAL,403893.0,persons,bns,2026-08-31,level,2026-08-31
@@ -4784,7 +4928,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,quarterly,EXPORTERS_SHARE,6.424747,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,EXPORTS,6016945.658610005,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,quarterly,EXTERNAL_DEBT,161144.273332,million USD,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1801.885104,USD million,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,752.647122,USD million,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6998.406575,USD million,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,144808.583934,USD million,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,6936.683263,USD million,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,16335.689399,USD million,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,quarterly,FDI_NET_INFLOW,-301.459891,million USD,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,62.031529,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -4792,6 +4940,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,monthly,FX_RESERVES,35076.02886017335,USD million,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,quarterly,GOLD_BULLION_SALES,7900.0,pieces,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10447907.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,380266.90341981,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1005466.77677209,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1903274.21511804,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4696702.77061781,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4875,7 +5024,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,69.170137,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,REER,105.11744,index,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,27576.65760503,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,6943.27170611,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3784.86282401,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,15783.26545431,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,monthly,REMITTANCES_SENT,49174.65081019,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,monthly,REMITTANCES_SENT_KZT,12141.77927482,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,monthly,REMITTANCES_SENT_RUB,5444.04381183,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-01-01,KZ,national,monthly,REMITTANCES_SENT_USD,31368.60175101,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-01-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,6.96422503198383,number of months,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.6,index,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,9260.655473,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -4886,6 +5041,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-02-01,KZ,national,monthly,EXPORTS,6202242.276639997,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,FX_RESERVES,36781.2851677488,USD million,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10556824.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-02-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,483985.26644412,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,951133.76851579,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1579249.11392242,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4735655.75875514,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4910,7 +5066,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-02-01,KZ,national,monthly,PENSION_PAYMENTS,31166.536,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,REER,110.6251,index,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,25817.97488921,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,6146.60387099,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,4265.02739277,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,14296.37224899,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-02-01,KZ,national,monthly,REMITTANCES_SENT,59544.13816239,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-02-01,KZ,national,monthly,REMITTANCES_SENT_KZT,16419.79560794,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-02-01,KZ,national,monthly,REMITTANCES_SENT_RUB,4779.50676526,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-02-01,KZ,national,monthly,REMITTANCES_SENT_USD,38123.76401463,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.7,index,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,10937.55217,billion KZT,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1769.855709,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -4920,6 +5082,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-03-01,KZ,national,monthly,EXPORTS,6665980.375739997,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,FX_RESERVES,34512.832471522364,USD million,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10671555.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-03-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,525879.68003068,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,935834.12413356,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1621163.51165046,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4492823.15642388,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4944,7 +5107,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-03-01,KZ,national,monthly,PENSION_PAYMENTS,61879.199,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,REER,112.4428,index,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,29853.48505157,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,8681.5381656,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3918.085761,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,15830.77320613,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-03-01,KZ,national,monthly,REMITTANCES_SENT,74161.95870891,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-03-01,KZ,national,monthly,REMITTANCES_SENT_KZT,23291.88996862,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-03-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6203.18378638,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-03-01,KZ,national,monthly,REMITTANCES_SENT_USD,44402.36360312,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-03-31,KZ,national,quarterly,GDP_NOMINAL,23582637000000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2023-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.8,% of labor force,bns,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,quarterly,BANK_ROA,5.08,%,nbk,2026-08-31,level,2026-08-31
@@ -4964,7 +5133,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,quarterly,EXPORTERS_SHARE,5.794948,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,EXPORTS,6912025.0879799975,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,quarterly,EXTERNAL_DEBT,162813.968887,million USD,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1728.526104,USD million,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,742.693157,USD million,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6953.579754,USD million,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,145557.015895,USD million,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,7086.369847,USD million,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,17256.952993,USD million,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,quarterly,FDI_NET_INFLOW,2662.456823,million USD,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,59.702823,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -4972,6 +5145,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,monthly,FX_RESERVES,36214.79977751212,USD million,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,quarterly,GOLD_BULLION_SALES,9585.0,pieces,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10882429.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,456221.64345106,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1047950.51691994,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1722863.34345509,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4528518.53769597,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5025,7 +5199,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,67.548291,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,REER,113.80852,index,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,26506.42192695,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,7504.25840793,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3826.98440871,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,13789.57975464,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,monthly,REMITTANCES_SENT,76556.80289032,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,monthly,REMITTANCES_SENT_KZT,25541.41056819,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,monthly,REMITTANCES_SENT_RUB,7041.49971766,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-04-01,KZ,national,monthly,REMITTANCES_SENT_USD,43684.549297,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-04-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,6.65234079576333,number of months,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.1,index,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,11353.96446,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -5036,6 +5216,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-05-01,KZ,national,monthly,EXPORTS,6209573.296129998,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,FX_RESERVES,37605.850886800545,USD million,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10941188.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-05-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,642630.335090689,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1023119.29073841,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1747817.22242131,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4494979.50005514,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5060,7 +5241,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-05-01,KZ,national,monthly,PENSION_PAYMENTS,128291.07,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,REER,115.83861,index,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,28197.50763373,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,8798.58026063,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3061.49155744,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,15000.29969834,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-05-01,KZ,national,monthly,REMITTANCES_SENT,90248.7620732,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-05-01,KZ,national,monthly,REMITTANCES_SENT_KZT,25008.83382841,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-05-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6959.80605006,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-05-01,KZ,national,monthly,REMITTANCES_SENT_USD,58000.3156027,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.5,index,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,11882.27967,billion KZT,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1978.54677,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -5070,6 +5257,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-06-01,KZ,national,monthly,EXPORTS,6449854.38803,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,FX_RESERVES,35444.97786669047,USD million,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,11287475.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-06-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,900203.22013916,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1030021.56909147,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1807260.57577642,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4398894.73578309,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5094,7 +5282,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-06-01,KZ,national,monthly,PENSION_PAYMENTS,163308.933,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,REER,118.27238,index,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,26795.43654993,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,8295.80480101,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3674.59054227,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,13473.41742874,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-06-01,KZ,national,monthly,REMITTANCES_SENT,87798.65888644,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-06-01,KZ,national,monthly,REMITTANCES_SENT_KZT,25578.31769807,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-06-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6370.20703615,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-06-01,KZ,national,monthly,REMITTANCES_SENT_USD,55621.66572783,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-06-30,KZ,national,quarterly,GDP_NOMINAL,47244671500000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2023-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,quarterly,BANK_ROA,5.19,%,nbk,2026-08-31,level,2026-08-31
@@ -5114,7 +5308,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,quarterly,EXPORTERS_SHARE,6.038073,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,EXPORTS,6695082.794110002,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,quarterly,EXTERNAL_DEBT,162802.617326,million USD,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1699.141143,USD million,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,553.596129,USD million,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6866.282041,USD million,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,145601.967977,USD million,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,6767.392054,USD million,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,17200.64935,USD million,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,quarterly,FDI_NET_INFLOW,1476.959941,million USD,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,57.480666,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -5122,6 +5320,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,monthly,FX_RESERVES,34456.779236480965,USD million,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,quarterly,GOLD_BULLION_SALES,9966.0,pieces,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12190667.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,160459.44686594,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1077807.76271719,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2009906.16381946,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4362082.18008589,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5175,7 +5374,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,64.321832,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,REER,121.32515,index,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,REMITTANCES_RECEIVED,24242.938213334,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,5932.54110478,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3410.18637352,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,13499.256250114,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,monthly,REMITTANCES_SENT,88804.51659105,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,monthly,REMITTANCES_SENT_KZT,27853.41551175,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6278.62704787,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-07-01,KZ,national,monthly,REMITTANCES_SENT_USD,54423.46465876,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-07-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,5.96100963516067,number of months,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.7,index,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,12864.24573,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -5186,6 +5391,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-08-01,KZ,national,monthly,EXPORTS,6671262.081420004,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,FX_RESERVES,34211.41401147802,USD million,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12442858.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-08-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,208770.41759544,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1025253.47271872,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1959469.08520741,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4326173.27278047,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5216,7 +5422,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-08-01,KZ,national,monthly,PENSION_PAYMENTS,272019.716,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,REER,121.75465,index,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,REMITTANCES_RECEIVED,22327.163019382,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-08-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,5765.17769821,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-08-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3471.80973188,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-08-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,11883.385368492,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-08-01,KZ,national,monthly,REMITTANCES_SENT,99054.860802557,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-08-01,KZ,national,monthly,REMITTANCES_SENT_KZT,28635.87321688,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-08-01,KZ,national,monthly,REMITTANCES_SENT_RUB,7235.96797148,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-08-01,KZ,national,monthly,REMITTANCES_SENT_USD,62991.165112747,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.3,index,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,12453.64983,billion KZT,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1948.6016,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -5226,6 +5438,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-09-01,KZ,national,monthly,EXPORTS,6298351.714319998,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,FX_RESERVES,33580.7195575279,USD million,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12511463.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-09-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,347858.35572444,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1015104.32869327,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1873027.59955726,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4253036.25583397,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5256,7 +5469,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-09-01,KZ,national,monthly,PENSION_PAYMENTS,332498.626,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,REER,119.20947,index,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,24422.675364869,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,5737.25690449,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3166.04608778,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,14169.695346629,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-09-01,KZ,national,monthly,REMITTANCES_SENT,93217.5520307,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-09-01,KZ,national,monthly,REMITTANCES_SENT_KZT,26553.34549417,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-09-01,KZ,national,monthly,REMITTANCES_SENT_RUB,7407.80187109,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-09-01,KZ,national,monthly,REMITTANCES_SENT_USD,59026.99769424,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-09-30,KZ,national,quarterly,GDP_NOMINAL,75546820300000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2023-09-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,quarterly,BANK_ROA,5.16,%,nbk,2026-08-31,level,2026-08-31
@@ -5276,7 +5495,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,quarterly,EXPORTERS_SHARE,6.107323,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,EXPORTS,6985840.790389997,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,quarterly,EXTERNAL_DEBT,163809.495203,million USD,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1630.716357,USD million,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,511.736174,USD million,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6586.309538,USD million,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,145584.036668,USD million,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,7046.212972,USD million,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,18225.458534,USD million,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,quarterly,FDI_NET_INFLOW,468.012017,million USD,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,58.316039,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -5284,6 +5507,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,monthly,FX_RESERVES,31883.450429953424,USD million,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,quarterly,GOLD_BULLION_SALES,8468.0,pieces,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12598933.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,319539.05274185,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1055719.53121084,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1932946.08346024,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4314919.42303077,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5337,7 +5561,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,64.393715,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,REER,118.74299,index,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,23532.269879783,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,5831.09111035,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2815.01868624,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,13502.507773163,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,monthly,REMITTANCES_SENT,89636.710716899,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,monthly,REMITTANCES_SENT_KZT,24794.7673502,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,monthly,REMITTANCES_SENT_RUB,7468.73668946,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-10-01,KZ,national,monthly,REMITTANCES_SENT_USD,57191.555073049,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-10-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,5.32376614785823,number of months,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.0,index,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,13305.23283,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -5348,6 +5578,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-11-01,KZ,national,monthly,EXPORTS,6784353.909989999,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,FX_RESERVES,33957.85037536994,USD million,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12719514.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-11-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,204966.35872824,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1016854.97611682,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1941198.90884291,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4209906.20752437,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5378,7 +5609,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-11-01,KZ,national,monthly,PENSION_PAYMENTS,431425.729,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,REER,119.78231,index,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,22530.622289574,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,5512.75799417,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2852.86779062,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,12987.776957874,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-11-01,KZ,national,monthly,REMITTANCES_SENT,81252.23102924,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-11-01,KZ,national,monthly,REMITTANCES_SENT_KZT,21959.96414488,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-11-01,KZ,national,monthly,REMITTANCES_SENT_RUB,9685.65519422,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-11-01,KZ,national,monthly,REMITTANCES_SENT_USD,49356.13080299,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.2,index,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,14497.92701,billion KZT,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2297.471045,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -5388,6 +5625,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-01,KZ,national,monthly,EXPORTS,7247242.304000005,thousand USD,bns,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,FX_RESERVES,34196.577653261724,USD million,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12807192.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-12-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,429668.1746287,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1000305.01522739,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1904205.62926,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4121791.37522187,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5418,7 +5656,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-01,KZ,national,monthly,PENSION_PAYMENTS,486279.456,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,REER,120.98336,index,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,REMITTANCES_RECEIVED,27705.032608077,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,7592.09614976,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3403.79375234,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,15187.937975877,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-12-01,KZ,national,monthly,REMITTANCES_SENT,79826.77450172,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-12-01,KZ,national,monthly,REMITTANCES_SENT_KZT,24514.92374252,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-12-01,KZ,national,monthly,REMITTANCES_SENT_RUB,9371.51375135,million KZT,nbk,2026-08-31,level,2026-08-31
+2023-12-01,KZ,national,monthly,REMITTANCES_SENT_USD,45655.58801609,million KZT,nbk,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,AGRICULTURE_OUTPUT,7576533712826.38,KZT,bns,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,AVG_WAGE,364295.0,KZT,bns,2026-08-31,level,2026-08-31
 2023-12-31,KZ,national,annual,BIRTHS_TOTAL,388428.0,persons,bns,2026-08-31,level,2026-08-31
@@ -5513,7 +5757,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,quarterly,EXPORTERS_SHARE,6.231542,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,EXPORTS,5947011.362290002,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,quarterly,EXTERNAL_DEBT,163711.964049,million USD,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1541.011104,USD million,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,516.81206,USD million,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6558.464662,USD million,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,144322.409899,USD million,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,7149.603671,USD million,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,19389.55415,USD million,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,quarterly,FDI_NET_INFLOW,-1016.17856,million USD,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,57.501477,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -5521,6 +5769,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,monthly,FX_RESERVES,35944.0531031745,USD million,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,quarterly,GOLD_BULLION_SALES,10710.0,pieces,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12821636.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,120313.45265052,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1010397.37501044,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2256804.11815881,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4438631.96417358,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5606,7 +5855,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,64.958653,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,REER,123.06211,index,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,20624.2564639,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,6683.70656749,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2125.82165871,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,10604.11395592,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,monthly,REMITTANCES_SENT,52480.93746954,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,monthly,REMITTANCES_SENT_KZT,15435.85217825,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6479.66074812,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-01-01,KZ,national,monthly,REMITTANCES_SENT_USD,30371.59377162,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-01-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,5.93519375814371,number of months,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.0,index,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,11046.07946,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -5617,6 +5872,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-02-01,KZ,national,monthly,EXPORTS,6378583.930739998,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,FX_RESERVES,36679.03081274847,USD million,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12924904.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-02-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,338872.23811407,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1023708.21598755,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1824637.23000753,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4243610.51998365,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5648,7 +5904,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-02-01,KZ,national,monthly,PENSION_PAYMENTS,51334.74,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,REER,125.23512,index,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,19133.07141938,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,4775.88391332,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2582.34337837,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,10539.50147017,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-02-01,KZ,national,monthly,REMITTANCES_SENT,58913.35848472,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-02-01,KZ,national,monthly,REMITTANCES_SENT_KZT,18524.29537011,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-02-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6816.38337509,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-02-01,KZ,national,monthly,REMITTANCES_SENT_USD,33370.79970024,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,11834.43991,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1961.053904,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -5658,6 +5920,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-03-01,KZ,national,monthly,EXPORTS,6288894.677410004,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,FX_RESERVES,36130.255476132355,USD million,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,13307589.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-03-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,348934.50555998,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,984688.95238253,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1895528.07791071,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4250020.33288207,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5689,7 +5952,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-03-01,KZ,national,monthly,PENSION_PAYMENTS,102798.512,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,REER,126.09382,index,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,20061.6372356,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,5273.74870714,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2134.47667259,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,11339.04651129,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-03-01,KZ,national,monthly,REMITTANCES_SENT,59265.15085536,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-03-01,KZ,national,monthly,REMITTANCES_SENT_KZT,21758.56393122,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-03-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6627.34884936,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-03-01,KZ,national,monthly,REMITTANCES_SENT_USD,30715.72586999,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-03-31,KZ,national,quarterly,GDP_NOMINAL,26023903800000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2024-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,quarterly,BANK_ROA,4.95,%,nbk,2026-08-31,level,2026-08-31
@@ -5709,7 +5978,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,quarterly,EXPORTERS_SHARE,6.257379,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,EXPORTS,7092660.01442,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,quarterly,EXTERNAL_DEBT,163952.926164,million USD,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1467.102104,USD million,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,510.06002,USD million,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6252.878443,USD million,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,144820.62638,USD million,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,7106.116126,USD million,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,19132.299784,USD million,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,quarterly,FDI_NET_INFLOW,2382.891878,million USD,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,57.216647,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -5717,6 +5990,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,monthly,FX_RESERVES,37847.046933613856,USD million,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,quarterly,GOLD_BULLION_SALES,18969.0,pieces,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,13644933.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,97315.38623732,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1010163.10871361,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1880272.09061127,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4209277.35218244,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5771,7 +6045,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,64.108619,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,REER,128.63669,index,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,20617.094405,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,5116.847621,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2748.38993356,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,11345.60834017,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,monthly,REMITTANCES_SENT,65855.31166946,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,monthly,REMITTANCES_SENT_KZT,23739.71928099,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6893.38084434,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-04-01,KZ,national,monthly,REMITTANCES_SENT_USD,35071.24025646,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-04-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,6.29222181759404,number of months,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,13262.55766,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -5782,6 +6062,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-05-01,KZ,national,monthly,EXPORTS,7091163.214260001,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,FX_RESERVES,39850.64174957584,USD million,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,14039489.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-05-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,462654.3142991,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,992563.25013414,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1966799.03202069,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4168080.26232637,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5813,7 +6094,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-05-01,KZ,national,monthly,PENSION_PAYMENTS,215088.343,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,REER,128.47414,index,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,20589.68625009,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,5324.73312685,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2533.6081703,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,11384.28509756,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-05-01,KZ,national,monthly,REMITTANCES_SENT,73852.75716502,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-05-01,KZ,national,monthly,REMITTANCES_SENT_KZT,26259.87797083,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-05-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6731.08756179,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-05-01,KZ,national,monthly,REMITTANCES_SENT_USD,40666.79374665,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.4,index,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,14265.00143,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2223.452942,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -5823,6 +6110,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-01,KZ,national,monthly,EXPORTS,6848030.736790003,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,FX_RESERVES,39817.07388842929,USD million,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,14032955.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-06-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,163137.22263474,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,999833.54951218,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2042898.14696909,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4237417.7403774,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5854,7 +6142,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-01,KZ,national,monthly,PENSION_PAYMENTS,268796.947,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,REER,124.04047,index,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,19320.10998654,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,4317.70394761,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2544.31700488,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,11193.34051858,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-06-01,KZ,national,monthly,REMITTANCES_SENT,73024.65647627,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-06-01,KZ,national,monthly,REMITTANCES_SENT_KZT,23657.8241493,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-06-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6415.04816917,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-06-01,KZ,national,monthly,REMITTANCES_SENT_USD,42797.07629576,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-06-30,KZ,national,quarterly,GDP_NOMINAL,52342740300000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2024-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.8,index,nbk,2026-08-31,level,2026-08-31
@@ -5871,7 +6165,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,quarterly,EXPORTERS_SHARE,5.93943,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,EXPORTS,6907750.070849999,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,quarterly,EXTERNAL_DEBT,166853.095507,million USD,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1587.493104,USD million,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1005.192055,USD million,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6144.470535,USD million,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,146219.377123,USD million,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,7098.373985,USD million,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,20633.718384,USD million,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,quarterly,FDI_NET_INFLOW,-314.495466,million USD,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,57.791826,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -5882,6 +6180,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,20186100.00286501,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,7138685.328904026,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,14468049.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,228672.39760396,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1037580.24209197,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2262795.60420695,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4463519.77572177,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5934,7 +6233,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,64.098794,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,REER,118.72476,index,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,REMITTANCES_RECEIVED,21636.00003842,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3946.3212982,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3064.68635253,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,13133.62636756,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,monthly,REMITTANCES_SENT,81915.56202099,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,monthly,REMITTANCES_SENT_KZT,28897.23153114,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,monthly,REMITTANCES_SENT_RUB,7071.3792022,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-07-01,KZ,national,monthly,REMITTANCES_SENT_USD,45762.63237337,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-07-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,6.61935253789912,number of months,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.1,index,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15399.21764,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -5945,6 +6250,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-08-01,KZ,national,monthly,EXPORTS,6642229.563030001,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,FX_RESERVES,41863.993563878044,USD million,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15278503.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-08-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,134722.31057769,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1019918.36650663,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2238664.37783256,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4366359.56004692,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -5976,7 +6282,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-08-01,KZ,national,monthly,PENSION_PAYMENTS,432491.738,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,REER,117.4856,index,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,REMITTANCES_RECEIVED,19983.35856108,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-08-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3734.70117519,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-08-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2680.15918079,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-08-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,12125.79674409,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-08-01,KZ,national,monthly,REMITTANCES_SENT,77262.21488625,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-08-01,KZ,national,monthly,REMITTANCES_SENT_KZT,26352.06521836,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-08-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6636.72616038,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-08-01,KZ,national,monthly,REMITTANCES_SENT_USD,44083.40020604,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.0,index,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,14691.87959,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2147.350572,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -5986,6 +6298,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-01,KZ,national,monthly,EXPORTS,7412682.182299997,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,FX_RESERVES,42721.03574698046,USD million,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15411454.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-09-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,131955.62080052,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1054265.20148398,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2210264.18359197,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4315442.69113673,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6017,7 +6330,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-01,KZ,national,monthly,PENSION_PAYMENTS,512332.488,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,REER,117.36981,index,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,18478.360031667,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3203.33395675,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2519.10165074,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,11516.294350527,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-09-01,KZ,national,monthly,REMITTANCES_SENT,63784.346106231,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-09-01,KZ,national,monthly,REMITTANCES_SENT_KZT,13392.66923827,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-09-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6661.93739726,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-09-01,KZ,national,monthly,REMITTANCES_SENT_USD,43590.166721621,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-09-30,KZ,national,quarterly,GDP_NOMINAL,84962626100000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
 2024-09-30,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-08-31,level,2026-08-31
@@ -6034,7 +6353,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,quarterly,EXPORTERS_SHARE,6.16817,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,EXPORTS,7110352.431069998,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,quarterly,EXTERNAL_DEBT,166367.064362,million USD,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1738.191104,USD million,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,970.028574,USD million,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6043.80677,USD million,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,145098.035394,USD million,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,6590.674698,USD million,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,21269.028968,USD million,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,quarterly,FDI_NET_INFLOW,-1494.10737,million USD,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,57.331976,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -6045,6 +6368,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,21567649.568551306,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,7217026.519217961,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15519546.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,103095.00274471,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1036900.87288954,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2138095.74366232,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4267439.42516567,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6097,7 +6421,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,62.918243,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,REER,118.90033,index,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,18913.89321278,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3035.61244324,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2539.40498733,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,11876.86452051,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,monthly,REMITTANCES_SENT,64809.14693075,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,monthly,REMITTANCES_SENT_KZT,19824.20897737,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6368.87456379,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-10-01,KZ,national,monthly,REMITTANCES_SENT_USD,38464.41297278,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-10-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,7.29885918123746,number of months,nbk,2026-08-31,level,2026-08-31
 2024-10-14,KZ,national,daily,BASE_RATE,14.25,% p.a.,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.6,index,nbk,2026-08-31,level,2026-08-31
@@ -6109,6 +6439,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-11-01,KZ,national,monthly,EXPORTS,6515143.492429999,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,FX_RESERVES,45851.429454643425,USD million,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15678756.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-11-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,122257.67771827,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1043030.18101316,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2160288.44600351,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4256727.19641729,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6140,7 +6471,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-11-01,KZ,national,monthly,PENSION_PAYMENTS,676062.69,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,REER,120.03158,index,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,17810.69840198,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,2740.94698302,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2656.76099936,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,11110.61446752,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-11-01,KZ,national,monthly,REMITTANCES_SENT,60602.63071371,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-11-01,KZ,national,monthly,REMITTANCES_SENT_KZT,22995.6280263,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-11-01,KZ,national,monthly,REMITTANCES_SENT_RUB,5688.25742128,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-11-01,KZ,national,monthly,REMITTANCES_SENT_USD,31785.30799098,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.8,index,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,17424.17647,billion KZT,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2521.613997,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -6150,6 +6487,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-01,KZ,national,monthly,EXPORTS,7439551.36831,thousand USD,bns,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,FX_RESERVES,44219.36392805446,USD million,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15704537.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-12-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,153176.85539497997,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1071012.3559316,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2108393.11610031,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4577210.23362293,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6181,7 +6519,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-01,KZ,national,monthly,PENSION_PAYMENTS,766300.16,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,REER,116.87711,index,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,REMITTANCES_RECEIVED,19544.907231552,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3081.44974071,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2861.5879924,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,12125.759300842,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-12-01,KZ,national,monthly,REMITTANCES_SENT,56813.43594721,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-12-01,KZ,national,monthly,REMITTANCES_SENT_KZT,22808.89157774,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-12-01,KZ,national,monthly,REMITTANCES_SENT_RUB,5897.64322529,million KZT,nbk,2026-08-31,level,2026-08-31
+2024-12-01,KZ,national,monthly,REMITTANCES_SENT_USD,27954.97781578,million KZT,nbk,2026-08-31,level,2026-08-31
 2024-12-02,KZ,national,daily,BASE_RATE,15.25,% p.a.,nbk,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,AGRICULTURE_OUTPUT,8310976713194.41,KZT,bns,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,AVG_WAGE,405416.0,KZT,bns,2026-08-31,level,2026-08-31
@@ -6276,7 +6620,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,quarterly,EXPORTERS_SHARE,6.005222,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,EXPORTS,5121405.036090004,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,quarterly,EXTERNAL_DEBT,164677.496974,million USD,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,2103.125104,USD million,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1342.033817,USD million,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,7051.938121,USD million,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,145208.760265,USD million,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,6633.629919,USD million,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,19468.736709,USD million,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,quarterly,FDI_NET_INFLOW,-297.43038,million USD,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,57.789382,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -6287,6 +6635,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,21765224.511810992,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8309718.93365078,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15704537.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,138317.59596436,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1112965.36456943,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2547588.24166583,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4923109.23102122,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6374,7 +6723,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,66.333043,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,REER,116.67894,index,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,15846.035589771,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,2531.59900529,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2075.99083983,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,10085.943668911,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,monthly,REMITTANCES_SENT,40748.10760782,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,monthly,REMITTANCES_SENT_KZT,15782.59978872,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,monthly,REMITTANCES_SENT_RUB,4714.01638201,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-01-01,KZ,national,monthly,REMITTANCES_SENT_USD,20122.56492854,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,7.35646605431325,number of months,nbk,2026-08-31,level,2026-08-31
 2025-01-01,KZ,national,annual,TAX_ARREARS_TOTAL,434785.0,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-01-20,KZ,national,daily,BASE_RATE,15.25,% p.a.,nbk,2026-08-31,level,2026-08-31
@@ -6387,6 +6742,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,EXPORTS,5710184.081799999,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,FX_RESERVES,47187.81846720963,USD million,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15990591.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-02-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,162398.49656527,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1092420.90446087,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2102422.1675395,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4850195.65293463,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6417,7 +6773,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,PENSION_PAYMENTS,104627.433,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,REER,119.32943,index,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,15813.144032362,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,2779.27288757,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2360.61319686,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,9544.477798632,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-02-01,KZ,national,monthly,REMITTANCES_SENT,45008.2050012,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-02-01,KZ,national,monthly,REMITTANCES_SENT_KZT,18456.53124174,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-02-01,KZ,national,monthly,REMITTANCES_SENT_RUB,5327.15770242,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-02-01,KZ,national,monthly,REMITTANCES_SENT_USD,21101.46947451,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-02-28,KZ,national,irregular,CUSTOMS_DUTIES,211524.49517072,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-02-28,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,18397.78606,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-02-28,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,96555.86459701,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -6442,6 +6804,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,EXPORTS,5569760.210219998,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,FX_RESERVES,47991.221587476466,USD million,nbk,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,16523491.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-03-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,16605.6953883,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1102273.80509243,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2095655.51232192,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4910449.89144085,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6472,7 +6835,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,PENSION_PAYMENTS,212895.745,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,REER,118.52597,index,nbk,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,16733.500870873,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3392.57268031,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2579.19920231,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,9486.835768933,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,REMITTANCES_SENT,47328.856735897,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-03-01,KZ,national,monthly,REMITTANCES_SENT_KZT,23194.76626909,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-03-01,KZ,national,monthly,REMITTANCES_SENT_RUB,5103.06103454,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-03-01,KZ,national,monthly,REMITTANCES_SENT_USD,18917.559605767,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-03-11,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,irregular,CUSTOMS_DUTIES,391451.48775773,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,quarterly,GDP_NOMINAL,30467333700000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
@@ -6513,7 +6882,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,quarterly,EXPORTERS_SHARE,6.434783,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,EXPORTS,6500230.803649997,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,quarterly,EXTERNAL_DEBT,170037.800782,million USD,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,1852.913104,USD million,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1808.580319,USD million,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6882.869876,USD million,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,148420.094022,USD million,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,7394.640865,USD million,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,21617.70676,USD million,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,quarterly,FDI_NET_INFLOW,2881.19419,million USD,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,59.855072,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -6524,6 +6897,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,22569797.17147042,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8005188.352843165,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,17041758.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,153685.95133191,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1124753.51118378,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2077886.13014662,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4890750.22247168,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6575,7 +6949,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,65.782609,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,REER,113.52171,index,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,19311.921655523,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3764.48108093,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3251.63386685,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,10794.571628643,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,REMITTANCES_SENT,57434.871770097,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,monthly,REMITTANCES_SENT_KZT,30495.49300394,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,monthly,REMITTANCES_SENT_RUB,5995.86685651,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-04-01,KZ,national,monthly,REMITTANCES_SENT_USD,20791.001912847,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,8.02288701005653,number of months,nbk,2026-08-31,level,2026-08-31
 2025-04-14,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.4,index,nbk,2026-08-31,level,2026-08-31
@@ -6587,6 +6967,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-05-01,KZ,national,monthly,EXPORTS,7035844.30024,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,FX_RESERVES,52398.25244436644,USD million,nbk,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,17593130.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-05-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,161659.21993525,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1122368.06802752,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2208894.24225379,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4917853.22582144,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6617,7 +6998,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-05-01,KZ,national,monthly,PENSION_PAYMENTS,423196.602,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,REER,113.64216,index,nbk,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,19059.294785234,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3747.96457056,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2948.17659004,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,10927.028605824,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-05-01,KZ,national,monthly,REMITTANCES_SENT,65933.3754131,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-05-01,KZ,national,monthly,REMITTANCES_SENT_KZT,37698.38074282,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-05-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6512.71885902,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-05-01,KZ,national,monthly,REMITTANCES_SENT_USD,21551.98769728,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.6,index,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15855.63465,billion KZT,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2432.796936,billion KZT,nbk,2026-08-31,level,2026-08-31
@@ -6627,6 +7014,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,EXPORTS,7201422.014460002,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,FX_RESERVES,52330.34155772205,USD million,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,17777504.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-06-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,127791.02688463,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1101853.95881152,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2217302.92427912,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4786041.46636006,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6657,7 +7045,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,PENSION_PAYMENTS,516971.624,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,REER,112.14037,index,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,18595.364206979,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3830.63840037,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2824.62813039,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,10569.046773139,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-06-01,KZ,national,monthly,REMITTANCES_SENT,64712.184057815,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-06-01,KZ,national,monthly,REMITTANCES_SENT_KZT,39565.66423237,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-06-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6202.43059267,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-06-01,KZ,national,monthly,REMITTANCES_SENT_USD,18805.562089945,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-06-09,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,irregular,CUSTOMS_DUTIES,1002267.64682282,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,quarterly,GDP_NOMINAL,61371821900000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
@@ -6698,7 +7092,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,quarterly,EXPORTERS_SHARE,6.25543,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,EXPORTS,6802835.536259998,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,quarterly,EXTERNAL_DEBT,172547.082968,million USD,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,3002.922104,USD million,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,1950.678935,USD million,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6910.825621,USD million,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,150128.1154,USD million,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,7876.861943,USD million,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,22418.967569,USD million,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,quarterly,FDI_NET_INFLOW,-1963.5226,million USD,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,59.542427,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -6709,6 +7107,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,23794008.22874087,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8397706.045038655,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,18208271.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,37844.52712701,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1099133.26401971,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2378732.95177878,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4729736.45293414,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6760,7 +7159,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,65.348972,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,REER,108.90469,index,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,REMITTANCES_RECEIVED,21264.962810764,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,4273.70823776,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3360.60886039,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,11956.985162277,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,REMITTANCES_SENT,70447.506300936,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,monthly,REMITTANCES_SENT_KZT,42659.98585331,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6761.39806816,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-07-01,KZ,national,monthly,REMITTANCES_SENT_USD,20902.807718626,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,8.15631437684291,number of months,nbk,2026-08-31,level,2026-08-31
 2025-07-14,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-31,level,2026-08-31
 2025-07-31,KZ,national,irregular,CUSTOMS_DUTIES,1199236.93435166,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -6787,6 +7192,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,EXPORTS,6577615.36351,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,FX_RESERVES,52147.46710584711,USD million,nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,18680805.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-08-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,48027.39553552,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1190263.20063652,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2334608.85945258,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4768427.13013532,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6817,7 +7223,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,PENSION_PAYMENTS,767626.93,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,REER,108.41895,index,nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,REMITTANCES_RECEIVED,20856.20042472,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-08-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,4088.08724962,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-08-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3146.36887571,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-08-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,12214.879560125,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,REMITTANCES_SENT,72705.211344807,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-08-01,KZ,national,monthly,REMITTANCES_SENT_KZT,41109.5773309501,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-08-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6628.10227874,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-08-01,KZ,national,monthly,REMITTANCES_SENT_USD,24836.916200087,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-08-31,KZ,national,irregular,CUSTOMS_DUTIES,1411349.86754375,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-08-31,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,337534.1023,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-08-31,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,924451.68804013,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -6840,6 +7252,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-01,KZ,national,monthly,EXPORTS,7426335.284579998,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-09-01,KZ,national,monthly,FX_RESERVES,54316.07017486334,USD million,nbk,2026-08-31,level,2026-08-31
 2025-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,19082810.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-09-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,54076.9006946,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-09-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1139387.86658868,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-09-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2312879.70814568,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-09-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4747704.85235132,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6867,7 +7280,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-01,KZ,national,monthly,PENSION_PAYMENTS,920202.661,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2025-09-01,KZ,national,monthly,REER,109.22656,index,nbk,2026-08-31,level,2026-08-31
 2025-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,20438.396964499,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3970.8378155,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3149.99960588,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-09-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,11908.499562664,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-09-01,KZ,national,monthly,REMITTANCES_SENT,71570.869920804,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-09-01,KZ,national,monthly,REMITTANCES_SENT_KZT,39907.0227472,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-09-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6770.48719008,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-09-01,KZ,national,monthly,REMITTANCES_SENT_USD,24737.672303524,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-09-02,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,irregular,CUSTOMS_DUTIES,1623527.8836656,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,quarterly,GDP_NOMINAL,99724898500000.0,million KZT,bns,2026-08-31,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-08-31
@@ -6904,7 +7323,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,quarterly,EXPORTERS_SHARE,6.52674,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,EXPORTS,7084636.991150005,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,quarterly,EXTERNAL_DEBT,171558.262373,million USD,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,3603.790104,USD million,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,2242.385139,USD million,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6720.9407,USD million,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,150630.374472,USD million,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,8216.320911,USD million,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,20927.887901,USD million,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,quarterly,FDI_NET_INFLOW,716.795427,million USD,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,59.86199,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -6915,6 +7338,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,25222902.565,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8730378.771,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,19291932.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,41286.17094888,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1174227.53390498,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2312304.46127746,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4733919.29279981,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -6964,7 +7388,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,66.46061,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,REER,109.81892,index,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,REMITTANCES_RECEIVED,20692.336550891,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,4017.00319687,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3220.73881133,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,12032.445198074,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,REMITTANCES_SENT,68092.222434033,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,monthly,REMITTANCES_SENT_KZT,39013.46050707,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6738.67985107,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-10-01,KZ,national,monthly,REMITTANCES_SENT_USD,22200.832554073,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,8.88756561317871,number of months,nbk,2026-08-31,level,2026-08-31
 2025-10-13,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-31,level,2026-08-31
 2025-10-31,KZ,national,irregular,CUSTOMS_DUTIES,1808570.55602749,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -6988,6 +7418,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-01,KZ,national,monthly,EXPORTS,6566600.029889997,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,FX_RESERVES,60442.955065507944,USD million,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,19580747.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-11-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,5732.88289281,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1134973.5117501,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2339635.03656874,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4855479.44336633,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -7016,7 +7447,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-01,KZ,national,monthly,PENSION_PAYMENTS,1213839.789,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,REER,114.2761,index,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,REMITTANCES_RECEIVED,17297.77484655,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3203.96663894,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2750.55276599,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-11-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,10127.877864089,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,REMITTANCES_SENT,55540.770486322,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-11-01,KZ,national,monthly,REMITTANCES_SENT_KZT,31683.5306919,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-11-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6550.45704167,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-11-01,KZ,national,monthly,REMITTANCES_SENT_USD,17196.654065722,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-11-30,KZ,national,irregular,CUSTOMS_DUTIES,2002525.13482824,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-11-30,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,395858.44862000004,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-11-30,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,1597148.16659897,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -7039,6 +7476,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-01,KZ,national,monthly,EXPORTS,7632630.896409997,thousand USD,bns,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,FX_RESERVES,61776.71852476928,USD million,nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,20017208.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-12-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,59568.01594448,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1080265.05337773,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2252217.06474763,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4795821.55219763,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -7067,7 +7505,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-01,KZ,national,monthly,PENSION_PAYMENTS,1328596.854,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,REER,115.97217,index,nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,REMITTANCES_RECEIVED,20513.316510463,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3852.6610648,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,3575.45734898,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-12-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,11637.403249792,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,REMITTANCES_SENT,59381.688402189,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-12-01,KZ,national,monthly,REMITTANCES_SENT_KZT,33528.11665901,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-12-01,KZ,national,monthly,REMITTANCES_SENT_RUB,7171.03654189,million KZT,nbk,2026-08-31,level,2026-08-31
+2025-12-01,KZ,national,monthly,REMITTANCES_SENT_USD,18563.442508739,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,AGRICULTURE_OUTPUT,9704982009100.89,KZT,bns,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,AVG_WAGE,443315.0,KZT,bns,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,BIRTHS_TOTAL,335005.0,persons,bns,2026-08-31,level,2026-08-31
@@ -7155,7 +7599,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,quarterly,EXPORTERS_SHARE,7.23722,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,EXPORTS,6471046.012700029,thousand USD,bns,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,quarterly,EXTERNAL_DEBT,181841.590364,million USD,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,3998.911104,USD million,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,3593.993792,USD million,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6569.003789,USD million,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,160153.268344,USD million,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,8882.392011,USD million,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,21688.32202,USD million,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,quarterly,FDI_NET_INFLOW,-2495.592967,million USD,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,59.003446,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -7166,6 +7614,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,26146859.151021335,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8698208.234496133,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,20222315.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,82567.22102183,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1141324.07346514,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2729265.87993823,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4989026.88532154,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -7251,7 +7700,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,71.209075,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,REER,116.80474,index,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,REMITTANCES_RECEIVED,15392.881078525,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,2729.17615576,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2304.21036703,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,9326.982979024,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,monthly,REMITTANCES_SENT,37885.147253329,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,monthly,REMITTANCES_SENT_KZT,21389.23685605,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,monthly,REMITTANCES_SENT_RUB,4511.95180963,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-01-01,KZ,national,monthly,REMITTANCES_SENT_USD,11895.064477149,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,9.776402,number of months,nbk,2026-08-31,level,2026-08-31
 2026-01-01,KZ,national,annual,TAX_ARREARS_TOTAL,522067.4666522346,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-01-26,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-31,level,2026-08-31
@@ -7276,6 +7731,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-01,KZ,national,monthly,EXPORTS,5927330.796140006,thousand USD,bns,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,FX_RESERVES,71464.59226735895,USD million,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,20536377.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-02-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,28955.97168899,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1123602.92557979,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2153803.33679195,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4995856.68853079,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -7306,7 +7762,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-01,KZ,national,monthly,PENSION_PAYMENTS,87285.341,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,REER,118.9,index,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,REMITTANCES_RECEIVED,15422.671986291,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3156.23218992,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2505.86735311,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-02-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,8801.99005621101,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,REMITTANCES_SENT,42243.33153742,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-02-01,KZ,national,monthly,REMITTANCES_SENT_KZT,24940.33418473,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-02-01,KZ,national,monthly,REMITTANCES_SENT_RUB,4985.59874671,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-02-01,KZ,national,monthly,REMITTANCES_SENT_USD,12182.73825199,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-02-24,KZ,national,daily,TONIA,17.18,%,nbk,2026-08-31,level,2026-08-31
 2026-02-25,KZ,national,daily,TONIA,17.3,%,nbk,2026-08-31,level,2026-08-31
 2026-02-26,KZ,national,daily,TONIA,17.34,%,nbk,2026-08-31,level,2026-08-31
@@ -7333,6 +7795,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,monthly,EXPORTS,6216681.608119982,thousand USD,bns,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,FX_RESERVES,73391.10792230585,USD million,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,20894160.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-03-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,98317.28749319,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1124237.57245908,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2161807.98451456,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4935070.93302002,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -7363,7 +7826,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,monthly,PENSION_PAYMENTS,164394.849,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,REER,123.66197,index,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,REMITTANCES_RECEIVED,16016.74954245,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3317.89072582,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2399.15677981,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-03-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,9230.59353363001,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,REMITTANCES_SENT,49355.088812281,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-03-01,KZ,national,monthly,REMITTANCES_SENT_KZT,29952.71035616,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-03-01,KZ,national,monthly,REMITTANCES_SENT_RUB,5330.36162228,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-03-01,KZ,national,monthly,REMITTANCES_SENT_USD,13967.871063091,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,daily,TONIA,17.97,%,nbk,2026-08-31,level,2026-08-31
 2026-03-02,KZ,national,daily,TONIA,17.97,%,nbk,2026-08-31,level,2026-08-31
 2026-03-03,KZ,national,daily,TONIA,17.51,%,nbk,2026-08-31,level,2026-08-31
@@ -7430,7 +7899,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,quarterly,EXPORTERS_SHARE,6.872852,percent of respondents,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,EXPORTS,5761887.189630023,thousand USD,bns,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,quarterly,EXTERNAL_DEBT,182778.238991,million USD,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_LOANS_LT,3755.490104,USD million,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,quarterly,EXTERNAL_DEBT_BANKS_SECURITIES_LT,3631.585722,USD million,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,quarterly,EXTERNAL_DEBT_GOV_LOANS_LT,6335.912699,USD million,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,quarterly,EXTERNAL_DEBT_LONG_TERM,159202.025598,USD million,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,quarterly,EXTERNAL_DEBT_OTHER_SECURITIES_LT,9201.825521,USD million,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,quarterly,EXTERNAL_DEBT_SHORT_TERM,23576.213393,USD million,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,quarterly,FDI_NET_INFLOW,3069.95567,million USD,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,60.867698,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
@@ -7441,6 +7914,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,27145138.06800939,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8185792.40162799,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,21295791.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,166885.23968497,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1104750.79291193,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2184068.95589054,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4752087.8264627,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -7494,7 +7968,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,66.852806,"diffusion index (0-100, 50=neutral)",nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,REER,126.46427,index,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,REMITTANCES_RECEIVED,16253.918165772,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3610.92673259,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,2387.17914112,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,9159.617321082,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,REMITTANCES_SENT,54935.409232604,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,monthly,REMITTANCES_SENT_KZT,32483.96124108,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,monthly,REMITTANCES_SENT_RUB,5485.15790654,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-04-01,KZ,national,monthly,REMITTANCES_SENT_USD,16856.980140884,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,9.752253,number of months,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,daily,TONIA,18.25,%,nbk,2026-08-31,level,2026-08-31
 2026-04-02,KZ,national,daily,TONIA,18.35,%,nbk,2026-08-31,level,2026-08-31
@@ -7535,6 +8015,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,EXPORTS,6147393.583650006,thousand USD,bns,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,FX_RESERVES,67521.48855598064,USD million,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,21617419.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-05-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,169324.26568043,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1125285.5974875,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2315552.66325919,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4622920.74766987,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -7567,7 +8048,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,PENSION_PAYMENTS,363503.843,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,REER,125.31691,index,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,REMITTANCES_RECEIVED,15052.325042056,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,3980.16250365,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,1672.82948582,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-05-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,8306.270942596,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,monthly,REMITTANCES_SENT,53534.625921444,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-05-01,KZ,national,monthly,REMITTANCES_SENT_KZT,32120.02523374,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-05-01,KZ,national,monthly,REMITTANCES_SENT_RUB,5586.75857749,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-05-01,KZ,national,monthly,REMITTANCES_SENT_USD,15740.463889214,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-05-01,KZ,national,daily,TONIA,18.19,%,nbk,2026-08-31,level,2026-08-31
 2026-05-02,KZ,national,daily,TONIA,18.19,%,nbk,2026-08-31,level,2026-08-31
 2026-05-03,KZ,national,daily,TONIA,18.19,%,nbk,2026-08-31,level,2026-08-31
@@ -7617,6 +8104,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,DEPOSIT_RATE,14.802963478080027,%,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,EXPORTS,9807366.906380022,thousand USD,bns,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,22011488.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-06-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,180554.01487513,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1162593.98704209,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2350649.93991293,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4883623.5978152,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -7648,7 +8136,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,PENSION_PAYMENTS,493617.906,"million KZT, year-to-date cumulative",nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,REER,122.99549,index,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,REMITTANCES_RECEIVED,18330.809294514,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_KZT,4856.91585348,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_RUB,1706.02133265,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-06-01,KZ,national,monthly,REMITTANCES_RECEIVED_USD,10633.349770014,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,REMITTANCES_SENT,65182.523811301,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-06-01,KZ,national,monthly,REMITTANCES_SENT_KZT,38066.98447675,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-06-01,KZ,national,monthly,REMITTANCES_SENT_RUB,7022.95771939,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-06-01,KZ,national,monthly,REMITTANCES_SENT_USD,19995.449298161,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,daily,TONIA,18.71,%,nbk,2026-08-31,level,2026-08-31
 2026-06-02,KZ,national,daily,TONIA,18.47,%,nbk,2026-08-31,level,2026-08-31
 2026-06-03,KZ,national,daily,TONIA,18.21,%,nbk,2026-08-31,level,2026-08-31
@@ -7711,6 +8205,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,28471879.4283,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8352366.460626001,million KZT,minfin,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,22104699.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-07-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,109574.25879704,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1136656.61395793,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2552054.06684284,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4788910.50490144,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -7787,6 +8282,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-30,KZ,national,daily,TONIA,16.15,%,nbk,2026-08-31,level,2026-08-31
 2026-07-31,KZ,national,daily,TONIA,16.21,%,nbk,2026-08-31,level,2026-08-31
 2026-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,22366214.0,million KZT,nbk,2026-08-31,level,2026-08-31
+2026-08-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,194549.94580431,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-08-01,KZ,national,monthly,KASE_USD_VOLUME,9695953843.0,USD,nbk,2026-08-31,level,2026-08-31
 2026-08-01,KZ,national,monthly,LENDING_RATE,20.84661806814383,%,nbk,2026-08-31,level,2026-08-31
 2026-08-01,KZ,national,monthly,PENSION_FUND_ASSETS,27072102.566,million KZT,nbk,2026-08-31,level,2026-08-31

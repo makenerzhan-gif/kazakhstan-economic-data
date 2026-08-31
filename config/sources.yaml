@@ -1810,6 +1810,138 @@ agencies:
           observed on 2026-08-31 returning the SAME field with different casing between
           otherwise identical requests (formId=445 period came back as both 'month' and
           'Month'), and some forms pad labels (formId=340 type is ' mln USD', leading space).
+      REMITTANCES_SENT_USD:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=411"
+        format: json
+        notes: >
+          2026-08-31. Found by the structural probe (groups a form rows by full
+          classification signature, keeps only groups forming exactly one row per
+          report_date across the whole history). Pinned fields: currency_code='US Dollar', money_transfer_sign='money transfers sent', period='Month', type='mln. KZT'.
+          Fetched via _fetch_nbk_exact_row (all listed fields must match, every other
+          classification field must be empty, exactly one row per date asserted;
+          comparison is case-insensitive and whitespace-stripped because NBK label
+          casing/padding is not stable across requests).
+      REMITTANCES_SENT_KZT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=411"
+        format: json
+        notes: >
+          2026-08-31. Found by the structural probe (groups a form rows by full
+          classification signature, keeps only groups forming exactly one row per
+          report_date across the whole history). Pinned fields: currency_code='Tenge', money_transfer_sign='money transfers sent', period='Month', type='mln. KZT'.
+          Fetched via _fetch_nbk_exact_row (all listed fields must match, every other
+          classification field must be empty, exactly one row per date asserted;
+          comparison is case-insensitive and whitespace-stripped because NBK label
+          casing/padding is not stable across requests).
+      REMITTANCES_SENT_RUB:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=411"
+        format: json
+        notes: >
+          2026-08-31. Found by the structural probe (groups a form rows by full
+          classification signature, keeps only groups forming exactly one row per
+          report_date across the whole history). Pinned fields: currency_code='Rubles', money_transfer_sign='money transfers sent', period='Month', type='mln. KZT'.
+          Fetched via _fetch_nbk_exact_row (all listed fields must match, every other
+          classification field must be empty, exactly one row per date asserted;
+          comparison is case-insensitive and whitespace-stripped because NBK label
+          casing/padding is not stable across requests).
+      REMITTANCES_RECEIVED_USD:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=411"
+        format: json
+        notes: >
+          2026-08-31. Found by the structural probe (groups a form rows by full
+          classification signature, keeps only groups forming exactly one row per
+          report_date across the whole history). Pinned fields: currency_code='US Dollar', money_transfer_sign='money transfers received', period='Month', type='mln. KZT'.
+          Fetched via _fetch_nbk_exact_row (all listed fields must match, every other
+          classification field must be empty, exactly one row per date asserted;
+          comparison is case-insensitive and whitespace-stripped because NBK label
+          casing/padding is not stable across requests).
+      REMITTANCES_RECEIVED_KZT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=411"
+        format: json
+        notes: >
+          2026-08-31. Found by the structural probe (groups a form rows by full
+          classification signature, keeps only groups forming exactly one row per
+          report_date across the whole history). Pinned fields: currency_code='Tenge', money_transfer_sign='money transfers received', period='Month', type='mln. KZT'.
+          Fetched via _fetch_nbk_exact_row (all listed fields must match, every other
+          classification field must be empty, exactly one row per date asserted;
+          comparison is case-insensitive and whitespace-stripped because NBK label
+          casing/padding is not stable across requests).
+      REMITTANCES_RECEIVED_RUB:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=411"
+        format: json
+        notes: >
+          2026-08-31. Found by the structural probe (groups a form rows by full
+          classification signature, keeps only groups forming exactly one row per
+          report_date across the whole history). Pinned fields: currency_code='Rubles', money_transfer_sign='money transfers received', period='Month', type='mln. KZT'.
+          Fetched via _fetch_nbk_exact_row (all listed fields must match, every other
+          classification field must be empty, exactly one row per date asserted;
+          comparison is case-insensitive and whitespace-stripped because NBK label
+          casing/padding is not stable across requests).
+      EXTERNAL_DEBT_GOV_LOANS_LT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=293"
+        format: json
+        notes: >
+          2026-08-31. Found by the structural probe (groups a form rows by full
+          classification signature, keeps only groups forming exactly one row per
+          report_date across the whole history). Pinned fields: investment_type='Loans ', maturity='Long-term', period='quarter', sector_economy_type='General Government', type='USD mln'.
+          Fetched via _fetch_nbk_exact_row (all listed fields must match, every other
+          classification field must be empty, exactly one row per date asserted;
+          comparison is case-insensitive and whitespace-stripped because NBK label
+          casing/padding is not stable across requests).
+      EXTERNAL_DEBT_BANKS_LOANS_LT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=293"
+        format: json
+        notes: >
+          2026-08-31. Found by the structural probe (groups a form rows by full
+          classification signature, keeps only groups forming exactly one row per
+          report_date across the whole history). Pinned fields: investment_type='Loans ', maturity='Long-term', period='quarter', sector_economy_type='Banks', type='USD mln'.
+          Fetched via _fetch_nbk_exact_row (all listed fields must match, every other
+          classification field must be empty, exactly one row per date asserted;
+          comparison is case-insensitive and whitespace-stripped because NBK label
+          casing/padding is not stable across requests).
+      EXTERNAL_DEBT_BANKS_SECURITIES_LT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=293"
+        format: json
+        notes: >
+          2026-08-31. Found by the structural probe (groups a form rows by full
+          classification signature, keeps only groups forming exactly one row per
+          report_date across the whole history). Pinned fields: investment_type='Debt securities ', maturity='Long-term', period='quarter', sector_economy_type='Banks', type='USD mln'.
+          Fetched via _fetch_nbk_exact_row (all listed fields must match, every other
+          classification field must be empty, exactly one row per date asserted;
+          comparison is case-insensitive and whitespace-stripped because NBK label
+          casing/padding is not stable across requests).
+      EXTERNAL_DEBT_OTHER_SECURITIES_LT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=293"
+        format: json
+        notes: >
+          2026-08-31. Found by the structural probe (groups a form rows by full
+          classification signature, keeps only groups forming exactly one row per
+          report_date across the whole history). Pinned fields: investment_type='Debt securities ', maturity='Long-term', period='quarter', sector_economy_type='Other Sectors', type='USD mln'.
+          Fetched via _fetch_nbk_exact_row (all listed fields must match, every other
+          classification field must be empty, exactly one row per date asserted;
+          comparison is case-insensitive and whitespace-stripped because NBK label
+          casing/padding is not stable across requests).
+      GOV_SECURITIES_SECONDARY_NBK_NOTES:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=16"
+        format: json
+        notes: >
+          2026-08-31. Found by the structural probe (groups a form rows by full
+          classification signature, keeps only groups forming exactly one row per
+          report_date across the whole history). Pinned fields: code='NBK Notes', type='Transactions volume (mln. tenge)'.
+          Fetched via _fetch_nbk_exact_row (all listed fields must match, every other
+          classification field must be empty, exactly one row per date asserted;
+          comparison is case-insensitive and whitespace-stripped because NBK label
+          casing/padding is not stable across requests).
       RESERVES_GUIDOTTI_RATIO (declined):
         status: declined
         notes: >

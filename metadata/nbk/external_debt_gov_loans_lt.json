@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=293",
+  "dataset_id": "formId=293,investment_type=Loans ,maturity=Long-term,period=quarter,sector_economy_type=General Government,type=USD mln",
+  "indicator_id": "EXTERNAL_DEBT_GOV_LOANS_LT",
+  "indicator_name": "External Debt: General Government Loans, Long-Term",
+  "description": "Внешний долг: займы госсектора, долгосрочные",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million, end of quarter. Long-term external debt of the GENERAL GOVERNMENT in the form of LOANS -- the sovereign borrowing component of external debt.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2020-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

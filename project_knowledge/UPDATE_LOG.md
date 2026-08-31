@@ -1233,3 +1233,29 @@ not by loosening the match until it passed.
 **226/226 confirmed indicators connected end-to-end** (83/83 NBK re-verified live in
 4m20s; unified dataset confirmed to carry all 226 across imf/nbk/bns/minfin).
 `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — thirty-third scale-up batch: 226 -> 237 indicators (remittance & external-debt composition)
+Second sweep with the structural probe, over ten more NBK forms.
+
+**NBK (11):**
+- Remittance currency composition (formId=411, 58 monthly pts from 2021-09):
+  REMITTANCES_{SENT,RECEIVED}_{USD,KZT,RUB} — the currency breakdown behind the existing
+  REMITTANCES_SENT/RECEIVED totals. Notable in the current data: tenge-denominated
+  outbound transfers (38.1 bn KZT) now exceed USD-denominated ones (20.0 bn).
+- External debt by sector and instrument (formId=293, 26 quarterly pts from 2020-Q1):
+  EXTERNAL_DEBT_GOV_LOANS_LT, EXTERNAL_DEBT_BANKS_LOANS_LT,
+  EXTERNAL_DEBT_BANKS_SECURITIES_LT, EXTERNAL_DEBT_OTHER_SECURITIES_LT — complements last
+  batch's maturity split with the who-owes-what-instrument dimension.
+- GOV_SECURITIES_SECONDARY_NBK_NOTES (formId=16, 44 monthly pts from 2023-01) — secondary
+  market turnover in NBK Notes, a liquidity measure distinct from the outstanding stock.
+
+**Considered and skipped** (documented so the next sweep doesn't re-litigate them):
+formId=408 (remittances by transfer system) would largely duplicate the existing
+REMITTANCES_SENT/RECEIVED totals and contains unlabeled non-'Total' rows whose meaning is
+not stated; formId=22 (UAPF portfolio structure) only exposes per-manager shares, not a
+portfolio-wide allocation; formId=32 and 283 are per-company rather than economy-wide;
+formId=486 (loan interest rates, 331 dates back to 1997) yielded no clean one-row-per-date
+series under the probe and needs its own structural pass rather than a guess.
+
+**237/237 confirmed indicators connected end-to-end** (94/94 NBK re-verified live in
+4m23s; unified dataset confirmed to carry all 237). `pytest tests/ -q` — 29/29 passing.

@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=293",
+  "dataset_id": "formId=293,investment_type=Debt securities ,maturity=Long-term,period=quarter,sector_economy_type=Other Sectors,type=USD mln",
+  "indicator_id": "EXTERNAL_DEBT_OTHER_SECURITIES_LT",
+  "indicator_name": "External Debt: Other Sectors Debt Securities, Long-Term",
+  "description": "Внешний долг: долговые ценные бумаги прочих секторов, долгосрочные",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million, end of quarter. Long-term external debt of OTHER SECTORS (non-bank corporates) in the form of DEBT SECURITIES.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2020-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

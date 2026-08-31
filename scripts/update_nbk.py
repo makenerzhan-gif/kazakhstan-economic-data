@@ -101,6 +101,17 @@ FETCHERS = {
     "PRIVATE_EXTERNAL_DEBT_INTERCOMPANY": nbk_fetchers.fetch_private_external_debt_intercompany,
     "PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT": nbk_fetchers.fetch_private_external_debt_banks_other_lt,
     "GOLD_BULLION_SALES": nbk_fetchers.fetch_gold_bullion_sales,
+    "REMITTANCES_SENT_USD": nbk_fetchers.fetch_remittances_sent_usd,
+    "REMITTANCES_SENT_KZT": nbk_fetchers.fetch_remittances_sent_kzt,
+    "REMITTANCES_SENT_RUB": nbk_fetchers.fetch_remittances_sent_rub,
+    "REMITTANCES_RECEIVED_USD": nbk_fetchers.fetch_remittances_received_usd,
+    "REMITTANCES_RECEIVED_KZT": nbk_fetchers.fetch_remittances_received_kzt,
+    "REMITTANCES_RECEIVED_RUB": nbk_fetchers.fetch_remittances_received_rub,
+    "EXTERNAL_DEBT_GOV_LOANS_LT": nbk_fetchers.fetch_external_debt_gov_loans_lt,
+    "EXTERNAL_DEBT_BANKS_LOANS_LT": nbk_fetchers.fetch_external_debt_banks_loans_lt,
+    "EXTERNAL_DEBT_BANKS_SECURITIES_LT": nbk_fetchers.fetch_external_debt_banks_securities_lt,
+    "EXTERNAL_DEBT_OTHER_SECURITIES_LT": nbk_fetchers.fetch_external_debt_other_securities_lt,
+    "GOV_SECURITIES_SECONDARY_NBK_NOTES": nbk_fetchers.fetch_gov_securities_secondary_nbk_notes,
 }
 
 INDICATOR_IDS = [
@@ -159,6 +170,17 @@ INDICATOR_IDS = [
     "PRIVATE_EXTERNAL_DEBT_INTERCOMPANY",
     "PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT",
     "GOLD_BULLION_SALES",
+    "REMITTANCES_SENT_USD",
+    "REMITTANCES_SENT_KZT",
+    "REMITTANCES_SENT_RUB",
+    "REMITTANCES_RECEIVED_USD",
+    "REMITTANCES_RECEIVED_KZT",
+    "REMITTANCES_RECEIVED_RUB",
+    "EXTERNAL_DEBT_GOV_LOANS_LT",
+    "EXTERNAL_DEBT_BANKS_LOANS_LT",
+    "EXTERNAL_DEBT_BANKS_SECURITIES_LT",
+    "EXTERNAL_DEBT_OTHER_SECURITIES_LT",
+    "GOV_SECURITIES_SECONDARY_NBK_NOTES",
 ]
 
 

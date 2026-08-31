@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=411",
+  "dataset_id": "formId=411,currency_code=Rubles,money_transfer_sign=money transfers sent,period=Month,type=mln. KZT",
+  "indicator_id": "REMITTANCES_SENT_RUB",
+  "indicator_name": "Remittances Sent, Russian Rubles",
+  "description": "Переводы из РК, рубли",
+  "frequency": "monthly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT equivalent. Cross-border money transfers SENT from Kazakhstan denominated in RUSSIAN RUBLES.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2021-09-01",
+  "period_end": "2026-06-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
