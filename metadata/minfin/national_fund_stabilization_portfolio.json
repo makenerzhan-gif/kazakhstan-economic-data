@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448",
+  "dataset_id": "gov.kz-statistical-bulletin-listing,sheet=табл 17*",
+  "indicator_id": "NATIONAL_FUND_STABILIZATION_PORTFOLIO",
+  "indicator_name": "National Fund of Kazakhstan Stabilization Portfolio",
+  "description": "Стабилизационный портфель Национального фонда РК",
+  "frequency": "quarterly",
+  "unit": "USD",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Built from 6 of 13 listed 'Statistical bulletin' documents (0 skipped). USD (not KZT). National Fund 'stabilization portfolio' (Стабилизационный портфель) sub-total -- the smaller, liquidity-focused portion of the Fund, held mostly in cash and money-market instruments. A POINT-IN-TIME snapshot as of each calendar quarter-end, not a cumulative flow (unlike most other minfin bulletin-sourced indicators). Originally sourced by Minfin FROM the National Bank RK, republished here in the Statistical Bulletin. Document TITLES are NOT used to determine period -- only each document's own internal 'ЗА N КВАРТАЛ YYYY ГОДА' header text is trusted.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2024-12-31",
+  "period_end": "2026-03-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

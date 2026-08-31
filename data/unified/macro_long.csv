@@ -3903,7 +3903,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,HOUSING_COMMISSIONED,941.1,m2 per 1000 population,bns,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,105.8,% change vs previous period,bns,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,77857582400000.0,KZT,bns,2026-08-31,level,2026-08-31
-2024-12-31,KZ,national,quarterly,NATIONAL_FUND_ASSETS,58839049755.01,USD,minfin,2026-08-31,level,2026-08-31
+2024-12-31,KZ,national,quarterly,NATIONAL_FUND_EQUITIES,20345643388.0,USD,minfin,2026-08-31,level,2026-08-31
+2024-12-31,KZ,national,quarterly,NATIONAL_FUND_GOLD,3314545578.0,USD,minfin,2026-08-31,level,2026-08-31
+2024-12-31,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_BONDS,30807618810.0,USD,minfin,2026-08-31,level,2026-08-31
+2024-12-31,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_PORTFOLIO,56053955582.0,USD,minfin,2026-08-31,level,2026-08-31
+2024-12-31,KZ,national,quarterly,NATIONAL_FUND_STABILIZATION_PORTFOLIO,3449973438.44,USD,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,NET_BUDGET_LENDING,116738.4461162,million KZT,minfin,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,NET_EXPORTS,7454952100000.0,million KZT,bns,2026-08-31,level,2026-08-31
 2024-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,8286490200000.0,KZT,bns,2026-08-31,level,2026-08-31
@@ -4047,7 +4051,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-31,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,406270.93573776,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,413981.43801995,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,790903.36800855,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
-2025-03-31,KZ,national,quarterly,NATIONAL_FUND_ASSETS,57866530543.79055,USD,minfin,2026-08-31,level,2026-08-31
+2025-03-31,KZ,national,quarterly,NATIONAL_FUND_EQUITIES,18581790963.346558,USD,minfin,2026-08-31,level,2026-08-31
+2025-03-31,KZ,national,quarterly,NATIONAL_FUND_GOLD,3059875301.52,USD,minfin,2026-08-31,level,2026-08-31
+2025-03-31,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_BONDS,31713795750.88344,USD,minfin,2026-08-31,level,2026-08-31
+2025-03-31,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_PORTFOLIO,54966393287.549995,USD,minfin,2026-08-31,level,2026-08-31
+2025-03-31,KZ,national,quarterly,NATIONAL_FUND_STABILIZATION_PORTFOLIO,4398059941.76,USD,minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.6,index,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -4130,7 +4138,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-30,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,1495460.27388462,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,774743.89632074,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,1921164.38839903,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
-2025-06-30,KZ,national,quarterly,NATIONAL_FUND_ASSETS,60260297988.00056,USD,minfin,2026-08-31,level,2026-08-31
+2025-06-30,KZ,national,quarterly,NATIONAL_FUND_EQUITIES,20208429849.27999,USD,minfin,2026-08-31,level,2026-08-31
+2025-06-30,KZ,national,quarterly,NATIONAL_FUND_GOLD,3212791097.2700005,USD,minfin,2026-08-31,level,2026-08-31
+2025-06-30,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_BONDS,31556699770.19001,USD,minfin,2026-08-31,level,2026-08-31
+2025-06-30,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_PORTFOLIO,56623680765.53001,USD,minfin,2026-08-31,level,2026-08-31
+2025-06-30,KZ,national,quarterly,NATIONAL_FUND_STABILIZATION_PORTFOLIO,5134539907.99,USD,minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.3,index,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -4229,7 +4241,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-30,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,2790489.29749974,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,1057190.93996987,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,2557700.09551103,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
-2025-09-30,KZ,national,quarterly,NATIONAL_FUND_ASSETS,62738941125.560555,USD,minfin,2026-08-31,level,2026-08-31
+2025-09-30,KZ,national,quarterly,NATIONAL_FUND_EQUITIES,21662944779.37,USD,minfin,2026-08-31,level,2026-08-31
+2025-09-30,KZ,national,quarterly,NATIONAL_FUND_GOLD,3729754075.11,USD,minfin,2026-08-31,level,2026-08-31
+2025-09-30,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_BONDS,32040895524.96,USD,minfin,2026-08-31,level,2026-08-31
+2025-09-30,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_PORTFOLIO,59116722163.55,USD,minfin,2026-08-31,level,2026-08-31
+2025-09-30,KZ,national,quarterly,NATIONAL_FUND_STABILIZATION_PORTFOLIO,5120141647.53,USD,minfin,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.6,index,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,DEPOSITS_TOTAL,43447389.63244179,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4355,7 +4371,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,HOUSING_COMMISSIONED,986.2,m2 per 1000 population,bns,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,109.0,% change vs previous period,bns,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,93919024900000.0,KZT,bns,2026-08-31,level,2026-08-31
-2025-12-31,KZ,national,quarterly,NATIONAL_FUND_ASSETS,63894534101.27055,USD,minfin,2026-08-31,level,2026-08-31
+2025-12-31,KZ,national,quarterly,NATIONAL_FUND_EQUITIES,22390532459.28,USD,minfin,2026-08-31,level,2026-08-31
+2025-12-31,KZ,national,quarterly,NATIONAL_FUND_GOLD,4223794282.72,USD,minfin,2026-08-31,level,2026-08-31
+2025-12-31,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_BONDS,32355497550.0,USD,minfin,2026-08-31,level,2026-08-31
+2025-12-31,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_PORTFOLIO,60676134579.92,USD,minfin,2026-08-31,level,2026-08-31
+2025-12-31,KZ,national,quarterly,NATIONAL_FUND_STABILIZATION_PORTFOLIO,4716322206.87,USD,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,NET_BUDGET_LENDING,149771.08565277,million KZT,minfin,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,NET_EXPORTS,5173993200000.0,million KZT,bns,2026-08-31,level,2026-08-31
 2025-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,9329876300000.0,KZT,bns,2026-08-31,level,2026-08-31
@@ -4532,7 +4552,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-31,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,513956.9460623,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,510033.17495029,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,838304.00566345,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
-2026-03-31,KZ,national,quarterly,NATIONAL_FUND_ASSETS,62395968457.21986,USD,minfin,2026-08-31,level,2026-08-31
+2026-03-31,KZ,national,quarterly,NATIONAL_FUND_EQUITIES,21698116050.25,USD,minfin,2026-08-31,level,2026-08-31
+2026-03-31,KZ,national,quarterly,NATIONAL_FUND_GOLD,4461134761.36,USD,minfin,2026-08-31,level,2026-08-31
+2026-03-31,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_BONDS,30787187862.19,USD,minfin,2026-08-31,level,2026-08-31
+2026-03-31,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_PORTFOLIO,59190691717.48,USD,minfin,2026-08-31,level,2026-08-31
+2026-03-31,KZ,national,quarterly,NATIONAL_FUND_STABILIZATION_PORTFOLIO,5516709253.18,USD,minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,daily,TONIA,17.79,%,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,DEPOSITS_TOTAL,46630016.45337905,million KZT,nbk,2026-08-31,level,2026-08-31

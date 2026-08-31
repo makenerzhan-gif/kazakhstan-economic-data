@@ -49,7 +49,11 @@ FETCHERS = {
     "LOCAL_GOV_WAGES_EXPENDITURE": minfin_fetchers.fetch_local_gov_wages_expenditure,
     "LOCAL_GOV_CAPITAL_EXPENDITURE": minfin_fetchers.fetch_local_gov_capital_expenditure,
     "LOCAL_GOV_SUBSIDIES_EXPENDITURE": minfin_fetchers.fetch_local_gov_subsidies_expenditure,
-    "NATIONAL_FUND_ASSETS": minfin_fetchers.fetch_national_fund_assets,
+    "NATIONAL_FUND_STABILIZATION_PORTFOLIO": minfin_fetchers.fetch_national_fund_stabilization_portfolio,
+    "NATIONAL_FUND_SAVINGS_PORTFOLIO": minfin_fetchers.fetch_national_fund_savings_portfolio,
+    "NATIONAL_FUND_SAVINGS_BONDS": minfin_fetchers.fetch_national_fund_savings_bonds,
+    "NATIONAL_FUND_EQUITIES": minfin_fetchers.fetch_national_fund_equities,
+    "NATIONAL_FUND_GOLD": minfin_fetchers.fetch_national_fund_gold,
 }
 
 INDICATOR_IDS = [
@@ -65,7 +69,8 @@ INDICATOR_IDS = [
     "GOV_PENSIONS_EXPENDITURE", "GOV_SUBSIDIES_EXPENDITURE",
     "SUBVENTIONS_REPUBLICAN",
     "LOCAL_GOV_WAGES_EXPENDITURE", "LOCAL_GOV_CAPITAL_EXPENDITURE", "LOCAL_GOV_SUBSIDIES_EXPENDITURE",
-    "NATIONAL_FUND_ASSETS",
+    "NATIONAL_FUND_STABILIZATION_PORTFOLIO", "NATIONAL_FUND_SAVINGS_PORTFOLIO",
+    "NATIONAL_FUND_SAVINGS_BONDS", "NATIONAL_FUND_EQUITIES", "NATIONAL_FUND_GOLD",
 ]
 
 

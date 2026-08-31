@@ -1,6 +1,6 @@
 # Update report — 2026-08-31
 
-Run timestamp: 2026-08-31T07:23:01.180460
+Run timestamp: 2026-08-31T07:50:38.687589
 Unified dataset updated: True
 Tests passed: True
 
@@ -324,7 +324,11 @@ Tests passed: True
   - warning: Unexpected jump of 475.7% between 2026-01-31 (51783.37820779) and 2026-02-28 (298102.8651729).
   - warning: Unexpected jump of 71.1% between 2026-02-28 (298102.8651729) and 2026-03-31 (510033.17495029).
   - warning: Unexpected jump of 52.7% between 2026-03-31 (510033.17495029) and 2026-05-31 (778700.22239769).
-- **minfin/NATIONAL_FUND_ASSETS** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **minfin/NATIONAL_FUND_STABILIZATION_PORTFOLIO** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **minfin/NATIONAL_FUND_SAVINGS_PORTFOLIO** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **minfin/NATIONAL_FUND_SAVINGS_BONDS** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **minfin/NATIONAL_FUND_EQUITIES** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **minfin/NATIONAL_FUND_GOLD** — fetch+validate+process: ok (downloaded=6, processed=6)
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% between 1995-01-01 (-8.2) and 1996-01-01 (0.5).
   - warning: Unexpected jump of 240.0% between 1996-01-01 (0.5) and 1997-01-01 (1.7).

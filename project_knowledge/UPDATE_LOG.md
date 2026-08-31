@@ -755,3 +755,37 @@ composition).
   National Bank RK per the sheet's own footer, republished in the Statistical Bulletin.
 
 **144/144 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — eighteenth scale-up batch: 144 -> 148 indicators (with a caught duplicate)
+Revisited табл 17 (the National Fund portfolio sheet used for the previous batch's
+NATIONAL_FUND_ASSETS) to extract its sub-portfolio and asset-class breakdown, which had been
+noted as present but not yet extracted.
+
+**Important correction first:** while wiring up the new sub-portfolio rows, discovered that
+NATIONAL_FUND_ASSETS (added in the seventeenth batch, minutes earlier) collides with an
+ALREADY-EXISTING indicator of the exact same ID, sourced from NBK formId=34 (added in an
+earlier session). Compared values: this sheet's 2026-Q1 total (USD 62,395,968,457) vs NBK's
+2026-04-01 value (USD 62,395,954,208) -- a ~0.00002% difference, almost certainly the same
+underlying valuation one day apart. The NBK series is also strictly better (monthly vs
+quarterly frequency, longer history). **Removed** the duplicate minfin-sourced
+NATIONAL_FUND_ASSETS entirely (indicators.yaml, update_minfin.py, sources.yaml, and the
+fetcher function itself) rather than leaving two indicators with the same ID silently
+colliding in indicator lookups and the unified dataset. Confirmed post-cleanup: zero
+duplicate IDs across all 148 indicators, and the original NBK series (102 monthly rows,
+untouched) still intact.
+
+**Minfin (5, net +4 after the above removal):** NATIONAL_FUND_STABILIZATION_PORTFOLIO,
+NATIONAL_FUND_SAVINGS_PORTFOLIO, NATIONAL_FUND_SAVINGS_BONDS, NATIONAL_FUND_EQUITIES,
+NATIONAL_FUND_GOLD -- all from the same табл 17 sheet, genuinely new information NBK's own
+formId=34 does not provide (only the grand total). Row order (Стабилизационный портфель /
+Облигации / Деньги.../ Сберегательный портфель / Облигации / Акции / Золото / Балама
+құралдар / Целевые талаптар / БАРЛЫҒЫ) confirmed byte-identical between the oldest (2024-Q4)
+and newest (2026-Q1) bulletin vintages, 13 months apart. One genuine ambiguity handled: the
+label "Облигации" (bonds) appears TWICE in the sheet -- once under the stabilization
+portfolio (value consistently near-zero) and once under the savings portfolio (the real,
+substantial figure, ~52-55% of savings). Resolved deterministically by ROW ORDER (take the
+first "Облигации" row after the "Сберегательный портфель" header row), not by label text
+alone -- verified live that this correctly grabs the substantial savings-portfolio figure
+(USD 30.8-32.4bn across quarters) rather than the always-near-zero stabilization one.
+
+**148/148 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

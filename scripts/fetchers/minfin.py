@@ -1046,14 +1046,28 @@ def fetch_local_gov_subsidies_expenditure() -> tuple[list[dict], dict]:
 
 
 # ---------------------------------------------------------------------------
-# NATIONAL_FUND_ASSETS: total market value (USD) of the National Fund of the
-# Republic of Kazakhstan's investment portfolio, quarterly point-in-time
-# snapshot -- found 2026-08-31 in the same "Statistical bulletin" document's
+# NATIONAL_FUND_STABILIZATION_PORTFOLIO / _SAVINGS_PORTFOLIO / _SAVINGS_BONDS /
+# _EQUITIES / _GOLD: composition breakdown (USD, quarterly point-in-time
+# snapshot) of the National Fund of the Republic of Kazakhstan's investment
+# portfolio -- found 2026-08-31 in the same "Statistical bulletin" document's
 # sheet "табл 17 кв+1мес" ("Composition of the portfolio and asset allocation
 # of the National Fund", sourced by Minfin FROM the National Bank RK). NOTE:
 # unlike CUSTOMS_DUTIES/GOV_*_EXPENDITURE, this sheet's name varies slightly
 # across vintages ("табл 17 кв+1мес" in the 11 most recent, "табл 17 кв" in the
 # 2 oldest) -- matched here by prefix ("табл 17") rather than exact string.
+#
+# IMPORTANT: this sheet also has a grand-total row ("БАРЛЫҒЫ"/"ВСЕГО") that
+# was initially built out as its own indicator, "NATIONAL_FUND_ASSETS" -- but
+# then REMOVED after discovering it collided with an ALREADY-EXISTING
+# indicator of that exact same ID, sourced from NBK formId=34 (see
+# fetch_fx_reserves's neighboring notes in config/sources.yaml). The two
+# turned out to be, for practical purposes, the same underlying figure (e.g.
+# this sheet's 2026-Q1 total of USD 62,395,968,457 vs NBK's 2026-04-01 value
+# of USD 62,395,954,208 -- a ~0.00002% difference, almost certainly the same
+# valuation one day apart) -- and the NBK series is strictly better anyway
+# (monthly vs quarterly, longer history). Only the SUB-PORTFOLIO breakdown
+# below (which NBK's formId=34 does not provide) was kept.
+#
 # Structurally different from every other bulletin-sheet fetcher in this file:
 # (a) it's a POINT-IN-TIME snapshot (portfolio value as of quarter-end), not a
 # year-to-date cumulative flow -- each of the 13 listed bulletins reports
@@ -1062,28 +1076,31 @@ def fetch_local_gov_subsidies_expenditure() -> tuple[list[dict], dict]:
 # not 13 growing partial-year figures; (b) values are already in USD (not
 # million KZT); (c) the row layout differs (label in column 0, value in
 # column 1, NOT the "value in the second-to-last column" convention used by
-# _fetch_bulletin_row), so this uses its own inline extraction rather than the
-# shared helper. Row matched by the Kazakh grand-total label 'БАРЛЫҒЫ' (mirrored
-# by Russian 'ВСЕГО' one column over) -- confirmed present, in that exact
-# position, in all 13 vintages. Period parsed from the sheet's own Russian
-# header text ('ЗА {N} КВАРТАЛ {YYYY} ГОДА'), never the unreliable document
-# title. Verified live 2026-08-31: 6 quarters, USD 57.9bn (2025-Q1) to USD
-# 63.9bn (2025-Q4), broadly consistent with the National Fund's publicly
-# reported size.
+# _fetch_bulletin_row), so this uses its own inline extraction rather than
+# that shared helper. Period parsed from the sheet's own Russian header text
+# ('ЗА {N} КВАРТАЛ {YYYY} ГОДА'), never the unreliable document title.
 # ---------------------------------------------------------------------------
 NF_SHEET_PREFIX = "табл 17"
 NF_QUARTER_RE = re.compile(r"ЗА\s+(\d)\s+КВАРТАЛ\s+(\d{4})\s+ГОДА", re.IGNORECASE)
 NF_QUARTER_END_MONTH_DAY = {1: (3, 31), 2: (6, 30), 3: (9, 30), 4: (12, 31)}
-NF_TOTAL_LABEL = "БАРЛЫҒЫ"
 
 
-def fetch_national_fund_assets() -> tuple[list[dict], dict]:
+def _fetch_nf_row(row_finder, indicator_id: str, description_note: str) -> tuple[list[dict], dict]:
+    """Shared fetcher for any single row in the National Fund portfolio sheet
+    (see the module comment above for the full structural explanation).
+    `row_finder` is a callable(rows: list[list]) -> row | None,
+    given the freedom to scope its search by row ORDER (not just label text)
+    since some labels repeat in this sheet (e.g. 'Облигации' appears both
+    under the stabilization portfolio, where it is consistently 0, and under
+    the savings portfolio, where it is the real figure) -- see
+    fetch_national_fund_savings_bonds for how that ambiguity is resolved.
+    """
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
     bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
-                "STRUCTURAL CHANGE DETECTED in minfin/NATIONAL_FUND_ASSETS",
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
                 f"WHAT CHANGED: no document title under directions={BUDGET_DIRECTION_ID} contains {STATISTICAL_BULLETIN_TITLE_MARKER!r}",
                 "EXPECTED: at least one 'Statistical bulletin as of ...' document",
                 "ACTUAL: not found in the current listing",
@@ -1117,9 +1134,7 @@ def fetch_national_fund_assets() -> tuple[list[dict], dict]:
                         break
             if period_match:
                 break
-        target_row = next((r for r in rows if r and any(
-            isinstance(c, str) and c.strip() == NF_TOTAL_LABEL for c in r if c
-        )), None)
+        target_row = row_finder(rows)
         if period_match is None or target_row is None:
             skipped.append(doc["id"])
             continue
@@ -1136,7 +1151,7 @@ def fetch_national_fund_assets() -> tuple[list[dict], dict]:
 
         month, day = NF_QUARTER_END_MONTH_DAY[quarter]
         iso_date = f"{year:04d}-{month:02d}-{day:02d}"
-        raw_store.save_raw_bytes(SOURCE, f"NATIONAL_FUND_ASSETS_{iso_date}", today,
+        raw_store.save_raw_bytes(SOURCE, f"{indicator_id}_{iso_date}", today,
                                   "xls" if file_path.lower().endswith(".xls") else "xlsx", content)
         if iso_date in seen_dates:
             continue
@@ -1146,14 +1161,14 @@ def fetch_national_fund_assets() -> tuple[list[dict], dict]:
     if not records:
         raise validation.StructuralChangeError(
             "\n".join([
-                "STRUCTURAL CHANGE DETECTED in minfin/NATIONAL_FUND_ASSETS",
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
                 f"WHAT CHANGED: zero of {len(bulletins)} listed bulletin documents could be parsed",
                 f"ACTUAL: all skipped, ids: {skipped}",
                 "ACTION REQUIRED: inspect a recent bulletin and update scripts/fetchers/minfin.py",
             ])
         )
 
-    raw_store.write_download_manifest(SOURCE, "NATIONAL_FUND_ASSETS", today, {
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
         "downloaded_at": datetime.now().isoformat(),
         "n_documents_listed": len(bulletins), "n_parsed": len(records), "skipped_document_ids": skipped,
         "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
@@ -1166,14 +1181,101 @@ def fetch_national_fund_assets() -> tuple[list[dict], dict]:
         "dataset_id": f"gov.kz-statistical-bulletin-listing,sheet={NF_SHEET_PREFIX}*",
         "note": (
             f"Built from {len(records)} of {len(bulletins)} listed 'Statistical bulletin' "
-            f"documents ({len(skipped)} skipped). USD (not KZT). Total market value of the "
-            "National Fund of the Republic of Kazakhstan's investment portfolio (stabilization "
-            "+ savings + target-requirements sub-portfolios combined), as of each calendar "
-            "quarter-end -- a POINT-IN-TIME snapshot, not a cumulative flow (unlike most other "
-            "minfin bulletin-sourced indicators). Originally sourced by Minfin FROM the National "
-            "Bank RK, republished here in the Statistical Bulletin. Document TITLES are NOT used "
-            "to determine period -- only each document's own internal 'ЗА N КВАРТАЛ YYYY ГОДА' "
-            "header text is trusted."
+            f"documents ({len(skipped)} skipped). USD (not KZT). {description_note} "
+            "A POINT-IN-TIME snapshot as of each calendar quarter-end, not a cumulative flow "
+            "(unlike most other minfin bulletin-sourced indicators). Originally sourced by "
+            "Minfin FROM the National Bank RK, republished here in the Statistical Bulletin. "
+            "Document TITLES are NOT used to determine period -- only each document's own "
+            "internal 'ЗА N КВАРТАЛ YYYY ГОДА' header text is trusted."
         ),
     }
     return records, manifest
+
+
+def _nf_row_by_label(rows: list, label: str):
+    return next((r for r in rows if r and any(
+        isinstance(c, str) and c.strip() == label for c in r if c
+    )), None)
+
+
+# Row order confirmed byte-identical (same 10-row block: Стабилизационный
+# портфель / Облигации / Деньги.../ Сберегательный портфель / Облигации /
+# Акции / Золото / Альтернативные инструменты / Целевые требования / БАРЛЫҒЫ,
+# in that exact sequence) in BOTH the oldest (2024-Q4) and newest (2026-Q1)
+# vintages, 13 months apart -- unusually stable for this document family, and
+# the basis for the row-order disambiguation in fetch_national_fund_savings_bonds.
+NF_STABILIZATION_LABEL = "Стабилизационный портфель"
+NF_SAVINGS_LABEL = "Сберегательный портфель"
+NF_BONDS_LABEL = "Облигации"
+NF_EQUITIES_LABEL = "Акции"
+NF_GOLD_LABEL = "Золото"
+
+
+def fetch_national_fund_stabilization_portfolio() -> tuple[list[dict], dict]:
+    """National Fund stabilization portfolio value, USD, quarterly. Verified
+    live 2026-08-31: matched exactly once per vintage, 6 quarters recovered."""
+    return _fetch_nf_row(
+        lambda rows: _nf_row_by_label(rows, NF_STABILIZATION_LABEL),
+        "NATIONAL_FUND_STABILIZATION_PORTFOLIO",
+        "National Fund 'stabilization portfolio' (Стабилизационный портфель) sub-total -- "
+        "the smaller, liquidity-focused portion of the Fund, held mostly in cash and "
+        "money-market instruments.",
+    )
+
+
+def fetch_national_fund_savings_portfolio() -> tuple[list[dict], dict]:
+    """National Fund savings portfolio value, USD, quarterly -- the much
+    larger, diversified (bonds/equities/gold/alternatives) portion of the
+    Fund. Verified live 2026-08-31: matched exactly once per vintage, 6
+    quarters recovered."""
+    return _fetch_nf_row(
+        lambda rows: _nf_row_by_label(rows, NF_SAVINGS_LABEL),
+        "NATIONAL_FUND_SAVINGS_PORTFOLIO",
+        "National Fund 'savings portfolio' (Сберегательный портфель) sub-total -- the larger, "
+        "diversified (bonds/equities/gold/alternative instruments) portion of the Fund.",
+    )
+
+
+def fetch_national_fund_savings_bonds() -> tuple[list[dict], dict]:
+    """National Fund savings-portfolio bond holdings, USD, quarterly. See the
+    module comment above for how this disambiguates from the stabilization
+    portfolio's own (always-zero) 'Облигации' row via row order, not label
+    text alone. Verified live 2026-08-31: ~52-55% of the savings portfolio in
+    every quarter checked."""
+    def _finder(rows):
+        savings_idx = next((i for i, r in enumerate(rows) if r and any(
+            isinstance(c, str) and c.strip() == NF_SAVINGS_LABEL for c in r if c
+        )), None)
+        if savings_idx is None:
+            return None
+        return next((r for r in rows[savings_idx + 1:] if r and any(
+            isinstance(c, str) and c.strip() == NF_BONDS_LABEL for c in r if c
+        )), None)
+    return _fetch_nf_row(
+        _finder,
+        "NATIONAL_FUND_SAVINGS_BONDS",
+        "National Fund savings-portfolio bond holdings (Облигации, the savings-portfolio "
+        "occurrence specifically -- NOT the stabilization portfolio's own always-zero "
+        "'Облигации' row, disambiguated by row order).",
+    )
+
+
+def fetch_national_fund_equities() -> tuple[list[dict], dict]:
+    """National Fund savings-portfolio equity holdings, USD, quarterly.
+    Verified live 2026-08-31: unambiguous, single match per vintage (only the
+    savings portfolio breaks down by equities)."""
+    return _fetch_nf_row(
+        lambda rows: _nf_row_by_label(rows, NF_EQUITIES_LABEL),
+        "NATIONAL_FUND_EQUITIES",
+        "National Fund savings-portfolio equity holdings (Акции).",
+    )
+
+
+def fetch_national_fund_gold() -> tuple[list[dict], dict]:
+    """National Fund savings-portfolio gold holdings, USD, quarterly.
+    Verified live 2026-08-31: unambiguous, single match per vintage."""
+    return _fetch_nf_row(
+        lambda rows: _nf_row_by_label(rows, NF_GOLD_LABEL),
+        "NATIONAL_FUND_GOLD",
+        "National Fund savings-portfolio gold holdings (Алтын / Золото).",
+    )

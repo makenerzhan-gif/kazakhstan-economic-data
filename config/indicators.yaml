@@ -1301,9 +1301,45 @@ indicators:
     category: fiscal
     source_status: confirmed
 
-  - id: NATIONAL_FUND_ASSETS
-    name_ru: "Активы Национального фонда РК"
-    name_en: "National Fund of Kazakhstan Total Assets"
+  - id: NATIONAL_FUND_STABILIZATION_PORTFOLIO
+    name_ru: "Стабилизационный портфель Национального фонда РК"
+    name_en: "National Fund of Kazakhstan Stabilization Portfolio"
+    agency: minfin
+    frequency: quarterly
+    unit: "USD"
+    category: fiscal
+    source_status: confirmed
+
+  - id: NATIONAL_FUND_SAVINGS_PORTFOLIO
+    name_ru: "Сберегательный портфель Национального фонда РК"
+    name_en: "National Fund of Kazakhstan Savings Portfolio"
+    agency: minfin
+    frequency: quarterly
+    unit: "USD"
+    category: fiscal
+    source_status: confirmed
+
+  - id: NATIONAL_FUND_SAVINGS_BONDS
+    name_ru: "Облигации в сберегательном портфеле Национального фонда РК"
+    name_en: "National Fund of Kazakhstan Savings Portfolio Bond Holdings"
+    agency: minfin
+    frequency: quarterly
+    unit: "USD"
+    category: fiscal
+    source_status: confirmed
+
+  - id: NATIONAL_FUND_EQUITIES
+    name_ru: "Акции в сберегательном портфеле Национального фонда РК"
+    name_en: "National Fund of Kazakhstan Equity Holdings"
+    agency: minfin
+    frequency: quarterly
+    unit: "USD"
+    category: fiscal
+    source_status: confirmed
+
+  - id: NATIONAL_FUND_GOLD
+    name_ru: "Золото в сберегательном портфеле Национального фонда РК"
+    name_en: "National Fund of Kazakhstan Gold Holdings"
     agency: minfin
     frequency: quarterly
     unit: "USD"
