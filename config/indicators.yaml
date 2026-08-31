@@ -1462,3 +1462,48 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+
+  - id: PROPERTY_TAX
+    name_ru: "Налог на имущество (государственный бюджет)"
+    name_en: "Property Tax (State Budget)"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
+
+  - id: LAND_TAX
+    name_ru: "Земельный налог (государственный бюджет)"
+    name_en: "Land Tax (State Budget)"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
+
+  - id: STATE_GOV_WAGES_EXPENDITURE
+    name_ru: "Заработная плата государственного бюджета"
+    name_en: "State Budget Wages Expenditure"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
+
+  - id: STATE_GOV_CAPITAL_EXPENDITURE
+    name_ru: "Капитальные затраты государственного бюджета"
+    name_en: "State Budget Capital Expenditure"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
+
+  - id: STATE_GOV_SUBSIDIES_EXPENDITURE
+    name_ru: "Бюджетные субсидии государственного бюджета"
+    name_en: "State Budget Subsidies Expenditure"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed

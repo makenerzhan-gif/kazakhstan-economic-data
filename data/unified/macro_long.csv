@@ -4034,9 +4034,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-28,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,737170.079,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-02-28,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,33689.77497058,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-02-28,KZ,national,irregular,GOV_WAGES_EXPENDITURE,180170.77747968,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-02-28,KZ,national,irregular,LAND_TAX,3867.95944128,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-02-28,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,209961.31519387,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-02-28,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,258545.99070222,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-02-28,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,511819.51571588,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-02-28,KZ,national,irregular,PROPERTY_TAX,152083.54998406,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-02-28,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,253696.28179088,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-02-28,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,292235.7656728,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-02-28,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,691990.29319556,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,CPI,101.3,% change vs previous month,bns,2026-08-31,level,2026-08-31
 2025-03-01,KZ,national,monthly,DEPOSITS_TOTAL,40449630.68109766,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4070,6 +4075,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,1090312.542,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,38684.86812658,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,281769.04392764,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-03-31,KZ,national,irregular,LAND_TAX,5009.60890131,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,406270.93573776,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,413981.43801995,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,790903.36800855,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4078,6 +4084,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-31,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_BONDS,31713795750.88344,USD,minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_PORTFOLIO,54966393287.549995,USD,minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,quarterly,NATIONAL_FUND_STABILIZATION_PORTFOLIO,4398059941.76,USD,minfin,2026-08-31,level,2026-08-31
+2025-03-31,KZ,national,irregular,PROPERTY_TAX,160273.84261717,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-03-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,457333.44835328,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-03-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,452666.30614653,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-03-31,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,1072672.41193619,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.6,index,nbk,2026-08-31,level,2026-08-31
 2025-04-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -4159,6 +4169,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-30,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,2158513.735,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,129731.75751781,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,irregular,GOV_WAGES_EXPENDITURE,570045.14241107,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-06-30,KZ,national,irregular,LAND_TAX,9758.02633739,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,1495460.27388462,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,774743.89632074,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,1921164.38839903,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4167,6 +4178,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-30,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_BONDS,31556699770.19001,USD,minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_PORTFOLIO,56623680765.53001,USD,minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,quarterly,NATIONAL_FUND_STABILIZATION_PORTFOLIO,5134539907.99,USD,minfin,2026-08-31,level,2026-08-31
+2025-06-30,KZ,national,irregular,PROPERTY_TAX,293375.08792122,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-06-30,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,1642189.09507622,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-06-30,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,904475.65383855,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-06-30,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,2491209.5308101,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.3,index,nbk,2026-08-31,level,2026-08-31
 2025-07-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-08-31,level,2026-08-31
@@ -4201,9 +4216,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,2515548.831,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-07-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,139131.75751781,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-07-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,666220.08366026,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-07-31,KZ,national,irregular,LAND_TAX,10114.54566644,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-07-31,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,1833970.49552394,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-07-31,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,884827.91621928,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-07-31,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,2089142.18050802,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-07-31,KZ,national,irregular,PROPERTY_TAX,305262.2944347,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-07-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,1985666.2271832,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-07-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1023959.67373709,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-07-31,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,2755362.26416828,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.9,index,nbk,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-08-31,level,2026-08-31
 2025-08-01,KZ,national,monthly,DEPOSITS_TOTAL,42392405.20091842,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4232,9 +4252,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,2873985.339,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-08-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,187096.88287821,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-08-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,757588.68915695,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-08-31,KZ,national,irregular,LAND_TAX,12616.19582185,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-08-31,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,2381975.28375177,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-08-31,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,977432.11322968,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-08-31,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,2303587.07203492,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-08-31,KZ,national,irregular,PROPERTY_TAX,455790.70602237,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-08-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,2586588.7774999,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-08-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1164528.99610789,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-08-31,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,3061175.76119187,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-09-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.8,index,nbk,2026-08-31,level,2026-08-31
 2025-09-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-08-31,level,2026-08-31
 2025-09-01,KZ,national,monthly,DEPOSITS_TOTAL,42795877.34127415,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4268,6 +4293,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-30,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,3231841.61,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,194472.40604145,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,irregular,GOV_WAGES_EXPENDITURE,844170.78636958,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-09-30,KZ,national,irregular,LAND_TAX,13560.48733851,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,2790489.29749974,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,1057190.93996987,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,2557700.09551103,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4276,6 +4302,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-30,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_BONDS,32040895524.96,USD,minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_PORTFOLIO,59116722163.55,USD,minfin,2026-08-31,level,2026-08-31
 2025-09-30,KZ,national,quarterly,NATIONAL_FUND_STABILIZATION_PORTFOLIO,5120141647.53,USD,minfin,2026-08-31,level,2026-08-31
+2025-09-30,KZ,national,irregular,PROPERTY_TAX,464832.57237733,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-09-30,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,3011034.84312081,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-09-30,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1251663.34601132,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-09-30,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,3401870.88188061,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.6,index,nbk,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-08-31,level,2026-08-31
 2025-10-01,KZ,national,monthly,DEPOSITS_TOTAL,43447389.63244179,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4309,9 +4339,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,3585790.894,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-10-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,252240.18289344,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-10-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,935910.22096525,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-10-31,KZ,national,irregular,LAND_TAX,14051.46498828,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-10-31,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,3195477.3271136,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-10-31,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,1158271.10878198,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-10-31,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,2835431.43183552,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-10-31,KZ,national,irregular,PROPERTY_TAX,471662.6544135,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-10-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,3447848.849362,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-10-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1410511.29167542,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-10-31,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,3771341.65280077,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.3,index,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,DEPOSITS_TOTAL,44679044.7624226,million KZT,nbk,2026-08-31,level,2026-08-31
 2025-11-01,KZ,national,monthly,DEPOSIT_RATE,14.57885683950363,%,nbk,2026-08-31,level,2026-08-31
@@ -4339,9 +4374,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-30,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,3949043.456,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-11-30,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,413622.6786086,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-11-30,KZ,national,irregular,GOV_WAGES_EXPENDITURE,1015393.44607841,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-11-30,KZ,national,irregular,LAND_TAX,16702.82580811,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-11-30,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,3715220.18835135,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-11-30,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,1231082.18592623,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-11-30,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,3106060.7387416,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-11-30,KZ,national,irregular,PROPERTY_TAX,658288.76117229,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-11-30,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,4015906.95881689,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-11-30,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1644704.86453483,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2025-11-30,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,4121454.18482001,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.9,index,nbk,2026-08-31,level,2026-08-31
 2025-12-01,KZ,national,monthly,DEPOSITS_TOTAL,44457125.20502845,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4503,9 +4543,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,430646.023,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-01-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,6318.84247,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-01-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,61529.58985924,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-01-31,KZ,national,irregular,LAND_TAX,274.36764823,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-01-31,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,29938.10085496,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-01-31,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,51783.37820779,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-01-31,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,240414.189634,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-01-31,KZ,national,irregular,PROPERTY_TAX,3311.46366933,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-01-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,30976.35148767,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-01-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,58102.22067779,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-01-31,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,301943.77949324,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.6,index,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,DEPOSITS_TOTAL,46163277.62036333,million KZT,nbk,2026-08-31,level,2026-08-31
 2026-02-01,KZ,national,monthly,DEPOSIT_RATE,15.336995860868887,%,nbk,2026-08-31,level,2026-08-31
@@ -4537,9 +4582,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-28,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,837970.387,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-02-28,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,34496.21587,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-02-28,KZ,national,irregular,GOV_WAGES_EXPENDITURE,154771.97288396,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-02-28,KZ,national,irregular,LAND_TAX,1667.61532971,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-02-28,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,248315.06581528,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-02-28,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,298102.8651729,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-02-28,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,541282.98972523,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-02-28,KZ,national,irregular,PROPERTY_TAX,134519.20517135,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-02-28,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,269681.0845407,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-02-28,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,332599.0810429,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-02-28,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,696054.96260919,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-02-28,KZ,national,daily,TONIA,17.97,%,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.5,index,nbk,2026-08-31,level,2026-08-31
 2026-03-01,KZ,national,monthly,DEPOSITS_TOTAL,46179213.57458906,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4600,6 +4650,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,1240814.106,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,35310.83917,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,246566.9662505,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-03-31,KZ,national,irregular,LAND_TAX,2375.40064648,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,513956.9460623,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,510033.17495029,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,838304.00566345,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
@@ -4608,6 +4659,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-31,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_BONDS,30787187862.19,USD,minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_PORTFOLIO,59190691717.48,USD,minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,quarterly,NATIONAL_FUND_STABILIZATION_PORTFOLIO,5516709253.18,USD,minfin,2026-08-31,level,2026-08-31
+2026-03-31,KZ,national,irregular,PROPERTY_TAX,143953.60676457,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-03-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,545937.98780687,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-03-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,545344.01412029,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-03-31,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,1084870.97191395,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-03-31,KZ,national,daily,TONIA,17.79,%,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-08-31,level,2026-08-31
 2026-04-01,KZ,national,monthly,DEPOSITS_TOTAL,46630016.45337905,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4717,9 +4772,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,2048661.101,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-05-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,205261.99334018,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-05-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,400318.17793383,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-05-31,KZ,national,irregular,LAND_TAX,4872.22984455,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-05-31,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,1086315.58317048,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-05-31,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,778700.22239769,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-05-31,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,1465586.11105871,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-05-31,KZ,national,irregular,PROPERTY_TAX,257451.24130667,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-05-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,1217269.06024621,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-05-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,983962.21573787,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-05-31,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,1865904.28899254,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-05-31,KZ,national,daily,TONIA,18.71,%,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.965806,index,nbk,2026-08-31,level,2026-08-31
 2026-06-01,KZ,national,monthly,DEPOSITS_TOTAL,47910515.95619293,million KZT,nbk,2026-08-31,level,2026-08-31
@@ -4777,9 +4837,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-30,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,2454119.434,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-06-30,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,259102.49153863,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-06-30,KZ,national,irregular,GOV_WAGES_EXPENDITURE,488809.26609373,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-06-30,KZ,national,irregular,LAND_TAX,5038.70880023,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-06-30,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,1307364.60597941,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-06-30,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,878932.72843332,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-06-30,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,2039172.6627365,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-06-30,KZ,national,irregular,PROPERTY_TAX,263237.87122039,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-06-30,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,1479118.48198626,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-06-30,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1138035.21997195,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
+2026-06-30,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,2527981.92883023,"million KZT, year-to-date cumulative",minfin,2026-08-31,level,2026-08-31
 2026-06-30,KZ,national,daily,TONIA,16.8,%,nbk,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.771858,index,nbk,2026-08-31,level,2026-08-31
 2026-07-01,KZ,national,monthly,DEPOSITS_TOTAL,50135442.4340935,million KZT,nbk,2026-08-31,level,2026-08-31

@@ -67,6 +67,11 @@ FETCHERS = {
     "STATE_BUDGET_EXPENDITURE": minfin_fetchers.fetch_state_budget_expenditure,
     "STATE_BUDGET_DEFICIT": minfin_fetchers.fetch_state_budget_deficit,
     "STATE_NON_OIL_DEFICIT": minfin_fetchers.fetch_state_non_oil_deficit,
+    "PROPERTY_TAX": minfin_fetchers.fetch_property_tax,
+    "LAND_TAX": minfin_fetchers.fetch_land_tax,
+    "STATE_GOV_WAGES_EXPENDITURE": minfin_fetchers.fetch_state_gov_wages_expenditure,
+    "STATE_GOV_CAPITAL_EXPENDITURE": minfin_fetchers.fetch_state_gov_capital_expenditure,
+    "STATE_GOV_SUBSIDIES_EXPENDITURE": minfin_fetchers.fetch_state_gov_subsidies_expenditure,
 }
 
 INDICATOR_IDS = [
@@ -90,6 +95,8 @@ INDICATOR_IDS = [
     "GOV_PROCUREMENT_TOTAL_VALUE",
     "INDIVIDUAL_INCOME_TAX", "STATE_BUDGET_REVENUE", "STATE_BUDGET_EXPENDITURE",
     "STATE_BUDGET_DEFICIT", "STATE_NON_OIL_DEFICIT",
+    "PROPERTY_TAX", "LAND_TAX",
+    "STATE_GOV_WAGES_EXPENDITURE", "STATE_GOV_CAPITAL_EXPENDITURE", "STATE_GOV_SUBSIDIES_EXPENDITURE",
 ]
 
 

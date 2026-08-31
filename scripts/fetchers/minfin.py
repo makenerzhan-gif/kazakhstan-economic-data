@@ -688,7 +688,7 @@ RU_MONTH_TO_NUM = {
 CUSTOMS_DUTIES_ROW_LABEL = "Таможенные платежи"
 
 
-def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str) -> tuple[list[dict], dict]:
+def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str, value_col: int = -2) -> tuple[list[dict], dict]:
     """Shared fetcher for any single row in one of the "Statistical bulletin"
     document's sheets, across all listed bulletin vintages. `row_matcher` is
     a callable(row) -> bool that identifies the target row within the sheet
@@ -697,6 +697,15 @@ def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str) -> tupl
     above for the full explanation of why this needs multi-document
     iteration, why document titles are not trusted, and why the result is
     genuinely year-to-date cumulative with real gaps.
+    `value_col` defaults to -2 ("second-to-last column", the convention every
+    sheet used so far happens to follow) but is overridable: табл 4's rows
+    have a trailing-cell count that genuinely varies between vintages (7, 9,
+    or 10 elements for the exact same logical row, depending on how much
+    empty trailing range openpyxl picked up from that specific file) --
+    confirmed live that -2 silently lands on a None padding cell in 4 of 13
+    vintages there, dropping those records. An absolute column index (5, the
+    value's real fixed position in that sheet) is used instead for that
+    sheet's fetchers.
     """
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
     bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
@@ -746,7 +755,7 @@ def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str) -> tupl
         end_month_name = (period_match.group(1) or "январь").lower()
         end_month = RU_MONTH_TO_NUM.get(end_month_name)
         year = int(period_match.group(2))
-        value = target_row[-2]
+        value = target_row[value_col] if -len(target_row) <= value_col < len(target_row) else None
         if end_month is None or value in (None, ""):
             skipped.append(doc["id"])
             continue
@@ -2055,4 +2064,113 @@ def fetch_state_non_oil_deficit() -> tuple[list[dict], dict]:
         "Million KZT. State non-oil budget deficit (surplus), STATE budget (republican + local "
         "government budgets combined) -- broader scope than NON_OIL_BUDGET_DEFICIT, which is "
         "republican-budget-only. Negative values indicate a deficit.",
+    )
+
+
+# ---------------------------------------------------------------------------
+# PROPERTY_TAX / LAND_TAX: found 2026-08-31 in sheet "табл 4" ("Поступления в
+# ГОСУДАРСТВЕННЫЙ бюджет" -- receipts to the STATE budget, republican + local
+# combined, the same "state" scope as табл 3's INDIVIDUAL_INCOME_TAX above).
+# This resolves the property-tax half of the question left open by
+# INDIVIDUAL_INCOME_TAX's discovery -- табл 3's simplified tax breakdown
+# didn't itemize property tax, but табл 4's full KBK-code-level classification
+# (the state-budget counterpart to табл 8 (дох), which is republican-only)
+# does.
+#
+# IMPORTANT data-quality finding: the RUSSIAN label for property tax
+# ('Налоги на имущество') is UNRELIABLE for matching across vintages --
+# confirmed live that in several older documents (e.g. doc 928644, "as of
+# November 1, 2025") the source spreadsheet itself renders this word as
+# 'Hалоги на имущество', using a LATIN 'H' instead of the correct Cyrillic
+# 'Н' -- a genuine copy-paste artifact in Minfin's own template, not a
+# rendering issue on this end (confirmed by inspecting the raw string).
+# Matching this label directly returned 0/13 matches in most vintages. Fixed
+# by matching on the KAZAKH label ('Мүлiкке салынатын салықтар') at its
+# fixed column position (index 4) instead, which is byte-identical across
+# all 13 vintages and gives exactly 1 match each -- confirmed live values
+# form a genuine year-to-date cumulative series (monotonic within each year,
+# resetting each January), the same pattern as CUSTOMS_DUTIES. LAND_TAX uses
+# the same Kazakh-label strategy for consistency, even though its Russian
+# label ('Земельный налог') did NOT show the H/Н issue -- matched twice per
+# vintage (a category-aggregate row and its single specific sub-item row,
+# confirmed to always carry an IDENTICAL value in every vintage checked, so
+# matching either is safe; the Kazakh-label-at-fixed-index approach picks the
+# first, the aggregate row, deterministically).
+# ---------------------------------------------------------------------------
+BULLETIN_STATE_REVENUE_SHEET_NAME = "табл 4"
+PROPERTY_TAX_KZ_LABEL = "Мүлiкке салынатын салықтар"
+LAND_TAX_KZ_LABEL = "Жер салығы"
+
+
+def fetch_property_tax() -> tuple[list[dict], dict]:
+    """Property tax revenue, STATE budget (republican + local combined),
+    million KZT, year-to-date cumulative. Verified live 2026-08-31: 13
+    documents parsed, monotonic within each year (2025: 152,083.55 Feb to
+    658,288.76 Nov; 2026: 3,311.46 Jan to 263,237.87 Jun)."""
+    return _fetch_bulletin_row(
+        BULLETIN_STATE_REVENUE_SHEET_NAME,
+        lambda r: len(r) > 4 and isinstance(r[4], str) and r[4].strip() == PROPERTY_TAX_KZ_LABEL,
+        "PROPERTY_TAX",
+        value_col=5,
+    )
+
+
+def fetch_land_tax() -> tuple[list[dict], dict]:
+    """Land tax revenue, STATE budget (republican + local combined), million
+    KZT, year-to-date cumulative. Verified live 2026-08-31: 13 documents
+    parsed, monotonic within each year (2025: 3,867.96 Feb to 16,702.83 Nov;
+    2026: 274.37 Jan to 5,038.71 Jun)."""
+    return _fetch_bulletin_row(
+        BULLETIN_STATE_REVENUE_SHEET_NAME,
+        lambda r: len(r) > 4 and isinstance(r[4], str) and r[4].strip() == LAND_TAX_KZ_LABEL,
+        "LAND_TAX",
+        value_col=5,
+    )
+
+
+# ---------------------------------------------------------------------------
+# STATE_GOV_WAGES_EXPENDITURE / _CAPITAL_EXPENDITURE / _SUBSIDIES_EXPENDITURE:
+# found 2026-08-31 in sheet "табл 6" ("Исполнение ГОСУДАРСТВЕННОГО бюджета по
+# экономической классификации расходов" -- STATE budget expenditure by
+# economic classification), the STATE-level (republican + local combined)
+# counterpart to both GOV_*_EXPENDITURE (табл 10, republican-only) and
+# LOCAL_GOV_*_EXPENDITURE (таб 11, local-only). Same three row labels
+# ('Заработная плата', 'Капитальные затраты', 'Бюджетные субсидии'), each
+# matched exactly once across all 13 vintages. Unlike табл 10, no separate
+# 'Пенсии' row exists in this sheet either (like the local-budget sheet), so
+# no STATE_GOV_PENSIONS_EXPENDITURE was added.
+# ---------------------------------------------------------------------------
+BULLETIN_STATE_ECONOMIC_SHEET_NAME = "табл 6"
+
+
+def fetch_state_gov_wages_expenditure() -> tuple[list[dict], dict]:
+    """State budget wages expenditure ('Заработная плата'), million KZT,
+    year-to-date cumulative. Verified live 2026-08-31: 13 documents parsed,
+    exactly one matching row in each."""
+    return _fetch_bulletin_row(
+        BULLETIN_STATE_ECONOMIC_SHEET_NAME,
+        lambda r: r[-1] == "Заработная плата",
+        "STATE_GOV_WAGES_EXPENDITURE",
+    )
+
+
+def fetch_state_gov_capital_expenditure() -> tuple[list[dict], dict]:
+    """State budget capital expenditure ('Капитальные затраты'), million
+    KZT, year-to-date cumulative. Verified live 2026-08-31: 13 documents
+    parsed, exactly one matching row in each."""
+    return _fetch_bulletin_row(
+        BULLETIN_STATE_ECONOMIC_SHEET_NAME,
+        lambda r: r[-1] == "Капитальные затраты",
+        "STATE_GOV_CAPITAL_EXPENDITURE",
+    )
+
+
+def fetch_state_gov_subsidies_expenditure() -> tuple[list[dict], dict]:
+    """State budget budgetary subsidies ('Бюджетные субсидии'), million KZT,
+    year-to-date cumulative. Verified live 2026-08-31: 13 documents parsed,
+    exactly one matching row in each."""
+    return _fetch_bulletin_row(
+        BULLETIN_STATE_ECONOMIC_SHEET_NAME,
+        lambda r: r[-1] == "Бюджетные субсидии",
+        "STATE_GOV_SUBSIDIES_EXPENDITURE",
     )

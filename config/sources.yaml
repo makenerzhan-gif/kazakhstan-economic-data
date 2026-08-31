@@ -1711,6 +1711,90 @@ agencies:
           2026-08-31. Same sheet. State non-oil budget deficit (surplus) -- broader scope than
           NON_OIL_BUDGET_DEFICIT (republican-only). Verified live: -8,454,245.45 (2023) to
           -11,393,479.39 (2025) million KZT. fetch_state_non_oil_deficit.
+      PROPERTY_TAX:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 4"
+        target_row_label: "Мүлiкке салынатын салықтар (Kazakh label, fixed column index 4 -- see notes)"
+        format: xlsx
+        frequency: "irregular (year-to-date cumulative)"
+        notes: >
+          2026-08-31. "Поступления в ГОСУДАРСТВЕННЫЙ бюджет" (receipts to the STATE budget,
+          republican + local combined) -- the state-level counterpart to табл 8 (дох), which is
+          republican-only. Resolves the property-tax half of the question left open by
+          INDIVIDUAL_INCOME_TAX's discovery (see that entry) -- табл 3's simplified breakdown
+          didn't itemize property tax, but this sheet's full KBK-code-level classification does.
+          TWO data-quality issues found and worked around, both confirmed by direct inspection,
+          neither guessed at: (1) the RUSSIAN label ("Налоги на имущество") is unreliable --
+          several older documents render it as "Hалоги на имущество" with a LATIN 'H' instead of
+          Cyrillic 'Н', a genuine artifact in Minfin's own spreadsheet template -- worked around
+          by matching the KAZAKH label ("Мүлiкке салынатын салықтар") instead, which is byte-
+          identical across all 13 vintages; (2) this specific row's trailing-cell count varies
+          between vintages (7, 9, or 10 elements for the same logical row), so the usual "value
+          at column -2" convention (used by every other sheet so far) silently landed on a None
+          padding cell in 4 of 13 vintages, dropping those records -- fixed by adding a
+          `value_col` override to the shared _fetch_bulletin_row helper (default -2 preserved
+          for every other already-shipped indicator) and using the value's real fixed absolute
+          position (column index 5) instead. Verified live after both fixes: 13/13 documents
+          parsed, monotonic within each year (2025: 152,083.55 Feb to 658,288.76 Nov; 2026:
+          3,311.46 Jan to 263,237.87 Jun) million KZT. fetch_property_tax.
+      LAND_TAX:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 4"
+        target_row_label: "Жер салығы (Kazakh label, fixed column index 4)"
+        format: xlsx
+        frequency: "irregular (year-to-date cumulative)"
+        notes: >
+          2026-08-31. Same sheet as PROPERTY_TAX, same Kazakh-label-plus-value_col=5 fix. This
+          label matches TWICE per vintage (a category-aggregate row and its single specific
+          sub-item row) -- confirmed live these always carry an IDENTICAL value in every
+          vintage, so matching the first occurrence (the aggregate row, via the Kazakh label at
+          its fixed column position) is safe and deterministic. Verified live: 13/13 documents
+          parsed, monotonic within each year (2025: 3,867.96 Feb to 16,702.83 Nov; 2026: 274.37
+          Jan to 5,038.71 Jun) million KZT. fetch_land_tax.
+      STATE_GOV_WAGES_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 6"
+        target_row_label: "Заработная плата"
+        format: xlsx
+        frequency: "irregular (year-to-date cumulative)"
+        notes: >
+          2026-08-31. "Исполнение ГОСУДАРСТВЕННОГО бюджета по экономической классификации
+          расходов" -- the STATE-level (republican + local combined) counterpart to both
+          GOV_WAGES_EXPENDITURE (табл 10, republican-only) and LOCAL_GOV_WAGES_EXPENDITURE (таб
+          11, local-only). Row "Заработная плата" matched exactly once per vintage, standard -2
+          value-column convention holds here (unlike табл 4). Verified live: 13/13 documents
+          parsed. fetch_state_gov_wages_expenditure.
+      STATE_GOV_CAPITAL_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 6"
+        target_row_label: "Капитальные затраты"
+        format: xlsx
+        frequency: "irregular (year-to-date cumulative)"
+        notes: >
+          2026-08-31. Same sheet as STATE_GOV_WAGES_EXPENDITURE. Row "Капитальные затраты"
+          matched exactly once per vintage. Verified live: 13/13 documents parsed.
+          fetch_state_gov_capital_expenditure.
+      STATE_GOV_SUBSIDIES_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 6"
+        target_row_label: "Бюджетные субсидии"
+        format: xlsx
+        frequency: "irregular (year-to-date cumulative)"
+        notes: >
+          2026-08-31. Same sheet. Row "Бюджетные субсидии" matched exactly once per vintage.
+          NOTE: like таб 11 (local-budget), this sheet has no separate "Пенсии" row, so no
+          STATE_GOV_PENSIONS_EXPENDITURE was added. Verified live: 13/13 documents parsed.
+          fetch_state_gov_subsidies_expenditure.
       GOV_HEALTH_SPENDING:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"

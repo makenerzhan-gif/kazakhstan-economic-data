@@ -890,3 +890,36 @@ breakdown and was NOT found itemized there either -- that specific question rema
   pattern established for SUBVENTIONS_REPUBLICAN.
 
 **161/161 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — twenty-second scale-up batch: 161 -> 166 indicators (a shared-helper bug caught and fixed)
+Followed up on the previous batch's discovery: табл 4 (STATE-level revenue KBK detail, the
+state-budget counterpart to табл 8 (дох)) for the property-tax half of the individual-income-
+tax question, and табл 6 (STATE-level economic classification) to complete the wages/capital/
+subsidies trilogy already covered at republican and local level.
+
+**Two real data-quality issues found and fixed in табл 4, neither guessed at:**
+1. The Russian label for property tax ("Налоги на имущество") is unreliable -- several older
+   bulletin vintages render it as "Hалоги на имущество" with a LATIN 'H' substituted for the
+   Cyrillic 'Н', a genuine artifact in Minfin's own spreadsheet template. Confirmed by directly
+   inspecting the raw string in a failing document rather than assuming a transcription error.
+   Fixed by matching the KAZAKH label instead, which is byte-identical across all 13 vintages.
+2. **A latent bug in the shared _fetch_bulletin_row helper**, discovered only because this
+   sheet's row-padding happened to vary: the helper's "-2" value-column convention (used by
+   every sheet since CUSTOMS_DUTIES) silently landed on a None padding cell in 4 of 13
+   vintages, because this specific row's trailing-cell count genuinely differs between
+   documents (7, 9, or 10 elements for the same logical row). The fetcher didn't error --
+   it just quietly returned 9 records instead of 13, which only stood out because 13 was the
+   expected count from prior sheets. Fixed by adding a `value_col` override to the shared
+   helper (default -2 preserved, zero behavior change for every other already-shipped
+   indicator -- explicitly re-verified live on CUSTOMS_DUTIES and STATE_GOV_WAGES_EXPENDITURE
+   after the change). A reminder to keep checking record counts against expectations, not just
+   "did it return something," even for indicators built on well-established shared helpers.
+
+**Minfin (5):**
+- PROPERTY_TAX / LAND_TAX (табл 4) -- resolves the property-tax half of the question left open
+  by last batch's INDIVIDUAL_INCOME_TAX discovery.
+- STATE_GOV_WAGES_EXPENDITURE / _CAPITAL_EXPENDITURE / _SUBSIDIES_EXPENDITURE (табл 6) --
+  completes the republican/local/state trilogy alongside the existing GOV_*_EXPENDITURE and
+  LOCAL_GOV_*_EXPENDITURE indicators.
+
+**166/166 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
