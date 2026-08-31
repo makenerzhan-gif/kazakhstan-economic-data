@@ -623,6 +623,33 @@ agencies:
           outflow consistent with Kazakhstan's well-documented post-Soviet emigration wave --
           falling to 7,608 by 2025, well below 2025 arrivals (23,761), a plausible reversal to
           net inflow in recent years. fetch_migration_departures.
+      LABOR_PRODUCTIVITY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 4023003
+        format: json
+        notes: >
+          2026-08-31. code 111216, "производительность труда" -- the only hit for a keyword
+          search on that exact phrase. Unlike most Taldau indicators connected this session,
+          worked with the default single-dimension (region-only) params -- no browser-based
+          parameter cracking needed. Verified live: 26 annual values (2000-2025), rising from
+          395,200 to 14,791,000 KZT per employed person -- plausible order of magnitude against
+          GDP_NOMINAL / employed-population back-of-envelope check (~11.1 million KZT/worker),
+          close enough given this likely uses a different underlying formula (gross value added
+          per worker, not GDP per worker) -- not cross-checked to the decimal, just confirmed
+          the right order of magnitude. fetch_labor_productivity.
+
+          Also investigated this pass: "индекс цен на жилье" (housing price index, indexId
+          703083, code 261605) -- classified across 3 dictionaries, params recovered via the
+          live ExtJS tree (measure_id=7, dicIds=67,848,2817, terms=741880,2695732,18120823,
+          period_id=5 for quarterly), confirmed to return real data (35 quarterly points), but
+          NOT connected: the source's own displayed period list ends at Q4 2020 -- a
+          discontinued/stale series on BNS's own site, not a fetcher problem. Investigating it
+          did surface and fix a real latent bug in _fetch_taldau_annual_index: it always
+          stamped records at year-end regardless of the response's own month, which would have
+          silently collapsed 4 quarters into duplicate December-31 dates for any future
+          quarterly index -- fixed to parse the actual month from the response's 'yMMYYYY' keys,
+          re-verified live against GDP_REAL for zero regression on already-shipped indicators.
       ENERGY_INTENSITY:
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"

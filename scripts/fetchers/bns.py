@@ -8,6 +8,7 @@ session (not guessed) -- see the per-function docstring for what was verified.
 """
 from __future__ import annotations
 
+import calendar
 import csv
 import io
 import json
@@ -493,12 +494,13 @@ def fetch_gdp_real() -> tuple[list[dict], dict]:
 
 def _fetch_taldau_annual_index(index_id: str, indicator_id: str, note: str,
                                 measure_id: str = "7", terms: str | None = None,
-                                dic_ids: str = REGIONS_DIC_ID) -> tuple[list[dict], dict]:
+                                dic_ids: str = REGIONS_DIC_ID,
+                                period_id: str = "7") -> tuple[list[dict], dict]:
     """Shared fetcher for any Taldau "NewIndex" indicator following the pattern
-    discovered for GDP_REAL: national annual series, root term id 741880. See
+    discovered for GDP_REAL: national series, root term id 741880. See
     fetch_gdp_real's docstring for how this mechanism was cracked. Each new
     index_id used here was verified live this session (real HTTP 200, at least
-    one parsed year) before being wired into update_bns.py -- not assumed to
+    one parsed period) before being wired into update_bns.py -- not assumed to
     work by analogy alone.
 
     Some indicators (e.g. average wage) are classified across MULTIPLE
@@ -510,10 +512,21 @@ def _fetch_taldau_annual_index(index_id: str, indicator_id: str, note: str,
     than guessed -- guessing measure_id=7 and a single dic_ids for a
     multi-dictionary index reliably returns HTTP 500, not wrong data, so this
     fails loudly rather than silently.
+
+    `period_id` defaults to "7" (annual, "Год") but is overridable -- despite
+    this function's name, the response's own date keys ('yMMYYYY', e.g.
+    'y092012' for a Q3-2012 quarterly point) already carry the true month, not
+    just the year, so a non-annual `period_id` (e.g. "5" for quarterly, found
+    for HOUSING_PRICE_INDEX via the live ExtJS tree, same technique as above)
+    is parsed correctly into a proper quarter-end date rather than silently
+    collapsed into "one record per year" -- which would have produced multiple
+    records sharing the same date and corrupted the series. This was caught
+    live before shipping: an early attempt kept the old year-only parsing and
+    it would have merged 4 quarters a year into duplicate December 31 dates.
     """
     body = {
         "p_parent_id": "", "p_index_id": index_id, "p_keyword": "",
-        "p_period_id": "7", "p_measure_id": measure_id, "p_term_id": NATIONAL_TERM_ID,
+        "p_period_id": period_id, "p_measure_id": measure_id, "p_term_id": NATIONAL_TERM_ID,
         "p_terms": terms or NATIONAL_TERM_ID, "p_dicIds": dic_ids, "idx": "0",
         "filter": '[{"property":null,"value":null}]', "id": "",
     }
@@ -540,15 +553,19 @@ def _fetch_taldau_annual_index(index_id: str, indicator_id: str, note: str,
 
     records = []
     for key, value in match.items():
-        if not (isinstance(key, str) and key.startswith("y") and key[1:].isdigit()):
+        if not (isinstance(key, str) and key.startswith("y") and key[1:].isdigit() and len(key) == 7):
             continue
-        year_str = key[-4:]
+        month_str, year_str = key[1:3], key[3:]
         try:
+            month = int(month_str)
             year = int(year_str)
             v = float(value)
         except (TypeError, ValueError):
             continue
-        records.append({"date": f"{year:04d}-12-31", "value": v})
+        if not 1 <= month <= 12:
+            continue
+        last_day = calendar.monthrange(year, month)[1]
+        records.append({"date": f"{year:04d}-{month:02d}-{last_day:02d}", "value": v})
 
     if not records:
         raise validation.StructuralChangeError(
@@ -1485,4 +1502,43 @@ def fetch_migration_departures() -> tuple[list[dict], dict]:
         "indexId 2929753.",
         measure_id="23", dic_ids="67,749,76,576",
         terms="741880,741917,39360,741935",
+    )
+
+
+def fetch_labor_productivity() -> tuple[list[dict], dict]:
+    """Labor productivity, national, annual, KZT per employed person. Taldau
+    indexId 4023003 (code 111216, "производительность труда"), the only hit
+    for a keyword search on that exact phrase. Verified live 2026-08-31 with
+    the default single-dimension (region-only) params -- no browser-based
+    parameter cracking needed for this one, unlike most other Taldau
+    indicators connected this session. 26 annual values (2000-2025), rising
+    from 395,200 to 14,791,000 KZT/worker -- plausible order of magnitude
+    against GDP_NOMINAL (~99.7 trillion KZT in 2025) divided by Kazakhstan's
+    roughly 9 million employed persons (~11.1 million KZT/worker), close
+    enough to the actual figure given this uses a different underlying
+    formula (likely gross value added per worker, not GDP per worker) --
+    not cross-checked to the decimal, just confirmed to be the right order
+    of magnitude rather than a wildly wrong unit or scale.
+
+    A related search for "индекс цен на жилье" (housing price index) also
+    found a single candidate (indexId 703083, code 261605, "Индексы цен на
+    рынке жилья") -- classified across 3 dictionaries, params recovered via
+    the live ExtJS tree (measure_id=7, dicIds=67,848,2817,
+    terms=741880,2695732,18120823, quarterly period_id=5) and confirmed to
+    return real data (35 quarterly points), but NOT implemented: the
+    source's OWN displayed period list ends at Q4 2020 -- this series is
+    discontinued/stale on BNS's own site, not a fetcher problem, and adding
+    a 5+ year stale series didn't meet this project's bar for current data.
+    Investigating this quarterly index did surface and fix a real latent bug
+    in _fetch_taldau_annual_index, though: it always stamped records at
+    year-end (Dec 31) regardless of the response's own month, which would
+    have silently collapsed 4 quarters into duplicate December 31 dates for
+    any future quarterly index -- fixed by parsing the actual month out of
+    the response's 'yMMYYYY' keys instead of assuming year-end, with zero
+    behavior change for already-shipped annual indicators (re-verified live
+    against GDP_REAL after the change)."""
+    return _fetch_taldau_annual_index(
+        "4023003", "LABOR_PRODUCTIVITY",
+        note="Labor productivity, national, KZT per employed person, annual. Taldau indexId "
+        "4023003.",
     )

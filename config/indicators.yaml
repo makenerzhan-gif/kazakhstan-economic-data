@@ -1247,6 +1247,15 @@ indicators:
     category: demographic
     source_status: confirmed
 
+  - id: LABOR_PRODUCTIVITY
+    name_ru: "Производительность труда"
+    name_en: "Labor Productivity"
+    agency: bns
+    frequency: annual
+    unit: "KZT per employed person"
+    category: labor
+    source_status: confirmed
+
   - id: GOV_WAGES_EXPENDITURE
     name_ru: "Расходы республиканского бюджета на заработную плату"
     name_en: "Republican Budget Wages Expenditure"

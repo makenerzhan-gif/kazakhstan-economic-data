@@ -1,0 +1,18 @@
+{
+  "downloaded_at": "2026-08-31T12:01:37.402462",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "703083",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "703083",
+    "p_keyword": "",
+    "p_period_id": "5",
+    "p_measure_id": "7",
+    "p_term_id": "741880",
+    "p_terms": "741880,2695732,18120823",
+    "p_dicIds": "67,848,2817",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}

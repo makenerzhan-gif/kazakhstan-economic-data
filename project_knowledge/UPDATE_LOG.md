@@ -950,3 +950,29 @@ consistent with Kazakhstan's well-documented post-Soviet emigration wave -- reve
 inflow by 2025 (23,761 arrivals vs 7,608 departures).
 
 **168/168 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — twenty-fourth scale-up batch: 168 -> 169 indicators (a latent date bug fixed pre-emptively)
+Continued the BNS/Taldau research from the previous batch. Checked several candidate gaps via
+keyword search: non-resource ("несырьевой") export share/value (found, but data stops at 2019
+-- stale, not pursued), a narrow ICT-hiring-difficulty survey metric (not a general labor-market
+indicator, skipped), and a manufacturing export/import combined index (needs multi-dimensional
+classification, not pursued this batch).
+
+**BNS (1):** LABOR_PRODUCTIVITY (code 111216) -- worked with the default single-dimension
+params, unusual for Taldau indicators this session (most need live-ExtJS-tree parameter
+recovery). 26 fresh annual values through 2025.
+
+**A real latent bug found and fixed while investigating, before it could ship wrong data:**
+found a housing price index (code 261605, "Индексы цен на рынке жилья") that turned out to be
+QUARTERLY (period_id=5), not annual like every other Taldau indicator connected so far. Testing
+it exposed that `_fetch_taldau_annual_index`'s date-stamping always assumed year-end (Dec 31)
+regardless of what period the response's own data keys actually represented -- for a quarterly
+index this would have silently collapsed all 4 quarters of a year into duplicate December-31
+records, corrupting the series. Decided NOT to add the housing index itself (its own displayed
+period range on BNS's site ends at Q4 2020 -- discontinued/stale, not a fetcher problem), but
+fixed the underlying bug anyway since it would bite the next quarterly index someone connects:
+the response's 'yMMYYYY' keys already carry the true month, so the fix parses that directly
+into a proper quarter-end (or year-end) date instead of assuming year-end. Re-verified live
+against GDP_REAL to confirm zero behavior change for every already-shipped annual indicator.
+
+**169/169 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

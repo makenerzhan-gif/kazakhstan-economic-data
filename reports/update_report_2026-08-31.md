@@ -1,6 +1,6 @@
 # Update report — 2026-08-31
 
-Run timestamp: 2026-08-31T11:19:36.080750
+Run timestamp: 2026-08-31T12:03:56.425073
 Unified dataset updated: True
 Tests passed: True
 
@@ -170,6 +170,7 @@ Tests passed: True
 - **bns/MIGRATION_ARRIVALS** — fetch+validate+process: ok (downloaded=26, processed=26)
   - warning: Unexpected jump of 57.8% between 2021-12-31 (11039.0) and 2022-12-31 (17425.0).
 - **bns/MIGRATION_DEPARTURES** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/LABOR_PRODUCTIVITY** — fetch+validate+process: ok (downloaded=26, processed=26)
 - **nbk/BASE_RATE** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Gap of 49 days between 2024-10-14 and 2024-12-02 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2024-12-02 and 2025-01-20 is outside expected range for frequency=daily (1-4d).
