@@ -1254,6 +1254,226 @@ agencies:
           2026-08-31. Same form/discovery as DEMAND_DIFFUSION_INDEX -- indicator_code='Demand
           expectations - Diffusion index' instead. 86 quarterly points, 2005-Q2 through
           2026-Q3. fetch_demand_expectations_diffusion_index.
+      LOAN_RATE_ACCEPTABLE_KZT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=347"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=347. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Acceptable interest rate of loans in tenge'. Verified live with full
+          pagination: 42 quarterly points, 2016-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      LOAN_RATE_ACCEPTABLE_FX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=347"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=347. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Acceptable interest rate of loans in foreign currency'. Verified live with full
+          pagination: 42 quarterly points, 2016-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      LOAN_TERM_ACCEPTABLE_KZT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=347"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=347. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Acceptable term of loans in tenge'. Verified live with full
+          pagination: 42 quarterly points, 2016-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      LOAN_TERM_ACCEPTABLE_FX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=347"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=347. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Acceptable term of loans in foreign currency'. Verified live with full
+          pagination: 42 quarterly points, 2016-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      INVENTORIES_DIFFUSION_INDEX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=362"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=362. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Inventories - Diffusion index'. Verified live with full
+          pagination: 42 quarterly points, 2016-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=362"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=362. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Inventories expectations - Diffusion index'. Verified live with full
+          pagination: 42 quarterly points, 2016-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      IMPORT_PRICE_DIFFUSION_INDEX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=363"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=363. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Price of imported goods - Diffusion index'. Verified live with full
+          pagination: 42 quarterly points, 2016-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=363"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=363. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Price expectations for imported goods - Diffusion index'. Verified live with full
+          pagination: 42 quarterly points, 2016-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      RAW_MATERIALS_PRICE_DIFFUSION_INDEX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=364"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=364. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Price for raw materials - Diffusion index'. Verified live with full
+          pagination: 86 quarterly points, 2005-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=364"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=364. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Price for raw materials expectations - Diffusion index'. Verified live with full
+          pagination: 86 quarterly points, 2005-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      CAPACITY_UTILIZATION:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=369"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=369. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Capacity utilization - Weighted Average'. Verified live with full
+          pagination: 42 quarterly points, 2016-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      FINISHED_GOODS_PRICE_DIFFUSION_INDEX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=387"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=387. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Price for finished goods - Diffusion index'. Verified live with full
+          pagination: 86 quarterly points, 2005-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=387"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=387. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Price for finished goods expectations - Diffusion index'. Verified live with full
+          pagination: 86 quarterly points, 2005-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      OVERDUE_ACCOUNTS_PAYABLE_SHARE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=378"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=378. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Overdue accounts payable'. Verified live with full
+          pagination: 42 quarterly points, 2016-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      OVERDUE_ACCOUNTS_RECEIVABLE_SHARE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=378"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=378. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Overdue accounts receivable'. Verified live with full
+          pagination: 42 quarterly points, 2016-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      OVERDUE_BANK_LOANS_SHARE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=378"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=378. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Overdue debt on bank loans'. Verified live with full
+          pagination: 42 quarterly points, 2016-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      ENTERPRISE_DEBT_BURDEN:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=392"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=392. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Average debt burden'. Verified live with full
+          pagination: 26 quarterly points, 2020-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      EXPORTERS_SHARE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=368"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=368. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Foreign Economic Activity - export'. Verified live with full
+          pagination: 26 quarterly points, 2020-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      IMPORTERS_SHARE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=368"
+        format: json
+        notes: >
+          2026-08-31. NBK "Survey Results" -> "Enterprise Monitoring", formId=368. Matched
+          on industry='All sectors' (the source's own economy-wide aggregate row, not computed
+          by us) + indicator_code='Foreign Economic Activity - import'. Verified live with full
+          pagination: 26 quarterly points, 2020-Q2 through 2026-Q3, zero duplicate dates, and the point count checked to EXACTLY
+          equal the number of calendar quarters in the range -- i.e. a genuinely regular
+          quarterly series with no gaps.
+      AVERAGE_WAGE_DIFFUSION_INDEX (declined):
+        status: declined
+        notes: >
+          2026-08-31. Investigated formId=360 "Change in average wage" alongside the other
+          Enterprise Monitoring forms. DECLINED: despite every row being labeled
+          period='quarter', the actual report_date values are SEMI-ANNUAL -- the actual series
+          runs 2016-04, 2016-10, 2017-04, 2017-10, ... and the expectations series runs Jan/Jul
+          -- switching to consecutive quarters only in 2026 (2026-04, 2026-07). Publishing a
+          mid-series frequency change as "quarterly" would mislabel the data, and the pipeline
+          has no honest single frequency for it, so it is left unconnected. Found by printing
+          the full date list rather than trusting the row's own period label.
       RESERVES_GUIDOTTI_RATIO (declined):
         status: declined
         notes: >

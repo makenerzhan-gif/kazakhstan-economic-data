@@ -1150,3 +1150,40 @@ since only a full run refreshes every agency's data.
 **186/186 confirmed indicators connected end-to-end** (43/43 NBK re-verified live this
 run; other agencies unchanged since the 182/182 full run earlier today).
 `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — thirty-first scale-up batch: 186 -> 205 indicators (rest of Enterprise Monitoring)
+Swept the remaining NBK Enterprise Monitoring forms in one pass, probing ten forms
+concurrently rather than one at a time. Every series below reuses the same
+`_fetch_enterprise_survey_index` helper (industry='All sectors' + indicator_code) added
+last batch, so this was 19 new indicators with no new fetching logic.
+
+**Verification tightened.** For each candidate the point count was checked to EXACTLY
+equal the number of calendar quarters in its own date range (42 for 2016-Q2..2026-Q3, 86
+for 2005-Q2..2026-Q3, 26 for 2020-Q2..2026-Q3) — a stronger check than "no duplicate
+dates", which would pass a series with gaps.
+
+**NBK (19):**
+- Prices/inflation pressure: RAW_MATERIALS_PRICE_* and FINISHED_GOODS_PRICE_* (actual +
+  expectations, 86 quarters back to 2005-Q2) — cost-push and output-price gauges;
+  FINISHED_GOODS_PRICE_EXPECTATIONS is the firm-side counterpart to the household-side
+  INFLATION_EXPECTATIONS. IMPORT_PRICE_* (actual + expectations) for imported inflation.
+- Activity: CAPACITY_UTILIZATION (weighted-average % of capacity in use — a standard
+  output-gap/slack measure), INVENTORIES_* (actual + expectations).
+- Credit conditions: LOAN_RATE_ACCEPTABLE_KZT/FX and LOAN_TERM_ACCEPTABLE_KZT/FX — the
+  rate and maturity enterprises report as acceptable for borrowing (a willingness
+  measure, to be read against the actual LENDING_RATE, not as a market rate).
+- Corporate stress: OVERDUE_ACCOUNTS_PAYABLE_SHARE, OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,
+  OVERDUE_BANK_LOANS_SHARE (the survey-side counterpart to the banking sector's
+  NPL_RATIO), ENTERPRISE_DEBT_BURDEN.
+- Trade participation: EXPORTERS_SHARE, IMPORTERS_SHARE.
+
+**Declined (1):** formId=360 "Change in average wage" — every row is labeled
+`period='quarter'`, but printing the actual dates showed the series is SEMI-ANNUAL
+(Apr/Oct for actual, Jan/Jul for expectations), switching to consecutive quarters only in
+2026. Labeling a mid-series frequency change as "quarterly" would mislabel the data, and
+there is no single honest frequency for it, so it is left unconnected. Caught by not
+trusting the row's own `period` field.
+
+**205/205 confirmed indicators connected end-to-end** (62/62 NBK re-verified live via
+`scripts/update_agency.py nbk` in 4m01s; unified dataset confirmed to still carry all 205
+across imf/nbk/bns/minfin). `pytest tests/ -q` — 29/29 passing.

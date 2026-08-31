@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=368",
+  "dataset_id": "formId=368,industry=All sectors,indicator_code=Foreign Economic Activity - export",
+  "indicator_id": "EXPORTERS_SHARE",
+  "indicator_name": "Share of Exporting Enterprises (NBK Enterprise Survey)",
+  "description": "Доля предприятий-экспортёров (опрос предприятий НБ РК)",
+  "frequency": "quarterly",
+  "unit": "percent of respondents",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Percent, share of surveyed respondents. NBK enterprise monitoring survey, economy-wide ('All sectors'): share of enterprises engaged in EXPORT activity only (the survey reports export-only, import-only, both, and neither as four separate shares).",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2020-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

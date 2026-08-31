@@ -1319,6 +1319,177 @@ indicators:
     category: monetary
     source_status: confirmed
 
+  - id: LOAN_RATE_ACCEPTABLE_KZT
+    name_ru: "Приемлемая ставка по кредитам в тенге (опрос предприятий НБ РК)"
+    name_en: "Acceptable Interest Rate on Tenge Loans (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "percent per annum"
+    category: monetary
+    source_status: confirmed
+
+  - id: LOAN_RATE_ACCEPTABLE_FX
+    name_ru: "Приемлемая ставка по кредитам в инвалюте (опрос предприятий НБ РК)"
+    name_en: "Acceptable Interest Rate on FX Loans (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "percent per annum"
+    category: monetary
+    source_status: confirmed
+
+  - id: LOAN_TERM_ACCEPTABLE_KZT
+    name_ru: "Приемлемый срок кредитов в тенге (опрос предприятий НБ РК)"
+    name_en: "Acceptable Term of Tenge Loans (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "months"
+    category: monetary
+    source_status: confirmed
+
+  - id: LOAN_TERM_ACCEPTABLE_FX
+    name_ru: "Приемлемый срок кредитов в инвалюте (опрос предприятий НБ РК)"
+    name_en: "Acceptable Term of FX Loans (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "months"
+    category: monetary
+    source_status: confirmed
+
+  - id: INVENTORIES_DIFFUSION_INDEX
+    name_ru: "Индекс диффузии запасов готовой продукции (опрос предприятий НБ РК)"
+    name_en: "Inventories Diffusion Index (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50=neutral)"
+    category: monetary
+    source_status: confirmed
+
+  - id: INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX
+    name_ru: "Индекс диффузии ожиданий запасов (опрос предприятий НБ РК)"
+    name_en: "Inventories Expectations Diffusion Index (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50=neutral)"
+    category: monetary
+    source_status: confirmed
+
+  - id: IMPORT_PRICE_DIFFUSION_INDEX
+    name_ru: "Индекс диффузии цен на импортные товары (опрос предприятий НБ РК)"
+    name_en: "Imported Goods Price Diffusion Index (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50=neutral)"
+    category: monetary
+    source_status: confirmed
+
+  - id: IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX
+    name_ru: "Индекс диффузии ожиданий цен на импортные товары (опрос предприятий НБ РК)"
+    name_en: "Imported Goods Price Expectations Diffusion Index (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50=neutral)"
+    category: monetary
+    source_status: confirmed
+
+  - id: RAW_MATERIALS_PRICE_DIFFUSION_INDEX
+    name_ru: "Индекс диффузии цен на сырьё и материалы (опрос предприятий НБ РК)"
+    name_en: "Raw Materials Price Diffusion Index (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50=neutral)"
+    category: monetary
+    source_status: confirmed
+
+  - id: RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX
+    name_ru: "Индекс диффузии ожиданий цен на сырьё и материалы (опрос предприятий НБ РК)"
+    name_en: "Raw Materials Price Expectations Diffusion Index (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50=neutral)"
+    category: monetary
+    source_status: confirmed
+
+  - id: CAPACITY_UTILIZATION
+    name_ru: "Уровень загрузки производственных мощностей (опрос предприятий НБ РК)"
+    name_en: "Capacity Utilization Level (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "percent"
+    category: monetary
+    source_status: confirmed
+
+  - id: FINISHED_GOODS_PRICE_DIFFUSION_INDEX
+    name_ru: "Индекс диффузии цен на готовую продукцию (опрос предприятий НБ РК)"
+    name_en: "Finished Goods Price Diffusion Index (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50=neutral)"
+    category: monetary
+    source_status: confirmed
+
+  - id: FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX
+    name_ru: "Индекс диффузии ожиданий цен на готовую продукцию (опрос предприятий НБ РК)"
+    name_en: "Finished Goods Price Expectations Diffusion Index (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50=neutral)"
+    category: monetary
+    source_status: confirmed
+
+  - id: OVERDUE_ACCOUNTS_PAYABLE_SHARE
+    name_ru: "Доля предприятий с просроченной кредиторской задолженностью"
+    name_en: "Share of Enterprises with Overdue Accounts Payable (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "percent of respondents"
+    category: monetary
+    source_status: confirmed
+
+  - id: OVERDUE_ACCOUNTS_RECEIVABLE_SHARE
+    name_ru: "Доля предприятий с просроченной дебиторской задолженностью"
+    name_en: "Share of Enterprises with Overdue Accounts Receivable (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "percent of respondents"
+    category: monetary
+    source_status: confirmed
+
+  - id: OVERDUE_BANK_LOANS_SHARE
+    name_ru: "Доля предприятий с просроченной задолженностью по банковским кредитам"
+    name_en: "Share of Enterprises with Overdue Bank Loan Debt (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "percent of respondents"
+    category: monetary
+    source_status: confirmed
+
+  - id: ENTERPRISE_DEBT_BURDEN
+    name_ru: "Средняя долговая нагрузка предприятий (опрос предприятий НБ РК)"
+    name_en: "Average Enterprise Debt Burden (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "percent"
+    category: monetary
+    source_status: confirmed
+
+  - id: EXPORTERS_SHARE
+    name_ru: "Доля предприятий-экспортёров (опрос предприятий НБ РК)"
+    name_en: "Share of Exporting Enterprises (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "percent of respondents"
+    category: monetary
+    source_status: confirmed
+
+  - id: IMPORTERS_SHARE
+    name_ru: "Доля предприятий-импортёров (опрос предприятий НБ РК)"
+    name_en: "Share of Importing Enterprises (NBK Enterprise Survey)"
+    agency: nbk
+    frequency: quarterly
+    unit: "percent of respondents"
+    category: monetary
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

@@ -1755,3 +1755,240 @@ def fetch_demand_expectations_diffusion_index() -> tuple[list[dict], dict]:
         "('All sectors') aggregate of enterprises' EXPECTED demand for their goods/services "
         "next quarter.",
     )
+
+
+# ---------------------------------------------------------------------------
+# Remaining NBK "Enterprise Monitoring" survey indicators, all found 2026-08-31
+# by probing the category's forms and reusing the same
+# `industry`='All sectors' + `indicator_code` match as the production/demand
+# indices above. Every series below was verified live with full pagination and
+# zero duplicate dates, and its point count was checked to EXACTLY equal the
+# number of calendar quarters in its own date range (42 for 2016-Q2..2026-Q3,
+# 86 for 2005-Q2..2026-Q3, 26 for 2020-Q2..2026-Q3) -- i.e. genuinely regular
+# quarterly series with no gaps, not merely "no duplicates".
+#
+# Note these are not all diffusion indices: formId=347 reports averages in
+# percent/months, 369 a weighted-average percent, 378/368 shares of
+# respondents in percent, and 392 a weighted-average percent. Units are stated
+# per indicator in config/indicators.yaml and in each note below.
+#
+# formId=360 "Change in average wage" was investigated and DECLINED: despite
+# every row being labeled `period`='quarter', the actual reporting dates are
+# SEMI-ANNUAL (2016-04, 2016-10, 2017-04, 2017-10, ... for the actual series;
+# Jan/Jul for the expectations series), switching to consecutive quarters only
+# in 2026. Publishing a mid-series frequency change as "quarterly" would be
+# wrong, so it is left unconnected rather than mislabeled.
+# ---------------------------------------------------------------------------
+def fetch_loan_rate_acceptable_kzt() -> tuple[list[dict], dict]:
+    """Interest rate on tenge loans that surveyed enterprises consider
+    acceptable, percent per annum, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "347", "Acceptable interest rate of loans in tenge", "LOAN_RATE_ACCEPTABLE_KZT",
+        "Percent per annum, average across respondents. NBK enterprise monitoring survey, "
+        "economy-wide ('All sectors'): the interest rate on TENGE loans that surveyed "
+        "enterprises report as acceptable for borrowing. A survey-reported willingness "
+        "measure, not a market rate -- compare against LENDING_RATE for the actual rate.",
+    )
+
+
+def fetch_loan_rate_acceptable_fx() -> tuple[list[dict], dict]:
+    """Interest rate on foreign-currency loans that surveyed enterprises
+    consider acceptable, percent per annum, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "347", "Acceptable interest rate of loans in foreign currency", "LOAN_RATE_ACCEPTABLE_FX",
+        "Percent per annum, average across respondents. NBK enterprise monitoring survey, "
+        "economy-wide ('All sectors'): the interest rate on FOREIGN-CURRENCY loans that "
+        "surveyed enterprises report as acceptable for borrowing. A survey-reported "
+        "willingness measure, not a market rate.",
+    )
+
+
+def fetch_loan_term_acceptable_kzt() -> tuple[list[dict], dict]:
+    """Loan term on tenge loans that surveyed enterprises consider
+    acceptable, months, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "347", "Acceptable term of loans in tenge", "LOAN_TERM_ACCEPTABLE_KZT",
+        "Months, average across respondents. NBK enterprise monitoring survey, economy-wide "
+        "('All sectors'): the loan maturity on TENGE loans that surveyed enterprises report "
+        "as acceptable for borrowing.",
+    )
+
+
+def fetch_loan_term_acceptable_fx() -> tuple[list[dict], dict]:
+    """Loan term on foreign-currency loans that surveyed enterprises consider
+    acceptable, months, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "347", "Acceptable term of loans in foreign currency", "LOAN_TERM_ACCEPTABLE_FX",
+        "Months, average across respondents. NBK enterprise monitoring survey, economy-wide "
+        "('All sectors'): the loan maturity on FOREIGN-CURRENCY loans that surveyed "
+        "enterprises report as acceptable for borrowing.",
+    )
+
+
+def fetch_inventories_diffusion_index() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: economy-wide diffusion index of reported
+    inventory change, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "362", "Inventories - Diffusion index", "INVENTORIES_DIFFUSION_INDEX",
+        "Diffusion index (0-100, 50=neutral). NBK enterprise monitoring survey, economy-wide "
+        "('All sectors') aggregate of enterprises' reported change in inventories over the "
+        "quarter.",
+    )
+
+
+def fetch_inventories_expectations_diffusion_index() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: economy-wide diffusion index of expected
+    inventory change next quarter."""
+    return _fetch_enterprise_survey_index(
+        "362", "Inventories expectations - Diffusion index", "INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX",
+        "Diffusion index (0-100, 50=neutral). NBK enterprise monitoring survey, economy-wide "
+        "('All sectors') aggregate of enterprises' EXPECTED change in inventories next "
+        "quarter.",
+    )
+
+
+def fetch_import_price_diffusion_index() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: economy-wide diffusion index of reported
+    imported-goods price change, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "363", "Price of imported goods - Diffusion index", "IMPORT_PRICE_DIFFUSION_INDEX",
+        "Diffusion index (0-100, 50=neutral). NBK enterprise monitoring survey, economy-wide "
+        "('All sectors') aggregate of enterprises' reported change in the price of IMPORTED "
+        "goods over the quarter -- an imported-inflation pressure gauge.",
+    )
+
+
+def fetch_import_price_expectations_diffusion_index() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: economy-wide diffusion index of expected
+    imported-goods price change next quarter."""
+    return _fetch_enterprise_survey_index(
+        "363", "Price expectations for imported goods - Diffusion index",
+        "IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX",
+        "Diffusion index (0-100, 50=neutral). NBK enterprise monitoring survey, economy-wide "
+        "('All sectors') aggregate of enterprises' EXPECTED change in the price of IMPORTED "
+        "goods next quarter.",
+    )
+
+
+def fetch_raw_materials_price_diffusion_index() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: economy-wide diffusion index of reported raw
+    materials price change, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "364", "Price for raw materials - Diffusion index", "RAW_MATERIALS_PRICE_DIFFUSION_INDEX",
+        "Diffusion index (0-100, 50=neutral). NBK enterprise monitoring survey, economy-wide "
+        "('All sectors') aggregate of enterprises' reported change in raw materials prices "
+        "over the quarter -- a cost-push inflation gauge. History back to 2005-Q2.",
+    )
+
+
+def fetch_raw_materials_price_expectations_diffusion_index() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: economy-wide diffusion index of expected raw
+    materials price change next quarter."""
+    return _fetch_enterprise_survey_index(
+        "364", "Price for raw materials expectations - Diffusion index",
+        "RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX",
+        "Diffusion index (0-100, 50=neutral). NBK enterprise monitoring survey, economy-wide "
+        "('All sectors') aggregate of enterprises' EXPECTED change in raw materials prices "
+        "next quarter. History back to 2005-Q2.",
+    )
+
+
+def fetch_capacity_utilization() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: economy-wide capacity utilization level,
+    percent, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "369", "Capacity utilization - Weighted Average", "CAPACITY_UTILIZATION",
+        "Percent, weighted average across respondents. NBK enterprise monitoring survey, "
+        "economy-wide ('All sectors') level of production capacity actually in use -- a "
+        "standard output-gap/slack indicator.",
+    )
+
+
+def fetch_finished_goods_price_diffusion_index() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: economy-wide diffusion index of reported
+    finished-goods price change, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "387", "Price for finished goods - Diffusion index", "FINISHED_GOODS_PRICE_DIFFUSION_INDEX",
+        "Diffusion index (0-100, 50=neutral). NBK enterprise monitoring survey, economy-wide "
+        "('All sectors') aggregate of enterprises' reported change in their own FINISHED "
+        "GOODS prices over the quarter -- an output-price/pass-through inflation gauge. "
+        "History back to 2005-Q2.",
+    )
+
+
+def fetch_finished_goods_price_expectations_diffusion_index() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: economy-wide diffusion index of expected
+    finished-goods price change next quarter."""
+    return _fetch_enterprise_survey_index(
+        "387", "Price for finished goods expectations - Diffusion index",
+        "FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX",
+        "Diffusion index (0-100, 50=neutral). NBK enterprise monitoring survey, economy-wide "
+        "('All sectors') aggregate of enterprises' EXPECTED change in their own FINISHED "
+        "GOODS prices next quarter -- a firm-side inflation-expectations gauge, complementing "
+        "the household-side INFLATION_EXPECTATIONS. History back to 2005-Q2.",
+    )
+
+
+def fetch_overdue_accounts_payable_share() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: share of enterprises reporting overdue accounts
+    payable, percent, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "378", "Overdue accounts payable", "OVERDUE_ACCOUNTS_PAYABLE_SHARE",
+        "Percent, share of surveyed respondents. NBK enterprise monitoring survey, economy-wide "
+        "('All sectors'): share of enterprises reporting OVERDUE ACCOUNTS PAYABLE -- a "
+        "corporate-distress indicator.",
+    )
+
+
+def fetch_overdue_accounts_receivable_share() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: share of enterprises reporting overdue accounts
+    receivable, percent, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "378", "Overdue accounts receivable", "OVERDUE_ACCOUNTS_RECEIVABLE_SHARE",
+        "Percent, share of surveyed respondents. NBK enterprise monitoring survey, economy-wide "
+        "('All sectors'): share of enterprises reporting OVERDUE ACCOUNTS RECEIVABLE -- a "
+        "payment-chain stress indicator.",
+    )
+
+
+def fetch_overdue_bank_loans_share() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: share of enterprises reporting overdue bank
+    loan debt, percent, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "378", "Overdue debt on bank loans", "OVERDUE_BANK_LOANS_SHARE",
+        "Percent, share of surveyed respondents. NBK enterprise monitoring survey, economy-wide "
+        "('All sectors'): share of enterprises reporting OVERDUE DEBT ON BANK LOANS -- the "
+        "survey-side counterpart to the banking sector's NPL_RATIO.",
+    )
+
+
+def fetch_enterprise_debt_burden() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: average share of revenue going to loan
+    payments, percent, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "392", "Average debt burden", "ENTERPRISE_DEBT_BURDEN",
+        "Percent, weighted average across respondents. NBK enterprise monitoring survey, "
+        "economy-wide ('All sectors'): share of enterprise revenue going to loan payments.",
+    )
+
+
+def fetch_exporters_share() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: share of enterprises engaged in export
+    activity, percent, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "368", "Foreign Economic Activity - export", "EXPORTERS_SHARE",
+        "Percent, share of surveyed respondents. NBK enterprise monitoring survey, economy-wide "
+        "('All sectors'): share of enterprises engaged in EXPORT activity only (the survey "
+        "reports export-only, import-only, both, and neither as four separate shares).",
+    )
+
+
+def fetch_importers_share() -> tuple[list[dict], dict]:
+    """NBK enterprise survey: share of enterprises engaged in import
+    activity, percent, quarterly."""
+    return _fetch_enterprise_survey_index(
+        "368", "Foreign Economic Activity - import", "IMPORTERS_SHARE",
+        "Percent, share of surveyed respondents. NBK enterprise monitoring survey, economy-wide "
+        "('All sectors'): share of enterprises engaged in IMPORT activity only (the survey "
+        "reports export-only, import-only, both, and neither as four separate shares).",
+    )

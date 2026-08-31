@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=347",
+  "dataset_id": "formId=347,industry=All sectors,indicator_code=Acceptable interest rate of loans in tenge",
+  "indicator_id": "LOAN_RATE_ACCEPTABLE_KZT",
+  "indicator_name": "Acceptable Interest Rate on Tenge Loans (NBK Enterprise Survey)",
+  "description": "Приемлемая ставка по кредитам в тенге (опрос предприятий НБ РК)",
+  "frequency": "quarterly",
+  "unit": "percent per annum",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Percent per annum, average across respondents. NBK enterprise monitoring survey, economy-wide ('All sectors'): the interest rate on TENGE loans that surveyed enterprises report as acceptable for borrowing. A survey-reported willingness measure, not a market rate -- compare against LENDING_RATE for the actual rate.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2016-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

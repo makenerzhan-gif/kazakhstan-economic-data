@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=387",
+  "dataset_id": "formId=387,industry=All sectors,indicator_code=Price for finished goods expectations - Diffusion index",
+  "indicator_id": "FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX",
+  "indicator_name": "Finished Goods Price Expectations Diffusion Index (NBK Enterprise Survey)",
+  "description": "Индекс диффузии ожиданий цен на готовую продукцию (опрос предприятий НБ РК)",
+  "frequency": "quarterly",
+  "unit": "diffusion index (0-100, 50=neutral)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Diffusion index (0-100, 50=neutral). NBK enterprise monitoring survey, economy-wide ('All sectors') aggregate of enterprises' EXPECTED change in their own FINISHED GOODS prices next quarter -- a firm-side inflation-expectations gauge, complementing the household-side INFLATION_EXPECTATIONS. History back to 2005-Q2.",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2005-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
