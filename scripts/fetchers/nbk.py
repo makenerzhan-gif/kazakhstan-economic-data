@@ -1106,3 +1106,170 @@ def fetch_loans_to_economy() -> tuple[list[dict], dict]:
         "Financial Soundness Indicator, second-tier banks (deposit takers)."
     )
     return records, manifest
+
+
+# ---------------------------------------------------------------------------
+# FDI_NET_INFLOW: found 2026-08-31 via GET /api/v1/data/categories, category
+# "external sector" -> "balance of payments" -> formId=337 "Direct
+# investments according to the directional principle: flows for the
+# period" -- the standard IMF BPM6-style "directional principle" net FDI
+# flow series (as opposed to the many gross/asset-liability/by-country/by-
+# sector variants also present in this category, e.g. formIds 286-335,
+# 400-403 -- those give geographic/sectoral breakdowns of the same
+# underlying flows, not picked here). Row matched by the exact code
+# 'Direct investment in reporting economy (net inflow)' combined with
+# direction_code='Direct investment in Kazakhstan' (this exact code string
+# also appears once with direction_code=None, labeled 'Net direct
+# investment' -- a different, netted-against-outflow headline figure, not
+# used here to keep this indicator as the standard BPM6 "net inflow"
+# concept specifically). Verified live 2026-08-31 with full pagination: 85
+# quarterly points, 2005-Q2 through 2026-Q2, ranging from USD -2,495.6
+# million (2026-Q1, a net-disinvestment quarter) to several USD 4,000+
+# million quarters around 2008-2009 -- genuinely volatile, including
+# negative quarters, a real and expected pattern for BPM6 net FDI flows
+# (loan repayments/divestments can exceed new investment in a given
+# quarter), not a data error.
+# ---------------------------------------------------------------------------
+FDI_FORM_ID = "337"
+FDI_CODE = "Direct investment in reporting economy (net inflow)"
+FDI_DIRECTION = "Direct investment in Kazakhstan"
+
+
+def fetch_fdi_net_inflow() -> tuple[list[dict], dict]:
+    """Net foreign direct investment inflow to Kazakhstan, BPM6 directional
+    principle, USD million, quarterly. See FDI_FORM_ID module comment above
+    for how the row was disambiguated from several related FDI series in
+    the same form."""
+    all_rows: list[dict] = []
+    raw_pages: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                             params={"formId": FDI_FORM_ID, "page": str(page), "pageSize": "500"},
+                             timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        raw_pages.append(data)
+        all_rows.extend(data["rows"])
+        if len(all_rows) >= data["totalRows"]:
+            break
+        page += 1
+
+    raw_content = json.dumps(raw_pages, ensure_ascii=False).encode("utf-8")
+    today = date.today()
+    raw_store.save_raw_bytes(SOURCE, "FDI_NET_INFLOW", today, "json", raw_content)
+    raw_store.write_download_manifest(SOURCE, "FDI_NET_INFLOW", today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "source_url": MONETARY_AGGREGATES_URL, "form_id": FDI_FORM_ID,
+        "n_pages": len(raw_pages), "total_rows": raw_pages[0]["totalRows"],
+    })
+
+    matching = [r for r in all_rows if r.get("code") == FDI_CODE and r.get("direction_code") == FDI_DIRECTION]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/FDI_NET_INFLOW",
+                f"WHAT CHANGED: no rows found with code={FDI_CODE!r}, direction_code={FDI_DIRECTION!r} in formId={FDI_FORM_ID}",
+                "EXPECTED: the standard BPM6 net-inflow row",
+                "ACTUAL: zero matching rows",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={FDI_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+
+    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in matching]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "quarterly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={FDI_FORM_ID}",
+        "dataset_id": f"formId={FDI_FORM_ID},code={FDI_CODE},direction={FDI_DIRECTION}",
+        "note": "USD million. Net foreign direct investment inflow to Kazakhstan (BPM6 "
+                "directional principle) -- from the balance of payments financial account, "
+                "not the same concept as domestic fixed-capital investment (INVESTMENT).",
+    }
+    return records, manifest
+
+
+# ---------------------------------------------------------------------------
+# GOV_SECURITIES_MEUKAM: found 2026-08-31 via the same categories browse,
+# category "securities" -> formId=430 "Structure of national currency
+# denominated Government Securities in Circulation" -- the closest thing to
+# a "domestic government securities market" aggregate available (a
+# previously-noted gap: earlier research into formIds 16/17/430 concluded
+# "no aggregate found"). Re-checked live this session: formId=430 gives an
+# END-OF-PERIOD OUTSTANDING STOCK (not a flow, unlike formIds 16/17 which
+# are auction/secondary-market transaction VOLUMES) broken down by
+# instrument type (14 distinct sec_type values: МЕККАМ, МЕUКАМ, МЕОКАМ,
+# METIKAM, Municipal Government Securities, Notes of NBK, etc.) -- but,
+# confirmed by listing every sec_type value across the full series, there
+# is genuinely NO "Total" row provided by the source. Rather than fabricate
+# a total by summing components ourselves (inconsistent with this
+# project's practice of not computing aggregates the source agency doesn't
+# itself publish -- see POVERTY_HEADCOUNT's notes for the same principle
+# applied to a ratio), this connects only the single largest, most
+# economically meaningful component -- 'МЕUКАМ' (medium/long-term treasury
+# bonds), which alone is ~22.4 trillion KZT as of 2026-08, an order of
+# magnitude larger than every other instrument type combined. Labeled
+# precisely as this one instrument, not as "total government securities
+# market", to avoid overstating what this actually measures. Verified live
+# 2026-08-31 with full pagination: 199 monthly points, 2010-02 through
+# 2026-08, all unique dates, million KZT.
+# ---------------------------------------------------------------------------
+GOV_SECURITIES_FORM_ID = "430"
+GOV_SECURITIES_MEUKAM_TYPE = "МЕUКАМ"
+
+
+def fetch_gov_securities_meukam() -> tuple[list[dict], dict]:
+    """MEUKAM (medium/long-term treasury bonds) outstanding, million KZT,
+    end of month. See GOV_SECURITIES_FORM_ID module comment above for why
+    this single instrument was picked over a fabricated cross-instrument
+    total."""
+    all_rows: list[dict] = []
+    raw_pages: list[dict] = []
+    page = 0
+    while True:
+        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                             params={"formId": GOV_SECURITIES_FORM_ID, "page": str(page), "pageSize": "500"},
+                             timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        raw_pages.append(data)
+        all_rows.extend(data["rows"])
+        if len(all_rows) >= data["totalRows"]:
+            break
+        page += 1
+
+    raw_content = json.dumps(raw_pages, ensure_ascii=False).encode("utf-8")
+    today = date.today()
+    raw_store.save_raw_bytes(SOURCE, "GOV_SECURITIES_MEUKAM", today, "json", raw_content)
+    raw_store.write_download_manifest(SOURCE, "GOV_SECURITIES_MEUKAM", today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "source_url": MONETARY_AGGREGATES_URL, "form_id": GOV_SECURITIES_FORM_ID,
+        "n_pages": len(raw_pages), "total_rows": raw_pages[0]["totalRows"],
+    })
+
+    matching = [r for r in all_rows if r.get("sec_type") == GOV_SECURITIES_MEUKAM_TYPE]
+    if not matching:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/GOV_SECURITIES_MEUKAM",
+                f"WHAT CHANGED: no rows found with sec_type={GOV_SECURITIES_MEUKAM_TYPE!r} in formId={GOV_SECURITIES_FORM_ID}",
+                "EXPECTED: the МЕUКАМ instrument-type row",
+                "ACTUAL: zero matching rows",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={GOV_SECURITIES_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+
+    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in matching]
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={GOV_SECURITIES_FORM_ID}",
+        "dataset_id": f"formId={GOV_SECURITIES_FORM_ID},sec_type={GOV_SECURITIES_MEUKAM_TYPE}",
+        "note": "Million KZT, end of month. МЕUКАМ (medium/long-term treasury bonds) outstanding "
+                "-- the single largest domestic government securities instrument type, NOT a "
+                "total across all instrument types (the source publishes no such total; other "
+                "types include МЕККАМ, МЕОКАМ, METIKAM, Municipal Government Securities, Notes "
+                "of NBK -- the latter is a central-bank sterilization instrument, not strictly "
+                "a government security).",
+    }
+    return records, manifest

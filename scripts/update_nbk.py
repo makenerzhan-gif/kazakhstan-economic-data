@@ -44,6 +44,8 @@ FETCHERS = {
     "CAPITAL_ADEQUACY_RATIO": nbk_fetchers.fetch_capital_adequacy_ratio,
     "NPL_RATIO": nbk_fetchers.fetch_npl_ratio,
     "LOANS_TO_ECONOMY": nbk_fetchers.fetch_loans_to_economy,
+    "FDI_NET_INFLOW": nbk_fetchers.fetch_fdi_net_inflow,
+    "GOV_SECURITIES_MEUKAM": nbk_fetchers.fetch_gov_securities_meukam,
 }
 
 INDICATOR_IDS = [
@@ -55,6 +57,7 @@ INDICATOR_IDS = [
     "INFLATION_EXPECTATIONS", "BUSINESS_ACTIVITY_INDEX",
     "NON_CASH_PAYMENTS_SHARE", "CAPITAL_ADEQUACY_RATIO", "NPL_RATIO",
     "LOANS_TO_ECONOMY",
+    "FDI_NET_INFLOW", "GOV_SECURITIES_MEUKAM",
 ]
 
 

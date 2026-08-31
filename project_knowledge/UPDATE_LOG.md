@@ -976,3 +976,37 @@ into a proper quarter-end (or year-end) date instead of assuming year-end. Re-ve
 against GDP_REAL to confirm zero behavior change for every already-shipped annual indicator.
 
 **169/169 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-08-31 — twenty-fifth scale-up batch: 169 -> 171 indicators (closes two long-flagged gaps)
+Self-directed batch: checked the existing indicator set for FDI (foreign direct investment)
+coverage and confirmed a real gap -- only domestic fixed-capital INVESTMENT existed, no
+cross-border investment flow. Explored NBK's full category tree via GET
+/api/v1/data/categories (a much richer structure than any single form browsed before) and
+found both FDI and a genuine answer to the long-standing "no aggregate found in NBK forms
+16/17/430" government-securities gap.
+
+**A real scare, investigated and ruled out before it cost anything:** while designing the
+pagination for these two new fetchers, noticed page=0 and page=1 appeared to return byte-
+identical content in a quick small-pageSize test -- raising the alarming possibility that
+EVERY existing NBK indicator using the established page-loop pattern (M2, M3, FX_RESERVES,
+EXTERNAL_DEBT, etc.) might be silently missing its most recent data, since a full-page
+duplicate would make the loop's "stop when we've fetched totalRows" check trigger too early.
+Verified properly at production pageSize (500) before concluding anything: page=0 and page=1
+are NOT duplicates at real page size -- adjacent pages simply share one overlapping boundary
+row (harmless), and the small-pageSize test that suggested otherwise was a coincidence of tiny
+sample size. No existing indicator was affected; this was confirmed, not assumed, before
+moving on.
+
+**NBK (2):**
+- FDI_NET_INFLOW -- net foreign direct investment inflow to Kazakhstan, BPM6 directional
+  principle, found in NBK's balance-of-payments category among ~20 sibling FDI series (gross/
+  net, by country, by sector); picked the standard aggregate over the breakdowns. 85 quarterly
+  points, 2005-2026, genuinely volatile including negative (net-disinvestment) quarters.
+- GOV_SECURITIES_MEUKAM -- re-investigated the government-securities gap and confirmed the
+  earlier "no aggregate" conclusion still holds (checked all 14 instrument-type values in the
+  source, genuinely no "Total" row) -- rather than fabricate a sum ourselves, connected only
+  the single largest component (МЕUКАМ, medium/long-term treasury bonds, ~22.4 trillion KZT,
+  an order of magnitude larger than everything else combined), labeled precisely as that one
+  instrument rather than overstated as "the market."
+
+**171/171 confirmed indicators connected end-to-end.** `pytest tests/ -q` — 29/29 passing.

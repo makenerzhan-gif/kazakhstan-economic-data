@@ -1166,6 +1166,24 @@ indicators:
     category: monetary
     source_status: confirmed
 
+  - id: FDI_NET_INFLOW
+    name_ru: "Чистый приток прямых иностранных инвестиций в Казахстан"
+    name_en: "Net Foreign Direct Investment Inflow to Kazakhstan"
+    agency: nbk
+    frequency: quarterly
+    unit: "million USD"
+    category: monetary
+    source_status: confirmed
+
+  - id: GOV_SECURITIES_MEUKAM
+    name_ru: "Объем МЕУКАМ в обращении"
+    name_en: "MEUKAM Government Bonds Outstanding"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

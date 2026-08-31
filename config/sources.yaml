@@ -1009,6 +1009,47 @@ agencies:
           own already-aggregated headline figure. Verified live: 18 rows, all unique dates,
           ~25.9-30.3 trillion KZT (2023-2024, after converting from the source's thousand-KZT
           unit to million KZT). fetch_loans_to_economy.
+      FDI_NET_INFLOW:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=337"
+        format: json
+        notes: >
+          2026-08-31. Found via GET /api/v1/data/categories -> "external sector" ->
+          "balance of payments" -> formId=337 "Direct investments according to the
+          directional principle: flows for the period" -- the standard IMF BPM6-style net FDI
+          flow series, picked over ~20 sibling forms in the same category that give
+          geographic/sectoral/gross-vs-net breakdowns of the same underlying concept (e.g.
+          formIds 286-335, 400-403). Row matched by exact code='Direct investment in reporting
+          economy (net inflow)' AND direction_code='Direct investment in Kazakhstan' -- that
+          same code string also appears once more with direction_code=None (labeled 'Net
+          direct investment', a netted-against-outflow headline figure), deliberately not used
+          here to keep this as the specific BPM6 "net inflow" concept. Verified live with full
+          pagination (proved the page=0/page=1 boundary behavior is a harmless 1-row overlap,
+          not a data-loss bug -- see the module comment in nbk.py for the verification): 85
+          quarterly points, 2005-Q2 through 2026-Q2, USD million, ranging down to -2,495.6
+          (2026-Q1, a net-disinvestment quarter) -- genuinely volatile including negative
+          quarters, expected for BPM6 net FDI flows. fetch_fdi_net_inflow.
+      GOV_SECURITIES_MEUKAM:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=430"
+        format: json
+        notes: >
+          2026-08-31. Found via GET /api/v1/data/categories -> "securities" -> formId=430
+          "Structure of national currency denominated Government Securities in Circulation".
+          Re-investigated a previously-noted gap ("no aggregate found in NBK forms 16/17/430")
+          -- confirmed this form gives an end-of-period OUTSTANDING STOCK (unlike formIds
+          16/17, which are auction/secondary-market transaction VOLUMES, a flow not a stock)
+          broken down by instrument type, but listed every one of the 14 distinct sec_type
+          values present across the full series and confirmed there is genuinely no "Total"
+          row -- NOT fabricated by summing components ourselves (consistent with this
+          project's practice of not computing aggregates the source doesn't itself publish;
+          see POVERTY_HEADCOUNT's notes for the same principle applied to a ratio). Instead
+          connects only the single largest component, sec_type='МЕUКАМ' (medium/long-term
+          treasury bonds, ~22.4 trillion KZT as of 2026-08, an order of magnitude larger than
+          every other instrument type combined) -- labeled precisely as this one instrument,
+          not as "total government securities market". Verified live with full pagination:
+          199 monthly points, 2010-02 through 2026-08, all unique dates, million KZT.
+          fetch_gov_securities_meukam.
       TONIA:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data/indicators"

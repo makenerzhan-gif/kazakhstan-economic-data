@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=337",
+  "dataset_id": "formId=337,code=Direct investment in reporting economy (net inflow),direction=Direct investment in Kazakhstan",
+  "indicator_id": "FDI_NET_INFLOW",
+  "indicator_name": "Net Foreign Direct Investment Inflow to Kazakhstan",
+  "description": "Чистый приток прямых иностранных инвестиций в Казахстан",
+  "frequency": "quarterly",
+  "unit": "million USD",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million. Net foreign direct investment inflow to Kazakhstan (BPM6 directional principle) -- from the balance of payments financial account, not the same concept as domestic fixed-capital investment (INVESTMENT).",
+  "publication_date": null,
+  "last_update_date": "2026-08-31",
+  "download_date": "2026-08-31",
+  "period_start": "2005-04-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
