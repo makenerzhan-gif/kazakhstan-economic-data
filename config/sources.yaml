@@ -2521,6 +2521,25 @@ agencies:
           their labels. Publishing from this form would mean guessing which label belongs to which
           value. Its sibling formId=485 was checked the same way and PASSED, so this is a defect in
           this specific form, not a misreading of the API.
+      NBK_FORM_COVERAGE (scope note):
+        status: out_of_scope
+        notes: >
+          2026-09-01. NBK form coverage is now fully enumerated rather than open-ended. The
+          API's own category tree (GET /api/v1/data/categories) lists 239 forms. 49 are
+          connected. The other 197 were all swept with the structural probe (group each
+          form's rows by full classification signature; keep only groups forming exactly one
+          row per report_date across >=90% of the form's dates). 106 of those do contain
+          clean series, but they are per-country / per-region / per-economic-activity /
+          per-company BREAKDOWNS, not headline indicators -- e.g. formId=436 (IIP by
+          countries) alone yields 2,064 clean series, 442 yields 1,380, 493 yields 1,343,
+          355 (external debt by countries) 936. Connecting them would add thousands of
+          granular series without adding an economic concept the dataset lacks: the headline
+          aggregate behind each was already taken from the corresponding top-level form
+          (IIP_*, EXTERNAL_DEBT_*, LOANS_*, FDI_*). DECIDED OUT OF SCOPE on 2026-09-01 after
+          review, deliberately, not for lack of a working method -- the probe results are
+          reproducible by re-running the sweep if a country/region cut is ever wanted.
+          Selection heuristic worth reusing: forms with FEW clean series (5-8) are the
+          top-level breakdowns; forms with hundreds are the granular tails.
       RESERVES_GUIDOTTI_RATIO (declined):
         status: declined
         notes: >

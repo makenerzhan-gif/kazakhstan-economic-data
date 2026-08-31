@@ -1445,3 +1445,20 @@ been silently published under the National Fund name.
 
 **280/280 confirmed indicators connected end-to-end** (126/126 NBK re-verified live in
 6m32s). `pytest tests/ -q` — 29/29 passing.
+
+### NBK form coverage closed out (scope decision, 2026-09-01)
+The NBK sweep is finished and the remaining surface is now *enumerated*, not unknown. Of
+the 239 forms in the API's category tree, **49 are connected**; all **197** others were
+probed. 106 of those do hold clean series, but every one is a per-country /
+per-region / per-activity / per-company breakdown — formId=436 (IIP by countries) alone
+yields 2,064 clean series, 442 yields 1,380, 493 yields 1,343, 355 yields 936. The
+headline aggregate behind each was already taken from the corresponding top-level form, so
+connecting them would add thousands of granular series without adding an economic concept
+the dataset lacks. **Reviewed and decided out of scope** — recorded in `config/sources.yaml`
+under `NBK_FORM_COVERAGE` so a later session does not re-run the sweep to rediscover it.
+The decision is reversible: re-running the probe reproduces the list if a country or region
+cut is ever wanted.
+
+Heuristic worth carrying forward: **forms with FEW clean series (5-8) are the top-level
+breakdowns; forms with hundreds are the granular tails.** That single ordering is what
+found the external-debt decomposition and the balance-of-payments comparative forms.
