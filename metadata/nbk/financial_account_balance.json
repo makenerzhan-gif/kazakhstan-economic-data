@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=485",
+  "dataset_id": "formId=485,account_type_code=financial,code=Financial account (excluding reserve assets),investment_type_code=financial,period=quarter,type=USD mln",
+  "indicator_id": "FINANCIAL_ACCOUNT_BALANCE",
+  "indicator_name": "Financial Account Balance (excluding reserve assets)",
+  "description": "Финансовый счёт платёжного баланса",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million. Balance of the FINANCIAL ACCOUNT of the balance of payments, excluding reserve assets -- the direct counterpart to CURRENT_ACCOUNT_BALANCE.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2005-04-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

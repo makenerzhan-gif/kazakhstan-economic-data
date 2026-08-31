@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=485",
+  "dataset_id": "formId=485,account_type_code=financial,code=Reserve assets and National Fund  in months of import of goods and services,investment_type_code=Reserve assets and National Fund,period=quarter,type=USD mln",
+  "indicator_id": "RESERVES_AND_NF_IMPORT_COVER",
+  "indicator_name": "Reserves plus National Fund, Import Cover",
+  "description": "Покрытие импорта резервами и Нацфондом",
+  "frequency": "quarterly",
+  "unit": "number of months",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Months of goods-and-services imports covered by reserve assets PLUS National Fund foreign assets. Broader than RESERVES_IMPORT_COVER, which counts NBK reserve assets only.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2005-04-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

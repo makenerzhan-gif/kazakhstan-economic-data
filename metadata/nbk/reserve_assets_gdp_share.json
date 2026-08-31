@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=485",
+  "dataset_id": "formId=485,account_type_code=financial,code=in % of GDP2,investment_type_code=Reserve assets NBK,period=quarter,type=USD mln",
+  "indicator_id": "RESERVE_ASSETS_GDP_SHARE",
+  "indicator_name": "NBK Reserve Assets, % of GDP",
+  "description": "Резервные активы НБ РК, % ВВП",
+  "frequency": "quarterly",
+  "unit": "% of GDP",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Percent of GDP. NBK reserve assets as a share of GDP.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2005-04-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

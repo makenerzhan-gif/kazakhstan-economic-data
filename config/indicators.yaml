@@ -2102,6 +2102,69 @@ indicators:
     category: monetary
     source_status: confirmed
 
+  - id: RESERVES_AND_NATIONAL_FUND
+    name_ru: "Резервы НБ РК и Нацфонда суммарно"
+    name_en: "International Reserves plus National Fund Assets"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: RESERVES_AND_NF_IMPORT_COVER
+    name_ru: "Покрытие импорта резервами и Нацфондом"
+    name_en: "Reserves plus National Fund, Import Cover"
+    agency: nbk
+    frequency: quarterly
+    unit: "number of months"
+    category: monetary
+    source_status: confirmed
+
+  - id: RESERVES_AND_NF_GDP_SHARE
+    name_ru: "Резервы и Нацфонд, % ВВП"
+    name_en: "Reserves plus National Fund, % of GDP"
+    agency: nbk
+    frequency: quarterly
+    unit: "% of GDP"
+    category: monetary
+    source_status: confirmed
+
+  - id: NATIONAL_FUND_GDP_SHARE
+    name_ru: "Активы Нацфонда, % ВВП"
+    name_en: "National Fund Foreign Assets, % of GDP"
+    agency: nbk
+    frequency: quarterly
+    unit: "% of GDP"
+    category: monetary
+    source_status: confirmed
+
+  - id: RESERVE_ASSETS_GDP_SHARE
+    name_ru: "Резервные активы НБ РК, % ВВП"
+    name_en: "NBK Reserve Assets, % of GDP"
+    agency: nbk
+    frequency: quarterly
+    unit: "% of GDP"
+    category: monetary
+    source_status: confirmed
+
+  - id: FINANCIAL_ACCOUNT_BALANCE
+    name_ru: "Финансовый счёт платёжного баланса"
+    name_en: "Financial Account Balance (excluding reserve assets)"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+
+  - id: BOP_OVERALL_BALANCE_GDP_SHARE
+    name_ru: "Общий баланс платёжного баланса, % ВВП"
+    name_en: "Balance of Payments Overall Balance, % of GDP"
+    agency: nbk
+    frequency: quarterly
+    unit: "% of GDP"
+    category: monetary
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

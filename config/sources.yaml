@@ -2418,6 +2418,109 @@ agencies:
           95,399.86), public + private (formId=350) sums exactly to the total, and the
           formId=351 instrument split also sums exactly to the total. 49 quarterly points,
           2014-Q2 to 2026-Q2. fetch_external_debt_due_within_year.
+      RESERVES_AND_NATIONAL_FUND:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=485"
+        format: json
+        notes: >
+          2026-09-01. formId=485 'Financial account of the balance of payments: absolute and
+          comparative indicators'. Pinned: account_type_code='financial', code='Reserve assets + Foreign assets of the National Fund,  end of period ', investment_type_code='Reserve assets and National Fund', period='quarter', type='USD mln'.
+          This form's row labels were VERIFIED to be correctly aligned before use, by two
+          independent exact matches against already-shipped indicators: its 'Reserve assets in
+          months of import' equals RESERVES_IMPORT_COVER exactly (9.752253) and its 'Reserve
+          assets, end of period' equals formId=469's reserve level exactly (66,786.22 mln USD).
+          That check mattered because the sibling formId=484 FAILED it (see the declined entry).
+          85 quarterly points, 2005-Q2 to 2026-Q2. fetch_reserves_and_national_fund.
+      RESERVES_AND_NF_IMPORT_COVER:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=485"
+        format: json
+        notes: >
+          2026-09-01. formId=485 'Financial account of the balance of payments: absolute and
+          comparative indicators'. Pinned: account_type_code='financial', code='Reserve assets and National Fund  in months of import of goods and services', investment_type_code='Reserve assets and National Fund', period='quarter', type='USD mln'.
+          This form's row labels were VERIFIED to be correctly aligned before use, by two
+          independent exact matches against already-shipped indicators: its 'Reserve assets in
+          months of import' equals RESERVES_IMPORT_COVER exactly (9.752253) and its 'Reserve
+          assets, end of period' equals formId=469's reserve level exactly (66,786.22 mln USD).
+          That check mattered because the sibling formId=484 FAILED it (see the declined entry).
+          85 quarterly points, 2005-Q2 to 2026-Q2. fetch_reserves_and_nf_import_cover.
+      RESERVES_AND_NF_GDP_SHARE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=485"
+        format: json
+        notes: >
+          2026-09-01. formId=485 'Financial account of the balance of payments: absolute and
+          comparative indicators'. Pinned: account_type_code='financial', code='in % of GDP2', investment_type_code='Reserve assets and National Fund', period='quarter', type='USD mln'.
+          This form's row labels were VERIFIED to be correctly aligned before use, by two
+          independent exact matches against already-shipped indicators: its 'Reserve assets in
+          months of import' equals RESERVES_IMPORT_COVER exactly (9.752253) and its 'Reserve
+          assets, end of period' equals formId=469's reserve level exactly (66,786.22 mln USD).
+          That check mattered because the sibling formId=484 FAILED it (see the declined entry).
+          85 quarterly points, 2005-Q2 to 2026-Q2. fetch_reserves_and_nf_gdp_share.
+      NATIONAL_FUND_GDP_SHARE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=485"
+        format: json
+        notes: >
+          2026-09-01. formId=485 'Financial account of the balance of payments: absolute and
+          comparative indicators'. Pinned: account_type_code='financial', code='in % of GDP2', investment_type_code='National Fund', period='quarter', type='USD mln'.
+          This form's row labels were VERIFIED to be correctly aligned before use, by two
+          independent exact matches against already-shipped indicators: its 'Reserve assets in
+          months of import' equals RESERVES_IMPORT_COVER exactly (9.752253) and its 'Reserve
+          assets, end of period' equals formId=469's reserve level exactly (66,786.22 mln USD).
+          That check mattered because the sibling formId=484 FAILED it (see the declined entry).
+          85 quarterly points, 2005-Q2 to 2026-Q2. fetch_national_fund_gdp_share.
+      RESERVE_ASSETS_GDP_SHARE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=485"
+        format: json
+        notes: >
+          2026-09-01. formId=485 'Financial account of the balance of payments: absolute and
+          comparative indicators'. Pinned: account_type_code='financial', code='in % of GDP2', investment_type_code='Reserve assets NBK', period='quarter', type='USD mln'.
+          This form's row labels were VERIFIED to be correctly aligned before use, by two
+          independent exact matches against already-shipped indicators: its 'Reserve assets in
+          months of import' equals RESERVES_IMPORT_COVER exactly (9.752253) and its 'Reserve
+          assets, end of period' equals formId=469's reserve level exactly (66,786.22 mln USD).
+          That check mattered because the sibling formId=484 FAILED it (see the declined entry).
+          85 quarterly points, 2005-Q2 to 2026-Q2. fetch_reserve_assets_gdp_share.
+      FINANCIAL_ACCOUNT_BALANCE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=485"
+        format: json
+        notes: >
+          2026-09-01. formId=485 'Financial account of the balance of payments: absolute and
+          comparative indicators'. Pinned: account_type_code='financial', code='Financial account (excluding reserve assets)', investment_type_code='financial', period='quarter', type='USD mln'.
+          This form's row labels were VERIFIED to be correctly aligned before use, by two
+          independent exact matches against already-shipped indicators: its 'Reserve assets in
+          months of import' equals RESERVES_IMPORT_COVER exactly (9.752253) and its 'Reserve
+          assets, end of period' equals formId=469's reserve level exactly (66,786.22 mln USD).
+          That check mattered because the sibling formId=484 FAILED it (see the declined entry).
+          85 quarterly points, 2005-Q2 to 2026-Q2. fetch_financial_account_balance.
+      BOP_OVERALL_BALANCE_GDP_SHARE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=485"
+        format: json
+        notes: >
+          2026-09-01. formId=485 'Financial account of the balance of payments: absolute and
+          comparative indicators'. Pinned: account_type_code='Overall balance', code='in % of GDP1', investment_type_code='Overall balance', period='quarter', type='USD mln'.
+          This form's row labels were VERIFIED to be correctly aligned before use, by two
+          independent exact matches against already-shipped indicators: its 'Reserve assets in
+          months of import' equals RESERVES_IMPORT_COVER exactly (9.752253) and its 'Reserve
+          assets, end of period' equals formId=469's reserve level exactly (66,786.22 mln USD).
+          That check mattered because the sibling formId=484 FAILED it (see the declined entry).
+          85 quarterly points, 2005-Q2 to 2026-Q2. fetch_bop_overall_balance_gdp_share.
+      CURRENT_ACCOUNT_COMPARATIVE_484 (declined):
+        status: declined
+        notes: >
+          2026-09-01. formId=484 'Current account of the balance of payments: absolute and
+          comparative indicators' looked attractive (85 quarterly points back to 2005, would have
+          given BoP-basis goods exports/imports and openness ratios). DECLINED: its `code` labels
+          do not line up with its values. The row labelled 'Import of goods and services' carries
+          32.64 while the row labelled 'in % of GDP1' for the same Debit/Goods-and-services cell
+          carries 18,511.96 -- i.e. the percent and the USD-million figures are swapped relative to
+          their labels. Publishing from this form would mean guessing which label belongs to which
+          value. Its sibling formId=485 was checked the same way and PASSED, so this is a defect in
+          this specific form, not a misreading of the API.
       RESERVES_GUIDOTTI_RATIO (declined):
         status: declined
         notes: >

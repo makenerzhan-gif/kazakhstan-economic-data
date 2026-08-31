@@ -2643,3 +2643,73 @@ def fetch_external_debt_due_within_year() -> tuple[list[dict], dict]:
         "USD million, end of quarter. External debt DUE FOR PAYMENT WITHIN ONE YEAR on a remaining-maturity basis -- short-term debt plus the current portion of long-term debt. This is the rollover-risk measure, and is larger than EXTERNAL_DEBT_SHORT_TERM, which is on an original-maturity basis.",
         "quarterly",
     )
+
+
+def fetch_reserves_and_national_fund() -> tuple[list[dict], dict]:
+    """International Reserves plus National Fund Assets (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "485", {'account_type_code': 'financial', 'code': 'Reserve assets + Foreign assets of the National Fund,  end of period ', 'investment_type_code': 'Reserve assets and National Fund', 'period': 'quarter', 'type': 'USD mln'},
+        "RESERVES_AND_NATIONAL_FUND",
+        "USD million, end of quarter. NBK reserve assets PLUS the foreign assets of the National Fund -- Kazakhstan's total external buffer. Held separately from FX_RESERVES (NBK reserves only, monthly) and NATIONAL_FUND_ASSETS (fund only, monthly); this is the combined figure on a balance-of-payments basis, with history back to 2005.",
+        "quarterly",
+    )
+
+
+def fetch_reserves_and_nf_import_cover() -> tuple[list[dict], dict]:
+    """Reserves plus National Fund, Import Cover (number of months, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "485", {'account_type_code': 'financial', 'code': 'Reserve assets and National Fund  in months of import of goods and services', 'investment_type_code': 'Reserve assets and National Fund', 'period': 'quarter', 'type': 'USD mln'},
+        "RESERVES_AND_NF_IMPORT_COVER",
+        "Months of goods-and-services imports covered by reserve assets PLUS National Fund foreign assets. Broader than RESERVES_IMPORT_COVER, which counts NBK reserve assets only.",
+        "quarterly",
+    )
+
+
+def fetch_reserves_and_nf_gdp_share() -> tuple[list[dict], dict]:
+    """Reserves plus National Fund, % of GDP (% of GDP, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "485", {'account_type_code': 'financial', 'code': 'in % of GDP2', 'investment_type_code': 'Reserve assets and National Fund', 'period': 'quarter', 'type': 'USD mln'},
+        "RESERVES_AND_NF_GDP_SHARE",
+        "Percent of GDP. Reserve assets plus National Fund foreign assets as a share of GDP.",
+        "quarterly",
+    )
+
+
+def fetch_national_fund_gdp_share() -> tuple[list[dict], dict]:
+    """National Fund Foreign Assets, % of GDP (% of GDP, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "485", {'account_type_code': 'financial', 'code': 'in % of GDP2', 'investment_type_code': 'National Fund', 'period': 'quarter', 'type': 'USD mln'},
+        "NATIONAL_FUND_GDP_SHARE",
+        "Percent of GDP. Foreign assets of the National Fund of Kazakhstan as a share of GDP.",
+        "quarterly",
+    )
+
+
+def fetch_reserve_assets_gdp_share() -> tuple[list[dict], dict]:
+    """NBK Reserve Assets, % of GDP (% of GDP, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "485", {'account_type_code': 'financial', 'code': 'in % of GDP2', 'investment_type_code': 'Reserve assets NBK', 'period': 'quarter', 'type': 'USD mln'},
+        "RESERVE_ASSETS_GDP_SHARE",
+        "Percent of GDP. NBK reserve assets as a share of GDP.",
+        "quarterly",
+    )
+
+
+def fetch_financial_account_balance() -> tuple[list[dict], dict]:
+    """Financial Account Balance (excluding reserve assets) (USD million, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "485", {'account_type_code': 'financial', 'code': 'Financial account (excluding reserve assets)', 'investment_type_code': 'financial', 'period': 'quarter', 'type': 'USD mln'},
+        "FINANCIAL_ACCOUNT_BALANCE",
+        "USD million. Balance of the FINANCIAL ACCOUNT of the balance of payments, excluding reserve assets -- the direct counterpart to CURRENT_ACCOUNT_BALANCE.",
+        "quarterly",
+    )
+
+
+def fetch_bop_overall_balance_gdp_share() -> tuple[list[dict], dict]:
+    """Balance of Payments Overall Balance, % of GDP (% of GDP, quarterly)."""
+    return _fetch_nbk_exact_row(
+        "485", {'account_type_code': 'Overall balance', 'code': 'in % of GDP1', 'investment_type_code': 'Overall balance', 'period': 'quarter', 'type': 'USD mln'},
+        "BOP_OVERALL_BALANCE_GDP_SHARE",
+        "Percent of GDP. OVERALL BALANCE of the balance of payments.",
+        "quarterly",
+    )

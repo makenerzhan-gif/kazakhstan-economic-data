@@ -137,6 +137,13 @@ FETCHERS = {
     "EXTERNAL_DEBT_SDR": nbk_fetchers.fetch_external_debt_sdr,
     "EXTERNAL_DEBT_OTHER_LIABILITIES": nbk_fetchers.fetch_external_debt_other_liabilities,
     "EXTERNAL_DEBT_DUE_WITHIN_YEAR": nbk_fetchers.fetch_external_debt_due_within_year,
+    "RESERVES_AND_NATIONAL_FUND": nbk_fetchers.fetch_reserves_and_national_fund,
+    "RESERVES_AND_NF_IMPORT_COVER": nbk_fetchers.fetch_reserves_and_nf_import_cover,
+    "RESERVES_AND_NF_GDP_SHARE": nbk_fetchers.fetch_reserves_and_nf_gdp_share,
+    "NATIONAL_FUND_GDP_SHARE": nbk_fetchers.fetch_national_fund_gdp_share,
+    "RESERVE_ASSETS_GDP_SHARE": nbk_fetchers.fetch_reserve_assets_gdp_share,
+    "FINANCIAL_ACCOUNT_BALANCE": nbk_fetchers.fetch_financial_account_balance,
+    "BOP_OVERALL_BALANCE_GDP_SHARE": nbk_fetchers.fetch_bop_overall_balance_gdp_share,
 }
 
 INDICATOR_IDS = [
@@ -231,6 +238,13 @@ INDICATOR_IDS = [
     "EXTERNAL_DEBT_SDR",
     "EXTERNAL_DEBT_OTHER_LIABILITIES",
     "EXTERNAL_DEBT_DUE_WITHIN_YEAR",
+    "RESERVES_AND_NATIONAL_FUND",
+    "RESERVES_AND_NF_IMPORT_COVER",
+    "RESERVES_AND_NF_GDP_SHARE",
+    "NATIONAL_FUND_GDP_SHARE",
+    "RESERVE_ASSETS_GDP_SHARE",
+    "FINANCIAL_ACCOUNT_BALANCE",
+    "BOP_OVERALL_BALANCE_GDP_SHARE",
 ]
 
 

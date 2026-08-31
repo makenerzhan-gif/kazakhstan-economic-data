@@ -1403,3 +1403,45 @@ Each difference came out to 0.0000, which is strong evidence the right rows were
 
 **273/273 confirmed indicators connected end-to-end** (119/119 NBK re-verified live in
 6m20s). `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — thirty-eighth batch: external buffers and the financial account (273 -> 280)
+Final probe sweep over the last 87 unused NBK forms, completing the enumeration of all 239
+forms in the API's category tree.
+
+**A label-alignment check that changed the outcome.** Two sibling forms looked equally
+attractive — 484 (current account, comparative) and 485 (financial account, comparative),
+both 85 quarterly points back to 2005. Before using either, their `code` labels were tested
+against values:
+- **485 PASSED** — two independent exact matches against already-shipped indicators: its
+  "Reserve assets in months of import" equals RESERVES_IMPORT_COVER to the digit
+  (9.752253), and its "Reserve assets, end of period" equals formId=469's reserve level
+  exactly (66,786.22 mln USD).
+- **484 FAILED** — its row labelled "Import of goods and services" carries 32.64 while the
+  row labelled "in % of GDP1" for the same Debit/Goods-and-services cell carries 18,511.96.
+  The percent and USD-million figures are swapped relative to their labels. Using it would
+  mean guessing which label belongs to which value, so it was declined and documented.
+
+That 485 passed the same test 484 failed is what makes this a source defect in 484 rather
+than a misreading of the API.
+
+**NBK (7), all 85 quarterly points from 2005-Q2:**
+- RESERVES_AND_NATIONAL_FUND (128.6 bn USD) — NBK reserve assets plus National Fund foreign
+  assets, Kazakhstan's total external buffer. Deliberately distinct from the existing
+  monthly FX_RESERVES (NBK only) and NATIONAL_FUND_ASSETS (fund only); the levels of those
+  two were NOT re-added from this form, only the combined figure and the ratios.
+- RESERVES_AND_NF_IMPORT_COVER (18.8 months) — broader than RESERVES_IMPORT_COVER (9.8
+  months), which counts NBK reserves only.
+- RESERVES_AND_NF_GDP_SHARE, NATIONAL_FUND_GDP_SHARE, RESERVE_ASSETS_GDP_SHARE.
+- FINANCIAL_ACCOUNT_BALANCE — the direct counterpart to CURRENT_ACCOUNT_BALANCE, which the
+  dataset had been missing.
+- BOP_OVERALL_BALANCE_GDP_SHARE.
+
+**A generator guard that caught a real ambiguity.** The fetchers' match dicts were pulled
+programmatically out of the probe results (rather than retyped) and asserted to reproduce
+the exact values seen. That assertion fired: selecting on investment type "National Fund"
+by substring also matched "Reserve assets and National Fund", so two different series
+qualified. Fixed by requiring an exact field match — the wrong series would otherwise have
+been silently published under the National Fund name.
+
+**280/280 confirmed indicators connected end-to-end** (126/126 NBK re-verified live in
+6m32s). `pytest tests/ -q` — 29/29 passing.

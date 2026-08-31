@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=485",
+  "dataset_id": "formId=485,account_type_code=Overall balance,code=in % of GDP1,investment_type_code=Overall balance,period=quarter,type=USD mln",
+  "indicator_id": "BOP_OVERALL_BALANCE_GDP_SHARE",
+  "indicator_name": "Balance of Payments Overall Balance, % of GDP",
+  "description": "Общий баланс платёжного баланса, % ВВП",
+  "frequency": "quarterly",
+  "unit": "% of GDP",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Percent of GDP. OVERALL BALANCE of the balance of payments.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2005-04-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
