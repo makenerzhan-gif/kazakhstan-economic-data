@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-4630524",
+  "indicator_id": "UNDER5_MORTALITY_RATE",
+  "indicator_name": "Under-Five Mortality Rate",
+  "description": "Коэффициент детской смертности до 5 лет",
+  "frequency": "annual",
+  "unit": "per 1000 live births",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Deaths of children under five per 1000 live births. Supersedes the older Taldau under-5 series (indexId 703852), which stops in 2012.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2013-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

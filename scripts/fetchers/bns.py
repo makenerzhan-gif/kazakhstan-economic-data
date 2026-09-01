@@ -1652,3 +1652,122 @@ def fetch_life_expectancy() -> tuple[list[dict], dict]:
         terms="741880,741917,741935",
         dic_ids="67,64,576",
     )
+
+
+def fetch_crude_birth_rate() -> tuple[list[dict], dict]:
+    """Crude Birth Rate (per 1000 population, annual).
+
+    Taldau indexId 703840. Multi-dictionary index: dicIds=67,749,576,
+    terms=741880,741917,741935 -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего.
+    These parameters were obtained programmatically (see fetch_life_expectancy and
+    config/sources.yaml for the GetSegmentList method), then verified live.
+    """
+    return _fetch_taldau_annual_index(
+        "703840", "CRUDE_BIRTH_RATE",
+        note="Births per 1000 population (Taldau code 612101). Cross-checks against the existing BIRTHS_TOTAL and POPULATION_BNS series.",
+        measure_id="648",
+        terms="741880,741917,741935",
+        dic_ids="67,749,576",
+    )
+
+
+def fetch_total_fertility_rate() -> tuple[list[dict], dict]:
+    """Total Fertility Rate (children per woman, annual).
+
+    Taldau indexId 77212253. Multi-dictionary index: dicIds=67,749,
+    terms=741880,741917 -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего.
+    These parameters were obtained programmatically (see fetch_life_expectancy and
+    config/sources.yaml for the GetSegmentList method), then verified live.
+    """
+    return _fetch_taldau_annual_index(
+        "77212253", "TOTAL_FERTILITY_RATE",
+        note="Average number of children a woman would bear over her lifetime at current age-specific fertility rates (Taldau code 61210102).",
+        measure_id="2906",
+        terms="741880,741917",
+        dic_ids="67,749",
+    )
+
+
+def fetch_crude_death_rate() -> tuple[list[dict], dict]:
+    """Crude Death Rate (per 1000 population, annual).
+
+    Taldau indexId 703848. Multi-dictionary index: dicIds=67,749,576,
+    terms=741880,741917,741935 -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего.
+    These parameters were obtained programmatically (see fetch_life_expectancy and
+    config/sources.yaml for the GetSegmentList method), then verified live.
+    """
+    return _fetch_taldau_annual_index(
+        "703848", "CRUDE_DEATH_RATE",
+        note="Deaths per 1000 population (Taldau code 612201). With CRUDE_BIRTH_RATE this gives the rate of natural increase.",
+        measure_id="648",
+        terms="741880,741917,741935",
+        dic_ids="67,749,576",
+    )
+
+
+def fetch_infant_mortality_rate() -> tuple[list[dict], dict]:
+    """Infant Mortality Rate (per 1000 live births, annual).
+
+    Taldau indexId 703850. Multi-dictionary index: dicIds=67,749,576,
+    terms=741880,741917,741935 -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего.
+    These parameters were obtained programmatically (see fetch_life_expectancy and
+    config/sources.yaml for the GetSegmentList method), then verified live.
+    """
+    return _fetch_taldau_annual_index(
+        "703850", "INFANT_MORTALITY_RATE",
+        note="Deaths of children under one year per 1000 live births (Taldau code 612202) -- a standard development and health-system indicator.",
+        measure_id="2798",
+        terms="741880,741917,741935",
+        dic_ids="67,749,576",
+    )
+
+
+def fetch_under5_mortality_rate() -> tuple[list[dict], dict]:
+    """Under-Five Mortality Rate (per 1000 live births, annual).
+
+    Taldau indexId 4630524. Multi-dictionary index: dicIds=67,749,576,
+    terms=741880,741917,741935 -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего.
+    These parameters were obtained programmatically (see fetch_life_expectancy and
+    config/sources.yaml for the GetSegmentList method), then verified live.
+    """
+    return _fetch_taldau_annual_index(
+        "4630524", "UNDER5_MORTALITY_RATE",
+        note="Deaths of children under five per 1000 live births. Supersedes the older Taldau under-5 series (indexId 703852), which stops in 2012.",
+        measure_id="2798",
+        terms="741880,741917,741935",
+        dic_ids="67,749,576",
+    )
+
+
+def fetch_stillbirth_rate() -> tuple[list[dict], dict]:
+    """Stillbirth Rate (per 1000 births, annual).
+
+    Taldau indexId 703845. Multi-dictionary index: dicIds=67,749,576,
+    terms=741880,741917,741935 -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего.
+    These parameters were obtained programmatically (see fetch_life_expectancy and
+    config/sources.yaml for the GetSegmentList method), then verified live.
+    """
+    return _fetch_taldau_annual_index(
+        "703845", "STILLBIRTH_RATE",
+        note="Stillbirths per 1000 births (Taldau code 61210501).",
+        measure_id="648",
+        terms="741880,741917,741935",
+        dic_ids="67,749,576",
+    )
+
+
+def fetch_innovation_expenditure() -> tuple[list[dict], dict]:
+    """Expenditure on Innovation (KZT, annual).
+
+    Taldau indexId 16174986. Multi-dictionary index: dicIds=68,915,304,1198,
+    terms=741880,741885,808348,3451399 -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего + Всего.
+    These parameters were obtained programmatically (see fetch_life_expectancy and
+    config/sources.yaml for the GetSegmentList method), then verified live.
+    """
+    return _fetch_taldau_annual_index(
+        "16174986", "INNOVATION_EXPENDITURE",
+        note="KZT. Total enterprise spending on innovation (Taldau code 231...). Short series -- the source publishes it only from 2022. Same KZT scale as the other BNS value series.",
+        measure_id="1",
+        terms="741880,741885,808348,3451399",
+        dic_ids="68,915,304,1198",
+    )

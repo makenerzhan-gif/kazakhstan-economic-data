@@ -726,6 +726,117 @@ agencies:
           the COVID dip (2000: 65.45, 2016: 72.41, 2020: 71.37, 2024: 75.44 years). Stored
           as returned, in months, rather than silently divided. 25 annual points, 2000-2024.
           fetch_life_expectancy.
+      CRUDE_BIRTH_RATE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 703840
+        format: json
+        notes: >
+          2026-09-01. Multi-dictionary Taldau index. Parameters obtained PROGRAMMATICALLY
+          via the GetSegmentList method (see the TALDAU_PARAM_DISCOVERY entry), not from a
+          browser capture: measure_id=648, dicIds=67,749,576, terms=741880,741917,741935
+          -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего. Selected only after checking the term names are
+          genuine totals, since segment 0 is merely the site's default and can be a narrow
+          slice. fetch_crude_birth_rate.
+      TOTAL_FERTILITY_RATE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 77212253
+        format: json
+        notes: >
+          2026-09-01. Multi-dictionary Taldau index. Parameters obtained PROGRAMMATICALLY
+          via the GetSegmentList method (see the TALDAU_PARAM_DISCOVERY entry), not from a
+          browser capture: measure_id=2906, dicIds=67,749, terms=741880,741917
+          -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего. Selected only after checking the term names are
+          genuine totals, since segment 0 is merely the site's default and can be a narrow
+          slice. fetch_total_fertility_rate.
+      CRUDE_DEATH_RATE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 703848
+        format: json
+        notes: >
+          2026-09-01. Multi-dictionary Taldau index. Parameters obtained PROGRAMMATICALLY
+          via the GetSegmentList method (see the TALDAU_PARAM_DISCOVERY entry), not from a
+          browser capture: measure_id=648, dicIds=67,749,576, terms=741880,741917,741935
+          -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего. Selected only after checking the term names are
+          genuine totals, since segment 0 is merely the site's default and can be a narrow
+          slice. fetch_crude_death_rate.
+      INFANT_MORTALITY_RATE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 703850
+        format: json
+        notes: >
+          2026-09-01. Multi-dictionary Taldau index. Parameters obtained PROGRAMMATICALLY
+          via the GetSegmentList method (see the TALDAU_PARAM_DISCOVERY entry), not from a
+          browser capture: measure_id=2798, dicIds=67,749,576, terms=741880,741917,741935
+          -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего. Selected only after checking the term names are
+          genuine totals, since segment 0 is merely the site's default and can be a narrow
+          slice. fetch_infant_mortality_rate.
+      UNDER5_MORTALITY_RATE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 4630524
+        format: json
+        notes: >
+          2026-09-01. Multi-dictionary Taldau index. Parameters obtained PROGRAMMATICALLY
+          via the GetSegmentList method (see the TALDAU_PARAM_DISCOVERY entry), not from a
+          browser capture: measure_id=2798, dicIds=67,749,576, terms=741880,741917,741935
+          -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего. Selected only after checking the term names are
+          genuine totals, since segment 0 is merely the site's default and can be a narrow
+          slice. fetch_under5_mortality_rate.
+      STILLBIRTH_RATE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 703845
+        format: json
+        notes: >
+          2026-09-01. Multi-dictionary Taldau index. Parameters obtained PROGRAMMATICALLY
+          via the GetSegmentList method (see the TALDAU_PARAM_DISCOVERY entry), not from a
+          browser capture: measure_id=648, dicIds=67,749,576, terms=741880,741917,741935
+          -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего. Selected only after checking the term names are
+          genuine totals, since segment 0 is merely the site's default and can be a narrow
+          slice. fetch_stillbirth_rate.
+      INNOVATION_EXPENDITURE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 16174986
+        format: json
+        notes: >
+          2026-09-01. Multi-dictionary Taldau index. Parameters obtained PROGRAMMATICALLY
+          via the GetSegmentList method (see the TALDAU_PARAM_DISCOVERY entry), not from a
+          browser capture: measure_id=1, dicIds=68,915,304,1198, terms=741880,741885,808348,3451399
+          -- i.e. РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего + Всего. Selected only after checking the term names are
+          genuine totals, since segment 0 is merely the site's default and can be a narrow
+          slice. fetch_innovation_expenditure.
+      TALDAU_PARAM_DISCOVERY (method):
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetSegmentList"
+        format: json
+        notes: >
+          2026-09-01. Multi-dictionary Taldau indexes no longer need a live browser session.
+          Two plain HTTP calls give their parameters:
+          (1) GET /ru/NewIndex/GetIndex/<INDEX_ID>?keyword= and scrape the server-rendered
+          JS literal with regex measure:\s*\{\s*id:\s*(\d+),\s*name:\s*"([^"]*)" --
+          that value is p_measure_id. It must be options.measure, NOT preferredMeasure, which
+          lists alternative display units and would give the wrong measure.
+          (2) POST /ru/NewIndex/GetSegmentList with body node=<ID>&indexId=<ID>&periodId=<P>&keyword=
+          returning a JSON array of valid dictionary combinations. Take element [0] (the site's
+          own default, per its indexShortController fOnSectionStoreLoad which does
+          `var selRec = rec[0];`), then p_dicIds = dicId split on '+' and joined with commas,
+          and p_terms = termIds verbatim. No cookies, session or CSRF token are required.
+          VERIFIED independently against three parameter sets captured by browser in earlier
+          sessions and reproduced exactly: LIFE_EXPECTANCY/703906 (measure 154, dicIds 67,64,576),
+          RETAIL_TRADE/702038 (measure 1, dicIds 67,59,676, 3 segments) and CONSTRUCTION/701885
+          (dicIds 68,60,71,2987, 6 segments). RETAIL_TRADE's fetched value also matched the
+          already-shipped series (27.7 trillion KZT).
+          CAVEAT, important: segment [0] is only the DEFAULT selection, not necessarily a total.
+          For indexId 703694 (households with ICT) it resolves to the device type 'Телевизор',
+          and for 702755 (enterprises with innovations) to 'Подвергавшиеся усовершенствованию +
+          Дополнительные услуги' -- narrow slices that would be wrong to publish under the
+          index's general name. Always read the segment's termNames (separated by ' + ', NOT by
+          commas) and confirm every term is a genuine total before connecting an index.
       MIGRATION_ARRIVALS:
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"

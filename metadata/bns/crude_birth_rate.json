@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703840",
+  "indicator_id": "CRUDE_BIRTH_RATE",
+  "indicator_name": "Crude Birth Rate",
+  "description": "Родившихся на 1000 человек населения",
+  "frequency": "annual",
+  "unit": "per 1000 population",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Births per 1000 population (Taldau code 612101). Cross-checks against the existing BIRTHS_TOTAL and POPULATION_BNS series.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2001-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

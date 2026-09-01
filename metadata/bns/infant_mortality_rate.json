@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703850",
+  "indicator_id": "INFANT_MORTALITY_RATE",
+  "indicator_name": "Infant Mortality Rate",
+  "description": "Коэффициент младенческой смертности",
+  "frequency": "annual",
+  "unit": "per 1000 live births",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Deaths of children under one year per 1000 live births (Taldau code 612202) -- a standard development and health-system indicator.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2001-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

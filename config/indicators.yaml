@@ -2165,6 +2165,69 @@ indicators:
     category: monetary
     source_status: confirmed
 
+  - id: CRUDE_BIRTH_RATE
+    name_ru: "Родившихся на 1000 человек населения"
+    name_en: "Crude Birth Rate"
+    agency: bns
+    frequency: annual
+    unit: "per 1000 population"
+    category: demographic
+    source_status: confirmed
+
+  - id: TOTAL_FERTILITY_RATE
+    name_ru: "Суммарный коэффициент рождаемости"
+    name_en: "Total Fertility Rate"
+    agency: bns
+    frequency: annual
+    unit: "children per woman"
+    category: demographic
+    source_status: confirmed
+
+  - id: CRUDE_DEATH_RATE
+    name_ru: "Умерших на 1000 человек населения"
+    name_en: "Crude Death Rate"
+    agency: bns
+    frequency: annual
+    unit: "per 1000 population"
+    category: demographic
+    source_status: confirmed
+
+  - id: INFANT_MORTALITY_RATE
+    name_ru: "Коэффициент младенческой смертности"
+    name_en: "Infant Mortality Rate"
+    agency: bns
+    frequency: annual
+    unit: "per 1000 live births"
+    category: demographic
+    source_status: confirmed
+
+  - id: UNDER5_MORTALITY_RATE
+    name_ru: "Коэффициент детской смертности до 5 лет"
+    name_en: "Under-Five Mortality Rate"
+    agency: bns
+    frequency: annual
+    unit: "per 1000 live births"
+    category: demographic
+    source_status: confirmed
+
+  - id: STILLBIRTH_RATE
+    name_ru: "Коэффициент мертворождаемости"
+    name_en: "Stillbirth Rate"
+    agency: bns
+    frequency: annual
+    unit: "per 1000 births"
+    category: demographic
+    source_status: confirmed
+
+  - id: INNOVATION_EXPENDITURE
+    name_ru: "Затраты на осуществление инноваций"
+    name_en: "Expenditure on Innovation"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: production
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

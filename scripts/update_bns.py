@@ -92,6 +92,13 @@ FETCHERS = {
     "TOURISM_OUTBOUND_TRIPS": bns_fetchers.fetch_tourism_outbound_trips,
     "TOURISM_INBOUND_NIGHTS": bns_fetchers.fetch_tourism_inbound_nights,
     "LIFE_EXPECTANCY": bns_fetchers.fetch_life_expectancy,
+    "CRUDE_BIRTH_RATE": bns_fetchers.fetch_crude_birth_rate,
+    "TOTAL_FERTILITY_RATE": bns_fetchers.fetch_total_fertility_rate,
+    "CRUDE_DEATH_RATE": bns_fetchers.fetch_crude_death_rate,
+    "INFANT_MORTALITY_RATE": bns_fetchers.fetch_infant_mortality_rate,
+    "UNDER5_MORTALITY_RATE": bns_fetchers.fetch_under5_mortality_rate,
+    "STILLBIRTH_RATE": bns_fetchers.fetch_stillbirth_rate,
+    "INNOVATION_EXPENDITURE": bns_fetchers.fetch_innovation_expenditure,
 }
 
 INDICATOR_IDS = [
@@ -124,6 +131,13 @@ INDICATOR_IDS = [
     "TOURISM_OUTBOUND_TRIPS",
     "TOURISM_INBOUND_NIGHTS",
     "LIFE_EXPECTANCY",
+    "CRUDE_BIRTH_RATE",
+    "TOTAL_FERTILITY_RATE",
+    "CRUDE_DEATH_RATE",
+    "INFANT_MORTALITY_RATE",
+    "UNDER5_MORTALITY_RATE",
+    "STILLBIRTH_RATE",
+    "INNOVATION_EXPENDITURE",
 ]
 
 

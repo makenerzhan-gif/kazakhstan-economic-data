@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703848",
+  "indicator_id": "CRUDE_DEATH_RATE",
+  "indicator_name": "Crude Death Rate",
+  "description": "Умерших на 1000 человек населения",
+  "frequency": "annual",
+  "unit": "per 1000 population",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Deaths per 1000 population (Taldau code 612201). With CRUDE_BIRTH_RATE this gives the rate of natural increase.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2001-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

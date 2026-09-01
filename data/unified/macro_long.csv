@@ -427,6 +427,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2001-12-31,KZ,national,annual,BIRTHS_TOTAL,221487.0,persons,bns,2026-09-01,level,2026-09-01
 2001-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,498159100000.0,KZT,bns,2026-09-01,level,2026-09-01
 2001-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,1167110000000.0,KZT,bns,2026-09-01,level,2026-09-01
+2001-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,14.91,per 1000 population,bns,2026-09-01,level,2026-09-01
+2001-12-31,KZ,national,annual,CRUDE_DEATH_RATE,9.95,per 1000 population,bns,2026-09-01,level,2026-09-01
 2001-12-31,KZ,national,annual,DEATHS_TOTAL,147876.0,persons,bns,2026-09-01,level,2026-09-01
 2001-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,98.2,% change vs previous period,bns,2026-09-01,level,2026-09-01
 2001-12-31,KZ,national,annual,GDP_DEFLATOR,110.1,% change vs previous period,bns,2026-09-01,level,2026-09-01
@@ -439,6 +441,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2001-12-31,KZ,national,annual,GROSS_OUTPUT,6958070300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2001-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,1850799100000.0,KZT,bns,2026-09-01,level,2026-09-01
 2001-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,98.5,% change vs previous period,bns,2026-09-01,level,2026-09-01
+2001-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,19.12,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2001-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,3894764000000.0,KZT,bns,2026-09-01,level,2026-09-01
 2001-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,457300.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2001-12-31,KZ,national,annual,LIFE_EXPECTANCY,789.12,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -511,6 +514,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2002-12-31,KZ,national,annual,BIRTHS_TOTAL,227171.0,persons,bns,2026-09-01,level,2026-09-01
 2002-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,576876600000.0,KZT,bns,2026-09-01,level,2026-09-01
 2002-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,1237247000000.0,KZT,bns,2026-09-01,level,2026-09-01
+2002-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,15.29,per 1000 population,bns,2026-09-01,level,2026-09-01
+2002-12-31,KZ,national,annual,CRUDE_DEATH_RATE,10.05,per 1000 population,bns,2026-09-01,level,2026-09-01
 2002-12-31,KZ,national,annual,DEATHS_TOTAL,149381.0,persons,bns,2026-09-01,level,2026-09-01
 2002-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,116.6,% change vs previous period,bns,2026-09-01,level,2026-09-01
 2002-12-31,KZ,national,annual,GDP_DEFLATOR,105.9,% change vs previous period,bns,2026-09-01,level,2026-09-01
@@ -523,6 +528,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2002-12-31,KZ,national,annual,GROSS_OUTPUT,7542053900000.0,KZT,bns,2026-09-01,level,2026-09-01
 2002-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,1993710800000.0,KZT,bns,2026-09-01,level,2026-09-01
 2002-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,103.1,% change vs previous period,bns,2026-09-01,level,2026-09-01
+2002-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,17.01,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2002-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,3981855500000.0,KZT,bns,2026-09-01,level,2026-09-01
 2002-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,530700.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2002-12-31,KZ,national,annual,LIFE_EXPECTANCY,791.4,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -595,6 +601,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2003-12-31,KZ,national,annual,BIRTHS_TOTAL,247946.0,persons,bns,2026-09-01,level,2026-09-01
 2003-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,666015200000.0,KZT,bns,2026-09-01,level,2026-09-01
 2003-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,1517919000000.0,KZT,bns,2026-09-01,level,2026-09-01
+2003-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,16.63,per 1000 population,bns,2026-09-01,level,2026-09-01
+2003-12-31,KZ,national,annual,CRUDE_DEATH_RATE,10.41,per 1000 population,bns,2026-09-01,level,2026-09-01
 2003-12-31,KZ,national,annual,DEATHS_TOTAL,155277.0,persons,bns,2026-09-01,level,2026-09-01
 2003-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,107.5,% change vs previous period,bns,2026-09-01,level,2026-09-01
 2003-12-31,KZ,national,annual,GDP_DEFLATOR,111.7,% change vs previous period,bns,2026-09-01,level,2026-09-01
@@ -607,6 +615,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2003-12-31,KZ,national,annual,GROSS_OUTPUT,8930920400000.0,KZT,bns,2026-09-01,level,2026-09-01
 2003-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,2434434100000.0,KZT,bns,2026-09-01,level,2026-09-01
 2003-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,92.4,% change vs previous period,bns,2026-09-01,level,2026-09-01
+2003-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,15.66,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2003-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,4560635700000.0,KZT,bns,2026-09-01,level,2026-09-01
 2003-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,625700.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2003-12-31,KZ,national,annual,LIFE_EXPECTANCY,788.88,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -684,6 +693,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2004-12-31,KZ,national,annual,BIRTHS_TOTAL,273028.0,persons,bns,2026-09-01,level,2026-09-01
 2004-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,822513200000.0,KZT,bns,2026-09-01,level,2026-09-01
 2004-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,1955071700000.0,KZT,bns,2026-09-01,level,2026-09-01
+2004-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,18.19,per 1000 population,bns,2026-09-01,level,2026-09-01
+2004-12-31,KZ,national,annual,CRUDE_DEATH_RATE,10.14,per 1000 population,bns,2026-09-01,level,2026-09-01
 2004-12-31,KZ,national,annual,DEATHS_TOTAL,152250.0,persons,bns,2026-09-01,level,2026-09-01
 2004-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,111.2,% change vs previous period,bns,2026-09-01,level,2026-09-01
 2004-12-31,KZ,national,annual,GDP_DEFLATOR,116.1,% change vs previous period,bns,2026-09-01,level,2026-09-01
@@ -696,6 +707,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2004-12-31,KZ,national,annual,GROSS_OUTPUT,11669306200000.0,KZT,bns,2026-09-01,level,2026-09-01
 2004-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,3053657900000.0,KZT,bns,2026-09-01,level,2026-09-01
 2004-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,114.9,% change vs previous period,bns,2026-09-01,level,2026-09-01
+2004-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,14.5,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2004-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,6042494900000.0,KZT,bns,2026-09-01,level,2026-09-01
 2004-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,783500.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2004-12-31,KZ,national,annual,LIFE_EXPECTANCY,792.72,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -818,6 +830,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2005-12-31,KZ,national,annual,BIRTHS_TOTAL,278977.0,persons,bns,2026-09-01,level,2026-09-01
 2005-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,1049146300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2005-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,2507682800000.0,KZT,bns,2026-09-01,level,2026-09-01
+2005-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,18.42,per 1000 population,bns,2026-09-01,level,2026-09-01
+2005-12-31,KZ,national,annual,CRUDE_DEATH_RATE,10.37,per 1000 population,bns,2026-09-01,level,2026-09-01
 2005-12-31,KZ,national,annual,DEATHS_TOTAL,157121.0,persons,bns,2026-09-01,level,2026-09-01
 2005-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,100.4,% change vs previous period,bns,2026-09-01,level,2026-09-01
 2005-12-31,KZ,national,annual,GDP_DEFLATOR,117.9,% change vs previous period,bns,2026-09-01,level,2026-09-01
@@ -830,6 +844,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2005-12-31,KZ,national,annual,GROSS_OUTPUT,15181970100000.0,KZT,bns,2026-09-01,level,2026-09-01
 2005-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,3685763300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2005-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,112.1,% change vs previous period,bns,2026-09-01,level,2026-09-01
+2005-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,15.15,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2005-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,7893525800000.0,KZT,bns,2026-09-01,level,2026-09-01
 2005-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,1003800.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2005-12-31,KZ,national,annual,LIFE_EXPECTANCY,790.32,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -1106,6 +1121,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2007-12-31,KZ,national,annual,BIRTHS_TOTAL,321963.0,persons,bns,2026-09-01,level,2026-09-01
 2007-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,1744054100000.0,KZT,bns,2026-09-01,level,2026-09-01
 2007-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,4433689700000.0,KZT,bns,2026-09-01,level,2026-09-01
+2007-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,20.79,per 1000 population,bns,2026-09-01,level,2026-09-01
+2007-12-31,KZ,national,annual,CRUDE_DEATH_RATE,10.22,per 1000 population,bns,2026-09-01,level,2026-09-01
 2007-12-31,KZ,national,annual,DEATHS_TOTAL,158297.0,persons,bns,2026-09-01,level,2026-09-01
 2007-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,109.1,% change vs previous period,bns,2026-09-01,level,2026-09-01
 2007-12-31,KZ,national,annual,GDP_DEFLATOR,115.5,% change vs previous period,bns,2026-09-01,level,2026-09-01
@@ -1118,6 +1135,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2007-12-31,KZ,national,annual,GROSS_OUTPUT,24236034500000.0,KZT,bns,2026-09-01,level,2026-09-01
 2007-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,5641240900000.0,KZT,bns,2026-09-01,level,2026-09-01
 2007-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,126.1,% change vs previous period,bns,2026-09-01,level,2026-09-01
+2007-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,14.57,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2007-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,11691870700000.0,KZT,bns,2026-09-01,level,2026-09-01
 2007-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,1643800.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2007-12-31,KZ,national,annual,LIFE_EXPECTANCY,796.08,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -1250,6 +1268,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2008-12-31,KZ,national,annual,BIRTHS_TOTAL,357555.0,persons,bns,2026-09-01,level,2026-09-01
 2008-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,2124974300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2008-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,5258583300000.0,KZT,bns,2026-09-01,level,2026-09-01
+2008-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,22.81,per 1000 population,bns,2026-09-01,level,2026-09-01
+2008-12-31,KZ,national,annual,CRUDE_DEATH_RATE,9.75,per 1000 population,bns,2026-09-01,level,2026-09-01
 2008-12-31,KZ,national,annual,DEATHS_TOTAL,152878.0,persons,bns,2026-09-01,level,2026-09-01
 2008-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,100.9,% change vs previous period,bns,2026-09-01,level,2026-09-01
 2008-12-31,KZ,national,annual,GDP_DEFLATOR,121.0,% change vs previous period,bns,2026-09-01,level,2026-09-01
@@ -1262,6 +1282,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2008-12-31,KZ,national,annual,GROSS_OUTPUT,29795141500000.0,KZT,bns,2026-09-01,level,2026-09-01
 2008-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,6970468500000.0,KZT,bns,2026-09-01,level,2026-09-01
 2008-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,88.5,% change vs previous period,bns,2026-09-01,level,2026-09-01
+2008-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,20.74,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2008-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,14116108100000.0,KZT,bns,2026-09-01,level,2026-09-01
 2008-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,1995500.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2008-12-31,KZ,national,annual,LIFE_EXPECTANCY,805.32,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -1394,6 +1415,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2009-12-31,KZ,national,annual,BIRTHS_TOTAL,356261.0,persons,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,2382550800000.0,KZT,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,5765398700000.0,KZT,bns,2026-09-01,level,2026-09-01
+2009-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,22.14,per 1000 population,bns,2026-09-01,level,2026-09-01
+2009-12-31,KZ,national,annual,CRUDE_DEATH_RATE,8.88,per 1000 population,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,DEATHS_TOTAL,142883.0,persons,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,88.1,% change vs previous period,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,GDP_DEFLATOR,104.7,% change vs previous period,bns,2026-09-01,level,2026-09-01
@@ -1410,6 +1433,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2009-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,99.0,% of prior period,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,97.1,% of prior period,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,IND_PROD_MINING,107.2,% of prior period,bns,2026-09-01,level,2026-09-01
+2009-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,16.33,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,13981759400000.0,KZT,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,2121300.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,LIFE_EXPECTANCY,820.32,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -1420,6 +1444,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2009-12-31,KZ,national,annual,PER_CAPITA_INCOME,34282.4680465119,KZT/month,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,REAL_INCOME_INDEX,96.8659229946104,% of prior period,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,RETAIL_TRADE,2551402949000.0,KZT,bns,2026-09-01,level,2026-09-01
+2009-12-31,KZ,national,annual,STILLBIRTH_RATE,10.0,per 1000 births,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,SUBSIDIES,25989400000.0,KZT,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,808272100000.0,KZT,bns,2026-09-01,level,2026-09-01
 2009-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,10066102700000.0,KZT,bns,2026-09-01,level,2026-09-01
@@ -1557,6 +1582,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-12-31,KZ,national,annual,BIRTHS_TOTAL,367707.0,persons,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,3001706300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,7492514900000.0,KZT,bns,2026-09-01,level,2026-09-01
+2010-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,22.53,per 1000 population,bns,2026-09-01,level,2026-09-01
+2010-12-31,KZ,national,annual,CRUDE_DEATH_RATE,8.95,per 1000 population,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,DEATHS_TOTAL,146027.0,persons,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,GDP_DEFLATOR,119.6,% change vs previous period,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,GDP_INCOME_METHOD,21815517000000.0,KZT,bns,2026-09-01,level,2026-09-01
@@ -1568,6 +1595,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,104.9,% of prior period,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,113.9,% of prior period,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,IND_PROD_MINING,107.2,% of prior period,bns,2026-09-01,level,2026-09-01
+2010-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,16.59,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,15241822000000.0,KZT,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,2437300.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,LIFE_EXPECTANCY,821.4,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -1578,6 +1606,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-12-31,KZ,national,annual,POVERTY_HEADCOUNT,146796.0,persons,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,REAL_INCOME_INDEX,106.257531646981,% of prior period,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,RETAIL_TRADE,3197147799000.0,KZT,bns,2026-09-01,level,2026-09-01
+2010-12-31,KZ,national,annual,STILLBIRTH_RATE,9.15,per 1000 births,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,SUBSIDIES,60484800000.0,KZT,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,1226970200000.0,KZT,bns,2026-09-01,level,2026-09-01
 2010-12-31,KZ,national,annual,WHOLESALE_TRADE,8152382420000.0,KZT,bns,2026-09-01,level,2026-09-01
@@ -1727,6 +1756,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-12-31,KZ,national,annual,BIRTHS_TOTAL,372690.0,persons,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,3588238500000.0,KZT,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,9225682300000.0,KZT,bns,2026-09-01,level,2026-09-01
+2011-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,22.51,per 1000 population,bns,2026-09-01,level,2026-09-01
+2011-12-31,KZ,national,annual,CRUDE_DEATH_RATE,8.72,per 1000 population,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,DEATHS_TOTAL,144323.0,persons,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,GDP_DEFLATOR,118.9,% change vs previous period,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,GDP_INCOME_METHOD,28243052700000.0,KZT,bns,2026-09-01,level,2026-09-01
@@ -1738,6 +1769,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,108.6,% of prior period,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,107.7,% of prior period,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,IND_PROD_MINING,101.0,% of prior period,bns,2026-09-01,level,2026-09-01
+2011-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,14.91,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,19705034100000.0,KZT,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,2867100.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,LIFE_EXPECTANCY,827.76,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -1749,6 +1781,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-12-31,KZ,national,annual,PPI,127.2,% of same period prior year,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,REAL_INCOME_INDEX,108.676084693627,% of prior period,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,RETAIL_TRADE,3865840640000.0,KZT,bns,2026-09-01,level,2026-09-01
+2011-12-31,KZ,national,annual,STILLBIRTH_RATE,8.73,per 1000 births,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,SUBSIDIES,80340300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,2581518200000.0,KZT,bns,2026-09-01,level,2026-09-01
 2011-12-31,KZ,national,annual,TOURISM_EMPLOYMENT,329414.0,persons,bns,2026-09-01,level,2026-09-01
@@ -1905,6 +1938,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-12-31,KZ,national,annual,BIRTHS_TOTAL,381153.0,persons,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,3732517100000.0,KZT,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,10133606000000.0,KZT,bns,2026-09-01,level,2026-09-01
+2012-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,22.7,per 1000 population,bns,2026-09-01,level,2026-09-01
+2012-12-31,KZ,national,annual,CRUDE_DEATH_RATE,8.54,per 1000 population,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,DEATHS_TOTAL,143411.0,persons,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,GDP_DEFLATOR,104.8,% change vs previous period,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,GDP_INCOME_METHOD,31015186600000.0,KZT,bns,2026-09-01,level,2026-09-01
@@ -1916,6 +1951,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,103.5,% of prior period,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,101.2,% of prior period,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,IND_PROD_MINING,100.4,% of prior period,bns,2026-09-01,level,2026-09-01
+2012-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,13.56,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,21129898300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,3116000.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,LIFE_EXPECTANCY,835.32,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -1927,6 +1963,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-12-31,KZ,national,annual,PPI,103.5,% of same period prior year,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,REAL_INCOME_INDEX,107.45931068392,% of prior period,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,RETAIL_TRADE,4567661194000.0,KZT,bns,2026-09-01,level,2026-09-01
+2012-12-31,KZ,national,annual,STILLBIRTH_RATE,8.98,per 1000 births,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,SUBSIDIES,97924300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,2585020800000.0,KZT,bns,2026-09-01,level,2026-09-01
 2012-12-31,KZ,national,annual,WHOLESALE_TRADE,11832510744000.0,KZT,bns,2026-09-01,level,2026-09-01
@@ -2077,6 +2114,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-12-31,KZ,national,annual,BIRTHS_TOTAL,387256.0,persons,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,4352759900000.0,KZT,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,11060875800000.0,KZT,bns,2026-09-01,level,2026-09-01
+2013-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,22.73,per 1000 population,bns,2026-09-01,level,2026-09-01
+2013-12-31,KZ,national,annual,CRUDE_DEATH_RATE,8.0,per 1000 population,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,DEATHS_TOTAL,136368.0,persons,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,EMISSIONS,2282700.885,metric tonnes,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,GDP_DEFLATOR,109.5,% change vs previous period,bns,2026-09-01,level,2026-09-01
@@ -2089,6 +2128,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,100.5,% of prior period,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,101.9,% of prior period,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,IND_PROD_MINING,103.3,% of prior period,bns,2026-09-01,level,2026-09-01
+2013-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,11.39,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,23264281300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,3560700.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,LIFE_EXPECTANCY,850.8,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -2101,8 +2141,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-12-31,KZ,national,annual,REAL_INCOME_INDEX,102.889011650984,% of prior period,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,REAL_WAGE_INDEX,101.9,% of prior period,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,RETAIL_TRADE,5474274033000.0,KZT,bns,2026-09-01,level,2026-09-01
+2013-12-31,KZ,national,annual,STILLBIRTH_RATE,8.2,per 1000 births,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,SUBSIDIES,91525000000.0,KZT,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,3193949100000.0,KZT,bns,2026-09-01,level,2026-09-01
+2013-12-31,KZ,national,annual,UNDER5_MORTALITY_RATE,14.19,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2013-12-31,KZ,national,annual,WHOLESALE_TRADE,14170379812000.0,KZT,bns,2026-09-01,level,2026-09-01
 2014-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.86181,% of GDP,nbk,2026-09-01,level,2026-09-01
 2014-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
@@ -2306,6 +2348,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,4869370700000.0,KZT,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,12474013600000.0,KZT,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,CORPORATE_TAX,1169666.8064632,million KZT,minfin,2026-09-01,level,2026-09-01
+2014-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,23.1,per 1000 population,bns,2026-09-01,level,2026-09-01
+2014-12-31,KZ,national,annual,CRUDE_DEATH_RATE,7.65,per 1000 population,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,DEATHS_TOTAL,132287.0,persons,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,DOCTORS_TOTAL,68864.0,persons,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,EMISSIONS,2256674.137,metric tonnes,bns,2026-09-01,level,2026-09-01
@@ -2336,6 +2380,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,102.6,% of prior period,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,101.1,% of prior period,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,IND_PROD_MINING,99.7,% of prior period,bns,2026-09-01,level,2026-09-01
+2014-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,9.83,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,25208557400000.0,KZT,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,4007400.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,LIFE_EXPECTANCY,858.0,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -2351,6 +2396,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-31,KZ,national,annual,REAL_INCOME_INDEX,103.380585455138,% of prior period,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,REAL_WAGE_INDEX,103.9,% of prior period,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,RETAIL_TRADE,6332252984000.0,KZT,bns,2026-09-01,level,2026-09-01
+2014-12-31,KZ,national,annual,STILLBIRTH_RATE,8.35,per 1000 births,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,SUBSIDIES,116315000000.0,KZT,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,3140575700000.0,KZT,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,TAX_REVENUE,3666092.67696642,million KZT,minfin,2026-09-01,level,2026-09-01
@@ -2361,6 +2407,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-31,KZ,national,annual,TOURISM_INBOUND_CONSUMPTION,304841612000.0,KZT,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,TOURISM_OUTBOUND_CONSUMPTION,387668606000.0,KZT,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,TOURISM_VALUE_ADDED,336751232000.0,KZT,bns,2026-09-01,level,2026-09-01
+2014-12-31,KZ,national,annual,UNDER5_MORTALITY_RATE,12.35,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,VAT_REVENUE,1198169.86741276,million KZT,minfin,2026-09-01,level,2026-09-01
 2014-12-31,KZ,national,annual,WHOLESALE_TRADE,16209979605000.0,KZT,bns,2026-09-01,level,2026-09-01
 2015-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-1.859795,% of GDP,nbk,2026-09-01,level,2026-09-01
@@ -2592,6 +2639,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,5199146500000.0,KZT,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,13161352400000.0,KZT,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,CORPORATE_TAX,1224645.23027333,million KZT,minfin,2026-09-01,level,2026-09-01
+2015-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,22.71,per 1000 population,bns,2026-09-01,level,2026-09-01
+2015-12-31,KZ,national,annual,CRUDE_DEATH_RATE,7.46,per 1000 population,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,DEATHS_TOTAL,130811.0,persons,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,DOCTORS_TOTAL,69722.0,persons,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,EMISSIONS,2180039.014,metric tonnes,bns,2026-09-01,level,2026-09-01
@@ -2625,6 +2674,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,98.5,% of prior period,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,100.2,% of prior period,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,IND_PROD_MINING,97.5,% of prior period,bns,2026-09-01,level,2026-09-01
+2015-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,9.41,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,25174185800000.0,KZT,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,4176100.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,LIFE_EXPECTANCY,864.0,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -2640,10 +2690,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-31,KZ,national,annual,REAL_INCOME_INDEX,101.416023282123,% of prior period,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,REAL_WAGE_INDEX,97.7122624505764,% of prior period,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,RETAIL_TRADE,6555820930000.0,KZT,bns,2026-09-01,level,2026-09-01
+2015-12-31,KZ,national,annual,STILLBIRTH_RATE,7.98,per 1000 births,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,SUBSIDIES,122810600000.0,KZT,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,2223043800000.0,KZT,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,TAX_REVENUE,3332925.04968725,million KZT,minfin,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,26718002200000.0,KZT,bns,2026-09-01,level,2026-09-01
+2015-12-31,KZ,national,annual,UNDER5_MORTALITY_RATE,12.04,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,VAT_REVENUE,944438.0303032,million KZT,minfin,2026-09-01,level,2026-09-01
 2015-12-31,KZ,national,annual,WHOLESALE_TRADE,16240476161000.0,KZT,bns,2026-09-01,level,2026-09-01
 2016-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.133532,% of GDP,nbk,2026-09-01,level,2026-09-01
@@ -2930,6 +2982,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,14253989500000.0,KZT,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,CONSTRUCTION,3258031007000.0,KZT,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,CORPORATE_TAX,1437364.5143039802,million KZT,minfin,2026-09-01,level,2026-09-01
+2016-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,22.52,per 1000 population,bns,2026-09-01,level,2026-09-01
+2016-12-31,KZ,national,annual,CRUDE_DEATH_RATE,7.37,per 1000 population,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,DEATHS_TOTAL,131231.0,persons,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,DOCTORS_TOTAL,74611.0,persons,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,ELECTRICITY_PRODUCTION,94642384000000.0,kWh,bns,2026-09-01,level,2026-09-01
@@ -2964,6 +3018,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,100.5,% of prior period,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,100.6,% of prior period,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,IND_PROD_MINING,97.3,% of prior period,bns,2026-09-01,level,2026-09-01
+2016-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,8.59,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,30393719100000.0,KZT,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,INVESTMENT,7762302972000.0,KZT,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,4762400.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
@@ -2980,6 +3035,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-31,KZ,national,annual,REAL_INCOME_INDEX,99.2549475611537,% of prior period,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,REAL_WAGE_INDEX,98.946605744881,% of prior period,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,RETAIL_TRADE,7974442118000.0,KZT,bns,2026-09-01,level,2026-09-01
+2016-12-31,KZ,national,annual,STILLBIRTH_RATE,8.3,per 1000 births,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,SUBSIDIES,143451800000.0,KZT,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,2777016300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,TAX_REVENUE,4275886.70365502,million KZT,minfin,2026-09-01,level,2026-09-01
@@ -2990,6 +3046,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-31,KZ,national,annual,TOURISM_INBOUND_CONSUMPTION,587156825000.0,KZT,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,TOURISM_OUTBOUND_CONSUMPTION,605352893000.0,KZT,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,TOURISM_VALUE_ADDED,558768504000.0,KZT,bns,2026-09-01,level,2026-09-01
+2016-12-31,KZ,national,annual,UNDER5_MORTALITY_RATE,10.79,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,VAT_REVENUE,1495681.95848907,million KZT,minfin,2026-09-01,level,2026-09-01
 2016-12-31,KZ,national,annual,WHOLESALE_TRADE,18011768560000.0,KZT,bns,2026-09-01,level,2026-09-01
 2017-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,0.694645,% of GDP,nbk,2026-09-01,level,2026-09-01
@@ -3292,6 +3349,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,16610443300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,CONSTRUCTION,3509295878000.0,KZT,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,CORPORATE_TAX,1538785.45160939,million KZT,minfin,2026-09-01,level,2026-09-01
+2017-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,21.64,per 1000 population,bns,2026-09-01,level,2026-09-01
+2017-12-31,KZ,national,annual,CRUDE_DEATH_RATE,7.15,per 1000 population,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,DEATHS_TOTAL,129009.0,persons,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,DOCTORS_TOTAL,72134.0,persons,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,ELECTRICITY_PRODUCTION,103128432700000.0,kWh,bns,2026-09-01,level,2026-09-01
@@ -3327,6 +3386,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,105.3,% of prior period,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,105.6,% of prior period,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,IND_PROD_MINING,109.3,% of prior period,bns,2026-09-01,level,2026-09-01
+2017-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,7.93,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,44223008300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,INVESTMENT,8770572291000.0,KZT,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,5518600.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
@@ -3342,6 +3402,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-12-31,KZ,national,annual,REAL_INCOME_INDEX,101.784998021819,% of prior period,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,REAL_WAGE_INDEX,98.2758898470945,% of prior period,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,RETAIL_TRADE,8892857650788.56,KZT,bns,2026-09-01,level,2026-09-01
+2017-12-31,KZ,national,annual,STILLBIRTH_RATE,8.53,per 1000 births,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,SUBSIDIES,188984900000.0,KZT,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,3371983400000.0,KZT,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,TAX_REVENUE,4848028.3186229,million KZT,minfin,2026-09-01,level,2026-09-01
@@ -3353,6 +3414,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-12-31,KZ,national,annual,TOURISM_INBOUND_CONSUMPTION,768827280000.0,KZT,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,TOURISM_OUTBOUND_CONSUMPTION,870091933000.0,KZT,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,TOURISM_VALUE_ADDED,688247770000.0,KZT,bns,2026-09-01,level,2026-09-01
+2017-12-31,KZ,national,annual,UNDER5_MORTALITY_RATE,10.24,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,VAT_REVENUE,1664699.27011816,million KZT,minfin,2026-09-01,level,2026-09-01
 2017-12-31,KZ,national,annual,WHOLESALE_TRADE,19485105769683.6,KZT,bns,2026-09-01,level,2026-09-01
 2018-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,3.099605,% of GDP,nbk,2026-09-01,level,2026-09-01
@@ -3682,6 +3744,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,18825518400000.0,KZT,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,CONSTRUCTION,3862994860000.0,KZT,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,CORPORATE_TAX,1687576.9781008,million KZT,minfin,2026-09-01,level,2026-09-01
+2018-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,21.77,per 1000 population,bns,2026-09-01,level,2026-09-01
+2018-12-31,KZ,national,annual,CRUDE_DEATH_RATE,7.14,per 1000 population,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,DEATHS_TOTAL,130448.0,persons,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,DOCTORS_TOTAL,72877.0,persons,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,ELECTRICITY_PRODUCTION,107363139100000.0,kWh,bns,2026-09-01,level,2026-09-01
@@ -3717,6 +3781,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,102.4,% of prior period,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,104.5,% of prior period,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,IND_PROD_MINING,104.6,% of prior period,bns,2026-09-01,level,2026-09-01
+2018-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,8.03,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,45046871300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,INVESTMENT,11179036042000.0,KZT,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,6173200.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
@@ -3733,17 +3798,20 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-12-31,KZ,national,annual,REAL_WAGE_INDEX,101.749132649195,% of prior period,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,RETAIL_TRADE,10045772326672.8,KZT,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,105.673060466727,% of prior period,bns,2026-09-01,level,2026-09-01
+2018-12-31,KZ,national,annual,STILLBIRTH_RATE,8.09,per 1000 births,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,SUBSIDIES,164369200000.0,KZT,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,4277352300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,TAX_REVENUE,5694904.40012893,million KZT,minfin,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,TELECOM_SERVICES,782459112900.0,KZT,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,37350907100000.0,KZT,bns,2026-09-01,level,2026-09-01
+2018-12-31,KZ,national,annual,TOTAL_FERTILITY_RATE,2.84,children per woman,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,TOURISM_EMPLOYMENT,463669.0,persons,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,TOURISM_EMPLOYMENT_SHARE,5.3,% of total employed,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,TOURISM_GDP_SHARE,1.0,% of GDP,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,TOURISM_INBOUND_CONSUMPTION,915806925000.0,KZT,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,TOURISM_OUTBOUND_CONSUMPTION,981432382000.0,KZT,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,TOURISM_VALUE_ADDED,783973393000.0,KZT,bns,2026-09-01,level,2026-09-01
+2018-12-31,KZ,national,annual,UNDER5_MORTALITY_RATE,10.11,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,VAT_REVENUE,2034313.93481333,million KZT,minfin,2026-09-01,level,2026-09-01
 2018-12-31,KZ,national,annual,WHOLESALE_TRADE,23836694976996.6,KZT,bns,2026-09-01,level,2026-09-01
 2019-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,1.094829,% of GDP,nbk,2026-09-01,level,2026-09-01
@@ -4099,6 +4167,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,21199133200000.0,KZT,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,CONSTRUCTION,4431666211000.0,KZT,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,CORPORATE_TAX,1974763.4865675,million KZT,minfin,2026-09-01,level,2026-09-01
+2019-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,21.73,per 1000 population,bns,2026-09-01,level,2026-09-01
+2019-12-31,KZ,national,annual,CRUDE_DEATH_RATE,7.19,per 1000 population,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,DEATHS_TOTAL,133128.0,persons,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,DOCTORS_TOTAL,74046.0,persons,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,ELECTRICITY_PRODUCTION,106483171400000.0,kWh,bns,2026-09-01,level,2026-09-01
@@ -4135,6 +4205,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,100.6,% of prior period,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,105.8,% of prior period,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,IND_PROD_MINING,103.1,% of prior period,bns,2026-09-01,level,2026-09-01
+2019-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,8.37,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,46992498200000.0,KZT,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,INVESTMENT,12576793455000.0,KZT,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,6869800.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
@@ -4151,17 +4222,20 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-31,KZ,national,annual,REAL_WAGE_INDEX,109.060603631512,% of prior period,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,RETAIL_TRADE,11327580594424.2,KZT,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,105.877632544159,% of prior period,bns,2026-09-01,level,2026-09-01
+2019-12-31,KZ,national,annual,STILLBIRTH_RATE,7.77,per 1000 births,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,SUBSIDIES,206349300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,5057371000000.0,KZT,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,TAX_REVENUE,6835513.38122905,million KZT,minfin,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,TELECOM_SERVICES,854566385900.0,KZT,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,42700693700000.0,KZT,bns,2026-09-01,level,2026-09-01
+2019-12-31,KZ,national,annual,TOTAL_FERTILITY_RATE,2.9,children per woman,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,TOURISM_EMPLOYMENT,469860.0,persons,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,TOURISM_EMPLOYMENT_SHARE,5.4,% of total employed,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,TOURISM_GDP_SHARE,1.0,% of GDP,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,TOURISM_INBOUND_CONSUMPTION,1120107522000.0,KZT,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,TOURISM_OUTBOUND_CONSUMPTION,1132230210000.0,KZT,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,TOURISM_VALUE_ADDED,821469043000.0,KZT,bns,2026-09-01,level,2026-09-01
+2019-12-31,KZ,national,annual,UNDER5_MORTALITY_RATE,10.69,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,VAT_REVENUE,2693127.19348285,million KZT,minfin,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,WHOLESALE_TRADE,27011905306454.1,KZT,bns,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,quarterly,BANK_ROA,3.65,%,nbk,2026-09-01,level,2026-09-01
@@ -4622,6 +4696,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,22038361400000.0,KZT,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,CONSTRUCTION,4934069181000.0,KZT,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,CORPORATE_TAX,1562091.88779989,million KZT,minfin,2026-09-01,level,2026-09-01
+2020-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,22.76,per 1000 population,bns,2026-09-01,level,2026-09-01
+2020-12-31,KZ,national,annual,CRUDE_DEATH_RATE,8.6,per 1000 population,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,DEATHS_TOTAL,161333.0,persons,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,DOCTORS_TOTAL,76443.0,persons,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,ELECTRICITY_PRODUCTION,108629093000000.0,kWh,bns,2026-09-01,level,2026-09-01
@@ -4658,6 +4734,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,99.9,% of prior period,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,104.1,% of prior period,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,IND_PROD_MINING,96.3,% of prior period,bns,2026-09-01,level,2026-09-01
+2020-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,7.77,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,42866610700000.0,KZT,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,INVESTMENT,12270144010000.0,KZT,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,7111900.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
@@ -4673,11 +4750,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-31,KZ,national,annual,REAL_INCOME_INDEX,104.3,% of prior period,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,RETAIL_TRADE,11729949741121.6,KZT,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,96.7776813427546,% of prior period,bns,2026-09-01,level,2026-09-01
+2020-12-31,KZ,national,annual,STILLBIRTH_RATE,8.12,per 1000 births,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,SUBSIDIES,248281800000.0,KZT,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,4069079900000.0,KZT,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,TAX_REVENUE,5575862.76305024,million KZT,minfin,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,TELECOM_SERVICES,926626141600.0,KZT,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,46448870300000.0,KZT,bns,2026-09-01,level,2026-09-01
+2020-12-31,KZ,national,annual,TOTAL_FERTILITY_RATE,3.13,children per woman,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,TOURISM_DOMESTIC_TRIPS,4463200.0,trips,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,TOURISM_EMPLOYMENT,458304.0,persons,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,TOURISM_EMPLOYMENT_SHARE,5.2,% of total employed,bns,2026-09-01,level,2026-09-01
@@ -4688,6 +4767,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-31,KZ,national,annual,TOURISM_OUTBOUND_CONSUMPTION,350973718000.0,KZT,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,TOURISM_OUTBOUND_TRIPS,2865004.0,trips,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,TOURISM_VALUE_ADDED,410454652000.0,KZT,bns,2026-09-01,level,2026-09-01
+2020-12-31,KZ,national,annual,UNDER5_MORTALITY_RATE,9.41,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,VAT_REVENUE,2532523.64954988,million KZT,minfin,2026-09-01,level,2026-09-01
 2020-12-31,KZ,national,annual,WHOLESALE_TRADE,27656470866681.9,KZT,bns,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,BANK_ROA,3.06,%,nbk,2026-09-01,level,2026-09-01
@@ -5210,6 +5290,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,26151537800000.0,KZT,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,CONSTRUCTION,5530680665000.0,KZT,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,CORPORATE_TAX,2095759.61536381,million KZT,minfin,2026-09-01,level,2026-09-01
+2021-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,23.5,per 1000 population,bns,2026-09-01,level,2026-09-01
+2021-12-31,KZ,national,annual,CRUDE_DEATH_RATE,9.61,per 1000 population,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,DEATHS_TOTAL,182403.0,persons,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,DOCTORS_TOTAL,78227.0,persons,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,ELECTRICITY_PRODUCTION,115078200000.0,kWh,bns,2026-09-01,level,2026-09-01
@@ -5246,6 +5328,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,105.9,% of prior period,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,104.7,% of prior period,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,IND_PROD_MINING,101.9,% of prior period,bns,2026-09-01,level,2026-09-01
+2021-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,8.44,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,61996110900000.0,KZT,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,INVESTMENT,13242233420000.0,KZT,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,8423400.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
@@ -5265,17 +5348,20 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-31,KZ,national,annual,RENEWABLE_ENERGY_SHARE,3.46,%,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,RETAIL_TRADE,13709321565719.8,KZT,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,107.817815875171,% of prior period,bns,2026-09-01,level,2026-09-01
+2021-12-31,KZ,national,annual,STILLBIRTH_RATE,7.55,per 1000 births,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,SUBSIDIES,305616400000.0,KZT,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,5161134000000.0,KZT,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,TAX_REVENUE,7057943.92913867,million KZT,minfin,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,TELECOM_SERVICES,1041324907100.0,KZT,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,52814472900000.0,KZT,bns,2026-09-01,level,2026-09-01
+2021-12-31,KZ,national,annual,TOTAL_FERTILITY_RATE,3.32,children per woman,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,TOURISM_EMPLOYMENT,463084.0,persons,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,TOURISM_EMPLOYMENT_SHARE,5.3,% of total employed,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,TOURISM_GDP_SHARE,1.0,% of GDP,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,TOURISM_INBOUND_CONSUMPTION,324516492000.0,KZT,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,TOURISM_OUTBOUND_CONSUMPTION,727678375000.0,KZT,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,TOURISM_VALUE_ADDED,572512483000.0,KZT,bns,2026-09-01,level,2026-09-01
+2021-12-31,KZ,national,annual,UNDER5_MORTALITY_RATE,10.08,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,VAT_REVENUE,2807690.80407635,million KZT,minfin,2026-09-01,level,2026-09-01
 2021-12-31,KZ,national,annual,WHOLESALE_TRADE,31097958278359.0,KZT,bns,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,BANK_ROA,4.23,%,nbk,2026-09-01,level,2026-09-01
@@ -5956,6 +6042,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,31556468900000.0,KZT,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,CONSTRUCTION,6304274070000.0,KZT,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,CORPORATE_TAX,2920802.77481614,million KZT,minfin,2026-09-01,level,2026-09-01
+2022-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,20.57,per 1000 population,bns,2026-09-01,level,2026-09-01
+2022-12-31,KZ,national,annual,CRUDE_DEATH_RATE,6.8,per 1000 population,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,DEATHS_TOTAL,133523.0,persons,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,DOCTORS_TOTAL,79261.0,persons,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,ELECTRICITY_PRODUCTION,113552100000.0,kWh,bns,2026-09-01,level,2026-09-01
@@ -5992,6 +6080,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,100.4,% of prior period,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,103.6,% of prior period,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,IND_PROD_MINING,99.1,% of prior period,bns,2026-09-01,level,2026-09-01
+2022-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,7.69,per 1000 live births,bns,2026-09-01,level,2026-09-01
+2022-12-31,KZ,national,annual,INNOVATION_EXPENDITURE,1453339140566.61,KZT,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,74559143400000.0,KZT,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,INVESTMENT,15251104090000.0,KZT,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,10083200.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
@@ -6011,11 +6101,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-31,KZ,national,annual,RENEWABLE_ENERGY_SHARE,4.438,%,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,RETAIL_TRADE,16748110269401.7,KZT,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,RETAIL_TRADE_VOLUME_INDEX,105.771305328741,% of prior period,bns,2026-09-01,level,2026-09-01
+2022-12-31,KZ,national,annual,STILLBIRTH_RATE,6.85,per 1000 births,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,SUBSIDIES,381405800000.0,KZT,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,7779408500000.0,KZT,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,TAX_REVENUE,10026825.0326842,million KZT,minfin,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,TELECOM_SERVICES,1121083977900.0,KZT,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,62193315900000.0,KZT,bns,2026-09-01,level,2026-09-01
+2022-12-31,KZ,national,annual,TOTAL_FERTILITY_RATE,3.05,children per woman,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,TOURISM_DOMESTIC_TRIPS,8607600.0,trips,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,TOURISM_EMPLOYMENT,488632.0,persons,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,TOURISM_EMPLOYMENT_SHARE,5.4,% of total employed,bns,2026-09-01,level,2026-09-01
@@ -6026,6 +6118,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-31,KZ,national,annual,TOURISM_OUTBOUND_CONSUMPTION,1163033132000.0,KZT,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,TOURISM_OUTBOUND_TRIPS,7670000.0,trips,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,TOURISM_VALUE_ADDED,1001040102000.0,KZT,bns,2026-09-01,level,2026-09-01
+2022-12-31,KZ,national,annual,UNDER5_MORTALITY_RATE,9.88,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,VAT_REVENUE,4226358.8257289,million KZT,minfin,2026-09-01,level,2026-09-01
 2022-12-31,KZ,national,annual,WHOLESALE_TRADE,36178420393631.1,KZT,bns,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,BANK_ROA,4.2,%,nbk,2026-09-01,level,2026-09-01
@@ -6964,6 +7057,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,36821377300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,CONSTRUCTION,7612810331000.0,KZT,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,CORPORATE_TAX,3889594.50796711,million KZT,minfin,2026-09-01,level,2026-09-01
+2023-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,19.52,per 1000 population,bns,2026-09-01,level,2026-09-01
+2023-12-31,KZ,national,annual,CRUDE_DEATH_RATE,6.57,per 1000 population,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,DEATHS_TOTAL,130686.0,persons,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,DOCTORS_TOTAL,81285.0,persons,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,ELECTRICITY_PRODUCTION,113585469000.0,kWh,bns,2026-09-01,level,2026-09-01
@@ -7003,6 +7098,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,IND_PROD_ELECTRICITY,105.4,% of prior period,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,IND_PROD_MANUFACTURING,104.0,% of prior period,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,IND_PROD_MINING,104.9,% of prior period,bns,2026-09-01,level,2026-09-01
+2023-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,7.67,per 1000 live births,bns,2026-09-01,level,2026-09-01
+2023-12-31,KZ,national,annual,INNOVATION_EXPENDITURE,1820818482304.93,KZT,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,72813967800000.0,KZT,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,11354200.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,LIFE_EXPECTANCY,901.08,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -7025,12 +7122,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,STATE_BUDGET_EXPENDITURE,26760000.2949759,million KZT,minfin,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,STATE_BUDGET_REVENUE,24917246.139965,million KZT,minfin,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,STATE_NON_OIL_DEFICIT,-8454245.45480962,million KZT,minfin,2026-09-01,level,2026-09-01
+2023-12-31,KZ,national,annual,STILLBIRTH_RATE,6.11,per 1000 births,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,SUBSIDIES,980720000000.0,KZT,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,SUBVENTIONS_REPUBLICAN,4995054.752,million KZT,minfin,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,9180745300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,TAX_REVENUE,12912428.2566707,million KZT,minfin,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,TELECOM_SERVICES,1233940515000.0,KZT,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,75154867300000.0,KZT,bns,2026-09-01,level,2026-09-01
+2023-12-31,KZ,national,annual,TOTAL_FERTILITY_RATE,2.96,children per woman,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,TOURISM_DOMESTIC_TRIPS,9569700.0,trips,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,TOURISM_EMPLOYMENT,498465.0,persons,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,TOURISM_EMPLOYMENT_SHARE,5.5,% of total employed,bns,2026-09-01,level,2026-09-01
@@ -7041,6 +7140,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,TOURISM_OUTBOUND_CONSUMPTION,1603823664000.0,KZT,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,TOURISM_OUTBOUND_TRIPS,10523700.0,trips,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,TOURISM_VALUE_ADDED,1184374222000.0,KZT,bns,2026-09-01,level,2026-09-01
+2023-12-31,KZ,national,annual,UNDER5_MORTALITY_RATE,10.03,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,VAT_REVENUE,5674110.63979825,million KZT,minfin,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,WHOLESALE_TRADE,41701686605244.6,KZT,bns,2026-09-01,level,2026-09-01
@@ -8015,6 +8115,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,42403123300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,CONSTRUCTION,9062096500000.0,KZT,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,CORPORATE_TAX,3653190.79919306,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,18.15,per 1000 population,bns,2026-09-01,level,2026-09-01
+2024-12-31,KZ,national,annual,CRUDE_DEATH_RATE,6.59,per 1000 population,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,DEATHS_TOTAL,132916.0,persons,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,DOCTORS_TOTAL,83379.0,persons,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,ELECTRICITY_PRODUCTION,118716605000.0,kWh,bns,2026-09-01,level,2026-09-01
@@ -8051,6 +8153,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,HOUSING_COMMISSIONED,941.1,m2 per 1000 population,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,105.8,% change vs previous period,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,INDIVIDUAL_INCOME_TAX,2451639.95926796,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,6.8,per 1000 live births,bns,2026-09-01,level,2026-09-01
+2024-12-31,KZ,national,annual,INNOVATION_EXPENDITURE,2301542754339.46,KZT,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,77857582400000.0,KZT,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,12886000.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,LIFE_EXPECTANCY,905.28,months (divide by 12 for years),bns,2026-09-01,level,2026-09-01
@@ -8078,12 +8182,14 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,STATE_BUDGET_EXPENDITURE,30318236.4587978,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,STATE_BUDGET_REVENUE,27132164.9675629,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,STATE_NON_OIL_DEFICIT,-10784415.598412,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-12-31,KZ,national,annual,STILLBIRTH_RATE,5.7,per 1000 births,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,SUBSIDIES,1122348400000.0,KZT,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,SUBVENTIONS_REPUBLICAN,5265026.806,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,8713991300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,TAX_REVENUE,12307809.76802,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,TELECOM_SERVICES,1404320066500.0,KZT,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,88245450300000.0,KZT,bns,2026-09-01,level,2026-09-01
+2024-12-31,KZ,national,annual,TOTAL_FERTILITY_RATE,2.8,children per woman,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,TOURISM_DOMESTIC_TRIPS,7824431.0,trips,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,TOURISM_EMPLOYMENT,613802.0,persons,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,TOURISM_EMPLOYMENT_SHARE,6.7,% of total employed,bns,2026-09-01,level,2026-09-01
@@ -8094,6 +8200,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,TOURISM_OUTBOUND_CONSUMPTION,1900336590000.0,KZT,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,TOURISM_OUTBOUND_TRIPS,11960747.0,trips,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,TOURISM_VALUE_ADDED,1418487547000.0,KZT,bns,2026-09-01,level,2026-09-01
+2024-12-31,KZ,national,annual,UNDER5_MORTALITY_RATE,9.3,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,VAT_REVENUE,5179378.10249218,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,WHOLESALE_TRADE,47164111273837.5,KZT,bns,2026-09-01,level,2026-09-01
@@ -9187,6 +9294,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,49384094700000.0,KZT,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,CONSTRUCTION,10846962615000.0,KZT,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,CORPORATE_TAX,4532987.45772564,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-12-31,KZ,national,annual,CRUDE_BIRTH_RATE,16.43,per 1000 population,bns,2026-09-01,level,2026-09-01
+2025-12-31,KZ,national,annual,CRUDE_DEATH_RATE,6.61,per 1000 population,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,DEATHS_TOTAL,134735.0,persons,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,EMISSIONS,2280913.7341199997,metric tonnes,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,EMPLOYED_TOTAL,9320639.0,persons,bns,2026-09-01,level,2026-09-01
@@ -9224,6 +9333,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,HOUSING_COMMISSIONED,986.2,m2 per 1000 population,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,IMPORT_VOLUME_INDEX,109.0,% change vs previous period,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,INDIVIDUAL_INCOME_TAX,2859192.3635777,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-12-31,KZ,national,annual,INFANT_MORTALITY_RATE,5.85,per 1000 live births,bns,2026-09-01,level,2026-09-01
+2025-12-31,KZ,national,annual,INNOVATION_EXPENDITURE,1594333924704.16,KZT,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,INTERMEDIATE_CONSUMPTION,93919024900000.0,KZT,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,LABOR_PRODUCTIVITY,14791000.0,KZT per employed person,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,MIGRATION_ARRIVALS,23761.0,persons,bns,2026-09-01,level,2026-09-01
@@ -9248,12 +9359,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,STATE_BUDGET_EXPENDITURE,33442828.7686143,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,STATE_BUDGET_REVENUE,29871047.8198312,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,STATE_NON_OIL_DEFICIT,-11393479.3915288,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-12-31,KZ,national,annual,STILLBIRTH_RATE,5.58,per 1000 births,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,SUBSIDIES,1304819600000.0,KZT,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,SUBVENTIONS_REPUBLICAN,5755110.6055,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,TAXES_ON_PRODUCTS,9903977600000.0,KZT,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,TAX_REVENUE,14463081.1377124,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,TELECOM_SERVICES,1500112639900.0,KZT,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,TOTAL_CONSUMPTION_EXPENDITURE,105045369900000.0,KZT,bns,2026-09-01,level,2026-09-01
+2025-12-31,KZ,national,annual,TOTAL_FERTILITY_RATE,2.57,children per woman,bns,2026-09-01,level,2026-09-01
+2025-12-31,KZ,national,annual,UNDER5_MORTALITY_RATE,8.1,per 1000 live births,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,VAT_REVENUE,6111842.33836617,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,0.39885,% of GDP,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-09-01,level,2026-09-01

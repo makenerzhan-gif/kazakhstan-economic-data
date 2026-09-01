@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703845",
+  "indicator_id": "STILLBIRTH_RATE",
+  "indicator_name": "Stillbirth Rate",
+  "description": "Коэффициент мертворождаемости",
+  "frequency": "annual",
+  "unit": "per 1000 births",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Stillbirths per 1000 births (Taldau code 61210501).",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2009-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

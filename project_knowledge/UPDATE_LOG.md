@@ -1502,3 +1502,57 @@ field is not consumed by the unified builder or metadata, so this is a catalogue
 fix only.
 
 **Still 280/280 indicators, all four agencies verified live.** `pytest tests/ -q` — 29/29.
+
+## 2026-09-01 — thirty-ninth batch: the Taldau browser dependency is GONE (280 -> 287)
+The long-standing BNS blocker is solved. Multi-dictionary Taldau indexes — fertility,
+mortality, ICT, R&D and the rest — no longer need a live browser session to obtain their
+parameters. **Two plain HTTP calls now do it**, which turns BNS from roughly two browser
+round-trips per indicator into the same batch workflow used for NBK.
+
+### The method
+1. `GET /ru/NewIndex/GetIndex/<INDEX_ID>?keyword=` and scrape the server-rendered JS literal
+   for `options.measure.id` — that is `p_measure_id`. It must be `options.measure`, **not**
+   `preferredMeasure`, which lists alternative display units and would give a wrong measure.
+2. `POST /ru/NewIndex/GetSegmentList` with `node=<ID>&indexId=<ID>&periodId=<P>&keyword=`
+   returns the valid dictionary combinations. Element `[0]` is the site's own default (its
+   `indexShortController.fOnSectionStoreLoad` does `var selRec = rec[0];`); `p_dicIds` is
+   that element's `dicId` split on `+`, and `p_terms` is its `termIds` verbatim.
+
+No cookies, session or CSRF token are involved.
+
+### It was verified before being used, not taken on trust
+The method came out of a multi-agent investigation whose independent verification phase
+never ran (the agents hit a usage limit), so it arrived as **one agent's unverified claim**.
+It was therefore re-tested here from scratch against three parameter sets captured by
+browser in *earlier* sessions — independent ground truth the investigation never saw:
+LIFE_EXPECTANCY/703906 (measure 154, dicIds 67,64,576), RETAIL_TRADE/702038 (measure 1,
+dicIds 67,59,676, 3 segments) and CONSTRUCTION/701885 (dicIds 68,60,71,2987, 6 segments).
+All three reproduced exactly, and RETAIL_TRADE's fetched value matched the already-shipped
+series (27.7 trillion KZT).
+
+### The trap in this method, and a bug in my own check for it
+Segment `[0]` is only the *default* selection — it is **not** guaranteed to be a total. For
+indexId 703694 (households with ICT) it resolves to the device type "Телевизор"; for 702755
+(enterprises with innovations) to "Подвергавшиеся усовершенствованию + Дополнительные
+услуги". Publishing either under the index's general name would be plainly wrong.
+
+The prober therefore flags whether every term is a total — and that check was itself wrong
+at first: `termNames` are separated by `' + '`, not by commas, so splitting on commas made
+the whole multi-term string count as a total merely because it contained "РЕСПУБЛИКА". Fixed
+to split on `+`, after which 702755 and the age-specific fertility index 703842 (15-19 лет)
+were correctly reclassified as slices and excluded.
+
+### BNS (7)
+- **CRUDE_BIRTH_RATE** (16.43 per 1000, 24 pts from 2001), **CRUDE_DEATH_RATE** (6.61),
+  **TOTAL_FERTILITY_RATE** (2.57 children), **INFANT_MORTALITY_RATE** (5.85 per 1000 live
+  births), **UNDER5_MORTALITY_RATE** (8.10), **STILLBIRTH_RATE** (5.58).
+- **INNOVATION_EXPENDITURE** (1.59 trillion KZT, published only from 2022).
+
+**Independent arithmetic cross-check.** The published rates were checked against series
+already in the dataset: `BIRTHS_TOTAL / POPULATION_BNS × 1000` reproduces the published
+CRUDE_BIRTH_RATE to two decimals for every year 2021-2025, and the same holds for deaths
+and CRUDE_DEATH_RATE. The 2021 death rate of 9.61 against a normal ~6.6 is the COVID spike,
+which is the right shape for that year.
+
+**287/287 confirmed indicators connected end-to-end** (76/76 BNS re-verified live).
+`pytest tests/ -q` — 29/29 passing.

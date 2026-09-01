@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-77212253",
+  "indicator_id": "TOTAL_FERTILITY_RATE",
+  "indicator_name": "Total Fertility Rate",
+  "description": "Суммарный коэффициент рождаемости",
+  "frequency": "annual",
+  "unit": "children per woman",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Average number of children a woman would bear over her lifetime at current age-specific fertility rates (Taldau code 61210102).",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2018-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
