@@ -257,6 +257,102 @@ agencies:
           year-on-year fall consistent with Kazakhstan cutting back from its 2025 record. And
           ~100 Mt of 2025 output against OIL_EXPORTS_VOLUME's 76.3 Mt is a 76%% export ratio,
           with the rest refined domestically. fetch_oil_production.
+      INDUSTRIAL_OUTPUT:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
+        format: xlsx
+        notes: >
+          2026-09-01. Sheet 2 of the monthly publication 'Основные показатели работы
+          промышленности', the same source as OIL_PRODUCTION. This is what answers the audit's
+          STALENESS finding: the existing IND_PROD and its three sub-indices are ANNUAL and stop
+          at 2023 because they come from the stat.gov.kz cubes, which are no longer updated. The
+          publication layer carries the same concepts monthly and current.
+          Column layout read from the sheet's own header: [enterprises, previous month,
+          reporting month, year-to-date, index vs previous month, index vs same month last year,
+          index for period]. After dropping non-numeric cells those are positions 0..6, so
+          values are at 1 and 2 and the year-on-year index at 5.
+          THE UNIT IS WRITTEN THREE WAYS across editions -- 'млн. теңге', 'млн.теңге' and
+          'млн. тенге' (Russian е for Kazakh ң). All three are the same unit, so the guard
+          strips whitespace and accepts either spelling; it fired twice during development,
+          which is how the variants were found. Same class of inconsistency as the
+          Latin/Cyrillic H in Minfin's sheets.
+          Value series gain two points per edition (reporting and previous month), the index
+          series one. Accumulated across runs -- only about three editions stay online.
+          Internal check at July 2026: mining 2,539,304 + manufacturing 2,605,482 = 5,144,786
+          against total industry 5,479,507, the 334,721 difference being electricity and water
+          supply, which the same sheet reports separately. fetch_industrial_output.
+      INDUSTRIAL_PRODUCTION_INDEX:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
+        format: xlsx
+        notes: >
+          2026-09-01. Sheet 2 of the monthly publication 'Основные показатели работы
+          промышленности', the same source as OIL_PRODUCTION. This is what answers the audit's
+          STALENESS finding: the existing IND_PROD and its three sub-indices are ANNUAL and stop
+          at 2023 because they come from the stat.gov.kz cubes, which are no longer updated. The
+          publication layer carries the same concepts monthly and current.
+          Column layout read from the sheet's own header: [enterprises, previous month,
+          reporting month, year-to-date, index vs previous month, index vs same month last year,
+          index for period]. After dropping non-numeric cells those are positions 0..6, so
+          values are at 1 and 2 and the year-on-year index at 5.
+          THE UNIT IS WRITTEN THREE WAYS across editions -- 'млн. теңге', 'млн.теңге' and
+          'млн. тенге' (Russian е for Kazakh ң). All three are the same unit, so the guard
+          strips whitespace and accepts either spelling; it fired twice during development,
+          which is how the variants were found. Same class of inconsistency as the
+          Latin/Cyrillic H in Minfin's sheets.
+          Value series gain two points per edition (reporting and previous month), the index
+          series one. Accumulated across runs -- only about three editions stay online.
+          Internal check at July 2026: mining 2,539,304 + manufacturing 2,605,482 = 5,144,786
+          against total industry 5,479,507, the 334,721 difference being electricity and water
+          supply, which the same sheet reports separately. fetch_industrial_production_index.
+      MINING_OUTPUT:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
+        format: xlsx
+        notes: >
+          2026-09-01. Sheet 2 of the monthly publication 'Основные показатели работы
+          промышленности', the same source as OIL_PRODUCTION. This is what answers the audit's
+          STALENESS finding: the existing IND_PROD and its three sub-indices are ANNUAL and stop
+          at 2023 because they come from the stat.gov.kz cubes, which are no longer updated. The
+          publication layer carries the same concepts monthly and current.
+          Column layout read from the sheet's own header: [enterprises, previous month,
+          reporting month, year-to-date, index vs previous month, index vs same month last year,
+          index for period]. After dropping non-numeric cells those are positions 0..6, so
+          values are at 1 and 2 and the year-on-year index at 5.
+          THE UNIT IS WRITTEN THREE WAYS across editions -- 'млн. теңге', 'млн.теңге' and
+          'млн. тенге' (Russian е for Kazakh ң). All three are the same unit, so the guard
+          strips whitespace and accepts either spelling; it fired twice during development,
+          which is how the variants were found. Same class of inconsistency as the
+          Latin/Cyrillic H in Minfin's sheets.
+          Value series gain two points per edition (reporting and previous month), the index
+          series one. Accumulated across runs -- only about three editions stay online.
+          Internal check at July 2026: mining 2,539,304 + manufacturing 2,605,482 = 5,144,786
+          against total industry 5,479,507, the 334,721 difference being electricity and water
+          supply, which the same sheet reports separately. fetch_mining_output.
+      MANUFACTURING_OUTPUT:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
+        format: xlsx
+        notes: >
+          2026-09-01. Sheet 2 of the monthly publication 'Основные показатели работы
+          промышленности', the same source as OIL_PRODUCTION. This is what answers the audit's
+          STALENESS finding: the existing IND_PROD and its three sub-indices are ANNUAL and stop
+          at 2023 because they come from the stat.gov.kz cubes, which are no longer updated. The
+          publication layer carries the same concepts monthly and current.
+          Column layout read from the sheet's own header: [enterprises, previous month,
+          reporting month, year-to-date, index vs previous month, index vs same month last year,
+          index for period]. After dropping non-numeric cells those are positions 0..6, so
+          values are at 1 and 2 and the year-on-year index at 5.
+          THE UNIT IS WRITTEN THREE WAYS across editions -- 'млн. теңге', 'млн.теңге' and
+          'млн. тенге' (Russian е for Kazakh ң). All three are the same unit, so the guard
+          strips whitespace and accepts either spelling; it fired twice during development,
+          which is how the variants were found. Same class of inconsistency as the
+          Latin/Cyrillic H in Minfin's sheets.
+          Value series gain two points per edition (reporting and previous month), the index
+          series one. Accumulated across runs -- only about three editions stay online.
+          Internal check at July 2026: mining 2,539,304 + manufacturing 2,605,482 = 5,144,786
+          against total industry 5,479,507, the 334,721 difference being electricity and water
+          supply, which the same sheet reports separately. fetch_manufacturing_output.
       IMPORTS:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/open-data/international-trade/474299/"

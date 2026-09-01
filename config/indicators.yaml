@@ -2633,6 +2633,42 @@ indicators:
     category: production
     source_status: confirmed
 
+  - id: INDUSTRIAL_OUTPUT
+    name_ru: "Объём промышленного производства"
+    name_en: "Industrial Output"
+    agency: bns
+    frequency: monthly
+    unit: "million KZT"
+    category: production
+    source_status: confirmed
+
+  - id: INDUSTRIAL_PRODUCTION_INDEX
+    name_ru: "Индекс промышленного производства (г/г)"
+    name_en: "Industrial Production Index (year-on-year)"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: production
+    source_status: confirmed
+
+  - id: MINING_OUTPUT
+    name_ru: "Объём горнодобывающей промышленности"
+    name_en: "Mining and Quarrying Output"
+    agency: bns
+    frequency: monthly
+    unit: "million KZT"
+    category: production
+    source_status: confirmed
+
+  - id: MANUFACTURING_OUTPUT
+    name_ru: "Объём обрабатывающей промышленности"
+    name_en: "Manufacturing Output"
+    agency: bns
+    frequency: monthly
+    unit: "million KZT"
+    category: production
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

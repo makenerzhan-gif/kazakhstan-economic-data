@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/",
+  "dataset_id": "osnovnye-pokazateli-promyshlennosti/sheet-2/Обрабатывающая промышленность",
+  "indicator_id": "MANUFACTURING_OUTPUT",
+  "indicator_name": "Manufacturing Output",
+  "description": "Объём обрабатывающей промышленности",
+  "frequency": "monthly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT. Value of manufacturing output -- the non-extractive half of industry, and the usual measure of diversification progress.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

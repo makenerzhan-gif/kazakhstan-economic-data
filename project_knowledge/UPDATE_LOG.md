@@ -2012,3 +2012,36 @@ oil misses came from stopping at the first layer.
   asserted it.
 
 **332/332 indicators** (97/97 BNS re-verified live). `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — monthly industry, and the staleness finding answered (332 -> 336)
+Sheet 2 of the same publication that supplied OIL_PRODUCTION. This is what answers the
+audit's **staleness** finding rather than its coverage findings: IND_PROD and its three
+sub-indices are annual and stop at **2023**, because they come from the stat.gov.kz cubes,
+which are no longer updated. The publication layer carries the same concepts monthly and
+current.
+
+**BNS (4):** INDUSTRIAL_OUTPUT (5.48 trillion KZT in July 2026),
+INDUSTRIAL_PRODUCTION_INDEX (year-on-year, 100.1), MINING_OUTPUT and MANUFACTURING_OUTPUT.
+The two sector series give the resource-versus-processing split the dataset lacked.
+
+The old annual series are left in place rather than deleted: they hold 2009-2023 history the
+monthly ones cannot reach, and the note on each new indicator says which is which.
+
+### The unit is written three different ways
+The guard on the value unit **fired twice during development**, and each time it was a real
+variant, not a false alarm: editions write it as `млн. теңге`, `млн.теңге` (no space) and
+`млн. тенге` (Russian **е** for Kazakh **ң**). Same unit every time. The check now strips
+whitespace and accepts either spelling — the same class of source inconsistency as the
+Latin/Cyrillic **Н** found earlier in Minfin's property-tax rows.
+
+Worth stating plainly: the guard was written to catch a rescaling, and what it actually
+caught was spelling drift. It still earned its place — without it, a genuine unit change
+would pass silently, and the two variants would have been discovered only by someone
+noticing odd numbers later.
+
+### Internal check
+At July 2026: mining 2,539,304 + manufacturing 2,605,482 = 5,144,786 against total industry
+5,479,507. The 334,721 difference is electricity and water supply, which the same sheet
+reports separately (water alone is 54,991) — so the sector rows account for the total.
+
+**336/336 indicators** (101/101 BNS re-verified live). `pytest tests/ -q` — 29/29 passing.

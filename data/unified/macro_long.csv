@@ -12947,6 +12947,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,monthly,IMPORTS,5953097.255370033,thousand USD,bns,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,62.585911,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.306987,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,monthly,INDUSTRIAL_OUTPUT,6513070.117,million KZT,bns,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.4,%,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,169656.553,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,240772.281,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
@@ -12969,6 +12970,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,monthly,M1,11371521.41482119,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,M2,44720043.05891928,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,M3,51109915.90503468,million KZT,nbk,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,monthly,MANUFACTURING_OUTPUT,2727895.633,million KZT,bns,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,monthly,MINING_OUTPUT,3414221.652,million KZT,bns,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,MONETARY_BASE,14749112.049475,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,62395.954207779934,USD million,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,19.683435,% of GDP,nbk,2026-09-01,level,2026-09-01
@@ -13089,6 +13092,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_FX,27228.60639047,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_KZT,2648863.86277529,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,IMPORTS,5137288.100680034,thousand USD,bns,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,INDUSTRIAL_OUTPUT,6279730.444,million KZT,bns,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,INDUSTRIAL_PRODUCTION_INDEX,104.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.7,%,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,227726.191,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,345627.144,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
@@ -13104,6 +13109,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,M1,11361233.27153154,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,M2,44943738.90924224,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,M3,51730546.95427494,million KZT,nbk,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,MANUFACTURING_OUTPUT,2721991.63,million KZT,bns,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,MINING_OUTPUT,3231994.66,million KZT,bns,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,MONETARY_BASE,14919074.741085,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,64823.338208291025,USD million,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,330.0,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -13214,6 +13221,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_FX,28669.6287538,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_KZT,2559183.22184333,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,IMPORTS,5443409.308769996,thousand USD,bns,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,INDUSTRIAL_OUTPUT,6554362.641,million KZT,bns,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,INDUSTRIAL_PRODUCTION_INDEX,108.2,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.4,%,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,278228.595,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,433074.004,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
@@ -13229,6 +13238,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,M1,11665813.59581034,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,M2,45687176.62063083,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,M3,52675374.91634965,million KZT,nbk,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,MANUFACTURING_OUTPUT,3242313.531,million KZT,bns,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,MINING_OUTPUT,2992675.016,million KZT,bns,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,MONETARY_BASE,14840823.139114,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,460.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,NEER,81.56805,index,nbk,2026-09-01,level,2026-09-01
@@ -13360,6 +13371,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,quarterly,IMPORTERS_SHARE,24.921585,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,61.819219,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.354719,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,INDUSTRIAL_OUTPUT,5479507.203,million KZT,bns,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,INDUSTRIAL_PRODUCTION_INDEX,100.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.1,%,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,341927.311,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,584071.888,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
@@ -13382,6 +13395,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,monthly,M1,12114106.83320511,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,M2,48128860.57983734,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,M3,55000216.68318795,million KZT,nbk,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,MANUFACTURING_OUTPUT,2605481.499,million KZT,bns,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,MINING_OUTPUT,2539303.673,million KZT,bns,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,MONETARY_BASE,15579703.801876,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,65497.97934542998,USD million,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,460.0,billion KZT,nbk,2026-09-01,level,2026-09-01

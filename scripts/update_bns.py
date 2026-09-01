@@ -120,6 +120,10 @@ FETCHERS = {
     "OIL_EXPORTS_VOLUME": bns_fetchers.fetch_oil_exports_volume,
     "OIL_EXPORTS_VALUE": bns_fetchers.fetch_oil_exports_value,
     "OIL_PRODUCTION": bns_fetchers.fetch_oil_production,
+    "INDUSTRIAL_OUTPUT": bns_fetchers.fetch_industrial_output,
+    "INDUSTRIAL_PRODUCTION_INDEX": bns_fetchers.fetch_industrial_production_index,
+    "MINING_OUTPUT": bns_fetchers.fetch_mining_output,
+    "MANUFACTURING_OUTPUT": bns_fetchers.fetch_manufacturing_output,
 }
 
 INDICATOR_IDS = [
@@ -180,6 +184,10 @@ INDICATOR_IDS = [
     "OIL_EXPORTS_VOLUME",
     "OIL_EXPORTS_VALUE",
     "OIL_PRODUCTION",
+    "INDUSTRIAL_OUTPUT",
+    "INDUSTRIAL_PRODUCTION_INDEX",
+    "MINING_OUTPUT",
+    "MANUFACTURING_OUTPUT",
 ]
 
 

@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/",
+  "dataset_id": "osnovnye-pokazateli-promyshlennosti/sheet-2/Горнодобывающая промышленность",
+  "indicator_id": "MINING_OUTPUT",
+  "indicator_name": "Mining and Quarrying Output",
+  "description": "Объём горнодобывающей промышленности",
+  "frequency": "monthly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT. Value of output of mining and quarrying -- the sector that carries Kazakhstan's oil, gas, coal and ore extraction. Read against MANUFACTURING_OUTPUT for the resource-versus-processing split.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

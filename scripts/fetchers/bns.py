@@ -2440,3 +2440,186 @@ def fetch_oil_production() -> tuple[list[dict], dict]:
                 "hardcoded, because editions are republished under new ids.",
     }
     return records, manifest
+
+
+# ---------------------------------------------------------------------------
+# Monthly industrial output and the industrial production index, from sheet 2
+# of the same "Основные показатели работы промышленности" publication that
+# supplies OIL_PRODUCTION.
+#
+# This is what fixes the audit's staleness finding: the existing IND_PROD and
+# its three sub-indices are ANNUAL and stop at 2023, because they come from the
+# stat.gov.kz cubes, which have not been updated since. The publication layer
+# carries the same concepts MONTHLY and current.
+#
+# Sheet 2 column layout, read from its own header (row 3 states the unit as
+# "млн. теңге"): [number of enterprises, previous month, reporting month,
+# year-to-date, index vs previous month, index vs same month last year, index
+# for the period vs same period last year]. After dropping non-numeric cells
+# those land at positions 0..6, so value columns are 1 and 2 and the
+# year-on-year index is 5.
+#
+# As with OIL_PRODUCTION, the site keeps only about three monthly editions, so
+# these series ACCUMULATE across runs. Value series gain two points per edition
+# (reporting month and the previous month); the index series gains one, because
+# the sheet publishes an index only for the reporting month.
+# ---------------------------------------------------------------------------
+INDUSTRY_SHEET_VALUES = "2"
+# The unit is written three different ways across editions: "млн. теңге", "млн.теңге"
+# (no space) and "млн. тенге" (Russian е instead of Kazakh ң). Same unit each time, so the
+# check strips whitespace and accepts either spelling rather than demanding one form --
+# the same class of source inconsistency as the Latin/Cyrillic H seen in Minfin's sheets.
+INDUSTRY_UNIT_PREFIX = "млн."
+INDUSTRY_UNIT_WORDS = ("теңге", "тенге")
+
+
+def _industry_publication_rows(sheet_name: str, row_marker: str, indicator_id: str) -> list[tuple]:
+    """Yield (published_date, numeric_cells) for every edition carrying the row.
+
+    Element ids are resolved from the page each run rather than hardcoded --
+    editions are republished under new ids.
+    """
+    found = []
+    for eid in _industry_publication_elements():
+        url = f"https://stat.gov.kz/api/iblock/element/{eid}/file/ru/"
+        try:
+            content = _download(url)
+            wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+        except Exception:
+            continue
+        sheet = next((s for s in wb.sheetnames if s.strip() == sheet_name), None)
+        if sheet is None:
+            continue
+
+        published = None
+        for sh in ("Обложка", "Метаданные"):
+            if sh not in wb.sheetnames:
+                continue
+            for row in wb[sh].iter_rows(max_row=20, values_only=True):
+                for cell in row:
+                    if isinstance(cell, str):
+                        m = PUBLISHED_RE.search(cell)
+                        if m:
+                            published = date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+                            break
+                if published:
+                    break
+            if published:
+                break
+        if published is None:
+            continue
+
+        ws = wb[sheet]
+        unit_ok = False
+        target = None
+        for row in ws.iter_rows(values_only=True):
+            for cell in row[:9]:
+                if isinstance(cell, str):
+                    flat = "".join(cell.split())
+                    if INDUSTRY_UNIT_PREFIX in flat and any(w in flat for w in INDUSTRY_UNIT_WORDS):
+                        unit_ok = True
+            label = next((c for c in row[:2] if isinstance(c, str)), "")
+            if target is None and label.strip().startswith(row_marker):
+                target = [c for c in row if isinstance(c, (int, float))]
+        if target is None:
+            continue
+        if not unit_ok:
+            raise validation.StructuralChangeError(
+                "\n".join([
+                    f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                    f"WHAT CHANGED: sheet {sheet_name!r} of element {eid} no longer declares its unit "
+                    f"as {INDUSTRY_UNIT_PREFIX!r} plus one of {INDUSTRY_UNIT_WORDS!r}",
+                    "EXPECTED: the value columns are million KZT; a changed unit would rescale the "
+                    "whole series silently",
+                    f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+                ])
+            )
+        _save_raw(f"{indicator_id}_{eid}", content, "xlsx",
+                  {"source_url": url, "element_id": eid, "published": published.isoformat(),
+                   "sheet": sheet_name, "row": row_marker})
+        found.append((published, target))
+    return found
+
+
+def _fetch_industry_series(row_marker: str, indicator_id: str, note: str,
+                           index_series: bool = False) -> tuple[list[dict], dict]:
+    existing = {}
+    path = (Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE
+            / f"{indicator_id.lower()}.csv")
+    if path.exists():
+        with path.open(encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                try:
+                    existing[row["date"]] = float(row["value"])
+                except (KeyError, TypeError, ValueError):
+                    continue
+
+    fetched: dict[str, float] = {}
+    for published, nums in _industry_publication_rows(INDUSTRY_SHEET_VALUES, row_marker, indicator_id):
+        if len(nums) < 6:
+            continue
+        rep_y, rep_m = (published.year, published.month - 1) if published.month > 1 else (published.year - 1, 12)
+        if index_series:
+            fetched[f"{rep_y:04d}-{rep_m:02d}-01"] = float(nums[5])
+        else:
+            fetched[f"{rep_y:04d}-{rep_m:02d}-01"] = float(nums[2])
+            prev_y, prev_m = (rep_y, rep_m - 1) if rep_m > 1 else (rep_y - 1, 12)
+            fetched[f"{prev_y:04d}-{prev_m:02d}-01"] = float(nums[1])
+
+    merged = {**existing, **fetched}
+    if not merged:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: no edition on {INDUSTRY_PAGE_URL} carried sheet "
+                f"{INDUSTRY_SHEET_VALUES!r} with a row starting {row_marker!r}, and no "
+                "previously processed history exists",
+                f"ACTION REQUIRED: inspect the page and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = [{"date": k, "value": v} for k, v in sorted(merged.items())]
+    manifest = {
+        "frequency": "monthly",
+        "source_url": INDUSTRY_PAGE_URL,
+        "dataset_id": f"osnovnye-pokazateli-promyshlennosti/sheet-2/{row_marker}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def fetch_industrial_output() -> tuple[list[dict], dict]:
+    """Industrial output, million KZT, monthly."""
+    return _fetch_industry_series(
+        "Промышленность", "INDUSTRIAL_OUTPUT",
+        "Million KZT. Value of industrial output (goods and services), all industry. Monthly and "
+        "current, unlike the existing IND_PROD, which is an annual index from the stat.gov.kz "
+        "cubes and stops at 2023. Accumulated across runs because the source keeps only about "
+        "three monthly editions online.")
+
+
+def fetch_industrial_production_index() -> tuple[list[dict], dict]:
+    """Industrial production index, same month previous year = 100, monthly."""
+    return _fetch_industry_series(
+        "Промышленность", "INDUSTRIAL_PRODUCTION_INDEX",
+        "Index, same month of the previous year = 100. The monthly, current replacement for the "
+        "annual IND_PROD series, which stops at 2023. One point per edition, since the sheet "
+        "publishes an index only for the reporting month.",
+        index_series=True)
+
+
+def fetch_mining_output() -> tuple[list[dict], dict]:
+    """Mining and quarrying output, million KZT, monthly."""
+    return _fetch_industry_series(
+        "Горнодобывающая промышленность", "MINING_OUTPUT",
+        "Million KZT. Value of output of mining and quarrying -- the sector that carries "
+        "Kazakhstan's oil, gas, coal and ore extraction. Read against MANUFACTURING_OUTPUT for "
+        "the resource-versus-processing split.")
+
+
+def fetch_manufacturing_output() -> tuple[list[dict], dict]:
+    """Manufacturing output, million KZT, monthly."""
+    return _fetch_industry_series(
+        "Обрабатывающая промышленность", "MANUFACTURING_OUTPUT",
+        "Million KZT. Value of manufacturing output -- the non-extractive half of industry, and "
+        "the usual measure of diversification progress.")
