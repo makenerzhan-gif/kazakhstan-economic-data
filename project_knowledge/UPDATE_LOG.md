@@ -2075,3 +2075,29 @@ Two fixes, because one was not enough:
 After the fix the series reads 3.46, 4.94, 6.74, 9.51, 11.46 trillion for March-July 2026.
 
 **338/338 indicators** (103/103 BNS re-verified live). `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — export and import price indices (338 -> 340)
+Closes a high-priority external-sector gap. The dataset held physical **volume** indices for
+trade but no **price** indices, so nominal trade movements could not be split into price and
+quantity, and terms of trade could not be built from actual trade at all —
+COMMODITY_TERMS_OF_TRADE from the IMF covers only the commodity basket.
+
+June 2026: export prices **127.8**, import prices **101.6** year on year — a sharp
+terms-of-trade gain, and in the same direction as the oil price over that window.
+
+### Two ways this file could have been read wrong
+- **Its cover carries no publication date**, unlike every other publication used here. The
+  reporting month is taken from the sheet's own header text instead ("Июнь 2026г. к"), which
+  is the better source anyway: it states the period the numbers describe rather than when the
+  file was posted.
+- **The total row carries seven comparisons side by side** — against the previous month,
+  against last December, against the same month a year earlier, against December 2020, and
+  three quarterly ones. Only the third is a normal year-on-year monthly index. Picking the
+  wrong column would have produced a series that passes any plausibility check while meaning
+  something else entirely: the December-2020 base column reads **234.4** for exports, which
+  looks like a perfectly reasonable index number.
+
+One edition sits on the page at a time, so the series accumulates across runs and starts with
+a single point — stated rather than padded.
+
+**340/340 indicators** (105/105 BNS re-verified live). `pytest tests/ -q` — 29/29 passing.

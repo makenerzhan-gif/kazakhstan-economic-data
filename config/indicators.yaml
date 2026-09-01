@@ -2687,6 +2687,24 @@ indicators:
     category: investment
     source_status: confirmed
 
+  - id: EXPORT_PRICE_INDEX
+    name_ru: "Индекс цен экспортных поставок"
+    name_en: "Export Price Index"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+
+  - id: IMPORT_PRICE_INDEX
+    name_ru: "Индекс цен импортных поступлений"
+    name_en: "Import Price Index"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

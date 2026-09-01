@@ -13326,6 +13326,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-30,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,1883810.5566879504,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,CUSTOMS_DUTIES,1164587.90739074,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,daily,EXCHANGE_RATE,485.82,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,monthly,EXPORT_PRICE_INDEX,127.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,quarterly,GDP_NOMINAL,70948693300000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
 2026-06-30,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,455695.2147,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,440478.89100685,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
@@ -13333,6 +13334,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-30,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,2454119.434,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,259102.49153863,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,GOV_WAGES_EXPENDITURE,488809.26609373,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,monthly,IMPORT_PRICE_INDEX,101.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,LAND_TAX,5038.70880023,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,1307364.60597941,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,878932.72843332,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01

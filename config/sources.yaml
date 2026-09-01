@@ -383,6 +383,36 @@ agencies:
           year-to-date index against the same period a year earlier (106-110 across March-July
           2026). The real-terms companion to the current-price value series.
           fetch_investment_index.
+      EXPORT_PRICE_INDEX:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/economy/prices/"
+        format: xlsx
+        notes: >
+          2026-09-01. Publication 'Индекс цен экспортных поставок / импортных поступлений
+          товаров', prices section. Closes a high-priority external-sector gap: the dataset held
+          physical VOLUME indices for trade but no PRICE indices, so nominal trade moves could
+          not be split into price and quantity, and terms of trade could not be built from
+          actual trade at all (COMMODITY_TERMS_OF_TRADE from the IMF covers only the commodity
+          basket).
+          Two details that make this file easy to get wrong:
+          (1) Its cover carries NO publication date, unlike every other publication used here.
+          The reporting month is taken from the sheet's own header text ('Июнь 2026г. к'),
+          which is better anyway -- it states the period the numbers describe rather than when
+          the file was posted.
+          (2) The total row carries SEVEN comparisons side by side: against the previous month,
+          against last December, against the same month a year earlier, against December 2020,
+          and three quarterly ones. Only the third is a normal year-on-year monthly index.
+          Choosing wrong would give a series that passes any plausibility check while meaning
+          something else -- the December-2020 base column reads 234.4 for exports.
+          June 2026: exports 127.8, imports 101.6 year on year. One edition is on the page at a
+          time, so the series accumulates across runs. fetch_export_price_index.
+      IMPORT_PRICE_INDEX:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/economy/prices/"
+        format: xlsx
+        notes: >
+          2026-09-01. Sheet 2 of the same publication as EXPORT_PRICE_INDEX, row 'Импорт -
+          всего', same column and same caveats. fetch_import_price_index.
       IMPORTS:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/open-data/international-trade/474299/"

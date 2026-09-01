@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/economy/prices/",
+  "dataset_id": "indeks-cen-vneshney-torgovli/sheet-2/Импорт - всего",
+  "indicator_id": "IMPORT_PRICE_INDEX",
+  "indicator_name": "Import Price Index",
+  "description": "Индекс цен импортных поступлений",
+  "frequency": "monthly",
+  "unit": "index, same month previous year = 100",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, same month of the previous year = 100. Price of Kazakhstan's goods imports, on the same basis and from the same publication as EXPORT_PRICE_INDEX.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-06-30",
+  "period_end": "2026-06-30",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

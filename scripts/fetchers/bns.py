@@ -2823,3 +2823,125 @@ def fetch_investment_index() -> tuple[list[dict], dict]:
         "Index, same period of the previous year = 100, year-to-date. The real-terms companion to "
         "INVESTMENT_FIXED_CAPITAL, which is in current prices.",
         unit_check=False)
+
+
+MONTH_END_DAYS = {1:31,2:28,3:31,4:30,5:31,6:30,7:31,8:31,9:30,10:31,11:30,12:31}
+
+
+# ---------------------------------------------------------------------------
+# EXPORT_PRICE_INDEX / IMPORT_PRICE_INDEX: from the prices section publication
+# "Индекс цен экспортных поставок / импортных поступлений товаров".
+#
+# The sector audit listed export and import price indices as a high-priority
+# external-sector gap: the dataset held physical VOLUME indices for trade but no
+# price indices, so nominal trade movements could not be split into price and
+# quantity, and terms of trade could not be built from actual trade at all.
+# (COMMODITY_TERMS_OF_TRADE from the IMF covers the commodity basket only.)
+#
+# Two details make this file easy to get wrong:
+#
+# 1. Its cover carries NO publication date -- unlike every other publication
+#    used here. The reporting month is instead taken from the sheet's own header
+#    text, "Июнь 2026г. к", which is more reliable anyway: it states the period
+#    the numbers describe rather than when the file was posted.
+#
+# 2. Row 5 carries SEVEN different comparisons side by side: against the previous
+#    month, against last December, against the same month a year earlier, against
+#    December 2020, and three quarterly ones. Only the third is a normal
+#    year-on-year monthly index. Picking the wrong column would produce a series
+#    that looks entirely plausible -- the December-2020 base column reads 234.4
+#    for exports, which would pass any range check while meaning something else
+#    completely.
+# ---------------------------------------------------------------------------
+TRADE_PRICE_PAGE_URL = "https://stat.gov.kz/ru/industries/economy/prices/"
+TRADE_PRICE_HEADER_RE = re.compile(r"([А-Яа-яЁё]+)\s+(\d{4})\s*г\.?\s*к")
+TRADE_PRICE_YOY_INDEX = 2  # 0: vs previous month, 1: vs last December, 2: vs same month last year
+
+
+def _fetch_trade_price_index(sheet_prefix: str, row_marker: str, indicator_id: str,
+                             note: str) -> tuple[list[dict], dict]:
+    existing = {}
+    path = (Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE
+            / f"{indicator_id.lower()}.csv")
+    if path.exists():
+        with path.open(encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                try:
+                    existing[row["date"]] = float(row["value"])
+                except (KeyError, TypeError, ValueError):
+                    continue
+
+    fetched: dict[str, float] = {}
+    for eid in _publication_elements(TRADE_PRICE_PAGE_URL, indicator_id):
+        url = f"https://stat.gov.kz/api/iblock/element/{eid}/file/ru/"
+        try:
+            content = _download(url)
+            wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+        except Exception:
+            continue
+        sheet = next((s for s in wb.sheetnames if s.strip().rstrip(".") == sheet_prefix), None)
+        if sheet is None:
+            continue
+
+        rep = None
+        target = None
+        for row in wb[sheet].iter_rows(values_only=True):
+            for cell in row[:6]:
+                if rep is None and isinstance(cell, str):
+                    m = TRADE_PRICE_HEADER_RE.search(cell)
+                    if m and m.group(1).lower() in RU_MONTHS:
+                        rep = (int(m.group(2)), RU_MONTHS[m.group(1).lower()])
+            label = next((c for c in row[:2] if isinstance(c, str)), "")
+            if target is None and label.strip().startswith(row_marker):
+                target = [c for c in row if isinstance(c, (int, float))]
+        if rep is None or target is None or len(target) <= TRADE_PRICE_YOY_INDEX:
+            continue
+
+        _save_raw(f"{indicator_id}_{eid}", content, "xlsx",
+                  {"source_url": url, "element_id": eid,
+                   "reporting_month": f"{rep[0]:04d}-{rep[1]:02d}", "sheet": sheet})
+        year, month = rep
+        last = MONTH_END_DAYS[month] if month != 2 or year % 4 else 29
+        fetched[f"{year:04d}-{month:02d}-{last:02d}"] = float(target[TRADE_PRICE_YOY_INDEX])
+
+    merged = {**existing, **fetched}
+    if not merged:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: no publication on {TRADE_PRICE_PAGE_URL} carried a sheet "
+                f"{sheet_prefix!r} with a row starting {row_marker!r} and a parseable "
+                "'<Month> <year>г. к' header, and no processed history exists",
+                "ACTION REQUIRED: inspect the page and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = [{"date": k, "value": v} for k, v in sorted(merged.items())]
+    manifest = {
+        "frequency": "monthly",
+        "source_url": TRADE_PRICE_PAGE_URL,
+        "dataset_id": f"indeks-cen-vneshney-torgovli/sheet-{sheet_prefix}/{row_marker}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def fetch_export_price_index() -> tuple[list[dict], dict]:
+    """Export price index, same month previous year = 100, monthly."""
+    return _fetch_trade_price_index(
+        "1", "Экспорт - всего", "EXPORT_PRICE_INDEX",
+        "Index, same month of the previous year = 100. Price of Kazakhstan's goods exports. The "
+        "dataset previously held only physical VOLUME indices for trade, so nominal moves could "
+        "not be split into price and quantity. Read against IMPORT_PRICE_INDEX for terms of "
+        "trade across all goods -- broader than COMMODITY_TERMS_OF_TRADE, which covers the "
+        "commodity basket only. The source sheet also publishes six other comparisons on the "
+        "same row (against last December, against December 2020, and three quarterly ones); "
+        "this is specifically the year-on-year monthly one.")
+
+
+def fetch_import_price_index() -> tuple[list[dict], dict]:
+    """Import price index, same month previous year = 100, monthly."""
+    return _fetch_trade_price_index(
+        "2", "Импорт - всего", "IMPORT_PRICE_INDEX",
+        "Index, same month of the previous year = 100. Price of Kazakhstan's goods imports, on "
+        "the same basis and from the same publication as EXPORT_PRICE_INDEX.")
