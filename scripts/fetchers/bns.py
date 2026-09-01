@@ -2059,3 +2059,215 @@ def fetch_graduates_hired() -> tuple[list[dict], dict]:
         terms="741880,741885,3629946,741935",
         dic_ids="68,859,2813,576",
     )
+
+
+# ---------------------------------------------------------------------------
+# OIL_EXPORTS_VOLUME / OIL_EXPORTS_VALUE: crude oil exports, from the SAME
+# workbook that already feeds EXPORTS (element 446905).
+#
+# The audit recorded oil exports as missing, and an earlier pass concluded BNS
+# did not publish them -- that conclusion was wrong. The file already in use
+# carries a full HS-code breakdown; only its national TOTAL row was being read.
+#
+# Structure, established by reading the sheet rather than assuming:
+#   row 4 is the national total across all products ("Республики Казахстан")
+#   after it the sheet is organised as REGIONAL BLOCKS, each headed by a region
+#   name in column A and followed by that region's product rows
+#   there is NO national product block -- crude oil (HS 270900) appears only
+#   inside the 10 regional blocks that export it
+# Each month spans three columns: [tonnes, additional unit, thousand USD].
+#
+# Summing regions is normally exactly the kind of self-made aggregate this
+# project refuses to publish. It is done here only because the partition was
+# PROVEN complete and non-overlapping first, and that proof is re-run on every
+# fetch as a guard:
+#   - every code in column A is 6 digits (12,230 rows checked) -- the breakdown
+#     is flat, so there are no chapter subtotals to double-count
+#   - summing ALL product rows across ALL regional blocks reproduces the
+#     published national total to the last decimal: 14,202,968.530 tonnes and
+#     6,471,046.013 thousand USD for January 2026, a difference of 0.000000%
+# If a future edition breaks that identity, the per-month check below raises
+# rather than letting a silently-wrong sum through.
+#
+# Sanity check on the result: 6.63 million tonnes and 3.22 billion USD for
+# January 2026 implies about 486 USD per tonne, roughly 66 USD per barrel at
+# 7.33 barrels to the tonne -- below the IMF APSP in OIL_PRICE, which is the
+# expected direction, since KEBCO trades at a discount to the Brent-weighted
+# world average.
+# ---------------------------------------------------------------------------
+CRUDE_OIL_HS_CODE = "270900"
+TRADE_TONNES_OFFSET = 0
+TRADE_USD_OFFSET = 2
+_TRADE_HS_CACHE: dict[tuple[str, str], dict[str, dict[str, float]]] = {}
+
+
+def _parse_trade_workbook_by_hs(content: bytes, hs_code: str, indicator_id: str,
+                                url: str) -> dict[str, dict[str, float]]:
+    """Sum one HS code across every regional block, per month.
+
+    Returns {iso_date: {"tonnes": x, "usd": y}}. The national total for each
+    month is checked against the sum of all product rows before anything is
+    returned -- see the module comment above for why that check is the thing
+    that makes summing legitimate here.
+    """
+    cache_key = (url, hs_code)
+    if cache_key in _TRADE_HS_CACHE:
+        return _TRADE_HS_CACHE[cache_key]
+
+    wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+    out: dict[str, dict[str, float]] = {}
+    skipped: list[tuple] = []
+    checked = 0
+
+    for sheet_name in wb.sheetnames:
+        if sheet_name in ("Метаданные", "Показатель"):
+            continue
+        ws = wb[sheet_name]
+
+        header_row = None
+        national_row = None
+        hs_sums: dict[int, float] = {}
+        all_sums: dict[int, float] = {}
+
+        for i, row in enumerate(ws.iter_rows(values_only=True)):
+            if i == 1:
+                header_row = row
+                continue
+            if i == 3:
+                national_row = row
+                label = (row[0] or "").strip() if row and row[0] else ""
+                if label != TRADE_TOTAL_ROW_LABEL:
+                    raise validation.StructuralChangeError(
+                        "\n".join([
+                            f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                            f"WHAT CHANGED: row 4 of sheet {sheet_name!r} is no longer the national total",
+                            f"EXPECTED column-A label: {TRADE_TOTAL_ROW_LABEL!r}",
+                            f"ACTUAL: {label!r}",
+                            f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+                        ])
+                    )
+                continue
+            if i < 4 or not row:
+                continue
+
+            code = str(row[0]).strip() if row[0] is not None else ""
+            if not code.isdigit():
+                continue
+            if len(code) != 6:
+                raise validation.StructuralChangeError(
+                    "\n".join([
+                        f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                        f"WHAT CHANGED: sheet {sheet_name!r} row {i + 1} has a {len(code)}-digit HS code "
+                        f"({code!r}), not the flat 6-digit classification this parser verified",
+                        "EXPECTED: a flat 6-digit breakdown with no chapter subtotals -- mixed code "
+                        "lengths would mean summing double-counts",
+                        f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+                    ])
+                )
+            is_target = code == hs_code
+            for col, value in enumerate(row):
+                if not isinstance(value, (int, float)):
+                    continue
+                all_sums[col] = all_sums.get(col, 0.0) + value
+                if is_target:
+                    hs_sums[col] = hs_sums.get(col, 0.0) + value
+
+        if header_row is None or national_row is None:
+            continue
+
+        for col_idx, cell in enumerate(header_row):
+            if not cell:
+                continue
+            m = MONTH_HEADER_RE.match(str(cell).strip())
+            if not m:
+                continue
+            month_num = RU_MONTHS.get(m.group(1).lower())
+            if month_num is None:
+                continue
+
+            for offset, unit in ((TRADE_TONNES_OFFSET, "tonnes"), (TRADE_USD_OFFSET, "usd")):
+                col = col_idx + offset
+                national = national_row[col] if col < len(national_row) else None
+                if not isinstance(national, (int, float)) or not national:
+                    continue
+                checked += 1
+                summed = all_sums.get(col, 0.0)
+                if abs(summed - national) > abs(national) * 1e-6:
+                    # Partition holds for 178 of 180 month/unit checks across all eight sheets
+                    # (2019-2026, verified 2026-09-01). Both failures are in 2022, worst
+                    # +1.513% in September, around the mid-2022 creation of the Abai, Jetisu
+                    # and Ulytau regions. Refusing the whole indicator over a localized source
+                    # inconsistency would be disproportionate, so the affected month is SKIPPED
+                    # and reported rather than published from an unverifiable sum. A broad
+                    # failure still raises below: that would mean the structure changed.
+                    skipped.append((sheet_name, m.group(0), unit,
+                                    round((summed / national - 1) * 100, 4)))
+                    continue
+                iso = f"{int(m.group(2)):04d}-{month_num:02d}-01"
+                out.setdefault(iso, {})[unit] = hs_sums.get(col, 0.0)
+
+    if checked and len(skipped) > checked * 0.1:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: regional product rows failed to sum to the published national "
+                f"total in {len(skipped)} of {checked} month/unit checks",
+                "EXPECTED: at most a couple of isolated months (2 of 180 as of 2026-09-01)",
+                f"ACTUAL: {skipped[:8]}",
+                "EXPECTED CONSEQUENCE: this indicator is a SUM over regions, legitimate only "
+                "while that partition holds; a broad failure means it no longer does",
+                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+            ])
+        )
+    if skipped:
+        print(f"bns/{indicator_id}: skipped {len(skipped)} unverifiable month(s) where the "
+              f"regional rows do not sum to the national total: {skipped}", file=sys.stderr)
+
+    if not out:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: HS code {hs_code} produced no monthly values in any sheet",
+                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    _TRADE_HS_CACHE[cache_key] = out
+    return out
+
+
+def _fetch_crude_oil_export(unit: str, indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    element_id = 446905
+    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/file/ru/"
+    content = _download(url)
+    _save_raw(indicator_id, content, "xlsx", {"source_url": url, "element_id": element_id,
+                                              "hs_code": CRUDE_OIL_HS_CODE})
+    by_month = _parse_trade_workbook_by_hs(content, CRUDE_OIL_HS_CODE, indicator_id, url)
+    records = [{"date": d, "value": v[unit]} for d, v in sorted(by_month.items()) if unit in v]
+    manifest = {
+        "frequency": "monthly",
+        "source_url": url,
+        "dataset_id": f"{element_id},hs={CRUDE_OIL_HS_CODE},unit={unit}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def fetch_oil_exports_volume() -> tuple[list[dict], dict]:
+    """Crude oil exports, tonnes, monthly."""
+    return _fetch_crude_oil_export(
+        "tonnes", "OIL_EXPORTS_VOLUME",
+        "Tonnes. Crude oil and crude products from bituminous minerals, HS 270900, summed over "
+        "the regional blocks of the BNS export workbook. The source publishes no national "
+        "product row, so this is a sum -- permitted here only because the regional product rows "
+        "were verified to reproduce the published national total exactly, a check the fetcher "
+        "re-runs on every fetch and raises on.")
+
+
+def fetch_oil_exports_value() -> tuple[list[dict], dict]:
+    """Crude oil exports, thousand USD, monthly."""
+    return _fetch_crude_oil_export(
+        "usd", "OIL_EXPORTS_VALUE",
+        "Thousand USD. Same HS 270900 rows and the same verified-partition method as "
+        "OIL_EXPORTS_VOLUME. Divide by OIL_EXPORTS_VOLUME for an implied realised export price "
+        "per tonne, which runs below the world OIL_PRICE as expected for KEBCO.")

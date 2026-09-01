@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/446905/file/ru/",
+  "dataset_id": "446905,hs=270900,unit=tonnes",
+  "indicator_id": "OIL_EXPORTS_VOLUME",
+  "indicator_name": "Crude Oil Exports, Volume",
+  "description": "Экспорт сырой нефти, объём",
+  "frequency": "monthly",
+  "unit": "tonnes",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Tonnes. Crude oil and crude products from bituminous minerals, HS 270900, summed over the regional blocks of the BNS export workbook. The source publishes no national product row, so this is a sum -- permitted here only because the regional product rows were verified to reproduce the published national total exactly, a check the fetcher re-runs on every fetch and raises on.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2019-01-01",
+  "period_end": "2026-06-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

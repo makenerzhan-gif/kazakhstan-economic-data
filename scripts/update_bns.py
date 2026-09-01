@@ -117,6 +117,8 @@ FETCHERS = {
     "HOUSING_INVESTMENT": bns_fetchers.fetch_housing_investment,
     "ICT_SPECIALISTS": bns_fetchers.fetch_ict_specialists,
     "GRADUATES_HIRED": bns_fetchers.fetch_graduates_hired,
+    "OIL_EXPORTS_VOLUME": bns_fetchers.fetch_oil_exports_volume,
+    "OIL_EXPORTS_VALUE": bns_fetchers.fetch_oil_exports_value,
 }
 
 INDICATOR_IDS = [
@@ -174,6 +176,8 @@ INDICATOR_IDS = [
     "HOUSING_INVESTMENT",
     "ICT_SPECIALISTS",
     "GRADUATES_HIRED",
+    "OIL_EXPORTS_VOLUME",
+    "OIL_EXPORTS_VALUE",
 ]
 
 

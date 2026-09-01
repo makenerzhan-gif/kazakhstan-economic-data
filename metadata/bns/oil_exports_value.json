@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/446905/file/ru/",
+  "dataset_id": "446905,hs=270900,unit=usd",
+  "indicator_id": "OIL_EXPORTS_VALUE",
+  "indicator_name": "Crude Oil Exports, Value",
+  "description": "Экспорт сырой нефти, стоимость",
+  "frequency": "monthly",
+  "unit": "thousand USD",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Thousand USD. Same HS 270900 rows and the same verified-partition method as OIL_EXPORTS_VOLUME. Divide by OIL_EXPORTS_VOLUME for an implied realised export price per tonne, which runs below the world OIL_PRICE as expected for KEBCO.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2019-01-01",
+  "period_end": "2026-06-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

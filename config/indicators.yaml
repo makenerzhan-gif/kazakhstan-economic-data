@@ -2606,6 +2606,24 @@ indicators:
     category: fiscal
     source_status: confirmed
 
+  - id: OIL_EXPORTS_VOLUME
+    name_ru: "Экспорт сырой нефти, объём"
+    name_en: "Crude Oil Exports, Volume"
+    agency: bns
+    frequency: monthly
+    unit: "tonnes"
+    category: trade
+    source_status: confirmed
+
+  - id: OIL_EXPORTS_VALUE
+    name_ru: "Экспорт сырой нефти, стоимость"
+    name_en: "Crude Oil Exports, Value"
+    agency: bns
+    frequency: monthly
+    unit: "thousand USD"
+    category: trade
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

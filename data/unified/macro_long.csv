@@ -5044,6 +5044,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-01-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57987.80596043727,USD million,nbk,2026-09-01,level,2026-09-01
 2019-01-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,32.334402,% of GDP,nbk,2026-09-01,level,2026-09-01
 2019-01-01,KZ,national,monthly,NEER,89.59003,index,nbk,2026-09-01,level,2026-09-01
+2019-01-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3335703.6214,thousand USD,bns,2026-09-01,level,2026-09-01
+2019-01-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6458923.609,tonnes,bns,2026-09-01,level,2026-09-01
 2019-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,21.84127,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2019-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,28.634921,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2019-01-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,3.047619,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -5070,6 +5072,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.8,%,nbk,2026-09-01,level,2026-09-01
 2019-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59467.161237699314,USD million,nbk,2026-09-01,level,2026-09-01
 2019-02-01,KZ,national,monthly,NEER,89.8572,index,nbk,2026-09-01,level,2026-09-01
+2019-02-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2620480.8877399997,thousand USD,bns,2026-09-01,level,2026-09-01
+2019-02-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5916925.067,tonnes,bns,2026-09-01,level,2026-09-01
 2019-02-01,KZ,national,monthly,REER,95.44558,index,nbk,2026-09-01,level,2026-09-01
 2019-02-28,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,78.9355773925781,index,imf,2026-09-01,level,2026-09-01
 2019-02-28,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,83.9094848632813,index,imf,2026-09-01,level,2026-09-01
@@ -5082,6 +5086,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.6,%,nbk,2026-09-01,level,2026-09-01
 2019-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60448.2917834169,USD million,nbk,2026-09-01,level,2026-09-01
 2019-03-01,KZ,national,monthly,NEER,89.51864,index,nbk,2026-09-01,level,2026-09-01
+2019-03-01,KZ,national,monthly,OIL_EXPORTS_VALUE,1491802.4709100001,thousand USD,bns,2026-09-01,level,2026-09-01
+2019-03-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,3672571.312,tonnes,bns,2026-09-01,level,2026-09-01
 2019-03-01,KZ,national,monthly,REER,95.28037,index,nbk,2026-09-01,level,2026-09-01
 2019-03-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,81.0157470703125,index,imf,2026-09-01,level,2026-09-01
 2019-03-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,85.5284881591797,index,imf,2026-09-01,level,2026-09-01
@@ -5131,6 +5137,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-04-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60531.235147699976,USD million,nbk,2026-09-01,level,2026-09-01
 2019-04-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,34.38476,% of GDP,nbk,2026-09-01,level,2026-09-01
 2019-04-01,KZ,national,monthly,NEER,89.42503,index,nbk,2026-09-01,level,2026-09-01
+2019-04-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3035310.9776399997,thousand USD,bns,2026-09-01,level,2026-09-01
+2019-04-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6591446.144,tonnes,bns,2026-09-01,level,2026-09-01
 2019-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,22.163009,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2019-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,29.247649,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2019-04-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,3.134796,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -5157,6 +5165,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.5,%,nbk,2026-09-01,level,2026-09-01
 2019-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60942.35222443004,USD million,nbk,2026-09-01,level,2026-09-01
 2019-05-01,KZ,national,monthly,NEER,89.98454,index,nbk,2026-09-01,level,2026-09-01
+2019-05-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2890835.5038799997,thousand USD,bns,2026-09-01,level,2026-09-01
+2019-05-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5928819.244,tonnes,bns,2026-09-01,level,2026-09-01
 2019-05-01,KZ,national,monthly,REER,96.21192,index,nbk,2026-09-01,level,2026-09-01
 2019-05-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,82.888671875,index,imf,2026-09-01,level,2026-09-01
 2019-05-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,86.5309295654297,index,imf,2026-09-01,level,2026-09-01
@@ -5169,6 +5179,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.2,%,nbk,2026-09-01,level,2026-09-01
 2019-06-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59681.46962567963,USD million,nbk,2026-09-01,level,2026-09-01
 2019-06-01,KZ,national,monthly,NEER,88.74142,index,nbk,2026-09-01,level,2026-09-01
+2019-06-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3115722.5942700002,thousand USD,bns,2026-09-01,level,2026-09-01
+2019-06-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6086999.497,tonnes,bns,2026-09-01,level,2026-09-01
 2019-06-01,KZ,national,monthly,REER,95.08654,index,nbk,2026-09-01,level,2026-09-01
 2019-06-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,76.1440811157227,index,imf,2026-09-01,level,2026-09-01
 2019-06-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,81.5981597900391,index,imf,2026-09-01,level,2026-09-01
@@ -5219,6 +5231,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-07-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59938.38031167057,USD million,nbk,2026-09-01,level,2026-09-01
 2019-07-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,34.23009,% of GDP,nbk,2026-09-01,level,2026-09-01
 2019-07-01,KZ,national,monthly,NEER,88.25201,index,nbk,2026-09-01,level,2026-09-01
+2019-07-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2379436.4498999994,thousand USD,bns,2026-09-01,level,2026-09-01
+2019-07-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,4360519.937,tonnes,bns,2026-09-01,level,2026-09-01
 2019-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,21.324215,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2019-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,27.385763,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2019-07-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,2.735468,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -5245,6 +5259,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.0,%,nbk,2026-09-01,level,2026-09-01
 2019-08-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59863.90740942218,USD million,nbk,2026-09-01,level,2026-09-01
 2019-08-01,KZ,national,monthly,NEER,89.26584,index,nbk,2026-09-01,level,2026-09-01
+2019-08-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2723790.98169,thousand USD,bns,2026-09-01,level,2026-09-01
+2019-08-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5231385.010000001,tonnes,bns,2026-09-01,level,2026-09-01
 2019-08-01,KZ,national,monthly,REER,95.63591,index,nbk,2026-09-01,level,2026-09-01
 2019-08-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,73.6998901367188,index,imf,2026-09-01,level,2026-09-01
 2019-08-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,78.8552627563477,index,imf,2026-09-01,level,2026-09-01
@@ -5257,6 +5273,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,10.0,%,nbk,2026-09-01,level,2026-09-01
 2019-09-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59546.73876374336,USD million,nbk,2026-09-01,level,2026-09-01
 2019-09-01,KZ,national,monthly,NEER,89.46763,index,nbk,2026-09-01,level,2026-09-01
+2019-09-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3324445.64183,thousand USD,bns,2026-09-01,level,2026-09-01
+2019-09-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6860788.906,tonnes,bns,2026-09-01,level,2026-09-01
 2019-09-01,KZ,national,monthly,REER,96.0176,index,nbk,2026-09-01,level,2026-09-01
 2019-09-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,76.2936935424805,index,imf,2026-09-01,level,2026-09-01
 2019-09-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,80.7723007202148,index,imf,2026-09-01,level,2026-09-01
@@ -5307,6 +5325,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-10-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59335.60414495219,USD million,nbk,2026-09-01,level,2026-09-01
 2019-10-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,33.430238,% of GDP,nbk,2026-09-01,level,2026-09-01
 2019-10-01,KZ,national,monthly,NEER,88.59066,index,nbk,2026-09-01,level,2026-09-01
+2019-10-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3023092.7325299997,thousand USD,bns,2026-09-01,level,2026-09-01
+2019-10-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6490546.045,tonnes,bns,2026-09-01,level,2026-09-01
 2019-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,21.270037,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2019-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,27.681874,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2019-10-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,2.527744,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -5333,6 +5353,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.8,%,nbk,2026-09-01,level,2026-09-01
 2019-11-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59905.81605449353,USD million,nbk,2026-09-01,level,2026-09-01
 2019-11-01,KZ,national,monthly,NEER,88.61988,index,nbk,2026-09-01,level,2026-09-01
+2019-11-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2712903.6902899994,thousand USD,bns,2026-09-01,level,2026-09-01
+2019-11-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6043764.51696,tonnes,bns,2026-09-01,level,2026-09-01
 2019-11-01,KZ,national,monthly,REER,95.94146,index,nbk,2026-09-01,level,2026-09-01
 2019-11-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,77.4823379516602,index,imf,2026-09-01,level,2026-09-01
 2019-11-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,81.6605529785156,index,imf,2026-09-01,level,2026-09-01
@@ -5345,6 +5367,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.9,%,nbk,2026-09-01,level,2026-09-01
 2019-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60445.20769224796,USD million,nbk,2026-09-01,level,2026-09-01
 2019-12-01,KZ,national,monthly,NEER,88.85799,index,nbk,2026-09-01,level,2026-09-01
+2019-12-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2931644.7427100004,thousand USD,bns,2026-09-01,level,2026-09-01
+2019-12-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6366034.516,tonnes,bns,2026-09-01,level,2026-09-01
 2019-12-01,KZ,national,monthly,REER,96.59902,index,nbk,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,AGRICULTURE_OUTPUT,5151162951650.0,KZT,bns,2026-09-01,level,2026-09-01
 2019-12-31,KZ,national,annual,AVG_WAGE,186815.0,KZT,bns,2026-09-01,level,2026-09-01
@@ -5533,6 +5557,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,33.431289,% of GDP,nbk,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,monthly,NEER,90.36163,index,nbk,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,quarterly,NPL_RATIO,8.14,%,nbk,2026-09-01,level,2026-09-01
+2020-01-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2591755.8871399993,thousand USD,bns,2026-09-01,level,2026-09-01
+2020-01-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5607103.2496299995,tonnes,bns,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,19.810165,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,26.301286,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,2.418861,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -5565,6 +5591,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.3,%,nbk,2026-09-01,level,2026-09-01
 2020-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,61118.704128278194,USD million,nbk,2026-09-01,level,2026-09-01
 2020-02-01,KZ,national,monthly,NEER,92.35253,index,nbk,2026-09-01,level,2026-09-01
+2020-02-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3111903.52708,thousand USD,bns,2026-09-01,level,2026-09-01
+2020-02-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6445431.899999999,tonnes,bns,2026-09-01,level,2026-09-01
 2020-02-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,35079.59424,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-02-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,3169.187637,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-02-01,KZ,national,monthly,REER,100.82805,index,nbk,2026-09-01,level,2026-09-01
@@ -5582,6 +5610,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.8,%,nbk,2026-09-01,level,2026-09-01
 2020-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59974.28316347415,USD million,nbk,2026-09-01,level,2026-09-01
 2020-03-01,KZ,national,monthly,NEER,86.02553,index,nbk,2026-09-01,level,2026-09-01
+2020-03-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3121131.54412,thousand USD,bns,2026-09-01,level,2026-09-01
+2020-03-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6224699.884,tonnes,bns,2026-09-01,level,2026-09-01
 2020-03-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,38747.63361,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-03-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,3531.62841,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-03-01,KZ,national,monthly,REER,94.70746,index,nbk,2026-09-01,level,2026-09-01
@@ -5649,6 +5679,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-04-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,30.187338,% of GDP,nbk,2026-09-01,level,2026-09-01
 2020-04-01,KZ,national,monthly,NEER,84.72363,index,nbk,2026-09-01,level,2026-09-01
 2020-04-01,KZ,national,quarterly,NPL_RATIO,8.95,%,nbk,2026-09-01,level,2026-09-01
+2020-04-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2763054.47258,thousand USD,bns,2026-09-01,level,2026-09-01
+2020-04-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6216552.517000001,tonnes,bns,2026-09-01,level,2026-09-01
 2020-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,20.409429,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2020-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,18.052109,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2020-04-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,12.158809,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -5680,6 +5712,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.3,%,nbk,2026-09-01,level,2026-09-01
 2020-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58540.57687401371,USD million,nbk,2026-09-01,level,2026-09-01
 2020-05-01,KZ,national,monthly,NEER,86.99154,index,nbk,2026-09-01,level,2026-09-01
+2020-05-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2242126.2687399997,thousand USD,bns,2026-09-01,level,2026-09-01
+2020-05-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6069878.699999999,tonnes,bns,2026-09-01,level,2026-09-01
 2020-05-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,37038.03411,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-05-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,3718.058171,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-05-01,KZ,national,monthly,REER,96.9767,index,nbk,2026-09-01,level,2026-09-01
@@ -5697,6 +5731,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,8.8,%,nbk,2026-09-01,level,2026-09-01
 2020-06-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58483.764862224816,USD million,nbk,2026-09-01,level,2026-09-01
 2020-06-01,KZ,national,monthly,NEER,88.12461,index,nbk,2026-09-01,level,2026-09-01
+2020-06-01,KZ,national,monthly,OIL_EXPORTS_VALUE,1256637.19899,thousand USD,bns,2026-09-01,level,2026-09-01
+2020-06-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6782608.276999999,tonnes,bns,2026-09-01,level,2026-09-01
 2020-06-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,44060.77954,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-06-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,4259.639699,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-06-01,KZ,national,monthly,REER,98.50318,index,nbk,2026-09-01,level,2026-09-01
@@ -5764,6 +5800,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-07-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,31.125975,% of GDP,nbk,2026-09-01,level,2026-09-01
 2020-07-01,KZ,national,monthly,NEER,85.76284,index,nbk,2026-09-01,level,2026-09-01
 2020-07-01,KZ,national,quarterly,NPL_RATIO,8.98,%,nbk,2026-09-01,level,2026-09-01
+2020-07-01,KZ,national,monthly,OIL_EXPORTS_VALUE,724067.95389,thousand USD,bns,2026-09-01,level,2026-09-01
+2020-07-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6231681.261,tonnes,bns,2026-09-01,level,2026-09-01
 2020-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,21.17394,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2020-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,21.266134,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2020-07-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,9.649662,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -5795,6 +5833,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.9,%,nbk,2026-09-01,level,2026-09-01
 2020-08-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58246.67595311005,USD million,nbk,2026-09-01,level,2026-09-01
 2020-08-01,KZ,national,monthly,NEER,83.85377,index,nbk,2026-09-01,level,2026-09-01
+2020-08-01,KZ,national,monthly,OIL_EXPORTS_VALUE,1340585.92528,thousand USD,bns,2026-09-01,level,2026-09-01
+2020-08-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6307874.023000001,tonnes,bns,2026-09-01,level,2026-09-01
 2020-08-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,37714.85918,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-08-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,4818.584835,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-08-01,KZ,national,monthly,REER,93.82322,index,nbk,2026-09-01,level,2026-09-01
@@ -5812,6 +5852,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.3,%,nbk,2026-09-01,level,2026-09-01
 2020-09-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58691.90235390731,USD million,nbk,2026-09-01,level,2026-09-01
 2020-09-01,KZ,national,monthly,NEER,83.40677,index,nbk,2026-09-01,level,2026-09-01
+2020-09-01,KZ,national,monthly,OIL_EXPORTS_VALUE,1576940.4683299998,thousand USD,bns,2026-09-01,level,2026-09-01
+2020-09-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5133334.433,tonnes,bns,2026-09-01,level,2026-09-01
 2020-09-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,36842.80129,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-09-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,5207.90785,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-09-01,KZ,national,monthly,REER,93.53332,index,nbk,2026-09-01,level,2026-09-01
@@ -5879,6 +5921,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-10-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,30.964834,% of GDP,nbk,2026-09-01,level,2026-09-01
 2020-10-01,KZ,national,monthly,NEER,82.83369,index,nbk,2026-09-01,level,2026-09-01
 2020-10-01,KZ,national,quarterly,NPL_RATIO,8.35,%,nbk,2026-09-01,level,2026-09-01
+2020-10-01,KZ,national,monthly,OIL_EXPORTS_VALUE,1747660.0236600002,thousand USD,bns,2026-09-01,level,2026-09-01
+2020-10-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5290588.017,tonnes,bns,2026-09-01,level,2026-09-01
 2020-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,21.916972,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2020-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,22.435897,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2020-10-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,9.157509,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -5910,6 +5954,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.6,%,nbk,2026-09-01,level,2026-09-01
 2020-11-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,56359.71739275148,USD million,nbk,2026-09-01,level,2026-09-01
 2020-11-01,KZ,national,monthly,NEER,82.38411,index,nbk,2026-09-01,level,2026-09-01
+2020-11-01,KZ,national,monthly,OIL_EXPORTS_VALUE,1746882.8661899997,thousand USD,bns,2026-09-01,level,2026-09-01
+2020-11-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5371208.498000001,tonnes,bns,2026-09-01,level,2026-09-01
 2020-11-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,39269.15578,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-11-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,5358.130592,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-11-01,KZ,national,monthly,REER,93.41864,index,nbk,2026-09-01,level,2026-09-01
@@ -5927,6 +5973,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.3,%,nbk,2026-09-01,level,2026-09-01
 2020-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57997.486669803555,USD million,nbk,2026-09-01,level,2026-09-01
 2020-12-01,KZ,national,monthly,NEER,81.99999,index,nbk,2026-09-01,level,2026-09-01
+2020-12-01,KZ,national,monthly,OIL_EXPORTS_VALUE,1481103.48359,thousand USD,bns,2026-09-01,level,2026-09-01
+2020-12-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,4903386.501,tonnes,bns,2026-09-01,level,2026-09-01
 2020-12-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,54346.0172,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-12-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,6440.327683,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-12-01,KZ,national,monthly,REER,93.3453,index,nbk,2026-09-01,level,2026-09-01
@@ -6129,6 +6177,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,32.93257,% of GDP,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,monthly,NEER,82.57278,index,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,NPL_RATIO,6.87,%,nbk,2026-09-01,level,2026-09-01
+2021-01-01,KZ,national,monthly,OIL_EXPORTS_VALUE,1570799.66035,thousand USD,bns,2026-09-01,level,2026-09-01
+2021-01-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5165686.6899999995,tonnes,bns,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,20.900517,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,22.969273,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,8.122908,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -6162,6 +6212,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.5,%,nbk,2026-09-01,level,2026-09-01
 2021-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57706.89584319457,USD million,nbk,2026-09-01,level,2026-09-01
 2021-02-01,KZ,national,monthly,NEER,83.07967,index,nbk,2026-09-01,level,2026-09-01
+2021-02-01,KZ,national,monthly,OIL_EXPORTS_VALUE,1805443.0342100002,thousand USD,bns,2026-09-01,level,2026-09-01
+2021-02-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5300322.223,tonnes,bns,2026-09-01,level,2026-09-01
 2021-02-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,47885.78486,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-02-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,5522.306377,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-02-01,KZ,national,monthly,REER,94.42381,index,nbk,2026-09-01,level,2026-09-01
@@ -6179,6 +6231,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.4,%,nbk,2026-09-01,level,2026-09-01
 2021-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57629.44357273033,USD million,nbk,2026-09-01,level,2026-09-01
 2021-03-01,KZ,national,monthly,NEER,83.6896,index,nbk,2026-09-01,level,2026-09-01
+2021-03-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2208077.73308,thousand USD,bns,2026-09-01,level,2026-09-01
+2021-03-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5719366.954999999,tonnes,bns,2026-09-01,level,2026-09-01
 2021-03-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,44360.54739,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-03-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,6551.362161,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-03-01,KZ,national,monthly,REER,95.32586,index,nbk,2026-09-01,level,2026-09-01
@@ -6250,6 +6304,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-04-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,32.388575,% of GDP,nbk,2026-09-01,level,2026-09-01
 2021-04-01,KZ,national,monthly,NEER,82.16062,index,nbk,2026-09-01,level,2026-09-01
 2021-04-01,KZ,national,quarterly,NPL_RATIO,7.11,%,nbk,2026-09-01,level,2026-09-01
+2021-04-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2411911.4225199996,thousand USD,bns,2026-09-01,level,2026-09-01
+2021-04-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5619453.658000002,tonnes,bns,2026-09-01,level,2026-09-01
 2021-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,22.228952,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2021-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,24.439733,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2021-04-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,7.298607,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -6281,6 +6337,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.3,%,nbk,2026-09-01,level,2026-09-01
 2021-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57687.22025982507,USD million,nbk,2026-09-01,level,2026-09-01
 2021-05-01,KZ,national,monthly,NEER,81.53213,index,nbk,2026-09-01,level,2026-09-01
+2021-05-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2504536.79692,thousand USD,bns,2026-09-01,level,2026-09-01
+2021-05-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5164062.373000001,tonnes,bns,2026-09-01,level,2026-09-01
 2021-05-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,52076.77744,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-05-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,7378.637095,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-05-01,KZ,national,monthly,REER,93.60571,index,nbk,2026-09-01,level,2026-09-01
@@ -6315,6 +6373,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.6,%,nbk,2026-09-01,level,2026-09-01
 2021-06-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58575.159155120135,USD million,nbk,2026-09-01,level,2026-09-01
 2021-06-01,KZ,national,monthly,NEER,81.58859,index,nbk,2026-09-01,level,2026-09-01
+2021-06-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2954423.30018,thousand USD,bns,2026-09-01,level,2026-09-01
+2021-06-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6138355.412,tonnes,bns,2026-09-01,level,2026-09-01
 2021-06-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,53348.6431,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-06-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,8294.625058,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-06-01,KZ,national,monthly,REER,94.44436,index,nbk,2026-09-01,level,2026-09-01
@@ -6413,6 +6473,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,31.308577,% of GDP,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,monthly,NEER,82.84246,index,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,NPL_RATIO,4.78,%,nbk,2026-09-01,level,2026-09-01
+2021-07-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2670641.36639,thousand USD,bns,2026-09-01,level,2026-09-01
+2021-07-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5396831.673,tonnes,bns,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,20.537602,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,23.890063,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,7.30897,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -6467,6 +6529,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.0,%,nbk,2026-09-01,level,2026-09-01
 2021-08-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,56902.75025680897,USD million,nbk,2026-09-01,level,2026-09-01
 2021-08-01,KZ,national,monthly,NEER,83.16268,index,nbk,2026-09-01,level,2026-09-01
+2021-08-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3041619.1635100003,thousand USD,bns,2026-09-01,level,2026-09-01
+2021-08-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5887058.544,tonnes,bns,2026-09-01,level,2026-09-01
 2021-08-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,51272.50229,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-08-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,8537.087975,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-08-01,KZ,national,monthly,REER,96.77603,index,nbk,2026-09-01,level,2026-09-01
@@ -6507,6 +6571,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.5,%,nbk,2026-09-01,level,2026-09-01
 2021-09-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,56862.96737923415,USD million,nbk,2026-09-01,level,2026-09-01
 2021-09-01,KZ,national,monthly,NEER,83.03027,index,nbk,2026-09-01,level,2026-09-01
+2021-09-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3118338.831230001,thousand USD,bns,2026-09-01,level,2026-09-01
+2021-09-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5583370.788,tonnes,bns,2026-09-01,level,2026-09-01
 2021-09-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,69199.6578,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-09-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,8779.4434,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-09-01,KZ,national,monthly,REER,96.66794,index,nbk,2026-09-01,level,2026-09-01
@@ -6613,6 +6679,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,28.860719,% of GDP,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,monthly,NEER,83.23922,index,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,NPL_RATIO,4.3,%,nbk,2026-09-01,level,2026-09-01
+2021-10-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3099172.84396,thousand USD,bns,2026-09-01,level,2026-09-01
+2021-10-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5566982.326,tonnes,bns,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,20.685508,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,22.579675,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,7.396272,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -6675,6 +6743,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.3,%,nbk,2026-09-01,level,2026-09-01
 2021-11-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,55087.02106155323,USD million,nbk,2026-09-01,level,2026-09-01
 2021-11-01,KZ,national,monthly,NEER,83.382,index,nbk,2026-09-01,level,2026-09-01
+2021-11-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2590641.54149,thousand USD,bns,2026-09-01,level,2026-09-01
+2021-11-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,4835854.498,tonnes,bns,2026-09-01,level,2026-09-01
 2021-11-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,65070.52843,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-11-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,9195.266525,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-11-01,KZ,national,monthly,REER,96.87982,index,nbk,2026-09-01,level,2026-09-01
@@ -6728,6 +6798,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-01,KZ,national,monthly,MONETARY_BASE,10476191.53480374,million KZT,nbk,2026-09-01,level,2026-09-01
 2021-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,54918.71230951723,USD million,nbk,2026-09-01,level,2026-09-01
 2021-12-01,KZ,national,monthly,NEER,83.63375,index,nbk,2026-09-01,level,2026-09-01
+2021-12-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3114231.5922899996,thousand USD,bns,2026-09-01,level,2026-09-01
+2021-12-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5330371.902000001,tonnes,bns,2026-09-01,level,2026-09-01
 2021-12-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,67571.11199,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-12-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,10155.19152,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-12-01,KZ,national,monthly,REER,96.99026,index,nbk,2026-09-01,level,2026-09-01
@@ -6972,6 +7044,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,monthly,NEER,86.35498,index,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,annual,NON_CASH_PAYMENTS_SHARE,73.5999984741211,%,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,NPL_RATIO,3.32,%,nbk,2026-09-01,level,2026-09-01
+2022-01-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3669449.2814099994,thousand USD,bns,2026-09-01,level,2026-09-01
+2022-01-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5785958.749000001,tonnes,bns,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,20.10201,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,21.392139,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,7.170717,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -7042,6 +7116,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-02-01,KZ,national,monthly,MONETARY_BASE,10683933.8418,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,53908.2957727797,USD million,nbk,2026-09-01,level,2026-09-01
 2022-02-01,KZ,national,monthly,NEER,86.62761,index,nbk,2026-09-01,level,2026-09-01
+2022-02-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3529974.9842299996,thousand USD,bns,2026-09-01,level,2026-09-01
+2022-02-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5881053.733000001,tonnes,bns,2026-09-01,level,2026-09-01
 2022-02-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,51753.92698,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-02-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,8448.755384,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-02-01,KZ,national,monthly,REER,98.3345,index,nbk,2026-09-01,level,2026-09-01
@@ -7094,6 +7170,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-03-01,KZ,national,monthly,MONETARY_BASE,10764863.00419374,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,53996.323883838384,USD million,nbk,2026-09-01,level,2026-09-01
 2022-03-01,KZ,national,monthly,NEER,83.37146,index,nbk,2026-09-01,level,2026-09-01
+2022-03-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3858695.99332,thousand USD,bns,2026-09-01,level,2026-09-01
+2022-03-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6431112.370999999,tonnes,bns,2026-09-01,level,2026-09-01
 2022-03-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,55324.33289,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-03-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,9855.4,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-03-01,KZ,national,monthly,REER,95.31372,index,nbk,2026-09-01,level,2026-09-01
@@ -7211,6 +7289,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,24.929067,% of GDP,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,monthly,NEER,86.72132,index,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,NPL_RATIO,3.57,%,nbk,2026-09-01,level,2026-09-01
+2022-04-01,KZ,national,monthly,OIL_EXPORTS_VALUE,4429252.1591300005,thousand USD,bns,2026-09-01,level,2026-09-01
+2022-04-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6336200.493000001,tonnes,bns,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,22.075585,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,23.455309,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,7.138572,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -7279,6 +7359,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-05-01,KZ,national,monthly,MONETARY_BASE,9968049.18263374,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,52621.820583583496,USD million,nbk,2026-09-01,level,2026-09-01
 2022-05-01,KZ,national,monthly,NEER,88.01218,index,nbk,2026-09-01,level,2026-09-01
+2022-05-01,KZ,national,monthly,OIL_EXPORTS_VALUE,4589568.44887,thousand USD,bns,2026-09-01,level,2026-09-01
+2022-05-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5791554.147000001,tonnes,bns,2026-09-01,level,2026-09-01
 2022-05-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,50143.81961,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-05-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,9694.960304,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-05-01,KZ,national,monthly,REER,102.28378,index,nbk,2026-09-01,level,2026-09-01
@@ -7334,6 +7416,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-06-01,KZ,national,monthly,MONETARY_BASE,9875007.50521374,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-06-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,53940.08265777606,USD million,nbk,2026-09-01,level,2026-09-01
 2022-06-01,KZ,national,monthly,NEER,82.80766,index,nbk,2026-09-01,level,2026-09-01
+2022-06-01,KZ,national,monthly,OIL_EXPORTS_VALUE,4771524.5109,thousand USD,bns,2026-09-01,level,2026-09-01
+2022-06-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6049752.29,tonnes,bns,2026-09-01,level,2026-09-01
 2022-06-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,57403.50909,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-06-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,10759.21087,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-06-01,KZ,national,monthly,REER,97.19417,index,nbk,2026-09-01,level,2026-09-01
@@ -7450,6 +7534,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,23.533914,% of GDP,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,monthly,NEER,79.42857,index,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,NPL_RATIO,3.61,%,nbk,2026-09-01,level,2026-09-01
+2022-07-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3495967.67386,thousand USD,bns,2026-09-01,level,2026-09-01
+2022-07-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,4678599.882,tonnes,bns,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,21.454219,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,22.890485,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,7.151406,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -7519,6 +7605,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-08-01,KZ,national,monthly,MONETARY_BASE,11579073.55098374,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-08-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,53285.14874153724,USD million,nbk,2026-09-01,level,2026-09-01
 2022-08-01,KZ,national,monthly,NEER,80.57895,index,nbk,2026-09-01,level,2026-09-01
+2022-08-01,KZ,national,monthly,OIL_EXPORTS_VALUE,4300756.915809999,thousand USD,bns,2026-09-01,level,2026-09-01
+2022-08-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5220637.272000001,tonnes,bns,2026-09-01,level,2026-09-01
 2022-08-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,63928.69452,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-08-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,11365.23397,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-08-01,KZ,national,monthly,REER,96.42578,index,nbk,2026-09-01,level,2026-09-01
@@ -7689,6 +7777,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,22.961746,% of GDP,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,monthly,NEER,83.74855,index,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,NPL_RATIO,3.6,%,nbk,2026-09-01,level,2026-09-01
+2022-10-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3947955.7711300002,thousand USD,bns,2026-09-01,level,2026-09-01
+2022-10-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,4917138.808999999,tonnes,bns,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,22.092326,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,23.980815,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,6.684652,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -7759,6 +7849,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-11-01,KZ,national,monthly,MONETARY_BASE,12374432.311,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-11-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,52456.089893242235,USD million,nbk,2026-09-01,level,2026-09-01
 2022-11-01,KZ,national,monthly,NEER,83.61444,index,nbk,2026-09-01,level,2026-09-01
+2022-11-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3394176.5642899997,thousand USD,bns,2026-09-01,level,2026-09-01
+2022-11-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,4831582.3780000005,tonnes,bns,2026-09-01,level,2026-09-01
 2022-11-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,73925.53762,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-11-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,12020.03111,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-11-01,KZ,national,monthly,REER,103.2937,index,nbk,2026-09-01,level,2026-09-01
@@ -7813,6 +7905,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-01,KZ,national,monthly,MONETARY_BASE,11719901.7989044,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,55826.82560162082,USD million,nbk,2026-09-01,level,2026-09-01
 2022-12-01,KZ,national,monthly,NEER,83.03511,index,nbk,2026-09-01,level,2026-09-01
+2022-12-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3167555.86436,thousand USD,bns,2026-09-01,level,2026-09-01
+2022-12-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,4683051.5426,tonnes,bns,2026-09-01,level,2026-09-01
 2022-12-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,63554.23824,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-12-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,13336.31037,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-12-01,KZ,national,monthly,REER,103.47396,index,nbk,2026-09-01,level,2026-09-01
@@ -8081,6 +8175,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,5008923.48052452,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,1424130.9002021104,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,3584792.58032241,million KZT,nbk,2026-09-01,level,2026-09-01
+2023-01-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3218523.0565500003,thousand USD,bns,2026-09-01,level,2026-09-01
+2023-01-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,4587554.794000001,tonnes,bns,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,21.891731,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,22.66508,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,7.733492,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -8170,6 +8266,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-02-01,KZ,national,monthly,MONETARY_BASE,10678781.9439,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57642.869427374,USD million,nbk,2026-09-01,level,2026-09-01
 2023-02-01,KZ,national,monthly,NEER,88.33169,index,nbk,2026-09-01,level,2026-09-01
+2023-02-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3565188.4991399995,thousand USD,bns,2026-09-01,level,2026-09-01
+2023-02-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5672482.413000001,tonnes,bns,2026-09-01,level,2026-09-01
 2023-02-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,58924.08316,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-02-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,10881.7613,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-02-01,KZ,national,monthly,PENSION_FUND_ASSETS,14853794.078,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -8240,6 +8338,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-03-01,KZ,national,monthly,MONETARY_BASE,10047215.38311,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57185.66239738011,USD million,nbk,2026-09-01,level,2026-09-01
 2023-03-01,KZ,national,monthly,NEER,89.2841,index,nbk,2026-09-01,level,2026-09-01
+2023-03-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3456515.35308,thousand USD,bns,2026-09-01,level,2026-09-01
+2023-03-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6351111.066000001,tonnes,bns,2026-09-01,level,2026-09-01
 2023-03-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,61952.83055,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-03-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,12707.40788,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-03-01,KZ,national,monthly,PENSION_FUND_ASSETS,15129613.382,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -8385,6 +8485,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,5188758.525673601,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,1392572.15003751,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,3796186.3756360896,million KZT,nbk,2026-09-01,level,2026-09-01
+2023-04-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3910525.343840001,thousand USD,bns,2026-09-01,level,2026-09-01
+2023-04-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6907714.152,tonnes,bns,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,21.367013,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,23.001486,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,7.161961,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -8472,6 +8574,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-05-01,KZ,national,monthly,MONETARY_BASE,9854370.65854,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58775.23714682723,USD million,nbk,2026-09-01,level,2026-09-01
 2023-05-01,KZ,national,monthly,NEER,91.22016,index,nbk,2026-09-01,level,2026-09-01
+2023-05-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3106881.6965999994,thousand USD,bns,2026-09-01,level,2026-09-01
+2023-05-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5278251.758000001,tonnes,bns,2026-09-01,level,2026-09-01
 2023-05-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,71462.4852,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-05-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,13282.86599,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-05-01,KZ,national,monthly,PENSION_FUND_ASSETS,15675889.399,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -8545,6 +8649,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-06-01,KZ,national,monthly,MONETARY_BASE,9654031.0954,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-06-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59181.10153303729,USD million,nbk,2026-09-01,level,2026-09-01
 2023-06-01,KZ,national,monthly,NEER,92.98425,index,nbk,2026-09-01,level,2026-09-01
+2023-06-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3280000.2646200005,thousand USD,bns,2026-09-01,level,2026-09-01
+2023-06-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5724675.032000001,tonnes,bns,2026-09-01,level,2026-09-01
 2023-06-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,72617.41859,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-06-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,13860.82644,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-06-01,KZ,national,monthly,PENSION_FUND_ASSETS,15841449.026,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -8686,6 +8792,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,5709965.760015231,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-07-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,1295517.8423580404,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-07-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,4414447.917657191,million KZT,nbk,2026-09-01,level,2026-09-01
+2023-07-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3913118.0496,thousand USD,bns,2026-09-01,level,2026-09-01
+2023-07-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6725981.748,tonnes,bns,2026-09-01,level,2026-09-01
 2023-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,21.445568,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2023-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,22.694825,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2023-07-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,6.543724,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -8775,6 +8883,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-08-01,KZ,national,monthly,MONETARY_BASE,9586966.9594,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-08-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60209.223709283295,USD million,nbk,2026-09-01,level,2026-09-01
 2023-08-01,KZ,national,monthly,NEER,95.92466,index,nbk,2026-09-01,level,2026-09-01
+2023-08-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3467652.9581800005,thousand USD,bns,2026-09-01,level,2026-09-01
+2023-08-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6356908.212,tonnes,bns,2026-09-01,level,2026-09-01
 2023-08-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,72294.5942,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-08-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,14910.7928,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-08-01,KZ,national,monthly,PENSION_FUND_ASSETS,16367874.294,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -8836,6 +8946,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-09-01,KZ,national,monthly,MONETARY_BASE,9068157.5302,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-09-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59893.90060693076,USD million,nbk,2026-09-01,level,2026-09-01
 2023-09-01,KZ,national,monthly,NEER,93.90999,index,nbk,2026-09-01,level,2026-09-01
+2023-09-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3249218.20575,thousand USD,bns,2026-09-01,level,2026-09-01
+2023-09-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5883459.799,tonnes,bns,2026-09-01,level,2026-09-01
 2023-09-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,73732.14856,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-09-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,14402.25143,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-09-01,KZ,national,monthly,PENSION_FUND_ASSETS,16761866.08,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -8979,6 +9091,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,6313111.883266029,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,1331759.5420258304,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,4981352.341240198,million KZT,nbk,2026-09-01,level,2026-09-01
+2023-10-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3816316.23492,thousand USD,bns,2026-09-01,level,2026-09-01
+2023-10-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6336616.357999999,tonnes,bns,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,21.405277,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,22.887637,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,5.870145,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -9074,6 +9188,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-11-01,KZ,national,monthly,MONETARY_BASE,9620615.0943,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-11-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,56367.549726403646,USD million,nbk,2026-09-01,level,2026-09-01
 2023-11-01,KZ,national,monthly,NEER,93.4541,index,nbk,2026-09-01,level,2026-09-01
+2023-11-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3384837.28543,thousand USD,bns,2026-09-01,level,2026-09-01
+2023-11-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5113777.365999999,tonnes,bns,2026-09-01,level,2026-09-01
 2023-11-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,87501.27565,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-11-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,15341.3838,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-11-01,KZ,national,monthly,PENSION_FUND_ASSETS,17211707.28,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -9152,6 +9268,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-01,KZ,national,monthly,MONETARY_BASE,10126463.5645,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58642.20391232207,USD million,nbk,2026-09-01,level,2026-09-01
 2023-12-01,KZ,national,monthly,NEER,94.05657,index,nbk,2026-09-01,level,2026-09-01
+2023-12-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3950796.27995,thousand USD,bns,2026-09-01,level,2026-09-01
+2023-12-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5737944.43,tonnes,bns,2026-09-01,level,2026-09-01
 2023-12-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,95774.39632,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-12-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,16795.39806,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-12-01,KZ,national,monthly,PENSION_FUND_ASSETS,17362490.985,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -9445,6 +9563,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,6516696.671835739,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,1266577.88041678,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,5250118.791418958,million KZT,nbk,2026-09-01,level,2026-09-01
+2024-01-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3671269.5445899996,thousand USD,bns,2026-09-01,level,2026-09-01
+2024-01-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5605724.491,tonnes,bns,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,21.647962,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,23.744832,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,6.438275,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -9541,6 +9661,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59492.64758565239,USD million,nbk,2026-09-01,level,2026-09-01
 2024-02-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,600.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-02-01,KZ,national,monthly,NEER,96.71582,index,nbk,2026-09-01,level,2026-09-01
+2024-02-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3645850.00769,thousand USD,bns,2026-09-01,level,2026-09-01
+2024-02-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6136690.695,tonnes,bns,2026-09-01,level,2026-09-01
 2024-02-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,97214.19659,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-02-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,12930.77603,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-02-01,KZ,national,monthly,PENSION_FUND_ASSETS,18103998.684,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -9619,6 +9741,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60169.43563169925,USD million,nbk,2026-09-01,level,2026-09-01
 2024-03-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,400.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-03-01,KZ,national,monthly,NEER,96.93782,index,nbk,2026-09-01,level,2026-09-01
+2024-03-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3545075.8509999993,thousand USD,bns,2026-09-01,level,2026-09-01
+2024-03-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6125370.428,tonnes,bns,2026-09-01,level,2026-09-01
 2024-03-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,100168.4659,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-03-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,13795.49381,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-03-01,KZ,national,monthly,PENSION_FUND_ASSETS,18486445.493,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -9764,6 +9888,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,7333583.13587942,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,1236537.39805054,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,6097045.73782888,million KZT,nbk,2026-09-01,level,2026-09-01
+2024-04-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3786696.6296400004,thousand USD,bns,2026-09-01,level,2026-09-01
+2024-04-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6424269.393,tonnes,bns,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,20.956316,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,23.90791,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,6.257379,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -9859,6 +9985,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59074.958782943104,USD million,nbk,2026-09-01,level,2026-09-01
 2024-05-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,500.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-05-01,KZ,national,monthly,NEER,98.78101,index,nbk,2026-09-01,level,2026-09-01
+2024-05-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3715214.7606,thousand USD,bns,2026-09-01,level,2026-09-01
+2024-05-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6085359.908000001,tonnes,bns,2026-09-01,level,2026-09-01
 2024-05-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,102717.0754,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-05-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,15364.56585,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-05-01,KZ,national,monthly,PENSION_FUND_ASSETS,18923065.937,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -9938,6 +10066,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,61045.06619097999,USD million,nbk,2026-09-01,level,2026-09-01
 2024-06-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,500.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-06-01,KZ,national,monthly,NEER,95.25366,index,nbk,2026-09-01,level,2026-09-01
+2024-06-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3618101.89762,thousand USD,bns,2026-09-01,level,2026-09-01
+2024-06-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5718218.593,tonnes,bns,2026-09-01,level,2026-09-01
 2024-06-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,103928.589,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-06-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,16488.45437,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-06-01,KZ,national,monthly,PENSION_FUND_ASSETS,19167346.514,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -10081,6 +10211,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,8694901.23085306,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,1576603.74641061,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,7118297.48444245,million KZT,nbk,2026-09-01,level,2026-09-01
+2024-07-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3733793.25172,thousand USD,bns,2026-09-01,level,2026-09-01
+2024-07-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5927292.159999999,tonnes,bns,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,19.700088,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,23.11085,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,5.498383,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -10177,6 +10309,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-08-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,61137.57097582994,USD million,nbk,2026-09-01,level,2026-09-01
 2024-08-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,250.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-08-01,KZ,national,monthly,NEER,89.9752,index,nbk,2026-09-01,level,2026-09-01
+2024-08-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3402351.404340001,thousand USD,bns,2026-09-01,level,2026-09-01
+2024-08-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5754482.035,tonnes,bns,2026-09-01,level,2026-09-01
 2024-08-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,113214.2212,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-08-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,17663.36193,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-08-01,KZ,national,monthly,PENSION_FUND_ASSETS,20122295.655,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -10255,6 +10389,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,62548.45229177003,USD million,nbk,2026-09-01,level,2026-09-01
 2024-09-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,450.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-09-01,KZ,national,monthly,NEER,89.73777,index,nbk,2026-09-01,level,2026-09-01
+2024-09-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3721933.0726400004,thousand USD,bns,2026-09-01,level,2026-09-01
+2024-09-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6057673.917,tonnes,bns,2026-09-01,level,2026-09-01
 2024-09-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,115970.8903,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-09-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,16839.23016,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-09-01,KZ,national,monthly,PENSION_FUND_ASSETS,20739588.373,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -10399,6 +10535,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,9348822.63125289,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,1715025.51940712,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,7633797.11184577,million KZT,nbk,2026-09-01,level,2026-09-01
+2024-10-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3412272.75531,thousand USD,bns,2026-09-01,level,2026-09-01
+2024-10-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5621201.662,tonnes,bns,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,20.075647,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,23.508874,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,5.178935,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -10496,6 +10634,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-11-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60582.341938721176,USD million,nbk,2026-09-01,level,2026-09-01
 2024-11-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,640.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-11-01,KZ,national,monthly,NEER,90.85457,index,nbk,2026-09-01,level,2026-09-01
+2024-11-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2923788.49986,thousand USD,bns,2026-09-01,level,2026-09-01
+2024-11-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5006706.711,tonnes,bns,2026-09-01,level,2026-09-01
 2024-11-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,111437.8038,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-11-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,17818.90697,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-11-01,KZ,national,monthly,PENSION_FUND_ASSETS,21376543.654,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -10573,6 +10713,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60885.06549524569,USD million,nbk,2026-09-01,level,2026-09-01
 2024-12-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,635.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-12-01,KZ,national,monthly,NEER,88.09184,index,nbk,2026-09-01,level,2026-09-01
+2024-12-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3708784.7131800004,thousand USD,bns,2026-09-01,level,2026-09-01
+2024-12-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6574445.862,tonnes,bns,2026-09-01,level,2026-09-01
 2024-12-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,129900.2586,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-12-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,19945.79046,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-12-01,KZ,national,monthly,PENSION_FUND_ASSETS,21885502.26,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -10869,6 +11011,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,10415794.88594316,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,2066815.98593159,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,8348978.90001157,million KZT,nbk,2026-09-01,level,2026-09-01
+2025-01-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2728534.420070001,thousand USD,bns,2026-09-01,level,2026-09-01
+2025-01-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,4813543.661,tonnes,bns,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,19.698288,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,23.73078,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,4.989846,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -10967,6 +11111,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58477.64825862991,USD million,nbk,2026-09-01,level,2026-09-01
 2025-02-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,550.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-02-01,KZ,national,monthly,NEER,87.16019,index,nbk,2026-09-01,level,2026-09-01
+2025-02-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3066096.40061,thousand USD,bns,2026-09-01,level,2026-09-01
+2025-02-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5598777.454000001,tonnes,bns,2026-09-01,level,2026-09-01
 2025-02-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,82207.86011,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-02-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,15441.03366,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-02-01,KZ,national,monthly,PENSION_FUND_ASSETS,22352495.405,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -11060,6 +11206,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58865.09691007011,USD million,nbk,2026-09-01,level,2026-09-01
 2025-03-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,450.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-03-01,KZ,national,monthly,NEER,85.83091,index,nbk,2026-09-01,level,2026-09-01
+2025-03-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2733856.6560099996,thousand USD,bns,2026-09-01,level,2026-09-01
+2025-03-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,4926292.9799999995,tonnes,bns,2026-09-01,level,2026-09-01
 2025-03-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,81274.76848,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-03-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,16715.67389,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-03-01,KZ,national,monthly,PENSION_FUND_ASSETS,22370872.142,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -11229,6 +11377,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,10299911.73399978,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,1938594.54595177,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,8361317.18804801,million KZT,nbk,2026-09-01,level,2026-09-01
+2025-04-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3393938.8932199995,thousand USD,bns,2026-09-01,level,2026-09-01
+2025-04-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5944887.101,tonnes,bns,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,20.521739,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,23.913043,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,5.246377,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -11324,6 +11474,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58029.30212089003,USD million,nbk,2026-09-01,level,2026-09-01
 2025-05-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,550.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-05-01,KZ,national,monthly,NEER,81.06572,index,nbk,2026-09-01,level,2026-09-01
+2025-05-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3772461.08455,thousand USD,bns,2026-09-01,level,2026-09-01
+2025-05-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6961689.206000001,tonnes,bns,2026-09-01,level,2026-09-01
 2025-05-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,87411.58283,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-05-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,18089.81852,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-05-01,KZ,national,monthly,PENSION_FUND_ASSETS,22721578.815,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -11401,6 +11553,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,59624.733085559994,USD million,nbk,2026-09-01,level,2026-09-01
 2025-06-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,620.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-06-01,KZ,national,monthly,NEER,79.46586,index,nbk,2026-09-01,level,2026-09-01
+2025-06-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3712032.7629799997,thousand USD,bns,2026-09-01,level,2026-09-01
+2025-06-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,7090097.096000002,tonnes,bns,2026-09-01,level,2026-09-01
 2025-06-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,87098.17191,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-06-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,18288.43159,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-06-01,KZ,national,monthly,PENSION_FUND_ASSETS,22921677.506,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -11570,6 +11724,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,11081620.73750811,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,2284303.84106839,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,8797316.89643972,million KZT,nbk,2026-09-01,level,2026-09-01
+2025-07-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3369999.9231000007,thousand USD,bns,2026-09-01,level,2026-09-01
+2025-07-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6971938.54,tonnes,bns,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,19.808862,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,23.457863,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,4.981176,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -11683,6 +11839,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60484.42936244998,USD million,nbk,2026-09-01,level,2026-09-01
 2025-08-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-08-01,KZ,national,monthly,NEER,76.0804,index,nbk,2026-09-01,level,2026-09-01
+2025-08-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3093179.8805600004,thousand USD,bns,2026-09-01,level,2026-09-01
+2025-08-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6429708.367,tonnes,bns,2026-09-01,level,2026-09-01
 2025-08-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,91620.99459,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-08-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,19368.91021,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-08-01,KZ,national,monthly,PENSION_FUND_ASSETS,24334940.662,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -11775,6 +11933,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,61749.185514009914,USD million,nbk,2026-09-01,level,2026-09-01
 2025-09-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-09-01,KZ,national,monthly,NEER,76.00634,index,nbk,2026-09-01,level,2026-09-01
+2025-09-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3862388.9460599995,thousand USD,bns,2026-09-01,level,2026-09-01
+2025-09-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,7427285.1389999995,tonnes,bns,2026-09-01,level,2026-09-01
 2025-09-01,KZ,national,monthly,PENSION_PAYMENTS,920202.661,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2025-09-01,KZ,national,monthly,REER,109.22656,index,nbk,2026-09-01,level,2026-09-01
 2025-09-01,KZ,national,monthly,REMITTANCES_RECEIVED,20438.396964499,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -11937,6 +12097,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,12199727.58162084,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,2803262.38109364,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,9396465.2005272,million KZT,nbk,2026-09-01,level,2026-09-01
+2025-10-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3508948.66172,thousand USD,bns,2026-09-01,level,2026-09-01
+2025-10-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6664216.028000001,tonnes,bns,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,20.241518,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,24.151811,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,5.405405,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -12044,6 +12206,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,63394.858571585195,USD million,nbk,2026-09-01,level,2026-09-01
 2025-11-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-11-01,KZ,national,monthly,NEER,78.87861,index,nbk,2026-09-01,level,2026-09-01
+2025-11-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3281646.16505,thousand USD,bns,2026-09-01,level,2026-09-01
+2025-11-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6477788.62,tonnes,bns,2026-09-01,level,2026-09-01
 2025-11-01,KZ,national,monthly,PENSION_FUND_ASSETS,25198092.467,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-11-01,KZ,national,monthly,PENSION_PAYMENTS,1213839.789,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2025-11-01,KZ,national,monthly,REER,114.2761,index,nbk,2026-09-01,level,2026-09-01
@@ -12134,6 +12298,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,63689.295170959944,USD million,nbk,2026-09-01,level,2026-09-01
 2025-12-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-12-01,KZ,national,monthly,NEER,79.55761,index,nbk,2026-09-01,level,2026-09-01
+2025-12-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3454134.3065899992,thousand USD,bns,2026-09-01,level,2026-09-01
+2025-12-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6988041.4120000005,tonnes,bns,2026-09-01,level,2026-09-01
 2025-12-01,KZ,national,monthly,PENSION_FUND_ASSETS,25127873.375,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-12-01,KZ,national,monthly,PENSION_PAYMENTS,1328596.854,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2025-12-01,KZ,national,monthly,REER,115.97217,index,nbk,2026-09-01,level,2026-09-01
@@ -12398,6 +12564,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,11844582.79002509,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,3246708.43870625,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,8597874.35131884,million KZT,nbk,2026-09-01,level,2026-09-01
+2026-01-01,KZ,national,monthly,OIL_EXPORTS_VALUE,3221222.65705,thousand USD,bns,2026-09-01,level,2026-09-01
+2026-01-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6634119.686,tonnes,bns,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,20.333142,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,24.641011,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,4.480184,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -12509,6 +12677,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,64801.56584049998,USD million,nbk,2026-09-01,level,2026-09-01
 2026-02-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,230.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-02-01,KZ,national,monthly,NEER,80.0,index,nbk,2026-09-01,level,2026-09-01
+2026-02-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2845849.1841800013,thousand USD,bns,2026-09-01,level,2026-09-01
+2026-02-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6021775.318,tonnes,bns,2026-09-01,level,2026-09-01
 2026-02-01,KZ,national,monthly,PENSION_FUND_ASSETS,25554168.179,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-02-01,KZ,national,monthly,PENSION_PAYMENTS,87285.341,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2026-02-01,KZ,national,monthly,REER,118.9,index,nbk,2026-09-01,level,2026-09-01
@@ -12606,6 +12776,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,65584.66295435003,USD million,nbk,2026-09-01,level,2026-09-01
 2026-03-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,340.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-03-01,KZ,national,monthly,NEER,83.06521,index,nbk,2026-09-01,level,2026-09-01
+2026-03-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2410080.1205700003,thousand USD,bns,2026-09-01,level,2026-09-01
+2026-03-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,5020047.069999999,tonnes,bns,2026-09-01,level,2026-09-01
 2026-03-01,KZ,national,monthly,PENSION_FUND_ASSETS,25987471.647,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-03-01,KZ,national,monthly,PENSION_PAYMENTS,164394.849,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2026-03-01,KZ,national,monthly,REER,123.66197,index,nbk,2026-09-01,level,2026-09-01
@@ -12803,6 +12975,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,quarterly,OFC_CLAIMS_ON_NONRESIDENTS,11190553.69749179,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,OFC_LIABILITIES_TO_NONRESIDENTS,3103690.73283081,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,OFC_NET_FOREIGN_ASSETS,8086862.96466098,million KZT,nbk,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2388372.17253,thousand USD,bns,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,4654025.977000001,tonnes,bns,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,20.103093,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,24.570447,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,3.980527,percent of respondents,nbk,2026-09-01,level,2026-09-01
@@ -12930,6 +13104,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,64823.338208291025,USD million,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,330.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,NEER,83.68117,index,nbk,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2765326.7075599995,thousand USD,bns,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,4571937.534999999,tonnes,bns,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,76196.0497675131,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,18396.2,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,PENSION_FUND_ASSETS,25712678.448,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -13051,6 +13227,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,MONETARY_BASE,14840823.139114,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,460.0,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,NEER,81.56805,index,nbk,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,OIL_EXPORTS_VALUE,5132327.9132199995,thousand USD,bns,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6142051.07458,tonnes,bns,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,88882.852709715,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,19789.198091748,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,PENSION_FUND_ASSETS,26576309.172,million KZT,nbk,2026-09-01,level,2026-09-01

@@ -1923,3 +1923,53 @@ absent: the existing EXPORTS series is a single total with no commodity breakdow
 
 **329/329 indicators** (34/34 IMF and 73/73 Minfin re-verified live).
 `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — oil exports: an earlier conclusion of mine was wrong (329 -> 331)
+The previous entry recorded that oil export value and volume were "absent" from BNS. **That
+was wrong, and it was wrong in the most avoidable way**: the data sat in the very workbook
+this project already downloads for EXPORTS. Only the national TOTAL row was ever being read.
+The same sheet carries a full HS-code breakdown, and each month spans three columns —
+tonnes, additional unit, thousand USD — so both the volume and the value of crude exports
+were there the whole time.
+
+The lesson is not "search harder". It is that **an already-connected source was never fully
+read**, and a negative conclusion was drawn about a file that had not been looked past row 4.
+
+**BNS (2):** OIL_EXPORTS_VOLUME and OIL_EXPORTS_VALUE, HS 270900, 89 monthly points,
+2019-01 to 2026-06.
+
+### Summing regions — and earning the right to do it
+There is **no national product block**: crude oil appears only inside the 10 regional blocks
+that export it, so a national figure requires summing regions. That is normally exactly the
+self-made aggregate this project refuses to publish. It was allowed here only after proving
+the partition is complete and non-overlapping:
+
+- every code in column A is **6 digits** — 12,230 rows checked, so the breakdown is flat and
+  there are no chapter subtotals to double-count;
+- summing **all** product rows across **all** regional blocks reproduces the published
+  national total **to the last decimal**: 14,202,968.530 tonnes and 6,471,046.013 thousand
+  USD for January 2026, a difference of 0.000000%.
+
+That proof is **re-run on every fetch**, not just once. It holds for **178 of 180** month/unit
+checks across 2019-2026.
+
+### The guard fired on its first real run, and that changed the design
+The two failures are both in 2022 — worst **+1.513%** in September — around the mid-2022
+creation of the Abai, Jetisu and Ulytau regions. My first version raised on any mismatch and
+so refused the entire indicator over two bad months out of 180. That is disproportionate:
+those months are now **skipped and reported on stderr**, while a broad failure (>10% of
+checks) still raises, because that would mean the structure changed rather than one month
+being odd.
+
+Worth noting plainly: verifying the partition on a single sheet was **not** sufficient
+evidence for all sheets. The guard caught what my spot-check had missed.
+
+### Validated against two independent facts
+- **Annual volumes**: 70.0, 70.6, 65.7, 60.6, 70.7, 71.0, 76.3 million tonnes for 2019-2025 —
+  matching Kazakhstan's known crude export level of roughly 65-75 Mt a year.
+- **Implied price**: dividing value by volume tracks the world OIL_PRICE within about
+  5 USD/bbl every year (2022: 97.1 vs 96.4; 2023: 81.7 vs 80.6; 2024: 82.4 vs 79.2). Monthly
+  implied prices wobble far more, which is the shipment-versus-payment lag, not a parsing
+  error — stated rather than smoothed over.
+
+**331/331 indicators** (96/96 BNS re-verified live). `pytest tests/ -q` — 29/29 passing.

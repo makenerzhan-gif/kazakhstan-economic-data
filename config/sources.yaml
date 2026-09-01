@@ -194,6 +194,44 @@ agencies:
           archived via Git LFS (data/raw/bns/*.xlsx tracked) rather than plain git, given the file
           size and monthly full-republish pattern -- see UPDATE_LOG for the reasoning. Now
           implemented in scripts/fetchers/bns.py:fetch_exports and connected.
+      OIL_EXPORTS_VOLUME:
+        status: confirmed
+        download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
+        format: xlsx
+        notes: >
+          2026-09-01. CORRECTS an earlier conclusion in this file that BNS does not publish oil
+          exports. It does -- in the very workbook already used for EXPORTS. Only the national
+          TOTAL row (row 4) was being read; the sheet also carries a full HS-code breakdown, and
+          each month spans three columns [tonnes, additional unit, thousand USD], so both the
+          volume and the value of crude oil exports were there all along.
+          Structure: after row 4 the sheet is organised as REGIONAL BLOCKS, each headed by a
+          region name in column A. There is NO national product block -- crude oil (HS 270900)
+          appears only inside the 10 regional blocks that export it, so a national figure
+          requires summing regions.
+          Summing is normally exactly the self-made aggregate this project refuses to publish.
+          It is done here only because the partition was PROVEN complete and non-overlapping
+          first: every code in column A is 6 digits (12,230 rows checked, so no chapter
+          subtotals to double-count), and summing ALL product rows reproduces the published
+          national total to the last decimal -- 14,202,968.530 tonnes and 6,471,046.013 thousand
+          USD for January 2026, a difference of 0.000000%. That proof is re-run on EVERY fetch.
+          It holds for 178 of 180 month/unit checks across 2019-2026. The two failures are both
+          in 2022 (worst +1.513%, September), around the mid-2022 creation of the Abai, Jetisu
+          and Ulytau regions; those months are SKIPPED and reported on stderr rather than
+          published from an unverifiable sum, and a broad failure (>10% of checks) raises.
+          VALIDATED against two independent facts: annual volumes come out at 70.0, 70.6, 65.7,
+          60.6, 70.7, 71.0 and 76.3 million tonnes for 2019-2025, matching Kazakhstan's known
+          crude export level; and the implied export price tracks the world OIL_PRICE within
+          about 5 USD/bbl every year (2022: 97.1 vs 96.4; 2023: 81.7 vs 80.6). Monthly implied
+          prices wobble much more, which is the shipment-versus-payment lag, not a parsing
+          error. 89 monthly points, 2019-01 to 2026-06. fetch_oil_exports_volume.
+      OIL_EXPORTS_VALUE:
+        status: confirmed
+        download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same workbook, same HS 270900 rows and the same verified-partition method
+          as OIL_EXPORTS_VOLUME, reading the thousand-USD column instead of tonnes. Divide by
+          OIL_EXPORTS_VOLUME for an implied realised export price. fetch_oil_exports_value.
       IMPORTS:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/open-data/international-trade/474299/"
