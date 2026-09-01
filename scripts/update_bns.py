@@ -99,6 +99,16 @@ FETCHERS = {
     "UNDER5_MORTALITY_RATE": bns_fetchers.fetch_under5_mortality_rate,
     "STILLBIRTH_RATE": bns_fetchers.fetch_stillbirth_rate,
     "INNOVATION_EXPENDITURE": bns_fetchers.fetch_innovation_expenditure,
+    "ORGANIZATIONS_USING_COMPUTERS": bns_fetchers.fetch_organizations_using_computers,
+    "COMPUTERS_IN_ORGANIZATIONS": bns_fetchers.fetch_computers_in_organizations,
+    "COMPUTERS_INTERNET_CONNECTED": bns_fetchers.fetch_computers_internet_connected,
+    "WORKERS_USING_COMPUTERS": bns_fetchers.fetch_workers_using_computers,
+    "WORKERS_USING_INTERNET": bns_fetchers.fetch_workers_using_internet,
+    "ECOMMERCE_RETAIL_ORDERS": bns_fetchers.fetch_ecommerce_retail_orders,
+    "ECOMMERCE_SERVICES_VALUE": bns_fetchers.fetch_ecommerce_services_value,
+    "DOCTORS_PER_10K": bns_fetchers.fetch_doctors_per_10k,
+    "HOSPITAL_BEDS": bns_fetchers.fetch_hospital_beds,
+    "HOSPITAL_BEDS_PER_10K": bns_fetchers.fetch_hospital_beds_per_10k,
 }
 
 INDICATOR_IDS = [
@@ -138,6 +148,16 @@ INDICATOR_IDS = [
     "UNDER5_MORTALITY_RATE",
     "STILLBIRTH_RATE",
     "INNOVATION_EXPENDITURE",
+    "ORGANIZATIONS_USING_COMPUTERS",
+    "COMPUTERS_IN_ORGANIZATIONS",
+    "COMPUTERS_INTERNET_CONNECTED",
+    "WORKERS_USING_COMPUTERS",
+    "WORKERS_USING_INTERNET",
+    "ECOMMERCE_RETAIL_ORDERS",
+    "ECOMMERCE_SERVICES_VALUE",
+    "DOCTORS_PER_10K",
+    "HOSPITAL_BEDS",
+    "HOSPITAL_BEDS_PER_10K",
 ]
 
 

@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703649",
+  "indicator_id": "COMPUTERS_IN_ORGANIZATIONS",
+  "indicator_name": "Computers Used in Organizations",
+  "description": "Количество компьютеров в организациях",
+  "frequency": "annual",
+  "unit": "units",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Number of computers in use in organizations.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2004-12-31",
+  "period_end": "2024-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

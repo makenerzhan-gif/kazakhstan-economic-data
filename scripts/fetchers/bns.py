@@ -1771,3 +1771,163 @@ def fetch_innovation_expenditure() -> tuple[list[dict], dict]:
         terms="741880,741885,808348,3451399",
         dic_ids="68,915,304,1198",
     )
+
+
+def fetch_organizations_using_computers() -> tuple[list[dict], dict]:
+    """Organizations Using Computers (units, annual).
+
+    Taldau indexId 703648, dicIds=68,915, terms=741880,741885
+    (РЕСПУБЛИКА КАЗАХСТАН + Всего). Parameters obtained via the
+    GetSegmentList method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "703648", "ORGANIZATIONS_USING_COMPUTERS",
+        note="Number of organizations using computers.",
+        measure_id="5",
+        terms="741880,741885",
+        dic_ids="68,915",
+    )
+
+
+def fetch_computers_in_organizations() -> tuple[list[dict], dict]:
+    """Computers Used in Organizations (units, annual).
+
+    Taldau indexId 703649, dicIds=68,915, terms=741880,741885
+    (РЕСПУБЛИКА КАЗАХСТАН + Всего). Parameters obtained via the
+    GetSegmentList method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "703649", "COMPUTERS_IN_ORGANIZATIONS",
+        note="Number of computers in use in organizations.",
+        measure_id="5",
+        terms="741880,741885",
+        dic_ids="68,915",
+    )
+
+
+def fetch_computers_internet_connected() -> tuple[list[dict], dict]:
+    """Computers Connected to the Internet (units, annual).
+
+    Taldau indexId 703651, dicIds=68,915, terms=741880,741885
+    (РЕСПУБЛИКА КАЗАХСТАН + Всего). Parameters obtained via the
+    GetSegmentList method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "703651", "COMPUTERS_INTERNET_CONNECTED",
+        note="Number of organizational computers connected to the internet. Read against COMPUTERS_IN_ORGANIZATIONS as a connectivity ratio.",
+        measure_id="5",
+        terms="741880,741885",
+        dic_ids="68,915",
+    )
+
+
+def fetch_workers_using_computers() -> tuple[list[dict], dict]:
+    """Workers Using a Computer at Work (persons, annual).
+
+    Taldau indexId 703675, dicIds=68,915, terms=741880,741885
+    (РЕСПУБЛИКА КАЗАХСТАН + Всего). Parameters obtained via the
+    GetSegmentList method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "703675", "WORKERS_USING_COMPUTERS",
+        note="Number of workers who used a computer at work at least once a week.",
+        measure_id="23",
+        terms="741880,741885",
+        dic_ids="68,915",
+    )
+
+
+def fetch_workers_using_internet() -> tuple[list[dict], dict]:
+    """Workers Using an Internet-Connected Computer at Work (persons, annual).
+
+    Taldau indexId 703676, dicIds=67,915, terms=741880,741885
+    (РЕСПУБЛИКА КАЗАХСТАН + Всего). Parameters obtained via the
+    GetSegmentList method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "703676", "WORKERS_USING_INTERNET",
+        note="Number of workers who use an internet-connected computer for work.",
+        measure_id="23",
+        terms="741880,741885",
+        dic_ids="67,915",
+    )
+
+
+def fetch_ecommerce_retail_orders() -> tuple[list[dict], dict]:
+    """E-Commerce Retail Orders (orders, annual).
+
+    Taldau indexId 18199189, dicIds=67,915,853, terms=741880,741885,2658135
+    (РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего). Parameters obtained via the
+    GetSegmentList method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "18199189", "ECOMMERCE_RETAIL_ORDERS",
+        note="Number of retail orders placed over the internet. Short series -- the source publishes it only from 2022.",
+        measure_id="5",
+        terms="741880,741885,2658135",
+        dic_ids="67,915,853",
+    )
+
+
+def fetch_ecommerce_services_value() -> tuple[list[dict], dict]:
+    """Services Sold via Own Internet Resource (KZT, annual).
+
+    Taldau indexId 77212521, dicIds=67,915,853,2956, terms=741880,741885,2658135,4628511
+    (РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего + Всего). Parameters obtained via the
+    GetSegmentList method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "77212521", "ECOMMERCE_SERVICES_VALUE",
+        note="KZT. Value of services sold through an organization's own internet resource. Short series -- published only from 2022. Same KZT scale as the other BNS value series.",
+        measure_id="1",
+        terms="741880,741885,2658135,4628511",
+        dic_ids="67,915,853,2956",
+    )
+
+
+def fetch_doctors_per_10k() -> tuple[list[dict], dict]:
+    """Doctors per 10,000 Population (per 10000 population, annual).
+
+    Taldau indexId 704316, dicIds=67, terms=741880
+    (РЕСПУБЛИКА КАЗАХСТАН). Parameters obtained via the
+    GetSegmentList method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "704316", "DOCTORS_PER_10K",
+        note="Doctors of all specialties per 10,000 population -- the density counterpart to the existing DOCTORS_TOTAL headcount.",
+        measure_id="23",
+        terms="741880",
+        dic_ids="67",
+    )
+
+
+def fetch_hospital_beds() -> tuple[list[dict], dict]:
+    """Hospital Beds (units, annual).
+
+    Taldau indexId 704310, dicIds=67, terms=741880
+    (РЕСПУБЛИКА КАЗАХСТАН). Parameters obtained via the
+    GetSegmentList method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "704310", "HOSPITAL_BEDS",
+        note="Total number of hospital beds.",
+        measure_id="742",
+        terms="741880",
+        dic_ids="67",
+    )
+
+
+def fetch_hospital_beds_per_10k() -> tuple[list[dict], dict]:
+    """Hospital Beds per 10,000 Population (per 10000 population, annual).
+
+    Taldau indexId 704311, dicIds=67, terms=741880
+    (РЕСПУБЛИКА КАЗАХСТАН). Parameters obtained via the
+    GetSegmentList method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "704311", "HOSPITAL_BEDS_PER_10K",
+        note="Hospital beds per 10,000 population -- health-system capacity relative to population.",
+        measure_id="742",
+        terms="741880",
+        dic_ids="67",
+    )

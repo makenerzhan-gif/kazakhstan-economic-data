@@ -1556,3 +1556,37 @@ which is the right shape for that year.
 
 **287/287 confirmed indicators connected end-to-end** (76/76 BNS re-verified live).
 `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — fortieth batch: ICT, e-commerce and health capacity (287 -> 297)
+First batch built entirely on the new GetSegmentList method — no browser involved at any
+point, and the whole batch was discovered, verified and wired in one pass.
+
+**BNS (10):**
+- ICT in organisations, with unusually long histories: ORGANIZATIONS_USING_COMPUTERS (20 pts
+  from 2005), COMPUTERS_IN_ORGANIZATIONS and COMPUTERS_INTERNET_CONNECTED (21 pts from
+  2004 — read together they give a connectivity ratio, 90% in 2024), WORKERS_USING_COMPUTERS
+  and WORKERS_USING_INTERNET (19 pts from 2006).
+- E-commerce: ECOMMERCE_RETAIL_ORDERS (22.7 million orders) and ECOMMERCE_SERVICES_VALUE
+  (451.8 bn KZT), both published only from 2022.
+- Health capacity: HOSPITAL_BEDS (104,989), HOSPITAL_BEDS_PER_10K (53.08) and
+  DOCTORS_PER_10K (40.57).
+
+Every one was confirmed to be an all-totals slice (`term_names` = "РЕСПУБЛИКА КАЗАХСТАН +
+Всего [+ Всего...]") before being connected, per the segment-0 caveat.
+
+**A duplicate avoided by checking rather than assuming.** The doctor-headcount index 704315
+turned out to be exactly the already-connected DOCTORS_TOTAL (83,379 in 2024, identical), so
+only the density measure was added from that family.
+
+**A cross-check that did NOT come out exact — and why that is fine.** Computing
+`DOCTORS_TOTAL / POPULATION_BNS × 10000` gives 40.85 for 2023 against the published 40.57 —
+a consistent +0.66% across every year tested. This was investigated rather than waved
+through or reported as a match. POPULATION_BNS is the *average annual* population, while the
+doctor headcount is measured *at end of year*; dividing an end-of-year numerator by an
+end-of-year population (larger than the average by roughly half the ~1.3% annual growth)
+reproduces exactly that ~0.65% gap. So the two series are each internally consistent, but
+DOCTORS_PER_10K is **not** reproducible from the other two, and is published as the source
+gives it rather than recomputed.
+
+**297/297 confirmed indicators connected end-to-end** (86/86 BNS re-verified live).
+`pytest tests/ -q` — 29/29 passing.

@@ -2228,6 +2228,96 @@ indicators:
     category: production
     source_status: confirmed
 
+  - id: ORGANIZATIONS_USING_COMPUTERS
+    name_ru: "Количество организаций, использующих компьютеры"
+    name_en: "Organizations Using Computers"
+    agency: bns
+    frequency: annual
+    unit: "units"
+    category: production
+    source_status: confirmed
+
+  - id: COMPUTERS_IN_ORGANIZATIONS
+    name_ru: "Количество компьютеров в организациях"
+    name_en: "Computers Used in Organizations"
+    agency: bns
+    frequency: annual
+    unit: "units"
+    category: production
+    source_status: confirmed
+
+  - id: COMPUTERS_INTERNET_CONNECTED
+    name_ru: "Количество компьютеров, подключённых к интернету"
+    name_en: "Computers Connected to the Internet"
+    agency: bns
+    frequency: annual
+    unit: "units"
+    category: production
+    source_status: confirmed
+
+  - id: WORKERS_USING_COMPUTERS
+    name_ru: "Работники, использующие компьютер (не реже раза в неделю)"
+    name_en: "Workers Using a Computer at Work"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: labor
+    source_status: confirmed
+
+  - id: WORKERS_USING_INTERNET
+    name_ru: "Работники, использующие компьютер с доступом в интернет"
+    name_en: "Workers Using an Internet-Connected Computer at Work"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: labor
+    source_status: confirmed
+
+  - id: ECOMMERCE_RETAIL_ORDERS
+    name_ru: "Количество заказов розничной торговли через интернет"
+    name_en: "E-Commerce Retail Orders"
+    agency: bns
+    frequency: annual
+    unit: "orders"
+    category: trade
+    source_status: confirmed
+
+  - id: ECOMMERCE_SERVICES_VALUE
+    name_ru: "Объём реализации услуг через собственный интернет-ресурс"
+    name_en: "Services Sold via Own Internet Resource"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: trade
+    source_status: confirmed
+
+  - id: DOCTORS_PER_10K
+    name_ru: "Численность врачей на 10 000 населения"
+    name_en: "Doctors per 10,000 Population"
+    agency: bns
+    frequency: annual
+    unit: "per 10000 population"
+    category: demographic
+    source_status: confirmed
+
+  - id: HOSPITAL_BEDS
+    name_ru: "Число больничных коек"
+    name_en: "Hospital Beds"
+    agency: bns
+    frequency: annual
+    unit: "units"
+    category: demographic
+    source_status: confirmed
+
+  - id: HOSPITAL_BEDS_PER_10K
+    name_ru: "Число больничных коек на 10 000 населения"
+    name_en: "Hospital Beds per 10,000 Population"
+    agency: bns
+    frequency: annual
+    unit: "per 10000 population"
+    category: demographic
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

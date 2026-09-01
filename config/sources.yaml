@@ -837,6 +837,116 @@ agencies:
           Дополнительные услуги' -- narrow slices that would be wrong to publish under the
           index's general name. Always read the segment's termNames (separated by ' + ', NOT by
           commas) and confirm every term is a genuine total before connecting an index.
+      ORGANIZATIONS_USING_COMPUTERS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 703648
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=5, dicIds=68,915, terms=741880,741885.
+          Term names are РЕСПУБЛИКА КАЗАХСТАН + Всего -- confirmed an all-totals slice before
+          connecting, since segment 0 is only the site's default and can be a narrow slice.
+          fetch_organizations_using_computers.
+      COMPUTERS_IN_ORGANIZATIONS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 703649
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=5, dicIds=68,915, terms=741880,741885.
+          Term names are РЕСПУБЛИКА КАЗАХСТАН + Всего -- confirmed an all-totals slice before
+          connecting, since segment 0 is only the site's default and can be a narrow slice.
+          fetch_computers_in_organizations.
+      COMPUTERS_INTERNET_CONNECTED:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 703651
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=5, dicIds=68,915, terms=741880,741885.
+          Term names are РЕСПУБЛИКА КАЗАХСТАН + Всего -- confirmed an all-totals slice before
+          connecting, since segment 0 is only the site's default and can be a narrow slice.
+          fetch_computers_internet_connected.
+      WORKERS_USING_COMPUTERS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 703675
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=23, dicIds=68,915, terms=741880,741885.
+          Term names are РЕСПУБЛИКА КАЗАХСТАН + Всего -- confirmed an all-totals slice before
+          connecting, since segment 0 is only the site's default and can be a narrow slice.
+          fetch_workers_using_computers.
+      WORKERS_USING_INTERNET:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 703676
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=23, dicIds=67,915, terms=741880,741885.
+          Term names are РЕСПУБЛИКА КАЗАХСТАН + Всего -- confirmed an all-totals slice before
+          connecting, since segment 0 is only the site's default and can be a narrow slice.
+          fetch_workers_using_internet.
+      ECOMMERCE_RETAIL_ORDERS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 18199189
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=5, dicIds=67,915,853, terms=741880,741885,2658135.
+          Term names are РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего -- confirmed an all-totals slice before
+          connecting, since segment 0 is only the site's default and can be a narrow slice.
+          fetch_ecommerce_retail_orders.
+      ECOMMERCE_SERVICES_VALUE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 77212521
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=1, dicIds=67,915,853,2956, terms=741880,741885,2658135,4628511.
+          Term names are РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего + Всего -- confirmed an all-totals slice before
+          connecting, since segment 0 is only the site's default and can be a narrow slice.
+          fetch_ecommerce_services_value.
+      DOCTORS_PER_10K:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 704316
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=23, dicIds=67, terms=741880.
+          Term names are РЕСПУБЛИКА КАЗАХСТАН -- confirmed an all-totals slice before
+          connecting, since segment 0 is only the site's default and can be a narrow slice.
+          fetch_doctors_per_10k.
+      HOSPITAL_BEDS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 704310
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=742, dicIds=67, terms=741880.
+          Term names are РЕСПУБЛИКА КАЗАХСТАН -- confirmed an all-totals slice before
+          connecting, since segment 0 is only the site's default and can be a narrow slice.
+          fetch_hospital_beds.
+      HOSPITAL_BEDS_PER_10K:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 704311
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=742, dicIds=67, terms=741880.
+          Term names are РЕСПУБЛИКА КАЗАХСТАН -- confirmed an all-totals slice before
+          connecting, since segment 0 is only the site's default and can be a narrow slice.
+          fetch_hospital_beds_per_10k.
       MIGRATION_ARRIVALS:
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
