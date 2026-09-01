@@ -13242,6 +13242,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,quarterly,CAPACITY_UTILIZATION,49.540378,percent,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15606.9783,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2196.1035,billion KZT,nbk,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,monthly,CONSTRUCTION_INDEX,114.5,index (same period previous year = 100),bns,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,monthly,CONSTRUCTION_OUTPUT,1739462042.0,thousand KZT,bns,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-2008.012157,million USD,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,44.873998,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,54.567583,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -13436,6 +13438,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.594739,index,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,16219.4,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2176.8,billion KZT,nbk,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,CONSTRUCTION_INDEX,113.4,index (same period previous year = 100),bns,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,CONSTRUCTION_OUTPUT,2409956375.0,thousand KZT,bns,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,DEPOSITS_TOTAL,47139660.7658384,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,DEPOSIT_RATE,14.768729804740355,%,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,daily,EXCHANGE_RATE,462.91,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -13572,6 +13576,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.965806,index,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,17398.077182644,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2391.120909104,billion KZT,nbk,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,CONSTRUCTION_INDEX,115.2,index (same period previous year = 100),bns,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,CONSTRUCTION_OUTPUT,4072093409.0,thousand KZT,bns,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,DEPOSITS_TOTAL,47910515.95619293,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,DEPOSIT_RATE,14.802963478080027,%,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,daily,EXCHANGE_RATE,485.95,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -13717,6 +13723,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-30,KZ,national,daily,TONIA,16.8,%,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.771858,index,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,CAPACITY_UTILIZATION,50.757057,percent,nbk,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,CONSTRUCTION_INDEX,115.3,index (same period previous year = 100),bns,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,CONSTRUCTION_OUTPUT,5061072753.0,thousand KZT,bns,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,51.981751,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,54.120331,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,DEPOSITS_TOTAL,50135442.4340935,million KZT,nbk,2026-09-01,level,2026-09-01

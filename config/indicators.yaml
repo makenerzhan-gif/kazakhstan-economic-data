@@ -3127,3 +3127,21 @@ indicators:
     unit: "index (same month previous year = 100)"
     category: trade
     source_status: confirmed
+
+  - id: CONSTRUCTION_OUTPUT
+    name_ru: "Объём выполненных строительных работ"
+    name_en: "Construction Work Performed"
+    agency: bns
+    frequency: monthly
+    unit: "thousand KZT"
+    category: production
+    source_status: confirmed
+
+  - id: CONSTRUCTION_INDEX
+    name_ru: "Индекс объёма строительных работ"
+    name_en: "Construction Work Index"
+    agency: bns
+    frequency: monthly
+    unit: "index (same period previous year = 100)"
+    category: production
+    source_status: confirmed

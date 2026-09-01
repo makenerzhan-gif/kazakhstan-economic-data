@@ -449,6 +449,45 @@ agencies:
         notes: >
           2026-09-01. Same sheet as RETAIL_TRADE_INDEX_MONTHLY, anchored to the 'Оптовая торговля'
           section heading instead. Same three-comparison layout and the same sheet-1 cross-check.
+      CONSTRUCTION_OUTPUT:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-inno-build/"
+        format: xlsx
+        notes: >
+          2026-09-01. Sheet '1.' of the monthly publication 'Основные показатели предприятий и
+          организаций, осуществляющих строительную деятельность', row 'Объем выполненных
+          строительных работ (услуг)', column 1 (column 2 is the index). Unit stated on the sheet
+          as тыс. теңге. Closes the audit's construction gap in the real sector.
+          THE MIXED-PERIODICITY TRAP AGAIN, and this section is worse than the investment one: it
+          publishes three cadences under the SAME sheet name and the SAME row label --
+          335623 (+30d to next release, Январь-июль 2026), 347225 (+32d, Январь-июнь 2026),
+          5224 (+91d, quarterly), and 347234 (+367d, '2025 год', value 10.85 trillion KZT).
+          The annual value would read as a monthly year-to-date point if nothing separated it,
+          which is exactly what produced the bogus 23.5-trillion 'June' investment figure before
+          the edition-gap filter existed.
+          Unlike the investment publication, this cover states BOTH facts outright: the date of
+          the next release (so the cadence is known, not guessed) and the period the numbers cover
+          ('Январь-июль 2026 года'). Editions are admitted only when that interval is at most 40
+          days, and the reporting month is READ from the cover rather than inferred from the
+          publication date. Two independent protections: the annual edition's period text carries
+          no month name, so it fails the period regex as well.
+          VALUES ARE YEAR-TO-DATE CUMULATIVE. 5.06 trillion KZT for January-July 2026 against
+          10.85 trillion for all of 2025 looks low but is right: Kazakhstan's construction is
+          strongly back-loaded, so seven months carry about 40% of the year. The series is guarded
+          for monotonicity within each calendar year, which would catch any future edition of a
+          different periodicity slipping past the gap filter.
+          Four monthly editions online on 2026-09-01 (April-July 2026), strictly increasing:
+          1.74, 2.41, 4.07, 5.06 trillion KZT. ACCUMULATES across runs.
+
+      CONSTRUCTION_INDEX:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-inno-build/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet and row as CONSTRUCTION_OUTPUT, column 2 ('В процентах к
+          соответствующему периоду прошлого года'). Year-to-date real-terms companion to
+          CONSTRUCTION_OUTPUT, which is in current prices. 115.3 for January-July 2026.
+
       EXPORT_PRICE_INDEX:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/industries/economy/prices/"

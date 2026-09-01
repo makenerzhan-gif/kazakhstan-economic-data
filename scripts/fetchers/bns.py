@@ -3311,3 +3311,190 @@ def fetch_wholesale_trade_index_monthly() -> tuple[list[dict], dict]:
         "Index, same month of the previous year = 100. Wholesale volume in real terms, on the same "
         "basis as RETAIL_TRADE_INDEX_MONTHLY and from the same sheet, which carries a separate "
         "regional block per trade type.")
+
+
+# ---------------------------------------------------------------------------
+# Monthly construction output, from the BNS publication "Основные показатели
+# предприятий и организаций, осуществляющих строительную деятельность"
+# (section "Строительство и инновации").
+#
+# Closes the audit's construction gap in the real sector.
+#
+# THE MIXED-PERIODICITY TRAP AGAIN, and this time the source hands over the
+# answer. The section carries three cadences side by side:
+#
+#   335623  published 18.08.2026, next 17.09.2026  (+30d)  Январь-июль 2026
+#   347225  published 17.07.2026, next 18.08.2026  (+32d)  Январь-июнь 2026
+#   5224    published 24.07.2026, next 23.10.2026  (+91d)  quarterly, different
+#                                                          publication entirely
+#   347234  published 03.07.2026, next 05.07.2027 (+367d)  2025 год -- ANNUAL
+#
+# The annual edition has the SAME sheet name and the SAME row label, and its
+# value (10.85 trillion KZT for 2025) would be read as a monthly year-to-date
+# point if nothing separated it. This is exactly what went wrong with
+# INVESTMENT_FIXED_CAPITAL before the edition-gap filter was added.
+#
+# Unlike the investment publication, this one states BOTH facts on its cover:
+# the interval to the next release (which identifies the cadence) and the
+# period the numbers cover ("Январь-июль 2026 года"). So the reporting month is
+# READ, not inferred from the publication date, and editions are admitted only
+# when their release interval is monthly.
+#
+# Values are YEAR-TO-DATE CUMULATIVE -- the column header says "в процентах к
+# соответствующему ПЕРИОДУ прошлого года" and the cover names a January-to-month
+# span. 5.06 trillion KZT for January-July 2026 against 10.85 trillion for all
+# of 2025 is consistent: construction in Kazakhstan is strongly back-loaded, so
+# seven months carrying about 40% of the year is the expected seasonal shape,
+# not a contradiction of the +15.3% growth the same row reports.
+# ---------------------------------------------------------------------------
+CONSTRUCTION_PAGE_URL = "https://stat.gov.kz/ru/industries/business-statistics/stat-inno-build/"
+CONSTRUCTION_ROW_MARKER = "Объем выполненных строительных работ"
+CONSTRUCTION_UNIT_WORDS = ("тыс.теңге", "тыс.тенге")
+CONSTRUCTION_PERIOD_RE = re.compile(r"^(?:Январь\s*-\s*)?([А-Яа-яЁё]+)\s+(\d{4})\s*года$")
+CONSTRUCTION_NEXT_RE = re.compile(r"Дата следующего опубликования:\s*(\d{2})\.(\d{2})\.(\d{4})")
+CONSTRUCTION_MAX_GAP_DAYS = 40  # a monthly release; the annual one is 367, the quarterly 91
+
+
+def _fetch_construction_series(value_index: int, indicator_id: str, note: str,
+                               unit_check: bool) -> tuple[list[dict], dict]:
+    existing = {}
+    path = (Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE
+            / f"{indicator_id.lower()}.csv")
+    if path.exists():
+        with path.open(encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                try:
+                    existing[row["date"]] = float(row["value"])
+                except (KeyError, TypeError, ValueError):
+                    continue
+
+    fetched: dict[str, float] = {}
+    for eid in _publication_elements(CONSTRUCTION_PAGE_URL, indicator_id):
+        url = f"https://stat.gov.kz/api/iblock/element/{eid}/file/ru/"
+        try:
+            content = _download(url)
+            wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+        except Exception:
+            continue
+        sheet = next((s for s in wb.sheetnames if s.strip() in ("1.", "1")), None)
+        if sheet is None:
+            continue
+
+        published = nxt = None
+        period = None
+        for sh in wb.sheetnames[:3]:
+            for row in wb[sh].iter_rows(max_row=24, values_only=True):
+                for cell in row:
+                    if not isinstance(cell, str):
+                        continue
+                    text = cell.strip()
+                    m = PUBLISHED_RE.search(text)
+                    if m:
+                        published = date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+                    m2 = CONSTRUCTION_NEXT_RE.search(text)
+                    if m2:
+                        nxt = date(int(m2.group(3)), int(m2.group(2)), int(m2.group(1)))
+                    m3 = CONSTRUCTION_PERIOD_RE.match(text)
+                    if m3 and m3.group(1).lower() in RU_MONTHS:
+                        period = (int(m3.group(2)), RU_MONTHS[m3.group(1).lower()])
+            if published and period:
+                break
+
+        # Admit monthly editions only. The annual and quarterly releases share
+        # this sheet name and row label, and their values are not comparable.
+        if published is None or nxt is None or period is None:
+            continue
+        if (nxt - published).days > CONSTRUCTION_MAX_GAP_DAYS:
+            continue
+
+        unit_ok = not unit_check
+        target = None
+        for row in wb[sheet].iter_rows(values_only=True):
+            for cell in row[:8]:
+                if isinstance(cell, str) and any(w in "".join(cell.split()) for w in CONSTRUCTION_UNIT_WORDS):
+                    unit_ok = True
+            label = next((c for c in row[:2] if isinstance(c, str)), "")
+            if target is None and label.strip().startswith(CONSTRUCTION_ROW_MARKER):
+                target = [c for c in row if isinstance(c, (int, float))]
+        if target is None or len(target) <= value_index:
+            continue
+        if not unit_ok:
+            raise validation.StructuralChangeError(
+                "\n".join([
+                    f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                    f"WHAT CHANGED: sheet {sheet!r} of element {eid} no longer declares its unit "
+                    f"as one of {CONSTRUCTION_UNIT_WORDS!r}",
+                    "EXPECTED: thousand KZT; a changed unit would rescale the series silently",
+                    f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+                ])
+            )
+
+        _save_raw(f"{indicator_id}_{eid}", content, "xlsx",
+                  {"source_url": url, "element_id": eid,
+                   "published": published.isoformat(), "next_publication": nxt.isoformat(),
+                   "period": f"{period[0]:04d}-{period[1]:02d}", "sheet": sheet})
+        fetched[f"{period[0]:04d}-{period[1]:02d}-01"] = float(target[value_index])
+
+    merged = {**existing, **fetched}
+    if not merged:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: no monthly edition on {CONSTRUCTION_PAGE_URL} carried a sheet '1.' "
+                f"with a row starting {CONSTRUCTION_ROW_MARKER!r}, a cover period and a release "
+                f"interval of at most {CONSTRUCTION_MAX_GAP_DAYS} days, and no processed history "
+                "exists",
+                "ACTION REQUIRED: inspect the page and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = [{"date": k, "value": v} for k, v in sorted(merged.items())]
+
+    # Year-to-date values cannot fall inside a calendar year. If one does, an
+    # edition of a different periodicity has slipped past the gap filter -- the
+    # failure mode that produced a 23.5-trillion "June" investment figure.
+    if value_index == 0:
+        for prev, cur in zip(records, records[1:]):
+            if prev["date"][:4] == cur["date"][:4] and cur["value"] < prev["value"]:
+                raise validation.StructuralChangeError(
+                    "\n".join([
+                        f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                        f"WHAT CHANGED: year-to-date value fell within {cur['date'][:4]} -- "
+                        f"{prev['date']}={prev['value']:,.0f} then {cur['date']}={cur['value']:,.0f}",
+                        "EXPECTED: a cumulative series never decreases inside a year; a fall means "
+                        "editions of different periodicity have been mixed",
+                        f"ACTION REQUIRED: inspect {CONSTRUCTION_PAGE_URL} and update "
+                        "scripts/fetchers/bns.py",
+                    ])
+                )
+
+    manifest = {
+        "frequency": "monthly",
+        "source_url": CONSTRUCTION_PAGE_URL,
+        "dataset_id": f"stroitelnaya-deyatelnost/sheet-1/{CONSTRUCTION_ROW_MARKER}/col{value_index}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def fetch_construction_output() -> tuple[list[dict], dict]:
+    """Construction work performed, thousand KZT, year-to-date cumulative."""
+    return _fetch_construction_series(
+        0, "CONSTRUCTION_OUTPUT",
+        "Thousand KZT, YEAR-TO-DATE CUMULATIVE (not a monthly flow) -- the cover names a "
+        "January-to-month span and the sheet compares against the same PERIOD of the previous "
+        "year. 5.06 trillion KZT for January-July 2026. Kazakhstan's construction is strongly "
+        "seasonal and back-loaded, so seven months carry only about 40% of the annual total. "
+        "The section also publishes annual and quarterly editions with the same sheet and row "
+        "label; only editions whose cover states a monthly release interval are read. "
+        "Accumulated across runs because the source keeps only a few editions online.",
+        unit_check=True)
+
+
+def fetch_construction_index() -> tuple[list[dict], dict]:
+    """Construction work, index against the same period a year earlier."""
+    return _fetch_construction_series(
+        1, "CONSTRUCTION_INDEX",
+        "Index, same period of the previous year = 100, year-to-date. The real-terms companion to "
+        "CONSTRUCTION_OUTPUT, which is in current prices.",
+        unit_check=False)

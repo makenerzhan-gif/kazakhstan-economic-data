@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/business-statistics/stat-inno-build/",
+  "dataset_id": "stroitelnaya-deyatelnost/sheet-1/Объем выполненных строительных работ/col1",
+  "indicator_id": "CONSTRUCTION_INDEX",
+  "indicator_name": "Construction Work Index",
+  "description": "Индекс объёма строительных работ",
+  "frequency": "monthly",
+  "unit": "index (same period previous year = 100)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, same period of the previous year = 100, year-to-date. The real-terms companion to CONSTRUCTION_OUTPUT, which is in current prices.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -2163,3 +2163,30 @@ Quarterly real GDP — the national-accounts section holds labour-productivity p
 the quarterly GDP cube (element 4439) has only a regional dimension, no physical-volume index.
 CPI breakdown by group (food / non-food / services) — confirmed absent from element 1549, whose
 product dimension holds only the "Товары и услуги" total. Both need a different dataset.
+
+## 2026-09-01 — monthly construction (348 indicators)
+
+- `CONSTRUCTION_OUTPUT` and `CONSTRUCTION_INDEX` from the BNS publication "Основные показатели
+  предприятий и организаций, осуществляющих строительную деятельность". Closes the audit's
+  construction gap in the real sector.
+- **The mixed-periodicity trap again, and this section is worse than investment**: it publishes
+  monthly (+30d), quarterly (+91d) and annual (+367d) editions under the SAME sheet name and the
+  SAME row label. The annual edition reads 10.85 trillion KZT for 2025 and would have been stored
+  as a monthly year-to-date point — the same failure that produced the bogus 23.5-trillion "June"
+  investment figure before the edition-gap filter existed.
+- This cover, unlike the investment one, states both facts outright: the date of the next release
+  (so the cadence is known rather than guessed) and the period covered ("Январь-июль 2026 года").
+  The reporting month is now READ from the cover instead of inferred from the publication date,
+  and editions are admitted only when the release interval is monthly. The annual edition fails
+  both tests independently — its period text carries no month name.
+- Values are year-to-date cumulative and guarded for monotonicity within each calendar year.
+  April–July 2026: 1.74, 2.41, 4.07, 5.06 trillion KZT — strictly increasing.
+- 5.06 trillion for seven months against 10.85 trillion for all of 2025 is not a contradiction of
+  the +15.3% the same row reports: Kazakhstan's construction is strongly back-loaded.
+- Verified live: 113/113 BNS fetchers OK, 29/29 tests passing.
+
+### Agriculture: monthly output not found in this section
+The agriculture section (`stat-forrest-village-hunt-fish`) holds grain balances, livestock,
+sown-area and greenhouse publications, plus long-run ANNUAL regional series in a different
+"Показатель" format (2000 onward, by KATO region). Monthly gross agricultural output is not
+among them. Not connected rather than guessed at.
