@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/business-statistics/stat-transport/",
+  "dataset_id": "pokazateli-raboty-transporta/sheet-1/vsego/col7",
+  "indicator_id": "PASSENGER_TURNOVER_MONTHLY",
+  "indicator_name": "Passenger Turnover, monthly",
+  "description": "Пассажирооборот, помесячно",
+  "frequency": "monthly",
+  "unit": "million passenger-km",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million passenger-km, YEAR-TO-DATE CUMULATIVE, all modes. DO NOT SPLICE THIS ONTO THE ANNUAL PASSENGER_TURNOVER SERIES. That series ends in 2016 at 266.8 bn p-km, while this one reads 54,627.9 mln p-km for January-July 2026, or about 94 bn annualised -- roughly a third of the old level. The break is unexplained: nothing published in this section resolves it, since the long-run archive there covers passengers CARRIED, a different indicator. Kept as a separate series and flagged rather than smoothed over.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-05-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

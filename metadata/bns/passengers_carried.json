@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/business-statistics/stat-transport/",
+  "dataset_id": "pokazateli-raboty-transporta/sheet-1/vsego/col5",
+  "indicator_id": "PASSENGERS_CARRIED",
+  "indicator_name": "Passengers Carried",
+  "description": "Перевезено пассажиров",
+  "frequency": "monthly",
+  "unit": "thousand people",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Thousand people, YEAR-TO-DATE CUMULATIVE, all modes. The count companion to PASSENGER_TURNOVER_MONTHLY.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-05-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/business-statistics/stat-transport/",
+  "dataset_id": "pokazateli-raboty-transporta/sheet-1/vsego/col1",
+  "indicator_id": "FREIGHT_CARRIED",
+  "indicator_name": "Freight Carried",
+  "description": "Перевезено грузов",
+  "frequency": "monthly",
+  "unit": "thousand tonnes",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Thousand tonnes, YEAR-TO-DATE CUMULATIVE, all modes. Physical tonnage, the companion to FREIGHT_TURNOVER_MONTHLY, which weights tonnage by distance. Read together they separate how much moved from how far it moved.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-05-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

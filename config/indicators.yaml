@@ -3217,3 +3217,39 @@ indicators:
     unit: "index (same quarter previous year = 100)"
     category: labor
     source_status: confirmed
+
+  - id: FREIGHT_TURNOVER_MONTHLY
+    name_ru: "Грузооборот, помесячно"
+    name_en: "Freight Turnover, monthly"
+    agency: bns
+    frequency: monthly
+    unit: "million tonne-km"
+    category: production
+    source_status: confirmed
+
+  - id: PASSENGER_TURNOVER_MONTHLY
+    name_ru: "Пассажирооборот, помесячно"
+    name_en: "Passenger Turnover, monthly"
+    agency: bns
+    frequency: monthly
+    unit: "million passenger-km"
+    category: production
+    source_status: confirmed
+
+  - id: FREIGHT_CARRIED
+    name_ru: "Перевезено грузов"
+    name_en: "Freight Carried"
+    agency: bns
+    frequency: monthly
+    unit: "thousand tonnes"
+    category: production
+    source_status: confirmed
+
+  - id: PASSENGERS_CARRIED
+    name_ru: "Перевезено пассажиров"
+    name_en: "Passengers Carried"
+    agency: bns
+    frequency: monthly
+    unit: "thousand people"
+    category: production
+    source_status: confirmed

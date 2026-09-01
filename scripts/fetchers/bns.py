@@ -3767,3 +3767,209 @@ def fetch_real_wage_index_quarterly() -> tuple[list[dict], dict]:
         "nominal wages up 11.5% year on year but real wages flat, which is the number that matters "
         "for consumption. The source row also publishes a quarter-on-quarter version; this is the "
         "year-on-year one.", "index (same quarter previous year = 100)")
+
+
+# ---------------------------------------------------------------------------
+# Monthly transport, from the BNS publication "Основные показатели работы
+# транспорта по видам экономической деятельности" (section "Транспорт").
+#
+# Closes the audit's freight and passenger turnover gap. The existing
+# FREIGHT_TURNOVER is ANNUAL and PASSENGER_TURNOVER is annual AND stops at 2016.
+#
+# TWO THINGS HERE ARE UNLIKE EVERY OTHER PUBLICATION USED IN THIS PROJECT.
+#
+# 1. THE CELLS ARE TEXT, NOT NUMBERS. openpyxl returns '540451.13' as a string.
+#    The isinstance(cell, (int, float)) filter used everywhere else in this
+#    module would have returned an EMPTY list of values here, and the fetcher
+#    would have silently found nothing. Values are parsed with _transport_num,
+#    and columns are addressed by ABSOLUTE POSITION rather than by their
+#    position among the numeric cells -- the latter is meaningless when some
+#    cells hold a dash for a mode that does not carry that traffic.
+#
+# 2. THE COVER CARRIES NO PUBLICATION DATE, only the period ("Январь-июль 2026
+#    года"). That is the better of the two anyway, and it is what is used.
+#
+# Column layout of sheet '1.', read from the header rows:
+#   c1 перевезено грузов, тыс. тонн      c2 % to same period last year
+#   c3 грузооборот, млн. т-км            c4 %
+#   c5 перевезено пассажиров, тыс. чел.  c6 %
+#   c7 пассажирооборот, млн. п-км        c8 %
+#   c9 доходы от перевозок, млн. теңге
+#
+# RECONCILIATION AGAINST THE EXISTING ANNUAL SERIES -- one matches, one does not:
+#
+#   Freight turnover:   298,327.53 mln t-km for January-July 2026 annualises to
+#                       511 bn t-km, against 512.6 bn in the annual
+#                       FREIGHT_TURNOVER for 2025. Effectively exact.
+#   Passenger turnover: 54,627.9 mln p-km for January-July 2026 annualises to
+#                       about 94 bn p-km, against 266.8 bn in the annual
+#                       PASSENGER_TURNOVER for 2016 -- a level roughly three
+#                       times higher.
+#
+# The passenger break is NOT explained here. The old annual series ends in 2016
+# and the long-run archive in the same section covers passengers CARRIED, a
+# different indicator, so nothing available resolves it. The two are therefore
+# kept as separate series and must not be spliced. Recorded as an open question
+# rather than smoothed over.
+# ---------------------------------------------------------------------------
+TRANSPORT_PAGE_URL = "https://stat.gov.kz/ru/industries/business-statistics/stat-transport/"
+TRANSPORT_SHEET_TITLE = "1. Основные показатели работы транспорта"
+TRANSPORT_ROW_MARKER = "Всего"
+TRANSPORT_COL_FREIGHT_CARRIED = 1
+TRANSPORT_COL_FREIGHT_TURNOVER = 3
+TRANSPORT_COL_PASSENGERS_CARRIED = 5
+TRANSPORT_COL_PASSENGER_TURNOVER = 7
+TRANSPORT_BLANKS = {"-", "–", "…", ".."}
+
+
+def _transport_num(cell):
+    """Parse a cell that may be a number, a numeric string, or a dash."""
+    if isinstance(cell, (int, float)):
+        return float(cell)
+    if not isinstance(cell, str):
+        return None
+    text = cell.strip().replace(" ", "").replace(" ", "").replace(",", ".")
+    if not text or text in TRANSPORT_BLANKS:
+        return None
+    try:
+        return float(text)
+    except ValueError:
+        return None
+
+
+def _fetch_transport_column(column: int, indicator_id: str, note: str,
+                            cumulative: bool) -> tuple[list[dict], dict]:
+    existing = {}
+    path = (Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE
+            / f"{indicator_id.lower()}.csv")
+    if path.exists():
+        with path.open(encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                try:
+                    existing[row["date"]] = float(row["value"])
+                except (KeyError, TypeError, ValueError):
+                    continue
+
+    fetched: dict[str, float] = {}
+    for eid in _publication_elements(TRANSPORT_PAGE_URL, indicator_id):
+        url = f"https://stat.gov.kz/api/iblock/element/{eid}/file/ru/"
+        try:
+            content = _download(url)
+            wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+        except Exception:
+            continue
+        sheet = next((s for s in wb.sheetnames if s.strip() == "1."), None)
+        if sheet is None:
+            continue
+        ws = wb[sheet]
+        if not any(isinstance(c, str) and c.strip().startswith(TRANSPORT_SHEET_TITLE)
+                   for row in ws.iter_rows(max_row=3, values_only=True) for c in row):
+            continue
+
+        period = None
+        for sh in wb.sheetnames[:3]:
+            for row in wb[sh].iter_rows(max_row=24, values_only=True):
+                for cell in row:
+                    if isinstance(cell, str):
+                        m = CONSTRUCTION_PERIOD_RE.match(cell.strip())
+                        if m and m.group(1).lower() in RU_MONTHS:
+                            period = (int(m.group(2)), RU_MONTHS[m.group(1).lower()])
+            if period:
+                break
+        if period is None:
+            continue
+
+        value = None
+        for row in ws.iter_rows(values_only=True):
+            label = next((c for c in row[:1] if isinstance(c, str)), "")
+            if label.strip().startswith(TRANSPORT_ROW_MARKER) and len(row) > column:
+                value = _transport_num(row[column])
+                break
+        if value is None:
+            continue
+
+        _save_raw(f"{indicator_id}_{eid}", content, "xlsx",
+                  {"source_url": url, "element_id": eid,
+                   "period": f"{period[0]:04d}-{period[1]:02d}", "sheet": "1.",
+                   "column": column})
+        fetched[f"{period[0]:04d}-{period[1]:02d}-01"] = value
+
+    merged = {**existing, **fetched}
+    if not merged:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: no edition on {TRANSPORT_PAGE_URL} carried sheet '1.' titled "
+                f"{TRANSPORT_SHEET_TITLE!r} with a row starting {TRANSPORT_ROW_MARKER!r}, a "
+                f"parseable value in column {column} and a cover period, and no processed "
+                "history exists",
+                "NOTE: this sheet stores its values as TEXT, not numbers -- a numeric-cell filter "
+                "finds nothing here",
+                "ACTION REQUIRED: inspect the page and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = [{"date": k, "value": v} for k, v in sorted(merged.items())]
+
+    if cumulative:
+        for prev, cur in zip(records, records[1:]):
+            if prev["date"][:4] == cur["date"][:4] and cur["value"] < prev["value"]:
+                raise validation.StructuralChangeError(
+                    "\n".join([
+                        f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                        f"WHAT CHANGED: year-to-date value fell within {cur['date'][:4]} -- "
+                        f"{prev['date']}={prev['value']:,.1f} then "
+                        f"{cur['date']}={cur['value']:,.1f}",
+                        "EXPECTED: a cumulative series never decreases inside a year",
+                        f"ACTION REQUIRED: inspect {TRANSPORT_PAGE_URL} and update "
+                        "scripts/fetchers/bns.py",
+                    ])
+                )
+
+    manifest = {
+        "frequency": "monthly",
+        "source_url": TRANSPORT_PAGE_URL,
+        "dataset_id": f"pokazateli-raboty-transporta/sheet-1/vsego/col{column}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def fetch_freight_turnover_monthly() -> tuple[list[dict], dict]:
+    """Freight turnover, million tonne-km, year-to-date cumulative."""
+    return _fetch_transport_column(
+        TRANSPORT_COL_FREIGHT_TURNOVER, "FREIGHT_TURNOVER_MONTHLY",
+        "Million tonne-km, YEAR-TO-DATE CUMULATIVE, all modes. Monthly companion to the annual "
+        "FREIGHT_TURNOVER, and it reconciles with it: 298,327.53 mln t-km for January-July 2026 "
+        "annualises to 511 bn against 512.6 bn reported for 2025. Note the source stores these "
+        "cells as TEXT rather than numbers.", cumulative=True)
+
+
+def fetch_passenger_turnover_monthly() -> tuple[list[dict], dict]:
+    """Passenger turnover, million passenger-km, year-to-date cumulative."""
+    return _fetch_transport_column(
+        TRANSPORT_COL_PASSENGER_TURNOVER, "PASSENGER_TURNOVER_MONTHLY",
+        "Million passenger-km, YEAR-TO-DATE CUMULATIVE, all modes. DO NOT SPLICE THIS ONTO THE "
+        "ANNUAL PASSENGER_TURNOVER SERIES. That series ends in 2016 at 266.8 bn p-km, while this "
+        "one reads 54,627.9 mln p-km for January-July 2026, or about 94 bn annualised -- roughly "
+        "a third of the old level. The break is unexplained: nothing published in this section "
+        "resolves it, since the long-run archive there covers passengers CARRIED, a different "
+        "indicator. Kept as a separate series and flagged rather than smoothed over.",
+        cumulative=True)
+
+
+def fetch_freight_carried() -> tuple[list[dict], dict]:
+    """Freight carried, thousand tonnes, year-to-date cumulative."""
+    return _fetch_transport_column(
+        TRANSPORT_COL_FREIGHT_CARRIED, "FREIGHT_CARRIED",
+        "Thousand tonnes, YEAR-TO-DATE CUMULATIVE, all modes. Physical tonnage, the companion to "
+        "FREIGHT_TURNOVER_MONTHLY, which weights tonnage by distance. Read together they separate "
+        "how much moved from how far it moved.", cumulative=True)
+
+
+def fetch_passengers_carried() -> tuple[list[dict], dict]:
+    """Passengers carried, thousand people, year-to-date cumulative."""
+    return _fetch_transport_column(
+        TRANSPORT_COL_PASSENGERS_CARRIED, "PASSENGERS_CARRIED",
+        "Thousand people, YEAR-TO-DATE CUMULATIVE, all modes. The count companion to "
+        "PASSENGER_TURNOVER_MONTHLY.", cumulative=True)

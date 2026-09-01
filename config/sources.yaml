@@ -585,6 +585,63 @@ agencies:
           nominal wages up 11.5% year on year but real wages flat, which is the number that matters
           for consumption.
 
+      FREIGHT_TURNOVER_MONTHLY:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-transport/"
+        format: xlsx
+        notes: >
+          2026-09-01. Sheet '1.' ('Основные показатели работы транспорта по видам экономической
+          деятельности'), row 'Всего', column 3 (млн. т-км). Year-to-date cumulative, all modes.
+          Closes the audit's freight turnover gap: the existing FREIGHT_TURNOVER is annual.
+          TWO THINGS HERE ARE UNLIKE EVERY OTHER PUBLICATION IN THIS PROJECT.
+          FIRST, THE CELLS ARE TEXT, NOT NUMBERS -- openpyxl returns '540451.13' as a string. The
+          isinstance(cell, (int, float)) filter used by every other fetcher in this module would
+          have found an EMPTY list of values here and silently returned nothing. Values are parsed
+          from text, and columns are addressed by ABSOLUTE POSITION rather than by position among
+          the numeric cells, which is meaningless when some cells hold a dash for a mode that does
+          not carry that traffic.
+          SECOND, THE COVER CARRIES NO PUBLICATION DATE, only the period ('Январь-июль 2026 года').
+          That is the better of the two anyway and it is what is used.
+          Column layout: c1 перевезено грузов (тыс. тонн), c2 %, c3 грузооборот (млн. т-км), c4 %,
+          c5 перевезено пассажиров (тыс. человек), c6 %, c7 пассажирооборот (млн. п-км), c8 %,
+          c9 доходы от перевозок (млн. теңге).
+          RECONCILES with the annual series: 298,327.53 mln t-km for January-July 2026 annualises
+          to 511 bn t-km against 512.6 bn reported for 2025.
+          Three editions online on 2026-09-01 (May-July 2026), strictly increasing. ACCUMULATES.
+
+      PASSENGER_TURNOVER_MONTHLY:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-transport/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet and row, column 7 (млн. п-км). Year-to-date cumulative.
+          UNRESOLVED LEVEL BREAK -- DO NOT SPLICE ONTO THE ANNUAL PASSENGER_TURNOVER SERIES.
+          That series ends in 2016 at 266.8 bn p-km. This one reads 54,627.9 mln p-km for
+          January-July 2026, about 94 bn annualised -- roughly a third of the old level. Freight
+          turnover from the SAME row reconciles almost exactly with its annual counterpart, so the
+          discrepancy is specific to passengers rather than a units or scaling error in the sheet.
+          The cause is NOT established here. The long-run archive in the same section (element
+          38141) covers 'Перевезено пассажиров', a different indicator, so nothing published there
+          resolves it. Recorded as an open question and kept as a separate series rather than
+          smoothed over or explained by guesswork.
+
+      FREIGHT_CARRIED:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-transport/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet and row, column 1 (тыс. тонн). Year-to-date cumulative physical
+          tonnage. Read against FREIGHT_TURNOVER_MONTHLY, which weights tonnage by distance, to
+          separate how much moved from how far it moved.
+
+      PASSENGERS_CARRIED:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-transport/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet and row, column 5 (тыс. человек). Year-to-date cumulative count
+          companion to PASSENGER_TURNOVER_MONTHLY.
+
       EXPORT_PRICE_INDEX:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/industries/economy/prices/"

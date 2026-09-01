@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/business-statistics/stat-transport/",
+  "dataset_id": "pokazateli-raboty-transporta/sheet-1/vsego/col3",
+  "indicator_id": "FREIGHT_TURNOVER_MONTHLY",
+  "indicator_name": "Freight Turnover, monthly",
+  "description": "Грузооборот, помесячно",
+  "frequency": "monthly",
+  "unit": "million tonne-km",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million tonne-km, YEAR-TO-DATE CUMULATIVE, all modes. Monthly companion to the annual FREIGHT_TURNOVER, and it reconciles with it: 298,327.53 mln t-km for January-July 2026 annualises to 511 bn against 512.6 bn reported for 2025. Note the source stores these cells as TEXT rather than numbers.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-05-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

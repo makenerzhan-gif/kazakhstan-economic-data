@@ -13455,6 +13455,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.090553743345362,KZT per 1 RUB,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,467.72582369546524,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,EXPORTS,6147393.583650006,thousand USD,bns,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,FREIGHT_CARRIED,382123.01,thousand tonnes,bns,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,FREIGHT_TURNOVER_MONTHLY,213301.16,million tonne-km,bns,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,FX_OTC_VOLUME_EUR,3155.67911297,EUR million,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,FX_OTC_VOLUME_RUB,16730.25806412,RUB million,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,FX_OTC_VOLUME_USD,36846.36804159,USD million,nbk,2026-09-01,level,2026-09-01
@@ -13496,6 +13498,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,OIL_EXPORTS_VALUE,2765326.7075599995,thousand USD,bns,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,4571937.534999999,tonnes,bns,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,OIL_PRODUCTION,8681.8,thousand tonnes,bns,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,PASSENGERS_CARRIED,822339.59,thousand people,bns,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,PASSENGER_TURNOVER_MONTHLY,36685.9,million passenger-km,bns,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,76196.0497675131,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,18396.2,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,PENSION_FUND_ASSETS,25712678.448,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -13593,6 +13597,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.513890045985644,KZT per 1 RUB,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,470.0677628623776,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,EXPORTS,9807366.906380022,thousand USD,bns,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,FREIGHT_CARRIED,462663.56,thousand tonnes,bns,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,FREIGHT_TURNOVER_MONTHLY,255817.02,million tonne-km,bns,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,FX_OTC_VOLUME_EUR,2678.15710586,EUR million,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,FX_OTC_VOLUME_RUB,11778.6457546,RUB million,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,FX_OTC_VOLUME_USD,23874.86459508,USD million,nbk,2026-09-01,level,2026-09-01
@@ -13632,6 +13638,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,OIL_EXPORTS_VALUE,5132327.9132199995,thousand USD,bns,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,OIL_EXPORTS_VOLUME,6142051.07458,tonnes,bns,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,OIL_PRODUCTION,8588.8,thousand tonnes,bns,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,PASSENGERS_CARRIED,979430.88,thousand people,bns,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,PASSENGER_TURNOVER_MONTHLY,45342.8,million passenger-km,bns,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,PAYMENTS_TOTAL_VALUE,88882.852709715,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,PAYMENT_CARDS_VALUE,19789.198091748,billion KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,PENSION_FUND_ASSETS,26576309.172,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -13751,6 +13759,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,quarterly,EXPORTERS_SHARE,6.472769,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_DIFFUSION_INDEX,58.511548,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,55.80268,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,FREIGHT_CARRIED,540451.13,thousand tonnes,bns,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,FREIGHT_TURNOVER_MONTHLY,298327.53,million tonne-km,bns,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,FX_OTC_VOLUME_EUR,3445.31046552,EUR million,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,FX_OTC_VOLUME_RUB,22113.81732956,RUB million,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,FX_OTC_VOLUME_USD,32235.34617144,USD million,nbk,2026-09-01,level,2026-09-01
@@ -13811,6 +13821,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_PAYABLE_SHARE,20.387796,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,OVERDUE_ACCOUNTS_RECEIVABLE_SHARE,24.379812,percent of respondents,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,OVERDUE_BANK_LOANS_SHARE,4.134588,percent of respondents,nbk,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,PASSENGERS_CARRIED,1130144.56,thousand people,bns,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,PASSENGER_TURNOVER_MONTHLY,54627.9,million passenger-km,bns,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,PENSION_FUND_ASSETS,26913614.438,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,PENSION_PAYMENTS,639307.969,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX,54.690619,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01

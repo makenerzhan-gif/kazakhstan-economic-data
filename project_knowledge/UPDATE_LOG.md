@@ -2221,3 +2221,30 @@ Splicing code through a shell heredoc lost one backslash level and wrote a liter
 a string literal, breaking the module. Two lessons, both now applied: build the replacement text
 in a scratchpad FILE rather than inside a heredoc, and validate before writing rather than after —
 the previous attempt wrote the broken file first and only then discovered it would not parse.
+
+## 2026-09-01 — monthly transport (360 indicators, 14,118 observations)
+
+- `FREIGHT_TURNOVER_MONTHLY`, `PASSENGER_TURNOVER_MONTHLY`, `FREIGHT_CARRIED`,
+  `PASSENGERS_CARRIED` from "Основные показатели работы транспорта по видам экономической
+  деятельности". Closes the audit's turnover gap: `FREIGHT_TURNOVER` was annual and
+  `PASSENGER_TURNOVER` was annual and stopped at 2016.
+- **The cells in this sheet are TEXT, not numbers.** openpyxl returns `'540451.13'` as a string.
+  The `isinstance(cell, (int, float))` filter that every other fetcher in the module uses would
+  have found an empty list here and returned nothing — a silent miss, not an error. Values are
+  parsed from text, and columns are addressed by absolute position rather than by position among
+  the numeric cells, which is meaningless when some cells hold a dash.
+- The cover carries no publication date, only the period ("Январь-июль 2026 года") — which is the
+  better of the two anyway, and is what the reporting month is taken from.
+- **One reconciliation passed and one failed, and the failure is recorded rather than papered
+  over.** Freight turnover: 298,327.53 mln t-km for January–July 2026 annualises to 511 bn
+  against 512.6 bn in the annual series for 2025 — effectively exact. Passenger turnover:
+  54,627.9 mln p-km annualises to about 94 bn against 266.8 bn in the annual series for 2016,
+  roughly a third of the old level.
+- Since freight from the *same row* reconciles, the passenger discrepancy is not a units or
+  scaling error in the sheet. The cause is not established: the long-run archive in that section
+  covers passengers *carried*, a different indicator, so nothing published there resolves it.
+  The two passenger series are kept separate and marked "do not splice". Left as an open question
+  instead of an invented explanation.
+- Year-to-date values guarded for monotonicity; three editions online (May–July 2026), strictly
+  increasing on all four series.
+- Verified live: 125/125 BNS fetchers OK, 29/29 tests passing.
