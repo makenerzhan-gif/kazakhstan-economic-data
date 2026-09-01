@@ -353,6 +353,36 @@ agencies:
           Internal check at July 2026: mining 2,539,304 + manufacturing 2,605,482 = 5,144,786
           against total industry 5,479,507, the 334,721 difference being electricity and water
           supply, which the same sheet reports separately. fetch_manufacturing_output.
+      INVESTMENT_FIXED_CAPITAL:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-invest/"
+        format: xlsx
+        notes: >
+          2026-09-01. Monthly publication 'Статистика инвестиций', sheet 1 ('Инвестиции в
+          основной капитал по видам затрат'), reached through the publication layer like
+          OIL_PRODUCTION and INDUSTRIAL_OUTPUT. Answers the staleness finding for the annual
+          INVESTMENT series, which stops at 2022.
+          The figures are YEAR-TO-DATE CUMULATIVE, not monthly flows: the sheet compares against
+          'соответствующему периоду прошлого года', and 11,464,246,834 thousand KZT for
+          January-July 2026 is 11.46 trillion over seven months, about 19.6 trillion a year --
+          Kazakhstan's actual investment scale, which a single month could not be.
+          A REAL TRAP HERE: the section mixes MONTHLY editions with an ANNUAL one. Read naively,
+          the annual file (published 03.07.2026) became 'June 2026' at 23.5 trillion against
+          July's 11.46 -- an impossible fall for a cumulative series, which is what exposed it.
+          Editions are now told apart by the gap to their next publication, which each file
+          states on its own cover: about a month for monthly, a year for annual. A monotonicity
+          check also raises if a year-to-date value ever falls inside a calendar year, so this
+          class of mistake cannot return silently. Series after the fix: 3.46, 4.94, 6.74, 9.51,
+          11.46 trillion for March-July 2026. fetch_investment_fixed_capital.
+      INVESTMENT_INDEX:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-invest/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet and row as INVESTMENT_FIXED_CAPITAL, second column: the
+          year-to-date index against the same period a year earlier (106-110 across March-July
+          2026). The real-terms companion to the current-price value series.
+          fetch_investment_index.
       IMPORTS:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/open-data/international-trade/474299/"

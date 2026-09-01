@@ -2623,3 +2623,203 @@ def fetch_manufacturing_output() -> tuple[list[dict], dict]:
         "Обрабатывающая промышленность", "MANUFACTURING_OUTPUT",
         "Million KZT. Value of manufacturing output -- the non-extractive half of industry, and "
         "the usual measure of diversification progress.")
+
+
+# ---------------------------------------------------------------------------
+# Fixed capital investment, from the monthly publication "Статистика инвестиций"
+# (sheet 1, "Инвестиции в основной капитал по видам затрат").
+#
+# The existing INVESTMENT series is ANNUAL and stops at 2022 -- one of the
+# staleness findings in the sector audit. This is the current, monthly-published
+# replacement, reached the same way as OIL_PRODUCTION and INDUSTRIAL_OUTPUT: via
+# the publication layer rather than the stat.gov.kz cubes.
+#
+# The figures are YEAR-TO-DATE CUMULATIVE, not monthly flows -- the sheet's own
+# column header reads "к соответствующему периоду прошлого года" (against the
+# same PERIOD of last year), and the July 2026 edition reports 11,464,246,834
+# thousand KZT, which is 11.46 trillion for seven months and about 19.6 trillion
+# a year. That is Kazakhstan's actual investment scale, and it confirms the
+# cumulative reading: a single month at that level would be implausible.
+# Labelled as cumulative rather than silently mixed with monthly series.
+#
+# Column layout after dropping non-numeric cells: [total value, index vs same
+# period last year, small enterprises, their index, medium, their index, large,
+# ...]. One point per edition, so like the other publication-layer series this
+# one ACCUMULATES across runs.
+# ---------------------------------------------------------------------------
+INVEST_PAGE_URL = "https://stat.gov.kz/ru/industries/business-statistics/stat-invest/"
+INVEST_ROW_MARKER = "Инвестиции в основной капитал"
+INVEST_UNIT_WORDS = ("тыс.теңге", "тыс.тенге")
+# The investment section mixes MONTHLY editions with an ANNUAL one. They are told apart
+# by the gap to the next publication, which each file states on its own cover: about a
+# month for monthly editions, a year for the annual one. Without this, the annual file
+# (published 03.07.2026) was read as the June 2026 month and produced 23.5 trillion KZT
+# against July's 11.46 -- an impossible drop for a year-to-date series, which is what
+# exposed it.
+NEXT_PUBLISHED_RE = re.compile(r"Дата следующего опубликования:\s*(\d{2})\.(\d{2})\.(\d{4})")
+MAX_EDITION_GAP_DAYS = 70
+
+
+def _publication_elements(page_url: str, indicator_id: str) -> list[int]:
+    resp = requests.get(page_url, headers=HEADERS, timeout=60)
+    resp.raise_for_status()
+    ids: list[int] = []
+    for m in re.finditer(r"/api/iblock/element/(\d+)/file/", resp.text):
+        eid = int(m.group(1))
+        if eid not in ids:
+            ids.append(eid)
+    if not ids:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: no /api/iblock/element/<id>/file/ links on {page_url}",
+                "ACTION REQUIRED: inspect the page and update scripts/fetchers/bns.py",
+            ])
+        )
+    return ids
+
+
+def _fetch_investment_series(value_index: int, indicator_id: str, note: str,
+                             unit_check: bool) -> tuple[list[dict], dict]:
+    existing = {}
+    path = (Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE
+            / f"{indicator_id.lower()}.csv")
+    if path.exists():
+        with path.open(encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                try:
+                    existing[row["date"]] = float(row["value"])
+                except (KeyError, TypeError, ValueError):
+                    continue
+
+    fetched: dict[str, float] = {}
+    for eid in _publication_elements(INVEST_PAGE_URL, indicator_id):
+        url = f"https://stat.gov.kz/api/iblock/element/{eid}/file/ru/"
+        try:
+            content = _download(url)
+            wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+        except Exception:
+            continue
+        sheet = next((s for s in wb.sheetnames if s.strip() == "1"), None)
+        if sheet is None:
+            continue
+
+        published = None
+        for sh in ("Обложка", "Метаданные"):
+            if sh not in wb.sheetnames:
+                continue
+            for row in wb[sh].iter_rows(max_row=20, values_only=True):
+                for cell in row:
+                    if isinstance(cell, str):
+                        m = PUBLISHED_RE.search(cell)
+                        if m:
+                            published = date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+                            break
+                if published:
+                    break
+            if published:
+                break
+        next_published = None
+        for sh in ("Обложка", "Метаданные"):
+            if sh not in wb.sheetnames:
+                continue
+            for row in wb[sh].iter_rows(max_row=20, values_only=True):
+                for cell in row:
+                    if isinstance(cell, str):
+                        m = NEXT_PUBLISHED_RE.search(cell)
+                        if m:
+                            next_published = date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+                            break
+                if next_published:
+                    break
+            if next_published:
+                break
+        if published is None:
+            continue
+        if next_published is not None and (next_published - published).days > MAX_EDITION_GAP_DAYS:
+            # Annual edition, not a monthly one -- see NEXT_PUBLISHED_RE above.
+            continue
+
+        unit_ok = not unit_check
+        target = None
+        for row in wb[sheet].iter_rows(values_only=True):
+            for cell in row[:10]:
+                if isinstance(cell, str) and any(w in "".join(cell.split()) for w in INVEST_UNIT_WORDS):
+                    unit_ok = True
+            label = next((c for c in row[:2] if isinstance(c, str)), "")
+            if target is None and label.strip() == INVEST_ROW_MARKER:
+                target = [c for c in row if isinstance(c, (int, float))]
+        if target is None or len(target) <= value_index:
+            continue
+        if not unit_ok:
+            raise validation.StructuralChangeError(
+                "\n".join([
+                    f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                    f"WHAT CHANGED: sheet 1 of element {eid} no longer declares its unit as one of "
+                    f"{INVEST_UNIT_WORDS!r}",
+                    "EXPECTED: thousand KZT; a changed unit would rescale the series silently",
+                    f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+                ])
+            )
+
+        _save_raw(f"{indicator_id}_{eid}", content, "xlsx",
+                  {"source_url": url, "element_id": eid, "published": published.isoformat()})
+        rep_y, rep_m = (published.year, published.month - 1) if published.month > 1 else (published.year - 1, 12)
+        fetched[f"{rep_y:04d}-{rep_m:02d}-01"] = float(target[value_index])
+
+    merged = {**existing, **fetched}
+    if not merged:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: no edition on {INVEST_PAGE_URL} carried sheet 1 with a row equal to "
+                f"{INVEST_ROW_MARKER!r}, and no previously processed history exists",
+                "ACTION REQUIRED: inspect the page and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = [{"date": k, "value": v} for k, v in sorted(merged.items())]
+    if unit_check:
+        # Year-to-date cumulation can only rise within a calendar year. A fall means an
+        # edition of the wrong periodicity slipped in -- which is exactly how the annual
+        # file was caught before the periodicity filter above existed.
+        for a, b in zip(records, records[1:]):
+            if a["date"][:4] == b["date"][:4] and b["value"] < a["value"]:
+                raise validation.StructuralChangeError(
+                    "\n".join([
+                        f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                        f"WHAT CHANGED: year-to-date value falls within {a['date'][:4]}: "
+                        f"{a['date']}={a['value']:,.0f} then {b['date']}={b['value']:,.0f}",
+                        "EXPECTED: a cumulative series cannot decrease inside a calendar year",
+                        "EXPECTED CONSEQUENCE: an edition of the wrong periodicity (annual rather "
+                        "than monthly) has most likely been included",
+                        f"ACTION REQUIRED: inspect {INVEST_PAGE_URL} and update scripts/fetchers/bns.py",
+                    ])
+                )
+    manifest = {
+        "frequency": "monthly",
+        "source_url": INVEST_PAGE_URL,
+        "dataset_id": f"statistika-investiciy/sheet-1/{INVEST_ROW_MARKER}/col{value_index}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def fetch_investment_fixed_capital() -> tuple[list[dict], dict]:
+    """Investment in fixed capital, thousand KZT, year-to-date cumulative."""
+    return _fetch_investment_series(
+        0, "INVESTMENT_FIXED_CAPITAL",
+        "Thousand KZT, YEAR-TO-DATE CUMULATIVE (not a monthly flow) -- the sheet reports against "
+        "the same PERIOD of the previous year. Replaces the annual INVESTMENT series, which stops "
+        "at 2022. Accumulated across runs because the source keeps only a handful of editions "
+        "online. 11.46 trillion KZT for January-July 2026, about 19.6 trillion a year.",
+        unit_check=True)
+
+
+def fetch_investment_index() -> tuple[list[dict], dict]:
+    """Investment in fixed capital, index against the same period a year earlier."""
+    return _fetch_investment_series(
+        1, "INVESTMENT_INDEX",
+        "Index, same period of the previous year = 100, year-to-date. The real-terms companion to "
+        "INVESTMENT_FIXED_CAPITAL, which is in current prices.",
+        unit_check=False)

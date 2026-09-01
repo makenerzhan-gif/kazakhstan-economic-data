@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/business-statistics/stat-invest/",
+  "dataset_id": "statistika-investiciy/sheet-1/Инвестиции в основной капитал/col0",
+  "indicator_id": "INVESTMENT_FIXED_CAPITAL",
+  "indicator_name": "Investment in Fixed Capital (year-to-date)",
+  "description": "Инвестиции в основной капитал (накопленным итогом)",
+  "frequency": "monthly",
+  "unit": "thousand KZT, year-to-date cumulative",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Thousand KZT, YEAR-TO-DATE CUMULATIVE (not a monthly flow) -- the sheet reports against the same PERIOD of the previous year. Replaces the annual INVESTMENT series, which stops at 2022. Accumulated across runs because the source keeps only a handful of editions online. 11.46 trillion KZT for January-July 2026, about 19.6 trillion a year.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-03-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -2669,6 +2669,24 @@ indicators:
     category: production
     source_status: confirmed
 
+  - id: INVESTMENT_FIXED_CAPITAL
+    name_ru: "Инвестиции в основной капитал (накопленным итогом)"
+    name_en: "Investment in Fixed Capital (year-to-date)"
+    agency: bns
+    frequency: monthly
+    unit: "thousand KZT, year-to-date cumulative"
+    category: investment
+    source_status: confirmed
+
+  - id: INVESTMENT_INDEX
+    name_ru: "Индекс инвестиций в основной капитал"
+    name_en: "Investment in Fixed Capital Index"
+    agency: bns
+    frequency: monthly
+    unit: "index, same period previous year = 100"
+    category: investment
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

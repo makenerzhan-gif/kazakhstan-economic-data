@@ -12763,6 +12763,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.6,%,nbk,2026-09-01,level,2026-09-01
 2026-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,108381.06,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2026-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,159541.754,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
+2026-03-01,KZ,national,monthly,INVESTMENT_FIXED_CAPITAL,3462954863.0,"thousand KZT, year-to-date cumulative",bns,2026-09-01,level,2026-09-01
+2026-03-01,KZ,national,monthly,INVESTMENT_INDEX,106.4,"index, same period previous year = 100",bns,2026-09-01,level,2026-09-01
 2026-03-01,KZ,national,monthly,KASE_USD_VOLUME,6783485791.0,USD,nbk,2026-09-01,level,2026-09-01
 2026-03-01,KZ,national,monthly,LENDING_RATE,21.161309683366508,%,nbk,2026-09-01,level,2026-09-01
 2026-03-01,KZ,national,monthly,LOANS_BUSINESS_FX,5391825.160983,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -12953,6 +12955,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,240772.281,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,51.174112,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.450745,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,monthly,INVESTMENT_FIXED_CAPITAL,4936639377.0,"thousand KZT, year-to-date cumulative",bns,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,monthly,INVESTMENT_INDEX,106.7,"index, same period previous year = 100",bns,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,KASE_USD_VOLUME,6728781904.0,USD,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,LENDING_RATE,21.324223612134443,%,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,LOANS_BUSINESS_FX,5333218.848275,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -13097,6 +13101,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.7,%,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,227726.191,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,345627.144,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,INVESTMENT_FIXED_CAPITAL,6742306077.0,"thousand KZT, year-to-date cumulative",bns,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,INVESTMENT_INDEX,107.0,"index, same period previous year = 100",bns,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,KASE_USD_VOLUME,8840953580.0,USD,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,LENDING_RATE,21.50224740718959,%,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,LOANS_BUSINESS_FX,5454222.788815,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -13226,6 +13232,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.4,%,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,278228.595,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,433074.004,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,INVESTMENT_FIXED_CAPITAL,9512104576.0,"thousand KZT, year-to-date cumulative",bns,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,INVESTMENT_INDEX,109.6,"index, same period previous year = 100",bns,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,KASE_USD_VOLUME,6838572326.0,USD,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,LENDING_RATE,21.661628124946557,%,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,LOANS_BUSINESS_FX,5916835.608669,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -13378,6 +13386,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,584071.888,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,53.963502,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.236384,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,INVESTMENT_FIXED_CAPITAL,11464246834.0,"thousand KZT, year-to-date cumulative",bns,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,INVESTMENT_INDEX,107.7,"index, same period previous year = 100",bns,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,KASE_USD_VOLUME,8763583632.0,USD,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,LENDING_RATE,20.268876944481192,%,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,LOANS_BUSINESS_FX,6296439.999176,million KZT,nbk,2026-09-01,level,2026-09-01

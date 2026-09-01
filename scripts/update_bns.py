@@ -124,6 +124,8 @@ FETCHERS = {
     "INDUSTRIAL_PRODUCTION_INDEX": bns_fetchers.fetch_industrial_production_index,
     "MINING_OUTPUT": bns_fetchers.fetch_mining_output,
     "MANUFACTURING_OUTPUT": bns_fetchers.fetch_manufacturing_output,
+    "INVESTMENT_FIXED_CAPITAL": bns_fetchers.fetch_investment_fixed_capital,
+    "INVESTMENT_INDEX": bns_fetchers.fetch_investment_index,
 }
 
 INDICATOR_IDS = [
@@ -188,6 +190,8 @@ INDICATOR_IDS = [
     "INDUSTRIAL_PRODUCTION_INDEX",
     "MINING_OUTPUT",
     "MANUFACTURING_OUTPUT",
+    "INVESTMENT_FIXED_CAPITAL",
+    "INVESTMENT_INDEX",
 ]
 
 

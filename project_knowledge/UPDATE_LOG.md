@@ -2045,3 +2045,33 @@ At July 2026: mining 2,539,304 + manufacturing 2,605,482 = 5,144,786 against tot
 reports separately (water alone is 54,991) — so the sector rows account for the total.
 
 **336/336 indicators** (101/101 BNS re-verified live). `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — fixed capital investment, and a trap that cost a wrong series (336 -> 338)
+Third staleness fix from the publication layer: the annual INVESTMENT series stops at **2022**.
+INVESTMENT_FIXED_CAPITAL and INVESTMENT_INDEX now carry current, monthly-published figures —
+11.46 trillion KZT for January-July 2026, growing 8% year on year in real terms.
+
+The figures are **year-to-date cumulative, not monthly flows**. The sheet compares against
+"соответствующему периоду прошлого года", and 11.46 trillion over seven months is about 19.6
+trillion a year, which is Kazakhstan's actual investment scale — a single month could not be.
+Labelled as cumulative rather than quietly mixed in with monthly series.
+
+### The section mixes monthly and annual editions
+This is the trap, and it produced a visibly wrong series before it was caught. The
+investment section publishes **monthly** editions alongside an **annual** one. Read naively —
+"published in month M, therefore reports month M−1" — the annual file (published 03.07.2026)
+became *June 2026* at **23.5 trillion**, against July's 11.46.
+
+A cumulative series cannot fall. That impossibility is what exposed it; nothing about 23.5
+trillion looks wrong in isolation, and it sits in exactly the range a plausible figure would.
+
+Two fixes, because one was not enough:
+- Editions are now told apart by the **gap to their next publication**, which each file states
+  on its own cover — about a month for monthly, a year for annual. That removes the bad row.
+- A **monotonicity check** raises if a year-to-date value ever falls inside a calendar year.
+  That is the property that caught this, so it is now enforced rather than relied on being
+  noticed. The periodicity filter is the fix; the monotonicity check is the net beneath it.
+
+After the fix the series reads 3.46, 4.94, 6.74, 9.51, 11.46 trillion for March-July 2026.
+
+**338/338 indicators** (103/103 BNS re-verified live). `pytest tests/ -q` — 29/29 passing.
