@@ -2901,6 +2901,36 @@ agencies:
           across the same dates, ruling out a fetcher bug. Reconciling this would mean
           guessing whether to rescale old or new values, which MASTER TASK rules forbid.
           Declined; only RESERVES_IMPORT_COVER connected from this form.
+      ANNUAL_INFLATION:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data/indicators"
+        format: json
+        notes: >
+          2026-09-01. Found while repairing the rolling-window rate series: the small
+          indicators widget behind NBK's homepage carries FOUR fields, not just the TONIA one
+          already used -- baseRate, tonia, annualInflation and inflationTarget. Annual
+          inflation was listed as a critical gap in the sector coverage audit, because the
+          existing CPI series holds only month-on-month percent change, from which a
+          year-on-year rate cannot be read off.
+          Parameter names matter: `from`/`to` are honoured, while `fromDate`/`toDate` are
+          silently ignored. Even so the window is rolling and shallow -- 2026-02-24 onward on
+          2026-09-01; requests for 2010-2015, 2020-2022 or 2024-2025 all return zero rows.
+          EVENT-DATED, not daily: the source stamps the value on every calendar day but it
+          only steps on CPI release dates -- across the 186-day window it took 7 distinct
+          values, changing on 2026-03-03, 04-02, 05-05, 06-02, 07-02 and 08-04. Storing it
+          daily would bury six real releases under 186 repeated rows, so only change points
+          are kept. Dates are the day the figure APPEARED (the release date), not the month
+          the reading refers to -- that mapping was not verified and is deliberately not
+          asserted. fetch_annual_inflation.
+      INFLATION_TARGET:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data/indicators"
+        format: json
+        notes: >
+          2026-09-01. Same widget and same rolling window as ANNUAL_INFLATION, field
+          inflationTarget. Event-dated: constant at 5.0 across the whole observed window, so
+          the series is a single row and will stay short by design -- it exists to record
+          WHEN the target moves. fetch_inflation_target.
       TONIA:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data/indicators"

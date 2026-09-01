@@ -1805,3 +1805,42 @@ published. Restored with `git restore` and re-applied by finding the function's 
 the first following line at column 0 — rather than the next `def`.
 
 **322/322 indicators, 126/126 NBK re-verified live.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — rolling windows stopped leaking; annual inflation found (322 -> 324)
+Second item from the coverage audit. The exchange rate was not the only series bleeding
+history: **three NBK endpoints serve only a recent window and silently drop what falls out
+of it.** Established live rather than assumed:
+
+| endpoint | window | parameters |
+|---|---|---|
+| `get_rates.cfm` | opens early May 2021 | no range interface at all |
+| `/api/v1/data/base-rate` | fixed 15 most recent decisions | ignores `limit`, `size`, `count`, `pageSize`, `page`, `fromDate`, `startDate`, `dateFrom`, `all`, `years` — all ten tried, all return exactly 15 rows |
+| `/api/v1/data/indicators` | rolling ~6 months | accepts `from`/`to`, ignores `fromDate`/`toDate`; even so, 2010-2015, 2020-2022 and 2024-2025 all return zero rows |
+
+A fetcher that returns only the current window therefore loses data on every run. BASE_RATE
+and TONIA now accumulate through a shared `_merge_accumulated` helper, the same fix applied
+to EXCHANGE_RATE. Nothing is recovered retroactively — the point is that nothing more is lost.
+
+### Two new indicators, from an endpoint already in use
+The indicators widget behind NBK's homepage carries **four** fields, not just the `tonia` one
+the project was reading: `baseRate`, `tonia`, `annualInflation`, `inflationTarget`.
+
+**ANNUAL_INFLATION** closes a gap the audit had marked critical: the existing CPI series holds
+only month-on-month percent change, so a year-on-year rate could not be read off it at all.
+Now 7 points, 12.2% (Feb 2026) declining to 10.2% (Aug 2026), against **INFLATION_TARGET** of
+5.0%.
+
+Both are stored **event-dated, not daily**. The source stamps a value on every calendar day,
+but annual inflation only steps when a CPI reading is released — across the 186-day window it
+took 7 distinct values, changing on 2026-03-03, 04-02, 05-05, 06-02, 07-02 and 08-04. Storing
+it daily would bury six real releases under 186 repeated rows. Dates are the day the figure
+**appeared**, not the month it refers to: that mapping was not verified, so it is not asserted.
+
+### A judgement call reversed after checking the output
+BASE_RATE was first given the same repeat-collapsing as annual inflation, and the series
+dropped from 15 points to 6. That is wrong: this endpoint returns one row per **MPC decision**,
+and a decision to hold the rate is itself an event. Collapsing silently discarded every hold.
+Repeat-collapsing is right for a figure carried between releases and wrong for a record of
+decisions — the two look identical in the data and are not. Reverted; 15 decisions retained.
+
+**324/324 indicators, 128/128 NBK re-verified live.** `pytest tests/ -q` — 29/29 passing.

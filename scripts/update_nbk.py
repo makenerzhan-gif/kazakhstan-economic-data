@@ -144,6 +144,8 @@ FETCHERS = {
     "RESERVE_ASSETS_GDP_SHARE": nbk_fetchers.fetch_reserve_assets_gdp_share,
     "FINANCIAL_ACCOUNT_BALANCE": nbk_fetchers.fetch_financial_account_balance,
     "BOP_OVERALL_BALANCE_GDP_SHARE": nbk_fetchers.fetch_bop_overall_balance_gdp_share,
+    "ANNUAL_INFLATION": nbk_fetchers.fetch_annual_inflation,
+    "INFLATION_TARGET": nbk_fetchers.fetch_inflation_target,
 }
 
 INDICATOR_IDS = [
@@ -245,6 +247,8 @@ INDICATOR_IDS = [
     "RESERVE_ASSETS_GDP_SHARE",
     "FINANCIAL_ACCOUNT_BALANCE",
     "BOP_OVERALL_BALANCE_GDP_SHARE",
+    "ANNUAL_INFLATION",
+    "INFLATION_TARGET",
 ]
 
 

@@ -2543,6 +2543,24 @@ indicators:
     category: fiscal
     source_status: confirmed
 
+  - id: ANNUAL_INFLATION
+    name_ru: "Годовая инфляция (ИПЦ, г/г)"
+    name_en: "Annual Consumer Inflation (year-on-year)"
+    agency: nbk
+    frequency: irregular
+    unit: "percent"
+    category: prices
+    source_status: confirmed
+
+  - id: INFLATION_TARGET
+    name_ru: "Целевой уровень инфляции НБ РК"
+    name_en: "NBK Inflation Target"
+    agency: nbk
+    frequency: irregular
+    unit: "percent"
+    category: prices
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

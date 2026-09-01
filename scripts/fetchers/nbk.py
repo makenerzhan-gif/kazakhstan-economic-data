@@ -67,8 +67,14 @@ def fetch_base_rate() -> tuple[list[dict], dict]:
             ])
         )
 
-    records = [{"date": row["effectiveDate"], "value": float(row["rate"])} for row in data]
-    records.sort(key=lambda r: r["date"])
+    fresh = {row["effectiveDate"]: float(row["rate"]) for row in data}
+    # Accumulated: this endpoint returns a FIXED window of the 15 most recent
+    # decisions and ignores every paging/date parameter tried (verified 2026-09-01),
+    # so without merging, each decision falls out of the series as newer ones land.
+    # NOT collapsed: the endpoint returns one row per MPC DECISION, and a decision to
+    # hold the rate is itself an event worth keeping. Collapsing repeats here dropped 15
+    # decisions to 6 distinct levels, discarding every hold.
+    records = _merge_accumulated("BASE_RATE", fresh)
     manifest = {
         "frequency": "daily",
         "source_url": BASE_RATE_URL,
@@ -95,22 +101,6 @@ def _parse_usd_from_rates_xml(content: bytes) -> float | None:
                     return None
             return None
     return None
-
-
-def _load_existing_exchange_rate() -> dict[str, float]:
-    """Previously-processed USD/KZT points, so each run only fetches what is
-    missing instead of re-downloading years of history."""
-    path = Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE / "exchange_rate.csv"
-    if not path.exists():
-        return {}
-    out: dict[str, float] = {}
-    with path.open(encoding="utf-8") as f:
-        for row in csv.DictReader(f):
-            try:
-                out[row["date"]] = float(row["value"])
-            except (KeyError, TypeError, ValueError):
-                continue
-    return out
 
 
 def _assert_no_isolated_spike(ordered: list[dict]) -> None:
@@ -183,7 +173,7 @@ def fetch_exchange_rate_usd(recheck_days: int = 14, max_new: int | None = None) 
     keeping raw data an unmodified copy of what the source returned.
     """
     today = date.today()
-    existing = _load_existing_exchange_rate()
+    existing = _load_processed_series("EXCHANGE_RATE")
 
     wanted: list[date] = []
     d = EXCHANGE_RATE_EARLIEST
@@ -828,7 +818,10 @@ def fetch_tonia() -> tuple[list[dict], dict]:
                 f"ACTION REQUIRED: inspect {INDICATORS_URL} and update scripts/fetchers/nbk.py",
             ])
         )
-    records = sorted([{"date": r["date"], "value": float(r["tonia"])} for r in matching], key=lambda r: r["date"])
+    fresh = {r["date"]: float(r["tonia"]) for r in matching}
+    # Accumulated: this endpoint serves only a rolling ~6-month window, so a
+    # fetcher returning just the window would drop older days on every run.
+    records = _merge_accumulated("TONIA", fresh)
     manifest = {
         "frequency": "daily",
         "source_url": INDICATORS_URL,
@@ -2835,3 +2828,138 @@ def fetch_bop_overall_balance_gdp_share() -> tuple[list[dict], dict]:
         "Percent of GDP. OVERALL BALANCE of the balance of payments.",
         "quarterly",
     )
+
+
+# ---------------------------------------------------------------------------
+# Rolling-window sources: accumulate instead of re-pulling.
+#
+# Three NBK endpoints serve only a recent window and silently drop older data:
+#   - get_rates.cfm (official FX rate)      -- window opens early May 2021
+#   - /api/v1/data/base-rate                -- a fixed 15 most recent decisions
+#   - /api/v1/data/indicators               -- a rolling ~6 months
+# Verified on the last two, 2026-09-01: base-rate ignores every paging and date
+# parameter tried (limit/size/count/pageSize/page/fromDate/startDate/dateFrom/
+# all/years) and always returns exactly 15 rows; indicators accepts `from`/`to`
+# (but NOT `fromDate`/`toDate`, which are ignored) yet still answers only from
+# 2026-02-24 -- asking for 2010-2015, 2020-2022 or 2024-2025 returns zero rows.
+#
+# Because these windows roll forward, a fetcher that returns only what the
+# endpoint currently serves loses history permanently on every run. These
+# helpers merge each fetch with what has already been processed, so the series
+# grows instead of sliding.
+# ---------------------------------------------------------------------------
+def _load_processed_series(indicator_id: str) -> dict[str, float]:
+    """Points already written for this indicator, keyed by date."""
+    path = (Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE
+            / f"{indicator_id.lower()}.csv")
+    if not path.exists():
+        return {}
+    out: dict[str, float] = {}
+    with path.open(encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            try:
+                out[row["date"]] = float(row["value"])
+            except (KeyError, TypeError, ValueError):
+                continue
+    return out
+
+
+def _merge_accumulated(indicator_id: str, fresh: dict[str, float],
+                       collapse_repeats: bool = False) -> list[dict]:
+    """Merge freshly-fetched points with everything already processed.
+
+    `collapse_repeats` is for EVENT-DATED series -- a policy rate or a published
+    inflation figure that is carried unchanged between announcements. Keeping one
+    row per calendar day would bury a handful of real decisions under hundreds of
+    repetitions, so only the points where the value actually changes are kept.
+    """
+    merged = {**_load_processed_series(indicator_id), **fresh}
+    records = [{"date": k, "value": v} for k, v in sorted(merged.items())]
+    if collapse_repeats:
+        kept = []
+        for r in records:
+            if not kept or r["value"] != kept[-1]["value"]:
+                kept.append(r)
+        records = kept
+    return records
+
+
+def _fetch_indicators_widget() -> list[dict]:
+    """Full current window of the indicators widget (base rate, TONIA, annual
+    inflation, inflation target). `from`/`to` are the parameter names that work."""
+    resp = requests.get(INDICATORS_URL, headers=HEADERS,
+                        params={"from": "2000-01-01", "to": date.today().isoformat()}, timeout=30)
+    resp.raise_for_status()
+    return resp.json()
+
+
+def _fetch_indicators_field(field: str, indicator_id: str, note: str,
+                            frequency: str, collapse_repeats: bool) -> tuple[list[dict], dict]:
+    rows = _fetch_indicators_widget()
+    today = date.today()
+    raw_store.save_raw_bytes(SOURCE, indicator_id, today, "json",
+                             json.dumps(rows, ensure_ascii=False).encode("utf-8"))
+
+    matching = {r["date"]: float(r[field]) for r in rows
+                if r.get(field) is not None and r.get("date")}
+    existing = _load_processed_series(indicator_id)
+    if not matching and not existing:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+                f"WHAT CHANGED: no rows with a non-null {field!r} field, and no previously "
+                "processed history to fall back on",
+                f"ACTUAL: {len(rows)} rows returned, none carrying {field!r}",
+                f"ACTION REQUIRED: inspect {INDICATORS_URL} and update scripts/fetchers/nbk.py",
+            ])
+        )
+
+    records = _merge_accumulated(indicator_id, matching, collapse_repeats=collapse_repeats)
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": INDICATORS_URL,
+        "field": field, "already_had": len(existing), "in_window": len(matching),
+        "total_after_merge": len(records),
+    })
+    manifest = {
+        "frequency": frequency,
+        "source_url": INDICATORS_URL,
+        "dataset_id": f"indicators-widget,field={field}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def fetch_annual_inflation() -> tuple[list[dict], dict]:
+    """Annual (year-on-year) consumer inflation, percent, as published by NBK.
+
+    Event-dated. The source stamps this value on every calendar day, but it only
+    STEPS when a new CPI reading is released -- verified 2026-09-01: across the
+    186-day window it took 7 distinct values, changing on 2026-03-03, 04-02,
+    05-05, 06-02, 07-02 and 08-04, i.e. in the first days of each month. Storing
+    it daily would bury six real releases under 186 repeated rows, so only the
+    change points are kept, dated when the figure appeared.
+
+    This is the headline inflation measure the dataset previously lacked: the
+    existing CPI series carries only month-on-month percent change, from which a
+    year-on-year rate cannot be read directly.
+    """
+    return _fetch_indicators_field(
+        "annualInflation", "ANNUAL_INFLATION",
+        "Percent, year-on-year. Dated at the day the figure appeared on NBK's indicators "
+        "widget, which is the CPI release date -- not the month the reading refers to. "
+        "Event-dated: only the days the published value changed are stored. Accumulated "
+        "across runs because the source window rolls (~6 months).",
+        "irregular", True)
+
+
+def fetch_inflation_target() -> tuple[list[dict], dict]:
+    """NBK's official inflation target, percent. Event-dated -- one point per
+    change. Constant at 5.0 across the whole window observed on 2026-09-01, so
+    this series exists to record WHEN the target moves, and will stay short by
+    design."""
+    return _fetch_indicators_field(
+        "inflationTarget", "INFLATION_TARGET",
+        "Percent. NBK's official inflation target. Event-dated: one point per change, so a "
+        "flat target produces a single row. Accumulated across runs because the source "
+        "window rolls (~6 months).",
+        "irregular", True)
