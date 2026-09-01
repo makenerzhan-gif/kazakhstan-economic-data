@@ -2248,3 +2248,36 @@ the previous attempt wrote the broken file first and only then discovered it wou
 - Year-to-date values guarded for monotonicity; three editions online (May–July 2026), strictly
   increasing on all four series.
 - Verified live: 125/125 BNS fetchers OK, 29/29 tests passing.
+
+## 2026-09-01 — monetary and fiscal audit items investigated, three declined with evidence
+
+No new indicators in this entry. Three audit gaps were chased to a firm answer and recorded so
+they are not re-investigated from scratch.
+
+**Bank total assets and capital — declined.** Three NBK forms could have carried them; all three
+were probed live and all three are unusable:
+- `formId=1` "Total balance sheet of tier two banks" — 1,918 rows, 44 monthly dates, 41 clean
+  series. It lists 45 individual balance-sheet account groups and publishes **no total** for
+  assets, liabilities or equity. Summing the asset lines would publish an aggregate the source
+  does not itself publish.
+- `formId=60` "Сведения о собственном капитале, обязательствах и активах" — the title promises
+  exactly this, but it is per-bank (23 banks) and **ambiguous**: seven rows per bank-date with
+  every field identical and only the amount differing. The API strips the line-item labels, so
+  which row is assets and which is capital cannot be known. Same failure mode as `formId=484`.
+- `formId=50` "Монетарный обзор Национального Банка" (the NBK balance sheet, also an audit item)
+  — 24 clean monthly series, but its only classification field is `row_code` (`1`, `1.1.1`, `2`,
+  `3.3`) with no labels anywhere in the response.
+
+**Correction to an earlier conclusion.** The `NBK_FORM_COVERAGE` note recorded that the 197
+unconnected forms are "granular breakdowns". That description was too coarse for `formId=1`: a
+balance sheet's top lines would be headline indicators, not a breakdown. They are simply absent
+from the form. The scope note now says so specifically rather than resting on the blanket claim.
+
+**National Fund inflows — not available.** The bulletin's National Fund sheet
+(`табл 17 кв+1мес`) was dumped: it carries only the portfolio composition (stabilisation and
+savings portfolios, bonds, equities, gold, alternative instruments, targeted requirements, total),
+all already connected. No inflow row exists there. Left open rather than substituted with a
+different concept.
+
+All three become connectable immediately if NBK publishes the `formId=50` row-code legend or adds
+a line-item field to `formId=60`.

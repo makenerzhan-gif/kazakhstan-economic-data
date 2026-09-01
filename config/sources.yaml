@@ -3391,6 +3391,48 @@ agencies:
           reproducible by re-running the sweep if a country/region cut is ever wanted.
           Selection heuristic worth reusing: forms with FEW clean series (5-8) are the
           top-level breakdowns; forms with hundreds are the granular tails.
+      BANKING_SECTOR_TOTALS (scope note):
+        status: not_connected
+        notes: >
+          2026-09-01. The sector audit listed BANK TOTAL ASSETS and BANK CAPITAL as monetary-sector
+          gaps. Three NBK forms could carry them. All three were probed live and all three are
+          unusable, for different reasons. Recorded so this is not re-investigated from scratch.
+          formId=1 'Total balance sheet of tier two banks of RK' -- 1,918 rows, 44 monthly dates
+          (2023-01 to 2026-08), fields report_date/amount/type/account_group, 41 clean series.
+          It lists 45 individual balance-sheet ACCOUNT GROUPS (Cash, Claims on clients, Time
+          deposits, Authorised capital, Additional capital, Reserve capital and revaluation
+          reserve, Subordinated debts, ...) and publishes NO total for assets, liabilities or
+          equity. Summing the asset lines here would publish an aggregate the source does not
+          itself publish, which this project does not do. NOTE this form was previously covered by
+          the blanket NBK_FORM_COVERAGE conclusion that unconnected forms are 'granular
+          breakdowns'; that description is too coarse for a balance sheet, whose top lines would
+          be headline indicators -- they simply are not present.
+          formId=60 'Сведения о собственном капитале, обязательствах и активах' -- the title
+          promises exactly capital, liabilities and assets. It is PER-BANK (23 named banks) AND
+          AMBIGUOUS: its only fields are report_date, amount, type and idn, and it returns SEVEN
+          rows per bank-date with every field identical and only the amount differing. The API
+          strips the line-item labels entirely, so which of the seven is assets and which is
+          capital cannot be known. Same failure mode as formId=484 (labels and values swapped).
+          Verified live on «Otbasy bank», 2025-10-01: seven rows, one distinguishing field between
+          them -- none.
+          formId=50 'Монетарный обзор Национального Банка' (the NBK balance sheet, also an audit
+          item) -- 1,090 rows, 44 monthly dates, 24 clean series, but its only classification field
+          is row_code ('1', '1.1.1', '2', '3.3', ...) with NO labels anywhere in the response.
+          Connecting it would mean guessing what each code means.
+          DECLINED rather than guessed. If NBK publishes the row-code legend for formId=50, or
+          adds a line-item field to formId=60, these become connectable immediately.
+
+      NATIONAL_FUND_INFLOWS (scope note):
+        status: not_connected
+        notes: >
+          2026-09-01. The audit asked for National Fund INFLOWS (oil revenue paid into the fund),
+          separate from the outbound guaranteed transfer already covered by
+          NATIONAL_FUND_TRANSFERS. The Statistical Bulletin's National Fund sheet ('табл 17 кв+1мес')
+          was dumped and carries ONLY the portfolio composition -- stabilisation portfolio, savings
+          portfolio, bonds, equities, gold, alternative instruments, targeted requirements, and the
+          total -- all of which are already connected. No inflow row exists on that sheet.
+          Left open rather than substituted with a different concept.
+
       RESERVES_GUIDOTTI_RATIO (declined):
         status: declined
         notes: >
