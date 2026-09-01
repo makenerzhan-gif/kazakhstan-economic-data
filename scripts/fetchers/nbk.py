@@ -6,8 +6,10 @@ data-serving endpoints used here.
 """
 from __future__ import annotations
 
+import csv
 import json
 import sys
+import time
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -22,6 +24,13 @@ SOURCE = "nbk"
 
 BASE_RATE_URL = "https://data.nationalbank.kz/api/v1/data/base-rate"
 RATES_CFM_URL = "https://nationalbank.kz/rss/get_rates.cfm"
+# First date the per-date rates endpoint serves a TRUSTWORTHY value, probed 2026-09-01.
+# The window itself opens a few days earlier, but 07.05.2021 is a Kazakhstan public holiday
+# for which the endpoint substitutes the latest available rate (464.77, against neighbours of
+# 426.99) instead of reporting no data -- so the series deliberately starts after it. The
+# window also rolls forward, which is why the fetcher accumulates across runs rather than
+# re-pulling a fixed recent window.
+EXCHANGE_RATE_EARLIEST = date(2021, 5, 10)
 
 
 def _download(url: str, params: dict | None = None) -> requests.Response:
@@ -69,66 +78,179 @@ def fetch_base_rate() -> tuple[list[dict], dict]:
     return records, manifest
 
 
-def fetch_exchange_rate_usd(days_back: int = 14) -> tuple[list[dict], dict]:
-    """Official daily USD/KZT rate, last `days_back` calendar days.
+def _parse_usd_from_rates_xml(content: bytes) -> float | None:
+    """Pull the USD rate out of one get_rates.cfm response, or None."""
+    try:
+        root = ET.fromstring(content)
+    except ET.ParseError:
+        return None
+    for item in root.findall(".//item"):
+        title_el = item.find("title")
+        if title_el is not None and (title_el.text or "").strip() == "USD":
+            desc_el = item.find("description")
+            if desc_el is not None and desc_el.text:
+                try:
+                    return float(desc_el.text.strip())
+                except ValueError:
+                    return None
+            return None
+    return None
 
-    Verified live 2026-08-30: the JSON current-rate endpoint always returns
-    today's snapshot only (date-filter params are silently ignored), so a real
-    historical series has to be built by querying the legacy per-date XML
-    endpoint (nationalbank.kz/rss/get_rates.cfm?fdate=DD.MM.YYYY) once per date.
-    Each date's raw XML is archived separately (not merged before saving) to
-    keep raw data an unmodified copy of what the source actually returned.
-    Limited to a recent window per run rather than looping over the entire
-    history -- deep backfill is a deliberate separate one-time job, not part
-    of the regular incremental update.
+
+def _load_existing_exchange_rate() -> dict[str, float]:
+    """Previously-processed USD/KZT points, so each run only fetches what is
+    missing instead of re-downloading years of history."""
+    path = Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE / "exchange_rate.csv"
+    if not path.exists():
+        return {}
+    out: dict[str, float] = {}
+    with path.open(encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            try:
+                out[row["date"]] = float(row["value"])
+            except (KeyError, TypeError, ValueError):
+                continue
+    return out
+
+
+def _assert_no_isolated_spike(ordered: list[dict]) -> None:
+    """Raise if a point spikes away from both neighbours and back again.
+
+    This guards against the source substituting a wrong LEVEL for a date it does
+    not actually publish. Observed live 2026-09-01: 07.05.2021 -- a Kazakhstan
+    public holiday, and the first date inside the endpoint's window -- came back
+    as 464.77, the latest rate available at request time, instead of the
+    "информации нет" the endpoint returns for dates outside the window. Both
+    neighbouring days were 426.99. Nothing inside that single response looked
+    wrong: it was self-consistent, carrying change=+37.78, which reconstructs
+    426.99 exactly.
+
+    An isolated spike is the signature. Real tenge devaluations are sustained
+    moves, not one-day round trips -- checked against Feb-Mar 2022, where the
+    rate ran 428 -> 503 over two weeks and this check stays silent, and against
+    the full 1364-point backfill, where it fires on nothing.
+    """
+    for i in range(1, len(ordered) - 1):
+        a, b, c = ordered[i - 1]["value"], ordered[i]["value"], ordered[i + 1]["value"]
+        if not a or not b:
+            continue
+        left = (b / a - 1) * 100
+        right = (c / b - 1) * 100
+        if abs(left) > 5 and abs(right) > 5 and left * right < 0:
+            raise validation.StructuralChangeError(
+                "\n".join([
+                    "STRUCTURAL CHANGE DETECTED in nbk/EXCHANGE_RATE",
+                    f"WHAT CHANGED: isolated spike at {ordered[i]['date']} -- "
+                    f"{a} -> {b} -> {c} ({left:+.2f}% then {right:+.2f}%)",
+                    "EXPECTED: the tenge moves in sustained steps, not one-day spikes that reverse",
+                    "ACTUAL: this is the signature of the endpoint returning the latest available "
+                    "rate for a date it does not publish, instead of reporting no data",
+                    f"ACTION REQUIRED: request {ordered[i]['date']} from {RATES_CFM_URL} directly, "
+                    "compare it against its neighbours, and exclude the date if the source is "
+                    "substituting a value",
+                ])
+            )
+
+
+def fetch_exchange_rate_usd(recheck_days: int = 14, max_new: int | None = None) -> tuple[list[dict], dict]:
+    """Official daily USD/KZT rate, accumulated across runs.
+
+    The source serves ONE DATE PER REQUEST: nationalbank.kz/rss/get_rates.cfm
+    ?fdate=DD.MM.YYYY. Verified live 2026-09-01 that it offers no range
+    interface -- passing `tdate` alongside `fdate` is silently ignored and the
+    response still covers the single `fdate` -- and that rates_all.xml carries
+    only today's snapshot across 48 currencies, not a history.
+
+    The window is LIMITED AND ROLLING. Probing back on 2026-09-01: 2020, 2015,
+    2010, 2005 and 2000 all answer "на выбранную дату информации нет", while
+    2022 through 2026 answer normally, and the boundary sits in early May 2021
+    (05.05.2021 absent, 11.05.2021 present). Because the window rolls forward,
+    history reachable today stops being reachable later -- so this fetcher
+    ACCUMULATES rather than re-pulling a fixed recent window: it reads what has
+    already been processed, requests only the dates still missing plus the last
+    `recheck_days` days, and returns the merged series.
+
+    This replaces an implementation that re-fetched a 14-day window every run and
+    therefore always produced a 14-day series, discarding everything older. The
+    dataset held only 2026-08-19..2026-09-01 for what is the most-used
+    macroeconomic series in the country.
+
+    Only weekdays are requested -- no rate is published for weekends. Public
+    holidays stay permanently "missing" and are re-asked each run, which costs a
+    few dozen requests rather than thousands.
+
+    Each date's raw XML is archived separately rather than merged before saving,
+    keeping raw data an unmodified copy of what the source returned.
     """
     today = date.today()
-    records: list[dict] = []
-    for i in range(days_back):
-        d = today - timedelta(days=i)
-        fdate = d.strftime("%d.%m.%Y")
-        resp = requests.get(RATES_CFM_URL, headers=HEADERS, params={"fdate": fdate}, timeout=30)
+    existing = _load_existing_exchange_rate()
+
+    wanted: list[date] = []
+    d = EXCHANGE_RATE_EARLIEST
+    while d <= today:
+        if d.weekday() < 5:
+            wanted.append(d)
+        d += timedelta(days=1)
+
+    recheck_from = today - timedelta(days=recheck_days)
+    to_fetch = [d for d in wanted if d.isoformat() not in existing or d >= recheck_from]
+    if max_new is not None:
+        # Keep the tail when capped, so a capped run still advances the current
+        # end of the series rather than only backfilling ancient history.
+        to_fetch = to_fetch[-max_new:]
+
+    fetched: dict[str, float] = {}
+    attempted = 0
+    for d in to_fetch:
+        attempted += 1
+        try:
+            resp = requests.get(RATES_CFM_URL, headers=HEADERS,
+                                params={"fdate": d.strftime("%d.%m.%Y")}, timeout=30)
+        except requests.exceptions.RequestException:
+            continue
         if resp.status_code != 200 or not resp.content:
             continue
         raw_store.save_raw_bytes(SOURCE, f"EXCHANGE_RATE_{d.isoformat()}", today, "xml", resp.content)
-        try:
-            root = ET.fromstring(resp.content)
-        except ET.ParseError:
-            continue
-        usd_value = None
-        for item in root.findall(".//item"):
-            title_el = item.find("title")
-            if title_el is not None and (title_el.text or "").strip() == "USD":
-                desc_el = item.find("description")
-                if desc_el is not None and desc_el.text:
-                    try:
-                        usd_value = float(desc_el.text.strip())
-                    except ValueError:
-                        usd_value = None
-                break
-        if usd_value is not None:
-            records.append({"date": d.isoformat(), "value": usd_value})
+        value = _parse_usd_from_rates_xml(resp.content)
+        if value is not None:
+            fetched[d.isoformat()] = value
+        time.sleep(0.25)
 
-    if not records:
+    merged = {**existing, **fetched}
+    if not merged:
         raise validation.StructuralChangeError(
             "\n".join([
                 "STRUCTURAL CHANGE DETECTED in nbk/EXCHANGE_RATE",
-                "WHAT CHANGED: no USD rate could be parsed from any of the last "
-                f"{days_back} days' responses",
-                "EXPECTED: an <item><title>USD</title><description>{rate}</description></item> "
-                "element for at least one recent date",
-                f"ACTUAL: zero parseable USD entries across {days_back} requests to {RATES_CFM_URL}",
+                f"WHAT CHANGED: no USD rate parsed from any of {attempted} requests, and no "
+                "previously-processed history exists to fall back on",
+                "EXPECTED: a USD item carrying a rate for at least one requested date",
+                f"ACTUAL: zero parseable USD entries across {attempted} requests to {RATES_CFM_URL}",
                 "ACTION REQUIRED: inspect the live XML response and update scripts/fetchers/nbk.py",
             ])
         )
 
     raw_store.write_download_manifest(SOURCE, "EXCHANGE_RATE", today, {
-        "downloaded_at": datetime.now().isoformat(), "source_url": RATES_CFM_URL, "days_back": days_back,
-        "n_records": len(records),
+        "downloaded_at": datetime.now().isoformat(), "source_url": RATES_CFM_URL,
+        "earliest_available": EXCHANGE_RATE_EARLIEST.isoformat(),
+        "already_had": len(existing), "requested": attempted, "newly_parsed": len(fetched),
+        "total_after_merge": len(merged),
     })
 
-    records.sort(key=lambda r: r["date"])
-    manifest = {"frequency": "daily", "source_url": RATES_CFM_URL, "dataset_id": "get_rates.cfm"}
+    records = [{"date": k, "value": v} for k, v in sorted(merged.items())]
+    _assert_no_isolated_spike(records)
+
+    manifest = {
+        "frequency": "daily",
+        "source_url": RATES_CFM_URL,
+        "dataset_id": "get_rates.cfm",
+        "note": "Official NBK USD/KZT rate. The endpoint serves one date per request and its "
+                "window rolls forward (nothing before early May 2021 was reachable on "
+                "2026-09-01), so this series is accumulated across runs: each run fetches only "
+                "the dates still missing plus the last two weeks, then merges with what was "
+                "already processed. Weekends are not requested. The series starts 2021-05-10 "
+                "rather than at the window edge because 07.05.2021, a public holiday, is served "
+                "with a substituted rate instead of a no-data response.",
+    }
     return records, manifest
 
 

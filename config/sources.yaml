@@ -1282,6 +1282,31 @@ agencies:
           per date (legacy XML endpoint, confirmed live with a real distinct historical value).
           An XLSX bulk-export button exists on the human page but its underlying request URL
           was not captured this session -- not needed since the XML loop already works.
+
+          REWORKED 2026-09-01. The fetcher had been re-pulling a fixed 14-day window on every
+          run, so the published series only ever held 14 days -- 2026-08-19..2026-09-01 -- for
+          what is the country's most-used macro series. Three things were established live
+          before rewriting it:
+          (1) NO RANGE INTERFACE. Passing tdate alongside fdate is silently ignored; the
+          response still covers the single fdate. rates_all.xml is only today's snapshot
+          across 48 currencies, not a history. So one request per date is the only route.
+          (2) THE WINDOW IS LIMITED AND ROLLING. Probing backwards: 2020, 2015, 2010, 2005 and
+          2000 all answer "на выбранную дату информации нет"; 2022-2026 answer normally; the
+          boundary sits in early May 2021 (05.05.2021 absent, 11.05.2021 present). Because the
+          window rolls forward, history reachable today stops being reachable later -- which is
+          why the fetcher now ACCUMULATES: it reads what is already processed, requests only
+          missing dates plus the last two weeks, and merges. Weekends are not requested.
+          (3) THE SOURCE SUBSTITUTES A WRONG VALUE AT THE WINDOW EDGE. 07.05.2021, a public
+          holiday, returns 464.77 -- the latest rate available at request time -- instead of a
+          no-data response, while both neighbouring days are 426.99. The single response looks
+          entirely valid on its own: it is self-consistent, carrying change=+37.78, which
+          reconstructs 426.99 exactly. Caught only by comparing against neighbours. The series
+          therefore starts 2021-05-10, and _assert_no_isolated_spike raises on any point that
+          moves >5% from the previous day and >5% back on the next. That check was validated
+          against the Feb-Mar 2022 devaluation (428 -> 503 over two weeks, a sustained move) --
+          it stays silent there, and fires on nothing in the 1367-point backfill.
+          Result: 1369 daily points, 2021-05-10 to 2026-09-01, range 414.67-549.15.
+          24 business days inside the window return an honest "информации нет" and are absent.
       M2:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data?formId=51"

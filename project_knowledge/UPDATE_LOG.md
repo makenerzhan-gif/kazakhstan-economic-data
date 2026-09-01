@@ -1756,3 +1756,52 @@ different frequency, and combining them would misrepresent both.
 
 **322/322 confirmed indicators connected end-to-end** (71/71 Minfin re-verified live).
 `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — exchange rate repaired: 14 points -> 1369
+First item from the sector coverage audit. No new indicator: this fixes the one the dataset
+already had and could not use. **EXCHANGE_RATE held only 2026-08-19..2026-09-01** — fourteen
+days of the most-used macro series in the country — because the fetcher re-pulled a fixed
+14-day window every run and discarded everything older.
+
+Now **1369 daily points, 2021-05-10 to 2026-09-01**, range 414.67-549.15. The unified dataset
+grew from 10,869 to 12,225 observations on this one repair.
+
+### Three things established live before rewriting
+1. **No range interface.** `tdate` alongside `fdate` is silently ignored — the response still
+   covers the single `fdate`. `rates_all.xml` is only today's snapshot across 48 currencies.
+   One request per date is the only route, so the backfill was ~1,360 requests.
+2. **The window is limited and rolling.** 2020, 2015, 2010, 2005 and 2000 all answer
+   "информации нет"; 2022-2026 answer normally; the boundary sits in early May 2021. Because
+   it rolls forward, history reachable today stops being reachable later — so the fetcher now
+   **accumulates**: it reads what is already processed, requests only missing dates plus the
+   last two weeks, and merges. Steady-state cost is ~85 requests per run, not 1,360.
+3. **The source substitutes a wrong value at the window edge.** This is the part worth
+   remembering.
+
+### The trap: a wrong value that looked completely valid
+07.05.2021 is a Kazakhstan public holiday. Instead of the "информации нет" it returns for
+dates *outside* the window, the endpoint returned **464.77 — the latest rate available at
+request time** — while both neighbouring days were 426.99. An 8% one-day round trip that
+never happened.
+
+Nothing inside that response looked wrong. It was self-consistent, carrying `change=+37.78`,
+which reconstructs 426.99 exactly. It was caught only by comparing the value against its
+neighbours after the fact.
+
+Handled two ways: the series starts 2021-05-10, past the edge; and `_assert_no_isolated_spike`
+raises on any point that moves >5% from the previous day and >5% back on the next. That check
+was **validated against a real event before being trusted** — the Feb-Mar 2022 devaluation ran
+428 → 503 over two weeks, a sustained move, and the check stays silent through it, while
+firing on nothing across the whole 1367-point backfill. Scanning the backfill also confirmed
+the substitution is not systemic: 24 business days inside the window return an honest refusal.
+
+### A self-inflicted break, recorded because it was nearly invisible
+The first attempt spliced the new function in by replacing everything from `def
+fetch_exchange_rate_usd(` to the next `def` — which also deleted the module-level constants
+sitting between them (`MONETARY_AGGREGATES_URL`, `ROW_CODE_M2`, `ROW_CODE_M3`). **122 of 126
+NBK indicators then failed** with `name 'MONETARY_AGGREGATES_URL' is not defined`. The
+pipeline caught it correctly and refused to rebuild the unified dataset, so nothing wrong was
+published. Restored with `git restore` and re-applied by finding the function's true end —
+the first following line at column 0 — rather than the next `def`.
+
+**322/322 indicators, 126/126 NBK re-verified live.** `pytest tests/ -q` — 29/29 passing.
