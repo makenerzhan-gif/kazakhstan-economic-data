@@ -2945,3 +2945,118 @@ def fetch_import_price_index() -> tuple[list[dict], dict]:
         "2", "Импорт - всего", "IMPORT_PRICE_INDEX",
         "Index, same month of the previous year = 100. Price of Kazakhstan's goods imports, on "
         "the same basis and from the same publication as EXPORT_PRICE_INDEX.")
+
+
+# ---------------------------------------------------------------------------
+# CPI_YOY / CPI_YTD: year-on-year and since-December inflation, from the SAME
+# open-data file that already feeds CPI (element 1549).
+#
+# Same lesson as oil exports: an already-connected source was not fully read.
+# The audit called annual inflation a CRITICAL gap, noting that CPI holds only
+# month-on-month percent change so a year-on-year rate cannot be derived from
+# it. But the file has an "ССП" (comparison type) dimension with THIRTY values,
+# and the project was filtering on one of them. Year-on-year was in the download
+# the whole time.
+#
+# Distinct comparison values include: against the previous period (what CPI
+# uses), against the same period a year earlier, against December of the
+# previous year, and a family of fixed-base ones (December 2000, 2001, 2002,
+# 2005, 2010, 2015, 2018, 2020, 2022). The product dimension has only one value
+# in this file -- "Товары и услуги", the all-items total -- so the audit's
+# food/non-food/services split is NOT here and remains open.
+#
+# 178 monthly points, 2011-01 to 2025-10. Cross-checked against the separately
+# sourced NBK ANNUAL_INFLATION: 12.6% here for October 2025 runs into 12.2% in
+# February 2026 and 10.2% by August 2026 there -- two independent sources on one
+# trajectory.
+#
+# fetch_cpi above predates this helper and repeats the same parse for the
+# month-on-month case. It is deliberately left untouched rather than refactored:
+# it is a shipped indicator, and the duplication is cheaper than the risk.
+# ---------------------------------------------------------------------------
+CPI_ELEMENT_ID = 1549
+CPI_REGION = "РЕСПУБЛИКА КАЗАХСТАН"
+CPI_CATEGORY = "Товары и услуги"
+
+
+def _fetch_cpi_by_comparison(comparison: str, indicator_id: str,
+                             note: str) -> tuple[list[dict], dict]:
+    url = f"https://stat.gov.kz/api/iblock/element/{CPI_ELEMENT_ID}/csv/file/ru/"
+    content = _download(url)
+    _save_raw(indicator_id, content, "csv",
+              {"source_url": url, "element_id": CPI_ELEMENT_ID, "comparison": comparison})
+
+    rows = list(csv.reader(io.StringIO(content.decode("utf-8-sig")), delimiter="\t"))
+    header, data_rows = rows[0], rows[1:]
+    col = {name: i for i, name in enumerate(header)}
+    try:
+        period_i = col["PERIOD"]
+        region_i = col["КАТО(по каталогу)"]
+        comparison_i = col["ССП"]
+        category_i = col["ГНКИПЦ01_2753"]
+        val_i = col["VAL"]
+    except KeyError as exc:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: expected column {exc} not present",
+                f"ACTUAL COLUMNS: {header}",
+                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+            ])
+        ) from exc
+
+    records = []
+    for row in data_rows:
+        if len(row) <= val_i:
+            continue
+        if (row[region_i] != CPI_REGION or row[comparison_i] != comparison
+                or row[category_i] != CPI_CATEGORY):
+            continue
+        period = row[period_i]
+        if len(period) != 6 or not period.isdigit():
+            continue
+        try:
+            value = float(row[val_i])
+        except ValueError:
+            continue
+        records.append({"date": f"{period[:4]}-{period[4:]}-01", "value": value})
+
+    if not records:
+        available = sorted({r[comparison_i] for r in data_rows if len(r) > comparison_i})
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: no rows matched comparison={comparison!r} for "
+                f"region={CPI_REGION!r}, category={CPI_CATEGORY!r}",
+                f"ACTUAL comparison values present: {available[:6]}",
+                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records.sort(key=lambda r: r["date"])
+    manifest = {
+        "frequency": "monthly",
+        "source_url": url,
+        "dataset_id": f"{CPI_ELEMENT_ID},comparison={comparison}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def fetch_cpi_yoy() -> tuple[list[dict], dict]:
+    """Consumer price index, same month previous year = 100, monthly."""
+    return _fetch_cpi_by_comparison(
+        "отчетный период к соответствующему периоду прошлого года", "CPI_YOY",
+        "Index, same month of the previous year = 100 -- so 112.6 means 12.6% annual inflation. "
+        "This is the headline inflation rate. The existing CPI series carries only "
+        "month-on-month change, from which this cannot be derived; both come from the same "
+        "open-data file, which has a comparison-type dimension with thirty values. Independently "
+        "consistent with the NBK-sourced ANNUAL_INFLATION series.")
+
+
+def fetch_cpi_ytd() -> tuple[list[dict], dict]:
+    """Consumer price index against December of the previous year, monthly."""
+    return _fetch_cpi_by_comparison(
+        "отчетный период к декабрю прошлого года", "CPI_YTD",
+        "Index, December of the previous year = 100 -- cumulative inflation so far this year, the "
+        "form Kazakhstan's own commentary usually quotes. Same file and dimension as CPI_YOY.")

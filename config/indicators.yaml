@@ -2705,6 +2705,24 @@ indicators:
     category: prices
     source_status: confirmed
 
+  - id: CPI_YOY
+    name_ru: "Инфляция год к году (ИПЦ)"
+    name_en: "Consumer Price Index, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+
+  - id: CPI_YTD
+    name_ru: "Инфляция с начала года (ИПЦ)"
+    name_en: "Consumer Price Index, since December"
+    agency: bns
+    frequency: monthly
+    unit: "index, December of previous year = 100"
+    category: prices
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

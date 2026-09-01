@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/",
+  "dataset_id": "1549,comparison=отчетный период к декабрю прошлого года",
+  "indicator_id": "CPI_YTD",
+  "indicator_name": "Consumer Price Index, since December",
+  "description": "Инфляция с начала года (ИПЦ)",
+  "frequency": "monthly",
+  "unit": "index, December of previous year = 100",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, December of the previous year = 100 -- cumulative inflation so far this year, the form Kazakhstan's own commentary usually quotes. Same file and dimension as CPI_YOY.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2011-01-01",
+  "period_end": "2025-10-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

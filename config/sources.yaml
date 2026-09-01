@@ -413,6 +413,34 @@ agencies:
         notes: >
           2026-09-01. Sheet 2 of the same publication as EXPORT_PRICE_INDEX, row 'Импорт -
           всего', same column and same caveats. fetch_import_price_index.
+      CPI_YOY:
+        status: confirmed
+        download_url: "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/"
+        format: csv
+        notes: >
+          2026-09-01. Closes the audit's CRITICAL inflation gap -- and the data was inside a file
+          the project ALREADY downloads. The audit noted that CPI carries only month-on-month
+          change, so a year-on-year rate could not be derived. But element 1549 has an 'ССП'
+          (comparison type) dimension with THIRTY values, and the project was filtering on one
+          of them. Same lesson as the oil exports: an already-connected source was not fully read.
+          Comparison values include: against the previous period (what CPI uses), against the
+          same period a year earlier (this indicator), against December of the previous year
+          (CPI_YTD), and fixed bases at December 2000, 2001, 2002, 2005, 2010, 2015, 2018, 2020
+          and 2022. The product dimension holds only 'Товары и услуги', so the audit's
+          food/non-food/services split is NOT in this file and remains open.
+          178 monthly points, 2011-01 to 2025-10. VERIFIED TWO WAYS: compounding twelve
+          month-on-month changes from the existing CPI series reproduces this index to within
+          0.11 index points (rounding) for every month tested; and it is consistent with the
+          separately sourced NBK ANNUAL_INFLATION -- 12.6% here for October 2025 runs into 12.2%
+          in February 2026 and 10.2% by August 2026 there. fetch_cpi_yoy.
+      CPI_YTD:
+        status: confirmed
+        download_url: "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/"
+        format: csv
+        notes: >
+          2026-09-01. Same file and dimension as CPI_YOY, comparison 'отчетный период к декабрю
+          прошлого года' -- cumulative inflation since December, the form Kazakhstan's own
+          commentary usually quotes. 178 monthly points. fetch_cpi_ytd.
       IMPORTS:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/open-data/international-trade/474299/"

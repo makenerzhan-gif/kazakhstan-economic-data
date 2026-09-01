@@ -2366,6 +2366,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-12-31,KZ,national,annual,WORKERS_USING_INTERNET,296018.0,persons,bns,2026-09-01,level,2026-09-01
 2011-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.615919,% of GDP,nbk,2026-09-01,level,2026-09-01
 2011-01-01,KZ,national,monthly,CPI,101.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2011-01-01,KZ,national,monthly,CPI_YOY,108.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2011-01-01,KZ,national,monthly,CPI_YTD,101.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2011-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,50.829111,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2011-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,51.08245,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2011-01-01,KZ,national,quarterly,EXTERNAL_DEBT,118222.763569,million USD,nbk,2026-09-01,level,2026-09-01
@@ -2418,6 +2420,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-01-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,111.117164611816,index,imf,2026-09-01,level,2026-09-01
 2011-01-31,KZ,national,monthly,OIL_PRICE,93.0593650793651,USD per barrel,imf,2026-09-01,level,2026-09-01
 2011-02-01,KZ,national,monthly,CPI,101.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2011-02-01,KZ,national,monthly,CPI_YOY,108.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2011-02-01,KZ,national,monthly,CPI_YTD,103.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2011-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,486556.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2011-02-01,KZ,national,monthly,NEER,155.07777,index,nbk,2026-09-01,level,2026-09-01
 2011-02-01,KZ,national,monthly,REER,124.25578,index,nbk,2026-09-01,level,2026-09-01
@@ -2425,6 +2429,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-02-28,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,114.764366149902,index,imf,2026-09-01,level,2026-09-01
 2011-02-28,KZ,national,monthly,OIL_PRICE,97.77116666666664,USD per barrel,imf,2026-09-01,level,2026-09-01
 2011-03-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2011-03-01,KZ,national,monthly,CPI_YOY,108.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2011-03-01,KZ,national,monthly,CPI_YTD,103.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2011-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,486231.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2011-03-01,KZ,national,monthly,NEER,152.76837,index,nbk,2026-09-01,level,2026-09-01
 2011-03-01,KZ,national,monthly,REER,122.25171,index,nbk,2026-09-01,level,2026-09-01
@@ -2434,6 +2440,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-03-31,KZ,national,monthly,OIL_PRICE,108.6301449275363,USD per barrel,imf,2026-09-01,level,2026-09-01
 2011-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-17.784116,% of GDP,nbk,2026-09-01,level,2026-09-01
 2011-04-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2011-04-01,KZ,national,monthly,CPI_YOY,108.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2011-04-01,KZ,national,monthly,CPI_YTD,104.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2011-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,49.640126,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2011-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,59.986505,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2011-04-01,KZ,national,quarterly,EXTERNAL_DEBT,123359.159137,million USD,nbk,2026-09-01,level,2026-09-01
@@ -2455,6 +2463,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-04-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,124.589775085449,index,imf,2026-09-01,level,2026-09-01
 2011-04-30,KZ,national,monthly,OIL_PRICE,116.4309523809524,USD per barrel,imf,2026-09-01,level,2026-09-01
 2011-05-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2011-05-01,KZ,national,monthly,CPI_YOY,108.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2011-05-01,KZ,national,monthly,CPI_YTD,104.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2011-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,541361.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2011-05-01,KZ,national,monthly,NEER,150.46454,index,nbk,2026-09-01,level,2026-09-01
 2011-05-01,KZ,national,monthly,REER,120.55312,index,nbk,2026-09-01,level,2026-09-01
@@ -2462,6 +2472,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-05-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,118.441513061523,index,imf,2026-09-01,level,2026-09-01
 2011-05-31,KZ,national,monthly,OIL_PRICE,108.1519696969696,USD per barrel,imf,2026-09-01,level,2026-09-01
 2011-06-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2011-06-01,KZ,national,monthly,CPI_YOY,108.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2011-06-01,KZ,national,monthly,CPI_YTD,105.1,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2011-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,571759.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2011-06-01,KZ,national,monthly,NEER,150.08575,index,nbk,2026-09-01,level,2026-09-01
 2011-06-01,KZ,national,monthly,REER,120.47782,index,nbk,2026-09-01,level,2026-09-01
@@ -2471,6 +2483,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-06-30,KZ,national,monthly,OIL_PRICE,106.0301515151515,USD per barrel,imf,2026-09-01,level,2026-09-01
 2011-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,2.783952,% of GDP,nbk,2026-09-01,level,2026-09-01
 2011-07-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2011-07-01,KZ,national,monthly,CPI_YOY,108.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2011-07-01,KZ,national,monthly,CPI_YTD,105.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2011-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,56.66224,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2011-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,58.056662,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2011-07-01,KZ,national,quarterly,EXTERNAL_DEBT,124897.278808,million USD,nbk,2026-09-01,level,2026-09-01
@@ -2492,6 +2506,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-07-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,117.994682312012,index,imf,2026-09-01,level,2026-09-01
 2011-07-31,KZ,national,monthly,OIL_PRICE,108.502857142857,USD per barrel,imf,2026-09-01,level,2026-09-01
 2011-08-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2011-08-01,KZ,national,monthly,CPI_YOY,109.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2011-08-01,KZ,national,monthly,CPI_YTD,105.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2011-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,611150.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2011-08-01,KZ,national,monthly,NEER,149.94819,index,nbk,2026-09-01,level,2026-09-01
 2011-08-01,KZ,national,monthly,REER,121.12363,index,nbk,2026-09-01,level,2026-09-01
@@ -2499,6 +2515,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-08-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,112.417022705078,index,imf,2026-09-01,level,2026-09-01
 2011-08-31,KZ,national,monthly,OIL_PRICE,100.5320289855073,USD per barrel,imf,2026-09-01,level,2026-09-01
 2011-09-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2011-09-01,KZ,national,monthly,CPI_YOY,108.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2011-09-01,KZ,national,monthly,CPI_YTD,106.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2011-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,646078.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2011-09-01,KZ,national,monthly,NEER,155.37173,index,nbk,2026-09-01,level,2026-09-01
 2011-09-01,KZ,national,monthly,REER,125.48642,index,nbk,2026-09-01,level,2026-09-01
@@ -2508,6 +2526,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-09-30,KZ,national,monthly,OIL_PRICE,100.7712121212121,USD per barrel,imf,2026-09-01,level,2026-09-01
 2011-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,3.18643,% of GDP,nbk,2026-09-01,level,2026-09-01
 2011-10-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2011-10-01,KZ,national,monthly,CPI_YOY,108.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2011-10-01,KZ,national,monthly,CPI_YTD,106.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2011-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,54.512864,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2011-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,53.121046,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2011-10-01,KZ,national,quarterly,EXTERNAL_DEBT,123708.361986,million USD,nbk,2026-09-01,level,2026-09-01
@@ -2529,6 +2549,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-10-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,107.953414916992,index,imf,2026-09-01,level,2026-09-01
 2011-10-31,KZ,national,monthly,OIL_PRICE,100.1539682539683,USD per barrel,imf,2026-09-01,level,2026-09-01
 2011-11-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2011-11-01,KZ,national,monthly,CPI_YOY,107.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2011-11-01,KZ,national,monthly,CPI_YTD,107.0,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2011-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,699938.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2011-11-01,KZ,national,monthly,NEER,156.9283,index,nbk,2026-09-01,level,2026-09-01
 2011-11-01,KZ,national,monthly,REER,126.98741,index,nbk,2026-09-01,level,2026-09-01
@@ -2536,6 +2558,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-11-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,110.133255004883,index,imf,2026-09-01,level,2026-09-01
 2011-11-30,KZ,national,monthly,OIL_PRICE,105.0215151515152,USD per barrel,imf,2026-09-01,level,2026-09-01
 2011-12-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2011-12-01,KZ,national,monthly,CPI_YOY,107.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2011-12-01,KZ,national,monthly,CPI_YTD,107.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2011-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,718948.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2011-12-01,KZ,national,monthly,NEER,159.86742,index,nbk,2026-09-01,level,2026-09-01
 2011-12-01,KZ,national,monthly,REER,129.41756,index,nbk,2026-09-01,level,2026-09-01
@@ -2594,6 +2618,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-12-31,KZ,national,annual,WORKERS_USING_INTERNET,330137.0,persons,bns,2026-09-01,level,2026-09-01
 2012-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,5.100267,% of GDP,nbk,2026-09-01,level,2026-09-01
 2012-01-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2012-01-01,KZ,national,monthly,CPI_YOY,105.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2012-01-01,KZ,national,monthly,CPI_YTD,100.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2012-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,52.774301,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2012-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,50.375469,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2012-01-01,KZ,national,quarterly,EXTERNAL_DEBT,125320.777887,million USD,nbk,2026-09-01,level,2026-09-01
@@ -2646,6 +2672,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-01-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,111.246223449707,index,imf,2026-09-01,level,2026-09-01
 2012-01-31,KZ,national,monthly,OIL_PRICE,106.7072727272727,USD per barrel,imf,2026-09-01,level,2026-09-01
 2012-02-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2012-02-01,KZ,national,monthly,CPI_YOY,104.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2012-02-01,KZ,national,monthly,CPI_YTD,100.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2012-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,787071.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2012-02-01,KZ,national,monthly,NEER,157.93811,index,nbk,2026-09-01,level,2026-09-01
 2012-02-01,KZ,national,monthly,REER,127.07037,index,nbk,2026-09-01,level,2026-09-01
@@ -2653,6 +2681,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-02-29,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,114.935844421387,index,imf,2026-09-01,level,2026-09-01
 2012-02-29,KZ,national,monthly,OIL_PRICE,112.7130158730158,USD per barrel,imf,2026-09-01,level,2026-09-01
 2012-03-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2012-03-01,KZ,national,monthly,CPI_YOY,104.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2012-03-01,KZ,national,monthly,CPI_YTD,101.1,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2012-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,819771.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2012-03-01,KZ,national,monthly,NEER,158.28727,index,nbk,2026-09-01,level,2026-09-01
 2012-03-01,KZ,national,monthly,REER,126.98969,index,nbk,2026-09-01,level,2026-09-01
@@ -2662,6 +2692,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-03-31,KZ,national,monthly,OIL_PRICE,117.8296969696969,USD per barrel,imf,2026-09-01,level,2026-09-01
 2012-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-5.199976,% of GDP,nbk,2026-09-01,level,2026-09-01
 2012-04-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2012-04-01,KZ,national,monthly,CPI_YOY,104.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2012-04-01,KZ,national,monthly,CPI_YTD,101.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2012-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,47.047894,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2012-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,59.47564,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2012-04-01,KZ,national,quarterly,EXTERNAL_DEBT,129154.054921,million USD,nbk,2026-09-01,level,2026-09-01
@@ -2683,6 +2715,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-04-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,114.304328918457,index,imf,2026-09-01,level,2026-09-01
 2012-04-30,KZ,national,monthly,OIL_PRICE,113.7642857142857,USD per barrel,imf,2026-09-01,level,2026-09-01
 2012-05-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2012-05-01,KZ,national,monthly,CPI_YOY,105.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2012-05-01,KZ,national,monthly,CPI_YTD,102.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2012-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,888371.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2012-05-01,KZ,national,monthly,NEER,162.55744,index,nbk,2026-09-01,level,2026-09-01
 2012-05-01,KZ,national,monthly,REER,131.78924,index,nbk,2026-09-01,level,2026-09-01
@@ -2690,6 +2724,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-05-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,108.2158203125,index,imf,2026-09-01,level,2026-09-01
 2012-05-31,KZ,national,monthly,OIL_PRICE,104.3359420289855,USD per barrel,imf,2026-09-01,level,2026-09-01
 2012-06-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2012-06-01,KZ,national,monthly,CPI_YOY,104.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2012-06-01,KZ,national,monthly,CPI_YTD,102.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2012-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,939454.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2012-06-01,KZ,national,monthly,NEER,165.16196,index,nbk,2026-09-01,level,2026-09-01
 2012-06-01,KZ,national,monthly,REER,134.28826,index,nbk,2026-09-01,level,2026-09-01
@@ -2699,6 +2735,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-06-30,KZ,national,monthly,OIL_PRICE,90.90920634920643,USD per barrel,imf,2026-09-01,level,2026-09-01
 2012-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.920648,% of GDP,nbk,2026-09-01,level,2026-09-01
 2012-07-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2012-07-01,KZ,national,monthly,CPI_YOY,104.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2012-07-01,KZ,national,monthly,CPI_YTD,103.0,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2012-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,56.193601,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2012-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,58.264971,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2012-07-01,KZ,national,quarterly,EXTERNAL_DEBT,132535.864969,million USD,nbk,2026-09-01,level,2026-09-01
@@ -2720,6 +2758,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-07-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,104.416999816895,index,imf,2026-09-01,level,2026-09-01
 2012-07-31,KZ,national,monthly,OIL_PRICE,96.95439393939391,USD per barrel,imf,2026-09-01,level,2026-09-01
 2012-08-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2012-08-01,KZ,national,monthly,CPI_YOY,104.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2012-08-01,KZ,national,monthly,CPI_YTD,103.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2012-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,999841.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2012-08-01,KZ,national,monthly,NEER,164.05922,index,nbk,2026-09-01,level,2026-09-01
 2012-08-01,KZ,national,monthly,REER,133.39074,index,nbk,2026-09-01,level,2026-09-01
@@ -2727,6 +2767,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-08-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,108.747955322266,index,imf,2026-09-01,level,2026-09-01
 2012-08-31,KZ,national,monthly,OIL_PRICE,105.6178260869566,USD per barrel,imf,2026-09-01,level,2026-09-01
 2012-09-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2012-09-01,KZ,national,monthly,CPI_YOY,105.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2012-09-01,KZ,national,monthly,CPI_YTD,103.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2012-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1017587.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2012-09-01,KZ,national,monthly,NEER,160.20404,index,nbk,2026-09-01,level,2026-09-01
 2012-09-01,KZ,national,monthly,REER,130.53008,index,nbk,2026-09-01,level,2026-09-01
@@ -2736,6 +2778,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-09-30,KZ,national,monthly,OIL_PRICE,106.3998333333334,USD per barrel,imf,2026-09-01,level,2026-09-01
 2012-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,6.705374,% of GDP,nbk,2026-09-01,level,2026-09-01
 2012-10-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2012-10-01,KZ,national,monthly,CPI_YOY,105.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2012-10-01,KZ,national,monthly,CPI_YTD,104.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2012-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,56.784424,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2012-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,54.476114,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2012-10-01,KZ,national,quarterly,EXTERNAL_DEBT,134414.115527,million USD,nbk,2026-09-01,level,2026-09-01
@@ -2757,6 +2801,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-10-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,108.667770385742,index,imf,2026-09-01,level,2026-09-01
 2012-10-31,KZ,national,monthly,OIL_PRICE,103.2720289855072,USD per barrel,imf,2026-09-01,level,2026-09-01
 2012-11-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2012-11-01,KZ,national,monthly,CPI_YOY,105.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2012-11-01,KZ,national,monthly,CPI_YTD,105.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2012-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1084987.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2012-11-01,KZ,national,monthly,NEER,159.40274,index,nbk,2026-09-01,level,2026-09-01
 2012-11-01,KZ,national,monthly,REER,131.2644,index,nbk,2026-09-01,level,2026-09-01
@@ -2764,6 +2810,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-11-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,107.536499023438,index,imf,2026-09-01,level,2026-09-01
 2012-11-30,KZ,national,monthly,OIL_PRICE,101.2460606060607,USD per barrel,imf,2026-09-01,level,2026-09-01
 2012-12-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2012-12-01,KZ,national,monthly,CPI_YOY,106.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2012-12-01,KZ,national,monthly,CPI_YTD,106.0,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2012-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1111354.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2012-12-01,KZ,national,monthly,NEER,157.0076,index,nbk,2026-09-01,level,2026-09-01
 2012-12-01,KZ,national,monthly,REER,129.64382,index,nbk,2026-09-01,level,2026-09-01
@@ -2817,6 +2865,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-12-31,KZ,national,annual,WORKERS_USING_INTERNET,397229.0,persons,bns,2026-09-01,level,2026-09-01
 2013-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,4.857544,% of GDP,nbk,2026-09-01,level,2026-09-01
 2013-01-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2013-01-01,KZ,national,monthly,CPI_YOY,106.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2013-01-01,KZ,national,monthly,CPI_YTD,100.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2013-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,51.792115,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2013-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,50.955795,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2013-01-01,KZ,national,quarterly,EXTERNAL_DEBT,136918.219279,million USD,nbk,2026-09-01,level,2026-09-01
@@ -2869,6 +2919,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-01-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,111.457023620606,index,imf,2026-09-01,level,2026-09-01
 2013-01-31,KZ,national,monthly,OIL_PRICE,105.1479710144927,USD per barrel,imf,2026-09-01,level,2026-09-01
 2013-02-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2013-02-01,KZ,national,monthly,CPI_YOY,107.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2013-02-01,KZ,national,monthly,CPI_YTD,101.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2013-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1148163.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2013-02-01,KZ,national,monthly,NEER,156.58844,index,nbk,2026-09-01,level,2026-09-01
 2013-02-01,KZ,national,monthly,REER,130.01259,index,nbk,2026-09-01,level,2026-09-01
@@ -2876,6 +2928,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-02-28,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,113.301292419434,index,imf,2026-09-01,level,2026-09-01
 2013-02-28,KZ,national,monthly,OIL_PRICE,107.6396666666666,USD per barrel,imf,2026-09-01,level,2026-09-01
 2013-03-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2013-03-01,KZ,national,monthly,CPI_YOY,106.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2013-03-01,KZ,national,monthly,CPI_YTD,101.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2013-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1163280.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2013-03-01,KZ,national,monthly,NEER,159.16687,index,nbk,2026-09-01,level,2026-09-01
 2013-03-01,KZ,national,monthly,REER,132.12388,index,nbk,2026-09-01,level,2026-09-01
@@ -2885,6 +2939,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-03-31,KZ,national,monthly,OIL_PRICE,102.8296825396826,USD per barrel,imf,2026-09-01,level,2026-09-01
 2013-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.669359,% of GDP,nbk,2026-09-01,level,2026-09-01
 2013-04-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2013-04-01,KZ,national,monthly,CPI_YOY,106.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2013-04-01,KZ,national,monthly,CPI_YTD,102.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2013-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,46.683673,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2013-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,59.262166,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2013-04-01,KZ,national,quarterly,EXTERNAL_DEBT,139691.461465,million USD,nbk,2026-09-01,level,2026-09-01
@@ -2906,6 +2962,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-04-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,106.897903442383,index,imf,2026-09-01,level,2026-09-01
 2013-04-30,KZ,national,monthly,OIL_PRICE,98.84090909090905,USD per barrel,imf,2026-09-01,level,2026-09-01
 2013-05-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2013-05-01,KZ,national,monthly,CPI_YOY,105.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2013-05-01,KZ,national,monthly,CPI_YTD,102.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2013-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1214223.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2013-05-01,KZ,national,monthly,NEER,159.1462,index,nbk,2026-09-01,level,2026-09-01
 2013-05-01,KZ,national,monthly,REER,132.40072,index,nbk,2026-09-01,level,2026-09-01
@@ -2913,6 +2971,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-05-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,107.266983032227,index,imf,2026-09-01,level,2026-09-01
 2013-05-31,KZ,national,monthly,OIL_PRICE,99.42304347826091,USD per barrel,imf,2026-09-01,level,2026-09-01
 2013-06-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2013-06-01,KZ,national,monthly,CPI_YOY,105.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2013-06-01,KZ,national,monthly,CPI_YTD,102.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2013-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1236537.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2013-06-01,KZ,national,monthly,NEER,158.7724,index,nbk,2026-09-01,level,2026-09-01
 2013-06-01,KZ,national,monthly,REER,132.24523,index,nbk,2026-09-01,level,2026-09-01
@@ -2922,6 +2982,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-06-30,KZ,national,monthly,OIL_PRICE,99.8378333333334,USD per barrel,imf,2026-09-01,level,2026-09-01
 2013-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,1.151794,% of GDP,nbk,2026-09-01,level,2026-09-01
 2013-07-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2013-07-01,KZ,national,monthly,CPI_YOY,105.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2013-07-01,KZ,national,monthly,CPI_YTD,102.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2013-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,53.044316,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2013-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,57.052023,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2013-07-01,KZ,national,quarterly,EXTERNAL_DEBT,145554.801486,million USD,nbk,2026-09-01,level,2026-09-01
@@ -2943,6 +3005,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-07-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,109.65657043457,index,imf,2026-09-01,level,2026-09-01
 2013-07-31,KZ,national,monthly,OIL_PRICE,105.3449275362318,USD per barrel,imf,2026-09-01,level,2026-09-01
 2013-08-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2013-08-01,KZ,national,monthly,CPI_YOY,105.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2013-08-01,KZ,national,monthly,CPI_YTD,103.1,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2013-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1300805.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2013-08-01,KZ,national,monthly,NEER,158.14122,index,nbk,2026-09-01,level,2026-09-01
 2013-08-01,KZ,national,monthly,REER,131.75854,index,nbk,2026-09-01,level,2026-09-01
@@ -2950,6 +3014,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-08-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,112.129104614258,index,imf,2026-09-01,level,2026-09-01
 2013-08-31,KZ,national,monthly,OIL_PRICE,108.1883333333333,USD per barrel,imf,2026-09-01,level,2026-09-01
 2013-09-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2013-09-01,KZ,national,monthly,CPI_YOY,105.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2013-09-01,KZ,national,monthly,CPI_YTD,103.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2013-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1332114.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2013-09-01,KZ,national,monthly,NEER,157.13508,index,nbk,2026-09-01,level,2026-09-01
 2013-09-01,KZ,national,monthly,REER,130.87041,index,nbk,2026-09-01,level,2026-09-01
@@ -2959,6 +3025,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-09-30,KZ,national,monthly,OIL_PRICE,108.8106349206349,USD per barrel,imf,2026-09-01,level,2026-09-01
 2013-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,4.620736,% of GDP,nbk,2026-09-01,level,2026-09-01
 2013-10-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2013-10-01,KZ,national,monthly,CPI_YOY,104.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2013-10-01,KZ,national,monthly,CPI_YTD,103.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2013-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,52.05738,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2013-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,53.020008,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2013-10-01,KZ,national,quarterly,EXTERNAL_DEBT,148162.713181,million USD,nbk,2026-09-01,level,2026-09-01
@@ -2980,6 +3048,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-10-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,111.235237121582,index,imf,2026-09-01,level,2026-09-01
 2013-10-31,KZ,national,monthly,OIL_PRICE,105.680579710145,USD per barrel,imf,2026-09-01,level,2026-09-01
 2013-11-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2013-11-01,KZ,national,monthly,CPI_YOY,104.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2013-11-01,KZ,national,monthly,CPI_YTD,104.1,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2013-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1391021.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2013-11-01,KZ,national,monthly,NEER,156.38193,index,nbk,2026-09-01,level,2026-09-01
 2013-11-01,KZ,national,monthly,REER,131.07081,index,nbk,2026-09-01,level,2026-09-01
@@ -2987,6 +3057,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-11-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,109.286254882813,index,imf,2026-09-01,level,2026-09-01
 2013-11-30,KZ,national,monthly,OIL_PRICE,102.6871428571428,USD per barrel,imf,2026-09-01,level,2026-09-01
 2013-12-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2013-12-01,KZ,national,monthly,CPI_YOY,104.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2013-12-01,KZ,national,monthly,CPI_YTD,104.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2013-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1434840.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2013-12-01,KZ,national,monthly,NEER,154.70451,index,nbk,2026-09-01,level,2026-09-01
 2013-12-01,KZ,national,monthly,REER,130.19461,index,nbk,2026-09-01,level,2026-09-01
@@ -3044,6 +3116,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-12-31,KZ,national,annual,WORKERS_USING_INTERNET,658461.0,persons,bns,2026-09-01,level,2026-09-01
 2014-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.86181,% of GDP,nbk,2026-09-01,level,2026-09-01
 2014-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2014-01-01,KZ,national,monthly,CPI_YOY,104.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2014-01-01,KZ,national,monthly,CPI_YTD,100.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2014-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,49.346527,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2014-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,49.962659,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2014-01-01,KZ,national,quarterly,EXTERNAL_DEBT,150032.867457,million USD,nbk,2026-09-01,level,2026-09-01
@@ -3097,6 +3171,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-01-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,109.153213500977,index,imf,2026-09-01,level,2026-09-01
 2014-01-31,KZ,national,monthly,OIL_PRICE,102.2192753623189,USD per barrel,imf,2026-09-01,level,2026-09-01
 2014-02-01,KZ,national,monthly,CPI,101.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2014-02-01,KZ,national,monthly,CPI_YOY,105.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2014-02-01,KZ,national,monthly,CPI_YTD,102.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2014-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1634026.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2014-02-01,KZ,national,monthly,NEER,138.58317,index,nbk,2026-09-01,level,2026-09-01
 2014-02-01,KZ,national,monthly,REER,118.45168,index,nbk,2026-09-01,level,2026-09-01
@@ -3104,6 +3180,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-02-28,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,110.294914245606,index,imf,2026-09-01,level,2026-09-01
 2014-02-28,KZ,national,monthly,OIL_PRICE,104.9338333333333,USD per barrel,imf,2026-09-01,level,2026-09-01
 2014-03-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2014-03-01,KZ,national,monthly,CPI_YOY,106.2,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2014-03-01,KZ,national,monthly,CPI_YTD,103.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2014-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1673297.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2014-03-01,KZ,national,monthly,NEER,134.45979,index,nbk,2026-09-01,level,2026-09-01
 2014-03-01,KZ,national,monthly,REER,115.56015,index,nbk,2026-09-01,level,2026-09-01
@@ -3113,6 +3191,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-03-31,KZ,national,monthly,OIL_PRICE,104.2601587301587,USD per barrel,imf,2026-09-01,level,2026-09-01
 2014-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-2.708741,% of GDP,nbk,2026-09-01,level,2026-09-01
 2014-04-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2014-04-01,KZ,national,monthly,CPI_YOY,106.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2014-04-01,KZ,national,monthly,CPI_YTD,103.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2014-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,41.951673,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2014-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,54.758364,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2014-04-01,KZ,national,quarterly,EXTERNAL_DEBT,151504.678853,million USD,nbk,2026-09-01,level,2026-09-01
@@ -3150,6 +3230,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-04-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,109.937515258789,index,imf,2026-09-01,level,2026-09-01
 2014-04-30,KZ,national,monthly,OIL_PRICE,104.9998484848485,USD per barrel,imf,2026-09-01,level,2026-09-01
 2014-05-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2014-05-01,KZ,national,monthly,CPI_YOY,106.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2014-05-01,KZ,national,monthly,CPI_YTD,104.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2014-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1722552.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2014-05-01,KZ,national,monthly,NEER,134.45082,index,nbk,2026-09-01,level,2026-09-01
 2014-05-01,KZ,national,monthly,REER,116.08576,index,nbk,2026-09-01,level,2026-09-01
@@ -3157,6 +3239,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-05-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,110.599609375,index,imf,2026-09-01,level,2026-09-01
 2014-05-31,KZ,national,monthly,OIL_PRICE,105.7875757575759,USD per barrel,imf,2026-09-01,level,2026-09-01
 2014-06-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2014-06-01,KZ,national,monthly,CPI_YOY,107.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2014-06-01,KZ,national,monthly,CPI_YTD,104.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2014-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1847931.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2014-06-01,KZ,national,monthly,NEER,133.97544,index,nbk,2026-09-01,level,2026-09-01
 2014-06-01,KZ,national,monthly,REER,115.83011,index,nbk,2026-09-01,level,2026-09-01
@@ -3166,6 +3250,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-06-30,KZ,national,monthly,OIL_PRICE,108.5479365079365,USD per barrel,imf,2026-09-01,level,2026-09-01
 2014-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,1.01006,% of GDP,nbk,2026-09-01,level,2026-09-01
 2014-07-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2014-07-01,KZ,national,monthly,CPI_YOY,106.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2014-07-01,KZ,national,monthly,CPI_YTD,104.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2014-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,51.764706,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2014-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,55.808824,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2014-07-01,KZ,national,quarterly,EXTERNAL_DEBT,155583.922159,million USD,nbk,2026-09-01,level,2026-09-01
@@ -3203,6 +3289,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-07-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,109.379653930664,index,imf,2026-09-01,level,2026-09-01
 2014-07-31,KZ,national,monthly,OIL_PRICE,105.456231884058,USD per barrel,imf,2026-09-01,level,2026-09-01
 2014-08-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2014-08-01,KZ,national,monthly,CPI_YOY,107.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2014-08-01,KZ,national,monthly,CPI_YTD,105.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2014-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2023751.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2014-08-01,KZ,national,monthly,NEER,138.11534,index,nbk,2026-09-01,level,2026-09-01
 2014-08-01,KZ,national,monthly,REER,119.73384,index,nbk,2026-09-01,level,2026-09-01
@@ -3210,6 +3298,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-08-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,106.018844604492,index,imf,2026-09-01,level,2026-09-01
 2014-08-31,KZ,national,monthly,OIL_PRICE,100.1090476190475,USD per barrel,imf,2026-09-01,level,2026-09-01
 2014-09-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2014-09-01,KZ,national,monthly,CPI_YOY,107.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2014-09-01,KZ,national,monthly,CPI_YTD,105.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2014-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2077700.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2014-09-01,KZ,national,monthly,NEER,141.81078,index,nbk,2026-09-01,level,2026-09-01
 2014-09-01,KZ,national,monthly,REER,123.16669,index,nbk,2026-09-01,level,2026-09-01
@@ -3219,6 +3309,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-09-30,KZ,national,monthly,OIL_PRICE,95.83484848484855,USD per barrel,imf,2026-09-01,level,2026-09-01
 2014-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-3.750485,% of GDP,nbk,2026-09-01,level,2026-09-01
 2014-10-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2014-10-01,KZ,national,monthly,CPI_YOY,107.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2014-10-01,KZ,national,monthly,CPI_YTD,106.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2014-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,51.551661,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2014-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,52.957284,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2014-10-01,KZ,national,quarterly,EXTERNAL_DEBT,155674.878898,million USD,nbk,2026-09-01,level,2026-09-01
@@ -3260,6 +3352,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-10-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,96.5913162231445,index,imf,2026-09-01,level,2026-09-01
 2014-10-31,KZ,national,monthly,OIL_PRICE,86.12289855072457,USD per barrel,imf,2026-09-01,level,2026-09-01
 2014-11-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2014-11-01,KZ,national,monthly,CPI_YOY,107.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2014-11-01,KZ,national,monthly,CPI_YTD,106.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2014-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2263669.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2014-11-01,KZ,national,monthly,NEER,151.74083,index,nbk,2026-09-01,level,2026-09-01
 2014-11-01,KZ,national,monthly,REER,132.52562,index,nbk,2026-09-01,level,2026-09-01
@@ -3267,6 +3361,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-11-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,91.1293182373047,index,imf,2026-09-01,level,2026-09-01
 2014-11-30,KZ,national,monthly,OIL_PRICE,77.0188333333333,USD per barrel,imf,2026-09-01,level,2026-09-01
 2014-12-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2014-12-01,KZ,national,monthly,CPI_YOY,107.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2014-12-01,KZ,national,monthly,CPI_YTD,107.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2014-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2249569.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2014-12-01,KZ,national,monthly,NEER,158.41472,index,nbk,2026-09-01,level,2026-09-01
 2014-12-01,KZ,national,monthly,REER,138.2474,index,nbk,2026-09-01,level,2026-09-01
@@ -3359,6 +3455,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-31,KZ,national,annual,WORKERS_USING_INTERNET,610321.0,persons,bns,2026-09-01,level,2026-09-01
 2015-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-1.859795,% of GDP,nbk,2026-09-01,level,2026-09-01
 2015-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2015-01-01,KZ,national,monthly,CPI_YOY,107.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2015-01-01,KZ,national,monthly,CPI_YTD,100.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2015-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,45.669433,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2015-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,47.618188,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2015-01-01,KZ,national,quarterly,EXTERNAL_DEBT,157114.532271,million USD,nbk,2026-09-01,level,2026-09-01
@@ -3431,6 +3529,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-01-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,70.0146560668945,index,imf,2026-09-01,level,2026-09-01
 2015-01-31,KZ,national,monthly,OIL_PRICE,47.66090909090909,USD per barrel,imf,2026-09-01,level,2026-09-01
 2015-02-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2015-02-01,KZ,national,monthly,CPI_YOY,106.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2015-02-01,KZ,national,monthly,CPI_YTD,101.0,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2015-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2395063.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2015-02-01,KZ,national,monthly,NEER,168.99327,index,nbk,2026-09-01,level,2026-09-01
 2015-02-01,KZ,national,monthly,REER,146.38648,index,nbk,2026-09-01,level,2026-09-01
@@ -3438,6 +3538,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-02-28,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,75.1213226318359,index,imf,2026-09-01,level,2026-09-01
 2015-02-28,KZ,national,monthly,OIL_PRICE,55.01033333333335,USD per barrel,imf,2026-09-01,level,2026-09-01
 2015-03-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2015-03-01,KZ,national,monthly,CPI_YOY,105.2,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2015-03-01,KZ,national,monthly,CPI_YTD,101.1,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2015-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2465115.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2015-03-01,KZ,national,monthly,NEER,170.14166,index,nbk,2026-09-01,level,2026-09-01
 2015-03-01,KZ,national,monthly,REER,146.32283,index,nbk,2026-09-01,level,2026-09-01
@@ -3447,6 +3549,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-03-31,KZ,national,monthly,OIL_PRICE,52.87454545454545,USD per barrel,imf,2026-09-01,level,2026-09-01
 2015-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-1.139902,% of GDP,nbk,2026-09-01,level,2026-09-01
 2015-04-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2015-04-01,KZ,national,monthly,CPI_YOY,104.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2015-04-01,KZ,national,monthly,CPI_YTD,101.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2015-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,31.391586,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2015-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,56.903991,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2015-04-01,KZ,national,quarterly,EXTERNAL_DEBT,154065.705095,million USD,nbk,2026-09-01,level,2026-09-01
@@ -3488,6 +3592,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-04-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,76.7771377563477,index,imf,2026-09-01,level,2026-09-01
 2015-04-30,KZ,national,monthly,OIL_PRICE,57.54621212121209,USD per barrel,imf,2026-09-01,level,2026-09-01
 2015-05-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2015-05-01,KZ,national,monthly,CPI_YOY,104.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2015-05-01,KZ,national,monthly,CPI_YTD,101.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2015-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2526650.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2015-05-01,KZ,national,monthly,NEER,160.99817,index,nbk,2026-09-01,level,2026-09-01
 2015-05-01,KZ,national,monthly,REER,137.7058,index,nbk,2026-09-01,level,2026-09-01
@@ -3495,6 +3601,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-05-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,81.1622848510742,index,imf,2026-09-01,level,2026-09-01
 2015-05-31,KZ,national,monthly,OIL_PRICE,62.58682539682543,USD per barrel,imf,2026-09-01,level,2026-09-01
 2015-06-01,KZ,national,monthly,CPI,99.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2015-06-01,KZ,national,monthly,CPI_YOY,103.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2015-06-01,KZ,national,monthly,CPI_YTD,101.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2015-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2526800.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2015-06-01,KZ,national,monthly,NEER,163.13433,index,nbk,2026-09-01,level,2026-09-01
 2015-06-01,KZ,national,monthly,REER,139.42581,index,nbk,2026-09-01,level,2026-09-01
@@ -3504,6 +3612,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-06-30,KZ,national,monthly,OIL_PRICE,61.41530303030305,USD per barrel,imf,2026-09-01,level,2026-09-01
 2015-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,1.34746,% of GDP,nbk,2026-09-01,level,2026-09-01
 2015-07-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2015-07-01,KZ,national,monthly,CPI_YOY,103.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2015-07-01,KZ,national,monthly,CPI_YTD,101.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2015-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,46.092077,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2015-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,56.316916,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2015-07-01,KZ,national,quarterly,EXTERNAL_DEBT,155281.005245,million USD,nbk,2026-09-01,level,2026-09-01
@@ -3545,6 +3655,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-07-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,74.6060104370117,index,imf,2026-09-01,level,2026-09-01
 2015-07-31,KZ,national,monthly,OIL_PRICE,54.671884057971,USD per barrel,imf,2026-09-01,level,2026-09-01
 2015-08-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2015-08-01,KZ,national,monthly,CPI_YOY,103.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2015-08-01,KZ,national,monthly,CPI_YTD,101.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2015-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2627153.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2015-08-01,KZ,national,monthly,NEER,152.97759,index,nbk,2026-09-01,level,2026-09-01
 2015-08-01,KZ,national,monthly,REER,130.97204,index,nbk,2026-09-01,level,2026-09-01
@@ -3552,6 +3664,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-08-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,67.7891159057617,index,imf,2026-09-01,level,2026-09-01
 2015-08-31,KZ,national,monthly,OIL_PRICE,46.14253968253969,USD per barrel,imf,2026-09-01,level,2026-09-01
 2015-09-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2015-09-01,KZ,national,monthly,CPI_YOY,104.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2015-09-01,KZ,national,monthly,CPI_YTD,102.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2015-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2627153.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2015-09-01,KZ,national,monthly,NEER,121.85171,index,nbk,2026-09-01,level,2026-09-01
 2015-09-01,KZ,national,monthly,REER,105.18619,index,nbk,2026-09-01,level,2026-09-01
@@ -3561,6 +3675,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-09-30,KZ,national,monthly,OIL_PRICE,46.24393939393941,USD per barrel,imf,2026-09-01,level,2026-09-01
 2015-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,1.46202,% of GDP,nbk,2026-09-01,level,2026-09-01
 2015-10-01,KZ,national,monthly,CPI,105.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2015-10-01,KZ,national,monthly,CPI_YOY,109.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2015-10-01,KZ,national,monthly,CPI_YTD,108.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2015-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,45.766631,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2015-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,47.296336,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2015-10-01,KZ,national,quarterly,EXTERNAL_DEBT,155284.275234,million USD,nbk,2026-09-01,level,2026-09-01
@@ -3602,6 +3718,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-10-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,68.2048492431641,index,imf,2026-09-01,level,2026-09-01
 2015-10-31,KZ,national,monthly,OIL_PRICE,47.01151515151514,USD per barrel,imf,2026-09-01,level,2026-09-01
 2015-11-01,KZ,national,monthly,CPI,103.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2015-11-01,KZ,national,monthly,CPI_YOY,112.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2015-11-01,KZ,national,monthly,CPI_YTD,112.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2015-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2657153.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2015-11-01,KZ,national,monthly,NEER,107.07714,index,nbk,2026-09-01,level,2026-09-01
 2015-11-01,KZ,national,monthly,REER,100.62325,index,nbk,2026-09-01,level,2026-09-01
@@ -3609,6 +3727,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-11-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,64.2708435058594,index,imf,2026-09-01,level,2026-09-01
 2015-11-30,KZ,national,monthly,OIL_PRICE,43.09253968253968,USD per barrel,imf,2026-09-01,level,2026-09-01
 2015-12-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2015-12-01,KZ,national,monthly,CPI_YOY,113.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2015-12-01,KZ,national,monthly,CPI_YTD,113.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2015-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2657153.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2015-12-01,KZ,national,monthly,NEER,101.30124,index,nbk,2026-09-01,level,2026-09-01
 2015-12-01,KZ,national,monthly,REER,96.10464,index,nbk,2026-09-01,level,2026-09-01
@@ -3698,6 +3818,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-31,KZ,national,annual,WORKERS_USING_INTERNET,655094.0,persons,bns,2026-09-01,level,2026-09-01
 2016-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.133532,% of GDP,nbk,2026-09-01,level,2026-09-01
 2016-01-01,KZ,national,monthly,CPI,101.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2016-01-01,KZ,national,monthly,CPI_YOY,114.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2016-01-01,KZ,national,monthly,CPI_YTD,101.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2016-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,41.035714,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2016-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,41.642857,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2016-01-01,KZ,national,quarterly,EXTERNAL_DEBT,153006.61261,million USD,nbk,2026-09-01,level,2026-09-01
@@ -3771,6 +3893,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-01-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,53.6649971008301,index,imf,2026-09-01,level,2026-09-01
 2016-01-31,KZ,national,monthly,OIL_PRICE,30.42920634920636,USD per barrel,imf,2026-09-01,level,2026-09-01
 2016-02-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2016-02-01,KZ,national,monthly,CPI_YOY,115.2,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2016-02-01,KZ,national,monthly,CPI_YTD,102.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2016-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2639943.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2016-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.9,%,nbk,2026-09-01,level,2026-09-01
 2016-02-01,KZ,national,monthly,NEER,93.46056,index,nbk,2026-09-01,level,2026-09-01
@@ -3779,6 +3903,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-02-29,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,55.1032829284668,index,imf,2026-09-01,level,2026-09-01
 2016-02-29,KZ,national,monthly,OIL_PRICE,31.27095238095237,USD per barrel,imf,2026-09-01,level,2026-09-01
 2016-03-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2016-03-01,KZ,national,monthly,CPI_YOY,115.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2016-03-01,KZ,national,monthly,CPI_YTD,103.0,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2016-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2636343.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2016-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,10.0,%,nbk,2026-09-01,level,2026-09-01
 2016-03-01,KZ,national,monthly,NEER,94.59006,index,nbk,2026-09-01,level,2026-09-01
@@ -3790,6 +3916,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,4.133345,% of GDP,nbk,2026-09-01,level,2026-09-01
 2016-04-01,KZ,national,quarterly,CAPACITY_UTILIZATION,54.183601,percent,nbk,2026-09-01,level,2026-09-01
 2016-04-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2016-04-01,KZ,national,monthly,CPI_YOY,116.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2016-04-01,KZ,national,monthly,CPI_YTD,103.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2016-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,35.757576,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2016-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,55.222816,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2016-04-01,KZ,national,quarterly,EXTERNAL_DEBT,153335.143373,million USD,nbk,2026-09-01,level,2026-09-01
@@ -3845,6 +3973,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-04-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,64.9373550415039,index,imf,2026-09-01,level,2026-09-01
 2016-04-30,KZ,national,monthly,OIL_PRICE,41.22873015873016,USD per barrel,imf,2026-09-01,level,2026-09-01
 2016-05-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2016-05-01,KZ,national,monthly,CPI_YOY,116.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2016-05-01,KZ,national,monthly,CPI_YTD,104.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2016-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2621343.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2016-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.4,%,nbk,2026-09-01,level,2026-09-01
 2016-05-01,KZ,national,monthly,NEER,96.18805,index,nbk,2026-09-01,level,2026-09-01
@@ -3853,6 +3983,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-05-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,68.5176849365234,index,imf,2026-09-01,level,2026-09-01
 2016-05-31,KZ,national,monthly,OIL_PRICE,46.30893939393941,USD per barrel,imf,2026-09-01,level,2026-09-01
 2016-06-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2016-06-01,KZ,national,monthly,CPI_YOY,117.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2016-06-01,KZ,national,monthly,CPI_YTD,104.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2016-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2595363.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2016-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.1,%,nbk,2026-09-01,level,2026-09-01
 2016-06-01,KZ,national,monthly,NEER,95.20243,index,nbk,2026-09-01,level,2026-09-01
@@ -3864,6 +3996,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-3.313248,% of GDP,nbk,2026-09-01,level,2026-09-01
 2016-07-01,KZ,national,quarterly,CAPACITY_UTILIZATION,55.928293,percent,nbk,2026-09-01,level,2026-09-01
 2016-07-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2016-07-01,KZ,national,monthly,CPI_YOY,117.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2016-07-01,KZ,national,monthly,CPI_YTD,105.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2016-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,50.159744,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2016-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,55.360312,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2016-07-01,KZ,national,quarterly,EXTERNAL_DEBT,159864.393962,million USD,nbk,2026-09-01,level,2026-09-01
@@ -3919,6 +4053,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-07-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,68.0051574707031,index,imf,2026-09-01,level,2026-09-01
 2016-07-31,KZ,national,monthly,OIL_PRICE,44.64650793650793,USD per barrel,imf,2026-09-01,level,2026-09-01
 2016-08-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2016-08-01,KZ,national,monthly,CPI_YOY,117.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2016-08-01,KZ,national,monthly,CPI_YTD,105.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2016-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2586103.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2016-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.6,%,nbk,2026-09-01,level,2026-09-01
 2016-08-01,KZ,national,monthly,NEER,93.41699,index,nbk,2026-09-01,level,2026-09-01
@@ -3927,6 +4063,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-08-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,68.6280975341797,index,imf,2026-09-01,level,2026-09-01
 2016-08-31,KZ,national,monthly,OIL_PRICE,45.2576811594203,USD per barrel,imf,2026-09-01,level,2026-09-01
 2016-09-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2016-09-01,KZ,national,monthly,CPI_YOY,116.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2016-09-01,KZ,national,monthly,CPI_YTD,105.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2016-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2586103.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2016-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.0,%,nbk,2026-09-01,level,2026-09-01
 2016-09-01,KZ,national,monthly,NEER,94.9963,index,nbk,2026-09-01,level,2026-09-01
@@ -3938,6 +4076,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.965138,% of GDP,nbk,2026-09-01,level,2026-09-01
 2016-10-01,KZ,national,quarterly,CAPACITY_UTILIZATION,55.996807,percent,nbk,2026-09-01,level,2026-09-01
 2016-10-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2016-10-01,KZ,national,monthly,CPI_YOY,111.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2016-10-01,KZ,national,monthly,CPI_YTD,106.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2016-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,51.649521,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2016-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,50.922313,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2016-10-01,KZ,national,quarterly,EXTERNAL_DEBT,164849.213055,million USD,nbk,2026-09-01,level,2026-09-01
@@ -3993,6 +4133,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-10-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,72.5380096435547,index,imf,2026-09-01,level,2026-09-01
 2016-10-31,KZ,national,monthly,OIL_PRICE,50.00857142857143,USD per barrel,imf,2026-09-01,level,2026-09-01
 2016-11-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2016-11-01,KZ,national,monthly,CPI_YOY,108.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2016-11-01,KZ,national,monthly,CPI_YTD,107.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2016-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2548037.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2016-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.4,%,nbk,2026-09-01,level,2026-09-01
 2016-11-01,KZ,national,monthly,NEER,97.5302,index,nbk,2026-09-01,level,2026-09-01
@@ -4001,6 +4143,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-11-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,70.9970550537109,index,imf,2026-09-01,level,2026-09-01
 2016-11-30,KZ,national,monthly,OIL_PRICE,45.48424242424241,USD per barrel,imf,2026-09-01,level,2026-09-01
 2016-12-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2016-12-01,KZ,national,monthly,CPI_YOY,108.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2016-12-01,KZ,national,monthly,CPI_YTD,108.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2016-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2548037.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2016-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.5,%,nbk,2026-09-01,level,2026-09-01
 2016-12-01,KZ,national,monthly,NEER,100.0,index,nbk,2026-09-01,level,2026-09-01
@@ -4102,6 +4246,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,0.694645,% of GDP,nbk,2026-09-01,level,2026-09-01
 2017-01-01,KZ,national,quarterly,CAPACITY_UTILIZATION,56.127555,percent,nbk,2026-09-01,level,2026-09-01
 2017-01-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2017-01-01,KZ,national,monthly,CPI_YOY,107.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2017-01-01,KZ,national,monthly,CPI_YTD,100.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2017-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,47.991543,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2017-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,46.952079,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2017-01-01,KZ,national,quarterly,EXTERNAL_DEBT,163528.4924,million USD,nbk,2026-09-01,level,2026-09-01
@@ -4188,6 +4334,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-01-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,78.3830795288086,index,imf,2026-09-01,level,2026-09-01
 2017-01-31,KZ,national,monthly,OIL_PRICE,53.94727272727273,USD per barrel,imf,2026-09-01,level,2026-09-01
 2017-02-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2017-02-01,KZ,national,monthly,CPI_YOY,107.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2017-02-01,KZ,national,monthly,CPI_YTD,101.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2017-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2572037.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2017-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.1,%,nbk,2026-09-01,level,2026-09-01
 2017-02-01,KZ,national,monthly,NEER,102.74156,index,nbk,2026-09-01,level,2026-09-01
@@ -4196,6 +4344,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-02-28,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,79.4665222167969,index,imf,2026-09-01,level,2026-09-01
 2017-02-28,KZ,national,monthly,OIL_PRICE,54.6136666666667,USD per barrel,imf,2026-09-01,level,2026-09-01
 2017-03-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2017-03-01,KZ,national,monthly,CPI_YOY,107.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2017-03-01,KZ,national,monthly,CPI_YTD,102.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2017-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2596158.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2017-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.7,%,nbk,2026-09-01,level,2026-09-01
 2017-03-01,KZ,national,monthly,NEER,103.65179,index,nbk,2026-09-01,level,2026-09-01
@@ -4207,6 +4357,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,1.7341,% of GDP,nbk,2026-09-01,level,2026-09-01
 2017-04-01,KZ,national,quarterly,CAPACITY_UTILIZATION,54.017544,percent,nbk,2026-09-01,level,2026-09-01
 2017-04-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2017-04-01,KZ,national,monthly,CPI_YOY,107.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2017-04-01,KZ,national,monthly,CPI_YTD,102.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2017-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,42.087719,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2017-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,57.368421,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2017-04-01,KZ,national,quarterly,EXTERNAL_DEBT,165292.701039,million USD,nbk,2026-09-01,level,2026-09-01
@@ -4262,6 +4414,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-04-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,76.8218765258789,index,imf,2026-09-01,level,2026-09-01
 2017-04-30,KZ,national,monthly,OIL_PRICE,52.56883333333335,USD per barrel,imf,2026-09-01,level,2026-09-01
 2017-05-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2017-05-01,KZ,national,monthly,CPI_YOY,107.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2017-05-01,KZ,national,monthly,CPI_YTD,103.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2017-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2586651.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2017-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.6,%,nbk,2026-09-01,level,2026-09-01
 2017-05-01,KZ,national,monthly,NEER,102.29591,index,nbk,2026-09-01,level,2026-09-01
@@ -4270,6 +4424,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-05-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,74.4413070678711,index,imf,2026-09-01,level,2026-09-01
 2017-05-31,KZ,national,monthly,OIL_PRICE,50.02275362318839,USD per barrel,imf,2026-09-01,level,2026-09-01
 2017-06-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2017-06-01,KZ,national,monthly,CPI_YOY,107.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2017-06-01,KZ,national,monthly,CPI_YTD,103.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2017-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2586651.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2017-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.7,%,nbk,2026-09-01,level,2026-09-01
 2017-06-01,KZ,national,monthly,NEER,100.07308,index,nbk,2026-09-01,level,2026-09-01
@@ -4281,6 +4437,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,0.888601,% of GDP,nbk,2026-09-01,level,2026-09-01
 2017-07-01,KZ,national,quarterly,CAPACITY_UTILIZATION,56.57009,percent,nbk,2026-09-01,level,2026-09-01
 2017-07-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2017-07-01,KZ,national,monthly,CPI_YOY,107.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2017-07-01,KZ,national,monthly,CPI_YTD,103.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2017-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,53.938237,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2017-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,56.29771,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2017-07-01,KZ,national,quarterly,EXTERNAL_DEBT,167774.327133,million USD,nbk,2026-09-01,level,2026-09-01
@@ -4337,6 +4495,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-07-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,74.2975921630859,index,imf,2026-09-01,level,2026-09-01
 2017-07-31,KZ,national,monthly,OIL_PRICE,47.87587301587305,USD per barrel,imf,2026-09-01,level,2026-09-01
 2017-08-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2017-08-01,KZ,national,monthly,CPI_YOY,107.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2017-08-01,KZ,national,monthly,CPI_YTD,103.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2017-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3285458.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2017-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.3,%,nbk,2026-09-01,level,2026-09-01
 2017-08-01,KZ,national,monthly,NEER,93.92925,index,nbk,2026-09-01,level,2026-09-01
@@ -4345,6 +4505,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-08-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,76.3781585693359,index,imf,2026-09-01,level,2026-09-01
 2017-08-31,KZ,national,monthly,OIL_PRICE,50.08173913043478,USD per barrel,imf,2026-09-01,level,2026-09-01
 2017-09-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2017-09-01,KZ,national,monthly,CPI_YOY,107.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2017-09-01,KZ,national,monthly,CPI_YTD,104.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2017-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3270411.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2017-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.2,%,nbk,2026-09-01,level,2026-09-01
 2017-09-01,KZ,national,monthly,NEER,92.4763,index,nbk,2026-09-01,level,2026-09-01
@@ -4356,6 +4518,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-3.159621,% of GDP,nbk,2026-09-01,level,2026-09-01
 2017-10-01,KZ,national,quarterly,CAPACITY_UTILIZATION,57.976313,percent,nbk,2026-09-01,level,2026-09-01
 2017-10-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2017-10-01,KZ,national,monthly,CPI_YOY,107.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2017-10-01,KZ,national,monthly,CPI_YTD,105.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2017-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,54.205287,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2017-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,51.956746,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2017-10-01,KZ,national,quarterly,EXTERNAL_DEBT,168847.74978,million USD,nbk,2026-09-01,level,2026-09-01
@@ -4412,6 +4576,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-10-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,79.9380264282227,index,imf,2026-09-01,level,2026-09-01
 2017-10-31,KZ,national,monthly,OIL_PRICE,54.96136363636364,USD per barrel,imf,2026-09-01,level,2026-09-01
 2017-11-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2017-11-01,KZ,national,monthly,CPI_YOY,107.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2017-11-01,KZ,national,monthly,CPI_YTD,106.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2017-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3277045.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2017-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.4,%,nbk,2026-09-01,level,2026-09-01
 2017-11-01,KZ,national,monthly,NEER,96.15569,index,nbk,2026-09-01,level,2026-09-01
@@ -4420,6 +4586,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-11-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,83.889289855957,index,imf,2026-09-01,level,2026-09-01
 2017-11-30,KZ,national,monthly,OIL_PRICE,60.05378787878791,USD per barrel,imf,2026-09-01,level,2026-09-01
 2017-12-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2017-12-01,KZ,national,monthly,CPI_YOY,107.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2017-12-01,KZ,national,monthly,CPI_YTD,107.1,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2017-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3343702.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2017-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.0,%,nbk,2026-09-01,level,2026-09-01
 2017-12-01,KZ,national,monthly,NEER,95.14614,index,nbk,2026-09-01,level,2026-09-01
@@ -4522,6 +4690,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,3.099605,% of GDP,nbk,2026-09-01,level,2026-09-01
 2018-01-01,KZ,national,quarterly,CAPACITY_UTILIZATION,57.488957,percent,nbk,2026-09-01,level,2026-09-01
 2018-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2018-01-01,KZ,national,monthly,CPI_YOY,106.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2018-01-01,KZ,national,monthly,CPI_YTD,100.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2018-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,50.526673,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2018-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,48.929664,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2018-01-01,KZ,national,quarterly,EXTERNAL_DEBT,167482.716088,million USD,nbk,2026-09-01,level,2026-09-01
@@ -4611,6 +4781,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-01-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,89.9409866333008,index,imf,2026-09-01,level,2026-09-01
 2018-01-31,KZ,national,monthly,OIL_PRICE,66.16623188405791,USD per barrel,imf,2026-09-01,level,2026-09-01
 2018-02-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2018-02-01,KZ,national,monthly,CPI_YOY,106.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2018-02-01,KZ,national,monthly,CPI_YTD,101.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2018-02-01,KZ,national,monthly,FX_RESERVES,31348.879187492814,USD million,nbk,2026-09-01,level,2026-09-01
 2018-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3396175.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2018-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.4,%,nbk,2026-09-01,level,2026-09-01
@@ -4621,6 +4793,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-02-28,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,88.4201736450195,index,imf,2026-09-01,level,2026-09-01
 2018-02-28,KZ,national,monthly,OIL_PRICE,63.5181666666666,USD per barrel,imf,2026-09-01,level,2026-09-01
 2018-03-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2018-03-01,KZ,national,monthly,CPI_YOY,106.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2018-03-01,KZ,national,monthly,CPI_YTD,101.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2018-03-01,KZ,national,monthly,FX_RESERVES,30993.283191102935,USD million,nbk,2026-09-01,level,2026-09-01
 2018-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3396175.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2018-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.4,%,nbk,2026-09-01,level,2026-09-01
@@ -4634,6 +4808,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,2.450631,% of GDP,nbk,2026-09-01,level,2026-09-01
 2018-04-01,KZ,national,quarterly,CAPACITY_UTILIZATION,55.215271,percent,nbk,2026-09-01,level,2026-09-01
 2018-04-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2018-04-01,KZ,national,monthly,CPI_YOY,106.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2018-04-01,KZ,national,monthly,CPI_YTD,102.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2018-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,43.070972,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2018-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,57.93811,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2018-04-01,KZ,national,quarterly,EXTERNAL_DEBT,167755.597133,million USD,nbk,2026-09-01,level,2026-09-01
@@ -4693,6 +4869,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-04-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,91.0949478149414,index,imf,2026-09-01,level,2026-09-01
 2018-04-30,KZ,national,monthly,OIL_PRICE,68.97126984126986,USD per barrel,imf,2026-09-01,level,2026-09-01
 2018-05-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2018-05-01,KZ,national,monthly,CPI_YOY,106.2,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2018-05-01,KZ,national,monthly,CPI_YTD,102.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2018-05-01,KZ,national,monthly,FX_RESERVES,31339.258244985424,USD million,nbk,2026-09-01,level,2026-09-01
 2018-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3452233.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2018-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.1,%,nbk,2026-09-01,level,2026-09-01
@@ -4703,6 +4881,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-05-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,94.6129531860352,index,imf,2026-09-01,level,2026-09-01
 2018-05-31,KZ,national,monthly,OIL_PRICE,73.63695652173914,USD per barrel,imf,2026-09-01,level,2026-09-01
 2018-06-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2018-06-01,KZ,national,monthly,CPI_YOY,105.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2018-06-01,KZ,national,monthly,CPI_YTD,102.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2018-06-01,KZ,national,monthly,FX_RESERVES,30720.59066405623,USD million,nbk,2026-09-01,level,2026-09-01
 2018-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3469984.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2018-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.7,%,nbk,2026-09-01,level,2026-09-01
@@ -4716,6 +4896,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,0.225871,% of GDP,nbk,2026-09-01,level,2026-09-01
 2018-07-01,KZ,national,quarterly,CAPACITY_UTILIZATION,57.210406,percent,nbk,2026-09-01,level,2026-09-01
 2018-07-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2018-07-01,KZ,national,monthly,CPI_YOY,105.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2018-07-01,KZ,national,monthly,CPI_YTD,102.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2018-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,53.664921,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2018-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,57.411649,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2018-07-01,KZ,national,quarterly,EXTERNAL_DEBT,165679.600388,million USD,nbk,2026-09-01,level,2026-09-01
@@ -4774,6 +4956,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-07-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,93.2681503295898,index,imf,2026-09-01,level,2026-09-01
 2018-07-31,KZ,national,monthly,OIL_PRICE,73.02439393939395,USD per barrel,imf,2026-09-01,level,2026-09-01
 2018-08-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2018-08-01,KZ,national,monthly,CPI_YOY,106.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2018-08-01,KZ,national,monthly,CPI_YTD,102.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2018-08-01,KZ,national,monthly,FX_RESERVES,30841.76116188529,USD million,nbk,2026-09-01,level,2026-09-01
 2018-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3685017.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2018-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.6,%,nbk,2026-09-01,level,2026-09-01
@@ -4784,6 +4968,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-08-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,92.1426391601563,index,imf,2026-09-01,level,2026-09-01
 2018-08-31,KZ,national,monthly,OIL_PRICE,71.45782608695657,USD per barrel,imf,2026-09-01,level,2026-09-01
 2018-09-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2018-09-01,KZ,national,monthly,CPI_YOY,106.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2018-09-01,KZ,national,monthly,CPI_YTD,103.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2018-09-01,KZ,national,monthly,FX_RESERVES,30509.909207138073,USD million,nbk,2026-09-01,level,2026-09-01
 2018-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3798951.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2018-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.4,%,nbk,2026-09-01,level,2026-09-01
@@ -4797,6 +4983,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.262036,% of GDP,nbk,2026-09-01,level,2026-09-01
 2018-10-01,KZ,national,quarterly,CAPACITY_UTILIZATION,58.034339,percent,nbk,2026-09-01,level,2026-09-01
 2018-10-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2018-10-01,KZ,national,monthly,CPI_YOY,105.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2018-10-01,KZ,national,monthly,CPI_YTD,103.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2018-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,53.867137,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2018-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,52.631579,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2018-10-01,KZ,national,quarterly,EXTERNAL_DEBT,162643.82645,million USD,nbk,2026-09-01,level,2026-09-01
@@ -4855,6 +5043,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-10-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,94.8183822631836,index,imf,2026-09-01,level,2026-09-01
 2018-10-31,KZ,national,monthly,OIL_PRICE,76.76637681159421,USD per barrel,imf,2026-09-01,level,2026-09-01
 2018-11-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2018-11-01,KZ,national,monthly,CPI_YOY,105.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2018-11-01,KZ,national,monthly,CPI_YTD,104.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2018-11-01,KZ,national,monthly,FX_RESERVES,29043.86968553896,USD million,nbk,2026-09-01,level,2026-09-01
 2018-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3874989.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2018-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.7,%,nbk,2026-09-01,level,2026-09-01
@@ -4865,6 +5055,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-11-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,84.8495101928711,index,imf,2026-09-01,level,2026-09-01
 2018-11-30,KZ,national,monthly,OIL_PRICE,62.36757575757573,USD per barrel,imf,2026-09-01,level,2026-09-01
 2018-12-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2018-12-01,KZ,national,monthly,CPI_YOY,105.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2018-12-01,KZ,national,monthly,CPI_YTD,105.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2018-12-01,KZ,national,monthly,FX_RESERVES,30146.45025175503,USD million,nbk,2026-09-01,level,2026-09-01
 2018-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3789794.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2018-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.8,%,nbk,2026-09-01,level,2026-09-01
@@ -4971,6 +5163,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,1.094829,% of GDP,nbk,2026-09-01,level,2026-09-01
 2019-01-01,KZ,national,quarterly,CAPACITY_UTILIZATION,57.488889,percent,nbk,2026-09-01,level,2026-09-01
 2019-01-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2019-01-01,KZ,national,monthly,CPI_YOY,105.2,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2019-01-01,KZ,national,monthly,CPI_YTD,100.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2019-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,51.142857,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2019-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,48.238095,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2019-01-01,KZ,national,monthly,EXPORTS,5351587.74833999,thousand USD,bns,2026-09-01,level,2026-09-01
@@ -5065,6 +5259,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-01-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,80.3885726928711,index,imf,2026-09-01,level,2026-09-01
 2019-01-31,KZ,national,monthly,OIL_PRICE,56.7771014492753,USD per barrel,imf,2026-09-01,level,2026-09-01
 2019-02-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2019-02-01,KZ,national,monthly,CPI_YOY,104.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2019-02-01,KZ,national,monthly,CPI_YTD,100.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2019-02-01,KZ,national,monthly,EXPORTS,4559264.017740005,thousand USD,bns,2026-09-01,level,2026-09-01
 2019-02-01,KZ,national,monthly,FX_RESERVES,30580.031878294478,USD million,nbk,2026-09-01,level,2026-09-01
 2019-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3982863.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5079,6 +5275,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-02-28,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,83.9094848632813,index,imf,2026-09-01,level,2026-09-01
 2019-02-28,KZ,national,monthly,OIL_PRICE,61.3093333333333,USD per barrel,imf,2026-09-01,level,2026-09-01
 2019-03-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2019-03-01,KZ,national,monthly,CPI_YOY,104.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2019-03-01,KZ,national,monthly,CPI_YTD,101.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2019-03-01,KZ,national,monthly,EXPORTS,3433642.2448500046,thousand USD,bns,2026-09-01,level,2026-09-01
 2019-03-01,KZ,national,monthly,FX_RESERVES,29136.874802504,USD million,nbk,2026-09-01,level,2026-09-01
 2019-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4084082.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5096,6 +5294,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,12.801904,% of GDP,nbk,2026-09-01,level,2026-09-01
 2019-04-01,KZ,national,quarterly,CAPACITY_UTILIZATION,54.5721,percent,nbk,2026-09-01,level,2026-09-01
 2019-04-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2019-04-01,KZ,national,monthly,CPI_YOY,104.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2019-04-01,KZ,national,monthly,CPI_YTD,101.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2019-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,43.667712,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2019-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,58.714734,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2019-04-01,KZ,national,monthly,EXPORTS,5201089.066599997,thousand USD,bns,2026-09-01,level,2026-09-01
@@ -5158,6 +5358,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-04-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,88.5600280761719,index,imf,2026-09-01,level,2026-09-01
 2019-04-30,KZ,national,monthly,OIL_PRICE,68.76196969696969,USD per barrel,imf,2026-09-01,level,2026-09-01
 2019-05-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2019-05-01,KZ,national,monthly,CPI_YOY,105.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2019-05-01,KZ,national,monthly,CPI_YTD,102.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2019-05-01,KZ,national,monthly,EXPORTS,5068705.517039989,thousand USD,bns,2026-09-01,level,2026-09-01
 2019-05-01,KZ,national,monthly,FX_RESERVES,27085.466360963313,USD million,nbk,2026-09-01,level,2026-09-01
 2019-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4245473.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5172,6 +5374,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-05-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,86.5309295654297,index,imf,2026-09-01,level,2026-09-01
 2019-05-31,KZ,national,monthly,OIL_PRICE,66.59884057971017,USD per barrel,imf,2026-09-01,level,2026-09-01
 2019-06-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2019-06-01,KZ,national,monthly,CPI_YOY,105.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2019-06-01,KZ,national,monthly,CPI_YTD,102.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2019-06-01,KZ,national,monthly,EXPORTS,5029506.973999987,thousand USD,bns,2026-09-01,level,2026-09-01
 2019-06-01,KZ,national,monthly,FX_RESERVES,28050.26017347632,USD million,nbk,2026-09-01,level,2026-09-01
 2019-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4354502.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5189,6 +5393,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,2.33582,% of GDP,nbk,2026-09-01,level,2026-09-01
 2019-07-01,KZ,national,quarterly,CAPACITY_UTILIZATION,57.533416,percent,nbk,2026-09-01,level,2026-09-01
 2019-07-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2019-07-01,KZ,national,monthly,CPI_YOY,105.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2019-07-01,KZ,national,monthly,CPI_YTD,102.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2019-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,54.351881,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2019-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,56.978551,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2019-07-01,KZ,national,monthly,EXPORTS,4388380.0123,thousand USD,bns,2026-09-01,level,2026-09-01
@@ -5252,6 +5458,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-07-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,83.0498046875,index,imf,2026-09-01,level,2026-09-01
 2019-07-31,KZ,national,monthly,OIL_PRICE,61.51971014492752,USD per barrel,imf,2026-09-01,level,2026-09-01
 2019-08-01,KZ,national,monthly,CPI,100.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2019-08-01,KZ,national,monthly,CPI_YOY,105.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2019-08-01,KZ,national,monthly,CPI_YTD,103.0,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2019-08-01,KZ,national,monthly,EXPORTS,4757676.361230004,thousand USD,bns,2026-09-01,level,2026-09-01
 2019-08-01,KZ,national,monthly,FX_RESERVES,27676.72926044222,USD million,nbk,2026-09-01,level,2026-09-01
 2019-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4929511.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5266,6 +5474,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-08-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,78.8552627563477,index,imf,2026-09-01,level,2026-09-01
 2019-08-31,KZ,national,monthly,OIL_PRICE,57.65090909090909,USD per barrel,imf,2026-09-01,level,2026-09-01
 2019-09-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2019-09-01,KZ,national,monthly,CPI_YOY,105.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2019-09-01,KZ,national,monthly,CPI_YTD,103.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2019-09-01,KZ,national,monthly,EXPORTS,5317152.093239978,thousand USD,bns,2026-09-01,level,2026-09-01
 2019-09-01,KZ,national,monthly,FX_RESERVES,28236.373828024312,USD million,nbk,2026-09-01,level,2026-09-01
 2019-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4914966.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5283,6 +5493,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,0.645105,% of GDP,nbk,2026-09-01,level,2026-09-01
 2019-10-01,KZ,national,quarterly,CAPACITY_UTILIZATION,57.688039,percent,nbk,2026-09-01,level,2026-09-01
 2019-10-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2019-10-01,KZ,national,monthly,CPI_YOY,105.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2019-10-01,KZ,national,monthly,CPI_YTD,103.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2019-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,54.901356,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2019-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,52.481504,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2019-10-01,KZ,national,monthly,EXPORTS,5077991.998250024,thousand USD,bns,2026-09-01,level,2026-09-01
@@ -5346,6 +5558,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-10-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,79.418212890625,index,imf,2026-09-01,level,2026-09-01
 2019-10-31,KZ,national,monthly,OIL_PRICE,57.48521739130435,USD per barrel,imf,2026-09-01,level,2026-09-01
 2019-11-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2019-11-01,KZ,national,monthly,CPI_YOY,105.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2019-11-01,KZ,national,monthly,CPI_YTD,104.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2019-11-01,KZ,national,monthly,EXPORTS,4838574.92016998,thousand USD,bns,2026-09-01,level,2026-09-01
 2019-11-01,KZ,national,monthly,FX_RESERVES,29501.515412105127,USD million,nbk,2026-09-01,level,2026-09-01
 2019-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4885471.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5360,6 +5574,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-11-30,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,81.6605529785156,index,imf,2026-09-01,level,2026-09-01
 2019-11-30,KZ,national,monthly,OIL_PRICE,60.1947619047619,USD per barrel,imf,2026-09-01,level,2026-09-01
 2019-12-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2019-12-01,KZ,national,monthly,CPI_YOY,105.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2019-12-01,KZ,national,monthly,CPI_YTD,105.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2019-12-01,KZ,national,monthly,EXPORTS,5042017.8237599945,thousand USD,bns,2026-09-01,level,2026-09-01
 2019-12-01,KZ,national,monthly,FX_RESERVES,28636.943794315,USD million,nbk,2026-09-01,level,2026-09-01
 2019-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4939929.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5477,6 +5693,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,1651.922115,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1134.698695,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2020-01-01,KZ,national,monthly,CPI_YOY,105.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2020-01-01,KZ,national,monthly,CPI_YTD,100.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,51.071647,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,48.224127,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,monthly,EXPORTS,4558391.945129985,thousand USD,bns,2026-09-01,level,2026-09-01
@@ -5584,6 +5802,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,1906.858162,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-02-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1262.329475,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-02-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2020-02-01,KZ,national,monthly,CPI_YOY,106.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2020-02-01,KZ,national,monthly,CPI_YTD,101.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2020-02-01,KZ,national,monthly,EXPORTS,4907435.960909992,thousand USD,bns,2026-09-01,level,2026-09-01
 2020-02-01,KZ,national,monthly,FX_RESERVES,29336.17423200095,USD million,nbk,2026-09-01,level,2026-09-01
 2020-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,5137106.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5603,6 +5823,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-03-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,2201.73173,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-03-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1329.896681,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-03-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2020-03-01,KZ,national,monthly,CPI_YOY,106.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2020-03-01,KZ,national,monthly,CPI_YTD,102.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2020-03-01,KZ,national,monthly,EXPORTS,4964794.981599992,thousand USD,bns,2026-09-01,level,2026-09-01
 2020-03-01,KZ,national,monthly,FX_RESERVES,29888.55629769168,USD million,nbk,2026-09-01,level,2026-09-01
 2020-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,5197472.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5628,6 +5850,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-04-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,1806.584922,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-04-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,999.5502804,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-04-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2020-04-01,KZ,national,monthly,CPI_YOY,106.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2020-04-01,KZ,national,monthly,CPI_YTD,103.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2020-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-597.1990194,million USD,nbk,2026-09-01,level,2026-09-01
 2020-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,39.562655,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2020-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,44.990695,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -5705,6 +5929,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,2408.103975,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-05-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1309.954196,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-05-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2020-05-01,KZ,national,monthly,CPI_YOY,106.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2020-05-01,KZ,national,monthly,CPI_YTD,103.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2020-05-01,KZ,national,monthly,EXPORTS,4035675.911559989,thousand USD,bns,2026-09-01,level,2026-09-01
 2020-05-01,KZ,national,monthly,FX_RESERVES,30557.171565349177,USD million,nbk,2026-09-01,level,2026-09-01
 2020-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,5747188.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5724,6 +5950,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,2781.761644,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-06-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1477.878055,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-06-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2020-06-01,KZ,national,monthly,CPI_YOY,107.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2020-06-01,KZ,national,monthly,CPI_YTD,104.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2020-06-01,KZ,national,monthly,EXPORTS,3208065.630579999,thousand USD,bns,2026-09-01,level,2026-09-01
 2020-06-01,KZ,national,monthly,FX_RESERVES,31560.974290282596,USD million,nbk,2026-09-01,level,2026-09-01
 2020-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,5822669.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5749,6 +5977,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-07-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,2983.061762,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-07-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1381.072664,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-07-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2020-07-01,KZ,national,monthly,CPI_YOY,107.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2020-07-01,KZ,national,monthly,CPI_YTD,104.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2020-07-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-4394.67146,million USD,nbk,2026-09-01,level,2026-09-01
 2020-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,44.007376,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2020-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,48.786109,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -5826,6 +6056,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,3370.480287,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-08-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1448.104548,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-08-01,KZ,national,monthly,CPI,100.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2020-08-01,KZ,national,monthly,CPI_YOY,107.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2020-08-01,KZ,national,monthly,CPI_YTD,104.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2020-08-01,KZ,national,monthly,EXPORTS,3314200.9581899936,thousand USD,bns,2026-09-01,level,2026-09-01
 2020-08-01,KZ,national,monthly,FX_RESERVES,35371.797273580385,USD million,nbk,2026-09-01,level,2026-09-01
 2020-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,6354041.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5845,6 +6077,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-09-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,3688.472401,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-09-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1519.435449,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-09-01,KZ,national,monthly,CPI,100.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2020-09-01,KZ,national,monthly,CPI_YOY,107.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2020-09-01,KZ,national,monthly,CPI_YTD,104.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2020-09-01,KZ,national,monthly,EXPORTS,3645107.82774001,thousand USD,bns,2026-09-01,level,2026-09-01
 2020-09-01,KZ,national,monthly,FX_RESERVES,35392.964194606415,USD million,nbk,2026-09-01,level,2026-09-01
 2020-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,6494870.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5870,6 +6104,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-10-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,3902.344905,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-10-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1552.592005,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-10-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2020-10-01,KZ,national,monthly,CPI_YOY,107.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2020-10-01,KZ,national,monthly,CPI_YTD,105.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2020-10-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-4734.156817,million USD,nbk,2026-09-01,level,2026-09-01
 2020-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,49.908425,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2020-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,49.206349,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -5947,6 +6183,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,3905.276902,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-11-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1452.853691,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-11-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2020-11-01,KZ,national,monthly,CPI_YOY,107.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2020-11-01,KZ,national,monthly,CPI_YTD,106.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2020-11-01,KZ,national,monthly,EXPORTS,4088727.8907100023,thousand USD,bns,2026-09-01,level,2026-09-01
 2020-11-01,KZ,national,monthly,FX_RESERVES,33573.863242423264,USD million,nbk,2026-09-01,level,2026-09-01
 2020-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,7052903.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5966,6 +6204,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,4688.20666,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-12-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1752.121023,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-12-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2020-12-01,KZ,national,monthly,CPI_YOY,107.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2020-12-01,KZ,national,monthly,CPI_YTD,107.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2020-12-01,KZ,national,monthly,EXPORTS,3715547.609480019,thousand USD,bns,2026-09-01,level,2026-09-01
 2020-12-01,KZ,national,monthly,FX_RESERVES,32508.02645613504,USD million,nbk,2026-09-01,level,2026-09-01
 2020-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,7213749.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -6088,6 +6328,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,3673.808076,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1237.404822,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2021-01-01,KZ,national,monthly,CPI_YOY,107.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2021-01-01,KZ,national,monthly,CPI_YTD,100.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-1329.008226,million USD,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,49.710983,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,47.550958,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -6205,6 +6447,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,4096.014744,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-02-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1426.291632,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-02-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2021-02-01,KZ,national,monthly,CPI_YOY,107.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2021-02-01,KZ,national,monthly,CPI_YTD,101.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2021-02-01,KZ,national,monthly,EXPORTS,3803664.2157799993,thousand USD,bns,2026-09-01,level,2026-09-01
 2021-02-01,KZ,national,monthly,FX_RESERVES,35562.654122438595,USD million,nbk,2026-09-01,level,2026-09-01
 2021-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,7388582.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -6224,6 +6468,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-03-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,4922.896785,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-03-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1628.465376,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-03-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2021-03-01,KZ,national,monthly,CPI_YOY,107.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2021-03-01,KZ,national,monthly,CPI_YTD,101.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2021-03-01,KZ,national,monthly,EXPORTS,4456529.660090006,thousand USD,bns,2026-09-01,level,2026-09-01
 2021-03-01,KZ,national,monthly,FX_RESERVES,34674.00214880725,USD million,nbk,2026-09-01,level,2026-09-01
 2021-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,7562582.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -6249,6 +6495,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-04-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,5196.498911,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-04-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1699.922989,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-04-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2021-04-01,KZ,national,monthly,CPI_YOY,107.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2021-04-01,KZ,national,monthly,CPI_YTD,102.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2021-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,113.3538939,million USD,nbk,2026-09-01,level,2026-09-01
 2021-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,43.943065,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2021-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,54.815263,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -6330,6 +6578,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,5688.405887,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-05-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1690.231207,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-05-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2021-05-01,KZ,national,monthly,CPI_YOY,107.2,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2021-05-01,KZ,national,monthly,CPI_YTD,103.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2021-05-01,KZ,national,monthly,EXPORTS,4916912.062209999,thousand USD,bns,2026-09-01,level,2026-09-01
 2021-05-01,KZ,national,monthly,FX_RESERVES,34220.79597716478,USD million,nbk,2026-09-01,level,2026-09-01
 2021-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,7799774.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -6365,6 +6615,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,6368.27277,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-06-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1926.352287,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-06-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2021-06-01,KZ,national,monthly,CPI_YOY,107.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2021-06-01,KZ,national,monthly,CPI_YTD,104.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2021-06-01,KZ,national,daily,EXCHANGE_RATE,428.7,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2021-06-01,KZ,national,monthly,EXPORTS,5562525.854630002,thousand USD,bns,2026-09-01,level,2026-09-01
 2021-06-01,KZ,national,monthly,FX_RESERVES,36468.42495914462,USD million,nbk,2026-09-01,level,2026-09-01
@@ -6412,6 +6664,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,6480.496943,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1742.331304,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2021-07-01,KZ,national,monthly,CPI_YOY,108.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2021-07-01,KZ,national,monthly,CPI_YTD,105.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-844.9059404,million USD,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,52.521897,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,54.016913,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -6522,6 +6776,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,6803.998134,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-08-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1733.089841,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-08-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2021-08-01,KZ,national,monthly,CPI_YOY,108.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2021-08-01,KZ,national,monthly,CPI_YTD,105.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2021-08-01,KZ,national,monthly,EXPORTS,5402312.951760008,thousand USD,bns,2026-09-01,level,2026-09-01
 2021-08-01,KZ,national,monthly,FX_RESERVES,34986.962665813546,USD million,nbk,2026-09-01,level,2026-09-01
 2021-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,8296702.0,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -6563,6 +6819,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-09-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,6977.010984,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-09-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1802.432437,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-09-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2021-09-01,KZ,national,monthly,CPI_YOY,108.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2021-09-01,KZ,national,monthly,CPI_YTD,106.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2021-09-01,KZ,national,daily,EXCHANGE_RATE,425.41,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2021-09-01,KZ,national,monthly,EXPORTS,5858389.300220001,thousand USD,bns,2026-09-01,level,2026-09-01
 2021-09-01,KZ,national,monthly,FX_RESERVES,36808.722430233895,USD million,nbk,2026-09-01,level,2026-09-01
@@ -6618,6 +6876,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,7470.358314,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1798.517256,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2021-10-01,KZ,national,monthly,CPI_YOY,108.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2021-10-01,KZ,national,monthly,CPI_YTD,107.0,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-1904.807968,million USD,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,53.893566,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,52.841251,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -6735,6 +6995,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,7401.637912,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-11-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1793.628613,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-11-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2021-11-01,KZ,national,monthly,CPI_YOY,108.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2021-11-01,KZ,national,monthly,CPI_YTD,107.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2021-11-01,KZ,national,daily,EXCHANGE_RATE,427.11,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2021-11-01,KZ,national,monthly,EXPORTS,5407310.924800003,thousand USD,bns,2026-09-01,level,2026-09-01
 2021-11-01,KZ,national,monthly,FX_RESERVES,35820.42086272155,USD million,nbk,2026-09-01,level,2026-09-01
@@ -6784,6 +7046,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,8043.897258,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-12-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2111.294259,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-12-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2021-12-01,KZ,national,monthly,CPI_YOY,108.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2021-12-01,KZ,national,monthly,CPI_YTD,108.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2021-12-01,KZ,national,monthly,DEPOSITS_TOTAL,1156435.64239634,million KZT,nbk,2026-09-01,level,2026-09-01
 2021-12-01,KZ,national,daily,EXCHANGE_RATE,434.16,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2021-12-01,KZ,national,monthly,EXPORTS,5802857.496099986,thousand USD,bns,2026-09-01,level,2026-09-01
@@ -6943,6 +7207,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,5384.410021,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1280.612076,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2022-01-01,KZ,national,monthly,CPI_YOY,108.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2022-01-01,KZ,national,monthly,CPI_YTD,100.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-43.09866828,million USD,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,53.555356,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,49.414941,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -7101,6 +7367,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,6857.361091,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-02-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1591.394293,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-02-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2022-02-01,KZ,national,monthly,CPI_YOY,108.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2022-02-01,KZ,national,monthly,CPI_YTD,101.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2022-02-01,KZ,national,monthly,DEPOSITS_TOTAL,15723554.22219909,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-02-01,KZ,national,daily,EXCHANGE_RATE,433.5,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2022-02-01,KZ,national,monthly,EXPORTS,6068517.096410005,thousand USD,bns,2026-09-01,level,2026-09-01
@@ -7155,6 +7423,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-03-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,8016.640985,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-03-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1838.748785,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-03-01,KZ,national,monthly,CPI,103.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2022-03-01,KZ,national,monthly,CPI_YOY,112.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2022-03-01,KZ,national,monthly,CPI_YTD,105.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2022-03-01,KZ,national,monthly,DEPOSITS_TOTAL,16385342.33025119,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-03-01,KZ,national,daily,EXCHANGE_RATE,495.0,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2022-03-01,KZ,national,monthly,EXPORTS,6976750.34171,thousand USD,bns,2026-09-01,level,2026-09-01
@@ -7218,6 +7488,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,7448.400711,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1841.376074,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,monthly,CPI,102.0,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2022-04-01,KZ,national,monthly,CPI_YOY,113.2,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2022-04-01,KZ,national,monthly,CPI_YTD,107.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,4420.288151,million USD,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,45.995801,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,54.874025,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -7345,6 +7617,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,7909.726513,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-05-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1785.233791,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-05-01,KZ,national,monthly,CPI,101.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2022-05-01,KZ,national,monthly,CPI_YOY,114.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2022-05-01,KZ,national,monthly,CPI_YTD,108.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2022-05-01,KZ,national,monthly,DEPOSITS_TOTAL,15077164.67590804,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-05-01,KZ,national,monthly,EXPORTS,7718603.470970001,thousand USD,bns,2026-09-01,level,2026-09-01
 2022-05-01,KZ,national,monthly,FX_RESERVES,33406.59237879385,USD million,nbk,2026-09-01,level,2026-09-01
@@ -7401,6 +7675,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,8815.999989,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-06-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1943.210876,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-06-01,KZ,national,monthly,CPI,101.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2022-06-01,KZ,national,monthly,CPI_YOY,114.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2022-06-01,KZ,national,monthly,CPI_YTD,110.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2022-06-01,KZ,national,monthly,DEPOSITS_TOTAL,15062733.52878488,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-06-01,KZ,national,daily,EXCHANGE_RATE,414.67,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2022-06-01,KZ,national,monthly,EXPORTS,8158257.709339968,thousand USD,bns,2026-09-01,level,2026-09-01
@@ -7463,6 +7739,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,9167.165778,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1844.859938,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2022-07-01,KZ,national,monthly,CPI_YOY,115.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2022-07-01,KZ,national,monthly,CPI_YTD,111.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,1236.914796,million USD,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,53.186715,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,54.458408,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -7590,6 +7868,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,9509.307459,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-08-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1855.926507,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-08-01,KZ,national,monthly,CPI,101.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2022-08-01,KZ,national,monthly,CPI_YOY,116.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2022-08-01,KZ,national,monthly,CPI_YTD,113.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2022-08-01,KZ,national,monthly,DEPOSITS_TOTAL,15897791.86152081,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-08-01,KZ,national,daily,EXCHANGE_RATE,477.09,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2022-08-01,KZ,national,monthly,EXPORTS,7435768.832140009,thousand USD,bns,2026-09-01,level,2026-09-01
@@ -7647,6 +7927,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-09-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,9299.50369,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-09-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1756.036428,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-09-01,KZ,national,monthly,CPI,101.8,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2022-09-01,KZ,national,monthly,CPI_YOY,117.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2022-09-01,KZ,national,monthly,CPI_YTD,115.4,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2022-09-01,KZ,national,monthly,DEPOSITS_TOTAL,15758116.40300614,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-09-01,KZ,national,daily,EXCHANGE_RATE,472.21,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2022-09-01,KZ,national,monthly,EXPORTS,7435243.3100000145,thousand USD,bns,2026-09-01,level,2026-09-01
@@ -7707,6 +7989,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,9843.614835,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1798.202529,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,monthly,CPI,101.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2022-10-01,KZ,national,monthly,CPI_YOY,118.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2022-10-01,KZ,national,monthly,CPI_YTD,117.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,1146.724615,million USD,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,54.946043,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,52.48801,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -7834,6 +8118,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,10222.94376,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-11-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1797.087351,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-11-01,KZ,national,monthly,CPI,101.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2022-11-01,KZ,national,monthly,CPI_YOY,119.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2022-11-01,KZ,national,monthly,CPI_YTD,118.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2022-11-01,KZ,national,monthly,DEPOSITS_TOTAL,16473072.18224791,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-11-01,KZ,national,daily,EXCHANGE_RATE,468.35,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2022-11-01,KZ,national,monthly,EXPORTS,6932983.36155,thousand USD,bns,2026-09-01,level,2026-09-01
@@ -7890,6 +8176,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,11312.54787,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-12-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2023.762501,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-12-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2022-12-01,KZ,national,monthly,CPI_YOY,120.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2022-12-01,KZ,national,monthly,CPI_YTD,120.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2022-12-01,KZ,national,monthly,DEPOSITS_TOTAL,16873130.5563075,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-12-01,KZ,national,daily,EXCHANGE_RATE,468.9,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2022-12-01,KZ,national,monthly,EXPORTS,6716117.178339988,thousand USD,bns,2026-09-01,level,2026-09-01
@@ -8055,6 +8343,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,8800.30636,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1489.103556,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2023-01-01,KZ,national,monthly,CPI_YOY,120.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2023-01-01,KZ,national,monthly,CPI_YTD,101.1,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-367.5249435,million USD,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,52.914932,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,49.866151,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -8235,6 +8525,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,9260.655473,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-02-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1621.105828,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-02-01,KZ,national,monthly,CPI,101.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2023-02-01,KZ,national,monthly,CPI_YOY,121.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2023-02-01,KZ,national,monthly,CPI_YTD,102.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2023-02-01,KZ,national,monthly,DEPOSITS_TOTAL,30583280.77951101,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-02-01,KZ,national,monthly,DEPOSIT_RATE,13.723094976118087,%,nbk,2026-09-01,level,2026-09-01
 2023-02-01,KZ,national,daily,EXCHANGE_RATE,460.51,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -8307,6 +8599,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-03-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,10937.55217,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-03-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1769.855709,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-03-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2023-03-01,KZ,national,monthly,CPI_YOY,118.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2023-03-01,KZ,national,monthly,CPI_YTD,103.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2023-03-01,KZ,national,monthly,DEPOSITS_TOTAL,29786885.99202555,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-03-01,KZ,national,monthly,DEPOSIT_RATE,13.497047537134153,%,nbk,2026-09-01,level,2026-09-01
 2023-03-01,KZ,national,daily,EXCHANGE_RATE,445.82,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -8395,6 +8689,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,10549.32772,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1880.150029,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2023-04-01,KZ,national,monthly,CPI_YOY,116.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2023-04-01,KZ,national,monthly,CPI_YTD,104.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-1632.68135,million USD,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,46.53789,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,55.676077,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -8543,6 +8839,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,11353.96446,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-05-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1928.901531,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-05-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2023-05-01,KZ,national,monthly,CPI_YOY,115.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2023-05-01,KZ,national,monthly,CPI_YTD,104.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2023-05-01,KZ,national,monthly,DEPOSITS_TOTAL,30280911.72420823,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-05-01,KZ,national,monthly,DEPOSIT_RATE,13.847582967678196,%,nbk,2026-09-01,level,2026-09-01
 2023-05-01,KZ,national,daily,EXCHANGE_RATE,453.39,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -8618,6 +8916,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,11882.27967,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-06-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1978.54677,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-06-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2023-06-01,KZ,national,monthly,CPI_YOY,114.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2023-06-01,KZ,national,monthly,CPI_YTD,105.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2023-06-01,KZ,national,monthly,DEPOSITS_TOTAL,30629173.56219384,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-06-01,KZ,national,monthly,DEPOSIT_RATE,13.842162785863794,%,nbk,2026-09-01,level,2026-09-01
 2023-06-01,KZ,national,daily,EXCHANGE_RATE,448.13,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -8705,6 +9005,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,12921.82176,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-07-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2015.21914,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-07-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2023-07-01,KZ,national,monthly,CPI_YOY,114.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2023-07-01,KZ,national,monthly,CPI_YTD,105.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2023-07-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-3422.078801,million USD,nbk,2026-09-01,level,2026-09-01
 2023-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,52.543129,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2023-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,55.011898,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -8847,6 +9149,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,12864.24573,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-08-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2046.547071,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-08-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2023-08-01,KZ,national,monthly,CPI_YOY,113.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2023-08-01,KZ,national,monthly,CPI_YTD,106.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2023-08-01,KZ,national,monthly,DEPOSITS_TOTAL,30708945.95725391,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-08-01,KZ,national,monthly,DEPOSIT_RATE,13.923634274322602,%,nbk,2026-09-01,level,2026-09-01
 2023-08-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,493.45562869515624,KZT per 1 EUR,nbk,2026-09-01,level,2026-09-01
@@ -8909,6 +9213,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-09-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,12453.64983,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-09-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1948.6016,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-09-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2023-09-01,KZ,national,monthly,CPI_YOY,111.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2023-09-01,KZ,national,monthly,CPI_YTD,107.2,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2023-09-01,KZ,national,monthly,DEPOSITS_TOTAL,30972351.80900546,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-09-01,KZ,national,monthly,DEPOSIT_RATE,13.934250158895047,%,nbk,2026-09-01,level,2026-09-01
 2023-09-01,KZ,national,daily,EXCHANGE_RATE,459.69,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -9001,6 +9307,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,13113.24621,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2040.686931,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2023-10-01,KZ,national,monthly,CPI_YOY,110.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2023-10-01,KZ,national,monthly,CPI_YTD,107.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-1655.390208,million USD,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,52.327305,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,52.846131,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -9151,6 +9459,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,13305.23283,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-11-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2036.150967,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-11-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2023-11-01,KZ,national,monthly,CPI_YOY,110.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2023-11-01,KZ,national,monthly,CPI_YTD,108.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2023-11-01,KZ,national,monthly,DEPOSITS_TOTAL,32034978.68445611,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-11-01,KZ,national,monthly,DEPOSIT_RATE,13.952560899758064,%,nbk,2026-09-01,level,2026-09-01
 2023-11-01,KZ,national,daily,EXCHANGE_RATE,469.67,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -9231,6 +9541,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,14497.92701,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-12-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2297.471045,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-12-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2023-12-01,KZ,national,monthly,CPI_YOY,109.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2023-12-01,KZ,national,monthly,CPI_YTD,109.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2023-12-01,KZ,national,monthly,DEPOSITS_TOTAL,32202659.86866336,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-12-01,KZ,national,monthly,DEPOSIT_RATE,13.858820785419695,%,nbk,2026-09-01,level,2026-09-01
 2023-12-01,KZ,national,daily,EXCHANGE_RATE,458.04,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -9440,6 +9752,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,10082.91529,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1820.251835,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2024-01-01,KZ,national,monthly,CPI_YOY,109.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2024-01-01,KZ,national,monthly,CPI_YTD,100.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-2605.319332,million USD,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,50.531601,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,49.483166,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -9623,6 +9937,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,11046.07946,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-02-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1884.696567,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-02-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2024-02-01,KZ,national,monthly,CPI_YOY,109.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2024-02-01,KZ,national,monthly,CPI_YTD,101.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2024-02-01,KZ,national,monthly,DEPOSITS_TOTAL,33781017.1410395,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-02-01,KZ,national,monthly,DEPOSIT_RATE,13.953731953381173,%,nbk,2026-09-01,level,2026-09-01
 2024-02-01,KZ,national,daily,EXCHANGE_RATE,447.74,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -9703,6 +10019,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-03-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,11834.43991,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-03-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1961.053904,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-03-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2024-03-01,KZ,national,monthly,CPI_YOY,109.1,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2024-03-01,KZ,national,monthly,CPI_YTD,102.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2024-03-01,KZ,national,monthly,DEPOSITS_TOTAL,34131114.71289864,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-03-01,KZ,national,monthly,DEPOSIT_RATE,13.592687101005142,%,nbk,2026-09-01,level,2026-09-01
 2024-03-01,KZ,national,daily,EXCHANGE_RATE,450.61,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -9796,6 +10114,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,12336.30503,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2042.198031,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2024-04-01,KZ,national,monthly,CPI_YOY,108.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2024-04-01,KZ,national,monthly,CPI_YTD,103.1,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-253.4558463,million USD,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,45.720189,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,55.608028,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -9947,6 +10267,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,13262.55766,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-05-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2102.008186,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-05-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2024-05-01,KZ,national,monthly,CPI_YOY,108.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2024-05-01,KZ,national,monthly,CPI_YTD,103.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2024-05-01,KZ,national,monthly,DEPOSITS_TOTAL,34278948.66617175,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-05-01,KZ,national,monthly,DEPOSIT_RATE,13.674165827578664,%,nbk,2026-09-01,level,2026-09-01
 2024-05-01,KZ,national,daily,EXCHANGE_RATE,442.05,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -10029,6 +10351,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,14265.00143,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-06-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2223.452942,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-06-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2024-06-01,KZ,national,monthly,CPI_YOY,108.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2024-06-01,KZ,national,monthly,CPI_YTD,103.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2024-06-01,KZ,national,monthly,DEPOSITS_TOTAL,34457841.84655527,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-06-01,KZ,national,monthly,DEPOSIT_RATE,13.627832871227048,%,nbk,2026-09-01,level,2026-09-01
 2024-06-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,478.71509736742024,KZT per 1 EUR,nbk,2026-09-01,level,2026-09-01
@@ -10118,6 +10442,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,14727.81934,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2254.925523,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2024-07-01,KZ,national,monthly,CPI_YOY,108.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2024-07-01,KZ,national,monthly,CPI_YTD,104.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-1673.210249,million USD,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,52.587474,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,55.454278,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -10271,6 +10597,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15399.21764,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-08-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2264.144286,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-08-01,KZ,national,monthly,CPI,100.6,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2024-08-01,KZ,national,monthly,CPI_YOY,108.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2024-08-01,KZ,national,monthly,CPI_YTD,105.3,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2024-08-01,KZ,national,monthly,DEPOSITS_TOTAL,36502637.06027923,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-08-01,KZ,national,monthly,DEPOSIT_RATE,13.49680671675873,%,nbk,2026-09-01,level,2026-09-01
 2024-08-01,KZ,national,daily,EXCHANGE_RATE,473.95,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -10352,6 +10680,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,14691.87959,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-09-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2147.350572,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-09-01,KZ,national,monthly,CPI,100.4,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2024-09-01,KZ,national,monthly,CPI_YOY,108.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2024-09-01,KZ,national,monthly,CPI_YTD,105.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2024-09-01,KZ,national,monthly,DEPOSITS_TOTAL,36203854.14893407,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-09-01,KZ,national,monthly,DEPOSIT_RATE,13.452783271991205,%,nbk,2026-09-01,level,2026-09-01
 2024-09-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,524.5997152322444,KZT per 1 EUR,nbk,2026-09-01,level,2026-09-01
@@ -10442,6 +10772,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15590.89924,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2270.910639,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2024-10-01,KZ,national,monthly,CPI_YOY,108.5,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2024-10-01,KZ,national,monthly,CPI_YTD,106.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-2105.194182,million USD,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,53.215013,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,52.749491,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -10596,6 +10928,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15570.81632,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-11-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2248.090648,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-11-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2024-11-01,KZ,national,monthly,CPI_YOY,108.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2024-11-01,KZ,national,monthly,CPI_YTD,107.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2024-11-01,KZ,national,monthly,DEPOSITS_TOTAL,37858761.73608735,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-11-01,KZ,national,monthly,DEPOSIT_RATE,13.267929947975617,%,nbk,2026-09-01,level,2026-09-01
 2024-11-01,KZ,national,daily,EXCHANGE_RATE,488.26,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -10676,6 +11010,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,17424.17647,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-12-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2521.613997,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-12-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2024-12-01,KZ,national,monthly,CPI_YOY,108.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2024-12-01,KZ,national,monthly,CPI_YTD,108.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2024-12-01,KZ,national,monthly,DEPOSITS_TOTAL,38550370.90590438,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-12-01,KZ,national,monthly,DEPOSIT_RATE,13.190457869536788,%,nbk,2026-09-01,level,2026-09-01
 2024-12-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,524.306719664216,KZT per 1 EUR,nbk,2026-09-01,level,2026-09-01
@@ -10885,6 +11221,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,12926.54097,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1928.366473,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2025-01-01,KZ,national,monthly,CPI_YOY,108.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2025-01-01,KZ,national,monthly,CPI_YTD,101.1,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-3903.6348,million USD,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,51.813171,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,49.579344,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -11075,6 +11413,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,13412.12673,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-02-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2028.906937,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-02-01,KZ,national,monthly,CPI,101.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2025-02-01,KZ,national,monthly,CPI_YOY,109.4,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2025-02-01,KZ,national,monthly,CPI_YTD,102.6,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2025-02-01,KZ,national,monthly,DEPOSITS_TOTAL,40402753.40371303,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-02-01,KZ,national,monthly,DEPOSIT_RATE,13.48052435745664,%,nbk,2026-09-01,level,2026-09-01
 2025-02-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,541.9018633125341,KZT per 1 EUR,nbk,2026-09-01,level,2026-09-01
@@ -11170,6 +11510,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,14597.7445,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-03-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2117.929396,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-03-01,KZ,national,monthly,CPI,101.3,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2025-03-01,KZ,national,monthly,CPI_YOY,110.0,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2025-03-01,KZ,national,monthly,CPI_YTD,103.9,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2025-03-01,KZ,national,monthly,DEPOSITS_TOTAL,40449630.68109766,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-03-01,KZ,national,monthly,DEPOSIT_RATE,13.322513225554022,%,nbk,2026-09-01,level,2026-09-01
 2025-03-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,520.103468220573,KZT per 1 EUR,nbk,2026-09-01,level,2026-09-01
@@ -11285,6 +11627,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15055.64296,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2295.789622,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,monthly,CPI,101.2,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2025-04-01,KZ,national,monthly,CPI_YOY,110.7,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2025-04-01,KZ,national,monthly,CPI_YTD,105.1,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-1030.042341,million USD,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,46.710145,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,54.782609,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -11437,6 +11781,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15748.26655,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-05-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2341.551963,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-05-01,KZ,national,monthly,CPI,100.9,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2025-05-01,KZ,national,monthly,CPI_YOY,111.3,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2025-05-01,KZ,national,monthly,CPI_YTD,106.1,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2025-05-01,KZ,national,monthly,DEPOSITS_TOTAL,41304095.29203244,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-05-01,KZ,national,monthly,DEPOSIT_RATE,13.990245349733751,%,nbk,2026-09-01,level,2026-09-01
 2025-05-01,KZ,national,daily,EXCHANGE_RATE,512.34,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -11518,6 +11864,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15855.63465,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-06-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2432.796936,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-06-01,KZ,national,monthly,CPI,100.8,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2025-06-01,KZ,national,monthly,CPI_YOY,111.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2025-06-01,KZ,national,monthly,CPI_YTD,107.0,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2025-06-01,KZ,national,monthly,DEPOSITS_TOTAL,41440760.24471729,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-06-01,KZ,national,monthly,DEPOSIT_RATE,14.240716911730122,%,nbk,2026-09-01,level,2026-09-01
 2025-06-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,576.7590054176108,KZT per 1 EUR,nbk,2026-09-01,level,2026-09-01
@@ -11634,6 +11982,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,16242.413,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2469.848726,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,monthly,CPI,100.7,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2025-07-01,KZ,national,monthly,CPI_YOY,111.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2025-07-01,KZ,national,monthly,CPI_YTD,107.7,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,CURRENT_ACCOUNT_BALANCE,-2861.708944,million USD,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,52.548509,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,54.286128,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
@@ -11805,6 +12155,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,16869.44556,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-08-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2499.464653,billion KZT,nbk,2026-09-01,level,2026-09-01
 2025-08-01,KZ,national,monthly,CPI,101.0,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2025-08-01,KZ,national,monthly,CPI_YOY,112.2,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2025-08-01,KZ,national,monthly,CPI_YTD,108.8,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2025-08-01,KZ,national,monthly,DEPOSITS_TOTAL,42392405.20091842,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-08-01,KZ,national,monthly,DEPOSIT_RATE,14.300005311689892,%,nbk,2026-09-01,level,2026-09-01
 2025-08-01,KZ,national,daily,EXCHANGE_RATE,540.78,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -11899,6 +12251,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-31,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,3061175.76119187,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2025-09-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.8,index,nbk,2026-09-01,level,2026-09-01
 2025-09-01,KZ,national,monthly,CPI,101.1,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2025-09-01,KZ,national,monthly,CPI_YOY,112.9,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2025-09-01,KZ,national,monthly,CPI_YTD,110.0,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2025-09-01,KZ,national,monthly,DEPOSITS_TOTAL,42795877.34127415,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-09-01,KZ,national,monthly,DEPOSIT_RATE,14.322008493441647,%,nbk,2026-09-01,level,2026-09-01
 2025-09-01,KZ,national,daily,EXCHANGE_RATE,538.54,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -12009,6 +12363,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.6,index,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,CAPACITY_UTILIZATION,51.978148,percent,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,monthly,CPI,100.5,% change vs previous month,bns,2026-09-01,level,2026-09-01
+2025-10-01,KZ,national,monthly,CPI_YOY,112.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2025-10-01,KZ,national,monthly,CPI_YTD,110.5,"index, December of previous year = 100",bns,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,DEMAND_DIFFUSION_INDEX,52.487062,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,DEMAND_EXPECTATIONS_DIFFUSION_INDEX,52.616446,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,monthly,DEPOSITS_TOTAL,43447389.63244179,million KZT,nbk,2026-09-01,level,2026-09-01

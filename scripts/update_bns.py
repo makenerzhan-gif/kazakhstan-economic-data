@@ -128,6 +128,8 @@ FETCHERS = {
     "INVESTMENT_INDEX": bns_fetchers.fetch_investment_index,
     "EXPORT_PRICE_INDEX": bns_fetchers.fetch_export_price_index,
     "IMPORT_PRICE_INDEX": bns_fetchers.fetch_import_price_index,
+    "CPI_YOY": bns_fetchers.fetch_cpi_yoy,
+    "CPI_YTD": bns_fetchers.fetch_cpi_ytd,
 }
 
 INDICATOR_IDS = [
@@ -196,6 +198,8 @@ INDICATOR_IDS = [
     "INVESTMENT_INDEX",
     "EXPORT_PRICE_INDEX",
     "IMPORT_PRICE_INDEX",
+    "CPI_YOY",
+    "CPI_YTD",
 ]
 
 

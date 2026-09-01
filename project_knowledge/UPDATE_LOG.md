@@ -2101,3 +2101,30 @@ One edition sits on the page at a time, so the series accumulates across runs an
 a single point — stated rather than padded.
 
 **340/340 indicators** (105/105 BNS re-verified live). `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — annual inflation: it was inside a file already being downloaded (340 -> 342)
+Closes the audit's **critical** inflation gap. The audit's own wording was that CPI carries
+only month-on-month change, "from which a year-on-year rate cannot be read directly" — and
+that was true of the *series*, but not of the *file*. Element 1549 has a comparison-type
+dimension with **thirty** values, and the project was filtering on one of them.
+
+**This is the same mistake as the oil exports, in a different file**: an already-connected
+source read only along the axis first needed. Twice in one session, a "missing" indicator was
+sitting inside a download the pipeline already performs.
+
+**BNS (2):** CPI_YOY (178 monthly points, 2011-01 to 2025-10) and CPI_YTD (cumulative since
+December, the form Kazakhstan's own commentary quotes).
+
+The comparison dimension also holds fixed bases at December 2000, 2001, 2002, 2005, 2010,
+2015, 2018, 2020 and 2022. The **product** dimension, though, holds only "Товары и услуги" —
+so the audit's food / non-food / services split is genuinely not in this file and stays open.
+
+### Verified two independent ways
+- **Against our own CPI**: compounding twelve month-on-month changes reproduces the published
+  year-on-year index to within **0.11 index points** (rounding) for every month tested —
+  111.79 vs 111.8, 112.23 vs 112.2, 112.57 vs 112.6.
+- **Against a different source**: 12.6% here for October 2025 runs into 12.2% in February 2026
+  and 10.2% by August 2026 in the NBK-sourced ANNUAL_INFLATION added earlier today. Two
+  agencies, one trajectory.
+
+**342/342 indicators** (107/107 BNS re-verified live). `pytest tests/ -q` — 29/29 passing.
