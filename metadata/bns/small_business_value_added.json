@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-20380637",
+  "indicator_id": "SMALL_BUSINESS_VALUE_ADDED",
+  "indicator_name": "Small Business Gross Value Added",
+  "description": "Валовая добавленная стоимость малого предпринимательства",
+  "frequency": "annual",
+  "unit": "KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "KZT. Gross value added produced by SMALL enterprises. Same KZT scale as the other BNS national-accounts series.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2005-12-31",
+  "period_end": "2024-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -109,6 +109,14 @@ FETCHERS = {
     "DOCTORS_PER_10K": bns_fetchers.fetch_doctors_per_10k,
     "HOSPITAL_BEDS": bns_fetchers.fetch_hospital_beds,
     "HOSPITAL_BEDS_PER_10K": bns_fetchers.fetch_hospital_beds_per_10k,
+    "SME_GDP_SHARE": bns_fetchers.fetch_sme_gdp_share,
+    "SMALL_BUSINESS_GDP_SHARE": bns_fetchers.fetch_small_business_gdp_share,
+    "MEDIUM_BUSINESS_GDP_SHARE": bns_fetchers.fetch_medium_business_gdp_share,
+    "SMALL_BUSINESS_VALUE_ADDED": bns_fetchers.fetch_small_business_value_added,
+    "MEDIUM_BUSINESS_VALUE_ADDED": bns_fetchers.fetch_medium_business_value_added,
+    "HOUSING_INVESTMENT": bns_fetchers.fetch_housing_investment,
+    "ICT_SPECIALISTS": bns_fetchers.fetch_ict_specialists,
+    "GRADUATES_HIRED": bns_fetchers.fetch_graduates_hired,
 }
 
 INDICATOR_IDS = [
@@ -158,6 +166,14 @@ INDICATOR_IDS = [
     "DOCTORS_PER_10K",
     "HOSPITAL_BEDS",
     "HOSPITAL_BEDS_PER_10K",
+    "SME_GDP_SHARE",
+    "SMALL_BUSINESS_GDP_SHARE",
+    "MEDIUM_BUSINESS_GDP_SHARE",
+    "SMALL_BUSINESS_VALUE_ADDED",
+    "MEDIUM_BUSINESS_VALUE_ADDED",
+    "HOUSING_INVESTMENT",
+    "ICT_SPECIALISTS",
+    "GRADUATES_HIRED",
 ]
 
 

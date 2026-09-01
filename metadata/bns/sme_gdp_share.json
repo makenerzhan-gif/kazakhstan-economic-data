@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-19824647",
+  "indicator_id": "SME_GDP_SHARE",
+  "indicator_name": "SME Share of GDP",
+  "description": "Доля малого и среднего предпринимательства в ВВП",
+  "frequency": "annual",
+  "unit": "% of GDP",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Percent of GDP produced by small and medium enterprises. Equals SMALL_BUSINESS_GDP_SHARE plus MEDIUM_BUSINESS_GDP_SHARE exactly (32.2 + 6.7 = 38.9 in 2024), which is the source's own decomposition, not one computed here.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2005-12-31",
+  "period_end": "2024-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

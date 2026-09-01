@@ -1590,3 +1590,39 @@ gives it rather than recomputed.
 
 **297/297 confirmed indicators connected end-to-end** (86/86 BNS re-verified live).
 `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — forty-first batch: SME sector, housing investment, ICT workforce (297 -> 305)
+**BNS (8):**
+- The SME block, 20 annual points each from 2005: SME_GDP_SHARE (38.9% of GDP in 2024),
+  SMALL_BUSINESS_GDP_SHARE (32.2), MEDIUM_BUSINESS_GDP_SHARE (6.7),
+  SMALL_BUSINESS_VALUE_ADDED (43.9 trillion KZT) and MEDIUM_BUSINESS_VALUE_ADDED (9.2
+  trillion). This closes a real gap — the dataset had no measure of the private
+  small-business economy at all.
+- HOUSING_INVESTMENT (3.85 trillion KZT, 13 pts from 2013) — the residential component
+  behind the broader INVESTMENT series.
+- ICT_SPECIALISTS (43,413 people) and GRADUATES_HIRED (44,644, 25 pts from 2001).
+
+**Two independent cross-checks, both passed:**
+1. Internal to the source: SMALL + MEDIUM GDP shares equal the published SME share with
+   **0.00 difference** for every year 2021-2024 (32.2 + 6.7 = 38.9).
+2. Against a *different* BNS series already in the dataset: SME value added divided by
+   GDP_INCOME_METHOD reproduces the published SME share to within 0.12 percentage points
+   across 2020-2024, and exactly for 2020 and 2024. That is a real check — it uses the
+   income-method GDP series, which has nothing to do with how these SME figures were
+   fetched, and it simultaneously confirms the KZT scale of both.
+
+**Deliberately not connected, recorded in sources.yaml under BNS_ENVIRONMENT_AND_CRIME:**
+- *Air emissions* — Taldau 705098 stops at 2021 and reports 1.04 million tonnes, while the
+  already-connected EMISSIONS series is broader (2.28 million tonnes) and runs to 2025.
+  Connecting the candidate would add a series that looks like the existing one but
+  contradicts it. Same for the emission-source counts, which also end in 2021.
+- *Crime* — all 22 candidates return an **empty** GetSegmentList at periodId=7, so no
+  annual national parameters could be resolved. Recorded as unresolved, **not** as "no data
+  exists": these are likely published on a different periodicity.
+- *Water* — no genuine candidates. Taldau's search matches substrings, and "вода" only hit
+  "восстановления" inside unrelated education indicators.
+- *Education* — headline schooling metrics (enrolment, student numbers) were not located;
+  what surfaced was mostly discontinued or narrow. The two usable ones are connected above.
+
+**305/305 confirmed indicators connected end-to-end** (94/94 BNS re-verified live).
+`pytest tests/ -q` — 29/29 passing.

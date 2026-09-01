@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-701834",
+  "indicator_id": "HOUSING_INVESTMENT",
+  "indicator_name": "Investment in Housing Construction",
+  "description": "Инвестиции в жилищное строительство",
+  "frequency": "annual",
+  "unit": "KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "KZT. Investment in residential construction -- the housing component behind the broader INVESTMENT series.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2013-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -947,6 +947,105 @@ agencies:
           Term names are РЕСПУБЛИКА КАЗАХСТАН -- confirmed an all-totals slice before
           connecting, since segment 0 is only the site's default and can be a narrow slice.
           fetch_hospital_beds_per_10k.
+      SME_GDP_SHARE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 19824647
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=7, dicIds=67, terms=741880.
+          Term names РЕСПУБЛИКА КАЗАХСТАН -- confirmed an all-totals slice before connecting.
+          fetch_sme_gdp_share.
+      SMALL_BUSINESS_GDP_SHARE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 20380630
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=7, dicIds=67, terms=741880.
+          Term names РЕСПУБЛИКА КАЗАХСТАН -- confirmed an all-totals slice before connecting.
+          fetch_small_business_gdp_share.
+      MEDIUM_BUSINESS_GDP_SHARE:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 20380634
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=7, dicIds=67, terms=741880.
+          Term names РЕСПУБЛИКА КАЗАХСТАН -- confirmed an all-totals slice before connecting.
+          fetch_medium_business_gdp_share.
+      SMALL_BUSINESS_VALUE_ADDED:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 20380637
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=1, dicIds=67, terms=741880.
+          Term names РЕСПУБЛИКА КАЗАХСТАН -- confirmed an all-totals slice before connecting.
+          fetch_small_business_value_added.
+      MEDIUM_BUSINESS_VALUE_ADDED:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 20380641
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=1, dicIds=67, terms=741880.
+          Term names РЕСПУБЛИКА КАЗАХСТАН -- confirmed an all-totals slice before connecting.
+          fetch_medium_business_value_added.
+      HOUSING_INVESTMENT:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 701834
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=1, dicIds=68,776,459, terms=741880,741917,807855.
+          Term names РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего -- confirmed an all-totals slice before connecting.
+          fetch_housing_investment.
+      ICT_SPECIALISTS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 19096214
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=23, dicIds=68,915, terms=741880,741885.
+          Term names РЕСПУБЛИКА КАЗАХСТАН + Всего -- confirmed an all-totals slice before connecting.
+          fetch_ict_specialists.
+      GRADUATES_HIRED:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 703000
+        format: json
+        notes: >
+          2026-09-01. Parameters obtained programmatically via the GetSegmentList method
+          (see TALDAU_PARAM_DISCOVERY): measure_id=23, dicIds=68,859,2813,576, terms=741880,741885,3629946,741935.
+          Term names РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего + Всего -- confirmed an all-totals slice before connecting.
+          fetch_graduates_hired.
+      BNS_ENVIRONMENT_AND_CRIME (not connected):
+        status: not_found
+        notes: >
+          2026-09-01. Probed with the GetSegmentList method and deliberately left unconnected:
+          (a) Air emissions -- Taldau indexId 705098 'объем выбросов загрязняющих веществ в
+          атмосферу по предприятиям' returns 1.044 million tonnes and STOPS AT 2021, while the
+          already-connected EMISSIONS series is broader (2.28 million tonnes) and runs to 2025.
+          The candidate is a narrower, stale variant, so connecting it would add a series that
+          looks like but contradicts the existing one. Same for 705084/705088 (counts of
+          stationary emission sources), which also end in 2021.
+          (b) Crime -- all 22 candidates returned an EMPTY GetSegmentList for periodId=7, so no
+          annual national parameters could be resolved. Not attempted further; these indexes are
+          likely published on a different periodicity. Data absence here is unconfirmed, not
+          established.
+          (c) Water -- no genuine candidates: Taldau's search matches on substrings, and the
+          keyword 'вода' only matched 'восстановления' inside unrelated education indicators.
+          (d) Education -- searched, but Taldau's headline schooling metrics (enrolment,
+          student numbers) were not located; what surfaced was mostly discontinued or narrow
+          series. GRADUATES_HIRED and ICT_SPECIALISTS were the two usable ones and are connected.
       MIGRATION_ARRIVALS:
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"

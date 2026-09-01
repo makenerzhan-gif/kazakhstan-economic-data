@@ -2318,6 +2318,78 @@ indicators:
     category: demographic
     source_status: confirmed
 
+  - id: SME_GDP_SHARE
+    name_ru: "Доля малого и среднего предпринимательства в ВВП"
+    name_en: "SME Share of GDP"
+    agency: bns
+    frequency: annual
+    unit: "% of GDP"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: SMALL_BUSINESS_GDP_SHARE
+    name_ru: "Доля малого предпринимательства в ВВП"
+    name_en: "Small Business Share of GDP"
+    agency: bns
+    frequency: annual
+    unit: "% of GDP"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: MEDIUM_BUSINESS_GDP_SHARE
+    name_ru: "Доля среднего предпринимательства в ВВП"
+    name_en: "Medium Business Share of GDP"
+    agency: bns
+    frequency: annual
+    unit: "% of GDP"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: SMALL_BUSINESS_VALUE_ADDED
+    name_ru: "Валовая добавленная стоимость малого предпринимательства"
+    name_en: "Small Business Gross Value Added"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: MEDIUM_BUSINESS_VALUE_ADDED
+    name_ru: "Валовая добавленная стоимость среднего предпринимательства"
+    name_en: "Medium Business Gross Value Added"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: national_accounts
+    source_status: confirmed
+
+  - id: HOUSING_INVESTMENT
+    name_ru: "Инвестиции в жилищное строительство"
+    name_en: "Investment in Housing Construction"
+    agency: bns
+    frequency: annual
+    unit: "KZT"
+    category: investment
+    source_status: confirmed
+
+  - id: ICT_SPECIALISTS
+    name_ru: "Численность специалистов в области ИКТ"
+    name_en: "ICT Specialists"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: labor
+    source_status: confirmed
+
+  - id: GRADUATES_HIRED
+    name_ru: "Принято специалистов с высшим образованием из числа выпускников года"
+    name_en: "University Graduates Hired in the Reporting Year"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: labor
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

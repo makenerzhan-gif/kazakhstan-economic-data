@@ -1931,3 +1931,131 @@ def fetch_hospital_beds_per_10k() -> tuple[list[dict], dict]:
         terms="741880",
         dic_ids="67",
     )
+
+
+def fetch_sme_gdp_share() -> tuple[list[dict], dict]:
+    """SME Share of GDP (% of GDP, annual).
+
+    Taldau indexId 19824647, dicIds=67, terms=741880
+    (РЕСПУБЛИКА КАЗАХСТАН). Parameters obtained via the GetSegmentList
+    method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "19824647", "SME_GDP_SHARE",
+        note="Percent of GDP produced by small and medium enterprises. Equals SMALL_BUSINESS_GDP_SHARE plus MEDIUM_BUSINESS_GDP_SHARE exactly (32.2 + 6.7 = 38.9 in 2024), which is the source's own decomposition, not one computed here.",
+        measure_id="7",
+        terms="741880",
+        dic_ids="67",
+    )
+
+
+def fetch_small_business_gdp_share() -> tuple[list[dict], dict]:
+    """Small Business Share of GDP (% of GDP, annual).
+
+    Taldau indexId 20380630, dicIds=67, terms=741880
+    (РЕСПУБЛИКА КАЗАХСТАН). Parameters obtained via the GetSegmentList
+    method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "20380630", "SMALL_BUSINESS_GDP_SHARE",
+        note="Percent of GDP produced by SMALL enterprises.",
+        measure_id="7",
+        terms="741880",
+        dic_ids="67",
+    )
+
+
+def fetch_medium_business_gdp_share() -> tuple[list[dict], dict]:
+    """Medium Business Share of GDP (% of GDP, annual).
+
+    Taldau indexId 20380634, dicIds=67, terms=741880
+    (РЕСПУБЛИКА КАЗАХСТАН). Parameters obtained via the GetSegmentList
+    method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "20380634", "MEDIUM_BUSINESS_GDP_SHARE",
+        note="Percent of GDP produced by MEDIUM enterprises.",
+        measure_id="7",
+        terms="741880",
+        dic_ids="67",
+    )
+
+
+def fetch_small_business_value_added() -> tuple[list[dict], dict]:
+    """Small Business Gross Value Added (KZT, annual).
+
+    Taldau indexId 20380637, dicIds=67, terms=741880
+    (РЕСПУБЛИКА КАЗАХСТАН). Parameters obtained via the GetSegmentList
+    method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "20380637", "SMALL_BUSINESS_VALUE_ADDED",
+        note="KZT. Gross value added produced by SMALL enterprises. Same KZT scale as the other BNS national-accounts series.",
+        measure_id="1",
+        terms="741880",
+        dic_ids="67",
+    )
+
+
+def fetch_medium_business_value_added() -> tuple[list[dict], dict]:
+    """Medium Business Gross Value Added (KZT, annual).
+
+    Taldau indexId 20380641, dicIds=67, terms=741880
+    (РЕСПУБЛИКА КАЗАХСТАН). Parameters obtained via the GetSegmentList
+    method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "20380641", "MEDIUM_BUSINESS_VALUE_ADDED",
+        note="KZT. Gross value added produced by MEDIUM enterprises.",
+        measure_id="1",
+        terms="741880",
+        dic_ids="67",
+    )
+
+
+def fetch_housing_investment() -> tuple[list[dict], dict]:
+    """Investment in Housing Construction (KZT, annual).
+
+    Taldau indexId 701834, dicIds=68,776,459, terms=741880,741917,807855
+    (РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего). Parameters obtained via the GetSegmentList
+    method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "701834", "HOUSING_INVESTMENT",
+        note="KZT. Investment in residential construction -- the housing component behind the broader INVESTMENT series.",
+        measure_id="1",
+        terms="741880,741917,807855",
+        dic_ids="68,776,459",
+    )
+
+
+def fetch_ict_specialists() -> tuple[list[dict], dict]:
+    """ICT Specialists (persons, annual).
+
+    Taldau indexId 19096214, dicIds=68,915, terms=741880,741885
+    (РЕСПУБЛИКА КАЗАХСТАН + Всего). Parameters obtained via the GetSegmentList
+    method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "19096214", "ICT_SPECIALISTS",
+        note="Number of ICT specialists (educated or specially trained in ICT) -- the workforce side of the digital-economy indicators.",
+        measure_id="23",
+        terms="741880,741885",
+        dic_ids="68,915",
+    )
+
+
+def fetch_graduates_hired() -> tuple[list[dict], dict]:
+    """University Graduates Hired in the Reporting Year (persons, annual).
+
+    Taldau indexId 703000, dicIds=68,859,2813,576, terms=741880,741885,3629946,741935
+    (РЕСПУБЛИКА КАЗАХСТАН + Всего + Всего + Всего). Parameters obtained via the GetSegmentList
+    method and confirmed to be an all-totals slice before use.
+    """
+    return _fetch_taldau_annual_index(
+        "703000", "GRADUATES_HIRED",
+        note="Number of specialists with higher education hired from among that year's university graduates -- a graduate-absorption measure for the labour market.",
+        measure_id="23",
+        terms="741880,741885,3629946,741935",
+        dic_ids="68,859,2813,576",
+    )

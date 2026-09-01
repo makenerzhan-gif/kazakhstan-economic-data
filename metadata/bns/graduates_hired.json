@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703000",
+  "indicator_id": "GRADUATES_HIRED",
+  "indicator_name": "University Graduates Hired in the Reporting Year",
+  "description": "Принято специалистов с высшим образованием из числа выпускников года",
+  "frequency": "annual",
+  "unit": "persons",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Number of specialists with higher education hired from among that year's university graduates -- a graduate-absorption measure for the labour market.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2001-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
