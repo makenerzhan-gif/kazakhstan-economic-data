@@ -3437,6 +3437,38 @@ agencies:
           stripped prefix. Annual columns for 2018-2022 also exist in these sheets but are a
           different frequency and are deliberately NOT spliced onto the quarterly series.
           14 quarterly points, 2023-Q1 to 2026-Q2. fetch_budget_financing_intl_organizations.
+      GOV_SECURITIES_YIELDS (not connected):
+        status: not_found
+        notes: >
+          2026-09-01. The government-bond yield curve was the last item flagged critical in the
+          monetary section of the sector coverage audit. Three routes were checked; none yields a
+          clean series without either fabricating an aggregate or committing to HTML scraping.
+          (1) NBK Open Data, all three forms of the "Securities" category: formId=17 (primary
+          auctions), formId=16 (secondary market) and formId=430 (outstanding stock). Every row
+          in 17 and 16 carries type='Transactions volume (mln. tenge)' and nothing else; 430
+          carries only 'mln. of KZT, end of period'. There are no yield fields anywhere in the
+          NBK securities data -- volumes and stocks only.
+          (2) Minfin Statistical Bulletin, sheet "табл 23". Yields DO exist here: header column 20
+          is "ставки вознаграждения (интереса), %", with columns 20-25 giving cut-off rates by
+          instrument and maturity (MEOKAM-60, MEUKAM-96/156/180, METISKAM-48/84). Values are
+          stored as decimals despite the percent header -- 0.1502 means 15.02%, which is
+          plausible against a 16.75% base rate. But the sheet is PER-AUCTION WITHIN ONE MONTH:
+          each bulletin vintage covers only its own month, so a series would have to be stitched
+          across the 13 vintages, giving roughly 13 months. Worse, a single month can hold two
+          auctions of the SAME maturity on the SAME date with different cut-offs -- 23.06.2026
+          has two MEUKAM-96 results, 14.29% and 15.76%. A date-keyed series cannot hold both, and
+          every tie-break (first, last, higher, average) is either arbitrary or an aggregate the
+          source does not publish. Not connected for that reason, not for lack of data.
+          (3) KASE, the natural home for yields and also for the missing stock index. kase.kz
+          responds (the /ru/gsecs/ page is ~5 MB) but exposes no JSON surface: /api/ returns 404,
+          robots.txt returns 404, and the page contains ZERO paths matching api|json|data|ajax|
+          export. The figures are server-rendered HTML, so this route means table scraping -- a
+          new agency, a new fetcher, and a parser tied to page markup.
+          WHAT WOULD WORK, if this is wanted later: the Minfin per-auction yields are real data
+          and could be published as an EVENT-DATED series (one point per auction, dated by
+          auction date, no aggregation), provided a documented rule is adopted for same-date
+          same-maturity collisions. That rule is a decision for the data owner, not something to
+          pick silently here.
       GOV_DEBT:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=261&activities=14610"

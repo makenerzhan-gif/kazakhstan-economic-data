@@ -1844,3 +1844,33 @@ Repeat-collapsing is right for a figure carried between releases and wrong for a
 decisions — the two look identical in the data and are not. Reverted; 15 decisions retained.
 
 **324/324 indicators, 128/128 NBK re-verified live.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — yield curve: investigated across three sources, not connected
+Third item from the audit's monetary block, and the first one that does **not** end in a new
+series. Recording it as a negative result with the evidence, so the search is not repeated.
+
+- **NBK Open Data** — all three forms of the Securities category checked in full: formId=17
+  (primary auctions), 16 (secondary market), 430 (outstanding stock). Every row in 17 and 16
+  carries `type='Transactions volume (mln. tenge)'` and nothing else; 430 carries only
+  `'mln. of KZT, end of period'`. **There are no yield fields anywhere in NBK's securities
+  data** — volumes and stocks only.
+- **Minfin bulletin, sheet "табл 23"** — yields *do* exist here. Header column 20 is "ставки
+  вознаграждения (интереса), %", with cut-off rates by instrument and maturity (MEOKAM-60,
+  MEUKAM-96/156/180, METISKAM-48/84), stored as decimals despite the percent header (0.1502 =
+  15.02%, plausible against a 16.75% base rate). Two problems: the sheet is per-auction
+  **within one month**, so a series means stitching 13 vintages for ~13 months; and a single
+  month can hold two auctions of the same maturity on the same date with different cut-offs —
+  23.06.2026 has two MEUKAM-96 results, 14.29% and 15.76%. A date-keyed series cannot hold
+  both, and every tie-break is either arbitrary or an aggregate the source does not publish.
+- **KASE** — the natural home for yields and for the missing stock index. The site responds
+  (`/ru/gsecs/` is ~5 MB) but exposes no JSON surface: `/api/` 404s, `robots.txt` 404s, and the
+  page contains **zero** paths matching `api|json|data|ajax|export`. Figures are server-rendered
+  HTML, so this route means table scraping — a new agency, a new fetcher, and a parser bound to
+  page markup.
+
+**Not connected because publishing it would require inventing a tie-break rule, not because
+the data is missing.** The per-auction yields are real and could ship as an event-dated series
+(one point per auction, no aggregation) once a rule for same-date same-maturity collisions is
+decided — that is a call for the data owner, not one to make silently.
+
+**Still 324 indicators.** `pytest tests/ -q` — 29/29 passing.
