@@ -1,8 +1,8 @@
 # Update report — 2026-09-01
 
-Run timestamp: 2026-09-01T01:00:31.966628
-Unified dataset updated: False
-Tests passed: None
+Run timestamp: 2026-09-01T22:42:11.661867
+Unified dataset updated: True
+Tests passed: True
 
 ## Per-dataset results
 
@@ -223,6 +223,91 @@ Tests passed: None
   - warning: Unexpected jump of 192.6% between 2020-12-31 (8041344.0) and 2022-12-31 (23525780.0).
   - warning: Unexpected jump of 55.9% between 2022-12-31 (23525780.0) and 2023-12-31 (36669532.0).
 - **bns/LIFE_EXPECTANCY** — fetch+validate+process: ok (downloaded=25, processed=25)
+- **bns/CRUDE_BIRTH_RATE** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 730 days between 2005-12-31 and 2007-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/TOTAL_FERTILITY_RATE** — fetch+validate+process: ok (downloaded=8, processed=8)
+- **bns/CRUDE_DEATH_RATE** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 730 days between 2005-12-31 and 2007-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/INFANT_MORTALITY_RATE** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 730 days between 2005-12-31 and 2007-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/UNDER5_MORTALITY_RATE** — fetch+validate+process: ok (downloaded=13, processed=13)
+- **bns/STILLBIRTH_RATE** — fetch+validate+process: ok (downloaded=17, processed=17)
+- **bns/INNOVATION_EXPENDITURE** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/ORGANIZATIONS_USING_COMPUTERS** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 446.1% between 2007-12-31 (8747.0) and 2008-12-31 (47771.0).
+- **bns/COMPUTERS_IN_ORGANIZATIONS** — fetch+validate+process: ok (downloaded=21, processed=21)
+  - warning: Unexpected jump of 50.1% between 2007-12-31 (266052.0) and 2008-12-31 (399327.0).
+- **bns/COMPUTERS_INTERNET_CONNECTED** — fetch+validate+process: ok (downloaded=21, processed=21)
+  - warning: Unexpected jump of 129.9% between 2004-12-31 (27713.0) and 2005-12-31 (63709.0).
+  - warning: Unexpected jump of 52.9% between 2007-12-31 (121324.0) and 2008-12-31 (185487.0).
+- **bns/WORKERS_USING_COMPUTERS** — fetch+validate+process: ok (downloaded=19, processed=19)
+  - warning: Unexpected jump of 74.6% between 2007-12-31 (222541.0) and 2008-12-31 (388584.0).
+  - warning: Unexpected jump of 71.1% between 2012-12-31 (619029.0) and 2013-12-31 (1059238.0).
+- **bns/WORKERS_USING_INTERNET** — fetch+validate+process: ok (downloaded=19, processed=19)
+  - warning: Unexpected jump of 90.7% between 2007-12-31 (104245.0) and 2008-12-31 (198828.0).
+  - warning: Unexpected jump of 65.8% between 2012-12-31 (397229.0) and 2013-12-31 (658461.0).
+- **bns/ECOMMERCE_RETAIL_ORDERS** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 87.0% between 2024-12-31 (12163189.2208168) and 2025-12-31 (22742883.3608395).
+- **bns/ECOMMERCE_SERVICES_VALUE** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/DOCTORS_PER_10K** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **bns/HOSPITAL_BEDS** — fetch+validate+process: ok (downloaded=11, processed=11)
+- **bns/HOSPITAL_BEDS_PER_10K** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **bns/SME_GDP_SHARE** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 56.1% between 2007-12-31 (10.7) and 2008-12-31 (16.7).
+  - warning: Unexpected jump of 55.1% between 2013-12-31 (16.7) and 2014-12-31 (25.9).
+- **bns/SMALL_BUSINESS_GDP_SHARE** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 151.6% between 2013-12-31 (6.4) and 2014-12-31 (16.1).
+- **bns/MEDIUM_BUSINESS_GDP_SHARE** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 410.0% between 2007-12-31 (2.0) and 2008-12-31 (10.2).
+- **bns/SMALL_BUSINESS_VALUE_ADDED** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 178.7% between 2013-12-31 (2300841842962.8) and 2014-12-31 (6411607477289.4).
+- **bns/MEDIUM_BUSINESS_VALUE_ADDED** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 554.3% between 2007-12-31 (248897770413.8) and 2008-12-31 (1628511690993.0).
+  - warning: Unexpected jump of 58.4% between 2009-12-31 (1867329865048.7) and 2010-12-31 (2958714440233.0).
+- **bns/HOUSING_INVESTMENT** — fetch+validate+process: ok (downloaded=13, processed=13)
+- **bns/ICT_SPECIALISTS** — fetch+validate+process: ok (downloaded=9, processed=9)
+- **bns/GRADUATES_HIRED** — fetch+validate+process: ok (downloaded=25, processed=25)
+  - warning: Unexpected jump of 73.3% between 2012-12-31 (11628.0) and 2013-12-31 (20157.0).
+  - warning: Unexpected jump of 82.8% between 2019-12-31 (34139.0) and 2020-12-31 (62410.0).
+- **bns/OIL_EXPORTS_VOLUME** — fetch+validate+process: ok (downloaded=89, processed=89)
+  - warning: Gap of 61 days between 2022-08-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 79.5% between 2019-03-01 (3672571.312) and 2019-04-01 (6591446.144).
+- **bns/OIL_EXPORTS_VALUE** — fetch+validate+process: ok (downloaded=89, processed=89)
+  - warning: Gap of 61 days between 2022-08-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 103.5% between 2019-03-01 (1491802.4709100001) and 2019-04-01 (3035310.9776399997).
+  - warning: Unexpected jump of 85.1% between 2020-07-01 (724067.95389) and 2020-08-01 (1340585.92528).
+  - warning: Unexpected jump of 85.6% between 2026-05-01 (2765326.7075599995) and 2026-06-01 (5132327.9132199995).
+- **bns/OIL_PRODUCTION** — fetch+validate+process: ok (downloaded=7, processed=7)
+  - warning: Gap of 274 days between 2025-07-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **bns/INDUSTRIAL_OUTPUT** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/INDUSTRIAL_PRODUCTION_INDEX** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/MINING_OUTPUT** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/MANUFACTURING_OUTPUT** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/INVESTMENT_FIXED_CAPITAL** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **bns/INVESTMENT_INDEX** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **bns/RETAIL_TRADE_MONTHLY** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/WHOLESALE_TRADE_MONTHLY** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/RETAIL_TRADE_INDEX_MONTHLY** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/WHOLESALE_TRADE_INDEX_MONTHLY** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/CONSTRUCTION_OUTPUT** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 69.0% between 2026-05-01 (2409956375.0) and 2026-06-01 (4072093409.0).
+- **bns/CONSTRUCTION_INDEX** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/LABOR_FORCE** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/LABOR_FORCE_PARTICIPATION_RATE** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/EMPLOYED_QUARTERLY** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/UNEMPLOYED_PERSONS** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/YOUTH_UNEMPLOYMENT_RATE** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/LONG_TERM_UNEMPLOYMENT_RATE** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/AVG_WAGE_QUARTERLY** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_QUARTERLY** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/FREIGHT_TURNOVER_MONTHLY** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/PASSENGER_TURNOVER_MONTHLY** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/FREIGHT_CARRIED** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/PASSENGERS_CARRIED** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/EXPORT_PRICE_INDEX** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/IMPORT_PRICE_INDEX** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/CPI_YOY** — fetch+validate+process: ok (downloaded=178, processed=178)
+- **bns/CPI_YTD** — fetch+validate+process: ok (downloaded=178, processed=178)
 - **nbk/BASE_RATE** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Gap of 49 days between 2024-10-14 and 2024-12-02 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2024-12-02 and 2025-01-20 is outside expected range for frequency=daily (1-4d).
@@ -238,7 +323,9 @@ Tests passed: None
   - warning: Gap of 48 days between 2026-03-10 and 2026-04-27 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 42 days between 2026-04-27 and 2026-06-08 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 49 days between 2026-06-08 and 2026-07-27 is outside expected range for frequency=daily (1-4d).
-- **nbk/EXCHANGE_RATE** — fetch+validate+process: ok (downloaded=14, processed=14)
+- **nbk/EXCHANGE_RATE** — fetch+validate+process: ok (downloaded=1369, processed=1369)
+  - warning: Gap of 26 days between 2023-07-27 and 2023-08-22 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 7 days between 2023-08-22 and 2023-08-29 is outside expected range for frequency=daily (1-4d).
 - **nbk/M2** — fetch+validate+process: ok (downloaded=56, processed=56)
   - warning: Unexpected jump of 228.5% between 2021-12-01 (4499341.39903034) and 2022-01-01 (14781486.94608868).
   - warning: Unexpected jump of 74.1% between 2022-12-01 (16097866.70000907) and 2023-01-01 (28025383.91905973).
@@ -261,7 +348,7 @@ Tests passed: None
 - **nbk/EXTERNAL_DEBT** — fetch+validate+process: ok (downloaded=85, processed=85)
 - **nbk/LENDING_RATE** — fetch+validate+process: ok (downloaded=56, processed=56)
 - **nbk/DEPOSIT_RATE** — fetch+validate+process: ok (downloaded=43, processed=43)
-- **nbk/TONIA** — fetch+validate+process: ok (downloaded=185, processed=185)
+- **nbk/TONIA** — fetch+validate+process: ok (downloaded=186, processed=186)
 - **nbk/NATIONAL_FUND_TRANSFERS** — fetch+validate+process: ok (downloaded=30, processed=30)
   - warning: Unexpected jump of 80.0% between 2024-08-01 (250.0) and 2024-09-01 (450.0).
   - warning: Unexpected jump of 51.8% between 2024-12-01 (635.0) and 2025-01-01 (306.0).
@@ -365,14 +452,14 @@ Tests passed: None
   - warning: Unexpected jump of 65.5% between 2022-07-01 (15.55) and 2022-10-01 (25.74).
 - **nbk/PENSION_FUND_ASSETS** — fetch+validate+process: ok (downloaded=43, processed=43)
   - warning: Gap of 61 days between 2025-08-01 and 2025-10-01 is outside expected range for frequency=monthly (25-40d).
-- **nbk/INSURANCE_PREMIUMS_GENERAL** — fetch+validate+process: ok (downloaded=31, processed=31)
+- **nbk/INSURANCE_PREMIUMS_GENERAL** — fetch+validate+process: ok (downloaded=32, processed=32)
   - warning: Gap of 365 days between 2025-01-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
   - warning: Unexpected jump of 51.9% between 2023-02-01 (77958.268) and 2023-03-01 (118423.413).
   - warning: Unexpected jump of 84.5% between 2024-01-01 (553191.013) and 2024-02-01 (85783.675).
   - warning: Unexpected jump of 90.5% between 2026-01-01 (685712.614) and 2026-02-01 (65238.985).
   - warning: Unexpected jump of 66.1% between 2026-02-01 (65238.985) and 2026-03-01 (108381.06).
   - warning: Unexpected jump of 56.5% between 2026-03-01 (108381.06) and 2026-04-01 (169656.553).
-- **nbk/INSURANCE_PREMIUMS_LIFE** — fetch+validate+process: ok (downloaded=31, processed=31)
+- **nbk/INSURANCE_PREMIUMS_LIFE** — fetch+validate+process: ok (downloaded=32, processed=32)
   - warning: Gap of 365 days between 2025-01-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
   - warning: Unexpected jump of 110.4% between 2023-02-01 (32646.904) and 2023-03-01 (68691.002).
   - warning: Unexpected jump of 89.7% between 2024-01-01 (502731.559) and 2024-02-01 (51543.463).
@@ -750,6 +837,8 @@ Tests passed: None
   - warning: Unexpected jump of 141.2% between 2025-01-01 (0.917813) and 2025-04-01 (2.214093).
   - warning: Unexpected jump of 84.8% between 2025-10-01 (2.629723) and 2026-01-01 (0.39885).
   - warning: Unexpected jump of 905.7% between 2026-01-01 (0.39885) and 2026-04-01 (4.011331).
+- **nbk/ANNUAL_INFLATION** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **nbk/INFLATION_TARGET** — fetch+validate+process: ok (downloaded=1, processed=1)
 - **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)
@@ -912,6 +1001,105 @@ Tests passed: None
   - warning: Unexpected jump of 472.4% between 2026-01-31 (58102.22067779) and 2026-02-28 (332599.0810429).
   - warning: Unexpected jump of 64.0% between 2026-02-28 (332599.0810429) and 2026-03-31 (545344.01412029).
   - warning: Unexpected jump of 80.4% between 2026-03-31 (545344.01412029) and 2026-05-31 (983962.21573787).
+- **minfin/STATE_DEBT_TOTAL** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
+- **minfin/GOV_DEBT_EXTERNAL_USD** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
+- **minfin/LOCAL_GOV_DEBT** — fetch+validate+process: ok (downloaded=21, processed=21)
+  - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
+- **minfin/STATE_GUARANTEED_DEBT** — fetch+validate+process: ok (downloaded=21, processed=21)
+  - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
+- **minfin/GOV_DEBT_EUROBONDS** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 83.8% between 2022-07-01 (4098270.0) and 2022-10-01 (664800.0).
+  - warning: Unexpected jump of 515.5% between 2022-10-01 (664800.0) and 2023-01-01 (4091516.9999999995).
+- **minfin/LOCAL_BUDGET_REVENUE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/LOCAL_BUDGET_EXPENDITURE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/LOCAL_BUDGET_TAX_REVENUE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/LOCAL_BUDGET_TRANSFERS** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/LOCAL_EDUCATION_EXPENDITURE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/LOCAL_HOUSING_UTILITIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/BUDGET_FINANCING_TOTAL** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 226.9% between 2023-03-31 (382189.30892918) and 2023-06-30 (1249185.8589798997).
+  - warning: Unexpected jump of 52.6% between 2023-06-30 (1249185.8589798997) and 2023-09-30 (592247.5682603805).
+  - warning: Unexpected jump of 53.8% between 2023-12-31 (587477.8587479903) and 2024-03-31 (271312.85565738997).
+  - warning: Unexpected jump of 156.1% between 2024-03-31 (271312.85565738997) and 2024-06-30 (694701.4657485).
+  - warning: Unexpected jump of 57.2% between 2024-06-30 (694701.4657485) and 2024-09-30 (1091941.6557680902).
+  - warning: Unexpected jump of 105.1% between 2024-12-31 (1528085.8762104001) and 2025-03-31 (-77995.15451745004).
+  - warning: Unexpected jump of 1479.3% between 2025-03-31 (-77995.15451745004) and 2025-06-30 (1075781.4388192703).
+  - warning: Unexpected jump of 137.8% between 2025-09-30 (1002304.0176625791) and 2025-12-31 (2383780.764162641).
+  - warning: Unexpected jump of 83.5% between 2025-12-31 (2383780.764162641) and 2026-03-31 (392139.04807354993).
+  - warning: Unexpected jump of 380.4% between 2026-03-31 (392139.04807354993) and 2026-06-30 (1883810.5566879504).
+- **minfin/BUDGET_FINANCING_DOMESTIC** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 165.9% between 2023-03-31 (418017.00788573) and 2023-06-30 (1111614.68020404).
+  - warning: Unexpected jump of 57.8% between 2023-12-31 (903445.8565542502) and 2024-03-31 (381660.56728928).
+  - warning: Unexpected jump of 91.9% between 2024-03-31 (381660.56728928) and 2024-06-30 (732485.5298125099).
+  - warning: Unexpected jump of 61.8% between 2024-06-30 (732485.5298125099) and 2024-09-30 (1184891.7911424702).
+  - warning: Unexpected jump of 100.1% between 2024-12-31 (994933.1664410699) and 2025-03-31 (-702.522268980043).
+  - warning: Unexpected jump of 163513.5% between 2025-03-31 (-702.522268980043) and 2025-06-30 (1148015.9800942603).
+  - warning: Unexpected jump of 50.5% between 2025-09-30 (1083374.6466171192) and 2025-12-31 (1630278.8705836413).
+  - warning: Unexpected jump of 70.4% between 2025-12-31 (1630278.8705836413) and 2026-03-31 (482264.72980344994).
+  - warning: Unexpected jump of 270.8% between 2026-03-31 (482264.72980344994) and 2026-06-30 (1788131.8086110405).
+- **minfin/BUDGET_FINANCING_EXTERNAL** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 484.0% between 2023-03-31 (-35827.698956550004) and 2023-06-30 (137571.17877586).
+  - warning: Unexpected jump of 242.8% between 2023-06-30 (137571.17877586) and 2023-09-30 (-196505.5894).
+  - warning: Unexpected jump of 60.8% between 2023-09-30 (-196505.5894) and 2023-12-31 (-315967.99780625995).
+  - warning: Unexpected jump of 65.1% between 2023-12-31 (-315967.99780625995) and 2024-03-31 (-110347.71163189001).
+  - warning: Unexpected jump of 65.8% between 2024-03-31 (-110347.71163189001) and 2024-06-30 (-37784.06406400999).
+  - warning: Unexpected jump of 146.0% between 2024-06-30 (-37784.06406400999) and 2024-09-30 (-92950.13537438001).
+  - warning: Unexpected jump of 673.6% between 2024-09-30 (-92950.13537438001) and 2024-12-31 (533152.7097693301).
+  - warning: Unexpected jump of 114.5% between 2024-12-31 (533152.7097693301) and 2025-03-31 (-77292.63224846999).
+  - warning: Unexpected jump of 1029.4% between 2025-09-30 (-81070.62895453998) and 2025-12-31 (753501.8935789998).
+  - warning: Unexpected jump of 112.0% between 2025-12-31 (753501.8935789998) and 2026-03-31 (-90125.68172990001).
+  - warning: Unexpected jump of 206.2% between 2026-03-31 (-90125.68172990001) and 2026-06-30 (95678.74807691004).
+- **minfin/BUDGET_FINANCING_LONG_TERM_BONDS** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 418.4% between 2023-03-31 (241522.33122000005) and 2023-06-30 (1252048.2134678098).
+  - warning: Unexpected jump of 70.4% between 2023-06-30 (1252048.2134678098) and 2023-09-30 (370774.6680679901).
+  - warning: Unexpected jump of 56.7% between 2023-09-30 (370774.6680679901) and 2023-12-31 (160702.58095640037).
+  - warning: Unexpected jump of 405.5% between 2023-12-31 (160702.58095640037) and 2024-03-31 (812385.61813387).
+  - warning: Unexpected jump of 87.7% between 2024-09-30 (1019705.7262130701) and 2024-12-31 (124990.8274763599).
+  - warning: Unexpected jump of 807.9% between 2024-12-31 (124990.8274763599) and 2025-03-31 (1134831.99426041).
+- **minfin/BUDGET_FINANCING_BANKS** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 91.9% between 2023-03-31 (895406.5905271001) and 2023-06-30 (1717939.86949314).
+  - warning: Unexpected jump of 70.2% between 2023-06-30 (1717939.86949314) and 2023-09-30 (512191.7640182604).
+  - warning: Unexpected jump of 70.2% between 2023-09-30 (512191.7640182604) and 2023-12-31 (152597.5937606995).
+  - warning: Unexpected jump of 508.5% between 2023-12-31 (152597.5937606995) and 2024-03-31 (928581.9325015999).
+  - warning: Unexpected jump of 84.7% between 2024-09-30 (1408860.8460293403) and 2024-12-31 (214882.05279849004).
+  - warning: Unexpected jump of 204.1% between 2024-12-31 (214882.05279849004) and 2025-03-31 (653408.38420761).
+  - warning: Unexpected jump of 63.8% between 2025-03-31 (653408.38420761) and 2025-06-30 (1070014.22437744).
+  - warning: Unexpected jump of 88.2% between 2026-03-31 (776687.8649514401) and 2026-06-30 (1461605.8187005399).
+- **minfin/BUDGET_FINANCING_INTL_ORGANIZATIONS** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 422.4% between 2023-03-31 (-44337.9314908) and 2023-06-30 (142958.63756759).
+  - warning: Unexpected jump of 170.0% between 2023-06-30 (142958.63756759) and 2023-09-30 (-100097.21039999998).
+  - warning: Unexpected jump of 93.0% between 2023-12-31 (-56918.329300110054) and 2024-03-31 (-109871.14630338999).
+  - warning: Unexpected jump of 64.5% between 2024-03-31 (-109871.14630338999) and 2024-06-30 (-39010.08709452003).
+  - warning: Unexpected jump of 142.0% between 2024-06-30 (-39010.08709452003) and 2024-09-30 (-94414.12202318996).
+  - warning: Unexpected jump of 662.6% between 2024-09-30 (-94414.12202318996) and 2024-12-31 (531140.07071926).
+  - warning: Unexpected jump of 114.1% between 2024-12-31 (531140.07071926) and 2025-03-31 (-74988.84902248999).
+  - warning: Unexpected jump of 57.7% between 2025-12-31 (-53103.99076799996) and 2026-03-31 (-83765.43717707001).
+  - warning: Unexpected jump of 70.7% between 2026-03-31 (-83765.43717707001) and 2026-06-30 (-142951.75581631996).
+- **minfin/OIL_EXPORT_DUTY** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Unexpected jump of 115.4% between 2025-02-28 (118631.52841894) and 2025-03-31 (255591.20797902).
+  - warning: Unexpected jump of 186.0% between 2025-03-31 (255591.20797902) and 2025-06-30 (731047.76502143).
+  - warning: Unexpected jump of 98.3% between 2025-11-30 (1493279.04341993) and 2026-01-31 (24693.1721991).
+  - warning: Unexpected jump of 119.9% between 2026-01-31 (24693.1721991) and 2026-02-28 (54290.73387972).
+  - warning: Unexpected jump of 329.3% between 2026-02-28 (54290.73387972) and 2026-03-31 (233079.25275303).
+  - warning: Unexpected jump of 168.4% between 2026-03-31 (233079.25275303) and 2026-05-31 (625498.66658031).
+- **minfin/OIL_PRODUCTS_EXPORT_DUTY** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Unexpected jump of 79.8% between 2025-02-28 (4355.61087285) and 2025-03-31 (7831.71768985).
+  - warning: Unexpected jump of 94.4% between 2025-03-31 (7831.71768985) and 2025-06-30 (15223.84902912).
+  - warning: Unexpected jump of 97.4% between 2025-11-30 (22235.69315283) and 2026-01-31 (582.519388).
+  - warning: Unexpected jump of 158.2% between 2026-01-31 (582.519388) and 2026-02-28 (1504.13469795).
+  - warning: Unexpected jump of 118.1% between 2026-02-28 (1504.13469795) and 2026-03-31 (3280.93408465).
+  - warning: Unexpected jump of 153.2% between 2026-03-31 (3280.93408465) and 2026-05-31 (8307.79667672).
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% between 1995-01-01 (-8.2) and 1996-01-01 (0.5).
   - warning: Unexpected jump of 240.0% between 1996-01-01 (0.5) and 1997-01-01 (1.7).
@@ -985,8 +1173,7 @@ Tests passed: None
   - warning: Unexpected jump of 65.3% between 2007-01-01 (4.091989) and 2008-01-01 (6.76587).
   - warning: Unexpected jump of 51.2% between 2008-01-01 (6.76587) and 2009-01-01 (10.227029).
   - warning: Unexpected jump of 50.9% between 2014-01-01 (14.496344) and 2015-01-01 (21.881937).
-- **imf/IMF_POPULATION** — fetch: error (downloaded=0, processed=0)
-  - ERROR: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+- **imf/IMF_POPULATION** — fetch+validate+process: ok (downloaded=40, processed=40)
 - **imf/IMF_NOMINAL_GDP** — fetch+validate+process: ok (downloaded=40, processed=40)
   - warning: Unexpected jump of 1127.0% between 1992-01-01 (2435224000.0) and 1993-01-01 (29881368000.0).
   - warning: Unexpected jump of 1317.2% between 1993-01-01 (29881368000.0) and 1994-01-01 (423469391000.0).
@@ -1174,3 +1361,7 @@ Tests passed: None
   - warning: Unexpected jump of 1137.8% between 1992-01-01 (142.842263) and 1993-01-01 (1768.128324).
   - warning: Unexpected jump of 1415.8% between 1993-01-01 (1768.128324) and 1994-01-01 (26801.860179).
   - warning: Unexpected jump of 141.4% between 1994-01-01 (26801.860179) and 1995-01-01 (64697.874176).
+- **imf/OIL_PRICE** — fetch+validate+process: ok (downloaded=415, processed=415)
+  - warning: Unexpected jump of 56.9% between 2026-02-28 (67.45116666666665) and 2026-03-31 (105.83).
+- **imf/COMMODITY_TERMS_OF_TRADE** — fetch+validate+process: ok (downloaded=413, processed=413)
+- **imf/COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS** — fetch+validate+process: ok (downloaded=413, processed=413)

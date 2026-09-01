@@ -13899,6 +13899,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-01,KZ,national,monthly,FX_OTC_VOLUME_USD,34020.68635506,USD million,nbk,2026-09-01,level,2026-09-01
 2026-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,22366214.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-08-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,194549.94580431,million KZT,nbk,2026-09-01,level,2026-09-01
+2026-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,387941.481,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
+2026-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,740362.524,"million KZT, year-to-date cumulative",nbk,2026-09-01,level,2026-09-01
 2026-08-01,KZ,national,monthly,KASE_USD_VOLUME,9695953843.0,USD,nbk,2026-09-01,level,2026-09-01
 2026-08-01,KZ,national,monthly,LENDING_RATE,20.84661806814383,%,nbk,2026-09-01,level,2026-09-01
 2026-08-01,KZ,national,monthly,PENSION_FUND_ASSETS,27072102.566,million KZT,nbk,2026-09-01,level,2026-09-01
