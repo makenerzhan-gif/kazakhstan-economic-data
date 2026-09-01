@@ -2128,3 +2128,38 @@ so the audit's food / non-food / services split is genuinely not in this file an
   agencies, one trajectory.
 
 **342/342 indicators** (107/107 BNS re-verified live). `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — monthly retail and wholesale trade (346 indicators, 14,084 observations)
+
+- Closed the audit's monthly-retail gap in the real sector. `RETAIL_TRADE_MONTHLY`,
+  `WHOLESALE_TRADE_MONTHLY`, `RETAIL_TRADE_INDEX_MONTHLY`, `WHOLESALE_TRADE_INDEX_MONTHLY`
+  from the BNS publication "Статистика внутренней торговли".
+- Same staleness pattern as industry and investment: `RETAIL_TRADE`, `WHOLESALE_TRADE` and
+  `RETAIL_TRADE_VOLUME_INDEX` already existed but are all ANNUAL, from the stat.gov.kz cubes.
+  The publication layer carries the same concepts monthly and current.
+- **Finding the section took three wrong guesses.** `stat-dom-trade`, `stat-trade` and
+  `stat-domestic-trade` all return HTTP 500. The real slug is `local-market`, and it sits under
+  `/economy/` rather than `/business-statistics/`. Guessing URL paths kept failing; enumerating
+  the site's own industry index (26 sections) found it immediately. Recorded because this is the
+  third time this session that guessing a BNS path cost more than reading a listing.
+- Two repeated-label traps, both caught before they produced wrong numbers:
+  - Sheet 1 repeats every row label — "Розничная торговля, всего" appears once nationally and
+    again under a "Сельская местность" heading for rural areas alone (718.9bn against 9,016bn
+    KZT). Matching is first-hit.
+  - Sheet 2 carries "Республика Казахстан" twice, under separate "Розничная торговля" and
+    "Оптовая торговля" headings. Lookups are anchored to the section heading — the same fix the
+    Minfin debt-structure rows needed.
+- Added a genuine cross-check: sheets 1 and 2 independently publish the reporting month's value,
+  so the index fetchers compare them and refuse the edition on a mismatch. All four editions
+  online agreed exactly.
+- Scale cross-check against the existing annual series: May 2026 retail of 1.93 trillion KZT
+  annualises to ~23 trillion against annual `RETAIL_TRADE` of 23.56 trillion for 2024.
+- Reporting month read from the sheet's own header ("май 2026г."), not the publication date.
+- Four editions online (April–July 2026), so these series ACCUMULATE across runs.
+- Verified live: 111/111 BNS fetchers OK, `pytest tests/ -q` 29/29 passing.
+
+### Real-sector audit items still open
+Quarterly real GDP — the national-accounts section holds labour-productivity publications, and
+the quarterly GDP cube (element 4439) has only a regional dimension, no physical-volume index.
+CPI breakdown by group (food / non-food / services) — confirmed absent from element 1549, whose
+product dimension holds only the "Товары и услуги" total. Both need a different dataset.

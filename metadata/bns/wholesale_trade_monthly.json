@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/economy/local-market/",
+  "dataset_id": "statistika-vnutrenney-torgovli/sheet-1/Оптовая торговля",
+  "indicator_id": "WHOLESALE_TRADE_MONTHLY",
+  "indicator_name": "Wholesale Trade Turnover, monthly",
+  "description": "Объём оптовой торговли, помесячно",
+  "frequency": "monthly",
+  "unit": "thousand KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Thousand KZT, single month. Wholesale sales of goods, whole country, from the same sheet as RETAIL_TRADE_MONTHLY. Wholesale runs roughly twice retail in Kazakhstan (19.6 against 9.0 trillion KZT over January-May 2026). Monthly companion to the annual WHOLESALE_TRADE.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

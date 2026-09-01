@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/economy/local-market/",
+  "dataset_id": "statistika-vnutrenney-torgovli/sheet-2/Оптовая торговля",
+  "indicator_id": "WHOLESALE_TRADE_INDEX_MONTHLY",
+  "indicator_name": "Wholesale Trade Physical Volume Index, monthly",
+  "description": "Индекс физического объёма оптовой торговли, помесячно",
+  "frequency": "monthly",
+  "unit": "index (same month previous year = 100)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, same month of the previous year = 100. Wholesale volume in real terms, on the same basis as RETAIL_TRADE_INDEX_MONTHLY and from the same sheet, which carries a separate regional block per trade type.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

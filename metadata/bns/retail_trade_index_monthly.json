@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/economy/local-market/",
+  "dataset_id": "statistika-vnutrenney-torgovli/sheet-2/Розничная торговля",
+  "indicator_id": "RETAIL_TRADE_INDEX_MONTHLY",
+  "indicator_name": "Retail Trade Physical Volume Index, monthly",
+  "description": "Индекс физического объёма розничной торговли, помесячно",
+  "frequency": "monthly",
+  "unit": "index (same month previous year = 100)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, same month of the previous year = 100 -- retail volume in REAL terms, the consumption-side companion to RETAIL_TRADE_MONTHLY, which is in current prices. Monthly replacement for the annual RETAIL_TRADE_VOLUME_INDEX. The source row also publishes month-on-month and year-to-date comparisons; this is the year-on-year monthly one.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

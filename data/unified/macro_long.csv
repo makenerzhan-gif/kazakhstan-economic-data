@@ -13371,9 +13371,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,18.784425,number of months,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,9.752253,number of months,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,21.252677,% of GDP,nbk,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,monthly,RETAIL_TRADE_INDEX_MONTHLY,105.0,index (same month previous year = 100),bns,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,monthly,RETAIL_TRADE_MONTHLY,1879309844.0,thousand KZT,bns,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,STATE_DEBT_TOTAL,36847200.72413738,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,2225795.7841593744,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,daily,TONIA,18.25,%,nbk,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,monthly,WHOLESALE_TRADE_INDEX_MONTHLY,108.9,index (same month previous year = 100),bns,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,monthly,WHOLESALE_TRADE_MONTHLY,4223901433.0,thousand KZT,bns,2026-09-01,level,2026-09-01
 2026-04-02,KZ,national,irregular,ANNUAL_INFLATION,11.0,percent,nbk,2026-09-01,level,2026-09-01
 2026-04-02,KZ,national,daily,EXCHANGE_RATE,475.09,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2026-04-02,KZ,national,daily,TONIA,18.35,%,nbk,2026-09-01,level,2026-09-01
@@ -13493,7 +13497,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,REMITTANCES_SENT_KZT,32120.02523374,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,REMITTANCES_SENT_RUB,5586.75857749,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,monthly,REMITTANCES_SENT_USD,15740.463889214,million KZT,nbk,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,RETAIL_TRADE_INDEX_MONTHLY,104.3,index (same month previous year = 100),bns,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,RETAIL_TRADE_MONTHLY,1933856242.0,thousand KZT,bns,2026-09-01,level,2026-09-01
 2026-05-01,KZ,national,daily,TONIA,18.19,%,nbk,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,WHOLESALE_TRADE_INDEX_MONTHLY,104.0,index (same month previous year = 100),bns,2026-09-01,level,2026-09-01
+2026-05-01,KZ,national,monthly,WHOLESALE_TRADE_MONTHLY,4507997205.0,thousand KZT,bns,2026-09-01,level,2026-09-01
 2026-05-02,KZ,national,daily,TONIA,18.19,%,nbk,2026-09-01,level,2026-09-01
 2026-05-03,KZ,national,daily,TONIA,18.19,%,nbk,2026-09-01,level,2026-09-01
 2026-05-04,KZ,national,daily,EXCHANGE_RATE,462.91,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
@@ -13623,7 +13631,11 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,REMITTANCES_SENT_KZT,38066.98447675,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,REMITTANCES_SENT_RUB,7022.95771939,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,monthly,REMITTANCES_SENT_USD,19995.449298161,million KZT,nbk,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,RETAIL_TRADE_INDEX_MONTHLY,104.8,index (same month previous year = 100),bns,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,RETAIL_TRADE_MONTHLY,2516468405.0,thousand KZT,bns,2026-09-01,level,2026-09-01
 2026-06-01,KZ,national,daily,TONIA,18.71,%,nbk,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,WHOLESALE_TRADE_INDEX_MONTHLY,101.2,index (same month previous year = 100),bns,2026-09-01,level,2026-09-01
+2026-06-01,KZ,national,monthly,WHOLESALE_TRADE_MONTHLY,4908733329.0,thousand KZT,bns,2026-09-01,level,2026-09-01
 2026-06-02,KZ,national,irregular,ANNUAL_INFLATION,10.4,percent,nbk,2026-09-01,level,2026-09-01
 2026-06-02,KZ,national,daily,EXCHANGE_RATE,488.96,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2026-06-02,KZ,national,daily,TONIA,18.47,%,nbk,2026-09-01,level,2026-09-01
@@ -13783,9 +13795,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,quarterly,PRODUCTION_VOLUME_DIFFUSION_INDEX,52.794411,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_DIFFUSION_INDEX,71.670944,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,64.941545,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,RETAIL_TRADE_INDEX_MONTHLY,105.6,index (same month previous year = 100),bns,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,RETAIL_TRADE_MONTHLY,2630723653.0,thousand KZT,bns,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,STATE_DEBT_TOTAL,38495061.56442599,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,2414476.280246,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,daily,TONIA,16.24,%,nbk,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,WHOLESALE_TRADE_INDEX_MONTHLY,105.7,index (same month previous year = 100),bns,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,monthly,WHOLESALE_TRADE_MONTHLY,4661796602.0,thousand KZT,bns,2026-09-01,level,2026-09-01
 2026-07-02,KZ,national,irregular,ANNUAL_INFLATION,10.3,percent,nbk,2026-09-01,level,2026-09-01
 2026-07-02,KZ,national,daily,EXCHANGE_RATE,479.26,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2026-07-02,KZ,national,daily,TONIA,16.36,%,nbk,2026-09-01,level,2026-09-01

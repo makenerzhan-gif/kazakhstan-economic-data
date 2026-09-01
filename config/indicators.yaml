@@ -3091,3 +3091,39 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+
+  - id: RETAIL_TRADE_MONTHLY
+    name_ru: "Объём розничной торговли, помесячно"
+    name_en: "Retail Trade Turnover, monthly"
+    agency: bns
+    frequency: monthly
+    unit: "thousand KZT"
+    category: trade
+    source_status: confirmed
+
+  - id: WHOLESALE_TRADE_MONTHLY
+    name_ru: "Объём оптовой торговли, помесячно"
+    name_en: "Wholesale Trade Turnover, monthly"
+    agency: bns
+    frequency: monthly
+    unit: "thousand KZT"
+    category: trade
+    source_status: confirmed
+
+  - id: RETAIL_TRADE_INDEX_MONTHLY
+    name_ru: "Индекс физического объёма розничной торговли, помесячно"
+    name_en: "Retail Trade Physical Volume Index, monthly"
+    agency: bns
+    frequency: monthly
+    unit: "index (same month previous year = 100)"
+    category: trade
+    source_status: confirmed
+
+  - id: WHOLESALE_TRADE_INDEX_MONTHLY
+    name_ru: "Индекс физического объёма оптовой торговли, помесячно"
+    name_en: "Wholesale Trade Physical Volume Index, monthly"
+    agency: bns
+    frequency: monthly
+    unit: "index (same month previous year = 100)"
+    category: trade
+    source_status: confirmed

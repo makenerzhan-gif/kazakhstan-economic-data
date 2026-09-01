@@ -383,6 +383,72 @@ agencies:
           year-to-date index against the same period a year earlier (106-110 across March-July
           2026). The real-terms companion to the current-price value series.
           fetch_investment_index.
+      RETAIL_TRADE_MONTHLY:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/economy/local-market/"
+        format: xlsx
+        notes: >
+          2026-09-01. Sheet 1 ('Объем реализации товаров и услуг') of the monthly publication
+          'Статистика внутренней торговли', row 'Розничная торговля, всего', column 2 (the
+          reporting month; column 1 is year-to-date). Unit stated on the sheet as тыс. тенге.
+          Answers the audit's real-sector gap for monthly retail trade. The existing RETAIL_TRADE,
+          WHOLESALE_TRADE and RETAIL_TRADE_VOLUME_INDEX are all ANNUAL, from the stat.gov.kz
+          cubes; these are the monthly publications behind them.
+          FINDING THE SECTION took three wrong guesses -- stat-dom-trade, stat-trade and
+          stat-domestic-trade all return HTTP 500. The real slug is 'local-market', and it sits
+          under /economy/ rather than /business-statistics/. Section slugs are now taken from the
+          site's own industry index (26 sections) instead of guessed.
+          TRAP: sheet 1 repeats every row label. 'Розничная торговля, всего' appears once for the
+          whole country and again below a 'Сельская местность' heading for rural areas only
+          (718.9bn against 9,016bn KZT for January-May 2026). Matching is first-hit.
+          The reporting month is read from the sheet's own header ('май 2026г.'), not derived from
+          the publication date. Both agree -- the edition published 12.06.2026 reports May -- but
+          the header states the period the numbers describe.
+          SCALE CROSS-CHECK against the existing annual series: 1.93 trillion KZT for May 2026
+          annualises to about 23 trillion, and annual RETAIL_TRADE reads 23.56 trillion for 2024.
+          Independent confirmation that this is the same concept.
+          Four editions were online on 2026-09-01 (April-July 2026), so the series ACCUMULATES
+          across runs like OIL_PRODUCTION and the industry series.
+
+      WHOLESALE_TRADE_MONTHLY:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/economy/local-market/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet and column as RETAIL_TRADE_MONTHLY, row 'Оптовая торговля'.
+          Wholesale runs roughly twice retail (19.58 against 9.02 trillion KZT for January-May
+          2026). Annualising May's 4.51 trillion gives about 54 trillion against annual
+          WHOLESALE_TRADE of 47.2 trillion for 2024 -- consistent with the growth between.
+          Subject to the same rural-repeat trap as RETAIL_TRADE_MONTHLY.
+
+      RETAIL_TRADE_INDEX_MONTHLY:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/economy/local-market/"
+        format: xlsx
+        notes: >
+          2026-09-01. Sheet 2 ('Индексы физического объема розничной и оптовой торговли') of the
+          same publication, row 'Республика Казахстан', column 3. Volume in REAL terms, the
+          companion to RETAIL_TRADE_MONTHLY, which is in current prices. Monthly replacement for
+          the annual RETAIL_TRADE_VOLUME_INDEX.
+          TRAP: sheet 2 carries 'Республика Казахстан' TWICE -- once under a 'Розничная торговля'
+          heading and once under 'Оптовая торговля', each followed by the same regional list.
+          Lookups are anchored to the section heading, the same fix the Minfin debt-structure rows
+          needed for their repeated row codes.
+          The row publishes THREE comparisons: month vs same month last year (used here), month vs
+          previous month, and period vs same period last year. Picking the wrong one would give a
+          plausible-looking series meaning something else.
+          CROSS-CHECK: sheet 2 republishes the reporting month's value that sheet 1 carries, and
+          the two are produced independently. The fetcher compares them and refuses the edition on
+          a mismatch, which would mean one of the two lookups had drifted onto the wrong row. All
+          four editions available on 2026-09-01 agreed exactly.
+
+      WHOLESALE_TRADE_INDEX_MONTHLY:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/economy/local-market/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet as RETAIL_TRADE_INDEX_MONTHLY, anchored to the 'Оптовая торговля'
+          section heading instead. Same three-comparison layout and the same sheet-1 cross-check.
       EXPORT_PRICE_INDEX:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/industries/economy/prices/"

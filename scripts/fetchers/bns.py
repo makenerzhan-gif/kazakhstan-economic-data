@@ -3060,3 +3060,254 @@ def fetch_cpi_ytd() -> tuple[list[dict], dict]:
         "отчетный период к декабрю прошлого года", "CPI_YTD",
         "Index, December of the previous year = 100 -- cumulative inflation so far this year, the "
         "form Kazakhstan's own commentary usually quotes. Same file and dimension as CPI_YOY.")
+
+
+# ---------------------------------------------------------------------------
+# Monthly retail and wholesale trade, from the BNS publication
+# "Статистика внутренней торговли" (section "Внутренний рынок").
+#
+# The sector audit flagged monthly retail trade as a real-sector gap. The
+# dataset already held RETAIL_TRADE, WHOLESALE_TRADE and
+# RETAIL_TRADE_VOLUME_INDEX -- but all three are ANNUAL, from the stat.gov.kz
+# cubes. This is the same staleness pattern already fixed for industry and
+# investment: the publication layer carries the same concepts monthly.
+#
+# Finding the section took three wrong guesses. stat-dom-trade, stat-trade and
+# stat-domestic-trade all return HTTP 500; the real slug is "local-market",
+# under /economy/ rather than /business-statistics/. Section slugs are now
+# taken from the site's own industry index rather than guessed.
+#
+# Two traps in the workbook:
+#
+# 1. Sheet 1 repeats every row label. "Розничная торговля, всего" appears at
+#    the top for the whole country and AGAIN below a "Сельская местность"
+#    heading for rural areas only (718bn against 9,016bn). Only the FIRST
+#    occurrence is national, so matching is first-hit, not last.
+#
+# 2. Sheet 2 carries "Республика Казахстан" twice as well -- once under a
+#    "Розничная торговля" heading and once under "Оптовая торговля". Lookups
+#    are therefore anchored to the section heading, the same fix the Minfin
+#    debt-structure rows needed.
+#
+# The reporting month is read from the sheet's own header ("май 2026г.")
+# rather than derived from the publication date. Both agree -- the edition
+# published 12.06.2026 reports May -- but the header states the period the
+# numbers describe instead of when the file was posted.
+#
+# The two sheets publish the reporting month's value independently, so the
+# index fetcher cross-checks sheet 2 against sheet 1 and refuses the edition
+# if they disagree.
+# ---------------------------------------------------------------------------
+LOCAL_MARKET_PAGE_URL = "https://stat.gov.kz/ru/industries/economy/local-market/"
+LOCAL_MARKET_MONTH_RE = re.compile(r"^([А-Яа-яЁё]+)\s+(\d{4})\s*г\.?$")
+LOCAL_MARKET_VALUE_TITLE = "1. Объем реализации товаров"
+LOCAL_MARKET_INDEX_TITLE = "2. Индексы физического объема"
+LOCAL_MARKET_UNIT_WORDS = ("тыс.тенге", "тыс.теңге")
+LOCAL_MARKET_REGION = "Республика Казахстан"
+
+
+def _local_market_editions(indicator_id: str):
+    """Yield (reporting_year, reporting_month, workbook, element_id, content).
+
+    Only editions whose sheet 1 carries the expected title are returned, which
+    filters out the e-commerce publication that shares the section (its sheets
+    are numbered 1.1, 1.2, ...) and any other file listed on the page.
+    """
+    for eid in _publication_elements(LOCAL_MARKET_PAGE_URL, indicator_id):
+        url = f"https://stat.gov.kz/api/iblock/element/{eid}/file/ru/"
+        try:
+            content = _download(url)
+            wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+        except Exception:
+            continue
+        sheet = next((s for s in wb.sheetnames if s.strip() == "1"), None)
+        if sheet is None:
+            continue
+
+        title_ok = False
+        reporting = None
+        for row in wb[sheet].iter_rows(max_row=8, values_only=True):
+            for cell in row:
+                if not isinstance(cell, str):
+                    continue
+                text = cell.strip()
+                if text.startswith(LOCAL_MARKET_VALUE_TITLE):
+                    title_ok = True
+                m = LOCAL_MARKET_MONTH_RE.match(text)
+                if m and m.group(1).lower() in RU_MONTHS:
+                    reporting = (int(m.group(2)), RU_MONTHS[m.group(1).lower()])
+        if not title_ok or reporting is None:
+            continue
+        yield reporting[0], reporting[1], wb, eid, content
+
+
+def _local_market_row(ws, marker: str, after: str | None = None) -> list | None:
+    """First numeric row whose label starts with `marker`, optionally only
+    after a row whose label equals `after`."""
+    armed = after is None
+    for row in ws.iter_rows(values_only=True):
+        label = next((c for c in row[:2] if isinstance(c, str)), "")
+        label = label.strip()
+        if not armed:
+            if label == after:
+                armed = True
+            continue
+        if label.startswith(marker):
+            nums = [c for c in row if isinstance(c, (int, float))]
+            if nums:
+                return nums
+    return None
+
+
+def _load_local_market_history(indicator_id: str) -> dict:
+    existing = {}
+    path = (Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE
+            / f"{indicator_id.lower()}.csv")
+    if path.exists():
+        with path.open(encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                try:
+                    existing[row["date"]] = float(row["value"])
+                except (KeyError, TypeError, ValueError):
+                    continue
+    return existing
+
+
+def _local_market_result(indicator_id: str, existing: dict, fetched: dict,
+                         what: str, note: str) -> tuple[list[dict], dict]:
+    merged = {**existing, **fetched}
+    if not merged:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: no edition on {LOCAL_MARKET_PAGE_URL} yielded {what}, "
+                "and no previously processed history exists",
+                "ACTION REQUIRED: inspect the page and update scripts/fetchers/bns.py",
+            ])
+        )
+    records = [{"date": k, "value": v} for k, v in sorted(merged.items())]
+    manifest = {
+        "frequency": "monthly",
+        "source_url": LOCAL_MARKET_PAGE_URL,
+        "dataset_id": f"statistika-vnutrenney-torgovli/{what}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def _fetch_local_market_value(row_marker: str, indicator_id: str,
+                              note: str) -> tuple[list[dict], dict]:
+    existing = _load_local_market_history(indicator_id)
+    fetched: dict[str, float] = {}
+    for year, month, wb, eid, content in _local_market_editions(indicator_id):
+        ws = wb[next(s for s in wb.sheetnames if s.strip() == "1")]
+        unit_ok = False
+        for row in ws.iter_rows(max_row=8, values_only=True):
+            for cell in row:
+                if isinstance(cell, str) and any(w in "".join(cell.split()) for w in LOCAL_MARKET_UNIT_WORDS):
+                    unit_ok = True
+        nums = _local_market_row(ws, row_marker)
+        if nums is None or len(nums) < 2:
+            continue
+        if not unit_ok:
+            raise validation.StructuralChangeError(
+                "\n".join([
+                    f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                    f"WHAT CHANGED: sheet 1 of element {eid} no longer declares its unit as one "
+                    f"of {LOCAL_MARKET_UNIT_WORDS!r}",
+                    "EXPECTED: thousand KZT; a changed unit would rescale the series silently",
+                    "ACTION REQUIRED: inspect the publication and update scripts/fetchers/bns.py",
+                ])
+            )
+        _save_raw(f"{indicator_id}_{eid}", content, "xlsx",
+                  {"source_url": f"https://stat.gov.kz/api/iblock/element/{eid}/file/ru/",
+                   "element_id": eid, "reporting_month": f"{year:04d}-{month:02d}",
+                   "sheet": "1", "row": row_marker})
+        # nums: [year-to-date, reporting month, share YTD, share month]
+        fetched[f"{year:04d}-{month:02d}-01"] = float(nums[1])
+
+    return _local_market_result(indicator_id, existing, fetched,
+                                f"sheet-1/{row_marker}", note)
+
+
+def _fetch_local_market_index(section: str, value_marker: str, indicator_id: str,
+                              note: str) -> tuple[list[dict], dict]:
+    existing = _load_local_market_history(indicator_id)
+    fetched: dict[str, float] = {}
+    for year, month, wb, eid, content in _local_market_editions(indicator_id):
+        sheet = next((s for s in wb.sheetnames if s.strip() == "2"), None)
+        if sheet is None:
+            continue
+        ws = wb[sheet]
+        if not any(isinstance(c, str) and c.strip().startswith(LOCAL_MARKET_INDEX_TITLE)
+                   for row in ws.iter_rows(max_row=4, values_only=True) for c in row):
+            continue
+        nums = _local_market_row(ws, LOCAL_MARKET_REGION, after=section)
+        if nums is None or len(nums) < 5:
+            continue
+
+        # Sheet 2 republishes the reporting month's value that sheet 1 carries.
+        # They are produced independently, so a mismatch means one of the two
+        # lookups has drifted onto the wrong row.
+        cross = _local_market_row(wb[next(s for s in wb.sheetnames if s.strip() == "1")], value_marker)
+        if cross is None or len(cross) < 2 or abs(cross[1] - nums[1]) > 1:
+            raise validation.StructuralChangeError(
+                "\n".join([
+                    f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                    f"WHAT CHANGED: element {eid} sheet 2 reports {nums[1]!r} for the reporting "
+                    f"month under {section!r}, but sheet 1 row {value_marker!r} reports "
+                    f"{cross[1] if cross and len(cross) > 1 else None!r}",
+                    "EXPECTED: the two sheets publish the same monthly value",
+                    "ACTION REQUIRED: inspect the publication and update scripts/fetchers/bns.py",
+                ])
+            )
+
+        _save_raw(f"{indicator_id}_{eid}", content, "xlsx",
+                  {"source_url": f"https://stat.gov.kz/api/iblock/element/{eid}/file/ru/",
+                   "element_id": eid, "reporting_month": f"{year:04d}-{month:02d}",
+                   "sheet": "2", "section": section})
+        # nums: [YTD value, month value, month vs same month last year,
+        #        month vs previous month, period vs same period last year]
+        fetched[f"{year:04d}-{month:02d}-01"] = float(nums[2])
+
+    return _local_market_result(indicator_id, existing, fetched,
+                                f"sheet-2/{section}", note)
+
+
+def fetch_retail_trade_monthly() -> tuple[list[dict], dict]:
+    """Retail trade turnover, thousand KZT, monthly."""
+    return _fetch_local_market_value(
+        "Розничная торговля, всего", "RETAIL_TRADE_MONTHLY",
+        "Thousand KZT, single month (not cumulative). Retail sales of goods and services, whole "
+        "country. The existing RETAIL_TRADE series carries the same concept ANNUALLY from the "
+        "stat.gov.kz cubes; this is the monthly publication behind it. Accumulated across runs "
+        "because the source keeps only a few editions online. Note the source sheet repeats this "
+        "row label for rural areas alone further down -- this is the national figure.")
+
+
+def fetch_wholesale_trade_monthly() -> tuple[list[dict], dict]:
+    """Wholesale trade turnover, thousand KZT, monthly."""
+    return _fetch_local_market_value(
+        "Оптовая торговля", "WHOLESALE_TRADE_MONTHLY",
+        "Thousand KZT, single month. Wholesale sales of goods, whole country, from the same sheet "
+        "as RETAIL_TRADE_MONTHLY. Wholesale runs roughly twice retail in Kazakhstan (19.6 against "
+        "9.0 trillion KZT over January-May 2026). Monthly companion to the annual WHOLESALE_TRADE.")
+
+
+def fetch_retail_trade_index_monthly() -> tuple[list[dict], dict]:
+    """Retail trade physical volume index, same month previous year = 100."""
+    return _fetch_local_market_index(
+        "Розничная торговля", "Розничная торговля, всего", "RETAIL_TRADE_INDEX_MONTHLY",
+        "Index, same month of the previous year = 100 -- retail volume in REAL terms, the "
+        "consumption-side companion to RETAIL_TRADE_MONTHLY, which is in current prices. Monthly "
+        "replacement for the annual RETAIL_TRADE_VOLUME_INDEX. The source row also publishes "
+        "month-on-month and year-to-date comparisons; this is the year-on-year monthly one.")
+
+
+def fetch_wholesale_trade_index_monthly() -> tuple[list[dict], dict]:
+    """Wholesale trade physical volume index, same month previous year = 100."""
+    return _fetch_local_market_index(
+        "Оптовая торговля", "Оптовая торговля", "WHOLESALE_TRADE_INDEX_MONTHLY",
+        "Index, same month of the previous year = 100. Wholesale volume in real terms, on the same "
+        "basis as RETAIL_TRADE_INDEX_MONTHLY and from the same sheet, which carries a separate "
+        "regional block per trade type.")
