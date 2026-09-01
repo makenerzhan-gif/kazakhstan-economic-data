@@ -2489,6 +2489,60 @@ indicators:
     category: fiscal
     source_status: confirmed
 
+  - id: BUDGET_FINANCING_TOTAL
+    name_ru: "Финансирование госбюджета, всего"
+    name_en: "State Budget Financing, Total"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT, flow during the quarter"
+    category: fiscal
+    source_status: confirmed
+
+  - id: BUDGET_FINANCING_DOMESTIC
+    name_ru: "Внутреннее финансирование госбюджета"
+    name_en: "State Budget Financing, Domestic"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT, flow during the quarter"
+    category: fiscal
+    source_status: confirmed
+
+  - id: BUDGET_FINANCING_EXTERNAL
+    name_ru: "Внешнее финансирование госбюджета"
+    name_en: "State Budget Financing, External"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT, flow during the quarter"
+    category: fiscal
+    source_status: confirmed
+
+  - id: BUDGET_FINANCING_LONG_TERM_BONDS
+    name_ru: "Финансирование через долгосрочные облигации"
+    name_en: "State Budget Financing via Long-Term Bonds"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT, flow during the quarter"
+    category: fiscal
+    source_status: confirmed
+
+  - id: BUDGET_FINANCING_BANKS
+    name_ru: "Финансирование госбюджета депозитными корпорациями"
+    name_en: "State Budget Financing by Deposit Corporations"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT, flow during the quarter"
+    category: fiscal
+    source_status: confirmed
+
+  - id: BUDGET_FINANCING_INTL_ORGANIZATIONS
+    name_ru: "Финансирование госбюджета международными организациями"
+    name_en: "State Budget Financing by International Organizations"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT, flow during the quarter"
+    category: fiscal
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

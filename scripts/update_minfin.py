@@ -83,6 +83,12 @@ FETCHERS = {
     "LOCAL_BUDGET_TRANSFERS": minfin_fetchers.fetch_local_budget_transfers,
     "LOCAL_EDUCATION_EXPENDITURE": minfin_fetchers.fetch_local_education_expenditure,
     "LOCAL_HOUSING_UTILITIES_EXPENDITURE": minfin_fetchers.fetch_local_housing_utilities_expenditure,
+    "BUDGET_FINANCING_TOTAL": minfin_fetchers.fetch_budget_financing_total,
+    "BUDGET_FINANCING_DOMESTIC": minfin_fetchers.fetch_budget_financing_domestic,
+    "BUDGET_FINANCING_EXTERNAL": minfin_fetchers.fetch_budget_financing_external,
+    "BUDGET_FINANCING_LONG_TERM_BONDS": minfin_fetchers.fetch_budget_financing_long_term_bonds,
+    "BUDGET_FINANCING_BANKS": minfin_fetchers.fetch_budget_financing_banks,
+    "BUDGET_FINANCING_INTL_ORGANIZATIONS": minfin_fetchers.fetch_budget_financing_intl_organizations,
 }
 
 INDICATOR_IDS = [
@@ -119,6 +125,12 @@ INDICATOR_IDS = [
     "LOCAL_BUDGET_TRANSFERS",
     "LOCAL_EDUCATION_EXPENDITURE",
     "LOCAL_HOUSING_UTILITIES_EXPENDITURE",
+    "BUDGET_FINANCING_TOTAL",
+    "BUDGET_FINANCING_DOMESTIC",
+    "BUDGET_FINANCING_EXTERNAL",
+    "BUDGET_FINANCING_LONG_TERM_BONDS",
+    "BUDGET_FINANCING_BANKS",
+    "BUDGET_FINANCING_INTL_ORGANIZATIONS",
 ]
 
 

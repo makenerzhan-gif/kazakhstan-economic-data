@@ -3250,6 +3250,138 @@ agencies:
           425,962.4 + capital sales 172,470.9 + special 0 + transfers 7,716,267.9 = 17,039,798.7,
           exactly the sheet's own "I. ДОХОДЫ" row. Only 3 annual points (2023-2025) are
           published in this sheet. fetch_local_housing_utilities_expenditure.
+      BUDGET_FINANCING_TOTAL:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin budget-financing sheets ("табл 20 кв" by counterparty
+          sector, "табл 21 кв" by financial instrument) -- the last two substantive unmined sheets
+          from the 49-sheet enumeration. TWO hazards, both handled explicitly:
+          (1) The sheets carry TWO side-by-side column groups -- state budget in columns 1-19 and
+          the republican budget repeating the same period layout in columns 20-38. The group
+          boundary is located from the header row, never hardcoded, so the two budgets cannot be
+          silently mixed. Only the STATE budget group is published.
+          (2) The quarterly columns are PER-QUARTER FLOWS, NOT year-to-date cumulative. This was
+          established rather than assumed, and the plausible-looking "magnitudes resemble the
+          annual columns, so Q4 is the year total" reading is WRONG: summing the four quarters
+          reproduces the already-connected STATE_BUDGET_DEFICIT to the cent for 2023 (2,811,100.59),
+          2024 (3,586,041.85) and 2025 (4,383,871.07) -- financing exactly covers the deficit.
+          Also verified: domestic + external = total, 0.00 difference in every quarter.
+          Note the sheet name "табл 21 кв " carries a TRAILING SPACE, so sheets are matched on a
+          stripped prefix. Annual columns for 2018-2022 also exist in these sheets but are a
+          different frequency and are deliberately NOT spliced onto the quarterly series.
+          14 quarterly points, 2023-Q1 to 2026-Q2. fetch_budget_financing_total.
+      BUDGET_FINANCING_DOMESTIC:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin budget-financing sheets ("табл 20 кв" by counterparty
+          sector, "табл 21 кв" by financial instrument) -- the last two substantive unmined sheets
+          from the 49-sheet enumeration. TWO hazards, both handled explicitly:
+          (1) The sheets carry TWO side-by-side column groups -- state budget in columns 1-19 and
+          the republican budget repeating the same period layout in columns 20-38. The group
+          boundary is located from the header row, never hardcoded, so the two budgets cannot be
+          silently mixed. Only the STATE budget group is published.
+          (2) The quarterly columns are PER-QUARTER FLOWS, NOT year-to-date cumulative. This was
+          established rather than assumed, and the plausible-looking "magnitudes resemble the
+          annual columns, so Q4 is the year total" reading is WRONG: summing the four quarters
+          reproduces the already-connected STATE_BUDGET_DEFICIT to the cent for 2023 (2,811,100.59),
+          2024 (3,586,041.85) and 2025 (4,383,871.07) -- financing exactly covers the deficit.
+          Also verified: domestic + external = total, 0.00 difference in every quarter.
+          Note the sheet name "табл 21 кв " carries a TRAILING SPACE, so sheets are matched on a
+          stripped prefix. Annual columns for 2018-2022 also exist in these sheets but are a
+          different frequency and are deliberately NOT spliced onto the quarterly series.
+          14 quarterly points, 2023-Q1 to 2026-Q2. fetch_budget_financing_domestic.
+      BUDGET_FINANCING_EXTERNAL:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin budget-financing sheets ("табл 20 кв" by counterparty
+          sector, "табл 21 кв" by financial instrument) -- the last two substantive unmined sheets
+          from the 49-sheet enumeration. TWO hazards, both handled explicitly:
+          (1) The sheets carry TWO side-by-side column groups -- state budget in columns 1-19 and
+          the republican budget repeating the same period layout in columns 20-38. The group
+          boundary is located from the header row, never hardcoded, so the two budgets cannot be
+          silently mixed. Only the STATE budget group is published.
+          (2) The quarterly columns are PER-QUARTER FLOWS, NOT year-to-date cumulative. This was
+          established rather than assumed, and the plausible-looking "magnitudes resemble the
+          annual columns, so Q4 is the year total" reading is WRONG: summing the four quarters
+          reproduces the already-connected STATE_BUDGET_DEFICIT to the cent for 2023 (2,811,100.59),
+          2024 (3,586,041.85) and 2025 (4,383,871.07) -- financing exactly covers the deficit.
+          Also verified: domestic + external = total, 0.00 difference in every quarter.
+          Note the sheet name "табл 21 кв " carries a TRAILING SPACE, so sheets are matched on a
+          stripped prefix. Annual columns for 2018-2022 also exist in these sheets but are a
+          different frequency and are deliberately NOT spliced onto the quarterly series.
+          14 quarterly points, 2023-Q1 to 2026-Q2. fetch_budget_financing_external.
+      BUDGET_FINANCING_LONG_TERM_BONDS:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin budget-financing sheets ("табл 20 кв" by counterparty
+          sector, "табл 21 кв" by financial instrument) -- the last two substantive unmined sheets
+          from the 49-sheet enumeration. TWO hazards, both handled explicitly:
+          (1) The sheets carry TWO side-by-side column groups -- state budget in columns 1-19 and
+          the republican budget repeating the same period layout in columns 20-38. The group
+          boundary is located from the header row, never hardcoded, so the two budgets cannot be
+          silently mixed. Only the STATE budget group is published.
+          (2) The quarterly columns are PER-QUARTER FLOWS, NOT year-to-date cumulative. This was
+          established rather than assumed, and the plausible-looking "magnitudes resemble the
+          annual columns, so Q4 is the year total" reading is WRONG: summing the four quarters
+          reproduces the already-connected STATE_BUDGET_DEFICIT to the cent for 2023 (2,811,100.59),
+          2024 (3,586,041.85) and 2025 (4,383,871.07) -- financing exactly covers the deficit.
+          Also verified: domestic + external = total, 0.00 difference in every quarter.
+          Note the sheet name "табл 21 кв " carries a TRAILING SPACE, so sheets are matched on a
+          stripped prefix. Annual columns for 2018-2022 also exist in these sheets but are a
+          different frequency and are deliberately NOT spliced onto the quarterly series.
+          14 quarterly points, 2023-Q1 to 2026-Q2. fetch_budget_financing_long_term_bonds.
+      BUDGET_FINANCING_BANKS:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin budget-financing sheets ("табл 20 кв" by counterparty
+          sector, "табл 21 кв" by financial instrument) -- the last two substantive unmined sheets
+          from the 49-sheet enumeration. TWO hazards, both handled explicitly:
+          (1) The sheets carry TWO side-by-side column groups -- state budget in columns 1-19 and
+          the republican budget repeating the same period layout in columns 20-38. The group
+          boundary is located from the header row, never hardcoded, so the two budgets cannot be
+          silently mixed. Only the STATE budget group is published.
+          (2) The quarterly columns are PER-QUARTER FLOWS, NOT year-to-date cumulative. This was
+          established rather than assumed, and the plausible-looking "magnitudes resemble the
+          annual columns, so Q4 is the year total" reading is WRONG: summing the four quarters
+          reproduces the already-connected STATE_BUDGET_DEFICIT to the cent for 2023 (2,811,100.59),
+          2024 (3,586,041.85) and 2025 (4,383,871.07) -- financing exactly covers the deficit.
+          Also verified: domestic + external = total, 0.00 difference in every quarter.
+          Note the sheet name "табл 21 кв " carries a TRAILING SPACE, so sheets are matched on a
+          stripped prefix. Annual columns for 2018-2022 also exist in these sheets but are a
+          different frequency and are deliberately NOT spliced onto the quarterly series.
+          14 quarterly points, 2023-Q1 to 2026-Q2. fetch_budget_financing_banks.
+      BUDGET_FINANCING_INTL_ORGANIZATIONS:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin budget-financing sheets ("табл 20 кв" by counterparty
+          sector, "табл 21 кв" by financial instrument) -- the last two substantive unmined sheets
+          from the 49-sheet enumeration. TWO hazards, both handled explicitly:
+          (1) The sheets carry TWO side-by-side column groups -- state budget in columns 1-19 and
+          the republican budget repeating the same period layout in columns 20-38. The group
+          boundary is located from the header row, never hardcoded, so the two budgets cannot be
+          silently mixed. Only the STATE budget group is published.
+          (2) The quarterly columns are PER-QUARTER FLOWS, NOT year-to-date cumulative. This was
+          established rather than assumed, and the plausible-looking "magnitudes resemble the
+          annual columns, so Q4 is the year total" reading is WRONG: summing the four quarters
+          reproduces the already-connected STATE_BUDGET_DEFICIT to the cent for 2023 (2,811,100.59),
+          2024 (3,586,041.85) and 2025 (4,383,871.07) -- financing exactly covers the deficit.
+          Also verified: domestic + external = total, 0.00 difference in every quarter.
+          Note the sheet name "табл 21 кв " carries a TRAILING SPACE, so sheets are matched on a
+          stripped prefix. Annual columns for 2018-2022 also exist in these sheets but are a
+          different frequency and are deliberately NOT spliced onto the quarterly series.
+          14 quarterly points, 2023-Q1 to 2026-Q2. fetch_budget_financing_intl_organizations.
       GOV_DEBT:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=261&activities=14610"

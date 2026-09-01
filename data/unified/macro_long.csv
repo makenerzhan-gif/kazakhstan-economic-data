@@ -6659,6 +6659,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-03-01,KZ,national,monthly,REMITTANCES_SENT_KZT,23291.88996862,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-03-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6203.18378638,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-03-01,KZ,national,monthly,REMITTANCES_SENT_USD,44402.36360312,million KZT,nbk,2026-09-01,level,2026-09-01
+2023-03-31,KZ,national,quarterly,BUDGET_FINANCING_BANKS,895406.5905271001,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-03-31,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,418017.00788573,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-03-31,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,-35827.698956550004,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-03-31,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,-44337.9314908,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-03-31,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,241522.33122000005,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-03-31,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,382189.30892918,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2023-03-31,KZ,national,quarterly,GDP_NOMINAL,23582637000000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
 2023-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.8,% of labor force,bns,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,BANK_ROA,5.08,%,nbk,2026-09-01,level,2026-09-01
@@ -6883,6 +6889,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-06-01,KZ,national,monthly,REMITTANCES_SENT_KZT,25578.31769807,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-06-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6370.20703615,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-06-01,KZ,national,monthly,REMITTANCES_SENT_USD,55621.66572783,million KZT,nbk,2026-09-01,level,2026-09-01
+2023-06-30,KZ,national,quarterly,BUDGET_FINANCING_BANKS,1717939.86949314,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-06-30,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,1111614.68020404,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-06-30,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,137571.17877586,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-06-30,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,142958.63756759,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-06-30,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,1252048.2134678098,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-06-30,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,1249185.8589798997,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2023-06-30,KZ,national,quarterly,GDP_NOMINAL,47244671500000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
 2023-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-09-01,level,2026-09-01
 2023-07-01,KZ,national,quarterly,BANK_ROA,5.19,%,nbk,2026-09-01,level,2026-09-01
@@ -7114,6 +7126,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-09-01,KZ,national,monthly,REMITTANCES_SENT_KZT,26553.34549417,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-09-01,KZ,national,monthly,REMITTANCES_SENT_RUB,7407.80187109,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-09-01,KZ,national,monthly,REMITTANCES_SENT_USD,59026.99769424,million KZT,nbk,2026-09-01,level,2026-09-01
+2023-09-30,KZ,national,quarterly,BUDGET_FINANCING_BANKS,512191.7640182604,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-09-30,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,788753.1576603805,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-09-30,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,-196505.5894,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-09-30,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,-100097.21039999998,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-09-30,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,370774.6680679901,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-09-30,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,592247.5682603805,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2023-09-30,KZ,national,quarterly,GDP_NOMINAL,75546820300000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
 2023-09-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,BANK_ROA,5.16,%,nbk,2026-09-01,level,2026-09-01
@@ -7354,6 +7372,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,AVG_WAGE,364295.0,KZT,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,BIRTHS_TOTAL,388428.0,persons,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,BUDGET_DEFICIT,-3120850.28546301,million KZT,minfin,2026-09-01,level,2026-09-01
+2023-12-31,KZ,national,quarterly,BUDGET_FINANCING_BANKS,152597.5937606995,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-12-31,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,903445.8565542502,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-12-31,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,-315967.99780625995,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-12-31,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,-56918.329300110054,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-12-31,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,160702.58095640037,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2023-12-31,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,587477.8587479903,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,12448870500000.0,KZT,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,36821377300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2023-12-31,KZ,national,annual,COMPUTERS_INTERNET_CONNECTED,1023625.0,units,bns,2026-09-01,level,2026-09-01
@@ -7737,6 +7761,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-03-01,KZ,national,monthly,REMITTANCES_SENT_KZT,21758.56393122,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-03-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6627.34884936,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-03-01,KZ,national,monthly,REMITTANCES_SENT_USD,30715.72586999,million KZT,nbk,2026-09-01,level,2026-09-01
+2024-03-31,KZ,national,quarterly,BUDGET_FINANCING_BANKS,928581.9325015999,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-03-31,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,381660.56728928,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-03-31,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,-110347.71163189001,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-03-31,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,-109871.14630338999,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-03-31,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,812385.61813387,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-03-31,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,271312.85565738997,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2024-03-31,KZ,national,quarterly,GDP_NOMINAL,26023903800000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
 2024-03-31,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,BANK_ROA,4.95,%,nbk,2026-09-01,level,2026-09-01
@@ -7976,6 +8006,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-01,KZ,national,monthly,REMITTANCES_SENT_KZT,23657.8241493,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-06-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6415.04816917,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-06-01,KZ,national,monthly,REMITTANCES_SENT_USD,42797.07629576,million KZT,nbk,2026-09-01,level,2026-09-01
+2024-06-30,KZ,national,quarterly,BUDGET_FINANCING_BANKS,1001449.8297719599,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-06-30,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,732485.5298125099,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-06-30,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,-37784.06406400999,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-06-30,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,-39010.08709452003,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-06-30,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,946265.2179366499,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-06-30,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,694701.4657485,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2024-06-30,KZ,national,quarterly,GDP_NOMINAL,52342740300000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
 2024-06-30,KZ,national,quarterly,UNEMPLOYMENT,4.7,% of labor force,bns,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.289872,% of GDP,nbk,2026-09-01,level,2026-09-01
@@ -8213,6 +8249,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-01,KZ,national,monthly,REMITTANCES_SENT_KZT,13392.66923827,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-09-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6661.93739726,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-09-01,KZ,national,monthly,REMITTANCES_SENT_USD,43590.166721621,million KZT,nbk,2026-09-01,level,2026-09-01
+2024-09-30,KZ,national,quarterly,BUDGET_FINANCING_BANKS,1408860.8460293403,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-09-30,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,1184891.7911424702,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-09-30,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,-92950.13537438001,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-09-30,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,-94414.12202318996,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-09-30,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,1019705.7262130701,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-09-30,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,1091941.6557680902,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2024-09-30,KZ,national,quarterly,GDP_NOMINAL,84962626100000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
 2024-09-30,KZ,national,quarterly,UNEMPLOYMENT,4.6,% of labor force,bns,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.698363,% of GDP,nbk,2026-09-01,level,2026-09-01
@@ -8456,6 +8498,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,AVG_WAGE,405416.0,KZT,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,BIRTHS_TOTAL,365923.0,persons,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,BUDGET_DEFICIT,-3648890.50318894,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-12-31,KZ,national,quarterly,BUDGET_FINANCING_BANKS,214882.05279849004,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-12-31,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,994933.1664410699,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-12-31,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,533152.7097693301,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-12-31,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,531140.07071926,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-12-31,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,124990.8274763599,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2024-12-31,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,1528085.8762104001,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,14396607800000.0,KZT,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,42403123300000.0,KZT,bns,2026-09-01,level,2026-09-01
 2024-12-31,KZ,national,annual,COMPUTERS_INTERNET_CONNECTED,1092530.0,units,bns,2026-09-01,level,2026-09-01
@@ -8857,6 +8905,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,REMITTANCES_SENT_RUB,5103.06103454,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-03-01,KZ,national,monthly,REMITTANCES_SENT_USD,18917.559605767,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-03-11,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-09-01,level,2026-09-01
+2025-03-31,KZ,national,quarterly,BUDGET_FINANCING_BANKS,653408.38420761,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-03-31,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,-702.522268980043,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-03-31,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,-77292.63224846999,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-03-31,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,-74988.84902248999,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-03-31,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,1134831.99426041,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-03-31,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,-77995.15451745004,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2025-03-31,KZ,national,irregular,CUSTOMS_DUTIES,391451.48775773,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2025-03-31,KZ,national,quarterly,GDP_NOMINAL,30467333700000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
 2025-03-31,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-337893.34243903897,million KZT,minfin,2026-09-01,level,2026-09-01
@@ -9116,6 +9170,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6202.43059267,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-06-01,KZ,national,monthly,REMITTANCES_SENT_USD,18805.562089945,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-06-09,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-09-01,level,2026-09-01
+2025-06-30,KZ,national,quarterly,BUDGET_FINANCING_BANKS,1070014.22437744,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-06-30,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,1148015.9800942603,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-06-30,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,-72234.54127498997,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-06-30,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,-68969.69157202997,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-06-30,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,1096339.6199897302,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-06-30,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,1075781.4388192703,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2025-06-30,KZ,national,irregular,CUSTOMS_DUTIES,1002267.64682282,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2025-06-30,KZ,national,quarterly,GDP_NOMINAL,61371821900000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
 2025-06-30,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-1936306.6720745338,million KZT,minfin,2026-09-01,level,2026-09-01
@@ -9400,6 +9460,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-01,KZ,national,monthly,REMITTANCES_SENT_RUB,6770.48719008,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-09-01,KZ,national,monthly,REMITTANCES_SENT_USD,24737.672303524,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-09-02,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-09-01,level,2026-09-01
+2025-09-30,KZ,national,quarterly,BUDGET_FINANCING_BANKS,1378987.3618139394,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-09-30,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,1083374.6466171192,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-09-30,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,-81070.62895453998,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-09-30,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,-80732.18814048005,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-09-30,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,1083660.4554077294,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-09-30,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,1002304.0176625791,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2025-09-30,KZ,national,irregular,CUSTOMS_DUTIES,1623527.8836656,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2025-09-30,KZ,national,quarterly,GDP_NOMINAL,99724898500000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
 2025-09-30,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,2420012.540493233,million KZT,minfin,2026-09-01,level,2026-09-01
@@ -9677,6 +9743,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,AVG_WAGE,443315.0,KZT,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,BIRTHS_TOTAL,335005.0,persons,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,BUDGET_DEFICIT,-4065222.8754779,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-12-31,KZ,national,quarterly,BUDGET_FINANCING_BANKS,729751.5336546306,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-12-31,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,1630278.8705836413,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-12-31,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,753501.8935789998,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-12-31,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,-53103.99076799996,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-12-31,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,891345.2481182907,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2025-12-31,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,2383780.764162641,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,CAPITAL_CONSUMPTION,16924065500000.0,KZT,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,COMPENSATION_EMPLOYEES,49384094700000.0,KZT,bns,2026-09-01,level,2026-09-01
 2025-12-31,KZ,national,annual,CONSTRUCTION,10846962615000.0,KZT,bns,2026-09-01,level,2026-09-01
@@ -10091,6 +10163,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-28,KZ,national,daily,TONIA,17.81,%,nbk,2026-09-01,level,2026-09-01
 2026-03-29,KZ,national,daily,TONIA,17.81,%,nbk,2026-09-01,level,2026-09-01
 2026-03-30,KZ,national,daily,TONIA,17.81,%,nbk,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,BUDGET_FINANCING_BANKS,776687.8649514401,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,482264.72980344994,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,-90125.68172990001,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,-83765.43717707001,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,983313.11098281,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,392139.04807354993,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,irregular,CUSTOMS_DUTIES,360761.31747095,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,quarterly,GDP_NOMINAL,34102358100000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
 2026-03-31,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,97830.27543000001,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
@@ -10449,6 +10527,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-27,KZ,national,daily,TONIA,16.83,%,nbk,2026-09-01,level,2026-09-01
 2026-06-28,KZ,national,daily,TONIA,16.83,%,nbk,2026-09-01,level,2026-09-01
 2026-06-29,KZ,national,daily,TONIA,16.83,%,nbk,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,quarterly,BUDGET_FINANCING_BANKS,1461605.8187005399,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,1788131.8086110405,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,95678.74807691004,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,-142951.75581631996,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,1025861.1509587801,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,1883810.5566879504,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,CUSTOMS_DUTIES,1164587.90739074,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,quarterly,GDP_NOMINAL,70948693300000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
 2026-06-30,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,455695.2147,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01

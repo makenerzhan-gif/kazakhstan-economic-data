@@ -1717,3 +1717,42 @@ padded.
 
 **316/316 confirmed indicators connected end-to-end** (65/65 Minfin re-verified live).
 `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — forty-fourth batch: budget financing flows (316 -> 322)
+The last two substantive unmined sheets — "табл 20 кв" (financing by counterparty sector)
+and "табл 21 кв" (by financial instrument). With these, the Minfin bulletin enumeration is
+worked through.
+
+**Minfin (6), 14 quarterly points each, 2023-Q1 to 2026-Q2:** BUDGET_FINANCING_TOTAL,
+_DOMESTIC, _EXTERNAL, _LONG_TERM_BONDS, _BANKS (who actually funds the deficit) and
+_INTL_ORGANIZATIONS.
+
+### The reading that would have been wrong
+These sheets mix annual columns (2018-2022) with quarterly ones (2023 onward), and the
+quarterly magnitudes *look* like the annual ones — which invites reading Q4 as the year
+total and the quarters as year-to-date cumulative. **That reading is wrong.** The columns are
+PER-QUARTER flows.
+
+This was settled against an independent series rather than by inspection: summing the four
+quarters of each year reproduces the already-connected STATE_BUDGET_DEFICIT **to the cent**
+— 2023: 2,811,100.59, 2024: 3,586,041.85, 2025: 4,383,871.07, each matching the published
+deficit exactly (|sum + deficit| = 0.00). Financing covers the deficit, three years running.
+Had the cumulative reading been used, every published value from 2023 on would have been
+wrong, and nothing about the numbers themselves would have looked odd.
+
+A second check also passed exactly: domestic + external = total, 0.00 difference in every
+quarter.
+
+### Two structural hazards handled
+- **Two side-by-side column groups.** Columns 1-19 are the STATE budget; columns 20-38
+  repeat the identical period layout for the REPUBLICAN budget. Reading a column index
+  without establishing its group would silently mix two different budgets. The boundary is
+  located from the header row, never hardcoded, and only the state-budget group is published.
+- **A sheet name with a trailing space** — `'табл 21 кв '` — which is what made an earlier
+  lookup fail with a KeyError. Sheets are now matched on a stripped prefix.
+
+The 2018-2022 annual columns are deliberately **not** spliced onto the quarterly series:
+different frequency, and combining them would misrepresent both.
+
+**322/322 confirmed indicators connected end-to-end** (71/71 Minfin re-verified live).
+`pytest tests/ -q` — 29/29 passing.

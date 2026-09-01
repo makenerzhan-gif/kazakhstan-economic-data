@@ -2516,3 +2516,246 @@ def fetch_local_housing_utilities_expenditure() -> tuple[list[dict], dict]:
         "LOCAL_HOUSING_UTILITIES_EXPENDITURE",
         "Million KZT. Housing and communal services spending from local budgets.",
     )
+
+
+# ---------------------------------------------------------------------------
+# BUDGET FINANCING flows: Statistical Bulletin sheets "табл 20 кв" (by sector
+# and residency of the counterparty) and "табл 21 кв" (by financial
+# instrument), the last two substantive unmined sheets from the 49-sheet
+# enumeration.
+#
+# Layout has two hazards, both handled explicitly:
+#
+# 1. TWO COLUMN GROUPS side by side. Columns 1..19 are the STATE budget
+#    (Мемлекеттік бюджет / Государственный бюджет) and columns 20..38 repeat
+#    the identical period layout for the REPUBLICAN budget. Reading a column
+#    index without establishing which group it belongs to would silently mix
+#    two different budgets. The group boundary is located from the header row
+#    rather than hardcoded.
+#
+# 2. The quarterly columns are PER-QUARTER FLOWS, NOT year-to-date cumulative.
+#    This was established, not assumed -- and the obvious "the magnitudes look
+#    like the annual columns, so Q4 must be the year total" reading is WRONG.
+#    Summing the four quarters of each year reproduces the already-connected
+#    STATE_BUDGET_DEFICIT exactly:
+#       2023: 382,189.3 + 1,249,185.9 + 592,247.6 + 587,477.9 = 2,811,100.7
+#             vs published deficit -2,811,100.59
+#       2024: 271,312.9 + 694,701.5 + 1,091,941.7 + 1,528,085.9 = 3,586,042.0
+#             vs published deficit -3,586,041.85
+#       2025: -77,995.2 + 1,075,781.4 + 1,002,304.0 + 2,383,780.8 = 4,383,871.0
+#             vs published deficit -4,383,871.07
+#    i.e. financing exactly covers the deficit, three years running.
+#
+# Only the QUARTERLY columns (2023Q1 onward) are published. The sheets also
+# carry annual columns for 2018-2022, but those are a different frequency and
+# are deliberately not spliced onto the quarterly series.
+# ---------------------------------------------------------------------------
+FINANCING_ANNUAL_RE = re.compile(r"(\d{4})\s*ж\.\s*есеп")
+FINANCING_QUARTER_RE = re.compile(r"(\d{4})\s*ж\..*?(\d)\s*тоқсан", re.DOTALL)
+FINANCING_QUARTER_END = {1: "03-31", 2: "06-30", 3: "09-30", 4: "12-31"}
+STATE_BUDGET_MARKER = "Мемлекеттік бюджет"
+REPUBLICAN_BUDGET_MARKER = "Республикалық бюджет"
+
+
+def _fetch_budget_financing_row(sheet_prefix: str, kazakh_label: str, russian_marker: str,
+                                 indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    docs = _list_documents(directions=BUDGET_DIRECTION_ID)
+    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    if not bulletins:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: no bulletin document under directions={BUDGET_DIRECTION_ID}",
+                f"ACTION REQUIRED: inspect {LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
+            ])
+        )
+    doc = bulletins[0]
+    file_path = doc["full_text"][0]["document"]
+    content = _download(file_path)
+
+    today = date.today()
+    ext = "xls" if file_path.lower().endswith(".xls") else "xlsx"
+    raw_store.save_raw_bytes(SOURCE, indicator_id, today, ext, content)
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "source_document_id": doc["id"], "source_title": doc.get("title"),
+        "source_url": GOV_KZ_BASE + file_path,
+    })
+
+    kind, wb = _open_workbook(content, file_path)
+    sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
+    # NB: one of these sheets is named with a TRAILING SPACE ('табл 21 кв '),
+    # so match on a stripped prefix rather than equality.
+    target_sheet = next((s for s in sheet_names if s.strip().startswith(sheet_prefix)), None)
+    if target_sheet is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: no sheet whose stripped name starts with {sheet_prefix!r}",
+                f"ACTUAL sheets: {sheet_names}",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path}",
+            ])
+        )
+
+    rows = list(_iter_rows(kind, wb, target_sheet))
+
+    # Establish the STATE-budget column range from the group header row.
+    state_col = rep_col = None
+    for r in rows[:12]:
+        for j, c in enumerate(r):
+            if isinstance(c, str):
+                if state_col is None and STATE_BUDGET_MARKER in c:
+                    state_col = j
+                if rep_col is None and REPUBLICAN_BUDGET_MARKER in c:
+                    rep_col = j
+        if state_col is not None and rep_col is not None:
+            break
+    if state_col is None or rep_col is None or rep_col <= state_col:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                "WHAT CHANGED: could not locate the two budget column groups "
+                f"({STATE_BUDGET_MARKER!r} then {REPUBLICAN_BUDGET_MARKER!r}) in sheet {target_sheet!r}",
+                f"ACTUAL: state_col={state_col}, republican_col={rep_col}",
+                "EXPECTED: state budget group starts left of the republican group; without this "
+                "boundary the two budgets would be silently mixed",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path}",
+            ])
+        )
+
+    # Period header row: the one with the most quarter labels.
+    period_row, quarters = None, {}
+    for r in rows[:14]:
+        found = {}
+        for j, c in enumerate(r):
+            if not isinstance(c, str):
+                continue
+            m = FINANCING_QUARTER_RE.search(c)
+            if m and state_col <= j < rep_col:
+                q = int(m.group(2))
+                if q in FINANCING_QUARTER_END:
+                    found[j] = (int(m.group(1)), q)
+        if len(found) > len(quarters):
+            period_row, quarters = r, found
+    if len(quarters) < 4:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: fewer than 4 quarterly columns inside the state-budget group "
+                f"(cols {state_col}..{rep_col - 1}) of sheet {target_sheet!r}",
+                f"ACTUAL: {len(quarters)}",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path}",
+            ])
+        )
+
+    target_row = next((r for r in rows
+                       if r and isinstance(r[0], str) and r[0].strip().startswith(kazakh_label)), None)
+    if target_row is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: no row whose first cell starts with {kazakh_label!r} in {target_sheet!r}",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path}",
+            ])
+        )
+
+    russian_text = " ".join(str(c) for c in target_row if isinstance(c, str))
+    if russian_marker.lower() not in russian_text.lower():
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: the row starting {kazakh_label!r} no longer carries its expected "
+                f"Russian label {russian_marker!r}",
+                f"ACTUAL text: {russian_text[:200]!r}",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path}",
+            ])
+        )
+
+    records = []
+    for col, (year, q) in sorted(quarters.items()):
+        value = target_row[col] if col < len(target_row) else None
+        if value in (None, ""):
+            continue
+        try:
+            v = float(value)
+        except (TypeError, ValueError):
+            continue
+        records.append({"date": f"{year:04d}-{FINANCING_QUARTER_END[q]}", "value": v})
+
+    if not records:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: no quarterly values parsed for row {kazakh_label!r}",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path}",
+            ])
+        )
+
+    records.sort(key=lambda r: r["date"])
+    return records, {
+        "frequency": "quarterly",
+        "source_url": GOV_KZ_BASE + file_path,
+        "dataset_id": f"statistical-bulletin/{target_sheet}/state-budget/{kazakh_label}",
+        "note": note,
+    }
+
+
+def fetch_budget_financing_total() -> tuple[list[dict], dict]:
+    """State budget financing, total (million KZT, per quarter)."""
+    return _fetch_budget_financing_row(
+        "табл 21", "МІНДЕТТЕМЕЛЕР", "ОБЯЗАТЕЛЬСТВА",
+        "BUDGET_FINANCING_TOTAL",
+        "Million KZT, flow during the quarter (NOT year-to-date). Total financing of the STATE "
+        "budget through incurring liabilities. The four quarters of a year sum to that year's "
+        "STATE_BUDGET_DEFICIT -- verified for 2023, 2024 and 2025.",
+    )
+
+
+def fetch_budget_financing_domestic() -> tuple[list[dict], dict]:
+    """State budget financing from domestic sources (million KZT, per quarter)."""
+    return _fetch_budget_financing_row(
+        "табл 21", "Ішкі", "нутренние",
+        "BUDGET_FINANCING_DOMESTIC",
+        "Million KZT, flow during the quarter. DOMESTIC financing of the state budget. With "
+        "BUDGET_FINANCING_EXTERNAL this sums to BUDGET_FINANCING_TOTAL.",
+    )
+
+
+def fetch_budget_financing_external() -> tuple[list[dict], dict]:
+    """State budget financing from external sources (million KZT, per quarter)."""
+    return _fetch_budget_financing_row(
+        "табл 21", "Сыртқы", "нешние",
+        "BUDGET_FINANCING_EXTERNAL",
+        "Million KZT, flow during the quarter. EXTERNAL financing of the state budget -- "
+        "frequently negative, i.e. net repayment to foreign creditors.",
+    )
+
+
+def fetch_budget_financing_long_term_bonds() -> tuple[list[dict], dict]:
+    """State budget financing via long-term bonds (million KZT, per quarter)."""
+    return _fetch_budget_financing_row(
+        "табл 21", "Ұзақ мерзімді облигациялар", "Долгосрочные облигации",
+        "BUDGET_FINANCING_LONG_TERM_BONDS",
+        "Million KZT, flow during the quarter. Financing raised through LONG-TERM bonds -- the "
+        "dominant domestic instrument.",
+    )
+
+
+def fetch_budget_financing_banks() -> tuple[list[dict], dict]:
+    """State budget financing from deposit corporations (million KZT, per quarter)."""
+    return _fetch_budget_financing_row(
+        "табл 20", "Депозиттік корпорациялар", "Депозитные корпорации",
+        "BUDGET_FINANCING_BANKS",
+        "Million KZT, flow during the quarter. Financing provided by DEPOSIT CORPORATIONS "
+        "(banks) -- who is actually funding the deficit, from the counterparty-sector table.",
+    )
+
+
+def fetch_budget_financing_intl_organizations() -> tuple[list[dict], dict]:
+    """State budget financing from international organizations (million KZT, per quarter)."""
+    return _fetch_budget_financing_row(
+        "табл 20", "Халықаралық ұйымдар", "еждународные организации",
+        "BUDGET_FINANCING_INTL_ORGANIZATIONS",
+        "Million KZT, flow during the quarter. Financing from INTERNATIONAL ORGANIZATIONS "
+        "(IBRD, ADB and similar) -- the main external counterparty group.",
+    )
