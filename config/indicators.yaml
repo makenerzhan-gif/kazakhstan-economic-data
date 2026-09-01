@@ -2561,6 +2561,51 @@ indicators:
     category: prices
     source_status: confirmed
 
+  - id: OIL_PRICE
+    name_ru: "Цена нефти (APSP, МВФ)"
+    name_en: "Crude Oil Price (IMF APSP)"
+    agency: imf
+    frequency: monthly
+    unit: "USD per barrel"
+    category: prices
+    source_status: confirmed
+
+  - id: COMMODITY_TERMS_OF_TRADE
+    name_ru: "Условия торговли по сырью (скользящие веса)"
+    name_en: "Commodity Terms of Trade (rolling weights)"
+    agency: imf
+    frequency: monthly
+    unit: "index"
+    category: trade
+    source_status: confirmed
+
+  - id: COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS
+    name_ru: "Условия торговли по сырью (фиксированные веса)"
+    name_en: "Commodity Terms of Trade (fixed weights)"
+    agency: imf
+    frequency: monthly
+    unit: "index"
+    category: trade
+    source_status: confirmed
+
+  - id: OIL_EXPORT_DUTY
+    name_ru: "Вывозная таможенная пошлина на сырую нефть"
+    name_en: "Crude Oil Export Customs Duty"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
+
+  - id: OIL_PRODUCTS_EXPORT_DUTY
+    name_ru: "Вывозная пошлина на товары из нефти"
+    name_en: "Export Duty on Petroleum Products"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT, year-to-date cumulative"
+    category: fiscal
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

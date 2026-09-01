@@ -89,6 +89,8 @@ FETCHERS = {
     "BUDGET_FINANCING_LONG_TERM_BONDS": minfin_fetchers.fetch_budget_financing_long_term_bonds,
     "BUDGET_FINANCING_BANKS": minfin_fetchers.fetch_budget_financing_banks,
     "BUDGET_FINANCING_INTL_ORGANIZATIONS": minfin_fetchers.fetch_budget_financing_intl_organizations,
+    "OIL_EXPORT_DUTY": minfin_fetchers.fetch_oil_export_duty,
+    "OIL_PRODUCTS_EXPORT_DUTY": minfin_fetchers.fetch_oil_products_export_duty,
 }
 
 INDICATOR_IDS = [
@@ -131,6 +133,8 @@ INDICATOR_IDS = [
     "BUDGET_FINANCING_LONG_TERM_BONDS",
     "BUDGET_FINANCING_BANKS",
     "BUDGET_FINANCING_INTL_ORGANIZATIONS",
+    "OIL_EXPORT_DUTY",
+    "OIL_PRODUCTS_EXPORT_DUTY",
 ]
 
 

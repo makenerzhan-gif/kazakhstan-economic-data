@@ -1,0 +1,21 @@
+{
+  "source": "imf",
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/PCPS/9.0.0/G001.POILAPSP.USD.M",
+  "dataset_id": "PCPS/9.0.0/G001.POILAPSP.USD.M",
+  "indicator_id": "OIL_PRICE",
+  "indicator_name": "Crude Oil Price (IMF APSP)",
+  "description": "Цена нефти (APSP, МВФ)",
+  "frequency": "monthly",
+  "unit": "USD per barrel",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "IMF World Economic Outlook (WEO), biannual exercise (April/October vintages)",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "1992-01-31",
+  "period_end": "2026-07-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

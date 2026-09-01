@@ -2759,3 +2759,48 @@ def fetch_budget_financing_intl_organizations() -> tuple[list[dict], dict]:
         "Million KZT, flow during the quarter. Financing from INTERNATIONAL ORGANIZATIONS "
         "(IBRD, ADB and similar) -- the main external counterparty group.",
     )
+
+
+# ---------------------------------------------------------------------------
+# OIL_EXPORT_DUTY / OIL_PRODUCTS_EXPORT_DUTY: found 2026-09-01 in sheet "табл 4"
+# by scanning every sheet of the bulletin for rows mentioning oil. Kazakhstan is
+# an oil exporter and the dataset carried no oil-linked budget revenue at all.
+#
+# What the scan actually showed matters for how these are named. Almost every
+# oil-mentioning row in the budget classification is a NON-oil variant -- "Мұнай
+# секторы ұйымдарынан түсетін түсімдерді қоспағанда", i.e. "excluding receipts
+# from oil sector organisations". The source does not publish a single
+# "oil revenue of the budget" total line. These two rows are the exception:
+# unambiguous, directly oil-linked revenue items. They are therefore named for
+# exactly what they are -- export customs duties -- and NOT presented as total
+# oil revenue, which would overstate what the source provides.
+#
+# Same column layout as LAND_TAX in this sheet: Kazakh label in column 4, value
+# in column 5, Russian label in column 6. Matched on the Kazakh label because
+# this sheet's row padding varies between vintages and its Russian labels have
+# been seen with Latin/Cyrillic letter substitutions.
+# ---------------------------------------------------------------------------
+OIL_EXPORT_DUTY_KZ_LABEL = "Мұнайға салынатын кедендік әкету бажы"
+OIL_PRODUCTS_EXPORT_DUTY_KZ_LABEL = "Мұнайдан өндірілген тауарларға салынатын кедендік әкету бажы"
+
+
+def fetch_oil_export_duty() -> tuple[list[dict], dict]:
+    """Export customs duty on CRUDE OIL, state budget, million KZT,
+    year-to-date cumulative."""
+    return _fetch_bulletin_row(
+        BULLETIN_STATE_REVENUE_SHEET_NAME,
+        lambda r: len(r) > 4 and isinstance(r[4], str) and r[4].strip() == OIL_EXPORT_DUTY_KZ_LABEL,
+        "OIL_EXPORT_DUTY",
+        value_col=5,
+    )
+
+
+def fetch_oil_products_export_duty() -> tuple[list[dict], dict]:
+    """Export customs duty on goods produced from oil, state budget, million
+    KZT, year-to-date cumulative."""
+    return _fetch_bulletin_row(
+        BULLETIN_STATE_REVENUE_SHEET_NAME,
+        lambda r: len(r) > 4 and isinstance(r[4], str) and r[4].strip() == OIL_PRODUCTS_EXPORT_DUTY_KZ_LABEL,
+        "OIL_PRODUCTS_EXPORT_DUTY",
+        value_col=5,
+    )

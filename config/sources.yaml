@@ -3469,6 +3469,36 @@ agencies:
           auction date, no aggregation), provided a documented rule is adopted for same-date
           same-maturity collisions. That rule is a decision for the data owner, not something to
           pick silently here.
+      OIL_EXPORT_DUTY:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 4"
+        format: xlsx
+        notes: >
+          2026-09-01. Found by scanning EVERY sheet of the bulletin for rows mentioning oil,
+          after the audit flagged that the dataset carried no oil-linked budget revenue at all.
+          What the scan showed shapes the naming: almost every oil-mentioning row in the budget
+          classification is a NON-oil variant -- 'Мұнай секторы ұйымдарынан түсетін
+          түсімдерді қоспағанда', i.e. 'excluding receipts from oil sector organisations'.
+          THE SOURCE DOES NOT PUBLISH A SINGLE 'OIL REVENUE OF THE BUDGET' TOTAL. These two rows
+          are the exception -- unambiguous, directly oil-linked revenue -- so they are named for
+          exactly what they are, export customs duties, and are NOT presented as total oil
+          revenue, which would overstate what the source provides.
+          Same column layout as LAND_TAX in this sheet: Kazakh label in column 4, value in
+          column 5, Russian label in column 6. Matched on the KAZAKH label because this sheet's
+          row padding varies between vintages and its Russian labels have been seen with
+          Latin/Cyrillic letter substitutions. 13 vintages parsed; 2026 runs 24,693 (Jan) to
+          901,338 (Jun), monotonic as year-to-date cumulation requires. fetch_oil_export_duty.
+      OIL_PRODUCTS_EXPORT_DUTY:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 4"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet, row and method as OIL_EXPORT_DUTY, for goods produced from
+          oil rather than crude. Two orders of magnitude smaller (10,130 against 901,338 million
+          KZT for Jan-Jun 2026), which is the expected shape for a refined-product duty.
+          fetch_oil_products_export_duty.
       GOV_DEBT:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=261&activities=14610"
@@ -4298,6 +4328,53 @@ agencies:
     access_type: api
     protection: none
     endpoints:
+      OIL_PRICE:
+        status: confirmed
+        download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/PCPS/9.0.0/G001.POILAPSP.USD.M"
+        format: csv
+        notes: >
+          2026-09-01. Closes the audit's largest single gap: Kazakhstan is an oil exporter and
+          the dataset carried NO oil price at all, so nothing linked world prices to exports,
+          the budget or the National Fund. Found by listing /structure/dataflow/IMF.RES, which
+          holds PCPS (Primary Commodity Price System) and CTOT alongside the WEO flow already
+          in use.
+          IMPORTANT about key discovery: this API answers a WRONG series key with HTTP 200 and
+          an EMPTY body, not an error -- so a mistyped key looks like a working request that
+          found nothing. Five plausible keys (W00.POILBRE..M and variants) all came back 200
+          with only a header. The real key was read off a full wildcard download: dimension
+          order is COUNTRY.INDICATOR.DATA_TRANSFORMATION.FREQUENCY and COUNTRY is the aggregate
+          G001, not a country code. The parser now says so in its error text.
+          The series is APSP -- the Average Petroleum Spot Price, a simple average of Brent,
+          Dubai Fateh and WTI. PCPS carries NO standalone Brent series: its indicator codelist
+          was checked and the only crude entries are POILAPSP and POPEC (OPEC basket); every
+          other *OIL* code is an edible oil (coconut, olive, palm, rapeseed, soybean).
+          A world price, NOT a Kazakhstan export price -- KEBCO trades at a differential to
+          Brent that this series does not capture. 415 monthly points, 1992-01 to 2026-07.
+          fetch_oil_price.
+      COMMODITY_TERMS_OF_TRADE:
+        status: confirmed
+        download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/CTOT/5.0.1/KAZ.CEMPI_CTOTNX_TT.R_RW_IX.M"
+        format: csv
+        notes: >
+          2026-09-01. IMF Commodity Terms of Trade, dataflow CTOT 5.0.1, dimension order
+          COUNTRY.INDICATOR.WGT_TYPE.FREQUENCY. 24 series exist for KAZ; the terms-of-trade
+          one is CEMPI_CTOTNX_TT.
+          This is COMMODITY terms of trade, not overall terms of trade -- it covers the
+          commodity basket only and says nothing about manufactured trade. The audit item it
+          partially answers asked for the broader measure, which this is not.
+          The source publishes rolling-weight and fixed-weight variants. Rather than pick one
+          silently, BOTH are connected: rolling weights here, fixed weights as
+          COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS. Rolling weights suit a series running from
+          1992 because a 1992 export basket misrepresents today's. 413 monthly points,
+          1992-01 to 2026-05. fetch_commodity_terms_of_trade.
+      COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS:
+        status: confirmed
+        download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/CTOT/5.0.1/KAZ.CEMPI_CTOTNX_TT.R_FW_IX.M"
+        format: csv
+        notes: >
+          2026-09-01. Fixed-weight variant of COMMODITY_TERMS_OF_TRADE, same dataflow and
+          indicator, WGT_TYPE=R_FW_IX. Carried so the choice between weightings stays visible
+          rather than being made silently. fetch_commodity_terms_of_trade_fixed_weights.
       IMF_GDP_GROWTH:
         status: confirmed
         dataset: WEO

@@ -47,6 +47,9 @@ FETCHERS = {
     "IMF_STRUCTURAL_BALANCE": imf_fetchers.fetch_structural_balance,
     "IMF_CPI_EOP_INDEX": imf_fetchers.fetch_cpi_eop_index,
     "IMF_GDP_PER_CAPITA_NATIONAL": imf_fetchers.fetch_gdp_per_capita_national_currency,
+    "OIL_PRICE": imf_fetchers.fetch_oil_price,
+    "COMMODITY_TERMS_OF_TRADE": imf_fetchers.fetch_commodity_terms_of_trade,
+    "COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS": imf_fetchers.fetch_commodity_terms_of_trade_fixed_weights,
 }
 
 INDICATOR_IDS = [
@@ -61,6 +64,9 @@ INDICATOR_IDS = [
     "IMF_GOV_EXPENDITURE", "IMF_GOV_REVENUE", "IMF_CPI_INDEX",
     "IMF_GOV_BALANCE_LEVEL", "IMF_PPP_EXCHANGE_RATE", "IMF_STRUCTURAL_BALANCE",
     "IMF_CPI_EOP_INDEX", "IMF_GDP_PER_CAPITA_NATIONAL",
+    "OIL_PRICE",
+    "COMMODITY_TERMS_OF_TRADE",
+    "COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS",
 ]
 
 

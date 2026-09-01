@@ -1,0 +1,21 @@
+{
+  "source": "imf",
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/CTOT/5.0.1/KAZ.CEMPI_CTOTNX_TT.R_RW_IX.M",
+  "dataset_id": "CTOT/5.0.1/KAZ.CEMPI_CTOTNX_TT.R_RW_IX.M",
+  "indicator_id": "COMMODITY_TERMS_OF_TRADE",
+  "indicator_name": "Commodity Terms of Trade (rolling weights)",
+  "description": "Условия торговли по сырью (скользящие веса)",
+  "frequency": "monthly",
+  "unit": "index",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "IMF World Economic Outlook (WEO), biannual exercise (April/October vintages)",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "1992-01-31",
+  "period_end": "2026-05-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

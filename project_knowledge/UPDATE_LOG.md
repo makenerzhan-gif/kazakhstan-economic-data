@@ -1874,3 +1874,52 @@ the data is missing.** The per-auction yields are real and could ship as an even
 decided — that is a call for the data owner, not one to make silently.
 
 **Still 324 indicators.** `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — the oil block: partly closed, and the gap named precisely (324 -> 329)
+Fourth item from the audit, and the one it called the largest: Kazakhstan is an oil exporter
+and the dataset contained **nothing about oil** — no price, no production, no oil-linked
+revenue. Five indicators now exist; what is still missing is stated exactly rather than left
+implied.
+
+### IMF (3) — price and commodity terms of trade
+Listing `/structure/dataflow/IMF.RES` turned up two flows sitting beside the WEO one already
+in use: **PCPS** (Primary Commodity Price System) and **CTOT** (Commodity Terms of Trade).
+
+- **OIL_PRICE** — 415 monthly points, 1992-01 to 2026-07, 80.19 USD/bbl. This is IMF's APSP,
+  the average of Brent, Dubai Fateh and WTI. PCPS has **no standalone Brent series**: its
+  indicator codelist was read, and the only crude entries are POILAPSP and POPEC (OPEC
+  basket) — every other `*OIL*` code is an edible oil. Labeled as a **world** price, not a
+  Kazakhstan export price: KEBCO trades at a differential to Brent this does not capture.
+- **COMMODITY_TERMS_OF_TRADE** and **COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS** — 413 monthly
+  points each from 1992. The source publishes rolling- and fixed-weight variants; rather than
+  pick one silently, both are carried. Note this is *commodity* terms of trade, covering the
+  commodity basket only — the audit asked for the broader measure, and this is not it.
+
+**A key-discovery trap worth remembering.** This API answers a WRONG series key with **HTTP
+200 and an empty body**, not an error — so a mistyped key looks like a working request that
+found nothing. Five plausible Brent keys all returned 200 with only a header row. The real key
+was read off a full wildcard download, which also revealed that PCPS's COUNTRY dimension holds
+the aggregate `G001`, not a country code. The parser's error text now says this outright, so
+the next person who hits an empty result is told where to look.
+
+### Minfin (2) — oil-linked budget revenue, named for what it is
+Scanning **every** sheet of the bulletin for oil mentions produced a result that shaped the
+naming: almost every oil-mentioning row in the budget classification is a **non-oil variant**
+— "excluding receipts from oil sector organisations". **The source publishes no single
+"oil revenue of the budget" line.**
+
+Two rows are the exception, and are unambiguous: **OIL_EXPORT_DUTY** (crude oil export customs
+duty, 901,338 million KZT Jan-Jun 2026) and **OIL_PRODUCTS_EXPORT_DUTY** (10,130 million).
+They are named as export duties, **not** presented as total oil revenue, which would overstate
+what the source gives.
+
+### Still missing, stated precisely
+**Oil production volumes are not in BNS's searchable index.** Probed with "нефти", "нефть",
+"сырой", "конденсат", "добыча", "уголь", "уран" — all return zero candidates; "нефт" returns
+ten, every one about retail petroleum products or storage tanks. Crude output is simply not
+reachable through the Taldau search that works for everything else here, and would need a
+different route (energy ministry or an operator). Oil export value and volume are likewise
+absent: the existing EXPORTS series is a single total with no commodity breakdown.
+
+**329/329 indicators** (34/34 IMF and 73/73 Minfin re-verified live).
+`pytest tests/ -q` — 29/29 passing.

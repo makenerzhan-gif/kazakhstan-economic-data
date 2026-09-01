@@ -350,3 +350,151 @@ def fetch_gdp_per_capita_national_currency() -> tuple[list[dict], dict]:
     all returned zero populated rows for Kazakhstan, so none were forced in.)
     """
     return _fetch_weo_series("IMF_GDP_PER_CAPITA_NATIONAL", "WEO", "IMF.RES", "9.0.0", "KAZ", "NGDPPC")
+
+
+# ---------------------------------------------------------------------------
+# Commodity block: crude oil price and commodity terms of trade.
+#
+# Both come from IMF.RES dataflows that sit alongside the WEO one this module
+# already uses, found 2026-09-01 by listing /structure/dataflow/IMF.RES:
+#   PCPS 9.0.0 -- Primary Commodity Price System
+#   CTOT 5.0.1 -- Commodity Terms of Trade
+#
+# The series keys were NOT guessed. Querying a partial key returns HTTP 200 with
+# an empty body rather than an error, so a wrong key looks like a working request
+# that found nothing -- exactly the failure mode that hides mistakes. The keys
+# below were read off a full wildcard download of each dataflow.
+#
+# PCPS dimension order is COUNTRY.INDICATOR.DATA_TRANSFORMATION.FREQUENCY, where
+# COUNTRY is the aggregate G001 (world) rather than a real country. CTOT is
+# COUNTRY.INDICATOR.WGT_TYPE.FREQUENCY.
+# ---------------------------------------------------------------------------
+MONTH_END = {1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30,
+             7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31}
+
+
+def _parse_sdmx_csv(content: bytes, indicator_id: str, source_url: str) -> list[dict]:
+    """Parse an SDMX 2.0 CSV response, handling annual, quarterly and monthly
+    TIME_PERIOD forms (2024, 2024-Q1, 2024-M01)."""
+    rows = list(csv.DictReader(io.StringIO(content.decode("utf-8-sig"))))
+    if not rows:
+        raise ValueError(f"IMF API returned an empty CSV body for {source_url}")
+
+    columns = set(rows[0].keys())
+    date_col = next((c for c in DATE_COL_CANDIDATES if c in columns), None)
+    value_col = next((c for c in VALUE_COL_CANDIDATES if c in columns), None)
+    if date_col is None or value_col is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in imf/{indicator_id}",
+                f"WHAT CHANGED: no recognised date/value column in the CSV response",
+                f"ACTUAL columns: {sorted(columns)}",
+                f"ACTION REQUIRED: inspect {source_url} and update scripts/fetchers/imf.py",
+            ])
+        )
+
+    records = []
+    for row in rows:
+        period = (row.get(date_col) or "").strip()
+        raw = (row.get(value_col) or "").strip()
+        if not period or not raw:
+            continue
+        try:
+            value = float(raw)
+        except ValueError:
+            continue
+        try:
+            if "-M" in period:
+                y, m = period.split("-M")
+                year, month = int(y), int(m)
+                day = MONTH_END[month]
+                if month == 2 and (year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)):
+                    day = 29
+            elif "-Q" in period:
+                y, q = period.split("-Q")
+                year, month = int(y), int(q) * 3
+                day = MONTH_END[month]
+            else:
+                year, month, day = int(period), 12, 31
+        except (ValueError, KeyError):
+            continue
+        records.append({"date": f"{year:04d}-{month:02d}-{day:02d}", "value": value})
+
+    if not records:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in imf/{indicator_id}",
+                "WHAT CHANGED: the response parsed but produced zero usable observations",
+                "EXPECTED: at least one row with a period and a numeric value. NOTE: this API "
+                "answers a WRONG series key with HTTP 200 and an empty body, so an empty result "
+                "usually means the key no longer matches, not that the data is gone",
+                f"ACTION REQUIRED: inspect {source_url} and update scripts/fetchers/imf.py",
+            ])
+        )
+    records.sort(key=lambda r: r["date"])
+    return records
+
+
+def _fetch_sdmx_monthly(indicator_id: str, dataflow: str, version: str, key: str,
+                        note: str) -> tuple[list[dict], dict]:
+    url = f"{BASE_URL}/IMF.RES/{dataflow}/{version}/{key}"
+    content = _download(url)
+
+    today = date.today()
+    raw_store.save_raw_bytes(SOURCE, indicator_id, today, "csv", content)
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
+        "source_url": url, "downloaded_at": datetime.now().isoformat(),
+        "dataflow": dataflow, "version": version, "series_key": key,
+    })
+
+    records = _parse_sdmx_csv(content, indicator_id, url)
+    manifest = {
+        "frequency": "monthly",
+        "source_url": url,
+        "dataset_id": f"{dataflow}/{version}/{key}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def fetch_oil_price() -> tuple[list[dict], dict]:
+    """Crude oil price, US dollars per barrel, monthly.
+
+    IMF's APSP -- the Average Petroleum Spot Price, the simple average of Brent,
+    Dubai Fateh and WTI. PCPS carries no standalone Brent series (checked: the
+    indicator codelist has PCOIL for coconut oil, PHEATOIL, POLVOIL, PPOIL and so
+    on, but the only crude entries are POILAPSP and POPEC, the OPEC basket), so
+    APSP is the reference crude price this source offers.
+
+    This closes the audit's largest single gap: Kazakhstan is an oil exporter and
+    the dataset carried no oil price at all, so nothing linked world prices to
+    exports, the budget or the National Fund.
+    """
+    return _fetch_sdmx_monthly(
+        "OIL_PRICE", "PCPS", "9.0.0", "G001.POILAPSP.USD.M",
+        "US dollars per barrel. IMF APSP crude oil price -- the simple average of Brent, "
+        "Dubai Fateh and West Texas Intermediate. A world price, not a Kazakhstan-specific "
+        "export price: KEBCO sells at a differential to Brent that this series does not "
+        "capture.")
+
+
+def fetch_commodity_terms_of_trade() -> tuple[list[dict], dict]:
+    """Kazakhstan's commodity terms of trade, index, monthly, rolling weights."""
+    return _fetch_sdmx_monthly(
+        "COMMODITY_TERMS_OF_TRADE", "CTOT", "5.0.1", "KAZ.CEMPI_CTOTNX_TT.R_RW_IX.M",
+        "Index. Price of Kazakhstan's commodity exports relative to its commodity imports. "
+        "COMMODITY terms of trade, not overall terms of trade -- it covers the commodity "
+        "basket only, and says nothing about manufactured trade. Rolling-weight variant: the "
+        "export basket is re-weighted over time, which suits a series running from 1992; the "
+        "fixed-weight variant is published separately as "
+        "COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS rather than one being chosen for you.")
+
+
+def fetch_commodity_terms_of_trade_fixed_weights() -> tuple[list[dict], dict]:
+    """Kazakhstan's commodity terms of trade, index, monthly, fixed weights."""
+    return _fetch_sdmx_monthly(
+        "COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS", "CTOT", "5.0.1",
+        "KAZ.CEMPI_CTOTNX_TT.R_FW_IX.M",
+        "Index. The fixed-weight variant of COMMODITY_TERMS_OF_TRADE. Both weightings are "
+        "published by the source; both are carried here so the choice between them stays "
+        "visible rather than being made silently.")
