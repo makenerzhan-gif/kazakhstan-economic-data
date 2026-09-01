@@ -1973,3 +1973,42 @@ evidence for all sheets. The guard caught what my spot-check had missed.
   error — stated rather than smoothed over.
 
 **331/331 indicators** (96/96 BNS re-verified live). `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — oil production found; the second wrong conclusion corrected (331 -> 332)
+Pointed at the right publication by the user. **OIL_PRODUCTION** now exists: crude oil
+including gas condensate, thousand tonnes, monthly.
+
+This is the second negative conclusion in two entries that turned out to be wrong, and the
+reason matters. Oil production genuinely **is** absent from the places that were checked —
+Taldau's full 3,700-indicator catalogue, and the stat.gov.kz industrial cubes, which are
+index-only and stop at 2023. What was not checked was the **publication** layer:
+"Основные показатели работы промышленности Республики Казахстан", sheet 3 ("Произведено
+продукции в натуральном выражении"), row "Нефть, включая конденсат газовый, тыс.тонн".
+
+Enumerating a source's *databases* is not the same as enumerating what it *publishes*. Both
+oil misses came from stopping at the first layer.
+
+### Implementation notes
+- Each edition reports **one month**, in columns [previous month, reporting month, YTD, same
+  month last year, same period last year], so one download yields three monthly points. The
+  YTD columns are a different frequency and are deliberately not mixed in.
+- The site keeps a **short archive** — three monthly editions on 2026-09-01 — so the series
+  is **accumulated across runs** and grows month by month, as EXCHANGE_RATE does. It starts
+  with 7 points and has gaps, which is stated rather than filled.
+- **Element ids are resolved from the page on every run, never hardcoded**: editions are
+  republished under new ids, and the HTML card-to-id mapping proved unreliable when parsed
+  directly. Only workbooks that actually contain the expected sheet and row are used, and the
+  reporting month comes from each file's own cover date rather than from the page text.
+
+### Validated three ways
+- Year-to-date for 2026 reads 53,208 thousand tonnes over seven months (~91 Mt/year) against
+  58,358 for the same period of 2025 (~100 Mt/year) — an 8.8% year-on-year fall, consistent
+  with Kazakhstan cutting back from its 2025 record.
+- ~100 Mt of 2025 output against **OIL_EXPORTS_VOLUME**'s 76.3 Mt for the same year is a 76%
+  export ratio, the rest refined domestically — the right shape for Kazakhstan, and a check
+  that uses an indicator added only an entry earlier.
+- An initial reading of "~91 Mt/year" as the general level was **wrong** and was corrected:
+  it is the 2026 pace, not the 2025 one. Recorded because the first draft of the source note
+  asserted it.
+
+**332/332 indicators** (97/97 BNS re-verified live). `pytest tests/ -q` — 29/29 passing.

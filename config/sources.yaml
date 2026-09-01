@@ -232,6 +232,31 @@ agencies:
           2026-09-01. Same workbook, same HS 270900 rows and the same verified-partition method
           as OIL_EXPORTS_VOLUME, reading the thousand-USD column instead of tonnes. Divide by
           OIL_EXPORTS_VOLUME for an implied realised export price. fetch_oil_exports_value.
+      OIL_PRODUCTION:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
+        format: xlsx
+        notes: >
+          2026-09-01. CORRECTS a second wrong conclusion: earlier passes recorded that BNS does
+          not publish oil production. It is genuinely absent from Taldau's full 3,700-indicator
+          catalogue and from the stat.gov.kz industrial cubes (index-only, stale at 2023) -- but
+          it IS in the monthly publication 'Основные показатели работы промышленности
+          Республики Казахстан', sheet 3 ('Произведено продукции в натуральном выражении'), row
+          'Нефть, включая конденсат газовый, тыс.тонн'.
+          Each edition reports ONE month, in columns [previous month, reporting month, YTD, same
+          month last year, same period last year, ...], so one download yields three monthly
+          points. The YTD columns are a different frequency and are deliberately not mixed in.
+          The site keeps only a SHORT ARCHIVE -- three monthly editions on 2026-09-01 -- so the
+          series is ACCUMULATED across runs and grows month by month, as EXCHANGE_RATE does.
+          It starts with 7 points and has gaps, which is stated rather than filled.
+          Element ids are resolved from the page on every run, never hardcoded: editions are
+          republished under new ids. Only workbooks that actually contain the expected sheet and
+          row are used, and the reporting month comes from each file's own cover date.
+          VALIDATED: the 2026 year-to-date column reads 53,208 thousand tonnes over seven months
+          (~91 Mt/year) against 58,358 for the same period of 2025 (~100 Mt/year), an 8.8%
+          year-on-year fall consistent with Kazakhstan cutting back from its 2025 record. And
+          ~100 Mt of 2025 output against OIL_EXPORTS_VOLUME's 76.3 Mt is a 76%% export ratio,
+          with the rest refined domestically. fetch_oil_production.
       IMPORTS:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/open-data/international-trade/474299/"

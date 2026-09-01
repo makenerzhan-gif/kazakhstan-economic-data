@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/",
+  "dataset_id": "osnovnye-pokazateli-promyshlennosti/sheet-3/neft-vklyuchaya-kondensat",
+  "indicator_id": "OIL_PRODUCTION",
+  "indicator_name": "Crude Oil Production including Gas Condensate",
+  "description": "Добыча нефти, включая газовый конденсат",
+  "frequency": "monthly",
+  "unit": "thousand tonnes",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Thousand tonnes. Crude oil including gas condensate, from the monthly BNS publication 'Основные показатели работы промышленности', sheet 3 (output in physical terms). Each edition reports one month, and the site keeps only about three editions online, so this series is ACCUMULATED across runs and grows month by month. Element ids are resolved from the page each run rather than hardcoded, because editions are republished under new ids.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2025-05-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

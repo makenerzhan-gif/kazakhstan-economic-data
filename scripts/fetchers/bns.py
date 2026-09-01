@@ -2271,3 +2271,172 @@ def fetch_oil_exports_value() -> tuple[list[dict], dict]:
         "Thousand USD. Same HS 270900 rows and the same verified-partition method as "
         "OIL_EXPORTS_VOLUME. Divide by OIL_EXPORTS_VOLUME for an implied realised export price "
         "per tonne, which runs below the world OIL_PRICE as expected for KEBCO.")
+
+
+# ---------------------------------------------------------------------------
+# OIL_PRODUCTION: crude oil output in physical terms, from the BNS publication
+# "Основные показатели работы промышленности Республики Казахстан".
+#
+# Earlier passes concluded BNS did not publish oil production. That was wrong
+# twice over: it is not in Taldau's 3,700-indicator catalogue and not in the
+# stat.gov.kz industrial cubes (which are index-only and stop at 2023), but it
+# IS in this monthly publication, sheet "3 " ("Произведено продукции в
+# натуральном выражении по видам промышленной продукции"), row "Нефть, включая
+# конденсат газовый, тыс.тонн".
+#
+# Two structural facts drive the implementation:
+#
+# 1. Each edition reports ONE month. Its columns are [previous month, reporting
+#    month, reporting period YTD, same month last year, same period last year,
+#    % vs previous month, % vs same month last year]. So a single download
+#    yields two usable monthly points -- the reporting month and the same month
+#    a year earlier -- and nothing else that can be turned into a clean monthly
+#    series (the YTD columns are a different frequency and are not mixed in).
+#
+# 2. The site keeps only a SHORT ARCHIVE -- three monthly editions were
+#    available on 2026-09-01. The series therefore starts small and GROWS: like
+#    EXCHANGE_RATE, it merges each fetch with what is already processed, so a
+#    month captured today is not lost when its edition drops off the page.
+#
+# The reporting month is derived from the publication date, which each file
+# states on its own cover sheet: published 17.08.2026 carries July data.
+#
+# Checks that this is the right row, all from the same edition: its 2026
+# year-to-date column reads 53,208 thousand tonnes over seven months (~91 Mt a
+# year) against 58,358 for the same period of 2025 (~100 Mt a year), an 8.8%
+# year-on-year fall consistent with Kazakhstan cutting back from its 2025 record.
+# And 2025 output of ~100 Mt against OIL_EXPORTS_VOLUME's 76.3 Mt for the same
+# year is a 76% export ratio, with the remainder refined domestically -- the
+# right shape for Kazakhstan.
+#
+# Element ids are NOT hardcoded: they rotate as editions are republished. Every
+# element linked from the industry page is downloaded, and only workbooks that
+# actually contain the expected sheet and row are used.
+# ---------------------------------------------------------------------------
+INDUSTRY_PAGE_URL = "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
+OIL_PRODUCTION_ROW_MARKER = "Нефть, включая конденсат газовый"
+OIL_PRODUCTION_SHEET = "3"
+PUBLISHED_RE = re.compile(r"Дата опубликования:\s*(\d{2})\.(\d{2})\.(\d{4})")
+
+
+def _industry_publication_elements() -> list[int]:
+    resp = requests.get(INDUSTRY_PAGE_URL, headers=HEADERS, timeout=60)
+    resp.raise_for_status()
+    ids = []
+    for m in re.finditer(r"/api/iblock/element/(\d+)/file/", resp.text):
+        eid = int(m.group(1))
+        if eid not in ids:
+            ids.append(eid)
+    if not ids:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in bns/OIL_PRODUCTION",
+                f"WHAT CHANGED: no /api/iblock/element/<id>/file/ links on {INDUSTRY_PAGE_URL}",
+                "EXPECTED: the industry page lists its publications as downloadable elements",
+                "ACTION REQUIRED: inspect the page and update scripts/fetchers/bns.py",
+            ])
+        )
+    return ids
+
+
+def fetch_oil_production() -> tuple[list[dict], dict]:
+    """Crude oil and gas condensate output, thousand tonnes, monthly.
+
+    Accumulated across runs -- see the block comment above for why (the source
+    keeps only about three monthly editions online at a time).
+    """
+    existing = {}
+    path = Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE / "oil_production.csv"
+    if path.exists():
+        with path.open(encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                try:
+                    existing[row["date"]] = float(row["value"])
+                except (KeyError, TypeError, ValueError):
+                    continue
+
+    fetched: dict[str, float] = {}
+    inspected = 0
+    for eid in _industry_publication_elements():
+        url = f"https://stat.gov.kz/api/iblock/element/{eid}/file/ru/"
+        try:
+            content = _download(url)
+        except Exception:
+            continue
+        try:
+            wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+        except Exception:
+            continue
+        sheet = next((s for s in wb.sheetnames if s.strip() == OIL_PRODUCTION_SHEET), None)
+        if sheet is None:
+            continue
+
+        published = None
+        for sh in ("Обложка", "Метаданные"):
+            if sh not in wb.sheetnames:
+                continue
+            for row in wb[sh].iter_rows(max_row=20, values_only=True):
+                for cell in row:
+                    if isinstance(cell, str):
+                        m = PUBLISHED_RE.search(cell)
+                        if m:
+                            published = date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+                            break
+                if published:
+                    break
+            if published:
+                break
+        if published is None:
+            continue
+
+        oil_row = None
+        for row in wb[sheet].iter_rows(values_only=True):
+            label = next((c for c in row[:3] if isinstance(c, str)), "")
+            if OIL_PRODUCTION_ROW_MARKER in label:
+                oil_row = row
+                break
+        if oil_row is None:
+            continue
+
+        inspected += 1
+        _save_raw(f"OIL_PRODUCTION_{eid}", content, "xlsx",
+                  {"source_url": url, "element_id": eid, "published": published.isoformat()})
+
+        # An edition published in month M reports month M-1.
+        rep_year, rep_month = (published.year, published.month - 1) if published.month > 1 else (published.year - 1, 12)
+        numbers = [c for c in oil_row if isinstance(c, (int, float))]
+        if len(numbers) < 4:
+            continue
+        # columns: previous month, reporting month, YTD, same month last year, ...
+        fetched[f"{rep_year:04d}-{rep_month:02d}-01"] = float(numbers[1])
+        prev_year_month = f"{rep_year - 1:04d}-{rep_month:02d}-01"
+        fetched[prev_year_month] = float(numbers[3])
+        prev_month_y, prev_month_m = (rep_year, rep_month - 1) if rep_month > 1 else (rep_year - 1, 12)
+        fetched[f"{prev_month_y:04d}-{prev_month_m:02d}-01"] = float(numbers[0])
+
+    merged = {**existing, **fetched}
+    if not merged:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in bns/OIL_PRODUCTION",
+                f"WHAT CHANGED: none of the industry-page publications contained sheet "
+                f"{OIL_PRODUCTION_SHEET!r} with a row matching {OIL_PRODUCTION_ROW_MARKER!r}, "
+                "and no previously processed history exists",
+                f"ACTUAL: {inspected} workbook(s) had the expected shape",
+                f"ACTION REQUIRED: inspect {INDUSTRY_PAGE_URL} and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = [{"date": k, "value": v} for k, v in sorted(merged.items())]
+    manifest = {
+        "frequency": "monthly",
+        "source_url": INDUSTRY_PAGE_URL,
+        "dataset_id": "osnovnye-pokazateli-promyshlennosti/sheet-3/neft-vklyuchaya-kondensat",
+        "note": "Thousand tonnes. Crude oil including gas condensate, from the monthly BNS "
+                "publication 'Основные показатели работы промышленности', sheet 3 (output in "
+                "physical terms). Each edition reports one month, and the site keeps only about "
+                "three editions online, so this series is ACCUMULATED across runs and grows "
+                "month by month. Element ids are resolved from the page each run rather than "
+                "hardcoded, because editions are republished under new ids.",
+    }
+    return records, manifest

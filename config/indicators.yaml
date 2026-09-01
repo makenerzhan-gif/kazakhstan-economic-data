@@ -2624,6 +2624,15 @@ indicators:
     category: trade
     source_status: confirmed
 
+  - id: OIL_PRODUCTION
+    name_ru: "Добыча нефти, включая газовый конденсат"
+    name_en: "Crude Oil Production including Gas Condensate"
+    agency: bns
+    frequency: monthly
+    unit: "thousand tonnes"
+    category: production
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"
