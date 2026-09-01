@@ -3148,6 +3148,108 @@ agencies:
           - 'табл 5', 'табл 9', 'табл 15' are expenditure by departmental classification and
             non-sequestrable programmes -- per-agency granularity, not headline indicators.
           - 'табл 12', 'табл 20 кв', 'табл 21 кв' remain genuinely unexplored candidates.
+      LOCAL_BUDGET_REVENUE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 12"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin sheet "табл 12" (Исполнение местных бюджетов), from the
+          49-sheet enumeration. The dataset covered the republican budget in detail but had no
+          LOCAL budget measure, which is where most education and housing/utilities spending sits.
+          Reuses _fetch_bulletin_annual_row unchanged: its default header regex skips the sheet's
+          current-period column ("2026 ж. қантар-маусым есеп") because 'есеп' is not immediately
+          after the year, and 2025's merged header sits over the ANNUAL sub-column so the annual
+          figure (17,039,798.7) is taken rather than the January-June one (8,223,337.6) --
+          verified live, not assumed. Verified identity for 2025: tax 8,725,097.5 + non-tax
+          425,962.4 + capital sales 172,470.9 + special 0 + transfers 7,716,267.9 = 17,039,798.7,
+          exactly the sheet's own "I. ДОХОДЫ" row. Only 3 annual points (2023-2025) are
+          published in this sheet. fetch_local_budget_revenue.
+      LOCAL_BUDGET_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 12"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin sheet "табл 12" (Исполнение местных бюджетов), from the
+          49-sheet enumeration. The dataset covered the republican budget in detail but had no
+          LOCAL budget measure, which is where most education and housing/utilities spending sits.
+          Reuses _fetch_bulletin_annual_row unchanged: its default header regex skips the sheet's
+          current-period column ("2026 ж. қантар-маусым есеп") because 'есеп' is not immediately
+          after the year, and 2025's merged header sits over the ANNUAL sub-column so the annual
+          figure (17,039,798.7) is taken rather than the January-June one (8,223,337.6) --
+          verified live, not assumed. Verified identity for 2025: tax 8,725,097.5 + non-tax
+          425,962.4 + capital sales 172,470.9 + special 0 + transfers 7,716,267.9 = 17,039,798.7,
+          exactly the sheet's own "I. ДОХОДЫ" row. Only 3 annual points (2023-2025) are
+          published in this sheet. fetch_local_budget_expenditure.
+      LOCAL_BUDGET_TAX_REVENUE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 12"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin sheet "табл 12" (Исполнение местных бюджетов), from the
+          49-sheet enumeration. The dataset covered the republican budget in detail but had no
+          LOCAL budget measure, which is where most education and housing/utilities spending sits.
+          Reuses _fetch_bulletin_annual_row unchanged: its default header regex skips the sheet's
+          current-period column ("2026 ж. қантар-маусым есеп") because 'есеп' is not immediately
+          after the year, and 2025's merged header sits over the ANNUAL sub-column so the annual
+          figure (17,039,798.7) is taken rather than the January-June one (8,223,337.6) --
+          verified live, not assumed. Verified identity for 2025: tax 8,725,097.5 + non-tax
+          425,962.4 + capital sales 172,470.9 + special 0 + transfers 7,716,267.9 = 17,039,798.7,
+          exactly the sheet's own "I. ДОХОДЫ" row. Only 3 annual points (2023-2025) are
+          published in this sheet. fetch_local_budget_tax_revenue.
+      LOCAL_BUDGET_TRANSFERS:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 12"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin sheet "табл 12" (Исполнение местных бюджетов), from the
+          49-sheet enumeration. The dataset covered the republican budget in detail but had no
+          LOCAL budget measure, which is where most education and housing/utilities spending sits.
+          Reuses _fetch_bulletin_annual_row unchanged: its default header regex skips the sheet's
+          current-period column ("2026 ж. қантар-маусым есеп") because 'есеп' is not immediately
+          after the year, and 2025's merged header sits over the ANNUAL sub-column so the annual
+          figure (17,039,798.7) is taken rather than the January-June one (8,223,337.6) --
+          verified live, not assumed. Verified identity for 2025: tax 8,725,097.5 + non-tax
+          425,962.4 + capital sales 172,470.9 + special 0 + transfers 7,716,267.9 = 17,039,798.7,
+          exactly the sheet's own "I. ДОХОДЫ" row. Only 3 annual points (2023-2025) are
+          published in this sheet. fetch_local_budget_transfers.
+      LOCAL_EDUCATION_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 12"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin sheet "табл 12" (Исполнение местных бюджетов), from the
+          49-sheet enumeration. The dataset covered the republican budget in detail but had no
+          LOCAL budget measure, which is where most education and housing/utilities spending sits.
+          Reuses _fetch_bulletin_annual_row unchanged: its default header regex skips the sheet's
+          current-period column ("2026 ж. қантар-маусым есеп") because 'есеп' is not immediately
+          after the year, and 2025's merged header sits over the ANNUAL sub-column so the annual
+          figure (17,039,798.7) is taken rather than the January-June one (8,223,337.6) --
+          verified live, not assumed. Verified identity for 2025: tax 8,725,097.5 + non-tax
+          425,962.4 + capital sales 172,470.9 + special 0 + transfers 7,716,267.9 = 17,039,798.7,
+          exactly the sheet's own "I. ДОХОДЫ" row. Only 3 annual points (2023-2025) are
+          published in this sheet. fetch_local_education_expenditure.
+      LOCAL_HOUSING_UTILITIES_EXPENDITURE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 12"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin sheet "табл 12" (Исполнение местных бюджетов), from the
+          49-sheet enumeration. The dataset covered the republican budget in detail but had no
+          LOCAL budget measure, which is where most education and housing/utilities spending sits.
+          Reuses _fetch_bulletin_annual_row unchanged: its default header regex skips the sheet's
+          current-period column ("2026 ж. қантар-маусым есеп") because 'есеп' is not immediately
+          after the year, and 2025's merged header sits over the ANNUAL sub-column so the annual
+          figure (17,039,798.7) is taken rather than the January-June one (8,223,337.6) --
+          verified live, not assumed. Verified identity for 2025: tax 8,725,097.5 + non-tax
+          425,962.4 + capital sales 172,470.9 + special 0 + transfers 7,716,267.9 = 17,039,798.7,
+          exactly the sheet's own "I. ДОХОДЫ" row. Only 3 annual points (2023-2025) are
+          published in this sheet. fetch_local_housing_utilities_expenditure.
       GOV_DEBT:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=261&activities=14610"

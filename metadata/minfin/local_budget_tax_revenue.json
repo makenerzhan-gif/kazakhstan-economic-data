@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/uploads/2026/8/5/609bce465237862c4ba611e0372fde11_original.1507070.xlsx",
+  "dataset_id": "gov.kz-doc-1051170,sheet=табл 12",
+  "indicator_id": "LOCAL_BUDGET_TAX_REVENUE",
+  "indicator_name": "Local Budgets Tax Revenue",
+  "description": "Налоговые поступления местных бюджетов",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT. TAX revenue of local budgets. The matcher explicitly excludes the neighbouring 'Неналоговые поступления' (non-tax) row, which contains the same substring.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2023-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

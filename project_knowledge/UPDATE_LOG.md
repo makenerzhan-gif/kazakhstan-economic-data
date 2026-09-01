@@ -1681,3 +1681,39 @@ happened to match, so nothing would have looked wrong. The whole batch was rever
 
 **310/310 confirmed indicators connected end-to-end** (59/59 Minfin re-verified live).
 `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — forty-third batch: local budgets (310 -> 316)
+Closed a real structural gap. The dataset covered Kazakhstan's **republican** budget in
+considerable detail but had no measure of the **local** budgets at all — which is where most
+education and housing/utilities spending actually happens.
+
+**Minfin (6)**, from Statistical Bulletin sheet "табл 12" (Исполнение местных бюджетов):
+LOCAL_BUDGET_REVENUE (17.04 trillion KZT in 2025), LOCAL_BUDGET_EXPENDITURE (16.74),
+LOCAL_BUDGET_TAX_REVENUE (8.73), LOCAL_BUDGET_TRANSFERS (7.72),
+LOCAL_EDUCATION_EXPENDITURE (6.31) and LOCAL_HOUSING_UTILITIES_EXPENDITURE (2.69).
+
+What these immediately show: transfers from the centre fund **45.3%** of local revenue
+against 51.2% from local taxes, and education alone is **37.7%** of all local spending.
+
+**No new parser needed** — `_fetch_bulletin_annual_row` was reused unchanged, and its
+existing default behaviour turned out to be exactly right here for two separate reasons that
+were *checked live rather than assumed*:
+- The sheet's current-period column is headed "2026 ж. қантар-маусым есеп", which the default
+  regex skips because 'есеп' is not immediately after the year.
+- 2025's merged header sits over the ANNUAL sub-column, so the annual figure (17,039,798.7)
+  is picked rather than the January-June one (8,223,337.6) sitting beside it.
+
+**A row-matching trap avoided.** A plain substring match for "Налоговые поступления" also
+matches "**Не**налоговые поступления" one row below if case is disregarded, and matching
+"Образование" alone would collide with other rows. The matchers therefore support an
+exclusion term and use numbered prefixes ("4. Образование"), and the tax row was verified to
+return 8,725,097.5 rather than the non-tax 425,962.4.
+
+**Verified identity (2025):** tax 8,725,097.5 + non-tax 425,962.4 + capital sales 172,470.9
++ special 0 + transfers 7,716,267.9 = **17,039,798.7**, exactly the sheet's own "I. ДОХОДЫ".
+
+Only 3 annual points (2023-2025) exist in this sheet — short, and stated as such rather than
+padded.
+
+**316/316 confirmed indicators connected end-to-end** (65/65 Minfin re-verified live).
+`pytest tests/ -q` — 29/29 passing.

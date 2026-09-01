@@ -77,6 +77,12 @@ FETCHERS = {
     "LOCAL_GOV_DEBT": minfin_fetchers.fetch_local_gov_debt,
     "STATE_GUARANTEED_DEBT": minfin_fetchers.fetch_state_guaranteed_debt,
     "GOV_DEBT_EUROBONDS": minfin_fetchers.fetch_gov_debt_eurobonds,
+    "LOCAL_BUDGET_REVENUE": minfin_fetchers.fetch_local_budget_revenue,
+    "LOCAL_BUDGET_EXPENDITURE": minfin_fetchers.fetch_local_budget_expenditure,
+    "LOCAL_BUDGET_TAX_REVENUE": minfin_fetchers.fetch_local_budget_tax_revenue,
+    "LOCAL_BUDGET_TRANSFERS": minfin_fetchers.fetch_local_budget_transfers,
+    "LOCAL_EDUCATION_EXPENDITURE": minfin_fetchers.fetch_local_education_expenditure,
+    "LOCAL_HOUSING_UTILITIES_EXPENDITURE": minfin_fetchers.fetch_local_housing_utilities_expenditure,
 }
 
 INDICATOR_IDS = [
@@ -107,6 +113,12 @@ INDICATOR_IDS = [
     "LOCAL_GOV_DEBT",
     "STATE_GUARANTEED_DEBT",
     "GOV_DEBT_EUROBONDS",
+    "LOCAL_BUDGET_REVENUE",
+    "LOCAL_BUDGET_EXPENDITURE",
+    "LOCAL_BUDGET_TAX_REVENUE",
+    "LOCAL_BUDGET_TRANSFERS",
+    "LOCAL_EDUCATION_EXPENDITURE",
+    "LOCAL_HOUSING_UTILITIES_EXPENDITURE",
 ]
 
 

@@ -2435,6 +2435,60 @@ indicators:
     category: fiscal
     source_status: confirmed
 
+  - id: LOCAL_BUDGET_REVENUE
+    name_ru: "Доходы местных бюджетов"
+    name_en: "Local Budgets Revenue"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: LOCAL_BUDGET_EXPENDITURE
+    name_ru: "Затраты местных бюджетов"
+    name_en: "Local Budgets Expenditure"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: LOCAL_BUDGET_TAX_REVENUE
+    name_ru: "Налоговые поступления местных бюджетов"
+    name_en: "Local Budgets Tax Revenue"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: LOCAL_BUDGET_TRANSFERS
+    name_ru: "Поступления трансфертов в местные бюджеты"
+    name_en: "Local Budgets Transfers Received"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: LOCAL_EDUCATION_EXPENDITURE
+    name_ru: "Расходы местных бюджетов на образование"
+    name_en: "Local Budgets Education Expenditure"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: LOCAL_HOUSING_UTILITIES_EXPENDITURE
+    name_ru: "Расходы местных бюджетов на ЖКХ"
+    name_en: "Local Budgets Housing and Utilities Expenditure"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

@@ -2410,3 +2410,109 @@ def fetch_gov_debt_eurobonds() -> tuple[list[dict], dict]:
         "Million KZT. Eurobonds within the Government's external debt -- the market-issued portion, as opposed to loans from international financial institutions.",
         currency="KZT",
     )
+
+
+# ---------------------------------------------------------------------------
+# LOCAL budget execution: Statistical Bulletin sheet "табл 12" ("Исполнение
+# местных бюджетов"), found 2026-09-01 in the same 49-sheet enumeration that
+# produced the debt-structure series. The dataset already covered the
+# REPUBLICAN budget in detail but had no measure of the LOCAL budgets, which
+# carry most of Kazakhstan's education, housing/utilities and health spending.
+#
+# Layout is the ordinary "several annual columns in one document" shape, so the
+# existing _fetch_bulletin_annual_row is reused unchanged. Its default header
+# regex also does the right thing here without special-casing: the sheet's
+# current-period column is headed "2026 ж. қантар-маусым есеп" and is skipped
+# because 'есеп' is not immediately after the year, while 2025's merged
+# "2025 ж. есеп" header sits over the ANNUAL sub-column, so the annual figure
+# (17,039,798.7) is taken rather than the January-June one (8,223,337.6) --
+# verified live rather than assumed.
+#
+# Row-matching hazard handled here: a naive substring match for "Налоговые
+# поступления" would also match "Неналоговые поступления" if case were ignored,
+# and matching "Образование" alone would collide with other rows. Matchers below
+# therefore require the numbered/section prefix and can exclude a substring.
+#
+# Verified identity at 2025: tax 8,725,097.5 + non-tax 425,962.4 + capital sales
+# 172,470.9 + special 0 + transfers 7,716,267.9 = 17,039,798.7, exactly the
+# sheet's own "I. ДОХОДЫ" row.
+# ---------------------------------------------------------------------------
+LOCAL_BUDGET_SHEET = "табл 12"
+
+
+def _row_has(row, must: str, exclude: str | None = None) -> bool:
+    for cell in row:
+        if isinstance(cell, str) and must in cell:
+            if exclude is not None and exclude in cell:
+                continue
+            return True
+    return False
+
+
+def fetch_local_budget_revenue() -> tuple[list[dict], dict]:
+    """Local budgets: total revenue (million KZT, annual)."""
+    return _fetch_bulletin_annual_row(
+        LOCAL_BUDGET_SHEET,
+        lambda r: _row_has(r, "I. ДОХОДЫ"),
+        "LOCAL_BUDGET_REVENUE",
+        "Million KZT. Total revenue of Kazakhstan's LOCAL budgets (regions and cities), "
+        "distinct from the republican budget series. Equals the sum of its own components: "
+        "tax + non-tax + capital sales + special + transfers.",
+    )
+
+
+def fetch_local_budget_expenditure() -> tuple[list[dict], dict]:
+    """Local budgets: total expenditure (million KZT, annual)."""
+    return _fetch_bulletin_annual_row(
+        LOCAL_BUDGET_SHEET,
+        lambda r: _row_has(r, "II. ЗАТРАТЫ"),
+        "LOCAL_BUDGET_EXPENDITURE",
+        "Million KZT. Total expenditure of Kazakhstan's LOCAL budgets.",
+    )
+
+
+def fetch_local_budget_tax_revenue() -> tuple[list[dict], dict]:
+    """Local budgets: tax revenue (million KZT, annual)."""
+    return _fetch_bulletin_annual_row(
+        LOCAL_BUDGET_SHEET,
+        lambda r: _row_has(r, "Налоговые поступления", exclude="Неналоговые"),
+        "LOCAL_BUDGET_TAX_REVENUE",
+        "Million KZT. TAX revenue of local budgets. The matcher explicitly excludes the "
+        "neighbouring 'Неналоговые поступления' (non-tax) row, which contains the same "
+        "substring.",
+    )
+
+
+def fetch_local_budget_transfers() -> tuple[list[dict], dict]:
+    """Local budgets: transfers received (million KZT, annual)."""
+    return _fetch_bulletin_annual_row(
+        LOCAL_BUDGET_SHEET,
+        lambda r: _row_has(r, "Поступления трансфертов"),
+        "LOCAL_BUDGET_TRANSFERS",
+        "Million KZT. Transfers received by local budgets from the republican budget -- "
+        "read against LOCAL_BUDGET_REVENUE this is the fiscal-dependence ratio of Kazakhstan's "
+        "regions (45% of local revenue in 2025).",
+    )
+
+
+def fetch_local_education_expenditure() -> tuple[list[dict], dict]:
+    """Local budgets: education spending (million KZT, annual)."""
+    return _fetch_bulletin_annual_row(
+        LOCAL_BUDGET_SHEET,
+        lambda r: _row_has(r, "4. Образование"),
+        "LOCAL_EDUCATION_EXPENDITURE",
+        "Million KZT. Education spending from local budgets -- the largest single functional "
+        "category of local expenditure (6.31 trillion KZT in 2025, 38% of the total). Matched on "
+        "the numbered prefix '4. Образование' so it cannot collide with other rows mentioning "
+        "education.",
+    )
+
+
+def fetch_local_housing_utilities_expenditure() -> tuple[list[dict], dict]:
+    """Local budgets: housing and utilities spending (million KZT, annual)."""
+    return _fetch_bulletin_annual_row(
+        LOCAL_BUDGET_SHEET,
+        lambda r: _row_has(r, "7. Жилищно-коммунальное хозяйство"),
+        "LOCAL_HOUSING_UTILITIES_EXPENDITURE",
+        "Million KZT. Housing and communal services spending from local budgets.",
+    )
