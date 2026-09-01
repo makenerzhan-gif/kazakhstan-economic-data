@@ -3145,3 +3145,75 @@ indicators:
     unit: "index (same period previous year = 100)"
     category: production
     source_status: confirmed
+
+  - id: LABOR_FORCE
+    name_ru: "Рабочая сила"
+    name_en: "Labour Force"
+    agency: bns
+    frequency: quarterly
+    unit: "persons"
+    category: labor
+    source_status: confirmed
+
+  - id: LABOR_FORCE_PARTICIPATION_RATE
+    name_ru: "Уровень участия в рабочей силе"
+    name_en: "Labour Force Participation Rate"
+    agency: bns
+    frequency: quarterly
+    unit: "% of population 15+"
+    category: labor
+    source_status: confirmed
+
+  - id: EMPLOYED_QUARTERLY
+    name_ru: "Занятое население, поквартально"
+    name_en: "Employed Population, quarterly"
+    agency: bns
+    frequency: quarterly
+    unit: "persons"
+    category: labor
+    source_status: confirmed
+
+  - id: UNEMPLOYED_PERSONS
+    name_ru: "Безработное население"
+    name_en: "Unemployed Population"
+    agency: bns
+    frequency: quarterly
+    unit: "persons"
+    category: labor
+    source_status: confirmed
+
+  - id: YOUTH_UNEMPLOYMENT_RATE
+    name_ru: "Уровень молодёжной безработицы"
+    name_en: "Youth Unemployment Rate"
+    agency: bns
+    frequency: quarterly
+    unit: "%"
+    category: labor
+    source_status: confirmed
+
+  - id: LONG_TERM_UNEMPLOYMENT_RATE
+    name_ru: "Уровень долгосрочной безработицы"
+    name_en: "Long-term Unemployment Rate"
+    agency: bns
+    frequency: quarterly
+    unit: "%"
+    category: labor
+    source_status: confirmed
+
+  - id: AVG_WAGE_QUARTERLY
+    name_ru: "Среднемесячная номинальная заработная плата, поквартально"
+    name_en: "Average Monthly Nominal Wage, quarterly"
+    agency: bns
+    frequency: quarterly
+    unit: "KZT"
+    category: labor
+    source_status: confirmed
+
+  - id: REAL_WAGE_INDEX_QUARTERLY
+    name_ru: "Индекс реальной заработной платы, поквартально"
+    name_en: "Real Wage Index, quarterly"
+    agency: bns
+    frequency: quarterly
+    unit: "index (same quarter previous year = 100)"
+    category: labor
+    source_status: confirmed

@@ -3498,3 +3498,272 @@ def fetch_construction_index() -> tuple[list[dict], dict]:
         "Index, same period of the previous year = 100, year-to-date. The real-terms companion to "
         "CONSTRUCTION_OUTPUT, which is in current prices.",
         unit_check=False)
+
+
+# ---------------------------------------------------------------------------
+# Quarterly labour market and wages, from two BNS publications:
+#   "Основные индикаторы рынка труда Республики Казахстан"  (stat-empt-unempl)
+#   "Численность наемных работников, фонд заработной платы, среднемесячная
+#    заработная плата"                                       (stat-wags)
+#
+# Closes several audit items at once: labour force participation, the
+# unemployment counts behind the rate, youth and long-term unemployment, and
+# quarterly wages. The dataset previously held UNEMPLOYMENT (quarterly, but
+# stale since 2025-06), EMPLOYED_TOTAL (annual), AVG_WAGE (annual) and
+# REAL_WAGE_INDEX (annual) -- no participation rate at all.
+#
+# BOTH SECTIONS MIX ANNUAL AND QUARTERLY EDITIONS under identical titles and
+# identical sheet names, the same trap as construction. The discriminator here
+# is cleaner than a release-interval heuristic: every quarterly edition names
+# its quarter on the cover ("I квартал 2026 года"), and the annual ones say
+# "2025 год" instead. An edition whose cover carries no quarter is not read.
+# The release interval is checked as well, so both would have to change
+# together for an annual figure to be mistaken for a quarterly one.
+#
+# Column 1 of the labour table is "Все население" (everyone aged 15 and over);
+# the columns beside it split by sex and then repeat the whole set for the
+# working-age population only. Only the first is read.
+#
+# Cross-check on wages: annual AVG_WAGE reads 443,315 KZT for 2025 and this
+# publication reads 445,068 KZT for Q1 2026 -- two independently sourced series
+# meeting where they should.
+# ---------------------------------------------------------------------------
+LABOUR_PAGE_URL = "https://stat.gov.kz/ru/industries/labor-and-income/stat-empt-unempl/"
+WAGES_PAGE_URL = "https://stat.gov.kz/ru/industries/labor-and-income/stat-wags/"
+QUARTER_RE = re.compile(r"\b(IV|III|II|I)\s*квартал\w*\s+(\d{4})", re.I)
+QUARTER_NUM = {"i": 1, "ii": 2, "iii": 3, "iv": 4}
+QUARTER_END = {1: "03-31", 2: "06-30", 3: "09-30", 4: "12-31"}
+LABOUR_SHEET_TITLE = "1. Основные индикаторы рынка труда"
+WAGES_SHEET_TITLE = "1. Численность наемных работников"
+QUARTERLY_MAX_GAP_DAYS = 100  # the annual editions in both sections run 344-366
+
+
+def _quarterly_editions(page_url: str, sheet_name: str, sheet_title: str,
+                        indicator_id: str):
+    """Yield (year, quarter, worksheet, element_id, content) for quarterly editions.
+
+    Editions whose cover does not name a quarter, or whose next release is more
+    than a quarter away, are skipped -- that is what keeps the annual editions
+    published under the same title out of a quarterly series.
+    """
+    for eid in _publication_elements(page_url, indicator_id):
+        url = f"https://stat.gov.kz/api/iblock/element/{eid}/file/ru/"
+        try:
+            content = _download(url)
+            wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+        except Exception:
+            continue
+        sheet = next((s for s in wb.sheetnames if s.strip() == sheet_name), None)
+        if sheet is None:
+            continue
+
+        cover = next((s for s in wb.sheetnames if s.strip().startswith("Обложка")), None)
+        if cover is None:
+            continue
+        published = nxt = None
+        quarter = None
+        for row in wb[cover].iter_rows(max_row=24, values_only=True):
+            for cell in row:
+                if not isinstance(cell, str):
+                    continue
+                text = cell.strip()
+                m = PUBLISHED_RE.search(text)
+                if m:
+                    published = date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+                m2 = CONSTRUCTION_NEXT_RE.search(text)
+                if m2:
+                    nxt = date(int(m2.group(3)), int(m2.group(2)), int(m2.group(1)))
+                m3 = QUARTER_RE.search(text)
+                if m3:
+                    quarter = (int(m3.group(2)), QUARTER_NUM[m3.group(1).lower()])
+        if quarter is None:
+            continue
+        if published and nxt and (nxt - published).days > QUARTERLY_MAX_GAP_DAYS:
+            continue
+
+        ws = wb[sheet]
+        if not any(isinstance(c, str) and c.strip().startswith(sheet_title)
+                   for row in ws.iter_rows(max_row=4, values_only=True) for c in row):
+            continue
+        yield quarter[0], quarter[1], ws, eid, content
+
+
+def _fetch_quarterly_publication_row(page_url: str, sheet_name: str, sheet_title: str,
+                                     row_marker: str, value_index: int, exact: bool,
+                                     indicator_id: str, note: str,
+                                     unit: str, identity=None) -> tuple[list[dict], dict]:
+    existing = {}
+    path = (Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE
+            / f"{indicator_id.lower()}.csv")
+    if path.exists():
+        with path.open(encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                try:
+                    existing[row["date"]] = float(row["value"])
+                except (KeyError, TypeError, ValueError):
+                    continue
+
+    fetched: dict[str, float] = {}
+    for year, quarter, ws, eid, content in _quarterly_editions(
+            page_url, sheet_name, sheet_title, indicator_id):
+        target = None
+        for row in ws.iter_rows(values_only=True):
+            label = next((c for c in row[:2] if isinstance(c, str)), "")
+            label = label.strip()
+            hit = (label == row_marker) if exact else label.startswith(row_marker)
+            if target is None and hit:
+                target = [c for c in row if isinstance(c, (int, float))]
+        if target is None or len(target) <= value_index:
+            continue
+        if identity is not None:
+            identity(ws, float(target[value_index]), indicator_id, eid)
+        _save_raw(f"{indicator_id}_{eid}", content, "xlsx",
+                  {"source_url": f"https://stat.gov.kz/api/iblock/element/{eid}/file/ru/",
+                   "element_id": eid, "quarter": f"{year:04d}Q{quarter}",
+                   "sheet": sheet_name, "row": row_marker})
+        fetched[f"{year:04d}-{QUARTER_END[quarter]}"] = float(target[value_index])
+
+    merged = {**existing, **fetched}
+    if not merged:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: no quarterly edition on {page_url} carried sheet {sheet_name!r} "
+                f"titled {sheet_title!r} with a row matching {row_marker!r}, and no processed "
+                "history exists",
+                "ACTION REQUIRED: inspect the page and update scripts/fetchers/bns.py",
+            ])
+        )
+
+    records = [{"date": k, "value": v} for k, v in sorted(merged.items())]
+    manifest = {
+        "frequency": "quarterly",
+        "source_url": page_url,
+        "dataset_id": f"{sheet_title}/{row_marker}/col{value_index}",
+        "note": note,
+        "unit": unit,
+    }
+    return records, manifest
+
+
+def _fetch_labour_row(row_marker: str, indicator_id: str, note: str,
+                      unit: str, identity_check: bool = False) -> tuple[list[dict], dict]:
+    # Column 1 is "Все население"; the rest split by sex and repeat for the
+    # working-age population.
+    return _fetch_quarterly_publication_row(
+        LABOUR_PAGE_URL, "1.", LABOUR_SHEET_TITLE, row_marker, 0, False,
+        indicator_id, note, unit,
+        identity=_labour_identity if identity_check else None)
+
+
+def _labour_identity(ws, value: float, indicator_id: str, eid: int) -> None:
+    """Employed + unemployed must equal the labour force, on the same sheet.
+
+    The table states all three independently, so this is a real check on the
+    row lookups rather than a restatement of one number. It is run while the
+    worksheet is already open, so it costs no extra download.
+    """
+    parts = {}
+    for row in ws.iter_rows(values_only=True):
+        label = next((c for c in row[:2] if isinstance(c, str)), "").strip()
+        for key, marker in (("employed", "Занятое население, человек"),
+                            ("unemployed", "Безработное население, человек")):
+            if key not in parts and label.startswith(marker):
+                nums = [c for c in row if isinstance(c, (int, float))]
+                if nums:
+                    parts[key] = float(nums[0])
+    if len(parts) != 2:
+        return
+    total = parts["employed"] + parts["unemployed"]
+    if abs(total - value) > 1:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
+                f"WHAT CHANGED: element {eid} reports a labour force of {value:,.0f}, but "
+                f"employed ({parts['employed']:,.0f}) plus unemployed "
+                f"({parts['unemployed']:,.0f}) is {total:,.0f}",
+                "EXPECTED: the table states all three independently and they must add up; a "
+                "mismatch means a row lookup has drifted",
+                f"ACTION REQUIRED: inspect {LABOUR_PAGE_URL} and update scripts/fetchers/bns.py",
+            ])
+        )
+
+
+def _fetch_wage_row(value_index: int, indicator_id: str, note: str,
+                    unit: str) -> tuple[list[dict], dict]:
+    return _fetch_quarterly_publication_row(
+        WAGES_PAGE_URL, "1", WAGES_SHEET_TITLE, "Всего", value_index, True,
+        indicator_id, note, unit)
+
+
+def fetch_labor_force() -> tuple[list[dict], dict]:
+    """Labour force, persons, quarterly."""
+    return _fetch_labour_row(
+        "Рабочая сила, человек", "LABOR_FORCE",
+        "Persons aged 15 and over who are employed or unemployed, whole country. 9.84 million in "
+        "Q1 2026. The denominator behind the unemployment and participation rates. Checked "
+        "against the same sheet's employed and unemployed counts, which must add up to it.",
+        "persons", identity_check=True)
+
+
+def fetch_labor_force_participation_rate() -> tuple[list[dict], dict]:
+    """Labour force participation rate, percent, quarterly."""
+    return _fetch_labour_row(
+        "Уровень участия в рабочей силе", "LABOR_FORCE_PARTICIPATION_RATE",
+        "Percent of the population aged 15 and over that is in the labour force. 67.2% in Q1 2026. "
+        "Flagged by the sector audit as missing entirely: without it, a falling unemployment rate "
+        "cannot be told apart from people leaving the labour force.", "% of population 15+")
+
+
+def fetch_employed_quarterly() -> tuple[list[dict], dict]:
+    """Employed population, persons, quarterly."""
+    return _fetch_labour_row(
+        "Занятое население, человек", "EMPLOYED_QUARTERLY",
+        "Persons. Quarterly companion to the annual EMPLOYED_TOTAL. 9.39 million in Q1 2026, of "
+        "whom 7.29 million are employees and 2.10 million self-employed -- a split that matters in "
+        "Kazakhstan, where self-employment absorbs much of what would otherwise be unemployment.",
+        "persons")
+
+
+def fetch_unemployed_persons() -> tuple[list[dict], dict]:
+    """Unemployed population, persons, quarterly."""
+    return _fetch_labour_row(
+        "Безработное население, человек", "UNEMPLOYED_PERSONS",
+        "Persons. The count behind the existing UNEMPLOYMENT rate series, which is stale since "
+        "2025-06. 446,049 in Q1 2026.", "persons")
+
+
+def fetch_youth_unemployment_rate() -> tuple[list[dict], dict]:
+    """Youth unemployment rate, percent, quarterly."""
+    return _fetch_labour_row(
+        "Уровень молодежной безработицы", "YOUTH_UNEMPLOYMENT_RATE",
+        "Percent. Unemployment among people aged 15-28, as the source defines youth. 3.0% in "
+        "Q1 2026 -- below the headline rate of 4.5%, the reverse of the usual pattern in most "
+        "economies.", "%")
+
+
+def fetch_long_term_unemployment_rate() -> tuple[list[dict], dict]:
+    """Long-term unemployment rate, percent, quarterly."""
+    return _fetch_labour_row(
+        "Уровень долгосрочной безработицы", "LONG_TERM_UNEMPLOYMENT_RATE",
+        "Percent. Share of the labour force unemployed for a year or more. 1.6% in Q1 2026, about "
+        "a third of total unemployment -- the structural component of the headline rate.", "%")
+
+
+def fetch_avg_wage_quarterly() -> tuple[list[dict], dict]:
+    """Average monthly nominal wage, KZT, quarterly."""
+    return _fetch_wage_row(
+        3, "AVG_WAGE_QUARTERLY",
+        "KZT per month, including small enterprises. Quarterly companion to the annual AVG_WAGE. "
+        "445,068 KZT in Q1 2026, against 443,315 KZT for all of 2025 in the annual series -- two "
+        "independently sourced series meeting where they should.", "KZT")
+
+
+def fetch_real_wage_index_quarterly() -> tuple[list[dict], dict]:
+    """Real wage index, same quarter previous year = 100, quarterly."""
+    return _fetch_wage_row(
+        7, "REAL_WAGE_INDEX_QUARTERLY",
+        "Index, same quarter of the previous year = 100. Wages after inflation. 99.8 in Q1 2026 -- "
+        "nominal wages up 11.5% year on year but real wages flat, which is the number that matters "
+        "for consumption. The source row also publishes a quarter-on-quarter version; this is the "
+        "year-on-year one.", "index (same quarter previous year = 100)")

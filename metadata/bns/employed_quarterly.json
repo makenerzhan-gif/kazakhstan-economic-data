@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/labor-and-income/stat-empt-unempl/",
+  "dataset_id": "1. Основные индикаторы рынка труда/Занятое население, человек/col0",
+  "indicator_id": "EMPLOYED_QUARTERLY",
+  "indicator_name": "Employed Population, quarterly",
+  "description": "Занятое население, поквартально",
+  "frequency": "quarterly",
+  "unit": "persons",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Persons. Quarterly companion to the annual EMPLOYED_TOTAL. 9.39 million in Q1 2026, of whom 7.29 million are employees and 2.10 million self-employed -- a split that matters in Kazakhstan, where self-employment absorbs much of what would otherwise be unemployment.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-03-31",
+  "period_end": "2026-06-30",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

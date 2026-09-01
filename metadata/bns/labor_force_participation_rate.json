@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/labor-and-income/stat-empt-unempl/",
+  "dataset_id": "1. Основные индикаторы рынка труда/Уровень участия в рабочей силе/col0",
+  "indicator_id": "LABOR_FORCE_PARTICIPATION_RATE",
+  "indicator_name": "Labour Force Participation Rate",
+  "description": "Уровень участия в рабочей силе",
+  "frequency": "quarterly",
+  "unit": "% of population 15+",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Percent of the population aged 15 and over that is in the labour force. 67.2% in Q1 2026. Flagged by the sector audit as missing entirely: without it, a falling unemployment rate cannot be told apart from people leaving the labour force.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-03-31",
+  "period_end": "2026-06-30",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

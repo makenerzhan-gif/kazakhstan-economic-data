@@ -488,6 +488,103 @@ agencies:
           соответствующему периоду прошлого года'). Year-to-date real-terms companion to
           CONSTRUCTION_OUTPUT, which is in current prices. 115.3 for January-July 2026.
 
+      LABOR_FORCE:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/labor-and-income/stat-empt-unempl/"
+        format: xlsx
+        notes: >
+          2026-09-01. Sheet '1.' ('Основные индикаторы рынка труда Республики Казахстан') of the
+          quarterly labour force publication, row 'Рабочая сила, человек', column 1.
+          COLUMN 1 IS 'Все население' -- everyone aged 15 and over. The columns beside it split by
+          sex, and the whole set then repeats for the working-age population only. Only the first
+          is read.
+          BOTH LABOUR SECTIONS MIX ANNUAL AND QUARTERLY EDITIONS under identical titles and
+          identical sheet names, the same trap as construction. The discriminator here is cleaner
+          than a release-interval heuristic: every quarterly edition names its quarter on the cover
+          ('I квартал 2026 года') and the annual ones say '2025 год'. An edition whose cover
+          carries no quarter is not read; the release interval is checked as well, so both would
+          have to change together for an annual figure to enter a quarterly series.
+          IDENTITY CHECK: employed plus unemployed must equal the labour force. The table states
+          all three independently, so this checks the row lookups rather than restating one
+          number, and it runs on the already-open worksheet at no extra cost. Verified to FIRE on
+          a wrong value, not merely to pass on a right one. Both editions online agree exactly
+          (9,392,025 + 446,049 = 9,838,074 for Q1 2026).
+          Two quarterly editions online on 2026-09-01 (Q1 and Q2 2026). ACCUMULATES across runs.
+
+      LABOR_FORCE_PARTICIPATION_RATE:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/labor-and-income/stat-empt-unempl/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet and column, row 'Уровень участия в рабочей силе, %'. 67.2% in
+          Q1 2026. Flagged by the sector audit as MISSING ENTIRELY: without it a falling
+          unemployment rate cannot be told apart from people leaving the labour force.
+
+      EMPLOYED_QUARTERLY:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/labor-and-income/stat-empt-unempl/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet and column, row 'Занятое население, человек'. Quarterly companion
+          to the annual EMPLOYED_TOTAL. 9.39 million in Q1 2026, of whom 7.29 million are employees
+          and 2.10 million self-employed -- a split that matters in Kazakhstan, where
+          self-employment absorbs much of what would otherwise be unemployment.
+
+      UNEMPLOYED_PERSONS:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/labor-and-income/stat-empt-unempl/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet and column, row 'Безработное население, человек'. The count behind
+          the existing UNEMPLOYMENT rate series, which comes from the stat.gov.kz cubes and is
+          stale since 2025-06. 446,049 in Q1 2026; 446,049/9,838,074 = 4.53%, matching the 4.5%
+          the same sheet publishes as the rate.
+
+      YOUTH_UNEMPLOYMENT_RATE:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/labor-and-income/stat-empt-unempl/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet and column, row 'Уровень молодежной безработицы'. 3.0% in Q1 2026,
+          BELOW the headline 4.5% -- the reverse of the usual pattern in most economies, and worth
+          knowing before reading it as a labour-market strength.
+
+      LONG_TERM_UNEMPLOYMENT_RATE:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/labor-and-income/stat-empt-unempl/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet and column, row 'Уровень долгосрочной безработицы'. 1.6% in
+          Q1 2026, about a third of total unemployment -- the structural component of the rate.
+
+      AVG_WAGE_QUARTERLY:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/labor-and-income/stat-wags/"
+        format: xlsx
+        notes: >
+          2026-09-01. Sheet '1' of the quarterly publication 'Численность наемных работников, фонд
+          заработной платы, среднемесячная заработная плата', row 'Всего', column 4. Same
+          annual-versus-quarterly filter as the labour force publication -- this section carries
+          three annual editions (release intervals 344, 364 and 365 days) alongside the quarterly
+          one (75 days).
+          CROSS-CHECK: the annual AVG_WAGE series reads 443,315 KZT for 2025 and this reads 445,068
+          KZT for Q1 2026 -- two independently sourced series meeting where they should.
+          Row layout: [списочная численность, фактическая численность, фонд заработной платы,
+          среднемесячная зарплата, % к предыдущему кварталу, % к соответствующему кварталу
+          предыдущего года, индекс реальной зарплаты к предыдущему кварталу, индекс реальной
+          зарплаты к соответствующему кварталу предыдущего года].
+
+      REAL_WAGE_INDEX_QUARTERLY:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/labor-and-income/stat-wags/"
+        format: xlsx
+        notes: >
+          2026-09-01. Same sheet and row, column 8 -- the real wage index against the SAME QUARTER
+          of the previous year. The row also publishes a quarter-on-quarter version in column 7;
+          picking that one would give a seasonal series meaning something else. 99.8 in Q1 2026:
+          nominal wages up 11.5% year on year but real wages flat, which is the number that matters
+          for consumption.
+
       EXPORT_PRICE_INDEX:
         status: confirmed
         page_url: "https://stat.gov.kz/ru/industries/economy/prices/"

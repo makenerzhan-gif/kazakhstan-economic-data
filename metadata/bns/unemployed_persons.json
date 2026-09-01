@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/labor-and-income/stat-empt-unempl/",
+  "dataset_id": "1. Основные индикаторы рынка труда/Безработное население, человек/col0",
+  "indicator_id": "UNEMPLOYED_PERSONS",
+  "indicator_name": "Unemployed Population",
+  "description": "Безработное население",
+  "frequency": "quarterly",
+  "unit": "persons",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Persons. The count behind the existing UNEMPLOYMENT rate series, which is stale since 2025-06. 446,049 in Q1 2026.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-03-31",
+  "period_end": "2026-06-30",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

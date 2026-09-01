@@ -2190,3 +2190,34 @@ The agriculture section (`stat-forrest-village-hunt-fish`) holds grain balances,
 sown-area and greenhouse publications, plus long-run ANNUAL regional series in a different
 "Показатель" format (2000 onward, by KATO region). Monthly gross agricultural output is not
 among them. Not connected rather than guessed at.
+
+## 2026-09-01 — quarterly labour market and wages (356 indicators, 14,106 observations)
+
+- Eight indicators from two BNS publications: "Основные индикаторы рынка труда" and
+  "Численность наемных работников, фонд заработной платы, среднемесячная заработная плата".
+  `LABOR_FORCE`, `LABOR_FORCE_PARTICIPATION_RATE`, `EMPLOYED_QUARTERLY`, `UNEMPLOYED_PERSONS`,
+  `YOUTH_UNEMPLOYMENT_RATE`, `LONG_TERM_UNEMPLOYMENT_RATE`, `AVG_WAGE_QUARTERLY`,
+  `REAL_WAGE_INDEX_QUARTERLY`.
+- Closes the audit's participation-rate gap, which was missing entirely. Without it a falling
+  unemployment rate cannot be told apart from people leaving the labour force.
+- Both sections mix annual and quarterly editions under identical titles and sheet names — the
+  construction trap again. The discriminator here is cleaner than a release-interval heuristic:
+  quarterly editions name their quarter on the cover ("I квартал 2026 года"), annual ones say
+  "2025 год". Both the cover quarter and the release interval must agree.
+- **Added an identity check that is not a restatement**: the labour table states labour force,
+  employed and unemployed independently, so employed + unemployed must equal the labour force.
+  It runs on the already-open worksheet at no extra download. Verified it FIRES on a wrong value
+  rather than only passing on a right one — a guard that never fires is worthless. Both editions
+  agree exactly: 9,392,025 + 446,049 = 9,838,074 for Q1 2026.
+- Wage cross-check across independent sources: annual `AVG_WAGE` reads 443,315 KZT for 2025 and
+  the quarterly publication reads 445,068 KZT for Q1 2026.
+- Youth unemployment (3.0%) sits BELOW the headline rate (4.5%) — the reverse of the usual
+  pattern, recorded so it is not read as a labour-market strength without checking.
+- Real wages flat (99.8) while nominal wages rose 11.5% year on year.
+- Verified live: 121/121 BNS fetchers OK, 29/29 tests passing.
+
+### Process note — the escaping trap, hit again
+Splicing code through a shell heredoc lost one backslash level and wrote a literal newline inside
+a string literal, breaking the module. Two lessons, both now applied: build the replacement text
+in a scratchpad FILE rather than inside a heredoc, and validate before writing rather than after —
+the previous attempt wrote the broken file first and only then discovered it would not parse.

@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/labor-and-income/stat-empt-unempl/",
+  "dataset_id": "1. Основные индикаторы рынка труда/Рабочая сила, человек/col0",
+  "indicator_id": "LABOR_FORCE",
+  "indicator_name": "Labour Force",
+  "description": "Рабочая сила",
+  "frequency": "quarterly",
+  "unit": "persons",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Persons aged 15 and over who are employed or unemployed, whole country. 9.84 million in Q1 2026. The denominator behind the unemployment and participation rates. Checked against the same sheet's employed and unemployed counts, which must add up to it.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-03-31",
+  "period_end": "2026-06-30",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

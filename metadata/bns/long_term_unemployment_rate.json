@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/labor-and-income/stat-empt-unempl/",
+  "dataset_id": "1. Основные индикаторы рынка труда/Уровень долгосрочной безработицы/col0",
+  "indicator_id": "LONG_TERM_UNEMPLOYMENT_RATE",
+  "indicator_name": "Long-term Unemployment Rate",
+  "description": "Уровень долгосрочной безработицы",
+  "frequency": "quarterly",
+  "unit": "%",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Percent. Share of the labour force unemployed for a year or more. 1.6% in Q1 2026, about a third of total unemployment -- the structural component of the headline rate.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-03-31",
+  "period_end": "2026-06-30",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

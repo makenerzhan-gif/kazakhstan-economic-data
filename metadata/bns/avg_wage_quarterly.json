@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/labor-and-income/stat-wags/",
+  "dataset_id": "1. Численность наемных работников/Всего/col3",
+  "indicator_id": "AVG_WAGE_QUARTERLY",
+  "indicator_name": "Average Monthly Nominal Wage, quarterly",
+  "description": "Среднемесячная номинальная заработная плата, поквартально",
+  "frequency": "quarterly",
+  "unit": "KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "KZT per month, including small enterprises. Quarterly companion to the annual AVG_WAGE. 445,068 KZT in Q1 2026, against 443,315 KZT for all of 2025 in the annual series -- two independently sourced series meeting where they should.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2026-03-31",
+  "period_end": "2026-03-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

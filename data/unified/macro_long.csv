@@ -13203,6 +13203,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-29,KZ,national,daily,TONIA,17.81,%,nbk,2026-09-01,level,2026-09-01
 2026-03-30,KZ,national,daily,EXCHANGE_RATE,482.53,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2026-03-30,KZ,national,daily,TONIA,17.81,%,nbk,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,AVG_WAGE_QUARTERLY,445068.0,KZT,bns,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,quarterly,BUDGET_FINANCING_BANKS,776687.8649514401,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,482264.72980344994,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,-90125.68172990001,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
@@ -13212,6 +13213,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,112.840255737305,index,imf,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS,111.345565795898,index,imf,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,irregular,CUSTOMS_DUTIES,360761.31747095,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,EMPLOYED_QUARTERLY,9392025.0,persons,bns,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,daily,EXCHANGE_RATE,481.54,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,quarterly,GDP_NOMINAL,34102358100000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
 2026-03-31,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,97830.27543000001,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
@@ -13220,10 +13222,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-31,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,1240814.106,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,35310.83917,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,irregular,GOV_WAGES_EXPENDITURE,246566.9662505,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,LABOR_FORCE,9838074.0,persons,bns,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,LABOR_FORCE_PARTICIPATION_RATE,67.2,% of population 15+,bns,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,irregular,LAND_TAX,2375.40064648,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,513956.9460623,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,510033.17495029,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,838304.00566345,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,LONG_TERM_UNEMPLOYMENT_RATE,1.6,%,bns,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,quarterly,NATIONAL_FUND_EQUITIES,21698116050.25,USD,minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,quarterly,NATIONAL_FUND_GOLD,4461134761.36,USD,minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,quarterly,NATIONAL_FUND_SAVINGS_BONDS,30787187862.19,USD,minfin,2026-09-01,level,2026-09-01
@@ -13233,10 +13238,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-31,KZ,national,monthly,OIL_PRICE,105.83,USD per barrel,imf,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,3280.93408465,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,irregular,PROPERTY_TAX,143953.60676457,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,REAL_WAGE_INDEX_QUARTERLY,99.8,index (same quarter previous year = 100),bns,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,545937.98780687,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,545344.01412029,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,1084870.97191395,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-03-31,KZ,national,daily,TONIA,17.79,%,nbk,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,UNEMPLOYED_PERSONS,446049.0,persons,bns,2026-09-01,level,2026-09-01
+2026-03-31,KZ,national,quarterly,YOUTH_UNEMPLOYMENT_RATE,3.0,%,bns,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,4.011331,% of GDP,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,CAPACITY_UTILIZATION,49.540378,percent,nbk,2026-09-01,level,2026-09-01
@@ -13699,6 +13707,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-30,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,1025861.1509587801,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,1883810.5566879504,"million KZT, flow during the quarter",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,CUSTOMS_DUTIES,1164587.90739074,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,quarterly,EMPLOYED_QUARTERLY,9399907.0,persons,bns,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,daily,EXCHANGE_RATE,485.82,KZT per 1 USD,nbk,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,monthly,EXPORT_PRICE_INDEX,127.8,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,quarterly,GDP_NOMINAL,70948693300000.0,KZT,bns,2026-09-01,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-01
@@ -13709,10 +13718,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-30,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,259102.49153863,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,GOV_WAGES_EXPENDITURE,488809.26609373,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,monthly,IMPORT_PRICE_INDEX,101.6,"index, same month previous year = 100",bns,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,quarterly,LABOR_FORCE,9844534.0,persons,bns,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,quarterly,LABOR_FORCE_PARTICIPATION_RATE,67.4,% of population 15+,bns,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,LAND_TAX,5038.70880023,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,1307364.60597941,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,878932.72843332,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,2039172.6627365,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,quarterly,LONG_TERM_UNEMPLOYMENT_RATE,1.5,%,bns,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,OIL_EXPORT_DUTY,901338.23939422,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,monthly,OIL_PRICE,82.87727272727277,USD per barrel,imf,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,10130.29628972,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
@@ -13721,6 +13733,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-30,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1138035.21997195,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,2527981.92883023,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2026-06-30,KZ,national,daily,TONIA,16.8,%,nbk,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,quarterly,UNEMPLOYED_PERSONS,444627.0,persons,bns,2026-09-01,level,2026-09-01
+2026-06-30,KZ,national,quarterly,YOUTH_UNEMPLOYMENT_RATE,2.9,%,bns,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.771858,index,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,CAPACITY_UTILIZATION,50.757057,percent,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,CONSTRUCTION_INDEX,115.3,index (same period previous year = 100),bns,2026-09-01,level,2026-09-01
