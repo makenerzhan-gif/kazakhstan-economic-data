@@ -1626,3 +1626,58 @@ gives it rather than recomputed.
 
 **305/305 confirmed indicators connected end-to-end** (94/94 BNS re-verified live).
 `pytest tests/ -q` — 29/29 passing.
+
+## 2026-09-01 — forty-second batch: government debt structure (305 -> 310)
+Applied the NBK enumeration approach to Minfin: downloaded the latest Statistical Bulletin
+and listed **all 49 sheets**, diffing them against the sheets this module already mines.
+Result: 20 mined, 29 not — and Minfin's remaining surface is now an enumerated list rather
+than an open question.
+
+**A sheet with a layout unlike any other used here.** "табл 22 кв" is a WIDE point-in-time
+series: one column PAIR per reporting date (млн тенге, then млн долл. США), 22 dates from
+2020-01-01 to 2026-07-01 — not the year-to-date-column-per-bulletin-edition shape the other
+sheets use. A new parser, `_fetch_debt_structure_row`, handles it.
+
+**Row codes in this sheet are not unique**, which is the real hazard: "1" and "2" appear
+under section I (government / National Bank debt) *and again* under sections II and III as
+their internal/external split. Matching on the code alone would silently return the wrong
+row. Every lookup is therefore anchored to its section ("I.", "II.", "III.") **and**
+verified against an expected Russian label before any value is read; a re-ordering upstream
+raises `StructuralChangeError` instead of quietly producing wrong numbers.
+
+**Minfin (5):** STATE_DEBT_TOTAL (38.50 trillion KZT), STATE_GUARANTEED_DEBT (2.41
+trillion), LOCAL_GOV_DEBT (2.77 trillion), GOV_DEBT_EUROBONDS (4.81 trillion) and
+GOV_DEBT_EXTERNAL_USD (17,192 million USD).
+
+**Three cross-checks, all exact:**
+- I + II + III = 38,495,061.56 + 2,414,476.28 + 6,000 = **40,915,537.84**, which equals the
+  already-connected GOV_DEBT to the cent — confirming these are components of it, not a
+  competing measure.
+- Section I is *not* simply 1+2+3. The sheet's own footnote says it excludes mutual claims,
+  and subtracting row 3.1 (local-government debt owed to the Government, 1,101,375.43)
+  reproduces I exactly. The discrepancy was chased down rather than ignored.
+- The USD column checks against the sheet's own stated rate: 8,352,366.46 / 485.82 =
+  17,192.4 versus the published 17,192.31.
+
+**A duplicate caught before it shipped — and a subtler danger with it.** The first pass also
+generated GOV_DEBT_DOMESTIC and GOV_DEBT_EXTERNAL, which the duplicate-ID check rejected:
+both already exist, sourced elsewhere, with *identical* values. Worse, the generated
+functions were named `fetch_gov_debt_domestic`/`fetch_gov_debt_external` — the same names as
+the existing ones, so appending them **shadowed** the originals in the module. The values
+happened to match, so nothing would have looked wrong. The whole batch was reverted with
+`git restore` and regenerated with those two dropped, rather than patched in place.
+
+**Declined and recorded** (in `sources.yaml`, `MINFIN_BULLETIN_SHEET_COVERAGE`):
+- 20 of the 29 unmined sheets are `табл 12.1`–`табл 12.20`, per-region budget execution —
+  the granular class already ruled out of scope for NBK.
+- `табл 19 кв` (dividends on state shareholdings): the execution figure is stored as the
+  **string** `'75945,7**'` with a footnote marker, and its own sub-item (78,612.9) *exceeds*
+  the total it belongs to, which the sheet attributes to returned mis-transfers. Publishing
+  it would mean picking an interpretation the source itself flags as irregular.
+- `табл 23` (primary placement of government securities): per-auction with multi-level
+  maturity headers; a monthly placement total would have to be summed across columns by us.
+- `табл 5`, `9`, `15`: per-agency departmental granularity.
+- `табл 12`, `20 кв`, `21 кв` remain genuinely unexplored candidates.
+
+**310/310 confirmed indicators connected end-to-end** (59/59 Minfin re-verified live).
+`pytest tests/ -q` — 29/29 passing.

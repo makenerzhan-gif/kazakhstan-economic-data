@@ -2174,3 +2174,239 @@ def fetch_state_gov_subsidies_expenditure() -> tuple[list[dict], dict]:
         lambda r: r[-1] == "Бюджетные субсидии",
         "STATE_GOV_SUBSIDIES_EXPENDITURE",
     )
+
+
+# ---------------------------------------------------------------------------
+# Government debt STRUCTURE: Statistical Bulletin sheet "табл 22 кв"
+# ("Государственный и гарантированный государством долг Республики Казахстан,
+# долг по поручительствам государства"), found 2026-09-01 by enumerating all 49
+# sheets of the latest bulletin and diffing them against the sheets this module
+# already mines.
+#
+# Layout differs from every other bulletin sheet used here: it is a WIDE
+# point-in-time time series -- one column PAIR per reporting date (млн тенге,
+# then млн долл. США), 22 dates from 2020-01-01 to 2026-07-01 in the current
+# vintage -- rather than a year-to-date column per bulletin edition.
+#
+# Row codes ARE NOT UNIQUE across the sheet: "1" and "2" appear both under
+# section I (government / National Bank debt) and again under sections II and
+# III as their internal/external split. Matching on the code alone would
+# silently pick the wrong row, so every lookup here is anchored to its section
+# ("I.", "II.", "III.") and additionally verified against an expected Russian
+# label before use.
+#
+# The sheet's own arithmetic was verified against it at 2026-07-01 before
+# connecting anything:
+#   1.1 + 1.2 = 28,471,879.43 + 8,352,366.46 = 36,824,245.89 = row "1"
+#   I. + II. + III. = 38,495,061.56 + 2,414,476.28 + 6,000 = 40,915,537.84,
+#   which equals the sheet's own "Всего" row AND the already-connected GOV_DEBT
+#   series exactly -- so these are components of GOV_DEBT, not a duplicate of it.
+# Note I. is NOT simply 1+2+3: the sheet's footnote 1 states it excludes mutual
+# claims, and subtracting row 3.1 (local-government debt owed to the Government,
+# 1,101,375.43) from 1+2+3 reproduces I. exactly.
+# ---------------------------------------------------------------------------
+DEBT_STRUCTURE_SHEET_PREFIX = "табл 22"
+DEBT_DATE_RE = re.compile(r"на\s+1\s+(\w+)\s+(\d{4})", re.IGNORECASE)
+DEBT_MONTHS = {"января": 1, "февраля": 2, "марта": 3, "апреля": 4, "мая": 5, "июня": 6,
+               "июля": 7, "августа": 8, "сентября": 9, "октября": 10, "ноября": 11, "декабря": 12}
+DEBT_SECTIONS = ("I.", "II.", "III.")
+
+
+def _fetch_debt_structure_row(section: str, row_code: str, russian_marker: str,
+                              indicator_id: str, note: str,
+                              currency: str = "KZT") -> tuple[list[dict], dict]:
+    docs = _list_documents(directions=BUDGET_DIRECTION_ID)
+    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    if not bulletins:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: no bulletin document under directions={BUDGET_DIRECTION_ID}",
+                f"ACTION REQUIRED: inspect {LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
+            ])
+        )
+    doc = bulletins[0]
+    file_path = doc["full_text"][0]["document"]
+    content = _download(file_path)
+
+    today = date.today()
+    ext = "xls" if file_path.lower().endswith(".xls") else "xlsx"
+    raw_store.save_raw_bytes(SOURCE, indicator_id, today, ext, content)
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "source_document_id": doc["id"], "source_title": doc.get("title"),
+        "source_url": GOV_KZ_BASE + file_path,
+    })
+
+    kind, wb = _open_workbook(content, file_path)
+    sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
+    target_sheet = next((s for s in sheet_names if s.strip().startswith(DEBT_STRUCTURE_SHEET_PREFIX)), None)
+    if target_sheet is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: no sheet starting with {DEBT_STRUCTURE_SHEET_PREFIX!r}",
+                f"ACTUAL sheets: {sheet_names}",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path}",
+            ])
+        )
+
+    rows = list(_iter_rows(kind, wb, target_sheet))
+
+    # Date header: the row carrying the most "на 1 <month> <year>" cells.
+    date_row_idx, date_cols = -1, {}
+    for i, r in enumerate(rows[:20]):
+        found = {}
+        for j, c in enumerate(r):
+            if isinstance(c, str):
+                m = DEBT_DATE_RE.search(c)
+                if m and m.group(1).lower() in DEBT_MONTHS:
+                    found[j] = (int(m.group(2)), DEBT_MONTHS[m.group(1).lower()])
+        if len(found) > len(date_cols):
+            date_row_idx, date_cols = i, found
+    if len(date_cols) < 4:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: fewer than 4 date columns in sheet {target_sheet!r}",
+                f"ACTUAL: {len(date_cols)} found",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path}",
+            ])
+        )
+
+    # Unit row sits directly under the dates; each date has a KZT column then a USD column.
+    unit_row = rows[date_row_idx + 1] if date_row_idx + 1 < len(rows) else []
+
+    def unit_at(idx):
+        cell = unit_row[idx] if idx < len(unit_row) else None
+        return cell.lower() if isinstance(cell, str) else ""
+
+    # Locate the requested row: anchored inside its section, never by code alone.
+    section_start = next((i for i, r in enumerate(rows)
+                          if r and str(r[0]).strip() == section), None)
+    if section_start is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: section anchor {section!r} not found in column 0",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path}",
+            ])
+        )
+    later = [i for i, r in enumerate(rows)
+             if i > section_start and r and str(r[0]).strip() in DEBT_SECTIONS]
+    section_end = later[0] if later else len(rows)
+
+    target_row, target_idx = None, None
+    scan = [section_start] if row_code == section else range(section_start, section_end)
+    for i in scan:
+        if rows[i] and str(rows[i][0]).strip() == row_code:
+            target_row, target_idx = rows[i], i
+            break
+    if target_row is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: row code {row_code!r} not found inside section {section!r} "
+                f"(rows {section_start}..{section_end})",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path}",
+            ])
+        )
+
+    # Structural guard: the row must still carry its expected Russian label.
+    russian_text = " ".join(str(c) for c in target_row if isinstance(c, str))
+    if russian_marker.lower() not in russian_text.lower():
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: row {row_code!r} in section {section!r} (sheet row {target_idx}) no longer "
+                f"contains the expected label {russian_marker!r}",
+                f"ACTUAL text: {russian_text[:200]!r}",
+                "EXPECTED: row codes may have been re-ordered -- the code alone is not trusted",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path}",
+            ])
+        )
+
+    want_usd = currency.upper() == "USD"
+    records = []
+    for col, (year, month) in sorted(date_cols.items()):
+        idx = col + 1 if want_usd else col
+        u = unit_at(idx)
+        if want_usd and "долл" not in u:
+            continue
+        if not want_usd and ("теңге" not in u and "тенге" not in u):
+            continue
+        value = target_row[idx] if idx < len(target_row) else None
+        if value in (None, ""):
+            continue
+        try:
+            v = float(value)
+        except (TypeError, ValueError):
+            continue
+        records.append({"date": f"{year:04d}-{month:02d}-01", "value": v})
+
+    if not records:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: no {currency} values parsed for row {row_code!r} in section {section!r}",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path}",
+            ])
+        )
+
+    records.sort(key=lambda r: r["date"])
+    return records, {
+        "frequency": "quarterly",
+        "source_url": GOV_KZ_BASE + file_path,
+        "dataset_id": f"statistical-bulletin/{target_sheet}/section={section},row={row_code},currency={currency}",
+        "note": note,
+    }
+
+
+def fetch_state_debt_total() -> tuple[list[dict], dict]:
+    """State Debt (million KZT, quarterly)."""
+    return _fetch_debt_structure_row(
+        "I.", "I.", "Государственный долг",
+        "STATE_DEBT_TOTAL",
+        "Million KZT. Section I of the bulletin's debt table: state debt (government + National Bank + local executive bodies, net of mutual claims). A COMPONENT of the existing GOV_DEBT, which is I + II + III -- verified: 38,495,061.56 + 2,414,476.28 + 6,000 = 40,915,537.84, exactly GOV_DEBT.",
+        currency="KZT",
+    )
+
+
+def fetch_gov_debt_external_usd() -> tuple[list[dict], dict]:
+    """Government Debt, External (USD) (USD million, quarterly)."""
+    return _fetch_debt_structure_row(
+        "I.", "1.2", "внешний",
+        "GOV_DEBT_EXTERNAL_USD",
+        "USD million. The same external government debt series as GOV_DEBT_EXTERNAL, in the source's own USD column. Consistency checked against the sheet's stated rate: 8,352,366.46 / 485.82 = 17,192.4 against the published 17,192.31.",
+        currency="USD",
+    )
+
+
+def fetch_local_gov_debt() -> tuple[list[dict], dict]:
+    """Local Government Debt (million KZT, quarterly)."""
+    return _fetch_debt_structure_row(
+        "I.", "3", "местных исполнительных",
+        "LOCAL_GOV_DEBT",
+        "Million KZT. Debt of local executive bodies (regional and city administrations), including what they owe the central Government.",
+        currency="KZT",
+    )
+
+
+def fetch_state_guaranteed_debt() -> tuple[list[dict], dict]:
+    """State-Guaranteed Debt (million KZT, quarterly)."""
+    return _fetch_debt_structure_row(
+        "II.", "II.", "Гарантированный государством",
+        "STATE_GUARANTEED_DEBT",
+        "Million KZT. Section II: debt guaranteed by the state -- the sovereign's contingent liabilities, outside state debt proper.",
+        currency="KZT",
+    )
+
+
+def fetch_gov_debt_eurobonds() -> tuple[list[dict], dict]:
+    """Government Eurobonds (million KZT, quarterly)."""
+    return _fetch_debt_structure_row(
+        "I.", "1.2.10.", "Еврооблигации",
+        "GOV_DEBT_EUROBONDS",
+        "Million KZT. Eurobonds within the Government's external debt -- the market-issued portion, as opposed to loans from international financial institutions.",
+        currency="KZT",
+    )

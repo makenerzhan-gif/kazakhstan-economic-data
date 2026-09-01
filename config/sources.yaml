@@ -3044,6 +3044,110 @@ agencies:
         format: xls
         frequency: annual
         notes: "Same document/mechanism as GOV_REVENUE, row 'II.Expences' instead of 'I. INCOME'. Now implemented in scripts/fetchers/minfin.py:fetch_gov_expenditure and connected."
+      STATE_DEBT_TOTAL:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 22 кв"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin sheet 'табл 22 кв' (state and state-guaranteed
+          debt), found by enumerating all 49 sheets of the latest bulletin and diffing them
+          against the sheets already mined -- 20 were in use, 29 were not. Unlike every other
+          bulletin sheet used here this is a WIDE point-in-time series: one column PAIR per
+          date (млн тенге, then млн долл. США), 22 dates from 2020-01-01 to 2026-07-01.
+          Matched as section=I., row code=I., currency=KZT.
+          IMPORTANT: row codes are NOT unique in this sheet -- '1' and '2' appear under
+          section I and again under II and III as their internal/external split -- so lookups
+          are anchored to the section and additionally verified against the expected Russian
+          label 'Государственный долг' before any value is read; a re-ordering upstream raises instead of
+          silently returning the wrong row. fetch_state_debt_total.
+      GOV_DEBT_EXTERNAL_USD:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 22 кв"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin sheet 'табл 22 кв' (state and state-guaranteed
+          debt), found by enumerating all 49 sheets of the latest bulletin and diffing them
+          against the sheets already mined -- 20 were in use, 29 were not. Unlike every other
+          bulletin sheet used here this is a WIDE point-in-time series: one column PAIR per
+          date (млн тенге, then млн долл. США), 22 dates from 2020-01-01 to 2026-07-01.
+          Matched as section=I., row code=1.2, currency=USD.
+          IMPORTANT: row codes are NOT unique in this sheet -- '1' and '2' appear under
+          section I and again under II and III as their internal/external split -- so lookups
+          are anchored to the section and additionally verified against the expected Russian
+          label 'внешний' before any value is read; a re-ordering upstream raises instead of
+          silently returning the wrong row. fetch_gov_debt_external_usd.
+      LOCAL_GOV_DEBT:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 22 кв"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin sheet 'табл 22 кв' (state and state-guaranteed
+          debt), found by enumerating all 49 sheets of the latest bulletin and diffing them
+          against the sheets already mined -- 20 were in use, 29 were not. Unlike every other
+          bulletin sheet used here this is a WIDE point-in-time series: one column PAIR per
+          date (млн тенге, then млн долл. США), 22 dates from 2020-01-01 to 2026-07-01.
+          Matched as section=I., row code=3, currency=KZT.
+          IMPORTANT: row codes are NOT unique in this sheet -- '1' and '2' appear under
+          section I and again under II and III as their internal/external split -- so lookups
+          are anchored to the section and additionally verified against the expected Russian
+          label 'местных исполнительных' before any value is read; a re-ordering upstream raises instead of
+          silently returning the wrong row. fetch_local_gov_debt.
+      STATE_GUARANTEED_DEBT:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 22 кв"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin sheet 'табл 22 кв' (state and state-guaranteed
+          debt), found by enumerating all 49 sheets of the latest bulletin and diffing them
+          against the sheets already mined -- 20 were in use, 29 were not. Unlike every other
+          bulletin sheet used here this is a WIDE point-in-time series: one column PAIR per
+          date (млн тенге, then млн долл. США), 22 dates from 2020-01-01 to 2026-07-01.
+          Matched as section=II., row code=II., currency=KZT.
+          IMPORTANT: row codes are NOT unique in this sheet -- '1' and '2' appear under
+          section I and again under II and III as their internal/external split -- so lookups
+          are anchored to the section and additionally verified against the expected Russian
+          label 'Гарантированный государством' before any value is read; a re-ordering upstream raises instead of
+          silently returning the wrong row. fetch_state_guaranteed_debt.
+      GOV_DEBT_EUROBONDS:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 22 кв"
+        format: xlsx
+        notes: >
+          2026-09-01. Statistical Bulletin sheet 'табл 22 кв' (state and state-guaranteed
+          debt), found by enumerating all 49 sheets of the latest bulletin and diffing them
+          against the sheets already mined -- 20 were in use, 29 were not. Unlike every other
+          bulletin sheet used here this is a WIDE point-in-time series: one column PAIR per
+          date (млн тенге, then млн долл. США), 22 dates from 2020-01-01 to 2026-07-01.
+          Matched as section=I., row code=1.2.10., currency=KZT.
+          IMPORTANT: row codes are NOT unique in this sheet -- '1' and '2' appear under
+          section I and again under II and III as their internal/external split -- so lookups
+          are anchored to the section and additionally verified against the expected Russian
+          label 'Еврооблигации' before any value is read; a re-ordering upstream raises instead of
+          silently returning the wrong row. fetch_gov_debt_eurobonds.
+      MINFIN_BULLETIN_SHEET_COVERAGE (scope note):
+        status: out_of_scope
+        notes: >
+          2026-09-01. The Statistical Bulletin's sheet coverage is now enumerated: 49 sheets, of
+          which 20 are mined by this module and 29 were not. Of those 29, TWENTY are 'табл 12.1'
+          through 'табл 12.20' -- per-region budget execution, the same granular class already
+          ruled out of scope for NBK. Of the rest:
+          - 'табл 22 кв' is now connected (this batch).
+          - 'табл 19 кв' (dividends on state shareholdings) was investigated and DECLINED: the
+            execution figure is stored as the STRING '75945,7**' with a footnote marker, and its
+            own sub-item (national holdings, 78,612.9) EXCEEDS the total it belongs to, which the
+            sheet attributes to returned mis-transfers. Publishing it would mean choosing an
+            interpretation the source itself flags as irregular.
+          - 'табл 23' (primary placement of government securities) is per-auction with multi-level
+            maturity headers; a single monthly placement total would have to be summed across
+            columns by us, which is a fabricated aggregate rather than one the source publishes.
+          - 'табл 5', 'табл 9', 'табл 15' are expenditure by departmental classification and
+            non-sequestrable programmes -- per-agency granularity, not headline indicators.
+          - 'табл 12', 'табл 20 кв', 'табл 21 кв' remain genuinely unexplored candidates.
       GOV_DEBT:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=261&activities=14610"

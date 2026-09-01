@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/uploads/2026/8/5/609bce465237862c4ba611e0372fde11_original.1507070.xlsx",
+  "dataset_id": "statistical-bulletin/табл 22 кв/section=I.,row=1.2,currency=USD",
+  "indicator_id": "GOV_DEBT_EXTERNAL_USD",
+  "indicator_name": "Government Debt, External (USD)",
+  "description": "Внешний долг Правительства РК, долл. США",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million. The same external government debt series as GOV_DEBT_EXTERNAL, in the source's own USD column. Consistency checked against the sheet's stated rate: 8,352,366.46 / 485.82 = 17,192.4 against the published 17,192.31.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2020-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

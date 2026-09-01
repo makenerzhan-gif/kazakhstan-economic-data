@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/uploads/2026/8/5/609bce465237862c4ba611e0372fde11_original.1507070.xlsx",
+  "dataset_id": "statistical-bulletin/табл 22 кв/section=I.,row=I.,currency=KZT",
+  "indicator_id": "STATE_DEBT_TOTAL",
+  "indicator_name": "State Debt",
+  "description": "Государственный долг РК",
+  "frequency": "quarterly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT. Section I of the bulletin's debt table: state debt (government + National Bank + local executive bodies, net of mutual claims). A COMPONENT of the existing GOV_DEBT, which is I + II + III -- verified: 38,495,061.56 + 2,414,476.28 + 6,000 = 40,915,537.84, exactly GOV_DEBT.",
+  "publication_date": null,
+  "last_update_date": "2026-09-01",
+  "download_date": "2026-09-01",
+  "period_start": "2020-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

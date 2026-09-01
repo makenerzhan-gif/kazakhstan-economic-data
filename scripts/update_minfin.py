@@ -72,6 +72,11 @@ FETCHERS = {
     "STATE_GOV_WAGES_EXPENDITURE": minfin_fetchers.fetch_state_gov_wages_expenditure,
     "STATE_GOV_CAPITAL_EXPENDITURE": minfin_fetchers.fetch_state_gov_capital_expenditure,
     "STATE_GOV_SUBSIDIES_EXPENDITURE": minfin_fetchers.fetch_state_gov_subsidies_expenditure,
+    "STATE_DEBT_TOTAL": minfin_fetchers.fetch_state_debt_total,
+    "GOV_DEBT_EXTERNAL_USD": minfin_fetchers.fetch_gov_debt_external_usd,
+    "LOCAL_GOV_DEBT": minfin_fetchers.fetch_local_gov_debt,
+    "STATE_GUARANTEED_DEBT": minfin_fetchers.fetch_state_guaranteed_debt,
+    "GOV_DEBT_EUROBONDS": minfin_fetchers.fetch_gov_debt_eurobonds,
 }
 
 INDICATOR_IDS = [
@@ -97,6 +102,11 @@ INDICATOR_IDS = [
     "STATE_BUDGET_DEFICIT", "STATE_NON_OIL_DEFICIT",
     "PROPERTY_TAX", "LAND_TAX",
     "STATE_GOV_WAGES_EXPENDITURE", "STATE_GOV_CAPITAL_EXPENDITURE", "STATE_GOV_SUBSIDIES_EXPENDITURE",
+    "STATE_DEBT_TOTAL",
+    "GOV_DEBT_EXTERNAL_USD",
+    "LOCAL_GOV_DEBT",
+    "STATE_GUARANTEED_DEBT",
+    "GOV_DEBT_EUROBONDS",
 ]
 
 

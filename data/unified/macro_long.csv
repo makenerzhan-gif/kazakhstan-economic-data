@@ -4476,6 +4476,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,55.924679,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,monthly,FX_RESERVES,28957.509887228625,USD million,nbk,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,quarterly,GOLD_BULLION_SALES,4868.0,pieces,nbk,2026-09-01,level,2026-09-01
+2020-01-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,3416740.0000000005,million KZT,minfin,2026-09-01,level,2026-09-01
+2020-01-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,15232.861544939597,USD million,minfin,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4969022.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,annual,IMF_CPI_EOP_INDEX,100.0,index,imf,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,annual,IMF_CPI_INDEX,96.85,index,imf,2026-09-01,level,2026-09-01
@@ -4540,6 +4542,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,20.437801,number of months,nbk,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,6.59853719141906,number of months,nbk,2026-09-01,level,2026-09-01
 2020-01-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,15.939981,% of GDP,nbk,2026-09-01,level,2026-09-01
+2020-01-01,KZ,national,quarterly,STATE_DEBT_TOTAL,16486847.268489938,million KZT,minfin,2026-09-01,level,2026-09-01
 2020-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.5,index,nbk,2026-09-01,level,2026-09-01
 2020-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,1906.858162,billion KZT,nbk,2026-09-01,level,2026-09-01
 2020-02-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1262.329475,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -5028,6 +5031,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,monthly,FX_RESERVES,35638.084976284,USD million,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,GOLD_BULLION_SALES,7891.0,pieces,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,GOV_DEBT,21548336.97585081,million KZT,minfin,2026-09-01,level,2026-09-01
+2021-01-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,3870101.0,million KZT,minfin,2026-09-01,level,2026-09-01
+2021-01-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,16393.93195837872,USD million,minfin,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,7193549.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,IIP_ASSETS,160536.113602,million USD,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,IIP_LIABILITIES,232516.43027,million USD,nbk,2026-09-01,level,2026-09-01
@@ -5075,6 +5080,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,5.158662,percent per annum,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,19.475528,months,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,23.203155,months,nbk,2026-09-01,level,2026-09-01
+2021-01-01,KZ,national,quarterly,LOCAL_GOV_DEBT,1741971.6845,million KZT,minfin,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58743.06233945499,USD million,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,32.93257,% of GDP,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,monthly,NEER,82.57278,index,nbk,2026-09-01,level,2026-09-01
@@ -5096,6 +5102,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,23.735973,number of months,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,9.19658034368602,number of months,nbk,2026-09-01,level,2026-09-01
 2021-01-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,20.830789,% of GDP,nbk,2026-09-01,level,2026-09-01
+2021-01-01,KZ,national,quarterly,STATE_DEBT_TOTAL,20642523.00803071,million KZT,minfin,2026-09-01,level,2026-09-01
+2021-01-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,877205.6171201023,million KZT,minfin,2026-09-01,level,2026-09-01
 2021-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.9,index,nbk,2026-09-01,level,2026-09-01
 2021-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,4096.014744,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-02-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1426.291632,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -5280,7 +5288,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,quarterly,GOLD_BULLION_SALES,7768.0,pieces,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,GOV_DEBT,23172110.398438435,million KZT,minfin,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,10305122.873276392,million KZT,minfin,2026-09-01,level,2026-09-01
+2021-07-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,3901249.0,million KZT,minfin,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,7491981.064672005,million KZT,minfin,2026-09-01,level,2026-09-01
+2021-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,17513.22159160337,USD million,minfin,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,8083841.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,IIP_ASSETS,164940.457763,million USD,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,IIP_LIABILITIES,241094.588864,million USD,nbk,2026-09-01,level,2026-09-01
@@ -5297,6 +5307,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,5.550954,percent per annum,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,19.001472,months,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,22.470226,months,nbk,2026-09-01,level,2026-09-01
+2021-07-01,KZ,national,quarterly,LOCAL_GOV_DEBT,1727426.8354130501,million KZT,minfin,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57343.36715300661,USD million,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,31.308577,% of GDP,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,monthly,NEER,82.84246,index,nbk,2026-09-01,level,2026-09-01
@@ -5318,6 +5329,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,22.83835,number of months,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,8.87821668923549,number of months,nbk,2026-09-01,level,2026-09-01
 2021-07-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,19.911295,% of GDP,nbk,2026-09-01,level,2026-09-01
+2021-07-01,KZ,national,quarterly,STATE_DEBT_TOTAL,22222527.500422597,million KZT,minfin,2026-09-01,level,2026-09-01
+2021-07-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,920974.5473158386,million KZT,minfin,2026-09-01,level,2026-09-01
 2021-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.4,index,nbk,2026-09-01,level,2026-09-01
 2021-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,6803.998134,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-08-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1733.089841,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -5400,7 +5413,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,quarterly,GOLD_BULLION_SALES,7448.0,pieces,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,GOV_DEBT,22869919.199762907,million KZT,minfin,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,10664470.080022218,million KZT,minfin,2026-09-01,level,2026-09-01
+2021-10-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,3858979.0000000005,million KZT,minfin,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,7378454.438925441,million KZT,minfin,2026-09-01,level,2026-09-01
+2021-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,17333.74313182851,USD million,minfin,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,8513231.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,IIP_ASSETS,164808.790195,million USD,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,IIP_LIABILITIES,244511.956737,million USD,nbk,2026-09-01,level,2026-09-01
@@ -5417,6 +5432,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,5.555051,percent per annum,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,20.853408,months,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,30.569255,months,nbk,2026-09-01,level,2026-09-01
+2021-10-01,KZ,national,quarterly,LOCAL_GOV_DEBT,1791544.821062132,million KZT,minfin,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,55058.18207939864,USD million,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,28.860719,% of GDP,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,monthly,NEER,83.23922,index,nbk,2026-09-01,level,2026-09-01
@@ -5446,6 +5462,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,22.265003,number of months,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,8.94829595034697,number of months,nbk,2026-09-01,level,2026-09-01
 2021-10-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,19.393251,% of GDP,nbk,2026-09-01,level,2026-09-01
+2021-10-01,KZ,national,quarterly,STATE_DEBT_TOTAL,21841130.341015667,million KZT,minfin,2026-09-01,level,2026-09-01
+2021-10-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1002180.508047239,million KZT,minfin,2026-09-01,level,2026-09-01
 2021-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.8,index,nbk,2026-09-01,level,2026-09-01
 2021-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,7401.637912,billion KZT,nbk,2026-09-01,level,2026-09-01
 2021-11-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1793.628613,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -5638,6 +5656,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,57.770777,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,monthly,FX_RESERVES,34377.97403821167,USD million,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,GOLD_BULLION_SALES,9489.0,pieces,nbk,2026-09-01,level,2026-09-01
+2022-01-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,3878993.0,million KZT,minfin,2026-09-01,level,2026-09-01
+2022-01-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,17141.640294725334,USD million,minfin,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,9056005.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,IIP_ASSETS,167348.028052,million USD,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,IIP_LIABILITIES,244277.840786,million USD,nbk,2026-09-01,level,2026-09-01
@@ -5691,6 +5711,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,5.273117,percent per annum,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,17.498563,months,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,21.963699,months,nbk,2026-09-01,level,2026-09-01
+2022-01-01,KZ,national,quarterly,LOCAL_GOV_DEBT,1874497.8050963522,million KZT,minfin,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,monthly,M0,3451715.059,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,monthly,M1,6368114.35895143,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,monthly,M2,14781486.94608868,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5726,6 +5747,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,21.144319,number of months,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,8.31774178964158,number of months,nbk,2026-09-01,level,2026-09-01
 2022-01-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,17.411253,% of GDP,nbk,2026-09-01,level,2026-09-01
+2022-01-01,KZ,national,quarterly,STATE_DEBT_TOTAL,21975567.46573108,million KZT,minfin,2026-09-01,level,2026-09-01
+2022-01-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1172589.2291820254,million KZT,minfin,2026-09-01,level,2026-09-01
 2022-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.2,index,nbk,2026-09-01,level,2026-09-01
 2022-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,6857.361091,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-02-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1591.394293,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -5829,6 +5852,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,60.467906,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,monthly,FX_RESERVES,33125.09938720851,USD million,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,GOLD_BULLION_SALES,12626.0,pieces,nbk,2026-09-01,level,2026-09-01
+2022-04-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,4101554.0,million KZT,minfin,2026-09-01,level,2026-09-01
+2022-04-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,16845.120772169208,USD million,minfin,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,9296961.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,IIP_ASSETS,167864.474317,million USD,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,IIP_LIABILITIES,239308.150952,million USD,nbk,2026-09-01,level,2026-09-01
@@ -5852,6 +5877,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,5.348047,percent per annum,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,18.151442,months,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,23.225119,months,nbk,2026-09-01,level,2026-09-01
+2022-04-01,KZ,national,quarterly,LOCAL_GOV_DEBT,1807125.454423078,million KZT,minfin,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,monthly,M0,3523866.127,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,monthly,M1,6398860.04249779,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,monthly,M2,14355018.10451048,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -5886,6 +5912,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,19.476053,number of months,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,7.71078271171951,number of months,nbk,2026-09-01,level,2026-09-01
 2022-04-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,16.338139,% of GDP,nbk,2026-09-01,level,2026-09-01
+2022-04-01,KZ,national,quarterly,STATE_DEBT_TOTAL,21694083.26148863,million KZT,minfin,2026-09-01,level,2026-09-01
+2022-04-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1241984.4178330426,million KZT,minfin,2026-09-01,level,2026-09-01
 2022-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.1,index,nbk,2026-09-01,level,2026-09-01
 2022-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,7909.726513,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-05-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1785.233791,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -5989,6 +6017,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,60.383004,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,monthly,FX_RESERVES,31960.657346680062,USD million,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,GOLD_BULLION_SALES,9208.0,pieces,nbk,2026-09-01,level,2026-09-01
+2022-07-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,4098270.0,million KZT,minfin,2026-09-01,level,2026-09-01
+2022-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,17097.538562961672,USD million,minfin,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,9459129.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,IIP_ASSETS,169046.365461,million USD,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,IIP_LIABILITIES,242621.7791,million USD,nbk,2026-09-01,level,2026-09-01
@@ -6012,6 +6042,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,5.385922,percent per annum,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,18.292592,months,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,22.93961,months,nbk,2026-09-01,level,2026-09-01
+2022-07-01,KZ,national,quarterly,LOCAL_GOV_DEBT,1816370.6183262342,million KZT,minfin,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,monthly,M0,3674234.495,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,monthly,M1,6502762.73640508,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,monthly,M2,15230783.41968568,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -6046,6 +6077,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,18.219108,number of months,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,7.14278472199835,number of months,nbk,2026-09-01,level,2026-09-01
 2022-07-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,15.176307,% of GDP,nbk,2026-09-01,level,2026-09-01
+2022-07-01,KZ,national,quarterly,STATE_DEBT_TOTAL,22952845.662668217,million KZT,minfin,2026-09-01,level,2026-09-01
+2022-07-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1379522.3225272836,million KZT,minfin,2026-09-01,level,2026-09-01
 2022-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.4,index,nbk,2026-09-01,level,2026-09-01
 2022-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,9509.307459,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-08-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1855.926507,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -6149,6 +6182,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,quarterly,FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.438249,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,monthly,FX_RESERVES,32638.671263871118,USD million,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,GOLD_BULLION_SALES,8206.0,pieces,nbk,2026-09-01,level,2026-09-01
+2022-10-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,664800.0,million KZT,minfin,2026-09-01,level,2026-09-01
+2022-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,16512.98068117965,USD million,minfin,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10341880.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,IIP_ASSETS,168016.314952,million USD,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,IIP_LIABILITIES,243269.468854,million USD,nbk,2026-09-01,level,2026-09-01
@@ -6172,6 +6207,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,5.733848,percent per annum,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,18.388325,months,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,22.723837,months,nbk,2026-09-01,level,2026-09-01
+2022-10-01,KZ,national,quarterly,LOCAL_GOV_DEBT,1849132.405962794,million KZT,minfin,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,monthly,M0,3762938.734,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,monthly,M1,6495288.11980758,million KZT,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,monthly,M2,15579399.14485345,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -6206,6 +6242,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,17.425212,number of months,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,6.92825593702098,number of months,nbk,2026-09-01,level,2026-09-01
 2022-10-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,15.155332,% of GDP,nbk,2026-09-01,level,2026-09-01
+2022-10-01,KZ,national,quarterly,STATE_DEBT_TOTAL,23871983.16331235,million KZT,minfin,2026-09-01,level,2026-09-01
+2022-10-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1364317.2616383452,million KZT,minfin,2026-09-01,level,2026-09-01
 2022-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.1,index,nbk,2026-09-01,level,2026-09-01
 2022-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,10222.94376,billion KZT,nbk,2026-09-01,level,2026-09-01
 2022-11-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1797.087351,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -6420,6 +6458,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,monthly,FX_OTC_VOLUME_USD,8162.59592361999,USD million,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,monthly,FX_RESERVES,35076.02886017335,USD million,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,GOLD_BULLION_SALES,7900.0,pieces,nbk,2026-09-01,level,2026-09-01
+2023-01-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,4091516.9999999995,million KZT,minfin,2026-09-01,level,2026-09-01
+2023-01-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,16953.917220324518,USD million,minfin,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10447907.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,380266.90341981,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1005466.77677209,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -6481,6 +6521,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,6.099823,percent per annum,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,18.484394,months,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,23.074785,months,nbk,2026-09-01,level,2026-09-01
+2023-01-01,KZ,national,quarterly,LOCAL_GOV_DEBT,1801782.3103052946,million KZT,minfin,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,monthly,M0,3360653.4209,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,monthly,M1,9382455.41364677,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,monthly,M2,28025383.91905973,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -6522,6 +6563,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,17.574285,number of months,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,6.96422503198383,number of months,nbk,2026-09-01,level,2026-09-01
 2023-01-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,15.526934,% of GDP,nbk,2026-09-01,level,2026-09-01
+2023-01-01,KZ,national,quarterly,STATE_DEBT_TOTAL,25317692.955366097,million KZT,minfin,2026-09-01,level,2026-09-01
+2023-01-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1303804.527222713,million KZT,minfin,2026-09-01,level,2026-09-01
 2023-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.6,index,nbk,2026-09-01,level,2026-09-01
 2023-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,9260.655473,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-02-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1621.105828,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -6669,6 +6712,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,monthly,FX_OTC_VOLUME_USD,12264.05384333,USD million,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,monthly,FX_RESERVES,36214.79977751212,USD million,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,GOLD_BULLION_SALES,9585.0,pieces,nbk,2026-09-01,level,2026-09-01
+2023-04-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,3982801.0000000005,million KZT,minfin,2026-09-01,level,2026-09-01
+2023-04-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,16881.938196648298,USD million,minfin,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,10882429.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,456221.64345106,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1047950.51691994,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -6701,6 +6746,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,6.61685,percent per annum,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,21.165507,months,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,25.604756,months,nbk,2026-09-01,level,2026-09-01
+2023-04-01,KZ,national,quarterly,LOCAL_GOV_DEBT,1827755.973165451,million KZT,minfin,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,monthly,M0,3219144.4818,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,monthly,M1,8592426.15983519,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,monthly,M2,28110277.23984131,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -6741,6 +6787,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,16.937523,number of months,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,6.65234079576333,number of months,nbk,2026-09-01,level,2026-09-01
 2023-04-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,15.445664,% of GDP,nbk,2026-09-01,level,2026-09-01
+2023-04-01,KZ,national,quarterly,STATE_DEBT_TOTAL,26418906.69969666,million KZT,minfin,2026-09-01,level,2026-09-01
+2023-04-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1284844.5778255898,million KZT,minfin,2026-09-01,level,2026-09-01
 2023-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.1,index,nbk,2026-09-01,level,2026-09-01
 2023-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,11353.96446,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-05-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1928.901531,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -7119,6 +7167,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,monthly,FX_OTC_VOLUME_USD,10184.64956689,USD million,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,monthly,FX_RESERVES,31883.450429953424,USD million,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,GOLD_BULLION_SALES,8468.0,pieces,nbk,2026-09-01,level,2026-09-01
+2023-10-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,4191777.0000000005,million KZT,minfin,2026-09-01,level,2026-09-01
+2023-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,16038.070450193687,USD million,minfin,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12598933.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,319539.05274185,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1055719.53121084,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -7151,6 +7201,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,6.779327,percent per annum,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,22.658199,months,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,26.353606,months,nbk,2026-09-01,level,2026-09-01
+2023-10-01,KZ,national,quarterly,LOCAL_GOV_DEBT,1972689.4300126096,million KZT,minfin,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,monthly,M0,3553371.2098,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,monthly,M1,9416813.96169853,million KZT,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,monthly,M2,29720799.51593569,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -7191,6 +7242,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,14.621585,number of months,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,5.32376614785823,number of months,nbk,2026-09-01,level,2026-09-01
 2023-10-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,12.759818,% of GDP,nbk,2026-09-01,level,2026-09-01
+2023-10-01,KZ,national,quarterly,STATE_DEBT_TOTAL,29167177.620249115,million KZT,minfin,2026-09-01,level,2026-09-01
+2023-10-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1371172.2745876436,million KZT,minfin,2026-09-01,level,2026-09-01
 2023-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.0,index,nbk,2026-09-01,level,2026-09-01
 2023-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,13305.23283,billion KZT,nbk,2026-09-01,level,2026-09-01
 2023-11-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2036.150967,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -7461,6 +7514,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,monthly,FX_OTC_VOLUME_USD,7752.68367429,USD million,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,monthly,FX_RESERVES,35944.0531031745,USD million,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,quarterly,GOLD_BULLION_SALES,10710.0,pieces,nbk,2026-09-01,level,2026-09-01
+2024-01-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,3795891.9999999995,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-01-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,15577.058467158678,USD million,minfin,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,12821636.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,120313.45265052,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1010397.37501044,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -7524,6 +7579,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,8.151666,percent per annum,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,24.397,months,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,28.086386,months,nbk,2026-09-01,level,2026-09-01
+2024-01-01,KZ,national,quarterly,LOCAL_GOV_DEBT,1970631.9309,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,monthly,M0,3639661.6298,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,monthly,M1,10380883.46418346,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,monthly,M2,32746912.82076069,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -7565,6 +7621,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,15.474204,number of months,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,5.93519375814371,number of months,nbk,2026-09-01,level,2026-09-01
 2024-01-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,13.775568,% of GDP,nbk,2026-09-01,level,2026-09-01
+2024-01-01,KZ,national,quarterly,STATE_DEBT_TOTAL,27165706.39330189,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-01-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1461867.8774690302,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.0,index,nbk,2026-09-01,level,2026-09-01
 2024-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,11046.07946,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-02-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1884.696567,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -7726,6 +7784,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,monthly,FX_OTC_VOLUME_USD,7663.91128851,USD million,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,monthly,FX_RESERVES,37847.046933613856,USD million,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,GOLD_BULLION_SALES,18969.0,pieces,nbk,2026-09-01,level,2026-09-01
+2024-04-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,3711101.75,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-04-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,15209.192,USD million,minfin,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,13644933.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,97315.38623732,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1010163.10871361,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -7758,6 +7818,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.076798,percent per annum,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,23.365612,months,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,26.914961,months,nbk,2026-09-01,level,2026-09-01
+2024-04-01,KZ,national,quarterly,LOCAL_GOV_DEBT,1798749.688,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,monthly,M0,3639093.3215,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,monthly,M1,9402328.61470429,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,monthly,M2,32535362.22066134,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -7799,6 +7860,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,16.006516,number of months,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,6.29222181759404,number of months,nbk,2026-09-01,level,2026-09-01
 2024-04-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,14.181679,% of GDP,nbk,2026-09-01,level,2026-09-01
+2024-04-01,KZ,national,quarterly,STATE_DEBT_TOTAL,27260274.922,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-04-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1443836.794,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-09-01,level,2026-09-01
 2024-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,13262.55766,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-05-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2102.008186,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -7959,7 +8022,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,quarterly,GOLD_BULLION_SALES,14752.0,pieces,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,GOV_DEBT,30327860.86431337,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,20186100.00286501,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-07-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,3910013.249998607,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,7138685.328904026,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,15141.65640543,USD million,minfin,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,14468049.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,228672.39760396,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1037580.24209197,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -7991,6 +8056,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.248322,percent per annum,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,24.133036,months,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,27.148721,months,nbk,2026-09-01,level,2026-09-01
+2024-07-01,KZ,national,quarterly,LOCAL_GOV_DEBT,1886506.8894314799,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,monthly,M0,3917267.1503,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,monthly,M1,10656953.30853039,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,monthly,M2,34127038.71751289,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -8031,6 +8097,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,16.593456,number of months,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,6.61935253789912,number of months,nbk,2026-09-01,level,2026-09-01
 2024-07-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,14.630595,% of GDP,nbk,2026-09-01,level,2026-09-01
+2024-07-01,KZ,national,quarterly,STATE_DEBT_TOTAL,28721442.716479875,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-07-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1583809.7971334949,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.1,index,nbk,2026-09-01,level,2026-09-01
 2024-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15399.21764,billion KZT,nbk,2026-09-01,level,2026-09-01
 2024-08-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2264.144286,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -8191,7 +8259,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,quarterly,GOLD_BULLION_SALES,13940.0,pieces,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,GOV_DEBT,32180341.53234472,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,21567649.568551306,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-10-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,4011053.0,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,7217026.519217961,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,15059.630071610625,USD million,minfin,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15519546.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,103095.00274471,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1036900.87288954,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -8223,6 +8293,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.065161,percent per annum,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,23.852681,months,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,26.746442,months,nbk,2026-09-01,level,2026-09-01
+2024-10-01,KZ,national,quarterly,LOCAL_GOV_DEBT,2144935.905,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,monthly,M0,3991213.68,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,monthly,M1,10837432.58398421,million KZT,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,monthly,M2,35352799.35758956,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -8263,6 +8334,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,17.304026,number of months,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,7.29885918123746,number of months,nbk,2026-09-01,level,2026-09-01
 2024-10-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,15.979874,% of GDP,nbk,2026-09-01,level,2026-09-01
+2024-10-01,KZ,national,quarterly,STATE_DEBT_TOTAL,30504806.062269196,million KZT,minfin,2026-09-01,level,2026-09-01
+2024-10-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1652927.1193755262,million KZT,minfin,2026-09-01,level,2026-09-01
 2024-10-14,KZ,national,daily,BASE_RATE,14.25,% p.a.,nbk,2026-09-01,level,2026-09-01
 2024-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.6,index,nbk,2026-09-01,level,2026-09-01
 2024-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15570.81632,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -8536,7 +8609,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,quarterly,GOLD_BULLION_SALES,23445.0,pieces,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,GOV_DEBT,33775798.64225829,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,21765224.511810992,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-01-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,4318347.25000048,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8309718.93365078,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-01-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,15872.175829259999,USD million,minfin,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,15704537.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,138317.59596436,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1112965.36456943,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -8600,6 +8675,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.107841,percent per annum,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,26.713836,months,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,29.177486,months,nbk,2026-09-01,level,2026-09-01
+2025-01-01,KZ,national,quarterly,LOCAL_GOV_DEBT,2301568.10542194,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,monthly,M0,4374545.5829,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,monthly,M1,11364042.71577298,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,monthly,M2,39254670.45494792,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -8643,6 +8719,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,16.597647,number of months,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,7.35646605431325,number of months,nbk,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,15.736963,% of GDP,nbk,2026-09-01,level,2026-09-01
+2025-01-01,KZ,national,quarterly,STATE_DEBT_TOTAL,31838094.866879333,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-01-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1917095.4246789496,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-01-01,KZ,national,annual,TAX_ARREARS_TOTAL,434785.0,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-01-20,KZ,national,daily,BASE_RATE,15.25,% p.a.,nbk,2026-09-01,level,2026-09-01
 2025-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.2,index,nbk,2026-09-01,level,2026-09-01
@@ -8842,7 +8920,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,quarterly,GOLD_BULLION_SALES,11084.0,pieces,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,GOV_DEBT,33833554.999943726,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,22569797.17147042,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-04-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,4180214.0000019497,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8005188.352843165,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-04-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,15901.60969537,USD million,minfin,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,17041758.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,153685.95133191,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1124753.51118378,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -8873,6 +8953,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.34163,percent per annum,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,26.87703,months,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,29.820193,months,nbk,2026-09-01,level,2026-09-01
+2025-04-01,KZ,national,quarterly,LOCAL_GOV_DEBT,2271173.2440499403,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,monthly,M0,4281997.1543,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,monthly,M1,10231744.02377287,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,monthly,M2,38357905.50218638,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -8913,6 +8994,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,17.345939,number of months,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,8.02288701005653,number of months,nbk,2026-09-01,level,2026-09-01
 2025-04-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,17.249283,% of GDP,nbk,2026-09-01,level,2026-09-01
+2025-04-01,KZ,national,quarterly,STATE_DEBT_TOTAL,31878508.144813597,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-04-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,1934438.50443014,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-04-14,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-09-01,level,2026-09-01
 2025-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.4,index,nbk,2026-09-01,level,2026-09-01
 2025-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15748.26655,billion KZT,nbk,2026-09-01,level,2026-09-01
@@ -9096,7 +9179,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,quarterly,GOLD_BULLION_SALES,4008.0,pieces,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,GOV_DEBT,35662941.288808316,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,23794008.22874087,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-07-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,4403581.500001577,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8397706.045038655,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,16137.331703220001,USD million,minfin,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,18208271.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,37844.52712701,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1099133.26401971,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -9127,6 +9212,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.101102,percent per annum,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,27.322491,months,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,29.563854,months,nbk,2026-09-01,level,2026-09-01
+2025-07-01,KZ,national,quarterly,LOCAL_GOV_DEBT,2307210.5419949,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,monthly,M0,4723998.8271,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,monthly,M1,11332249.35488954,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,monthly,M2,40623854.65938157,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -9167,6 +9253,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,17.611125,number of months,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,8.15631437684291,number of months,nbk,2026-09-01,level,2026-09-01
 2025-07-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,17.76681,% of GDP,nbk,2026-09-01,level,2026-09-01
+2025-07-01,KZ,national,quarterly,STATE_DEBT_TOTAL,33534250.882279526,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-07-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,2108082.055828796,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-07-14,KZ,national,daily,BASE_RATE,16.5,% p.a.,nbk,2026-09-01,level,2026-09-01
 2025-07-31,KZ,national,irregular,CUSTOMS_DUTIES,1199236.93435166,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2025-07-31,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,325048.78472000005,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
@@ -9371,7 +9459,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,quarterly,GOLD_BULLION_SALES,9110.0,pieces,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,GOV_DEBT,37948743.672,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,25222902.565,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-10-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,4644193.5,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8730378.771,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,15908.414,USD million,minfin,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,19291932.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,41286.17094888,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1174227.53390498,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -9402,6 +9492,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.323007,percent per annum,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,27.082113,months,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,29.121075,months,nbk,2026-09-01,level,2026-09-01
+2025-10-01,KZ,national,quarterly,LOCAL_GOV_DEBT,2543482.852,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,monthly,M0,4692018.1385,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,monthly,M1,11365178.76486595,million KZT,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,monthly,M2,41626869.84291708,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -9440,6 +9531,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,18.471417,number of months,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,8.88756561317871,number of months,nbk,2026-09-01,level,2026-09-01
 2025-10-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,19.489205,% of GDP,nbk,2026-09-01,level,2026-09-01
+2025-10-01,KZ,national,quarterly,STATE_DEBT_TOTAL,35503738.175,million KZT,minfin,2026-09-01,level,2026-09-01
+2025-10-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,2424397.146,million KZT,minfin,2026-09-01,level,2026-09-01
 2025-10-13,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-09-01,level,2026-09-01
 2025-10-31,KZ,national,irregular,CUSTOMS_DUTIES,1808570.55602749,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
 2025-10-31,KZ,national,irregular,GOV_AUDIT_VIOLATIONS_AMOUNT,387808.0230800001,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
@@ -9702,7 +9795,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,quarterly,GOLD_BULLION_SALES,16597.0,pieces,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,quarterly,GOV_DEBT,38743138.97677609,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,26146859.151021335,million KZT,minfin,2026-09-01,level,2026-09-01
+2026-01-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,5011624.000000592,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8698208.234496133,million KZT,minfin,2026-09-01,level,2026-09-01
+2026-01-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,17307.45614441,USD million,minfin,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,20222315.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,82567.22102183,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1141324.07346514,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -9766,6 +9861,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.507616,percent per annum,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,27.737141,months,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,30.224874,months,nbk,2026-09-01,level,2026-09-01
+2026-01-01,KZ,national,quarterly,LOCAL_GOV_DEBT,2678710.551846,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,monthly,M0,4749199.36743725,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,monthly,M1,11935072.42579671,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,monthly,M2,45805637.78808471,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -9807,6 +9903,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,19.146254,number of months,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,9.776402,number of months,nbk,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,21.383318,% of GDP,nbk,2026-09-01,level,2026-09-01
+2026-01-01,KZ,national,quarterly,STATE_DEBT_TOTAL,36444155.17501747,million KZT,minfin,2026-09-01,level,2026-09-01
+2026-01-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,2292983.8017586176,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-01-01,KZ,national,annual,TAX_ARREARS_TOTAL,522067.4666522346,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-01-26,KZ,national,daily,BASE_RATE,18.0,% p.a.,nbk,2026-09-01,level,2026-09-01
 2026-01-31,KZ,national,irregular,CUSTOMS_DUTIES,66067.6032816,"million KZT, year-to-date cumulative",minfin,2026-09-01,level,2026-09-01
@@ -10046,7 +10144,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,quarterly,GOLD_BULLION_SALES,6681.0,pieces,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,GOV_DEBT,39078996.50829675,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,27145138.06800939,million KZT,minfin,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,4778997.0,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8185792.40162799,million KZT,minfin,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,16999.195085824627,USD million,minfin,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,21295791.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,166885.23968497,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1104750.79291193,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -10079,6 +10179,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,8.061423,percent per annum,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,28.675861,months,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,31.760793,months,nbk,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,quarterly,LOCAL_GOV_DEBT,2540461.86428113,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,M0,4479899.45165563,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,M1,11371521.41482119,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,monthly,M2,44720043.05891928,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -10119,6 +10220,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,quarterly,RESERVES_AND_NF_IMPORT_COVER,18.784425,number of months,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,RESERVES_IMPORT_COVER,9.752253,number of months,nbk,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,quarterly,RESERVE_ASSETS_GDP_SHARE,21.252677,% of GDP,nbk,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,quarterly,STATE_DEBT_TOTAL,36847200.72413738,million KZT,minfin,2026-09-01,level,2026-09-01
+2026-04-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,2225795.7841593744,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-04-01,KZ,national,daily,TONIA,18.25,%,nbk,2026-09-01,level,2026-09-01
 2026-04-02,KZ,national,daily,TONIA,18.35,%,nbk,2026-09-01,level,2026-09-01
 2026-04-03,KZ,national,daily,TONIA,18.08,%,nbk,2026-09-01,level,2026-09-01
@@ -10364,7 +10467,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,monthly,FX_RESERVES,61828.63729572266,USD million,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,GOV_DEBT,40915537.844671994,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,28471879.4283,million KZT,minfin,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,4814560.249998,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8352366.460626001,million KZT,minfin,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,17192.30674,USD million,minfin,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,22104699.0,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,109574.25879704,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1136656.61395793,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -10393,6 +10498,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,8.638192,percent per annum,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,26.442051,months,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,30.298614,months,nbk,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,quarterly,LOCAL_GOV_DEBT,2772191.1021999996,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,M0,4864774.24909445,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,M1,12114106.83320511,million KZT,nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,monthly,M2,48128860.57983734,million KZT,nbk,2026-09-01,level,2026-09-01
@@ -10414,6 +10520,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,quarterly,PRODUCTION_VOLUME_DIFFUSION_INDEX,52.794411,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_DIFFUSION_INDEX,71.670944,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,quarterly,RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX,64.941545,"diffusion index (0-100, 50=neutral)",nbk,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,quarterly,STATE_DEBT_TOTAL,38495061.56442599,million KZT,minfin,2026-09-01,level,2026-09-01
+2026-07-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,2414476.280246,million KZT,minfin,2026-09-01,level,2026-09-01
 2026-07-01,KZ,national,daily,TONIA,16.24,%,nbk,2026-09-01,level,2026-09-01
 2026-07-02,KZ,national,daily,TONIA,16.36,%,nbk,2026-09-01,level,2026-09-01
 2026-07-03,KZ,national,daily,TONIA,16.59,%,nbk,2026-09-01,level,2026-09-01

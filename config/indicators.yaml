@@ -2390,6 +2390,51 @@ indicators:
     category: labor
     source_status: confirmed
 
+  - id: STATE_DEBT_TOTAL
+    name_ru: "Государственный долг РК"
+    name_en: "State Debt"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_DEBT_EXTERNAL_USD
+    name_ru: "Внешний долг Правительства РК, долл. США"
+    name_en: "Government Debt, External (USD)"
+    agency: minfin
+    frequency: quarterly
+    unit: "USD million"
+    category: fiscal
+    source_status: confirmed
+
+  - id: LOCAL_GOV_DEBT
+    name_ru: "Долг местных исполнительных органов"
+    name_en: "Local Government Debt"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: STATE_GUARANTEED_DEBT
+    name_ru: "Гарантированный государством долг"
+    name_en: "State-Guaranteed Debt"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: GOV_DEBT_EUROBONDS
+    name_ru: "Еврооблигации Правительства РК"
+    name_en: "Government Eurobonds"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"
