@@ -1,6 +1,6 @@
 # Update report — 2026-09-02
 
-Run timestamp: 2026-09-02T17:26:47.783086
+Run timestamp: 2026-09-02T20:04:11.520833
 Unified dataset updated: True
 Tests passed: True
 
@@ -498,6 +498,19 @@ Tests passed: True
 - **nbk/KASE_RUB_VOLUME** — fetch+validate+process: ok (downloaded=20, processed=20)
   - warning: Unexpected jump of 53.3% between 2026-01-01 (134560334406.0) and 2026-02-01 (62859414953.0).
   - warning: Unexpected jump of 63.8% between 2026-04-01 (70943760874.0) and 2026-05-01 (116228489175.0).
+- **nbk/PAYMENTS_TOTAL_COUNT** — fetch+validate+process: ok (downloaded=71, processed=71)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/PAYMENT_CARDS_COUNT** — fetch+validate+process: ok (downloaded=71, processed=71)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/CASHLESS_PAYMENTS_COUNT** — fetch+validate+process: ok (downloaded=71, processed=71)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/CASH_WITHDRAWALS_COUNT** — fetch+validate+process: ok (downloaded=71, processed=71)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/REMITTANCES_SENT_COUNT** — fetch+validate+process: ok (downloaded=58, processed=58)
+  - warning: Unexpected jump of 55.6% between 2021-12-01 (226.259) and 2022-01-01 (100.472).
+  - warning: Unexpected jump of 53.0% between 2022-03-01 (167.585) and 2022-04-01 (256.327).
+- **nbk/REMITTANCES_RECEIVED_COUNT** — fetch+validate+process: ok (downloaded=58, processed=58)
+  - warning: Unexpected jump of 86.5% between 2022-03-01 (96.643) and 2022-04-01 (180.237).
 - **nbk/BANK_ROA** — fetch+validate+process: ok (downloaded=18, processed=18)
 - **nbk/BANK_ROE** — fetch+validate+process: ok (downloaded=18, processed=18)
   - warning: Unexpected jump of 50.4% between 2022-04-01 (31.32) and 2022-07-01 (15.55).
@@ -1449,3 +1462,12 @@ Tests passed: True
   - warning: Unexpected jump of 56.9% between 2026-02-28 (67.45116666666665) and 2026-03-31 (105.83).
 - **imf/COMMODITY_TERMS_OF_TRADE** — fetch+validate+process: ok (downloaded=413, processed=413)
 - **imf/COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS** — fetch+validate+process: ok (downloaded=413, processed=413)
+- **ardfm/BANK_NPL_90_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_NPL_90_AMOUNT** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LOANS_TOTAL** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_PROVISIONS_IFRS** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_CAPITAL_ADEQUACY_K1** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_CAPITAL_ADEQUACY_K2** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=3, processed=3)
