@@ -3715,6 +3715,127 @@ agencies:
         notes: >
           2026-09-01. Same form and type, currency='Russian ruble'.
 
+      NBK_FORM_RESWEEP (scope note):
+        status: informational
+        notes: >
+          2026-09-02. The 176 currently-unconnected NBK forms were re-swept, because the earlier
+          NBK_FORM_COVERAGE verdict -- "the unconnected forms are granular breakdowns" -- was shown
+          too coarse by formId=1 (a balance sheet, whose top lines would be headline indicators;
+          they are simply absent from it). One page per form, classifying by what its
+          classification fields actually are rather than by how many series it yields:
+            84  geographic, per-entity or per-industry breakdowns
+            60  multi-dimensional breakdowns
+            16  no classification field at all, but SEVERAL UNLABELLED ROWS PER DATE
+             4  only an unlabelled row_code
+            11  few enough series to be headline candidates
+             1  empty
+          The 16 "no classification" forms are NOT single-series forms as the shape suggests: they
+          return 3 to 86 rows per date with nothing distinguishing them (verified on formId=414,
+          415, 416, 450). That is the same label-stripping defect already recorded for formId=60,
+          formId=42 and formId=484, and it is now known to affect at least twenty forms.
+          Of the 11 candidates, checked individually: formId=417 has no unambiguous series at all;
+          formId=61 has one ('Other liabilities') and nothing else; formId=181 is clean only for
+          the Euro leg; formId=396 duplicates external debt already held; formId=33 is discussed
+          separately below. formId=418 and formId=412 were connected -- see the *_COUNT indicators.
+          This note replaces the blanket claim with a classification. It does not reopen the
+          decision on the 144 genuine breakdowns, which stands.
+
+      OFFICIAL_AVERAGE_FX_RATES (scope note):
+        status: not_connected
+        notes: >
+          2026-09-02. formId=33 'Official Foreign Exchange Rates on average for the period' looked
+          like the strongest find of the re-sweep: official average rates for USD, EUR, RUB, CNY
+          and GBP, 44 monthly dates, properly labelled by currency. Not connected, for two reasons
+          both established live.
+          FIRST, ITS report_date IS SHIFTED ONE MONTH FORWARD OF THE PERIOD IT DESCRIBES. The form
+          reports 472.1259 at 2026-08-01, which equals the average of the daily official
+          EXCHANGE_RATE series over JULY 2026 (472.12); and 487.8527 at 2026-07-01, which equals
+          the JUNE average (487.85). Nothing in the API states this. Connecting it naively would
+          mislabel every point by a month. Recorded because the finding is reusable: anyone reading
+          this form must shift it back.
+          SECOND, 15 OF 44 DATES CARRY MORE THAN ONE VALUE per currency with nothing to separate
+          them (e.g. 2023-01-01 US dollars: 460.480894, 467.743810, 467.867937). For USD the
+          ambiguity could be resolved against the daily series the project already holds, but for
+          EUR, RUB, CNY and GBP there is no independent daily series to disambiguate with, so
+          connecting those means guessing on a third of the history.
+          The form also carries a junk member, currency='1'.
+          USD would add nothing in any case: the daily official EXCHANGE_RATE is already held and
+          is the authoritative source for it.
+
+      PAYMENTS_TOTAL_COUNT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=418"
+        format: json
+        notes: >
+          2026-09-02. formId=418 'Statistics of payment instruments (by transactions)',
+          payment_instrument='Total', period='Month', type='thsd. transactions'. 71 monthly
+          points, 2020-01 to 2026-06.
+          WHY COUNTS: the dataset held PAYMENTS_TOTAL_VALUE, CASHLESS_PAYMENTS_VALUE,
+          CASH_WITHDRAWALS_VALUE and PAYMENT_CARDS_VALUE -- all values. Value alone cannot separate
+          people spending more from people transacting more often. The counts give average
+          transaction size.
+          CROSS-CHECK against those value series on all 71 shared dates: a cashless payment
+          averages 12,600-13,600 KZT through the first half of 2026 and a cash withdrawal
+          113,000-123,000 KZT -- withdrawals about NINE TIMES larger per transaction, the expected
+          shape, and confirmation that the two forms share a date convention with no shift.
+          THE SOURCE'S OWN TOTAL DOES NOT ALWAYS ADD UP, and this is REPORTED, NOT ENFORCED.
+          Summing the ten instrument rows equals the published Total exactly on 66 of 71 months.
+          On five -- 2020-06, 2022-07, 2024-10, 2024-11, 2024-12 -- the parts EXCEED the stated
+          total, by 1,515 to 14,962 thousand transactions, with all ten instruments present. A hard
+          identity guard would fail on real published data, so this follows the OIL_EXPORTS_VOLUME
+          precedent: check every run, print the failing months to stderr, and raise only if more
+          than a tenth fail. The PUBLISHED Total is what is stored -- the parts are not summed to
+          replace it.
+          The separate card identity (cashless + withdrawals = payment cards) DOES hold on every
+          month within rounding, and is enforced as a hard guard.
+
+      PAYMENT_CARDS_COUNT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=418"
+        format: json
+        notes: >
+          2026-09-02. Same form, payment_instrument='Payment cards, including:'. 97% of all payment
+          transactions in Kazakhstan by June 2026 (1.295 of 1.329 billion). Splits exactly into
+          CASHLESS_PAYMENTS_COUNT and CASH_WITHDRAWALS_COUNT.
+
+      CASHLESS_PAYMENTS_COUNT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=418"
+        format: json
+        notes: >
+          2026-09-02. Same form, payment_instrument='cashless payments'. Card payments for goods
+          and services. Against CASHLESS_PAYMENTS_VALUE, an average ticket of 12,600-13,600 KZT
+          through the first half of 2026 -- about 27 US dollars.
+
+      CASH_WITHDRAWALS_COUNT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=418"
+        format: json
+        notes: >
+          2026-09-02. Same form, payment_instrument='cash withdrawals'. Against
+          CASH_WITHDRAWALS_VALUE, 113,000-123,000 KZT per withdrawal -- roughly nine times the size
+          of a cashless payment. Read the two counts together for the cash-to-card transition.
+
+      REMITTANCES_SENT_COUNT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=412"
+        format: json
+        notes: >
+          2026-09-02. formId=412 'International remittances by currencies (by transactions)',
+          money_transfer_sign='money transfers sent', period='Month', type='thsd. transactions'.
+          58 monthly points, 2021-09 onward. This is the form's OWN all-currency total: the
+          per-currency rows carry a currency_code field and are excluded by requiring every other
+          classification field to be empty, so nothing is summed across currencies here.
+
+      REMITTANCES_RECEIVED_COUNT:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=412"
+        format: json
+        notes: >
+          2026-09-02. Same form, money_transfer_sign='money transfers received'. Kazakhstan SENDS
+          far more transfers than it receives -- 160,313 against 44,854 thousand transactions in
+          June 2026 -- so the two are not symmetric and should not be netted casually.
+
       DEPOSIT_DOLLARIZATION (scope note):
         status: not_connected
         notes: >

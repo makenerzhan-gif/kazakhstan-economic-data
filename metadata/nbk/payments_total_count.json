@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=418",
+  "dataset_id": "formId=418,payment_instrument=Total,period=Month,type=thsd. transactions",
+  "indicator_id": "PAYMENTS_TOTAL_COUNT",
+  "indicator_name": "Payment Transactions, total",
+  "description": "Количество платёжных транзакций, всего",
+  "frequency": "monthly",
+  "unit": "thousand transactions",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Thousand transactions. The count companion to PAYMENTS_TOTAL_VALUE -- value alone cannot separate people spending more from people transacting more often. 1.33 billion transactions in June 2026. NOTE the source's own Total is exceeded by the sum of its ten instrument rows on five of 71 months (2020-06, 2022-07, 2024-10, 2024-11, 2024-12); this is reported on stderr each run rather than silently reconciled, and the published Total is what is stored.",
+  "publication_date": null,
+  "last_update_date": "2026-09-02",
+  "download_date": "2026-09-02",
+  "period_start": "2020-01-01",
+  "period_end": "2026-06-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

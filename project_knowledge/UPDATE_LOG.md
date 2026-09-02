@@ -2448,3 +2448,71 @@ because building it means summing three series into an aggregate the source does
 finding: kase.kz responds but exposes no JSON surface, so the index needs HTML scraping — a new
 agency and a parser tied to page markup. Four guessed API paths all returned 404, consistent with
 that.
+
+## 2026-09-02 — NBK form re-sweep, and transaction counts (384 indicators, 14,771 observations)
+
+I recorded earlier that the blanket verdict "the 197 unconnected NBK forms are granular
+breakdowns" was too coarse, after `formId=1` turned out to be a balance sheet whose top lines
+would be headline indicators. This is the follow-through on that admission rather than leaving it
+as a footnote.
+
+### The re-sweep
+All 176 currently-unconnected forms, one page each, classified by **what their classification
+fields actually are** rather than by how many series they yield:
+
+| | |
+|---|---|
+| 84 | geographic, per-entity or per-industry breakdowns |
+| 60 | multi-dimensional breakdowns |
+| 16 | no classification field at all — but 3 to 86 **unlabelled rows per date** |
+| 4 | only an unlabelled `row_code` |
+| 11 | few enough series to be headline candidates |
+| 1 | empty |
+
+The 16 "no classification" forms are not single-series forms, as their shape suggests — they are
+label-stripped, the same defect already recorded for `formId=60`, `formId=42` and `formId=484`.
+That defect is now known to affect **at least twenty forms**, which is a more useful thing to know
+than the count of breakdowns.
+
+Of the 11 candidates, checked one by one: `formId=417` has no unambiguous series at all;
+`formId=61` has exactly one and nothing else; `formId=181` is clean only on its Euro leg;
+`formId=396` duplicates external debt already held. Two were worth connecting.
+
+### formId=33 — the strongest-looking find, declined
+"Official Foreign Exchange Rates on average for the period": official averages for USD, EUR, RUB,
+CNY and GBP, properly labelled. Declined for two reasons, both established live.
+
+**Its `report_date` is shifted one month forward of the period it describes.** The form reports
+472.1259 at 2026-08-01, which is the average of the daily official `EXCHANGE_RATE` over **July**
+(472.12); and 487.8527 at 2026-07-01, which is the **June** average (487.85). Nothing in the API
+says so. Connecting it naively mislabels every point by a month. Recorded because the finding is
+reusable by anyone who reads this form later.
+
+**15 of 44 dates carry more than one value per currency** with nothing to separate them. For USD
+that could be resolved against the daily series already held — but for EUR, RUB, CNY and GBP there
+is no independent daily series to disambiguate with, so it would mean guessing on a third of the
+history. USD would add nothing anyway: the daily official rate is already the authoritative source.
+
+### What was connected: transaction counts
+`PAYMENTS_TOTAL_COUNT`, `PAYMENT_CARDS_COUNT`, `CASHLESS_PAYMENTS_COUNT`,
+`CASH_WITHDRAWALS_COUNT` (formId=418, 71 months from 2020-01) and `REMITTANCES_SENT_COUNT`,
+`REMITTANCES_RECEIVED_COUNT` (formId=412, 58 months from 2021-09).
+
+The dataset held the corresponding **values** but no counts, and value alone cannot separate
+people spending more from people transacting more often.
+
+Cross-check against the value series on all 71 shared dates: a cashless payment averages
+12,600–13,600 KZT through H1 2026, a cash withdrawal 113,000–123,000 KZT — withdrawals about
+**nine times larger per transaction**, the expected shape, and confirmation that the two forms
+share a date convention with no shift.
+
+**The source's own Total does not always add up, and that is reported rather than enforced.**
+Summing the ten instrument rows equals the published Total exactly on 66 of 71 months. On five —
+2020-06, 2022-07, 2024-10, 2024-11, 2024-12 — the parts *exceed* the stated total, by 1,515 to
+14,962 thousand transactions, with all ten instruments present. A hard guard would fail on real
+published data, so this follows the `OIL_EXPORTS_VOLUME` precedent: check every run, print the
+failing months to stderr, raise only if more than a tenth fail. **The published Total is what is
+stored** — the parts are not summed to replace it. The separate card identity (cashless +
+withdrawals = payment cards) does hold everywhere and is enforced as a hard guard.
+
+Verified live: 142/142 NBK fetchers OK, 29/29 tests passing.

@@ -3271,3 +3271,183 @@ def fetch_kase_rub_volume() -> tuple[list[dict], dict]:
         "Roubles. Turnover of the RUB/KZT pair on KASE, on the same basis as KASE_USD_VOLUME and "
         "KASE_EUR_VOLUME.",
         "monthly")
+
+
+# ---------------------------------------------------------------------------
+# TRANSACTION COUNTS to sit beside the payment and remittance VALUES already
+# held. formId=418 "Statistics of payment instruments (by transactions)" and
+# formId=412 "International remittances by currencies (by transactions)".
+#
+# Found by re-sweeping the 176 unconnected NBK forms after the formId=1 finding
+# showed the earlier blanket verdict ("the unconnected forms are granular
+# breakdowns") was too coarse. Of 176, 84 are genuinely geographic or
+# per-entity, 60 are multi-dimensional breakdowns, 16 carry no classification
+# field but several unlabelled rows per date, 4 carry only unlabelled row
+# codes, and 11 have few enough series to be headline candidates. These two are
+# what survived checking that shortlist.
+#
+# WHY COUNTS MATTER HERE: the dataset already holds PAYMENTS_TOTAL_VALUE,
+# CASHLESS_PAYMENTS_VALUE, CASH_WITHDRAWALS_VALUE, PAYMENT_CARDS_VALUE and the
+# REMITTANCES_* values. Value alone cannot separate "people are spending more"
+# from "people are transacting more often". Together the two give average
+# transaction size, which is the number that actually moves with behaviour.
+#
+# CROSS-CHECK against the existing value series, on all 71 shared dates: a
+# cashless payment averages 12,600-13,600 KZT and a cash withdrawal
+# 113,000-123,000 KZT -- withdrawals about nine times larger per transaction,
+# which is the expected shape (people withdraw in lumps and pay in small
+# amounts) and confirms the two forms share a date convention.
+#
+# THE SOURCE'S OWN TOTAL DOES NOT ALWAYS ADD UP, and that is reported rather
+# than enforced. Summing the ten instruments equals the published 'Total'
+# exactly on 66 of 71 months. On five -- 2020-06, 2022-07, 2024-10, 2024-11,
+# 2024-12 -- the parts EXCEED the stated total, by 1,515 to 14,962 thousand
+# transactions, with all ten instruments present. A hard identity guard would
+# fail on real published data, so this follows the OIL_EXPORTS_VOLUME
+# precedent: check, report the failures on stderr, and raise only if more than
+# a tenth of months fail. The separate card identity (cashless + withdrawals =
+# payment cards) holds everywhere within rounding.
+# ---------------------------------------------------------------------------
+PAYMENT_COUNT_FORM_ID = "418"
+PAYMENT_COUNT_MATCH = {"period": "Month", "type": "thsd. transactions"}
+PAYMENT_COUNT_TOTAL = "Total"
+PAYMENT_COUNT_CARDS = "Payment cards, including:"
+PAYMENT_COUNT_SUBITEMS = ("cashless payments", "cash withdrawals")
+PAYMENT_COUNT_ROUNDING = 0.05        # thousand transactions
+PAYMENT_COUNT_MAX_FAIL_SHARE = 0.10
+
+REMITTANCE_COUNT_FORM_ID = "412"
+REMITTANCE_COUNT_MATCH = {"period": "Month", "type": "thsd. transactions"}
+
+
+def _check_payment_total_identity() -> tuple[int, list[str]]:
+    """Sum of instruments vs the published Total. Returns (months, failures)."""
+    rows = _fetch_nbk_form_paginated(PAYMENT_COUNT_FORM_ID, "PAYMENTS_TOTAL_COUNT")
+    by_date: dict[str, dict[str, float]] = {}
+    for row in rows:
+        instrument = str(row.get("payment_instrument", "")).strip()
+        if instrument:
+            by_date.setdefault(row["report_date"], {})[instrument] = float(row["amount"])
+
+    failures = []
+    checked = 0
+    for report_date, values in sorted(by_date.items()):
+        if PAYMENT_COUNT_TOTAL not in values:
+            continue
+        parts = [k for k in values
+                 if k != PAYMENT_COUNT_TOTAL and k not in PAYMENT_COUNT_SUBITEMS]
+        if not parts:
+            continue
+        checked += 1
+        gap = sum(values[k] for k in parts) - values[PAYMENT_COUNT_TOTAL]
+        if abs(gap) > PAYMENT_COUNT_ROUNDING:
+            failures.append(f"{report_date} (parts exceed total by {gap:,.3f})")
+
+        cards = values.get(PAYMENT_COUNT_CARDS)
+        if cards is not None and all(k in values for k in PAYMENT_COUNT_SUBITEMS):
+            sub = sum(values[k] for k in PAYMENT_COUNT_SUBITEMS)
+            if abs(sub - cards) > PAYMENT_COUNT_ROUNDING:
+                raise validation.StructuralChangeError(
+                    "\n".join([
+                        "STRUCTURAL CHANGE DETECTED in nbk/PAYMENTS_TOTAL_COUNT",
+                        f"WHAT CHANGED: on {report_date} cashless payments plus cash withdrawals "
+                        f"({sub:,.3f}) no longer equal payment cards ({cards:,.3f})",
+                        "EXPECTED: the two are the published components of the card row and have "
+                        "agreed on every month to date, within rounding",
+                        f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId="
+                        f"{PAYMENT_COUNT_FORM_ID} and update scripts/fetchers/nbk.py",
+                    ])
+                )
+
+    if checked and len(failures) > PAYMENT_COUNT_MAX_FAIL_SHARE * checked:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/PAYMENTS_TOTAL_COUNT",
+                f"WHAT CHANGED: the instrument rows fail to sum to the published Total on "
+                f"{len(failures)} of {checked} months, above the {PAYMENT_COUNT_MAX_FAIL_SHARE:.0%} "
+                "that the source's own historical inconsistency accounts for",
+                f"ACTUAL: {failures[:6]}",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId="
+                f"{PAYMENT_COUNT_FORM_ID} and update scripts/fetchers/nbk.py",
+            ])
+        )
+    return checked, failures
+
+
+def _fetch_payment_count(instrument: str, indicator_id: str, note: str,
+                         check_total: bool = False) -> tuple[list[dict], dict]:
+    records, manifest = _fetch_nbk_exact_row(
+        PAYMENT_COUNT_FORM_ID, {**PAYMENT_COUNT_MATCH, "payment_instrument": instrument},
+        indicator_id, note, "monthly")
+    if check_total:
+        checked, failures = _check_payment_total_identity()
+        manifest["identity_months_checked"] = checked
+        manifest["identity_months_failed"] = len(failures)
+        if failures:
+            print(f"nbk/{indicator_id}: the source's instrument rows exceed its own published "
+                  f"Total on {len(failures)} of {checked} months: {failures}", file=sys.stderr)
+    return records, manifest
+
+
+def fetch_payments_total_count() -> tuple[list[dict], dict]:
+    """All payment transactions, thousand transactions, monthly."""
+    return _fetch_payment_count(
+        PAYMENT_COUNT_TOTAL, "PAYMENTS_TOTAL_COUNT",
+        "Thousand transactions. The count companion to PAYMENTS_TOTAL_VALUE -- value alone cannot "
+        "separate people spending more from people transacting more often. 1.33 billion "
+        "transactions in June 2026. NOTE the source's own Total is exceeded by the sum of its ten "
+        "instrument rows on five of 71 months (2020-06, 2022-07, 2024-10, 2024-11, 2024-12); this "
+        "is reported on stderr each run rather than silently reconciled, and the published Total "
+        "is what is stored.",
+        check_total=True)
+
+
+def fetch_payment_cards_count() -> tuple[list[dict], dict]:
+    """Payment card transactions, thousand transactions, monthly."""
+    return _fetch_payment_count(
+        PAYMENT_COUNT_CARDS, "PAYMENT_CARDS_COUNT",
+        "Thousand transactions on payment cards -- 97% of all payment transactions in Kazakhstan "
+        "by June 2026 (1.295 of 1.329 billion). The count companion to PAYMENT_CARDS_VALUE. Splits "
+        "into CASHLESS_PAYMENTS_COUNT and CASH_WITHDRAWALS_COUNT, which sum to it exactly.")
+
+
+def fetch_cashless_payments_count() -> tuple[list[dict], dict]:
+    """Cashless card payments, thousand transactions, monthly."""
+    return _fetch_payment_count(
+        "cashless payments", "CASHLESS_PAYMENTS_COUNT",
+        "Thousand transactions. Card payments for goods and services, as opposed to withdrawals. "
+        "Against CASHLESS_PAYMENTS_VALUE this gives an average ticket of 12,600-13,600 KZT through "
+        "the first half of 2026 -- about 27 US dollars, a normal retail purchase.")
+
+
+def fetch_cash_withdrawals_count() -> tuple[list[dict], dict]:
+    """Cash withdrawals, thousand transactions, monthly."""
+    return _fetch_payment_count(
+        "cash withdrawals", "CASH_WITHDRAWALS_COUNT",
+        "Thousand transactions. Against CASH_WITHDRAWALS_VALUE this averages 113,000-123,000 KZT "
+        "per withdrawal -- roughly NINE TIMES the size of a cashless payment, which is the "
+        "expected shape: cash is taken out in lumps and spent in small amounts. Read the two "
+        "counts together for the cash-to-card transition rather than reading either alone.")
+
+
+def fetch_remittances_sent_count() -> tuple[list[dict], dict]:
+    """Remittance transactions sent abroad, thousand transactions, monthly."""
+    return _fetch_nbk_exact_row(
+        REMITTANCE_COUNT_FORM_ID, {**REMITTANCE_COUNT_MATCH, "money_transfer_sign": "money transfers sent"},
+        "REMITTANCES_SENT_COUNT",
+        "Thousand transactions, monthly, 2021-09 onward. The count companion to REMITTANCES_SENT. "
+        "This is the form's own all-currency total: the per-currency rows carry a currency_code "
+        "field and are excluded by requiring every other classification field to be empty, so no "
+        "summing across currencies is done here.",
+        "monthly")
+
+
+def fetch_remittances_received_count() -> tuple[list[dict], dict]:
+    """Remittance transactions received, thousand transactions, monthly."""
+    return _fetch_nbk_exact_row(
+        REMITTANCE_COUNT_FORM_ID, {**REMITTANCE_COUNT_MATCH, "money_transfer_sign": "money transfers received"},
+        "REMITTANCES_RECEIVED_COUNT",
+        "Thousand transactions, monthly. The count companion to REMITTANCES_RECEIVED. Kazakhstan "
+        "sends far more transfers than it receives -- 160,313 against 44,854 thousand transactions "
+        "in June 2026 -- so the two are not symmetric and should not be netted casually.",
+        "monthly")

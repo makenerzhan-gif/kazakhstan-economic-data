@@ -3415,3 +3415,57 @@ indicators:
     unit: "RUB"
     category: monetary
     source_status: confirmed
+
+  - id: PAYMENTS_TOTAL_COUNT
+    name_ru: "Количество платёжных транзакций, всего"
+    name_en: "Payment Transactions, total"
+    agency: nbk
+    frequency: monthly
+    unit: "thousand transactions"
+    category: monetary
+    source_status: confirmed
+
+  - id: PAYMENT_CARDS_COUNT
+    name_ru: "Количество транзакций по платёжным картам"
+    name_en: "Payment Card Transactions"
+    agency: nbk
+    frequency: monthly
+    unit: "thousand transactions"
+    category: monetary
+    source_status: confirmed
+
+  - id: CASHLESS_PAYMENTS_COUNT
+    name_ru: "Количество безналичных платежей"
+    name_en: "Cashless Payment Transactions"
+    agency: nbk
+    frequency: monthly
+    unit: "thousand transactions"
+    category: monetary
+    source_status: confirmed
+
+  - id: CASH_WITHDRAWALS_COUNT
+    name_ru: "Количество операций снятия наличных"
+    name_en: "Cash Withdrawal Transactions"
+    agency: nbk
+    frequency: monthly
+    unit: "thousand transactions"
+    category: monetary
+    source_status: confirmed
+
+  - id: REMITTANCES_SENT_COUNT
+    name_ru: "Количество отправленных денежных переводов"
+    name_en: "Remittance Transactions Sent"
+    agency: nbk
+    frequency: monthly
+    unit: "thousand transactions"
+    category: monetary
+    source_status: confirmed
+
+  - id: REMITTANCES_RECEIVED_COUNT
+    name_ru: "Количество полученных денежных переводов"
+    name_en: "Remittance Transactions Received"
+    agency: nbk
+    frequency: monthly
+    unit: "thousand transactions"
+    category: monetary
+    source_status: confirmed
