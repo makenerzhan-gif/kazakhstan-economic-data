@@ -1,6 +1,6 @@
 # Update report — 2026-09-02
 
-Run timestamp: 2026-09-02T21:41:32.581047
+Run timestamp: 2026-09-02T17:50:42.021099
 Unified dataset updated: True
 Tests passed: True
 
@@ -1482,3 +1482,13 @@ Tests passed: True
 - **ardfm/BANK_ASSETS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_LOANS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_DEPOSITS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LOANS_CORPORATE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_NPL_90_CORPORATE_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LOANS_RETAIL** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_NPL_90_RETAIL_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LOANS_SME** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_NPL_90_SME_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_SHARE_CAPITAL** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_TOP5_ASSETS_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_TOP5_LOANS_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_TOP5_DEPOSITS_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)

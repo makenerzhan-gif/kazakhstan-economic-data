@@ -1,6 +1,6 @@
 {
   "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/PCPS/9.0.0/G001.POILAPSP.USD.M",
-  "downloaded_at": "2026-09-02T22:38:57.464391",
+  "downloaded_at": "2026-09-02T19:13:05.187955",
   "dataflow": "PCPS",
   "version": "9.0.0",
   "series_key": "G001.POILAPSP.USD.M"
