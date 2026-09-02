@@ -5751,3 +5751,134 @@ agencies:
           by a population near IMF_POPULATION's own trajectory. Tried TX/TM (exports/imports
           of goods and services, USD level) and TXG_D first; all returned zero populated
           rows for Kazakhstan, none forced in.
+  ardfm:
+    name: "Agency of the Republic of Kazakhstan for Regulation and Development of the Financial Market (АРРФР)"
+    website: "https://www.gov.kz/memleket/entities/ardfm"
+    status: confirmed
+    notes: >
+      Added 2026-09-02 as the FIFTH agency, for one reason: the sector audit's single remaining
+      real defect was the banking block. NPL_RATIO, CAPITAL_ADEQUACY_RATIO, BANK_ROA, BANK_ROE and
+      LOANS_TO_ECONOMY all stop at 2024-04-01 because NBK formId=314 stopped updating, and the
+      sweep of all 239 NBK forms confirmed no replacement exists there (formId=1 lists 45
+      balance-sheet lines with no totals; formId=60 returns seven unlabelled rows per bank-date).
+      Banking supervision sits with ARDFM, which publishes the figures monthly.
+      HOW IT IS REACHED. ARDFM has no API of its own and finreg.kz no longer resolves (DNS dead
+      on 2026-09-02). Its content sits behind the SAME gov.kz content-manager API that already
+      serves Minfin, under projects=ardfm -- 2,700 documents. The banking bulletin is located by
+      the API's `title` filter, which was found by probing: the endpoint answers 400 with the
+      offending parameter name for anything it does not support, so `q`, `search`, `name`, `text`
+      and `filter` were ruled out and `title` confirmed in one pass.
+      Documents are found by TITLE, NOT BY ID, because each monthly edition is a new document.
+      Three editions were online on 2026-09-02 (01.05, 01.06, 01.07.2026), so these series
+      ACCUMULATE across runs like the BNS publication-layer ones.
+      THE BULLETINS ARE PDF. Text extracts cleanly with pypdf (added to requirements). pdftotext
+      drops EVERY Cyrillic character on these files -- it returns digits and Latin only, which
+      looks like a partially-working extraction rather than a failure, so it is worth knowing
+      before reaching for it.
+      WHAT IS NOT TAKEN. The bulletin has 16 tables including deposits, funding structure,
+      liquidity, concentration and the sector's role in the economy. Only tables 4, 12 and 14 are
+      read -- the ones that answer the frozen block. The rest are available if wanted later.
+    access_type: api+pdf
+    protection: none
+    endpoints:
+      BANK_NPL_90_SHARE:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?title=Текущее состояние банковского сектора"
+        table: "Таблица 4. Качество ссудного портфеля банковского сектора РК"
+        format: pdf
+        notes: >
+          2026-09-02. Row 'Займы с просроченной задолженностью свыше 90 дней', column 4 (share at
+          the reporting date). 4.12% at 01.07.2026, 4.19% at 01.06, 4.13% at 01.05.
+          DOES NOT CONTINUE THE FROZEN NBK NPL_RATIO, which last read 3.06% for 2024-04-01.
+          Different compiler, monthly rather than quarterly, definitions not verified to match.
+          The level and direction are consistent, which is reassuring but is not grounds for
+          splicing them into one series.
+          TWO PARSING TRAPS, both of which would have produced plausible wrong numbers rather
+          than an error:
+          (1) EVERY HEADLINE FIGURE APPEARS TWICE in the document -- once in the narrative
+          commentary and once in the table -- and the two DISAGREE, because the narrative rounds
+          and compares against the SAME DATE A YEAR EARLIER while the table compares against the
+          START OF THE YEAR. For ROA at 01.07.2026 the narrative reads "составило – 3,7% (4,6% на
+          аналогичную дату)" and the table reads "4,21% 3,65%". The narrative appears FIRST, so a
+          first-match lookup silently takes the rounded figure on the wrong comparison basis.
+          Every lookup is anchored to its table heading, and the heading itself is taken from its
+          LAST occurrence because the contents page repeats "Таблица N." as a dotted line.
+          (2) The row label must be stripped BEFORE numbers are parsed, or the "90" in "свыше 90
+          дней" is read as a value.
+          Each row is checked for an exact column count, so a changed table shape raises instead
+          of shifting every later column.
+      BANK_NPL_90_AMOUNT:
+        status: confirmed
+        table: "Таблица 4"
+        format: pdf
+        notes: >
+          2026-09-02. Same row, column 3 (amount at the reporting date). 1,845.7 bln KZT at
+          01.07.2026. Read against BANK_PROVISIONS_IFRS for coverage.
+      BANK_LOANS_TOTAL:
+        status: confirmed
+        table: "Таблица 4"
+        format: pdf
+        notes: >
+          2026-09-02. Row 'Банковские займы, в т.ч.:', amount at the reporting date. 44,754.2 bln
+          KZT at 01.07.2026. The frozen NBK LOANS_TO_ECONOMY last read 30,283 bln for 2024-04-01,
+          but the CONCEPTS DIFFER as well as the compiler -- loans to the economy against all bank
+          loans -- so the gap is not a growth rate.
+      BANK_PROVISIONS_IFRS:
+        status: confirmed
+        table: "Таблица 4"
+        format: pdf
+        notes: >
+          2026-09-02. Row 'Провизии по МСФО', amount at the reporting date.
+          THE SOURCE IS INCONSISTENT ABOUT THE SIGN: the 01.05 and 01.06.2026 editions print this
+          row negative and the 01.07.2026 edition prints it positive, while the shared 01.01.2026
+          figure is 1,925.9 in both presentations. That is a formatting change, not a data change,
+          so the MAGNITUDE is stored and the sign discarded -- keeping it would have manufactured
+          a swing of twice the value between two consecutive months.
+      BANK_CAPITAL_ADEQUACY_K1:
+        status: confirmed
+        table: "Таблица 12. Достаточность собственного капитала банковского сектора РК"
+        format: pdf
+        notes: >
+          2026-09-02. Row 'Коэффициент достаточности собственного капитала k1'. 19.7% at
+          01.07.2026, single column (this table prints the reporting date only).
+          LABEL NESTING TRAP: 'k1' is a prefix of 'k1-2', which is a different ratio on the next
+          row (20.1% against 19.7%). The row is matched with a TRAILING SPACE and the number count
+          is checked, so the two cannot be confused.
+      BANK_CAPITAL_ADEQUACY_K2:
+        status: confirmed
+        table: "Таблица 12"
+        format: pdf
+        notes: >
+          2026-09-02. Total capital ratio, 20.5% at 01.07.2026 -- the closest counterpart to the
+          frozen NBK CAPITAL_ADEQUACY_RATIO, which last read 21.44% for 2024-04-01.
+      BANK_ROA_MONTHLY:
+        status: confirmed
+        table: "Таблица 14. Доходность банковского сектора РК"
+        format: pdf
+        notes: >
+          2026-09-02. Row 'Отношение чистого дохода к совокупным активам (ROA)', reporting-date
+          column. 3.65% at 01.07.2026.
+          TRAILING TWELVE-MONTH AVERAGE, as the table's own footnote states ("в расчете
+          показателей включаются среднегодовые значения за последние 12 месяцев") -- not a
+          point-in-time ratio. The frozen NBK BANK_ROA last read 4.95% for 2024-04-01.
+          This is the row where the narrative-versus-table trap was found; see
+          BANK_NPL_90_SHARE for the full description.
+      BANK_ROE_MONTHLY:
+        status: confirmed
+        table: "Таблица 14"
+        format: pdf
+        notes: >
+          2026-09-02. 24.14% at 01.07.2026 against 28.55% at 01.01.2026. Trailing twelve-month
+          average, same basis and same trap as BANK_ROA_MONTHLY. The frozen NBK BANK_ROE last read
+          31.7% for 2024-04-01.
+      BANK_NET_INCOME:
+        status: confirmed
+        table: "Таблица 14"
+        format: pdf
+        notes: >
+          2026-09-02. Row 'Чистый доход (убыток) после уплаты подоходного налога', reporting-date
+          column. CUMULATIVE FROM 1 JANUARY, not a monthly flow: 795.9 at 01.05.2026, 1,035.7 at
+          01.06, 1,195.6 at 01.07, against 2,723.7 for the whole of 2025. The year-start column of
+          this table is that full prior-year figure rather than a stock, so it is deliberately not
+          read -- only the reporting-date column.
+

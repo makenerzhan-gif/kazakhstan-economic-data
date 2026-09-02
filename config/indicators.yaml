@@ -3469,3 +3469,84 @@ indicators:
     unit: "thousand transactions"
     category: monetary
     source_status: confirmed
+
+  - id: BANK_NPL_90_SHARE
+    name_ru: "Доля займов с просрочкой свыше 90 дней"
+    name_en: "Loans Overdue 90+ Days, share"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_NPL_90_AMOUNT
+    name_ru: "Займы с просрочкой свыше 90 дней"
+    name_en: "Loans Overdue 90+ Days"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_LOANS_TOTAL
+    name_ru: "Банковские займы, всего"
+    name_en: "Total Bank Loans"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_PROVISIONS_IFRS
+    name_ru: "Провизии по МСФО"
+    name_en: "IFRS Provisions"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_CAPITAL_ADEQUACY_K1
+    name_ru: "Коэффициент достаточности капитала k1"
+    name_en: "Capital Adequacy Ratio k1"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_CAPITAL_ADEQUACY_K2
+    name_ru: "Коэффициент достаточности капитала k2"
+    name_en: "Capital Adequacy Ratio k2"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_ROA_MONTHLY
+    name_ru: "Рентабельность активов банков (ROA), помесячно"
+    name_en: "Bank Return on Assets, monthly"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_ROE_MONTHLY
+    name_ru: "Рентабельность капитала банков (ROE), помесячно"
+    name_en: "Bank Return on Equity, monthly"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_NET_INCOME
+    name_ru: "Чистый доход банковского сектора"
+    name_en: "Banking Sector Net Income"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed

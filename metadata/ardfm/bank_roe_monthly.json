@@ -1,0 +1,21 @@
+{
+  "source": "ardfm",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?title=Текущее состояние банковского сектора",
+  "dataset_id": "ardfm-banking-bulletin/table-14/Отношение чистого дохода к собственному капиталу по балансу (ROE)/col1",
+  "indicator_id": "BANK_ROE_MONTHLY",
+  "indicator_name": "Bank Return on Equity, monthly",
+  "description": "Рентабельность капитала банков (ROE), помесячно",
+  "frequency": "monthly",
+  "unit": "%",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "ARDFM monthly banking sector bulletin (PDF), tables 4, 12 and 14",
+  "publication_date": null,
+  "last_update_date": "2026-09-02",
+  "download_date": "2026-09-02",
+  "period_start": "2026-05-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

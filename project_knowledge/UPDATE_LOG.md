@@ -2516,3 +2516,59 @@ stored** — the parts are not summed to replace it. The separate card identity 
 withdrawals = payment cards) does hold everywhere and is enforced as a hard guard.
 
 Verified live: 142/142 NBK fetchers OK, 29/29 tests passing.
+
+## 2026-09-02 — ARDFM added as a fifth agency; the banking block is unfrozen (393 indicators, 14,798 observations)
+
+The audit's single remaining real defect is closed. `NPL_RATIO`, `CAPITAL_ADEQUACY_RATIO`,
+`BANK_ROA`, `BANK_ROE` and `LOANS_TO_ECONOMY` had been stuck at 2024-04-01 since NBK `formId=314`
+stopped updating, and the sweep of all 239 NBK forms confirmed no replacement existed there.
+Banking supervision belongs to ARDFM, which publishes the figures **monthly**.
+
+Nine indicators: `BANK_NPL_90_SHARE`, `BANK_NPL_90_AMOUNT`, `BANK_LOANS_TOTAL`,
+`BANK_PROVISIONS_IFRS`, `BANK_CAPITAL_ADEQUACY_K1`, `BANK_CAPITAL_ADEQUACY_K2`,
+`BANK_ROA_MONTHLY`, `BANK_ROE_MONTHLY`, `BANK_NET_INCOME`.
+
+### Getting to the source
+ARDFM has no API and finreg.kz no longer resolves. Its content sits behind the **same gov.kz
+content-manager API that already serves Minfin**, under `projects=ardfm` — 2,700 documents. The
+banking bulletin is located by the API's `title` filter, found by probing: the endpoint answers
+400 naming the offending parameter for anything unsupported, so `q`, `search`, `name`, `text` and
+`filter` were ruled out and `title` confirmed in a single pass. Documents are found by title, not
+id, because each monthly edition is a new document.
+
+The bulletins are **PDF**. pypdf extracts them cleanly and is now a dependency. `pdftotext` drops
+every Cyrillic character on these files — it returns digits and Latin only, which looks like a
+partially-working extraction rather than a failure.
+
+### Three traps, all of which would have produced plausible wrong numbers rather than errors
+1. **Every headline figure appears twice** — once in the narrative commentary, once in the table —
+   and the two *disagree*, because the narrative rounds and compares against the same date a year
+   earlier while the table compares against the start of the year. For ROA at 01.07.2026 the
+   narrative reads "составило – 3,7% (4,6% на аналогичную дату)" and the table reads
+   "4,21% 3,65%". The narrative comes **first**, so a first-match lookup silently takes the
+   rounded figure on the wrong comparison basis. Every lookup is anchored to its table heading —
+   and to that heading's *last* occurrence, because the contents page repeats "Таблица N." as a
+   dotted line.
+2. **The capital ratio labels nest**: `k1` is a prefix of `k1-2`, a different ratio on the next
+   row (19.7% against 20.1%). Matched with a trailing space plus a column-count check.
+3. **The row label must be stripped before parsing**, or the "90" in "свыше 90 дней" becomes part
+   of the value. My first probe did exactly that, and also turned `k1 19,7%` into `119.7%`.
+
+### The source contradicts itself on one row, and that is recorded rather than smoothed
+`Провизии по МСФО` is printed **negative** in the 01.05 and 01.06.2026 editions and **positive**
+in the 01.07.2026 edition, while the shared 01.01.2026 figure is 1,925.9 in both presentations.
+It is a formatting change, not a data change, so the magnitude is stored and the sign discarded —
+keeping it would have manufactured a swing of twice the value between two consecutive months.
+I had written a note claiming a "sign-consistency guard" before implementing one; the note now
+describes what the code actually does.
+
+### Not spliced onto the frozen series
+Different compiler, monthly rather than quarterly, definitions not verified to match. Levels are
+consistent with where NBK left off — NPL 3.06% (2024-Q2) against 4.12% now, ROA 4.95% against
+3.65%, ROE 31.7% against 24.14%, CAR 21.44% against k2 20.5% — which is reassuring but is not
+grounds for joining them. `BANK_LOANS_TOTAL` differs by concept as well: loans to the economy
+against all bank loans.
+
+Three editions online, so these accumulate like the BNS publication-layer series.
+Verified live: 9/9 ARDFM fetchers OK, 29/29 tests passing. Five agencies now:
+NBK 9,037 observations, BNS 2,539, IMF 2,400, Minfin 795, ARDFM 27.

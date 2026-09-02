@@ -17,7 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib import pipeline_logging, unified  # noqa: E402
-import update_bns, update_nbk, update_minfin, update_imf  # noqa: E402
+import update_bns, update_nbk, update_minfin, update_imf, update_ardfm  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
@@ -26,7 +26,7 @@ def main() -> int:
     run_ts = datetime.now().isoformat()
     logger = pipeline_logging.RunLogger(run_timestamp=run_ts)
 
-    for module in (update_bns, update_nbk, update_minfin, update_imf):
+    for module in (update_bns, update_nbk, update_minfin, update_imf, update_ardfm):
         module.run(logger)
 
     if logger.has_errors():
