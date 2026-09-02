@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=324",
+  "dataset_id": "nbk-form-324/SERVICES",
+  "indicator_id": "BOP_SERVICES_BALANCE",
+  "indicator_name": "Balance on Services",
+  "description": "Сальдо баланса услуг",
+  "frequency": "quarterly",
+  "unit": "million USD",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million USD, quarterly. Services exports minus imports -- transport, travel, construction, business services. Persistently negative but small next to the income account (-219.1 mln in Q2 2026).",
+  "publication_date": null,
+  "last_update_date": "2026-09-02",
+  "download_date": "2026-09-02",
+  "period_start": "2020-04-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -2163,6 +2163,79 @@ agencies:
           through 2026-Q2, USD million, recently negative (e.g. -5,180.4 in 2026-Q1) -- a
           plausible current account deficit for Kazakhstan given large FDI-related income
           outflows even alongside a goods trade surplus. fetch_current_account_balance.
+      BOP_GOODS_BALANCE:
+        status: confirmed
+        api_url: "https://data.nationalbank.kz/api/v1/data?formId=324"
+        format: json
+        notes: >
+          2026-09-01. formId=324 'Current account of the balance of payments', the form already
+          supplying CURRENT_ACCOUNT_BALANCE. Match: code='Goods',
+          instrument_type_code='Goods and services', instrument_subtype1_code='Goods',
+          account_type_code='Current account', type='mln USD', period='Quarter', and no other
+          classification field set. 24 quarters, 2020-04-01 to 2026-04-01.
+          Closes the audit's BoP gap. The dataset held the current account as a single number, so
+          the deficit could not be decomposed -- and for Kazakhstan the decomposition IS the story:
+          in Q2 2026 goods ran a SURPLUS of 4,068.9 mln USD while primary income ran a DEFICIT of
+          5,956.5 mln. The current account deficit is an income deficit, not a trade deficit.
+          WHY NOT formId=481, WHICH HAS FOUR TIMES THE HISTORY. 481 ('standard presentation')
+          carries the same five lines back to 2000-04-01 and its headline matches the stored series
+          to six decimals. It was built out first and then REJECTED: on ten quarters in 2023-2024
+          it returns TWO DIFFERENT AMOUNTS under an IDENTICAL classification signature -- e.g.
+          2023-04-01 goods as both 5,169.046879 and 5,232.056879, a 1.2% gap. Nothing in the row
+          distinguishes them; they look like two vintages of a revised figure with no vintage
+          field. Choosing the larger, the smaller or the last-returned would each be a guess.
+          Forms 479 (analytic presentation) and 483 (by resident sector) have the same defect on
+          two quarters each. 324 has none.
+          481 ALSO SERVES EXACT DUPLICATES AT SCALE: 28,704 rows returned, matching its own
+          totalRows exactly (so not a pagination fault), of which only 14,975 are distinct, with
+          some rows repeated FOUR TIMES inside a single page. That part is harmless -- identical
+          rows collapse losslessly -- but it is worth recording, because a first pass here built
+          a per-date dict that silently overwrote them and produced an identity check that looked
+          like it passed without actually comparing what it claimed to.
+          THE 'Goods' TRAP: on 324 the code 'Goods' appears TWICE -- the goods balance, and a
+          sub-item under Travel -> Personal for goods bought by travellers, 0.0 throughout. They
+          differ only in the instrument fields, so the full signature is pinned.
+          FIELD-NAMING DIFFERENCE BETWEEN FORMS OF THE SAME PUBLICATION: 324 writes the unit as
+          'mln USD' while 481 writes 'USD mln' -- same field, words in the opposite order. 324
+          also pads instrument_type_code as ' Goods and services' and capitalises period as
+          'Quarter'. Comparisons strip and case-fold, which absorbs the padding and the casing but
+          NOT the word order; that had to be read off a live row.
+          IDENTITY CHECKED ON EVERY FETCH: goods + services + primary + secondary must equal the
+          current account. The form publishes all five independently, so this tests the row
+          lookups rather than restating one number. All 24 quarters reconcile, and in the unified
+          dataset the four components sum to exactly the stored CURRENT_ACCOUNT_BALANCE
+          (-2008.012157 for 2026-04-01). Verified to FIRE when a component is perturbed.
+
+      BOP_SERVICES_BALANCE:
+        status: confirmed
+        api_url: "https://data.nationalbank.kz/api/v1/data?formId=324"
+        format: json
+        notes: >
+          2026-09-01. Same form and rules as BOP_GOODS_BALANCE, code='Services' with
+          instrument_subtype1_code='Services'. Services exports minus imports -- transport, travel,
+          construction, business services. Persistently negative but small next to the income
+          account (-219.1 mln USD in Q2 2026).
+
+      BOP_PRIMARY_INCOME:
+        status: confirmed
+        api_url: "https://data.nationalbank.kz/api/v1/data?formId=324"
+        format: json
+        notes: >
+          2026-09-01. Same form, code='Primary income', instrument_type_code='Primary income'.
+          Investment income and compensation of employees, net. THE DRIVER OF KAZAKHSTAN'S CURRENT
+          ACCOUNT DEFICIT: -5,956.5 mln USD in Q2 2026 against a goods surplus of +4,068.9 mln. It
+          is dominated by profit repatriation by foreign investors in the oil sector, so it tracks
+          oil earnings rather than domestic demand -- which is why the current account can worsen
+          in a strong oil year.
+
+      BOP_SECONDARY_INCOME:
+        status: confirmed
+        api_url: "https://data.nationalbank.kz/api/v1/data?formId=324"
+        format: json
+        notes: >
+          2026-09-01. Same form, code='Secondary income', instrument_type_code='Secondary income'.
+          Current transfers, net. The smallest of the four components (+98.7 mln USD in Q2 2026).
+
       BANK_ROA:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data?formId=314"

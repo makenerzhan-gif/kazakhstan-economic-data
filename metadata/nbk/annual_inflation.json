@@ -11,10 +11,10 @@
   "geography": "Kazakhstan (national)",
   "methodology": "Percent, year-on-year. Dated at the day the figure appeared on NBK's indicators widget, which is the CPI release date -- not the month the reading refers to. Event-dated: only the days the published value changed are stored. Accumulated across runs because the source window rolls (~6 months).",
   "publication_date": null,
-  "last_update_date": "2026-09-01",
-  "download_date": "2026-09-01",
+  "last_update_date": "2026-09-02",
+  "download_date": "2026-09-02",
   "period_start": "2026-02-24",
-  "period_end": "2026-08-04",
+  "period_end": "2026-09-02",
   "next_update_date": null,
   "transformation": "level",
   "revision_status": "original"

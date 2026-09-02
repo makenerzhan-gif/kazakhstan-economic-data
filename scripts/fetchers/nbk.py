@@ -2963,3 +2963,228 @@ def fetch_inflation_target() -> tuple[list[dict], dict]:
         "flat target produces a single row. Accumulated across runs because the source "
         "window rolls (~6 months).",
         "irregular", True)
+
+
+# ---------------------------------------------------------------------------
+# Balance of payments sub-balances, from formId=324 "Current account of the
+# balance of payments" -- the form already supplying CURRENT_ACCOUNT_BALANCE.
+#
+# Closes the audit's BoP gap. The dataset held CURRENT_ACCOUNT_BALANCE as a
+# single number, so the deficit could not be decomposed -- and for Kazakhstan
+# the decomposition is the whole story. In Q2 2026 goods ran a SURPLUS of
+# 4,068.9 mln USD while primary income ran a DEFICIT of 5,956.5 mln, which is
+# profit repatriation by foreign investors in the oil sector. The current
+# account deficit is an INCOME deficit, not a trade deficit, and the headline
+# number alone hides that completely.
+#
+# WHY NOT formId=481, WHICH HAS FOUR TIMES THE HISTORY. 481 ("standard
+# presentation") carries the same five lines back to 2000-04-01 against 324's
+# 2020-04-01, and its headline matches the stored series to six decimals. It
+# was built out first and then REJECTED, because on ten quarters in 2023-2024
+# it returns TWO DIFFERENT AMOUNTS under an identical classification signature
+# -- e.g. 2023-04-01 goods as both 5,169.046879 and 5,232.056879, a 1.2% gap.
+# Nothing in the row distinguishes them; they look like two vintages of a
+# revised figure with no vintage field. Choosing the larger, the smaller or the
+# last-returned would each be a guess, so the form is not used. Forms 479
+# (analytic presentation) and 483 (by resident sector) have the same defect on
+# two quarters each. 324 has none: every line resolves to exactly one value per
+# quarter.
+#
+# 481 also serves exact duplicates at scale -- 28,704 rows returned, matching
+# its own totalRows, of which only 14,975 are distinct, with some rows repeated
+# four times inside a single page. That part is harmless (byte-identical rows
+# collapse losslessly); the differing amounts above are what disqualified it.
+#
+# THE 'Goods' TRAP. On 324 the code 'Goods' appears TWICE with different
+# meanings: the goods balance, and a sub-item under Travel -> Personal for
+# goods bought by travellers, which is 0.0 throughout. They are told apart only
+# by instrument_type_code / instrument_subtype1_code, so every line here is
+# pinned on its FULL signature and _fetch_nbk_exact_row's "no other
+# classification field may be set" rule does the rest.
+#
+# THE ACCOUNTING IDENTITY IS CHECKED ON EVERY FETCH, NOT ASSUMED: goods +
+# services + primary income + secondary income must equal the current account.
+# The form publishes all five independently, so this tests the row lookups
+# rather than restating one number.
+#
+# Note for anyone extending this: the form has FOURTEEN classification fields,
+# not the four that the first row happens to carry. Reading the field list off
+# row zero -- as a first pass here did -- understates the structure badly.
+# ---------------------------------------------------------------------------
+BOP_FORM_ID = "324"
+BOP_BASE_MATCH = {"account_type_code": "Current account", "type": "mln USD", "period": "quarter"}
+# NOTE: formId=324 writes the unit as "mln USD" while formId=481 writes "USD mln" -- the
+# same field, the words in the opposite order, in two forms of the same publication. It
+# also pads instrument_type_code as " Goods and services" and capitalises period as
+# "Quarter". All comparisons here strip and case-fold, which absorbs the padding and the
+# casing, but NOT the word order -- that had to be read off a live row.
+BOP_LINES = {
+    "GOODS": {"code": "Goods", "instrument_type_code": "Goods and services",
+              "instrument_subtype1_code": "Goods"},
+    "SERVICES": {"code": "Services", "instrument_type_code": "Goods and services",
+                 "instrument_subtype1_code": "Services"},
+    "PRIMARY_INCOME": {"code": "Primary income", "instrument_type_code": "Primary income"},
+    "SECONDARY_INCOME": {"code": "Secondary income", "instrument_type_code": "Secondary income"},
+    "CURRENT_ACCOUNT": {"code": "Current account"},
+}
+BOP_IDENTITY_PARTS = ("GOODS", "SERVICES", "PRIMARY_INCOME", "SECONDARY_INCOME")
+BOP_IDENTITY_TOLERANCE = 0.01
+
+
+def _bop_norm(value) -> str:
+    return str(value).strip().casefold()
+
+
+def _bop_select(all_rows: list[dict], line: str, indicator_id: str) -> dict[str, float]:
+    """Return {report_date: amount} for one BoP line.
+
+    A row qualifies only if it matches the line's full signature AND carries no
+    other classification field, the same rule _fetch_nbk_exact_row applies.
+    Byte-identical repeats are collapsed; two DIFFERENT amounts for one date
+    raise, which is exactly what disqualified formId=481.
+    """
+    match = {**BOP_BASE_MATCH, **BOP_LINES[line]}
+    wanted = {k: _bop_norm(v) for k, v in match.items()}
+
+    def qualifies(row: dict) -> bool:
+        for key, want in wanted.items():
+            if key not in row or _bop_norm(row[key]) != want:
+                return False
+        for key, value in row.items():
+            if key in ("report_date", "amount") or key in match:
+                continue
+            if value not in (None, ""):
+                return False
+        return True
+
+    by_date: dict[str, set] = {}
+    for row in all_rows:
+        if qualifies(row):
+            by_date.setdefault(row["report_date"], set()).add(float(row["amount"]))
+
+    if not by_date:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+                f"WHAT CHANGED: no rows in formId={BOP_FORM_ID} match {match!r} with no other "
+                "classification field set",
+                "EXPECTED: one value per quarter for exactly this balance-of-payments line",
+                "ACTUAL: zero matching rows",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={BOP_FORM_ID} and "
+                "update scripts/fetchers/nbk.py",
+            ])
+        )
+
+    conflicting = sorted(d for d, vals in by_date.items() if len(vals) > 1)
+    if conflicting:
+        example = conflicting[0]
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+                f"WHAT CHANGED: formId={BOP_FORM_ID} returns rows with the SAME classification "
+                f"but DIFFERENT amounts for {match!r}",
+                "EXPECTED: one value per quarter; differing values under one signature cannot be "
+                "told apart and must not be guessed between (this is what disqualified formId=481)",
+                f"ACTUAL: {len(conflicting)} such date(s), e.g. {example} -> "
+                f"{sorted(by_date[example])}",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={BOP_FORM_ID} and "
+                "update scripts/fetchers/nbk.py",
+            ])
+        )
+    return {d: next(iter(vals)) for d, vals in by_date.items()}
+
+
+def _verify_bop_identity(all_rows: list[dict], indicator_id: str) -> int:
+    """goods + services + primary + secondary == current account, per quarter."""
+    parts = {line: _bop_select(all_rows, line, indicator_id)
+             for line in BOP_IDENTITY_PARTS + ("CURRENT_ACCOUNT",)}
+    dates = set(parts["CURRENT_ACCOUNT"])
+    for line in BOP_IDENTITY_PARTS:
+        dates &= set(parts[line])
+
+    if not dates:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+                f"WHAT CHANGED: formId={BOP_FORM_ID} carries no single quarter with all of "
+                f"{BOP_IDENTITY_PARTS} plus the current account",
+                "EXPECTED: at least one quarter where the identity can be checked",
+                f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={BOP_FORM_ID} and "
+                "update scripts/fetchers/nbk.py",
+            ])
+        )
+
+    for report_date in sorted(dates):
+        total = sum(parts[line][report_date] for line in BOP_IDENTITY_PARTS)
+        stated = parts["CURRENT_ACCOUNT"][report_date]
+        if abs(total - stated) > BOP_IDENTITY_TOLERANCE:
+            detail = ", ".join(f"{line}={parts[line][report_date]:.3f}"
+                               for line in BOP_IDENTITY_PARTS)
+            raise validation.StructuralChangeError(
+                "\n".join([
+                    f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+                    f"WHAT CHANGED: on {report_date} the current account components do not add "
+                    f"up -- {detail}, summing to {total:.3f}, against a stated current account "
+                    f"of {stated:.3f}",
+                    "EXPECTED: the form publishes all five lines independently and they must "
+                    "reconcile; a mismatch means a component has been renamed or respecified",
+                    f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={BOP_FORM_ID} and "
+                    "update scripts/fetchers/nbk.py",
+                ])
+            )
+    return len(dates)
+
+
+def _fetch_bop_line(line: str, indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    all_rows = _fetch_nbk_form_paginated(BOP_FORM_ID, indicator_id)
+    series = _bop_select(all_rows, line, indicator_id)
+    checked = _verify_bop_identity(all_rows, indicator_id)
+    records = [{"date": d, "value": v} for d, v in sorted(series.items())]
+    manifest = {
+        "frequency": "quarterly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={BOP_FORM_ID}",
+        "dataset_id": f"nbk-form-{BOP_FORM_ID}/{line}",
+        "note": note,
+        "identity_quarters_checked": checked,
+    }
+    return records, manifest
+
+
+def fetch_bop_goods_balance() -> tuple[list[dict], dict]:
+    """Balance on goods, million USD, quarterly."""
+    return _fetch_bop_line(
+        "GOODS", "BOP_GOODS_BALANCE",
+        "Million USD, quarterly. Exports minus imports of goods. Kazakhstan runs a goods SURPLUS "
+        "(4,068.9 mln in Q2 2026) alongside a current account DEFICIT -- the deficit comes from "
+        "primary income, not trade. Beware: this form uses the code 'Goods' twice, the second "
+        "time for goods bought by travellers under Travel, which is 0.0 throughout; the two are "
+        "told apart only by the instrument fields. Every fetch re-checks that goods + services + "
+        "primary income + secondary income equals the current account.")
+
+
+def fetch_bop_services_balance() -> tuple[list[dict], dict]:
+    """Balance on services, million USD, quarterly."""
+    return _fetch_bop_line(
+        "SERVICES", "BOP_SERVICES_BALANCE",
+        "Million USD, quarterly. Services exports minus imports -- transport, travel, "
+        "construction, business services. Persistently negative but small next to the income "
+        "account (-219.1 mln in Q2 2026).")
+
+
+def fetch_bop_primary_income() -> tuple[list[dict], dict]:
+    """Primary income balance, million USD, quarterly."""
+    return _fetch_bop_line(
+        "PRIMARY_INCOME", "BOP_PRIMARY_INCOME",
+        "Million USD, quarterly. Investment income and compensation of employees, net. THIS IS "
+        "THE DRIVER OF KAZAKHSTAN'S CURRENT ACCOUNT DEFICIT: -5,956.5 mln in Q2 2026 against a "
+        "goods surplus of +4,068.9 mln. It is dominated by profit repatriation by foreign "
+        "investors in the oil sector, so it tracks oil earnings rather than domestic demand.")
+
+
+def fetch_bop_secondary_income() -> tuple[list[dict], dict]:
+    """Secondary income balance, million USD, quarterly."""
+    return _fetch_bop_line(
+        "SECONDARY_INCOME", "BOP_SECONDARY_INCOME",
+        "Million USD, quarterly. Current transfers, net -- personal transfers, government "
+        "transfers and other current transfers. The smallest of the four components (+98.7 mln "
+        "in Q2 2026).")

@@ -2321,3 +2321,53 @@ Not in the publication layer either — the route that rescued `OIL_PRODUCTION` 
 series after Taldau failed for them. The prices section publishes transport tariffs,
 socially-significant food prices, export/import price indices and retail food prices; the
 construction section publishes no price tables at all.
+
+## 2026-09-01 — balance of payments sub-balances (368 indicators, 14,225 observations)
+
+- `BOP_GOODS_BALANCE`, `BOP_SERVICES_BALANCE`, `BOP_PRIMARY_INCOME`, `BOP_SECONDARY_INCOME` from
+  NBK `formId=324` — the form already supplying `CURRENT_ACCOUNT_BALANCE`. 24 quarters,
+  2020-04-01 to 2026-04-01.
+- Closes the audit's BoP gap. The dataset held the current account as one number, so the deficit
+  could not be decomposed — and for Kazakhstan the decomposition *is* the story: in Q2 2026 goods
+  ran a **surplus** of 4,068.9 mln USD while primary income ran a **deficit** of 5,956.5 mln.
+  The current account deficit is an income deficit, not a trade deficit — profit repatriation by
+  foreign investors in oil. That means it can worsen in a strong oil year, which the headline
+  number alone completely hides.
+
+### Rejected formId=481 despite four times the history
+`481` ("standard presentation") carries the same five lines back to 2000-04-01 and its headline
+matches the stored series to six decimals. It was fully built out, tested, and then rejected: on
+**ten quarters in 2023–2024 it returns two different amounts under an identical classification
+signature** — 2023-04-01 goods as both 5,169.046879 and 5,232.056879, a 1.2% gap, with nothing in
+the row to tell them apart. They look like two vintages of a revised figure with no vintage field.
+Taking the larger, the smaller, or the last-returned would each be a guess. Forms 479 and 483 have
+the same defect on two quarters each. `324` has none.
+
+### Three things this cost, recorded because they are easy to repeat
+1. **Reading the field list off row zero understates the form.** My first probe reported four
+   classification fields. The form actually has fourteen — `instrument_type_code`,
+   `instrument_subtype1..4_code`, `investor_type_code`, `sector_economy_type_code` and others
+   appear only on subsets of rows. Pinning four fields matched 208 rows I thought were one series.
+2. **My first identity check was unsound and passed anyway.** It built a dict keyed by date and
+   silently overwrote duplicate rows, so it compared whichever row came last and reported "holds
+   exactly on all 105 quarters". Once duplicates were handled properly the same data raised. A
+   check that cannot fail is worse than no check, because it is quoted as evidence.
+3. **`481` serves exact duplicates at scale** — 28,704 rows returned, matching its own
+   `totalRows`, of which only 14,975 are distinct, some repeated four times inside a single page.
+   Harmless in itself, but it is what made the unsound check look like it passed.
+
+### Two traps that the full-signature pinning caught
+- On `324` the code `Goods` appears **twice**: the goods balance, and a sub-item under
+  Travel → Personal for goods bought by travellers, 0.0 throughout. Only the instrument fields
+  distinguish them.
+- `324` writes the unit as `mln USD` while `481` writes `USD mln` — the same field, words in the
+  opposite order, in two forms of the same publication. `324` also pads `instrument_type_code` as
+  `" Goods and services"` and capitalises `period`. Stripping and case-folding absorb the padding
+  and the casing but not the word order; that had to be read off a live row.
+
+The accounting identity is now re-checked on every fetch — goods + services + primary + secondary
+must equal the current account — and it was verified to **fire** when a component is perturbed by
+50 mln, not merely to pass on real data. In the unified dataset the four components sum to exactly
+the stored `CURRENT_ACCOUNT_BALANCE` (−2008.012157 for 2026-04-01).
+
+Verified live: 132/132 NBK fetchers OK, 29/29 tests passing.

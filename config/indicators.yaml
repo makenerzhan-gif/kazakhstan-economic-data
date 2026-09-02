@@ -3289,3 +3289,39 @@ indicators:
     unit: "%"
     category: demographic
     source_status: confirmed
+
+  - id: BOP_GOODS_BALANCE
+    name_ru: "Сальдо баланса товаров"
+    name_en: "Balance on Goods"
+    agency: nbk
+    frequency: quarterly
+    unit: "million USD"
+    category: monetary
+    source_status: confirmed
+
+  - id: BOP_SERVICES_BALANCE
+    name_ru: "Сальдо баланса услуг"
+    name_en: "Balance on Services"
+    agency: nbk
+    frequency: quarterly
+    unit: "million USD"
+    category: monetary
+    source_status: confirmed
+
+  - id: BOP_PRIMARY_INCOME
+    name_ru: "Сальдо первичных доходов"
+    name_en: "Primary Income Balance"
+    agency: nbk
+    frequency: quarterly
+    unit: "million USD"
+    category: monetary
+    source_status: confirmed
+
+  - id: BOP_SECONDARY_INCOME
+    name_ru: "Сальдо вторичных доходов"
+    name_en: "Secondary Income Balance"
+    agency: nbk
+    frequency: quarterly
+    unit: "million USD"
+    category: monetary
+    source_status: confirmed
