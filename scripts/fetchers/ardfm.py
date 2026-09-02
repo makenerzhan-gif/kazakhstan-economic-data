@@ -123,7 +123,8 @@ def _table_body(text: str, number: int) -> str:
     return rest[: nxt.start() + 1] if nxt else rest
 
 
-def _row_numbers(table: str, label: str, indicator_id: str, expect: int) -> list[float]:
+def _row_numbers(table: str, label: str, indicator_id: str, expect: int,
+                 exclude: str | None = None) -> list[float]:
     """Numbers on the row whose label starts with `label`, label removed first.
 
     Removing the label matters: the digit in 'k1' and the '90' in 'свыше 90
@@ -134,6 +135,11 @@ def _row_numbers(table: str, label: str, indicator_id: str, expect: int) -> list
     for line in table.split("\n"):
         stripped = line.strip()
         if not stripped.startswith(label):
+            continue
+        # `exclude` separates nested labels: 'Всего активы' is a prefix of
+        # 'Всего активы (без учета резервов (провизий))', and BOTH rows carry
+        # five numbers, so the column-count check alone cannot tell them apart.
+        if exclude is not None and exclude in stripped:
             continue
         tail = stripped[len(label):]
         values = []
@@ -158,20 +164,38 @@ def _row_numbers(table: str, label: str, indicator_id: str, expect: int) -> list
 
 
 def _column_dates(table: str, indicator_id: str) -> list[tuple[int, int]]:
-    """The (year, month) of each data column, read from the table's own header."""
-    found = []
-    for line in table.split("\n")[:8]:
+    """The (year, month) of each data column, read from the table's own header.
+
+    Anchored to the header marker "Наименование", not to a line offset. In some
+    editions a chart is extracted ahead of the table it belongs to -- the
+    01.06.2026 bulletin puts table 16's real header on line 33 of its span --
+    so counting lines from the top of the span finds nothing at all. The dates
+    sit either on the marker line itself or on the next one or two, depending
+    on the table.
+
+    Chart axis labels are a live hazard here: one of them reads
+    "01.01.26 01.02.26 01.03.26 01.04.2026 01.05.2026 01.06.2026", mixing two-
+    and four-digit years. Requiring four digits rejects the short ones, and
+    anchoring to the header keeps the long ones out of range.
+    """
+    body = table.split("\n")
+    start = next((k for k, line in enumerate(body) if "Наименование" in line), None)
+    window = body[start:start + 3] if start is not None else body[:8]
+    found: list[tuple[int, int]] = []
+    for line in window:
         for m in COLUMN_DATE_RE.finditer(line):
             pair = (int(m.group(3)), int(m.group(2)))
             if pair not in found:
                 found.append(pair)
+        if len(found) >= 2:
+            break
     return found
-
 
 def _fetch_banking_series(table_no: int, label: str, expect: int, value_index: int,
                           indicator_id: str, note: str, unit: str,
                           date_index: int | None = None,
-                          absolute: bool = False) -> tuple[list[dict], dict]:
+                          absolute: bool = False,
+                          exclude: str | None = None) -> tuple[list[dict], dict]:
     """One series from one row of one table, across every listed edition.
 
     `value_index` picks the column within the row. `date_index` says which of
@@ -207,7 +231,7 @@ def _fetch_banking_series(table_no: int, label: str, expect: int, value_index: i
         table = _table_body(text, table_no)
         if not table:
             continue
-        values = _row_numbers(table, label, indicator_id, expect)
+        values = _row_numbers(table, label, indicator_id, expect, exclude=exclude)
         if not values:
             continue
         inspected += 1
@@ -389,3 +413,228 @@ def fetch_bank_net_income() -> tuple[list[dict], dict]:
         "the whole of 2025. The year-start column is that full prior-year figure, so it is not "
         "read here -- only the reporting-date column.",
         "billion KZT", date_index=1)
+
+
+# ---------------------------------------------------------------------------
+# The rest of the bulletin: balance sheet, deposits, liquidity, and the
+# sector's size relative to GDP.
+#
+# WHERE THE ASSET ROWS ACTUALLY LIVE. "Таблица 2. Структура совокупных активов"
+# extracts as a heading and nothing else -- its data is a chart, not text. The
+# asset rows are nonetheless in the document, and they fall inside TABLE 1's
+# span in every edition checked. They are therefore anchored to table 1, not to
+# the table whose heading names them.
+#
+# THE ASSET LABELS NEST, like the capital ratios did. "Всего активы" is a
+# prefix of "Всего активы (без учета резервов (провизий))" and BOTH rows carry
+# five numbers, so a column-count check cannot separate them -- the net figure
+# is matched with an explicit exclusion.
+#
+# WHICH ASSET MEASURE THE GDP RATIO USES, checked rather than assumed: the
+# bulletin's own "Отношение активов к ВВП" reads 45.3% for 01.07.2026, and
+# 74,226.8 / 163,678.5 = 45.35% while the gross figure would give 46.7%. So the
+# ratio is built on NET assets. Recorded because the bulletin publishes both
+# asset measures without saying which feeds the ratio.
+#
+# NOT PUBLISHED, so not derived: balance-sheet equity has no clean total row
+# (the label "Всего расчетный собственный капитал" wraps onto its own line with
+# no figures), so assets = liabilities + equity cannot be checked here. Gross
+# assets minus provisions does not reproduce net assets either -- the gap is
+# about 120 bln KZT at both dates -- so provisions are not the only difference
+# and that is not an identity either.
+# ---------------------------------------------------------------------------
+TABLE_ASSETS = 1          # not table 2: see the comment above
+TABLE_LIABILITIES = 8
+TABLE_DEPOSITS = 9
+TABLE_LIQUIDITY = 13
+TABLE_ROLE = 16
+
+ROW_ASSETS_NET = "Всего активы"
+ROW_ASSETS_NET_EXCLUDE = "(без учета"
+ROW_ASSETS_GROSS = "Всего активы (без учета резервов (провизий))"
+ROW_LIABILITIES = "Всего обязательств"
+ROW_CLIENT_DEPOSITS = "Вклады клиентов"
+ROW_DEPOSITS_LEGAL = "Вклады юридических лиц"
+ROW_DEPOSITS_INDIVIDUALS = "Вклады физических лиц"
+ROW_LIQUID_ASSETS = "Высоколиквидные активы (среднемесячное значение)"
+ROW_ASSETS_TO_GDP = "Отношение активов к ВВП"
+ROW_LOANS_TO_GDP = "Отношение ссудного портфеля к ВВП"
+ROW_DEPOSITS_TO_GDP = "Отношение вкладов клиентов к ВВП"
+
+
+def fetch_bank_assets_total() -> tuple[list[dict], dict]:
+    """Total banking sector assets, net of provisions, billion KZT, monthly."""
+    return _fetch_banking_series(
+        TABLE_ASSETS, ROW_ASSETS_NET, 5, 2, "BANK_ASSETS_TOTAL",
+        _FROZEN_NOTE + "Billion KZT, NET of provisions -- 74,226.8 at 01.07.2026. This is the "
+        "figure the sector audit asked for and that NBK could not supply: formId=1 lists 45 "
+        "balance-sheet lines and publishes no total at all, and formId=60 returns seven "
+        "unlabelled rows per bank-date. ARDFM publishes the total outright. Note the label is a "
+        "prefix of the gross row, so the two are separated explicitly rather than by column "
+        "count, which is identical for both.",
+        "billion KZT", date_index=1, exclude=ROW_ASSETS_NET_EXCLUDE)
+
+
+def fetch_bank_assets_gross() -> tuple[list[dict], dict]:
+    """Banking sector assets before provisions, billion KZT, monthly."""
+    return _fetch_banking_series(
+        TABLE_ASSETS, ROW_ASSETS_GROSS, 5, 2, "BANK_ASSETS_GROSS",
+        _FROZEN_NOTE + "Billion KZT, BEFORE provisions -- 76,425.4 at 01.07.2026 against 74,226.8 "
+        "net. The two do not differ by the provisions figure alone (the gap is about 120 bln "
+        "wider), so the pair is published as-is rather than reconciled here.",
+        "billion KZT", date_index=1)
+
+
+def fetch_bank_liabilities_total() -> tuple[list[dict], dict]:
+    """Total banking sector liabilities, billion KZT, monthly."""
+    return _fetch_banking_series(
+        TABLE_LIABILITIES, ROW_LIABILITIES, 5, 2, "BANK_LIABILITIES_TOTAL",
+        _FROZEN_NOTE + "Billion KZT -- 63,037.1 at 01.07.2026, of which client deposits are 80.5%. "
+        "Balance-sheet equity is NOT published as a clean total in this bulletin, so assets minus "
+        "liabilities is not offered as an equity series here.",
+        "billion KZT", date_index=1)
+
+
+def fetch_bank_client_deposits() -> tuple[list[dict], dict]:
+    """Client deposits, billion KZT, monthly.
+
+    Runs the cross-table deposit-split identity on every fetch.
+    """
+    records, manifest = _fetch_banking_series(
+        TABLE_LIABILITIES, ROW_CLIENT_DEPOSITS, 5, 2, "BANK_CLIENT_DEPOSITS",
+        _FROZEN_NOTE + "Billion KZT -- 50,716.0 at 01.07.2026, 80.5% of all bank liabilities. "
+        "Kazakhstan's banks are deposit-funded to an unusual degree, which is the context for "
+        "reading BANK_LIABILITIES_TOTAL. The label appears on five lines across the document; "
+        "this one is anchored to the liabilities table.",
+        "billion KZT", date_index=1)
+    manifest["identity_editions_checked"] = _verify_deposit_split("BANK_CLIENT_DEPOSITS")
+    return records, manifest
+
+
+def fetch_bank_deposits_legal_entities() -> tuple[list[dict], dict]:
+    """Deposits of legal entities, billion KZT, monthly."""
+    return _fetch_banking_series(
+        TABLE_DEPOSITS, ROW_DEPOSITS_LEGAL, 6, 3, "BANK_DEPOSITS_LEGAL_ENTITIES",
+        _FROZEN_NOTE + "Billion KZT -- 20,579.9 at 01.07.2026. This table carries SIX numbers per "
+        "row, not five: [amount, of which foreign currency, FX share, then the same three for the "
+        "reporting date]. The FX columns are what make it worth taking separately from the "
+        "aggregate.",
+        "billion KZT", date_index=1)
+
+
+def fetch_bank_deposits_individuals() -> tuple[list[dict], dict]:
+    """Deposits of individuals, billion KZT, monthly."""
+    return _fetch_banking_series(
+        TABLE_DEPOSITS, ROW_DEPOSITS_INDIVIDUALS, 6, 3, "BANK_DEPOSITS_INDIVIDUALS",
+        _FROZEN_NOTE + "Billion KZT -- 30,136.2 at 01.07.2026, half again the corporate figure. "
+        "Same six-column layout as BANK_DEPOSITS_LEGAL_ENTITIES.",
+        "billion KZT", date_index=1)
+
+
+def fetch_bank_deposits_individuals_fx_share() -> tuple[list[dict], dict]:
+    """Share of individuals' deposits held in foreign currency, percent, monthly."""
+    return _fetch_banking_series(
+        TABLE_DEPOSITS, ROW_DEPOSITS_INDIVIDUALS, 6, 5, "BANK_DEPOSITS_INDIVIDUALS_FX_SHARE",
+        _FROZEN_NOTE + "Percent of household deposits denominated in foreign currency -- 20.2% at "
+        "01.07.2026, down from 21.8% at 01.01.2026. THIS IS A PUBLISHED DOLLARIZATION MEASURE, "
+        "which NBK could not supply: its formId=42 carries the right currency dimension but "
+        "returns ten unlabelled rows per date-currency. Household deposits only, not the whole "
+        "banking system.",
+        "%", date_index=1)
+
+
+def fetch_bank_liquid_assets() -> tuple[list[dict], dict]:
+    """Highly liquid assets, monthly average, billion KZT."""
+    return _fetch_banking_series(
+        TABLE_LIQUIDITY, ROW_LIQUID_ASSETS, 2, 1, "BANK_LIQUID_ASSETS",
+        _FROZEN_NOTE + "Billion KZT, MONTHLY AVERAGE as the row states -- 21,945.4 at 01.07.2026, "
+        "about 30% of assets. Not a point-in-time stock, so it does not sit on the balance sheet "
+        "alongside BANK_ASSETS_TOTAL.",
+        "billion KZT", date_index=1)
+
+
+def fetch_bank_assets_to_gdp() -> tuple[list[dict], dict]:
+    """Banking sector assets as a share of GDP, percent, monthly."""
+    return _fetch_banking_series(
+        TABLE_ROLE, ROW_ASSETS_TO_GDP, 2, 1, "BANK_ASSETS_TO_GDP",
+        _FROZEN_NOTE + "Percent -- 45.3% at 01.07.2026. Published by the source, not computed "
+        "here. It is built on the NET asset figure: 74,226.8 / 163,678.5 = 45.35%, while gross "
+        "assets would give 46.7%. The bulletin publishes both asset measures without saying which "
+        "feeds the ratio, so this was checked rather than assumed.",
+        "%", date_index=1)
+
+
+def fetch_bank_loans_to_gdp() -> tuple[list[dict], dict]:
+    """Bank loan portfolio as a share of GDP, percent, monthly."""
+    return _fetch_banking_series(
+        TABLE_ROLE, ROW_LOANS_TO_GDP, 2, 1, "BANK_LOANS_TO_GDP",
+        _FROZEN_NOTE + "Percent -- 27.3% at 01.07.2026. The standard measure of financial depth, "
+        "and the one the sector audit listed as a derived indicator; it turns out the source "
+        "publishes it directly, so nothing is computed here. Low by international standards, "
+        "which is the usual starting point for any credit-cycle discussion about Kazakhstan.",
+        "%", date_index=1)
+
+
+def fetch_bank_deposits_to_gdp() -> tuple[list[dict], dict]:
+    """Client deposits as a share of GDP, percent, monthly."""
+    return _fetch_banking_series(
+        TABLE_ROLE, ROW_DEPOSITS_TO_GDP, 2, 1, "BANK_DEPOSITS_TO_GDP",
+        _FROZEN_NOTE + "Percent -- 31.0% at 01.07.2026. Deposits exceed loans relative to GDP, "
+        "the mirror of the deposit-funded structure visible in BANK_LIABILITIES_TOTAL.",
+        "%", date_index=1)
+
+
+# ---------------------------------------------------------------------------
+# Cross-table identity: the deposits table (9) splits client deposits into
+# legal entities and individuals, and the liabilities table (8) carries the
+# total. The two tables are compiled separately, so this checks the row
+# lookups rather than restating one number.
+#
+# Verified across all three editions online on 2026-09-02: 19,581.9 + 28,586.4
+# = 48,168.3 exactly, 19,634.2 + 29,311.6 = 48,945.8 exactly, and 20,579.9 +
+# 30,136.2 = 50,716.1 against a published 50,716.0 -- one rounding step, which
+# is what the tolerance allows for.
+# ---------------------------------------------------------------------------
+DEPOSIT_SPLIT_TOLERANCE = 0.5  # billion KZT; the tables round to one decimal
+
+
+def _verify_deposit_split(indicator_id: str) -> int:
+    """legal entities + individuals == client deposits, per edition."""
+    checked = 0
+    for doc in _list_banking_bulletins(indicator_id):
+        full_text = doc.get("full_text") or []
+        if not full_text or not full_text[0].get("document"):
+            continue
+        text = _pdf_text(_download(full_text[0]["document"]))
+        total_row = _row_numbers(_table_body(text, TABLE_LIABILITIES),
+                                 ROW_CLIENT_DEPOSITS, indicator_id, 5)
+        deposits = _table_body(text, TABLE_DEPOSITS)
+        legal = _row_numbers(deposits, ROW_DEPOSITS_LEGAL, indicator_id, 6)
+        people = _row_numbers(deposits, ROW_DEPOSITS_INDIVIDUALS, indicator_id, 6)
+        if not (total_row and legal and people):
+            continue
+        checked += 1
+        parts = legal[3] + people[3]
+        if abs(parts - total_row[2]) > DEPOSIT_SPLIT_TOLERANCE:
+            raise validation.StructuralChangeError(
+                "\n".join([
+                    f"STRUCTURAL CHANGE DETECTED in ardfm/{indicator_id}",
+                    f"WHAT CHANGED: in {doc.get('title') or ''!r} the deposit split does not add "
+                    f"up -- legal entities {legal[3]:,.1f} plus individuals {people[3]:,.1f} = "
+                    f"{parts:,.1f}, against client deposits of {total_row[2]:,.1f}",
+                    "EXPECTED: tables 8 and 9 are compiled separately and must reconcile; a "
+                    "mismatch means a row lookup has drifted onto the wrong line",
+                    "ACTION REQUIRED: inspect a recent bulletin and update "
+                    "scripts/fetchers/ardfm.py",
+                ])
+            )
+    if checked == 0:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in ardfm/{indicator_id}",
+                "WHAT CHANGED: no edition carried both the deposits split and the client-deposit "
+                "total, so the cross-table identity could not be checked on any date",
+                "ACTION REQUIRED: inspect a recent bulletin and update scripts/fetchers/ardfm.py",
+            ])
+        )
+    return checked

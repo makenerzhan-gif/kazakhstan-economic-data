@@ -3550,3 +3550,102 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+
+  - id: BANK_ASSETS_TOTAL
+    name_ru: "Совокупные активы банков"
+    name_en: "Total Banking Sector Assets"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_ASSETS_GROSS
+    name_ru: "Активы банков без вычета провизий"
+    name_en: "Banking Sector Assets, gross"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_LIABILITIES_TOTAL
+    name_ru: "Совокупные обязательства банков"
+    name_en: "Total Banking Sector Liabilities"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_CLIENT_DEPOSITS
+    name_ru: "Вклады клиентов банков"
+    name_en: "Bank Client Deposits"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_DEPOSITS_LEGAL_ENTITIES
+    name_ru: "Вклады юридических лиц"
+    name_en: "Deposits of Legal Entities"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_DEPOSITS_INDIVIDUALS
+    name_ru: "Вклады физических лиц"
+    name_en: "Deposits of Individuals"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_DEPOSITS_INDIVIDUALS_FX_SHARE
+    name_ru: "Доля вкладов физлиц в инвалюте"
+    name_en: "Individuals' Deposits, FX share"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_LIQUID_ASSETS
+    name_ru: "Высоколиквидные активы банков"
+    name_en: "Bank Highly Liquid Assets"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_ASSETS_TO_GDP
+    name_ru: "Отношение активов банков к ВВП"
+    name_en: "Bank Assets to GDP"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_LOANS_TO_GDP
+    name_ru: "Отношение ссудного портфеля к ВВП"
+    name_en: "Bank Loans to GDP"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_DEPOSITS_TO_GDP
+    name_ru: "Отношение вкладов клиентов к ВВП"
+    name_en: "Bank Deposits to GDP"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed

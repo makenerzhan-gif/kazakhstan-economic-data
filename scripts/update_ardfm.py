@@ -29,12 +29,34 @@ FETCHERS = {
     "BANK_ROA_MONTHLY": ardfm_fetchers.fetch_bank_roa_monthly,
     "BANK_ROE_MONTHLY": ardfm_fetchers.fetch_bank_roe_monthly,
     "BANK_NET_INCOME": ardfm_fetchers.fetch_bank_net_income,
+    "BANK_ASSETS_TOTAL": ardfm_fetchers.fetch_bank_assets_total,
+    "BANK_ASSETS_GROSS": ardfm_fetchers.fetch_bank_assets_gross,
+    "BANK_LIABILITIES_TOTAL": ardfm_fetchers.fetch_bank_liabilities_total,
+    "BANK_CLIENT_DEPOSITS": ardfm_fetchers.fetch_bank_client_deposits,
+    "BANK_DEPOSITS_LEGAL_ENTITIES": ardfm_fetchers.fetch_bank_deposits_legal_entities,
+    "BANK_DEPOSITS_INDIVIDUALS": ardfm_fetchers.fetch_bank_deposits_individuals,
+    "BANK_DEPOSITS_INDIVIDUALS_FX_SHARE": ardfm_fetchers.fetch_bank_deposits_individuals_fx_share,
+    "BANK_LIQUID_ASSETS": ardfm_fetchers.fetch_bank_liquid_assets,
+    "BANK_ASSETS_TO_GDP": ardfm_fetchers.fetch_bank_assets_to_gdp,
+    "BANK_LOANS_TO_GDP": ardfm_fetchers.fetch_bank_loans_to_gdp,
+    "BANK_DEPOSITS_TO_GDP": ardfm_fetchers.fetch_bank_deposits_to_gdp,
 }
 
 INDICATOR_IDS = [
     "BANK_NPL_90_SHARE", "BANK_NPL_90_AMOUNT", "BANK_LOANS_TOTAL",
     "BANK_PROVISIONS_IFRS", "BANK_CAPITAL_ADEQUACY_K1", "BANK_CAPITAL_ADEQUACY_K2",
     "BANK_ROA_MONTHLY", "BANK_ROE_MONTHLY", "BANK_NET_INCOME",
+    "BANK_ASSETS_TOTAL",
+    "BANK_ASSETS_GROSS",
+    "BANK_LIABILITIES_TOTAL",
+    "BANK_CLIENT_DEPOSITS",
+    "BANK_DEPOSITS_LEGAL_ENTITIES",
+    "BANK_DEPOSITS_INDIVIDUALS",
+    "BANK_DEPOSITS_INDIVIDUALS_FX_SHARE",
+    "BANK_LIQUID_ASSETS",
+    "BANK_ASSETS_TO_GDP",
+    "BANK_LOANS_TO_GDP",
+    "BANK_DEPOSITS_TO_GDP",
 ]
 
 def _indicator_meta(indicator_id: str) -> dict:

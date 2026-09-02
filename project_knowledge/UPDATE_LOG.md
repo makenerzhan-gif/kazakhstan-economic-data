@@ -2572,3 +2572,57 @@ against all bank loans.
 Three editions online, so these accumulate like the BNS publication-layer series.
 Verified live: 9/9 ARDFM fetchers OK, 29/29 tests passing. Five agencies now:
 NBK 9,037 observations, BNS 2,539, IMF 2,400, Minfin 795, ARDFM 27.
+
+## 2026-09-02 — the rest of the ARDFM bulletin (404 indicators, 14,831 observations)
+
+Eleven more series from the tables left unread in the first pass: balance sheet, deposits,
+liquidity, and the sector's size relative to GDP. Two of them close audit items that NBK could
+not answer.
+
+- **`BANK_ASSETS_TOTAL`** — 74,226.8 bln KZT at 01.07.2026. This is the figure the audit asked
+  for and NBK could not supply: `formId=1` lists 45 balance-sheet lines and publishes no total at
+  all, `formId=60` returns seven unlabelled rows per bank-date. ARDFM publishes it outright.
+- **`BANK_DEPOSITS_INDIVIDUALS_FX_SHARE`** — 20.2%, down from 21.8% at the start of the year. A
+  **published** dollarization measure, where NBK's `formId=42` had the right currency dimension
+  but ten unlabelled rows per date-currency. Household deposits only, so narrower than the audit
+  asked — but published rather than constructed.
+- `BANK_LOANS_TO_GDP` (27.3%) was listed in the audit as something to *derive*. The source
+  publishes it directly, so nothing is computed.
+
+Also: `BANK_ASSETS_GROSS`, `BANK_LIABILITIES_TOTAL`, `BANK_CLIENT_DEPOSITS`,
+`BANK_DEPOSITS_LEGAL_ENTITIES`, `BANK_DEPOSITS_INDIVIDUALS`, `BANK_LIQUID_ASSETS`,
+`BANK_ASSETS_TO_GDP`, `BANK_DEPOSITS_TO_GDP`.
+
+### The asset rows are not in the table that names them
+"Таблица 2. Структура совокупных активов" extracts as a heading and nothing else — its data is a
+chart. The asset rows are in the document all the same, and fall inside **table 1's** span in
+every edition. They are anchored there rather than to the heading that names them.
+
+And the labels nest again, exactly like `k1`/`k1-2`: "Всего активы" is a prefix of "Всего активы
+(без учета резервов (провизий))", and **both rows carry five numbers**, so the column-count check
+cannot separate them. The net figure is matched with an explicit exclusion.
+
+### A new cross-table identity, verified to fire
+Tables 8 and 9 are compiled separately: table 9 splits client deposits into legal entities and
+individuals, table 8 carries the total. They reconcile on all three editions — 19,581.9 + 28,586.4
+= 48,168.3 exactly, 19,634.2 + 29,311.6 = 48,945.8 exactly, 20,579.9 + 30,136.2 = 50,716.1 against
+a published 50,716.0, one rounding step. The guard was verified to **fire** when the
+legal-entities lookup is pointed at the individuals row.
+
+### Two things checked rather than assumed
+The bulletin publishes **two** asset measures without saying which feeds its GDP ratio.
+74,226.8 / 163,678.5 = 45.35% against a published 45.3%, while gross assets would give 46.7% — so
+the ratio is built on **net** assets, and that is now recorded.
+
+Gross assets minus IFRS provisions does **not** reproduce net assets: 70,901.9 against a published
+70,774.1, a gap of about 120 bln at both dates. So provisions are not the only difference and
+neither figure is derived from the other here.
+
+### The column-date lookup had to be rewritten
+In the 01.06.2026 edition a chart is extracted *ahead of* the table it belongs to, putting table
+16's real header on line 33 of its span — counting lines from the top found nothing. The header
+is now anchored to its own marker. A chart axis in the same span reads "01.01.26 01.02.26
+01.03.26 01.04.2026 01.05.2026 01.06.2026", mixing two- and four-digit years; requiring four
+digits rejects the short ones and the header anchor keeps the long ones out of range.
+
+Verified live: 20/20 ARDFM fetchers OK, 29/29 tests passing.

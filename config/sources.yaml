@@ -5881,4 +5881,124 @@ agencies:
           01.06, 1,195.6 at 01.07, against 2,723.7 for the whole of 2025. The year-start column of
           this table is that full prior-year figure rather than a stock, so it is deliberately not
           read -- only the reporting-date column.
+      BANK_ASSETS_TOTAL:
+        status: confirmed
+        table: "внутри участка Таблицы 1 (см. примечание) — 'Всего активы'"
+        format: pdf
+        notes: >
+          2026-09-02. Billion KZT, NET of provisions -- 74,226.8 at 01.07.2026. THIS IS THE
+          FIGURE THE AUDIT ASKED FOR AND NBK COULD NOT SUPPLY: formId=1 lists 45 balance-sheet
+          lines and publishes no total at all, formId=60 returns seven unlabelled rows per
+          bank-date. ARDFM publishes the total outright.
+          WHERE THE ROW ACTUALLY LIVES: 'Таблица 2. Структура совокупных активов' extracts as a
+          heading and nothing else -- its data is rendered as a chart, not text. The asset rows
+          are nonetheless present and fall inside TABLE 1's span in every edition checked, so they
+          are anchored to table 1 rather than to the table whose heading names them.
+          LABEL NESTING, the same trap as k1/k1-2: 'Всего активы' is a prefix of 'Всего активы
+          (без учета резервов (провизий))' and BOTH rows carry five numbers, so the column-count
+          check cannot separate them. The net figure is matched with an explicit exclusion of
+          '(без учета'.
+          NOT DERIVED, because it does not reconcile: gross assets minus IFRS provisions gives
+          70,901.9 against a published net 70,774.1 at 01.01.2026 -- a gap of about 120 bln at
+          both dates -- so provisions are not the only difference and neither figure is computed
+          from the other here.
+      BANK_ASSETS_GROSS:
+        status: confirmed
+        format: pdf
+        notes: >
+          2026-09-02. Billion KZT before provisions -- 76,425.4 at 01.07.2026. Published alongside
+          the net figure; see BANK_ASSETS_TOTAL for why the two are not reconciled here.
+      BANK_LIABILITIES_TOTAL:
+        status: confirmed
+        table: "Таблица 8. Структура совокупных обязательств банковского сектора РК"
+        format: pdf
+        notes: >
+          2026-09-02. Row 'Всего обязательств', reporting-date column. 63,037.1 bln KZT at
+          01.07.2026, of which client deposits are 80.5%.
+          BALANCE-SHEET EQUITY IS NOT PUBLISHED as a clean total in this bulletin -- the label
+          'Всего расчетный собственный капитал' wraps onto its own line with no figures -- so
+          assets minus liabilities is NOT offered as an equity series and the identity
+          assets = liabilities + equity cannot be checked here.
+      BANK_CLIENT_DEPOSITS:
+        status: confirmed
+        table: "Таблица 8"
+        format: pdf
+        notes: >
+          2026-09-02. Row 'Вклады клиентов'. 50,716.0 bln KZT at 01.07.2026, 80.5% of all bank
+          liabilities -- Kazakhstan's banks are deposit-funded to an unusual degree.
+          THE LABEL APPEARS ON FIVE LINES across the document (tables 8, 11, 16 and the narrative,
+          with 2, 5, 4, 0 and 0 numbers respectively), so it is anchored to the liabilities table.
+          CROSS-TABLE IDENTITY CHECKED ON EVERY FETCH: the deposits table (9) splits client
+          deposits into legal entities and individuals and the liabilities table (8) carries the
+          total; the two tables are compiled separately, so this checks the row lookups rather
+          than restating one number. Verified on all three editions -- 19,581.9 + 28,586.4 =
+          48,168.3 exactly, 19,634.2 + 29,311.6 = 48,945.8 exactly, 20,579.9 + 30,136.2 =
+          50,716.1 against a published 50,716.0, one rounding step. Verified to FIRE when the
+          legal-entities lookup is pointed at the individuals row.
+      BANK_DEPOSITS_LEGAL_ENTITIES:
+        status: confirmed
+        table: "Таблица 9. Вклады клиентов банковского сектора РК, в т.ч. в ин. валюте"
+        format: pdf
+        notes: >
+          2026-09-02. 20,579.9 bln KZT at 01.07.2026. THIS TABLE CARRIES SIX NUMBERS PER ROW, not
+          five like tables 4 and 8: [amount, of which foreign currency, FX share, then the same
+          three for the reporting date]. The column count is asserted, so a change to the layout
+          raises instead of shifting every later column.
+      BANK_DEPOSITS_INDIVIDUALS:
+        status: confirmed
+        table: "Таблица 9"
+        format: pdf
+        notes: >
+          2026-09-02. 30,136.2 bln KZT at 01.07.2026 -- half again the corporate figure. Same
+          six-column layout.
+      BANK_DEPOSITS_INDIVIDUALS_FX_SHARE:
+        status: confirmed
+        table: "Таблица 9"
+        format: pdf
+        notes: >
+          2026-09-02. Percent of household deposits in foreign currency -- 20.2% at 01.07.2026,
+          down from 21.8% at 01.01.2026.
+          THIS IS A PUBLISHED DOLLARIZATION MEASURE, which closes part of the audit item that NBK
+          could not answer: its formId=42 carries the right currency dimension but returns ten
+          unlabelled rows per date-currency with ten different amounts. Household deposits only,
+          not the whole banking system, so it is narrower than the audit asked for -- but it is
+          published rather than constructed.
+      BANK_LIQUID_ASSETS:
+        status: confirmed
+        table: "Таблица 13. Динамика ликвидности банковского сектора РК"
+        format: pdf
+        notes: >
+          2026-09-02. 21,945.4 bln KZT at 01.07.2026, about 30% of assets. MONTHLY AVERAGE, as the
+          row itself states -- not a point-in-time stock, so it does not sit on the balance sheet
+          alongside BANK_ASSETS_TOTAL.
+      BANK_ASSETS_TO_GDP:
+        status: confirmed
+        table: "Таблица 16. Роль банковского сектора в экономике РК"
+        format: pdf
+        notes: >
+          2026-09-02. 45.3% at 01.07.2026. PUBLISHED BY THE SOURCE, not computed here.
+          WHICH ASSET MEASURE IT USES WAS CHECKED, NOT ASSUMED: 74,226.8 / 163,678.5 = 45.35%
+          while the gross figure would give 46.7%, so the ratio is built on NET assets. The
+          bulletin publishes both asset measures without saying which feeds the ratio.
+          TABLE 16 IS WHERE THE COLUMN-DATE LOOKUP HAD TO BE REWRITTEN. In the 01.06.2026 edition
+          a chart is extracted ahead of the table it belongs to, putting the real header on line
+          33 of the table's span, so counting lines from the top found nothing. The header is now
+          anchored to its own marker ('Наименование'). A chart axis label in the same span reads
+          '01.01.26 01.02.26 01.03.26 01.04.2026 01.05.2026 01.06.2026', mixing two- and
+          four-digit years -- requiring four digits rejects the short ones and the header anchor
+          keeps the long ones out of range.
+      BANK_LOANS_TO_GDP:
+        status: confirmed
+        table: "Таблица 16"
+        format: pdf
+        notes: >
+          2026-09-02. 27.3% at 01.07.2026. The standard measure of financial depth, listed in the
+          audit as something to DERIVE -- the source publishes it directly, so nothing is computed.
+      BANK_DEPOSITS_TO_GDP:
+        status: confirmed
+        table: "Таблица 16"
+        format: pdf
+        notes: >
+          2026-09-02. 31.0% at 01.07.2026. Deposits exceed loans relative to GDP, the mirror of
+          the deposit-funded structure visible in BANK_LIABILITIES_TOTAL.
 
