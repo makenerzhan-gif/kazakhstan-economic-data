@@ -40,6 +40,16 @@ FETCHERS = {
     "BANK_ASSETS_TO_GDP": ardfm_fetchers.fetch_bank_assets_to_gdp,
     "BANK_LOANS_TO_GDP": ardfm_fetchers.fetch_bank_loans_to_gdp,
     "BANK_DEPOSITS_TO_GDP": ardfm_fetchers.fetch_bank_deposits_to_gdp,
+    "BANK_LOANS_CORPORATE": ardfm_fetchers.fetch_bank_loans_corporate,
+    "BANK_NPL_90_CORPORATE_SHARE": ardfm_fetchers.fetch_bank_npl_90_corporate_share,
+    "BANK_LOANS_RETAIL": ardfm_fetchers.fetch_bank_loans_retail,
+    "BANK_NPL_90_RETAIL_SHARE": ardfm_fetchers.fetch_bank_npl_90_retail_share,
+    "BANK_LOANS_SME": ardfm_fetchers.fetch_bank_loans_sme,
+    "BANK_NPL_90_SME_SHARE": ardfm_fetchers.fetch_bank_npl_90_sme_share,
+    "BANK_SHARE_CAPITAL": ardfm_fetchers.fetch_bank_share_capital,
+    "BANK_TOP5_ASSETS_SHARE": ardfm_fetchers.fetch_bank_top5_assets_share,
+    "BANK_TOP5_LOANS_SHARE": ardfm_fetchers.fetch_bank_top5_loans_share,
+    "BANK_TOP5_DEPOSITS_SHARE": ardfm_fetchers.fetch_bank_top5_deposits_share,
 }
 
 INDICATOR_IDS = [
@@ -57,6 +67,16 @@ INDICATOR_IDS = [
     "BANK_ASSETS_TO_GDP",
     "BANK_LOANS_TO_GDP",
     "BANK_DEPOSITS_TO_GDP",
+    "BANK_LOANS_CORPORATE",
+    "BANK_NPL_90_CORPORATE_SHARE",
+    "BANK_LOANS_RETAIL",
+    "BANK_NPL_90_RETAIL_SHARE",
+    "BANK_LOANS_SME",
+    "BANK_NPL_90_SME_SHARE",
+    "BANK_SHARE_CAPITAL",
+    "BANK_TOP5_ASSETS_SHARE",
+    "BANK_TOP5_LOANS_SHARE",
+    "BANK_TOP5_DEPOSITS_SHARE",
 ]
 
 def _indicator_meta(indicator_id: str) -> dict:

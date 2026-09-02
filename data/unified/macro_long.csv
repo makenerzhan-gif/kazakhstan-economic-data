@@ -14061,14 +14061,24 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,BANK_DEPOSITS_TO_GDP,29.4,%,ardfm,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,BANK_LIABILITIES_TOTAL,60354.8,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,BANK_LOANS_CORPORATE,6136.5,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,BANK_LOANS_RETAIL,25305.6,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,BANK_LOANS_SME,12025.7,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,BANK_LOANS_TOTAL,43783.0,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,BANK_LOANS_TO_GDP,26.7,%,ardfm,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,BANK_NPL_90_AMOUNT,1808.3,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,BANK_NPL_90_CORPORATE_SHARE,2.5,%,ardfm,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,BANK_NPL_90_RETAIL_SHARE,4.8,%,ardfm,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,BANK_NPL_90_SHARE,4.13,%,ardfm,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,BANK_NPL_90_SME_SHARE,3.7,%,ardfm,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,BANK_PROVISIONS_IFRS,2077.0,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,BANK_SHARE_CAPITAL,1544.5,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,BANK_TOP5_ASSETS_SHARE,69.0,%,ardfm,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,BANK_TOP5_DEPOSITS_SHARE,72.7,%,ardfm,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,BANK_TOP5_LOANS_SHARE,75.8,%,ardfm,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.594739,index,nbk,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1283961.7,thousand transactions,nbk,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,16219.4,billion KZT,nbk,2026-09-02,level,2026-09-02
@@ -14239,14 +14249,24 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,BANK_DEPOSITS_TO_GDP,29.9,%,ardfm,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,BANK_LIABILITIES_TOTAL,61924.5,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20996.0,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,BANK_LOANS_CORPORATE,6472.8,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,BANK_LOANS_RETAIL,25480.1,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,BANK_LOANS_SME,12081.1,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,BANK_LOANS_TOTAL,44356.3,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,BANK_LOANS_TO_GDP,27.1,%,ardfm,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,BANK_NET_INCOME,1035.7,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,BANK_NPL_90_AMOUNT,1859.7,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,BANK_NPL_90_CORPORATE_SHARE,2.4,%,ardfm,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,BANK_NPL_90_RETAIL_SHARE,4.9,%,ardfm,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,BANK_NPL_90_SHARE,4.19,%,ardfm,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,BANK_NPL_90_SME_SHARE,3.8,%,ardfm,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,BANK_PROVISIONS_IFRS,2081.0,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.58,%,ardfm,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,BANK_ROE_MONTHLY,23.81,%,ardfm,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,BANK_SHARE_CAPITAL,1544.5,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,BANK_TOP5_ASSETS_SHARE,69.1,%,ardfm,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,BANK_TOP5_DEPOSITS_SHARE,72.5,%,ardfm,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,BANK_TOP5_LOANS_SHARE,75.5,%,ardfm,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.965806,index,nbk,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1275686.811,thousand transactions,nbk,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,17398.077182644,billion KZT,nbk,2026-09-02,level,2026-09-02
@@ -14433,14 +14453,24 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,monthly,BANK_DEPOSITS_TO_GDP,31.0,%,ardfm,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,BANK_LIABILITIES_TOTAL,63037.1,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,BANK_LIQUID_ASSETS,21945.4,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,BANK_LOANS_CORPORATE,6428.2,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,BANK_LOANS_RETAIL,25848.9,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,BANK_LOANS_SME,12172.8,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,BANK_LOANS_TOTAL,44754.2,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,BANK_LOANS_TO_GDP,27.3,%,ardfm,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,BANK_NET_INCOME,1195.6,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,BANK_NPL_90_AMOUNT,1845.7,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,BANK_NPL_90_CORPORATE_SHARE,2.0,%,ardfm,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,BANK_NPL_90_RETAIL_SHARE,4.8,%,ardfm,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,BANK_NPL_90_SHARE,4.12,%,ardfm,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,BANK_NPL_90_SME_SHARE,3.9,%,ardfm,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,BANK_PROVISIONS_IFRS,2079.6,billion KZT,ardfm,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.65,%,ardfm,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.14,%,ardfm,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,BANK_SHARE_CAPITAL,1600.6,billion KZT,ardfm,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,BANK_TOP5_ASSETS_SHARE,69.2,%,ardfm,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,BANK_TOP5_DEPOSITS_SHARE,72.7,%,ardfm,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,BANK_TOP5_LOANS_SHARE,75.8,%,ardfm,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.771858,index,nbk,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,quarterly,CAPACITY_UTILIZATION,50.757057,percent,nbk,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,CONSTRUCTION_INDEX,115.3,index (same period previous year = 100),bns,2026-09-02,level,2026-09-02

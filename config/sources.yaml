@@ -6001,4 +6001,91 @@ agencies:
         notes: >
           2026-09-02. 31.0% at 01.07.2026. Deposits exceed loans relative to GDP, the mirror of
           the deposit-funded structure visible in BANK_LIABILITIES_TOTAL.
+      BANK_LOANS_CORPORATE:
+        status: confirmed
+        table: "Таблица 5. Качество займов юридических лиц"
+        format: pdf
+        notes: >
+          2026-09-02. Row 'Займы юридических лиц, в т.ч.:', reporting-date amount. 6,428.2 bln KZT
+          at 01.07.2026, DOWN 11.1% since the start of the year -- the only one of the three
+          borrower segments that is shrinking.
+          THE THREE SEGMENTS DO NOT SUM TO BANK_LOANS_TOTAL. Corporate plus retail plus SME gives
+          44,449.9 bln against a published 44,754.2 at 01.07.2026, and the gap is a stable 304-322
+          bln (about 0.7%) across all three editions. Something sits outside the three named
+          categories and the bulletin does not say what, so no identity is asserted and nothing is
+          derived from the difference. Recorded so nobody sums the three and treats the shortfall
+          as an error.
+      BANK_NPL_90_CORPORATE_SHARE:
+        status: confirmed
+        table: "Таблица 5"
+        format: pdf
+        notes: >
+          2026-09-02. 2.0% at 01.07.2026 -- HALF the headline 4.12%, and the overdue amount fell
+          20.8% since the start of the year. The 90-day row carries the same label in all three
+          segment tables, so it is the table anchor that separates them.
+      BANK_LOANS_RETAIL:
+        status: confirmed
+        table: "Таблица 6. Качество займов физических лиц"
+        format: pdf
+        notes: >
+          2026-09-02. 25,848.9 bln KZT at 01.07.2026 -- the largest segment, four times the
+          corporate book. Same segment-residual caveat as BANK_LOANS_CORPORATE.
+      BANK_NPL_90_RETAIL_SHARE:
+        status: confirmed
+        table: "Таблица 6"
+        format: pdf
+        notes: >
+          2026-09-02. 4.8% at 01.07.2026, the highest of the three segments. Since retail is also
+          the largest book, this is what pulls the headline rate up.
+      BANK_LOANS_SME:
+        status: confirmed
+        table: "Таблица 7. Качество займов МСБ"
+        format: pdf
+        notes: >
+          2026-09-02. 12,172.8 bln KZT at 01.07.2026, up 9.6% since the start of the year -- the
+          fastest-growing segment.
+      BANK_NPL_90_SME_SHARE:
+        status: confirmed
+        table: "Таблица 7"
+        format: pdf
+        notes: >
+          2026-09-02. 3.9% at 01.07.2026, and the overdue AMOUNT rose 40.1% since the start of the
+          year -- the sharpest deterioration of the three segments. Growing fastest and souring
+          fastest at the same time is the combination the aggregate rate conceals.
+          WHY THE SEGMENTS MATTER: the headline 90-day share is 4.12% and spans 2.0% (corporate)
+          to 4.8% (retail). The three also move in opposite directions -- corporate overdue debt
+          fell 20.8% year-to-date while SME rose 40.1% -- so the aggregate is an average of
+          divergent trends, not a summary of a common one.
+      BANK_SHARE_CAPITAL:
+        status: confirmed
+        table: "Таблица 11. Структура фондирования банковского сектора РК"
+        format: pdf
+        notes: >
+          2026-09-02. 1,600.6 bln KZT at 01.07.2026, 2.2% of total funding.
+          A COMPONENT OF EQUITY, NOT TOTAL EQUITY. The bulletin publishes no balance-sheet equity
+          total anywhere, which is why BANK_LIABILITIES_TOTAL has no equity counterpart and why
+          assets = liabilities + equity cannot be checked. This is paid-in share capital only.
+          The funding table carries FOUR numbers per row, not the five of tables 4, 5, 6, 7 and 8.
+      BANK_TOP5_ASSETS_SHARE:
+        status: confirmed
+        table: "Таблица 15. Концентрация банковского сектора РК"
+        format: pdf
+        notes: >
+          2026-09-02. 69.2% at 01.07.2026. Context for every sector aggregate in this agency's
+          block: the averages are dominated by a handful of institutions.
+          Table 15's row labels END WITH A BARE '%' before the figures, which yields no number and
+          so does not disturb the column count.
+      BANK_TOP5_LOANS_SHARE:
+        status: confirmed
+        table: "Таблица 15"
+        format: pdf
+        notes: >
+          2026-09-02. 75.8% at 01.07.2026. Lending is MORE concentrated than assets (69.2%) or
+          deposits (72.7%), so the segment NPL rates are largely a statement about five banks.
+      BANK_TOP5_DEPOSITS_SHARE:
+        status: confirmed
+        table: "Таблица 15"
+        format: pdf
+        notes: >
+          2026-09-02. 72.7% at 01.07.2026.
 

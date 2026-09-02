@@ -2626,3 +2626,67 @@ is now anchored to its own marker. A chart axis in the same span reads "01.01.26
 digits rejects the short ones and the header anchor keeps the long ones out of range.
 
 Verified live: 20/20 ARDFM fetchers OK, 29/29 tests passing.
+
+## 2026-09-02 — loan quality by borrower segment, and concentration (414 indicators)
+
+Ten more series from the ARDFM bulletin: tables 5, 6 and 7 (loan quality for corporate, retail
+and SME borrowers), the share-capital line from the funding table, and table 15 (concentration).
+The ARDFM block is now 30 indicators and the bulletin's substantive tables are read.
+
+### The headline NPL rate is an average of divergent trends
+The aggregate 90-day overdue share is 4.12%. Underneath it, at 01.07.2026:
+
+| segment | book, bln KZT | 90+ overdue | year-to-date change in overdue amount |
+|---|---|---|---|
+| corporate | 6,428.2 | **2.0%** | −20.8% |
+| SME | 12,172.8 | 3.9% | **+40.1%** |
+| retail | 25,848.9 | **4.8%** | +15.8% |
+
+Corporate credit is shrinking (−11.1% year-to-date) and its bad debt is falling. SME is the
+fastest-growing book *and* the fastest-souring one. Retail is the largest book and carries the
+highest bad-debt share, which is what pulls the headline up. None of that is visible in the
+aggregate, which is the argument for taking the segments separately.
+
+### The three segments do not sum to the total, and that is left alone
+Corporate + retail + SME = 44,449.9 bln against a published `BANK_LOANS_TOTAL` of 44,754.2 — a
+residual of about 304 bln, stable at 304–322 bln (~0.7%) across all three editions. Something
+sits outside the three named categories and the bulletin does not say what. No identity is
+asserted, nothing is derived from the difference, and the caveat is recorded on each segment so
+nobody sums the three and reads the shortfall as an error.
+
+### Concentration is the context for every aggregate here
+The five largest banks hold 69.2% of assets, 72.7% of deposits and **75.8% of loans**. Lending is
+the most concentrated of the three, so the segment NPL rates above are largely a statement about
+five institutions rather than about a market.
+
+### Share capital is a component, not equity
+`BANK_SHARE_CAPITAL` (1,600.6 bln, 2.2% of funding) is paid-in capital only. The bulletin
+publishes **no** balance-sheet equity total anywhere — which is why `BANK_LIABILITIES_TOTAL` has
+no equity counterpart and why assets = liabilities + equity still cannot be checked. The funding
+table also carries four numbers per row rather than the five of tables 4–8, and the column count
+is asserted per row.
+
+### Process note
+I edited `config/indicators.yaml` and `update_ardfm.py` while a full five-agency run was in
+flight. The running process had already imported its fetcher registry, so the new indicators
+could not appear in that run's output — its result is a snapshot of the previous state, not of
+this one. Verification was redone afterwards rather than read off a run that could not have
+included the change.
+
+Verified live: 30/30 ARDFM fetchers OK, 29/29 tests passing.
+
+### A defect in my own module, found by the source refusing to talk to me
+The first thirty-indicator run failed: gov.kz started refusing connections partway through, and
+the pipeline correctly declined to rebuild the unified dataset. The cause was mine, not the
+source's. Every indicator here is a separate fetcher and each one walks all listed editions, so
+thirty indicators over three bulletins meant **ninety downloads of a ~450 KB PDF and ninety pypdf
+parses per run** — about 40 MB, all of it the same three files.
+
+Both are now cached per process. A fresh run still re-downloads, so the append-only raw archive
+still records today's bytes, but within one run each document is fetched once and parsed once.
+The first fetcher takes 31 seconds and the rest take about a tenth of a second each; the whole
+module now runs in 26 seconds against a source that was previously being hammered.
+
+Retries were added at the same time, covering `ConnectionError` and `Timeout` only — never an
+HTTP status, for the same reason as the IMF module: a 404 or a 500 is information about the
+source, and retrying it hides a real change behind a delay.

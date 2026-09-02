@@ -3649,3 +3649,93 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+
+  - id: BANK_LOANS_CORPORATE
+    name_ru: "Займы юридическим лицам"
+    name_en: "Loans to Legal Entities"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_NPL_90_CORPORATE_SHARE
+    name_ru: "Доля просрочки свыше 90 дней, юрлица"
+    name_en: "Corporate Loans Overdue 90+ Days, share"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_LOANS_RETAIL
+    name_ru: "Займы физическим лицам"
+    name_en: "Loans to Individuals"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_NPL_90_RETAIL_SHARE
+    name_ru: "Доля просрочки свыше 90 дней, физлица"
+    name_en: "Retail Loans Overdue 90+ Days, share"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_LOANS_SME
+    name_ru: "Займы МСБ"
+    name_en: "Loans to SMEs"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_NPL_90_SME_SHARE
+    name_ru: "Доля просрочки свыше 90 дней, МСБ"
+    name_en: "SME Loans Overdue 90+ Days, share"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_SHARE_CAPITAL
+    name_ru: "Уставный капитал банков"
+    name_en: "Bank Share Capital"
+    agency: ardfm
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_TOP5_ASSETS_SHARE
+    name_ru: "Доля 5 крупнейших банков в активах"
+    name_en: "Top-5 Banks Share of Assets"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_TOP5_LOANS_SHARE
+    name_ru: "Доля 5 крупнейших банков в ссудном портфеле"
+    name_en: "Top-5 Banks Share of Loans"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+
+  - id: BANK_TOP5_DEPOSITS_SHARE
+    name_ru: "Доля 5 крупнейших банков во вкладах"
+    name_en: "Top-5 Banks Share of Deposits"
+    agency: ardfm
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed

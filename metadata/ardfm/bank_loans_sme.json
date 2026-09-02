@@ -1,0 +1,21 @@
+{
+  "source": "ardfm",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?title=Текущее состояние банковского сектора",
+  "dataset_id": "ardfm-banking-bulletin/table-7/Займы МСБ, в т.ч.:/col2",
+  "indicator_id": "BANK_LOANS_SME",
+  "indicator_name": "Loans to SMEs",
+  "description": "Займы МСБ",
+  "frequency": "monthly",
+  "unit": "billion KZT",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "ARDFM monthly banking sector bulletin (PDF), tables 4, 12 and 14",
+  "publication_date": null,
+  "last_update_date": "2026-09-02",
+  "download_date": "2026-09-02",
+  "period_start": "2026-05-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

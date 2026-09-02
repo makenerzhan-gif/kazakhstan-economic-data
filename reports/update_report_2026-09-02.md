@@ -1,6 +1,6 @@
 # Update report — 2026-09-02
 
-Run timestamp: 2026-09-02T20:04:11.520833
+Run timestamp: 2026-09-02T21:41:32.581047
 Unified dataset updated: True
 Tests passed: True
 
@@ -1471,3 +1471,14 @@ Tests passed: True
 - **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_ASSETS_TOTAL** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_ASSETS_GROSS** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LIABILITIES_TOTAL** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_CLIENT_DEPOSITS** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_DEPOSITS_LEGAL_ENTITIES** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_DEPOSITS_INDIVIDUALS** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_DEPOSITS_INDIVIDUALS_FX_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_ASSETS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LOANS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_DEPOSITS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)

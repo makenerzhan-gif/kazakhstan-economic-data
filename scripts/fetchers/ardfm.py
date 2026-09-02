@@ -46,9 +46,11 @@ part of the value.
 from __future__ import annotations
 
 import io
+import hashlib
 import json
 import re
 import sys
+import time
 from datetime import date, datetime
 from pathlib import Path
 
@@ -67,11 +69,46 @@ REPORT_DATE_RE = re.compile(r"на\s+(\d{2})\.(\d{2})\.(\d{4})")
 COLUMN_DATE_RE = re.compile(r"\b(\d{2})\.(\d{2})\.(\d{4})\b")
 
 
+_DOCUMENT_CACHE: dict[str, bytes] = {}
+_TEXT_CACHE: dict[str, str] = {}
+_DOWNLOAD_ATTEMPTS = 3
+
+
 def _download(path: str) -> bytes:
+    """Fetch one document, once per process, retrying only transport failures.
+
+    THE CACHE IS NOT AN OPTIMISATION, IT IS A FIX. Every indicator in this
+    module is a separate fetcher and each one walks all listed editions, so
+    thirty indicators over three bulletins meant NINETY downloads of a ~450 KB
+    PDF per run -- about 40 MB, all of it the same handful of files. gov.kz
+    started refusing connections partway through the first thirty-indicator
+    run, which is what exposed this. The cache is per-process: a fresh run
+    still re-downloads, so the append-only raw archive still sees today's
+    bytes, but within one run each document is fetched exactly once.
+
+    Retries cover ConnectionError and Timeout only -- never an HTTP status --
+    for the same reason as the IMF module: a 404 or a 500 is information about
+    the source, and retrying it hides a real change behind a delay.
+    """
     url = path if path.startswith("http") else GOV_KZ_BASE + path
-    resp = requests.get(url, headers=HEADERS, timeout=180)
-    resp.raise_for_status()
-    return resp.content
+    cached = _DOCUMENT_CACHE.get(url)
+    if cached is not None:
+        return cached
+    last: Exception | None = None
+    for attempt in range(1, _DOWNLOAD_ATTEMPTS + 1):
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=180)
+            resp.raise_for_status()
+            _DOCUMENT_CACHE[url] = resp.content
+            return resp.content
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as exc:
+            last = exc
+            if attempt < _DOWNLOAD_ATTEMPTS:
+                print(f"ardfm: transport error on {url} (attempt {attempt}/"
+                      f"{_DOWNLOAD_ATTEMPTS}), retrying in {attempt}s: "
+                      f"{type(exc).__name__}", file=sys.stderr)
+                time.sleep(attempt)
+    raise last
 
 
 def _save_raw(indicator_id: str, content: bytes, extra: dict) -> None:
@@ -104,7 +141,21 @@ def _list_banking_bulletins(indicator_id: str) -> list[dict]:
 
 
 def _pdf_text(content: bytes) -> str:
-    return "\n".join((page.extract_text() or "") for page in PdfReader(io.BytesIO(content)).pages)
+    """Extracted text of one bulletin, parsed once per process.
+
+    Cached for the same reason the download is: thirty indicators over three
+    bulletins meant ninety pypdf parses of a fourteen-page document per run,
+    which dominated the module's runtime even after the bytes were cached.
+    Keyed by the document's own bytes, so two different documents never share
+    an entry and a changed document is re-parsed.
+    """
+    key = hashlib.sha256(content).hexdigest()
+    cached = _TEXT_CACHE.get(key)
+    if cached is not None:
+        return cached
+    text = "\n".join((page.extract_text() or "") for page in PdfReader(io.BytesIO(content)).pages)
+    _TEXT_CACHE[key] = text
+    return text
 
 
 def _table_body(text: str, number: int) -> str:
@@ -638,3 +689,147 @@ def _verify_deposit_split(indicator_id: str) -> int:
             ])
         )
     return checked
+
+
+# ---------------------------------------------------------------------------
+# Loan quality by borrower segment (tables 5, 6, 7), the capital component
+# published in the funding table (11), and market concentration (15).
+#
+# WHY THE SEGMENTS ARE WORTH SEPARATING: the headline 90-day overdue share is
+# 4.12%, and it hides a wide spread. At 01.07.2026 corporate loans run 2.0%,
+# SME 3.9% and retail 4.8%. The three move differently too -- corporate
+# overdue debt FELL 20.8% since the start of the year while SME rose 40.1% --
+# so the aggregate is an average of divergent trends rather than a summary of
+# a common one.
+#
+# THE THREE SEGMENTS DO NOT SUM TO THE TOTAL PORTFOLIO, and that is left as it
+# is rather than reconciled. Corporate + retail + SME gives 44,449.9 bln KZT
+# against a published 44,754.2 at 01.07.2026 -- a residual of about 304 bln,
+# and the gap is a stable 304-322 bln (roughly 0.7%) across all three editions.
+# Something sits outside the three named categories; the bulletin does not say
+# what, so no identity is asserted and nothing is derived from the difference.
+# Anyone summing these three and expecting BANK_LOANS_TOTAL should know that in
+# advance.
+#
+# Table 15's rows end their label with a bare "%" before the figures, which
+# yields no number and so does not disturb the column count.
+# ---------------------------------------------------------------------------
+TABLE_LOANS_CORPORATE = 5
+TABLE_LOANS_RETAIL = 6
+TABLE_LOANS_SME = 7
+TABLE_FUNDING = 11
+TABLE_CONCENTRATION = 15
+
+ROW_SEGMENT_NPL_90 = ROW_NPL_90          # the same label heads the 90-day row in every segment table
+ROW_CORPORATE_TOTAL = "Займы юридических лиц, в т.ч.:"
+ROW_RETAIL_TOTAL = "Займы физических лиц, в т.ч.:"
+ROW_SME_TOTAL = "Займы МСБ, в т.ч.:"
+ROW_SHARE_CAPITAL = "Уставный капитал"
+ROW_TOP5_ASSETS = "Доля 5 крупнейших банков в совокупных активах"
+ROW_TOP5_LOANS = "Доля 5 крупнейших банков в совокупном ссудном портфеле"
+ROW_TOP5_DEPOSITS = "Доля 5 крупнейших банков в совокупных вкладах клиентов"
+
+_SEGMENT_NOTE = (
+    "The three borrower segments do NOT sum to BANK_LOANS_TOTAL -- corporate plus retail plus SME "
+    "is about 304 bln KZT short of the published portfolio, a stable ~0.7% gap across every "
+    "edition. Something sits outside the three named categories and the bulletin does not say "
+    "what, so the difference is neither explained nor used here. ")
+
+
+def fetch_bank_loans_corporate() -> tuple[list[dict], dict]:
+    """Loans to legal entities, billion KZT, monthly."""
+    return _fetch_banking_series(
+        TABLE_LOANS_CORPORATE, ROW_CORPORATE_TOTAL, 5, 2, "BANK_LOANS_CORPORATE",
+        _FROZEN_NOTE + "Billion KZT -- 6,428.2 at 01.07.2026, DOWN 11.1% since the start of the "
+        "year while retail and SME both grew. The corporate book is the smallest of the three "
+        "segments and the only one shrinking. " + _SEGMENT_NOTE,
+        "billion KZT", date_index=1)
+
+
+def fetch_bank_npl_90_corporate_share() -> tuple[list[dict], dict]:
+    """Corporate loans overdue more than 90 days, share, monthly."""
+    return _fetch_banking_series(
+        TABLE_LOANS_CORPORATE, ROW_SEGMENT_NPL_90, 5, 3, "BANK_NPL_90_CORPORATE_SHARE",
+        _FROZEN_NOTE + "Percent of the corporate loan book overdue by more than 90 days -- 2.0% "
+        "at 01.07.2026, HALF the headline 4.12%, and the overdue amount fell 20.8% since the "
+        "start of the year. Read with the retail and SME shares before treating the aggregate as "
+        "a description of credit risk.",
+        "%", date_index=1)
+
+
+def fetch_bank_loans_retail() -> tuple[list[dict], dict]:
+    """Loans to individuals, billion KZT, monthly."""
+    return _fetch_banking_series(
+        TABLE_LOANS_RETAIL, ROW_RETAIL_TOTAL, 5, 2, "BANK_LOANS_RETAIL",
+        _FROZEN_NOTE + "Billion KZT -- 25,848.9 at 01.07.2026, the largest segment by far and "
+        "four times the corporate book. " + _SEGMENT_NOTE,
+        "billion KZT", date_index=1)
+
+
+def fetch_bank_npl_90_retail_share() -> tuple[list[dict], dict]:
+    """Retail loans overdue more than 90 days, share, monthly."""
+    return _fetch_banking_series(
+        TABLE_LOANS_RETAIL, ROW_SEGMENT_NPL_90, 5, 3, "BANK_NPL_90_RETAIL_SHARE",
+        _FROZEN_NOTE + "Percent of the household loan book overdue by more than 90 days -- 4.8% "
+        "at 01.07.2026, the highest of the three segments and rising. Since retail is also the "
+        "largest book, this is what pulls the headline rate up.",
+        "%", date_index=1)
+
+
+def fetch_bank_loans_sme() -> tuple[list[dict], dict]:
+    """Loans to small and medium enterprises, billion KZT, monthly."""
+    return _fetch_banking_series(
+        TABLE_LOANS_SME, ROW_SME_TOTAL, 5, 2, "BANK_LOANS_SME",
+        _FROZEN_NOTE + "Billion KZT -- 12,172.8 at 01.07.2026, up 9.6% since the start of the "
+        "year, the fastest-growing of the three segments. " + _SEGMENT_NOTE,
+        "billion KZT", date_index=1)
+
+
+def fetch_bank_npl_90_sme_share() -> tuple[list[dict], dict]:
+    """SME loans overdue more than 90 days, share, monthly."""
+    return _fetch_banking_series(
+        TABLE_LOANS_SME, ROW_SEGMENT_NPL_90, 5, 3, "BANK_NPL_90_SME_SHARE",
+        _FROZEN_NOTE + "Percent of the SME loan book overdue by more than 90 days -- 3.9% at "
+        "01.07.2026, and the overdue AMOUNT rose 40.1% since the start of the year, the sharpest "
+        "deterioration of the three segments. Growing fast and souring fastest is the combination "
+        "worth watching here.",
+        "%", date_index=1)
+
+
+def fetch_bank_share_capital() -> tuple[list[dict], dict]:
+    """Share capital of the banking sector, billion KZT, monthly."""
+    return _fetch_banking_series(
+        TABLE_FUNDING, ROW_SHARE_CAPITAL, 4, 2, "BANK_SHARE_CAPITAL",
+        _FROZEN_NOTE + "Billion KZT of paid-in share capital -- 1,600.6 at 01.07.2026, 2.2% of "
+        "total funding. This is a COMPONENT of equity, not total equity: the bulletin does not "
+        "publish a balance-sheet equity total anywhere, which is why BANK_LIABILITIES_TOTAL has "
+        "no equity counterpart. The funding table carries four numbers per row rather than five.",
+        "billion KZT", date_index=1)
+
+
+def fetch_bank_top5_assets_share() -> tuple[list[dict], dict]:
+    """Share of the five largest banks in sector assets, percent, monthly."""
+    return _fetch_banking_series(
+        TABLE_CONCENTRATION, ROW_TOP5_ASSETS, 2, 1, "BANK_TOP5_ASSETS_SHARE",
+        _FROZEN_NOTE + "Percent -- 69.2% at 01.07.2026. Kazakhstan's banking system is highly "
+        "concentrated, which is context for reading every sector aggregate here: the averages are "
+        "dominated by a handful of institutions.",
+        "%", date_index=1)
+
+
+def fetch_bank_top5_loans_share() -> tuple[list[dict], dict]:
+    """Share of the five largest banks in the sector loan portfolio, percent."""
+    return _fetch_banking_series(
+        TABLE_CONCENTRATION, ROW_TOP5_LOANS, 2, 1, "BANK_TOP5_LOANS_SHARE",
+        _FROZEN_NOTE + "Percent -- 75.8% at 01.07.2026. Lending is MORE concentrated than assets "
+        "(69.2%) or deposits (72.7%), so the segment NPL rates are largely a statement about five "
+        "banks.",
+        "%", date_index=1)
+
+
+def fetch_bank_top5_deposits_share() -> tuple[list[dict], dict]:
+    """Share of the five largest banks in client deposits, percent, monthly."""
+    return _fetch_banking_series(
+        TABLE_CONCENTRATION, ROW_TOP5_DEPOSITS, 2, 1, "BANK_TOP5_DEPOSITS_SHARE",
+        _FROZEN_NOTE + "Percent -- 72.7% at 01.07.2026.",
+        "%", date_index=1)
