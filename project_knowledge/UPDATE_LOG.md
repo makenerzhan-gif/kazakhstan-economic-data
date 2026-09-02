@@ -2371,3 +2371,43 @@ must equal the current account — and it was verified to **fire** when a compon
 the stored `CURRENT_ACCOUNT_BALANCE` (−2008.012157 for 2026-04-01).
 
 Verified live: 132/132 NBK fetchers OK, 29/29 tests passing.
+
+## 2026-09-01 — state budget execution within the year (374 indicators)
+
+- Six year-to-date series from sheet "табл 3" of the Minfin Statistical Bulletin:
+  `STATE_BUDGET_REVENUE_YTD`, `STATE_BUDGET_EXPENDITURE_YTD`, `STATE_BUDGET_DEFICIT_YTD`,
+  `STATE_NON_OIL_DEFICIT_YTD`, `STATE_NET_BUDGET_LENDING_YTD`,
+  `STATE_FINANCIAL_ASSETS_BALANCE_YTD`. Closes the audit's monthly-budget-execution item.
+- The dataset already read this exact sheet — but only its **annual** column, giving three points
+  each ending at 2025. The fiscal position could not be tracked within a year at all. Column 5 is
+  the current year-to-date figure, and across the thirteen bulletin vintages it gives 11 in-year
+  points from 2025-03-31 to 2026-06-30. The source was already connected; a column was being left
+  unread. That is the third time this session the gap turned out to be inside a source already in
+  use, after oil exports and the CPI comparison dimension.
+- Two of the six were not in the dataset at any frequency: net budget lending and the balance on
+  financial-asset operations — the two lines that sit between the revenue-expenditure gap and the
+  headline deficit.
+- **The budget identity is checked, not assumed**: revenue − expenditure − net lending − financial
+  assets balance = deficit. All five are published independently on the sheet. For January–June
+  2026: 15,036,307.107 − 16,677,640.518 − 255,161.716 − 379,454.476 = −2,275,949.603, exactly the
+  stated line V. Verified across **all 11 dates** by cross-checking the six series against each
+  other — zero discrepancies — and the guard was verified to **fire** when the deficit lookup is
+  pointed at the non-oil deficit row instead.
+- Two layout traps: `_fetch_bulletin_row`'s default `value_col=-2` lands on the *Russian label*
+  here, since this sheet puts its labels in the last columns; and rows must be matched on the full
+  section text, because "III. ЧИСТОЕ БЮДЖЕТНОЕ КРЕДИТОВАНИЕ" and "VI. НЕНЕФТЯНОЙ ДЕФИЦИТ" collide
+  with looser matching.
+- `_fetch_bulletin_row` gained an optional `note_override`: its built-in note says "republican
+  budget only", true of every sheet it served until "табл 3", which is the **state** budget
+  (republican plus local). Shipping the default note would have misstated what the numbers cover.
+  Existing callers are untouched.
+- The series reset each January (26.8 trillion KZT by 2025-11-30, then 1.83 trillion at
+  2026-01-31) — the expected cumulative pattern, not a collapse.
+
+### External debt service — not connected
+Two NBK forms carry the phrase; both were probed live and neither is usable, for the same two
+reasons. `formId=346` and `formId=393` are **forecasts** — their `repayment_type` values are
+literally "Principal (forecast)" and "Interests  (forecast)" — and neither publishes a **total**:
+both break the forecast across 11–13 forward repayment windows and 4–5 sectors with no "Total"
+member in either dimension. Summing the windows would be an aggregate the source does not publish.
+The interest component of actual service sits inside `BOP_PRIMARY_INCOME`, which is connected.

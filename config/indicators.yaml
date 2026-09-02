@@ -3325,3 +3325,57 @@ indicators:
     unit: "million USD"
     category: monetary
     source_status: confirmed
+
+  - id: STATE_BUDGET_REVENUE_YTD
+    name_ru: "Доходы государственного бюджета, нарастающим итогом"
+    name_en: "State Budget Revenue, year-to-date"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: STATE_BUDGET_EXPENDITURE_YTD
+    name_ru: "Затраты государственного бюджета, нарастающим итогом"
+    name_en: "State Budget Expenditure, year-to-date"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: STATE_BUDGET_DEFICIT_YTD
+    name_ru: "Дефицит государственного бюджета, нарастающим итогом"
+    name_en: "State Budget Deficit, year-to-date"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: STATE_NON_OIL_DEFICIT_YTD
+    name_ru: "Ненефтяной дефицит бюджета, нарастающим итогом"
+    name_en: "Non-oil Budget Deficit, year-to-date"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: STATE_NET_BUDGET_LENDING_YTD
+    name_ru: "Чистое бюджетное кредитование, нарастающим итогом"
+    name_en: "Net Budget Lending, year-to-date"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+
+  - id: STATE_FINANCIAL_ASSETS_BALANCE_YTD
+    name_ru: "Сальдо по операциям с финансовыми активами, нарастающим итогом"
+    name_en: "Balance on Financial Asset Operations, year-to-date"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed

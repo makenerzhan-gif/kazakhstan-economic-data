@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448",
+  "dataset_id": "gov.kz-statistical-bulletin-listing,sheet=табл 3",
+  "indicator_id": "STATE_NET_BUDGET_LENDING_YTD",
+  "indicator_name": "Net Budget Lending, year-to-date",
+  "description": "Чистое бюджетное кредитование, нарастающим итогом",
+  "frequency": "irregular (year-to-date cumulative, roughly monthly)",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Built from 11 of 13 listed 'Statistical bulletin' documents (2 skipped). Million KZT, STATE budget (republican plus local), YEAR-TO-DATE CUMULATIVE -- resets each January, so a January value is not a collapse from the previous December. Read from column 5 of sheet 'табл 3'; the existing annual series of the same name reads column 3 of the same sheet. Budget loans issued minus repaid (255,162 mln KZT for January-June 2026). One of the two lines between the revenue-expenditure gap and the headline deficit; not previously in the dataset at any frequency.",
+  "publication_date": null,
+  "last_update_date": "2026-09-02",
+  "download_date": "2026-09-02",
+  "period_start": "2025-03-31",
+  "period_end": "2026-06-30",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

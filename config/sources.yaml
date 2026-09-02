@@ -4754,6 +4754,103 @@ agencies:
           (republican + local combined) -- broader scope than GOV_REVENUE (republican-only, from
           the separate "Dynamics of execution" file). Verified live: 24,917,246.14 (2023) to
           29,871,047.82 (2025) million KZT. fetch_state_budget_revenue.
+      STATE_BUDGET_REVENUE_YTD:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 3"
+        target_row_label: "I. ДОХОДЫ"
+        format: xlsx
+        frequency: irregular (year-to-date cumulative)
+        notes: >
+          2026-09-01. Closes the audit's MONTHLY BUDGET EXECUTION item. The dataset already held
+          STATE_BUDGET_REVENUE / _EXPENDITURE / _DEFICIT and STATE_NON_OIL_DEFICIT from this same
+          sheet, but read from its ANNUAL column -- three points each, the last being 2025. The
+          fiscal position could not be tracked within a year at all.
+          COLUMN LAYOUT of 'табл 3': [Kazakh label, 2023 annual, 2024 annual, 2025 annual,
+          2025 January-to-month, 2026 January-to-month, Russian label]. The existing annual series
+          read column 3; these read COLUMN 5, the current year-to-date figure. Across the thirteen
+          listed bulletin vintages that yields 11 in-year points, 2025-03-31 to 2026-06-30.
+          TWO LAYOUT CONSEQUENCES. First, _fetch_bulletin_row's default value_col of -2 lands on
+          the RUSSIAN LABEL here, not a number, because this sheet puts its labels in the last
+          columns -- an absolute index is used, the same fix 'табл 4' needed. Second, rows are
+          matched on the Russian label at index 6 and on the FULL section text ('I. ДОХОДЫ', not a
+          prefix), because 'III. ЧИСТОЕ БЮДЖЕТНОЕ КРЕДИТОВАНИЕ' and 'VI. НЕНЕФТЯНОЙ ДЕФИЦИТ' would
+          collide with looser matching.
+          _fetch_bulletin_row gained an optional note_override parameter for this: its built-in
+          note says "republican budget only", which is true of every sheet it served until 'табл 3'
+          (the STATE budget -- republican plus local). Existing callers are untouched.
+          YEAR-TO-DATE CUMULATIVE with a January reset: 26,775,070 mln KZT by 2025-11-30, then
+          1,831,700 at 2026-01-31. That is the expected pattern, not a collapse.
+
+      STATE_BUDGET_EXPENDITURE_YTD:
+        status: confirmed
+        sheet: "табл 3"
+        target_row_label: "II. ЗАТРАТЫ"
+        notes: >
+          2026-09-01. Same sheet and column as STATE_BUDGET_REVENUE_YTD. 16,677,641 mln KZT for
+          January-June 2026 against revenue of 15,036,307 -- spending ran 1.64 trillion ahead
+          before net lending and financial-asset operations.
+
+      STATE_BUDGET_DEFICIT_YTD:
+        status: confirmed
+        sheet: "табл 3"
+        target_row_label: "V. ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА"
+        notes: >
+          2026-09-01. Same sheet and column. -2,275,950 mln KZT for January-June 2026.
+          THE BUDGET IDENTITY IS CHECKED, NOT ASSUMED: revenue - expenditure - net lending -
+          balance on financial-asset operations = deficit. All five lines are published
+          independently on this sheet, so this tests the row lookups rather than restating one
+          number. For January-June 2026: 15,036,307.107 - 16,677,640.518 - 255,161.716 -
+          379,454.476 = -2,275,949.603, exactly the stated line V. Verified across ALL 11 dates by
+          cross-checking the six series against each other -- zero discrepancies above 1 mln KZT --
+          and the guard was verified to FIRE when the deficit lookup is pointed at the non-oil
+          deficit row instead. The in-fetcher check runs against the latest bulletin only, which
+          costs one download rather than one per component.
+
+      STATE_NON_OIL_DEFICIT_YTD:
+        status: confirmed
+        sheet: "табл 3"
+        target_row_label: "VI. НЕНЕФТЯНОЙ ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА"
+        notes: >
+          2026-09-01. Same sheet and column. -5,037,288 mln KZT for January-June 2026 against a
+          headline deficit of -2,275,950. The gap between the two is what oil contributed to the
+          budget in that period, and it is the number that shows the underlying fiscal position.
+
+      STATE_NET_BUDGET_LENDING_YTD:
+        status: confirmed
+        sheet: "табл 3"
+        target_row_label: "III. ЧИСТОЕ БЮДЖЕТНОЕ КРЕДИТОВАНИЕ"
+        notes: >
+          2026-09-01. Same sheet and column. Budget loans issued minus repaid, 255,162 mln KZT for
+          January-June 2026. One of the two lines sitting between the revenue-expenditure gap and
+          the headline deficit; not previously in the dataset at any frequency.
+
+      STATE_FINANCIAL_ASSETS_BALANCE_YTD:
+        status: confirmed
+        sheet: "табл 3"
+        target_row_label: "IV. САЛЬДО ПО ОПЕРАЦИЯМ С ФИНАНСОВЫМИ АКТИВАМИ"
+        notes: >
+          2026-09-01. Same sheet and column. Acquisition minus disposal of financial assets,
+          379,454 mln KZT for January-June 2026. The second line between the revenue-expenditure
+          gap and the headline deficit; not previously in the dataset at any frequency.
+
+      EXTERNAL_DEBT_SERVICE (scope note):
+        status: not_connected
+        notes: >
+          2026-09-01. The audit asked for external debt SERVICE. Two NBK forms carry the phrase and
+          both were probed live; neither is usable, for the same two reasons.
+          formId=346 'External debt service schedule' (242 rows, 2 dates) and formId=393
+          'Outstanding Public Sector External Debt and Debt Service Schedule' (544 rows, 6 dates)
+          are FORECASTS, not realised payments: their repayment_type values are literally
+          'Principal (forecast)' and 'Interests  (forecast)'.
+          Neither publishes a TOTAL. Both break the forecast across 11-13 forward repayment windows
+          ('within 1-3 months', 'within 22-24 months', 'after 2 years', 'on demand', 'no
+          information') and 4-5 economic sectors, with no 'Total' member in either dimension.
+          Summing the windows would be an aggregate the source does not publish.
+          Actual debt service paid is not exposed as a separate line; the interest component sits
+          inside BOP_PRIMARY_INCOME, which IS connected. Left not connected rather than fabricated.
+
       STATE_BUDGET_EXPENDITURE:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"

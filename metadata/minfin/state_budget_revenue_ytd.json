@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448",
+  "dataset_id": "gov.kz-statistical-bulletin-listing,sheet=табл 3",
+  "indicator_id": "STATE_BUDGET_REVENUE_YTD",
+  "indicator_name": "State Budget Revenue, year-to-date",
+  "description": "Доходы государственного бюджета, нарастающим итогом",
+  "frequency": "irregular (year-to-date cumulative, roughly monthly)",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Built from 11 of 13 listed 'Statistical bulletin' documents (2 skipped). Million KZT, STATE budget (republican plus local), YEAR-TO-DATE CUMULATIVE -- resets each January, so a January value is not a collapse from the previous December. Read from column 5 of sheet 'табл 3'; the existing annual series of the same name reads column 3 of the same sheet. Total revenue. 15,036,307 mln KZT for January-June 2026 against 14,516,486 for the same period of 2025, both printed side by side on the sheet.",
+  "publication_date": null,
+  "last_update_date": "2026-09-02",
+  "download_date": "2026-09-02",
+  "period_start": "2025-03-31",
+  "period_end": "2026-06-30",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

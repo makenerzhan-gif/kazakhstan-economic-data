@@ -688,7 +688,8 @@ RU_MONTH_TO_NUM = {
 CUSTOMS_DUTIES_ROW_LABEL = "Таможенные платежи"
 
 
-def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str, value_col: int = -2) -> tuple[list[dict], dict]:
+def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str, value_col: int = -2,
+                        note_override: str | None = None) -> tuple[list[dict], dict]:
     """Shared fetcher for any single row in one of the "Statistical bulletin"
     document's sheets, across all listed bulletin vintages. `row_matcher` is
     a callable(row) -> bool that identifies the target row within the sheet
@@ -802,6 +803,13 @@ def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str, value_c
             "unreliable; only each document's own internal period text is trusted."
         ),
     }
+    # The default note says "republican budget only", which is true of every sheet
+    # this helper served until "табл 3" (the STATE budget: republican plus local).
+    # Callers on a different scope pass their own note rather than shipping a
+    # manifest that misstates what the numbers cover.
+    if note_override is not None:
+        manifest["note"] = (f"Built from {len(records)} of {len(bulletins)} listed 'Statistical "
+                            f"bulletin' documents ({len(skipped)} skipped). " + note_override)
     return records, manifest
 
 
@@ -2804,3 +2812,217 @@ def fetch_oil_products_export_duty() -> tuple[list[dict], dict]:
         "OIL_PRODUCTS_EXPORT_DUTY",
         value_col=5,
     )
+
+
+# ---------------------------------------------------------------------------
+# STATE BUDGET EXECUTION, YEAR-TO-DATE -- the audit's "monthly budget
+# execution" item, from sheet "табл 3" of the Statistical Bulletin.
+#
+# The dataset already held STATE_BUDGET_REVENUE / _EXPENDITURE / _DEFICIT and
+# STATE_NON_OIL_DEFICIT from this same sheet, but read from its ANNUAL column
+# -- three points each, the last being 2025. Fiscal position could not be
+# tracked within a year at all.
+#
+# The sheet's column layout is [Kazakh label, 2023 annual, 2024 annual, 2025
+# annual, 2025 Jan-to-month, 2026 Jan-to-month, Russian label]. The existing
+# annual series read column 3. Column 5 is the CURRENT year-to-date figure, and
+# across the thirteen bulletin vintages that gives thirteen in-year points.
+#
+# Two consequences of the layout worth stating:
+#
+# 1. The default value_col of -2 lands on the RUSSIAN LABEL here, not a number,
+#    because this sheet puts its labels in the last columns. An absolute index
+#    is used, the same fix "табл 4" needed.
+# 2. Rows are matched on the RUSSIAN label at index 6, not the Kazakh one at
+#    index 0, and on the full section text -- 'I. ДОХОДЫ' rather than a prefix,
+#    since 'III. ЧИСТОЕ БЮДЖЕТНОЕ КРЕДИТОВАНИЕ' and 'VI. НЕНЕФТЯНОЙ ДЕФИЦИТ'
+#    would collide with looser matching.
+#
+# THE BUDGET IDENTITY IS CHECKED against the latest bulletin on every fetch of
+# the deficit series: revenue - expenditure - net lending - financial assets
+# balance = deficit. All four components and the deficit are published
+# independently on this sheet, so this tests the row lookups rather than
+# restating one number. For Jan-June 2026: 15,036,307.107 - 16,677,640.518 -
+# 255,161.716 - 379,454.476 = -2,275,949.603, exactly the stated line V.
+#
+# These are YEAR-TO-DATE CUMULATIVE and reset each January, like every other
+# bulletin-sourced series here. A January value is not a collapse from the
+# previous December.
+# ---------------------------------------------------------------------------
+BULLETIN_STATE_BUDGET_YTD_COL = 5
+BULLETIN_STATE_BUDGET_LABEL_COL = 6
+STATE_BUDGET_LINES = {
+    "revenue": "I. ДОХОДЫ",
+    "expenditure": "II. ЗАТРАТЫ",
+    "net_lending": "III. ЧИСТОЕ БЮДЖЕТНОЕ КРЕДИТОВАНИЕ",
+    "financial_assets": "IV. САЛЬДО ПО ОПЕРАЦИЯМ С ФИНАНСОВЫМИ АКТИВАМИ",
+    "deficit": "V. ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА",
+    "non_oil_deficit": "VI. НЕНЕФТЯНОЙ ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА",
+}
+STATE_BUDGET_IDENTITY_TOLERANCE = 1.0  # million KZT
+
+
+def _state_budget_row_matcher(label: str):
+    def matcher(row) -> bool:
+        if len(row) <= BULLETIN_STATE_BUDGET_LABEL_COL:
+            return False
+        cell = row[BULLETIN_STATE_BUDGET_LABEL_COL]
+        return isinstance(cell, str) and cell.strip().startswith(label)
+    return matcher
+
+
+def _verify_state_budget_identity(indicator_id: str) -> str:
+    """revenue - expenditure - net lending - financial assets == deficit.
+
+    Checked against the most recent bulletin only, which costs one download
+    rather than one per component. Returns the period checked.
+    """
+    docs = _list_documents(directions=BUDGET_DIRECTION_ID)
+    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    if not bulletins:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: no document title under directions={BUDGET_DIRECTION_ID} contains "
+                f"{STATISTICAL_BULLETIN_TITLE_MARKER!r}",
+                "ACTION REQUIRED: inspect the listing and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    doc = bulletins[0]
+    file_path = doc["full_text"][0]["document"]
+    content = _download(file_path)
+    kind, wb = _open_workbook(content, file_path)
+    sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
+    target_sheet = next((s for s in sheet_names if s.strip() == BULLETIN_STATE_BUDGET_SHEET_NAME), None)
+    if target_sheet is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: the latest bulletin has no sheet {BULLETIN_STATE_BUDGET_SHEET_NAME!r}",
+                f"ACTUAL sheets: {sheet_names[:12]}",
+                "ACTION REQUIRED: inspect a recent bulletin and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    rows = list(_iter_rows(kind, wb, target_sheet))
+    values = {}
+    for key, label in STATE_BUDGET_LINES.items():
+        matcher = _state_budget_row_matcher(label)
+        row = next((r for r in rows if r and matcher(r)), None)
+        if row is None or len(row) <= BULLETIN_STATE_BUDGET_YTD_COL:
+            continue
+        cell = row[BULLETIN_STATE_BUDGET_YTD_COL]
+        if isinstance(cell, (int, float)):
+            values[key] = float(cell)
+
+    needed = ("revenue", "expenditure", "net_lending", "financial_assets", "deficit")
+    missing = [k for k in needed if k not in values]
+    if missing:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: sheet {BULLETIN_STATE_BUDGET_SHEET_NAME!r} of the latest bulletin "
+                f"no longer carries a numeric column {BULLETIN_STATE_BUDGET_YTD_COL} for: "
+                f"{[STATE_BUDGET_LINES[k] for k in missing]}",
+                "EXPECTED: all budget sections present with a year-to-date figure",
+                "ACTION REQUIRED: inspect a recent bulletin and update scripts/fetchers/minfin.py",
+            ])
+        )
+
+    computed = (values["revenue"] - values["expenditure"]
+                - values["net_lending"] - values["financial_assets"])
+    if abs(computed - values["deficit"]) > STATE_BUDGET_IDENTITY_TOLERANCE:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: the state budget identity no longer holds -- revenue "
+                f"{values['revenue']:.3f} - expenditure {values['expenditure']:.3f} - net lending "
+                f"{values['net_lending']:.3f} - financial assets {values['financial_assets']:.3f} "
+                f"= {computed:.3f}, against a stated deficit of {values['deficit']:.3f}",
+                "EXPECTED: all five lines are published independently on this sheet and must "
+                "reconcile; a mismatch means a row lookup has drifted or a section was respecified",
+                "ACTION REQUIRED: inspect a recent bulletin and update scripts/fetchers/minfin.py",
+            ])
+        )
+    return str(doc.get("title") or "")[:80]
+
+
+def _fetch_state_budget_ytd(line: str, indicator_id: str, note: str,
+                            check_identity: bool = False) -> tuple[list[dict], dict]:
+    records, manifest = _fetch_bulletin_row(
+        BULLETIN_STATE_BUDGET_SHEET_NAME,
+        _state_budget_row_matcher(STATE_BUDGET_LINES[line]),
+        indicator_id,
+        value_col=BULLETIN_STATE_BUDGET_YTD_COL,
+        note_override=note)
+    if check_identity:
+        manifest["identity_checked_against"] = _verify_state_budget_identity(indicator_id)
+    return records, manifest
+
+
+_STATE_BUDGET_YTD_COMMON = (
+    "Million KZT, STATE budget (republican plus local), YEAR-TO-DATE CUMULATIVE -- resets each "
+    "January, so a January value is not a collapse from the previous December. Read from column 5 "
+    "of sheet 'табл 3'; the existing annual series of the same name reads column 3 of the same "
+    "sheet. ")
+
+
+def fetch_state_budget_revenue_ytd() -> tuple[list[dict], dict]:
+    """State budget revenue, million KZT, year-to-date."""
+    return _fetch_state_budget_ytd(
+        "revenue", "STATE_BUDGET_REVENUE_YTD",
+        _STATE_BUDGET_YTD_COMMON +
+        "Total revenue. 15,036,307 mln KZT for January-June 2026 against 14,516,486 for the same "
+        "period of 2025, both printed side by side on the sheet.")
+
+
+def fetch_state_budget_expenditure_ytd() -> tuple[list[dict], dict]:
+    """State budget expenditure, million KZT, year-to-date."""
+    return _fetch_state_budget_ytd(
+        "expenditure", "STATE_BUDGET_EXPENDITURE_YTD",
+        _STATE_BUDGET_YTD_COMMON +
+        "Total expenditure ('затраты'). 16,677,641 mln KZT for January-June 2026 -- spending ran "
+        "ahead of revenue by 1.64 trillion before net lending and financial-asset operations.")
+
+
+def fetch_state_budget_deficit_ytd() -> tuple[list[dict], dict]:
+    """State budget deficit, million KZT, year-to-date."""
+    return _fetch_state_budget_ytd(
+        "deficit", "STATE_BUDGET_DEFICIT_YTD",
+        _STATE_BUDGET_YTD_COMMON +
+        "Deficit (negative) or surplus (positive), -2,275,950 mln KZT for January-June 2026. Every "
+        "fetch re-checks the budget identity against the latest bulletin: revenue - expenditure - "
+        "net lending - balance on financial-asset operations must equal this line, and all five "
+        "are published independently on the sheet.",
+        check_identity=True)
+
+
+def fetch_state_non_oil_deficit_ytd() -> tuple[list[dict], dict]:
+    """State budget non-oil deficit, million KZT, year-to-date."""
+    return _fetch_state_budget_ytd(
+        "non_oil_deficit", "STATE_NON_OIL_DEFICIT_YTD",
+        _STATE_BUDGET_YTD_COMMON +
+        "The deficit excluding oil revenue -- -5,037,288 mln KZT for January-June 2026 against a "
+        "headline deficit of -2,275,950. The gap between the two is what oil contributed to the "
+        "budget, and it is the number that shows the underlying fiscal position.")
+
+
+def fetch_state_net_budget_lending_ytd() -> tuple[list[dict], dict]:
+    """Net budget lending, million KZT, year-to-date."""
+    return _fetch_state_budget_ytd(
+        "net_lending", "STATE_NET_BUDGET_LENDING_YTD",
+        _STATE_BUDGET_YTD_COMMON +
+        "Budget loans issued minus repaid (255,162 mln KZT for January-June 2026). One of the two "
+        "lines between the revenue-expenditure gap and the headline deficit; not previously in the "
+        "dataset at any frequency.")
+
+
+def fetch_state_financial_assets_balance_ytd() -> tuple[list[dict], dict]:
+    """Balance on operations with financial assets, million KZT, year-to-date."""
+    return _fetch_state_budget_ytd(
+        "financial_assets", "STATE_FINANCIAL_ASSETS_BALANCE_YTD",
+        _STATE_BUDGET_YTD_COMMON +
+        "Acquisition minus disposal of financial assets (379,454 mln KZT for January-June 2026). "
+        "The second of the two lines between the revenue-expenditure gap and the headline deficit; "
+        "not previously in the dataset at any frequency.")
