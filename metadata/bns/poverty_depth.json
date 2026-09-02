@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/labor-and-income/stat-life/",
+  "dataset_id": "5. Основные показатели бедности/Қазақстан Республикасы/col0",
+  "indicator_id": "POVERTY_DEPTH",
+  "indicator_name": "Poverty Depth",
+  "description": "Глубина бедности",
+  "frequency": "quarterly",
+  "unit": "%",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Percent. How far below the subsistence minimum the poor fall on average, weighted by the population -- 0.9% in Q1 2026. POVERTY_HEADCOUNT counts who is poor; this measures how poor, and the two can move in opposite directions.",
+  "publication_date": null,
+  "last_update_date": "2026-09-02",
+  "download_date": "2026-09-02",
+  "period_start": "2026-03-31",
+  "period_end": "2026-03-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

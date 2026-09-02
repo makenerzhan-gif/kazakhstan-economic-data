@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/labor-and-income/stat-life/",
+  "dataset_id": "5. Основные показатели бедности/Қазақстан Республикасы/col4",
+  "indicator_id": "DECILE_INCOME_RATIO",
+  "indicator_name": "Decile Income Ratio",
+  "description": "Соотношение доходов 10% наиболее и наименее обеспеченных",
+  "frequency": "quarterly",
+  "unit": "ratio",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Ratio of the income of the richest 10% to the poorest 10%. 5.66 in Q1 2026. Reads the same distribution as GINI_COEFFICIENT but at the tails, where the Gini is least sensitive.",
+  "publication_date": null,
+  "last_update_date": "2026-09-02",
+  "download_date": "2026-09-02",
+  "period_start": "2026-03-31",
+  "period_end": "2026-03-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -3253,3 +3253,39 @@ indicators:
     unit: "thousand people"
     category: production
     source_status: confirmed
+
+  - id: GINI_COEFFICIENT
+    name_ru: "Коэффициент Джини"
+    name_en: "Gini Coefficient"
+    agency: bns
+    frequency: quarterly
+    unit: "coefficient (0-1)"
+    category: labor
+    source_status: confirmed
+
+  - id: DECILE_INCOME_RATIO
+    name_ru: "Соотношение доходов 10% наиболее и наименее обеспеченных"
+    name_en: "Decile Income Ratio"
+    agency: bns
+    frequency: quarterly
+    unit: "ratio"
+    category: labor
+    source_status: confirmed
+
+  - id: POVERTY_DEPTH
+    name_ru: "Глубина бедности"
+    name_en: "Poverty Depth"
+    agency: bns
+    frequency: quarterly
+    unit: "%"
+    category: demographic
+    source_status: confirmed
+
+  - id: POVERTY_SEVERITY
+    name_ru: "Острота бедности"
+    name_en: "Poverty Severity"
+    agency: bns
+    frequency: quarterly
+    unit: "%"
+    category: demographic
+    source_status: confirmed

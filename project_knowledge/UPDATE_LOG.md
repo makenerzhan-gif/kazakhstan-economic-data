@@ -2281,3 +2281,43 @@ different concept.
 
 All three become connectable immediately if NBK publishes the `formId=50` row-code legend or adds
 a line-item field to `formId=60`.
+
+## 2026-09-01 — income inequality and poverty depth (364 indicators, 14,124 observations)
+
+- `GINI_COEFFICIENT`, `DECILE_INCOME_RATIO`, `POVERTY_DEPTH`, `POVERTY_SEVERITY` from sheet 5 of
+  the quarterly BNS publication "Основные показатели дифференциации доходов населения".
+  Closes the audit's Gini gap: the dataset held `POVERTY_HEADCOUNT` but nothing about how income
+  is *distributed*, so a falling poverty rate could not be told apart from a widening gap above
+  the poverty line. Gini 0.283 for Q1 2026, decile ratio 5.66.
+- **The country row is labelled in Kazakh** — "Қазақстан Республикасы" — even in the
+  Russian-language file, where every other publication in this project uses "Республика
+  Казахстан" or "Всего". Matching on the Russian form finds nothing.
+- The sheet publishes two Gini coefficients, over decile and quintile groups (0.283 and 0.269).
+  The decile one is the headline; the quintile variant is a methodological alternative of the
+  same concept and was deliberately not added as a second series.
+- Reused `_quarterly_editions` unchanged — the annual-versus-quarterly cover filter built for the
+  labour market applied here without modification.
+
+### My own mistake, caught and fixed before commit
+I registered these four under a new `category: social`, inventing a thirteenth category for four
+indicators. That is the same error as the earlier `demography`/`demographic` slip. Corrected to
+follow the existing convention: the two poverty measures go to `demographic` alongside
+`POVERTY_HEADCOUNT`, the two distribution measures to `labor` alongside `PER_CAPITA_INCOME` and
+`REAL_INCOME_INDEX`. Eleven categories, as before.
+
+### Housing price index — not connected, two independent reasons
+It exists on Taldau (index 703083, "Индексы цен на рынке жилья") but is unusable as a current
+indicator, both verified live:
+1. **Frozen.** Segment metadata reports maxDate 2020-12-30, and a live fetch returned 35 quarterly
+   points from 2012-03-31 to 2020-12-31 and nothing after — six years stale.
+2. **The default segment is the wrong concept.** Taldau's `segment[0]` is "Арендная плата за
+   неблагоустроенное жилье" — rent for unimproved housing, a sub-category, not the headline
+   sale-price index. Same trap already recorded in `TALDAU_PARAM_DISCOVERY` (the ICT index
+   defaults to "Телевизор"). No endpoint for enumerating a dictionary's terms could be found
+   (`GetTermList`, `GetDicTerms`, `GetTermTreeData` all 404), so the right housing category could
+   not be selected without a browser session.
+
+Not in the publication layer either — the route that rescued `OIL_PRODUCTION` and the industry
+series after Taldau failed for them. The prices section publishes transport tariffs,
+socially-significant food prices, export/import price indices and retail food prices; the
+construction section publishes no price tables at all.

@@ -3973,3 +3973,83 @@ def fetch_passengers_carried() -> tuple[list[dict], dict]:
         TRANSPORT_COL_PASSENGERS_CARRIED, "PASSENGERS_CARRIED",
         "Thousand people, YEAR-TO-DATE CUMULATIVE, all modes. The count companion to "
         "PASSENGER_TURNOVER_MONTHLY.", cumulative=True)
+
+
+# ---------------------------------------------------------------------------
+# Income inequality and poverty depth, from the quarterly BNS publication
+# "Основные показатели дифференциации доходов населения" (section
+# "Уровень жизни"), sheet 5 "Основные показатели бедности".
+#
+# Closes the audit's Gini gap. The dataset held POVERTY_HEADCOUNT but no
+# measure of how income is DISTRIBUTED, so a falling poverty rate could not be
+# told apart from a widening gap above the poverty line.
+#
+# Reuses _quarterly_editions unchanged: this publication states its quarter on
+# the cover ("I квартал 2026 года") and its next release 84 days out, so the
+# same annual-versus-quarterly filter built for the labour market applies here
+# without modification.
+#
+# THE COUNTRY ROW IS LABELLED IN KAZAKH -- "Қазақстан Республикасы" -- even in
+# the Russian-language file, where every other publication in this project uses
+# "Республика Казахстан" or "Всего". Matching on the Russian form would find
+# nothing. The remaining rows are the regions, also in Kazakh.
+#
+# Sheet 5 column layout: [глубина бедности %, острота бедности %, коэффициент
+# Джини по 10% группам, коэффициент Джини по 20% группам, соотношение доходов
+# 10% наиболее и 10% наименее обеспеченных].
+#
+# The sheet publishes TWO Gini coefficients, computed over decile and quintile
+# groups (0.283 and 0.269 for Q1 2026). The decile one is taken as the headline
+# because it is the finer partition; the quintile variant is a methodological
+# alternative of the same concept and is deliberately not added as a separate
+# series.
+# ---------------------------------------------------------------------------
+LIVING_PAGE_URL = "https://stat.gov.kz/ru/industries/labor-and-income/stat-life/"
+POVERTY_SHEET_TITLE = "5. Основные показатели бедности"
+POVERTY_COUNTRY_ROW = "Қазақстан Республикасы"
+
+
+def _fetch_poverty_row(value_index: int, indicator_id: str, note: str,
+                       unit: str) -> tuple[list[dict], dict]:
+    return _fetch_quarterly_publication_row(
+        LIVING_PAGE_URL, "5", POVERTY_SHEET_TITLE, POVERTY_COUNTRY_ROW,
+        value_index, False, indicator_id, note, unit)
+
+
+def fetch_gini_coefficient() -> tuple[list[dict], dict]:
+    """Gini coefficient over decile groups, quarterly."""
+    return _fetch_poverty_row(
+        2, "GINI_COEFFICIENT",
+        "Gini coefficient of income, computed over 10% (decile) population groups. 0.283 for "
+        "Q1 2026 -- low by international standards. The dataset held POVERTY_HEADCOUNT but no "
+        "measure of how income is DISTRIBUTED, so a falling poverty rate could not be told apart "
+        "from a widening gap above the poverty line. The source also publishes a quintile-based "
+        "Gini (0.269 for the same quarter); this is the decile one, the finer partition.",
+        "coefficient (0-1)")
+
+
+def fetch_decile_income_ratio() -> tuple[list[dict], dict]:
+    """Ratio of income of the richest to the poorest decile, quarterly."""
+    return _fetch_poverty_row(
+        4, "DECILE_INCOME_RATIO",
+        "Ratio of the income of the richest 10% to the poorest 10%. 5.66 in Q1 2026. Reads the "
+        "same distribution as GINI_COEFFICIENT but at the tails, where the Gini is least "
+        "sensitive.", "ratio")
+
+
+def fetch_poverty_depth() -> tuple[list[dict], dict]:
+    """Poverty depth, percent, quarterly."""
+    return _fetch_poverty_row(
+        0, "POVERTY_DEPTH",
+        "Percent. How far below the subsistence minimum the poor fall on average, weighted by the "
+        "population -- 0.9% in Q1 2026. POVERTY_HEADCOUNT counts who is poor; this measures how "
+        "poor, and the two can move in opposite directions.", "%")
+
+
+def fetch_poverty_severity() -> tuple[list[dict], dict]:
+    """Poverty severity, percent, quarterly."""
+    return _fetch_poverty_row(
+        1, "POVERTY_SEVERITY",
+        "Percent. The squared poverty gap, which weights the deepest shortfalls most heavily -- "
+        "0.2% in Q1 2026. Read with POVERTY_DEPTH and POVERTY_HEADCOUNT as the standard "
+        "Foster-Greer-Thorbecke set.", "%")
