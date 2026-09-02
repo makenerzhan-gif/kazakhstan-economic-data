@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=35",
+  "dataset_id": "formId=35,currency=Euro,type=Volume of trade on KASE for the period (units of currency)",
+  "indicator_id": "KASE_EUR_VOLUME",
+  "indicator_name": "KASE EUR Trading Volume",
+  "description": "Объём торгов EUR/KZT на KASE",
+  "frequency": "monthly",
+  "unit": "EUR",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Euro. Turnover of the EUR/KZT pair on KASE -- the exchange, which is a different market from the over-the-counter FX_OTC_VOLUME_EUR. The two are not alternatives and must not be summed.",
+  "publication_date": null,
+  "last_update_date": "2026-09-02",
+  "download_date": "2026-09-02",
+  "period_start": "2025-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

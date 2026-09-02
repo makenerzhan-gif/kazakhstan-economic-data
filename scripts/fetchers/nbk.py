@@ -3188,3 +3188,86 @@ def fetch_bop_secondary_income() -> tuple[list[dict], dict]:
         "Million USD, quarterly. Current transfers, net -- personal transfers, government "
         "transfers and other current transfers. The smallest of the four components (+98.7 mln "
         "in Q2 2026).")
+
+
+# ---------------------------------------------------------------------------
+# Completing formId=35 "Results of trades on KASE".
+#
+# The form was connected for one cell of a 2x4 grid: USD trading volume. Its
+# `type` dimension has two values (volume, and average end-of-period rate) and
+# its `currency` dimension four (US dollars, Euro, Russian ruble, Chinese
+# renminbi). Seven of the eight combinations were unread.
+#
+# THE CHINESE RENMINBI WAS ABSENT FROM THE DATASET ENTIRELY -- no KASE rate, no
+# OTC rate, no volume, at any frequency. China is one of Kazakhstan's largest
+# trade partners, so a tenge/yuan rate is not an exotic addition; it was simply
+# never taken from a form already being downloaded. That is the fourth time
+# this session a gap turned out to be inside an already-connected source, after
+# oil exports, the CPI comparison dimension, and the state budget's
+# year-to-date column.
+#
+# What is added here is the yuan rate and the three missing KASE volumes. The
+# KASE rates for USD, EUR and RUB are deliberately NOT added: EXCHANGE_RATE
+# (the NBK official rate) and EXCHANGE_RATE_*_OTC (the over-the-counter market)
+# already cover those currencies, and a third near-identical rate series per
+# currency would invite silent substitution in analysis. The yuan is different
+# because nothing covers it at all.
+#
+# Note this form is a DIFFERENT MARKET from the OTC series: KASE is the
+# exchange, FX_OTC_VOLUME_* is over-the-counter. They are not alternatives to
+# each other and should not be summed -- neither is a share of the other's
+# total as published here.
+#
+# Unlike fetch_kase_usd_volume above, which predates it, these go through
+# _fetch_nbk_exact_row: it compares stripped and case-folded, requires every
+# other classification field to be empty, and asserts exactly one row per date.
+# fetch_kase_usd_volume is left as it is rather than refactored -- it is a
+# shipped indicator and the duplication is cheaper than the risk.
+# ---------------------------------------------------------------------------
+KASE_VOLUME_TYPE = "Volume of trade on KASE for the period (units of currency)"
+KASE_RATE_TYPE = "Average exchange rate on KASE end of period (tenge)"
+
+
+def fetch_exchange_rate_cny_kase() -> tuple[list[dict], dict]:
+    """KZT per Chinese yuan, average KASE rate at end of period, monthly."""
+    return _fetch_nbk_exact_row(
+        KASE_FORM_ID, {"type": KASE_RATE_TYPE, "currency": "Chinese renminbi (yuan)"},
+        "EXCHANGE_RATE_CNY_KASE",
+        "Tenge per Chinese yuan, average rate on KASE at end of period. THE YUAN WAS ABSENT FROM "
+        "THIS DATASET ENTIRELY -- no rate and no volume at any frequency -- although China is one "
+        "of Kazakhstan's largest trade partners and the form carrying it was already being "
+        "downloaded for USD volume. This is the KASE exchange rate, a different market from the "
+        "EXCHANGE_RATE_*_OTC series and from the NBK official EXCHANGE_RATE.",
+        "monthly")
+
+
+def fetch_kase_cny_volume() -> tuple[list[dict], dict]:
+    """CNY/KZT trading volume on KASE, yuan, monthly."""
+    return _fetch_nbk_exact_row(
+        KASE_FORM_ID, {"type": KASE_VOLUME_TYPE, "currency": "Chinese renminbi (yuan)"},
+        "KASE_CNY_VOLUME",
+        "Yuan. Turnover of the CNY/KZT pair on KASE. Denominated in units of the foreign currency, "
+        "like KASE_USD_VOLUME, so the four volume series are NOT comparable to each other without "
+        "converting them first.",
+        "monthly")
+
+
+def fetch_kase_eur_volume() -> tuple[list[dict], dict]:
+    """EUR/KZT trading volume on KASE, euro, monthly."""
+    return _fetch_nbk_exact_row(
+        KASE_FORM_ID, {"type": KASE_VOLUME_TYPE, "currency": "Euro"},
+        "KASE_EUR_VOLUME",
+        "Euro. Turnover of the EUR/KZT pair on KASE -- the exchange, which is a different market "
+        "from the over-the-counter FX_OTC_VOLUME_EUR. The two are not alternatives and must not "
+        "be summed.",
+        "monthly")
+
+
+def fetch_kase_rub_volume() -> tuple[list[dict], dict]:
+    """RUB/KZT trading volume on KASE, roubles, monthly."""
+    return _fetch_nbk_exact_row(
+        KASE_FORM_ID, {"type": KASE_VOLUME_TYPE, "currency": "Russian ruble"},
+        "KASE_RUB_VOLUME",
+        "Roubles. Turnover of the RUB/KZT pair on KASE, on the same basis as KASE_USD_VOLUME and "
+        "KASE_EUR_VOLUME.",
+        "monthly")

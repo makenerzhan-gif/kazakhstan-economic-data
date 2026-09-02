@@ -3664,6 +3664,90 @@ agencies:
           turnover across all pairs. Verified live: 20 rows, 2025-01 to 2026-08, all unique
           dates, values $6.7-9.7 billion/month -- plausible for Kazakhstan's FX market.
           fetch_kase_usd_volume.
+      EXCHANGE_RATE_CNY_KASE:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=35"
+        format: json
+        notes: >
+          2026-09-01. formId=35 'Results of trades on KASE',
+          type='Average exchange rate on KASE end of period (tenge)',
+          currency='Chinese renminbi (yuan)'. 20 monthly points, 2025-01 to 2026-08.
+          THE YUAN WAS ABSENT FROM THIS DATASET ENTIRELY -- no KASE rate, no OTC rate, no volume,
+          at any frequency -- although China is one of Kazakhstan's largest trade partners and this
+          form was ALREADY being downloaded for KASE_USD_VOLUME. The form is a 2x4 grid (two types
+          by four currencies) and only one cell was being read. That is the fourth time this
+          session a gap turned out to sit inside an already-connected source, after oil exports,
+          the CPI comparison dimension, and the state budget's year-to-date column.
+          CROSS-CHECK against an independently sourced series: dividing the NBK official
+          EXCHANGE_RATE by this one gives an implied USD/CNY cross-rate of 7.24 at end-January
+          2025, which matches the market rate at that time, drifting smoothly to 6.62 by
+          end-August 2026. Two series from different collection processes agreeing on a third
+          quantity they never mention.
+          SCOPE DECISION: the KASE rates for USD, EUR and RUB are deliberately NOT connected.
+          EXCHANGE_RATE (NBK official) and EXCHANGE_RATE_*_OTC (over-the-counter) already cover
+          those currencies, and a third near-identical rate per currency would invite silent
+          substitution in analysis. The yuan is different because nothing covered it at all.
+
+      KASE_CNY_VOLUME:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=35"
+        format: json
+        notes: >
+          2026-09-01. Same form, type='Volume of trade on KASE for the period (units of currency)',
+          currency='Chinese renminbi (yuan)'. DENOMINATED IN UNITS OF THE FOREIGN CURRENCY, like
+          KASE_USD_VOLUME -- so the four KASE volume series are NOT comparable to each other
+          without converting them first.
+          KASE is the EXCHANGE; FX_OTC_VOLUME_* is the over-the-counter market. Different venues,
+          not alternatives, and neither is a share of the other's total as published here.
+
+      KASE_EUR_VOLUME:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=35"
+        format: json
+        notes: >
+          2026-09-01. Same form and type, currency='Euro'. Completes the form's volume coverage
+          alongside KASE_USD_VOLUME, KASE_CNY_VOLUME and KASE_RUB_VOLUME.
+
+      KASE_RUB_VOLUME:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=35"
+        format: json
+        notes: >
+          2026-09-01. Same form and type, currency='Russian ruble'.
+
+      DEPOSIT_DOLLARIZATION (scope note):
+        status: not_connected
+        notes: >
+          2026-09-01. The audit asked for dollarization ratios. formId=42 'Information on the
+          structure of deposits' is the obvious source and DOES carry the needed dimension --
+          currency, with values 'National currency' and 'Foreign currency', 44 monthly dates
+          2023-01 to 2026-08, in billions of tenge. It is nevertheless UNUSABLE: it returns TEN
+          rows per (date, currency) with TEN DIFFERENT amounts and NO field distinguishing them.
+          Verified live on 2026-08-01, National currency: ten rows, amounts from 1.35 to 19,444.60
+          bln tenge, every classification field identical. The API strips the line-item labels, so
+          which row is the total and which are its parts cannot be known. Taking the largest would
+          be an interpretation the source does not state.
+          This is the THIRD NBK form found with that exact defect, after formId=60 (bank capital
+          and assets) and formId=484 (current account, labels and values swapped). formId=62,
+          which supplies DEPOSITS_TOTAL, has the related problem of carrying row_code with no
+          labels.
+          The dataset does hold household deposits split by currency with proper labels
+          (HOUSEHOLD_DEPOSITS_DEMAND/FIXED_TERM/SAVING, each _KZT and _FX, from formId=261), so a
+          household deposit dollarization ratio can be computed by a user from published
+          components. It is not published here because building it means summing three series into
+          an aggregate the source does not itself publish.
+
+      KASE_STOCK_INDEX (scope note):
+        status: not_connected
+        notes: >
+          2026-09-01. Re-checked this session. formId=35 is the only KASE form in the NBK API and
+          carries FX trading only -- two types (volume, average rate) across four currencies, no
+          equity index. Confirms the earlier finding recorded under GOV_SECURITIES_YIELDS: kase.kz
+          itself responds but exposes no JSON surface, so the index would require scraping
+          server-rendered HTML -- a new agency and a parser tied to page markup. Four guessed API
+          paths (/api/v1/indexes/KASE/, /ru/index_kase/, /api/v1/index/KASE/history/ and the old
+          host) all returned 404, consistent with that. Unchanged decision: not connected.
+
       REMITTANCES_SENT:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data?formId=408"

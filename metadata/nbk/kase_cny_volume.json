@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=35",
+  "dataset_id": "formId=35,currency=Chinese renminbi (yuan),type=Volume of trade on KASE for the period (units of currency)",
+  "indicator_id": "KASE_CNY_VOLUME",
+  "indicator_name": "KASE CNY Trading Volume",
+  "description": "Объём торгов CNY/KZT на KASE",
+  "frequency": "monthly",
+  "unit": "CNY",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Yuan. Turnover of the CNY/KZT pair on KASE. Denominated in units of the foreign currency, like KASE_USD_VOLUME, so the four volume series are NOT comparable to each other without converting them first.",
+  "publication_date": null,
+  "last_update_date": "2026-09-02",
+  "download_date": "2026-09-02",
+  "period_start": "2025-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

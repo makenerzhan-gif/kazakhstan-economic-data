@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=35",
+  "dataset_id": "formId=35,currency=Chinese renminbi (yuan),type=Average exchange rate on KASE end of period (tenge)",
+  "indicator_id": "EXCHANGE_RATE_CNY_KASE",
+  "indicator_name": "KZT/CNY Exchange Rate, KASE",
+  "description": "Курс тенге к юаню на KASE",
+  "frequency": "monthly",
+  "unit": "KZT per CNY",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Tenge per Chinese yuan, average rate on KASE at end of period. THE YUAN WAS ABSENT FROM THIS DATASET ENTIRELY -- no rate and no volume at any frequency -- although China is one of Kazakhstan's largest trade partners and the form carrying it was already being downloaded for USD volume. This is the KASE exchange rate, a different market from the EXCHANGE_RATE_*_OTC series and from the NBK official EXCHANGE_RATE.",
+  "publication_date": null,
+  "last_update_date": "2026-09-02",
+  "download_date": "2026-09-02",
+  "period_start": "2025-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

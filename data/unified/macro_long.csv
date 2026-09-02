@@ -11310,6 +11310,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,monthly,DEPOSIT_RATE,13.163087625892695,%,nbk,2026-09-02,level,2026-09-02
 2025-01-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,14.492312,percent,nbk,2026-09-02,level,2026-09-02
 2025-01-01,KZ,national,daily,EXCHANGE_RATE,525.11,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
+2025-01-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,71.75782608695653,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2025-01-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,544.43809007167,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2025-01-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,5.114756720611198,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2025-01-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,522.0710841921002,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -11402,6 +11403,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,974278.598,"million KZT, year-to-date cumulative",nbk,2026-09-02,level,2026-09-02
 2025-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,52.523934,"diffusion index (0-100, 50=neutral)",nbk,2026-09-02,level,2026-09-02
 2025-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,50.78329,"diffusion index (0-100, 50=neutral)",nbk,2026-09-02,level,2026-09-02
+2025-01-01,KZ,national,monthly,KASE_CNY_VOLUME,897897703.0,CNY,nbk,2026-09-02,level,2026-09-02
+2025-01-01,KZ,national,monthly,KASE_EUR_VOLUME,71652083.0,EUR,nbk,2026-09-02,level,2026-09-02
+2025-01-01,KZ,national,monthly,KASE_RUB_VOLUME,127896431294.0,RUB,nbk,2026-09-02,level,2026-09-02
 2025-01-01,KZ,national,monthly,KASE_USD_VOLUME,5335884168.0,USD,nbk,2026-09-02,level,2026-09-02
 2025-01-01,KZ,national,monthly,LENDING_RATE,18.262499111701732,%,nbk,2026-09-02,level,2026-09-02
 2025-01-01,KZ,national,monthly,LOANS_BUSINESS_FX,4208724.919801,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -11497,6 +11501,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,CPI_YTD,102.6,"index, December of previous year = 100",bns,2026-09-02,level,2026-09-02
 2025-02-01,KZ,national,monthly,DEPOSITS_TOTAL,40402753.40371303,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-02-01,KZ,national,monthly,DEPOSIT_RATE,13.48052435745664,%,nbk,2026-09-02,level,2026-09-02
+2025-02-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,71.13691099476439,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2025-02-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,541.9018633125341,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2025-02-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,5.185200069968684,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2025-02-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,525.3003559885628,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -11515,6 +11520,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_KZT,2691743.59730329,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-02-01,KZ,national,monthly,IMPORTS,4450593.607579998,thousand USD,bns,2026-09-02,level,2026-09-02
 2025-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.7,%,nbk,2026-09-02,level,2026-09-02
+2025-02-01,KZ,national,monthly,KASE_CNY_VOLUME,686634269.0,CNY,nbk,2026-09-02,level,2026-09-02
+2025-02-01,KZ,national,monthly,KASE_EUR_VOLUME,93731688.0,EUR,nbk,2026-09-02,level,2026-09-02
+2025-02-01,KZ,national,monthly,KASE_RUB_VOLUME,101692355792.0,RUB,nbk,2026-09-02,level,2026-09-02
 2025-02-01,KZ,national,monthly,KASE_USD_VOLUME,4532589401.0,USD,nbk,2026-09-02,level,2026-09-02
 2025-02-01,KZ,national,monthly,LENDING_RATE,20.46141258989975,%,nbk,2026-09-02,level,2026-09-02
 2025-02-01,KZ,national,monthly,LOANS_BUSINESS_FX,4034056.749627,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -11594,6 +11602,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,CPI_YTD,103.9,"index, December of previous year = 100",bns,2026-09-02,level,2026-09-02
 2025-03-01,KZ,national,monthly,DEPOSITS_TOTAL,40449630.68109766,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-03-01,KZ,national,monthly,DEPOSIT_RATE,13.322513225554022,%,nbk,2026-09-02,level,2026-09-02
+2025-03-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,68.47575791855203,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2025-03-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,520.103468220573,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2025-03-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,5.3440145900474505,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2025-03-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,506.0150369909184,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -11612,6 +11621,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_KZT,2825458.3596726,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-03-01,KZ,national,monthly,IMPORTS,4709147.182030002,thousand USD,bns,2026-09-02,level,2026-09-02
 2025-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.6,%,nbk,2026-09-02,level,2026-09-02
+2025-03-01,KZ,national,monthly,KASE_CNY_VOLUME,635543238.0,CNY,nbk,2026-09-02,level,2026-09-02
+2025-03-01,KZ,national,monthly,KASE_EUR_VOLUME,149081157.0,EUR,nbk,2026-09-02,level,2026-09-02
+2025-03-01,KZ,national,monthly,KASE_RUB_VOLUME,94207746963.0,RUB,nbk,2026-09-02,level,2026-09-02
 2025-03-01,KZ,national,monthly,KASE_USD_VOLUME,4741743818.0,USD,nbk,2026-09-02,level,2026-09-02
 2025-03-01,KZ,national,monthly,LENDING_RATE,19.542834289126315,%,nbk,2026-09-02,level,2026-09-02
 2025-03-01,KZ,national,monthly,LOANS_BUSINESS_FX,3883045.222707,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -11726,6 +11738,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,monthly,DEPOSIT_RATE,13.556356492025685,%,nbk,2026-09-02,level,2026-09-02
 2025-04-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,14.981159,percent,nbk,2026-09-02,level,2026-09-02
 2025-04-01,KZ,national,daily,EXCHANGE_RATE,504.44,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
+2025-04-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,69.47731958762887,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2025-04-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,540.007947303249,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2025-04-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,5.824242886030211,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2025-04-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,499.846065746839,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -11785,6 +11798,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.2,%,nbk,2026-09-02,level,2026-09-02
 2025-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,52.318841,"diffusion index (0-100, 50=neutral)",nbk,2026-09-02,level,2026-09-02
 2025-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.73913,"diffusion index (0-100, 50=neutral)",nbk,2026-09-02,level,2026-09-02
+2025-04-01,KZ,national,monthly,KASE_CNY_VOLUME,645563100.0,CNY,nbk,2026-09-02,level,2026-09-02
+2025-04-01,KZ,national,monthly,KASE_EUR_VOLUME,46255660.0,EUR,nbk,2026-09-02,level,2026-09-02
+2025-04-01,KZ,national,monthly,KASE_RUB_VOLUME,89963073630.0,RUB,nbk,2026-09-02,level,2026-09-02
 2025-04-01,KZ,national,monthly,KASE_USD_VOLUME,4135038968.0,USD,nbk,2026-09-02,level,2026-09-02
 2025-04-01,KZ,national,monthly,LENDING_RATE,20.491975970408085,%,nbk,2026-09-02,level,2026-09-02
 2025-04-01,KZ,national,monthly,LOANS_BUSINESS_FX,4027397.422839,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -11876,6 +11892,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-05-01,KZ,national,monthly,DEPOSITS_TOTAL,41304095.29203244,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-05-01,KZ,national,monthly,DEPOSIT_RATE,13.990245349733751,%,nbk,2026-09-02,level,2026-09-02
 2025-05-01,KZ,national,daily,EXCHANGE_RATE,512.34,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
+2025-05-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,70.49798076923076,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2025-05-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,587.6398528864216,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2025-05-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.126857868060103,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2025-05-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,518.0022023428643,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -11894,6 +11911,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-05-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_KZT,3147800.26824685,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-05-01,KZ,national,monthly,IMPORTS,5417192.442700004,thousand USD,bns,2026-09-02,level,2026-09-02
 2025-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.1,%,nbk,2026-09-02,level,2026-09-02
+2025-05-01,KZ,national,monthly,KASE_CNY_VOLUME,725361532.0,CNY,nbk,2026-09-02,level,2026-09-02
+2025-05-01,KZ,national,monthly,KASE_EUR_VOLUME,53090876.0,EUR,nbk,2026-09-02,level,2026-09-02
+2025-05-01,KZ,national,monthly,KASE_RUB_VOLUME,81628404531.0,RUB,nbk,2026-09-02,level,2026-09-02
 2025-05-01,KZ,national,monthly,KASE_USD_VOLUME,5421679179.0,USD,nbk,2026-09-02,level,2026-09-02
 2025-05-01,KZ,national,monthly,LENDING_RATE,20.442598884849115,%,nbk,2026-09-02,level,2026-09-02
 2025-05-01,KZ,national,monthly,LOANS_BUSINESS_FX,4131292.6568,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -11958,6 +11978,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,CPI_YTD,107.0,"index, December of previous year = 100",bns,2026-09-02,level,2026-09-02
 2025-06-01,KZ,national,monthly,DEPOSITS_TOTAL,41440760.24471729,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-06-01,KZ,national,monthly,DEPOSIT_RATE,14.240716911730122,%,nbk,2026-09-02,level,2026-09-02
+2025-06-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,71.00583092067168,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2025-06-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,576.7590054176108,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2025-06-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.335541109963258,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2025-06-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,513.6959227985309,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -11976,6 +11997,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_KZT,3278035.21536757,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-06-01,KZ,national,monthly,IMPORTS,5462042.798370001,thousand USD,bns,2026-09-02,level,2026-09-02
 2025-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.6,%,nbk,2026-09-02,level,2026-09-02
+2025-06-01,KZ,national,monthly,KASE_CNY_VOLUME,760677000.0,CNY,nbk,2026-09-02,level,2026-09-02
+2025-06-01,KZ,national,monthly,KASE_EUR_VOLUME,35860459.0,EUR,nbk,2026-09-02,level,2026-09-02
+2025-06-01,KZ,national,monthly,KASE_RUB_VOLUME,101281187845.0,RUB,nbk,2026-09-02,level,2026-09-02
 2025-06-01,KZ,national,monthly,KASE_USD_VOLUME,4524405406.0,USD,nbk,2026-09-02,level,2026-09-02
 2025-06-01,KZ,national,monthly,LENDING_RATE,20.3650349645139,%,nbk,2026-09-02,level,2026-09-02
 2025-06-01,KZ,national,monthly,LOANS_BUSINESS_FX,4243785.936504,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -12091,6 +12115,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,monthly,DEPOSIT_RATE,14.236610166490344,%,nbk,2026-09-02,level,2026-09-02
 2025-07-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,14.807414,percent,nbk,2026-09-02,level,2026-09-02
 2025-07-01,KZ,national,daily,EXCHANGE_RATE,519.64,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
+2025-07-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,72.57734513274336,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2025-07-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,588.4549746797239,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2025-07-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.520177283332588,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2025-07-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,517.0549731955465,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -12150,6 +12175,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.2,%,nbk,2026-09-02,level,2026-09-02
 2025-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.546771,"diffusion index (0-100, 50=neutral)",nbk,2026-09-02,level,2026-09-02
 2025-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,52.896032,"diffusion index (0-100, 50=neutral)",nbk,2026-09-02,level,2026-09-02
+2025-07-01,KZ,national,monthly,KASE_CNY_VOLUME,1388679877.0,CNY,nbk,2026-09-02,level,2026-09-02
+2025-07-01,KZ,national,monthly,KASE_EUR_VOLUME,30062975.0,EUR,nbk,2026-09-02,level,2026-09-02
+2025-07-01,KZ,national,monthly,KASE_RUB_VOLUME,60854321272.0,RUB,nbk,2026-09-02,level,2026-09-02
 2025-07-01,KZ,national,monthly,KASE_USD_VOLUME,4708212401.0,USD,nbk,2026-09-02,level,2026-09-02
 2025-07-01,KZ,national,monthly,LENDING_RATE,19.723792375815165,%,nbk,2026-09-02,level,2026-09-02
 2025-07-01,KZ,national,monthly,LOANS_BUSINESS_FX,4431716.486833,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -12266,6 +12294,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,DEPOSITS_TOTAL,42392405.20091842,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-08-01,KZ,national,monthly,DEPOSIT_RATE,14.300005311689892,%,nbk,2026-09-02,level,2026-09-02
 2025-08-01,KZ,national,daily,EXCHANGE_RATE,540.78,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
+2025-08-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,75.04478613861386,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2025-08-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,622.2988724931653,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2025-08-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.450420480270951,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2025-08-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,533.00332235115,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -12284,6 +12313,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_KZT,3507006.4497313,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-08-01,KZ,national,monthly,IMPORTS,5381113.225620001,thousand USD,bns,2026-09-02,level,2026-09-02
 2025-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.6,%,nbk,2026-09-02,level,2026-09-02
+2025-08-01,KZ,national,monthly,KASE_CNY_VOLUME,1622983645.0,CNY,nbk,2026-09-02,level,2026-09-02
+2025-08-01,KZ,national,monthly,KASE_EUR_VOLUME,54643625.0,EUR,nbk,2026-09-02,level,2026-09-02
+2025-08-01,KZ,national,monthly,KASE_RUB_VOLUME,86184780233.0,RUB,nbk,2026-09-02,level,2026-09-02
 2025-08-01,KZ,national,monthly,KASE_USD_VOLUME,5728745799.0,USD,nbk,2026-09-02,level,2026-09-02
 2025-08-01,KZ,national,monthly,LENDING_RATE,20.840731904522425,%,nbk,2026-09-02,level,2026-09-02
 2025-08-01,KZ,national,monthly,LOANS_BUSINESS_FX,4752187.215659,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -12368,6 +12400,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-01,KZ,national,monthly,DEPOSITS_TOTAL,42795877.34127415,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-09-01,KZ,national,monthly,DEPOSIT_RATE,14.322008493441647,%,nbk,2026-09-02,level,2026-09-02
 2025-09-01,KZ,national,daily,EXCHANGE_RATE,538.54,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
+2025-09-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,75.5608359621451,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2025-09-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,625.0761112116277,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2025-09-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.246783429652082,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2025-09-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,541.5435987439945,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -12386,6 +12419,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_KZT,3668308.22577412,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-09-01,KZ,national,monthly,IMPORTS,5779957.384110003,thousand USD,bns,2026-09-02,level,2026-09-02
 2025-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.2,%,nbk,2026-09-02,level,2026-09-02
+2025-09-01,KZ,national,monthly,KASE_CNY_VOLUME,1882207702.0,CNY,nbk,2026-09-02,level,2026-09-02
+2025-09-01,KZ,national,monthly,KASE_EUR_VOLUME,38050555.0,EUR,nbk,2026-09-02,level,2026-09-02
+2025-09-01,KZ,national,monthly,KASE_RUB_VOLUME,82004785798.0,RUB,nbk,2026-09-02,level,2026-09-02
 2025-09-01,KZ,national,monthly,KASE_USD_VOLUME,4573596095.0,USD,nbk,2026-09-02,level,2026-09-02
 2025-09-01,KZ,national,monthly,LENDING_RATE,20.185123301269897,%,nbk,2026-09-02,level,2026-09-02
 2025-09-01,KZ,national,monthly,LOANS_BUSINESS_FX,4952269.33045,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -12489,6 +12525,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,monthly,DEPOSIT_RATE,14.367424925144395,%,nbk,2026-09-02,level,2026-09-02
 2025-10-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,15.161012,percent,nbk,2026-09-02,level,2026-09-02
 2025-10-01,KZ,national,daily,EXCHANGE_RATE,549.06,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
+2025-10-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,76.92596109942926,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2025-10-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,634.8146538883343,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2025-10-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.464098654426004,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2025-10-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,542.5434197757063,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -12548,6 +12585,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.6,%,nbk,2026-09-02,level,2026-09-02
 2025-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.298447,"diffusion index (0-100, 50=neutral)",nbk,2026-09-02,level,2026-09-02
 2025-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,51.092582,"diffusion index (0-100, 50=neutral)",nbk,2026-09-02,level,2026-09-02
+2025-10-01,KZ,national,monthly,KASE_CNY_VOLUME,1833832741.0,CNY,nbk,2026-09-02,level,2026-09-02
+2025-10-01,KZ,national,monthly,KASE_EUR_VOLUME,46051625.0,EUR,nbk,2026-09-02,level,2026-09-02
+2025-10-01,KZ,national,monthly,KASE_RUB_VOLUME,122145774809.0,RUB,nbk,2026-09-02,level,2026-09-02
 2025-10-01,KZ,national,monthly,KASE_USD_VOLUME,5281301237.0,USD,nbk,2026-09-02,level,2026-09-02
 2025-10-01,KZ,national,monthly,LENDING_RATE,20.358591103516808,%,nbk,2026-09-02,level,2026-09-02
 2025-10-01,KZ,national,monthly,LOANS_BUSINESS_FX,5191126.509013,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -12655,6 +12695,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.3,index,nbk,2026-09-02,level,2026-09-02
 2025-11-01,KZ,national,monthly,DEPOSITS_TOTAL,44679044.7624226,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-11-01,KZ,national,monthly,DEPOSIT_RATE,14.57885683950363,%,nbk,2026-09-02,level,2026-09-02
+2025-11-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,74.59471867007673,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2025-11-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,627.9016200547197,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2025-11-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.620101106848095,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2025-11-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,536.4650996718966,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -12673,6 +12714,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_KZT,3849252.06894159,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-11-01,KZ,national,monthly,IMPORTS,5881063.739770008,thousand USD,bns,2026-09-02,level,2026-09-02
 2025-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.6,%,nbk,2026-09-02,level,2026-09-02
+2025-11-01,KZ,national,monthly,KASE_CNY_VOLUME,1350363063.0,CNY,nbk,2026-09-02,level,2026-09-02
+2025-11-01,KZ,national,monthly,KASE_EUR_VOLUME,38727065.0,EUR,nbk,2026-09-02,level,2026-09-02
+2025-11-01,KZ,national,monthly,KASE_RUB_VOLUME,144895339435.0,RUB,nbk,2026-09-02,level,2026-09-02
 2025-11-01,KZ,national,monthly,KASE_USD_VOLUME,6126620939.0,USD,nbk,2026-09-02,level,2026-09-02
 2025-11-01,KZ,national,monthly,LENDING_RATE,20.759646478475155,%,nbk,2026-09-02,level,2026-09-02
 2025-11-01,KZ,national,monthly,LOANS_BUSINESS_FX,5323320.07453,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -12753,6 +12797,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-01,KZ,national,monthly,DEPOSITS_TOTAL,44457125.20502845,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-12-01,KZ,national,monthly,DEPOSIT_RATE,14.772806559284458,%,nbk,2026-09-02,level,2026-09-02
 2025-12-01,KZ,national,daily,EXCHANGE_RATE,512.53,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
+2025-12-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,72.60645569620253,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2025-12-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,602.7544223131395,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2025-12-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.5509847350697825,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2025-12-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,520.3936171146277,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -12771,6 +12816,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_KZT,3977930.62479415,million KZT,nbk,2026-09-02,level,2026-09-02
 2025-12-01,KZ,national,monthly,IMPORTS,7115016.38019,thousand USD,bns,2026-09-02,level,2026-09-02
 2025-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.7,%,nbk,2026-09-02,level,2026-09-02
+2025-12-01,KZ,national,monthly,KASE_CNY_VOLUME,1697196914.0,CNY,nbk,2026-09-02,level,2026-09-02
+2025-12-01,KZ,national,monthly,KASE_EUR_VOLUME,51285585.0,EUR,nbk,2026-09-02,level,2026-09-02
+2025-12-01,KZ,national,monthly,KASE_RUB_VOLUME,129658560769.0,RUB,nbk,2026-09-02,level,2026-09-02
 2025-12-01,KZ,national,monthly,KASE_USD_VOLUME,5661082434.0,USD,nbk,2026-09-02,level,2026-09-02
 2025-12-01,KZ,national,monthly,LENDING_RATE,19.72501394196683,%,nbk,2026-09-02,level,2026-09-02
 2025-12-01,KZ,national,monthly,LOANS_BUSINESS_FX,5262159.449336,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -12938,6 +12986,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,monthly,DEPOSIT_RATE,14.825187569338517,%,nbk,2026-09-02,level,2026-09-02
 2026-01-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,15.516944,percent,nbk,2026-09-02,level,2026-09-02
 2026-01-01,KZ,national,daily,EXCHANGE_RATE,505.53,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
+2026-01-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,72.1207843137255,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2026-01-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,598.5172108507621,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2026-01-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.494891909018132,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2026-01-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,509.2912478136361,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -13030,6 +13079,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,1065144.803,"million KZT, year-to-date cumulative",nbk,2026-09-02,level,2026-09-02
 2026-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,52.326249,"diffusion index (0-100, 50=neutral)",nbk,2026-09-02,level,2026-09-02
 2026-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,50.603102,"diffusion index (0-100, 50=neutral)",nbk,2026-09-02,level,2026-09-02
+2026-01-01,KZ,national,monthly,KASE_CNY_VOLUME,2762728044.0,CNY,nbk,2026-09-02,level,2026-09-02
+2026-01-01,KZ,national,monthly,KASE_EUR_VOLUME,47887189.0,EUR,nbk,2026-09-02,level,2026-09-02
+2026-01-01,KZ,national,monthly,KASE_RUB_VOLUME,134560334406.0,RUB,nbk,2026-09-02,level,2026-09-02
 2026-01-01,KZ,national,monthly,KASE_USD_VOLUME,7976520014.0,USD,nbk,2026-09-02,level,2026-09-02
 2026-01-01,KZ,national,monthly,LENDING_RATE,19.6221573126321,%,nbk,2026-09-02,level,2026-09-02
 2026-01-01,KZ,national,monthly,LOANS_BUSINESS_FX,5470261.238103,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -13140,6 +13192,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.6,index,nbk,2026-09-02,level,2026-09-02
 2026-02-01,KZ,national,monthly,DEPOSITS_TOTAL,46163277.62036333,million KZT,nbk,2026-09-02,level,2026-09-02
 2026-02-01,KZ,national,monthly,DEPOSIT_RATE,15.336995860868887,%,nbk,2026-09-02,level,2026-09-02
+2026-02-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,72.15193004063345,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2026-02-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,595.8290113516616,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2026-02-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.498552790086442,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2026-02-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,505.41020454209837,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -13160,6 +13213,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.7,%,nbk,2026-09-02,level,2026-09-02
 2026-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,65238.985,"million KZT, year-to-date cumulative",nbk,2026-09-02,level,2026-09-02
 2026-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,82855.48,"million KZT, year-to-date cumulative",nbk,2026-09-02,level,2026-09-02
+2026-02-01,KZ,national,monthly,KASE_CNY_VOLUME,1223591921.0,CNY,nbk,2026-09-02,level,2026-09-02
+2026-02-01,KZ,national,monthly,KASE_EUR_VOLUME,38250408.0,EUR,nbk,2026-09-02,level,2026-09-02
+2026-02-01,KZ,national,monthly,KASE_RUB_VOLUME,62859414953.0,RUB,nbk,2026-09-02,level,2026-09-02
 2026-02-01,KZ,national,monthly,KASE_USD_VOLUME,5890188211.0,USD,nbk,2026-09-02,level,2026-09-02
 2026-02-01,KZ,national,monthly,LENDING_RATE,21.61993369671556,%,nbk,2026-09-02,level,2026-09-02
 2026-02-01,KZ,national,monthly,LOANS_BUSINESS_FX,5440008.031119,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -13239,6 +13295,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.5,index,nbk,2026-09-02,level,2026-09-02
 2026-03-01,KZ,national,monthly,DEPOSITS_TOTAL,46179213.57458906,million KZT,nbk,2026-09-02,level,2026-09-02
 2026-03-01,KZ,national,monthly,DEPOSIT_RATE,15.064249017655019,%,nbk,2026-09-02,level,2026-09-02
+2026-03-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,72.7264496124031,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2026-03-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,586.2227253958952,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2026-03-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.427722712187114,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2026-03-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,494.8069205242384,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -13261,6 +13318,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,159541.754,"million KZT, year-to-date cumulative",nbk,2026-09-02,level,2026-09-02
 2026-03-01,KZ,national,monthly,INVESTMENT_FIXED_CAPITAL,3462954863.0,"thousand KZT, year-to-date cumulative",bns,2026-09-02,level,2026-09-02
 2026-03-01,KZ,national,monthly,INVESTMENT_INDEX,106.4,"index, same period previous year = 100",bns,2026-09-02,level,2026-09-02
+2026-03-01,KZ,national,monthly,KASE_CNY_VOLUME,880046786.0,CNY,nbk,2026-09-02,level,2026-09-02
+2026-03-01,KZ,national,monthly,KASE_EUR_VOLUME,48358684.0,EUR,nbk,2026-09-02,level,2026-09-02
+2026-03-01,KZ,national,monthly,KASE_RUB_VOLUME,81634240432.0,RUB,nbk,2026-09-02,level,2026-09-02
 2026-03-01,KZ,national,monthly,KASE_USD_VOLUME,6783485791.0,USD,nbk,2026-09-02,level,2026-09-02
 2026-03-01,KZ,national,monthly,LENDING_RATE,21.161309683366508,%,nbk,2026-09-02,level,2026-09-02
 2026-03-01,KZ,national,monthly,LOANS_BUSINESS_FX,5391825.160983,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -13413,6 +13473,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,monthly,DEPOSIT_RATE,14.988567766845254,%,nbk,2026-09-02,level,2026-09-02
 2026-04-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,15.786082,percent,nbk,2026-09-02,level,2026-09-02
 2026-04-01,KZ,national,daily,EXCHANGE_RATE,478.77,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
+2026-04-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,69.29591089108911,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2026-04-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,564.675228343441,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2026-04-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,5.9527340049196615,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2026-04-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,486.3595535925357,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -13477,6 +13538,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.450745,"diffusion index (0-100, 50=neutral)",nbk,2026-09-02,level,2026-09-02
 2026-04-01,KZ,national,monthly,INVESTMENT_FIXED_CAPITAL,4936639377.0,"thousand KZT, year-to-date cumulative",bns,2026-09-02,level,2026-09-02
 2026-04-01,KZ,national,monthly,INVESTMENT_INDEX,106.7,"index, same period previous year = 100",bns,2026-09-02,level,2026-09-02
+2026-04-01,KZ,national,monthly,KASE_CNY_VOLUME,1860457507.0,CNY,nbk,2026-09-02,level,2026-09-02
+2026-04-01,KZ,national,monthly,KASE_EUR_VOLUME,33341114.0,EUR,nbk,2026-09-02,level,2026-09-02
+2026-04-01,KZ,national,monthly,KASE_RUB_VOLUME,70943760874.0,RUB,nbk,2026-09-02,level,2026-09-02
 2026-04-01,KZ,national,monthly,KASE_USD_VOLUME,6728781904.0,USD,nbk,2026-09-02,level,2026-09-02
 2026-04-01,KZ,national,monthly,LENDING_RATE,21.324223612134443,%,nbk,2026-09-02,level,2026-09-02
 2026-04-01,KZ,national,monthly,LOANS_BUSINESS_FX,5333218.848275,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -13605,6 +13669,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,DEPOSITS_TOTAL,47139660.7658384,million KZT,nbk,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,DEPOSIT_RATE,14.768729804740355,%,nbk,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,daily,EXCHANGE_RATE,462.91,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,67.70560153815815,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,548.967866352598,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.090553743345362,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,467.72582369546524,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -13631,6 +13696,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,345627.144,"million KZT, year-to-date cumulative",nbk,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,INVESTMENT_FIXED_CAPITAL,6742306077.0,"thousand KZT, year-to-date cumulative",bns,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,INVESTMENT_INDEX,107.0,"index, same period previous year = 100",bns,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,KASE_CNY_VOLUME,3136384254.0,CNY,nbk,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,KASE_EUR_VOLUME,45947303.0,EUR,nbk,2026-09-02,level,2026-09-02
+2026-05-01,KZ,national,monthly,KASE_RUB_VOLUME,116228489175.0,RUB,nbk,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,KASE_USD_VOLUME,8840953580.0,USD,nbk,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,LENDING_RATE,21.50224740718959,%,nbk,2026-09-02,level,2026-09-02
 2026-05-01,KZ,national,monthly,LOANS_BUSINESS_FX,5454222.788815,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -13753,6 +13821,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,DEPOSITS_TOTAL,47910515.95619293,million KZT,nbk,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,DEPOSIT_RATE,14.802963478080027,%,nbk,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,daily,EXCHANGE_RATE,485.95,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,71.76220675944334,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,549.7154520851624,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.513890045985644,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,470.0677628623776,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -13778,6 +13847,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,433074.004,"million KZT, year-to-date cumulative",nbk,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,INVESTMENT_FIXED_CAPITAL,9512104576.0,"thousand KZT, year-to-date cumulative",bns,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,INVESTMENT_INDEX,109.6,"index, same period previous year = 100",bns,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,KASE_CNY_VOLUME,1096257932.0,CNY,nbk,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,KASE_EUR_VOLUME,64535992.0,EUR,nbk,2026-09-02,level,2026-09-02
+2026-06-01,KZ,national,monthly,KASE_RUB_VOLUME,118723086810.0,RUB,nbk,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,KASE_USD_VOLUME,6838572326.0,USD,nbk,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,LENDING_RATE,21.661628124946557,%,nbk,2026-09-02,level,2026-09-02
 2026-06-01,KZ,national,monthly,LOANS_BUSINESS_FX,5916835.608669,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -13919,6 +13991,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,monthly,DEPOSIT_RATE,14.676794197976564,%,nbk,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,16.612489,percent,nbk,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,daily,EXCHANGE_RATE,480.72,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,70.84557080799306,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,561.7262544604678,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.595063789102116,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,486.1631621057338,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -13956,6 +14029,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.236384,"diffusion index (0-100, 50=neutral)",nbk,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,INVESTMENT_FIXED_CAPITAL,11464246834.0,"thousand KZT, year-to-date cumulative",bns,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,INVESTMENT_INDEX,107.7,"index, same period previous year = 100",bns,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,KASE_CNY_VOLUME,2088053344.0,CNY,nbk,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,KASE_EUR_VOLUME,87808800.0,EUR,nbk,2026-09-02,level,2026-09-02
+2026-07-01,KZ,national,monthly,KASE_RUB_VOLUME,152134566442.0,RUB,nbk,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,KASE_USD_VOLUME,8763583632.0,USD,nbk,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,LENDING_RATE,20.268876944481192,%,nbk,2026-09-02,level,2026-09-02
 2026-07-01,KZ,national,monthly,LOANS_BUSINESS_FX,6296439.999176,million KZT,nbk,2026-09-02,level,2026-09-02
@@ -14057,6 +14133,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-31,KZ,national,daily,EXCHANGE_RATE,474.63,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
 2026-07-31,KZ,national,monthly,OIL_PRICE,80.19181818181823,USD per barrel,imf,2026-09-01,level,2026-09-01
 2026-07-31,KZ,national,daily,TONIA,16.21,%,nbk,2026-09-02,level,2026-09-02
+2026-08-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,70.2015921563845,KZT per CNY,nbk,2026-09-02,level,2026-09-02
 2026-08-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,539.1738630563711,KZT per 1 EUR,nbk,2026-09-02,level,2026-09-02
 2026-08-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.04232729279101,KZT per 1 RUB,nbk,2026-09-02,level,2026-09-02
 2026-08-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,471.3541340218493,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
@@ -14068,6 +14145,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,194549.94580431,million KZT,nbk,2026-09-02,level,2026-09-02
 2026-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,387941.481,"million KZT, year-to-date cumulative",nbk,2026-09-02,level,2026-09-02
 2026-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,740362.524,"million KZT, year-to-date cumulative",nbk,2026-09-02,level,2026-09-02
+2026-08-01,KZ,national,monthly,KASE_CNY_VOLUME,1930871767.0,CNY,nbk,2026-09-02,level,2026-09-02
+2026-08-01,KZ,national,monthly,KASE_EUR_VOLUME,77834064.0,EUR,nbk,2026-09-02,level,2026-09-02
+2026-08-01,KZ,national,monthly,KASE_RUB_VOLUME,140762229004.0,RUB,nbk,2026-09-02,level,2026-09-02
 2026-08-01,KZ,national,monthly,KASE_USD_VOLUME,9695953843.0,USD,nbk,2026-09-02,level,2026-09-02
 2026-08-01,KZ,national,monthly,LENDING_RATE,20.84661806814383,%,nbk,2026-09-02,level,2026-09-02
 2026-08-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,66121.40505500538,USD million,nbk,2026-09-02,level,2026-09-02

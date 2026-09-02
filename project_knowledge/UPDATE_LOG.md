@@ -2411,3 +2411,40 @@ literally "Principal (forecast)" and "Interests  (forecast)" — and neither pub
 both break the forecast across 11–13 forward repayment windows and 4–5 sectors with no "Total"
 member in either dimension. Summing the windows would be an aggregate the source does not publish.
 The interest component of actual service sits inside `BOP_PRIMARY_INCOME`, which is connected.
+
+## 2026-09-01 — completing the KASE form; dollarization and the stock index declined (378 indicators)
+
+- `EXCHANGE_RATE_CNY_KASE`, `KASE_CNY_VOLUME`, `KASE_EUR_VOLUME`, `KASE_RUB_VOLUME` from
+  `formId=35` "Results of trades on KASE" — a 2×4 grid of which exactly one cell was being read.
+- **The Chinese yuan was absent from this dataset entirely** — no KASE rate, no OTC rate, no
+  volume, at any frequency — although China is one of Kazakhstan's largest trade partners and this
+  form was already being downloaded every run for `KASE_USD_VOLUME`. Fourth time this session the
+  gap sat inside an already-connected source, after oil exports, the CPI comparison dimension and
+  the state budget's year-to-date column.
+- Cross-check against an independent series: dividing the NBK official `EXCHANGE_RATE` by the KASE
+  yuan rate gives an implied USD/CNY of **7.24 at end-January 2025**, matching the market rate
+  then, drifting smoothly to **6.62 by end-August 2026**. Two series from different collection
+  processes agreeing on a third quantity neither of them mentions.
+- Scope decision: the KASE rates for USD, EUR and RUB were deliberately left out. `EXCHANGE_RATE`
+  (official) and `EXCHANGE_RATE_*_OTC` (over-the-counter) already cover those currencies, and a
+  third near-identical rate per currency invites silent substitution in analysis. The yuan is
+  different because nothing covered it at all.
+
+### Dollarization — not connected
+`formId=42` "Information on the structure of deposits" is the obvious source and does carry the
+needed `currency` dimension (National / Foreign, 44 monthly dates). It is still unusable: it
+returns **ten rows per (date, currency) with ten different amounts and no field distinguishing
+them** — verified live on 2026-08-01, National currency, amounts from 1.35 to 19,444.60 bln tenge
+with every classification field identical. Taking the largest as the total would be an
+interpretation the source does not state. This is the **third** NBK form found with that exact
+defect, after `formId=60` (bank capital and assets) and `formId=484`.
+
+Household deposits split by currency *are* held with proper labels (from `formId=261`), so a user
+can compute a household dollarization ratio from published components. It is not published here
+because building it means summing three series into an aggregate the source does not publish.
+
+### KASE stock index — still not connected
+`formId=35` is the only KASE form in the NBK API and carries FX trading only. Confirms the earlier
+finding: kase.kz responds but exposes no JSON surface, so the index needs HTML scraping — a new
+agency and a parser tied to page markup. Four guessed API paths all returned 404, consistent with
+that.
