@@ -169,6 +169,8 @@ indicators:
     unit: "% change"
     category: international_projection
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "кодлист МВФ: Percent change"
 
   - id: IMF_INFLATION
     name_ru: "IMF WEO: инфляция, Казахстан"
@@ -178,6 +180,8 @@ indicators:
     unit: "% change, average consumer prices"
     category: international_projection
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "кодлист МВФ: Period average, percent change"
 
   - id: IMF_CURRENT_ACCOUNT
     name_ru: "IMF: Счет текущих операций, Казахстан"
@@ -187,6 +191,8 @@ indicators:
     unit: "% of GDP"
     category: international_projection
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "кодлист МВФ: Current account, Percent of GDP"
 
   # --- Second batch (2026-08-30): national-accounts, monetary, and fiscal detail ---
 
@@ -198,6 +204,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "паспорт: отношение к базе (на душу населения)"
 
   - id: GDP_DEFLATOR
     name_ru: "Дефлятор ВВП, методом производства"
@@ -207,6 +215,8 @@ indicators:
     unit: "% change vs previous period"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "паспорт: отношение к базе (отношение вдс отчетного периода к )"
 
   - id: GFCF
     name_ru: "Валовое накопление основного капитала"
@@ -225,6 +235,8 @@ indicators:
     unit: "% change vs previous period"
     category: national_accounts
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "паспорт: сравнение двух периодов (между двумя периодами)"
 
   - id: NET_EXPORTS
     name_ru: "Чистый экспорт"
@@ -234,6 +246,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (разница между экспортом)"
 
   - id: HOUSEHOLD_CONSUMPTION
     name_ru: "Расходы на конечное потребление домашних хозяйств"
@@ -243,6 +257,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (расходы на)"
 
   - id: COMPENSATION_EMPLOYEES
     name_ru: "Оплата труда"
@@ -324,6 +340,8 @@ indicators:
     unit: "% of GDP"
     category: international_projection
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "кодлист МВФ: Net lending/borrowing, Percent of GDP"
 
   - id: IMF_GOV_DEBT
     name_ru: "IMF WEO: валовой долг сектора госуправления, Казахстан"
@@ -333,6 +351,8 @@ indicators:
     unit: "% of GDP"
     category: international_projection
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "кодлист МВФ: Gross debt — запас"
 
   - id: FX_RESERVES
     name_ru: "Валовые международные резервы НБ РК"
@@ -477,6 +497,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (налоги, взимаемые)"
 
   - id: NET_TAXES_ON_PRODUCTS
     name_ru: "Чистые налоги на продукты"
@@ -486,6 +508,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (налоги за вычетом)"
 
   - id: SUBSIDIES
     name_ru: "Субсидии на производство и импорт"
@@ -495,6 +519,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (платежи, которые)"
 
   - id: INTERMEDIATE_CONSUMPTION
     name_ru: "Промежуточное потребление"
@@ -522,6 +548,8 @@ indicators:
     unit: "% change vs previous period"
     category: national_accounts
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "паспорт: сравнение двух периодов (между двумя периодами)"
 
   - id: EXPORT_VOLUME_INDEX
     name_ru: "Индекс физического объема экспорта товаров и услуг"
@@ -531,6 +559,8 @@ indicators:
     unit: "% change vs previous period"
     category: national_accounts
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "паспорт: сравнение двух периодов (между двумя периодами)"
 
   - id: TOTAL_CONSUMPTION_EXPENDITURE
     name_ru: "Расходы на конечное потребление"
@@ -540,6 +570,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (расходы на)"
 
   - id: CAPITAL_CONSUMPTION
     name_ru: "Потребление основного капитала"
@@ -558,6 +590,8 @@ indicators:
     unit: "persons"
     category: international_projection
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "кодлист МВФ: Population — запас"
 
   - id: IMF_NOMINAL_GDP
     name_ru: "IMF WEO: номинальный ВВП, Казахстан (нац. валюта)"
@@ -567,6 +601,8 @@ indicators:
     unit: "KZT"
     category: international_projection
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "кодлист МВФ: GDP, current prices"
 
   - id: IMF_NOMINAL_GDP_USD
     name_ru: "IMF WEO: номинальный ВВП, Казахстан (USD)"
@@ -576,6 +612,8 @@ indicators:
     unit: "USD"
     category: international_projection
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "кодлист МВФ: GDP, current prices, US dollar"
 
   - id: IMF_GDP_PPP
     name_ru: "IMF WEO: ВВП по ППС, Казахстан"
@@ -585,6 +623,8 @@ indicators:
     unit: "international dollars"
     category: international_projection
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "кодлист МВФ: GDP, PPP"
 
   - id: IMF_INVESTMENT_RATIO
     name_ru: "IMF WEO: валовые инвестиции, % ВВП"
@@ -594,6 +634,8 @@ indicators:
     unit: "% of GDP"
     category: international_projection
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "кодлист МВФ: Gross capital formation, Percent of GDP"
 
   - id: IMF_SAVINGS_RATIO
     name_ru: "IMF WEO: валовые национальные сбережения, % ВВП"
@@ -603,6 +645,8 @@ indicators:
     unit: "% of GDP"
     category: international_projection
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "кодлист МВФ: Gross national savings, Percent of GDP"
 
   - id: REER
     name_ru: "Реальный эффективный обменный курс тенге"
@@ -639,6 +683,8 @@ indicators:
     unit: "% of GDP"
     category: international_projection
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "кодлист МВФ: Revenue, Percent of GDP"
 
   - id: IMF_GOV_EXPENDITURE_RATIO
     name_ru: "IMF WEO: расходы сектора госуправления, % ВВП"
@@ -648,6 +694,8 @@ indicators:
     unit: "% of GDP"
     category: international_projection
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "кодлист МВФ: Expenditure, Percent of GDP"
 
   - id: IMF_EXPORT_VOLUME_GROWTH
     name_ru: "IMF WEO: рост физического объема экспорта"
@@ -657,6 +705,8 @@ indicators:
     unit: "% change"
     category: international_projection
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "кодлист МВФ: Percent change"
 
   - id: IMF_IMPORT_VOLUME_GROWTH
     name_ru: "IMF WEO: рост физического объема импорта"
@@ -666,6 +716,8 @@ indicators:
     unit: "% change"
     category: international_projection
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "кодлист МВФ: Percent change"
 
   - id: IMF_CURRENT_ACCOUNT_USD
     name_ru: "IMF WEO: счет текущих операций, Казахстан (USD)"
@@ -675,6 +727,8 @@ indicators:
     unit: "USD"
     category: international_projection
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "кодлист МВФ: balance of current transactions за период"
 
   - id: RETAIL_TRADE
     name_ru: "Объем розничной торговли в стоимостном выражении"
@@ -684,6 +738,8 @@ indicators:
     unit: "KZT"
     category: trade
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (объем перепродаж)"
 
   - id: IMF_GDP_PER_CAPITA_PPP
     name_ru: "IMF WEO: ВВП на душу населения по ППС"
@@ -693,6 +749,8 @@ indicators:
     unit: "international dollars"
     category: international_projection
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "кодлист МВФ: GDP per capita, PPP"
 
   - id: IMF_GDP_WORLD_SHARE_PPP
     name_ru: "IMF WEO: доля Казахстана в мировом ВВП по ППС"
@@ -702,6 +760,8 @@ indicators:
     unit: "% of world total"
     category: international_projection
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "кодлист МВФ: GDP, PPP share of world"
 
   - id: IMF_INFLATION_EOP
     name_ru: "IMF WEO: инфляция на конец периода"
@@ -711,6 +771,8 @@ indicators:
     unit: "% change"
     category: international_projection
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "кодлист МВФ: End-of-period, percent change"
 
   - id: IMF_GOV_NET_DEBT_RATIO
     name_ru: "IMF WEO: чистый долг сектора госуправления, % ВВП"
@@ -720,6 +782,8 @@ indicators:
     unit: "% of GDP"
     category: international_projection
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "кодлист МВФ: Net debt — запас"
 
   - id: IMF_GDP_DEFLATOR_INDEX
     name_ru: "IMF WEO: дефлятор ВВП, индекс"
@@ -738,6 +802,8 @@ indicators:
     unit: "KZT"
     category: international_projection
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "кодлист МВФ: GDP, constant prices"
 
   - id: EXTERNAL_DEBT
     name_ru: "Валовой внешний долг РК"
@@ -783,6 +849,8 @@ indicators:
     unit: "persons"
     category: demographic
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "паспорт: среднее за период (средняя арифметическ)"
 
   - id: REAL_WAGE_INDEX
     name_ru: "Индекс реальной заработной платы"
@@ -792,6 +860,8 @@ indicators:
     unit: "% of prior period"
     category: labor
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "паспорт: сравнение двух периодов (индекс реальной заработной платы о)"
 
   - id: EMPLOYED_TOTAL
     name_ru: "Занятое население"
@@ -900,6 +970,8 @@ indicators:
     unit: "KZT"
     category: international_projection
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "кодлист МВФ: Expenditure, General government"
 
   - id: IMF_GOV_REVENUE
     name_ru: "IMF WEO: доходы сектора госуправления, уровень"
@@ -909,6 +981,8 @@ indicators:
     unit: "KZT"
     category: international_projection
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "кодлист МВФ: Revenue, General government"
 
   - id: IMF_CPI_INDEX
     name_ru: "IMF WEO: индекс потребительских цен, уровень"
@@ -918,6 +992,8 @@ indicators:
     unit: "index"
     category: international_projection
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "кодлист МВФ: Period average"
 
   - id: IMF_GOV_BALANCE_LEVEL
     name_ru: "IMF WEO: сальдо бюджета сектора госуправления, уровень"
@@ -927,6 +1003,8 @@ indicators:
     unit: "KZT"
     category: international_projection
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "кодлист МВФ: Net lending/borrowing за период"
 
   - id: IMF_PPP_EXCHANGE_RATE
     name_ru: "IMF WEO: подразумеваемый курс ППС"
@@ -945,6 +1023,8 @@ indicators:
     unit: "KZT"
     category: trade
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (перепродажа)"
 
   - id: RETAIL_TRADE_VOLUME_INDEX
     name_ru: "Индекс физического объема розничной торговли"
@@ -954,6 +1034,8 @@ indicators:
     unit: "% of prior period"
     category: trade
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "паспорт: сравнение двух периодов (относительный показатель, характер)"
 
   - id: EMISSIONS
     name_ru: "Объем выбросов загрязняющих веществ в атмосферу"
@@ -972,6 +1054,8 @@ indicators:
     unit: "tonne-km"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (объем работы)"
     lifecycle: superseded
     superseded_by: FREIGHT_TURNOVER_MONTHLY
     lifecycle_note: "replacement reconciles with this series: 511 bn t-km annualised against 512.6 bn here"
@@ -984,6 +1068,8 @@ indicators:
     unit: "passenger-km"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (объем работы)"
     lifecycle: superseded_not_spliceable
     superseded_by: PASSENGER_TURNOVER_MONTHLY
     lifecycle_note: "UNEXPLAINED LEVEL BREAK: 266.8 bn p-km here against ~94 bn annualised in the replacement. Freight from the same source reconciles, so this is not a units error. Do not join."
@@ -1050,6 +1136,8 @@ indicators:
     unit: "% of prior period"
     category: labor
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "паспорт: сравнение двух периодов (индекс номинальных денежных доходо)"
 
   - id: TELECOM_SERVICES
     name_ru: "Объем услуг связи"
@@ -1059,6 +1147,8 @@ indicators:
     unit: "KZT"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (поступления)"
 
   - id: DOCTORS_TOTAL
     name_ru: "Списочная численность врачей всех специальностей на конец года"
@@ -1068,6 +1158,8 @@ indicators:
     unit: "persons"
     category: demographic
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "паспорт: среднее за период (в среднем за год)"
 
   - id: IMF_STRUCTURAL_BALANCE
     name_ru: "IMF WEO: структурное сальдо бюджета, % потенциального ВВП"
@@ -1077,6 +1169,8 @@ indicators:
     unit: "% of potential GDP"
     category: international_projection
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "кодлист МВФ: Structural balance, Percent"
 
   - id: IMF_CPI_EOP_INDEX
     name_ru: "IMF WEO: индекс потребительских цен на конец периода, уровень"
@@ -1086,6 +1180,8 @@ indicators:
     unit: "index"
     category: international_projection
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "кодлист МВФ: End-of-period (EoP)"
 
   - id: ENERGY_INTENSITY
     name_ru: "Энергоемкость ВВП"
@@ -1190,6 +1286,8 @@ indicators:
     unit: "KZT"
     category: international_projection
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "кодлист МВФ: GDP per capita"
 
   - id: LOANS_TO_ECONOMY
     name_ru: "Кредиты банковского сектора экономике (общий портфель)"
@@ -1838,6 +1936,8 @@ indicators:
     unit: "% of GDP"
     category: tourism
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "паспорт: отношение к базе (доля )"
 
   - id: TOURISM_EMPLOYMENT
     name_ru: "Численность занятых в отраслях туризма"
@@ -1856,6 +1956,8 @@ indicators:
     unit: "% of total employed"
     category: tourism
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "паспорт: отношение к базе (доля )"
 
   - id: TOURISM_INBOUND_CONSUMPTION
     name_ru: "Потребление, относящееся к въездному туризму"
@@ -1865,6 +1967,8 @@ indicators:
     unit: "KZT"
     category: tourism
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (потребление, относящееся)"
 
   - id: TOURISM_OUTBOUND_CONSUMPTION
     name_ru: "Потребление, относящееся к выездному туризму"
@@ -1874,6 +1978,8 @@ indicators:
     unit: "KZT"
     category: tourism
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (потребление, относящееся)"
 
   - id: TOURISM_INBOUND_TRIPS
     name_ru: "Количество поездок въездного туризма"
@@ -1910,6 +2016,8 @@ indicators:
     unit: "nights"
     category: tourism
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (количество проведенных ночей)"
 
   - id: LIFE_EXPECTANCY
     name_ru: "Ожидаемая продолжительность жизни при рождении"
@@ -1919,6 +2027,8 @@ indicators:
     unit: "months (divide by 12 for years)"
     category: demographic
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "паспорт: среднее за период (в среднем предстояло)"
 
   - id: EXCHANGE_RATE_EUR_OTC
     name_ru: "Средний курс евро на внебиржевом рынке (покупка)"
@@ -2216,6 +2326,8 @@ indicators:
     unit: "per 1000 population"
     category: demographic
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "паспорт: отношение к базе (отношение общего числа родившихся )"
 
   - id: TOTAL_FERTILITY_RATE
     name_ru: "Суммарный коэффициент рождаемости"
@@ -2234,6 +2346,8 @@ indicators:
     unit: "per 1000 population"
     category: demographic
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "паспорт: отношение к базе (отношение общего числа умерших в т)"
 
   - id: INFANT_MORTALITY_RATE
     name_ru: "Коэффициент младенческой смертности"
@@ -2243,6 +2357,8 @@ indicators:
     unit: "per 1000 live births"
     category: demographic
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "паспорт: отношение к базе (отношение числа умерших в возрасте)"
 
   - id: UNDER5_MORTALITY_RATE
     name_ru: "Коэффициент детской смертности до 5 лет"
@@ -2252,6 +2368,8 @@ indicators:
     unit: "per 1000 live births"
     category: demographic
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "паспорт: отношение к базе (отношение числа умерших в возрасте)"
 
   - id: STILLBIRTH_RATE
     name_ru: "Коэффициент мертворождаемости"
@@ -2261,6 +2379,8 @@ indicators:
     unit: "per 1000 births"
     category: demographic
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "паспорт: отношение к базе (отношение числа мертворожденных в )"
 
   - id: INNOVATION_EXPENDITURE
     name_ru: "Затраты на осуществление инноваций"
@@ -2270,6 +2390,8 @@ indicators:
     unit: "KZT"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (затраты на)"
 
   - id: ORGANIZATIONS_USING_COMPUTERS
     name_ru: "Количество организаций, использующих компьютеры"
@@ -2288,6 +2410,8 @@ indicators:
     unit: "units"
     category: production
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "паспорт: запас на дату (находившиеся на балансе)"
 
   - id: COMPUTERS_INTERNET_CONNECTED
     name_ru: "Количество компьютеров, подключённых к интернету"
@@ -2342,6 +2466,8 @@ indicators:
     unit: "per 10000 population"
     category: demographic
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "паспорт: отношение к базе (на 10000 человек)"
     lifecycle: stale_source
     lifecycle_note: "annual health statistics; 2024 not yet published as of 2026-09"
 
@@ -2362,6 +2488,8 @@ indicators:
     unit: "per 10000 population"
     category: demographic
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "паспорт: отношение к базе (на 10000 человек)"
     lifecycle: stale_source
     lifecycle_note: "annual health statistics; 2024 not yet published as of 2026-09"
 
@@ -2373,6 +2501,8 @@ indicators:
     unit: "% of GDP"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "единица: доля/коэффициент"
 
   - id: SMALL_BUSINESS_GDP_SHARE
     name_ru: "Доля малого предпринимательства в ВВП"
@@ -2382,6 +2512,8 @@ indicators:
     unit: "% of GDP"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "единица: доля/коэффициент"
 
   - id: MEDIUM_BUSINESS_GDP_SHARE
     name_ru: "Доля среднего предпринимательства в ВВП"
@@ -2391,6 +2523,8 @@ indicators:
     unit: "% of GDP"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "единица: доля/коэффициент"
 
   - id: SMALL_BUSINESS_VALUE_ADDED
     name_ru: "Валовая добавленная стоимость малого предпринимательства"
@@ -2418,6 +2552,8 @@ indicators:
     unit: "KZT"
     category: investment
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (затраты на)"
 
   - id: ICT_SPECIALISTS
     name_ru: "Численность специалистов в области ИКТ"
@@ -2864,6 +3000,8 @@ indicators:
     unit: "persons"
     category: demographic
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (за отчетный период)"
 
   - id: MIGRATION_DEPARTURES
     name_ru: "Внешняя миграция по всем потокам - выбытие"
@@ -2873,6 +3011,8 @@ indicators:
     unit: "persons"
     category: demographic
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поток за период (за отчетный период)"
 
   - id: LABOR_PRODUCTIVITY
     name_ru: "Производительность труда"
@@ -2882,6 +3022,8 @@ indicators:
     unit: "KZT per employed person"
     category: labor
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "паспорт: отношение к базе (в расчете на единицу)"
 
   - id: GOV_WAGES_EXPENDITURE
     name_ru: "Расходы республиканского бюджета на заработную плату"
