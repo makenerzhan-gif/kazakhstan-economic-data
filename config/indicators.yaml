@@ -1223,6 +1223,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "метаданные формы: 'results of the households survey', Данные=Aggregated — та же природа, что диффузионные индексы"
 
   - id: BUSINESS_ACTIVITY_INDEX
     name_ru: "Индекс деловой активности"
