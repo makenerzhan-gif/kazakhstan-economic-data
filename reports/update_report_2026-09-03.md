@@ -1,6 +1,6 @@
 # Update report — 2026-09-03
 
-Run timestamp: 2026-09-03T12:09:15.181535
+Run timestamp: 2026-09-03T10:15:09.579198
 Unified dataset updated: True
 Tests passed: True
 
@@ -371,7 +371,7 @@ Tests passed: True
 - **nbk/INFLATION_EXPECTATIONS** — fetch+validate+process: ok (downloaded=126, processed=126)
   - warning: Gap of 62 days between 2021-12-01 and 2022-02-01 is outside expected range for frequency=monthly (25-40d).
   - warning: Unexpected jump of 89.6% between 2022-02-01 (9.6) and 2022-03-01 (18.2).
-- **nbk/BUSINESS_ACTIVITY_INDEX** — fetch+validate+process: ok (downloaded=79, processed=79)
+- **nbk/BUSINESS_ACTIVITY_INDEX** — fetch+validate+process: ok (downloaded=80, processed=80)
 - **nbk/NON_CASH_PAYMENTS_SHARE** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **nbk/CAPITAL_ADEQUACY_RATIO** — fetch+validate+process: ok (downloaded=18, processed=18)
 - **nbk/NPL_RATIO** — fetch+validate+process: ok (downloaded=18, processed=18)

@@ -14830,6 +14830,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-30,KZ,national,daily,TONIA,16.15,%,nbk,2026-09-03,level,2026-09-03
 2026-07-31,KZ,national,daily,EXCHANGE_RATE,474.63,KZT per 1 USD,nbk,2026-09-03,level,2026-09-03
 2026-07-31,KZ,national,daily,TONIA,16.21,%,nbk,2026-09-03,level,2026-09-03
+2026-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.6423,index,nbk,2026-09-03,level,2026-09-03
 2026-08-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,70.2015921563845,KZT per CNY,nbk,2026-09-03,level,2026-09-03
 2026-08-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,539.1738630563711,KZT per 1 EUR,nbk,2026-09-03,level,2026-09-03
 2026-08-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.04232729279101,KZT per 1 RUB,nbk,2026-09-03,level,2026-09-03
