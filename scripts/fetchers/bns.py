@@ -46,7 +46,7 @@ def _dd_mm_yyyy_to_iso(s: str) -> str:
     return datetime.strptime(s, "%d.%m.%Y").date().isoformat()
 
 
-def fetch_cpi() -> tuple[list[dict], dict]:
+def _fetch_cpi_cube_legacy() -> tuple[list[dict], dict]:
     """CPI, national, month-over-month index (% of previous period), category 'Товары и услуги'.
 
     Verified live 2026-08-30: file is TSV (tab-separated, despite the "/csv/" URL),
@@ -449,6 +449,12 @@ def fetch_imports() -> tuple[list[dict], dict]:
 
 
 TALDAU_TREE_DATA_URL = "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+# Taldau's periodId is not documented; these three were established by fetching
+# each and reading the returned date keys. periodId=4 gives month-end dates,
+# 5 gives quarter-ends and 7 gives year-ends. The manifest used to report every
+# Taldau series as annual regardless, which was simply wrong for the quarterly
+# and monthly ones.
+TALDAU_PERIOD_FREQUENCY = {"4": "monthly", "5": "quarterly", "7": "annual"}
 GDP_REAL_INDEX_ID = "2979005"  # "индекс физического объема ВВП методом производства"
 NATIONAL_TERM_ID = "741880"    # РЕСПУБЛИКА КАЗАХСТАН
 REGIONS_DIC_ID = "67"          # the classifier dictionary id for the region dimension
@@ -564,8 +570,19 @@ def _fetch_taldau_annual_index(index_id: str, indicator_id: str, note: str,
             continue
         if not 1 <= month <= 12:
             continue
-        last_day = calendar.monthrange(year, month)[1]
-        records.append({"date": f"{year:04d}-{month:02d}-{last_day:02d}", "value": v})
+        # DATE CONVENTION. Quarterly and annual Taldau series are stamped at the
+        # PERIOD END, matching how the rest of this project dates those
+        # frequencies. MONTHLY ones are stamped at the period START, because 113
+        # of the project's 125 monthly series already do -- including CPI before
+        # it moved to Taldau. Emitting month-end here silently broke every join
+        # between CPI and the monthly production, trade and labour series, which
+        # is a worse failure than an inconsistent-looking date because nothing
+        # raises: the join just returns nothing.
+        if period_id == TALDAU_PERIOD_MONTHLY:
+            records.append({"date": f"{year:04d}-{month:02d}-01", "value": v})
+        else:
+            last_day = calendar.monthrange(year, month)[1]
+            records.append({"date": f"{year:04d}-{month:02d}-{last_day:02d}", "value": v})
 
     if not records:
         raise validation.StructuralChangeError(
@@ -579,7 +596,7 @@ def _fetch_taldau_annual_index(index_id: str, indicator_id: str, note: str,
 
     records.sort(key=lambda r: r["date"])
     manifest = {
-        "frequency": "annual",
+        "frequency": TALDAU_PERIOD_FREQUENCY.get(period_id, "annual"),
         "source_url": TALDAU_TREE_DATA_URL,
         "dataset_id": f"taldau-index-{index_id}",
         "note": note,
@@ -2901,8 +2918,11 @@ def _fetch_trade_price_index(sheet_prefix: str, row_marker: str, indicator_id: s
                   {"source_url": url, "element_id": eid,
                    "reporting_month": f"{rep[0]:04d}-{rep[1]:02d}", "sheet": sheet})
         year, month = rep
-        last = MONTH_END_DAYS[month] if month != 2 or year % 4 else 29
-        fetched[f"{year:04d}-{month:02d}-{last:02d}"] = float(target[TRADE_PRICE_YOY_INDEX])
+        # Month START, matching the 120 other monthly series in this project.
+        # These two shipped on month-end dates, which silently prevented every
+        # join against the monthly production, trade and price series -- a join
+        # that returns nothing raises nothing, so it had to be found by looking.
+        fetched[f"{year:04d}-{month:02d}-01"] = float(target[TRADE_PRICE_YOY_INDEX])
 
     merged = {**existing, **fetched}
     if not merged:
@@ -3043,7 +3063,7 @@ def _fetch_cpi_by_comparison(comparison: str, indicator_id: str,
     return records, manifest
 
 
-def fetch_cpi_yoy() -> tuple[list[dict], dict]:
+def _fetch_cpi_yoy_cube_legacy() -> tuple[list[dict], dict]:
     """Consumer price index, same month previous year = 100, monthly."""
     return _fetch_cpi_by_comparison(
         "отчетный период к соответствующему периоду прошлого года", "CPI_YOY",
@@ -3054,7 +3074,7 @@ def fetch_cpi_yoy() -> tuple[list[dict], dict]:
         "consistent with the NBK-sourced ANNUAL_INFLATION series.")
 
 
-def fetch_cpi_ytd() -> tuple[list[dict], dict]:
+def _fetch_cpi_ytd_cube_legacy() -> tuple[list[dict], dict]:
     """Consumer price index against December of the previous year, monthly."""
     return _fetch_cpi_by_comparison(
         "отчетный период к декабрю прошлого года", "CPI_YTD",
@@ -4104,7 +4124,7 @@ def _fetch_core_cpi(index_id: str, basket_term: str, dic_ids: str, comparison_te
     return _fetch_taldau_annual_index(
         index_id, indicator_id, note, measure_id="7",
         terms=f"{CORE_CPI_REGION_TERM},{comparison_term},{basket_term}",
-        dic_ids=dic_ids, period_id="5")
+        dic_ids=dic_ids, period_id=TALDAU_PERIOD_MONTHLY)
 
 
 def fetch_core_cpi_yoy_ex3() -> tuple[list[dict], dict]:
@@ -4120,11 +4140,11 @@ def fetch_core_cpi_yoy_ex3() -> tuple[list[dict], dict]:
         "volatile ones.")
 
 
-def fetch_core_cpi_qoq_ex3() -> tuple[list[dict], dict]:
+def fetch_core_cpi_mom_ex3() -> tuple[list[dict], dict]:
     """Core CPI excluding three components, previous quarter = 100."""
     return _fetch_core_cpi(
         CORE_CPI_EX3_INDEX, CORE_CPI_EX3_BASKET, CORE_CPI_EX3_DICS, CORE_CPI_TERM_QOQ,
-        "CORE_CPI_QOQ_EX3",
+        "CORE_CPI_MOM_EX3",
         "Index, previous quarter = 100 -- 102.6 for Q2 2026. The momentum reading of "
         "CORE_CPI_YOY_EX3: it turns before the year-on-year series does, which is the point of "
         "carrying both.")
@@ -4142,11 +4162,11 @@ def fetch_core_cpi_yoy_ex7() -> tuple[list[dict], dict]:
         "than the rest of the basket.")
 
 
-def fetch_core_cpi_qoq_ex7() -> tuple[list[dict], dict]:
+def fetch_core_cpi_mom_ex7() -> tuple[list[dict], dict]:
     """Core CPI excluding seven components, previous quarter = 100."""
     return _fetch_core_cpi(
         CORE_CPI_EX7_INDEX, CORE_CPI_EX7_BASKET, CORE_CPI_EX7_DICS, CORE_CPI_TERM_QOQ,
-        "CORE_CPI_QOQ_EX7",
+        "CORE_CPI_MOM_EX7",
         "Index, previous quarter = 100 -- 102.6 for Q2 2026. Momentum on the narrower core "
         "basket, the companion to CORE_CPI_YOY_EX7.")
 
@@ -4295,3 +4315,76 @@ def fetch_real_wage_index_education() -> tuple[list[dict], dict]:
         "decline of the six sectors carried here and 6.5 points below the national figure of 99.8. "
         "Public-sector real pay was falling while private services rose; neither is visible in the "
         "aggregate REAL_WAGE_INDEX_QUARTERLY.", "index (same quarter previous year = 100)")
+
+
+# ---------------------------------------------------------------------------
+# CPI MOVED FROM THE OPEN-DATA CUBE TO TALDAU, and core inflation moved from
+# quarterly to monthly. Both because a staleness review asked why CPI stopped
+# at October 2025.
+#
+# THE ANSWER WAS NOT THAT CPI HAD STOPPED. Open-data element 1549 stops at
+# 202510 -- verified by downloading the 6 MB file and reading its own PERIOD
+# column, so this is the source and not the fetcher. But Taldau index 703076
+# carries the SAME series through 2026-07, nine months further.
+#
+# THE SWITCH WAS CHECKED BEFORE IT WAS MADE, not after: across all 178
+# overlapping months, for all three comparison bases, the cube and Taldau agree
+# to within 0.05 index points -- zero discrepancies. Same start (2011-01), same
+# values, nine more months. That is a delivery channel that stopped, not a
+# discontinued series, and it is the difference between repointing a series and
+# replacing one.
+#
+# periodId=4 IS MONTHLY and periodId=5 IS QUARTERLY on Taldau. The core
+# inflation series shipped earlier used periodId=5 and got 14 quarterly points;
+# periodId=4 gives 42 monthly ones over the same span. That was a deficiency in
+# work already shipped, found by this review rather than by a failure.
+#
+# CROSS-CHECK on the new data: CPI year-on-year reads 110.2 for July 2026, and
+# the independently sourced NBK ANNUAL_INFLATION reads 10.2% for August 2026.
+# The three comparison terms all live in dictionary 848, the same one the core
+# baskets use.
+# ---------------------------------------------------------------------------
+CPI_TALDAU_INDEX = "703076"
+CPI_TALDAU_DICS = "67,848,2753"
+CPI_TALDAU_BASKET = "4772381"          # Товары и услуги
+CPI_TERM_MOM = "2695730"               # отчетный период к предыдущему периоду
+CPI_TERM_YTD = "2695731"               # отчетный период к декабрю прошлого года
+CPI_TERM_YOY = "2695732"               # отчетный период к соответствующему периоду прошлого года
+TALDAU_PERIOD_MONTHLY = "4"
+
+
+def _fetch_cpi_taldau(comparison_term: str, indicator_id: str,
+                      note: str) -> tuple[list[dict], dict]:
+    return _fetch_taldau_annual_index(
+        CPI_TALDAU_INDEX, indicator_id, note, measure_id="7",
+        terms=f"{CORE_CPI_REGION_TERM},{comparison_term},{CPI_TALDAU_BASKET}",
+        dic_ids=CPI_TALDAU_DICS, period_id=TALDAU_PERIOD_MONTHLY)
+
+
+def fetch_cpi() -> tuple[list[dict], dict]:
+    """Consumer price index, previous month = 100, monthly."""
+    return _fetch_cpi_taldau(
+        CPI_TERM_MOM, "CPI",
+        "Index, previous month = 100 -- 100.6 for July 2026. MOVED FROM open-data element 1549 to "
+        "Taldau index 703076 on 2026-09-03: the cube stops at October 2025 (confirmed by reading "
+        "its own PERIOD column, so the source and not the fetcher), while Taldau carries the same "
+        "series through July 2026. The two agree to within 0.05 index points across all 178 "
+        "overlapping months, so this is the same series on a channel that is still updating.")
+
+
+def fetch_cpi_yoy() -> tuple[list[dict], dict]:
+    """Consumer price index, same month previous year = 100, monthly."""
+    return _fetch_cpi_taldau(
+        CPI_TERM_YOY, "CPI_YOY",
+        "Index, same month of the previous year = 100 -- 110.2 for July 2026, so 10.2% headline "
+        "inflation. The independently sourced NBK ANNUAL_INFLATION reads 10.2% for August 2026, "
+        "which is the cross-check. Same Taldau move as CPI; see that note for the verification.")
+
+
+def fetch_cpi_ytd() -> tuple[list[dict], dict]:
+    """Consumer price index against December of the previous year, monthly."""
+    return _fetch_cpi_taldau(
+        CPI_TERM_YTD, "CPI_YTD",
+        "Index, December of the previous year = 100 -- 105.7 for July 2026, cumulative inflation "
+        "so far this year and the form Kazakhstan's own commentary usually quotes. Same Taldau "
+        "move as CPI.")

@@ -88,7 +88,7 @@ indicators:
     name_ru: "Базовая ставка НБ РК"
     name_en: "NBK Base Rate"
     agency: nbk
-    frequency: daily
+    frequency: irregular
     unit: "% p.a."
     category: monetary
     source_status: confirmed
@@ -3744,17 +3744,17 @@ indicators:
     name_ru: "Базовая инфляция без трёх составляющих, год к году"
     name_en: "Core CPI ex-3, year-on-year"
     agency: bns
-    frequency: quarterly
-    unit: "index (same quarter previous year = 100)"
+    frequency: monthly
+    unit: "index (same month previous year = 100)"
     category: prices
     source_status: confirmed
 
-  - id: CORE_CPI_QOQ_EX3
-    name_ru: "Базовая инфляция без трёх составляющих, квартал к кварталу"
-    name_en: "Core CPI ex-3, quarter-on-quarter"
+  - id: CORE_CPI_MOM_EX3
+    name_ru: "Базовая инфляция без трёх составляющих, месяц к месяцу"
+    name_en: "Core CPI ex-3, month-on-month"
     agency: bns
-    frequency: quarterly
-    unit: "index (previous quarter = 100)"
+    frequency: monthly
+    unit: "index (previous month = 100)"
     category: prices
     source_status: confirmed
 
@@ -3762,17 +3762,17 @@ indicators:
     name_ru: "Базовая инфляция без семи составляющих, год к году"
     name_en: "Core CPI ex-7, year-on-year"
     agency: bns
-    frequency: quarterly
-    unit: "index (same quarter previous year = 100)"
+    frequency: monthly
+    unit: "index (same month previous year = 100)"
     category: prices
     source_status: confirmed
 
-  - id: CORE_CPI_QOQ_EX7
-    name_ru: "Базовая инфляция без семи составляющих, квартал к кварталу"
-    name_en: "Core CPI ex-7, quarter-on-quarter"
+  - id: CORE_CPI_MOM_EX7
+    name_ru: "Базовая инфляция без семи составляющих, месяц к месяцу"
+    name_en: "Core CPI ex-7, month-on-month"
     agency: bns
-    frequency: quarterly
-    unit: "index (previous quarter = 100)"
+    frequency: monthly
+    unit: "index (previous month = 100)"
     category: prices
     source_status: confirmed
 

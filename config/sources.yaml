@@ -730,7 +730,7 @@ agencies:
           dimension CPI_YOY uses, so selecting the other one is choosing a published comparison
           rather than constructing anything -- and all four combinations were fetched live and
           checked before shipping.
-      CORE_CPI_QOQ_EX3:
+      CORE_CPI_MOM_EX3:
         status: confirmed
         index_id: 55056856
         format: json
@@ -749,7 +749,7 @@ agencies:
           111.9 for Q2 2026, slightly ABOVE the three-component measure (111.4). That ordering is
           informative rather than noise: excluding administered prices RAISES measured inflation,
           which says those prices were rising more slowly than the rest of the basket.
-      CORE_CPI_QOQ_EX7:
+      CORE_CPI_MOM_EX7:
         status: confirmed
         index_id: 55056857
         format: json

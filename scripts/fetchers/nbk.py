@@ -76,7 +76,7 @@ def fetch_base_rate() -> tuple[list[dict], dict]:
     # decisions to 6 distinct levels, discarding every hold.
     records = _merge_accumulated("BASE_RATE", fresh)
     manifest = {
-        "frequency": "daily",
+        "frequency": "irregular",  # MPC decision dates, ~49 days apart -- see the note below
         "source_url": BASE_RATE_URL,
         "dataset_id": "base-rate",
         "note": "event-dated (rate valid until the next MPC decision), not literal daily observations",

@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-55056856",
+  "indicator_id": "CORE_CPI_MOM_EX3",
+  "indicator_name": "Core CPI ex-3, month-on-month",
+  "description": "Базовая инфляция без трёх составляющих, месяц к месяцу",
+  "frequency": "monthly",
+  "unit": "index (previous month = 100)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, previous quarter = 100 -- 102.6 for Q2 2026. The momentum reading of CORE_CPI_YOY_EX3: it turns before the year-on-year series does, which is the point of carrying both.",
+  "publication_date": null,
+  "last_update_date": "2026-09-03",
+  "download_date": "2026-09-03",
+  "period_start": "2023-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

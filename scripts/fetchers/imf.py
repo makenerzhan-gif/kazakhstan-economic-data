@@ -405,11 +405,16 @@ def _parse_sdmx_csv(content: bytes, indicator_id: str, source_url: str) -> list[
             continue
         try:
             if "-M" in period:
+                # Month START. Every monthly series in this project is dated at
+                # the start of its month -- 122 of 125 after a convention sweep
+                # on 2026-09-03 -- so month-end here meant OIL_PRICE and the two
+                # commodity terms-of-trade series could not be joined on date to
+                # any BNS or NBK monthly series. A join that silently returns
+                # nothing raises nothing; this had to be found by looking.
+                # Quarterly and annual stay at period end, which is what the
+                # rest of the project uses for those frequencies.
                 y, m = period.split("-M")
-                year, month = int(y), int(m)
-                day = MONTH_END[month]
-                if month == 2 and (year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)):
-                    day = 29
+                year, month, day = int(y), int(m), 1
             elif "-Q" in period:
                 y, q = period.split("-Q")
                 year, month = int(y), int(q) * 3

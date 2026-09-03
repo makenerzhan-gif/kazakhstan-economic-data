@@ -2784,3 +2784,55 @@ reliable access path, so absence found by paging that endpoint is not evidence o
 the scope note now says so.
 
 Verified live: 145/145 BNS fetchers OK, 29/29 tests passing.
+
+## 2026-09-03 — CPI moved to a live channel; a date-convention defect found and fixed
+
+A request to delete the 18 "stale" indicators turned into a review, because the flag was mine and
+deserved checking before anything was deleted. Three of the eighteen were false positives and the
+review found three defects in work shipped earlier the same day.
+
+### CPI had not stopped; its delivery channel had
+Open-data element 1549 ends at October 2025 — confirmed by downloading the 6 MB file and reading
+its own `PERIOD` column, so the source and not the fetcher. Taldau index 703076 carries the same
+series through July 2026.
+
+**The switch was checked before it was made.** Across all 178 overlapping months, for all three
+comparison bases, cube and Taldau agree to within 0.05 index points — zero discrepancies, same
+start (2011-01), nine more months. That is a channel that stopped, not a series that ended, and it
+is the difference between repointing and replacing. `CPI`, `CPI_YOY` and `CPI_YTD` now come from
+Taldau; 178 → 187 points each.
+
+### Three defects in my own recent work
+1. **Core inflation was connected quarterly when monthly exists.** `periodId=4` is monthly and `5`
+   is quarterly; I used 5 and got 14 points where 42 were available. Fixed, and
+   `CORE_CPI_QOQ_*` renamed to `CORE_CPI_MOM_*` — "quarter-on-quarter" had become wrong.
+2. **The Taldau manifest reported `annual` for every series** regardless of period, which was
+   simply false for the quarterly and monthly ones. Frequency is now derived from `period_id`.
+3. **`BASE_RATE` was declared daily** while its own fetcher note said "event-dated … not literal
+   daily observations". Actual spacing is 49 days — MPC meetings. Corrected to `irregular` rather
+   than loosening the staleness threshold to fit a wrong label.
+
+### The date-convention defect, and how far it reached
+Moving CPI to Taldau changed its dates from month-**start** to month-**end**, because the Taldau
+helper stamped every frequency at period end. That silently broke every join between CPI and the
+monthly production, trade and labour series. **A join that returns nothing raises nothing** — it
+had to be found by looking, and it was found by counting conventions rather than by any test.
+
+Checking the rest showed the problem was wider than the change that exposed it: 113 of 125 monthly
+series used month-start, 12 used month-end, and five of those twelve were mine from earlier in the
+session (the two trade price indices) or the IMF module's (`OIL_PRICE` and two commodity
+terms-of-trade series). All monthly series are now on month-start — **125 of 125**. `CPI_YOY` and
+`OIL_PRICE` now share 187 dates; they shared none.
+
+Quarterly and annual carry the same split (82 start / 40 end, and 35 start / 120 end). That is
+pre-existing and was **not** touched — changing 75 series on a convention question is the user's
+call, not a side effect of a CPI fix.
+
+### Where the staleness count landed
+18 → 14. The remaining fourteen are the cases where the replacement is genuinely shorter than the
+original, and the recommendation is unchanged: mark them superseded rather than delete. Deleting
+`IND_PROD` (15 points from 2009) to keep `INDUSTRIAL_PRODUCTION_INDEX` (4 points from 2026) trades
+years of history for months, and the ARDFM banking series explicitly cannot be spliced onto the
+NBK ones they replace.
+
+Verified live: 430/430 indicators OK in a clean full run, 29/29 tests.
