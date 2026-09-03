@@ -1369,6 +1369,8 @@ indicators:
     unit: "thousand toe"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "Методика формирования ТЭБ (stat.gov.kz/methodology/14): 'Общее первичное потребление энергии и ее эквивалентов = статья 1.1 (производство) + статья 1.2 (импорт) - статья 1.3 (экспорт) - статья 1.4 (бункеровка) - статья 1.5 (изменение запасов)' -- тождество из потоков за период, та же конструкция, что CURRENT_ACCOUNT_BALANCE"
 
   - id: ELECTRICITY_PRODUCTION
     name_ru: "Производство электроэнергии"
@@ -1378,6 +1380,8 @@ indicators:
     unit: "kWh"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "Методика формирования ТЭБ (stat.gov.kz/methodology/14): 'Производство (добыча) определяется как улавливание, извлечение или изготовление... продукта' -- поток; входит статьёй 1.1 баланса наравне с импортом/экспортом, отдельно от статьи 1.5 'Запасы на начало/конец года'"
 
   - id: NON_CASH_PAYMENTS_SHARE
     name_ru: "Доля безналичных платежей населения"
@@ -2737,6 +2741,8 @@ indicators:
     unit: "children per woman"
     category: demographic
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "Методика расчета показателей рождаемости (stat.gov.kz/methodology/37): суммарный коэффициент 'характеризует среднее число детей, рожденных одной женщиной... при условии сохранения интенсивности повозрастной рождаемости за расчетный год' -- явное среднее по данным одного года"
 
   - id: CRUDE_DEATH_RATE
     name_ru: "Умерших на 1000 человек населения"
@@ -3484,6 +3490,8 @@ indicators:
     unit: "persons"
     category: demographic
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "Методика оценки бедности (stat.gov.kz/methodology/36): на основе ВОДХ (выборочное обследование домашних хозяйств по оценке уровня жизни); 'Уровень бедности рассчитывается на квартальной и годовой основе' -- та же выборочная база, что у GINI_COEFFICIENT/POVERTY_DEPTH"
 
   - id: MIGRATION_ARRIVALS
     name_ru: "Внешняя миграция по всем потокам - прибытие"

@@ -2918,3 +2918,69 @@ Verified live: 430/430 in a clean full run, zero convention warnings, 29/29 test
 ### Still only in prose
 The comparison basis of the 21 index series — year-on-year, month-on-month, against December —
 lives in the note and the unit string. That is the next field of the same kind.
+
+## 2026-09-03 — observation type reaches 421 of 430, and comparison basis is done
+
+Eight batches between this line and the last one filled `observation_type` from 92 to 417: IMF's
+own WEO/CTOT codelists, Taldau passports read indicator by indicator, NBK's pinned `type` fields
+and form names, Minfin, the rest of BNS, the rest of NBK, the rest of IMF. Same rule throughout —
+nothing from a name alone, everything cited to the field or document that said so.
+
+That pass caught its own long-standing mistake. `BUSINESS_ACTIVITY_INDEX` had been filed as
+`comparison_index` since the very first NBK batch, months ago, on the strength of a generic `^index`
+unit rule. Structuring `comparison_basis` for it meant checking what it was based *against* — and
+the live values cluster 36.4 to 51.7 around 50. That is a diffusion index, not a rebased series; a
+real `comparison_index` sits at exactly 100 at its base date, the way `NEER`/`REER` sit at exactly
+100.0 on 2016-12-01 and `IMF_GDP_DEFLATOR_INDEX` sits at exactly 100.0 in 2005. Corrected to
+`period_average`. Same failure mode as `COMPUTERS_IN_ORGANIZATIONS` and `EXCHANGE_RATE_CNY_KASE`
+earlier in the project: a rule matching the container — the unit string, the form name — instead of
+the quantity's own behaviour. Third time it's been caught this way; worth naming so a fourth time is
+harder to miss. `comparison_basis` itself came out clean: 44 of 44 `comparison_index` series now
+carry `yoy`, `mom`, `ytd_base`, or `fixed_base` (with the base period recorded — June 2012 for the
+IMF terms-of-trade series, December 2016 for NEER/REER, 2005 for the deflator).
+
+### The last 13, and where new sources actually moved the needle
+Thirteen indicators had no source text specific enough to classify: 12 from BNS, one from IMF
+(`IMF_PPP_EXCHANGE_RATE` — checked against every structural column the SDMX dataflow carries,
+including `STATISTICAL_MEASURES`, down to a `RT` code that decodes only as generic "Rate", the same
+dead end already hit for `IMF_UNEMPLOYMENT`'s `LUR`). Told to close them, the right move was not to
+re-read what had already come up empty — it was to find sources not yet checked. `stat.gov.kz` turns
+out to publish its approved methodologies at `/ru/methodology/`, indexed by topic, each document
+carrying an approval date and registration number. That was new this session.
+
+Four indicators resolved:
+
+- **`POVERTY_HEADCOUNT`** — the poverty methodology document: built on ВОДХ, the household
+  living-standards sample survey, and "Уровень бедности рассчитывается на квартальной и годовой
+  основе". Same survey underlies `GINI_COEFFICIENT` and `POVERTY_DEPTH`, already `period_average`.
+- **`TOTAL_FERTILITY_RATE`** — the fertility-indicators methodology: the total fertility rate
+  "характеризует среднее число детей, рожденных одной женщиной... при условии сохранения
+  интенсивности повозрастной рождаемости за расчетный год" — an explicit average, built from one
+  calendar year's age-specific rates.
+- **`ELECTRICITY_PRODUCTION`** and **`ENERGY_CONSUMPTION`** — the fuel-energy balance methodology
+  states the balance as an identity: "Общее первичное потребление энергии и ее эквивалентов =
+  статья 1.1 (производство) + статья 1.2 (импорт) – статья 1.3 (экспорт) – статья 1.4 (бункеровка)
+  – статья 1.5 (изменение запасов)". Production and consumption are both terms in a sum of period
+  flows — the same construction already used for `CURRENT_ACCOUNT_BALANCE` — and the balance keeps
+  stocks (запасы, "at start/end of year") as a separate, explicitly labelled line, not mixed in.
+
+Nine stayed unclassified, now confirmed rather than merely unchecked:
+
+- `ORGANIZATIONS_USING_COMPUTERS`, `COMPUTERS_INTERNET_CONNECTED`, `WORKERS_USING_COMPUTERS`,
+  `WORKERS_USING_INTERNET` all trace to the same BNS annual ICT-in-organizations survey (the English
+  name "Workers Using a Computer **at Work**" rules out the household survey as the source). The
+  methodology document says only "проводится на годовой основе выборочным методом" — that is
+  cadence, how often the survey runs, not a reference-period statement of what the number represents.
+  The household side of the same document *does* carry real reference-period language ("последним
+  трем месяцам, предшествующих интервью"), which is exactly why it would have been a mistake to
+  borrow it here — it describes a different survey.
+- `ICT_SPECIALISTS` and `ECOMMERCE_SERVICES_VALUE` — the same ICT methodology never uses
+  "специалист" or "работник", and never describes an own-site sales concept; zero occurrences,
+  not weak ones.
+- `TOURISM_EMPLOYMENT` — both tourism methodology documents read in full, including one approved
+  31.07.2026 that BNS has not used before this archive search (mobile-positioning-based visitor
+  counting). Neither touches employment; the newer one is entirely about identifying trips from
+  telecom signalling data.
+- `HOSPITAL_BEDS` — the methodology archive has no health or medicine section at all.
+
+**421 of 430.** Verified: 29/29 tests, BNS live fetch clean.
