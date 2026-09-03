@@ -2919,27 +2919,219 @@ Verified live: 430/430 in a clean full run, zero convention warnings, 29/29 test
 The comparison basis of the 21 index series — year-on-year, month-on-month, against December —
 lives in the note and the unit string. That is the next field of the same kind.
 
-## 2026-09-03 — observation type reaches 421 of 430, and comparison basis is done
+## 2026-09-03 — observation type from source metadata, not prose (163 of 430)
 
-Eight batches between this line and the last one filled `observation_type` from 92 to 417: IMF's
-own WEO/CTOT codelists, Taldau passports read indicator by indicator, NBK's pinned `type` fields
-and form names, Minfin, the rest of BNS, the rest of NBK, the rest of IMF. Same rule throughout —
-nothing from a name alone, everything cited to the field or document that said so.
+Continues the pass begun above, and changes how it's done: everything from here on cites the source
+statement it came from, not a note written earlier in the project.
 
-That pass caught its own long-standing mistake. `BUSINESS_ACTIVITY_INDEX` had been filed as
-`comparison_index` since the very first NBK batch, months ago, on the strength of a generic `^index`
-unit rule. Structuring `comparison_basis` for it meant checking what it was based *against* — and
-the live values cluster 36.4 to 51.7 around 50. That is a diffusion index, not a rebased series; a
-real `comparison_index` sits at exactly 100 at its base date, the way `NEER`/`REER` sit at exactly
-100.0 on 2016-12-01 and `IMF_GDP_DEFLATOR_INDEX` sits at exactly 100.0 in 2005. Corrected to
-`period_average`. Same failure mode as `COMPUTERS_IN_ORGANIZATIONS` and `EXCHANGE_RATE_CNY_KASE`
-earlier in the project: a rule matching the container — the unit string, the form name — instead of
-the quantity's own behaviour. Third time it's been caught this way; worth naming so a fourth time is
-harder to miss. `comparison_basis` itself came out clean: 44 of 44 `comparison_index` series now
-carry `yoy`, `mom`, `ytd_base`, or `fixed_base` (with the base period recorded — June 2012 for the
-IMF terms-of-trade series, December 2016 for NEER/REER, 2005 for the deflator).
+The IMF batch (28) comes from the official WEO codelist, fetched from the SDMX structure endpoint.
+The names state the answer outright: `PCPIE` is "End-of-period", `PCPI` is "Period average",
+`NGDP_RPCH` is "Percent change", "Gross debt" is a stock. Three indicators whose names don't say —
+the GDP deflator, the PPP conversion rate, the unemployment rate — are left unclassified rather than
+assumed.
 
-### The last 13, and where new sources actually moved the needle
+The Taldau batch (43) comes from the methodological passport each index publishes, carrying
+"Определение показателя" and "Методика расчета". Classifying from those is reading the source; a
+first attempt classified from prose notes written earlier in the project and got roughly thirty of
+fifty-one wrong.
+
+The passport rules needed two rounds. The first ordering sent `COMPUTERS_IN_ORGANIZATIONS` to
+`period_total` on the phrase "за отчетный период", when its own definition says the computers are
+those "находившиеся на балансе" — a stock; `DOCTORS_TOTAL` the same way, on "в среднем за год". That
+phrase describes the reporting period, not the nature of the quantity, so the specific wordings run
+first now.
+
+A fifth type, `period_ratio`, is added for series like "% of GDP" and rates per 1000 population —
+neither summable across periods nor a stock at a date. 23 series are that shape.
+
+**163 of 430.** 267 remain, concentrated in NBK (130) and Minfin (79). 29/29 tests.
+
+## 2026-09-03 — NBK observation types from pinned fields and form names (251 of 430)
+
+Two kinds of evidence for NBK. The strongest is the value the fetcher already pins: several forms
+state the answer outright — "Stocks (mln. tenge)", "Balance (mln. tenge)", "mln. of KZT, end of
+period", "Transactions volume", "Average rate - bid". Where that's absent, the form name from the
+API's own category tree settles it where the concept is unambiguous: external debt and the
+international investment position are positions by definition; KASE trade results and remittance
+amounts are turnover.
+
+Three corrections, each the same mistake in a different guise — a rule matching the container rather
+than the quantity:
+
+`EXCHANGE_RATE_CNY_KASE` nearly went to `period_total` because its form is "Results of trades on
+KASE", which carries both turnover and rates. The unit is now checked before the form name, so a
+rate can never again be classified from its form's title.
+
+Reading only the `type` field missed the reserve series, whose decisive phrase sits in `code`:
+"Reserve assets + Foreign assets of the National Fund, end of period". All pinned fields are searched
+now, not just `type`.
+
+`RESERVES_IMPORT_COVER` and `RESERVES_AND_NF_IMPORT_COVER` are the same concept on different forms
+and were landing on different types. Import cover is a stock expressed in months, so the unit decides
+it now, not the form.
+
+**251 of 430.** 179 remain: Minfin 79, BNS 52, NBK the rest. 29/29 tests.
+
+## 2026-09-03 — Minfin observation types (330 of 430)
+
+Three kinds of evidence already sitting in the repository — none of it a guess about what a name
+implies.
+
+Twenty-three settled by the unit string itself, already reading "million KZT, year-to-date
+cumulative" or "million KZT, flow during the quarter" from when the sheet's column header was first
+read. Twelve debt series settled by notes recorded at the time of reading the source, stating
+point-in-time outright — `GOV_ACCOUNTS_PAYABLE` and `GOV_ACCOUNTS_RECEIVABLE` follow from their own
+notes: creditor and debtor arrears are balances, not flows.
+
+The remaining budget series were settled empirically. `GOV_EXPENDITURE`, `TAX_REVENUE` and their
+siblings hold exactly one observation per calendar year at a plausible annual magnitude — 25 trillion
+KZT of expenditure in 2025 — so they're annual totals, not year-to-date figures that happen to be
+sampled in December. The National Fund portfolio series are quarter-end holdings from a sheet dumped
+earlier that carries only portfolio composition.
+
+**330 of 430.** 100 remain: BNS 52, NBK 42, IMF 6. 29/29 tests.
+
+## 2026-09-03 — BNS observation types (370 of 430)
+
+Two sources: the Taldau passport already fetched during the earlier pass — most of these indicators
+were in that pass's skip list because they didn't match its rules, not because evidence was missing
+— and the fetch-investigation notes already in `sources.yaml`.
+
+Explicit period wording carried most of it. `GRADUATES_HIRED`: hired "в отчетном периоде".
+`CAPITAL_CONSUMPTION`: value decline "в течение отчетного периода". `EMPLOYED_TOTAL`: LFS
+reference-week methodology, "в течение определенного короткого периода, равного одной неделе" — the
+same evidentiary basis already used for the quarterly labour-survey indicators. The System of
+National Accounts family (`GFCF`, `GROSS_OUTPUT`, `GROSS_ACCUMULATION`, `INTERMEDIATE_CONSUMPTION`,
+`COMPENSATION_EMPLOYEES`, `AGRICULTURE_OUTPUT`, business and tourism value-added) are
+production-account flow concepts by SNA definition — output and value added are inherently measured
+over an accounting period, not stocks at a date.
+
+`GDP_NOMINAL` stands out: its `json_cube` response carries periods literally named "Январь-Март",
+"Январь-Июнь" — evidence of year-to-date cumulation visible in the response structure itself, not in
+a prose note.
+
+Twelve indicators were left deliberately unclassified here for the first time — the same twelve that
+"добей последние 13" would later chase down to nine. Their processing-method field says only "данные
+выборочной совокупности распространены на генеральную совокупность" (sample data scaled to the
+population), which describes how the estimate was produced, not when it applies. Not evidence of
+stock vs. flow vs. average, so no rule fires: `HOSPITAL_BEDS`, `ICT_SPECIALISTS`,
+`ORGANIZATIONS_USING_COMPUTERS`, `COMPUTERS_INTERNET_CONNECTED`, `WORKERS_USING_COMPUTERS`,
+`WORKERS_USING_INTERNET`, `ELECTRICITY_PRODUCTION`, `ENERGY_CONSUMPTION`, `ECOMMERCE_SERVICES_VALUE`,
+`TOTAL_FERTILITY_RATE`, `POVERTY_HEADCOUNT`, `TOURISM_EMPLOYMENT`.
+
+**370 of 430.** 60 remain: NBK 42, BNS 12, IMF 6. 145/145 BNS fetchers live, 29/29 tests.
+
+## 2026-09-03 — final NBK batch (411 of 430)
+
+41 of the last 42 NBK indicators, closing all but one gap in the agency. Three kinds of evidence not
+used in earlier batches.
+
+A verified identity as evidence: `CURRENT_ACCOUNT_BALANCE` is `period_total` not from its form or
+unit, but because this session had already proved goods + services + primary + secondary income (all
+`period_total` flows) sum to it within 0.01 across 105 quarters. If the parts are flows, the sum is a
+flow.
+
+A form name stating its own construction, quoted rather than inferred: `FDI_NET_INFLOW`'s form is
+titled "Direct investments ... flows for the period". `DEPOSIT_RATE` and `LENDING_RATE` come from
+forms literally named "Средневзвешенные ставки" (weighted-average rates). `ENTERPRISE_DEBT_BURDEN`
+and `CAPACITY_UTILIZATION` carry `indicator_code` values of "Average debt burden" and "Capacity
+utilization - Weighted Average" — the source's own field.
+
+A field within one form that differs from its siblings: `PENSION_FUND_ASSETS` matches
+`class_type='Pension savings'`, an accumulated stock, distinct from the receipts/disposals flow rows
+the same form also carries. Reading only the form name would have missed this.
+
+Twelve diffusion indices (0–100, 50 = neutral) from the NBK Enterprise Monitoring business survey are
+`period_average` as the standard, internationally-defined construction of that statistic — a
+net-balance reading representing the survey period, not a comparison between two periods.
+
+`INFLATION_EXPECTATIONS` is the one left unclassified: a survey percentage that's neither a stock nor
+a summable flow, with no source text confirming whether it's reported as a mean, median, or something
+else.
+
+**411 of 430.** 19 remain: BNS 12, IMF 6, NBK 1. 142/142 NBK fetchers live, 29/29 tests.
+
+## 2026-09-03 — final IMF batch (416 of 430)
+
+Five of the last six IMF indicators, from a codelist not checked in the earlier WEO pass. `CTOT`
+(commodity terms of trade) describes its own indicator as "June 2012 = 100" — a fixed-base index,
+`comparison_index` by that explicit construction, same base for both the standard and fixed-weights
+variants.
+
+`IMF_GDP_DEFLATOR_INDEX`: the WEO codelist description groups the GDP deflator explicitly alongside
+"producer or consumer price indices" as the implicit counterpart to those explicit ones — classified
+`comparison_index` on that basis rather than `period_ratio`, since the source frames it as the same
+family as CPI/PPI.
+
+`OIL_PRICE`: APSP is named "Average Petroleum Spot Price" and documented as "the simple average of
+Brent, Dubai Fateh and WTI" — `period_average`, directly from the name and the fetcher's own
+docstring.
+
+`IMF_UNEMPLOYMENT`: WEO's own description frames it as a bare ratio (unemployed / labor force), but
+Kazakhstan's unemployment rate is compiled by BNS using LFS reference-week methodology, already
+confirmed as the basis for the equivalent national series (`period_average`). Classified consistently
+with that traced national methodology rather than the IMF cross-country boilerplate.
+
+`IMF_PPP_EXCHANGE_RATE` stays unclassified: its codelist description is generic boilerplate that
+doesn't settle stock vs. average.
+
+**416 of 430.** 17 remain: BNS 12, NBK 1, IMF 1. 34/34 IMF fetchers live, 29/29 tests.
+
+## 2026-09-03 — INFLATION_EXPECTATIONS closes NBK; IMF_PPP_EXCHANGE_RATE confirmed at its limit (417 of 430)
+
+`INFLATION_EXPECTATIONS` found via a channel not checked before: the NBK form metadata endpoint (a
+different API surface from the Taldau passport mechanism used for the BNS batches) states the source
+outright — "results of the households survey on inflationary expectations", Данные=Aggregated. Same
+evidentiary basis already used for the Enterprise Monitoring diffusion indices: a survey statistic
+representing its period. Closes NBK except for the one indicator that genuinely lacks evidence.
+
+`IMF_PPP_EXCHANGE_RATE` was checked one level deeper before giving up on it: the raw WEO CSV carries
+a `STATISTICAL_MEASURES` column, empty for every other indicator in this project but populated "RT"
+for this one. Decoded via the SDMX codelist, RT is "Rate: A measure that expresses the frequency of
+occurrence of an event... in relation to another quantity" — the exact same generic boilerplate
+already seen, and rejected as decisive, for `IMF_UNEMPLOYMENT`'s `LUR` code. Confirmed rather than
+assumed that there is nothing more specific to read.
+
+The 12 remaining BNS indicators were re-verified exhaustively rather than left as a known gap: every
+field of every Taldau passport was searched for time-marker wording this time, not just the six
+fields checked in the earlier batches. One match came back, and it was spurious — "накоплен" inside
+an unrelated department name ("Управление счетов накопления"), not evidence about the indicator
+itself. The 12 stand confirmed as lacking source evidence, not merely unexamined.
+
+**417 of 430.** 13 remain: BNS 12, IMF 1. 142/142 NBK fetchers live, 29/29 tests.
+
+## 2026-09-03 — comparison basis for all 44 comparison_index indicators, and a three-year-old misclassification caught
+
+Same discipline as `observation_type`: what basis a comparison index compares against — year-on-year,
+month-on-month, a year-to-date base, or a fixed historical base — becomes a queryable field instead
+of living only in prose.
+
+Most of the 44 already carried the answer in their own unit string, written when the indicator was
+connected and verified live: "same month previous year = 100" is `yoy`, "previous month = 100" is
+`mom`, "December of previous year = 100" is `ytd_base`. For annual-frequency series worded "% change
+vs previous period", the basis follows from the frequency itself — at annual frequency, "previous
+period" is definitionally "previous year".
+
+Four indicators carried only a bare "index" unit and needed a live check of the raw data rather than
+a guess from the label. `NEER` and `REER`: the value hits exactly 100.0 at 2016-12-01, and only
+there, across all three variants of the same NBK form (nominal, real, real effective) — not a
+coincidental near-100 reading but a genuine rebase point. `IMF_GDP_DEFLATOR_INDEX`: exactly 100.0 in
+2005. Both `fixed_base`, with the base date now recorded in `comparison_basis_evidence`.
+
+The fourth, `BUSINESS_ACTIVITY_INDEX`, turned out to be misclassified from the very first NBK batch,
+months earlier in the project: it had matched the generic `^index` unit rule as `comparison_index`
+without anyone checking what the data actually does. The live check shows a range of 36.4–51.7
+clustered around 50 — a diffusion index (50 = neutral), not a fixed-base index — and its form sits in
+the same "Survey Results → Enterprise Monitoring" category as the twelve diffusion indices already
+classified `period_average`. Corrected. This is the same failure mode already hit and fixed three
+times in this project — a rule matching the container label rather than the quantity's actual
+behaviour — caught this time only because the data was checked before the classification was trusted.
+
+**430 indicators, 15,071 observations, 417 with `observation_type`, 44 with `comparison_basis`.**
+142/142 NBK fetchers live, 29/29 tests.
+
+## 2026-09-03 — the last 13: four more resolved via a new source, nine confirmed at the limit
+
 Thirteen indicators had no source text specific enough to classify: 12 from BNS, one from IMF
 (`IMF_PPP_EXCHANGE_RATE` — checked against every structural column the SDMX dataflow carries,
 including `STATISTICAL_MEASURES`, down to a `RT` code that decodes only as generic "Rate", the same
