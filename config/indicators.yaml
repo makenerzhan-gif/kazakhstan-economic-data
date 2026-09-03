@@ -3739,3 +3739,39 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+
+  - id: CORE_CPI_YOY_EX3
+    name_ru: "Базовая инфляция без трёх составляющих, год к году"
+    name_en: "Core CPI ex-3, year-on-year"
+    agency: bns
+    frequency: quarterly
+    unit: "index (same quarter previous year = 100)"
+    category: prices
+    source_status: confirmed
+
+  - id: CORE_CPI_QOQ_EX3
+    name_ru: "Базовая инфляция без трёх составляющих, квартал к кварталу"
+    name_en: "Core CPI ex-3, quarter-on-quarter"
+    agency: bns
+    frequency: quarterly
+    unit: "index (previous quarter = 100)"
+    category: prices
+    source_status: confirmed
+
+  - id: CORE_CPI_YOY_EX7
+    name_ru: "Базовая инфляция без семи составляющих, год к году"
+    name_en: "Core CPI ex-7, year-on-year"
+    agency: bns
+    frequency: quarterly
+    unit: "index (same quarter previous year = 100)"
+    category: prices
+    source_status: confirmed
+
+  - id: CORE_CPI_QOQ_EX7
+    name_ru: "Базовая инфляция без семи составляющих, квартал к кварталу"
+    name_en: "Core CPI ex-7, quarter-on-quarter"
+    agency: bns
+    frequency: quarterly
+    unit: "index (previous quarter = 100)"
+    category: prices
+    source_status: confirmed

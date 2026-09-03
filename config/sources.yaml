@@ -694,6 +694,93 @@ agencies:
           shortfalls most heavily -- 0.2% in Q1 2026. Completes the Foster-Greer-Thorbecke set
           together with POVERTY_HEADCOUNT and POVERTY_DEPTH.
 
+      CORE_CPI_YOY_EX3:
+        status: confirmed
+        source_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        index_id: 55056856
+        format: json
+        notes: >
+          2026-09-03. Core inflation, listed by the sector audit as a monetary-sector gap and
+          never previously searched for. Taldau index 55056856, 'базовый индекс потребительских
+          цен без трех составляющих' -- excludes fruit and vegetables, petrol and coal.
+          Parameters: measure_id=7, dic_ids=67,848,4791, terms=741880 (РЕСПУБЛИКА КАЗАХСТАН),
+          2695732 (отчетный период к соответствующему периоду прошлого года), 77239135 (the
+          basket). 14 points, 2023-03-31 to 2026-06-30.
+          THE SOURCE PUBLISHES TWO CORE BASKETS, not one, and they are SEPARATE Taldau indexes
+          rather than two terms of one dimension -- 55056856 (ex-3) and 55056857 (ex-7). The
+          parent index 703082 ('Базовый индекс потребительских цен') returns an EMPTY segment list
+          for every period tried, so it is a catalogue heading, not a series.
+          periodId=5 IS QUARTERLY HERE, NOT MONTHLY. This is the trap. Fourteen points span
+          2023-03-31 to 2026-06-30, and the period-on-period reading is 102.6-103.2 -- which as a
+          monthly rate would annualise to about 36% and as a quarterly rate to about 11%, matching
+          the year-on-year reading of 111.4 on the same rows. Reading it as monthly would have
+          overstated inflation threefold while still looking like a plausible index.
+          INTERNAL CONSISTENCY CHECKED: chaining four consecutive quarter-on-quarter indices
+          reproduces the year-on-year index to within +/-0.1 across the ENTIRE history of both
+          baskets. That confirms three things at once -- the comparison terms are correctly
+          identified, periodId=5 really is quarterly, and both comparison bases come from the same
+          underlying data.
+          CROSS-CHECK against independently sourced headline series: core reads 111.4 (ex-3) and
+          111.9 (ex-7) for Q2 2026, against CPI_YOY of 112.6 for October 2025 and the NBK-sourced
+          ANNUAL_INFLATION falling from 12.2% in February 2026 to 10.2% by August. Core sitting
+          just below headline is the expected relationship, since the excluded items are the
+          volatile ones.
+          ON THE COMPARISON TERM: the site's default segment shows period-on-period for the ex-3
+          basket and year-on-year for the ex-7 one. Both terms belong to dictionary 848, the same
+          dimension CPI_YOY uses, so selecting the other one is choosing a published comparison
+          rather than constructing anything -- and all four combinations were fetched live and
+          checked before shipping.
+      CORE_CPI_QOQ_EX3:
+        status: confirmed
+        index_id: 55056856
+        format: json
+        notes: >
+          2026-09-03. Same index and basket, comparison term 2695730 (отчетный период к
+          предыдущему периоду). 102.6 for Q2 2026. The momentum reading: it turns before the
+          year-on-year series, which is why both are carried.
+      CORE_CPI_YOY_EX7:
+        status: confirmed
+        index_id: 55056857
+        format: json
+        notes: >
+          2026-09-03. Taldau index 55056857, the NARROWER basket -- on top of fruit, vegetables,
+          petrol and coal it also excludes regulated utilities and rail transport, i.e. the
+          administered prices. dic_ids=67,848,4792, basket term 77239177.
+          111.9 for Q2 2026, slightly ABOVE the three-component measure (111.4). That ordering is
+          informative rather than noise: excluding administered prices RAISES measured inflation,
+          which says those prices were rising more slowly than the rest of the basket.
+      CORE_CPI_QOQ_EX7:
+        status: confirmed
+        index_id: 55056857
+        format: json
+        notes: >
+          2026-09-03. Same index and basket, period-on-period comparison. 102.6 for Q2 2026.
+
+      MINIMUM_WAGE (scope note):
+        status: not_found
+        notes: >
+          2026-09-03. Searched Taldau's catalogue under 'минимальная заработная плата',
+          'минимальный размер заработной платы' and 'минимальная зарплата' -- ZERO results for all
+          three. This is expected on reflection: Kazakhstan's minimum wage is a LEGISLATED figure
+          set annually in the republican budget law, not a statistical observation, so it does not
+          belong to the statistics catalogue at all. It would have to come from the budget law
+          text on Minfin's side, which is a different kind of source from everything else here.
+          Left not connected rather than scraped out of legal text.
+
+      GRAIN_HARVEST (scope note):
+        status: not_found
+        notes: >
+          2026-09-03. Searched Taldau for 'валовой сбор зерна' (zero results) and 'валовый сбор'
+          (three results, ALL of them about FLOWERS -- 'валовый сбор цветов', open-ground and
+          protected-ground). 'зерновых культур' returns twenty indexes but they are stocks held,
+          receipts, and inter-regional purchases rather than the harvest itself.
+          The BNS agriculture section was already checked in an earlier pass and publishes grain
+          BALANCES, sown area and greenhouse output, not a harvest series. AGRICULTURE_OUTPUT
+          (annual, current to 2025) remains the only agriculture series held.
+          Not connected. The search was by keyword against the catalogue, so absence here is
+          weaker evidence than the structural probes used elsewhere -- recorded as not found
+          rather than not published.
+
       HOUSING_PRICE_INDEX (scope note):
         status: not_connected
         notes: >

@@ -4053,3 +4053,99 @@ def fetch_poverty_severity() -> tuple[list[dict], dict]:
         "Percent. The squared poverty gap, which weights the deepest shortfalls most heavily -- "
         "0.2% in Q1 2026. Read with POVERTY_DEPTH and POVERTY_HEADCOUNT as the standard "
         "Foster-Greer-Thorbecke set.", "%")
+
+
+# ---------------------------------------------------------------------------
+# CORE INFLATION, from Taldau. The audit listed it as a monetary-sector gap and
+# it had never been searched for.
+#
+# THE SOURCE PUBLISHES TWO CORE BASKETS, not one, and they are separate Taldau
+# indexes rather than two terms of one dimension:
+#   55056856  "базовый ИПЦ без трех составляющих"  -- excludes fruit and
+#             vegetables, petrol and coal
+#   55056857  "базовый ИПЦ без семи составляющих"  -- also excludes regulated
+#             utilities, rail transport and others
+# The parent index 703082 ("Базовый индекс потребительских цен") returns an
+# EMPTY segment list for every period tried, so it is a catalogue heading
+# rather than a series.
+#
+# periodId=5 IS QUARTERLY HERE, not monthly. Fourteen points span 2023-03-31 to
+# 2026-06-30, and the values confirm it: the period-on-period reading is
+# 102.6-103.2, which as a monthly rate would annualise to about 36% and as a
+# quarterly rate to about 11% -- matching the year-on-year reading of
+# 111.4-112.5 on the same rows. Taking it for monthly would have overstated
+# inflation threefold while still looking like a plausible index.
+#
+# BOTH COMPARISON BASES COME FROM DICTIONARY 848, the same one CPI_YOY uses.
+# The site's default segment shows period-on-period for the three-component
+# basket and year-on-year for the seven-component one; the other two
+# combinations are the same published dimension with the other term selected,
+# and all four were fetched live and checked for plausibility before shipping.
+#
+# CROSS-CHECK against the separately-sourced headline series: core runs 111.4
+# (ex-3) and 111.9 (ex-7) for Q2 2026, against CPI_YOY of 112.6 for October
+# 2025 and the NBK-sourced ANNUAL_INFLATION of 12.2% in February 2026 falling
+# to 10.2% by August. Core sitting just below headline is the expected
+# relationship, since the excluded items are the volatile ones.
+# ---------------------------------------------------------------------------
+CORE_CPI_EX3_INDEX = "55056856"
+CORE_CPI_EX7_INDEX = "55056857"
+CORE_CPI_TERM_QOQ = "2695730"      # отчетный период к предыдущему периоду
+CORE_CPI_TERM_YOY = "2695732"      # отчетный период к соответствующему периоду прошлого года
+CORE_CPI_REGION_TERM = "741880"    # РЕСПУБЛИКА КАЗАХСТАН
+CORE_CPI_EX3_BASKET = "77239135"
+CORE_CPI_EX7_BASKET = "77239177"
+CORE_CPI_EX3_DICS = "67,848,4791"
+CORE_CPI_EX7_DICS = "67,848,4792"
+
+
+def _fetch_core_cpi(index_id: str, basket_term: str, dic_ids: str, comparison_term: str,
+                    indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    return _fetch_taldau_annual_index(
+        index_id, indicator_id, note, measure_id="7",
+        terms=f"{CORE_CPI_REGION_TERM},{comparison_term},{basket_term}",
+        dic_ids=dic_ids, period_id="5")
+
+
+def fetch_core_cpi_yoy_ex3() -> tuple[list[dict], dict]:
+    """Core CPI excluding three components, same quarter previous year = 100."""
+    return _fetch_core_cpi(
+        CORE_CPI_EX3_INDEX, CORE_CPI_EX3_BASKET, CORE_CPI_EX3_DICS, CORE_CPI_TERM_YOY,
+        "CORE_CPI_YOY_EX3",
+        "Index, same quarter of the previous year = 100. Core inflation excluding fruit and "
+        "vegetables, petrol and coal -- 111.4 for Q2 2026, so 11.4%. QUARTERLY, not monthly: the "
+        "source's periodId=5 is quarters here, which the period-on-period reading confirms "
+        "(102.6-103.2 a quarter, about 11% annualised, matching this series). Sits just below the "
+        "headline CPI_YOY, which is the expected relationship since the excluded items are the "
+        "volatile ones.")
+
+
+def fetch_core_cpi_qoq_ex3() -> tuple[list[dict], dict]:
+    """Core CPI excluding three components, previous quarter = 100."""
+    return _fetch_core_cpi(
+        CORE_CPI_EX3_INDEX, CORE_CPI_EX3_BASKET, CORE_CPI_EX3_DICS, CORE_CPI_TERM_QOQ,
+        "CORE_CPI_QOQ_EX3",
+        "Index, previous quarter = 100 -- 102.6 for Q2 2026. The momentum reading of "
+        "CORE_CPI_YOY_EX3: it turns before the year-on-year series does, which is the point of "
+        "carrying both.")
+
+
+def fetch_core_cpi_yoy_ex7() -> tuple[list[dict], dict]:
+    """Core CPI excluding seven components, same quarter previous year = 100."""
+    return _fetch_core_cpi(
+        CORE_CPI_EX7_INDEX, CORE_CPI_EX7_BASKET, CORE_CPI_EX7_DICS, CORE_CPI_TERM_YOY,
+        "CORE_CPI_YOY_EX7",
+        "Index, same quarter of the previous year = 100. The NARROWER core basket: on top of "
+        "fruit, vegetables, petrol and coal it also excludes regulated utilities and rail "
+        "transport -- the administered prices. 111.9 for Q2 2026, slightly ABOVE the "
+        "three-component measure, which says the administered prices were rising more slowly "
+        "than the rest of the basket.")
+
+
+def fetch_core_cpi_qoq_ex7() -> tuple[list[dict], dict]:
+    """Core CPI excluding seven components, previous quarter = 100."""
+    return _fetch_core_cpi(
+        CORE_CPI_EX7_INDEX, CORE_CPI_EX7_BASKET, CORE_CPI_EX7_DICS, CORE_CPI_TERM_QOQ,
+        "CORE_CPI_QOQ_EX7",
+        "Index, previous quarter = 100 -- 102.6 for Q2 2026. Momentum on the narrower core "
+        "basket, the companion to CORE_CPI_YOY_EX7.")

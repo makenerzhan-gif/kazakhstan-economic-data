@@ -2690,3 +2690,49 @@ module now runs in 26 seconds against a source that was previously being hammere
 Retries were added at the same time, covering `ConnectionError` and `Timeout` only — never an
 HTTP status, for the same reason as the IMF module: a 404 or a 500 is information about the
 source, and retrying it hides a real change behind a delay.
+
+## 2026-09-03 — core inflation (418 indicators, 14,917 observations)
+
+`CORE_CPI_YOY_EX3`, `CORE_CPI_QOQ_EX3`, `CORE_CPI_YOY_EX7`, `CORE_CPI_QOQ_EX7` from Taldau. The
+audit listed core inflation as a monetary-sector gap and it had never been searched for.
+
+**The source publishes two core baskets, not one** — and they are separate Taldau indexes rather
+than two terms of one dimension. `55056856` excludes fruit, vegetables, petrol and coal;
+`55056857` also excludes regulated utilities and rail transport. The parent index `703082`
+("Базовый индекс потребительских цен") returns an empty segment list for every period tried, so
+it is a catalogue heading, not a series.
+
+### `periodId=5` is quarterly here, not monthly
+This was the trap. Fourteen points span 2023-03-31 to 2026-06-30, and the period-on-period reading
+is 102.6–103.2 — which as a *monthly* rate would annualise to about 36% and as a *quarterly* rate
+to about 11%, matching the year-on-year reading of 111.4 on the same rows. Reading it as monthly
+would have overstated inflation threefold while still looking like a perfectly plausible index.
+
+### The chaining check settles three questions at once
+Chaining four consecutive quarter-on-quarter indices reproduces the year-on-year index to within
+±0.1 **across the entire history of both baskets**. That confirms the comparison terms are
+correctly identified, that `periodId=5` really is quarterly, and that both comparison bases come
+from the same underlying data. It is also the kind of check that could only pass if all three were
+right, which is why it was worth running rather than asserting.
+
+### An ordering worth noticing
+Core ex-7 (111.9) reads **above** core ex-3 (111.4). Excluding administered prices *raises*
+measured inflation, which says regulated utilities and rail transport were rising more slowly than
+the rest of the basket. That is information, not noise.
+
+Cross-checked against independently sourced headline series: `CPI_YOY` 112.6 for October 2025 and
+the NBK-sourced `ANNUAL_INFLATION` falling from 12.2% in February 2026 to 10.2% by August. Core
+sitting just below headline is the expected relationship.
+
+### Two of the four unsearched indicators are not statistical series
+- **Minimum wage** — zero results in Taldau under three wordings. Expected on reflection: it is a
+  *legislated* figure set annually in the republican budget law, not a statistical observation, so
+  it does not belong to a statistics catalogue. It would have to come from legal text, which is a
+  different kind of source from everything else here.
+- **Grain harvest** — "валовой сбор зерна" returns nothing; "валовый сбор" returns three indexes,
+  all of them about **flowers**. "зерновых культур" returns twenty, but they are stocks held,
+  receipts and inter-regional purchases rather than the harvest. Recorded as *not found* rather
+  than *not published*: this was a keyword search against the catalogue, which is weaker evidence
+  than the structural probes used elsewhere.
+
+Verified live: 133/133 BNS fetchers OK, 29/29 tests passing.
