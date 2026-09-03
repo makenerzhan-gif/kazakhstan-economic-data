@@ -22,6 +22,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "единица: 'index (physical volume, % of previous period)'"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: GDP_NOMINAL
     name_ru: "ВВП, номинальный"
@@ -45,6 +47,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "единица: 'index, % to previous period'"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
     lifecycle: superseded
     superseded_by: INDUSTRIAL_PRODUCTION_INDEX
     lifecycle_note: "annual cube discontinued after 2023; the monthly publication carries the same concept"
@@ -59,6 +63,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к предыдущему месяцу"
+    comparison_basis: mom
+    comparison_basis_evidence: "единица: 'previous month = 100'"
 
   - id: UNEMPLOYMENT
     name_ru: "Уровень безработицы"
@@ -196,6 +202,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "кодлист МВФ: Percent change"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: IMF_INFLATION
     name_ru: "IMF WEO: инфляция, Казахстан"
@@ -207,6 +215,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "кодлист МВФ: Period average, percent change"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: IMF_CURRENT_ACCOUNT
     name_ru: "IMF: Счет текущих операций, Казахстан"
@@ -264,6 +274,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "паспорт: сравнение двух периодов (между двумя периодами)"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: NET_EXPORTS
     name_ru: "Чистый экспорт"
@@ -627,6 +639,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "паспорт: сравнение двух периодов (между двумя периодами)"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: EXPORT_VOLUME_INDEX
     name_ru: "Индекс физического объема экспорта товаров и услуг"
@@ -638,6 +652,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "паспорт: сравнение двух периодов (между двумя периодами)"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: TOTAL_CONSUMPTION_EXPENDITURE
     name_ru: "Расходы на конечное потребление"
@@ -737,6 +753,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "единица: индекс сравнения"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100 (проверено: ровно 100.0 на 2016-12-01 во всех трёх вариантах формы 299)"
 
   - id: NEER
     name_ru: "Номинальный эффективный обменный курс тенге"
@@ -748,6 +766,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "единица: индекс сравнения"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100 (проверено: ровно 100.0 на 2016-12-01 во всех трёх вариантах формы 299)"
 
   - id: DEPOSITS_TOTAL
     name_ru: "Депозиты резидентов в депозитных организациях, всего"
@@ -792,6 +812,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "кодлист МВФ: Percent change"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: IMF_IMPORT_VOLUME_GROWTH
     name_ru: "IMF WEO: рост физического объема импорта"
@@ -803,6 +825,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "кодлист МВФ: Percent change"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: IMF_CURRENT_ACCOUNT_USD
     name_ru: "IMF WEO: счет текущих операций, Казахстан (USD)"
@@ -858,6 +882,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "кодлист МВФ: End-of-period, percent change"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: IMF_GOV_NET_DEBT_RATIO
     name_ru: "IMF WEO: чистый долг сектора госуправления, % ВВП"
@@ -880,6 +906,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "кодлист МВФ описывает как ценовой индекс наравне с CPI/PPI"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "2005 = 100 (проверено: ровно 100.0 в 2005 году в самих данных)"
 
   - id: IMF_REAL_GDP
     name_ru: "IMF WEO: реальный ВВП, национальная валюта"
@@ -957,6 +985,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "паспорт: сравнение двух периодов (индекс реальной заработной платы о)"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: EMPLOYED_TOTAL
     name_ru: "Занятое население"
@@ -1045,6 +1075,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "единица: '% of same period prior year'"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: TONIA
     name_ru: "Индикатор TONIA (однодневный межбанковский своп)"
@@ -1153,6 +1185,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "паспорт: сравнение двух периодов (относительный показатель, характер)"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: EMISSIONS
     name_ru: "Объем выбросов загрязняющих веществ в атмосферу"
@@ -1234,8 +1268,8 @@ indicators:
     unit: "index"
     category: monetary
     source_status: confirmed
-    observation_type: comparison_index
-    observation_evidence: "единица: индекс сравнения"
+    observation_type: period_average
+    observation_evidence: "ИСПРАВЛЕНО: та же форма 339, категория Survey Results -> Enterprise Monitoring, что и диффузионные индексы. Данные подтверждают: диапазон 36.4-51.7, кластер около 50 (диффузионная конструкция, 50=нейтрально), а не базисный индекс =100. Первая классификация ошибочно совпала по общему тексту единицы 'index'."
 
   - id: AGRICULTURE_OUTPUT
     name_ru: "Валовой выпуск продукции (услуг) сельского хозяйства"
@@ -1269,6 +1303,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "паспорт: сравнение двух периодов (индекс номинальных денежных доходо)"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: TELECOM_SERVICES
     name_ru: "Объем услуг связи"
@@ -1392,6 +1428,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "единица: '% of prior period'"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
     lifecycle: superseded
     superseded_by: MINING_OUTPUT
     lifecycle_note: "same, but the replacement is output in KZT rather than an index"
@@ -1406,6 +1444,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "единица: '% of prior period'"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
     lifecycle: superseded
     superseded_by: MANUFACTURING_OUTPUT
     lifecycle_note: "same, but the replacement is output in KZT rather than an index"
@@ -1420,6 +1460,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "единица: '% of prior period'"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
     lifecycle: stale_source
     lifecycle_note: "no monthly counterpart was connected for electricity; the annual cube stopped at 2023"
 
@@ -3136,6 +3178,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "год к году, то же построение, что CPI_YOY (независимо сверено в этой сессии)"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: INFLATION_TARGET
     name_ru: "Целевой уровень инфляции НБ РК"
@@ -3169,6 +3213,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "кодлист CTOT: 'June 2012 = 100' — базисный индекс"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "June 2012 = 100 (кодлист МВФ CTOT)"
 
   - id: COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS
     name_ru: "Условия торговли по сырью (фиксированные веса)"
@@ -3180,6 +3226,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "кодлист CTOT: та же база 'June 2012 = 100'"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "June 2012 = 100 (кодлист МВФ CTOT)"
 
   - id: OIL_EXPORT_DUTY
     name_ru: "Вывозная таможенная пошлина на сырую нефть"
@@ -3259,6 +3307,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему месяцу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: MINING_OUTPUT
     name_ru: "Объём горнодобывающей промышленности"
@@ -3304,6 +3354,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему периоду прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: EXPORT_PRICE_INDEX
     name_ru: "Индекс цен экспортных поставок"
@@ -3315,6 +3367,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему месяцу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: IMPORT_PRICE_INDEX
     name_ru: "Индекс цен импортных поступлений"
@@ -3326,6 +3380,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему месяцу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: CPI_YOY
     name_ru: "Инфляция год к году (ИПЦ)"
@@ -3337,6 +3393,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему месяцу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: CPI_YTD
     name_ru: "Инфляция с начала года (ИПЦ)"
@@ -3348,6 +3406,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к декабрю прошлого года"
+    comparison_basis: ytd_base
+    comparison_basis_evidence: "единица: 'December of previous year = 100'"
 
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
@@ -3845,6 +3905,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему месяцу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: WHOLESALE_TRADE_INDEX_MONTHLY
     name_ru: "Индекс физического объёма оптовой торговли, помесячно"
@@ -3856,6 +3918,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему месяцу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: CONSTRUCTION_OUTPUT
     name_ru: "Объём выполненных строительных работ"
@@ -3879,6 +3943,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему периоду прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: LABOR_FORCE
     name_ru: "Рабочая сила"
@@ -3967,6 +4033,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему кварталу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: FREIGHT_TURNOVER_MONTHLY
     name_ru: "Грузооборот, помесячно"
@@ -4627,6 +4695,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему периоду прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: CORE_CPI_MOM_EX3
     name_ru: "Базовая инфляция без трёх составляющих, месяц к месяцу"
@@ -4638,6 +4708,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к предыдущему периоду"
+    comparison_basis: mom
+    comparison_basis_evidence: "единица: 'previous month = 100'"
 
   - id: CORE_CPI_YOY_EX7
     name_ru: "Базовая инфляция без семи составляющих, год к году"
@@ -4649,6 +4721,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему периоду прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: CORE_CPI_MOM_EX7
     name_ru: "Базовая инфляция без семи составляющих, месяц к месяцу"
@@ -4660,6 +4734,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к предыдущему периоду"
+    comparison_basis: mom
+    comparison_basis_evidence: "единица: 'previous month = 100'"
 
   - id: AVG_WAGE_MINING
     name_ru: "Среднемесячная заработная плата: горнодобывающая промышленность"
@@ -4682,6 +4758,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему кварталу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: AVG_WAGE_MANUFACTURING
     name_ru: "Среднемесячная заработная плата: обрабатывающая промышленность"
@@ -4704,6 +4782,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему кварталу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: AVG_WAGE_AGRICULTURE
     name_ru: "Среднемесячная заработная плата: сельское хозяйство"
@@ -4726,6 +4806,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему кварталу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: AVG_WAGE_CONSTRUCTION
     name_ru: "Среднемесячная заработная плата: строительство"
@@ -4748,6 +4830,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему кварталу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: AVG_WAGE_FINANCE
     name_ru: "Среднемесячная заработная плата: финансовая и страховая деятельность"
@@ -4770,6 +4854,8 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему кварталу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: AVG_WAGE_EDUCATION
     name_ru: "Среднемесячная заработная плата: образование"
@@ -4792,3 +4878,5 @@ indicators:
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "к соответствующему кварталу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
