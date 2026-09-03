@@ -20,6 +20,8 @@ indicators:
     unit: "index (physical volume, % of previous period)"
     category: national_accounts
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "единица: 'index (physical volume, % of previous period)'"
 
   - id: GDP_NOMINAL
     name_ru: "ВВП, номинальный"
@@ -29,6 +31,9 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "куб отдаёт периоды 'Январь-Март', 'Январь-Июнь' — нарастающий итог"
 
   - id: IND_PROD
     name_ru: "Индекс промышленного производства"
@@ -38,6 +43,8 @@ indicators:
     unit: "index, % to previous period"
     category: production
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "единица: 'index, % to previous period'"
     lifecycle: superseded
     superseded_by: INDUSTRIAL_PRODUCTION_INDEX
     lifecycle_note: "annual cube discontinued after 2023; the monthly publication carries the same concept"
@@ -61,6 +68,8 @@ indicators:
     unit: "% of labor force"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "примечание: методология LFS/МОТ, как у остальных квартальных обследований рабочей силы"
     lifecycle: stale_source
     lifecycle_note: "the quarterly cube stopped at 2025-06. LABOR_FORCE and UNEMPLOYED_PERSONS from the ARDFM-era labour publication give the rate, but no drop-in rate series was connected"
 
@@ -72,6 +81,8 @@ indicators:
     unit: "KZT"
     category: investment
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "тот же json_cube формат СНС, что GFCF/GROSS_OUTPUT: поток за год"
     lifecycle: superseded
     superseded_by: INVESTMENT_FIXED_CAPITAL
     lifecycle_note: "annual cube stops at 2022; the replacement is monthly year-to-date"
@@ -84,6 +95,8 @@ indicators:
     unit: "thousand USD"
     category: trade
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "таможенная статистика: помесячные декларации, оборот за месяц"
 
   - id: IMPORTS
     name_ru: "Импорт (итого)"
@@ -93,6 +106,8 @@ indicators:
     unit: "thousand USD"
     category: trade
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "таможенная статистика: помесячные декларации, оборот за месяц"
 
   - id: BASE_RATE
     name_ru: "Базовая ставка НБ РК"
@@ -236,6 +251,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: валовое накопление основного капитала — поток СНС"
 
   - id: GFCF_VOLUME_INDEX
     name_ru: "Индекс физического объема валового накопления основного капитала"
@@ -278,6 +295,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: СНС, вознаграждение, подлежащее выплате за период"
 
   - id: MONETARY_BASE
     name_ru: "Денежная база (резервные деньги)"
@@ -406,6 +425,8 @@ indicators:
     unit: "KZT"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "паспорт: делением фонда оплаты труда на фактическую численность"
 
   - id: TAX_REVENUE
     name_ru: "Налоговые поступления республиканского бюджета"
@@ -525,6 +546,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: ВВП методом доходов — поток СНС"
 
   - id: GROSS_OUTPUT
     name_ru: "Валовой выпуск"
@@ -534,6 +557,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: валовой выпуск — суммарная стоимость произведённого за период"
 
   - id: TAXES_ON_PRODUCTS
     name_ru: "Налоги на продукты"
@@ -576,6 +601,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: потребляется 'в течение текущего периода'"
 
   - id: GROSS_ACCUMULATION
     name_ru: "Валовое накопление"
@@ -585,6 +612,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: совокупный показатель СНС, сумма статей накопления за период"
 
   - id: IMPORT_VOLUME_INDEX
     name_ru: "Индекс физического объема импорта товаров и услуг"
@@ -627,6 +656,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: снижение стоимости 'в течение отчетного периода'"
 
   - id: IMF_POPULATION
     name_ru: "IMF WEO: население Казахстана"
@@ -892,6 +923,8 @@ indicators:
     unit: "KZT"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: стоимость выполненных работ"
 
   - id: POPULATION_BNS
     name_ru: "Среднегодовая численность населения"
@@ -923,6 +956,8 @@ indicators:
     unit: "persons"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "паспорт: методология обследования, референтная неделя (МОТ/LFS)"
 
   - id: BIRTHS_TOTAL
     name_ru: "Число родившихся (живыми)"
@@ -932,6 +967,8 @@ indicators:
     unit: "persons"
     category: demographic
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: регистрация актов о рождении за период"
 
   - id: DEATHS_TOTAL
     name_ru: "Число умерших"
@@ -941,6 +978,8 @@ indicators:
     unit: "persons"
     category: demographic
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: регистрация актов о смерти за период"
 
   - id: EXCISE_TAX_REVENUE
     name_ru: "Поступления акцизного налога"
@@ -983,6 +1022,8 @@ indicators:
     unit: "m2 per 1000 population"
     category: production
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "единица: на 1000 населения (как DOCTORS_PER_10K и аналоги)"
 
   - id: PPI
     name_ru: "Индекс цен предприятий-производителей промышленной продукции"
@@ -992,6 +1033,8 @@ indicators:
     unit: "% of same period prior year"
     category: prices
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "единица: '% of same period prior year'"
 
   - id: TONIA
     name_ru: "Индикатор TONIA (однодневный межбанковский своп)"
@@ -1105,6 +1148,8 @@ indicators:
     unit: "metric tonnes"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: поступление веществ в атмосферу за период"
 
   - id: FREIGHT_TURNOVER
     name_ru: "Грузооборот"
@@ -1184,6 +1229,8 @@ indicators:
     unit: "KZT"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: стоимость продукции, созданной за период (СНС)"
 
   - id: PER_CAPITA_INCOME
     name_ru: "Среднедушевые номинальные денежные доходы населения"
@@ -1193,6 +1240,8 @@ indicators:
     unit: "KZT/month"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "название: 'Среднедушевые' — конструкция как у GDP_PER_CAPITA"
 
   - id: REAL_INCOME_INDEX
     name_ru: "Индекс реальных денежных доходов"
@@ -1257,6 +1306,8 @@ indicators:
     unit: "toe per thousand USD"
     category: production
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "паспорт: потребление на единицу ВВП — отношение к другому потоку"
 
   - id: ENERGY_CONSUMPTION
     name_ru: "Общее первичное энергопотребление"
@@ -1317,6 +1368,8 @@ indicators:
     unit: "% of prior period"
     category: production
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "единица: '% of prior period'"
     lifecycle: superseded
     superseded_by: MINING_OUTPUT
     lifecycle_note: "same, but the replacement is output in KZT rather than an index"
@@ -1329,6 +1382,8 @@ indicators:
     unit: "% of prior period"
     category: production
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "единица: '% of prior period'"
     lifecycle: superseded
     superseded_by: MANUFACTURING_OUTPUT
     lifecycle_note: "same, but the replacement is output in KZT rather than an index"
@@ -1341,6 +1396,8 @@ indicators:
     unit: "% of prior period"
     category: production
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "единица: '% of prior period'"
     lifecycle: stale_source
     lifecycle_note: "no monthly counterpart was connected for electricity; the annual cube stopped at 2023"
 
@@ -2069,6 +2126,8 @@ indicators:
     unit: "KZT"
     category: tourism
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: часть валовой добавленной стоимости — поток СНС"
 
   - id: TOURISM_GDP_SHARE
     name_ru: "Доля валовой добавленной стоимости туризма в ВВП"
@@ -2131,6 +2190,8 @@ indicators:
     unit: "trips"
     category: tourism
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: количество поездок за период"
 
   - id: TOURISM_DOMESTIC_TRIPS
     name_ru: "Количество поездок внутреннего туризма"
@@ -2140,6 +2201,8 @@ indicators:
     unit: "trips"
     category: tourism
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: количество поездок за период"
 
   - id: TOURISM_OUTBOUND_TRIPS
     name_ru: "Количество поездок выездного туризма"
@@ -2149,6 +2212,8 @@ indicators:
     unit: "trips"
     category: tourism
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: количество поездок за период"
 
   - id: TOURISM_INBOUND_NIGHTS
     name_ru: "Количество проведенных ночей въездного туризма"
@@ -2654,6 +2719,8 @@ indicators:
     unit: "orders"
     category: trade
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: количество заказов — транзакции за период"
 
   - id: ECOMMERCE_SERVICES_VALUE
     name_ru: "Объём реализации услуг через собственный интернет-ресурс"
@@ -2740,6 +2807,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: валовая добавленная стоимость — поток СНС"
 
   - id: MEDIUM_BUSINESS_VALUE_ADDED
     name_ru: "Валовая добавленная стоимость среднего предпринимательства"
@@ -2749,6 +2818,8 @@ indicators:
     unit: "KZT"
     category: national_accounts
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: валовая добавленная стоимость — поток СНС"
 
   - id: HOUSING_INVESTMENT
     name_ru: "Инвестиции в жилищное строительство"
@@ -2778,6 +2849,8 @@ indicators:
     unit: "persons"
     category: labor
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "паспорт: зачисленных 'в отчетном периоде'"
 
   - id: STATE_DEBT_TOTAL
     name_ru: "Государственный долг РК"
@@ -3043,6 +3116,8 @@ indicators:
     unit: "tonnes"
     category: trade
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "тот же документ, что EXPORTS: оборот за месяц"
 
   - id: OIL_EXPORTS_VALUE
     name_ru: "Экспорт сырой нефти, стоимость"
@@ -3052,6 +3127,8 @@ indicators:
     unit: "thousand USD"
     category: trade
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "тот же документ, что EXPORTS: оборот за месяц"
 
   - id: OIL_PRODUCTION
     name_ru: "Добыча нефти, включая газовый конденсат"
@@ -3183,6 +3260,8 @@ indicators:
     unit: "thousand toe"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "потреблённая за период физическая величина (тыс. т н.э.)"
 
   - id: RENEWABLE_ENERGY_SHARE
     name_ru: "Доля возобновляемых источников энергии в производстве электроэнергии"
@@ -3192,6 +3271,8 @@ indicators:
     unit: "%"
     category: production
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "единица: доля (% от общего потребления)"
 
   - id: GG_TAXES
     name_ru: "Налоговые поступления сектора государственного управления (МВФ методология)"
