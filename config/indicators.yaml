@@ -372,6 +372,8 @@ indicators:
     unit: "%"
     category: international_projection
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "тот же показатель, что LFS-уровень безработицы BNS/NBK (методология подтверждена отдельно)"
 
   - id: IMF_GOV_BALANCE
     name_ru: "IMF WEO: сальдо бюджета сектора госуправления, Казахстан"
@@ -876,6 +878,8 @@ indicators:
     unit: "index"
     category: international_projection
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "кодлист МВФ описывает как ценовой индекс наравне с CPI/PPI"
 
   - id: IMF_REAL_GDP
     name_ru: "IMF WEO: реальный ВВП, национальная валюта"
@@ -3150,6 +3154,8 @@ indicators:
     unit: "USD per barrel"
     category: prices
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "APSP = 'Average Petroleum Spot Price' — простое среднее трёх эталонных сортов"
 
   - id: COMMODITY_TERMS_OF_TRADE
     name_ru: "Условия торговли по сырью (скользящие веса)"
@@ -3159,6 +3165,8 @@ indicators:
     unit: "index"
     category: trade
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "кодлист CTOT: 'June 2012 = 100' — базисный индекс"
 
   - id: COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS
     name_ru: "Условия торговли по сырью (фиксированные веса)"
@@ -3168,6 +3176,8 @@ indicators:
     unit: "index"
     category: trade
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "кодлист CTOT: та же база 'June 2012 = 100'"
 
   - id: OIL_EXPORT_DUTY
     name_ru: "Вывозная таможенная пошлина на сырую нефть"
