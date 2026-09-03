@@ -18,6 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib import pipeline_logging, unified  # noqa: E402
 import update_bns, update_nbk, update_minfin, update_imf, update_ardfm  # noqa: E402
+import build_project_knowledge  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
@@ -52,6 +53,11 @@ def main() -> int:
               file=sys.stderr)
         _write_report(run_ts, logger, unified_updated=True, tests_passed=False)
         return 1
+
+    # Refresh project_knowledge/ only once the data behind it is known-good --
+    # this is the only folder synced into the Claude Project, so it should
+    # never be left pointing at a run that failed validation or tests.
+    build_project_knowledge.main()
 
     _write_report(run_ts, logger, unified_updated=True, tests_passed=True)
     print("update_all: completed successfully. Review changes and commit "

@@ -3212,3 +3212,39 @@ alone here.
 Verified live across all four agencies that carry a `year_to_date` series — BNS (145/145), Minfin
 (79/79), NBK (142/142), ARDFM (30/30) — plus a clean import of `update_imf.py`, whose edit is a
 provable no-op: IMF carries zero `year_to_date` indicators. 32/32 tests (29 plus the three new).
+
+## 2026-09-04 — this folder had not been current since 2026-09-01
+
+`build_project_knowledge.py` regenerates `DATA_CATALOG.md`, `DATA_DICTIONARY.md`, `SOURCES.md` and
+`latest/{macro_latest.csv,macro_metadata.json}` — the only files that reach the Claude Project
+"Экономика Казахстана" once someone clicks Sync now. Its own docstring says to run it after
+`update_all.py`. Nothing ever called it: not `update_all.py`, whose own docstring lists "refresh
+metadata/project_knowledge" as one of its steps and then doesn't do it, and not the CI workflow,
+which only calls `update_all.py`. Every file in this folder except this log — the one file edited by
+hand all session — carried a 2026-09-01 timestamp while the repository moved from 342 indicators to
+430, gained the entire `observation_type`/`comparison_basis`/`cumulation` field system, and added a
+fifth agency. None of that had reached the folder this pipeline exists to keep current.
+
+`SOURCES.md` is the clearest proof: it listed four agencies. ARDFM — added 2026-09-02, 30 indicators
+— had no row, because nothing had regenerated the file since before ARDFM existed.
+
+Fixed by calling `build_project_knowledge.main()` from `update_all.py`, placed after the test gate
+passes and before the run report is written — so a run that fails validation or tests leaves this
+folder at its last known-good state rather than publishing something broken, which is also why the
+call is a direct one, not wrapped in try/except: a failure here should stop the run loudly, the same
+as everywhere else in this pipeline. Regenerated now by hand to catch up immediately rather than
+waiting for tomorrow's scheduled run: **430/430 connected**, `SOURCES.md` now lists five agencies.
+
+Also dropped a hardcoded "Stage 1 (15-20 indicator pilot)" from the catalog's own title — the count at
+the bottom of the file is generated from the real total already: no reason for the title to freeze a
+number the moment it was written. Same staleness, smaller instance: `README.md` still said "four
+sources," "18 pilot indicators," and listed `{bns,nbk,minfin,imf}` in the repository layout with
+ARDFM absent from all three. Corrected to the current counts.
+
+**Known gap, not fixed here:** `DATA_DICTIONARY.md`'s per-indicator entries come from
+`metadata/{agency}/{id}.json` — source, unit, frequency, period, methodology, transformation,
+revision status — and that file has no `observation_type`, `comparison_basis`, or `cumulation` field.
+The dictionary synced into the Project still can't tell a reader whether a value is a stock, a flow,
+or a comparison already, or what a comparison is measured against. The metadata this session built
+specifically to answer that question lives in `config/indicators.yaml`, which this generator doesn't
+read from at all.

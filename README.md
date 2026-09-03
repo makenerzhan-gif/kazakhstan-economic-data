@@ -1,38 +1,40 @@
 # Kazakhstan Economic Data Pipeline
 
 Automated collection, validation, processing, and versioning of official
-Kazakhstan macroeconomic data from four sources — Bureau of National
+Kazakhstan macroeconomic data from five sources — Bureau of National
 Statistics (БНС), National Bank of Kazakhstan (НБ РК), Ministry of Finance
-(Минфин), and the IMF — into a unified dataset, with a manual bridge into a
+(Минфин), the Agency for Regulation and Development of the Financial Market
+(АРРФР), and the IMF — into a unified dataset, with a manual bridge into a
 Claude Project for analysis.
 
 ```
-БНС + НБ РК + Минфин + IMF → RAW → VALIDATION → PROCESSED → METADATA →
+БНС + НБ РК + Минфин + АРРФР + IMF → RAW → VALIDATION → PROCESSED → METADATA →
 UNIFIED DATASET → GitHub → (manual "Sync now") → Claude Project "Экономика Казахстана"
 ```
 
-## Stage 1 scope
+## Scope
 
-18 pilot indicators (see `config/indicators.yaml`), all connected end-to-end
-against live official sources, to prove the pipeline before scaling to the
-full 100-150 indicator list. No econometric modeling in this stage — see
-MASTER TASK section 17 for the stage-1 exit criteria.
+430 indicators (see `config/indicators.yaml`), all connected end-to-end
+against live official sources — past the original 18-indicator pilot and its
+100-150 indicator target (MASTER TASK section 17). No econometric modeling
+yet; see `project_knowledge/UPDATE_LOG.md` for the dated history of how the
+dataset grew and what was verified at each step.
 
 ## Repository layout
 
 ```
-data/raw/{bns,nbk,minfin,imf}/       append-only, date-stamped downloads, never edited/deleted
-data/processed/{bns,nbk,minfin,imf}/ cleaned + transformed series
-data/unified/                        macro_long.csv (long format) + macro_wide.csv (wide format)
-metadata/{bns,nbk,minfin,imf}/       one JSON per indicator (source, methodology, dates, ...)
-metadata/revisions/                  logged old->new value changes, never overwritten
-dictionaries/                        data dictionary source files
-project_knowledge/                   the ONLY folder meant to be synced into the Claude Project
-scripts/                             update_<agency>.py, update_all.py, scripts/lib/*
-tests/                                pytest suite
-reports/                             update_report_YYYY-MM-DD.md per run
-config/                              indicators.yaml, sources.yaml, frequency.yaml
-.github/workflows/update.yml         scheduled automated run
+data/raw/{bns,nbk,minfin,ardfm,imf}/       append-only, date-stamped downloads, never edited/deleted
+data/processed/{bns,nbk,minfin,ardfm,imf}/ cleaned + transformed series
+data/unified/                              macro_long.csv (long format) + macro_wide.csv (wide format)
+metadata/{bns,nbk,minfin,ardfm,imf}/       one JSON per indicator (source, methodology, dates, ...)
+metadata/revisions/                        logged old->new value changes, never overwritten
+dictionaries/                              data dictionary source files
+project_knowledge/                         the ONLY folder meant to be synced into the Claude Project
+scripts/                                   update_<agency>.py, update_all.py, scripts/lib/*
+tests/                                     pytest suite
+reports/                                   update_report_YYYY-MM-DD.md per run
+config/                                    indicators.yaml, sources.yaml, frequency.yaml
+.github/workflows/update.yml               scheduled automated run
 ```
 
 ## Running locally
