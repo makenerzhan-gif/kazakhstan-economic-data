@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/labor-and-income/stat-wags/",
+  "dataset_id": "1. Численность наемных работников/Сельское, лесное и рыбное хозяйство/col3",
+  "indicator_id": "AVG_WAGE_AGRICULTURE",
+  "indicator_name": "Average Monthly Wage: Agriculture",
+  "description": "Среднемесячная заработная плата: сельское хозяйство",
+  "frequency": "quarterly",
+  "unit": "KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "KZT per month -- 268,096 in Q1 2026, the LOWEST of the twenty-one activities and 60% of the national average. Agriculture employs far more people than its wage bill suggests.",
+  "publication_date": null,
+  "last_update_date": "2026-09-03",
+  "download_date": "2026-09-03",
+  "period_start": "2026-03-31",
+  "period_end": "2026-03-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

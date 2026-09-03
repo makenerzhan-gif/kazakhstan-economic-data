@@ -2736,3 +2736,51 @@ sitting just below headline is the expected relationship.
   than the structural probes used elsewhere.
 
 Verified live: 133/133 BNS fetchers OK, 29/29 tests passing.
+
+## 2026-09-03 — wages by economic activity (430 indicators, 14,929 observations)
+
+Twelve series — average wage and real wage index for mining, manufacturing, agriculture,
+construction, finance and education — from **the same sheet that already supplied
+`AVG_WAGE_QUARTERLY`**. That fetcher read the `Всего` row; twenty more sit below it, one per
+activity. This is the fourth time in this project that a gap turned out to be inside a source
+already connected.
+
+### The aggregate hides a four-to-one spread
+
+| activity | wage, KZT | real index |
+|---|---|---|
+| mining and quarrying | 1,020,632 | 99.1 |
+| finance and insurance | 941,411 | 104.6 |
+| manufacturing | 508,854 | 103.2 |
+| **national average** | **445,068** | **99.8** |
+| construction | 427,282 | 99.3 |
+| education | 315,100 | **93.3** |
+| agriculture | 268,096 | **107.5** |
+
+### The real index is where the sector detail earns its place
+It moves in *opposite directions* across activities while the national figure sits still:
+education 93.3 and arts 93.1 against administrative services 111.6 and transport 104.6, with the
+aggregate at 99.8. Public-sector real pay was falling while private services rose — and
+`REAL_WAGE_INDEX_QUARTERLY` shows neither. Two more pairings worth noting: mining pays the most
+and its real pay was *falling*; agriculture pays the least and had the strongest real gain.
+Construction volumes grew 15.3% year on year while real pay in the sector did not.
+
+Six activities were taken rather than all twenty-one — they span the wage distribution and the
+public/private divide, which is what the aggregate cannot show. The rest are on the same sheet
+with the same lookup. Rows are matched exactly rather than by prefix, since "Горнодобывающая
+промышленность и разработка карьеров" and "Обрабатывающая промышленность" end in the same word.
+
+### ARDFM's other sector bulletins are discontinued
+Checked by title: pension latest 01.12.2020, securities market 01.10.2011, non-banking 01.04.2024,
+microfinance 2023, insurance 2005–2011 with no dated editions. Searching for current replacements
+returned only regulatory acts. Only the banking bulletin is maintained.
+
+### A correction to my own method
+I first reported "3,200 ARDFM documents, none updated in 2026". **That was false** — the banking
+bulletins carry 2026 update dates. The `projects=ardfm` pagination is broken: pages 0 and 1 come
+back identical, 500 unique ids out of 600 fetched, and the ordering reaches 2008–2010 by page 5
+without surfacing recent items. No sort parameter is accepted. The title filter is the only
+reliable access path, so absence found by paging that endpoint is not evidence of anything, and
+the scope note now says so.
+
+Verified live: 145/145 BNS fetchers OK, 29/29 tests passing.

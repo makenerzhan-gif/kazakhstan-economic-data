@@ -13833,6 +13833,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-29,KZ,national,daily,TONIA,17.81,%,nbk,2026-09-02,level,2026-09-02
 2026-03-30,KZ,national,daily,EXCHANGE_RATE,482.53,KZT per 1 USD,nbk,2026-09-02,level,2026-09-02
 2026-03-30,KZ,national,daily,TONIA,17.81,%,nbk,2026-09-02,level,2026-09-02
+2026-03-31,KZ,national,quarterly,AVG_WAGE_AGRICULTURE,268096.0,KZT,bns,2026-09-03,level,2026-09-03
+2026-03-31,KZ,national,quarterly,AVG_WAGE_CONSTRUCTION,427282.0,KZT,bns,2026-09-03,level,2026-09-03
+2026-03-31,KZ,national,quarterly,AVG_WAGE_EDUCATION,315100.0,KZT,bns,2026-09-03,level,2026-09-03
+2026-03-31,KZ,national,quarterly,AVG_WAGE_FINANCE,941411.0,KZT,bns,2026-09-03,level,2026-09-03
+2026-03-31,KZ,national,quarterly,AVG_WAGE_MANUFACTURING,508854.0,KZT,bns,2026-09-03,level,2026-09-03
+2026-03-31,KZ,national,quarterly,AVG_WAGE_MINING,1020632.0,KZT,bns,2026-09-03,level,2026-09-03
 2026-03-31,KZ,national,quarterly,AVG_WAGE_QUARTERLY,445068.0,KZT,bns,2026-09-03,level,2026-09-03
 2026-03-31,KZ,national,quarterly,BUDGET_FINANCING_BANKS,776687.8649514401,"million KZT, flow during the quarter",minfin,2026-09-02,level,2026-09-02
 2026-03-31,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,482264.72980344994,"million KZT, flow during the quarter",minfin,2026-09-02,level,2026-09-02
@@ -13876,6 +13882,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-31,KZ,national,quarterly,POVERTY_DEPTH,0.9,%,bns,2026-09-03,level,2026-09-03
 2026-03-31,KZ,national,quarterly,POVERTY_SEVERITY,0.2,%,bns,2026-09-03,level,2026-09-03
 2026-03-31,KZ,national,irregular,PROPERTY_TAX,143953.60676457,"million KZT, year-to-date cumulative",minfin,2026-09-02,level,2026-09-02
+2026-03-31,KZ,national,quarterly,REAL_WAGE_INDEX_AGRICULTURE,107.5,index (same quarter previous year = 100),bns,2026-09-03,level,2026-09-03
+2026-03-31,KZ,national,quarterly,REAL_WAGE_INDEX_CONSTRUCTION,99.3,index (same quarter previous year = 100),bns,2026-09-03,level,2026-09-03
+2026-03-31,KZ,national,quarterly,REAL_WAGE_INDEX_EDUCATION,93.3,index (same quarter previous year = 100),bns,2026-09-03,level,2026-09-03
+2026-03-31,KZ,national,quarterly,REAL_WAGE_INDEX_FINANCE,104.6,index (same quarter previous year = 100),bns,2026-09-03,level,2026-09-03
+2026-03-31,KZ,national,quarterly,REAL_WAGE_INDEX_MANUFACTURING,103.2,index (same quarter previous year = 100),bns,2026-09-03,level,2026-09-03
+2026-03-31,KZ,national,quarterly,REAL_WAGE_INDEX_MINING,99.1,index (same quarter previous year = 100),bns,2026-09-03,level,2026-09-03
 2026-03-31,KZ,national,quarterly,REAL_WAGE_INDEX_QUARTERLY,99.8,index (same quarter previous year = 100),bns,2026-09-03,level,2026-09-03
 2026-03-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,-392139.04807355,million KZT,minfin,2026-09-02,level,2026-09-02
 2026-03-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,7624321.89407335,million KZT,minfin,2026-09-02,level,2026-09-02

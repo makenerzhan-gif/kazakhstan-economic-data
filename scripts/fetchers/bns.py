@@ -4149,3 +4149,149 @@ def fetch_core_cpi_qoq_ex7() -> tuple[list[dict], dict]:
         "CORE_CPI_QOQ_EX7",
         "Index, previous quarter = 100 -- 102.6 for Q2 2026. Momentum on the narrower core "
         "basket, the companion to CORE_CPI_YOY_EX7.")
+
+
+# ---------------------------------------------------------------------------
+# WAGES BY ECONOMIC ACTIVITY, from the same quarterly publication that already
+# supplies AVG_WAGE_QUARTERLY -- sheet 1 carries the 'Всего' row this project
+# was reading and twenty more rows below it, one per activity. Another case of
+# an already-connected source not being read to the end.
+#
+# WHY IT MATTERS: the national average of 445,068 KZT hides a spread of nearly
+# four to one. Mining and quarrying pays 1,020,632 and agriculture 268,096.
+# Finance pays 941,411, education 315,100.
+#
+# THE REAL WAGE INDEX MATTERS MORE THAN THE LEVEL HERE, and it moves in
+# opposite directions across sectors: education 93.3 and arts 93.1 against
+# administrative services 111.6 and transport 104.6, with the national figure
+# at 99.8. Public-sector real pay was falling while private services rose --
+# the national series alone shows neither.
+#
+# Six activities are taken rather than all twenty-one: they span the wage
+# distribution and the public/private divide, which is what the aggregate
+# cannot show. The rest are available on the same sheet with the same row
+# lookup if they are ever wanted.
+#
+# Rows are matched EXACTLY, not by prefix: 'Промышленность' is a prefix of
+# nothing here, but 'Горнодобывающая промышленность и разработка карьеров' and
+# 'Обрабатывающая промышленность' both end in the same word, and an exact match
+# removes any question. The column layout is the same eight-value one described
+# for AVG_WAGE_QUARTERLY.
+# ---------------------------------------------------------------------------
+WAGE_SECTOR_ROWS = {
+    "MINING": "Горнодобывающая промышленность и разработка карьеров",
+    "MANUFACTURING": "Обрабатывающая промышленность",
+    "AGRICULTURE": "Сельское, лесное и рыбное хозяйство",
+    "CONSTRUCTION": "Строительство",
+    "FINANCE": "Финансовая и страховая деятельность",
+    "EDUCATION": "Образование",
+}
+WAGE_COL_LEVEL = 3          # среднемесячная заработная плата, KZT
+WAGE_COL_REAL_YOY = 7       # индекс реальной заработной платы к соответствующему кварталу
+
+
+def _fetch_sector_wage(sector: str, value_index: int, indicator_id: str, note: str,
+                       unit: str) -> tuple[list[dict], dict]:
+    return _fetch_quarterly_publication_row(
+        WAGES_PAGE_URL, "1", WAGES_SHEET_TITLE, WAGE_SECTOR_ROWS[sector],
+        value_index, True, indicator_id, note, unit)
+
+
+def fetch_avg_wage_mining() -> tuple[list[dict], dict]:
+    """Average monthly wage in mining and quarrying, KZT, quarterly."""
+    return _fetch_sector_wage(
+        "MINING", WAGE_COL_LEVEL, "AVG_WAGE_MINING",
+        "KZT per month. The highest-paying activity in Kazakhstan -- 1,020,632 in Q1 2026, 2.3 "
+        "times the national average and 3.8 times agriculture. This is where oil sector pay sits, "
+        "so it moves with commodity earnings rather than with domestic demand.", "KZT")
+
+
+def fetch_avg_wage_manufacturing() -> tuple[list[dict], dict]:
+    """Average monthly wage in manufacturing, KZT, quarterly."""
+    return _fetch_sector_wage(
+        "MANUFACTURING", WAGE_COL_LEVEL, "AVG_WAGE_MANUFACTURING",
+        "KZT per month -- 508,854 in Q1 2026, half what mining pays. Read against AVG_WAGE_MINING "
+        "for the pay gap between the resource and processing halves of industry, which is the "
+        "same divide MANUFACTURING_OUTPUT and MINING_OUTPUT measure in volume terms.", "KZT")
+
+
+def fetch_avg_wage_agriculture() -> tuple[list[dict], dict]:
+    """Average monthly wage in agriculture, forestry and fishing, KZT, quarterly."""
+    return _fetch_sector_wage(
+        "AGRICULTURE", WAGE_COL_LEVEL, "AVG_WAGE_AGRICULTURE",
+        "KZT per month -- 268,096 in Q1 2026, the LOWEST of the twenty-one activities and 60% of "
+        "the national average. Agriculture employs far more people than its wage bill suggests.",
+        "KZT")
+
+
+def fetch_avg_wage_construction() -> tuple[list[dict], dict]:
+    """Average monthly wage in construction, KZT, quarterly."""
+    return _fetch_sector_wage(
+        "CONSTRUCTION", WAGE_COL_LEVEL, "AVG_WAGE_CONSTRUCTION",
+        "KZT per month -- 427,282 in Q1 2026, just below the national average despite construction "
+        "output growing 15.3% year on year.", "KZT")
+
+
+def fetch_avg_wage_finance() -> tuple[list[dict], dict]:
+    """Average monthly wage in finance and insurance, KZT, quarterly."""
+    return _fetch_sector_wage(
+        "FINANCE", WAGE_COL_LEVEL, "AVG_WAGE_FINANCE",
+        "KZT per month -- 941,411 in Q1 2026, second only to mining and more than twice the "
+        "national average.", "KZT")
+
+
+def fetch_avg_wage_education() -> tuple[list[dict], dict]:
+    """Average monthly wage in education, KZT, quarterly."""
+    return _fetch_sector_wage(
+        "EDUCATION", WAGE_COL_LEVEL, "AVG_WAGE_EDUCATION",
+        "KZT per month -- 315,100 in Q1 2026, 71% of the national average. Paired with "
+        "REAL_WAGE_INDEX_EDUCATION, which is the sector where real pay fell fastest.", "KZT")
+
+
+def fetch_real_wage_index_mining() -> tuple[list[dict], dict]:
+    """Real wage index in mining, same quarter previous year = 100."""
+    return _fetch_sector_wage(
+        "MINING", WAGE_COL_REAL_YOY, "REAL_WAGE_INDEX_MINING",
+        "Index, same quarter of the previous year = 100 -- 99.1 in Q1 2026. Real pay in the "
+        "highest-paying sector was flat to falling even as the national figure held at 99.8.", "index (same quarter previous year = 100)")
+
+
+def fetch_real_wage_index_manufacturing() -> tuple[list[dict], dict]:
+    """Real wage index in manufacturing, same quarter previous year = 100."""
+    return _fetch_sector_wage(
+        "MANUFACTURING", WAGE_COL_REAL_YOY, "REAL_WAGE_INDEX_MANUFACTURING",
+        "Index, same quarter of the previous year = 100 -- 103.2 in Q1 2026, one of the sectors "
+        "where real pay rose.", "index (same quarter previous year = 100)")
+
+
+def fetch_real_wage_index_agriculture() -> tuple[list[dict], dict]:
+    """Real wage index in agriculture, same quarter previous year = 100."""
+    return _fetch_sector_wage(
+        "AGRICULTURE", WAGE_COL_REAL_YOY, "REAL_WAGE_INDEX_AGRICULTURE",
+        "Index, same quarter of the previous year = 100 -- 107.5 in Q1 2026, the strongest real "
+        "gain of the six sectors carried here, from the lowest base.", "index (same quarter previous year = 100)")
+
+
+def fetch_real_wage_index_construction() -> tuple[list[dict], dict]:
+    """Real wage index in construction, same quarter previous year = 100."""
+    return _fetch_sector_wage(
+        "CONSTRUCTION", WAGE_COL_REAL_YOY, "REAL_WAGE_INDEX_CONSTRUCTION",
+        "Index, same quarter of the previous year = 100 -- 99.3 in Q1 2026. Construction volumes "
+        "grew 15.3% year on year while real pay in the sector did not.", "index (same quarter previous year = 100)")
+
+
+def fetch_real_wage_index_finance() -> tuple[list[dict], dict]:
+    """Real wage index in finance and insurance, same quarter previous year = 100."""
+    return _fetch_sector_wage(
+        "FINANCE", WAGE_COL_REAL_YOY, "REAL_WAGE_INDEX_FINANCE",
+        "Index, same quarter of the previous year = 100 -- 104.6 in Q1 2026.", "index (same quarter previous year = 100)")
+
+
+def fetch_real_wage_index_education() -> tuple[list[dict], dict]:
+    """Real wage index in education, same quarter previous year = 100."""
+    return _fetch_sector_wage(
+        "EDUCATION", WAGE_COL_REAL_YOY, "REAL_WAGE_INDEX_EDUCATION",
+        "Index, same quarter of the previous year = 100 -- 93.3 in Q1 2026, the sharpest real "
+        "decline of the six sectors carried here and 6.5 points below the national figure of 99.8. "
+        "Public-sector real pay was falling while private services rose; neither is visible in the "
+        "aggregate REAL_WAGE_INDEX_QUARTERLY.", "index (same quarter previous year = 100)")

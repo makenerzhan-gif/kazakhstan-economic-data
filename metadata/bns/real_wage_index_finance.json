@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/labor-and-income/stat-wags/",
+  "dataset_id": "1. Численность наемных работников/Финансовая и страховая деятельность/col7",
+  "indicator_id": "REAL_WAGE_INDEX_FINANCE",
+  "indicator_name": "Real Wage Index: Finance and Insurance",
+  "description": "Индекс реальной заработной платы: финансовая и страховая деятельность",
+  "frequency": "quarterly",
+  "unit": "index (same quarter previous year = 100)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, same quarter of the previous year = 100 -- 104.6 in Q1 2026.",
+  "publication_date": null,
+  "last_update_date": "2026-09-03",
+  "download_date": "2026-09-03",
+  "period_start": "2026-03-31",
+  "period_end": "2026-03-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

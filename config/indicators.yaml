@@ -3775,3 +3775,111 @@ indicators:
     unit: "index (previous quarter = 100)"
     category: prices
     source_status: confirmed
+
+  - id: AVG_WAGE_MINING
+    name_ru: "Среднемесячная заработная плата: горнодобывающая промышленность"
+    name_en: "Average Monthly Wage: Mining and Quarrying"
+    agency: bns
+    frequency: quarterly
+    unit: "KZT"
+    category: labor
+    source_status: confirmed
+
+  - id: REAL_WAGE_INDEX_MINING
+    name_ru: "Индекс реальной заработной платы: горнодобывающая промышленность"
+    name_en: "Real Wage Index: Mining and Quarrying"
+    agency: bns
+    frequency: quarterly
+    unit: "index (same quarter previous year = 100)"
+    category: labor
+    source_status: confirmed
+
+  - id: AVG_WAGE_MANUFACTURING
+    name_ru: "Среднемесячная заработная плата: обрабатывающая промышленность"
+    name_en: "Average Monthly Wage: Manufacturing"
+    agency: bns
+    frequency: quarterly
+    unit: "KZT"
+    category: labor
+    source_status: confirmed
+
+  - id: REAL_WAGE_INDEX_MANUFACTURING
+    name_ru: "Индекс реальной заработной платы: обрабатывающая промышленность"
+    name_en: "Real Wage Index: Manufacturing"
+    agency: bns
+    frequency: quarterly
+    unit: "index (same quarter previous year = 100)"
+    category: labor
+    source_status: confirmed
+
+  - id: AVG_WAGE_AGRICULTURE
+    name_ru: "Среднемесячная заработная плата: сельское хозяйство"
+    name_en: "Average Monthly Wage: Agriculture"
+    agency: bns
+    frequency: quarterly
+    unit: "KZT"
+    category: labor
+    source_status: confirmed
+
+  - id: REAL_WAGE_INDEX_AGRICULTURE
+    name_ru: "Индекс реальной заработной платы: сельское хозяйство"
+    name_en: "Real Wage Index: Agriculture"
+    agency: bns
+    frequency: quarterly
+    unit: "index (same quarter previous year = 100)"
+    category: labor
+    source_status: confirmed
+
+  - id: AVG_WAGE_CONSTRUCTION
+    name_ru: "Среднемесячная заработная плата: строительство"
+    name_en: "Average Monthly Wage: Construction"
+    agency: bns
+    frequency: quarterly
+    unit: "KZT"
+    category: labor
+    source_status: confirmed
+
+  - id: REAL_WAGE_INDEX_CONSTRUCTION
+    name_ru: "Индекс реальной заработной платы: строительство"
+    name_en: "Real Wage Index: Construction"
+    agency: bns
+    frequency: quarterly
+    unit: "index (same quarter previous year = 100)"
+    category: labor
+    source_status: confirmed
+
+  - id: AVG_WAGE_FINANCE
+    name_ru: "Среднемесячная заработная плата: финансовая и страховая деятельность"
+    name_en: "Average Monthly Wage: Finance and Insurance"
+    agency: bns
+    frequency: quarterly
+    unit: "KZT"
+    category: labor
+    source_status: confirmed
+
+  - id: REAL_WAGE_INDEX_FINANCE
+    name_ru: "Индекс реальной заработной платы: финансовая и страховая деятельность"
+    name_en: "Real Wage Index: Finance and Insurance"
+    agency: bns
+    frequency: quarterly
+    unit: "index (same quarter previous year = 100)"
+    category: labor
+    source_status: confirmed
+
+  - id: AVG_WAGE_EDUCATION
+    name_ru: "Среднемесячная заработная плата: образование"
+    name_en: "Average Monthly Wage: Education"
+    agency: bns
+    frequency: quarterly
+    unit: "KZT"
+    category: labor
+    source_status: confirmed
+
+  - id: REAL_WAGE_INDEX_EDUCATION
+    name_ru: "Индекс реальной заработной платы: образование"
+    name_en: "Real Wage Index: Education"
+    agency: bns
+    frequency: quarterly
+    unit: "index (same quarter previous year = 100)"
+    category: labor
+    source_status: confirmed

@@ -756,6 +756,109 @@ agencies:
         notes: >
           2026-09-03. Same index and basket, period-on-period comparison. 102.6 for Q2 2026.
 
+      AVG_WAGE_MINING:
+        status: confirmed
+        page_url: "https://stat.gov.kz/ru/industries/labor-and-income/stat-wags/"
+        format: xlsx
+        notes: >
+          2026-09-03. Sheet 1 of the quarterly wages publication -- the SAME sheet that already
+          supplied AVG_WAGE_QUARTERLY. That fetcher read the 'Всего' row; twenty more rows sit
+          below it, one per economic activity. Another case of an already-connected source not
+          being read to the end, which is now the fourth such finding in this project.
+          Six activities are taken rather than all twenty-one: they span the wage distribution and
+          the public/private divide, which is what the aggregate cannot show. The rest are on the
+          same sheet with the same lookup if wanted.
+          Rows are matched EXACTLY rather than by prefix, because 'Горнодобывающая промышленность
+          и разработка карьеров' and 'Обрабатывающая промышленность' both end in the same word.
+          Mining is the highest-paying activity: 1,020,632 KZT in Q1 2026, 2.3x the national
+          average of 445,068 and 3.8x agriculture's 268,096.
+      AVG_WAGE_MANUFACTURING:
+        status: confirmed
+        format: xlsx
+        notes: >
+          2026-09-03. 508,854 KZT in Q1 2026, half what mining pays. Read against AVG_WAGE_MINING
+          for the pay gap between the resource and processing halves of industry -- the same
+          divide MINING_OUTPUT and MANUFACTURING_OUTPUT measure in volume terms.
+      AVG_WAGE_AGRICULTURE:
+        status: confirmed
+        format: xlsx
+        notes: >
+          2026-09-03. 268,096 KZT in Q1 2026 -- the LOWEST of the twenty-one activities, 60% of
+          the national average.
+      AVG_WAGE_CONSTRUCTION:
+        status: confirmed
+        format: xlsx
+        notes: >
+          2026-09-03. 427,282 KZT in Q1 2026, just below the national average, while construction
+          output grew 15.3% year on year (CONSTRUCTION_INDEX).
+      AVG_WAGE_FINANCE:
+        status: confirmed
+        format: xlsx
+        notes: >
+          2026-09-03. 941,411 KZT in Q1 2026, second only to mining.
+      AVG_WAGE_EDUCATION:
+        status: confirmed
+        format: xlsx
+        notes: >
+          2026-09-03. 315,100 KZT in Q1 2026, 71% of the national average.
+      REAL_WAGE_INDEX_EDUCATION:
+        status: confirmed
+        format: xlsx
+        notes: >
+          2026-09-03. 93.3 in Q1 2026 -- the sharpest real decline of the six sectors carried and
+          6.5 points below the national 99.8.
+          THE REAL INDEX IS WHERE THE SECTOR DETAIL EARNS ITS PLACE. It moves in OPPOSITE
+          directions across activities while the national figure sits still: education 93.3 and
+          arts 93.1 against administrative services 111.6 and transport 104.6, with the aggregate
+          at 99.8. Public-sector real pay was falling while private services rose, and neither
+          shows up in REAL_WAGE_INDEX_QUARTERLY.
+      REAL_WAGE_INDEX_MINING:
+        status: confirmed
+        format: xlsx
+        notes: >
+          2026-09-03. 99.1 in Q1 2026 -- real pay flat to falling in the highest-paying sector.
+      REAL_WAGE_INDEX_MANUFACTURING:
+        status: confirmed
+        format: xlsx
+        notes: >
+          2026-09-03. 103.2 in Q1 2026.
+      REAL_WAGE_INDEX_AGRICULTURE:
+        status: confirmed
+        format: xlsx
+        notes: >
+          2026-09-03. 107.5 in Q1 2026 -- the strongest real gain of the six, from the lowest base.
+      REAL_WAGE_INDEX_CONSTRUCTION:
+        status: confirmed
+        format: xlsx
+        notes: >
+          2026-09-03. 99.3 in Q1 2026: construction volumes grew 15.3% year on year while real pay
+          in the sector did not.
+      REAL_WAGE_INDEX_FINANCE:
+        status: confirmed
+        format: xlsx
+        notes: >
+          2026-09-03. 104.6 in Q1 2026.
+
+      ARDFM_NON_BANKING_BULLETINS (scope note):
+        status: not_connected
+        notes: >
+          2026-09-03. ARDFM's other sector bulletins were checked by title and are ALL
+          DISCONTINUED in this content type, so only the banking one is current:
+            'Текущее состояние накопительной пенсионной системы'  -- latest 01.12.2020
+            'Текущее состояние рынка ценных бумаг'                -- latest 01.10.2011
+            'Текущее состояние небанковского сектора'             -- latest 01.04.2024
+            'Текущее состояние микрофинансовых организаций'       -- latest 2023
+            'Текущее состояние страхового сектора'                -- 2005-2011, no dated editions
+          Searching for current replacements under 'страхового рынка', 'пенсионных активов' and
+          'ЕНПФ' returned only regulatory acts, not statistics.
+          A CORRECTION TO METHOD, worth recording: an attempt to enumerate ARDFM by paging
+          projects=ardfm reported "3,200 documents, none updated in 2026", which is FALSE -- the
+          banking bulletins carry 2026 update dates. The pagination is broken: pages 0 and 1 come
+          back identical, 500 unique ids out of 600 fetched, and the ordering reaches 2008-2010 by
+          page 5 without ever surfacing recent items. No sort parameter is accepted (sort, order
+          and sort_by all return 400). The title filter is the only reliable access path here, so
+          absence found by paging is not evidence of anything.
+
       MINIMUM_WAGE (scope note):
         status: not_found
         notes: >
