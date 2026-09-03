@@ -13,7 +13,7 @@ from datetime import date, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib import metadata, pipeline_logging, processed_store, revisions, validation  # noqa: E402
+from lib import periods, metadata, pipeline_logging, processed_store, revisions, validation  # noqa: E402
 from fetchers import ardfm as ardfm_fetchers  # noqa: E402
 
 AGENCY = "ardfm"
@@ -120,6 +120,15 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
             ))
             continue
 
+        # Normalise BEFORE validating, so the validator judges what will actually
+        # be stored. Validating first made validate_period_convention warn about
+        # dates the very next step was about to fix -- 24 false warnings on the
+        # first run after the convention change. write_processed still
+        # normalises as a backstop for any other caller.
+        _meta = _indicator_meta(indicator_id)
+        records = periods.normalise(
+            records, manifest_info.get("frequency") or _meta["frequency"],
+            _meta.get("observation_type"))
         result = validation.run_all(records, indicator_id, expected_frequency=manifest_info.get("frequency", "monthly"))
         status = "ok" if result.ok else "error"
         if not result.ok:
@@ -136,7 +145,9 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
             revisions.append_revisions(revs)
 
         transformation = manifest_info.get("transformation", "level")
-        processed_store.write_processed(AGENCY, indicator_id, records, transformation=transformation)
+        processed_store.write_processed(
+            AGENCY, indicator_id, records, transformation=transformation,
+            frequency=manifest_info.get("frequency") or _indicator_meta(indicator_id)["frequency"])
 
         ind = _indicator_meta(indicator_id)
         metadata.DatasetMetadata(

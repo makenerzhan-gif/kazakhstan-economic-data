@@ -2868,3 +2868,53 @@ and for the six not-spliceable cases it would not even produce a continuous seri
 
 The catalogue artifact was rebuilt on the new numbers (15,072 observations) with a status column,
 a "only marked" filter, and the reason on hover.
+
+## 2026-09-03 — observation type as a field, and the date convention derived from it
+
+A note from the user: an indicator can be measured **as at a date** (1 January 2026) or **over a
+period** (January–March 2026), comparisons run year-on-year, quarter-on-quarter, month-on-month or
+date-against-the-same-date, and the source states which. None of that was recorded anywhere in the
+dataset — and I had already been stopped by exactly this distinction, then worked around it.
+
+`TAX_ARREARS_TOTAL` is недоимка, a **stock** read "as at" its date. `PENSION_CONTRIBUTIONS_RECEIVED`
+sits on the same sheet with the same date and is поступления, a **flow** over a year. That is why
+annual dates were left alone in the convention sweep. The right answer was not "leave it" — it was
+"record what the number is".
+
+### The information cannot be recovered from prose
+An automated pass over `sources.yaml` notes classified 51 indicators. On manual review roughly
+**thirty were wrong**. The exchange rate for the yuan and the National Fund stabilisation portfolio
+were filed as "year-to-date" because that phrase appears in their notes describing something else
+in the same table; `RETAIL_TRADE_MONTHLY` was filed as cumulative even though its own note says
+"single month (not cumulative)". Three index series were filed as totals.
+
+So the field is populated **only from source documents read directly**, and every entry carries the
+evidence: "сноска: среднегодовые за 12 месяцев", "обложка: Январь-июль 2026 года", "колонка 2:
+отдельный месяц".
+
+| `observation_type` | count | meaning |
+|---|---|---|
+| `point_in_time` | 28 | a stock or rate **as at** the date |
+| `period_total` | 23 | a flow **over** the period — 7 of them `cumulation: year_to_date` |
+| `period_average` | 20 | an average over the period |
+| `comparison_index` | 21 | the value **is** a comparison between two periods |
+
+**92 of 430.** The other 338 carry no type at all — a visible, tracked gap rather than a silent
+default. Filling it means re-reading each source, which is the only way it can be filled honestly.
+
+### The type now drives the date convention
+`point_in_time` series are exempt from normalisation: their date **is** the measurement, and a
+balance at 30 June is not a balance at 1 June. That settles the annual question on the merits
+instead of by majority vote, and it is why `lib/periods.py` takes the type as an argument.
+
+### Two duplicates fell out
+`EXPORT_PRICE_INDEX` and `IMPORT_PRICE_INDEX` each held June 2026 **twice** — 127.8 at both
+2026-06-01 and 2026-06-30 — a duplicate created by my own partial fix, where the fetcher had moved
+to month-start while the stored file still held month-end and the accumulate merge kept both. Same
+value, so nothing was lost; the count fell from 15,072 to 15,070 because two duplicates went away.
+
+Verified live: 430/430 in a clean full run, zero convention warnings, 29/29 tests.
+
+### Still only in prose
+The comparison basis of the 21 index series — year-on-year, month-on-month, against December —
+lives in the note and the unit string. That is the next field of the same kind.

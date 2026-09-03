@@ -50,6 +50,8 @@ indicators:
     unit: "% change vs previous month"
     category: prices
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к предыдущему месяцу"
 
   - id: UNEMPLOYMENT
     name_ru: "Уровень безработицы"
@@ -100,6 +102,8 @@ indicators:
     unit: "% p.a."
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "ставка, действующая с даты решения"
 
   - id: EXCHANGE_RATE
     name_ru: "Официальный курс USD/KZT"
@@ -109,6 +113,8 @@ indicators:
     unit: "KZT per 1 USD"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "официальный курс на дату"
 
   - id: M2
     name_ru: "Денежная масса M2"
@@ -2673,6 +2679,8 @@ indicators:
     unit: "thousand tonnes"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "колонка отчётного месяца, не накопление"
 
   - id: INDUSTRIAL_OUTPUT
     name_ru: "Объём промышленного производства"
@@ -2682,6 +2690,8 @@ indicators:
     unit: "million KZT"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "колонка отчётного месяца, не накопление"
 
   - id: INDUSTRIAL_PRODUCTION_INDEX
     name_ru: "Индекс промышленного производства (г/г)"
@@ -2691,6 +2701,8 @@ indicators:
     unit: "index, same month previous year = 100"
     category: production
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему месяцу прошлого года"
 
   - id: MINING_OUTPUT
     name_ru: "Объём горнодобывающей промышленности"
@@ -2700,6 +2712,8 @@ indicators:
     unit: "million KZT"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "колонка отчётного месяца, не накопление"
 
   - id: MANUFACTURING_OUTPUT
     name_ru: "Объём обрабатывающей промышленности"
@@ -2709,6 +2723,8 @@ indicators:
     unit: "million KZT"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "колонка отчётного месяца, не накопление"
 
   - id: INVESTMENT_FIXED_CAPITAL
     name_ru: "Инвестиции в основной капитал (накопленным итогом)"
@@ -2718,6 +2734,9 @@ indicators:
     unit: "thousand KZT, year-to-date cumulative"
     category: investment
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "колонка: к соответствующему ПЕРИОДУ"
 
   - id: INVESTMENT_INDEX
     name_ru: "Индекс инвестиций в основной капитал"
@@ -2727,6 +2746,8 @@ indicators:
     unit: "index, same period previous year = 100"
     category: investment
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему периоду прошлого года"
 
   - id: EXPORT_PRICE_INDEX
     name_ru: "Индекс цен экспортных поставок"
@@ -2736,6 +2757,8 @@ indicators:
     unit: "index, same month previous year = 100"
     category: prices
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему месяцу прошлого года"
 
   - id: IMPORT_PRICE_INDEX
     name_ru: "Индекс цен импортных поступлений"
@@ -2745,6 +2768,8 @@ indicators:
     unit: "index, same month previous year = 100"
     category: prices
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему месяцу прошлого года"
 
   - id: CPI_YOY
     name_ru: "Инфляция год к году (ИПЦ)"
@@ -2754,6 +2779,8 @@ indicators:
     unit: "index, same month previous year = 100"
     category: prices
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему месяцу прошлого года"
 
   - id: CPI_YTD
     name_ru: "Инфляция с начала года (ИПЦ)"
@@ -2763,6 +2790,8 @@ indicators:
     unit: "index, December of previous year = 100"
     category: prices
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к декабрю прошлого года"
 
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
@@ -3141,6 +3170,8 @@ indicators:
     unit: "thousand KZT"
     category: trade
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "колонка 2: отдельный месяц"
 
   - id: WHOLESALE_TRADE_MONTHLY
     name_ru: "Объём оптовой торговли, помесячно"
@@ -3150,6 +3181,8 @@ indicators:
     unit: "thousand KZT"
     category: trade
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "колонка 2: отдельный месяц"
 
   - id: RETAIL_TRADE_INDEX_MONTHLY
     name_ru: "Индекс физического объёма розничной торговли, помесячно"
@@ -3159,6 +3192,8 @@ indicators:
     unit: "index (same month previous year = 100)"
     category: trade
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему месяцу прошлого года"
 
   - id: WHOLESALE_TRADE_INDEX_MONTHLY
     name_ru: "Индекс физического объёма оптовой торговли, помесячно"
@@ -3168,6 +3203,8 @@ indicators:
     unit: "index (same month previous year = 100)"
     category: trade
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему месяцу прошлого года"
 
   - id: CONSTRUCTION_OUTPUT
     name_ru: "Объём выполненных строительных работ"
@@ -3177,6 +3214,9 @@ indicators:
     unit: "thousand KZT"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "обложка: Январь-июль 2026 года"
 
   - id: CONSTRUCTION_INDEX
     name_ru: "Индекс объёма строительных работ"
@@ -3186,6 +3226,8 @@ indicators:
     unit: "index (same period previous year = 100)"
     category: production
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему периоду прошлого года"
 
   - id: LABOR_FORCE
     name_ru: "Рабочая сила"
@@ -3195,6 +3237,8 @@ indicators:
     unit: "persons"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "обследование рабочей силы за квартал"
 
   - id: LABOR_FORCE_PARTICIPATION_RATE
     name_ru: "Уровень участия в рабочей силе"
@@ -3204,6 +3248,8 @@ indicators:
     unit: "% of population 15+"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "обследование рабочей силы за квартал"
 
   - id: EMPLOYED_QUARTERLY
     name_ru: "Занятое население, поквартально"
@@ -3213,6 +3259,8 @@ indicators:
     unit: "persons"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "обследование рабочей силы за квартал"
 
   - id: UNEMPLOYED_PERSONS
     name_ru: "Безработное население"
@@ -3222,6 +3270,8 @@ indicators:
     unit: "persons"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "обследование рабочей силы за квартал"
 
   - id: YOUTH_UNEMPLOYMENT_RATE
     name_ru: "Уровень молодёжной безработицы"
@@ -3231,6 +3281,8 @@ indicators:
     unit: "%"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "обследование рабочей силы за квартал"
 
   - id: LONG_TERM_UNEMPLOYMENT_RATE
     name_ru: "Уровень долгосрочной безработицы"
@@ -3240,6 +3292,8 @@ indicators:
     unit: "%"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "обследование рабочей силы за квартал"
 
   - id: AVG_WAGE_QUARTERLY
     name_ru: "Среднемесячная номинальная заработная плата, поквартально"
@@ -3249,6 +3303,8 @@ indicators:
     unit: "KZT"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднемесячная за квартал"
 
   - id: REAL_WAGE_INDEX_QUARTERLY
     name_ru: "Индекс реальной заработной платы, поквартально"
@@ -3258,6 +3314,8 @@ indicators:
     unit: "index (same quarter previous year = 100)"
     category: labor
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему кварталу прошлого года"
 
   - id: FREIGHT_TURNOVER_MONTHLY
     name_ru: "Грузооборот, помесячно"
@@ -3267,6 +3325,9 @@ indicators:
     unit: "million tonne-km"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "обложка: Январь-июль 2026 года"
 
   - id: PASSENGER_TURNOVER_MONTHLY
     name_ru: "Пассажирооборот, помесячно"
@@ -3276,6 +3337,9 @@ indicators:
     unit: "million passenger-km"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "обложка: Январь-июль 2026 года"
 
   - id: FREIGHT_CARRIED
     name_ru: "Перевезено грузов"
@@ -3285,6 +3349,9 @@ indicators:
     unit: "thousand tonnes"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "обложка: Январь-июль 2026 года"
 
   - id: PASSENGERS_CARRIED
     name_ru: "Перевезено пассажиров"
@@ -3294,6 +3361,9 @@ indicators:
     unit: "thousand people"
     category: production
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "обложка: Январь-июль 2026 года"
 
   - id: GINI_COEFFICIENT
     name_ru: "Коэффициент Джини"
@@ -3303,6 +3373,8 @@ indicators:
     unit: "coefficient (0-1)"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "обследование домохозяйств за квартал"
 
   - id: DECILE_INCOME_RATIO
     name_ru: "Соотношение доходов 10% наиболее и наименее обеспеченных"
@@ -3312,6 +3384,8 @@ indicators:
     unit: "ratio"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "обследование домохозяйств за квартал"
 
   - id: POVERTY_DEPTH
     name_ru: "Глубина бедности"
@@ -3321,6 +3395,8 @@ indicators:
     unit: "%"
     category: demographic
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "обследование домохозяйств за квартал"
 
   - id: POVERTY_SEVERITY
     name_ru: "Острота бедности"
@@ -3330,6 +3406,8 @@ indicators:
     unit: "%"
     category: demographic
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "обследование домохозяйств за квартал"
 
   - id: BOP_GOODS_BALANCE
     name_ru: "Сальдо баланса товаров"
@@ -3339,6 +3417,8 @@ indicators:
     unit: "million USD"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "квартальный поток платёжного баланса"
 
   - id: BOP_SERVICES_BALANCE
     name_ru: "Сальдо баланса услуг"
@@ -3348,6 +3428,8 @@ indicators:
     unit: "million USD"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "квартальный поток платёжного баланса"
 
   - id: BOP_PRIMARY_INCOME
     name_ru: "Сальдо первичных доходов"
@@ -3357,6 +3439,8 @@ indicators:
     unit: "million USD"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "квартальный поток платёжного баланса"
 
   - id: BOP_SECONDARY_INCOME
     name_ru: "Сальдо вторичных доходов"
@@ -3366,6 +3450,8 @@ indicators:
     unit: "million USD"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "квартальный поток платёжного баланса"
 
   - id: STATE_BUDGET_REVENUE_YTD
     name_ru: "Доходы государственного бюджета, нарастающим итогом"
@@ -3465,6 +3551,8 @@ indicators:
     unit: "thousand transactions"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "транзакции за месяц"
 
   - id: PAYMENT_CARDS_COUNT
     name_ru: "Количество транзакций по платёжным картам"
@@ -3474,6 +3562,8 @@ indicators:
     unit: "thousand transactions"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "транзакции за месяц"
 
   - id: CASHLESS_PAYMENTS_COUNT
     name_ru: "Количество безналичных платежей"
@@ -3483,6 +3573,8 @@ indicators:
     unit: "thousand transactions"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "транзакции за месяц"
 
   - id: CASH_WITHDRAWALS_COUNT
     name_ru: "Количество операций снятия наличных"
@@ -3492,6 +3584,8 @@ indicators:
     unit: "thousand transactions"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "транзакции за месяц"
 
   - id: REMITTANCES_SENT_COUNT
     name_ru: "Количество отправленных денежных переводов"
@@ -3501,6 +3595,8 @@ indicators:
     unit: "thousand transactions"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "транзакции за месяц"
 
   - id: REMITTANCES_RECEIVED_COUNT
     name_ru: "Количество полученных денежных переводов"
@@ -3510,6 +3606,8 @@ indicators:
     unit: "thousand transactions"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "транзакции за месяц"
 
   - id: BANK_NPL_90_SHARE
     name_ru: "Доля займов с просрочкой свыше 90 дней"
@@ -3519,6 +3617,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "доля в портфеле на дату"
 
   - id: BANK_NPL_90_AMOUNT
     name_ru: "Займы с просрочкой свыше 90 дней"
@@ -3528,6 +3628,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "остаток просроченного долга на дату"
 
   - id: BANK_LOANS_TOTAL
     name_ru: "Банковские займы, всего"
@@ -3537,6 +3639,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "остаток основного долга на дату"
 
   - id: BANK_PROVISIONS_IFRS
     name_ru: "Провизии по МСФО"
@@ -3546,6 +3650,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "провизии на отчётную дату"
 
   - id: BANK_CAPITAL_ADEQUACY_K1
     name_ru: "Коэффициент достаточности капитала k1"
@@ -3555,6 +3661,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 12, одна колонка на дату"
 
   - id: BANK_CAPITAL_ADEQUACY_K2
     name_ru: "Коэффициент достаточности капитала k2"
@@ -3564,6 +3672,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 12, одна колонка на дату"
 
   - id: BANK_ROA_MONTHLY
     name_ru: "Рентабельность активов банков (ROA), помесячно"
@@ -3573,6 +3683,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "сноска: среднегодовые за 12 месяцев"
 
   - id: BANK_ROE_MONTHLY
     name_ru: "Рентабельность капитала банков (ROE), помесячно"
@@ -3582,6 +3694,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "сноска: среднегодовые за 12 месяцев"
 
   - id: BANK_NET_INCOME
     name_ru: "Чистый доход банковского сектора"
@@ -3591,6 +3705,9 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "нарастающий итог: 795,9 / 1035,7 / 1195,6"
 
   - id: BANK_ASSETS_TOTAL
     name_ru: "Совокупные активы банков"
@@ -3600,6 +3717,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица баланса на отчётную дату"
 
   - id: BANK_ASSETS_GROSS
     name_ru: "Активы банков без вычета провизий"
@@ -3609,6 +3728,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица баланса на отчётную дату"
 
   - id: BANK_LIABILITIES_TOTAL
     name_ru: "Совокупные обязательства банков"
@@ -3618,6 +3739,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 8, на отчётную дату"
 
   - id: BANK_CLIENT_DEPOSITS
     name_ru: "Вклады клиентов банков"
@@ -3627,6 +3750,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 8, на отчётную дату"
 
   - id: BANK_DEPOSITS_LEGAL_ENTITIES
     name_ru: "Вклады юридических лиц"
@@ -3636,6 +3761,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 9, на отчётную дату"
 
   - id: BANK_DEPOSITS_INDIVIDUALS
     name_ru: "Вклады физических лиц"
@@ -3645,6 +3772,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 9, на отчётную дату"
 
   - id: BANK_DEPOSITS_INDIVIDUALS_FX_SHARE
     name_ru: "Доля вкладов физлиц в инвалюте"
@@ -3654,6 +3783,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "доля на отчётную дату"
 
   - id: BANK_LIQUID_ASSETS
     name_ru: "Высоколиквидные активы банков"
@@ -3663,6 +3794,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "строка: среднемесячное значение"
 
   - id: BANK_ASSETS_TO_GDP
     name_ru: "Отношение активов банков к ВВП"
@@ -3672,6 +3805,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 16, отношение на дату"
 
   - id: BANK_LOANS_TO_GDP
     name_ru: "Отношение ссудного портфеля к ВВП"
@@ -3681,6 +3816,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 16, отношение на дату"
 
   - id: BANK_DEPOSITS_TO_GDP
     name_ru: "Отношение вкладов клиентов к ВВП"
@@ -3690,6 +3827,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 16, отношение на дату"
 
   - id: BANK_LOANS_CORPORATE
     name_ru: "Займы юридическим лицам"
@@ -3699,6 +3838,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "остаток основного долга на дату"
 
   - id: BANK_NPL_90_CORPORATE_SHARE
     name_ru: "Доля просрочки свыше 90 дней, юрлица"
@@ -3708,6 +3849,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "доля в портфеле на дату"
 
   - id: BANK_LOANS_RETAIL
     name_ru: "Займы физическим лицам"
@@ -3717,6 +3860,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "остаток основного долга на дату"
 
   - id: BANK_NPL_90_RETAIL_SHARE
     name_ru: "Доля просрочки свыше 90 дней, физлица"
@@ -3726,6 +3871,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "доля в портфеле на дату"
 
   - id: BANK_LOANS_SME
     name_ru: "Займы МСБ"
@@ -3735,6 +3882,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "остаток основного долга на дату"
 
   - id: BANK_NPL_90_SME_SHARE
     name_ru: "Доля просрочки свыше 90 дней, МСБ"
@@ -3744,6 +3893,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "доля в портфеле на дату"
 
   - id: BANK_SHARE_CAPITAL
     name_ru: "Уставный капитал банков"
@@ -3753,6 +3904,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 11, на отчётную дату"
 
   - id: BANK_TOP5_ASSETS_SHARE
     name_ru: "Доля 5 крупнейших банков в активах"
@@ -3762,6 +3915,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 15, доля на дату"
 
   - id: BANK_TOP5_LOANS_SHARE
     name_ru: "Доля 5 крупнейших банков в ссудном портфеле"
@@ -3771,6 +3926,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 15, доля на дату"
 
   - id: BANK_TOP5_DEPOSITS_SHARE
     name_ru: "Доля 5 крупнейших банков во вкладах"
@@ -3780,6 +3937,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 15, доля на дату"
 
   - id: CORE_CPI_YOY_EX3
     name_ru: "Базовая инфляция без трёх составляющих, год к году"
@@ -3789,6 +3948,8 @@ indicators:
     unit: "index (same month previous year = 100)"
     category: prices
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему периоду прошлого года"
 
   - id: CORE_CPI_MOM_EX3
     name_ru: "Базовая инфляция без трёх составляющих, месяц к месяцу"
@@ -3798,6 +3959,8 @@ indicators:
     unit: "index (previous month = 100)"
     category: prices
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к предыдущему периоду"
 
   - id: CORE_CPI_YOY_EX7
     name_ru: "Базовая инфляция без семи составляющих, год к году"
@@ -3807,6 +3970,8 @@ indicators:
     unit: "index (same month previous year = 100)"
     category: prices
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему периоду прошлого года"
 
   - id: CORE_CPI_MOM_EX7
     name_ru: "Базовая инфляция без семи составляющих, месяц к месяцу"
@@ -3816,6 +3981,8 @@ indicators:
     unit: "index (previous month = 100)"
     category: prices
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к предыдущему периоду"
 
   - id: AVG_WAGE_MINING
     name_ru: "Среднемесячная заработная плата: горнодобывающая промышленность"
@@ -3825,6 +3992,8 @@ indicators:
     unit: "KZT"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднемесячная за квартал"
 
   - id: REAL_WAGE_INDEX_MINING
     name_ru: "Индекс реальной заработной платы: горнодобывающая промышленность"
@@ -3834,6 +4003,8 @@ indicators:
     unit: "index (same quarter previous year = 100)"
     category: labor
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему кварталу прошлого года"
 
   - id: AVG_WAGE_MANUFACTURING
     name_ru: "Среднемесячная заработная плата: обрабатывающая промышленность"
@@ -3843,6 +4014,8 @@ indicators:
     unit: "KZT"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднемесячная за квартал"
 
   - id: REAL_WAGE_INDEX_MANUFACTURING
     name_ru: "Индекс реальной заработной платы: обрабатывающая промышленность"
@@ -3852,6 +4025,8 @@ indicators:
     unit: "index (same quarter previous year = 100)"
     category: labor
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему кварталу прошлого года"
 
   - id: AVG_WAGE_AGRICULTURE
     name_ru: "Среднемесячная заработная плата: сельское хозяйство"
@@ -3861,6 +4036,8 @@ indicators:
     unit: "KZT"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднемесячная за квартал"
 
   - id: REAL_WAGE_INDEX_AGRICULTURE
     name_ru: "Индекс реальной заработной платы: сельское хозяйство"
@@ -3870,6 +4047,8 @@ indicators:
     unit: "index (same quarter previous year = 100)"
     category: labor
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему кварталу прошлого года"
 
   - id: AVG_WAGE_CONSTRUCTION
     name_ru: "Среднемесячная заработная плата: строительство"
@@ -3879,6 +4058,8 @@ indicators:
     unit: "KZT"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднемесячная за квартал"
 
   - id: REAL_WAGE_INDEX_CONSTRUCTION
     name_ru: "Индекс реальной заработной платы: строительство"
@@ -3888,6 +4069,8 @@ indicators:
     unit: "index (same quarter previous year = 100)"
     category: labor
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему кварталу прошлого года"
 
   - id: AVG_WAGE_FINANCE
     name_ru: "Среднемесячная заработная плата: финансовая и страховая деятельность"
@@ -3897,6 +4080,8 @@ indicators:
     unit: "KZT"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднемесячная за квартал"
 
   - id: REAL_WAGE_INDEX_FINANCE
     name_ru: "Индекс реальной заработной платы: финансовая и страховая деятельность"
@@ -3906,6 +4091,8 @@ indicators:
     unit: "index (same quarter previous year = 100)"
     category: labor
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему кварталу прошлого года"
 
   - id: AVG_WAGE_EDUCATION
     name_ru: "Среднемесячная заработная плата: образование"
@@ -3915,6 +4102,8 @@ indicators:
     unit: "KZT"
     category: labor
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднемесячная за квартал"
 
   - id: REAL_WAGE_INDEX_EDUCATION
     name_ru: "Индекс реальной заработной платы: образование"
@@ -3924,3 +4113,5 @@ indicators:
     unit: "index (same quarter previous year = 100)"
     category: labor
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "к соответствующему кварталу прошлого года"

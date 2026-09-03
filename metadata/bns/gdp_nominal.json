@@ -13,8 +13,8 @@
   "publication_date": null,
   "last_update_date": "2026-09-03",
   "download_date": "2026-09-03",
-  "period_start": "2010-03-31",
-  "period_end": "2026-06-30",
+  "period_start": "2010-01-01",
+  "period_end": "2026-04-01",
   "next_update_date": null,
   "transformation": "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",
   "revision_status": "original"

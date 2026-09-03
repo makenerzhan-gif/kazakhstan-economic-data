@@ -6,6 +6,8 @@ change) must STOP the pipeline loudly rather than silently coercing the data.
 """
 from __future__ import annotations
 
+from . import periods
+
 from dataclasses import dataclass, field
 from datetime import datetime
 
@@ -153,6 +155,38 @@ def check_structural_change(expected_columns: set[str], actual_columns: set[str]
         )
 
 
+def validate_period_convention(records: list[dict], indicator_id: str,
+                               expected_frequency: str) -> ValidationResult:
+    """Flag a series whose observation dates mix period-start and period-end.
+
+    This is the check that was missing. validate_frequency measures the GAP
+    between observations, and the gap is 91 days whether a quarter is dated
+    2026-01-01 or 2026-03-31 -- so it passes under either convention and is
+    blind to a series that switches between them mid-history. That blindness
+    is how CPI moved from month-start to month-end dates without anything
+    noticing, silently breaking every join against the other monthly series.
+
+    A series that consistently uses one convention is NOT flagged here, even
+    where that convention is not the project's preferred one: consistency is
+    the property that matters for joining, and annual series are deliberately
+    left on whatever their source implies (see lib/periods.py).
+    """
+    result = ValidationResult(indicator_id=indicator_id)
+    seen = {}
+    for r in records:
+        conv = periods.convention_of(str(r.get("date", "")), expected_frequency)
+        if conv in ("start", "end"):
+            seen.setdefault(conv, []).append(r["date"])
+    if len(seen) > 1:
+        detail = "; ".join(f"{k}: {v[0]}..{v[-1]} ({len(v)} obs)" for k, v in sorted(seen.items()))
+        result.add_warning(
+            f"Observation dates mix period-start and period-end within one series "
+            f"({detail}). Joins against other {expected_frequency} series will "
+            f"silently drop the rows on the minority convention."
+        )
+    return result
+
+
 def run_all(records: list[dict], indicator_id: str, expected_frequency: str,
             min_value: float | None = None, max_value: float | None = None) -> ValidationResult:
     combined = ValidationResult(indicator_id=indicator_id)
@@ -161,6 +195,7 @@ def run_all(records: list[dict], indicator_id: str, expected_frequency: str,
         validate_types(records, indicator_id),
         validate_missing_and_duplicates(records, indicator_id),
         validate_frequency(records, indicator_id, expected_frequency),
+        validate_period_convention(records, indicator_id, expected_frequency),
         validate_no_impossible_values(records, indicator_id, min_value, max_value),
         validate_outliers(records, indicator_id),
     ):

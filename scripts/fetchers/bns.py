@@ -3552,7 +3552,14 @@ LABOUR_PAGE_URL = "https://stat.gov.kz/ru/industries/labor-and-income/stat-empt-
 WAGES_PAGE_URL = "https://stat.gov.kz/ru/industries/labor-and-income/stat-wags/"
 QUARTER_RE = re.compile(r"\b(IV|III|II|I)\s*квартал\w*\s+(\d{4})", re.I)
 QUARTER_NUM = {"i": 1, "ii": 2, "iii": 3, "iv": 4}
-QUARTER_END = {1: "03-31", 2: "06-30", 3: "09-30", 4: "12-31"}
+# Quarter START, matching lib/periods.py. This mapping used to give quarter
+# ENDS, which put every series from this helper on a different convention
+# from the rest of the project. It survived the convention sweep because the
+# sweep normalised what was WRITTEN, while the accumulate merge here keys on
+# what the fetcher BUILDS -- so stored 2026-01-01 and fresh 2026-03-31 both
+# survived the merge and then collapsed onto one date, which surfaced as 24
+# duplicate-date errors rather than as anything subtle.
+QUARTER_START = {1: "01-01", 2: "04-01", 3: "07-01", 4: "10-01"}
 LABOUR_SHEET_TITLE = "1. Основные индикаторы рынка труда"
 WAGES_SHEET_TITLE = "1. Численность наемных работников"
 QUARTERLY_MAX_GAP_DAYS = 100  # the annual editions in both sections run 344-366
@@ -3641,7 +3648,7 @@ def _fetch_quarterly_publication_row(page_url: str, sheet_name: str, sheet_title
                   {"source_url": f"https://stat.gov.kz/api/iblock/element/{eid}/file/ru/",
                    "element_id": eid, "quarter": f"{year:04d}Q{quarter}",
                    "sheet": sheet_name, "row": row_marker})
-        fetched[f"{year:04d}-{QUARTER_END[quarter]}"] = float(target[value_index])
+        fetched[f"{year:04d}-{QUARTER_START[quarter]}"] = float(target[value_index])
 
     merged = {**existing, **fetched}
     if not merged:
