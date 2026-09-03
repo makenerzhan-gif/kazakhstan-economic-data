@@ -755,6 +755,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "row_code='1' = 'Всего депозитов' — остаток"
 
   - id: IMF_GOV_REVENUE_RATIO
     name_ru: "IMF WEO: доходы сектора госуправления, % ВВП"
@@ -905,6 +907,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "то же построение: 'Средневзвешенные ставки'"
 
   - id: DEPOSIT_RATE
     name_ru: "Средневзвешенная ставка вознаграждения по депозитам физических лиц (тенге)"
@@ -914,6 +918,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "название формы: 'Средневзвешенные ставки' — явно взвешенное среднее"
 
   - id: CONSTRUCTION
     name_ru: "Объем выполненных строительных работ (услуг)"
@@ -1044,6 +1050,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "Tenge OverNight Index AVERAGE — усреднение в самом названии индекса"
 
   - id: NATIONAL_FUND_TRANSFERS
     name_ru: "Трансферты из Национального фонда в республиканский бюджет"
@@ -1053,6 +1061,8 @@ indicators:
     unit: "billion KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "data_type='Transfers from National fund' — перевод за период"
 
   - id: KASE_USD_VOLUME
     name_ru: "Объем торгов USD/KZT на KASE"
@@ -1335,6 +1345,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "доля безналичных платежей населения от общего объёма за год"
 
   - id: CAPITAL_ADEQUACY_RATIO
     name_ru: "Коэффициент достаточности капитала банков второго уровня"
@@ -1344,6 +1356,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "FSI: 'Regulatory capital to risk-weighted assets' — оба члена суть остатки на дату"
     lifecycle: superseded_not_spliceable
     superseded_by: BANK_CAPITAL_ADEQUACY_K2
     lifecycle_note: "ARDFM; k2 is the closest counterpart but not the identical ratio"
@@ -1356,6 +1370,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "FSI: 'Nonperforming loans to total gross loans' — оба члена суть остатки на дату"
     lifecycle: superseded_not_spliceable
     superseded_by: BANK_NPL_90_SHARE
     lifecycle_note: "ARDFM, not NBK: different compiler, monthly not quarterly, definitions not verified to match"
@@ -1420,6 +1436,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "formId=445: остаток кредитов экономике на дату"
     lifecycle: superseded_not_spliceable
     superseded_by: BANK_LOANS_TOTAL
     lifecycle_note: "ARDFM, and the CONCEPT differs too: loans to the economy against all bank loans"
@@ -1432,6 +1450,8 @@ indicators:
     unit: "million USD"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: 'flows for the period'"
 
   - id: GOV_SECURITIES_MEUKAM
     name_ru: "Объем МЕУКАМ в обращении"
@@ -1441,6 +1461,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: 'in Circulation' — объём в обращении, остаток"
 
   - id: IIP_NET
     name_ru: "Чистая международная инвестиционная позиция"
@@ -1483,6 +1505,8 @@ indicators:
     unit: "million USD"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "тождество проверено в этой сессии: сумма BOP_GOODS+SERVICES+PRIMARY+SECONDARY (все period_total) сходится с точностью 0.01"
 
   - id: BANK_ROA
     name_ru: "Рентабельность активов банков (ROA)"
@@ -1492,6 +1516,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FSI: доходность строится по скользящему периоду, как ARDFM BANK_ROA_MONTHLY"
     lifecycle: superseded_not_spliceable
     superseded_by: BANK_ROA_MONTHLY
     lifecycle_note: "ARDFM; the replacement is a trailing twelve-month average, which this series is not"
@@ -1504,6 +1530,8 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FSI: доходность строится по скользящему периоду, как ARDFM BANK_ROE_MONTHLY"
     lifecycle: superseded_not_spliceable
     superseded_by: BANK_ROE_MONTHLY
     lifecycle_note: "ARDFM; same trailing-average caveat as BANK_ROA"
@@ -1516,6 +1544,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "class_type='Pension savings' — накопленный остаток, в отличие от строк-потоков (взносы/выплаты) той же формы"
 
   - id: INSURANCE_PREMIUMS_GENERAL
     name_ru: "Страховые премии, общее страхование"
@@ -1525,6 +1555,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица: 'year-to-date cumulative'"
 
   - id: INSURANCE_PREMIUMS_LIFE
     name_ru: "Страховые премии, страхование жизни"
@@ -1534,6 +1567,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица: 'year-to-date cumulative'"
 
   - id: PENSION_PAYMENTS
     name_ru: "Пенсионные выплаты из ЕНПФ"
@@ -1543,6 +1579,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица: 'year-to-date cumulative'"
 
   - id: RESERVES_IMPORT_COVER
     name_ru: "Покрытие импорта международными резервами"
@@ -1563,6 +1602,8 @@ indicators:
     unit: "diffusion index (0-100, 50=neutral)"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "диффузионный индекс: балансовая статистика опроса за квартал"
 
   - id: PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX
     name_ru: "Индекс диффузии ожиданий объёма производства (опрос предприятий НБ РК)"
@@ -1572,6 +1613,8 @@ indicators:
     unit: "diffusion index (0-100, 50=neutral)"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "тот же опрос, ожидания на следующий период"
 
   - id: DEMAND_DIFFUSION_INDEX
     name_ru: "Индекс диффузии спроса на товары/услуги (опрос предприятий НБ РК)"
@@ -1581,6 +1624,8 @@ indicators:
     unit: "diffusion index (0-100, 50=neutral)"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "диффузионный индекс: балансовая статистика опроса Enterprise Monitoring за квартал"
 
   - id: DEMAND_EXPECTATIONS_DIFFUSION_INDEX
     name_ru: "Индекс диффузии ожиданий спроса (опрос предприятий НБ РК)"
@@ -1590,6 +1635,8 @@ indicators:
     unit: "diffusion index (0-100, 50=neutral)"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "тот же опрос, ожидания на следующий период"
 
   - id: LOAN_RATE_ACCEPTABLE_KZT
     name_ru: "Приемлемая ставка по кредитам в тенге (опрос предприятий НБ РК)"
@@ -1599,6 +1646,8 @@ indicators:
     unit: "percent per annum"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "опрос предприятий: приемлемая ставка, среднее мнение за период"
 
   - id: LOAN_RATE_ACCEPTABLE_FX
     name_ru: "Приемлемая ставка по кредитам в инвалюте (опрос предприятий НБ РК)"
@@ -1608,6 +1657,8 @@ indicators:
     unit: "percent per annum"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "indicator_code без 'Average', но опрос даёт среднее мнение предприятий за период"
 
   - id: LOAN_TERM_ACCEPTABLE_KZT
     name_ru: "Приемлемый срок кредитов в тенге (опрос предприятий НБ РК)"
@@ -1617,6 +1668,8 @@ indicators:
     unit: "months"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "опрос предприятий: приемлемый срок, среднее мнение за период"
 
   - id: LOAN_TERM_ACCEPTABLE_FX
     name_ru: "Приемлемый срок кредитов в инвалюте (опрос предприятий НБ РК)"
@@ -1626,6 +1679,8 @@ indicators:
     unit: "months"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "опрос предприятий: приемлемый срок, среднее мнение за период"
 
   - id: INVENTORIES_DIFFUSION_INDEX
     name_ru: "Индекс диффузии запасов готовой продукции (опрос предприятий НБ РК)"
@@ -1635,6 +1690,8 @@ indicators:
     unit: "diffusion index (0-100, 50=neutral)"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "диффузионный индекс: балансовая статистика опроса за квартал"
 
   - id: INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX
     name_ru: "Индекс диффузии ожиданий запасов (опрос предприятий НБ РК)"
@@ -1644,6 +1701,8 @@ indicators:
     unit: "diffusion index (0-100, 50=neutral)"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "тот же опрос, ожидания на следующий период"
 
   - id: IMPORT_PRICE_DIFFUSION_INDEX
     name_ru: "Индекс диффузии цен на импортные товары (опрос предприятий НБ РК)"
@@ -1653,6 +1712,8 @@ indicators:
     unit: "diffusion index (0-100, 50=neutral)"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "диффузионный индекс: балансовая статистика опроса за квартал"
 
   - id: IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX
     name_ru: "Индекс диффузии ожиданий цен на импортные товары (опрос предприятий НБ РК)"
@@ -1662,6 +1723,8 @@ indicators:
     unit: "diffusion index (0-100, 50=neutral)"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "тот же опрос, ожидания на следующий период"
 
   - id: RAW_MATERIALS_PRICE_DIFFUSION_INDEX
     name_ru: "Индекс диффузии цен на сырьё и материалы (опрос предприятий НБ РК)"
@@ -1671,6 +1734,8 @@ indicators:
     unit: "diffusion index (0-100, 50=neutral)"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "диффузионный индекс: балансовая статистика опроса за квартал"
 
   - id: RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX
     name_ru: "Индекс диффузии ожиданий цен на сырьё и материалы (опрос предприятий НБ РК)"
@@ -1680,6 +1745,8 @@ indicators:
     unit: "diffusion index (0-100, 50=neutral)"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "тот же опрос, ожидания на следующий период"
 
   - id: CAPACITY_UTILIZATION
     name_ru: "Уровень загрузки производственных мощностей (опрос предприятий НБ РК)"
@@ -1689,6 +1756,8 @@ indicators:
     unit: "percent"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "indicator_code='Capacity utilization - Weighted Average' — явное 'Weighted Average'"
 
   - id: FINISHED_GOODS_PRICE_DIFFUSION_INDEX
     name_ru: "Индекс диффузии цен на готовую продукцию (опрос предприятий НБ РК)"
@@ -1698,6 +1767,8 @@ indicators:
     unit: "diffusion index (0-100, 50=neutral)"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "диффузионный индекс: балансовая статистика опроса за квартал"
 
   - id: FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX
     name_ru: "Индекс диффузии ожиданий цен на готовую продукцию (опрос предприятий НБ РК)"
@@ -1707,6 +1778,8 @@ indicators:
     unit: "diffusion index (0-100, 50=neutral)"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "тот же опрос, ожидания на следующий период"
 
   - id: OVERDUE_ACCOUNTS_PAYABLE_SHARE
     name_ru: "Доля предприятий с просроченной кредиторской задолженностью"
@@ -1749,6 +1822,8 @@ indicators:
     unit: "percent"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "indicator_code='Average debt burden' — явное 'Average' в источнике"
 
   - id: EXPORTERS_SHARE
     name_ru: "Доля предприятий-экспортёров (опрос предприятий НБ РК)"
@@ -1758,6 +1833,8 @@ indicators:
     unit: "percent of respondents"
     category: monetary
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "единица: 'percent of respondents' — доля опрошенных предприятий"
 
   - id: IMPORTERS_SHARE
     name_ru: "Доля предприятий-импортёров (опрос предприятий НБ РК)"
@@ -1767,6 +1844,8 @@ indicators:
     unit: "percent of respondents"
     category: monetary
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "единица: 'percent of respondents' — доля опрошенных предприятий"
 
   - id: PAYMENTS_TOTAL_VALUE
     name_ru: "Общий объём платежей (все инструменты)"
@@ -1996,6 +2075,8 @@ indicators:
     unit: "pieces"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "продажи — транзакции за период (как ECOMMERCE_RETAIL_ORDERS)"
 
   - id: REMITTANCES_SENT_USD
     name_ru: "Переводы из РК, доллары США"
@@ -3047,6 +3128,8 @@ indicators:
     unit: "percent"
     category: prices
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "год к году, то же построение, что CPI_YOY (независимо сверено в этой сессии)"
 
   - id: INFLATION_TARGET
     name_ru: "Целевой уровень инфляции НБ РК"
@@ -3056,6 +3139,8 @@ indicators:
     unit: "percent"
     category: prices
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "то же построение, что BASE_RATE: объявленное значение, действующее до пересмотра"
 
   - id: OIL_PRICE
     name_ru: "Цена нефти (APSP, МВФ)"
