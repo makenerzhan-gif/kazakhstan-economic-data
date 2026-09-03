@@ -124,6 +124,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — денежная база"
 
   - id: M3
     name_ru: "Денежная масса M3"
@@ -133,6 +135,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — денежная база"
 
   - id: GOV_REVENUE
     name_ru: "Доходы республиканского бюджета"
@@ -277,6 +281,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — денежная база"
 
   - id: M0
     name_ru: "Наличные деньги в обращении (M0)"
@@ -286,6 +292,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — денежная база"
 
   - id: M1
     name_ru: "Денежный агрегат M1"
@@ -295,6 +303,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — денежная база"
 
   - id: GOV_HEALTH_SPENDING
     name_ru: "Расходы республиканского бюджета на здравоохранение"
@@ -362,6 +372,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — international reserves"
 
   - id: NATIONAL_FUND_ASSETS
     name_ru: "Активы Национального фонда РК (иностранная валюта)"
@@ -371,6 +383,8 @@ indicators:
     unit: "USD million"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — international reserves"
 
   - id: AVG_WAGE
     name_ru: "Среднемесячная номинальная заработная плата одного работника"
@@ -656,6 +670,8 @@ indicators:
     unit: "index"
     category: monetary
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "единица: индекс сравнения"
 
   - id: NEER
     name_ru: "Номинальный эффективный обменный курс тенге"
@@ -665,6 +681,8 @@ indicators:
     unit: "index"
     category: monetary
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "единица: индекс сравнения"
 
   - id: DEPOSITS_TOTAL
     name_ru: "Депозиты резидентов в депозитных организациях, всего"
@@ -813,6 +831,8 @@ indicators:
     unit: "million USD"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: LENDING_RATE
     name_ru: "Средневзвешенная ставка вознаграждения по кредитам БВУ (тенге)"
@@ -961,6 +981,8 @@ indicators:
     unit: "USD"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — results of trades"
 
   - id: IMF_GOV_EXPENDITURE
     name_ru: "IMF WEO: расходы сектора госуправления, уровень"
@@ -1082,6 +1104,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — remittances"
 
   - id: REMITTANCES_RECEIVED
     name_ru: "Входящие международные денежные переводы через СМДП"
@@ -1091,6 +1115,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — remittances"
 
   - id: INFLATION_EXPECTATIONS
     name_ru: "Инфляционные ожидания населения"
@@ -1109,6 +1135,8 @@ indicators:
     unit: "index"
     category: monetary
     source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "единица: индекс сравнения"
 
   - id: AGRICULTURE_OUTPUT
     name_ru: "Валовой выпуск продукции (услуг) сельского хозяйства"
@@ -1327,6 +1355,8 @@ indicators:
     unit: "million USD"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — international investment position"
 
   - id: IIP_ASSETS
     name_ru: "Международная инвестиционная позиция: активы"
@@ -1336,6 +1366,8 @@ indicators:
     unit: "million USD"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — international investment position"
 
   - id: IIP_LIABILITIES
     name_ru: "Международная инвестиционная позиция: обязательства"
@@ -1345,6 +1377,8 @@ indicators:
     unit: "million USD"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — international investment position"
 
   - id: CURRENT_ACCOUNT_BALANCE
     name_ru: "Сальдо счета текущих операций"
@@ -1423,6 +1457,8 @@ indicators:
     unit: "number of months"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "единица: месяцев импорта — запас"
 
   - id: PRODUCTION_VOLUME_DIFFUSION_INDEX
     name_ru: "Индекс диффузии объёма производства (опрос предприятий НБ РК)"
@@ -1585,6 +1621,8 @@ indicators:
     unit: "percent of respondents"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — overdue debt"
 
   - id: OVERDUE_ACCOUNTS_RECEIVABLE_SHARE
     name_ru: "Доля предприятий с просроченной дебиторской задолженностью"
@@ -1594,6 +1632,8 @@ indicators:
     unit: "percent of respondents"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — overdue debt"
 
   - id: OVERDUE_BANK_LOANS_SHARE
     name_ru: "Доля предприятий с просроченной задолженностью по банковским кредитам"
@@ -1603,6 +1643,8 @@ indicators:
     unit: "percent of respondents"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — overdue debt"
 
   - id: ENTERPRISE_DEBT_BURDEN
     name_ru: "Средняя долговая нагрузка предприятий (опрос предприятий НБ РК)"
@@ -1639,6 +1681,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — statistics of payment instruments"
 
   - id: CASHLESS_PAYMENTS_VALUE
     name_ru: "Объём безналичных платежей"
@@ -1648,6 +1692,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — statistics of payment instruments"
 
   - id: CASH_WITHDRAWALS_VALUE
     name_ru: "Объём снятия наличных"
@@ -1657,6 +1703,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — statistics of payment instruments"
 
   - id: PAYMENT_CARDS_VALUE
     name_ru: "Объём операций по платёжным картам"
@@ -1666,6 +1714,8 @@ indicators:
     unit: "billion KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — statistics of payment instruments"
 
   - id: HOUSEHOLD_DEPOSITS_FIXED_TERM_KZT
     name_ru: "Срочные депозиты физлиц в тенге"
@@ -1675,6 +1725,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "поле type: balance"
 
   - id: HOUSEHOLD_DEPOSITS_FIXED_TERM_FX
     name_ru: "Срочные депозиты физлиц в инвалюте"
@@ -1684,6 +1736,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "поле type: balance"
 
   - id: HOUSEHOLD_DEPOSITS_DEMAND_KZT
     name_ru: "Текущие счета и депозиты до востребования физлиц в тенге"
@@ -1693,6 +1747,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "поле type: balance"
 
   - id: HOUSEHOLD_DEPOSITS_DEMAND_FX
     name_ru: "Текущие счета и депозиты до востребования физлиц в инвалюте"
@@ -1702,6 +1758,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "поле type: balance"
 
   - id: HOUSEHOLD_DEPOSITS_SAVING_KZT
     name_ru: "Сберегательные депозиты физлиц в тенге"
@@ -1711,6 +1769,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "поле type: balance"
 
   - id: HOUSEHOLD_DEPOSITS_SAVING_FX
     name_ru: "Сберегательные депозиты физлиц в инвалюте"
@@ -1720,6 +1780,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "поле type: balance"
 
   - id: LOANS_BUSINESS_KZT
     name_ru: "Кредиты банков бизнесу в тенге"
@@ -1729,6 +1791,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "поле type: end of period"
 
   - id: LOANS_BUSINESS_FX
     name_ru: "Кредиты банков бизнесу в инвалюте"
@@ -1738,6 +1802,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "поле type: end of period"
 
   - id: LOANS_INDIVIDUALS_KZT
     name_ru: "Кредиты банков физлицам в тенге"
@@ -1747,6 +1813,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "поле type: end of period"
 
   - id: LOANS_INDIVIDUALS_FX
     name_ru: "Кредиты банков физлицам в инвалюте"
@@ -1756,6 +1824,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "поле type: end of period"
 
   - id: LOANS_MICROFINANCE_INDIVIDUALS
     name_ru: "Микрокредиты физлицам в тенге"
@@ -1765,6 +1835,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "поле type: end of period"
 
   - id: LOANS_MICROFINANCE_BUSINESS
     name_ru: "Микрокредиты бизнесу в тенге"
@@ -1774,6 +1846,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "поле type: end of period"
 
   - id: EXTERNAL_DEBT_LONG_TERM
     name_ru: "Внешний долг РК, долгосрочный"
@@ -1783,6 +1857,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_SHORT_TERM
     name_ru: "Внешний долг РК, краткосрочный"
@@ -1792,6 +1868,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: PRIVATE_EXTERNAL_DEBT_INTERCOMPANY
     name_ru: "Частный внешний долг: внутрифирменное кредитование"
@@ -1801,6 +1879,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT
     name_ru: "Частный внешний долг: банки и прочие сектора, долгосрочный"
@@ -1810,6 +1890,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: GOLD_BULLION_SALES
     name_ru: "Продажи мерных золотых слитков населению"
@@ -1828,6 +1910,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — remittances"
 
   - id: REMITTANCES_SENT_KZT
     name_ru: "Переводы из РК, тенге"
@@ -1837,6 +1921,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — remittances"
 
   - id: REMITTANCES_SENT_RUB
     name_ru: "Переводы из РК, рубли"
@@ -1846,6 +1932,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — remittances"
 
   - id: REMITTANCES_RECEIVED_USD
     name_ru: "Переводы в РК, доллары США"
@@ -1855,6 +1943,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — remittances"
 
   - id: REMITTANCES_RECEIVED_KZT
     name_ru: "Переводы в РК, тенге"
@@ -1864,6 +1954,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — remittances"
 
   - id: REMITTANCES_RECEIVED_RUB
     name_ru: "Переводы в РК, рубли"
@@ -1873,6 +1965,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — remittances"
 
   - id: EXTERNAL_DEBT_GOV_LOANS_LT
     name_ru: "Внешний долг: займы госсектора, долгосрочные"
@@ -1882,6 +1976,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_BANKS_LOANS_LT
     name_ru: "Внешний долг: займы банков, долгосрочные"
@@ -1891,6 +1987,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_BANKS_SECURITIES_LT
     name_ru: "Внешний долг: долговые ценные бумаги банков, долгосрочные"
@@ -1900,6 +1998,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_OTHER_SECURITIES_LT
     name_ru: "Внешний долг: долговые ценные бумаги прочих секторов, долгосрочные"
@@ -1909,6 +2009,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: GOV_SECURITIES_SECONDARY_NBK_NOTES
     name_ru: "Вторичный рынок ГЦБ: ноты НБ РК, объём сделок"
@@ -1918,6 +2020,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "поле type: transactions volume"
 
   - id: TOURISM_VALUE_ADDED
     name_ru: "Валовая добавленная стоимость, создаваемая непосредственно в туризме"
@@ -2038,6 +2142,8 @@ indicators:
     unit: "KZT per 1 EUR"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "поле type: average rate"
 
   - id: EXCHANGE_RATE_RUB_OTC
     name_ru: "Средний курс рубля на внебиржевом рынке (покупка)"
@@ -2047,6 +2153,8 @@ indicators:
     unit: "KZT per 1 RUB"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "поле type: average rate"
 
   - id: EXCHANGE_RATE_USD_OTC
     name_ru: "Средний курс доллара на внебиржевом рынке (покупка)"
@@ -2056,6 +2164,8 @@ indicators:
     unit: "KZT per 1 USD"
     category: monetary
     source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "поле type: average rate"
 
   - id: FX_OTC_VOLUME_USD
     name_ru: "Объём покупки долларов на внебиржевом рынке"
@@ -2065,6 +2175,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — otc operations"
 
   - id: FX_OTC_VOLUME_EUR
     name_ru: "Объём покупки евро на внебиржевом рынке"
@@ -2074,6 +2186,8 @@ indicators:
     unit: "EUR million"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — otc operations"
 
   - id: FX_OTC_VOLUME_RUB
     name_ru: "Объём покупки рублей на внебиржевом рынке"
@@ -2083,6 +2197,8 @@ indicators:
     unit: "RUB million"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — otc operations"
 
   - id: OFC_NET_FOREIGN_ASSETS
     name_ru: "Чистые иностранные активы прочих финорганизаций"
@@ -2092,6 +2208,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — analytical survey"
 
   - id: OFC_CLAIMS_ON_NONRESIDENTS
     name_ru: "Требования прочих финорганизаций к нерезидентам"
@@ -2101,6 +2219,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — analytical survey"
 
   - id: OFC_LIABILITIES_TO_NONRESIDENTS
     name_ru: "Обязательства прочих финорганизаций перед нерезидентами"
@@ -2110,6 +2230,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — analytical survey"
 
   - id: OFC_CLAIMS_ON_BANKING_SYSTEM
     name_ru: "Требования прочих финорганизаций к банковской системе"
@@ -2119,6 +2241,8 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — analytical survey"
 
   - id: EXTERNAL_DEBT_GENERAL_GOVERNMENT
     name_ru: "Внешний долг: сектор государственного управления"
@@ -2128,6 +2252,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_CENTRAL_BANK
     name_ru: "Внешний долг: центральный банк"
@@ -2137,6 +2263,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_BANKS
     name_ru: "Внешний долг: банки"
@@ -2146,6 +2274,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_OTHER_SECTORS
     name_ru: "Внешний долг: прочие сектора"
@@ -2155,6 +2285,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_EX_INTERCOMPANY
     name_ru: "Внешний долг без внутрифирменного кредитования"
@@ -2164,6 +2296,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_PUBLIC_SECTOR
     name_ru: "Внешний долг государственного сектора"
@@ -2173,6 +2307,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_PRIVATE_SECTOR
     name_ru: "Внешний долг частного сектора"
@@ -2182,6 +2318,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_GOV_GUARANTEED
     name_ru: "Государственный и гарантированный государством внешний долг"
@@ -2191,6 +2329,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_LOANS
     name_ru: "Внешний долг: займы"
@@ -2200,6 +2340,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_DEBT_SECURITIES
     name_ru: "Внешний долг: долговые ценные бумаги"
@@ -2209,6 +2351,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_TRADE_CREDITS
     name_ru: "Внешний долг: торговые кредиты и авансы"
@@ -2218,6 +2362,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_CURRENCY_DEPOSITS
     name_ru: "Внешний долг: наличная валюта и депозиты"
@@ -2227,6 +2373,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_SDR
     name_ru: "Внешний долг: специальные права заимствования"
@@ -2236,6 +2384,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_OTHER_LIABILITIES
     name_ru: "Внешний долг: прочие долговые обязательства"
@@ -2245,6 +2395,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: EXTERNAL_DEBT_DUE_WITHIN_YEAR
     name_ru: "Внешний долг к погашению в течение года"
@@ -2254,6 +2406,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "название формы: позиция/остаток — external debt"
 
   - id: RESERVES_AND_NATIONAL_FUND
     name_ru: "Резервы НБ РК и Нацфонда суммарно"
@@ -2263,6 +2417,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "поле type: end of period"
 
   - id: RESERVES_AND_NF_IMPORT_COVER
     name_ru: "Покрытие импорта резервами и Нацфондом"
@@ -2272,6 +2428,8 @@ indicators:
     unit: "number of months"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "единица: месяцев импорта — запас"
 
   - id: RESERVES_AND_NF_GDP_SHARE
     name_ru: "Резервы и Нацфонд, % ВВП"
@@ -2281,6 +2439,8 @@ indicators:
     unit: "% of GDP"
     category: monetary
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "единица: доля"
 
   - id: NATIONAL_FUND_GDP_SHARE
     name_ru: "Активы Нацфонда, % ВВП"
@@ -2290,6 +2450,8 @@ indicators:
     unit: "% of GDP"
     category: monetary
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "единица: доля"
 
   - id: RESERVE_ASSETS_GDP_SHARE
     name_ru: "Резервные активы НБ РК, % ВВП"
@@ -2299,6 +2461,8 @@ indicators:
     unit: "% of GDP"
     category: monetary
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "единица: доля"
 
   - id: FINANCIAL_ACCOUNT_BALANCE
     name_ru: "Финансовый счёт платёжного баланса"
@@ -2308,6 +2472,8 @@ indicators:
     unit: "USD million"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — financial account of the balance"
 
   - id: BOP_OVERALL_BALANCE_GDP_SHARE
     name_ru: "Общий баланс платёжного баланса, % ВВП"
@@ -2317,6 +2483,8 @@ indicators:
     unit: "% of GDP"
     category: monetary
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "единица: доля"
 
   - id: CRUDE_BIRTH_RATE
     name_ru: "Родившихся на 1000 человек населения"
@@ -3657,6 +3825,8 @@ indicators:
     unit: "KZT per CNY"
     category: monetary
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "единица: курс/ставка"
 
   - id: KASE_CNY_VOLUME
     name_ru: "Объём торгов CNY/KZT на KASE"
@@ -3666,6 +3836,8 @@ indicators:
     unit: "CNY"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — results of trades"
 
   - id: KASE_EUR_VOLUME
     name_ru: "Объём торгов EUR/KZT на KASE"
@@ -3675,6 +3847,8 @@ indicators:
     unit: "EUR"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — results of trades"
 
   - id: KASE_RUB_VOLUME
     name_ru: "Объём торгов RUB/KZT на KASE"
@@ -3684,6 +3858,8 @@ indicators:
     unit: "RUB"
     category: monetary
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название формы: оборот за период — results of trades"
 
   - id: PAYMENTS_TOTAL_COUNT
     name_ru: "Количество платёжных транзакций, всего"
