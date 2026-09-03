@@ -146,6 +146,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: GOV_EXPENDITURE
     name_ru: "Расходы республиканского бюджета"
@@ -155,6 +157,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: GOV_DEBT
     name_ru: "Государственный долг РК"
@@ -164,6 +168,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "примечание при чтении источника: остаток на дату"
 
   - id: IMF_GDP_GROWTH
     name_ru: "IMF WEO: реальный рост ВВП Казахстана"
@@ -314,6 +320,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: GOV_EDUCATION_SPENDING
     name_ru: "Расходы республиканского бюджета на образование"
@@ -323,6 +331,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: GOV_SOCIAL_SPENDING
     name_ru: "Расходы республиканского бюджета на социальную помощь и соцобеспечение"
@@ -332,6 +342,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: IMF_UNEMPLOYMENT
     name_ru: "IMF WEO: уровень безработицы, Казахстан"
@@ -403,6 +415,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: CORPORATE_TAX
     name_ru: "Корпоративный подоходный налог"
@@ -412,6 +426,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: VAT_REVENUE
     name_ru: "Налог на добавленную стоимость"
@@ -421,6 +437,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: GOV_DEFENSE_SPENDING
     name_ru: "Расходы республиканского бюджета на оборону"
@@ -430,6 +448,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: GOV_GENERAL_SERVICES_SPENDING
     name_ru: "Расходы республиканского бюджета на государственные услуги общего характера"
@@ -439,6 +459,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: GOV_TRANSPORT_SPENDING
     name_ru: "Расходы республиканского бюджета на транспорт и связь"
@@ -448,6 +470,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: GOV_DEBT_SERVICING
     name_ru: "Расходы республиканского бюджета на обслуживание долга"
@@ -457,6 +481,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "обслуживание долга — платежи за год"
 
   - id: NET_BUDGET_LENDING
     name_ru: "Чистое бюджетное кредитование"
@@ -466,6 +492,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: BUDGET_DEFICIT
     name_ru: "Дефицит (профицит) республиканского бюджета"
@@ -475,6 +503,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: NON_OIL_BUDGET_DEFICIT
     name_ru: "Ненефтяной дефицит бюджета"
@@ -484,6 +514,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: GDP_INCOME_METHOD
     name_ru: "ВВП, методом доходов"
@@ -918,6 +950,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: GOV_DEBT_DOMESTIC
     name_ru: "Государственный долг РК, внутренний"
@@ -927,6 +961,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "тот же документ, что GOV_DEBT: долг на дату"
 
   - id: GOV_DEBT_EXTERNAL
     name_ru: "Государственный долг РК, внешний"
@@ -936,6 +972,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "тот же документ, что GOV_DEBT: долг на дату"
 
   - id: HOUSING_COMMISSIONED
     name_ru: "Ввод в эксплуатацию общей площади жилых домов на 1000 человек населения"
@@ -2749,6 +2787,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "примечание при чтении источника: остаток на дату"
 
   - id: GOV_DEBT_EXTERNAL_USD
     name_ru: "Внешний долг Правительства РК, долл. США"
@@ -2758,6 +2798,8 @@ indicators:
     unit: "USD million"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "примечание при чтении источника: остаток на дату"
 
   - id: LOCAL_GOV_DEBT
     name_ru: "Долг местных исполнительных органов"
@@ -2767,6 +2809,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "примечание при чтении источника: остаток на дату"
 
   - id: STATE_GUARANTEED_DEBT
     name_ru: "Гарантированный государством долг"
@@ -2776,6 +2820,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "примечание при чтении источника: остаток на дату"
 
   - id: GOV_DEBT_EUROBONDS
     name_ru: "Еврооблигации Правительства РК"
@@ -2785,6 +2831,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "примечание при чтении источника: остаток на дату"
 
   - id: LOCAL_BUDGET_REVENUE
     name_ru: "Доходы местных бюджетов"
@@ -2794,6 +2842,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: LOCAL_BUDGET_EXPENDITURE
     name_ru: "Затраты местных бюджетов"
@@ -2803,6 +2853,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: LOCAL_BUDGET_TAX_REVENUE
     name_ru: "Налоговые поступления местных бюджетов"
@@ -2812,6 +2864,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: LOCAL_BUDGET_TRANSFERS
     name_ru: "Поступления трансфертов в местные бюджеты"
@@ -2821,6 +2875,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: LOCAL_EDUCATION_EXPENDITURE
     name_ru: "Расходы местных бюджетов на образование"
@@ -2830,6 +2886,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: LOCAL_HOUSING_UTILITIES_EXPENDITURE
     name_ru: "Расходы местных бюджетов на ЖКХ"
@@ -2839,6 +2897,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: BUDGET_FINANCING_TOTAL
     name_ru: "Финансирование госбюджета, всего"
@@ -2848,6 +2908,8 @@ indicators:
     unit: "million KZT, flow during the quarter"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "единица: поток за квартал"
 
   - id: BUDGET_FINANCING_DOMESTIC
     name_ru: "Внутреннее финансирование госбюджета"
@@ -2857,6 +2919,8 @@ indicators:
     unit: "million KZT, flow during the quarter"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "единица: поток за квартал"
 
   - id: BUDGET_FINANCING_EXTERNAL
     name_ru: "Внешнее финансирование госбюджета"
@@ -2866,6 +2930,8 @@ indicators:
     unit: "million KZT, flow during the quarter"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "единица: поток за квартал"
 
   - id: BUDGET_FINANCING_LONG_TERM_BONDS
     name_ru: "Финансирование через долгосрочные облигации"
@@ -2875,6 +2941,8 @@ indicators:
     unit: "million KZT, flow during the quarter"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "единица: поток за квартал"
 
   - id: BUDGET_FINANCING_BANKS
     name_ru: "Финансирование госбюджета депозитными корпорациями"
@@ -2884,6 +2952,8 @@ indicators:
     unit: "million KZT, flow during the quarter"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "единица: поток за квартал"
 
   - id: BUDGET_FINANCING_INTL_ORGANIZATIONS
     name_ru: "Финансирование госбюджета международными организациями"
@@ -2893,6 +2963,8 @@ indicators:
     unit: "million KZT, flow during the quarter"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "единица: поток за квартал"
 
   - id: ANNUAL_INFLATION
     name_ru: "Годовая инфляция (ИПЦ, г/г)"
@@ -2947,6 +3019,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: OIL_PRODUCTS_EXPORT_DUTY
     name_ru: "Вывозная пошлина на товары из нефти"
@@ -2956,6 +3031,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: OIL_EXPORTS_VOLUME
     name_ru: "Экспорт сырой нефти, объём"
@@ -3123,6 +3201,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "ГФС: налоговые поступления за квартал"
 
   - id: GG_SOCIAL_CONTRIBUTIONS
     name_ru: "Социальные отчисления сектора государственного управления (МВФ методология)"
@@ -3132,6 +3212,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "ГФС: социальные взносы за квартал"
 
   - id: GG_CASH_SURPLUS_DEFICIT
     name_ru: "Кассовый профицит/дефицит сектора государственного управления (МВФ методология)"
@@ -3141,6 +3223,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "ГФС: сальдо денежных операций за квартал"
 
   - id: CUSTOMS_DUTIES
     name_ru: "Таможенные платежи (республиканский бюджет)"
@@ -3150,6 +3234,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: POVERTY_HEADCOUNT
     name_ru: "Общая численность населения с доходами ниже величины прожиточного минимума"
@@ -3201,6 +3288,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: GOV_CAPITAL_EXPENDITURE
     name_ru: "Капитальные затраты республиканского бюджета"
@@ -3210,6 +3300,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: GOV_PENSIONS_EXPENDITURE
     name_ru: "Расходы республиканского бюджета на пенсии"
@@ -3219,6 +3312,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: GOV_SUBSIDIES_EXPENDITURE
     name_ru: "Бюджетные субсидии республиканского бюджета"
@@ -3228,6 +3324,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: SUBVENTIONS_REPUBLICAN
     name_ru: "Субвенции из республиканского бюджета"
@@ -3237,6 +3336,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: LOCAL_GOV_WAGES_EXPENDITURE
     name_ru: "Заработная плата местного бюджета"
@@ -3246,6 +3347,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: LOCAL_GOV_CAPITAL_EXPENDITURE
     name_ru: "Капитальные затраты местного бюджета"
@@ -3255,6 +3359,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: LOCAL_GOV_SUBSIDIES_EXPENDITURE
     name_ru: "Бюджетные субсидии местного бюджета"
@@ -3264,6 +3371,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: NATIONAL_FUND_STABILIZATION_PORTFOLIO
     name_ru: "Стабилизационный портфель Национального фонда РК"
@@ -3273,6 +3383,8 @@ indicators:
     unit: "USD"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "примечание при чтении источника: остаток на дату"
 
   - id: NATIONAL_FUND_SAVINGS_PORTFOLIO
     name_ru: "Сберегательный портфель Национального фонда РК"
@@ -3282,6 +3394,8 @@ indicators:
     unit: "USD"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "лист 17: состав портфеля на конец квартала"
 
   - id: NATIONAL_FUND_SAVINGS_BONDS
     name_ru: "Облигации в сберегательном портфеле Национального фонда РК"
@@ -3291,6 +3405,8 @@ indicators:
     unit: "USD"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "лист 17: состав портфеля на конец квартала"
 
   - id: NATIONAL_FUND_EQUITIES
     name_ru: "Акции в сберегательном портфеле Национального фонда РК"
@@ -3300,6 +3416,8 @@ indicators:
     unit: "USD"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "лист 17: состав портфеля на конец квартала"
 
   - id: NATIONAL_FUND_GOLD
     name_ru: "Золото в сберегательном портфеле Национального фонда РК"
@@ -3309,6 +3427,8 @@ indicators:
     unit: "USD"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "лист 17: состав портфеля на конец квартала"
 
   - id: GOV_ACCOUNTS_PAYABLE
     name_ru: "Кредиторская задолженность государственного бюджета"
@@ -3318,6 +3438,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "примечание: creditor arrears — задолженность, остаток"
 
   - id: GOV_ACCOUNTS_RECEIVABLE
     name_ru: "Дебиторская задолженность государственного бюджета"
@@ -3327,6 +3449,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "примечание: debtor arrears — задолженность, остаток"
 
   - id: GOV_FINANCIAL_ASSETS_SOLD
     name_ru: "Поступления в бюджет от продажи финансовых активов государства"
@@ -3336,6 +3460,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: GOV_AUDIT_VIOLATIONS_AMOUNT
     name_ru: "Сумма нарушений, выявленных Комитетом внутреннего государственного аудита"
@@ -3345,6 +3472,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: TAX_ARREARS_TOTAL
     name_ru: "Недоимка по налогам и платежам в бюджет"
@@ -3354,6 +3484,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "примечание при чтении источника: остаток на дату"
 
   - id: PENSION_CONTRIBUTIONS_RECEIVED
     name_ru: "Поступления обязательных пенсионных взносов"
@@ -3363,6 +3495,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "примечание при чтении источника: остаток на дату"
 
   - id: PENSION_CONTRIBUTIONS_ARREARS
     name_ru: "Задолженность по обязательным пенсионным взносам"
@@ -3372,6 +3506,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "примечание при чтении источника: остаток на дату"
 
   - id: GOV_PROCUREMENT_TOTAL_VALUE
     name_ru: "Сумма заключенных договоров государственных закупок"
@@ -3381,6 +3517,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "лист: «о государственных закупках за {год} год»"
 
   - id: INDIVIDUAL_INCOME_TAX
     name_ru: "Индивидуальный подоходный налог (государственный бюджет)"
@@ -3390,6 +3528,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: STATE_BUDGET_REVENUE
     name_ru: "Доходы государственного бюджета"
@@ -3399,6 +3539,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: STATE_BUDGET_EXPENDITURE
     name_ru: "Затраты государственного бюджета"
@@ -3408,6 +3550,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: STATE_BUDGET_DEFICIT
     name_ru: "Дефицит (профицит) государственного бюджета"
@@ -3417,6 +3561,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: STATE_NON_OIL_DEFICIT
     name_ru: "Ненефтяной дефицит (профицит) государственного бюджета"
@@ -3426,6 +3572,8 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "годовой итог бюджетного потока: одна точка на год"
 
   - id: PROPERTY_TAX
     name_ru: "Налог на имущество (государственный бюджет)"
@@ -3435,6 +3583,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: LAND_TAX
     name_ru: "Земельный налог (государственный бюджет)"
@@ -3444,6 +3595,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: STATE_GOV_WAGES_EXPENDITURE
     name_ru: "Заработная плата государственного бюджета"
@@ -3453,6 +3607,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: STATE_GOV_CAPITAL_EXPENDITURE
     name_ru: "Капитальные затраты государственного бюджета"
@@ -3462,6 +3619,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: STATE_GOV_SUBSIDIES_EXPENDITURE
     name_ru: "Бюджетные субсидии государственного бюджета"
@@ -3471,6 +3631,9 @@ indicators:
     unit: "million KZT, year-to-date cumulative"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: RETAIL_TRADE_MONTHLY
     name_ru: "Объём розничной торговли, помесячно"
@@ -3771,6 +3934,9 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: STATE_BUDGET_EXPENDITURE_YTD
     name_ru: "Затраты государственного бюджета, нарастающим итогом"
@@ -3780,6 +3946,9 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: STATE_BUDGET_DEFICIT_YTD
     name_ru: "Дефицит государственного бюджета, нарастающим итогом"
@@ -3789,6 +3958,9 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: STATE_NON_OIL_DEFICIT_YTD
     name_ru: "Ненефтяной дефицит бюджета, нарастающим итогом"
@@ -3798,6 +3970,9 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: STATE_NET_BUDGET_LENDING_YTD
     name_ru: "Чистое бюджетное кредитование, нарастающим итогом"
@@ -3807,6 +3982,9 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: STATE_FINANCIAL_ASSETS_BALANCE_YTD
     name_ru: "Сальдо по операциям с финансовыми активами, нарастающим итогом"
@@ -3816,6 +3994,9 @@ indicators:
     unit: "million KZT"
     category: fiscal
     source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "единица/имя: нарастающий итог с начала года"
 
   - id: EXCHANGE_RATE_CNY_KASE
     name_ru: "Курс тенге к юаню на KASE"
