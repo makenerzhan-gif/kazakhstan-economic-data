@@ -120,7 +120,8 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
         records = periods.normalise(
             records, manifest_info.get("frequency") or _meta["frequency"],
             _meta.get("observation_type"))
-        result = validation.run_all(records, indicator_id, expected_frequency=manifest_info.get("frequency", "annual"))
+        result = validation.run_all(records, indicator_id, expected_frequency=manifest_info.get("frequency", "annual"),
+                                     cumulation=_meta.get("cumulation"))
         status = "ok" if result.ok else "error"
         if not result.ok:
             run_logger.log(pipeline_logging.LogEntry(

@@ -55,3 +55,32 @@ def test_run_all_ok_case():
     records = [{"date": "2026-01-01", "value": 1.0}, {"date": "2026-02-01", "value": 1.1}]
     result = validation.run_all(records, "TEST", expected_frequency="monthly")
     assert result.ok
+
+
+def test_validate_outliers_flags_real_jump():
+    records = [{"date": "2026-01-01", "value": 100.0}, {"date": "2026-02-01", "value": 200.0}]
+    result = validation.validate_outliers(records, "TEST")
+    assert any("Unexpected jump" in w for w in result.warnings)
+
+
+def test_validate_outliers_year_to_date_ignores_the_january_reset():
+    records = [
+        {"date": "2026-01-01", "value": 100.0},
+        {"date": "2026-04-01", "value": 210.0},
+        {"date": "2026-07-01", "value": 320.0},
+        {"date": "2026-10-01", "value": 430.0},
+        {"date": "2027-01-01", "value": 105.0},  # reset: raw drop of ~76%, not a real jump
+    ]
+    result = validation.validate_outliers(records, "TEST", cumulation="year_to_date")
+    assert result.warnings == []
+
+
+def test_validate_outliers_year_to_date_still_catches_a_real_anomaly():
+    records = [
+        {"date": "2026-01-01", "value": 100.0},
+        {"date": "2026-04-01", "value": 210.0},   # own-period contribution: 110
+        {"date": "2026-07-01", "value": 900.0},   # own-period contribution: 690 -- genuine spike
+        {"date": "2026-10-01", "value": 1010.0},  # own-period contribution: 110
+    ]
+    result = validation.validate_outliers(records, "TEST", cumulation="year_to_date")
+    assert any("own-period contribution" in w for w in result.warnings)

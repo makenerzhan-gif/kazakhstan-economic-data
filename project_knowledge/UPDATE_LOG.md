@@ -3176,3 +3176,39 @@ Nine stayed unclassified, now confirmed rather than merely unchecked:
 - `HOSPITAL_BEDS` — the methodology archive has no health or medicine section at all.
 
 **421 of 430.** Verified: 29/29 tests, BNS live fetch clean.
+
+## 2026-09-03 — cumulation stops lying to the outlier check
+
+`observation_type` and `comparison_basis` had a real consumer already sitting in the pipeline, not a
+hypothetical one: `validate_outliers` compares each observation to the one before it and warns past a
+50% swing. Nobody had told it that 34 indicators are `cumulation: year_to_date` — a value that is
+*supposed* to climb through the year and drop back at every January reset. Every one of those resets
+was going through as a false "jump".
+
+`GDP_NOMINAL` in this run's own report: ~60 warnings, one for nearly every quarter boundary since
+2010, each one just the source's own accounting doing what year-to-date accounting does — 34.1
+trillion in January, 70.9 trillion in April is not the economy grabbing +108% in a quarter, it's Q1
+plus Q2 sitting next to Q1 alone.
+
+The check now takes `cumulation` and, for `year_to_date` series, compares each observation's *own
+-period contribution* — itself minus the previous observation in the same calendar year, reset at the
+year's first observation — instead of the raw cumulative total. Wired through the one place all five
+agencies already read indicator metadata (`_meta = _indicator_meta(...)`) into the one place they all
+call `validation.run_all`, so the fix is a single line in each orchestrator.
+
+`GDP_NOMINAL` live: 60 warnings to 5. The 5 that remain are real and worth having: every one is a
+Q3-to-Q4 step, 50-59%, recurring nearly every year since 2019 — Kazakhstan's Q4 nominal GDP genuinely
+running well above Q3, not a reset artifact. Three tests lock the behaviour in: a plain series still
+flags a real jump, a YTD series's January reset produces zero warnings, and a genuine mid-year spike
+in a YTD series is still caught (proving the fix retargets the check rather than disabling it).
+
+Minfin's YTD budget series (`CUSTOMS_DUTIES`, `PROPERTY_TAX`, `GOV_WAGES_EXPENDITURE` and others, 23
+of the 34 total) still carry real warning counts after the fix — checked `CUSTOMS_DUTIES` directly:
+April and May 2025 are simply absent from the stored data, so the March-to-June step is genuinely
+three months of contribution next to the one-month step that follows it. That is a pre-existing gap
+in what the source publishes, not something `cumulation` was ever positioned to fix, and it is left
+alone here.
+
+Verified live across all four agencies that carry a `year_to_date` series — BNS (145/145), Minfin
+(79/79), NBK (142/142), ARDFM (30/30) — plus a clean import of `update_imf.py`, whose edit is a
+provable no-op: IMF carries zero `year_to_date` indicators. 32/32 tests (29 plus the three new).

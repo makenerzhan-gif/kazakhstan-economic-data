@@ -119,21 +119,44 @@ def validate_no_impossible_values(records: list[dict], indicator_id: str, min_va
     return result
 
 
-def validate_outliers(records: list[dict], indicator_id: str, max_pct_jump: float = 0.5) -> ValidationResult:
-    """Flags (warns, does not fail) period-over-period jumps larger than max_pct_jump."""
+def validate_outliers(records: list[dict], indicator_id: str, max_pct_jump: float = 0.5,
+                       cumulation: str | None = None) -> ValidationResult:
+    """Flags (warns, does not fail) period-over-period jumps larger than max_pct_jump.
+
+    A year-to-date series (cumulation="year_to_date") is compared on its own
+    -period contribution -- this observation's value minus the previous one
+    in the same calendar year, reset at the first observation of each year
+    -- not on the raw cumulative total. The raw total is *supposed* to climb
+    within a year and drop back at every January reset; comparing it directly
+    turned every single YTD series' annual reset into a false "jump" (seen
+    live: ~30 spurious warnings a run on GDP_NOMINAL alone, every one of them
+    just January following December).
+    """
     result = ValidationResult(indicator_id=indicator_id)
     sorted_records = sorted(
         (r for r in records if r.get("value") is not None),
         key=lambda r: r["date"],
     )
-    for prev, cur in zip(sorted_records, sorted_records[1:]):
-        p, c = float(prev["value"]), float(cur["value"])
+    rows = [(r["date"], float(r["value"])) for r in sorted_records]
+    if cumulation == "year_to_date":
+        compare, prev_value, prev_year = [], None, None
+        for d, v in rows:
+            year = str(d)[:4]
+            compare.append(v if (prev_value is None or year != prev_year) else v - prev_value)
+            prev_value, prev_year = v, year
+    else:
+        compare = [v for _, v in rows]
+
+    label = "own-period contribution" if cumulation == "year_to_date" else "value"
+    for i in range(1, len(rows)):
+        p, c = compare[i - 1], compare[i]
         if p == 0:
             continue
         pct = abs(c - p) / abs(p)
         if pct > max_pct_jump:
             result.add_warning(
-                f"Unexpected jump of {pct:.1%} between {prev['date']} ({p}) and {cur['date']} ({c})."
+                f"Unexpected jump of {pct:.1%} in {label} between "
+                f"{rows[i-1][0]} ({p}) and {rows[i][0]} ({c})."
             )
     return result
 
@@ -188,7 +211,8 @@ def validate_period_convention(records: list[dict], indicator_id: str,
 
 
 def run_all(records: list[dict], indicator_id: str, expected_frequency: str,
-            min_value: float | None = None, max_value: float | None = None) -> ValidationResult:
+            min_value: float | None = None, max_value: float | None = None,
+            cumulation: str | None = None) -> ValidationResult:
     combined = ValidationResult(indicator_id=indicator_id)
     for r in (
         validate_schema(records, indicator_id),
@@ -197,7 +221,7 @@ def run_all(records: list[dict], indicator_id: str, expected_frequency: str,
         validate_frequency(records, indicator_id, expected_frequency),
         validate_period_convention(records, indicator_id, expected_frequency),
         validate_no_impossible_values(records, indicator_id, min_value, max_value),
-        validate_outliers(records, indicator_id),
+        validate_outliers(records, indicator_id, cumulation=cumulation),
     ):
         combined.errors.extend(r.errors)
         combined.warnings.extend(r.warnings)
