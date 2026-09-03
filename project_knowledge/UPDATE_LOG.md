@@ -2836,3 +2836,35 @@ years of history for months, and the ARDFM banking series explicitly cannot be s
 NBK ones they replace.
 
 Verified live: 430/430 indicators OK in a clean full run, 29/29 tests.
+
+## 2026-09-03 — lifecycle marks instead of deletion
+
+The 14 remaining flagged series are marked rather than deleted, plus `FREIGHT_TURNOVER` which is
+superseded without being stale — those are different properties and the marks now say which.
+
+Three statuses instead of one, because lumping them would have hidden the distinction that
+matters:
+
+| status | count | meaning |
+|---|---|---|
+| `superseded` | 5 | a replacement is connected and **reconciles** with the original |
+| `superseded_not_spliceable` | 6 | a replacement exists but the two **must not be joined** |
+| `stale_source` | 4 | no replacement; the publisher is simply behind |
+
+The middle category is the one worth having. Five of its six are the NBK banking series replaced
+by ARDFM ones: different compiler, monthly rather than quarterly, definitions not verified to
+match, and for `LOANS_TO_ECONOMY` a different concept as well (loans to the economy against all
+bank loans). The sixth is `PASSENGER_TURNOVER`, where the monthly series is **not** a continuation
+— 266.8 bn p-km here against about 94 bn annualised there, while freight from the same source
+reconciles almost exactly, so it is not a units error and remains unexplained.
+
+Each mark carries `superseded_by` and a one-line reason in `lifecycle_note`, so the reason travels
+with the data rather than living only in this log.
+
+**Why not delete.** The replacements are shorter than the originals by a wide margin: `IND_PROD`
+has 15 points from 2009 against 4 in the monthly index from 2026; the five NBK banking series have
+18 points from 2020 against 3 in the ARDFM ones. Deleting would trade years of history for months,
+and for the six not-spliceable cases it would not even produce a continuous series.
+
+The catalogue artifact was rebuilt on the new numbers (15,072 observations) with a status column,
+a "only marked" filter, and the reason on hover.

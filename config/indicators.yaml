@@ -38,6 +38,9 @@ indicators:
     unit: "index, % to previous period"
     category: production
     source_status: confirmed
+    lifecycle: superseded
+    superseded_by: INDUSTRIAL_PRODUCTION_INDEX
+    lifecycle_note: "annual cube discontinued after 2023; the monthly publication carries the same concept"
 
   - id: CPI
     name_ru: "Индекс потребительских цен (инфляция)"
@@ -56,6 +59,8 @@ indicators:
     unit: "% of labor force"
     category: labor
     source_status: confirmed
+    lifecycle: stale_source
+    lifecycle_note: "the quarterly cube stopped at 2025-06. LABOR_FORCE and UNEMPLOYED_PERSONS from the ARDFM-era labour publication give the rate, but no drop-in rate series was connected"
 
   - id: INVESTMENT
     name_ru: "Инвестиции в основной капитал"
@@ -65,6 +70,9 @@ indicators:
     unit: "KZT"
     category: investment
     source_status: confirmed
+    lifecycle: superseded
+    superseded_by: INVESTMENT_FIXED_CAPITAL
+    lifecycle_note: "annual cube stops at 2022; the replacement is monthly year-to-date"
 
   - id: EXPORTS
     name_ru: "Экспорт (итого)"
@@ -958,6 +966,9 @@ indicators:
     unit: "tonne-km"
     category: production
     source_status: confirmed
+    lifecycle: superseded
+    superseded_by: FREIGHT_TURNOVER_MONTHLY
+    lifecycle_note: "replacement reconciles with this series: 511 bn t-km annualised against 512.6 bn here"
 
   - id: PASSENGER_TURNOVER
     name_ru: "Пассажирооборот"
@@ -967,6 +978,9 @@ indicators:
     unit: "passenger-km"
     category: production
     source_status: confirmed
+    lifecycle: superseded_not_spliceable
+    superseded_by: PASSENGER_TURNOVER_MONTHLY
+    lifecycle_note: "UNEXPLAINED LEVEL BREAK: 266.8 bn p-km here against ~94 bn annualised in the replacement. Freight from the same source reconciles, so this is not a units error. Do not join."
 
   - id: REMITTANCES_SENT
     name_ru: "Исходящие международные денежные переводы через СМДП"
@@ -1111,6 +1125,9 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    lifecycle: superseded_not_spliceable
+    superseded_by: BANK_CAPITAL_ADEQUACY_K2
+    lifecycle_note: "ARDFM; k2 is the closest counterpart but not the identical ratio"
 
   - id: NPL_RATIO
     name_ru: "Доля неработающих кредитов"
@@ -1120,6 +1137,9 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    lifecycle: superseded_not_spliceable
+    superseded_by: BANK_NPL_90_SHARE
+    lifecycle_note: "ARDFM, not NBK: different compiler, monthly not quarterly, definitions not verified to match"
 
   - id: IND_PROD_MINING
     name_ru: "Индекс промышленного производства: горнодобывающая промышленность"
@@ -1129,6 +1149,9 @@ indicators:
     unit: "% of prior period"
     category: production
     source_status: confirmed
+    lifecycle: superseded
+    superseded_by: MINING_OUTPUT
+    lifecycle_note: "same, but the replacement is output in KZT rather than an index"
 
   - id: IND_PROD_MANUFACTURING
     name_ru: "Индекс промышленного производства: обрабатывающая промышленность"
@@ -1138,6 +1161,9 @@ indicators:
     unit: "% of prior period"
     category: production
     source_status: confirmed
+    lifecycle: superseded
+    superseded_by: MANUFACTURING_OUTPUT
+    lifecycle_note: "same, but the replacement is output in KZT rather than an index"
 
   - id: IND_PROD_ELECTRICITY
     name_ru: "Индекс промышленного производства: снабжение электроэнергией, газом, паром"
@@ -1147,6 +1173,8 @@ indicators:
     unit: "% of prior period"
     category: production
     source_status: confirmed
+    lifecycle: stale_source
+    lifecycle_note: "no monthly counterpart was connected for electricity; the annual cube stopped at 2023"
 
   - id: IMF_GDP_PER_CAPITA_NATIONAL
     name_ru: "IMF WEO: ВВП на душу населения, национальная валюта"
@@ -1165,6 +1193,9 @@ indicators:
     unit: "million KZT"
     category: monetary
     source_status: confirmed
+    lifecycle: superseded_not_spliceable
+    superseded_by: BANK_LOANS_TOTAL
+    lifecycle_note: "ARDFM, and the CONCEPT differs too: loans to the economy against all bank loans"
 
   - id: FDI_NET_INFLOW
     name_ru: "Чистый приток прямых иностранных инвестиций в Казахстан"
@@ -1228,6 +1259,9 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    lifecycle: superseded_not_spliceable
+    superseded_by: BANK_ROA_MONTHLY
+    lifecycle_note: "ARDFM; the replacement is a trailing twelve-month average, which this series is not"
 
   - id: BANK_ROE
     name_ru: "Рентабельность капитала банков (ROE)"
@@ -1237,6 +1271,9 @@ indicators:
     unit: "%"
     category: monetary
     source_status: confirmed
+    lifecycle: superseded_not_spliceable
+    superseded_by: BANK_ROE_MONTHLY
+    lifecycle_note: "ARDFM; same trailing-average caveat as BANK_ROA"
 
   - id: PENSION_FUND_ASSETS
     name_ru: "Пенсионные накопления ЕНПФ"
@@ -2299,6 +2336,8 @@ indicators:
     unit: "per 10000 population"
     category: demographic
     source_status: confirmed
+    lifecycle: stale_source
+    lifecycle_note: "annual health statistics; 2024 not yet published as of 2026-09"
 
   - id: HOSPITAL_BEDS
     name_ru: "Число больничных коек"
@@ -2317,6 +2356,8 @@ indicators:
     unit: "per 10000 population"
     category: demographic
     source_status: confirmed
+    lifecycle: stale_source
+    lifecycle_note: "annual health statistics; 2024 not yet published as of 2026-09"
 
   - id: SME_GDP_SHARE
     name_ru: "Доля малого и среднего предпринимательства в ВВП"
