@@ -274,9 +274,41 @@ def test_format_p_and_significance_note():
     assert report._format_p(None) == "undefined"
     assert report._format_p(0.0001) == "<0.001"
     assert report._format_p(0.031) == "0.031"
-    assert report._significance_note(0.01) == ", significant at 5%"
-    assert report._significance_note(0.5) == ", not significant at 5%"
-    assert report._significance_note(None) == ""
+    # corrected_alpha=0.01 here: p=0.01 clears the uncorrected 5% bar but not
+    # the (deliberately strict, for this test) corrected one.
+    assert report._significance_note(0.01, corrected_alpha=0.01) == (
+        ", significant at 5%; does not survive Bonferroni correction"
+    )
+    assert report._significance_note(0.001, corrected_alpha=0.01) == (
+        ", significant at 5%; survives Bonferroni correction"
+    )
+    # Not significant uncorrected -> no Bonferroni clause; it would trivially
+    # also fail the stricter corrected threshold, so stating that is noise.
+    assert report._significance_note(0.5, corrected_alpha=0.01) == ", not significant at 5%"
+    assert report._significance_note(None, corrected_alpha=0.01) == ""
+
+
+def test_count_tests_counts_headline_plus_nonzero_lags_only():
+    results = [
+        correlate.PairResult(
+            id_x="A", id_y="B", label="", rationale="", interpretation="",
+            transform_x="", transform_y="", n=10, date_start=None, date_end=None,
+            r=0.5, p=0.1,
+        ),
+        correlate.PairResult(
+            id_x="C", id_y="D", label="", rationale="", interpretation="",
+            transform_x="", transform_y="", n=10, date_start=None, date_end=None,
+            r=0.5, p=0.1,
+            lag_profile=[
+                correlate.LagPoint(lag=-1, r=0.1, p=0.9, n=9),
+                correlate.LagPoint(lag=0, r=0.5, p=0.1, n=10),
+                correlate.LagPoint(lag=1, r=0.2, p=0.7, n=9),
+            ],
+        ),
+    ]
+    # 2 headline tests + 2 non-zero lags (lag=0 is C-vs-D's own headline, not
+    # counted again) = 4.
+    assert report._count_tests(results) == 4
 
 
 def test_build_report_includes_p_value_in_headline_line():

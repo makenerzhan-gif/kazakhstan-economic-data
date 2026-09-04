@@ -21,7 +21,7 @@ Curated set of 8 pairs, hand-picked for shared history and a plausible economic 
 | Transform applied | used as-is (already a published comparison) | used as-is (already a published comparison) |
 
 - Overlap window: 2023-01-01 .. 2026-07-01 -- 42 observations.
-- **Pearson r = 0.991** (p = <0.001, significant at 5%)
+- **Pearson r = 0.991** (p = <0.001, significant at 5%; survives Bonferroni correction)
 
 Strong co-movement is expected here almost by construction -- core is a subset of the same basket headline is built from. A weak reading would be the surprising result worth chasing, not a strong one.
 
@@ -65,7 +65,7 @@ Strongest same-window reading: lag -1, r = -0.168, p = 0.197, not significant at
 | Transform applied | used as-is (already a published comparison) | used as-is (already a published comparison) |
 
 - Overlap window: 2011-01-01 .. 2026-06-01 -- 186 observations.
-- **Pearson r = -0.197** (p = 0.007, significant at 5%)
+- **Pearson r = -0.197** (p = 0.007, significant at 5%; does not survive Bonferroni correction)
 
 This compares a slow-moving fixed-base level index against a fast month-over-month comparison -- a weak correlation is expected from that mismatch in what's being measured, not necessarily evidence of no relationship.
 
@@ -80,7 +80,7 @@ This compares a slow-moving fixed-base level index against a fast month-over-mon
 | Transform applied | used as-is (already a published comparison) | used as-is (already a published comparison) |
 
 - Overlap window: 2011-01-01 .. 2026-07-01 -- 187 observations.
-- **Pearson r = -0.245** (p = <0.001, significant at 5%)
+- **Pearson r = -0.245** (p = <0.001, significant at 5%; survives Bonferroni correction)
 
 Same level-vs-comparison mismatch caveat as REER vs CPI.
 
@@ -95,7 +95,7 @@ Same level-vs-comparison mismatch caveat as REER vs CPI.
 | Transform applied | period-over-period % change (transformations.growth_rate) | period-over-period % change (transformations.growth_rate) |
 
 - Overlap window: 2015-12-31 .. 2025-12-31 -- 11 observations.
-- **Pearson r = 0.904** (p = <0.001, significant at 5%)
+- **Pearson r = 0.904** (p = <0.001, significant at 5%; survives Bonferroni correction)
 
 - n=11 -- small sample; treat as descriptive, not confirmatory.
 
@@ -128,7 +128,7 @@ Export value moves with shipped volume as well as price, and volume has its own 
 | +2 | 0.247 | 0.022 | 86 |
 | +3 | 0.746 | <0.001 | 85 |
 
-Strongest same-window reading: lag +3, r = 0.746, p = <0.001, significant at 5% (n=85). Descriptive only -- scanning multiple lags means this is the best of several looks, not a confirmed finding on its own; see Methodology.
+Strongest same-window reading: lag +3, r = 0.746, p = <0.001, significant at 5%; survives Bonferroni correction (n=85). Descriptive only -- scanning multiple lags means this is the best of several looks, not a confirmed finding on its own; see Methodology.
 
 ## CPI_YOY vs CORE_CPI_YOY_EX7
 
@@ -141,7 +141,7 @@ Strongest same-window reading: lag +3, r = 0.746, p = <0.001, significant at 5% 
 | Transform applied | used as-is (already a published comparison) | used as-is (already a published comparison) |
 
 - Overlap window: 2023-01-01 .. 2026-07-01 -- 42 observations.
-- **Pearson r = 0.980** (p = <0.001, significant at 5%)
+- **Pearson r = 0.980** (p = <0.001, significant at 5%; survives Bonferroni correction)
 
 Same construction caveat as CPI_YOY vs CORE_CPI_YOY_EX3: strong co-movement is the expected result, not evidence of anything beyond core being a subset of the headline basket.
 
@@ -187,13 +187,19 @@ Strongest same-window reading: lag -3, r = 0.124, p = 0.260, not significant at 
   skewed). Read it as a rough guide, not an exact one, especially at the
   small sample sizes some of these pairs have.
 - "Significant at 5%" below means p < 0.05
-  for that single test. This report runs several such tests (one per pair,
-  plus one per lag on the pairs with a lag scan) without correcting for
-  that -- at 5%, roughly 1 in 20 tests would clear the
-  bar by chance alone even with no real relationship anywhere, and a lag
-  scan's own "strongest reading" is the best of several such tests by
-  construction. Treat any single significant reading, especially a lag
-  scan's best one, as a lead worth checking again, not a conclusion.
+  for that single test in isolation.
+- **Multiple comparisons.** This report represents 26 distinct tests
+  (one per pair, plus one per non-zero lag on the pairs with a lag scan --
+  a lag scan's own contemporaneous point is the same test as that pair's
+  headline, not counted again). At 5% uncorrected,
+  roughly 1 in 20 tests would clear the bar by chance alone even with no
+  real relationship anywhere in the data, and a lag scan's "strongest
+  reading" is the best of several such tests by construction. "Survives
+  Bonferroni correction" below means p < 0.0019
+  (0.05 / 26, the standard conservative adjustment
+  for testing 26 hypotheses in one report). Treat a reading that is
+  significant uncorrected but does not survive correction as a lead worth
+  checking again with fresh data, not a conclusion.
 - Significant is not the same as strong: the p-value mainly reflects sample
   size, so a large-n pair can flag "significant" on a coefficient too weak
   to matter for anything (REER and NEER vs CPI both do exactly this in this

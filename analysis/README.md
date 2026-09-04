@@ -69,6 +69,17 @@ significant on a fairly weak r (n>180 makes that easy to clear), while
 despite n=11 precisely because the relationship is that strong. Read r for
 size, p only for whether this sample rules out zero.
 
+**Multiple comparisons.** Every report runs several significance tests (one
+per pair, plus one per non-zero lag on the pairs with a lag scan), so each
+result also states whether it survives a Bonferroni correction for the
+report's total test count (`report._count_tests`; the corrected threshold is
+shown in the report's own Methodology section, not fixed here since it
+depends on how many pairs and lags that run actually included). This already
+changed the reading on one pair: `REER` vs `CPI` is "significant at 5%"
+uncorrected (p=0.007) but does not survive the correction, while `NEER` vs
+`CPI` (p<0.001) does -- the two pairs looked like near-duplicates from r
+alone, and the correction is what actually separates them.
+
 **Deliberately left out, and why:**
 - `UNEMPLOYMENT` vs `AVG_WAGE`/`REAL_WAGE_INDEX` — `UNEMPLOYMENT` carries
   `lifecycle: stale_source`, stops in 2025-06, and has only 10 observations.
@@ -110,8 +121,5 @@ which year is the last real one.
   contaminating itself on the IMF WEO-forecast years already described
   above if built before that's handled properly. Natural next slices, not
   built yet.
-- **No multiple-comparisons correction** (Bonferroni or similar) on the
-  significance tests, even though this report runs several of them. Stated
-  explicitly in each report's Methodology section rather than corrected for.
 - **No revision tracking, no structural-change detection.** Every report is
   a fresh snapshot computed from whatever `data/unified/` holds at run time.

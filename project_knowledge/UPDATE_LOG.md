@@ -3425,3 +3425,35 @@ constant-series edge cases without raising (scipy raises below n=2, returns nan+
 ConstantInputWarning for a constant series -- both now handled explicitly rather than
 left to propagate), report formatting for p-values and the significance label, and the
 new headline line renders correctly. requirements.txt gained `scipy>=1.11`.
+
+## 2026-09-04 — Bonferroni correction, and it actually separates two pairs that looked alike
+
+`analysis/README.md` had named this as the one gap left after significance testing
+landed: "No multiple-comparisons correction (Bonferroni or similar) on the
+significance tests, even though this report runs several of them." Closed without a
+new dependency -- Bonferroni is arithmetic (divide alpha by the number of tests), not
+a library call.
+
+`report._count_tests` counts every distinct test a report actually represents: one
+per pair's headline correlation, plus one per non-zero lag on the three pairs with a
+lag scan -- a scan's own lag-zero point is the same test as that pair's headline, not
+counted twice. Today's report: 8 pairs + 3 pairs x 6 non-zero lags = 26 tests, giving
+a corrected threshold of 0.05/26 = 0.0019. Each result now states whether it survives
+that threshold, but only when the uncorrected 5% test already passed -- a reading
+that misses the easy bar trivially misses the stricter one too, so saying so twice
+would be noise, not information. (Caught this exact redundancy in the first version
+of the test for it, which asserted a Bonferroni clause on a non-significant p-value
+and failed against the actual, more sensible behavior -- fixed the test, not the
+code, once it was clear which one was right.)
+
+**What it changed**: `REER` vs `CPI` (r=-0.197, p=0.007) reads "significant at 5%"
+uncorrected but does *not* survive Bonferroni correction; `NEER` vs `CPI` (r=-0.245,
+p<0.001), its near-twin by construction, does. The two had looked like duplicates of
+each other from r alone -- the correction is what actually tells them apart. The
+`OIL_PRICE` vs `OIL_EXPORTS_VALUE` lag+3 finding (r=0.746, p<0.001) survives too,
+real additional confidence that it's a pattern and not one of 26 tests landing low
+by chance.
+
+1 new test (65/65 total) plus a fix to one existing one. `analysis/README.md` and
+each report's own Methodology section now explain the correction directly, with
+REER/NEER named as the live example rather than a hypothetical one.
