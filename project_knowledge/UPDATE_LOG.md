@@ -3321,3 +3321,24 @@ Deliberately out of scope: seasonal decomposition and forecasting (both need
 statistical significance testing (needs `scipy`), any all-pairs matrix, and syncing
 this output into `project_knowledge/`/the Claude Project -- an explicit follow-up
 decision once this output's shape has been reviewed, not bundled in here.
+
+## 2026-09-04 — two more correlation pairs, one of them a direct test of the other
+
+Added the two v1.1 candidates already named and deferred in the previous entry:
+`CPI_YOY` vs `CORE_CPI_YOY_EX7` (r=0.980, alongside the existing ex-3 pair at r=0.991
+-- both strong, as expected from core being a subset of the headline basket) and
+`OIL_PRICE` vs `OIL_EXPORTS_VOLUME` (r=-0.048, n=88).
+
+The second one is worth a note: it was added specifically to test a hypothesis the
+`OIL_PRICE` vs `OIL_EXPORTS_VALUE` pair's own interpretation had raised -- that
+value's weak correlation with price (r=-0.170) might be because export value also
+moves with shipped volume, independent of price. A near-zero price-vs-volume
+correlation is exactly the supporting evidence for that: volume really does appear to
+move roughly independently of price in this data, over 2019-2026. Recorded in
+`pairs.py` as a cross-reference between the two entries rather than as a coincidence.
+
+Both indicators checked clean against the guardrails before adding (no `lifecycle`
+flag, no `cumulation`, not an `international_projection` series) -- no new
+`ACKNOWLEDGED_LIFECYCLE`/`FORECAST_CUTOFF_YEAR` entries needed. 8 pairs now, still
+under the 10-pair cap `test_pairs_config.py` enforces. 53/53 tests, no code changes --
+this was purely `pairs.py` config plus the `analysis/README.md` count update.

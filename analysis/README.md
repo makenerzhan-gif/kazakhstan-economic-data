@@ -28,26 +28,28 @@ on every pipeline run) — never `data/raw/` or `data/processed/` directly.
 exploratory analysis, not a pass/fail data-integrity gate, and it stays a
 manually-run script until there's a reason to automate it.
 
-## The v1 correlation pass — what's covered and why
+## The correlation pass — what's covered and why
 
-`scripts/analysis/pairs.py` holds a **curated list of 6 hand-picked pairs**,
+`scripts/analysis/pairs.py` holds a **curated list of 8 hand-picked pairs**,
 not an all-pairs matrix over all 430 indicators. A blind matrix over series of
 wildly different length, frequency, and quality would mostly produce spurious
 correlations; every pair here is a reviewed choice with a stated rationale,
 and adding one is meant to stay a reviewed decision, not a config toggle
 (`tests/test_pairs_config.py` caps the list at 10 for exactly this reason).
 
-**In v1:** headline vs core inflation, oil price vs USD/KZT, REER/NEER vs
-CPI, government revenue vs expenditure, oil price vs crude export value.
+**Covered:** headline vs core inflation (both ex-3 and ex-7 exclusion
+baskets), oil price vs USD/KZT, REER/NEER vs CPI, government revenue vs
+expenditure, oil price vs crude export value and separately vs crude export
+volume. The volume pair was added specifically to test a hypothesis raised by
+the value pair's own interpretation note — see that pair's entry in the
+generated report for how the two connect.
 
-**Deliberately left out of v1, and why:**
+**Deliberately left out, and why:**
 - `UNEMPLOYMENT` vs `AVG_WAGE`/`REAL_WAGE_INDEX` — `UNEMPLOYMENT` carries
   `lifecycle: stale_source`, stops in 2025-06, and has only 10 observations.
   Too weak to lead with; a fine candidate once a replacement source is
   connected.
-- `CORE_CPI_*_EX7` and `OIL_EXPORTS_VOLUME` — reasonable v1.1 additions using
-  the same `Pair(...)` mechanism, just not in the first cut.
-- Any full correlation matrix, even restricted to the ~9 indicators the 6
+- Any full correlation matrix, even restricted to the ~10 indicators the 8
   pairs already touch — every comparison stays a deliberately chosen,
   individually-captioned pair, not a heatmap.
 

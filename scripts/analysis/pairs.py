@@ -108,14 +108,44 @@ PAIRS: list[Pair] = [
             "Export value moves with shipped volume as well as price, and "
             "volume has its own logistics-driven variation independent of "
             "price -- a weak reading doesn't mean price is irrelevant to "
-            "revenue, only that value alone doesn't isolate the price effect."
+            "revenue, only that value alone doesn't isolate the price effect. "
+            "See OIL_PRICE vs OIL_EXPORTS_VOLUME below for a direct check of "
+            "that volume-noise explanation."
+        ),
+    ),
+    Pair(
+        "CPI_YOY", "CORE_CPI_YOY_EX7", "Headline vs core inflation (ex-7)",
+        rationale=(
+            "Same question as headline vs core (ex-3) above, with the wider "
+            "exclusion basket -- run alongside it rather than in place of it, "
+            "since the two core measures can diverge from each other even "
+            "when both track headline."
+        ),
+        interpretation=(
+            "Same construction caveat as CPI_YOY vs CORE_CPI_YOY_EX3: strong "
+            "co-movement is the expected result, not evidence of anything "
+            "beyond core being a subset of the headline basket."
+        ),
+    ),
+    Pair(
+        "OIL_PRICE", "OIL_EXPORTS_VOLUME", "Oil price vs crude export volume",
+        rationale=(
+            "Direct counterpart to OIL_PRICE vs OIL_EXPORTS_VALUE: if price "
+            "and volume move independently, that's the mechanism behind "
+            "value's weak correlation with price above, not evidence price "
+            "doesn't matter."
+        ),
+        interpretation=(
+            "A near-zero reading here is the supporting case for that "
+            "explanation; a strong one (in either direction) would mean the "
+            "value result above needs a different explanation."
         ),
     ),
 ]
 
 # Explicit, reviewed overrides. correlate.py refuses to run a pair that needs
 # one of these and isn't listed here -- fail loudly, never silently guess.
-# Empty in v1: none of the 6 curated pairs above touch a lifecycle-flagged or
+# Empty as of this list: none of the pairs above touch a lifecycle-flagged or
 # international_projection-category indicator.
 ACKNOWLEDGED_LIFECYCLE: dict[str, str] = {}
 FORECAST_CUTOFF_YEAR: dict[str, int] = {}

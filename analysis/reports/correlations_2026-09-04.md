@@ -8,7 +8,7 @@ in `project_knowledge/`, and as of this report it is not synced into the
 Claude Project. Treat every figure here as a starting point for a question,
 not a finding on its own -- see Methodology and limitations at the end.
 
-Curated set of 6 pairs, hand-picked for shared history and a plausible economic relationship -- not an all-pairs matrix. See `analysis/README.md` for the full candidate list and why the rest were left out of v1.
+Curated set of 8 pairs, hand-picked for shared history and a plausible economic relationship -- not an all-pairs matrix. See `analysis/README.md` for the full candidate list and why the rest were left out of v1.
 
 ## CPI_YOY vs CORE_CPI_YOY_EX3
 
@@ -100,7 +100,37 @@ Only 12 annual observations means roughly 11 usable points after taking growth r
 - Overlap window: 2019-02-01 .. 2026-06-01 -- 88 observations.
 - **Pearson r = -0.170**
 
-Export value moves with shipped volume as well as price, and volume has its own logistics-driven variation independent of price -- a weak reading doesn't mean price is irrelevant to revenue, only that value alone doesn't isolate the price effect.
+Export value moves with shipped volume as well as price, and volume has its own logistics-driven variation independent of price -- a weak reading doesn't mean price is irrelevant to revenue, only that value alone doesn't isolate the price effect. See OIL_PRICE vs OIL_EXPORTS_VOLUME below for a direct check of that volume-noise explanation.
+
+## CPI_YOY vs CORE_CPI_YOY_EX7
+
+**Headline vs core inflation (ex-7)**
+
+*Why this pair:* Same question as headline vs core (ex-3) above, with the wider exclusion basket -- run alongside it rather than in place of it, since the two core measures can diverge from each other even when both track headline.
+
+| | CPI_YOY | CORE_CPI_YOY_EX7 |
+|---|---|---|
+| Transform applied | used as-is (already a published comparison) | used as-is (already a published comparison) |
+
+- Overlap window: 2023-01-01 .. 2026-07-01 -- 42 observations.
+- **Pearson r = 0.980**
+
+Same construction caveat as CPI_YOY vs CORE_CPI_YOY_EX3: strong co-movement is the expected result, not evidence of anything beyond core being a subset of the headline basket.
+
+## OIL_PRICE vs OIL_EXPORTS_VOLUME
+
+**Oil price vs crude export volume**
+
+*Why this pair:* Direct counterpart to OIL_PRICE vs OIL_EXPORTS_VALUE: if price and volume move independently, that's the mechanism behind value's weak correlation with price above, not evidence price doesn't matter.
+
+| | OIL_PRICE | OIL_EXPORTS_VOLUME |
+|---|---|---|
+| Transform applied | period-over-period % change (transformations.growth_rate) | period-over-period % change (transformations.growth_rate) |
+
+- Overlap window: 2019-02-01 .. 2026-06-01 -- 88 observations.
+- **Pearson r = -0.048**
+
+A near-zero reading here is the supporting case for that explanation; a strong one (in either direction) would mean the value result above needs a different explanation.
 
 ## Methodology and limitations
 
