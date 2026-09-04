@@ -1,6 +1,6 @@
 {
   "source": "minfin",
-  "source_url": "https://www.gov.kz/uploads/2026/8/5/609bce465237862c4ba611e0372fde11_original.1507070.xlsx",
+  "source_url": "https://www.gov.kz/uploads/2026/9/4/0f480349a6d5a3d479e612d5eecb8906_original.1216239.xlsx",
   "dataset_id": "statistical-bulletin/табл 22 кв/section=I.,row=1.2.10.,currency=KZT",
   "indicator_id": "GOV_DEBT_EUROBONDS",
   "indicator_name": "Government Eurobonds",
@@ -11,8 +11,8 @@
   "geography": "Kazakhstan (national)",
   "methodology": "Million KZT. Eurobonds within the Government's external debt -- the market-issued portion, as opposed to loans from international financial institutions.",
   "publication_date": null,
-  "last_update_date": "2026-09-03",
-  "download_date": "2026-09-03",
+  "last_update_date": "2026-09-04",
+  "download_date": "2026-09-04",
   "period_start": "2020-01-01",
   "period_end": "2026-07-01",
   "next_update_date": null,
