@@ -118,11 +118,19 @@ def decumulate_ytd(series: Series) -> Series:
 
 
 def seasonal_adjust_placeholder(series: Series) -> Series:
-    """Seasonal adjustment is NOT implemented in stage 1 (needs enough history for
-    X-13ARIMA-SEATS / STL to be meaningful, and only some of the stage-1 indicators
-    are even seasonal in a way that matters). Returns the input unchanged and callers
-    must tag the resulting metadata `transformation` field as 'seasonal_adjustment:none'
-    rather than implying adjustment happened.
+    """Seasonal adjustment is NOT implemented here, deliberately, and this stays
+    a no-op indefinitely -- not a placeholder waiting to be filled in here.
+
+    The real implementation is scripts/analysis/decompose.py, using
+    statsmodels' STL on a pandas Series (see
+    scripts/analysis/timeseries.py::prepare_level for how the series gets
+    there). It belongs there, not here, because it needs a real date-indexed
+    pandas Series and statsmodels itself -- the first external numerical
+    dependency in what stays a deliberately pandas-free, stdlib-only module.
+
+    Returns the input unchanged. Callers must still tag the resulting metadata
+    `transformation` field as 'seasonal_adjustment:none' rather than implying
+    adjustment happened.
     """
     return list(series)
 

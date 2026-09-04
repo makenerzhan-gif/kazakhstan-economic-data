@@ -3457,3 +3457,80 @@ by chance.
 1 new test (65/65 total) plus a fix to one existing one. `analysis/README.md` and
 each report's own Methodology section now explain the correction directly, with
 REER/NEER named as the live example rather than a hypothetical one.
+
+## 2026-09-04 — seasonal decomposition, the next slice of the analysis phase
+
+Asked for "seasonal decomposition and forecasting" together. Two background research
+passes plus a Plan-agent design pass ran first, and both converged on shipping
+decomposition alone: a full sweep of all 247 monthly+quarterly indicators' actual
+processed CSVs (not assumed) found only **4** indicators genuinely economically-seasonal
+with enough dense, gap-free history for STL to mean anything -- `CPI`, `EXPORTS`,
+`IMPORTS`, `GDP_NOMINAL`. The "obvious" candidates -- industrial production, retail
+trade, construction, tourism -- are all brand-new series with 3-5 data points, onboarded
+in just the last few months, unusable despite being exactly what you'd reach for first.
+Forecasting is a comparably-sized second design (backtest methodology, model choice,
+the WEO-forecast-year guardrail `analysis/README.md` already warned about) -- bundling
+both would mean reviewing two independent designs in one pass for no size reason: 4
+targets is smaller than the correlation phase's own opening commit (8 pairs, 12 files).
+
+`statsmodels>=0.15` is the first new dependency since `scipy`. Verified installable
+before committing to the design (`pip install --dry-run`): a prebuilt wheel exists for
+this environment's Python 3.14, no compilation, no conflicts against the existing
+numpy/pandas/scipy.
+
+**New shared module, not feature-local**: `scripts/analysis/timeseries.py::prepare_level`
+carries the same decumulation/lifecycle/forecast-cutoff guardrails
+`correlate.prepare_indicator` already has, but returns the level as-is rather than a
+growth-rate transform (STL separates trend/seasonal/residual out of the level itself;
+growth-rate-ing first would hand it an already partially-deseasonalized series). Built
+shared, not folded into `decompose.py`, specifically so the next slice (forecasting)
+reuses it without a third copy-paste -- this is what actually implements the
+contamination guard the README already promised, not just names it. One new guardrail
+beyond what correlation needed: after decumulation, the series is reindexed onto a
+regular calendar grid and refused if that reveals a gap -- all 4 targets are gap-free
+today, but the pipeline re-runs daily, and this is what keeps that true going forward.
+
+`scripts/analysis/decompose.py`: STL (`statsmodels.tsa.seasonal.STL`), `robust=True`
+fixed for every target (each window contains at least one large transient shock -- 2020
+COVID, the 2022 KZT devaluation -- and a non-robust fit would let one anomalous period
+distort the seasonal estimate for that calendar position across every year). Reports the
+average seasonal effect by calendar month/quarter (12 or 4 rows, not a dump of every
+observation), trend direction, and seasonal strength via the standard Hyndman &
+Athanasopoulos measure (`max(0, 1 - Var(resid)/Var(seasonal+resid))`, not
+`Var(seasonal)/Var(original)` -- the naive version would be dominated by trend for
+`GDP_NOMINAL` specifically). A `MIN_CYCLES=3` guardrail (stricter than STL's own ~2-cycle
+minimum) refuses a target outright rather than decomposing it with a louder caveat.
+
+**Verified, not assumed** -- ran the real script against the live data before writing
+anything about its output: `GDP_NOMINAL` comes back with seasonal strength 0.985, Q4
+running far above Q1-Q2 every cycle -- the same Q3-to-Q4 pattern the outlier-check work
+found independently weeks ago while fixing `validate_outliers`'s cumulation-awareness,
+now confirmed a second way. `IMPORTS` (0.688) shows meaningfully more seasonal structure
+than `EXPORTS` (0.204); `CPI` is weakest of the four (0.174) once the 2022 devaluation's
+inflation spike is downweighted by `robust=True` rather than read as a permanent
+November/December effect. Caught and fixed two real bugs from that live run before
+trusting the report: a duplicated "rose, rose" in the trend-direction line, and
+unreadable 13-digit `GDP_NOMINAL` figures with 3 decimal places of false precision --
+both fixed (thousands separators, 2 decimals uniformly) and reverified.
+
+The STL-recovery test is worth naming: a synthetic 8-year series with a *known*,
+deliberately irregular seasonal pattern (not a symmetric sine, which could mask an
+off-by-a-few-months alignment bug) recovers every month to within 0.05 of the true value
+and seasonal_strength=1.0 -- checked by actually running it during implementation, not
+assumed from the formula being "obviously correct."
+
+22 new tests (87/87 total): `test_timeseries.py` (guardrails, including the new gap
+check), `test_decompose.py` (the seasonal-recovery test, `_variance_explained` hand-
+computed against real arithmetic, guardrail propagation, report rendering),
+`test_seasonal_targets_config.py` (mirrors `test_pairs_config.py`, plus a
+period-matches-real-frequency check `pairs.py` doesn't need). `transformations.py`'s
+`seasonal_adjust_placeholder` got a docstring-only update pointing at where the real
+implementation actually lives (`git diff` confirms no behaviour change) -- it stays a
+documented no-op rather than a thin pandas-wrapping stub, since `transformations.py` is
+deliberately pandas-free and STL genuinely needs a date-indexed `pandas.Series` plus
+`statsmodels` itself.
+
+Deliberately out of scope: forecasting (the named next slice -- `timeseries.py` is
+already built for it to reuse), any indicator beyond the 4 verified targets, charting
+(the calendar table is useful without one), CI wiring, `project_knowledge/`/Claude
+Project sync (same open decision the correlation phase already deferred).
