@@ -289,10 +289,13 @@ checked, including `GDP_NOMINAL`'s 13-digit scale, which renders as a clean
 
 ## What NOT to expect here
 
-- **Not synced to the Claude Project.** `project_knowledge/` is the only
-  folder that reaches "Экономика Казахстана" — this isn't in it. Whether
-  (and how) this phase's output should eventually feed that Project is an
-  open follow-up decision, not something bundled into v1.
+- **Not synced to the Claude Project, by decision, not by omission.**
+  `project_knowledge/` is the only folder that reaches "Экономика Казахстана"
+  (via the manual GitHub -> Sync now bridge described in `project_knowledge/
+  README.md`). Asked explicitly whether any of `analysis/`'s output should
+  join it — decided no: Project Knowledge stays sourced-data-only, preserving
+  the exact separation this whole folder was built to guarantee. Read
+  analysis output directly from the repo/reports instead.
 - **No multi-step-ahead accuracy breakdown.** The forecasting pass reports
   one MAE/RMSE/MAPE per target across the whole holdout window — it doesn't
   say whether accuracy 1 period ahead differs from accuracy `horizon`
