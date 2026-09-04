@@ -50,13 +50,24 @@ additionally report correlation at each shift from `-max_lag` to `+max_lag`
 periods (`scripts/analysis/correlate.py::lag_scan`), since a same-month
 reading may understate a delayed pass-through. The scan surfaced a real
 pattern worth noting here: `OIL_PRICE` vs `OIL_EXPORTS_VALUE` goes from a
-near-zero contemporaneous r to r≈0.75 at a 3-month lag, while the volume pair
-shows nothing comparable at any lag tested — consistent with a price effect
-on export *value* that takes about a quarter to clear, showing up through
-price rather than through how much is shipped. Read as descriptive, not
-confirmatory: no significance testing is run, and reporting the strongest of
-several scanned lags is itself a multiple-comparisons problem (stated in each
-report's Methodology section, not just here).
+near-zero, not-significant contemporaneous r to r≈0.75 (p<0.001) at a
+3-month lag, while the volume pair shows nothing comparable at any lag
+tested — consistent with a price effect on export *value* that takes about
+a quarter to clear, showing up through price rather than through how much
+is shipped. Read as descriptive, not confirmatory: reporting the strongest
+of several scanned lags is itself a multiple-comparisons problem (stated in
+each report's Methodology section, not just here).
+
+**Significance.** Every r comes with a two-sided p-value
+(`scipy.stats.pearsonr`, H0: no linear correlation) and a plain
+"significant / not significant at 5%" label. Two things worth knowing before
+reading too much into either word: the test assumes approximately
+bivariate-normal data, not verified for any series here; and "significant"
+tracks sample size more than strength — `REER`/`NEER` vs `CPI` both read as
+significant on a fairly weak r (n>180 makes that easy to clear), while
+`GOV_REVENUE` vs `GOV_EXPENDITURE`'s much stronger r=0.904 is significant
+despite n=11 precisely because the relationship is that strong. Read r for
+size, p only for whether this sample rules out zero.
 
 **Deliberately left out, and why:**
 - `UNEMPLOYMENT` vs `AVG_WAGE`/`REAL_WAGE_INDEX` — `UNEMPLOYMENT` carries
@@ -99,9 +110,8 @@ which year is the last real one.
   contaminating itself on the IMF WEO-forecast years already described
   above if built before that's handled properly. Natural next slices, not
   built yet.
-- **No statistical significance testing** (p-values, confidence intervals) —
-  needs `scipy.stats`, not added. A correlation coefficient alone is not
-  proof of a relationship, especially at the sample sizes some of these
-  pairs have (as low as n=11).
+- **No multiple-comparisons correction** (Bonferroni or similar) on the
+  significance tests, even though this report runs several of them. Stated
+  explicitly in each report's Methodology section rather than corrected for.
 - **No revision tracking, no structural-change detection.** Every report is
   a fresh snapshot computed from whatever `data/unified/` holds at run time.

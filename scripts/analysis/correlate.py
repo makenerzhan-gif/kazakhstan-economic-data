@@ -10,11 +10,13 @@ same convention as scripts/lib/*.py.
 """
 from __future__ import annotations
 
+import warnings
 from dataclasses import dataclass, field
 from pathlib import Path
 
 import pandas as pd
 import yaml
+from scipy.stats import ConstantInputWarning, pearsonr
 
 from lib import periods, transformations  # noqa: E402
 
@@ -27,6 +29,10 @@ FREQUENCY_YAML = REPO_ROOT / "config" / "frequency.yaml"
 
 RESAMPLE_OFFSET = {"monthly": "MS", "quarterly": "QS", "annual": "AS"}
 
+# Below this, "not significant at 5%" is noted explicitly rather than left
+# for the reader to compute from the p-value.
+SIGNIFICANCE_ALPHA = 0.05
+
 
 class AnalysisGuardrailError(Exception):
     """Mirrors validation.StructuralChangeError's stop-loudly philosophy: raised
@@ -35,10 +41,31 @@ class AnalysisGuardrailError(Exception):
     """
 
 
+def pearson_with_p(x: pd.Series, y: pd.Series) -> tuple[float | None, float | None, int]:
+    """Pearson r, its two-sided p-value (H0: no linear correlation, assuming
+    bivariate normality -- not verified for any series here), and n.
+
+    Returns (None, None, n) if there are fewer than 2 paired observations or
+    the correlation is undefined (a constant series after transform) -- same
+    "undefined, not zero" treatment as the rest of this module.
+    """
+    n = len(x)
+    if n < 2:
+        return None, None, n
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", category=ConstantInputWarning)
+        result = pearsonr(x, y)
+    r, p = float(result.statistic), float(result.pvalue)
+    if pd.isna(r):
+        return None, None, n
+    return r, p, n
+
+
 @dataclass
 class LagPoint:
     lag: int
     r: float | None
+    p: float | None
     n: int
 
 
@@ -55,6 +82,7 @@ class PairResult:
     date_start: str | None
     date_end: str | None
     r: float | None
+    p: float | None = None
     caveats: list[str] = field(default_factory=list)
     lag_profile: list[LagPoint] | None = None
 
@@ -208,11 +236,8 @@ def lagged_correlation(x: pd.Series, y: pd.Series, lag: int) -> LagPoint:
     """
     y_shifted = y.shift(-lag)
     joined = pd.concat([x, y_shifted], axis=1, keys=["x", "y"]).dropna()
-    n = len(joined)
-    r = joined["x"].corr(joined["y"]) if n >= 2 else None
-    if r is not None and pd.isna(r):
-        r = None
-    return LagPoint(lag=lag, r=r, n=n)
+    r, p, n = pearson_with_p(joined["x"], joined["y"])
+    return LagPoint(lag=lag, r=r, p=p, n=n)
 
 
 def lag_scan(x: pd.Series, y: pd.Series, max_lag: int) -> list[LagPoint]:
@@ -241,15 +266,13 @@ def correlate_pair(
     )
 
     joined = pd.concat([x, y], axis=1, keys=[pair.id_x, pair.id_y]).dropna()
-    n = len(joined)
-    r = joined[pair.id_x].corr(joined[pair.id_y]) if n >= 2 else None
+    r, p, n = pearson_with_p(joined[pair.id_x], joined[pair.id_y])
     date_start = joined.index.min().strftime("%Y-%m-%d") if n else None
     date_end = joined.index.max().strftime("%Y-%m-%d") if n else None
 
     caveats: list[str] = []
-    if r is not None and pd.isna(r):
+    if n >= 2 and r is None:
         caveats.append("correlation is undefined (a constant series after transform).")
-        r = None
     if n < 30:
         caveats.append(f"n={n} -- small sample; treat as descriptive, not confirmatory.")
 
@@ -258,7 +281,7 @@ def correlate_pair(
     return PairResult(
         id_x=pair.id_x, id_y=pair.id_y, label=pair.label, rationale=pair.rationale,
         interpretation=pair.interpretation, transform_x=transform_x, transform_y=transform_y,
-        n=n, date_start=date_start, date_end=date_end, r=r, caveats=caveats,
+        n=n, date_start=date_start, date_end=date_end, r=r, p=p, caveats=caveats,
         lag_profile=lag_profile,
     )
 

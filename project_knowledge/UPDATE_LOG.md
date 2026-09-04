@@ -3385,3 +3385,43 @@ tests (58/58 total): zero-lag matches the contemporaneous figure, the known
 lead-lag construction resolves to the right lag and sign, correlate_pair
 wires max_lag through correctly (and leaves it off when unset), and the
 report renders the table. No new dependency.
+
+## 2026-09-04 — significance testing, and what it changes about how to read the pairs
+
+Every report in this analysis phase had carried the same disclaimer since the first
+one: "No statistical significance testing... a coefficient alone is not proof of a
+relationship." Closed that gap with `scipy` (first new dependency this project has
+added since `pypdf`) -- `scipy.stats.pearsonr` replaces the separate `pandas.Series
+.corr()` call everywhere a correlation is computed, since it returns the identical r
+plus a p-value in one call rather than computing r twice through two libraries.
+
+Every pair and every lag-scan point now carries a two-sided p-value (H0: no linear
+correlation) and a plain "significant / not significant at 5%" label, computed by
+`correlate.pearson_with_p`, which returns `(None, None, n)` below n=2 or for a
+constant series -- same "undefined, not zero" treatment already used throughout this
+module, not a new exception path.
+
+**What it actually changed about how to read the existing 8 pairs**: not much shifted,
+but two things sharpened. `GOV_REVENUE` vs `GOV_EXPENDITURE` (r=0.904, n=11) had been
+flagged with "treat as descriptive, not confirmatory" purely because of its small
+sample -- the p-value (<0.001) says the relationship is strong enough that even 11
+points rule out "no relationship" convincingly; the earlier blanket small-n caveat was
+more cautious than the number itself warrants. The opposite lesson showed up in
+`REER`/`NEER` vs `CPI`: both read as "significant at 5%" (p=0.007, p<0.001) on
+correlations of only -0.197 and -0.245 -- large n (186, 187) makes weak relationships
+easy to detect, so "significant" here says nothing about size. Both `analysis/README.md`
+and every report's own Methodology section now say this directly, with these two pairs
+named as the live example, not a hypothetical one.
+
+The lag scan's "strongest same-window reading" callout now shows its p-value too --
+`OIL_PRICE` vs `OIL_EXPORTS_VALUE`'s lag+3 finding (r=0.746) comes in at p<0.001, which
+is additional, real evidence for reading it as a genuine pattern rather than one of
+seven lags landing high by chance. The report's own methodology text is explicit that
+this is still not corrected for running multiple tests (one per pair, one per lag) --
+scipy gives p-values, not a multiple-comparisons correction, and none was added.
+
+6 new tests (64/64 total): pearson_with_p matches pandas' r exactly and handles n<2 and
+constant-series edge cases without raising (scipy raises below n=2, returns nan+a
+ConstantInputWarning for a constant series -- both now handled explicitly rather than
+left to propagate), report formatting for p-values and the significance label, and the
+new headline line renders correctly. requirements.txt gained `scipy>=1.11`.

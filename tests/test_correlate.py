@@ -222,12 +222,70 @@ def test_build_report_renders_lag_table_when_present():
             transform_x="as-is", transform_y="as-is", n=10,
             date_start="2026-01-01", date_end="2026-10-01", r=0.1, caveats=[],
             lag_profile=[
-                correlate.LagPoint(lag=-1, r=0.2, n=9),
-                correlate.LagPoint(lag=0, r=0.1, n=10),
-                correlate.LagPoint(lag=1, r=0.9, n=9),
+                correlate.LagPoint(lag=-1, r=0.2, p=0.6, n=9),
+                correlate.LagPoint(lag=0, r=0.1, p=0.8, n=10),
+                correlate.LagPoint(lag=1, r=0.9, p=0.001, n=9),
             ],
         ),
     ]
     text = report.build_report(results, run_date="2026-09-04")
     assert "Lag scan" in text
     assert "Strongest same-window reading: lag +1" in text
+
+
+def test_pearson_with_p_matches_pandas_corr():
+    x = pd.Series([1.0, 2.0, 4.0, 3.0, 5.0])
+    y = pd.Series([2.0, 1.0, 5.0, 4.0, 6.0])
+    r, p, n = correlate.pearson_with_p(x, y)
+    assert r == pytest.approx(x.corr(y))
+    assert n == 5
+    assert p is not None and 0.0 <= p <= 1.0
+
+
+def test_pearson_with_p_returns_none_below_two_observations():
+    r, p, n = correlate.pearson_with_p(pd.Series([1.0]), pd.Series([2.0]))
+    assert r is None
+    assert p is None
+    assert n == 1
+
+
+def test_pearson_with_p_returns_none_for_constant_series():
+    r, p, n = correlate.pearson_with_p(pd.Series([1.0, 1.0, 1.0]), pd.Series([2.0, 3.0, 4.0]))
+    assert r is None
+    assert p is None
+    assert n == 3
+
+
+def test_correlate_pair_populates_p_alongside_r():
+    pair = pairs_config.Pair("A", "B", "label", "rationale")
+    long_df = pd.concat([
+        _long_df("A", [("2026-01-01", 1.0), ("2026-02-01", 2.0), ("2026-03-01", 3.0)]),
+        _long_df("B", [("2026-01-01", 10.0), ("2026-02-01", 20.0), ("2026-03-01", 30.0)]),
+    ])
+    indicators_by_id = {
+        "A": {"frequency": "monthly", "observation_type": "comparison_index"},
+        "B": {"frequency": "monthly", "observation_type": "comparison_index"},
+    }
+    result = correlate.correlate_pair(pair, long_df, indicators_by_id)
+    assert result.p is not None and result.p < 0.001
+
+
+def test_format_p_and_significance_note():
+    assert report._format_p(None) == "undefined"
+    assert report._format_p(0.0001) == "<0.001"
+    assert report._format_p(0.031) == "0.031"
+    assert report._significance_note(0.01) == ", significant at 5%"
+    assert report._significance_note(0.5) == ", not significant at 5%"
+    assert report._significance_note(None) == ""
+
+
+def test_build_report_includes_p_value_in_headline_line():
+    results = [
+        correlate.PairResult(
+            id_x="A", id_y="B", label="A vs B", rationale="why", interpretation="",
+            transform_x="as-is", transform_y="as-is", n=10,
+            date_start="2026-01-01", date_end="2026-10-01", r=0.5, p=0.02, caveats=[],
+        ),
+    ]
+    text = report.build_report(results, run_date="2026-09-04")
+    assert "p = 0.020, significant at 5%" in text
