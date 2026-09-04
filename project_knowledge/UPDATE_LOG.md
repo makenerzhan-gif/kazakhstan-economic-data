@@ -3248,3 +3248,76 @@ The dictionary synced into the Project still can't tell a reader whether a value
 or a comparison already, or what a comparison is measured against. The metadata this session built
 specifically to answer that question lives in `config/indicators.yaml`, which this generator doesn't
 read from at all.
+
+## 2026-09-04 — the deferred phase starts: a curated correlation pass
+
+Both `README.md` ("No econometric modeling yet") and `project_knowledge/README.md`
+("Modeling is a deliberate later phase") named this and put it off until the dataset
+itself was solid. Told to start it, "just compute correlations" was the wrong first
+move: the project has a strict, consistently-enforced rule against publishing an
+aggregate a source doesn't itself publish, and two real landmines in the data make a
+naive correlation wrong outright -- annual dates are deliberately left on mixed
+period-start/period-end convention across indicators (`scripts/lib/periods.py`), and
+34 indicators are year-to-date-cumulative, where a raw January-to-December comparison
+reads a normal reset as a collapse.
+
+Two background research passes and one design pass went into this before any code, and
+the design itself surfaced two pieces of already-written, already-tested, completely
+unused infrastructure: `scripts/lib/transformations.py` (yoy/qoq/mom/growth_rate/
+deflate/rebase_index, docstring'd with exact formulas, called by nothing outside its
+own test file) and `config/frequency.yaml` (per-indicator cross-frequency aggregation
+rules -- `EXCHANGE_RATE: mean`, `GOV_REVENUE: sum`, `M2: end_of_period` -- read by no
+code anywhere). This phase is what finally wires both in, rather than reinventing
+either.
+
+**What shipped**, a first slice, deliberately small:
+
+- `transformations.decumulate_ytd` -- the one real gap in that module. Converts a
+  year-to-date cumulative series to its own-period contribution (same logic
+  `validate_outliers` already computes inline for the outlier check, now reusable for
+  anything that needs the de-cumulated series itself). Tested against the exact
+  fixtures already proven correct in `test_schema.py`'s YTD outlier tests, so the new
+  reusable version is checked against already-correct behaviour, not a fresh guess.
+- `scripts/analysis/` (`pairs.py`, `correlate.py`, `report.py`) + `scripts/
+  analyze_correlations.py` -- a manually-run script (not wired into `update_all.py` or
+  CI) that correlates 6 hand-picked pairs from `data/unified/macro_long.csv`: headline
+  vs core inflation, oil price vs USD/KZT, REER/NEER vs CPI, government revenue vs
+  expenditure, oil price vs crude export value. Every pair carries a written rationale
+  (why it was picked) and interpretation (what to weigh while reading the result) --
+  both human-authored in `pairs.py`, not generated, since a script narrating its own
+  economic story would be exactly the kind of unearned confidence this project has
+  avoided everywhere else.
+- Four guardrails that refuse rather than guess: an indicator carrying a `lifecycle`
+  flag (a known structural break) is rejected unless explicitly acknowledged in
+  `pairs.ACKNOWLEDGED_LIFECYCLE`; an IMF `international_projection` series (WEO
+  forecasts through 2031 baked into the same column as actuals) is rejected unless
+  `pairs.FORECAST_CUTOFF_YEAR` states the last real year; a cross-frequency pair with
+  no entry in `config/frequency.yaml`'s aggregation rules is rejected rather than
+  assigned a guessed method; two annual series with different date conventions are
+  rejected rather than silently joined on the wrong year-anchor.
+- Output lives under a new top-level `analysis/` -- deliberately not `data/processed/`,
+  `config/indicators.yaml`, or `project_knowledge/` -- so nothing computed here can be
+  mistaken for a connected, source-published indicator. `analysis/README.md` states
+  this up front, in the same register as `project_knowledge/README.md`'s "what NOT to
+  expect here," and lists the full candidate set including what was left out of v1 and
+  why (`UNEMPLOYMENT` vs wages: only 10 points, source stopped mid-2025 -- too weak to
+  lead with).
+
+**Verified, not assumed**: two of the six results (`GOV_REVENUE`/`GOV_EXPENDITURE`
+r=0.904 n=11; `OIL_PRICE`/`EXCHANGE_RATE` r=0.063 n=62) were computed independently by
+hand against the live repo before being written into the plan, then reproduced exactly
+by the finished script. `OIL_PRICE` vs `EXCHANGE_RATE` is worth reading in full as an
+example of the standard this output holds itself to: r=0.063 is reported as a real,
+checked near-zero result over 2021-2026, explicitly followed by why that is not the
+same claim as "oil doesn't matter to the tenge" (NBK manages the rate rather than
+floating it; monthly averaging blurs timing; the window spans very different regimes).
+
+13/13 relevant new tests (53/53 total), `git status` confirms nothing outside
+`analysis/`, `scripts/`, and `tests/` changed -- no new dependency, `pandas` already
+covered it.
+
+Deliberately out of scope: seasonal decomposition and forecasting (both need
+`statsmodels`; forecasting additionally risks the WEO-contamination problem above),
+statistical significance testing (needs `scipy`), any all-pairs matrix, and syncing
+this output into `project_knowledge/`/the Claude Project -- an explicit follow-up
+decision once this output's shape has been reviewed, not bundled in here.

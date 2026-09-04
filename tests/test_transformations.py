@@ -57,3 +57,41 @@ def test_rebase_index():
 def test_seasonal_adjust_placeholder_is_passthrough():
     s = [("2026-01", 10.0)]
     assert t.seasonal_adjust_placeholder(s) == s
+
+
+def test_decumulate_ytd_matches_validate_outliers_own_period_contribution():
+    # Same fixture as test_schema.py::test_validate_outliers_year_to_date_ignores_the_january_reset
+    s = [
+        ("2026-01-01", 100.0),
+        ("2026-04-01", 210.0),
+        ("2026-07-01", 320.0),
+        ("2026-10-01", 430.0),
+        ("2027-01-01", 105.0),  # January reset -- own-period contribution, not a diff across years
+    ]
+    out = t.decumulate_ytd(s)
+    assert [v for _, v in out] == [100.0, 110.0, 110.0, 110.0, 105.0]
+
+
+def test_decumulate_ytd_flags_real_spike_within_year():
+    # Same fixture as test_schema.py::test_validate_outliers_year_to_date_still_catches_a_real_anomaly
+    s = [
+        ("2026-01-01", 100.0),
+        ("2026-04-01", 210.0),
+        ("2026-07-01", 900.0),
+        ("2026-10-01", 1010.0),
+    ]
+    out = t.decumulate_ytd(s)
+    assert [v for _, v in out] == [100.0, 110.0, 690.0, 110.0]
+
+
+def test_decumulate_ytd_propagates_none_and_does_not_fake_a_delta_across_a_gap():
+    s = [("2026-01-01", 100.0), ("2026-04-01", None), ("2026-07-01", 320.0)]
+    out = t.decumulate_ytd(s)
+    assert out[0][1] == 100.0
+    assert out[1][1] is None
+    assert out[2][1] == 320.0  # treated as a fresh run's first value, not 320-None
+
+
+def test_decumulate_ytd_single_observation_is_unchanged():
+    s = [("2026-01-01", 42.0)]
+    assert t.decumulate_ytd(s) == s

@@ -89,6 +89,34 @@ def rebase_index(series: Series, new_base_date: str, new_base_value: float = 100
     return [(d, (v / base * new_base_value) if v is not None else None) for d, v in series]
 
 
+def decumulate_ytd(series: Series) -> Series:
+    """Convert a year-to-date cumulative series into its own-period contribution.
+
+    value[t] = raw[t] - raw[t-1] if raw[t-1] falls in the same calendar year as
+    raw[t], else raw[t] unchanged -- the first observation of a new year IS its
+    own-period contribution, since the cumulative total resets at each January.
+    The same logic validation.validate_outliers computes inline for
+    cumulation="year_to_date" series (to avoid flagging every January reset as a
+    false outlier); this makes it reusable for anything that needs the
+    de-cumulated series itself, not just outlier comparison.
+
+    A None value breaks the chain: the next non-None value after a gap is
+    treated as the first observation of a new run, not diffed across the gap.
+    """
+    out: Series = []
+    prev_value: float | None = None
+    prev_year: str | None = None
+    for d, v in series:
+        year = str(d)[:4]
+        if v is None:
+            out.append((d, None))
+            prev_value, prev_year = None, None
+            continue
+        out.append((d, v if (prev_value is None or year != prev_year) else v - prev_value))
+        prev_value, prev_year = v, year
+    return out
+
+
 def seasonal_adjust_placeholder(series: Series) -> Series:
     """Seasonal adjustment is NOT implemented in stage 1 (needs enough history for
     X-13ARIMA-SEATS / STL to be meaningful, and only some of the stage-1 indicators
@@ -109,4 +137,5 @@ TRANSFORMATION_REGISTRY = {
     "mom": mom,
     "deflate": deflate,
     "rebase_index": rebase_index,
+    "decumulate_ytd": decumulate_ytd,
 }
