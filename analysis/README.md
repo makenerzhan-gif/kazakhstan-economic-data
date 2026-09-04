@@ -19,9 +19,10 @@ mistaken for a connected, source-published indicator.
   `scripts/decompose_seasonality.py`, same full-snapshot convention.
 - `reports/forecast_YYYY-MM-DD.md` — one dated report per run of
   `scripts/forecast_series.py`, same full-snapshot convention.
-- `reports/charts/*.png` — one dated chart per target per pass, written by
-  the same two scripts above (decomposition, forecasting) and embedded in
-  their respective `.md` report — see "The charting slice" below.
+- `reports/charts/*.png` — one dated chart per target/pair, written by the
+  same three scripts above (correlation pairs with a lag scan only;
+  decomposition and forecasting, every target) and embedded in their
+  respective `.md` report — see "The charting slice" below.
 
 ## How to regenerate it
 
@@ -263,19 +264,28 @@ this: capturing `s` and `backtest_forecast` for CPI reproduced the exact
 already-shipped backtest MAE (0.2748380824808585) from the captured values
 themselves.
 
-Real output from a live run, both passes: 8 PNGs, ~394KB total (seasonal
-charts ~21-27KB each, forecast charts ~67-75KB each at `DEFAULT_DPI=120`).
+**The correlation pass** gets a bar chart too, but only for the 3 of 8 pairs
+that set `max_lag > 0` (`OIL_PRICE` vs `EXCHANGE_RATE`, vs
+`OIL_EXPORTS_VALUE`, vs `OIL_EXPORTS_VOLUME`) — a pair without a lag scan has
+a single r/p scalar, nothing to plot as a function of lag. Same bar-chart
+visual language as decomposition's (discrete x positions, zero line, sign
+coloring): r on the y-axis, lag on the x-axis, one bar per scanned lag. Needed
+zero changes to `correlate.py` — `PairResult.lag_profile` already carried
+everything the chart needs. The `OIL_PRICE` vs `OIL_EXPORTS_VALUE` chart
+visually confirms the pattern the lag-scan section above already describes in
+words: near-zero/negative bars around lag 0, rising to r≈0.75 at lag +3.
 
-**Deliberately out of scope:** charting the correlation pass's lag scans
-(r-vs-lag) — a different, smaller-population output shape than the two
-table-per-target passes above, and out of the scope confirmed before this
-slice started; interactive/HTML charts (plotly, bokeh) — static PNGs match
-this project's markdown-report-centric output model; unit-aware y-axis
-labels (`config/indicators.yaml` does carry a `unit` field, but threading it
-through would need new plumbing for a cosmetic gain — matplotlib's default
-axis formatting was sufficient in every real chart checked, including
-`GDP_NOMINAL`'s 13-digit scale, which renders as a clean `1e13` offset, not
-raw digits); a chart retention/cleanup policy.
+Real output from a live run, all three passes: 11 PNGs, ~440KB total
+(seasonal charts ~21-27KB each, forecast charts ~67-75KB each, lag-scan
+charts ~26-31KB each, all at `DEFAULT_DPI=120`).
+
+**Deliberately out of scope:** interactive/HTML charts (plotly, bokeh) —
+static PNGs match this project's markdown-report-centric output model;
+unit-aware y-axis labels (`config/indicators.yaml` does carry a `unit`
+field, but threading it through would need new plumbing for a cosmetic gain
+— matplotlib's default axis formatting was sufficient in every real chart
+checked, including `GDP_NOMINAL`'s 13-digit scale, which renders as a clean
+`1e13` offset, not raw digits); a chart retention/cleanup policy.
 
 ## What NOT to expect here
 

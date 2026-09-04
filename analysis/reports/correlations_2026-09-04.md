@@ -40,6 +40,8 @@ Strong co-movement is expected here almost by construction -- core is a subset o
 
 NBK manages the exchange rate rather than floating it freely, so a same-month linear read may understate a lagged or asymmetric response -- see the lag scan below for whether shifting the two series relative to each other finds a stronger reading. Resampling the daily rate to a monthly mean also blurs when in the month a move happened, and the overlap window folds very different regimes (COVID recovery, the 2022 devaluation, disinflation) into one number.
 
+![OIL_PRICE vs EXCHANGE_RATE lag scan chart](charts/lag_OIL_PRICE_EXCHANGE_RATE_2026-09-04.png)
+
 **Lag scan** (positive lag = OIL_PRICE leads EXCHANGE_RATE):
 
 | Lag (periods) | r | p | n |
@@ -116,6 +118,8 @@ Only 12 annual observations means roughly 11 usable points after taking growth r
 
 Export value moves with shipped volume as well as price, and volume has its own logistics-driven variation independent of price -- a weak reading doesn't mean price is irrelevant to revenue, only that value alone doesn't isolate the price effect. See OIL_PRICE vs OIL_EXPORTS_VOLUME below for a direct check of that volume-noise explanation, and the lag scan for whether a shipment/settlement delay between a price move and its showing up in recorded export value fits better than same-month.
 
+![OIL_PRICE vs OIL_EXPORTS_VALUE lag scan chart](charts/lag_OIL_PRICE_OIL_EXPORTS_VALUE_2026-09-04.png)
+
 **Lag scan** (positive lag = OIL_PRICE leads OIL_EXPORTS_VALUE):
 
 | Lag (periods) | r | p | n |
@@ -159,6 +163,8 @@ Same construction caveat as CPI_YOY vs CORE_CPI_YOY_EX3: strong co-movement is t
 - **Pearson r = -0.048** (p = 0.655, not significant at 5%)
 
 A near-zero reading here is the supporting case for that explanation; a strong one (in either direction) would mean the value result above needs a different explanation. Same lag scan as the value pair, for the same reason.
+
+![OIL_PRICE vs OIL_EXPORTS_VOLUME lag scan chart](charts/lag_OIL_PRICE_OIL_EXPORTS_VOLUME_2026-09-04.png)
 
 **Lag scan** (positive lag = OIL_PRICE leads OIL_EXPORTS_VOLUME):
 

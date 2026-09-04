@@ -3,9 +3,12 @@ from pathlib import Path
 
 import pandas as pd
 import pytest
+from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from analysis import charts  # noqa: E402
 from analysis import correlate  # noqa: E402
+from analysis import lag_charts  # noqa: E402
 from analysis import pairs as pairs_config  # noqa: E402
 from analysis import report  # noqa: E402
 
@@ -309,6 +312,94 @@ def test_count_tests_counts_headline_plus_nonzero_lags_only():
     # 2 headline tests + 2 non-zero lags (lag=0 is C-vs-D's own headline, not
     # counted again) = 4.
     assert report._count_tests(results) == 4
+
+
+def test_render_pair_chart_returns_none_without_lag_scan():
+    result = correlate.PairResult(
+        id_x="A", id_y="B", label="", rationale="", interpretation="",
+        transform_x="", transform_y="", n=10, date_start=None, date_end=None,
+        r=0.5, p=0.1,
+    )
+    assert lag_charts.render_pair_chart(result, run_date="2026-09-04", out_dir=Path("/unused")) is None
+
+
+def test_render_pair_chart_writes_a_valid_png(tmp_path):
+    pair = pairs_config.Pair("A", "B", "label", "rationale", max_lag=2)
+    long_df = pd.concat([
+        _long_df("A", [(f"2026-{m:02d}-01", float(m)) for m in range(1, 9)]),
+        _long_df("B", [(f"2026-{m:02d}-01", float(m) * 2) for m in range(1, 9)]),
+    ])
+    indicators_by_id = {
+        "A": {"frequency": "monthly", "observation_type": "comparison_index"},
+        "B": {"frequency": "monthly", "observation_type": "comparison_index"},
+    }
+    result = correlate.correlate_pair(pair, long_df, indicators_by_id)
+
+    path = lag_charts.render_pair_chart(result, run_date="2026-09-04", out_dir=tmp_path)
+
+    assert path.name == charts.chart_filename("lag", "A_B", "2026-09-04")
+    assert path.exists()
+    assert path.stat().st_size > 1000
+    img = Image.open(path)
+    img.verify()
+
+
+def test_render_pair_chart_skips_undefined_lag_points(tmp_path):
+    result = correlate.PairResult(
+        id_x="A", id_y="B", label="", rationale="", interpretation="",
+        transform_x="", transform_y="", n=10, date_start=None, date_end=None,
+        r=0.1, p=0.8,
+        lag_profile=[
+            correlate.LagPoint(lag=-1, r=None, p=None, n=1),
+            correlate.LagPoint(lag=0, r=0.1, p=0.8, n=10),
+            correlate.LagPoint(lag=1, r=0.9, p=0.001, n=9),
+        ],
+    )
+    path = lag_charts.render_pair_chart(result, run_date="2026-09-04", out_dir=tmp_path)
+    assert path is not None
+    assert path.exists()
+
+
+def test_render_all_only_returns_paths_for_pairs_with_lag_scans(tmp_path):
+    results = [
+        correlate.PairResult(
+            id_x="A", id_y="B", label="", rationale="", interpretation="",
+            transform_x="", transform_y="", n=10, date_start=None, date_end=None, r=0.5,
+        ),
+        correlate.PairResult(
+            id_x="C", id_y="D", label="", rationale="", interpretation="",
+            transform_x="", transform_y="", n=10, date_start=None, date_end=None, r=0.5,
+            lag_profile=[
+                correlate.LagPoint(lag=0, r=0.5, p=0.1, n=10),
+                correlate.LagPoint(lag=1, r=0.2, p=0.7, n=9),
+            ],
+        ),
+    ]
+    paths = lag_charts.render_all(results, run_date="2026-09-04", out_dir=tmp_path)
+    assert len(paths) == 1
+    assert paths[0].name == charts.chart_filename("lag", "C_D", "2026-09-04")
+
+
+def test_build_report_embeds_chart_only_for_pairs_with_lag_scan():
+    results = [
+        correlate.PairResult(
+            id_x="A", id_y="B", label="A vs B", rationale="why", interpretation="",
+            transform_x="as-is", transform_y="as-is", n=10,
+            date_start="2026-01-01", date_end="2026-10-01", r=0.1, p=0.8,
+        ),
+        correlate.PairResult(
+            id_x="C", id_y="D", label="C vs D", rationale="why", interpretation="",
+            transform_x="as-is", transform_y="as-is", n=10,
+            date_start="2026-01-01", date_end="2026-10-01", r=0.5, p=0.1,
+            lag_profile=[
+                correlate.LagPoint(lag=0, r=0.5, p=0.1, n=10),
+                correlate.LagPoint(lag=1, r=0.2, p=0.7, n=9),
+            ],
+        ),
+    ]
+    text = report.build_report(results, run_date="2026-09-04")
+    assert "![C vs D lag scan chart](charts/lag_C_D_2026-09-04.png)" in text
+    assert "charts/lag_A_B_2026-09-04.png" not in text
 
 
 def test_build_report_includes_p_value_in_headline_line():

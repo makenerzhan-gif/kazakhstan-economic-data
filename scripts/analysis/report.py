@@ -2,9 +2,15 @@
 
 Pure string-building, same shape as build_project_knowledge.py's
 build_data_catalog/build_sources_md: one function in, one string out, no I/O.
+The `charts` import below is the pure chart_filename() naming function only --
+never charts.save_figure() -- so this module stays genuinely zero-I/O; the
+actual PNG (for pairs with a lag scan only) is written by
+analyze_correlations.py calling lag_charts.render_all() before this module's
+build_report() ever runs.
 """
 from __future__ import annotations
 
+from . import charts
 from .correlate import SIGNIFICANCE_ALPHA, PairResult
 
 DISCLAIMER = """**DERIVED, NOT SOURCED.** Every number below is computed by
@@ -130,7 +136,12 @@ def _lag_table(result: PairResult, corrected_alpha: float) -> list[str]:
     return lines
 
 
-def _pair_section(result: PairResult, corrected_alpha: float) -> str:
+def _chart_embed(result: PairResult, run_date: str) -> list[str]:
+    filename = charts.chart_filename("lag", f"{result.id_x}_{result.id_y}", run_date)
+    return ["", f"![{result.id_x} vs {result.id_y} lag scan chart](charts/{filename})"]
+
+
+def _pair_section(result: PairResult, corrected_alpha: float, run_date: str) -> str:
     lines = [
         f"## {result.id_x} vs {result.id_y}",
         "",
@@ -157,6 +168,7 @@ def _pair_section(result: PairResult, corrected_alpha: float) -> str:
     if result.interpretation:
         lines += ["", result.interpretation]
     if result.lag_profile:
+        lines += _chart_embed(result, run_date)
         lines += _lag_table(result, corrected_alpha)
     return "\n".join(lines)
 
@@ -178,7 +190,7 @@ def build_report(results: list[PairResult], run_date: str) -> str:
         "",
     ]
     for r in results:
-        parts.append(_pair_section(r, corrected_alpha))
+        parts.append(_pair_section(r, corrected_alpha, run_date))
         parts.append("")
     parts.append(_methodology(n_tests, corrected_alpha))
     return "\n".join(parts) + "\n"

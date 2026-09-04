@@ -3698,12 +3698,73 @@ via Pillow), plus `test_forecast.py`'s `_sample_result()` fixture and its
 deterministic-recovery test extended for the two new required fields. `git diff
 scripts/analysis/decompose.py` confirmed empty, matching the zero-change claim.
 
-Deliberately out of scope: charting the correlation pass's lag scans (a different,
-smaller-population shape, and out of the confirmed scope for this round);
-interactive/HTML charts (matplotlib static PNGs match this project's
-markdown-report-centric output model); unit-aware y-axis labels (`config/
-indicators.yaml` does carry a `unit` field, but matplotlib's default axis
+Deliberately out of scope: interactive/HTML charts (matplotlib static PNGs match
+this project's markdown-report-centric output model); unit-aware y-axis labels
+(`config/indicators.yaml` does carry a `unit` field, but matplotlib's default axis
 formatting was already sufficient in every real chart checked, including
 GDP_NOMINAL's 13-digit scale); a chart retention/cleanup policy (would contradict
 the deliberate never-deleted convention the `.md` reports already use, and isn't
 worth building before there's a real reason to).
+
+## 2026-09-04 — lag-scan charts, closing out the charting slice's one deferral
+
+Asked to continue after the decomposition/forecasting charting slice shipped.
+That slice had explicitly deferred the correlation pass's lag scans as a
+"different, smaller-population output shape" -- re-read `pairs.py`, `correlate.py`,
+`report.py`, and `analyze_correlations.py` in full before touching anything (not
+relied on memory from earlier this session) to confirm the real current field
+names and structure rather than risk a stale assumption.
+
+**Zero changes needed to `correlate.py`** -- `PairResult.lag_profile` (a list of
+`LagPoint(lag, r, p, n)`) already carried everything a lag-scan chart needs, the
+same zero-change situation `decompose.py` was in for the first charting slice, and
+unlike `forecast.py`'s two required field additions there was no discarded
+intermediate value to retain here at all. New `scripts/analysis/lag_charts.py`
+reuses the shared `charts.py` module exactly as-is (`chart_filename`,
+`save_figure`, `add_disclaimer` -- none of it needed touching for a third pass),
+following the established bar-chart visual language from the seasonal-effect
+chart (discrete x positions, zero line, sign-colored bars) rather than the
+forecast pass's line-chart style, since a lag scan is a small number of discrete
+shifts (7 points, -3..+3 for all 3 scanned pairs today), not a continuous time
+series. Only pairs with `max_lag > 0` (3 of 8: `OIL_PRICE` vs `EXCHANGE_RATE`, vs
+`OIL_EXPORTS_VALUE`, vs `OIL_EXPORTS_VOLUME`) get a chart -- `render_all` filters
+this, and `report.py`'s `_chart_embed` is only called inside the same
+`if result.lag_profile:` guard that already gates the existing lag table.
+`report.py` stayed genuinely zero-I/O (only imports `charts.chart_filename`,
+never `charts.save_figure`), matching `seasonal_report.py`/`forecast_report.py`'s
+precedent exactly. `_pair_section` gained a `run_date` parameter threaded down
+from `build_report`, which every existing test already passes as a keyword
+argument -- confirmed zero existing tests call `_pair_section` directly, so this
+signature change broke nothing.
+
+A small defensive branch worth naming: a `LagPoint` can have `r=None` (fewer than
+2 paired observations after the shift, or a constant series) -- `render_pair_chart`
+filters those out of the bars entirely (never plots a misleading 0-height bar for
+"undefined") and annotates the count of skipped lags directly on the chart. None
+of the 3 real scanned pairs hits this in practice (verified via the real run
+below), so it's covered by a dedicated test with a directly-constructed
+`PairResult`, not real data.
+
+**Verified, not assumed** -- ran the real script after wiring: identical r values
+as before (0.063/-0.170/-0.048 for the three lag-scanned pairs' contemporaneous
+readings, confirming the change touched nothing about the computation), exactly 3
+charts written (matching the 3 pairs with `max_lag > 0`), ~83KB total (~26-31KB
+each). Opened the real `OIL_PRICE` vs `OIL_EXPORTS_VALUE` chart before trusting
+it: it visually reproduces the exact pattern this project's own `analysis/
+README.md` already described in words from the original lag-scan work --
+near-zero/negative bars around lag 0, rising to r≈0.75 at lag +3 -- same
+"read the live output before committing" discipline used throughout this session.
+
+5 new tests (118/118 total), all in `test_correlate.py` (no new test file, matching
+how the first charting slice extended `test_decompose.py`/`test_forecast.py`
+in place rather than adding parallel chart-only files): `render_pair_chart`
+returns `None` for a pair with no lag scan; writes a real, valid PNG for a real
+`correlate_pair()` result; skips undefined lag points without crashing or
+mis-plotting them; `render_all` returns paths only for the pairs that actually
+got a chart; the report embeds the chart image link only for a pair with a lag
+scan, never for one without. `git diff scripts/analysis/correlate.py
+scripts/analysis/pairs.py` confirmed empty, matching the zero-change claim.
+
+Deliberately out of scope: everything the first charting slice already scoped out
+(interactive/HTML charts, unit-aware y-axis labels, a chart retention/cleanup
+policy) applies here too, unchanged.
