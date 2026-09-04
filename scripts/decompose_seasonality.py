@@ -13,7 +13,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from analysis import decompose, seasonal_report  # noqa: E402
+from analysis import decompose, seasonal_charts, seasonal_report  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
@@ -25,9 +25,16 @@ def main() -> int:
         print(f"{r.indicator_id}: seasonal_strength={r.seasonal_strength:.3f} (n={r.n})")
 
     run_date = date.today().isoformat()
+    out_dir = REPO_ROOT / "analysis" / "reports"
+
+    # Charts must be written before the report string is built: the report
+    # embeds a conventional relative link (charts.chart_filename) without
+    # itself doing any I/O to check the file exists.
+    chart_paths = seasonal_charts.render_all(results, run_date, out_dir / "charts")
+    print(f"Wrote {len(chart_paths)} chart(s) to {(out_dir / 'charts').relative_to(REPO_ROOT)}")
+
     text = seasonal_report.build_report(results, run_date=run_date)
 
-    out_dir = REPO_ROOT / "analysis" / "reports"
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / f"seasonal_decomposition_{run_date}.md"
     out_path.write_text(text, encoding="utf-8")

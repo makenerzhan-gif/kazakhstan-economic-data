@@ -19,6 +19,9 @@ mistaken for a connected, source-published indicator.
   `scripts/decompose_seasonality.py`, same full-snapshot convention.
 - `reports/forecast_YYYY-MM-DD.md` — one dated report per run of
   `scripts/forecast_series.py`, same full-snapshot convention.
+- `reports/charts/*.png` — one dated chart per target per pass, written by
+  the same two scripts above (decomposition, forecasting) and embedded in
+  their respective `.md` report — see "The charting slice" below.
 
 ## How to regenerate it
 
@@ -224,8 +227,55 @@ independently-derived value that could drift from it.
 **Deliberately out of scope:** `STLForecast`/`SARIMAX` as alternative models
 (verified working during planning, not built — a second hyperparameter set
 for no clear v1 benefit); automatic model-order selection; damped trend;
-multiplicative seasonality/error; any target beyond the 4; charting; CI
-wiring; multi-step-ahead accuracy decay (see below).
+multiplicative seasonality/error; any target beyond the 4; CI wiring;
+multi-step-ahead accuracy decay (see below).
+
+## The charting slice — what's plotted and why
+
+Both passes above get one PNG chart per target, embedded in their markdown
+report and written to `analysis/reports/charts/`
+(`seasonal_<INDICATOR_ID>_<date>.png`, `forecast_<INDICATOR_ID>_<date>.png`) —
+same dated, never-overwritten convention as the `.md` reports themselves
+(`.gitignore` excludes neither, so these are committed like any other report).
+A small "DERIVED, NOT SOURCED" caption is stamped into every chart image
+itself, not just its surrounding markdown — a PNG can be shared or embedded
+standalone, disconnected from the report text around it, and this project
+has been strict everywhere else about never letting derived output be
+mistaken for something a source published.
+
+**Decomposition** gets a bar chart of `seasonal_by_period` — mean seasonal
+effect by calendar month/quarter, the same numbers as the adjacent table,
+colored by sign (above/below the yearly average). Needed zero changes to
+`decompose.py`: the summary table was already everything the chart needs.
+
+**Forecasting** gets a line chart with three layers: the full historical
+actual series, the backtest's predicted values overlaid on the holdout
+window (the visual form of what "backtest" means — how closely the dashed
+line tracks the solid one there is the whole accuracy claim), and the
+forward forecast with its 95% interval band continuing past a vertical
+marker at the last real observation, labeled UNVERIFIED. This needed two
+small, free additions to `forecast.py` — a `history` field on
+`ForecastResult` and a `predictions` field on `BacktestMetrics` — retaining
+two values (`s`, the prepared series, and `backtest_forecast`) that
+`forecast_target()` already computed and previously discarded once reduced
+to MAE/RMSE/MAPE. No new modeling work. Verified live before committing to
+this: capturing `s` and `backtest_forecast` for CPI reproduced the exact
+already-shipped backtest MAE (0.2748380824808585) from the captured values
+themselves.
+
+Real output from a live run, both passes: 8 PNGs, ~394KB total (seasonal
+charts ~21-27KB each, forecast charts ~67-75KB each at `DEFAULT_DPI=120`).
+
+**Deliberately out of scope:** charting the correlation pass's lag scans
+(r-vs-lag) — a different, smaller-population output shape than the two
+table-per-target passes above, and out of the scope confirmed before this
+slice started; interactive/HTML charts (plotly, bokeh) — static PNGs match
+this project's markdown-report-centric output model; unit-aware y-axis
+labels (`config/indicators.yaml` does carry a `unit` field, but threading it
+through would need new plumbing for a cosmetic gain — matplotlib's default
+axis formatting was sufficient in every real chart checked, including
+`GDP_NOMINAL`'s 13-digit scale, which renders as a clean `1e13` offset, not
+raw digits); a chart retention/cleanup policy.
 
 ## What NOT to expect here
 
@@ -238,8 +288,5 @@ wiring; multi-step-ahead accuracy decay (see below).
   say whether accuracy 1 period ahead differs from accuracy `horizon`
   periods ahead within the same backtest. A reasonable follow-up question,
   not answered by the current report.
-- **No charting.** The calendar-month/quarter seasonal-effect table and the
-  forecast point/interval table are useful without one; a chart is a
-  natural, separate follow-on once this output's shape has been reviewed.
 - **No revision tracking, no structural-change detection.** Every report is
   a fresh snapshot computed from whatever `data/unified/` holds at run time.

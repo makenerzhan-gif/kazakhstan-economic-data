@@ -65,6 +65,12 @@ class ForecastGuardrailError(Exception):
 
 
 @dataclass
+class HistoryPoint:
+    date: str
+    value: float
+
+
+@dataclass
 class BacktestMetrics:
     train_n: int
     train_start: str
@@ -75,6 +81,7 @@ class BacktestMetrics:
     mae: float
     rmse: float
     mape: float
+    predictions: list[HistoryPoint]
 
 
 @dataclass
@@ -100,6 +107,7 @@ class ForecastResult:
     model_spec: str
     backtest: BacktestMetrics
     forecast_points: list[ForecastPoint]
+    history: list[HistoryPoint]
     caveats: list[str] = field(default_factory=list)
 
 
@@ -173,6 +181,12 @@ def forecast_target(
     # forecast.py must use the IDENTICAL grid prepare_level's own gap check
     # just validated, not a value that could independently drift from it.
     s = s.asfreq(timeseries.FREQUENCY_OFFSET[meta["frequency"]])
+    # Retained for the charting pass (seasonal_charts.py/forecast_charts.py):
+    # the full prepared series, otherwise discarded once len(s)/date_start/
+    # date_end are pulled from it below. A chart with no historical context
+    # can't show whether a forecast looks plausible relative to where the
+    # series came from.
+    history = [HistoryPoint(date=idx.strftime("%Y-%m-%d"), value=float(v)) for idx, v in s.items()]
 
     train_n = len(s) - target.horizon
     min_train_n = MIN_CYCLES * target.period
@@ -186,6 +200,12 @@ def forecast_target(
 
     train, holdout = s.iloc[:train_n], s.iloc[train_n:]
     backtest_forecast = _fit_ets(train, target.period).forecast(target.horizon)
+    # Also retained for the charting pass -- the backtest's own predicted
+    # values, otherwise discarded once reduced to MAE/RMSE/MAPE below.
+    backtest_predictions = [
+        HistoryPoint(date=idx.strftime("%Y-%m-%d"), value=float(v))
+        for idx, v in backtest_forecast.items()
+    ]
     backtest = BacktestMetrics(
         train_n=train_n,
         train_start=train.index.min().strftime("%Y-%m-%d"),
@@ -196,6 +216,7 @@ def forecast_target(
         mae=_mae(holdout, backtest_forecast),
         rmse=_rmse(holdout, backtest_forecast),
         mape=_mape(holdout, backtest_forecast),
+        predictions=backtest_predictions,
     )
 
     forward_fit = _fit_ets(s, target.period)
@@ -215,6 +236,7 @@ def forecast_target(
         period=target.period, horizon=target.horizon, n=len(s),
         date_start=s.index.min().strftime("%Y-%m-%d"), date_end=s.index.max().strftime("%Y-%m-%d"),
         model_spec=MODEL_SPEC, backtest=backtest, forecast_points=forecast_points,
+        history=history,
     )
 
 

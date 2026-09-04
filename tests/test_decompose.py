@@ -3,9 +3,12 @@ from pathlib import Path
 
 import pandas as pd
 import pytest
+from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from analysis import charts  # noqa: E402
 from analysis import decompose  # noqa: E402
+from analysis import seasonal_charts  # noqa: E402
 from analysis import seasonal_report  # noqa: E402
 from analysis import seasonal_targets  # noqa: E402
 from analysis import timeseries  # noqa: E402
@@ -117,3 +120,22 @@ def test_build_report_handles_no_targets():
     text = seasonal_report.build_report([], run_date="2026-09-04")
     assert "Seasonal decomposition" in text
     assert "Methodology" in text
+
+
+def test_render_target_chart_writes_a_valid_png(tmp_path):
+    true_seasonal = [4, 2, -1, -3, -4, -2, 0, 1, 3, 2, -1, -1]
+    trend = [100 + 0.8 * t for t in range(96)]
+    dates = pd.date_range("2015-01-01", periods=96, freq="MS")
+    observed = [trend[t] + true_seasonal[t % 12] for t in range(96)]
+    long_df = _long_df("TEST_CHART", list(zip((d.strftime("%Y-%m-%d") for d in dates), observed)))
+    meta = {"frequency": "monthly", "observation_type": "period_total"}
+    target = seasonal_targets.SeasonalTarget("TEST_CHART", "test", "test rationale", period=12)
+    result = decompose.decompose_target(target, long_df, {"TEST_CHART": meta})
+
+    path = seasonal_charts.render_target_chart(result, run_date="2026-09-04", out_dir=tmp_path)
+
+    assert path.name == charts.chart_filename("seasonal", "TEST_CHART", "2026-09-04")
+    assert path.exists()
+    assert path.stat().st_size > 1000
+    img = Image.open(path)
+    img.verify()

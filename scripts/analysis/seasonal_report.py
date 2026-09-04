@@ -2,10 +2,15 @@
 
 Pure string-building, same shape as build_project_knowledge.py's
 build_data_catalog/build_sources_md and scripts/analysis/report.py's
-build_report: one function in, one string out, no I/O.
+build_report: one function in, one string out, no I/O. The `charts` import
+below is the pure chart_filename() naming function only -- never
+charts.save_figure() -- so this module stays genuinely zero-I/O; the actual
+PNG is written by decompose_seasonality.py calling seasonal_charts.render_all()
+before this module's build_report() ever runs.
 """
 from __future__ import annotations
 
+from . import charts
 from .decompose import MIN_CYCLES, DecompositionResult
 
 DISCLAIMER = """**DERIVED, NOT SOURCED.** Every number below is computed by
@@ -75,7 +80,12 @@ def _seasonal_table(result: DecompositionResult) -> list[str]:
     return lines
 
 
-def _target_section(result: DecompositionResult) -> str:
+def _chart_embed(indicator_id: str, run_date: str) -> list[str]:
+    filename = charts.chart_filename("seasonal", indicator_id, run_date)
+    return ["", f"![{indicator_id} average seasonal effect chart](charts/{filename})"]
+
+
+def _target_section(result: DecompositionResult, run_date: str) -> str:
     trend_word = "rose" if result.trend_end >= result.trend_start else "fell"
     trend_pct = (f", {abs(result.trend_change_pct):.1f}%"
                  if result.trend_change_pct is not None else "")
@@ -100,6 +110,7 @@ def _target_section(result: DecompositionResult) -> str:
             lines.append(f"- {c}")
     if result.interpretation:
         lines += ["", result.interpretation]
+    lines += _chart_embed(result.indicator_id, run_date)
     lines += _seasonal_table(result)
     return "\n".join(lines)
 
@@ -119,7 +130,7 @@ def build_report(results: list[DecompositionResult], run_date: str) -> str:
         "",
     ]
     for r in results:
-        parts.append(_target_section(r))
+        parts.append(_target_section(r, run_date))
         parts.append("")
     parts.append(_methodology(MIN_CYCLES))
     return "\n".join(parts) + "\n"

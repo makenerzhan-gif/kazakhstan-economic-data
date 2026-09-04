@@ -16,7 +16,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from analysis import forecast, forecast_report  # noqa: E402
+from analysis import forecast, forecast_charts, forecast_report  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
@@ -28,9 +28,16 @@ def main() -> int:
         print(f"{r.indicator_id}: backtest MAPE={r.backtest.mape:.2f}% (n={r.n}, horizon={r.horizon})")
 
     run_date = date.today().isoformat()
+    out_dir = REPO_ROOT / "analysis" / "reports"
+
+    # Charts must be written before the report string is built: the report
+    # embeds a conventional relative link (charts.chart_filename) without
+    # itself doing any I/O to check the file exists.
+    chart_paths = forecast_charts.render_all(results, run_date, out_dir / "charts")
+    print(f"Wrote {len(chart_paths)} chart(s) to {(out_dir / 'charts').relative_to(REPO_ROOT)}")
+
     text = forecast_report.build_report(results, run_date=run_date)
 
-    out_dir = REPO_ROOT / "analysis" / "reports"
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / f"forecast_{run_date}.md"
     out_path.write_text(text, encoding="utf-8")

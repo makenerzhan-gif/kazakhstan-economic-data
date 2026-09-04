@@ -3616,8 +3616,94 @@ quantity the runtime guardrail checks, caught here if a target's history ever sh
 Deliberately out of scope: `STLForecast`/`SARIMAX` as alternative models (verified
 working during planning, not built -- a second hyperparameter set for no clear v1
 benefit), automatic model-order selection, damped trend, multiplicative
-seasonality/error, any target beyond the 4, charting, CI wiring,
+seasonality/error, any target beyond the 4, CI wiring,
 `project_knowledge/`/Claude Project sync (same deferred decision as decomposition),
 multi-step-ahead accuracy decay (one MAE/RMSE/MAPE per target across the whole
 holdout, not broken out by how many periods ahead -- a real, named, unanswered
 follow-up question).
+
+## 2026-09-04 — charting, visualizing both analysis passes' output
+
+Asked what's next after forecasting shipped; recommended charting since both passes'
+own docs already named it as a natural follow-on "once this output's shape has been
+reviewed" -- it had been reviewed twice by then. Scope confirmed before starting:
+decomposition + forecasting only, not the correlation pass's lag scans. Went through
+Plan Mode again -- an Explore agent read the 4 decomposition-side files in full, a
+Plan agent designed and partially verified the approach against live data (both
+read-only), and I independently re-read the report/CLI files myself and re-verified
+every cited line number before writing the plan.
+
+**Zero changes needed to `decompose.py`** -- `seasonal_by_period` (the 12/4-row
+table the report already renders) was already everything a seasonal-effect bar chart
+needs. Confirmed live before committing to this: re-running `decompose.run_all()`
+reproduced the exact already-shipped seasonal strengths (CPI 0.174, EXPORTS 0.204,
+IMPORTS 0.688, GDP_NOMINAL 0.985). `forecast.py` needed two small, free additions --
+a new `HistoryPoint(date, value)` dataclass, a `history` field on `ForecastResult`,
+and a `predictions` field on `BacktestMetrics` -- retaining two values
+(`s`, the prepared series, and `backtest_forecast`) that `forecast_target()` already
+computed and previously discarded once reduced to MAE/RMSE/MAPE. Not new modeling
+work: a forecast chart with no historical context can't show whether a forecast
+looks plausible relative to where the series came from, and the backtest's own
+predicted values are the visual form of what "backtest" means. Verified live during
+planning: capturing `s` and `backtest_forecast` for CPI reproduced the exact
+already-shipped backtest MAE (0.2748380824808585) from the captured values
+themselves, and grep confirmed only 2 real construction sites exist for
+`BacktestMetrics(`/`ForecastResult(` in the whole repo (`forecast.py` and
+`tests/test_forecast.py`'s `_sample_result()`) -- the "adding a required dataclass
+field breaks an existing fixture" gotcha that has hit this project a few times now
+had a fully known, small blast radius here.
+
+`matplotlib>=3.11`/`pillow>=12.3` are the new dependencies. Verified installable via
+dry-run during planning, then actually installed for real and smoke-tested headless
+(`matplotlib.use("Agg")`, real `savefig`, real `PIL.Image` open, real
+`plt.close(fig)`/`get_fignums()` check) before writing any chart-rendering code --
+zero warnings under `warnings.simplefilter("error")`. New shared
+`scripts/analysis/charts.py` (mirrors `timeseries.py`'s shared-plumbing role):
+`chart_filename()` (pure naming, importable by the zero-I/O report modules without
+pulling in matplotlib.pyplot), `add_disclaimer()` (a small "DERIVED, NOT SOURCED"
+caption stamped into every chart image itself -- a PNG can be shared standalone,
+disconnected from its report's surrounding disclaimer text, and this project has
+been strict everywhere else about that exact risk), `save_figure()` (stamps the
+disclaimer, saves, and closes the figure -- matplotlib leaks every created figure
+until `plt.close()` runs). Two new feature-local chart-builder modules,
+`seasonal_charts.py`/`forecast_charts.py`, each a thin `render_target_chart()` +
+`render_all()` pair, called from `decompose_seasonality.py`/`forecast_series.py`
+before the report string is built (so the markdown image link's target already
+exists by the time it's referenced). `seasonal_report.py`/`forecast_report.py`
+stayed genuinely zero-I/O -- they only import `charts.chart_filename`, never
+`charts.save_figure`.
+
+**Verified, not assumed** -- ran both real scripts end to end after wiring: identical
+MAPE/seasonal-strength numbers as before (confirms the new fields changed nothing
+about the underlying computation, only what's retained), 8 real PNGs written,
+~394KB total (seasonal charts ~21-27KB each, forecast charts ~67-75KB each at
+DPI=120). Opened the real generated CPI and GDP_NOMINAL charts from both passes
+before trusting them -- same "read the live output before committing" discipline
+that caught 2 real bugs in the decomposition/forecasting report text earlier this
+session. All four looked right: CPI's seasonal bar chart shows the winter-high/
+summer-low pattern the report text already described; CPI's forecast chart clearly
+shows the 2015-16 and 2022 devaluation spikes, a backtest line tracking the actual
+closely, and a widening 95% band in the UNVERIFIED region; GDP_NOMINAL's forecast
+chart rendered its 13-digit KZT scale as a clean `1e13` axis offset with no extra
+formatting code needed, and its sharp annual Q4 spikes (matching the 0.985 seasonal
+strength already reported) are visually obvious in both the actual and backtest
+lines.
+
+7 new tests (113/113 total): `test_charts.py` (naming convention,
+`save_figure`/`add_disclaimer` against real rendered figures, a subprocess-based
+check that importing `charts` alone never pulls in `matplotlib.pyplot`), one new
+chart-render test each in `test_decompose.py`/`test_forecast.py` (real synthetic
+data through the real mechanism, rendered, checked as a valid non-trivial-size PNG
+via Pillow), plus `test_forecast.py`'s `_sample_result()` fixture and its
+deterministic-recovery test extended for the two new required fields. `git diff
+scripts/analysis/decompose.py` confirmed empty, matching the zero-change claim.
+
+Deliberately out of scope: charting the correlation pass's lag scans (a different,
+smaller-population shape, and out of the confirmed scope for this round);
+interactive/HTML charts (matplotlib static PNGs match this project's
+markdown-report-centric output model); unit-aware y-axis labels (`config/
+indicators.yaml` does carry a `unit` field, but matplotlib's default axis
+formatting was already sufficient in every real chart checked, including
+GDP_NOMINAL's 13-digit scale); a chart retention/cleanup policy (would contradict
+the deliberate never-deleted convention the `.md` reports already use, and isn't
+worth building before there's a real reason to).

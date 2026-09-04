@@ -4,10 +4,13 @@ from pathlib import Path
 
 import pandas as pd
 import pytest
+from PIL import Image
 from statsmodels.tools.sm_exceptions import ConvergenceWarning
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from analysis import charts  # noqa: E402
 from analysis import forecast  # noqa: E402
+from analysis import forecast_charts  # noqa: E402
 from analysis import forecast_report  # noqa: E402
 from analysis import forecast_targets  # noqa: E402
 from analysis import timeseries  # noqa: E402
@@ -75,6 +78,15 @@ def test_forecast_target_recovers_a_known_deterministic_continuation():
     assert result.backtest.mae == pytest.approx(0.0, abs=1e-4)
     assert result.backtest.rmse == pytest.approx(0.0, abs=1e-4)
 
+    # history/predictions are retained for the charting pass -- confirm they
+    # actually cover the windows their surrounding scalars already claim.
+    assert len(result.history) == result.n
+    assert result.history[0].date == result.date_start
+    assert result.history[-1].date == result.date_end
+    assert len(result.backtest.predictions) == result.backtest.horizon
+    assert result.backtest.predictions[0].date == result.backtest.holdout_start
+    assert result.backtest.predictions[-1].date == result.backtest.holdout_end
+
 
 def test_forecast_target_raises_below_min_training_length():
     # period=12, horizon=12 -> needs train_n = n-12 >= MIN_CYCLES*12=36, i.e. n>=48.
@@ -124,9 +136,17 @@ def _sample_result() -> forecast.ForecastResult:
             train_n=48, train_start="2021-01-01", train_end="2024-12-01",
             holdout_start="2025-01-01", holdout_end="2025-12-01",
             horizon=12, mae=1.23, rmse=1.5, mape=2.34,
+            predictions=[
+                forecast.HistoryPoint(date="2025-01-01", value=108.0),
+                forecast.HistoryPoint(date="2025-12-01", value=109.5),
+            ],
         ),
         forecast_points=[
             forecast.ForecastPoint(date="2026-01-01", mean=110.0, pi_lower=105.0, pi_upper=115.0),
+        ],
+        history=[
+            forecast.HistoryPoint(date="2021-01-01", value=100.0),
+            forecast.HistoryPoint(date="2025-12-01", value=109.5),
         ],
     )
 
@@ -153,3 +173,26 @@ def test_build_report_handles_no_targets():
     text = forecast_report.build_report([], run_date="2026-09-04")
     assert "Forecasting" in text
     assert "Methodology" in text
+
+
+def test_render_target_chart_writes_a_valid_png(tmp_path):
+    n = 96
+    trend = [100 + 0.5 * t for t in range(n)]
+    seasonal = [4, 2, -1, -3, -4, -2, 0, 1, 3, 2, -1, -1]
+    dates = pd.date_range("2015-01-01", periods=n, freq="MS")
+    observed = [trend[t] + seasonal[t % 12] for t in range(n)]
+    long_df = _long_df("TEST_CHART", list(zip((d.strftime("%Y-%m-%d") for d in dates), observed)))
+    meta = {"frequency": "monthly", "observation_type": "period_total"}
+    target = forecast_targets.ForecastTarget("TEST_CHART", "test", "test rationale", period=12, horizon=12)
+
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", category=ConvergenceWarning)
+        result = forecast.forecast_target(target, long_df, {"TEST_CHART": meta})
+
+    path = forecast_charts.render_target_chart(result, run_date="2026-09-04", out_dir=tmp_path)
+
+    assert path.name == charts.chart_filename("forecast", "TEST_CHART", "2026-09-04")
+    assert path.exists()
+    assert path.stat().st_size > 1000
+    img = Image.open(path)
+    img.verify()

@@ -7,3 +7,5 @@ pytest>=8.0
 pypdf>=4.0
 scipy>=1.11
 statsmodels>=0.15
+matplotlib>=3.11
+pillow>=12.3

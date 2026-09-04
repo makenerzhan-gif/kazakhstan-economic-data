@@ -23,6 +23,8 @@ Curated set of 4 targets, hand-picked for having enough dense, gap-free history 
 
 Window includes the 2022 KZT devaluation's inflation spike and the 2020 COVID disruption -- both large, transient, non-seasonal shocks. robust=True exists specifically so neither distorts the seasonal estimate for the calendar month it happened to land in, rather than the shock's size being permanently attributed to that month every year.
 
+![CPI average seasonal effect chart](charts/seasonal_CPI_2026-09-04.png)
+
 **Average seasonal effect by calendar month:**
 
 | Period | Mean seasonal effect | Cycles averaged |
@@ -52,6 +54,8 @@ Window includes the 2022 KZT devaluation's inflation spike and the 2020 COVID di
 - Trend: 5,120,267.18 -> 6,498,146.54 (rose, 26.9% over the window).
 
 Same COVID/devaluation shock-window caveat as CPI. Also exposed to global commodity-price swings unrelated to calendar seasonality -- a real seasonal signal here more plausibly reflects shipment/logistics timing than price.
+
+![EXPORTS average seasonal effect chart](charts/seasonal_EXPORTS_2026-09-04.png)
 
 **Average seasonal effect by calendar month:**
 
@@ -83,6 +87,8 @@ Same COVID/devaluation shock-window caveat as CPI. Also exposed to global commod
 
 Same COVID/devaluation and price-vs-timing caveat as EXPORTS.
 
+![IMPORTS average seasonal effect chart](charts/seasonal_IMPORTS_2026-09-04.png)
+
 **Average seasonal effect by calendar month:**
 
 | Period | Mean seasonal effect | Cycles averaged |
@@ -112,6 +118,8 @@ Same COVID/devaluation and price-vs-timing caveat as EXPORTS.
 - Trend: 4,864,601,452,928.95 -> 45,372,746,825,780.68 (rose, 832.7% over the window).
 
 Nominal KZT GDP grew roughly an order of magnitude over this window from real growth, inflation, and the 2022 devaluation combined -- trend dominates the raw level's variance by construction, which is exactly why seasonal strength is reported as a share of seasonal-plus-residual variance, not total variance (see the report's Methodology section).
+
+![GDP_NOMINAL average seasonal effect chart](charts/seasonal_GDP_NOMINAL_2026-09-04.png)
 
 **Average seasonal effect by calendar quarter:**
 

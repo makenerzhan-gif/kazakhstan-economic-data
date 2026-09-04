@@ -1,10 +1,15 @@
 """Render a list of ForecastResult into the markdown report.
 
 Pure string-building, same shape as scripts/analysis/seasonal_report.py's
-build_report: one function in, one string out, no I/O.
+build_report: one function in, one string out, no I/O. The `charts` import
+below is the pure chart_filename() naming function only -- never
+charts.save_figure() -- so this module stays genuinely zero-I/O; the actual
+PNG is written by forecast_series.py calling forecast_charts.render_all()
+before this module's build_report() ever runs.
 """
 from __future__ import annotations
 
+from . import charts
 from .forecast import MIN_CYCLES, ForecastResult
 
 DISCLAIMER = """**DERIVED, NOT SOURCED.** Every number below is computed by
@@ -115,7 +120,12 @@ def _forecast_table(result: ForecastResult) -> list[str]:
     return lines
 
 
-def _target_section(result: ForecastResult) -> str:
+def _chart_embed(indicator_id: str, run_date: str) -> list[str]:
+    filename = charts.chart_filename("forecast", indicator_id, run_date)
+    return ["", f"![{indicator_id} history, backtest, and forecast chart](charts/{filename})"]
+
+
+def _target_section(result: ForecastResult, run_date: str) -> str:
     lines = [
         f"## {result.indicator_id}",
         "",
@@ -134,6 +144,7 @@ def _target_section(result: ForecastResult) -> str:
             lines.append(f"- {c}")
     if result.interpretation:
         lines += ["", result.interpretation]
+    lines += _chart_embed(result.indicator_id, run_date)
     lines += _backtest_section(result)
     lines += _forecast_table(result)
     return "\n".join(lines)
@@ -153,7 +164,7 @@ def build_report(results: list[ForecastResult], run_date: str) -> str:
         "",
     ]
     for r in results:
-        parts.append(_target_section(r))
+        parts.append(_target_section(r, run_date))
         parts.append("")
     parts.append(_methodology(MIN_CYCLES))
     return "\n".join(parts) + "\n"
