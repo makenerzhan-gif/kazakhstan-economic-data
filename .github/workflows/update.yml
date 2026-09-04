@@ -63,5 +63,16 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Automated data update $(date -u +'%Y-%m-%d')"
+            # This job takes ~1.5-2h end to end; a push to main from elsewhere
+            # during that window (a human commit, an overlapping manual run)
+            # makes a plain `git push` fail with "rejected (fetch first)" --
+            # happened for real on 2026-09-04, twice, losing both runs' output.
+            # Rebase onto the current origin/main right before pushing rather
+            # than failing the whole run over a race a replay resolves cleanly
+            # in the common case: this step's own add-list never touches
+            # project_knowledge/UPDATE_LOG.md's content or anything under
+            # scripts/, so a genuine conflict here would mean something worth
+            # a human looking at, not routine noise to suppress.
+            git pull --rebase origin main
             git push
           fi
