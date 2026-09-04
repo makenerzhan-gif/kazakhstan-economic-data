@@ -3534,3 +3534,90 @@ Deliberately out of scope: forecasting (the named next slice -- `timeseries.py` 
 already built for it to reuse), any indicator beyond the 4 verified targets, charting
 (the calendar table is useful without one), CI wiring, `project_knowledge/`/Claude
 Project sync (same open decision the correlation phase already deferred).
+
+## 2026-09-04 — forecasting, closing out the "seasonal decomposition and forecasting" request
+
+The deferred second half of the request decomposition shipped alone above. Same 4
+curated targets (`CPI`, `EXPORTS`, `IMPORTS`, `GDP_NOMINAL`), independently
+re-justified in a new `scripts/analysis/forecast_targets.py` against this pass's own
+guardrail rather than inherited from `seasonal_targets.py` -- the same "a different
+pass's decisions aren't inherited" split every override dict in this codebase already
+keeps. `scripts/analysis/timeseries.py::prepare_level` is reused exactly as built
+(`git diff` confirms zero changes to it, `transformations.py`, `requirements.txt`, or
+`test_timeseries.py`) -- this is the payoff of building it shared during the
+decomposition slice instead of folding it into `decompose.py`.
+
+**Model choice, verified before committing to it**:
+`statsmodels.tsa.exponential_smoothing.ets.ETSModel`, fixed spec ETS(A,A,A) --
+additive error, additive trend, additive seasonal -- not the classic
+`statsmodels.tsa.holtwinters.ExponentialSmoothing`. Ran both during planning: the
+classic implementation's fitted result has no `get_prediction()`, only `.simulate()`
+(manual quantile-taking needed for an interval, and a bare int as `rng=` throws a live
+`FutureWarning` on the installed statsmodels 0.15.0). `ETSModel.fit(disp=False)` gives
+`get_prediction(...).summary_frame(alpha=0.05)` with clean `mean`/`pi_lower`/`pi_upper`
+columns, closed-form for this additive spec. **Two fits per target**: a *backtest* fit
+trained on all but the last `horizon` observations, scored (MAE/RMSE/MAPE) against the
+real, already-known holdout actuals; a separate *forward* fit trained on the full
+series, forecasting `horizon` periods beyond the last real observation with a 95%
+interval -- labeled UNVERIFIED in the report, since no held-out actual exists for those
+periods by construction. `horizon` is 12 for monthly targets, 4 for quarterly
+(`PERIOD_TO_HORIZON`, a one-year-ahead framing for both). `MIN_CYCLES=3` gates the
+post-holdout training length this time, not the full series -- independently
+redeclared in `forecast.py`, not imported from `decompose.py`, same reasoning as
+always: it gates a different quantity here.
+
+**A real bug found during planning, not assumed away**: the level `prepare_level`
+returns has no `.index.freq` set, so `ETSModel` warned on every single fit ("No
+frequency information was provided..."). Verified independently before accepting the
+fix, not just trusting the planning pass's claim: `warnings.simplefilter("error")`
+around the fit (any warning would raise) fired zero warnings after adding
+`s = s.asfreq(timeseries.FREQUENCY_OFFSET[meta["frequency"]])` right after
+`prepare_level` returns, with identical values and length confirmed before/after.
+Reuses the shared `FREQUENCY_OFFSET` constant directly -- it has to be the exact grid
+`prepare_level`'s own gap-check already validated, not a second value that could drift
+from it. **A second bug found while reading the live-generated report, not by any
+test**: the training-window line read "Training window: 2011-01-01 .. 175
+observations." -- a count sitting where an end-date belongs, inconsistent with the
+adjacent Holdout line's `start .. end (count)` format. Fixed by adding `train_start`/
+`train_end` fields to `BacktestMetrics`, populated from the training split's own index,
+and reverified the fix changed only the rendering, not the underlying numbers (MAPEs
+identical before/after to 2 decimals).
+
+**Verified, not assumed** -- ran the real script against the live data before writing
+anything about its output: CPI backtest MAE=0.27 RMSE=0.36 MAPE=0.27% (n=187,
+train=175, the deepest training-length margin of the four at 4.86x); EXPORTS
+MAE=735,042.76 RMSE=1,046,230.93 MAPE=10.54% (n=90, train=78, tightest margin at
+2.17x, and per the decomposition pass also the least seasonal structure of the four --
+seasonal strength 0.204); IMPORTS MAE=464,109.00 RMSE=583,477.33 MAPE=8.10% (same
+construction and margin as EXPORTS); GDP_NOMINAL MAE=1,656,615,106,823.13
+RMSE=2,038,155,631,710.74 MAPE=3.57% (n=66, train=62, 5.17x margin, despite forecasting
+raw 13-digit KZT figures). No pass/fail threshold on any of these -- every MAPE is
+reported as-is, EXPORTS' double-digit figure included, matching this project's
+"report the number, don't hide it" pattern throughout.
+
+The synthetic-recovery test is worth naming, same spirit as `decompose.py`'s: an
+8-year, zero-noise series with a known, deliberately irregular (non-sinusoidal)
+seasonal pattern and a linear trend recovers a near-exact backtest (MAE/RMSE both
+~0 to 4 decimal places) -- `ConvergenceWarning` suppressed only inside this one test
+(a fully deterministic series is a known statsmodels MLE edge case, verified none of
+the 4 real targets ever trigger it, so production code leaves it unsuppressed).
+
+19 new tests (106/106 total): `test_forecast.py` (MAE/RMSE/MAPE hand-computed against
+`actual=[10,20,30]`/`forecast=[12,18,33]`, the synthetic-recovery test, all 4
+guardrails -- below-minimum training length, period-vs-frequency mismatch,
+horizon-vs-period mismatch, unwrapped `timeseries.SeriesGuardrailError` propagation --
+and report-rendering assertions including the UNVERIFIED label and the corrected
+training-window date-range format), `test_forecast_targets_config.py` (mirrors
+`test_seasonal_targets_config.py`, plus a horizon-matches-`PERIOD_TO_HORIZON` check and
+a test that loads the real unified dataset and statically re-verifies each target's
+post-holdout training length still clears `forecast.MIN_CYCLES * period` -- the same
+quantity the runtime guardrail checks, caught here if a target's history ever shrinks).
+
+Deliberately out of scope: `STLForecast`/`SARIMAX` as alternative models (verified
+working during planning, not built -- a second hyperparameter set for no clear v1
+benefit), automatic model-order selection, damped trend, multiplicative
+seasonality/error, any target beyond the 4, charting, CI wiring,
+`project_knowledge/`/Claude Project sync (same deferred decision as decomposition),
+multi-step-ahead accuracy decay (one MAE/RMSE/MAPE per target across the whole
+holdout, not broken out by how many periods ahead -- a real, named, unanswered
+follow-up question).
