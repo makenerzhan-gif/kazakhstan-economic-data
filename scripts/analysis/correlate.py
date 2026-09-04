@@ -36,6 +36,13 @@ class AnalysisGuardrailError(Exception):
 
 
 @dataclass
+class LagPoint:
+    lag: int
+    r: float | None
+    n: int
+
+
+@dataclass
 class PairResult:
     id_x: str
     id_y: str
@@ -49,6 +56,7 @@ class PairResult:
     date_end: str | None
     r: float | None
     caveats: list[str] = field(default_factory=list)
+    lag_profile: list[LagPoint] | None = None
 
 
 def load_indicators(path: Path = INDICATORS_YAML) -> dict[str, dict]:
@@ -184,6 +192,34 @@ def check_consistent_annual_convention(id_x: str, dates_x, id_y: str, dates_y) -
         )
 
 
+def lagged_correlation(x: pd.Series, y: pd.Series, lag: int) -> LagPoint:
+    """Correlation between x[t] and y[t + lag].
+
+    lag > 0 means x leads y (this period's x lines up with a LATER y);
+    lag < 0 means x lags y; lag == 0 is the ordinary contemporaneous
+    correlation already computed in correlate_pair.
+
+    Lag is counted in periods of the already-transformed series -- row
+    position, not recalculated against calendar dates. A gap in either
+    series' own history shifts everything after it by more than `lag`
+    periods' worth of calendar time. Fine for the dense, gap-free series
+    this is used on (checked when a pair sets max_lag); would need
+    reindexing onto a regular calendar grid first for anything gappier.
+    """
+    y_shifted = y.shift(-lag)
+    joined = pd.concat([x, y_shifted], axis=1, keys=["x", "y"]).dropna()
+    n = len(joined)
+    r = joined["x"].corr(joined["y"]) if n >= 2 else None
+    if r is not None and pd.isna(r):
+        r = None
+    return LagPoint(lag=lag, r=r, n=n)
+
+
+def lag_scan(x: pd.Series, y: pd.Series, max_lag: int) -> list[LagPoint]:
+    """lagged_correlation for every lag from -max_lag to +max_lag inclusive."""
+    return [lagged_correlation(x, y, lag) for lag in range(-max_lag, max_lag + 1)]
+
+
 def correlate_pair(
     pair: pairs_config.Pair, long_df: pd.DataFrame, indicators_by_id: dict[str, dict]
 ) -> PairResult:
@@ -217,10 +253,13 @@ def correlate_pair(
     if n < 30:
         caveats.append(f"n={n} -- small sample; treat as descriptive, not confirmatory.")
 
+    lag_profile = lag_scan(x, y, pair.max_lag) if pair.max_lag > 0 else None
+
     return PairResult(
         id_x=pair.id_x, id_y=pair.id_y, label=pair.label, rationale=pair.rationale,
         interpretation=pair.interpretation, transform_x=transform_x, transform_y=transform_y,
         n=n, date_start=date_start, date_end=date_end, r=r, caveats=caveats,
+        lag_profile=lag_profile,
     )
 
 

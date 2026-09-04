@@ -20,10 +20,19 @@ METHODOLOGY = """## Methodology and limitations
 - Correlation is Pearson (`pandas.Series.corr`, default method), computed on
   the transform stated per indicator above, over the intersection of
   available dates for each pair.
+- Where a lag scan is shown: lag is counted in periods of the two series'
+  own overlap after each side's transform -- row position, not recalculated
+  against calendar dates. A gap in either series' history would shift
+  everything after it by more than the stated lag's worth of calendar time;
+  none of the series a lag scan runs on have gaps in their overlap window,
+  but this is not re-verified per run.
 - No statistical significance testing (p-values, confidence intervals) is
   computed -- that requires `scipy.stats`, deliberately not added in this
   slice. A coefficient alone, especially at small n, is not proof of a
-  relationship.
+  relationship -- this applies to every lag in a scan individually, not
+  just the headline contemporaneous figure, and scanning several lags and
+  reporting the strongest one is itself a form of multiple comparisons: the
+  strongest lag in a short window is not automatically the true one.
 - Correlation is not causation, and none of the above controls for
   confounders.
 - This is a curated set of hand-picked pairs, not an all-pairs matrix over
@@ -33,6 +42,35 @@ METHODOLOGY = """## Methodology and limitations
 
 def _format_r(r: float | None) -> str:
     return f"{r:.3f}" if r is not None else "undefined"
+
+
+def _lag_table(result: PairResult) -> list[str]:
+    """Lag scan as a markdown table plus a plain-language note on the
+    strongest same-window reading -- described as descriptive, never as
+    "the" lag, since scanning several lags and reporting the best one is a
+    form of multiple comparisons (see Methodology and limitations)."""
+    lines = [
+        "",
+        f"**Lag scan** (positive lag = {result.id_x} leads {result.id_y}):",
+        "",
+        "| Lag (periods) | r | n |",
+        "|---|---|---|",
+    ]
+    for point in result.lag_profile:
+        marker = " (contemporaneous)" if point.lag == 0 else ""
+        lines.append(f"| {point.lag:+d}{marker} | {_format_r(point.r)} | {point.n} |")
+
+    defined = [p for p in result.lag_profile if p.r is not None]
+    if defined:
+        best = max(defined, key=lambda p: abs(p.r))
+        lines += [
+            "",
+            f"Strongest same-window reading: lag {best.lag:+d}, r = {_format_r(best.r)} "
+            f"(n={best.n}). Descriptive only -- no significance test, and scanning "
+            f"multiple lags means this is the best of several looks, not a confirmed "
+            f"finding on its own.",
+        ]
+    return lines
 
 
 def _pair_section(result: PairResult) -> str:
@@ -60,6 +98,8 @@ def _pair_section(result: PairResult) -> str:
             lines.append(f"- {c}")
     if result.interpretation:
         lines += ["", result.interpretation]
+    if result.lag_profile:
+        lines += _lag_table(result)
     return "\n".join(lines)
 
 

@@ -3342,3 +3342,46 @@ flag, no `cumulation`, not an `international_projection` series) -- no new
 `ACKNOWLEDGED_LIFECYCLE`/`FORECAST_CUTOFF_YEAR` entries needed. 8 pairs now, still
 under the 10-pair cap `test_pairs_config.py` enforces. 53/53 tests, no code changes --
 this was purely `pairs.py` config plus the `analysis/README.md` count update.
+
+## 2026-09-04 — lag scans, and a pattern they actually surfaced
+
+The correlation pass's own report had flagged this as unbuilt: `OIL_PRICE` vs
+`EXCHANGE_RATE`'s interpretation said outright "a same-month linear read may
+understate a lagged or asymmetric response... a lagged version is a reasonable
+next step, not built here." Built it -- as an extension of the existing
+mechanism, not a new module: `correlate.lagged_correlation(x, y, lag)` correlates
+`x[t]` against `y[t+lag]` (positive lag = x leads y), `lag_scan` runs it across
+`-max_lag..+max_lag`, and `Pair` gained an opt-in `max_lag` field. Sign convention
+verified empirically before trusting it in the report -- a first attempt at the
+verification used a straight linear ramp for x and got r≈1.0 at every single lag,
+which proved nothing (a monotonic ramp correlates with any shift of itself);
+redone with a non-monotonic fixture and a known y[t]=x[t-2] construction, which
+correctly peaks at exactly lag=+2, r=1.0, and nowhere else.
+
+Enabled on the three pairs where a delayed or asymmetric response is
+economically plausible: `OIL_PRICE` vs `EXCHANGE_RATE`, vs `OIL_EXPORTS_VALUE`,
+vs `OIL_EXPORTS_VOLUME`. The other five (contemporaneous-by-construction pairs
+like the two core-inflation ones, or GOV_REVENUE/GOV_EXPENDITURE at n=11 where
+a lag scan would shred an already-small sample further) were left at the
+default `max_lag=0`.
+
+**What it found**: `OIL_PRICE` vs `OIL_EXPORTS_VALUE` goes from r=-0.170 at
+lag 0 to r=0.746 at a 3-month lag (n=85) -- a real, coherent pattern, not
+noise-fishing, because the companion pair (`OIL_PRICE` vs
+`OIL_EXPORTS_VOLUME`) shows nothing comparable at *any* lag tested (best is
+0.124). Read together: price affects recorded export *value* with roughly a
+quarter's delay -- plausible given shipping/settlement/invoicing lags on
+commodity exports -- while the physical *volume* shipped moves independently
+of price at every lag checked. `OIL_PRICE` vs `EXCHANGE_RATE`'s lag scan, by
+contrast, found nothing at any shift (strongest is r=-0.168) -- a real
+negative result that reinforces the original near-zero contemporaneous
+reading rather than hiding a stronger one.
+
+Report output added a per-pair lag table plus a "strongest same-window
+reading" callout, worded as descriptive on purpose: scanning several lags and
+reporting the best one is itself a multiple-comparisons problem, stated
+explicitly in the report's own Methodology section, not just here. 5 new
+tests (58/58 total): zero-lag matches the contemporaneous figure, the known
+lead-lag construction resolves to the right lag and sign, correlate_pair
+wires max_lag through correctly (and leaves it off when unset), and the
+report renders the table. No new dependency.

@@ -27,6 +27,8 @@ class Pair:
     rationale: str
     resample_to: str | None = None  # set when the two native frequencies differ
     interpretation: str = ""
+    max_lag: int = 0  # scan lags -max_lag..+max_lag (in periods) when > 0; see
+                       # correlate.lagged_correlation for the sign convention
 
 
 PAIRS: list[Pair] = [
@@ -52,14 +54,16 @@ PAIRS: list[Pair] = [
             "cheaper barrel show up in the tenge the same month."
         ),
         resample_to="monthly",
+        max_lag=3,
         interpretation=(
             "NBK manages the exchange rate rather than floating it freely, "
             "so a same-month linear read may understate a lagged or "
-            "asymmetric response. Resampling the daily rate to a monthly "
-            "mean also blurs when in the month a move happened, and the "
-            "overlap window folds very different regimes (COVID recovery, "
-            "the 2022 devaluation, disinflation) into one number. A lagged "
-            "or YoY-basis version is a reasonable next step, not built here."
+            "asymmetric response -- see the lag scan below for whether "
+            "shifting the two series relative to each other finds a "
+            "stronger reading. Resampling the daily rate to a monthly mean "
+            "also blurs when in the month a move happened, and the overlap "
+            "window folds very different regimes (COVID recovery, the 2022 "
+            "devaluation, disinflation) into one number."
         ),
     ),
     Pair(
@@ -104,13 +108,16 @@ PAIRS: list[Pair] = [
             "BNS records as actually exported, independent of the "
             "exchange-rate pass-through question above."
         ),
+        max_lag=3,
         interpretation=(
             "Export value moves with shipped volume as well as price, and "
             "volume has its own logistics-driven variation independent of "
             "price -- a weak reading doesn't mean price is irrelevant to "
             "revenue, only that value alone doesn't isolate the price effect. "
             "See OIL_PRICE vs OIL_EXPORTS_VOLUME below for a direct check of "
-            "that volume-noise explanation."
+            "that volume-noise explanation, and the lag scan for whether a "
+            "shipment/settlement delay between a price move and its showing "
+            "up in recorded export value fits better than same-month."
         ),
     ),
     Pair(
@@ -135,10 +142,12 @@ PAIRS: list[Pair] = [
             "value's weak correlation with price above, not evidence price "
             "doesn't matter."
         ),
+        max_lag=3,
         interpretation=(
             "A near-zero reading here is the supporting case for that "
             "explanation; a strong one (in either direction) would mean the "
-            "value result above needs a different explanation."
+            "value result above needs a different explanation. Same lag scan "
+            "as the value pair, for the same reason."
         ),
     ),
 ]

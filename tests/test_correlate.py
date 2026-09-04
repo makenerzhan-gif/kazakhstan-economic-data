@@ -155,3 +155,79 @@ def test_build_report_handles_undefined_correlation():
     ]
     text = report.build_report(results, run_date="2026-09-04")
     assert "undefined" in text
+
+
+def test_lagged_correlation_zero_lag_matches_contemporaneous():
+    dates = pd.date_range("2026-01-01", periods=4, freq="MS")
+    x = pd.Series([1.0, 2.0, 3.0, 4.0], index=dates)
+    y = pd.Series([10.0, 20.0, 30.0, 40.0], index=dates)
+    point = correlate.lagged_correlation(x, y, 0)
+    assert point.lag == 0
+    assert point.r == pytest.approx(1.0)
+    assert point.n == 4
+
+
+def test_lag_scan_finds_known_lead_lag_relationship():
+    # y[t] = x[t-2] -- x's value at time t shows up in y two periods later,
+    # i.e. x leads y by 2. Values are deliberately non-monotonic: a straight
+    # ramp would correlate ~1.0 at every lag and not actually test the sign
+    # convention.
+    dates = pd.date_range("2026-01-01", periods=12, freq="MS")
+    x = pd.Series([3.0, 1.0, 4.0, 1.0, 5.0, 9.0, 2.0, 6.0, 5.0, 3.0, 5.0, 8.0], index=dates)
+    y = pd.Series(index=dates, dtype=float)
+    y.iloc[2:] = x.iloc[:-2].values
+    y = y.dropna()
+
+    profile = correlate.lag_scan(x, y, max_lag=3)
+    assert [p.lag for p in profile] == [-3, -2, -1, 0, 1, 2, 3]
+
+    best = max(profile, key=lambda p: abs(p.r))
+    assert best.lag == 2
+    assert best.r == pytest.approx(1.0)
+
+
+def test_correlate_pair_computes_lag_profile_when_max_lag_set():
+    pair = pairs_config.Pair("A", "B", "label", "rationale", max_lag=2)
+    long_df = pd.concat([
+        _long_df("A", [(f"2026-{m:02d}-01", float(m)) for m in range(1, 9)]),
+        _long_df("B", [(f"2026-{m:02d}-01", float(m) * 2) for m in range(1, 9)]),
+    ])
+    indicators_by_id = {
+        "A": {"frequency": "monthly", "observation_type": "comparison_index"},
+        "B": {"frequency": "monthly", "observation_type": "comparison_index"},
+    }
+    result = correlate.correlate_pair(pair, long_df, indicators_by_id)
+    assert result.lag_profile is not None
+    assert [p.lag for p in result.lag_profile] == [-2, -1, 0, 1, 2]
+
+
+def test_correlate_pair_leaves_lag_profile_none_when_max_lag_zero():
+    pair = pairs_config.Pair("A", "B", "label", "rationale")  # max_lag defaults to 0
+    long_df = pd.concat([
+        _long_df("A", [("2026-01-01", 1.0), ("2026-02-01", 2.0)]),
+        _long_df("B", [("2026-01-01", 10.0), ("2026-02-01", 20.0)]),
+    ])
+    indicators_by_id = {
+        "A": {"frequency": "monthly", "observation_type": "comparison_index"},
+        "B": {"frequency": "monthly", "observation_type": "comparison_index"},
+    }
+    result = correlate.correlate_pair(pair, long_df, indicators_by_id)
+    assert result.lag_profile is None
+
+
+def test_build_report_renders_lag_table_when_present():
+    results = [
+        correlate.PairResult(
+            id_x="A", id_y="B", label="A vs B", rationale="why", interpretation="",
+            transform_x="as-is", transform_y="as-is", n=10,
+            date_start="2026-01-01", date_end="2026-10-01", r=0.1, caveats=[],
+            lag_profile=[
+                correlate.LagPoint(lag=-1, r=0.2, n=9),
+                correlate.LagPoint(lag=0, r=0.1, n=10),
+                correlate.LagPoint(lag=1, r=0.9, n=9),
+            ],
+        ),
+    ]
+    text = report.build_report(results, run_date="2026-09-04")
+    assert "Lag scan" in text
+    assert "Strongest same-window reading: lag +1" in text

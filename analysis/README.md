@@ -44,6 +44,20 @@ volume. The volume pair was added specifically to test a hypothesis raised by
 the value pair's own interpretation note — see that pair's entry in the
 generated report for how the two connect.
 
+**Lag scans.** Three pairs (`OIL_PRICE` vs `EXCHANGE_RATE`, vs
+`OIL_EXPORTS_VALUE`, vs `OIL_EXPORTS_VOLUME`) set `max_lag` in `pairs.py` and
+additionally report correlation at each shift from `-max_lag` to `+max_lag`
+periods (`scripts/analysis/correlate.py::lag_scan`), since a same-month
+reading may understate a delayed pass-through. The scan surfaced a real
+pattern worth noting here: `OIL_PRICE` vs `OIL_EXPORTS_VALUE` goes from a
+near-zero contemporaneous r to r≈0.75 at a 3-month lag, while the volume pair
+shows nothing comparable at any lag tested — consistent with a price effect
+on export *value* that takes about a quarter to clear, showing up through
+price rather than through how much is shipped. Read as descriptive, not
+confirmatory: no significance testing is run, and reporting the strongest of
+several scanned lags is itself a multiple-comparisons problem (stated in each
+report's Methodology section, not just here).
+
 **Deliberately left out, and why:**
 - `UNEMPLOYMENT` vs `AVG_WAGE`/`REAL_WAGE_INDEX` — `UNEMPLOYMENT` carries
   `lifecycle: stale_source`, stops in 2025-06, and has only 10 observations.

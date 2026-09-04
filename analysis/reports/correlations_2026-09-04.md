@@ -38,7 +38,21 @@ Strong co-movement is expected here almost by construction -- core is a subset o
 - Overlap window: 2021-06-01 .. 2026-07-01 -- 62 observations.
 - **Pearson r = 0.063**
 
-NBK manages the exchange rate rather than floating it freely, so a same-month linear read may understate a lagged or asymmetric response. Resampling the daily rate to a monthly mean also blurs when in the month a move happened, and the overlap window folds very different regimes (COVID recovery, the 2022 devaluation, disinflation) into one number. A lagged or YoY-basis version is a reasonable next step, not built here.
+NBK manages the exchange rate rather than floating it freely, so a same-month linear read may understate a lagged or asymmetric response -- see the lag scan below for whether shifting the two series relative to each other finds a stronger reading. Resampling the daily rate to a monthly mean also blurs when in the month a move happened, and the overlap window folds very different regimes (COVID recovery, the 2022 devaluation, disinflation) into one number.
+
+**Lag scan** (positive lag = OIL_PRICE leads EXCHANGE_RATE):
+
+| Lag (periods) | r | n |
+|---|---|---|
+| -3 | 0.013 | 59 |
+| -2 | -0.033 | 60 |
+| -1 | -0.168 | 61 |
+| +0 (contemporaneous) | 0.063 | 62 |
+| +1 | -0.045 | 62 |
+| +2 | 0.060 | 62 |
+| +3 | -0.040 | 61 |
+
+Strongest same-window reading: lag -1, r = -0.168 (n=61). Descriptive only -- no significance test, and scanning multiple lags means this is the best of several looks, not a confirmed finding on its own.
 
 ## REER vs CPI
 
@@ -100,7 +114,21 @@ Only 12 annual observations means roughly 11 usable points after taking growth r
 - Overlap window: 2019-02-01 .. 2026-06-01 -- 88 observations.
 - **Pearson r = -0.170**
 
-Export value moves with shipped volume as well as price, and volume has its own logistics-driven variation independent of price -- a weak reading doesn't mean price is irrelevant to revenue, only that value alone doesn't isolate the price effect. See OIL_PRICE vs OIL_EXPORTS_VOLUME below for a direct check of that volume-noise explanation.
+Export value moves with shipped volume as well as price, and volume has its own logistics-driven variation independent of price -- a weak reading doesn't mean price is irrelevant to revenue, only that value alone doesn't isolate the price effect. See OIL_PRICE vs OIL_EXPORTS_VOLUME below for a direct check of that volume-noise explanation, and the lag scan for whether a shipment/settlement delay between a price move and its showing up in recorded export value fits better than same-month.
+
+**Lag scan** (positive lag = OIL_PRICE leads OIL_EXPORTS_VALUE):
+
+| Lag (periods) | r | n |
+|---|---|---|
+| -3 | 0.163 | 85 |
+| -2 | -0.075 | 86 |
+| -1 | -0.140 | 87 |
+| +0 (contemporaneous) | -0.170 | 88 |
+| +1 | -0.096 | 87 |
+| +2 | 0.247 | 86 |
+| +3 | 0.746 | 85 |
+
+Strongest same-window reading: lag +3, r = 0.746 (n=85). Descriptive only -- no significance test, and scanning multiple lags means this is the best of several looks, not a confirmed finding on its own.
 
 ## CPI_YOY vs CORE_CPI_YOY_EX7
 
@@ -130,17 +158,40 @@ Same construction caveat as CPI_YOY vs CORE_CPI_YOY_EX3: strong co-movement is t
 - Overlap window: 2019-02-01 .. 2026-06-01 -- 88 observations.
 - **Pearson r = -0.048**
 
-A near-zero reading here is the supporting case for that explanation; a strong one (in either direction) would mean the value result above needs a different explanation.
+A near-zero reading here is the supporting case for that explanation; a strong one (in either direction) would mean the value result above needs a different explanation. Same lag scan as the value pair, for the same reason.
+
+**Lag scan** (positive lag = OIL_PRICE leads OIL_EXPORTS_VOLUME):
+
+| Lag (periods) | r | n |
+|---|---|---|
+| -3 | 0.124 | 85 |
+| -2 | -0.060 | 86 |
+| -1 | -0.015 | 87 |
+| +0 (contemporaneous) | -0.048 | 88 |
+| +1 | -0.058 | 87 |
+| +2 | -0.068 | 86 |
+| +3 | 0.095 | 85 |
+
+Strongest same-window reading: lag -3, r = 0.124 (n=85). Descriptive only -- no significance test, and scanning multiple lags means this is the best of several looks, not a confirmed finding on its own.
 
 ## Methodology and limitations
 
 - Correlation is Pearson (`pandas.Series.corr`, default method), computed on
   the transform stated per indicator above, over the intersection of
   available dates for each pair.
+- Where a lag scan is shown: lag is counted in periods of the two series'
+  own overlap after each side's transform -- row position, not recalculated
+  against calendar dates. A gap in either series' history would shift
+  everything after it by more than the stated lag's worth of calendar time;
+  none of the series a lag scan runs on have gaps in their overlap window,
+  but this is not re-verified per run.
 - No statistical significance testing (p-values, confidence intervals) is
   computed -- that requires `scipy.stats`, deliberately not added in this
   slice. A coefficient alone, especially at small n, is not proof of a
-  relationship.
+  relationship -- this applies to every lag in a scan individually, not
+  just the headline contemporaneous figure, and scanning several lags and
+  reporting the strongest one is itself a form of multiple comparisons: the
+  strongest lag in a short window is not automatically the true one.
 - Correlation is not causation, and none of the above controls for
   confounders.
 - This is a curated set of hand-picked pairs, not an all-pairs matrix over
