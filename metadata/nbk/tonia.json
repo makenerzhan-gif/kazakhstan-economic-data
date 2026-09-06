@@ -11,10 +11,10 @@
   "geography": "Kazakhstan (national)",
   "methodology": "%. Only a rolling ~6-month history is available from this endpoint -- do not assume deeper history exists; a gap in earlier years is expected, not a bug.",
   "publication_date": null,
-  "last_update_date": "2026-09-05",
-  "download_date": "2026-09-05",
+  "last_update_date": "2026-09-06",
+  "download_date": "2026-09-06",
   "period_start": "2026-02-24",
-  "period_end": "2026-09-05",
+  "period_end": "2026-09-06",
   "next_update_date": null,
   "transformation": "level",
   "revision_status": "original"

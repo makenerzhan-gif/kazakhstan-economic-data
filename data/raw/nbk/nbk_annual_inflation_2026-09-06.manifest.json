@@ -1,0 +1,8 @@
+{
+  "downloaded_at": "2026-09-06T10:30:58.243337",
+  "source_url": "https://data.nationalbank.kz/api/v1/data/indicators",
+  "field": "annualInflation",
+  "already_had": 8,
+  "in_window": 191,
+  "total_after_merge": 8
+}
