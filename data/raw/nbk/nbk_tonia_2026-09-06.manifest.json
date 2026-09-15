@@ -1,0 +1,6 @@
+{
+  "downloaded_at": "2026-09-06T10:13:34.560122",
+  "source_url": "https://data.nationalbank.kz/api/v1/data/indicators",
+  "raw_file": "nbk_annual_inflation_2026-09-06.json",
+  "raw_file_note": "byte-identical copy nbk_tonia_2026-09-06.json removed 2026-09-15; the bytes are in nbk_annual_inflation_2026-09-06.json"
+}

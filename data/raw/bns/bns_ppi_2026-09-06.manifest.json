@@ -1,0 +1,20 @@
+{
+  "downloaded_at": "2026-09-06T09:52:12.780850",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "703039",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "703039",
+    "p_keyword": "",
+    "p_period_id": "8",
+    "p_measure_id": "1",
+    "p_term_id": "741880",
+    "p_terms": "741880,2695732,4150464,15698719,18716910",
+    "p_dicIds": "67,848,2513,2854,3068",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  },
+  "raw_file": "bns_ppi_2026-08-30.json",
+  "raw_file_note": "byte-identical copy bns_ppi_2026-09-06.json removed 2026-09-15; the bytes are in bns_ppi_2026-08-30.json"
+}

@@ -1,0 +1,10 @@
+{
+  "downloaded_at": "2026-09-09T12:17:15.068602",
+  "source_url": "https://www.gov.kz/uploads/2026/6/12/b695516479aad9c00a7dcd481bbceaca_original.471357.pdf",
+  "document_id": 1025628,
+  "title": "Текущее состояние банковского сектора РК по состоянию на 01.05.2026",
+  "table": 9,
+  "row": "Вклады физических лиц",
+  "raw_file": "ardfm_bank_assets_gross_202605_2026-09-02.pdf",
+  "raw_file_note": "byte-identical copy ardfm_bank_deposits_individuals_fx_share_202605_2026-09-09.pdf removed 2026-09-15; the bytes are in ardfm_bank_assets_gross_202605_2026-09-02.pdf"
+}

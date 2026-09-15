@@ -1,0 +1,6 @@
+{
+  "downloaded_at": "2026-09-05T10:04:31.768999",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=34",
+  "raw_file": "nbk_fx_reserves_2026-09-02.json",
+  "raw_file_note": "byte-identical copy nbk_fx_reserves_2026-09-05.json removed 2026-09-15; the bytes are in nbk_fx_reserves_2026-09-02.json"
+}

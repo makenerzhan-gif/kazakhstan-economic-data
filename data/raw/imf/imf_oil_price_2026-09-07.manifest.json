@@ -1,0 +1,9 @@
+{
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/PCPS/9.0.0/G001.POILAPSP.USD.M",
+  "downloaded_at": "2026-09-07T12:36:03.812453",
+  "dataflow": "PCPS",
+  "version": "9.0.0",
+  "series_key": "G001.POILAPSP.USD.M",
+  "raw_file": "imf_oil_price_2026-09-04.csv",
+  "raw_file_note": "byte-identical copy imf_oil_price_2026-09-07.csv removed 2026-09-15; the bytes are in imf_oil_price_2026-09-04.csv"
+}

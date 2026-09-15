@@ -1,0 +1,6 @@
+{
+  "downloaded_at": "2026-09-08T11:01:34.217212",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=299",
+  "raw_file": "nbk_neer_2026-08-30.json",
+  "raw_file_note": "byte-identical copy nbk_neer_2026-09-08.json removed 2026-09-15; the bytes are in nbk_neer_2026-08-30.json"
+}

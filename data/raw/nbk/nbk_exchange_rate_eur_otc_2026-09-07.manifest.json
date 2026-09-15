@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-07T11:51:31.633918",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "41",
+  "n_pages": 5,
+  "total_rows": 2266,
+  "raw_file": "nbk_exchange_rate_eur_otc_2026-09-01.json",
+  "raw_file_note": "byte-identical copy nbk_exchange_rate_eur_otc_2026-09-07.json removed 2026-09-15; the bytes are in nbk_exchange_rate_eur_otc_2026-09-01.json"
+}

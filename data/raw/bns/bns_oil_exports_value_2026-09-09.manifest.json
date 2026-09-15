@@ -1,0 +1,8 @@
+{
+  "downloaded_at": "2026-09-09T10:36:36.899077",
+  "source_url": "https://stat.gov.kz/api/iblock/element/446905/file/ru/",
+  "element_id": 446905,
+  "hs_code": "270900",
+  "raw_file": "bns_exports_2026-09-07.xlsx",
+  "raw_file_note": "byte-identical copy bns_oil_exports_value_2026-09-09.xlsx removed 2026-09-15; the bytes are in bns_exports_2026-09-07.xlsx"
+}

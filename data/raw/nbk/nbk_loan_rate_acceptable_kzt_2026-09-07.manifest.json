@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-07T11:48:10.291644",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "347",
+  "n_pages": 5,
+  "total_rows": 2352,
+  "raw_file": "nbk_loan_rate_acceptable_fx_2026-08-31.json",
+  "raw_file_note": "byte-identical copy nbk_loan_rate_acceptable_kzt_2026-09-07.json removed 2026-09-15; the bytes are in nbk_loan_rate_acceptable_fx_2026-08-31.json"
+}

@@ -11,10 +11,10 @@
   "geography": "Kazakhstan (national)",
   "methodology": "Index, previous quarter = 100 -- 102.6 for Q2 2026. The momentum reading of CORE_CPI_YOY_EX3: it turns before the year-on-year series does, which is the point of carrying both.",
   "publication_date": null,
-  "last_update_date": "2026-09-04",
-  "download_date": "2026-09-04",
+  "last_update_date": "2026-09-09",
+  "download_date": "2026-09-09",
   "period_start": "2023-01-01",
-  "period_end": "2026-07-01",
+  "period_end": "2026-08-01",
   "next_update_date": null,
   "transformation": "level",
   "revision_status": "original"

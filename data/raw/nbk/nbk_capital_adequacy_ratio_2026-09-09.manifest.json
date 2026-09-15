@@ -1,0 +1,6 @@
+{
+  "downloaded_at": "2026-09-09T11:02:51.175668",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=314",
+  "raw_file": "nbk_bank_roa_2026-08-31.json",
+  "raw_file_note": "byte-identical copy nbk_capital_adequacy_ratio_2026-09-09.json removed 2026-09-15; the bytes are in nbk_bank_roa_2026-08-31.json"
+}

@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-06T10:14:43.916451",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "430",
+  "n_pages": 6,
+  "total_rows": 2786,
+  "raw_file": "nbk_gov_securities_meukam_2026-08-31.json",
+  "raw_file_note": "byte-identical copy nbk_gov_securities_meukam_2026-09-06.json removed 2026-09-15; the bytes are in nbk_gov_securities_meukam_2026-08-31.json"
+}

@@ -1,0 +1,6 @@
+{
+  "downloaded_at": "2026-09-06T10:19:40.539796",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=314",
+  "raw_file": "nbk_bank_roa_2026-08-31.json",
+  "raw_file_note": "byte-identical copy nbk_bank_roe_2026-09-06.json removed 2026-09-15; the bytes are in nbk_bank_roa_2026-08-31.json"
+}

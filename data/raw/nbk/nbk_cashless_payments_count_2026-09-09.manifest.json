@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-09T11:08:54.300928",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "418",
+  "n_pages": 2,
+  "total_rows": 720,
+  "raw_file": "nbk_cash_withdrawals_count_2026-09-07.json",
+  "raw_file_note": "byte-identical copy nbk_cashless_payments_count_2026-09-09.json removed 2026-09-15; the bytes are in nbk_cash_withdrawals_count_2026-09-07.json"
+}

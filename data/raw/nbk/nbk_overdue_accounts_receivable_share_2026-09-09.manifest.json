@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-09T11:17:31.717639",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "378",
+  "n_pages": 4,
+  "total_rows": 1764,
+  "raw_file": "nbk_overdue_accounts_payable_share_2026-08-31.json",
+  "raw_file_note": "byte-identical copy nbk_overdue_accounts_receivable_share_2026-09-09.json removed 2026-09-15; the bytes are in nbk_overdue_accounts_payable_share_2026-08-31.json"
+}

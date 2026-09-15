@@ -1,0 +1,7 @@
+{
+  "downloaded_at": "2026-09-07T10:57:01.427420",
+  "source_url": "https://stat.gov.kz/api/iblock/element/102790/json/file/ru/",
+  "element_id": 102790,
+  "raw_file": "bns_unemployment_2026-09-03.json",
+  "raw_file_note": "byte-identical copy bns_unemployment_2026-09-07.json removed 2026-09-15; the bytes are in bns_unemployment_2026-09-03.json"
+}

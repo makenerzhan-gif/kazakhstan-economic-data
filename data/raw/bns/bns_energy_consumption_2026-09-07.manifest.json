@@ -1,0 +1,20 @@
+{
+  "downloaded_at": "2026-09-07T11:08:44.591720",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "77394629",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "77394629",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "2908",
+    "p_term_id": "741880",
+    "p_terms": "741880,77356561",
+    "p_dicIds": "68,4834",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  },
+  "raw_file": "bns_energy_consumption_2026-08-30.json",
+  "raw_file_note": "byte-identical copy bns_energy_consumption_2026-09-07.json removed 2026-09-15; the bytes are in bns_energy_consumption_2026-08-30.json"
+}

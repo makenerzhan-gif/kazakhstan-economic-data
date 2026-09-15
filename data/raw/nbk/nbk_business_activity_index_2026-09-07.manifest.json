@@ -1,0 +1,6 @@
+{
+  "downloaded_at": "2026-09-07T11:35:56.827957",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=339",
+  "raw_file": "nbk_business_activity_index_2026-09-04.json",
+  "raw_file_note": "byte-identical copy nbk_business_activity_index_2026-09-07.json removed 2026-09-15; the bytes are in nbk_business_activity_index_2026-09-04.json"
+}

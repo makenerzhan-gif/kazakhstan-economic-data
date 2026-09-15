@@ -1,0 +1,7 @@
+{
+  "downloaded_at": "2026-09-07T11:09:00.144550",
+  "source_url": "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/",
+  "element_id": 5809,
+  "raw_file": "bns_ind_prod_2026-09-03.json",
+  "raw_file_note": "byte-identical copy bns_ind_prod_mining_2026-09-07.json removed 2026-09-15; the bytes are in bns_ind_prod_2026-09-03.json"
+}

@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-08T11:16:22.959625",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "445",
+  "n_pages": 1,
+  "total_rows": 445,
+  "raw_file": "nbk_loans_business_fx_2026-09-02.json",
+  "raw_file_note": "byte-identical copy nbk_loans_individuals_kzt_2026-09-08.json removed 2026-09-15; the bytes are in nbk_loans_business_fx_2026-09-02.json"
+}

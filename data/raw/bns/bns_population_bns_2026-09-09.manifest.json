@@ -1,0 +1,20 @@
+{
+  "downloaded_at": "2026-09-09T10:29:28.850240",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "703834",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "703834",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "23",
+    "p_term_id": "741880",
+    "p_terms": "741880,741917,741935,3699122",
+    "p_dicIds": "67,749,576,1433",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  },
+  "raw_file": "bns_population_bns_2026-08-30.json",
+  "raw_file_note": "byte-identical copy bns_population_bns_2026-09-09.json removed 2026-09-15; the bytes are in bns_population_bns_2026-08-30.json"
+}

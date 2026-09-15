@@ -1,0 +1,20 @@
+{
+  "downloaded_at": "2026-09-09T10:33:27.724449",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "701834",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "701834",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "1",
+    "p_term_id": "741880",
+    "p_terms": "741880,741917,807855",
+    "p_dicIds": "68,776,459",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  },
+  "raw_file": "bns_housing_investment_2026-09-01.json",
+  "raw_file_note": "byte-identical copy bns_housing_investment_2026-09-09.json removed 2026-09-15; the bytes are in bns_housing_investment_2026-09-01.json"
+}

@@ -2,5 +2,7 @@
   "downloaded_at": "2026-09-15T06:13:29.438276",
   "source_url": "https://stat.gov.kz/api/iblock/element/446905/file/ru/",
   "element_id": 446905,
-  "note": "shared by EXPORTS_VALUE_BY_COMMODITY_GROUP and EXPORTS_VOLUME_BY_COMMODITY_GROUP"
+  "note": "shared by EXPORTS_VALUE_BY_COMMODITY_GROUP and EXPORTS_VOLUME_BY_COMMODITY_GROUP",
+  "raw_file": "bns_exports_2026-09-07.xlsx",
+  "raw_file_note": "byte-identical copy bns_exports_by_group_2026-09-15.xlsx removed 2026-09-15; the bytes are in bns_exports_2026-09-07.xlsx"
 }

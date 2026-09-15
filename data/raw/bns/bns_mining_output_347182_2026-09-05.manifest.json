@@ -1,0 +1,10 @@
+{
+  "downloaded_at": "2026-09-05T09:45:50.937043",
+  "source_url": "https://stat.gov.kz/api/iblock/element/347182/file/ru/",
+  "element_id": 347182,
+  "published": "2026-07-17",
+  "sheet": "2",
+  "row": "Горнодобывающая промышленность",
+  "raw_file": "bns_industrial_output_347182_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy bns_mining_output_347182_2026-09-05.xlsx removed 2026-09-15; the bytes are in bns_industrial_output_347182_2026-09-01.xlsx"
+}

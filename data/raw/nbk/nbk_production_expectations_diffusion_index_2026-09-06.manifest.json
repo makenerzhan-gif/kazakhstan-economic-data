@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-06T10:25:10.137886",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "365",
+  "n_pages": 3,
+  "total_rows": 1176,
+  "raw_file": "nbk_production_expectations_diffusion_index_2026-08-31.json",
+  "raw_file_note": "byte-identical copy nbk_production_expectations_diffusion_index_2026-09-06.json removed 2026-09-15; the bytes are in nbk_production_expectations_diffusion_index_2026-08-31.json"
+}

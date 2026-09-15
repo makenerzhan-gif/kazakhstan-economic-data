@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-09T11:19:28.719185",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "16",
+  "n_pages": 2,
+  "total_rows": 719,
+  "raw_file": "nbk_gov_securities_secondary_nbk_notes_2026-08-31.json",
+  "raw_file_note": "byte-identical copy nbk_gov_securities_secondary_nbk_notes_2026-09-09.json removed 2026-09-15; the bytes are in nbk_gov_securities_secondary_nbk_notes_2026-08-31.json"
+}

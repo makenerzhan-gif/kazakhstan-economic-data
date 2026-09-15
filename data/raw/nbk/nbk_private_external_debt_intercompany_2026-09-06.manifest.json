@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-06T10:27:58.188205",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "340",
+  "n_pages": 2,
+  "total_rows": 672,
+  "raw_file": "nbk_external_debt_long_term_2026-08-31.json",
+  "raw_file_note": "byte-identical copy nbk_private_external_debt_intercompany_2026-09-06.json removed 2026-09-15; the bytes are in nbk_external_debt_long_term_2026-08-31.json"
+}

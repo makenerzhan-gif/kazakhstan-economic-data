@@ -1,0 +1,20 @@
+{
+  "downloaded_at": "2026-09-07T11:10:35.101264",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "704316",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "704316",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "23",
+    "p_term_id": "741880",
+    "p_terms": "741880",
+    "p_dicIds": "67",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  },
+  "raw_file": "bns_doctors_per_10k_2026-09-01.json",
+  "raw_file_note": "byte-identical copy bns_doctors_per_10k_2026-09-07.json removed 2026-09-15; the bytes are in bns_doctors_per_10k_2026-09-01.json"
+}

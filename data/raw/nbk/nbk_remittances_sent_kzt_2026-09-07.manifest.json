@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-07T11:50:52.359406",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "411",
+  "n_pages": 2,
+  "total_rows": 612,
+  "raw_file": "nbk_remittances_received_kzt_2026-09-07.json",
+  "raw_file_note": "byte-identical copy nbk_remittances_sent_kzt_2026-09-07.json removed 2026-09-15; the bytes are in nbk_remittances_received_kzt_2026-09-07.json"
+}

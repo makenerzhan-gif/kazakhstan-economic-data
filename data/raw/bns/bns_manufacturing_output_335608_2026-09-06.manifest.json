@@ -1,0 +1,10 @@
+{
+  "downloaded_at": "2026-09-06T09:57:30.853187",
+  "source_url": "https://stat.gov.kz/api/iblock/element/335608/file/ru/",
+  "element_id": 335608,
+  "published": "2026-08-17",
+  "sheet": "2",
+  "row": "Обрабатывающая промышленность",
+  "raw_file": "bns_industrial_output_335608_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy bns_manufacturing_output_335608_2026-09-06.xlsx removed 2026-09-15; the bytes are in bns_industrial_output_335608_2026-09-01.xlsx"
+}

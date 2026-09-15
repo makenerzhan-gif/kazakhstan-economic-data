@@ -1,0 +1,11 @@
+{
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.GGX",
+  "downloaded_at": "2026-09-05T11:11:42.071815",
+  "dataflow": "WEO",
+  "agency_code": "IMF.RES",
+  "version": "9.0.0",
+  "country": "KAZ",
+  "indicator_code": "GGX",
+  "raw_file": "imf_imf_gov_expenditure_2026-09-04.csv",
+  "raw_file_note": "byte-identical copy imf_imf_gov_expenditure_2026-09-05.csv removed 2026-09-15; the bytes are in imf_imf_gov_expenditure_2026-09-04.csv"
+}

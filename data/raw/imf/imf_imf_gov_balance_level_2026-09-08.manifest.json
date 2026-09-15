@@ -1,0 +1,11 @@
+{
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.GGXCNL",
+  "downloaded_at": "2026-09-08T12:11:48.629834",
+  "dataflow": "WEO",
+  "agency_code": "IMF.RES",
+  "version": "9.0.0",
+  "country": "KAZ",
+  "indicator_code": "GGXCNL",
+  "raw_file": "imf_imf_gov_balance_level_2026-09-04.csv",
+  "raw_file_note": "byte-identical copy imf_imf_gov_balance_level_2026-09-08.csv removed 2026-09-15; the bytes are in imf_imf_gov_balance_level_2026-09-04.csv"
+}

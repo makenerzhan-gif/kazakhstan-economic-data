@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-05T10:03:10.136810",
+  "source_url": "https://stat.gov.kz/api/iblock/element/335803/file/ru/",
+  "element_id": 335803,
+  "reporting_month": "2026-06",
+  "sheet": "2.",
+  "raw_file": "bns_export_price_index_335803_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy bns_import_price_index_335803_2026-09-05.xlsx removed 2026-09-15; the bytes are in bns_export_price_index_335803_2026-09-01.xlsx"
+}

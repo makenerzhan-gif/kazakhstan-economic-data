@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-07T11:52:40.391868",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "351",
+  "n_pages": 1,
+  "total_rows": 392,
+  "raw_file": "nbk_external_debt_currency_deposits_2026-09-01.json",
+  "raw_file_note": "byte-identical copy nbk_external_debt_debt_securities_2026-09-07.json removed 2026-09-15; the bytes are in nbk_external_debt_currency_deposits_2026-09-01.json"
+}

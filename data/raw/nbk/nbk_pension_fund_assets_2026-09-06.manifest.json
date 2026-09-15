@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-06T10:19:45.037494",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "25",
+  "n_pages": 3,
+  "total_rows": 1075,
+  "raw_file": "nbk_pension_fund_assets_2026-08-31.json",
+  "raw_file_note": "byte-identical copy nbk_pension_fund_assets_2026-09-06.json removed 2026-09-15; the bytes are in nbk_pension_fund_assets_2026-08-31.json"
+}

@@ -1,0 +1,11 @@
+{
+  "downloaded_at": "2026-09-07T11:18:12.686238",
+  "source_url": "https://stat.gov.kz/api/iblock/element/346313/file/ru/",
+  "element_id": 346313,
+  "published": "2026-05-18",
+  "next_publication": "2026-06-17",
+  "period": "2026-04",
+  "sheet": "1.",
+  "raw_file": "bns_construction_index_346313_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy bns_construction_output_346313_2026-09-07.xlsx removed 2026-09-15; the bytes are in bns_construction_index_346313_2026-09-01.xlsx"
+}

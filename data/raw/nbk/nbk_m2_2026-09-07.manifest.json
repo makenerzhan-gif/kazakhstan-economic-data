@@ -1,0 +1,10 @@
+{
+  "downloaded_at": "2026-09-07T11:34:32.384256",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "51",
+  "row_code": "4",
+  "n_pages": 3,
+  "total_rows_all_codes": 1059,
+  "raw_file": "nbk_m0_2026-08-30.json",
+  "raw_file_note": "byte-identical copy nbk_m2_2026-09-07.json removed 2026-09-15; the bytes are in nbk_m0_2026-08-30.json"
+}

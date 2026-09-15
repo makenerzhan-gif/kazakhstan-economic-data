@@ -1,0 +1,10 @@
+{
+  "downloaded_at": "2026-09-05T10:01:31.119847",
+  "source_url": "https://stat.gov.kz/api/iblock/element/346883/file/ru/",
+  "element_id": 346883,
+  "quarter": "2026Q1",
+  "sheet": "1",
+  "row": "Финансовая и страховая деятельность",
+  "raw_file": "bns_avg_wage_agriculture_346883_2026-09-03.xlsx",
+  "raw_file_note": "byte-identical copy bns_real_wage_index_finance_346883_2026-09-05.xlsx removed 2026-09-15; the bytes are in bns_avg_wage_agriculture_346883_2026-09-03.xlsx"
+}

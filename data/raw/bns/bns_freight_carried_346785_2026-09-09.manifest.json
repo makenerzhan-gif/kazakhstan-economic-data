@@ -1,0 +1,10 @@
+{
+  "downloaded_at": "2026-09-09T10:51:08.561739",
+  "source_url": "https://stat.gov.kz/api/iblock/element/346785/file/ru/",
+  "element_id": 346785,
+  "period": "2026-05",
+  "sheet": "1.",
+  "column": 1,
+  "raw_file": "bns_freight_carried_346785_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy bns_freight_carried_346785_2026-09-09.xlsx removed 2026-09-15; the bytes are in bns_freight_carried_346785_2026-09-01.xlsx"
+}

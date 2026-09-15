@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-07T11:38:45.736293",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "324",
+  "n_pages": 21,
+  "total_rows": 10429,
+  "raw_file": "nbk_bop_goods_balance_2026-09-03.json",
+  "raw_file_note": "byte-identical copy nbk_current_account_balance_2026-09-07.json removed 2026-09-15; the bytes are in nbk_bop_goods_balance_2026-09-03.json"
+}

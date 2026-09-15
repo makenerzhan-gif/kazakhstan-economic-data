@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-06T10:18:53.556073",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "35",
+  "n_pages": 1,
+  "total_rows": 168,
+  "raw_file": "nbk_dbg35_2026-09-02.json",
+  "raw_file_note": "byte-identical copy nbk_exchange_rate_cny_kase_2026-09-06.json removed 2026-09-15; the bytes are in nbk_dbg35_2026-09-02.json"
+}
