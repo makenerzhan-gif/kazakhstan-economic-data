@@ -16,5 +16,7 @@
     2668,
     2496
   ],
-  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=261&activities=14610"
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=261&activities=14610",
+  "raw_file": "minfin_budget_financing_banks_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy minfin_gov_debt_external_2026-09-01.xlsx removed 2026-09-15; the bytes are in minfin_budget_financing_banks_2026-09-01.xlsx"
 }

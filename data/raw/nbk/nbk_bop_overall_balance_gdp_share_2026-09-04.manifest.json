@@ -3,5 +3,7 @@
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "485",
   "n_pages": 5,
-  "total_rows": 2040
+  "total_rows": 2040,
+  "raw_file": "nbk_bop_overall_balance_gdp_share_2026-09-01.json",
+  "raw_file_note": "byte-identical copy nbk_bop_overall_balance_gdp_share_2026-09-04.json removed 2026-09-15; the bytes are in nbk_bop_overall_balance_gdp_share_2026-09-01.json"
 }

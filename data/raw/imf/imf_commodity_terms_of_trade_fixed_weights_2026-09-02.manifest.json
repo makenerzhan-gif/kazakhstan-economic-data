@@ -3,5 +3,7 @@
   "downloaded_at": "2026-09-02T19:13:06.229225",
   "dataflow": "CTOT",
   "version": "5.0.1",
-  "series_key": "KAZ.CEMPI_CTOTNX_TT.R_FW_IX.M"
+  "series_key": "KAZ.CEMPI_CTOTNX_TT.R_FW_IX.M",
+  "raw_file": "imf_commodity_terms_of_trade_fixed_weights_2026-09-01.csv",
+  "raw_file_note": "byte-identical copy imf_commodity_terms_of_trade_fixed_weights_2026-09-02.csv removed 2026-09-15; the bytes are in imf_commodity_terms_of_trade_fixed_weights_2026-09-01.csv"
 }

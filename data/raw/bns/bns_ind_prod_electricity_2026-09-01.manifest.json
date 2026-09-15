@@ -1,5 +1,7 @@
 {
   "downloaded_at": "2026-09-01T22:43:14.246416",
   "source_url": "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/",
-  "element_id": 5809
+  "element_id": 5809,
+  "raw_file": "bns_ind_prod_2026-08-30.json",
+  "raw_file_note": "byte-identical copy bns_ind_prod_electricity_2026-09-01.json removed 2026-09-15; the bytes are in bns_ind_prod_2026-08-30.json"
 }

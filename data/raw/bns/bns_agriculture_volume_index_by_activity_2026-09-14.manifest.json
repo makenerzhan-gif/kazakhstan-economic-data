@@ -1,5 +1,7 @@
 {
   "downloaded_at": "2026-09-14T23:25:09.327745",
   "source_url": "https://stat.gov.kz/api/iblock/element/8150/file/ru/",
-  "element_id": 8150
+  "element_id": 8150,
+  "raw_file": "bns_agriculture_volume_index_by_activity_2026-09-14.xls",
+  "raw_file_note": "byte-identical copy bns_agriculture_volume_index_by_activity_2026-09-14.xlsx removed 2026-09-15; the bytes are in bns_agriculture_volume_index_by_activity_2026-09-14.xls"
 }

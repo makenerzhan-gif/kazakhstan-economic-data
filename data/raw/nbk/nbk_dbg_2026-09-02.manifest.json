@@ -3,5 +3,7 @@
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "393",
   "n_pages": 2,
-  "total_rows": 544
+  "total_rows": 544,
+  "raw_file": "nbk_dbg393_2026-09-02.json",
+  "raw_file_note": "byte-identical copy nbk_dbg_2026-09-02_155858.json removed 2026-09-15; the bytes are in nbk_dbg393_2026-09-02.json"
 }

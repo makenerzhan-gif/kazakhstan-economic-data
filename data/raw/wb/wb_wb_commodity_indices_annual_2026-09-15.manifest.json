@@ -1,5 +1,7 @@
 {
   "downloaded_at": "2026-09-15T00:13:36.235271",
   "source_url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
-  "sheet": "Annual Indices (Nominal)"
+  "sheet": "Annual Indices (Nominal)",
+  "raw_file": "wb_wb_commodity_prices_annual_2026-09-15.xlsx",
+  "raw_file_note": "byte-identical copy wb_wb_commodity_indices_annual_2026-09-15.xlsx removed 2026-09-15; the bytes are in wb_wb_commodity_prices_annual_2026-09-15.xlsx"
 }

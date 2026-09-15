@@ -4,5 +4,7 @@
   "element_id": 347192,
   "published": "2026-07-03",
   "sheet": "2",
-  "row": "Горнодобывающая промышленность"
+  "row": "Горнодобывающая промышленность",
+  "raw_file": "bns_industrial_output_347192_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy bns_mining_output_347192_2026-09-02_175934.xlsx removed 2026-09-15; the bytes are in bns_industrial_output_347192_2026-09-01.xlsx"
 }

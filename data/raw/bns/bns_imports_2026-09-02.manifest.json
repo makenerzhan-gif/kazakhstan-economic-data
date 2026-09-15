@@ -1,5 +1,7 @@
 {
   "downloaded_at": "2026-09-02T17:53:11.257499",
   "source_url": "https://stat.gov.kz/api/iblock/element/446906/file/ru/",
-  "element_id": 446906
+  "element_id": 446906,
+  "raw_file": "bns_imports_2026-08-30.xlsx",
+  "raw_file_note": "byte-identical copy bns_imports_2026-09-02_175311.xlsx removed 2026-09-15; the bytes are in bns_imports_2026-08-30.xlsx"
 }

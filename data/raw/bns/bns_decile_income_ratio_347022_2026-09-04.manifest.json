@@ -4,5 +4,7 @@
   "element_id": 347022,
   "quarter": "2026Q1",
   "sheet": "5",
-  "row": "Қазақстан Республикасы"
+  "row": "Қазақстан Республикасы",
+  "raw_file": "bns_decile_income_ratio_347022_2026-09-02.xlsx",
+  "raw_file_note": "byte-identical copy bns_decile_income_ratio_347022_2026-09-04.xlsx removed 2026-09-15; the bytes are in bns_decile_income_ratio_347022_2026-09-02.xlsx"
 }

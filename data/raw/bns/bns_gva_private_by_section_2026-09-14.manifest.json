@@ -1,5 +1,7 @@
 {
   "downloaded_at": "2026-09-14T23:25:02.158559",
   "source_url": "https://stat.gov.kz/api/iblock/element/4446/file/ru/",
-  "element_id": 4446
+  "element_id": 4446,
+  "raw_file": "bns_gva_foreign_by_section_2026-09-14.xlsx",
+  "raw_file_note": "byte-identical copy bns_gva_private_by_section_2026-09-14.xlsx removed 2026-09-15; the bytes are in bns_gva_foreign_by_section_2026-09-14.xlsx"
 }

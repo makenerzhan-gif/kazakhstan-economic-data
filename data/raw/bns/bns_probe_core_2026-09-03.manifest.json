@@ -14,5 +14,7 @@
     "idx": "0",
     "filter": "[{\"property\":null,\"value\":null}]",
     "id": ""
-  }
+  },
+  "raw_file": "bns_core_cpi_yoy_ex3_2026-09-03.json",
+  "raw_file_note": "byte-identical copy bns_probe_core_2026-09-03_070253.json removed 2026-09-15; the bytes are in bns_core_cpi_yoy_ex3_2026-09-03.json"
 }

@@ -119,10 +119,14 @@ after `update_dims.py`): `EXPORTS`, `OIL_EXPORTS_VALUE`, `OIL_EXPORTS_VOLUME`
 `EMPLOYED_TOTAL`, `ELECTRICITY_PRODUCTION`. They keep their ids, units and
 place in `macro_long.csv`/`macro_wide.csv`; `scale` only converts units, the
 values are the published ones. Two more rules stop the same bytes being
-fetched and stored several times a day: every agency's `_download` is cached
-per process, and `lib/raw_store.py` keeps one raw copy per day per source file —
-an indicator whose download is byte-identical to a file already archived that
-day points at it in its manifest (`raw_file`) instead of writing a second copy.
+fetched and stored again and again: every agency's `_download` is cached per
+process, and `lib/raw_store.py` keeps one raw copy per distinct content — a
+download that is byte-identical to a file already archived for that agency (any
+indicator, any day) points at it in its dated manifest (`raw_file`) instead of
+writing another copy. Revised content still lands as a new dated file, and
+nothing archived is ever modified. The copies accumulated before this rule
+(9.9 GB of 11.2 GB) were removed on 2026-09-15; `data/raw/dedup_2026-09-15.json`
+maps every removed file to the file that holds its bytes.
 
 ## Hard rules (see MASTER TASK for full detail)
 
@@ -130,7 +134,8 @@ day points at it in its manifest (`raw_file`) instead of writing a second copy.
   entry in `config/sources.yaml` must be backed by verified research.
 - Never bypass CAPTCHA/login/anti-bot protection — mark the source as
   unavailable-automatic and note it for manual download instead.
-- Raw data is never edited or deleted, only appended to with a new dated file.
+- Raw data is never edited, and distinct content is never deleted — a new dated
+  file for every revision; byte-identical downloads are stored once (see above).
 - A structural change in a source stops that dataset's pipeline loudly
   (WHAT CHANGED / EXPECTED / ACTUAL / ACTION REQUIRED) rather than continuing silently.
 - Production data is only updated if validation and tests pass.

@@ -5,5 +5,7 @@
   "agency_code": "IMF.RES",
   "version": "9.0.0",
   "country": "KAZ",
-  "indicator_code": "NGDP_D"
+  "indicator_code": "NGDP_D",
+  "raw_file": "imf_imf_gdp_deflator_index_2026-08-30.csv",
+  "raw_file_note": "byte-identical copy imf_imf_gdp_deflator_index_2026-09-01.csv removed 2026-09-15; the bytes are in imf_imf_gdp_deflator_index_2026-08-30.csv"
 }

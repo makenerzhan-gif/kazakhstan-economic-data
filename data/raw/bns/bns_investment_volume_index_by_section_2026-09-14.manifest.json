@@ -1,5 +1,7 @@
 {
   "downloaded_at": "2026-09-14T23:25:08.279456",
   "source_url": "https://stat.gov.kz/api/iblock/element/5547/file/ru/",
-  "element_id": 5547
+  "element_id": 5547,
+  "raw_file": "bns_investment_by_section_2026-09-14.xlsx",
+  "raw_file_note": "byte-identical copy bns_investment_volume_index_by_section_2026-09-14.xlsx removed 2026-09-15; the bytes are in bns_investment_by_section_2026-09-14.xlsx"
 }

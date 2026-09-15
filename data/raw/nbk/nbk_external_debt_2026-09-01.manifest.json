@@ -1,4 +1,6 @@
 {
   "downloaded_at": "2026-09-01T22:47:38.822890",
-  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=353"
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=353",
+  "raw_file": "nbk_external_debt_2026-08-30.json",
+  "raw_file_note": "byte-identical copy nbk_external_debt_2026-09-01.json removed 2026-09-15; the bytes are in nbk_external_debt_2026-08-30.json"
 }

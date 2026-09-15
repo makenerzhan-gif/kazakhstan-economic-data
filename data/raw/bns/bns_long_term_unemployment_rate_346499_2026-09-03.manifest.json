@@ -4,5 +4,7 @@
   "element_id": 346499,
   "quarter": "2026Q1",
   "sheet": "1.",
-  "row": "Уровень долгосрочной безработицы"
+  "row": "Уровень долгосрочной безработицы",
+  "raw_file": "bns_employed_quarterly_346499_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy bns_long_term_unemployment_rate_346499_2026-09-03_103856.xlsx removed 2026-09-15; the bytes are in bns_employed_quarterly_346499_2026-09-01.xlsx"
 }

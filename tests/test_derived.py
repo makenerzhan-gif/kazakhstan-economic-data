@@ -54,16 +54,18 @@ def test_scalar_ids_are_either_fetched_or_derived_never_both_and_never_neither()
         assert i["id"] in fetched or i["id"] in derived, f"{i['id']} has neither a fetcher nor a derivation"
 
 
-def test_raw_store_keeps_identical_same_day_bytes_once(tmp_path, monkeypatch):
+def test_raw_store_keeps_identical_bytes_once_across_indicators_and_days(tmp_path, monkeypatch):
     monkeypatch.setattr(raw_store, "RAW_ROOT", tmp_path)
-    today = date(2026, 9, 15)
+    today, tomorrow = date(2026, 9, 15), date(2026, 9, 16)
     first = raw_store.save_raw_bytes("bns", "EXPORTS", today, "xlsx", b"same bytes")
     twin = raw_store.save_raw_bytes("bns", "OIL_EXPORTS_VALUE", today, "xlsx", b"same bytes")
     other = raw_store.save_raw_bytes("bns", "IMPORTS", today, "xlsx", b"different bytes")
-    assert twin == first and other != first
-    assert sorted(p.name for p in (tmp_path / "bns").iterdir()) == ["bns_exports_2026-09-15.xlsx", "bns_imports_2026-09-15.xlsx"]
+    next_day = raw_store.save_raw_bytes("bns", "EXPORTS", tomorrow, "xlsx", b"same bytes")        # source unchanged overnight
+    revised = raw_store.save_raw_bytes("bns", "EXPORTS", tomorrow, "xlsx", b"revised bytes")      # source republished
+    assert twin == first and next_day == first and other != first and revised.name == "bns_exports_2026-09-16.xlsx"
+    assert sorted(p.name for p in (tmp_path / "bns").iterdir()) == ["bns_exports_2026-09-15.xlsx", "bns_exports_2026-09-16.xlsx", "bns_imports_2026-09-15.xlsx"]
     again = raw_store.save_raw_bytes("bns", "EXPORTS", today, "xlsx", b"same bytes")      # idempotent re-run
-    assert again == first and len(list((tmp_path / "bns").iterdir())) == 2
+    assert again == first and len(list((tmp_path / "bns").iterdir())) == 3
 
 
 def test_downloads_are_made_once_per_process(monkeypatch):

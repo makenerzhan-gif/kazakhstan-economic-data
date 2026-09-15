@@ -4205,3 +4205,28 @@ stay: their successors do not cover the same periods or definitions.
 the repository's rule is that raw files are never removed, and git keeps them in history
 regardless; they simply stop multiplying from here. Removing them from the working tree
 is a one-line decision for the author.
+
+## 2026-09-15 — raw store: byte-identical copies removed, one copy per distinct content from now on
+
+**What.** The author asked for the old copies to go. 5 683 raw files (9.9 GB of 11.2 GB)
+were byte-identical to another file archived for the same agency — the same workbook
+under several indicator ids, the same PDF or form re-downloaded on days when the source
+had not changed — and were removed from the working tree; every one of them maps to the
+file that still holds its bytes in `data/raw/dedup_2026-09-15.json` (matched through git
+blob ids — identical content is one blob — and, for twins added the same day, by byte
+comparison), and the dated manifests of the removed files carry `raw_file` pointing at it.
+Five files that the first pass took for duplicates turned out to have no twin left after
+the pass and were restored before anything was committed; the check that every removed
+file has a surviving twin is part of the record. Nothing with distinct content was
+touched. `data/raw` is now 1.39 GB.
+
+**Rule going forward.** `lib/raw_store.identical_twin`: a download whose bytes are
+already archived for the agency — any indicator, any day — is not written again; the
+indicator's dated manifest records the download and names the file. Revised content still
+produces a new dated file, and files already archived are never modified or removed by
+the store. The MASTER-TASK rule reads as before with one clarification in README: raw data
+is never edited and distinct content is never deleted.
+
+**Note.** Git history still contains the removed copies (identical blobs are stored once
+by git, so the .git directory was never as large as the working tree); shrinking clones
+would need a history rewrite, which was not done.

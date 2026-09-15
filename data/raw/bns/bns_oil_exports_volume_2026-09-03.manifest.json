@@ -2,5 +2,7 @@
   "downloaded_at": "2026-09-03T22:36:13.628357",
   "source_url": "https://stat.gov.kz/api/iblock/element/446905/file/ru/",
   "element_id": 446905,
-  "hs_code": "270900"
+  "hs_code": "270900",
+  "raw_file": "bns_exports_2026-08-30.xlsx",
+  "raw_file_note": "byte-identical copy bns_oil_exports_volume_2026-09-03_102730.xlsx removed 2026-09-15; the bytes are in bns_exports_2026-08-30.xlsx"
 }

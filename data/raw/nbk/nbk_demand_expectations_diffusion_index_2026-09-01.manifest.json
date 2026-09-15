@@ -3,5 +3,7 @@
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "366",
   "n_pages": 5,
-  "total_rows": 2408
+  "total_rows": 2408,
+  "raw_file": "nbk_demand_diffusion_index_2026-08-31.json",
+  "raw_file_note": "byte-identical copy nbk_demand_expectations_diffusion_index_2026-09-01.json removed 2026-09-15; the bytes are in nbk_demand_diffusion_index_2026-08-31.json"
 }

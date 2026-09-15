@@ -4,5 +4,7 @@
   "element_id": 347237,
   "reporting_month": "2026-06",
   "sheet": "1",
-  "row": "Оптовая торговля"
+  "row": "Оптовая торговля",
+  "raw_file": "bns_retail_trade_index_monthly_347237_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy bns_wholesale_trade_monthly_347237_2026-09-02_180202.xlsx removed 2026-09-15; the bytes are in bns_retail_trade_index_monthly_347237_2026-09-01.xlsx"
 }

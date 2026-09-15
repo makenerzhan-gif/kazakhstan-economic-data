@@ -4,5 +4,7 @@
   "element_id": 346883,
   "quarter": "2026Q1",
   "sheet": "1",
-  "row": "Строительство"
+  "row": "Строительство",
+  "raw_file": "bns_avg_wage_agriculture_346883_2026-09-03.xlsx",
+  "raw_file_note": "byte-identical copy bns_real_wage_index_construction_346883_2026-09-04.xlsx removed 2026-09-15; the bytes are in bns_avg_wage_agriculture_346883_2026-09-03.xlsx"
 }

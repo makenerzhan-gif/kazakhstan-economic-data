@@ -4,5 +4,7 @@
   "document_id": 1055812,
   "title": "Текущее состояние банковского сектора РК по состоянию на 01.07.2026",
   "table": 5,
-  "row": "Займы с просроченной задолженностью свыше 90 дней"
+  "row": "Займы с просроченной задолженностью свыше 90 дней",
+  "raw_file": "ardfm_bank_assets_gross_202607_2026-09-02.pdf",
+  "raw_file_note": "byte-identical copy ardfm_bank_npl_90_corporate_share_202607_2026-09-03.pdf removed 2026-09-15; the bytes are in ardfm_bank_assets_gross_202607_2026-09-02.pdf"
 }

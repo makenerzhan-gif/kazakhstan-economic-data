@@ -4,5 +4,7 @@
   "element_id": 335608,
   "published": "2026-08-17",
   "sheet": "2",
-  "row": "Промышленность"
+  "row": "Промышленность",
+  "raw_file": "bns_industrial_output_335608_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy bns_industrial_production_index_335608_2026-09-04.xlsx removed 2026-09-15; the bytes are in bns_industrial_output_335608_2026-09-01.xlsx"
 }

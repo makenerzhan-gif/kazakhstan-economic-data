@@ -3,5 +3,7 @@
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "350",
   "n_pages": 1,
-  "total_rows": 357
+  "total_rows": 357,
+  "raw_file": "nbk_external_debt_gov_guaranteed_2026-09-01.json",
+  "raw_file_note": "byte-identical copy nbk_external_debt_public_sector_2026-09-03.json removed 2026-09-15; the bytes are in nbk_external_debt_gov_guaranteed_2026-09-01.json"
 }

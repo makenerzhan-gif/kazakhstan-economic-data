@@ -2,5 +2,7 @@
   "downloaded_at": "2026-09-01T23:26:48.049850",
   "source_document_id": 1051170,
   "source_title": "Statistical bulletin as of July 1, 2026 (is developed in Kazakh and Russian, while English translation is not provided)",
-  "source_url": "https://www.gov.kz/uploads/2026/8/5/609bce465237862c4ba611e0372fde11_original.1507070.xlsx"
+  "source_url": "https://www.gov.kz/uploads/2026/8/5/609bce465237862c4ba611e0372fde11_original.1507070.xlsx",
+  "raw_file": "minfin_budget_financing_banks_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy minfin_gov_debt_external_usd_2026-09-01.xlsx removed 2026-09-15; the bytes are in minfin_budget_financing_banks_2026-09-01.xlsx"
 }

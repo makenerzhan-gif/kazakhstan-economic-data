@@ -1,4 +1,6 @@
 {
   "downloaded_at": "2026-09-03T23:27:35.964572",
-  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=35"
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=35",
+  "raw_file": "nbk_kase_usd_volume_2026-08-30.json",
+  "raw_file_note": "byte-identical copy nbk_kase_usd_volume_2026-09-03.json removed 2026-09-15; the bytes are in nbk_kase_usd_volume_2026-08-30.json"
 }

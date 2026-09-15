@@ -14,5 +14,7 @@
     "idx": "0",
     "filter": "[{\"property\":null,\"value\":null}]",
     "id": ""
-  }
+  },
+  "raw_file": "bns_small_business_value_added_2026-09-01.json",
+  "raw_file_note": "byte-identical copy bns_small_business_value_added_2026-09-02.json removed 2026-09-15; the bytes are in bns_small_business_value_added_2026-09-01.json"
 }

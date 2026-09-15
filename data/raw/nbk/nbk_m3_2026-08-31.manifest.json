@@ -4,5 +4,7 @@
   "form_id": "51",
   "row_code": "5",
   "n_pages": 3,
-  "total_rows_all_codes": 1059
+  "total_rows_all_codes": 1059,
+  "raw_file": "nbk_m0_2026-08-30.json",
+  "raw_file_note": "byte-identical copy nbk_m3_2026-08-31.json removed 2026-09-15; the bytes are in nbk_m0_2026-08-30.json"
 }

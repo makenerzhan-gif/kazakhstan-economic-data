@@ -1,4 +1,6 @@
 {
   "downloaded_at": "2026-08-31T23:37:48.832387",
-  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=27"
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=27",
+  "raw_file": "nbk_lending_rate_2026-08-30.json",
+  "raw_file_note": "byte-identical copy nbk_lending_rate_2026-08-31.json removed 2026-09-15; the bytes are in nbk_lending_rate_2026-08-30.json"
 }

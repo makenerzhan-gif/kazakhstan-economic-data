@@ -1,4 +1,6 @@
 {
   "downloaded_at": "2026-08-31T23:37:51.095602",
-  "source_url": "https://data.nationalbank.kz/api/v1/data/indicators"
+  "source_url": "https://data.nationalbank.kz/api/v1/data/indicators",
+  "raw_file": "nbk_tonia_2026-09-01.json",
+  "raw_file_note": "byte-identical copy nbk_tonia_2026-08-31_233751.json removed 2026-09-15; the bytes are in nbk_tonia_2026-09-01.json"
 }

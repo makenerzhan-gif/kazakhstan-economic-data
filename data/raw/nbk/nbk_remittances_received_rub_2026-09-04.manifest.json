@@ -3,5 +3,7 @@
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "411",
   "n_pages": 2,
-  "total_rows": 602
+  "total_rows": 602,
+  "raw_file": "nbk_remittances_received_kzt_2026-08-31.json",
+  "raw_file_note": "byte-identical copy nbk_remittances_received_rub_2026-09-04.json removed 2026-09-15; the bytes are in nbk_remittances_received_kzt_2026-08-31.json"
 }

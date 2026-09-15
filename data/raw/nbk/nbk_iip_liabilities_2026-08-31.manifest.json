@@ -3,5 +3,7 @@
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "309",
   "n_pages": 12,
-  "total_rows": 5786
+  "total_rows": 5786,
+  "raw_file": "nbk_iip_assets_2026-08-31.json",
+  "raw_file_note": "byte-identical copy nbk_iip_liabilities_2026-08-31.json removed 2026-09-15; the bytes are in nbk_iip_assets_2026-08-31.json"
 }

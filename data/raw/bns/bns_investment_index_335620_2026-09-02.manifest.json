@@ -2,5 +2,7 @@
   "downloaded_at": "2026-09-02T18:01:18.990800",
   "source_url": "https://stat.gov.kz/api/iblock/element/335620/file/ru/",
   "element_id": 335620,
-  "published": "2026-08-17"
+  "published": "2026-08-17",
+  "raw_file": "bns_investment_fixed_capital_335620_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy bns_investment_index_335620_2026-09-02_180118.xlsx removed 2026-09-15; the bytes are in bns_investment_fixed_capital_335620_2026-09-01.xlsx"
 }

@@ -1,5 +1,7 @@
 {
   "downloaded_at": "2026-09-03T22:33:17.420866",
   "source_url": "https://stat.gov.kz/api/iblock/element/4439/json/file/ru/",
-  "element_id": 4439
+  "element_id": 4439,
+  "raw_file": "bns_gdp_nominal_2026-08-30.json",
+  "raw_file_note": "byte-identical copy bns_gdp_nominal_2026-09-03_223317.json removed 2026-09-15; the bytes are in bns_gdp_nominal_2026-08-30.json"
 }

@@ -1,5 +1,7 @@
 {
   "downloaded_at": "2026-09-14T23:25:09.706020",
   "source_url": "https://stat.gov.kz/api/iblock/element/8166/file/ru/",
-  "element_id": 8166
+  "element_id": 8166,
+  "raw_file": "bns_grain_yield_by_region_2026-09-14.xls",
+  "raw_file_note": "byte-identical copy bns_grain_yield_by_region_2026-09-14.xlsx removed 2026-09-15; the bytes are in bns_grain_yield_by_region_2026-09-14.xls"
 }

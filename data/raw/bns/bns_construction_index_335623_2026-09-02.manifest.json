@@ -5,5 +5,7 @@
   "published": "2026-08-18",
   "next_publication": "2026-09-17",
   "period": "2026-07",
-  "sheet": "1."
+  "sheet": "1.",
+  "raw_file": "bns_construction_index_335623_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy bns_construction_index_335623_2026-09-02_180311.xlsx removed 2026-09-15; the bytes are in bns_construction_index_335623_2026-09-01.xlsx"
 }

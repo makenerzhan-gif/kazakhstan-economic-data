@@ -4,5 +4,7 @@
   "document_id": 1025628,
   "title": "Текущее состояние банковского сектора РК по состоянию на 01.05.2026",
   "table": 11,
-  "row": "Уставный капитал"
+  "row": "Уставный капитал",
+  "raw_file": "ardfm_bank_assets_gross_202605_2026-09-02.pdf",
+  "raw_file_note": "byte-identical copy ardfm_bank_share_capital_202605_2026-09-03.pdf removed 2026-09-15; the bytes are in ardfm_bank_assets_gross_202605_2026-09-02.pdf"
 }

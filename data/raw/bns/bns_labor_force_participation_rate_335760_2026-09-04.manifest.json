@@ -4,5 +4,7 @@
   "element_id": 335760,
   "quarter": "2026Q2",
   "sheet": "1.",
-  "row": "Уровень участия в рабочей силе"
+  "row": "Уровень участия в рабочей силе",
+  "raw_file": "bns_employed_quarterly_335760_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy bns_labor_force_participation_rate_335760_2026-09-04.xlsx removed 2026-09-15; the bytes are in bns_employed_quarterly_335760_2026-09-01.xlsx"
 }

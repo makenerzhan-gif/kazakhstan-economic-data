@@ -4,5 +4,7 @@
   "document_id": 1055812,
   "title": "Текущее состояние банковского сектора РК по состоянию на 01.07.2026",
   "table": 9,
-  "row": "Вклады физических лиц"
+  "row": "Вклады физических лиц",
+  "raw_file": "ardfm_bank_assets_gross_202607_2026-09-02.pdf",
+  "raw_file_note": "byte-identical copy ardfm_bank_deposits_individuals_fx_share_202607_2026-09-04.pdf removed 2026-09-15; the bytes are in ardfm_bank_assets_gross_202607_2026-09-02.pdf"
 }

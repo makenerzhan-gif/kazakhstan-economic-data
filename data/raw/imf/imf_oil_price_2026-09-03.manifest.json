@@ -3,5 +3,7 @@
   "downloaded_at": "2026-09-03T20:04:51.362685",
   "dataflow": "PCPS",
   "version": "9.0.0",
-  "series_key": "G001.POILAPSP.USD.M"
+  "series_key": "G001.POILAPSP.USD.M",
+  "raw_file": "imf_oil_price_2026-09-01.csv",
+  "raw_file_note": "byte-identical copy imf_oil_price_2026-09-03.csv removed 2026-09-15; the bytes are in imf_oil_price_2026-09-01.csv"
 }

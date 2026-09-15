@@ -1,4 +1,6 @@
 {
   "downloaded_at": "2026-09-01T22:47:44.710471",
-  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=470"
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=470",
+  "raw_file": "nbk_national_fund_transfers_2026-08-30.json",
+  "raw_file_note": "byte-identical copy nbk_national_fund_transfers_2026-09-01.json removed 2026-09-15; the bytes are in nbk_national_fund_transfers_2026-08-30.json"
 }

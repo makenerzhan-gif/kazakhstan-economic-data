@@ -1,5 +1,7 @@
 {
   "downloaded_at": "2026-09-02T17:50:55.281572",
   "source_url": "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/",
-  "element_id": 1549
+  "element_id": 1549,
+  "raw_file": "bns_cpi_2026-08-30.csv",
+  "raw_file_note": "byte-identical copy bns_cpi_2026-09-02_175055.csv removed 2026-09-15; the bytes are in bns_cpi_2026-08-30.csv"
 }

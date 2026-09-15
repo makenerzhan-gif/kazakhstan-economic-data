@@ -4,5 +4,7 @@
   "element_id": 347699,
   "period": "2026-06",
   "sheet": "1.",
-  "column": 7
+  "column": 7,
+  "raw_file": "bns_freight_carried_347699_2026-09-01.xlsx",
+  "raw_file_note": "byte-identical copy bns_passenger_turnover_monthly_347699_2026-09-03_104106.xlsx removed 2026-09-15; the bytes are in bns_freight_carried_347699_2026-09-01.xlsx"
 }

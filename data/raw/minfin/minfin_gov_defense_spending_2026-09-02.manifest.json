@@ -2,5 +2,7 @@
   "downloaded_at": "2026-09-02T18:30:02.860036",
   "source_document_id": 1001046,
   "source_title": "Dynamics of execution of the republican budget from 2014 to 2025",
-  "source_url": "https://www.gov.kz/uploads/2026/4/22/df7f71644666a6fd54cf11fcebb8c972_original.97280.xls"
+  "source_url": "https://www.gov.kz/uploads/2026/4/22/df7f71644666a6fd54cf11fcebb8c972_original.97280.xls",
+  "raw_file": "minfin_budget_deficit_2026-08-30.xls",
+  "raw_file_note": "byte-identical copy minfin_gov_defense_spending_2026-09-02.xls removed 2026-09-15; the bytes are in minfin_budget_deficit_2026-08-30.xls"
 }

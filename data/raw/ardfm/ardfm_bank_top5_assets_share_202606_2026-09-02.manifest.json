@@ -4,5 +4,7 @@
   "document_id": 1044228,
   "title": "Текущее состояние банковского сектора РК по состоянию на 01.06.2026",
   "table": 15,
-  "row": "Доля 5 крупнейших банков в совокупных активах"
+  "row": "Доля 5 крупнейших банков в совокупных активах",
+  "raw_file": "ardfm_bank_assets_gross_202606_2026-09-02.pdf",
+  "raw_file_note": "byte-identical copy ardfm_bank_top5_assets_share_202606_2026-09-02.pdf removed 2026-09-15; the bytes are in ardfm_bank_assets_gross_202606_2026-09-02.pdf"
 }

@@ -4,5 +4,7 @@
   "field": "inflationTarget",
   "already_had": 1,
   "in_window": 188,
-  "total_after_merge": 1
+  "total_after_merge": 1,
+  "raw_file": "nbk_annual_inflation_2026-09-03.json",
+  "raw_file_note": "byte-identical copy nbk_inflation_target_2026-09-03.json removed 2026-09-15; the bytes are in nbk_annual_inflation_2026-09-03.json"
 }

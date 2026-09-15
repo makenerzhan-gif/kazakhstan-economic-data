@@ -1,5 +1,7 @@
 {
   "downloaded_at": "2026-08-31T23:36:54.326283",
   "source_url": "https://stat.gov.kz/api/iblock/element/5546/json/file/ru/",
-  "element_id": 5546
+  "element_id": 5546,
+  "raw_file": "bns_investment_2026-08-30.json",
+  "raw_file_note": "byte-identical copy bns_investment_2026-08-31.json removed 2026-09-15; the bytes are in bns_investment_2026-08-30.json"
 }

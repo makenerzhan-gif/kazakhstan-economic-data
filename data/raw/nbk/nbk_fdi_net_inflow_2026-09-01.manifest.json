@@ -3,5 +3,7 @@
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "337",
   "n_pages": 7,
-  "total_rows": 3145
+  "total_rows": 3145,
+  "raw_file": "nbk_fdi_net_inflow_2026-08-31.json",
+  "raw_file_note": "byte-identical copy nbk_fdi_net_inflow_2026-09-01.json removed 2026-09-15; the bytes are in nbk_fdi_net_inflow_2026-08-31.json"
 }

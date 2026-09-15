@@ -3,5 +3,7 @@
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "26",
   "n_pages": 2,
-  "total_rows": 621
+  "total_rows": 621,
+  "raw_file": "nbk_ofc_claims_on_banking_system_2026-09-01.json",
+  "raw_file_note": "byte-identical copy nbk_ofc_liabilities_to_nonresidents_2026-09-04.json removed 2026-09-15; the bytes are in nbk_ofc_claims_on_banking_system_2026-09-01.json"
 }
