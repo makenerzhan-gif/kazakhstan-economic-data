@@ -4370,3 +4370,20 @@ previous edition (values identical throughout):
 All 13 fetch live again. Tests 305 → 308. Still stopping: the two Minfin pension series
 (since 9 September, unrelated) and the two BNS export datasets (element 446905 still
 serving the 22 KB stub at 09:35 UTC).
+
+## 2026-09-15 — the two Minfin pension series: table 27 is dated 1 January only half the year
+
+PENSION_CONTRIBUTIONS_RECEIVED and PENSION_CONTRIBUTIONS_ARREARS had stopped since 9 September
+(the first daily run to open the 'as of August 1, 2026' bulletin). Cause: table 27 of the
+bulletin is rebuilt twice a year, not with every edition — the editions published from
+about February to July carry the figures as of 1 January (the annual series these two
+indicators are), the editions from August on carry the figures as of 1 July (half-year
+receipts, mid-year arrears); the August edition switched while the 'as of July 1, 2026' one
+still showed 1 January, and the title does not say which. The fetcher looked only at the
+newest edition and only for «на 1 января». It now opens the editions newest-first (at most
+eight, 1.2–1.5 MB each, cached per process) and takes the first whose table 27 is dated
+1 January; the manifest lists the mid-year editions it skipped. The 1-July figures are not
+stored — a half-year variant would be a separate indicator with its own semantics
+(year-to-date receipts), not a silent change of this one. Verified live: both series return
+their 2025 and 2026 points from the July-1 edition (2 448 612.9 / 2 548 511.5 and
+3 287 315.7 / 4 486 885.8 million KZT). Tests 308 → 311.

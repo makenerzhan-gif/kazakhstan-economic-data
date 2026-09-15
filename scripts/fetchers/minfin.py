@@ -1725,7 +1725,67 @@ BULLETIN_PENSION_SHEET_NAME = "табл 27 пг"
 PENSION_TOTAL_LABEL = "Жиыны"
 
 
+AS_OF_FIRST_OF_MONTH_RE = re.compile(r"на\s+1\s+([а-яё]+)\s+(\d{4})\s+года", re.IGNORECASE)
+PENSION_MAX_EDITIONS = 8
+
+
+def _pension_table(content: bytes, file_path: str, indicator_id: str) -> tuple[list, list] | None:
+    """(header_row, total_row) of sheet 'табл 27 пг', or None when the workbook has no such
+    sheet. The header carries the two as-of dates the table is built for."""
+    kind, wb = _open_workbook(content, file_path)
+    sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
+    target_sheet = next((s for s in sheet_names if s.strip() == BULLETIN_PENSION_SHEET_NAME), None)
+    if target_sheet is None:
+        return None
+    rows = list(_iter_rows(kind, wb, target_sheet))
+    header_row = next((r for r in rows if r and any(isinstance(c, str) and AS_OF_FIRST_OF_MONTH_RE.search(c) for c in r if c)), None)
+    total_row = next((r for r in rows if r and isinstance(r[0], str) and r[0].strip() == PENSION_TOTAL_LABEL), None)
+    if header_row is None or total_row is None:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                "WHAT CHANGED: could not find header row (as-of-1st-of-month year labels) or the total row",
+                f"ACTUAL: header_row found={header_row is not None}, total_row found={total_row is not None}",
+                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path} and update scripts/fetchers/minfin.py",
+            ])
+        )
+    return header_row, total_row
+
+
+def _pension_records(header_row: list, total_row: list, column_half: str, indicator_id: str) -> tuple[list[dict], set[str]]:
+    """Records for one column pair of the table and the set of months its header names."""
+    year_matches = [(i, AS_OF_FIRST_OF_MONTH_RE.search(c)) for i, c in enumerate(header_row)
+                    if isinstance(c, str) and AS_OF_FIRST_OF_MONTH_RE.search(c)]
+    if len(year_matches) != 4:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+                f"WHAT CHANGED: expected exactly 4 as-of-date header cells (2 for receipts, 2 for "
+                f"arrears), found {len(year_matches)}: {[(i, m.group(0)) for i, m in year_matches]}",
+                "ACTION REQUIRED: inspect the sheet layout and update scripts/fetchers/minfin.py",
+            ])
+        )
+    months = {m.group(1).lower() for _, m in year_matches}
+    half = year_matches[:2] if column_half == "first" else year_matches[2:]
+    records = []
+    for col_idx, m in half:
+        value = total_row[col_idx] if col_idx < len(total_row) else None
+        if value in (None, ""):
+            continue
+        records.append({"date": f"{int(m.group(2)):04d}-01-01", "value": float(value)})
+    records.sort(key=lambda r: r["date"])
+    return records, months
+
+
 def _fetch_pension_row(column_half: str, indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    """Table 27 is rebuilt twice a year, not with every bulletin: the editions published
+    from about February to July carry the figures as of 1 JANUARY (the annual series these
+    indicators are), the editions from August on carry the figures as of 1 JULY (half-year
+    receipts, mid-year arrears). Seen 2026-09-04: the 'as of August 1, 2026' bulletin
+    switched the table to 1 July while the 'as of July 1, 2026' one still had 1 January.
+    The bulletin title says nothing about which; so the editions are opened newest-first
+    and the first whose table 27 is dated 1 January is used -- the 1-July figures are not
+    stored (a half-year variant would be a separate indicator, not this one)."""
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
     bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
     if not bulletins:
@@ -1738,82 +1798,43 @@ def _fetch_pension_row(column_half: str, indicator_id: str, note: str) -> tuple[
                 f"ACTION REQUIRED: inspect {LISTING_URL}?directions={BUDGET_DIRECTION_ID} and update scripts/fetchers/minfin.py",
             ])
         )
-    doc = bulletins[0]
-    file_path = doc["full_text"][0]["document"]
-    content = _download(file_path)
-
-    today = date.today()
-    ext = "xls" if file_path.lower().endswith(".xls") else "xlsx"
-    raw_store.save_raw_bytes(SOURCE, indicator_id, today, ext, content)
-    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
-        "downloaded_at": datetime.now().isoformat(),
-        "source_document_id": doc["id"], "source_title": doc.get("title"),
-        "source_url": GOV_KZ_BASE + file_path,
-    })
-
-    kind, wb = _open_workbook(content, file_path)
-    sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
-    target_sheet = next((s for s in sheet_names if s.strip() == BULLETIN_PENSION_SHEET_NAME), None)
-    if target_sheet is None:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
-                f"WHAT CHANGED: no sheet named {BULLETIN_PENSION_SHEET_NAME!r} in the latest bulletin",
-                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path} and update scripts/fetchers/minfin.py",
-            ])
-        )
-
-    rows = list(_iter_rows(kind, wb, target_sheet))
-    header_row = next((r for r in rows if r and any(
-        isinstance(c, str) and AS_OF_JAN1_HEADER_RE.search(c) for c in r if c
-    )), None)
-    target_row = next((r for r in rows if r and isinstance(r[0], str) and r[0].strip() == PENSION_TOTAL_LABEL), None)
-    if header_row is None or target_row is None:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
-                "WHAT CHANGED: could not find header row (as-of-Jan-1 year labels) or target row",
-                f"ACTUAL: header_row found={header_row is not None}, target_row found={target_row is not None}",
-                f"ACTION REQUIRED: inspect {GOV_KZ_BASE + file_path} and update scripts/fetchers/minfin.py",
-            ])
-        )
-
-    year_matches = [(i, int(AS_OF_JAN1_HEADER_RE.search(c).group(1)))
-                     for i, c in enumerate(header_row) if isinstance(c, str) and AS_OF_JAN1_HEADER_RE.search(c)]
-    if len(year_matches) != 4:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
-                f"WHAT CHANGED: expected exactly 4 year-header matches (2 for receipts, 2 for "
-                f"arrears), found {len(year_matches)}: {year_matches}",
-                "ACTION REQUIRED: inspect the sheet layout and update scripts/fetchers/minfin.py",
-            ])
-        )
-    half = year_matches[:2] if column_half == "first" else year_matches[2:]
-
-    records = []
-    for col_idx, year in half:
-        value = target_row[col_idx] if col_idx < len(target_row) else None
-        if value in (None, ""):
+    seen: list[tuple[str, str]] = []
+    for doc in bulletins[:PENSION_MAX_EDITIONS]:
+        file_path = doc["full_text"][0]["document"]
+        content = _download(file_path)
+        table = _pension_table(content, file_path, indicator_id)
+        if table is None:
+            seen.append((str(doc.get("title"))[:40], "no table 27"))
             continue
-        records.append({"date": f"{year:04d}-01-01", "value": float(value)})
-
-    if not records:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
-                "WHAT CHANGED: zero year/value pairs extracted",
-                "ACTION REQUIRED: inspect the sheet layout and update scripts/fetchers/minfin.py",
-            ])
-        )
-    records.sort(key=lambda r: r["date"])
-    manifest = {
-        "frequency": "annual",
-        "source_url": GOV_KZ_BASE + file_path,
-        "dataset_id": f"gov.kz-doc-{doc['id']},sheet={BULLETIN_PENSION_SHEET_NAME}",
-        "note": note,
-    }
-    return records, manifest
+        records, months = _pension_records(*table, column_half, indicator_id)
+        if months == {"января"}:
+            today = date.today()
+            ext = "xls" if file_path.lower().endswith(".xls") else "xlsx"
+            raw_store.save_raw_bytes(SOURCE, indicator_id, today, ext, content)
+            raw_store.write_download_manifest(SOURCE, indicator_id, today, {
+                "downloaded_at": datetime.now().isoformat(),
+                "source_document_id": doc["id"], "source_title": doc.get("title"),
+                "source_url": GOV_KZ_BASE + file_path,
+                "editions_skipped": seen,
+            })
+            manifest = {
+                "frequency": "annual",
+                "source_url": GOV_KZ_BASE + file_path,
+                "dataset_id": f"gov.kz-doc-{doc['id']},sheet={BULLETIN_PENSION_SHEET_NAME}",
+                "note": note + (f" Newer editions skipped because their table 27 is dated mid-year: {seen}." if seen else ""),
+            }
+            return records, manifest
+        seen.append((str(doc.get("title"))[:40], "/".join(sorted(months))))
+    raise validation.StructuralChangeError(
+        "\n".join([
+            f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+            f"WHAT CHANGED: none of the {len(seen)} newest bulletins carries table 27 dated 1 January",
+            f"ACTUAL: {seen}",
+            "EXPECTED: the February–July editions carry the 1-January figures; if the table's dating "
+            "convention changed, decide whether the indicator becomes semi-annual",
+            "ACTION REQUIRED: inspect the bulletins and update scripts/fetchers/minfin.py",
+        ])
+    )
 
 
 def fetch_pension_contributions_received() -> tuple[list[dict], dict]:

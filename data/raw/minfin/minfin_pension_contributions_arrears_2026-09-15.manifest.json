@@ -1,6 +1,12 @@
 {
-  "downloaded_at": "2026-09-15T10:37:07.527713",
-  "source_document_id": 1062506,
-  "source_title": "Statistical bulletin as of August 1, 2026 (is developed in Kazakh and Russian, while English translation is not provided)",
-  "source_url": "https://www.gov.kz/uploads/2026/9/4/0f480349a6d5a3d479e612d5eecb8906_original.1216239.xlsx"
+  "downloaded_at": "2026-09-15T16:17:31.752344",
+  "source_document_id": 1051170,
+  "source_title": "Statistical bulletin as of July 1, 2026 (is developed in Kazakh and Russian, while English translation is not provided)",
+  "source_url": "https://www.gov.kz/uploads/2026/8/5/609bce465237862c4ba611e0372fde11_original.1507070.xlsx",
+  "editions_skipped": [
+    [
+      "Statistical bulletin as of August 1, 202",
+      "июля"
+    ]
+  ]
 }

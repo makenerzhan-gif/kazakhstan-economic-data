@@ -5248,6 +5248,12 @@ agencies:
           -- confirmed live this ordering is stable. Verified live: 2,448,612.87 (as of
           2025-01-01) to 2,548,511.48 (as of 2026-01-01) million KZT.
           fetch_pension_contributions_received.
+          2026-09-15. Table 27 is rebuilt twice a year, not with every bulletin: the February-July
+          editions carry the figures as of 1 JANUARY, the August-January editions the figures as of
+          1 JULY (the 'as of August 1, 2026' bulletin switched to 1 July while 'as of July 1, 2026'
+          still had 1 January; the title does not say which). The fetcher now opens the editions
+          newest-first and uses the first whose table is dated 1 January; the 1-July figures are
+          not stored -- a half-year variant would be a separate indicator.
       PENSION_CONTRIBUTIONS_ARREARS:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
@@ -5263,6 +5269,12 @@ agencies:
           notably LARGER than contributions received, and growing faster, a real signal about
           pension-contribution compliance worth having in the dataset.
           fetch_pension_contributions_arrears.
+          2026-09-15. Table 27 is rebuilt twice a year, not with every bulletin: the February-July
+          editions carry the figures as of 1 JANUARY, the August-January editions the figures as of
+          1 JULY (the 'as of August 1, 2026' bulletin switched to 1 July while 'as of July 1, 2026'
+          still had 1 January; the title does not say which). The fetcher now opens the editions
+          newest-first and uses the first whose table is dated 1 January; the 1-July figures are
+          not stored -- a half-year variant would be a separate indicator.
       GOV_PROCUREMENT_TOTAL_VALUE:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
