@@ -4289,3 +4289,24 @@ and `update_all.py` rebuilds it daily. Tests 299 → 303.
 World Bank prices, 2000–2010 for BNS) would turn most `history` entries into pipeline
 coverage — a `years` change in `model_map.yaml`, but the author's call, since the history
 would then be rewritten to today's vintages. Nothing committed to main yet.
+
+## 2026-09-15 — two corrections to the de-duplication notes
+
+**ANNUAL_INFLATION vs CPI_YOY — a dating convention, not a discrepancy.** The 0.7 pp
+"difference on the same month" reported on 2026-09-15 disappears entirely when the NBK
+series is shifted one month back: ANNUAL_INFLATION is event-dated by the day the figure
+appeared on the NBK widget (2026-09-02 carries August 2026), CPI_YOY by the reference
+month. Shifted, all 8 common points equal CPI_YOY − 100 to the decimal. By content it is
+BNS's own index republished by the NBK; it stays as the deliberate independent cross-check
+its metadata describes, with a `dating_note` in indicators.yaml so nobody compares the two
+on the calendar date again.
+
+**"15 GB of deleted blobs in git history" — wrong, withdrawn.** Git stores one blob per
+content, so the byte-identical raw copies removed on 2026-09-15 never occupied extra
+space in `.git`: the packed history is 39 MB (1.5 GB of unique blob content, mostly
+daily NBK JSON, delta-compressed), and a history rewrite would free 6 MB — 23 blobs whose
+content is no longer at HEAD. The large files live in Git LFS (`data/raw/bns/*.xlsx`),
+which also de-duplicates by content and which a history rewrite does not shrink on GitHub
+at all (LFS objects are only removed with the repository). A rewrite would change every
+commit hash, force every clone to be re-cloned and invalidate the hashes quoted in this
+log for no gain. Not done, and not recommended.
