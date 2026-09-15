@@ -1,0 +1,9 @@
+{"indicator_id": "ELECTRICITY_PRODUCTION", "period": "2016-12-31", "old_value": 94642384000000.0, "new_value": 94642384000.0, "detected_date": "2026-09-15", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "ELECTRICITY_PRODUCTION", "period": "2017-12-31", "old_value": 103128432700000.0, "new_value": 103127955800.0, "detected_date": "2026-09-15", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "ELECTRICITY_PRODUCTION", "period": "2018-12-31", "old_value": 107363139100000.0, "new_value": 107268807800.0, "detected_date": "2026-09-15", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "ELECTRICITY_PRODUCTION", "period": "2019-12-31", "old_value": 106483171400000.0, "new_value": 106483161000.0, "detected_date": "2026-09-15", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "ELECTRICITY_PRODUCTION", "period": "2020-12-31", "old_value": 108629093000000.0, "new_value": 108628400000.0, "detected_date": "2026-09-15", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "ELECTRICITY_PRODUCTION", "period": "2021-12-31", "old_value": 115078200000.0, "new_value": 115079200000.0, "detected_date": "2026-09-15", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "ELECTRICITY_PRODUCTION", "period": "2022-12-31", "old_value": 113552100000.0, "new_value": 113453169500.0, "detected_date": "2026-09-15", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "ELECTRICITY_PRODUCTION", "period": "2023-12-31", "old_value": 113585469000.0, "new_value": 113585468800.0, "detected_date": "2026-09-15", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "ELECTRICITY_PRODUCTION", "period": "2024-12-31", "old_value": 118716605000.0, "new_value": 118669937900.0, "detected_date": "2026-09-15", "source": "bns", "reason": "not stated by source"}

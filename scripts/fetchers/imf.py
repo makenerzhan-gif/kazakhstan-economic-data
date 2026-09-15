@@ -33,8 +33,11 @@ VALUE_COL_CANDIDATES = ["OBS_VALUE", "VALUE", "VAL"]
 SOURCE = "imf"
 
 
+_DOWNLOAD_CACHE: dict[str, bytes] = {}
+
+
 def _download(url: str, attempts: int = 3) -> bytes:
-    """Download with a retry on TRANSPORT-level failures only.
+    """Download once per process, with a retry on TRANSPORT-level failures only.
 
     imf.org was observed on 2026-09-01 intermittently resetting connections
     (ConnectionResetError 10054) on a couple of arbitrary indicators per run --
@@ -47,11 +50,14 @@ def _download(url: str, attempts: int = 3) -> bytes:
     than be papered over by repetition. Retries are announced on stderr so a
     flaky source stays visible in the run output instead of silently passing.
     """
+    if url in _DOWNLOAD_CACHE:
+        return _DOWNLOAD_CACHE[url]
     last_exc: Exception | None = None
     for attempt in range(1, attempts + 1):
         try:
             resp = requests.get(url, headers=HEADERS, timeout=30)
             resp.raise_for_status()
+            _DOWNLOAD_CACHE[url] = resp.content
             return resp.content
         except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as exc:
             last_exc = exc

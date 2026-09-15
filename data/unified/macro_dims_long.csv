@@ -5248,6 +5248,7 @@ date,country,region,frequency,variable,item_code,item_name,value,unit,source,sou
 2022-06-01,KZ,national,monthly,EXPORTS_VALUE_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",8158257.709339968,thousand USD,bns,2026-09-15,level,2026-09-15
 2022-07-01,KZ,national,monthly,EXPORTS_VALUE_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",6710232.980090019,thousand USD,bns,2026-09-15,level,2026-09-15
 2022-08-01,KZ,national,monthly,EXPORTS_VALUE_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",7435768.832140009,thousand USD,bns,2026-09-15,level,2026-09-15
+2022-09-01,KZ,national,monthly,EXPORTS_VALUE_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",7435243.3100000145,thousand USD,bns,2026-09-15,level,2026-09-15
 2022-10-01,KZ,national,monthly,EXPORTS_VALUE_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",6940850.361629987,thousand USD,bns,2026-09-15,level,2026-09-15
 2022-11-01,KZ,national,monthly,EXPORTS_VALUE_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",6932983.36155,thousand USD,bns,2026-09-15,level,2026-09-15
 2022-12-01,KZ,national,monthly,EXPORTS_VALUE_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",6716117.178339988,thousand USD,bns,2026-09-15,level,2026-09-15
@@ -8536,6 +8537,7 @@ date,country,region,frequency,variable,item_code,item_name,value,unit,source,sou
 2022-06-01,KZ,national,monthly,EXPORTS_VOLUME_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",12689823.20736002,tonnes,bns,2026-09-15,level,2026-09-15
 2022-07-01,KZ,national,monthly,EXPORTS_VOLUME_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",10600422.346539987,tonnes,bns,2026-09-15,level,2026-09-15
 2022-08-01,KZ,national,monthly,EXPORTS_VOLUME_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",11260508.108419955,tonnes,bns,2026-09-15,level,2026-09-15
+2022-09-01,KZ,national,monthly,EXPORTS_VOLUME_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",11267694.182769982,tonnes,bns,2026-09-15,level,2026-09-15
 2022-10-01,KZ,national,monthly,EXPORTS_VOLUME_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",10990313.59803995,tonnes,bns,2026-09-15,level,2026-09-15
 2022-11-01,KZ,national,monthly,EXPORTS_VOLUME_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",10662042.998060042,tonnes,bns,2026-09-15,level,2026-09-15
 2022-12-01,KZ,national,monthly,EXPORTS_VOLUME_BY_COMMODITY_GROUP,TOTAL,"Экспорт товаров, всего",11504357.60295005,tonnes,bns,2026-09-15,level,2026-09-15

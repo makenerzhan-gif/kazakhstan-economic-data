@@ -47,10 +47,30 @@ def _versioned_raw_path(agency: str, indicator_id: str, download_date: date, ext
     return path
 
 
-def save_raw_bytes(agency: str, indicator_id: str, download_date: date, ext: str, content: bytes) -> Path:
-    """Write raw content to disk.
+def same_day_twin(agency: str, download_date: date, ext: str, content: bytes) -> Path | None:
+    """A file already archived today for this agency, under ANY indicator id, with
+    exactly these bytes. Several indicators read one source file (the 65 MB BNS
+    export workbook feeds EXPORTS, the oil-export series and the commodity-group
+    datasets; NBK forms carry up to seven series each) and used to be stored once
+    per indicator -- 2.9 GB of byte-identical copies by 2026-09-15. One copy per
+    day per file is enough: the manifest of every indicator still records what
+    was downloaded, and `raw_file` in it names the file that holds the bytes."""
+    folder = RAW_ROOT / agency
+    if not folder.exists():
+        return None
+    size = len(content)
+    for p in sorted(folder.glob(f"{agency}_*_{download_date.isoformat()}*.{ext.lstrip('.')}")):
+        if p.stat().st_size == size and p.read_bytes() == content:
+            return p
+    return None
 
-    - No file yet for this (agency, indicator, date): write it normally.
+
+def save_raw_bytes(agency: str, indicator_id: str, download_date: date, ext: str, content: bytes) -> Path:
+    """Write raw content to disk and return the path that holds it.
+
+    - No file yet for this (agency, indicator, date): write it normally -- unless
+      another indicator archived byte-identical content today, in which case that
+      file is returned and nothing new is written (see same_day_twin).
     - Existing file, byte-identical content: no-op, return the existing path
       (idempotent re-run).
     - Existing file, DIFFERENT content: archive the new content separately
@@ -65,6 +85,9 @@ def save_raw_bytes(agency: str, indicator_id: str, download_date: date, ext: str
         existing = path.read_bytes()
         if existing == content:
             return path  # idempotent re-run same day, nothing to do
+        twin = same_day_twin(agency, download_date, ext, content)
+        if twin is not None:
+            return twin
         versioned_path = _versioned_raw_path(agency, indicator_id, download_date, ext)
         versioned_path.write_bytes(content)
         print(
@@ -73,6 +96,10 @@ def save_raw_bytes(agency: str, indicator_id: str, download_date: date, ext: str
             f"{versioned_path.name} (original file untouched)."
         )
         return versioned_path
+    twin = same_day_twin(agency, download_date, ext, content)
+    if twin is not None:
+        print(f"raw_store: {indicator_id} shares today's raw file {twin.name} (identical bytes) -- not stored twice.")
+        return twin
     path.write_bytes(content)
     return path
 

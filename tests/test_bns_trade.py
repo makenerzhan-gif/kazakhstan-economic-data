@@ -68,7 +68,8 @@ def test_groups_are_sums_of_their_hs_lines_and_total_is_the_national_row():
 def test_a_month_whose_regions_do_not_sum_to_the_national_total_is_skipped():
     content = _workbook(national_override={3: 1106.0})        # January tonnes total wrong by 0.2 % (true 1108)
     out = bns_trade.parse_groups(content, GROUPS, DS)
-    assert "2025-01-01" not in out["tonnes"] and "2025-01-01" in out["usd"] and "2025-02-01" in out["tonnes"]
+    assert out["tonnes"]["2025-01-01"] == {"TOTAL": 1106.0}          # the published row stays, the group sums are withheld
+    assert set(out["usd"]["2025-01-01"]) == {"WHEAT", "FLAT_ROLLED", "CRUDE_OIL", "TOTAL"} and "WHEAT" in out["tonnes"]["2025-02-01"]
 
 
 def test_a_non_six_digit_code_is_a_structural_change():

@@ -622,7 +622,7 @@ datasets:
     frequency: annual
     unit: "% of previous year"
     category: production
-    note: "Codes follow ОКЭД (05, 06.1, 10.5, 24.4 …); IND is the industry total, MACH the machinery group 26–30. The scalar IND_PROD series reads the JSON cube of a related element and stops at 2023."
+    note: "Codes follow ОКЭД (05, 06.1, 10.5, 24.4 …); IND is the industry total, MACH the machinery group 26–30. The scalar IND_PROD, IND_PROD_MINING/_MANUFACTURING/_ELECTRICITY series are derived from items IND, B, C, D of this dataset (the JSON cube 5809 they used to read stopped at 2023)."
 
   - id: AGRICULTURE_VOLUME_INDEX_BY_ACTIVITY
     name_ru: "ИФО валовой продукции (услуг) сельского, лесного и рыбного хозяйства по видам деятельности"

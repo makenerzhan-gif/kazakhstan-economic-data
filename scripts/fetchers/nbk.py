@@ -33,10 +33,19 @@ RATES_CFM_URL = "https://nationalbank.kz/rss/get_rates.cfm"
 EXCHANGE_RATE_EARLIEST = date(2021, 5, 10)
 
 
+_DOWNLOAD_CACHE: dict[tuple, requests.Response] = {}
+
+
 def _download(url: str, params: dict | None = None) -> requests.Response:
-    resp = requests.get(url, headers=HEADERS, params=params, timeout=30)
-    resp.raise_for_status()
-    return resp
+    """GET once per process per (url, params): one NBK form carries up to seven
+    series, each with its own fetcher -- the form used to be downloaded (and
+    archived) once per series."""
+    key = (url, tuple(sorted((params or {}).items())))
+    if key not in _DOWNLOAD_CACHE:
+        resp = requests.get(url, headers=HEADERS, params=params, timeout=30)
+        resp.raise_for_status()
+        _DOWNLOAD_CACHE[key] = resp
+    return _DOWNLOAD_CACHE[key]
 
 
 def fetch_base_rate() -> tuple[list[dict], dict]:

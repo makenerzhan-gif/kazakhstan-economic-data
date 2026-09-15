@@ -9,7 +9,7 @@
   "unit": "thousand USD",
   "currency": "USD",
   "geography": "Kazakhstan (national)",
-  "methodology": "TOTAL is the published national row; the groups are sums of 6-digit HS lines over the regional blocks. Gas condensate and the 10-digit 'основные товары' subsets (petroleum products) cannot be separated at 6 digits — CRUDE_OIL is all of 2709, PETROLEUM_PRODUCTS all of 2710. Raw file: downloaded, saved as EXPORTS_BY_GROUP.",
+  "methodology": "TOTAL is the published national row; the groups are sums of 6-digit HS lines over the regional blocks. Gas condensate and the 10-digit 'основные товары' subsets (petroleum products) cannot be separated at 6 digits — CRUDE_OIL is all of 2709, PETROLEUM_PRODUCTS all of 2710. Raw file: bns_exports_by_group_2026-09-15.xlsx.",
   "publication_date": null,
   "last_update_date": "2026-09-15",
   "download_date": "2026-09-15",

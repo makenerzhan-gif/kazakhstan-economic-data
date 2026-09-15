@@ -49,9 +49,8 @@ indicators:
     observation_evidence: "единица: 'index, % to previous period'"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
-    lifecycle: superseded
-    superseded_by: INDUSTRIAL_PRODUCTION_INDEX
-    lifecycle_note: "annual cube discontinued after 2023; the monthly publication carries the same concept"
+    derived_from: {dataset: INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY, item: IND, region: national}
+    derived_note: "the same BNS index from the live table 5792 (1991-2025) instead of the cube 5809 that stopped at 2023; values equal on 2009-2023"
 
   - id: CPI
     name_ru: "Индекс потребительских цен (инфляция)"
@@ -89,9 +88,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "тот же json_cube формат СНС, что GFCF/GROSS_OUTPUT: поток за год"
-    lifecycle: superseded
-    superseded_by: INVESTMENT_FIXED_CAPITAL
-    lifecycle_note: "annual cube stops at 2022; the replacement is monthly year-to-date"
+    derived_from: {dataset: INVESTMENT_BY_REGION, item: TOTAL, region: national, scale: 1000000}
+    derived_note: "national row of table 5546 (million KZT) x 1e6; 2001-2025 instead of the cube's 2016-2022, equal to it within the table's rounding to the million"
 
   - id: EXPORTS
     name_ru: "Экспорт (итого)"
@@ -103,6 +101,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "таможенная статистика: помесячные декларации, оборот за месяц"
+    derived_from: {dataset: EXPORTS_VALUE_BY_COMMODITY_GROUP, item: TOTAL, region: national}
+    derived_note: "the national row of the same export workbook, read once for the commodity groups"
 
   - id: IMPORTS
     name_ru: "Импорт (итого)"
@@ -974,6 +974,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "паспорт: среднее за период (средняя арифметическ)"
+    derived_from: {dataset: POPULATION_AVG_BY_REGION, item: ALL, region: national}
+    derived_note: "national row of table 6576; 2009-2025 instead of Taldau's 2021-2025, equal to it except 2021 (19 000 687 vs 19 000 987.5 -- a later BNS revision)"
 
   - id: REAL_WAGE_INDEX
     name_ru: "Индекс реальной заработной платы"
@@ -998,6 +1000,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "паспорт: методология обследования, референтная неделя (МОТ/LFS)"
+    derived_from: {dataset: EMPLOYED_BY_REGION, item: TOTAL, region: national, scale: 1000}
+    derived_note: "national row of table 102798 (thousand persons) x 1000; 2001-2025 instead of Taldau's 2019-2025, equal on 2019-2025"
 
   - id: BIRTHS_TOTAL
     name_ru: "Число родившихся (живыми)"
@@ -1382,6 +1386,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "Методика формирования ТЭБ (stat.gov.kz/methodology/14): 'Производство (добыча) определяется как улавливание, извлечение или изготовление... продукта' -- поток; входит статьёй 1.1 баланса наравне с импортом/экспортом, отдельно от статьи 1.5 'Запасы на начало/конец года'"
+    derived_from: {dataset: PRODUCTION_NATURAL_BY_REGION, item: ELECTRICITY, region: national, scale: 1000000}
+    derived_note: "national row of table 5814 (million kWh) x 1e6; the Taldau series mixed units (2016-2020 a thousand times larger than 2021-2024) and differed from the table by up to 0.09 %"
 
   - id: NON_CASH_PAYMENTS_SHARE
     name_ru: "Доля безналичных платежей населения"
@@ -1434,9 +1440,8 @@ indicators:
     observation_evidence: "единица: '% of prior period'"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
-    lifecycle: superseded
-    superseded_by: MINING_OUTPUT
-    lifecycle_note: "same, but the replacement is output in KZT rather than an index"
+    derived_from: {dataset: INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY, item: B, region: national}
+    derived_note: "section B of table 5792; equal to the cube on 2009-2023"
 
   - id: IND_PROD_MANUFACTURING
     name_ru: "Индекс промышленного производства: обрабатывающая промышленность"
@@ -1450,9 +1455,8 @@ indicators:
     observation_evidence: "единица: '% of prior period'"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
-    lifecycle: superseded
-    superseded_by: MANUFACTURING_OUTPUT
-    lifecycle_note: "same, but the replacement is output in KZT rather than an index"
+    derived_from: {dataset: INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY, item: C, region: national}
+    derived_note: "section C of table 5792; equal to the cube on 2009-2023"
 
   - id: IND_PROD_ELECTRICITY
     name_ru: "Индекс промышленного производства: снабжение электроэнергией, газом, паром"
@@ -1466,8 +1470,8 @@ indicators:
     observation_evidence: "единица: '% of prior period'"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
-    lifecycle: stale_source
-    lifecycle_note: "no monthly counterpart was connected for electricity; the annual cube stopped at 2023"
+    derived_from: {dataset: INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY, item: D, region: national}
+    derived_note: "section D of table 5792; equal to the cube on 2009-2022, 2023 revised 105.4 -> 105.351"
 
   - id: IMF_GDP_PER_CAPITA_NATIONAL
     name_ru: "IMF WEO: ВВП на душу населения, национальная валюта"
@@ -3281,6 +3285,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "тот же документ, что EXPORTS: оборот за месяц"
+    derived_from: {dataset: EXPORTS_VOLUME_BY_COMMODITY_GROUP, item: CRUDE_OIL, region: national}
+    derived_note: "same rows, tonnes"
 
   - id: OIL_EXPORTS_VALUE
     name_ru: "Экспорт сырой нефти, стоимость"
@@ -3292,6 +3298,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "тот же документ, что EXPORTS: оборот за месяц"
+    derived_from: {dataset: EXPORTS_VALUE_BY_COMMODITY_GROUP, item: CRUDE_OIL, region: national}
+    derived_note: "HS 2709 summed over the regional blocks under the per-month national-total proof, as before -- now from the shared parse"
 
   - id: OIL_PRODUCTION
     name_ru: "Добыча нефти, включая газовый конденсат"

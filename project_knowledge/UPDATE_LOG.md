@@ -4143,3 +4143,65 @@ model (11.27 t for 2023) was not the customs figure (6.77 t) and is now BNS's. J
 **Not done.** Imports by group (the model does not use them). The «Экспорт» rows for
 2026–2030 still carry the sheet's own price/volume mechanics — that is the author's
 forecast, not a pipeline matter. Nothing committed.
+
+## 2026-09-15 — de-duplication: eleven scalar series derived from the item-level layer, one download and one raw copy per source file
+
+**Why.** A scan of all 431 scalar series (pairwise, by period, after normalising dates)
+found no two that are literal copies of each other. It did find eleven that are exact —
+or unit-scaled — copies of national items the item-level layer already produces from
+the same BNS tables, fetched a second time by their own scalar fetcher, in several cases
+from a source that had since gone stale. And the same source files were being
+downloaded and archived several times a day: the 56–65 MB export workbook under three
+indicator ids (EXPORTS, OIL_EXPORTS_VALUE, OIL_EXPORTS_VOLUME), the 22 MB industrial
+cube under four, NBK forms once per series (formId 132 twice, 51 five times …) —
+2.9 GB of byte-identical raw copies on disk by this date (git stores identical blobs
+once, so the repository itself grew less than the working tree, but every clone and
+every run paid for the copies).
+
+**What changed.**
+- `config/indicators.yaml`: `derived_from: {dataset, item, region, scale}` on IND_PROD,
+  IND_PROD_MINING, IND_PROD_MANUFACTURING, IND_PROD_ELECTRICITY (← INDUSTRIAL_PRODUCTION_
+  INDEX_BY_ACTIVITY IND/B/C/D), INVESTMENT (← INVESTMENT_BY_REGION TOTAL × 1e6), EXPORTS,
+  OIL_EXPORTS_VALUE, OIL_EXPORTS_VOLUME (← EXPORTS_*_BY_COMMODITY_GROUP TOTAL/CRUDE_OIL),
+  POPULATION_BNS (← POPULATION_AVG_BY_REGION ALL), EMPLOYED_TOTAL (← EMPLOYED_BY_REGION
+  TOTAL × 1000), ELECTRICITY_PRODUCTION (← PRODUCTION_NATURAL_BY_REGION ELECTRICITY × 1e6).
+  `scripts/update_derived.py` writes them after `update_dims.py` with the usual
+  validation, revision log and metadata (the metadata names the dataset and item).
+  Their fetchers (483 lines of `fetchers/bns.py`, including the trade-by-HS parser now
+  superseded by `bns_trade.py`) and registrations are gone; the endpoints in
+  `sources.yaml` are marked `derived` with the research trail kept.
+- Verified before switching: on every common date the derived series equal the old ones
+  to the last digit, with three explainable exceptions — IND_PROD_ELECTRICITY 2023
+  (105.4 → 105.351, a BNS revision in the live table), POPULATION_BNS 2021 (19 000 987.5
+  → 19 000 687, likewise), INVESTMENT (the table publishes million KZT, the cube full
+  tenge: differences under 0.5 million on 8–15 trillion). ELECTRICITY_PRODUCTION was
+  not a duplicate but a broken series: the Taldau figures for 2016–2020 were a thousand
+  times the 2021–2024 ones (94 642 384 000 000 vs 115 078 200 000 "kWh"); the item-level
+  table is consistent (million kWh) and differs from the sane years by 0.0002–0.09 %.
+  Histories grew: IND_PROD 1990–2025 instead of 2009–2023, INVESTMENT 2003–2025 instead
+  of 2016–2022, EMPLOYED_TOTAL 2001–2025, POPULATION_BNS 2009–2025, EXPORTS and the oil
+  series 2015–2026 (BNS added 2015–2018 sheets to the workbook this month).
+- `lib/raw_store.save_raw_bytes` returns the path that holds the bytes and, when another
+  indicator archived byte-identical content the same day, returns that file instead of
+  writing a copy (`same_day_twin`); fetchers record it as `raw_file` in their manifests.
+  Every agency's `_download` (bns, nbk, minfin, imf; ardfm already had one) caches per
+  process, so a file read by several indicators is requested once per run.
+  The export workbook is now archived once a day under its old name `bns_exports_<date>`.
+- Tests 294 → 299 (`tests/test_derived.py`: derivation, registry consistency — every
+  scalar id is either fetched or derived, never both, never neither — raw dedup,
+  download cache). Model sync unchanged (the model's POPULATION_BNS, EMPLOYED_TOTAL and
+  EXPORTS values are the same numbers).
+
+**Looked at and deliberately kept.** GDP_INCOME_METHOD equals the Q4 (year-to-date)
+value of GDP_NOMINAL every year — two BNS measurements of one total, kept because one is
+annual from 2000 and the other quarterly. The IMF WEO series that shadow national ones
+(population, GDP, unemployment, inflation, debt) are different vintages with forecasts,
+not copies. ANNUAL_INFLATION (NBK) and CPI_YOY (BNS) differ by up to 0.7 pp on the same
+month — worth a look at the dating convention, not a duplicate. The lifecycle-tagged
+frozen series (NBK banking ratios to 2024-04, PASSENGER_TURNOVER, per-10k health ratios)
+stay: their successors do not cover the same periods or definitions.
+
+**Not done.** The 2.9 GB of byte-identical raw copies already on disk were not deleted —
+the repository's rule is that raw files are never removed, and git keeps them in history
+regardless; they simply stop multiplying from here. Removing them from the working tree
+is a one-line decision for the author.

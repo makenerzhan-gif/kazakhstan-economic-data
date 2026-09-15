@@ -248,7 +248,7 @@ agencies:
           guesses against Api/GetIndexData and NewIndex/GetDynamics returned empty/500 -- resolved
           above by capturing the real browser request instead of guessing further.
       IND_PROD:
-        status: confirmed
+        status: derived   # 2026-09-15: was confirmed; the series is now written from INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY[IND] (scripts/update_derived.py) -- the research trail below stays
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
         element_id: 5809
         download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
@@ -265,7 +265,7 @@ agencies:
           ['РЕСПУБЛИКА КАЗАХСТАН', 'Промышленность', 'отчетный период к предыдущему периоду'].
           Now implemented in scripts/fetchers/bns.py:fetch_ind_prod and connected.
       IND_PROD_MINING:
-        status: confirmed
+        status: derived   # 2026-09-15: was confirmed; the series is now written from INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY[B] (scripts/update_derived.py) -- the research trail below stays
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
         element_id: 5809
         download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
@@ -282,7 +282,7 @@ agencies:
           и разработка карьеров', 'отчетный период к предыдущему периоду']. Same 15 annual
           periods (2009-2023) as IND_PROD itself. fetch_ind_prod_mining.
       IND_PROD_MANUFACTURING:
-        status: confirmed
+        status: derived   # 2026-09-15: was confirmed; the series is now written from INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY[C] (scripts/update_derived.py) -- the research trail below stays
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
         element_id: 5809
         download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
@@ -292,7 +292,7 @@ agencies:
           ['РЕСПУБЛИКА КАЗАХСТАН', 'Обрабатывающая промышленность', 'отчетный период к
           предыдущему периоду']. fetch_ind_prod_manufacturing.
       IND_PROD_ELECTRICITY:
-        status: confirmed
+        status: derived   # 2026-09-15: was confirmed; the series is now written from INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY[D] (scripts/update_derived.py) -- the research trail below stays
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
         element_id: 5809
         download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
@@ -328,7 +328,7 @@ agencies:
           longer history -- that table was not located this session. Flagging so a future pass
           knows to look for it rather than assuming 2.5 years is all that exists.
       INVESTMENT:
-        status: confirmed
+        status: derived   # 2026-09-15: was confirmed; the series is now written from INVESTMENT_BY_REGION[TOTAL] (scripts/update_derived.py) -- the research trail below stays
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-invest/"
         element_id: 5546
         download_url: "https://stat.gov.kz/api/iblock/element/5546/json/file/ru/"
@@ -346,7 +346,7 @@ agencies:
           history was not located here and may live in a separate file. Now implemented in
           scripts/fetchers/bns.py:fetch_investment and connected.
       EXPORTS:
-        status: confirmed
+        status: derived   # 2026-09-15: was confirmed; the series is now written from EXPORTS_VALUE_BY_COMMODITY_GROUP[TOTAL] (scripts/update_derived.py) -- the research trail below stays
         page_url: "https://stat.gov.kz/ru/open-data/international-trade/474298/"
         element_id: 446905
         download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
@@ -365,7 +365,7 @@ agencies:
           size and monthly full-republish pattern -- see UPDATE_LOG for the reasoning. Now
           implemented in scripts/fetchers/bns.py:fetch_exports and connected.
       OIL_EXPORTS_VOLUME:
-        status: confirmed
+        status: derived   # 2026-09-15: was confirmed; the series is now written from EXPORTS_VOLUME_BY_COMMODITY_GROUP[CRUDE_OIL] (scripts/update_derived.py) -- the research trail below stays
         download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
         format: xlsx
         notes: >
@@ -395,7 +395,7 @@ agencies:
           prices wobble much more, which is the shipment-versus-payment lag, not a parsing
           error. 89 monthly points, 2019-01 to 2026-06. fetch_oil_exports_volume.
       OIL_EXPORTS_VALUE:
-        status: confirmed
+        status: derived   # 2026-09-15: was confirmed; the series is now written from EXPORTS_VALUE_BY_COMMODITY_GROUP[CRUDE_OIL] (scripts/update_derived.py) -- the research trail below stays
         download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
         format: xlsx
         notes: >
@@ -1312,7 +1312,7 @@ agencies:
           dicIds=68,60,71,2987, terms=741880,741908,741919,18753820. Verified live: ~4.9
           trillion KZT (2020) to ~10.8 trillion KZT (2025). fetch_construction.
       POPULATION_BNS:
-        status: confirmed
+        status: derived   # 2026-09-15: was confirmed; the series is now written from POPULATION_AVG_BY_REGION[ALL] (scripts/update_derived.py) -- the research trail below stays
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         index_id: 703834
         format: json
@@ -1335,7 +1335,7 @@ agencies:
           terms=741880,741885,3629946,741935,2695730). Verified live: 98-108% range,
           plausible. fetch_real_wage_index.
       EMPLOYED_TOTAL:
-        status: confirmed
+        status: derived   # 2026-09-15: was confirmed; the series is now written from EMPLOYED_BY_REGION[TOTAL] (scripts/update_derived.py) -- the research trail below stays
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         index_id: 702840
         format: json
@@ -2099,7 +2099,7 @@ agencies:
           large hydroelectric power stations from the renewable total, per the source's own
           label. fetch_renewable_energy_share.
       ELECTRICITY_PRODUCTION:
-        status: confirmed
+        status: derived   # 2026-09-15: was confirmed; the series is now written from PRODUCTION_NATURAL_BY_REGION[ELECTRICITY] (scripts/update_derived.py) -- the research trail below stays
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         index_id: 19197226
         format: json

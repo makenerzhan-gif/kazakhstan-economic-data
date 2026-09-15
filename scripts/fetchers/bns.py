@@ -27,17 +27,25 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; KZEconDataPipeline/1.0; +http
 SOURCE = "bns"
 
 
+_DOWNLOAD_CACHE: dict[str, bytes] = {}
+
+
 def _download(url: str) -> bytes:
-    resp = requests.get(url, headers=HEADERS, timeout=120)
-    resp.raise_for_status()
-    return resp.content
+    """GET once per process: several indicators read one file (the export workbook,
+    the industrial cube), and the World Bank / EIA fetchers reuse this too."""
+    if url not in _DOWNLOAD_CACHE:
+        resp = requests.get(url, headers=HEADERS, timeout=120)
+        resp.raise_for_status()
+        _DOWNLOAD_CACHE[url] = resp.content
+    return _DOWNLOAD_CACHE[url]
 
 
 def _save_raw(indicator_id: str, content: bytes, ext: str, extra_manifest: dict) -> None:
     today = date.today()
-    raw_store.save_raw_bytes(SOURCE, indicator_id, today, ext, content)
+    path = raw_store.save_raw_bytes(SOURCE, indicator_id, today, ext, content)
     raw_store.write_download_manifest(SOURCE, indicator_id, today, {
         "downloaded_at": datetime.now().isoformat(),
+        "raw_file": path.name,
         **extra_manifest,
     })
 
@@ -206,132 +214,6 @@ def fetch_gdp_nominal() -> tuple[list[dict], dict]:
     return records, manifest
 
 
-def fetch_ind_prod() -> tuple[list[dict], dict]:
-    """Industrial production index, national, whole-industry aggregate, annual.
-
-    Verified live 2026-08-30: SAME list-of-cube-slices JSON format as GDP_NOMINAL/
-    UNEMPLOYMENT (terms/termNames/periods per entry) -- not a merged-cell pivot
-    table. 3 dimensions: [region, industry/activity, comparison_type]. The
-    comparison_type dimension has exactly one value in this file
-    ('отчетный период к предыдущему периоду'), and all periods are ANNUAL only
-    (2009-2023) -- there is no monthly granularity in this particular file,
-    correcting our earlier unverified guess that it might contain monthly points.
-    Filtered to region='РЕСПУБЛИКА КАЗАХСТАН', industry='Промышленность' (the
-    whole-industry aggregate, as opposed to sub-sectors like manufacturing).
-    """
-    element_id = 5809
-    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/json/file/ru/"
-    content = _download(url)
-    _save_raw("IND_PROD", content, "json", {"source_url": url, "element_id": element_id})
-
-    import json
-    data = json.loads(content)
-
-    TARGET = ["РЕСПУБЛИКА КАЗАХСТАН", "Промышленность", "отчетный период к предыдущему периоду"]
-    match = next((entry for entry in data if entry.get("termNames") == TARGET), None)
-    if match is None:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                "STRUCTURAL CHANGE DETECTED in bns/IND_PROD",
-                "WHAT CHANGED: no cube slice matched the expected national/whole-industry combo",
-                f"EXPECTED termNames: {TARGET}",
-                "ACTUAL: no matching entry in the downloaded file",
-                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
-            ])
-        )
-
-    records = []
-    for p in match["periods"]:
-        try:
-            records.append({"date": _dd_mm_yyyy_to_iso(p["date"]), "value": float(p["value"])})
-        except (ValueError, KeyError):
-            continue
-    records.sort(key=lambda r: r["date"])
-    manifest = {
-        "frequency": "annual",
-        "source_url": url,
-        "dataset_id": str(element_id),
-        "note": "file contains only annual points, not monthly, despite the indicator being conceptually a monthly release",
-    }
-    return records, manifest
-
-
-def fetch_investment() -> tuple[list[dict], dict]:
-    """Investment in fixed capital, national, all enterprise sizes/localities, total, annual.
-
-    Verified live 2026-08-30: SAME list-of-cube-slices JSON format again. 4
-    dimensions: [region, locality, enterprise_size, cost_type]. Filtered to
-    region='РЕСПУБЛИКА КАЗАХСТАН', locality='Всего', enterprise_size='Всего',
-    cost_type='Всего' (the fully-aggregated national total).
-
-    IMPORTANT caveat found this session: there are TWO cube entries with this
-    exact same termNames combo -- one covering 2016-2018, another covering
-    2019-2022, with no overlapping years. This looks like a classification/
-    methodology break (BNS re-published under what appears to be a revised
-    structure starting 2019) rather than a data error. We concatenate both
-    since their periods don't overlap, but flag it in the manifest note rather
-    than silently presenting it as one continuous, unbroken methodology. Also
-    note: this file's actual coverage (2016-2022) is narrower than the
-    "2003-2025" range advertised on the human-facing page -- that longer
-    history may live in a different, not-yet-identified file.
-    """
-    element_id = 5546
-    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/json/file/ru/"
-    content = _download(url)
-    _save_raw("INVESTMENT", content, "json", {"source_url": url, "element_id": element_id})
-
-    import json
-    data = json.loads(content)
-
-    TARGET = ["РЕСПУБЛИКА КАЗАХСТАН", "Всего", "Всего", "Всего"]
-    matches = [entry for entry in data if entry.get("termNames") == TARGET]
-    if not matches:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                "STRUCTURAL CHANGE DETECTED in bns/INVESTMENT",
-                "WHAT CHANGED: no cube slice matched the expected fully-aggregated national combo",
-                f"EXPECTED termNames: {TARGET}",
-                "ACTUAL: no matching entry in the downloaded file",
-                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
-            ])
-        )
-
-    records = []
-    for match in matches:
-        for p in match["periods"]:
-            try:
-                records.append({"date": _dd_mm_yyyy_to_iso(p["date"]), "value": float(p["value"])})
-            except (ValueError, KeyError):
-                continue
-    records.sort(key=lambda r: r["date"])
-
-    dates = [r["date"] for r in records]
-    if len(dates) != len(set(dates)):
-        raise validation.StructuralChangeError(
-            "\n".join([
-                "STRUCTURAL CHANGE DETECTED in bns/INVESTMENT",
-                "WHAT CHANGED: multiple cube slices for the national total now overlap on the same date(s)",
-                "EXPECTED: the known methodology-break slices (2016-2018 / 2019-2022) to cover disjoint years",
-                f"ACTUAL: duplicate dates found across {len(matches)} matching slices",
-                "ACTION REQUIRED: inspect the raw file and decide how to reconcile overlapping values "
-                "before trusting this series -- do not silently pick one.",
-            ])
-        )
-
-    manifest = {
-        "frequency": "annual",
-        "source_url": url,
-        "dataset_id": str(element_id),
-        "note": (
-            f"{len(matches)} cube slices concatenated for the national total (methodology break "
-            "observed between them, exact years found: " + ", ".join(sorted({r['date'][:4] for r in records})) +
-            "). Coverage is narrower than the 2003-2025 advertised on the source page -- "
-            "the older history was not located in this file."
-        ),
-    }
-    return records, manifest
-
-
 RU_MONTHS = {
     "январь": 1, "февраль": 2, "март": 3, "апрель": 4, "май": 5, "июнь": 6,
     "июль": 7, "август": 8, "сентябрь": 9, "октябрь": 10, "ноябрь": 11, "декабрь": 12,
@@ -423,22 +305,9 @@ def _parse_trade_workbook(content: bytes, indicator_id: str, url: str) -> list[d
     return records
 
 
-def fetch_exports() -> tuple[list[dict], dict]:
-    """Exports, national total, monthly, thousand USD. XLSX-only (no CSV/JSON
-    variant found for trade indicators). See _parse_trade_workbook docstring
-    for the structure this relies on.
-    """
-    element_id = 446905
-    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/file/ru/"
-    content = _download(url)
-    _save_raw("EXPORTS", content, "xlsx", {"source_url": url, "element_id": element_id})
-    records = _parse_trade_workbook(content, "EXPORTS", url)
-    manifest = {"frequency": "monthly", "source_url": url, "dataset_id": str(element_id)}
-    return records, manifest
-
-
 def fetch_imports() -> tuple[list[dict], dict]:
-    """Imports, national total, monthly, thousand USD. Same format as fetch_exports."""
+    """Imports, national total, monthly, thousand USD -- the import workbook (element
+    446906), same shape as the export one that scripts/fetchers/bns_trade.py reads."""
     element_id = 446906
     url = f"https://stat.gov.kz/api/iblock/element/{element_id}/file/ru/"
     content = _download(url)
@@ -810,26 +679,6 @@ def fetch_construction() -> tuple[list[dict], dict]:
     )
 
 
-def fetch_population_bns() -> tuple[list[dict], dict]:
-    """Average annual population, persons. Taldau indexId 703834 (code 611104,
-    "Среднегодовая численность населения"), found under Taldau's demographic
-    statistics via keyword search ("численность населения") -- picked over
-    the "at start of period" variant (703831) as the more standard annual
-    figure. Classified across 4 dictionaries; params recovered via the live
-    ExtJS component tree, same technique as RETAIL_TRADE/CONSTRUCTION.
-    Verified live 2026-08-30 and cross-checked: 2025 value (20,391,610.5)
-    matches the already-confirmed IMF_POPULATION series (2025: 20,380,366) to
-    within 0.06% -- strong independent confirmation, two different agencies'
-    figures agreeing almost exactly.
-    """
-    return _fetch_taldau_annual_index(
-        "703834", "POPULATION_BNS",
-        note="Average annual population, persons. Taldau indexId 703834.",
-        measure_id="23", dic_ids="67,749,576,1433",
-        terms="741880,741917,741935,3699122",
-    )
-
-
 def fetch_real_wage_index() -> tuple[list[dict], dict]:
     """Real wage index, % of prior period (100 = no change). Taldau indexId
     702976 (code 25210103, "индекс реальной заработной платы") -- companion to
@@ -845,24 +694,6 @@ def fetch_real_wage_index() -> tuple[list[dict], dict]:
         note="Real wage index, % of prior period. Taldau indexId 702976.",
         measure_id="7", dic_ids="68,859,2813,576,848",
         terms="741880,741885,3629946,741935,2695730",
-    )
-
-
-def fetch_employed_total() -> tuple[list[dict], dict]:
-    """Total employed population, persons. Taldau indexId 702840 (code 251201,
-    "Занятое население") -- companion to UNEMPLOYMENT (a rate, not a count).
-    Found via keyword search ("занятое население"), picked over the many
-    narrower breakdowns (by sector, by additional-work status, etc.) returned
-    by the same search as the clean headline total. Classified across 6
-    dictionaries; params recovered via the live ExtJS component tree.
-    Verified live 2026-08-30: ~9.3 million (2025), a plausible employed-
-    population figure for Kazakhstan given its ~20.4 million total population.
-    """
-    return _fetch_taldau_annual_index(
-        "702840", "EMPLOYED_TOTAL",
-        note="Total employed population, persons. Taldau indexId 702840.",
-        measure_id="23", dic_ids="67,749,576,1773,1793,3028",
-        terms="741880,741917,741935,3805694,4197331,741885",
     )
 
 
@@ -1231,99 +1062,6 @@ def fetch_energy_consumption() -> tuple[list[dict], dict]:
         note="Total primary energy consumption, thousand toe. Taldau indexId 77394629.",
         measure_id="2908", dic_ids="68,4834",
         terms="741880,77356561",
-    )
-
-
-def fetch_electricity_production() -> tuple[list[dict], dict]:
-    """Electricity production, kWh, annual. Taldau indexId 19197226 (code
-    304132, "Производство электроэнергии в натуральном выражении"), found
-    via keyword search ("производство электроэнергии") after the energy
-    category page itself didn't list it among its two RK-total indicators.
-    Standard single-dimension mechanism worked directly. Verified live
-    2026-08-30: ~113.6 billion kWh (2022) to ~118.7 billion kWh (2024), a
-    plausible scale matching Kazakhstan's known annual generation.
-    """
-    return _fetch_taldau_annual_index(
-        "19197226", "ELECTRICITY_PRODUCTION",
-        note="Electricity production, kWh. Taldau indexId 19197226.",
-    )
-
-
-def _fetch_ind_prod_sub_sector(industry_name: str, indicator_id: str) -> tuple[list[dict], dict]:
-    """Shared fetcher for industrial-production sub-sector indices -- the SAME
-    stat.gov.kz open-data file (element_id=5809) used by fetch_ind_prod for the
-    whole-industry aggregate ('Промышленность') turns out to also carry sub-
-    sector cube slices for the same region/comparison_type, discovered by
-    enumerating every distinct `industry` (termNames[1]) value in the file
-    rather than searching for a separate indicator. This resolves the mining/
-    manufacturing/electricity sub-sector gap noted in earlier sessions as "not
-    found" -- it was never a separate indicator to find, just an unexplored
-    dimension of one already-connected file.
-    """
-    element_id = 5809
-    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/json/file/ru/"
-    content = _download(url)
-    _save_raw(indicator_id, content, "json", {"source_url": url, "element_id": element_id})
-
-    import json
-    data = json.loads(content)
-
-    TARGET = ["РЕСПУБЛИКА КАЗАХСТАН", industry_name, "отчетный период к предыдущему периоду"]
-    match = next((entry for entry in data if entry.get("termNames") == TARGET), None)
-    if match is None:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
-                "WHAT CHANGED: no cube slice matched the expected national/sub-sector combo",
-                f"EXPECTED termNames: {TARGET}",
-                "ACTUAL: no matching entry in the downloaded file",
-                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
-            ])
-        )
-
-    records = []
-    for p in match["periods"]:
-        try:
-            records.append({"date": _dd_mm_yyyy_to_iso(p["date"]), "value": float(p["value"])})
-        except (ValueError, KeyError):
-            continue
-    records.sort(key=lambda r: r["date"])
-    manifest = {
-        "frequency": "annual",
-        "source_url": url,
-        "dataset_id": str(element_id),
-        "note": f"Sub-sector ({industry_name!r}) slice of the same file used by IND_PROD. "
-                "Physical volume index, % of prior period.",
-    }
-    return records, manifest
-
-
-def fetch_ind_prod_mining() -> tuple[list[dict], dict]:
-    """Industrial production index, mining and quarrying sub-sector, % of
-    prior period, annual. Same source file as IND_PROD (element_id=5809),
-    industry='Горнодобывающая промышленность и разработка карьеров'.
-    Verified live 2026-08-30: 15 periods (2009-2023), values ~99-106% range,
-    consistent with the whole-industry aggregate's own range."""
-    return _fetch_ind_prod_sub_sector("Горнодобывающая промышленность и разработка карьеров", "IND_PROD_MINING")
-
-
-def fetch_ind_prod_manufacturing() -> tuple[list[dict], dict]:
-    """Industrial production index, manufacturing sub-sector, % of prior
-    period, annual. Same source file as IND_PROD (element_id=5809),
-    industry='Обрабатывающая промышленность'. Verified live 2026-08-30: 15
-    periods (2009-2023), values ~100-105% range."""
-    return _fetch_ind_prod_sub_sector("Обрабатывающая промышленность", "IND_PROD_MANUFACTURING")
-
-
-def fetch_ind_prod_electricity() -> tuple[list[dict], dict]:
-    """Industrial production index, electricity/gas/steam/air-conditioning
-    supply sub-sector, % of prior period, annual. Same source file as
-    IND_PROD (element_id=5809), industry='Снабжение электроэнергией, газом,
-    паром, горячей водой и кондиционированным воздухом'. Verified live
-    2026-08-30: 15 periods (2009-2023), values ~100-106% range."""
-    return _fetch_ind_prod_sub_sector(
-        "Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",
-        "IND_PROD_ELECTRICITY",
     )
 
 
@@ -2076,218 +1814,6 @@ def fetch_graduates_hired() -> tuple[list[dict], dict]:
         terms="741880,741885,3629946,741935",
         dic_ids="68,859,2813,576",
     )
-
-
-# ---------------------------------------------------------------------------
-# OIL_EXPORTS_VOLUME / OIL_EXPORTS_VALUE: crude oil exports, from the SAME
-# workbook that already feeds EXPORTS (element 446905).
-#
-# The audit recorded oil exports as missing, and an earlier pass concluded BNS
-# did not publish them -- that conclusion was wrong. The file already in use
-# carries a full HS-code breakdown; only its national TOTAL row was being read.
-#
-# Structure, established by reading the sheet rather than assuming:
-#   row 4 is the national total across all products ("Республики Казахстан")
-#   after it the sheet is organised as REGIONAL BLOCKS, each headed by a region
-#   name in column A and followed by that region's product rows
-#   there is NO national product block -- crude oil (HS 270900) appears only
-#   inside the 10 regional blocks that export it
-# Each month spans three columns: [tonnes, additional unit, thousand USD].
-#
-# Summing regions is normally exactly the kind of self-made aggregate this
-# project refuses to publish. It is done here only because the partition was
-# PROVEN complete and non-overlapping first, and that proof is re-run on every
-# fetch as a guard:
-#   - every code in column A is 6 digits (12,230 rows checked) -- the breakdown
-#     is flat, so there are no chapter subtotals to double-count
-#   - summing ALL product rows across ALL regional blocks reproduces the
-#     published national total to the last decimal: 14,202,968.530 tonnes and
-#     6,471,046.013 thousand USD for January 2026, a difference of 0.000000%
-# If a future edition breaks that identity, the per-month check below raises
-# rather than letting a silently-wrong sum through.
-#
-# Sanity check on the result: 6.63 million tonnes and 3.22 billion USD for
-# January 2026 implies about 486 USD per tonne, roughly 66 USD per barrel at
-# 7.33 barrels to the tonne -- below the IMF APSP in OIL_PRICE, which is the
-# expected direction, since KEBCO trades at a discount to the Brent-weighted
-# world average.
-# ---------------------------------------------------------------------------
-CRUDE_OIL_HS_CODE = "270900"
-TRADE_TONNES_OFFSET = 0
-TRADE_USD_OFFSET = 2
-_TRADE_HS_CACHE: dict[tuple[str, str], dict[str, dict[str, float]]] = {}
-
-
-def _parse_trade_workbook_by_hs(content: bytes, hs_code: str, indicator_id: str,
-                                url: str) -> dict[str, dict[str, float]]:
-    """Sum one HS code across every regional block, per month.
-
-    Returns {iso_date: {"tonnes": x, "usd": y}}. The national total for each
-    month is checked against the sum of all product rows before anything is
-    returned -- see the module comment above for why that check is the thing
-    that makes summing legitimate here.
-    """
-    cache_key = (url, hs_code)
-    if cache_key in _TRADE_HS_CACHE:
-        return _TRADE_HS_CACHE[cache_key]
-
-    wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
-    out: dict[str, dict[str, float]] = {}
-    skipped: list[tuple] = []
-    checked = 0
-
-    for sheet_name in wb.sheetnames:
-        if sheet_name in ("Метаданные", "Показатель"):
-            continue
-        ws = wb[sheet_name]
-
-        header_row = None
-        national_row = None
-        hs_sums: dict[int, float] = {}
-        all_sums: dict[int, float] = {}
-
-        for i, row in enumerate(ws.iter_rows(values_only=True)):
-            if i == 1:
-                header_row = row
-                continue
-            if i == 3:
-                national_row = row
-                label = (row[0] or "").strip() if row and row[0] else ""
-                if label != TRADE_TOTAL_ROW_LABEL:
-                    raise validation.StructuralChangeError(
-                        "\n".join([
-                            f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
-                            f"WHAT CHANGED: row 4 of sheet {sheet_name!r} is no longer the national total",
-                            f"EXPECTED column-A label: {TRADE_TOTAL_ROW_LABEL!r}",
-                            f"ACTUAL: {label!r}",
-                            f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
-                        ])
-                    )
-                continue
-            if i < 4 or not row:
-                continue
-
-            code = str(row[0]).strip() if row[0] is not None else ""
-            if not code.isdigit():
-                continue
-            if len(code) != 6:
-                raise validation.StructuralChangeError(
-                    "\n".join([
-                        f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
-                        f"WHAT CHANGED: sheet {sheet_name!r} row {i + 1} has a {len(code)}-digit HS code "
-                        f"({code!r}), not the flat 6-digit classification this parser verified",
-                        "EXPECTED: a flat 6-digit breakdown with no chapter subtotals -- mixed code "
-                        "lengths would mean summing double-counts",
-                        f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
-                    ])
-                )
-            is_target = code == hs_code
-            for col, value in enumerate(row):
-                if not isinstance(value, (int, float)):
-                    continue
-                all_sums[col] = all_sums.get(col, 0.0) + value
-                if is_target:
-                    hs_sums[col] = hs_sums.get(col, 0.0) + value
-
-        if header_row is None or national_row is None:
-            continue
-
-        for col_idx, cell in enumerate(header_row):
-            if not cell:
-                continue
-            m = MONTH_HEADER_RE.match(str(cell).strip())
-            if not m:
-                continue
-            month_num = RU_MONTHS.get(m.group(1).lower())
-            if month_num is None:
-                continue
-
-            for offset, unit in ((TRADE_TONNES_OFFSET, "tonnes"), (TRADE_USD_OFFSET, "usd")):
-                col = col_idx + offset
-                national = national_row[col] if col < len(national_row) else None
-                if not isinstance(national, (int, float)) or not national:
-                    continue
-                checked += 1
-                summed = all_sums.get(col, 0.0)
-                if abs(summed - national) > abs(national) * 1e-6:
-                    # Partition holds for 178 of 180 month/unit checks across all eight sheets
-                    # (2019-2026, verified 2026-09-01). Both failures are in 2022, worst
-                    # +1.513% in September, around the mid-2022 creation of the Abai, Jetisu
-                    # and Ulytau regions. Refusing the whole indicator over a localized source
-                    # inconsistency would be disproportionate, so the affected month is SKIPPED
-                    # and reported rather than published from an unverifiable sum. A broad
-                    # failure still raises below: that would mean the structure changed.
-                    skipped.append((sheet_name, m.group(0), unit,
-                                    round((summed / national - 1) * 100, 4)))
-                    continue
-                iso = f"{int(m.group(2)):04d}-{month_num:02d}-01"
-                out.setdefault(iso, {})[unit] = hs_sums.get(col, 0.0)
-
-    if checked and len(skipped) > checked * 0.1:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
-                f"WHAT CHANGED: regional product rows failed to sum to the published national "
-                f"total in {len(skipped)} of {checked} month/unit checks",
-                "EXPECTED: at most a couple of isolated months (2 of 180 as of 2026-09-01)",
-                f"ACTUAL: {skipped[:8]}",
-                "EXPECTED CONSEQUENCE: this indicator is a SUM over regions, legitimate only "
-                "while that partition holds; a broad failure means it no longer does",
-                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
-            ])
-        )
-    if skipped:
-        print(f"bns/{indicator_id}: skipped {len(skipped)} unverifiable month(s) where the "
-              f"regional rows do not sum to the national total: {skipped}", file=sys.stderr)
-
-    if not out:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}",
-                f"WHAT CHANGED: HS code {hs_code} produced no monthly values in any sheet",
-                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
-            ])
-        )
-
-    _TRADE_HS_CACHE[cache_key] = out
-    return out
-
-
-def _fetch_crude_oil_export(unit: str, indicator_id: str, note: str) -> tuple[list[dict], dict]:
-    element_id = 446905
-    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/file/ru/"
-    content = _download(url)
-    _save_raw(indicator_id, content, "xlsx", {"source_url": url, "element_id": element_id,
-                                              "hs_code": CRUDE_OIL_HS_CODE})
-    by_month = _parse_trade_workbook_by_hs(content, CRUDE_OIL_HS_CODE, indicator_id, url)
-    records = [{"date": d, "value": v[unit]} for d, v in sorted(by_month.items()) if unit in v]
-    manifest = {
-        "frequency": "monthly",
-        "source_url": url,
-        "dataset_id": f"{element_id},hs={CRUDE_OIL_HS_CODE},unit={unit}",
-        "note": note,
-    }
-    return records, manifest
-
-
-def fetch_oil_exports_volume() -> tuple[list[dict], dict]:
-    """Crude oil exports, tonnes, monthly."""
-    return _fetch_crude_oil_export(
-        "tonnes", "OIL_EXPORTS_VOLUME",
-        "Tonnes. Crude oil and crude products from bituminous minerals, HS 270900, summed over "
-        "the regional blocks of the BNS export workbook. The source publishes no national "
-        "product row, so this is a sum -- permitted here only because the regional product rows "
-        "were verified to reproduce the published national total exactly, a check the fetcher "
-        "re-runs on every fetch and raises on.")
-
-
-def fetch_oil_exports_value() -> tuple[list[dict], dict]:
-    """Crude oil exports, thousand USD, monthly."""
-    return _fetch_crude_oil_export(
-        "usd", "OIL_EXPORTS_VALUE",
-        "Thousand USD. Same HS 270900 rows and the same verified-partition method as "
-        "OIL_EXPORTS_VOLUME. Divide by OIL_EXPORTS_VOLUME for an implied realised export price "
-        "per tonne, which runs below the world OIL_PRICE as expected for KEBCO.")
 
 
 # ---------------------------------------------------------------------------

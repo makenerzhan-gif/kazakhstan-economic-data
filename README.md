@@ -108,6 +108,22 @@ months after the release's last historical month) carry `transformation`
 scalar series, `OIL_PRICE_BRENT` (monthly Brent from the Pink Sheet, `scripts/update_wb.py`),
 beside the IMF's `OIL_PRICE` (APSP average).
 
+### Derived scalar indicators
+
+Eleven scalar series are national totals that the item-level layer already
+carries, so they are written from it rather than fetched a second time
+(`derived_from` in `config/indicators.yaml`, `scripts/update_derived.py`, run
+after `update_dims.py`): `EXPORTS`, `OIL_EXPORTS_VALUE`, `OIL_EXPORTS_VOLUME`
+(the export workbook, read once), `IND_PROD` and its three sections (table
+5792 instead of the cube that stopped at 2023), `INVESTMENT`, `POPULATION_BNS`,
+`EMPLOYED_TOTAL`, `ELECTRICITY_PRODUCTION`. They keep their ids, units and
+place in `macro_long.csv`/`macro_wide.csv`; `scale` only converts units, the
+values are the published ones. Two more rules stop the same bytes being
+fetched and stored several times a day: every agency's `_download` is cached
+per process, and `lib/raw_store.py` keeps one raw copy per day per source file —
+an indicator whose download is byte-identical to a file already archived that
+day points at it in its manifest (`raw_file`) instead of writing a second copy.
+
 ## Hard rules (see MASTER TASK for full detail)
 
 - Never fabricate a data source, API endpoint, or dataset structure — every

@@ -12,9 +12,11 @@ every month here exactly as fetchers/bns.py does: a month that fails the check i
 skipped and reported, a broad failure stops the dataset. TOTAL is the published
 national row itself, never a sum.
 
-Two datasets read the same file: value (thousand USD) and volume (tonnes). The file is
-parsed once per process; the raw copy is shared with EXPORTS when that download
-already happened today (the file is 56 MB — one copy per day is enough).
+Two datasets read the same file: value (thousand USD) and volume (tonnes), parsed once
+per process. The scalar EXPORTS, OIL_EXPORTS_VALUE and OIL_EXPORTS_VOLUME series are
+derived from these datasets (config/indicators.yaml `derived_from`, scripts/
+update_derived.py) — the workbook is downloaded once per run and archived once per day
+(raw id EXPORTS, the name the file has always had in data/raw/bns).
 """
 from __future__ import annotations
 
@@ -32,10 +34,8 @@ from fetchers import bns  # noqa: E402
 
 ELEMENT_ID = 446905
 URL = f"https://stat.gov.kz/api/iblock/element/{ELEMENT_ID}/file/ru/"
-SHARED_RAW_ID = "EXPORTS"           # the scalar EXPORTS download of the same day
-OWN_RAW_ID = "EXPORTS_BY_GROUP"
-UNIT_OFFSET = {"tonnes": bns.TRADE_TONNES_OFFSET, "usd": bns.TRADE_USD_OFFSET}
-_CONTENT: dict[str, bytes] = {}
+RAW_ID = "EXPORTS"
+UNIT_OFFSET = {"tonnes": 0, "usd": 2}      # each month spans [tonnes, additional unit, thousand USD]
 _PARSED: dict[tuple[str, str], dict] = {}
 
 
@@ -58,20 +58,15 @@ def load_groups(name: str) -> list[dict]:
 
 
 def _content(today: date) -> tuple[bytes, str]:
-    """(workbook bytes, note on where they came from)."""
-    if URL in _CONTENT:
-        return _CONTENT[URL], "in-process cache"
-    shared = raw_store.raw_path("bns", SHARED_RAW_ID, today, "xlsx")
-    if shared.exists():
-        _CONTENT[URL] = shared.read_bytes()
-        return _CONTENT[URL], f"raw copy shared with {SHARED_RAW_ID}: {shared.name}"
+    """(workbook bytes, the raw file holding them). bns._download caches per process,
+    raw_store stores identical bytes once per day."""
     content = bns._download(URL)
-    raw_store.save_raw_bytes("bns", OWN_RAW_ID, today, "xlsx", content)
-    raw_store.write_download_manifest("bns", OWN_RAW_ID, today, {
-        "downloaded_at": datetime.now().isoformat(), "source_url": URL, "element_id": ELEMENT_ID,
-        "note": "shared by EXPORTS_VALUE_BY_COMMODITY_GROUP and EXPORTS_VOLUME_BY_COMMODITY_GROUP"})
-    _CONTENT[URL] = content
-    return content, f"downloaded, saved as {OWN_RAW_ID}"
+    path = raw_store.save_raw_bytes("bns", RAW_ID, today, "xlsx", content)
+    raw_store.write_download_manifest("bns", RAW_ID, today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": URL, "element_id": ELEMENT_ID, "raw_file": path.name,
+        "note": "read by EXPORTS_VALUE_BY_COMMODITY_GROUP and EXPORTS_VOLUME_BY_COMMODITY_GROUP; "
+                "EXPORTS, OIL_EXPORTS_VALUE and OIL_EXPORTS_VOLUME are derived from them"})
+    return content, path.name
 
 
 def parse_groups(content: bytes, groups: list[dict], ds: dict) -> dict[str, dict[str, dict[str, float]]]:
@@ -129,7 +124,11 @@ def parse_groups(content: bytes, groups: list[dict], ds: dict) -> dict[str, dict
                     continue
                 checked += 1
                 if abs(all_sums.get(col, 0.0) - national) > abs(national) * 1e-6:
+                    # The group sums are unverifiable for this month and are withheld; the
+                    # published national row is not a sum and stays (EXPORTS is derived from it
+                    # and must be gap-free).
                     skipped.append((sheet_name, m.group(0), unit, round((all_sums.get(col, 0.0) / national - 1) * 100, 4)))
+                    out[unit][iso] = {"TOTAL": float(national)}
                     continue
                 month_vals = {g["code"]: sums[g["code"]].get(col, 0.0) for g in groups if g["prefixes"]}
                 month_vals["TOTAL"] = float(national)
@@ -157,4 +156,4 @@ def fetch(ds: dict) -> tuple[list[dict], dict]:
     records = [{"date": iso, "region": dims.NATIONAL, "item_code": code, "item_name": names[code], "value": v}
                for iso in sorted(by_month) for code, v in by_month[iso].items()]
     return records, {"frequency": "monthly", "source_url": URL, "dataset_id": f"{ELEMENT_ID},measure={ds['measure']}",
-                     "note": ds.get("note", "") + f" Raw file: {origin}.", "warnings": []}
+                     "note": ds.get("note", "") + f" Raw file: {origin}.", "warnings": [], "raw_file": origin}

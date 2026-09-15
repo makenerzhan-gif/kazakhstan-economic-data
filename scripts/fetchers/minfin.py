@@ -40,11 +40,18 @@ def _list_documents(**params) -> list[dict]:
     return resp.json()
 
 
+_DOWNLOAD_CACHE: dict[str, bytes] = {}
+
+
 def _download(path: str) -> bytes:
+    """GET once per process: the same document listing and the same bulletin serve
+    many indicators."""
     url = path if path.startswith("http") else GOV_KZ_BASE + path
-    resp = requests.get(url, headers=HEADERS, timeout=60)
-    resp.raise_for_status()
-    return resp.content
+    if url not in _DOWNLOAD_CACHE:
+        resp = requests.get(url, headers=HEADERS, timeout=60)
+        resp.raise_for_status()
+        _DOWNLOAD_CACHE[url] = resp.content
+    return _DOWNLOAD_CACHE[url]
 
 
 def _open_workbook(content: bytes, filename_hint: str):
