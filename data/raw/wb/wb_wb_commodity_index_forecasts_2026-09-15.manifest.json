@@ -1,7 +1,5 @@
 {
-  "downloaded_at": "2026-09-15T00:13:42.318149",
+  "downloaded_at": "2026-09-15T07:54:33.795198",
   "source_url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.xlsx",
-  "sheet": "Forecast",
-  "raw_file": "wb_wb_commodity_price_forecasts_2026-09-15.xlsx",
-  "raw_file_note": "byte-identical copy wb_wb_commodity_index_forecasts_2026-09-15.xlsx removed 2026-09-15; the bytes are in wb_wb_commodity_price_forecasts_2026-09-15.xlsx"
+  "sheet": "Forecast"
 }

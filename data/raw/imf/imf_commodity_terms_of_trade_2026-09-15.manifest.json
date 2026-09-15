@@ -1,0 +1,7 @@
+{
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/CTOT/5.0.1/KAZ.CEMPI_CTOTNX_TT.R_RW_IX.M",
+  "downloaded_at": "2026-09-15T07:51:54.777006",
+  "dataflow": "CTOT",
+  "version": "5.0.1",
+  "series_key": "KAZ.CEMPI_CTOTNX_TT.R_RW_IX.M"
+}

@@ -1,0 +1,9 @@
+{
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.BCA",
+  "downloaded_at": "2026-09-15T07:51:37.417322",
+  "dataflow": "WEO",
+  "agency_code": "IMF.RES",
+  "version": "9.0.0",
+  "country": "KAZ",
+  "indicator_code": "BCA"
+}
