@@ -1,6 +1,6 @@
 # Update report — 2026-09-15
 
-Run timestamp: 2026-09-15T08:25:53.930177
+Run timestamp: 2026-09-15T09:47:27.911892
 Unified dataset updated: True
 Tests passed: True
 
@@ -419,30 +419,22 @@ Tests passed: True
   - warning: Unexpected jump of 145.4% in value between 2025-04-01 (-99.72807162) and 2025-07-01 (-244.6962967).
   - warning: Unexpected jump of 67.7% in value between 2025-07-01 (-244.6962967) and 2026-01-01 (-79.09401).
   - warning: Unexpected jump of 224.8% in value between 2026-01-01 (-79.09401) and 2026-04-01 (98.708601).
-- **nbk/EXCHANGE_RATE_CNY_KASE** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXCHANGE_RATE_CNY_KASE
-WHAT CHANGED: no rows in formId=35 match {'type': 'Average exchange rate on KASE end of period (tenge)', 'currency': 'Chinese renminbi (yuan)'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=35 and update scripts/fetchers/nbk.py
-- **nbk/KASE_CNY_VOLUME** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/KASE_CNY_VOLUME
-WHAT CHANGED: no rows in formId=35 match {'type': 'Volume of trade on KASE for the period (units of currency)', 'currency': 'Chinese renminbi (yuan)'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=35 and update scripts/fetchers/nbk.py
-- **nbk/KASE_EUR_VOLUME** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/KASE_EUR_VOLUME
-WHAT CHANGED: no rows in formId=35 match {'type': 'Volume of trade on KASE for the period (units of currency)', 'currency': 'Euro'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=35 and update scripts/fetchers/nbk.py
-- **nbk/KASE_RUB_VOLUME** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/KASE_RUB_VOLUME
-WHAT CHANGED: no rows in formId=35 match {'type': 'Volume of trade on KASE for the period (units of currency)', 'currency': 'Russian ruble'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=35 and update scripts/fetchers/nbk.py
+- **nbk/EXCHANGE_RATE_CNY_KASE** — fetch+validate+process: ok (downloaded=20, processed=20)
+- **nbk/KASE_CNY_VOLUME** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 82.6% in value between 2025-06-01 (760677000.0) and 2025-07-01 (1388679877.0).
+  - warning: Unexpected jump of 62.8% in value between 2025-12-01 (1697196914.0) and 2026-01-01 (2762728044.0).
+  - warning: Unexpected jump of 55.7% in value between 2026-01-01 (2762728044.0) and 2026-02-01 (1223591921.0).
+  - warning: Unexpected jump of 111.4% in value between 2026-03-01 (880046786.0) and 2026-04-01 (1860457507.0).
+  - warning: Unexpected jump of 68.6% in value between 2026-04-01 (1860457507.0) and 2026-05-01 (3136384254.0).
+  - warning: Unexpected jump of 65.0% in value between 2026-05-01 (3136384254.0) and 2026-06-01 (1096257932.0).
+  - warning: Unexpected jump of 90.5% in value between 2026-06-01 (1096257932.0) and 2026-07-01 (2088053344.0).
+- **nbk/KASE_EUR_VOLUME** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 59.1% in value between 2025-02-01 (93731688.0) and 2025-03-01 (149081157.0).
+  - warning: Unexpected jump of 69.0% in value between 2025-03-01 (149081157.0) and 2025-04-01 (46255660.0).
+  - warning: Unexpected jump of 81.8% in value between 2025-07-01 (30062975.0) and 2025-08-01 (54643625.0).
+- **nbk/KASE_RUB_VOLUME** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 53.3% in value between 2026-01-01 (134560334406.0) and 2026-02-01 (62859414953.0).
+  - warning: Unexpected jump of 63.8% in value between 2026-04-01 (70943760874.0) and 2026-05-01 (116228489175.0).
 - **nbk/PAYMENTS_TOTAL_COUNT** — fetch+validate+process: ok (downloaded=72, processed=72)
   - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
 - **nbk/PAYMENT_CARDS_COUNT** — fetch+validate+process: ok (downloaded=72, processed=72)
@@ -451,18 +443,11 @@ ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=35 and 
   - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
 - **nbk/CASH_WITHDRAWALS_COUNT** — fetch+validate+process: ok (downloaded=72, processed=72)
   - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
-- **nbk/REMITTANCES_SENT_COUNT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/REMITTANCES_SENT_COUNT
-WHAT CHANGED: no rows in formId=412 match {'period': 'Month', 'type': 'thsd. transactions', 'money_transfer_sign': 'money transfers sent'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=412 and update scripts/fetchers/nbk.py
-- **nbk/REMITTANCES_RECEIVED_COUNT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/REMITTANCES_RECEIVED_COUNT
-WHAT CHANGED: no rows in formId=412 match {'period': 'Month', 'type': 'thsd. transactions', 'money_transfer_sign': 'money transfers received'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=412 and update scripts/fetchers/nbk.py
+- **nbk/REMITTANCES_SENT_COUNT** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 55.6% in value between 2021-12-01 (226.259) and 2022-01-01 (100.472).
+  - warning: Unexpected jump of 53.0% in value between 2022-03-01 (167.585) and 2022-04-01 (256.327).
+- **nbk/REMITTANCES_RECEIVED_COUNT** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 86.5% in value between 2022-03-01 (96.643) and 2022-04-01 (180.237).
 - **nbk/BANK_ROA** — fetch+validate+process: ok (downloaded=18, processed=18)
 - **nbk/BANK_ROE** — fetch+validate+process: ok (downloaded=18, processed=18)
   - warning: Unexpected jump of 50.4% in value between 2022-04-01 (31.32) and 2022-07-01 (15.55).
@@ -587,12 +572,20 @@ ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=412 and
 - **nbk/EXTERNAL_DEBT_SHORT_TERM** — fetch+validate+process: ok (downloaded=47, processed=47)
 - **nbk/PRIVATE_EXTERNAL_DEBT_INTERCOMPANY** — fetch+validate+process: ok (downloaded=47, processed=47)
 - **nbk/PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT** — fetch+validate+process: ok (downloaded=47, processed=47)
-- **nbk/GOLD_BULLION_SALES** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/GOLD_BULLION_SALES
-WHAT CHANGED: no rows in formId=476 match {'period': 'quarter', 'type': 'pieces'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=476 and update scripts/fetchers/nbk.py
+- **nbk/GOLD_BULLION_SALES** — fetch+validate+process: ok (downloaded=36, processed=36)
+  - warning: Unexpected jump of 238.7% in value between 2017-07-01 (225.0) and 2017-10-01 (762.0).
+  - warning: Unexpected jump of 94.1% in value between 2018-04-01 (560.0) and 2018-07-01 (1087.0).
+  - warning: Unexpected jump of 54.5% in value between 2019-01-01 (1092.0) and 2019-04-01 (1687.0).
+  - warning: Unexpected jump of 295.3% in value between 2019-07-01 (1853.0) and 2019-10-01 (7324.0).
+  - warning: Unexpected jump of 66.8% in value between 2020-04-01 (2497.0) and 2020-07-01 (4166.0).
+  - warning: Unexpected jump of 57.1% in value between 2020-07-01 (4166.0) and 2020-10-01 (6545.0).
+  - warning: Unexpected jump of 77.1% in value between 2024-01-01 (10710.0) and 2024-04-01 (18969.0).
+  - warning: Unexpected jump of 68.2% in value between 2024-10-01 (13940.0) and 2025-01-01 (23445.0).
+  - warning: Unexpected jump of 52.7% in value between 2025-01-01 (23445.0) and 2025-04-01 (11084.0).
+  - warning: Unexpected jump of 63.8% in value between 2025-04-01 (11084.0) and 2025-07-01 (4008.0).
+  - warning: Unexpected jump of 127.3% in value between 2025-07-01 (4008.0) and 2025-10-01 (9110.0).
+  - warning: Unexpected jump of 82.2% in value between 2025-10-01 (9110.0) and 2026-01-01 (16597.0).
+  - warning: Unexpected jump of 59.7% in value between 2026-01-01 (16597.0) and 2026-04-01 (6681.0).
 - **nbk/REMITTANCES_SENT_USD** — fetch+validate+process: ok (downloaded=59, processed=59)
 - **nbk/REMITTANCES_SENT_KZT** — fetch+validate+process: ok (downloaded=59, processed=59)
   - warning: Unexpected jump of 65.3% in value between 2021-12-01 (7535.75044157) and 2022-01-01 (2616.94285723).
@@ -641,42 +634,44 @@ ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=476 and
   - warning: Unexpected jump of 239.5% in value between 2026-02-01 (28955.97168899) and 2026-03-01 (98317.28749319).
   - warning: Unexpected jump of 69.7% in value between 2026-03-01 (98317.28749319) and 2026-04-01 (166885.23968497).
   - warning: Unexpected jump of 77.6% in value between 2026-07-01 (109574.25879704) and 2026-08-01 (194549.94580431).
-- **nbk/EXCHANGE_RATE_EUR_OTC** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXCHANGE_RATE_EUR_OTC
-WHAT CHANGED: no rows in formId=41 match {'currency': 'Euro', 'type': 'Average rate - bid'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=41 and update scripts/fetchers/nbk.py
-- **nbk/EXCHANGE_RATE_RUB_OTC** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXCHANGE_RATE_RUB_OTC
-WHAT CHANGED: no rows in formId=41 match {'currency': 'Russian ruble', 'type': 'Average rate - bid'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=41 and update scripts/fetchers/nbk.py
-- **nbk/EXCHANGE_RATE_USD_OTC** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXCHANGE_RATE_USD_OTC
-WHAT CHANGED: no rows in formId=41 match {'currency': 'US dollars', 'type': 'Average rate - bid'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=41 and update scripts/fetchers/nbk.py
-- **nbk/FX_OTC_VOLUME_USD** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/FX_OTC_VOLUME_USD
-WHAT CHANGED: no rows in formId=41 match {'currency': 'US dollars', 'type': 'Volume - bid (mln. units of currency)'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=41 and update scripts/fetchers/nbk.py
-- **nbk/FX_OTC_VOLUME_EUR** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/FX_OTC_VOLUME_EUR
-WHAT CHANGED: no rows in formId=41 match {'currency': 'Euro', 'type': 'Volume - bid (mln. units of currency)'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=41 and update scripts/fetchers/nbk.py
-- **nbk/FX_OTC_VOLUME_RUB** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/FX_OTC_VOLUME_RUB
-WHAT CHANGED: no rows in formId=41 match {'currency': 'Russian ruble', 'type': 'Volume - bid (mln. units of currency)'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=41 and update scripts/fetchers/nbk.py
+- **nbk/EXCHANGE_RATE_EUR_OTC** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **nbk/EXCHANGE_RATE_RUB_OTC** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **nbk/EXCHANGE_RATE_USD_OTC** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **nbk/FX_OTC_VOLUME_USD** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Unexpected jump of 315.8% in value between 2025-10-01 (7673.19460581) and 2025-11-01 (31903.14004966).
+- **nbk/FX_OTC_VOLUME_EUR** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Unexpected jump of 278.1% in value between 2023-03-01 (27.45185617) and 2023-04-01 (103.7886563).
+  - warning: Unexpected jump of 50.4% in value between 2023-04-01 (103.7886563) and 2023-05-01 (51.50716283).
+  - warning: Unexpected jump of 86.9% in value between 2023-05-01 (51.50716283) and 2023-06-01 (96.27563099).
+  - warning: Unexpected jump of 293.6% in value between 2023-12-01 (32.46711045) and 2024-01-01 (127.78599308).
+  - warning: Unexpected jump of 63.2% in value between 2024-06-01 (47.55011162) and 2024-07-01 (17.47688425).
+  - warning: Unexpected jump of 9764.8% in value between 2024-07-01 (17.47688425) and 2024-08-01 (1724.06505769).
+  - warning: Unexpected jump of 98.7% in value between 2024-08-01 (1724.06505769) and 2024-09-01 (22.48569887).
+  - warning: Unexpected jump of 58.4% in value between 2024-09-01 (22.48569887) and 2024-10-01 (9.35293447).
+  - warning: Unexpected jump of 307.7% in value between 2024-11-01 (8.31511494) and 2024-12-01 (33.89795482).
+  - warning: Unexpected jump of 84.2% in value between 2024-12-01 (33.89795482) and 2025-01-01 (62.44354394).
+  - warning: Unexpected jump of 93.8% in value between 2025-03-01 (43.47637811) and 2025-04-01 (2.71311907).
+  - warning: Unexpected jump of 38714.4% in value between 2025-04-01 (2.71311907) and 2025-05-01 (1053.08085191).
+  - warning: Unexpected jump of 98.2% in value between 2025-06-01 (1197.57744684) and 2025-07-01 (21.94826975).
+  - warning: Unexpected jump of 71.4% in value between 2025-07-01 (21.94826975) and 2025-08-01 (37.6295546).
+  - warning: Unexpected jump of 2576.4% in value between 2025-08-01 (37.6295546) and 2025-09-01 (1007.12166264).
+  - warning: Unexpected jump of 229.3% in value between 2025-09-01 (1007.12166264) and 2025-10-01 (3316.73066392).
+- **nbk/FX_OTC_VOLUME_RUB** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Unexpected jump of 94.0% in value between 2023-01-01 (105058.08166441) and 2023-02-01 (6277.93852608).
+  - warning: Unexpected jump of 52.2% in value between 2023-05-01 (6328.62441345) and 2023-06-01 (9629.28545988).
+  - warning: Unexpected jump of 99.0% in value between 2023-07-01 (8497.83758494) and 2023-08-01 (16914.13384886).
+  - warning: Unexpected jump of 376.2% in value between 2023-10-01 (7307.38477158) and 2023-11-01 (34795.24853584).
+  - warning: Unexpected jump of 83.6% in value between 2023-11-01 (34795.24853584) and 2023-12-01 (5689.16127649).
+  - warning: Unexpected jump of 146.6% in value between 2023-12-01 (5689.16127649) and 2024-01-01 (14028.91267118).
+  - warning: Unexpected jump of 60.2% in value between 2024-03-01 (10828.63096657) and 2024-04-01 (4312.92394988).
+  - warning: Unexpected jump of 64.2% in value between 2024-04-01 (4312.92394988) and 2024-05-01 (7082.66701895).
+  - warning: Unexpected jump of 257.6% in value between 2024-10-01 (20032.31138816) and 2024-11-01 (71639.23431021).
+  - warning: Unexpected jump of 75.2% in value between 2024-11-01 (71639.23431021) and 2024-12-01 (17733.32086136).
+  - warning: Unexpected jump of 63.4% in value between 2024-12-01 (17733.32086136) and 2025-01-01 (28975.18712813).
+  - warning: Unexpected jump of 148.4% in value between 2025-02-01 (25358.91346323) and 2025-03-01 (62987.32398228).
+  - warning: Unexpected jump of 56.3% in value between 2026-01-01 (56774.97777926) and 2026-02-01 (24799.4919284).
+  - warning: Unexpected jump of 132.7% in value between 2026-03-01 (12708.96987589) and 2026-04-01 (29574.76288046).
+  - warning: Unexpected jump of 87.7% in value between 2026-06-01 (11778.6457546) and 2026-07-01 (22113.81732956).
 - **nbk/OFC_NET_FOREIGN_ASSETS** — fetch+validate+process: ok (downloaded=15, processed=15)
 - **nbk/OFC_CLAIMS_ON_NONRESIDENTS** — fetch+validate+process: ok (downloaded=15, processed=15)
 - **nbk/OFC_LIABILITIES_TO_NONRESIDENTS** — fetch+validate+process: ok (downloaded=15, processed=15)
