@@ -1,0 +1,75 @@
+# Release schedules the pipeline's metadata cannot carry by itself, and the order of a
+# model refresh. The BNS dynamic tables state their own «Дата следующей актуализации» in
+# their Метаданные sheet — scripts/update_dims.py stores it as next_update_date in
+# metadata/bns/<dataset>.json, and scripts/build_calendar.py reads it from there. What is
+# listed here is what the sources publish on a fixed rhythm without a machine-readable
+# date (World Bank, EIA, IMF), plus the documents that reach the model by hand.
+# `next` is a date only when the source has announced it; otherwise the cadence is enough.
+
+version: 1
+
+schedules:
+  - id: wb_cmo
+    agency: wb
+    what: "Commodity Markets Outlook — таблица прогнозов (WB_COMMODITY_PRICE_FORECASTS, WB_COMMODITY_INDEX_FORECASTS)"
+    cadence: "два раза в год, конец апреля и конец октября"
+    next: 2026-10-02            # named on the Commodity Markets page and in the April 2026 forecast sheet's footer
+    model: "«Внешние и внутренние факторы» строки 65–124 и 146–161 за 2026–2027, строка 5 (Brent ВБ)"
+    action: "update_all → model_sync --apply; 2028–2030 модель дотягивает сама (уровень 2027 г.)"
+
+  - id: wb_pink_sheet
+    agency: wb
+    what: "Pink Sheet — месячные и годовые цены и индексы (WB_COMMODITY_PRICES_ANNUAL, WB_COMMODITY_INDICES_ANNUAL, OIL_PRICE_BRENT)"
+    cadence: "ежемесячно, первые рабочие дни месяца; годовой файл дополняется новым годом в январе"
+    model: "«Внешние и внутренние факторы» строки 65–124, 146–161 (факт), строки 2 и 66 (Brent)"
+    action: "факт прошлого года появляется в январском выпуске — тогда сверка 2026 г."
+
+  - id: eia_steo
+    agency: eia
+    what: "Short-Term Energy Outlook, таблица 2 (EIA_STEO_PRICES)"
+    cadence: "ежемесячно, первая декада месяца (выпуск сентября 2026 — 9 сентября)"
+    model: "«Внешние и внутренние факторы» строка 4 (Brent EIA, 2026–2027)"
+    action: "update_all → model_sync; консенсус (строка 3) пересчитается формулой"
+
+  - id: imf_weo
+    agency: imf
+    what: "World Economic Outlook — IMF_* ряды, курс по ППС (IMF_PPP_EXCHANGE_RATE)"
+    cadence: "два раза в год, апрель и октябрь"
+    model: "«Внешние и внутренние факторы» строка 51 (курс к международному доллару)"
+    action: "update_all → model_sync --apply (все годы, включая прогноз)"
+
+  - id: bns_express_iok
+    agency: bns
+    what: "Экспресс-информация «Об инвестициях в основной капитал» по источникам финансирования"
+    cadence: "ежемесячно (оперативные данные); уточнённые годовые — февраль–март"
+    model: "«ИОК» строки 48–49, «ВВП_расходы_МКИ» 54–55 (manual_inputs: iok_budget_private_split)"
+    action: "вручную: динамической таблицы у БНС нет"
+
+  - id: pser
+    agency: manual
+    what: "Прогноз социально-экономического развития на 2027–2029 гг. — прогнозы ЦГО и министерств, курс, инфляция"
+    cadence: "ежегодно, август–сентябрь (одобрение Правительством); документ ПСЭР 2027–2029 в модель ещё не поступал"
+    model: "«Прогнозы ЦГО 2024-29» (manual_inputs: cgo_forecasts, cgo_fact_columns), «Внешние и внутренние факторы» 51, 55–57"
+    action: "вручную, по решению автора; после загрузки — model_sync для строк, у которых есть ряд БНС"
+
+  - id: brent_consensus
+    agency: manual
+    what: "Прогнозы Brent агентств (строки 6–24)"
+    cadence: "по решению автора; ВБ и EIA обновляются пайплайном"
+    model: "«Внешние и внутренние факторы» строки 3–24 (manual_inputs: brent_agency_forecasts)"
+    action: "вручную"
+
+  - id: bns_io_tables
+    agency: bns
+    what: "Таблицы «Затраты–Выпуск» (справочные листы Лист2, Лист3)"
+    cadence: "ежегодно, с лагом около двух лет (за 2023 г. — в 2025 г.)"
+    model: "Лист2, Лист3 (manual_inputs: io_tables_2023_*)"
+    action: "вручную; на расчёт не влияет"
+
+# One refresh of the model, in order. Every step is a command; nothing is edited by hand.
+procedure:
+  - "python scripts/update_all.py                       # источники → сырьё → проверки → processed → unified (в CI ежедневно)"
+  - "python scripts/model_sync.py                       # сверка модели с пайплайном: ok / diff / control / missing"
+  - "python scripts/model_sync.py --apply --out <копия>  # запись расхождений во входные ячейки (примечание + журнал), оригинал не трогается"
+  - "python scripts/model_coverage.py --strict           # ни одного числа без источника: model_map или manual_inputs"
+  - "python scripts/build_calendar.py                    # календарь: что и когда обновится следующим"

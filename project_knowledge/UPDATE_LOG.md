@@ -4231,3 +4231,61 @@ is never edited and distinct content is never deleted.
 **Note.** Git history still contains the removed copies (identical blobs are stored once
 by git, so the .git directory was never as large as the working tree); shrinking clones
 would need a history rewrite, which was not done.
+
+## 2026-09-15 — model sync, phase 6: every number in the model has a source; the update calendar
+
+**What.** The last phase of the loading plan: no number in the GDP model without a named
+source, and a calendar of when each source moves next.
+
+**Coverage.** `scripts/model_coverage.py` walks every literal number in the workbook's year
+columns (repeated year headers inside sheets are ignored) and classifies it: claimed by a
+`model_map.yaml` mapping, claimed by an entry in the new `config/manual_inputs.yaml`, or
+unaccounted. First run on the phase-5 model: 67 075 numbers, 4 153 pipeline, 62 922
+unaccounted — almost all of them history before 2023 and the input-output reference
+sheets. Now: 66 656 numbers, 4 209 pipeline, 62 447 manual, 0 unaccounted
+(`--strict` passes).
+
+**Fourteen more contract mappings** for national totals the scan found unclaimed: the
+labour block of «Прогнозы ЦГО» (labour force, employees, self-employed, unemployed, the
+rate, the real-wage index) and its grain harvest; the national rows above the regional
+blocks on «Факторы» (labour force, unemployed, unemployment rate, self-employed, urban
+and rural population); the national fixed-investment volume index on «ИОК»; the section
+deflators on «Дефляторы_производ_регионы» (2023 typed, 2024+ computed by the model —
+controls within 0.25 pp). 111 checks: 99 ok, 9 applied, 3 controls. The nine are BNS
+revisions of 2023 figures the ministries had supplied (labour force 9 378 → 9 534 thousand,
+employees, self-employed, unemployed, rate 4.8 → 4.7, real wage index 100.3 → 102.7, grain
+harvest 17 708 → 17 097 thousand tonnes) and the 2023 urban/rural population totals, whose
+regional blocks had been revised in phase 2 while the totals above them stayed
+(12 330 544 → 12 386 757; 7 569 780.5 → 7 513 567.5). Only those nine cells changed; every
+other sheet and «Контроль» are byte-for-byte as before. Journal 1 485 → 1 495 rows. Copy on
+Yandex.Disk replaced under a hash check (73562144 → b115ea6f).
+
+**manual_inputs.yaml** — 45 entries. Per sheet: the history before 2023 (author's loads
+from earlier BNS/NBK/WB/IMF publications, vintage not recorded — said so); the 2023 base
+year below the section level on the production sheets (BNS January-2025 publication; the
+pipeline has no regional detail below sections); «Прогнозы ЦГО» fact columns and forecasts
+(PSER 2025–2029, January 2025; the rows with a BNS series are pipeline-checked); the Brent
+agency forecasts (author's collection, January 2025); the inflation corridor and the
+«значение для дефлятора» assumption; the budget/private investment split from the express
+releases (the author's 14.09 decision); the export rows the 6-digit workbook cannot give;
+the price-index constants; the input-output tables of 2023 on Лист2/Лист3 and the
+productivity satellite (no formula references them). Five entries are `kind: review` —
+literal numbers where a formula or a source would be expected: «Зерна, $/м.т.» = 185 on
+«Факторы»; ИФО 2024 of coal (99.2) and of the electricity subsections 35.1–35.3 among
+empty/formula cells; the pair 6 310 / 2 580 for «г.Алматы» in three derived sheets. These
+are the author's to resolve; nothing was changed.
+
+**Calendar.** The BNS dynamic tables state «Дата последней/следующей актуализации» in their
+Метаданные sheet; `bns_dims.fetch` now reads both into `publication_date` and
+`next_update_date` of the dataset metadata (28 of 40 tables carry them; the legacy .xls
+tables, 4446 and 5546–5549 do not). `config/calendar.yaml` adds the rhythms without a
+machine-readable date (CMO 2 October 2026; Pink Sheet and STEO monthly; WEO April/October;
+PSER 2027–2029 — not yet received; the express releases; the IO tables) and the refresh
+procedure. `scripts/build_calendar.py` writes `project_knowledge/CALENDAR.md` — 68 series
+the model reads, next dates, overdue flags, the manual blocks with their refresh rules —
+and `update_all.py` rebuilds it daily. Tests 299 → 303.
+
+**Not done.** Extending the fact-year checks into history (the pipeline reaches 1960 for
+World Bank prices, 2000–2010 for BNS) would turn most `history` entries into pipeline
+coverage — a `years` change in `model_map.yaml`, but the author's call, since the history
+would then be rewritten to today's vintages. Nothing committed to main yet.

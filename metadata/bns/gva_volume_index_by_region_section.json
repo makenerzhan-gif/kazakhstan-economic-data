@@ -10,12 +10,12 @@
   "currency": "",
   "geography": "Kazakhstan (national and regions)",
   "methodology": "Item GDP («Всего») is the volume index of the gross regional product; the table carries 11 sections plus «Прочие услуги» (OTHER_SERVICES).",
-  "publication_date": null,
+  "publication_date": "2026-08-24",
   "last_update_date": "2026-09-14",
   "download_date": "2026-09-14",
   "period_start": "2010-12-31",
   "period_end": "2025-12-31",
-  "next_update_date": null,
+  "next_update_date": "2027-08-23",
   "transformation": "level",
   "revision_status": "original"
 }

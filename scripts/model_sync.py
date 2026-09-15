@@ -222,9 +222,9 @@ class Workbook:
         a read-only worksheet scans from the top on every iter_rows call."""
         key = (sheet, row)
         if key not in self._rows:
-            f = next(self.formulas[sheet].iter_rows(min_row=row, max_row=row, min_col=1, max_col=self.MAX_COL, values_only=True))
-            v = next(self.values[sheet].iter_rows(min_row=row, max_row=row, min_col=1, max_col=self.MAX_COL, values_only=True))
-            self._rows[key] = (list(f), list(v))
+            f = next(self.formulas[sheet].iter_rows(min_row=row, max_row=row, min_col=1, max_col=self.MAX_COL, values_only=True), ())
+            v = next(self.values[sheet].iter_rows(min_row=row, max_row=row, min_col=1, max_col=self.MAX_COL, values_only=True), ())
+            self._rows[key] = (list(f), list(v))          # an empty sheet gives ([], [])
         return self._rows[key]
 
     def column(self, sheet: str, col: int, first_row: int, last_row: int) -> list:
@@ -232,6 +232,18 @@ class Workbook:
 
     def max_row(self, sheet: str) -> int:
         return self.values[sheet].max_row
+
+    @property
+    def sheetnames(self) -> list[str]:
+        return list(self.values.sheetnames)
+
+    def load_sheet(self, sheet: str) -> None:
+        """Fill the row cache for a whole sheet in one pass (a whole-sheet scan through
+        row() would re-read the sheet from the top for every row)."""
+        fi = self.formulas[sheet].iter_rows(min_row=1, min_col=1, max_col=self.MAX_COL, values_only=True)
+        vi = self.values[sheet].iter_rows(min_row=1, min_col=1, max_col=self.MAX_COL, values_only=True)
+        for r, (f, v) in enumerate(zip(fi, vi), 1):
+            self._rows.setdefault((sheet, r), (list(f), list(v)))
 
 
 def _year_cols(m: dict, wb: Workbook, sheet: str, header_row: int, cache: dict) -> dict[int, int]:

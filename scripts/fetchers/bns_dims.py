@@ -355,12 +355,50 @@ def parse_group_blocks(grid: list[list], ds: dict, year_regex: re.Pattern) -> li
 
 # ---------------------------------------------------------------- entry point
 
+UPDATE_DATES = {"дата последней актуализации": "release", "дата следующей актуализации": "next_update"}
+
+
+def _iso(cell) -> str | None:
+    """'2026-09-30 00:00:00', datetime, '30.09.2027' -> ISO date; None when unreadable."""
+    if cell is None:
+        return None
+    if hasattr(cell, "date"):
+        return cell.date().isoformat()
+    s = str(cell).strip()
+    m = re.match(r"^(\d{4})-(\d{2})-(\d{2})", s) or None
+    if m:
+        return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+    m = re.match(r"^(\d{2})\.(\d{2})\.(\d{4})$", s)
+    return f"{m.group(3)}-{m.group(2)}-{m.group(1)}" if m else None
+
+
+def update_dates(grids: dict[str, list[list]]) -> dict[str, str]:
+    """{'release': ..., 'next_update': ...} from the table's «Метаданные» sheet (most BNS
+    dynamic tables carry «Дата последней/следующей актуализации» there; the legacy .xls
+    tables and 5546/5547/5549 do not — then nothing is returned)."""
+    out: dict[str, str] = {}
+    for name, grid in grids.items():
+        if "етаданн" not in name:
+            continue
+        for row in grid[:60]:
+            key = dims.normalise_label(row[0]) if row and row[0] else ""
+            hit = next((v for k, v in UPDATE_DATES.items() if k in key), None)           # wording varies slightly per table
+            if hit:
+                value = next((c for c in row[1:] if c is not None and str(c).strip()), None)   # the date's column varies
+                iso = _iso(value)
+                if iso:
+                    out[hit] = iso
+    return out
+
+
 def fetch(ds: dict) -> tuple[list[dict], dict]:
     url = f"https://stat.gov.kz/api/iblock/element/{ds['element_id']}/file/ru/"
     content = bns._download(url)
     bns._save_raw(ds["id"], content, "xls" if is_legacy_xls(content) else "xlsx", {"source_url": url, "element_id": ds["element_id"]})
+    grids = _sheets(content)
     return parse(content, ds), {"frequency": ds["frequency"], "source_url": url, "dataset_id": str(ds["element_id"]),
-                                "note": ds.get("note", "annual values from the xlsx export; quarterly year-to-date columns skipped")}
+                                "note": ds.get("note", "annual values from the xlsx export; quarterly year-to-date columns skipped"),
+                                **update_dates(grids)}
 
 
 def parse(content: bytes, ds: dict) -> list[dict]:

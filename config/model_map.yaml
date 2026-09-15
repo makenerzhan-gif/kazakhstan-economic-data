@@ -748,3 +748,104 @@ mappings:
     tolerance: 0.006
     replace_formulas: true
     note: "экспорт по товарным группам, тыс. тонн"
+
+  # ---------------------------------------------------------------- phase 6: the national totals the coverage scan found unclaimed
+  # «Факторы»: the national rows above each regional block (the blocks themselves are mapped above).
+  - id: labour_force_national
+    dims_variable: LABOUR_FORCE_BY_REGION
+    sheet: "Внешние и внутренние факторы"
+    rows_by_item: {TOTAL: 224}
+    scale: 1000
+    tolerance: 1.0
+
+  - id: unemployed_national
+    dims_variable: UNEMPLOYED_BY_REGION
+    sheet: "Внешние и внутренние факторы"
+    rows_by_item: {TOTAL: 266}
+    scale: 1000
+    tolerance: 1.0
+
+  - id: unemployment_rate_national
+    dims_variable: UNEMPLOYMENT_RATE_BY_REGION
+    sheet: "Внешние и внутренние факторы"
+    rows_by_item: {TOTAL: 287}
+    tolerance: 0.06
+    note: "2024+ — ссылка на «Прогнозы ЦГО» (контроль)"
+
+  - id: self_employed_national
+    dims_variable: SELF_EMPLOYED_BY_REGION
+    sheet: "Внешние и внутренние факторы"
+    rows_by_item: {TOTAL: 308}
+    scale: 1000
+    tolerance: 1.0
+    note: "2024–2025 — формула (рабочая сила × доля); факт БНС показан как контроль"
+
+  - id: population_urban_rural_national
+    dims_variable: POPULATION_AVG_BY_REGION
+    sheet: "Внешние и внутренние факторы"
+    rows_by_item: {URBAN: 185, RURAL: 206}
+    tolerance: 0.6
+    note: "2024+ — суммы региональных блоков (контроль); 2023 — число"
+
+  # «Прогнозы ЦГО»: the fact columns of the labour block and the grain harvest are BNS figures
+  # (the same treatment as oil, gas, employed and wage above).
+  - id: cgo_labour_force
+    dims_variable: LABOUR_FORCE_BY_REGION
+    sheet: "Прогнозы ЦГО 2024-29"
+    rows_by_item: {TOTAL: 109}
+    tolerance: 0.001
+
+  - id: cgo_employees
+    dims_variable: EMPLOYEES_BY_REGION
+    sheet: "Прогнозы ЦГО 2024-29"
+    rows_by_item: {TOTAL: 111}
+    tolerance: 0.001
+
+  - id: cgo_self_employed
+    dims_variable: SELF_EMPLOYED_BY_REGION
+    sheet: "Прогнозы ЦГО 2024-29"
+    rows_by_item: {TOTAL: 112}
+    tolerance: 0.001
+
+  - id: cgo_unemployed
+    dims_variable: UNEMPLOYED_BY_REGION
+    sheet: "Прогнозы ЦГО 2024-29"
+    rows_by_item: {TOTAL: 113}
+    tolerance: 0.001
+
+  - id: cgo_unemployment_rate
+    dims_variable: UNEMPLOYMENT_RATE_BY_REGION
+    sheet: "Прогнозы ЦГО 2024-29"
+    rows_by_item: {TOTAL: 114}
+    tolerance: 0.06
+
+  - id: cgo_real_wage_index
+    variable: REAL_WAGE_INDEX
+    annual: last
+    tolerance: 0.06
+    targets:
+      - {sheet: "Прогнозы ЦГО 2024-29", row: 117, note: "индекс реальной заработной платы, %"}
+
+  - id: cgo_grain_harvest
+    dims_variable: GRAIN_HARVEST_BY_REGION
+    sheet: "Прогнозы ЦГО 2024-29"
+    rows_by_item: {TOTAL: 4}
+    tolerance: 0.06
+    note: "валовой сбор зерновых (включая рис) и бобовых, тыс. т"
+
+  # «ИОК»: the national volume index of fixed investment.
+  - id: investment_volume_national
+    dims_variable: INVESTMENT_VOLUME_INDEX_BY_REGION
+    sheet: "ИОК"
+    rows_by_item: {TOTAL: 52}
+    tolerance: 0.06
+
+  # «Дефляторы_производ_регионы»: section deflators — 2023 typed from BNS, 2024+ computed by the
+  # model in constant 2023 prices (controls, same tolerance as the volume indices).
+  - id: gva_deflator_sections
+    dims_variable: GVA_DEFLATOR_BY_SECTION
+    sheet: "Дефляторы_производ_регионы"
+    rows_by_item: {A: 3, IND: 57, B: 79, C: 207, D: 953, E: 1023, F: 1067, G: 1090, H: 1115, I: 1144, J: 1166, K: 1196,
+                   L: 1218, M: 1240, N: 1262, O: 1284, P: 1306, Q: 1328, R: 1350, S: 1372, T: 1373, GVA: 1374, GDP: 1399}
+    tolerance: 0.25
+    note: "дефляторы секций: 2023 — БНС, 2024+ модель считает в ценах 2023 г. (расхождение до 0,25 п.п.)"

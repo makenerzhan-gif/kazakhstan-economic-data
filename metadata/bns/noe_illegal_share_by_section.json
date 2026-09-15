@@ -10,12 +10,12 @@
   "currency": "",
   "geography": "Kazakhstan (national)",
   "methodology": "annual values from the xlsx export; quarterly year-to-date columns skipped",
-  "publication_date": null,
+  "publication_date": "2026-07-31",
   "last_update_date": "2026-09-14",
   "download_date": "2026-09-14",
   "period_start": "2013-12-31",
   "period_end": "2025-12-31",
-  "next_update_date": null,
+  "next_update_date": "2027-07-31",
   "transformation": "level",
   "revision_status": "original"
 }

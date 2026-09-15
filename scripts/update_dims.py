@@ -87,7 +87,7 @@ def run(run_logger: pipeline_logging.RunLogger, only: set[str] | None = None) ->
             download_date=today.isoformat(),
             period_start=min(r["date"] for r in records),
             period_end=max(r["date"] for r in records),
-            next_update_date=ds.get("next_update"),
+            next_update_date=manifest_info.get("next_update") or ds.get("next_update"),
             transformation=manifest_info.get("transformation", "level"),
             revision_status="revised" if revs else "original",
         ).write()

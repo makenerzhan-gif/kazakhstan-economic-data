@@ -1,0 +1,462 @@
+# Every number in the GDP model that is NOT a pipeline series: where it came from, which
+# vintage, who owns it and when it should be refreshed. Read by scripts/model_coverage.py,
+# which walks every literal number in the workbook and reports the ones neither
+# config/model_map.yaml nor this file claims. The phase-6 target: none unclaimed.
+#
+# An entry names a sheet and rows ([first, last], or a list mixing rows and ranges), and
+# optionally `years: [first, last]` (default: every year column) or, for sheets without a
+# calendar-year header, `columns: [A, Z]`. A pipeline mapping always takes precedence over
+# an entry here — the entries describe what the pipeline does not deliver.
+#
+# kind:   history     values loaded by hand from earlier publications; not re-checked
+#         assumption  the author's parameter or rule; changes only by the author's decision
+#         external    a document that is not a pipeline source (ministry forecasts, PSER)
+#         satellite   a sheet the model's calculation does not reference
+#         review      a literal number where a formula or a source would be expected —
+#                     listed so it is not forgotten, to be decided by the author
+# vintage: when the numbers were last set, as far as it is known ("unknown" is honest).
+
+version: 1
+
+inputs:
+  # ------------------------------------------------------------ «Внешние и внутренние факторы»
+  - id: factors_history
+    sheet: "Внешние и внутренние факторы"
+    rows: [2, 331]
+    years: [1991, 2022]
+    kind: history
+    source: "Публикации БНС, НБ РК, Всемирного банка и МВФ прошлых лет, загружены автором модели"
+    vintage: "до 2025-01; версия источников не зафиксирована"
+    owner: author
+    refresh: "не сверяется; при желании — расширить years в model_map (пайплайн отдаёт ВБ с 1960 г., БНС с 2000/2010 г.)"
+
+  - id: brent_agency_forecasts
+    sheet: "Внешние и внутренние факторы"
+    rows: [3, 24]
+    years: [2023, 2030]
+    kind: external
+    source: "Прогнозы Brent агентств (МВФ, ОПЕК, Bank of America, Barclays, Bloomberg, BMI, Commerzbank, Deutsche Bank, Fitch, Goldman Sachs, ING, JP Morgan, Moody's, Morgan Stanley, АБР, ЕАБР, S&P, Citi, HSBC), собранные автором; строка 3 — среднее строк 4–23"
+    vintage: "2025-01 (ВБ строка 5 и EIA строка 4 за 2026–2027 — из пайплайна, CMO апрель 2026 / STEO сентябрь 2026)"
+    owner: author
+    refresh: "при пересборе консенсуса; 2023–2025 в строках 4–5 — прогнозы старых выпусков, не факт"
+
+  - id: factors_oil_parameters
+    sheet: "Внешние и внутренние факторы"
+    rows: [26, 41]
+    years: [2023, 2030]
+    kind: assumption
+    source: "Параметры автора: реальная цена нефти в долларах 2010 г. (строка 26), инерционность шоков (строка 41)"
+    vintage: "unknown"
+    owner: author
+    refresh: "по решению автора"
+
+  - id: inflation_corridor
+    sheet: "Внешние и внутренние факторы"
+    rows: [55, 56]
+    years: [2023, 2030]
+    kind: external
+    source: "Нижняя и верхняя границы — целевой коридор НБ РК, как записан в строке «Коридор НБ» (правка 14.09.2026: до неё строки ссылались на пустые ячейки листа ЦГО)"
+    vintage: "2025-01"
+    owner: nbk
+    refresh: "при изменении цели по инфляции НБ РК (ряд INFLATION_TARGET в пайплайне — для сверки)"
+
+  - id: deflator_inflation_value
+    sheet: "Внешние и внутренние факторы"
+    rows: [57]
+    years: [2023, 2030]
+    kind: assumption
+    source: "«Значение для дефлятора» — допущение автора (в истории то середина коридора, то ИПЦ; 2025 г. — 7,5 при факте ИПЦ 12,3)"
+    vintage: "2025-01"
+    owner: author
+    refresh: "решение автора (см. отчёт, «Не заменено и почему»)"
+
+  - id: grains_price_constant
+    sheet: "Внешние и внутренние факторы"
+    rows: [85]
+    years: [2025, 2030]
+    kind: review
+    source: "«Зерна, $/м.т.» = 185 во всех годах с 2025 г. — константа, у ВБ такой позиции нет (зерно в модели — пшеница HRW, строка 89, и индекс «Зерна», строка 153)"
+    vintage: "unknown"
+    owner: author
+    refresh: "уточнить у автора, используется ли строка"
+
+  - id: wb_price_changes_history
+    sheet: "Внешние и внутренние факторы"
+    rows: [128, 143]
+    years: [2023, 2025]
+    kind: history
+    source: "Изменение цен год к году — рассчитано автором из индексов ВБ (строки 146–161); с 2026 г. — формулы"
+    vintage: "2025-01"
+    owner: author
+    refresh: "не требуется: прогнозные годы считаются формулами"
+
+  # ------------------------------------------------------------ «Прогнозы ЦГО 2024-29»
+  - id: cgo_history
+    sheet: "Прогнозы ЦГО 2024-29"
+    rows: [2, 135]
+    years: [2020, 2022]
+    kind: history
+    source: "Данные министерств и ЦГО за прошлые годы, как получены автором"
+    vintage: "2025-01"
+    owner: ministry
+    refresh: "не сверяется"
+
+  - id: cgo_fact_columns
+    sheet: "Прогнозы ЦГО 2024-29"
+    rows: [2, 135]
+    years: [2023, 2025]
+    kind: external
+    source: "Фактические столбцы прогноза ЦГО (Центр государственного обеспечения / отраслевые министерства, ПСЭР 2025–2029, январь 2025 г.). Определения не всегда совпадают с БНС: уголь (строка 10) и электроэнергия (56) — министерские, нефть по месторождениям (13–16) и экспорт нефти (17) — МЭ. Строки, для которых есть ряд БНС (нефть, газ, зерно, рынок труда, зарплата), сверяются с пайплайном — см. model_map"
+    vintage: "2025-01"
+    owner: ministry
+    refresh: "при выходе ПСЭР 2027–2029 (документ ещё не получен — публично есть только сообщение Правительства)"
+
+  - id: cgo_forecasts
+    sheet: "Прогнозы ЦГО 2024-29"
+    rows: [2, 135]
+    years: [2026, 2030]
+    kind: external
+    source: "Прогноз ЦГО и отраслевых министерств по ПСЭР на 2025–2029 гг. (выпуск января 2025 г.): ИФО отраслей, добыча, экспорт, тарифы, МРП, МЗП, пенсии, социальные показатели, инвестиции по отраслям"
+    vintage: "2025-01"
+    owner: ministry
+    refresh: "при выходе ПСЭР 2027–2029; до этого 2026–2029 — прежний вариант, 2030 — правило модели"
+
+  # ------------------------------------------------------------ «ИОК» и «ВВП_расходы_МКИ»
+  - id: iok_history
+    sheet: "ИОК"
+    rows: [1, 140]
+    years: [1991, 2022]
+    kind: history
+    source: "Инвестиции в основной капитал по регионам и отраслям — публикации БНС прошлых лет, загружены автором"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется (пайплайн отдаёт 5546/5547/5549 с 2001 г. — можно расширить years в model_map)"
+
+  - id: iok_budget_private_split
+    sheet: "ИОК"
+    rows: [48, 49, 74]
+    years: [2023, 2025]
+    kind: external
+    source: "Бюджетные ИОК (строка 49) — экспресс-информация БНС «Об инвестициях в основной капитал» по источникам финансирования: 2 936,6 (2023), 4 098,4 (2024), 4 984,0 (2025) млрд ₸ — оперативные итоги выпусков, не совпадающие с уточнёнными годовыми (решение автора 14.09.2026, оговорка в примечаниях к ячейкам). Частные (48) = итог − бюджетные; ИФО частных (74) — расчёт автора за 2023 г."
+    vintage: "2026-09-14"
+    owner: author
+    refresh: "при выходе годовой публикации ИОК по источникам финансирования; динамической таблицы у БНС нет"
+
+  - id: mki_history
+    sheet: "ВВП_расходы_МКИ"
+    rows: [1, 170]
+    years: [1991, 2022]
+    kind: history
+    source: "ВВП методом конечного использования — публикации БНС прошлых лет, загружены автором"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется"
+
+  - id: mki_budget_split_and_constants
+    sheet: "ВВП_расходы_МКИ"
+    rows: [54, 55, 123, 125]
+    years: [2023, 2025]
+    kind: external
+    source: "Строки 54–55 — те же бюджетные/частные ИОК, что на листе «ИОК» (48–49); 123 — ИФО частных инвестиций 2023 г. (расчёт автора); 125 — изменение запасов 2023 г. = 100 (допущение автора)"
+    vintage: "2026-09-14"
+    owner: author
+    refresh: "вместе с iok_budget_private_split"
+
+  # ------------------------------------------------------------ производственные листы: история и база 2023 г.
+  - id: gva_history
+    sheet: "ВДС_производ_регионы"
+    rows: [1, 1460]
+    years: [1991, 2022]
+    kind: history
+    source: "ВДС по секциям, разделам, подклассам и регионам, натуральные объёмы — публикации БНС прошлых лет, загружены автором"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется; секции, регионы и натуральные строки за 2023–2025 сверяются пайплайном"
+
+  - id: gva_base_2023_lower_rows
+    sheet: "ВДС_производ_регионы"
+    rows: [1, 1460]
+    years: [2023, 2023]
+    kind: history
+    source: "Базовый 2023 г. ниже уровня секций (разделы 01.1–01.7, 06.1–06.2, 24.1–24.3, подклассы, их региональные блоки) — публикация БНС января 2025 г.; в пайплайне региональных разрезов ниже секций нет. Секции, ВРП, чистые налоги, натуральные строки и национальные разделы промышленности за 2023 г. сверены (см. model_map)"
+    vintage: "2025-01 (пересмотры БНС 2023 г. по регионам и секциям внесены 14.09.2026)"
+    owner: author
+    refresh: "при пересмотре БНС 2023 г. — вручную, по секциям через пайплайн"
+
+  - id: ifo_history
+    sheet: "ИФО_производ_регионы"
+    rows: [1, 1460]
+    years: [1991, 2022]
+    kind: history
+    source: "ИФО по секциям, разделам и регионам — публикации БНС прошлых лет; ИФО ВРП по регионам 2001–2023 записан 14.09.2026 из ряда БНС"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется"
+
+  - id: ifo_base_2023_lower_rows
+    sheet: "ИФО_производ_регионы"
+    rows: [1, 1460]
+    years: [2023, 2023]
+    kind: history
+    source: "ИФО 2023 г. по разделам и подклассам (01, 01.1–01.7, 05–33 и т. д.) — БНС, публикация января 2025 г.; секции сверяются пайплайном (gva_volume_index_control)"
+    vintage: "2025-01"
+    owner: author
+    refresh: "не сверяется"
+
+  - id: ifo_coal_2024_override
+    sheet: "ИФО_производ_регионы"
+    rows: [102]
+    years: [2024, 2024]
+    kind: review
+    source: "Строка «Уголь каменный» под разделом 05: в столбце 2024 г. число 99,2 среди формул (2023 и 2025 — формулы/прочерк) — ручная замена, источник не установлен"
+    vintage: "unknown"
+    owner: author
+    refresh: "решение автора: вернуть формулу или задокументировать число"
+
+  - id: deflators_history
+    sheet: "Дефляторы_производ_регионы"
+    rows: [1, 1460]
+    years: [1991, 2022]
+    kind: history
+    source: "Дефляторы по секциям, разделам и регионам — БНС и расчёт автора (ВДС / реальная ВДС)"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется"
+
+  - id: deflators_base_2023_lower_rows
+    sheet: "Дефляторы_производ_регионы"
+    rows: [1, 1460]
+    years: [2023, 2023]
+    kind: history
+    source: "Дефляторы 2023 г. по разделам и подклассам — БНС (4441) / расчёт автора; секции сверяются пайплайном (gva_deflator_sections)"
+    vintage: "2025-01"
+    owner: author
+    refresh: "не сверяется"
+
+  - id: satellites_history
+    sheet: "Занятое население"
+    rows: [1, 80]
+    years: [1991, 2022]
+    kind: history
+    source: "Занятые по видам деятельности — публикации БНС прошлых лет, загружены автором; 2023–2025 — из пайплайна (5831)"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется"
+
+  - id: ownership_history
+    sheet: "ВДС_формы_собственности"
+    rows: [1, 80]
+    years: [1991, 2022]
+    kind: history
+    source: "ВДС по формам собственности до 2010 г. — публикации БНС прошлых лет; 2010–2025 — таблица 4446 через пайплайн"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется"
+
+  - id: noe_history
+    sheet: "Ненаблюд_незакон_экономика"
+    rows: [1, 80]
+    years: [1991, 2022]
+    kind: history
+    source: "Ненаблюдаемая экономика — публикации БНС прошлых лет; 2023–2025 — таблица 4448 через пайплайн"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется"
+
+  - id: income_history
+    sheet: "ВВП_доходы"
+    rows: [1, 60]
+    years: [1991, 2022]
+    kind: history
+    source: "ВВП методом доходов — публикации БНС прошлых лет; 2023–2025 — таблицы 4452–4455 через пайплайн"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется"
+
+  # ------------------------------------------------------------ «Экспорт»
+  - id: exports_history
+    sheet: "Экспорт"
+    rows: [1, 109]
+    years: [1998, 2022]
+    kind: history
+    source: "Экспорт по 24 товарным группам, стоимость и физические объёмы — публикации БНС по основным товарам, загружены автором"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется (пайплайн отдаёт группы с 2015 г. — можно расширить years в model_map)"
+
+  - id: exports_ten_digit_rows
+    sheet: "Экспорт"
+    rows: [10, 11, 91, 92, 93, 94]
+    years: [2023, 2025]
+    kind: external
+    source: "Газовый конденсат (10/92) и «нефтепродукты» по списку основных товаров (11/93) — 10-значные позиции ТН ВЭД из публикации БНС по основным товарам, 6-значный файл их не разделяет; нефть в тоннах (91) — ссылка на «Прогнозы ЦГО» (экспорт нефти, МЭ); газ (94) — объём в м³ (БНС), в тоннах не публикуется"
+    vintage: "2025-01"
+    owner: author
+    refresh: "вручную по публикации основных товаров экспорта, либо подключить 10-значный источник"
+
+  - id: exports_price_constants
+    sheet: "Экспорт"
+    rows: [52, 53]
+    years: [2023, 2030]
+    kind: assumption
+    source: "Индекс цен для транспортных средств и «прочих» = 100 (без изменения цен) — допущение автора"
+    vintage: "unknown"
+    owner: author
+    refresh: "по решению автора"
+
+  # ------------------------------------------------------------ сателлиты и служебные листы
+  - id: productivity_satellite
+    sheet: "Производ-ть труда"
+    rows: [1, 60]
+    kind: satellite
+    source: "Производительность труда по секциям: история рассчитана автором (ВДС / занятые), с 2024 г. — формулы; на лист нет ссылок из расчёта"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не требуется"
+
+  - id: io_tables_2023_resources
+    sheet: "Лист3"
+    rows: [1, 131]
+    columns: [A, ADH]
+    kind: satellite
+    source: "Таблицы «Затраты–Выпуск» РК за 2023 г., тыс. тенге: ресурсы в основных ценах, переход к ценам покупателя (БНС); на лист нет ссылок из расчёта — справочный материал автора"
+    vintage: "2025 (таблицы ЗВ за 2023 г.)"
+    owner: bns
+    refresh: "при выходе таблиц ЗВ за 2024 г."
+
+  - id: io_tables_2023_summary
+    sheet: "Лист2"
+    rows: [1, 74]
+    columns: [A, K]
+    kind: satellite
+    source: "Таблицы «Затраты–Выпуск» РК за 2023 г., тыс. тенге — сводная таблица ресурсов (БНС); на лист нет ссылок из расчёта"
+    vintage: "2025 (таблицы ЗВ за 2023 г.)"
+    owner: bns
+    refresh: "при выходе таблиц ЗВ за 2024 г."
+
+  - id: fact_bns_calibration
+    sheet: "Факт_БНС"
+    rows: [1, 130]
+    columns: [A, Z]
+    kind: assumption
+    source: "Лист-переходник фактических лет: данные БНС в столбцах D–N и таблице 2 сверяются пайплайном; остальные числа — калибровочные коэффициенты k и соотношения внутри секций там, где БНС не публикует индекс подсекции (7 из 43 нижних строк A, B, C), расчёт модели 14.09.2026"
+    vintage: "2026-09-14"
+    owner: author
+    refresh: "пересчитываются при загрузке новых индексов"
+
+  - id: real_gva_zero_row
+    sheet: "Реал_ВДС_производ_регионы"
+    rows: [1435]
+    kind: assumption
+    source: "«Прочие строительные работы» — нулевая строка-заглушка автора во всех годах"
+    vintage: "unknown"
+    owner: author
+    refresh: "не требуется"
+
+  - id: ifo_zero_row
+    sheet: "ИФО_производ_регионы"
+    rows: [1435]
+    kind: assumption
+    source: "«Прочие строительные работы» — строка-заглушка автора (та же, что в «Реал_ВДС»), числа 2024–2030"
+    vintage: "unknown"
+    owner: author
+    refresh: "не требуется"
+
+  - id: deflators_zero_row
+    sheet: "Дефляторы_производ_регионы"
+    rows: [1435]
+    kind: assumption
+    source: "«Прочие строительные работы» — строка-заглушка автора (та же, что в «Реал_ВДС»), числа 2024–2030"
+    vintage: "unknown"
+    owner: author
+    refresh: "не требуется"
+
+  - id: ifo_electricity_subsections_2024
+    sheet: "ИФО_производ_регионы"
+    rows: [975, 998, 1000]
+    years: [2024, 2024]
+    kind: review
+    source: "ИФО 2024 г. подсекций электроэнергетики 35.1–35.3 — числа среди пустых ячеек (ВДС 2024–2025 и ИФО 2025 по ним пусты); БНС годовых данных по подсекциям не публикует, источник не установлен"
+    vintage: "unknown"
+    owner: author
+    refresh: "решение автора: источник или удалить"
+
+  - id: derived_sheets_literal_numbers
+    sheet: "Вклад_в_ВВП_производ_регионы"
+    rows: [301]
+    years: [2022, 2023]
+    kind: review
+    source: "Строка «г.Алматы» в блоке молока: числа 6 310 и 2 580 среди формул (соседние строки ссылаются на ВДС) — та же пара чисел стоит в листах «Доля_в_ВВП…» и «Структура_ВДС…»; вероятно, остаток ручной правки"
+    vintage: "unknown"
+    owner: author
+    refresh: "решение автора: вернуть формулы"
+
+  - id: derived_sheets_literal_numbers_share
+    sheet: "Доля_в_ВВП_производ_регионы"
+    rows: [301]
+    years: [2022, 2023]
+    kind: review
+    source: "см. derived_sheets_literal_numbers"
+    vintage: "unknown"
+    owner: author
+    refresh: "решение автора"
+
+  - id: derived_sheets_literal_numbers_structure
+    sheet: "Структура_ВДС_производ_регионы"
+    rows: [301]
+    years: [2022, 2023]
+    kind: review
+    source: "см. derived_sheets_literal_numbers"
+    vintage: "unknown"
+    owner: author
+    refresh: "решение автора"
+
+  - id: derived_sheets_history
+    sheet: "Вклад_в_ВВП_производ_регионы"
+    rows: [1, 1460]
+    years: [1991, 2022]
+    kind: history
+    source: "Числа в производных листах за прошлые годы (вклады, доли, структура — там, где формулы заменены значениями автором)"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется"
+
+  - id: derived_sheets_history_share
+    sheet: "Доля_в_ВВП_производ_регионы"
+    rows: [1, 1460]
+    years: [1991, 2022]
+    kind: history
+    source: "см. derived_sheets_history"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется"
+
+  - id: derived_sheets_history_share_industry
+    sheet: "Доля_по_отрасл_производ_регионы"
+    rows: [1, 1460]
+    years: [1991, 2023]
+    kind: history
+    source: "см. derived_sheets_history"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется"
+
+  - id: derived_sheets_history_structure
+    sheet: "Структура_ВДС_производ_регионы"
+    rows: [1, 1460]
+    years: [1991, 2022]
+    kind: history
+    source: "см. derived_sheets_history"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется"
+
+  - id: derived_sheets_history_real
+    sheet: "Реал_ВДС_производ_регионы"
+    rows: [1, 1460]
+    years: [1991, 2022]
+    kind: history
+    source: "см. derived_sheets_history"
+    vintage: "до 2025-01"
+    owner: author
+    refresh: "не сверяется"

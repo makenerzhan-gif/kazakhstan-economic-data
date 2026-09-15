@@ -73,6 +73,33 @@ python scripts/model_sync.py --model path.xlsx --apply --out path_synced.xlsx
 This step is deliberately not part of `update_all.py`: the model is a hand-run
 file on the analyst's disk, not a pipeline artefact.
 
+### Every number has a source
+
+`config/manual_inputs.yaml` records the provenance, vintage, owner and refresh rule
+of every block of numbers in the model that is not a pipeline series — the
+history loaded by hand before 2025, the ministries' forecasts («Прогнозы ЦГО»),
+the author's assumptions, the reference sheets — and flags the few literal numbers
+that sit where a formula or a source would be expected (`kind: review`).
+`scripts/model_coverage.py` walks every literal number in the workbook and reports
+what neither `model_map.yaml` nor `manual_inputs.yaml` claims; `--strict` exits 1
+when anything is unclaimed. `config/calendar.yaml` holds the release rhythms the
+sources do not publish machine-readably (CMO, Pink Sheet, STEO, WEO, the PSER
+document, the BNS express releases) and the refresh procedure;
+`scripts/build_calendar.py` joins it with the «Дата следующей актуализации» the BNS
+tables state in their own metadata sheet (kept in `metadata/bns/*.json`) into
+`project_knowledge/CALENDAR.md` — the next date for every series the model reads,
+overdue ones flagged. `update_all.py` rebuilds it daily.
+
+Refresh procedure, in order (also in `config/calendar.yaml`):
+
+```bash
+python scripts/update_all.py
+python scripts/model_sync.py
+python scripts/model_sync.py --apply --out <copy>
+python scripts/model_coverage.py --strict
+python scripts/build_calendar.py
+```
+
 ## Item-level series (breakdowns)
 
 `macro_long.csv` promises one value per (date, variable). Breakdowns — GVA by
