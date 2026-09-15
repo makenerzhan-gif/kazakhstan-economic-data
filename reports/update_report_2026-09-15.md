@@ -1,6 +1,6 @@
 # Update report — 2026-09-15
 
-Run timestamp: 2026-09-15T06:49:21.666547
+Run timestamp: 2026-09-15T08:25:53.930177
 Unified dataset updated: True
 Tests passed: True
 
@@ -387,30 +387,38 @@ Tests passed: True
   - warning: Unexpected jump of 177.8% in value between 2025-04-01 (-1030.042341) and 2025-07-01 (-2861.708944).
   - warning: Unexpected jump of 81.0% in value between 2025-07-01 (-2861.708944) and 2026-01-01 (-5180.443517).
   - warning: Unexpected jump of 61.2% in value between 2026-01-01 (-5180.443517) and 2026-04-01 (-2008.012157).
-- **nbk/BOP_GOODS_BALANCE** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/BOP_GOODS_BALANCE
-WHAT CHANGED: no rows in formId=324 match {'account_type_code': 'Current account', 'type': 'mln USD', 'period': 'quarter', 'code': 'Goods', 'instrument_type_code': 'Goods and services', 'instrument_subtype1_code': 'Goods'} with no other classification field set
-EXPECTED: one value per quarter for exactly this balance-of-payments line
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=324 and update scripts/fetchers/nbk.py
-- **nbk/BOP_SERVICES_BALANCE** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/BOP_SERVICES_BALANCE
-WHAT CHANGED: no rows in formId=324 match {'account_type_code': 'Current account', 'type': 'mln USD', 'period': 'quarter', 'code': 'Services', 'instrument_type_code': 'Goods and services', 'instrument_subtype1_code': 'Services'} with no other classification field set
-EXPECTED: one value per quarter for exactly this balance-of-payments line
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=324 and update scripts/fetchers/nbk.py
-- **nbk/BOP_PRIMARY_INCOME** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/BOP_PRIMARY_INCOME
-WHAT CHANGED: no rows in formId=324 match {'account_type_code': 'Current account', 'type': 'mln USD', 'period': 'quarter', 'code': 'Primary income', 'instrument_type_code': 'Primary income'} with no other classification field set
-EXPECTED: one value per quarter for exactly this balance-of-payments line
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=324 and update scripts/fetchers/nbk.py
-- **nbk/BOP_SECONDARY_INCOME** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/BOP_SECONDARY_INCOME
-WHAT CHANGED: no rows in formId=324 match {'account_type_code': 'Current account', 'type': 'mln USD', 'period': 'quarter', 'code': 'Secondary income', 'instrument_type_code': 'Secondary income'} with no other classification field set
-EXPECTED: one value per quarter for exactly this balance-of-payments line
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=324 and update scripts/fetchers/nbk.py
+- **nbk/BOP_GOODS_BALANCE** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 184 days between 2025-07-01 and 2026-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 101.2% in value between 2020-04-01 (4229.801801) and 2020-07-01 (-48.73738356).
+  - warning: Unexpected jump of 79.3% in value between 2020-07-01 (-48.73738356) and 2020-10-01 (-87.38074753).
+  - warning: Unexpected jump of 2291.9% in value between 2020-10-01 (-87.38074753) and 2021-01-01 (1915.301376).
+  - warning: Unexpected jump of 191.3% in value between 2021-01-01 (1915.301376) and 2021-04-01 (5578.72849).
+  - warning: Unexpected jump of 60.9% in value between 2022-01-01 (7549.247832) and 2022-04-01 (12147.66415).
+  - warning: Unexpected jump of 114.1% in value between 2025-01-01 (2398.772959) and 2025-04-01 (5136.459851).
+  - warning: Unexpected jump of 88.0% in value between 2025-07-01 (2751.965382) and 2026-01-01 (329.801885).
+  - warning: Unexpected jump of 1133.7% in value between 2026-01-01 (329.801885) and 2026-04-01 (4068.863836).
+- **nbk/BOP_SERVICES_BALANCE** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 184 days between 2025-07-01 and 2026-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 163.7% in value between 2022-10-01 (-206.7770768) and 2023-01-01 (-545.2781485).
+  - warning: Unexpected jump of 58.7% in value between 2025-04-01 (-206.5478619) and 2025-07-01 (-327.7333122).
+  - warning: Unexpected jump of 51.7% in value between 2026-01-01 (-453.717197) and 2026-04-01 (-219.085907).
+- **nbk/BOP_PRIMARY_INCOME** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 184 days between 2025-07-01 and 2026-01-01 is outside expected range for frequency=quarterly (80-100d).
+- **nbk/BOP_SECONDARY_INCOME** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 184 days between 2025-07-01 and 2026-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 139.1% in value between 2020-04-01 (57.4467333) and 2020-07-01 (-22.45868373).
+  - warning: Unexpected jump of 229.8% in value between 2020-07-01 (-22.45868373) and 2020-10-01 (29.14823717).
+  - warning: Unexpected jump of 4296.7% in value between 2020-10-01 (29.14823717) and 2021-01-01 (1281.56756).
+  - warning: Unexpected jump of 109.9% in value between 2021-01-01 (1281.56756) and 2021-04-01 (-127.4366969).
+  - warning: Unexpected jump of 76.9% in value between 2021-04-01 (-127.4366969) and 2021-07-01 (-225.456334).
+  - warning: Unexpected jump of 58.2% in value between 2021-10-01 (-198.6415376) and 2022-01-01 (-83.11141562).
+  - warning: Unexpected jump of 300.5% in value between 2022-01-01 (-83.11141562) and 2022-04-01 (-332.8594033).
+  - warning: Unexpected jump of 61.5% in value between 2023-04-01 (-198.8091963) and 2023-07-01 (-321.1664373).
+  - warning: Unexpected jump of 72.5% in value between 2024-01-01 (-268.5742348) and 2024-04-01 (-73.72640656).
+  - warning: Unexpected jump of 69.4% in value between 2024-07-01 (-103.6553972) and 2024-10-01 (-175.6142774).
+  - warning: Unexpected jump of 145.4% in value between 2025-04-01 (-99.72807162) and 2025-07-01 (-244.6962967).
+  - warning: Unexpected jump of 67.7% in value between 2025-07-01 (-244.6962967) and 2026-01-01 (-79.09401).
+  - warning: Unexpected jump of 224.8% in value between 2026-01-01 (-79.09401) and 2026-04-01 (98.708601).
 - **nbk/EXCHANGE_RATE_CNY_KASE** — fetch: structural_change (downloaded=0, processed=0)
   - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXCHANGE_RATE_CNY_KASE
 WHAT CHANGED: no rows in formId=35 match {'type': 'Average exchange rate on KASE end of period (tenge)', 'currency': 'Chinese renminbi (yuan)'} with no other classification field set
@@ -435,30 +443,14 @@ WHAT CHANGED: no rows in formId=35 match {'type': 'Volume of trade on KASE for t
 EXPECTED: one row per period for exactly this series
 ACTUAL: zero matching rows
 ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=35 and update scripts/fetchers/nbk.py
-- **nbk/PAYMENTS_TOTAL_COUNT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/PAYMENTS_TOTAL_COUNT
-WHAT CHANGED: no rows in formId=418 match {'period': 'Month', 'type': 'thsd. transactions', 'payment_instrument': 'Total'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=418 and update scripts/fetchers/nbk.py
-- **nbk/PAYMENT_CARDS_COUNT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/PAYMENT_CARDS_COUNT
-WHAT CHANGED: no rows in formId=418 match {'period': 'Month', 'type': 'thsd. transactions', 'payment_instrument': 'Payment cards, including:'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=418 and update scripts/fetchers/nbk.py
-- **nbk/CASHLESS_PAYMENTS_COUNT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/CASHLESS_PAYMENTS_COUNT
-WHAT CHANGED: no rows in formId=418 match {'period': 'Month', 'type': 'thsd. transactions', 'payment_instrument': 'cashless payments'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=418 and update scripts/fetchers/nbk.py
-- **nbk/CASH_WITHDRAWALS_COUNT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/CASH_WITHDRAWALS_COUNT
-WHAT CHANGED: no rows in formId=418 match {'period': 'Month', 'type': 'thsd. transactions', 'payment_instrument': 'cash withdrawals'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=418 and update scripts/fetchers/nbk.py
+- **nbk/PAYMENTS_TOTAL_COUNT** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/PAYMENT_CARDS_COUNT** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/CASHLESS_PAYMENTS_COUNT** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/CASH_WITHDRAWALS_COUNT** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
 - **nbk/REMITTANCES_SENT_COUNT** — fetch: structural_change (downloaded=0, processed=0)
   - ERROR: STRUCTURAL CHANGE DETECTED in nbk/REMITTANCES_SENT_COUNT
 WHAT CHANGED: no rows in formId=412 match {'period': 'Month', 'type': 'thsd. transactions', 'money_transfer_sign': 'money transfers sent'} with no other classification field set
@@ -535,72 +527,62 @@ ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=412 and
 - **nbk/ENTERPRISE_DEBT_BURDEN** — fetch+validate+process: ok (downloaded=26, processed=26)
 - **nbk/EXPORTERS_SHARE** — fetch+validate+process: ok (downloaded=26, processed=26)
 - **nbk/IMPORTERS_SHARE** — fetch+validate+process: ok (downloaded=26, processed=26)
-- **nbk/PAYMENTS_TOTAL_VALUE** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/PAYMENTS_TOTAL_VALUE
-WHAT CHANGED: no rows in formId=419 match {'period': 'Month', 'type': 'billions KZT', 'payment_instrument': 'Total'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=419 and update scripts/fetchers/nbk.py
-- **nbk/CASHLESS_PAYMENTS_VALUE** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/CASHLESS_PAYMENTS_VALUE
-WHAT CHANGED: no rows in formId=419 match {'period': 'Month', 'type': 'billions KZT', 'payment_instrument': 'cashless payments'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=419 and update scripts/fetchers/nbk.py
-- **nbk/CASH_WITHDRAWALS_VALUE** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/CASH_WITHDRAWALS_VALUE
-WHAT CHANGED: no rows in formId=419 match {'period': 'Month', 'type': 'billions KZT', 'payment_instrument': 'cash withdrawals'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=419 and update scripts/fetchers/nbk.py
-- **nbk/PAYMENT_CARDS_VALUE** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/PAYMENT_CARDS_VALUE
-WHAT CHANGED: no rows in formId=419 match {'period': 'Month', 'type': 'billions KZT', 'payment_instrument': 'Payment cards, including:'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=419 and update scripts/fetchers/nbk.py
+- **nbk/PAYMENTS_TOTAL_VALUE** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/CASHLESS_PAYMENTS_VALUE** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/CASH_WITHDRAWALS_VALUE** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/PAYMENT_CARDS_VALUE** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
 - **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_KZT** — fetch+validate+process: ok (downloaded=44, processed=44)
 - **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_FX** — fetch+validate+process: ok (downloaded=44, processed=44)
 - **nbk/HOUSEHOLD_DEPOSITS_DEMAND_KZT** — fetch+validate+process: ok (downloaded=44, processed=44)
 - **nbk/HOUSEHOLD_DEPOSITS_DEMAND_FX** — fetch+validate+process: ok (downloaded=44, processed=44)
 - **nbk/HOUSEHOLD_DEPOSITS_SAVING_KZT** — fetch+validate+process: ok (downloaded=44, processed=44)
 - **nbk/HOUSEHOLD_DEPOSITS_SAVING_FX** — fetch+validate+process: ok (downloaded=44, processed=44)
-- **nbk/LOANS_BUSINESS_KZT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/LOANS_BUSINESS_KZT
-WHAT CHANGED: no rows in formId=445 match {'period': 'Month', 'type': 'mln. of KZT, end of period', 'creditors': 'Banking sector', 'currency': 'National currency', 'subject_type': 'Business'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=445 and update scripts/fetchers/nbk.py
-- **nbk/LOANS_BUSINESS_FX** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/LOANS_BUSINESS_FX
-WHAT CHANGED: no rows in formId=445 match {'period': 'Month', 'type': 'mln. of KZT, end of period', 'creditors': 'Banking sector', 'currency': 'Foreign currency', 'subject_type': 'Business'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=445 and update scripts/fetchers/nbk.py
-- **nbk/LOANS_INDIVIDUALS_KZT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/LOANS_INDIVIDUALS_KZT
-WHAT CHANGED: no rows in formId=445 match {'period': 'Month', 'type': 'mln. of KZT, end of period', 'creditors': 'Banking sector', 'currency': 'National currency', 'subject_type': 'Individuals'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=445 and update scripts/fetchers/nbk.py
-- **nbk/LOANS_INDIVIDUALS_FX** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/LOANS_INDIVIDUALS_FX
-WHAT CHANGED: no rows in formId=445 match {'period': 'Month', 'type': 'mln. of KZT, end of period', 'creditors': 'Banking sector', 'currency': 'Foreign currency', 'subject_type': 'Individuals'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=445 and update scripts/fetchers/nbk.py
-- **nbk/LOANS_MICROFINANCE_INDIVIDUALS** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/LOANS_MICROFINANCE_INDIVIDUALS
-WHAT CHANGED: no rows in formId=445 match {'period': 'Month', 'type': 'mln. of KZT, end of period', 'creditors': 'Microfinance activities', 'currency': 'National currency', 'subject_type': 'Individuals'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=445 and update scripts/fetchers/nbk.py
-- **nbk/LOANS_MICROFINANCE_BUSINESS** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/LOANS_MICROFINANCE_BUSINESS
-WHAT CHANGED: no rows in formId=445 match {'period': 'Month', 'type': 'mln. of KZT, end of period', 'creditors': 'Microfinance activities', 'currency': 'National currency', 'subject_type': 'Business'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=445 and update scripts/fetchers/nbk.py
+- **nbk/LOANS_BUSINESS_KZT** — fetch+validate+process: ok (downloaded=43, processed=43)
+  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/LOANS_BUSINESS_FX** — fetch+validate+process: ok (downloaded=43, processed=43)
+  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/LOANS_INDIVIDUALS_KZT** — fetch+validate+process: ok (downloaded=43, processed=43)
+  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/LOANS_INDIVIDUALS_FX** — fetch+validate+process: ok (downloaded=43, processed=43)
+  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/LOANS_MICROFINANCE_INDIVIDUALS** — fetch+validate+process: ok (downloaded=43, processed=43)
+  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/LOANS_MICROFINANCE_BUSINESS** — fetch+validate+process: ok (downloaded=43, processed=43)
+  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
 - **nbk/EXTERNAL_DEBT_LONG_TERM** — fetch+validate+process: ok (downloaded=47, processed=47)
 - **nbk/EXTERNAL_DEBT_SHORT_TERM** — fetch+validate+process: ok (downloaded=47, processed=47)
 - **nbk/PRIVATE_EXTERNAL_DEBT_INTERCOMPANY** — fetch+validate+process: ok (downloaded=47, processed=47)
@@ -611,66 +593,36 @@ WHAT CHANGED: no rows in formId=476 match {'period': 'quarter', 'type': 'pieces'
 EXPECTED: one row per period for exactly this series
 ACTUAL: zero matching rows
 ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=476 and update scripts/fetchers/nbk.py
-- **nbk/REMITTANCES_SENT_USD** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/REMITTANCES_SENT_USD
-WHAT CHANGED: no rows in formId=411 match {'period': 'Month', 'type': 'mln. KZT', 'currency_code': 'US Dollar', 'money_transfer_sign': 'money transfers sent'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=411 and update scripts/fetchers/nbk.py
-- **nbk/REMITTANCES_SENT_KZT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/REMITTANCES_SENT_KZT
-WHAT CHANGED: no rows in formId=411 match {'period': 'Month', 'type': 'mln. KZT', 'currency_code': 'Tenge', 'money_transfer_sign': 'money transfers sent'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=411 and update scripts/fetchers/nbk.py
-- **nbk/REMITTANCES_SENT_RUB** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/REMITTANCES_SENT_RUB
-WHAT CHANGED: no rows in formId=411 match {'period': 'Month', 'type': 'mln. KZT', 'currency_code': 'Rubles', 'money_transfer_sign': 'money transfers sent'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=411 and update scripts/fetchers/nbk.py
-- **nbk/REMITTANCES_RECEIVED_USD** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/REMITTANCES_RECEIVED_USD
-WHAT CHANGED: no rows in formId=411 match {'period': 'Month', 'type': 'mln. KZT', 'currency_code': 'US Dollar', 'money_transfer_sign': 'money transfers received'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=411 and update scripts/fetchers/nbk.py
-- **nbk/REMITTANCES_RECEIVED_KZT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/REMITTANCES_RECEIVED_KZT
-WHAT CHANGED: no rows in formId=411 match {'period': 'Month', 'type': 'mln. KZT', 'currency_code': 'Tenge', 'money_transfer_sign': 'money transfers received'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=411 and update scripts/fetchers/nbk.py
-- **nbk/REMITTANCES_RECEIVED_RUB** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/REMITTANCES_RECEIVED_RUB
-WHAT CHANGED: no rows in formId=411 match {'period': 'Month', 'type': 'mln. KZT', 'currency_code': 'Rubles', 'money_transfer_sign': 'money transfers received'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=411 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_GOV_LOANS_LT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_GOV_LOANS_LT
-WHAT CHANGED: no rows in formId=293 match {'maturity': 'Long-term', 'period': 'quarter', 'type': 'USD mln', 'investment_type': 'Loans ', 'sector_economy_type': 'General Government'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=293 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_BANKS_LOANS_LT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_BANKS_LOANS_LT
-WHAT CHANGED: no rows in formId=293 match {'maturity': 'Long-term', 'period': 'quarter', 'type': 'USD mln', 'investment_type': 'Loans ', 'sector_economy_type': 'Banks'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=293 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_BANKS_SECURITIES_LT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_BANKS_SECURITIES_LT
-WHAT CHANGED: no rows in formId=293 match {'maturity': 'Long-term', 'period': 'quarter', 'type': 'USD mln', 'investment_type': 'Debt securities ', 'sector_economy_type': 'Banks'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=293 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_OTHER_SECURITIES_LT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_OTHER_SECURITIES_LT
-WHAT CHANGED: no rows in formId=293 match {'maturity': 'Long-term', 'period': 'quarter', 'type': 'USD mln', 'investment_type': 'Debt securities ', 'sector_economy_type': 'Other Sectors'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=293 and update scripts/fetchers/nbk.py
+- **nbk/REMITTANCES_SENT_USD** — fetch+validate+process: ok (downloaded=59, processed=59)
+- **nbk/REMITTANCES_SENT_KZT** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 65.3% in value between 2021-12-01 (7535.75044157) and 2022-01-01 (2616.94285723).
+  - warning: Unexpected jump of 63.8% in value between 2022-01-01 (2616.94285723) and 2022-02-01 (4287.82910448).
+  - warning: Unexpected jump of 84.3% in value between 2022-03-01 (5095.81663903) and 2022-04-01 (9390.57069132).
+  - warning: Unexpected jump of 52.7% in value between 2022-04-01 (9390.57069132) and 2022-05-01 (14339.6470739).
+  - warning: Unexpected jump of 79.4% in value between 2022-06-01 (13597.55890139) and 2022-07-01 (24396.72373385).
+- **nbk/REMITTANCES_SENT_RUB** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 70.6% in value between 2022-02-01 (4921.3584205) and 2022-03-01 (8394.11491677).
+  - warning: Unexpected jump of 69.3% in value between 2022-03-01 (8394.11491677) and 2022-04-01 (14209.19187954).
+  - warning: Unexpected jump of 55.6% in value between 2022-12-01 (12272.84606747) and 2023-01-01 (5444.04381183).
+- **nbk/REMITTANCES_RECEIVED_USD** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 131.7% in value between 2022-03-01 (16433.033167949) and 2022-04-01 (38079.979214164).
+- **nbk/REMITTANCES_RECEIVED_KZT** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 53.0% in value between 2021-12-01 (7228.53167229) and 2022-01-01 (3394.3982902).
+  - warning: Unexpected jump of 94.2% in value between 2022-03-01 (4486.05744728) and 2022-04-01 (8713.61985846).
+  - warning: Unexpected jump of 62.9% in value between 2022-04-01 (8713.61985846) and 2022-05-01 (14194.89113365).
+  - warning: Unexpected jump of 71.2% in value between 2022-06-01 (15181.31978941) and 2022-07-01 (25995.12395873).
+- **nbk/REMITTANCES_RECEIVED_RUB** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 52.1% in value between 2021-12-01 (1743.38269675) and 2022-01-01 (834.67709836).
+  - warning: Unexpected jump of 141.4% in value between 2022-02-01 (1181.43375686) and 2022-03-01 (2851.80089685).
+- **nbk/EXTERNAL_DEBT_GOV_LOANS_LT** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **nbk/EXTERNAL_DEBT_BANKS_LOANS_LT** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 121.3% in value between 2022-01-01 (1541.171104) and 2022-04-01 (3411.103104).
+  - warning: Unexpected jump of 61.5% in value between 2022-07-01 (4404.157104) and 2022-10-01 (1697.076104).
+  - warning: Unexpected jump of 62.1% in value between 2025-04-01 (1852.913104) and 2025-07-01 (3002.922104).
+- **nbk/EXTERNAL_DEBT_BANKS_SECURITIES_LT** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 97.1% in value between 2024-04-01 (510.06002) and 2024-07-01 (1005.192055).
+  - warning: Unexpected jump of 60.3% in value between 2025-10-01 (2242.385139) and 2026-01-01 (3593.993792).
+- **nbk/EXTERNAL_DEBT_OTHER_SECURITIES_LT** — fetch+validate+process: ok (downloaded=26, processed=26)
 - **nbk/GOV_SECURITIES_SECONDARY_NBK_NOTES** — fetch+validate+process: ok (downloaded=44, processed=44)
   - warning: Unexpected jump of 82.2% in value between 2023-06-01 (900203.22013916) and 2023-07-01 (160459.44686594).
   - warning: Unexpected jump of 66.6% in value between 2023-08-01 (208770.41759544) and 2023-09-01 (347858.35572444).
@@ -729,138 +681,176 @@ ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=41 and 
 - **nbk/OFC_CLAIMS_ON_NONRESIDENTS** — fetch+validate+process: ok (downloaded=15, processed=15)
 - **nbk/OFC_LIABILITIES_TO_NONRESIDENTS** — fetch+validate+process: ok (downloaded=15, processed=15)
 - **nbk/OFC_CLAIMS_ON_BANKING_SYSTEM** — fetch+validate+process: ok (downloaded=15, processed=15)
-- **nbk/EXTERNAL_DEBT_GENERAL_GOVERNMENT** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_GENERAL_GOVERNMENT
-WHAT CHANGED: no rows in formId=349 match {'class_type': 'Debt', 'ed_code': 'External Debt - General Government', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=349 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_CENTRAL_BANK** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_CENTRAL_BANK
-WHAT CHANGED: no rows in formId=349 match {'class_type': 'Debt', 'ed_code': 'External Debt - Central Bank', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=349 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_BANKS** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_BANKS
-WHAT CHANGED: no rows in formId=349 match {'class_type': 'Debt', 'ed_code': 'External Debt - Banks', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=349 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_OTHER_SECTORS** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_OTHER_SECTORS
-WHAT CHANGED: no rows in formId=349 match {'class_type': 'Debt', 'ed_code': 'External Debt - Other Sectors', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=349 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_EX_INTERCOMPANY** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_EX_INTERCOMPANY
-WHAT CHANGED: no rows in formId=349 match {'class_type': 'Debt', 'ed_code': 'External Debt - Reference: ED not included intercompany lending', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=349 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_PUBLIC_SECTOR** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_PUBLIC_SECTOR
-WHAT CHANGED: no rows in formId=350 match {'class_type': 'Debt', 'ed_code': 'External Debt - Reference: Public sector ED', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=350 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_PRIVATE_SECTOR** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_PRIVATE_SECTOR
-WHAT CHANGED: no rows in formId=350 match {'class_type': 'Debt', 'ed_code': 'External Debt - Private sector ED', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=350 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_GOV_GUARANTEED** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_GOV_GUARANTEED
-WHAT CHANGED: no rows in formId=350 match {'class_type': 'Debt', 'ed_code': 'External Debt - Reference: Government and government guaranteed ED', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=350 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_LOANS** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_LOANS
-WHAT CHANGED: no rows in formId=351 match {'class_type': 'Debt', 'ed_code': 'External Debt - Loans', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=351 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_DEBT_SECURITIES** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_DEBT_SECURITIES
-WHAT CHANGED: no rows in formId=351 match {'class_type': 'Debt', 'ed_code': 'External Debt - Debt securities', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=351 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_TRADE_CREDITS** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_TRADE_CREDITS
-WHAT CHANGED: no rows in formId=351 match {'class_type': 'Debt', 'ed_code': 'External Debt - Trade credits and advances', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=351 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_CURRENCY_DEPOSITS** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_CURRENCY_DEPOSITS
-WHAT CHANGED: no rows in formId=351 match {'class_type': 'Debt', 'ed_code': 'External Debt - Currency and deposits', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=351 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_SDR** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_SDR
-WHAT CHANGED: no rows in formId=351 match {'class_type': 'Debt', 'ed_code': 'External Debt - Special drawing rights', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=351 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_OTHER_LIABILITIES** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_OTHER_LIABILITIES
-WHAT CHANGED: no rows in formId=351 match {'class_type': 'Debt', 'ed_code': 'External Debt - Other debt liabilities', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=351 and update scripts/fetchers/nbk.py
-- **nbk/EXTERNAL_DEBT_DUE_WITHIN_YEAR** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/EXTERNAL_DEBT_DUE_WITHIN_YEAR
-WHAT CHANGED: no rows in formId=348 match {'class_type': 'Debt', 'ed_code': 'External Debt- Reference: ED due for payment within one year', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=348 and update scripts/fetchers/nbk.py
-- **nbk/RESERVES_AND_NATIONAL_FUND** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/RESERVES_AND_NATIONAL_FUND
-WHAT CHANGED: no rows in formId=485 match {'account_type_code': 'financial', 'code': 'Reserve assets + Foreign assets of the National Fund,  end of period ', 'investment_type_code': 'Reserve assets and National Fund', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=485 and update scripts/fetchers/nbk.py
-- **nbk/RESERVES_AND_NF_IMPORT_COVER** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/RESERVES_AND_NF_IMPORT_COVER
-WHAT CHANGED: no rows in formId=485 match {'account_type_code': 'financial', 'code': 'Reserve assets and National Fund  in months of import of goods and services', 'investment_type_code': 'Reserve assets and National Fund', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=485 and update scripts/fetchers/nbk.py
-- **nbk/RESERVES_AND_NF_GDP_SHARE** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/RESERVES_AND_NF_GDP_SHARE
-WHAT CHANGED: no rows in formId=485 match {'account_type_code': 'financial', 'code': 'in % of GDP2', 'investment_type_code': 'Reserve assets and National Fund', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=485 and update scripts/fetchers/nbk.py
-- **nbk/NATIONAL_FUND_GDP_SHARE** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/NATIONAL_FUND_GDP_SHARE
-WHAT CHANGED: no rows in formId=485 match {'account_type_code': 'financial', 'code': 'in % of GDP2', 'investment_type_code': 'National Fund', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=485 and update scripts/fetchers/nbk.py
-- **nbk/RESERVE_ASSETS_GDP_SHARE** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/RESERVE_ASSETS_GDP_SHARE
-WHAT CHANGED: no rows in formId=485 match {'account_type_code': 'financial', 'code': 'in % of GDP2', 'investment_type_code': 'Reserve assets NBK', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=485 and update scripts/fetchers/nbk.py
-- **nbk/FINANCIAL_ACCOUNT_BALANCE** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/FINANCIAL_ACCOUNT_BALANCE
-WHAT CHANGED: no rows in formId=485 match {'account_type_code': 'financial', 'code': 'Financial account (excluding reserve assets)', 'investment_type_code': 'financial', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=485 and update scripts/fetchers/nbk.py
-- **nbk/BOP_OVERALL_BALANCE_GDP_SHARE** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in nbk/BOP_OVERALL_BALANCE_GDP_SHARE
-WHAT CHANGED: no rows in formId=485 match {'account_type_code': 'Overall balance', 'code': 'in % of GDP1', 'investment_type_code': 'Overall balance', 'period': 'quarter', 'type': 'USD mln'} with no other classification field set
-EXPECTED: one row per period for exactly this series
-ACTUAL: zero matching rows
-ACTION REQUIRED: inspect https://data.nationalbank.kz/api/v1/data?formId=485 and update scripts/fetchers/nbk.py
+- **nbk/EXTERNAL_DEBT_GENERAL_GOVERNMENT** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_CENTRAL_BANK** — fetch+validate+process: ok (downloaded=49, processed=49)
+  - warning: Unexpected jump of 105.0% in value between 2018-01-01 (926.315338) and 2018-04-01 (1899.180947).
+  - warning: Unexpected jump of 65.0% in value between 2020-10-01 (805.595509) and 2021-01-01 (1329.369253).
+  - warning: Unexpected jump of 78.0% in value between 2021-07-01 (1714.690681) and 2021-10-01 (3051.342042).
+- **nbk/EXTERNAL_DEBT_BANKS** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_OTHER_SECTORS** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_EX_INTERCOMPANY** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_PUBLIC_SECTOR** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_PRIVATE_SECTOR** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_GOV_GUARANTEED** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_LOANS** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_DEBT_SECURITIES** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_TRADE_CREDITS** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_CURRENCY_DEPOSITS** — fetch+validate+process: ok (downloaded=49, processed=49)
+  - warning: Unexpected jump of 66.9% in value between 2022-07-01 (2461.514757) and 2022-10-01 (4108.944138).
+- **nbk/EXTERNAL_DEBT_SDR** — fetch+validate+process: ok (downloaded=49, processed=49)
+  - warning: Unexpected jump of 315.7% in value between 2021-07-01 (495.690733) and 2021-10-01 (2060.49031).
+- **nbk/EXTERNAL_DEBT_OTHER_LIABILITIES** — fetch+validate+process: ok (downloaded=49, processed=49)
+  - warning: Unexpected jump of 50.3% in value between 2017-07-01 (1445.802869) and 2017-10-01 (2172.574489).
+  - warning: Unexpected jump of 57.5% in value between 2017-10-01 (2172.574489) and 2018-01-01 (923.512828).
+  - warning: Unexpected jump of 68.3% in value between 2021-01-01 (799.938294) and 2021-04-01 (1346.108917).
+  - warning: Unexpected jump of 54.3% in value between 2021-10-01 (1292.050422) and 2022-01-01 (1993.129368).
+  - warning: Unexpected jump of 84.6% in value between 2025-01-01 (2455.07651) and 2025-04-01 (4530.964698).
+- **nbk/EXTERNAL_DEBT_DUE_WITHIN_YEAR** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/RESERVES_AND_NATIONAL_FUND** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **nbk/RESERVES_AND_NF_IMPORT_COVER** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **nbk/RESERVES_AND_NF_GDP_SHARE** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **nbk/NATIONAL_FUND_GDP_SHARE** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **nbk/RESERVE_ASSETS_GDP_SHARE** — fetch+validate+process: ok (downloaded=85, processed=85)
+  - warning: Unexpected jump of 97.5% in value between 2016-07-01 (11.629221) and 2016-10-01 (22.969044).
+- **nbk/FINANCIAL_ACCOUNT_BALANCE** — fetch+validate+process: ok (downloaded=85, processed=85)
+  - warning: Unexpected jump of 239.3% in value between 2005-04-01 (408.144181) and 2005-07-01 (1384.938676).
+  - warning: Unexpected jump of 106.1% in value between 2005-07-01 (1384.938676) and 2005-10-01 (-84.101483).
+  - warning: Unexpected jump of 795.4% in value between 2005-10-01 (-84.101483) and 2006-01-01 (584.845981).
+  - warning: Unexpected jump of 594.7% in value between 2006-01-01 (584.845981) and 2006-04-01 (-2893.374924).
+  - warning: Unexpected jump of 55.0% in value between 2006-07-01 (-2104.066685) and 2006-10-01 (-946.646455).
+  - warning: Unexpected jump of 519.0% in value between 2006-10-01 (-946.646455) and 2007-01-01 (-5859.3395).
+  - warning: Unexpected jump of 70.5% in value between 2007-01-01 (-5859.3395) and 2007-04-01 (-1727.743042).
+  - warning: Unexpected jump of 68.8% in value between 2007-04-01 (-1727.743042) and 2007-07-01 (-2916.879349).
+  - warning: Unexpected jump of 157.5% in value between 2007-07-01 (-2916.879349) and 2007-10-01 (1675.92162).
+  - warning: Unexpected jump of 82.6% in value between 2008-01-01 (975.076658) and 2008-04-01 (1780.609202).
+  - warning: Unexpected jump of 105.1% in value between 2008-07-01 (1425.073239) and 2008-10-01 (-73.275268).
+  - warning: Unexpected jump of 1881.4% in value between 2008-10-01 (-73.275268) and 2009-01-01 (-1451.877691).
+  - warning: Unexpected jump of 55.5% in value between 2009-04-01 (-1171.594212) and 2009-07-01 (-521.468936).
+  - warning: Unexpected jump of 227.9% in value between 2009-07-01 (-521.468936) and 2009-10-01 (-1709.920887).
+  - warning: Unexpected jump of 69.8% in value between 2009-10-01 (-1709.920887) and 2010-01-01 (-516.254659).
+  - warning: Unexpected jump of 340.6% in value between 2010-01-01 (-516.254659) and 2010-04-01 (1242.347592).
+  - warning: Unexpected jump of 256.4% in value between 2010-07-01 (1821.164568) and 2010-10-01 (6490.718657).
+  - warning: Unexpected jump of 83.4% in value between 2010-10-01 (6490.718657) and 2011-01-01 (1077.588682).
+  - warning: Unexpected jump of 310.3% in value between 2011-01-01 (1077.588682) and 2011-04-01 (-2266.699102).
+  - warning: Unexpected jump of 353.5% in value between 2011-04-01 (-2266.699102) and 2011-07-01 (5745.629302).
+  - warning: Unexpected jump of 60.9% in value between 2011-07-01 (5745.629302) and 2011-10-01 (2247.810675).
+  - warning: Unexpected jump of 69.2% in value between 2011-10-01 (2247.810675) and 2012-01-01 (3804.343766).
+  - warning: Unexpected jump of 88.2% in value between 2012-01-01 (3804.343766) and 2012-04-01 (447.861437).
+  - warning: Unexpected jump of 70.2% in value between 2012-04-01 (447.861437) and 2012-07-01 (133.54794).
+  - warning: Unexpected jump of 2396.3% in value between 2012-07-01 (133.54794) and 2012-10-01 (3333.748429).
+  - warning: Unexpected jump of 52.8% in value between 2012-10-01 (3333.748429) and 2013-01-01 (1572.061819).
+  - warning: Unexpected jump of 181.1% in value between 2013-04-01 (1245.46354) and 2013-07-01 (-1009.997894).
+  - warning: Unexpected jump of 150.4% in value between 2013-07-01 (-1009.997894) and 2013-10-01 (509.07076).
+  - warning: Unexpected jump of 192.7% in value between 2013-10-01 (509.07076) and 2014-01-01 (-471.74938).
+  - warning: Unexpected jump of 624.0% in value between 2014-01-01 (-471.74938) and 2014-04-01 (2472.201888).
+  - warning: Unexpected jump of 161.8% in value between 2014-04-01 (2472.201888) and 2014-07-01 (-1527.025653).
+  - warning: Unexpected jump of 189.0% in value between 2014-07-01 (-1527.025653) and 2014-10-01 (-4413.235227).
+  - warning: Unexpected jump of 99.9% in value between 2015-07-01 (-1604.457798) and 2015-10-01 (-3208.101348).
+  - warning: Unexpected jump of 57.5% in value between 2016-01-01 (-2528.469472) and 2016-04-01 (-1075.507929).
+  - warning: Unexpected jump of 199.2% in value between 2016-04-01 (-1075.507929) and 2016-07-01 (-3218.197998).
+  - warning: Unexpected jump of 70.0% in value between 2017-04-01 (-1608.850635) and 2017-07-01 (-482.7823).
+  - warning: Unexpected jump of 719.0% in value between 2017-07-01 (-482.7823) and 2017-10-01 (-3954.109438).
+  - warning: Unexpected jump of 113.2% in value between 2017-10-01 (-3954.109438) and 2018-01-01 (522.56489).
+  - warning: Unexpected jump of 138.6% in value between 2018-01-01 (522.56489) and 2018-04-01 (1246.869276).
+  - warning: Unexpected jump of 140.5% in value between 2018-07-01 (770.595905) and 2018-10-01 (-311.972239).
+  - warning: Unexpected jump of 415.7% in value between 2018-10-01 (-311.972239) and 2019-01-01 (984.781808).
+  - warning: Unexpected jump of 216.7% in value between 2019-01-01 (984.781808) and 2019-04-01 (3118.329105).
+  - warning: Unexpected jump of 97.7% in value between 2019-04-01 (3118.329105) and 2019-07-01 (72.483793).
+  - warning: Unexpected jump of 1161.9% in value between 2019-07-01 (72.483793) and 2019-10-01 (-769.72313).
+  - warning: Unexpected jump of 475.3% in value between 2020-04-01 (-904.845717) and 2020-07-01 (-5205.384567).
+  - warning: Unexpected jump of 82.6% in value between 2020-10-01 (-2786.229651) and 2021-01-01 (-5088.549054).
+  - warning: Unexpected jump of 92.1% in value between 2021-01-01 (-5088.549054) and 2021-04-01 (-402.894651).
+  - warning: Unexpected jump of 479.6% in value between 2021-04-01 (-402.894651) and 2021-07-01 (-2335.181491).
+  - warning: Unexpected jump of 213.3% in value between 2021-10-01 (-3467.437175) and 2022-01-01 (3929.334441).
+  - warning: Unexpected jump of 97.8% in value between 2022-07-01 (3314.275075) and 2022-10-01 (73.270242).
+  - warning: Unexpected jump of 477.8% in value between 2022-10-01 (73.270242) and 2023-01-01 (-276.831333).
+  - warning: Unexpected jump of 232.6% in value between 2023-01-01 (-276.831333) and 2023-04-01 (367.120334).
+  - warning: Unexpected jump of 426.8% in value between 2023-04-01 (367.120334) and 2023-07-01 (-1199.841612).
+  - warning: Unexpected jump of 162.3% in value between 2023-07-01 (-1199.841612) and 2023-10-01 (747.108013).
+  - warning: Unexpected jump of 314.2% in value between 2023-10-01 (747.108013) and 2024-01-01 (-1600.300265).
+  - warning: Unexpected jump of 55.5% in value between 2024-01-01 (-1600.300265) and 2024-04-01 (-711.734111).
+  - warning: Unexpected jump of 272.1% in value between 2024-04-01 (-711.734111) and 2024-07-01 (1224.813651).
+  - warning: Unexpected jump of 160.8% in value between 2024-07-01 (1224.813651) and 2024-10-01 (-745.15208).
+  - warning: Unexpected jump of 387.8% in value between 2024-10-01 (-745.15208) and 2025-01-01 (-3634.821816).
+  - warning: Unexpected jump of 120.8% in value between 2025-01-01 (-3634.821816) and 2025-04-01 (754.307952).
+  - warning: Unexpected jump of 184.3% in value between 2025-04-01 (754.307952) and 2025-07-01 (2144.677459).
+  - warning: Unexpected jump of 142.5% in value between 2025-07-01 (2144.677459) and 2025-10-01 (-910.699381).
+  - warning: Unexpected jump of 125.4% in value between 2025-10-01 (-910.699381) and 2026-01-01 (-2052.720089).
+  - warning: Unexpected jump of 137.0% in value between 2026-01-01 (-2052.720089) and 2026-04-01 (758.500412).
+- **nbk/BOP_OVERALL_BALANCE_GDP_SHARE** — fetch+validate+process: ok (downloaded=85, processed=85)
+  - warning: Unexpected jump of 670.1% in value between 2005-04-01 (-1.432245) and 2005-07-01 (8.165763).
+  - warning: Unexpected jump of 115.4% in value between 2005-07-01 (8.165763) and 2005-10-01 (-1.256623).
+  - warning: Unexpected jump of 662.3% in value between 2005-10-01 (-1.256623) and 2006-01-01 (7.066511).
+  - warning: Unexpected jump of 444.6% in value between 2006-01-01 (7.066511) and 2006-04-01 (-24.350994).
+  - warning: Unexpected jump of 58.4% in value between 2006-04-01 (-24.350994) and 2006-07-01 (-10.136972).
+  - warning: Unexpected jump of 86.9% in value between 2006-07-01 (-10.136972) and 2006-10-01 (-1.326354).
+  - warning: Unexpected jump of 1441.5% in value between 2006-10-01 (-1.326354) and 2007-01-01 (-20.445876).
+  - warning: Unexpected jump of 69.2% in value between 2007-04-01 (-10.817254) and 2007-07-01 (-3.326345).
+  - warning: Unexpected jump of 583.9% in value between 2007-07-01 (-3.326345) and 2007-10-01 (16.094759).
+  - warning: Unexpected jump of 68.5% in value between 2007-10-01 (16.094759) and 2008-01-01 (5.073619).
+  - warning: Unexpected jump of 176.2% in value between 2008-01-01 (5.073619) and 2008-04-01 (-3.863561).
+  - warning: Unexpected jump of 73.9% in value between 2008-04-01 (-3.863561) and 2008-07-01 (-6.718117).
+  - warning: Unexpected jump of 52.7% in value between 2008-07-01 (-6.718117) and 2008-10-01 (-3.176559).
+  - warning: Unexpected jump of 286.0% in value between 2008-10-01 (-3.176559) and 2009-01-01 (5.909267).
+  - warning: Unexpected jump of 56.8% in value between 2009-01-01 (5.909267) and 2009-04-01 (2.55514).
+  - warning: Unexpected jump of 56.6% in value between 2009-04-01 (2.55514) and 2009-07-01 (4.002334).
+  - warning: Unexpected jump of 245.3% in value between 2009-07-01 (4.002334) and 2009-10-01 (-5.816108).
+  - warning: Unexpected jump of 168.0% in value between 2010-01-01 (-5.855813) and 2010-04-01 (-15.695801).
+  - warning: Unexpected jump of 98.2% in value between 2010-04-01 (-15.695801) and 2010-07-01 (-0.281029).
+  - warning: Unexpected jump of 77.8% in value between 2010-07-01 (-0.281029) and 2010-10-01 (-0.06228).
+  - warning: Unexpected jump of 889.0% in value between 2010-10-01 (-0.06228) and 2011-01-01 (-0.615919).
+  - warning: Unexpected jump of 2787.4% in value between 2011-01-01 (-0.615919) and 2011-04-01 (-17.784116).
+  - warning: Unexpected jump of 115.7% in value between 2011-04-01 (-17.784116) and 2011-07-01 (2.783952).
+  - warning: Unexpected jump of 60.1% in value between 2011-10-01 (3.18643) and 2012-01-01 (5.100267).
+  - warning: Unexpected jump of 202.0% in value between 2012-01-01 (5.100267) and 2012-04-01 (-5.199976).
+  - warning: Unexpected jump of 82.3% in value between 2012-04-01 (-5.199976) and 2012-07-01 (-0.920648).
+  - warning: Unexpected jump of 828.3% in value between 2012-07-01 (-0.920648) and 2012-10-01 (6.705374).
+  - warning: Unexpected jump of 113.8% in value between 2013-01-01 (4.857544) and 2013-04-01 (-0.669359).
+  - warning: Unexpected jump of 272.1% in value between 2013-04-01 (-0.669359) and 2013-07-01 (1.151794).
+  - warning: Unexpected jump of 301.2% in value between 2013-07-01 (1.151794) and 2013-10-01 (4.620736).
+  - warning: Unexpected jump of 118.7% in value between 2013-10-01 (4.620736) and 2014-01-01 (-0.86181).
+  - warning: Unexpected jump of 214.3% in value between 2014-01-01 (-0.86181) and 2014-04-01 (-2.708741).
+  - warning: Unexpected jump of 137.3% in value between 2014-04-01 (-2.708741) and 2014-07-01 (1.01006).
+  - warning: Unexpected jump of 471.3% in value between 2014-07-01 (1.01006) and 2014-10-01 (-3.750485).
+  - warning: Unexpected jump of 50.4% in value between 2014-10-01 (-3.750485) and 2015-01-01 (-1.859795).
+  - warning: Unexpected jump of 218.2% in value between 2015-04-01 (-1.139902) and 2015-07-01 (1.34746).
+  - warning: Unexpected jump of 109.1% in value between 2015-10-01 (1.46202) and 2016-01-01 (-0.133532).
+  - warning: Unexpected jump of 3195.4% in value between 2016-01-01 (-0.133532) and 2016-04-01 (4.133345).
+  - warning: Unexpected jump of 180.2% in value between 2016-04-01 (4.133345) and 2016-07-01 (-3.313248).
+  - warning: Unexpected jump of 70.9% in value between 2016-07-01 (-3.313248) and 2016-10-01 (-0.965138).
+  - warning: Unexpected jump of 172.0% in value between 2016-10-01 (-0.965138) and 2017-01-01 (0.694645).
+  - warning: Unexpected jump of 149.6% in value between 2017-01-01 (0.694645) and 2017-04-01 (1.7341).
+  - warning: Unexpected jump of 455.6% in value between 2017-07-01 (0.888601) and 2017-10-01 (-3.159621).
+  - warning: Unexpected jump of 198.1% in value between 2017-10-01 (-3.159621) and 2018-01-01 (3.099605).
+  - warning: Unexpected jump of 90.8% in value between 2018-04-01 (2.450631) and 2018-07-01 (0.225871).
+  - warning: Unexpected jump of 216.0% in value between 2018-07-01 (0.225871) and 2018-10-01 (-0.262036).
+  - warning: Unexpected jump of 517.8% in value between 2018-10-01 (-0.262036) and 2019-01-01 (1.094829).
+  - warning: Unexpected jump of 1069.3% in value between 2019-01-01 (1.094829) and 2019-04-01 (12.801904).
+  - warning: Unexpected jump of 81.8% in value between 2019-04-01 (12.801904) and 2019-07-01 (2.33582).
+  - warning: Unexpected jump of 72.4% in value between 2019-07-01 (2.33582) and 2019-10-01 (0.645105).
+  - warning: Unexpected jump of 126.8% in value between 2019-10-01 (0.645105) and 2020-01-01 (1.463401).
+  - warning: Unexpected jump of 135.5% in value between 2020-01-01 (1.463401) and 2020-04-01 (3.445885).
+  - warning: Unexpected jump of 201.0% in value between 2020-04-01 (3.445885) and 2020-07-01 (-3.480762).
+  - warning: Unexpected jump of 267.3% in value between 2020-07-01 (-3.480762) and 2020-10-01 (5.823157).
+  - warning: Unexpected jump of 84.1% in value between 2020-10-01 (5.823157) and 2021-01-01 (0.926798).
+  - warning: Unexpected jump of 165.5% in value between 2021-01-01 (0.926798) and 2021-04-01 (-0.607402).
+  - warning: Unexpected jump of 692.4% in value between 2021-04-01 (-0.607402) and 2021-07-01 (3.598443).
+  - warning: Unexpected jump of 110.4% in value between 2021-07-01 (3.598443) and 2021-10-01 (-0.375566).
+  - warning: Unexpected jump of 1508.9% in value between 2021-10-01 (-0.375566) and 2022-01-01 (5.291228).
+  - warning: Unexpected jump of 53.6% in value between 2022-01-01 (5.291228) and 2022-04-01 (8.126961).
+  - warning: Unexpected jump of 80.9% in value between 2022-04-01 (8.126961) and 2022-07-01 (1.548226).
+  - warning: Unexpected jump of 390.7% in value between 2022-07-01 (1.548226) and 2022-10-01 (-4.500662).
+  - warning: Unexpected jump of 109.6% in value between 2022-10-01 (-4.500662) and 2023-01-01 (0.434229).
+  - warning: Unexpected jump of 679.3% in value between 2023-01-01 (0.434229) and 2023-04-01 (3.383904).
+  - warning: Unexpected jump of 98.3% in value between 2023-07-01 (2.963561) and 2023-10-01 (5.875824).
+  - warning: Unexpected jump of 119.0% in value between 2023-10-01 (5.875824) and 2024-01-01 (-1.113539).
+  - warning: Unexpected jump of 191.7% in value between 2024-01-01 (-1.113539) and 2024-04-01 (1.021658).
+  - warning: Unexpected jump of 128.4% in value between 2024-04-01 (1.021658) and 2024-07-01 (-0.289872).
+  - warning: Unexpected jump of 140.9% in value between 2024-07-01 (-0.289872) and 2024-10-01 (-0.698363).
+  - warning: Unexpected jump of 231.4% in value between 2024-10-01 (-0.698363) and 2025-01-01 (0.917813).
+  - warning: Unexpected jump of 141.2% in value between 2025-01-01 (0.917813) and 2025-04-01 (2.214093).
+  - warning: Unexpected jump of 84.8% in value between 2025-10-01 (2.629723) and 2026-01-01 (0.39885).
+  - warning: Unexpected jump of 905.7% in value between 2026-01-01 (0.39885) and 2026-04-01 (4.011331).
 - **nbk/INFLATION_TARGET** — fetch+validate+process: ok (downloaded=1, processed=1)
 - **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
@@ -2275,15 +2265,15 @@ ACTION REQUIRED: inspect https://www.gov.kz/uploads/2026/9/4/0f480349a6d5a3d479e
   - warning: ... 109 more warnings not listed
 - **bns/EXPORTS_VALUE_BY_COMMODITY_GROUP** — fetch: structural_change (downloaded=0, processed=0)
   - ERROR: STRUCTURAL CHANGE DETECTED in bns/EXPORTS_VALUE_BY_COMMODITY_GROUP (element 446905)
-WHAT CHANGED: no month passed the partition check
-EXPECTED: monthly national totals matched by the regional rows
-ACTUAL: Показатель
+WHAT CHANGED: the workbook has no data sheets (22 KB, sheets ['Метаданные', 'Показатель'])
+EXPECTED: one sheet per year ('2019', …) plus the current partial year
+ACTUAL: only description sheets -- a stub served during regeneration? retry later
 ACTION REQUIRED: open the export workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or dictionaries/hs_export_groups.csv, then re-run.
 - **bns/EXPORTS_VOLUME_BY_COMMODITY_GROUP** — fetch: structural_change (downloaded=0, processed=0)
   - ERROR: STRUCTURAL CHANGE DETECTED in bns/EXPORTS_VOLUME_BY_COMMODITY_GROUP (element 446905)
-WHAT CHANGED: no month passed the partition check
-EXPECTED: monthly national totals matched by the regional rows
-ACTUAL: Показатель
+WHAT CHANGED: the workbook has no data sheets (22 KB, sheets ['Метаданные', 'Показатель'])
+EXPECTED: one sheet per year ('2019', …) plus the current partial year
+ACTUAL: only description sheets -- a stub served during regeneration? retry later
 ACTION REQUIRED: open the export workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or dictionaries/hs_export_groups.csv, then re-run.
 - **wb/WB_COMMODITY_PRICES_ANNUAL** — fetch+validate+process: ok (downloaded=4099, processed=4099)
   - warning: [CRUDE_PETRO@world] Unexpected jump of 55.6% in value between 1972-12-31 (1.8) and 1973-12-31 (2.8).
