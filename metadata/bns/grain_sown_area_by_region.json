@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/8154/file/ru/",
+  "dataset_id": "8154",
+  "indicator_id": "GRAIN_SOWN_AREA_BY_REGION",
+  "indicator_name": "Sown area of grain (incl. rice) and pulses, by region",
+  "description": "Уточнённая посевная площадь зерновых (включая рис) и бобовых культур, по регионам",
+  "frequency": "annual",
+  "unit": "thousand hectares",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "annual values from the xlsx export; quarterly year-to-date columns skipped",
+  "publication_date": null,
+  "last_update_date": "2026-09-14",
+  "download_date": "2026-09-14",
+  "period_start": "2004-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

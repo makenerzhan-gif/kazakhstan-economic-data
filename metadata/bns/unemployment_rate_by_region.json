@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/102790/file/ru/",
+  "dataset_id": "102790",
+  "indicator_id": "UNEMPLOYMENT_RATE_BY_REGION",
+  "indicator_name": "Unemployment rate, by region",
+  "description": "Уровень безработицы, по регионам",
+  "frequency": "annual",
+  "unit": "%",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Three sub-columns per year (всего, мужчины, женщины); the sheet also lists districts, which are skipped.",
+  "publication_date": null,
+  "last_update_date": "2026-09-14",
+  "download_date": "2026-09-14",
+  "period_start": "2001-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

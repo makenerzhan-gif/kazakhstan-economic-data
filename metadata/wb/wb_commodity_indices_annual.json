@@ -1,0 +1,21 @@
+{
+  "source": "wb",
+  "source_url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx",
+  "dataset_id": "CMO-Historical-Data-Annual.xlsx#Annual Indices (Nominal)",
+  "indicator_id": "WB_COMMODITY_INDICES_ANNUAL",
+  "indicator_name": "World Bank commodity price indices, annual, nominal (2010=100)",
+  "description": "Индексы мировых цен на сырьевые товары, годовые (Всемирный банк, 2010=100), номинальные",
+  "frequency": "annual",
+  "unit": "index, 2010=100",
+  "currency": "",
+  "geography": "World (benchmark prices)",
+  "methodology": " File release: September 02, 2026.",
+  "publication_date": "September 02, 2026",
+  "last_update_date": "2026-09-15",
+  "download_date": "2026-09-15",
+  "period_start": "1960-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

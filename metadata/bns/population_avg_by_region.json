@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/6576/file/ru/",
+  "dataset_id": "6576",
+  "indicator_id": "POPULATION_AVG_BY_REGION",
+  "indicator_name": "Average annual population by region: total, urban, rural, by sex",
+  "description": "Среднегодовая численность населения по регионам: всё население, город, село, по полу",
+  "frequency": "annual",
+  "unit": "persons",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Items ALL, URBAN, RURAL and their MEN/WOMEN splits (ALL_MEN, URBAN_WOMEN …); 2009 onwards, recalculated by BNS for the 2022 regions.",
+  "publication_date": null,
+  "last_update_date": "2026-09-14",
+  "download_date": "2026-09-14",
+  "period_start": "2009-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

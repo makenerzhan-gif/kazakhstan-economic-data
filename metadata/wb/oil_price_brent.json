@@ -1,0 +1,21 @@
+{
+  "source": "wb",
+  "source_url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+  "dataset_id": "CMO-Historical-Data-Monthly.xlsx#Monthly Prices",
+  "indicator_id": "OIL_PRICE_BRENT",
+  "indicator_name": "Crude Oil Price, Brent spot (World Bank Pink Sheet)",
+  "description": "Цена нефти Brent (Всемирный банк, Pink Sheet)",
+  "frequency": "monthly",
+  "unit": "USD per barrel",
+  "currency": "USD",
+  "geography": "World (benchmark price)",
+  "methodology": "US dollars per barrel, monthly average of daily Brent (38° API) spot quotations as published in the World Bank Pink Sheet (nominal). A world benchmark, not the Kazakh export price: KEBCO trades at a differential to Brent. File release: September 02, 2026.",
+  "publication_date": "September 02, 2026",
+  "last_update_date": "2026-09-15",
+  "download_date": "2026-09-15",
+  "period_start": "1960-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

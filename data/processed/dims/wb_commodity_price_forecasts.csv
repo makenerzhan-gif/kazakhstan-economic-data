@@ -1,0 +1,93 @@
+date,region,item_code,item_name,value,transformation
+2026-12-31,world,COAL_AUS,"Уголь, Австралия, $/м.т.",130.0,forecast
+2027-12-31,world,COAL_AUS,"Уголь, Австралия, $/м.т.",115.0,forecast
+2026-12-31,world,CRUDE_BRENT,"Сырая нефть марки Брент, $/баррель",86.0,forecast
+2027-12-31,world,CRUDE_BRENT,"Сырая нефть марки Брент, $/баррель",70.0,forecast
+2026-12-31,world,NGAS_EUR,"Природный газ, Европа, $/млн брит. тепл. ед.",15.0,forecast
+2027-12-31,world,NGAS_EUR,"Природный газ, Европа, $/млн брит. тепл. ед.",12.0,forecast
+2026-12-31,world,NGAS_US,"Природный газ, США, $/млн брит. тепл. ед.",3.8,forecast
+2027-12-31,world,NGAS_US,"Природный газ, США, $/млн брит. тепл. ед.",4.0,forecast
+2026-12-31,world,NGAS_JP,"Сжиженный природный газ, Япония, $/млн брит. тепл. ед.",16.0,forecast
+2027-12-31,world,NGAS_JP,"Сжиженный природный газ, Япония, $/млн брит. тепл. ед.",13.0,forecast
+2026-12-31,world,COCOA,"Какао, $/кг",3.8,forecast
+2027-12-31,world,COCOA,"Какао, $/кг",4.2,forecast
+2026-12-31,world,COFFEE_ARABIC,"Кофе, арабика, $/кг",7.25,forecast
+2027-12-31,world,COFFEE_ARABIC,"Кофе, арабика, $/кг",7.0,forecast
+2026-12-31,world,COFFEE_ROBUS,"Кофе, робуста, $/кг",4.0,forecast
+2027-12-31,world,COFFEE_ROBUS,"Кофе, робуста, $/кг",3.9,forecast
+2026-12-31,world,TEA_AVG,"Чай, средний (3 аукциона), $/кг",2.85,forecast
+2027-12-31,world,TEA_AVG,"Чай, средний (3 аукциона), $/кг",3.0,forecast
+2026-12-31,world,COCONUT_OIL,"Кокосовое масло, $/м.т.",2301.0,forecast
+2027-12-31,world,COCONUT_OIL,"Кокосовое масло, $/м.т.",2111.0,forecast
+2026-12-31,world,GRNUT_OIL,"Арахисовое масло, $/м.т.",1722.0,forecast
+2027-12-31,world,GRNUT_OIL,"Арахисовое масло, $/м.т.",1740.0,forecast
+2026-12-31,world,PALM_OIL,"Пальмовое масло, $/м.т.",1089.0,forecast
+2027-12-31,world,PALM_OIL,"Пальмовое масло, $/м.т.",1096.0,forecast
+2026-12-31,world,SOYBEAN_MEAL,"Соевый шрот, $/м.т.",359.0,forecast
+2027-12-31,world,SOYBEAN_MEAL,"Соевый шрот, $/м.т.",363.0,forecast
+2026-12-31,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1233.0,forecast
+2027-12-31,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1236.0,forecast
+2026-12-31,world,SOYBEANS,"Соевые бобы, $/м.т.",441.0,forecast
+2027-12-31,world,SOYBEANS,"Соевые бобы, $/м.т.",446.0,forecast
+2026-12-31,world,BARLEY,"Ячмень, $/м.т.",172.0,forecast
+2027-12-31,world,BARLEY,"Ячмень, $/м.т.",174.0,forecast
+2026-12-31,world,MAIZE,"Маис, $/м.т.",211.0,forecast
+2027-12-31,world,MAIZE,"Маис, $/м.т.",214.0,forecast
+2026-12-31,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",401.0,forecast
+2027-12-31,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",413.0,forecast
+2026-12-31,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",253.0,forecast
+2027-12-31,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",260.0,forecast
+2026-12-31,world,BANANA_US,"Бананы, США, $/кг",1.1,forecast
+2027-12-31,world,BANANA_US,"Бананы, США, $/кг",1.12,forecast
+2026-12-31,world,BEEF,"Говядина, $/кг",7.6,forecast
+2027-12-31,world,BEEF,"Говядина, $/кг",7.81,forecast
+2026-12-31,world,CHICKEN,"Курица, $/кг",1.69,forecast
+2027-12-31,world,CHICKEN,"Курица, $/кг",1.72,forecast
+2026-12-31,world,ORANGE,"Апельсины, $/кг",1.15,forecast
+2027-12-31,world,ORANGE,"Апельсины, $/кг",1.2,forecast
+2026-12-31,world,SHRIMP_MEX,"Креветка, Мексика, $/кг",9.0,forecast
+2027-12-31,world,SHRIMP_MEX,"Креветка, Мексика, $/кг",9.47,forecast
+2026-12-31,world,SUGAR_WLD,"Сахар, мир, $/кг",0.35,forecast
+2027-12-31,world,SUGAR_WLD,"Сахар, мир, $/кг",0.34,forecast
+2026-12-31,world,LOGS_CMR,"Бревна, Африка (Камерун), $/куб.м.",400.0,forecast
+2027-12-31,world,LOGS_CMR,"Бревна, Африка (Камерун), $/куб.м.",405.0,forecast
+2026-12-31,world,LOGS_MYS,"Бревна, Юго-Восточная Азия (Малайзия), $/куб.м.",190.0,forecast
+2027-12-31,world,LOGS_MYS,"Бревна, Юго-Восточная Азия (Малайзия), $/куб.м.",200.0,forecast
+2026-12-31,world,SAWNWD_MYS,"Пиломатериалы, Юго-Восточная Азия (Малайзия), $/куб.м.",725.0,forecast
+2027-12-31,world,SAWNWD_MYS,"Пиломатериалы, Юго-Восточная Азия (Малайзия), $/куб.м.",730.0,forecast
+2026-12-31,world,COTTON_A_INDX,"Хлопок, индекс A, $/кг",1.65,forecast
+2027-12-31,world,COTTON_A_INDX,"Хлопок, индекс A, $/кг",1.75,forecast
+2026-12-31,world,RUBBER_TSR20,"Каучук, TSR20, $/кг",1.9,forecast
+2027-12-31,world,RUBBER_TSR20,"Каучук, TSR20, $/кг",1.95,forecast
+2026-12-31,world,TOBAC_US,"Табак, США (импортная цена), $/м.т.",6700.0,forecast
+2027-12-31,world,TOBAC_US,"Табак, США (импортная цена), $/м.т.",5500.0,forecast
+2026-12-31,world,DAP,"Диаммоний фосфат (DAP), $/м.т.",725.0,forecast
+2027-12-31,world,DAP,"Диаммоний фосфат (DAP), $/м.т.",650.0,forecast
+2026-12-31,world,PHOSROCK,"Фосфатная порода, $/м.т.",160.0,forecast
+2027-12-31,world,PHOSROCK,"Фосфатная порода, $/м.т.",170.0,forecast
+2026-12-31,world,POTASH,"Хлорид калия, $/м.т.",390.0,forecast
+2027-12-31,world,POTASH,"Хлорид калия, $/м.т.",365.0,forecast
+2026-12-31,world,TSP,"Тройной суперфосфат (TSP), $/м.т.",625.0,forecast
+2027-12-31,world,TSP,"Тройной суперфосфат (TSP), $/м.т.",550.0,forecast
+2026-12-31,world,UREA_EE_BULK,"Карбамид, Восточная Европа, $/м.т.",675.0,forecast
+2027-12-31,world,UREA_EE_BULK,"Карбамид, Восточная Европа, $/м.т.",500.0,forecast
+2026-12-31,world,ALUMINUM,"Алюминий, $/м.т.",3200.0,forecast
+2027-12-31,world,ALUMINUM,"Алюминий, $/м.т.",3000.0,forecast
+2026-12-31,world,COPPER,"Медь, $/м.т.",12000.0,forecast
+2027-12-31,world,COPPER,"Медь, $/м.т.",11000.0,forecast
+2026-12-31,world,IRON_ORE,"Железная руда, $/сух. м.т.",97.0,forecast
+2027-12-31,world,IRON_ORE,"Железная руда, $/сух. м.т.",95.0,forecast
+2026-12-31,world,LEAD,"Свинец, $/м.т.",1950.0,forecast
+2027-12-31,world,LEAD,"Свинец, $/м.т.",1950.0,forecast
+2026-12-31,world,NICKEL,"Никель, $/м.т.",17000.0,forecast
+2027-12-31,world,NICKEL,"Никель, $/м.т.",17500.0,forecast
+2026-12-31,world,TIN,"Олово, $/м.т.",41000.0,forecast
+2027-12-31,world,TIN,"Олово, $/м.т.",37000.0,forecast
+2026-12-31,world,ZINC,"Цинк, $/м.т.",3000.0,forecast
+2027-12-31,world,ZINC,"Цинк, $/м.т.",2750.0,forecast
+2026-12-31,world,GOLD,"Золото, $/тройская унция",4700.0,forecast
+2027-12-31,world,GOLD,"Золото, $/тройская унция",4300.0,forecast
+2026-12-31,world,SILVER,"Серебро, $/тройская унция",70.0,forecast
+2027-12-31,world,SILVER,"Серебро, $/тройская унция",65.0,forecast
+2026-12-31,world,PLATINUM,"Платина, $/тройская унция",1950.0,forecast
+2027-12-31,world,PLATINUM,"Платина, $/тройская унция",1700.0,forecast

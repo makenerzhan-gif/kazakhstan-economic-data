@@ -1,0 +1,21 @@
+{
+  "source": "eia",
+  "source_url": "https://www.eia.gov/outlooks/steo/xls/STEO_m.xlsx",
+  "dataset_id": "STEO_m.xlsx#2tab",
+  "indicator_id": "EIA_STEO_PRICES",
+  "indicator_name": "EIA Short-Term Energy Outlook crude prices, monthly history and forecast, USD per barrel",
+  "description": "Цены на нефть по прогнозу EIA (Short-Term Energy Outlook), месячные: история и прогноз, $/баррель",
+  "frequency": "monthly",
+  "unit": "USD per barrel",
+  "currency": "USD",
+  "geography": "World (benchmark prices)",
+  "methodology": "Table 2 'Energy Prices' of the monthly STEO workbook; months after the release's last historical month carry transformation 'forecast'. The model takes the annual mean (annual: mean). STEO release: September 2026; last historical month 202608.",
+  "publication_date": "September 2026",
+  "last_update_date": "2026-09-15",
+  "download_date": "2026-09-15",
+  "period_start": "2022-01-01",
+  "period_end": "2027-12-01",
+  "next_update_date": null,
+  "transformation": "level (history) / forecast (months after the last historical month)",
+  "revision_status": "original"
+}

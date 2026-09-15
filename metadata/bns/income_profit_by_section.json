@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/4455/file/ru/",
+  "dataset_id": "4455",
+  "indicator_id": "INCOME_PROFIT_BY_SECTION",
+  "indicator_name": "Net operating surplus / mixed income by ОКЭД section",
+  "description": "Чистая прибыль / чистый смешанный доход, по видам экономической деятельности",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "annual values from the xlsx export; quarterly year-to-date columns skipped",
+  "publication_date": null,
+  "last_update_date": "2026-09-14",
+  "download_date": "2026-09-14",
+  "period_start": "2010-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

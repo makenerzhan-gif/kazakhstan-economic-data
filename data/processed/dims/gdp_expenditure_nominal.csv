@@ -1,0 +1,269 @@
+date,region,item_code,item_name,value,transformation
+2007-12-31,national,EXPORTS,экспорт товаров и услуг,6336595.9,level
+2008-12-31,national,EXPORTS,экспорт товаров и услуг,9173663.0,level
+2009-12-31,national,EXPORTS,экспорт товаров и услуг,7115731.2,level
+2010-12-31,national,EXPORTS,экспорт товаров и услуг,9652096.5,level
+2011-12-31,national,EXPORTS,экспорт товаров и услуг,13123039.2,level
+2012-12-31,national,EXPORTS,экспорт товаров и услуг,13680694.3,level
+2013-12-31,national,EXPORTS,экспорт товаров и услуг,13901757.1,level
+2014-12-31,national,EXPORTS,экспорт товаров и услуг,15609170.2,level
+2015-12-31,national,EXPORTS,экспорт товаров и услуг,11658809.0,level
+2016-12-31,national,EXPORTS,экспорт товаров и услуг,14957440.7,level
+2017-12-31,national,EXPORTS,экспорт товаров и услуг,17617527.7,level
+2018-12-31,national,EXPORTS,экспорт товаров и услуг,23259735.6,level
+2019-12-31,national,EXPORTS,экспорт товаров и услуг,25336984.8,level
+2020-12-31,national,EXPORTS,экспорт товаров и услуг,21568377.5,level
+2021-12-31,national,EXPORTS,экспорт товаров и услуг,28245396.0,level
+2022-12-31,national,EXPORTS,экспорт товаров и услуг,43134297.5,level
+2023-12-31,national,EXPORTS,экспорт товаров и услуг,41387443.1,level
+2024-12-31,national,EXPORTS,экспорт товаров и услуг,42644271.2,level
+2025-12-31,national,EXPORTS,экспорт товаров и услуг,47092760.9,level
+2007-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,7215844.7,level
+2008-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,8764943.0,level
+2009-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,10066102.700000001,level
+2010-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,12258755.7,level
+2011-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,14874786.8,level
+2012-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,17510663.900000002,level
+2013-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,21624594.9,level
+2014-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,23477055.5,level
+2015-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,26718002.2,level
+2016-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,31083238.500000004,level
+2017-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,34326070.3,level
+2018-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,37350907.1,level
+2019-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,42700693.699999996,level
+2020-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,46448870.3,level
+2021-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,52814472.900000006,level
+2022-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,62193315.900000006,level
+2023-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,75154867.3,level
+2024-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,88245450.30000001,level
+2025-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,105045369.9,level
+2007-12-31,national,GDP,Валовой внутренний продукт,12849794.000000002,level
+2008-12-31,national,GDP,Валовой внутренний продукт,16052919.2,level
+2009-12-31,national,GDP,Валовой внутренний продукт,17007647.0,level
+2010-12-31,national,GDP,Валовой внутренний продукт,21815517.0,level
+2011-12-31,national,GDP,Валовой внутренний продукт,28243052.7,level
+2012-12-31,national,GDP,Валовой внутренний продукт,31015186.600000005,level
+2013-12-31,national,GDP,Валовой внутренний продукт,35999025.099999994,level
+2014-12-31,national,GDP,Валовой внутренний продукт,39675832.9,level
+2015-12-31,national,GDP,Валовой внутренний продукт,40884133.6,level
+2016-12-31,national,GDP,Валовой внутренний продукт,46971150.0,level
+2017-12-31,national,GDP,Валовой внутренний продукт,54378857.79999999,level
+2018-12-31,national,GDP,Валовой внутренний продукт,61819536.400000006,level
+2019-12-31,national,GDP,Валовой внутренний продукт,69532626.49999999,level
+2020-12-31,national,GDP,Валовой внутренний продукт,70649033.2,level
+2021-12-31,national,GDP,Валовой внутренний продукт,83951587.9,level
+2022-12-31,national,GDP,Валовой внутренний продукт,103765518.2,level
+2023-12-31,national,GDP,Валовой внутренний продукт,119442289.69999999,level
+2024-12-31,national,GDP,Валовой внутренний продукт,136693318.3,level
+2025-12-31,national,GDP,Валовой внутренний продукт,159583750.7,level
+2007-12-31,national,GFCF,валовое накопление основного капитала,3857191.9,level
+2008-12-31,national,GFCF,валовое накопление основного капитала,4308792.9,level
+2009-12-31,national,GFCF,валовое накопление основного капитала,4726718.7,level
+2010-12-31,national,GFCF,валовое накопление основного капитала,5307136.6,level
+2011-12-31,national,GFCF,валовое накопление основного капитала,6062287.2,level
+2012-12-31,national,GFCF,валовое накопление основного капитала,7072441.5,level
+2013-12-31,national,GFCF,валовое накопление основного капитала,7877374.3,level
+2014-12-31,national,GFCF,валовое накопление основного капитала,8552487.1,level
+2015-12-31,national,GFCF,валовое накопление основного капитала,9354911.6,level
+2016-12-31,national,GFCF,валовое накопление основного капитала,10671499.7,level
+2017-12-31,national,GFCF,валовое накопление основного капитала,11798875.1,level
+2018-12-31,national,GFCF,валовое накопление основного капитала,13091415.8,level
+2019-12-31,national,GFCF,валовое накопление основного капитала,16317522.5,level
+2020-12-31,national,GFCF,валовое накопление основного капитала,17463439.5,level
+2021-12-31,national,GFCF,валовое накопление основного капитала,19341582.2,level
+2022-12-31,national,GFCF,валовое накопление основного капитала,22958808.4,level
+2023-12-31,national,GFCF,валовое накопление основного капитала,29811815.9,level
+2024-12-31,national,GFCF,валовое накопление основного капитала,33469209.9,level
+2025-12-31,national,GFCF,валовое накопление основного капитала,39170101.3,level
+2007-12-31,national,GOVERNMENT,органов государственного управления,1420406.3,level
+2008-12-31,national,GOVERNMENT,органов государственного управления,1635550.6,level
+2009-12-31,national,GOVERNMENT,органов государственного управления,1983589.3,level
+2010-12-31,national,GOVERNMENT,органов государственного управления,2358768.9,level
+2011-12-31,national,GOVERNMENT,органов государственного управления,2958699.3,level
+2012-12-31,national,GOVERNMENT,органов государственного управления,3573446.7,level
+2013-12-31,national,GOVERNMENT,органов государственного управления,3662309.2,level
+2014-12-31,national,GOVERNMENT,органов государственного управления,4241218.1,level
+2015-12-31,national,GOVERNMENT,органов государственного управления,4755939.300000001,level
+2016-12-31,national,GOVERNMENT,органов государственного управления,5463145.6,level
+2017-12-31,national,GOVERNMENT,органов государственного управления,5729324.8,level
+2018-12-31,national,GOVERNMENT,органов государственного управления,5144127.7,level
+2019-12-31,national,GOVERNMENT,органов государственного управления,6349831.8,level
+2020-12-31,national,GOVERNMENT,органов государственного управления,9002130.9,level
+2021-12-31,national,GOVERNMENT,органов государственного управления,9461635.3,level
+2022-12-31,national,GOVERNMENT,органов государственного управления,10894621.7,level
+2023-12-31,national,GOVERNMENT,органов государственного управления,13433821.8,level
+2024-12-31,national,GOVERNMENT,органов государственного управления,14749597.0,level
+2025-12-31,national,GOVERNMENT,органов государственного управления,16498041.7,level
+2007-12-31,national,GOV_COLLECTIVE,на коллективные услуги,738770.8,level
+2008-12-31,national,GOV_COLLECTIVE,на коллективные услуги,840876.3,level
+2009-12-31,national,GOV_COLLECTIVE,на коллективные услуги,979087.9,level
+2010-12-31,national,GOV_COLLECTIVE,на коллективные услуги,1125436.5,level
+2011-12-31,national,GOV_COLLECTIVE,на коллективные услуги,1420662.6,level
+2012-12-31,national,GOV_COLLECTIVE,на коллективные услуги,1725604.9,level
+2013-12-31,national,GOV_COLLECTIVE,на коллективные услуги,1723200.9,level
+2014-12-31,national,GOV_COLLECTIVE,на коллективные услуги,2070337.5,level
+2015-12-31,national,GOV_COLLECTIVE,на коллективные услуги,2470983.6,level
+2016-12-31,national,GOV_COLLECTIVE,на коллективные услуги,2659311.2,level
+2017-12-31,national,GOV_COLLECTIVE,на коллективные услуги,2889279.0,level
+2018-12-31,national,GOV_COLLECTIVE,на коллективные услуги,3023542.7,level
+2019-12-31,national,GOV_COLLECTIVE,на коллективные услуги,3827910.6,level
+2020-12-31,national,GOV_COLLECTIVE,на коллективные услуги,4362715.0,level
+2021-12-31,national,GOV_COLLECTIVE,на коллективные услуги,4332011.0,level
+2022-12-31,national,GOV_COLLECTIVE,на коллективные услуги,5317583.4,level
+2023-12-31,national,GOV_COLLECTIVE,на коллективные услуги,6449076.2,level
+2024-12-31,national,GOV_COLLECTIVE,на коллективные услуги,6861617.5,level
+2025-12-31,national,GOV_COLLECTIVE,на коллективные услуги,7997051.5,level
+2007-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,681635.5,level
+2008-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,794674.3,level
+2009-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,1004501.4,level
+2010-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,1233332.4,level
+2011-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,1538036.7,level
+2012-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,1847841.8,level
+2013-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,1939108.3,level
+2014-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,2170880.6,level
+2015-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,2284955.7,level
+2016-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,2803834.4,level
+2017-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,2840045.8,level
+2018-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,2120585.0,level
+2019-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,2521921.2,level
+2020-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,4639415.9,level
+2021-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,5129624.3,level
+2022-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,5577038.3,level
+2023-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,6984745.6,level
+2024-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,7887979.5,level
+2025-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,8500990.2,level
+2007-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,4565107.7,level
+2008-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,4415593.7,level
+2009-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,5002725.3,level
+2010-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,5535370.899999999,level
+2011-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,6495378.5,level
+2012-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,7825026.2,level
+2013-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,8844818.4,level
+2014-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,10232495.4,level
+2015-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,11409909.5,level
+2016-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,13070935.7,level
+2017-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,14330178.899999999,level
+2018-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,15614509.700000001,level
+2019-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,19210178.5,level
+2020-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,20351807.2,level
+2021-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,22275240.5,level
+2022-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,25916382.0,level
+2023-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,33631527.4,level
+2024-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,37457431.1,level
+2025-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,45016860.599999994,level
+2007-12-31,national,HOUSEHOLDS,домашних хозяйств,5641240.9,level
+2008-12-31,national,HOUSEHOLDS,домашних хозяйств,6970468.5,level
+2009-12-31,national,HOUSEHOLDS,домашних хозяйств,7912607.0,level
+2010-12-31,national,HOUSEHOLDS,домашних хозяйств,9721099.6,level
+2011-12-31,national,HOUSEHOLDS,домашних хозяйств,11692755.2,level
+2012-12-31,national,HOUSEHOLDS,домашних хозяйств,13659206.6,level
+2013-12-31,national,HOUSEHOLDS,домашних хозяйств,17616589.2,level
+2014-12-31,national,HOUSEHOLDS,домашних хозяйств,18805873.9,level
+2015-12-31,national,HOUSEHOLDS,домашних хозяйств,21491895.4,level
+2016-12-31,national,HOUSEHOLDS,домашних хозяйств,25087440.1,level
+2017-12-31,national,HOUSEHOLDS,домашних хозяйств,27986614.7,level
+2018-12-31,national,HOUSEHOLDS,домашних хозяйств,31514400.6,level
+2019-12-31,national,HOUSEHOLDS,домашних хозяйств,35570705.8,level
+2020-12-31,national,HOUSEHOLDS,домашних хозяйств,36660980.9,level
+2021-12-31,national,HOUSEHOLDS,домашних хозяйств,42419295.9,level
+2022-12-31,national,HOUSEHOLDS,домашних хозяйств,50951517.7,level
+2023-12-31,national,HOUSEHOLDS,домашних хозяйств,61348463.0,level
+2024-12-31,national,HOUSEHOLDS,домашних хозяйств,73171015.4,level
+2025-12-31,national,HOUSEHOLDS,домашних хозяйств,88162257.5,level
+2007-12-31,national,IMPORTS,импорт товаров и услуг,5505984.1,level
+2008-12-31,national,IMPORTS,импорт товаров и услуг,5963405.8,level
+2009-12-31,national,IMPORTS,импорт товаров и услуг,5770294.1,level
+2010-12-31,national,IMPORTS,импорт товаров и услуг,6521549.5,level
+2011-12-31,national,IMPORTS,импорт товаров и услуг,7527675.7,level
+2012-12-31,national,IMPORTS,импорт товаров и услуг,9184858.9,level
+2013-12-31,national,IMPORTS,импорт товаров и услуг,9644344.6,level
+2014-12-31,national,IMPORTS,импорт товаров и услуг,10169025.7,level
+2015-12-31,national,IMPORTS,импорт товаров и услуг,10030113.0,level
+2016-12-31,national,IMPORTS,импорт товаров и услуг,13371609.8,level
+2017-12-31,national,IMPORTS,импорт товаров и услуг,13283468.9,level
+2018-12-31,national,IMPORTS,импорт товаров и услуг,16012952.6,level
+2019-12-31,national,IMPORTS,импорт товаров и услуг,19760914.8,level
+2020-12-31,national,IMPORTS,импорт товаров и услуг,18720252.7,level
+2021-12-31,national,IMPORTS,импорт товаров и услуг,21007832.5,level
+2022-12-31,national,IMPORTS,импорт товаров и услуг,27773158.3,level
+2023-12-31,national,IMPORTS,импорт товаров и услуг,33066052.7,level
+2024-12-31,national,IMPORTS,импорт товаров и услуг,35189319.1,level
+2025-12-31,national,IMPORTS,импорт товаров и услуг,41918767.7,level
+2007-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,707915.8,level
+2008-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,106800.8,level
+2009-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,276006.6,level
+2010-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,228234.3,level
+2011-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,433091.3,level
+2012-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,752584.7,level
+2013-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,967444.1,level
+2014-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,1680008.3,level
+2015-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,2054997.9,level
+2016-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,2399436.0,level
+2017-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,2531303.8,level
+2018-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,2523093.9,level
+2019-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,2892656.0,level
+2020-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,2888367.7,level
+2021-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,2933658.3,level
+2022-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,2957573.6,level
+2023-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,3778012.4,level
+2024-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,3918307.7,level
+2025-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,5846759.3,level
+2007-12-31,national,NET_EXPORTS,Чистый экспорт,830611.8000000007,level
+2008-12-31,national,NET_EXPORTS,Чистый экспорт,3210257.2,level
+2009-12-31,national,NET_EXPORTS,Чистый экспорт,1345437.1000000006,level
+2010-12-31,national,NET_EXPORTS,Чистый экспорт,3130547.0,level
+2011-12-31,national,NET_EXPORTS,Чистый экспорт,5595363.499999999,level
+2012-12-31,national,NET_EXPORTS,Чистый экспорт,4495835.4,level
+2013-12-31,national,NET_EXPORTS,Чистый экспорт,4257412.5,level
+2014-12-31,national,NET_EXPORTS,Чистый экспорт,5440144.5,level
+2015-12-31,national,NET_EXPORTS,Чистый экспорт,1628696.0,level
+2016-12-31,national,NET_EXPORTS,Чистый экспорт,1585830.8999999985,level
+2017-12-31,national,NET_EXPORTS,Чистый экспорт,4334058.799999999,level
+2018-12-31,national,NET_EXPORTS,Чистый экспорт,7246783.000000002,level
+2019-12-31,national,NET_EXPORTS,Чистый экспорт,5576070.0,level
+2020-12-31,national,NET_EXPORTS,Чистый экспорт,2848124.8000000007,level
+2021-12-31,national,NET_EXPORTS,Чистый экспорт,7237563.5,level
+2022-12-31,national,NET_EXPORTS,Чистый экспорт,15361139.2,level
+2023-12-31,national,NET_EXPORTS,Чистый экспорт,8321390.400000002,level
+2024-12-31,national,NET_EXPORTS,Чистый экспорт,7454952.1000000015,level
+2025-12-31,national,NET_EXPORTS,Чистый экспорт,5173993.1999999955,level
+2007-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",154197.5,level
+2008-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",158923.9,level
+2009-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",169906.4,level
+2010-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",178887.2,level
+2011-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",223332.3,level
+2012-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",278010.6,level
+2013-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",345696.5,level
+2014-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",429963.5,level
+2015-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",470167.5,level
+2016-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",532652.8,level
+2017-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",610130.8,level
+2018-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",692378.8,level
+2019-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",780156.1,level
+2020-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",785758.5,level
+2021-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",933541.7,level
+2022-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",347176.5,level
+2023-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",372582.5,level
+2024-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",324837.9,level
+2025-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",385070.7,level
+2007-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,238229.8,level
+2008-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,-337874.7,level
+2009-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,593381.9,level
+2010-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,890843.4000000022,level
+2011-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,1277523.9,level
+2012-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,1183661.1,level
+2013-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,1272199.3,level
+2014-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,526137.5,level
+2015-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,1127525.9,level
+2016-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,1231144.9,level
+2017-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,1388549.8,level
+2018-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,1607336.6,level
+2019-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,2045684.3,level
+2020-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,1000230.9,level
+2021-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,1624311.0,level
+2022-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,294681.1,level
+2023-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,2334504.6,level
+2024-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,3535484.8,level
+2025-12-31,national,STAT_DISCREPANCY,Статистическое расхождение,4347527.0,level
+2023-12-31,national,VALUABLES,приобретение минус выбытие ценностей,41699.1,level
+2024-12-31,national,VALUABLES,приобретение минус выбытие ценностей,69913.5,level

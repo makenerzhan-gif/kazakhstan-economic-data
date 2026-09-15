@@ -3209,6 +3209,18 @@ indicators:
     observation_type: period_average
     observation_evidence: "APSP = 'Average Petroleum Spot Price' — простое среднее трёх эталонных сортов"
 
+  - id: OIL_PRICE_BRENT
+    name_ru: "Цена нефти Brent (Всемирный банк, Pink Sheet)"
+    name_en: "Crude Oil Price, Brent spot (World Bank Pink Sheet)"
+    agency: wb
+    frequency: monthly
+    unit: "USD per barrel"
+    category: prices
+    country: WLD
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "Pink Sheet 'Description': monthly average of daily spot quotations, Brent 38° API; column 'Crude oil, Brent' of CMO-Historical-Data-Monthly.xlsx"
+
   - id: COMMODITY_TERMS_OF_TRADE
     name_ru: "Условия торговли по сырью (скользящие веса)"
     name_en: "Commodity Terms of Trade (rolling weights)"

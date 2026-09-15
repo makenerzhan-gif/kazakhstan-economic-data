@@ -42,7 +42,7 @@ def build_long(indicators: list[dict]) -> list[dict]:
         for rec in _load_processed_series(agency, ind_id):
             rows.append({
                 "date": rec.get("date"),
-                "country": "KZ",
+                "country": ind.get("country", "KZ"),    # WLD for world benchmark prices (OIL_PRICE_BRENT)
                 "region": "national",
                 "frequency": ind.get("frequency"),
                 "variable": ind_id,

@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/8150/file/ru/",
+  "dataset_id": "8150",
+  "indicator_id": "AGRICULTURE_VOLUME_INDEX_BY_ACTIVITY",
+  "indicator_name": "Agriculture, forestry and fishing gross output volume index by ОКЭД activity (national)",
+  "description": "ИФО валовой продукции (услуг) сельского, лесного и рыбного хозяйства по видам деятельности",
+  "frequency": "annual",
+  "unit": "% of previous year",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Item codes are the sheet's own ОКЭД codes (A, 01, 011, 0111 … 014, 02, 03); uncoded aggregate rows are skipped.",
+  "publication_date": null,
+  "last_update_date": "2026-09-14",
+  "download_date": "2026-09-14",
+  "period_start": "2010-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

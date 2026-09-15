@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/5927/file/ru/",
+  "dataset_id": "5927",
+  "indicator_id": "GVA_NOMINAL_BY_REGION_SECTION",
+  "indicator_name": "Gross regional product and GVA by ОКЭД section, by region",
+  "description": "Валовой региональный продукт и ВДС по видам экономической деятельности, по регионам",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Item GDP is the gross regional product, NET_TAXES the regional net taxes on products; the 2018 overlap between the two sheets resolves to the later sheet.",
+  "publication_date": null,
+  "last_update_date": "2026-09-14",
+  "download_date": "2026-09-14",
+  "period_start": "2010-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

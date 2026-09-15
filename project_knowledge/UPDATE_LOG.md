@@ -3768,3 +3768,378 @@ scripts/analysis/pairs.py` confirmed empty, matching the zero-change claim.
 Deliberately out of scope: everything the first charting slice already scoped out
 (interactive/HTML charts, unit-aware y-axis labels, a chart retention/cleanup
 policy) applies here too, unchanged.
+
+## 2026-09-14 — model sync, phase 0: a contract between the Excel GDP model and the unified dataset
+
+The analyst's Excel GDP model (`1_Model_GDP_p_a_2025_…_rev_2026-09-14.xlsx`, kept
+on Yandex.Disk, not in this repo) had just been brought to BNS facts for 2024-2025
+by hand, from 40 BNS dynamic tables plus World Bank, IMF and NBK series. Comparing
+what the model needs with what this pipeline already publishes showed 29 indicator
+groups: 5 fully covered, 11 only as national totals, 13 absent (everything by
+section or by region, natural volumes, World Bank prices, exports by commodity).
+This entry is the first of six planned phases: make the part that already matches
+flow from the pipeline, and make any later disagreement visible.
+
+**What was added.** `config/model_map.yaml` — one entry per pipeline variable (21
+entries, 22 cell targets) naming the workbook cells that should carry its annual
+value, the annualisation rule (`last`, `mean`, `december`, `sum`), the unit scale
+(the pipeline stores tenge, the model млн ₸) and a tolerance. `scripts/model_sync.py`
+reads the workbook twice (formulas and cached values), annualises the unified series
+and prints one line per cell and year. The one design rule worth stating: a cell that
+holds a formula is a CONTROL — compared, never written, because the model computes it
+— and only a cell that holds a number is an INPUT that `--apply` may rewrite. So the
+loader can never replace the model's own logic with a pasted value. `--apply` writes
+through a private Excel instance (`scripts/lib/excel_apply.ps1`, the same applier used
+for the manual update: full recalculation, save-as to `--out`, never in place), puts a
+comment on each written cell naming the variable, source and previous value, and
+appends the change to the model's own «Журнал_правок» sheet. This step is a local,
+Windows-only tool and is deliberately not wired into `update_all.py`.
+
+**Verified, not assumed.** The first real run against the model: 111 checks, 107
+already equal, 0 control mismatches, 0 missing, 4 input differences — and all four
+were real stale cells, not loader noise: employed persons and the average wage for
+2023 on the «Прогнозы ЦГО» sheet still held the old ЦГО estimates (8 930.5 thousand
+vs BNS 9 081.92; 349 748 vs 364 295 tenge), and the 2023-2024 annual exchange rate
+came from a different averaging than 2025 (456.31/469.21 vs the daily mean
+456.79/469.02; 2025 already was the daily mean). Applied through `--apply`: the
+model's «Контроль» sheet (GDP, GVA, deflators, 20 sections, 2023-2030) did not change
+by a single cell, which confirms the fact-year deflators no longer depend on those
+rate cells; the re-run reports 111/111 equal. Two findings recorded in the map's
+comments rather than mapped: `SUBSIDIES` is not subsidies on products (980.7 bn ₸ in
+2023 against BNS's 339.6 bn; `TAXES_ON_PRODUCTS` does match), and the quarterly
+`GDP_NOMINAL` is cumulative within the year, so the annual `GDP_INCOME_METHOD` is the
+series to use for nominal GDP.
+
+9 new tests in `tests/test_model_sync.py` (127/127 total): the four annualisation
+rules only ever see observations dated inside the requested year and return `None`
+rather than a fabricated value for an absent one; an unknown rule is an error, not a
+default; scale-then-offset; year-header parsing ignores strings and booleans; a
+formula cell can never reach the `diff` status; `build_ops` writes only `diff`
+inputs and journals each; and `model_map.yaml` names only variables that exist in
+`indicators.yaml`.
+
+Deliberately out of scope, for the later phases: an item dimension (section / region)
+in the unified data, which is what 24 of the 29 indicator groups need; new BNS
+fetchers for the 40 tables; World Bank and EIA as agencies; exports by commodity from
+the trade file already downloaded; a `manual_inputs.yaml` for forecasts that are
+assumptions, not facts.
+
+## 2026-09-14 — model sync, phase 1: national accounts by section, component and ownership form
+
+The model's core is a breakdown — GVA by ОКЭД section, by industry division, GDP by
+expenditure component, income components by section, the non-observed economy, GVA
+by form of ownership — and `macro_long.csv` cannot hold one, because its contract is
+one value per (date, variable). So this phase adds a parallel item-level layer with
+the same rules rather than bending the existing one: `config/dims.yaml` (16 datasets
+from 13 BNS dynamic tables), `scripts/fetchers/bns_dims.py`, `scripts/lib/dims.py`,
+`scripts/update_dims.py`, `data/processed/dims/<id>.csv`, `metadata/bns/<id>.json`,
+revisions keyed on (date, item), and `data/unified/macro_dims_long.csv` (`macro_long`'s
+columns plus `item_code`, `item_name`; 5 682 rows on the first run). `update_all.py`
+runs it after the agency updaters and rebuilds the dims file with the rest.
+
+**Why the xlsx export, not the JSON cube.** Every table's JSON cube was downloaded and
+inspected first, the way the existing BNS fetchers read theirs. It is not the same
+data: 4439 and 4435–4437 carry only regional/national totals there (no sections, no
+components), 4453 stops at 2024 while the xlsx has 2025, and 4446/4448 return 404.
+The xlsx export is the file the Excel model was hand-loaded from on 2026-09-14, which
+also made it possible to test the parsers against ~2 000 already-verified cells (below).
+Three sheet layouts cover everything (`periods_across`, `region_blocks`,
+`year_subcolumns`); parsers find header rows by content, take only the "YYYY год"
+columns (quarterly columns are year-to-date), date annual values 31 December like the
+other annual BNS series, and resolve every data label through a dictionary
+(`dictionaries/okved_sections.csv`, `dictionaries/expenditure_items.csv`). A label that
+matches no entry — the event that must not pass silently when BNS renames or adds a
+line — raises `StructuralChangeError` with the unmatched labels listed.
+
+**Three parser defects the first live run caught, all mine.** BNS writes
+«Косвенно-измеряемые услуги» with a hyphen (dictionary regex fixed to accept both);
+the income tables label quarters "1 квартал 2025 года", which *contains* "2025 год",
+so an unanchored year search took Q1 for the annual value — the compensation total
+for 2025 came out as 8.8 trn instead of 49.4 trn (regex now anchored at the start of
+the cell); and the expenditure volume index publishes no index for net exports,
+inventories or valuables (11 items, not 15 — the minimum-items guard was set from the
+nominal table). After the fixes: 16/16 datasets ok, 153/153 tests.
+
+**Verified, not assumed** — `model_map.yaml` gained 17 item-level mappings (the model's
+own «Факт_БНС» input sheet read through its code column, plus the section totals,
+the МКИ sheet, the income sheet with one column block per component, the NOE sheet,
+and the ownership sheet over 2010–2025) and `model_sync.py` learned `dims_variable`
+entries, explicit `year_columns` for text-headed sheets, and `item_column` scanning.
+Against the model as it stands: 2 077 checks, 2 019 equal, 0 input differences,
+0 control mismatches, 58 "missing" — all of them ownership cells that BNS leaves
+empty (the phenomenon is absent) and the model holds as 0; the loader reports the
+absence rather than inventing a zero. Two contract corrections came out of the run and
+are recorded as comments in the map: BNS's «Итого по отраслям» in table 4452 includes
+the net-taxes row, so it equals the model's income-method GDP (row 30), not the sum of
+sections (row 27); and the model's aggregate volume indices are chained in fixed 2023
+prices, which sits 0.2 p.p. from BNS's previous-year-price aggregate in 2025 — a known
+property, so that control's tolerance is 0.25 rather than 0.15.
+
+27 new tests (153 total): the three parsers on synthetic grids replicating the live
+layouts, the structural-change path on an unknown label, dictionary uniqueness and
+every canonical name resolving only to its own code, label variants actually seen in
+BNS files (hyphenated, unspaced, footnoted), duplicate (date, item) rejection,
+item-keyed revisions, the dims long format extending the scalar one, and the
+`model_sync` extensions (code-column scanning with aliases, dims loading).
+
+Deliberately out of scope: the regional dimension (phase 2 — the `region` column
+exists in both long files but only ever holds `national`); `DATA_CATALOG.md`, which
+is generated from `indicators.yaml` and does not yet list the item-level datasets;
+quarterly year-to-date values from these tables (skipped, not stored); and the
+outlier warnings on small NOE shares, which are warnings by design.
+
+## 2026-09-14 — model sync, phase 2: the regional dimension
+
+The model's production block is 20 section headings each followed by 21 region rows
+(the 20 regions of 2022 plus the closed Южно-Казахстанская), and its «Факторы» sheet
+carries population, labour force, employment and unemployment by region. Until now
+`region` in both unified files only ever held `national`. This phase fills it.
+
+**What was added.** `dictionaries/regions.csv` — 22 codes with one regex each, matched
+on a normalised label that folds the spellings BNS actually uses across its tables:
+«Акмолинская», «Акмолинская область», «АКМОЛИНСКАЯ ОБЛАСТЬ», «Область Абай3)»,
+«З-Казахстанская», «Жетісу»/«Жетысу», «Ұлытау», «г.Алматы»/«г. Алматы»/«Г.АЛМАТЫ»,
+with Kazakh letters mapped to Russian shapes, footnote digits dropped and district
+rows («Абайский район», «Кокшетау г.а.») matching nothing. `lib/dims.py` gained the
+`region` column throughout (processed, revisions keyed on (date, region, item),
+unified). `fetchers/bns_dims.py` gained a fourth layout (`group_blocks`, for the
+population table's «Все население / Городское / Сельское» blocks with their sex
+sub-blocks), region rows for `periods_across` and `year_subcolumns`, all-regions
+mode for `region_blocks`, per-dataset `label_overrides`, and `strict: false` for
+sheets that also list districts. 17 new datasets in `config/dims.yaml` (34 in all,
+24 589 unified rows, 22 regions): ВРП and GVA by section and region (5927), the
+regional GVA volume indices (450904) and the ВРП volume index (5926), average
+population by region × settlement type × sex (6576), the labour market by region
+(102790–102800: labour force, employed, unemployed, employees, self-employed,
+unemployment rate), employment by BNS group by region (443430/435/438), employment
+by section (5831), and fixed capital investment by region and by section with its
+volume indices (5546/5547/5549). `model_map.yaml` gained 21 regional mappings and a
+`blocks` form (item -> row range of region rows, names resolved from the sheet);
+`model_sync.py` treats an EMPTY input cell as fillable — it was reported as "missing"
+before, which hid the 80 empty regional cells of 2024–2025.
+
+**Parser defects the live run caught, all mine again.** BNS wraps column headers
+mid-word with a hyphen («Горнодобы-вающая», «промышлен-ность» in 450904), so a
+hyphen between two letters is now dropped in normalisation and the dictionary
+regexes accept an optional hyphen; the 2010–2018 sheet of 5927 names the ВРП column
+«Всего» and carries КИУФП (FISIM) — dataset-level overrides; period rows in 450904
+carry footnotes («20211)»), so that dataset's year regex allows one; and the
+investment-by-section table has no «%» column for 2003, which the sub-column parser
+now detects instead of reading 2004's value as 2003's index.
+
+**Verified, not assumed** — 184/184 tests (14 new: region labels seen in BNS files and
+in the model, the group-blocks parser, region rows in both row-wise layouts, the
+missing-sub-column case, hyphenated and Latin-lettered labels, region-keyed
+revisions). Against the model: 5 143 checks, 4 753 already equal, 105 differences on
+input cells, 116 control mismatches, 169 "missing". The 105 were applied through
+`--apply` (the model's «Контроль» sheet did not change by a cell): 22 are BNS's
+current 2023 regional population — small revisions plus a reclassification of
+51 837 people in Алматинская from urban to rural; 41 are the regional unemployment
+rate, empty for 2024–2025 in the model, plus Восточно-Казахстанская 2023, which held
+the national 4.6 instead of BNS's 3.4; 40 are regional self-employment 2024–2025,
+also empty; and 2 are mining volume indices for Astana and Almaty 2023 where BNS
+publishes 0 and the model had nothing. Re-run: 4 858 equal, 0 differences. The 169
+"missing" are the closed Южно-Казахстанская rows (63 + 33 + 15) and the BNS-empty
+ownership cells already known; nothing was invented for them. The 116 control
+mismatches are two findings for the model's author, not the loader's: regional
+employment and unemployment for 2024–2025 are formulas in the model (labour force
+minus an estimated unemployment) and sit up to ±0.2 % from BNS's published regional
+figures; and employment by section is derived in the model from the BNS group totals,
+while BNS publishes it directly (5831) — differences reach 29 thousand in section S.
+
+Deliberately out of scope: replacing those formulas with facts (the loader never
+overwrites a formula; the author decides); the 2010–2017 sheet of 450904 and the
+2013–2018 sheet of 5931, parsed but not mapped to the model; forestry and fishing
+volume indices by region (458550/458663 — the model has no rows for them);
+`DATA_CATALOG.md` still lists scalar indicators only.
+
+## 2026-09-14 — model sync: the author's two employment decisions, as a contract flag
+
+The model's author decided that regional employment and unemployment for 2024–2025
+and employment by section are facts, not model logic. Rather than a one-off script,
+`model_map.yaml` gained a per-mapping `replace_formulas: true`, and `model_sync.py` a
+matching `Check.replace_formula`: with the flag, a formula cell that disagrees with the
+pipeline is reported as `diff` and `--apply` may overwrite it; without it the default
+holds — formulas are only ever compared. The decision is therefore visible in the
+contract, next to the mapping it applies to, with a comment saying who decided and when,
+and every replaced cell carries a comment and a journal row saying the formula was
+replaced by a fact.
+
+Applied: 116 cells — regional employed and unemployed 2024–2025 (the model had
+estimated unemployment as labour force × the NATIONAL rate and employment as the
+remainder), and employment by section 2023–2025 from BNS 5831 (the model had derived
+sections from group totals; the sums over sections stay formulas, and the industry
+subtotal now agrees with 5831 to the unit). «Контроль» unchanged; the only sheet that
+reads these cells is labour productivity, which now rests on published figures.
+Re-run of those mappings: 183 equal, 0 differences, 0 control mismatches.
+
+## 2026-09-14 — model sync, phase 3: physical output, production indices, grain
+
+**What was added.** Six datasets (40 in all, 39 387 unified rows): industrial output in
+physical units by product and region (5814 — the model's physical-output rows under the
+industry nodes are labelled exactly as this table labels its products, so
+`dictionaries/products.csv` is that list: coal, oil, gas, ores and concentrates,
+foods, beverages, textiles, fuels, electricity, heat, water); the industrial production
+index by activity (5792, 53 rows — `dictionaries/industry_divisions.csv`, ОКЭД
+divisions and groups); the agriculture volume index by ОКЭД activity (8150, codes from
+the sheet); and grain harvest, sown area and yield by region (8160/8154/8166). Parser
+additions: `product_blocks` (product label row, then the country and producing
+regions), `group_blocks` generalised to labels in column A and to skipping crop groups
+the dictionary does not name, a `code_col` for tables that carry their own codes, and
+legacy `.xls` reading through xlrd — five of these tables are OLE2 files, not zip-based
+xlsx, and the first live run failed on all five with "File is not a zip file" until the
+format was detected from the file signature rather than the download name.
+
+**Verified, not assumed.** Seven new mappings: the physical-output rows of the ВДС
+sheet (31 products), the oil and gas fact rows of «Прогнозы ЦГО», table 2 of «Факт_БНС»
+(the raw BNS index behind every lowest-row ИФО of sections A, B, C, read through the
+sheet's code column with the model's own numbering for non-ferrous metallurgy and
+casting aliased to ОКЭД 24.4/24.5), and the grain harvest row with its 21 region rows.
+First run: 168 equal — every 2023 physical value and all 72 raw indices in table 2
+matched to the last decimal, which is the strongest test the parsers could get — 57
+differences, 0 control mismatches, 9 missing. Applied: 55 empty 2024–2025 physical-
+output cells filled, and the 2023 oil and gas fact rows on the ЦГО sheet refined from
+the ministry's rounded 89.9 / 59.1 to BNS's 89.977 млн т / 59.458 млрд м³. «Контроль»
+unchanged. Re-run: 225 equal, 0 differences. The 9 missing are BNS-confidential or
+absent cells (bauxite 2024–2025, asbestos 2025, grain in regions that grow none) —
+nothing invented.
+
+Deliberately out of scope: the coal and electricity fact rows of «Прогнозы ЦГО», which
+follow the ministries' definitions (2023: 112 vs BNS 116.4 млн т; 112.8 vs 113.6 млрд
+кВт·ч) and need a stated conversion rule before they can be mapped; oil production by
+field (ministry data, not BNS); crop-level sown area from 466568; the regional
+detail of 5814 (loaded, 22 regions, but the model has national rows only).
+
+## 2026-09-15 — model sync, phase 4: world prices from the World Bank and the EIA (two new agencies)
+
+**What.** The GDP model's world-price block («Внешние и внутренние факторы»: 46 annual
+commodity prices in rows 65–124, 16 price indices in rows 146–161, the World Bank and EIA
+Brent forecasts in rows 5 and 4) was the last fact block still hand-loaded. It now comes
+from two new pipeline agencies:
+
+- `wb` — World Bank Commodity Markets. Four item-level datasets in `config/dims.yaml`:
+  `WB_COMMODITY_PRICES_ANNUAL` (69 Pink Sheet series, 1960–2025, 4 099 rows),
+  `WB_COMMODITY_INDICES_ANNUAL` (16 indices 2010=100, 1 056 rows),
+  `WB_COMMODITY_PRICE_FORECASTS` and `WB_COMMODITY_INDEX_FORECASTS` (the CMO forecast
+  table's `2026f`/`2027f` columns only: 92 and 32 rows, April 2026 vintage). Plus one scalar
+  series beside the IMF's APSP: `OIL_PRICE_BRENT`, monthly Brent from the Pink Sheet
+  (800 points, 1960-01 – 2026-08, `scripts/update_wb.py`).
+- `eia` — U.S. Short-Term Energy Outlook. `EIA_STEO_PRICES`: Brent and WTI spot, monthly
+  history and forecast from `STEO_m.xlsx` (144 rows, 2022-01 – 2027-12; September 2026
+  release, last historical month 2026-08; months after it carry `transformation: forecast`).
+
+**How the files are reached — verified, not remembered.** The CMO page links its files on
+thedocs.worldbank.org and the document id in the path changes every release: the link the
+model had been loaded from (…-0350012021) is the January 2025 vintage and ends in 2024;
+the current one (…-0050012026, "Updated on September 02, 2026") ends in 2025. So
+`scripts/fetchers/wb.py` reads the page at run time (plain GET, 200, 56 KB) and takes the
+links from it, with the last confirmed link as the fallback and the manifest saying which
+was used. The forecast table is linked as a PDF; the xlsx sits at the same path (checked
+for April 2026). EIA's `xls/2tab.xlsx` and `STEO_a.xlsx` answer 404; the whole monthly
+workbook `xls/STEO_m.xlsx` is what exists and is read (sheets `Dates`, `2tab`).
+
+**Codes.** Neither World Bank file carries a mnemonic row any more, so
+`dictionaries/wb_commodities.csv` (69, with `name_en` and `unit`) and
+`wb_commodity_indices.csv` (16) define the codes, modelled on the Pink Sheet mnemonics,
+with one regex per series matching the labels of both the history file and the forecast
+table ("Logs, Cameroon" / "Logs, Africa", "Urea" / "Urea, E. Europe", "Non-energy **" /
+"Non-Energy"). English labels get their own normaliser (`dims.normalise_label_en`) —
+the Russian one folds Latin letters into Cyrillic. The price sheets' units row is
+checked against the dictionary (a changed unit stops the dataset); the sub-group rows
+of the forecast table are indented into column B/C, which the first run caught as
+"8 items instead of 46" and the parser now handles.
+
+**Plumbing.** `update_dims.py` dispatches the fetcher by each dataset's agency
+(`AGENCY_FETCHERS`), takes `--only <agency|id>…`, writes a record-level
+`transformation`, and sets `country`/`geography` per dataset (`WLD`, "World (benchmark
+prices)"; `region` is `world`). `model_sync.py` gained `rel_tolerance` — the wider of the
+absolute and relative tolerances applies, because the price rows span $0.34/kg to
+$34 000/t and the World Bank publishes rounded values. `lib/unified.py` takes the scalar
+`country` from indicators.yaml (KZ unless said otherwise). `update_all.py` runs
+`update_wb` before `update_dims`. Tests: 207 → 290 (`tests/test_wb_eia.py`, a relative-
+tolerance case, the dataset-registry test now per agency).
+
+**Model run** (`model_map.yaml` +7 mappings: `wb_prices_history`, `wb_price_forecasts`,
+`wb_indices_history`, `wb_index_forecasts`, `brent_reference_control`, `brent_wb_forecast`,
+`brent_eia_forecast`): 317 checks — 310 ok, 2 diff, 0 control, 5 missing. Applied 2 cells:
+US natural gas 2023 (2.50 → 2.54, revised by the World Bank) and the EIA Brent 2026
+forecast (91, the overview table's rounded figure, → 90.8575, the mean of the twelve
+monthly values). The five "missing" are Barley 2023–2025 and Shrimp 2024–2025, which
+the World Bank no longer publishes as history (`..`) — the model's own numbers there
+stay, nothing was invented. Re-check: 312 ok, 0 diff. The 2026 column of «Контроль»
+moved by 0.003 % (consensus Brent 79.571 → 79.551 through row 3's average) — the model's
+designed propagation of a forecast input, unlike the fact-year loads of phases 1–3 which
+left «Контроль» untouched. Journal 1 315 → 1 318 rows. Copy on Yandex.Disk replaced
+under a hash check (eee49fc8 → dceb4f43); the original file is unchanged (3f5a1228).
+
+**Found by the way — decisions left to the author, not applied.** An informational scan
+of 1991–2025 (2 205 cells: 2 114 ok, 76 diff, 15 missing) shows:
+1. Row 66 «сырая нефть марки Брент» holds the World Bank *average* crude (Brent/Dubai/WTI)
+   for 1991–2020 — every year within 0.3 % of `CRUDE_PETRO`, 2.5–6.2 % below Brent in
+   2011–2020 — and Brent only from 2021 (the phase-3-era load). Row 2 links to it. Whether
+   the history should become Brent (`--only wb_prices_history` with `years` widened) is
+   the author's call; it would move the historical oil deflators.
+2. Rubber TSR20 1999–2016 (5–16 %) and Urea 1991–2020 differ from the current Pink Sheet:
+   older vintages of series the World Bank has since redefined (the `**` marker).
+3. Grains index 2022: model 105.4, World Bank 150.4 — looks like a slip, not a vintage.
+
+**Not done.** The page-scraping step has only been exercised from this machine, not from
+GitHub Actions (the fallback link covers a blocked page, but a stale fallback would go
+unnoticed until the October 2 CMO — the log warning is the signal). `OIL_PRICE` (IMF
+APSP) and the CTOT indices still carry `country: KZ`, predating the field; left as is
+rather than silently rewriting an existing series' rows. Nothing committed — the phase-0
+through phase-4 work is uncommitted in the working tree by the author's choice.
+
+## 2026-09-15 — model sync, phase 5: exports by commodity group, and the «Экспорт» sheet cut loose from an external workbook
+
+**What.** The last fact block of the GDP model still hand-loaded was the «Экспорт» sheet:
+23 commodity groups by value (млн $) and physical volume, 2024–2025 still the January-2025
+forecast formulas, and 396 formulas pointing at another workbook (`2355.xlsx` on the
+author's Yandex.Disk) for world prices and sector volume indices.
+
+**Pipeline.** Two datasets from the export workbook that already feeds EXPORTS and
+OIL_EXPORTS_* (element 446905): `EXPORTS_VALUE_BY_COMMODITY_GROUP` (thousand USD) and
+`EXPORTS_VOLUME_BY_COMMODITY_GROUP` (tonnes), monthly January 2019 – June 2026, 3 288 rows
+each, `scripts/fetchers/bns_trade.py`, dispatched by a dataset-level `fetcher` key.
+Groups are HS prefixes in `dictionaries/hs_export_groups.csv` — the model's grouping
+(1001 wheat … chapter 15 fats and oils … chapters 86–89 transport equipment) — each the
+sum of its 6-digit lines over the regional blocks, under the same per-month proof that
+the regional rows reproduce the national total that OIL_EXPORTS_* uses (the two months
+of September 2022 fail by 1.1–1.5 % and are skipped). TOTAL is the national row. The raw
+copy is shared with the day's EXPORTS download when it exists. What the 6-digit file
+cannot give and is therefore not offered: gas condensate (2709 00 100 0) and the
+'основные товары' subset of petroleum products — `CRUDE_OIL` is all of 2709,
+`PETROLEUM_PRODUCTS` all of 2710; natural-gas tonnes (published in m³ only).
+
+**Model, step 12 — external links.** All 396 `[1]` formulas now point at this workbook:
+rows 30–51 (prices) at the same series on «Внешние и внутренние факторы» (Brent row 2,
+gas Europe 67, coal 65, wheat HRW 89, iron ore 116, metals 114–123, and for the rows the
+sheet uses as year-on-year multipliers the y/y rows 134/141/142), rows 58–81 (ИФО) at the
+same sectors on «ИФО_производ_регионы» (01.1–01.3, 07.1, 07.2, 05, 19, gas row 130, 24.2,
+24, 01, 20, 30, GDP row 1399). Every correspondence was established from the rows' cached
+2022–2023 values (all equal except BNS's later revisions of 2023 for 07.2 and 24.2 and of
+2022 for 24: 100.5 vs 100) and from the formula form — a ratio-of-levels row gets a price
+level, a direct-multiplier row a y/y index. Two rows changed source by design: crude oil
+and petroleum products now take the Brent reference row 2 (99.8/82.6 $ for 2022–2023
+instead of 99.21/82.16 from the old workbook). Rows 26/108 («Прочие») got the 2023
+residual pattern for 2024–2025 and rows 2/109 became inputs; `excel_apply.ps1` gained a
+`breaklinks` op and the link definition is gone. «Контроль» and every other sheet:
+unchanged (the sheet is a satellite — nothing references it).
+
+**Model, step 13 — facts.** Four mappings (`exports_total`, `exports_value_groups`,
+`exports_volume_tonnes`, `exports_volume_thousand_tonnes`, `replace_formulas: true` by the
+approved phase-5 plan): 126 checks, 116 cells rewritten — the total, 21 value groups and
+20 volume rows for 2023–2025 (2023 was an earlier vintage of the same data: total 79 812
+→ 79 138.8 млн $, oil 43 403 → 42 320, iron ore +3 %, transport +6 %; the 2024–2025
+forecast formulas → BNS). Row identities hold to 0.000 (total = groups + «Прочие»); the
+2026–2030 formulas chain on from the 2025 facts and the re-linked prices/ИФО (2026 total
+now 94.0 bn $ against 86.5 before). Re-check 126 ok. Not mapped and left as the author's:
+rows 10/92 (condensate), 11/93 (petroleum products), 91 (crude tonnes — linked to «Прогнозы
+ЦГО», 71.0 Mt for 2024 against BNS 71.04 Mt) and 94 (gas volume). Gold tonnage in the
+model (11.27 t for 2023) was not the customs figure (6.77 t) and is now BNS's. Journal
+1 318 → 1 485 rows. Copy on Yandex.Disk replaced under a hash check (dceb4f43 →
+73562144); the original is unchanged (3f5a1228). Tests 290 → 294.
+
+**Not done.** Imports by group (the model does not use them). The «Экспорт» rows for
+2026–2030 still carry the sheet's own price/volume mechanics — that is the author's
+forecast, not a pipeline matter. Nothing committed.

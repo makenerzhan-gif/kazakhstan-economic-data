@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/446905/file/ru/",
+  "dataset_id": "446905,measure=usd",
+  "indicator_id": "EXPORTS_VALUE_BY_COMMODITY_GROUP",
+  "indicator_name": "Goods exports by commodity group (HS prefixes), thousand USD, monthly",
+  "description": "Экспорт товаров по товарным группам (ТН ВЭД), тыс. долларов США, помесячно",
+  "frequency": "monthly",
+  "unit": "thousand USD",
+  "currency": "USD",
+  "geography": "Kazakhstan (national)",
+  "methodology": "TOTAL is the published national row; the groups are sums of 6-digit HS lines over the regional blocks. Gas condensate and the 10-digit 'основные товары' subsets (petroleum products) cannot be separated at 6 digits — CRUDE_OIL is all of 2709, PETROLEUM_PRODUCTS all of 2710. Raw file: downloaded, saved as EXPORTS_BY_GROUP.",
+  "publication_date": null,
+  "last_update_date": "2026-09-15",
+  "download_date": "2026-09-15",
+  "period_start": "2015-01-01",
+  "period_end": "2026-06-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

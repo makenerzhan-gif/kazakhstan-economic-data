@@ -1,0 +1,17 @@
+code,name_ru,name_en,match
+TOTAL,"Сырьевые товары, сводный индекс (2010=100)",World Bank Commodity Price Index,^(total|world bank commodity)
+ENERGY,"Энергоносители (2010=100)",Energy,^energy$
+NON_ENERGY,"Неэнергетические сырьевые товары (2010=100)",Non-energy,^non-?energy$
+AGRICULTURE,"Сельское хозяйство (2010=100)",Agriculture,^agriculture$
+BEVERAGES,"Напитки (2010=100)",Beverages,^beverages$
+FOOD,"Еда (2010=100)",Food,^food$
+OILS_MEALS,"Масла и шроты (2010=100)",Oils & Meals,^oils? (&|and) meals$
+GRAINS,"Зерна (2010=100)",Grains,^grains$
+OTHER_FOOD,"Другая пища (2010=100)",Other Food,^other food$
+RAW_MATERIALS,"Сырьевые ресурсы (2010=100)",Raw Materials,^raw materials$
+TIMBER,"Древесина (2010=100)",Timber,^timber$
+OTHER_RAW_MATERIALS,"Другое сырье (2010=100)",Other Raw Materials,^other raw mat
+FERTILIZERS,"Удобрения (2010=100)",Fertilizers,^fertilizers$
+METALS_MINERALS,"Металлы и минералы (2010=100)",Metals & Minerals,^metals (&|and) minerals$
+BASE_METALS,"Неблагородные металлы, без железной руды (2010=100)",Base Metals (ex. iron ore),^base metals
+PRECIOUS_METALS,"Драгоценные металлы (2010=100)",Precious Metals,^precious metals$

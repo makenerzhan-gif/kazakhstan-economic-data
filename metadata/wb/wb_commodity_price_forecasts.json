@@ -1,0 +1,21 @@
+{
+  "source": "wb",
+  "source_url": "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.xlsx",
+  "dataset_id": "CMO-April-2026-Forecasts.xlsx#Forecast",
+  "indicator_id": "WB_COMMODITY_PRICE_FORECASTS",
+  "indicator_name": "World Bank Commodity Markets Outlook price forecasts, nominal USD",
+  "description": "Прогноз мировых цен на сырьевые товары (Всемирный банк, Commodity Markets Outlook), номинальные $",
+  "frequency": "annual",
+  "unit": "USD per unit named in item_name",
+  "currency": "USD",
+  "geography": "World (benchmark prices)",
+  "methodology": "Forecast ('YYYYf') columns of the CMO table only; the two forecast years move on with each April/October release, the raw files keep every vintage. File release: April 28, 2026.",
+  "publication_date": "April 28, 2026",
+  "last_update_date": "2026-09-15",
+  "download_date": "2026-09-15",
+  "period_start": "2026-12-31",
+  "period_end": "2027-12-31",
+  "next_update_date": null,
+  "transformation": "forecast",
+  "revision_status": "original"
+}

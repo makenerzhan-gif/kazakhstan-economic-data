@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/4448/file/ru/",
+  "dataset_id": "4448",
+  "indicator_id": "NOE_SHARE_BY_SECTION",
+  "indicator_name": "Non-observed economy, share of GDP, by ОКЭД section",
+  "description": "Доля ненаблюдаемой экономики в ВВП, по видам экономической деятельности",
+  "frequency": "annual",
+  "unit": "% of GDP",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "annual values from the xlsx export; quarterly year-to-date columns skipped",
+  "publication_date": null,
+  "last_update_date": "2026-09-14",
+  "download_date": "2026-09-14",
+  "period_start": "2013-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

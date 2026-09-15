@@ -1,0 +1,229 @@
+date,region,item_code,item_name,value,transformation
+2007-12-31,national,EXPORTS,экспорт товаров и услуг,111.6,level
+2008-12-31,national,EXPORTS,экспорт товаров и услуг,143.5,level
+2009-12-31,national,EXPORTS,экспорт товаров и услуг,88.0,level
+2010-12-31,national,EXPORTS,экспорт товаров и услуг,131.6,level
+2011-12-31,national,EXPORTS,экспорт товаров и услуг,135.4,level
+2012-12-31,national,EXPORTS,экспорт товаров и услуг,99.5,level
+2013-12-31,national,EXPORTS,экспорт товаров и услуг,98.9,level
+2014-12-31,national,EXPORTS,экспорт товаров и услуг,115.2,level
+2015-12-31,national,EXPORTS,экспорт товаров и услуг,77.9,level
+2016-12-31,national,EXPORTS,экспорт товаров и услуг,134.3,level
+2017-12-31,national,EXPORTS,экспорт товаров и услуг,114.3,level
+2018-12-31,national,EXPORTS,экспорт товаров и услуг,120.5,level
+2019-12-31,national,EXPORTS,экспорт товаров и услуг,106.7,level
+2020-12-31,national,EXPORTS,экспорт товаров и услуг,96.0,level
+2021-12-31,national,EXPORTS,экспорт товаров и услуг,128.0,level
+2022-12-31,national,EXPORTS,экспорт товаров и услуг,128.5,level
+2023-12-31,national,EXPORTS,экспорт товаров и услуг,94.2,level
+2024-12-31,national,EXPORTS,экспорт товаров и услуг,102.6,level
+2025-12-31,national,EXPORTS,экспорт товаров и услуг,109.2,level
+2007-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,113.4,level
+2008-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,114.1,level
+2009-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,114.2,level
+2010-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,111.0,level
+2011-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,108.3,level
+2012-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,106.3,level
+2013-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,107.2,level
+2014-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,105.6,level
+2015-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,111.6,level
+2016-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,114.7,level
+2017-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,106.0,level
+2018-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,106.0,level
+2019-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,106.5,level
+2020-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,107.2,level
+2021-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,108.7,level
+2022-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,115.0,level
+2023-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,114.3,level
+2024-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,108.8,level
+2025-12-31,national,FINAL_CONSUMPTION,Расходы на конечное потребление,110.9,level
+2007-12-31,national,GDP,Валовой внутренний продукт,115.5,level
+2008-12-31,national,GDP,Валовой внутренний продукт,121.0,level
+2009-12-31,national,GDP,Валовой внутренний продукт,104.7,level
+2010-12-31,national,GDP,Валовой внутренний продукт,119.6,level
+2011-12-31,national,GDP,Валовой внутренний продукт,118.9,level
+2012-12-31,national,GDP,Валовой внутренний продукт,104.8,level
+2013-12-31,national,GDP,Валовой внутренний продукт,109.5,level
+2014-12-31,national,GDP,Валовой внутренний продукт,105.8,level
+2015-12-31,national,GDP,Валовой внутренний продукт,101.9,level
+2016-12-31,national,GDP,Валовой внутренний продукт,113.6,level
+2017-12-31,national,GDP,Валовой внутренний продукт,108.4,level
+2018-12-31,national,GDP,Валовой внутренний продукт,109.2,level
+2019-12-31,national,GDP,Валовой внутренний продукт,107.6,level
+2020-12-31,national,GDP,Валовой внутренний продукт,104.2,level
+2021-12-31,national,GDP,Валовой внутренний продукт,113.9,level
+2022-12-31,national,GDP,Валовой внутренний продукт,119.7,level
+2023-12-31,national,GDP,Валовой внутренний продукт,111.2,level
+2024-12-31,national,GDP,Валовой внутренний продукт,109.0,level
+2025-12-31,national,GDP,Валовой внутренний продукт,109.7,level
+2007-12-31,national,GFCF,валовое накопление основного капитала,106.6,level
+2008-12-31,national,GFCF,валовое накопление основного капитала,110.6,level
+2009-12-31,national,GFCF,валовое накопление основного капитала,110.6,level
+2010-12-31,national,GFCF,валовое накопление основного капитала,108.2,level
+2011-12-31,national,GFCF,валовое накопление основного капитала,104.7,level
+2012-12-31,national,GFCF,валовое накопление основного капитала,106.2,level
+2013-12-31,national,GFCF,валовое накопление основного капитала,105.6,level
+2014-12-31,national,GFCF,валовое накопление основного капитала,104.0,level
+2015-12-31,national,GFCF,валовое накопление основного капитала,105.0,level
+2016-12-31,national,GFCF,валовое накопление основного капитала,110.8,level
+2017-12-31,national,GFCF,валовое накопление основного капитала,105.4,level
+2018-12-31,national,GFCF,валовое накопление основного капитала,105.3,level
+2019-12-31,national,GFCF,валовое накопление основного капитала,109.5,level
+2020-12-31,national,GFCF,валовое накопление основного капитала,107.2,level
+2021-12-31,national,GFCF,валовое накопление основного капитала,107.9,level
+2022-12-31,national,GFCF,валовое накопление основного капитала,114.4,level
+2023-12-31,national,GFCF,валовое накопление основного капитала,114.6,level
+2024-12-31,national,GFCF,валовое накопление основного капитала,105.5,level
+2025-12-31,national,GFCF,валовое накопление основного капитала,106.0,level
+2007-12-31,national,GOVERNMENT,органов государственного управления,119.8,level
+2008-12-31,national,GOVERNMENT,органов государственного управления,112.2,level
+2009-12-31,national,GOVERNMENT,органов государственного управления,120.0,level
+2010-12-31,national,GOVERNMENT,органов государственного управления,115.8,level
+2011-12-31,national,GOVERNMENT,органов государственного управления,112.1,level
+2012-12-31,national,GOVERNMENT,органов государственного управления,106.4,level
+2013-12-31,national,GOVERNMENT,органов государственного управления,100.8,level
+2014-12-31,national,GOVERNMENT,органов государственного управления,105.5,level
+2015-12-31,national,GOVERNMENT,органов государственного управления,109.5,level
+2016-12-31,national,GOVERNMENT,органов государственного управления,112.3,level
+2017-12-31,national,GOVERNMENT,органов государственного управления,103.0,level
+2018-12-31,national,GOVERNMENT,органов государственного управления,104.5,level
+2019-12-31,national,GOVERNMENT,органов государственного управления,106.9,level
+2020-12-31,national,GOVERNMENT,органов государственного управления,108.0,level
+2021-12-31,national,GOVERNMENT,органов государственного управления,107.7,level
+2022-12-31,national,GOVERNMENT,органов государственного управления,112.8,level
+2023-12-31,national,GOVERNMENT,органов государственного управления,113.2,level
+2024-12-31,national,GOVERNMENT,органов государственного управления,108.7,level
+2025-12-31,national,GOVERNMENT,органов государственного управления,108.2,level
+2007-12-31,national,GOV_COLLECTIVE,на коллективные услуги,123.7,level
+2008-12-31,national,GOV_COLLECTIVE,на коллективные услуги,110.1,level
+2009-12-31,national,GOV_COLLECTIVE,на коллективные услуги,117.3,level
+2010-12-31,national,GOV_COLLECTIVE,на коллективные услуги,114.6,level
+2011-12-31,national,GOV_COLLECTIVE,на коллективные услуги,115.1,level
+2012-12-31,national,GOV_COLLECTIVE,на коллективные услуги,104.5,level
+2013-12-31,national,GOV_COLLECTIVE,на коллективные услуги,98.3,level
+2014-12-31,national,GOV_COLLECTIVE,на коллективные услуги,103.9,level
+2015-12-31,national,GOV_COLLECTIVE,на коллективные услуги,115.5,level
+2016-12-31,national,GOV_COLLECTIVE,на коллективные услуги,106.5,level
+2017-12-31,national,GOV_COLLECTIVE,на коллективные услуги,103.4,level
+2018-12-31,national,GOV_COLLECTIVE,на коллективные услуги,104.4,level
+2019-12-31,national,GOV_COLLECTIVE,на коллективные услуги,105.0,level
+2020-12-31,national,GOV_COLLECTIVE,на коллективные услуги,105.4,level
+2021-12-31,national,GOV_COLLECTIVE,на коллективные услуги,107.2,level
+2022-12-31,national,GOV_COLLECTIVE,на коллективные услуги,113.7,level
+2023-12-31,national,GOV_COLLECTIVE,на коллективные услуги,110.5,level
+2024-12-31,national,GOV_COLLECTIVE,на коллективные услуги,106.1,level
+2025-12-31,national,GOV_COLLECTIVE,на коллективные услуги,108.9,level
+2007-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,115.8,level
+2008-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,114.5,level
+2009-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,122.8,level
+2010-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,117.0,level
+2011-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,109.5,level
+2012-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,108.2,level
+2013-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,103.1,level
+2014-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,107.1,level
+2015-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,103.6,level
+2016-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,118.4,level
+2017-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,102.7,level
+2018-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,104.7,level
+2019-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,109.8,level
+2020-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,110.6,level
+2021-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,108.1,level
+2022-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,111.9,level
+2023-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,115.9,level
+2024-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,111.1,level
+2025-12-31,national,GOV_INDIVIDUAL,на индивидуальные товары и услуги,107.5,level
+2007-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,106.8,level
+2008-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,110.9,level
+2009-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,110.8,level
+2010-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,108.5,level
+2011-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,105.8,level
+2012-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,106.9,level
+2013-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,106.0,level
+2014-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,106.5,level
+2015-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,105.6,level
+2016-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,111.8,level
+2017-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,105.9,level
+2018-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,105.9,level
+2019-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,109.7,level
+2020-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,107.1,level
+2021-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,107.9,level
+2022-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,113.9,level
+2023-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,115.0,level
+2024-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,105.7,level
+2025-12-31,national,GROSS_CAPITAL_FORMATION,Валовое накопление,107.2,level
+2007-12-31,national,HOUSEHOLDS,домашних хозяйств,111.9,level
+2008-12-31,national,HOUSEHOLDS,домашних хозяйств,114.6,level
+2009-12-31,national,HOUSEHOLDS,домашних хозяйств,112.9,level
+2010-12-31,national,HOUSEHOLDS,домашних хозяйств,109.9,level
+2011-12-31,national,HOUSEHOLDS,домашних хозяйств,107.3,level
+2012-12-31,national,HOUSEHOLDS,домашних хозяйств,106.1,level
+2013-12-31,national,HOUSEHOLDS,домашних хозяйств,108.6,level
+2014-12-31,national,HOUSEHOLDS,домашних хозяйств,105.6,level
+2015-12-31,national,HOUSEHOLDS,домашних хозяйств,112.3,level
+2016-12-31,national,HOUSEHOLDS,домашних хозяйств,115.4,level
+2017-12-31,national,HOUSEHOLDS,домашних хозяйств,106.6,level
+2018-12-31,national,HOUSEHOLDS,домашних хозяйств,106.1,level
+2019-12-31,national,HOUSEHOLDS,домашних хозяйств,106.4,level
+2020-12-31,national,HOUSEHOLDS,домашних хозяйств,107.1,level
+2021-12-31,national,HOUSEHOLDS,домашних хозяйств,108.8,level
+2022-12-31,national,HOUSEHOLDS,домашних хозяйств,115.5,level
+2023-12-31,national,HOUSEHOLDS,домашних хозяйств,114.5,level
+2024-12-31,national,HOUSEHOLDS,домашних хозяйств,108.8,level
+2025-12-31,national,HOUSEHOLDS,домашних хозяйств,111.4,level
+2007-12-31,national,IMPORTS,импорт товаров и услуг,105.6,level
+2008-12-31,national,IMPORTS,импорт товаров и услуг,122.4,level
+2009-12-31,national,IMPORTS,импорт товаров и услуг,114.8,level
+2010-12-31,national,IMPORTS,импорт товаров и услуг,109.8,level
+2011-12-31,national,IMPORTS,импорт товаров и услуг,112.3,level
+2012-12-31,national,IMPORTS,импорт товаров и услуг,97.8,level
+2013-12-31,national,IMPORTS,импорт товаров и услуг,97.4,level
+2014-12-31,national,IMPORTS,импорт товаров и услуг,109.8,level
+2015-12-31,national,IMPORTS,импорт товаров и услуг,98.7,level
+2016-12-31,national,IMPORTS,импорт товаров и услуг,136.1,level
+2017-12-31,national,IMPORTS,импорт товаров и услуг,106.7,level
+2018-12-31,national,IMPORTS,импорт товаров и услуг,113.1,level
+2019-12-31,national,IMPORTS,импорт товаров и услуг,107.4,level
+2020-12-31,national,IMPORTS,импорт товаров и услуг,104.1,level
+2021-12-31,national,IMPORTS,импорт товаров и услуг,110.0,level
+2022-12-31,national,IMPORTS,импорт товаров и услуг,115.9,level
+2023-12-31,national,IMPORTS,импорт товаров и услуг,102.9,level
+2024-12-31,national,IMPORTS,импорт товаров и услуг,100.2,level
+2025-12-31,national,IMPORTS,импорт товаров и услуг,110.8,level
+2007-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,107.9,level
+2008-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,125.6,level
+2009-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,113.9,level
+2010-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,114.9,level
+2011-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,123.1,level
+2012-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,113.4,level
+2013-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,109.0,level
+2014-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,121.5,level
+2015-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,108.7,level
+2016-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,116.3,level
+2017-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,108.3,level
+2018-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,109.0,level
+2019-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,110.6,level
+2020-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,106.2,level
+2021-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,107.4,level
+2022-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,110.8,level
+2023-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,117.9,level
+2024-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,106.1,level
+2025-12-31,national,INVENTORIES,изменение запасов материальных оборотных средств,115.6,level
+2007-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",117.0,level
+2008-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",114.0,level
+2009-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",114.0,level
+2010-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",112.0,level
+2011-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",115.9,level
+2012-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",114.7,level
+2013-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",109.8,level
+2014-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",107.4,level
+2015-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",106.3,level
+2016-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",109.9,level
+2017-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",107.4,level
+2018-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",108.2,level
+2019-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",107.2,level
+2020-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",104.3,level
+2021-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",113.9,level
+2022-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",110.2,level
+2023-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",110.6,level
+2024-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",106.6,level
+2025-12-31,national,NPISH,"некоммерческих организаций, обслуживающих домашние хозяйства",112.4,level

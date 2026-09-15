@@ -1,0 +1,750 @@
+# Contract between the GDP model workbook (1_Model_GDP_p_a_2025_…_rev_*.xlsx) and the
+# unified dataset. Read by scripts/model_sync.py.
+#
+# One entry per pipeline variable; `targets` are the workbook cells that should hold
+# that variable's annual value. Whether a target is checked or written is decided at
+# run time from the workbook itself: a cell holding a formula is a CONTROL (compared,
+# never overwritten — the model computes it), a cell holding a number is an INPUT
+# (compared, and rewritten by --apply when it differs). Nothing here is applied to a
+# formula cell, so the model's own logic can never be replaced by a pasted number.
+#
+# annual — how a variable's observations inside a calendar year become one number:
+#   last      the last observation dated within the year (annual series: the single value)
+#   mean      arithmetic mean of the observations within the year (daily/monthly rates)
+#   december  the observation for month 12 (monthly indices reported year-to-date)
+#   sum       sum of the observations within the year (monthly flows)
+# scale / offset — value * scale + offset, applied after annualisation (pipeline stores
+#   tenge and index levels; the model stores млн ₸ and percentage changes).
+# tolerance — |model − pipeline| above which a target is reported as a difference.
+# rel_tolerance — the same as a share of the pipeline value; the wider of the two applies.
+# years — calendar years to check; default is model.default_years.
+
+version: 1
+
+model:
+  default_file: "D:/Yandex.Disk/В клауд/1_Model_GDP_p_a_2025_470_75_15.01.2025_rev_2026-09-14.xlsx"
+  year_header_row: 1          # every mapped sheet carries the calendar year in row 1 (cached values)
+  default_years: [2023, 2024, 2025]
+  journal_sheet: "Журнал_правок"
+
+mappings:
+  - id: gdp_nominal
+    variable: GDP_INCOME_METHOD     # annual GDP in tenge; GDP_NOMINAL is quarterly and cumulative within the year
+    annual: last
+    scale: 1.0e-6
+    tolerance: 1.0
+    targets:
+      - {sheet: "ВДС_производ_регионы", row: 1399, note: "ВВП = ВДС + чистые налоги"}
+      - {sheet: "ВВП_доходы", row: 30, note: "ВВП методом доходов"}
+
+  - id: gdp_real
+    variable: GDP_REAL
+    annual: last
+    tolerance: 0.15                 # the model chains real GVA in fixed 2023 prices, BNS in previous-year prices
+    targets:
+      - {sheet: "ИФО_производ_регионы", row: 1399, note: "ИФО ВВП, сводится из секций"}
+      - {sheet: "ВВП_расходы_МКИ", row: 134, note: "ИФО ВВП методом конечного использования", tolerance: 0.05}
+
+  - id: gdp_deflator
+    variable: GDP_DEFLATOR
+    annual: last
+    tolerance: 0.15
+    targets:
+      - {sheet: "Дефляторы_производ_регионы", row: 1399, note: "дефлятор ВВП, сводится из секций"}
+
+  - id: net_taxes_on_products
+    variable: NET_TAXES_ON_PRODUCTS
+    annual: last
+    scale: 1.0e-6
+    tolerance: 1.0
+    targets:
+      - {sheet: "ВДС_производ_регионы", row: 1375, note: "ЧН, национальный итог"}
+      - {sheet: "ВВП_доходы", row: 28, col_offset: 2, note: "ЧН в столбце «другие налоги на производство»"}
+
+  - id: taxes_on_products
+    variable: TAXES_ON_PRODUCTS     # SUBSIDIES in the pipeline is a different aggregate (980.7 bn ₸ in 2023 vs 339.6 bn subsidies on products) — not mapped
+    annual: last
+    scale: 1.0e-6
+    tolerance: 1.0
+    targets:
+      - {sheet: "ВДС_производ_регионы", row: 1397, note: "налоги на продукты и импорт"}
+
+  - id: final_consumption
+    variable: TOTAL_CONSUMPTION_EXPENDITURE
+    annual: last
+    scale: 1.0e-6
+    tolerance: 0.6
+    targets:
+      - {sheet: "ВВП_расходы_МКИ", row: 2}
+
+  - id: household_consumption
+    variable: HOUSEHOLD_CONSUMPTION
+    annual: last
+    scale: 1.0e-6
+    tolerance: 0.6
+    targets:
+      - {sheet: "ВВП_расходы_МКИ", row: 3}
+
+  - id: gross_accumulation
+    variable: GROSS_ACCUMULATION
+    annual: last
+    scale: 1.0e-6
+    tolerance: 0.6
+    targets:
+      - {sheet: "ВВП_расходы_МКИ", row: 8}
+
+  - id: gfcf
+    variable: GFCF
+    annual: last
+    scale: 1.0e-6
+    tolerance: 0.6
+    targets:
+      - {sheet: "ВВП_расходы_МКИ", row: 9}
+
+  - id: net_exports
+    variable: NET_EXPORTS
+    annual: last
+    scale: 1.0e-6
+    tolerance: 0.6
+    targets:
+      - {sheet: "ВВП_расходы_МКИ", row: 57}
+
+  - id: gfcf_volume_index
+    variable: GFCF_VOLUME_INDEX
+    annual: last
+    tolerance: 0.05
+    targets:
+      - {sheet: "ВВП_расходы_МКИ", row: 78}
+
+  - id: export_volume_index
+    variable: EXPORT_VOLUME_INDEX
+    annual: last
+    tolerance: 0.05
+    targets:
+      - {sheet: "ВВП_расходы_МКИ", row: 127}
+
+  - id: import_volume_index
+    variable: IMPORT_VOLUME_INDEX
+    annual: last
+    tolerance: 0.05
+    targets:
+      - {sheet: "ВВП_расходы_МКИ", row: 130}
+
+  - id: compensation_of_employees
+    variable: COMPENSATION_EMPLOYEES
+    annual: last
+    scale: 1.0e-6
+    tolerance: 0.6
+    targets:
+      - {sheet: "ВВП_доходы", row: 27, col_offset: 1, note: "оплата труда, итого по отраслям"}
+
+  - id: consumption_of_fixed_capital
+    variable: CAPITAL_CONSUMPTION
+    annual: last
+    scale: 1.0e-6
+    tolerance: 0.6
+    targets:
+      - {sheet: "ВВП_доходы", row: 27, col_offset: 3, note: "потребление основного капитала, итого по отраслям"}
+
+  - id: employed
+    variable: EMPLOYED_TOTAL
+    annual: last
+    tolerance: 0.6
+    targets:
+      - {sheet: "Внешние и внутренние факторы", row: 245, note: "занятое население, человек"}
+      - {sheet: "Прогнозы ЦГО 2024-29", row: 110, scale: 1.0e-3, tolerance: 0.001, note: "тыс. человек"}
+
+  - id: population
+    variable: POPULATION_BNS
+    annual: last
+    tolerance: 0.6
+    targets:
+      - {sheet: "Внешние и внутренние факторы", row: 164, note: "среднегодовая численность населения"}
+
+  - id: average_wage
+    variable: AVG_WAGE
+    annual: last
+    tolerance: 0.6
+    targets:
+      - {sheet: "Прогнозы ЦГО 2024-29", row: 116, note: "среднемесячная заработная плата, тенге"}
+
+  - id: cpi_december
+    variable: CPI_YTD                # monthly index, December of previous year = 100
+    annual: december
+    offset: -100.0                  # the model keeps the December-on-December change in percent
+    tolerance: 0.05
+    targets:
+      - {sheet: "Внешние и внутренние факторы", row: 60, note: "ИПЦ на конец периода, % к декабрю прошлого года"}
+
+  - id: exchange_rate
+    variable: EXCHANGE_RATE         # daily official rate; the model keeps the annual average
+    annual: mean
+    tolerance: 0.05
+    targets:
+      - {sheet: "Внешние и внутренние факторы", row: 50, note: "среднее по дням; 2024 в модели — 469,21 из другого усреднения"}
+
+  - id: ppp_exchange_rate
+    variable: IMF_PPP_EXCHANGE_RATE  # IMF WEO implied PPP conversion rate; the model keeps the whole WEO horizon
+    annual: last
+    tolerance: 0.01
+    years: [1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
+            2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030]
+    targets:
+      - {sheet: "Внешние и внутренние факторы", row: 51, note: "курс тенге к международному доллару"}
+
+  # ---------------------------------------------------------------- item-level series (macro_dims_long.csv)
+  # «Факт_БНС» is the model's own input sheet for the fact years: column A holds the item code
+  # (A…T, 05…33, ЧН, ВДС, ТП, СП, ВВП), D/E/F the nominal GVA 2023/2024/2025, G/H the volume
+  # indices 2024/2025 and M/N the published deflators 2024/2025. Its header is text, so the
+  # year columns are given explicitly. These are the cells the production block reads.
+  - id: fact_bns_gva_nominal
+    dims_variable: GVA_NOMINAL_BY_SECTION
+    sheet: "Факт_БНС"
+    year_columns: {2023: D, 2024: E, 2025: F}
+    item_column: A
+    row_range: [7, 60]
+    item_aliases: {GVA: "ВДС", NET_TAXES: "ЧН", TAXES: "ТП", SUBSIDIES: "СП", GDP: "ВВП"}
+    tolerance: 0.6
+
+  - id: fact_bns_industry_divisions
+    dims_variable: GVA_NOMINAL_INDUSTRY_DIVISIONS
+    sheet: "Факт_БНС"
+    year_columns: {2023: D, 2024: E, 2025: F}
+    item_column: A
+    row_range: [7, 60]
+    tolerance: 0.6
+
+  - id: fact_bns_gva_volume_index
+    dims_variable: GVA_VOLUME_INDEX_BY_SECTION
+    sheet: "Факт_БНС"
+    year_columns: {2024: G, 2025: H}
+    years: [2024, 2025]
+    item_column: A
+    row_range: [7, 60]
+    item_aliases: {GVA: "ВДС", NET_TAXES: "ЧН", TAXES: "ТП", SUBSIDIES: "СП", GDP: "ВВП"}
+    tolerance: 0.05
+
+  - id: fact_bns_gva_deflator
+    dims_variable: GVA_DEFLATOR_BY_SECTION
+    sheet: "Факт_БНС"
+    year_columns: {2024: M, 2025: N}
+    years: [2024, 2025]
+    item_column: A
+    row_range: [7, 60]
+    item_aliases: {GVA: "ВДС", NET_TAXES: "ЧН", TAXES: "ТП", SUBSIDIES: "СП", GDP: "ВВП"}
+    tolerance: 0.05
+
+  # Section totals on the production sheets are formulas for the fact years — controls.
+  - id: gva_sections_control
+    dims_variable: GVA_NOMINAL_BY_SECTION
+    sheet: "ВДС_производ_регионы"
+    rows_by_item: {A: 3, IND: 57, B: 79, C: 207, D: 953, E: 1023, F: 1067, G: 1090, H: 1115, I: 1144, J: 1166, K: 1196,
+                   L: 1218, M: 1240, N: 1262, O: 1284, P: 1306, Q: 1328, R: 1350, S: 1372, T: 1373, GVA: 1374,
+                   NET_TAXES: 1375, TAXES: 1397, SUBSIDIES: 1398, GDP: 1399}
+    tolerance: 0.6
+
+  - id: gva_volume_index_control
+    dims_variable: GVA_VOLUME_INDEX_BY_SECTION
+    sheet: "ИФО_производ_регионы"
+    rows_by_item: {A: 3, IND: 57, B: 79, C: 207, D: 953, E: 1023, F: 1067, G: 1090, H: 1115, I: 1144, J: 1166, K: 1196,
+                   L: 1218, M: 1240, N: 1262, O: 1284, P: 1306, Q: 1328, R: 1350, S: 1372, T: 1373, GVA: 1374, GDP: 1399}
+    tolerance: 0.25
+    note: "сводные ИФО (ВДС, ВВП) модель считает в постоянных ценах 2023 г., БНС — в ценах прошлого года: расхождение до 0,2 п.п. в 2025 г."
+
+  # Expenditure method: the МКИ sheet holds numbers for 2023–2025 (inputs).
+  - id: expenditure_nominal
+    dims_variable: GDP_EXPENDITURE_NOMINAL
+    sheet: "ВВП_расходы_МКИ"
+    rows_by_item: {FINAL_CONSUMPTION: 2, HOUSEHOLDS: 3, GOVERNMENT: 4, GOV_INDIVIDUAL: 5, GOV_COLLECTIVE: 6, NPISH: 7,
+                   GROSS_CAPITAL_FORMATION: 8, GFCF: 9, NET_EXPORTS: 57, EXPORTS: 58, IMPORTS: 61, STAT_DISCREPANCY: 64, GDP: 65}
+    tolerance: 0.6
+
+  - id: expenditure_volume_index
+    dims_variable: GDP_EXPENDITURE_VOLUME_INDEX
+    sheet: "ВВП_расходы_МКИ"
+    rows_by_item: {FINAL_CONSUMPTION: 71, HOUSEHOLDS: 72, GOVERNMENT: 73, GOV_INDIVIDUAL: 74, GOV_COLLECTIVE: 75, NPISH: 76,
+                   GROSS_CAPITAL_FORMATION: 77, GFCF: 78, EXPORTS: 127, IMPORTS: 130, GDP: 134}
+    tolerance: 0.05
+
+  - id: expenditure_deflator
+    dims_variable: GDP_EXPENDITURE_DEFLATOR
+    sheet: "ВВП_расходы_МКИ"
+    rows_by_item: {FINAL_CONSUMPTION: 140, HOUSEHOLDS: 141, GOVERNMENT: 142, GOV_INDIVIDUAL: 143, GOV_COLLECTIVE: 144, NPISH: 145,
+                   GROSS_CAPITAL_FORMATION: 146, GFCF: 147, INVENTORIES: 151, EXPORTS: 153, IMPORTS: 156, GDP: 160}
+    tolerance: 0.05
+
+  # Income method: one block of five columns per year (ВДС, оплата труда, другие налоги, ПОК, прибыль).
+  - id: income_compensation
+    dims_variable: INCOME_COMPENSATION_BY_SECTION
+    sheet: "ВВП_доходы"
+    col_offset: 1
+    rows_by_item: &income_rows {GOODS: 3, A: 4, IND: 5, B: 6, C: 7, D: 8, E: 9, F: 10, SERVICES: 11, G: 12, H: 13, I: 14, J: 15,
+                                K: 16, L: 17, M: 18, N: 19, O: 20, P: 21, Q: 22, R: 23, S: 24, T: 25, TOTAL: 27}
+    tolerance: 0.6
+
+  - id: income_other_taxes
+    dims_variable: INCOME_OTHER_TAXES_BY_SECTION
+    sheet: "ВВП_доходы"
+    col_offset: 2
+    # BNS's «Итого по отраслям» in table 4452 includes the net taxes on products row, so it
+    # equals the model's row 30 (ВВП методом доходов), not row 27 (sum of the sections).
+    rows_by_item: {GOODS: 3, A: 4, IND: 5, B: 6, C: 7, D: 8, E: 9, F: 10, SERVICES: 11, G: 12, H: 13, I: 14, J: 15,
+                   K: 16, L: 17, M: 18, N: 19, O: 20, P: 21, Q: 22, R: 23, S: 24, T: 25, NET_TAXES: 28, TOTAL: 30}
+    tolerance: 0.6
+
+  - id: income_cfc
+    dims_variable: INCOME_CFC_BY_SECTION
+    sheet: "ВВП_доходы"
+    col_offset: 3
+    rows_by_item: *income_rows
+    tolerance: 0.6
+
+  - id: income_profit
+    dims_variable: INCOME_PROFIT_BY_SECTION
+    sheet: "ВВП_доходы"
+    col_offset: 4
+    rows_by_item: *income_rows
+    tolerance: 0.6
+
+  # Non-observed economy: two columns per year (всего, в т.ч. незаконная).
+  - id: noe_share
+    dims_variable: NOE_SHARE_BY_SECTION
+    sheet: "Ненаблюд_незакон_экономика"
+    col_offset: 0
+    rows_by_item: &noe_rows {GOODS: 3, A: 4, B: 6, C: 7, D: 8, E: 9, F: 10, SERVICES: 11, G: 12, H: 13, I: 14, J: 15, K: 16,
+                             L: 17, M: 18, N: 19, O: 20, P: 21, Q: 22, R: 23, S: 24, T: 25, TOTAL: 26}
+    tolerance: 0.005
+
+  - id: noe_illegal_share
+    dims_variable: NOE_ILLEGAL_SHARE_BY_SECTION
+    sheet: "Ненаблюд_незакон_экономика"
+    col_offset: 1
+    rows_by_item: *noe_rows
+    tolerance: 0.005
+
+  # Ownership: four columns per year (ВДС, государственная, частная, других государств), 2010–2025.
+  - id: ownership_state
+    dims_variable: GVA_STATE_BY_SECTION
+    sheet: "ВДС_формы_собственности"
+    col_offset: 1
+    years: &ownership_years [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+    rows_by_item: &ownership_rows {A: 4, B: 6, C: 7, D: 8, E: 9, F: 10, G: 12, H: 13, I: 14, J: 15, K: 16, L: 17, M: 18,
+                                   N: 19, O: 20, P: 21, Q: 22, R: 23, S: 24, T: 25, TOTAL: 26}
+    tolerance: 0.06
+
+  - id: ownership_private
+    dims_variable: GVA_PRIVATE_BY_SECTION
+    sheet: "ВДС_формы_собственности"
+    col_offset: 2
+    years: *ownership_years
+    rows_by_item: *ownership_rows
+    tolerance: 0.06
+
+  - id: ownership_foreign
+    dims_variable: GVA_FOREIGN_BY_SECTION
+    sheet: "ВДС_формы_собственности"
+    col_offset: 3
+    years: *ownership_years
+    rows_by_item: *ownership_rows
+    tolerance: 0.06
+
+  # ---------------------------------------------------------------- regional series (phase 2)
+  # `blocks` names the row range holding the region rows under each item; the region
+  # names are read from `region_column` and resolved through dictionaries/regions.csv.
+  # Production sheets: 21 region rows (20 regions of 2022 plus the closed Южно-Казахстанская)
+  # under each section heading; 2024–2025 region rows are numbers (inputs), 2026+ formulas.
+  - id: vrp_regions_sections
+    dims_variable: GVA_NOMINAL_BY_REGION_SECTION
+    sheet: "ВДС_производ_регионы"
+    region_column: B
+    blocks: &production_blocks
+      A: [4, 24]
+      IND: [58, 78]
+      B: [80, 100]
+      C: [208, 228]
+      D: [954, 974]
+      E: [1024, 1044]
+      F: [1068, 1088]
+      G: [1091, 1111]
+      H: [1116, 1136]
+      I: [1145, 1165]
+      J: [1167, 1187]
+      K: [1197, 1217]
+      L: [1219, 1239]
+      M: [1241, 1261]
+      N: [1263, 1283]
+      O: [1285, 1305]
+      P: [1307, 1327]
+      Q: [1329, 1349]
+      R: [1351, 1371]
+      NET_TAXES: [1376, 1396]
+      GDP: [1400, 1420]
+    tolerance: 0.6
+
+  - id: ifo_regions_sections
+    dims_variable: GVA_VOLUME_INDEX_BY_REGION_SECTION
+    sheet: "ИФО_производ_регионы"
+    region_column: B
+    blocks: {A: [4, 24], IND: [58, 78], B: [80, 100], C: [208, 228], D: [954, 974], E: [1024, 1044], F: [1068, 1088],
+             G: [1091, 1111], H: [1116, 1136], J: [1167, 1187], L: [1219, 1239]}
+    tolerance: 0.05
+
+  - id: grp_ifo_regions
+    dims_variable: GRP_VOLUME_INDEX_BY_REGION
+    sheet: "ИФО_производ_регионы"
+    region_column: B
+    blocks: {GDP: [1400, 1420]}
+    tolerance: 0.05
+
+  # «Факторы»: population and labour by region, one block per indicator (row 164 and the
+  # like are the national totals, already covered by the scalar mappings above).
+  - id: population_regions
+    dims_variable: POPULATION_AVG_BY_REGION
+    sheet: "Внешние и внутренние факторы"
+    region_column: A
+    blocks: {ALL: [165, 184], URBAN: [186, 205], RURAL: [207, 223]}
+    tolerance: 0.6
+
+  - id: labour_force_regions
+    dims_variable: LABOUR_FORCE_BY_REGION
+    sheet: "Внешние и внутренние факторы"
+    region_column: A
+    blocks: {TOTAL: [225, 244]}
+    scale: 1000
+    tolerance: 1.0
+
+  # The model estimated regional unemployment for 2024–2025 as labour force × the NATIONAL
+  # rate and employment as the remainder; the author decided on 2026-09-14 that these fact-year
+  # cells are inputs — replace_formulas lets --apply overwrite the formulas with BNS values.
+  - id: employed_regions
+    dims_variable: EMPLOYED_BY_REGION
+    sheet: "Внешние и внутренние факторы"
+    region_column: A
+    blocks: {TOTAL: [246, 265]}
+    scale: 1000
+    tolerance: 1.0
+    replace_formulas: true
+
+  - id: unemployed_regions
+    dims_variable: UNEMPLOYED_BY_REGION
+    sheet: "Внешние и внутренние факторы"
+    region_column: A
+    blocks: {TOTAL: [267, 286]}
+    scale: 1000
+    tolerance: 1.0
+    replace_formulas: true
+
+  - id: unemployment_rate_regions
+    dims_variable: UNEMPLOYMENT_RATE_BY_REGION
+    sheet: "Внешние и внутренние факторы"
+    region_column: A
+    blocks: {TOTAL: [288, 307]}
+    tolerance: 0.05
+
+  - id: self_employed_regions
+    dims_variable: SELF_EMPLOYED_BY_REGION
+    sheet: "Внешние и внутренние факторы"
+    region_column: A
+    blocks: {TOTAL: [309, 328]}
+    scale: 1000
+    tolerance: 1.0
+
+  # «Факт_БНС», table 4: employment by BNS group, national, thousand persons (B/C/D = 2023/2024/2025).
+  - id: fact_bns_employed_agriculture
+    dims_variable: EMPLOYED_AGRICULTURE_BY_REGION
+    sheet: "Факт_БНС"
+    year_columns: {2023: B, 2024: C, 2025: D}
+    rows_by_item: {TOTAL: 123}
+    scale: 1.0e-3
+    tolerance: 0.001
+
+  - id: fact_bns_employed_industry_construction
+    dims_variable: EMPLOYED_INDUSTRY_CONSTRUCTION_BY_REGION
+    sheet: "Факт_БНС"
+    year_columns: {2023: B, 2024: C, 2025: D}
+    rows_by_item: {TOTAL: 124}
+    scale: 1.0e-3
+    tolerance: 0.001
+
+  - id: fact_bns_employed_services
+    dims_variable: EMPLOYED_SERVICES_BY_REGION
+    sheet: "Факт_БНС"
+    year_columns: {2023: B, 2024: C, 2025: D}
+    rows_by_item: {TOTAL: 125}
+    scale: 1.0e-3
+    tolerance: 0.001
+
+  - id: fact_bns_employed_total
+    dims_variable: EMPLOYED_BY_REGION
+    sheet: "Факт_БНС"
+    year_columns: {2023: B, 2024: C, 2025: D}
+    rows_by_item: {TOTAL: 126}
+    tolerance: 0.001
+
+  # «Занятое население»: employed by section, thousand persons. The model derived the sections
+  # from the BNS group totals (2023 typed, 2024–2025 formulas); the author decided on 2026-09-14
+  # to take BNS's direct series (5831) — the section rows are inputs, the sums stay formulas.
+  - id: employed_sections
+    dims_variable: EMPLOYED_BY_SECTION
+    sheet: "Занятое население"
+    rows_by_item: {A: 3, B: 5, C: 6, D: 7, E: 8, F: 9, G: 11, H: 12, I: 13, J: 14, K: 15, L: 16, M: 17, N: 18,
+                   O: 19, P: 20, Q: 21, R: 22, S: 23}
+    tolerance: 0.001
+    replace_formulas: true
+
+  - id: employed_sections_control
+    dims_variable: EMPLOYED_BY_SECTION
+    sheet: "Занятое население"
+    rows_by_item: {IND: 4, TOTAL: 26}
+    tolerance: 0.6
+    note: "итог по отраслям в модели = сумма 20 секций, у БНС «занято в экономике, всего» включает секции T и U"
+
+  # Investment: regions on the ИОК and МКИ sheets, sections on both.
+  - id: investment_regions_iok
+    dims_variable: INVESTMENT_BY_REGION
+    sheet: "ИОК"
+    region_column: B
+    blocks: {TOTAL: [27, 47]}
+    tolerance: 0.6
+
+  - id: investment_volume_regions_iok
+    dims_variable: INVESTMENT_VOLUME_INDEX_BY_REGION
+    sheet: "ИОК"
+    region_column: B
+    blocks: {TOTAL: [53, 73]}
+    tolerance: 0.05
+
+  - id: investment_regions_mki
+    dims_variable: INVESTMENT_BY_REGION
+    sheet: "ВВП_расходы_МКИ"
+    region_column: B
+    blocks: {TOTAL: [11, 31]}
+    tolerance: 0.6
+
+  - id: investment_volume_regions_mki
+    dims_variable: INVESTMENT_VOLUME_INDEX_BY_REGION
+    sheet: "ВВП_расходы_МКИ"
+    region_column: B
+    blocks: {TOTAL: [80, 100]}
+    tolerance: 0.05
+
+  - id: investment_sections_iok
+    dims_variable: INVESTMENT_BY_SECTION
+    sheet: "ИОК"
+    rows_by_item: {A: 3, IND: 4, B: 5, C: 6, D: 7, E: 8, F: 9, G: 11, H: 12, I: 13, J: 14, K: 15, L: 16, M: 17, N: 18,
+                   O: 19, P: 20, Q: 21, R: 22, S: 23, TOTAL: 26}
+    tolerance: 0.6
+
+  - id: investment_sections_mki
+    dims_variable: INVESTMENT_BY_SECTION
+    sheet: "ВВП_расходы_МКИ"
+    rows_by_item: {A: 33, IND: 34, B: 35, C: 36, D: 37, E: 38, F: 39, G: 41, H: 42, I: 43, J: 44, K: 45, L: 46, M: 47,
+                   N: 48, O: 49, P: 50, Q: 51, R: 52, S: 53, TOTAL: 10}
+    tolerance: 0.6
+
+  - id: investment_volume_sections_mki
+    dims_variable: INVESTMENT_VOLUME_INDEX_BY_SECTION
+    sheet: "ВВП_расходы_МКИ"
+    rows_by_item: {A: 102, IND: 103, B: 104, C: 105, D: 106, E: 107, F: 108, G: 110, H: 111, I: 112, J: 113, K: 114,
+                   L: 115, M: 116, N: 117, O: 118, P: 119, Q: 120, R: 121, S: 122, TOTAL: 79}
+    tolerance: 0.05
+
+  # ---------------------------------------------------------------- natural volumes and indices (phase 3)
+  # The ВДС sheet carries physical-output rows under the industry nodes, labelled exactly as BNS
+  # table 5814 labels its products; 2023 is filled, 2024–2025 were empty. Oil (r117) and gas
+  # (r130) are formulas reading «Прогнозы ЦГО» — controls here, inputs on the ЦГО sheet below.
+  - id: natural_output_rows
+    dims_variable: PRODUCTION_NATURAL_BY_REGION
+    sheet: "ВДС_производ_регионы"
+    rows_by_item: {COAL: 102, OIL_INCL_CONDENSATE: 117, NATURAL_GAS: 130, IRON_ORE: 140, IRON_ORE_PELLETS: 149, COPPER_ORE: 152,
+                   BAUXITE: 162, LEAD_CONCENTRATE: 164, ZINC_CONCENTRATE: 170, MANGANESE_ORE: 179, CHROME_ORE: 183, ASBESTOS: 204,
+                   JUICES: 527, COGNAC: 548, VODKA: 558, WINE: 576, BEER: 594, CIGARETTES: 616, FABRICS: 644, CARPETS: 657,
+                   FOOTWEAR: 674, LEATHER_FOOTWEAR: 695, WINDOWS_DOORS: 716, COKE: 743, MOTOR_FUEL: 746, DIESEL: 760,
+                   FUEL_OIL: 776, ETHANOL: 795, ELECTRICITY: 976, HEAT: 1001, WATER_NONPOTABLE: 1045}
+    tolerance: 0.06
+
+  # «Прогнозы ЦГО»: oil and gas fact rows are the BNS totals in млн т / млрд м³ (coal and electricity
+  # there follow the ministries' definitions and are deliberately not mapped).
+  - id: cgo_oil_fact
+    dims_variable: PRODUCTION_NATURAL_BY_REGION
+    sheet: "Прогнозы ЦГО 2024-29"
+    rows_by_item: {OIL_INCL_CONDENSATE: 12}
+    scale: 1.0e-3
+    tolerance: 0.01
+
+  - id: cgo_gas_fact
+    dims_variable: PRODUCTION_NATURAL_BY_REGION
+    sheet: "Прогнозы ЦГО 2024-29"
+    rows_by_item: {NATURAL_GAS: 20}
+    scale: 1.0e-3
+    tolerance: 0.01
+
+  # «Факт_БНС», table 2: the raw BNS index behind every lowest-row ИФО of sections A, B, C
+  # (column F = 2024, I = 2025; the calibrated index next to it is the model's own).
+  - id: fact_bns_industry_indices
+    dims_variable: INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY
+    sheet: "Факт_БНС"
+    year_columns: {2024: F, 2025: I}
+    years: [2024, 2025]
+    item_column: C
+    row_range: [70, 112]
+    item_aliases: {"24.4": "24.2", "24.5": "24.3"}   # the model numbers non-ferrous metallurgy 24.2 and casting 24.3
+    tolerance: 0.001
+
+  - id: fact_bns_agriculture_indices
+    dims_variable: AGRICULTURE_VOLUME_INDEX_BY_ACTIVITY
+    sheet: "Факт_БНС"
+    year_columns: {2024: F, 2025: I}
+    years: [2024, 2025]
+    item_column: C
+    row_range: [70, 112]
+    item_aliases: {"011": "01.1", "012": "01.2", "013": "01.3", "014": "01.4", "015": "01.5", "016": "01.6", "017": "01.7"}
+    tolerance: 0.001
+
+  # Grain harvest: national row and the 21 region rows under it on the ВДС sheet, thousand tonnes.
+  - id: grain_harvest_national
+    dims_variable: GRAIN_HARVEST_BY_REGION
+    sheet: "ВДС_производ_регионы"
+    rows_by_item: {TOTAL: 28}
+    tolerance: 0.06
+
+  - id: grain_harvest_regions
+    dims_variable: GRAIN_HARVEST_BY_REGION
+    sheet: "ВДС_производ_регионы"
+    region_column: B
+    blocks: {TOTAL: [29, 49]}
+    tolerance: 0.06
+
+  # ---------------------------------------------------------------- world prices (World Bank, EIA)
+  # «Внешние и внутренние факторы»: rows 65–124 hold the World Bank annual prices the model
+  # uses (46 of the 69 Pink Sheet series, in the order of the CMO forecast table), rows
+  # 146–161 the 16 price indices (2010=100). History (fact years) comes from the Pink Sheet,
+  # 2026–2027 from the current CMO forecast table; 2028–2030 repeat 2027 (the model's own
+  # rule) and rows 128–143 are year-on-year formulas over the indices — neither is mapped.
+  # The World Bank publishes rounded annual values, the model kept full-precision means of
+  # older vintages, hence the relative tolerance.
+  - id: wb_prices_history
+    dims_variable: WB_COMMODITY_PRICES_ANNUAL
+    sheet: "Внешние и внутренние факторы"
+    region: world
+    rows_by_item: &wb_price_rows {COAL_AUS: 65, CRUDE_BRENT: 66, NGAS_EUR: 67, NGAS_US: 68, NGAS_JP: 69,
+                   COCOA: 73, COFFEE_ARABIC: 74, COFFEE_ROBUS: 75, TEA_AVG: 76,
+                   COCONUT_OIL: 79, GRNUT_OIL: 80, PALM_OIL: 81, SOYBEAN_MEAL: 82, SOYBEAN_OIL: 83, SOYBEANS: 84,
+                   BARLEY: 86, MAIZE: 87, RICE_05: 88, WHEAT_US_HRW: 89,
+                   BANANA_US: 91, BEEF: 92, CHICKEN: 93, ORANGE: 94, SHRIMP_MEX: 95, SUGAR_WLD: 96,
+                   LOGS_CMR: 99, LOGS_MYS: 100, SAWNWD_MYS: 101, COTTON_A_INDX: 103, RUBBER_TSR20: 104, TOBAC_US: 105,
+                   DAP: 108, PHOSROCK: 109, POTASH: 110, TSP: 111, UREA_EE_BULK: 112,
+                   ALUMINUM: 114, COPPER: 115, IRON_ORE: 116, LEAD: 117, NICKEL: 118, TIN: 119, ZINC: 120,
+                   GOLD: 122, SILVER: 123, PLATINUM: 124}
+    tolerance: 0.006
+    rel_tolerance: 0.01
+
+  - id: wb_price_forecasts
+    dims_variable: WB_COMMODITY_PRICE_FORECASTS
+    sheet: "Внешние и внутренние факторы"
+    region: world
+    rows_by_item: *wb_price_rows
+    years: [2026, 2027]
+    tolerance: 0.006
+    note: "прогноз ВБ, Commodity Markets Outlook (текущий выпуск)"
+
+  - id: wb_indices_history
+    dims_variable: WB_COMMODITY_INDICES_ANNUAL
+    sheet: "Внешние и внутренние факторы"
+    region: world
+    rows_by_item: &wb_index_rows {TOTAL: 146, ENERGY: 147, NON_ENERGY: 148, AGRICULTURE: 149, BEVERAGES: 150, FOOD: 151,
+                   OILS_MEALS: 152, GRAINS: 153, OTHER_FOOD: 154, RAW_MATERIALS: 155, TIMBER: 156, OTHER_RAW_MATERIALS: 157,
+                   FERTILIZERS: 158, METALS_MINERALS: 159, BASE_METALS: 160, PRECIOUS_METALS: 161}
+    tolerance: 0.06
+    rel_tolerance: 0.01
+
+  - id: wb_index_forecasts
+    dims_variable: WB_COMMODITY_INDEX_FORECASTS
+    sheet: "Внешние и внутренние факторы"
+    region: world
+    rows_by_item: *wb_index_rows
+    years: [2026, 2027]
+    tolerance: 0.06
+    note: "прогноз ВБ, Commodity Markets Outlook (текущий выпуск)"
+
+  # Brent block at the top of the sheet: row 2 links to row 66 (control), row 5 is the World
+  # Bank's forecast, row 4 EIA's (annual mean of the STEO monthly path). Rows 6–23 are other
+  # agencies' forecasts entered by hand and are not mapped; row 3 averages rows 4–23.
+  - id: brent_reference_control
+    dims_variable: WB_COMMODITY_PRICES_ANNUAL
+    sheet: "Внешние и внутренние факторы"
+    region: world
+    rows_by_item: {CRUDE_BRENT: 2}
+    tolerance: 0.006
+    rel_tolerance: 0.01
+
+  - id: brent_wb_forecast
+    dims_variable: WB_COMMODITY_PRICE_FORECASTS
+    sheet: "Внешние и внутренние факторы"
+    region: world
+    rows_by_item: {CRUDE_BRENT: 5}
+    years: [2026, 2027]
+    tolerance: 0.006
+    note: "прогноз Brent ВБ, CMO"
+
+  - id: brent_eia_forecast
+    dims_variable: EIA_STEO_PRICES
+    sheet: "Внешние и внутренние факторы"
+    region: world
+    rows_by_item: {BREPUUS: 4}
+    years: [2026, 2027]
+    annual: mean
+    tolerance: 0.006
+    note: "прогноз Brent EIA, STEO: среднее 12 месячных значений"
+
+  # ---------------------------------------------------------------- exports by commodity group («Экспорт»)
+  # Rows 3–25 hold the value of 23 commodity groups (млн $), row 2 the total, row 26 the residual
+  # «Прочие» (= row 2 − rows 3–25, a formula); rows 85–107 the physical volumes, row 109 the
+  # total tonnage, row 108 the residual. The fact years were forecast formulas (previous year ×
+  # volume growth × price change) until phase 5; by the author's phase-5 decision they are BNS
+  # facts (replace_formulas) and the forecast formulas chain on from 2025. Not mapped: gas
+  # condensate (row 10/92) and «нефтепродукты» (11/93) — 10-digit subsets of 2709/2710 that the
+  # 6-digit workbook cannot separate; crude-oil tonnes (91) — linked to «Прогнозы ЦГО»; natural
+  # gas volume (94) — published in cubic metres. Units per row follow the sheet: most rows are
+  # tonnes, flour/flat-rolled/zinc are thousand tonnes.
+  - id: exports_total
+    variable: EXPORTS
+    annual: sum
+    scale: 1.0e-3
+    tolerance: 0.06
+    replace_formulas: true
+    targets:
+      - {sheet: "Экспорт", row: 2, note: "экспорт товаров, млн $ (сумма месяцев)"}
+
+  - id: exports_value_groups
+    dims_variable: EXPORTS_VALUE_BY_COMMODITY_GROUP
+    sheet: "Экспорт"
+    annual: sum
+    scale: 1.0e-3
+    rows_by_item: {WHEAT: 3, FLOUR: 4, IRON_ORE: 5, ZINC_ORE: 6, CHROME_ORE: 7, COAL: 8, CRUDE_OIL: 9, NATURAL_GAS: 12,
+                   SILVER: 13, GOLD: 14, FERROALLOYS: 15, FERROUS_SCRAP: 16, FLAT_ROLLED: 17, COPPER: 18, LEAD: 19,
+                   ALUMINIUM: 20, ZINC: 21, FATS_OILS: 22, INORGANIC_CHEM: 23, IRON_STEEL_ARTICLES: 24, TRANSPORT: 25}
+    tolerance: 0.06
+    replace_formulas: true
+    note: "экспорт по товарным группам, млн $"
+
+  - id: exports_volume_tonnes
+    dims_variable: EXPORTS_VOLUME_BY_COMMODITY_GROUP
+    sheet: "Экспорт"
+    annual: sum
+    rows_by_item: {WHEAT: 85, IRON_ORE: 87, ZINC_ORE: 88, CHROME_ORE: 89, COAL: 90, SILVER: 95, GOLD: 96, FERROALLOYS: 97,
+                   FERROUS_SCRAP: 98, COPPER: 100, LEAD: 101, ALUMINIUM: 102, FATS_OILS: 104, INORGANIC_CHEM: 105,
+                   IRON_STEEL_ARTICLES: 106, TRANSPORT: 107, TOTAL: 109}
+    tolerance: 0.6
+    replace_formulas: true
+    note: "экспорт по товарным группам, тонн"
+
+  - id: exports_volume_thousand_tonnes
+    dims_variable: EXPORTS_VOLUME_BY_COMMODITY_GROUP
+    sheet: "Экспорт"
+    annual: sum
+    scale: 1.0e-3
+    rows_by_item: {FLOUR: 86, FLAT_ROLLED: 99, ZINC: 103}
+    tolerance: 0.006
+    replace_formulas: true
+    note: "экспорт по товарным группам, тыс. тонн"

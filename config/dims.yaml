@@ -1,0 +1,812 @@
+# Dimensional (item-level) datasets: national accounts broken down by ОКЭД section,
+# by industry division, by expenditure component and by form of ownership.
+#
+# These live beside, not inside, config/indicators.yaml: macro_long.csv promises one
+# value per (date, variable), and a breakdown has one value per (date, variable, item).
+# They are read by scripts/update_dims.py and land in data/unified/macro_dims_long.csv.
+#
+# Source is the xlsx export of each BNS dynamic table (…/api/iblock/element/<id>/file/ru/).
+# The JSON cube export of the same element was checked for every table on 2026-09-14 and
+# rejected: 4439 and 4435–4437 carry only regional/national totals there, 4453 stops at
+# 2024, and 4446/4448 return 404. The xlsx is the file the model was hand-loaded from.
+#
+# layout — which parser in scripts/fetchers/bns_dims.py reads the sheet:
+#   periods_across   one row per item (label in label_col), periods across the columns;
+#                    only the annual "YYYY год" columns are taken (quarterly columns are
+#                    year-to-date and skipped)
+#   region_blocks    one block per region, one row per period inside the block, one column
+#                    per item with the item code on the row under the names (5931); only the
+#                    national block is taken
+#   year_subcolumns  one row per item, one header cell per year with several sub-columns;
+#                    sub_offset picks the sub-column (0 = first)
+# dictionary — how item labels become item codes: dictionaries/<name>.csv (code, name_ru,
+#   match = case-insensitive regex on the normalised label); from_table = codes are in
+#   the sheet itself. A data row whose label matches no dictionary entry stops the dataset
+#   loudly (StructuralChangeError) — never silently dropped.
+# Annual observations are dated 31 December, the convention this repo's other annual BNS
+# series already follow.
+#
+# World Bank (agency wb, scripts/fetchers/wb.py) and EIA (agency eia, scripts/fetchers/eia.py)
+# datasets sit at the end of this file. They are world prices, not Kazakh statistics:
+# region "world", country "WLD", US dollars. `table` (not `layout`) names the parser;
+# `fallback_url` is the last confirmed link, used when the CMO page cannot be read.
+
+version: 1
+
+datasets:
+  - id: GVA_NOMINAL_BY_SECTION
+    name_ru: "ВВП методом производства в текущих ценах, по видам экономической деятельности"
+    name_en: "GDP by production approach, current prices, by ОКЭД section"
+    agency: bns
+    element_id: 4439
+    layout: periods_across
+    sheet_match: "^2010-2026"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 28
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+    note: "Sections A–T plus goods/services/industry aggregates, FISIM, GVA, taxes and subsidies on products, GDP. 2010–present sheet only (ОКЭД НК РК 03-2019)."
+
+  - id: GVA_VOLUME_INDEX_BY_SECTION
+    name_ru: "ИФО ВВП методом производства, по видам экономической деятельности"
+    name_en: "GDP volume index by production approach, by ОКЭД section"
+    agency: bns
+    element_id: 4440
+    layout: periods_across
+    sheet_match: "^2010-2026"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 28
+    frequency: annual
+    unit: "% of previous year"
+    category: national_accounts
+
+  - id: GVA_DEFLATOR_BY_SECTION
+    name_ru: "Дефлятор ВВП методом производства, по видам экономической деятельности"
+    name_en: "GDP deflator by production approach, by ОКЭД section"
+    agency: bns
+    element_id: 4441
+    layout: periods_across
+    sheet_match: "^2010-2026"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 28
+    frequency: annual
+    unit: "% of previous year"
+    category: national_accounts
+
+  - id: GVA_NOMINAL_INDUSTRY_DIVISIONS
+    name_ru: "Валовая добавленная стоимость по отраслям промышленности"
+    name_en: "Gross value added by industry division (ОКЭД 05–39)"
+    agency: bns
+    element_id: 5931
+    layout: region_blocks
+    sheets: ["2013-2018гг. периоды", "2018-2026гг."]
+    region: "Республика Казахстан"
+    dictionary: from_table
+    min_items: 30
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+    note: "Item codes come from the sheet's own code row (B, 05–09, C, 10–33, D, E); the code-less first column «Промышленность – всего» is coded IND."
+
+  - id: GDP_EXPENDITURE_NOMINAL
+    name_ru: "ВВП методом конечного использования в текущих ценах"
+    name_en: "GDP by expenditure, current prices, by component"
+    agency: bns
+    element_id: 4435
+    layout: periods_across
+    sheet_match: "^2007-2026"
+    label_col: 1
+    dictionary: expenditure_items
+    min_items: 14
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+
+  - id: GDP_EXPENDITURE_VOLUME_INDEX
+    name_ru: "ИФО ВВП методом конечного использования"
+    name_en: "GDP volume index by expenditure, by component"
+    agency: bns
+    element_id: 4437
+    layout: periods_across
+    sheet_match: "^2007-2026"
+    label_col: 1
+    dictionary: expenditure_items
+    min_items: 11
+    note: "No volume index is published for net exports, inventories and valuables — 11 items, not 15."
+    frequency: annual
+    unit: "% of previous year"
+    category: national_accounts
+
+  - id: GDP_EXPENDITURE_DEFLATOR
+    name_ru: "Дефлятор ВВП методом конечного использования"
+    name_en: "GDP deflator by expenditure, by component"
+    agency: bns
+    element_id: 4436
+    layout: periods_across
+    sheet_match: "^2007-2026"
+    label_col: 1
+    dictionary: expenditure_items
+    min_items: 12
+    frequency: annual
+    unit: "% of previous year"
+    category: national_accounts
+
+  - id: INCOME_COMPENSATION_BY_SECTION
+    name_ru: "Оплата труда в счёте образования доходов, по видам экономической деятельности"
+    name_en: "Compensation of employees by ОКЭД section"
+    agency: bns
+    element_id: 4453
+    layout: periods_across
+    sheet_match: "^ОКЭД \\(НК РК 03-2007\\)"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 24
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+
+  - id: INCOME_OTHER_TAXES_BY_SECTION
+    name_ru: "Другие налоги на производство, по видам экономической деятельности"
+    name_en: "Other taxes on production by ОКЭД section"
+    agency: bns
+    element_id: 4452
+    layout: periods_across
+    sheet_match: "^ОКЭД \\(НК РК 03-2007\\)"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 24
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+    note: "Also carries the «Чистые налоги на продукты» row (item NET_TAXES)."
+
+  - id: INCOME_CFC_BY_SECTION
+    name_ru: "Потребление основного капитала, по видам экономической деятельности"
+    name_en: "Consumption of fixed capital by ОКЭД section"
+    agency: bns
+    element_id: 4454
+    layout: periods_across
+    sheet_match: "^ОКЭД \\(НК РК 03-2007\\)"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 24
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+
+  - id: INCOME_PROFIT_BY_SECTION
+    name_ru: "Чистая прибыль / чистый смешанный доход, по видам экономической деятельности"
+    name_en: "Net operating surplus / mixed income by ОКЭД section"
+    agency: bns
+    element_id: 4455
+    layout: periods_across
+    sheet_match: "^ОКЭД \\(НК РК 03-2007\\)"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 24
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+
+  - id: NOE_SHARE_BY_SECTION
+    name_ru: "Доля ненаблюдаемой экономики в ВВП, по видам экономической деятельности"
+    name_en: "Non-observed economy, share of GDP, by ОКЭД section"
+    agency: bns
+    element_id: 4448
+    layout: year_subcolumns
+    sheets: ["2013-2016", "2017-2025"]
+    label_col: 0
+    sub_offset: 0
+    dictionary: okved_sections
+    min_items: 22
+    frequency: annual
+    unit: "% of GDP"
+    category: national_accounts
+
+  - id: NOE_ILLEGAL_SHARE_BY_SECTION
+    name_ru: "Доля незаконной экономики в ВВП, по видам экономической деятельности"
+    name_en: "Illegal economy, share of GDP, by ОКЭД section"
+    agency: bns
+    element_id: 4448
+    layout: year_subcolumns
+    sheets: ["2013-2016", "2017-2025"]
+    label_col: 0
+    sub_offset: 1
+    dictionary: okved_sections
+    min_items: 22
+    frequency: annual
+    unit: "% of GDP"
+    category: national_accounts
+
+  - id: GVA_STATE_BY_SECTION
+    name_ru: "ВДС, государственная форма собственности, по видам экономической деятельности"
+    name_en: "Gross value added, state ownership, by ОКЭД section"
+    agency: bns
+    element_id: 4446
+    layout: year_subcolumns
+    sheets: ["ВДС по КФС"]
+    label_col: 0
+    sub_offset: 1
+    year_regex: "^\\s*(\\d{4})\\s*г\\.?\\s*$"
+    dictionary: okved_sections
+    min_items: 21
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+    note: "Sub-columns per year: ВДС, государственная, частная, других государств. Empty BNS cells mean the phenomenon is absent (no record written)."
+
+  - id: GVA_PRIVATE_BY_SECTION
+    name_ru: "ВДС, частная форма собственности, по видам экономической деятельности"
+    name_en: "Gross value added, private ownership, by ОКЭД section"
+    agency: bns
+    element_id: 4446
+    layout: year_subcolumns
+    sheets: ["ВДС по КФС"]
+    label_col: 0
+    sub_offset: 2
+    year_regex: "^\\s*(\\d{4})\\s*г\\.?\\s*$"
+    dictionary: okved_sections
+    min_items: 21
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+
+  - id: GVA_FOREIGN_BY_SECTION
+    name_ru: "ВДС, собственность других государств, по видам экономической деятельности"
+    name_en: "Gross value added, foreign ownership, by ОКЭД section"
+    agency: bns
+    element_id: 4446
+    layout: year_subcolumns
+    sheets: ["ВДС по КФС"]
+    label_col: 0
+    sub_offset: 3
+    year_regex: "^\\s*(\\d{4})\\s*г\\.?\\s*$"
+    dictionary: okved_sections
+    min_items: 21
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+
+  # ================================================================ regional (phase 2)
+  # region = "national" for the country row, else a code from dictionaries/regions.csv.
+  # Sheets with rows below the region level (districts) say strict: false.
+
+  - id: GVA_NOMINAL_BY_REGION_SECTION
+    name_ru: "Валовой региональный продукт и ВДС по видам экономической деятельности, по регионам"
+    name_en: "Gross regional product and GVA by ОКЭД section, by region"
+    agency: bns
+    element_id: 5927
+    layout: region_blocks
+    regions: all
+    sheets: ["ВРП_2010-2018", "ВРП_2018-2026"]
+    dictionary: okved_sections
+    label_overrides: {"всего": GDP, "киуфп": FISIM}     # the 2010–2018 sheet names the ВРП column «Всего» and carries КИУФП (FISIM)
+    min_items: 20
+    min_regions: 20
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+    note: "Item GDP is the gross regional product, NET_TAXES the regional net taxes on products; the 2018 overlap between the two sheets resolves to the later sheet."
+
+  - id: GVA_VOLUME_INDEX_BY_REGION_SECTION
+    name_ru: "ИФО ВДС по видам экономической деятельности, по регионам"
+    name_en: "GVA volume index by ОКЭД section, by region"
+    agency: bns
+    element_id: 450904
+    layout: region_blocks
+    regions: all
+    sheets: ["ИФО ВДС_2010-2017", "ИФО ВДС_2018-2025"]
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"     # period rows are plain years, sometimes with a footnote: "20211)"
+    dictionary: okved_sections
+    label_overrides: {"всего": GDP}
+    min_items: 10
+    min_regions: 20
+    frequency: annual
+    unit: "% of previous year"
+    category: national_accounts
+    note: "Item GDP («Всего») is the volume index of the gross regional product; the table carries 11 sections plus «Прочие услуги» (OTHER_SERVICES)."
+
+  - id: GRP_VOLUME_INDEX_BY_REGION
+    name_ru: "Индекс физического объёма валового регионального продукта"
+    name_en: "Gross regional product volume index, by region"
+    agency: bns
+    element_id: 5926
+    layout: periods_across
+    sheet_match: "^2001-2026"
+    label_col: 1
+    row_dimension: region
+    fixed_item: GDP
+    fixed_item_name: "Валовой региональный продукт"
+    min_regions: 20
+    frequency: annual
+    unit: "% of previous year"
+    category: national_accounts
+
+  - id: POPULATION_AVG_BY_REGION
+    name_ru: "Среднегодовая численность населения по регионам: всё население, город, село, по полу"
+    name_en: "Average annual population by region: total, urban, rural, by sex"
+    agency: bns
+    element_id: 6576
+    layout: group_blocks
+    sheets: ["2009-2025"]
+    year_regex: "^\\s*(\\d{4})"
+    groups: {ALL: "^все население", URBAN: "^городское население", RURAL: "^сельское население", MEN: "^мужчины", WOMEN: "^женщины"}
+    subgroups: [MEN, WOMEN]
+    min_items: 9
+    min_regions: 20
+    frequency: annual
+    unit: "persons"
+    category: population
+    note: "Items ALL, URBAN, RURAL and their MEN/WOMEN splits (ALL_MEN, URBAN_WOMEN …); 2009 onwards, recalculated by BNS for the 2022 regions."
+
+  - id: LABOUR_FORCE_BY_REGION
+    name_ru: "Рабочая сила (15 лет и старше), по регионам"
+    name_en: "Labour force (15+), by region"
+    agency: bns
+    element_id: 102800
+    layout: periods_across
+    sheets: ["Показатель"]
+    label_col: 0
+    row_dimension: region
+    fixed_item: TOTAL
+    fixed_item_name: "Рабочая сила"
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    min_regions: 20
+    frequency: annual
+    unit: "thousand persons"
+    category: labour
+
+  - id: EMPLOYED_BY_REGION
+    name_ru: "Занятое население, по регионам"
+    name_en: "Employed population, by region"
+    agency: bns
+    element_id: 102798
+    layout: periods_across
+    sheets: ["Показатель"]
+    label_col: 0
+    row_dimension: region
+    fixed_item: TOTAL
+    fixed_item_name: "Занятое население"
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    min_regions: 20
+    frequency: annual
+    unit: "thousand persons"
+    category: labour
+
+  - id: UNEMPLOYED_BY_REGION
+    name_ru: "Безработное население (15 лет и старше), по регионам"
+    name_en: "Unemployed population (15+), by region"
+    agency: bns
+    element_id: 102791
+    layout: periods_across
+    sheets: ["Показатель"]
+    label_col: 0
+    row_dimension: region
+    fixed_item: TOTAL
+    fixed_item_name: "Безработное население"
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    min_regions: 20
+    frequency: annual
+    unit: "thousand persons"
+    category: labour
+
+  - id: EMPLOYEES_BY_REGION
+    name_ru: "Наёмные работники, по регионам"
+    name_en: "Employees (wage earners), by region"
+    agency: bns
+    element_id: 102796
+    layout: periods_across
+    sheets: ["Показатель"]
+    label_col: 0
+    row_dimension: region
+    fixed_item: TOTAL
+    fixed_item_name: "Наёмные работники"
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    min_regions: 20
+    frequency: annual
+    unit: "thousand persons"
+    category: labour
+
+  - id: SELF_EMPLOYED_BY_REGION
+    name_ru: "Самостоятельно занятые работники, по регионам"
+    name_en: "Self-employed workers, by region"
+    agency: bns
+    element_id: 102793
+    layout: periods_across
+    sheets: ["Показатель"]
+    label_col: 0
+    row_dimension: region
+    fixed_item: TOTAL
+    fixed_item_name: "Самостоятельно занятые"
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    min_regions: 20
+    frequency: annual
+    unit: "thousand persons"
+    category: labour
+
+  - id: UNEMPLOYMENT_RATE_BY_REGION
+    name_ru: "Уровень безработицы, по регионам"
+    name_en: "Unemployment rate, by region"
+    agency: bns
+    element_id: 102790
+    layout: year_subcolumns
+    sheets: ["Показатель"]
+    label_col: 0
+    sub_offset: 0
+    row_dimension: region
+    fixed_item: TOTAL
+    fixed_item_name: "Уровень безработицы"
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    strict: false
+    min_regions: 20
+    frequency: annual
+    unit: "%"
+    category: labour
+    note: "Three sub-columns per year (всего, мужчины, женщины); the sheet also lists districts, which are skipped."
+
+  - id: EMPLOYED_AGRICULTURE_BY_REGION
+    name_ru: "Занятое население в сельском, лесном и рыбном хозяйстве, по регионам"
+    name_en: "Employed in agriculture, forestry and fishing, by region"
+    agency: bns
+    element_id: 443430
+    layout: year_subcolumns
+    sheets: ["Показатель"]
+    label_col: 0
+    sub_offset: 0
+    row_dimension: region
+    fixed_item: TOTAL
+    fixed_item_name: "Занятые: сельское, лесное и рыбное хозяйство"
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    strict: false
+    min_regions: 20
+    frequency: annual
+    unit: "persons"
+    category: labour
+
+  - id: EMPLOYED_INDUSTRY_CONSTRUCTION_BY_REGION
+    name_ru: "Занятое население в промышленности и строительстве, по регионам"
+    name_en: "Employed in industry and construction, by region"
+    agency: bns
+    element_id: 443435
+    layout: year_subcolumns
+    sheets: ["Показатель"]
+    label_col: 0
+    sub_offset: 0
+    row_dimension: region
+    fixed_item: TOTAL
+    fixed_item_name: "Занятые: промышленность и строительство"
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    strict: false
+    min_regions: 20
+    frequency: annual
+    unit: "persons"
+    category: labour
+
+  - id: EMPLOYED_SERVICES_BY_REGION
+    name_ru: "Занятое население в сфере услуг, по регионам"
+    name_en: "Employed in services, by region"
+    agency: bns
+    element_id: 443438
+    layout: year_subcolumns
+    sheets: ["Показатель"]
+    label_col: 0
+    sub_offset: 0
+    row_dimension: region
+    fixed_item: TOTAL
+    fixed_item_name: "Занятые: сфера услуг"
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    strict: false
+    min_regions: 20
+    frequency: annual
+    unit: "persons"
+    category: labour
+
+  - id: EMPLOYED_BY_SECTION
+    name_ru: "Занятое население по основным видам экономической деятельности"
+    name_en: "Employed population by ОКЭД section (national)"
+    agency: bns
+    element_id: 5831
+    layout: year_subcolumns
+    sheets: ["Показатель по ВЭД РК"]
+    label_col: 0
+    sub_offset: 4
+    dictionary: okved_sections
+    label_overrides: {"занято в экономике, всего": TOTAL}
+    min_items: 20
+    frequency: annual
+    unit: "thousand persons"
+    category: labour
+    note: "Five sub-columns per year (I–IV квартал, год); the annual «год» column is taken."
+
+  - id: INVESTMENT_BY_REGION
+    name_ru: "Инвестиции в основной капитал, по регионам"
+    name_en: "Fixed capital investment, by region"
+    agency: bns
+    element_id: 5546
+    layout: periods_across
+    sheets: ["Лист1"]
+    label_col: 0
+    row_dimension: region
+    fixed_item: TOTAL
+    fixed_item_name: "Инвестиции в основной капитал"
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    min_regions: 20
+    frequency: annual
+    unit: "million KZT"
+    category: investment
+
+  - id: INVESTMENT_VOLUME_INDEX_BY_REGION
+    name_ru: "Индексы физического объёма инвестиций в основной капитал, по регионам"
+    name_en: "Fixed capital investment volume index, by region"
+    agency: bns
+    element_id: 5549
+    layout: periods_across
+    sheets: ["Лист1"]
+    label_col: 0
+    row_dimension: region
+    fixed_item: TOTAL
+    fixed_item_name: "ИФО инвестиций в основной капитал"
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    min_regions: 20
+    frequency: annual
+    unit: "% of previous year"
+    category: investment
+
+  - id: INVESTMENT_BY_SECTION
+    name_ru: "Инвестиции в основной капитал по направлениям использования (видам деятельности)"
+    name_en: "Fixed capital investment by ОКЭД section (national)"
+    agency: bns
+    element_id: 5547
+    layout: year_subcolumns
+    sheets: ["Лист1"]
+    label_col: 0
+    sub_offset: 0
+    dictionary: okved_sections
+    label_overrides: {"всего": TOTAL}
+    min_items: 20
+    frequency: annual
+    unit: "million KZT"
+    category: investment
+
+  - id: INVESTMENT_VOLUME_INDEX_BY_SECTION
+    name_ru: "ИФО инвестиций в основной капитал по направлениям использования (видам деятельности)"
+    name_en: "Fixed capital investment volume index by ОКЭД section (national)"
+    agency: bns
+    element_id: 5547
+    layout: year_subcolumns
+    sheets: ["Лист1"]
+    label_col: 0
+    sub_offset: 1
+    dictionary: okved_sections
+    label_overrides: {"всего": TOTAL}
+    min_items: 20
+    frequency: annual
+    unit: "% of previous year"
+    category: investment
+    note: "The «в % к прошлому году» column next to each year; 2003 has none."
+
+  # ================================================================ natural volumes and indices (phase 3)
+
+  - id: PRODUCTION_NATURAL_BY_REGION
+    name_ru: "Произведено продукции в натуральном выражении, по регионам"
+    name_en: "Industrial output in physical units, by product and region"
+    agency: bns
+    element_id: 5814
+    layout: product_blocks
+    sheets: ["горнодоб", "обрабатыв", "электроэнергия", "водоснабженение"]
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    dictionary: products
+    strict: false
+    min_items: 30
+    min_regions: 15
+    frequency: annual
+    unit: "as labelled per item (тыс. тонн, млн куб. м, млн кВт·ч, тыс. литров, …)"
+    category: production
+    note: "Only the products in dictionaries/products.csv are kept (the model's natural rows use the same labels); the manufacturing sheet lists ~80 products, the others are skipped."
+
+  - id: INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY
+    name_ru: "Индексы промышленного производства по видам деятельности"
+    name_en: "Industrial production index by activity (ОКЭД divisions and groups, national)"
+    agency: bns
+    element_id: 5792
+    layout: periods_across
+    sheets: ["лист"]
+    label_col: 1
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    dictionary: industry_divisions
+    min_items: 50
+    frequency: annual
+    unit: "% of previous year"
+    category: production
+    note: "Codes follow ОКЭД (05, 06.1, 10.5, 24.4 …); IND is the industry total, MACH the machinery group 26–30. The scalar IND_PROD series reads the JSON cube of a related element and stops at 2023."
+
+  - id: AGRICULTURE_VOLUME_INDEX_BY_ACTIVITY
+    name_ru: "ИФО валовой продукции (услуг) сельского, лесного и рыбного хозяйства по видам деятельности"
+    name_en: "Agriculture, forestry and fishing gross output volume index by ОКЭД activity (national)"
+    agency: bns
+    element_id: 8150
+    layout: periods_across
+    sheets: ["ИФО А к пред"]
+    label_col: 1
+    code_col: 0
+    year_regex: "^\\s*(\\d{4})"
+    min_items: 30
+    frequency: annual
+    unit: "% of previous year"
+    category: production
+    note: "Item codes are the sheet's own ОКЭД codes (A, 01, 011, 0111 … 014, 02, 03); uncoded aggregate rows are skipped."
+
+  - id: GRAIN_HARVEST_BY_REGION
+    name_ru: "Валовой сбор зерновых (включая рис) и бобовых культур, по регионам"
+    name_en: "Gross harvest of grain (incl. rice) and pulses, by region"
+    agency: bns
+    element_id: 8160
+    layout: group_blocks
+    sheets: ["валовой сбор"]
+    label_col: 0
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    groups: {TOTAL: "^всего", WHEAT: "пшениц"}
+    skip_unknown_groups: true
+    min_items: 2
+    min_regions: 20
+    frequency: annual
+    unit: "thousand tonnes"
+    category: agriculture
+
+  - id: GRAIN_SOWN_AREA_BY_REGION
+    name_ru: "Уточнённая посевная площадь зерновых (включая рис) и бобовых культур, по регионам"
+    name_en: "Sown area of grain (incl. rice) and pulses, by region"
+    agency: bns
+    element_id: 8154
+    layout: group_blocks
+    sheets: ["посевная"]
+    label_col: 0
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    groups: {TOTAL: "^всего", WHEAT: "пшениц"}
+    skip_unknown_groups: true
+    min_items: 2
+    min_regions: 20
+    frequency: annual
+    unit: "thousand hectares"
+    category: agriculture
+
+  - id: GRAIN_YIELD_BY_REGION
+    name_ru: "Урожайность зерновых (включая рис) и бобовых культур, по регионам"
+    name_en: "Yield of grain (incl. rice) and pulses, by region"
+    agency: bns
+    element_id: 8166
+    layout: group_blocks
+    sheets: ["урожайность"]
+    label_col: 0
+    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    groups: {TOTAL: "^всего", WHEAT: "пшениц"}
+    skip_unknown_groups: true
+    min_items: 2
+    min_regions: 20
+    frequency: annual
+    unit: "centners per hectare"
+    category: agriculture
+
+  # ---------------------------------------------------------------- external trade by commodity group
+  # The export workbook behind EXPORTS / OIL_EXPORTS_* (element 446905): flat 6-digit HS lines
+  # inside regional blocks, monthly columns [tonnes, additional unit, thousand USD]. Groups are
+  # HS prefixes from dictionaries/hs_export_groups.csv (the GDP model's «Экспорт» sheet
+  # grouping); each is the sum of its lines over the regions, allowed only because the regional
+  # rows are re-checked against the national total every month (scripts/fetchers/bns_trade.py).
+  - id: EXPORTS_VALUE_BY_COMMODITY_GROUP
+    name_ru: "Экспорт товаров по товарным группам (ТН ВЭД), тыс. долларов США, помесячно"
+    name_en: "Goods exports by commodity group (HS prefixes), thousand USD, monthly"
+    agency: bns
+    fetcher: bns_trade
+    element_id: 446905
+    measure: usd
+    dictionary: hs_export_groups
+    frequency: monthly
+    unit: "thousand USD"
+    category: external_trade
+    note: "TOTAL is the published national row; the groups are sums of 6-digit HS lines over the regional blocks. Gas condensate and the 10-digit 'основные товары' subsets (petroleum products) cannot be separated at 6 digits — CRUDE_OIL is all of 2709, PETROLEUM_PRODUCTS all of 2710."
+
+  - id: EXPORTS_VOLUME_BY_COMMODITY_GROUP
+    name_ru: "Экспорт товаров по товарным группам (ТН ВЭД), тонн, помесячно"
+    name_en: "Goods exports by commodity group (HS prefixes), tonnes, monthly"
+    agency: bns
+    fetcher: bns_trade
+    element_id: 446905
+    measure: tonnes
+    dictionary: hs_export_groups
+    frequency: monthly
+    unit: "tonnes"
+    category: external_trade
+    note: "Same groups as EXPORTS_VALUE_BY_COMMODITY_GROUP. Natural gas (271121) is published in cubic metres only — its tonnes are zero here."
+
+  # ---------------------------------------------------------------- World Bank, Commodity Markets
+  # Links verified 2026-09-15 (files downloaded and read). The CMO page is read at run time
+  # for the current links; fallback_url is what it carried that day. Next CMO: 2 October 2026.
+  - id: WB_COMMODITY_PRICES_ANNUAL
+    name_ru: "Мировые цены на сырьевые товары, годовые средние (Всемирный банк, Pink Sheet), номинальные $"
+    name_en: "World Bank commodity prices, annual averages, nominal USD (Pink Sheet)"
+    agency: wb
+    table: annual_prices
+    sheet: "Annual Prices (Nominal)"
+    fallback_url: "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx"
+    dictionary: wb_commodities
+    region: world
+    country: WLD
+    geography: "World (benchmark prices)"
+    min_items: 60
+    frequency: annual
+    unit: "USD per unit named in item_name ($/bbl, $/mt, $/kg, $/troy oz …); NGAS_INDEX 2010=100"
+    category: world_prices
+    note: "69 series from 1960; the units row of the sheet is checked against dictionaries/wb_commodities.csv."
+
+  - id: WB_COMMODITY_INDICES_ANNUAL
+    name_ru: "Индексы мировых цен на сырьевые товары, годовые (Всемирный банк, 2010=100), номинальные"
+    name_en: "World Bank commodity price indices, annual, nominal (2010=100)"
+    agency: wb
+    table: annual_indices
+    sheet: "Annual Indices (Nominal)"
+    fallback_url: "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx"
+    dictionary: wb_commodity_indices
+    region: world
+    country: WLD
+    geography: "World (benchmark prices)"
+    min_items: 16
+    frequency: annual
+    unit: "index, 2010=100"
+    category: world_prices
+
+  - id: WB_COMMODITY_PRICE_FORECASTS
+    name_ru: "Прогноз мировых цен на сырьевые товары (Всемирный банк, Commodity Markets Outlook), номинальные $"
+    name_en: "World Bank Commodity Markets Outlook price forecasts, nominal USD"
+    agency: wb
+    table: forecast_prices
+    section: prices
+    sheet: "Forecast"
+    fallback_url: "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.xlsx"
+    dictionary: wb_commodities
+    region: world
+    country: WLD
+    geography: "World (benchmark prices)"
+    min_items: 40
+    frequency: annual
+    unit: "USD per unit named in item_name"
+    category: world_prices
+    note: "Forecast ('YYYYf') columns of the CMO table only; the two forecast years move on with each April/October release, the raw files keep every vintage."
+
+  - id: WB_COMMODITY_INDEX_FORECASTS
+    name_ru: "Прогноз индексов мировых цен на сырьевые товары (Всемирный банк, Commodity Markets Outlook), 2010=100"
+    name_en: "World Bank Commodity Markets Outlook index forecasts (2010=100)"
+    agency: wb
+    table: forecast_indices
+    section: indices
+    sheet: "Forecast"
+    fallback_url: "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.xlsx"
+    dictionary: wb_commodity_indices
+    region: world
+    country: WLD
+    geography: "World (benchmark prices)"
+    min_items: 16
+    frequency: annual
+    unit: "index, 2010=100"
+    category: world_prices
+    note: "Forecast ('YYYYf') columns of the CMO table only."
+
+  # ---------------------------------------------------------------- U.S. EIA, Short-Term Energy Outlook
+  - id: EIA_STEO_PRICES
+    name_ru: "Цены на нефть по прогнозу EIA (Short-Term Energy Outlook), месячные: история и прогноз, $/баррель"
+    name_en: "EIA Short-Term Energy Outlook crude prices, monthly history and forecast, USD per barrel"
+    agency: eia
+    url: "https://www.eia.gov/outlooks/steo/xls/STEO_m.xlsx"
+    sheet: "2tab"
+    items: {BREPUUS: "Brent, спот, средняя за месяц, $/баррель", WTIPUUS: "WTI, спот, средняя за месяц, $/баррель"}
+    region: world
+    country: WLD
+    geography: "World (benchmark prices)"
+    frequency: monthly
+    unit: "USD per barrel"
+    category: world_prices
+    note: "Table 2 'Energy Prices' of the monthly STEO workbook; months after the release's last historical month carry transformation 'forecast'. The model takes the annual mean (annual: mean)."

@@ -1,0 +1,72 @@
+code,name_ru,name_en,unit,match
+CRUDE_PETRO,"Нефть, средняя (Brent, Dubai, WTI), $/баррель","Crude oil, average",$/bbl,"^crude oil, average"
+CRUDE_BRENT,"Сырая нефть марки Брент, $/баррель","Crude oil, Brent",$/bbl,"^crude oil, brent"
+CRUDE_DUBAI,"Сырая нефть Dubai, $/баррель","Crude oil, Dubai",$/bbl,"^crude oil, dubai"
+CRUDE_WTI,"Сырая нефть WTI, $/баррель","Crude oil, WTI",$/bbl,"^crude oil, wti"
+COAL_AUS,"Уголь, Австралия, $/м.т.","Coal, Australian",$/mt,"^coal, austral"
+COAL_SAFRICA,"Уголь, ЮАР, $/м.т.","Coal, South African",$/mt,"^coal, south afric"
+NGAS_US,"Природный газ, США, $/млн брит. тепл. ед.","Natural gas, US",$/mmbtu,"^natural gas, u\.?s\.?$"
+NGAS_EUR,"Природный газ, Европа, $/млн брит. тепл. ед.","Natural gas, Europe",$/mmbtu,"^natural gas, europe"
+NGAS_JP,"Сжиженный природный газ, Япония, $/млн брит. тепл. ед.","Liquefied natural gas, Japan",$/mmbtu,^liquefied natural gas
+NGAS_INDEX,"Индекс цен на природный газ, 2010=100",Natural gas index,2010=100,^natural gas index
+COCOA,"Какао, $/кг",Cocoa,$/kg,^cocoa$
+COFFEE_ARABIC,"Кофе, арабика, $/кг","Coffee, Arabica",$/kg,"^coffee, arabica"
+COFFEE_ROBUS,"Кофе, робуста, $/кг","Coffee, Robusta",$/kg,"^coffee, robusta"
+TEA_AVG,"Чай, средний (3 аукциона), $/кг","Tea, avg 3 auctions",$/kg,"^tea, (avg|average)"
+TEA_COLOMBO,"Чай, Коломбо, $/кг","Tea, Colombo",$/kg,"^tea, colombo"
+TEA_KOLKATA,"Чай, Калькутта, $/кг","Tea, Kolkata",$/kg,"^tea, kolkata"
+TEA_MOMBASA,"Чай, Момбаса, $/кг","Tea, Mombasa",$/kg,"^tea, mombasa"
+COCONUT_OIL,"Кокосовое масло, $/м.т.",Coconut oil,$/mt,^coconut oil
+GRNUT,"Арахис, $/м.т.",Groundnuts,$/mt,^groundnuts$
+FISH_MEAL,"Рыбная мука, $/м.т.",Fish meal,$/mt,^fish ?meal
+GRNUT_OIL,"Арахисовое масло, $/м.т.",Groundnut oil,$/mt,^groundnut oil
+PALM_OIL,"Пальмовое масло, $/м.т.",Palm oil,$/mt,^palm oil$
+PLMKRNL_OIL,"Пальмоядровое масло, $/м.т.",Palm kernel oil,$/mt,^palm kernel oil
+RAPESEED_OIL,"Рапсовое масло, $/м.т.",Rapeseed oil,$/mt,^rapeseed oil
+SUNFLOWER_OIL,"Подсолнечное масло, $/м.т.",Sunflower oil,$/mt,^sunflower oil
+SOYBEANS,"Соевые бобы, $/м.т.",Soybeans,$/mt,^soybeans$
+SOYBEAN_OIL,"Соевое масло, $/м.т.",Soybean oil,$/mt,^soybean oil
+SOYBEAN_MEAL,"Соевый шрот, $/м.т.",Soybean meal,$/mt,^soybean meal
+BARLEY,"Ячмень, $/м.т.",Barley,$/mt,^barley$
+MAIZE,"Маис, $/м.т.",Maize,$/mt,^maize$
+SORGHUM,"Сорго, $/м.т.",Sorghum,$/mt,^sorghum$
+RICE_05,"Рис, Таиланд, 5%, $/м.т.","Rice, Thai 5%",$/mt,"^rice, thai(land)?,? 5%"
+RICE_25,"Рис, Таиланд, 25%, $/м.т.","Rice, Thai 25%",$/mt,"^rice, thai(land)?,? 25%"
+RICE_A1,"Рис, Таиланд, A.1, $/м.т.","Rice, Thai A.1",$/mt,"^rice, thai(land)?,? a\.1"
+RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.","Rice, Viet Namese 5%",$/mt,"^rice, viet"
+WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.","Wheat, US SRW",$/mt,"^wheat, u\.?s\.?,? srw"
+WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.","Wheat, US HRW",$/mt,"^wheat, u\.?s\.?,? hrw"
+BANANA_EU,"Бананы, Европа, $/кг","Banana, Europe",$/kg,"^bananas?, europe"
+BANANA_US,"Бананы, США, $/кг","Banana, US",$/kg,"^bananas?, u\.?s\.?$"
+ORANGE,"Апельсины, $/кг",Orange,$/kg,^oranges?$
+BEEF,"Говядина, $/кг",Beef,$/kg,^beef$
+CHICKEN,"Курица, $/кг",Chicken,$/kg,^chicken$
+LAMB,"Баранина, $/кг",Lamb,$/kg,^lamb$
+SHRIMP_MEX,"Креветка, Мексика, $/кг","Shrimps, Mexican",$/kg,^shrimps?
+SUGAR_EU,"Сахар, ЕС, $/кг","Sugar, EU",$/kg,"^sugar, eu"
+SUGAR_US,"Сахар, США, $/кг","Sugar, US",$/kg,"^sugar, u\.?s\.?$"
+SUGAR_WLD,"Сахар, мир, $/кг","Sugar, world",$/kg,"^sugar, world"
+TOBAC_US,"Табак, США (импортная цена), $/м.т.","Tobacco, US import u.v.",$/mt,^tobacco
+LOGS_CMR,"Бревна, Африка (Камерун), $/куб.м.","Logs, Cameroon",$/cubic meter,"^logs, (cameroon|africa)"
+LOGS_MYS,"Бревна, Юго-Восточная Азия (Малайзия), $/куб.м.","Logs, Malaysian",$/cubic meter,"^logs, (malaysia|s\.e\. asia)"
+SAWNWD_CMR,"Пиломатериалы, Африка (Камерун), $/куб.м.","Sawnwood, Cameroon",$/cubic meter,"^sawnwood, (cameroon|africa)"
+SAWNWD_MYS,"Пиломатериалы, Юго-Восточная Азия (Малайзия), $/куб.м.","Sawnwood, Malaysian",$/cubic meter,"^sawnwood, (malaysia|s\.e\. asia)"
+PLYWOOD,"Фанера, ¢/лист",Plywood,¢/sheet,^plywood$
+COTTON_A_INDX,"Хлопок, индекс A, $/кг","Cotton, A Index",$/kg,^cotton
+RUBBER_TSR20,"Каучук, TSR20, $/кг","Rubber, TSR20",$/kg,"^rubber, tsr ?20"
+RUBBER1_MYSG,"Каучук, RSS3, $/кг","Rubber, RSS3",$/kg,"^rubber, rss ?3"
+PHOSROCK,"Фосфатная порода, $/м.т.",Phosphate rock,$/mt,^phosphate rock
+DAP,"Диаммоний фосфат (DAP), $/м.т.",DAP,$/mt,^dap$
+TSP,"Тройной суперфосфат (TSP), $/м.т.",TSP,$/mt,^tsp$
+UREA_EE_BULK,"Карбамид, Восточная Европа, $/м.т.",Urea,$/mt,^urea
+POTASH,"Хлорид калия, $/м.т.",Potassium chloride,$/mt,^potassium chloride
+ALUMINUM,"Алюминий, $/м.т.",Aluminum,$/mt,^alumin(i)?um$
+IRON_ORE,"Железная руда, $/сух. м.т.","Iron ore, cfr spot",$/dmtu,^iron ore
+COPPER,"Медь, $/м.т.",Copper,$/mt,^copper$
+LEAD,"Свинец, $/м.т.",Lead,$/mt,^lead$
+TIN,"Олово, $/м.т.",Tin,$/mt,^tin$
+NICKEL,"Никель, $/м.т.",Nickel,$/mt,^nickel$
+ZINC,"Цинк, $/м.т.",Zinc,$/mt,^zinc$
+GOLD,"Золото, $/тройская унция",Gold,$/troy oz,^gold$
+PLATINUM,"Платина, $/тройская унция",Platinum,$/troy oz,^platinum$
+SILVER,"Серебро, $/тройская унция",Silver,$/troy oz,^silver$

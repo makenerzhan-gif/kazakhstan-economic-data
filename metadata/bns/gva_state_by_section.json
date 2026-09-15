@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/4446/file/ru/",
+  "dataset_id": "4446",
+  "indicator_id": "GVA_STATE_BY_SECTION",
+  "indicator_name": "Gross value added, state ownership, by ОКЭД section",
+  "description": "ВДС, государственная форма собственности, по видам экономической деятельности",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Sub-columns per year: ВДС, государственная, частная, других государств. Empty BNS cells mean the phenomenon is absent (no record written).",
+  "publication_date": null,
+  "last_update_date": "2026-09-14",
+  "download_date": "2026-09-14",
+  "period_start": "2010-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

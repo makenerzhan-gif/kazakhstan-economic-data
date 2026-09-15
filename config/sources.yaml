@@ -28,6 +28,176 @@ agencies:
     access_type: api
     protection: none
     endpoints:
+      # ---- dimensional tables (config/dims.yaml, scripts/update_dims.py) ----
+      EXPORTS_VALUE_BY_COMMODITY_GROUP:
+        status: confirmed_xlsx
+        element_id: 446905
+        download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
+        format: xlsx_table
+        notes: >
+          2026-09-15. The same 56–65 MB export workbook that feeds EXPORTS and OIL_EXPORTS_*, read
+          by scripts/fetchers/bns_trade.py for the GDP model's 23 commodity groups
+          (dictionaries/hs_export_groups.csv: HS headings, chapters or 6-digit lines). A group is
+          the sum of its 6-digit lines over the regional blocks, with the per-month check that the
+          regional rows reproduce the published national total (2 months of 2022 fail by 1–1.5 %
+          and are skipped, as for OIL_EXPORTS_*). TOTAL is the national row. Not separable at 6
+          digits and therefore not offered: gas condensate (2709 00 100 0) and the 'основные
+          товары' subset of petroleum products — CRUDE_OIL is all of 2709, PETROLEUM_PRODUCTS all
+          of 2710. Monthly, January 2019 – June 2026 at the time of writing; one raw copy per day
+          shared with EXPORTS when that download happened first.
+      EXPORTS_VOLUME_BY_COMMODITY_GROUP:
+        status: confirmed_xlsx
+        element_id: 446905
+        download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
+        format: xlsx_table
+        notes: "2026-09-15. Tonnes column of the same file and groups. Natural gas (271121) is published in cubic metres only — its tonnes are zero; gold and silver are in tonnes here (the file's additional unit is grams)."
+      # Verified 2026-09-14 by downloading each xlsx export and reading it (the same files
+      # the Excel GDP model was hand-loaded from that day). The JSON cube export of these
+      # elements was checked and rejected for this purpose: 4439 and 4435-4437 carry only
+      # region/national totals there, 4453 stops at 2024, 4446 and 4448 return 404.
+      GVA_NOMINAL_BY_SECTION:
+        status: confirmed_xlsx
+        element_id: 4439
+        download_url: "https://stat.gov.kz/api/iblock/element/4439/file/ru/"
+        format: xlsx_table
+        notes: "Sheet '2010-2026(ОКЭД НК РК 03-2019)': sections down the rows, quarterly-YTD and 'YYYY год' columns; annual columns used."
+      GVA_VOLUME_INDEX_BY_SECTION:
+        status: confirmed_xlsx
+        element_id: 4440
+        download_url: "https://stat.gov.kz/api/iblock/element/4440/file/ru/"
+        format: xlsx_table
+        notes: "Same layout as 4439, values in % of the same period of the previous year."
+      GVA_DEFLATOR_BY_SECTION:
+        status: confirmed_xlsx
+        element_id: 4441
+        download_url: "https://stat.gov.kz/api/iblock/element/4441/file/ru/"
+        format: xlsx_table
+        notes: "Same layout as 4439."
+      GVA_NOMINAL_INDUSTRY_DIVISIONS:
+        status: confirmed_xlsx
+        element_id: 5931
+        download_url: "https://stat.gov.kz/api/iblock/element/5931/file/ru/"
+        format: xlsx_table
+        notes: "Sheets '2013-2018гг. периоды' and '2018-2026гг.': region blocks, one row per period, one column per industry division with codes on the row under the names."
+      GDP_EXPENDITURE_NOMINAL:
+        status: confirmed_xlsx
+        element_id: 4435
+        download_url: "https://stat.gov.kz/api/iblock/element/4435/file/ru/"
+        format: xlsx_table
+        notes: "Sheet '2007-2026': КСП code in column A, component label in column B, periods across."
+      GDP_EXPENDITURE_VOLUME_INDEX:
+        status: confirmed_xlsx
+        element_id: 4437
+        download_url: "https://stat.gov.kz/api/iblock/element/4437/file/ru/"
+        format: xlsx_table
+        notes: "Same layout as 4435."
+      GDP_EXPENDITURE_DEFLATOR:
+        status: confirmed_xlsx
+        element_id: 4436
+        download_url: "https://stat.gov.kz/api/iblock/element/4436/file/ru/"
+        format: xlsx_table
+        notes: "Same layout as 4435."
+      INCOME_COMPENSATION_BY_SECTION:
+        status: confirmed_xlsx
+        element_id: 4453
+        download_url: "https://stat.gov.kz/api/iblock/element/4453/file/ru/"
+        format: xlsx_table
+        notes: "Sheet 'ОКЭД (НК РК 03-2007)': sections down the rows, periods across; 2025 present here although the JSON cube stops at 2024."
+      INCOME_OTHER_TAXES_BY_SECTION:
+        status: confirmed_xlsx
+        element_id: 4452
+        download_url: "https://stat.gov.kz/api/iblock/element/4452/file/ru/"
+        format: xlsx_table
+        notes: "Same layout as 4453, plus a 'Чистые налоги на продукты' row."
+      INCOME_CFC_BY_SECTION:
+        status: confirmed_xlsx
+        element_id: 4454
+        download_url: "https://stat.gov.kz/api/iblock/element/4454/file/ru/"
+        format: xlsx_table
+        notes: "Same layout as 4453."
+      INCOME_PROFIT_BY_SECTION:
+        status: confirmed_xlsx
+        element_id: 4455
+        download_url: "https://stat.gov.kz/api/iblock/element/4455/file/ru/"
+        format: xlsx_table
+        notes: "Same layout as 4453."
+      NOE_SHARE_BY_SECTION:
+        status: confirmed_xlsx
+        element_id: 4448
+        download_url: "https://stat.gov.kz/api/iblock/element/4448/file/ru/"
+        format: xlsx_table
+        notes: "Sheets '2013-2016' and '2017-2025': one 'YYYY год' header cell per year over two sub-columns (total, of which illegal); JSON export returns 404."
+      NOE_ILLEGAL_SHARE_BY_SECTION:
+        status: confirmed_xlsx
+        element_id: 4448
+        download_url: "https://stat.gov.kz/api/iblock/element/4448/file/ru/"
+        format: xlsx_table
+        notes: "Second sub-column of the same table."
+      GVA_STATE_BY_SECTION:
+        status: confirmed_xlsx
+        element_id: 4446
+        download_url: "https://stat.gov.kz/api/iblock/element/4446/file/ru/"
+        format: xlsx_table
+        notes: "Sheet 'ВДС по КФС': one 'YYYYг.' header cell per year over four sub-columns (ВДС, государственная, частная, других государств); JSON export returns 404."
+      GVA_PRIVATE_BY_SECTION:
+        status: confirmed_xlsx
+        element_id: 4446
+        download_url: "https://stat.gov.kz/api/iblock/element/4446/file/ru/"
+        format: xlsx_table
+        notes: "Third sub-column of the same table."
+      GVA_FOREIGN_BY_SECTION:
+        status: confirmed_xlsx
+        element_id: 4446
+        download_url: "https://stat.gov.kz/api/iblock/element/4446/file/ru/"
+        format: xlsx_table
+        notes: "Fourth sub-column of the same table."
+      # ---- regional dimensional tables (phase 2, verified 2026-09-14 the same way) ----
+      GVA_NOMINAL_BY_REGION_SECTION:
+        status: confirmed_xlsx
+        element_id: 5927
+        download_url: "https://stat.gov.kz/api/iblock/element/5927/file/ru/"
+        format: xlsx_table
+        notes: "Sheets 'ВРП_2010-2018' and 'ВРП_2018-2026': one block per region (КАТО code in column A), one row per period, columns ВРП, 21 sections, чистые налоги."
+      GVA_VOLUME_INDEX_BY_REGION_SECTION:
+        status: confirmed_xlsx
+        element_id: 450904
+        download_url: "https://stat.gov.kz/api/iblock/element/450904/file/ru/"
+        format: xlsx_table
+        notes: "Sheets 'ИФО ВДС_2010-2017' and 'ИФО ВДС_2018-2025': region blocks, plain-year rows, columns Всего + 11 sections + Прочие услуги."
+      GRP_VOLUME_INDEX_BY_REGION:
+        status: confirmed_xlsx
+        element_id: 5926
+        download_url: "https://stat.gov.kz/api/iblock/element/5926/file/ru/"
+        format: xlsx_table
+        notes: "Sheet '2001-2026': one row per region, 'YYYY год' and quarterly-YTD columns."
+      POPULATION_AVG_BY_REGION:
+        status: confirmed_xlsx
+        element_id: 6576
+        download_url: "https://stat.gov.kz/api/iblock/element/6576/file/ru/"
+        format: xlsx_table
+        notes: "Sheet '2009-2025': group label rows (Все население / Городское / Сельское, each with Мужчины / Женщины) followed by the country and region rows; years as numbers."
+      LABOUR_FORCE_BY_REGION: {status: confirmed_xlsx, element_id: 102800, download_url: "https://stat.gov.kz/api/iblock/element/102800/file/ru/", format: xlsx_table, notes: "Sheet 'Показатель': region rows, plain-year columns, thousand persons."}
+      EMPLOYED_BY_REGION: {status: confirmed_xlsx, element_id: 102798, download_url: "https://stat.gov.kz/api/iblock/element/102798/file/ru/", format: xlsx_table, notes: "As 102800."}
+      UNEMPLOYED_BY_REGION: {status: confirmed_xlsx, element_id: 102791, download_url: "https://stat.gov.kz/api/iblock/element/102791/file/ru/", format: xlsx_table, notes: "As 102800."}
+      EMPLOYEES_BY_REGION: {status: confirmed_xlsx, element_id: 102796, download_url: "https://stat.gov.kz/api/iblock/element/102796/file/ru/", format: xlsx_table, notes: "As 102800."}
+      SELF_EMPLOYED_BY_REGION: {status: confirmed_xlsx, element_id: 102793, download_url: "https://stat.gov.kz/api/iblock/element/102793/file/ru/", format: xlsx_table, notes: "As 102800."}
+      UNEMPLOYMENT_RATE_BY_REGION: {status: confirmed_xlsx, element_id: 102790, download_url: "https://stat.gov.kz/api/iblock/element/102790/file/ru/", format: xlsx_table, notes: "Sheet 'Показатель': regions AND districts down the rows, three sub-columns per year (всего/мужчины/женщины); districts skipped."}
+      EMPLOYED_AGRICULTURE_BY_REGION: {status: confirmed_xlsx, element_id: 443430, download_url: "https://stat.gov.kz/api/iblock/element/443430/file/ru/", format: xlsx_table, notes: "As 102790, persons."}
+      EMPLOYED_INDUSTRY_CONSTRUCTION_BY_REGION: {status: confirmed_xlsx, element_id: 443435, download_url: "https://stat.gov.kz/api/iblock/element/443435/file/ru/", format: xlsx_table, notes: "As 102790, persons."}
+      EMPLOYED_SERVICES_BY_REGION: {status: confirmed_xlsx, element_id: 443438, download_url: "https://stat.gov.kz/api/iblock/element/443438/file/ru/", format: xlsx_table, notes: "As 102790, persons."}
+      EMPLOYED_BY_SECTION: {status: confirmed_xlsx, element_id: 5831, download_url: "https://stat.gov.kz/api/iblock/element/5831/file/ru/", format: xlsx_table, notes: "Sheet 'Показатель по ВЭД РК': sections down the rows, five sub-columns per year (quarters + год)."}
+      INVESTMENT_BY_REGION: {status: confirmed_xlsx, element_id: 5546, download_url: "https://stat.gov.kz/api/iblock/element/5546/file/ru/", format: xlsx_table, notes: "Sheet 'Лист1': region rows, plain-year columns, million KZT. The scalar INVESTMENT indicator reads the JSON cube of the same element, which stops at 2022."}
+      INVESTMENT_VOLUME_INDEX_BY_REGION: {status: confirmed_xlsx, element_id: 5549, download_url: "https://stat.gov.kz/api/iblock/element/5549/file/ru/", format: xlsx_table, notes: "As 5546, % of previous year."}
+      INVESTMENT_BY_SECTION: {status: confirmed_xlsx, element_id: 5547, download_url: "https://stat.gov.kz/api/iblock/element/5547/file/ru/", format: xlsx_table, notes: "Sheet 'Лист1': sections down the rows, 'YYYY год' + 'в % к прошлому году' column pairs (2003 has no % column)."}
+      INVESTMENT_VOLUME_INDEX_BY_SECTION: {status: confirmed_xlsx, element_id: 5547, download_url: "https://stat.gov.kz/api/iblock/element/5547/file/ru/", format: xlsx_table, notes: "The % column of the same table."}
+      # ---- natural volumes and indices (phase 3, verified 2026-09-14) ----
+      PRODUCTION_NATURAL_BY_REGION: {status: confirmed_xlsx, element_id: 5814, download_url: "https://stat.gov.kz/api/iblock/element/5814/file/ru/", format: xlsx_table, notes: "Sheets горнодоб / обрабатыв / электроэнергия / водоснабженение: product label rows (name + unit) followed by the country and producing-region rows; years across. Only dictionary products kept."}
+      INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY: {status: confirmed_xlsx, element_id: 5792, download_url: "https://stat.gov.kz/api/iblock/element/5792/file/ru/", format: xls_table, notes: "Sheet 'лист' (.xls): 53 activity rows (ОКЭД divisions and groups) in column B, years 1990–2025 across; the scalar IND_PROD indicator reads element 5809's JSON cube, which stops at 2023."}
+      AGRICULTURE_VOLUME_INDEX_BY_ACTIVITY: {status: confirmed_xlsx, element_id: 8150, download_url: "https://stat.gov.kz/api/iblock/element/8150/file/ru/", format: xls_table, notes: "Sheet 'ИФО А к пред' (.xls): ОКЭД code in column A, name in column B, years 2010–2025 across."}
+      GRAIN_HARVEST_BY_REGION: {status: confirmed_xlsx, element_id: 8160, download_url: "https://stat.gov.kz/api/iblock/element/8160/file/ru/", format: xls_table, notes: "Sheet 'валовой сбор' (.xls): crop group rows (Всего, из них: пшеницы …) each followed by the country and region rows; years 2004–2025 across; thousand tonnes."}
+      GRAIN_SOWN_AREA_BY_REGION: {status: confirmed_xlsx, element_id: 8154, download_url: "https://stat.gov.kz/api/iblock/element/8154/file/ru/", format: xls_table, notes: "As 8160, thousand hectares."}
+      GRAIN_YIELD_BY_REGION: {status: confirmed_xlsx, element_id: 8166, download_url: "https://stat.gov.kz/api/iblock/element/8166/file/ru/", format: xls_table, notes: "As 8160, centners per hectare."}
+      # ---- scalar indicators ----
       GDP_NOMINAL:
         status: confirmed_json
         page_url: "https://stat.gov.kz/ru/open-data/national-accounts/474289/"
@@ -6279,3 +6449,77 @@ agencies:
         notes: >
           2026-09-02. 72.7% at 01.07.2026.
 
+  wb:
+    name: "World Bank — Commodity Markets (Pink Sheet, Commodity Markets Outlook)"
+    website: "https://www.worldbank.org/en/research/commodity-markets"
+    status: confirmed
+    notes: >
+      Added 2026-09-15 as the sixth agency, for the GDP model's world-price block («Внешние и
+      внутренние факторы»: 46 annual prices, 16 price indices, the World Bank Brent forecast) and
+      for a standalone Brent series beside the IMF APSP (OIL_PRICE). Verified by downloading and
+      reading every file named below; nothing here is from memory.
+      HOW THE FILES ARE REACHED. The Commodity Markets page links the current files on
+      thedocs.worldbank.org; the document id in the path changes with every release
+      (…/5d903e848db1d1b83e0ec8f744e55570-0350012021/… was the January 2025 vintage, ending 2024;
+      …/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/… the September 2026 one, ending 2025), so a
+      hard-coded link goes stale within months. scripts/fetchers/wb.py reads the page (plain GET
+      with a browser-like User-Agent, HTTP 200, 56 KB) and takes the links from it; the last
+      confirmed link is the fallback and the manifest says which was used. The forecast table is
+      linked as a PDF; the xlsx exists at the same path (checked for April 2026) and is what is read.
+      WHAT THE FILES CARRY. No series codes any more (older vintages had a mnemonic row); the
+      codes live in dictionaries/wb_commodities.csv (69 price series, modelled on those
+      mnemonics) and wb_commodity_indices.csv (16), and their regexes match both the history
+      file's names and the forecast table's ("Logs, Cameroon" / "Logs, Africa"). The annual file
+      publishes rounded values (Brent 1960 = 1.6); the monthly file is the finer source.
+      Next CMO update: 2 October 2026 (from the page and the forecast sheet's footer).
+    access_type: xlsx
+    protection: none
+    endpoints:
+      WB_COMMODITY_PRICES_ANNUAL:
+        status: confirmed_xlsx
+        download_url: "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx"
+        format: xlsx_table
+        notes: "Sheet 'Annual Prices (Nominal)': names row, units row, one row per year 1960–2025; 69 series. 'Updated on September 02, 2026'. Also sheets Annual Indices (Nominal), Annual Prices/Indices (Real), Description, Definitions, Index Weights."
+      WB_COMMODITY_INDICES_ANNUAL:
+        status: confirmed_xlsx
+        download_url: "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx"
+        format: xlsx_table
+        notes: "Sheet 'Annual Indices (Nominal)': four header rows, each column named on one of them (the group tree); 16 indices, 2010=100, 1960–2025."
+      WB_COMMODITY_PRICE_FORECASTS:
+        status: confirmed_xlsx
+        download_url: "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.xlsx"
+        format: xlsx_table
+        notes: "Sheet 'Forecast' (TABLE 1 of the CMO): header 'Commodity … Unit 2024 2025 2026f 2027f', INDEXES block then PRICES block; the percent-change and 'differences from October 2025' blocks to the right repeat the 'f' years and are not taken. 46 price rows, 16 index rows."
+      WB_COMMODITY_INDEX_FORECASTS:
+        status: confirmed_xlsx
+        download_url: "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.xlsx"
+        format: xlsx_table
+        notes: "Same file and sheet, INDEXES block."
+      OIL_PRICE_BRENT:
+        status: confirmed_xlsx
+        download_url: "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx"
+        format: xlsx_table
+        notes: "Sheet 'Monthly Prices', column 'Crude oil, Brent' ($/bbl), rows '1960M01' … '2026M08'. The monthly file lists 71 series (two more than the annual: rapeseed and sunflower oil) and marks some names with '**' — the dictionary regexes ignore the marker."
+  eia:
+    name: "U.S. Energy Information Administration — Short-Term Energy Outlook"
+    website: "https://www.eia.gov/outlooks/steo/"
+    status: confirmed
+    notes: >
+      Added 2026-09-15 as the seventh agency, for one cell pair of the GDP model: the EIA Brent
+      forecast (row «U.S. EIA» of the Brent consensus block). Verified 2026-09-14 by download:
+      https://www.eia.gov/outlooks/steo/xls/STEO_m.xlsx (the whole monthly-table workbook of the
+      current release) answers 200; the per-table xls/2tab.xlsx and the annual STEO_a.xlsx that
+      older references point to answer 404, so the workbook is what is read. Sheet 'Dates' names
+      the release ('Forecast Month - September 2026') and the last historical month (202608);
+      sheet '2tab' (Table 2, Energy Prices) has a year row over a month row and one row per
+      series with the EIA series id in column A. Monthly values only — the annual averages the
+      STEO overview prints are the means of the twelve months, which is how the model contract
+      takes them (annual: mean). Released monthly, usually in the first ten days.
+    access_type: xlsx
+    protection: none
+    endpoints:
+      EIA_STEO_PRICES:
+        status: confirmed_xlsx
+        download_url: "https://www.eia.gov/outlooks/steo/xls/STEO_m.xlsx"
+        format: xlsx_table
+        notes: "Sheet '2tab', rows BREPUUS (Brent Spot Average) and WTIPUUS (WTI Spot Average), $/bbl, January 2022 – December 2027 in the September 2026 release; months after 202608 are forecasts."
