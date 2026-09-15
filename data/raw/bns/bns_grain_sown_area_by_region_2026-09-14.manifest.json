@@ -3,5 +3,5 @@
   "source_url": "https://stat.gov.kz/api/iblock/element/8154/file/ru/",
   "element_id": 8154,
   "raw_file": "bns_grain_sown_area_by_region_2026-09-14.xls",
-  "raw_file_note": "byte-identical copy bns_grain_sown_area_by_region_2026-09-14.xlsx removed 2026-09-15; the bytes are in bns_grain_sown_area_by_region_2026-09-14.xls"
+  "raw_file_note": "byte-identical copy bns_grain_sown_area_by_region_2026-09-14.xlsx removed 2026-09-15 (the legacy .xls saved under both extensions on the first phase-3 run); the bytes are in bns_grain_sown_area_by_region_2026-09-14.xls"
 }

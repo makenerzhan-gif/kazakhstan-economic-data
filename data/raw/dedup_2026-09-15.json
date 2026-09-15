@@ -1,7 +1,7 @@
 {
  "date": "2026-09-15",
  "rule": "byte-identical raw files kept once per agency; every removed file maps to the file holding its bytes (verified through git blob ids and, for twins added the same day, by byte comparison)",
- "removed_files": 5683,
+ "removed_files": 5688,
  "removed": {
   "data/raw/ardfm/ardfm_bank_assets_gross_202605_2026-09-03.pdf": "data/raw/ardfm/ardfm_bank_assets_gross_202605_2026-09-02.pdf",
   "data/raw/ardfm/ardfm_bank_assets_gross_202605_2026-09-04.pdf": "data/raw/ardfm/ardfm_bank_assets_gross_202605_2026-09-02.pdf",
@@ -5685,6 +5685,11 @@
   "data/raw/nbk/nbk_tonia_2026-09-03.json": "data/raw/nbk/nbk_annual_inflation_2026-09-03.json",
   "data/raw/nbk/nbk_tonia_2026-09-04.json": "data/raw/nbk/nbk_annual_inflation_2026-09-04.json",
   "data/raw/wb/wb_wb_commodity_index_forecasts_2026-09-15.xlsx": "data/raw/wb/wb_wb_commodity_price_forecasts_2026-09-15.xlsx",
-  "data/raw/wb/wb_wb_commodity_indices_annual_2026-09-15.xlsx": "data/raw/wb/wb_wb_commodity_prices_annual_2026-09-15.xlsx"
+  "data/raw/wb/wb_wb_commodity_indices_annual_2026-09-15.xlsx": "data/raw/wb/wb_wb_commodity_prices_annual_2026-09-15.xlsx",
+  "data/raw/bns/bns_agriculture_volume_index_by_activity_2026-09-14.xlsx": "data/raw/bns/bns_agriculture_volume_index_by_activity_2026-09-14.xls",
+  "data/raw/bns/bns_grain_harvest_by_region_2026-09-14.xlsx": "data/raw/bns/bns_grain_harvest_by_region_2026-09-14.xls",
+  "data/raw/bns/bns_grain_sown_area_by_region_2026-09-14.xlsx": "data/raw/bns/bns_grain_sown_area_by_region_2026-09-14.xls",
+  "data/raw/bns/bns_grain_yield_by_region_2026-09-14.xlsx": "data/raw/bns/bns_grain_yield_by_region_2026-09-14.xls",
+  "data/raw/bns/bns_industrial_production_index_by_activity_2026-09-14.xlsx": "data/raw/bns/bns_industrial_production_index_by_activity_2026-09-14.xls"
  }
 }

@@ -4215,9 +4215,10 @@ had not changed — and were removed from the working tree; every one of them ma
 file that still holds its bytes in `data/raw/dedup_2026-09-15.json` (matched through git
 blob ids — identical content is one blob — and, for twins added the same day, by byte
 comparison), and the dated manifests of the removed files carry `raw_file` pointing at it.
-Five files that the first pass took for duplicates turned out to have no twin left after
-the pass and were restored before anything was committed; the check that every removed
-file has a surviving twin is part of the record. Nothing with distinct content was
+Five legacy-.xls tables that the first phase-3 run had saved under both extensions were
+restored by the verification pass (it looked for twins with the same extension), then
+removed again once the .xls twins were confirmed byte-identical -- 5 688 files in all; the
+check that every removed file has a surviving twin is part of the record. Nothing with distinct content was
 touched. `data/raw` is now 1.39 GB.
 
 **Rule going forward.** `lib/raw_store.identical_twin`: a download whose bytes are

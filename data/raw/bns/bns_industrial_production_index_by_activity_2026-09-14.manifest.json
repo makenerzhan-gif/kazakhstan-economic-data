@@ -3,5 +3,5 @@
   "source_url": "https://stat.gov.kz/api/iblock/element/5792/file/ru/",
   "element_id": 5792,
   "raw_file": "bns_industrial_production_index_by_activity_2026-09-14.xls",
-  "raw_file_note": "byte-identical copy bns_industrial_production_index_by_activity_2026-09-14.xlsx removed 2026-09-15; the bytes are in bns_industrial_production_index_by_activity_2026-09-14.xls"
+  "raw_file_note": "byte-identical copy bns_industrial_production_index_by_activity_2026-09-14.xlsx removed 2026-09-15 (the legacy .xls saved under both extensions on the first phase-3 run); the bytes are in bns_industrial_production_index_by_activity_2026-09-14.xls"
 }
