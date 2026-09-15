@@ -1286,6 +1286,11 @@ FDI_DIRECTION = "Direct investment in Kazakhstan"
 # every form; the pages were otherwise byte-identical to 2026-09-09) -- it stopped 65
 # series in one run until it was listed here.
 NON_CLASSIFICATION_FIELDS = ("report_date", "amount", "row_id")
+# Per-form attributes that vary from row to row but do not classify a series either, both
+# added by the API on 2026-09-15: formId=35 (KASE) gained `period`, a month label that only
+# repeats report_date ("apr", "30 jun"); formId=476 (gold bullion sales) gained `weight`, the
+# total weight of the pieces sold in the quarter -- a second measure, not a dimension.
+FORM_IGNORE_FIELDS = {"35": ("period",), "476": ("weight",)}
 
 
 def _fetch_nbk_form_paginated(form_id: str, indicator_id: str) -> list[dict]:
@@ -2144,13 +2149,19 @@ def _fetch_nbk_exact_row(form_id: str, match: dict, indicator_id: str, note: str
         return str(value).strip().casefold()
 
     normalized_match = {k: norm(v) for k, v in match.items()}
+    # A field that carries one and the same value on every row of the form cannot tell
+    # series apart and is no classification for the "no other field set" rule -- formId=41
+    # gained `periodicity` = "monthly" on every row on 2026-09-15. FORM_IGNORE_FIELDS covers
+    # the varying-but-not-classifying attributes.
+    uniform = {k for k in {k for r in all_rows for k in r} if len({norm(r.get(k)) for r in all_rows}) == 1}
+    skip = set(NON_CLASSIFICATION_FIELDS) | uniform | set(FORM_IGNORE_FIELDS.get(str(form_id), ()))
 
     def qualifies(row: dict) -> bool:
         for key, want in normalized_match.items():
             if key not in row or norm(row[key]) != want:
                 return False
         for key, value in row.items():
-            if key in NON_CLASSIFICATION_FIELDS or key in match:
+            if key in skip or key in match:
                 continue
             if value not in (None, ""):
                 return False
@@ -3311,7 +3322,8 @@ PAYMENT_COUNT_ROUNDING = 0.05        # thousand transactions
 PAYMENT_COUNT_MAX_FAIL_SHARE = 0.10
 
 REMITTANCE_COUNT_FORM_ID = "412"
-REMITTANCE_COUNT_MATCH = {"period": "Month", "type": "thsd. transactions"}
+REMITTANCE_COUNT_MATCH = {"period": "Month", "type": "thsd. transactions",
+                          "currency_code": "Total"}   # 2026-09-15: the all-currency rows, empty before, now say "Total" (values unchanged, checked)
 
 
 def _check_payment_total_identity() -> tuple[int, list[str]]:

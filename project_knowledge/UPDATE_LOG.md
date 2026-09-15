@@ -4351,3 +4351,22 @@ two fixed here:
    replacement id asserted. Watch the next daily reports.
 
 The remaining "structural changes" of that report are the same two as on 9 September.
+
+## 2026-09-15 — second CI run (a834d5e1 → bf22916c): 460 ok, 17 stops; the last 13 NBK stops explained
+
+The row_id fix brought 52 of the 65 NBK series back. The remaining 13 were four more
+changes the API made the same day, each visible by comparing the archived pages with the
+previous edition (values identical throughout):
+- formId=41 (OTC exchange rates and turnover, 6 series): a new `periodicity` field, "monthly"
+  on every row. Rule added to `_fetch_nbk_exact_row`: a field uniform across the whole form
+  cannot tell series apart and is not a classification.
+- formId=35 (KASE rates and turnover, 4 series): a new `period` field holding a month label
+  that only repeats report_date ("apr", "30 jun"). Listed in `FORM_IGNORE_FIELDS`.
+- formId=476 (gold bullion sales, 1 series): a new `weight` field, the total weight of the
+  pieces sold in the quarter — a second measure, not a dimension. Listed there too.
+- formId=412 (remittance transaction counts, 2 series): the all-currency rows, which used to
+  have an empty `currency_code`, now say "Total"; pinned in `REMITTANCE_COUNT_MATCH` after
+  checking that the 116 common values are unchanged to the last digit.
+All 13 fetch live again. Tests 305 → 308. Still stopping: the two Minfin pension series
+(since 9 September, unrelated) and the two BNS export datasets (element 446905 still
+serving the 22 KB stub at 09:35 UTC).
