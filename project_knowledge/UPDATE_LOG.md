@@ -4319,3 +4319,35 @@ the BNS index adds nothing to CPI_YOY, so it is retired — the indicator entry,
 marked `retired` with its research notes kept, the processed file and metadata are deleted,
 the raw downloads stay. 430 scalar indicators remain. Year-on-year inflation = `CPI_YOY − 100`
 for the reference month.
+
+## 2026-09-15 — first CI run of the new pipeline: what it showed, and two source changes
+
+**The run** (workflow_dispatch on cf83162e): pipeline 65 minutes, tests 303/303 on the
+runner, commit `99213b13` — the first automated commit since 9 September. The daily runs
+of 10–14 September had all died with "No space left on device": the runner could not hold
+the working tree with its 11 GB of duplicate raw copies (checkout alone took 70 minutes on
+the 14th and the pipeline never finished). After the de-duplication the checkout took 13
+seconds, and the store's one-copy rule held on the runner too (every re-downloaded
+unchanged file was recognised and not stored again).
+
+**410 datasets ok, 67 stopped as structural changes** — two of them real, and one of the
+two fixed here:
+
+1. *NBK open-data forms (65 series: balance of payments, external debt, loans, remittances,
+   payments, OTC and KASE turnover, reserves ratios).* The archived pages of 9 and 15
+   September are identical except that every row now carries a new technical field
+   `row_id`. The fetchers pin a series by requiring "no other classification field set",
+   and treated `row_id` as one. `NON_CLASSIFICATION_FIELDS` in `fetchers/nbk.py` now lists
+   it beside `report_date` and `amount`; verified offline on the archived pages and live
+   on three of the series. Tests 303 → 305.
+2. *BNS element 446905 (the export workbook by HS line).* From about 07:50 UTC the element
+   serves a 23 KB workbook with only the description sheet and an annual per-region summary
+   — no monthly sheets — both from the runner and from Almaty; at 06:13 the same URL had
+   given the full 65 MB file (grown by the 2015–2018 sheets), and the import element
+   still gives its full 144 MB file. The parser stops loudly on a workbook without year
+   sheets (message made explicit), the two commodity-group datasets and the three series
+   derived from them keep the last good data (through June 2026). Whether the element is
+   being regenerated or has been re-pointed is not known; recorded in sources.yaml, no
+   replacement id asserted. Watch the next daily reports.
+
+The remaining "structural changes" of that report are the same two as on 9 September.

@@ -45,6 +45,15 @@ agencies:
           товары' subset of petroleum products — CRUDE_OIL is all of 2709, PETROLEUM_PRODUCTS all
           of 2710. Monthly, January 2019 – June 2026 at the time of writing; one raw copy per day
           shared with EXPORTS when that download happened first.
+          2026-09-15, from about 07:50 UTC: the same element started serving a 23 KB workbook --
+          only the Метаданные sheet and a per-region ANNUAL summary of «Товарооборот в иностранной
+          валюте» (2020-2025), no monthly HS sheets -- both from the CI runner and from Almaty,
+          while element 446906 (imports) still served its full 144 MB workbook (which, like the
+          export one at 06:13 that morning, had grown by the 2015-2018 sheets). Whether this is a
+          regeneration in progress or a re-pointed element is not known; the parser stops loudly on
+          a workbook without year sheets and the derived EXPORTS / OIL_EXPORTS_* keep the last good
+          data (through June 2026). Watch the daily report; if it persists, the monthly workbook has
+          to be located again -- no other element id is asserted here.
       EXPORTS_VOLUME_BY_COMMODITY_GROUP:
         status: confirmed_xlsx
         element_id: 446905

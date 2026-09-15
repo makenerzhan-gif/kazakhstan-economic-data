@@ -77,9 +77,14 @@ def parse_groups(content: bytes, groups: list[dict], ds: dict) -> dict[str, dict
     skipped: list[tuple] = []
     checked = 0
     by_prefix = [(p, g["code"]) for g in groups for p in g["prefixes"]]
-    for sheet_name in wb.sheetnames:
-        if sheet_name in ("Метаданные", "Показатель"):
-            continue
+    data_sheets = [s for s in wb.sheetnames if s not in ("Метаданные", "Показатель")]
+    if not data_sheets:
+        # Seen on the CI runner 2026-09-15: a 23 KB workbook with only the two description
+        # sheets and a per-region annual summary -- BNS was serving a stub while the 65 MB
+        # export was being regenerated. Stop loudly; the previous processed data stays.
+        _structural(ds, f"the workbook has no data sheets ({len(content) // 1024} KB, sheets {wb.sheetnames})",
+                    "one sheet per year ('2019', …) plus the current partial year", "only description sheets -- a stub served during regeneration? retry later")
+    for sheet_name in data_sheets:
         ws = wb[sheet_name]
         header_row = national_row = None
         sums: dict[str, dict[int, float]] = defaultdict(lambda: defaultdict(float))

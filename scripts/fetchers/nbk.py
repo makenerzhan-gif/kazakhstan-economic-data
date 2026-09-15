@@ -1280,6 +1280,14 @@ FDI_CODE = "Direct investment in reporting economy (net inflow)"
 FDI_DIRECTION = "Direct investment in Kazakhstan"
 
 
+# Fields of an NBK open-data row that are NOT classification dimensions and must never
+# disqualify a row in the "no other classification field set" checks: the value and its
+# date, and `row_id`, a technical row number the API added on 2026-09-15 (every row of
+# every form; the pages were otherwise byte-identical to 2026-09-09) -- it stopped 65
+# series in one run until it was listed here.
+NON_CLASSIFICATION_FIELDS = ("report_date", "amount", "row_id")
+
+
 def _fetch_nbk_form_paginated(form_id: str, indicator_id: str) -> list[dict]:
     """Shared full-pagination fetcher for any data.nationalbank.kz open-data
     form. Loops page=0,1,2,... until all totalRows are collected (verified
@@ -2142,7 +2150,7 @@ def _fetch_nbk_exact_row(form_id: str, match: dict, indicator_id: str, note: str
             if key not in row or norm(row[key]) != want:
                 return False
         for key, value in row.items():
-            if key in ("report_date", "amount") or key in match:
+            if key in NON_CLASSIFICATION_FIELDS or key in match:
                 continue
             if value not in (None, ""):
                 return False
@@ -3037,7 +3045,7 @@ def _bop_select(all_rows: list[dict], line: str, indicator_id: str) -> dict[str,
             if key not in row or _bop_norm(row[key]) != want:
                 return False
         for key, value in row.items():
-            if key in ("report_date", "amount") or key in match:
+            if key in NON_CLASSIFICATION_FIELDS or key in match:
                 continue
             if value not in (None, ""):
                 return False
