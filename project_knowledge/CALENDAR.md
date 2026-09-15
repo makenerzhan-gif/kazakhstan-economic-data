@@ -128,6 +128,9 @@
 | `io_tables_2023_summary` | Лист2 | 1–74 | satellite | 2025 (таблицы ЗВ за 2023 г.) | при выходе таблиц ЗВ за 2024 г. |
 | `fact_bns_calibration` | Факт_БНС | 1–130 | assumption | 2026-09-14 | пересчитываются при загрузке новых индексов |
 | `real_gva_zero_row` | Реал_ВДС_производ_регионы | 1435 | assumption | unknown | не требуется |
+| `ifo_zero_row` | ИФО_производ_регионы | 1435 | assumption | unknown | не требуется |
+| `deflators_zero_row` | Дефляторы_производ_регионы | 1435 | assumption | unknown | не требуется |
+| `ifo_electricity_subsections_2024` | ИФО_производ_регионы | 975, 998, 1000 (2024–2024) | review | unknown | решение автора: источник или удалить |
 | `derived_sheets_literal_numbers` | Вклад_в_ВВП_производ_регионы | 301 (2022–2023) | review | unknown | решение автора: вернуть формулы |
 | `derived_sheets_literal_numbers_share` | Доля_в_ВВП_производ_регионы | 301 (2022–2023) | review | unknown | решение автора |
 | `derived_sheets_literal_numbers_structure` | Структура_ВДС_производ_регионы | 301 (2022–2023) | review | unknown | решение автора |

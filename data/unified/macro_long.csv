@@ -14985,7 +14985,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-19,KZ,national,daily,EXCHANGE_RATE,489.3,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-02-20,KZ,national,daily,EXCHANGE_RATE,489.17,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-02-23,KZ,national,daily,EXCHANGE_RATE,494.66,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
-2026-02-24,KZ,national,irregular,ANNUAL_INFLATION,12.2,percent,nbk,2026-09-09,level,2026-09-09
 2026-02-24,KZ,national,daily,EXCHANGE_RATE,497.33,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-02-24,KZ,national,irregular,INFLATION_TARGET,5.0,percent,nbk,2026-09-09,level,2026-09-09
 2026-02-24,KZ,national,daily,TONIA,17.18,%,nbk,2026-09-09,level,2026-09-09
@@ -15087,7 +15086,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,daily,TONIA,17.97,%,nbk,2026-09-09,level,2026-09-09
 2026-03-02,KZ,national,daily,EXCHANGE_RATE,497.56,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-03-02,KZ,national,daily,TONIA,17.97,%,nbk,2026-09-09,level,2026-09-09
-2026-03-03,KZ,national,irregular,ANNUAL_INFLATION,11.7,percent,nbk,2026-09-09,level,2026-09-09
 2026-03-03,KZ,national,daily,EXCHANGE_RATE,502.6,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-03-03,KZ,national,daily,TONIA,17.51,%,nbk,2026-09-09,level,2026-09-09
 2026-03-04,KZ,national,daily,EXCHANGE_RATE,498.09,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
@@ -15344,7 +15342,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,monthly,WHOLESALE_TRADE_INDEX_MONTHLY,108.9,index (same month previous year = 100),bns,2026-09-09,level,2026-09-09
 2026-04-01,KZ,national,monthly,WHOLESALE_TRADE_MONTHLY,4223901433.0,thousand KZT,bns,2026-09-09,level,2026-09-09
 2026-04-01,KZ,national,quarterly,YOUTH_UNEMPLOYMENT_RATE,2.9,%,bns,2026-09-09,level,2026-09-09
-2026-04-02,KZ,national,irregular,ANNUAL_INFLATION,11.0,percent,nbk,2026-09-09,level,2026-09-09
 2026-04-02,KZ,national,daily,EXCHANGE_RATE,475.09,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-04-02,KZ,national,daily,TONIA,18.35,%,nbk,2026-09-09,level,2026-09-09
 2026-04-03,KZ,national,daily,EXCHANGE_RATE,472.31,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
@@ -15526,7 +15523,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-03,KZ,national,daily,TONIA,18.19,%,nbk,2026-09-09,level,2026-09-09
 2026-05-04,KZ,national,daily,EXCHANGE_RATE,462.91,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-05-04,KZ,national,daily,TONIA,18.19,%,nbk,2026-09-09,level,2026-09-09
-2026-05-05,KZ,national,irregular,ANNUAL_INFLATION,10.6,percent,nbk,2026-09-09,level,2026-09-09
 2026-05-05,KZ,national,daily,EXCHANGE_RATE,464.53,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-05-05,KZ,national,daily,TONIA,17.83,%,nbk,2026-09-09,level,2026-09-09
 2026-05-06,KZ,national,daily,EXCHANGE_RATE,465.01,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
@@ -15716,7 +15712,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,daily,TONIA,18.71,%,nbk,2026-09-09,level,2026-09-09
 2026-06-01,KZ,national,monthly,WHOLESALE_TRADE_INDEX_MONTHLY,101.2,index (same month previous year = 100),bns,2026-09-09,level,2026-09-09
 2026-06-01,KZ,national,monthly,WHOLESALE_TRADE_MONTHLY,4908733329.0,thousand KZT,bns,2026-09-09,level,2026-09-09
-2026-06-02,KZ,national,irregular,ANNUAL_INFLATION,10.4,percent,nbk,2026-09-09,level,2026-09-09
 2026-06-02,KZ,national,daily,EXCHANGE_RATE,488.96,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-06-02,KZ,national,daily,TONIA,18.47,%,nbk,2026-09-09,level,2026-09-09
 2026-06-03,KZ,national,daily,EXCHANGE_RATE,493.15,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
@@ -15945,7 +15940,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,daily,TONIA,16.24,%,nbk,2026-09-09,level,2026-09-09
 2026-07-01,KZ,national,monthly,WHOLESALE_TRADE_INDEX_MONTHLY,105.7,index (same month previous year = 100),bns,2026-09-09,level,2026-09-09
 2026-07-01,KZ,national,monthly,WHOLESALE_TRADE_MONTHLY,4661796602.0,thousand KZT,bns,2026-09-09,level,2026-09-09
-2026-07-02,KZ,national,irregular,ANNUAL_INFLATION,10.3,percent,nbk,2026-09-09,level,2026-09-09
 2026-07-02,KZ,national,daily,EXCHANGE_RATE,479.26,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-07-02,KZ,national,daily,TONIA,16.36,%,nbk,2026-09-09,level,2026-09-09
 2026-07-03,KZ,national,daily,EXCHANGE_RATE,474.47,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
@@ -16063,7 +16057,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-02,KZ,national,daily,TONIA,15.72,%,nbk,2026-09-09,level,2026-09-09
 2026-08-03,KZ,national,daily,EXCHANGE_RATE,473.59,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-08-03,KZ,national,daily,TONIA,15.72,%,nbk,2026-09-09,level,2026-09-09
-2026-08-04,KZ,national,irregular,ANNUAL_INFLATION,10.2,percent,nbk,2026-09-09,level,2026-09-09
 2026-08-04,KZ,national,daily,EXCHANGE_RATE,475.38,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-08-04,KZ,national,daily,TONIA,15.62,%,nbk,2026-09-09,level,2026-09-09
 2026-08-05,KZ,national,daily,EXCHANGE_RATE,471.98,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
@@ -16118,7 +16111,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-31,KZ,national,daily,TONIA,16.91,%,nbk,2026-09-09,level,2026-09-09
 2026-09-01,KZ,national,daily,EXCHANGE_RATE,462.31,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-09-01,KZ,national,daily,TONIA,16.27,%,nbk,2026-09-09,level,2026-09-09
-2026-09-02,KZ,national,irregular,ANNUAL_INFLATION,9.8,percent,nbk,2026-09-09,level,2026-09-09
 2026-09-02,KZ,national,daily,EXCHANGE_RATE,458.45,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09
 2026-09-02,KZ,national,daily,TONIA,16.12,%,nbk,2026-09-09,level,2026-09-09
 2026-09-03,KZ,national,daily,EXCHANGE_RATE,455.4,KZT per 1 USD,nbk,2026-09-09,level,2026-09-09

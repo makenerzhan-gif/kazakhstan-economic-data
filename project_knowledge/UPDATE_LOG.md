@@ -4310,3 +4310,12 @@ which also de-duplicates by content and which a history rewrite does not shrink 
 at all (LFS objects are only removed with the repository). A rewrite would change every
 commit hash, force every clone to be re-cloned and invalidate the hashes quoted in this
 log for no gain. Not done, and not recommended.
+
+## 2026-09-15 — ANNUAL_INFLATION retired; CPI_YOY (BNS) is the headline inflation series
+
+The author's decision on the dating finding above: the NBK's release-dated republication of
+the BNS index adds nothing to CPI_YOY, so it is retired — the indicator entry, the fetcher
+(`fetch_annual_inflation`) and the registration are removed, the sources.yaml endpoint is
+marked `retired` with its research notes kept, the processed file and metadata are deleted,
+the raw downloads stay. 430 scalar indicators remain. Year-on-year inflation = `CPI_YOY − 100`
+for the reference month.

@@ -2938,29 +2938,6 @@ def _fetch_indicators_field(field: str, indicator_id: str, note: str,
     return records, manifest
 
 
-def fetch_annual_inflation() -> tuple[list[dict], dict]:
-    """Annual (year-on-year) consumer inflation, percent, as published by NBK.
-
-    Event-dated. The source stamps this value on every calendar day, but it only
-    STEPS when a new CPI reading is released -- verified 2026-09-01: across the
-    186-day window it took 7 distinct values, changing on 2026-03-03, 04-02,
-    05-05, 06-02, 07-02 and 08-04, i.e. in the first days of each month. Storing
-    it daily would bury six real releases under 186 repeated rows, so only the
-    change points are kept, dated when the figure appeared.
-
-    This is the headline inflation measure the dataset previously lacked: the
-    existing CPI series carries only month-on-month percent change, from which a
-    year-on-year rate cannot be read directly.
-    """
-    return _fetch_indicators_field(
-        "annualInflation", "ANNUAL_INFLATION",
-        "Percent, year-on-year. Dated at the day the figure appeared on NBK's indicators "
-        "widget, which is the CPI release date -- not the month the reading refers to. "
-        "Event-dated: only the days the published value changed are stored. Accumulated "
-        "across runs because the source window rolls (~6 months).",
-        "irregular", True)
-
-
 def fetch_inflation_target() -> tuple[list[dict], dict]:
     """NBK's official inflation target, percent. Event-dated -- one point per
     change. Constant at 5.0 across the whole window observed on 2026-09-01, so

@@ -3959,7 +3959,7 @@ agencies:
           guessing whether to rescale old or new values, which MASTER TASK rules forbid.
           Declined; only RESERVES_IMPORT_COVER connected from this form.
       ANNUAL_INFLATION:
-        status: confirmed
+        status: retired   # 2026-09-15: by content the BNS CPI_YOY republished by the NBK, release-dated (equals CPI_YOY shifted one month back, 8/8); the author kept the BNS series
         download_url: "https://data.nationalbank.kz/api/v1/data/indicators"
         format: json
         notes: >
