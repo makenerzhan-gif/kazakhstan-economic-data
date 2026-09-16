@@ -11,11 +11,11 @@
   "geography": "Kazakhstan (national)",
   "methodology": "Million KZT, end of month. Outstanding MICROFINANCE-sector loans to BUSINESS borrowers, in TENGE.",
   "publication_date": null,
-  "last_update_date": "2026-09-15",
-  "download_date": "2026-09-15",
+  "last_update_date": "2026-09-16",
+  "download_date": "2026-09-16",
   "period_start": "2022-01-01",
-  "period_end": "2026-07-01",
+  "period_end": "2026-08-01",
   "next_update_date": null,
   "transformation": "level",
-  "revision_status": "original"
+  "revision_status": "revised"
 }

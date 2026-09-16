@@ -1,0 +1,3 @@
+{"indicator_id": "OIL_EXPORTS_VALUE", "period": "2026-04-01", "old_value": 2388372.17253, "new_value": 2501745.04824, "detected_date": "2026-09-16", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "OIL_EXPORTS_VALUE", "period": "2026-05-01", "old_value": 2765326.7075599995, "new_value": 2768427.89497, "detected_date": "2026-09-16", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "OIL_EXPORTS_VALUE", "period": "2026-06-01", "old_value": 5132327.9132199995, "new_value": 5169473.5938, "detected_date": "2026-09-16", "source": "bns", "reason": "not stated by source"}
