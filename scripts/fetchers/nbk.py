@@ -1293,6 +1293,9 @@ NON_CLASSIFICATION_FIELDS = ("report_date", "amount", "row_id")
 FORM_IGNORE_FIELDS = {"35": ("period",), "476": ("weight",)}
 
 
+_FORM_PAGES_CACHE: dict[str, tuple[list[dict], list[dict]]] = {}
+
+
 def _fetch_nbk_form_paginated(form_id: str, indicator_id: str) -> list[dict]:
     """Shared full-pagination fetcher for any data.nationalbank.kz open-data
     form. Loops page=0,1,2,... until all totalRows are collected (verified
@@ -1305,20 +1308,27 @@ def _fetch_nbk_form_paginated(form_id: str, indicator_id: str) -> list[dict]:
     StructuralChangeError themselves if nothing matches, since what
     "matching" means is form-specific.
     """
-    all_rows: list[dict] = []
-    raw_pages: list[dict] = []
-    page = 0
-    while True:
-        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
-                             params={"formId": form_id, "page": str(page), "pageSize": "500"},
-                             timeout=30)
-        resp.raise_for_status()
-        data = resp.json()
-        raw_pages.append(data)
-        all_rows.extend(data["rows"])
-        if len(all_rows) >= data["totalRows"]:
-            break
-        page += 1
+    # One form serves up to seven series; the pages are fetched once per process and the
+    # 21-page balance-of-payments form no longer costs 0.8 minutes per series (24 minutes
+    # of the 63-minute CI run of 2026-09-15 were NBK, most of it repeated form downloads).
+    if form_id not in _FORM_PAGES_CACHE:
+        pages: list[dict] = []
+        rows: list[dict] = []
+        page = 0
+        while True:
+            resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
+                                 params={"formId": form_id, "page": str(page), "pageSize": "500"},
+                                 timeout=30)
+            resp.raise_for_status()
+            data = resp.json()
+            pages.append(data)
+            rows.extend(data["rows"])
+            if len(rows) >= data["totalRows"]:
+                break
+            page += 1
+        _FORM_PAGES_CACHE[form_id] = (pages, rows)
+    raw_pages, all_rows = _FORM_PAGES_CACHE[form_id]
+    all_rows = list(all_rows)
 
     raw_content = json.dumps(raw_pages, ensure_ascii=False).encode("utf-8")
     today = date.today()

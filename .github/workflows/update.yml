@@ -15,6 +15,14 @@ on:
     - cron: "0 6 * * *"
   workflow_dispatch: {}
 
+# One run at a time. Two overlapping runs (the daily one and a manual re-run on
+# 2026-09-15) both edited the same dated manifests and report, and the later one's
+# rebase in "Commit and push" hit content conflicts and failed after a full 68-minute
+# pipeline. Queued runs start from the previous run's commit, so nothing to conflict.
+concurrency:
+  group: update-pipeline
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest

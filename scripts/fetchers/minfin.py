@@ -32,12 +32,20 @@ LISTING_URL = "https://www.gov.kz/api/v1/public/content-manager/documents"
 GOV_KZ_BASE = "https://www.gov.kz"
 
 
+_LISTING_CACHE: dict[tuple, list[dict]] = {}
+
+
 def _list_documents(**params) -> list[dict]:
-    resp = requests.get(LISTING_URL, headers=HEADERS,
-                         params={"sort-by": "created_date:DESC", "page": "1", "size": "100", **params},
-                         timeout=30)
-    resp.raise_for_status()
-    return resp.json()
+    """The document listing, once per process per parameter set: 77 indicators ask for the
+    same budget-direction listing, and from the CI runner every gov.kz round trip is slow."""
+    key = tuple(sorted(params.items()))
+    if key not in _LISTING_CACHE:
+        resp = requests.get(LISTING_URL, headers=HEADERS,
+                             params={"sort-by": "created_date:DESC", "page": "1", "size": "100", **params},
+                             timeout=30)
+        resp.raise_for_status()
+        _LISTING_CACHE[key] = resp.json()
+    return _LISTING_CACHE[key]
 
 
 _DOWNLOAD_CACHE: dict[str, bytes] = {}
