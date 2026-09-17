@@ -11,10 +11,10 @@
   "geography": "Kazakhstan (national)",
   "methodology": "Official NBK USD/KZT rate. The endpoint serves one date per request and its window rolls forward (nothing before early May 2021 was reachable on 2026-09-01), so this series is accumulated across runs: each run fetches only the dates still missing plus the last two weeks, then merges with what was already processed. Weekends are not requested. The series starts 2021-05-10 rather than at the window edge because 07.05.2021, a public holiday, is served with a substituted rate instead of a no-data response.",
   "publication_date": null,
-  "last_update_date": "2026-09-16",
-  "download_date": "2026-09-16",
+  "last_update_date": "2026-09-17",
+  "download_date": "2026-09-17",
   "period_start": "2021-05-10",
-  "period_end": "2026-09-16",
+  "period_end": "2026-09-17",
   "next_update_date": null,
   "transformation": "level",
   "revision_status": "original"

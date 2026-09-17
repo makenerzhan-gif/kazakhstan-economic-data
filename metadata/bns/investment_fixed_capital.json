@@ -11,10 +11,10 @@
   "geography": "Kazakhstan (national)",
   "methodology": "Thousand KZT, YEAR-TO-DATE CUMULATIVE (not a monthly flow) -- the sheet reports against the same PERIOD of the previous year. Replaces the annual INVESTMENT series, which stops at 2022. Accumulated across runs because the source keeps only a handful of editions online. 11.46 trillion KZT for January-July 2026, about 19.6 trillion a year.",
   "publication_date": null,
-  "last_update_date": "2026-09-16",
-  "download_date": "2026-09-16",
+  "last_update_date": "2026-09-17",
+  "download_date": "2026-09-17",
   "period_start": "2026-03-01",
-  "period_end": "2026-07-01",
+  "period_end": "2026-08-01",
   "next_update_date": null,
   "transformation": "level",
   "revision_status": "original"

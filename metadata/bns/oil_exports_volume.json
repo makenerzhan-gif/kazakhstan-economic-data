@@ -9,13 +9,13 @@
   "unit": "tonnes",
   "currency": "",
   "geography": "Kazakhstan (national)",
-  "methodology": "Derived from the item-level dataset EXPORTS_VOLUME_BY_COMMODITY_GROUP, item CRUDE_OIL. Same groups as EXPORTS_VALUE_BY_COMMODITY_GROUP. Natural gas (271121) is published in cubic metres only — its tonnes are zero here. Raw file: bns_exports_2026-09-16.xlsx.",
+  "methodology": "Derived from the item-level dataset EXPORTS_VOLUME_BY_COMMODITY_GROUP, item CRUDE_OIL. Same groups as EXPORTS_VALUE_BY_COMMODITY_GROUP. Natural gas (271121) is published in cubic metres only — its tonnes are zero here. Raw file: bns_exports_2026-09-17.xlsx.",
   "publication_date": null,
-  "last_update_date": "2026-09-16",
-  "download_date": "2026-09-16",
+  "last_update_date": "2026-09-17",
+  "download_date": "2026-09-17",
   "period_start": "2015-01-01",
   "period_end": "2026-07-01",
   "next_update_date": null,
   "transformation": "level",
-  "revision_status": "revised"
+  "revision_status": "original"
 }
