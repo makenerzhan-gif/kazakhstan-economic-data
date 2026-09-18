@@ -1,0 +1,19 @@
+{
+  "downloaded_at": "2026-09-18T10:12:07.046592",
+  "raw_file": "bns_labor_productivity_2026-08-31.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "4023003",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "4023003",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "7",
+    "p_term_id": "741880",
+    "p_terms": "741880",
+    "p_dicIds": "67",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}

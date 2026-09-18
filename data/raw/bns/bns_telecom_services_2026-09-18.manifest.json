@@ -1,0 +1,19 @@
+{
+  "downloaded_at": "2026-09-18T10:11:52.602089",
+  "raw_file": "bns_telecom_services_2026-08-30.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "702379",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "702379",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "1",
+    "p_term_id": "741880",
+    "p_terms": "741880,741907,741906,18064429",
+    "p_dicIds": "68,59,230,1693",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}
