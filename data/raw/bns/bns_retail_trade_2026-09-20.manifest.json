@@ -1,0 +1,19 @@
+{
+  "downloaded_at": "2026-09-20T10:14:45.189299",
+  "raw_file": "bns_retail_trade_2026-08-30.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "702038",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "702038",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "1",
+    "p_term_id": "741880",
+    "p_terms": "741880,741907,741894",
+    "p_dicIds": "67,59,676",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}
