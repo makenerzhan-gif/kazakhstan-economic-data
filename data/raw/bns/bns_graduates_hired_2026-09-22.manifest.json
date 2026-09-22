@@ -1,0 +1,19 @@
+{
+  "downloaded_at": "2026-09-22T10:32:30.288117",
+  "raw_file": "bns_graduates_hired_2026-09-01.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "703000",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "703000",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "23",
+    "p_term_id": "741880",
+    "p_terms": "741880,741885,3629946,741935",
+    "p_dicIds": "68,859,2813,576",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}

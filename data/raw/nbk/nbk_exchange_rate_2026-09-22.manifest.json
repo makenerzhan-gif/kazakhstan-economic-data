@@ -1,0 +1,9 @@
+{
+  "downloaded_at": "2026-09-22T10:39:16.680736",
+  "source_url": "https://nationalbank.kz/rss/get_rates.cfm",
+  "earliest_available": "2021-05-10",
+  "already_had": 1383,
+  "requested": 33,
+  "newly_parsed": 11,
+  "total_after_merge": 1384
+}
