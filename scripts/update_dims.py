@@ -58,7 +58,7 @@ def run(run_logger: pipeline_logging.RunLogger, only: set[str] | None = None) ->
                 action="fetch", status="error", errors=[str(exc)]))
             continue
 
-        result = dims.validate(records, ds_id, ds["frequency"])
+        result = dims.validate(records, ds_id, ds["frequency"], cumulation=ds.get("cumulation"))
         warnings = list(manifest_info.get("warnings", [])) + result.warnings
         if not result.ok:
             run_logger.log(pipeline_logging.LogEntry(
@@ -69,7 +69,7 @@ def run(run_logger: pipeline_logging.RunLogger, only: set[str] | None = None) ->
         revs = dims.detect_revisions(ds_id, agency, dims.load_processed(ds_id), records, today)
         if revs:
             revisions.append_revisions(revs)
-        dims.write_processed(ds_id, records)
+        dims.write_processed(ds_id, records, ds.get("transformation", "level"))
         metadata.DatasetMetadata(
             source=agency,
             source_url=manifest_info.get("source_url", ""),
@@ -88,7 +88,7 @@ def run(run_logger: pipeline_logging.RunLogger, only: set[str] | None = None) ->
             period_start=min(r["date"] for r in records),
             period_end=max(r["date"] for r in records),
             next_update_date=manifest_info.get("next_update") or ds.get("next_update"),
-            transformation=manifest_info.get("transformation", "level"),
+            transformation=manifest_info.get("transformation") or ds.get("transformation") or "level",
             revision_status="revised" if revs else "original",
         ).write()
         run_logger.log(pipeline_logging.LogEntry(

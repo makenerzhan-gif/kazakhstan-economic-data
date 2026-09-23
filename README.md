@@ -110,7 +110,7 @@ volume indices, population by region and settlement type, the labour market,
 fixed capital investment), physical output by product, production indices by
 activity and grain by region — have one value per (date, region, variable,
 item), so they live in a parallel layer with the same rules: `config/dims.yaml`
-(47 datasets: 40 from 36 BNS dynamic tables read from their xlsx or legacy xls
+(61 datasets: 40 annual and 14 quarterly from 36 BNS dynamic tables read from their xlsx or legacy xls
 export, two from the BNS export workbook by commodity group, four from the World
 Bank's Pink Sheet and Commodity Markets Outlook, one from the U.S. EIA Short-Term
 Energy Outlook), `scripts/update_dims.py` (fetcher chosen by each dataset's
@@ -131,19 +131,38 @@ that also list districts or products outside the dictionary say `strict: false`
 and skip them). Forecast observations (the CMO's `2026f`/`2027f` columns, STEO
 months after the release's last historical month) carry `transformation`
 `forecast` so they are never mistaken for history.
+
+Fourteen of the BNS datasets are quarterly siblings of annual ones (id suffix
+`_QUARTERLY`; `periods: quarterly_ytd` or `quarterly_subcolumns` in
+`config/dims.yaml`): the year-to-date columns and rows the same tables carry
+beside the annual ones («1 квартал», «1 полугодие», «9 месяцев», «год») — GDP
+by production (nominal, volume index, deflator; by section and by industry
+division), GDP by expenditure (nominal, volume index, deflator), the income
+account by section (compensation, other taxes, consumption of fixed capital,
+operating surplus), the gross regional product by section and region and its
+volume index by region — and the discrete «I–IV квартал» sub-columns of
+employment by section. A quarterly observation is dated the first day of the
+last quarter it covers (2024-07-01 for January–September 2024), as every
+quarterly series in `macro_long.csv` is; Q4 is the year and equals the annual
+sibling's value. The flow tables say `cumulation: year_to_date` and carry the
+same `transformation` text as `GDP_NOMINAL`; the indices say in their unit
+that they are year-to-date periods in % of the same period of the previous
+year. Nothing is decumulated to discrete quarters.
 `update_all.py` runs it after the agency updaters. The World Bank also feeds one
 scalar series, `OIL_PRICE_BRENT` (monthly Brent from the Pink Sheet, `scripts/update_wb.py`),
 beside the IMF's `OIL_PRICE` (APSP average).
 
 ### Derived scalar indicators
 
-Eleven scalar series are national totals that the item-level layer already
+Twelve scalar series are national totals that the item-level layer already
 carries, so they are written from it rather than fetched a second time
 (`derived_from` in `config/indicators.yaml`, `scripts/update_derived.py`, run
 after `update_dims.py`): `EXPORTS`, `OIL_EXPORTS_VALUE`, `OIL_EXPORTS_VOLUME`
 (the export workbook, read once), `IND_PROD` and its three sections (table
 5792 instead of the cube that stopped at 2023), `INVESTMENT`, `POPULATION_BNS`,
-`EMPLOYED_TOTAL`, `ELECTRICITY_PRODUCTION`. They keep their ids, units and
+`EMPLOYED_TOTAL`, `ELECTRICITY_PRODUCTION`, and `GDP_NOMINAL` (the «ВВП» row of
+`GVA_NOMINAL_BY_SECTION_QUARTERLY` — the xlsx export of element 4439 instead
+of its JSON cube). They keep their ids, units and
 place in `macro_long.csv`/`macro_wide.csv`; `scale` only converts units, the
 values are the published ones. Two more rules stop the same bytes being
 fetched and stored again and again: every agency's `_download` is cached per

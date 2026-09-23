@@ -64,6 +64,11 @@ agencies:
       # the Excel GDP model was hand-loaded from that day). The JSON cube export of these
       # elements was checked and rejected for this purpose: 4439 and 4435-4437 carry only
       # region/national totals there, 4453 stops at 2024, 4446 and 4448 return 404.
+      # 2026-09-23: the year-to-date columns/rows of 4439-4441, 4435-4437, 4452-4455, 5926, 5927,
+      # 5931 and the I-IV квартал sub-columns of 5831 are read from these same files by the
+      # *_QUARTERLY datasets in config/dims.yaml (period labels verified that day: «1 квартал
+      # 2010г.», «I квартал     2012 года», «1 полугодие 2026г.*», «9 месяцев 2019 года**»,
+      # «9 месяц 2012г.», «2025 год7)8)»). 450904 carries annual rows only.
       GVA_NOMINAL_BY_SECTION:
         status: confirmed_xlsx
         element_id: 4439
@@ -208,7 +213,7 @@ agencies:
       GRAIN_YIELD_BY_REGION: {status: confirmed_xlsx, element_id: 8166, download_url: "https://stat.gov.kz/api/iblock/element/8166/file/ru/", format: xls_table, notes: "As 8160, centners per hectare."}
       # ---- scalar indicators ----
       GDP_NOMINAL:
-        status: confirmed_json
+        status: derived   # 2026-09-23: was confirmed_json; the series is now written from GVA_NOMINAL_BY_SECTION_QUARTERLY[GDP] x 1e6 (scripts/update_derived.py), the xlsx export of the same element 4439 -- equal to this cube on all 66 quarters; the trail below stays
         page_url: "https://stat.gov.kz/ru/open-data/national-accounts/474289/"
         element_id: 4439
         download_url: "https://stat.gov.kz/api/iblock/element/4439/json/file/ru/"

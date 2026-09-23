@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/5926/file/ru/",
+  "dataset_id": "5926",
+  "indicator_id": "GRP_VOLUME_INDEX_BY_REGION_QUARTERLY",
+  "indicator_name": "Gross regional product volume index, by region, year-to-date",
+  "description": "Индекс физического объёма валового регионального продукта, нарастающим итогом с начала года",
+  "frequency": "quarterly",
+  "unit": "% of the same period of the previous year, year-to-date",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Year-to-date columns «I квартал YYYY года», «I полугодие YYYY года», «9 месяцев YYYY года», «YYYY год»; they begin with «9 месяцев 2011 года» (2001–2010 are annual only, in GRP_VOLUME_INDEX_BY_REGION), hence years_from 2011; through 2026 Q1 on 2026-09-23.",
+  "publication_date": "2026-08-24",
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2011-07-01",
+  "period_end": "2026-01-01",
+  "next_update_date": "2026-10-12",
+  "transformation": "as published: the year-to-date period (January-March, January-June, January-September, the year) in % of the same period of the previous year -- not converted to discrete quarters",
+  "revision_status": "original"
+}

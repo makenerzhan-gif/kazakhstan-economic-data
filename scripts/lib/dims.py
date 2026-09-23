@@ -166,10 +166,13 @@ def _key(r: dict) -> tuple[str, str, str]:
 
 # ---------------------------------------------------------------- validation and revisions
 
-def validate(records: list[dict], dataset_id: str, frequency: str) -> validation.ValidationResult:
+def validate(records: list[dict], dataset_id: str, frequency: str,
+             cumulation: str | None = None) -> validation.ValidationResult:
     """The scalar checks, applied per (region, item): types on every row, duplicates on
     (date, region, item), frequency gaps and outliers within each series. Warnings are
-    capped per dataset — a regional breakdown has hundreds of series."""
+    capped per dataset — a regional breakdown has hundreds of series. `cumulation`
+    ("year_to_date" for the quarterly flow tables) makes the outlier check compare
+    own-period contributions, as it does for the scalar year-to-date series."""
     result = validation.ValidationResult(indicator_id=dataset_id)
     if not records:
         result.add_error("No records to validate (empty dataset).")
@@ -195,7 +198,7 @@ def validate(records: list[dict], dataset_id: str, frequency: str) -> validation
     for (region, code), rows in by_series.items():
         tag = code if region == NATIONAL else f"{code}@{region}"
         for sub in (validation.validate_frequency(rows, dataset_id, frequency),
-                    validation.validate_outliers(rows, dataset_id)):
+                    validation.validate_outliers(rows, dataset_id, cumulation=cumulation)):
             warnings.extend(f"[{tag}] {w}" for w in sub.warnings)
     if len(warnings) > MAX_WARNINGS:
         warnings = warnings[:MAX_WARNINGS] + [f"... {len(warnings) - MAX_WARNINGS} more warnings not listed"]

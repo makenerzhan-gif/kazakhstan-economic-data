@@ -10,20 +10,32 @@ periods_across   one row per label, periods across the columns. The label is an
                  item (4439/4440/4441, 4452–4455, 4435–4437; sheet headers such as
                  "1 квартал 2024г.", "2024 год", " 2025 год7)8)") or a region
                  (5926, 5546, 5549, 102791–102800; headers "2024 год" or plain
-                 "2024" / 2024.0). Quarterly columns are year-to-date and skipped.
+                 "2024" / 2024.0). The annual columns are taken; a dataset that
+                 says `periods: quarterly_ytd` takes the year-to-date columns
+                 instead (see period_of below).
 region_blocks    one block per region introduced by a row with the КАТО code in
                  column A and the region name in column B, then one row per period
                  inside the block, one column per item. Item codes sit on the row
                  under the names (5931: B, 05 … 33, D, E) or come from the names
                  through the dictionary (5927 sections + ВРП + ЧН, 450904 sections).
+                 The annual rows are taken, or the year-to-date rows under
+                 `periods: quarterly_ytd` (5931, 5927; 450904 has none).
 year_subcolumns  one header cell per year spanning several sub-columns; sub_offset
                  picks the sub-column. Rows are items (4448 total/illegal, 4446 four
                  ownership columns, 5547 value/% pairs, 5831 five quarterly columns
                  with "год" last) or regions (102790, 443430/435/438: всего/мужчины/
-                 женщины, district rows present and ignored).
+                 женщины, district rows present and ignored). Under
+                 `periods: quarterly_subcolumns` the four «I–IV квартал» sub-columns
+                 are read as discrete quarters (5831).
 group_blocks     6576: group label rows («Все население», «Мужчины», «Городское
                  население» …) each followed by the country row and one row per
                  region; the item is the group (ALL, URBAN, RURAL, ALL_MEN …).
+
+Dating: an annual observation is 31 December of its year; a quarterly one is the
+first day of the last quarter it covers (2024-07-01 for January–September 2024,
+2024-10-01 for the year), the period-start convention lib/periods.py keeps for
+every quarterly series in this repository. `years_from` drops the columns or
+rows of earlier years (5926's quarterly columns begin in 2011).
 
 Every data row must resolve to an item (or a region) through its dictionary; an
 unresolved label is reported as a structural change and stops that dataset — a
@@ -49,6 +61,41 @@ from fetchers import bns  # noqa: E402
 YEAR_IN_LABEL = re.compile(r"^\s*(\d{4})\s*год")
 FOOTNOTE_ROW = re.compile(r"^\s*(\d\)|\*)")
 MISSING = {"", "-", "–", "—", "…", "...", "..", "x", "х"}
+
+# Sub-annual periods as the national-accounts tables label them (every one of them is
+# YEAR-TO-DATE: January–March, January–June, January–September, the year). Seen on the
+# live files 2026-09-23: 4439–4441, 4435–4437 write "1 квартал 2010г." / "1 полугодие
+# 2026г.*" / "9 месяцев 2010г." (once "9 месяц 2012г."); 4452–4455 write "1 квартал 2010
+# года" and footnote marks ("1 квартал 2024 года 2)"); 5926, 5927 and 5931 write the
+# quarter in Roman numerals, "I квартал     2012 года", "I полугодие 2018 года".
+# Matched after whitespace is collapsed and the label lower-cased; the Roman I may be
+# a Latin i or a Cyrillic і.
+_QUARTER_LABELS = (
+    (re.compile(r"^(?:1|i|і)\s*квартал\s*(\d{4})"), 1),
+    (re.compile(r"^(?:1|i|і)\s*полугодие\s*(\d{4})"), 2),
+    (re.compile(r"^9\s*месяц(?:ев)?\s*(\d{4})"), 3),
+    (re.compile(r"^(\d{4})\s*год"), 4),
+)
+ROMAN_QUARTERS = {"i": 1, "ii": 2, "iii": 3, "iv": 4, "і": 1, "іі": 2, "ііі": 3, "іv": 4}
+QUARTER_START_MONTH = {1: "01", 2: "04", 3: "07", 4: "10"}
+
+
+def period_of(label) -> tuple[int, int] | None:
+    """(year, quarter) for a year-to-date period label — quarter 1–4 = January–March …
+    January–December; None for anything else (a region name, an item, a footnote)."""
+    s = re.sub(r"\s+", " ", str(label or "")).strip().lower()
+    for rx, q in _QUARTER_LABELS:
+        m = rx.match(s)
+        if m:
+            return int(m.group(1)), q
+    return None
+
+
+def quarter_of(label) -> int | None:
+    """1–4 for a bare quarter label («I квартал» … «IV квартал», 5831's sub-column row),
+    None for anything else («год», an empty cell)."""
+    m = re.match(r"^([ivі]+)\s*квартал", re.sub(r"\s+", " ", str(label or "")).strip().lower())
+    return ROMAN_QUARTERS.get(m.group(1)) if m else None
 
 
 def _to_float(v) -> float | None:
@@ -128,8 +175,32 @@ def _annual_columns(row: list, year_regex: re.Pattern) -> dict[int, int]:
     return cols
 
 
+def _from_year(cols: dict, ds: dict) -> dict:
+    """Drop the periods before the dataset's `years_from` (key = year or (year, quarter))."""
+    years_from = ds.get("years_from")
+    if not years_from:
+        return cols
+    return {k: j for k, j in cols.items() if (k[0] if isinstance(k, tuple) else k) >= years_from}
+
+
+def _period_columns(row: list, ds: dict, year_regex: re.Pattern) -> dict:
+    """{key: column index} for the header cells that name a period: key = year for the
+    annual columns (the default), (year, quarter) for every year-to-date column when the
+    dataset says `periods: quarterly_ytd`. The first column of a repeated period wins."""
+    if ds.get("periods") != "quarterly_ytd":
+        return _from_year(_annual_columns(row, year_regex), ds)
+    cols = {}
+    for j, cell in enumerate(row):
+        key = period_of(cell) if cell is not None else None
+        if key is not None and key not in cols:
+            cols[key] = j
+    return _from_year(cols, ds)
+
+
 def _header_row(grid: list[list], year_regex: re.Pattern, ds: dict) -> int:
-    i = next((i for i, row in enumerate(grid) if len(_annual_columns(row, year_regex)) >= 2), None)
+    """The first row with at least two period cells (annual ones, or year-to-date ones under
+    `periods: quarterly_ytd`)."""
+    i = next((i for i, row in enumerate(grid) if len(_period_columns(row, ds, year_regex)) >= 2), None)
     if i is None:
         _structural(ds, "no header row with at least two year cells", "a row of period labels", grid[:6])
     return i
@@ -174,8 +245,15 @@ def _unmatched(ds: dict, unmatched: list) -> None:
                     else f"every data label in dictionaries/{ds['dictionary']}.csv", unmatched)
 
 
-def _rec(year: int, region: str, code: str, name: str, value: float) -> dict:
-    return {"date": f"{year}-12-31", "region": region, "item_code": code, "item_name": name, "value": value}
+def _rec(key, region: str, code: str, name: str, value: float) -> dict:
+    """One observation. key = year dates it 31 December; key = (year, quarter) dates it the
+    first day of the quarter — 2024-07-01 for January–September 2024 (see the module docstring)."""
+    if isinstance(key, tuple):
+        year, quarter = key
+        date = f"{year}-{QUARTER_START_MONTH[quarter]}-01"
+    else:
+        date = f"{key}-12-31"
+    return {"date": date, "region": region, "item_code": code, "item_name": name, "value": value}
 
 
 # ---------------------------------------------------------------- parsers
@@ -183,20 +261,20 @@ def _rec(year: int, region: str, code: str, name: str, value: float) -> dict:
 def parse_periods_across(grid: list[list], dictionary: list[dict] | None, label_col: int, ds: dict,
                          year_regex: re.Pattern = YEAR_IN_LABEL) -> list[dict]:
     header_i = _header_row(grid, year_regex, ds)
-    year_cols = _annual_columns(grid[header_i], year_regex)
+    cols = _period_columns(grid[header_i], ds, year_regex)
     records, unmatched = [], []
     for row in grid[header_i + 1:]:
         label = row[label_col] if label_col < len(row) else None
         if label is None or not str(label).strip() or FOOTNOTE_ROW.match(str(label)):
             continue
-        values = {y: _to_float(row[c]) for y, c in year_cols.items() if c < len(row)}
+        values = {k: _to_float(row[c]) for k, c in cols.items() if c < len(row)}
         if all(v is None for v in values.values()):
             continue                                    # a heading or a footnote, not data
         key = _row_key(label, ds, dictionary, unmatched, row)
         if key is None:
             continue
         region, code, name = key
-        records += [_rec(y, region, code, name, v) for y, v in values.items() if v is not None]
+        records += [_rec(k, region, code, name, v) for k, v in values.items() if v is not None]
     _unmatched(ds, unmatched)
     return records
 
@@ -229,27 +307,41 @@ def parse_year_subcolumns(grid: list[list], dictionary: list[dict] | None, label
                           year_regex: re.Pattern = YEAR_IN_LABEL) -> list[dict]:
     header_i = _header_row(grid, year_regex, ds)
     header = grid[header_i]
-    year_cols = {}
-    for y, c in _annual_columns(header, year_regex).items():
-        target = c + sub_offset
-        # A year with fewer sub-columns than the others (5547: 2003 has no "%" column)
-        # would otherwise read the next year's first cell as its own.
-        if sub_offset and target < len(header) and header[target] is not None and year_regex.search(str(header[target])):
-            continue
-        year_cols[y] = target
+    cols: dict = {}
+    if ds.get("periods") == "quarterly_subcolumns":
+        # 5831: under every year cell the next row reads «I квартал», «II квартал», «III квартал»,
+        # «IV квартал», «год». The four quarter sub-columns are discrete quarters, not year-to-date;
+        # a year whose sub-columns are labelled otherwise is a structural change, not a guess.
+        below = grid[header_i + 1] if header_i + 1 < len(grid) else []
+        for y, c in _annual_columns(header, year_regex).items():
+            for q in (1, 2, 3, 4):
+                j = c + q - 1
+                if (quarter_of(below[j]) if j < len(below) else None) != q:
+                    _structural(ds, f"sub-column {q} under {y} is not «{('I', 'II', 'III', 'IV')[q - 1]} квартал»",
+                                "«I квартал», «II квартал», «III квартал», «IV квартал», «год» under every year", below[c:c + 5])
+                cols[(y, q)] = j
+    else:
+        for y, c in _annual_columns(header, year_regex).items():
+            target = c + sub_offset
+            # A year with fewer sub-columns than the others (5547: 2003 has no "%" column)
+            # would otherwise read the next year's first cell as its own.
+            if sub_offset and target < len(header) and header[target] is not None and year_regex.search(str(header[target])):
+                continue
+            cols[y] = target
+    cols = _from_year(cols, ds)
     records, unmatched = [], []
     for row in grid[header_i + 1:]:
         label = row[label_col] if label_col < len(row) else None
         if label is None or not str(label).strip() or FOOTNOTE_ROW.match(str(label)):
             continue
-        values = {y: _to_float(row[c]) for y, c in year_cols.items() if c < len(row)}
+        values = {k: _to_float(row[c]) for k, c in cols.items() if c < len(row)}
         if all(v is None for v in values.values()):
             continue
         key = _row_key(label, ds, dictionary, unmatched)
         if key is None:
             continue
         region, code, name = key
-        records += [_rec(y, region, code, name, v) for y, v in values.items() if v is not None]
+        records += [_rec(k, region, code, name, v) for k, v in values.items() if v is not None]
     _unmatched(ds, unmatched)
     return records
 
@@ -284,6 +376,8 @@ def parse_region_blocks(grid: list[list], ds: dict, dictionary: list[dict] | Non
     if unmatched:
         _structural(ds, "item columns whose name matches no dictionary entry", f"every column name in dictionaries/{ds['dictionary']}.csv", unmatched)
     want_all = ds.get("regions", "national") == "all"
+    quarterly = ds.get("periods") == "quarterly_ytd"
+    years_from = ds.get("years_from") or 0
     records, region, bad_regions = [], None, []
     for row in grid[head_i + 1:]:
         if len(row) < 2:
@@ -300,14 +394,18 @@ def parse_region_blocks(grid: list[list], ds: dict, dictionary: list[dict] | Non
             continue
         if region is None or not label:
             continue
-        m = year_regex.search(label)
-        if not m:
-            continue                                     # quarterly / year-to-date row
-        year = int(m.group(1))
+        if quarterly:
+            key = period_of(label)                       # every period row: quarter, half-year, nine months, year
+            year = key[0] if key else None
+        else:
+            m = year_regex.search(label)
+            key = year = int(m.group(1)) if m else None  # the annual row only; the year-to-date rows are skipped
+        if key is None or year < years_from:
+            continue
         for j, (code, name) in items.items():
             v = _to_float(row[j]) if j < len(row) else None
             if v is not None:
-                records.append(_rec(year, region, code, name, v))
+                records.append(_rec(key, region, code, name, v))
     if bad_regions and ds.get("strict", True):
         _structural(ds, "region blocks whose name matches no dictionary entry", "every block name in dictionaries/regions.csv", bad_regions)
     return records

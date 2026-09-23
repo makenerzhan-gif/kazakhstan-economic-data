@@ -34,7 +34,8 @@ def test_every_derived_indicator_points_at_a_real_dataset_and_has_no_fetcher_of_
     dims_ids = set(update_dims.DATASETS)
     derived = update_derived.derived_indicators()
     assert {i["id"] for i in derived} == {"IND_PROD", "IND_PROD_MINING", "IND_PROD_MANUFACTURING", "IND_PROD_ELECTRICITY", "INVESTMENT",
-                                          "EXPORTS", "OIL_EXPORTS_VALUE", "OIL_EXPORTS_VOLUME", "POPULATION_BNS", "EMPLOYED_TOTAL", "ELECTRICITY_PRODUCTION"}
+                                          "EXPORTS", "OIL_EXPORTS_VALUE", "OIL_EXPORTS_VOLUME", "POPULATION_BNS", "EMPLOYED_TOTAL", "ELECTRICITY_PRODUCTION",
+                                          "GDP_NOMINAL"}
     for i in derived:
         spec = i["derived_from"]
         assert spec["dataset"] in dims_ids, i["id"]

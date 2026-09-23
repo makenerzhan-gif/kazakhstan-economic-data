@@ -5,7 +5,7 @@
 A national total that the item-level layer already carries — the export workbook's
 national row, the industrial production index of section B, the average population —
 used to be fetched a second time by its own scalar fetcher from the same or a sibling
-BNS table. Those eleven series are now written from data/processed/dims/<dataset>.csv:
+BNS table. Those twelve series are now written from data/processed/dims/<dataset>.csv:
 one download, one parse, one raw copy, and the scalar keeps its id, unit and place in
 macro_long.csv / macro_wide.csv. The values are the published ones (the item-level
 parsers keep the sum-against-total proofs); `scale` only converts units (thousand
@@ -22,6 +22,7 @@ import csv
 import sys
 import yaml
 from datetime import date, datetime
+from decimal import Decimal
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -39,14 +40,16 @@ def derive(ind: dict, dims_records: list[dict]) -> list[dict]:
     """The scalar records for one indicator from its dataset's processed rows."""
     spec = ind["derived_from"]
     region = spec.get("region", dims.NATIONAL)
-    scale = float(spec.get("scale", 1.0))
+    # Decimal, not float: 16804418.1 * 1e6 in floats is 16804418100000.002, and that noise
+    # was being logged as a "revision" of GDP_NOMINAL and stored in ELECTRICITY_PRODUCTION.
+    scale = Decimal(str(spec.get("scale", 1)))
     out = []
     for r in dims_records:
         if r["item_code"] != spec["item"] or (r.get("region") or dims.NATIONAL) != region:
             continue
         if r.get("value") in (None, ""):
             continue
-        out.append({"date": r["date"], "value": float(r["value"]) * scale, "transformation": r.get("transformation") or "level"})
+        out.append({"date": r["date"], "value": float(Decimal(str(r["value"])) * scale), "transformation": r.get("transformation") or "level"})
     out.sort(key=lambda r: r["date"])
     return out
 
@@ -96,7 +99,8 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
         revs = revisions.detect_revisions(indicator_id, agency, _load_old_processed(agency, indicator_id), records, today)
         if revs:
             revisions.append_revisions(revs)
-        processed_store.write_processed(agency, indicator_id, records, transformation="level", frequency=ind["frequency"])
+        transformation = records[0].get("transformation") or "level"   # the source dataset's, e.g. year-to-date cumulative for GDP_NOMINAL
+        processed_store.write_processed(agency, indicator_id, records, transformation=transformation, frequency=ind["frequency"])
 
         src_meta = metadata.load(agency, dataset) or {}
         metadata.DatasetMetadata(
@@ -119,7 +123,7 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
             period_start=records[0]["date"] if records else None,
             period_end=records[-1]["date"] if records else None,
             next_update_date=src_meta.get("next_update_date"),
-            transformation="level",
+            transformation=transformation,
             revision_status="revised" if revs else "original",
         ).write()
         run_logger.log(pipeline_logging.LogEntry(timestamp=datetime.now().isoformat(), source=agency, dataset=indicator_id,

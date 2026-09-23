@@ -167,53 +167,6 @@ def fetch_unemployment() -> tuple[list[dict], dict]:
     return records, manifest
 
 
-def fetch_gdp_nominal() -> tuple[list[dict], dict]:
-    """Nominal GDP, national, production method -- published as YEAR-TO-DATE
-    CUMULATIVE totals at each quarter-end (Jan-Mar, Jan-Jun, Jan-Sep, Jan-Dec), not
-    as discrete quarterly increments. We store it exactly as published (cumulative);
-    turning it into non-cumulative quarterly GDP would require a decumulation
-    transformation not yet implemented -- flagged in metadata rather than silently done.
-
-    Verified live 2026-08-30: file is a JSON list of 22 per-region cube slices, each
-    with a single-element termNames (just the region name). Confirmed a
-    ['РЕСПУБЛИКА КАЗАХСТАН'] entry exists with 66 periods. Values are in KZT (whole tenge).
-    """
-    element_id = 4439
-    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/json/file/ru/"
-    content = _download(url)
-    _save_raw("GDP_NOMINAL", content, "json", {"source_url": url, "element_id": element_id})
-
-    import json
-    data = json.loads(content)
-
-    match = next((entry for entry in data if entry.get("termNames") == ["РЕСПУБЛИКА КАЗАХСТАН"]), None)
-    if match is None:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                "STRUCTURAL CHANGE DETECTED in bns/GDP_NOMINAL",
-                "WHAT CHANGED: no cube slice matched the expected national-total combo",
-                "EXPECTED termNames: ['РЕСПУБЛИКА КАЗАХСТАН']",
-                "ACTUAL: no matching entry in the downloaded file",
-                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
-            ])
-        )
-
-    records = []
-    for p in match["periods"]:
-        try:
-            records.append({"date": _dd_mm_yyyy_to_iso(p["date"]), "value": float(p["value"])})
-        except (ValueError, KeyError):
-            continue
-    records.sort(key=lambda r: r["date"])
-    manifest = {
-        "frequency": "quarterly",
-        "source_url": url,
-        "dataset_id": str(element_id),
-        "transformation": "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",
-    }
-    return records, manifest
-
-
 RU_MONTHS = {
     "январь": 1, "февраль": 2, "март": 3, "апрель": 4, "май": 5, "июнь": 6,
     "июль": 7, "август": 8, "сентябрь": 9, "октябрь": 10, "ноябрь": 11, "декабрь": 12,

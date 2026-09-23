@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/4439/file/ru/",
+  "dataset_id": "4439",
+  "indicator_id": "GVA_NOMINAL_BY_SECTION_QUARTERLY",
+  "indicator_name": "GDP by production approach, current prices, by ОКЭД section, year-to-date",
+  "description": "ВВП методом производства в текущих ценах, по видам экономической деятельности, нарастающим итогом с начала года",
+  "frequency": "quarterly",
+  "unit": "million KZT, year-to-date cumulative",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Year-to-date columns «1 квартал YYYYг.», «1 полугодие YYYYг.», «9 месяцев YYYYг.», «YYYY год» of the 2010–present sheet; 2010 Q1 – 2026 H1 on 2026-09-23. Same rows as GVA_NOMINAL_BY_SECTION.",
+  "publication_date": "2026-08-14",
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2010-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": "2026-09-30",
+  "transformation": "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",
+  "revision_status": "original"
+}

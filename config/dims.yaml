@@ -12,19 +12,30 @@
 #
 # layout — which parser in scripts/fetchers/bns_dims.py reads the sheet:
 #   periods_across   one row per item (label in label_col), periods across the columns;
-#                    only the annual "YYYY год" columns are taken (quarterly columns are
-#                    year-to-date and skipped)
+#                    the annual "YYYY год" columns are taken (the quarterly columns are
+#                    year-to-date; a dataset with `periods: quarterly_ytd` takes those)
 #   region_blocks    one block per region, one row per period inside the block, one column
 #                    per item with the item code on the row under the names (5931); only the
-#                    national block is taken
+#                    national block is taken; annual rows, or the year-to-date rows under
+#                    `periods: quarterly_ytd`
 #   year_subcolumns  one row per item, one header cell per year with several sub-columns;
-#                    sub_offset picks the sub-column (0 = first)
+#                    sub_offset picks the sub-column (0 = first); `periods: quarterly_subcolumns`
+#                    reads the four «I–IV квартал» sub-columns as discrete quarters (5831)
+# periods — annual (default), quarterly_ytd or quarterly_subcolumns, see above. A quarterly
+#   dataset is a sibling of an annual one (same element, same rows, same dictionary, id
+#   suffixed _QUARTERLY) and says `frequency: quarterly`; `cumulation: year_to_date` marks
+#   the flow tables (the outlier check then compares own-period contributions);
+#   `transformation` is written into every processed row and the metadata, as the scalar
+#   GDP_NOMINAL does; `years_from` drops earlier periods (5926's quarterly columns begin
+#   in 2011).
 # dictionary — how item labels become item codes: dictionaries/<name>.csv (code, name_ru,
 #   match = case-insensitive regex on the normalised label); from_table = codes are in
 #   the sheet itself. A data row whose label matches no dictionary entry stops the dataset
 #   loudly (StructuralChangeError) — never silently dropped.
 # Annual observations are dated 31 December, the convention this repo's other annual BNS
-# series already follow.
+# series already follow; quarterly ones the first day of the last quarter they cover
+# (2024-07-01 for January–September 2024, 2024-10-01 for the year), the period-start
+# convention of lib/periods.py and of the scalar GDP_NOMINAL.
 #
 # World Bank (agency wb, scripts/fetchers/wb.py) and EIA (agency eia, scripts/fetchers/eia.py)
 # datasets sit at the end of this file. They are world prices, not Kazakh statistics:
@@ -690,6 +701,266 @@ datasets:
     frequency: annual
     unit: "centners per hectare"
     category: agriculture
+
+  # ---------------------------------------------------------------- quarterly siblings
+  # The same national-accounts tables carry year-to-date columns (or rows) beside the annual
+  # ones: «1 квартал», «1 полугодие», «9 месяцев», «год». These datasets read them from the
+  # same xlsx (one download, one raw copy — bns._download and raw_store dedup by content);
+  # the annual sibling keeps the «год» columns only. Q4 of a quarterly series is the year, the
+  # same cell as the annual sibling's value. 5831's quarters are discrete (labour force
+  # survey), every other table's are cumulative. Verified on the live files 2026-09-23.
+  - id: GVA_NOMINAL_BY_SECTION_QUARTERLY
+    name_ru: "ВВП методом производства в текущих ценах, по видам экономической деятельности, нарастающим итогом с начала года"
+    name_en: "GDP by production approach, current prices, by ОКЭД section, year-to-date"
+    agency: bns
+    element_id: 4439
+    layout: periods_across
+    periods: quarterly_ytd
+    sheet_match: "^2010-2026"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 28
+    frequency: quarterly
+    cumulation: year_to_date
+    unit: "million KZT, year-to-date cumulative"
+    transformation: "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)"
+    category: national_accounts
+    note: "Year-to-date columns «1 квартал YYYYг.», «1 полугодие YYYYг.», «9 месяцев YYYYг.», «YYYY год» of the 2010–present sheet; 2010 Q1 – 2026 H1 on 2026-09-23. Same rows as GVA_NOMINAL_BY_SECTION."
+
+  - id: GVA_VOLUME_INDEX_BY_SECTION_QUARTERLY
+    name_ru: "ИФО ВВП методом производства, по видам экономической деятельности, нарастающим итогом с начала года"
+    name_en: "GDP volume index by production approach, by ОКЭД section, year-to-date"
+    agency: bns
+    element_id: 4440
+    layout: periods_across
+    periods: quarterly_ytd
+    sheet_match: "^2010-2026"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 28
+    frequency: quarterly
+    unit: "% of the same period of the previous year, year-to-date"
+    transformation: "as published: the year-to-date period (January-March, January-June, January-September, the year) in % of the same period of the previous year -- not converted to discrete quarters"
+    category: national_accounts
+    note: "Year-to-date columns of the 2010–present sheet; 2010 Q1 – 2026 H1 on 2026-09-23. Same rows as GVA_VOLUME_INDEX_BY_SECTION."
+
+  - id: GVA_DEFLATOR_BY_SECTION_QUARTERLY
+    name_ru: "Дефлятор ВВП методом производства, по видам экономической деятельности, нарастающим итогом с начала года"
+    name_en: "GDP deflator by production approach, by ОКЭД section, year-to-date"
+    agency: bns
+    element_id: 4441
+    layout: periods_across
+    periods: quarterly_ytd
+    sheet_match: "^2010-2026"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 28
+    frequency: quarterly
+    unit: "% of the same period of the previous year, year-to-date"
+    transformation: "as published: the year-to-date period (January-March, January-June, January-September, the year) in % of the same period of the previous year -- not converted to discrete quarters"
+    category: national_accounts
+    note: "Year-to-date columns of the 2010–present sheet; 2010 Q1 – 2026 H1 on 2026-09-23. Same rows as GVA_DEFLATOR_BY_SECTION."
+
+  - id: GVA_NOMINAL_INDUSTRY_DIVISIONS_QUARTERLY
+    name_ru: "Валовая добавленная стоимость по отраслям промышленности, нарастающим итогом с начала года"
+    name_en: "Gross value added by industry division (ОКЭД 05–39), year-to-date"
+    agency: bns
+    element_id: 5931
+    layout: region_blocks
+    periods: quarterly_ytd
+    sheets: ["2013-2018гг. периоды", "2018-2026гг."]
+    region: "Республика Казахстан"
+    dictionary: from_table
+    min_items: 30
+    frequency: quarterly
+    cumulation: year_to_date
+    unit: "million KZT, year-to-date cumulative"
+    transformation: "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)"
+    category: national_accounts
+    note: "Period rows «1 квартал 2013 года» … «I квартал 2026 года» of the national block; the 2018 overlap resolves to the later sheet. Same columns as GVA_NOMINAL_INDUSTRY_DIVISIONS."
+
+  - id: GDP_EXPENDITURE_NOMINAL_QUARTERLY
+    name_ru: "ВВП методом конечного использования в текущих ценах, нарастающим итогом с начала года"
+    name_en: "GDP by expenditure, current prices, by component, year-to-date"
+    agency: bns
+    element_id: 4435
+    layout: periods_across
+    periods: quarterly_ytd
+    sheet_match: "^2007-2026"
+    label_col: 1
+    dictionary: expenditure_items
+    min_items: 14
+    frequency: quarterly
+    cumulation: year_to_date
+    unit: "million KZT, year-to-date cumulative"
+    transformation: "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)"
+    category: national_accounts
+    note: "Year-to-date columns of the 2007–present sheet; 2007 Q1 – 2026 Q1 on 2026-09-23. Same rows as GDP_EXPENDITURE_NOMINAL."
+
+  - id: GDP_EXPENDITURE_VOLUME_INDEX_QUARTERLY
+    name_ru: "ИФО ВВП методом конечного использования, нарастающим итогом с начала года"
+    name_en: "GDP volume index by expenditure, by component, year-to-date"
+    agency: bns
+    element_id: 4437
+    layout: periods_across
+    periods: quarterly_ytd
+    sheet_match: "^2007-2026"
+    label_col: 1
+    dictionary: expenditure_items
+    min_items: 11
+    frequency: quarterly
+    unit: "% of the same period of the previous year, year-to-date"
+    transformation: "as published: the year-to-date period (January-March, January-June, January-September, the year) in % of the same period of the previous year -- not converted to discrete quarters"
+    category: national_accounts
+    note: "Year-to-date columns of the 2007–present sheet (one header reads «9 месяц 2012г.»); 2007 Q1 – 2026 Q1 on 2026-09-23. Same rows as GDP_EXPENDITURE_VOLUME_INDEX — no index for net exports, inventories and valuables."
+
+  - id: GDP_EXPENDITURE_DEFLATOR_QUARTERLY
+    name_ru: "Дефлятор ВВП методом конечного использования, нарастающим итогом с начала года"
+    name_en: "GDP deflator by expenditure, by component, year-to-date"
+    agency: bns
+    element_id: 4436
+    layout: periods_across
+    periods: quarterly_ytd
+    sheet_match: "^2007-2026"
+    label_col: 1
+    dictionary: expenditure_items
+    min_items: 12
+    frequency: quarterly
+    unit: "% of the same period of the previous year, year-to-date"
+    transformation: "as published: the year-to-date period (January-March, January-June, January-September, the year) in % of the same period of the previous year -- not converted to discrete quarters"
+    category: national_accounts
+    note: "Year-to-date columns of the 2007–present sheet; 2007 Q1 – 2026 Q1 on 2026-09-23. Same rows as GDP_EXPENDITURE_DEFLATOR."
+
+  - id: INCOME_COMPENSATION_BY_SECTION_QUARTERLY
+    name_ru: "Оплата труда в счёте образования доходов, по видам экономической деятельности, нарастающим итогом с начала года"
+    name_en: "Compensation of employees by ОКЭД section, year-to-date"
+    agency: bns
+    element_id: 4453
+    layout: periods_across
+    periods: quarterly_ytd
+    sheet_match: "^ОКЭД \\(НК РК 03-2007\\)"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 24
+    frequency: quarterly
+    cumulation: year_to_date
+    unit: "million KZT, year-to-date cumulative"
+    transformation: "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)"
+    category: national_accounts
+    note: "Year-to-date columns «1 квартал YYYY года» … of the ОКЭД (НК РК 03-2007) sheet; 2010 Q1 – 2026 Q1 on 2026-09-23. Same rows as INCOME_COMPENSATION_BY_SECTION."
+
+  - id: INCOME_OTHER_TAXES_BY_SECTION_QUARTERLY
+    name_ru: "Другие налоги на производство, по видам экономической деятельности, нарастающим итогом с начала года"
+    name_en: "Other taxes on production by ОКЭД section, year-to-date"
+    agency: bns
+    element_id: 4452
+    layout: periods_across
+    periods: quarterly_ytd
+    sheet_match: "^ОКЭД \\(НК РК 03-2007\\)"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 24
+    frequency: quarterly
+    cumulation: year_to_date
+    unit: "million KZT, year-to-date cumulative"
+    transformation: "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)"
+    category: national_accounts
+    note: "Year-to-date columns (footnote marks «2)» on the 2022–2026 headers) of the ОКЭД (НК РК 03-2007) sheet; 2010 Q1 – 2026 Q1 on 2026-09-23. Same rows as INCOME_OTHER_TAXES_BY_SECTION, including NET_TAXES."
+
+  - id: INCOME_CFC_BY_SECTION_QUARTERLY
+    name_ru: "Потребление основного капитала, по видам экономической деятельности, нарастающим итогом с начала года"
+    name_en: "Consumption of fixed capital by ОКЭД section, year-to-date"
+    agency: bns
+    element_id: 4454
+    layout: periods_across
+    periods: quarterly_ytd
+    sheet_match: "^ОКЭД \\(НК РК 03-2007\\)"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 24
+    frequency: quarterly
+    cumulation: year_to_date
+    unit: "million KZT, year-to-date cumulative"
+    transformation: "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)"
+    category: national_accounts
+    note: "Year-to-date columns of the ОКЭД (НК РК 03-2007) sheet; 2010 Q1 – 2026 Q1 on 2026-09-23. Same rows as INCOME_CFC_BY_SECTION."
+
+  - id: INCOME_PROFIT_BY_SECTION_QUARTERLY
+    name_ru: "Чистая прибыль / чистый смешанный доход, по видам экономической деятельности, нарастающим итогом с начала года"
+    name_en: "Net operating surplus / mixed income by ОКЭД section, year-to-date"
+    agency: bns
+    element_id: 4455
+    layout: periods_across
+    periods: quarterly_ytd
+    sheet_match: "^ОКЭД \\(НК РК 03-2007\\)"
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 24
+    frequency: quarterly
+    cumulation: year_to_date
+    unit: "million KZT, year-to-date cumulative"
+    transformation: "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)"
+    category: national_accounts
+    note: "Year-to-date columns of the ОКЭД (НК РК 03-2007) sheet; 2010 Q1 – 2026 Q1 on 2026-09-23. Same rows as INCOME_PROFIT_BY_SECTION."
+
+  - id: GVA_NOMINAL_BY_REGION_SECTION_QUARTERLY
+    name_ru: "Валовой региональный продукт и ВДС по видам экономической деятельности, по регионам, нарастающим итогом с начала года"
+    name_en: "Gross regional product and GVA by ОКЭД section, by region, year-to-date"
+    agency: bns
+    element_id: 5927
+    layout: region_blocks
+    periods: quarterly_ytd
+    regions: all
+    sheets: ["ВРП_2010-2018", "ВРП_2018-2026"]
+    dictionary: okved_sections
+    label_overrides: {"всего": GDP, "киуфп": FISIM}
+    min_items: 20
+    min_regions: 20
+    frequency: quarterly
+    cumulation: year_to_date
+    unit: "million KZT, year-to-date cumulative"
+    transformation: "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)"
+    category: national_accounts
+    note: "Period rows «I квартал 2010 года» … «I квартал 2026 года» of every region block; the 2018 overlap resolves to the later sheet; the regions created in 2022 (Абай, Жетісу, Ұлытау) start with «2021 год» then «I полугодие 2022 года». Same columns as GVA_NOMINAL_BY_REGION_SECTION."
+
+  - id: GRP_VOLUME_INDEX_BY_REGION_QUARTERLY
+    name_ru: "Индекс физического объёма валового регионального продукта, нарастающим итогом с начала года"
+    name_en: "Gross regional product volume index, by region, year-to-date"
+    agency: bns
+    element_id: 5926
+    layout: periods_across
+    periods: quarterly_ytd
+    years_from: 2011
+    sheet_match: "^2001-2026"
+    label_col: 1
+    row_dimension: region
+    fixed_item: GDP
+    fixed_item_name: "Валовой региональный продукт"
+    min_regions: 20
+    frequency: quarterly
+    unit: "% of the same period of the previous year, year-to-date"
+    transformation: "as published: the year-to-date period (January-March, January-June, January-September, the year) in % of the same period of the previous year -- not converted to discrete quarters"
+    category: national_accounts
+    note: "Year-to-date columns «I квартал YYYY года», «I полугодие YYYY года», «9 месяцев YYYY года», «YYYY год»; they begin with «9 месяцев 2011 года» (2001–2010 are annual only, in GRP_VOLUME_INDEX_BY_REGION), hence years_from 2011; through 2026 Q1 on 2026-09-23."
+
+  - id: EMPLOYED_BY_SECTION_QUARTERLY
+    name_ru: "Занятое население по основным видам экономической деятельности, по кварталам"
+    name_en: "Employed population by ОКЭД section (national), by quarter"
+    agency: bns
+    element_id: 5831
+    layout: year_subcolumns
+    periods: quarterly_subcolumns
+    sheets: ["Показатель по ВЭД РК"]
+    label_col: 0
+    sub_offset: 0
+    dictionary: okved_sections
+    label_overrides: {"занято в экономике, всего": TOTAL}
+    min_items: 20
+    frequency: quarterly
+    unit: "thousand persons"
+    transformation: "level (discrete quarter, as published -- not year-to-date)"
+    category: labour
+    note: "The «I квартал» … «IV квартал» sub-columns under every year (the fifth, «год», is EMPLOYED_BY_SECTION); 2010 Q1 – 2026 Q2 on 2026-09-23. Discrete quarters of the labour force survey, not cumulative."
 
   # ---------------------------------------------------------------- external trade by commodity group
   # The export workbook behind EXPORTS / OIL_EXPORTS_* (element 446905): flat 6-digit HS lines

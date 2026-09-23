@@ -36,6 +36,8 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "куб отдаёт периоды 'Январь-Март', 'Январь-Июнь' — нарастающий итог"
+    derived_from: {dataset: GVA_NOMINAL_BY_SECTION_QUARTERLY, item: GDP, region: national, scale: 1000000}
+    derived_note: "the «ВВП» row of table 4439's xlsx export (million KZT, year-to-date) x 1e6; equal to the JSON cube's national slice on all 66 quarters 2010 Q1 - 2026 H1 within the table's rounding to 0.1 million KZT (checked 2026-09-23; only 2010 Q2 differed, by 48 795 KZT, where the cube carried unrounded tenge), one download instead of two"
 
   - id: IND_PROD
     name_ru: "Индекс промышленного производства"

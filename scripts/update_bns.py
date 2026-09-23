@@ -25,7 +25,6 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 FETCHERS = {
     "CPI": bns_fetchers.fetch_cpi,
     "UNEMPLOYMENT": bns_fetchers.fetch_unemployment,
-    "GDP_NOMINAL": bns_fetchers.fetch_gdp_nominal,
     "GDP_REAL": bns_fetchers.fetch_gdp_real,
     "IMPORTS": bns_fetchers.fetch_imports,
     "GDP_PER_CAPITA": bns_fetchers.fetch_gdp_per_capita,
@@ -160,7 +159,7 @@ FETCHERS = {
 }
 
 INDICATOR_IDS = [
-    "GDP_REAL", "GDP_NOMINAL", "CPI", "UNEMPLOYMENT",
+    "GDP_REAL", "CPI", "UNEMPLOYMENT",
     "IMPORTS",
     "GDP_PER_CAPITA", "GDP_DEFLATOR", "GFCF", "GFCF_VOLUME_INDEX",
     "NET_EXPORTS", "HOUSEHOLD_CONSUMPTION", "COMPENSATION_EMPLOYEES", "AVG_WAGE",

@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/4441/file/ru/",
+  "dataset_id": "4441",
+  "indicator_id": "GVA_DEFLATOR_BY_SECTION_QUARTERLY",
+  "indicator_name": "GDP deflator by production approach, by ОКЭД section, year-to-date",
+  "description": "Дефлятор ВВП методом производства, по видам экономической деятельности, нарастающим итогом с начала года",
+  "frequency": "quarterly",
+  "unit": "% of the same period of the previous year, year-to-date",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Year-to-date columns of the 2010–present sheet; 2010 Q1 – 2026 H1 on 2026-09-23. Same rows as GVA_DEFLATOR_BY_SECTION.",
+  "publication_date": "2026-08-14",
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2010-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": "2026-09-30",
+  "transformation": "as published: the year-to-date period (January-March, January-June, January-September, the year) in % of the same period of the previous year -- not converted to discrete quarters",
+  "revision_status": "original"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/4454/file/ru/",
+  "dataset_id": "4454",
+  "indicator_id": "INCOME_CFC_BY_SECTION_QUARTERLY",
+  "indicator_name": "Consumption of fixed capital by ОКЭД section, year-to-date",
+  "description": "Потребление основного капитала, по видам экономической деятельности, нарастающим итогом с начала года",
+  "frequency": "quarterly",
+  "unit": "million KZT, year-to-date cumulative",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Year-to-date columns of the ОКЭД (НК РК 03-2007) sheet; 2010 Q1 – 2026 Q1 on 2026-09-23. Same rows as INCOME_CFC_BY_SECTION.",
+  "publication_date": "2026-08-03",
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2010-01-01",
+  "period_end": "2026-01-01",
+  "next_update_date": "2026-10-01",
+  "transformation": "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",
+  "revision_status": "original"
+}
