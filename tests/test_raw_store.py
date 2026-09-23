@@ -59,3 +59,39 @@ def test_three_distinct_same_day_versions_are_all_preserved(isolated_raw_root):
     assert len({p1, p2, p3}) == 3
     for p, content in ((p1, b"version-a"), (p2, b"version-b"), (p3, b"version-c")):
         assert p.read_bytes() == content
+
+
+def _lfs_pointer(content: bytes) -> bytes:
+    """What actions/checkout leaves in place of an LFS-tracked file when lfs is off."""
+    import hashlib
+    return (b"version https://git-lfs.github.com/spec/v1\n"
+            b"oid sha256:" + hashlib.sha256(content).hexdigest().encode() + b"\n"
+            b"size " + str(len(content)).encode() + b"\n")
+
+
+def test_an_lfs_pointer_to_the_same_bytes_counts_as_the_archived_copy(isolated_raw_root):
+    """Regression test for the CI duplicates of 2026-09-16..23: the workflow checks the
+    repository out without LFS content, so every archived BNS workbook is a 130-byte
+    pointer there. Comparing bytes saw a 'different' file every day and archived the
+    unchanged workbook again (58 copies a day). The pointer names the sha256 of the
+    content it stands for, and that is what must be compared."""
+    folder = isolated_raw_root / "bns"
+    folder.mkdir()
+    (folder / "bns_exports_2026-09-22.xlsx").write_bytes(_lfs_pointer(b"same bytes"))
+    same_day = folder / "bns_exports_2026-09-23.xlsx"
+    same_day.write_bytes(_lfs_pointer(b"same bytes"))
+
+    assert raw_store.save_raw_bytes("bns", "EXPORTS", date(2026, 9, 23), "xlsx", b"same bytes") == same_day
+    assert raw_store.save_raw_bytes("bns", "OIL_EXPORTS_VALUE", date(2026, 9, 24), "xlsx", b"same bytes") == folder / "bns_exports_2026-09-22.xlsx"
+    assert sorted(p.name for p in folder.iterdir()) == ["bns_exports_2026-09-22.xlsx", "bns_exports_2026-09-23.xlsx"]
+
+    revised = raw_store.save_raw_bytes("bns", "EXPORTS", date(2026, 9, 23), "xlsx", b"revised bytes")   # a real revision still lands
+    assert revised.name.startswith("bns_exports_2026-09-23_") and revised.read_bytes() == b"revised bytes"
+    assert same_day.read_bytes() == _lfs_pointer(b"same bytes"), "the pointer is never touched"
+
+
+def test_lfs_pointer_oid_reads_only_real_pointers():
+    assert raw_store.lfs_pointer_oid(_lfs_pointer(b"x")) == "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881"
+    assert raw_store.lfs_pointer_oid(b"version 1\noid sha256:abc\n") is None
+    assert raw_store.lfs_pointer_oid(b"PK\x03\x04 a real workbook") is None
+    assert raw_store.lfs_pointer_oid(b"") is None

@@ -59,15 +59,46 @@ def identical_twin(agency: str, ext: str, content: bytes) -> Path | None:
     One copy per distinct content is enough: the dated manifest of every indicator still
     records that the download happened, and `raw_file` in it names the file that holds
     the bytes. A source that revises a file produces different bytes and a new file, as
-    before -- nothing already archived is ever modified or removed here."""
+    before -- nothing already archived is ever modified or removed here.
+
+    In the CI checkout the archived BNS workbooks are Git LFS *pointers* (the workflow
+    checks out with `lfs: false`, so a 130-byte text stub stands in for each xlsx). A
+    pointer carries the sha256 of the content it stands for, so it is compared by that
+    hash instead of by bytes -- otherwise every unchanged workbook looked "different" in
+    CI and was archived again on every run (58 duplicate copies a day, 2026-09-16..23)."""
     folder = RAW_ROOT / agency
     if not folder.exists():
         return None
-    size = len(content)
+    sha = sha256_of(content)
     for p in sorted(folder.glob(f"{agency}_*.{ext.lstrip('.')}")):
-        if p.stat().st_size == size and p.read_bytes() == content:
+        if holds_content(p, content, sha):
             return p
     return None
+
+
+LFS_POINTER_PREFIX = b"version https://git-lfs.github.com/spec/v1"
+
+
+def lfs_pointer_oid(data: bytes) -> str | None:
+    """The sha256 named by a Git LFS pointer file, or None when `data` is not a pointer."""
+    if not data.startswith(LFS_POINTER_PREFIX):
+        return None
+    for line in data.decode("ascii", "replace").splitlines():
+        if line.startswith("oid sha256:"):
+            return line[len("oid sha256:"):].strip()
+    return None
+
+
+def holds_content(path: Path, content: bytes, sha: str | None = None) -> bool:
+    """Does the archived file hold exactly these bytes -- literally, or as a Git LFS
+    pointer whose oid is their sha256?"""
+    size = path.stat().st_size
+    if size == len(content):
+        return path.read_bytes() == content
+    if size <= 1024:                      # a pointer is ~130 bytes; never read big files needlessly
+        oid = lfs_pointer_oid(path.read_bytes())
+        return oid is not None and oid == (sha or sha256_of(content))
+    return False
 
 
 same_day_twin = None  # removed 2026-09-15 in favour of identical_twin (any day)
@@ -80,8 +111,8 @@ def save_raw_bytes(agency: str, indicator_id: str, download_date: date, ext: str
       file with byte-identical content is already archived for this agency (any
       indicator, any day), in which case that file is returned and nothing new is
       written (see identical_twin).
-    - Existing file, byte-identical content: no-op, return the existing path
-      (idempotent re-run).
+    - Existing file, byte-identical content (or an LFS pointer to it): no-op, return
+      the existing path (idempotent re-run).
     - Existing file, DIFFERENT content: archive the new content separately
       under a time-suffixed filename (see _versioned_raw_path) and print a
       visible note -- the old file is never modified or deleted. This is the
@@ -91,8 +122,7 @@ def save_raw_bytes(agency: str, indicator_id: str, download_date: date, ext: str
     path = raw_path(agency, indicator_id, download_date, ext)
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists():
-        existing = path.read_bytes()
-        if existing == content:
+        if holds_content(path, content):
             return path  # idempotent re-run same day, nothing to do
         twin = identical_twin(agency, ext, content)
         if twin is not None:

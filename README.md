@@ -199,7 +199,9 @@ fetched and stored again and again: every agency's `_download` is cached per
 process, and `lib/raw_store.py` keeps one raw copy per distinct content — a
 download that is byte-identical to a file already archived for that agency (any
 indicator, any day) points at it in its dated manifest (`raw_file`) instead of
-writing another copy. Revised content still lands as a new dated file, and
+writing another copy; in a checkout without LFS content (the CI workflow) the
+archived workbook is a Git LFS pointer, and the pointer's sha256 is what the
+download is compared with. Revised content still lands as a new dated file, and
 nothing archived is ever modified. The copies accumulated before this rule
 (9.9 GB of 11.2 GB) were removed on 2026-09-15; `data/raw/dedup_2026-09-15.json`
 maps every removed file to the file that holds its bytes.

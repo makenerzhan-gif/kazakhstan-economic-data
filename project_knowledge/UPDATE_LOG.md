@@ -4632,3 +4632,25 @@ name and still reads a plain .csv (tests cover both). The plain file was removed
 repository; the columns and content are unchanged (2 180 176 bytes compressed, 28× smaller).
 `pandas.read_csv` and `csv` over `gzip.open` read it directly; the scalar `macro_long.csv`
 (1.8 MB) stays plain. README, config comments and docstrings updated. Tests 359 → 360.
+
+## 2026-09-23 — raw store: an LFS pointer counts as the archived copy (CI stored every BNS workbook again each day)
+
+**Found.** The manual run 35877301328 (54 min, 545/545 ok, no data change) added 76 raw BNS
+workbooks, and every scheduled run since 2026-09-16 added 58 — all byte-identical to files
+already archived (`cmp` on 4439 for 22 and 23 September: identical). The workflow checks the
+repository out with `lfs: false`, so in CI each archived `data/raw/bns/*.xlsx` is a 130-byte
+Git LFS pointer; `raw_store.identical_twin` compared bytes, saw a "different" file and archived
+the unchanged download again under a time-suffixed name. At HEAD: 790 pointer files for 88
+distinct objects (597 MB of content, 702 duplicate pointers). GitHub LFS storage is
+content-addressed, so the duplicates cost repository clutter and 2.3 GB of smudged copies in
+a local checkout, not LFS quota.
+
+**What.** `raw_store.holds_content` treats a file as holding the download either literally or as
+an LFS pointer whose `oid sha256:` equals the download's sha256; `identical_twin` and the
+same-day branch of `save_raw_bytes` use it. Revised content still lands as a new file; nothing
+archived is touched. Verified on a real workbook against a simulated CI worktree (pointer
+stub for the previous day → twin found, nothing written) and against the local archive.
+Tests 360 → 362 (`tests/test_raw_store.py`). The 702 duplicate pointers already in the
+repository are left in place; removing them is the same operation as the 2026-09-15 dedup
+(a record file mapping each removed file to the file that holds its bytes) and is the
+author's decision.
