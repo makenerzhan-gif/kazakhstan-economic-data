@@ -3,7 +3,7 @@
 #
 # These live beside, not inside, config/indicators.yaml: macro_long.csv promises one
 # value per (date, variable), and a breakdown has one value per (date, variable, item).
-# They are read by scripts/update_dims.py and land in data/unified/macro_dims_long.csv.
+# They are read by scripts/update_dims.py and land in data/unified/macro_dims_long.csv.gz (gzip).
 #
 # Source is the xlsx export of each BNS dynamic table (…/api/iblock/element/<id>/file/ru/).
 # The JSON cube export of the same element was checked for every table on 2026-09-14 and

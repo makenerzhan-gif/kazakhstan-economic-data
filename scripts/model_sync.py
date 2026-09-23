@@ -5,7 +5,7 @@ The contract lives in config/model_map.yaml. Kinds of entry:
 
   variable:       a scalar pipeline series (macro_long.csv) and the workbook cells that
                   should carry its annual value — `targets: [{sheet, row, col_offset?}]`
-  dims_variable:  an item-level series (macro_dims_long.csv); one sheet, and one of
+  dims_variable:  an item-level series (macro_dims_long.csv.gz); one sheet, and one of
                     rows_by_item: {item_code: row}            explicit rows
                     item_column + row_range                   item codes read from a column of the
                                                               sheet (`item_aliases` maps a code to
@@ -60,7 +60,7 @@ from lib import dims as dimslib  # noqa: E402
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MAP = REPO_ROOT / "config" / "model_map.yaml"
 DEFAULT_UNIFIED = REPO_ROOT / "data" / "unified" / "macro_long.csv"
-DEFAULT_DIMS = REPO_ROOT / "data" / "unified" / "macro_dims_long.csv"
+DEFAULT_DIMS = REPO_ROOT / "data" / "unified" / "macro_dims_long.csv.gz"
 APPLIER = REPO_ROOT / "scripts" / "lib" / "excel_apply.ps1"
 ANNUAL_RULES = ("last", "mean", "december", "sum")
 NATIONAL = dimslib.NATIONAL
@@ -124,7 +124,7 @@ def load_unified_dims(path: Path) -> dict[tuple[str, str, str], list[Observation
     series: dict[tuple[str, str, str], list[Observation]] = defaultdict(list)
     if not path.exists():
         return series
-    with path.open(encoding="utf-8") as f:
+    with dimslib.open_unified(path) as f:                # plain or gzip-compressed, by the file's name
         for row in csv.DictReader(f):
             try:
                 value = float(row["value"])

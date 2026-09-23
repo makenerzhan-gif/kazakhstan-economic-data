@@ -120,7 +120,8 @@ Energy Outlook), `scripts/update_dims.py` (fetcher chosen by each dataset's
 (HS-prefix groups summed over the regional blocks, national total re-checked every
 month), `scripts/fetchers/wb.py`,
 `scripts/fetchers/eia.py`, `scripts/lib/dims.py`, `data/processed/dims/<id>.csv`,
-and `data/unified/macro_dims_long.csv` (`macro_long`'s columns plus `item_code`,
+and `data/unified/macro_dims_long.csv.gz` (gzip-compressed — 217 597 rows are 61 MB plain;
+`macro_long`'s columns plus `item_code`,
 `item_name`; `region` is `national` for the country row, a code from
 `dictionaries/regions.csv` for a region, and `world` — with `country` WLD — for
 the world benchmark prices). Item codes come from the dictionaries

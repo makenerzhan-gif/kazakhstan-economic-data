@@ -43,7 +43,7 @@ def main() -> int:
     unified.write_long_csv(long_rows)
     fieldnames, wide_rows = unified.build_wide(long_rows)
     unified.write_wide_csv(fieldnames, wide_rows)
-    update_dims.build_unified()   # item-level series: data/unified/macro_dims_long.csv
+    update_dims.build_unified()   # item-level series: data/unified/macro_dims_long.csv.gz
 
     test_result = subprocess.run(
         [sys.executable, "-m", "pytest", str(REPO_ROOT / "tests"), "-q"],

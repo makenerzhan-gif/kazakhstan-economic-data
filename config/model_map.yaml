@@ -192,7 +192,7 @@ mappings:
     targets:
       - {sheet: "Внешние и внутренние факторы", row: 51, note: "курс тенге к международному доллару"}
 
-  # ---------------------------------------------------------------- item-level series (macro_dims_long.csv)
+  # ---------------------------------------------------------------- item-level series (macro_dims_long.csv.gz)
   # «Факт_БНС» is the model's own input sheet for the fact years: column A holds the item code
   # (A…T, 05…33, ЧН, ВДС, ТП, СП, ВВП), D/E/F the nominal GVA 2023/2024/2025, G/H the volume
   # indices 2024/2025 and M/N the published deflators 2024/2025. Its header is text, so the

@@ -4617,3 +4617,18 @@ read; 469090/471272 (experimental GDP/GRP 2024 on a SUT basis — text sheets), 
 (financial assets by sector, one year), 345748 (creative industries 2018–2023), 470989
 (supply-use tables in previous-year prices, experimental — for the МОБ model, not this
 pipeline). Nothing in `config/model_map.yaml` changed.
+
+## 2026-09-23 — the unified item-level file is gzip-compressed: macro_dims_long.csv.gz (2.2 MB instead of 61 MB)
+
+**Why.** With 115 datasets the unified item-level file reached 217 597 rows and 61 MB; GitHub
+warned on the push that it exceeds the recommended 50 MB, and every daily run rewrites it. Git
+LFS was rejected (a public repository's LFS quota would be consumed by a 61 MB daily rewrite);
+dropping the file from the repository was the alternative, but it is the one place a reader
+finds every item-level series at once.
+
+**What.** `lib/dims.UNIFIED_PATH` is `data/unified/macro_dims_long.csv.gz`; `write_long_csv`
+and `model_sync.load_unified_dims` go through `dims.open_unified`, which gzips by the file's
+name and still reads a plain .csv (tests cover both). The plain file was removed from the
+repository; the columns and content are unchanged (2 180 176 bytes compressed, 28× smaller).
+`pandas.read_csv` and `csv` over `gzip.open` read it directly; the scalar `macro_long.csv`
+(1.8 MB) stays plain. README, config comments and docstrings updated. Tests 359 → 360.

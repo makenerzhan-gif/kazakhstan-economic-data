@@ -9,7 +9,7 @@ layer with the same shape and the same rules:
   processed      data/processed/dims/<id>.csv                 date,region,item_code,item_name,value,transformation
   metadata       metadata/<agency>/<id>.json                  (lib/metadata.DatasetMetadata)
   revisions      metadata/revisions/<id>_revisions.jsonl      period is "<date> <item_code>[ @<region>]"
-  unified        data/unified/macro_dims_long.csv             macro_long's columns + item_code, item_name
+  unified        data/unified/macro_dims_long.csv.gz          macro_long's columns + item_code, item_name (gzip)
 
 `region` is "national" for the country total (the value macro_long.csv uses) and a
 code from dictionaries/regions.csv otherwise; the World Bank and EIA datasets, which
@@ -22,6 +22,7 @@ than one, is a structural change and stops the dataset loudly.
 from __future__ import annotations
 
 import csv
+import gzip
 import json
 import re
 from datetime import date
@@ -36,7 +37,7 @@ CONFIG_PATH = REPO_ROOT / "config" / "dims.yaml"
 DICT_ROOT = REPO_ROOT / "dictionaries"
 PROCESSED_ROOT = REPO_ROOT / "data" / "processed" / "dims"
 METADATA_ROOT = REPO_ROOT / "metadata"
-UNIFIED_PATH = REPO_ROOT / "data" / "unified" / "macro_dims_long.csv"
+UNIFIED_PATH = REPO_ROOT / "data" / "unified" / "macro_dims_long.csv.gz"
 
 NATIONAL = "national"
 PROCESSED_COLUMNS = ["date", "region", "item_code", "item_name", "value", "transformation"]
@@ -243,10 +244,19 @@ def build_long(datasets: list[dict]) -> list[dict]:
     return rows
 
 
+def open_unified(path: Path, mode: str = "r"):
+    """Open the unified item-level file for text I/O — gzip-compressed when its name ends in
+    .gz (the committed form since 2026-09-23: 217 597 rows were 61 MB uncompressed, past
+    GitHub's recommended file size, and the file is rewritten by every daily run)."""
+    if str(path).endswith(".gz"):
+        return gzip.open(path, mode + "t", newline="", encoding="utf-8")
+    return path.open(mode, newline="", encoding="utf-8")
+
+
 def write_long_csv(rows: list[dict], path: Path | None = None) -> Path:
     path = path or UNIFIED_PATH
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", newline="", encoding="utf-8") as f:
+    with open_unified(path, "w") as f:
         writer = csv.DictWriter(f, fieldnames=LONG_COLUMNS)
         writer.writeheader()
         writer.writerows(rows)

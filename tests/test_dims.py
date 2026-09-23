@@ -301,3 +301,16 @@ def test_detect_revisions_labels_regions():
     new = [{"date": "2024-12-31", "region": "AKM", "item_code": "TOTAL", "value": 2.0}]
     revs = dims.detect_revisions("TEST", "bns", old, new, __import__("datetime").date(2026, 9, 14))
     assert revs[0].period == "2024-12-31 TOTAL @AKM"
+
+
+def test_unified_long_file_is_written_gzipped_and_read_back(tmp_path):
+    import gzip
+    import model_sync
+    rows = [{"date": "2024-12-31", "country": "KZ", "region": "national", "frequency": "annual", "variable": "X", "item_code": "A",
+             "item_name": "a", "value": 1.5, "unit": "u", "source": "bns", "source_version": "2026-09-23", "transformation": "level", "last_updated": "2026-09-23"}]
+    p = dims.write_long_csv(rows, tmp_path / "macro_dims_long.csv.gz")
+    assert p.exists() and gzip.open(p, "rt", encoding="utf-8").readline().startswith("date,country,region")
+    assert model_sync.load_unified_dims(p)[("X", "A", "national")][0].value == 1.5
+    plain = dims.write_long_csv(rows, tmp_path / "plain.csv")
+    assert model_sync.load_unified_dims(plain)[("X", "A", "national")][0].value == 1.5
+    assert dims.UNIFIED_PATH.name.endswith(".csv.gz")

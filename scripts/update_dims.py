@@ -3,7 +3,7 @@
 
 Same shape as update_bns.py — fetch, validate, record revisions, write processed,
 write metadata, log — but every record carries an item_code, and the result goes
-to data/unified/macro_dims_long.csv rather than macro_long.csv (see lib/dims.py).
+to data/unified/macro_dims_long.csv.gz (gzip) rather than macro_long.csv (see lib/dims.py).
 Each dataset names its agency; the fetcher is chosen by it (bns, wb, eia).
 
     python scripts/update_dims.py                 # every dataset
