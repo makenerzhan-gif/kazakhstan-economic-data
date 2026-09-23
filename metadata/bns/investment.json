@@ -12,7 +12,7 @@
   "methodology": "Derived from the item-level dataset INVESTMENT_BY_REGION, item TOTAL, scale 1000000. annual values from the xlsx export; quarterly year-to-date columns skipped",
   "publication_date": null,
   "last_update_date": "2026-09-23",
-  "download_date": "2026-09-16",
+  "download_date": "2026-09-22",
   "period_start": "2003-12-31",
   "period_end": "2025-12-31",
   "next_update_date": null,

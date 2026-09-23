@@ -1,0 +1,19 @@
+{
+  "downloaded_at": "2026-09-18T10:11:41.746268",
+  "raw_file": "bns_retail_trade_volume_index_2026-08-30.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "702041",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "702041",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "7",
+    "p_term_id": "741880",
+    "p_terms": "741880,741917,741894,2695732,2658135,18121059",
+    "p_dicIds": "68,776,676,848,853,2985",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}

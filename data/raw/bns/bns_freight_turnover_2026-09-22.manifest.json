@@ -1,0 +1,19 @@
+{
+  "downloaded_at": "2026-09-22T10:31:02.063508",
+  "raw_file": "bns_freight_turnover_2026-08-30.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "702179",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "702179",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "43",
+    "p_term_id": "741880",
+    "p_terms": "741880,741335,741907,19805998",
+    "p_dicIds": "68,1214,59,4309",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}

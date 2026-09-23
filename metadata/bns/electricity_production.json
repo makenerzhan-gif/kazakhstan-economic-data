@@ -12,10 +12,10 @@
   "methodology": "Derived from the item-level dataset PRODUCTION_NATURAL_BY_REGION, item ELECTRICITY, scale 1000000. Only the products in dictionaries/products.csv are kept (the model's natural rows use the same labels); the manufacturing sheet lists ~80 products, the others are skipped.",
   "publication_date": "2026-07-03",
   "last_update_date": "2026-09-23",
-  "download_date": "2026-09-16",
+  "download_date": "2026-09-22",
   "period_start": "1990-12-31",
   "period_end": "2025-12-31",
   "next_update_date": "2027-07-03",
   "transformation": "level",
-  "revision_status": "revised"
+  "revision_status": "original"
 }

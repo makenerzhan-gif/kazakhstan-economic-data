@@ -17,5 +17,5 @@
   "period_end": "2026-04-01",
   "next_update_date": "2026-09-30",
   "transformation": "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",
-  "revision_status": "revised"
+  "revision_status": "original"
 }

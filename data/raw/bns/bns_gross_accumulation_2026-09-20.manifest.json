@@ -1,0 +1,19 @@
+{
+  "downloaded_at": "2026-09-20T10:14:36.741020",
+  "raw_file": "bns_gross_accumulation_2026-08-30.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "2709376",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "2709376",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "7",
+    "p_term_id": "741880",
+    "p_terms": "741880",
+    "p_dicIds": "67",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}
