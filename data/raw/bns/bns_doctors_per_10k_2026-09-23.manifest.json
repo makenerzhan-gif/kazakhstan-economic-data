@@ -1,0 +1,19 @@
+{
+  "downloaded_at": "2026-09-23T10:33:40.422975",
+  "raw_file": "bns_doctors_per_10k_2026-09-01.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "704316",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "704316",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "23",
+    "p_term_id": "741880",
+    "p_terms": "741880",
+    "p_dicIds": "67",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}
