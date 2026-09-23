@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/471384/file/ru/",
+  "dataset_id": "471384",
+  "indicator_id": "QNA_GVA_BY_REGION_SECTION",
+  "indicator_name": "GVA by ОКЭД section and region, current prices, discrete quarter (QNA)",
+  "description": "ВДС по видам экономической деятельности в разрезе регионов (КНС, дискретный квартал)",
+  "frequency": "quarterly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Element 471384 «Валовой региональный продукт на квартальной основе», sheet «ВДС дискретный квартал»: one block per region (КАТО name in column A: «Республика Казахстан», «Область Абай», «город Астана»), ОКЭД code in column B, name in column C; sections, ВДС, чистые налоги, ВРП/ВВП; 2019 Q1 – 2026 Q1 on 2026-09-23. The cumulative sheet is not stored but re-read on every run (cumulative_check): it is the running sum of this one on all points except IV quarter 2025 in five regions — AKM, AKT, ATY, ZHM, ZKO — where the discrete quarters of 2025 sum above the published «год 2025» of the same file (which equals table 5927) by 2.2 % (AKM), 20 % (AKT), 15 % (ATY), 16 % (ZHM), 16 % (ZKO); the national total agrees. Seen 2026-09-23; kept as published, warned on every run.",
+  "publication_date": "2026-09-18",
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2019-01-01",
+  "period_end": "2026-01-01",
+  "next_update_date": "2026-10-30",
+  "transformation": "level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",
+  "revision_status": "original"
+}

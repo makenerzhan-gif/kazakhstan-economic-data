@@ -70,8 +70,10 @@ def normalise_label(label) -> str:
 
 def normalise_region_label(label) -> str:
     """As normalise_label, with the word «область» dropped: BNS writes «Акмолинская»,
-    «Акмолинская область» and «Область Абай» for the same region."""
+    «Акмолинская область» and «Область Абай» for the same region — and «город Астана»
+    (471384) folded to the dictionary's «г. Астана»."""
     s = normalise_label(label).replace("область", " ")
+    s = re.sub(r"^\s*город\s+", "г. ", s)
     return re.sub(r"\s+", " ", s).strip()
 
 

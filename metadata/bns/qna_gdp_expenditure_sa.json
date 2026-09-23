@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/283161/file/ru/",
+  "dataset_id": "283161",
+  "indicator_id": "QNA_GDP_EXPENDITURE_SA",
+  "indicator_name": "GDP by expenditure component, current prices, seasonally adjusted, discrete quarter (QNA)",
+  "description": "ВВП методом конечного использования по компонентам (КНС, дискретный квартал), текущие цены, с исключением сезонного фактора",
+  "frequency": "quarterly",
+  "unit": "million KZT, seasonally adjusted",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Element 283161 «ВВП методом конечного использования на квартальной основе с сезонной корректировкой», sheet 5: 14 rows (no statistical discrepancy), 2010 Q1 – 2026 Q1; 2010–2012 quarters unadjusted per the footnotes; no benchmarking to the annual value on 2026-09-23.",
+  "publication_date": "2026-07-28",
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2010-01-01",
+  "period_end": "2026-01-01",
+  "next_update_date": "2026-10-28",
+  "transformation": "seasonally and calendar adjusted (X13-ARIMA-SEATS, JDemetra+ 2.2.4), discrete quarter, as published; quarterly national accounts vintage -- see metadata",
+  "revision_status": "original"
+}

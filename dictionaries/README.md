@@ -13,6 +13,7 @@ matches no entry, or more than one, is a structural change and stops the dataset
 | `okved_sections.csv` | ОКЭД sections A–T plus GOODS/SERVICES/IND aggregates, FISIM, GVA, taxes, GDP | national accounts by section, ownership, NOE, employment, investment |
 | `industry_divisions.csv` | ОКЭД divisions 05–39 (+ IND) | GVA by industry division |
 | `expenditure_items.csv` | GDP by expenditure components | expenditure tables 4435–4437 |
+| `income_components.csv` | GDP, compensation, net taxes on production and imports, gross operating surplus | QNA_GDP_INCOME (283160 sheet 1) |
 | `regions.csv` | 22 region codes (KZ → region `national`) | every regional dataset |
 | `products.csv` | physical-output products (the GDP model's natural rows) | production in kind, 5814 |
 | `wb_commodities.csv` | 69 World Bank Pink Sheet price series (`name_en`, `unit` too) | WB annual/monthly prices, CMO price forecasts, OIL_PRICE_BRENT |

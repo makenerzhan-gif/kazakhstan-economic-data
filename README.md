@@ -110,7 +110,7 @@ volume indices, population by region and settlement type, the labour market,
 fixed capital investment), physical output by product, production indices by
 activity and grain by region — have one value per (date, region, variable,
 item), so they live in a parallel layer with the same rules: `config/dims.yaml`
-(61 datasets: 40 annual and 14 quarterly from 36 BNS dynamic tables read from their xlsx or legacy xls
+(80 datasets: 40 annual, 14 year-to-date and 19 discrete-quarter from 40 BNS dynamic tables read from their xlsx or legacy xls
 export, two from the BNS export workbook by commodity group, four from the World
 Bank's Pink Sheet and Commodity Markets Outlook, one from the U.S. EIA Short-Term
 Energy Outlook), `scripts/update_dims.py` (fetcher chosen by each dataset's
@@ -148,6 +148,25 @@ sibling's value. The flow tables say `cumulation: year_to_date` and carry the
 same `transformation` text as `GDP_NOMINAL`; the indices say in their unit
 that they are year-to-date periods in % of the same period of the previous
 year. Nothing is decumulated to discrete quarters.
+
+Discrete quarters come from the only place BNS publishes them: the four tables
+under the heading «Экспериментальная оценка Валового внутреннего продукта» on
+the national-accounts dynamic-tables page — quarterly national accounts built
+with IMF technical assistance (elements 283162 production, 283161 expenditure,
+283160 income, 471384 regions; layout `year_quarters`, ids `QNA_*`, 19
+datasets): GVA by section and GDP by expenditure component in current prices, in
+average 2010 prices, as volume indices (quarter on the same quarter of the
+previous year, plus the cumulative index and deflator sheets), seasonally
+adjusted in current and 2010 prices; GDP by income and the income account by
+activity (compensation, other net taxes, gross operating surplus); GVA by region
+and section from 2019. Their cumulative twin sheets are not stored — they are the
+running sums of the discrete quarters — but are re-read on every run and any
+point where they disagree is reported (`cumulative_check`). **These tables carry
+a different vintage of the 2010–2022 history**: the SNA-2008 recalculation their
+annotation describes, which the dynamic annual tables (4439, 4435, 5927) and
+Taldau do not carry — GDP 2010 is 9.4 % higher, 2017–2022 1.5–2.9 % lower;
+2023–2025 are identical. Every `QNA_*` dataset says so in its `vintage` and
+metadata, and nothing in the annual datasets or the model changes because of it.
 `update_all.py` runs it after the agency updaters. The World Bank also feeds one
 scalar series, `OIL_PRICE_BRENT` (monthly Brent from the Pink Sheet, `scripts/update_wb.py`),
 beside the IMF's `OIL_PRICE` (APSP average).

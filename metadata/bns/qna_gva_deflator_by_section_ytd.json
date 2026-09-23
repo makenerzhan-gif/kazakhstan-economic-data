@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/283162/file/ru/",
+  "dataset_id": "283162",
+  "indicator_id": "QNA_GVA_DEFLATOR_BY_SECTION_YTD",
+  "indicator_name": "GVA deflators by ОКЭД section, year-to-date period on the same period of the previous year (QNA)",
+  "description": "Индексы-дефляторы ВДС по видам экономической деятельности, период к соответствующему периоду прошлого года (КНС, нарастающим итогом)",
+  "frequency": "quarterly",
+  "unit": "% of the same period of the previous year, year-to-date",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Element 283162 «ВВП методом производства (на квартальной основе)», sheet 4 (cumulative; the only deflator sheet): 26 rows (goods/services/industry aggregates, sections A–T, ВДС, чистые налоги, ВВП), 2011 Q1 – 2026 Q1 on 2026-09-23 (the table lags the cumulative dynamic table 4439 by one quarter).",
+  "publication_date": null,
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2011-01-01",
+  "period_end": "2026-01-01",
+  "next_update_date": null,
+  "transformation": "as published: year-to-date period in % of the same period of the previous year -- not converted to discrete quarters; quarterly national accounts vintage -- see metadata",
+  "revision_status": "original"
+}

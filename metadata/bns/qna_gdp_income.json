@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/283160/file/ru/",
+  "dataset_id": "283160",
+  "indicator_id": "QNA_GDP_INCOME",
+  "indicator_name": "GDP by income: GDP, compensation, net taxes on production and imports, gross operating surplus, discrete quarter (QNA)",
+  "description": "ВВП методом доходов: ВВП, оплата труда, чистые налоги на производство и импорт, валовая прибыль (КНС, дискретный квартал)",
+  "frequency": "quarterly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Element 283160 «ВВП методом доходов (на квартальной основе)», sheet 1: four rows, 2010 Q1 – 2026 Q1 on 2026-09-23.",
+  "publication_date": "2026-08-17",
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2010-01-01",
+  "period_end": "2026-01-01",
+  "next_update_date": "2026-10-16",
+  "transformation": "level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",
+  "revision_status": "original"
+}

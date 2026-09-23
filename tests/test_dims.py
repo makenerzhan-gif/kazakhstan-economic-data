@@ -19,7 +19,7 @@ def test_every_dataset_has_a_fetcher_and_a_known_layout():
         key = ds.get("fetcher", ds["agency"])
         assert key in update_dims.AGENCY_FETCHERS, f"{ds['id']}: no fetcher for {key}"
         if key == "bns":
-            assert ds["layout"] in ("periods_across", "region_blocks", "year_subcolumns", "group_blocks", "product_blocks")
+            assert ds["layout"] in ("periods_across", "region_blocks", "year_subcolumns", "group_blocks", "product_blocks", "year_quarters")
         elif key == "bns_trade":
             assert ds["measure"] in ("usd", "tonnes") and ds["dictionary"] == "hs_export_groups" and ds["frequency"] == "monthly"
         elif ds["agency"] == "wb":

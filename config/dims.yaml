@@ -962,6 +962,345 @@ datasets:
     category: labour
     note: "The «I квартал» … «IV квартал» sub-columns under every year (the fifth, «год», is EMPLOYED_BY_SECTION); 2010 Q1 – 2026 Q2 on 2026-09-23. Discrete quarters of the labour force survey, not cumulative."
 
+  # ---------------------------------------------------------------- quarterly national accounts (discrete quarters)
+  # BNS publishes discrete quarters only here: four tables under the heading «Экспериментальная оценка
+  # Валового внутреннего продукта» (production, expenditure, income, regions), each a set of sheets with a
+  # year row over four quarter sub-columns (layout year_quarters). They carry a DIFFERENT VINTAGE of the
+  # 2010-2022 history than the dynamic tables above (see `vintage`); the cumulative sheets that are exact
+  # running sums of the discrete ones are not stored (dedup rule), the cumulative index/deflator sheets are.
+  - id: QNA_GVA_BY_SECTION
+    cumulative_check: '1.1'
+    name_ru: ВДС по видам экономической деятельности (КНС, дискретный квартал), текущие цены
+    name_en: GVA by ОКЭД section, current prices, discrete quarter (QNA)
+    agency: bns
+    element_id: 283162
+    layout: year_quarters
+    sheets: ['1']
+    label_col: 1
+    dictionary: okved_sections
+    min_items: 24
+    frequency: quarterly
+    unit: million KZT
+    transformation: level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283162 «ВВП методом производства (на квартальной основе)», sheet 1: 26 rows (goods/services/industry aggregates, sections A–T, ВДС, чистые налоги, ВВП), 2010 Q1 – 2026 Q1 on 2026-09-23 (the table lags the cumulative dynamic table 4439 by one quarter).'
+  - id: QNA_GVA_BY_SECTION_CONSTANT_2010
+    cumulative_check: '2.1'
+    name_ru: ВДС по видам экономической деятельности (КНС, дискретный квартал), в средних ценах 2010 года
+    name_en: GVA by ОКЭД section, average 2010 prices, discrete quarter (QNA)
+    agency: bns
+    element_id: 283162
+    layout: year_quarters
+    sheets: ['2']
+    label_col: 1
+    dictionary: okved_sections
+    min_items: 24
+    frequency: quarterly
+    unit: million KZT, average 2010 prices
+    transformation: level at average 2010 prices (discrete quarter, as published; quarterly national accounts vintage -- see metadata)
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283162 «ВВП методом производства (на квартальной основе)», sheet 2: 26 rows (goods/services/industry aggregates, sections A–T, ВДС, чистые налоги, ВВП), 2010 Q1 – 2026 Q1 on 2026-09-23 (the table lags the cumulative dynamic table 4439 by one quarter).'
+  - id: QNA_GVA_VOLUME_INDEX_BY_SECTION
+    name_ru: ИФО ВДС по видам экономической деятельности, квартал к соответствующему кварталу прошлого года (КНС)
+    name_en: GVA volume index by ОКЭД section, quarter on the same quarter of the previous year (QNA)
+    agency: bns
+    element_id: 283162
+    layout: year_quarters
+    sheets: ['3']
+    label_col: 1
+    dictionary: okved_sections
+    min_items: 24
+    frequency: quarterly
+    unit: '% of the same quarter of the previous year'
+    transformation: 'as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata'
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283162 «ВВП методом производства (на квартальной основе)», sheet 3: 26 rows (goods/services/industry aggregates, sections A–T, ВДС, чистые налоги, ВВП), 2011 Q1 – 2026 Q1 on 2026-09-23 (the table lags the cumulative dynamic table 4439 by one quarter).'
+  - id: QNA_GVA_VOLUME_INDEX_BY_SECTION_YTD
+    name_ru: ИФО ВДС по видам экономической деятельности, период к соответствующему периоду прошлого года (КНС, нарастающим итогом)
+    name_en: GVA volume index by ОКЭД section, year-to-date period on the same period of the previous year (QNA)
+    agency: bns
+    element_id: 283162
+    layout: year_quarters
+    sheets: ['3.1']
+    label_col: 1
+    dictionary: okved_sections
+    min_items: 24
+    frequency: quarterly
+    unit: '% of the same period of the previous year, year-to-date'
+    transformation: 'as published: year-to-date period in % of the same period of the previous year -- not converted to discrete quarters; quarterly national accounts vintage -- see metadata'
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283162 «ВВП методом производства (на квартальной основе)», sheet 3.1 (cumulative): 26 rows (goods/services/industry aggregates, sections A–T, ВДС, чистые налоги, ВВП), 2011 Q1 – 2026 Q1 on 2026-09-23 (the table lags the cumulative dynamic table 4439 by one quarter).'
+    cumulative: true
+  - id: QNA_GVA_DEFLATOR_BY_SECTION_YTD
+    name_ru: Индексы-дефляторы ВДС по видам экономической деятельности, период к соответствующему периоду прошлого года (КНС, нарастающим итогом)
+    name_en: GVA deflators by ОКЭД section, year-to-date period on the same period of the previous year (QNA)
+    agency: bns
+    element_id: 283162
+    layout: year_quarters
+    sheets: ['4']
+    label_col: 1
+    dictionary: okved_sections
+    min_items: 24
+    frequency: quarterly
+    unit: '% of the same period of the previous year, year-to-date'
+    transformation: 'as published: year-to-date period in % of the same period of the previous year -- not converted to discrete quarters; quarterly national accounts vintage -- see metadata'
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283162 «ВВП методом производства (на квартальной основе)», sheet 4 (cumulative; the only deflator sheet): 26 rows (goods/services/industry aggregates, sections A–T, ВДС, чистые налоги, ВВП), 2011 Q1 – 2026 Q1 on 2026-09-23 (the table lags the cumulative dynamic table 4439 by one quarter).'
+    cumulative: true
+  - id: QNA_GVA_BY_SECTION_SA
+    name_ru: ВДС по видам экономической деятельности (КНС, дискретный квартал), текущие цены, с исключением сезонного фактора
+    name_en: GVA by ОКЭД section, current prices, seasonally adjusted, discrete quarter (QNA)
+    agency: bns
+    element_id: 283162
+    layout: year_quarters
+    sheets: ['5']
+    label_col: 1
+    dictionary: okved_sections
+    min_items: 24
+    frequency: quarterly
+    unit: million KZT, seasonally adjusted
+    transformation: seasonally and calendar adjusted (X13-ARIMA-SEATS, JDemetra+ 2.2.4), discrete quarter, as published; quarterly national accounts vintage -- see metadata
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283162 «ВВП методом производства (на квартальной основе)», sheet 5: 26 rows (goods/services/industry aggregates, sections A–T, ВДС, чистые налоги, ВВП), 2010 Q1 – 2026 Q1 on 2026-09-23 (the table lags the cumulative dynamic table 4439 by one quarter). Footnotes: some rows unadjusted before 2012/2015; quarters need not sum to the annual value (no benchmarking of the adjusted series, per the file''s own metadata).'
+  - id: QNA_GVA_BY_SECTION_SA_CONSTANT_2010
+    name_ru: ВДС по видам экономической деятельности (КНС, дискретный квартал), в ценах 2010 года, с исключением сезонного фактора
+    name_en: GVA by ОКЭД section, 2010 prices, seasonally adjusted, discrete quarter (QNA)
+    agency: bns
+    element_id: 283162
+    layout: year_quarters
+    sheets: ['6']
+    label_col: 1
+    dictionary: okved_sections
+    min_items: 24
+    frequency: quarterly
+    unit: million KZT, average 2010 prices, seasonally adjusted
+    transformation: seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283162 «ВВП методом производства (на квартальной основе)», sheet 6: 26 rows (goods/services/industry aggregates, sections A–T, ВДС, чистые налоги, ВВП), 2010 Q1 – 2026 Q1 on 2026-09-23 (the table lags the cumulative dynamic table 4439 by one quarter).'
+  - id: QNA_GDP_EXPENDITURE
+    cumulative_check: '1.1'
+    name_ru: ВВП методом конечного использования по компонентам (КНС, дискретный квартал), текущие цены
+    name_en: GDP by expenditure component, current prices, discrete quarter (QNA)
+    agency: bns
+    element_id: 283161
+    layout: year_quarters
+    sheets: ['1']
+    label_col: 0
+    dictionary: expenditure_items
+    min_items: 12
+    frequency: quarterly
+    unit: million KZT
+    transformation: level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283161 «ВВП методом конечного использования на квартальной основе с сезонной корректировкой», sheet 1: 16 rows incl. GDP by expenditure and by production, 2010 Q1 – 2026 Q1 on 2026-09-23.'
+  - id: QNA_GDP_EXPENDITURE_CONSTANT_2010
+    cumulative_check: '2.1'
+    name_ru: ВВП методом конечного использования по компонентам (КНС, дискретный квартал), в средних ценах 2010 года
+    name_en: GDP by expenditure component, average 2010 prices, discrete quarter (QNA)
+    agency: bns
+    element_id: 283161
+    layout: year_quarters
+    sheets: ['2']
+    label_col: 0
+    dictionary: expenditure_items
+    min_items: 12
+    frequency: quarterly
+    unit: million KZT, average 2010 prices
+    transformation: level at average 2010 prices (discrete quarter, as published; quarterly national accounts vintage -- see metadata)
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283161 «ВВП методом конечного использования на квартальной основе с сезонной корректировкой», sheet 2: 2010 Q1 – 2026 Q1 on 2026-09-23.'
+  - id: QNA_GDP_EXPENDITURE_VOLUME_INDEX
+    name_ru: ИФО ВВП методом конечного использования по компонентам, квартал к соответствующему кварталу прошлого года (КНС)
+    name_en: GDP volume index by expenditure component, quarter on the same quarter of the previous year (QNA)
+    agency: bns
+    element_id: 283161
+    layout: year_quarters
+    sheets: ['3']
+    label_col: 0
+    dictionary: expenditure_items
+    min_items: 10
+    frequency: quarterly
+    unit: '% of the same quarter of the previous year'
+    transformation: 'as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata'
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283161 «ВВП методом конечного использования на квартальной основе с сезонной корректировкой», sheet 3: 2011 Q1 – 2026 Q1 on 2026-09-23.'
+  - id: QNA_GDP_EXPENDITURE_VOLUME_INDEX_YTD
+    name_ru: ИФО ВВП методом конечного использования по компонентам, период к соответствующему периоду прошлого года (КНС, нарастающим итогом)
+    name_en: GDP volume index by expenditure component, year-to-date (QNA)
+    agency: bns
+    element_id: 283161
+    layout: year_quarters
+    sheets: ['3.1']
+    label_col: 0
+    dictionary: expenditure_items
+    min_items: 10
+    frequency: quarterly
+    unit: '% of the same period of the previous year, year-to-date'
+    transformation: 'as published: year-to-date period in % of the same period of the previous year -- not converted to discrete quarters; quarterly national accounts vintage -- see metadata'
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283161 «ВВП методом конечного использования на квартальной основе с сезонной корректировкой», sheet 3.1 (cumulative): 2011 Q1 – 2026 Q1 on 2026-09-23.'
+    cumulative: true
+  - id: QNA_GDP_EXPENDITURE_DEFLATOR_YTD
+    name_ru: Индекс-дефлятор ВВП методом конечного использования по компонентам, период к соответствующему периоду прошлого года (КНС, нарастающим итогом)
+    name_en: GDP deflator by expenditure component, year-to-date (QNA)
+    agency: bns
+    element_id: 283161
+    layout: year_quarters
+    sheets: ['4']
+    label_col: 0
+    dictionary: expenditure_items
+    min_items: 10
+    frequency: quarterly
+    unit: '% of the same period of the previous year, year-to-date'
+    transformation: 'as published: year-to-date period in % of the same period of the previous year -- not converted to discrete quarters; quarterly national accounts vintage -- see metadata'
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283161 «ВВП методом конечного использования на квартальной основе с сезонной корректировкой», sheet 4 (cumulative; the only deflator sheet): 2011 Q1 – 2026 Q1 on 2026-09-23.'
+    cumulative: true
+  - id: QNA_GDP_EXPENDITURE_SA
+    name_ru: ВВП методом конечного использования по компонентам (КНС, дискретный квартал), текущие цены, с исключением сезонного фактора
+    name_en: GDP by expenditure component, current prices, seasonally adjusted, discrete quarter (QNA)
+    agency: bns
+    element_id: 283161
+    layout: year_quarters
+    sheets: ['5']
+    label_col: 0
+    dictionary: expenditure_items
+    min_items: 12
+    frequency: quarterly
+    unit: million KZT, seasonally adjusted
+    transformation: seasonally and calendar adjusted (X13-ARIMA-SEATS, JDemetra+ 2.2.4), discrete quarter, as published; quarterly national accounts vintage -- see metadata
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283161 «ВВП методом конечного использования на квартальной основе с сезонной корректировкой», sheet 5: 14 rows (no statistical discrepancy), 2010 Q1 – 2026 Q1; 2010–2012 quarters unadjusted per the footnotes; no benchmarking to the annual value on 2026-09-23.'
+  - id: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010
+    name_ru: ВВП методом конечного использования по компонентам (КНС, дискретный квартал), в ценах 2010 года, с исключением сезонного фактора
+    name_en: GDP by expenditure component, 2010 prices, seasonally adjusted, discrete quarter (QNA)
+    agency: bns
+    element_id: 283161
+    layout: year_quarters
+    sheets: ['6']
+    label_col: 0
+    dictionary: expenditure_items
+    min_items: 12
+    frequency: quarterly
+    unit: million KZT, average 2010 prices, seasonally adjusted
+    transformation: seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283161 «ВВП методом конечного использования на квартальной основе с сезонной корректировкой», sheet 6: 13 rows, 2010 Q1 – 2026 Q1 on 2026-09-23.'
+  - id: QNA_GDP_INCOME
+    cumulative_check: '1.1'
+    name_ru: 'ВВП методом доходов: ВВП, оплата труда, чистые налоги на производство и импорт, валовая прибыль (КНС, дискретный квартал)'
+    name_en: 'GDP by income: GDP, compensation, net taxes on production and imports, gross operating surplus, discrete quarter (QNA)'
+    agency: bns
+    element_id: 283160
+    layout: year_quarters
+    sheets: ['1']
+    label_col: 0
+    dictionary: income_components
+    min_items: 4
+    frequency: quarterly
+    unit: million KZT
+    transformation: level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283160 «ВВП методом доходов (на квартальной основе)», sheet 1: four rows, 2010 Q1 – 2026 Q1 on 2026-09-23.'
+  - id: QNA_INCOME_COMPENSATION_BY_SECTION
+    cumulative_check: '2.1'
+    name_ru: Оплата труда в счёте образования доходов, по видам экономической деятельности (КНС, дискретный квартал)
+    name_en: Compensation of employees by ОКЭД section, discrete quarter (QNA)
+    agency: bns
+    element_id: 283160
+    layout: year_quarters
+    sheets: ['2']
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 22
+    frequency: quarterly
+    unit: million KZT
+    transformation: level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283160 «ВВП методом доходов (на квартальной основе)», sheet 2 «Образование доходов по видам экономической деятельности»: an activity label row followed by four component rows (ВДС, оплата труда, другие чистые налоги на производство, валовая прибыль/валовой смешанный доход) for 23 activities and the total; this dataset takes the «Оплата труда» rows, 2010 Q1 – 2026 Q1 on 2026-09-23. The ВДС rows equal QNA_GVA_BY_SECTION on 1 491 of 1 495 common points and are not stored (the four exceptions, all I quarter 2026 on 2026-09-23: A and GOODS lower by 6 034, L and SERVICES higher by 311 169 million KZT in the income account); the two economy-wide rows «Чистые налоги на продукты» and «Валовой внутренний продукт» are in QNA_GVA_BY_SECTION / QNA_GDP_INCOME (skip_rows).'
+    components: &id001 {GVA: ^валовая добавленная стоимость, COMPENSATION: ^оплата труда, OTHER_NET_TAXES: ^другие чистые налоги на производство, GROSS_PROFIT: ^валовая прибыль}
+    component: COMPENSATION
+    label_overrides: {'оптования и розничная торговля; ремонт автомобилей и мотоциклов': G, 'проффесиональная, научная и техническая деятельность': M}   # two misspelt activity labels in 283160 sheet 2 (seen 2026-09-23)
+    skip_rows: &id002 [^чистые налоги на продукты, ^валовой внутренний продукт]
+  - id: QNA_INCOME_OTHER_NET_TAXES_BY_SECTION
+    cumulative_check: '2.1'
+    name_ru: Другие чистые налоги на производство в счёте образования доходов, по видам экономической деятельности (КНС, дискретный квартал)
+    name_en: Other net taxes on production by ОКЭД section, discrete quarter (QNA)
+    agency: bns
+    element_id: 283160
+    layout: year_quarters
+    sheets: ['2']
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 22
+    frequency: quarterly
+    unit: million KZT
+    transformation: level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283160 «ВВП методом доходов (на квартальной основе)», sheet 2 «Образование доходов по видам экономической деятельности»: an activity label row followed by four component rows (ВДС, оплата труда, другие чистые налоги на производство, валовая прибыль/валовой смешанный доход) for 23 activities and the total; this dataset takes the «Другие чистые налоги на производство» rows, 2010 Q1 – 2026 Q1 on 2026-09-23. The ВДС rows equal QNA_GVA_BY_SECTION on 1 491 of 1 495 common points and are not stored (the four exceptions, all I quarter 2026 on 2026-09-23: A and GOODS lower by 6 034, L and SERVICES higher by 311 169 million KZT in the income account); the two economy-wide rows «Чистые налоги на продукты» and «Валовой внутренний продукт» are in QNA_GVA_BY_SECTION / QNA_GDP_INCOME (skip_rows).'
+    components: *id001
+    component: OTHER_NET_TAXES
+    label_overrides: {'оптования и розничная торговля; ремонт автомобилей и мотоциклов': G, 'проффесиональная, научная и техническая деятельность': M}   # two misspelt activity labels in 283160 sheet 2 (seen 2026-09-23)
+    skip_rows: *id002
+  - id: QNA_INCOME_GROSS_PROFIT_BY_SECTION
+    cumulative_check: '2.1'
+    name_ru: Валовая прибыль / валовой смешанный доход в счёте образования доходов, по видам экономической деятельности (КНС, дискретный квартал)
+    name_en: Gross operating surplus / gross mixed income by ОКЭД section, discrete quarter (QNA)
+    agency: bns
+    element_id: 283160
+    layout: year_quarters
+    sheets: ['2']
+    label_col: 0
+    dictionary: okved_sections
+    min_items: 22
+    frequency: quarterly
+    unit: million KZT
+    transformation: level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 283160 «ВВП методом доходов (на квартальной основе)», sheet 2 «Образование доходов по видам экономической деятельности»: an activity label row followed by four component rows (ВДС, оплата труда, другие чистые налоги на производство, валовая прибыль/валовой смешанный доход) for 23 activities and the total; this dataset takes the «Валовая прибыль / валовой смешанный доход» rows, 2010 Q1 – 2026 Q1 on 2026-09-23. The ВДС rows equal QNA_GVA_BY_SECTION on 1 491 of 1 495 common points and are not stored (the four exceptions, all I quarter 2026 on 2026-09-23: A and GOODS lower by 6 034, L and SERVICES higher by 311 169 million KZT in the income account); the two economy-wide rows «Чистые налоги на продукты» and «Валовой внутренний продукт» are in QNA_GVA_BY_SECTION / QNA_GDP_INCOME (skip_rows).'
+    components: *id001
+    component: GROSS_PROFIT
+    label_overrides: {'оптования и розничная торговля; ремонт автомобилей и мотоциклов': G, 'проффесиональная, научная и техническая деятельность': M}   # two misspelt activity labels in 283160 sheet 2 (seen 2026-09-23)
+    skip_rows: *id002
+  - id: QNA_GVA_BY_REGION_SECTION
+    cumulative_check: ВДС квартал с накоплением
+    name_ru: ВДС по видам экономической деятельности в разрезе регионов (КНС, дискретный квартал)
+    name_en: GVA by ОКЭД section and region, current prices, discrete quarter (QNA)
+    agency: bns
+    element_id: 471384
+    layout: year_quarters
+    sheets: [ВДС дискретный квартал]
+    label_col: 2
+    dictionary: okved_sections
+    min_items: 22
+    frequency: quarterly
+    unit: million KZT
+    transformation: level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)
+    category: national_accounts
+    vintage: 'BNS quarterly national accounts (the «Экспериментальная оценка Валового внутреннего продукта» group of the national-accounts dynamic tables, built with IMF technical assistance, benchmarked to annual data). VINTAGE: 2010-2022 are the SNA-2008 recalculation announced in the files'' annotation and differ from the dynamic tables 4439/4435/5927 and Taldau (GDP 2010 +9.4 %, 2017-2022 -1.5..-2.9 %); 2023-2025 equal them. Checked 2026-09-23.'
+    note: 'Element 471384 «Валовой региональный продукт на квартальной основе», sheet «ВДС дискретный квартал»: one block per region (КАТО name in column A: «Республика Казахстан», «Область Абай», «город Астана»), ОКЭД code in column B, name in column C; sections, ВДС, чистые налоги, ВРП/ВВП; 2019 Q1 – 2026 Q1 on 2026-09-23. The cumulative sheet is not stored but re-read on every run (cumulative_check): it is the running sum of this one on all points except IV quarter 2025 in five regions — AKM, AKT, ATY, ZHM, ZKO — where the discrete quarters of 2025 sum above the published «год 2025» of the same file (which equals table 5927) by 2.2 % (AKM), 20 % (AKT), 15 % (ATY), 16 % (ZHM), 16 % (ZKO); the national total agrees. Seen 2026-09-23; kept as published, warned on every run.'
+    region_col: 0
+    regions: all
+    min_regions: 20
+
   # ---------------------------------------------------------------- external trade by commodity group
   # The export workbook behind EXPORTS / OIL_EXPORTS_* (element 446905): flat 6-digit HS lines
   # inside regional blocks, monthly columns [tonnes, additional unit, thousand USD]. Groups are

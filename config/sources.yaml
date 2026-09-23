@@ -211,6 +211,45 @@ agencies:
       GRAIN_HARVEST_BY_REGION: {status: confirmed_xlsx, element_id: 8160, download_url: "https://stat.gov.kz/api/iblock/element/8160/file/ru/", format: xls_table, notes: "Sheet 'валовой сбор' (.xls): crop group rows (Всего, из них: пшеницы …) each followed by the country and region rows; years 2004–2025 across; thousand tonnes."}
       GRAIN_SOWN_AREA_BY_REGION: {status: confirmed_xlsx, element_id: 8154, download_url: "https://stat.gov.kz/api/iblock/element/8154/file/ru/", format: xls_table, notes: "As 8160, thousand hectares."}
       GRAIN_YIELD_BY_REGION: {status: confirmed_xlsx, element_id: 8166, download_url: "https://stat.gov.kz/api/iblock/element/8166/file/ru/", format: xls_table, notes: "As 8160, centners per hectare."}
+      # ---- quarterly national accounts, DISCRETE quarters (2026-09-23) ----
+      # Found by reading the national-accounts «Динамические таблицы» page: a group headed
+      # «Экспериментальная оценка Валового внутреннего продукта» holds the only tables with discrete
+      # quarters (the dynamic tables above and Taldau index 2709379 offer «Год» and «Квартал с
+      # накоплением» only). Each file: an Аннотация sheet (IMF-assisted quarterly national accounts,
+      # Denton/Cholette-Dagum benchmarking in XLPBM, X13-ARIMA-SEATS in JDemetra+ 2.2.4), a Содержание
+      # sheet, then numbered sheets with a year row over four quarter sub-columns. VERIFIED: discrete
+      # quarters sum to the files' own cumulative sheets exactly (283162: 1 248/1 248 points); the sums
+      # equal the dynamic annual tables 4439/4435/5927 ONLY for 2023-2025 -- 2010-2022 are the SNA-2008
+      # recalculation described in the annotation (GDP 2010 +9.4 %, 2011 +6.5 % ... 2017-2022 -1.5..-2.9 %),
+      # which the dynamic tables and Taldau (checked live 2026-09-23, still 21 815 517 for 2010) do not carry.
+      QNA_GVA_BY_SECTION:
+        status: confirmed_xlsx
+        element_id: 283162
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/283162/file/ru/"
+        format: xlsx_table
+        notes: "«ВВП методом производства (на квартальной основе)», updated 17.08.2026 (one quarter behind 4439). Sheets 1/1.1 current prices discrete/cumulative, 2/2.1 average 2010 prices, 3/3.1 ИФО discrete/cumulative (from 2011), 4 deflator cumulative, 5/6 seasonally adjusted current/2010 prices. Rows: ОКЭД code in column A («Секция А (01-03)»), name in column B. Feeds QNA_GVA_BY_SECTION, _CONSTANT_2010, _VOLUME_INDEX_BY_SECTION(_YTD), _DEFLATOR_BY_SECTION_YTD, _SA, _SA_CONSTANT_2010."
+      QNA_GDP_EXPENDITURE:
+        status: confirmed_xlsx
+        element_id: 283161
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/283161/file/ru/"
+        format: xlsx_table
+        notes: "«ВВП методом конечного использования на квартальной основе с сезонной корректировкой», updated 28.07.2026, next 28.10.2026 (Метаданные 1). Same sheet set as 283162 for 15 expenditure components + GDP by production; labels in column A. Feeds the seven QNA_GDP_EXPENDITURE* datasets."
+      QNA_GDP_INCOME:
+        status: confirmed_xlsx
+        element_id: 283160
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/283160/file/ru/"
+        format: xlsx_table
+        notes: "«ВВП методом доходов (на квартальной основе)», updated 17.08.2026, next 16.10.2026. Sheet 1: GDP, оплата труда, чистые налоги на производство и импорт, валовая прибыль (discrete); 1.1 cumulative; sheet 2: income account by 23 activities x 4 components (an activity row, then ВДС/оплата труда/другие чистые налоги/валовая прибыль rows) + «Итого» + two economy-wide rows; 2.1 cumulative. Feeds QNA_GDP_INCOME and QNA_INCOME_{COMPENSATION,OTHER_NET_TAXES,GROSS_PROFIT}_BY_SECTION."
+      QNA_GVA_BY_REGION_SECTION:
+        status: confirmed_xlsx
+        element_id: 471384
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/471384/file/ru/"
+        format: xlsx_table
+        notes: "«Валовой региональный продукт на квартальной основе», updated 18.09.2026, next 30.10.2026. Sheets «ВДС дискретный квартал» / «ВДС квартал с накоплением»: region blocks (name in column A, incl. «город Астана»), ОКЭД code column B, name column C, 2019 Q1 onward. Discrete sums equal 5927 for 2023-2025 only (2024: 414/461 (region, section, year) points)."
       # ---- scalar indicators ----
       GDP_NOMINAL:
         status: derived   # 2026-09-23: was confirmed_json; the series is now written from GVA_NOMINAL_BY_SECTION_QUARTERLY[GDP] x 1e6 (scripts/update_derived.py), the xlsx export of the same element 4439 -- equal to this cube on all 66 quarters; the trail below stays

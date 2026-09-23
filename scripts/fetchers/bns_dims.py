@@ -30,6 +30,18 @@ year_subcolumns  one header cell per year spanning several sub-columns; sub_offs
 group_blocks     6576: group label rows («Все население», «Мужчины», «Городское
                  население» …) each followed by the country row and one row per
                  region; the item is the group (ALL, URBAN, RURAL, ALL_MEN …).
+year_quarters    the quarterly national accounts 283162/283161/283160/471384: a row
+                 of year cells, each spanning four sub-columns whose labels sit on
+                 the next row — «I квартал» … «IV квартал» (discrete quarters) or,
+                 with `cumulative: true`, «I квартал | I полугодие | 9 месяцев |
+                 год» / «Январь - Март | … | год». Items down the rows in label_col;
+                 `region_col` starts a region block (471384: «Республика Казахстан»,
+                 «Область Абай», «город Астана», the block's first row is also its
+                 first data row); `components` + `component` (283160 sheet 2: an
+                 activity label row without numbers, then one row per income
+                 component) pick one component's rows, the item being the activity.
+                 Rows with numbers that are neither items nor components must be
+                 listed in `skip_rows`, otherwise they stop the dataset.
 
 Dating: an annual observation is 31 December of its year; a quarterly one is the
 first day of the last quarter it covers (2024-07-01 for January–September 2024,
@@ -94,8 +106,29 @@ def period_of(label) -> tuple[int, int] | None:
 def quarter_of(label) -> int | None:
     """1–4 for a bare quarter label («I квартал» … «IV квартал», 5831's sub-column row),
     None for anything else («год», an empty cell)."""
-    m = re.match(r"^([ivі]+)\s*квартал", re.sub(r"\s+", " ", str(label or "")).strip().lower())
+    m = re.match(r"^([ivі]+)\s*кв(?:артал|\.|\b)", re.sub(r"\s+", " ", str(label or "")).strip().lower())
     return ROMAN_QUARTERS.get(m.group(1)) if m else None
+
+
+def ytd_of(label) -> int | None:
+    """1–4 for a bare year-to-date label without a year — «I квартал», «I полугодие»,
+    «9 месяцев», «год» (283162/283161 cumulative sheets; 283160 abbreviates «I кв.») or
+    «Январь - Март», «Январь - Июнь», «Январь - Сентябрь», «год» (471384); None otherwise."""
+    s = re.sub(r"\s+", " ", str(label or "")).strip().lower()
+    if re.match(r"^(?:1|i|і)\s*кв(?:артал|\.|\b)|^январь\s*-\s*март", s):
+        return 1
+    if re.match(r"^(?:1|i|і)\s*полугодие|^январь\s*-\s*июнь", s):
+        return 2
+    if re.match(r"^9\s*месяц|^январь\s*-\s*сентябрь", s):
+        return 3
+    if re.match(r"^год\b", s):
+        return 4
+    return None
+
+
+# A bare year cell of the quarterly national-accounts tables: 2010, "2010", "2025 3)" or
+# "20253)" (a footnote mark glued to the year), never a data cell such as "2146592.05".
+YEAR_CELL = re.compile(r"^\s*(\d{4})(?:\.0)?(?:\s*\d\))*\s*$")
 
 
 def _to_float(v) -> float | None:
@@ -451,6 +484,84 @@ def parse_group_blocks(grid: list[list], ds: dict, year_regex: re.Pattern) -> li
     return records
 
 
+def parse_year_quarters(grid: list[list], dictionary: list[dict] | None, ds: dict) -> list[dict]:
+    """The quarterly national-accounts tables (see the module docstring, layout year_quarters)."""
+    cumulative = bool(ds.get("cumulative"))
+    sub_of = ytd_of if cumulative else quarter_of
+    expected = "«I квартал», «I полугодие», «9 месяцев», «год»" if cumulative else "«I квартал», «II квартал», «III квартал», «IV квартал»"
+    header_i = None
+    for i in range(len(grid) - 1):
+        years = {y: c for y, c in _annual_columns(grid[i], YEAR_CELL).items() if 1990 <= y <= 2035}
+        if years and sum(1 for c in grid[i + 1] if sub_of(c)) >= 4:
+            header_i = i
+            break
+    if header_i is None:
+        _structural(ds, "no year row followed by a row of quarter labels", f"years across, {expected} under each", grid[:6])
+    years, subs = _annual_columns(grid[header_i], YEAR_CELL), grid[header_i + 1]
+    cols: dict[tuple[int, int], int] = {}
+    last_year = max(years)
+    for y, c in years.items():
+        for q in (1, 2, 3, 4):
+            j = c + q - 1
+            found = sub_of(subs[j]) if j < len(subs) else None
+            if found != q:
+                # The current year is published as far as it goes («2026 | I квартал» only);
+                # a gap under any earlier year, or a label out of order, is a structural change.
+                if y == last_year and found is None and q > 1:
+                    break
+                _structural(ds, f"sub-column {q} under {y} is not the {q}. of {expected}", f"{expected} under every year (the last year may stop early)", subs[c:c + 4])
+            cols[(y, q)] = j
+    cols = _from_year(cols, ds)
+    label_col, region_col = int(ds.get("label_col", 0)), ds.get("region_col")
+    want_all = ds.get("regions", "national") == "all"
+    components = {code: re.compile(pat) for code, pat in (ds.get("components") or {}).items()}
+    skip_rows = [re.compile(p) for p in ds.get("skip_rows", [])]
+    records, unmatched, bad_regions = [], [], []
+    region, group = dims.NATIONAL, None
+    for row in grid[header_i + 2:]:
+        if region_col is not None and region_col < len(row) and row[region_col] not in (None, ""):
+            reg = dims.match_region(row[region_col])
+            if reg is None:
+                bad_regions.append(str(row[region_col]).strip())
+            region = None if reg is None else (reg[0] if (want_all or reg[0] == dims.NATIONAL) else None)
+        label = row[label_col] if label_col < len(row) else None
+        if region is None or label is None or not str(label).strip() or FOOTNOTE_ROW.match(str(label)):
+            continue
+        norm = dims.normalise_label(label)
+        values = {k: _to_float(row[j]) for k, j in cols.items() if j < len(row)}
+        has_values = any(v is not None for v in values.values())
+        if any(p.search(norm) for p in skip_rows):
+            continue
+        if components:
+            hit = next((code for code, pat in components.items() if pat.search(norm)), None)
+            if hit is None:                              # not a component row: an activity label (the cumulative twin
+                group_hit = _item(label, ds, dictionary)   # 2.1 puts numbers on «Производство услуг», the discrete sheet none)
+                if group_hit is None:
+                    unmatched.append(str(label).strip())
+                else:
+                    group = group_hit
+                continue
+            if hit != ds["component"]:
+                continue
+            if group is None:
+                _structural(ds, f"a «{label}» row under no recognised activity label (last unrecognised label: {unmatched[-1] if unmatched else None})",
+                            "an activity label row from the dictionary before its component rows", row[:3])
+            code, name = group
+            records += [_rec(k, region, code, name, v) for k, v in values.items() if v is not None]
+            continue
+        if not has_values:
+            continue
+        key = _row_key(label, ds, dictionary, unmatched, row)
+        if key is None:
+            continue
+        _, code, name = key
+        records += [_rec(k, region, code, name, v) for k, v in values.items() if v is not None]
+    if bad_regions and ds.get("strict", True):
+        _structural(ds, "region blocks whose name matches no dictionary entry", "every block name in dictionaries/regions.csv", bad_regions)
+    _unmatched(ds, unmatched)
+    return records
+
+
 # ---------------------------------------------------------------- entry point
 
 UPDATE_DATES = {"дата последней актуализации": "release", "дата следующей актуализации": "next_update"}
@@ -489,14 +600,53 @@ def update_dates(grids: dict[str, list[list]]) -> dict[str, str]:
     return out
 
 
+def cumulative_check(content: bytes, ds: dict, records: list[dict]) -> list[str]:
+    """The quarterly national-accounts files publish every discrete sheet next to its
+    year-to-date twin. The twin is not stored (it is the running sum of what is), but it is
+    read on every run and compared: a (region, item, period) whose running sum of discrete
+    quarters differs from the published cumulative value is reported as a warning — the
+    file is inconsistent with itself there (seen 2026-09-23: 471384, IV quarter 2025 in five
+    regions), and the discrete value is kept as published."""
+    twin = {**ds, "id": f"{ds['id']}[cumulative twin]", "sheets": [ds["cumulative_check"]], "cumulative": True}
+    try:
+        cumulative = parse(content, twin)
+    except validation.StructuralChangeError as exc:         # the twin is a check, not the data: warn, keep the dataset
+        return [f"cumulative twin sheet {ds['cumulative_check']!r} could not be read, cross-check skipped: {str(exc).splitlines()[1]}"]
+    by: dict[tuple, dict[int, float]] = {}
+    for r in records:
+        by.setdefault((r["region"], r["item_code"], r["date"][:4]), {})[int(r["date"][5:7])] = float(r["value"])
+    sums: dict[tuple, float] = {}
+    for (region, code, year), quarters in by.items():
+        acc = 0.0
+        for month in (1, 4, 7, 10):
+            if month not in quarters:
+                break
+            acc += quarters[month]
+            sums[(region, code, f"{year}-{month:02d}-01")] = acc
+    bad = []
+    for r in cumulative:
+        key = (r["region"], r["item_code"], r["date"])
+        if key in sums and abs(sums[key] - float(r["value"])) > 1e-6 * max(1.0, abs(float(r["value"]))):
+            bad.append(f"{key[1]}@{key[0]} {key[2]}: cumulative sheet {float(r['value']):.1f}, sum of discrete quarters {sums[key]:.1f}")
+    if not bad:
+        return []
+    return [f"cumulative twin sheet {ds['cumulative_check']!r} disagrees with the running sum of the discrete quarters on "
+            f"{len(bad)} of {len(cumulative)} points (discrete values kept as published): " + "; ".join(bad[:8])
+            + (" …" if len(bad) > 8 else "")]
+
+
 def fetch(ds: dict) -> tuple[list[dict], dict]:
     url = f"https://stat.gov.kz/api/iblock/element/{ds['element_id']}/file/ru/"
     content = bns._download(url)
     bns._save_raw(ds["id"], content, "xls" if is_legacy_xls(content) else "xlsx", {"source_url": url, "element_id": ds["element_id"]})
     grids = _sheets(content)
-    return parse(content, ds), {"frequency": ds["frequency"], "source_url": url, "dataset_id": str(ds["element_id"]),
-                                "note": ds.get("note", "annual values from the xlsx export; quarterly year-to-date columns skipped"),
-                                **update_dates(grids)}
+    records = parse(content, ds)
+    manifest = {"frequency": ds["frequency"], "source_url": url, "dataset_id": str(ds["element_id"]),
+                "note": ds.get("note", "annual values from the xlsx export; quarterly year-to-date columns skipped"),
+                **update_dates(grids)}
+    if ds.get("cumulative_check"):
+        manifest["warnings"] = cumulative_check(content, ds, records)
+    return records, manifest
 
 
 def parse(content: bytes, ds: dict) -> list[dict]:
@@ -515,6 +665,8 @@ def parse(content: bytes, ds: dict) -> list[dict]:
             records += parse_group_blocks(grid, ds, year_regex)
         elif ds["layout"] == "product_blocks":
             records += parse_product_blocks(grid, dictionary, ds, year_regex)
+        elif ds["layout"] == "year_quarters":
+            records += parse_year_quarters(grid, dictionary, ds)
         else:
             raise ValueError(f"{ds['id']}: unknown layout {ds['layout']!r}")
     seen = {}
