@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/4445/file/ru/",
+  "dataset_id": "4445",
+  "indicator_id": "OIL_GAS_SECTOR_GDP_SHARE",
+  "indicator_name": "GVA of the oil-and-gas and commodity sectors, % of GDP",
+  "description": "Удельный вес ВДС нефтегазового и сырьевого секторов в ВВП",
+  "frequency": "annual",
+  "unit": "% of GDP",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Sheet «Структура», same rows as the ВДС sheet.",
+  "publication_date": "2026-07-31",
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2010-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": "2027-07-31",
+  "transformation": "level",
+  "revision_status": "original"
+}

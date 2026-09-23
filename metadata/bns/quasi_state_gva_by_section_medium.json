@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/75044/file/ru/",
+  "dataset_id": "75044",
+  "indicator_id": "QUASI_STATE_GVA_BY_SECTION_MEDIUM",
+  "indicator_name": "Quasi-public sector GVA, medium (101-250 employees) enterprises, by ОКЭД section",
+  "description": "ВДС средних (101–250 человек) квазигосударственных предприятий по видам деятельности",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Sheet «ВДС по КРП и ОКЭД»: «2018г.» … each over three size sub-columns; this dataset takes sub-column 2.",
+  "publication_date": null,
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2018-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

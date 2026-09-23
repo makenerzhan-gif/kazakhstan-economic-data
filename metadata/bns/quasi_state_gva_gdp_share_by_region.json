@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/75044/file/ru/",
+  "dataset_id": "75044",
+  "indicator_id": "QUASI_STATE_GVA_GDP_SHARE_BY_REGION",
+  "indicator_name": "Quasi-public sector GVA, % of GDP, by region",
+  "description": "Доля ВДС квазигосударственного сектора в ВВП по регионам",
+  "frequency": "annual",
+  "unit": "% of GDP",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Sheet «Доля в ВВП»: regions down, «2018г.» … across.",
+  "publication_date": null,
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2018-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

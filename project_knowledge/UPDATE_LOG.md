@@ -4571,3 +4571,49 @@ hash (b115ea6f); new SHA-256 bc2f716e…; the original 15.01.2025 file is untouc
 **Left out.** No formula of the model uses the new sheet — how the author wants the structure or
 contribution calculations to read it is their call; the history sheets stay on the dynamic-table
 vintage until BNS revises those tables (the daily check will show it as revisions).
+
+## 2026-09-23 — the rest of the national-accounts page: 15 tables, 35 datasets, 84 492 rows
+
+**Why.** The user asked whether every table on the BNS national-accounts «Динамические
+таблицы» page is in the pipeline. Of 47, 20 were; 6 are derivable from those (structure
+shares, regional shares, GRP per capita, GDP by income as a whole, GDP per capita in tenge);
+6 are one-off or narrow publications (experimental SUT-based GDP/GRP 2024, the financial
+balance-sheet pilot, creative industries, supply-use tables in previous-year prices — offered
+to the МОБ project instead). The user said «Добавь» to the remaining 15.
+
+**What.** 35 datasets, 84 492 rows, eight new sheet layouts in `scripts/fetchers/bns_dims.py`
+(described in its docstring): `year_sheets` (81477 gross output by region and section, 81478
+the production account by region, 2022–2025), `periods_across` with new dictionaries (286855
+six annual SNA aggregates 2010–2024; 4445 the oil-and-gas / commodity sector tables — 32 items:
+sector aggregates and their product lines, `dictionaries/oil_gas_sectors.csv`; 5923 GRP by
+region from 1993 — 1990–1992 are in roubles and skipped — plus its year-to-date quarterly
+series 2008 Q1 on; 5932 the non-observed economy's share of GDP and of GRP by region; 75044's
+quasi-public GVA share and large-enterprise productivity), `year_quarters` with a cumulative
+flag (4449 labour productivity by section, 4450 its index y/y and 2022 = 100, 5934's regional
+index 2022 = 100), `year_blocks_items_regions_ytd` (5933/5934 productivity and its index by
+region and section since 2010/2011 — 23 581 and 22 237 rows), `year_blocks_regions_items`
+(5932 NOE by region and activity), `year_blocks_items_regions` (75044 quasi-public GVA by
+region and section, the year read from each block's title), `year_subcolumns` (75044 GVA by
+enterprise size, three datasets), `month_rows` / `year_months` / `region_blocks_months` (5941–
+5943 the short-term economic indicator: monthly level, year-to-date level, volume index by
+country, region and region × activity from January 2021), `sector_columns` (410224 GDP
+components by institutional sector S11–S15 and total: output, intermediate consumption, GVA,
+compensation, other taxes, consumption of fixed capital, net profit — items «<activity>_<sector>»,
+seven datasets). New dictionaries `sna_aggregates`, `production_account`, `oil_gas_sectors`,
+`kei_activities` (the indicator's «Связь» stays COMMUNICATIONS, not folded into J);
+`regions.csv` learnt «Нур-Султан» (AST) and BNS's misspelt «Карагандиская». Quirks handled
+loudly rather than guessed: 5933/5934's current-year block repeats «1 квартал» in all four
+sub-columns (the last block may stop early); 81478's sheet «2023 год » has a trailing space
+(all «YYYY год» sheets are taken); 5941 puts the year marker in column B for 2025–2026 and
+column C before; 5943's column labels carry their own year («ИФО, января 2022г. к …»);
+5932's third sheet has one header for all year blocks. Every dataset states in `note` what it
+reads. Live run: 35/35 ok; the 15 files are 1.9 MB together, one raw copy each.
+`macro_dims_long.csv`: 133 105 → 217 597 rows, 115 datasets. Tests 349 → 359
+(`tests/test_na_page_layouts.py`).
+
+**Not taken, and why.** 4450's sub-industry sheets (agriculture, ICT by division) and 5934's
+«к уровню 2019» — older base; 4445 «Свод» and 75044 «Доля по КРП» — derived from the sheets
+read; 469090/471272 (experimental GDP/GRP 2024 on a SUT basis — text sheets), 466862
+(financial assets by sector, one year), 345748 (creative industries 2018–2023), 470989
+(supply-use tables in previous-year prices, experimental — for the МОБ model, not this
+pipeline). Nothing in `config/model_map.yaml` changed.

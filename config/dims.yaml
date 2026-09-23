@@ -21,6 +21,9 @@
 #   year_subcolumns  one row per item, one header cell per year with several sub-columns;
 #                    sub_offset picks the sub-column (0 = first); `periods: quarterly_subcolumns`
 #                    reads the four «I–IV квартал» sub-columns as discrete quarters (5831)
+#   year_quarters / year_months / year_sheets / year_blocks_* / month_rows / region_blocks_months /
+#                    sector_columns — the quarterly national accounts and the rest of the page; each is
+#                    described in scripts/fetchers/bns_dims.py's docstring
 # periods — annual (default), quarterly_ytd or quarterly_subcolumns, see above. A quarterly
 #   dataset is a sibling of an annual one (same element, same rows, same dictionary, id
 #   suffixed _QUARTERLY) and says `frequency: quarterly`; `cumulation: year_to_date` marks
@@ -1300,6 +1303,540 @@ datasets:
     region_col: 0
     regions: all
     min_regions: 20
+
+  # ---------------------------------------------------------------- the rest of the national-accounts page (2026-09-23)
+  # Fifteen more files from the same page: output and the production account by region, the annual SNA
+  # aggregates, labour productivity (levels and indices, by section and by region), the oil-and-gas and
+  # commodity sector tables, the short-term economic indicator (monthly), GRP by region back to 1993 and
+  # year-to-date, the non-observed economy by region, the quasi-public sector, GDP components by
+  # institutional sector. Layouts year_sheets, year_blocks_*, month_rows, year_months,
+  # region_blocks_months and sector_columns are described in scripts/fetchers/bns_dims.py.
+  - id: OUTPUT_BY_REGION_SECTION
+    name_ru: Выпуск по видам экономической деятельности и регионам
+    name_en: Gross output by ОКЭД section and region
+    agency: bns
+    element_id: 81477
+    layout: year_sheets
+    dictionary: okved_sections
+    label_overrides: {всего: TOTAL}
+    regions: all
+    min_items: 20
+    min_regions: 20
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: One sheet per year («2022 год» …), items across the «код КАТО» header row, one row per region; «Всего» = TOTAL. 2022–2025 on 2026-09-23.
+  - {id: PRODUCTION_ACCOUNT_BY_REGION, name_ru: 'Выпуск, промежуточное потребление, ВДС, чистые налоги и ВРП по регионам', name_en: 'Production account by region: output, intermediate consumption, GVA, net taxes, GRP', agency: bns, element_id: 81478, layout: year_sheets, dictionary: production_account, regions: all, min_items: 5, min_regions: 20, frequency: annual, unit: million KZT, category: national_accounts, note: 'One sheet per year, the five measures across, one row per region. 2022–2025 on 2026-09-23 (sheet «2023 год » carries a trailing space).'}
+  - {id: SNA_AGGREGATES, name_ru: 'Агрегаты системы национальных счетов, годовые', name_en: 'Annual SNA aggregates: GVA, GDP, gross profit, GNI, gross disposable income, gross saving', agency: bns, element_id: 286855, layout: periods_across, sheet_match: ^Динамика, label_col: 0, year_regex: '^\s*(\d{4})', dictionary: sna_aggregates, min_items: 6, frequency: annual, unit: million KZT, category: national_accounts, note: 'Sheet «Динамика агрегатов»: six aggregates down, years 2010–2025 across (the file''s last update 22.12.2025).'}
+  - id: LABOUR_PRODUCTIVITY_BY_SECTION_YTD
+    name_ru: Производительность труда по видам экономической деятельности, нарастающим итогом
+    name_en: Labour productivity by ОКЭД section, year-to-date
+    agency: bns
+    element_id: 4449
+    layout: year_quarters
+    cumulative: true
+    sheets: [2010-2026]
+    label_col: 0
+    dictionary: okved_sections
+    label_overrides: {в целом по экономике: TOTAL}
+    min_items: 20
+    transformation: level, year-to-date (as published -- the level for January-<month> or the quarter-end year-to-date period)
+    frequency: quarterly
+    unit: thousand KZT per employed person, year-to-date
+    category: labour
+    note: 'Sheet «2010-2026»: «YYYY год» over «1 квартал | 1 полугодие | 9 месяцев | год»; «В целом по экономике» = TOTAL. 2010 Q1 – 2026 Q1 on 2026-09-23.'
+  - id: LABOUR_PRODUCTIVITY_INDEX_BY_SECTION_YTD
+    name_ru: Индекс производительности труда по видам экономической деятельности, нарастающим итогом
+    name_en: Labour productivity index by ОКЭД section, year-to-date
+    agency: bns
+    element_id: 4450
+    layout: year_quarters
+    cumulative: true
+    sheets: [2010-2026 годы]
+    label_col: 0
+    dictionary: okved_sections
+    label_overrides: {в целом по экономике: TOTAL}
+    min_items: 20
+    transformation: 'as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods'
+    frequency: quarterly
+    unit: '% of the same period of the previous year, year-to-date'
+    category: labour
+    note: Sheet «2010-2026 годы». 2010 Q1 – 2026 Q1 on 2026-09-23.
+  - id: LABOUR_PRODUCTIVITY_INDEX_BY_SECTION_2022_BASE
+    name_ru: Индекс производительности труда по видам экономической деятельности к уровню 2022 года
+    name_en: Labour productivity index by ОКЭД section, 2022 = 100, year-to-date
+    agency: bns
+    element_id: 4450
+    layout: year_quarters
+    cumulative: true
+    sheets: [2022 год =100]
+    label_col: 0
+    dictionary: okved_sections
+    label_overrides: {в целом по экономике: TOTAL}
+    min_items: 20
+    transformation: 'as published: year-to-date period in % of the same period of 2022'
+    frequency: quarterly
+    unit: '% of the same period of 2022 (2022 = 100), year-to-date'
+    category: labour
+    note: Sheet «2022 год =100». 2022 Q1 – 2026 Q1 on 2026-09-23.
+  - id: LABOUR_PRODUCTIVITY_BY_REGION_SECTION_YTD
+    name_ru: Производительность труда по регионам и видам экономической деятельности, нарастающим итогом
+    name_en: Labour productivity by region and ОКЭД section, year-to-date
+    agency: bns
+    element_id: 5933
+    layout: year_blocks_items_regions_ytd
+    sheets: [ПТ]
+    dictionary: okved_sections
+    regions: all
+    min_items: 18
+    min_regions: 14
+    transformation: level, year-to-date (as published -- the level for January-<month> or the quarter-end year-to-date period)
+    frequency: quarterly
+    unit: thousand KZT per employed person, year-to-date
+    category: labour
+    note: 'Sheet «ПТ»: a block per year (the year alone in column A), region names across each spanning «1 квартал | 1 полугодие | 9 месяцев | год», items down. 2010–2026 Q1; 16 regions before 2022 (incl. Южно-Казахстанская, г. Нур-Султан), 20 after.'
+  - id: LABOUR_PRODUCTIVITY_INDEX_BY_REGION_SECTION_YTD
+    name_ru: Индекс производительности труда по регионам и видам экономической деятельности, нарастающим итогом
+    name_en: Labour productivity index by region and ОКЭД section, year-to-date
+    agency: bns
+    element_id: 5934
+    layout: year_blocks_items_regions_ytd
+    sheets: [ИПТ]
+    dictionary: okved_sections
+    regions: all
+    min_items: 18
+    min_regions: 14
+    transformation: 'as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods'
+    frequency: quarterly
+    unit: '% of the same period of the previous year, year-to-date'
+    category: labour
+    note: Sheet «ИПТ», same layout as 5933; zeros where BNS publishes 0 for early quarters. 2011–2026 Q1.
+  - id: LABOUR_PRODUCTIVITY_INDEX_BY_REGION_2022_BASE
+    name_ru: Индекс производительности труда по регионам к уровню 2022 года
+    name_en: Labour productivity index by region, 2022 = 100, year-to-date
+    agency: bns
+    element_id: 5934
+    layout: year_quarters
+    cumulative: true
+    sheets: [к уровню 2022]
+    label_col: 1
+    row_dimension: region
+    fixed_item: PRODUCTIVITY_INDEX
+    fixed_item_name: Индекс производительности труда
+    regions: all
+    min_regions: 18
+    transformation: 'as published: year-to-date period in % of the same period of 2022'
+    frequency: quarterly
+    unit: '% of the same period of 2022 (2022 = 100), year-to-date'
+    category: labour
+    note: 'Sheet «к уровню 2022»: regions down (name in column B), «YYYY год» over four year-to-date sub-columns. 2022 Q1 – 2026 Q1.'
+  - id: OIL_GAS_SECTOR_GVA
+    name_ru: ВДС нефтегазового, ненефтегазового, сырьевого и несырьевого секторов и их составляющих
+    name_en: GVA of the oil-and-gas, non-oil, commodity and non-commodity sectors and their product lines
+    agency: bns
+    element_id: 4445
+    layout: periods_across
+    sheets: [ВДС]
+    label_col: 1
+    dictionary: oil_gas_sectors
+    min_items: 28
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: 'Sheet «ВДС»: sector aggregates and their ОКЭД/КПВЭД lines (dictionaries/oil_gas_sectors.csv), «YYYY год» across, 2010–2025 on 2026-09-23.'
+  - id: OIL_GAS_SECTOR_VOLUME_INDEX
+    name_ru: ИФО ВДС нефтегазового и сырьевого секторов и их составляющих
+    name_en: GVA volume index of the oil-and-gas and commodity sectors and their lines
+    agency: bns
+    element_id: 4445
+    layout: periods_across
+    sheets: [ИФО ВДС]
+    label_col: 1
+    dictionary: oil_gas_sectors
+    min_items: 28
+    frequency: annual
+    unit: '% of previous year'
+    category: national_accounts
+    note: Sheet «ИФО ВДС», same rows as the ВДС sheet.
+  - id: OIL_GAS_SECTOR_GDP_SHARE
+    name_ru: Удельный вес ВДС нефтегазового и сырьевого секторов в ВВП
+    name_en: GVA of the oil-and-gas and commodity sectors, % of GDP
+    agency: bns
+    element_id: 4445
+    layout: periods_across
+    sheets: [Структура]
+    label_col: 1
+    dictionary: oil_gas_sectors
+    min_items: 28
+    frequency: annual
+    unit: '% of GDP'
+    category: national_accounts
+    note: Sheet «Структура», same rows as the ВДС sheet.
+  - id: KEI_MONTHLY
+    name_ru: Краткосрочный экономический индикатор, в текущих ценах за месяц
+    name_en: Short-term economic indicator, current prices, month
+    agency: bns
+    element_id: 5941
+    layout: month_rows
+    sheets: [2021-2026]
+    columns: {TOTAL: 2}
+    item_names: {TOTAL: Краткосрочный экономический индикатор}
+    min_items: 1
+    frequency: monthly
+    unit: billion KZT, month
+    category: national_accounts
+    note: 'Sheet «2021-2026»: year rows («2021 г.»), month rows, column C = the month''s level. From January 2021.'
+  - id: KEI_YTD
+    name_ru: Краткосрочный экономический индикатор, в текущих ценах нарастающим итогом
+    name_en: Short-term economic indicator, current prices, year-to-date
+    agency: bns
+    element_id: 5941
+    layout: month_rows
+    sheets: [2021-2026]
+    columns: {TOTAL: 3}
+    item_names: {TOTAL: Краткосрочный экономический индикатор}
+    min_items: 1
+    cumulation: year_to_date
+    transformation: level (year-to-date cumulative, as published -- not decumulated to months)
+    frequency: monthly
+    unit: billion KZT, year-to-date cumulative
+    category: national_accounts
+    note: Sheet «2021-2026», column D = year-to-date level.
+  - id: KEI_VOLUME_INDEX_YTD
+    name_ru: ИФО краткосрочного экономического индикатора, нарастающим итогом
+    name_en: Short-term economic indicator, volume index, year-to-date
+    agency: bns
+    element_id: 5941
+    layout: month_rows
+    sheets: [2021-2026]
+    columns: {TOTAL: 4}
+    item_names: {TOTAL: Краткосрочный экономический индикатор}
+    min_items: 1
+    transformation: 'as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods'
+    frequency: monthly
+    unit: '% of the same period of the previous year, year-to-date'
+    category: national_accounts
+    note: Sheet «2021-2026», column E.
+  - id: KEI_VOLUME_INDEX_BY_REGION_YTD
+    name_ru: Индекс краткосрочного экономического индикатора по регионам, нарастающим итогом
+    name_en: Short-term economic indicator, volume index by region, year-to-date
+    agency: bns
+    element_id: 5942
+    layout: year_months
+    sheets: [Динамика]
+    label_col: 1
+    row_dimension: region
+    fixed_item: TOTAL
+    fixed_item_name: Краткосрочный экономический индикатор
+    regions: all
+    min_regions: 20
+    transformation: 'as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods'
+    frequency: monthly
+    unit: '% of the same period of the previous year, year-to-date'
+    category: national_accounts
+    note: 'Sheet «Динамика»: «2021 г.» over twelve «Январь … Январь-декабрь» sub-columns, one row per region. From January 2021.'
+  - id: KEI_VOLUME_INDEX_BY_REGION_ACTIVITY_YTD
+    name_ru: Индекс краткосрочного экономического индикатора по отраслям экономики регионов, нарастающим итогом
+    name_en: Short-term economic indicator, volume index by region and activity, year-to-date
+    agency: bns
+    element_id: 5943
+    layout: region_blocks_months
+    sheets: [Динамика]
+    dictionary: kei_activities
+    regions: all
+    min_items: 10
+    min_regions: 20
+    transformation: 'as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods'
+    frequency: monthly
+    unit: '% of the same period of the previous year, year-to-date'
+    category: national_accounts
+    note: 'Sheet «Динамика»: a block per region, a header of «ИФО, январь-март 2021 г. к …» periods, activity rows (dictionaries/kei_activities.csv; «Связь» kept as COMMUNICATIONS, the index itself as TOTAL). From January 2021.'
+  - id: GRP_NOMINAL_BY_REGION
+    name_ru: Валовой региональный продукт по регионам, в текущих ценах
+    name_en: Gross regional product by region, current prices
+    agency: bns
+    element_id: 5923
+    layout: periods_across
+    sheets: [' 1990-1997', 1998-2007, 2008-2026]
+    label_col: 1
+    row_dimension: region
+    fixed_item: GDP
+    fixed_item_name: Валовой региональный продукт
+    year_regex: ^\s*(\d{4})(?=\D|$|\d\))
+    years_from: 1993
+    regions: all
+    min_regions: 14
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: 'Sheets « 1990-1997», «1998-2007», «2008-2026»: regions down, years across (year-to-date columns on the last sheet skipped here). 1990–1992 are in million roubles and are not taken (years_from 1993).'
+  - id: GRP_NOMINAL_BY_REGION_QUARTERLY
+    name_ru: Валовой региональный продукт по регионам, нарастающим итогом с начала года
+    name_en: Gross regional product by region, year-to-date
+    agency: bns
+    element_id: 5923
+    layout: periods_across
+    periods: quarterly_ytd
+    sheets: [2008-2026]
+    label_col: 1
+    row_dimension: region
+    fixed_item: GDP
+    fixed_item_name: Валовой региональный продукт
+    regions: all
+    min_regions: 14
+    cumulation: year_to_date
+    transformation: level (year-to-date cumulative, as published -- not decumulated to discrete quarters)
+    frequency: quarterly
+    unit: million KZT, year-to-date cumulative
+    category: national_accounts
+    note: 'Sheet «2008-2026»: «I квартал YYYY года», «I полугодие», «9 месяцев», «YYYY год». 2008 Q1 – 2026 Q1.'
+  - id: NOE_SHARE_OF_GDP_BY_REGION
+    name_ru: Доля ненаблюдаемой экономики в ВВП по регионам
+    name_en: Non-observed economy, share of GDP, by region
+    agency: bns
+    element_id: 5932
+    layout: periods_across
+    sheets: [доля ННЭ в ВВП]
+    label_col: 1
+    row_dimension: region
+    fixed_item: NOE_SHARE
+    fixed_item_name: Доля ненаблюдаемой экономики
+    year_regex: ^\s*(\d{4})
+    regions: all
+    min_regions: 18
+    frequency: annual
+    unit: '% of GDP'
+    category: national_accounts
+    note: 'Legacy .xls. Sheet «доля ННЭ в ВВП»: regions down, years 2013–2025 across (numeric cells 2013.0 …).'
+  - id: NOE_SHARE_OF_GRP_BY_REGION
+    name_ru: Доля ненаблюдаемой экономики в ВРП по регионам
+    name_en: Non-observed economy, share of GRP, by region
+    agency: bns
+    element_id: 5932
+    layout: periods_across
+    sheets: [доля ННЭ в ВРП]
+    label_col: 1
+    row_dimension: region
+    fixed_item: NOE_SHARE
+    fixed_item_name: Доля ненаблюдаемой экономики
+    year_regex: ^\s*(\d{4})
+    regions: all
+    min_regions: 18
+    frequency: annual
+    unit: '% of GRP'
+    category: national_accounts
+    note: Sheet «доля ННЭ в ВРП»; the national row is empty.
+  - id: NOE_SHARE_OF_GDP_BY_REGION_ACTIVITY
+    name_ru: Доля ВДС ненаблюдаемой экономики в ВВП по регионам и видам деятельности
+    name_en: Non-observed economy GVA, share of GDP, by region and activity
+    agency: bns
+    element_id: 5932
+    layout: year_blocks_regions_items
+    sheets: [доля ННЭ по ВЭД в ВВП]
+    dictionary: okved_sections
+    label_overrides: {всего: TOTAL}
+    regions: all
+    min_items: 10
+    min_regions: 18
+    frequency: annual
+    unit: '% of GDP'
+    category: national_accounts
+    note: 'Sheet «доля ННЭ по ВЭД в ВВП»: one header of activities across, then a block per year («2020 год») of region rows. 2020–2025.'
+  - id: QUASI_STATE_GVA_BY_REGION_SECTION
+    name_ru: ВДС квазигосударственного сектора по регионам и видам экономической деятельности
+    name_en: Quasi-public sector GVA by region and ОКЭД section
+    agency: bns
+    element_id: 75044
+    layout: year_blocks_items_regions
+    sheets: [ВДС Квази по регионам и ВЭД]
+    year_in_title: '111219'
+    dictionary: okved_sections
+    regions: all
+    min_items: 20
+    min_regions: 15
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: 'Sheet «ВДС Квази по регионам и ВЭД»: a block per year (title «… за 2018 год» beside the table id 111219), regions across («город Нур-Султан» = AST), items down. 2018–2025.'
+  - id: QUASI_STATE_GVA_GDP_SHARE_BY_REGION
+    name_ru: Доля ВДС квазигосударственного сектора в ВВП по регионам
+    name_en: Quasi-public sector GVA, % of GDP, by region
+    agency: bns
+    element_id: 75044
+    layout: periods_across
+    sheets: [Доля в ВВП]
+    label_col: 1
+    row_dimension: region
+    fixed_item: QUASI_GVA_SHARE
+    fixed_item_name: Доля ВДС квазигосударственного сектора в ВВП
+    year_regex: ^\s*(\d{4})\s*г
+    regions: all
+    min_regions: 18
+    frequency: annual
+    unit: '% of GDP'
+    category: national_accounts
+    note: 'Sheet «Доля в ВВП»: regions down, «2018г.» … across.'
+  - id: QUASI_STATE_PRODUCTIVITY_LARGE_BY_SECTION
+    name_ru: Производительность труда крупных квазигосударственных предприятий по видам деятельности
+    name_en: Labour productivity of large quasi-public enterprises by ОКЭД section
+    agency: bns
+    element_id: 75044
+    layout: periods_across
+    sheets: [ПТ по крупным]
+    label_col: 1
+    dictionary: okved_sections
+    year_regex: ^\s*(\d{4})\s*г
+    min_items: 20
+    frequency: annual
+    unit: thousand KZT per person
+    category: national_accounts
+    note: 'Sheet «ПТ по крупным»: items down (name in column B), «2018г.» … across.'
+  - id: QUASI_STATE_GVA_BY_SECTION_SMALL
+    name_ru: ВДС малых (до 100 человек) квазигосударственных предприятий по видам деятельности
+    name_en: Quasi-public sector GVA, small (up to 100 employees) enterprises, by ОКЭД section
+    agency: bns
+    element_id: 75044
+    layout: year_subcolumns
+    sheets: [ВДС по КРП и ОКЭД]
+    label_col: 1
+    sub_offset: 0
+    year_regex: ^\s*(\d{4})\s*г
+    dictionary: okved_sections
+    min_items: 20
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: 'Sheet «ВДС по КРП и ОКЭД»: «2018г.» … each over three size sub-columns; this dataset takes sub-column 1.'
+  - id: QUASI_STATE_GVA_BY_SECTION_MEDIUM
+    name_ru: ВДС средних (101–250 человек) квазигосударственных предприятий по видам деятельности
+    name_en: Quasi-public sector GVA, medium (101-250 employees) enterprises, by ОКЭД section
+    agency: bns
+    element_id: 75044
+    layout: year_subcolumns
+    sheets: [ВДС по КРП и ОКЭД]
+    label_col: 1
+    sub_offset: 1
+    year_regex: ^\s*(\d{4})\s*г
+    dictionary: okved_sections
+    min_items: 20
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: 'Sheet «ВДС по КРП и ОКЭД»: «2018г.» … each over three size sub-columns; this dataset takes sub-column 2.'
+  - id: QUASI_STATE_GVA_BY_SECTION_LARGE
+    name_ru: ВДС крупных (свыше 250 человек) квазигосударственных предприятий по видам деятельности
+    name_en: Quasi-public sector GVA, large (over 250 employees) enterprises, by ОКЭД section
+    agency: bns
+    element_id: 75044
+    layout: year_subcolumns
+    sheets: [ВДС по КРП и ОКЭД]
+    label_col: 1
+    sub_offset: 2
+    year_regex: ^\s*(\d{4})\s*г
+    dictionary: okved_sections
+    min_items: 20
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: 'Sheet «ВДС по КРП и ОКЭД»: «2018г.» … each over three size sub-columns; this dataset takes sub-column 3.'
+  - id: GDP_COMPONENTS_BY_SECTOR_OUTPUT
+    name_ru: Выпуск в основных ценах по институциональным секторам и видам экономической деятельности
+    name_en: Output at basic prices by institutional sector (S11–S15, S1) and ОКЭД section
+    agency: bns
+    element_id: 410224
+    layout: sector_columns
+    sheets: [Система]
+    measure: OUTPUT
+    dictionary: okved_sections
+    min_items: 80
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: 'Sheet «Система»: sector codes S11, S12, S13, S14, S15, S1 across, each over seven measures; a block per activity with one row per year 2010–2025. Item = «<activity>_<sector>»; this dataset takes «Выпуск в основных ценах».'
+  - id: GDP_COMPONENTS_BY_SECTOR_INTERMEDIATE_CONSUMPTION
+    name_ru: Промежуточное потребление по институциональным секторам и видам экономической деятельности
+    name_en: Intermediate consumption by institutional sector (S11–S15, S1) and ОКЭД section
+    agency: bns
+    element_id: 410224
+    layout: sector_columns
+    sheets: [Система]
+    measure: INTERMEDIATE_CONSUMPTION
+    dictionary: okved_sections
+    min_items: 80
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: 'Sheet «Система»: sector codes S11, S12, S13, S14, S15, S1 across, each over seven measures; a block per activity with one row per year 2010–2025. Item = «<activity>_<sector>»; this dataset takes «Промежуточное потребление».'
+  - id: GDP_COMPONENTS_BY_SECTOR_GVA
+    name_ru: Валовая добавленная стоимость по институциональным секторам и видам экономической деятельности
+    name_en: Gross value added by institutional sector (S11–S15, S1) and ОКЭД section
+    agency: bns
+    element_id: 410224
+    layout: sector_columns
+    sheets: [Система]
+    measure: GVA
+    dictionary: okved_sections
+    min_items: 80
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: 'Sheet «Система»: sector codes S11, S12, S13, S14, S15, S1 across, each over seven measures; a block per activity with one row per year 2010–2025. Item = «<activity>_<sector>»; this dataset takes «Валовая добавленная стоимость».'
+  - id: GDP_COMPONENTS_BY_SECTOR_COMPENSATION
+    name_ru: Оплата труда по институциональным секторам и видам экономической деятельности
+    name_en: Compensation of employees by institutional sector (S11–S15, S1) and ОКЭД section
+    agency: bns
+    element_id: 410224
+    layout: sector_columns
+    sheets: [Система]
+    measure: COMPENSATION
+    dictionary: okved_sections
+    min_items: 80
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: 'Sheet «Система»: sector codes S11, S12, S13, S14, S15, S1 across, each over seven measures; a block per activity with one row per year 2010–2025. Item = «<activity>_<sector>»; this dataset takes «Оплата труда».'
+  - id: GDP_COMPONENTS_BY_SECTOR_OTHER_TAXES
+    name_ru: Другие налоги на производство по институциональным секторам и видам экономической деятельности
+    name_en: Other taxes on production by institutional sector (S11–S15, S1) and ОКЭД section
+    agency: bns
+    element_id: 410224
+    layout: sector_columns
+    sheets: [Система]
+    measure: OTHER_TAXES
+    dictionary: okved_sections
+    min_items: 80
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: 'Sheet «Система»: sector codes S11, S12, S13, S14, S15, S1 across, each over seven measures; a block per activity with one row per year 2010–2025. Item = «<activity>_<sector>»; this dataset takes «Другие налоги на производство».'
+  - id: GDP_COMPONENTS_BY_SECTOR_CFC
+    name_ru: Потребление основного капитала по институциональным секторам и видам экономической деятельности
+    name_en: Consumption of fixed capital by institutional sector (S11–S15, S1) and ОКЭД section
+    agency: bns
+    element_id: 410224
+    layout: sector_columns
+    sheets: [Система]
+    measure: CFC
+    dictionary: okved_sections
+    min_items: 80
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: 'Sheet «Система»: sector codes S11, S12, S13, S14, S15, S1 across, each over seven measures; a block per activity with one row per year 2010–2025. Item = «<activity>_<sector>»; this dataset takes «Потребление основного капитала».'
+  - id: GDP_COMPONENTS_BY_SECTOR_PROFIT
+    name_ru: Чистая прибыль и чистые смешанные доходы по институциональным секторам и видам экономической деятельности
+    name_en: Net operating surplus and net mixed income by institutional sector (S11–S15, S1) and ОКЭД section
+    agency: bns
+    element_id: 410224
+    layout: sector_columns
+    sheets: [Система]
+    measure: PROFIT
+    dictionary: okved_sections
+    min_items: 80
+    frequency: annual
+    unit: million KZT
+    category: national_accounts
+    note: 'Sheet «Система»: sector codes S11, S12, S13, S14, S15, S1 across, each over seven measures; a block per activity with one row per year 2010–2025. Item = «<activity>_<sector>»; this dataset takes «Чистая прибыль и чистые смешанные доходы».'
 
   # ---------------------------------------------------------------- external trade by commodity group
   # The export workbook behind EXPORTS / OIL_EXPORTS_* (element 446905): flat 6-digit HS lines

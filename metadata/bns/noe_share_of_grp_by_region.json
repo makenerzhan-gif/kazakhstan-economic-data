@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/5932/file/ru/",
+  "dataset_id": "5932",
+  "indicator_id": "NOE_SHARE_OF_GRP_BY_REGION",
+  "indicator_name": "Non-observed economy, share of GRP, by region",
+  "description": "Доля ненаблюдаемой экономики в ВРП по регионам",
+  "frequency": "annual",
+  "unit": "% of GRP",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Sheet «доля ННЭ в ВРП»; the national row is empty.",
+  "publication_date": null,
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2013-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

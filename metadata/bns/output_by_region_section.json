@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/81477/file/ru/",
+  "dataset_id": "81477",
+  "indicator_id": "OUTPUT_BY_REGION_SECTION",
+  "indicator_name": "Gross output by ОКЭД section and region",
+  "description": "Выпуск по видам экономической деятельности и регионам",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "One sheet per year («2022 год» …), items across the «код КАТО» header row, one row per region; «Всего» = TOTAL. 2022–2025 on 2026-09-23.",
+  "publication_date": "2026-08-24",
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2022-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": "2027-08-23",
+  "transformation": "level",
+  "revision_status": "original"
+}

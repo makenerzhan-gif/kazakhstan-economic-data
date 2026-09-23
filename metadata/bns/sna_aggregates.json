@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/286855/file/ru/",
+  "dataset_id": "286855",
+  "indicator_id": "SNA_AGGREGATES",
+  "indicator_name": "Annual SNA aggregates: GVA, GDP, gross profit, GNI, gross disposable income, gross saving",
+  "description": "Агрегаты системы национальных счетов, годовые",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Sheet «Динамика агрегатов»: six aggregates down, years 2010–2025 across (the file's last update 22.12.2025).",
+  "publication_date": null,
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2010-12-31",
+  "period_end": "2024-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

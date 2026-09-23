@@ -250,6 +250,116 @@ agencies:
         download_url: "https://stat.gov.kz/api/iblock/element/471384/file/ru/"
         format: xlsx_table
         notes: "«Валовой региональный продукт на квартальной основе», updated 18.09.2026, next 30.10.2026. Sheets «ВДС дискретный квартал» / «ВДС квартал с накоплением»: region blocks (name in column A, incl. «город Астана»), ОКЭД code column B, name column C, 2019 Q1 onward. Discrete sums equal 5927 for 2023-2025 only (2024: 414/461 (region, section, year) points)."
+      # ---- the rest of the national-accounts page (2026-09-23) ----
+      # Inventory of https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/ on 2026-09-23:
+      # 47 tables; 20 were in the pipeline, 15 more are read below (35 datasets); 6 are derivable from what is
+      # in (4442, 4438, 5929, 5930, 4456, 4447) and 6 are one-off or narrow publications not taken (469090,
+      # 471272, 466862, 345748, 470989, and the derived «Свод»/«Доля по КРП» sheets).
+      OUTPUT_BY_REGION_SECTION:
+        status: confirmed_xlsx
+        element_id: 81477
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/81477/file/ru/"
+        format: xlsx_table
+        notes: "«Выпуск по видам экономической деятельности», one sheet per year 2022–2025 (24.08.2026); items across, regions down. Feeds OUTPUT_BY_REGION_SECTION."
+      PRODUCTION_ACCOUNT_BY_REGION:
+        status: confirmed_xlsx
+        element_id: 81478
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/81478/file/ru/"
+        format: xlsx_table
+        notes: "«Выпуск, промежуточное потребление и валовой региональный продукт», one sheet per year 2022–2025 («2023 год » with a trailing space); five measures across, regions down. Feeds PRODUCTION_ACCOUNT_BY_REGION."
+      SNA_AGGREGATES:
+        status: confirmed_xlsx
+        element_id: 286855
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/286855/file/ru/"
+        format: xlsx_table
+        notes: "«Агрегаты системы национальных счетов (годовые)», sheet «Динамика агрегатов»: six aggregates 2010–2024/2025 (22.12.2025). Feeds SNA_AGGREGATES."
+      LABOUR_PRODUCTIVITY_BY_SECTION_YTD:
+        status: confirmed_xlsx
+        element_id: 4449
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/4449/file/ru/"
+        format: xlsx_table
+        notes: "«Производительность труда по видам экономической деятельности», sheet «2010-2026»: «YYYY год» over four year-to-date sub-columns (07.08.2026). Feeds LABOUR_PRODUCTIVITY_BY_SECTION_YTD."
+      LABOUR_PRODUCTIVITY_INDEX_BY_SECTION_YTD:
+        status: confirmed_xlsx
+        element_id: 4450
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/4450/file/ru/"
+        format: xlsx_table
+        notes: "«Индексы производительности труда»: sheets «2010-2026 годы» (y/y, year-to-date), «2016/2019/2022 год =100», two sub-industry sheets (agriculture, ICT — not read). Feeds LABOUR_PRODUCTIVITY_INDEX_BY_SECTION_YTD and _2022_BASE."
+      LABOUR_PRODUCTIVITY_BY_REGION_SECTION_YTD:
+        status: confirmed_xlsx
+        element_id: 5933
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/5933/file/ru/"
+        format: xlsx_table
+        notes: "«Производительность труда в разрезе регионов по видам экономической деятельности», sheet «ПТ»: a block per year, regions across (16 before 2022: incl. Южно-Казахстанская, г. Нур-Султан; «Карагандиская» misspelt), four year-to-date sub-columns each (31.08.2026). Feeds LABOUR_PRODUCTIVITY_BY_REGION_SECTION_YTD."
+      LABOUR_PRODUCTIVITY_INDEX_BY_REGION_SECTION_YTD:
+        status: confirmed_xlsx
+        element_id: 5934
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/5934/file/ru/"
+        format: xlsx_table
+        notes: "«Индекс производительности труда в разрезе регионов …», sheets «ИПТ» (as 5933) and «к уровню 2019/2022» (regions down, «YYYY год» over four sub-columns). Feeds LABOUR_PRODUCTIVITY_INDEX_BY_REGION_SECTION_YTD and _BY_REGION_2022_BASE."
+      OIL_GAS_SECTOR_GVA:
+        status: confirmed_xlsx
+        element_id: 4445
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/4445/file/ru/"
+        format: xlsx_table
+        notes: "«Динамика нефтегазового и сырьевого секторов», sheets «ВДС», «ИФО ВДС», «Структура» (and a derived «Свод»): sector aggregates and their КПВЭД lines, «YYYY год» 2010–2025 across (31.07.2026); dictionaries/oil_gas_sectors.csv. Feeds OIL_GAS_SECTOR_GVA / _VOLUME_INDEX / _GDP_SHARE."
+      KEI_MONTHLY:
+        status: confirmed_xlsx
+        element_id: 5941
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/5941/file/ru/"
+        format: xlsx_table
+        notes: "«Краткосрочный экономический индикатор по РК», sheet «2021-2026»: year rows, month rows, columns C/D/E = month level, year-to-date level, ИФО year-to-date (15.09.2026). Feeds KEI_MONTHLY, KEI_YTD, KEI_VOLUME_INDEX_YTD."
+      KEI_VOLUME_INDEX_BY_REGION_YTD:
+        status: confirmed_xlsx
+        element_id: 5942
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/5942/file/ru/"
+        format: xlsx_table
+        notes: "«Индекс КЭИ по регионам», sheet «Динамика»: «2021 г.» … over twelve «Январь … Январь-декабрь» sub-columns, regions down. Feeds KEI_VOLUME_INDEX_BY_REGION_YTD."
+      KEI_VOLUME_INDEX_BY_REGION_ACTIVITY_YTD:
+        status: confirmed_xlsx
+        element_id: 5943
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/5943/file/ru/"
+        format: xlsx_table
+        notes: "«Индекс КЭИ по отраслям экономики регионов», sheet «Динамика»: a block per region, a header of «ИФО, январь-март 2021 г. к …» labels, activity rows (dictionaries/kei_activities.csv). Feeds KEI_VOLUME_INDEX_BY_REGION_ACTIVITY_YTD."
+      GRP_NOMINAL_BY_REGION:
+        status: confirmed_xlsx
+        element_id: 5923
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/5923/file/ru/"
+        format: xlsx_table
+        notes: "«Валовой региональный продукт», sheets « 1990-1997» (roubles to 1992, «19901)» labels), «1998-2007», «2008-2026» (year-to-date quarterly columns); regions down (24.08.2026). Feeds GRP_NOMINAL_BY_REGION (from 1993) and GRP_NOMINAL_BY_REGION_QUARTERLY (2008 Q1 on)."
+      GDP_COMPONENTS_BY_SECTOR_OUTPUT:
+        status: confirmed_xlsx
+        element_id: 410224
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/410224/file/ru/"
+        format: xlsx_table
+        notes: "«Компоненты ВВП по секторам экономики и ВЭД», sheet «Система»: sector codes S11–S15, S1 across, seven measures each; activity blocks with year rows 2010–2025 (18.09.2026). Feeds the seven GDP_COMPONENTS_BY_SECTOR_* datasets."
+      NOE_SHARE_OF_GDP_BY_REGION:
+        status: confirmed_xlsx
+        element_id: 5932
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/5932/file/ru/"
+        format: xls_table
+        notes: "«Доля ненаблюдаемой экономики в ВВП по регионам», legacy .xls: sheets «доля ННЭ в ВВП», «доля ННЭ в ВРП» (regions down, years 2013–2025 as numbers), «доля ННЭ по ВЭД в ВВП» (a header of activities, year blocks of region rows, 2020–2025) (27.08.2026). Feeds NOE_SHARE_OF_GDP_BY_REGION, NOE_SHARE_OF_GRP_BY_REGION, NOE_SHARE_OF_GDP_BY_REGION_ACTIVITY."
+      QUASI_STATE_GVA_BY_REGION_SECTION:
+        status: confirmed_xlsx
+        element_id: 75044
+        page_url: "https://stat.gov.kz/ru/industries/economy/national-accounts/dynamic-tables/"
+        download_url: "https://stat.gov.kz/api/iblock/element/75044/file/ru/"
+        format: xlsx_table
+        notes: "«Основные показатели квазигосударственного сектора»: sheets «ВДС Квази по регионам и ВЭД» (a block per year titled «… за 2018 год», regions across incl. «город Нур-Султан»), «Доля в ВВП», «ВДС по КРП и ОКЭД» (three size sub-columns per year), «Доля по КРП» (derived, not read), «ПТ по крупным» (20.08.2026). Feeds QUASI_STATE_GVA_BY_REGION_SECTION, _GVA_GDP_SHARE_BY_REGION, _GVA_BY_SECTION_SMALL/MEDIUM/LARGE, _PRODUCTIVITY_LARGE_BY_SECTION."
       # ---- scalar indicators ----
       GDP_NOMINAL:
         status: derived   # 2026-09-23: was confirmed_json; the series is now written from GVA_NOMINAL_BY_SECTION_QUARTERLY[GDP] x 1e6 (scripts/update_derived.py), the xlsx export of the same element 4439 -- equal to this cube on all 66 quarters; the trail below stays

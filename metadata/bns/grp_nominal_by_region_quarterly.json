@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/5923/file/ru/",
+  "dataset_id": "5923",
+  "indicator_id": "GRP_NOMINAL_BY_REGION_QUARTERLY",
+  "indicator_name": "Gross regional product by region, year-to-date",
+  "description": "Валовой региональный продукт по регионам, нарастающим итогом с начала года",
+  "frequency": "quarterly",
+  "unit": "million KZT, year-to-date cumulative",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Sheet «2008-2026»: «I квартал YYYY года», «I полугодие», «9 месяцев», «YYYY год». 2008 Q1 – 2026 Q1.",
+  "publication_date": "2026-08-24",
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2008-01-01",
+  "period_end": "2026-01-01",
+  "next_update_date": "2026-10-12",
+  "transformation": "level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",
+  "revision_status": "original"
+}

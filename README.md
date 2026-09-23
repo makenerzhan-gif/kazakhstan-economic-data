@@ -110,7 +110,8 @@ volume indices, population by region and settlement type, the labour market,
 fixed capital investment), physical output by product, production indices by
 activity and grain by region — have one value per (date, region, variable,
 item), so they live in a parallel layer with the same rules: `config/dims.yaml`
-(80 datasets: 40 annual, 14 year-to-date and 19 discrete-quarter from 40 BNS dynamic tables read from their xlsx or legacy xls
+(115 datasets: 40 annual, 14 year-to-date, 19 discrete-quarter and 35 more from the rest of the
+national-accounts page, all from 55 BNS dynamic tables read from their xlsx or legacy xls
 export, two from the BNS export workbook by commodity group, four from the World
 Bank's Pink Sheet and Commodity Markets Outlook, one from the U.S. EIA Short-Term
 Energy Outlook), `scripts/update_dims.py` (fetcher chosen by each dataset's
@@ -166,7 +167,14 @@ a different vintage of the 2010–2022 history**: the SNA-2008 recalculation the
 annotation describes, which the dynamic annual tables (4439, 4435, 5927) and
 Taldau do not carry — GDP 2010 is 9.4 % higher, 2017–2022 1.5–2.9 % lower;
 2023–2025 are identical. Every `QNA_*` dataset says so in its `vintage` and
-metadata, and nothing in the annual datasets changes because of it. The model
+metadata, and nothing in the annual datasets changes because of it. The rest of the
+national-accounts page is read too (35 datasets from 15 tables: gross output and the
+production account by region, the annual SNA aggregates, labour productivity by section
+and region, the oil-and-gas and commodity sector tables, the monthly short-term economic
+indicator, GRP by region from 1993 and year-to-date, the non-observed economy and the
+quasi-public sector by region, GDP components by institutional sector), so that every
+table on that page is either in the pipeline, derivable from it, or a one-off publication
+listed as such in `config/sources.yaml`. The model
 carries the second vintage on a sheet of its own, «Факт_КНС» (annual values of
 five QNA_* datasets, `fact_qna_*` mappings), which no model formula reads.
 `update_all.py` runs it after the agency updaters. The World Bank also feeds one

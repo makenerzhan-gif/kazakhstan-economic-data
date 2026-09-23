@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/75044/file/ru/",
+  "dataset_id": "75044",
+  "indicator_id": "QUASI_STATE_PRODUCTIVITY_LARGE_BY_SECTION",
+  "indicator_name": "Labour productivity of large quasi-public enterprises by ОКЭД section",
+  "description": "Производительность труда крупных квазигосударственных предприятий по видам деятельности",
+  "frequency": "annual",
+  "unit": "thousand KZT per person",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Sheet «ПТ по крупным»: items down (name in column B), «2018г.» … across.",
+  "publication_date": null,
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2018-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

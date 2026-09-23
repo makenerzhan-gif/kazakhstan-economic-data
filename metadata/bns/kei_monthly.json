@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/5941/file/ru/",
+  "dataset_id": "5941",
+  "indicator_id": "KEI_MONTHLY",
+  "indicator_name": "Short-term economic indicator, current prices, month",
+  "description": "Краткосрочный экономический индикатор, в текущих ценах за месяц",
+  "frequency": "monthly",
+  "unit": "billion KZT, month",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Sheet «2021-2026»: year rows («2021 г.»), month rows, column C = the month's level. From January 2021.",
+  "publication_date": "2026-09-15",
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2021-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": "2026-10-15",
+  "transformation": "level",
+  "revision_status": "original"
+}

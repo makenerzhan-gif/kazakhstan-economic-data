@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/5934/file/ru/",
+  "dataset_id": "5934",
+  "indicator_id": "LABOUR_PRODUCTIVITY_INDEX_BY_REGION_SECTION_YTD",
+  "indicator_name": "Labour productivity index by region and ОКЭД section, year-to-date",
+  "description": "Индекс производительности труда по регионам и видам экономической деятельности, нарастающим итогом",
+  "frequency": "quarterly",
+  "unit": "% of the same period of the previous year, year-to-date",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Sheet «ИПТ», same layout as 5933; zeros where BNS publishes 0 for early quarters. 2011–2026 Q1.",
+  "publication_date": "2026-08-31",
+  "last_update_date": "2026-09-23",
+  "download_date": "2026-09-23",
+  "period_start": "2011-01-01",
+  "period_end": "2026-01-01",
+  "next_update_date": "2026-10-16",
+  "transformation": "as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods",
+  "revision_status": "original"
+}
