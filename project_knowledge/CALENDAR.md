@@ -5,7 +5,7 @@
 
 ## Ряды пайплайна, которые читает модель
 
-68 наборов; с объявленной датой следующего обновления — 30, просрочено — 0.
+73 наборов; с объявленной датой следующего обновления — 32, просрочено — 0.
 
 | Следующее обновление | Набор | Агентство | Последнее обновление (публикация) | Где в модели |
 |---|---|---|---|---|
@@ -21,6 +21,8 @@
 | 2026-10-12 | `GDP_EXPENDITURE_VOLUME_INDEX` | bns | 2026-09-23 (2026-07-13) | «ВВП_расходы_МКИ» (expenditure_volume_index) |
 | 2026-10-12 | `GRP_VOLUME_INDEX_BY_REGION` | bns | 2026-09-23 (2026-08-24) | «ИФО_производ_регионы» (grp_ifo_regions) |
 | 2026-10-12 | `GVA_NOMINAL_BY_REGION_SECTION` | bns | 2026-09-23 (2026-08-24) | «ВДС_производ_регионы» (vrp_regions_sections) |
+| 2026-10-28 | `QNA_GDP_EXPENDITURE` | bns | 2026-09-23 (2026-07-28) | «Факт_КНС» (fact_qna_gdp_expenditure) |
+| 2026-10-28 | `QNA_GDP_EXPENDITURE_VOLUME_INDEX_YTD` | bns | 2026-09-23 (2026-07-28) | «Факт_КНС» (fact_qna_gdp_expenditure_volume_index_ytd) |
 | 2026-11-12 | `EMPLOYED_BY_SECTION` | bns | 2026-09-23 (2026-08-13) | «Занятое население» (employed_sections, employed_sections_control) |
 | 2027-03-31 | `EMPLOYED_AGRICULTURE_BY_REGION` | bns | 2026-09-23 (2026-03-30) | «Факт_БНС» (fact_bns_employed_agriculture) |
 | 2027-03-31 | `EMPLOYED_BY_REGION` | bns | 2026-09-23 (2026-03-30) | «Внешние и внутренние факторы» (employed_regions); «Факт_БНС» (fact_bns_employed_total) |
@@ -67,6 +69,9 @@
 | — | `INVESTMENT_VOLUME_INDEX_BY_SECTION` | bns | 2026-09-23 (—) | «ВВП_расходы_МКИ» (investment_volume_sections_mki) |
 | — | `NET_EXPORTS` | bns | 2026-09-23 (—) | «ВВП_расходы_МКИ» (net_exports) |
 | — | `NET_TAXES_ON_PRODUCTS` | bns | 2026-09-23 (—) | «ВДС_производ_регионы» (net_taxes_on_products); «ВВП_доходы» (net_taxes_on_products) |
+| — | `QNA_GVA_BY_SECTION` | bns | 2026-09-23 (—) | «Факт_КНС» (fact_qna_gva_by_section) |
+| — | `QNA_GVA_DEFLATOR_BY_SECTION_YTD` | bns | 2026-09-23 (—) | «Факт_КНС» (fact_qna_gva_deflator_by_section_ytd) |
+| — | `QNA_GVA_VOLUME_INDEX_BY_SECTION_YTD` | bns | 2026-09-23 (—) | «Факт_КНС» (fact_qna_gva_volume_index_by_section_ytd) |
 | — | `REAL_WAGE_INDEX` | bns | 2026-09-23 (—) | «Прогнозы ЦГО 2024-29» (cgo_real_wage_index) |
 | — | `TAXES_ON_PRODUCTS` | bns | 2026-09-23 (—) | «ВДС_производ_регионы» (taxes_on_products) |
 | — | `TOTAL_CONSUMPTION_EXPENDITURE` | bns | 2026-09-23 (—) | «ВВП_расходы_МКИ» (final_consumption) |
