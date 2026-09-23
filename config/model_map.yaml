@@ -22,7 +22,7 @@
 version: 1
 
 model:
-  default_file: "D:/Yandex.Disk/В клауд/1_Model_GDP_p_a_2025_470_75_15.01.2025_rev_2026-09-14.xlsx"
+  default_file: "D:/Yandex.Disk/Модель ВВП по производству/1_Model_GDP_p_a_2025_470_75_15.01.2025_rev_2026-09-14.xlsx"   # folder renamed by the author (was «В клауд»)
   year_header_row: 1          # every mapped sheet carries the calendar year in row 1 (cached values)
   default_years: [2023, 2024, 2025]
   journal_sheet: "Журнал_правок"
@@ -232,6 +232,52 @@ mappings:
     item_column: A
     row_range: [7, 60]
     item_aliases: {GVA: "ВДС", NET_TAXES: "ЧН", TAXES: "ТП", SUBSIDIES: "СП", GDP: "ВВП"}
+    tolerance: 0.05
+
+
+  # ---------------------------------------------------------------- «Факт_КНС»: the second vintage (2026-09-23)
+  # Annual values of the quarterly national accounts (QNA_*, files 283162/283161): the SNA-2008 recalculation
+  # of 2010–2022 that the dynamic tables do not carry, plus 2023–2025 (equal to Факт_БНС). A sheet of its own that
+  # no formula reads; row 1 carries the years (C..R = 2010..2025); five blocks, rows below. Flows are the sum of the
+  # four discrete quarters, indices the published «год» value (annual: last on the year-to-date datasets).
+  - id: fact_qna_gva_by_section
+    dims_variable: QNA_GVA_BY_SECTION
+    annual: sum
+    sheet: "Факт_КНС"
+    years: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+    rows_by_item: {GOODS: 8, A: 9, IND: 10, B: 11, C: 12, D: 13, E: 14, F: 15, SERVICES: 16, G: 17, H: 18, I: 19, J: 20, K: 21, L: 22, M: 23, N: 24, O: 25, P: 26, Q: 27, R: 28, S: 29, T: 30, GVA: 31, NET_TAXES: 32, GDP: 33}
+    tolerance: 0.6
+
+  - id: fact_qna_gva_volume_index_by_section_ytd
+    dims_variable: QNA_GVA_VOLUME_INDEX_BY_SECTION_YTD
+    annual: last
+    sheet: "Факт_КНС"
+    years: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+    rows_by_item: {GOODS: 37, A: 38, IND: 39, B: 40, C: 41, D: 42, E: 43, F: 44, SERVICES: 45, G: 46, H: 47, I: 48, J: 49, K: 50, L: 51, M: 52, N: 53, O: 54, P: 55, Q: 56, R: 57, S: 58, T: 59, GVA: 60, NET_TAXES: 61, GDP: 62}
+    tolerance: 0.05
+
+  - id: fact_qna_gva_deflator_by_section_ytd
+    dims_variable: QNA_GVA_DEFLATOR_BY_SECTION_YTD
+    annual: last
+    sheet: "Факт_КНС"
+    years: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+    rows_by_item: {GOODS: 66, A: 67, IND: 68, B: 69, C: 70, D: 71, E: 72, F: 73, SERVICES: 74, G: 75, H: 76, I: 77, J: 78, K: 79, L: 80, M: 81, N: 82, O: 83, P: 84, Q: 85, R: 86, S: 87, T: 88, GVA: 89, NET_TAXES: 90, GDP: 91}
+    tolerance: 0.05
+
+  - id: fact_qna_gdp_expenditure
+    dims_variable: QNA_GDP_EXPENDITURE
+    annual: sum
+    sheet: "Факт_КНС"
+    years: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+    rows_by_item: {FINAL_CONSUMPTION: 95, HOUSEHOLDS: 96, GOVERNMENT: 97, GOV_INDIVIDUAL: 98, GOV_COLLECTIVE: 99, NPISH: 100, GROSS_CAPITAL_FORMATION: 101, GFCF: 102, INVENTORIES: 103, VALUABLES: 104, NET_EXPORTS: 105, EXPORTS: 106, IMPORTS: 107, STAT_DISCREPANCY: 108, GDP: 109, GDP_PRODUCTION: 110}
+    tolerance: 0.6
+
+  - id: fact_qna_gdp_expenditure_volume_index_ytd
+    dims_variable: QNA_GDP_EXPENDITURE_VOLUME_INDEX_YTD
+    annual: last
+    sheet: "Факт_КНС"
+    years: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+    rows_by_item: {FINAL_CONSUMPTION: 114, HOUSEHOLDS: 115, GOVERNMENT: 116, GOV_INDIVIDUAL: 117, GOV_COLLECTIVE: 118, NPISH: 119, GROSS_CAPITAL_FORMATION: 120, GFCF: 121, INVENTORIES: 122, VALUABLES: 123, EXPORTS: 124, IMPORTS: 125, GDP: 126, GDP_PRODUCTION: 127}
     tolerance: 0.05
 
   # Section totals on the production sheets are formulas for the fact years — controls.

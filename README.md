@@ -166,7 +166,9 @@ a different vintage of the 2010–2022 history**: the SNA-2008 recalculation the
 annotation describes, which the dynamic annual tables (4439, 4435, 5927) and
 Taldau do not carry — GDP 2010 is 9.4 % higher, 2017–2022 1.5–2.9 % lower;
 2023–2025 are identical. Every `QNA_*` dataset says so in its `vintage` and
-metadata, and nothing in the annual datasets or the model changes because of it.
+metadata, and nothing in the annual datasets changes because of it. The model
+carries the second vintage on a sheet of its own, «Факт_КНС» (annual values of
+five QNA_* datasets, `fact_qna_*` mappings), which no model formula reads.
 `update_all.py` runs it after the agency updaters. The World Bank also feeds one
 scalar series, `OIL_PRICE_BRENT` (monthly Brent from the Pink Sheet, `scripts/update_wb.py`),
 beside the IMF's `OIL_PRICE` (APSP average).

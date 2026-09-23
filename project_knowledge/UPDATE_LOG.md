@@ -4533,3 +4533,41 @@ production (`GDP_PRODUCTION`) from GDP. Tests 338 → 349 (`tests/test_qna.py`,
 
 **Left out.** The cumulative twins as data (running sums); the ВДС component of the income
 account (four points differ, noted); any use in the model.
+
+## 2026-09-23 — the second vintage in the model: sheet «Факт_КНС» (1 662 values from the QNA_* datasets), option Б
+
+**Why.** The comparison of the two vintages (report https://claude.ai/artifact/Ay5rFQ8Mmc2etvmYy5qefq:
+GDP 2010 +9.4 %, 2017–2022 −1.5…−2.9 %, transport −21 % in 2022, a 2022/2023 seam inside table
+4439 that breaks nominal × ИФО × deflator = nominal by +1.5 % for GDP and +27 % for transport)
+ended with three options; the author chose Б — load the quarterly national accounts' annual
+values into the model as a separate block, leave the history sheets and the published vintage
+untouched.
+
+**What.** A new sheet «Факт_КНС» (after «Контроль») with five tables, row 1 carrying the years
+2010–2025 in C..R as every mapped sheet does: (1) ВДС by section in current prices — the sum of
+the four discrete quarters of QNA_GVA_BY_SECTION (26 items, 416 values); (2) ИФО ВДС — the «год»
+value of QNA_GVA_VOLUME_INDEX_BY_SECTION_YTD (2011–2025, 390); (3) deflators — likewise (390);
+(4) GDP by expenditure, sum of quarters of QNA_GDP_EXPENDITURE (16 components, 256); (5) its
+volume index, «год» value (14 components, 210). Codes in column A follow «Факт_БНС» (ВДС, ЧН,
+ВВП) plus ПТ/ПУ/ПР for goods/services/industry and short codes for the expenditure components;
+blue font marks pipeline data; the header rows 2–4 state the source files (283162 of
+17.08.2026, 283161 of 28.07.2026), the vintage difference and that no formula reads the sheet.
+Written with scripts/lib/excel_apply.ps1 (39 ops, 11 s) from scratchpad/quarterly/plan_qna.py;
+«Журнал_правок» gained 7 rows (1 495 → 1 502). Every other sheet is unchanged cell for cell
+(formulas and cached values; «Контроль» included).
+
+Five mappings in `config/model_map.yaml` (`fact_qna_*`, `rows_by_item`, `annual: sum` for the
+flows and `annual: last` on the year-to-date index datasets, years 2010–2025 / 2011–2025) make
+the sheet part of the daily contract: model_sync on the new copy reports the block as
+1 662 ok / 0 diff / 0 missing; the full check is 7 407 ok, 0 diff, 3 control, 183 missing (the
+three controls are formula cells that differ from today's pipeline value by more than their
+tolerance, one of them in gva_deflator_sections — reported, never overwritten). model_coverage: 68 318 numbers, 5 871 from the
+pipeline, 62 447 manual, 0 unaccounted. `default_file` now points at the author's renamed
+folder «Модель ВВП по производству».
+
+The revised copy replaced `…_rev_2026-09-14.xlsx` on Yandex.Disk after checking the previous
+hash (b115ea6f); new SHA-256 bc2f716e…; the original 15.01.2025 file is untouched (3f5a1228…).
+
+**Left out.** No formula of the model uses the new sheet — how the author wants the structure or
+contribution calculations to read it is their call; the history sheets stay on the dynamic-table
+vintage until BNS revises those tables (the daily check will show it as revisions).
