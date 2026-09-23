@@ -2,6 +2,7 @@
   "downloaded_at": "2026-09-19T10:43:09.273517",
   "source_url": "https://stat.gov.kz/api/iblock/element/446905/file/ru/",
   "element_id": 446905,
-  "raw_file": "bns_exports_2026-09-19.xlsx",
-  "note": "read by EXPORTS_VALUE_BY_COMMODITY_GROUP and EXPORTS_VOLUME_BY_COMMODITY_GROUP; EXPORTS, OIL_EXPORTS_VALUE and OIL_EXPORTS_VOLUME are derived from them"
+  "raw_file": "bns_exports_2026-09-16.xlsx",
+  "note": "read by EXPORTS_VALUE_BY_COMMODITY_GROUP and EXPORTS_VOLUME_BY_COMMODITY_GROUP; EXPORTS, OIL_EXPORTS_VALUE and OIL_EXPORTS_VOLUME are derived from them",
+  "raw_file_note": "byte-identical copy bns_exports_2026-09-19.xlsx removed 2026-09-23; the bytes are in bns_exports_2026-09-16.xlsx"
 }

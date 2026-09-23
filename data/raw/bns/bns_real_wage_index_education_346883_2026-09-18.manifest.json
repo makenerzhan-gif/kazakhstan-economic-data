@@ -1,9 +1,10 @@
 {
   "downloaded_at": "2026-09-18T10:17:45.791900",
-  "raw_file": "bns_avg_wage_quarterly_346883_2026-09-18.xlsx",
+  "raw_file": "bns_avg_wage_agriculture_346883_2026-09-03.xlsx",
   "source_url": "https://stat.gov.kz/api/iblock/element/346883/file/ru/",
   "element_id": 346883,
   "quarter": "2026Q1",
   "sheet": "1",
-  "row": "Образование"
+  "row": "Образование",
+  "raw_file_note": "byte-identical copy bns_avg_wage_quarterly_346883_2026-09-18.xlsx removed 2026-09-23; the bytes are in bns_avg_wage_agriculture_346883_2026-09-03.xlsx"
 }

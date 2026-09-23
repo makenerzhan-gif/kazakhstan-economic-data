@@ -8,8 +8,9 @@ before the rule, the daily CI run on main). Nothing with distinct content is tou
 a file is removed only when a file with exactly the same bytes stays, and the dated
 manifest of the removed file is pointed at the survivor (`raw_file`).
 
-    python scripts/dedup_raw.py            # do it
-    python scripts/dedup_raw.py --dry-run  # report only
+    python scripts/dedup_raw.py                     # do it
+    python scripts/dedup_raw.py --dry-run           # report only
+    python scripts/dedup_raw.py --repair-manifests  # re-point manifests left naming a file an earlier dedup removed
 """
 from __future__ import annotations
 
@@ -58,28 +59,74 @@ def find_duplicates() -> list[tuple[Path, list[Path]]]:
     return out
 
 
-def point_manifest(removed: Path, kept: Path, today: str) -> bool:
-    m = NAME.match(removed.name)
-    if not m:
-        return False
-    manifest = removed.parent / f"{m.group('agency')}_{m.group('id')}_{m.group('date')}.manifest.json"
-    if not manifest.exists():
-        return False
-    try:
-        info = json.loads(manifest.read_text(encoding="utf-8"))
-    except json.JSONDecodeError:
-        info = {}
-    info["raw_file"] = kept.name
-    info["raw_file_note"] = f"byte-identical copy {removed.name} removed {today}; the bytes are in {kept.name}"
+def _manifests(folder: Path):
+    for manifest in sorted(folder.glob("*.manifest.json")):
+        try:
+            info = json.loads(manifest.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        if isinstance(info, dict):
+            yield manifest, info
+
+
+def _repoint(manifest: Path, info: dict, removed_name: str, kept_name: str, today: str) -> None:
+    info["raw_file"] = kept_name
+    info["raw_file_note"] = f"byte-identical copy {removed_name} removed {today}; the bytes are in {kept_name}"
     manifest.write_text(json.dumps(info, indent=2, ensure_ascii=False), encoding="utf-8")
-    return True
+
+
+def point_manifests(removed: Path, kept: Path, today: str) -> int:
+    """Point every manifest in the folder that names the removed file at the survivor --
+    not only the manifest named after the removed file: a shared workbook is named by
+    the manifests of every indicator that reads it (the wage table 346883 feeds
+    AVG_WAGE_QUARTERLY and AVG_WAGE_AGRICULTURE; until 2026-09-23 only the owner's
+    manifest was re-pointed and the others were left dangling)."""
+    n = 0
+    for manifest, info in _manifests(removed.parent):
+        if info.get("raw_file") == removed.name:
+            _repoint(manifest, info, removed.name, kept.name, today)
+            n += 1
+    return n
+
+
+def repair_manifests(today: str, dry_run: bool = False) -> int:
+    """Re-point every manifest whose `raw_file` no longer exists but is named in a
+    dedup record (data/raw/dedup_*.json), following chains (a survivor of one dedup
+    removed by a later one). Returns the number of manifests changed."""
+    mapping: dict[tuple[str, str], str] = {}                      # (agency, removed name) -> kept name
+    for record in sorted(RAW.glob("dedup_*.json")):
+        for removed_rel, kept_rel in json.loads(record.read_text(encoding="utf-8")).get("removed", {}).items():
+            mapping[(Path(removed_rel).parent.name, Path(removed_rel).name)] = Path(kept_rel).name
+    n = 0
+    for folder in sorted(p for p in RAW.iterdir() if p.is_dir()):
+        for manifest, info in _manifests(folder):
+            name = info.get("raw_file")
+            if not name or (folder / name).exists():
+                continue
+            seen, target = {name}, mapping.get((folder.name, name))
+            while target is not None and not (folder / target).exists() and target not in seen:
+                seen.add(target)
+                target = mapping.get((folder.name, target))
+            if target is None or not (folder / target).exists():
+                print(f"dedup_raw: {manifest.name} names {name}, which is missing and not in any dedup record -- left as is")
+                continue
+            n += 1
+            if not dry_run:
+                _repoint(manifest, info, name, target, today)
+    return n
 
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--repair-manifests", action="store_true",
+                    help="only re-point manifests whose raw_file was removed by an earlier dedup (see repair_manifests)")
     args = ap.parse_args(argv)
     today = date.today().isoformat()
+    if args.repair_manifests:
+        n = repair_manifests(today, dry_run=args.dry_run)
+        print(f"dedup_raw --repair-manifests{' (dry run)' if args.dry_run else ''}: {n} manifests {'would be ' if args.dry_run else ''}re-pointed")
+        return 0
     groups = find_duplicates()
     removed: dict[str, str] = {}
     freed = 0
@@ -88,7 +135,7 @@ def main(argv: list[str] | None = None) -> int:
             freed += d.stat().st_size
             removed[d.relative_to(REPO_ROOT).as_posix()] = kept.relative_to(REPO_ROOT).as_posix()
             if not args.dry_run:
-                point_manifest(d, kept, today)
+                point_manifests(d, kept, today)
                 d.unlink()
     print(f"dedup_raw{' (dry run)' if args.dry_run else ''}: {len(groups)} contents with copies, "
           f"{len(removed)} files {'would be ' if args.dry_run else ''}removed, {freed / 1e6:.0f} MB")

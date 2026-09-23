@@ -1,9 +1,10 @@
 {
   "downloaded_at": "2026-09-21T11:21:00.244000",
-  "raw_file": "bns_retail_trade_monthly_346655_2026-09-21.xlsx",
+  "raw_file": "bns_retail_trade_index_monthly_346655_2026-09-01.xlsx",
   "source_url": "https://stat.gov.kz/api/iblock/element/346655/file/ru/",
   "element_id": 346655,
   "reporting_month": "2026-05",
   "sheet": "2",
-  "section": "Оптовая торговля"
+  "section": "Оптовая торговля",
+  "raw_file_note": "byte-identical copy bns_retail_trade_monthly_346655_2026-09-21.xlsx removed 2026-09-23; the bytes are in bns_retail_trade_index_monthly_346655_2026-09-01.xlsx"
 }

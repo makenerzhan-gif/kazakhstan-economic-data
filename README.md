@@ -204,7 +204,10 @@ archived workbook is a Git LFS pointer, and the pointer's sha256 is what the
 download is compared with. Revised content still lands as a new dated file, and
 nothing archived is ever modified. The copies accumulated before this rule
 (9.9 GB of 11.2 GB) were removed on 2026-09-15; `data/raw/dedup_2026-09-15.json`
-maps every removed file to the file that holds its bytes.
+maps every removed file to the file that holds its bytes; the 702 copies the CI
+runs of 16–23 September archived again (LFS pointers compared by bytes, see
+`lib/raw_store.holds_content`) were removed the same way on 2026-09-23
+(`data/raw/dedup_2026-09-23.json`).
 
 ## Hard rules (see MASTER TASK for full detail)
 

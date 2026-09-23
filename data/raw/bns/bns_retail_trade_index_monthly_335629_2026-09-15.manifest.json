@@ -1,9 +1,10 @@
 {
   "downloaded_at": "2026-09-15T09:59:25.631950",
-  "raw_file": "bns_retail_trade_monthly_335629_2026-09-15_095904.xlsx",
+  "raw_file": "bns_retail_trade_index_monthly_335629_2026-09-01.xlsx",
   "source_url": "https://stat.gov.kz/api/iblock/element/335629/file/ru/",
   "element_id": 335629,
   "reporting_month": "2026-07",
   "sheet": "2",
-  "section": "Розничная торговля"
+  "section": "Розничная торговля",
+  "raw_file_note": "byte-identical copy bns_retail_trade_monthly_335629_2026-09-15_095904.xlsx removed 2026-09-23; the bytes are in bns_retail_trade_index_monthly_335629_2026-09-01.xlsx"
 }

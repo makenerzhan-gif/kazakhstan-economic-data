@@ -1,6 +1,7 @@
 {
   "downloaded_at": "2026-09-17T11:31:07.458753",
-  "raw_file": "bns_production_natural_by_region_2026-09-17.xlsx",
+  "raw_file": "bns_production_natural_by_region_2026-09-14.xlsx",
   "source_url": "https://stat.gov.kz/api/iblock/element/5814/file/ru/",
-  "element_id": 5814
+  "element_id": 5814,
+  "raw_file_note": "byte-identical copy bns_production_natural_by_region_2026-09-17.xlsx removed 2026-09-23; the bytes are in bns_production_natural_by_region_2026-09-14.xlsx"
 }

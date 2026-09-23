@@ -4654,3 +4654,22 @@ Tests 360 → 362 (`tests/test_raw_store.py`). The 702 duplicate pointers alread
 repository are left in place; removing them is the same operation as the 2026-09-15 dedup
 (a record file mapping each removed file to the file that holds its bytes) and is the
 author's decision.
+
+## 2026-09-23 — 702 duplicate raw copies removed; every manifest re-pointed (user: «Удали дубликаты»)
+
+**What.** `scripts/dedup_raw.py` removed the 702 byte-identical BNS workbooks that the CI runs of
+2026-09-16..23 had archived again (80 distinct contents, 2 326 MB of smudged copies; verified
+before removal that each removed pointer's LFS oid equals the surviving file's). Record:
+`data/raw/dedup_2026-09-23.json` (removed → kept, 702 entries). Nothing with distinct content
+was touched; the raw tree keeps one file per content, the earliest archive of it.
+
+**Found and fixed on the way.** The dedup of 2026-09-15 re-pointed only the manifest named after
+a removed file; the manifests of the other indicators that read the same shared workbook (346883
+feeds AVG_WAGE_QUARTERLY and AVG_WAGE_AGRICULTURE; 335623 the construction index and output;
+5831 the employment tables …) kept naming the removed file. Today's removal would have left 732
+such manifests dangling. `dedup_raw.point_manifests` now re-points every manifest in the folder
+that names the removed file, and `--repair-manifests` follows the dedup records (across chains)
+for manifests left dangling earlier: 732 repaired, 0 dangling among the 10 502 manifests
+afterwards. `raw_file` in a manifest is written by the fetchers and read by nobody in the
+pipeline, so nothing had failed — the record was simply wrong. Tests 362 → 364
+(`tests/test_dedup_raw.py`).

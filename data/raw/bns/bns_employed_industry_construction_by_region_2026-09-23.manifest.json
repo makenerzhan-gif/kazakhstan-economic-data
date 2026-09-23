@@ -1,6 +1,7 @@
 {
   "downloaded_at": "2026-09-23T15:41:04.038921",
-  "raw_file": "bns_employed_industry_construction_by_region_2026-09-23_154104.xlsx",
+  "raw_file": "bns_employed_industry_construction_by_region_2026-09-14.xlsx",
   "source_url": "https://stat.gov.kz/api/iblock/element/443435/file/ru/",
-  "element_id": 443435
+  "element_id": 443435,
+  "raw_file_note": "byte-identical copy bns_employed_industry_construction_by_region_2026-09-23_154104.xlsx removed 2026-09-23; the bytes are in bns_employed_industry_construction_by_region_2026-09-14.xlsx"
 }

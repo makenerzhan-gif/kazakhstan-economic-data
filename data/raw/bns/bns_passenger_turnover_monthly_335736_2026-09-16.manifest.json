@@ -1,9 +1,10 @@
 {
   "downloaded_at": "2026-09-16T15:47:55.232290",
-  "raw_file": "bns_freight_turnover_monthly_335736_2026-09-16.xlsx",
+  "raw_file": "bns_freight_carried_335736_2026-09-01.xlsx",
   "source_url": "https://stat.gov.kz/api/iblock/element/335736/file/ru/",
   "element_id": 335736,
   "period": "2026-07",
   "sheet": "1.",
-  "column": 7
+  "column": 7,
+  "raw_file_note": "byte-identical copy bns_freight_turnover_monthly_335736_2026-09-16.xlsx removed 2026-09-23; the bytes are in bns_freight_carried_335736_2026-09-01.xlsx"
 }

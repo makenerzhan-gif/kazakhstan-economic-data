@@ -1,8 +1,9 @@
 {
   "downloaded_at": "2026-09-21T11:24:48.489977",
-  "raw_file": "bns_export_price_index_347991_2026-09-21.xlsx",
+  "raw_file": "bns_export_price_index_347991_2026-09-16.xlsx",
   "source_url": "https://stat.gov.kz/api/iblock/element/347991/file/ru/",
   "element_id": 347991,
   "reporting_month": "2026-07",
-  "sheet": "2."
+  "sheet": "2.",
+  "raw_file_note": "byte-identical copy bns_export_price_index_347991_2026-09-21.xlsx removed 2026-09-23; the bytes are in bns_export_price_index_347991_2026-09-16.xlsx"
 }
