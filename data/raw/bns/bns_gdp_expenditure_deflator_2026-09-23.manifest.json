@@ -1,7 +1,6 @@
 {
-  "downloaded_at": "2026-09-23T15:40:32.172129",
+  "downloaded_at": "2026-09-23T18:52:47.533292",
   "raw_file": "bns_gdp_expenditure_deflator_2026-09-14.xlsx",
   "source_url": "https://stat.gov.kz/api/iblock/element/4436/file/ru/",
-  "element_id": 4436,
-  "raw_file_note": "byte-identical copy bns_gdp_expenditure_deflator_2026-09-23_154032.xlsx removed 2026-09-23; the bytes are in bns_gdp_expenditure_deflator_2026-09-14.xlsx"
+  "element_id": 4436
 }

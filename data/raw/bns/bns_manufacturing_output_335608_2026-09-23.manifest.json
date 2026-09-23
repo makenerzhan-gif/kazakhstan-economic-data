@@ -1,10 +1,9 @@
 {
-  "downloaded_at": "2026-09-23T14:55:56.161138",
+  "downloaded_at": "2026-09-23T18:09:00.188552",
   "raw_file": "bns_industrial_output_335608_2026-09-01.xlsx",
   "source_url": "https://stat.gov.kz/api/iblock/element/335608/file/ru/",
   "element_id": 335608,
   "published": "2026-08-17",
   "sheet": "2",
-  "row": "Обрабатывающая промышленность",
-  "raw_file_note": "byte-identical copy bns_oil_production_335608_2026-09-23_145527.xlsx removed 2026-09-23; the bytes are in bns_industrial_output_335608_2026-09-01.xlsx"
+  "row": "Обрабатывающая промышленность"
 }
