@@ -1,0 +1,19 @@
+{
+  "downloaded_at": "2026-09-24T10:41:15.724225",
+  "raw_file": "bns_innovation_expenditure_2026-09-01.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "16174986",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "16174986",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "1",
+    "p_term_id": "741880",
+    "p_terms": "741880,741885,808348,3451399",
+    "p_dicIds": "68,915,304,1198",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}
