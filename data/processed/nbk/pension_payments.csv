@@ -1,45 +1,45 @@
 date,value,transformation
-2023-01-01,1155398.586,level
-2023-02-01,31166.536,level
-2023-03-01,61879.199,level
-2023-04-01,93385.277,level
-2023-05-01,128291.07,level
-2023-06-01,163308.933,level
-2023-07-01,198734.928,level
-2023-08-01,272019.716,level
-2023-09-01,332498.626,level
-2023-10-01,382192.053,level
-2023-11-01,431425.729,level
-2023-12-01,486279.456,level
-2024-01-01,532558.563,level
-2024-02-01,51334.74,level
-2024-03-01,102798.512,level
-2024-04-01,147938.547,level
-2024-05-01,215088.343,level
-2024-06-01,268796.947,level
-2024-07-01,331067.321,level
-2024-08-01,432491.738,level
-2024-09-01,512332.488,level
-2024-10-01,589369.032,level
-2024-11-01,676062.69,level
-2024-12-01,766300.16,level
-2025-01-01,904922.77,level
-2025-02-01,104627.433,level
-2025-03-01,212895.745,level
-2025-04-01,300640.553,level
-2025-05-01,423196.602,level
-2025-06-01,516971.624,level
-2025-07-01,624171.02,level
-2025-08-01,767626.93,level
-2025-09-01,920202.661,level
-2025-10-01,1088751.829,level
-2025-11-01,1213839.789,level
-2025-12-01,1328596.854,level
-2026-01-01,1610746.019,level
-2026-02-01,87285.341,level
-2026-03-01,164394.849,level
-2026-04-01,250083.32,level
-2026-05-01,363503.843,level
-2026-06-01,493617.906,level
-2026-07-01,639307.969,level
-2026-08-01,704953.9,level
+2022-12-01,1155398.586,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2023-01-01,31166.536,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2023-02-01,61879.199,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2023-03-01,93385.277,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2023-04-01,128291.07,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2023-05-01,163308.933,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2023-06-01,198734.928,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2023-07-01,272019.716,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2023-08-01,332498.626,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2023-09-01,382192.053,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2023-10-01,431425.729,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2023-11-01,486279.456,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2023-12-01,532558.563,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2024-01-01,51334.74,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2024-02-01,102798.512,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2024-03-01,147938.547,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2024-04-01,215088.343,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2024-05-01,268796.947,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2024-06-01,331067.321,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2024-07-01,432491.738,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2024-08-01,512332.488,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2024-09-01,589369.032,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2024-10-01,676062.69,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2024-11-01,766300.16,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2024-12-01,904922.77,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-01-01,104627.433,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-02-01,212895.745,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-03-01,300640.553,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-04-01,423196.602,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-05-01,516971.624,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-06-01,624171.02,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-07-01,767626.93,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-08-01,920202.661,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-09-01,1088751.829,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-10-01,1213839.789,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-11-01,1328596.854,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-12-01,1610746.019,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-01-01,87285.341,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-02-01,164394.849,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-03-01,250083.32,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-04-01,363503.843,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-05-01,493617.906,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-06-01,639307.969,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-07-01,704953.9,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"

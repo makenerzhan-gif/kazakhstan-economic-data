@@ -6,7 +6,7 @@
   "indicator_name": "Export Physical Volume Index",
   "description": "Индекс физического объема экспорта товаров и услуг",
   "frequency": "annual",
-  "unit": "% change vs previous period",
+  "unit": "index, previous year = 100",
   "currency": "",
   "geography": "Kazakhstan (national)",
   "methodology": "Physical volume index of exports of goods and services, % of prior period. Same 2010-2013 gap as GFCF. Taldau indexId 700983.",

@@ -700,6 +700,19 @@ RU_MONTH_TO_NUM = {
     "январь": 1, "февраль": 2, "март": 3, "апрель": 4, "май": 5, "июнь": 6,
     "июль": 7, "август": 8, "сентябрь": 9, "октябрь": 10, "ноябрь": 11, "декабрь": 12,
 }
+# Matched by stem, not by the full word: the January-February 2026 bulletin heads
+# табл 3 "январь-феврал отчет" (no soft sign) and the exact lookup dropped that
+# edition from six STATE_*_YTD series (audit 2026-09-25). Stems also cover the
+# genitive forms ("мая", "августа") a header may use.
+RU_MONTH_STEMS = (("январ", 1), ("феврал", 2), ("март", 3), ("апрел", 4), ("ма", 5), ("июн", 6),
+                  ("июл", 7), ("август", 8), ("сентябр", 9), ("октябр", 10), ("ноябр", 11), ("декабр", 12))
+
+
+def _ru_month(name: str | None) -> int | None:
+    name = (name or "").strip().lower()
+    if name in RU_MONTH_TO_NUM:
+        return RU_MONTH_TO_NUM[name]
+    return next((num for stem, num in RU_MONTH_STEMS if name.startswith(stem) and len(name) <= len(stem) + 3), None)
 CUSTOMS_DUTIES_ROW_LABEL = "Таможенные платежи"
 
 
@@ -769,7 +782,7 @@ def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str, value_c
             continue
 
         end_month_name = (period_match.group(1) or "январь").lower()
-        end_month = RU_MONTH_TO_NUM.get(end_month_name)
+        end_month = _ru_month(end_month_name)
         year = int(period_match.group(2))
         value = target_row[value_col] if -len(target_row) <= value_col < len(target_row) else None
         if end_month is None or value in (None, ""):
@@ -1476,7 +1489,7 @@ def fetch_gov_financial_assets_sold() -> tuple[list[dict], dict]:
             continue
 
         end_month_name = (period_match.group(2) or period_match.group(1)).lower()
-        end_month = RU_MONTH_TO_NUM.get(end_month_name)
+        end_month = _ru_month(end_month_name)
         year = int(period_match.group(3))
         value = target_row[1] if len(target_row) > 1 else None
         if end_month is None or value in (None, ""):

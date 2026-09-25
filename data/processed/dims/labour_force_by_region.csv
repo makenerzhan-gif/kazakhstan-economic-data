@@ -17,6 +17,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,AKM,TOTAL,Рабочая сила,439.8,level
 2013-12-31,AKM,TOTAL,Рабочая сила,441.911,level
 2014-12-31,AKM,TOTAL,Рабочая сила,444.683,level
+2015-12-31,AKM,TOTAL,Рабочая сила,429.908,level
 2016-12-31,AKM,TOTAL,Рабочая сила,437.991,level
 2017-12-31,AKM,TOTAL,Рабочая сила,428.878,level
 2018-12-31,AKM,TOTAL,Рабочая сила,429.212,level
@@ -41,6 +42,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,AKT,TOTAL,Рабочая сила,432.374,level
 2013-12-31,AKT,TOTAL,Рабочая сила,434.126,level
 2014-12-31,AKT,TOTAL,Рабочая сила,430.936,level
+2015-12-31,AKT,TOTAL,Рабочая сила,426.565,level
 2016-12-31,AKT,TOTAL,Рабочая сила,429.291,level
 2017-12-31,AKT,TOTAL,Рабочая сила,429.464,level
 2018-12-31,AKT,TOTAL,Рабочая сила,438.643,level
@@ -65,6 +67,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ALA,TOTAL,Рабочая сила,774.679,level
 2013-12-31,ALA,TOTAL,Рабочая сила,787.517,level
 2014-12-31,ALA,TOTAL,Рабочая сила,809.221,level
+2015-12-31,ALA,TOTAL,Рабочая сила,885.004,level
 2016-12-31,ALA,TOTAL,Рабочая сила,916.269,level
 2017-12-31,ALA,TOTAL,Рабочая сила,939.19,level
 2018-12-31,ALA,TOTAL,Рабочая сила,961.673,level
@@ -89,6 +92,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ALM,TOTAL,Рабочая сила,1020.755,level
 2013-12-31,ALM,TOTAL,Рабочая сила,1044.571,level
 2014-12-31,ALM,TOTAL,Рабочая сила,1065.296,level
+2015-12-31,ALM,TOTAL,Рабочая сила,992.549,level
 2016-12-31,ALM,TOTAL,Рабочая сила,1034.789,level
 2017-12-31,ALM,TOTAL,Рабочая сила,1037.531,level
 2018-12-31,ALM,TOTAL,Рабочая сила,1043.229,level
@@ -113,6 +117,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,AST,TOTAL,Рабочая сила,417.574,level
 2013-12-31,AST,TOTAL,Рабочая сила,434.47,level
 2014-12-31,AST,TOTAL,Рабочая сила,454.551,level
+2015-12-31,AST,TOTAL,Рабочая сила,488.834,level
 2016-12-31,AST,TOTAL,Рабочая сила,488.715,level
 2017-12-31,AST,TOTAL,Рабочая сила,521.492,level
 2018-12-31,AST,TOTAL,Рабочая сила,531.426,level
@@ -137,6 +142,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ATY,TOTAL,Рабочая сила,291.786,level
 2013-12-31,ATY,TOTAL,Рабочая сила,294.28,level
 2014-12-31,ATY,TOTAL,Рабочая сила,301.3,level
+2015-12-31,ATY,TOTAL,Рабочая сила,312.029,level
 2016-12-31,ATY,TOTAL,Рабочая сила,311.769,level
 2017-12-31,ATY,TOTAL,Рабочая сила,315.711,level
 2018-12-31,ATY,TOTAL,Рабочая сила,319.697,level
@@ -161,6 +167,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,KRG,TOTAL,Рабочая сила,740.939,level
 2013-12-31,KRG,TOTAL,Рабочая сила,744.11,level
 2014-12-31,KRG,TOTAL,Рабочая сила,713.087,level
+2015-12-31,KRG,TOTAL,Рабочая сила,707.701,level
 2016-12-31,KRG,TOTAL,Рабочая сила,690.642,level
 2017-12-31,KRG,TOTAL,Рабочая сила,685.0,level
 2018-12-31,KRG,TOTAL,Рабочая сила,685.354,level
@@ -185,6 +192,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,KST,TOTAL,Рабочая сила,539.558,level
 2013-12-31,KST,TOTAL,Рабочая сила,531.075,level
 2014-12-31,KST,TOTAL,Рабочая сила,519.96,level
+2015-12-31,KST,TOTAL,Рабочая сила,510.263,level
 2016-12-31,KST,TOTAL,Рабочая сила,519.161,level
 2017-12-31,KST,TOTAL,Рабочая сила,517.098,level
 2018-12-31,KST,TOTAL,Рабочая сила,512.692,level
@@ -209,6 +217,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,KZL,TOTAL,Рабочая сила,347.646,level
 2013-12-31,KZL,TOTAL,Рабочая сила,352.62,level
 2014-12-31,KZL,TOTAL,Рабочая сила,327.593,level
+2015-12-31,KZL,TOTAL,Рабочая сила,324.387,level
 2016-12-31,KZL,TOTAL,Рабочая сила,345.623,level
 2017-12-31,KZL,TOTAL,Рабочая сила,347.411,level
 2018-12-31,KZL,TOTAL,Рабочая сила,349.725,level
@@ -233,6 +242,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,MNG,TOTAL,Рабочая сила,271.734,level
 2013-12-31,MNG,TOTAL,Рабочая сила,274.223,level
 2014-12-31,MNG,TOTAL,Рабочая сила,261.771,level
+2015-12-31,MNG,TOTAL,Рабочая сила,291.869,level
 2016-12-31,MNG,TOTAL,Рабочая сила,292.325,level
 2017-12-31,MNG,TOTAL,Рабочая сила,292.038,level
 2018-12-31,MNG,TOTAL,Рабочая сила,320.213,level
@@ -257,6 +267,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,PVL,TOTAL,Рабочая сила,439.206,level
 2013-12-31,PVL,TOTAL,Рабочая сила,440.0,level
 2014-12-31,PVL,TOTAL,Рабочая сила,441.257,level
+2015-12-31,PVL,TOTAL,Рабочая сила,426.175,level
 2016-12-31,PVL,TOTAL,Рабочая сила,421.435,level
 2017-12-31,PVL,TOTAL,Рабочая сила,416.311,level
 2018-12-31,PVL,TOTAL,Рабочая сила,412.957,level
@@ -272,6 +283,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,SHM,TOTAL,Рабочая сила,292.197,level
 2013-12-31,SHM,TOTAL,Рабочая сила,301.15,level
 2014-12-31,SHM,TOTAL,Рабочая сила,302.276,level
+2015-12-31,SHM,TOTAL,Рабочая сила,370.392,level
 2016-12-31,SHM,TOTAL,Рабочая сила,377.951,level
 2017-12-31,SHM,TOTAL,Рабочая сила,375.438,level
 2018-12-31,SHM,TOTAL,Рабочая сила,406.426,level
@@ -296,6 +308,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,SKO,TOTAL,Рабочая сила,349.558,level
 2013-12-31,SKO,TOTAL,Рабочая сила,346.876,level
 2014-12-31,SKO,TOTAL,Рабочая сила,330.251,level
+2015-12-31,SKO,TOTAL,Рабочая сила,329.631,level
 2016-12-31,SKO,TOTAL,Рабочая сила,318.934,level
 2017-12-31,SKO,TOTAL,Рабочая сила,310.312,level
 2018-12-31,SKO,TOTAL,Рабочая сила,311.329,level
@@ -311,6 +324,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,TRK,TOTAL,Рабочая сила,951.21,level
 2013-12-31,TRK,TOTAL,Рабочая сила,954.078,level
 2014-12-31,TRK,TOTAL,Рабочая сила,927.586,level
+2015-12-31,TRK,TOTAL,Рабочая сила,825.534,level
 2016-12-31,TRK,TOTAL,Рабочая сила,832.065,level
 2017-12-31,TRK,TOTAL,Рабочая сила,821.6,level
 2018-12-31,TRK,TOTAL,Рабочая сила,832.043,level
@@ -339,6 +353,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,VKO,TOTAL,Рабочая сила,748.486,level
 2013-12-31,VKO,TOTAL,Рабочая сила,745.984,level
 2014-12-31,VKO,TOTAL,Рабочая сила,740.911,level
+2015-12-31,VKO,TOTAL,Рабочая сила,715.527,level
 2016-12-31,VKO,TOTAL,Рабочая сила,719.214,level
 2017-12-31,VKO,TOTAL,Рабочая сила,722.286,level
 2018-12-31,VKO,TOTAL,Рабочая сила,713.6,level
@@ -372,6 +387,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ZHM,TOTAL,Рабочая сила,591.912,level
 2013-12-31,ZHM,TOTAL,Рабочая сила,580.974,level
 2014-12-31,ZHM,TOTAL,Рабочая сила,557.72,level
+2015-12-31,ZHM,TOTAL,Рабочая сила,525.21,level
 2016-12-31,ZHM,TOTAL,Рабочая сила,526.725,level
 2017-12-31,ZHM,TOTAL,Рабочая сила,531.067,level
 2018-12-31,ZHM,TOTAL,Рабочая сила,533.01,level
@@ -400,6 +416,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ZKO,TOTAL,Рабочая сила,332.519,level
 2013-12-31,ZKO,TOTAL,Рабочая сила,333.379,level
 2014-12-31,ZKO,TOTAL,Рабочая сила,333.566,level
+2015-12-31,ZKO,TOTAL,Рабочая сила,325.977,level
 2016-12-31,ZKO,TOTAL,Рабочая сила,335.944,level
 2017-12-31,ZKO,TOTAL,Рабочая сила,336.605,level
 2018-12-31,ZKO,TOTAL,Рабочая сила,337.404,level
@@ -424,6 +441,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,national,TOTAL,Рабочая сила,8981.933,level
 2013-12-31,national,TOTAL,Рабочая сила,9041.344,level
 2014-12-31,national,TOTAL,Рабочая сила,8961.965,level
+2015-12-31,national,TOTAL,Рабочая сила,8887.555,level
 2016-12-31,national,TOTAL,Рабочая сила,8998.843,level
 2017-12-31,national,TOTAL,Рабочая сила,9027.432,level
 2018-12-31,national,TOTAL,Рабочая сила,9138.633,level

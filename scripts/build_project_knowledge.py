@@ -113,6 +113,52 @@ def build_sources_md(sources: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
+def load_source_issues() -> list[dict]:
+    path = REPO_ROOT / "config" / "source_issues.yaml"
+    return yaml.safe_load(path.read_text(encoding="utf-8"))["issues"] if path.exists() else []
+
+
+def _processed_rows(variable: str) -> list[dict]:
+    """The processed rows of a scalar indicator or an item-level dataset, whichever exists."""
+    for path in [*(REPO_ROOT / "data" / "processed").glob(f"*/{variable.lower()}.csv")]:
+        with path.open(encoding="utf-8") as f:
+            return list(csv.DictReader(f))
+    return []
+
+
+def issue_status(issue: dict) -> str:
+    """'still in the data' while every pinned observation holds its recorded value."""
+    pinned = issue.get("observations") or []
+    if not pinned:
+        return "caveat"
+    rows = _processed_rows(issue["variable"])
+    for obs in pinned:
+        match = [r for r in rows if r["date"] == obs["date"]
+                 and r.get("item_code", obs.get("item")) == obs.get("item", r.get("item_code"))
+                 and (r.get("region") or "national") == obs.get("region", "national")]
+        if not match or abs(float(match[0]["value"]) - float(obs["value"])) > 1e-6 * max(1.0, abs(float(obs["value"]))):
+            return "no longer in the data -- source corrected? remove the entry"
+    return "still in the data"
+
+
+def build_source_issues_section(issues: list[dict]) -> str:
+    lines = [
+        "",
+        "## Known problems in the sources",
+        "",
+        "From config/source_issues.yaml (audit 2026-09-25). The values are what the official files say "
+        "and are kept as published; exclude or dummy them in a model.",
+        "",
+        "| Variable | Dates | Kind | Status | What to do |",
+        "|---|---|---|---|---|",
+    ]
+    for issue in issues:
+        dates = ", ".join(sorted({o["date"] for o in issue.get("observations") or []})) or "-"
+        variable = issue["variable"] + (" (+ " + ", ".join(issue["also"]) + ")" if issue.get("also") else "")
+        lines.append(f"| {variable} | {dates} | {issue['kind']} | {issue_status(issue)} | {issue['advice']} |")
+    return "\n".join(lines) + "\n"
+
+
 def refresh_latest(indicators: list[dict]) -> None:
     wide_src = REPO_ROOT / "data" / "unified" / "macro_wide.csv"
     latest_dir = PK / "latest"
@@ -134,7 +180,8 @@ def main() -> int:
     indicators = load_indicators()
     sources = load_sources()
 
-    (PK / "DATA_CATALOG.md").write_text(build_data_catalog(indicators), encoding="utf-8")
+    (PK / "DATA_CATALOG.md").write_text(build_data_catalog(indicators) + build_source_issues_section(load_source_issues()),
+                                        encoding="utf-8")
     (PK / "DATA_DICTIONARY.md").write_text(build_data_dictionary(indicators), encoding="utf-8")
     (PK / "SOURCES.md").write_text(build_sources_md(sources), encoding="utf-8")
     refresh_latest(indicators)

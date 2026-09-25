@@ -368,7 +368,7 @@ datasets:
     row_dimension: region
     fixed_item: TOTAL
     fixed_item_name: "Рабочая сила"
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     min_regions: 20
     frequency: annual
     unit: "thousand persons"
@@ -385,7 +385,7 @@ datasets:
     row_dimension: region
     fixed_item: TOTAL
     fixed_item_name: "Занятое население"
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     min_regions: 20
     frequency: annual
     unit: "thousand persons"
@@ -402,7 +402,7 @@ datasets:
     row_dimension: region
     fixed_item: TOTAL
     fixed_item_name: "Безработное население"
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     min_regions: 20
     frequency: annual
     unit: "thousand persons"
@@ -419,7 +419,7 @@ datasets:
     row_dimension: region
     fixed_item: TOTAL
     fixed_item_name: "Наёмные работники"
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     min_regions: 20
     frequency: annual
     unit: "thousand persons"
@@ -436,7 +436,7 @@ datasets:
     row_dimension: region
     fixed_item: TOTAL
     fixed_item_name: "Самостоятельно занятые"
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     min_regions: 20
     frequency: annual
     unit: "thousand persons"
@@ -454,7 +454,7 @@ datasets:
     row_dimension: region
     fixed_item: TOTAL
     fixed_item_name: "Уровень безработицы"
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     strict: false
     min_regions: 20
     frequency: annual
@@ -474,7 +474,7 @@ datasets:
     row_dimension: region
     fixed_item: TOTAL
     fixed_item_name: "Занятые: сельское, лесное и рыбное хозяйство"
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     strict: false
     min_regions: 20
     frequency: annual
@@ -493,7 +493,7 @@ datasets:
     row_dimension: region
     fixed_item: TOTAL
     fixed_item_name: "Занятые: промышленность и строительство"
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     strict: false
     min_regions: 20
     frequency: annual
@@ -512,7 +512,7 @@ datasets:
     row_dimension: region
     fixed_item: TOTAL
     fixed_item_name: "Занятые: сфера услуг"
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     strict: false
     min_regions: 20
     frequency: annual
@@ -547,7 +547,7 @@ datasets:
     row_dimension: region
     fixed_item: TOTAL
     fixed_item_name: "Инвестиции в основной капитал"
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     min_regions: 20
     frequency: annual
     unit: "million KZT"
@@ -564,7 +564,7 @@ datasets:
     row_dimension: region
     fixed_item: TOTAL
     fixed_item_name: "ИФО инвестиций в основной капитал"
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     min_regions: 20
     frequency: annual
     unit: "% of previous year"
@@ -612,7 +612,7 @@ datasets:
     element_id: 5814
     layout: product_blocks
     sheets: ["горнодоб", "обрабатыв", "электроэнергия", "водоснабженение"]
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     dictionary: products
     strict: false
     min_items: 30
@@ -630,7 +630,7 @@ datasets:
     layout: periods_across
     sheets: ["лист"]
     label_col: 1
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     dictionary: industry_divisions
     min_items: 50
     frequency: annual
@@ -662,7 +662,7 @@ datasets:
     layout: group_blocks
     sheets: ["валовой сбор"]
     label_col: 0
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     groups: {TOTAL: "^всего", WHEAT: "пшениц"}
     skip_unknown_groups: true
     min_items: 2
@@ -679,7 +679,7 @@ datasets:
     layout: group_blocks
     sheets: ["посевная"]
     label_col: 0
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     groups: {TOTAL: "^всего", WHEAT: "пшениц"}
     skip_unknown_groups: true
     min_items: 2
@@ -696,7 +696,7 @@ datasets:
     layout: group_blocks
     sheets: ["урожайность"]
     label_col: 0
-    year_regex: "^\\s*(\\d{4})(?!\\d)"
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     groups: {TOTAL: "^всего", WHEAT: "пшениц"}
     skip_unknown_groups: true
     min_items: 2

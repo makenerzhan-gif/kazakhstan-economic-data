@@ -1268,8 +1268,8 @@ def fetch_loans_to_economy() -> tuple[list[dict], dict]:
 # investment' -- a different, netted-against-outflow headline figure, not
 # used here to keep this indicator as the standard BPM6 "net inflow"
 # concept specifically). Verified live 2026-08-31 with full pagination: 85
-# quarterly points, 2005-Q2 through 2026-Q2, ranging from USD -2,495.6
-# million (2026-Q1, a net-disinvestment quarter) to several USD 4,000+
+# quarterly points, 2005-Q1 through 2026-Q1, ranging from USD -2,495.6
+# million (2025-Q4, a net-disinvestment quarter) to several USD 4,000+
 # million quarters around 2008-2009 -- genuinely volatile, including
 # negative quarters, a real and expected pattern for BPM6 net FDI flows
 # (loan repayments/divestments can exceed new investment in a given
@@ -1532,8 +1532,8 @@ def fetch_iip_liabilities() -> tuple[list[dict], dict]:
 # plus one completely unclassified headline row per quarter -- code='Current
 # account', account_type_code='Current account', every other classification
 # field empty -- was the very first row returned by the API, no search
-# needed. Verified live: 24 quarterly points, 2020-Q2 through 2026-Q2, USD
-# million, recently negative (e.g. -5,180.4 in 2026-Q1) -- a current account
+# needed. Verified live: 24 quarterly points, 2020-Q1 through 2026-Q1, USD
+# million, recently negative (e.g. -5,180.4 in 2025-Q4) -- a current account
 # deficit, a plausible and well-known pattern for Kazakhstan given large
 # FDI-related income outflows even alongside a goods trade surplus.
 # ---------------------------------------------------------------------------
@@ -2986,7 +2986,7 @@ def fetch_inflation_target() -> tuple[list[dict], dict]:
 #
 # Closes the audit's BoP gap. The dataset held CURRENT_ACCOUNT_BALANCE as a
 # single number, so the deficit could not be decomposed -- and for Kazakhstan
-# the decomposition is the whole story. In Q2 2026 goods ran a SURPLUS of
+# the decomposition is the whole story. In Q1 2026 goods ran a SURPLUS of
 # 4,068.9 mln USD while primary income ran a DEFICIT of 5,956.5 mln, which is
 # profit repatriation by foreign investors in the oil sector. The current
 # account deficit is an INCOME deficit, not a trade deficit, and the headline
@@ -3170,7 +3170,7 @@ def fetch_bop_goods_balance() -> tuple[list[dict], dict]:
     return _fetch_bop_line(
         "GOODS", "BOP_GOODS_BALANCE",
         "Million USD, quarterly. Exports minus imports of goods. Kazakhstan runs a goods SURPLUS "
-        "(4,068.9 mln in Q2 2026) alongside a current account DEFICIT -- the deficit comes from "
+        "(4,068.9 mln in Q1 2026) alongside a current account DEFICIT -- the deficit comes from "
         "primary income, not trade. Beware: this form uses the code 'Goods' twice, the second "
         "time for goods bought by travellers under Travel, which is 0.0 throughout; the two are "
         "told apart only by the instrument fields. Every fetch re-checks that goods + services + "
@@ -3183,7 +3183,7 @@ def fetch_bop_services_balance() -> tuple[list[dict], dict]:
         "SERVICES", "BOP_SERVICES_BALANCE",
         "Million USD, quarterly. Services exports minus imports -- transport, travel, "
         "construction, business services. Persistently negative but small next to the income "
-        "account (-219.1 mln in Q2 2026).")
+        "account (-219.1 mln in Q1 2026).")
 
 
 def fetch_bop_primary_income() -> tuple[list[dict], dict]:
@@ -3191,7 +3191,7 @@ def fetch_bop_primary_income() -> tuple[list[dict], dict]:
     return _fetch_bop_line(
         "PRIMARY_INCOME", "BOP_PRIMARY_INCOME",
         "Million USD, quarterly. Investment income and compensation of employees, net. THIS IS "
-        "THE DRIVER OF KAZAKHSTAN'S CURRENT ACCOUNT DEFICIT: -5,956.5 mln in Q2 2026 against a "
+        "THE DRIVER OF KAZAKHSTAN'S CURRENT ACCOUNT DEFICIT: -5,956.5 mln in Q1 2026 against a "
         "goods surplus of +4,068.9 mln. It is dominated by profit repatriation by foreign "
         "investors in the oil sector, so it tracks oil earnings rather than domestic demand.")
 
@@ -3202,7 +3202,7 @@ def fetch_bop_secondary_income() -> tuple[list[dict], dict]:
         "SECONDARY_INCOME", "BOP_SECONDARY_INCOME",
         "Million USD, quarterly. Current transfers, net -- personal transfers, government "
         "transfers and other current transfers. The smallest of the four components (+98.7 mln "
-        "in Q2 2026).")
+        "in Q1 2026).")
 
 
 # ---------------------------------------------------------------------------

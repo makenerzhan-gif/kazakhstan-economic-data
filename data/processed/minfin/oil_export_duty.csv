@@ -1,14 +1,15 @@
 date,value,transformation
-2025-03-31,255591.20797902,level
-2025-06-30,731047.76502143,level
-2025-07-31,880766.44298002,level
-2025-08-31,1047172.25215907,level
-2025-09-30,1213736.75535864,level
-2025-10-31,1347951.51199763,level
-2025-11-30,1493279.04341993,level
-2026-01-31,24693.1721991,level
-2026-02-28,54290.73387972,level
-2026-03-31,233079.25275303,level
-2026-05-31,625498.66658031,level
-2026-06-30,901338.23939422,level
-2026-07-31,1042295.79275944,level
+2025-02-28,118631.52841894,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-03-31,255591.20797902,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-06-30,731047.76502143,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-07-31,880766.44298002,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-08-31,1047172.25215907,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-09-30,1213736.75535864,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-10-31,1347951.51199763,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-11-30,1493279.04341993,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-01-31,24693.1721991,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-02-28,54290.73387972,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-03-31,233079.25275303,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-05-31,625498.66658031,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-06-30,901338.23939422,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-07-31,1042295.79275944,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"

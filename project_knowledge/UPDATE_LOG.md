@@ -4673,3 +4673,43 @@ for manifests left dangling earlier: 732 repaired, 0 dangling among the 10 502 m
 afterwards. `raw_file` in a manifest is written by the fetchers and read by nobody in the
 pipeline, so nothing had failed — the record was simply wrong. Tests 362 → 364
 (`tests/test_dedup_raw.py`).
+
+## 2026-09-25 — independent data audit and the fixes it called for (user: «проверь все данные», «исправляй»)
+
+**Audit.** `reports/data_audit_2026-09-25.md`: all 430 indicators and 115 item-level datasets
+re-parsed from `data/raw/` with parsers written for the audit (not the pipeline's). Every value
+matched its raw file; the problems were dates, gaps, labels and errors inside the sources.
+
+**Fixed in the pipeline.**
+- *NBK / ARDFM flows dated one period late.* NBK open data stamps a flow or an average with the day
+  after its period (report_date 2020-04-01 = Q1 2020 of the balance of payments). New
+  `date_basis: next_period_start` (with `date_basis_evidence`) on 30 indicators — the BOP lines and
+  GDP ratios of form 485, OTC rates and volumes (form 41), KASE volumes (form 35), LENDING_RATE,
+  PENSION_PAYMENTS, INSURANCE_PREMIUMS_*, GOV_SECURITIES_SECONDARY_NBK_NOTES, and ARDFM's
+  BANK_NET_INCOME / ROA / ROE / LIQUID_ASSETS; `periods.apply_date_basis` moves them back once, in
+  `update_nbk` / `update_ardfm`, before normalisation. Proof: the four quarters of each year
+  2020-2024 now add up to the IMF annual current account to 1 mln USD. Enterprise surveys, stocks
+  «as at the 1st» and DEPOSIT_RATE (evidence inconclusive) are unchanged.
+- *Point-in-time stocks restated to the period start.* `processed_store.write_processed` now passes
+  `observation_type` to `periods.normalise`; the five National Fund portfolio series return to their
+  quarter-end dates (2026-06-30, not 2026-04-01).
+- *2015 lost from six regional labour tables and EMPLOYED_TOTAL.* The year pattern rejected the
+  footnoted header «20152)»; `year_regex` now allows a footnote digit (16 datasets; re-parsed from the
+  archived workbooks: only the 2015 column is added, nothing else changes).
+- *Minfin.* Month names matched by stem («январь-феврал отчет» had dropped Jan-Feb 2026 from six
+  STATE_*_YTD series); `update_minfin.keep_unlisted_history` carries over periods the gov.kz listing no
+  longer serves; 49 lost points restored from the 33 archived bulletins (no conflict with any value
+  already held), incl. Jan-Feb 2025 for 23 series, Jan-Feb 2026 for six, TAX_ARREARS_TOTAL on 1 January 2024 and
+  2025, and the 2021-2022 annual columns of older editions for 18 annual series.
+- *Expenditure GDP components 2010-2013.* `gaps_filled_from` fills the Taldau gap in GFCF,
+  HOUSEHOLD_CONSUMPTION, NET_EXPORTS, GROSS_ACCUMULATION, TOTAL_CONSUMPTION_EXPENDITURE and the three
+  volume indices from table 4439 — only while the two agree on every shared year (15 of 15, to 1e-16).
+- *Labels.* IMF WEO years stamped at 31 December like BNS (a date join returned nothing before), and
+  every year from the vintage's COUNTRY_UPDATE_DATE on is labelled «IMF WEO estimate/projection» in
+  `transformation`; year-to-date series say so in `transformation` (34, was 1); unit strings of CPI,
+  GDP_DEFLATOR and three volume indices now say «index, … = 100»; core CPI notes say monthly;
+  youth unemployment is ages 15-34; stale `sources.yaml` entries carry `current_source`.
+
+**Source errors are kept as published** and listed in `config/source_issues.yaml` (export tonnage
+June 2026, NBK money 2021-12..2022, 2021 non-oil deficit, eurobonds 2022-Q4, …); DATA_CATALOG.md
+shows each with a status that flips when a source corrects it. Tests 364 → 382.

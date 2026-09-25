@@ -1,14 +1,15 @@
 date,value,transformation
-2025-03-31,43106.1,level
-2025-06-30,310612.23612,level
-2025-07-31,325048.78472000005,level
-2025-08-31,337534.1023,level
-2025-09-30,348288.53260000004,level
-2025-10-31,387808.0230800001,level
-2025-11-30,395858.44862000004,level
-2026-01-31,19655.0,level
-2026-02-28,29246.476010000002,level
-2026-03-31,97830.27543000001,level
-2026-05-31,393908.82220000005,level
-2026-06-30,455695.2147,level
-2026-07-31,545174.2186199999,level
+2025-02-28,18397.78606,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-03-31,43106.1,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-06-30,310612.23612,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-07-31,325048.78472000005,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-08-31,337534.1023,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-09-30,348288.53260000004,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-10-31,387808.0230800001,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-11-30,395858.44862000004,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-01-31,19655.0,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-02-28,29246.476010000002,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-03-31,97830.27543000001,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-05-31,393908.82220000005,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-06-30,455695.2147,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-07-31,545174.2186199999,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"

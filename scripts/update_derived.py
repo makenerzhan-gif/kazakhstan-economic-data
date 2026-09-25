@@ -129,6 +129,50 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
         run_logger.log(pipeline_logging.LogEntry(timestamp=datetime.now().isoformat(), source=agency, dataset=indicator_id,
                                                  action="derive+validate+process", status="ok",
                                                  records_downloaded=0, records_processed=len(records), warnings=result.warnings))
+    run_gap_fill(run_logger)
+
+
+def gap_filled_indicators(path: Path = INDICATORS_PATH) -> list[dict]:
+    return [i for i in yaml.safe_load(path.read_text(encoding="utf-8"))["indicators"] if i.get("gaps_filled_from")]
+
+
+def fill_gaps(ind: dict, own_rows: list[dict], dims_records: list[dict], tolerance: float = 1e-9) -> tuple[list[dict], int]:
+    """The indicator's own records plus the item-level values for the dates it lacks.
+
+    Only when the two agree on every date they share: the BNS expenditure table on
+    Taldau skips 2010-2013 while the xlsx table 4439's expenditure sheet carries them,
+    and on the fifteen years both hold they are the same numbers to 1e-16. A single
+    disagreement means they are no longer the same series and nothing is filled.
+    """
+    spec = ind["gaps_filled_from"]
+    other = {r["date"]: r["value"] for r in derive({"derived_from": spec}, dims_records)}
+    own = {r["date"]: float(r["value"]) for r in own_rows if r.get("value") not in (None, "")}
+    shared = set(own) & set(other)
+    if not shared:
+        raise validation.StructuralChangeError(f"{ind['id']}: no date in common with {spec['dataset']}[{spec['item']}] -- cannot prove they are one series")
+    worst = max(abs(own[d] - other[d]) / max(abs(own[d]), 1e-12) for d in shared)
+    if worst > tolerance:
+        raise validation.StructuralChangeError(
+            f"{ind['id']}: differs from {spec['dataset']}[{spec['item']}] by up to {worst:.2e} (relative) on shared dates -- gaps not filled")
+    added = {d: v for d, v in other.items() if d not in own}
+    merged = [{"date": d, "value": v} for d, v in sorted({**own, **added}.items())]
+    return merged, len(added)
+
+
+def run_gap_fill(run_logger: pipeline_logging.RunLogger) -> None:
+    for ind in gap_filled_indicators():
+        indicator_id, agency = ind["id"], ind["agency"]
+        try:
+            merged, added = fill_gaps(ind, _load_old_processed(agency, indicator_id),
+                                      dims.load_processed(ind["gaps_filled_from"]["dataset"]))
+        except Exception as exc:  # noqa: BLE001 -- the scalar series stays as fetched
+            run_logger.log(pipeline_logging.LogEntry(timestamp=datetime.now().isoformat(), source=agency, dataset=indicator_id,
+                                                     action="fill_gaps", status="error", errors=[str(exc)]))
+            continue
+        if added:
+            processed_store.write_processed(agency, indicator_id, merged, transformation="level", frequency=ind["frequency"])
+        run_logger.log(pipeline_logging.LogEntry(timestamp=datetime.now().isoformat(), source=agency, dataset=indicator_id,
+                                                 action="fill_gaps", status="ok", records_downloaded=0, records_processed=added))
 
 
 if __name__ == "__main__":

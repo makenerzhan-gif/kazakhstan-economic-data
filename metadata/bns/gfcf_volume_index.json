@@ -6,7 +6,7 @@
   "indicator_name": "GFCF Physical Volume Index",
   "description": "Индекс физического объема валового накопления основного капитала",
   "frequency": "annual",
-  "unit": "% change vs previous period",
+  "unit": "index, previous year = 100",
   "currency": "",
   "geography": "Kazakhstan (national)",
   "methodology": "Physical volume index of gross fixed capital formation, % of prior period. Taldau indexId 700981.",

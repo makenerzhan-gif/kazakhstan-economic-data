@@ -17,6 +17,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,AKM,TOTAL,Занятое население,416.421,level
 2013-12-31,AKM,TOTAL,Занятое население,418.985,level
 2014-12-31,AKM,TOTAL,Занятое население,422.685,level
+2015-12-31,AKM,TOTAL,Занятое население,408.142,level
 2016-12-31,AKM,TOTAL,Занятое население,416.432,level
 2017-12-31,AKM,TOTAL,Занятое население,408.285,level
 2018-12-31,AKM,TOTAL,Занятое население,408.697,level
@@ -41,6 +42,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,AKT,TOTAL,Занятое население,410.941,level
 2013-12-31,AKT,TOTAL,Занятое население,412.658,level
 2014-12-31,AKT,TOTAL,Занятое население,410.031,level
+2015-12-31,AKT,TOTAL,Занятое население,404.812,level
 2016-12-31,AKT,TOTAL,Занятое население,408.556,level
 2017-12-31,AKT,TOTAL,Занятое население,408.867,level
 2018-12-31,AKT,TOTAL,Занятое население,417.561,level
@@ -65,6 +67,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ALA,TOTAL,Занятое население,731.037,level
 2013-12-31,ALA,TOTAL,Занятое население,743.071,level
 2014-12-31,ALA,TOTAL,Занятое население,764.457,level
+2015-12-31,ALA,TOTAL,Занятое население,838.46,level
 2016-12-31,ALA,TOTAL,Занятое население,867.898,level
 2017-12-31,ALA,TOTAL,Занятое население,889.606,level
 2018-12-31,ALA,TOTAL,Занятое население,911.923,level
@@ -89,6 +92,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ALM,TOTAL,Занятое население,969.7,level
 2013-12-31,ALM,TOTAL,Занятое население,993.14,level
 2014-12-31,ALM,TOTAL,Занятое население,1013.266,level
+2015-12-31,ALM,TOTAL,Занятое население,943.024,level
 2016-12-31,ALM,TOTAL,Занятое население,985.347,level
 2017-12-31,ALM,TOTAL,Занятое население,988.441,level
 2018-12-31,ALM,TOTAL,Занятое население,994.48,level
@@ -113,6 +117,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,AST,TOTAL,Занятое население,393.949,level
 2013-12-31,AST,TOTAL,Занятое население,410.456,level
 2014-12-31,AST,TOTAL,Занятое население,431.596,level
+2015-12-31,AST,TOTAL,Занятое население,466.087,level
 2016-12-31,AST,TOTAL,Занятое население,466.056,level
 2017-12-31,AST,TOTAL,Занятое население,497.534,level
 2018-12-31,AST,TOTAL,Занятое население,507.473,level
@@ -137,6 +142,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ATY,TOTAL,Занятое население,277.323,level
 2013-12-31,ATY,TOTAL,Занятое население,279.495,level
 2014-12-31,ATY,TOTAL,Занятое население,286.127,level
+2015-12-31,ATY,TOTAL,Занятое население,296.294,level
 2016-12-31,ATY,TOTAL,Занятое население,296.378,level
 2017-12-31,ATY,TOTAL,Занятое население,300.112,level
 2018-12-31,ATY,TOTAL,Занятое население,304.034,level
@@ -161,6 +167,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,KRG,TOTAL,Занятое население,702.991,level
 2013-12-31,KRG,TOTAL,Занятое население,707.198,level
 2014-12-31,KRG,TOTAL,Занятое население,678.387,level
+2015-12-31,KRG,TOTAL,Занятое население,670.009,level
 2016-12-31,KRG,TOTAL,Занятое население,656.42,level
 2017-12-31,KRG,TOTAL,Занятое население,652.352,level
 2018-12-31,KRG,TOTAL,Занятое население,653.987,level
@@ -185,6 +192,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,KST,TOTAL,Занятое население,511.247,level
 2013-12-31,KST,TOTAL,Занятое население,503.648,level
 2014-12-31,KST,TOTAL,Занятое население,493.855,level
+2015-12-31,KST,TOTAL,Занятое население,484.195,level
 2016-12-31,KST,TOTAL,Занятое население,493.508,level
 2017-12-31,KST,TOTAL,Занятое население,492.082,level
 2018-12-31,KST,TOTAL,Занятое население,488.166,level
@@ -209,6 +217,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,KZL,TOTAL,Занятое население,329.097,level
 2013-12-31,KZL,TOTAL,Занятое население,334.353,level
 2014-12-31,KZL,TOTAL,Занятое население,311.144,level
+2015-12-31,KZL,TOTAL,Занятое население,307.786,level
 2016-12-31,KZL,TOTAL,Занятое население,328.551,level
 2017-12-31,KZL,TOTAL,Занятое население,330.562,level
 2018-12-31,KZL,TOTAL,Занятое население,332.94,level
@@ -233,6 +242,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,MNG,TOTAL,Занятое население,256.324,level
 2013-12-31,MNG,TOTAL,Занятое население,259.082,level
 2014-12-31,MNG,TOTAL,Занятое население,248.794,level
+2015-12-31,MNG,TOTAL,Занятое население,277.016,level
 2016-12-31,MNG,TOTAL,Занятое население,277.824,level
 2017-12-31,MNG,TOTAL,Занятое население,277.8,level
 2018-12-31,MNG,TOTAL,Занятое население,304.723,level
@@ -257,6 +267,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,PVL,TOTAL,Занятое население,417.481,level
 2013-12-31,PVL,TOTAL,Занятое население,417.976,level
 2014-12-31,PVL,TOTAL,Занятое население,420.276,level
+2015-12-31,PVL,TOTAL,Занятое население,405.136,level
 2016-12-31,PVL,TOTAL,Занятое население,401.138,level
 2017-12-31,PVL,TOTAL,Занятое население,396.39,level
 2018-12-31,PVL,TOTAL,Занятое население,393.34,level
@@ -272,6 +283,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,SHM,TOTAL,Занятое население,273.278,level
 2013-12-31,SHM,TOTAL,Занятое население,282.758,level
 2014-12-31,SHM,TOTAL,Занятое население,286.313,level
+2015-12-31,SHM,TOTAL,Занятое население,351.124,level
 2016-12-31,SHM,TOTAL,Занятое население,357.96,level
 2017-12-31,SHM,TOTAL,Занятое население,355.78,level
 2018-12-31,SHM,TOTAL,Занятое население,385.428,level
@@ -296,6 +308,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,SKO,TOTAL,Занятое население,331.246,level
 2013-12-31,SKO,TOTAL,Занятое население,329.316,level
 2014-12-31,SKO,TOTAL,Занятое население,313.781,level
+2015-12-31,SKO,TOTAL,Занятое население,312.829,level
 2016-12-31,SKO,TOTAL,Занятое население,303.095,level
 2017-12-31,SKO,TOTAL,Занятое население,295.157,level
 2018-12-31,SKO,TOTAL,Занятое население,296.213,level
@@ -311,6 +324,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,TRK,TOTAL,Занятое население,900.395,level
 2013-12-31,TRK,TOTAL,Занятое население,902.963,level
 2014-12-31,TRK,TOTAL,Занятое население,876.92,level
+2015-12-31,TRK,TOTAL,Занятое население,780.937,level
 2016-12-31,TRK,TOTAL,Занятое население,789.284,level
 2017-12-31,TRK,TOTAL,Занятое население,779.102,level
 2018-12-31,TRK,TOTAL,Занятое население,789.002,level
@@ -339,6 +353,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,VKO,TOTAL,Занятое население,710.436,level
 2013-12-31,VKO,TOTAL,Занятое население,708.249,level
 2014-12-31,VKO,TOTAL,Занятое население,705.455,level
+2015-12-31,VKO,TOTAL,Занятое население,679.659,level
 2016-12-31,VKO,TOTAL,Занятое население,684.286,level
 2017-12-31,VKO,TOTAL,Занятое население,687.582,level
 2018-12-31,VKO,TOTAL,Занятое население,679.048,level
@@ -372,6 +387,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ZHM,TOTAL,Занятое население,559.861,level
 2013-12-31,ZHM,TOTAL,Занятое население,550.84,level
 2014-12-31,ZHM,TOTAL,Занятое население,530.172,level
+2015-12-31,ZHM,TOTAL,Занятое население,498.508,level
 2016-12-31,ZHM,TOTAL,Занятое население,501.113,level
 2017-12-31,ZHM,TOTAL,Занятое население,505.28,level
 2018-12-31,ZHM,TOTAL,Занятое население,506.975,level
@@ -400,6 +416,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ZKO,TOTAL,Занятое население,315.425,level
 2013-12-31,ZKO,TOTAL,Занятое население,316.46,level
 2014-12-31,ZKO,TOTAL,Занятое население,316.815,level
+2015-12-31,ZKO,TOTAL,Занятое население,309.295,level
 2016-12-31,ZKO,TOTAL,Занятое население,319.53,level
 2017-12-31,ZKO,TOTAL,Занятое население,320.221,level
 2018-12-31,ZKO,TOTAL,Занятое население,320.999,level
@@ -424,6 +441,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,national,TOTAL,Занятое население,8507.1,level
 2013-12-31,national,TOTAL,Занятое население,8570.648,level
 2014-12-31,national,TOTAL,Занятое население,8510.074,level
+2015-12-31,national,TOTAL,Занятое население,8433.313,level
 2016-12-31,national,TOTAL,Занятое население,8553.376,level
 2017-12-31,national,TOTAL,Занятое население,8585.153,level
 2018-12-31,national,TOTAL,Занятое население,8694.989,level

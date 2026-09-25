@@ -3243,7 +3243,7 @@ def fetch_youth_unemployment_rate() -> tuple[list[dict], dict]:
     """Youth unemployment rate, percent, quarterly."""
     return _fetch_labour_row(
         "Уровень молодежной безработицы", "YOUTH_UNEMPLOYMENT_RATE",
-        "Percent. Unemployment among people aged 15-28, as the source defines youth. 3.0% in "
+        "Percent. Unemployment among people aged 15-34, as the source defines youth (Law «On State Youth Policy»). 3.0% in "
         "Q1 2026 -- below the headline rate of 4.5%, the reverse of the usual pattern in most "
         "economies.", "%")
 
@@ -3614,46 +3614,45 @@ def _fetch_core_cpi(index_id: str, basket_term: str, dic_ids: str, comparison_te
 
 
 def fetch_core_cpi_yoy_ex3() -> tuple[list[dict], dict]:
-    """Core CPI excluding three components, same quarter previous year = 100."""
+    """Core CPI excluding three components, same month previous year = 100."""
     return _fetch_core_cpi(
         CORE_CPI_EX3_INDEX, CORE_CPI_EX3_BASKET, CORE_CPI_EX3_DICS, CORE_CPI_TERM_YOY,
         "CORE_CPI_YOY_EX3",
-        "Index, same quarter of the previous year = 100. Core inflation excluding fruit and "
-        "vegetables, petrol and coal -- 111.4 for Q2 2026, so 11.4%. QUARTERLY, not monthly: the "
-        "source's periodId=5 is quarters here, which the period-on-period reading confirms "
-        "(102.6-103.2 a quarter, about 11% annualised, matching this series). Sits just below the "
-        "headline CPI_YOY, which is the expected relationship since the excluded items are the "
-        "volatile ones.")
+        "Index, same month of the previous year = 100. Core inflation excluding fruit and "
+        "vegetables, petrol and coal -- 110.7 for August 2026, so 10.7%. MONTHLY (the Taldau "
+        "query uses the monthly period; an earlier note here said quarterly, corrected "
+        "2026-09-25). Sits just below the headline CPI_YOY, which is the expected relationship "
+        "since the excluded items are the volatile ones.")
 
 
 def fetch_core_cpi_mom_ex3() -> tuple[list[dict], dict]:
-    """Core CPI excluding three components, previous quarter = 100."""
+    """Core CPI excluding three components, previous month = 100."""
     return _fetch_core_cpi(
         CORE_CPI_EX3_INDEX, CORE_CPI_EX3_BASKET, CORE_CPI_EX3_DICS, CORE_CPI_TERM_QOQ,
         "CORE_CPI_MOM_EX3",
-        "Index, previous quarter = 100 -- 102.6 for Q2 2026. The momentum reading of "
+        "Index, previous month = 100 -- 100.8 for August 2026. The momentum reading of "
         "CORE_CPI_YOY_EX3: it turns before the year-on-year series does, which is the point of "
         "carrying both.")
 
 
 def fetch_core_cpi_yoy_ex7() -> tuple[list[dict], dict]:
-    """Core CPI excluding seven components, same quarter previous year = 100."""
+    """Core CPI excluding seven components, same month previous year = 100."""
     return _fetch_core_cpi(
         CORE_CPI_EX7_INDEX, CORE_CPI_EX7_BASKET, CORE_CPI_EX7_DICS, CORE_CPI_TERM_YOY,
         "CORE_CPI_YOY_EX7",
-        "Index, same quarter of the previous year = 100. The NARROWER core basket: on top of "
+        "Index, same month of the previous year = 100. The NARROWER core basket: on top of "
         "fruit, vegetables, petrol and coal it also excludes regulated utilities and rail "
-        "transport -- the administered prices. 111.9 for Q2 2026, slightly ABOVE the "
-        "three-component measure, which says the administered prices were rising more slowly "
-        "than the rest of the basket.")
+        "transport -- the administered prices. 111.2 for August 2026 (monthly), slightly ABOVE "
+        "the three-component measure, which says the administered prices were rising more "
+        "slowly than the rest of the basket.")
 
 
 def fetch_core_cpi_mom_ex7() -> tuple[list[dict], dict]:
-    """Core CPI excluding seven components, previous quarter = 100."""
+    """Core CPI excluding seven components, previous month = 100."""
     return _fetch_core_cpi(
         CORE_CPI_EX7_INDEX, CORE_CPI_EX7_BASKET, CORE_CPI_EX7_DICS, CORE_CPI_TERM_QOQ,
         "CORE_CPI_MOM_EX7",
-        "Index, previous quarter = 100 -- 102.6 for Q2 2026. Momentum on the narrower core "
+        "Index, previous month = 100 -- 100.6 for August 2026. Momentum on the narrower core "
         "basket, the companion to CORE_CPI_YOY_EX7.")
 
 

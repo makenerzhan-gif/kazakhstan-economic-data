@@ -6,7 +6,7 @@
   "indicator_name": "GDP Deflator (production method)",
   "description": "Дефлятор ВВП, методом производства",
   "frequency": "annual",
-  "unit": "% change vs previous period",
+  "unit": "index, previous year = 100",
   "currency": "",
   "geography": "Kazakhstan (national)",
   "methodology": "GDP deflator, production method, % of prior period. Taldau indexId 2970978.",

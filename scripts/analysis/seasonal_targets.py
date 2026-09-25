@@ -31,8 +31,8 @@ SEASONAL_TARGETS: list[SeasonalTarget] = [
         "CPI", "Headline CPI, month-over-month (already a comparison index)",
         rationale=(
             "Already a published MoM comparison index (observation_type="
-            "comparison_index, comparison_basis=mom, unit '% change vs previous "
-            "month') -- decompose as published, same 'already a comparison, don't "
+            "comparison_index, comparison_basis=mom, unit 'index, previous "
+            "month = 100') -- decompose as published, same 'already a comparison, don't "
             "transform it' rule scripts/analysis/correlate.py already uses. "
             "Textbook seasonal candidate: 187 gap-free monthly points "
             "(2011-01..2026-07), 15.5x this pass's 3-cycle minimum."

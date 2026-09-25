@@ -1,14 +1,15 @@
 date,value,transformation
-2025-03-31,406270.93573776,level
-2025-06-30,1495460.27388462,level
-2025-07-31,1833970.49552394,level
-2025-08-31,2381975.28375177,level
-2025-09-30,2790489.29749974,level
-2025-10-31,3195477.3271136,level
-2025-11-30,3715220.18835135,level
-2026-01-31,29938.10085496,level
-2026-02-28,248315.06581528,level
-2026-03-31,513956.9460623,level
-2026-05-31,1086315.58317048,level
-2026-06-30,1307364.60597941,level
-2026-07-31,1667705.03409599,level
+2025-02-28,209961.31519387,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-03-31,406270.93573776,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-06-30,1495460.27388462,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-07-31,1833970.49552394,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-08-31,2381975.28375177,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-09-30,2790489.29749974,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-10-31,3195477.3271136,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-11-30,3715220.18835135,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-01-31,29938.10085496,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-02-28,248315.06581528,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-03-31,513956.9460623,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-05-31,1086315.58317048,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-06-30,1307364.60597941,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-07-31,1667705.03409599,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"

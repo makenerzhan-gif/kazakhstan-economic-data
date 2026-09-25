@@ -10,6 +10,7 @@ whereas the CSV columns were confirmed to be clean and tabular.
 from __future__ import annotations
 
 import csv
+import re
 import io
 import sys
 import time
@@ -68,6 +69,20 @@ def _download(url: str, attempts: int = 3) -> bytes:
     raise last_exc  # type: ignore[misc]
 
 
+# The WEO carries a whole horizon -- history, the current-year estimate, five
+# projection years -- in one column with nothing to tell them apart but the
+# COUNTRY_UPDATE_DATE of the vintage. A year at or after that date's year cannot be
+# an outturn when the country desk last updated, so it is labelled a projection in
+# the record's `transformation` (2025 of the 9/29/2025 vintage: nominal GDP 157 741 bn
+# KZT against the BNS outturn 159 609 bn). Earlier years stay "level".
+WEO_PROJECTION = "IMF WEO estimate/projection"
+
+
+def weo_vintage_year(row: dict) -> int | None:
+    m = re.search(r"(\d{4})\s*$", (row.get("COUNTRY_UPDATE_DATE") or "").strip())
+    return int(m.group(1)) if m else None
+
+
 def _parse_annual_csv(content: bytes, indicator_id: str, source_url: str) -> list[dict]:
     text = content.decode("utf-8-sig")
     rows = list(csv.DictReader(io.StringIO(text)))
@@ -95,14 +110,20 @@ def _parse_annual_csv(content: bytes, indicator_id: str, source_url: str) -> lis
         raw_val = (row.get(value_col) or "").strip()
         if not period or not raw_val:
             continue
-        # Annual WEO observations are labeled just by year (e.g. "2024"); we stamp them
-        # at Jan 1 of that year as a documented convention, not an implied in-year timing.
-        iso_date = f"{period}-01-01" if period.isdigit() and len(period) == 4 else period
+        # Annual WEO observations are labeled just by year (e.g. "2024"). Stamped at
+        # 31 December, like every BNS and Minfin annual series: until 2026-09-25 they sat
+        # on 1 January and a date join of IMF and BNS for the same year returned nothing.
+        is_year = period.isdigit() and len(period) == 4
+        iso_date = f"{period}-12-31" if is_year else period
         try:
             value = float(raw_val)
         except ValueError:
             continue
-        records.append({"date": iso_date, "value": value})
+        rec = {"date": iso_date, "value": value}
+        vintage_year = weo_vintage_year(row)
+        if is_year and vintage_year is not None and int(period) >= vintage_year:
+            rec["transformation"] = f"{WEO_PROJECTION} (country update {row.get('COUNTRY_UPDATE_DATE', '').strip()})"
+        records.append(rec)
 
     records.sort(key=lambda r: r["date"])
     return records

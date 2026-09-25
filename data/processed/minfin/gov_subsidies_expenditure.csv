@@ -1,14 +1,15 @@
 date,value,transformation
-2025-03-31,38684.86812658,level
-2025-06-30,129731.75751781,level
-2025-07-31,139131.75751781,level
-2025-08-31,187096.88287821,level
-2025-09-30,194472.40604145,level
-2025-10-31,252240.18289344,level
-2025-11-30,413622.6786086,level
-2026-01-31,6318.84247,level
-2026-02-28,34496.21587,level
-2026-03-31,35310.83917,level
-2026-05-31,205261.99334018,level
-2026-06-30,259102.49153863,level
-2026-07-31,293922.04089829,level
+2025-02-28,33689.77497058,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-03-31,38684.86812658,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-06-30,129731.75751781,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-07-31,139131.75751781,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-08-31,187096.88287821,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-09-30,194472.40604145,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-10-31,252240.18289344,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2025-11-30,413622.6786086,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-01-31,6318.84247,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-02-28,34496.21587,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-03-31,35310.83917,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-05-31,205261.99334018,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-06-30,259102.49153863,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-07-31,293922.04089829,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"

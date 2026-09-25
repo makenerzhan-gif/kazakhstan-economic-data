@@ -59,7 +59,7 @@ indicators:
     name_en: "Consumer Price Index (Inflation)"
     agency: bns
     frequency: monthly
-    unit: "% change vs previous month"
+    unit: "index, previous month = 100"
     category: prices
     source_status: confirmed
     observation_type: comparison_index
@@ -249,7 +249,7 @@ indicators:
     name_en: "GDP Deflator (production method)"
     agency: bns
     frequency: annual
-    unit: "% change vs previous period"
+    unit: "index, previous year = 100"
     category: national_accounts
     source_status: confirmed
     observation_type: period_ratio
@@ -265,19 +265,23 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "паспорт: валовое накопление основного капитала — поток СНС"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_NOMINAL, item: GFCF, region: national, scale: 1000000}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_NOMINAL), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: GFCF_VOLUME_INDEX
     name_ru: "Индекс физического объема валового накопления основного капитала"
     name_en: "GFCF Physical Volume Index"
     agency: bns
     frequency: annual
-    unit: "% change vs previous period"
+    unit: "index, previous year = 100"
     category: national_accounts
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "паспорт: сравнение двух периодов (между двумя периодами)"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_VOLUME_INDEX, item: GFCF, region: national}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_VOLUME_INDEX), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: NET_EXPORTS
     name_ru: "Чистый экспорт"
@@ -289,6 +293,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "паспорт: поток за период (разница между экспортом)"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_NOMINAL, item: NET_EXPORTS, region: national, scale: 1000000}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_NOMINAL), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: HOUSEHOLD_CONSUMPTION
     name_ru: "Расходы на конечное потребление домашних хозяйств"
@@ -300,6 +306,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "паспорт: поток за период (расходы на)"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_NOMINAL, item: HOUSEHOLDS, region: national, scale: 1000000}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_NOMINAL), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: COMPENSATION_EMPLOYEES
     name_ru: "Оплата труда"
@@ -630,32 +638,38 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "паспорт: совокупный показатель СНС, сумма статей накопления за период"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_NOMINAL, item: GROSS_CAPITAL_FORMATION, region: national, scale: 1000000}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_NOMINAL), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: IMPORT_VOLUME_INDEX
     name_ru: "Индекс физического объема импорта товаров и услуг"
     name_en: "Import Physical Volume Index"
     agency: bns
     frequency: annual
-    unit: "% change vs previous period"
+    unit: "index, previous year = 100"
     category: national_accounts
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "паспорт: сравнение двух периодов (между двумя периодами)"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_VOLUME_INDEX, item: IMPORTS, region: national}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_VOLUME_INDEX), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: EXPORT_VOLUME_INDEX
     name_ru: "Индекс физического объема экспорта товаров и услуг"
     name_en: "Export Physical Volume Index"
     agency: bns
     frequency: annual
-    unit: "% change vs previous period"
+    unit: "index, previous year = 100"
     category: national_accounts
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "паспорт: сравнение двух периодов (между двумя периодами)"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_VOLUME_INDEX, item: EXPORTS, region: national}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_VOLUME_INDEX), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: TOTAL_CONSUMPTION_EXPENDITURE
     name_ru: "Расходы на конечное потребление"
@@ -667,6 +681,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "паспорт: поток за период (расходы на)"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_NOMINAL, item: FINAL_CONSUMPTION, region: national, scale: 1000000}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_NOMINAL), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: CAPITAL_CONSUMPTION
     name_ru: "Потребление основного капитала"
@@ -943,6 +959,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "то же построение: 'Средневзвешенные ставки'"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 27: значение на 2026-08-01 уже было в файле, скачанном 2026-08-30, до конца августа -- это июль (аудит 2026-09-25)"
 
   - id: DEPOSIT_RATE
     name_ru: "Средневзвешенная ставка вознаграждения по депозитам физических лиц (тенге)"
@@ -1116,6 +1134,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — results of trades"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 35: строка с report_date 2026-08-01 несёт поле period = 'jul' -- оборот за июль (аудит 2026-09-25)"
 
   - id: IMF_GOV_EXPENDITURE
     name_ru: "IMF WEO: расходы сектора госуправления, уровень"
@@ -1510,6 +1530,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: 'flows for the period'"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: GOV_SECURITIES_MEUKAM
     name_ru: "Объем МЕУКАМ в обращении"
@@ -1565,6 +1587,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "тождество проверено в этой сессии: сумма BOP_GOODS+SERVICES+PRIMARY+SECONDARY (все period_total) сходится с точностью 0.01"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: BANK_ROA
     name_ru: "Рентабельность активов банков (ROA)"
@@ -1616,6 +1640,8 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "единица: 'year-to-date cumulative'"
+    date_basis: next_period_start
+    date_basis_evidence: "нарастающий итог с датой следующего месяца (форма 132): точка 2026-09-01 была в файле от 2026-09-16, до конца сентября; YYYY-01-01 -- весь прошлый год (аудит 2026-09-25)"
 
   - id: INSURANCE_PREMIUMS_LIFE
     name_ru: "Страховые премии, страхование жизни"
@@ -1628,6 +1654,8 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "единица: 'year-to-date cumulative'"
+    date_basis: next_period_start
+    date_basis_evidence: "нарастающий итог с датой следующего месяца (форма 132): точка 2026-09-01 была в файле от 2026-09-16, до конца сентября; YYYY-01-01 -- весь прошлый год (аудит 2026-09-25)"
 
   - id: PENSION_PAYMENTS
     name_ru: "Пенсионные выплаты из ЕНПФ"
@@ -1640,6 +1668,8 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "единица: 'year-to-date cumulative'"
+    date_basis: next_period_start
+    date_basis_evidence: "нарастающий итог с датой следующего месяца: точка YYYY-01-01 -- весь прошлый год (PENSION_PAYMENTS 2025-01-01 = 904 923 = год 2024), YYYY-02-01 -- январь; без сдвига декумуляция давала отрицательный февраль (аудит 2026-09-25)"
 
   - id: RESERVES_IMPORT_COVER
     name_ru: "Покрытие импорта международными резервами"
@@ -2256,6 +2286,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "поле type: transactions volume"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 16: полный месячный оборот с датой 2026-09-01 был в файле от 2026-09-23, до конца сентября -- это август (аудит 2026-09-25)"
 
   - id: TOURISM_VALUE_ADDED
     name_ru: "Валовая добавленная стоимость, создаваемая непосредственно в туризме"
@@ -2386,6 +2418,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "поле type: average rate"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 41: значение на дату M совпадает со средним официальным курсом месяца M-1 (средняя ошибка 0,42% против 1,61% к месяцу M; USD 2026-07-01 = 486,16 при среднем за июнь 487,85 и за июль 472,12) (аудит 2026-09-25)"
 
   - id: EXCHANGE_RATE_RUB_OTC
     name_ru: "Средний курс рубля на внебиржевом рынке (покупка)"
@@ -2397,6 +2431,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "поле type: average rate"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 41: значение на дату M совпадает со средним официальным курсом месяца M-1 (средняя ошибка 0,42% против 1,61% к месяцу M; USD 2026-07-01 = 486,16 при среднем за июнь 487,85 и за июль 472,12) (аудит 2026-09-25)"
 
   - id: EXCHANGE_RATE_USD_OTC
     name_ru: "Средний курс доллара на внебиржевом рынке (покупка)"
@@ -2408,6 +2444,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "поле type: average rate"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 41: значение на дату M совпадает со средним официальным курсом месяца M-1 (средняя ошибка 0,42% против 1,61% к месяцу M; USD 2026-07-01 = 486,16 при среднем за июнь 487,85 и за июль 472,12) (аудит 2026-09-25)"
 
   - id: FX_OTC_VOLUME_USD
     name_ru: "Объём покупки долларов на внебиржевом рынке"
@@ -2419,6 +2457,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — otc operations"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 41: значение на дату M совпадает со средним официальным курсом месяца M-1 (средняя ошибка 0,42% против 1,61% к месяцу M; USD 2026-07-01 = 486,16 при среднем за июнь 487,85 и за июль 472,12) (аудит 2026-09-25)"
 
   - id: FX_OTC_VOLUME_EUR
     name_ru: "Объём покупки евро на внебиржевом рынке"
@@ -2430,6 +2470,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — otc operations"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 41: значение на дату M совпадает со средним официальным курсом месяца M-1 (средняя ошибка 0,42% против 1,61% к месяцу M; USD 2026-07-01 = 486,16 при среднем за июнь 487,85 и за июль 472,12) (аудит 2026-09-25)"
 
   - id: FX_OTC_VOLUME_RUB
     name_ru: "Объём покупки рублей на внебиржевом рынке"
@@ -2441,6 +2483,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — otc operations"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 41: значение на дату M совпадает со средним официальным курсом месяца M-1 (средняя ошибка 0,42% против 1,61% к месяцу M; USD 2026-07-01 = 486,16 при среднем за июнь 487,85 и за июль 472,12) (аудит 2026-09-25)"
 
   - id: OFC_NET_FOREIGN_ASSETS
     name_ru: "Чистые иностранные активы прочих финорганизаций"
@@ -2683,6 +2727,8 @@ indicators:
     source_status: confirmed
     observation_type: period_ratio
     observation_evidence: "единица: доля"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 485, та же разметка, что у платёжного баланса: «Резервные активы на конец периода» на 2026-04-01 равны форме 34 на 2026-04-01 -- конец I кв.; отношение относится к I кв. (аудит 2026-09-25)"
 
   - id: NATIONAL_FUND_GDP_SHARE
     name_ru: "Активы Нацфонда, % ВВП"
@@ -2694,6 +2740,8 @@ indicators:
     source_status: confirmed
     observation_type: period_ratio
     observation_evidence: "единица: доля"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 485, та же разметка, что у платёжного баланса: «Резервные активы на конец периода» на 2026-04-01 равны форме 34 на 2026-04-01 -- конец I кв.; отношение относится к I кв. (аудит 2026-09-25)"
 
   - id: RESERVE_ASSETS_GDP_SHARE
     name_ru: "Резервные активы НБ РК, % ВВП"
@@ -2705,6 +2753,8 @@ indicators:
     source_status: confirmed
     observation_type: period_ratio
     observation_evidence: "единица: доля"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 485, та же разметка, что у платёжного баланса: «Резервные активы на конец периода» на 2026-04-01 равны форме 34 на 2026-04-01 -- конец I кв.; отношение относится к I кв. (аудит 2026-09-25)"
 
   - id: FINANCIAL_ACCOUNT_BALANCE
     name_ru: "Финансовый счёт платёжного баланса"
@@ -2716,6 +2766,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — financial account of the balance"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: BOP_OVERALL_BALANCE_GDP_SHARE
     name_ru: "Общий баланс платёжного баланса, % ВВП"
@@ -2727,6 +2779,8 @@ indicators:
     source_status: confirmed
     observation_type: period_ratio
     observation_evidence: "единица: доля"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: CRUDE_BIRTH_RATE
     name_ru: "Родившихся на 1000 человек населения"
@@ -4155,6 +4209,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "квартальный поток платёжного баланса"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: BOP_SERVICES_BALANCE
     name_ru: "Сальдо баланса услуг"
@@ -4166,6 +4222,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "квартальный поток платёжного баланса"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: BOP_PRIMARY_INCOME
     name_ru: "Сальдо первичных доходов"
@@ -4177,6 +4235,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "квартальный поток платёжного баланса"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: BOP_SECONDARY_INCOME
     name_ru: "Сальдо вторичных доходов"
@@ -4188,6 +4248,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "квартальный поток платёжного баланса"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: STATE_BUDGET_REVENUE_YTD
     name_ru: "Доходы государственного бюджета, нарастающим итогом"
@@ -4282,6 +4344,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — results of trades"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 35: строка с report_date 2026-08-01 несёт поле period = 'jul' -- оборот за июль (аудит 2026-09-25)"
 
   - id: KASE_EUR_VOLUME
     name_ru: "Объём торгов EUR/KZT на KASE"
@@ -4293,6 +4357,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — results of trades"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 35: строка с report_date 2026-08-01 несёт поле period = 'jul' -- оборот за июль (аудит 2026-09-25)"
 
   - id: KASE_RUB_VOLUME
     name_ru: "Объём торгов RUB/KZT на KASE"
@@ -4304,6 +4370,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — results of trades"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 35: строка с report_date 2026-08-01 несёт поле period = 'jul' -- оборот за июль (аудит 2026-09-25)"
 
   - id: PAYMENTS_TOTAL_COUNT
     name_ru: "Количество платёжных транзакций, всего"
@@ -4447,6 +4515,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "сноска: среднегодовые за 12 месяцев"
+    date_basis: next_period_start
+    date_basis_evidence: "отчёт АРРФР «на 01.07.2026»: поток/среднее относится к периоду до этой даты (чистый доход -- январь-июнь, ликвидные активы -- среднее за июнь, ROA/ROE -- последние 12 месяцев по июнь) (аудит 2026-09-25)"
 
   - id: BANK_ROE_MONTHLY
     name_ru: "Рентабельность капитала банков (ROE), помесячно"
@@ -4458,6 +4528,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "сноска: среднегодовые за 12 месяцев"
+    date_basis: next_period_start
+    date_basis_evidence: "отчёт АРРФР «на 01.07.2026»: поток/среднее относится к периоду до этой даты (чистый доход -- январь-июнь, ликвидные активы -- среднее за июнь, ROA/ROE -- последние 12 месяцев по июнь) (аудит 2026-09-25)"
 
   - id: BANK_NET_INCOME
     name_ru: "Чистый доход банковского сектора"
@@ -4470,6 +4542,8 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "нарастающий итог: 795,9 / 1035,7 / 1195,6"
+    date_basis: next_period_start
+    date_basis_evidence: "отчёт АРРФР «на 01.07.2026»: поток/среднее относится к периоду до этой даты (чистый доход -- январь-июнь, ликвидные активы -- среднее за июнь, ROA/ROE -- последние 12 месяцев по июнь) (аудит 2026-09-25)"
 
   - id: BANK_ASSETS_TOTAL
     name_ru: "Совокупные активы банков"
@@ -4558,6 +4632,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "строка: среднемесячное значение"
+    date_basis: next_period_start
+    date_basis_evidence: "отчёт АРРФР «на 01.07.2026»: поток/среднее относится к периоду до этой даты (чистый доход -- январь-июнь, ликвидные активы -- среднее за июнь, ROA/ROE -- последние 12 месяцев по июнь) (аудит 2026-09-25)"
 
   - id: BANK_ASSETS_TO_GDP
     name_ru: "Отношение активов банков к ВВП"

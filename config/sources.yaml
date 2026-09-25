@@ -363,6 +363,7 @@ agencies:
       # ---- scalar indicators ----
       GDP_NOMINAL:
         status: derived   # 2026-09-23: was confirmed_json; the series is now written from GVA_NOMINAL_BY_SECTION_QUARTERLY[GDP] x 1e6 (scripts/update_derived.py), the xlsx export of the same element 4439 -- equal to this cube on all 66 quarters; the trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset GVA_NOMINAL_BY_SECTION_QUARTERLY (item GDP) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/open-data/national-accounts/474289/"
         element_id: 4439
         download_url: "https://stat.gov.kz/api/iblock/element/4439/json/file/ru/"
@@ -412,6 +413,7 @@ agencies:
           above by capturing the real browser request instead of guessing further.
       IND_PROD:
         status: derived   # 2026-09-15: was confirmed; the series is now written from INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY[IND] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY (item IND) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
         element_id: 5809
         download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
@@ -429,6 +431,7 @@ agencies:
           Now implemented in scripts/fetchers/bns.py:fetch_ind_prod and connected.
       IND_PROD_MINING:
         status: derived   # 2026-09-15: was confirmed; the series is now written from INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY[B] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY (item B) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
         element_id: 5809
         download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
@@ -446,6 +449,7 @@ agencies:
           periods (2009-2023) as IND_PROD itself. fetch_ind_prod_mining.
       IND_PROD_MANUFACTURING:
         status: derived   # 2026-09-15: was confirmed; the series is now written from INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY[C] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY (item C) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
         element_id: 5809
         download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
@@ -456,6 +460,7 @@ agencies:
           предыдущему периоду']. fetch_ind_prod_manufacturing.
       IND_PROD_ELECTRICITY:
         status: derived   # 2026-09-15: was confirmed; the series is now written from INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY[D] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY (item D) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
         element_id: 5809
         download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
@@ -467,6 +472,7 @@ agencies:
           fetch_ind_prod_electricity.
       CPI:
         status: confirmed
+        current_source: "2026-09-25 (audit): the fetcher reads Taldau index 703076 (monthly, 2011-01 onward, through 2026-08), not element 1549, whose cube stopped at 2025-10 -- see metadata/bns/cpi.json. The element 1549 description below is the history of the connection."
         page_url: "https://stat.gov.kz/ru/open-data/stat-prices/474295/"
         element_id: 1549
         download_url: "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/"
@@ -492,6 +498,7 @@ agencies:
           knows to look for it rather than assuming 2.5 years is all that exists.
       INVESTMENT:
         status: derived   # 2026-09-15: was confirmed; the series is now written from INVESTMENT_BY_REGION[TOTAL] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset INVESTMENT_BY_REGION (item TOTAL) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-invest/"
         element_id: 5546
         download_url: "https://stat.gov.kz/api/iblock/element/5546/json/file/ru/"
@@ -510,6 +517,7 @@ agencies:
           scripts/fetchers/bns.py:fetch_investment and connected.
       EXPORTS:
         status: derived   # 2026-09-15: was confirmed; the series is now written from EXPORTS_VALUE_BY_COMMODITY_GROUP[TOTAL] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset EXPORTS_VALUE_BY_COMMODITY_GROUP (item TOTAL) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/open-data/international-trade/474298/"
         element_id: 446905
         download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
@@ -529,6 +537,7 @@ agencies:
           implemented in scripts/fetchers/bns.py:fetch_exports and connected.
       OIL_EXPORTS_VOLUME:
         status: derived   # 2026-09-15: was confirmed; the series is now written from EXPORTS_VOLUME_BY_COMMODITY_GROUP[CRUDE_OIL] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset EXPORTS_VOLUME_BY_COMMODITY_GROUP (item CRUDE_OIL) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
         format: xlsx
         notes: >
@@ -559,6 +568,7 @@ agencies:
           error. 89 monthly points, 2019-01 to 2026-06. fetch_oil_exports_volume.
       OIL_EXPORTS_VALUE:
         status: derived   # 2026-09-15: was confirmed; the series is now written from EXPORTS_VALUE_BY_COMMODITY_GROUP[CRUDE_OIL] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset EXPORTS_VALUE_BY_COMMODITY_GROUP (item CRUDE_OIL) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
         format: xlsx
         notes: >
@@ -1029,6 +1039,7 @@ agencies:
 
       CORE_CPI_YOY_EX3:
         status: confirmed
+        current_source: "2026-09-25 (audit): the series is MONTHLY (44 points, 2023-01 to 2026-08; the fetcher queries the monthly period). The quarterly description below predates that and is historical."
         source_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         index_id: 55056856
         format: json
@@ -1065,6 +1076,7 @@ agencies:
           checked before shipping.
       CORE_CPI_MOM_EX3:
         status: confirmed
+        current_source: "2026-09-25 (audit): the series is MONTHLY (44 points, 2023-01 to 2026-08; the fetcher queries the monthly period). The quarterly description below predates that and is historical."
         index_id: 55056856
         format: json
         notes: >
@@ -1073,6 +1085,7 @@ agencies:
           year-on-year series, which is why both are carried.
       CORE_CPI_YOY_EX7:
         status: confirmed
+        current_source: "2026-09-25 (audit): the series is MONTHLY (44 points, 2023-01 to 2026-08; the fetcher queries the monthly period). The quarterly description below predates that and is historical."
         index_id: 55056857
         format: json
         notes: >
@@ -1084,6 +1097,7 @@ agencies:
           which says those prices were rising more slowly than the rest of the basket.
       CORE_CPI_MOM_EX7:
         status: confirmed
+        current_source: "2026-09-25 (audit): the series is MONTHLY (44 points, 2023-01 to 2026-08; the fetcher queries the monthly period). The quarterly description below predates that and is historical."
         index_id: 55056857
         format: json
         notes: >
@@ -1273,6 +1287,7 @@ agencies:
           всего', same column and same caveats. fetch_import_price_index.
       CPI_YOY:
         status: confirmed
+        current_source: "2026-09-25 (audit): now read from Taldau index 703076 like CPI (188 monthly points to 2026-08); the element 1549 description below is historical."
         download_url: "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/"
         format: csv
         notes: >
@@ -1293,6 +1308,7 @@ agencies:
           in February 2026 and 10.2% by August 2026 there. fetch_cpi_yoy.
       CPI_YTD:
         status: confirmed
+        current_source: "2026-09-25 (audit): now read from Taldau index 703076 like CPI; the element 1549 description below is historical."
         download_url: "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/"
         format: csv
         notes: >
@@ -1476,6 +1492,7 @@ agencies:
           trillion KZT (2020) to ~10.8 trillion KZT (2025). fetch_construction.
       POPULATION_BNS:
         status: derived   # 2026-09-15: was confirmed; the series is now written from POPULATION_AVG_BY_REGION[ALL] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset POPULATION_AVG_BY_REGION (item ALL) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         index_id: 703834
         format: json
@@ -1499,6 +1516,7 @@ agencies:
           plausible. fetch_real_wage_index.
       EMPLOYED_TOTAL:
         status: derived   # 2026-09-15: was confirmed; the series is now written from EMPLOYED_BY_REGION[TOTAL] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset EMPLOYED_BY_REGION (item TOTAL) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         index_id: 702840
         format: json
@@ -2263,6 +2281,7 @@ agencies:
           label. fetch_renewable_energy_share.
       ELECTRICITY_PRODUCTION:
         status: derived   # 2026-09-15: was confirmed; the series is now written from PRODUCTION_NATURAL_BY_REGION[ELECTRICITY] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset PRODUCTION_NATURAL_BY_REGION (item ELECTRICITY) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         index_id: 19197226
         format: json
@@ -2612,8 +2631,8 @@ agencies:
           here to keep this as the specific BPM6 "net inflow" concept. Verified live with full
           pagination (proved the page=0/page=1 boundary behavior is a harmless 1-row overlap,
           not a data-loss bug -- see the module comment in nbk.py for the verification): 85
-          quarterly points, 2005-Q2 through 2026-Q2, USD million, ranging down to -2,495.6
-          (2026-Q1, a net-disinvestment quarter) -- genuinely volatile including negative
+          quarterly points, 2005-Q1 through 2026-Q1, USD million, ranging down to -2,495.6
+          (2025-Q4, a net-disinvestment quarter) -- genuinely volatile including negative
           quarters, expected for BPM6 net FDI flows. fetch_fdi_net_inflow.
       GOV_SECURITIES_MEUKAM:
         status: confirmed
@@ -2695,10 +2714,10 @@ agencies:
           supplying CURRENT_ACCOUNT_BALANCE. Match: code='Goods',
           instrument_type_code='Goods and services', instrument_subtype1_code='Goods',
           account_type_code='Current account', type='mln USD', period='Quarter', and no other
-          classification field set. 24 quarters, 2020-04-01 to 2026-04-01.
+          classification field set. 24 quarters, 2020-Q1 to 2026-Q1 (the source stamps each quarter with the day after it -- 2020-04-01 to 2026-04-01 -- restated by date_basis).
           Closes the audit's BoP gap. The dataset held the current account as a single number, so
           the deficit could not be decomposed -- and for Kazakhstan the decomposition IS the story:
-          in Q2 2026 goods ran a SURPLUS of 4,068.9 mln USD while primary income ran a DEFICIT of
+          in Q1 2026 goods ran a SURPLUS of 4,068.9 mln USD while primary income ran a DEFICIT of
           5,956.5 mln. The current account deficit is an income deficit, not a trade deficit.
           WHY NOT formId=481, WHICH HAS FOUR TIMES THE HISTORY. 481 ('standard presentation')
           carries the same five lines back to 2000-04-01 and its headline matches the stored series
