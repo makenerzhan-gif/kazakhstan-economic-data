@@ -179,6 +179,8 @@ FETCHERS = {
     "HOURS_WORKED": bns_fetchers.fetch_hours_worked,
     "HOURS_WORKED_QUARTERLY": bns_fetchers.fetch_hours_worked_quarterly,
     "HOURS_PER_EMPLOYEE": bns_fetchers.fetch_hours_per_employee,
+    "GINI_COEFFICIENT_ANNUAL": bns_fetchers.fetch_gini_coefficient_annual,
+    "DECILE_INCOME_RATIO_ANNUAL": bns_fetchers.fetch_decile_income_ratio_annual,
     "AVG_WAGE_1T_QUARTERLY": bns_fetchers.fetch_avg_wage_1t_quarterly,
     "CPI_YTD": bns_fetchers.fetch_cpi_ytd,
 }
@@ -288,6 +290,7 @@ INDICATOR_IDS = [
     "FIXED_ASSETS_GROSS", "FIXED_ASSETS_GROSS_START", "FIXED_ASSETS_NET", "FIXED_ASSETS_COMMISSIONED",
     "FIXED_ASSETS_DEPRECIATION", "FIXED_ASSETS_WEAR", "FIXED_ASSETS_RENEWAL",
     "HOURS_WORKED", "HOURS_WORKED_QUARTERLY", "HOURS_PER_EMPLOYEE",
+    "GINI_COEFFICIENT_ANNUAL", "DECILE_INCOME_RATIO_ANNUAL",
 ]
 
 

@@ -4874,3 +4874,24 @@ Production-function inputs; 490 indicators. All checked live against BNS publica
   output + imports. Run after each December release; not part of the daily run.
 - **Not done yet:** household income/expenditure by decile (BNS 18651 gives decile income shares;
   Taldau expenditure by decile has only D1/D10 before 2024).
+
+## 2026-09-25 — income by decile (CGE/CAEM calibration, distribution)
+
+New fetcher `scripts/fetchers/bns_living.py` (every edition of BNS «Основные показатели
+дифференциации доходов населения», listing 18651, plus Taldau history); 499 indicators.
+- **Item-level, D01–D10:** INCOME_SHARE_BY_DECILE (annual 2011–2025) and _QUARTERLY (2011-Q1 to
+  2026-Q1; Taldau lacks 2017-Q1..Q3 and 2021-Q2); INCOME_MEAN_BY_DECILE (mean monthly money income per
+  capita, annual 2022–2025; 2025: 44 360 to 265 626 KZT) and _QUARTERLY (2022-Q3 on);
+  INCOME_UPPER_BOUND_BY_DECILE (the decile cut-offs) annual and quarterly; HH_EXPENDITURE_BOTTOM_TOP_DECILE
+  (money expenditure of D01 and D10 by item, 2001–2024, Taldau 704518 — equal to the 2024 edition's
+  table 10 to the tenge).
+- Shares add to 100 in every period (enforced). Taldau's annual shares equal the editions on all 30
+  common points; its quarterly shares differ in the second decimal on 16 of 122 and miss quarters, so
+  they are used only before the first quarterly edition (2022-Q3).
+- **Fixed: GINI_COEFFICIENT, DECILE_INCOME_RATIO, POVERTY_DEPTH, POVERTY_SEVERITY held ONE quarter
+  each** (the fetcher saw only the edition linked from the section page). Now 15 quarters from the
+  editions, and the Gini 57 quarters with Taldau's history from 2011 (equal to the editions on every
+  common quarter). New: GINI_COEFFICIENT_ANNUAL (2001–2025; 0.339 in 2001, 0.291 in 2025) and
+  DECILE_INCOME_RATIO_ANNUAL (2011–2025).
+- Quintiles are not stored separately: each quintile is two adjacent deciles (shares add, bounds are
+  the even decile cut-offs).

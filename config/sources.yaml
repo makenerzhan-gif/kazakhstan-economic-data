@@ -51,6 +51,22 @@ agencies:
           68,859,2813 carries 2013-2016 annual (lower coverage, not spliced) and the quarterly series
           from 2016-Q1 (HOURS_WORKED_QUARTERLY). 703018 (minutes per employee, measure 35) on the section
           segment from 2013 (HOURS_PER_EMPLOYEE).
+      INCOME_SHARE_BY_DECILE:
+        status: confirmed_xlsx
+        download_url: "https://stat.gov.kz/ru/industries/labor-and-income/stat-life/spreadsheets/?name=18651&year=YYYY"
+        format: xlsx_table
+        notes: >
+          2026-09-25. «Основные показатели дифференциации доходов населения»: 19 editions (annual 2022-2025,
+          quarterly III 2022 - I 2026). Period from the cover sheet (the listing dates are unreliable: the
+          2022 annual edition is listed as 24.04.2022, its cover says released 24.04.2023). Tables found by
+          title: «Распределение доходов по 10-процентным группам населения» (bounds, share, mean) and
+          «Основные показатели бедности» (depth, severity, Gini 10%/20%, top/bottom decile ratio; the national
+          row is «Қазақстан Республикасы» in quarterly editions, «Республика Казахстан» in annual ones).
+          History from Taldau (POST GetIndexTreeData): 704515 decile shares (p_dicIds 67,838, decile root
+          term 742656, children 742657-742666), 704502 Gini, 704504 decile ratio, 704518 expenditure of the
+          bottom/top decile (dictionaries 67,749,270,735,838). Taldau annual = editions exactly; Taldau
+          quarterly lacks 2017-Q1..Q3, 2021-Q2, 2025-Q4, 2026-Q1 and differs in the 2nd decimal on some
+          quarters, so it is used only before 2022-Q3.
       KZ_EXPORTS_BY_PARTNER:
         status: confirmed_xlsx
         download_url: "https://stat.gov.kz/ru/industries/economy/foreign-market/spreadsheets/?year=YYYY&name=19182&period=&type=spreadsheets"

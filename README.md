@@ -16,7 +16,7 @@ METADATA → UNIFIED DATASET → GitHub → (manual "Sync now") → Claude Proje
 
 ## Scope
 
-497 indicators (see `config/indicators.yaml`), all connected end-to-end
+499 indicators (see `config/indicators.yaml`), all connected end-to-end
 against live official sources — past the original 18-indicator pilot and its
 100-150 indicator target (MASTER TASK section 17). No econometric modeling
 yet; see `project_knowledge/UPDATE_LOG.md` for the dated history of how the

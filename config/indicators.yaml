@@ -4766,6 +4766,28 @@ indicators:
     observation_type: period_average
     observation_evidence: "обследование домохозяйств за квартал"
 
+
+  - id: GINI_COEFFICIENT_ANNUAL
+    name_ru: "Коэффициент Джини (по 10% группам населения), годовой"
+    name_en: "Gini Coefficient (decile groups), annual"
+    agency: bns
+    frequency: annual
+    unit: "coefficient (0-1)"
+    category: labor
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "ВОДХ за год; Taldau 704502 (с 2001) и годовые выпуски «Основные показатели дифференциации доходов» (с 2022)"
+
+  - id: DECILE_INCOME_RATIO_ANNUAL
+    name_ru: "Коэффициент фондов (доходы 10% наиболее к 10% наименее обеспеченных), годовой"
+    name_en: "Decile Income Ratio, annual"
+    agency: bns
+    frequency: annual
+    unit: "ratio"
+    category: labor
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "Taldau 704504 (2011-2022) и годовые выпуски (с 2022)"
   - id: POVERTY_DEPTH
     name_ru: "Глубина бедности"
     name_en: "Poverty Depth"

@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/labor-and-income/stat-life/spreadsheets/?name=18651&year=YYYY",
+  "dataset_id": "bns/18651",
+  "indicator_id": "INCOME_MEAN_BY_DECILE_QUARTERLY",
+  "indicator_name": "Mean monthly money income per capita by decile, quarterly",
+  "description": "Среднемесячный денежный доход на душу населения по децильным группам, поквартально",
+  "frequency": "quarterly",
+  "unit": "KZT per month per capita",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "From the quarterly editions, III quarter 2022 onward. Editions read: 7475 2022Q3, 14911 2022Q4, 65647 2023Q1, 84709 2023Q2, 160961 2023Q3, 160955 2023Q4, 193651 2024Q1, 212356 2024Q2, 265869 2024Q3, 281637 2024Q4, 347021 2025Q1, 348035 2025Q2, 358743 2025Q3, 281638 2025Q4, 347022 2026Q1.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "2022-07-01",
+  "period_end": "2026-01-01",
+  "next_update_date": null,
+  "transformation": "level (discrete quarter, as published)",
+  "revision_status": "original"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/labor-and-income/stat-life/spreadsheets/?name=18651&year=YYYY",
+  "dataset_id": "bns/18651 «Основные показатели бедности» + taldau/704504",
+  "indicator_id": "DECILE_INCOME_RATIO_ANNUAL",
+  "indicator_name": "Decile Income Ratio, annual",
+  "description": "Коэффициент фондов (доходы 10% наиболее к 10% наименее обеспеченных), годовой",
+  "frequency": "annual",
+  "unit": "ratio",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Income of the richest 10% over the poorest 10% (коэффициент фондов), annual: Taldau 704504 for 2011-2021, the annual editions from 2022. 5.98 in 2025. 4 editions; Taldau 704504 for the earlier periods, differing from the editions on 0 overlapping points.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "2011-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

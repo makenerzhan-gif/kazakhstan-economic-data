@@ -2343,3 +2343,100 @@ datasets:
     unit: "million USD"
     category: external
     note: "NBK formId=346, as at report_date (the first day of the quarter after the reference quarter, like EXTERNAL_DEBT). Item = SECTOR_TYPE_HORIZON: sectors GG, CB, BANKS, OTHER, FDI_LOANS; PRINCIPAL/INTEREST; ON_DEMAND, M01_03 … M22_24, AFTER_2Y, NO_INFO; MEMO_GOODS_* = repayment in goods (a memo item). Principal rows sum to EXTERNAL_DEBT at each date (enforced)."
+
+  # ---------------------------------------------------------------- income by decile (added 2026-09-25)
+  # scripts/fetchers/bns_living.py: every edition of BNS «Основные показатели дифференциации
+  # доходов населения» (listing 18651; annual 2022-2025, quarterly from III quarter 2022), the
+  # period read from the cover; shares extended back to 2011 with Taldau 704515. Items D01-D10.
+  # Income = money income per capita of the household budget survey (ВОДХ), monthly average.
+  - id: INCOME_SHARE_BY_DECILE
+    name_ru: "Доля денежных доходов по 10-процентным (децильным) группам населения, годовая"
+    name_en: "Share of money income by population decile, annual"
+    agency: bns
+    fetcher: bns_living
+    table: deciles
+    kind: annual
+    measure: share
+    frequency: annual
+    unit: "percent of total income"
+    category: labour
+    note: "Deciles of the population ranked by per-capita money income. 2011-2021 Taldau 704515, 2022-2025 the annual editions (equal to Taldau where both exist). Shares add to 100 each year (checked)."
+
+  - id: INCOME_SHARE_BY_DECILE_QUARTERLY
+    name_ru: "Доля денежных доходов по 10-процентным (децильным) группам населения, поквартально"
+    name_en: "Share of money income by population decile, quarterly"
+    agency: bns
+    fetcher: bns_living
+    table: deciles
+    kind: quarterly
+    measure: share
+    frequency: quarterly
+    unit: "percent of total income"
+    transformation: "level (discrete quarter, as published)"
+    category: labour
+    note: "Discrete quarters (IV quarter 2024: bottom decile 3.91 against 4.03 for the year). From 2022-Q3 the quarterly editions; 2011-Q1 to 2022-Q2 Taldau 704515, which lacks 2017-Q1 to Q3 and 2021-Q2 (left missing). Where both exist Taldau differs from the editions by 0.01-0.1 on some points; the editions are kept."
+
+  - id: INCOME_MEAN_BY_DECILE
+    name_ru: "Среднемесячный денежный доход на душу населения по децильным группам, годовой"
+    name_en: "Mean monthly money income per capita by decile, annual"
+    agency: bns
+    fetcher: bns_living
+    table: deciles
+    kind: annual
+    measure: mean
+    frequency: annual
+    unit: "KZT per month per capita"
+    category: labour
+    note: "Mean of each decile, from the annual editions (2022 onward; Taldau has the levels only for the bottom and top decile). 2025: 44 360 (D01) to 265 626 (D10)."
+
+  - id: INCOME_MEAN_BY_DECILE_QUARTERLY
+    name_ru: "Среднемесячный денежный доход на душу населения по децильным группам, поквартально"
+    name_en: "Mean monthly money income per capita by decile, quarterly"
+    agency: bns
+    fetcher: bns_living
+    table: deciles
+    kind: quarterly
+    measure: mean
+    frequency: quarterly
+    unit: "KZT per month per capita"
+    transformation: "level (discrete quarter, as published)"
+    category: labour
+    note: "From the quarterly editions, III quarter 2022 onward."
+
+  - id: INCOME_UPPER_BOUND_BY_DECILE
+    name_ru: "Верхние границы децильных групп по среднедушевому денежному доходу, годовые"
+    name_en: "Upper income bound of each decile, annual"
+    agency: bns
+    fetcher: bns_living
+    table: deciles
+    kind: annual
+    measure: upper
+    frequency: annual
+    unit: "KZT per month per capita"
+    category: labour
+    note: "Upper end of each decile's income interval (D01-D09 are the decile cut-offs; D10 is the highest income observed in the sample). Annual editions, 2022 onward."
+
+  - id: INCOME_UPPER_BOUND_BY_DECILE_QUARTERLY
+    name_ru: "Верхние границы децильных групп по среднедушевому денежному доходу, поквартально"
+    name_en: "Upper income bound of each decile, quarterly"
+    agency: bns
+    fetcher: bns_living
+    table: deciles
+    kind: quarterly
+    measure: upper
+    frequency: quarterly
+    unit: "KZT per month per capita"
+    transformation: "level (discrete quarter, as published)"
+    category: labour
+    note: "As INCOME_UPPER_BOUND_BY_DECILE, quarterly editions from III quarter 2022."
+
+  - id: HH_EXPENDITURE_BOTTOM_TOP_DECILE
+    name_ru: "Денежные расходы домашних хозяйств 10% наименее и 10% наиболее обеспеченного населения, по статьям"
+    name_en: "Money expenditure of the bottom and top income decile, by item"
+    agency: bns
+    fetcher: bns_living
+    table: expenditure_tails
+    frequency: annual
+    unit: "KZT per month per 100 household members"
+    category: labour
+    note: "Taldau 704518, annual 2001-2024 (food from 2004; 2019 not published there -- left missing). Items D01_* / D10_*: money and consumer expenditure, food, eating out, non-food, services, transfers to other households, taxes, debt repayment. The middle deciles are published for 2024 only and are not taken. 2024 equals the annual edition's table 10."

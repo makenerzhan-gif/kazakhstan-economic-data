@@ -3449,15 +3449,12 @@ def fetch_passengers_carried() -> tuple[list[dict], dict]:
 # measure of how income is DISTRIBUTED, so a falling poverty rate could not be
 # told apart from a widening gap above the poverty line.
 #
-# Reuses _quarterly_editions unchanged: this publication states its quarter on
-# the cover ("I квартал 2026 года") and its next release 84 days out, so the
-# same annual-versus-quarterly filter built for the labour market applies here
-# without modification.
+# Read by fetchers/bns_living.py from every edition of the publication (its
+# listing, name=18651), quarterly and annual kept apart by the cover text.
 #
-# THE COUNTRY ROW IS LABELLED IN KAZAKH -- "Қазақстан Республикасы" -- even in
-# the Russian-language file, where every other publication in this project uses
-# "Республика Казахстан" or "Всего". Matching on the Russian form would find
-# nothing. The remaining rows are the regions, also in Kazakh.
+# THE COUNTRY ROW IS LABELLED IN KAZAKH -- "Қазақстан Республикасы" -- in the
+# quarterly editions, even in the Russian-language file; the annual ones use
+# "Республика Казахстан". Both are accepted.
 #
 # Sheet 5 column layout: [глубина бедности %, острота бедности %, коэффициент
 # Джини по 10% группам, коэффициент Джини по 20% группам, соотношение доходов
@@ -3470,15 +3467,23 @@ def fetch_passengers_carried() -> tuple[list[dict], dict]:
 # series.
 # ---------------------------------------------------------------------------
 LIVING_PAGE_URL = "https://stat.gov.kz/ru/industries/labor-and-income/stat-life/"
-POVERTY_SHEET_TITLE = "5. Основные показатели бедности"
-POVERTY_COUNTRY_ROW = "Қазақстан Республикасы"
+
+
+# Until 2026-09-25 these read only the editions linked from LIVING_PAGE_URL -- the latest
+# one -- so each series held a single quarter. They now read every edition of the
+# «Основные показатели дифференциации доходов» listing (III quarter 2022 onward, the
+# columns found by header text) through fetchers/bns_living.py; the Gini adds Taldau's
+# quarterly history (704502) for the quarters before the first edition.
+POVERTY_COLUMNS = {0: ("depth", None), 1: ("severity", None), 2: ("gini10", "704502"), 4: ("ratio", None)}
 
 
 def _fetch_poverty_row(value_index: int, indicator_id: str, note: str,
                        unit: str) -> tuple[list[dict], dict]:
-    return _fetch_quarterly_publication_row(
-        LIVING_PAGE_URL, "5", POVERTY_SHEET_TITLE, POVERTY_COUNTRY_ROW,
-        value_index, False, indicator_id, note, unit)
+    from fetchers import bns_living
+    key, taldau_index = POVERTY_COLUMNS[value_index]
+    records, manifest = bns_living.poverty_series(indicator_id, key, "quarterly", taldau_index, note)
+    manifest["unit"] = unit
+    return records, manifest
 
 
 def fetch_gini_coefficient() -> tuple[list[dict], dict]:
@@ -4176,3 +4181,20 @@ def fetch_hours_per_employee() -> tuple[list[dict], dict]:
         note="Hours actually worked per employee in the year (Taldau 703018, published in minutes, converted "
              "to hours), national, from 2013.")
     return [{**r, "value": round(r["value"] / 60, 3)} for r in records], manifest
+
+
+# ---------------------------------------------------------------- annual inequality (added 2026-09-25)
+def fetch_gini_coefficient_annual() -> tuple[list[dict], dict]:
+    from fetchers import bns_living
+    return bns_living.poverty_series(
+        "GINI_COEFFICIENT_ANNUAL", "gini10", "annual", "704502",
+        "Gini coefficient of money income over decile groups, annual, from 2001 (Taldau 704502; from 2022 "
+        "the annual editions of «Основные показатели дифференциации доходов», which equal Taldau). 0.291 in 2025.")
+
+
+def fetch_decile_income_ratio_annual() -> tuple[list[dict], dict]:
+    from fetchers import bns_living
+    return bns_living.poverty_series(
+        "DECILE_INCOME_RATIO_ANNUAL", "ratio", "annual", "704504",
+        "Income of the richest 10% over the poorest 10% (коэффициент фондов), annual: Taldau 704504 for "
+        "2011-2021, the annual editions from 2022. 5.98 in 2025.")
