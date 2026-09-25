@@ -1,0 +1,21 @@
+{
+  "source": "fred",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=FEDFUNDS",
+  "dataset_id": "FRED/FEDFUNDS",
+  "indicator_id": "US_FED_FUNDS",
+  "indicator_name": "US Effective Federal Funds Rate",
+  "description": "Эффективная ставка по федеральным фондам США",
+  "frequency": "monthly",
+  "unit": "% per annum",
+  "currency": "",
+  "geography": "United States",
+  "methodology": "Percent, effective federal funds rate, monthly average. FRED series FEDFUNDS.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "1954-07-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

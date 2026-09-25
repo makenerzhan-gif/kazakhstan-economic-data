@@ -77,3 +77,41 @@ def test_long_histories_hold_known_points():
     assert min(_series("kase", "GS_YIELD_10Y")) == "2019-11-01"
     assert min(_series("nbk", "DEPOSIT_RATE")) == "1996-12-01"
     assert min(_series("nbk", "LOAN_RATE_ISSUED_LEGAL_KZT")) == "1997-01-01"
+
+
+def test_cbr_key_rate_and_usd_rub_parsers():
+    from fetchers import foreign
+    soap = b"""<?xml version="1.0"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body>
+    <KeyRateXMLResponse xmlns="http://web.cbr.ru/"><KeyRateXMLResult><KeyRate xmlns="">
+    <KR><DT>2023-12-18T00:00:00+03:00</DT><Rate>16.00</Rate></KR><KR><DT>2023-12-15T00:00:00+03:00</DT><Rate>15.00</Rate></KR>
+    </KeyRate></KeyRateXMLResult></KeyRateXMLResponse></soap:Body></soap:Envelope>"""
+    assert foreign.parse_cbr_key_rate(soap) == {"2023-12-18": 16.0, "2023-12-15": 15.0}
+    xml = ('<?xml version="1.0" encoding="windows-1251"?><ValCurs><Record Date="11.03.2022" Id="R01235">'
+           '<Nominal>1</Nominal><Value>120,3785</Value></Record></ValCurs>').encode("cp1251")
+    assert foreign.parse_cbr_xml_dynamic(xml) == {"2022-03-11": 120.3785}
+
+
+def test_qnea_takes_real_nsa_national_currency_gdp_from_the_first_quarter_given():
+    from fetchers import foreign
+    rows = ("STRUCTURE[;],COUNTRY,INDICATOR,PRICE_TYPE,S_ADJUSTMENT,TYPE_OF_TRANSFORMATION,FREQUENCY,TIME_PERIOD,OBS_VALUE\n"
+            "dataflow,RUS,B1GQ,Q,NSA,XDC,Q,2013-Q4,23.75\n"
+            "dataflow,RUS,B1GQ,Q,NSA,XDC,Q,2014-Q1,28.17\n"
+            "dataflow,RUS,B1GQ,V,NSA,XDC,Q,2014-Q1,99\n"
+            "dataflow,RUS,B1GQ,Q,NSA,USD,Q,2014-Q1,1\n").encode()
+    assert foreign.parse_qnea_real_gdp(rows, "2014-Q1") == {"2014-01-01": 28.17}
+
+
+def test_fred_csv_skips_missing_observations():
+    from fetchers import foreign
+    content = b"observation_date,GS10\n2023-10-01,4.80\n2023-11-01,.\n2023-12-01,\n"
+    assert foreign.parse_fred_csv(content, "GS10") == {"2023-10-01": 4.8}
+
+
+def test_external_block_holds_known_points():
+    key = _series("cbr", "RU_KEY_RATE")
+    assert key["2013-09-17"] == 5.5 and key["2022-02-28"] == 20.0 and key["2023-12-18"] == 16.0
+    assert _series("cbr", "RUB_USD")["2022-03-11"] == 120.3785
+    assert min(_series("cbr", "RUB_USD")) == "1998-01-01"
+    assert _series("eec", "RU_CPI_YOY")["2024-12-01"] == 109.5
+    assert min(_series("imf", "RU_GDP_REAL")) == "2014-01-01"
+    assert _series("fred", "US_FED_FUNDS")["2023-08-01"] == 5.33

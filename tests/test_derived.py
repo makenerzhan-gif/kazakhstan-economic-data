@@ -45,9 +45,9 @@ def test_every_derived_indicator_points_at_a_real_dataset_and_has_no_fetcher_of_
 
 def test_scalar_ids_are_either_fetched_or_derived_never_both_and_never_neither():
     indicators = yaml.safe_load((REPO_ROOT / "config" / "indicators.yaml").read_text(encoding="utf-8"))["indicators"]
-    import update_ardfm, update_imf, update_kase, update_minfin, update_nbk, update_wb
+    import update_ardfm, update_foreign, update_imf, update_kase, update_minfin, update_nbk, update_wb
     fetched = set()
-    for m in (update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_wb, update_kase):
+    for m in (update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_wb, update_kase, update_foreign):
         fetched |= set(m.FETCHERS)
     derived = {i["id"] for i in indicators if i.get("derived_from")}
     assert not fetched & derived

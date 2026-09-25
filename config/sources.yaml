@@ -6033,6 +6033,12 @@ agencies:
     access_type: api
     protection: none
     endpoints:
+      RU_GDP_REAL:
+        status: confirmed
+        download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/QNEA/7.0.0/RUS.*.*.*.*.Q"
+        format: sdmx csv
+        notes: >
+          2026-09-25. INDICATOR=B1GQ, PRICE_TYPE=Q (2021 prices), S_ADJUSTMENT=NSA, TYPE_OF_TRANSFORMATION=XDC, from 2014-Q1 only (2011-13 on another base). Annual growth 2020-2025 -2.65/5.87/-1.44/4.07/4.92/1.0. fetch_ru_gdp_real.
       OIL_PRICE:
         status: confirmed
         download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/PCPS/9.0.0/G001.POILAPSP.USD.M"
@@ -6944,3 +6950,91 @@ agencies:
           2026-09-25. Zero-coupon government securities yield at 10Y: monthly average of the
           daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
           fetch_gs_yield_10y.
+  cbr:
+    name: "Bank of Russia (ЦБ РФ) — key rate, official exchange rate"
+    website: "https://www.cbr.ru"
+    status: confirmed
+    notes: >
+      Added 2026-09-25 for the external block. The key rate comes from the DailyInfo SOAP web
+      service (method KeyRateXML; a plain GET to the .asmx method answers with an error page and
+      HTTP 200), the USD/RUB rate from /scripts/XML_dynamic.asp (windows-1251 XML, decimal commas).
+      Rosstat (rosstat.gov.ru) is not reachable from the runner.
+    access_type: soap + xml
+    protection: none
+    endpoints:
+      RU_KEY_RATE:
+        status: confirmed
+        download_url: "https://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx"
+        format: soap xml
+        notes: >
+          2026-09-25. KeyRateXML(fromDate, ToDate) -> <KR><DT/><Rate/></KR> daily from 2013-09-17, 66 changes; kept as change points dated by effective date. Checked: 5.5 (2013-09-17), 20.0 (2022-02-28), 16.0 (2023-12-18), 21.0 (2024-10-28). fetch_ru_key_rate.
+      RUB_USD:
+        status: confirmed
+        download_url: "https://www.cbr.ru/scripts/XML_dynamic.asp?VAL_NM_RQ=R01235"
+        format: xml
+        notes: >
+          2026-09-25. date_req1/date_req2 dd/mm/yyyy; <Record Date><Nominal/><Value/>. From 1998-01-01 (post-redenomination); 2022-03-11 = 120.3785. Accumulated, 60-day refresh. fetch_rub_usd.
+  eec:
+    name: "Eurasian Economic Commission (ЕЭК) — EAEU macro statistics"
+    website: "https://eec.eaeunion.org/comission/department/dep_stat/econstat/"
+    status: confirmed
+    notes: >
+      Added 2026-09-25. Legacy .xls series files under /upload/files/dep_stat/econstat/: one block
+      per year («2005 год»), one row per member state, months across. Used for Russia's CPI, which
+      Rosstat's own site does not serve to the runner; the other EAEU members are in the same files.
+    access_type: xls
+    protection: none
+    endpoints:
+      RU_CPI_MOM:
+        status: confirmed
+        download_url: "https://eec.eaeunion.org/upload/files/dep_stat/econstat/Series_CPI/CPI_1.xls"
+        format: xls
+        notes: >
+          2026-09-25. «в процентах к предыдущему месяцу», row «Россия», 2005-01 onward. 2022-03 = 107.6. fetch_ru_cpi_mom.
+      RU_CPI_YOY:
+        status: confirmed
+        download_url: "https://eec.eaeunion.org/upload/files/dep_stat/econstat/Series_CPI/CPI_3.xls"
+        format: xls
+        notes: >
+          2026-09-25. Same month of the previous year = 100; equals the Bank of Russia table within 0.05 in all 156 months 2013-09..2026-08. fetch_ru_cpi_yoy.
+  fred:
+    name: "Federal Reserve Bank of St. Louis (FRED) — US rates, prices, output"
+    website: "https://fred.stlouisfed.org"
+    status: confirmed
+    notes: >
+      Added 2026-09-25. https://fred.stlouisfed.org/graph/fredgraph.csv?id=<SERIES> returns
+      observation_date,<SERIES> without an API key. FRED's Russia series (OECD MEI) all ended in
+      2021-22 and are not used.
+    access_type: csv
+    protection: none
+    endpoints:
+      US_FED_FUNDS:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=FEDFUNDS"
+        format: csv
+        notes: >
+          2026-09-25. FRED FEDFUNDS, checked against known values. fetch_us_fed_funds.
+      US_TREASURY_2Y:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GS2"
+        format: csv
+        notes: >
+          2026-09-25. FRED GS2, checked against known values. fetch_us_treasury_2y.
+      US_TREASURY_10Y:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GS10"
+        format: csv
+        notes: >
+          2026-09-25. FRED GS10, checked against known values. fetch_us_treasury_10y.
+      US_CPI:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL"
+        format: csv
+        notes: >
+          2026-09-25. FRED CPIAUCSL, checked against known values. fetch_us_cpi.
+      US_GDP_REAL:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDPC1"
+        format: csv
+        notes: >
+          2026-09-25. FRED GDPC1, checked against known values. fetch_us_gdp_real.

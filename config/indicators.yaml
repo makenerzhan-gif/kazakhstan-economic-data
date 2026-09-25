@@ -5368,3 +5368,132 @@ indicators:
     observation_evidence: "к соответствующему кварталу прошлого года"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+
+  # ---------------------------------------------------------------- external block (added 2026-09-25)
+  # Russia and the United States for the QPM/BVAR models; sources in scripts/fetchers/foreign.py.
+
+  - id: RU_KEY_RATE
+    name_ru: "Ключевая ставка Банка России"
+    name_en: "Bank of Russia Key Rate"
+    agency: cbr
+    frequency: irregular
+    unit: "% per annum"
+    category: international
+    country: RUS
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "ставка, действующая с даты (дата вступления в силу)"
+
+  - id: RUB_USD
+    name_ru: "Официальный курс рубля к доллару США (ЦБ РФ)"
+    name_en: "Official RUB/USD Exchange Rate (Bank of Russia)"
+    agency: cbr
+    frequency: daily
+    unit: "RUB per USD"
+    category: international
+    country: RUS
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "официальный курс на дату"
+
+  - id: RU_CPI_MOM
+    name_ru: "ИПЦ России, к предыдущему месяцу"
+    name_en: "Russia CPI, month-on-month"
+    agency: eec
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: international
+    country: RUS
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "ЕЭК, Series_CPI/CPI_1.xls: в процентах к предыдущему месяцу"
+    comparison_basis: mom
+    comparison_basis_evidence: "ЕЭК CPI_1 = к предыдущему периоду"
+
+  - id: RU_CPI_YOY
+    name_ru: "ИПЦ России, к соответствующему месяцу прошлого года"
+    name_en: "Russia CPI, year-on-year"
+    agency: eec
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: international
+    country: RUS
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "ЕЭК, Series_CPI/CPI_3.xls: к соответствующему месяцу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "ЕЭК CPI_3; совпадает с таблицей ЦБ РФ за 2013-09..2026-08 в пределах 0,05"
+
+  - id: RU_GDP_REAL
+    name_ru: "Реальный ВВП России (цены 2021 г., без сезонной корректировки)"
+    name_en: "Russia Real GDP (2021 prices, NSA)"
+    agency: imf
+    frequency: quarterly
+    unit: "RUB, 2021 prices"
+    category: international
+    country: RUS
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "МВФ QNEA B1GQ, PRICE_TYPE=Q, NSA, XDC — поток за квартал"
+
+  - id: US_FED_FUNDS
+    name_ru: "Эффективная ставка по федеральным фондам США"
+    name_en: "US Effective Federal Funds Rate"
+    agency: fred
+    frequency: monthly
+    unit: "% per annum"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED FEDFUNDS — среднее за месяц"
+
+  - id: US_TREASURY_2Y
+    name_ru: "Доходность 2-летних казначейских облигаций США"
+    name_en: "US 2-Year Treasury Yield"
+    agency: fred
+    frequency: monthly
+    unit: "% per annum"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED GS2 — среднее за месяц"
+
+  - id: US_TREASURY_10Y
+    name_ru: "Доходность 10-летних казначейских облигаций США"
+    name_en: "US 10-Year Treasury Yield"
+    agency: fred
+    frequency: monthly
+    unit: "% per annum"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED GS10 — среднее за месяц"
+
+  - id: US_CPI
+    name_ru: "Индекс потребительских цен США (с сезонной корректировкой)"
+    name_en: "US Consumer Price Index (SA)"
+    agency: fred
+    frequency: monthly
+    unit: "index, 1982-84 = 100"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "FRED CPIAUCSL — индекс с фиксированной базой"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "1982-84 = 100 (FRED CPIAUCSL)"
+
+  - id: US_GDP_REAL
+    name_ru: "Реальный ВВП США (цепные доллары 2017 г., SAAR)"
+    name_en: "US Real GDP (chained 2017 dollars, SAAR)"
+    agency: fred
+    frequency: quarterly
+    unit: "billion chained 2017 USD, SAAR"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "FRED GDPC1 — поток за квартал в годовом выражении"

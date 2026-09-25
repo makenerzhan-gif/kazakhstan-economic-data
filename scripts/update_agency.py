@@ -27,7 +27,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib import pipeline_logging, unified  # noqa: E402
-import update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_kase  # noqa: E402
+import update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_kase, update_foreign  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
@@ -37,6 +37,7 @@ MODULES = {
     "minfin": update_minfin,
     "imf": update_imf,
     "kase": update_kase,
+    "foreign": update_foreign,
     "ardfm": update_ardfm,
 }
 

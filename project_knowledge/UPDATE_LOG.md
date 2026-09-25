@@ -4777,3 +4777,17 @@ Sources found live and checked before wiring in (research notes in the PR); 462 
   flagged as unproven.
 - **LOAN_RATE_ISSUED_LEGAL_KZT / _INDIVIDUAL_KZT** from 1997-01 (form 486, `date_basis`); the API
   lacks a few months in 2007-09 and 2014.
+
+## 2026-09-25 — model data, step 2 (external block), part 1: Russia, the United States, world prices
+
+New agencies `cbr`, `eec`, `fred` (one updater, `update_foreign.py`, `scripts/fetchers/foreign.py`);
+472 indicators. Every source checked live against known values before wiring in.
+- **Russia:** RU_KEY_RATE (Bank of Russia SOAP KeyRateXML, 66 changes from 2013-09-17, dated by
+  effective date); RUB_USD (official, daily from 1998); RU_CPI_MOM / RU_CPI_YOY (EEC, monthly from
+  2005 — Rosstat is unreachable from the runner; EEC y/y equals the Bank of Russia's table within
+  0.05 in 156 of 156 months); RU_GDP_REAL (IMF QNEA, 2021 prices, NSA, from 2014-Q1 — 2011-13 are on
+  another base). FRED's Russia series ended in 2021-22 and are not used.
+- **United States (FRED, no key):** US_FED_FUNDS, US_TREASURY_2Y, US_TREASURY_10Y (monthly averages),
+  US_CPI (SA), US_GDP_REAL (chained 2017 USD, SAAR).
+- **World prices:** item-level WB_COMMODITY_PRICES_MONTHLY (71 series) and
+  WB_COMMODITY_INDICES_MONTHLY (16) from 1960-01, from the monthly Pink Sheet.

@@ -1,0 +1,10 @@
+{
+  "downloaded_at": "2026-09-25T18:21:41.804896",
+  "raw_file": "cbr_rub_usd_2026-09-25.xml",
+  "source_url": "https://www.cbr.ru/scripts/XML_dynamic.asp",
+  "params": {
+    "date_req1": "01/12/1997",
+    "date_req2": "25/09/2026",
+    "VAL_NM_RQ": "R01235"
+  }
+}

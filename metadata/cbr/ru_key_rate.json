@@ -1,0 +1,21 @@
+{
+  "source": "cbr",
+  "source_url": "https://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx",
+  "dataset_id": "DailyInfo/KeyRateXML",
+  "indicator_id": "RU_KEY_RATE",
+  "indicator_name": "Bank of Russia Key Rate",
+  "description": "Ключевая ставка Банка России",
+  "frequency": "irregular",
+  "unit": "% per annum",
+  "currency": "",
+  "geography": "Russian Federation",
+  "methodology": "Percent per annum. One row per change of the Bank of Russia key rate, dated by the day it TOOK EFFECT (the decision is usually the business day before), from 2013-09-17 (5.5%). Collapsed from the daily series the web service returns.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "2013-09-17",
+  "period_end": "2026-07-27",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
