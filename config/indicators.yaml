@@ -77,8 +77,7 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "примечание: методология LFS/МОТ, как у остальных квартальных обследований рабочей силы"
-    lifecycle: stale_source
-    lifecycle_note: "the quarterly cube stopped at 2025-06. LABOR_FORCE and UNEMPLOYED_PERSONS from the ARDFM-era labour publication give the rate, but no drop-in rate series was connected"
+    source_note: "с 2026-09-25 — элемент 5830 БНС «Основные индикаторы рынка труда» (2001Q1 и далее) вместо куба 102790 (2023Q1-2025Q2); на всех 10 общих кварталах значения совпадают"
 
   - id: INVESTMENT
     name_ru: "Инвестиции в основной капитал"
@@ -3555,6 +3554,199 @@ indicators:
     observation_evidence: "к декабрю прошлого года"
     comparison_basis: ytd_base
     comparison_basis_evidence: "единица: 'December of previous year = 100'"
+
+  - id: CPI_FOOD
+    name_ru: "ИПЦ: продовольственные товары, к предыдущему месяцу"
+    name_en: "CPI: food products, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695730 «отчетный период к предыдущему периоду»"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: CPI_FOOD_YOY
+    name_ru: "ИПЦ: продовольственные товары, к соответствующему месяцу прошлого года"
+    name_en: "CPI: food products, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695732 «к соответствующему периоду прошлого года»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года; декабрь 2011-2025 = элемент 1548 БНС"
+
+  - id: CPI_NONFOOD
+    name_ru: "ИПЦ: непродовольственные товары, к предыдущему месяцу"
+    name_en: "CPI: non-food products, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695730 «отчетный период к предыдущему периоду»"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: CPI_NONFOOD_YOY
+    name_ru: "ИПЦ: непродовольственные товары, к соответствующему месяцу прошлого года"
+    name_en: "CPI: non-food products, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695732 «к соответствующему периоду прошлого года»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года; декабрь 2011-2025 = элемент 1548 БНС"
+
+  - id: CPI_SERVICES
+    name_ru: "ИПЦ: платные услуги, к предыдущему месяцу"
+    name_en: "CPI: paid services, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695730 «отчетный период к предыдущему периоду»"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: CPI_SERVICES_YOY
+    name_ru: "ИПЦ: платные услуги, к соответствующему месяцу прошлого года"
+    name_en: "CPI: paid services, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695732 «к соответствующему периоду прошлого года»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года; декабрь 2011-2025 = элемент 1548 БНС"
+
+  - id: CPI_UTILITIES
+    name_ru: "ИПЦ: жилищно-коммунальные услуги, к предыдущему месяцу"
+    name_en: "CPI: housing and utility services, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695730 «отчетный период к предыдущему периоду»"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: CPI_UTILITIES_YOY
+    name_ru: "ИПЦ: жилищно-коммунальные услуги, к соответствующему месяцу прошлого года"
+    name_en: "CPI: housing and utility services, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695732 «к соответствующему периоду прошлого года»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года; декабрь 2011-2025 = элемент 1548 БНС"
+
+  - id: CPI_REGULATED_UTILITIES
+    name_ru: "ИПЦ: регулируемые коммунальные услуги, к предыдущему месяцу"
+    name_en: "CPI: regulated utility services, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695730 «отчетный период к предыдущему периоду»"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: CPI_REGULATED_UTILITIES_YOY
+    name_ru: "ИПЦ: регулируемые коммунальные услуги, к соответствующему месяцу прошлого года"
+    name_en: "CPI: regulated utility services, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695732 «к соответствующему периоду прошлого года»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года; декабрь 2011-2025 = элемент 1548 БНС"
+
+  - id: PPI_MONTHLY
+    name_ru: "Индекс цен производителей промышленной продукции, к предыдущему месяцу"
+    name_en: "Producer Price Index, industrial products, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703039, термин 2695730"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: PPI_YOY_MONTHLY
+    name_ru: "Индекс цен производителей промышленной продукции, к соответствующему месяцу прошлого года"
+    name_en: "Producer Price Index, industrial products, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703039, термин 2695732"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732; декабрь к декабрю 2011-2025 = элемент 1626 БНС"
+
+  - id: IND_PROD_MONTHLY_YOY
+    name_ru: "Индекс промышленного производства, к соответствующему месяцу прошлого года"
+    name_en: "Industrial Production Index, monthly, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: production
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 701625, термин 2695732"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732; октябрь 2025 = 107,1 как в релизе БНС"
+
+  - id: IND_PROD_MONTHLY_MOM
+    name_ru: "Индекс промышленного производства, к предыдущему месяцу"
+    name_en: "Industrial Production Index, monthly, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: production
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 701625, термин 2695730; без сезонной корректировки"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: AVG_WAGE_1T_QUARTERLY
+    name_ru: "Среднемесячная номинальная заработная плата (форма 1-Т), поквартально"
+    name_en: "Average Monthly Nominal Wage (form 1-T), quarterly"
+    agency: bns
+    frequency: quarterly
+    unit: "KZT"
+    category: labor
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднемесячная за квартал, элемент 5674 БНС / Taldau 702972"
 
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"

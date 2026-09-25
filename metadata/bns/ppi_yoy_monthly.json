@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703039",
+  "indicator_id": "PPI_YOY_MONTHLY",
+  "indicator_name": "Producer Price Index, industrial products, year-on-year",
+  "description": "Индекс цен производителей промышленной продукции, к соответствующему месяцу прошлого года",
+  "frequency": "monthly",
+  "unit": "index, same month previous year = 100",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, same month of the previous year = 100: producer prices of industrial products, national, monthly from 2011-01 (Taldau index 703039). December/December values equal BNS element 1626 for 2011-2025. The annual PPI series is a different figure -- the January-December average.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "2011-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

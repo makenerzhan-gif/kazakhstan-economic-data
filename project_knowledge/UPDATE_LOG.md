@@ -4738,3 +4738,18 @@ exchange rate before 2021-05, M0-M3 and bank rates before 2021-12 (most NBK form
 2023-01 by default -- the date parameter still has to be found live), TONIA before 2026-02, the
 government yield curve, rates and volumes of new loans, quarterly unemployment before 2023, a monthly
 industrial production index.
+
+## 2026-09-25 — model data, step 1 continued (network opened): BNS prices, production, labour
+
+Queries found through Taldau's own endpoints (getSearchPageGridData, GetPeriodList, GetSegmentList)
+and checked against BNS's releases before wiring in. 451 indicators.
+- **CPI by group**, monthly from 2011-01, month-on-month and year-on-year: CPI_FOOD, CPI_NONFOOD,
+  CPI_SERVICES, CPI_UTILITIES, CPI_REGULATED_UTILITIES (+ _YOY). December y/y 2011-2025 equal BNS
+  element 1548 in every year (Dec 2022: food 125.3, non-food 119.4, services 114.1).
+- **PPI_MONTHLY / PPI_YOY_MONTHLY** from 2011-01 (Dec/Dec 2011-2025 equal element 1626).
+- **IND_PROD_MONTHLY_YOY / _MOM** from 2014-01 (October 2025: 107.1 / 99.4 as released).
+- **UNEMPLOYMENT** from 2001Q1 (was 2023Q1-2025Q2, stale): element 5830 «Основные индикаторы рынка
+  труда»; identical to the old cube on all 10 shared quarters. Its 2014 column is headed «20142)» —
+  the same footnote trap as the 2015 labour tables; the validator's duplicate-date check caught it.
+- **AVG_WAGE_1T_QUARTERLY** from 2015Q1 (element 5674, form 1-Т) — a different coverage from
+  AVG_WAGE_QUARTERLY (2026Q1: 461 486 against 445 068 KZT), so a separate series.

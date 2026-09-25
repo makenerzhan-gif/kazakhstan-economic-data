@@ -126,47 +126,6 @@ def _fetch_cpi_cube_legacy() -> tuple[list[dict], dict]:
     return records, manifest
 
 
-def fetch_unemployment() -> tuple[list[dict], dict]:
-    """Unemployment rate, national, both sexes, all localities, all ages, all education levels.
-
-    Verified live 2026-08-30: file is a JSON list of "cube slices", each with its own
-    terms/termNames/periods (NOT a single terms/periods object). Dimension order is
-    [region, locality, sex, education, age_group]. Confirmed the fully-aggregated
-    national row exists with termNames == ['РЕСПУБЛИКА КАЗАХСТАН', 'Всего', 'Всего',
-    'Всего', 'Всего']. periods[].date is DD.MM.YYYY, .value is the unemployment rate (%).
-    """
-    element_id = 102790
-    url = f"https://stat.gov.kz/api/iblock/element/{element_id}/json/file/ru/"
-    content = _download(url)
-    _save_raw("UNEMPLOYMENT", content, "json", {"source_url": url, "element_id": element_id})
-
-    import json
-    data = json.loads(content)
-
-    TARGET = ["РЕСПУБЛИКА КАЗАХСТАН", "Всего", "Всего", "Всего", "Всего"]
-    match = next((entry for entry in data if entry.get("termNames") == TARGET), None)
-    if match is None:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                "STRUCTURAL CHANGE DETECTED in bns/UNEMPLOYMENT",
-                "WHAT CHANGED: no cube slice matched the expected fully-aggregated national combo",
-                f"EXPECTED termNames: {TARGET}",
-                "ACTUAL: no matching entry in the downloaded file",
-                f"ACTION REQUIRED: inspect {url} and update scripts/fetchers/bns.py",
-            ])
-        )
-
-    records = []
-    for p in match["periods"]:
-        try:
-            records.append({"date": _dd_mm_yyyy_to_iso(p["date"]), "value": float(p["value"])})
-        except (ValueError, KeyError):
-            continue
-    records.sort(key=lambda r: r["date"])
-    manifest = {"frequency": "quarterly", "source_url": url, "dataset_id": str(element_id)}
-    return records, manifest
-
-
 RU_MONTHS = {
     "январь": 1, "февраль": 2, "март": 3, "апрель": 4, "май": 5, "июнь": 6,
     "июль": 7, "август": 8, "сентябрь": 9, "октябрь": 10, "ноябрь": 11, "декабрь": 12,
@@ -3873,3 +3832,228 @@ def fetch_cpi_ytd() -> tuple[list[dict], dict]:
         "Index, December of the previous year = 100 -- 105.7 for July 2026, cumulative inflation "
         "so far this year and the form Kazakhstan's own commentary usually quotes. Same Taldau "
         "move as CPI.")
+
+
+# ---------------------------------------------------------------------------
+# MODEL DATA, STEP 1 (2026-09-25): the price and activity blocks a QPM / BVAR needs.
+# Every query below was found through Taldau's own endpoints -- getSearchPageGridData
+# (search), GetPeriodList (period ids) and GetSegmentList (the dictionary ids and the
+# default "Всего" terms of each segment) -- and checked against BNS's own releases
+# before being wired in:
+#   - CPI groups: December y/y for 2011-2025 equals stat.gov.kz element 1548 for food,
+#     non-food and services in all 15 years (Dec 2022: headline 120.3, food 125.3,
+#     non-food 119.4, services 114.1); November 2025 m/m 101.0 / 100.9 / 100.3 as in
+#     «Социально-экономическое развитие».
+#   - PPI: December/December 2011-2025 equals element 1626 in all 15 years (2021 146.1,
+#     2022 109.4); October 2025 m/m 101.2, y/y 108.4 as in the BNS release.
+#   - Industrial production: October 2025 m/m 99.4, y/y 107.1 as in the BNS release.
+# Comparison terms (dictionary 848): 2695730 previous period, 2695731 December of the
+# previous year, 2695732 same period of the previous year. Monthly history starts in
+# 2011-01 (CPI groups, PPI) and 2014-01 (industrial production); nothing monthly exists
+# earlier on Taldau or stat.gov.kz.
+# ---------------------------------------------------------------------------
+CPI_GROUP_TERMS = {
+    "FOOD": "4772574",                  # Продовольственные товары
+    "NONFOOD": "4772568",               # Непродовольственные товары
+    "SERVICES": "4772555",              # Платные услуги
+    "UTILITIES": "4772562",             # Жилищно-коммунальные услуги
+    "REGULATED_UTILITIES": "4772564",   # Коммунальные услуги регулируемые
+}
+CPI_GROUP_NAMES = {
+    "FOOD": "food products", "NONFOOD": "non-food products", "SERVICES": "paid services",
+    "UTILITIES": "housing and utility services", "REGULATED_UTILITIES": "regulated utility services",
+}
+
+
+def _fetch_cpi_group(group: str, comparison_term: str, indicator_id: str) -> tuple[list[dict], dict]:
+    basis = "previous month = 100" if comparison_term == CPI_TERM_MOM else "same month of the previous year = 100"
+    records, manifest = _fetch_taldau_annual_index(
+        CPI_TALDAU_INDEX, indicator_id,
+        f"Index, {basis}: CPI for {CPI_GROUP_NAMES[group]} (Taldau index 703076, term "
+        f"{CPI_GROUP_TERMS[group]}), monthly from 2011-01, national. Same index and dictionaries "
+        "as the headline CPI; December year-on-year values equal BNS element 1548 for 2011-2025.",
+        measure_id="7", terms=f"{NATIONAL_TERM_ID},{comparison_term},{CPI_GROUP_TERMS[group]}",
+        dic_ids=CPI_TALDAU_DICS, period_id=TALDAU_PERIOD_MONTHLY)
+    return records, manifest
+
+
+def fetch_cpi_food() -> tuple[list[dict], dict]:
+    return _fetch_cpi_group("FOOD", CPI_TERM_MOM, "CPI_FOOD")
+
+
+def fetch_cpi_food_yoy() -> tuple[list[dict], dict]:
+    return _fetch_cpi_group("FOOD", CPI_TERM_YOY, "CPI_FOOD_YOY")
+
+
+def fetch_cpi_nonfood() -> tuple[list[dict], dict]:
+    return _fetch_cpi_group("NONFOOD", CPI_TERM_MOM, "CPI_NONFOOD")
+
+
+def fetch_cpi_nonfood_yoy() -> tuple[list[dict], dict]:
+    return _fetch_cpi_group("NONFOOD", CPI_TERM_YOY, "CPI_NONFOOD_YOY")
+
+
+def fetch_cpi_services() -> tuple[list[dict], dict]:
+    return _fetch_cpi_group("SERVICES", CPI_TERM_MOM, "CPI_SERVICES")
+
+
+def fetch_cpi_services_yoy() -> tuple[list[dict], dict]:
+    return _fetch_cpi_group("SERVICES", CPI_TERM_YOY, "CPI_SERVICES_YOY")
+
+
+def fetch_cpi_utilities() -> tuple[list[dict], dict]:
+    return _fetch_cpi_group("UTILITIES", CPI_TERM_MOM, "CPI_UTILITIES")
+
+
+def fetch_cpi_utilities_yoy() -> tuple[list[dict], dict]:
+    return _fetch_cpi_group("UTILITIES", CPI_TERM_YOY, "CPI_UTILITIES_YOY")
+
+
+def fetch_cpi_regulated_utilities() -> tuple[list[dict], dict]:
+    return _fetch_cpi_group("REGULATED_UTILITIES", CPI_TERM_MOM, "CPI_REGULATED_UTILITIES")
+
+
+def fetch_cpi_regulated_utilities_yoy() -> tuple[list[dict], dict]:
+    return _fetch_cpi_group("REGULATED_UTILITIES", CPI_TERM_YOY, "CPI_REGULATED_UTILITIES_YOY")
+
+
+PPI_MONTHLY_INDEX = "703039"
+PPI_MONTHLY_DICS = "67,848,2513,2854,3068"
+PPI_MONTHLY_TOTAL_TERMS = "4150464,15698719,18716910"   # the "Всего" of the three product/activity dictionaries
+
+
+def _fetch_ppi_monthly(comparison_term: str, indicator_id: str, basis: str) -> tuple[list[dict], dict]:
+    return _fetch_taldau_annual_index(
+        PPI_MONTHLY_INDEX, indicator_id,
+        f"Index, {basis}: producer prices of industrial products, national, monthly from 2011-01 "
+        "(Taldau index 703039). December/December values equal BNS element 1626 for 2011-2025. "
+        "The annual PPI series is a different figure -- the January-December average.",
+        measure_id="7", terms=f"{NATIONAL_TERM_ID},{comparison_term},{PPI_MONTHLY_TOTAL_TERMS}",
+        dic_ids=PPI_MONTHLY_DICS, period_id=TALDAU_PERIOD_MONTHLY)
+
+
+def fetch_ppi_monthly() -> tuple[list[dict], dict]:
+    return _fetch_ppi_monthly(CPI_TERM_MOM, "PPI_MONTHLY", "previous month = 100")
+
+
+def fetch_ppi_yoy_monthly() -> tuple[list[dict], dict]:
+    return _fetch_ppi_monthly(CPI_TERM_YOY, "PPI_YOY_MONTHLY", "same month of the previous year = 100")
+
+
+IND_PROD_MONTHLY_INDEX = "701625"
+IND_PROD_MONTHLY_DICS = "68,4303,848"      # region, activity, comparison -- the comparison comes LAST here
+IND_PROD_MONTHLY_TOTAL = "3079117"         # Промышленность, всего
+
+
+def _fetch_ind_prod_monthly(comparison_term: str, indicator_id: str, basis: str) -> tuple[list[dict], dict]:
+    return _fetch_taldau_annual_index(
+        IND_PROD_MONTHLY_INDEX, indicator_id,
+        f"Index, {basis}: industrial production, national, monthly from 2014-01 (Taldau index 701625). "
+        "Not seasonally adjusted -- the month-on-month index swings with the calendar (January 2026 "
+        "78.5, February 124.5).",
+        measure_id="7", terms=f"{NATIONAL_TERM_ID},{IND_PROD_MONTHLY_TOTAL},{comparison_term}",
+        dic_ids=IND_PROD_MONTHLY_DICS, period_id=TALDAU_PERIOD_MONTHLY)
+
+
+def fetch_ind_prod_monthly_yoy() -> tuple[list[dict], dict]:
+    return _fetch_ind_prod_monthly(CPI_TERM_YOY, "IND_PROD_MONTHLY_YOY", "same month of the previous year = 100")
+
+
+def fetch_ind_prod_monthly_mom() -> tuple[list[dict], dict]:
+    return _fetch_ind_prod_monthly(CPI_TERM_MOM, "IND_PROD_MONTHLY_MOM", "previous month = 100")
+
+
+# ---------------------------------------------------------------------------
+# LABOUR HISTORY from two stat.gov.kz dynamic tables (2026-09-25).
+# «Основные индикаторы рынка труда» (element 5830, sheet «ОИРТ»): one block per
+# indicator, each with a year row, a quarter row (I-IV квартал, год) and the
+# «Республика Казахстан» row -- unemployment 15+ quarterly from 2001Q1 (12.7) with no
+# gap, where the JSON cube the pipeline used before covers only 2023Q1-2025Q2.
+# «Среднемесячная заработная плата» (element 5674, sheet «Показатель», form 1-Т):
+# quarterly pairs of rows (labels, then values) from 2015. It is NOT the same figure as
+# AVG_WAGE_QUARTERLY (445 068 KZT in 2026Q1 with small enterprises; 461 486 here), so it
+# goes out as its own series.
+# ---------------------------------------------------------------------------
+LABOUR_INDICATORS_ELEMENT = 5830
+WAGE_1T_ELEMENT = 5674
+QUARTER_LABELS = {"I": 1, "II": 2, "III": 3, "IV": 4}
+FOOTNOTED_YEAR_RE = re.compile(r"^\s*((?:19|20)\d{2})(?=\D|$|\d\))")
+
+
+def parse_labour_indicator_block(content: bytes, block_label: str) -> list[dict]:
+    """Quarter-end records of the national row of one «ОИРТ» block."""
+    wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+    rows = [list(r) for r in wb["ОИРТ"].iter_rows(values_only=True)]
+    start = next((i for i, r in enumerate(rows) if r and isinstance(r[0], str)
+                  and r[0].strip().lower() == block_label.lower()), None)
+    if start is None:
+        raise validation.StructuralChangeError(f"no block {block_label!r} in sheet «ОИРТ»")
+    year_i = next(i for i in range(start, start + 6) if any(isinstance(c, int) and 1990 < c < 2100 for c in rows[i]))
+    years, quarters = rows[year_i], rows[year_i + 1]
+    national = next(r for r in rows[year_i + 2:year_i + 6] if r and isinstance(r[0], str)
+                    and r[0].strip() == "Республика Казахстан")
+    records, year = [], None
+    for col, label in enumerate(quarters):
+        # A year cell may carry a footnote digit: 2014 is headed '20142)' (footnote 2).
+        m_year = FOOTNOTED_YEAR_RE.match(str(years[col])) if years[col] is not None else None
+        if m_year:
+            year = int(m_year.group(1))
+        m = re.match(r"^\s*(I{1,3}|IV)\s+квартал", str(label or ""))
+        if not m or year is None or col >= len(national):
+            continue
+        value = national[col]
+        if isinstance(value, (int, float)):
+            q_end = QUARTER_LABELS[m.group(1)] * 3
+            records.append({"date": f"{year:04d}-{q_end:02d}-{calendar.monthrange(year, q_end)[1]:02d}",
+                            "value": round(float(value), 4)})
+    return records
+
+
+def fetch_unemployment() -> tuple[list[dict], dict]:
+    """Unemployment rate (ILO, 15 and older), national, quarterly from 2001Q1."""
+    url = f"https://stat.gov.kz/api/iblock/element/{LABOUR_INDICATORS_ELEMENT}/file/ru/"
+    content = _download(url)
+    _save_raw("UNEMPLOYMENT", content, "xlsx", {"source_url": url, "element_id": LABOUR_INDICATORS_ELEMENT})
+    records = parse_labour_indicator_block(content, "Уровень безработицы")
+    if len(records) < 90:
+        raise validation.StructuralChangeError(
+            f"bns/UNEMPLOYMENT: only {len(records)} quarters parsed from element {LABOUR_INDICATORS_ELEMENT}; expected 2001Q1 onward")
+    manifest = {"frequency": "quarterly", "source_url": url, "dataset_id": str(LABOUR_INDICATORS_ELEMENT),
+                "note": "Percent of the labour force, ILO definition, age 15+, national, quarterly from 2001Q1 "
+                        "(stat.gov.kz element 5830 «Основные индикаторы рынка труда», block «Уровень "
+                        "безработицы»). Replaced the JSON cube 102790 on 2026-09-25, which stopped at 2025Q2 "
+                        "and began in 2023Q1; the two agree on every shared quarter."}
+    return records, manifest
+
+
+def parse_wage_1t_quarterly(content: bytes) -> list[dict]:
+    wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+    rows = [list(r) for r in wb["Показатель"].iter_rows(values_only=True)]
+    records = []
+    for i, r in enumerate(rows[:-1]):
+        if not (r and isinstance(r[0], int) and any(isinstance(c, str) and "квартал" in c for c in r[1:])):
+            continue
+        year, values = r[0], rows[i + 1]
+        for col, label in enumerate(r[1:], start=1):
+            m = re.match(r"^\s*([1-4])\s+квартал", str(label or ""))
+            if m and col < len(values) and isinstance(values[col], (int, float)):
+                q_end = int(m.group(1)) * 3
+                records.append({"date": f"{year:04d}-{q_end:02d}-{calendar.monthrange(year, q_end)[1]:02d}",
+                                "value": float(values[col])})
+    return records
+
+
+def fetch_avg_wage_1t_quarterly() -> tuple[list[dict], dict]:
+    """Average monthly nominal wage, form 1-Т, KZT, quarterly from 2015Q1."""
+    url = f"https://stat.gov.kz/api/iblock/element/{WAGE_1T_ELEMENT}/file/ru/"
+    content = _download(url)
+    _save_raw("AVG_WAGE_1T_QUARTERLY", content, "xlsx", {"source_url": url, "element_id": WAGE_1T_ELEMENT})
+    records = parse_wage_1t_quarterly(content)
+    if len(records) < 40:
+        raise validation.StructuralChangeError(
+            f"bns/AVG_WAGE_1T_QUARTERLY: only {len(records)} quarters parsed from element {WAGE_1T_ELEMENT}")
+    manifest = {"frequency": "quarterly", "source_url": url, "dataset_id": str(WAGE_1T_ELEMENT),
+                "note": "KZT per month, statistical form 1-Т «Отчет по труду», national, quarterly from 2015Q1 "
+                        "(118 638 KZT) -- stat.gov.kz element 5674, equal to Taldau index 702972. A different "
+                        "coverage from AVG_WAGE_QUARTERLY (461 486 here against 445 068 there for 2026Q1)."}
+    return records, manifest

@@ -479,8 +479,99 @@ agencies:
         format: tsv_utf8_bom
         columns: ["NAM", "DAT", "PERIOD", "КАТО", "LКАТО", "ССП", "LССП", "category_code", "category_name", "VAL"]
         notes: "Actually downloaded and parsed this session. PERIOD like 201911 = Nov 2019. Regional breakdown; filter LКАТО for national total."
+      CPI_FOOD:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695730,4772574. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_food.
+      CPI_FOOD_YOY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695732,4772574. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_food_yoy.
+      CPI_NONFOOD:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695730,4772568. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_nonfood.
+      CPI_NONFOOD_YOY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695732,4772568. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_nonfood_yoy.
+      CPI_SERVICES:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695730,4772555. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_services.
+      CPI_SERVICES_YOY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695732,4772555. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_services_yoy.
+      CPI_UTILITIES:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695730,4772562. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_utilities.
+      CPI_UTILITIES_YOY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695732,4772562. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_utilities_yoy.
+      CPI_REGULATED_UTILITIES:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695730,4772564. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_regulated_utilities.
+      CPI_REGULATED_UTILITIES_YOY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695732,4772564. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_regulated_utilities_yoy.
+      PPI_MONTHLY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703039, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2513,2854,3068, p_terms=741880,2695730,4150464,15698719,18716910. Dec/Dec 2011-2025 equal element 1626. fetch_ppi_monthly.
+      PPI_YOY_MONTHLY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703039, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2513,2854,3068, p_terms=741880,2695732,4150464,15698719,18716910. Dec/Dec 2011-2025 equal element 1626. fetch_ppi_yoy_monthly.
+      IND_PROD_MONTHLY_YOY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 701625, p_period_id=4, p_measure_id=7, p_dicIds=68,4303,848 (comparison last), p_terms=741880,3079117,2695732. Monthly from 2014-01. fetch_ind_prod_monthly_yoy.
+      IND_PROD_MONTHLY_MOM:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 701625, p_period_id=4, p_measure_id=7, p_dicIds=68,4303,848 (comparison last), p_terms=741880,3079117,2695730. Monthly from 2014-01. fetch_ind_prod_monthly_mom.
+      AVG_WAGE_1T_QUARTERLY:
+        status: confirmed
+        download_url: "https://stat.gov.kz/api/iblock/element/5674/file/ru/"
+        format: xlsx
+        notes: >
+          2026-09-25. Sheet «Показатель»: from 2015 each year is a row of quarter labels followed by a row of values (columns 1, 4, 7, 10); 2007-2014 monthly rows above are not used. Equal to Taldau index 702972. fetch_avg_wage_1t_quarterly.
       UNEMPLOYMENT:
         status: confirmed
+        current_source: "2026-09-25: stat.gov.kz element 5830 «Основные индикаторы рынка труда» (xlsx, sheet «ОИРТ», block «Уровень безработицы», national row), quarterly 2001Q1 onward; the cube 102790 described below stopped at 2025Q2."
         page_url: "https://stat.gov.kz/ru/open-data/labor-statistics/474294/"
         element_id: 102790
         download_url: "https://stat.gov.kz/api/iblock/element/102790/json/file/ru/"

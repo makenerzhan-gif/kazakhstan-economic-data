@@ -155,6 +155,21 @@ FETCHERS = {
     "EXPORT_PRICE_INDEX": bns_fetchers.fetch_export_price_index,
     "IMPORT_PRICE_INDEX": bns_fetchers.fetch_import_price_index,
     "CPI_YOY": bns_fetchers.fetch_cpi_yoy,
+    "CPI_FOOD": bns_fetchers.fetch_cpi_food,
+    "CPI_FOOD_YOY": bns_fetchers.fetch_cpi_food_yoy,
+    "CPI_NONFOOD": bns_fetchers.fetch_cpi_nonfood,
+    "CPI_NONFOOD_YOY": bns_fetchers.fetch_cpi_nonfood_yoy,
+    "CPI_SERVICES": bns_fetchers.fetch_cpi_services,
+    "CPI_SERVICES_YOY": bns_fetchers.fetch_cpi_services_yoy,
+    "CPI_UTILITIES": bns_fetchers.fetch_cpi_utilities,
+    "CPI_UTILITIES_YOY": bns_fetchers.fetch_cpi_utilities_yoy,
+    "CPI_REGULATED_UTILITIES": bns_fetchers.fetch_cpi_regulated_utilities,
+    "CPI_REGULATED_UTILITIES_YOY": bns_fetchers.fetch_cpi_regulated_utilities_yoy,
+    "PPI_MONTHLY": bns_fetchers.fetch_ppi_monthly,
+    "PPI_YOY_MONTHLY": bns_fetchers.fetch_ppi_yoy_monthly,
+    "IND_PROD_MONTHLY_YOY": bns_fetchers.fetch_ind_prod_monthly_yoy,
+    "IND_PROD_MONTHLY_MOM": bns_fetchers.fetch_ind_prod_monthly_mom,
+    "AVG_WAGE_1T_QUARTERLY": bns_fetchers.fetch_avg_wage_1t_quarterly,
     "CPI_YTD": bns_fetchers.fetch_cpi_ytd,
 }
 
@@ -259,6 +274,7 @@ INDICATOR_IDS = [
     "IMPORT_PRICE_INDEX",
     "CPI_YOY",
     "CPI_YTD",
+    "CPI_FOOD", "CPI_FOOD_YOY", "CPI_NONFOOD", "CPI_NONFOOD_YOY", "CPI_SERVICES", "CPI_SERVICES_YOY", "CPI_UTILITIES", "CPI_UTILITIES_YOY", "CPI_REGULATED_UTILITIES", "CPI_REGULATED_UTILITIES_YOY", "PPI_MONTHLY", "PPI_YOY_MONTHLY", "IND_PROD_MONTHLY_YOY", "IND_PROD_MONTHLY_MOM", "AVG_WAGE_1T_QUARTERLY",
 ]
 
 
