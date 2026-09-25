@@ -1,0 +1,21 @@
+{
+  "source": "wb",
+  "source_url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+  "dataset_id": "CMO-Historical-Data-Monthly.xlsx#Monthly Prices",
+  "indicator_id": "WB_COMMODITY_PRICES_MONTHLY",
+  "indicator_name": "World Bank commodity prices, monthly averages, nominal USD (Pink Sheet)",
+  "description": "Мировые цены на сырьевые товары, среднемесячные (Всемирный банк, Pink Sheet), номинальные $",
+  "frequency": "monthly",
+  "unit": "USD per unit named in item_name ($/bbl, $/mt, $/kg, $/troy oz …); NGAS_INDEX 2010=100",
+  "currency": "USD",
+  "geography": "World (benchmark prices)",
+  "methodology": "71 series monthly from 1960-01 (copper, zinc, aluminium, lead, wheat, gas, coal …) for the external block of the QPM/BVAR (added 2026-09-25); the same monthly Pink Sheet OIL_PRICE_BRENT is read from. File release: September 02, 2026.",
+  "publication_date": "September 02, 2026",
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "1960-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

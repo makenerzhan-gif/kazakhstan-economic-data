@@ -1906,6 +1906,39 @@ datasets:
     unit: "index, 2010=100"
     category: world_prices
 
+  - id: WB_COMMODITY_PRICES_MONTHLY
+    name_ru: "Мировые цены на сырьевые товары, среднемесячные (Всемирный банк, Pink Sheet), номинальные $"
+    name_en: "World Bank commodity prices, monthly averages, nominal USD (Pink Sheet)"
+    agency: wb
+    table: monthly_prices
+    sheet: "Monthly Prices"
+    fallback_url: "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx"
+    dictionary: wb_commodities
+    region: world
+    country: WLD
+    geography: "World (benchmark prices)"
+    min_items: 60
+    frequency: monthly
+    unit: "USD per unit named in item_name ($/bbl, $/mt, $/kg, $/troy oz …); NGAS_INDEX 2010=100"
+    category: world_prices
+    note: "71 series monthly from 1960-01 (copper, zinc, aluminium, lead, wheat, gas, coal …) for the external block of the QPM/BVAR (added 2026-09-25); the same monthly Pink Sheet OIL_PRICE_BRENT is read from."
+
+  - id: WB_COMMODITY_INDICES_MONTHLY
+    name_ru: "Индексы мировых цен на сырьевые товары, месячные (Всемирный банк, 2010=100), номинальные"
+    name_en: "World Bank commodity price indices, monthly, nominal (2010=100)"
+    agency: wb
+    table: monthly_indices
+    sheet: "Monthly Indices"
+    fallback_url: "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx"
+    dictionary: wb_commodity_indices
+    region: world
+    country: WLD
+    geography: "World (benchmark prices)"
+    min_items: 16
+    frequency: monthly
+    unit: "index, 2010=100"
+    category: world_prices
+
   - id: WB_COMMODITY_PRICE_FORECASTS
     name_ru: "Прогноз мировых цен на сырьевые товары (Всемирный банк, Commodity Markets Outlook), номинальные $"
     name_en: "World Bank Commodity Markets Outlook price forecasts, nominal USD"
