@@ -2559,6 +2559,66 @@ agencies:
           only one other dimension: subcategory (Including / Excluding oil trade). Used
           "Including oil trade" as primary since oil dominates KZ's actual trade weights.
           fetch_reer.
+      RER_USD:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: >
+          2026-09-25. The remaining series of formId=299 (same form and pagination as REER),
+          pinned on category / fx_currency_pair / subcategory. December 2016 = 100; a rise is a
+          real appreciation of the tenge. Monthly from 1995-01. Built from the form download
+          archived 2026-09-03 (the network was closed to data.nationalbank.kz that day); the
+          next pipeline run refreshes it. fetch_rer_usd.
+      RER_RUB:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: >
+          2026-09-25. The remaining series of formId=299 (same form and pagination as REER),
+          pinned on category / fx_currency_pair / subcategory. December 2016 = 100; a rise is a
+          real appreciation of the tenge. Monthly from 1995-01. Built from the form download
+          archived 2026-09-03 (the network was closed to data.nationalbank.kz that day); the
+          next pipeline run refreshes it. fetch_rer_rub.
+      RER_EUR:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: >
+          2026-09-25. The remaining series of formId=299 (same form and pagination as REER),
+          pinned on category / fx_currency_pair / subcategory. December 2016 = 100; a rise is a
+          real appreciation of the tenge. Monthly from 1995-01. Built from the form download
+          archived 2026-09-03 (the network was closed to data.nationalbank.kz that day); the
+          next pipeline run refreshes it. fetch_rer_eur.
+      RER_CNY:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: >
+          2026-09-25. The remaining series of formId=299 (same form and pagination as REER),
+          pinned on category / fx_currency_pair / subcategory. December 2016 = 100; a rise is a
+          real appreciation of the tenge. Monthly from 1995-01. Built from the form download
+          archived 2026-09-03 (the network was closed to data.nationalbank.kz that day); the
+          next pipeline run refreshes it. fetch_rer_cny.
+      REER_EX_OIL:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: >
+          2026-09-25. The remaining series of formId=299 (same form and pagination as REER),
+          pinned on category / fx_currency_pair / subcategory. December 2016 = 100; a rise is a
+          real appreciation of the tenge. Monthly from 1995-01. Built from the form download
+          archived 2026-09-03 (the network was closed to data.nationalbank.kz that day); the
+          next pipeline run refreshes it. fetch_reer_ex_oil.
+      NEER_EX_OIL:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: >
+          2026-09-25. The remaining series of formId=299 (same form and pagination as REER),
+          pinned on category / fx_currency_pair / subcategory. December 2016 = 100; a rise is a
+          real appreciation of the tenge. Monthly from 1995-01. Built from the form download
+          archived 2026-09-03 (the network was closed to data.nationalbank.kz that day); the
+          next pipeline run refreshes it. fetch_neer_ex_oil.
       NEER:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"

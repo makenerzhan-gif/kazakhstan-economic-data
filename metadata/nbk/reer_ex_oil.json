@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=299",
+  "dataset_id": "formId=299,category=Real effective exchange rate,pair=None,subcategory=Excluding oil trade",
+  "indicator_id": "REER_EX_OIL",
+  "indicator_name": "Real Effective Exchange Rate, excluding oil trade",
+  "description": "Реальный эффективный обменный курс тенге (без нефтяной торговли)",
+  "frequency": "monthly",
+  "unit": "index, December 2016 = 100",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, December 2016 = 100: the real effective exchange rate, basket excluding oil trade. A rise is a real appreciation of the tenge.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-03",
+  "period_start": "1995-01-01",
+  "period_end": "2026-06-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

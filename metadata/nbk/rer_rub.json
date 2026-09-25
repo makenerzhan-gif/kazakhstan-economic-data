@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=299",
+  "dataset_id": "formId=299,category=Real exchange rate,pair=Russian ruble,subcategory=None",
+  "indicator_id": "RER_RUB",
+  "indicator_name": "Real Exchange Rate of the Tenge vs Russian Ruble",
+  "description": "Реальный обменный курс тенге к российскому рублю",
+  "frequency": "monthly",
+  "unit": "index, December 2016 = 100",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, December 2016 = 100: the real exchange rate of the tenge against Russian ruble. A rise is a real appreciation of the tenge.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-03",
+  "period_start": "1995-01-01",
+  "period_end": "2026-06-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

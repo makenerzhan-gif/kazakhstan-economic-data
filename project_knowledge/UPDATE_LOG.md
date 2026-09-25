@@ -4713,3 +4713,28 @@ matched its raw file; the problems were dates, gaps, labels and errors inside th
 **Source errors are kept as published** and listed in `config/source_issues.yaml` (export tonnage
 June 2026, NBK money 2021-12..2022, 2021 non-oil deficit, eurobonds 2022-Q4, …); DATA_CATALOG.md
 shows each with a status that flips when a source corrects it. Tests 364 → 382.
+
+## 2026-09-25 — model data, step 1 (what the archive allows): BOP from 2000, bilateral real exchange rates (user: «Сделай пункт 1»)
+
+The network to the sources was closed in this session (stat.gov.kz, nationalbank.kz, kase.kz, gov.kz
+answer 403 through the environment's proxy), so only what the archived downloads already hold was added.
+
+- **Balance of payments from 2000-Q1 (was 2020-Q1).** CURRENT_ACCOUNT_BALANCE and the four BOP_* lines
+  now read formId=481 for the 80 quarters before formId=324's first (`nbk._bop_history`). 481 was
+  rejected earlier because it serves two amounts for some quarters -- but only from report_date
+  2023-04-01, inside 324's range. Each download is checked: one amount per early quarter, the
+  identity goods + services + primary + secondary = current account in every one of them, and 481
+  equal to 324 on every quarter both carry unambiguously; any failure leaves the history out and says
+  so in the manifest. The four quarters of every year 2000-2024 add up to the IMF WEO annual current
+  account within 0.8 mln USD (test: tests/test_date_basis.py).
+- **Six new NBK series from formId=299** (436 indicators): RER_USD, RER_RUB, RER_EUR, RER_CNY --
+  bilateral real exchange rates of the tenge -- and REER_EX_OIL, NEER_EX_OIL. Monthly from 1995-01,
+  December 2016 = 100, a rise is a real appreciation. Built from the form archived 2026-09-03 (to
+  2026-06); the next CI run refreshes them.
+
+**Still needed for QPM / BVAR, blocked on network access:** CPI by group (food / non-food / services /
+regulated, Taldau terms not yet identified), monthly PPI, the base rate before 2024-10, the official
+exchange rate before 2021-05, M0-M3 and bank rates before 2021-12 (most NBK forms serve a window from
+2023-01 by default -- the date parameter still has to be found live), TONIA before 2026-02, the
+government yield curve, rates and volumes of new loans, quarterly unemployment before 2023, a monthly
+industrial production index.

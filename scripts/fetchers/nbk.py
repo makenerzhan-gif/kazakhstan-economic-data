@@ -539,6 +539,79 @@ def fetch_reer() -> tuple[list[dict], dict]:
     return records, manifest
 
 
+# ---------------------------------------------------------------------------
+# The rest of formId=299 (added 2026-09-25 for the QPM/BVAR external block): the
+# BILATERAL real exchange rates of the tenge against the US dollar, the ruble, the euro
+# and the yuan, and the effective rates on the basket EXCLUDING oil trade. Monthly from
+# 1995-01, December 2016 = 100 in all eight series of the form (checked on the archived
+# download of 2026-09-03). A RISE is a real APPRECIATION of the tenge: the August 2015
+# float took the dollar RER from 149.6 (July) to 108.4 (September). Each series is
+# pinned on its full signature -- category, fx_currency_pair and subcategory -- and a
+# date carrying two different amounts stops the fetch rather than being guessed at.
+# ---------------------------------------------------------------------------
+FORM_299_SERIES = {
+    "RER_USD": ("Real exchange rate", "US dollars", None),
+    "RER_RUB": ("Real exchange rate", "Russian ruble", None),
+    "RER_EUR": ("Real exchange rate", "Euro", None),
+    "RER_CNY": ("Real exchange rate", "Chinese renminbi (yuan)", None),
+    "REER_EX_OIL": ("Real effective exchange rate", None, "Excluding oil trade"),
+    "NEER_EX_OIL": ("The nominal effective exchange rate", None, "Excluding oil trade"),
+}
+
+
+def _fetch_form_299_series(indicator_id: str) -> tuple[list[dict], dict]:
+    category, pair, subcategory = FORM_299_SERIES[indicator_id]
+    rows = _fetch_nbk_form_paginated(REER_NEER_FORM_ID, indicator_id)
+    by_date: dict[str, set] = {}
+    for r in rows:
+        if (r.get("category") == category and (r.get("fx_currency_pair") or None) == pair
+                and (r.get("subcategory") or None) == subcategory):
+            by_date.setdefault(r["report_date"], set()).add(float(r["amount"]))
+    conflicting = sorted(d for d, v in by_date.items() if len(v) > 1)
+    if not by_date or conflicting:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+            f"WHAT CHANGED: formId={REER_NEER_FORM_ID} returned "
+            + (f"two amounts for {conflicting[:3]}" if conflicting else "no rows")
+            + f" for category={category!r}, fx_currency_pair={pair!r}, subcategory={subcategory!r}",
+            "EXPECTED: one index value per month",
+            f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={REER_NEER_FORM_ID} and update scripts/fetchers/nbk.py",
+        ]))
+    records = [{"date": d, "value": next(iter(v))} for d, v in sorted(by_date.items())]
+    what = f"real exchange rate of the tenge against {pair}" if pair else f"{category.lower()}, basket excluding oil trade"
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={REER_NEER_FORM_ID}",
+        "dataset_id": f"formId={REER_NEER_FORM_ID},category={category},pair={pair},subcategory={subcategory}",
+        "note": f"Index, December 2016 = 100: the {what}. A rise is a real appreciation of the tenge.",
+    }
+    return records, manifest
+
+
+def fetch_rer_usd() -> tuple[list[dict], dict]:
+    return _fetch_form_299_series("RER_USD")
+
+
+def fetch_rer_rub() -> tuple[list[dict], dict]:
+    return _fetch_form_299_series("RER_RUB")
+
+
+def fetch_rer_eur() -> tuple[list[dict], dict]:
+    return _fetch_form_299_series("RER_EUR")
+
+
+def fetch_rer_cny() -> tuple[list[dict], dict]:
+    return _fetch_form_299_series("RER_CNY")
+
+
+def fetch_reer_ex_oil() -> tuple[list[dict], dict]:
+    return _fetch_form_299_series("REER_EX_OIL")
+
+
+def fetch_neer_ex_oil() -> tuple[list[dict], dict]:
+    return _fetch_form_299_series("NEER_EX_OIL")
+
+
 def fetch_neer() -> tuple[list[dict], dict]:
     """Nominal effective exchange rate (NEER) index, including oil trade in the basket weights."""
     rows = _fetch_effective_rate_rows("The nominal effective exchange rate")
@@ -1560,14 +1633,15 @@ def fetch_current_account_balance() -> tuple[list[dict], dict]:
             ])
         )
 
-    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in matching]
-    records.sort(key=lambda r: r["date"])
+    recent = {r["report_date"]: float(r["amount"]) for r in matching}
+    history, history_note = _bop_history("CURRENT_ACCOUNT", "CURRENT_ACCOUNT_BALANCE", recent)
+    records = [{"date": d, "value": v} for d, v in sorted({**history, **recent}.items())]
     manifest = {
         "frequency": "quarterly",
         "source_url": f"{MONETARY_AGGREGATES_URL}?formId={CURRENT_ACCOUNT_FORM_ID}",
         "dataset_id": f"formId={CURRENT_ACCOUNT_FORM_ID},code={CURRENT_ACCOUNT_CODE}",
         "note": "USD million. Current account balance of the balance of payments. Negative "
-                "values indicate a deficit.",
+                f"values indicate a deficit. History: {history_note}.",
     }
     return records, manifest
 
@@ -2992,7 +3066,8 @@ def fetch_inflation_target() -> tuple[list[dict], dict]:
 # account deficit is an INCOME deficit, not a trade deficit, and the headline
 # number alone hides that completely.
 #
-# WHY NOT formId=481, WHICH HAS FOUR TIMES THE HISTORY. 481 ("standard
+# WHY NOT formId=481 FOR RECENT QUARTERS (its pre-2020 history IS used -- see
+# _bop_history below). 481 ("standard
 # presentation") carries the same five lines back to 2000-04-01 against 324's
 # 2020-04-01, and its headline matches the stored series to six decimals. It
 # was built out first and then REJECTED, because on ten quarters in 2023-2024
@@ -3150,16 +3225,74 @@ def _verify_bop_identity(all_rows: list[dict], indicator_id: str) -> int:
     return len(dates)
 
 
+# ---------------------------------------------------------------------------
+# HISTORY BEFORE 2020 FROM formId=481 (added 2026-09-25). 324 starts at Q1 2020; 481
+# carries the same five lines from Q1 2000. What disqualified 481 above -- two
+# different amounts under one signature -- occurs from report_date 2023-04-01 on,
+# all of it inside 324's own range. So 481 is read ONLY for the quarters before 324's
+# first one, and only while every check below holds on the day's download:
+#   - each of those quarters resolves to exactly one amount per line;
+#   - goods + services + primary + secondary = current account in each of them;
+#   - on every quarter both forms carry unambiguously, 481 equals 324 (1e-6).
+# Checked 2026-09-25 on the archived 2026-09-02 download: 80 quarters, identity holds
+# in all, 14-15 overlap quarters identical, and the four quarters of every year
+# 2000-2024 add up to the IMF WEO annual current account within 0.8 mln USD.
+# If any check fails the history is left out (logged in the manifest), never guessed.
+# ---------------------------------------------------------------------------
+BOP_HISTORY_FORM_ID = "481"
+BOP_HISTORY_TYPE = "USD mln"   # 481's word order; 324 says "mln USD"
+
+
+def _bop_history(line: str, indicator_id: str, recent: dict[str, float]) -> tuple[dict[str, float], str]:
+    """({report_date: amount} for the quarters before 324's first, a note on what was done)."""
+    rows = [{**r, "type": "mln USD"} if _bop_norm(r.get("type")) == _bop_norm(BOP_HISTORY_TYPE) else r
+            for r in _fetch_nbk_form_paginated(BOP_HISTORY_FORM_ID, indicator_id)]
+    first_recent = min(recent)
+
+    def select(target: str) -> dict[str, set]:
+        match = {**BOP_BASE_MATCH, **BOP_LINES[target]}
+        wanted = {k: _bop_norm(v) for k, v in match.items()}
+        out: dict[str, set] = {}
+        for row in rows:
+            if all(k in row and _bop_norm(row[k]) == v for k, v in wanted.items()) and all(
+                    k in NON_CLASSIFICATION_FIELDS or k in match or row[k] in (None, "") for k in row):
+                out.setdefault(row["report_date"], set()).add(round(float(row["amount"]), 6))
+        return out
+
+    lines = {name: select(name) for name in BOP_IDENTITY_PARTS + ("CURRENT_ACCOUNT",)}
+    history = {d: v for d, v in lines[line].items() if d < first_recent}
+    if not history:
+        return {}, f"formId={BOP_HISTORY_FORM_ID}: no quarter before {first_recent}; history not added"
+    if any(len(v) > 1 for v in history.values()):
+        bad = sorted(d for d, v in history.items() if len(v) > 1)
+        return {}, f"formId={BOP_HISTORY_FORM_ID}: two amounts for {bad[:3]}; history not added"
+    for d in history:
+        parts = [lines[p].get(d, set()) for p in BOP_IDENTITY_PARTS]
+        ca = lines["CURRENT_ACCOUNT"].get(d, set())
+        if any(len(p) != 1 for p in parts) or len(ca) != 1 or \
+                abs(sum(next(iter(p)) for p in parts) - next(iter(ca))) > BOP_IDENTITY_TOLERANCE:
+            return {}, f"formId={BOP_HISTORY_FORM_ID}: identity fails on {d}; history not added"
+    overlap = [d for d, v in lines[line].items() if d in recent and len(v) == 1]
+    differing = [d for d in overlap if abs(next(iter(lines[line][d])) - recent[d]) > 1e-6]
+    if not overlap or differing:
+        return {}, (f"formId={BOP_HISTORY_FORM_ID}: differs from {BOP_FORM_ID} on {differing[:3]}"
+                    if differing else f"formId={BOP_HISTORY_FORM_ID}: no unambiguous overlap to prove it") + "; history not added"
+    return ({d: next(iter(v)) for d, v in history.items()},
+            f"{len(history)} quarters before {first_recent} from formId={BOP_HISTORY_FORM_ID}, "
+            f"equal to {BOP_FORM_ID} on all {len(overlap)} shared unambiguous quarters, identity checked")
+
+
 def _fetch_bop_line(line: str, indicator_id: str, note: str) -> tuple[list[dict], dict]:
     all_rows = _fetch_nbk_form_paginated(BOP_FORM_ID, indicator_id)
     series = _bop_select(all_rows, line, indicator_id)
     checked = _verify_bop_identity(all_rows, indicator_id)
-    records = [{"date": d, "value": v} for d, v in sorted(series.items())]
+    history, history_note = _bop_history(line, indicator_id, series)
+    records = [{"date": d, "value": v} for d, v in sorted({**history, **series}.items())]
     manifest = {
         "frequency": "quarterly",
         "source_url": f"{MONETARY_AGGREGATES_URL}?formId={BOP_FORM_ID}",
         "dataset_id": f"nbk-form-{BOP_FORM_ID}/{line}",
-        "note": note,
+        "note": f"{note} History: {history_note}.",
         "identity_quarters_checked": checked,
     }
     return records, manifest

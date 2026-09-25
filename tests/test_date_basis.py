@@ -63,11 +63,12 @@ def test_quarterly_current_account_sums_to_the_imf_calendar_year():
     for d, v in quarters.items():
         by_year[d[:4]].append(v)
     checked = 0
-    for year in ("2020", "2021", "2022", "2023", "2024"):
+    # 2000-2019 from formId=481, 2020 on from 324 (see nbk._bop_history).
+    for year in (str(y) for y in range(2000, 2025)):
         assert len(by_year[year]) == 4, year
         assert abs(sum(by_year[year]) - imf[year]) < 1.0, (year, sum(by_year[year]), imf[year])
         checked += 1
-    assert checked == 5
+    assert checked == 25
 
 
 def test_year_to_date_pension_payments_restart_in_january():

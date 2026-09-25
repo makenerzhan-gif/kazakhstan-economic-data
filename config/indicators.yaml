@@ -787,6 +787,84 @@ indicators:
     comparison_basis: fixed_base
     comparison_basis_evidence: "декабрь 2016 = 100 (проверено: ровно 100.0 на 2016-12-01 во всех трёх вариантах формы 299)"
 
+  - id: RER_USD
+    name_ru: "Реальный обменный курс тенге к доллару США"
+    name_en: "Real Exchange Rate of the Tenge vs US Dollar"
+    agency: nbk
+    frequency: monthly
+    unit: "index, December 2016 = 100"
+    category: monetary
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "форма 299 НБ РК: индекс, рост = реальное укрепление тенге (август 2015: RER к USD 149,6 -> 108,4)"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100: ровно 100.0 на 2016-12-01 во всех восьми рядах формы 299 (архив 2026-09-03)"
+
+  - id: RER_RUB
+    name_ru: "Реальный обменный курс тенге к российскому рублю"
+    name_en: "Real Exchange Rate of the Tenge vs Russian Ruble"
+    agency: nbk
+    frequency: monthly
+    unit: "index, December 2016 = 100"
+    category: monetary
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "форма 299 НБ РК: индекс, рост = реальное укрепление тенге (август 2015: RER к USD 149,6 -> 108,4)"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100: ровно 100.0 на 2016-12-01 во всех восьми рядах формы 299 (архив 2026-09-03)"
+
+  - id: RER_EUR
+    name_ru: "Реальный обменный курс тенге к евро"
+    name_en: "Real Exchange Rate of the Tenge vs Euro"
+    agency: nbk
+    frequency: monthly
+    unit: "index, December 2016 = 100"
+    category: monetary
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "форма 299 НБ РК: индекс, рост = реальное укрепление тенге (август 2015: RER к USD 149,6 -> 108,4)"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100: ровно 100.0 на 2016-12-01 во всех восьми рядах формы 299 (архив 2026-09-03)"
+
+  - id: RER_CNY
+    name_ru: "Реальный обменный курс тенге к юаню"
+    name_en: "Real Exchange Rate of the Tenge vs Chinese Yuan"
+    agency: nbk
+    frequency: monthly
+    unit: "index, December 2016 = 100"
+    category: monetary
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "форма 299 НБ РК: индекс, рост = реальное укрепление тенге (август 2015: RER к USD 149,6 -> 108,4)"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100: ровно 100.0 на 2016-12-01 во всех восьми рядах формы 299 (архив 2026-09-03)"
+
+  - id: REER_EX_OIL
+    name_ru: "Реальный эффективный обменный курс тенге (без нефтяной торговли)"
+    name_en: "Real Effective Exchange Rate, excluding oil trade"
+    agency: nbk
+    frequency: monthly
+    unit: "index, December 2016 = 100"
+    category: monetary
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "форма 299 НБ РК: индекс, рост = реальное укрепление тенге (август 2015: RER к USD 149,6 -> 108,4)"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100: ровно 100.0 на 2016-12-01 во всех восьми рядах формы 299 (архив 2026-09-03)"
+
+  - id: NEER_EX_OIL
+    name_ru: "Номинальный эффективный обменный курс тенге (без нефтяной торговли)"
+    name_en: "Nominal Effective Exchange Rate, excluding oil trade"
+    agency: nbk
+    frequency: monthly
+    unit: "index, December 2016 = 100"
+    category: monetary
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "форма 299 НБ РК: индекс, рост = реальное укрепление тенге (август 2015: RER к USD 149,6 -> 108,4)"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100: ровно 100.0 на 2016-12-01 во всех восьми рядах формы 299 (архив 2026-09-03)"
+
   - id: DEPOSITS_TOTAL
     name_ru: "Депозиты резидентов в депозитных организациях, всего"
     name_en: "Total Resident Deposits in Deposit-Taking Organizations"

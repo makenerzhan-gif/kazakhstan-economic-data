@@ -29,6 +29,12 @@ FETCHERS = {
     "NATIONAL_FUND_ASSETS": nbk_fetchers.fetch_national_fund_assets,
     "REER": nbk_fetchers.fetch_reer,
     "NEER": nbk_fetchers.fetch_neer,
+    "RER_USD": nbk_fetchers.fetch_rer_usd,
+    "RER_RUB": nbk_fetchers.fetch_rer_rub,
+    "RER_EUR": nbk_fetchers.fetch_rer_eur,
+    "RER_CNY": nbk_fetchers.fetch_rer_cny,
+    "REER_EX_OIL": nbk_fetchers.fetch_reer_ex_oil,
+    "NEER_EX_OIL": nbk_fetchers.fetch_neer_ex_oil,
     "DEPOSITS_TOTAL": nbk_fetchers.fetch_deposits_total,
     "EXTERNAL_DEBT": nbk_fetchers.fetch_external_debt,
     "LENDING_RATE": nbk_fetchers.fetch_lending_rate,
@@ -264,6 +270,7 @@ INDICATOR_IDS = [
     "FINANCIAL_ACCOUNT_BALANCE",
     "BOP_OVERALL_BALANCE_GDP_SHARE",
     "INFLATION_TARGET",
+    "RER_USD", "RER_RUB", "RER_EUR", "RER_CNY", "REER_EX_OIL", "NEER_EX_OIL",
 ]
 
 
