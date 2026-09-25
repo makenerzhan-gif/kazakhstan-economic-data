@@ -29,6 +29,28 @@ agencies:
     protection: none
     endpoints:
       # ---- dimensional tables (config/dims.yaml, scripts/update_dims.py) ----
+      FIXED_ASSETS_GROSS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json_api
+        notes: >
+          2026-09-25. Taldau index 703214 (gross, end of year), 703203 (start of year), 703215 (net),
+          703205 (commissioned), 703220 (depreciation): period 7, measure 1 (tenge), p_dicIds
+          68,915,90,77,1161, p_terms 741880,741885,741927,455728,741908 -- asset term 455728
+          «Основные средства» (tangible); the default 741881 adds intangibles. 703216 (wear) and
+          703217 (renewal): measure 7, dictionaries 68,915,90,77. 2000-2025; the 2025 values equal the
+          publication «Основные фонды РК (2025)» (element 347772). By section: p_parent_id=p_term_id=741885,
+          idx=1; by asset type: 455728, idx=3 (config/dims.yaml FIXED_ASSETS_*_BY_*).
+      HOURS_WORKED:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json_api
+        notes: >
+          2026-09-25. Taldau 703017 (man-hours, measure 112): annual on dictionaries 67,1212,2813,576
+          (terms 741880,741885,3629946,741935) for 2000-2012 and 2017-2025; the section segment
+          68,859,2813 carries 2013-2016 annual (lower coverage, not spliced) and the quarterly series
+          from 2016-Q1 (HOURS_WORKED_QUARTERLY). 703018 (minutes per employee, measure 35) on the section
+          segment from 2013 (HOURS_PER_EMPLOYEE).
       KZ_EXPORTS_BY_PARTNER:
         status: confirmed_xlsx
         download_url: "https://stat.gov.kz/ru/industries/economy/foreign-market/spreadsheets/?year=YYYY&name=19182&period=&type=spreadsheets"

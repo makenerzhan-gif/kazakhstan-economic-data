@@ -4057,3 +4057,122 @@ def fetch_avg_wage_1t_quarterly() -> tuple[list[dict], dict]:
                         "(118 638 KZT) -- stat.gov.kz element 5674, equal to Taldau index 702972. A different "
                         "coverage from AVG_WAGE_QUARTERLY (461 486 here against 445 068 there for 2026Q1)."}
     return records, manifest
+
+
+# ---------------------------------------------------------------- fixed assets and hours worked
+# Added 2026-09-25 for the production function behind potential output and the output gap.
+# Taldau, form 11 «Отчет о состоянии основных фондов» (all enterprises), national, annual
+# 2000-2025, published in tenge and converted here to billion KZT. The asset dimension
+# (dictionary 77) is set to term 455728 «Основные средства» -- TANGIBLE fixed assets. The
+# page's default term 741881 «Всего» adds intangibles (2025: 222.8 against 216.9 trn KZT).
+# Checked: the 2025 gross and net stock equal BNS's «Основные фонды РК (2025)» (element
+# 347772) to the tenge, and wear = 1 - net/gross in every year. These are HISTORICAL-COST
+# BOOK VALUES that include revaluations (2024: +22.5 %) -- not a real perpetual-inventory
+# stock; deflate, or build K from GFCF and its volume index, before using them as K.
+FIXED_ASSETS_DICS = "68,915,90,77,1161"
+FIXED_ASSETS_TERMS = "741880,741885,741927,455728,741908"
+FIXED_ASSETS_RATIO_DICS = "68,915,90,77"
+FIXED_ASSETS_RATIO_TERMS = "741880,741885,741927,455728"
+FIXED_ASSETS_INDEX = {
+    "FIXED_ASSETS_GROSS": ("703214", "gross stock (original cost) at the end of the year"),
+    "FIXED_ASSETS_GROSS_START": ("703203", "gross stock (original cost) at the start of the year"),
+    "FIXED_ASSETS_NET": ("703215", "net stock (book value, gross less accumulated depreciation) at the end of the year"),
+    "FIXED_ASSETS_COMMISSIONED": ("703205", "new fixed assets put into operation during the year"),
+    "FIXED_ASSETS_DEPRECIATION": ("703220", "depreciation charged during the year"),
+}
+FIXED_ASSETS_RATIO_INDEX = {
+    "FIXED_ASSETS_WEAR": ("703216", "degree of wear, % (accumulated depreciation / gross stock)"),
+    "FIXED_ASSETS_RENEWAL": ("703217", "renewal ratio, % (new assets put into operation / gross stock at the end of the year)"),
+}
+FIXED_ASSETS_NOTE = ("Tangible fixed assets («Основные средства», Taldau term 455728, intangibles excluded) of all "
+                     "enterprises, form 11, national, from 2000. Historical-cost book values incl. revaluations -- "
+                     "not a volume measure.")
+
+
+def _fixed_assets(indicator_id: str) -> tuple[list[dict], dict]:
+    if indicator_id in FIXED_ASSETS_INDEX:
+        index_id, what = FIXED_ASSETS_INDEX[indicator_id]
+        records, manifest = _fetch_taldau_annual_index(
+            index_id, indicator_id, note=f"Billion KZT, {what}. " + FIXED_ASSETS_NOTE + f" Taldau {index_id}.",
+            measure_id="1", terms=FIXED_ASSETS_TERMS, dic_ids=FIXED_ASSETS_DICS)
+        records = [{**r, "value": round(r["value"] / 1e9, 6)} for r in records]
+    else:
+        index_id, what = FIXED_ASSETS_RATIO_INDEX[indicator_id]
+        records, manifest = _fetch_taldau_annual_index(
+            index_id, indicator_id, note=f"Percent, {what}. " + FIXED_ASSETS_NOTE + f" Taldau {index_id}.",
+            measure_id="7", terms=FIXED_ASSETS_RATIO_TERMS, dic_ids=FIXED_ASSETS_RATIO_DICS)
+    if len(records) < 20:
+        raise validation.StructuralChangeError(
+            f"bns/{indicator_id}: only {len(records)} years from Taldau {index_id}; expected 2000 onward")
+    return records, manifest
+
+
+def fetch_fixed_assets_gross() -> tuple[list[dict], dict]:
+    return _fixed_assets("FIXED_ASSETS_GROSS")
+
+
+def fetch_fixed_assets_gross_start() -> tuple[list[dict], dict]:
+    return _fixed_assets("FIXED_ASSETS_GROSS_START")
+
+
+def fetch_fixed_assets_net() -> tuple[list[dict], dict]:
+    return _fixed_assets("FIXED_ASSETS_NET")
+
+
+def fetch_fixed_assets_commissioned() -> tuple[list[dict], dict]:
+    return _fixed_assets("FIXED_ASSETS_COMMISSIONED")
+
+
+def fetch_fixed_assets_depreciation() -> tuple[list[dict], dict]:
+    return _fixed_assets("FIXED_ASSETS_DEPRECIATION")
+
+
+def fetch_fixed_assets_wear() -> tuple[list[dict], dict]:
+    return _fixed_assets("FIXED_ASSETS_WEAR")
+
+
+def fetch_fixed_assets_renewal() -> tuple[list[dict], dict]:
+    return _fixed_assets("FIXED_ASSETS_RENEWAL")
+
+
+# Hours actually worked by employees (enterprise survey, Taldau 703017, man-hours; 703018,
+# minutes per employee). The annual series sits on two Taldau segments that do not overlap:
+# regions x ... (dictionaries 67,1212,2813,576) gives 2000-2012 and 2017 onward, the
+# section segment (68,859,2813) only 2013-2016. They are NOT spliced: their coverage
+# differs -- the section segment and the quarterly series (period 5, from 2016-Q1, on the
+# same section segment) agree with each other (2016: 6 260 annual against 6 297 summed
+# over quarters, million man-hours), the regional segment runs about 8 % higher (2017:
+# 6 848 against 6 353). A splice would put a false +9 % "growth" into 2017. So HOURS_WORKED
+# is the regional segment with 2013-2016 missing, and HOURS_WORKED_QUARTERLY is the
+# consistent series from 2016.
+HOURS_REGIONAL_SEGMENT = ("67,1212,2813,576", "741880,741885,3629946,741935")
+HOURS_SECTION_SEGMENT = ("68,859,2813", "741880,741885,3629946")
+
+
+def fetch_hours_worked() -> tuple[list[dict], dict]:
+    records, manifest = _fetch_taldau_annual_index(
+        "703017", "HOURS_WORKED", measure_id="112", terms=HOURS_REGIONAL_SEGMENT[1], dic_ids=HOURS_REGIONAL_SEGMENT[0],
+        note="Million man-hours actually worked by employees in the year (enterprise survey, Taldau 703017, "
+             "regional segment), national, 2000-2012 and 2017 onward. 2013-2016 exist only on a segment with "
+             "about 8 % lower coverage and are deliberately not spliced in; use HOURS_WORKED_QUARTERLY from 2016.")
+    records = [{**r, "value": round(r["value"] / 1e6, 6)} for r in records]
+    if len(records) < 20:
+        raise validation.StructuralChangeError(f"bns/HOURS_WORKED: only {len(records)} years; expected 2000 onward")
+    return records, manifest
+
+
+def fetch_hours_worked_quarterly() -> tuple[list[dict], dict]:
+    records, manifest = _fetch_taldau_annual_index(
+        "703017", "HOURS_WORKED_QUARTERLY", measure_id="112", terms=HOURS_SECTION_SEGMENT[1],
+        dic_ids=HOURS_SECTION_SEGMENT[0], period_id="5",
+        note="Million man-hours actually worked by employees in the quarter (Taldau 703017, quarterly), national, "
+             "from 2016-Q1, not seasonally adjusted. The quarters do not sum to HOURS_WORKED (different coverage).")
+    return [{**r, "value": round(r["value"] / 1e6, 6)} for r in records], manifest
+
+
+def fetch_hours_per_employee() -> tuple[list[dict], dict]:
+    records, manifest = _fetch_taldau_annual_index(
+        "703018", "HOURS_PER_EMPLOYEE", measure_id="35", terms=HOURS_SECTION_SEGMENT[1], dic_ids=HOURS_SECTION_SEGMENT[0],
+        note="Hours actually worked per employee in the year (Taldau 703018, published in minutes, converted "
+             "to hours), national, from 2013.")
+    return [{**r, "value": round(r["value"] / 60, 3)} for r in records], manifest

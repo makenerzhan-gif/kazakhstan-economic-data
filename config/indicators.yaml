@@ -3873,6 +3873,117 @@ indicators:
     observation_type: period_average
     observation_evidence: "среднемесячная за квартал, элемент 5674 БНС / Taldau 702972"
 
+
+  # Production-function inputs for potential output / output gap (added 2026-09-25).
+  - id: FIXED_ASSETS_GROSS
+    name_ru: "Основные средства (материальные), первоначальная стоимость на конец года"
+    name_en: "Tangible fixed assets, gross (original cost), end of year"
+    agency: bns
+    frequency: annual
+    unit: "billion KZT"
+    category: investment
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Taldau 703214 «наличие основных средств на конец года», форма 11; термин 455728"
+
+  - id: FIXED_ASSETS_GROSS_START
+    name_ru: "Основные средства (материальные), первоначальная стоимость на начало года"
+    name_en: "Tangible fixed assets, gross (original cost), start of year"
+    agency: bns
+    frequency: annual
+    unit: "billion KZT"
+    category: investment
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Taldau 703203 «на начало года»; отличается от конца предыдущего года (переоценка, охват)"
+
+  - id: FIXED_ASSETS_NET
+    name_ru: "Основные средства (материальные), балансовая стоимость на конец года"
+    name_en: "Tangible fixed assets, net (book value), end of year"
+    agency: bns
+    frequency: annual
+    unit: "billion KZT"
+    category: investment
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Taldau 703215 «балансовая стоимость на конец года»"
+
+  - id: FIXED_ASSETS_COMMISSIONED
+    name_ru: "Ввод в действие новых основных средств"
+    name_en: "New tangible fixed assets put into operation"
+    agency: bns
+    frequency: annual
+    unit: "billion KZT"
+    category: investment
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "Taldau 703205 «введено в действие за год»"
+
+  - id: FIXED_ASSETS_DEPRECIATION
+    name_ru: "Начисленный износ (амортизация) основных средств за год"
+    name_en: "Depreciation of tangible fixed assets during the year"
+    agency: bns
+    frequency: annual
+    unit: "billion KZT"
+    category: investment
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "Taldau 703220 «начислено износа за год»"
+
+  - id: FIXED_ASSETS_WEAR
+    name_ru: "Степень износа основных средств на конец года"
+    name_en: "Degree of wear of tangible fixed assets, end of year"
+    agency: bns
+    frequency: annual
+    unit: "percent"
+    category: investment
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Taldau 703216; = 1 − балансовая/первоначальная в каждом году"
+
+  - id: FIXED_ASSETS_RENEWAL
+    name_ru: "Коэффициент обновления основных средств"
+    name_en: "Renewal ratio of tangible fixed assets"
+    agency: bns
+    frequency: annual
+    unit: "percent"
+    category: investment
+    source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "Taldau 703217: ввод новых / наличие на конец года"
+
+  - id: HOURS_WORKED
+    name_ru: "Фактически отработанное время работниками, годовое (региональный сегмент Taldau)"
+    name_en: "Hours actually worked by employees, annual"
+    agency: bns
+    frequency: annual
+    unit: "million man-hours"
+    category: labor
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "Taldau 703017, мера 112 (человеко-час); 2013-2016 нет в этом сегменте"
+
+  - id: HOURS_WORKED_QUARTERLY
+    name_ru: "Фактически отработанное время работниками, поквартально"
+    name_en: "Hours actually worked by employees, quarterly"
+    agency: bns
+    frequency: quarterly
+    unit: "million man-hours"
+    category: labor
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "Taldau 703017, период 5 (квартал), с 2016-Q1; без сезонной корректировки"
+
+  - id: HOURS_PER_EMPLOYEE
+    name_ru: "Фактически отработанное время в расчете на одного работника, за год"
+    name_en: "Hours actually worked per employee, annual"
+    agency: bns
+    frequency: annual
+    unit: "hours per employee"
+    category: labor
+    source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "Taldau 703018 (в минутах, пересчитано в часы), с 2013"
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"

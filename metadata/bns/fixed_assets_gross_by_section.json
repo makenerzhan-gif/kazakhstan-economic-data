@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703214",
+  "indicator_id": "FIXED_ASSETS_GROSS_BY_SECTION",
+  "indicator_name": "Tangible fixed assets by ОКЭД section, gross (original cost), end of year",
+  "description": "Основные средства (материальные) по видам экономической деятельности, первоначальная стоимость на конец года",
+  "frequency": "annual",
+  "unit": "billion KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Taldau 703214, form 11, asset term 455728 (tangible), 2000 onward. Historical-cost book values incl. revaluations. National total = FIXED_ASSETS_GROSS.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "2000-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

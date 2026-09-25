@@ -6701,6 +6701,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2000-12-31,KZ,national,annual,DEATHS_TOTAL,149778.0,persons,bns,2026-09-24,level,2026-09-24
 2000-12-31,KZ,national,annual,ELECTRICITY_PRODUCTION,51635100000.0,kWh,bns,2026-09-24,level,2026-09-24
 2000-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,127.9,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2000-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,464.89944,billion KZT,bns,2026-09-25,level,2026-09-25
+2000-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,178.06737,billion KZT,bns,2026-09-25,level,2026-09-25
+2000-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,2975.27812,billion KZT,bns,2026-09-25,level,2026-09-25
+2000-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,2541.12948,billion KZT,bns,2026-09-25,level,2026-09-25
+2000-12-31,KZ,national,annual,FIXED_ASSETS_NET,2031.19049,billion KZT,bns,2026-09-25,level,2026-09-25
+2000-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,15.6,percent,bns,2026-09-25,level,2026-09-25
+2000-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,31.7,percent,bns,2026-09-25,level,2026-09-25
 2000-12-31,KZ,national,annual,GDP_DEFLATOR,117.4,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2000-12-31,KZ,national,annual,GDP_INCOME_METHOD,2599901600000.0,KZT,bns,2026-09-24,level,2026-09-24
 2000-12-31,KZ,national,annual,GDP_PER_CAPITA,174700.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -6709,6 +6716,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2000-12-31,KZ,national,annual,GFCF_VOLUME_INDEX,116.1,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2000-12-31,KZ,national,annual,GROSS_ACCUMULATION,471597400000.0,KZT,bns,2026-09-24,level,2026-09-24
 2000-12-31,KZ,national,annual,GROSS_OUTPUT,5441726600000.0,KZT,bns,2026-09-24,level,2026-09-24
+2000-12-31,KZ,national,annual,HOURS_WORKED,4096.952188,million man-hours,bns,2026-09-25,level,2026-09-25
 2000-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,1589061600000.0,KZT,bns,2026-09-24,level,2026-09-24
 2000-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,22.086466,index,imf,2026-09-24,level,2026-09-24
 2000-12-31,KZ,national,annual,IMF_CPI_INDEX,21.161519,index,imf,2026-09-24,level,2026-09-24
@@ -8498,6 +8506,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2001-12-31,KZ,national,daily,EXCHANGE_RATE_EUR,134.77,KZT per EUR,nbk,2026-09-25,level,2026-09-25
 2001-12-31,KZ,national,daily,EXCHANGE_RATE_RUB,4.97,KZT per RUB,nbk,2026-09-25,level,2026-09-25
 2001-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,98.2,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2001-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,500.7319,billion KZT,bns,2026-09-25,level,2026-09-25
+2001-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,214.5393,billion KZT,bns,2026-09-25,level,2026-09-25
+2001-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,3484.9642,billion KZT,bns,2026-09-25,level,2026-09-25
+2001-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,3010.91,billion KZT,bns,2026-09-25,level,2026-09-25
+2001-12-31,KZ,national,annual,FIXED_ASSETS_NET,2362.6268,billion KZT,bns,2026-09-25,level,2026-09-25
+2001-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,14.4,percent,bns,2026-09-25,level,2026-09-25
+2001-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,32.2,percent,bns,2026-09-25,level,2026-09-25
 2001-12-31,KZ,national,annual,GDP_DEFLATOR,110.1,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2001-12-31,KZ,national,annual,GDP_INCOME_METHOD,3250593300000.0,KZT,bns,2026-09-24,level,2026-09-24
 2001-12-31,KZ,national,annual,GDP_PER_CAPITA,218800.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -8507,6 +8522,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2001-12-31,KZ,national,annual,GRADUATES_HIRED,23150.0,persons,bns,2026-09-24,level,2026-09-24
 2001-12-31,KZ,national,annual,GROSS_ACCUMULATION,873643200000.0,KZT,bns,2026-09-24,level,2026-09-24
 2001-12-31,KZ,national,annual,GROSS_OUTPUT,6958070300000.0,KZT,bns,2026-09-24,level,2026-09-24
+2001-12-31,KZ,national,annual,HOURS_WORKED,4285.010396,million man-hours,bns,2026-09-25,level,2026-09-25
 2001-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,1850799100000.0,KZT,bns,2026-09-24,level,2026-09-24
 2001-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,23.5,index,imf,2026-09-24,level,2026-09-24
 2001-12-31,KZ,national,annual,IMF_CPI_INDEX,22.933333,index,imf,2026-09-24,level,2026-09-24
@@ -10458,6 +10474,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2002-12-31,KZ,national,daily,EXCHANGE_RATE_EUR,162.45,KZT per EUR,nbk,2026-09-25,level,2026-09-25
 2002-12-31,KZ,national,daily,EXCHANGE_RATE_RUB,4.89,KZT per RUB,nbk,2026-09-25,level,2026-09-25
 2002-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,116.6,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2002-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,605.34454,billion KZT,bns,2026-09-25,level,2026-09-25
+2002-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,349.05421,billion KZT,bns,2026-09-25,level,2026-09-25
+2002-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,4317.64175,billion KZT,bns,2026-09-25,level,2026-09-25
+2002-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,3469.83482,billion KZT,bns,2026-09-25,level,2026-09-25
+2002-12-31,KZ,national,annual,FIXED_ASSETS_NET,3083.78311,billion KZT,bns,2026-09-25,level,2026-09-25
+2002-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,14.0,percent,bns,2026-09-25,level,2026-09-25
+2002-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,28.6,percent,bns,2026-09-25,level,2026-09-25
 2002-12-31,KZ,national,annual,GDP_DEFLATOR,105.9,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2002-12-31,KZ,national,annual,GDP_INCOME_METHOD,3776277300000.0,KZT,bns,2026-09-24,level,2026-09-24
 2002-12-31,KZ,national,annual,GDP_PER_CAPITA,254100.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -10467,6 +10490,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2002-12-31,KZ,national,annual,GRADUATES_HIRED,15131.0,persons,bns,2026-09-24,level,2026-09-24
 2002-12-31,KZ,national,annual,GROSS_ACCUMULATION,1030460100000.0,KZT,bns,2026-09-24,level,2026-09-24
 2002-12-31,KZ,national,annual,GROSS_OUTPUT,7542053900000.0,KZT,bns,2026-09-24,level,2026-09-24
+2002-12-31,KZ,national,annual,HOURS_WORKED,4488.791702,million man-hours,bns,2026-09-25,level,2026-09-25
 2002-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,1993710800000.0,KZT,bns,2026-09-24,level,2026-09-24
 2002-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,25.1,index,imf,2026-09-24,level,2026-09-24
 2002-12-31,KZ,national,annual,IMF_CPI_INDEX,24.3,index,imf,2026-09-24,level,2026-09-24
@@ -12394,6 +12418,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2003-12-31,KZ,national,daily,EXCHANGE_RATE_EUR,180.23,KZT per EUR,nbk,2026-09-25,level,2026-09-25
 2003-12-31,KZ,national,daily,EXCHANGE_RATE_RUB,4.93,KZT per RUB,nbk,2026-09-25,level,2026-09-25
 2003-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,107.5,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2003-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,778.87445,billion KZT,bns,2026-09-25,level,2026-09-25
+2003-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,426.45329,billion KZT,bns,2026-09-25,level,2026-09-25
+2003-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,5021.71441,billion KZT,bns,2026-09-25,level,2026-09-25
+2003-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,4230.61456,billion KZT,bns,2026-09-25,level,2026-09-25
+2003-12-31,KZ,national,annual,FIXED_ASSETS_NET,3378.56764,billion KZT,bns,2026-09-25,level,2026-09-25
+2003-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,15.5,percent,bns,2026-09-25,level,2026-09-25
+2003-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,32.7,percent,bns,2026-09-25,level,2026-09-25
 2003-12-31,KZ,national,annual,GDP_DEFLATOR,111.7,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2003-12-31,KZ,national,annual,GDP_INCOME_METHOD,4611975300000.0,KZT,bns,2026-09-24,level,2026-09-24
 2003-12-31,KZ,national,annual,GDP_PER_CAPITA,309300.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -12403,6 +12434,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2003-12-31,KZ,national,annual,GRADUATES_HIRED,13911.0,persons,bns,2026-09-24,level,2026-09-24
 2003-12-31,KZ,national,annual,GROSS_ACCUMULATION,1185458100000.0,KZT,bns,2026-09-24,level,2026-09-24
 2003-12-31,KZ,national,annual,GROSS_OUTPUT,8930920400000.0,KZT,bns,2026-09-24,level,2026-09-24
+2003-12-31,KZ,national,annual,HOURS_WORKED,4671.520636,million man-hours,bns,2026-09-25,level,2026-09-25
 2003-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,2434434100000.0,KZT,bns,2026-09-24,level,2026-09-24
 2003-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,26.9,index,imf,2026-09-24,level,2026-09-24
 2003-12-31,KZ,national,annual,IMF_CPI_INDEX,25.85,index,imf,2026-09-24,level,2026-09-24
@@ -14383,6 +14415,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2004-12-31,KZ,national,daily,EXCHANGE_RATE_EUR,177.1,KZT per EUR,nbk,2026-09-25,level,2026-09-25
 2004-12-31,KZ,national,daily,EXCHANGE_RATE_RUB,4.67,KZT per RUB,nbk,2026-09-25,level,2026-09-25
 2004-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,111.2,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2004-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,924.68329,billion KZT,bns,2026-09-25,level,2026-09-25
+2004-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,525.76308,billion KZT,bns,2026-09-25,level,2026-09-25
+2004-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,6506.05845,billion KZT,bns,2026-09-25,level,2026-09-25
+2004-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,5536.43294,billion KZT,bns,2026-09-25,level,2026-09-25
+2004-12-31,KZ,national,annual,FIXED_ASSETS_NET,4446.04838,billion KZT,bns,2026-09-25,level,2026-09-25
+2004-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,14.6,percent,bns,2026-09-25,level,2026-09-25
+2004-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,33.5,percent,bns,2026-09-25,level,2026-09-25
 2004-12-31,KZ,national,annual,GDP_DEFLATOR,116.1,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2004-12-31,KZ,national,annual,GDP_INCOME_METHOD,5870134300000.0,KZT,bns,2026-09-24,level,2026-09-24
 2004-12-31,KZ,national,annual,GDP_PER_CAPITA,391000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -14392,6 +14431,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2004-12-31,KZ,national,annual,GRADUATES_HIRED,12019.0,persons,bns,2026-09-24,level,2026-09-24
 2004-12-31,KZ,national,annual,GROSS_ACCUMULATION,1544496300000.0,KZT,bns,2026-09-24,level,2026-09-24
 2004-12-31,KZ,national,annual,GROSS_OUTPUT,11669306200000.0,KZT,bns,2026-09-24,level,2026-09-24
+2004-12-31,KZ,national,annual,HOURS_WORKED,4932.391085,million man-hours,bns,2026-09-25,level,2026-09-25
 2004-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,3053657900000.0,KZT,bns,2026-09-24,level,2026-09-24
 2004-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,28.7,index,imf,2026-09-24,level,2026-09-24
 2004-12-31,KZ,national,annual,IMF_CPI_INDEX,27.658333,index,imf,2026-09-24,level,2026-09-24
@@ -16456,6 +16496,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2005-12-31,KZ,national,annual,ELECTRICITY_PRODUCTION,67919700000.0,kWh,bns,2026-09-24,level,2026-09-24
 2005-12-31,KZ,national,annual,EMPLOYED_TOTAL,7261000.0,persons,bns,2026-09-24,level,2026-09-24
 2005-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,100.4,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2005-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,1244.32076,billion KZT,bns,2026-09-25,level,2026-09-25
+2005-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,687.10198,billion KZT,bns,2026-09-25,level,2026-09-25
+2005-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,7478.74905,billion KZT,bns,2026-09-25,level,2026-09-25
+2005-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,6041.43004,billion KZT,bns,2026-09-25,level,2026-09-25
+2005-12-31,KZ,national,annual,FIXED_ASSETS_NET,4766.31757,billion KZT,bns,2026-09-25,level,2026-09-25
+2005-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,16.6,percent,bns,2026-09-25,level,2026-09-25
+2005-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,36.3,percent,bns,2026-09-25,level,2026-09-25
 2005-12-31,KZ,national,annual,GDP_DEFLATOR,117.9,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2005-12-31,KZ,national,annual,GDP_INCOME_METHOD,7590593500000.0,KZT,bns,2026-09-24,level,2026-09-24
 2005-12-31,KZ,national,annual,GDP_PER_CAPITA,501100.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -16465,6 +16512,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2005-12-31,KZ,national,annual,GRADUATES_HIRED,11200.0,persons,bns,2026-09-24,level,2026-09-24
 2005-12-31,KZ,national,annual,GROSS_ACCUMULATION,2350789200000.0,KZT,bns,2026-09-24,level,2026-09-24
 2005-12-31,KZ,national,annual,GROSS_OUTPUT,15181970100000.0,KZT,bns,2026-09-24,level,2026-09-24
+2005-12-31,KZ,national,annual,HOURS_WORKED,5120.566568,million man-hours,bns,2026-09-25,level,2026-09-25
 2005-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,3685763300000.0,KZT,bns,2026-09-24,level,2026-09-24
 2005-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,30.8,index,imf,2026-09-24,level,2026-09-24
 2005-12-31,KZ,national,annual,IMF_CPI_INDEX,29.708333,index,imf,2026-09-24,level,2026-09-24
@@ -18544,6 +18592,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2006-12-31,KZ,national,annual,ELECTRICITY_PRODUCTION,71668460000.0,kWh,bns,2026-09-24,level,2026-09-24
 2006-12-31,KZ,national,annual,EMPLOYED_TOTAL,7403500.0,persons,bns,2026-09-24,level,2026-09-24
 2006-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,106.8,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2006-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,1689.02508,billion KZT,bns,2026-09-25,level,2026-09-25
+2006-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,755.58451,billion KZT,bns,2026-09-25,level,2026-09-25
+2006-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,9799.09994,billion KZT,bns,2026-09-25,level,2026-09-25
+2006-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,7743.38428,billion KZT,bns,2026-09-25,level,2026-09-25
+2006-12-31,KZ,national,annual,FIXED_ASSETS_NET,6142.56825,billion KZT,bns,2026-09-25,level,2026-09-25
+2006-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,17.2,percent,bns,2026-09-25,level,2026-09-25
+2006-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,37.3,percent,bns,2026-09-25,level,2026-09-25
 2006-12-31,KZ,national,annual,GDP_DEFLATOR,121.5,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2006-12-31,KZ,national,annual,GDP_INCOME_METHOD,10213731200000.0,KZT,bns,2026-09-24,level,2026-09-24
 2006-12-31,KZ,national,annual,GDP_PER_CAPITA,667200.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -18553,6 +18608,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2006-12-31,KZ,national,annual,GRADUATES_HIRED,12330.0,persons,bns,2026-09-24,level,2026-09-24
 2006-12-31,KZ,national,annual,GROSS_ACCUMULATION,3462535700000.0,KZT,bns,2026-09-24,level,2026-09-24
 2006-12-31,KZ,national,annual,GROSS_OUTPUT,20036064200000.0,KZT,bns,2026-09-24,level,2026-09-24
+2006-12-31,KZ,national,annual,HOURS_WORKED,5252.224561,million man-hours,bns,2026-09-25,level,2026-09-25
 2006-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,4547334500000.0,KZT,bns,2026-09-24,level,2026-09-24
 2006-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,33.4,index,imf,2026-09-24,level,2026-09-24
 2006-12-31,KZ,national,annual,IMF_CPI_INDEX,32.266667,index,imf,2026-09-24,level,2026-09-24
@@ -20628,6 +20684,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2007-12-31,KZ,national,daily,EXCHANGE_RATE_EUR,177.17,KZT per EUR,nbk,2026-09-25,level,2026-09-25
 2007-12-31,KZ,national,daily,EXCHANGE_RATE_RUB,4.92,KZT per RUB,nbk,2026-09-25,level,2026-09-25
 2007-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,109.1,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2007-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,2271.02311,billion KZT,bns,2026-09-25,level,2026-09-25
+2007-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,921.15553,billion KZT,bns,2026-09-25,level,2026-09-25
+2007-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,12100.04667,billion KZT,bns,2026-09-25,level,2026-09-25
+2007-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,9687.49689,billion KZT,bns,2026-09-25,level,2026-09-25
+2007-12-31,KZ,national,annual,FIXED_ASSETS_NET,7837.09707,billion KZT,bns,2026-09-25,level,2026-09-25
+2007-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,18.8,percent,bns,2026-09-25,level,2026-09-25
+2007-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,35.2,percent,bns,2026-09-25,level,2026-09-25
 2007-12-31,KZ,national,annual,GDP_DEFLATOR,115.5,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2007-12-31,KZ,national,annual,GDP_INCOME_METHOD,12849794000000.0,KZT,bns,2026-09-24,level,2026-09-24
 2007-12-31,KZ,national,annual,GDP_PER_CAPITA,829900.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -20637,6 +20700,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2007-12-31,KZ,national,annual,GRADUATES_HIRED,13160.0,persons,bns,2026-09-24,level,2026-09-24
 2007-12-31,KZ,national,annual,GROSS_ACCUMULATION,4565107700000.0,KZT,bns,2026-09-24,level,2026-09-24
 2007-12-31,KZ,national,annual,GROSS_OUTPUT,24236034500000.0,KZT,bns,2026-09-24,level,2026-09-24
+2007-12-31,KZ,national,annual,HOURS_WORKED,5538.093599,million man-hours,bns,2026-09-25,level,2026-09-25
 2007-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,5641240900000.0,KZT,bns,2026-09-24,level,2026-09-24
 2007-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,39.6,index,imf,2026-09-24,level,2026-09-24
 2007-12-31,KZ,national,annual,IMF_CPI_INDEX,35.75,index,imf,2026-09-24,level,2026-09-24
@@ -22716,6 +22780,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2008-12-31,KZ,national,daily,EXCHANGE_RATE_EUR,170.89,KZT per EUR,nbk,2026-09-25,level,2026-09-25
 2008-12-31,KZ,national,daily,EXCHANGE_RATE_RUB,4.11,KZT per RUB,nbk,2026-09-25,level,2026-09-25
 2008-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,100.9,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2008-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,2775.1364,billion KZT,bns,2026-09-25,level,2026-09-25
+2008-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,1237.0414,billion KZT,bns,2026-09-25,level,2026-09-25
+2008-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,15298.5634,billion KZT,bns,2026-09-25,level,2026-09-25
+2008-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,12212.2011,billion KZT,bns,2026-09-25,level,2026-09-25
+2008-12-31,KZ,national,annual,FIXED_ASSETS_NET,9775.7058,billion KZT,bns,2026-09-25,level,2026-09-25
+2008-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,18.1,percent,bns,2026-09-25,level,2026-09-25
+2008-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,36.1,percent,bns,2026-09-25,level,2026-09-25
 2008-12-31,KZ,national,annual,GDP_DEFLATOR,121.0,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2008-12-31,KZ,national,annual,GDP_INCOME_METHOD,16052919200000.0,KZT,bns,2026-09-24,level,2026-09-24
 2008-12-31,KZ,national,annual,GDP_PER_CAPITA,1024200.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -22725,6 +22796,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2008-12-31,KZ,national,annual,GRADUATES_HIRED,17334.0,persons,bns,2026-09-24,level,2026-09-24
 2008-12-31,KZ,national,annual,GROSS_ACCUMULATION,4415593700000.0,KZT,bns,2026-09-24,level,2026-09-24
 2008-12-31,KZ,national,annual,GROSS_OUTPUT,29795141500000.0,KZT,bns,2026-09-24,level,2026-09-24
+2008-12-31,KZ,national,annual,HOURS_WORKED,5773.024094,million man-hours,bns,2026-09-25,level,2026-09-25
 2008-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,6970468500000.0,KZT,bns,2026-09-24,level,2026-09-24
 2008-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,43.4,index,imf,2026-09-24,level,2026-09-24
 2008-12-31,KZ,national,annual,IMF_CPI_INDEX,41.883333,index,imf,2026-09-24,level,2026-09-24
@@ -24783,6 +24855,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2009-12-31,KZ,national,daily,EXCHANGE_RATE_EUR,212.84,KZT per EUR,nbk,2026-09-25,level,2026-09-25
 2009-12-31,KZ,national,daily,EXCHANGE_RATE_RUB,4.92,KZT per RUB,nbk,2026-09-25,level,2026-09-25
 2009-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,88.1,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2009-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,3068.4455,billion KZT,bns,2026-09-25,level,2026-09-25
+2009-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,1474.6174,billion KZT,bns,2026-09-25,level,2026-09-25
+2009-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,19802.5669,billion KZT,bns,2026-09-25,level,2026-09-25
+2009-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,16022.6999,billion KZT,bns,2026-09-25,level,2026-09-25
+2009-12-31,KZ,national,annual,FIXED_ASSETS_NET,12353.1648,billion KZT,bns,2026-09-25,level,2026-09-25
+2009-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,15.5,percent,bns,2026-09-25,level,2026-09-25
+2009-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,37.6,percent,bns,2026-09-25,level,2026-09-25
 2009-12-31,KZ,national,annual,GDP_DEFLATOR,104.7,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2009-12-31,KZ,national,annual,GDP_INCOME_METHOD,17007647000000.0,KZT,bns,2026-09-24,level,2026-09-24
 2009-12-31,KZ,national,annual,GDP_PER_CAPITA,1056900.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -24792,6 +24871,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2009-12-31,KZ,national,annual,GRADUATES_HIRED,13788.0,persons,bns,2026-09-24,level,2026-09-24
 2009-12-31,KZ,national,annual,GROSS_ACCUMULATION,5002725300000.0,KZT,bns,2026-09-24,level,2026-09-24
 2009-12-31,KZ,national,annual,GROSS_OUTPUT,30746805500000.0,KZT,bns,2026-09-24,level,2026-09-24
+2009-12-31,KZ,national,annual,HOURS_WORKED,5588.963915,million man-hours,bns,2026-09-25,level,2026-09-25
 2009-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,7912607000000.0,KZT,bns,2026-09-24,level,2026-09-24
 2009-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,46.1,index,imf,2026-09-24,level,2026-09-24
 2009-12-31,KZ,national,annual,IMF_CPI_INDEX,44.941667,index,imf,2026-09-24,level,2026-09-24
@@ -26888,6 +26968,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-12-31,KZ,national,daily,EXCHANGE_RATE_EUR,195.23,KZT per EUR,nbk,2026-09-25,level,2026-09-25
 2010-12-31,KZ,national,daily,EXCHANGE_RATE_RUB,4.84,KZT per RUB,nbk,2026-09-25,level,2026-09-25
 2010-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,103.1,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2010-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,3083.8438,billion KZT,bns,2026-09-25,level,2026-09-25
+2010-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,1822.0256,billion KZT,bns,2026-09-25,level,2026-09-25
+2010-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,23643.1393,billion KZT,bns,2026-09-25,level,2026-09-25
+2010-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,20801.6062,billion KZT,bns,2026-09-25,level,2026-09-25
+2010-12-31,KZ,national,annual,FIXED_ASSETS_NET,15060.1451,billion KZT,bns,2026-09-25,level,2026-09-25
+2010-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,13.0,percent,bns,2026-09-25,level,2026-09-25
+2010-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,36.3,percent,bns,2026-09-25,level,2026-09-25
 2010-12-31,KZ,national,annual,GDP_DEFLATOR,119.6,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2010-12-31,KZ,national,annual,GDP_INCOME_METHOD,21815517000000.0,KZT,bns,2026-09-24,level,2026-09-24
 2010-12-31,KZ,national,annual,GDP_PER_CAPITA,1336580.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -26897,6 +26984,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-12-31,KZ,national,annual,GRADUATES_HIRED,13922.0,persons,bns,2026-09-24,level,2026-09-24
 2010-12-31,KZ,national,annual,GROSS_ACCUMULATION,5535370899999.999,KZT,bns,2026-09-24,level,2026-09-24
 2010-12-31,KZ,national,annual,GROSS_OUTPUT,36357713000000.0,KZT,bns,2026-09-24,level,2026-09-24
+2010-12-31,KZ,national,annual,HOURS_WORKED,5726.047437,million man-hours,bns,2026-09-25,level,2026-09-25
 2010-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,9721099600000.0,KZT,bns,2026-09-24,level,2026-09-24
 2010-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,49.6,index,imf,2026-09-24,level,2026-09-24
 2010-12-31,KZ,national,annual,IMF_CPI_INDEX,48.133333,index,imf,2026-09-24,level,2026-09-24
@@ -29178,6 +29266,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-12-31,KZ,national,annual,ELECTRICITY_PRODUCTION,86585504500.0,kWh,bns,2026-09-24,level,2026-09-24
 2011-12-31,KZ,national,annual,EMPLOYED_TOTAL,8301600.0,persons,bns,2026-09-24,level,2026-09-24
 2011-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,100.4,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2011-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,3311.1875,billion KZT,bns,2026-09-25,level,2026-09-25
+2011-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,2011.7734,billion KZT,bns,2026-09-25,level,2026-09-25
+2011-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,26346.274,billion KZT,bns,2026-09-25,level,2026-09-25
+2011-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,22914.0627,billion KZT,bns,2026-09-25,level,2026-09-25
+2011-12-31,KZ,national,annual,FIXED_ASSETS_NET,15933.4583,billion KZT,bns,2026-09-25,level,2026-09-25
+2011-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,12.6,percent,bns,2026-09-25,level,2026-09-25
+2011-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,39.5,percent,bns,2026-09-25,level,2026-09-25
 2011-12-31,KZ,national,annual,GDP_DEFLATOR,118.9,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2011-12-31,KZ,national,annual,GDP_INCOME_METHOD,28243052700000.0,KZT,bns,2026-09-24,level,2026-09-24
 2011-12-31,KZ,national,annual,GDP_PER_CAPITA,1705790.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -29187,6 +29282,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-12-31,KZ,national,annual,GRADUATES_HIRED,16804.0,persons,bns,2026-09-24,level,2026-09-24
 2011-12-31,KZ,national,annual,GROSS_ACCUMULATION,6495378500000.0,KZT,bns,2026-09-24,level,2026-09-24
 2011-12-31,KZ,national,annual,GROSS_OUTPUT,45446908900000.0,KZT,bns,2026-09-24,level,2026-09-24
+2011-12-31,KZ,national,annual,HOURS_WORKED,5895.040359,million man-hours,bns,2026-09-25,level,2026-09-25
 2011-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,11692755200000.0,KZT,bns,2026-09-24,level,2026-09-24
 2011-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,53.3,index,imf,2026-09-24,level,2026-09-24
 2011-12-31,KZ,national,annual,IMF_CPI_INDEX,52.166667,index,imf,2026-09-24,level,2026-09-24
@@ -31477,6 +31573,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-12-31,KZ,national,daily,EXCHANGE_RATE_EUR,199.22,KZT per EUR,nbk,2026-09-25,level,2026-09-25
 2012-12-31,KZ,national,daily,EXCHANGE_RATE_RUB,4.96,KZT per RUB,nbk,2026-09-25,level,2026-09-25
 2012-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,104.8,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2012-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,3961.6428,billion KZT,bns,2026-09-25,level,2026-09-25
+2012-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,2352.9209,billion KZT,bns,2026-09-25,level,2026-09-25
+2012-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,30784.4632,billion KZT,bns,2026-09-25,level,2026-09-25
+2012-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,26659.9826,billion KZT,bns,2026-09-25,level,2026-09-25
+2012-12-31,KZ,national,annual,FIXED_ASSETS_NET,18416.9204,billion KZT,bns,2026-09-25,level,2026-09-25
+2012-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,12.9,percent,bns,2026-09-25,level,2026-09-25
+2012-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,40.2,percent,bns,2026-09-25,level,2026-09-25
 2012-12-31,KZ,national,annual,GDP_DEFLATOR,104.8,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2012-12-31,KZ,national,annual,GDP_INCOME_METHOD,31015186600000.0,KZT,bns,2026-09-24,level,2026-09-24
 2012-12-31,KZ,national,annual,GDP_PER_CAPITA,1847010.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -31486,6 +31589,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-12-31,KZ,national,annual,GRADUATES_HIRED,11628.0,persons,bns,2026-09-24,level,2026-09-24
 2012-12-31,KZ,national,annual,GROSS_ACCUMULATION,7825026200000.0,KZT,bns,2026-09-24,level,2026-09-24
 2012-12-31,KZ,national,annual,GROSS_OUTPUT,49657988400000.0,KZT,bns,2026-09-24,level,2026-09-24
+2012-12-31,KZ,national,annual,HOURS_WORKED,6146.298146,million man-hours,bns,2026-09-25,level,2026-09-25
 2012-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,13659206600000.0,KZT,bns,2026-09-24,level,2026-09-24
 2012-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,56.5,index,imf,2026-09-24,level,2026-09-24
 2012-12-31,KZ,national,annual,IMF_CPI_INDEX,54.841667,index,imf,2026-09-24,level,2026-09-24
@@ -33766,6 +33870,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-12-31,KZ,national,daily,EXCHANGE_RATE_EUR,211.17,KZT per EUR,nbk,2026-09-25,level,2026-09-25
 2013-12-31,KZ,national,daily,EXCHANGE_RATE_RUB,4.69,KZT per RUB,nbk,2026-09-25,level,2026-09-25
 2013-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,102.7,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2013-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,4239.9633,billion KZT,bns,2026-09-25,level,2026-09-25
+2013-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,2374.2247,billion KZT,bns,2026-09-25,level,2026-09-25
+2013-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,36158.4595,billion KZT,bns,2026-09-25,level,2026-09-25
+2013-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,29240.0319,billion KZT,bns,2026-09-25,level,2026-09-25
+2013-12-31,KZ,national,annual,FIXED_ASSETS_NET,20712.8525,billion KZT,bns,2026-09-25,level,2026-09-25
+2013-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,11.7,percent,bns,2026-09-25,level,2026-09-25
+2013-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,42.7,percent,bns,2026-09-25,level,2026-09-25
 2013-12-31,KZ,national,annual,GDP_DEFLATOR,109.5,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2013-12-31,KZ,national,annual,GDP_INCOME_METHOD,35999025100000.0,KZT,bns,2026-09-24,level,2026-09-24
 2013-12-31,KZ,national,annual,GDP_PER_CAPITA,2113170.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -33775,6 +33886,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-12-31,KZ,national,annual,GRADUATES_HIRED,20157.0,persons,bns,2026-09-24,level,2026-09-24
 2013-12-31,KZ,national,annual,GROSS_ACCUMULATION,8844818400000.0,KZT,bns,2026-09-24,level,2026-09-24
 2013-12-31,KZ,national,annual,GROSS_OUTPUT,56160882300000.0,KZT,bns,2026-09-24,level,2026-09-24
+2013-12-31,KZ,national,annual,HOURS_PER_EMPLOYEE,1754.3,hours per employee,bns,2026-09-25,level,2026-09-25
 2013-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,17616589200000.0,KZT,bns,2026-09-24,level,2026-09-24
 2013-12-31,KZ,national,annual,HOUSING_INVESTMENT,497860909000.0,KZT,bns,2026-09-24,level,2026-09-24
 2013-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,59.1,index,imf,2026-09-24,level,2026-09-24
@@ -36139,6 +36251,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-31,KZ,national,daily,EXCHANGE_RATE_RUB,3.17,KZT per RUB,nbk,2026-09-25,level,2026-09-25
 2014-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,45673.58668505,million KZT,minfin,2026-09-24,level,2026-09-24
 2014-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,97.5,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
+2014-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,4810.1211,billion KZT,bns,2026-09-25,level,2026-09-25
+2014-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,2939.0477,billion KZT,bns,2026-09-25,level,2026-09-25
+2014-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,47019.1248,billion KZT,bns,2026-09-25,level,2026-09-25
+2014-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,36996.3317,billion KZT,bns,2026-09-25,level,2026-09-25
+2014-12-31,KZ,national,annual,FIXED_ASSETS_NET,24881.5027,billion KZT,bns,2026-09-25,level,2026-09-25
+2014-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,10.2,percent,bns,2026-09-25,level,2026-09-25
+2014-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,47.1,percent,bns,2026-09-25,level,2026-09-25
 2014-12-31,KZ,national,annual,GDP_DEFLATOR,105.8,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2014-12-31,KZ,national,annual,GDP_INCOME_METHOD,39675832900000.0,KZT,bns,2026-09-24,level,2026-09-24
 2014-12-31,KZ,national,annual,GDP_PER_CAPITA,2294950.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -36159,6 +36278,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-31,KZ,national,annual,GROSS_OUTPUT,61860129600000.0,KZT,bns,2026-09-24,level,2026-09-24
 2014-12-31,KZ,national,annual,HOSPITAL_BEDS,105219.0,units,bns,2026-09-24,level,2026-09-24
 2014-12-31,KZ,national,annual,HOSPITAL_BEDS_PER_10K,60.41,per 10000 population,bns,2026-09-24,level,2026-09-24
+2014-12-31,KZ,national,annual,HOURS_PER_EMPLOYEE,1736.1,hours per employee,bns,2026-09-25,level,2026-09-25
 2014-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,18805873900000.0,KZT,bns,2026-09-24,level,2026-09-24
 2014-12-31,KZ,national,annual,HOUSING_COMMISSIONED,441.2,m2 per 1000 population,bns,2026-09-24,level,2026-09-24
 2014-12-31,KZ,national,annual,HOUSING_INVESTMENT,613487021000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -38632,6 +38752,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,60807.48937294,million KZT,minfin,2026-09-24,level,2026-09-24
 2015-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,95.9,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2015-12-31,KZ,national,annual,FINAL_ENERGY_CONSUMPTION,38378.2,thousand toe,bns,2026-09-24,level,2026-09-24
+2015-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,9961.541071,billion KZT,bns,2026-09-25,level,2026-09-25
+2015-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,3928.923084,billion KZT,bns,2026-09-25,level,2026-09-25
+2015-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,62011.163684,billion KZT,bns,2026-09-25,level,2026-09-25
+2015-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,55533.138893,billion KZT,bns,2026-09-25,level,2026-09-25
+2015-12-31,KZ,national,annual,FIXED_ASSETS_NET,38037.99835,billion KZT,bns,2026-09-25,level,2026-09-25
+2015-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,16.0641092327334,percent,bns,2026-09-25,level,2026-09-25
+2015-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,38.659434705249,percent,bns,2026-09-25,level,2026-09-25
 2015-12-31,KZ,national,annual,GDP_DEFLATOR,101.9,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2015-12-31,KZ,national,annual,GDP_INCOME_METHOD,40884133600000.0,KZT,bns,2026-09-24,level,2026-09-24
 2015-12-31,KZ,national,annual,GDP_PER_CAPITA,2330540.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -38652,6 +38779,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-31,KZ,national,annual,GROSS_OUTPUT,63958086200000.0,KZT,bns,2026-09-24,level,2026-09-24
 2015-12-31,KZ,national,annual,HOSPITAL_BEDS,102489.0,units,bns,2026-09-24,level,2026-09-24
 2015-12-31,KZ,national,annual,HOSPITAL_BEDS_PER_10K,58.0,per 10000 population,bns,2026-09-24,level,2026-09-24
+2015-12-31,KZ,national,annual,HOURS_PER_EMPLOYEE,1718.861,hours per employee,bns,2026-09-25,level,2026-09-25
 2015-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,21491895400000.0,KZT,bns,2026-09-24,level,2026-09-24
 2015-12-31,KZ,national,annual,HOUSING_COMMISSIONED,509.844810105416,m2 per 1000 population,bns,2026-09-24,level,2026-09-24
 2015-12-31,KZ,national,annual,HOUSING_INVESTMENT,739987365000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -38788,6 +38916,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-01-01,KZ,national,quarterly,FOREIGN_DEMAND_YOY,102.7614,"index, same quarter previous year = 100",derived,2026-09-25,level,2026-09-25
 2016-01-01,KZ,national,quarterly,GDP_NOMINAL,9309090900000.0,KZT,bns,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-24
 2016-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2657153.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2016-01-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1510.437,million man-hours,bns,2026-09-25,level,2026-09-25
 2016-01-01,KZ,national,monthly,IMPORTS,1594493.3150500036,thousand USD,bns,2026-09-24,level,2026-09-24
 2016-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,82.8,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2016-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,99.3,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
@@ -39376,6 +39505,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-04-01,KZ,national,quarterly,FOREIGN_DEMAND_YOY,102.6809,"index, same quarter previous year = 100",derived,2026-09-25,level,2026-09-25
 2016-04-01,KZ,national,quarterly,GDP_NOMINAL,19357056900000.0,KZT,bns,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-24
 2016-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2621343.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2016-04-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1580.242,million man-hours,bns,2026-09-25,level,2026-09-25
 2016-04-01,KZ,national,monthly,IMPORTS,2086044.1451799967,thousand USD,bns,2026-09-24,level,2026-09-24
 2016-04-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,67.878788,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2016-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.928699,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -39986,6 +40116,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-07-01,KZ,national,quarterly,FOREIGN_DEMAND_YOY,102.6764,"index, same quarter previous year = 100",derived,2026-09-25,level,2026-09-25
 2016-07-01,KZ,national,quarterly,GDP_NOMINAL,31355126100000.0,KZT,bns,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-24
 2016-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2586103.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2016-07-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1579.4904,million man-hours,bns,2026-09-25,level,2026-09-25
 2016-07-01,KZ,national,monthly,IMPORTS,1908572.8915699963,thousand USD,bns,2026-09-24,level,2026-09-24
 2016-07-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,65.761448,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2016-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.927938,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -40602,6 +40733,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-10-01,KZ,national,quarterly,FOREIGN_DEMAND_YOY,102.9747,"index, same quarter previous year = 100",derived,2026-09-25,level,2026-09-25
 2016-10-01,KZ,national,quarterly,GDP_NOMINAL,46971150000000.0,KZT,bns,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-24
 2016-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2583483.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2016-10-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1626.9907,million man-hours,bns,2026-09-25,level,2026-09-25
 2016-10-01,KZ,national,monthly,IMPORTS,2505862.746799997,thousand USD,bns,2026-09-24,level,2026-09-24
 2016-10-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,63.391274,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2016-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,57.697765,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -41179,6 +41311,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,77844.26863845,million KZT,minfin,2026-09-24,level,2026-09-24
 2016-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,95.5,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2016-12-31,KZ,national,annual,FINAL_ENERGY_CONSUMPTION,38699.5,thousand toe,bns,2026-09-24,level,2026-09-24
+2016-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,6965.5742,billion KZT,bns,2026-09-25,level,2026-09-25
+2016-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,4567.170902,billion KZT,bns,2026-09-25,level,2026-09-25
+2016-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,71823.570852,billion KZT,bns,2026-09-25,level,2026-09-25
+2016-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,57740.388816,billion KZT,bns,2026-09-25,level,2026-09-25
+2016-12-31,KZ,national,annual,FIXED_ASSETS_NET,45408.36835,billion KZT,bns,2026-09-25,level,2026-09-25
+2016-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,9.6981730615527,percent,bns,2026-09-25,level,2026-09-25
+2016-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,36.7779020014144,percent,bns,2026-09-25,level,2026-09-25
 2016-12-31,KZ,national,annual,GDP_DEFLATOR,113.6,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2016-12-31,KZ,national,annual,GDP_INCOME_METHOD,46971150000000.0,KZT,bns,2026-09-24,level,2026-09-24
 2016-12-31,KZ,national,annual,GDP_PER_CAPITA,2639700.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -41199,6 +41338,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-31,KZ,national,annual,GROSS_OUTPUT,74731304600000.0,KZT,bns,2026-09-24,level,2026-09-24
 2016-12-31,KZ,national,annual,HOSPITAL_BEDS,100079.0,units,bns,2026-09-24,level,2026-09-24
 2016-12-31,KZ,national,annual,HOSPITAL_BEDS_PER_10K,55.9,per 10000 population,bns,2026-09-24,level,2026-09-24
+2016-12-31,KZ,national,annual,HOURS_PER_EMPLOYEE,1804.653,hours per employee,bns,2026-09-25,level,2026-09-25
 2016-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,25087440100000.0,KZT,bns,2026-09-24,level,2026-09-24
 2016-12-31,KZ,national,annual,HOUSING_COMMISSIONED,590.999072686586,m2 per 1000 population,bns,2026-09-24,level,2026-09-24
 2016-12-31,KZ,national,annual,HOUSING_INVESTMENT,839565399000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -41338,6 +41478,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-01-01,KZ,national,quarterly,FOREIGN_DEMAND_YOY,103.3034,"index, same quarter previous year = 100",derived,2026-09-25,level,2026-09-25
 2017-01-01,KZ,national,quarterly,GDP_NOMINAL,10431358000000.0,KZT,bns,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-24
 2017-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2548037.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2017-01-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1541.98,million man-hours,bns,2026-09-25,level,2026-09-25
 2017-01-01,KZ,national,monthly,IMPORTS,1988007.4679899907,thousand USD,bns,2026-09-24,level,2026-09-24
 2017-01-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,63.12544,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2017-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.879493,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -41940,6 +42081,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-04-01,KZ,national,quarterly,FOREIGN_DEMAND_YOY,103.7679,"index, same quarter previous year = 100",derived,2026-09-25,level,2026-09-25
 2017-04-01,KZ,national,quarterly,GDP_NOMINAL,21546269700000.0,KZT,bns,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-24
 2017-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2597818.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2017-04-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1602.8529,million man-hours,bns,2026-09-25,level,2026-09-25
 2017-04-01,KZ,national,monthly,IMPORTS,2301529.7318299953,thousand USD,bns,2026-09-24,level,2026-09-24
 2017-04-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,62.368421,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2017-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,57.473684,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -42552,6 +42694,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-07-01,KZ,national,quarterly,GDP_NOMINAL,35142065200000.0,KZT,bns,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-24
 2017-07-01,KZ,national,quarterly,GOLD_BULLION_SALES,225.0,pieces,nbk,2026-09-24,level,2026-09-24
 2017-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2546458.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2017-07-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1580.0112,million man-hours,bns,2026-09-25,level,2026-09-25
 2017-07-01,KZ,national,monthly,IMPORTS,2447990.0597300045,thousand USD,bns,2026-09-24,level,2026-09-24
 2017-07-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,61.693269,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2017-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,56.644691,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -43168,6 +43311,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-10-01,KZ,national,quarterly,GDP_NOMINAL,54378857800000.0,KZT,bns,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-24
 2017-10-01,KZ,national,quarterly,GOLD_BULLION_SALES,762.0,pieces,nbk,2026-09-24,level,2026-09-24
 2017-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3270411.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2017-10-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1628.4473,million man-hours,bns,2026-09-25,level,2026-09-25
 2017-10-01,KZ,national,monthly,IMPORTS,2666245.7418099996,thousand USD,bns,2026-09-24,level,2026-09-24
 2017-10-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,66.203227,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2017-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.783728,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -43747,6 +43891,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,80980.24179613,million KZT,minfin,2026-09-24,level,2026-09-24
 2017-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,108.0,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2017-12-31,KZ,national,annual,FINAL_ENERGY_CONSUMPTION,40042.7,thousand toe,bns,2026-09-24,level,2026-09-24
+2017-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,7337.18179,billion KZT,bns,2026-09-25,level,2026-09-25
+2017-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,5200.619635,billion KZT,bns,2026-09-25,level,2026-09-25
+2017-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,77919.780888,billion KZT,bns,2026-09-25,level,2026-09-25
+2017-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,70724.600093,billion KZT,bns,2026-09-25,level,2026-09-25
+2017-12-31,KZ,national,annual,FIXED_ASSETS_NET,49092.017687,billion KZT,bns,2026-09-25,level,2026-09-25
+2017-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,9.4163275436306,percent,bns,2026-09-25,level,2026-09-25
+2017-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,36.9967200524352,percent,bns,2026-09-25,level,2026-09-25
 2017-12-31,KZ,national,annual,FREIGHT_TURNOVER,563958611800.0,tonne-km,bns,2026-09-24,level,2026-09-24
 2017-12-31,KZ,national,annual,GDP_DEFLATOR,108.4,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2017-12-31,KZ,national,annual,GDP_INCOME_METHOD,54378857800000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -43768,6 +43919,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-12-31,KZ,national,annual,GROSS_OUTPUT,95418867600000.0,KZT,bns,2026-09-24,level,2026-09-24
 2017-12-31,KZ,national,annual,HOSPITAL_BEDS,99465.0,units,bns,2026-09-24,level,2026-09-24
 2017-12-31,KZ,national,annual,HOSPITAL_BEDS_PER_10K,54.78,per 10000 population,bns,2026-09-24,level,2026-09-24
+2017-12-31,KZ,national,annual,HOURS_PER_EMPLOYEE,1951.406,hours per employee,bns,2026-09-25,level,2026-09-25
+2017-12-31,KZ,national,annual,HOURS_WORKED,6848.0637,million man-hours,bns,2026-09-25,level,2026-09-25
 2017-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,27986614700000.0,KZT,bns,2026-09-24,level,2026-09-24
 2017-12-31,KZ,national,annual,HOUSING_COMMISSIONED,619.486846155301,m2 per 1000 population,bns,2026-09-24,level,2026-09-24
 2017-12-31,KZ,national,annual,HOUSING_INVESTMENT,1022481847000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -43912,6 +44065,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-01-01,KZ,national,quarterly,GDP_NOMINAL,11786166700000.0,KZT,bns,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-24
 2018-01-01,KZ,national,quarterly,GOLD_BULLION_SALES,799.0,pieces,nbk,2026-09-24,level,2026-09-24
 2018-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3373984.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2018-01-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1569.4041,million man-hours,bns,2026-09-25,level,2026-09-25
 2018-01-01,KZ,national,monthly,IMPORTS,2243048.23982,thousand USD,bns,2026-09-24,level,2026-09-24
 2018-01-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,63.489636,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2018-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.970438,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -44519,6 +44673,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-04-01,KZ,national,quarterly,GOLD_BULLION_SALES,560.0,pieces,nbk,2026-09-24,level,2026-09-24
 2018-04-01,KZ,national,quarterly,GOV_DEBT,14809063.205648273,million KZT,minfin,2026-09-24,level,2026-09-24
 2018-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3424733.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2018-04-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1627.207,million man-hours,bns,2026-09-25,level,2026-09-25
 2018-04-01,KZ,national,monthly,IMPORTS,2810724.807029994,thousand USD,bns,2026-09-24,level,2026-09-24
 2018-04-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,62.63034,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2018-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.308106,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -45135,6 +45290,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-07-01,KZ,national,quarterly,GDP_NOMINAL,39767105700000.0,KZT,bns,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-24
 2018-07-01,KZ,national,quarterly,GOLD_BULLION_SALES,1087.0,pieces,nbk,2026-09-24,level,2026-09-24
 2018-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3545359.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2018-07-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1602.1844,million man-hours,bns,2026-09-25,level,2026-09-25
 2018-07-01,KZ,national,monthly,IMPORTS,2885418.4661600026,thousand USD,bns,2026-09-24,level,2026-09-24
 2018-07-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,63.187173,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2018-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.491492,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -45760,6 +45916,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-10-01,KZ,national,quarterly,GDP_NOMINAL,61819536400000.0,KZT,bns,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-24
 2018-10-01,KZ,national,quarterly,GOLD_BULLION_SALES,1223.0,pieces,nbk,2026-09-24,level,2026-09-24
 2018-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3874989.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2018-10-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1664.7341,million man-hours,bns,2026-09-25,level,2026-09-25
 2018-10-01,KZ,national,monthly,IMPORTS,3226521.3908399977,thousand USD,bns,2026-09-24,level,2026-09-24
 2018-10-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,65.227856,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2018-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.210526,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -46345,6 +46502,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,95277.7034925,million KZT,minfin,2026-09-24,level,2026-09-24
 2018-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,109.6,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2018-12-31,KZ,national,annual,FINAL_ENERGY_CONSUMPTION,41313.5,thousand toe,bns,2026-09-24,level,2026-09-24
+2018-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,8519.348928,billion KZT,bns,2026-09-25,level,2026-09-25
+2018-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,6697.689196,billion KZT,bns,2026-09-25,level,2026-09-25
+2018-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,91259.280645,billion KZT,bns,2026-09-25,level,2026-09-25
+2018-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,81263.928669,billion KZT,bns,2026-09-25,level,2026-09-25
+2018-12-31,KZ,national,annual,FIXED_ASSETS_NET,56336.756048,billion KZT,bns,2026-09-25,level,2026-09-25
+2018-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,9.3353233425561,percent,bns,2026-09-25,level,2026-09-25
+2018-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,38.2673678228899,percent,bns,2026-09-25,level,2026-09-25
 2018-12-31,KZ,national,annual,FREIGHT_TURNOVER,609533174400.0,tonne-km,bns,2026-09-24,level,2026-09-24
 2018-12-31,KZ,national,annual,GDP_DEFLATOR,109.2,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2018-12-31,KZ,national,annual,GDP_INCOME_METHOD,61819536400000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -46366,6 +46530,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-12-31,KZ,national,annual,GROSS_OUTPUT,102753424600000.0,KZT,bns,2026-09-24,level,2026-09-24
 2018-12-31,KZ,national,annual,HOSPITAL_BEDS,98371.0,units,bns,2026-09-24,level,2026-09-24
 2018-12-31,KZ,national,annual,HOSPITAL_BEDS_PER_10K,53.48,per 10000 population,bns,2026-09-24,level,2026-09-24
+2018-12-31,KZ,national,annual,HOURS_PER_EMPLOYEE,1839.858,hours per employee,bns,2026-09-25,level,2026-09-25
+2018-12-31,KZ,national,annual,HOURS_WORKED,6536.1229,million man-hours,bns,2026-09-25,level,2026-09-25
 2018-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,31514400600000.0,KZT,bns,2026-09-24,level,2026-09-24
 2018-12-31,KZ,national,annual,HOUSING_COMMISSIONED,685.460952771722,m2 per 1000 population,bns,2026-09-24,level,2026-09-24
 2018-12-31,KZ,national,annual,HOUSING_INVESTMENT,1201296191000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -46513,6 +46679,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-01-01,KZ,national,quarterly,GOLD_BULLION_SALES,1092.0,pieces,nbk,2026-09-24,level,2026-09-24
 2019-01-01,KZ,national,quarterly,GOV_DEBT,16045358.34352307,million KZT,minfin,2026-09-24,level,2026-09-24
 2019-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3867393.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2019-01-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1570.4986,million man-hours,bns,2026-09-25,level,2026-09-25
 2019-01-01,KZ,national,monthly,IMPORTS,2295045.348209998,thousand USD,bns,2026-09-24,level,2026-09-24
 2019-01-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,63.920635,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2019-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,60.666667,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -47116,6 +47283,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-04-01,KZ,national,quarterly,GDP_NOMINAL,27908618100000.0,KZT,bns,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-09-24
 2019-04-01,KZ,national,quarterly,GOLD_BULLION_SALES,1687.0,pieces,nbk,2026-09-24,level,2026-09-24
 2019-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4139799.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2019-04-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1659.92,million man-hours,bns,2026-09-25,level,2026-09-25
 2019-04-01,KZ,national,monthly,IMPORTS,3281326.52717999,thousand USD,bns,2026-09-24,level,2026-09-24
 2019-04-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,64.482759,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2019-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.075235,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -47732,6 +47900,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-07-01,KZ,national,quarterly,GOLD_BULLION_SALES,1853.0,pieces,nbk,2026-09-24,level,2026-09-24
 2019-07-01,KZ,national,quarterly,GOV_DEBT,16190495.480079824,million KZT,minfin,2026-09-24,level,2026-09-24
 2019-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4580703.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2019-07-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1648.6097,million man-hours,bns,2026-09-25,level,2026-09-25
 2019-07-01,KZ,national,monthly,IMPORTS,3990234.8986299885,thousand USD,bns,2026-09-24,level,2026-09-24
 2019-07-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,63.972645,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2019-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.356543,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -48362,6 +48531,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-10-01,KZ,national,quarterly,GOLD_BULLION_SALES,7324.0,pieces,nbk,2026-09-24,level,2026-09-24
 2019-10-01,KZ,national,quarterly,GOV_DEBT,16729849.831619615,million KZT,minfin,2026-09-24,level,2026-09-24
 2019-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4947565.0,million KZT,nbk,2026-09-24,level,2026-09-24
+2019-10-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1687.7543,million man-hours,bns,2026-09-25,level,2026-09-25
 2019-10-01,KZ,national,monthly,IMPORTS,3990155.357689976,thousand USD,bns,2026-09-24,level,2026-09-24
 2019-10-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,62.438348,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2019-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.03021,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -48958,6 +49128,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,106498.26050557,million KZT,minfin,2026-09-24,level,2026-09-24
 2019-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,102.0,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2019-12-31,KZ,national,annual,FINAL_ENERGY_CONSUMPTION,38327.6,thousand toe,bns,2026-09-24,level,2026-09-24
+2019-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,8596.43032,billion KZT,bns,2026-09-25,level,2026-09-25
+2019-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,16144.398666,billion KZT,bns,2026-09-25,level,2026-09-25
+2019-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,117169.08552,billion KZT,bns,2026-09-25,level,2026-09-25
+2019-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,98850.221541,billion KZT,bns,2026-09-25,level,2026-09-25
+2019-12-31,KZ,national,annual,FIXED_ASSETS_NET,68940.42263,billion KZT,bns,2026-09-25,level,2026-09-25
+2019-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,7.3367734175348,percent,bns,2026-09-25,level,2026-09-25
+2019-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,41.1615936711972,percent,bns,2026-09-25,level,2026-09-25
 2019-12-31,KZ,national,annual,FREIGHT_TURNOVER,597613853300.0,tonne-km,bns,2026-09-24,level,2026-09-24
 2019-12-31,KZ,national,annual,GDP_DEFLATOR,107.6,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2019-12-31,KZ,national,annual,GDP_INCOME_METHOD,69532626500000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -48979,6 +49156,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-31,KZ,national,annual,GROSS_OUTPUT,111674103000000.0,KZT,bns,2026-09-24,level,2026-09-24
 2019-12-31,KZ,national,annual,HOSPITAL_BEDS,96286.0,units,bns,2026-09-24,level,2026-09-24
 2019-12-31,KZ,national,annual,HOSPITAL_BEDS_PER_10K,51.68,per 10000 population,bns,2026-09-24,level,2026-09-24
+2019-12-31,KZ,national,annual,HOURS_PER_EMPLOYEE,1757.171,hours per employee,bns,2026-09-25,level,2026-09-25
+2019-12-31,KZ,national,annual,HOURS_WORKED,6337.8948,million man-hours,bns,2026-09-25,level,2026-09-25
 2019-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,35570705800000.0,KZT,bns,2026-09-24,level,2026-09-24
 2019-12-31,KZ,national,annual,HOUSING_COMMISSIONED,709.8,m2 per 1000 population,bns,2026-09-24,level,2026-09-24
 2019-12-31,KZ,national,annual,HOUSING_INVESTMENT,1475500403000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -49147,6 +49326,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,monthly,GS_YIELD_3M,10.0185,% per annum,kase,2026-09-25,level,2026-09-25
 2020-01-01,KZ,national,monthly,GS_YIELD_5Y,9.1006,% per annum,kase,2026-09-25,level,2026-09-25
 2020-01-01,KZ,national,monthly,GS_YIELD_6M,9.9409,% per annum,kase,2026-09-25,level,2026-09-25
+2020-01-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1577.4614,million man-hours,bns,2026-09-25,level,2026-09-25
 2020-01-01,KZ,national,monthly,IMPORTS,2553506.17209001,thousand USD,bns,2026-09-24,level,2026-09-24
 2020-01-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,61.497244,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2020-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,57.945499,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -49813,6 +49993,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-04-01,KZ,national,monthly,GS_YIELD_3M,11.4662,% per annum,kase,2026-09-25,level,2026-09-25
 2020-04-01,KZ,national,monthly,GS_YIELD_5Y,10.0335,% per annum,kase,2026-09-25,level,2026-09-25
 2020-04-01,KZ,national,monthly,GS_YIELD_6M,11.3675,% per annum,kase,2026-09-25,level,2026-09-25
+2020-04-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1560.2205,million man-hours,bns,2026-09-25,level,2026-09-25
 2020-04-01,KZ,national,quarterly,IMPORTERS_SHARE,24.162531,percent of respondents,nbk,2026-09-24,level,2026-09-24
 2020-04-01,KZ,national,monthly,IMPORTS,2825391.9494300066,thousand USD,bns,2026-09-24,level,2026-09-24
 2020-04-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,62.825682,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -50484,6 +50665,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-07-01,KZ,national,monthly,GS_YIELD_3M,10.3225,% per annum,kase,2026-09-25,level,2026-09-25
 2020-07-01,KZ,national,monthly,GS_YIELD_5Y,10.1655,% per annum,kase,2026-09-25,level,2026-09-25
 2020-07-01,KZ,national,monthly,GS_YIELD_6M,10.3073,% per annum,kase,2026-09-25,level,2026-09-25
+2020-07-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1583.523,million man-hours,bns,2026-09-25,level,2026-09-25
 2020-07-01,KZ,national,quarterly,IMPORTERS_SHARE,24.554395,percent of respondents,nbk,2026-09-24,level,2026-09-24
 2020-07-01,KZ,national,monthly,IMPORTS,3753263.315130019,thousand USD,bns,2026-09-24,level,2026-09-24
 2020-07-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,62.261832,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -51168,6 +51350,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-10-01,KZ,national,monthly,GS_YIELD_3M,9.413,% per annum,kase,2026-09-25,level,2026-09-25
 2020-10-01,KZ,national,monthly,GS_YIELD_5Y,9.6438,% per annum,kase,2026-09-25,level,2026-09-25
 2020-10-01,KZ,national,monthly,GS_YIELD_6M,9.467,% per annum,kase,2026-09-25,level,2026-09-25
+2020-10-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1655.1085,million man-hours,bns,2026-09-25,level,2026-09-25
 2020-10-01,KZ,national,quarterly,IMPORTERS_SHARE,25.763126,percent of respondents,nbk,2026-09-24,level,2026-09-24
 2020-10-01,KZ,national,monthly,IMPORTS,3667143.0039600274,thousand USD,bns,2026-09-24,level,2026-09-24
 2020-10-01,KZ,national,quarterly,IMPORT_PRICE_DIFFUSION_INDEX,62.591575,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
@@ -51787,6 +51970,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,105144.3625886,million KZT,minfin,2026-09-24,level,2026-09-24
 2020-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,88.7,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2020-12-31,KZ,national,annual,FINAL_ENERGY_CONSUMPTION,40331.9,thousand toe,bns,2026-09-24,level,2026-09-24
+2020-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,12118.495919,billion KZT,bns,2026-09-25,level,2026-09-25
+2020-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,17693.898865,billion KZT,bns,2026-09-25,level,2026-09-25
+2020-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,128308.3454,billion KZT,bns,2026-09-25,level,2026-09-25
+2020-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,114594.572405,billion KZT,bns,2026-09-25,level,2026-09-25
+2020-12-31,KZ,national,annual,FIXED_ASSETS_NET,69694.61176,billion KZT,bns,2026-09-25,level,2026-09-25
+2020-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,9.4448228454827,percent,bns,2026-09-25,level,2026-09-25
+2020-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,45.6819339827603,percent,bns,2026-09-25,level,2026-09-25
 2020-12-31,KZ,national,annual,FREIGHT_TURNOVER,584025637450.253,tonne-km,bns,2026-09-24,level,2026-09-24
 2020-12-31,KZ,national,annual,GDP_DEFLATOR,104.2,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2020-12-31,KZ,national,annual,GDP_INCOME_METHOD,70649033200000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -51808,6 +51998,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-31,KZ,national,annual,GROSS_OUTPUT,109694845800000.0,KZT,bns,2026-09-24,level,2026-09-24
 2020-12-31,KZ,national,annual,HOSPITAL_BEDS,127464.0,units,bns,2026-09-24,level,2026-09-24
 2020-12-31,KZ,national,annual,HOSPITAL_BEDS_PER_10K,67.51,per 10000 population,bns,2026-09-24,level,2026-09-24
+2020-12-31,KZ,national,annual,HOURS_PER_EMPLOYEE,1755.28,hours per employee,bns,2026-09-25,level,2026-09-25
+2020-12-31,KZ,national,annual,HOURS_WORKED,6221.9914,million man-hours,bns,2026-09-25,level,2026-09-25
 2020-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,36660980900000.0,KZT,bns,2026-09-24,level,2026-09-24
 2020-12-31,KZ,national,annual,HOUSING_COMMISSIONED,817.9,m2 per 1000 population,bns,2026-09-24,level,2026-09-24
 2020-12-31,KZ,national,annual,HOUSING_INVESTMENT,1989280578000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -51982,6 +52174,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,monthly,GS_YIELD_3M,9.3367,% per annum,kase,2026-09-25,level,2026-09-25
 2021-01-01,KZ,national,monthly,GS_YIELD_5Y,9.4445,% per annum,kase,2026-09-25,level,2026-09-25
 2021-01-01,KZ,national,monthly,GS_YIELD_6M,9.4074,% per annum,kase,2026-09-25,level,2026-09-25
+2021-01-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1546.1859,million man-hours,bns,2026-09-25,level,2026-09-25
 2021-01-01,KZ,national,quarterly,IIP_ASSETS,160536.113602,million USD,nbk,2026-09-24,level,2026-09-24
 2021-01-01,KZ,national,quarterly,IIP_LIABILITIES,232516.43027,million USD,nbk,2026-09-24,level,2026-09-24
 2021-01-01,KZ,national,quarterly,IIP_NET,-71980.316668,million USD,nbk,2026-09-24,level,2026-09-24
@@ -52649,6 +52842,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-04-01,KZ,national,monthly,GS_YIELD_3M,8.4867,% per annum,kase,2026-09-25,level,2026-09-25
 2021-04-01,KZ,national,monthly,GS_YIELD_5Y,9.5978,% per annum,kase,2026-09-25,level,2026-09-25
 2021-04-01,KZ,national,monthly,GS_YIELD_6M,8.5942,% per annum,kase,2026-09-25,level,2026-09-25
+2021-04-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1628.5391,million man-hours,bns,2026-09-25,level,2026-09-25
 2021-04-01,KZ,national,quarterly,IIP_ASSETS,160303.265061,million USD,nbk,2026-09-24,level,2026-09-24
 2021-04-01,KZ,national,quarterly,IIP_LIABILITIES,234779.664105,million USD,nbk,2026-09-24,level,2026-09-24
 2021-04-01,KZ,national,quarterly,IIP_NET,-74476.399043,million USD,nbk,2026-09-24,level,2026-09-24
@@ -53333,6 +53527,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,monthly,GS_YIELD_3M,8.4986,% per annum,kase,2026-09-25,level,2026-09-25
 2021-07-01,KZ,national,monthly,GS_YIELD_5Y,9.7963,% per annum,kase,2026-09-25,level,2026-09-25
 2021-07-01,KZ,national,monthly,GS_YIELD_6M,8.8158,% per annum,kase,2026-09-25,level,2026-09-25
+2021-07-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1611.8241,million man-hours,bns,2026-09-25,level,2026-09-25
 2021-07-01,KZ,national,quarterly,IIP_ASSETS,164940.457763,million USD,nbk,2026-09-24,level,2026-09-24
 2021-07-01,KZ,national,quarterly,IIP_LIABILITIES,241094.588864,million USD,nbk,2026-09-24,level,2026-09-24
 2021-07-01,KZ,national,quarterly,IIP_NET,-76154.131101,million USD,nbk,2026-09-24,level,2026-09-24
@@ -54039,6 +54234,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,monthly,GS_YIELD_3M,8.9783,% per annum,kase,2026-09-25,level,2026-09-25
 2021-10-01,KZ,national,monthly,GS_YIELD_5Y,9.6489,% per annum,kase,2026-09-25,level,2026-09-25
 2021-10-01,KZ,national,monthly,GS_YIELD_6M,9.2956,% per annum,kase,2026-09-25,level,2026-09-25
+2021-10-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1673.4786,million man-hours,bns,2026-09-25,level,2026-09-25
 2021-10-01,KZ,national,quarterly,IIP_ASSETS,164808.790195,million USD,nbk,2026-09-24,level,2026-09-24
 2021-10-01,KZ,national,quarterly,IIP_LIABILITIES,244511.956737,million USD,nbk,2026-09-24,level,2026-09-24
 2021-10-01,KZ,national,quarterly,IIP_NET,-79703.166542,million USD,nbk,2026-09-24,level,2026-09-24
@@ -54696,6 +54892,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,111277.72455273,million KZT,minfin,2026-09-24,level,2026-09-24
 2021-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,102.3,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2021-12-31,KZ,national,annual,FINAL_ENERGY_CONSUMPTION,43261.7,thousand toe,bns,2026-09-24,level,2026-09-24
+2021-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,10533.701842,billion KZT,bns,2026-09-25,level,2026-09-25
+2021-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,17128.288859,billion KZT,bns,2026-09-25,level,2026-09-25
+2021-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,141136.41448,billion KZT,bns,2026-09-25,level,2026-09-25
+2021-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,130359.431798,billion KZT,bns,2026-09-25,level,2026-09-25
+2021-12-31,KZ,national,annual,FIXED_ASSETS_NET,74577.115427,billion KZT,bns,2026-09-25,level,2026-09-25
+2021-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,7.4634897597549,percent,bns,2026-09-25,level,2026-09-25
+2021-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,47.1595507780396,percent,bns,2026-09-25,level,2026-09-25
 2021-12-31,KZ,national,annual,FREIGHT_TURNOVER,607713919525.155,tonne-km,bns,2026-09-24,level,2026-09-24
 2021-12-31,KZ,national,annual,GDP_DEFLATOR,113.9,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2021-12-31,KZ,national,annual,GDP_INCOME_METHOD,83951587900000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -54719,6 +54922,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-31,KZ,national,annual,GROSS_OUTPUT,141092181200000.0,KZT,bns,2026-09-24,level,2026-09-24
 2021-12-31,KZ,national,annual,HOSPITAL_BEDS,125034.0,units,bns,2026-09-24,level,2026-09-24
 2021-12-31,KZ,national,annual,HOSPITAL_BEDS_PER_10K,65.4,per 10000 population,bns,2026-09-24,level,2026-09-24
+2021-12-31,KZ,national,annual,HOURS_PER_EMPLOYEE,1746.847,hours per employee,bns,2026-09-25,level,2026-09-25
+2021-12-31,KZ,national,annual,HOURS_WORKED,6253.0303,million man-hours,bns,2026-09-25,level,2026-09-25
 2021-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,42419295900000.0,KZT,bns,2026-09-24,level,2026-09-24
 2021-12-31,KZ,national,annual,HOUSING_COMMISSIONED,899.2,m2 per 1000 population,bns,2026-09-24,level,2026-09-24
 2021-12-31,KZ,national,annual,HOUSING_INVESTMENT,2434297204000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -54887,6 +55092,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,monthly,GS_YIELD_3M,9.0649,% per annum,kase,2026-09-25,level,2026-09-25
 2022-01-01,KZ,national,monthly,GS_YIELD_5Y,9.8403,% per annum,kase,2026-09-25,level,2026-09-25
 2022-01-01,KZ,national,monthly,GS_YIELD_6M,9.4012,% per annum,kase,2026-09-25,level,2026-09-25
+2022-01-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1576.4271,million man-hours,bns,2026-09-25,level,2026-09-25
 2022-01-01,KZ,national,quarterly,IIP_ASSETS,167348.028052,million USD,nbk,2026-09-24,level,2026-09-24
 2022-01-01,KZ,national,quarterly,IIP_LIABILITIES,244277.840786,million USD,nbk,2026-09-24,level,2026-09-24
 2022-01-01,KZ,national,quarterly,IIP_NET,-76929.812735,million USD,nbk,2026-09-24,level,2026-09-24
@@ -55599,6 +55805,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,monthly,GS_YIELD_3M,13.033,% per annum,kase,2026-09-25,level,2026-09-25
 2022-04-01,KZ,national,monthly,GS_YIELD_5Y,11.2759,% per annum,kase,2026-09-25,level,2026-09-25
 2022-04-01,KZ,national,monthly,GS_YIELD_6M,13.1136,% per annum,kase,2026-09-25,level,2026-09-25
+2022-04-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1661.3051,million man-hours,bns,2026-09-25,level,2026-09-25
 2022-04-01,KZ,national,quarterly,IIP_ASSETS,167864.474317,million USD,nbk,2026-09-24,level,2026-09-24
 2022-04-01,KZ,national,quarterly,IIP_LIABILITIES,239308.150952,million USD,nbk,2026-09-24,level,2026-09-24
 2022-04-01,KZ,national,quarterly,IIP_NET,-71443.676635,million USD,nbk,2026-09-24,level,2026-09-24
@@ -56322,6 +56529,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,monthly,GS_YIELD_3M,12.828,% per annum,kase,2026-09-25,level,2026-09-25
 2022-07-01,KZ,national,monthly,GS_YIELD_5Y,11.4458,% per annum,kase,2026-09-25,level,2026-09-25
 2022-07-01,KZ,national,monthly,GS_YIELD_6M,13.1661,% per annum,kase,2026-09-25,level,2026-09-25
+2022-07-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1661.9092,million man-hours,bns,2026-09-25,level,2026-09-25
 2022-07-01,KZ,national,quarterly,IIP_ASSETS,169046.365461,million USD,nbk,2026-09-24,level,2026-09-24
 2022-07-01,KZ,national,quarterly,IIP_LIABILITIES,242621.7791,million USD,nbk,2026-09-24,level,2026-09-24
 2022-07-01,KZ,national,quarterly,IIP_NET,-73575.413639,million USD,nbk,2026-09-24,level,2026-09-24
@@ -57051,6 +57259,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,monthly,GS_YIELD_3M,13.8616,% per annum,kase,2026-09-25,level,2026-09-25
 2022-10-01,KZ,national,monthly,GS_YIELD_5Y,10.9367,% per annum,kase,2026-09-25,level,2026-09-25
 2022-10-01,KZ,national,monthly,GS_YIELD_6M,13.9633,% per annum,kase,2026-09-25,level,2026-09-25
+2022-10-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1713.8308,million man-hours,bns,2026-09-25,level,2026-09-25
 2022-10-01,KZ,national,quarterly,IIP_ASSETS,168016.314952,million USD,nbk,2026-09-24,level,2026-09-24
 2022-10-01,KZ,national,quarterly,IIP_LIABILITIES,243269.468854,million USD,nbk,2026-09-24,level,2026-09-24
 2022-10-01,KZ,national,quarterly,IIP_NET,-75253.153902,million USD,nbk,2026-09-24,level,2026-09-24
@@ -57724,6 +57933,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,153619.21504825,million KZT,minfin,2026-09-24,level,2026-09-24
 2022-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,109.6,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2022-12-31,KZ,national,annual,FINAL_ENERGY_CONSUMPTION,41156.454,thousand toe,bns,2026-09-24,level,2026-09-24
+2022-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,14245.633052,billion KZT,bns,2026-09-25,level,2026-09-25
+2022-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,8755.952908,billion KZT,bns,2026-09-25,level,2026-09-25
+2022-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,146312.861479,billion KZT,bns,2026-09-25,level,2026-09-25
+2022-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,139383.265962,billion KZT,bns,2026-09-25,level,2026-09-25
+2022-12-31,KZ,national,annual,FIXED_ASSETS_NET,78653.565613,billion KZT,bns,2026-09-25,level,2026-09-25
+2022-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,9.7364188684428,percent,bns,2026-09-25,level,2026-09-25
+2022-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,46.2428901889196,percent,bns,2026-09-25,level,2026-09-25
 2022-12-31,KZ,national,annual,FREIGHT_TURNOVER,596568690820.104,tonne-km,bns,2026-09-24,level,2026-09-24
 2022-12-31,KZ,national,annual,GDP_DEFLATOR,119.7,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2022-12-31,KZ,national,annual,GDP_INCOME_METHOD,103765518200000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -57747,6 +57963,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-31,KZ,national,annual,GROSS_OUTPUT,170926658900000.0,KZT,bns,2026-09-24,level,2026-09-24
 2022-12-31,KZ,national,annual,HOSPITAL_BEDS,103689.0,units,bns,2026-09-24,level,2026-09-24
 2022-12-31,KZ,national,annual,HOSPITAL_BEDS_PER_10K,52.46,per 10000 population,bns,2026-09-24,level,2026-09-24
+2022-12-31,KZ,national,annual,HOURS_PER_EMPLOYEE,1777.229,hours per employee,bns,2026-09-25,level,2026-09-25
+2022-12-31,KZ,national,annual,HOURS_WORKED,6502.4823,million man-hours,bns,2026-09-25,level,2026-09-25
 2022-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,50951517700000.0,KZT,bns,2026-09-24,level,2026-09-24
 2022-12-31,KZ,national,annual,HOUSING_COMMISSIONED,785.9,m2 per 1000 population,bns,2026-09-24,level,2026-09-24
 2022-12-31,KZ,national,annual,HOUSING_INVESTMENT,2799911619000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -57948,6 +58166,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,monthly,GS_YIELD_3M,14.8934,% per annum,kase,2026-09-25,level,2026-09-25
 2023-01-01,KZ,national,monthly,GS_YIELD_5Y,12.2033,% per annum,kase,2026-09-25,level,2026-09-25
 2023-01-01,KZ,national,monthly,GS_YIELD_6M,14.954,% per annum,kase,2026-09-25,level,2026-09-25
+2023-01-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1623.6864,million man-hours,bns,2026-09-25,level,2026-09-25
 2023-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1005466.77677209,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1903274.21511804,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4696702.77061781,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -58736,6 +58955,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,monthly,GS_YIELD_3M,14.9288,% per annum,kase,2026-09-25,level,2026-09-25
 2023-04-01,KZ,national,monthly,GS_YIELD_5Y,11.3006,% per annum,kase,2026-09-25,level,2026-09-25
 2023-04-01,KZ,national,monthly,GS_YIELD_6M,14.3338,% per annum,kase,2026-09-25,level,2026-09-25
+2023-04-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1655.8569,million man-hours,bns,2026-09-25,level,2026-09-25
 2023-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1047950.51691994,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1722863.34345509,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4528518.53769597,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -59528,6 +59748,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,monthly,GS_YIELD_3M,15.2184,% per annum,kase,2026-09-25,level,2026-09-25
 2023-07-01,KZ,national,monthly,GS_YIELD_5Y,11.9811,% per annum,kase,2026-09-25,level,2026-09-25
 2023-07-01,KZ,national,monthly,GS_YIELD_6M,14.8761,% per annum,kase,2026-09-25,level,2026-09-25
+2023-07-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1658.5368,million man-hours,bns,2026-09-25,level,2026-09-25
 2023-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1077807.76271719,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2009906.16381946,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4362082.18008589,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -60257,6 +60478,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,monthly,GS_YIELD_3M,14.8721,% per annum,kase,2026-09-25,level,2026-09-25
 2023-10-01,KZ,national,monthly,GS_YIELD_5Y,11.9922,% per annum,kase,2026-09-25,level,2026-09-25
 2023-10-01,KZ,national,monthly,GS_YIELD_6M,14.5928,% per annum,kase,2026-09-25,level,2026-09-25
+2023-10-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1718.2114,million man-hours,bns,2026-09-25,level,2026-09-25
 2023-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1055719.53121084,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1932946.08346024,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4314919.42303077,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -60994,6 +61216,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,161890.42923258,million KZT,minfin,2026-09-24,level,2026-09-24
 2023-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,101.8,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2023-12-31,KZ,national,annual,FINAL_ENERGY_CONSUMPTION,43382.35,thousand toe,bns,2026-09-24,level,2026-09-24
+2023-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,18235.692312,billion KZT,bns,2026-09-25,level,2026-09-25
+2023-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,9709.761239,billion KZT,bns,2026-09-25,level,2026-09-25
+2023-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,160048.748692,billion KZT,bns,2026-09-25,level,2026-09-25
+2023-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,140494.436145,billion KZT,bns,2026-09-25,level,2026-09-25
+2023-12-31,KZ,national,annual,FIXED_ASSETS_NET,85558.441885,billion KZT,bns,2026-09-25,level,2026-09-25
+2023-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,11.3938362286687,percent,bns,2026-09-25,level,2026-09-25
+2023-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,46.5422612896213,percent,bns,2026-09-25,level,2026-09-25
 2023-12-31,KZ,national,annual,FREIGHT_TURNOVER,503529242424.721,tonne-km,bns,2026-09-24,level,2026-09-24
 2023-12-31,KZ,national,annual,GDP_DEFLATOR,111.2,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2023-12-31,KZ,national,annual,GDP_INCOME_METHOD,119442289700000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -61017,6 +61246,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,GROSS_OUTPUT,183415086800000.0,KZT,bns,2026-09-24,level,2026-09-24
 2023-12-31,KZ,national,annual,HOSPITAL_BEDS,106347.91,units,bns,2026-09-24,level,2026-09-24
 2023-12-31,KZ,national,annual,HOSPITAL_BEDS_PER_10K,53.08,per 10000 population,bns,2026-09-24,level,2026-09-24
+2023-12-31,KZ,national,annual,HOURS_PER_EMPLOYEE,1777.296,hours per employee,bns,2026-09-25,level,2026-09-25
+2023-12-31,KZ,national,annual,HOURS_WORKED,6648.6163,million man-hours,bns,2026-09-25,level,2026-09-25
 2023-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,61348463000000.0,KZT,bns,2026-09-24,level,2026-09-24
 2023-12-31,KZ,national,annual,HOUSING_COMMISSIONED,881.7,m2 per 1000 population,bns,2026-09-24,level,2026-09-24
 2023-12-31,KZ,national,annual,HOUSING_INVESTMENT,3067221777000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -61221,6 +61452,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,monthly,GS_YIELD_3M,13.6463,% per annum,kase,2026-09-25,level,2026-09-25
 2024-01-01,KZ,national,monthly,GS_YIELD_5Y,11.7731,% per annum,kase,2026-09-25,level,2026-09-25
 2024-01-01,KZ,national,monthly,GS_YIELD_6M,13.4026,% per annum,kase,2026-09-25,level,2026-09-25
+2024-01-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1657.7665,million man-hours,bns,2026-09-25,level,2026-09-25
 2024-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1010397.37501044,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2256804.11815881,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4438631.96417358,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -62025,6 +62257,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,monthly,GS_YIELD_3M,12.1217,% per annum,kase,2026-09-25,level,2026-09-25
 2024-04-01,KZ,national,monthly,GS_YIELD_5Y,11.2704,% per annum,kase,2026-09-25,level,2026-09-25
 2024-04-01,KZ,national,monthly,GS_YIELD_6M,11.6816,% per annum,kase,2026-09-25,level,2026-09-25
+2024-04-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1694.4528,million man-hours,bns,2026-09-25,level,2026-09-25
 2024-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1010163.10871361,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,1880272.09061127,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4209277.35218244,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -62833,6 +63066,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,monthly,GS_YIELD_3M,12.649,% per annum,kase,2026-09-25,level,2026-09-25
 2024-07-01,KZ,national,monthly,GS_YIELD_5Y,12.1566,% per annum,kase,2026-09-25,level,2026-09-25
 2024-07-01,KZ,national,monthly,GS_YIELD_6M,12.5508,% per annum,kase,2026-09-25,level,2026-09-25
+2024-07-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1691.6377,million man-hours,bns,2026-09-25,level,2026-09-25
 2024-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1037580.24209197,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2262795.60420695,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4463519.77572177,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -63652,6 +63886,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,monthly,GS_YIELD_3M,12.6026,% per annum,kase,2026-09-25,level,2026-09-25
 2024-10-01,KZ,national,monthly,GS_YIELD_5Y,11.6284,% per annum,kase,2026-09-25,level,2026-09-25
 2024-10-01,KZ,national,monthly,GS_YIELD_6M,12.3296,% per annum,kase,2026-09-25,level,2026-09-25
+2024-10-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1768.7032,million man-hours,bns,2026-09-25,level,2026-09-25
 2024-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1036900.87288954,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2138095.74366232,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4267439.42516567,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -64396,6 +64631,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,125189.66151049,million KZT,minfin,2026-09-24,level,2026-09-24
 2024-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,100.0,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2024-12-31,KZ,national,annual,FINAL_ENERGY_CONSUMPTION,44647.3,thousand toe,bns,2026-09-24,level,2026-09-24
+2024-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,25656.446256,billion KZT,bns,2026-09-25,level,2026-09-25
+2024-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,12741.619157,billion KZT,bns,2026-09-25,level,2026-09-25
+2024-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,196023.260237,billion KZT,bns,2026-09-25,level,2026-09-25
+2024-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,167285.617696,billion KZT,bns,2026-09-25,level,2026-09-25
+2024-12-31,KZ,national,annual,FIXED_ASSETS_NET,108036.051829,billion KZT,bns,2026-09-25,level,2026-09-25
+2024-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,13.0884703299906,percent,bns,2026-09-25,level,2026-09-25
+2024-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,44.8861060170206,percent,bns,2026-09-25,level,2026-09-25
 2024-12-31,KZ,national,annual,FREIGHT_TURNOVER,520920702065.322,tonne-km,bns,2026-09-24,level,2026-09-24
 2024-12-31,KZ,national,annual,GDP_DEFLATOR,109.0,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2024-12-31,KZ,national,annual,GDP_INCOME_METHOD,136693318300000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -64419,6 +64661,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,GROSS_ACCUMULATION,37457431100000.0,KZT,bns,2026-09-24,level,2026-09-24
 2024-12-31,KZ,national,annual,GROSS_OUTPUT,206264410500000.0,KZT,bns,2026-09-24,level,2026-09-24
 2024-12-31,KZ,national,annual,HOSPITAL_BEDS,104989.0,units,bns,2026-09-24,level,2026-09-24
+2024-12-31,KZ,national,annual,HOURS_PER_EMPLOYEE,1838.508,hours per employee,bns,2026-09-25,level,2026-09-25
+2024-12-31,KZ,national,annual,HOURS_WORKED,6938.9286,million man-hours,bns,2026-09-25,level,2026-09-25
 2024-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,73171015400000.0,KZT,bns,2026-09-24,level,2026-09-24
 2024-12-31,KZ,national,annual,HOUSING_COMMISSIONED,941.1,m2 per 1000 population,bns,2026-09-24,level,2026-09-24
 2024-12-31,KZ,national,annual,HOUSING_INVESTMENT,3542403483000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -64633,6 +64877,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,monthly,GS_YIELD_3M,11.5914,% per annum,kase,2026-09-25,level,2026-09-25
 2025-01-01,KZ,national,monthly,GS_YIELD_5Y,11.6301,% per annum,kase,2026-09-25,level,2026-09-25
 2025-01-01,KZ,national,monthly,GS_YIELD_6M,11.4768,% per annum,kase,2026-09-25,level,2026-09-25
+2025-01-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1602.1247,million man-hours,bns,2026-09-25,level,2026-09-25
 2025-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1112965.36456943,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2547588.24166583,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4923109.23102122,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -65495,6 +65740,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,monthly,GS_YIELD_3M,15.0427,% per annum,kase,2026-09-25,level,2026-09-25
 2025-04-01,KZ,national,monthly,GS_YIELD_5Y,13.503,% per annum,kase,2026-09-25,level,2026-09-25
 2025-04-01,KZ,national,monthly,GS_YIELD_6M,14.8216,% per annum,kase,2026-09-25,level,2026-09-25
+2025-04-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1656.9246,million man-hours,bns,2026-09-25,level,2026-09-25
 2025-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1124753.51118378,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2077886.13014662,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-04-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4890750.22247168,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -66338,6 +66584,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,monthly,GS_YIELD_3M,15.134,% per annum,kase,2026-09-25,level,2026-09-25
 2025-07-01,KZ,national,monthly,GS_YIELD_5Y,14.9858,% per annum,kase,2026-09-25,level,2026-09-25
 2025-07-01,KZ,national,monthly,GS_YIELD_6M,15.5753,% per annum,kase,2026-09-25,level,2026-09-25
+2025-07-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1670.4786,million man-hours,bns,2026-09-25,level,2026-09-25
 2025-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1099133.26401971,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2378732.95177878,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-07-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4729736.45293414,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -67232,6 +67479,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,monthly,GS_YIELD_3M,15.8933,% per annum,kase,2026-09-25,level,2026-09-25
 2025-10-01,KZ,national,monthly,GS_YIELD_5Y,15.6644,% per annum,kase,2026-09-25,level,2026-09-25
 2025-10-01,KZ,national,monthly,GS_YIELD_6M,15.9406,% per annum,kase,2026-09-25,level,2026-09-25
+2025-10-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1739.9493,million man-hours,bns,2026-09-25,level,2026-09-25
 2025-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1174227.53390498,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2312304.46127746,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4733919.29279981,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -68001,6 +68249,13 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,EXCISE_TAX_REVENUE,117407.40095227,million KZT,minfin,2026-09-24,level,2026-09-24
 2025-12-31,KZ,national,annual,EXPORT_VOLUME_INDEX,101.9,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2025-12-31,KZ,national,annual,FINAL_ENERGY_CONSUMPTION,48482.8,thousand toe,bns,2026-09-24,level,2026-09-24
+2025-12-31,KZ,national,annual,FIXED_ASSETS_COMMISSIONED,21652.276768,billion KZT,bns,2026-09-25,level,2026-09-25
+2025-12-31,KZ,national,annual,FIXED_ASSETS_DEPRECIATION,15982.161949,billion KZT,bns,2026-09-25,level,2026-09-25
+2025-12-31,KZ,national,annual,FIXED_ASSETS_GROSS,216944.305474,billion KZT,bns,2026-09-25,level,2026-09-25
+2025-12-31,KZ,national,annual,FIXED_ASSETS_GROSS_START,193277.022757,billion KZT,bns,2026-09-25,level,2026-09-25
+2025-12-31,KZ,national,annual,FIXED_ASSETS_NET,114877.572354,billion KZT,bns,2026-09-25,level,2026-09-25
+2025-12-31,KZ,national,annual,FIXED_ASSETS_RENEWAL,9.9805693081882,percent,bns,2026-09-25,level,2026-09-25
+2025-12-31,KZ,national,annual,FIXED_ASSETS_WEAR,47.0474359292332,percent,bns,2026-09-25,level,2026-09-25
 2025-12-31,KZ,national,annual,FREIGHT_TURNOVER,512604002871.184,tonne-km,bns,2026-09-24,level,2026-09-24
 2025-12-31,KZ,national,annual,GDP_DEFLATOR,109.7,"index, previous year = 100",bns,2026-09-24,level,2026-09-24
 2025-12-31,KZ,national,annual,GDP_INCOME_METHOD,159608552900000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -68023,6 +68278,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,GRADUATES_HIRED,44644.0,persons,bns,2026-09-24,level,2026-09-24
 2025-12-31,KZ,national,annual,GROSS_ACCUMULATION,45016860600000.0,KZT,bns,2026-09-24,level,2026-09-24
 2025-12-31,KZ,national,annual,GROSS_OUTPUT,244197701500000.0,KZT,bns,2026-09-24,level,2026-09-24
+2025-12-31,KZ,national,annual,HOURS_PER_EMPLOYEE,1835.395,hours per employee,bns,2026-09-25,level,2026-09-25
+2025-12-31,KZ,national,annual,HOURS_WORKED,7027.8486,million man-hours,bns,2026-09-25,level,2026-09-25
 2025-12-31,KZ,national,annual,HOUSEHOLD_CONSUMPTION,88162257500000.0,KZT,bns,2026-09-24,level,2026-09-24
 2025-12-31,KZ,national,annual,HOUSING_COMMISSIONED,986.2,m2 per 1000 population,bns,2026-09-24,level,2026-09-24
 2025-12-31,KZ,national,annual,HOUSING_INVESTMENT,3854920886000.0,KZT,bns,2026-09-24,level,2026-09-24
@@ -68218,6 +68475,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,monthly,GS_YIELD_3M,16.051,% per annum,kase,2026-09-25,level,2026-09-25
 2026-01-01,KZ,national,monthly,GS_YIELD_5Y,14.5111,% per annum,kase,2026-09-25,level,2026-09-25
 2026-01-01,KZ,national,monthly,GS_YIELD_6M,15.9962,% per annum,kase,2026-09-25,level,2026-09-25
+2026-01-01,KZ,national,quarterly,HOURS_WORKED_QUARTERLY,1620.2584,million man-hours,bns,2026-09-25,level,2026-09-25
 2026-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_FX,1141324.07346514,million KZT,nbk,2026-09-24,level,2026-09-24
 2026-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_DEMAND_KZT,2729265.87993823,million KZT,nbk,2026-09-24,level,2026-09-24
 2026-01-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_FX,4989026.88532154,million KZT,nbk,2026-09-24,level,2026-09-24

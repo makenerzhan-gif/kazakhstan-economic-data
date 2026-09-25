@@ -4825,3 +4825,27 @@ codes), new agency `wits`, static CEPII tables in `data/reference/`. All checked
 - **data/reference/cepii_geodist_kaz.csv** (GeoDist: distances, contiguity, language, colonial
   ties) and **cepii_gravity_kaz.csv** (Gravity V202211, 1992–2021: harmonic weighted distance,
   RTA/FTA, WTO/GATT, EU, sibling/dependency links). Static research releases, not refreshed.
+
+## 2026-09-25 — model data, step 3: potential output and the output gap
+
+Production-function inputs; 490 indicators. All checked live against BNS publications.
+- **Capital (BNS form 11, Taldau, 2000–2025, billion KZT):** FIXED_ASSETS_GROSS (216 944 in 2025),
+  _GROSS_START, _NET (114 878), _COMMISSIONED, _DEPRECIATION, FIXED_ASSETS_WEAR (47.0 %),
+  FIXED_ASSETS_RENEWAL. Tangible assets only (term 455728 — the Taldau default adds intangibles:
+  222 829). 2025 equals the publication «Основные фонды РК (2025)» to the tenge. **Book values at
+  historical cost incl. revaluations (2024: +22.5 %)** — not a volume measure of K; deflate or build
+  a perpetual-inventory stock from GFCF before using it in a production function.
+- **Item-level (new fetcher `taldau`, `scripts/fetchers/taldau_dims.py`):** FIXED_ASSETS_GROSS/NET/
+  WEAR_BY_SECTION (ОКЭД A–T, 2000–2025; mining 2025: 67.7 trn, wear 59.9 %), FIXED_ASSETS_GROSS_BY_ASSET
+  (buildings, structures, machinery 98.2 trn, other, biological), EMPLOYED_BY_SECTION_LONG (2001–2019:
+  adds 2001–2009 to EMPLOYED_BY_SECTION; equal on 2010–2019 once T and U — folded into S by element
+  5831 — are added back). Children are checked to sum to the total. Dictionary okved_sections gains U.
+- **Hours:** HOURS_WORKED (million man-hours, 2000–2012 and 2017–2025), HOURS_WORKED_QUARTERLY (from
+  2016-Q1), HOURS_PER_EMPLOYEE (1 835 h in 2025). The annual 2013–2016 values exist only on a Taldau
+  segment with ~8 % lower coverage (2017: 6 353 summed over quarters vs 6 848) and are NOT spliced in —
+  a splice would show +9 % "growth" in 2017.
+- **CAPACITY_UTILIZATION_BY_SECTOR** (NBK form 369, 13 sectors + total, 2016-Q2 onward; new fetcher
+  `nbk_survey`); TOTAL equals the scalar CAPACITY_UTILIZATION in every quarter.
+- **Not added:** a Eurobond country-risk spread. The one free daily price source found (the Deutsche
+  Börse web API) authenticates requests with a key scraped from the site's JavaScript — the pipeline
+  does not reproduce another site's client authentication.

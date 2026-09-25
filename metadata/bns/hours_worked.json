@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703017",
+  "indicator_id": "HOURS_WORKED",
+  "indicator_name": "Hours actually worked by employees, annual",
+  "description": "Фактически отработанное время работниками, годовое (региональный сегмент Taldau)",
+  "frequency": "annual",
+  "unit": "million man-hours",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million man-hours actually worked by employees in the year (enterprise survey, Taldau 703017, regional segment), national, 2000-2012 and 2017 onward. 2013-2016 exist only on a segment with about 8 % lower coverage and are deliberately not spliced in; use HOURS_WORKED_QUARTERLY from 2016.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "2000-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

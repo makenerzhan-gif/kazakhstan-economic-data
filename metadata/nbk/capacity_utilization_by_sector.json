@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=369",
+  "dataset_id": "formId=369,indicator_code=Capacity utilization - Weighted Average",
+  "indicator_id": "CAPACITY_UTILIZATION_BY_SECTOR",
+  "indicator_name": "Capacity utilisation by sector (NBK enterprise monitoring survey)",
+  "description": "Уровень загрузки производственных мощностей по отраслям (мониторинг предприятий НБ РК)",
+  "frequency": "quarterly",
+  "unit": "percent",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Weighted average across respondents, quarterly from 2016-Q2, dated like the scalar CAPACITY_UTILIZATION (item TOTAL = that series). Sectors mapped to ОКЭД letters; NRS = the NBK's pool of sections N, R, S.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "2016-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

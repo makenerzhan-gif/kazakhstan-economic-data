@@ -169,6 +169,16 @@ FETCHERS = {
     "PPI_YOY_MONTHLY": bns_fetchers.fetch_ppi_yoy_monthly,
     "IND_PROD_MONTHLY_YOY": bns_fetchers.fetch_ind_prod_monthly_yoy,
     "IND_PROD_MONTHLY_MOM": bns_fetchers.fetch_ind_prod_monthly_mom,
+    "FIXED_ASSETS_GROSS": bns_fetchers.fetch_fixed_assets_gross,
+    "FIXED_ASSETS_GROSS_START": bns_fetchers.fetch_fixed_assets_gross_start,
+    "FIXED_ASSETS_NET": bns_fetchers.fetch_fixed_assets_net,
+    "FIXED_ASSETS_COMMISSIONED": bns_fetchers.fetch_fixed_assets_commissioned,
+    "FIXED_ASSETS_DEPRECIATION": bns_fetchers.fetch_fixed_assets_depreciation,
+    "FIXED_ASSETS_WEAR": bns_fetchers.fetch_fixed_assets_wear,
+    "FIXED_ASSETS_RENEWAL": bns_fetchers.fetch_fixed_assets_renewal,
+    "HOURS_WORKED": bns_fetchers.fetch_hours_worked,
+    "HOURS_WORKED_QUARTERLY": bns_fetchers.fetch_hours_worked_quarterly,
+    "HOURS_PER_EMPLOYEE": bns_fetchers.fetch_hours_per_employee,
     "AVG_WAGE_1T_QUARTERLY": bns_fetchers.fetch_avg_wage_1t_quarterly,
     "CPI_YTD": bns_fetchers.fetch_cpi_ytd,
 }
@@ -275,6 +285,9 @@ INDICATOR_IDS = [
     "CPI_YOY",
     "CPI_YTD",
     "CPI_FOOD", "CPI_FOOD_YOY", "CPI_NONFOOD", "CPI_NONFOOD_YOY", "CPI_SERVICES", "CPI_SERVICES_YOY", "CPI_UTILITIES", "CPI_UTILITIES_YOY", "CPI_REGULATED_UTILITIES", "CPI_REGULATED_UTILITIES_YOY", "PPI_MONTHLY", "PPI_YOY_MONTHLY", "IND_PROD_MONTHLY_YOY", "IND_PROD_MONTHLY_MOM", "AVG_WAGE_1T_QUARTERLY",
+    "FIXED_ASSETS_GROSS", "FIXED_ASSETS_GROSS_START", "FIXED_ASSETS_NET", "FIXED_ASSETS_COMMISSIONED",
+    "FIXED_ASSETS_DEPRECIATION", "FIXED_ASSETS_WEAR", "FIXED_ASSETS_RENEWAL",
+    "HOURS_WORKED", "HOURS_WORKED_QUARTERLY", "HOURS_PER_EMPLOYEE",
 ]
 
 

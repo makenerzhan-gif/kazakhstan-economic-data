@@ -1,0 +1,18 @@
+{
+  "downloaded_at": "2026-09-25T19:05:35.468594",
+  "raw_file": "bns_fixed_assets_wear_by_section_children_2026-09-25.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "request_body": {
+    "p_parent_id": "741885",
+    "p_index_id": "703216",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "7",
+    "p_term_id": "741885",
+    "p_terms": "741880,741885,741927,455728",
+    "p_dicIds": "68,915,90,77",
+    "idx": "1",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}

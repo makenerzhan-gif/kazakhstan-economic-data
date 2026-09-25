@@ -24,6 +24,11 @@ def test_every_dataset_has_a_fetcher_and_a_known_layout():
                                     "year_blocks_items_regions_ytd", "month_rows", "region_blocks_months", "sector_columns")
         elif key == "bns_trade":
             assert ds["measure"] in ("usd", "tonnes") and ds["dictionary"] == "hs_export_groups" and ds["frequency"] == "monthly"
+        elif key == "taldau":
+            assert ds["index_id"] and ds["dic_ids"].count(",") == ds["terms"].count(",")
+            assert ds["terms"].split(",")[ds["expand_pos"]] == ds["expand_term"]
+        elif key == "nbk_survey":
+            assert ds["form_id"] and ds["indicator_code"] and ds["frequency"] == "quarterly"
         elif key == "gravity":
             assert ds["table"] in update_dims.gravity.TABLES and ds["frequency"] == "annual"
         elif ds["agency"] == "wb":

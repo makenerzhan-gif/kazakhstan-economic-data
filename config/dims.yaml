@@ -2114,3 +2114,116 @@ datasets:
     unit: "persons"
     category: international
     note: "Item = ISO3; 2000 onward."
+
+  # ---------------------------------------------------------------- Taldau breakdowns (added 2026-09-25)
+  # scripts/fetchers/taldau_dims.py: one dimension of a Taldau index opened into its children;
+  # the national total is kept as item TOTAL and the children are checked against it. For the
+  # production function behind potential output (capital and labour by ОКЭД section).
+  - id: FIXED_ASSETS_GROSS_BY_SECTION
+    name_ru: "Основные средства (материальные) по видам экономической деятельности, первоначальная стоимость на конец года"
+    name_en: "Tangible fixed assets by ОКЭД section, gross (original cost), end of year"
+    agency: bns
+    fetcher: taldau
+    index_id: "703214"
+    measure_id: "1"
+    dic_ids: "68,915,90,77,1161"
+    terms: "741880,741885,741927,455728,741908"
+    expand_pos: 1
+    expand_term: "741885"
+    dictionary: okved_sections
+    scale: 1000000000
+    min_items: 18
+    frequency: annual
+    unit: "billion KZT"
+    category: investment
+    note: "Taldau 703214, form 11, asset term 455728 (tangible), 2000 onward. Historical-cost book values incl. revaluations. National total = FIXED_ASSETS_GROSS."
+
+  - id: FIXED_ASSETS_NET_BY_SECTION
+    name_ru: "Основные средства (материальные) по видам экономической деятельности, балансовая стоимость на конец года"
+    name_en: "Tangible fixed assets by ОКЭД section, net (book value), end of year"
+    agency: bns
+    fetcher: taldau
+    index_id: "703215"
+    measure_id: "1"
+    dic_ids: "68,915,90,77,1161"
+    terms: "741880,741885,741927,455728,741908"
+    expand_pos: 1
+    expand_term: "741885"
+    dictionary: okved_sections
+    scale: 1000000000
+    min_items: 18
+    frequency: annual
+    unit: "billion KZT"
+    category: investment
+    note: "Taldau 703215, as FIXED_ASSETS_GROSS_BY_SECTION."
+
+  - id: FIXED_ASSETS_WEAR_BY_SECTION
+    name_ru: "Степень износа основных средств по видам экономической деятельности, %"
+    name_en: "Degree of wear of tangible fixed assets by ОКЭД section, percent"
+    agency: bns
+    fetcher: taldau
+    index_id: "703216"
+    measure_id: "7"
+    dic_ids: "68,915,90,77"
+    terms: "741880,741885,741927,455728"
+    expand_pos: 1
+    expand_term: "741885"
+    dictionary: okved_sections
+    sum_check: false
+    min_items: 18
+    frequency: annual
+    unit: "percent"
+    category: investment
+    note: "Taldau 703216. By section from 2008 (the national total from 2000)."
+
+  - id: FIXED_ASSETS_GROSS_BY_ASSET
+    name_ru: "Основные средства по видам (здания, сооружения, машины и оборудование …), первоначальная стоимость на конец года"
+    name_en: "Tangible fixed assets by asset type, gross (original cost), end of year"
+    agency: bns
+    fetcher: taldau
+    index_id: "703214"
+    measure_id: "1"
+    dic_ids: "68,915,90,77,1161"
+    terms: "741880,741885,741927,455728,741908"
+    expand_pos: 3
+    expand_term: "455728"
+    dictionary: from_table
+    scale: 1000000000
+    min_items: 4
+    frequency: annual
+    unit: "billion KZT"
+    category: investment
+    note: "Taldau 703214, children of term 455728 «Основные средства»: buildings, structures, machinery and equipment, other, biological assets. item_code = the Taldau term id. 2008 onward."
+
+  - id: EMPLOYED_BY_SECTION_LONG
+    name_ru: "Занятое население по видам экономической деятельности, 2001-2019 (Taldau)"
+    name_en: "Employed population by ОКЭД section, 2001-2019 (Taldau)"
+    agency: bns
+    fetcher: taldau
+    index_id: "702840"
+    measure_id: "23"
+    dic_ids: "67,915,749,576,1773,1793"
+    terms: "741880,741885,741917,741935,3805694,4197331"
+    expand_pos: 1
+    expand_term: "741885"
+    dictionary: okved_sections
+    scale: 1000
+    min_items: 18
+    frequency: annual
+    unit: "thousand persons"
+    category: labour
+    note: "Labour force survey, Taldau 702840 on the ОКЭД-2 (dictionary 915) segment, which stops in 2019; 2010-2019 equal EMPLOYED_BY_SECTION (within 0.1 thousand) except S: element 5831 folds T and U into S, Taldau keeps them apart (T to 2014, U 2012-2015; S+T+U = 5831's S every year). Adds 2001-2009. Break in 2014 (agriculture 2 074 → 1 605 thousand, survey reweighting)."
+
+  # ---------------------------------------------------------------- NBK enterprise survey by sector (added 2026-09-25)
+  - id: CAPACITY_UTILIZATION_BY_SECTOR
+    name_ru: "Уровень загрузки производственных мощностей по отраслям (мониторинг предприятий НБ РК)"
+    name_en: "Capacity utilisation by sector (NBK enterprise monitoring survey)"
+    agency: nbk
+    fetcher: nbk_survey
+    form_id: "369"
+    indicator_code: "Capacity utilization - Weighted Average"
+    min_items: 12
+    frequency: quarterly
+    unit: "percent"
+    category: monetary
+    note: "Weighted average across respondents, quarterly from 2016-Q2, dated like the scalar CAPACITY_UTILIZATION (item TOTAL = that series). Sectors mapped to ОКЭД letters; NRS = the NBK's pool of sections N, R, S."
