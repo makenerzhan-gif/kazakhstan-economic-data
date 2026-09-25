@@ -1,7 +1,7 @@
 {
   "source": "nbk",
-  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=51",
-  "dataset_id": "formId=51,row_code=2",
+  "source_url": "https://nationalbank.kz/ru/monetarybase/denezhnaya-baza-i-agregaty-shirokoy-denezhnoy-massy/records",
+  "dataset_id": "nbk-money-records/M0",
   "indicator_id": "M0",
   "indicator_name": "Cash in Circulation (M0)",
   "description": "Наличные деньги в обращении (M0)",
@@ -9,13 +9,13 @@
   "unit": "million KZT",
   "currency": "KZT",
   "geography": "Kazakhstan (national)",
-  "methodology": "report_date runs about one month ahead of the human page's column label -- not shifted here.",
+  "methodology": "Million KZT, M0 -- cash in circulation outside banks, stock at the end of the month, dated as at the first day of the next month; from 1994 (NBK page records). Replaced open-data form 51 on 2026-09-25, whose 2021-12..2022-12 values were wrong.",
   "publication_date": null,
-  "last_update_date": "2026-09-24",
-  "download_date": "2026-09-24",
-  "period_start": "2021-12-01",
-  "period_end": "2026-07-01",
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "1994-02-01",
+  "period_end": "2026-09-01",
   "next_update_date": null,
   "transformation": "level",
-  "revision_status": "original"
+  "revision_status": "revised"
 }

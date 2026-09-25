@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://nationalbank.kz/ru/exchangerates/ezhednevnye-oficialnye-rynochnye-kursy-valyut/report",
+  "dataset_id": "official-rates-report/RUB",
+  "indicator_id": "EXCHANGE_RATE_RUB",
+  "indicator_name": "Official RUB/KZT Exchange Rate",
+  "description": "Официальный курс тенге к российскому рублю (RUB/KZT)",
+  "frequency": "daily",
+  "unit": "KZT per RUB",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Official NBK RUB/KZT rate, KZT per one RUB, weekdays, from 1999-11 (the archive report's first rows, 1999-10-19..21, are malformed). Accumulated: each run reads the last 10129 days of the report and merges them with the processed history, which was loaded in full on 2026-09-25. No rate is published for 2023-07-28..2023-08-21.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "1999-11-17",
+  "period_end": "2026-09-25",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

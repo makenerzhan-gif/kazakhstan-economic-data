@@ -138,6 +138,39 @@ indicators:
     observation_type: point_in_time
     observation_evidence: "официальный курс на дату"
 
+  - id: EXCHANGE_RATE_EUR
+    name_ru: "Официальный курс тенге к евро (EUR/KZT)"
+    name_en: "Official EUR/KZT Exchange Rate"
+    agency: nbk
+    frequency: daily
+    unit: "KZT per EUR"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "официальный рыночный курс, устанавливаемый на дату"
+
+  - id: EXCHANGE_RATE_CNY
+    name_ru: "Официальный курс тенге к китайскому юаню (CNY/KZT)"
+    name_en: "Official CNY/KZT Exchange Rate"
+    agency: nbk
+    frequency: daily
+    unit: "KZT per CNY"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "официальный рыночный курс, устанавливаемый на дату"
+
+  - id: EXCHANGE_RATE_RUB
+    name_ru: "Официальный курс тенге к российскому рублю (RUB/KZT)"
+    name_en: "Official RUB/KZT Exchange Rate"
+    agency: nbk
+    frequency: daily
+    unit: "KZT per RUB"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "официальный рыночный курс, устанавливаемый на дату"
+
   - id: M2
     name_ru: "Денежная масса M2"
     name_en: "Money Supply M2"
@@ -1040,8 +1073,8 @@ indicators:
     date_basis_evidence: "форма 27: значение на 2026-08-01 уже было в файле, скачанном 2026-08-30, до конца августа -- это июль (аудит 2026-09-25)"
 
   - id: DEPOSIT_RATE
-    name_ru: "Средневзвешенная ставка вознаграждения по депозитам физических лиц (тенге)"
-    name_en: "Weighted Average Deposit Rate, Individuals (National Currency)"
+    name_ru: "Средневзвешенная ставка по привлечённым депозитам физических лиц (тенге)"
+    name_en: "Weighted Average Rate on New Deposits, Individuals (National Currency)"
     agency: nbk
     frequency: monthly
     unit: "%"
@@ -1049,6 +1082,32 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "название формы: 'Средневзвешенные ставки' — явно взвешенное среднее"
+
+  - id: LOAN_RATE_ISSUED_LEGAL_KZT
+    name_ru: "Средневзвешенная ставка по выданным кредитам БВУ юридическим лицам, тенге"
+    name_en: "Weighted Average Rate on Loans Issued by Banks to legal entities, KZT"
+    agency: nbk
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "форма 486 «Ставки вознаграждения по кредитам, выданным БВУ» — средневзвешенная за месяц"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 486: месяц m страницы/xlsx НБ РК = report_date m+1 API во всех 1332 из 1332 значений (исследование 2026-09-25)"
+
+  - id: LOAN_RATE_ISSUED_INDIVIDUAL_KZT
+    name_ru: "Средневзвешенная ставка по выданным кредитам БВУ физическим лицам (включая ИП), тенге"
+    name_en: "Weighted Average Rate on Loans Issued by Banks to individuals (incl. sole proprietors), KZT"
+    agency: nbk
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "форма 486 «Ставки вознаграждения по кредитам, выданным БВУ» — средневзвешенная за месяц"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 486: месяц m страницы/xlsx НБ РК = report_date m+1 API во всех 1332 из 1332 значений (исследование 2026-09-25)"
 
   - id: CONSTRUCTION
     name_ru: "Объем выполненных строительных работ (услуг)"
@@ -1180,15 +1239,81 @@ indicators:
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: TONIA
-    name_ru: "Индикатор TONIA (однодневный межбанковский своп)"
-    name_en: "TONIA Overnight Interbank Rate"
-    agency: nbk
+    name_ru: "Индикатор TONIA (однодневное репо с ГЦБ на KASE)"
+    name_en: "TONIA Overnight Repo Rate"
+    agency: kase
     frequency: daily
-    unit: "%"
+    unit: "% per annum"
     category: monetary
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "Tenge OverNight Index AVERAGE — усреднение в самом названии индекса"
+
+  - id: GS_YIELD_3M
+    name_ru: "Бескупонная доходность ГЦБ, 3 месяца (кривая KASE, среднее за месяц)"
+    name_en: "Government Securities Zero-Coupon Yield, 3M (KASE curve, monthly average)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднее за месяц по ежедневным кривым Нельсона-Сигеля KASE"
+
+  - id: GS_YIELD_6M
+    name_ru: "Бескупонная доходность ГЦБ, 6 месяцев (кривая KASE, среднее за месяц)"
+    name_en: "Government Securities Zero-Coupon Yield, 6M (KASE curve, monthly average)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднее за месяц по ежедневным кривым Нельсона-Сигеля KASE"
+
+  - id: GS_YIELD_1Y
+    name_ru: "Бескупонная доходность ГЦБ, 1 год (кривая KASE, среднее за месяц)"
+    name_en: "Government Securities Zero-Coupon Yield, 1Y (KASE curve, monthly average)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднее за месяц по ежедневным кривым Нельсона-Сигеля KASE"
+
+  - id: GS_YIELD_2Y
+    name_ru: "Бескупонная доходность ГЦБ, 2 года (кривая KASE, среднее за месяц)"
+    name_en: "Government Securities Zero-Coupon Yield, 2Y (KASE curve, monthly average)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднее за месяц по ежедневным кривым Нельсона-Сигеля KASE"
+
+  - id: GS_YIELD_5Y
+    name_ru: "Бескупонная доходность ГЦБ, 5 лет (кривая KASE, среднее за месяц)"
+    name_en: "Government Securities Zero-Coupon Yield, 5Y (KASE curve, monthly average)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднее за месяц по ежедневным кривым Нельсона-Сигеля KASE"
+
+  - id: GS_YIELD_10Y
+    name_ru: "Бескупонная доходность ГЦБ, 10 лет (кривая KASE, среднее за месяц)"
+    name_en: "Government Securities Zero-Coupon Yield, 10Y (KASE curve, monthly average)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднее за месяц по ежедневным кривым Нельсона-Сигеля KASE"
 
   - id: NATIONAL_FUND_TRANSFERS
     name_ru: "Трансферты из Национального фонда в республиканский бюджет"

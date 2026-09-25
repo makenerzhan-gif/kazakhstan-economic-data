@@ -28,20 +28,6 @@ issues:
       The BNS national row includes it: 848.3 Mt against 12-15 Mt in every other month.
     advice: Treat June 2026 export tonnage (FLAT_ROLLED and TOTAL) as missing. Value series (USD) are unaffected.
 
-  - id: nbk_money_2021_12_2022
-    kind: break
-    variable: M3
-    also: [M0, M1, M2, DEPOSITS_TOTAL]
-    observations:
-      - {date: "2021-12-01", value: 4500005.07139634}
-      - {date: "2022-12-01", value: 20574132.3513075}
-      - {date: "2023-01-01", value: 34295954.59776597}
-    evidence: >
-      NBK open-data form 51 (nbk_m2_2026-09-15.json): M3 4.50 trn KZT at 2021-12-01 (M0 3.34 trn), about
-      19-20 trn through 2022, then 34.3 trn at 2023-01-01 (+67% in one month). M3 - M0 = DEPOSITS_TOTAL
-      holds throughout, so the break is in the deposit component of the published form.
-    advice: Do not use M1-M3 or DEPOSITS_TOTAL before 2023-01 without checking the NBK monetary survey.
-
   - id: non_oil_deficit_2021
     kind: error
     variable: NON_OIL_BUDGET_DEFICIT

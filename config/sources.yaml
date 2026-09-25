@@ -4323,6 +4323,7 @@ agencies:
           WHEN the target moves. fetch_inflation_target.
       TONIA:
         status: confirmed
+        current_source: "2026-09-25: moved to agency kase (KASE TradingView feed, trade-dated, from 2001-09-02); this NBK widget is no longer fetched."
         download_url: "https://data.nationalbank.kz/api/v1/data/indicators"
         format: json
         notes: >
@@ -6868,3 +6869,78 @@ agencies:
         download_url: "https://www.eia.gov/outlooks/steo/xls/STEO_m.xlsx"
         format: xlsx_table
         notes: "Sheet '2tab', rows BREPUUS (Brent Spot Average) and WTIPUUS (WTI Spot Average), $/bbl, January 2022 – December 2027 in the September 2026 release; months after 202608 are forecasts."
+  kase:
+    name: "Kazakhstan Stock Exchange (KASE) — TONIA and the government securities yield curve"
+    website: "https://kase.kz"
+    status: confirmed
+    notes: >
+      Added 2026-09-25 as the eighth agency, for the monetary block of the QPM/BVAR models. kase.kz
+      was rebuilt as an Angular app; its indicator charts read a TradingView feed
+      (/tv-charts/indicators/history?symbol=SYM&resolution=D&from=0&to=<unix>, JSON t/c arrays,
+      t = UTC midnight of the trade date) and its yield-curve page links an .xls with the whole
+      daily history of the Nelson-Siegel parameters (/en/app-gateway/documents/curve/). Neither
+      needs authentication. The earlier note that kase.kz had no JSON surface (UPDATE_LOG,
+      2026-09-01) predates the rebuild. Verified live: TONIA dates are trade dates (working
+      Sunday 2025-01-05 present); the tenors computed from the file's parameters equal the curve
+      KASE plots from /api/indicators/gsec-curve/ within 0.001 pp on 2026-09-25.
+    access_type: json + xls
+    protection: none
+    endpoints:
+      TONIA:
+        status: confirmed
+        download_url: "https://kase.kz/tv-charts/indicators/history?symbol=TONIA&resolution=D&from=0"
+        format: json
+        notes: >
+          2026-09-25. Daily from 2001-09-02 by trade date, % per annum. Replaces the NBK widget
+          (nationalbank.kz indicators, 2026-02-24 onward, publication-dated with weekends
+          filled). Other money-market series on the same feed, not connected: SWAP_1D/2D (from
+          2014), TWINA and MM_INDEX (from 2010), TRION (from 2020), KZGB_Ys/Ym/Yl (from 2022).
+          fetch_tonia.
+      GS_YIELD_3M:
+        status: confirmed
+        download_url: "https://kase.kz/en/app-gateway/documents/curve/"
+        format: xls
+        notes: >
+          2026-09-25. Zero-coupon government securities yield at 3M: monthly average of the
+          daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
+          fetch_gs_yield_3m.
+      GS_YIELD_6M:
+        status: confirmed
+        download_url: "https://kase.kz/en/app-gateway/documents/curve/"
+        format: xls
+        notes: >
+          2026-09-25. Zero-coupon government securities yield at 6M: monthly average of the
+          daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
+          fetch_gs_yield_6m.
+      GS_YIELD_1Y:
+        status: confirmed
+        download_url: "https://kase.kz/en/app-gateway/documents/curve/"
+        format: xls
+        notes: >
+          2026-09-25. Zero-coupon government securities yield at 1Y: monthly average of the
+          daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
+          fetch_gs_yield_1y.
+      GS_YIELD_2Y:
+        status: confirmed
+        download_url: "https://kase.kz/en/app-gateway/documents/curve/"
+        format: xls
+        notes: >
+          2026-09-25. Zero-coupon government securities yield at 2Y: monthly average of the
+          daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
+          fetch_gs_yield_2y.
+      GS_YIELD_5Y:
+        status: confirmed
+        download_url: "https://kase.kz/en/app-gateway/documents/curve/"
+        format: xls
+        notes: >
+          2026-09-25. Zero-coupon government securities yield at 5Y: monthly average of the
+          daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
+          fetch_gs_yield_5y.
+      GS_YIELD_10Y:
+        status: confirmed
+        download_url: "https://kase.kz/en/app-gateway/documents/curve/"
+        format: xls
+        notes: >
+          2026-09-25. Zero-coupon government securities yield at 10Y: monthly average of the
+          daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
+          fetch_gs_yield_10y.

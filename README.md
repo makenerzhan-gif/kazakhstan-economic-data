@@ -1,21 +1,22 @@
 # Kazakhstan Economic Data Pipeline
 
 Automated collection, validation, processing, and versioning of official
-Kazakhstan macroeconomic data from seven sources — Bureau of National
+Kazakhstan macroeconomic data from eight sources — Bureau of National
 Statistics (БНС), National Bank of Kazakhstan (НБ РК), Ministry of Finance
 (Минфин), the Agency for Regulation and Development of the Financial Market
-(АРРФР), the IMF, and, for world commodity prices, the World Bank (Pink Sheet,
+(АРРФР), the Kazakhstan Stock Exchange (KASE: TONIA, the government securities
+yield curve), the IMF, and, for world commodity prices, the World Bank (Pink Sheet,
 Commodity Markets Outlook) and the U.S. EIA (Short-Term Energy Outlook) — into a
 unified dataset, with a manual bridge into a Claude Project for analysis.
 
 ```
-БНС + НБ РК + Минфин + АРРФР + IMF + World Bank + EIA → RAW → VALIDATION → PROCESSED →
+БНС + НБ РК + Минфин + АРРФР + KASE + IMF + World Bank + EIA → RAW → VALIDATION → PROCESSED →
 METADATA → UNIFIED DATASET → GitHub → (manual "Sync now") → Claude Project "Экономика Казахстана"
 ```
 
 ## Scope
 
-451 indicators (see `config/indicators.yaml`), all connected end-to-end
+462 indicators (see `config/indicators.yaml`), all connected end-to-end
 against live official sources — past the original 18-indicator pilot and its
 100-150 indicator target (MASTER TASK section 17). No econometric modeling
 yet; see `project_knowledge/UPDATE_LOG.md` for the dated history of how the

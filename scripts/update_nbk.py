@@ -20,6 +20,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 FETCHERS = {
     "BASE_RATE": nbk_fetchers.fetch_base_rate,
     "EXCHANGE_RATE": nbk_fetchers.fetch_exchange_rate_usd,
+    "EXCHANGE_RATE_EUR": nbk_fetchers.fetch_exchange_rate_eur,
+    "EXCHANGE_RATE_CNY": nbk_fetchers.fetch_exchange_rate_cny,
+    "EXCHANGE_RATE_RUB": nbk_fetchers.fetch_exchange_rate_rub,
     "M2": nbk_fetchers.fetch_m2,
     "M3": nbk_fetchers.fetch_m3,
     "MONETARY_BASE": nbk_fetchers.fetch_monetary_base,
@@ -39,7 +42,8 @@ FETCHERS = {
     "EXTERNAL_DEBT": nbk_fetchers.fetch_external_debt,
     "LENDING_RATE": nbk_fetchers.fetch_lending_rate,
     "DEPOSIT_RATE": nbk_fetchers.fetch_deposit_rate,
-    "TONIA": nbk_fetchers.fetch_tonia,
+    "LOAN_RATE_ISSUED_LEGAL_KZT": nbk_fetchers.fetch_loan_rate_issued_legal_kzt,
+    "LOAN_RATE_ISSUED_INDIVIDUAL_KZT": nbk_fetchers.fetch_loan_rate_issued_individual_kzt,
     "NATIONAL_FUND_TRANSFERS": nbk_fetchers.fetch_national_fund_transfers,
     "KASE_USD_VOLUME": nbk_fetchers.fetch_kase_usd_volume,
     "REMITTANCES_SENT": nbk_fetchers.fetch_remittances_sent,
@@ -168,10 +172,10 @@ FETCHERS = {
 }
 
 INDICATOR_IDS = [
-    "BASE_RATE", "EXCHANGE_RATE", "M2", "M3", "MONETARY_BASE", "M0", "M1",
+    "BASE_RATE", "EXCHANGE_RATE", "EXCHANGE_RATE_EUR", "EXCHANGE_RATE_CNY", "EXCHANGE_RATE_RUB", "M2", "M3", "MONETARY_BASE", "M0", "M1",
     "FX_RESERVES", "NATIONAL_FUND_ASSETS", "REER", "NEER", "DEPOSITS_TOTAL",
-    "EXTERNAL_DEBT", "LENDING_RATE", "DEPOSIT_RATE",
-    "TONIA", "NATIONAL_FUND_TRANSFERS", "KASE_USD_VOLUME",
+    "EXTERNAL_DEBT", "LENDING_RATE", "DEPOSIT_RATE", "LOAN_RATE_ISSUED_LEGAL_KZT", "LOAN_RATE_ISSUED_INDIVIDUAL_KZT",
+    "NATIONAL_FUND_TRANSFERS", "KASE_USD_VOLUME",
     "REMITTANCES_SENT", "REMITTANCES_RECEIVED",
     "INFLATION_EXPECTATIONS", "BUSINESS_ACTIVITY_INDEX",
     "NON_CASH_PAYMENTS_SHARE", "CAPITAL_ADEQUACY_RATIO", "NPL_RATIO",

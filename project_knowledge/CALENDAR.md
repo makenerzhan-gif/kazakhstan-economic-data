@@ -77,7 +77,7 @@
 | — | `TOTAL_CONSUMPTION_EXPENDITURE` | bns | 2026-09-24 (—) | «ВВП_расходы_МКИ» (final_consumption) |
 | — | `EIA_STEO_PRICES` | eia | 2026-09-24 (September 2026) | «Внешние и внутренние факторы» (brent_eia_forecast) |
 | — | `IMF_PPP_EXCHANGE_RATE` | imf | 2026-09-24 (—) | «Внешние и внутренние факторы» (ppp_exchange_rate) |
-| — | `EXCHANGE_RATE` | nbk | 2026-09-24 (—) | «Внешние и внутренние факторы» (exchange_rate) |
+| — | `EXCHANGE_RATE` | nbk | 2026-09-25 (—) | «Внешние и внутренние факторы» (exchange_rate) |
 | — | `WB_COMMODITY_INDEX_FORECASTS` | wb | 2026-09-24 (April 28, 2026) | «Внешние и внутренние факторы» (wb_index_forecasts) |
 | — | `WB_COMMODITY_INDICES_ANNUAL` | wb | 2026-09-24 (September 02, 2026) | «Внешние и внутренние факторы» (wb_indices_history) |
 | — | `WB_COMMODITY_PRICES_ANNUAL` | wb | 2026-09-24 (September 02, 2026) | «Внешние и внутренние факторы» (wb_prices_history, brent_reference_control) |

@@ -4753,3 +4753,27 @@ and checked against BNS's releases before wiring in. 451 indicators.
   the same footnote trap as the 2015 labour tables; the validator's duplicate-date check caught it.
 - **AVG_WAGE_1T_QUARTERLY** from 2015Q1 (element 5674, form 1-Т) — a different coverage from
   AVG_WAGE_QUARTERLY (2026Q1: 461 486 against 445 068 KZT), so a separate series.
+
+## 2026-09-25 — model data, step 1 continued: KASE as the eighth agency, long NBK histories
+
+Sources found live and checked before wiring in (research notes in the PR); 462 indicators.
+- **KASE (new agency, `scripts/fetchers/kase.py`, `update_kase.py`).** kase.kz now has JSON/xls
+  surfaces. **TONIA** moved here from the NBK widget: daily by TRADE date from 2001-09-02 (was
+  2026-02-24 onward, publication-dated, weekends filled). **GS_YIELD_3M/6M/1Y/2Y/5Y/10Y**: monthly
+  averages of KASE's daily Nelson-Siegel zero-coupon curves from 2019-11; the tenors computed from
+  the file's parameters equal the curve KASE plots within 0.001 pp.
+- **BASE_RATE**: all 91 decisions from 2015-09-02 — the endpoint needs both `from` and `to`; with
+  one or none it serves the last 15.
+- **EXCHANGE_RATE** from 1999-11 (was 2021-05) and new **EXCHANGE_RATE_EUR / _CNY / _RUB**: the NBK
+  archive report (one request, all currencies). The 1 386 accumulated USD points are unchanged; the
+  archive also carries 07.05.2021 correctly. Each run now reads the last 45 days and accumulates. The
+  report's first rows (1999-10-19..21) are malformed and dropped. The isolated-spike guard now looks
+  only at the dollar's last 60 days: over the history it fired on 2015-08-25, which is real.
+- **M0-M3, MONETARY_BASE, DEPOSITS_TOTAL** from 1994 (was 2021-12): NBK page records. This also
+  **fixes the 2021-12..2022-12 values** that open-data form 51 got wrong (M3 4.5 trn → 28.7 trn); the
+  entry is gone from `config/source_issues.yaml`. From 2023 the two sources agree on every month.
+- **DEPOSIT_RATE** from 1996-12 (page records) — and one month earlier than before: form 268 stamps
+  month m at m+1 like the other flows (42 of 44 months equal after the shift), which the audit had
+  flagged as unproven.
+- **LOAN_RATE_ISSUED_LEGAL_KZT / _INDIVIDUAL_KZT** from 1997-01 (form 486, `date_basis`); the API
+  lacks a few months in 2007-09 and 2014.
