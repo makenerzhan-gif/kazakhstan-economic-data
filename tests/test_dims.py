@@ -25,7 +25,8 @@ def test_every_dataset_has_a_fetcher_and_a_known_layout():
         elif key == "bns_trade":
             assert ds["measure"] in ("usd", "tonnes") and ds["dictionary"] == "hs_export_groups" and ds["frequency"] == "monthly"
         elif ds["agency"] == "wb":
-            assert ds["table"] in ("annual_prices", "annual_indices", "forecast_prices", "forecast_indices")
+            assert ds["table"] in ("annual_prices", "annual_indices", "monthly_prices", "monthly_indices",
+                                   "forecast_prices", "forecast_indices")
             assert ds["fallback_url"].startswith("https://thedocs.worldbank.org/") and ds["sheet"]
         elif ds["agency"] == "eia":
             assert ds["sheet"] and ds["items"]
