@@ -4849,3 +4849,28 @@ Production-function inputs; 490 indicators. All checked live against BNS publica
 - **Not added:** a Eurobond country-risk spread. The one free daily price source found (the Deutsche
   Börse web API) authenticates requests with a key scraped from the site's JavaScript — the pipeline
   does not reproduce another site's client authentication.
+
+## 2026-09-25 — model data, steps 4, 6, 7: nowcasting, МОБ/CGE, sovereign rating
+
+497 indicators. Checked live.
+- **Nowcasting — monthly state-budget taxes, 2018-01 to 2026-07** (Minfin Statistical Bulletin,
+  'табл 3', million KZT, year-to-date): STATE_TAX_REVENUE_YTD, STATE_CIT_YTD, STATE_PIT_YTD,
+  STATE_SOCIAL_TAX_YTD, STATE_VAT_YTD, STATE_EXCISE_YTD (+ December 2016-17). The bulletin series
+  so far read only the listing's first page (to 2025) and missed the older «Statistical Bulletin»
+  titles; now all pages are read (91 editions) and the period of every column is read from its
+  header across three layouts (discrete quarters 2020-21 are cumulated). Only 2026-04 is missing
+  (no edition). Tax 2024 = 19 700 517 mln KZT, equal to KGD's figure to the thousand. The archive
+  keeps each edition's 'табл 3' as JSON rather than the ~70 MB of workbooks.
+- **Ratings:** WGI_GE/RQ/RL/CC/VA/PV (Worldwide Governance Indicators, estimate, all economies,
+  1996-2024; the codes changed to GOV_WGI_*.EST in the 2025 revision; KAZ 2024: GE 0.15, RL −0.38,
+  VA −0.82); EXTERNAL_DEBT_SERVICE_SCHEDULE (NBK form 346: principal and interest due by sector and
+  horizon; principal sums to EXTERNAL_DEBT — 182 778 mln USD at 2026-04-01 — enforced; 43.0 bn due
+  within 12 months incl. on demand; the API keeps two vintages, older ones are carried forward);
+  GG_INTEREST (general government interest, GFS row 24, quarterly). No machine-readable source of
+  the rating history itself was found.
+- **МОБ / CGE (CAEM):** `scripts/build_io_tables.py` → `data/reference/io/`: symmetric input-output
+  tables (68 products, 10 tables incl. A and the Leontief inverse) and supply-use tables (125 × 72)
+  for 2021-2024, long gzip CSV. L = (I − A)⁻¹ checked on every build (≤ 4e-15). BNS's A divides by
+  output + imports. Run after each December release; not part of the daily run.
+- **Not done yet:** household income/expenditure by decile (BNS 18651 gives decile income shares;
+  Taldau expenditure by decile has only D1/D10 before 2024).

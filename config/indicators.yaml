@@ -4017,6 +4017,89 @@ indicators:
     observation_type: period_total
     observation_evidence: "ГФС: налоговые поступления за квартал"
 
+  - id: GG_INTEREST
+    name_ru: "Процентные расходы сектора государственного управления (МВФ методология)"
+    name_en: "General Government Interest Expense (IMF GFS Methodology)"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "ГФС: строка 24 «Interest», за квартал"
+
+  - id: STATE_TAX_REVENUE_YTD
+    name_ru: "Налоговые поступления государственного бюджета, нарастающим итогом с начала года, помесячно"
+    name_en: "State budget tax receipts, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Статбюллетень МФ, «табл 3», январь–месяц отчётного года; все страницы списка, с 2020"
+
+  - id: STATE_CIT_YTD
+    name_ru: "Корпоративный подоходный налог (государственный бюджет), нарастающим итогом с начала года, помесячно"
+    name_en: "State budget corporate income tax, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Статбюллетень МФ, «табл 3», январь–месяц отчётного года; все страницы списка, с 2020"
+
+  - id: STATE_PIT_YTD
+    name_ru: "Индивидуальный подоходный налог (государственный бюджет), нарастающим итогом с начала года, помесячно"
+    name_en: "State budget individual income tax, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Статбюллетень МФ, «табл 3», январь–месяц отчётного года; все страницы списка, с 2020"
+
+  - id: STATE_SOCIAL_TAX_YTD
+    name_ru: "Социальный налог (государственный бюджет), нарастающим итогом с начала года, помесячно"
+    name_en: "State budget social tax, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Статбюллетень МФ, «табл 3», январь–месяц отчётного года; все страницы списка, с 2020"
+
+  - id: STATE_VAT_YTD
+    name_ru: "Налог на добавленную стоимость (государственный бюджет), нарастающим итогом с начала года, помесячно"
+    name_en: "State budget value added tax, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Статбюллетень МФ, «табл 3», январь–месяц отчётного года; все страницы списка, с 2020"
+
+  - id: STATE_EXCISE_YTD
+    name_ru: "Акцизы (государственный бюджет), нарастающим итогом с начала года, помесячно"
+    name_en: "State budget excise duties, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Статбюллетень МФ, «табл 3», январь–месяц отчётного года; все страницы списка, с 2020"
+
   - id: GG_SOCIAL_CONTRIBUTIONS
     name_ru: "Социальные отчисления сектора государственного управления (МВФ методология)"
     name_en: "General Government Social Contributions (IMF GFS Methodology)"

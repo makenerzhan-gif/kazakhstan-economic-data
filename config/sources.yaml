@@ -5176,6 +5176,10 @@ agencies:
         notes: >
           2026-08-30. Same document set and mechanism as GOV_DEBT_DOMESTIC -- see its notes
           for the full explanation, including the GOV_DEBT scope caveat. fetch_gov_debt_external.
+      GG_INTEREST:
+        status: confirmed
+        format: xlsx_table
+        notes: "2026-09-25. Same 'General government data' document as GG_TAXES, row code 24 ('Interest'), billion KZT converted to million."
       GG_TAXES:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
@@ -5698,6 +5702,19 @@ agencies:
           (republican + local combined) -- broader scope than GOV_REVENUE (republican-only, from
           the separate "Dynamics of execution" file). Verified live: 24,917,246.14 (2023) to
           29,871,047.82 (2025) million KZT. fetch_state_budget_revenue.
+      STATE_TAX_REVENUE_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        format: xlsx_table
+        notes: >
+          2026-09-25. Every page of the listing (page=N, size=100; X-Has-Next / X-Next-Pages headers)
+          and every title matching /statistical bulletin|бюллетен/i -- 91 editions from 2019-10.
+          Sheet 'табл 3', rows by Kazakh label: «Салықтық түсімдер» (total), корпоративтік/корпорациялық
+          табыс салығы, жеке табыс салығы, әлеуметтік салық, қосылған құн салығы, акциздер. Column periods
+          from the header text: 'YYYY ж. есеп' (annual), 'жылдық/годовой' and 'қантар-X/январь-X' under the
+          prior year, 'YYYY ж. қантар-X есеп/январь-X отчет' (current YTD), 'N-тоқсан' (discrete quarters,
+          2020 - mid 2021). Also STATE_CIT_YTD, STATE_PIT_YTD, STATE_SOCIAL_TAX_YTD, STATE_VAT_YTD,
+          STATE_EXCISE_YTD. Cross-check: KGD «Динамика поступлений налогов» 2024 = 19 700 516 947 thousand.
       STATE_BUDGET_REVENUE_YTD:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"

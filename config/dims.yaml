@@ -2227,3 +2227,119 @@ datasets:
     unit: "percent"
     category: monetary
     note: "Weighted average across respondents, quarterly from 2016-Q2, dated like the scalar CAPACITY_UTILIZATION (item TOTAL = that series). Sectors mapped to ОКЭД letters; NRS = the NBK's pool of sections N, R, S."
+
+  # ---------------------------------------------------------------- Worldwide Governance Indicators (added 2026-09-25)
+  # For sovereign-rating models: the institutional-strength inputs of the agencies' scorecards.
+  # World Bank API v2, source=3; every economy, so a cross-country panel can be estimated.
+  - id: WGI_GE
+    name_ru: "WGI: Эффективность государственного управления (оценка, от -2,5 до +2,5), страны мира"
+    name_en: "WGI: Government Effectiveness, governance estimate (approx. -2.5 to +2.5), all economies"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: GOV_WGI_GE.EST
+    wb_source: 3
+    first_year: 1996
+    region: world
+    country: WLD
+    geography: "All economies (WGI; aggregates excluded)"
+    frequency: annual
+    unit: "governance estimate, standard normal units (approx. -2.5 to +2.5)"
+    category: international
+    note: "Worldwide Governance Indicators (Kaufmann-Kraay), Government Effectiveness. Item = ISO3. Biennial 1996-2002 (1996, 1998, 2000), annual from 2002. Estimates are standardised each year across countries, so a level change partly reflects the other countries."
+
+  - id: WGI_RQ
+    name_ru: "WGI: Качество регулирования (оценка, от -2,5 до +2,5), страны мира"
+    name_en: "WGI: Regulatory Quality, governance estimate (approx. -2.5 to +2.5), all economies"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: GOV_WGI_RQ.EST
+    wb_source: 3
+    first_year: 1996
+    region: world
+    country: WLD
+    geography: "All economies (WGI; aggregates excluded)"
+    frequency: annual
+    unit: "governance estimate, standard normal units (approx. -2.5 to +2.5)"
+    category: international
+    note: "Worldwide Governance Indicators (Kaufmann-Kraay), Regulatory Quality. Item = ISO3. Biennial 1996-2002 (1996, 1998, 2000), annual from 2002. Estimates are standardised each year across countries, so a level change partly reflects the other countries."
+
+  - id: WGI_RL
+    name_ru: "WGI: Верховенство закона (оценка, от -2,5 до +2,5), страны мира"
+    name_en: "WGI: Rule of Law, governance estimate (approx. -2.5 to +2.5), all economies"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: GOV_WGI_RL.EST
+    wb_source: 3
+    first_year: 1996
+    region: world
+    country: WLD
+    geography: "All economies (WGI; aggregates excluded)"
+    frequency: annual
+    unit: "governance estimate, standard normal units (approx. -2.5 to +2.5)"
+    category: international
+    note: "Worldwide Governance Indicators (Kaufmann-Kraay), Rule of Law. Item = ISO3. Biennial 1996-2002 (1996, 1998, 2000), annual from 2002. Estimates are standardised each year across countries, so a level change partly reflects the other countries."
+
+  - id: WGI_CC
+    name_ru: "WGI: Контроль коррупции (оценка, от -2,5 до +2,5), страны мира"
+    name_en: "WGI: Control of Corruption, governance estimate (approx. -2.5 to +2.5), all economies"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: GOV_WGI_CC.EST
+    wb_source: 3
+    first_year: 1996
+    region: world
+    country: WLD
+    geography: "All economies (WGI; aggregates excluded)"
+    frequency: annual
+    unit: "governance estimate, standard normal units (approx. -2.5 to +2.5)"
+    category: international
+    note: "Worldwide Governance Indicators (Kaufmann-Kraay), Control of Corruption. Item = ISO3. Biennial 1996-2002 (1996, 1998, 2000), annual from 2002. Estimates are standardised each year across countries, so a level change partly reflects the other countries."
+
+  - id: WGI_VA
+    name_ru: "WGI: Право голоса и подотчётность (оценка, от -2,5 до +2,5), страны мира"
+    name_en: "WGI: Voice and Accountability, governance estimate (approx. -2.5 to +2.5), all economies"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: GOV_WGI_VA.EST
+    wb_source: 3
+    first_year: 1996
+    region: world
+    country: WLD
+    geography: "All economies (WGI; aggregates excluded)"
+    frequency: annual
+    unit: "governance estimate, standard normal units (approx. -2.5 to +2.5)"
+    category: international
+    note: "Worldwide Governance Indicators (Kaufmann-Kraay), Voice and Accountability. Item = ISO3. Biennial 1996-2002 (1996, 1998, 2000), annual from 2002. Estimates are standardised each year across countries, so a level change partly reflects the other countries."
+
+  - id: WGI_PV
+    name_ru: "WGI: Политическая стабильность и отсутствие насилия (оценка, от -2,5 до +2,5), страны мира"
+    name_en: "WGI: Political Stability and Absence of Violence/Terrorism, governance estimate (approx. -2.5 to +2.5), all economies"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: GOV_WGI_PV.EST
+    wb_source: 3
+    first_year: 1996
+    region: world
+    country: WLD
+    geography: "All economies (WGI; aggregates excluded)"
+    frequency: annual
+    unit: "governance estimate, standard normal units (approx. -2.5 to +2.5)"
+    category: international
+    note: "Worldwide Governance Indicators (Kaufmann-Kraay), Political Stability and Absence of Violence/Terrorism. Item = ISO3. Biennial 1996-2002 (1996, 1998, 2000), annual from 2002. Estimates are standardised each year across countries, so a level change partly reflects the other countries."
+
+  - id: EXTERNAL_DEBT_SERVICE_SCHEDULE
+    name_ru: "График погашения внешнего долга РК (основной долг и проценты, прогноз) по секторам и срокам"
+    name_en: "External debt service schedule (principal and interest, forecast) by sector and horizon"
+    agency: nbk
+    fetcher: nbk_debt_schedule
+    form_id: "346"
+    frequency: quarterly
+    unit: "million USD"
+    category: external
+    note: "NBK formId=346, as at report_date (the first day of the quarter after the reference quarter, like EXTERNAL_DEBT). Item = SECTOR_TYPE_HORIZON: sectors GG, CB, BANKS, OTHER, FDI_LOANS; PRINCIPAL/INTEREST; ON_DEMAND, M01_03 … M22_24, AFTER_2Y, NO_INFO; MEMO_GOODS_* = repayment in goods (a memo item). Principal rows sum to EXTERNAL_DEBT at each date (enforced)."

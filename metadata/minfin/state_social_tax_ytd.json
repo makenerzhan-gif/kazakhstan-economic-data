@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448",
+  "dataset_id": "gov.kz-statistical-bulletin,sheet=табл 3,all pages",
+  "indicator_id": "STATE_SOCIAL_TAX_YTD",
+  "indicator_name": "State budget social tax, year-to-date, monthly",
+  "description": "Социальный налог (государственный бюджет), нарастающим итогом с начала года, помесячно",
+  "frequency": "monthly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT, STATE budget (republican plus local) social tax, YEAR-TO-DATE cumulative (January to the month dated), from every Statistical Bulletin on every page of the listing (91 of 91 parsed). The latest edition wins where editions differ (10 revised points across the six series). Where an edition gave discrete quarters (2020 - mid 2021) they are cumulated to March/June/September/December. Months no edition covers are missing, not interpolated.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "2016-12-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

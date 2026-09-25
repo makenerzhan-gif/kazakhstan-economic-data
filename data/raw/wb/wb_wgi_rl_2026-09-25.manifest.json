@@ -1,0 +1,5 @@
+{
+  "downloaded_at": "2026-09-25T19:21:30.700274",
+  "raw_file": "wb_wgi_rl_2026-09-25.json",
+  "source_url": "https://api.worldbank.org/v2/country/all/indicator/GOV_WGI_RL.EST?format=json&per_page=20000&date=1996:2026&source=3"
+}

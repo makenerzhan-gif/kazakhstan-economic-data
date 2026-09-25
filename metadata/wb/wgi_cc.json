@@ -1,0 +1,21 @@
+{
+  "source": "wb",
+  "source_url": "https://api.worldbank.org/v2/country/all/indicator/GOV_WGI_CC.EST?format=json&per_page=20000&date=1996:2026&source=3",
+  "dataset_id": "wdi/GOV_WGI_CC.EST",
+  "indicator_id": "WGI_CC",
+  "indicator_name": "WGI: Control of Corruption, governance estimate (approx. -2.5 to +2.5), all economies",
+  "description": "WGI: Контроль коррупции (оценка, от -2,5 до +2,5), страны мира",
+  "frequency": "annual",
+  "unit": "governance estimate, standard normal units (approx. -2.5 to +2.5)",
+  "currency": "",
+  "geography": "All economies (WGI; aggregates excluded)",
+  "methodology": "Worldwide Governance Indicators (Kaufmann-Kraay), Control of Corruption. Item = ISO3. Biennial 1996-2002 (1996, 1998, 2000), annual from 2002. Estimates are standardised each year across countries, so a level change partly reflects the other countries. WDI last updated 2026-03-18.",
+  "publication_date": "2026-03-18",
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "1996-12-31",
+  "period_end": "2024-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

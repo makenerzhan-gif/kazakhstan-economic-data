@@ -16,6 +16,8 @@ by partner country, partner GDP and population, tariffs. Items are ISO 3166 alph
 - World Bank WDI API v2: GDP (current and constant 2015 USD) and population for every
   economy (aggregates dropped), 2000 onward.
 - WITS TradeStats-Tariff: Kazakhstan's MFN and applied tariff averages, overall and by partner.
+- The same World Bank API with source=3 serves the Worldwide Governance Indicators (rating
+  models; codes GOV_WGI_*.EST since the 2025 WGI revision -- the old GE.EST answer error 120).
 """
 from __future__ import annotations
 
@@ -273,14 +275,16 @@ def fetch_wits_tariffs(ds: dict) -> tuple[list[dict], dict]:
 
 # ---------------------------------------------------------------- World Bank WDI
 WDI_URL = ("https://api.worldbank.org/v2/country/all/indicator/{indicator}?format=json&per_page=20000"
-           "&date=2000:{year}")
+           "&date={first}:{year}")
 WDI_COUNTRIES_URL = "https://api.worldbank.org/v2/country?format=json&per_page=400"
 
 
 def fetch_wdi(ds: dict) -> tuple[list[dict], dict]:
     countries = json.loads(_get(WDI_COUNTRIES_URL))[1]
     economies = {c["id"]: c["name"] for c in countries if c.get("region", {}).get("value") != "Aggregates"}
-    url = WDI_URL.format(indicator=ds["indicator"], year=date.today().year)
+    url = WDI_URL.format(indicator=ds["indicator"], first=ds.get("first_year", 2000), year=date.today().year)
+    if ds.get("wb_source"):                      # e.g. 3 = Worldwide Governance Indicators (codes GOV_WGI_*)
+        url += f"&source={ds['wb_source']}"
     content = _get(url)
     _save_raw("wb", ds["id"], content, "json", {"source_url": url})
     meta, rows = json.loads(content)

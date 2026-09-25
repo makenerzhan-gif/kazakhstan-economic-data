@@ -14,3 +14,13 @@ same ISO3 codes.
 Kazakhstan's EAEU membership (from 2015; customs union with Russia and Belarus from
 2010) shows up in `fta_wto`/`rta_type`. Note that CEPII codes `sibling_ever = 0` for
 KAZ–RUS because Russia was the hegemon itself; use `col_dep_ever` for that pair.
+
+## io/
+
+BNS symmetric input-output tables («Затраты - Выпуск», 68 products, sheets 1–10 incl. the
+direct-requirements matrix A and the Leontief inverse) and supply-use tables («Ресурсы -
+Использование», 125 products × 72 industries, sheets 1–8), 2021–2024, one long gzip CSV per
+kind and year (`table, row_no, row_code, row_name, col_no, col_code, col_name, value`;
+thousand KZT, coefficients in tables 9–10). Built by `scripts/build_io_tables.py`, which
+also writes `editions.csv` (element id, publication date, the L = (I − A)⁻¹ check). BNS's A is
+flows divided by total resources at basic prices (output + imports), not by output.

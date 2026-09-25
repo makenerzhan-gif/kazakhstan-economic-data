@@ -23,7 +23,7 @@ from fetchers import bns_dims, bns_trade, eia, gravity, nbk_dims, taldau_dims, w
 # Keyed by a dataset's `fetcher` when it names one, else by its agency.
 AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb.fetch, "eia": eia.fetch,
                    "gravity": gravity.fetch, "taldau": taldau_dims.fetch,
-                   "nbk_survey": nbk_dims.fetch}
+                   "nbk_survey": nbk_dims.fetch, "nbk_debt_schedule": nbk_dims.fetch_debt_schedule}
 METHODOLOGY = {"bns": "Bureau of National Statistics official methodology",
                "wb": "World Bank Commodity Markets (Pink Sheet / Commodity Markets Outlook), nominal US dollars",
                "eia": "U.S. EIA Short-Term Energy Outlook, monthly release",
