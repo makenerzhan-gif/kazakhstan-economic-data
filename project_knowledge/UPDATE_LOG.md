@@ -4791,3 +4791,16 @@ New agencies `cbr`, `eec`, `fred` (one updater, `update_foreign.py`, `scripts/fe
   US_CPI (SA), US_GDP_REAL (chained 2017 USD, SAAR).
 - **World prices:** item-level WB_COMMODITY_PRICES_MONTHLY (71 series) and
   WB_COMMODITY_INDICES_MONTHLY (16) from 1960-01, from the monthly Pink Sheet.
+
+## 2026-09-25 — model data, step 2 (external block), part 2: China, euro area, EAEU, foreign demand
+
+New agencies `nbs`, `ecb`, `derived`; 480 indicators. Checked live against known values.
+- **China:** CN_CPI_YOY (IMF CPI, % y/y, from 1994 — FRED's China series stopped in 2023-25);
+  CN_GDP_REAL_YOY (NBS, single-quarter y/y, from 1993 — via the new data.stats.gov.cn JSON endpoint,
+  the old easyquery API is behind a WAF; the IMF's QNEA volume for China breaks its base in 2026).
+- **Euro area (ECB Data Portal):** EA_HICP_YOY (dataflow HICP — ICP ended at 2025-12), EA_GDP_REAL
+  (chain-linked 2015, SCA, EA20), EA_DEPOSIT_RATE (69 changes from 1999).
+- **EAEU:** BY_CPI_YOY, KG_CPI_YOY from the same EEC file as Russia.
+- **FOREIGN_DEMAND_YOY:** real GDP growth of the euro area, China and Russia weighted by Kazakhstan's
+  2023-2025 export shares (43.2 / 18.6 / 11.7 %, rescaled; BNS indicator 312101, recomputed from the
+  2024-2025 table), quarterly from 2015-Q1. Weights and caveats in `config/foreign_demand.yaml`.

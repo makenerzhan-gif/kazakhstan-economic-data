@@ -1,0 +1,21 @@
+{
+  "source": "ecb",
+  "source_url": "https://data-api.ecb.europa.eu/service/data/MNA/Q.Y.I9.W2.S1.S1.B.B1GQ._Z._Z._Z.EUR.LR.N?format=csvdata",
+  "dataset_id": "ECB/MNA/Q.Y.I9.W2.S1.S1.B.B1GQ._Z._Z._Z.EUR.LR.N",
+  "indicator_id": "EA_GDP_REAL",
+  "indicator_name": "Euro Area Real GDP (chain-linked 2015, SA)",
+  "description": "Реальный ВВП еврозоны (цепные объёмы 2015 г., SA)",
+  "frequency": "quarterly",
+  "unit": "million EUR, chain-linked 2015",
+  "currency": "",
+  "geography": "Euro area",
+  "methodology": "Million euro, chain-linked volumes (reference year 2015), seasonally and calendar adjusted, euro area 20 (fixed composition), from 1995-Q1.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "1995-01-01",
+  "period_end": "2026-01-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

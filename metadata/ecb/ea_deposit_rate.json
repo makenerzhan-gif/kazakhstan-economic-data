@@ -1,0 +1,21 @@
+{
+  "source": "ecb",
+  "source_url": "https://data-api.ecb.europa.eu/service/data/FM/B.U2.EUR.4F.KR.DFR.LEV?format=csvdata",
+  "dataset_id": "ECB/FM/B.U2.EUR.4F.KR.DFR.LEV",
+  "indicator_id": "EA_DEPOSIT_RATE",
+  "indicator_name": "ECB Deposit Facility Rate",
+  "description": "Ставка по депозитной линии ЕЦБ",
+  "frequency": "irregular",
+  "unit": "% per annum",
+  "currency": "",
+  "geography": "Euro area",
+  "methodology": "Percent per annum, ECB deposit facility rate, one row per change (effective date), from 1999-01-01.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "1999-01-01",
+  "period_end": "2026-09-16",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

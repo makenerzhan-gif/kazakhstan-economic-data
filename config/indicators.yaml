@@ -5497,3 +5497,111 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "FRED GDPC1 — поток за квартал в годовом выражении"
+
+  - id: BY_CPI_YOY
+    name_ru: "ИПЦ Беларуси, к соответствующему месяцу прошлого года"
+    name_en: "Belarus CPI, year-on-year"
+    agency: eec
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: international
+    country: BLR
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "ЕЭК CPI_3.xls, строка «Беларусь»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "ЕЭК CPI_3"
+
+  - id: KG_CPI_YOY
+    name_ru: "ИПЦ Кыргызстана, к соответствующему месяцу прошлого года"
+    name_en: "Kyrgyzstan CPI, year-on-year"
+    agency: eec
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: international
+    country: KGZ
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "ЕЭК CPI_3.xls, строка «Кыргызстан»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "ЕЭК CPI_3"
+
+  - id: CN_CPI_YOY
+    name_ru: "ИПЦ Китая, % к соответствующему месяцу прошлого года"
+    name_en: "China CPI, % year-on-year"
+    agency: imf
+    frequency: monthly
+    unit: "% change, same month previous year"
+    category: international
+    country: CHN
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "МВФ CPI 5.0.0, YOY_PCH_PA_PT"
+    comparison_basis: yoy
+    comparison_basis_evidence: "процентное изменение к соответствующему месяцу прошлого года"
+
+  - id: CN_GDP_REAL_YOY
+    name_ru: "Реальный ВВП Китая, квартал к кварталу прошлого года"
+    name_en: "China Real GDP, same quarter previous year = 100"
+    agency: nbs
+    frequency: quarterly
+    unit: "index, same quarter previous year = 100"
+    category: international
+    country: CHN
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "НБС Китая, 国内生产总值指数 当季值"
+    comparison_basis: yoy
+    comparison_basis_evidence: "上年同期=100"
+
+  - id: EA_HICP_YOY
+    name_ru: "Инфляция в еврозоне (HICP), % г/г"
+    name_en: "Euro Area HICP Inflation, % y/y"
+    agency: ecb
+    frequency: monthly
+    unit: "% change, same month previous year"
+    category: international
+    country: EA
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "ЕЦБ HICP ANR — годовой темп изменения"
+    comparison_basis: yoy
+    comparison_basis_evidence: "annual rate of change"
+
+  - id: EA_GDP_REAL
+    name_ru: "Реальный ВВП еврозоны (цепные объёмы 2015 г., SA)"
+    name_en: "Euro Area Real GDP (chain-linked 2015, SA)"
+    agency: ecb
+    frequency: quarterly
+    unit: "million EUR, chain-linked 2015"
+    category: international
+    country: EA
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "ЕЦБ MNA B1GQ LR — поток за квартал"
+
+  - id: EA_DEPOSIT_RATE
+    name_ru: "Ставка по депозитной линии ЕЦБ"
+    name_en: "ECB Deposit Facility Rate"
+    agency: ecb
+    frequency: irregular
+    unit: "% per annum"
+    category: international
+    country: EA
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "ставка, действующая с даты изменения"
+
+  - id: FOREIGN_DEMAND_YOY
+    name_ru: "Индекс внешнего спроса: рост реального ВВП партнёров, взвешенный по экспорту"
+    name_en: "Foreign Demand Index: export-weighted partner real GDP growth"
+    agency: derived
+    frequency: quarterly
+    unit: "index, same quarter previous year = 100"
+    category: international
+    country: KZ
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "средневзвешенный рост ВВП еврозоны, Китая и России по долям экспорта 2023-2025 (config/foreign_demand.yaml)"
+    comparison_basis: yoy
+    comparison_basis_evidence: "каждый компонент — к соответствующему кварталу прошлого года"

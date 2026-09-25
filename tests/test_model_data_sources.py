@@ -115,3 +115,28 @@ def test_external_block_holds_known_points():
     assert _series("eec", "RU_CPI_YOY")["2024-12-01"] == 109.5
     assert min(_series("imf", "RU_GDP_REAL")) == "2014-01-01"
     assert _series("fred", "US_FED_FUNDS")["2023-08-01"] == 5.33
+
+
+def test_nbs_quarter_codes_and_ecb_periods():
+    from fetchers import foreign
+    payload = {"data": [{"code": "202001SS", "values": [{"_id": "X", "value": "93.2"}, {"_id": "Y", "value": "1"}]},
+                        {"code": "202602SS", "values": [{"_id": "X", "value": ""}]}]}
+    assert foreign.parse_nbs_quarterly(payload, "X") == {"2020-01-01": 93.2}
+    ecb = b"KEY,TIME_PERIOD,OBS_VALUE\nA,2022-10,10.6\nA,2020-Q2,1.5\nA,2019-09-18,-0.5\nA,2023-01,\n"
+    assert foreign.parse_ecb_csv(ecb) == {"2022-10-01": 10.6, "2020-04-01": 1.5, "2019-09-18": -0.5}
+
+
+def test_foreign_demand_weights_partner_growth_on_common_quarters():
+    from fetchers import foreign
+    levels = {"2024-01-01": 100.0, "2025-01-01": 102.0, "2025-04-01": 50.0}
+    assert foreign.yoy_index(levels, "level") == {"2025-01-01": 102.0}
+    growth = {"A": {"2025-01-01": 102.0, "2025-04-01": 101.0}, "B": {"2025-01-01": 110.0}}
+    assert foreign.foreign_demand(growth, {"A": 3.0, "B": 1.0}) == {"2025-01-01": 104.0}
+
+
+def test_foreign_demand_weights_are_documented_and_the_index_exists():
+    import yaml
+    cfg = yaml.safe_load((Path(__file__).resolve().parents[1] / "config" / "foreign_demand.yaml").read_text(encoding="utf-8"))
+    assert {p["name"] for p in cfg["partners"]} == {"euro area", "China", "Russia"} and cfg["reviewed"]
+    fd = _series("derived", "FOREIGN_DEMAND_YOY")
+    assert min(fd) == "2015-01-01" and 88 < fd["2020-04-01"] < 95     # the 2020-Q2 collapse

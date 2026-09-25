@@ -1,0 +1,21 @@
+{
+  "source": "derived",
+  "source_url": "config/foreign_demand.yaml",
+  "dataset_id": "derived/foreign-demand",
+  "indicator_id": "FOREIGN_DEMAND_YOY",
+  "indicator_name": "Foreign Demand Index: export-weighted partner real GDP growth",
+  "description": "Индекс внешнего спроса: рост реального ВВП партнёров, взвешенный по экспорту",
+  "frequency": "quarterly",
+  "unit": "index, same quarter previous year = 100",
+  "currency": "",
+  "geography": "Kazakhstan (trade-weighted partners)",
+  "methodology": "Index, same quarter of the previous year = 100: real GDP growth of Kazakhstan's main export partners weighted by their 2023-2025 export shares (euro area 58.8%, China 25.4%, Russia 15.9%; BNS indicator 312101, reviewed 2026-09-25). Built from EA_GDP_REAL, CN_GDP_REAL_YOY and RU_GDP_REAL for the quarters all three cover (from 2015-Q1).",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "2015-01-01",
+  "period_end": "2026-01-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

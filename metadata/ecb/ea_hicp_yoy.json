@@ -1,0 +1,21 @@
+{
+  "source": "ecb",
+  "source_url": "https://data-api.ecb.europa.eu/service/data/HICP/M.U2.N.000000.4D0.ANR?format=csvdata",
+  "dataset_id": "ECB/HICP/M.U2.N.000000.4D0.ANR",
+  "indicator_id": "EA_HICP_YOY",
+  "indicator_name": "Euro Area HICP Inflation, % y/y",
+  "description": "Инфляция в еврозоне (HICP), % г/г",
+  "frequency": "monthly",
+  "unit": "% change, same month previous year",
+  "currency": "",
+  "geography": "Euro area",
+  "methodology": "Percent change on the same month of the previous year, euro area HICP (changing composition), from 1991.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "1997-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

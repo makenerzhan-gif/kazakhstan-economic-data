@@ -290,3 +290,177 @@ def fetch_us_cpi() -> tuple[list[dict], dict]:
 
 def fetch_us_gdp_real() -> tuple[list[dict], dict]:
     return _fetch_fred("US_GDP_REAL")
+
+
+# ---------------------------------------------------------------- other EAEU members (EEC)
+def fetch_by_cpi_yoy() -> tuple[list[dict], dict]:
+    return _fetch_eec_cpi("Беларусь", "yoy", "BY_CPI_YOY")
+
+
+def fetch_kg_cpi_yoy() -> tuple[list[dict], dict]:
+    return _fetch_eec_cpi("Кыргызстан", "yoy", "KG_CPI_YOY")
+
+
+# ---------------------------------------------------------------- China
+# CPI from the IMF CPI dataflow (NBS's own y/y is rounded to one decimal and 35 of 344 months
+# differ from the IMF's index-based rate by more than 0.15 pp, mostly 2006-07). Real GDP from
+# the National Bureau of Statistics: its old easyquery API answers 403 since the site moved to
+# /dg/website/; the JSON endpoint behind the new site needs no login but is undocumented, so
+# the fetch checks what it gets. The IMF's QNEA volume for China breaks its base in 2026.
+IMF_CPI_URL = "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/CPI/5.0.0/{country}.CPI._T.YOY_PCH_PA_PT.M"
+NBS_ESDATA_URL = "https://data.stats.gov.cn/dg/website/publicrelease/web/external/stream/esData"
+NBS_HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36",
+               "Referer": "https://data.stats.gov.cn/dg/website/page.html", "Content-Type": "application/json"}
+NBS_GDP_QUARTERLY = {"cid": "f9b694c9b79e4ce5958bc88c6410fa67", "root": "a94b8b7365a94874968cabbe392cf679",
+                     "indicator": "170e7f00f8c24ede863c0526b42ae81f"}   # 国内生产总值指数(上年同期=100)_当季值
+
+
+def parse_imf_cpi_yoy(content: bytes) -> dict[str, float]:
+    out = {}
+    for r in csv.DictReader(io.StringIO(content.decode("utf-8-sig"))):
+        m = re.match(r"^(\d{4})-M(\d{2})$", r.get("TIME_PERIOD") or "")
+        if m and r.get("OBS_VALUE"):
+            out[f"{m.group(1)}-{m.group(2)}-01"] = round(float(r["OBS_VALUE"]), 4)
+    return out
+
+
+def fetch_cn_cpi_yoy() -> tuple[list[dict], dict]:
+    url = IMF_CPI_URL.format(country="CHN")
+    content = _get(url, headers={"Accept": "application/vnd.sdmx.data+csv"}, timeout=120)
+    _save_raw("imf", "CN_CPI_YOY", content, "csv", {"source_url": url})
+    values = parse_imf_cpi_yoy(content)
+    if len(values) < 300:
+        _structural("imf", "CN_CPI_YOY", f"only {len(values)} months of CHN CPI YOY_PCH_PA_PT", url)
+    return [{"date": d, "value": v} for d, v in sorted(values.items())], {
+        "frequency": "monthly", "source_url": url, "dataset_id": "IMF.STA/CPI/5.0.0/CHN.CPI._T.YOY_PCH_PA_PT.M",
+        "note": "Percent change on the same month of the previous year, China CPI (all items), from 1994-01, "
+                "computed by the IMF from the index (NBS publishes it rounded to one decimal)."}
+
+
+def parse_nbs_quarterly(payload: dict, indicator: str) -> dict[str, float]:
+    out = {}
+    for period in payload.get("data") or []:
+        m = re.match(r"^(\d{4})0([1-4])SS$", period.get("code", ""))
+        if not m:
+            continue
+        for v in period.get("values") or []:
+            if v.get("_id") == indicator and v.get("value") not in (None, ""):
+                out[f"{m.group(1)}-{3 * int(m.group(2)) - 2:02d}-01"] = float(v["value"])
+    return out
+
+
+def fetch_cn_gdp_real_yoy() -> tuple[list[dict], dict]:
+    import json
+    spec = NBS_GDP_QUARTERLY
+    body = {"cid": spec["cid"], "indicatorIds": [spec["indicator"]], "daCatalogId": "",
+            "das": [{"text": "全国", "value": "000000000000"}],
+            "dts": [f"199201SS-{date.today().year}04SS"], "showType": "1", "rootId": spec["root"]}
+    content = _get(NBS_ESDATA_URL, data=json.dumps(body).encode("utf-8"), headers=NBS_HEADERS, timeout=120)
+    _save_raw("nbs", "CN_GDP_REAL_YOY", content, "json", {"source_url": NBS_ESDATA_URL, "request_body": body})
+    values = parse_nbs_quarterly(json.loads(content), spec["indicator"])
+    if len(values) < 100 or not all(80 < v < 130 for v in values.values()):
+        _structural("nbs", "CN_GDP_REAL_YOY", f"{len(values)} quarters, or values outside 80-130 (index, previous "
+                                             "year = 100) -- the undocumented endpoint may have changed", NBS_ESDATA_URL)
+    return [{"date": d, "value": v} for d, v in sorted(values.items())], {
+        "frequency": "quarterly", "source_url": NBS_ESDATA_URL, "dataset_id": f"nbs/{spec['indicator']} (当季值)",
+        "note": "Index, same quarter of the previous year = 100: China's real GDP growth for the single quarter, "
+                "from 1993-Q1, National Bureau of Statistics (new data.stats.gov.cn JSON endpoint)."}
+
+
+# ---------------------------------------------------------------- euro area (ECB Data Portal)
+# HICP moved on 2026-02-04 from dataflow ICP (which ends at 2025-12) to HICP, provider 4D0.
+ECB_URL = "https://data-api.ecb.europa.eu/service/data/{key}"
+ECB_SERIES = {
+    "EA_HICP_YOY": ("HICP/M.U2.N.000000.4D0.ANR", "monthly",
+                    "Percent change on the same month of the previous year, euro area HICP (changing composition), "
+                    "from 1991."),
+    "EA_GDP_REAL": ("MNA/Q.Y.I9.W2.S1.S1.B.B1GQ._Z._Z._Z.EUR.LR.N", "quarterly",
+                    "Million euro, chain-linked volumes (reference year 2015), seasonally and calendar adjusted, "
+                    "euro area 20 (fixed composition), from 1995-Q1."),
+    "EA_DEPOSIT_RATE": ("FM/B.U2.EUR.4F.KR.DFR.LEV", "irregular",
+                        "Percent per annum, ECB deposit facility rate, one row per change (effective date), from "
+                        "1999-01-01."),
+}
+
+
+def parse_ecb_csv(content: bytes) -> dict[str, float]:
+    out = {}
+    for r in csv.DictReader(io.StringIO(content.decode("utf-8-sig"))):
+        p, v = r.get("TIME_PERIOD") or "", r.get("OBS_VALUE")
+        if not v:
+            continue
+        if re.match(r"^\d{4}-\d{2}-\d{2}$", p):
+            out[p] = float(v)
+        elif m := re.match(r"^(\d{4})-(\d{2})$", p):
+            out[f"{m.group(1)}-{m.group(2)}-01"] = float(v)
+        elif m := re.match(r"^(\d{4})-Q([1-4])$", p):
+            out[f"{m.group(1)}-{3 * int(m.group(2)) - 2:02d}-01"] = float(v)
+    return out
+
+
+def _fetch_ecb(indicator_id: str) -> tuple[list[dict], dict]:
+    key, frequency, note = ECB_SERIES[indicator_id]
+    url = ECB_URL.format(key=key)
+    content = _get(url, params={"format": "csvdata"}, timeout=120)
+    _save_raw("ecb", indicator_id, content, "csv", {"source_url": url})
+    values = parse_ecb_csv(content)
+    if len(values) < 50:
+        _structural("ecb", indicator_id, f"only {len(values)} observations for {key}", url)
+    return [{"date": d, "value": v} for d, v in sorted(values.items())], {
+        "frequency": frequency, "source_url": f"{url}?format=csvdata", "dataset_id": f"ECB/{key}", "note": note}
+
+
+def fetch_ea_hicp_yoy() -> tuple[list[dict], dict]:
+    return _fetch_ecb("EA_HICP_YOY")
+
+
+def fetch_ea_gdp_real() -> tuple[list[dict], dict]:
+    return _fetch_ecb("EA_GDP_REAL")
+
+
+def fetch_ea_deposit_rate() -> tuple[list[dict], dict]:
+    return _fetch_ecb("EA_DEPOSIT_RATE")
+
+
+# ---------------------------------------------------------------- foreign demand
+FOREIGN_DEMAND_CONFIG = REPO_ROOT / "config" / "foreign_demand.yaml"
+
+
+def yoy_index(values: dict[str, float], kind: str) -> dict[str, float]:
+    """Same quarter of the previous year = 100, from a quarterly level or an index already on that basis."""
+    if kind == "yoy_index":
+        return dict(values)
+    out = {}
+    for d, v in values.items():
+        prev = f"{int(d[:4]) - 1:04d}{d[4:]}"
+        if prev in values and values[prev]:
+            out[d] = 100 * v / values[prev]
+    return out
+
+
+def foreign_demand(partner_growth: dict[str, dict[str, float]], shares: dict[str, float]) -> dict[str, float]:
+    """Export-share-weighted real GDP growth of the partners, for the quarters all of them cover."""
+    total = sum(shares.values())
+    common = set.intersection(*(set(g) for g in partner_growth.values()))
+    return {d: round(sum(shares[p] / total * partner_growth[p][d] for p in shares), 4) for d in sorted(common)}
+
+
+def fetch_foreign_demand_yoy() -> tuple[list[dict], dict]:
+    import yaml
+    cfg = yaml.safe_load(FOREIGN_DEMAND_CONFIG.read_text(encoding="utf-8"))
+    growth, shares = {}, {}
+    for p in cfg["partners"]:
+        g = p["growth"]
+        series = _processed(g["agency"], g["indicator"])
+        if not series:
+            raise validation.StructuralChangeError(f"FOREIGN_DEMAND_YOY: no processed {g['indicator']} to build from")
+        growth[p["name"]] = yoy_index(series, g["kind"])
+        shares[p["name"]] = float(p["share"])
+    values = foreign_demand(growth, shares)
+    weights = ", ".join(f"{n} {100 * s / sum(shares.values()):.1f}%" for n, s in shares.items())
+    return [{"date": d, "value": v} for d, v in values.items()], {
+        "frequency": "quarterly", "source_url": "config/foreign_demand.yaml", "dataset_id": "derived/foreign-demand",
+        "note": f"Index, same quarter of the previous year = 100: real GDP growth of Kazakhstan's main export partners "
+                f"weighted by their 2023-2025 export shares ({weights}; BNS indicator 312101, reviewed "
+                f"{cfg['reviewed']}). Built from EA_GDP_REAL, CN_GDP_REAL_YOY and RU_GDP_REAL for the quarters all "
+                "three cover (from 2015-Q1)."}

@@ -28,6 +28,15 @@ FETCHERS = {
     "US_TREASURY_10Y": foreign_fetchers.fetch_us_treasury_10y,
     "US_CPI": foreign_fetchers.fetch_us_cpi,
     "US_GDP_REAL": foreign_fetchers.fetch_us_gdp_real,
+    "BY_CPI_YOY": foreign_fetchers.fetch_by_cpi_yoy,
+    "KG_CPI_YOY": foreign_fetchers.fetch_kg_cpi_yoy,
+    "CN_CPI_YOY": foreign_fetchers.fetch_cn_cpi_yoy,
+    "CN_GDP_REAL_YOY": foreign_fetchers.fetch_cn_gdp_real_yoy,
+    "EA_HICP_YOY": foreign_fetchers.fetch_ea_hicp_yoy,
+    "EA_GDP_REAL": foreign_fetchers.fetch_ea_gdp_real,
+    "EA_DEPOSIT_RATE": foreign_fetchers.fetch_ea_deposit_rate,
+    # Last: built from the partner series written above.
+    "FOREIGN_DEMAND_YOY": foreign_fetchers.fetch_foreign_demand_yoy,
 }
 INDICATOR_IDS = list(FETCHERS)
 
@@ -87,7 +96,7 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
             frequency=manifest_info.get("frequency", ind["frequency"]),
             unit=ind["unit"],
             currency="",
-            geography={"RUS": "Russian Federation", "USA": "United States"}.get(ind.get("country"), ind.get("country", "")),
+            geography={"RUS": "Russian Federation", "USA": "United States", "BLR": "Belarus", "KGZ": "Kyrgyzstan", "CHN": "China", "EA": "Euro area", "KZ": "Kazakhstan (trade-weighted partners)"}.get(ind.get("country"), ind.get("country", "")),
             methodology=manifest_info.get("note", "see scripts/fetchers/foreign.py"),
             publication_date=manifest_info.get("release"),
             last_update_date=today.isoformat(),

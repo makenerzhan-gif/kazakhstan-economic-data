@@ -1,0 +1,21 @@
+{
+  "source": "nbs",
+  "source_url": "https://data.stats.gov.cn/dg/website/publicrelease/web/external/stream/esData",
+  "dataset_id": "nbs/170e7f00f8c24ede863c0526b42ae81f (当季值)",
+  "indicator_id": "CN_GDP_REAL_YOY",
+  "indicator_name": "China Real GDP, same quarter previous year = 100",
+  "description": "Реальный ВВП Китая, квартал к кварталу прошлого года",
+  "frequency": "quarterly",
+  "unit": "index, same quarter previous year = 100",
+  "currency": "",
+  "geography": "China",
+  "methodology": "Index, same quarter of the previous year = 100: China's real GDP growth for the single quarter, from 1993-Q1, National Bureau of Statistics (new data.stats.gov.cn JSON endpoint).",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "1993-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

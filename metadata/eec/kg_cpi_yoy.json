@@ -1,0 +1,21 @@
+{
+  "source": "eec",
+  "source_url": "https://eec.eaeunion.org/upload/files/dep_stat/econstat/Series_CPI/CPI_3.xls",
+  "dataset_id": "eec/CPI_3.xls/Кыргызстан",
+  "indicator_id": "KG_CPI_YOY",
+  "indicator_name": "Kyrgyzstan CPI, year-on-year",
+  "description": "ИПЦ Кыргызстана, к соответствующему месяцу прошлого года",
+  "frequency": "monthly",
+  "unit": "index, same month previous year = 100",
+  "currency": "",
+  "geography": "Kyrgyzstan",
+  "methodology": "Index, same month of the previous year = 100: consumer prices, Кыргызстан, monthly from 2005-01, as published by the Eurasian Economic Commission from national statistics (one decimal, not seasonally adjusted).",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "2005-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

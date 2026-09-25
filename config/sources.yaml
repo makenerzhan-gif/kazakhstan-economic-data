@@ -6033,6 +6033,12 @@ agencies:
     access_type: api
     protection: none
     endpoints:
+      CN_CPI_YOY:
+        status: confirmed
+        download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/CPI/5.0.0/CHN.CPI._T.YOY_PCH_PA_PT.M"
+        format: sdmx csv
+        notes: >
+          2026-09-25. From 1994-01; 2024 average 0.22 (official 0.2). FRED China series stopped in 2023-25. fetch_cn_cpi_yoy.
       RU_GDP_REAL:
         status: confirmed
         download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/QNEA/7.0.0/RUS.*.*.*.*.Q"
@@ -6985,6 +6991,18 @@ agencies:
     access_type: xls
     protection: none
     endpoints:
+      KG_CPI_YOY:
+        status: confirmed
+        download_url: "https://eec.eaeunion.org/upload/files/dep_stat/econstat/Series_CPI/CPI_3.xls"
+        format: xls
+        notes: >
+          2026-09-25. Row «Кыргызстан»; 2026-08 112.0. fetch_kg_cpi_yoy.
+      BY_CPI_YOY:
+        status: confirmed
+        download_url: "https://eec.eaeunion.org/upload/files/dep_stat/econstat/Series_CPI/CPI_3.xls"
+        format: xls
+        notes: >
+          2026-09-25. Row «Беларусь»; 2026-08 104.5. fetch_by_cpi_yoy.
       RU_CPI_MOM:
         status: confirmed
         download_url: "https://eec.eaeunion.org/upload/files/dep_stat/econstat/Series_CPI/CPI_1.xls"
@@ -7038,3 +7056,64 @@ agencies:
         format: csv
         notes: >
           2026-09-25. FRED GDPC1, checked against known values. fetch_us_gdp_real.
+  nbs:
+    name: "National Bureau of Statistics of China — real GDP growth"
+    website: "https://data.stats.gov.cn/dg/website/page.html"
+    status: confirmed
+    notes: >
+      Added 2026-09-25. The old easyquery.htm API answers 403 (WAF) since the site moved to
+      /dg/website/; the new site's JSON endpoint (POST .../external/stream/esData with catalog id,
+      indicator id and a period range such as 199201SS-202604SS) needs no login but is
+      undocumented -- the fetcher checks the count and range of what it gets.
+    access_type: json
+    protection: none
+    endpoints:
+      CN_GDP_REAL_YOY:
+        status: confirmed
+        download_url: "https://data.stats.gov.cn/dg/website/publicrelease/web/external/stream/esData"
+        format: json
+        notes: >
+          2026-09-25. Catalog f9b694c9b79e4ce5958bc88c6410fa67, indicator 170e7f00f8c24ede863c0526b42ae81f (当季值), root a94b8b7365a94874968cabbe392cf679; 1993-Q1 onward; 2020-Q1 93.2. fetch_cn_gdp_real_yoy.
+  ecb:
+    name: "European Central Bank Data Portal — euro area prices, output, policy rate"
+    website: "https://data.ecb.europa.eu"
+    status: confirmed
+    notes: >
+      Added 2026-09-25. https://data-api.ecb.europa.eu/service/data/<flow>/<key>?format=csvdata,
+      no key. HICP moved on 2026-02-04 from dataflow ICP (ends 2025-12) to HICP (provider 4D0).
+    access_type: csv
+    protection: none
+    endpoints:
+      EA_HICP_YOY:
+        status: confirmed
+        download_url: "https://data-api.ecb.europa.eu/service/data/HICP/M.U2.N.000000.4D0.ANR?format=csvdata"
+        format: csv
+        notes: >
+          2026-09-25. 2022-10 10.6, 2024-12 2.4. fetch_ea_hicp_yoy.
+      EA_GDP_REAL:
+        status: confirmed
+        download_url: "https://data-api.ecb.europa.eu/service/data/MNA/Q.Y.I9.W2.S1.S1.B.B1GQ._Z._Z._Z.EUR.LR.N?format=csvdata"
+        format: csv
+        notes: >
+          2026-09-25. EA20, chain-linked 2015, SCA, from 1995-Q1. fetch_ea_gdp_real.
+      EA_DEPOSIT_RATE:
+        status: confirmed
+        download_url: "https://data-api.ecb.europa.eu/service/data/FM/B.U2.EUR.4F.KR.DFR.LEV?format=csvdata"
+        format: csv
+        notes: >
+          2026-09-25. 69 change dates from 1999-01-01; -0.5 (2019-09-18), 4.0 (2023-09-20). fetch_ea_deposit_rate.
+  derived:
+    name: "Computed in this pipeline from other connected series"
+    website: "https://github.com/makenerzhan-gif/kazakhstan-economic-data"
+    status: confirmed
+    notes: >
+      Series built here, not downloaded: each names its inputs and weights in its own config file.
+    access_type: computed
+    protection: none
+    endpoints:
+      FOREIGN_DEMAND_YOY:
+        status: confirmed
+        download_url: "config/foreign_demand.yaml"
+        format: computed
+        notes: >
+          2026-09-25. Export-share-weighted real GDP growth of the euro area, China and Russia (weights from BNS indicator 312101, 2023-2025). fetch_foreign_demand_yoy.
