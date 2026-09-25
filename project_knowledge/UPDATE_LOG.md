@@ -4804,3 +4804,24 @@ New agencies `nbs`, `ecb`, `derived`; 480 indicators. Checked live against known
 - **FOREIGN_DEMAND_YOY:** real GDP growth of the euro area, China and Russia weighted by Kazakhstan's
   2023-2025 export shares (43.2 / 18.6 / 11.7 %, rescaled; BNS indicator 312101, recomputed from the
   2024-2025 table), quarterly from 2015-Q1. Weights and caveats in `config/foreign_demand.yaml`.
+
+## 2026-09-25 — model data, step 5: the gravity model
+
+New module `scripts/fetchers/gravity.py` (item-level, `config/dims.yaml`; items are ISO3 partner
+codes), new agency `wits`, static CEPII tables in `data/reference/`. All checked live.
+- **KZ_EXPORTS_BY_PARTNER / KZ_IMPORTS_BY_PARTNER** (BNS 312101, thousand USD, 2020–2025, 233
+  partners): each year from its final July edition (the 2021 edition's second sheet gives 2020);
+  country rows sum exactly to «Всего» (2025 exports 79.23 bn: China 15.20, Italy 15.64, Russia
+  8.25). A partner with a blank cell is a zero flow, stored as 0 (PPML needs the zeros). Russian
+  names → ISO3 through the new `dictionaries/partner_countries.csv` (235 names; an unknown name
+  stops the dataset).
+- **WITS_KZ_EXPORTS/IMPORTS_BY_PARTNER** (UN Comtrade via WITS, 1995–2023): the long history. Equal
+  to BNS for EAEU partners but well below it for non-EAEU flows in 2020–2022 (world exports 2021:
+  53.1 vs 60.3 bn) — splice to BNS from 2020.
+- **KZ_TARIFF_AVERAGES** (MFN and applied, simple and weighted, 1996–2023; applied simple 4.26 %
+  in 2023) and **KZ_TARIFF_APPLIED_BY_PARTNER** (2004–2023).
+- **WDI_GDP_USD, WDI_GDP_CONST_USD, WDI_POPULATION** (World Bank API, 2000–2025, 213–217
+  economies, aggregates dropped).
+- **data/reference/cepii_geodist_kaz.csv** (GeoDist: distances, contiguity, language, colonial
+  ties) and **cepii_gravity_kaz.csv** (Gravity V202211, 1992–2021: harmonic weighted distance,
+  RTA/FTA, WTO/GATT, EU, sibling/dependency links). Static research releases, not refreshed.

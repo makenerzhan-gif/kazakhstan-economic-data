@@ -22,6 +22,11 @@ against live official sources — past the original 18-indicator pilot and its
 yet; see `project_knowledge/UPDATE_LOG.md` for the dated history of how the
 dataset grew and what was verified at each step.
 
+For the gravity model of Kazakhstan's trade, item-level datasets keyed by ISO3
+partner code (`config/dims.yaml`): trade by partner (BNS from 2020, WITS/UN Comtrade
+1995–2023), partner GDP and population (World Bank WDI), tariffs (WITS); distances and
+bilateral dummies (CEPII) are static tables in `data/reference/`.
+
 ## Repository layout
 
 ```

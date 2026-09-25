@@ -1990,3 +1990,127 @@ datasets:
     unit: "USD per barrel"
     category: world_prices
     note: "Table 2 'Energy Prices' of the monthly STEO workbook; months after the release's last historical month carry transformation 'forecast'. The model takes the annual mean (annual: mean)."
+
+  # ---------------------------------------------------------------- gravity model (added 2026-09-25)
+  # scripts/fetchers/gravity.py. Items are ISO 3166 alpha-3 codes; the BNS Russian partner
+  # names are mapped by dictionaries/partner_countries.csv (an unknown name stops the dataset).
+  # BNS and WITS overlap in 2020-2023 and disagree for non-EAEU partners in 2020-2022 (WITS
+  # below BNS: world exports 2021 53.1 vs 60.3 bn USD) -- take BNS from 2020, WITS before.
+  - id: KZ_EXPORTS_BY_PARTNER
+    name_ru: "Экспорт товаров Казахстана по странам-партнёрам, тыс. долларов США, годовой"
+    name_en: "Kazakhstan goods exports by partner country, thousand USD, annual (BNS)"
+    agency: bns
+    fetcher: gravity
+    table: bns_partner_trade
+    measure: exports
+    frequency: annual
+    unit: "thousand USD"
+    category: external_trade
+    note: "BNS «Основные показатели внешней торговли РК по странам» (312101), full-year editions from data year 2020; each year read from its final (July) edition when published, else the preliminary. Country rows sum exactly to «Всего». Partner by country of destination."
+
+  - id: KZ_IMPORTS_BY_PARTNER
+    name_ru: "Импорт товаров Казахстана по странам-партнёрам, тыс. долларов США, годовой"
+    name_en: "Kazakhstan goods imports by partner country, thousand USD, annual (BNS)"
+    agency: bns
+    fetcher: gravity
+    table: bns_partner_trade
+    measure: imports
+    frequency: annual
+    unit: "thousand USD"
+    category: external_trade
+    note: "Same editions as KZ_EXPORTS_BY_PARTNER. Partner by country of origin."
+
+  - id: WITS_KZ_EXPORTS_BY_PARTNER
+    name_ru: "Экспорт Казахстана по странам-партнёрам (WITS/UN Comtrade), тыс. долларов США"
+    name_en: "Kazakhstan exports by partner, thousand USD (WITS TradeStats, UN Comtrade)"
+    agency: wits
+    fetcher: gravity
+    table: wits_partner_trade
+    indicator: XPRT-TRD-VL
+    frequency: annual
+    unit: "thousand USD"
+    category: external_trade
+    note: "1995 onward, as reported by Kazakhstan to UN Comtrade. Matches BNS for EAEU partners; understates non-EAEU flows in 2020-2022 -- prefer KZ_EXPORTS_BY_PARTNER from 2020. Legacy partner codes ROM/SER/ZAR/SUD/MNT/TMP mapped to ISO3; regional aggregates dropped."
+
+  - id: WITS_KZ_IMPORTS_BY_PARTNER
+    name_ru: "Импорт Казахстана по странам-партнёрам (WITS/UN Comtrade), тыс. долларов США"
+    name_en: "Kazakhstan imports by partner, thousand USD (WITS TradeStats, UN Comtrade)"
+    agency: wits
+    fetcher: gravity
+    table: wits_partner_trade
+    indicator: MPRT-TRD-VL
+    frequency: annual
+    unit: "thousand USD"
+    category: external_trade
+    note: "As WITS_KZ_EXPORTS_BY_PARTNER; prefer KZ_IMPORTS_BY_PARTNER from 2020."
+
+  - id: KZ_TARIFF_AVERAGES
+    name_ru: "Средние ставки импортных пошлин Казахстана (MFN и применяемые, простые и взвешенные), %"
+    name_en: "Kazakhstan import tariff averages (MFN and applied, simple and weighted), percent"
+    agency: wits
+    fetcher: gravity
+    table: wits_tariffs
+    partner: wld
+    indicators: [MFN-SMPL-AVRG, MFN-WGHTD-AVRG, AHS-SMPL-AVRG, AHS-WGHTD-AVRG]
+    frequency: annual
+    unit: "percent"
+    category: external_trade
+    note: "WITS TradeStats-Tariff, all products. MFN = most-favoured-nation rate; AHS = effectively applied (preferential where one exists: zero inside the EAEU). Since 2010 Kazakhstan applies the EAEU common external tariff."
+
+  - id: KZ_TARIFF_APPLIED_BY_PARTNER
+    name_ru: "Применяемая ставка импортных пошлин Казахстана по странам-партнёрам (простая средняя), %"
+    name_en: "Kazakhstan effectively applied tariff by partner, simple average, percent"
+    agency: wits
+    fetcher: gravity
+    table: wits_tariffs
+    partner: all
+    indicators: [AHS-SMPL-AVRG]
+    frequency: annual
+    unit: "percent"
+    category: external_trade
+    note: "WITS TradeStats-Tariff AHS-SMPL-AVRG by partner: the bilateral tariff term of a gravity equation (zero for EAEU/CIS FTA partners)."
+
+  - id: WDI_GDP_USD
+    name_ru: "ВВП стран мира, текущие доллары США (Всемирный банк, WDI)"
+    name_en: "GDP of world economies, current USD (World Bank WDI NY.GDP.MKTP.CD)"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: NY.GDP.MKTP.CD
+    region: world
+    country: WLD
+    geography: "All economies (WDI; aggregates excluded)"
+    frequency: annual
+    unit: "USD"
+    category: international
+    note: "Partner mass term of the gravity model. Item = ISO3 of the economy; 2000 onward."
+
+  - id: WDI_GDP_CONST_USD
+    name_ru: "ВВП стран мира, постоянные доллары США 2015 г. (Всемирный банк, WDI)"
+    name_en: "GDP of world economies, constant 2015 USD (World Bank WDI NY.GDP.MKTP.KD)"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: NY.GDP.MKTP.KD
+    region: world
+    country: WLD
+    geography: "All economies (WDI; aggregates excluded)"
+    frequency: annual
+    unit: "USD (constant 2015)"
+    category: international
+    note: "Real partner GDP. Item = ISO3; 2000 onward."
+
+  - id: WDI_POPULATION
+    name_ru: "Население стран мира (Всемирный банк, WDI)"
+    name_en: "Population of world economies (World Bank WDI SP.POP.TOTL)"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: SP.POP.TOTL
+    region: world
+    country: WLD
+    geography: "All economies (WDI; aggregates excluded)"
+    frequency: annual
+    unit: "persons"
+    category: international
+    note: "Item = ISO3; 2000 onward."

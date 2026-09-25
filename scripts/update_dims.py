@@ -18,13 +18,15 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib import dims, metadata, pipeline_logging, revisions, validation  # noqa: E402
-from fetchers import bns_dims, bns_trade, eia, wb  # noqa: E402
+from fetchers import bns_dims, bns_trade, eia, gravity, wb  # noqa: E402
 
 # Keyed by a dataset's `fetcher` when it names one, else by its agency.
-AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb.fetch, "eia": eia.fetch}
+AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb.fetch, "eia": eia.fetch,
+                   "gravity": gravity.fetch}
 METHODOLOGY = {"bns": "Bureau of National Statistics official methodology",
                "wb": "World Bank Commodity Markets (Pink Sheet / Commodity Markets Outlook), nominal US dollars",
-               "eia": "U.S. EIA Short-Term Energy Outlook, monthly release"}
+               "eia": "U.S. EIA Short-Term Energy Outlook, monthly release",
+               "wits": "World Bank WITS TradeStats (UN Comtrade / TRAINS data)"}
 CONFIG = dims.load_config()
 DATASETS = {d["id"]: d for d in CONFIG["datasets"]}
 DATASET_IDS = list(DATASETS)

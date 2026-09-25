@@ -1,0 +1,21 @@
+{
+  "source": "wb",
+  "source_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?format=json&per_page=20000&date=2000:2026",
+  "dataset_id": "wdi/NY.GDP.MKTP.CD",
+  "indicator_id": "WDI_GDP_USD",
+  "indicator_name": "GDP of world economies, current USD (World Bank WDI NY.GDP.MKTP.CD)",
+  "description": "ВВП стран мира, текущие доллары США (Всемирный банк, WDI)",
+  "frequency": "annual",
+  "unit": "USD",
+  "currency": "USD",
+  "geography": "All economies (WDI; aggregates excluded)",
+  "methodology": "Partner mass term of the gravity model. Item = ISO3 of the economy; 2000 onward. WDI last updated 2026-07-13.",
+  "publication_date": "2026-07-13",
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "2000-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

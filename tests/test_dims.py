@@ -24,6 +24,8 @@ def test_every_dataset_has_a_fetcher_and_a_known_layout():
                                     "year_blocks_items_regions_ytd", "month_rows", "region_blocks_months", "sector_columns")
         elif key == "bns_trade":
             assert ds["measure"] in ("usd", "tonnes") and ds["dictionary"] == "hs_export_groups" and ds["frequency"] == "monthly"
+        elif key == "gravity":
+            assert ds["table"] in update_dims.gravity.TABLES and ds["frequency"] == "annual"
         elif ds["agency"] == "wb":
             assert ds["table"] in ("annual_prices", "annual_indices", "monthly_prices", "monthly_indices",
                                    "forecast_prices", "forecast_indices")

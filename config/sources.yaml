@@ -29,6 +29,17 @@ agencies:
     protection: none
     endpoints:
       # ---- dimensional tables (config/dims.yaml, scripts/update_dims.py) ----
+      KZ_EXPORTS_BY_PARTNER:
+        status: confirmed_xlsx
+        download_url: "https://stat.gov.kz/ru/industries/economy/foreign-market/spreadsheets/?year=YYYY&name=19182&period=&type=spreadsheets"
+        format: xlsx_table
+        notes: >
+          2026-09-25. «Основные показатели внешней торговли РК по странам» (312101): the listing page
+          per publication year names each edition (row id bx_<n>_<elementId>); the file is
+          /api/iblock/element/<elementId>/file/ru/ (xls or xlsx). Full-year editions: preliminary
+          «(январь-декабрь YYYYг.)» in February, final «(YYYYг.)» in July; sheets 'YYYY' or '12_YYYY'
+          (the 2021 edition also carries 12_2020). Columns: partner, turnover, share, exports, share,
+          imports, share, thousand USD. KZ_IMPORTS_BY_PARTNER reads the same files.
       EXPORTS_VALUE_BY_COMMODITY_GROUP:
         status: confirmed_xlsx
         element_id: 446905
@@ -6858,6 +6869,39 @@ agencies:
         download_url: "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx"
         format: xlsx_table
         notes: "Sheet 'Monthly Prices', column 'Crude oil, Brent' ($/bbl), rows '1960M01' … '2026M08'. The monthly file lists 71 series (two more than the annual: rapeseed and sunflower oil) and marks some names with '**' — the dictionary regexes ignore the marker."
+      WDI_GDP_USD:
+        status: confirmed
+        download_url: "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?format=json&per_page=20000&date=2000:2026"
+        format: json_api
+        notes: "World Bank API v2 (added 2026-09-25 for the gravity model), no key. [meta, rows]; rows carry countryiso3code, date, value. Aggregates dropped via /v2/country?format=json&per_page=400 (region.value == 'Aggregates'). Same call with NY.GDP.MKTP.KD (WDI_GDP_CONST_USD) and SP.POP.TOTL (WDI_POPULATION)."
+  wits:
+    name: "World Bank WITS — TradeStats (UN Comtrade and TRAINS data)"
+    website: "https://wits.worldbank.org"
+    status: confirmed
+    notes: >
+      Added 2026-09-25 for the gravity model. SDMX 2.1 REST, JSON, no key:
+      /API/V1/SDMX/V21/datasource/tradestats-trade/reporter/kaz/year/all/partner/all/product/Total/indicator/<XPRT-TRD-VL|MPRT-TRD-VL>?format=JSON
+      (Kazakhstan's reported exports/imports by partner, thousand USD, 1995-2023 on 2026-09-25) and
+      .../tradestats-tariff/reporter/kaz/year/all/partner/<wld|all>/product/Total/indicator/<MFN-SMPL-AVRG|...>?format=JSON.
+      A few partners keep pre-ISO codes (ROM, SER, ZAR, SUD, MNT, TMP). Checked against BNS 312101:
+      identical for EAEU partners, but non-EAEU flows in 2020-2022 are well below BNS (world exports
+      2021: 53.1 vs 60.3 bn USD) -- the pipeline's BNS series are preferred from 2020.
+    access_type: api
+    protection: none
+    endpoints:
+      WITS_KZ_EXPORTS_BY_PARTNER:
+        status: confirmed
+        download_url: "https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/kaz/year/all/partner/all/product/Total/indicator/XPRT-TRD-VL?format=JSON"
+        format: sdmx_json
+      WITS_KZ_IMPORTS_BY_PARTNER:
+        status: confirmed
+        download_url: "https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/kaz/year/all/partner/all/product/Total/indicator/MPRT-TRD-VL?format=JSON"
+        format: sdmx_json
+      KZ_TARIFF_AVERAGES:
+        status: confirmed
+        download_url: "https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-tariff/reporter/kaz/year/all/partner/wld/product/Total/indicator/MFN-SMPL-AVRG?format=JSON"
+        format: sdmx_json
+        notes: "Also MFN-WGHTD-AVRG, AHS-SMPL-AVRG, AHS-WGHTD-AVRG; partner/all with AHS-SMPL-AVRG gives KZ_TARIFF_APPLIED_BY_PARTNER."
   eia:
     name: "U.S. Energy Information Administration — Short-Term Energy Outlook"
     website: "https://www.eia.gov/outlooks/steo/"

@@ -1,0 +1,2759 @@
+date,region,item_code,item_name,value,transformation
+2012-12-31,national,ABW,Aruba,7.5,level
+2013-12-31,national,ABW,Aruba,10.0,level
+2004-12-31,national,AFG,Afghanistan,3.33333333333333,level
+2008-12-31,national,AFG,Afghanistan,5.0,level
+2010-12-31,national,AFG,Afghanistan,3.8125,level
+2011-12-31,national,AFG,Afghanistan,1.65,level
+2012-12-31,national,AFG,Afghanistan,4.79454694475446,level
+2013-12-31,national,AFG,Afghanistan,5.99026317834854,level
+2014-12-31,national,AFG,Afghanistan,5.27886194839246,level
+2015-12-31,national,AFG,Afghanistan,4.03988225643451,level
+2016-12-31,national,AFG,Afghanistan,2.15909090909091,level
+2017-12-31,national,AFG,Afghanistan,3.58232547929793,level
+2018-12-31,national,AFG,Afghanistan,2.16897211202349,level
+2019-12-31,national,AFG,Afghanistan,3.25466174200604,level
+2020-12-31,national,AFG,Afghanistan,2.89948057215952,level
+2021-12-31,national,AFG,Afghanistan,6.16729983687401,level
+2022-12-31,national,AFG,Afghanistan,4.46595976563325,level
+2023-12-31,national,AFG,Afghanistan,3.26036418520886,level
+2008-12-31,national,AGO,Angola,7.3655913875949,level
+2010-12-31,national,AGO,Angola,7.1459573507309,level
+2011-12-31,national,AGO,Angola,10.0,level
+2013-12-31,national,AGO,Angola,9.54545497894287,level
+2016-12-31,national,AGO,Angola,3.25,level
+2018-12-31,national,AGO,Angola,7.44878438538547,level
+2019-12-31,national,AGO,Angola,7.83154658534367,level
+2020-12-31,national,AGO,Angola,7.19715681890816,level
+2022-12-31,national,AGO,Angola,5.64329230537017,level
+2023-12-31,national,AGO,Angola,10.0,level
+2004-12-31,national,AIA,Anguila,0.666666666666667,level
+2008-12-31,national,AIA,Anguila,4.28787873008034,level
+2010-12-31,national,AIA,Anguila,8.20075758298238,level
+2011-12-31,national,AIA,Anguila,5.82589280605316,level
+2012-12-31,national,AIA,Anguila,13.2345779158852,level
+2013-12-31,national,AIA,Anguila,7.66918497819167,level
+2014-12-31,national,AIA,Anguila,5.97961216926575,level
+2015-12-31,national,AIA,Anguila,1.75,level
+2016-12-31,national,AIA,Anguila,10.0,level
+2017-12-31,national,AIA,Anguila,8.7715277671814,level
+2018-12-31,national,AIA,Anguila,0.0,level
+2019-12-31,national,AIA,Anguila,0.0,level
+2022-12-31,national,AIA,Anguila,7.59681957960129,level
+2023-12-31,national,AIA,Anguila,6.21794859568278,level
+2004-12-31,national,ALB,Albania,2.5,level
+2008-12-31,national,ALB,Albania,7.22222222222222,level
+2010-12-31,national,ALB,Albania,9.80442183358329,level
+2011-12-31,national,ALB,Albania,9.78618421052632,level
+2012-12-31,national,ALB,Albania,9.84756097560976,level
+2013-12-31,national,ALB,Albania,10.0657894736842,level
+2014-12-31,national,ALB,Albania,9.2047074010874,level
+2015-12-31,national,ALB,Albania,8.35013126706084,level
+2016-12-31,national,ALB,Albania,6.53750278705206,level
+2017-12-31,national,ALB,Albania,5.24876435527684,level
+2018-12-31,national,ALB,Albania,4.26621377915549,level
+2019-12-31,national,ALB,Albania,5.16860582989148,level
+2020-12-31,national,ALB,Albania,5.23011816852598,level
+2021-12-31,national,ALB,Albania,9.07659925205607,level
+2022-12-31,national,ALB,Albania,8.68484684000624,level
+2023-12-31,national,ALB,Albania,7.24745040151137,level
+2008-12-31,national,AND,Andorra,10.0,level
+2010-12-31,national,AND,Andorra,13.9285712242126,level
+2014-12-31,national,AND,Andorra,12.5,level
+2015-12-31,national,AND,Andorra,4.18214273452759,level
+2016-12-31,national,AND,Andorra,2.203125,level
+2017-12-31,national,AND,Andorra,4.8333332836628,level
+2018-12-31,national,AND,Andorra,9.5,level
+2019-12-31,national,AND,Andorra,5.875,level
+2022-12-31,national,AND,Andorra,8.77875337158282,level
+2023-12-31,national,AND,Andorra,4.02757603327433,level
+2008-12-31,national,ANT,Netherlands Antilles,1.66666666666667,level
+2010-12-31,national,ANT,Netherlands Antilles,13.2341270446777,level
+2004-12-31,national,ARE,United Arab Emirates,2.2937223992156,level
+2008-12-31,national,ARE,United Arab Emirates,5.52447338705842,level
+2010-12-31,national,ARE,United Arab Emirates,9.22317068359218,level
+2011-12-31,national,ARE,United Arab Emirates,9.47774376064384,level
+2012-12-31,national,ARE,United Arab Emirates,10.097077599326,level
+2013-12-31,national,ARE,United Arab Emirates,9.70055299408085,level
+2014-12-31,national,ARE,United Arab Emirates,8.99376354381391,level
+2015-12-31,national,ARE,United Arab Emirates,8.02315091046607,level
+2016-12-31,national,ARE,United Arab Emirates,6.96451548853004,level
+2017-12-31,national,ARE,United Arab Emirates,6.57212965266936,level
+2018-12-31,national,ARE,United Arab Emirates,6.25661159348992,level
+2019-12-31,national,ARE,United Arab Emirates,6.61004829137344,level
+2020-12-31,national,ARE,United Arab Emirates,5.82853363978426,level
+2021-12-31,national,ARE,United Arab Emirates,5.42348163971427,level
+2022-12-31,national,ARE,United Arab Emirates,6.05841376743917,level
+2023-12-31,national,ARE,United Arab Emirates,5.14143816379115,level
+2004-12-31,national,ARG,Argentina,2.02018633355265,level
+2008-12-31,national,ARG,Argentina,4.35660152557569,level
+2010-12-31,national,ARG,Argentina,7.61936303990626,level
+2011-12-31,national,ARG,Argentina,7.00826860573597,level
+2012-12-31,national,ARG,Argentina,6.87100287184397,level
+2013-12-31,national,ARG,Argentina,7.05623046901212,level
+2014-12-31,national,ARG,Argentina,6.41047518673,level
+2015-12-31,national,ARG,Argentina,6.50359737220472,level
+2016-12-31,national,ARG,Argentina,4.89179918414257,level
+2017-12-31,national,ARG,Argentina,4.65735575658278,level
+2018-12-31,national,ARG,Argentina,4.66865781268091,level
+2019-12-31,national,ARG,Argentina,4.49317240470746,level
+2020-12-31,national,ARG,Argentina,3.98149198489111,level
+2021-12-31,national,ARG,Argentina,3.83377600684125,level
+2022-12-31,national,ARG,Argentina,4.9126237314481,level
+2023-12-31,national,ARG,Argentina,4.14825369007005,level
+2004-12-31,national,ARM,Armenia,2.08080808029455,level
+2008-12-31,national,ARM,Armenia,0.254237288135593,level
+2010-12-31,national,ARM,Armenia,0.0,level
+2011-12-31,national,ARM,Armenia,0.0,level
+2012-12-31,national,ARM,Armenia,0.0,level
+2013-12-31,national,ARM,Armenia,0.0,level
+2014-12-31,national,ARM,Armenia,0.0,level
+2016-12-31,national,ARM,Armenia,0.0,level
+2017-12-31,national,ARM,Armenia,0.0,level
+2018-12-31,national,ARM,Armenia,0.0,level
+2019-12-31,national,ARM,Armenia,0.0,level
+2020-12-31,national,ARM,Armenia,0.0,level
+2021-12-31,national,ARM,Armenia,0.0,level
+2022-12-31,national,ARM,Armenia,0.0,level
+2023-12-31,national,ARM,Armenia,0.0,level
+2010-12-31,national,ASM,American Samoa,0.0,level
+2011-12-31,national,ASM,American Samoa,12.125,level
+2012-12-31,national,ASM,American Samoa,1.21212124824524,level
+2013-12-31,national,ASM,American Samoa,2.5,level
+2014-12-31,national,ASM,American Samoa,8.03999996185303,level
+2016-12-31,national,ASM,American Samoa,2.91666666666667,level
+2023-12-31,national,ATF,Fr. So. Ant. Tr,8.33333301544189,level
+2011-12-31,national,ATG,Antigua and Barbuda,2.5,level
+2012-12-31,national,ATG,Antigua and Barbuda,20.0,level
+2013-12-31,national,ATG,Antigua and Barbuda,9.0,level
+2014-12-31,national,ATG,Antigua and Barbuda,6.10434737205505,level
+2015-12-31,national,ATG,Antigua and Barbuda,3.89920624097188,level
+2019-12-31,national,ATG,Antigua and Barbuda,0.0,level
+2022-12-31,national,ATG,Antigua and Barbuda,9.14558347533731,level
+2023-12-31,national,ATG,Antigua and Barbuda,4.33333349227905,level
+2004-12-31,national,AUS,Australia,1.91415291098484,level
+2008-12-31,national,AUS,Australia,4.94087554179672,level
+2010-12-31,national,AUS,Australia,7.77503104461518,level
+2011-12-31,national,AUS,Australia,7.95356186995976,level
+2012-12-31,national,AUS,Australia,7.75492024106415,level
+2013-12-31,national,AUS,Australia,8.24275751074008,level
+2014-12-31,national,AUS,Australia,6.9710460267961,level
+2015-12-31,national,AUS,Australia,6.69049166005299,level
+2016-12-31,national,AUS,Australia,5.97728666049489,level
+2017-12-31,national,AUS,Australia,5.43511169675636,level
+2018-12-31,national,AUS,Australia,5.38116761200805,level
+2019-12-31,national,AUS,Australia,4.7661152224729,level
+2020-12-31,national,AUS,Australia,4.29151232580137,level
+2021-12-31,national,AUS,Australia,4.37957831557038,level
+2022-12-31,national,AUS,Australia,5.14916761636063,level
+2023-12-31,national,AUS,Australia,4.19526770942851,level
+2004-12-31,national,AUT,Austria,2.32516682691319,level
+2008-12-31,national,AUT,Austria,5.10012768422382,level
+2010-12-31,national,AUT,Austria,8.41580346861863,level
+2011-12-31,national,AUT,Austria,8.3201664471363,level
+2012-12-31,national,AUT,Austria,8.56844826382529,level
+2013-12-31,national,AUT,Austria,8.71500033664764,level
+2014-12-31,national,AUT,Austria,7.67462339354053,level
+2015-12-31,national,AUT,Austria,6.93078530226661,level
+2016-12-31,national,AUT,Austria,6.25551981778177,level
+2017-12-31,national,AUT,Austria,5.82375239951264,level
+2018-12-31,national,AUT,Austria,5.78187794746064,level
+2019-12-31,national,AUT,Austria,5.95372540038984,level
+2020-12-31,national,AUT,Austria,5.19863546055844,level
+2021-12-31,national,AUT,Austria,5.02104888761535,level
+2022-12-31,national,AUT,Austria,5.37870975092087,level
+2023-12-31,national,AUT,Austria,4.95133061084529,level
+2004-12-31,national,AZE,Azerbaijan,2.26398026158935,level
+2008-12-31,national,AZE,Azerbaijan,0.0,level
+2010-12-31,national,AZE,Azerbaijan,0.0,level
+2011-12-31,national,AZE,Azerbaijan,0.0,level
+2012-12-31,national,AZE,Azerbaijan,0.0,level
+2013-12-31,national,AZE,Azerbaijan,0.0,level
+2014-12-31,national,AZE,Azerbaijan,0.0,level
+2015-12-31,national,AZE,Azerbaijan,0.0,level
+2016-12-31,national,AZE,Azerbaijan,0.0,level
+2017-12-31,national,AZE,Azerbaijan,0.0,level
+2018-12-31,national,AZE,Azerbaijan,0.0,level
+2019-12-31,national,AZE,Azerbaijan,0.0,level
+2020-12-31,national,AZE,Azerbaijan,0.0,level
+2021-12-31,national,AZE,Azerbaijan,0.0,level
+2022-12-31,national,AZE,Azerbaijan,0.0,level
+2023-12-31,national,AZE,Azerbaijan,0.0,level
+2011-12-31,national,BDI,Burundi,15.0,level
+2012-12-31,national,BDI,Burundi,7.5,level
+2013-12-31,national,BDI,Burundi,7.5,level
+2014-12-31,national,BDI,Burundi,13.466667175293,level
+2015-12-31,national,BDI,Burundi,0.0,level
+2016-12-31,national,BDI,Burundi,0.0,level
+2017-12-31,national,BDI,Burundi,0.0,level
+2021-12-31,national,BDI,Burundi,0.0,level
+2022-12-31,national,BDI,Burundi,5.89226102828979,level
+2023-12-31,national,BDI,Burundi,0.0,level
+2004-12-31,national,BEL,Belgium,2.35365310821304,level
+2008-12-31,national,BEL,Belgium,5.45920995555857,level
+2010-12-31,national,BEL,Belgium,8.96584472787412,level
+2011-12-31,national,BEL,Belgium,9.15919613825423,level
+2012-12-31,national,BEL,Belgium,9.24477858143625,level
+2013-12-31,national,BEL,Belgium,9.24130232647887,level
+2014-12-31,national,BEL,Belgium,8.32445692973935,level
+2015-12-31,national,BEL,Belgium,7.52092864822574,level
+2016-12-31,national,BEL,Belgium,6.36824546722387,level
+2017-12-31,national,BEL,Belgium,6.12048868621946,level
+2018-12-31,national,BEL,Belgium,5.91913333440488,level
+2019-12-31,national,BEL,Belgium,9.27211297797169,level
+2020-12-31,national,BEL,Belgium,5.22135660250296,level
+2021-12-31,national,BEL,Belgium,5.34904036378663,level
+2022-12-31,national,BEL,Belgium,5.75299079512935,level
+2023-12-31,national,BEL,Belgium,5.19202002698073,level
+2008-12-31,national,BEN,Benin,2.5,level
+2010-12-31,national,BEN,Benin,9.2857141494751,level
+2011-12-31,national,BEN,Benin,10.0,level
+2012-12-31,national,BEN,Benin,20.0,level
+2013-12-31,national,BEN,Benin,11.6666666666667,level
+2014-12-31,national,BEN,Benin,5.0,level
+2016-12-31,national,BEN,Benin,3.0,level
+2018-12-31,national,BEN,Benin,0.0,level
+2019-12-31,national,BEN,Benin,5.66666666666667,level
+2020-12-31,national,BEN,Benin,5.22222216924032,level
+2022-12-31,national,BEN,Benin,3.75350093841553,level
+2004-12-31,national,BFA,Burkina Faso,5.0,level
+2008-12-31,national,BFA,Burkina Faso,5.0,level
+2011-12-31,national,BFA,Burkina Faso,15.0,level
+2014-12-31,national,BFA,Burkina Faso,12.8999996185303,level
+2022-12-31,national,BFA,Burkina Faso,5.12744998931885,level
+2023-12-31,national,BFA,Burkina Faso,0.0,level
+2004-12-31,national,BGD,Bangladesh,4.23076923076923,level
+2008-12-31,national,BGD,Bangladesh,5.21963824042978,level
+2010-12-31,national,BGD,Bangladesh,11.2070932542956,level
+2011-12-31,national,BGD,Bangladesh,11.2237829559151,level
+2012-12-31,national,BGD,Bangladesh,10.729368662942,level
+2013-12-31,national,BGD,Bangladesh,10.9278561219637,level
+2014-12-31,national,BGD,Bangladesh,10.884915030599,level
+2015-12-31,national,BGD,Bangladesh,10.1839933869688,level
+2016-12-31,national,BGD,Bangladesh,6.00529688690941,level
+2017-12-31,national,BGD,Bangladesh,5.85253075393946,level
+2018-12-31,national,BGD,Bangladesh,5.46655552859976,level
+2019-12-31,national,BGD,Bangladesh,5.49600057203987,level
+2020-12-31,national,BGD,Bangladesh,5.41137739350018,level
+2021-12-31,national,BGD,Bangladesh,9.87664084723501,level
+2022-12-31,national,BGD,Bangladesh,8.37421113060367,level
+2023-12-31,national,BGD,Bangladesh,8.37482035458088,level
+2004-12-31,national,BGR,Bulgaria,2.07065727643564,level
+2008-12-31,national,BGR,Bulgaria,5.00494530901391,level
+2010-12-31,national,BGR,Bulgaria,8.90306037221073,level
+2011-12-31,national,BGR,Bulgaria,8.7511777853062,level
+2012-12-31,national,BGR,Bulgaria,9.02175179294464,level
+2013-12-31,national,BGR,Bulgaria,9.49267953949348,level
+2014-12-31,national,BGR,Bulgaria,8.74401450841659,level
+2015-12-31,national,BGR,Bulgaria,7.67781335058346,level
+2016-12-31,national,BGR,Bulgaria,5.7941621032505,level
+2017-12-31,national,BGR,Bulgaria,5.42566952463011,level
+2018-12-31,national,BGR,Bulgaria,5.11474712562802,level
+2019-12-31,national,BGR,Bulgaria,6.19499304294787,level
+2020-12-31,national,BGR,Bulgaria,4.54446917256772,level
+2021-12-31,national,BGR,Bulgaria,5.60792303510296,level
+2022-12-31,national,BGR,Bulgaria,5.62238650821464,level
+2023-12-31,national,BGR,Bulgaria,4.87620198980091,level
+2004-12-31,national,BHR,Bahrain,5.0,level
+2008-12-31,national,BHR,Bahrain,9.0,level
+2010-12-31,national,BHR,Bahrain,12.0415984618513,level
+2011-12-31,national,BHR,Bahrain,10.5477345330375,level
+2012-12-31,national,BHR,Bahrain,13.8333333333333,level
+2013-12-31,national,BHR,Bahrain,12.5201262831688,level
+2014-12-31,national,BHR,Bahrain,8.60000006357829,level
+2015-12-31,national,BHR,Bahrain,10.4000000953674,level
+2016-12-31,national,BHR,Bahrain,7.91679428304945,level
+2017-12-31,national,BHR,Bahrain,6.99096920490265,level
+2018-12-31,national,BHR,Bahrain,7.64603029797429,level
+2019-12-31,national,BHR,Bahrain,6.64558568171092,level
+2020-12-31,national,BHR,Bahrain,5.53694656917027,level
+2021-12-31,national,BHR,Bahrain,11.3578143119812,level
+2022-12-31,national,BHR,Bahrain,4.23031511902809,level
+2023-12-31,national,BHR,Bahrain,4.55000019073486,level
+2004-12-31,national,BHS,"Bahamas, The",0.0,level
+2008-12-31,national,BHS,"Bahamas, The",8.18984972126782,level
+2010-12-31,national,BHS,"Bahamas, The",3.04590151458979,level
+2011-12-31,national,BHS,"Bahamas, The",2.36823057631652,level
+2012-12-31,national,BHS,"Bahamas, The",3.47043178975582,level
+2013-12-31,national,BHS,"Bahamas, The",6.64630848765373,level
+2014-12-31,national,BHS,"Bahamas, The",3.69401967749,level
+2015-12-31,national,BHS,"Bahamas, The",3.42454556624095,level
+2016-12-31,national,BHS,"Bahamas, The",2.29562517181039,level
+2017-12-31,national,BHS,"Bahamas, The",0.0638767816126347,level
+2018-12-31,national,BHS,"Bahamas, The",0.522184111177921,level
+2019-12-31,national,BHS,"Bahamas, The",0.0437994552776217,level
+2021-12-31,national,BHS,"Bahamas, The",5.33333349227905,level
+2022-12-31,national,BHS,"Bahamas, The",4.37675046920776,level
+2023-12-31,national,BHS,"Bahamas, The",13.5077884197235,level
+2004-12-31,national,BIH,Bosnia and Herzegovina,3.66666666666667,level
+2008-12-31,national,BIH,Bosnia and Herzegovina,4.22619046483721,level
+2010-12-31,national,BIH,Bosnia and Herzegovina,8.41410819271155,level
+2011-12-31,national,BIH,Bosnia and Herzegovina,8.11719576517741,level
+2012-12-31,national,BIH,Bosnia and Herzegovina,8.80023448807853,level
+2013-12-31,national,BIH,Bosnia and Herzegovina,9.41682094183158,level
+2014-12-31,national,BIH,Bosnia and Herzegovina,7.96699811738323,level
+2015-12-31,national,BIH,Bosnia and Herzegovina,8.13081714695242,level
+2016-12-31,national,BIH,Bosnia and Herzegovina,4.86636751185038,level
+2017-12-31,national,BIH,Bosnia and Herzegovina,5.0873138839993,level
+2018-12-31,national,BIH,Bosnia and Herzegovina,5.35715810811067,level
+2019-12-31,national,BIH,Bosnia and Herzegovina,4.94722502028225,level
+2020-12-31,national,BIH,Bosnia and Herzegovina,4.58627181942575,level
+2021-12-31,national,BIH,Bosnia and Herzegovina,6.77364542109243,level
+2022-12-31,national,BIH,Bosnia and Herzegovina,6.58839851915836,level
+2023-12-31,national,BIH,Bosnia and Herzegovina,5.91091261064733,level
+2018-12-31,national,BLM,BLM,6.90000009536743,level
+2019-12-31,national,BLM,BLM,3.94428094228109,level
+2020-12-31,national,BLM,BLM,4.19999980926514,level
+2004-12-31,national,BLR,Belarus,2.11877475500527,level
+2008-12-31,national,BLR,Belarus,0.0,level
+2010-12-31,national,BLR,Belarus,0.0,level
+2011-12-31,national,BLR,Belarus,0.0,level
+2012-12-31,national,BLR,Belarus,0.0,level
+2013-12-31,national,BLR,Belarus,0.0,level
+2014-12-31,national,BLR,Belarus,0.0,level
+2016-12-31,national,BLR,Belarus,0.0,level
+2017-12-31,national,BLR,Belarus,0.0,level
+2018-12-31,national,BLR,Belarus,0.0,level
+2019-12-31,national,BLR,Belarus,0.0,level
+2020-12-31,national,BLR,Belarus,0.0,level
+2021-12-31,national,BLR,Belarus,0.0,level
+2022-12-31,national,BLR,Belarus,0.0,level
+2023-12-31,national,BLR,Belarus,0.0,level
+2008-12-31,national,BLZ,Belize,6.40625,level
+2011-12-31,national,BLZ,Belize,8.14102578163147,level
+2012-12-31,national,BLZ,Belize,5.55555550257365,level
+2013-12-31,national,BLZ,Belize,4.15832083041851,level
+2014-12-31,national,BLZ,Belize,4.75,level
+2015-12-31,national,BLZ,Belize,0.0,level
+2016-12-31,national,BLZ,Belize,5.83333313465118,level
+2017-12-31,national,BLZ,Belize,8.33333301544189,level
+2018-12-31,national,BLZ,Belize,3.43253970146179,level
+2019-12-31,national,BLZ,Belize,7.0,level
+2023-12-31,national,BLZ,Belize,0.0,level
+2008-12-31,national,BMU,Bermuda,1.37969944253564,level
+2010-12-31,national,BMU,Bermuda,1.45993537455797,level
+2011-12-31,national,BMU,Bermuda,5.83333349227905,level
+2012-12-31,national,BMU,Bermuda,0.205647684633732,level
+2013-12-31,national,BMU,Bermuda,0.176097497344017,level
+2014-12-31,national,BMU,Bermuda,5.62532778829336,level
+2015-12-31,national,BMU,Bermuda,3.61343443393707,level
+2016-12-31,national,BMU,Bermuda,3.04617968760431,level
+2017-12-31,national,BMU,Bermuda,0.075829304754734,level
+2018-12-31,national,BMU,Bermuda,0.0665523335337639,level
+2019-12-31,national,BMU,Bermuda,3.53047462552786,level
+2020-12-31,national,BMU,Bermuda,2.86629447713494,level
+2021-12-31,national,BMU,Bermuda,28.5563182830811,level
+2022-12-31,national,BMU,Bermuda,12.6621787548065,level
+2023-12-31,national,BMU,Bermuda,13.0922544002533,level
+2004-12-31,national,BOL,Bolivia,5.0,level
+2008-12-31,national,BOL,Bolivia,5.41666666666667,level
+2010-12-31,national,BOL,Bolivia,3.75,level
+2011-12-31,national,BOL,Bolivia,4.44444441795349,level
+2012-12-31,national,BOL,Bolivia,3.75,level
+2013-12-31,national,BOL,Bolivia,7.1875,level
+2014-12-31,national,BOL,Bolivia,4.16666666666667,level
+2015-12-31,national,BOL,Bolivia,4.62559149349108,level
+2016-12-31,national,BOL,Bolivia,7.54614828181837,level
+2017-12-31,national,BOL,Bolivia,6.91522363399466,level
+2018-12-31,national,BOL,Bolivia,0.0,level
+2019-12-31,national,BOL,Bolivia,3.75,level
+2020-12-31,national,BOL,Bolivia,3.75,level
+2021-12-31,national,BOL,Bolivia,3.93707481452397,level
+2022-12-31,national,BOL,Bolivia,2.21885718107224,level
+2023-12-31,national,BOL,Bolivia,1.5,level
+2004-12-31,national,BRA,Brazil,1.8467211807617,level
+2008-12-31,national,BRA,Brazil,4.46893323915999,level
+2010-12-31,national,BRA,Brazil,7.748700418625,level
+2011-12-31,national,BRA,Brazil,7.48197276646064,level
+2012-12-31,national,BRA,Brazil,7.27557543111265,level
+2013-12-31,national,BRA,Brazil,7.7298669452959,level
+2014-12-31,national,BRA,Brazil,6.46398164584871,level
+2015-12-31,national,BRA,Brazil,5.35426091477158,level
+2016-12-31,national,BRA,Brazil,5.04367536064409,level
+2017-12-31,national,BRA,Brazil,4.55553832714783,level
+2018-12-31,national,BRA,Brazil,4.46677920011276,level
+2019-12-31,national,BRA,Brazil,4.48506900216171,level
+2020-12-31,national,BRA,Brazil,4.04801427184333,level
+2021-12-31,national,BRA,Brazil,4.95983329900058,level
+2022-12-31,national,BRA,Brazil,5.00772812110063,level
+2023-12-31,national,BRA,Brazil,4.53327133334139,level
+2008-12-31,national,BRB,Barbados,0.249235823750496,level
+2010-12-31,national,BRB,Barbados,5.92963249236345,level
+2011-12-31,national,BRB,Barbados,12.8515332579613,level
+2012-12-31,national,BRB,Barbados,7.23577693402767,level
+2013-12-31,national,BRB,Barbados,7.62373305526045,level
+2014-12-31,national,BRB,Barbados,0.150656148791313,level
+2015-12-31,national,BRB,Barbados,0.128636613488197,level
+2016-12-31,national,BRB,Barbados,6.2960288785398,level
+2017-12-31,national,BRB,Barbados,0.075829304754734,level
+2018-12-31,national,BRB,Barbados,0.0584190413355827,level
+2019-12-31,national,BRB,Barbados,0.036301472534736,level
+2020-12-31,national,BRB,Barbados,0.0337828621268272,level
+2021-12-31,national,BRB,Barbados,14.2781591415405,level
+2022-12-31,national,BRB,Barbados,7.25372791290283,level
+2023-12-31,national,BRB,Barbados,11.0528113047282,level
+2010-12-31,national,BRN,Brunei,10.0,level
+2014-12-31,national,BRN,Brunei,7.14285707473755,level
+2017-12-31,national,BRN,Brunei,10.5999999046326,level
+2019-12-31,national,BRN,Brunei,0.0,level
+2020-12-31,national,BRN,Brunei,0.0,level
+2022-12-31,national,BRN,Brunei,9.21041660308838,level
+2023-12-31,national,BRN,Brunei,5.64010420441628,level
+2011-12-31,national,BTN,Bhutan,5.58333349227905,level
+2013-12-31,national,BTN,Bhutan,9.99999976158142,level
+2015-12-31,national,BTN,Bhutan,7.14285707473755,level
+2023-12-31,national,BTN,Bhutan,0.0,level
+2011-12-31,national,BVT,Bouvet Island,5.31845235824585,level
+2013-12-31,national,BVT,Bouvet Island,5.0,level
+2016-12-31,national,BVT,Bouvet Island,5.0,level
+2008-12-31,national,BWA,Botswana,15.0,level
+2010-12-31,national,BWA,Botswana,20.0,level
+2011-12-31,national,BWA,Botswana,20.0,level
+2013-12-31,national,BWA,Botswana,20.0,level
+2019-12-31,national,BWA,Botswana,4.16666674613953,level
+2022-12-31,national,BWA,Botswana,4.55000019073486,level
+2023-12-31,national,BWA,Botswana,3.52901786565781,level
+2008-12-31,national,CAF,Central African Republic,0.0,level
+2011-12-31,national,CAF,Central African Republic,5.0,level
+2013-12-31,national,CAF,Central African Republic,3.38095235824585,level
+2014-12-31,national,CAF,Central African Republic,4.84642839431763,level
+2016-12-31,national,CAF,Central African Republic,0.0,level
+2018-12-31,national,CAF,Central African Republic,0.0,level
+2019-12-31,national,CAF,Central African Republic,15.0,level
+2023-12-31,national,CAF,Central African Republic,0.5,level
+2004-12-31,national,CAN,Canada,2.16228930957806,level
+2008-12-31,national,CAN,Canada,4.54711981428096,level
+2010-12-31,national,CAN,Canada,8.079200180281,level
+2011-12-31,national,CAN,Canada,7.79265354034626,level
+2012-12-31,national,CAN,Canada,7.90640519057394,level
+2013-12-31,national,CAN,Canada,8.0338771636489,level
+2014-12-31,national,CAN,Canada,7.73439768502037,level
+2015-12-31,national,CAN,Canada,6.5330372752457,level
+2016-12-31,national,CAN,Canada,5.45973651081268,level
+2017-12-31,national,CAN,Canada,5.18706219271092,level
+2018-12-31,national,CAN,Canada,5.17744474332906,level
+2019-12-31,national,CAN,Canada,5.01647830299576,level
+2020-12-31,national,CAN,Canada,4.51653995871215,level
+2021-12-31,national,CAN,Canada,4.58084120624527,level
+2022-12-31,national,CAN,Canada,5.46070129114961,level
+2023-12-31,national,CAN,Canada,4.57364144526757,level
+2011-12-31,national,CCK,Cocos (Keeling) Islands,15.0,level
+2012-12-31,national,CCK,Cocos (Keeling) Islands,10.7142858505249,level
+2013-12-31,national,CCK,Cocos (Keeling) Islands,10.0,level
+2014-12-31,national,CCK,Cocos (Keeling) Islands,13.5493504784324,level
+2016-12-31,national,CCK,Cocos (Keeling) Islands,12.5,level
+2017-12-31,national,CCK,Cocos (Keeling) Islands,8.39999993642171,level
+2018-12-31,national,CCK,Cocos (Keeling) Islands,2.5,level
+2019-12-31,national,CCK,Cocos (Keeling) Islands,2.92500001192093,level
+2023-12-31,national,CCK,Cocos (Keeling) Islands,8.0,level
+2004-12-31,national,CHE,Switzerland,2.22043176762556,level
+2008-12-31,national,CHE,Switzerland,4.60240576076847,level
+2010-12-31,national,CHE,Switzerland,7.91262440438091,level
+2011-12-31,national,CHE,Switzerland,7.8751387585843,level
+2012-12-31,national,CHE,Switzerland,8.23584447376684,level
+2013-12-31,national,CHE,Switzerland,8.29839944202811,level
+2014-12-31,national,CHE,Switzerland,7.59016377481485,level
+2015-12-31,national,CHE,Switzerland,6.94938006467371,level
+2016-12-31,national,CHE,Switzerland,5.93957303571486,level
+2017-12-31,national,CHE,Switzerland,5.70068980010085,level
+2018-12-31,national,CHE,Switzerland,5.38862258825274,level
+2019-12-31,national,CHE,Switzerland,5.47871682925894,level
+2020-12-31,national,CHE,Switzerland,4.86019459065665,level
+2021-12-31,national,CHE,Switzerland,4.89470910538205,level
+2022-12-31,national,CHE,Switzerland,5.68413987951244,level
+2023-12-31,national,CHE,Switzerland,4.95161452598564,level
+2004-12-31,national,CHL,Chile,1.36363636453946,level
+2008-12-31,national,CHL,Chile,4.77512070613688,level
+2010-12-31,national,CHL,Chile,5.70810406438766,level
+2011-12-31,national,CHL,Chile,5.37424742643322,level
+2012-12-31,national,CHL,Chile,7.55503368948121,level
+2013-12-31,national,CHL,Chile,7.53947157593388,level
+2014-12-31,national,CHL,Chile,6.2417458246669,level
+2015-12-31,national,CHL,Chile,5.45332549975043,level
+2016-12-31,national,CHL,Chile,5.52407990713589,level
+2017-12-31,national,CHL,Chile,4.74160556933459,level
+2018-12-31,national,CHL,Chile,5.5272628551103,level
+2019-12-31,national,CHL,Chile,4.80131146386266,level
+2020-12-31,national,CHL,Chile,4.36499753308793,level
+2021-12-31,national,CHL,Chile,4.17276395302193,level
+2022-12-31,national,CHL,Chile,5.05424228573547,level
+2023-12-31,national,CHL,Chile,5.69871021480095,level
+2004-12-31,national,CHN,China,2.60870024625212,level
+2008-12-31,national,CHN,China,5.01438986374202,level
+2010-12-31,national,CHN,China,8.24125159333498,level
+2011-12-31,national,CHN,China,8.2868538090983,level
+2012-12-31,national,CHN,China,8.37004380181884,level
+2013-12-31,national,CHN,China,8.26521629800753,level
+2014-12-31,national,CHN,China,7.70529540258537,level
+2015-12-31,national,CHN,China,7.15433263771461,level
+2016-12-31,national,CHN,China,6.07980954656964,level
+2017-12-31,national,CHN,China,5.82820757871913,level
+2018-12-31,national,CHN,China,5.70104257687874,level
+2019-12-31,national,CHN,China,5.63141852286422,level
+2020-12-31,national,CHN,China,5.23408227007725,level
+2021-12-31,national,CHN,China,5.42199944365928,level
+2022-12-31,national,CHN,China,6.22618627708485,level
+2023-12-31,national,CHN,China,5.56282145607719,level
+2004-12-31,national,CIV,Cote d'Ivoire,3.33333333333333,level
+2008-12-31,national,CIV,Cote d'Ivoire,2.875,level
+2010-12-31,national,CIV,Cote d'Ivoire,7.23039217556224,level
+2011-12-31,national,CIV,Cote d'Ivoire,7.25,level
+2012-12-31,national,CIV,Cote d'Ivoire,5.0992967016995,level
+2013-12-31,national,CIV,Cote d'Ivoire,5.83333333333333,level
+2014-12-31,national,CIV,Cote d'Ivoire,4.08888885378838,level
+2015-12-31,national,CIV,Cote d'Ivoire,3.51093749701977,level
+2016-12-31,national,CIV,Cote d'Ivoire,3.33333333333333,level
+2017-12-31,national,CIV,Cote d'Ivoire,2.03125,level
+2018-12-31,national,CIV,Cote d'Ivoire,3.36904760507437,level
+2019-12-31,national,CIV,Cote d'Ivoire,2.52321427209037,level
+2020-12-31,national,CIV,Cote d'Ivoire,2.53750000681196,level
+2021-12-31,national,CIV,Cote d'Ivoire,3.19750082492828,level
+2022-12-31,national,CIV,Cote d'Ivoire,2.5153274834156,level
+2023-12-31,national,CIV,Cote d'Ivoire,4.76539928262884,level
+2010-12-31,national,CMR,Cameroon,5.625,level
+2011-12-31,national,CMR,Cameroon,11.1430395974053,level
+2013-12-31,national,CMR,Cameroon,9.45833349227905,level
+2014-12-31,national,CMR,Cameroon,8.25,level
+2015-12-31,national,CMR,Cameroon,9.45000004768372,level
+2016-12-31,national,CMR,Cameroon,5.0,level
+2017-12-31,national,CMR,Cameroon,3.86872408166528,level
+2018-12-31,national,CMR,Cameroon,3.78537174438437,level
+2019-12-31,national,CMR,Cameroon,5.52537312507629,level
+2020-12-31,national,CMR,Cameroon,4.91679315567017,level
+2021-12-31,national,CMR,Cameroon,0.833333333333333,level
+2022-12-31,national,CMR,Cameroon,5.47183520453317,level
+2023-12-31,national,CMR,Cameroon,1.45833333333333,level
+2004-12-31,national,COG,"Congo, Rep.",0.0,level
+2010-12-31,national,COG,"Congo, Rep.",13.9583334922791,level
+2011-12-31,national,COG,"Congo, Rep.",6.09090909090909,level
+2014-12-31,national,COG,"Congo, Rep.",8.34040832519531,level
+2018-12-31,national,COG,"Congo, Rep.",2.5,level
+2019-12-31,national,COG,"Congo, Rep.",4.5,level
+2020-12-31,national,COG,"Congo, Rep.",4.0,level
+2021-12-31,national,COG,"Congo, Rep.",3.75,level
+2022-12-31,national,COG,"Congo, Rep.",1.125,level
+2010-12-31,national,COK,Cook Islands,2.8125,level
+2011-12-31,national,COK,Cook Islands,5.0,level
+2012-12-31,national,COK,Cook Islands,0.0,level
+2013-12-31,national,COK,Cook Islands,17.5,level
+2014-12-31,national,COK,Cook Islands,0.0,level
+2023-12-31,national,COK,Cook Islands,5.0,level
+2004-12-31,national,COL,Colombia,3.71527779102325,level
+2008-12-31,national,COL,Colombia,4.95535714285714,level
+2010-12-31,national,COL,Colombia,10.8945058078012,level
+2011-12-31,national,COL,Colombia,10.5465929551885,level
+2012-12-31,national,COL,Colombia,10.7675811602246,level
+2013-12-31,national,COL,Colombia,10.7726930618286,level
+2014-12-31,national,COL,Colombia,7.58192502620608,level
+2015-12-31,national,COL,Colombia,6.93948626806659,level
+2016-12-31,national,COL,Colombia,6.30025577783171,level
+2017-12-31,national,COL,Colombia,5.05209325865293,level
+2018-12-31,national,COL,Colombia,4.84388129564727,level
+2019-12-31,national,COL,Colombia,5.21025038945178,level
+2020-12-31,national,COL,Colombia,5.15505452843552,level
+2021-12-31,national,COL,Colombia,4.25894149303436,level
+2022-12-31,national,COL,Colombia,5.92736899271244,level
+2023-12-31,national,COL,Colombia,5.73323679249734,level
+2013-12-31,national,COM,Comoros,0.0,level
+2014-12-31,national,COM,Comoros,0.0,level
+2016-12-31,national,COM,Comoros,0.0,level
+2017-12-31,national,COM,Comoros,0.0,level
+2018-12-31,national,COM,Comoros,2.36111116409302,level
+2021-12-31,national,COM,Comoros,0.0,level
+2022-12-31,national,COM,Comoros,0.548387110233307,level
+2023-12-31,national,COM,Comoros,0.0,level
+2011-12-31,national,CPV,Cape Verde,10.0,level
+2014-12-31,national,CPV,Cape Verde,6.46770823001862,level
+2015-12-31,national,CPV,Cape Verde,8.68377590179443,level
+2017-12-31,national,CPV,Cape Verde,0.0328987091779709,level
+2018-12-31,national,CPV,Cape Verde,11.4309110641479,level
+2019-12-31,national,CPV,Cape Verde,11.8328428268433,level
+2022-12-31,national,CPV,Cape Verde,8.64923620223999,level
+2023-12-31,national,CPV,Cape Verde,0.806451618671417,level
+2004-12-31,national,CRI,Costa Rica,1.92307692307692,level
+2008-12-31,national,CRI,Costa Rica,2.70833333333333,level
+2010-12-31,national,CRI,Costa Rica,4.56855600902012,level
+2011-12-31,national,CRI,Costa Rica,5.84780366981731,level
+2012-12-31,national,CRI,Costa Rica,6.59973460719699,level
+2013-12-31,national,CRI,Costa Rica,6.39928387491791,level
+2014-12-31,national,CRI,Costa Rica,5.36020884108036,level
+2015-12-31,national,CRI,Costa Rica,4.39060253989609,level
+2016-12-31,national,CRI,Costa Rica,2.60683396458626,level
+2017-12-31,national,CRI,Costa Rica,2.51145119917008,level
+2018-12-31,national,CRI,Costa Rica,3.15026499523083,level
+2019-12-31,national,CRI,Costa Rica,3.61200621838327,level
+2020-12-31,national,CRI,Costa Rica,3.41677752281317,level
+2021-12-31,national,CRI,Costa Rica,3.22229257751914,level
+2022-12-31,national,CRI,Costa Rica,4.66530712822388,level
+2023-12-31,national,CRI,Costa Rica,3.22997288512332,level
+2004-12-31,national,CUB,Cuba,2.14285714285714,level
+2008-12-31,national,CUB,Cuba,6.49987263729175,level
+2010-12-31,national,CUB,Cuba,8.38148281350732,level
+2011-12-31,national,CUB,Cuba,7.60201250761747,level
+2012-12-31,national,CUB,Cuba,6.28405832179955,level
+2013-12-31,national,CUB,Cuba,10.862682916224,level
+2014-12-31,national,CUB,Cuba,0.0987182304263115,level
+2015-12-31,national,CUB,Cuba,3.97692227860292,level
+2016-12-31,national,CUB,Cuba,3.1973525856932,level
+2017-12-31,national,CUB,Cuba,3.91695113678773,level
+2018-12-31,national,CUB,Cuba,6.46663807146251,level
+2019-12-31,national,CUB,Cuba,8.53047462552786,level
+2020-12-31,national,CUB,Cuba,8.53296122327447,level
+2021-12-31,national,CUB,Cuba,28.5563182830811,level
+2022-12-31,national,CUB,Cuba,13.2611837387085,level
+2023-12-31,national,CUB,Cuba,9.10402170817057,level
+2011-12-31,national,CUW,Curaçao,13.3333333333333,level
+2012-12-31,national,CUW,Curaçao,8.19444449742635,level
+2023-12-31,national,CUW,Curaçao,0.0,level
+2011-12-31,national,CXR,Christmas Island,7.5,level
+2012-12-31,national,CXR,Christmas Island,2.72727274894714,level
+2017-12-31,national,CXR,Christmas Island,15.1999998092651,level
+2021-12-31,national,CXR,Christmas Island,3.90000009536743,level
+2022-12-31,national,CXR,Christmas Island,10.0,level
+2004-12-31,national,CYM,Cayman Islands,2.5,level
+2008-12-31,national,CYM,Cayman Islands,0.0,level
+2012-12-31,national,CYM,Cayman Islands,12.8571424484253,level
+2014-12-31,national,CYM,Cayman Islands,0.0,level
+2015-12-31,national,CYM,Cayman Islands,0.0,level
+2019-12-31,national,CYM,Cayman Islands,0.0,level
+2020-12-31,national,CYM,Cayman Islands,0.0,level
+2023-12-31,national,CYM,Cayman Islands,1.66666666666667,level
+2004-12-31,national,CYP,Cyprus,3.04545454545455,level
+2008-12-31,national,CYP,Cyprus,6.1147186477463,level
+2010-12-31,national,CYP,Cyprus,9.17403188149134,level
+2011-12-31,national,CYP,Cyprus,6.38895564354383,level
+2012-12-31,national,CYP,Cyprus,8.94880302761282,level
+2013-12-31,national,CYP,Cyprus,9.48151231643514,level
+2014-12-31,national,CYP,Cyprus,7.30269518542163,level
+2015-12-31,national,CYP,Cyprus,6.28989012660207,level
+2016-12-31,national,CYP,Cyprus,3.90035970562271,level
+2017-12-31,national,CYP,Cyprus,4.75902540919146,level
+2018-12-31,national,CYP,Cyprus,6.96670238546869,level
+2019-12-31,national,CYP,Cyprus,4.31595135603708,level
+2020-12-31,national,CYP,Cyprus,3.81211173819492,level
+2021-12-31,national,CYP,Cyprus,3.83011659427925,level
+2022-12-31,national,CYP,Cyprus,5.02995485789848,level
+2023-12-31,national,CYP,Cyprus,3.81979059714537,level
+2004-12-31,national,CZE,Czech Republic,2.27008795381854,level
+2008-12-31,national,CZE,Czech Republic,4.77980504000219,level
+2010-12-31,national,CZE,Czech Republic,8.28054358287351,level
+2011-12-31,national,CZE,Czech Republic,8.31517341218008,level
+2012-12-31,national,CZE,Czech Republic,8.63290855246671,level
+2013-12-31,national,CZE,Czech Republic,8.74323740967711,level
+2014-12-31,national,CZE,Czech Republic,7.86012265686947,level
+2015-12-31,national,CZE,Czech Republic,6.94573459798065,level
+2016-12-31,national,CZE,Czech Republic,5.90346694919132,level
+2017-12-31,national,CZE,Czech Republic,5.69151846022056,level
+2018-12-31,national,CZE,Czech Republic,5.69285814060139,level
+2019-12-31,national,CZE,Czech Republic,8.54274303319425,level
+2020-12-31,national,CZE,Czech Republic,5.0815165534465,level
+2021-12-31,national,CZE,Czech Republic,5.0767969923231,level
+2022-12-31,national,CZE,Czech Republic,5.76592336126416,level
+2023-12-31,national,CZE,Czech Republic,4.96796012079293,level
+2004-12-31,national,DEU,Germany,2.56566159152583,level
+2008-12-31,national,DEU,Germany,5.24603060777304,level
+2010-12-31,national,DEU,Germany,8.42347469934567,level
+2011-12-31,national,DEU,Germany,8.60897538112433,level
+2012-12-31,national,DEU,Germany,8.5758266296766,level
+2013-12-31,national,DEU,Germany,8.48844101748917,level
+2014-12-31,national,DEU,Germany,7.87405102963944,level
+2015-12-31,national,DEU,Germany,7.18506361934355,level
+2016-12-31,national,DEU,Germany,6.24027585293351,level
+2017-12-31,national,DEU,Germany,5.95884577795463,level
+2018-12-31,national,DEU,Germany,5.88538447328864,level
+2019-12-31,national,DEU,Germany,7.22313910617602,level
+2020-12-31,national,DEU,Germany,5.33725312570713,level
+2021-12-31,national,DEU,Germany,5.62689490083023,level
+2022-12-31,national,DEU,Germany,6.03695830506401,level
+2023-12-31,national,DEU,Germany,4.87301038065892,level
+2010-12-31,national,DJI,Djibouti,15.0,level
+2011-12-31,national,DJI,Djibouti,15.0,level
+2013-12-31,national,DJI,Djibouti,15.0,level
+2015-12-31,national,DJI,Djibouti,8.29999923706055,level
+2016-12-31,national,DJI,Djibouti,5.0,level
+2008-12-31,national,DMA,Dominica,5.0,level
+2010-12-31,national,DMA,Dominica,7.92628208796183,level
+2011-12-31,national,DMA,Dominica,7.5,level
+2012-12-31,national,DMA,Dominica,17.8125,level
+2013-12-31,national,DMA,Dominica,9.0,level
+2014-12-31,national,DMA,Dominica,4.21570690472921,level
+2016-12-31,national,DMA,Dominica,2.22255290262401,level
+2017-12-31,national,DMA,Dominica,2.14285707473755,level
+2018-12-31,national,DMA,Dominica,1.74242424964905,level
+2023-12-31,national,DMA,Dominica,2.97222222884496,level
+2004-12-31,national,DNK,Denmark,2.03173749259061,level
+2008-12-31,national,DNK,Denmark,4.96099505612445,level
+2010-12-31,national,DNK,Denmark,8.36597945680493,level
+2011-12-31,national,DNK,Denmark,8.34732971658466,level
+2012-12-31,national,DNK,Denmark,8.49397767603438,level
+2013-12-31,national,DNK,Denmark,9.6078041097607,level
+2014-12-31,national,DNK,Denmark,8.33166831608979,level
+2015-12-31,national,DNK,Denmark,6.84606992348107,level
+2016-12-31,national,DNK,Denmark,5.86314964710563,level
+2017-12-31,national,DNK,Denmark,5.41056941561119,level
+2018-12-31,national,DNK,Denmark,5.55803139389225,level
+2019-12-31,national,DNK,Denmark,5.50380882741512,level
+2020-12-31,national,DNK,Denmark,4.54589111572291,level
+2021-12-31,national,DNK,Denmark,4.70621767170154,level
+2022-12-31,national,DNK,Denmark,5.20346223755624,level
+2023-12-31,national,DNK,Denmark,4.38328809013554,level
+2004-12-31,national,DOM,Dominican Republic,3.57142857142857,level
+2008-12-31,national,DOM,Dominican Republic,4.63455660182696,level
+2010-12-31,national,DOM,Dominican Republic,8.175,level
+2011-12-31,national,DOM,Dominican Republic,7.36724656139101,level
+2012-12-31,national,DOM,Dominican Republic,8.25058722318638,level
+2013-12-31,national,DOM,Dominican Republic,9.4733044788951,level
+2014-12-31,national,DOM,Dominican Republic,5.68800965675407,level
+2015-12-31,national,DOM,Dominican Republic,7.83718316505353,level
+2016-12-31,national,DOM,Dominican Republic,3.84811688528249,level
+2017-12-31,national,DOM,Dominican Republic,4.88305548118484,level
+2018-12-31,national,DOM,Dominican Republic,4.33039828834848,level
+2019-12-31,national,DOM,Dominican Republic,4.4479930123369,level
+2020-12-31,national,DOM,Dominican Republic,4.01377259560532,level
+2021-12-31,national,DOM,Dominican Republic,5.93627175603594,level
+2022-12-31,national,DOM,Dominican Republic,3.9033751030763,level
+2023-12-31,national,DOM,Dominican Republic,3.97790642910533,level
+2004-12-31,national,DZA,Algeria,1.66666666666667,level
+2008-12-31,national,DZA,Algeria,1.875,level
+2010-12-31,national,DZA,Algeria,7.8125,level
+2012-12-31,national,DZA,Algeria,17.5,level
+2013-12-31,national,DZA,Algeria,15.0,level
+2014-12-31,national,DZA,Algeria,8.72499990463257,level
+2015-12-31,national,DZA,Algeria,3.64482405285041,level
+2016-12-31,national,DZA,Algeria,8.30667877197266,level
+2017-12-31,national,DZA,Algeria,2.96111106872559,level
+2018-12-31,national,DZA,Algeria,3.75,level
+2019-12-31,national,DZA,Algeria,4.58333333333333,level
+2020-12-31,national,DZA,Algeria,4.58333333333333,level
+2021-12-31,national,DZA,Algeria,3.75,level
+2022-12-31,national,DZA,Algeria,1.16666666666667,level
+2023-12-31,national,DZA,Algeria,3.00094699859619,level
+2004-12-31,national,ECU,Ecuador,4.2348484992981,level
+2008-12-31,national,ECU,Ecuador,5.28009258376227,level
+2010-12-31,national,ECU,Ecuador,8.62682979553938,level
+2011-12-31,national,ECU,Ecuador,9.05152710034297,level
+2012-12-31,national,ECU,Ecuador,9.39343086481094,level
+2013-12-31,national,ECU,Ecuador,8.46808321162891,level
+2014-12-31,national,ECU,Ecuador,7.59970450401306,level
+2015-12-31,national,ECU,Ecuador,6.08833488763547,level
+2016-12-31,national,ECU,Ecuador,4.48110929258027,level
+2017-12-31,national,ECU,Ecuador,5.18008958297274,level
+2018-12-31,national,ECU,Ecuador,4.50458979525138,level
+2019-12-31,national,ECU,Ecuador,6.05192550267418,level
+2020-12-31,national,ECU,Ecuador,6.05683829678699,level
+2021-12-31,national,ECU,Ecuador,3.84297312630547,level
+2022-12-31,national,ECU,Ecuador,5.13571353580641,level
+2023-12-31,national,ECU,Ecuador,3.84054379783026,level
+2004-12-31,national,EGY,"Egypt, Arab Rep.",2.26879370642396,level
+2008-12-31,national,EGY,"Egypt, Arab Rep.",5.76905217785989,level
+2010-12-31,national,EGY,"Egypt, Arab Rep.",10.468643313881,level
+2011-12-31,national,EGY,"Egypt, Arab Rep.",9.57146041131779,level
+2012-12-31,national,EGY,"Egypt, Arab Rep.",10.1455068209725,level
+2013-12-31,national,EGY,"Egypt, Arab Rep.",10.6713233240154,level
+2014-12-31,national,EGY,"Egypt, Arab Rep.",9.77092497078586,level
+2015-12-31,national,EGY,"Egypt, Arab Rep.",9.01077995526604,level
+2016-12-31,national,EGY,"Egypt, Arab Rep.",6.02401554829351,level
+2017-12-31,national,EGY,"Egypt, Arab Rep.",5.84025836695804,level
+2018-12-31,national,EGY,"Egypt, Arab Rep.",6.15869221038612,level
+2019-12-31,national,EGY,"Egypt, Arab Rep.",5.37224462501465,level
+2020-12-31,national,EGY,"Egypt, Arab Rep.",5.24690435059935,level
+2021-12-31,national,EGY,"Egypt, Arab Rep.",7.26100792260778,level
+2022-12-31,national,EGY,"Egypt, Arab Rep.",6.55634069227311,level
+2023-12-31,national,EGY,"Egypt, Arab Rep.",6.57175003656974,level
+2011-12-31,national,ERI,Eritrea,5.0,level
+2014-12-31,national,ERI,Eritrea,10.0,level
+2022-12-31,national,ERI,Eritrea,3.95000004768372,level
+2023-12-31,national,ERI,Eritrea,8.28806273142497,level
+2011-12-31,national,ESH,Western Sahara,10.0,level
+2014-12-31,national,ESH,Western Sahara,6.05935010313988,level
+2015-12-31,national,ESH,Western Sahara,3.25,level
+2016-12-31,national,ESH,Western Sahara,6.96000003814697,level
+2023-12-31,national,ESH,Western Sahara,0.0,level
+2004-12-31,national,ESP,Spain,2.37908508333518,level
+2008-12-31,national,ESP,Spain,5.50665519011774,level
+2010-12-31,national,ESP,Spain,9.41598144435286,level
+2011-12-31,national,ESP,Spain,9.32584476840941,level
+2012-12-31,national,ESP,Spain,9.53962481970635,level
+2013-12-31,national,ESP,Spain,9.56533334459221,level
+2014-12-31,national,ESP,Spain,8.60904153771289,level
+2015-12-31,national,ESP,Spain,7.71585081698455,level
+2016-12-31,national,ESP,Spain,6.5596679794058,level
+2017-12-31,national,ESP,Spain,6.23361053145241,level
+2018-12-31,national,ESP,Spain,6.1174935965571,level
+2019-12-31,national,ESP,Spain,6.62725873845871,level
+2020-12-31,national,ESP,Spain,5.53146534749933,level
+2021-12-31,national,ESP,Spain,6.05140501883834,level
+2022-12-31,national,ESP,Spain,6.39730178830462,level
+2023-12-31,national,ESP,Spain,5.59307723016131,level
+2004-12-31,national,EST,Estonia,2.33370966442004,level
+2008-12-31,national,EST,Estonia,5.35088952505187,level
+2010-12-31,national,EST,Estonia,8.07787311945309,level
+2011-12-31,national,EST,Estonia,8.44029955649002,level
+2012-12-31,national,EST,Estonia,8.48352167048032,level
+2013-12-31,national,EST,Estonia,8.18277971155651,level
+2014-12-31,national,EST,Estonia,7.59811827091568,level
+2015-12-31,national,EST,Estonia,6.72241744769356,level
+2016-12-31,national,EST,Estonia,5.94583325375887,level
+2017-12-31,national,EST,Estonia,5.34047151467731,level
+2018-12-31,national,EST,Estonia,4.91293040060383,level
+2019-12-31,national,EST,Estonia,5.37115613304551,level
+2020-12-31,national,EST,Estonia,4.65354269797117,level
+2021-12-31,national,EST,Estonia,4.84087094511741,level
+2022-12-31,national,EST,Estonia,4.92469385586655,level
+2023-12-31,national,EST,Estonia,4.75858114366716,level
+2004-12-31,national,ETH,Ethiopia(excludes Eritrea),5.0,level
+2008-12-31,national,ETH,Ethiopia(excludes Eritrea),0.0,level
+2010-12-31,national,ETH,Ethiopia(excludes Eritrea),0.9375,level
+2011-12-31,national,ETH,Ethiopia(excludes Eritrea),3.51666667461395,level
+2012-12-31,national,ETH,Ethiopia(excludes Eritrea),1.25,level
+2013-12-31,national,ETH,Ethiopia(excludes Eritrea),2.36111111111111,level
+2014-12-31,national,ETH,Ethiopia(excludes Eritrea),1.92348483475772,level
+2015-12-31,national,ETH,Ethiopia(excludes Eritrea),2.5,level
+2016-12-31,national,ETH,Ethiopia(excludes Eritrea),1.58799844328314,level
+2017-12-31,national,ETH,Ethiopia(excludes Eritrea),2.13657733092183,level
+2018-12-31,national,ETH,Ethiopia(excludes Eritrea),1.66234867169987,level
+2019-12-31,national,ETH,Ethiopia(excludes Eritrea),1.16635741651631,level
+2020-12-31,national,ETH,Ethiopia(excludes Eritrea),1.1665610538509,level
+2021-12-31,national,ETH,Ethiopia(excludes Eritrea),3.30943769675035,level
+2022-12-31,national,ETH,Ethiopia(excludes Eritrea),3.76474753293124,level
+2023-12-31,national,ETH,Ethiopia(excludes Eritrea),4.91603573885831,level
+2004-12-31,national,FIN,Finland,2.23318158374543,level
+2008-12-31,national,FIN,Finland,4.67149468767374,level
+2010-12-31,national,FIN,Finland,7.9509606116318,level
+2011-12-31,national,FIN,Finland,7.8248870549417,level
+2012-12-31,national,FIN,Finland,8.1940666329367,level
+2013-12-31,national,FIN,Finland,8.555596774489,level
+2014-12-31,national,FIN,Finland,7.8431871259379,level
+2015-12-31,national,FIN,Finland,6.72679346617061,level
+2016-12-31,national,FIN,Finland,5.64114203860312,level
+2017-12-31,national,FIN,Finland,5.3413291571368,level
+2018-12-31,national,FIN,Finland,5.31851987283271,level
+2019-12-31,national,FIN,Finland,4.95547271874135,level
+2020-12-31,national,FIN,Finland,4.48099944793147,level
+2021-12-31,national,FIN,Finland,4.70944339378852,level
+2022-12-31,national,FIN,Finland,5.01579441680291,level
+2023-12-31,national,FIN,Finland,4.24538793329902,level
+2008-12-31,national,FJI,Fiji,0.0,level
+2010-12-31,national,FJI,Fiji,10.0,level
+2013-12-31,national,FJI,Fiji,10.6944446563721,level
+2014-12-31,national,FJI,Fiji,12.3000001907349,level
+2015-12-31,national,FJI,Fiji,12.5,level
+2018-12-31,national,FJI,Fiji,15.0,level
+2019-12-31,national,FJI,Fiji,7.0,level
+2023-12-31,national,FJI,Fiji,7.0,level
+2011-12-31,national,FLK,Falkland Island,3.0,level
+2012-12-31,national,FLK,Falkland Island,12.8571424484253,level
+2013-12-31,national,FLK,Falkland Island,9.47991826799181,level
+2014-12-31,national,FLK,Falkland Island,4.16666650772095,level
+2004-12-31,national,FRA,France,2.57529585247503,level
+2008-12-31,national,FRA,France,5.32736471472041,level
+2010-12-31,national,FRA,France,8.68767586995811,level
+2011-12-31,national,FRA,France,8.92689419992684,level
+2012-12-31,national,FRA,France,9.06507146621861,level
+2013-12-31,national,FRA,France,8.9386871458874,level
+2014-12-31,national,FRA,France,8.37572692287252,level
+2015-12-31,national,FRA,France,7.72073645312861,level
+2016-12-31,national,FRA,France,6.54959728201083,level
+2017-12-31,national,FRA,France,6.06050421741635,level
+2018-12-31,national,FRA,France,5.97636833340891,level
+2019-12-31,national,FRA,France,9.57505749946041,level
+2020-12-31,national,FRA,France,5.36953593085305,level
+2021-12-31,national,FRA,France,5.97279640844868,level
+2022-12-31,national,FRA,France,5.94862592428547,level
+2023-12-31,national,FRA,France,5.40066475710935,level
+2008-12-31,national,FRO,Faeroe Islands,5.0,level
+2010-12-31,national,FRO,Faeroe Islands,9.58333333333333,level
+2011-12-31,national,FRO,Faeroe Islands,10.0,level
+2012-12-31,national,FRO,Faeroe Islands,11.6666666666667,level
+2013-12-31,national,FRO,Faeroe Islands,11.4583334922791,level
+2014-12-31,national,FRO,Faeroe Islands,11.3900001525879,level
+2015-12-31,national,FRO,Faeroe Islands,6.5,level
+2017-12-31,national,FRO,Faeroe Islands,4.44999996821086,level
+2018-12-31,national,FRO,Faeroe Islands,3.0,level
+2021-12-31,national,FRO,Faeroe Islands,4.0,level
+2022-12-31,national,FRO,Faeroe Islands,0.777777751286825,level
+2023-12-31,national,FRO,Faeroe Islands,2.65441459417343,level
+2015-12-31,national,FSM,"Micronesia, Fed. Sts.",1.31111109256744,level
+2008-12-31,national,GAB,Gabon,6.66666666666667,level
+2012-12-31,national,GAB,Gabon,12.8571424484253,level
+2013-12-31,national,GAB,Gabon,12.6547618865967,level
+2015-12-31,national,GAB,Gabon,12.3599996566772,level
+2018-12-31,national,GAB,Gabon,7.59375,level
+2019-12-31,national,GAB,Gabon,7.125,level
+2022-12-31,national,GAB,Gabon,4.0,level
+2023-12-31,national,GAB,Gabon,5.0,level
+2004-12-31,national,GBR,United Kingdom,2.53302711851717,level
+2008-12-31,national,GBR,United Kingdom,4.90569952145298,level
+2010-12-31,national,GBR,United Kingdom,8.49084664944332,level
+2011-12-31,national,GBR,United Kingdom,8.37693477465446,level
+2012-12-31,national,GBR,United Kingdom,8.38969364106606,level
+2013-12-31,national,GBR,United Kingdom,8.44582640477706,level
+2014-12-31,national,GBR,United Kingdom,8.04551176295467,level
+2015-12-31,national,GBR,United Kingdom,7.28215218352806,level
+2016-12-31,national,GBR,United Kingdom,6.22118334115683,level
+2017-12-31,national,GBR,United Kingdom,6.09855812697125,level
+2018-12-31,national,GBR,United Kingdom,5.91558151801396,level
+2019-12-31,national,GBR,United Kingdom,7.5761978948301,level
+2020-12-31,national,GBR,United Kingdom,5.33665071317664,level
+2021-12-31,national,GBR,United Kingdom,5.50132549125166,level
+2022-12-31,national,GBR,United Kingdom,5.83159697575907,level
+2023-12-31,national,GBR,United Kingdom,5.2970544048453,level
+2004-12-31,national,GEO,Georgia,2.19642857213815,level
+2008-12-31,national,GEO,Georgia,0.0,level
+2010-12-31,national,GEO,Georgia,0.0,level
+2011-12-31,national,GEO,Georgia,0.0,level
+2012-12-31,national,GEO,Georgia,0.0,level
+2013-12-31,national,GEO,Georgia,0.0,level
+2014-12-31,national,GEO,Georgia,0.000719591089197107,level
+2015-12-31,national,GEO,Georgia,0.0,level
+2016-12-31,national,GEO,Georgia,0.0,level
+2017-12-31,national,GEO,Georgia,0.000389144171115964,level
+2018-12-31,national,GEO,Georgia,0.0,level
+2019-12-31,national,GEO,Georgia,0.0,level
+2020-12-31,national,GEO,Georgia,0.0,level
+2021-12-31,national,GEO,Georgia,0.0,level
+2022-12-31,national,GEO,Georgia,0.0,level
+2023-12-31,national,GEO,Georgia,0.0,level
+2004-12-31,national,GHA,Ghana,3.75,level
+2008-12-31,national,GHA,Ghana,4.93055550257365,level
+2010-12-31,national,GHA,Ghana,9.375,level
+2011-12-31,national,GHA,Ghana,10.0595237414042,level
+2012-12-31,national,GHA,Ghana,7.85714280605316,level
+2013-12-31,national,GHA,Ghana,6.98412693871392,level
+2014-12-31,national,GHA,Ghana,10.8042844970221,level
+2015-12-31,national,GHA,Ghana,5.57857131958008,level
+2016-12-31,national,GHA,Ghana,3.08333333333333,level
+2017-12-31,national,GHA,Ghana,5.484375,level
+2018-12-31,national,GHA,Ghana,5.0,level
+2019-12-31,national,GHA,Ghana,3.84073587951975,level
+2020-12-31,national,GHA,Ghana,3.64114752805067,level
+2021-12-31,national,GHA,Ghana,4.01142951420375,level
+2022-12-31,national,GHA,Ghana,3.46069891112191,level
+2023-12-31,national,GHA,Ghana,5.16783695220947,level
+2004-12-31,national,GIB,Gibraltar,0.333333333333333,level
+2008-12-31,national,GIB,Gibraltar,3.95408167157854,level
+2010-12-31,national,GIB,Gibraltar,5.44150248889265,level
+2011-12-31,national,GIB,Gibraltar,11.875,level
+2012-12-31,national,GIB,Gibraltar,5.0,level
+2013-12-31,national,GIB,Gibraltar,7.08333341280619,level
+2014-12-31,national,GIB,Gibraltar,5.52469274732802,level
+2016-12-31,national,GIB,Gibraltar,7.25,level
+2017-12-31,national,GIB,Gibraltar,5.20833331346512,level
+2018-12-31,national,GIB,Gibraltar,4.46006941795349,level
+2019-12-31,national,GIB,Gibraltar,3.116065710783,level
+2022-12-31,national,GIB,Gibraltar,2.39375,level
+2023-12-31,national,GIB,Gibraltar,2.4888889392217,level
+2004-12-31,national,GIN,Guinea,0.0,level
+2012-12-31,national,GIN,Guinea,5.0,level
+2015-12-31,national,GIN,Guinea,8.39999961853027,level
+2016-12-31,national,GIN,Guinea,0.0,level
+2017-12-31,national,GIN,Guinea,0.0,level
+2018-12-31,national,GIN,Guinea,7.55864283635926,level
+2019-12-31,national,GIN,Guinea,5.0,level
+2022-12-31,national,GIN,Guinea,0.0,level
+2023-12-31,national,GIN,Guinea,1.66666662693024,level
+2004-12-31,national,GMB,"Gambia, The",2.5,level
+2010-12-31,national,GMB,"Gambia, The",5.0,level
+2011-12-31,national,GMB,"Gambia, The",11.25,level
+2012-12-31,national,GMB,"Gambia, The",0.0,level
+2013-12-31,national,GMB,"Gambia, The",6.66666650772095,level
+2014-12-31,national,GMB,"Gambia, The",4.0,level
+2015-12-31,national,GMB,"Gambia, The",5.0,level
+2017-12-31,national,GMB,"Gambia, The",0.0,level
+2023-12-31,national,GMB,"Gambia, The",3.31670472611481,level
+2013-12-31,national,GNB,Guinea-Bissau,5.0,level
+2017-12-31,national,GNB,Guinea-Bissau,0.0,level
+2008-12-31,national,GNQ,Equatorial Guinea,0.0,level
+2013-12-31,national,GNQ,Equatorial Guinea,0.176097497344017,level
+2015-12-31,national,GNQ,Equatorial Guinea,6.6875,level
+2004-12-31,national,GRC,Greece,2.2100389861224,level
+2008-12-31,national,GRC,Greece,4.89663765318308,level
+2010-12-31,national,GRC,Greece,8.61832816949507,level
+2011-12-31,national,GRC,Greece,8.99041392845923,level
+2012-12-31,national,GRC,Greece,9.61945867512761,level
+2013-12-31,national,GRC,Greece,9.27901737279235,level
+2014-12-31,national,GRC,Greece,8.56334540838281,level
+2015-12-31,national,GRC,Greece,7.53434766186565,level
+2016-12-31,national,GRC,Greece,6.57267416534679,level
+2017-12-31,national,GRC,Greece,6.02593396326964,level
+2018-12-31,national,GRC,Greece,6.05129455429975,level
+2019-12-31,national,GRC,Greece,6.59303048498526,level
+2020-12-31,national,GRC,Greece,5.43980829385314,level
+2021-12-31,national,GRC,Greece,6.57545190029496,level
+2022-12-31,national,GRC,Greece,6.31893347141643,level
+2023-12-31,national,GRC,Greece,5.39166305904657,level
+2004-12-31,national,GRD,Grenada,0.0,level
+2010-12-31,national,GRD,Grenada,6.66666650772095,level
+2013-12-31,national,GRD,Grenada,10.0,level
+2015-12-31,national,GRD,Grenada,2.76666641235352,level
+2016-12-31,national,GRD,Grenada,7.25,level
+2023-12-31,national,GRD,Grenada,0.833333313465118,level
+2004-12-31,national,GRL,Greenland,0.0,level
+2008-12-31,national,GRL,Greenland,11.25,level
+2011-12-31,national,GRL,Greenland,2.5,level
+2012-12-31,national,GRL,Greenland,8.75,level
+2013-12-31,national,GRL,Greenland,0.0,level
+2014-12-31,national,GRL,Greenland,11.0999994277954,level
+2022-12-31,national,GRL,Greenland,0.842105229695638,level
+2023-12-31,national,GRL,Greenland,0.0,level
+2004-12-31,national,GTM,Guatemala,3.75,level
+2008-12-31,national,GTM,Guatemala,4.79166666666667,level
+2010-12-31,national,GTM,Guatemala,9.8143236226049,level
+2011-12-31,national,GTM,Guatemala,9.10714285714286,level
+2012-12-31,national,GTM,Guatemala,8.81921602319926,level
+2013-12-31,national,GTM,Guatemala,6.95621999949217,level
+2014-12-31,national,GTM,Guatemala,7.03449916677631,level
+2015-12-31,national,GTM,Guatemala,6.39854524722871,level
+2016-12-31,national,GTM,Guatemala,3.35879358304665,level
+2017-12-31,national,GTM,Guatemala,2.27765714628622,level
+2018-12-31,national,GTM,Guatemala,2.63023244655308,level
+2019-12-31,national,GTM,Guatemala,2.56371374067385,level
+2020-12-31,national,GTM,Guatemala,2.60793591127731,level
+2021-12-31,national,GTM,Guatemala,8.76689168810844,level
+2022-12-31,national,GTM,Guatemala,9.02249551812808,level
+2023-12-31,national,GTM,Guatemala,8.60256467546735,level
+2008-12-31,national,GUM,Guam,2.5,level
+2011-12-31,national,GUM,Guam,7.38095235824585,level
+2013-12-31,national,GUM,Guam,0.0,level
+2018-12-31,national,GUM,Guam,0.0,level
+2019-12-31,national,GUM,Guam,7.75,level
+2022-12-31,national,GUM,Guam,5.0,level
+2008-12-31,national,GUY,Guyana,0.249235823750496,level
+2010-12-31,national,GUY,Guyana,0.0962990000844002,level
+2011-12-31,national,GUY,Guyana,0.188478171825409,level
+2012-12-31,national,GUY,Guyana,0.205647684633732,level
+2013-12-31,national,GUY,Guyana,0.1562418465813,level
+2014-12-31,national,GUY,Guyana,0.15784552693367,level
+2016-12-31,national,GUY,Guyana,0.0920577570796013,level
+2017-12-31,national,GUY,Guyana,0.075829304754734,level
+2018-12-31,national,GUY,Guyana,4.90336398314685,level
+2019-12-31,national,GUY,Guyana,0.0523105636239052,level
+2020-12-31,national,GUY,Guyana,0.0526424366980791,level
+2022-12-31,national,GUY,Guyana,7.840789159139,level
+2023-12-31,national,GUY,Guyana,21.6584339141846,level
+2004-12-31,national,HKG,"Hong Kong, China",2.3233568072319,level
+2008-12-31,national,HKG,"Hong Kong, China",5.76960377443461,level
+2010-12-31,national,HKG,"Hong Kong, China",9.2186259129733,level
+2011-12-31,national,HKG,"Hong Kong, China",10.3845237066529,level
+2012-12-31,national,HKG,"Hong Kong, China",10.1886319396118,level
+2013-12-31,national,HKG,"Hong Kong, China",9.79127915458322,level
+2014-12-31,national,HKG,"Hong Kong, China",8.51656472239132,level
+2015-12-31,national,HKG,"Hong Kong, China",7.25503438990857,level
+2016-12-31,national,HKG,"Hong Kong, China",6.22785742793998,level
+2017-12-31,national,HKG,"Hong Kong, China",6.0027480924502,level
+2018-12-31,national,HKG,"Hong Kong, China",5.80873045847044,level
+2019-12-31,national,HKG,"Hong Kong, China",5.25631892457953,level
+2020-12-31,national,HKG,"Hong Kong, China",4.98363641710147,level
+2021-12-31,national,HKG,"Hong Kong, China",5.88855497853526,level
+2022-12-31,national,HKG,"Hong Kong, China",6.06614254335492,level
+2023-12-31,national,HKG,"Hong Kong, China",5.13695110951151,level
+2004-12-31,national,HND,Honduras,5.0,level
+2008-12-31,national,HND,Honduras,5.22058823529412,level
+2010-12-31,national,HND,Honduras,10.7936507562796,level
+2011-12-31,national,HND,Honduras,8.9087301492691,level
+2012-12-31,national,HND,Honduras,11.5066964030266,level
+2013-12-31,national,HND,Honduras,10.6196741555866,level
+2014-12-31,national,HND,Honduras,8.03463119614337,level
+2015-12-31,national,HND,Honduras,8.25762023244585,level
+2016-12-31,national,HND,Honduras,5.46226119261016,level
+2017-12-31,national,HND,Honduras,2.15420205789534,level
+2018-12-31,national,HND,Honduras,2.86003317670631,level
+2019-12-31,national,HND,Honduras,4.56026563306267,level
+2020-12-31,national,HND,Honduras,4.43201230251445,level
+2021-12-31,national,HND,Honduras,9.07423516114553,level
+2022-12-31,national,HND,Honduras,5.32623743309694,level
+2023-12-31,national,HND,Honduras,4.38407656219271,level
+2004-12-31,national,HRV,Croatia,3.0943051203229,level
+2008-12-31,national,HRV,Croatia,4.99201245301513,level
+2010-12-31,national,HRV,Croatia,8.97583498508472,level
+2011-12-31,national,HRV,Croatia,9.09617748430797,level
+2012-12-31,national,HRV,Croatia,10.1176556156528,level
+2013-12-31,national,HRV,Croatia,9.39316955158388,level
+2014-12-31,national,HRV,Croatia,9.03410656585709,level
+2015-12-31,national,HRV,Croatia,8.94552660327995,level
+2016-12-31,national,HRV,Croatia,5.56144936767893,level
+2017-12-31,national,HRV,Croatia,5.74017600058961,level
+2018-12-31,national,HRV,Croatia,5.49330807074978,level
+2019-12-31,national,HRV,Croatia,5.18871859446585,level
+2020-12-31,national,HRV,Croatia,4.63132497610871,level
+2021-12-31,national,HRV,Croatia,5.1877653111111,level
+2022-12-31,national,HRV,Croatia,5.61725727655949,level
+2023-12-31,national,HRV,Croatia,4.71540500704511,level
+2008-12-31,national,HTI,Haiti,5.0,level
+2010-12-31,national,HTI,Haiti,10.0,level
+2011-12-31,national,HTI,Haiti,8.0,level
+2012-12-31,national,HTI,Haiti,10.0,level
+2013-12-31,national,HTI,Haiti,9.94318187236786,level
+2014-12-31,national,HTI,Haiti,8.57920371794275,level
+2015-12-31,national,HTI,Haiti,8.93408747240901,level
+2016-12-31,national,HTI,Haiti,1.63847644464113,level
+2017-12-31,national,HTI,Haiti,1.84503302638504,level
+2018-12-31,national,HTI,Haiti,1.67962238068382,level
+2019-12-31,national,HTI,Haiti,0.0254993699491024,level
+2020-12-31,national,HTI,Haiti,0.0279018394649029,level
+2021-12-31,national,HTI,Haiti,13.6409231821696,level
+2022-12-31,national,HTI,Haiti,8.04867792129517,level
+2023-12-31,national,HTI,Haiti,9.11548709869385,level
+2004-12-31,national,HUN,Hungary,2.21107052619724,level
+2008-12-31,national,HUN,Hungary,5.17839812644123,level
+2010-12-31,national,HUN,Hungary,8.65789756977604,level
+2011-12-31,national,HUN,Hungary,8.53292380198218,level
+2012-12-31,national,HUN,Hungary,8.81886891488106,level
+2013-12-31,national,HUN,Hungary,8.62091870908815,level
+2014-12-31,national,HUN,Hungary,8.40511074018594,level
+2015-12-31,national,HUN,Hungary,7.28480363191907,level
+2016-12-31,national,HUN,Hungary,5.73285968809047,level
+2017-12-31,national,HUN,Hungary,5.25326887783207,level
+2018-12-31,national,HUN,Hungary,5.04945450018211,level
+2019-12-31,national,HUN,Hungary,4.98656632141728,level
+2020-12-31,national,HUN,Hungary,4.57587612617762,level
+2021-12-31,national,HUN,Hungary,5.07323189722757,level
+2022-12-31,national,HUN,Hungary,5.28421951730113,level
+2023-12-31,national,HUN,Hungary,4.61502402512344,level
+2004-12-31,national,IDN,Indonesia,2.7147981580281,level
+2008-12-31,national,IDN,Indonesia,4.82141447598767,level
+2010-12-31,national,IDN,Indonesia,8.86164227128029,level
+2011-12-31,national,IDN,Indonesia,9.30730678381098,level
+2012-12-31,national,IDN,Indonesia,9.57309339967252,level
+2013-12-31,national,IDN,Indonesia,9.7115110331183,level
+2014-12-31,national,IDN,Indonesia,8.86180262072665,level
+2015-12-31,national,IDN,Indonesia,8.06970767055234,level
+2016-12-31,national,IDN,Indonesia,6.51730736690946,level
+2017-12-31,national,IDN,Indonesia,6.04451941371601,level
+2018-12-31,national,IDN,Indonesia,6.01408963188505,level
+2019-12-31,national,IDN,Indonesia,5.79403406812369,level
+2020-12-31,national,IDN,Indonesia,5.44392901137121,level
+2021-12-31,national,IDN,Indonesia,6.08934914336788,level
+2022-12-31,national,IDN,Indonesia,6.02474295608699,level
+2023-12-31,national,IDN,Indonesia,5.80300768580702,level
+2004-12-31,national,IND,India,2.82380654519304,level
+2008-12-31,national,IND,India,5.26269003601306,level
+2010-12-31,national,IND,India,8.93672762988744,level
+2011-12-31,national,IND,India,8.91024432189887,level
+2012-12-31,national,IND,India,8.80197545523345,level
+2013-12-31,national,IND,India,9.12403838795739,level
+2014-12-31,national,IND,India,8.31092603684154,level
+2015-12-31,national,IND,India,7.28259590262299,level
+2016-12-31,national,IND,India,5.88262423143497,level
+2017-12-31,national,IND,India,5.64487834377843,level
+2018-12-31,national,IND,India,5.51981523209333,level
+2019-12-31,national,IND,India,5.33210243251921,level
+2020-12-31,national,IND,India,5.03134684906623,level
+2021-12-31,national,IND,India,5.75347327827685,level
+2022-12-31,national,IND,India,6.08587322802988,level
+2023-12-31,national,IND,India,5.59938606904559,level
+2004-12-31,national,IOT,British Indian Ocean Ter.,0.0,level
+2011-12-31,national,IOT,British Indian Ocean Ter.,5.0,level
+2012-12-31,national,IOT,British Indian Ocean Ter.,10.0,level
+2018-12-31,national,IOT,British Indian Ocean Ter.,4.72222232818604,level
+2004-12-31,national,IRL,Ireland,1.98778093102093,level
+2008-12-31,national,IRL,Ireland,3.78155017300104,level
+2010-12-31,national,IRL,Ireland,6.44789026086954,level
+2011-12-31,national,IRL,Ireland,6.5519584123677,level
+2012-12-31,national,IRL,Ireland,7.09102856174111,level
+2013-12-31,national,IRL,Ireland,7.38661651881075,level
+2014-12-31,national,IRL,Ireland,6.36283553351865,level
+2015-12-31,national,IRL,Ireland,5.45574809992396,level
+2016-12-31,national,IRL,Ireland,4.64678945411061,level
+2017-12-31,national,IRL,Ireland,4.59685738667225,level
+2018-12-31,national,IRL,Ireland,4.46628904367341,level
+2019-12-31,national,IRL,Ireland,4.57083763632923,level
+2020-12-31,national,IRL,Ireland,3.9972202345434,level
+2021-12-31,national,IRL,Ireland,3.50622463531381,level
+2022-12-31,national,IRL,Ireland,4.52255911670859,level
+2023-12-31,national,IRL,Ireland,4.27100802702672,level
+2004-12-31,national,IRN,"Iran, Islamic Rep.",2.45121212092313,level
+2008-12-31,national,IRN,"Iran, Islamic Rep.",6.21713162330779,level
+2010-12-31,national,IRN,"Iran, Islamic Rep.",8.74277894037925,level
+2011-12-31,national,IRN,"Iran, Islamic Rep.",8.39471473743722,level
+2012-12-31,national,IRN,"Iran, Islamic Rep.",9.23531952530984,level
+2013-12-31,national,IRN,"Iran, Islamic Rep.",8.92885294720441,level
+2014-12-31,national,IRN,"Iran, Islamic Rep.",8.13558280897045,level
+2015-12-31,national,IRN,"Iran, Islamic Rep.",6.50025791872054,level
+2016-12-31,national,IRN,"Iran, Islamic Rep.",6.09184746453919,level
+2017-12-31,national,IRN,"Iran, Islamic Rep.",5.51913785431856,level
+2018-12-31,national,IRN,"Iran, Islamic Rep.",5.52555606990483,level
+2019-12-31,national,IRN,"Iran, Islamic Rep.",6.20609330202697,level
+2020-12-31,national,IRN,"Iran, Islamic Rep.",5.58849271739393,level
+2021-12-31,national,IRN,"Iran, Islamic Rep.",5.14819633556429,level
+2022-12-31,national,IRN,"Iran, Islamic Rep.",5.44109855554998,level
+2023-12-31,national,IRN,"Iran, Islamic Rep.",4.99532490378709,level
+2004-12-31,national,IRQ,Iraq,5.0,level
+2008-12-31,national,IRQ,Iraq,5.0,level
+2010-12-31,national,IRQ,Iraq,6.66666650772095,level
+2011-12-31,national,IRQ,Iraq,0.833333313465118,level
+2012-12-31,national,IRQ,Iraq,12.5,level
+2013-12-31,national,IRQ,Iraq,15.0,level
+2015-12-31,national,IRQ,Iraq,5.0,level
+2016-12-31,national,IRQ,Iraq,1.66666662693024,level
+2021-12-31,national,IRQ,Iraq,7.85423898696899,level
+2022-12-31,national,IRQ,Iraq,7.25,level
+2023-12-31,national,IRQ,Iraq,7.25,level
+2004-12-31,national,ISL,Iceland,2.30769230769231,level
+2008-12-31,national,ISL,Iceland,3.64615383148193,level
+2010-12-31,national,ISL,Iceland,11.1333401328639,level
+2011-12-31,national,ISL,Iceland,7.45485404821543,level
+2012-12-31,national,ISL,Iceland,8.9478843098595,level
+2013-12-31,national,ISL,Iceland,10.3857672489606,level
+2014-12-31,national,ISL,Iceland,6.52332887384627,level
+2015-12-31,national,ISL,Iceland,6.9854552044588,level
+2016-12-31,national,ISL,Iceland,4.53213778287172,level
+2017-12-31,national,ISL,Iceland,5.23955917515253,level
+2018-12-31,national,ISL,Iceland,3.62947574507837,level
+2019-12-31,national,ISL,Iceland,5.66413866759588,level
+2020-12-31,national,ISL,Iceland,5.11390121327713,level
+2021-12-31,national,ISL,Iceland,5.25089932571758,level
+2022-12-31,national,ISL,Iceland,4.13645478231566,level
+2023-12-31,national,ISL,Iceland,4.27387262071882,level
+2004-12-31,national,ISR,Israel,1.98206904110236,level
+2008-12-31,national,ISR,Israel,4.98852510104998,level
+2010-12-31,national,ISR,Israel,8.15044682909315,level
+2011-12-31,national,ISR,Israel,8.77471197664174,level
+2012-12-31,national,ISR,Israel,8.60065135452896,level
+2013-12-31,national,ISR,Israel,8.58325798796589,level
+2014-12-31,national,ISR,Israel,7.48980509363393,level
+2015-12-31,national,ISR,Israel,6.29883291700791,level
+2016-12-31,national,ISR,Israel,5.59466689200649,level
+2017-12-31,national,ISR,Israel,4.89238099138739,level
+2018-12-31,national,ISR,Israel,4.75190751496611,level
+2019-12-31,national,ISR,Israel,4.71932125188314,level
+2020-12-31,national,ISR,Israel,4.29321881448729,level
+2021-12-31,national,ISR,Israel,4.2376704946437,level
+2022-12-31,national,ISR,Israel,4.56678607147238,level
+2023-12-31,national,ISR,Israel,4.02744343204376,level
+2004-12-31,national,ITA,Italy,2.6163213324108,level
+2008-12-31,national,ITA,Italy,5.33578318448368,level
+2010-12-31,national,ITA,Italy,8.78603484537029,level
+2011-12-31,national,ITA,Italy,8.9645448654607,level
+2012-12-31,national,ITA,Italy,8.96355727839237,level
+2013-12-31,national,ITA,Italy,9.13039100835984,level
+2014-12-31,national,ITA,Italy,8.41017043015585,level
+2015-12-31,national,ITA,Italy,7.82539681978178,level
+2016-12-31,national,ITA,Italy,6.48765477801604,level
+2017-12-31,national,ITA,Italy,6.24997134868893,level
+2018-12-31,national,ITA,Italy,6.12279035485804,level
+2019-12-31,national,ITA,Italy,7.69399147735271,level
+2020-12-31,national,ITA,Italy,5.54320460360181,level
+2021-12-31,national,ITA,Italy,6.05952835001716,level
+2022-12-31,national,ITA,Italy,6.51976968901738,level
+2023-12-31,national,ITA,Italy,5.87431132496596,level
+2004-12-31,national,JAM,Jamaica,2.5,level
+2008-12-31,national,JAM,Jamaica,1.33307860791683,level
+2010-12-31,national,JAM,Jamaica,10.2243831666807,level
+2011-12-31,national,JAM,Jamaica,0.188478171825409,level
+2012-12-31,national,JAM,Jamaica,5.72408846318722,level
+2013-12-31,national,JAM,Jamaica,7.21517774959405,level
+2014-12-31,national,JAM,Jamaica,4.29310895999273,level
+2015-12-31,national,JAM,Jamaica,0.105256012640893,level
+2016-12-31,national,JAM,Jamaica,0.0923594944179058,level
+2017-12-31,national,JAM,Jamaica,1.30146942039331,level
+2018-12-31,national,JAM,Jamaica,1.2444063598911,level
+2019-12-31,national,JAM,Jamaica,5.70394511520863,level
+2020-12-31,national,JAM,Jamaica,5.38798893455948,level
+2021-12-31,national,JAM,Jamaica,28.5563182830811,level
+2022-12-31,national,JAM,Jamaica,10.8550131320953,level
+2023-12-31,national,JAM,Jamaica,14.0792169570923,level
+2004-12-31,national,JOR,Jordan,2.08108108108108,level
+2008-12-31,national,JOR,Jordan,4.54427083333333,level
+2010-12-31,national,JOR,Jordan,11.6263183021545,level
+2011-12-31,national,JOR,Jordan,10.1289682547251,level
+2012-12-31,national,JOR,Jordan,11.6733527906013,level
+2013-12-31,national,JOR,Jordan,9.4621139023755,level
+2014-12-31,national,JOR,Jordan,8.77802139583689,level
+2015-12-31,national,JOR,Jordan,8.20122395828366,level
+2016-12-31,national,JOR,Jordan,6.68025079969731,level
+2017-12-31,national,JOR,Jordan,4.96717085549608,level
+2018-12-31,national,JOR,Jordan,7.95479028333838,level
+2019-12-31,national,JOR,Jordan,6.35805121529847,level
+2020-12-31,national,JOR,Jordan,6.21922945583771,level
+2021-12-31,national,JOR,Jordan,9.30296810813572,level
+2022-12-31,national,JOR,Jordan,7.95004274970607,level
+2023-12-31,national,JOR,Jordan,7.88766725858053,level
+2004-12-31,national,JPN,Japan,1.9703337751285,level
+2008-12-31,national,JPN,Japan,4.88322860011562,level
+2010-12-31,national,JPN,Japan,8.32225968986971,level
+2011-12-31,national,JPN,Japan,7.66432351500008,level
+2012-12-31,national,JPN,Japan,7.56067612452312,level
+2013-12-31,national,JPN,Japan,8.05943275175786,level
+2014-12-31,national,JPN,Japan,7.61533935527969,level
+2015-12-31,national,JPN,Japan,6.41753614406147,level
+2016-12-31,national,JPN,Japan,5.7379974376921,level
+2017-12-31,national,JPN,Japan,5.79655330105506,level
+2018-12-31,national,JPN,Japan,5.37270771931174,level
+2019-12-31,national,JPN,Japan,5.53186608445515,level
+2020-12-31,national,JPN,Japan,4.89580624995424,level
+2021-12-31,national,JPN,Japan,5.05638984124736,level
+2022-12-31,national,JPN,Japan,5.70105116909065,level
+2023-12-31,national,JPN,Japan,5.02374504421785,level
+2004-12-31,national,KEN,Kenya,3.63636363636364,level
+2008-12-31,national,KEN,Kenya,5.625,level
+2010-12-31,national,KEN,Kenya,10.546875,level
+2011-12-31,national,KEN,Kenya,10.0817384468882,level
+2012-12-31,national,KEN,Kenya,10.2003105412359,level
+2013-12-31,national,KEN,Kenya,8.7037037037037,level
+2014-12-31,national,KEN,Kenya,6.28309680927883,level
+2015-12-31,national,KEN,Kenya,8.32167916948145,level
+2016-12-31,national,KEN,Kenya,4.95223007465459,level
+2017-12-31,national,KEN,Kenya,4.62344774494515,level
+2018-12-31,national,KEN,Kenya,4.94255559326017,level
+2019-12-31,national,KEN,Kenya,4.76844379360167,level
+2020-12-31,national,KEN,Kenya,5.55999816814438,level
+2021-12-31,national,KEN,Kenya,5.6663761138916,level
+2022-12-31,national,KEN,Kenya,6.76526177183111,level
+2023-12-31,national,KEN,Kenya,6.90615849494934,level
+2004-12-31,national,KGZ,Kyrgyz Republic,2.57241747742519,level
+2008-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2010-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2011-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2012-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2013-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2014-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2015-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2016-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2017-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2018-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2019-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2020-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2021-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2022-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2023-12-31,national,KGZ,Kyrgyz Republic,0.0,level
+2004-12-31,national,KHM,Cambodia,4.54545454545455,level
+2008-12-31,national,KHM,Cambodia,5.98214287417276,level
+2010-12-31,national,KHM,Cambodia,10.3212851386472,level
+2011-12-31,national,KHM,Cambodia,10.2952981651376,level
+2012-12-31,national,KHM,Cambodia,10.4712301558918,level
+2013-12-31,national,KHM,Cambodia,10.3831598837644,level
+2014-12-31,national,KHM,Cambodia,10.6802247090446,level
+2015-12-31,national,KHM,Cambodia,9.73368100396974,level
+2016-12-31,national,KHM,Cambodia,5.51485578646723,level
+2017-12-31,national,KHM,Cambodia,5.57241228522077,level
+2018-12-31,national,KHM,Cambodia,5.66150816223255,level
+2019-12-31,national,KHM,Cambodia,5.47461370369315,level
+2020-12-31,national,KHM,Cambodia,5.42996279421011,level
+2021-12-31,national,KHM,Cambodia,10.2441958353437,level
+2022-12-31,national,KHM,Cambodia,7.67645619060627,level
+2023-12-31,national,KHM,Cambodia,7.4985739242562,level
+2008-12-31,national,KIR,Kiribati,8.33333301544189,level
+2013-12-31,national,KIR,Kiribati,0.0,level
+2014-12-31,national,KIR,Kiribati,9.09999942779541,level
+2012-12-31,national,KNA,St. Kitts and Nevis,12.5,level
+2015-12-31,national,KNA,St. Kitts and Nevis,8.89306116104126,level
+2017-12-31,national,KNA,St. Kitts and Nevis,0.0,level
+2018-12-31,national,KNA,St. Kitts and Nevis,5.0,level
+2004-12-31,national,KOR,"Korea, Rep.",2.13064818035912,level
+2008-12-31,national,KOR,"Korea, Rep.",5.06212851632502,level
+2010-12-31,national,KOR,"Korea, Rep.",8.31028121876462,level
+2011-12-31,national,KOR,"Korea, Rep.",8.70789475190619,level
+2012-12-31,national,KOR,"Korea, Rep.",8.70105152736407,level
+2013-12-31,national,KOR,"Korea, Rep.",8.99772159231314,level
+2014-12-31,national,KOR,"Korea, Rep.",8.02496878288327,level
+2015-12-31,national,KOR,"Korea, Rep.",7.23063636872123,level
+2016-12-31,national,KOR,"Korea, Rep.",6.31239325372393,level
+2017-12-31,national,KOR,"Korea, Rep.",5.91941214758592,level
+2018-12-31,national,KOR,"Korea, Rep.",5.83826152566625,level
+2019-12-31,national,KOR,"Korea, Rep.",10.2005868549858,level
+2020-12-31,national,KOR,"Korea, Rep.",5.24113214162964,level
+2021-12-31,national,KOR,"Korea, Rep.",5.30064235329152,level
+2022-12-31,national,KOR,"Korea, Rep.",5.79622333841032,level
+2023-12-31,national,KOR,"Korea, Rep.",5.18527144316192,level
+2004-12-31,national,KWT,Kuwait,3.33333333333333,level
+2008-12-31,national,KWT,Kuwait,7.64204549789429,level
+2010-12-31,national,KWT,Kuwait,12.1044862270355,level
+2011-12-31,national,KWT,Kuwait,7.5,level
+2013-12-31,national,KWT,Kuwait,7.5,level
+2014-12-31,national,KWT,Kuwait,9.63720234802791,level
+2015-12-31,national,KWT,Kuwait,13.125,level
+2016-12-31,national,KWT,Kuwait,8.8291210655736,level
+2017-12-31,national,KWT,Kuwait,4.96071769766234,level
+2018-12-31,national,KWT,Kuwait,6.40000009536743,level
+2019-12-31,national,KWT,Kuwait,6.85262324350576,level
+2020-12-31,national,KWT,Kuwait,6.24289458079471,level
+2021-12-31,national,KWT,Kuwait,7.70833337306976,level
+2022-12-31,national,KWT,Kuwait,5.09268936157227,level
+2023-12-31,national,KWT,Kuwait,1.25,level
+2004-12-31,national,LAO,Lao PDR,4.58333332836628,level
+2008-12-31,national,LAO,Lao PDR,5.17647058823529,level
+2010-12-31,national,LAO,Lao PDR,9.44444444444444,level
+2011-12-31,national,LAO,Lao PDR,9.98722860548231,level
+2012-12-31,national,LAO,Lao PDR,10.4761904761905,level
+2013-12-31,national,LAO,Lao PDR,10.3125,level
+2014-12-31,national,LAO,Lao PDR,9.8446297995979,level
+2015-12-31,national,LAO,Lao PDR,9.42261121810778,level
+2016-12-31,national,LAO,Lao PDR,4.80390854104189,level
+2017-12-31,national,LAO,Lao PDR,5.04127484810583,level
+2018-12-31,national,LAO,Lao PDR,2.62308576734116,level
+2019-12-31,national,LAO,Lao PDR,2.52067960202004,level
+2020-12-31,national,LAO,Lao PDR,3.28547943338614,level
+2021-12-31,national,LAO,Lao PDR,5.21303636294145,level
+2022-12-31,national,LAO,Lao PDR,5.21705549955368,level
+2023-12-31,national,LAO,Lao PDR,7.49414829633854,level
+2004-12-31,national,LBN,Lebanon,2.01754385860343,level
+2008-12-31,national,LBN,Lebanon,7.28192640279795,level
+2010-12-31,national,LBN,Lebanon,10.6282607822707,level
+2011-12-31,national,LBN,Lebanon,10.6212121248245,level
+2012-12-31,national,LBN,Lebanon,9.57646518824052,level
+2013-12-31,national,LBN,Lebanon,10.6725058207606,level
+2014-12-31,national,LBN,Lebanon,10.0336325033628,level
+2015-12-31,national,LBN,Lebanon,8.05697194519535,level
+2016-12-31,national,LBN,Lebanon,6.37960389013524,level
+2017-12-31,national,LBN,Lebanon,7.32376559637487,level
+2018-12-31,national,LBN,Lebanon,7.47585220039381,level
+2019-12-31,national,LBN,Lebanon,6.31861271302602,level
+2020-12-31,national,LBN,Lebanon,6.06294569291356,level
+2021-12-31,national,LBN,Lebanon,6.78303833191211,level
+2022-12-31,national,LBN,Lebanon,6.53923205435276,level
+2023-12-31,national,LBN,Lebanon,6.51220462881789,level
+2004-12-31,national,LBR,Liberia,0.0,level
+2008-12-31,national,LBR,Liberia,0.0,level
+2010-12-31,national,LBR,Liberia,4.25000001589457,level
+2011-12-31,national,LBR,Liberia,0.0,level
+2012-12-31,national,LBR,Liberia,0.0,level
+2015-12-31,national,LBR,Liberia,3.0,level
+2023-12-31,national,LBR,Liberia,0.0,level
+2008-12-31,national,LBY,Libya,5.0,level
+2010-12-31,national,LBY,Libya,9.79166674613953,level
+2011-12-31,national,LBY,Libya,4.6875,level
+2013-12-31,national,LBY,Libya,7.17261922359467,level
+2014-12-31,national,LBY,Libya,4.84642839431763,level
+2023-12-31,national,LBY,Libya,4.55000019073486,level
+2010-12-31,national,LCA,St. Lucia,0.0,level
+2011-12-31,national,LCA,St. Lucia,1.66666662693024,level
+2012-12-31,national,LCA,St. Lucia,2.22222216924032,level
+2013-12-31,national,LCA,St. Lucia,3.33333325386047,level
+2014-12-31,national,LCA,St. Lucia,3.33333325386047,level
+2015-12-31,national,LCA,St. Lucia,3.33333325386047,level
+2019-12-31,national,LCA,St. Lucia,3.16666674613953,level
+2004-12-31,national,LKA,Sri Lanka,3.60606060624123,level
+2008-12-31,national,LKA,Sri Lanka,5.94055524318338,level
+2010-12-31,national,LKA,Sri Lanka,10.902443205254,level
+2011-12-31,national,LKA,Sri Lanka,10.9125355833455,level
+2012-12-31,national,LKA,Sri Lanka,10.2987914649389,level
+2013-12-31,national,LKA,Sri Lanka,10.5591153140162,level
+2014-12-31,national,LKA,Sri Lanka,9.9321760716749,level
+2015-12-31,national,LKA,Sri Lanka,9.20539559694109,level
+2016-12-31,national,LKA,Sri Lanka,5.68310801729358,level
+2017-12-31,national,LKA,Sri Lanka,5.44007802719008,level
+2018-12-31,national,LKA,Sri Lanka,5.18527446472137,level
+2019-12-31,national,LKA,Sri Lanka,4.73887980341945,level
+2020-12-31,national,LKA,Sri Lanka,4.49457289752304,level
+2021-12-31,national,LKA,Sri Lanka,8.56615871023124,level
+2022-12-31,national,LKA,Sri Lanka,6.5936917222359,level
+2023-12-31,national,LKA,Sri Lanka,6.82609940822734,level
+2010-12-31,national,LSO,Lesotho,6.66666666666667,level
+2011-12-31,national,LSO,Lesotho,10.0,level
+2012-12-31,national,LSO,Lesotho,12.2222222222222,level
+2013-12-31,national,LSO,Lesotho,10.0,level
+2014-12-31,national,LSO,Lesotho,4.16666650772095,level
+2015-12-31,national,LSO,Lesotho,8.00250334739685,level
+2016-12-31,national,LSO,Lesotho,7.13470839119206,level
+2017-12-31,national,LSO,Lesotho,6.20201211096719,level
+2018-12-31,national,LSO,Lesotho,0.0,level
+2019-12-31,national,LSO,Lesotho,2.78333353996277,level
+2020-12-31,national,LSO,Lesotho,2.5,level
+2021-12-31,national,LSO,Lesotho,2.91666665673256,level
+2023-12-31,national,LSO,Lesotho,1.99494953950246,level
+2004-12-31,national,LTU,Lithuania,2.52520653643453,level
+2008-12-31,national,LTU,Lithuania,5.12776254455,level
+2010-12-31,national,LTU,Lithuania,8.92285941272974,level
+2011-12-31,national,LTU,Lithuania,9.11054972123544,level
+2012-12-31,national,LTU,Lithuania,9.46929613332572,level
+2013-12-31,national,LTU,Lithuania,9.53558158495466,level
+2014-12-31,national,LTU,Lithuania,8.81509705825105,level
+2015-12-31,national,LTU,Lithuania,7.79674907709574,level
+2016-12-31,national,LTU,Lithuania,6.50530409973534,level
+2017-12-31,national,LTU,Lithuania,6.14515745335603,level
+2018-12-31,national,LTU,Lithuania,6.02259733787394,level
+2019-12-31,national,LTU,Lithuania,6.83614944249471,level
+2020-12-31,national,LTU,Lithuania,5.46850518617005,level
+2021-12-31,national,LTU,Lithuania,5.75419092589144,level
+2022-12-31,national,LTU,Lithuania,6.06523376531833,level
+2023-12-31,national,LTU,Lithuania,5.57108571120937,level
+2004-12-31,national,LUX,Luxembourg,2.13314535900166,level
+2008-12-31,national,LUX,Luxembourg,4.4571136795314,level
+2010-12-31,national,LUX,Luxembourg,7.35593794981639,level
+2011-12-31,national,LUX,Luxembourg,6.90144530350858,level
+2012-12-31,national,LUX,Luxembourg,7.44336998203526,level
+2013-12-31,national,LUX,Luxembourg,8.6370053223524,level
+2014-12-31,national,LUX,Luxembourg,8.33223635140159,level
+2015-12-31,national,LUX,Luxembourg,6.57589268959486,level
+2016-12-31,national,LUX,Luxembourg,4.50866994463682,level
+2017-12-31,national,LUX,Luxembourg,4.90119594414677,level
+2018-12-31,national,LUX,Luxembourg,5.18578781293971,level
+2019-12-31,national,LUX,Luxembourg,4.48719007361169,level
+2020-12-31,national,LUX,Luxembourg,4.175911610033,level
+2021-12-31,national,LUX,Luxembourg,4.38706584201001,level
+2022-12-31,national,LUX,Luxembourg,4.43819262812623,level
+2023-12-31,national,LUX,Luxembourg,3.77373376109383,level
+2004-12-31,national,LVA,Latvia,1.93208106109743,level
+2008-12-31,national,LVA,Latvia,5.39574360256432,level
+2010-12-31,national,LVA,Latvia,9.09434970953759,level
+2011-12-31,national,LVA,Latvia,9.04867582350275,level
+2012-12-31,national,LVA,Latvia,9.03605513821467,level
+2013-12-31,national,LVA,Latvia,9.57452405562115,level
+2014-12-31,national,LVA,Latvia,8.54869435247872,level
+2015-12-31,national,LVA,Latvia,7.49314028820963,level
+2016-12-31,national,LVA,Latvia,6.3599893510582,level
+2017-12-31,national,LVA,Latvia,5.69292358007586,level
+2018-12-31,national,LVA,Latvia,5.32121691300077,level
+2019-12-31,national,LVA,Latvia,5.47273675104682,level
+2020-12-31,national,LVA,Latvia,4.97055605974003,level
+2021-12-31,national,LVA,Latvia,5.3873446801638,level
+2022-12-31,national,LVA,Latvia,4.88977191989781,level
+2023-12-31,national,LVA,Latvia,4.45644084864025,level
+2004-12-31,national,MAC,Macao,5.0,level
+2008-12-31,national,MAC,Macao,5.0,level
+2010-12-31,national,MAC,Macao,9.58333333333333,level
+2011-12-31,national,MAC,Macao,7.5,level
+2012-12-31,national,MAC,Macao,5.27272729873657,level
+2013-12-31,national,MAC,Macao,5.0,level
+2014-12-31,national,MAC,Macao,3.66882032963137,level
+2015-12-31,national,MAC,Macao,4.09583338101705,level
+2016-12-31,national,MAC,Macao,6.10416666666667,level
+2017-12-31,national,MAC,Macao,3.68444442749023,level
+2018-12-31,national,MAC,Macao,0.0,level
+2019-12-31,national,MAC,Macao,3.83999996185303,level
+2020-12-31,national,MAC,Macao,3.93000001907349,level
+2021-12-31,national,MAC,Macao,7.5,level
+2022-12-31,national,MAC,Macao,7.08913604806109,level
+2023-12-31,national,MAC,Macao,6.06074578673751,level
+2004-12-31,national,MAR,Morocco,4.19166666984558,level
+2008-12-31,national,MAR,Morocco,5.71014492408089,level
+2010-12-31,national,MAR,Morocco,9.80170002544627,level
+2011-12-31,national,MAR,Morocco,10.3419522392122,level
+2012-12-31,national,MAR,Morocco,10.152723830437,level
+2013-12-31,national,MAR,Morocco,10.4957964479923,level
+2014-12-31,national,MAR,Morocco,10.349382447852,level
+2015-12-31,national,MAR,Morocco,9.03471225031834,level
+2016-12-31,national,MAR,Morocco,5.39859739890207,level
+2017-12-31,national,MAR,Morocco,5.27076616949377,level
+2018-12-31,national,MAR,Morocco,4.76851108419087,level
+2019-12-31,national,MAR,Morocco,6.07548087658826,level
+2020-12-31,national,MAR,Morocco,5.80366283371246,level
+2021-12-31,national,MAR,Morocco,8.28840645030141,level
+2022-12-31,national,MAR,Morocco,6.66469529720202,level
+2023-12-31,national,MAR,Morocco,6.85306574505264,level
+2004-12-31,national,MDA,Moldova,3.27068452257663,level
+2008-12-31,national,MDA,Moldova,0.0,level
+2010-12-31,national,MDA,Moldova,0.0,level
+2011-12-31,national,MDA,Moldova,0.0,level
+2012-12-31,national,MDA,Moldova,0.0,level
+2013-12-31,national,MDA,Moldova,0.0,level
+2014-12-31,national,MDA,Moldova,0.0,level
+2015-12-31,national,MDA,Moldova,0.0,level
+2016-12-31,national,MDA,Moldova,0.0,level
+2017-12-31,national,MDA,Moldova,0.0,level
+2018-12-31,national,MDA,Moldova,0.0,level
+2019-12-31,national,MDA,Moldova,0.0,level
+2020-12-31,national,MDA,Moldova,0.0,level
+2021-12-31,national,MDA,Moldova,0.0,level
+2022-12-31,national,MDA,Moldova,0.0,level
+2023-12-31,national,MDA,Moldova,0.0,level
+2004-12-31,national,MDG,Madagascar,5.0,level
+2008-12-31,national,MDG,Madagascar,4.53125,level
+2010-12-31,national,MDG,Madagascar,9.64749040911274,level
+2011-12-31,national,MDG,Madagascar,9.54545454545455,level
+2012-12-31,national,MDG,Madagascar,10.0966183482737,level
+2013-12-31,national,MDG,Madagascar,9.38524590163934,level
+2014-12-31,national,MDG,Madagascar,9.76641757246941,level
+2015-12-31,national,MDG,Madagascar,9.1686012082375,level
+2016-12-31,national,MDG,Madagascar,5.79052266507365,level
+2017-12-31,national,MDG,Madagascar,4.517777285663,level
+2018-12-31,national,MDG,Madagascar,4.60788549949105,level
+2019-12-31,national,MDG,Madagascar,4.81041676300893,level
+2020-12-31,national,MDG,Madagascar,4.81250575469138,level
+2021-12-31,national,MDG,Madagascar,8.95191252042377,level
+2022-12-31,national,MDG,Madagascar,7.13118967899056,level
+2023-12-31,national,MDG,Madagascar,7.78785782129992,level
+2004-12-31,national,MDV,Maldives,0.0,level
+2010-12-31,national,MDV,Maldives,6.66666650772095,level
+2012-12-31,national,MDV,Maldives,20.0,level
+2014-12-31,national,MDV,Maldives,4.49603174130122,level
+2015-12-31,national,MDV,Maldives,0.0,level
+2021-12-31,national,MDV,Maldives,5.68241500854492,level
+2022-12-31,national,MDV,Maldives,6.86041668057442,level
+2023-12-31,national,MDV,Maldives,8.15370371606615,level
+2004-12-31,national,MEX,Mexico,1.68840187477569,level
+2008-12-31,national,MEX,Mexico,3.684719489639,level
+2010-12-31,national,MEX,Mexico,6.96456659330237,level
+2011-12-31,national,MEX,Mexico,7.07634492660061,level
+2012-12-31,national,MEX,Mexico,7.12864957751223,level
+2013-12-31,national,MEX,Mexico,7.44791885735295,level
+2014-12-31,national,MEX,Mexico,6.33402396972328,level
+2015-12-31,national,MEX,Mexico,6.27887866387605,level
+2016-12-31,national,MEX,Mexico,5.74934891870415,level
+2017-12-31,national,MEX,Mexico,4.8194613976183,level
+2018-12-31,national,MEX,Mexico,4.56473257686258,level
+2019-12-31,national,MEX,Mexico,4.67827867729855,level
+2020-12-31,national,MEX,Mexico,4.20064301360416,level
+2021-12-31,national,MEX,Mexico,4.23661624664654,level
+2022-12-31,national,MEX,Mexico,4.62263761922854,level
+2023-12-31,national,MEX,Mexico,4.03420926322285,level
+2011-12-31,national,MHL,Marshall Islands,10.0,level
+2013-12-31,national,MHL,Marshall Islands,6.5,level
+2014-12-31,national,MHL,Marshall Islands,9.5,level
+2015-12-31,national,MHL,Marshall Islands,0.0,level
+2016-12-31,national,MHL,Marshall Islands,10.0,level
+2018-12-31,national,MHL,Marshall Islands,13.9309110641479,level
+2004-12-31,national,MKD,"Macedonia, FYR",2.5,level
+2008-12-31,national,MKD,"Macedonia, FYR",5.37927349408468,level
+2010-12-31,national,MKD,"Macedonia, FYR",10.1740814512823,level
+2011-12-31,national,MKD,"Macedonia, FYR",8.66636963036789,level
+2012-12-31,national,MKD,"Macedonia, FYR",9.1588137126714,level
+2013-12-31,national,MKD,"Macedonia, FYR",10.9125386861063,level
+2014-12-31,national,MKD,"Macedonia, FYR",9.39458180341747,level
+2015-12-31,national,MKD,"Macedonia, FYR",8.50051408666574,level
+2016-12-31,national,MKD,"Macedonia, FYR",5.71147082524175,level
+2017-12-31,national,MKD,"Macedonia, FYR",4.60465368851209,level
+2018-12-31,national,MKD,"Macedonia, FYR",4.6632524351166,level
+2019-12-31,national,MKD,"Macedonia, FYR",4.73524316100557,level
+2020-12-31,national,MKD,"Macedonia, FYR",4.52775895216243,level
+2021-12-31,national,MKD,"Macedonia, FYR",7.00790813381289,level
+2022-12-31,national,MKD,"Macedonia, FYR",6.34392280684839,level
+2023-12-31,national,MKD,"Macedonia, FYR",5.90736040592194,level
+2010-12-31,national,MLI,Mali,0.0,level
+2011-12-31,national,MLI,Mali,2.78333334922791,level
+2012-12-31,national,MLI,Mali,4.60218254725138,level
+2013-12-31,national,MLI,Mali,2.99305555224419,level
+2014-12-31,national,MLI,Mali,1.38607639074326,level
+2015-12-31,national,MLI,Mali,6.66666662693024,level
+2016-12-31,national,MLI,Mali,1.0,level
+2017-12-31,national,MLI,Mali,0.0,level
+2018-12-31,national,MLI,Mali,0.0,level
+2019-12-31,national,MLI,Mali,3.125,level
+2020-12-31,national,MLI,Mali,2.725,level
+2021-12-31,national,MLI,Mali,0.0,level
+2022-12-31,national,MLI,Mali,2.45625,level
+2023-12-31,national,MLI,Mali,2.41541361808777,level
+2004-12-31,national,MLT,Malta,2.66666666666667,level
+2008-12-31,national,MLT,Malta,3.94557822480494,level
+2010-12-31,national,MLT,Malta,6.77999687194824,level
+2011-12-31,national,MLT,Malta,5.56240979830424,level
+2012-12-31,national,MLT,Malta,7.43385015458477,level
+2013-12-31,national,MLT,Malta,7.31423161463304,level
+2014-12-31,national,MLT,Malta,7.38433899550602,level
+2015-12-31,national,MLT,Malta,7.93425363760728,level
+2016-12-31,national,MLT,Malta,4.13054011107112,level
+2017-12-31,national,MLT,Malta,3.87350200242637,level
+2018-12-31,national,MLT,Malta,4.52867147326469,level
+2019-12-31,national,MLT,Malta,3.17525984033158,level
+2020-12-31,national,MLT,Malta,2.70387588833508,level
+2021-12-31,national,MLT,Malta,2.09064626523427,level
+2022-12-31,national,MLT,Malta,3.47034723466297,level
+2023-12-31,national,MLT,Malta,3.9356811099,level
+2004-12-31,national,MMR,Myanmar,5.0,level
+2008-12-31,national,MMR,Myanmar,5.29411764705882,level
+2010-12-31,national,MMR,Myanmar,10.2536231745844,level
+2011-12-31,national,MMR,Myanmar,10.0,level
+2012-12-31,national,MMR,Myanmar,10.4166666507721,level
+2013-12-31,national,MMR,Myanmar,11.4521720362645,level
+2014-12-31,national,MMR,Myanmar,9.54735067335423,level
+2015-12-31,national,MMR,Myanmar,8.93169083110988,level
+2016-12-31,national,MMR,Myanmar,5.00386998636572,level
+2017-12-31,national,MMR,Myanmar,6.03652120371261,level
+2018-12-31,national,MMR,Myanmar,5.55035824996419,level
+2019-12-31,national,MMR,Myanmar,5.4679516780918,level
+2020-12-31,national,MMR,Myanmar,5.32172367774232,level
+2021-12-31,national,MMR,Myanmar,9.69699269673956,level
+2022-12-31,national,MMR,Myanmar,8.53530390960414,level
+2023-12-31,national,MMR,Myanmar,8.66373093235187,level
+2004-12-31,national,MNG,Mongolia,3.82692307692308,level
+2008-12-31,national,MNG,Mongolia,7.02380956922259,level
+2010-12-31,national,MNG,Mongolia,10.5770833492279,level
+2011-12-31,national,MNG,Mongolia,14.2760416865349,level
+2012-12-31,national,MNG,Mongolia,12.1333333206177,level
+2013-12-31,national,MNG,Mongolia,13.0750482920054,level
+2014-12-31,national,MNG,Mongolia,12.3659549554189,level
+2015-12-31,national,MNG,Mongolia,9.78696508989789,level
+2016-12-31,national,MNG,Mongolia,7.93879158327692,level
+2017-12-31,national,MNG,Mongolia,7.82544476268231,level
+2018-12-31,national,MNG,Mongolia,6.28036266168285,level
+2019-12-31,national,MNG,Mongolia,7.60702335893177,level
+2020-12-31,national,MNG,Mongolia,7.16674091772176,level
+2021-12-31,national,MNG,Mongolia,8.99975286403173,level
+2022-12-31,national,MNG,Mongolia,6.77470509275313,level
+2023-12-31,national,MNG,Mongolia,9.17170509744863,level
+2004-12-31,national,MNP,Northern Mariana Islands,5.0,level
+2018-12-31,national,MNP,Northern Mariana Islands,6.5,level
+2010-12-31,national,MNE,Montenegro,12.5,level
+2011-12-31,national,MNE,Montenegro,11.0714285714286,level
+2013-12-31,national,MNE,Montenegro,8.71527791023254,level
+2014-12-31,national,MNE,Montenegro,9.08999977111816,level
+2016-12-31,national,MNE,Montenegro,5.02857141494751,level
+2017-12-31,national,MNE,Montenegro,6.5149692179236,level
+2018-12-31,national,MNE,Montenegro,10.1666666666667,level
+2019-12-31,national,MNE,Montenegro,5.08333337306976,level
+2020-12-31,national,MNE,Montenegro,4.75,level
+2021-12-31,national,MNE,Montenegro,1.5,level
+2022-12-31,national,MNE,Montenegro,2.00595237314701,level
+2023-12-31,national,MNE,Montenegro,8.13438057899475,level
+2004-12-31,national,MOZ,Mozambique,2.40740740740741,level
+2008-12-31,national,MOZ,Mozambique,3.33333333333333,level
+2010-12-31,national,MOZ,Mozambique,8.58333339691162,level
+2011-12-31,national,MOZ,Mozambique,5.0,level
+2012-12-31,national,MOZ,Mozambique,0.0,level
+2013-12-31,national,MOZ,Mozambique,0.0,level
+2014-12-31,national,MOZ,Mozambique,0.0,level
+2015-12-31,national,MOZ,Mozambique,0.0,level
+2016-12-31,national,MOZ,Mozambique,0.0,level
+2017-12-31,national,MOZ,Mozambique,0.0,level
+2018-12-31,national,MOZ,Mozambique,0.0,level
+2019-12-31,national,MOZ,Mozambique,0.0,level
+2020-12-31,national,MOZ,Mozambique,0.0,level
+2021-12-31,national,MOZ,Mozambique,0.0,level
+2022-12-31,national,MOZ,Mozambique,1.0,level
+2023-12-31,national,MOZ,Mozambique,0.0,level
+2004-12-31,national,MRT,Mauritania,5.0,level
+2008-12-31,national,MRT,Mauritania,3.57142857142857,level
+2010-12-31,national,MRT,Mauritania,5.76361556989806,level
+2011-12-31,national,MRT,Mauritania,7.34375,level
+2012-12-31,national,MRT,Mauritania,5.0,level
+2013-12-31,national,MRT,Mauritania,8.57142857142857,level
+2014-12-31,national,MRT,Mauritania,3.34563087001443,level
+2015-12-31,national,MRT,Mauritania,6.0,level
+2017-12-31,national,MRT,Mauritania,0.0328987091779709,level
+2018-12-31,national,MRT,Mauritania,4.30366117383043,level
+2019-12-31,national,MRT,Mauritania,0.0149015299975872,level
+2022-12-31,national,MRT,Mauritania,5.18215847015381,level
+2023-12-31,national,MRT,Mauritania,0.0,level
+2004-12-31,national,MSR,Montserrat,5.0,level
+2008-12-31,national,MSR,Montserrat,0.0,level
+2015-12-31,national,MSR,Montserrat,0.0,level
+2004-12-31,national,MUS,Mauritius,4.72222216924032,level
+2008-12-31,national,MUS,Mauritius,4.70744680851064,level
+2010-12-31,national,MUS,Mauritius,10.2143865924771,level
+2011-12-31,national,MUS,Mauritius,10.5049435061924,level
+2012-12-31,national,MUS,Mauritius,10.4198027342558,level
+2013-12-31,national,MUS,Mauritius,10.4346570970213,level
+2014-12-31,national,MUS,Mauritius,10.3561362738496,level
+2015-12-31,national,MUS,Mauritius,9.19652657801635,level
+2016-12-31,national,MUS,Mauritius,6.25124862234563,level
+2017-12-31,national,MUS,Mauritius,4.86589845655752,level
+2018-12-31,national,MUS,Mauritius,4.81252076412674,level
+2019-12-31,national,MUS,Mauritius,4.58253339536326,level
+2020-12-31,national,MUS,Mauritius,4.39623590251026,level
+2021-12-31,national,MUS,Mauritius,10.5004950430658,level
+2022-12-31,national,MUS,Mauritius,8.41144371032715,level
+2023-12-31,national,MUS,Mauritius,8.28734493255615,level
+2004-12-31,national,MWI,Malawi,3.0,level
+2008-12-31,national,MWI,Malawi,0.0,level
+2010-12-31,national,MWI,Malawi,0.0,level
+2011-12-31,national,MWI,Malawi,0.0,level
+2012-12-31,national,MWI,Malawi,0.0,level
+2013-12-31,national,MWI,Malawi,0.0,level
+2014-12-31,national,MWI,Malawi,2.19964284896851,level
+2015-12-31,national,MWI,Malawi,0.0,level
+2016-12-31,national,MWI,Malawi,0.0,level
+2017-12-31,national,MWI,Malawi,0.0,level
+2018-12-31,national,MWI,Malawi,0.0,level
+2019-12-31,national,MWI,Malawi,1.66666666666667,level
+2020-12-31,national,MWI,Malawi,1.66666666666667,level
+2021-12-31,national,MWI,Malawi,0.0,level
+2022-12-31,national,MWI,Malawi,2.5,level
+2023-12-31,national,MWI,Malawi,0.0,level
+2004-12-31,national,MYS,Malaysia,1.99713630278482,level
+2008-12-31,national,MYS,Malaysia,4.87608178901435,level
+2010-12-31,national,MYS,Malaysia,8.8936974289697,level
+2011-12-31,national,MYS,Malaysia,8.39454968837036,level
+2012-12-31,national,MYS,Malaysia,8.6915574837384,level
+2013-12-31,national,MYS,Malaysia,8.81237777255682,level
+2014-12-31,national,MYS,Malaysia,7.80220723658385,level
+2015-12-31,national,MYS,Malaysia,6.79450281420128,level
+2016-12-31,national,MYS,Malaysia,5.24741700051298,level
+2017-12-31,national,MYS,Malaysia,5.08750463005416,level
+2018-12-31,national,MYS,Malaysia,5.15811139464033,level
+2019-12-31,national,MYS,Malaysia,4.94945242969106,level
+2020-12-31,national,MYS,Malaysia,4.60145234765139,level
+2021-12-31,national,MYS,Malaysia,4.55587055097593,level
+2022-12-31,national,MYS,Malaysia,5.02308702620508,level
+2023-12-31,national,MYS,Malaysia,4.47827393789472,level
+2012-12-31,national,MYT,Mayotte,12.8571424484253,level
+2004-12-31,national,NAM,Namibia,0.0,level
+2008-12-31,national,NAM,Namibia,4.375,level
+2010-12-31,national,NAM,Namibia,8.16964280605316,level
+2011-12-31,national,NAM,Namibia,7.91666666666667,level
+2012-12-31,national,NAM,Namibia,4.375,level
+2013-12-31,national,NAM,Namibia,8.41630593935649,level
+2014-12-31,national,NAM,Namibia,3.75,level
+2015-12-31,national,NAM,Namibia,8.59166685740153,level
+2016-12-31,national,NAM,Namibia,3.75,level
+2017-12-31,national,NAM,Namibia,4.45248011747996,level
+2019-12-31,national,NAM,Namibia,1.875,level
+2020-12-31,national,NAM,Namibia,1.875,level
+2021-12-31,national,NAM,Namibia,5.35238099098206,level
+2022-12-31,national,NAM,Namibia,4.57638888557752,level
+2023-12-31,national,NAM,Namibia,3.23905727598402,level
+2010-12-31,national,NCL,New Caledonia,8.0,level
+2012-12-31,national,NCL,New Caledonia,10.687128007412,level
+2013-12-31,national,NCL,New Caledonia,10.5902778307597,level
+2014-12-31,national,NCL,New Caledonia,10.0,level
+2019-12-31,national,NCL,New Caledonia,0.0,level
+2022-12-31,national,NCL,New Caledonia,8.72658252716064,level
+2023-12-31,national,NCL,New Caledonia,0.0,level
+2010-12-31,national,NER,Niger,10.7498881467959,level
+2011-12-31,national,NER,Niger,10.0,level
+2013-12-31,national,NER,Niger,5.0,level
+2014-12-31,national,NER,Niger,4.15000009536743,level
+2016-12-31,national,NER,Niger,0.0,level
+2018-12-31,national,NER,Niger,5.0,level
+2019-12-31,national,NER,Niger,8.73214292526245,level
+2022-12-31,national,NER,Niger,5.0,level
+2023-12-31,national,NER,Niger,10.0,level
+2004-12-31,national,NGA,Nigeria,3.0,level
+2008-12-31,national,NGA,Nigeria,4.375,level
+2010-12-31,national,NGA,Nigeria,12.4234291159588,level
+2011-12-31,national,NGA,Nigeria,3.58333330154419,level
+2012-12-31,national,NGA,Nigeria,9.0,level
+2013-12-31,national,NGA,Nigeria,5.17857142857143,level
+2014-12-31,national,NGA,Nigeria,4.02187490463257,level
+2015-12-31,national,NGA,Nigeria,5.41263773566798,level
+2016-12-31,national,NGA,Nigeria,2.00821878140171,level
+2017-12-31,national,NGA,Nigeria,3.140625,level
+2018-12-31,national,NGA,Nigeria,3.05414250173739,level
+2019-12-31,national,NGA,Nigeria,4.25,level
+2020-12-31,national,NGA,Nigeria,4.16666666666667,level
+2021-12-31,national,NGA,Nigeria,3.0,level
+2022-12-31,national,NGA,Nigeria,4.16666666666667,level
+2023-12-31,national,NGA,Nigeria,1.25,level
+2004-12-31,national,NIC,Nicaragua,5.0,level
+2010-12-31,national,NIC,Nicaragua,13.3333333333333,level
+2011-12-31,national,NIC,Nicaragua,9.0,level
+2012-12-31,national,NIC,Nicaragua,7.0,level
+2013-12-31,national,NIC,Nicaragua,11.1160714030266,level
+2014-12-31,national,NIC,Nicaragua,5.26163897131171,level
+2015-12-31,national,NIC,Nicaragua,3.63393946737051,level
+2016-12-31,national,NIC,Nicaragua,2.99755259448042,level
+2017-12-31,national,NIC,Nicaragua,3.2970949916169,level
+2018-12-31,national,NIC,Nicaragua,4.67013909701597,level
+2019-12-31,national,NIC,Nicaragua,4.4407459018752,level
+2020-12-31,national,NIC,Nicaragua,4.42594269514084,level
+2021-12-31,national,NIC,Nicaragua,9.69508543279436,level
+2022-12-31,national,NIC,Nicaragua,7.6845148563385,level
+2023-12-31,national,NIC,Nicaragua,9.34917521476746,level
+2010-12-31,national,NIU,Niue,0.0,level
+2011-12-31,national,NIU,Niue,5.0,level
+2012-12-31,national,NIU,Niue,6.90476185083389,level
+2013-12-31,national,NIU,Niue,11.9805194681341,level
+2014-12-31,national,NIU,Niue,6.90391862392426,level
+2015-12-31,national,NIU,Niue,6.57500004768372,level
+2016-12-31,national,NIU,Niue,6.02513228522407,level
+2018-12-31,national,NIU,Niue,4.33333333333333,level
+2019-12-31,national,NIU,Niue,3.40000009536743,level
+2023-12-31,national,NIU,Niue,1.61111110448837,level
+2004-12-31,national,NLD,Netherlands,2.41852028127662,level
+2008-12-31,national,NLD,Netherlands,5.27601227205014,level
+2010-12-31,national,NLD,Netherlands,8.77023140865696,level
+2011-12-31,national,NLD,Netherlands,8.45543354677012,level
+2012-12-31,national,NLD,Netherlands,8.81360087551436,level
+2013-12-31,national,NLD,Netherlands,8.83570406922745,level
+2014-12-31,national,NLD,Netherlands,8.14571333273753,level
+2015-12-31,national,NLD,Netherlands,7.07813512041803,level
+2016-12-31,national,NLD,Netherlands,6.38116288717968,level
+2017-12-31,national,NLD,Netherlands,6.06101703740164,level
+2018-12-31,national,NLD,Netherlands,5.99097097842964,level
+2019-12-31,national,NLD,Netherlands,6.07637480621666,level
+2020-12-31,national,NLD,Netherlands,5.4253854000178,level
+2021-12-31,national,NLD,Netherlands,5.46556560752383,level
+2022-12-31,national,NLD,Netherlands,5.78690189452972,level
+2023-12-31,national,NLD,Netherlands,5.10454060647109,level
+2004-12-31,national,NOR,Norway,1.84401066301436,level
+2008-12-31,national,NOR,Norway,4.38034680581862,level
+2010-12-31,national,NOR,Norway,7.58519814421083,level
+2011-12-31,national,NOR,Norway,7.57394234473641,level
+2012-12-31,national,NOR,Norway,7.45333341208466,level
+2013-12-31,national,NOR,Norway,7.41163206404569,level
+2014-12-31,national,NOR,Norway,6.72919866287897,level
+2015-12-31,national,NOR,Norway,5.80521808027361,level
+2016-12-31,national,NOR,Norway,5.1392447933674,level
+2017-12-31,national,NOR,Norway,4.98018046676281,level
+2018-12-31,national,NOR,Norway,4.16886364901874,level
+2019-12-31,national,NOR,Norway,20.4522311410617,level
+2020-12-31,national,NOR,Norway,3.76062287172415,level
+2021-12-31,national,NOR,Norway,3.99843139288812,level
+2022-12-31,national,NOR,Norway,4.61344469780844,level
+2023-12-31,national,NOR,Norway,3.53773288417142,level
+2008-12-31,national,NPL,Nepal,3.6363635930148,level
+2010-12-31,national,NPL,Nepal,10.2083333730698,level
+2011-12-31,national,NPL,Nepal,11.7482363382975,level
+2012-12-31,national,NPL,Nepal,11.3736263421866,level
+2013-12-31,national,NPL,Nepal,8.0,level
+2014-12-31,national,NPL,Nepal,11.2788889143202,level
+2015-12-31,national,NPL,Nepal,11.8541667461395,level
+2016-12-31,national,NPL,Nepal,9.0,level
+2017-12-31,national,NPL,Nepal,5.99844320662669,level
+2018-12-31,national,NPL,Nepal,7.53938286399676,level
+2019-12-31,national,NPL,Nepal,4.9521773752446,level
+2020-12-31,national,NPL,Nepal,4.39371828820246,level
+2021-12-31,national,NPL,Nepal,6.82103518077305,level
+2022-12-31,national,NPL,Nepal,9.07657504081726,level
+2023-12-31,national,NPL,Nepal,5.71112119234525,level
+2004-12-31,national,NRU,Nauru,0.0,level
+2010-12-31,national,NRU,Nauru,13.8938491609361,level
+2011-12-31,national,NRU,Nauru,9.76772827193851,level
+2012-12-31,national,NRU,Nauru,7.2794642329216,level
+2013-12-31,national,NRU,Nauru,16.4583334922791,level
+2014-12-31,national,NRU,Nauru,10.0110129117966,level
+2015-12-31,national,NRU,Nauru,10.6200703893389,level
+2016-12-31,national,NRU,Nauru,10.0919644832611,level
+2017-12-31,national,NRU,Nauru,2.5,level
+2018-12-31,national,NRU,Nauru,4.85959597067399,level
+2019-12-31,national,NRU,Nauru,5.0,level
+2022-12-31,national,NRU,Nauru,9.4296875,level
+2023-12-31,national,NRU,Nauru,6.38902449607849,level
+2004-12-31,national,NZL,New Zealand,1.92342341912759,level
+2008-12-31,national,NZL,New Zealand,5.90380718605304,level
+2010-12-31,national,NZL,New Zealand,9.11738278935937,level
+2011-12-31,national,NZL,New Zealand,7.71468989415602,level
+2012-12-31,national,NZL,New Zealand,6.88769253546541,level
+2013-12-31,national,NZL,New Zealand,6.78108576708718,level
+2014-12-31,national,NZL,New Zealand,7.29985323358706,level
+2015-12-31,national,NZL,New Zealand,5.72311754962525,level
+2016-12-31,national,NZL,New Zealand,5.18301050141454,level
+2017-12-31,national,NZL,New Zealand,4.36947658073197,level
+2018-12-31,national,NZL,New Zealand,4.22848939647277,level
+2019-12-31,national,NZL,New Zealand,4.7153511246751,level
+2020-12-31,national,NZL,New Zealand,4.29781899885698,level
+2021-12-31,national,NZL,New Zealand,4.43351596126369,level
+2022-12-31,national,NZL,New Zealand,4.61973262753016,level
+2023-12-31,national,NZL,New Zealand,3.44798398869378,level
+2004-12-31,national,OMN,Oman,4.62962961196899,level
+2008-12-31,national,OMN,Oman,7.87428379058838,level
+2010-12-31,national,OMN,Oman,12.0378737410561,level
+2011-12-31,national,OMN,Oman,10.9514285778999,level
+2012-12-31,national,OMN,Oman,11.5252975622813,level
+2013-12-31,national,OMN,Oman,13.1041666030884,level
+2014-12-31,national,OMN,Oman,10.2569378898996,level
+2015-12-31,national,OMN,Oman,8.07923279868232,level
+2016-12-31,national,OMN,Oman,7.01309526667875,level
+2017-12-31,national,OMN,Oman,6.41811860691417,level
+2018-12-31,national,OMN,Oman,5.9609375,level
+2019-12-31,national,OMN,Oman,6.69375,level
+2020-12-31,national,OMN,Oman,6.01775000095367,level
+2021-12-31,national,OMN,Oman,5.5,level
+2022-12-31,national,OMN,Oman,5.20897989026431,level
+2023-12-31,national,OMN,Oman,3.20552536646525,level
+2004-12-31,national,PAK,Pakistan,3.19105691008452,level
+2008-12-31,national,PAK,Pakistan,6.87920420363143,level
+2010-12-31,national,PAK,Pakistan,12.0852359793222,level
+2011-12-31,national,PAK,Pakistan,10.7541646974347,level
+2012-12-31,national,PAK,Pakistan,11.3442452439115,level
+2013-12-31,national,PAK,Pakistan,11.3036189463179,level
+2014-12-31,national,PAK,Pakistan,10.4333172696255,level
+2015-12-31,national,PAK,Pakistan,9.5179626330304,level
+2016-12-31,national,PAK,Pakistan,6.7909311501718,level
+2017-12-31,national,PAK,Pakistan,7.12779170387933,level
+2018-12-31,national,PAK,Pakistan,6.8556666381813,level
+2019-12-31,national,PAK,Pakistan,6.67312921459367,level
+2020-12-31,national,PAK,Pakistan,6.43803570946261,level
+2021-12-31,national,PAK,Pakistan,8.35689987648617,level
+2022-12-31,national,PAK,Pakistan,7.90002032401515,level
+2023-12-31,national,PAK,Pakistan,7.72157636126786,level
+2004-12-31,national,PAN,Panama,3.33333333333333,level
+2008-12-31,national,PAN,Panama,4.67233009708738,level
+2010-12-31,national,PAN,Panama,10.3630297666185,level
+2011-12-31,national,PAN,Panama,10.3425898624189,level
+2012-12-31,national,PAN,Panama,8.62980769230769,level
+2013-12-31,national,PAN,Panama,8.05343298014108,level
+2014-12-31,national,PAN,Panama,6.03749999133023,level
+2015-12-31,national,PAN,Panama,7.31178569793701,level
+2016-12-31,national,PAN,Panama,10.0374999046326,level
+2017-12-31,national,PAN,Panama,3.26339190006256,level
+2018-12-31,national,PAN,Panama,1.02218411117792,level
+2019-12-31,national,PAN,Panama,3.60942531242035,level
+2020-12-31,national,PAN,Panama,3.60870563453063,level
+2021-12-31,national,PAN,Panama,9.32657957077026,level
+2022-12-31,national,PAN,Panama,3.52500009536743,level
+2023-12-31,national,PAN,Panama,5.65632986028989,level
+2011-12-31,national,PCN,Pitcairn,0.0,level
+2013-12-31,national,PCN,Pitcairn,3.0,level
+2022-12-31,national,PCN,Pitcairn,2.0,level
+2004-12-31,national,PER,Peru,3.33333333333333,level
+2008-12-31,national,PER,Peru,6.03125,level
+2010-12-31,national,PER,Peru,9.60422079779885,level
+2011-12-31,national,PER,Peru,7.38142945109934,level
+2012-12-31,national,PER,Peru,7.65149099662386,level
+2013-12-31,national,PER,Peru,8.77051556278282,level
+2014-12-31,national,PER,Peru,7.52028848219882,level
+2015-12-31,national,PER,Peru,8.33299073519615,level
+2016-12-31,national,PER,Peru,5.10696281386732,level
+2017-12-31,national,PER,Peru,4.35888808700157,level
+2018-12-31,national,PER,Peru,4.61269092016401,level
+2019-12-31,national,PER,Peru,5.39752771066905,level
+2020-12-31,national,PER,Peru,5.09370059588175,level
+2021-12-31,national,PER,Peru,6.12661323726994,level
+2022-12-31,national,PER,Peru,6.18725786138983,level
+2023-12-31,national,PER,Peru,5.69869232314234,level
+2004-12-31,national,PHL,Philippines,2.20046620058198,level
+2008-12-31,national,PHL,Philippines,4.45689272125382,level
+2010-12-31,national,PHL,Philippines,8.59848442071906,level
+2011-12-31,national,PHL,Philippines,8.7623059000938,level
+2012-12-31,national,PHL,Philippines,8.8198432904879,level
+2013-12-31,national,PHL,Philippines,8.88121773996032,level
+2014-12-31,national,PHL,Philippines,8.01391928621748,level
+2015-12-31,national,PHL,Philippines,7.18415990198048,level
+2016-12-31,national,PHL,Philippines,5.37752611954962,level
+2017-12-31,national,PHL,Philippines,5.38379603707498,level
+2018-12-31,national,PHL,Philippines,4.54439828196297,level
+2019-12-31,national,PHL,Philippines,4.22452290156226,level
+2020-12-31,national,PHL,Philippines,3.84235395586572,level
+2021-12-31,national,PHL,Philippines,3.80969686718548,level
+2022-12-31,national,PHL,Philippines,4.28433566406125,level
+2023-12-31,national,PHL,Philippines,4.12426745530331,level
+2019-12-31,national,PLW,Palau,0.0,level
+2008-12-31,national,PNG,Papua New Guinea,1.875,level
+2010-12-31,national,PNG,Papua New Guinea,5.0,level
+2011-12-31,national,PNG,Papua New Guinea,1.5,level
+2012-12-31,national,PNG,Papua New Guinea,0.0,level
+2013-12-31,national,PNG,Papua New Guinea,0.0,level
+2014-12-31,national,PNG,Papua New Guinea,0.0,level
+2016-12-31,national,PNG,Papua New Guinea,2.89217837651571,level
+2017-12-31,national,PNG,Papua New Guinea,0.0,level
+2019-12-31,national,PNG,Papua New Guinea,4.0,level
+2022-12-31,national,PNG,Papua New Guinea,5.0,level
+2023-12-31,national,PNG,Papua New Guinea,0.0,level
+2004-12-31,national,POL,Poland,2.65515003084639,level
+2008-12-31,national,POL,Poland,5.64826409934368,level
+2010-12-31,national,POL,Poland,9.23786777204735,level
+2011-12-31,national,POL,Poland,9.44347627258456,level
+2012-12-31,national,POL,Poland,9.61642874106468,level
+2013-12-31,national,POL,Poland,9.3411051488702,level
+2014-12-31,national,POL,Poland,8.83960196541727,level
+2015-12-31,national,POL,Poland,7.91145191006362,level
+2016-12-31,national,POL,Poland,6.66553545726269,level
+2017-12-31,national,POL,Poland,6.24297133917182,level
+2018-12-31,national,POL,Poland,6.10151884553608,level
+2019-12-31,national,POL,Poland,6.54818110831427,level
+2020-12-31,national,POL,Poland,5.554490073438,level
+2021-12-31,national,POL,Poland,6.25147145254647,level
+2022-12-31,national,POL,Poland,6.2074402880187,level
+2023-12-31,national,POL,Poland,5.73354005552585,level
+2008-12-31,national,PRK,"Korea, Dem. Rep.",3.83854165673256,level
+2010-12-31,national,PRK,"Korea, Dem. Rep.",7.82255834065951,level
+2012-12-31,national,PRK,"Korea, Dem. Rep.",8.76233198768214,level
+2013-12-31,national,PRK,"Korea, Dem. Rep.",6.54057043174218,level
+2014-12-31,national,PRK,"Korea, Dem. Rep.",7.99052025225352,level
+2015-12-31,national,PRK,"Korea, Dem. Rep.",6.17969953808291,level
+2016-12-31,national,PRK,"Korea, Dem. Rep.",5.94395344903072,level
+2017-12-31,national,PRK,"Korea, Dem. Rep.",5.63709182720631,level
+2018-12-31,national,PRK,"Korea, Dem. Rep.",3.87744047641754,level
+2019-12-31,national,PRK,"Korea, Dem. Rep.",5.41933172466233,level
+2020-12-31,national,PRK,"Korea, Dem. Rep.",5.16646905348947,level
+2004-12-31,national,PRT,Portugal,2.40258576536691,level
+2008-12-31,national,PRT,Portugal,5.41764151597511,level
+2010-12-31,national,PRT,Portugal,9.35168094732237,level
+2011-12-31,national,PRT,Portugal,9.91497891990444,level
+2012-12-31,national,PRT,Portugal,10.7604869409924,level
+2013-12-31,national,PRT,Portugal,11.0651939306103,level
+2014-12-31,national,PRT,Portugal,10.3118090147121,level
+2015-12-31,national,PRT,Portugal,9.47061578603889,level
+2016-12-31,national,PRT,Portugal,6.8668927586746,level
+2017-12-31,national,PRT,Portugal,6.15101207739499,level
+2018-12-31,national,PRT,Portugal,6.10670793233357,level
+2019-12-31,national,PRT,Portugal,7.57596148257726,level
+2020-12-31,national,PRT,Portugal,5.79092383955722,level
+2021-12-31,national,PRT,Portugal,7.44428062765745,level
+2022-12-31,national,PRT,Portugal,6.76154017545783,level
+2023-12-31,national,PRT,Portugal,6.26624318516773,level
+2004-12-31,national,PRY,Paraguay,5.0,level
+2008-12-31,national,PRY,Paraguay,0.0,level
+2010-12-31,national,PRY,Paraguay,26.6666660308838,level
+2011-12-31,national,PRY,Paraguay,25.8333330154419,level
+2012-12-31,national,PRY,Paraguay,16.845238004412,level
+2013-12-31,national,PRY,Paraguay,7.5089285771052,level
+2014-12-31,national,PRY,Paraguay,9.48327770233154,level
+2015-12-31,national,PRY,Paraguay,8.85187494754791,level
+2016-12-31,national,PRY,Paraguay,8.74937498569489,level
+2017-12-31,national,PRY,Paraguay,7.875,level
+2018-12-31,national,PRY,Paraguay,9.6875,level
+2019-12-31,national,PRY,Paraguay,10.4468748569489,level
+2020-12-31,national,PRY,Paraguay,11.8697917461395,level
+2021-12-31,national,PRY,Paraguay,7.96875,level
+2022-12-31,national,PRY,Paraguay,10.1313983069526,level
+2023-12-31,national,PRY,Paraguay,4.15684390068054,level
+2008-12-31,national,PSE,Occ.Pal.Terr,0.0,level
+2010-12-31,national,PSE,Occ.Pal.Terr,6.625,level
+2011-12-31,national,PSE,Occ.Pal.Terr,5.625,level
+2012-12-31,national,PSE,Occ.Pal.Terr,9.16666666666667,level
+2013-12-31,national,PSE,Occ.Pal.Terr,12.5,level
+2014-12-31,national,PSE,Occ.Pal.Terr,4.64827787876129,level
+2015-12-31,national,PSE,Occ.Pal.Terr,4.1233766078949,level
+2016-12-31,national,PSE,Occ.Pal.Terr,8.9125,level
+2017-12-31,national,PSE,Occ.Pal.Terr,7.40834823021522,level
+2018-12-31,national,PSE,Occ.Pal.Terr,3.79999995231628,level
+2019-12-31,national,PSE,Occ.Pal.Terr,2.50615166127682,level
+2020-12-31,national,PSE,Occ.Pal.Terr,2.50543724372983,level
+2021-12-31,national,PSE,Occ.Pal.Terr,5.0,level
+2022-12-31,national,PSE,Occ.Pal.Terr,0.0,level
+2023-12-31,national,PSE,Occ.Pal.Terr,2.5,level
+2008-12-31,national,PYF,French Polynesia,7.5,level
+2010-12-31,national,PYF,French Polynesia,9.77427244186401,level
+2013-12-31,national,PYF,French Polynesia,2.5,level
+2014-12-31,national,PYF,French Polynesia,10.0,level
+2015-12-31,national,PYF,French Polynesia,11.1214284896851,level
+2022-12-31,national,PYF,French Polynesia,4.55000019073486,level
+2023-12-31,national,PYF,French Polynesia,2.61111110448837,level
+2004-12-31,national,QAT,Qatar,0.0,level
+2008-12-31,national,QAT,Qatar,6.57051284496601,level
+2010-12-31,national,QAT,Qatar,11.4792924063762,level
+2011-12-31,national,QAT,Qatar,6.4661990744727,level
+2012-12-31,national,QAT,Qatar,5.01308850944042,level
+2013-12-31,national,QAT,Qatar,10.2942704602292,level
+2014-12-31,national,QAT,Qatar,9.11405294911748,level
+2015-12-31,national,QAT,Qatar,7.76171881396596,level
+2016-12-31,national,QAT,Qatar,8.09553575515747,level
+2017-12-31,national,QAT,Qatar,8.38970988923684,level
+2018-12-31,national,QAT,Qatar,3.74074073632558,level
+2019-12-31,national,QAT,Qatar,7.46974586038028,level
+2020-12-31,national,QAT,Qatar,7.52076858545051,level
+2021-12-31,national,QAT,Qatar,6.08872390335256,level
+2022-12-31,national,QAT,Qatar,6.82289186492562,level
+2023-12-31,national,QAT,Qatar,3.23358588417371,level
+2004-12-31,national,ROU,Romania,2.52255848015941,level
+2008-12-31,national,ROU,Romania,5.07694951971782,level
+2010-12-31,national,ROU,Romania,9.09204042426108,level
+2011-12-31,national,ROU,Romania,9.18409971130096,level
+2012-12-31,national,ROU,Romania,9.20199514749664,level
+2013-12-31,national,ROU,Romania,9.05679235767128,level
+2014-12-31,national,ROU,Romania,8.60786696263441,level
+2015-12-31,national,ROU,Romania,7.6312016477932,level
+2016-12-31,national,ROU,Romania,5.4307080501682,level
+2017-12-31,national,ROU,Romania,5.12812965526896,level
+2018-12-31,national,ROU,Romania,5.16184044058246,level
+2019-12-31,national,ROU,Romania,6.32601777124076,level
+2020-12-31,national,ROU,Romania,4.81327104342142,level
+2021-12-31,national,ROU,Romania,6.03661037909454,level
+2022-12-31,national,ROU,Romania,5.80621201841981,level
+2023-12-31,national,ROU,Romania,5.17705284661234,level
+2004-12-31,national,RUS,Russian Federation,2.72650280398632,level
+2008-12-31,national,RUS,Russian Federation,0.0,level
+2010-12-31,national,RUS,Russian Federation,0.0,level
+2011-12-31,national,RUS,Russian Federation,0.0,level
+2012-12-31,national,RUS,Russian Federation,0.0,level
+2013-12-31,national,RUS,Russian Federation,0.0,level
+2014-12-31,national,RUS,Russian Federation,0.0,level
+2016-12-31,national,RUS,Russian Federation,0.0,level
+2017-12-31,national,RUS,Russian Federation,0.0,level
+2018-12-31,national,RUS,Russian Federation,0.0,level
+2019-12-31,national,RUS,Russian Federation,0.0,level
+2020-12-31,national,RUS,Russian Federation,0.0,level
+2021-12-31,national,RUS,Russian Federation,0.0,level
+2022-12-31,national,RUS,Russian Federation,0.0,level
+2023-12-31,national,RUS,Russian Federation,0.0,level
+2004-12-31,national,RWA,Rwanda,2.95454545454545,level
+2008-12-31,national,RWA,Rwanda,0.0,level
+2010-12-31,national,RWA,Rwanda,0.0,level
+2012-12-31,national,RWA,Rwanda,2.5,level
+2013-12-31,national,RWA,Rwanda,10.0,level
+2014-12-31,national,RWA,Rwanda,0.0,level
+2015-12-31,national,RWA,Rwanda,0.0,level
+2016-12-31,national,RWA,Rwanda,0.0,level
+2017-12-31,national,RWA,Rwanda,0.0,level
+2018-12-31,national,RWA,Rwanda,0.0,level
+2019-12-31,national,RWA,Rwanda,0.0,level
+2020-12-31,national,RWA,Rwanda,0.0,level
+2021-12-31,national,RWA,Rwanda,0.0,level
+2022-12-31,national,RWA,Rwanda,3.11413884162903,level
+2023-12-31,national,RWA,Rwanda,3.65161590576172,level
+2004-12-31,national,SAU,Saudi Arabia,2.47899159263162,level
+2008-12-31,national,SAU,Saudi Arabia,5.37095640882661,level
+2010-12-31,national,SAU,Saudi Arabia,10.153672890585,level
+2011-12-31,national,SAU,Saudi Arabia,8.59231902352462,level
+2012-12-31,national,SAU,Saudi Arabia,8.44334693428348,level
+2013-12-31,national,SAU,Saudi Arabia,8.1861313978831,level
+2014-12-31,national,SAU,Saudi Arabia,7.90720063807016,level
+2015-12-31,national,SAU,Saudi Arabia,7.426984274641,level
+2016-12-31,national,SAU,Saudi Arabia,5.61402983769127,level
+2017-12-31,national,SAU,Saudi Arabia,4.91447977028153,level
+2018-12-31,national,SAU,Saudi Arabia,4.11895464562081,level
+2019-12-31,national,SAU,Saudi Arabia,71.8870130446015,level
+2020-12-31,national,SAU,Saudi Arabia,5.11167814748155,level
+2021-12-31,national,SAU,Saudi Arabia,4.74799864632743,level
+2022-12-31,national,SAU,Saudi Arabia,6.60121015795564,level
+2023-12-31,national,SAU,Saudi Arabia,4.80946521957715,level
+2004-12-31,national,SDN,Fm Sudan,0.0,level
+2008-12-31,national,SDN,Fm Sudan,1.66666666666667,level
+2010-12-31,national,SDN,Fm Sudan,6.38020825386047,level
+2011-12-31,national,SDN,Fm Sudan,0.0,level
+2004-12-31,national,SEN,Senegal,3.55,level
+2008-12-31,national,SEN,Senegal,3.33333333333333,level
+2010-12-31,national,SEN,Senegal,0.0,level
+2011-12-31,national,SEN,Senegal,7.5,level
+2012-12-31,national,SEN,Senegal,3.39285713434219,level
+2013-12-31,national,SEN,Senegal,0.0,level
+2014-12-31,national,SEN,Senegal,0.785714285714286,level
+2015-12-31,national,SEN,Senegal,2.5,level
+2016-12-31,national,SEN,Senegal,0.0,level
+2017-12-31,national,SEN,Senegal,7.20107775705832,level
+2018-12-31,national,SEN,Senegal,7.43229166666667,level
+2019-12-31,national,SEN,Senegal,3.89285714285714,level
+2020-12-31,national,SEN,Senegal,3.78571428571429,level
+2021-12-31,national,SEN,Senegal,2.85714292526245,level
+2022-12-31,national,SEN,Senegal,2.80121173177447,level
+2023-12-31,national,SEN,Senegal,3.38462610244751,level
+2004-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",2.40137614678899,level
+2008-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",4.8305555652689,level
+2010-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",7.7635128937007,level
+2011-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",9.69678001537501,level
+2012-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",9.62596705626757,level
+2013-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",9.93913665766779,level
+2014-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",9.10783556126915,level
+2015-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",8.41928243743273,level
+2016-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",5.97058856940043,level
+2017-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",6.10732490980394,level
+2018-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",6.10447695482788,level
+2019-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",6.76115174586162e-05,level
+2020-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",4.99253852486725,level
+2021-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",6.23409720619812,level
+2022-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",6.86933918301962,level
+2023-12-31,national,SRB,"Serbia, FR(Serbia/Montenegro)",5.68093108827482,level
+2004-12-31,national,SGP,Singapore,1.9161904759407,level
+2008-12-31,national,SGP,Singapore,4.49416855657074,level
+2010-12-31,national,SGP,Singapore,6.75155637854216,level
+2011-12-31,national,SGP,Singapore,7.47506547463003,level
+2012-12-31,national,SGP,Singapore,7.02977681525238,level
+2013-12-31,national,SGP,Singapore,7.67450590346443,level
+2014-12-31,national,SGP,Singapore,6.72864577167846,level
+2015-12-31,national,SGP,Singapore,6.72553823756821,level
+2016-12-31,national,SGP,Singapore,4.45904036800244,level
+2017-12-31,national,SGP,Singapore,4.64576071034176,level
+2018-12-31,national,SGP,Singapore,4.22315780101525,level
+2019-12-31,national,SGP,Singapore,4.3012478887647,level
+2020-12-31,national,SGP,Singapore,3.90039177522745,level
+2021-12-31,national,SGP,Singapore,3.57495004343987,level
+2022-12-31,national,SGP,Singapore,4.29450119846135,level
+2023-12-31,national,SGP,Singapore,3.17258746491739,level
+2010-12-31,national,SHN,Saint Helena,10.0,level
+2011-12-31,national,SHN,Saint Helena,11.6666666666667,level
+2012-12-31,national,SHN,Saint Helena,11.6666666666667,level
+2014-12-31,national,SHN,Saint Helena,9.0714282989502,level
+2016-12-31,national,SHN,Saint Helena,7.19999980926514,level
+2018-12-31,national,SHN,Saint Helena,8.60000038146973,level
+2012-12-31,national,SLB,Solomon Islands,11.25,level
+2013-12-31,national,SLB,Solomon Islands,20.0,level
+2022-12-31,national,SLB,Solomon Islands,0.0,level
+2023-12-31,national,SLB,Solomon Islands,0.15625,level
+2008-12-31,national,SLE,Sierra Leone,3.0,level
+2010-12-31,national,SLE,Sierra Leone,6.23958331346512,level
+2011-12-31,national,SLE,Sierra Leone,9.35642634056233,level
+2012-12-31,national,SLE,Sierra Leone,3.91071426868439,level
+2013-12-31,national,SLE,Sierra Leone,8.04538688063622,level
+2014-12-31,national,SLE,Sierra Leone,4.72648575570848,level
+2015-12-31,national,SLE,Sierra Leone,5.20643927834251,level
+2016-12-31,national,SLE,Sierra Leone,4.41036464025577,level
+2017-12-31,national,SLE,Sierra Leone,7.22133940970525,level
+2018-12-31,national,SLE,Sierra Leone,5.65978900400492,level
+2019-12-31,national,SLE,Sierra Leone,4.78707664153155,level
+2020-12-31,national,SLE,Sierra Leone,4.45012479669908,level
+2021-12-31,national,SLE,Sierra Leone,2.31730769230769,level
+2022-12-31,national,SLE,Sierra Leone,1.60299824785303,level
+2023-12-31,national,SLE,Sierra Leone,1.42216919788292,level
+2004-12-31,national,SLV,El Salvador,0.0,level
+2008-12-31,national,SLV,El Salvador,5.75,level
+2010-12-31,national,SLV,El Salvador,6.42857142857143,level
+2011-12-31,national,SLV,El Salvador,8.125,level
+2012-12-31,national,SLV,El Salvador,7.07792204076594,level
+2013-12-31,national,SLV,El Salvador,9.85119040807088,level
+2014-12-31,national,SLV,El Salvador,5.8877330268068,level
+2015-12-31,national,SLV,El Salvador,8.45989793539047,level
+2016-12-31,national,SLV,El Salvador,3.97259507359316,level
+2017-12-31,national,SLV,El Salvador,3.72465425990522,level
+2018-12-31,national,SLV,El Salvador,1.13679213946064,level
+2019-12-31,national,SLV,El Salvador,5.09977905768901,level
+2020-12-31,national,SLV,El Salvador,4.89955801907927,level
+2021-12-31,national,SLV,El Salvador,7.83424359560013,level
+2022-12-31,national,SLV,El Salvador,6.44953112304211,level
+2023-12-31,national,SLV,El Salvador,5.82453607429158,level
+2004-12-31,national,SMR,San Marino,0.166666662693024,level
+2008-12-31,national,SMR,San Marino,12.0066890301912,level
+2010-12-31,national,SMR,San Marino,11.7582074977733,level
+2011-12-31,national,SMR,San Marino,14.9247379302979,level
+2012-12-31,national,SMR,San Marino,11.1371068954468,level
+2013-12-31,national,SMR,San Marino,9.32526340308013,level
+2014-12-31,national,SMR,San Marino,11.7165396290441,level
+2016-12-31,national,SMR,San Marino,7.99300117322587,level
+2017-12-31,national,SMR,San Marino,6.25672127206677,level
+2018-12-31,national,SMR,San Marino,6.36363958730858,level
+2019-12-31,national,SMR,San Marino,6.41762830949156,level
+2020-12-31,national,SMR,San Marino,5.77708891227376,level
+2021-12-31,national,SMR,San Marino,6.75627419527839,level
+2022-12-31,national,SMR,San Marino,4.92782804098996,level
+2023-12-31,national,SMR,San Marino,4.08827023704847,level
+2011-12-31,national,SOM,Somalia,15.0,level
+2012-12-31,national,SOM,Somalia,15.0,level
+2013-12-31,national,SOM,Somalia,15.0,level
+2014-12-31,national,SOM,Somalia,12.4000000953674,level
+2015-12-31,national,SOM,Somalia,3.76666641235352,level
+2016-12-31,national,SOM,Somalia,3.20555555820465,level
+2017-12-31,national,SOM,Somalia,4.91035279621681,level
+2010-12-31,national,SPM,Saint Pierre and Miquelon,13.3333333333333,level
+2013-12-31,national,STP,Sao Tome and Principe,2.96604940626356,level
+2014-12-31,national,STP,Sao Tome and Principe,3.1875,level
+2018-12-31,national,STP,Sao Tome and Principe,1.0,level
+2023-12-31,national,STP,Sao Tome and Principe,5.73831403255463,level
+2012-12-31,national,SDN,Sudan,10.5370370229085,level
+2013-12-31,national,SDN,Sudan,10.0,level
+2014-12-31,national,SDN,Sudan,9.5625,level
+2015-12-31,national,SDN,Sudan,5.64375019073486,level
+2018-12-31,national,SDN,Sudan,10.9,level
+2023-12-31,national,SDN,Sudan,0.0,level
+2008-12-31,national,SUR,Suriname,6.04166650772095,level
+2010-12-31,national,SUR,Suriname,15.0,level
+2011-12-31,national,SUR,Suriname,11.8181818326314,level
+2012-12-31,national,SUR,Suriname,12.0,level
+2013-12-31,national,SUR,Suriname,13.5,level
+2014-12-31,national,SUR,Suriname,6.26249980926514,level
+2016-12-31,national,SUR,Suriname,3.75,level
+2017-12-31,national,SUR,Suriname,3.75,level
+2018-12-31,national,SUR,Suriname,3.75,level
+2019-12-31,national,SUR,Suriname,3.12999562520002,level
+2020-12-31,national,SUR,Suriname,3.36409368179739,level
+2021-12-31,national,SUR,Suriname,7.09100131988525,level
+2022-12-31,national,SUR,Suriname,5.9375,level
+2023-12-31,national,SUR,Suriname,6.32595517900255,level
+2004-12-31,national,SVK,Slovak Republic,2.1025175580202,level
+2008-12-31,national,SVK,Slovak Republic,4.89160953104034,level
+2010-12-31,national,SVK,Slovak Republic,7.88105983390344,level
+2011-12-31,national,SVK,Slovak Republic,9.07214565368799,level
+2012-12-31,national,SVK,Slovak Republic,8.37911532074213,level
+2013-12-31,national,SVK,Slovak Republic,8.81187329317133,level
+2014-12-31,national,SVK,Slovak Republic,8.02440548675588,level
+2015-12-31,national,SVK,Slovak Republic,7.22482381840952,level
+2016-12-31,national,SVK,Slovak Republic,6.42526392379124,level
+2017-12-31,national,SVK,Slovak Republic,5.37528971423616,level
+2018-12-31,national,SVK,Slovak Republic,4.77408837876704,level
+2019-12-31,national,SVK,Slovak Republic,4.77333081787181,level
+2020-12-31,national,SVK,Slovak Republic,4.36158341141795,level
+2021-12-31,national,SVK,Slovak Republic,4.70983071994073,level
+2022-12-31,national,SVK,Slovak Republic,5.16164109473695,level
+2023-12-31,national,SVK,Slovak Republic,4.27480130052566,level
+2004-12-31,national,SVN,Slovenia,2.18729155365179,level
+2008-12-31,national,SVN,Slovenia,5.15659399285461,level
+2010-12-31,national,SVN,Slovenia,7.93148676561902,level
+2011-12-31,national,SVN,Slovenia,8.62259808582868,level
+2012-12-31,national,SVN,Slovenia,8.96064257802551,level
+2013-12-31,national,SVN,Slovenia,9.02893738025722,level
+2014-12-31,national,SVN,Slovenia,8.08452244966346,level
+2015-12-31,national,SVN,Slovenia,7.3796634012147,level
+2016-12-31,national,SVN,Slovenia,5.90107229931118,level
+2017-12-31,national,SVN,Slovenia,5.74664044180713,level
+2018-12-31,national,SVN,Slovenia,5.56721862403799,level
+2019-12-31,national,SVN,Slovenia,13.0004603959718,level
+2020-12-31,national,SVN,Slovenia,5.23812802988679,level
+2021-12-31,national,SVN,Slovenia,5.19023648062124,level
+2022-12-31,national,SVN,Slovenia,5.27730435243815,level
+2023-12-31,national,SVN,Slovenia,4.57639131119949,level
+2004-12-31,national,SWE,Sweden,2.22915117702153,level
+2008-12-31,national,SWE,Sweden,4.47810421067315,level
+2010-12-31,national,SWE,Sweden,7.71231294451904,level
+2011-12-31,national,SWE,Sweden,7.86955784361035,level
+2012-12-31,national,SWE,Sweden,7.94158409073192,level
+2013-12-31,national,SWE,Sweden,8.50326166420814,level
+2014-12-31,national,SWE,Sweden,7.57584198216738,level
+2015-12-31,national,SWE,Sweden,6.33023088384275,level
+2016-12-31,national,SWE,Sweden,5.63800010274208,level
+2017-12-31,national,SWE,Sweden,5.45791428687454,level
+2018-12-31,national,SWE,Sweden,5.21368800803422,level
+2019-12-31,national,SWE,Sweden,5.14090981735553,level
+2020-12-31,national,SWE,Sweden,4.69625088672324,level
+2021-12-31,national,SWE,Sweden,4.69787761912896,level
+2022-12-31,national,SWE,Sweden,5.40682912377671,level
+2023-12-31,national,SWE,Sweden,4.84783250455958,level
+2008-12-31,national,SWZ,Swaziland,2.1875,level
+2010-12-31,national,SWZ,Swaziland,7.5,level
+2011-12-31,national,SWZ,Swaziland,4.125,level
+2012-12-31,national,SWZ,Swaziland,4.93333330154419,level
+2013-12-31,national,SWZ,Swaziland,7.56149170615456,level
+2014-12-31,national,SWZ,Swaziland,4.96499996185303,level
+2016-12-31,national,SWZ,Swaziland,3.4375,level
+2017-12-31,national,SWZ,Swaziland,5.03125,level
+2018-12-31,national,SWZ,Swaziland,4.89583325386047,level
+2019-12-31,national,SWZ,Swaziland,5.33571422100067,level
+2021-12-31,national,SWZ,Swaziland,7.0,level
+2023-12-31,national,SWZ,Swaziland,5.3125,level
+2004-12-31,national,SYC,Seychelles,5.0,level
+2008-12-31,national,SYC,Seychelles,3.02536230501921,level
+2010-12-31,national,SYC,Seychelles,6.55357142857143,level
+2011-12-31,national,SYC,Seychelles,9.05555558204651,level
+2012-12-31,national,SYC,Seychelles,6.90476189340864,level
+2013-12-31,national,SYC,Seychelles,7.4375,level
+2014-12-31,national,SYC,Seychelles,9.375,level
+2015-12-31,national,SYC,Seychelles,10.0124998092651,level
+2016-12-31,national,SYC,Seychelles,8.85416650772095,level
+2017-12-31,national,SYC,Seychelles,0.0,level
+2018-12-31,national,SYC,Seychelles,0.833333313465118,level
+2019-12-31,national,SYC,Seychelles,0.0245741922408342,level
+2020-12-31,national,SYC,Seychelles,0.0165374670177698,level
+2021-12-31,national,SYC,Seychelles,7.14322710037231,level
+2022-12-31,national,SYC,Seychelles,11.9267172813416,level
+2023-12-31,national,SYC,Seychelles,19.445837020874,level
+2004-12-31,national,SYR,Syrian Arab Republic,3.08125,level
+2008-12-31,national,SYR,Syrian Arab Republic,6.90740742683411,level
+2010-12-31,national,SYR,Syrian Arab Republic,10.8822514948502,level
+2011-12-31,national,SYR,Syrian Arab Republic,11.1370989978313,level
+2012-12-31,national,SYR,Syrian Arab Republic,11.909390609081,level
+2013-12-31,national,SYR,Syrian Arab Republic,12.0192307692308,level
+2014-12-31,national,SYR,Syrian Arab Republic,7.4303572177887,level
+2015-12-31,national,SYR,Syrian Arab Republic,11.25,level
+2016-12-31,national,SYR,Syrian Arab Republic,7.57089281082153,level
+2017-12-31,national,SYR,Syrian Arab Republic,4.4375,level
+2018-12-31,national,SYR,Syrian Arab Republic,6.48571423121861,level
+2019-12-31,national,SYR,Syrian Arab Republic,6.83333333333333,level
+2020-12-31,national,SYR,Syrian Arab Republic,6.83333333333333,level
+2021-12-31,national,SYR,Syrian Arab Republic,3.34375,level
+2022-12-31,national,SYR,Syrian Arab Republic,5.75,level
+2004-12-31,national,TCA,Turks and Caicos Isl.,3.33333333333333,level
+2011-12-31,national,TCA,Turks and Caicos Isl.,8.58829893084133,level
+2012-12-31,national,TCA,Turks and Caicos Isl.,7.72727271643552,level
+2013-12-31,national,TCA,Turks and Caicos Isl.,6.08779761195183,level
+2014-12-31,national,TCA,Turks and Caicos Isl.,9.558571434021,level
+2015-12-31,national,TCA,Turks and Caicos Isl.,10.1490669931684,level
+2016-12-31,national,TCA,Turks and Caicos Isl.,8.482253074646,level
+2017-12-31,national,TCA,Turks and Caicos Isl.,4.89722219109535,level
+2019-12-31,national,TCA,Turks and Caicos Isl.,4.19999980926514,level
+2020-12-31,national,TCA,Turks and Caicos Isl.,4.65000009536743,level
+2021-12-31,national,TCA,Turks and Caicos Isl.,6.43197254951184,level
+2022-12-31,national,TCA,Turks and Caicos Isl.,5.01302590469519,level
+2023-12-31,national,TCA,Turks and Caicos Isl.,9.66666666666667,level
+2013-12-31,national,TCD,Chad,10.0,level
+2014-12-31,national,TCD,Chad,3.65999984741211,level
+2022-12-31,national,TCD,Chad,1.87675046920776,level
+2015-12-31,national,TGO,Togo,0.0,level
+2004-12-31,national,THA,Thailand,2.41493922693061,level
+2008-12-31,national,THA,Thailand,5.3933831730452,level
+2010-12-31,national,THA,Thailand,9.36323684071414,level
+2011-12-31,national,THA,Thailand,9.33692056756644,level
+2012-12-31,national,THA,Thailand,9.34766955842,level
+2013-12-31,national,THA,Thailand,9.31438165980357,level
+2014-12-31,national,THA,Thailand,8.46532810882416,level
+2015-12-31,national,THA,Thailand,7.56126881312398,level
+2016-12-31,national,THA,Thailand,6.21339779811349,level
+2017-12-31,national,THA,Thailand,5.80478398937807,level
+2018-12-31,national,THA,Thailand,5.43072200898892,level
+2019-12-31,national,THA,Thailand,5.46871731947485,level
+2020-12-31,national,THA,Thailand,5.07534415239426,level
+2021-12-31,national,THA,Thailand,5.69717428532609,level
+2022-12-31,national,THA,Thailand,6.05884943238714,level
+2023-12-31,national,THA,Thailand,5.3393381151977,level
+2004-12-31,national,TJK,Tajikistan,2.87894736674794,level
+2008-12-31,national,TJK,Tajikistan,0.0,level
+2010-12-31,national,TJK,Tajikistan,0.0,level
+2011-12-31,national,TJK,Tajikistan,0.0,level
+2012-12-31,national,TJK,Tajikistan,0.0,level
+2013-12-31,national,TJK,Tajikistan,0.0,level
+2014-12-31,national,TJK,Tajikistan,0.0,level
+2015-12-31,national,TJK,Tajikistan,0.0,level
+2016-12-31,national,TJK,Tajikistan,0.0,level
+2017-12-31,national,TJK,Tajikistan,0.0,level
+2018-12-31,national,TJK,Tajikistan,0.0,level
+2019-12-31,national,TJK,Tajikistan,0.0,level
+2020-12-31,national,TJK,Tajikistan,0.0,level
+2021-12-31,national,TJK,Tajikistan,0.0,level
+2022-12-31,national,TJK,Tajikistan,0.0,level
+2023-12-31,national,TJK,Tajikistan,0.0,level
+2012-12-31,national,TKL,Tokelau,2.77777767181396,level
+2014-12-31,national,TKL,Tokelau,10.0,level
+2017-12-31,national,TKL,Tokelau,7.59999990463257,level
+2018-12-31,national,TKL,Tokelau,0.0,level
+2019-12-31,national,TKL,Tokelau,0.0,level
+2004-12-31,national,TKM,Turkmenistan,2.64132553443574,level
+2008-12-31,national,TKM,Turkmenistan,0.0,level
+2010-12-31,national,TKM,Turkmenistan,0.0,level
+2011-12-31,national,TKM,Turkmenistan,0.0,level
+2012-12-31,national,TKM,Turkmenistan,0.0,level
+2013-12-31,national,TKM,Turkmenistan,0.0,level
+2014-12-31,national,TKM,Turkmenistan,0.0,level
+2015-12-31,national,TKM,Turkmenistan,0.0,level
+2016-12-31,national,TKM,Turkmenistan,0.0,level
+2017-12-31,national,TKM,Turkmenistan,0.0,level
+2018-12-31,national,TKM,Turkmenistan,0.0,level
+2019-12-31,national,TKM,Turkmenistan,0.0,level
+2020-12-31,national,TKM,Turkmenistan,0.0,level
+2021-12-31,national,TKM,Turkmenistan,0.0,level
+2022-12-31,national,TKM,Turkmenistan,0.0,level
+2023-12-31,national,TKM,Turkmenistan,0.0,level
+2010-12-31,national,TLS,East Timor,5.0,level
+2022-12-31,national,TLS,East Timor,0.0,level
+2023-12-31,national,TLS,East Timor,0.833333333333333,level
+2008-12-31,national,TTO,Trinidad and Tobago,5.0,level
+2010-12-31,national,TTO,Trinidad and Tobago,13.9903846468244,level
+2013-12-31,national,TTO,Trinidad and Tobago,13.75,level
+2014-12-31,national,TTO,Trinidad and Tobago,8.4733732752502,level
+2015-12-31,national,TTO,Trinidad and Tobago,5.69965907931328,level
+2016-12-31,national,TTO,Trinidad and Tobago,2.97823966294527,level
+2017-12-31,national,TTO,Trinidad and Tobago,2.46183876010279,level
+2018-12-31,national,TTO,Trinidad and Tobago,2.94079371094704,level
+2019-12-31,national,TTO,Trinidad and Tobago,1.19951848126948,level
+2020-12-31,national,TTO,Trinidad and Tobago,1.11852117609233,level
+2021-12-31,national,TTO,Trinidad and Tobago,17.6169509887695,level
+2022-12-31,national,TTO,Trinidad and Tobago,13.2405369281769,level
+2023-12-31,national,TTO,Trinidad and Tobago,8.87620580196381,level
+2004-12-31,national,TUN,Tunisia,3.76404494382022,level
+2008-12-31,national,TUN,Tunisia,4.89042933458506,level
+2010-12-31,national,TUN,Tunisia,9.54322396292545,level
+2011-12-31,national,TUN,Tunisia,9.61409776178854,level
+2012-12-31,national,TUN,Tunisia,10.280375645558,level
+2013-12-31,national,TUN,Tunisia,10.4664111170243,level
+2014-12-31,national,TUN,Tunisia,9.98395884188593,level
+2015-12-31,national,TUN,Tunisia,9.35185451001032,level
+2016-12-31,national,TUN,Tunisia,5.44102756131233,level
+2017-12-31,national,TUN,Tunisia,5.1652530806366,level
+2018-12-31,national,TUN,Tunisia,5.13324788677167,level
+2019-12-31,national,TUN,Tunisia,4.73985336662083,level
+2020-12-31,national,TUN,Tunisia,4.56809671446637,level
+2021-12-31,national,TUN,Tunisia,7.52866423520886,level
+2022-12-31,national,TUN,Tunisia,5.85920262506338,level
+2023-12-31,national,TUN,Tunisia,6.0749019028885,level
+2004-12-31,national,TUR,Turkey,2.59000389705115,level
+2008-12-31,national,TUR,Turkey,5.58924105401351,level
+2010-12-31,national,TUR,Turkey,8.65158135010344,level
+2011-12-31,national,TUR,Turkey,9.20034442666521,level
+2012-12-31,national,TUR,Turkey,9.2169637592278,level
+2013-12-31,national,TUR,Turkey,8.97387753053046,level
+2014-12-31,national,TUR,Turkey,8.05899542407384,level
+2015-12-31,national,TUR,Turkey,7.41797255029159,level
+2016-12-31,national,TUR,Turkey,6.12235563940227,level
+2017-12-31,national,TUR,Turkey,5.92092180215996,level
+2018-12-31,national,TUR,Turkey,5.76934019698853,level
+2019-12-31,national,TUR,Turkey,8.36696143551771,level
+2020-12-31,national,TUR,Turkey,5.26450370645809,level
+2021-12-31,national,TUR,Turkey,5.89226040704083,level
+2022-12-31,national,TUR,Turkey,6.51461990684526,level
+2023-12-31,national,TUR,Turkey,5.69739418032076,level
+2004-12-31,national,TUV,Tuvalu,0.0,level
+2013-12-31,national,TUV,Tuvalu,10.59375,level
+2014-12-31,national,TUV,Tuvalu,2.0,level
+2017-12-31,national,TUV,Tuvalu,0.0,level
+2018-12-31,national,TUV,Tuvalu,1.66666662693024,level
+2023-12-31,national,TUV,Tuvalu,0.0,level
+2004-12-31,national,TZA,Tanzania,5.0,level
+2008-12-31,national,TZA,Tanzania,1.0,level
+2010-12-31,national,TZA,Tanzania,5.95238099779402,level
+2011-12-31,national,TZA,Tanzania,0.0,level
+2012-12-31,national,TZA,Tanzania,0.0,level
+2013-12-31,national,TZA,Tanzania,0.0,level
+2014-12-31,national,TZA,Tanzania,0.0,level
+2015-12-31,national,TZA,Tanzania,0.0,level
+2016-12-31,national,TZA,Tanzania,5.86506858445704,level
+2017-12-31,national,TZA,Tanzania,1.3404274781545,level
+2018-12-31,national,TZA,Tanzania,0.0,level
+2019-12-31,national,TZA,Tanzania,1.30000003178914,level
+2020-12-31,national,TZA,Tanzania,1.11111111111111,level
+2021-12-31,national,TZA,Tanzania,0.0,level
+2022-12-31,national,TZA,Tanzania,0.0,level
+2023-12-31,national,TZA,Tanzania,0.78125,level
+2004-12-31,national,UGA,Uganda,2.5,level
+2008-12-31,national,UGA,Uganda,1.0,level
+2010-12-31,national,UGA,Uganda,10.8410894619791,level
+2011-12-31,national,UGA,Uganda,6.64346409440041,level
+2012-12-31,national,UGA,Uganda,0.454545458157857,level
+2013-12-31,national,UGA,Uganda,0.0,level
+2014-12-31,national,UGA,Uganda,0.0,level
+2015-12-31,national,UGA,Uganda,0.0,level
+2016-12-31,national,UGA,Uganda,0.00832990035414696,level
+2017-12-31,national,UGA,Uganda,4.91428565979004,level
+2018-12-31,national,UGA,Uganda,0.0,level
+2019-12-31,national,UGA,Uganda,0.0,level
+2020-12-31,national,UGA,Uganda,0.0,level
+2021-12-31,national,UGA,Uganda,0.0,level
+2022-12-31,national,UGA,Uganda,0.0,level
+2023-12-31,national,UGA,Uganda,1.01347120602926,level
+2004-12-31,national,UKR,Ukraine,2.25669793121585,level
+2008-12-31,national,UKR,Ukraine,0.013295069626797,level
+2010-12-31,national,UKR,Ukraine,0.0244385809314035,level
+2011-12-31,national,UKR,Ukraine,3.02014495236391e-05,level
+2012-12-31,national,UKR,Ukraine,0.0349945849471993,level
+2013-12-31,national,UKR,Ukraine,0.0414613639544799,level
+2014-12-31,national,UKR,Ukraine,8.79881972911365e-05,level
+2015-12-31,national,UKR,Ukraine,0.00019729820884089,level
+2016-12-31,national,UKR,Ukraine,0.000174961614318273,level
+2017-12-31,national,UKR,Ukraine,6.0572667359227e-05,level
+2018-12-31,national,UKR,Ukraine,5.53253387073869e-05,level
+2019-12-31,national,UKR,Ukraine,0.000122647979306385,level
+2020-12-31,national,UKR,Ukraine,0.000125027225038526,level
+2021-12-31,national,UKR,Ukraine,0.0553085371411802,level
+2022-12-31,national,UKR,Ukraine,0.0,level
+2023-12-31,national,UKR,Ukraine,0.0,level
+2004-12-31,national,URY,Uruguay,5.0,level
+2008-12-31,national,URY,Uruguay,11.8055555555556,level
+2010-12-31,national,URY,Uruguay,6.49351607511441,level
+2011-12-31,national,URY,Uruguay,10.8109832604726,level
+2012-12-31,national,URY,Uruguay,12.1017156488755,level
+2013-12-31,national,URY,Uruguay,8.54166666666667,level
+2014-12-31,national,URY,Uruguay,6.96935076595229,level
+2015-12-31,national,URY,Uruguay,7.47537698064532,level
+2016-12-31,national,URY,Uruguay,5.4574120764931,level
+2017-12-31,national,URY,Uruguay,5.18085938692093,level
+2018-12-31,national,URY,Uruguay,6.83984375,level
+2019-12-31,national,URY,Uruguay,5.09090914045061,level
+2020-12-31,national,URY,Uruguay,5.34090914045061,level
+2021-12-31,national,URY,Uruguay,4.04453141159481,level
+2022-12-31,national,URY,Uruguay,6.82444530063205,level
+2023-12-31,national,URY,Uruguay,7.50871923991612,level
+2004-12-31,national,USA,United States,2.44857665974728,level
+2008-12-31,national,USA,United States,4.91815302794914,level
+2010-12-31,national,USA,United States,8.16437310993065,level
+2011-12-31,national,USA,United States,8.12645737826131,level
+2012-12-31,national,USA,United States,8.34168256593094,level
+2013-12-31,national,USA,United States,8.26487184414725,level
+2014-12-31,national,USA,United States,7.81027358528962,level
+2015-12-31,national,USA,United States,7.12557211957818,level
+2016-12-31,national,USA,United States,6.03495693422009,level
+2017-12-31,national,USA,United States,5.76135390091377,level
+2018-12-31,national,USA,United States,5.71743329252986,level
+2019-12-31,national,USA,United States,5.68665763573289,level
+2020-12-31,national,USA,United States,5.17756053304413,level
+2021-12-31,national,USA,United States,5.15064391617712,level
+2022-12-31,national,USA,United States,5.81308371203528,level
+2023-12-31,national,USA,United States,5.20893210261513,level
+2004-12-31,national,UZB,Uzbekistan,2.28398517145279,level
+2008-12-31,national,UZB,Uzbekistan,0.00932835820895522,level
+2010-12-31,national,UZB,Uzbekistan,0.0,level
+2011-12-31,national,UZB,Uzbekistan,0.0227272727272727,level
+2012-12-31,national,UZB,Uzbekistan,0.0144508670520231,level
+2013-12-31,national,UZB,Uzbekistan,0.0132743362831858,level
+2014-12-31,national,UZB,Uzbekistan,0.0,level
+2015-12-31,national,UZB,Uzbekistan,0.0,level
+2016-12-31,national,UZB,Uzbekistan,0.0,level
+2017-12-31,national,UZB,Uzbekistan,0.0,level
+2018-12-31,national,UZB,Uzbekistan,0.0,level
+2019-12-31,national,UZB,Uzbekistan,0.0,level
+2020-12-31,national,UZB,Uzbekistan,0.0,level
+2021-12-31,national,UZB,Uzbekistan,0.0,level
+2022-12-31,national,UZB,Uzbekistan,0.0,level
+2023-12-31,national,UZB,Uzbekistan,0.0,level
+2004-12-31,national,VAT,Holy See,1.66666666666667,level
+2010-12-31,national,VAT,Holy See,12.8571424484253,level
+2011-12-31,national,VAT,Holy See,0.0971797853708267,level
+2014-12-31,national,VAT,Holy See,4.34761905670166,level
+2017-12-31,national,VAT,Holy See,0.0,level
+2022-12-31,national,VAT,Holy See,5.28162892659505,level
+2010-12-31,national,VCT,St. Vincent and the Grenadines,5.0,level
+2011-12-31,national,VCT,St. Vincent and the Grenadines,9.61538505554199,level
+2017-12-31,national,VCT,St. Vincent and the Grenadines,6.41666650772095,level
+2018-12-31,national,VCT,St. Vincent and the Grenadines,6.40000009536743,level
+2022-12-31,national,VCT,St. Vincent and the Grenadines,6.5,level
+2004-12-31,national,VEN,Venezuela,1.0,level
+2008-12-31,national,VEN,Venezuela,2.5,level
+2010-12-31,national,VEN,Venezuela,7.16411570140294,level
+2011-12-31,national,VEN,Venezuela,7.4479167163372,level
+2012-12-31,national,VEN,Venezuela,7.70833349227905,level
+2013-12-31,national,VEN,Venezuela,9.79166674613953,level
+2014-12-31,national,VEN,Venezuela,9.69285678863525,level
+2015-12-31,national,VEN,Venezuela,7.15833330154419,level
+2016-12-31,national,VEN,Venezuela,5.83200956260165,level
+2017-12-31,national,VEN,Venezuela,4.13560545444489,level
+2018-12-31,national,VEN,Venezuela,6.50000015894572,level
+2019-12-31,national,VEN,Venezuela,5.45000000794729,level
+2020-12-31,national,VEN,Venezuela,5.16666666666667,level
+2022-12-31,national,VEN,Venezuela,6.55928349494934,level
+2023-12-31,national,VEN,Venezuela,7.05591956774394,level
+2004-12-31,national,VGB,British Virgin Islands,0.967741935483871,level
+2008-12-31,national,VGB,British Virgin Islands,4.13793103448276,level
+2010-12-31,national,VGB,British Virgin Islands,6.68852787017822,level
+2011-12-31,national,VGB,British Virgin Islands,0.0,level
+2012-12-31,national,VGB,British Virgin Islands,14.6428570747375,level
+2013-12-31,national,VGB,British Virgin Islands,10.4982362853156,level
+2014-12-31,national,VGB,British Virgin Islands,9.60992744043469,level
+2015-12-31,national,VGB,British Virgin Islands,5.88343254062865,level
+2016-12-31,national,VGB,British Virgin Islands,7.97275640414311,level
+2017-12-31,national,VGB,British Virgin Islands,6.26666665077209,level
+2019-12-31,national,VGB,British Virgin Islands,4.0,level
+2022-12-31,national,VGB,British Virgin Islands,7.27500009536743,level
+2023-12-31,national,VGB,British Virgin Islands,3.5,level
+2004-12-31,national,VNM,Vietnam,3.58578431372549,level
+2008-12-31,national,VNM,Vietnam,5.7741179777499,level
+2010-12-31,national,VNM,Vietnam,9.88889139912643,level
+2011-12-31,national,VNM,Vietnam,9.94616666235281,level
+2012-12-31,national,VNM,Vietnam,10.4159452542116,level
+2013-12-31,national,VNM,Vietnam,10.0479076431203,level
+2014-12-31,national,VNM,Vietnam,9.52917810284406,level
+2015-12-31,national,VNM,Vietnam,8.52058609879197,level
+2016-12-31,national,VNM,Vietnam,6.24086660072285,level
+2017-12-31,national,VNM,Vietnam,2.45468142032623,level
+2018-12-31,national,VNM,Vietnam,2.20768183465337,level
+2019-12-31,national,VNM,Vietnam,2.0257336854573,level
+2020-12-31,national,VNM,Vietnam,1.77161379341354,level
+2021-12-31,national,VNM,Vietnam,2.0224965633367,level
+2022-12-31,national,VNM,Vietnam,1.84849866584083,level
+2023-12-31,national,VNM,Vietnam,1.56518829975512,level
+2004-12-31,national,VUT,Vanuatu,1.66666665673256,level
+2012-12-31,national,VUT,Vanuatu,6.36363649368286,level
+2013-12-31,national,VUT,Vanuatu,12.2576960457696,level
+2014-12-31,national,VUT,Vanuatu,1.875,level
+2014-12-31,national,WLF,Wallis and Futura Isl.,6.03448295593262,level
+2023-12-31,national,WLF,Wallis and Futura Isl.,6.5,level
+2010-12-31,national,WSM,Samoa,10.0,level
+2019-12-31,national,WSM,Samoa,3.0,level
+2008-12-31,national,YEM,Yemen,0.0,level
+2010-12-31,national,YEM,Yemen,0.0,level
+2012-12-31,national,YEM,Yemen,9.36274506064022,level
+2013-12-31,national,YEM,Yemen,5.68181832631429,level
+2014-12-31,national,YEM,Yemen,4.45748403337267,level
+2015-12-31,national,YEM,Yemen,0.0,level
+2016-12-31,national,YEM,Yemen,4.0,level
+2018-12-31,national,YEM,Yemen,7.41666650772095,level
+2022-12-31,national,YEM,Yemen,8.19944953918457,level
+2023-12-31,national,YEM,Yemen,6.5,level
+2004-12-31,national,ZAF,South Africa,2.11918150441548,level
+2008-12-31,national,ZAF,South Africa,4.56298362015339,level
+2010-12-31,national,ZAF,South Africa,7.35208151839584,level
+2011-12-31,national,ZAF,South Africa,6.47143829162521,level
+2012-12-31,national,ZAF,South Africa,6.95061127118073,level
+2013-12-31,national,ZAF,South Africa,7.53439760450764,level
+2014-12-31,national,ZAF,South Africa,6.48076703055616,level
+2015-12-31,national,ZAF,South Africa,5.71522800454249,level
+2016-12-31,national,ZAF,South Africa,5.23272224957192,level
+2017-12-31,national,ZAF,South Africa,4.90085758604488,level
+2018-12-31,national,ZAF,South Africa,4.80929438330532,level
+2019-12-31,national,ZAF,South Africa,5.12527352210344,level
+2020-12-31,national,ZAF,South Africa,4.63344032714066,level
+2021-12-31,national,ZAF,South Africa,4.27112776886171,level
+2022-12-31,national,ZAF,South Africa,5.18314446518797,level
+2023-12-31,national,ZAF,South Africa,4.34022223311329,level
+2004-12-31,national,COD,"Congo, Dem. Rep.",0.0,level
+2008-12-31,national,COD,"Congo, Dem. Rep.",0.0,level
+2010-12-31,national,COD,"Congo, Dem. Rep.",0.0,level
+2011-12-31,national,COD,"Congo, Dem. Rep.",0.0,level
+2012-12-31,national,COD,"Congo, Dem. Rep.",0.833333313465118,level
+2013-12-31,national,COD,"Congo, Dem. Rep.",0.0,level
+2014-12-31,national,COD,"Congo, Dem. Rep.",0.0,level
+2015-12-31,national,COD,"Congo, Dem. Rep.",5.56309509277344,level
+2016-12-31,national,COD,"Congo, Dem. Rep.",0.0,level
+2017-12-31,national,COD,"Congo, Dem. Rep.",1.42857138315837,level
+2018-12-31,national,COD,"Congo, Dem. Rep.",1.0,level
+2019-12-31,national,COD,"Congo, Dem. Rep.",0.0,level
+2020-12-31,national,COD,"Congo, Dem. Rep.",0.0,level
+2021-12-31,national,COD,"Congo, Dem. Rep.",0.0,level
+2022-12-31,national,COD,"Congo, Dem. Rep.",1.42857146263123,level
+2023-12-31,national,COD,"Congo, Dem. Rep.",0.0,level
+2004-12-31,national,ZMB,Zambia,3.0,level
+2008-12-31,national,ZMB,Zambia,2.30769230769231,level
+2010-12-31,national,ZMB,Zambia,8.25907028856732,level
+2011-12-31,national,ZMB,Zambia,6.44345235824585,level
+2012-12-31,national,ZMB,Zambia,8.33333333333333,level
+2013-12-31,national,ZMB,Zambia,4.0,level
+2014-12-31,national,ZMB,Zambia,0.0,level
+2015-12-31,national,ZMB,Zambia,0.0,level
+2016-12-31,national,ZMB,Zambia,0.0,level
+2017-12-31,national,ZMB,Zambia,0.0,level
+2018-12-31,national,ZMB,Zambia,1.0,level
+2019-12-31,national,ZMB,Zambia,0.0,level
+2020-12-31,national,ZMB,Zambia,0.0,level
+2021-12-31,national,ZMB,Zambia,0.0,level
+2022-12-31,national,ZMB,Zambia,3.33333333333333,level
+2023-12-31,national,ZMB,Zambia,0.0,level
+2004-12-31,national,ZWE,Zimbabwe,5.0,level
+2008-12-31,national,ZWE,Zimbabwe,7.77777777777778,level
+2010-12-31,national,ZWE,Zimbabwe,8.18224966526031,level
+2011-12-31,national,ZWE,Zimbabwe,6.875,level
+2012-12-31,national,ZWE,Zimbabwe,6.1194855372111,level
+2013-12-31,national,ZWE,Zimbabwe,5.83333333333333,level
+2014-12-31,national,ZWE,Zimbabwe,4.94646120071411,level
+2015-12-31,national,ZWE,Zimbabwe,4.55555555555556,level
+2016-12-31,national,ZWE,Zimbabwe,4.95833333333333,level
+2017-12-31,national,ZWE,Zimbabwe,5.73000001907349,level
+2018-12-31,national,ZWE,Zimbabwe,5.46354162693024,level
+2019-12-31,national,ZWE,Zimbabwe,5.70714282989502,level
+2020-12-31,national,ZWE,Zimbabwe,5.84285715648106,level
+2021-12-31,national,ZWE,Zimbabwe,5.66913448061262,level
+2022-12-31,national,ZWE,Zimbabwe,5.31580595970154,level
+2023-12-31,national,ZWE,Zimbabwe,4.98380395344326,level

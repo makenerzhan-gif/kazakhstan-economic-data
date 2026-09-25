@@ -1,0 +1,21 @@
+{
+  "source": "wits",
+  "source_url": "https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/kaz/year/all/partner/all/product/Total/indicator/MPRT-TRD-VL?format=JSON",
+  "dataset_id": "wits/tradestats-trade/MPRT-TRD-VL",
+  "indicator_id": "WITS_KZ_IMPORTS_BY_PARTNER",
+  "indicator_name": "Kazakhstan imports by partner, thousand USD (WITS TradeStats, UN Comtrade)",
+  "description": "Импорт Казахстана по странам-партнёрам (WITS/UN Comtrade), тыс. долларов США",
+  "frequency": "annual",
+  "unit": "thousand USD",
+  "currency": "USD",
+  "geography": "Kazakhstan (national)",
+  "methodology": "As WITS_KZ_EXPORTS_BY_PARTNER; prefer KZ_IMPORTS_BY_PARTNER from 2020.",
+  "publication_date": null,
+  "last_update_date": "2026-09-25",
+  "download_date": "2026-09-25",
+  "period_start": "1995-12-31",
+  "period_end": "2023-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
