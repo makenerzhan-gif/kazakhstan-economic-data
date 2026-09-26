@@ -24,3 +24,15 @@ kind and year (`table, row_no, row_code, row_name, col_no, col_code, col_name, v
 thousand KZT, coefficients in tables 9–10). Built by `scripts/build_io_tables.py`, which
 also writes `editions.csv` (element id, publication date, the L = (I − A)⁻¹ check). BNS's A is
 flows divided by total resources at basic prices (output + imports), not by output.
+
+## nf_receipts_kgd_history.csv
+
+National Fund receipts by tax, thousand KZT, year to date (`indicator_id, date, value_thousand_kzt,
+source_url`; 1 433 rows, 2002–2025 without 2005–2006): KGD «Динамика поступлений налогов и платежей
+в Национальный фонд» (https://kgd.gov.kz/ru/section/dinamika-postupleniy-nalogov-i-platezhey-v-nacionalnyy-fond),
+one by-tax workbook per year, read by row label; a workbook is kept only if its tax rows add up to
+«ИТОГО по налоговым поступлениям» in every month (2005 does not; there is no 2006 file). Loaded once
+on 2026-09-26 by `scripts/load_nf_receipts_history.py` (the page has not been updated since May 2025);
+the workbooks are archived as `data/raw/minfin/minfin_nf_receipts_history_kgd_<year>_2026-09-26.*`.
+The Minfin fetcher prepends the months before 2018 to the seven `NF_*_YTD` tax series while KGD
+equals Minfin in every December both cover (2018–2024: all seven taxes, to the thousand tenge).

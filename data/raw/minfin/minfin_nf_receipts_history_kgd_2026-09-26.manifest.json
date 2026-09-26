@@ -1,0 +1,147 @@
+{
+  "downloaded_at": "2026-09-26T23:49:41.754332",
+  "source_url": "https://kgd.gov.kz/ru/section/dinamika-postupleniy-nalogov-i-platezhey-v-nacionalnyy-fond",
+  "output": "nf_receipts_kgd_history.csv",
+  "workbooks": {
+    "2002": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2015/nacfond_2002_po_nalogam.xls",
+      "raw_file": "minfin_nf_receipts_history_kgd_2002_2026-09-26.xls",
+      "points": 24,
+      "months_failing_identity": []
+    },
+    "2003": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2015/nacfond_2003_po_nalogam.xls",
+      "raw_file": "minfin_nf_receipts_history_kgd_2003_2026-09-26.xls",
+      "points": 15,
+      "months_failing_identity": []
+    },
+    "2004": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2015/nacfond_2004_po_nalogam.xls",
+      "raw_file": "minfin_nf_receipts_history_kgd_2004_2026-09-26.xls",
+      "points": 10,
+      "months_failing_identity": []
+    },
+    "2005": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2015/nacfond_2005_po_nalogam.xlsx",
+      "raw_file": "minfin_nf_receipts_history_kgd_2005_2026-09-26.xlsx",
+      "points": 0,
+      "months_failing_identity": [
+        12
+      ]
+    },
+    "2007": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2015/nacfond_2007_po_nalogam.xls",
+      "raw_file": "minfin_nf_receipts_history_kgd_2007_2026-09-26.xls",
+      "points": 60,
+      "months_failing_identity": []
+    },
+    "2008": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2015/nacfond_2008_po_nalogam.xls",
+      "raw_file": "minfin_nf_receipts_history_kgd_2008_2026-09-26.xls",
+      "points": 60,
+      "months_failing_identity": []
+    },
+    "2009": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2015/nacfond_2009_po_nalogam.xls",
+      "raw_file": "minfin_nf_receipts_history_kgd_2009_2026-09-26.xls",
+      "points": 72,
+      "months_failing_identity": []
+    },
+    "2010": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2015/nacfond_2010_po_nalogam.xls",
+      "raw_file": "minfin_nf_receipts_history_kgd_2010_2026-09-26.xls",
+      "points": 72,
+      "months_failing_identity": []
+    },
+    "2011": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2015/nacfond_2011_po_nalogam.xls",
+      "raw_file": "minfin_nf_receipts_history_kgd_2011_2026-09-26.xls",
+      "points": 72,
+      "months_failing_identity": []
+    },
+    "2012": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2015/nacfond_2012_po_nalogam.xls",
+      "raw_file": "minfin_nf_receipts_history_kgd_2012_2026-09-26.xls",
+      "points": 72,
+      "months_failing_identity": []
+    },
+    "2013": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2015/nacfond_2013_po_nalogam.xls",
+      "raw_file": "minfin_nf_receipts_history_kgd_2013_2026-09-26.xls",
+      "points": 72,
+      "months_failing_identity": []
+    },
+    "2014": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2014/NF2014/postuplenie_nalogov_i_platezhey_v_nacfond_po_vidam_nalogov_i_platezhey.xls",
+      "raw_file": "minfin_nf_receipts_history_kgd_2014_2026-09-26.xls",
+      "points": 72,
+      "months_failing_identity": []
+    },
+    "2015": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2015/nalogi_dek_0.xlsx",
+      "raw_file": "minfin_nf_receipts_history_kgd_2015_2026-09-26.xlsx",
+      "points": 72,
+      "months_failing_identity": []
+    },
+    "2016": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/2015/2016/nalogi_6.xlsx",
+      "raw_file": "minfin_nf_receipts_history_kgd_2016_2026-09-26.xlsx",
+      "points": 72,
+      "months_failing_identity": []
+    },
+    "2017": {
+      "url": "https://kgd.gov.kz/sites/default/files/statistika/nalogi_2.xlsx",
+      "raw_file": "minfin_nf_receipts_history_kgd_2017_2026-09-26.xlsx",
+      "points": 72,
+      "months_failing_identity": []
+    },
+    "2018": {
+      "url": "https://kgd.gov.kz/sites/default/files/nalogi_18.xlsx",
+      "raw_file": "minfin_nf_receipts_history_kgd_2018_2026-09-26.xlsx",
+      "points": 84,
+      "months_failing_identity": []
+    },
+    "2019": {
+      "url": "https://kgd.gov.kz/sites/default/files/nalogi_20.xlsx",
+      "raw_file": "minfin_nf_receipts_history_kgd_2019_2026-09-26.xlsx",
+      "points": 84,
+      "months_failing_identity": []
+    },
+    "2020": {
+      "url": "https://kgd.gov.kz/sites/default/files/URAS/nalogi_9.xlsx",
+      "raw_file": "minfin_nf_receipts_history_kgd_2020_2026-09-26.xlsx",
+      "points": 84,
+      "months_failing_identity": []
+    },
+    "2021": {
+      "url": "https://kgd.gov.kz/sites/default/files/nalogi_62.xlsx",
+      "raw_file": "minfin_nf_receipts_history_kgd_2021_2026-09-26.xlsx",
+      "points": 84,
+      "months_failing_identity": []
+    },
+    "2022": {
+      "url": "https://kgd.gov.kz/sites/default/files/nalogi_89.xlsx",
+      "raw_file": "minfin_nf_receipts_history_kgd_2022_2026-09-26.xlsx",
+      "points": 84,
+      "months_failing_identity": []
+    },
+    "2023": {
+      "url": "https://kgd.gov.kz/sites/default/files/nalogi_rus_okt_1.xlsx",
+      "raw_file": "minfin_nf_receipts_history_kgd_2023_2026-09-26.xlsx",
+      "points": 84,
+      "months_failing_identity": []
+    },
+    "2024": {
+      "url": "https://kgd.gov.kz/sites/default/files/nalogi_rus__12.xlsx",
+      "raw_file": "minfin_nf_receipts_history_kgd_2024_2026-09-26.xlsx",
+      "points": 84,
+      "months_failing_identity": []
+    },
+    "2025": {
+      "url": "https://kgd.gov.kz/sites/default/files/nalogi_rus__16.xlsx",
+      "raw_file": "minfin_nf_receipts_history_kgd_2025_2026-09-26.xlsx",
+      "points": 28,
+      "months_failing_identity": []
+    }
+  }
+}

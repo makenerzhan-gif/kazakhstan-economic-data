@@ -108,6 +108,21 @@ FETCHERS = {
     "BUDGET_FINANCING_INTL_ORGANIZATIONS": minfin_fetchers.fetch_budget_financing_intl_organizations,
     "OIL_EXPORT_DUTY": minfin_fetchers.fetch_oil_export_duty,
     "OIL_PRODUCTS_EXPORT_DUTY": minfin_fetchers.fetch_oil_products_export_duty,
+    "NF_OIL_CIT_YTD": minfin_fetchers.fetch_nf_oil_cit_ytd,
+    "NF_EXCESS_PROFIT_TAX_YTD": minfin_fetchers.fetch_nf_excess_profit_tax_ytd,
+    "NF_BONUSES_YTD": minfin_fetchers.fetch_nf_bonuses_ytd,
+    "NF_MET_YTD": minfin_fetchers.fetch_nf_met_ytd,
+    "NF_RENT_TAX_EXPORT_YTD": minfin_fetchers.fetch_nf_rent_tax_export_ytd,
+    "NF_PSA_SHARE_YTD": minfin_fetchers.fetch_nf_psa_share_ytd,
+    "NF_PSA_ADDITIONAL_PAYMENT_YTD": minfin_fetchers.fetch_nf_psa_additional_payment_ytd,
+    "NF_OIL_DIRECT_TAXES_YTD": minfin_fetchers.fetch_nf_oil_direct_taxes_ytd,
+    "NF_OIL_OTHER_RECEIPTS_YTD": minfin_fetchers.fetch_nf_oil_other_receipts_ytd,
+    "NF_OIL_RECEIPTS_YTD": minfin_fetchers.fetch_nf_oil_receipts_ytd,
+    "NF_PRIVATIZATION_YTD": minfin_fetchers.fetch_nf_privatization_ytd,
+    "NF_INVESTMENT_INCOME_YTD": minfin_fetchers.fetch_nf_investment_income_ytd,
+    "NF_GUARANTEED_TRANSFER_YTD": minfin_fetchers.fetch_nf_guaranteed_transfer_ytd,
+    "NF_TARGETED_TRANSFERS_YTD": minfin_fetchers.fetch_nf_targeted_transfers_ytd,
+    "NF_TRANSFERS_YTD": minfin_fetchers.fetch_nf_transfers_ytd,
 }
 
 INDICATOR_IDS = [
@@ -158,6 +173,21 @@ INDICATOR_IDS = [
     "BUDGET_FINANCING_INTL_ORGANIZATIONS",
     "OIL_EXPORT_DUTY",
     "OIL_PRODUCTS_EXPORT_DUTY",
+    "NF_OIL_CIT_YTD",
+    "NF_EXCESS_PROFIT_TAX_YTD",
+    "NF_BONUSES_YTD",
+    "NF_MET_YTD",
+    "NF_RENT_TAX_EXPORT_YTD",
+    "NF_PSA_SHARE_YTD",
+    "NF_PSA_ADDITIONAL_PAYMENT_YTD",
+    "NF_OIL_DIRECT_TAXES_YTD",
+    "NF_OIL_OTHER_RECEIPTS_YTD",
+    "NF_OIL_RECEIPTS_YTD",
+    "NF_PRIVATIZATION_YTD",
+    "NF_INVESTMENT_INCOME_YTD",
+    "NF_GUARANTEED_TRANSFER_YTD",
+    "NF_TARGETED_TRANSFERS_YTD",
+    "NF_TRANSFERS_YTD",
 ]
 
 

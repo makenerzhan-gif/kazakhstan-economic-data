@@ -16,7 +16,7 @@ METADATA → UNIFIED DATASET → GitHub → (manual "Sync now") → Claude Proje
 
 ## Scope
 
-519 indicators (see `config/indicators.yaml`), all connected end-to-end
+534 indicators (see `config/indicators.yaml`), all connected end-to-end
 against live official sources — past the original 18-indicator pilot and its
 100-150 indicator target (MASTER TASK section 17). No econometric modeling
 yet; see `project_knowledge/UPDATE_LOG.md` for the dated history of how the
@@ -28,6 +28,12 @@ partner code (`config/dims.yaml`): trade by partner (BNS from 2020, WITS/UN Comt
 bilateral dummies (CEPII) are static tables in `data/reference/`. Input-output and
 supply-use tables (BNS, 2021–2024) are built into `data/reference/io/` by
 `scripts/build_io_tables.py`.
+
+National Fund receipts by tax and payment (15 `NF_*_YTD` series: the seven oil-sector taxes,
+their total, other oil-sector receipts, privatization, investment income, guaranteed and
+targeted transfers) are read monthly from Minfin's report on the Fund (from 2018); the seven
+taxes reach back to 2002 through KGD's by-tax workbooks, loaded once by
+`scripts/load_nf_receipts_history.py` into `data/reference/nf_receipts_kgd_history.csv`.
 
 Model-ready monthly and quarterly panels (seasonally adjusted, chained, with a
 perpetual-inventory capital stock and TFP) are derived into `model_data/` by

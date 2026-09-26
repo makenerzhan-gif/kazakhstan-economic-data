@@ -1,85 +1,8 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to 2026-09-15
-are in docs/UPDATE_LOG_ARCHIVE.md in the repository (not synced into the Claude Project). When this
-file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-23 — quarterly data: fourteen year-to-date and quarterly siblings of the item-level datasets; GDP_NOMINAL derived from them
-
-**Why.** The item-level layer read only the «YYYY год» columns of the BNS national-accounts
-tables; the same xlsx files carry «1 квартал», «1 полугодие» and «9 месяцев» beside them
-(as columns in 4439–4441, 4435–4437, 4452–4455 and 5926, as rows inside the region blocks
-of 5927 and 5931), and the employment table 5831 carries «I–IV квартал» sub-columns under
-every year. The user asked for the quarterly data.
-
-**What.** Fourteen datasets, each the sibling of an annual one (same element, same rows,
-same dictionary, id suffixed `_QUARTERLY`, `frequency: quarterly`), 44 328 rows in
-`macro_dims_long.csv` (95 764 in all):
-
-| dataset | rows | items × regions | periods |
-|---|---|---|---|
-| GVA_NOMINAL_BY_SECTION_QUARTERLY (4439) | 1 821 | 30 | 2010 Q1 – 2026 H1 |
-| GVA_VOLUME_INDEX_BY_SECTION_QUARTERLY (4440) | 1 821 | 30 | 2010 Q1 – 2026 H1 |
-| GVA_DEFLATOR_BY_SECTION_QUARTERLY (4441) | 1 821 | 30 | 2010 Q1 – 2026 H1 |
-| GVA_NOMINAL_INDUSTRY_DIVISIONS_QUARTERLY (5931) | 1 961 | 37 | 2013 Q1 – 2026 Q1 |
-| GDP_EXPENDITURE_NOMINAL_QUARTERLY (4435) | 1 080 | 15 | 2007 Q1 – 2026 Q1 |
-| GDP_EXPENDITURE_VOLUME_INDEX_QUARTERLY (4437) | 847 | 11 | 2007 Q1 – 2026 Q1 |
-| GDP_EXPENDITURE_DEFLATOR_QUARTERLY (4436) | 924 | 12 | 2007 Q1 – 2026 Q1 |
-| INCOME_COMPENSATION_BY_SECTION_QUARTERLY (4453) | 1 560 | 24 | 2010 Q1 – 2026 Q1 |
-| INCOME_OTHER_TAXES_BY_SECTION_QUARTERLY (4452) | 1 625 | 25 | 2010 Q1 – 2026 Q1 |
-| INCOME_CFC_BY_SECTION_QUARTERLY (4454) | 1 560 | 24 | 2010 Q1 – 2026 Q1 |
-| INCOME_PROFIT_BY_SECTION_QUARTERLY (4455) | 1 567 | 25 | 2010 Q1 – 2026 Q1 |
-| GVA_NOMINAL_BY_REGION_SECTION_QUARTERLY (5927) | 25 256 | 25 × 22 | 2010 Q1 – 2026 Q1 |
-| GRP_VOLUME_INDEX_BY_REGION_QUARTERLY (5926) | 1 099 | 1 × 22 | 2011 9 months – 2026 Q1 |
-| EMPLOYED_BY_SECTION_QUARTERLY (5831) | 1 386 | 21 | 2010 Q1 – 2026 Q2 (discrete) |
-
-Every period of the national-accounts tables is YEAR-TO-DATE (January–March, January–June,
-January–September, the year); the values are stored as published, not decumulated. The
-employment quarters are discrete (a labour-force-survey quarter), which the data itself
-proves: its Q4 differs from the annual figure on all 336 (year, item) pairs, while in every
-year-to-date dataset Q4 equals the annual sibling's value on all 10 707 (year, region, item)
-pairs. Dating follows `lib/periods.py` and the scalar `GDP_NOMINAL`: the first day of the
-last quarter covered (2024-07-01 for January–September 2024, 2024-10-01 for the year).
-The flow tables say `cumulation: year_to_date` (the outlier check then compares own-period
-contributions, as for the scalar year-to-date series) and carry the same `transformation`
-text as `GDP_NOMINAL`; the indices' unit says they are year-to-date periods in % of the same
-period of the previous year. 5926's year-to-date columns begin with «9 месяцев 2011 года»
-(`years_from: 2011`; 2001–2010 stay annual). 450904 has annual rows only — no sibling.
-
-Parser (`scripts/fetchers/bns_dims.py`): `period_of` reads every label shape seen in the
-files («1 квартал 2010г.», «I квартал     2012 года», «1 полугодие 2026г.*», «9 месяцев
-2019 года**», «9 месяц 2012г.», «2025 год7)8)», a Cyrillic І), `quarter_of` the bare
-«I–IV квартал» sub-column labels (a year whose sub-columns are labelled otherwise stops the
-dataset loudly); `_period_columns` / `_rec` date the period; `periods` and `years_from` are
-dataset keys. `dims.validate` takes `cumulation`; `update_dims` writes the dataset's
-`transformation` into every processed row and the metadata. One download and one raw copy
-per file as before: the thirteen files were byte-identical to the 14/16 September copies,
-so the run stored fourteen manifests and no new bytes. Validation warnings are seasonal
-(agriculture's third-quarter contribution, other taxes in Q4) and one row of 4440/4441
-(NET_TAXES) that is published annually only — informational, none failed.
-
-**GDP_NOMINAL.** The scalar was fetched from the JSON cube of the same element 4439. Its 66
-quarters equal the xlsx «ВВП» row × 1e6 within the table's rounding to 0.1 million KZT (only
-2010 Q2 differed, by 48 795 KZT, where the cube carried unrounded tenge), so it is now the
-twelfth derived scalar (`derived_from: GVA_NOMINAL_BY_SECTION_QUARTERLY[GDP] × 1e6`) — one
-download instead of two, `fetch_gdp_nominal` retired, `sources.yaml` says `derived`.
-`update_derived` now keeps the source dataset's `transformation` (the year-to-date text) in
-the processed rows and the metadata, and scales with `Decimal`: in floats 16804418.1 × 1e6 is
-16804418100000.002, and that noise had been logged as "revisions" of GDP_NOMINAL (three
-quarters) and stored in ELECTRICITY_PRODUCTION (1994 and 2004 since 15 September). The
-noise entries dated today were removed from the two revision logs (they were artefacts of
-the multiplication, not of the source); the genuine 2010 Q2 entry stays. ELECTRICITY_PRODUCTION
-2014 keeps its fractional value (94 643 242 900.00002) because the xlsx cell itself holds
-94643.24290000001. `macro_long.csv`/`macro_wide.csv` and `project_knowledge/` rebuilt.
-
-Tests 311 → 338 (`tests/test_dims_quarterly.py`: every label shape, the three layouts under
-`periods`, `years_from`, the structural stop on mislabelled sub-columns, the year-to-date
-outlier check, and that every quarterly dataset mirrors its annual sibling's configuration).
-
-**Left out.** Discrete quarters for the year-to-date flows (a decumulation transformation,
-to be its own derived layer if ever needed, never a silent change of these); 450904 (no
-quarterly rows); the model has no quarterly mappings — nothing in `config/model_map.yaml`
-changed and the daily run's model check is unaffected.
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to the first
+one of 2026-09-23 are in docs/UPDATE_LOG_ARCHIVE.md in the repository (not synced into the Claude
+Project). When this file grows past ~60 KB, move the oldest entries there.
 
 ## 2026-09-23 — discrete quarters: the quarterly national accounts (19 QNA_* datasets), and a second vintage of the 2010–2022 history
 
@@ -725,3 +648,60 @@ merging main, same record (116 files in all).
 38 NBK forms for the first time in canonical form (18.4 MB); each held the same data as the form's last
 old-format file, so those 38 old copies (18.5 MB) were removed with `dedup_raw --nbk-forms` (same record).
 From now on an NBK form or WITS answer is stored again only when its data change.
+
+## 2026-09-26 — National Fund receipts by tax and payment: 519 -> 534 indicators
+
+**Why.** The pipeline had the National Fund's assets, portfolios and the NBK's monthly transfer
+flow (from 2024), but not what flows into the Fund by tax. CAEM (`NFRK_R_oil_*`) and the fiscal
+blocks of the models need the oil-sector taxes; the CAEM mission file stops in 2023 and has holes.
+Sources were surveyed beforehand (`Справочники_МВФ/sources_nf_receipts.md`).
+
+**Minfin (15 series, monthly, year to date, million KZT; source thousand KZT).** Every «Statement
+of receipts and application of the National Fund … as of 1 <month>» / «Отчет о поступлениях и
+использовании Национального фонда» of activity 7294 on gov.kz (all listing pages; 106 documents,
+reports as of 1 Feb 2018 … 1 Jul 2026, all parsed). Series: NF_OIL_CIT_YTD, NF_EXCESS_PROFIT_TAX_YTD,
+NF_BONUSES_YTD, NF_MET_YTD, NF_RENT_TAX_EXPORT_YTD, NF_PSA_SHARE_YTD, NF_PSA_ADDITIONAL_PAYMENT_YTD,
+their line NF_OIL_DIRECT_TAXES_YTD, NF_OIL_OTHER_RECEIPTS_YTD (fines, damages, other non-tax),
+NF_OIL_RECEIPTS_YTD (the two lines added), NF_PRIVATIZATION_YTD (privatization + transfer of
+national-company assets to the competitive environment), NF_INVESTMENT_INCOME_YTD (as booked in
+the report: in a monthly report the income of the last period the NBK approved, a quarter or more
+behind; in December the full year), NF_GUARANTEED_TRANSFER_YTD, NF_TARGETED_TRANSFERS_YTD and
+NF_TRANSFERS_YTD. The flow series NATIONAL_FUND_TRANSFERS (NBK, from 2024-02) stays; the Minfin
+total is year to date by type from 2018 (2025: 5 250 bn against 5 201 bn summed from NBK months).
+- Lines are found by EN/RU label (rows moved: budget-loan repayment lines in 2025–2026, investment
+  income moved out of receipts in the approved annual reports); a line printed blank is zero.
+- The period is read from the sheet heading, not the listing title (25467 says 2020 for 2019;
+  26492, listed as 1 December 2018, is a second copy of 1 November). Document 638881 is headed
+  «1 March 2024» but its numbers lie between 1 March and 1 May and it was posted on 2024-04-03:
+  `DOC_PERIOD_OVERRIDES` makes it 1 April 2024. The approved annual reports for 2018 (26493) and
+  2024 (866047) stand in for the missing reports as of 1 January 2019 and 2025. The approved 2023
+  report (677412) has lines 21–23 one row up (land sales 53 349 = KGD code 303102 stand as
+  privatization): `DOC_LINE_EXCLUSIONS` takes 2023 privatization from the 1 January 2024 report.
+- Identity on every report: seven taxes = direct taxes, four items = other oil-sector receipts
+  (2 thousand KZT); a failing report is left out and named in the note. All 106 pass.
+- Missing months: May 2018, November 2018 (no report as of 1 June / 1 December 2018), April–May
+  2026 (not published). Not interpolated.
+
+**History 2002–2017 (the seven taxes).** KGD «Динамика поступлений налогов и платежей в
+Национальный фонд», one by-tax workbook per year, loaded once by the new
+`scripts/load_nf_receipts_history.py` into `data/reference/nf_receipts_kgd_history.csv` (1 433
+rows; workbooks archived as `minfin_nf_receipts_history_kgd_<year>_2026-09-26.*`). Rows by
+Russian label; a workbook is kept only if its tax rows add up to «ИТОГО по налоговым
+поступлениям» in every month — 2005 fails (misplaced numbers) and there is no 2006 file; 2003–2004
+start in August. The fetcher prepends KGD months before 2018-01 only while KGD equals Minfin in
+every shared December (2018–2024: 7 of 7 for all seven taxes). Within the year KGD and Minfin
+differ now and then by payment timing (CIT: 21 of 79 months equal, largest gap 2.3 bn; rent tax
+largest 12.3 bn); the note says so.
+
+**Cross-checks (December, bn KZT).** Against the source note: 2022 CIT 2 266.198, MET 1 582.031,
+PSA share 1 477.397; 2023 1 532.974 / 1 282.495 / 1 035.543; 2024 1 265.822 / 680.875 / 1 202.176;
+2025 1 300.317 / 899.223 / 1 045.387 — all equal. Against CAEM `nfrk_detail.csv` 2014–2023, all
+seven taxes: largest difference 0.000008 bn. CAEM's holes are filled here: PSA share 2014 (357.477),
+MET and PSA share 2017 (626.350, 285.893), also EPT 2008/2012 and PSA share 2008–2009. 2002–2004
+and 2007–2013 equal CAEM wherever both have a value.
+
+Tests: `tests/test_minfin_nf_receipts.py` (19: synthetic sheets with moved rows and RU labels, the
+identities, blank = zero, the heading → period table incl. the typos, year to date → December =
+year, the December overlap rule, the KGD workbook identity). Full suite: 489 passed. Only the
+15 new fetchers were run live; the unified long file gained 2 287 rows, the wide file 15 columns,
+no existing row or cell changed.
