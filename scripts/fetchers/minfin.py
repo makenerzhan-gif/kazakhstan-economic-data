@@ -534,37 +534,104 @@ def fetch_non_oil_budget_deficit() -> tuple[list[dict], dict]:
 # Values in the source are billions of KZT; converted to million KZT here for
 # consistency with GOV_REVENUE/GOV_EXPENDITURE/GOV_DEBT.
 # ---------------------------------------------------------------------------
-GG_TITLE_MARKER = "General government data"
+GG_TITLE_RE = re.compile(r"general\s+government|сектору\s+государственного\s+управления", re.IGNORECASE)
 GG_QUARTER_HEADER_RE = re.compile(r"^(\d{4})/(\d)$")
 GG_QUARTER_END_MONTH_DAY = {1: (3, 31), 2: (6, 30), 3: (9, 30), 4: (12, 31)}
 
 
-def _find_gg_document() -> dict:
-    docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    for d in docs:
-        title = d.get("title") or ""
-        if GG_TITLE_MARKER in title:
-            return d
-    raise validation.StructuralChangeError(
-        "\n".join([
-            "STRUCTURAL CHANGE DETECTED in minfin/GG_* indicators",
-            f"WHAT CHANGED: no document title under directions={BUDGET_DIRECTION_ID} contains {GG_TITLE_MARKER!r}",
-            "EXPECTED: a 'General government data ... (consolidated budget according to IMF methodology)' document",
-            "ACTUAL: not found in the current listing",
-            f"ACTION REQUIRED: inspect {LISTING_URL}?directions={BUDGET_DIRECTION_ID} and update scripts/fetchers/minfin.py",
-        ])
-    )
+def _find_gg_documents() -> list[dict]:
+    """Every quarterly general-government document Minfin still lists, newest first.
+
+    Matched by pattern, not by one title: Minfin words the title differently almost every
+    quarter -- "General Government date 2023/3Q", "General Government Data Q1 2025", "Data
+    on the General Government sektor ... for the 2 Q of 2025", "Данные по сектору
+    государственного управления ... за 1 квартал 2026", "General government SECTOR data
+    for Q2 2026". The old fixed marker "General government data" missed the last two, so
+    from 2026-06 the fetcher silently kept reading the Q4 2025 file and GG_* stopped at
+    2025Q4 while two newer quarters were online.
+
+    Each file carries only its own year's quarters, so the history is the union of all of
+    them (23 documents on 2026-09-26, the oldest from 2020-03 with 2019). The budget
+    direction's listing holds only its latest 100 documents, hence the title searches.
+    """
+    found: dict = {}
+    for d in _list_documents(directions=BUDGET_DIRECTION_ID):
+        found[d.get("id")] = d
+    for title in ("government", "государственного управления"):
+        for page in range(1, 6):
+            batch = _list_documents(title=title, projects="minfin", page=str(page))
+            for d in batch:
+                found.setdefault(d.get("id"), d)
+            if len(batch) < 100:
+                break
+    docs = [d for d in found.values()
+            if GG_TITLE_RE.search(d.get("title") or "") and d.get("full_text")
+            and str(d["full_text"][0].get("document", "")).lower().endswith((".xlsx", ".xls"))]
+    if not docs:
+        raise validation.StructuralChangeError(
+            "\n".join([
+                "STRUCTURAL CHANGE DETECTED in minfin/GG_* indicators",
+                f"WHAT CHANGED: no listed document title matches {GG_TITLE_RE.pattern!r}",
+                "EXPECTED: quarterly 'General government ... (consolidated budget according to IMF methodology)' documents",
+                "ACTUAL: not found in the current listing",
+                f"ACTION REQUIRED: inspect {LISTING_URL}?directions={BUDGET_DIRECTION_ID} and update scripts/fetchers/minfin.py",
+            ])
+        )
+    return sorted(docs, key=lambda d: d.get("created_date") or "", reverse=True)
+
+
+def _gg_coverage_year(doc: dict) -> int:
+    """The year a quarterly GG file covers, from its publication date: Q4 comes out in
+    March of the next year, Q1-Q3 from June to December of their own. Each file carries only
+    that year's quarters, so a quarter labelled with another year is a header error, not
+    data: the Q2 2020 file (id 70842) heads its columns "2019/1", "2019/2", and its first
+    column equals the Q1 2020 file's 2020/1 (2,339,6xx mln KZT of taxes). Pre-filled zeros
+    for quarters not yet reported (the Q1 2020 file's 2020/3 and 2020/4) are not data either."""
+    created = str(doc.get("created_date") or "")
+    y, m = int(created[:4]), int(created[5:7])
+    return y if m >= 4 else y - 1
 
 
 def _fetch_gg_row(row_code, indicator_id: str) -> tuple[list[dict], dict]:
-    doc = _find_gg_document()
+    """The union of every listed document, oldest first so a newer edition's figure for a
+    quarter replaces an older one's (revisions). Documents that do not parse are skipped;
+    the newest must parse, or the layout has changed and that is raised."""
+    docs = _find_gg_documents()
+    merged: dict[str, float] = {}
+    manifest = None
+    skipped, dropped = [], []
+    for doc in reversed(docs):
+        try:
+            records, man = _fetch_gg_row_from(doc, row_code, indicator_id)
+        except (validation.StructuralChangeError, requests.RequestException):
+            # an older edition that fails to parse or to download costs only its own
+            # quarters, which keep_unlisted_history retains from earlier runs; the newest
+            # edition must succeed
+            if doc is docs[0]:
+                raise
+            skipped.append(str(doc.get("id")))
+            continue
+        year = _gg_coverage_year(doc)
+        for r in records:
+            if int(r["date"][:4]) != year or r["value"] == 0:
+                dropped.append(f"{doc.get('id')}:{r['date']}={r['value']:g}")
+                continue
+            merged[r["date"]] = r["value"]
+        manifest = man
+    manifest = {**manifest, "documents_read": len(docs) - len(skipped),
+                "documents_skipped": skipped, "cells_dropped": dropped}
+    return [{"date": d, "value": v} for d, v in sorted(merged.items())], manifest
+
+
+def _fetch_gg_row_from(doc: dict, row_code, indicator_id: str) -> tuple[list[dict], dict]:
     file_path = doc["full_text"][0]["document"]
     content = _download(file_path)
 
     today = date.today()
     ext = "xls" if file_path.lower().endswith(".xls") else "xlsx"
-    raw_store.save_raw_bytes(SOURCE, indicator_id, today, ext, content)
-    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
+    raw_name = f"{indicator_id}_{doc['id']}"
+    raw_store.save_raw_bytes(SOURCE, raw_name, today, ext, content)
+    raw_store.write_download_manifest(SOURCE, raw_name, today, {
         "downloaded_at": datetime.now().isoformat(),
         "source_document_id": doc["id"], "source_title": doc.get("title"),
         "source_url": GOV_KZ_BASE + file_path,
