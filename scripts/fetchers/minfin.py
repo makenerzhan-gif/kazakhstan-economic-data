@@ -3471,3 +3471,470 @@ def fetch_state_vat_ytd() -> tuple[list[dict], dict]:
 
 def fetch_state_excise_ytd() -> tuple[list[dict], dict]:
     return _fetch_state_tax("STATE_EXCISE_YTD")
+
+
+# ---------------------------------------------------------------------------
+# National Fund receipts by tax and payment, and transfers (added 2026-09-26).
+#
+# Minfin's monthly "Statement of receipts and application of the National Fund of the
+# Republic of Kazakhstan as of 1 <month> <year>" (activity 7294 of the gov.kz listing; 106
+# documents from the report as of 1 February 2018). One small sheet, thousand KZT,
+# YEAR-TO-DATE: the report "as of 1 March" covers January-February. Checked 2026-09-26 on
+# all 106 files:
+#   - the sheet is in English or Russian, and its rows move (lines for budget-loan
+#     repayments were inserted in 2025-2026, investment income left the receipts in the
+#     approved annual reports), so every line is found by its label, never by position;
+#   - the period is read from the sheet's own heading, not from the listing title (the
+#     titles of documents 25467 and 26492 name the wrong year or month, others were posted
+#     months late). Document 638881 is headed "as of 1 March 2024" in both places, but its
+#     numbers lie between the reports as of 1 March (621022) and 1 May 2024 and it was
+#     posted on 2024-04-03: it is the report as of 1 April 2024 (DOC_PERIOD_OVERRIDES);
+#   - document 26492 (listed as "1 December 2018") is a second copy of 1 November 2018;
+#     no report as of 1 June 2018, 1 December 2018 or 1 May/1 June 2026 exists. The
+#     reports as of 1 January 2019 and 2025 do not exist either: the approved annual
+#     reports for 2018 (26493, headed "as of 2018") and 2024 (866047) stand in for them;
+#   - where two documents cover one period (re-issues, the approved annual reports for
+#     2023 and 2024) the one posted last wins; revised points are counted in the note.
+# Checks run on every report: the seven taxes add up to "direct taxes levied on oil
+# sector enterprises", the four items of other oil-sector receipts to their line, the
+# first-level receipts lines to «Receipts, total» and the application lines to «Application,
+# total» (NF_IDENTITY_TOLERANCE, thousand KZT). A report that fails is left out and named;
+# the two documents with values against the wrong labels are repaired first (NF_DOC_FIXES).
+# Cross-checks 2026-09-26: December values equal KGD's «Динамика поступлений налогов и
+# платежей в Национальный фонд» and the CAEM mission file to the thousand tenge.
+#
+# 2002-2017 come from KGD's by-tax workbooks, loaded once by
+# scripts/load_nf_receipts_history.py into data/reference/nf_receipts_kgd_history.csv
+# (KGD stopped updating the page in May 2025 and its file names are irregular). They are
+# prepended to a series only for months before its first Minfin month, and only while
+# KGD equals Minfin in every December both cover (the overlap check, as for BoP form 481;
+# within the year the two differ now and then by payment timing, see nf_merge_history).
+# ---------------------------------------------------------------------------
+NF_ACTIVITY_ID = "7294"
+NF_TITLE_RE = re.compile(r"receipts\s+and\s+(?:application|use)\s+of\s+the\s+national\s+fund|"
+                         r"поступлени\w*\s+и\s+использовани\w*\s+национальн", re.IGNORECASE)
+NF_ASOF_EN_RE = re.compile(r"as\s+of\s+1\s*([a-z]+)\s*,?\s*(\d{4})", re.IGNORECASE)
+NF_ASOF_EN_MDY_RE = re.compile(r"as\s+of\s+([a-z]+)\s+1\s*,\s*(\d{4})", re.IGNORECASE)
+NF_ASOF_EN_ANNUAL_RE = re.compile(r"as\s+of\s+(\d{4})\b", re.IGNORECASE)
+NF_ASOF_RU_RE = re.compile(r"на\s+1\s*([а-яё]+)\s+(\d{4})", re.IGNORECASE)
+NF_EN_MONTHS = {"jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6, "jul": 7, "aug": 8,
+                "sep": 9, "oct": 10, "okt": 10, "nov": 11, "dec": 12}
+NF_RU_MONTHS = {"январ": 1, "феврал": 2, "март": 3, "апрел": 4, "мая": 5, "июн": 6, "июл": 7,
+                "август": 8, "сентябр": 9, "октябр": 10, "ноябр": 11, "декабр": 12}
+DOC_PERIOD_OVERRIDES = {"638881": (2024, 3)}     # headed "as of 1 March 2024"; is 1 April 2024
+# Lines a document gets wrong, left to the other report of the same period. 677412 (approved
+# annual report for 2023): the values of lines 21-23 sit one row up -- land sales (53 349,
+# = KGD code 303102 and the report as of 1 January 2024) stand as privatization.
+DOC_LINE_EXCLUSIONS = {"677412": {"NF_PRIVATIZATION_YTD"}}
+# Documents whose values sit against the wrong labels, repaired before parsing (sheet rows
+# are 0-based here). Both were found by the receipts / application identities or by the
+# approved report, and both fixes are checked against the labels they expect.
+#   866029 (as of 1 July 2025, a re-issue «taking into account the total income for the first
+#   half of 2025»): from «repayment of budget loans» (2nd line) to «expenditures connected
+#   with the National Fund management» every value is printed one row too high -- the
+#   investment income of the half-year (2 480 802 213) stands against «sale of assets by an
+#   organization ... loan portfolios», the application total (3 143 663 714.4) against «other
+#   receipts and income», the guaranteed transfer (2 000 000 000) against «including:».
+#   Moved one row down, receipts and application add up to their totals (to the thousand).
+#   946754 (as of 1 January 2026): 23 000 000 stands against «receipts from the transfer to
+#   the competitive environment of assets», and the line «sale of assets by an organization
+#   specializing in improving the quality of loan portfolios» is missing; the approved report
+#   for 2025 (Decree No. 1328 of 25.06.2026, NBK file 135446, p. 4) has 2.5 transfer to the
+#   competitive environment blank and 2.6 sale of assets by that organization = 23 000 000.
+NF_BANK_ASSETS_LABEL = ("proceeds from the sale of assets by an organization specializing in improving the quality "
+                        "of loan portfolios of second-tier banks")
+NF_DOC_FIXES = {
+    "866029": {"shift_values_down": (23, 34, "repayment of budget loans", "expenditures connected with the national fund")},
+    "946754": {"relabel": {25: ("receipts from the transfer to the competitive environment", NF_BANK_ASSETS_LABEL)}},
+}
+NF_IDENTITY_TOLERANCE = 2.0                       # thousand KZT (the sheets carry 0.1-thousand decimals)
+
+NF_TAX_ITEMS = {
+    "NF_OIL_CIT_YTD": lambda s: s.startswith(("corporate income tax", "корпоративный подоходный налог")),
+    "NF_EXCESS_PROFIT_TAX_YTD": lambda s: s.startswith(("excess profit", "налог на сверхприбыль")),
+    "NF_BONUSES_YTD": lambda s: s.startswith(("bonus", "бонус")),
+    "NF_MET_YTD": lambda s: s.startswith(("tax on production of useful minerals", "mineral extraction tax",
+                                          "налог на добычу полезных ископаемых")),
+    "NF_RENT_TAX_EXPORT_YTD": lambda s: s.startswith(("rent tax on export", "рентный налог на экспорт")),
+    "NF_PSA_SHARE_YTD": lambda s: s.startswith(("portion of the republic of kazakhstan", "share of the republic of kazakhstan",
+                                                "доля республики казахстан по разделу")),
+    "NF_PSA_ADDITIONAL_PAYMENT_YTD": lambda s: s.startswith(("additional payment", "дополнительный платеж недропользователя")),
+}
+NF_OTHER_OIL_ITEMS = (
+    lambda s: s.startswith(("administrative fines", "административные штрафы")),
+    lambda s: s.startswith(("other fines", "прочие штрафы")),
+    lambda s: s.startswith(("received from users of natural", "средства, полученные от природопользователей")),
+    lambda s: s.startswith(("other nontax receipts", "other non-tax receipts", "другие неналоговые поступления")),
+)
+NF_LINES = {
+    # section: "receipts" (between «Receipts, total» and «Application, total») or "application"
+    "NF_OIL_DIRECT_TAXES_YTD": ("receipts", lambda s: s.startswith(("direct taxes", "прямые налоги"))),
+    **{k: ("receipts", f) for k, f in NF_TAX_ITEMS.items()},
+    # «оther» is spelt with a Cyrillic «о» in the English sheets
+    "NF_OIL_OTHER_RECEIPTS_YTD": ("receipts", lambda s: "ther receipts from operations" in s
+                                  or s.startswith("другие поступления от операций")),
+    "NF_PRIVATIZATION_YTD": ("receipts", lambda s: ("privatization" in s or "приватизац" in s
+                                                    or "competitive environment" in s or "конкурентную среду" in s)
+                             and not s.startswith(("return", "возврат"))),
+    "NF_INVESTMENT_INCOME_YTD": ("receipts", lambda s: s.startswith(("investment income", "инвестиционные доходы"))),
+    "NF_GUARANTEED_TRANSFER_YTD": ("application", lambda s: s.startswith(("guaranteed transfer", "гарантированн"))),
+    "NF_TARGETED_TRANSFERS_YTD": ("application", lambda s: s.startswith(("targeted transfer", "целевые трансферт"))),
+}
+NF_DERIVED = {
+    "NF_OIL_RECEIPTS_YTD": ("NF_OIL_DIRECT_TAXES_YTD", "NF_OIL_OTHER_RECEIPTS_YTD"),
+    "NF_TRANSFERS_YTD": ("NF_GUARANTEED_TRANSFER_YTD", "NF_TARGETED_TRANSFERS_YTD"),
+}
+NF_INDICATORS = tuple(NF_LINES) + tuple(NF_DERIVED)
+NF_HISTORY_PATH = Path(__file__).resolve().parents[2] / "data" / "reference" / "nf_receipts_kgd_history.csv"
+
+
+def _nf_label(text) -> str:
+    return " ".join(str(text).split()).lower().lstrip("-–—*• ").strip()
+
+
+def nf_report_period(rows: list[list]) -> tuple[int, int] | None:
+    """(year, last month covered) from the heading: "... as of 1 March 2018" -> (2018, 2),
+    "... as of 1 January 2026" -> (2025, 12), "... AS OF 2018" (approved annual) -> (2018, 12)."""
+    head = next((" ".join(str(c).split()) for r in rows[:4] for c in r
+                 if isinstance(c, str) and re.search(r"national\s+fund|национальн", c, re.IGNORECASE)), "")
+    year = month = None
+    m = NF_ASOF_EN_RE.search(head) or NF_ASOF_EN_MDY_RE.search(head)
+    if m and not m.group(1).isdigit():
+        year, month = int(m.group(2)), NF_EN_MONTHS.get(m.group(1).lower()[:3])
+    elif (m := NF_ASOF_RU_RE.search(head)):
+        year = int(m.group(2))
+        month = next((n for stem, n in NF_RU_MONTHS.items() if m.group(1).lower().startswith(stem)), None)
+    elif (m := NF_ASOF_EN_ANNUAL_RE.search(head)):
+        return int(m.group(1)), 12
+    if not (year and month):
+        return None
+    return (year - 1, 12) if month == 1 else (year, month - 1)
+
+
+def _nf_value(row: list, label_col: int) -> float | None:
+    for c in row[label_col + 1:]:
+        if isinstance(c, (int, float)) and not isinstance(c, bool):
+            return float(c)
+        if isinstance(c, str) and c.strip():
+            try:
+                return float(c.replace(" ", "").replace(" ", "").replace(",", "."))
+            except ValueError:
+                continue
+    return None
+
+
+NF_INCLUDING = ("including", "в том числе")
+NF_INVESTMENT_TOTAL = ("investment income, total", "инвестиционный доход, всего", "инвестиционные доходы, всего")
+
+
+def apply_nf_doc_fixes(doc_id, rows: list[list]) -> tuple[list[list], list[str]]:
+    """(rows with the known defects of one document repaired, what was done). Each fix is
+    checked against the labels it expects; a document that no longer looks as described
+    is left as it is (and then fails the identities if it is still wrong)."""
+    fix = NF_DOC_FIXES.get(str(doc_id))
+    if not fix:
+        return rows, []
+    rows = [list(r) for r in rows]
+    done = []
+    if "shift_values_down" in fix:
+        first, last, first_label, last_label = fix["shift_values_down"]
+        if len(rows) > last + 1 and _nf_label(rows[first][1]).startswith(first_label) \
+                and _nf_label(rows[last + 1][1]).startswith(last_label):
+            values = [r[2] if len(r) > 2 else None for r in rows[first:last + 1]]
+            for r in rows[first:last + 2]:
+                while len(r) < 3:
+                    r.append(None)
+            rows[first][2] = None
+            for k, v in enumerate(values):
+                rows[first + 1 + k][2] = v
+            done.append(f"values of sheet rows {first + 1}-{last + 1} moved one row down")
+    for row, (expected, label) in fix.get("relabel", {}).items():
+        if len(rows) > row and _nf_label(rows[row][1]).startswith(expected):
+            rows[row][1] = label
+            done.append(f"sheet row {row + 1} relabelled «{label[:40]}…»")
+    return rows, done
+
+
+def parse_nf_report(rows: list[list]) -> dict[str, float]:
+    """{indicator: thousand KZT} from one report sheet. A line printed without a number
+    counts as zero (the sheet lists every item and leaves the empty ones blank); a line
+    the sheet does not have is absent. Lines matching one indicator are added up (the
+    2026 sheets carry privatization twice, once blank).
+
+    Investment income is the receipts line «investment income from the Fund management»,
+    the income booked into the Fund's receipts. The approved annual reports (and the one
+    as of 1 January 2023) also carry item «Investment income, total» -- the NBK's full-year
+    result including the exchange-rate revaluation; it is not used. A report that has that
+    item and leaves the receipts line blank or out (the approved reports for 2023-2025)
+    gives no investment-income value, so the report as of 1 January stands for December.
+
+    Also returned, for nf_identity_errors: «_RECEIPTS_TOTAL», «_RECEIPTS_LINES» (every
+    first-level receipts line: all lines of the section except the seven taxes and the four
+    items of other oil-sector receipts), «_APPLICATION_TOTAL», «_APPLICATION_LINES»."""
+    out: dict[str, float] = {}
+    section = None
+    other_items: list[float] = []
+    inv_line: float | None = None
+    inv_line_seen = inv_total_seen = False
+    receipts_lines, application_lines = [], []
+    for row in rows:
+        idx = next((j for j, c in enumerate(row) if isinstance(c, str) and len(c.strip()) > 3), None)
+        if idx is None:
+            continue
+        s = _nf_label(row[idx])
+        value = _nf_value(row, idx)
+        numbered = bool(row) and re.match(r"^\d+\.?$", str(row[0]).strip()) is not None
+        if s.startswith(("receipts, total", "поступления, всего")):
+            section = "receipts"
+            out["_RECEIPTS_TOTAL"] = value or 0.0
+            continue
+        if s.startswith(("application, total", "использование, всего")):
+            section = "application"
+            out["_APPLICATION_TOTAL"] = value or 0.0
+            continue
+        if numbered or s.startswith(NF_INVESTMENT_TOTAL):
+            section = "other"                              # «1. Means at the beginning», «4. ...», «8. ...»
+            inv_total_seen = inv_total_seen or s.startswith(NF_INVESTMENT_TOTAL)
+            continue
+        if section == "receipts":
+            if any(f(s) for f in NF_OTHER_OIL_ITEMS):
+                other_items.append(value or 0.0)
+            elif not s.startswith(NF_INCLUDING) and not any(f(s) for f in NF_TAX_ITEMS.values()):
+                receipts_lines.append(value or 0.0)
+        elif section == "application":
+            application_lines.append(value or 0.0)          # «including:» too: it must be blank
+        if section == "receipts" and NF_LINES["NF_INVESTMENT_INCOME_YTD"][1](s):
+            inv_line_seen = True
+            inv_line = value if inv_line is None else inv_line + (value or 0.0)
+            continue
+        for ind, (sec, match) in NF_LINES.items():
+            if sec == section and match(s):
+                out[ind] = out.get(ind, 0.0) + (value or 0.0)
+                break
+    if inv_line is not None or (inv_line_seen and not inv_total_seen):
+        out["NF_INVESTMENT_INCOME_YTD"] = inv_line or 0.0
+    if other_items:
+        out["_OTHER_OIL_ITEMS_SUM"] = sum(other_items)
+    if "_RECEIPTS_TOTAL" in out:
+        out["_RECEIPTS_LINES"] = sum(receipts_lines)
+    if "_APPLICATION_TOTAL" in out:
+        out["_APPLICATION_LINES"] = sum(application_lines)
+    for ind, parts in NF_DERIVED.items():
+        if all(p in out for p in parts):
+            out[ind] = sum(out[p] for p in parts)
+    return out
+
+
+def nf_identity_errors(values: dict[str, float]) -> list[str]:
+    """Where the published parts do not add up to the published line: the seven taxes and
+    direct taxes, the four items and other oil-sector receipts, the first-level lines and
+    «Receipts, total», the lines of «Application, total» and that total."""
+    needed = list(NF_TAX_ITEMS) + ["NF_OIL_DIRECT_TAXES_YTD", "_RECEIPTS_TOTAL", "_APPLICATION_TOTAL"]
+    if any(k not in values for k in needed):
+        return [f"missing lines: {sorted(k for k in needed if k not in values)}"]
+    errors = []
+    checks = [("seven taxes minus direct taxes", sum(values[k] for k in NF_TAX_ITEMS), "NF_OIL_DIRECT_TAXES_YTD"),
+              ("first-level receipts lines minus «Receipts, total»", values.get("_RECEIPTS_LINES", 0.0), "_RECEIPTS_TOTAL"),
+              ("application lines minus «Application, total»", values.get("_APPLICATION_LINES", 0.0), "_APPLICATION_TOTAL")]
+    if "_OTHER_OIL_ITEMS_SUM" in values and "NF_OIL_OTHER_RECEIPTS_YTD" in values:
+        checks.append(("other oil-sector items minus their line", values["_OTHER_OIL_ITEMS_SUM"], "NF_OIL_OTHER_RECEIPTS_YTD"))
+    for name, parts, total in checks:
+        gap = parts - values[total]
+        if abs(gap) > NF_IDENTITY_TOLERANCE:
+            errors.append(f"{name} = {gap:,.1f} thousand KZT")
+    return errors
+
+
+def load_nf_history(path: Path = NF_HISTORY_PATH) -> dict[str, dict[tuple[int, int], float]]:
+    """{indicator: {(year, month): thousand KZT}} from the one-off KGD history file."""
+    out: dict[str, dict[tuple[int, int], float]] = {}
+    if not path.exists():
+        return out
+    import csv as _csv
+    with path.open(encoding="utf-8") as f:
+        for r in _csv.DictReader(f):
+            out.setdefault(r["indicator_id"], {})[(int(r["date"][:4]), int(r["date"][5:7]))] = float(r["value_thousand_kzt"])
+    return out
+
+
+def nf_merge_history(recent: dict[tuple[int, int], float], history: dict[tuple[int, int], float],
+                     tolerance: float = NF_IDENTITY_TOLERANCE) -> tuple[dict[tuple[int, int], float], str]:
+    """(history points to prepend, note). Only months before the first Minfin month, and only
+    when KGD equals Minfin in every December both carry. Months within the year are not
+    required to match: KGD dates a payment by the tax administration, the Treasury by its
+    crediting to the Fund, so they may differ by a few days' receipts (2018-2024: from a quarter
+    of the months equal for CIT to nearly all for the PSA lines; the largest gap 12.3 bn KZT of
+    rent tax); the note reports how many are equal and the largest gap."""
+    if not history:
+        return {}, "none (KGD does not publish this line)"
+    if not recent:
+        return {}, "no Minfin month to check KGD against; history not added"
+    first = min(recent)
+    overlap = sorted(k for k in history if k in recent)
+    decembers = [k for k in overlap if k[1] == 12]
+    differing = [k for k in decembers if abs(history[k] - recent[k]) > tolerance]
+    if not decembers or differing:
+        return {}, ("KGD differs from Minfin in December " + ", ".join(str(y) for y, _ in differing[:4])
+                    if differing else "no December shared with Minfin to prove KGD") + "; history not added"
+    before = {k: v for k, v in history.items() if k < first}
+    if not before:
+        return {}, "KGD has no month before Minfin's first"
+    months = [k for k in overlap if k[1] != 12]
+    same = sum(abs(history[k] - recent[k]) <= tolerance for k in months)
+    gap = max((abs(history[k] - recent[k]) for k in months), default=0.0) / 1e6
+    return before, (f"{len(before)} months {min(before)[0]}-{max(before)[0]} from KGD's «Динамика поступлений налогов и "
+                    f"платежей в Национальный фонд» (data/reference/nf_receipts_kgd_history.csv; no 2005-2006 workbook "
+                    f"that passes its own identity). KGD equals Minfin in all {len(decembers)} shared Decembers; within "
+                    f"the year {same} of {len(months)} shared months are equal, the rest differ by payment timing "
+                    f"(largest {gap:,.1f} bn KZT)")
+
+
+NF_PATH_SIZE_RE = re.compile(r"_original\.(\d+)\.xlsx?$", re.IGNORECASE)
+
+
+def _nf_cached_report(doc_id, path: str) -> bytes | None:
+    """The report's bytes from data/raw/minfin/ when this document id is archived there and
+    the archived file has the size gov.kz writes into the upload path (`…_original.36864.xls`):
+    the daily run then reads the 106 reports from disk and downloads only new or re-uploaded
+    ones. Anything else -- no archived copy, no size in the path, a size that differs, not a
+    workbook -- returns None and the report is downloaded."""
+    m = NF_PATH_SIZE_RE.search(path or "")
+    cached = raw_store.latest_raw_file(SOURCE, f"NF_REPORT_{doc_id}")
+    if m is None or cached is None or cached.stat().st_size != int(m.group(1)):
+        return None
+    content = cached.read_bytes()
+    return content if content.startswith((b"PK", b"\xd0\xcf\x11\xe0")) else None
+
+
+_NF_CACHE: dict = {}
+
+
+def _nf_reports() -> tuple[dict[str, dict[tuple[int, int], float]], dict]:
+    if _NF_CACHE:
+        return _NF_CACHE["data"], _NF_CACHE["info"]
+    docs = [d for d in _list_all_documents(activities=NF_ACTIVITY_ID)
+            if NF_TITLE_RE.search(" ".join((d.get("title") or "").split())) and d.get("full_text")
+            and str(d["full_text"][0].get("document", "")).lower().endswith((".xlsx", ".xls"))]
+    docs.sort(key=lambda d: (d.get("created_date") or "", int(d.get("id") or 0)))   # later postings overwrite
+    data: dict[str, dict[tuple[int, int], float]] = {k: {} for k in NF_INDICATORS}
+    today = date.today()
+    parsed, unreadable, failed, fixed, revised, downloaded = [], [], [], [], 0, 0
+    for doc in docs:
+        path = doc["full_text"][0]["document"]
+        try:
+            content = _nf_cached_report(doc.get("id"), path)
+            if content is None:
+                content = _download(path)
+                downloaded += 1
+            # gov.kz has answered a status other than 200 with a normal body: trust the signature
+            if not content.startswith((b"PK", b"\xd0\xcf\x11\xe0")):
+                raise ValueError("not a workbook")
+            ext = "xls" if content.startswith(b"\xd0\xcf") else "xlsx"
+            kind, wb = _open_workbook(content, "." + ext)
+            rows = list(_iter_rows(kind, wb))
+        except Exception:  # noqa: BLE001 -- one unreadable report must not sink the series
+            unreadable.append(str(doc.get("id")))
+            continue
+        period = DOC_PERIOD_OVERRIDES.get(str(doc.get("id"))) or nf_report_period(rows)
+        rows, fixes = apply_nf_doc_fixes(doc.get("id"), rows)
+        if fixes:
+            fixed.append(f"{doc.get('id')}: {'; '.join(fixes)}")
+        values = parse_nf_report(rows)
+        errors = nf_identity_errors(values) if period else ["no period in the heading"]
+        if errors:
+            failed.append(f"{doc.get('id')}: {'; '.join(errors)}")
+            continue
+        raw_store.save_raw_bytes(SOURCE, f"NF_REPORT_{doc.get('id')}", today, ext, content)
+        parsed.append(str(doc.get("id")))
+        for ind in NF_INDICATORS:
+            if ind in values and ind not in DOC_LINE_EXCLUSIONS.get(str(doc.get("id")), ()):
+                old = data[ind].get(period)
+                if old is not None and abs(old - values[ind]) > NF_IDENTITY_TOLERANCE:
+                    revised += 1
+                data[ind][period] = values[ind]
+    info = {"n_documents": len(docs), "parsed": len(parsed), "unreadable": unreadable,
+            "identity_failed": failed, "fixed": fixed, "revised_points": revised,
+            "downloaded": downloaded, "read_from_archive": len(docs) - len(unreadable) - downloaded}
+    raw_store.write_download_manifest(SOURCE, "NF_REPORTS", today, {
+        "downloaded_at": datetime.now().isoformat(),
+        "source_url": f"{LISTING_URL}?activities={NF_ACTIVITY_ID}", **info})
+    _NF_CACHE.update(data=data, info=info)
+    return data, info
+
+
+NF_NAMES = {
+    "NF_OIL_CIT_YTD": "corporate income tax of oil-sector organisations",
+    "NF_EXCESS_PROFIT_TAX_YTD": "excess profit tax (oil sector)",
+    "NF_BONUSES_YTD": "bonuses (oil sector)",
+    "NF_MET_YTD": "mineral extraction tax (oil sector)",
+    "NF_RENT_TAX_EXPORT_YTD": "rent tax on export",
+    "NF_PSA_SHARE_YTD": "Kazakhstan's share of production under production-sharing agreements",
+    "NF_PSA_ADDITIONAL_PAYMENT_YTD": "additional payment of subsoil users under production-sharing contracts",
+    "NF_OIL_DIRECT_TAXES_YTD": "direct taxes on oil-sector organisations (the sum of the seven taxes)",
+    "NF_OIL_OTHER_RECEIPTS_YTD": "other receipts from oil-sector operations (fines, damages, other non-tax)",
+    "NF_OIL_RECEIPTS_YTD": "receipts from oil-sector organisations (direct taxes plus other oil-sector receipts)",
+    "NF_PRIVATIZATION_YTD": "privatization of republican property plus transfer of national-company assets "
+                            "to the competitive environment",
+    "NF_INVESTMENT_INCOME_YTD": "investment income from managing the Fund AS CREDITED TO ITS RECEIPTS in the "
+                                "report (the line 'investment income from the Fund management'): the income of the "
+                                "last period the NBK has approved, a quarter to three quarters behind the month "
+                                "dated. December is the full year in 2018, 2020 and 2021, nine months in 2019 and "
+                                "2023, and 30.3 bn KZT in 2022 (the NBK's full-year result, item 'Investment income, "
+                                "total' with the exchange-rate revaluation, was a loss of 826.5 bn; that item is not "
+                                "used). No December 2024 or 2025: the approved annual reports book no investment "
+                                "income in receipts",
+    "NF_GUARANTEED_TRANSFER_YTD": "guaranteed transfer to the republican budget",
+    "NF_TARGETED_TRANSFERS_YTD": "targeted transfers to the republican budget",
+    "NF_TRANSFERS_YTD": "guaranteed plus targeted transfers to the republican budget",
+}
+
+
+def _fetch_nf(indicator_id: str) -> tuple[list[dict], dict]:
+    data, info = _nf_reports()
+    vals = data[indicator_id]
+    if len(vals) < 60:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+            f"WHAT CHANGED: only {len(vals)} months parsed from {info['parsed']} of {info['n_documents']} National Fund "
+            f"reports (identity failed: {info['identity_failed'][:3]}; unreadable: {info['unreadable'][:3]})",
+            f"ACTION REQUIRED: inspect a recent report ({LISTING_URL}?activities={NF_ACTIVITY_ID}) and the labels in "
+            "NF_LINES in scripts/fetchers/minfin.py"]))
+    history, history_note = nf_merge_history(vals, load_nf_history().get(indicator_id, {}))
+    merged = {**history, **vals}
+    records = [{"date": f"{y:04d}-{m:02d}-01", "value": round(v / 1000.0, 6)} for (y, m), v in sorted(merged.items())]
+    gaps = ""
+    if info["identity_failed"] or info["unreadable"]:
+        gaps = (f" Left out: {len(info['identity_failed'])} report(s) failing the identity {info['identity_failed'][:3]}, "
+                f"{len(info['unreadable'])} unreadable {info['unreadable'][:3]}.")
+    return records, {
+        "frequency": "monthly", "source_url": f"{LISTING_URL}?activities={NF_ACTIVITY_ID}",
+        "dataset_id": "gov.kz-minfin-national-fund-receipts-and-use,all pages",
+        "note": (f"Million KZT (source: thousand KZT), National Fund of the Republic of Kazakhstan, "
+                 f"{NF_NAMES[indicator_id]}, YEAR-TO-DATE cumulative (January to the month dated): the report 'as of "
+                 "1 <month>' is dated the month before, 'as of 1 January' is December. From every Minfin 'Statement of "
+                 f"receipts and application of the National Fund' in the listing ({info['parsed']} of "
+                 f"{info['n_documents']} parsed; the approved annual reports for 2018 and 2024 stand in for the missing "
+                 f"reports as of 1 January 2019 and 2025; the latest posting wins, {info['revised_points']} revised "
+                 f"point(s) across the series). Every report passes four identities: seven taxes = direct taxes "
+                 "on the oil sector, four items = other oil-sector receipts, first-level lines = receipts total, "
+                 "lines = application total. Repaired before parsing (see NF_DOC_FIXES): "
+                 f"{'; '.join(info['fixed']) or 'none'}. History: {history_note}.{gaps} Months no report covers are "
+                 "missing, not interpolated."),
+    }
+
+
+def fetch_nf_oil_cit_ytd(): return _fetch_nf("NF_OIL_CIT_YTD")                                  # noqa: E704
+def fetch_nf_excess_profit_tax_ytd(): return _fetch_nf("NF_EXCESS_PROFIT_TAX_YTD")              # noqa: E704
+def fetch_nf_bonuses_ytd(): return _fetch_nf("NF_BONUSES_YTD")                                  # noqa: E704
+def fetch_nf_met_ytd(): return _fetch_nf("NF_MET_YTD")                                          # noqa: E704
+def fetch_nf_rent_tax_export_ytd(): return _fetch_nf("NF_RENT_TAX_EXPORT_YTD")                  # noqa: E704
+def fetch_nf_psa_share_ytd(): return _fetch_nf("NF_PSA_SHARE_YTD")                              # noqa: E704
+def fetch_nf_psa_additional_payment_ytd(): return _fetch_nf("NF_PSA_ADDITIONAL_PAYMENT_YTD")    # noqa: E704
+def fetch_nf_oil_direct_taxes_ytd(): return _fetch_nf("NF_OIL_DIRECT_TAXES_YTD")                # noqa: E704
+def fetch_nf_oil_other_receipts_ytd(): return _fetch_nf("NF_OIL_OTHER_RECEIPTS_YTD")            # noqa: E704
+def fetch_nf_oil_receipts_ytd(): return _fetch_nf("NF_OIL_RECEIPTS_YTD")                        # noqa: E704
+def fetch_nf_privatization_ytd(): return _fetch_nf("NF_PRIVATIZATION_YTD")                      # noqa: E704
+def fetch_nf_investment_income_ytd(): return _fetch_nf("NF_INVESTMENT_INCOME_YTD")              # noqa: E704
+def fetch_nf_guaranteed_transfer_ytd(): return _fetch_nf("NF_GUARANTEED_TRANSFER_YTD")          # noqa: E704
+def fetch_nf_targeted_transfers_ytd(): return _fetch_nf("NF_TARGETED_TRANSFERS_YTD")            # noqa: E704
+def fetch_nf_transfers_ytd(): return _fetch_nf("NF_TRANSFERS_YTD")                              # noqa: E704

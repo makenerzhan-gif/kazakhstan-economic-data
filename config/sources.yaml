@@ -5791,6 +5791,102 @@ agencies:
           prior year, 'YYYY ж. қантар-X есеп/январь-X отчет' (current YTD), 'N-тоқсан' (discrete quarters,
           2020 - mid 2021). Also STATE_CIT_YTD, STATE_PIT_YTD, STATE_SOCIAL_TAX_YTD, STATE_VAT_YTD,
           STATE_EXCISE_YTD. Cross-check: KGD «Динамика поступлений налогов» 2024 = 19 700 516 947 thousand.
+      NF_OIL_CIT_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        history_url: "https://kgd.gov.kz/ru/section/dinamika-postupleniy-nalogov-i-platezhey-v-nacionalnyy-fond"
+        format: xls_table
+        notes: >
+          2026-09-26. Minfin «Statement of receipts and application of the National Fund of the Republic of
+          Kazakhstan as of 1 <month> <year>» / «Отчет о поступлениях и использовании Национального фонда»:
+          every page of the activity-7294 listing, titles matching /receipts and (application|use) of the
+          national fund|поступлени.. и использовани.. национальн/i -- 106 documents, reports as of 1 Feb 2018
+          .. 1 Jul 2026, one sheet, thousand KZT, year to date. Lines by EN/RU label; period from the sheet's
+          own heading (document 638881, headed 1 March 2024, is 1 April 2024). Approved annual reports for 2018
+          (26493) and 2024 (866047) stand in for the missing reports as of 1 January 2019 and 2025. Identities on
+          every report: seven taxes = direct taxes on oil-sector organisations, four items = other oil-sector
+          receipts, first-level lines = receipts total, lines = application total. Repaired before parsing
+          (NF_DOC_FIXES): 866029 (values one row too high from the second budget-loan line on) and 946754
+          (23 000 000 is the sale of bank-loan-portfolio assets, not privatization: approved report for 2025,
+          Decree No. 1328, p. 4). Investment income = the receipts line only (the NBK's full-year item
+          «Investment income, total», with FX revaluation, is not used). 2002-2017 from KGD's by-tax
+          workbooks, loaded once by scripts/load_nf_receipts_history.py (data/reference/nf_receipts_kgd_history.csv),
+          prepended while KGD = Minfin in every shared December (2018-2024, all seven taxes, to the thousand).
+          Cross-check: CAEM nfrk_detail.csv 2014-2023 equal to 0.001 bn. Also NF_EXCESS_PROFIT_TAX_YTD,
+          NF_BONUSES_YTD, NF_MET_YTD, NF_RENT_TAX_EXPORT_YTD, NF_PSA_SHARE_YTD, NF_PSA_ADDITIONAL_PAYMENT_YTD
+          (with KGD history), NF_OIL_DIRECT_TAXES_YTD, NF_OIL_OTHER_RECEIPTS_YTD, NF_OIL_RECEIPTS_YTD,
+          NF_PRIVATIZATION_YTD, NF_INVESTMENT_INCOME_YTD, NF_GUARANTEED_TRANSFER_YTD, NF_TARGETED_TRANSFERS_YTD,
+          NF_TRANSFERS_YTD (from 2018).
+      NF_EXCESS_PROFIT_TAX_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      NF_BONUSES_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      NF_MET_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      NF_RENT_TAX_EXPORT_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      NF_PSA_SHARE_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      NF_PSA_ADDITIONAL_PAYMENT_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      NF_OIL_DIRECT_TAXES_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      NF_OIL_OTHER_RECEIPTS_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      NF_OIL_RECEIPTS_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      NF_PRIVATIZATION_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      NF_INVESTMENT_INCOME_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      NF_GUARANTEED_TRANSFER_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      NF_TARGETED_TRANSFERS_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      NF_TRANSFERS_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
+        format: xls_table
+        notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
       STATE_BUDGET_REVENUE_YTD:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"

@@ -4258,6 +4258,186 @@ indicators:
     cumulation: year_to_date
     observation_evidence: "Статбюллетень МФ, «табл 3», январь–месяц отчётного года; все страницы списка, с 2020"
 
+  - id: NF_OIL_CIT_YTD
+    name_ru: "Корпоративный подоходный налог организаций нефтяного сектора (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
+    name_en: "National Fund receipts: corporate income tax of oil-sector organisations, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; КПН нефтяного сектора, КБК 101105 (до 2015 также 101106/101107)"
+
+  - id: NF_EXCESS_PROFIT_TAX_YTD
+    name_ru: "Налог на сверхприбыль (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
+    name_en: "National Fund receipts: excess profit tax, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; налог на сверхприбыль, КБК 105322"
+
+  - id: NF_BONUSES_YTD
+    name_ru: "Бонусы организаций нефтяного сектора (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
+    name_en: "National Fund receipts: bonuses, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; бонусы, КБК 105325"
+
+  - id: NF_MET_YTD
+    name_ru: "Налог на добычу полезных ископаемых организаций нефтяного сектора (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
+    name_en: "National Fund receipts: mineral extraction tax, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; НДПИ, КБК 105326 (с 2009 г.)"
+
+  - id: NF_RENT_TAX_EXPORT_YTD
+    name_ru: "Рентный налог на экспорт (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
+    name_en: "National Fund receipts: rent tax on export, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; рентный налог на экспорт, КБК 105327"
+
+  - id: NF_PSA_SHARE_YTD
+    name_ru: "Доля Республики Казахстан по разделу продукции (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
+    name_en: "National Fund receipts: Kazakhstan's share under production-sharing agreements, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; доля РК по СРП, КБК 105328"
+
+  - id: NF_PSA_ADDITIONAL_PAYMENT_YTD
+    name_ru: "Дополнительный платёж недропользователя по СРП (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
+    name_en: "National Fund receipts: additional payment of subsoil users under production-sharing contracts, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; доп. платёж по СРП и альтернативный налог, КБК 105329 (с 2018 г.)"
+
+  - id: NF_OIL_DIRECT_TAXES_YTD
+    name_ru: "Прямые налоги от организаций нефтяного сектора, всего (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
+    name_en: "National Fund receipts: direct taxes on oil-sector organisations, total, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; строка «прямые налоги от организаций нефтяного сектора» = сумма семи налогов (проверяется)"
+
+  - id: NF_OIL_OTHER_RECEIPTS_YTD
+    name_ru: "Другие поступления от операций организаций нефтяного сектора (штрафы, иски, прочие неналоговые; Национальный фонд), нарастающим итогом с начала года, помесячно"
+    name_en: "National Fund receipts: other receipts from oil-sector operations, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; строка «другие поступления от операций организаций нефтяного сектора» = сумма четырёх статей (проверяется)"
+
+  - id: NF_OIL_RECEIPTS_YTD
+    name_ru: "Поступления от организаций нефтяного сектора в Национальный фонд, всего (прямые налоги и другие поступления), нарастающим итогом с начала года, помесячно"
+    name_en: "National Fund receipts from oil-sector organisations, total, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; сумма двух строк отчёта: прямые налоги + другие поступления нефтяного сектора"
+
+  - id: NF_PRIVATIZATION_YTD
+    name_ru: "Поступления в Национальный фонд от приватизации и передачи активов в конкурентную среду, нарастающим итогом с начала года, помесячно"
+    name_en: "National Fund receipts: privatization and transfer of assets to the competitive environment, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; строки «приватизация республиканской собственности» + «передача в конкурентную среду активов нацкомпаний»"
+
+  - id: NF_INVESTMENT_INCOME_YTD
+    name_ru: "Инвестиционный доход от управления Национальным фондом, зачисленный в поступления фонда (по отчёту Минфина), нарастающим итогом с начала года, помесячно"
+    name_en: "National Fund investment income as booked in the Minfin report, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; строка поступлений «инвестиционные доходы от управления Фондом» — доход последнего утверждённого НБК периода (лаг от квартала до трёх); декабрь = год только в 2018, 2020, 2021; за 2024–2025 декабря нет (в утверждённых годовых отчётах инвестдоход вне поступлений); итог «Инвестиционный доход, всего» с курсовой переоценкой не берётся"
+
+  - id: NF_GUARANTEED_TRANSFER_YTD
+    name_ru: "Гарантированный трансферт из Национального фонда в республиканский бюджет, нарастающим итогом с начала года, помесячно"
+    name_en: "Guaranteed transfer from the National Fund to the republican budget, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; раздел «Использование», строка «гарантированные трансферты»"
+
+  - id: NF_TARGETED_TRANSFERS_YTD
+    name_ru: "Целевые трансферты из Национального фонда в республиканский бюджет, нарастающим итогом с начала года, помесячно"
+    name_en: "Targeted transfers from the National Fund to the republican budget, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; раздел «Использование», строка «целевые трансферты»"
+
+  - id: NF_TRANSFERS_YTD
+    name_ru: "Трансферты из Национального фонда в республиканский бюджет, всего (гарантированный и целевые), нарастающим итогом с начала года, помесячно"
+    name_en: "Transfers from the National Fund to the republican budget, total (guaranteed plus targeted), year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; гарантированный + целевые трансферты; помесячные потоки с 2024 г. — NATIONAL_FUND_TRANSFERS (НБК)"
+
   - id: GG_SOCIAL_CONTRIBUTIONS
     name_ru: "Социальные отчисления сектора государственного управления (МВФ методология)"
     name_en: "General Government Social Contributions (IMF GFS Methodology)"

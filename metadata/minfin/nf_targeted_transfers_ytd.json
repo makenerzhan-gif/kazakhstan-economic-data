@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294",
+  "dataset_id": "gov.kz-minfin-national-fund-receipts-and-use,all pages",
+  "indicator_id": "NF_TARGETED_TRANSFERS_YTD",
+  "indicator_name": "Targeted transfers from the National Fund to the republican budget, year-to-date, monthly",
+  "description": "Целевые трансферты из Национального фонда в республиканский бюджет, нарастающим итогом с начала года, помесячно",
+  "frequency": "monthly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT (source: thousand KZT), National Fund of the Republic of Kazakhstan, targeted transfers to the republican budget, YEAR-TO-DATE cumulative (January to the month dated): the report 'as of 1 <month>' is dated the month before, 'as of 1 January' is December. From every Minfin 'Statement of receipts and application of the National Fund' in the listing (106 of 106 parsed; the approved annual reports for 2018 and 2024 stand in for the missing reports as of 1 January 2019 and 2025; the latest posting wins, 0 revised point(s) across the series). Every report passes four identities: seven taxes = direct taxes on the oil sector, four items = other oil-sector receipts, first-level lines = receipts total, lines = application total. Repaired before parsing (see NF_DOC_FIXES): 866029: values of sheet rows 24-35 moved one row down; 946754: sheet row 26 relabelled «proceeds from the sale of assets by an o…». History: none (KGD does not publish this line). Months no report covers are missing, not interpolated.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2018-01-01",
+  "period_end": "2026-06-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

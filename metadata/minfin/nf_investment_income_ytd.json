@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294",
+  "dataset_id": "gov.kz-minfin-national-fund-receipts-and-use,all pages",
+  "indicator_id": "NF_INVESTMENT_INCOME_YTD",
+  "indicator_name": "National Fund investment income as booked in the Minfin report, year-to-date, monthly",
+  "description": "Инвестиционный доход от управления Национальным фондом, зачисленный в поступления фонда (по отчёту Минфина), нарастающим итогом с начала года, помесячно",
+  "frequency": "monthly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT (source: thousand KZT), National Fund of the Republic of Kazakhstan, investment income from managing the Fund AS CREDITED TO ITS RECEIPTS in the report (the line 'investment income from the Fund management'): the income of the last period the NBK has approved, a quarter to three quarters behind the month dated. December is the full year in 2018, 2020 and 2021, nine months in 2019 and 2023, and 30.3 bn KZT in 2022 (the NBK's full-year result, item 'Investment income, total' with the exchange-rate revaluation, was a loss of 826.5 bn; that item is not used). No December 2024 or 2025: the approved annual reports book no investment income in receipts, YEAR-TO-DATE cumulative (January to the month dated): the report 'as of 1 <month>' is dated the month before, 'as of 1 January' is December. From every Minfin 'Statement of receipts and application of the National Fund' in the listing (106 of 106 parsed; the approved annual reports for 2018 and 2024 stand in for the missing reports as of 1 January 2019 and 2025; the latest posting wins, 0 revised point(s) across the series). Every report passes four identities: seven taxes = direct taxes on the oil sector, four items = other oil-sector receipts, first-level lines = receipts total, lines = application total. Repaired before parsing (see NF_DOC_FIXES): 866029: values of sheet rows 24-35 moved one row down; 946754: sheet row 26 relabelled «proceeds from the sale of assets by an o…». History: none (KGD does not publish this line). Months no report covers are missing, not interpolated.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2018-01-01",
+  "period_end": "2026-06-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,4 +1,4 @@
-# Update Log — archive (2026-08-30 .. 2026-09-15)
+# Update Log — archive (2026-08-30 .. 2026-09-23)
 
 Older entries of project_knowledge/UPDATE_LOG.md, moved here on 2026-09-26 so the Claude Project's
 context holds only the recent log. Oldest first; nothing edited.
@@ -4390,3 +4390,149 @@ stored — a half-year variant would be a separate indicator with its own semant
 (year-to-date receipts), not a silent change of this one. Verified live: both series return
 their 2025 and 2026 points from the July-1 edition (2 448 612.9 / 2 548 511.5 and
 3 287 315.7 / 4 486 885.8 million KZT). Tests 308 → 311.
+
+## 2026-09-23 — quarterly data: fourteen year-to-date and quarterly siblings of the item-level datasets; GDP_NOMINAL derived from them
+
+**Why.** The item-level layer read only the «YYYY год» columns of the BNS national-accounts
+tables; the same xlsx files carry «1 квартал», «1 полугодие» and «9 месяцев» beside them
+(as columns in 4439–4441, 4435–4437, 4452–4455 and 5926, as rows inside the region blocks
+of 5927 and 5931), and the employment table 5831 carries «I–IV квартал» sub-columns under
+every year. The user asked for the quarterly data.
+
+**What.** Fourteen datasets, each the sibling of an annual one (same element, same rows,
+same dictionary, id suffixed `_QUARTERLY`, `frequency: quarterly`), 44 328 rows in
+`macro_dims_long.csv` (95 764 in all):
+
+| dataset | rows | items × regions | periods |
+|---|---|---|---|
+| GVA_NOMINAL_BY_SECTION_QUARTERLY (4439) | 1 821 | 30 | 2010 Q1 – 2026 H1 |
+| GVA_VOLUME_INDEX_BY_SECTION_QUARTERLY (4440) | 1 821 | 30 | 2010 Q1 – 2026 H1 |
+| GVA_DEFLATOR_BY_SECTION_QUARTERLY (4441) | 1 821 | 30 | 2010 Q1 – 2026 H1 |
+| GVA_NOMINAL_INDUSTRY_DIVISIONS_QUARTERLY (5931) | 1 961 | 37 | 2013 Q1 – 2026 Q1 |
+| GDP_EXPENDITURE_NOMINAL_QUARTERLY (4435) | 1 080 | 15 | 2007 Q1 – 2026 Q1 |
+| GDP_EXPENDITURE_VOLUME_INDEX_QUARTERLY (4437) | 847 | 11 | 2007 Q1 – 2026 Q1 |
+| GDP_EXPENDITURE_DEFLATOR_QUARTERLY (4436) | 924 | 12 | 2007 Q1 – 2026 Q1 |
+| INCOME_COMPENSATION_BY_SECTION_QUARTERLY (4453) | 1 560 | 24 | 2010 Q1 – 2026 Q1 |
+| INCOME_OTHER_TAXES_BY_SECTION_QUARTERLY (4452) | 1 625 | 25 | 2010 Q1 – 2026 Q1 |
+| INCOME_CFC_BY_SECTION_QUARTERLY (4454) | 1 560 | 24 | 2010 Q1 – 2026 Q1 |
+| INCOME_PROFIT_BY_SECTION_QUARTERLY (4455) | 1 567 | 25 | 2010 Q1 – 2026 Q1 |
+| GVA_NOMINAL_BY_REGION_SECTION_QUARTERLY (5927) | 25 256 | 25 × 22 | 2010 Q1 – 2026 Q1 |
+| GRP_VOLUME_INDEX_BY_REGION_QUARTERLY (5926) | 1 099 | 1 × 22 | 2011 9 months – 2026 Q1 |
+| EMPLOYED_BY_SECTION_QUARTERLY (5831) | 1 386 | 21 | 2010 Q1 – 2026 Q2 (discrete) |
+
+Every period of the national-accounts tables is YEAR-TO-DATE (January–March, January–June,
+January–September, the year); the values are stored as published, not decumulated. The
+employment quarters are discrete (a labour-force-survey quarter), which the data itself
+proves: its Q4 differs from the annual figure on all 336 (year, item) pairs, while in every
+year-to-date dataset Q4 equals the annual sibling's value on all 10 707 (year, region, item)
+pairs. Dating follows `lib/periods.py` and the scalar `GDP_NOMINAL`: the first day of the
+last quarter covered (2024-07-01 for January–September 2024, 2024-10-01 for the year).
+The flow tables say `cumulation: year_to_date` (the outlier check then compares own-period
+contributions, as for the scalar year-to-date series) and carry the same `transformation`
+text as `GDP_NOMINAL`; the indices' unit says they are year-to-date periods in % of the same
+period of the previous year. 5926's year-to-date columns begin with «9 месяцев 2011 года»
+(`years_from: 2011`; 2001–2010 stay annual). 450904 has annual rows only — no sibling.
+
+Parser (`scripts/fetchers/bns_dims.py`): `period_of` reads every label shape seen in the
+files («1 квартал 2010г.», «I квартал     2012 года», «1 полугодие 2026г.*», «9 месяцев
+2019 года**», «9 месяц 2012г.», «2025 год7)8)», a Cyrillic І), `quarter_of` the bare
+«I–IV квартал» sub-column labels (a year whose sub-columns are labelled otherwise stops the
+dataset loudly); `_period_columns` / `_rec` date the period; `periods` and `years_from` are
+dataset keys. `dims.validate` takes `cumulation`; `update_dims` writes the dataset's
+`transformation` into every processed row and the metadata. One download and one raw copy
+per file as before: the thirteen files were byte-identical to the 14/16 September copies,
+so the run stored fourteen manifests and no new bytes. Validation warnings are seasonal
+(agriculture's third-quarter contribution, other taxes in Q4) and one row of 4440/4441
+(NET_TAXES) that is published annually only — informational, none failed.
+
+**GDP_NOMINAL.** The scalar was fetched from the JSON cube of the same element 4439. Its 66
+quarters equal the xlsx «ВВП» row × 1e6 within the table's rounding to 0.1 million KZT (only
+2010 Q2 differed, by 48 795 KZT, where the cube carried unrounded tenge), so it is now the
+twelfth derived scalar (`derived_from: GVA_NOMINAL_BY_SECTION_QUARTERLY[GDP] × 1e6`) — one
+download instead of two, `fetch_gdp_nominal` retired, `sources.yaml` says `derived`.
+`update_derived` now keeps the source dataset's `transformation` (the year-to-date text) in
+the processed rows and the metadata, and scales with `Decimal`: in floats 16804418.1 × 1e6 is
+16804418100000.002, and that noise had been logged as "revisions" of GDP_NOMINAL (three
+quarters) and stored in ELECTRICITY_PRODUCTION (1994 and 2004 since 15 September). The
+noise entries dated today were removed from the two revision logs (they were artefacts of
+the multiplication, not of the source); the genuine 2010 Q2 entry stays. ELECTRICITY_PRODUCTION
+2014 keeps its fractional value (94 643 242 900.00002) because the xlsx cell itself holds
+94643.24290000001. `macro_long.csv`/`macro_wide.csv` and `project_knowledge/` rebuilt.
+
+Tests 311 → 338 (`tests/test_dims_quarterly.py`: every label shape, the three layouts under
+`periods`, `years_from`, the structural stop on mislabelled sub-columns, the year-to-date
+outlier check, and that every quarterly dataset mirrors its annual sibling's configuration).
+
+**Left out.** Discrete quarters for the year-to-date flows (a decumulation transformation,
+to be its own derived layer if ever needed, never a silent change of these); 450904 (no
+quarterly rows); the model has no quarterly mappings — nothing in `config/model_map.yaml`
+changed and the daily run's model check is unaffected.
+
+## 2026-09-23 — discrete quarters: the quarterly national accounts (19 QNA_* datasets), and a second vintage of the 2010–2022 history
+
+**Why.** The year-to-date siblings added earlier today are what the dynamic tables offer;
+the user asked for discrete quarters («Найди дискретные кварталы», then «1 вариант» — all
+four tables in full).
+
+**Where they are.** Not in the dynamic tables 4439–4441 / 4435–4437 / 4452–4455 / 5926 /
+5927 / 5931 and not in Taldau (index 2709379 offers «Год» and «Квартал с накоплением» only —
+checked live): the national-accounts «Динамические таблицы» page has a group headed
+«Экспериментальная оценка Валового внутреннего продукта» with four workbooks — 283162 «ВВП
+методом производства (на квартальной основе)», 283161 «ВВП методом конечного использования
+на квартальной основе с сезонной корректировкой», 283160 «ВВП методом доходов (на
+квартальной основе)», 471384 «Валовой региональный продукт на квартальной основе». Their
+annotation: quarterly national accounts compiled with IMF technical assistance, discrete
+quarters benchmarked to the annual accounts (XLPBM, Denton / Cholette-Dagum), seasonal
+adjustment by X13-ARIMA-SEATS in JDemetra+ 2.2.4, and — «параллельно с внедрением КНС» — a
+recalculation of the annual national accounts 2010–2023 to SNA 2008.
+
+**What is stored.** 19 datasets, 37 341 rows, layout `year_quarters` (a year row over four
+quarter sub-columns; `cumulative: true` reads «I квартал | I полугодие | 9 месяцев | год»
+or «Январь - Март … год»; `region_col` for the regional blocks; `components` + `component`
+for the income account, whose activity rows have no numbers and whose component rows repeat
+under each activity):
+
+| element | datasets | rows | periods |
+|---|---|---|---|
+| 283162 production | QNA_GVA_BY_SECTION, _CONSTANT_2010, _VOLUME_INDEX_BY_SECTION, _VOLUME_INDEX_BY_SECTION_YTD, _DEFLATOR_BY_SECTION_YTD, _SA, _SA_CONSTANT_2010 (26 items) | 1 690 / 1 690 / 1 586 / 1 586 / 1 586 / 1 690 / 1 690 | 2010 Q1 (indices 2011 Q1) – 2026 Q1 |
+| 283161 expenditure | QNA_GDP_EXPENDITURE, _CONSTANT_2010, _VOLUME_INDEX, _VOLUME_INDEX_YTD, _DEFLATOR_YTD, _SA, _SA_CONSTANT_2010 (13–16 items) | 1 040 / 910 / 854 / 854 / 854 / 910 / 845 | 2010 Q1 – 2026 Q1 |
+| 283160 income | QNA_GDP_INCOME (4 items); QNA_INCOME_COMPENSATION / _OTHER_NET_TAXES / _GROSS_PROFIT _BY_SECTION (24 items each) | 260; 3 × 1 560 | 2010 Q1 – 2026 Q1 |
+| 471384 regions | QNA_GVA_BY_REGION_SECTION (24 items × 21 regions) | 14 616 | 2019 Q1 – 2026 Q1 |
+
+Not stored, by the de-duplication rule: the cumulative twins of the current- and
+constant-price sheets (283162 1.1/2.1, 283161 1.1/2.1, 283160 1.1/2.1, 471384's second
+sheet) — proven to be the running sums of the discrete quarters (283161: 1 040 + 910
+points, 283160: 260, 283162: 1 690 constant-price points, all equal) — and the ВДС rows of
+the income account, equal to QNA_GVA_BY_SECTION on 1 491 of 1 495 common points (the four
+exceptions, I quarter 2026: A/GOODS 6 034 lower, L/SERVICES 311 169 million KZT higher in
+the income account — recorded in the datasets' notes). The cumulative twins are nonetheless
+re-read on every run (`cumulative_check`): any point that is not the running sum of the
+stored quarters is a warning, the discrete value is kept. Today that warning fires once,
+and it is real: in 471384 the four quarters of 2025 sum above the file's own «год 2025» —
+which equals table 5927 — in five regions (AKM +2.2 %, AKT +20 %, ATY +15 %, ZHM +16 %, ZKO
++16 %; IV quarter 2025 carries the whole difference; the national total agrees). Two
+misspelt activity labels in 283160 («Оптования и розничная торговля», «Проффесиональная»)
+are mapped by `label_overrides`; the cumulative income twin abbreviates «I кв.» and puts
+numbers on the «Производство услуг» group row — both handled. The four files are 1.3 MB
+together, one raw copy each (the datasets of one file share it).
+
+**Two vintages — the finding that matters for the model.** Q1+Q2+Q3+Q4 of the discrete
+tables equal the dynamic annual tables only for 2023–2025 (283162 vs 4439: 26/26 sections
+equal in each of 2023, 2024, 2025, 0/26 in 2010–2016, 5–8/26 in 2017–2022; 283161 vs 4435
+and 471384 vs 5927 likewise). For 2010–2022 the quarterly tables carry the SNA-2008
+recalculation: GDP 2010 +9.4 %, 2011 +6.5 %, 2012 +5.9 %, 2013 +3.4 %, 2014 +3.1 %, 2015
++1.6 %, 2016 +0.1 %, 2017 −2.6 %, 2018 −2.9 %, 2019 −2.9 %, 2020 −2.0 %, 2021 −1.6 %, 2022
+−1.5 % against 4439; the volume index differs too (2020: 98.5 vs 97.5). The dynamic tables
+and Taldau (2709379, checked live 2026-09-23: GDP 2010 still 21 815 517 million KZT) have not
+been moved to the revised series. Every QNA_* dataset carries this in `vintage` (metadata
+`methodology`) and a `transformation` that names the vintage; the annual datasets, the
+year-to-date siblings and `config/model_map.yaml` are untouched — the GDP model's 2010–2022
+history stays on the published dynamic-table vintage until its author decides otherwise.
+
+Also: `dims.normalise_region_label` folds «город Астана» to the dictionary's «г. Астана»;
+`dictionaries/income_components.csv` (4 codes) is new; `expenditure_items.csv` tells GDP by
+production (`GDP_PRODUCTION`) from GDP. Tests 338 → 349 (`tests/test_qna.py`,
+`tests/test_qna_cumulative_check.py`).
+
+**Left out.** The cumulative twins as data (running sums); the ВДС component of the income
+account (four points differ, noted); any use in the model.
