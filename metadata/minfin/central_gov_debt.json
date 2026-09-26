@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/uploads/2026/9/4/0f480349a6d5a3d479e612d5eecb8906_original.1216239.xlsx",
+  "dataset_id": "statistical-bulletin/табл 22 кв/section=I.,row=1,currency=KZT",
+  "indicator_id": "CENTRAL_GOV_DEBT",
+  "indicator_name": "Government of the Republic of Kazakhstan Debt",
+  "description": "Долг Правительства РК",
+  "frequency": "quarterly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT. Row 1 of section I: debt of the Government of the Republic of Kazakhstan (central government proper, = GOV_DEBT_DOMESTIC + GOV_DEBT_EXTERNAL exactly). Excludes the National Bank (row 2) and local executive bodies (row 3) that STATE_DEBT_TOTAL also carries, and the guarantees of sections II-III that GOV_DEBT carries. The denominator for a foreign-currency share of government debt.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2020-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/uploads/2026/9/4/0f480349a6d5a3d479e612d5eecb8906_original.1216239.xlsx",
+  "dataset_id": "statistical-bulletin/табл 22 кв/section=I.,row=1.2,currency=KZT",
+  "indicator_id": "CENTRAL_GOV_DEBT_EXTERNAL",
+  "indicator_name": "Government of the Republic of Kazakhstan Debt, External",
+  "description": "Внешний долг Правительства РК (табл. 22, тенге)",
+  "frequency": "quarterly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT. Row 1.2 of section I: external debt of the Government of the Republic of Kazakhstan, in the sheet's own tenge column -- the same concept as GOV_DEBT_EXTERNAL (quarterly snapshot documents, 11 dates from 2021-07-01 with gaps) but with the bulletin's 22 dates from 2020-01-01, and the tenge twin of GOV_DEBT_EXTERNAL_USD. Numerator of the foreign-currency share of government debt against CENTRAL_GOV_DEBT. 'External' in the bulletin is by market of borrowing (eurobonds, IFI loans), not by currency of denomination.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2020-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

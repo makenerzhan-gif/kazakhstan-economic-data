@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/uploads/2026/9/4/0f480349a6d5a3d479e612d5eecb8906_original.1216239.xlsx",
+  "dataset_id": "statistical-bulletin/табл 22 кв/section=I.,row=2,currency=KZT",
+  "indicator_id": "NBK_DEBT",
+  "indicator_name": "National Bank of Kazakhstan Debt",
+  "description": "Долг Национального Банка РК",
+  "frequency": "quarterly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT. Row 2 of section I: debt of the National Bank of Kazakhstan, counted inside Kazakhstan's 'state debt' by the Budget Code but outside general government under PSDS/GFSM (the central bank is a public corporation). Sparse: 3.4 trn KZT at 2020-01-01 (tenge cell blank, converted from 8,968.4 mln USD), 2.9 trn at 2021-01-01, 0 by 2025-07-01; 2025-04-01 blank in both currencies (= 0 by the section identity), blank cells (skipped) from 2026-01-01. Section I is already consolidated (I = row 1 + row 2 + row 3 - row 3.1), so general government debt on the bulletin's own definitions = STATE_DEBT_TOTAL - NBK_DEBT. Tenge cell blank but USD cell filled at ['2020-01-01']: value = USD x the sheet's own implied rate for that date (section I row KZT / USD).",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2020-01-01",
+  "period_end": "2025-10-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
