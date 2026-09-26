@@ -74298,6 +74298,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,quarterly,AVG_WAGE_MANUFACTURING,508854.0,KZT,bns,2026-09-26,level,2026-09-26
 2026-01-01,KZ,national,quarterly,AVG_WAGE_MINING,1020632.0,KZT,bns,2026-09-26,level,2026-09-26
 2026-01-01,KZ,national,quarterly,AVG_WAGE_QUARTERLY,445068.0,KZT,bns,2026-09-26,level,2026-09-26
+2026-01-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-09-26,level,2026-09-26
+2026-01-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-09-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-26
+2026-01-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-09-26,level,2026-09-26
+2026-01-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-09-26,level,2026-09-26
 2026-01-01,KZ,national,quarterly,BOP_GOODS_BALANCE,4068.863836,million USD,nbk,2026-09-26,level,2026-09-26
 2026-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,4.011331,% of GDP,nbk,2026-09-26,level,2026-09-26
 2026-01-01,KZ,national,quarterly,BOP_PRIMARY_INCOME,-5956.498687,million USD,nbk,2026-09-26,level,2026-09-26

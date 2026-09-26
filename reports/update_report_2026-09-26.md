@@ -1,8 +1,74 @@
 # Update report — 2026-09-26
 
-Run timestamp: 2026-09-26T07:20:50.037254
+Run timestamp: 2026-09-26T09:20:26.934030
 Unified dataset updated: True
 Tests passed: True
+
+## Failed this run — previous data kept
+
+- **nbk/PENSION_PAYMENTS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Read timed out. (read timeout=30)
+- **nbk/RESERVES_IMPORT_COVER**: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+- **nbk/PRODUCTION_VOLUME_DIFFUSION_INDEX**: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+- **nbk/PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=365&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/DEMAND_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=366&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/DEMAND_EXPECTATIONS_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=366&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOAN_RATE_ACCEPTABLE_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOAN_RATE_ACCEPTABLE_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOAN_TERM_ACCEPTABLE_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOAN_TERM_ACCEPTABLE_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/INVENTORIES_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=362&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=362&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/IMPORT_PRICE_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=363&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=363&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/RAW_MATERIALS_PRICE_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=364&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=364&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/CAPACITY_UTILIZATION**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=369&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/FINISHED_GOODS_PRICE_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=387&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=387&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/OVERDUE_ACCOUNTS_PAYABLE_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=378&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/OVERDUE_ACCOUNTS_RECEIVABLE_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=378&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/OVERDUE_BANK_LOANS_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=378&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/ENTERPRISE_DEBT_BURDEN**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=392&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXPORTERS_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=368&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/IMPORTERS_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=368&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/PAYMENTS_TOTAL_VALUE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/CASHLESS_PAYMENTS_VALUE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/CASH_WITHDRAWALS_VALUE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/PAYMENT_CARDS_VALUE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/HOUSEHOLD_DEPOSITS_DEMAND_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/HOUSEHOLD_DEPOSITS_DEMAND_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/HOUSEHOLD_DEPOSITS_SAVING_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/HOUSEHOLD_DEPOSITS_SAVING_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOANS_BUSINESS_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOANS_BUSINESS_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOANS_INDIVIDUALS_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOANS_INDIVIDUALS_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOANS_MICROFINANCE_INDIVIDUALS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOANS_MICROFINANCE_BUSINESS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXTERNAL_DEBT_LONG_TERM**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXTERNAL_DEBT_SHORT_TERM**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/PRIVATE_EXTERNAL_DEBT_INTERCOMPANY**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/GOLD_BULLION_SALES**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=476&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/REMITTANCES_SENT_USD**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/REMITTANCES_SENT_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/REMITTANCES_SENT_RUB**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/REMITTANCES_RECEIVED_USD**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/REMITTANCES_RECEIVED_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/REMITTANCES_RECEIVED_RUB**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXTERNAL_DEBT_GOV_LOANS_LT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXTERNAL_DEBT_BANKS_LOANS_LT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXTERNAL_DEBT_BANKS_SECURITIES_LT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXTERNAL_DEBT_OTHER_SECURITIES_LT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/GOV_SECURITIES_SECONDARY_NBK_NOTES**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=16&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXCHANGE_RATE_EUR_OTC**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXCHANGE_RATE_RUB_OTC**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXCHANGE_RATE_USD_OTC**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/FX_OTC_VOLUME_USD**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/FX_OTC_VOLUME_EUR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/FX_OTC_VOLUME_RUB**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
 
 ## Per-dataset results
 
@@ -223,8 +289,8 @@ Tests passed: True
 - **bns/REAL_WAGE_INDEX_QUARTERLY** — fetch+validate+process: ok (downloaded=1, processed=1)
 - **bns/FREIGHT_TURNOVER_MONTHLY** — fetch+validate+process: ok (downloaded=4, processed=4)
   - warning: Unexpected jump of 80.1% in own-period contribution between 2026-05-01 (213301.16) and 2026-06-01 (42515.859999999986).
-- **bns/PASSENGER_TURNOVER_MONTHLY** — fetch+validate+process: ok (downloaded=4, processed=4)
-  - warning: Unexpected jump of 76.4% in own-period contribution between 2026-05-01 (36685.9) and 2026-06-01 (8656.900000000001).
+- **bns/PASSENGER_TURNOVER_MONTHLY** — fetch+validate+process: ok (downloaded=68, processed=68)
+  - warning: Unexpected jump of 53.9% in own-period contribution between 2022-12-01 (12221.78969886301) and 2023-01-01 (5636.37806482853).
 - **bns/FREIGHT_CARRIED** — fetch+validate+process: ok (downloaded=4, processed=4)
   - warning: Unexpected jump of 78.9% in own-period contribution between 2026-05-01 (382123.01) and 2026-06-01 (80540.54999999999).
 - **bns/PASSENGERS_CARRIED** — fetch+validate+process: ok (downloaded=4, processed=4)
@@ -645,8 +711,8 @@ Tests passed: True
   - warning: Unexpected jump of 86.5% in value between 2022-03-01 (96.643) and 2022-04-01 (180.237).
 - **nbk/BANK_ROA** — fetch+validate+process: ok (downloaded=18, processed=18)
 - **nbk/BANK_ROE** — fetch+validate+process: ok (downloaded=18, processed=18)
-  - warning: Unexpected jump of 50.4% in value between 2022-04-01 (31.32) and 2022-07-01 (15.55).
-  - warning: Unexpected jump of 65.5% in value between 2022-07-01 (15.55) and 2022-10-01 (25.74).
+  - warning: Unexpected jump of 50.4% in value between 2022-01-01 (31.32) and 2022-04-01 (15.55).
+  - warning: Unexpected jump of 65.5% in value between 2022-04-01 (15.55) and 2022-07-01 (25.74).
 - **nbk/PENSION_FUND_ASSETS** — fetch+validate+process: ok (downloaded=44, processed=44)
   - warning: Gap of 61 days between 2025-08-01 and 2025-10-01 is outside expected range for frequency=monthly (25-40d).
 - **nbk/INSURANCE_PREMIUMS_GENERAL** — fetch+validate+process: ok (downloaded=33, processed=33)
@@ -661,199 +727,132 @@ Tests passed: True
   - warning: Unexpected jump of 801.0% in own-period contribution between 2024-12-01 (118218.70700000005) and 2025-12-01 (1065144.803).
   - warning: Unexpected jump of 92.2% in own-period contribution between 2025-12-01 (1065144.803) and 2026-01-01 (82855.48).
   - warning: Unexpected jump of 72.7% in own-period contribution between 2026-05-01 (87446.86000000004) and 2026-06-01 (150997.88400000002).
-- **nbk/PENSION_PAYMENTS** — fetch+validate+process: ok (downloaded=45, processed=45)
-  - warning: Unexpected jump of 97.3% in own-period contribution between 2022-12-01 (1155398.586) and 2023-01-01 (31166.536).
-  - warning: Unexpected jump of 106.9% in own-period contribution between 2023-06-01 (35425.995000000024) and 2023-07-01 (73284.788).
-  - warning: Unexpected jump of 62.9% in own-period contribution between 2024-06-01 (62270.37400000001) and 2024-07-01 (101424.41700000002).
-  - warning: Unexpected jump of 53.6% in own-period contribution between 2024-11-01 (90237.47000000009) and 2024-12-01 (138622.61).
-  - warning: Unexpected jump of 145.9% in own-period contribution between 2025-11-01 (114757.06499999994) and 2025-12-01 (282149.16500000004).
-  - warning: Unexpected jump of 69.1% in own-period contribution between 2025-12-01 (282149.16500000004) and 2026-01-01 (87285.341).
-  - warning: Unexpected jump of 54.9% in own-period contribution between 2026-06-01 (145690.06300000002) and 2026-07-01 (65645.93099999998).
-- **nbk/RESERVES_IMPORT_COVER** — fetch+validate+process: ok (downloaded=50, processed=50)
-- **nbk/PRODUCTION_VOLUME_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=42, processed=42)
-- **nbk/PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=42, processed=42)
-- **nbk/DEMAND_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=86, processed=86)
-- **nbk/DEMAND_EXPECTATIONS_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=86, processed=86)
-- **nbk/LOAN_RATE_ACCEPTABLE_KZT** — fetch+validate+process: ok (downloaded=42, processed=42)
-- **nbk/LOAN_RATE_ACCEPTABLE_FX** — fetch+validate+process: ok (downloaded=42, processed=42)
-- **nbk/LOAN_TERM_ACCEPTABLE_KZT** — fetch+validate+process: ok (downloaded=42, processed=42)
-- **nbk/LOAN_TERM_ACCEPTABLE_FX** — fetch+validate+process: ok (downloaded=42, processed=42)
-- **nbk/INVENTORIES_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=42, processed=42)
-- **nbk/INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=42, processed=42)
-- **nbk/IMPORT_PRICE_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=42, processed=42)
-- **nbk/IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=42, processed=42)
-- **nbk/RAW_MATERIALS_PRICE_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=86, processed=86)
-- **nbk/RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=86, processed=86)
-- **nbk/CAPACITY_UTILIZATION** — fetch+validate+process: ok (downloaded=42, processed=42)
-- **nbk/FINISHED_GOODS_PRICE_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=86, processed=86)
-- **nbk/FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=86, processed=86)
-- **nbk/OVERDUE_ACCOUNTS_PAYABLE_SHARE** — fetch+validate+process: ok (downloaded=42, processed=42)
-- **nbk/OVERDUE_ACCOUNTS_RECEIVABLE_SHARE** — fetch+validate+process: ok (downloaded=42, processed=42)
-- **nbk/OVERDUE_BANK_LOANS_SHARE** — fetch+validate+process: ok (downloaded=42, processed=42)
-  - warning: Unexpected jump of 402.7% in value between 2020-01-01 (2.418861) and 2020-04-01 (12.158809).
-- **nbk/ENTERPRISE_DEBT_BURDEN** — fetch+validate+process: ok (downloaded=26, processed=26)
-- **nbk/EXPORTERS_SHARE** — fetch+validate+process: ok (downloaded=26, processed=26)
-- **nbk/IMPORTERS_SHARE** — fetch+validate+process: ok (downloaded=26, processed=26)
-- **nbk/PAYMENTS_TOTAL_VALUE** — fetch+validate+process: ok (downloaded=72, processed=72)
-  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
-- **nbk/CASHLESS_PAYMENTS_VALUE** — fetch+validate+process: ok (downloaded=72, processed=72)
-  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
-- **nbk/CASH_WITHDRAWALS_VALUE** — fetch+validate+process: ok (downloaded=72, processed=72)
-  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
-- **nbk/PAYMENT_CARDS_VALUE** — fetch+validate+process: ok (downloaded=72, processed=72)
-  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
-- **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_KZT** — fetch+validate+process: ok (downloaded=44, processed=44)
-- **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_FX** — fetch+validate+process: ok (downloaded=44, processed=44)
-- **nbk/HOUSEHOLD_DEPOSITS_DEMAND_KZT** — fetch+validate+process: ok (downloaded=44, processed=44)
-- **nbk/HOUSEHOLD_DEPOSITS_DEMAND_FX** — fetch+validate+process: ok (downloaded=44, processed=44)
-- **nbk/HOUSEHOLD_DEPOSITS_SAVING_KZT** — fetch+validate+process: ok (downloaded=44, processed=44)
-- **nbk/HOUSEHOLD_DEPOSITS_SAVING_FX** — fetch+validate+process: ok (downloaded=44, processed=44)
-- **nbk/LOANS_BUSINESS_KZT** — fetch+validate+process: ok (downloaded=44, processed=44)
-  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
-- **nbk/LOANS_BUSINESS_FX** — fetch+validate+process: ok (downloaded=44, processed=44)
-  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
-- **nbk/LOANS_INDIVIDUALS_KZT** — fetch+validate+process: ok (downloaded=44, processed=44)
-  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
-- **nbk/LOANS_INDIVIDUALS_FX** — fetch+validate+process: ok (downloaded=44, processed=44)
-  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
-- **nbk/LOANS_MICROFINANCE_INDIVIDUALS** — fetch+validate+process: ok (downloaded=44, processed=44)
-  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
-- **nbk/LOANS_MICROFINANCE_BUSINESS** — fetch+validate+process: ok (downloaded=44, processed=44)
-  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
-- **nbk/EXTERNAL_DEBT_LONG_TERM** — fetch+validate+process: ok (downloaded=47, processed=47)
-- **nbk/EXTERNAL_DEBT_SHORT_TERM** — fetch+validate+process: ok (downloaded=47, processed=47)
-- **nbk/PRIVATE_EXTERNAL_DEBT_INTERCOMPANY** — fetch+validate+process: ok (downloaded=47, processed=47)
-- **nbk/PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT** — fetch+validate+process: ok (downloaded=47, processed=47)
-- **nbk/GOLD_BULLION_SALES** — fetch+validate+process: ok (downloaded=36, processed=36)
-  - warning: Unexpected jump of 238.7% in value between 2017-07-01 (225.0) and 2017-10-01 (762.0).
-  - warning: Unexpected jump of 94.1% in value between 2018-04-01 (560.0) and 2018-07-01 (1087.0).
-  - warning: Unexpected jump of 54.5% in value between 2019-01-01 (1092.0) and 2019-04-01 (1687.0).
-  - warning: Unexpected jump of 295.3% in value between 2019-07-01 (1853.0) and 2019-10-01 (7324.0).
-  - warning: Unexpected jump of 66.8% in value between 2020-04-01 (2497.0) and 2020-07-01 (4166.0).
-  - warning: Unexpected jump of 57.1% in value between 2020-07-01 (4166.0) and 2020-10-01 (6545.0).
-  - warning: Unexpected jump of 77.1% in value between 2024-01-01 (10710.0) and 2024-04-01 (18969.0).
-  - warning: Unexpected jump of 68.2% in value between 2024-10-01 (13940.0) and 2025-01-01 (23445.0).
-  - warning: Unexpected jump of 52.7% in value between 2025-01-01 (23445.0) and 2025-04-01 (11084.0).
-  - warning: Unexpected jump of 63.8% in value between 2025-04-01 (11084.0) and 2025-07-01 (4008.0).
-  - warning: Unexpected jump of 127.3% in value between 2025-07-01 (4008.0) and 2025-10-01 (9110.0).
-  - warning: Unexpected jump of 82.2% in value between 2025-10-01 (9110.0) and 2026-01-01 (16597.0).
-  - warning: Unexpected jump of 59.7% in value between 2026-01-01 (16597.0) and 2026-04-01 (6681.0).
-- **nbk/REMITTANCES_SENT_USD** — fetch+validate+process: ok (downloaded=59, processed=59)
-- **nbk/REMITTANCES_SENT_KZT** — fetch+validate+process: ok (downloaded=59, processed=59)
-  - warning: Unexpected jump of 65.3% in value between 2021-12-01 (7535.75044157) and 2022-01-01 (2616.94285723).
-  - warning: Unexpected jump of 63.8% in value between 2022-01-01 (2616.94285723) and 2022-02-01 (4287.82910448).
-  - warning: Unexpected jump of 84.3% in value between 2022-03-01 (5095.81663903) and 2022-04-01 (9390.57069132).
-  - warning: Unexpected jump of 52.7% in value between 2022-04-01 (9390.57069132) and 2022-05-01 (14339.6470739).
-  - warning: Unexpected jump of 79.4% in value between 2022-06-01 (13597.55890139) and 2022-07-01 (24396.72373385).
-- **nbk/REMITTANCES_SENT_RUB** — fetch+validate+process: ok (downloaded=59, processed=59)
-  - warning: Unexpected jump of 70.6% in value between 2022-02-01 (4921.3584205) and 2022-03-01 (8394.11491677).
-  - warning: Unexpected jump of 69.3% in value between 2022-03-01 (8394.11491677) and 2022-04-01 (14209.19187954).
-  - warning: Unexpected jump of 55.6% in value between 2022-12-01 (12272.84606747) and 2023-01-01 (5444.04381183).
-- **nbk/REMITTANCES_RECEIVED_USD** — fetch+validate+process: ok (downloaded=59, processed=59)
-  - warning: Unexpected jump of 131.7% in value between 2022-03-01 (16433.033167949) and 2022-04-01 (38079.979214164).
-- **nbk/REMITTANCES_RECEIVED_KZT** — fetch+validate+process: ok (downloaded=59, processed=59)
-  - warning: Unexpected jump of 53.0% in value between 2021-12-01 (7228.53167229) and 2022-01-01 (3394.3982902).
-  - warning: Unexpected jump of 94.2% in value between 2022-03-01 (4486.05744728) and 2022-04-01 (8713.61985846).
-  - warning: Unexpected jump of 62.9% in value between 2022-04-01 (8713.61985846) and 2022-05-01 (14194.89113365).
-  - warning: Unexpected jump of 71.2% in value between 2022-06-01 (15181.31978941) and 2022-07-01 (25995.12395873).
-- **nbk/REMITTANCES_RECEIVED_RUB** — fetch+validate+process: ok (downloaded=59, processed=59)
-  - warning: Unexpected jump of 52.1% in value between 2021-12-01 (1743.38269675) and 2022-01-01 (834.67709836).
-  - warning: Unexpected jump of 141.4% in value between 2022-02-01 (1181.43375686) and 2022-03-01 (2851.80089685).
-- **nbk/EXTERNAL_DEBT_GOV_LOANS_LT** — fetch+validate+process: ok (downloaded=26, processed=26)
-- **nbk/EXTERNAL_DEBT_BANKS_LOANS_LT** — fetch+validate+process: ok (downloaded=26, processed=26)
-  - warning: Unexpected jump of 121.3% in value between 2022-01-01 (1541.171104) and 2022-04-01 (3411.103104).
-  - warning: Unexpected jump of 61.5% in value between 2022-07-01 (4404.157104) and 2022-10-01 (1697.076104).
-  - warning: Unexpected jump of 62.1% in value between 2025-04-01 (1852.913104) and 2025-07-01 (3002.922104).
-- **nbk/EXTERNAL_DEBT_BANKS_SECURITIES_LT** — fetch+validate+process: ok (downloaded=26, processed=26)
-  - warning: Unexpected jump of 97.1% in value between 2024-04-01 (510.06002) and 2024-07-01 (1005.192055).
-  - warning: Unexpected jump of 60.3% in value between 2025-10-01 (2242.385139) and 2026-01-01 (3593.993792).
-- **nbk/EXTERNAL_DEBT_OTHER_SECURITIES_LT** — fetch+validate+process: ok (downloaded=26, processed=26)
-- **nbk/GOV_SECURITIES_SECONDARY_NBK_NOTES** — fetch+validate+process: ok (downloaded=45, processed=45)
-  - warning: Unexpected jump of 82.2% in value between 2023-05-01 (900203.22013916) and 2023-06-01 (160459.44686594).
-  - warning: Unexpected jump of 66.6% in value between 2023-07-01 (208770.41759544) and 2023-08-01 (347858.35572444).
-  - warning: Unexpected jump of 109.6% in value between 2023-10-01 (204966.35872824) and 2023-11-01 (429668.1746287).
-  - warning: Unexpected jump of 72.0% in value between 2023-11-01 (429668.1746287) and 2023-12-01 (120313.45265052).
-  - warning: Unexpected jump of 181.7% in value between 2023-12-01 (120313.45265052) and 2024-01-01 (338872.23811407).
-  - warning: Unexpected jump of 72.1% in value between 2024-02-01 (348934.50555998) and 2024-03-01 (97315.38623732).
-  - warning: Unexpected jump of 375.4% in value between 2024-03-01 (97315.38623732) and 2024-04-01 (462654.3142991).
-  - warning: Unexpected jump of 64.7% in value between 2024-04-01 (462654.3142991) and 2024-05-01 (163137.22263474).
-  - warning: Unexpected jump of 89.8% in value between 2025-01-01 (162398.49656527) and 2025-02-01 (16605.6953883).
-  - warning: Unexpected jump of 825.5% in value between 2025-02-01 (16605.6953883) and 2025-03-01 (153685.95133191).
-  - warning: Unexpected jump of 70.4% in value between 2025-05-01 (127791.02688463) and 2025-06-01 (37844.52712701).
-  - warning: Unexpected jump of 86.1% in value between 2025-09-01 (41286.17094888) and 2025-10-01 (5732.88289281).
-  - warning: Unexpected jump of 939.1% in value between 2025-10-01 (5732.88289281) and 2025-11-01 (59568.01594448).
-  - warning: Unexpected jump of 64.9% in value between 2025-12-01 (82567.22102183) and 2026-01-01 (28955.97168899).
-  - warning: Unexpected jump of 239.5% in value between 2026-01-01 (28955.97168899) and 2026-02-01 (98317.28749319).
-  - warning: Unexpected jump of 69.7% in value between 2026-02-01 (98317.28749319) and 2026-03-01 (166885.23968497).
-  - warning: Unexpected jump of 77.6% in value between 2026-06-01 (109574.25879704) and 2026-07-01 (194549.94580431).
-- **nbk/EXCHANGE_RATE_EUR_OTC** — fetch+validate+process: ok (downloaded=44, processed=44)
-- **nbk/EXCHANGE_RATE_RUB_OTC** — fetch+validate+process: ok (downloaded=44, processed=44)
-- **nbk/EXCHANGE_RATE_USD_OTC** — fetch+validate+process: ok (downloaded=44, processed=44)
-- **nbk/FX_OTC_VOLUME_USD** — fetch+validate+process: ok (downloaded=44, processed=44)
-  - warning: Unexpected jump of 315.8% in value between 2025-09-01 (7673.19460581) and 2025-10-01 (31903.14004966).
-- **nbk/FX_OTC_VOLUME_EUR** — fetch+validate+process: ok (downloaded=44, processed=44)
-  - warning: Unexpected jump of 278.1% in value between 2023-02-01 (27.45185617) and 2023-03-01 (103.7886563).
-  - warning: Unexpected jump of 50.4% in value between 2023-03-01 (103.7886563) and 2023-04-01 (51.50716283).
-  - warning: Unexpected jump of 86.9% in value between 2023-04-01 (51.50716283) and 2023-05-01 (96.27563099).
-  - warning: Unexpected jump of 293.6% in value between 2023-11-01 (32.46711045) and 2023-12-01 (127.78599308).
-  - warning: Unexpected jump of 63.2% in value between 2024-05-01 (47.55011162) and 2024-06-01 (17.47688425).
-  - warning: Unexpected jump of 9764.8% in value between 2024-06-01 (17.47688425) and 2024-07-01 (1724.06505769).
-  - warning: Unexpected jump of 98.7% in value between 2024-07-01 (1724.06505769) and 2024-08-01 (22.48569887).
-  - warning: Unexpected jump of 58.4% in value between 2024-08-01 (22.48569887) and 2024-09-01 (9.35293447).
-  - warning: Unexpected jump of 307.7% in value between 2024-10-01 (8.31511494) and 2024-11-01 (33.89795482).
-  - warning: Unexpected jump of 84.2% in value between 2024-11-01 (33.89795482) and 2024-12-01 (62.44354394).
-  - warning: Unexpected jump of 93.8% in value between 2025-02-01 (43.47637811) and 2025-03-01 (2.71311907).
-  - warning: Unexpected jump of 38714.4% in value between 2025-03-01 (2.71311907) and 2025-04-01 (1053.08085191).
-  - warning: Unexpected jump of 98.2% in value between 2025-05-01 (1197.57744684) and 2025-06-01 (21.94826975).
-  - warning: Unexpected jump of 71.4% in value between 2025-06-01 (21.94826975) and 2025-07-01 (37.6295546).
-  - warning: Unexpected jump of 2576.4% in value between 2025-07-01 (37.6295546) and 2025-08-01 (1007.12166264).
-  - warning: Unexpected jump of 229.3% in value between 2025-08-01 (1007.12166264) and 2025-09-01 (3316.73066392).
-- **nbk/FX_OTC_VOLUME_RUB** — fetch+validate+process: ok (downloaded=44, processed=44)
-  - warning: Unexpected jump of 94.0% in value between 2022-12-01 (105058.08166441) and 2023-01-01 (6277.93852608).
-  - warning: Unexpected jump of 52.2% in value between 2023-04-01 (6328.62441345) and 2023-05-01 (9629.28545988).
-  - warning: Unexpected jump of 99.0% in value between 2023-06-01 (8497.83758494) and 2023-07-01 (16914.13384886).
-  - warning: Unexpected jump of 376.2% in value between 2023-09-01 (7307.38477158) and 2023-10-01 (34795.24853584).
-  - warning: Unexpected jump of 83.6% in value between 2023-10-01 (34795.24853584) and 2023-11-01 (5689.16127649).
-  - warning: Unexpected jump of 146.6% in value between 2023-11-01 (5689.16127649) and 2023-12-01 (14028.91267118).
-  - warning: Unexpected jump of 60.2% in value between 2024-02-01 (10828.63096657) and 2024-03-01 (4312.92394988).
-  - warning: Unexpected jump of 64.2% in value between 2024-03-01 (4312.92394988) and 2024-04-01 (7082.66701895).
-  - warning: Unexpected jump of 257.6% in value between 2024-09-01 (20032.31138816) and 2024-10-01 (71639.23431021).
-  - warning: Unexpected jump of 75.2% in value between 2024-10-01 (71639.23431021) and 2024-11-01 (17733.32086136).
-  - warning: Unexpected jump of 63.4% in value between 2024-11-01 (17733.32086136) and 2024-12-01 (28975.18712813).
-  - warning: Unexpected jump of 148.4% in value between 2025-01-01 (25358.91346323) and 2025-02-01 (62987.32398228).
-  - warning: Unexpected jump of 56.3% in value between 2025-12-01 (56774.97777926) and 2026-01-01 (24799.4919284).
-  - warning: Unexpected jump of 132.7% in value between 2026-02-01 (12708.96987589) and 2026-03-01 (29574.76288046).
-  - warning: Unexpected jump of 87.7% in value between 2026-05-01 (11778.6457546) and 2026-06-01 (22113.81732956).
+- **nbk/PENSION_PAYMENTS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Read timed out. (read timeout=30)
+- **nbk/RESERVES_IMPORT_COVER** — fetch: error (downloaded=0, processed=0)
+  - ERROR: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+- **nbk/PRODUCTION_VOLUME_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+- **nbk/PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=365&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/DEMAND_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=366&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/DEMAND_EXPECTATIONS_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=366&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOAN_RATE_ACCEPTABLE_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOAN_RATE_ACCEPTABLE_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOAN_TERM_ACCEPTABLE_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOAN_TERM_ACCEPTABLE_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/INVENTORIES_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=362&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=362&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/IMPORT_PRICE_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=363&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=363&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/RAW_MATERIALS_PRICE_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=364&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=364&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/CAPACITY_UTILIZATION** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=369&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/FINISHED_GOODS_PRICE_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=387&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=387&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/OVERDUE_ACCOUNTS_PAYABLE_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=378&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/OVERDUE_ACCOUNTS_RECEIVABLE_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=378&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/OVERDUE_BANK_LOANS_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=378&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/ENTERPRISE_DEBT_BURDEN** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=392&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXPORTERS_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=368&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/IMPORTERS_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=368&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/PAYMENTS_TOTAL_VALUE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/CASHLESS_PAYMENTS_VALUE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/CASH_WITHDRAWALS_VALUE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/PAYMENT_CARDS_VALUE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/HOUSEHOLD_DEPOSITS_DEMAND_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/HOUSEHOLD_DEPOSITS_DEMAND_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/HOUSEHOLD_DEPOSITS_SAVING_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/HOUSEHOLD_DEPOSITS_SAVING_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOANS_BUSINESS_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOANS_BUSINESS_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOANS_INDIVIDUALS_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOANS_INDIVIDUALS_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOANS_MICROFINANCE_INDIVIDUALS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/LOANS_MICROFINANCE_BUSINESS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXTERNAL_DEBT_LONG_TERM** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXTERNAL_DEBT_SHORT_TERM** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/PRIVATE_EXTERNAL_DEBT_INTERCOMPANY** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/GOLD_BULLION_SALES** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=476&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/REMITTANCES_SENT_USD** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/REMITTANCES_SENT_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/REMITTANCES_SENT_RUB** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/REMITTANCES_RECEIVED_USD** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/REMITTANCES_RECEIVED_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/REMITTANCES_RECEIVED_RUB** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXTERNAL_DEBT_GOV_LOANS_LT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXTERNAL_DEBT_BANKS_LOANS_LT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXTERNAL_DEBT_BANKS_SECURITIES_LT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXTERNAL_DEBT_OTHER_SECURITIES_LT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/GOV_SECURITIES_SECONDARY_NBK_NOTES** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=16&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXCHANGE_RATE_EUR_OTC** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXCHANGE_RATE_RUB_OTC** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/EXCHANGE_RATE_USD_OTC** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/FX_OTC_VOLUME_USD** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/FX_OTC_VOLUME_EUR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
+- **nbk/FX_OTC_VOLUME_RUB** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by NewConnectionError("HTTPSConnection(host='data.nationalbank.kz', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))
 - **nbk/OFC_NET_FOREIGN_ASSETS** — fetch+validate+process: ok (downloaded=15, processed=15)
 - **nbk/OFC_CLAIMS_ON_NONRESIDENTS** — fetch+validate+process: ok (downloaded=15, processed=15)
 - **nbk/OFC_LIABILITIES_TO_NONRESIDENTS** — fetch+validate+process: ok (downloaded=15, processed=15)
@@ -1077,12 +1076,54 @@ Tests passed: True
   - warning: Unexpected jump of 89.3% in value between 2021-10-01 (10664470.080022218) and 2024-07-01 (20186100.00286501).
 - **minfin/GOV_DEBT_EXTERNAL** — fetch+validate+process: ok (downloaded=11, processed=11)
   - warning: Gap of 1004 days between 2021-10-01 and 2024-07-01 is outside expected range for frequency=quarterly (80-100d).
-- **minfin/GG_TAXES** — fetch+validate+process: ok (downloaded=4, processed=4)
-- **minfin/GG_SOCIAL_CONTRIBUTIONS** — fetch+validate+process: ok (downloaded=4, processed=4)
-- **minfin/GG_CASH_SURPLUS_DEFICIT** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/GG_TAXES** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
+- **minfin/GG_SOCIAL_CONTRIBUTIONS** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 57.2% in value between 2019-10-01 (92717.02600000003) and 2020-01-01 (145718.743).
+  - warning: Unexpected jump of 90.6% in value between 2021-01-01 (73744.766) and 2021-04-01 (6909.248000000005).
+  - warning: Unexpected jump of 3351.2% in value between 2021-04-01 (6909.248000000005) and 2021-07-01 (238451.813).
+  - warning: Unexpected jump of 54.0% in value between 2021-07-01 (238451.813) and 2021-10-01 (109580.69299999997).
+  - warning: Unexpected jump of 313.3% in value between 2022-01-01 (122661.0) and 2022-04-01 (506981.27800000005).
+  - warning: Unexpected jump of 89.7% in value between 2022-07-01 (529838.0810000001) and 2022-10-01 (54650.42199999993).
+  - warning: Unexpected jump of 546.2% in value between 2022-10-01 (54650.42199999993) and 2023-01-01 (353144.44982000004).
+  - warning: Unexpected jump of 245.0% in value between 2023-07-01 (366118.90999999986) and 2023-10-01 (1262972.539).
+  - warning: Unexpected jump of 68.5% in value between 2023-10-01 (1262972.539) and 2024-01-01 (397493.572).
+- **minfin/GG_CASH_SURPLUS_DEFICIT** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 52.0% in value between 2019-10-01 (-250916.60798209533) and 2020-01-01 (-381343.48881481064).
+  - warning: Unexpected jump of 234.4% in value between 2020-01-01 (-381343.48881481064) and 2021-01-01 (-1275300.8272018605).
+  - warning: Unexpected jump of 55.2% in value between 2021-01-01 (-1275300.8272018605) and 2021-04-01 (-571044.759064831).
+  - warning: Unexpected jump of 96.9% in value between 2021-04-01 (-571044.759064831) and 2021-07-01 (-17425.756952329946).
+  - warning: Unexpected jump of 4989.7% in value between 2021-07-01 (-17425.756952329946) and 2021-10-01 (-886916.1184843306).
+  - warning: Unexpected jump of 158.9% in value between 2021-10-01 (-886916.1184843306) and 2022-01-01 (522065.1325183007).
+  - warning: Unexpected jump of 181.7% in value between 2022-01-01 (522065.1325183007) and 2022-04-01 (1470827.9447816992).
+  - warning: Unexpected jump of 175.4% in value between 2022-04-01 (1470827.9447816992) and 2022-07-01 (-1109016.7054016993).
+  - warning: Unexpected jump of 121.0% in value between 2022-10-01 (-897001.2492683001) and 2023-01-01 (188595.4212616301).
+  - warning: Unexpected jump of 127.2% in value between 2023-01-01 (188595.4212616301) and 2023-04-01 (-51253.952961635034).
+  - warning: Unexpected jump of 160.8% in value between 2023-04-01 (-51253.952961635034) and 2023-07-01 (-133682.33699999246).
+  - warning: Unexpected jump of 1012.6% in value between 2023-07-01 (-133682.33699999246) and 2023-10-01 (1219931.6138144995).
+  - warning: Unexpected jump of 122.4% in value between 2023-10-01 (1219931.6138144995) and 2024-01-01 (-273677.80152991903).
+  - warning: Unexpected jump of 363.0% in value between 2024-04-01 (-300695.30380014086) and 2024-07-01 (790708.0638805606).
+  - warning: Unexpected jump of 51.0% in value between 2024-07-01 (790708.0638805606) and 2024-10-01 (387589.57756531663).
+  - warning: Unexpected jump of 187.2% in value between 2024-10-01 (387589.57756531663) and 2025-01-01 (-337893.34243903897).
   - warning: Unexpected jump of 473.1% in value between 2025-01-01 (-337893.34243903897) and 2025-04-01 (-1936306.6720745338).
   - warning: Unexpected jump of 225.0% in value between 2025-04-01 (-1936306.6720745338) and 2025-07-01 (2420012.540493233).
-- **minfin/GG_INTEREST** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 93.2% in value between 2025-10-01 (2180188.231371036) and 2026-01-01 (148601.7281751192).
+  - warning: Unexpected jump of 1153.4% in value between 2026-01-01 (148601.7281751192) and 2026-04-01 (-1565373.91449593).
+- **minfin/GG_INTEREST** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 95.0% in value between 2019-10-01 (109888.48587770008) and 2020-01-01 (214309.35250448).
+  - warning: Unexpected jump of 53.7% in value between 2020-01-01 (214309.35250448) and 2021-01-01 (329394.06733212).
+  - warning: Unexpected jump of 54.8% in value between 2021-07-01 (306443.11887835007) and 2021-10-01 (138496.89841074985).
+  - warning: Unexpected jump of 192.7% in value between 2021-10-01 (138496.89841074985) and 2022-01-01 (405314.67347184).
+  - warning: Unexpected jump of 63.8% in value between 2022-07-01 (398066.87259999994) and 2022-10-01 (144296.49509999997).
+  - warning: Unexpected jump of 287.7% in value between 2022-10-01 (144296.49509999997) and 2023-01-01 (559456.7300252101).
+  - warning: Unexpected jump of 53.5% in value between 2023-07-01 (540868.8146) and 2023-10-01 (251636.96430000005).
+  - warning: Unexpected jump of 187.5% in value between 2023-10-01 (251636.96430000005) and 2024-01-01 (723390.2845831).
+  - warning: Unexpected jump of 58.5% in value between 2024-07-01 (582223.49684495) and 2024-10-01 (241553.9249606495).
+  - warning: Unexpected jump of 306.5% in value between 2024-10-01 (241553.9249606495) and 2025-01-01 (982033.00317685).
+  - warning: Unexpected jump of 257.2% in value between 2025-10-01 (334497.1181666395) and 2026-01-01 (1194927.1597884002).
 - **minfin/STATE_TAX_REVENUE_YTD** — fetch+validate+process: ok (downloaded=104, processed=104)
   - warning: Gap of 365 days between 2016-12-01 and 2017-12-01 is outside expected range for frequency=monthly (25-40d).
   - warning: Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
@@ -1566,6 +1607,57 @@ Tests passed: True
   - warning: Unexpected jump of 182.9% in own-period contribution between 2026-03-31 (1776.7993867) and 2026-05-31 (5026.86259207).
   - warning: Unexpected jump of 63.7% in own-period contribution between 2026-05-31 (5026.86259207) and 2026-06-30 (1822.499613).
   - warning: Unexpected jump of 78.9% in own-period contribution between 2026-06-30 (1822.499613) and 2026-07-31 (385.11558830000104).
+- **imf/FSI_CAPITAL_ADEQUACY** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Unexpected jump of 79.6% in value between 2009-12-31 (9.519266702175827) and 2010-03-31 (17.10033929150852).
+- **imf/FSI_TIER1_CAPITAL** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Unexpected jump of 119.7% in value between 2009-12-31 (5.904242537941516) and 2010-03-31 (12.97271185413035).
+- **imf/FSI_NPL_RATIO** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Unexpected jump of 163.1% in value between 2008-12-31 (6.810153801380004) and 2009-03-31 (17.91472118013967).
+  - warning: Unexpected jump of 129.4% in value between 2009-03-31 (17.91472118013967) and 2009-06-30 (41.10462703839628).
+  - warning: Unexpected jump of 51.0% in value between 2011-06-30 (36.05740195026148) and 2011-09-30 (54.45062888966379).
+  - warning: Unexpected jump of 82.2% in value between 2017-03-31 (10.58645660958795) and 2017-06-30 (19.28508736983701).
+  - warning: Unexpected jump of 73.0% in value between 2017-09-30 (13.43877604905746) and 2017-12-31 (3.632156910305266).
+  - warning: Unexpected jump of 60.5% in value between 2018-03-31 (3.983334908184628) and 2018-06-30 (6.395076235826054).
+- **imf/FSI_ROA** — fetch+validate+process: ok (downloaded=68, processed=68)
+  - warning: Unexpected jump of 934.9% in value between 2009-01-01 (-1.145852382940305) and 2009-04-01 (-11.85822566865).
+  - warning: Unexpected jump of 282.0% in value between 2009-10-01 (-6.533727142503979) and 2010-01-01 (11.88879617349405).
+  - warning: Unexpected jump of 92.9% in value between 2010-10-01 (2.528119437845606) and 2011-01-01 (0.1792947843985423).
+  - warning: Unexpected jump of 208.2% in value between 2011-01-01 (0.1792947843985423) and 2011-04-01 (0.552556081195331).
+  - warning: Unexpected jump of 64.8% in value between 2011-07-01 (0.716450141360997) and 2011-10-01 (1.180954607986713).
+  - warning: Unexpected jump of 95.3% in value between 2013-10-01 (2.03268937751695) and 2014-01-01 (0.09616699005327214).
+  - warning: Unexpected jump of 1086.6% in value between 2014-01-01 (0.09616699005327214) and 2014-04-01 (1.141094650452197).
+  - warning: Unexpected jump of 72.1% in value between 2014-07-01 (1.571859939932081) and 2014-10-01 (2.705124347844517).
+  - warning: Unexpected jump of 58.3% in value between 2015-01-01 (2.231709444817533) and 2015-04-01 (0.9304803025281119).
+  - warning: Unexpected jump of 56.2% in value between 2015-04-01 (0.9304803025281119) and 2015-07-01 (1.453245863731273).
+  - warning: Unexpected jump of 120.1% in value between 2017-04-01 (1.869349982359225) and 2017-07-01 (-0.375835048335595).
+  - warning: Unexpected jump of 138.3% in value between 2017-07-01 (-0.375835048335595) and 2017-10-01 (0.1440978315525113).
+  - warning: Unexpected jump of 2332.2% in value between 2017-10-01 (0.1440978315525113) and 2018-01-01 (3.504721362348867).
+  - warning: Unexpected jump of 82.3% in value between 2018-10-01 (3.037283778788779) and 2019-01-01 (0.5363935993493536).
+  - warning: Unexpected jump of 368.1% in value between 2019-01-01 (0.5363935993493536) and 2019-04-01 (2.51066670579322).
+- **imf/FSI_ROE** — fetch+validate+process: ok (downloaded=68, processed=68)
+  - warning: Unexpected jump of 1089.7% in value between 2009-01-01 (-11.35784690911062) and 2009-04-01 (-135.1218383648785).
+  - warning: Unexpected jump of 273.8% in value between 2009-10-01 (-94.15649230994136) and 2010-01-01 (163.660145111343).
+  - warning: Unexpected jump of 50.8% in value between 2010-07-01 (55.99670578475362) and 2010-10-01 (27.52376127977955).
+  - warning: Unexpected jump of 101.7% in value between 2010-10-01 (27.52376127977955) and 2011-01-01 (-0.4569215204689364).
+  - warning: Unexpected jump of 923.2% in value between 2011-01-01 (-0.4569215204689364) and 2011-04-01 (3.761230616257796).
+  - warning: Unexpected jump of 59.8% in value between 2011-07-01 (5.331049546926054) and 2011-10-01 (8.51921661577041).
+  - warning: Unexpected jump of 118.9% in value between 2013-10-01 (13.17047078317771) and 2014-01-01 (-2.493344502182155).
+  - warning: Unexpected jump of 295.6% in value between 2014-01-01 (-2.493344502182155) and 2014-04-01 (4.877082969786738).
+  - warning: Unexpected jump of 85.4% in value between 2014-04-01 (4.877082969786738) and 2014-07-01 (9.043193999349755).
+  - warning: Unexpected jump of 126.7% in value between 2014-07-01 (9.043193999349755) and 2014-10-01 (20.50185995130348).
+  - warning: Unexpected jump of 65.3% in value between 2015-01-01 (13.70090314471169) and 2015-04-01 (4.757404905224663).
+  - warning: Unexpected jump of 79.3% in value between 2015-04-01 (4.757404905224663) and 2015-07-01 (8.531586726734977).
+  - warning: Unexpected jump of 56.2% in value between 2015-10-01 (9.435208151972333) and 2016-01-01 (14.73999010890031).
+  - warning: Unexpected jump of 140.3% in value between 2017-04-01 (13.94319095242992) and 2017-07-01 (-5.618872352972675).
+  - warning: Unexpected jump of 62.2% in value between 2017-07-01 (-5.618872352972675) and 2017-10-01 (-2.121816342766462).
+  - warning: Unexpected jump of 1423.2% in value between 2017-10-01 (-2.121816342766462) and 2018-01-01 (28.07530967459699).
+  - warning: Unexpected jump of 131.1% in value between 2018-10-01 (21.29274841030291) and 2019-01-01 (-6.619779781172574).
+  - warning: Unexpected jump of 308.3% in value between 2019-01-01 (-6.619779781172574) and 2019-04-01 (13.78625280740589).
+  - warning: Unexpected jump of 50.4% in value between 2022-01-01 (31.32398191664181) and 2022-04-01 (15.54610147303262).
+  - warning: Unexpected jump of 65.6% in value between 2022-04-01 (15.54610147303262) and 2022-07-01 (25.73851466440785).
+- **imf/FSI_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=72, processed=72)
+- **imf/FSI_LIQUID_TO_SHORT_TERM_LIABILITIES** — fetch+validate+process: ok (downloaded=72, processed=72)
+- **imf/FSI_FX_LOANS_SHARE** — fetch+validate+process: ok (downloaded=72, processed=72)
 - **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
   - warning: Unexpected jump of 106.1% in value between 1995-12-31 (-8.2) and 1996-12-31 (0.5).
   - warning: Unexpected jump of 240.0% in value between 1996-12-31 (0.5) and 1997-12-31 (1.7).
@@ -1837,10 +1929,10 @@ Tests passed: True
 - **ardfm/BANK_PROVISIONS_IFRS** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_CAPITAL_ADEQUACY_K1** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_CAPITAL_ADEQUACY_K2** — fetch+validate+process: ok (downloaded=3, processed=3)
-- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=5, processed=5)
-- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=5, processed=5)
-- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=5, processed=5)
-  - warning: Unexpected jump of 100.0% in own-period contribution between 2026-02-01 (795.9) and 2026-03-01 (0.0).
+- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=6, processed=6)
+  - warning: Unexpected jump of 100.0% in own-period contribution between 2026-01-01 (795.9) and 2026-02-01 (0.0).
 - **ardfm/BANK_ASSETS_TOTAL** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_ASSETS_GROSS** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_LIABILITIES_TOTAL** — fetch+validate+process: ok (downloaded=3, processed=3)
@@ -1848,7 +1940,7 @@ Tests passed: True
 - **ardfm/BANK_DEPOSITS_LEGAL_ENTITIES** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_DEPOSITS_INDIVIDUALS** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_DEPOSITS_INDIVIDUALS_FX_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
-- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=6, processed=6)
 - **ardfm/BANK_ASSETS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_LOANS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_DEPOSITS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
@@ -6136,83 +6228,85 @@ Tests passed: True
   - warning: [U] Unexpected jump of 565.3% in value between 2009-12-31 (0.075) and 2012-12-31 (0.499).
   - warning: [U] Unexpected jump of 54.7% in value between 2014-12-31 (0.552) and 2015-12-31 (0.25).
 - **nbk/CAPACITY_UTILIZATION_BY_SECTOR** — fetch+validate+process: ok (downloaded=588, processed=588)
-- **wb/WGI_GE** — fetch+validate+process: ok (downloaded=5168, processed=5168)
+- **wb/WGI_GE** — fetch+validate+process: ok (downloaded=5373, processed=5373)
   - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AFG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ALB@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ALB@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ALB@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: [ALB@world] Unexpected jump of 55.1% in value between 2004-12-31 (-0.449955899999999) and 2005-12-31 (-0.697942699999999).
-  - warning: [ALB@world] Unexpected jump of 122.5% in value between 2013-12-31 (-0.356418399999999) and 2014-12-31 (0.0801175).
-  - warning: [ALB@world] Unexpected jump of 129.1% in value between 2014-12-31 (0.0801175) and 2015-12-31 (0.1835585).
-  - warning: [ALB@world] Unexpected jump of 90.1% in value between 2018-12-31 (0.2684643) and 2019-12-31 (0.0266494).
-  - warning: [ALB@world] Unexpected jump of 496.7% in value between 2020-12-31 (0.0187103) and 2021-12-31 (0.1116368).
-  - warning: [ALB@world] Unexpected jump of 72.9% in value between 2021-12-31 (0.1116368) and 2022-12-31 (0.1929668).
-  - warning: [ALB@world] Unexpected jump of 52.1% in value between 2022-12-31 (0.1929668) and 2023-12-31 (0.293429).
+  - warning: [ALB@world] Unexpected jump of 58.2% in value between 2011-12-31 (-0.1676611) and 2012-12-31 (-0.2653137).
+  - warning: [ALB@world] Unexpected jump of 126.5% in value between 2013-12-31 (-0.3092996) and 2014-12-31 (0.0820916).
+  - warning: [ALB@world] Unexpected jump of 127.7% in value between 2014-12-31 (0.0820916) and 2015-12-31 (0.1869501).
+  - warning: [ALB@world] Unexpected jump of 60.9% in value between 2018-12-31 (0.2962959) and 2019-12-31 (0.115817).
+  - warning: [ALB@world] Unexpected jump of 108.1% in value between 2019-12-31 (0.115817) and 2020-12-31 (-0.0093366).
+  - warning: [ALB@world] Unexpected jump of 1257.4% in value between 2020-12-31 (-0.0093366) and 2021-12-31 (0.1080629).
+  - warning: [ALB@world] Unexpected jump of 77.9% in value between 2021-12-31 (0.1080629) and 2022-12-31 (0.192283).
   - warning: [DZA@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [DZA@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [DZA@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: [DZA@world] Unexpected jump of 72.3% in value between 2020-12-31 (-0.2693237) and 2021-12-31 (-0.4641151).
-  - warning: [ASM@world] Unexpected jump of 363.6% in value between 2004-12-31 (-0.0644599) and 2005-12-31 (-0.298856499999999).
-  - warning: [ASM@world] Unexpected jump of 172.6% in value between 2006-12-31 (-0.3018027) and 2007-12-31 (0.2189602).
-  - warning: [ASM@world] Unexpected jump of 225.1% in value between 2013-12-31 (0.23624) and 2014-12-31 (0.767958).
+  - warning: [ASM@world] Unexpected jump of 234.0% in value between 2004-12-31 (-0.0987958) and 2005-12-31 (-0.3299803).
+  - warning: [ASM@world] Unexpected jump of 157.3% in value between 2006-12-31 (-0.331042) and 2007-12-31 (0.1896806).
+  - warning: [ASM@world] Unexpected jump of 250.1% in value between 2013-12-31 (0.215171) and 2014-12-31 (0.7532867).
   - warning: [AND@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AND@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AND@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: [AND@world] Unexpected jump of 70.0% in value between 2005-12-31 (0.7337585) and 2006-12-31 (1.2471197).
+  - warning: [AND@world] Unexpected jump of 73.1% in value between 2005-12-31 (0.7083444) and 2006-12-31 (1.2264451).
   - warning: [AGO@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AGO@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AGO@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: [AGO@world] Unexpected jump of 95.6% in value between 1996-12-31 (-0.5703424) and 1998-12-31 (-1.11557479999999).
+  - warning: [AGO@world] Unexpected jump of 70.6% in value between 1996-12-31 (-0.7507979) and 1998-12-31 (-1.280924).
   - warning: [ATG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ATG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: ... 1158 more warnings not listed
-- **wb/WGI_RQ** — fetch+validate+process: ok (downloaded=5169, processed=5169)
+  - warning: [ATG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: ... 1179 more warnings not listed
+- **wb/WGI_RQ** — fetch+validate+process: ok (downloaded=5374, processed=5374)
   - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AFG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ALB@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ALB@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ALB@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: [ALB@world] Unexpected jump of 63.1% in value between 2005-12-31 (-0.355651799999999) and 2006-12-31 (-0.1313664).
-  - warning: [ALB@world] Unexpected jump of 94.7% in value between 2006-12-31 (-0.1313664) and 2007-12-31 (-0.00691089999999999).
-  - warning: [ALB@world] Unexpected jump of 653.1% in value between 2007-12-31 (-0.00691089999999999) and 2008-12-31 (0.0382242).
-  - warning: [ALB@world] Unexpected jump of 234.0% in value between 2008-12-31 (0.0382242) and 2009-12-31 (0.1276639).
-  - warning: [ALB@world] Unexpected jump of 255.3% in value between 2011-12-31 (0.053824) and 2012-12-31 (-0.0835796999999999).
-  - warning: [ALB@world] Unexpected jump of 188.4% in value between 2013-12-31 (-0.0639441999999999) and 2014-12-31 (0.056535).
-  - warning: [ALB@world] Unexpected jump of 71.9% in value between 2016-12-31 (0.0642829999999999) and 2017-12-31 (0.1105237).
-  - warning: [ALB@world] Unexpected jump of 121.3% in value between 2019-12-31 (0.0917374) and 2020-12-31 (-0.0195592999999999).
-  - warning: [ALB@world] Unexpected jump of 74.7% in value between 2020-12-31 (-0.0195592999999999) and 2021-12-31 (-0.0049463).
-  - warning: [ALB@world] Unexpected jump of 414.9% in value between 2021-12-31 (-0.0049463) and 2022-12-31 (0.0155769).
-  - warning: [ALB@world] Unexpected jump of 306.1% in value between 2022-12-31 (0.0155769) and 2023-12-31 (0.0632513).
-  - warning: [ALB@world] Unexpected jump of 114.6% in value between 2023-12-31 (0.0632513) and 2024-12-31 (0.1357347).
+  - warning: [ALB@world] Unexpected jump of 75.9% in value between 2005-12-31 (-0.3048729) and 2006-12-31 (-0.0736101).
+  - warning: [ALB@world] Unexpected jump of 150.3% in value between 2006-12-31 (-0.0736101) and 2007-12-31 (0.0369915).
+  - warning: [ALB@world] Unexpected jump of 96.0% in value between 2007-12-31 (0.0369915) and 2008-12-31 (0.0724895).
+  - warning: [ALB@world] Unexpected jump of 108.9% in value between 2008-12-31 (0.0724895) and 2009-12-31 (0.1514581).
+  - warning: [ALB@world] Unexpected jump of 131.8% in value between 2011-12-31 (0.0795064) and 2012-12-31 (-0.0253159).
+  - warning: [ALB@world] Unexpected jump of 66.0% in value between 2012-12-31 (-0.0253159) and 2013-12-31 (-0.0086184).
+  - warning: [ALB@world] Unexpected jump of 1402.0% in value between 2013-12-31 (-0.0086184) and 2014-12-31 (0.1122108).
+  - warning: [ALB@world] Unexpected jump of 62.6% in value between 2014-12-31 (0.1122108) and 2015-12-31 (0.0419841).
+  - warning: [ALB@world] Unexpected jump of 68.9% in value between 2015-12-31 (0.0419841) and 2016-12-31 (0.0709287).
+  - warning: [ALB@world] Unexpected jump of 62.3% in value between 2016-12-31 (0.0709287) and 2017-12-31 (0.1151517).
+  - warning: [ALB@world] Unexpected jump of 63.9% in value between 2019-12-31 (0.163741) and 2020-12-31 (0.0591864).
+  - warning: [ALB@world] Unexpected jump of 74.1% in value between 2022-12-31 (0.0598038) and 2023-12-31 (0.1040899).
+  - warning: [ALB@world] Unexpected jump of 142.8% in value between 2023-12-31 (0.1040899) and 2024-12-31 (0.2527435).
   - warning: [DZA@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [DZA@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [DZA@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: [ASM@world] Unexpected jump of 494.7% in value between 2004-12-31 (0.0975081) and 2005-12-31 (0.5798426).
-  - warning: [ASM@world] Unexpected jump of 74.2% in value between 2013-12-31 (0.5635653) and 2014-12-31 (0.1453016).
-  - warning: [ASM@world] Unexpected jump of 147.2% in value between 2016-12-31 (0.1589592) and 2017-12-31 (-0.0750966).
-  - warning: [ASM@world] Unexpected jump of 660.5% in value between 2019-12-31 (-0.0709177) and 2020-12-31 (0.3974735).
+  - warning: [ASM@world] Unexpected jump of 632.2% in value between 2004-12-31 (0.0778281) and 2005-12-31 (0.5698671).
+  - warning: [ASM@world] Unexpected jump of 75.0% in value between 2013-12-31 (0.5534562) and 2014-12-31 (0.1381031).
+  - warning: [ASM@world] Unexpected jump of 158.9% in value between 2016-12-31 (0.1468832) and 2017-12-31 (-0.086513).
+  - warning: [ASM@world] Unexpected jump of 588.3% in value between 2019-12-31 (-0.0796304) and 2020-12-31 (0.388867).
   - warning: [AND@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AND@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AND@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AGO@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: [AGO@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: ... 1071 more warnings not listed
-- **wb/WGI_RL** — fetch+validate+process: ok (downloaded=5296, processed=5296)
+  - warning: ... 1074 more warnings not listed
+- **wb/WGI_RL** — fetch+validate+process: ok (downloaded=5503, processed=5503)
   - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AFG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ALB@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ALB@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ALB@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: [ALB@world] Unexpected jump of 120.9% in value between 1996-12-31 (-0.394600599999999) and 1998-12-31 (-0.871855199999999).
-  - warning: [ALB@world] Unexpected jump of 67.1% in value between 2018-12-31 (-0.1743527) and 2019-12-31 (-0.291428099999999).
+  - warning: [ALB@world] Unexpected jump of 87.1% in value between 1996-12-31 (-0.5113104) and 1998-12-31 (-0.9565596).
+  - warning: [ALB@world] Unexpected jump of 61.5% in value between 2018-12-31 (-0.17177) and 2019-12-31 (-0.2774219).
+  - warning: [ALB@world] Unexpected jump of 63.8% in value between 2024-12-31 (-0.1072169) and 2025-12-31 (-0.0387779).
   - warning: [DZA@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [DZA@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [DZA@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: [ASM@world] Unexpected jump of 91.5% in value between 2004-12-31 (0.5451769) and 2005-12-31 (1.0437479).
+  - warning: [DZA@world] Unexpected jump of 53.0% in value between 2000-12-31 (-1.3080047) and 2002-12-31 (-0.6144935).
+  - warning: [ASM@world] Unexpected jump of 93.2% in value between 2004-12-31 (0.5487895) and 2005-12-31 (1.0602739).
   - warning: [AND@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AND@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AND@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
@@ -6222,16 +6316,14 @@ Tests passed: True
   - warning: [ATG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ATG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ATG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: [ATG@world] Unexpected jump of 64.4% in value between 2014-12-31 (0.5532204) and 2015-12-31 (0.9093919).
+  - warning: [ATG@world] Unexpected jump of 74.1% in value between 2014-12-31 (0.521044) and 2015-12-31 (0.9072456).
   - warning: [ARG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ARG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ARG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: [ARG@world] Unexpected jump of 73.6% in value between 1996-12-31 (0.1293667) and 1998-12-31 (0.0341532).
-  - warning: [ARG@world] Unexpected jump of 570.1% in value between 1998-12-31 (0.0341532) and 2000-12-31 (-0.160553).
-  - warning: [ARG@world] Unexpected jump of 401.3% in value between 2000-12-31 (-0.160553) and 2002-12-31 (-0.804874299999999).
-  - warning: [ARG@world] Unexpected jump of 67.2% in value between 2018-12-31 (-0.2022099) and 2019-12-31 (-0.338125599999999).
-  - warning: [ARM@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: ... 976 more warnings not listed
+  - warning: [ARG@world] Unexpected jump of 94.5% in value between 1996-12-31 (0.0924197) and 1998-12-31 (0.0050634).
+  - warning: [ARG@world] Unexpected jump of 3377.3% in value between 1998-12-31 (0.0050634) and 2000-12-31 (-0.1659412).
+  - warning: [ARG@world] Unexpected jump of 370.2% in value between 2000-12-31 (-0.1659412) and 2002-12-31 (-0.7802321).
+  - warning: ... 997 more warnings not listed
 - **wb/WGI_CC** — fetch+validate+process: ok (downloaded=5201, processed=5201)
   - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
@@ -6264,30 +6356,30 @@ Tests passed: True
   - warning: [ARG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ARG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: ... 1043 more warnings not listed
-- **wb/WGI_VA** — fetch+validate+process: ok (downloaded=5285, processed=5285)
+- **wb/WGI_VA** — fetch+validate+process: ok (downloaded=5488, processed=5488)
   - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AFG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ALB@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ALB@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ALB@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: [ALB@world] Unexpected jump of 59.0% in value between 2000-12-31 (-0.524937099999999) and 2002-12-31 (-0.2153127).
-  - warning: [ALB@world] Unexpected jump of 91.7% in value between 2003-12-31 (-0.1267372) and 2004-12-31 (-0.0105244).
-  - warning: [ALB@world] Unexpected jump of 1056.2% in value between 2004-12-31 (-0.0105244) and 2005-12-31 (0.1006314).
-  - warning: [ALB@world] Unexpected jump of 75.9% in value between 2007-12-31 (0.0980996) and 2008-12-31 (0.1726).
-  - warning: [ALB@world] Unexpected jump of 103.8% in value between 2010-12-31 (0.1270914) and 2011-12-31 (-0.0048785).
-  - warning: [ALB@world] Unexpected jump of 1073.9% in value between 2011-12-31 (-0.0048785) and 2012-12-31 (-0.0572675).
-  - warning: [ALB@world] Unexpected jump of 259.8% in value between 2013-12-31 (-0.0615944) and 2014-12-31 (0.0984136999999999).
-  - warning: [ALB@world] Unexpected jump of 100.7% in value between 2020-12-31 (0.0554688) and 2021-12-31 (-0.000404299999999999).
-  - warning: [ALB@world] Unexpected jump of 6079.7% in value between 2021-12-31 (-0.000404299999999999) and 2022-12-31 (0.024176).
-  - warning: [ALB@world] Unexpected jump of 250.5% in value between 2022-12-31 (0.024176) and 2023-12-31 (-0.0363936).
-  - warning: [ALB@world] Unexpected jump of 65.9% in value between 2023-12-31 (-0.0363936) and 2024-12-31 (-0.0124167999999999).
+  - warning: [ALB@world] Unexpected jump of 75.6% in value between 2000-12-31 (-0.4766348) and 2002-12-31 (-0.1162055).
+  - warning: [ALB@world] Unexpected jump of 69.2% in value between 2002-12-31 (-0.1162055) and 2003-12-31 (-0.035791).
+  - warning: [ALB@world] Unexpected jump of 166.5% in value between 2003-12-31 (-0.035791) and 2004-12-31 (0.0237956).
+  - warning: [ALB@world] Unexpected jump of 449.8% in value between 2004-12-31 (0.0237956) and 2005-12-31 (0.13082).
+  - warning: [ALB@world] Unexpected jump of 58.7% in value between 2007-12-31 (0.1483063) and 2008-12-31 (0.2354351).
+  - warning: [ALB@world] Unexpected jump of 64.0% in value between 2010-12-31 (0.1811537) and 2011-12-31 (0.0652195).
+  - warning: [ALB@world] Unexpected jump of 70.9% in value between 2011-12-31 (0.0652195) and 2012-12-31 (0.0189938).
+  - warning: [ALB@world] Unexpected jump of 62.9% in value between 2012-12-31 (0.0189938) and 2013-12-31 (0.00704).
+  - warning: [ALB@world] Unexpected jump of 1883.1% in value between 2013-12-31 (0.00704) and 2014-12-31 (0.1396133).
+  - warning: [ALB@world] Unexpected jump of 54.3% in value between 2022-12-31 (0.1082213) and 2023-12-31 (0.0494378).
+  - warning: [ALB@world] Unexpected jump of 71.7% in value between 2024-12-31 (0.0735983) and 2025-12-31 (0.1263393).
   - warning: [DZA@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [DZA@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [DZA@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ASM@world] Gap of 730 days between 2017-12-31 and 2019-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: [ASM@world] Unexpected jump of 131.2% in value between 2004-12-31 (0.263356) and 2005-12-31 (0.6088416).
-  - warning: [ASM@world] Unexpected jump of 71.4% in value between 2006-12-31 (0.6195371) and 2007-12-31 (1.0616691).
+  - warning: [ASM@world] Unexpected jump of 136.3% in value between 2004-12-31 (0.2494031) and 2005-12-31 (0.5893929).
+  - warning: [ASM@world] Unexpected jump of 72.1% in value between 2006-12-31 (0.597839) and 2007-12-31 (1.0287128).
   - warning: [AND@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AND@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AND@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
@@ -6295,7 +6387,7 @@ Tests passed: True
   - warning: [AGO@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AGO@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ATG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
-  - warning: ... 1063 more warnings not listed
+  - warning: ... 1080 more warnings not listed
 - **wb/WGI_PV** — fetch+validate+process: ok (downloaded=5255, processed=5255)
   - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
