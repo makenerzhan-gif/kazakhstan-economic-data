@@ -3202,9 +3202,14 @@ BOP_HISTORY_TYPE = "USD mln"   # 481's word order; 324 says "mln USD"
 
 
 def _bop_history(line: str, indicator_id: str, recent: dict[str, float]) -> tuple[dict[str, float], str]:
-    """({report_date: amount} for the quarters before 324's first, a note on what was done)."""
+    """({report_date: amount} for the quarters before 324's first, a note on what was done).
+
+    481 is archived under `<indicator_id>_HISTORY`: under the series' own id its download
+    overwrote the dated manifest of the 324 download made moments before (both forms,
+    one manifest; 2026-09-25..26 the manifest named only 481) and its raw file took a
+    time-suffixed name as if 324 had been revised."""
     rows = [{**r, "type": "mln USD"} if _bop_norm(r.get("type")) == _bop_norm(BOP_HISTORY_TYPE) else r
-            for r in _fetch_nbk_form_paginated(BOP_HISTORY_FORM_ID, indicator_id)]
+            for r in _fetch_nbk_form_paginated(BOP_HISTORY_FORM_ID, f"{indicator_id}_HISTORY")]
     first_recent = min(recent)
 
     def select(target: str) -> dict[str, set]:

@@ -629,3 +629,8 @@ removed 101 files / 1 307 MB (insurance 98, the 324 and 481 forms under CURRENT_
 each, replaced by today's canonical copies) and re-pointed their manifests; a manifest without
 `raw_file` is now taken to name the file of its own stem. Record: `data/raw/dedup_2026-09-26.json`
 (`nbk_forms_removed`). Five new tests (`tests/test_nbk_pages.py`).
+
+**Also.** The five BoP series (CURRENT_ACCOUNT_BALANCE, BOP_GOODS/SERVICES_BALANCE, BOP_PRIMARY/SECONDARY_INCOME)
+read form 324 and, for 2000–2019, form 481 under the same id, so the 481 download overwrote the dated manifest
+of the 324 one and was filed as a same-day "revision" (`_HHMMSS`). `_bop_history` now archives 481 under
+`<ID>_HISTORY`: two manifests per series per day, no false revision; the series are unchanged (104 quarters).

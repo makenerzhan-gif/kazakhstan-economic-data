@@ -113,6 +113,39 @@ def test_a_second_run_with_the_same_data_stores_no_new_file(raw_root, monkeypatc
     assert manifest["rows_archived"] == len(ROWS)
 
 
+def test_bop_history_form_gets_its_own_raw_file_and_manifest(raw_root, monkeypatch):
+    """A BoP series reads 324 and, for the quarters before 2020, 481; each download keeps
+    its own dated manifest (481 used to overwrite 324's) and neither is a "revision"."""
+    def form(form_id: int, amount: float) -> list[dict]:
+        rows = [{"report_date": "2020-01-01", "amount": amount, "code": "Goods", "row_id": "1"}]
+        return [{"locale": "en", "formId": form_id, "columns": COLUMNS, "rows": rows, "page": 0,
+                 "pageSize": 500, "totalRows": 1}]
+
+    served = {"324": form(324, 1.0), "481": form(481, 2.0)}
+
+    class Resp:
+        def __init__(self, data):
+            self._data = data
+
+        def raise_for_status(self):
+            pass
+
+        def json(self):
+            return json.loads(json.dumps(self._data))
+
+    monkeypatch.setattr(nbk.requests, "get", lambda url, headers, params, timeout: Resp(served[params["formId"]][0]))
+    nbk._FORM_PAGES_CACHE.clear()
+    nbk._fetch_nbk_form_paginated(nbk.BOP_FORM_ID, "BOP_GOODS_BALANCE")
+    nbk._bop_history("GOODS", "BOP_GOODS_BALANCE", {"2020-01-01": 1.0})
+    today = date.today().isoformat()
+    folder = raw_root / "nbk"
+    assert sorted(p.name for p in folder.glob("*.json") if not p.name.endswith(".manifest.json")) == [
+        f"nbk_bop_goods_balance_{today}.json", f"nbk_bop_goods_balance_history_{today}.json"]
+    for stem, form_id in (("bop_goods_balance", "324"), ("bop_goods_balance_history", "481")):
+        manifest = json.loads((folder / f"nbk_{stem}_{today}.manifest.json").read_text(encoding="utf-8"))
+        assert manifest["form_id"] == form_id and manifest["raw_file"] == f"nbk_{stem}_{today}.json"
+
+
 def test_dedup_nbk_forms_removes_copies_equal_in_canonical_form(raw_root):
     folder = raw_root / "nbk"
     folder.mkdir()
