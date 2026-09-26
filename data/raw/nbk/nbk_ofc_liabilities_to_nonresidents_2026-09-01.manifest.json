@@ -4,6 +4,6 @@
   "form_id": "26",
   "n_pages": 2,
   "total_rows": 621,
-  "raw_file": "nbk_ofc_claims_on_banking_system_2026-09-01.json",
-  "raw_file_note": "byte-identical copy nbk_ofc_liabilities_to_nonresidents_2026-09-01.json removed 2026-09-15; the bytes are in nbk_ofc_claims_on_banking_system_2026-09-01.json"
+  "raw_file": "nbk_ofc_net_foreign_assets_2026-09-26.json",
+  "raw_file_note": "copy nbk_ofc_claims_on_banking_system_2026-09-01.json removed 2026-09-26: same NBK form content as nbk_ofc_net_foreign_assets_2026-09-26.json (equal in the canonical form of scripts/lib/nbk_pages.py -- same rows and values; only page arrangement, row order and per-page column labels differed); the content is in nbk_ofc_net_foreign_assets_2026-09-26.json"
 }

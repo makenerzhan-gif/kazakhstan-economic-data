@@ -720,3 +720,8 @@ their bytes are unknown). No dangling manifest left. Checked live: two WITS runs
 
 The CI run of 2026-09-26 09:45 (old code) added one more insurance copy (`…_094522.json`); removed on
 merging main, same record (116 files in all).
+
+**First CI run on the new code (2026-09-26, run 36239472600).** No new insurance or WITS copy. It archived
+38 NBK forms for the first time in canonical form (18.4 MB); each held the same data as the form's last
+old-format file, so those 38 old copies (18.5 MB) were removed with `dedup_raw --nbk-forms` (same record).
+From now on an NBK form or WITS answer is stored again only when its data change.

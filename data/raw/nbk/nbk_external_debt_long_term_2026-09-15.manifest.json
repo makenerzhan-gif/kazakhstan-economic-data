@@ -3,5 +3,7 @@
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "340",
   "n_pages": 2,
-  "total_rows": 672
+  "total_rows": 672,
+  "raw_file": "nbk_external_debt_long_term_2026-09-26.json",
+  "raw_file_note": "copy nbk_external_debt_long_term_2026-09-15.json removed 2026-09-26: same NBK form content as nbk_external_debt_long_term_2026-09-26.json (equal in the canonical form of scripts/lib/nbk_pages.py -- same rows and values; only page arrangement, row order and per-page column labels differed); the content is in nbk_external_debt_long_term_2026-09-26.json"
 }
