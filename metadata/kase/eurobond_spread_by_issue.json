@@ -9,7 +9,7 @@
   "unit": "basis points",
   "currency": "",
   "geography": "Kazakhstan (national)",
-  "methodology": "YTM minus the FRED constant-maturity Treasury yield (DGS5/7/10/20/30) on the valuation date, linearly interpolated at the remaining maturity. USD bonds only.",
+  "methodology": "YTM minus the FRED constant-maturity Treasury yield (DGS1/2/3/5/7/10/20/30) on the valuation date, linearly interpolated at the remaining maturity. USD bonds with at least a year to maturity. The 2024 and 2025 bonds are unreliable from 2022-04 (near-zero, then negative spreads 2023-04..2024-04; config/source_issues.yaml).",
   "publication_date": null,
   "last_update_date": "2026-09-26",
   "download_date": "2026-09-26",
@@ -17,5 +17,5 @@
   "period_end": "2026-09-01",
   "next_update_date": null,
   "transformation": "level",
-  "revision_status": "original"
+  "revision_status": "revised"
 }

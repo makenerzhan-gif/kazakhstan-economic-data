@@ -22,7 +22,7 @@ from a key in its JavaScript -- not reproduced here; NBK / IMF / FRED / World Ba
 WHAT IS BUILT. The LAST valuation of each month (a month-end observation, dated at the
 first day of the month like the other monthly series). Per issue: clean price and YTM
 (KASE's; computed from the clean price where KASE left it blank, 2019-12 to 2020-10 for the
-USD bonds). Spread = YTM minus the US Treasury constant-maturity yield (FRED DGS5/7/10/20/30
+USD bonds). Spread = YTM minus the US Treasury constant-maturity yield (FRED DGS1/2/3/5/7/10/20/30
 on the valuation date, linearly interpolated at the bond's remaining maturity).
 
 QUALITY -- read before use. 2020-11 to 2022-07 only the 2044 bond is quoted and its values
@@ -31,6 +31,12 @@ is unchanged across May and June 2022). From 2022-08 the 2045 bond is quoted and
 the long bonds agree with each other within about 20 bp. Hence the headline
 KZ_EUROBOND_SPREAD is the 2044 bond to 2020-10, MISSING 2020-11 to 2022-07, and the 2045 bond
 from 2022-08; the per-issue datasets keep every month.
+
+WHY THE GAP IS NOT FILLED WITH THE SHORT BONDS. The 3.875% 2024 and 5.125% 2025 bonds are
+quoted through 2020-11..2022-07, but they are no better: 12-18 bp in April-June 2022 (a stress
+quarter), the two disagreeing ninefold in 2022-09 (150 vs 17 bp), and NEGATIVE spreads from
+2023-04 to 2024-04 (down to -112 bp, while the 2045 bond stood at 120-170 bp) -- KASE valued
+them off local trades close to par. Checked 2026-09-26; see config/source_issues.yaml.
 
 Accumulates: months already processed are kept, only missing months and the last two are
 fetched on each run (the first run back-fills from 2014-10; KASE resets connections under
@@ -76,6 +82,9 @@ USD_BONDS = {
     "XS3093655341": ("KZ_24_3207", 5.0, date(2032, 7, 1)),
     "XS3093658014": ("KZ_25_3707", 5.5, date(2037, 7, 1)),
 }
+# A bond in its last year gives no spread (EMBI drops bonds at 12 months to maturity): a few
+# cents of valuation error move its yield by tens of basis points.
+MIN_YEARS_TO_MATURITY = 1.0
 BENCHMARK = [  # (from month, to month, ISIN); months outside every window are left missing
     (date(2014, 10, 1), date(2020, 10, 1), "XS1120709826"),
     (date(2022, 8, 1), date(9999, 12, 1), "XS1263139856"),
@@ -263,7 +272,7 @@ def ytm_from_clean(clean: float, settle: date, maturity: date, coupon: float) ->
     return round(100 * (lo + hi) / 2, 4)
 
 
-UST_SERIES = {5: "DGS5", 7: "DGS7", 10: "DGS10", 20: "DGS20", 30: "DGS30"}
+UST_SERIES = {1: "DGS1", 2: "DGS2", 3: "DGS3", 5: "DGS5", 7: "DGS7", 10: "DGS10", 20: "DGS20", 30: "DGS30"}
 
 
 def treasury_curve() -> dict[int, dict[str, float]]:
@@ -283,7 +292,7 @@ def treasury_curve() -> dict[int, dict[str, float]]:
 
 
 def treasury_yield(on: date, years: float, curve: dict[int, dict[str, float]]) -> float | None:
-    """The constant-maturity yield at `years`, linear between 5/7/10/20/30, on the last
+    """The constant-maturity yield at `years`, linear between 1/2/3/5/7/10/20/30, on the last
     FRED date at or before `on` (within 7 days)."""
     points = {}
     for tenor, vals in curve.items():
@@ -380,6 +389,8 @@ def spreads() -> dict[str, dict[str, float]]:
             if isin not in USD_BONDS or "ytm" not in b:
                 continue
             years = (USD_BONDS[isin][2] - vdate).days / 365.25
+            if years < MIN_YEARS_TO_MATURITY:
+                continue
             ust = treasury_yield(vdate, years, curve)
             if ust is not None:
                 out.setdefault(month, {})[isin] = round(100 * (b["ytm"] - ust), 1)
@@ -437,7 +448,7 @@ def fetch_benchmark(indicator_id: str) -> tuple[list[dict], dict]:
             records.append({"date": month, "value": v})
     unit = "basis points over US Treasuries" if indicator_id == "KZ_EUROBOND_SPREAD" else "percent per annum"
     return records, {
-        "frequency": "monthly", "source_url": "https://kase.kz (settlement prices) ; FRED DGS5/7/10/20/30",
+        "frequency": "monthly", "source_url": "https://kase.kz (settlement prices) ; FRED DGS1/2/3/5/7/10/20/30",
         "dataset_id": "kase/settlement-prices+FRED",
         "note": (f"{unit.capitalize()}, last KASE valuation of the month of the benchmark long USD Eurobond of the "
                  "Ministry of Finance: 4.875% 2044 (XS1120709826) to 2020-10, 6.5% 2045 (XS1263139856) from 2022-08; "

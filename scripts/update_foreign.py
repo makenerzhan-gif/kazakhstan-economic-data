@@ -24,6 +24,7 @@ FETCHERS = {
     "RU_CPI_YOY": foreign_fetchers.fetch_ru_cpi_yoy,
     "RU_GDP_REAL": foreign_fetchers.fetch_ru_gdp_real,
     "US_FED_FUNDS": foreign_fetchers.fetch_us_fed_funds,
+    "US_TREASURY_1Y": foreign_fetchers.fetch_us_treasury_1y,
     "US_TREASURY_2Y": foreign_fetchers.fetch_us_treasury_2y,
     "US_TREASURY_10Y": foreign_fetchers.fetch_us_treasury_10y,
     "US_CPI": foreign_fetchers.fetch_us_cpi,
@@ -37,6 +38,10 @@ FETCHERS = {
     "EA_DEPOSIT_RATE": foreign_fetchers.fetch_ea_deposit_rate,
     # Last: built from the partner series written above.
     "FOREIGN_DEMAND_YOY": foreign_fetchers.fetch_foreign_demand_yoy,
+    "KZT_USD_RATE_DIFF_ON": foreign_fetchers.fetch_kzt_usd_rate_diff_on,
+    "KZT_USD_RATE_DIFF_1Y": foreign_fetchers.fetch_kzt_usd_rate_diff_1y,
+    "KZT_USD_RATE_DIFF_10Y": foreign_fetchers.fetch_kzt_usd_rate_diff_10y,
+    "KZT_CARRY_EXCESS_RETURN": foreign_fetchers.fetch_kzt_carry_excess_return,
 }
 INDICATOR_IDS = list(FETCHERS)
 

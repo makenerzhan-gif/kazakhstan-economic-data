@@ -1,6 +1,6 @@
 {
   "source": "kase",
-  "source_url": "https://kase.kz (settlement prices) ; FRED DGS5/7/10/20/30",
+  "source_url": "https://kase.kz (settlement prices) ; FRED DGS1/2/3/5/7/10/20/30",
   "dataset_id": "kase/settlement-prices+FRED",
   "indicator_id": "KZ_EUROBOND_YIELD",
   "indicator_name": "Kazakhstan sovereign USD Eurobond yield (2044/2045 benchmark, KASE valuation, end of month)",

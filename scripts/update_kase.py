@@ -20,6 +20,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 FETCHERS = {
     "TONIA": kase_fetchers.fetch_tonia,
+    "SWAP_1D": kase_fetchers.fetch_swap_1d,
     "GS_YIELD_3M": kase_fetchers.fetch_gs_yield_3m,
     "GS_YIELD_6M": kase_fetchers.fetch_gs_yield_6m,
     "GS_YIELD_1Y": kase_fetchers.fetch_gs_yield_1y,

@@ -4915,3 +4915,23 @@ New fetcher `scripts/fetchers/kase_eurobonds.py`; 501 indicators.
   within 0.9 bp; LSE's last trade in the 2045 bond (27.07.2026) is within 0.3 points of KASE's value.
 - Not EMBI: one bond, valued by KASE. Accumulates: the first run back-filled 2014-11..2026-09; daily
   runs fetch only missing months and the last two.
+
+## 2026-09-26 — country risk: short Treasury tenors, and the tenge's side of UIP
+
+507 indicators.
+- **Eurobond spreads:** the Treasury curve now has 1/2/3-year points (FRED DGS1/2/3), and a bond in its last
+  year gets no spread (EMBI's 12-month rule). The 2020-11..2022-07 gap of KZ_EUROBOND_SPREAD stays: the short
+  2024/2025 bonds are quoted in that window but are no better — 12-18 bp in April-June 2022, ninefold
+  disagreement in 2022-09 and NEGATIVE spreads (to -112 bp) every month 2023-04..2024-04 while the 2045 bond
+  stood at 120-170 bp (`config/source_issues.yaml`).
+- **SWAP_1D** (KASE «SWAP-1D (USD)», daily from 2014-06): one-day USD/KZT FX swap rate. No KASE methodology is
+  published; in 2024-2026 it tracks TONIA - fed funds, in 2022-12..2023-06 it sat at TONIA + 1 (15-17 %) while
+  the differential was 11-12 %.
+- **Derived (monthly):** KZT_USD_RATE_DIFF_ON (TONIA - fed funds, from 2001), KZT_USD_RATE_DIFF_1Y and _10Y
+  (KASE zero-coupon curve - Treasury constant maturity, from 2019-11), and KZT_CARRY_EXCESS_RETURN — the
+  ex-post excess return of tenge over dollars, (TONIA - FF) - 1200 ln(S_m/S_m-1): its mean is the average UIP
+  premium (2016-2026: 7.1 % p.a., s.e. 3.1; 2023-2026: 10.9, s.e. 4.6); devaluation months -199 (2014-02) and
+  -276 (2015-08). New US_TREASURY_1Y (FRED GS1).
+- **Not available openly:** expected depreciation (NBK open data has inflation expectations only), so the
+  ex-ante currency premium is not published as a series — it is the differential minus expected depreciation,
+  to be estimated in the model.

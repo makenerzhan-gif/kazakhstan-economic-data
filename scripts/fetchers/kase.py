@@ -195,3 +195,25 @@ def fetch_gs_yield_5y() -> tuple[list[dict], dict]:
 
 def fetch_gs_yield_10y() -> tuple[list[dict], dict]:
     return fetch_gs_yield("10Y")
+
+
+def fetch_swap_1d() -> tuple[list[dict], dict]:
+    """SWAP-1D (USD): KASE's weighted-average annualised rate on one-day USD/KZT FX swaps."""
+    import json
+    to = int(datetime.now(tz=timezone.utc).timestamp()) + 86400
+    params = {"symbol": "SWAP_1D", "resolution": "D", "from": 0, "to": to}
+    content = _get(TV_HISTORY_URL, params)
+    _save_raw("SWAP_1D", content, "json", {"source_url": TV_HISTORY_URL, "params": params})
+    records = parse_tv_history(json.loads(content), "SWAP_1D")
+    manifest = {
+        "frequency": "daily", "source_url": f"{TV_HISTORY_URL}?symbol=SWAP_1D&resolution=D",
+        "dataset_id": "kase-tv/SWAP_1D",
+        "note": "Percent per annum, KASE indicator «SWAP-1D (USD)» (fini code SWAP_USDKZT_1): weighted average "
+                "annualised rate on one-day USD/KZT FX swaps on KASE, by trade date, from 2014-06-09. KASE publishes "
+                "no definition beyond the name and unit. Behaviour checked 2026-09-26 against TONIA and the Fed "
+                "funds rate (monthly means): 2024-2026 it tracks the differential TONIA - fed funds (mean gap -0.5 "
+                "pp), but from 2022-12 to 2023-06, with the Fed at 4-5 %, it stayed at TONIA + 1 (15-17 %) instead "
+                "of falling to the differential (11-12 %) -- either a large covered-parity deviation in those "
+                "months or a different construction; read it with that in mind.",
+    }
+    return records, manifest

@@ -2477,4 +2477,4 @@ datasets:
     frequency: monthly
     unit: "basis points"
     category: monetary
-    note: "YTM minus the FRED constant-maturity Treasury yield (DGS5/7/10/20/30) on the valuation date, linearly interpolated at the remaining maturity. USD bonds only."
+    note: "YTM minus the FRED constant-maturity Treasury yield (DGS1/2/3/5/7/10/20/30) on the valuation date, linearly interpolated at the remaining maturity. USD bonds with at least a year to maturity. The 2024 and 2025 bonds are unreliable from 2022-04 (near-zero, then negative spreads 2023-04..2024-04; config/source_issues.yaml)."

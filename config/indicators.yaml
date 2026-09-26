@@ -1249,6 +1249,17 @@ indicators:
     observation_type: period_average
     observation_evidence: "Tenge OverNight Index AVERAGE — усреднение в самом названии индекса"
 
+
+  - id: SWAP_1D
+    name_ru: "Индикатор SWAP-1D (USD): ставка однодневных валютных свопов USD/KZT на KASE"
+    name_en: "SWAP-1D (USD): one-day USD/KZT FX swap rate on KASE"
+    agency: kase
+    frequency: daily
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "KASE: средневзвешенная ставка по сделкам валютного свопа USD/KZT на один день"
   - id: GS_YIELD_3M
     name_ru: "Бескупонная доходность ГЦБ, 3 месяца (кривая KASE, среднее за месяц)"
     name_en: "Government Securities Zero-Coupon Yield, 3M (KASE curve, monthly average)"
@@ -1336,7 +1347,7 @@ indicators:
     category: monetary
     source_status: confirmed
     observation_type: end_of_period
-    observation_evidence: "YTM бенчмарка минус доходность UST постоянной срочности (FRED DGS5/7/10/20/30), интерполированная на срок до погашения"
+    observation_evidence: "YTM бенчмарка минус доходность UST постоянной срочности (FRED DGS1/2/3/5/7/10/20/30), интерполированная на срок до погашения"
   - id: NATIONAL_FUND_TRANSFERS
     name_ru: "Трансферты из Национального фонда в республиканский бюджет"
     name_en: "Transfers from the National Fund"
@@ -5698,6 +5709,18 @@ indicators:
     observation_type: period_average
     observation_evidence: "FRED GS2 — среднее за месяц"
 
+
+  - id: US_TREASURY_1Y
+    name_ru: "Доходность 1-летних казначейских облигаций США"
+    name_en: "US 1-Year Treasury Yield"
+    agency: fred
+    frequency: monthly
+    unit: "% per annum"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED GS1 — среднее за месяц"
   - id: US_TREASURY_10Y
     name_ru: "Доходность 10-летних казначейских облигаций США"
     name_en: "US 10-Year Treasury Yield"
@@ -5843,3 +5866,51 @@ indicators:
     observation_evidence: "средневзвешенный рост ВВП еврозоны, Китая и России по долям экспорта 2023-2025 (config/foreign_demand.yaml)"
     comparison_basis: yoy
     comparison_basis_evidence: "каждый компонент — к соответствующему кварталу прошлого года"
+
+  - id: KZT_USD_RATE_DIFF_ON
+    name_ru: "Дифференциал овернайт-ставок: TONIA минус ставка ФРС"
+    name_en: "Overnight rate differential: TONIA minus effective fed funds"
+    agency: derived
+    frequency: monthly
+    unit: "percentage points"
+    category: international
+    country: KZ
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "средние за месяц TONIA (KASE) и FEDFUNDS (FRED)"
+
+  - id: KZT_USD_RATE_DIFF_1Y
+    name_ru: "Дифференциал доходностей 1 год: ГЦБ РК (кривая KASE) минус UST"
+    name_en: "1-year yield differential: KZ government securities (KASE curve) minus US Treasuries"
+    agency: derived
+    frequency: monthly
+    unit: "percentage points"
+    category: international
+    country: KZ
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "средние за месяц GS_YIELD_1Y и FRED GS1"
+
+  - id: KZT_USD_RATE_DIFF_10Y
+    name_ru: "Дифференциал доходностей 10 лет: ГЦБ РК (кривая KASE) минус UST"
+    name_en: "10-year yield differential: KZ government securities (KASE curve) minus US Treasuries"
+    agency: derived
+    frequency: monthly
+    unit: "percentage points"
+    category: international
+    country: KZ
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "средние за месяц GS_YIELD_10Y и FRED GS10"
+
+  - id: KZT_CARRY_EXCESS_RETURN
+    name_ru: "Избыточная доходность тенгового керри (ex post): дифференциал овернайт минус ослабление тенге, годовых"
+    name_en: "Ex-post tenge carry excess return: overnight differential minus tenge depreciation, annualised"
+    agency: derived
+    frequency: monthly
+    unit: "% per annum"
+    category: international
+    country: KZ
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "(TONIA−FF) за месяц − 1200·ln(S_m/S_m−1), официальный курс НБ РК на конец месяца"

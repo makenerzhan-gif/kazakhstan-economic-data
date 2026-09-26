@@ -1,0 +1,21 @@
+{
+  "source": "derived",
+  "source_url": "data/processed",
+  "dataset_id": "derived/kzt_usd_rate_diff_1y",
+  "indicator_id": "KZT_USD_RATE_DIFF_1Y",
+  "indicator_name": "1-year yield differential: KZ government securities (KASE curve) minus US Treasuries",
+  "description": "Дифференциал доходностей 1 год: ГЦБ РК (кривая KASE) минус UST",
+  "frequency": "monthly",
+  "unit": "percentage points",
+  "currency": "",
+  "geography": "Kazakhstan (trade-weighted partners)",
+  "methodology": "Percentage points, monthly means: KASE zero-coupon government securities yield at 1 year (GS_YIELD_1Y) minus the 1-year Treasury constant-maturity yield (FRED GS1), from 2019-11. Zero-coupon vs par basis -- a few basis points at 1 year.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2019-11-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

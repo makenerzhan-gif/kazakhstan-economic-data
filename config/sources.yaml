@@ -7055,6 +7055,15 @@ agencies:
           2026-09-25. Zero-coupon government securities yield at 10Y: monthly average of the
           daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
           fetch_gs_yield_10y.
+      SWAP_1D:
+        status: confirmed
+        download_url: "https://kase.kz/tv-charts/indicators/history?symbol=SWAP_1D&resolution=D&from=0&to=<unix>"
+        format: json
+        notes: >
+          2026-09-26. The same TradingView feed as TONIA; KASE's catalogue (https://kase.kz/api/indicators/) names it
+          «SWAP-1D (USD)», fini code SWAP_USDKZT_1, unit «% годовых», with no methodology published. Daily from
+          2014-06-09. Tracks TONIA - fed funds in 2024-2026 (mean gap -0.5 pp) but sat at TONIA + 1 in 2022-12..2023-06
+          while the Fed was at 4-5 %: either a covered-parity deviation or a different construction.
       KZ_EUROBOND_SPREAD:
         status: confirmed
         download_url: "https://kase.kz/ru/app-gateway/documents/risk/DD.MM.YYYY/"
@@ -7067,7 +7076,7 @@ agencies:
           -> file.url zips (weekly 2014-2016, daily after; layouts «Еврооблигации МФ РК» to 2020-06, clean only
           2020-07..10, «Расчетные цены» with «Рыночная»/«Индикативная» 2020-11..2024-07). Columns found by
           header text. Last valuation of each month; YTM computed from the clean price where blank (30/360
-          semi-annual, reproduces KASE to 0.01 pp). Treasury leg: FRED DGS5/7/10/20/30. Cross-check: LSE last
+          semi-annual, reproduces KASE to 0.01 pp). Treasury leg: FRED DGS1/2/3/5/7/10/20/30. Cross-check: LSE last
           trade 27.07.2026 in XS1263139856 105.354 vs KASE 105.642; an independent re-computation agrees on all
           121 benchmark months within 0.9 bp. Rejected: AIX (no trades), LSE (history behind a signed widget),
           Deutsche Börse (requests need headers computed from a key in its JavaScript), NBK/IMF/FRED/WB (no series).

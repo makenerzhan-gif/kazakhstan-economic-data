@@ -150,3 +150,16 @@ issues:
     advice: >
       Do not use the 2044 bond for 2020-11 to 2023. The headline KZ_EUROBOND_SPREAD / KZ_EUROBOND_YIELD leave
       2020-11 to 2022-07 missing and switch to the 2045 bond from 2022-08.
+
+  - id: kase_eurobond_short_bonds_2022_2024
+    kind: caveat
+    variable: EUROBOND_SPREAD_BY_ISSUE
+    observations:
+      - {date: "2023-06-01", item: XS1120709669, value: -112.5}
+      - {date: "2023-07-01", item: XS1263054519, value: -112.3}
+    evidence: >
+      KASE valuations of the short USD bonds (3.875% 2024 XS1120709669, 5.125% 2025 XS1263054519): 12-18 bp in
+      April-June 2022, 150 vs 17 bp for the two in 2022-09, and negative spreads over US Treasuries every month
+      from 2023-04 to 2024-04 (down to -112 bp) while the 2045 bond stood at 120-170 bp -- valued off local trades
+      close to par, not the external market. So they cannot fill the 2020-11..2022-07 gap of the headline either.
+    advice: Do not use the 2024 and 2025 bonds' spreads from 2022-04 on.

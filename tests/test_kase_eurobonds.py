@@ -58,3 +58,29 @@ def test_benchmark_windows_leave_the_low_quality_period_out():
     assert K._benchmark("2020-10-01") == "XS1120709826"
     assert K._benchmark("2021-06-01") is None and K._benchmark("2022-07-01") is None
     assert K._benchmark("2022-08-01") == "XS1263139856"
+
+
+def test_short_bonds_get_no_spread_in_their_last_year(monkeypatch):
+    K._CACHE.clear()
+    monkeypatch.setitem(K._CACHE, "history", {"2024-01-01": {"date": "2024-01-31", "bonds": {
+        "XS1120709669": {"code": "KZ_05_2410", "ytm": 5.0},      # 0.7 years left
+        "XS1263054519": {"code": "KZ_07_2507", "ytm": 5.0}}}})   # 1.5 years left
+    monkeypatch.setitem(K._CACHE, "ust", {1: {"2024-01-31": 4.7}, 2: {"2024-01-31": 4.2}})
+    got = K.spreads()
+    assert list(got["2024-01-01"]) == ["XS1263054519"]
+    years = (date(2025, 7, 21) - date(2024, 1, 31)).days / 365.25
+    ust = K.treasury_yield(date(2024, 1, 31), years, K._CACHE["ust"])
+    assert got["2024-01-01"]["XS1263054519"] == pytest.approx(100 * (5.0 - ust), abs=0.1)
+    K._CACHE.clear()
+
+
+def test_carry_excess_return_and_differentials():
+    from fetchers import foreign
+    tonia = {"2015-07-15": 10.0, "2015-07-31": 10.0, "2015-08-14": 12.0, "2015-08-31": 12.0}
+    fed = {"2015-07-01": 0.1, "2015-08-01": 0.1}
+    fx = {"2015-07-31": 187.0, "2015-08-31": 255.0}           # the August 2015 float
+    got = foreign.carry_excess_return(tonia, fed, fx)
+    import math
+    assert list(got) == ["2015-08-01"]
+    assert got["2015-08-01"] == pytest.approx(11.9 - 1200 * math.log(255 / 187), abs=1e-3)
+    assert foreign._monthly_mean({"2026-01-05": 1.0, "2026-01-20": 3.0}) == {"2026-01-01": 2.0}

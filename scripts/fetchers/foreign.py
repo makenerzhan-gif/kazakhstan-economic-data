@@ -241,6 +241,7 @@ def fetch_ru_gdp_real() -> tuple[list[dict], dict]:
 FRED_CSV_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv"
 FRED_SERIES = {
     "US_FED_FUNDS": ("FEDFUNDS", "monthly", "Percent, effective federal funds rate, monthly average."),
+    "US_TREASURY_1Y": ("GS1", "monthly", "Percent, 1-year Treasury constant-maturity yield, monthly average."),
     "US_TREASURY_2Y": ("GS2", "monthly", "Percent, 2-year Treasury constant-maturity yield, monthly average."),
     "US_TREASURY_10Y": ("GS10", "monthly", "Percent, 10-year Treasury constant-maturity yield, monthly average."),
     "US_CPI": ("CPIAUCSL", "monthly", "Index 1982-84 = 100, CPI for all urban consumers, seasonally adjusted "
@@ -274,6 +275,10 @@ def _fetch_fred(indicator_id: str) -> tuple[list[dict], dict]:
 
 def fetch_us_fed_funds() -> tuple[list[dict], dict]:
     return _fetch_fred("US_FED_FUNDS")
+
+
+def fetch_us_treasury_1y() -> tuple[list[dict], dict]:
+    return _fetch_fred("US_TREASURY_1Y")
 
 
 def fetch_us_treasury_2y() -> tuple[list[dict], dict]:
@@ -464,3 +469,99 @@ def fetch_foreign_demand_yoy() -> tuple[list[dict], dict]:
                 f"weighted by their 2023-2025 export shares ({weights}; BNS indicator 312101, reviewed "
                 f"{cfg['reviewed']}). Built from EA_GDP_REAL, CN_GDP_REAL_YOY and RU_GDP_REAL for the quarters all "
                 "three cover (from 2015-Q1)."}
+
+
+# ---------------------------------------------------------------- tenge vs dollar rates (added 2026-09-26)
+# The market side of the tenge's UIP premium: interest differentials against the dollar and
+# the ex-post carry excess return (Fama). The premium itself needs expected depreciation,
+# which no open source publishes for Kazakhstan (NBK open data carries inflation
+# expectations only, form 305) -- so it is left to the model: ex ante premium = the
+# differential minus expected depreciation; its sample mean is estimable from the ex-post
+# excess return below. Built from processed series of this pipeline; monthly, dated at the
+# first day of the month.
+def _monthly_mean(series: dict[str, float]) -> dict[str, float]:
+    sums: dict[str, list[float]] = {}
+    for d, v in series.items():
+        sums.setdefault(d[:7] + "-01", []).append(v)
+    return {m: sum(v) / len(v) for m, v in sums.items()}
+
+
+def _month_last(series: dict[str, float]) -> dict[str, float]:
+    out: dict[str, tuple[str, float]] = {}
+    for d, v in series.items():
+        m = d[:7] + "-01"
+        if m not in out or d > out[m][0]:
+            out[m] = (d, v)
+    return {m: v for m, (_, v) in out.items()}
+
+
+def _differential(indicator_id: str, kzt: tuple[str, str], usd: tuple[str, str], daily_kzt: bool,
+                  note: str) -> tuple[list[dict], dict]:
+    k = _processed(*kzt)
+    u = _processed(*usd)
+    if not k or not u:
+        _structural("derived", indicator_id, f"missing processed {kzt} or {usd}", "data/processed")
+    if daily_kzt:
+        k = _monthly_mean(k)
+        k.pop(date.today().strftime("%Y-%m-01"), None)     # a partial month's mean would move every day
+    common = sorted(set(k) & set(u))
+    return [{"date": m, "value": round(k[m] - u[m], 4)} for m in common], {
+        "frequency": "monthly", "source_url": "data/processed", "dataset_id": f"derived/{indicator_id.lower()}",
+        "note": note}
+
+
+def fetch_kzt_usd_rate_diff_on() -> tuple[list[dict], dict]:
+    return _differential(
+        "KZT_USD_RATE_DIFF_ON", ("kase", "TONIA"), ("fred", "US_FED_FUNDS"), True,
+        "Percentage points, monthly: TONIA (monthly mean of KASE's daily index) minus the effective federal funds "
+        "rate (FRED FEDFUNDS, monthly mean). The overnight tenge-dollar interest differential.")
+
+
+def fetch_kzt_usd_rate_diff_1y() -> tuple[list[dict], dict]:
+    return _differential(
+        "KZT_USD_RATE_DIFF_1Y", ("kase", "GS_YIELD_1Y"), ("fred", "US_TREASURY_1Y"), False,
+        "Percentage points, monthly means: KASE zero-coupon government securities yield at 1 year (GS_YIELD_1Y) "
+        "minus the 1-year Treasury constant-maturity yield (FRED GS1), from 2019-11. Zero-coupon vs par basis -- "
+        "a few basis points at 1 year.")
+
+
+def fetch_kzt_usd_rate_diff_10y() -> tuple[list[dict], dict]:
+    return _differential(
+        "KZT_USD_RATE_DIFF_10Y", ("kase", "GS_YIELD_10Y"), ("fred", "US_TREASURY_10Y"), False,
+        "Percentage points, monthly means: KASE zero-coupon government securities yield at 10 years (GS_YIELD_10Y) "
+        "minus the 10-year Treasury constant-maturity yield (FRED GS10), from 2019-11. The KASE 10-year point is "
+        "an extrapolation of thinly traded long bonds before 2024 (see GS_YIELD_10Y).")
+
+
+def carry_excess_return(tonia: dict[str, float], fed: dict[str, float], usdkzt: dict[str, float]) -> dict[str, float]:
+    """Annualised ex-post excess return (%) of holding tenge overnight rather than dollars over month m:
+    (TONIA - fed funds, means over m) - 1200 * ln(S_end(m) / S_end(m-1)), S = KZT per USD."""
+    import math
+    t, f, s = _monthly_mean(tonia), fed, _month_last(usdkzt)
+    months = sorted(set(t) & set(f) & set(s))
+    out = {}
+    for prev, m in zip(months, months[1:]):
+        py, pm = int(prev[:4]), int(prev[5:7])
+        y, mo = int(m[:4]), int(m[5:7])
+        if (y * 12 + mo) - (py * 12 + pm) != 1:
+            continue
+        out[m] = round((t[m] - f[m]) - 1200 * math.log(s[m] / s[prev]), 4)
+    return out
+
+
+def fetch_kzt_carry_excess_return() -> tuple[list[dict], dict]:
+    tonia, fed, fx = _processed("kase", "TONIA"), _processed("fred", "US_FED_FUNDS"), _processed("nbk", "EXCHANGE_RATE")
+    if not (tonia and fed and fx):
+        _structural("derived", "KZT_CARRY_EXCESS_RETURN", "missing processed TONIA, US_FED_FUNDS or EXCHANGE_RATE",
+                    "data/processed")
+    values = carry_excess_return(tonia, fed, fx)
+    today_month = date.today().strftime("%Y-%m-01")
+    values.pop(today_month, None)                   # the current month is not finished
+    return [{"date": m, "value": v} for m, v in sorted(values.items())], {
+        "frequency": "monthly", "source_url": "data/processed", "dataset_id": "derived/kzt-carry-excess-return",
+        "note": "Percent per annum, ex-post: the return of rolling tenge overnight (TONIA) rather than dollars "
+                "(effective fed funds) over the month, net of the tenge's depreciation against the dollar over the "
+                "month (NBK official rate, last fixing of the month vs the previous month), annualised: "
+                "(TONIA - FF) - 1200 ln(S_m / S_m-1). Under UIP its mean is zero; its sample mean estimates the "
+                "average tenge risk premium, its variation is dominated by the exchange rate (2014-08 and 2015-08 "
+                "devaluations). Overnight rates, so no term premium; onshore TONIA, not an offshore rate."}
