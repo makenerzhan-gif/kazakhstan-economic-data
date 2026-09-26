@@ -1,77 +1,8 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to the first
-one of 2026-09-23 are in docs/UPDATE_LOG_ARCHIVE.md in the repository (not synced into the Claude
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-23 —
+discrete quarters» are in docs/UPDATE_LOG_ARCHIVE.md in the repository (not synced into the Claude
 Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-23 — discrete quarters: the quarterly national accounts (19 QNA_* datasets), and a second vintage of the 2010–2022 history
-
-**Why.** The year-to-date siblings added earlier today are what the dynamic tables offer;
-the user asked for discrete quarters («Найди дискретные кварталы», then «1 вариант» — all
-four tables in full).
-
-**Where they are.** Not in the dynamic tables 4439–4441 / 4435–4437 / 4452–4455 / 5926 /
-5927 / 5931 and not in Taldau (index 2709379 offers «Год» and «Квартал с накоплением» only —
-checked live): the national-accounts «Динамические таблицы» page has a group headed
-«Экспериментальная оценка Валового внутреннего продукта» with four workbooks — 283162 «ВВП
-методом производства (на квартальной основе)», 283161 «ВВП методом конечного использования
-на квартальной основе с сезонной корректировкой», 283160 «ВВП методом доходов (на
-квартальной основе)», 471384 «Валовой региональный продукт на квартальной основе». Their
-annotation: quarterly national accounts compiled with IMF technical assistance, discrete
-quarters benchmarked to the annual accounts (XLPBM, Denton / Cholette-Dagum), seasonal
-adjustment by X13-ARIMA-SEATS in JDemetra+ 2.2.4, and — «параллельно с внедрением КНС» — a
-recalculation of the annual national accounts 2010–2023 to SNA 2008.
-
-**What is stored.** 19 datasets, 37 341 rows, layout `year_quarters` (a year row over four
-quarter sub-columns; `cumulative: true` reads «I квартал | I полугодие | 9 месяцев | год»
-or «Январь - Март … год»; `region_col` for the regional blocks; `components` + `component`
-for the income account, whose activity rows have no numbers and whose component rows repeat
-under each activity):
-
-| element | datasets | rows | periods |
-|---|---|---|---|
-| 283162 production | QNA_GVA_BY_SECTION, _CONSTANT_2010, _VOLUME_INDEX_BY_SECTION, _VOLUME_INDEX_BY_SECTION_YTD, _DEFLATOR_BY_SECTION_YTD, _SA, _SA_CONSTANT_2010 (26 items) | 1 690 / 1 690 / 1 586 / 1 586 / 1 586 / 1 690 / 1 690 | 2010 Q1 (indices 2011 Q1) – 2026 Q1 |
-| 283161 expenditure | QNA_GDP_EXPENDITURE, _CONSTANT_2010, _VOLUME_INDEX, _VOLUME_INDEX_YTD, _DEFLATOR_YTD, _SA, _SA_CONSTANT_2010 (13–16 items) | 1 040 / 910 / 854 / 854 / 854 / 910 / 845 | 2010 Q1 – 2026 Q1 |
-| 283160 income | QNA_GDP_INCOME (4 items); QNA_INCOME_COMPENSATION / _OTHER_NET_TAXES / _GROSS_PROFIT _BY_SECTION (24 items each) | 260; 3 × 1 560 | 2010 Q1 – 2026 Q1 |
-| 471384 regions | QNA_GVA_BY_REGION_SECTION (24 items × 21 regions) | 14 616 | 2019 Q1 – 2026 Q1 |
-
-Not stored, by the de-duplication rule: the cumulative twins of the current- and
-constant-price sheets (283162 1.1/2.1, 283161 1.1/2.1, 283160 1.1/2.1, 471384's second
-sheet) — proven to be the running sums of the discrete quarters (283161: 1 040 + 910
-points, 283160: 260, 283162: 1 690 constant-price points, all equal) — and the ВДС rows of
-the income account, equal to QNA_GVA_BY_SECTION on 1 491 of 1 495 common points (the four
-exceptions, I quarter 2026: A/GOODS 6 034 lower, L/SERVICES 311 169 million KZT higher in
-the income account — recorded in the datasets' notes). The cumulative twins are nonetheless
-re-read on every run (`cumulative_check`): any point that is not the running sum of the
-stored quarters is a warning, the discrete value is kept. Today that warning fires once,
-and it is real: in 471384 the four quarters of 2025 sum above the file's own «год 2025» —
-which equals table 5927 — in five regions (AKM +2.2 %, AKT +20 %, ATY +15 %, ZHM +16 %, ZKO
-+16 %; IV quarter 2025 carries the whole difference; the national total agrees). Two
-misspelt activity labels in 283160 («Оптования и розничная торговля», «Проффесиональная»)
-are mapped by `label_overrides`; the cumulative income twin abbreviates «I кв.» and puts
-numbers on the «Производство услуг» group row — both handled. The four files are 1.3 MB
-together, one raw copy each (the datasets of one file share it).
-
-**Two vintages — the finding that matters for the model.** Q1+Q2+Q3+Q4 of the discrete
-tables equal the dynamic annual tables only for 2023–2025 (283162 vs 4439: 26/26 sections
-equal in each of 2023, 2024, 2025, 0/26 in 2010–2016, 5–8/26 in 2017–2022; 283161 vs 4435
-and 471384 vs 5927 likewise). For 2010–2022 the quarterly tables carry the SNA-2008
-recalculation: GDP 2010 +9.4 %, 2011 +6.5 %, 2012 +5.9 %, 2013 +3.4 %, 2014 +3.1 %, 2015
-+1.6 %, 2016 +0.1 %, 2017 −2.6 %, 2018 −2.9 %, 2019 −2.9 %, 2020 −2.0 %, 2021 −1.6 %, 2022
-−1.5 % against 4439; the volume index differs too (2020: 98.5 vs 97.5). The dynamic tables
-and Taldau (2709379, checked live 2026-09-23: GDP 2010 still 21 815 517 million KZT) have not
-been moved to the revised series. Every QNA_* dataset carries this in `vintage` (metadata
-`methodology`) and a `transformation` that names the vintage; the annual datasets, the
-year-to-date siblings and `config/model_map.yaml` are untouched — the GDP model's 2010–2022
-history stays on the published dynamic-table vintage until its author decides otherwise.
-
-Also: `dims.normalise_region_label` folds «город Астана» to the dictionary's «г. Астана»;
-`dictionaries/income_components.csv` (4 codes) is new; `expenditure_items.csv` tells GDP by
-production (`GDP_PRODUCTION`) from GDP. Tests 338 → 349 (`tests/test_qna.py`,
-`tests/test_qna_cumulative_check.py`).
-
-**Left out.** The cumulative twins as data (running sums); the ВДС component of the income
-account (four points differ, noted); any use in the model.
 
 ## 2026-09-23 — the second vintage in the model: sheet «Факт_КНС» (1 662 values from the QNA_* datasets), option Б
 
@@ -663,10 +594,14 @@ reports as of 1 Feb 2018 … 1 Jul 2026, all parsed). Series: NF_OIL_CIT_YTD, NF
 NF_BONUSES_YTD, NF_MET_YTD, NF_RENT_TAX_EXPORT_YTD, NF_PSA_SHARE_YTD, NF_PSA_ADDITIONAL_PAYMENT_YTD,
 their line NF_OIL_DIRECT_TAXES_YTD, NF_OIL_OTHER_RECEIPTS_YTD (fines, damages, other non-tax),
 NF_OIL_RECEIPTS_YTD (the two lines added), NF_PRIVATIZATION_YTD (privatization + transfer of
-national-company assets to the competitive environment), NF_INVESTMENT_INCOME_YTD (as booked in
-the report: in a monthly report the income of the last period the NBK approved, a quarter or more
-behind; in December the full year), NF_GUARANTEED_TRANSFER_YTD, NF_TARGETED_TRANSFERS_YTD and
-NF_TRANSFERS_YTD. The flow series NATIONAL_FUND_TRANSFERS (NBK, from 2024-02) stays; the Minfin
+national-company assets to the competitive environment; the sale of bank-loan-portfolio assets is
+not in it), NF_INVESTMENT_INCOME_YTD (the receipts line «investment income from the Fund
+management» only: the NBK-approved income of the last approved period, a quarter to three quarters
+behind the month; December is the full year only in 2018, 2020, 2021 — nine months in 2019 and
+2023, 30.3 bn in 2022 — and there is no December 2024 or 2025, the approved annual reports book no
+investment income in receipts; their item «Investment income, total», the NBK's full-year result
+with the exchange-rate revaluation, is not used), NF_GUARANTEED_TRANSFER_YTD,
+NF_TARGETED_TRANSFERS_YTD and NF_TRANSFERS_YTD. The flow series NATIONAL_FUND_TRANSFERS (NBK, from 2024-02) stays; the Minfin
 total is year to date by type from 2018 (2025: 5 250 bn against 5 201 bn summed from NBK months).
 - Lines are found by EN/RU label (rows moved: budget-loan repayment lines in 2025–2026, investment
   income moved out of receipts in the approved annual reports); a line printed blank is zero.
@@ -677,8 +612,21 @@ total is year to date by type from 2018 (2025: 5 250 bn against 5 201 bn summed 
   2024 (866047) stand in for the missing reports as of 1 January 2019 and 2025. The approved 2023
   report (677412) has lines 21–23 one row up (land sales 53 349 = KGD code 303102 stand as
   privatization): `DOC_LINE_EXCLUSIONS` takes 2023 privatization from the 1 January 2024 report.
-- Identity on every report: seven taxes = direct taxes, four items = other oil-sector receipts
-  (2 thousand KZT); a failing report is left out and named in the note. All 106 pass.
+- Four identities on every report (2 thousand KZT): seven taxes = direct taxes, four items =
+  other oil-sector receipts, first-level lines = «Receipts, total», lines = «Application, total». A
+  failing report is left out and named in the note. Two documents are repaired first
+  (`NF_DOC_FIXES`, each fix checked against the labels it expects): in 866029 (as of 1 July 2025,
+  the re-issue with the half-year income) every value from the second budget-loan line to the
+  management expenses sits one row too high — found by the two total identities, the only report
+  failing them; moved back, 2025-06 reads guaranteed transfer 2 000 bn (was 1 120), targeted 1 120
+  (was 23.7), privatization 0.608 (was 1.0), investment income 2 480.8 (was 0). In 946754 (as of 1
+  January 2026) 23 000 000 thousand stands against «transfer to the competitive environment» and
+  the bank-asset line is missing; the approved report for 2025 (Decree No. 1328, NBK file 135446,
+  p. 4) has 2.5 blank and 2.6 «sale of assets by the organization improving banks' loan
+  portfolios» = 23 000 000: 2025-12 privatization is 1.284 bn (was 24.284). All 106 pass.
+- The daily run reads a report from `data/raw/minfin/` when its id is archived there with the size
+  gov.kz writes into the upload path (`…_original.36864.xls`), and downloads only new or re-uploaded
+  ones (checked: 0 of 106 downloaded on the second run).
 - Missing months: May 2018, November 2018 (no report as of 1 June / 1 December 2018), April–May
   2026 (not published). Not interpolated.
 
@@ -700,8 +648,11 @@ seven taxes: largest difference 0.000008 bn. CAEM's holes are filled here: PSA s
 MET and PSA share 2017 (626.350, 285.893), also EPT 2008/2012 and PSA share 2008–2009. 2002–2004
 and 2007–2013 equal CAEM wherever both have a value.
 
-Tests: `tests/test_minfin_nf_receipts.py` (19: synthetic sheets with moved rows and RU labels, the
-identities, blank = zero, the heading → period table incl. the typos, year to date → December =
-year, the December overlap rule, the KGD workbook identity). Full suite: 489 passed. Only the
-15 new fetchers were run live; the unified long file gained 2 287 rows, the wide file 15 columns,
-no existing row or cell changed.
+Tests: `tests/test_minfin_nf_receipts.py` (25: synthetic sheets with moved rows and RU labels, the
+four identities one by one, blank = zero, investment income only from the receipts line, the
+heading → period table incl. the typos, the two document fixes on the archived reports and their
+label guard, the period override, the line exclusion, the latest posting winning, a failing report
+left out, the archive read, December = KGD's January–December column for 2023 and 2024, the
+December overlap rule, the KGD workbook identity). Full suite: 495 passed. Only the 15 new fetchers
+were run live; the unified long file gained 2 285 rows, the wide file 15 columns, no existing row
+or cell changed (against origin/main dfc74557).

@@ -1,0 +1,15 @@
+{
+  "downloaded_at": "2026-09-27T00:09:18.182563",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294",
+  "n_documents": 106,
+  "parsed": 106,
+  "unreadable": [],
+  "identity_failed": [],
+  "fixed": [
+    "866029: values of sheet rows 24-35 moved one row down",
+    "946754: sheet row 26 relabelled «proceeds from the sale of assets by an o…»"
+  ],
+  "revised_points": 0,
+  "downloaded": 0,
+  "read_from_archive": 106
+}

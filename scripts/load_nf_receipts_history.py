@@ -10,7 +10,8 @@ statistika/2015/nacfond_2012_po_nalogam.xls), so it is not a daily source: this 
 reads the page once, archives every by-tax workbook under data/raw/minfin/ as
 NF_RECEIPTS_HISTORY_KGD_<year>, and writes data/reference/nf_receipts_kgd_history.csv.
 The daily Minfin fetcher (scripts/fetchers/minfin.py, _fetch_nf) prepends the months
-before its first report, and only while KGD equals Minfin on every month both carry.
+before its first report, and only while KGD equals Minfin in every December both carry
+(within the year the two differ now and then by payment timing; see nf_merge_history).
 
 Rows are read by their Russian label (the code column appears only from 2015). The seven
 lines kept are the seven taxes of the Minfin report; corporate income tax is the sum of its
