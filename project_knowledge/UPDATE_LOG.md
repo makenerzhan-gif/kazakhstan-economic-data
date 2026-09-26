@@ -630,3 +630,12 @@ Nothing removed from the data: full histories stay in `data/unified/`, full meta
   (index 702177) is published only to 2017 (272.8 bn p-km); 2972310 starts at 106.8 bn in 2021 and breaks again in
   2023 (116.5 → 72.8 bn); 2018–2020 are not published. Not joined; lifecycle note rewritten.
 - Tests: tests/test_lagging_series.py (10).
+
+## 2026-09-26 — a failed dataset no longer blocks the daily run
+
+`update_all.py` used to stop the unified rebuild and the commit on any single `error` (2026-09-25: one BNS file
+format change held back ~660 healthy series). Every updater logs `error` before writing, so a failed dataset
+keeps its previous processed file and unified values; the run now continues, lists the failures at the top of
+the update report and raises one GitHub Actions warning per failure (plus the job summary). It still stops when
+more than 20 % of datasets fail — an outage or a shared-code bug. Test: `failure_gate` in
+tests/test_lagging_series.py.
