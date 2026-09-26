@@ -608,3 +608,24 @@ Nothing removed from the data: full histories stay in `data/unified/`, full meta
 - `UPDATE_LOG.md`: entries 2026-08-30 .. 09-15 moved to `docs/UPDATE_LOG_ARCHIVE.md` (357 → 48 KB here).
 - New `models/{gravity,bvar,rstar}.md`: the model reports, text only.
 - `tests/test_project_knowledge.py` fails if the folder passes 600 KB.
+
+## 2026-09-26 — NBK form downloads archived in canonical form; 101 same-content copies removed
+
+**Why.** The insurance form (formId=132, 13.7 MB, read by INSURANCE_PREMIUMS_GENERAL/LIFE) was archived
+again on nearly every run since 2026-08-31, often several times a day: 102 files, 4 distinct contents.
+The rows were the same and in the same order; what changed on every call was the per-page `columns`
+block — the API labels `residency` "Residency of institutional units" on some pages and "residency"
+(null before 09-15) on others, in a new random mix each time — so the byte-level dedup of
+`lib/raw_store` never matched. Every other form already had one file per content; `row_id` is stable.
+
+**What.** `fetchers.nbk._fetch_nbk_form_paginated` now archives the canonical form of the pages
+(`scripts/lib/nbk_pages.py`): all rows unchanged and none dropped (repeats kept), sorted by
+report_date then full row content; envelope fields once, `n_pages`; distinct column entries sorted;
+sorted keys. Only page boundaries and the API's row order are not kept. The manifest records
+`raw_file`, `raw_format` (`nbk-open-data-form/canonical-v1`), `raw_normalisation`, `rows_archived`.
+Checked live: a second same-day run stores no new file. `scripts/dedup_raw.py --nbk-forms` groups the
+NBK form files by canonical content (keeping a canonical file where one exists, else the earliest),
+removed 101 files / 1 307 MB (insurance 98, the 324 and 481 forms under CURRENT_ACCOUNT_BALANCE one
+each, replaced by today's canonical copies) and re-pointed their manifests; a manifest without
+`raw_file` is now taken to name the file of its own stem. Record: `data/raw/dedup_2026-09-26.json`
+(`nbk_forms_removed`). Five new tests (`tests/test_nbk_pages.py`).
