@@ -2440,3 +2440,41 @@ datasets:
     unit: "KZT per month per 100 household members"
     category: labour
     note: "Taldau 704518, annual 2001-2024 (food from 2004; 2019 not published there -- left missing). Items D01_* / D10_*: money and consumer expenditure, food, eating out, non-food, services, transfers to other households, taxes, debt repayment. The middle deciles are published for 2024 only and are not taken. 2024 equals the annual edition's table 10."
+
+  # ---------------------------------------------------------------- sovereign Eurobonds (added 2026-09-26)
+  # scripts/fetchers/kase_eurobonds.py: the last KASE settlement-price valuation of each month for
+  # every Eurobond of the Ministry of Finance (items = ISIN). Month-end observations dated at the
+  # first day of the month. 2020-11 to 2022-07 only the 2044 bond is quoted, often stale or
+  # «Индикативная» -- kept here, excluded from the headline KZ_EUROBOND_SPREAD.
+  - id: EUROBOND_PRICE_BY_ISSUE
+    name_ru: "Расчётные (чистые) цены еврооблигаций Минфина РК на KASE, конец месяца"
+    name_en: "KASE settlement clean prices of Kazakhstan MinFin Eurobonds, end of month"
+    agency: kase
+    fetcher: kase_eurobonds
+    measure: clean
+    frequency: monthly
+    unit: "percent of par (clean)"
+    category: monetary
+    note: "KASE daily valuation files (risk documents from 2024-08, CMS market-prices archive before). Weekly files in 2014-2016."
+
+  - id: EUROBOND_YTM_BY_ISSUE
+    name_ru: "Доходность к погашению еврооблигаций Минфина РК (оценка KASE), конец месяца"
+    name_en: "Yield to maturity of Kazakhstan MinFin Eurobonds (KASE valuation), end of month"
+    agency: kase
+    fetcher: kase_eurobonds
+    measure: ytm
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    note: "KASE's YTM; where KASE left it blank (USD bonds 2019-12 to 2020-10) computed from the clean price, 30/360 semi-annual (reproduces KASE's to 0.01 pp). EUR bonds (KZ_10_2811, KZ_14_2609, KZ_27_3409) are EUR yields."
+
+  - id: EUROBOND_SPREAD_BY_ISSUE
+    name_ru: "Спред долларовых еврооблигаций Минфина РК к UST, по выпускам, конец месяца"
+    name_en: "Spread of Kazakhstan MinFin USD Eurobonds over US Treasuries, by issue, end of month"
+    agency: kase
+    fetcher: kase_eurobonds
+    measure: spread
+    frequency: monthly
+    unit: "basis points"
+    category: monetary
+    note: "YTM minus the FRED constant-maturity Treasury yield (DGS5/7/10/20/30) on the valuation date, linearly interpolated at the remaining maturity. USD bonds only."

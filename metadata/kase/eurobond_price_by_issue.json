@@ -1,0 +1,21 @@
+{
+  "source": "kase",
+  "source_url": "https://kase.kz/ru/app-gateway/documents/risk/DD.MM.YYYY/ ; https://kase.kz/cms/api/market-prices",
+  "dataset_id": "kase/settlement-prices/MinFin-eurobonds",
+  "indicator_id": "EUROBOND_PRICE_BY_ISSUE",
+  "indicator_name": "KASE settlement clean prices of Kazakhstan MinFin Eurobonds, end of month",
+  "description": "Расчётные (чистые) цены еврооблигаций Минфина РК на KASE, конец месяца",
+  "frequency": "monthly",
+  "unit": "percent of par (clean)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "KASE daily valuation files (risk documents from 2024-08, CMS market-prices archive before). Weekly files in 2014-2016.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2014-11-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1315,6 +1315,28 @@ indicators:
     observation_type: period_average
     observation_evidence: "среднее за месяц по ежедневным кривым Нельсона-Сигеля KASE"
 
+
+  - id: KZ_EUROBOND_YIELD
+    name_ru: "Доходность суверенных еврооблигаций РК в долларах США (бенчмарк 2044/2045, оценка KASE на конец месяца)"
+    name_en: "Kazakhstan sovereign USD Eurobond yield (2044/2045 benchmark, KASE valuation, end of month)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: end_of_period
+    observation_evidence: "последняя расчётная цена KASE в месяце; 2044 (XS1120709826) до 2020-10, 2045 (XS1263139856) с 2022-08; 2020-11..2022-07 нет"
+
+  - id: KZ_EUROBOND_SPREAD
+    name_ru: "Спред суверенных еврооблигаций РК к казначейским облигациям США (бенчмарк 2044/2045, конец месяца)"
+    name_en: "Kazakhstan sovereign USD Eurobond spread over US Treasuries (2044/2045 benchmark, end of month)"
+    agency: kase
+    frequency: monthly
+    unit: "basis points"
+    category: monetary
+    source_status: confirmed
+    observation_type: end_of_period
+    observation_evidence: "YTM бенчмарка минус доходность UST постоянной срочности (FRED DGS5/7/10/20/30), интерполированная на срок до погашения"
   - id: NATIONAL_FUND_TRANSFERS
     name_ru: "Трансферты из Национального фонда в республиканский бюджет"
     name_en: "Transfers from the National Fund"

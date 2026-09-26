@@ -27,6 +27,8 @@ def test_every_dataset_has_a_fetcher_and_a_known_layout():
         elif key == "taldau":
             assert ds["index_id"] and ds["dic_ids"].count(",") == ds["terms"].count(",")
             assert ds["terms"].split(",")[ds["expand_pos"]] == ds["expand_term"]
+        elif key == "kase_eurobonds":
+            assert ds["measure"] in ("clean", "ytm", "spread") and ds["frequency"] == "monthly"
         elif key == "bns_living":
             assert ds["table"] in ("deciles", "expenditure_tails")
             if ds["table"] == "deciles":

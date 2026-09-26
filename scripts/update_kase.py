@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Update pipeline for the Kazakhstan Stock Exchange (KASE) indicators: TONIA and the
-government securities zero-coupon yield curve. See update_bns.py for the design
+"""Update pipeline for the Kazakhstan Stock Exchange (KASE) indicators: TONIA, the
+government securities zero-coupon yield curve and the sovereign Eurobond yield/spread
+(scripts/fetchers/kase_eurobonds.py). See update_bns.py for the design
 rationale and scripts/fetchers/kase.py for the two sources."""
 from __future__ import annotations
 
@@ -12,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib import periods, metadata, pipeline_logging, processed_store, revisions, validation  # noqa: E402
-from fetchers import kase as kase_fetchers  # noqa: E402
+from fetchers import kase as kase_fetchers, kase_eurobonds  # noqa: E402
 
 AGENCY = "kase"
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -25,6 +26,8 @@ FETCHERS = {
     "GS_YIELD_2Y": kase_fetchers.fetch_gs_yield_2y,
     "GS_YIELD_5Y": kase_fetchers.fetch_gs_yield_5y,
     "GS_YIELD_10Y": kase_fetchers.fetch_gs_yield_10y,
+    "KZ_EUROBOND_YIELD": kase_eurobonds.fetch_kz_eurobond_yield,
+    "KZ_EUROBOND_SPREAD": kase_eurobonds.fetch_kz_eurobond_spread,
 }
 INDICATOR_IDS = list(FETCHERS)
 

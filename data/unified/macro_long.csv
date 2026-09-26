@@ -35940,6 +35940,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,105.1,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2014-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.6,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2014-11-01,KGZ,national,monthly,KG_CPI_YOY,110.2,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2014-11-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,220.9,basis points,kase,2026-09-26,level,2026-09-26
+2014-11-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.2165,% per annum,kase,2026-09-26,level,2026-09-26
 2014-11-01,KZ,national,monthly,M0,1274397.0,million KZT,nbk,2026-09-25,level,2026-09-25
 2014-11-01,KZ,national,monthly,M1,3406501.0,million KZT,nbk,2026-09-25,level,2026-09-25
 2014-11-01,KZ,national,monthly,M2,9203084.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -36111,6 +36113,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,98.8,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2014-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.9,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2014-12-01,KGZ,national,monthly,KG_CPI_YOY,110.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2014-12-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,262.0,basis points,kase,2026-09-26,level,2026-09-26
+2014-12-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.394,% per annum,kase,2026-09-26,level,2026-09-26
 2014-12-01,KZ,national,monthly,M0,1221633.0,million KZT,nbk,2026-09-25,level,2026-09-25
 2014-12-01,KZ,national,monthly,M1,3196190.0,million KZT,nbk,2026-09-25,level,2026-09-25
 2014-12-01,KZ,national,monthly,M2,8583963.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -36460,6 +36464,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,81.3,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2015-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,99.2,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2015-01-01,KGZ,national,monthly,KG_CPI_YOY,111.6,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2015-01-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,317.2,basis points,kase,2026-09-26,level,2026-09-26
+2015-01-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.5645,% per annum,kase,2026-09-26,level,2026-09-26
 2015-01-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,20.4,%,nbk,2026-09-25,level,2026-09-25
 2015-01-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,17.4,%,nbk,2026-09-25,level,2026-09-25
 2015-01-01,KZ,national,monthly,M0,1122319.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -36645,6 +36651,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,101.7,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2015-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.6,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2015-02-01,KGZ,national,monthly,KG_CPI_YOY,111.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2015-02-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,303.9,basis points,kase,2026-09-26,level,2026-09-26
+2015-02-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.6915,% per annum,kase,2026-09-26,level,2026-09-26
 2015-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,21.4,%,nbk,2026-09-25,level,2026-09-25
 2015-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,19.0,%,nbk,2026-09-25,level,2026-09-25
 2015-02-01,KZ,national,monthly,M0,1035712.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -36818,6 +36826,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,115.5,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2015-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.9,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2015-03-01,KGZ,national,monthly,KG_CPI_YOY,108.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2015-03-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,319.2,basis points,kase,2026-09-26,level,2026-09-26
+2015-03-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.732,% per annum,kase,2026-09-26,level,2026-09-26
 2015-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.5,%,nbk,2026-09-25,level,2026-09-25
 2015-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,18.1,%,nbk,2026-09-25,level,2026-09-25
 2015-03-01,KZ,national,monthly,M0,1020848.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -37038,6 +37048,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.0,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2015-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,99.6,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2015-04-01,KGZ,national,monthly,KG_CPI_YOY,107.9,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2015-04-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,271.8,basis points,kase,2026-09-26,level,2026-09-26
+2015-04-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.3145,% per annum,kase,2026-09-26,level,2026-09-26
 2015-04-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,16.6,%,nbk,2026-09-25,level,2026-09-25
 2015-04-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,15.1,%,nbk,2026-09-25,level,2026-09-25
 2015-04-01,KZ,national,monthly,M0,1037126.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -37236,6 +37248,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,99.8,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2015-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.1,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2015-05-01,KGZ,national,monthly,KG_CPI_YOY,106.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2015-05-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,263.7,basis points,kase,2026-09-26,level,2026-09-26
+2015-05-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.502,% per annum,kase,2026-09-26,level,2026-09-26
 2015-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.6,%,nbk,2026-09-25,level,2026-09-25
 2015-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,15.3,%,nbk,2026-09-25,level,2026-09-25
 2015-05-01,KZ,national,monthly,M0,1018439.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -37411,6 +37425,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.5,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2015-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.3,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2015-06-01,KGZ,national,monthly,KG_CPI_YOY,104.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2015-06-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,273.9,basis points,kase,2026-09-26,level,2026-09-26
+2015-06-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.8095,% per annum,kase,2026-09-26,level,2026-09-26
 2015-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,16.3,%,nbk,2026-09-25,level,2026-09-25
 2015-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,14.2,%,nbk,2026-09-25,level,2026-09-25
 2015-06-01,KZ,national,monthly,M0,1086948.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -37631,6 +37647,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,96.2,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2015-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,97.9,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2015-07-01,KGZ,national,monthly,KG_CPI_YOY,105.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2015-07-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,325.9,basis points,kase,2026-09-26,level,2026-09-26
+2015-07-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.166,% per annum,kase,2026-09-26,level,2026-09-26
 2015-07-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.3,%,nbk,2026-09-25,level,2026-09-25
 2015-07-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,14.0,%,nbk,2026-09-25,level,2026-09-25
 2015-07-01,KZ,national,monthly,M0,1143598.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -37830,6 +37848,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.3,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2015-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,93.6,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2015-08-01,KGZ,national,monthly,KG_CPI_YOY,105.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2015-08-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,377.1,basis points,kase,2026-09-26,level,2026-09-26
+2015-08-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.585,% per annum,kase,2026-09-26,level,2026-09-26
 2015-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.2,%,nbk,2026-09-25,level,2026-09-25
 2015-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,13.8,%,nbk,2026-09-25,level,2026-09-25
 2015-08-01,KZ,national,monthly,M0,1135293.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -38013,6 +38033,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,95.3,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2015-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,95.8,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2015-09-01,KGZ,national,monthly,KG_CPI_YOY,106.4,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2015-09-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,346.6,basis points,kase,2026-09-26,level,2026-09-26
+2015-09-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.302,% per annum,kase,2026-09-26,level,2026-09-26
 2015-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.1,%,nbk,2026-09-25,level,2026-09-25
 2015-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,14.4,%,nbk,2026-09-25,level,2026-09-25
 2015-09-01,KZ,national,monthly,M0,1186211.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -38234,6 +38256,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,109.4,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2015-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,96.1,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2015-10-01,KGZ,national,monthly,KG_CPI_YOY,104.9,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2015-10-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,327.4,basis points,kase,2026-09-26,level,2026-09-26
+2015-10-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.106,% per annum,kase,2026-09-26,level,2026-09-26
 2015-10-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,16.7,%,nbk,2026-09-25,level,2026-09-25
 2015-10-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,14.8,%,nbk,2026-09-25,level,2026-09-25
 2015-10-01,KZ,national,monthly,M0,1199959.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -38430,6 +38454,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,105.8,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2015-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,96.7,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2015-11-01,KGZ,national,monthly,KG_CPI_YOY,103.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2015-11-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,291.7,basis points,kase,2026-09-26,level,2026-09-26
+2015-11-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.858,% per annum,kase,2026-09-26,level,2026-09-26
 2015-11-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.2,%,nbk,2026-09-25,level,2026-09-25
 2015-11-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,15.7,%,nbk,2026-09-25,level,2026-09-25
 2015-11-01,KZ,national,monthly,M0,1201559.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -38611,6 +38637,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,99.6,"index, previous month = 100",bns,2026-09-25,level,2026-09-25
 2015-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,97.5,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2015-12-01,KGZ,national,monthly,KG_CPI_YOY,103.4,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2015-12-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,315.5,basis points,kase,2026-09-26,level,2026-09-26
+2015-12-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.062,% per annum,kase,2026-09-26,level,2026-09-26
 2015-12-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.3,%,nbk,2026-09-25,level,2026-09-25
 2015-12-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,16.0,%,nbk,2026-09-25,level,2026-09-25
 2015-12-01,KZ,national,monthly,M0,1190243.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -38963,6 +38991,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,99.3,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2016-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.8,%,nbk,2026-09-24,level,2026-09-24
 2016-01-01,KGZ,national,monthly,KG_CPI_YOY,101.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2016-01-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,348.5,basis points,kase,2026-09-26,level,2026-09-26
+2016-01-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.236,% per annum,kase,2026-09-26,level,2026-09-26
 2016-01-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.1,%,nbk,2026-09-25,level,2026-09-25
 2016-01-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,25.8,%,nbk,2026-09-25,level,2026-09-25
 2016-01-01,KZ,national,monthly,M0,1236973.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -39148,6 +39178,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.1,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2016-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.9,%,nbk,2026-09-24,level,2026-09-24
 2016-02-01,KGZ,national,monthly,KG_CPI_YOY,101.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2016-02-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,333.0,basis points,kase,2026-09-26,level,2026-09-26
+2016-02-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.882,% per annum,kase,2026-09-26,level,2026-09-26
 2016-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.6,%,nbk,2026-09-25,level,2026-09-25
 2016-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,19.1,%,nbk,2026-09-25,level,2026-09-25
 2016-02-01,KZ,national,monthly,M0,1174178.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -39327,6 +39359,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,98.2,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2016-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,10.0,%,nbk,2026-09-24,level,2026-09-24
 2016-03-01,KGZ,national,monthly,KG_CPI_YOY,100.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2016-03-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,318.2,basis points,kase,2026-09-26,level,2026-09-26
+2016-03-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.784,% per annum,kase,2026-09-26,level,2026-09-26
 2016-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.2,%,nbk,2026-09-25,level,2026-09-25
 2016-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,18.0,%,nbk,2026-09-25,level,2026-09-25
 2016-03-01,KZ,national,monthly,M0,1237519.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -39557,6 +39591,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,43.368984,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2016-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,51.604278,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2016-04-01,KGZ,national,monthly,KG_CPI_YOY,99.4,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2016-04-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,280.9,basis points,kase,2026-09-26,level,2026-09-26
+2016-04-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.468,% per annum,kase,2026-09-26,level,2026-09-26
 2016-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,5.613619,percent per annum,nbk,2026-09-24,level,2026-09-24
 2016-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,9.527314,percent per annum,nbk,2026-09-24,level,2026-09-24
 2016-04-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.2,%,nbk,2026-09-25,level,2026-09-25
@@ -39756,6 +39792,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,94.7,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2016-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.4,%,nbk,2026-09-24,level,2026-09-24
 2016-05-01,KGZ,national,monthly,KG_CPI_YOY,100.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2016-05-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,304.0,basis points,kase,2026-09-26,level,2026-09-26
+2016-05-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.6255,% per annum,kase,2026-09-26,level,2026-09-26
 2016-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.2,%,nbk,2026-09-25,level,2026-09-25
 2016-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,16.6,%,nbk,2026-09-25,level,2026-09-25
 2016-05-01,KZ,national,monthly,M0,1395984.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -39940,6 +39978,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.1,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2016-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.1,%,nbk,2026-09-24,level,2026-09-24
 2016-06-01,KGZ,national,monthly,KG_CPI_YOY,101.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2016-06-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,304.9,basis points,kase,2026-09-26,level,2026-09-26
+2016-06-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.252,% per annum,kase,2026-09-26,level,2026-09-26
 2016-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.0,%,nbk,2026-09-25,level,2026-09-25
 2016-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,16.3,%,nbk,2026-09-25,level,2026-09-25
 2016-06-01,KZ,national,monthly,M0,1485329.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -40169,6 +40209,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,50.106496,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2016-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,52.058928,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2016-07-01,KGZ,national,monthly,KG_CPI_YOY,101.2,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2016-07-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,260.7,basis points,kase,2026-09-26,level,2026-09-26
+2016-07-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.8275,% per annum,kase,2026-09-26,level,2026-09-26
 2016-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,5.898147,percent per annum,nbk,2026-09-24,level,2026-09-24
 2016-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,9.402721,percent per annum,nbk,2026-09-24,level,2026-09-24
 2016-07-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,20.1,%,nbk,2026-09-25,level,2026-09-25
@@ -40372,6 +40414,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,92.5,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2016-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.6,%,nbk,2026-09-24,level,2026-09-24
 2016-08-01,KGZ,national,monthly,KG_CPI_YOY,100.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2016-08-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,242.9,basis points,kase,2026-09-26,level,2026-09-26
+2016-08-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.589,% per annum,kase,2026-09-26,level,2026-09-26
 2016-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.9,%,nbk,2026-09-25,level,2026-09-25
 2016-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,16.0,%,nbk,2026-09-25,level,2026-09-25
 2016-08-01,KZ,national,monthly,M0,1593378.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -40563,6 +40607,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.1,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2016-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.0,%,nbk,2026-09-24,level,2026-09-24
 2016-09-01,KGZ,national,monthly,KG_CPI_YOY,99.7,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2016-09-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,229.9,basis points,kase,2026-09-26,level,2026-09-26
+2016-09-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.557,% per annum,kase,2026-09-26,level,2026-09-26
 2016-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.9,%,nbk,2026-09-25,level,2026-09-25
 2016-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,15.1,%,nbk,2026-09-25,level,2026-09-25
 2016-09-01,KZ,national,monthly,M0,1548974.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -40787,6 +40833,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,50.94005,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2016-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,48.545584,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2016-10-01,KGZ,national,monthly,KG_CPI_YOY,99.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2016-10-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,228.1,basis points,kase,2026-09-26,level,2026-09-26
+2016-10-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.7935,% per annum,kase,2026-09-26,level,2026-09-26
 2016-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,3.971279,percent per annum,nbk,2026-09-24,level,2026-09-24
 2016-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.94635,percent per annum,nbk,2026-09-24,level,2026-09-24
 2016-10-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.2,%,nbk,2026-09-25,level,2026-09-25
@@ -40994,6 +41042,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.1,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2016-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.4,%,nbk,2026-09-24,level,2026-09-24
 2016-11-01,KGZ,national,monthly,KG_CPI_YOY,99.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2016-11-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,252.4,basis points,kase,2026-09-26,level,2026-09-26
+2016-11-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.4125,% per annum,kase,2026-09-26,level,2026-09-26
 2016-11-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.0,%,nbk,2026-09-25,level,2026-09-25
 2016-11-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,14.9,%,nbk,2026-09-25,level,2026-09-25
 2016-11-01,KZ,national,monthly,M0,1572842.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -41180,6 +41230,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.8,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2016-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.5,%,nbk,2026-09-24,level,2026-09-24
 2016-12-01,KGZ,national,monthly,KG_CPI_YOY,99.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2016-12-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,213.3,basis points,kase,2026-09-26,level,2026-09-26
+2016-12-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.1955,% per annum,kase,2026-09-26,level,2026-09-26
 2016-12-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.4,%,nbk,2026-09-25,level,2026-09-25
 2016-12-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,14.5,%,nbk,2026-09-25,level,2026-09-25
 2016-12-01,KZ,national,monthly,M0,1567794.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -41540,6 +41592,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,48.537703,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2017-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,47.163495,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2017-01-01,KGZ,national,monthly,KG_CPI_YOY,100.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2017-01-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,202.5,basis points,kase,2026-09-26,level,2026-09-26
+2017-01-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.045,% per annum,kase,2026-09-26,level,2026-09-26
 2017-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,3.766472,percent per annum,nbk,2026-09-24,level,2026-09-24
 2017-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.961951,percent per annum,nbk,2026-09-24,level,2026-09-24
 2017-01-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.6,%,nbk,2026-09-25,level,2026-09-25
@@ -41745,6 +41799,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.0,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2017-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.1,%,nbk,2026-09-24,level,2026-09-24
 2017-02-01,KGZ,national,monthly,KG_CPI_YOY,101.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2017-02-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,217.4,basis points,kase,2026-09-26,level,2026-09-26
+2017-02-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.092,% per annum,kase,2026-09-26,level,2026-09-26
 2017-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.7,%,nbk,2026-09-25,level,2026-09-25
 2017-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,14.2,%,nbk,2026-09-25,level,2026-09-25
 2017-02-01,KZ,national,monthly,M0,1619063.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -41918,6 +41974,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,108.3,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2017-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.7,%,nbk,2026-09-24,level,2026-09-24
 2017-03-01,KGZ,national,monthly,KG_CPI_YOY,102.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2017-03-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,213.9,basis points,kase,2026-09-26,level,2026-09-26
+2017-03-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.058,% per annum,kase,2026-09-26,level,2026-09-26
 2017-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.4,%,nbk,2026-09-25,level,2026-09-25
 2017-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,13.0,%,nbk,2026-09-25,level,2026-09-25
 2017-03-01,KZ,national,monthly,M0,1640297.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -42143,6 +42201,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,47.298246,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2017-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,52.280702,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2017-04-01,KGZ,national,monthly,KG_CPI_YOY,103.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2017-04-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,206.6,basis points,kase,2026-09-26,level,2026-09-26
+2017-04-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.925,% per annum,kase,2026-09-26,level,2026-09-26
 2017-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,3.489593,percent per annum,nbk,2026-09-24,level,2026-09-24
 2017-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.762089,percent per annum,nbk,2026-09-24,level,2026-09-24
 2017-04-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.7,%,nbk,2026-09-25,level,2026-09-25
@@ -42345,6 +42405,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,110.7,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2017-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.6,%,nbk,2026-09-24,level,2026-09-24
 2017-05-01,KGZ,national,monthly,KG_CPI_YOY,103.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2017-05-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,213.9,basis points,kase,2026-09-26,level,2026-09-26
+2017-05-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.948,% per annum,kase,2026-09-26,level,2026-09-26
 2017-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.6,%,nbk,2026-09-25,level,2026-09-25
 2017-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,13.3,%,nbk,2026-09-25,level,2026-09-25
 2017-05-01,KZ,national,monthly,M0,1724115.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -42531,6 +42593,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,107.5,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2017-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.7,%,nbk,2026-09-24,level,2026-09-24
 2017-06-01,KGZ,national,monthly,KG_CPI_YOY,104.1,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2017-06-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,225.0,basis points,kase,2026-09-26,level,2026-09-26
+2017-06-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.885,% per annum,kase,2026-09-26,level,2026-09-26
 2017-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.6,%,nbk,2026-09-25,level,2026-09-25
 2017-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,14.0,%,nbk,2026-09-25,level,2026-09-25
 2017-06-01,KZ,national,monthly,M0,1741857.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -42756,6 +42820,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,52.706454,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2017-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,52.099237,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2017-07-01,KGZ,national,monthly,KG_CPI_YOY,103.6,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2017-07-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,199.0,basis points,kase,2026-09-26,level,2026-09-26
+2017-07-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.816,% per annum,kase,2026-09-26,level,2026-09-26
 2017-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,3.572097,percent per annum,nbk,2026-09-24,level,2026-09-24
 2017-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.795422,percent per annum,nbk,2026-09-24,level,2026-09-24
 2017-07-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.7,%,nbk,2026-09-25,level,2026-09-25
@@ -42962,6 +43028,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,114.4,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2017-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.3,%,nbk,2026-09-24,level,2026-09-24
 2017-08-01,KGZ,national,monthly,KG_CPI_YOY,103.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2017-08-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,203.3,basis points,kase,2026-09-26,level,2026-09-26
+2017-08-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.721,% per annum,kase,2026-09-26,level,2026-09-26
 2017-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.0,%,nbk,2026-09-25,level,2026-09-25
 2017-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,13.8,%,nbk,2026-09-25,level,2026-09-25
 2017-08-01,KZ,national,monthly,M0,1869034.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -43154,6 +43222,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.9,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2017-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.2,%,nbk,2026-09-24,level,2026-09-24
 2017-09-01,KGZ,national,monthly,KG_CPI_YOY,103.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2017-09-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,195.5,basis points,kase,2026-09-26,level,2026-09-26
+2017-09-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.647,% per annum,kase,2026-09-26,level,2026-09-26
 2017-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.8,%,nbk,2026-09-25,level,2026-09-25
 2017-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,13.1,%,nbk,2026-09-25,level,2026-09-25
 2017-09-01,KZ,national,monthly,M0,1820613.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -43374,6 +43444,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,53.810505,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2017-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,49.004463,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2017-10-01,KGZ,national,monthly,KG_CPI_YOY,103.6,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2017-10-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,186.1,basis points,kase,2026-09-26,level,2026-09-26
+2017-10-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.674,% per annum,kase,2026-09-26,level,2026-09-26
 2017-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,3.752862,percent per annum,nbk,2026-09-24,level,2026-09-24
 2017-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.590587,percent per annum,nbk,2026-09-24,level,2026-09-24
 2017-10-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.2,%,nbk,2026-09-25,level,2026-09-25
@@ -43587,6 +43659,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.0,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2017-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.4,%,nbk,2026-09-24,level,2026-09-24
 2017-11-01,KGZ,national,monthly,KG_CPI_YOY,104.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2017-11-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,181.0,basis points,kase,2026-09-26,level,2026-09-26
+2017-11-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.511,% per annum,kase,2026-09-26,level,2026-09-26
 2017-11-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.9,%,nbk,2026-09-25,level,2026-09-25
 2017-11-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,13.4,%,nbk,2026-09-25,level,2026-09-25
 2017-11-01,KZ,national,monthly,M0,1778145.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -43773,6 +43847,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.4,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2017-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.0,%,nbk,2026-09-24,level,2026-09-24
 2017-12-01,KGZ,national,monthly,KG_CPI_YOY,103.7,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2017-12-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,159.8,basis points,kase,2026-09-26,level,2026-09-26
+2017-12-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.38,% per annum,kase,2026-09-26,level,2026-09-26
 2017-12-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.2,%,nbk,2026-09-25,level,2026-09-25
 2017-12-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,13.2,%,nbk,2026-09-25,level,2026-09-25
 2017-12-01,KZ,national,monthly,M0,1766492.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -44137,6 +44213,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,50.441726,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2018-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,48.165138,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2018-01-01,KGZ,national,monthly,KG_CPI_YOY,103.2,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2018-01-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,148.7,basis points,kase,2026-09-26,level,2026-09-26
+2018-01-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.3875,% per annum,kase,2026-09-26,level,2026-09-26
 2018-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,3.900619,percent per annum,nbk,2026-09-24,level,2026-09-24
 2018-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.496095,percent per annum,nbk,2026-09-24,level,2026-09-24
 2018-01-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,20.1,%,nbk,2026-09-25,level,2026-09-25
@@ -44351,6 +44429,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.1,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2018-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.4,%,nbk,2026-09-24,level,2026-09-24
 2018-02-01,KGZ,national,monthly,KG_CPI_YOY,103.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2018-02-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,165.3,basis points,kase,2026-09-26,level,2026-09-26
+2018-02-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.763,% per annum,kase,2026-09-26,level,2026-09-26
 2018-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.4,%,nbk,2026-09-25,level,2026-09-25
 2018-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.9,%,nbk,2026-09-25,level,2026-09-25
 2018-02-01,KZ,national,monthly,M0,1817235.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -44533,6 +44613,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.7,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2018-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.4,%,nbk,2026-09-24,level,2026-09-24
 2018-03-01,KGZ,national,monthly,KG_CPI_YOY,102.7,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2018-03-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,189.5,basis points,kase,2026-09-26,level,2026-09-26
+2018-03-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.934,% per annum,kase,2026-09-26,level,2026-09-26
 2018-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.6,%,nbk,2026-09-25,level,2026-09-25
 2018-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.8,%,nbk,2026-09-25,level,2026-09-25
 2018-03-01,KZ,national,monthly,M0,1794473.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -44764,6 +44846,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,49.075008,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2018-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.229062,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2018-04-01,KGZ,national,monthly,KG_CPI_YOY,102.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2018-04-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,182.6,basis points,kase,2026-09-26,level,2026-09-26
+2018-04-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.941,% per annum,kase,2026-09-26,level,2026-09-26
 2018-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,3.398713,percent per annum,nbk,2026-09-24,level,2026-09-24
 2018-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.41395,percent per annum,nbk,2026-09-24,level,2026-09-24
 2018-04-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.6,%,nbk,2026-09-25,level,2026-09-25
@@ -44979,6 +45063,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.4,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2018-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.1,%,nbk,2026-09-24,level,2026-09-24
 2018-05-01,KGZ,national,monthly,KG_CPI_YOY,101.4,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2018-05-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,195.0,basis points,kase,2026-09-26,level,2026-09-26
+2018-05-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.0115,% per annum,kase,2026-09-26,level,2026-09-26
 2018-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.3,%,nbk,2026-09-25,level,2026-09-25
 2018-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.5,%,nbk,2026-09-25,level,2026-09-25
 2018-05-01,KZ,national,monthly,M0,1886063.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -45172,6 +45258,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.2,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2018-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.7,%,nbk,2026-09-24,level,2026-09-24
 2018-06-01,KGZ,national,monthly,KG_CPI_YOY,100.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2018-06-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,210.2,basis points,kase,2026-09-26,level,2026-09-26
+2018-06-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.096,% per annum,kase,2026-09-26,level,2026-09-26
 2018-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.1,%,nbk,2026-09-25,level,2026-09-25
 2018-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.5,%,nbk,2026-09-25,level,2026-09-25
 2018-06-01,KZ,national,monthly,M0,1940652.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -45400,6 +45488,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.30301,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2018-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.419503,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2018-07-01,KGZ,national,monthly,KG_CPI_YOY,101.1,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2018-07-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,168.4,basis points,kase,2026-09-26,level,2026-09-26
+2018-07-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.771,% per annum,kase,2026-09-26,level,2026-09-26
 2018-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,2.767238,percent per annum,nbk,2026-09-24,level,2026-09-24
 2018-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.336896,percent per annum,nbk,2026-09-24,level,2026-09-24
 2018-07-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.4,%,nbk,2026-09-25,level,2026-09-25
@@ -45619,6 +45709,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.9,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2018-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.6,%,nbk,2026-09-24,level,2026-09-24
 2018-08-01,KGZ,national,monthly,KG_CPI_YOY,100.9,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2018-08-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,178.1,basis points,kase,2026-09-26,level,2026-09-26
+2018-08-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.7505,% per annum,kase,2026-09-26,level,2026-09-26
 2018-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.4,%,nbk,2026-09-25,level,2026-09-25
 2018-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.2,%,nbk,2026-09-25,level,2026-09-25
 2018-08-01,KZ,national,monthly,M0,2103425.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -45813,6 +45905,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.5,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2018-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.4,%,nbk,2026-09-24,level,2026-09-24
 2018-09-01,KGZ,national,monthly,KG_CPI_YOY,101.2,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2018-09-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,154.5,basis points,kase,2026-09-26,level,2026-09-26
+2018-09-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.7115,% per annum,kase,2026-09-26,level,2026-09-26
 2018-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.6,%,nbk,2026-09-25,level,2026-09-25
 2018-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.2,%,nbk,2026-09-25,level,2026-09-25
 2018-09-01,KZ,national,monthly,M0,2100151.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -46045,6 +46139,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,53.193196,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2018-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,50.401155,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2018-10-01,KGZ,national,monthly,KG_CPI_YOY,100.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2018-10-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,162.2,basis points,kase,2026-09-26,level,2026-09-26
+2018-10-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.9755,% per annum,kase,2026-09-26,level,2026-09-26
 2018-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,2.946029,percent per annum,nbk,2026-09-24,level,2026-09-24
 2018-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.320311,percent per annum,nbk,2026-09-24,level,2026-09-24
 2018-10-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.3,%,nbk,2026-09-25,level,2026-09-25
@@ -46267,6 +46363,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,102.3,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2018-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.7,%,nbk,2026-09-24,level,2026-09-24
 2018-11-01,KGZ,national,monthly,KG_CPI_YOY,100.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2018-11-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,195.6,basis points,kase,2026-09-26,level,2026-09-26
+2018-11-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.211,% per annum,kase,2026-09-26,level,2026-09-26
 2018-11-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.1,%,nbk,2026-09-25,level,2026-09-25
 2018-11-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.5,%,nbk,2026-09-25,level,2026-09-25
 2018-11-01,KZ,national,monthly,M0,2102866.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -46456,6 +46554,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.1,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2018-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.8,%,nbk,2026-09-24,level,2026-09-24
 2018-12-01,KGZ,national,monthly,KG_CPI_YOY,100.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2018-12-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,190.7,basis points,kase,2026-09-26,level,2026-09-26
+2018-12-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.884,% per annum,kase,2026-09-26,level,2026-09-26
 2018-12-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.2,%,nbk,2026-09-25,level,2026-09-25
 2018-12-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,11.7,%,nbk,2026-09-25,level,2026-09-25
 2018-12-01,KZ,national,monthly,M0,2082467.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -46829,6 +46929,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,50.68254,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2019-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,48.285714,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2019-01-01,KGZ,national,monthly,KG_CPI_YOY,100.4,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2019-01-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,174.5,basis points,kase,2026-09-26,level,2026-09-26
+2019-01-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.666,% per annum,kase,2026-09-26,level,2026-09-26
 2019-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,3.146186,percent per annum,nbk,2026-09-24,level,2026-09-24
 2019-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.230096,percent per annum,nbk,2026-09-24,level,2026-09-24
 2019-01-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.4,%,nbk,2026-09-25,level,2026-09-25
@@ -47042,6 +47144,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.5,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2019-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.8,%,nbk,2026-09-24,level,2026-09-24
 2019-02-01,KGZ,national,monthly,KG_CPI_YOY,99.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2019-02-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,150.1,basis points,kase,2026-09-26,level,2026-09-26
+2019-02-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.5255,% per annum,kase,2026-09-26,level,2026-09-26
 2019-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.2,%,nbk,2026-09-25,level,2026-09-25
 2019-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.4,%,nbk,2026-09-25,level,2026-09-25
 2019-02-01,KZ,national,monthly,M0,2170013.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -47224,6 +47328,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.2,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2019-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.6,%,nbk,2026-09-24,level,2026-09-24
 2019-03-01,KGZ,national,monthly,KG_CPI_YOY,99.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2019-03-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,170.6,basis points,kase,2026-09-26,level,2026-09-26
+2019-03-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.4355,% per annum,kase,2026-09-26,level,2026-09-26
 2019-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.8,%,nbk,2026-09-25,level,2026-09-25
 2019-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.0,%,nbk,2026-09-25,level,2026-09-25
 2019-03-01,KZ,national,monthly,M0,2134988.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -47452,6 +47558,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,49.357367,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2019-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,54.827586,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2019-04-01,KGZ,national,monthly,KG_CPI_YOY,99.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2019-04-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,155.6,basis points,kase,2026-09-26,level,2026-09-26
+2019-04-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.404,% per annum,kase,2026-09-26,level,2026-09-26
 2019-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,3.056764,percent per annum,nbk,2026-09-24,level,2026-09-24
 2019-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,7.132242,percent per annum,nbk,2026-09-24,level,2026-09-24
 2019-04-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.5,%,nbk,2026-09-25,level,2026-09-25
@@ -47668,6 +47776,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,98.4,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2019-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.5,%,nbk,2026-09-24,level,2026-09-24
 2019-05-01,KGZ,national,monthly,KG_CPI_YOY,100.1,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2019-05-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,187.2,basis points,kase,2026-09-26,level,2026-09-26
+2019-05-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.364,% per annum,kase,2026-09-26,level,2026-09-26
 2019-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.1,%,nbk,2026-09-25,level,2026-09-25
 2019-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,11.9,%,nbk,2026-09-25,level,2026-09-25
 2019-05-01,KZ,national,monthly,M0,2207421.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -47856,6 +47966,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.9,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2019-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.2,%,nbk,2026-09-24,level,2026-09-24
 2019-06-01,KGZ,national,monthly,KG_CPI_YOY,100.9,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2019-06-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,168.2,basis points,kase,2026-09-26,level,2026-09-26
+2019-06-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.1035,% per annum,kase,2026-09-26,level,2026-09-26
 2019-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.3,%,nbk,2026-09-25,level,2026-09-25
 2019-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,11.7,%,nbk,2026-09-25,level,2026-09-25
 2019-06-01,KZ,national,monthly,M0,2245869.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -48088,6 +48200,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.553932,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2019-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.745726,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2019-07-01,KGZ,national,monthly,KG_CPI_YOY,101.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2019-07-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,146.2,basis points,kase,2026-09-26,level,2026-09-26
+2019-07-01,KZ,national,monthly,KZ_EUROBOND_YIELD,3.8865,% per annum,kase,2026-09-26,level,2026-09-26
 2019-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,3.109405,percent per annum,nbk,2026-09-24,level,2026-09-24
 2019-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,6.995766,percent per annum,nbk,2026-09-24,level,2026-09-24
 2019-07-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.9,%,nbk,2026-09-25,level,2026-09-25
@@ -48310,6 +48424,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.9,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2019-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.0,%,nbk,2026-09-24,level,2026-09-24
 2019-08-01,KGZ,national,monthly,KG_CPI_YOY,102.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2019-08-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,172.3,basis points,kase,2026-09-26,level,2026-09-26
+2019-08-01,KZ,national,monthly,KZ_EUROBOND_YIELD,3.6005,% per annum,kase,2026-09-26,level,2026-09-26
 2019-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.8,%,nbk,2026-09-25,level,2026-09-25
 2019-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,11.9,%,nbk,2026-09-25,level,2026-09-25
 2019-08-01,KZ,national,monthly,M0,2236207.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -48500,6 +48616,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.7,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2019-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,10.0,%,nbk,2026-09-24,level,2026-09-24
 2019-09-01,KGZ,national,monthly,KG_CPI_YOY,102.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2019-09-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,155.0,basis points,kase,2026-09-26,level,2026-09-26
+2019-09-01,KZ,national,monthly,KZ_EUROBOND_YIELD,3.5805,% per annum,kase,2026-09-26,level,2026-09-26
 2019-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.4,%,nbk,2026-09-25,level,2026-09-25
 2019-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,11.7,%,nbk,2026-09-25,level,2026-09-25
 2019-09-01,KZ,national,monthly,M0,2247723.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -48738,6 +48856,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.608508,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2019-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,49.892109,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2019-10-01,KGZ,national,monthly,KG_CPI_YOY,102.6,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2019-10-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,148.4,basis points,kase,2026-09-26,level,2026-09-26
+2019-10-01,KZ,national,monthly,KZ_EUROBOND_YIELD,3.568,% per annum,kase,2026-09-26,level,2026-09-26
 2019-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,2.895837,percent per annum,nbk,2026-09-24,level,2026-09-24
 2019-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,6.446634,percent per annum,nbk,2026-09-24,level,2026-09-24
 2019-10-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,18.0,%,nbk,2026-09-25,level,2026-09-25
@@ -48968,6 +49088,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.8,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2019-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.8,%,nbk,2026-09-24,level,2026-09-24
 2019-11-01,KGZ,national,monthly,KG_CPI_YOY,102.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2019-11-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,143.4,basis points,kase,2026-09-26,level,2026-09-26
+2019-11-01,KZ,national,monthly,KZ_EUROBOND_YIELD,3.5725,% per annum,kase,2026-09-26,level,2026-09-26
 2019-11-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.0,%,nbk,2026-09-25,level,2026-09-25
 2019-11-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.2,%,nbk,2026-09-25,level,2026-09-25
 2019-11-01,KZ,national,monthly,M0,2231036.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -49158,6 +49280,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.4,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2019-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.9,%,nbk,2026-09-24,level,2026-09-24
 2019-12-01,KGZ,national,monthly,KG_CPI_YOY,103.1,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2019-12-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,112.0,basis points,kase,2026-09-26,level,2026-09-26
+2019-12-01,KZ,national,monthly,KZ_EUROBOND_YIELD,3.4367,% per annum,kase,2026-09-26,level,2026-09-26
 2019-12-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,16.8,%,nbk,2026-09-25,level,2026-09-25
 2019-12-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.1,%,nbk,2026-09-25,level,2026-09-25
 2019-12-01,KZ,national,monthly,M0,2200878.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -49554,6 +49678,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,50.780772,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2020-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,48.98959,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2020-01-01,KGZ,national,monthly,KG_CPI_YOY,103.2,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2020-01-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,149.2,basis points,kase,2026-09-26,level,2026-09-26
+2020-01-01,KZ,national,monthly,KZ_EUROBOND_YIELD,3.397,% per annum,kase,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,quarterly,LOANS_TO_ECONOMY,14738200.007,million KZT,nbk,2026-09-24,level,2026-09-24
 2020-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,2.405732,percent per annum,nbk,2026-09-24,level,2026-09-24
 2020-01-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,5.899178,percent per annum,nbk,2026-09-24,level,2026-09-24
@@ -49781,6 +49907,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,107.5,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2020-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.3,%,nbk,2026-09-24,level,2026-09-24
 2020-02-01,KGZ,national,monthly,KG_CPI_YOY,104.1,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2020-02-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,150.9,basis points,kase,2026-09-26,level,2026-09-26
+2020-02-01,KZ,national,monthly,KZ_EUROBOND_YIELD,3.0568,% per annum,kase,2026-09-26,level,2026-09-26
 2020-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.0,%,nbk,2026-09-25,level,2026-09-25
 2020-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.0,%,nbk,2026-09-25,level,2026-09-25
 2020-02-01,KZ,national,monthly,M0,2189815.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -49980,6 +50108,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.9,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2020-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.8,%,nbk,2026-09-24,level,2026-09-24
 2020-03-01,KGZ,national,monthly,KG_CPI_YOY,105.9,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2020-03-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,276.1,basis points,kase,2026-09-26,level,2026-09-26
+2020-03-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.0013,% per annum,kase,2026-09-26,level,2026-09-26
 2020-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.7,%,nbk,2026-09-25,level,2026-09-25
 2020-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.5,%,nbk,2026-09-25,level,2026-09-25
 2020-03-01,KZ,national,monthly,M0,2215110.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -50241,6 +50371,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,45.037221,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2020-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,47.239454,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2020-04-01,KGZ,national,monthly,KG_CPI_YOY,108.6,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2020-04-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,287.0,basis points,kase,2026-09-26,level,2026-09-26
+2020-04-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.0221,% per annum,kase,2026-09-26,level,2026-09-26
 2020-04-01,KZ,national,quarterly,LOANS_TO_ECONOMY,15256410.603,million KZT,nbk,2026-09-24,level,2026-09-24
 2020-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,2.58952,percent per annum,nbk,2026-09-24,level,2026-09-24
 2020-04-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,5.47852,percent per annum,nbk,2026-09-24,level,2026-09-24
@@ -50473,6 +50605,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.5,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2020-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.3,%,nbk,2026-09-24,level,2026-09-24
 2020-05-01,KGZ,national,monthly,KG_CPI_YOY,107.2,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2020-05-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,206.4,basis points,kase,2026-09-26,level,2026-09-26
+2020-05-01,KZ,national,monthly,KZ_EUROBOND_YIELD,3.3446,% per annum,kase,2026-09-26,level,2026-09-26
 2020-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.6,%,nbk,2026-09-25,level,2026-09-25
 2020-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,11.4,%,nbk,2026-09-25,level,2026-09-25
 2020-05-01,KZ,national,monthly,M0,2572940.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -50670,6 +50804,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,94.4,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2020-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,8.8,%,nbk,2026-09-24,level,2026-09-24
 2020-06-01,KGZ,national,monthly,KG_CPI_YOY,105.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2020-06-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,196.0,basis points,kase,2026-09-26,level,2026-09-26
+2020-06-01,KZ,national,monthly,KZ_EUROBOND_YIELD,3.2382,% per annum,kase,2026-09-26,level,2026-09-26
 2020-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,16.9,%,nbk,2026-09-25,level,2026-09-25
 2020-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,11.0,%,nbk,2026-09-25,level,2026-09-25
 2020-06-01,KZ,national,monthly,M0,2766404.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -50932,6 +51068,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,48.063921,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2020-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,49.738783,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2020-07-01,KGZ,national,monthly,KG_CPI_YOY,105.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2020-07-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,187.1,basis points,kase,2026-09-26,level,2026-09-26
+2020-07-01,KZ,national,monthly,KZ_EUROBOND_YIELD,2.9431,% per annum,kase,2026-09-26,level,2026-09-26
 2020-07-01,KZ,national,quarterly,LOANS_TO_ECONOMY,14988004.896,million KZT,nbk,2026-09-24,level,2026-09-24
 2020-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,2.33818,percent per annum,nbk,2026-09-24,level,2026-09-24
 2020-07-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,5.110953,percent per annum,nbk,2026-09-24,level,2026-09-24
@@ -51167,6 +51305,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,94.4,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2020-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.9,%,nbk,2026-09-24,level,2026-09-24
 2020-08-01,KGZ,national,monthly,KG_CPI_YOY,105.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2020-08-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,141.9,basis points,kase,2026-09-26,level,2026-09-26
+2020-08-01,KZ,national,monthly,KZ_EUROBOND_YIELD,2.804,% per annum,kase,2026-09-26,level,2026-09-26
 2020-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.1,%,nbk,2026-09-25,level,2026-09-25
 2020-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,11.9,%,nbk,2026-09-25,level,2026-09-25
 2020-08-01,KZ,national,monthly,M0,2885316.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -51373,6 +51513,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,96.5,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2020-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.3,%,nbk,2026-09-24,level,2026-09-24
 2020-09-01,KGZ,national,monthly,KG_CPI_YOY,105.4,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2020-09-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,163.2,basis points,kase,2026-09-26,level,2026-09-26
+2020-09-01,KZ,national,monthly,KZ_EUROBOND_YIELD,2.955,% per annum,kase,2026-09-26,level,2026-09-26
 2020-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.3,%,nbk,2026-09-25,level,2026-09-25
 2020-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.1,%,nbk,2026-09-25,level,2026-09-25
 2020-09-01,KZ,national,monthly,M0,2922621.0,million KZT,nbk,2026-09-25,level,2026-09-25
@@ -51636,6 +51778,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,51.190476,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2020-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,48.336386,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2020-10-01,KGZ,national,monthly,KG_CPI_YOY,107.2,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2020-10-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,113.5,basis points,kase,2026-09-26,level,2026-09-26
+2020-10-01,KZ,national,monthly,KZ_EUROBOND_YIELD,2.6524,% per annum,kase,2026-09-26,level,2026-09-26
 2020-10-01,KZ,national,quarterly,LOANS_TO_ECONOMY,15306402.845,million KZT,nbk,2026-09-24,level,2026-09-24
 2020-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_FX,2.38673,percent per annum,nbk,2026-09-24,level,2026-09-24
 2020-10-01,KZ,national,quarterly,LOAN_RATE_ACCEPTABLE_KZT,5.3618,percent per annum,nbk,2026-09-24,level,2026-09-24
@@ -57207,6 +57351,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.4,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2022-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.5,%,nbk,2026-09-24,level,2026-09-24
 2022-08-01,KGZ,national,monthly,KG_CPI_YOY,115.6,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2022-08-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,293.5,basis points,kase,2026-09-26,level,2026-09-26
+2022-08-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.39,% per annum,kase,2026-09-26,level,2026-09-26
 2022-08-01,KZ,national,monthly,LENDING_RATE,17.07153305277927,%,nbk,2026-09-24,level,2026-09-24
 2022-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.75614,%,nbk,2026-09-25,level,2026-09-25
 2022-08-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,16.246022,%,nbk,2026-09-25,level,2026-09-25
@@ -57431,6 +57577,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,98.7,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2022-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.9,%,nbk,2026-09-24,level,2026-09-24
 2022-09-01,KGZ,national,monthly,KG_CPI_YOY,115.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2022-09-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,302.1,basis points,kase,2026-09-26,level,2026-09-26
+2022-09-01,KZ,national,monthly,KZ_EUROBOND_YIELD,7.02,% per annum,kase,2026-09-26,level,2026-09-26
 2022-09-01,KZ,national,monthly,LENDING_RATE,17.063559038391393,%,nbk,2026-09-24,level,2026-09-24
 2022-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.82924,%,nbk,2026-09-25,level,2026-09-25
 2022-09-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,16.229795,%,nbk,2026-09-25,level,2026-09-25
@@ -57707,6 +57855,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,55.050959,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2022-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,50.479616,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2022-10-01,KGZ,national,monthly,KG_CPI_YOY,115.4,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2022-10-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,312.0,basis points,kase,2026-09-26,level,2026-09-26
+2022-10-01,KZ,national,monthly,KZ_EUROBOND_YIELD,7.5,% per annum,kase,2026-09-26,level,2026-09-26
 2022-10-01,KZ,national,monthly,LENDING_RATE,17.17087368351704,%,nbk,2026-09-24,level,2026-09-24
 2022-10-01,KZ,national,monthly,LOANS_BUSINESS_FX,2648378.498098,million KZT,nbk,2026-09-24,level,2026-09-24
 2022-10-01,KZ,national,monthly,LOANS_BUSINESS_KZT,8298020.010091,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -57960,6 +58110,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.1,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2022-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,18.2,%,nbk,2026-09-24,level,2026-09-24
 2022-11-01,KGZ,national,monthly,KG_CPI_YOY,115.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2022-11-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,220.3,basis points,kase,2026-09-26,level,2026-09-26
+2022-11-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.15,% per annum,kase,2026-09-26,level,2026-09-26
 2022-11-01,KZ,national,monthly,LENDING_RATE,16.465062137936577,%,nbk,2026-09-24,level,2026-09-24
 2022-11-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,15.295712,%,nbk,2026-09-25,level,2026-09-25
 2022-11-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,18.421907,%,nbk,2026-09-25,level,2026-09-25
@@ -58187,6 +58339,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,97.2,"index, same month previous year = 100",bns,2026-09-25,level,2026-09-25
 2022-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,21.3,%,nbk,2026-09-24,level,2026-09-24
 2022-12-01,KGZ,national,monthly,KG_CPI_YOY,114.7,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2022-12-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,195.3,basis points,kase,2026-09-26,level,2026-09-26
+2022-12-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.05,% per annum,kase,2026-09-26,level,2026-09-26
 2022-12-01,KZ,national,monthly,LENDING_RATE,18.22994721811067,%,nbk,2026-09-24,level,2026-09-24
 2022-12-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,17.397804,%,nbk,2026-09-25,level,2026-09-25
 2022-12-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,19.197475,%,nbk,2026-09-25,level,2026-09-25
@@ -58646,6 +58800,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,53.703153,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2023-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,50.208209,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2023-01-01,KGZ,national,monthly,KG_CPI_YOY,115.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2023-01-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,217.2,basis points,kase,2026-09-26,level,2026-09-26
+2023-01-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.92,% per annum,kase,2026-09-26,level,2026-09-26
 2023-01-01,KZ,national,monthly,LENDING_RATE,19.271907297535602,%,nbk,2026-09-24,level,2026-09-24
 2023-01-01,KZ,national,monthly,LOANS_BUSINESS_FX,2648198.069435,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-01-01,KZ,national,monthly,LOANS_BUSINESS_KZT,8950681.540742,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -58924,6 +59080,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,118423.413,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,68691.002,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-02-01,KGZ,national,monthly,KG_CPI_YOY,116.2,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2023-02-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,191.1,basis points,kase,2026-09-26,level,2026-09-26
+2023-02-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.97,% per annum,kase,2026-09-26,level,2026-09-26
 2023-02-01,KZ,national,monthly,LENDING_RATE,19.796053918159934,%,nbk,2026-09-24,level,2026-09-24
 2023-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,20.051944,%,nbk,2026-09-25,level,2026-09-25
 2023-02-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,19.451957,%,nbk,2026-09-25,level,2026-09-25
@@ -59153,6 +59311,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,160450.274,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,97783.749,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-03-01,KGZ,national,monthly,KG_CPI_YOY,112.7,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2023-03-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,234.2,basis points,kase,2026-09-26,level,2026-09-26
+2023-03-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.12,% per annum,kase,2026-09-26,level,2026-09-26
 2023-03-01,KZ,national,monthly,LENDING_RATE,19.31735883546762,%,nbk,2026-09-24,level,2026-09-24
 2023-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.693154,%,nbk,2026-09-25,level,2026-09-25
 2023-03-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,18.810038,%,nbk,2026-09-25,level,2026-09-25
@@ -59457,6 +59617,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,52.838039,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2023-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.774146,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2023-04-01,KGZ,national,monthly,KG_CPI_YOY,110.7,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2023-04-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,216.9,basis points,kase,2026-09-26,level,2026-09-26
+2023-04-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.94,% per annum,kase,2026-09-26,level,2026-09-26
 2023-04-01,KZ,national,monthly,LENDING_RATE,19.00074253500449,%,nbk,2026-09-24,level,2026-09-24
 2023-04-01,KZ,national,monthly,LOANS_BUSINESS_FX,2448333.773467,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-04-01,KZ,national,monthly,LOANS_BUSINESS_KZT,9042851.960595,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -59731,6 +59893,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,243470.659,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,173143.221,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-05-01,KGZ,national,monthly,KG_CPI_YOY,111.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2023-05-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,217.4,basis points,kase,2026-09-26,level,2026-09-26
+2023-05-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.15,% per annum,kase,2026-09-26,level,2026-09-26
 2023-05-01,KZ,national,monthly,LENDING_RATE,19.34009129442089,%,nbk,2026-09-24,level,2026-09-24
 2023-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.817461,%,nbk,2026-09-25,level,2026-09-25
 2023-05-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,18.951812,%,nbk,2026-09-25,level,2026-09-25
@@ -59973,6 +60137,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,302456.225,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,213082.685,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-06-01,KGZ,national,monthly,KG_CPI_YOY,110.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2023-06-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,199.3,basis points,kase,2026-09-26,level,2026-09-26
+2023-06-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.01,% per annum,kase,2026-09-26,level,2026-09-26
 2023-06-01,KZ,national,monthly,LENDING_RATE,19.394703682405453,%,nbk,2026-09-24,level,2026-09-24
 2023-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_INDIVIDUAL_KZT,19.791665,%,nbk,2026-09-25,level,2026-09-25
 2023-06-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,18.95908,%,nbk,2026-09-25,level,2026-09-25
@@ -60272,6 +60438,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.848305,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2023-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.599048,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2023-07-01,KGZ,national,monthly,KG_CPI_YOY,110.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2023-07-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,173.9,basis points,kase,2026-09-26,level,2026-09-26
+2023-07-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.92,% per annum,kase,2026-09-26,level,2026-09-26
 2023-07-01,KZ,national,monthly,LENDING_RATE,17.584178284111264,%,nbk,2026-09-24,level,2026-09-24
 2023-07-01,KZ,national,monthly,LOANS_BUSINESS_FX,2433532.695988,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-07-01,KZ,national,monthly,LOANS_BUSINESS_KZT,9415548.173241,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -60536,6 +60704,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,384148.277,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,305351.976,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-08-01,KGZ,national,monthly,KG_CPI_YOY,109.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2023-08-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,173.6,basis points,kase,2026-09-26,level,2026-09-26
+2023-08-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.09,% per annum,kase,2026-09-26,level,2026-09-26
 2023-08-01,KZ,national,monthly,LENDING_RATE,19.949278808242905,%,nbk,2026-09-24,level,2026-09-24
 2023-08-01,KZ,national,monthly,LOANS_BUSINESS_FX,2372023.998434,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-08-01,KZ,national,monthly,LOANS_BUSINESS_KZT,9340296.539641,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -60719,6 +60889,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,421781.599,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,346197.664,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-09-01,KGZ,national,monthly,KG_CPI_YOY,109.6,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2023-09-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,141.4,basis points,kase,2026-09-26,level,2026-09-26
+2023-09-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.3,% per annum,kase,2026-09-26,level,2026-09-26
 2023-09-01,KZ,national,monthly,LENDING_RATE,19.694344468944003,%,nbk,2026-09-24,level,2026-09-24
 2023-09-01,KZ,national,monthly,LOANS_BUSINESS_FX,2496291.84856,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-09-01,KZ,national,monthly,LOANS_BUSINESS_KZT,9407052.370571,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -61024,6 +61196,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.269197,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2023-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,51.660243,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2023-10-01,KGZ,national,monthly,KG_CPI_YOY,109.2,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2023-10-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,123.9,basis points,kase,2026-09-26,level,2026-09-26
+2023-10-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.42,% per annum,kase,2026-09-26,level,2026-09-26
 2023-10-01,KZ,national,monthly,LENDING_RATE,19.60920986399095,%,nbk,2026-09-24,level,2026-09-24
 2023-10-01,KZ,national,monthly,LOANS_BUSINESS_FX,2519923.221679,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-10-01,KZ,national,monthly,LOANS_BUSINESS_KZT,9544616.784221,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -61308,6 +61482,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-11-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,496371.081,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-11-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,437764.843,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-11-01,KGZ,national,monthly,KG_CPI_YOY,108.1,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2023-11-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,140.0,basis points,kase,2026-09-26,level,2026-09-26
+2023-11-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.09,% per annum,kase,2026-09-26,level,2026-09-26
 2023-11-01,KZ,national,monthly,LENDING_RATE,17.923222610329784,%,nbk,2026-09-24,level,2026-09-24
 2023-11-01,KZ,national,monthly,LOANS_BUSINESS_FX,2514101.755572,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-11-01,KZ,national,monthly,LOANS_BUSINESS_KZT,9681583.124604,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -61555,6 +61731,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,553191.013,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-12-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,502731.559,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2023-12-01,KGZ,national,monthly,KG_CPI_YOY,107.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2023-12-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,120.7,basis points,kase,2026-09-26,level,2026-09-26
+2023-12-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.38,% per annum,kase,2026-09-26,level,2026-09-26
 2023-12-01,KZ,national,monthly,LENDING_RATE,18.006679112045607,%,nbk,2026-09-24,level,2026-09-24
 2023-12-01,KZ,national,monthly,LOANS_BUSINESS_FX,2500430.223558,million KZT,nbk,2026-09-24,level,2026-09-24
 2023-12-01,KZ,national,monthly,LOANS_BUSINESS_KZT,9730738.984215,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -62022,6 +62200,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,51.240402,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2024-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,50.2658,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2024-01-01,KGZ,national,monthly,KG_CPI_YOY,105.9,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2024-01-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,127.8,basis points,kase,2026-09-26,level,2026-09-26
+2024-01-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.6,% per annum,kase,2026-09-26,level,2026-09-26
 2024-01-01,KZ,national,monthly,LENDING_RATE,19.784331132048788,%,nbk,2026-09-24,level,2026-09-24
 2024-01-01,KZ,national,monthly,LOANS_BUSINESS_FX,2964850.120989,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-01-01,KZ,national,monthly,LOANS_BUSINESS_KZT,10152910.496491,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -62304,6 +62484,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,128290.972,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,105802.624,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-02-01,KGZ,national,monthly,KG_CPI_YOY,105.1,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2024-02-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,113.8,basis points,kase,2026-09-26,level,2026-09-26
+2024-02-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.63,% per annum,kase,2026-09-26,level,2026-09-26
 2024-02-01,KZ,national,monthly,LENDING_RATE,18.395419601244416,%,nbk,2026-09-24,level,2026-09-24
 2024-02-01,KZ,national,monthly,LOANS_BUSINESS_FX,2880777.429963,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-02-01,KZ,national,monthly,LOANS_BUSINESS_KZT,9948078.926047,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -62546,6 +62728,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,172731.451,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,158205.581,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-03-01,KGZ,national,monthly,KG_CPI_YOY,105.2,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2024-03-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,104.4,basis points,kase,2026-09-26,level,2026-09-26
+2024-03-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.48,% per annum,kase,2026-09-26,level,2026-09-26
 2024-03-01,KZ,national,monthly,LENDING_RATE,19.085179999976837,%,nbk,2026-09-24,level,2026-09-24
 2024-03-01,KZ,national,monthly,LOANS_BUSINESS_FX,2997067.07469,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-03-01,KZ,national,monthly,LOANS_BUSINESS_KZT,10090313.310643,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -62849,6 +63033,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,50.929752,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2024-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.335301,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2024-04-01,KGZ,national,monthly,KG_CPI_YOY,105.2,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2024-04-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,78.3,basis points,kase,2026-09-26,level,2026-09-26
+2024-04-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.67,% per annum,kase,2026-09-26,level,2026-09-26
 2024-04-01,KZ,national,monthly,LENDING_RATE,19.60306213367616,%,nbk,2026-09-24,level,2026-09-24
 2024-04-01,KZ,national,monthly,LOANS_BUSINESS_FX,3027478.370873,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-04-01,KZ,national,monthly,LOANS_BUSINESS_KZT,10025530.846689,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -63130,6 +63316,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,250151.963,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,307060.839,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-05-01,KGZ,national,monthly,KG_CPI_YOY,104.6,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2024-05-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,77.9,basis points,kase,2026-09-26,level,2026-09-26
+2024-05-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.5,% per annum,kase,2026-09-26,level,2026-09-26
 2024-05-01,KZ,national,monthly,LENDING_RATE,19.509679282669985,%,nbk,2026-09-24,level,2026-09-24
 2024-05-01,KZ,national,monthly,LOANS_BUSINESS_FX,3004295.209125,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-05-01,KZ,national,monthly,LOANS_BUSINESS_KZT,10112615.381261,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -63373,6 +63561,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,295711.578,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,378374.216,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-06-01,KGZ,national,monthly,KG_CPI_YOY,104.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2024-06-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,63.1,basis points,kase,2026-09-26,level,2026-09-26
+2024-06-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.23,% per annum,kase,2026-09-26,level,2026-09-26
 2024-06-01,KZ,national,monthly,LENDING_RATE,18.327872739821753,%,nbk,2026-09-24,level,2026-09-24
 2024-06-01,KZ,national,monthly,LOANS_BUSINESS_FX,3038188.50095,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-06-01,KZ,national,monthly,LOANS_BUSINESS_KZT,10176215.359914,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -63680,6 +63870,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.586886,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2024-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.690091,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2024-07-01,KGZ,national,monthly,KG_CPI_YOY,104.1,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2024-07-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,86.9,basis points,kase,2026-09-26,level,2026-09-26
+2024-07-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.3,% per annum,kase,2026-09-26,level,2026-09-26
 2024-07-01,KZ,national,monthly,LENDING_RATE,19.298256972824884,%,nbk,2026-09-24,level,2026-09-24
 2024-07-01,KZ,national,monthly,LOANS_BUSINESS_FX,3323474.77484,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-07-01,KZ,national,monthly,LOANS_BUSINESS_KZT,10207817.965569,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -63965,6 +64157,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,389268.479,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,582671.247,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-08-01,KGZ,national,monthly,KG_CPI_YOY,103.794,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2024-08-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,80.8,basis points,kase,2026-09-26,level,2026-09-26
+2024-08-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.04,% per annum,kase,2026-09-26,level,2026-09-26
 2024-08-01,KZ,national,monthly,LENDING_RATE,19.232646917803372,%,nbk,2026-09-24,level,2026-09-24
 2024-08-01,KZ,national,monthly,LOANS_BUSINESS_FX,3354560.044559,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-08-01,KZ,national,monthly,LOANS_BUSINESS_KZT,10200100.239984,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -64209,6 +64403,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,425808.399,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,672205.289,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-09-01,KGZ,national,monthly,KG_CPI_YOY,104.9,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2024-09-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,79.4,basis points,kase,2026-09-26,level,2026-09-26
+2024-09-01,KZ,national,monthly,KZ_EUROBOND_YIELD,4.98,% per annum,kase,2026-09-26,level,2026-09-26
 2024-09-01,KZ,national,monthly,LENDING_RATE,19.953287574027616,%,nbk,2026-09-24,level,2026-09-24
 2024-09-01,KZ,national,monthly,LOANS_BUSINESS_FX,3496617.651978,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-09-01,KZ,national,monthly,LOANS_BUSINESS_KZT,10268526.414029,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -64522,6 +64718,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.844341,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2024-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,51.716613,"diffusion index (0-100, 50=neutral)",nbk,2026-09-24,level,2026-09-24
 2024-10-01,KGZ,national,monthly,KG_CPI_YOY,104.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2024-10-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,86.8,basis points,kase,2026-09-26,level,2026-09-26
+2024-10-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.44,% per annum,kase,2026-09-26,level,2026-09-26
 2024-10-01,KZ,national,monthly,LENDING_RATE,19.315141809438817,%,nbk,2026-09-24,level,2026-09-24
 2024-10-01,KZ,national,monthly,LOANS_BUSINESS_FX,3820966.722925,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-10-01,KZ,national,monthly,LOANS_BUSINESS_KZT,10300640.13758,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -64809,6 +65007,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-11-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,506444.956,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-11-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,856059.891,"million KZT, year-to-date cumulative",nbk,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2024-11-01,KGZ,national,monthly,KG_CPI_YOY,105.7,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2024-11-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,77.6,basis points,kase,2026-09-26,level,2026-09-26
+2024-11-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.22,% per annum,kase,2026-09-26,level,2026-09-26
 2024-11-01,KZ,national,monthly,LENDING_RATE,18.090577881947382,%,nbk,2026-09-24,level,2026-09-24
 2024-11-01,KZ,national,monthly,LOANS_BUSINESS_FX,3901936.948583,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-11-01,KZ,national,monthly,LOANS_BUSINESS_KZT,10298098.61242,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -65052,6 +65252,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-01,KZ,national,monthly,KASE_RUB_VOLUME,127896431294.0,RUB,nbk,2026-09-24,level,2026-09-24
 2024-12-01,KZ,national,monthly,KASE_USD_VOLUME,5335884168.0,USD,nbk,2026-09-24,level,2026-09-24
 2024-12-01,KGZ,national,monthly,KG_CPI_YOY,106.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2024-12-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,93.4,basis points,kase,2026-09-26,level,2026-09-26
+2024-12-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.79,% per annum,kase,2026-09-26,level,2026-09-26
 2024-12-01,KZ,national,monthly,LENDING_RATE,18.262499111701732,%,nbk,2026-09-24,level,2026-09-24
 2024-12-01,KZ,national,monthly,LOANS_BUSINESS_FX,4104003.481779,million KZT,nbk,2026-09-24,level,2026-09-24
 2024-12-01,KZ,national,monthly,LOANS_BUSINESS_KZT,10645685.350863,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -65540,6 +65742,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,monthly,KASE_RUB_VOLUME,101692355792.0,RUB,nbk,2026-09-24,level,2026-09-24
 2025-01-01,KZ,national,monthly,KASE_USD_VOLUME,4532589401.0,USD,nbk,2026-09-24,level,2026-09-24
 2025-01-01,KGZ,national,monthly,KG_CPI_YOY,106.7,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2025-01-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,93.2,basis points,kase,2026-09-26,level,2026-09-26
+2025-01-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.81,% per annum,kase,2026-09-26,level,2026-09-26
 2025-01-01,KZ,national,monthly,LENDING_RATE,20.46141258989975,%,nbk,2026-09-24,level,2026-09-24
 2025-01-01,KZ,national,monthly,LOANS_BUSINESS_FX,4208724.919801,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-01-01,KZ,national,monthly,LOANS_BUSINESS_KZT,11072437.540183,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -65819,6 +66023,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,KASE_RUB_VOLUME,94207746963.0,RUB,nbk,2026-09-24,level,2026-09-24
 2025-02-01,KZ,national,monthly,KASE_USD_VOLUME,4741743818.0,USD,nbk,2026-09-24,level,2026-09-24
 2025-02-01,KGZ,national,monthly,KG_CPI_YOY,107.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2025-02-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,112.2,basis points,kase,2026-09-26,level,2026-09-26
+2025-02-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.67,% per annum,kase,2026-09-26,level,2026-09-26
 2025-02-01,KZ,national,monthly,LENDING_RATE,19.542834289126315,%,nbk,2026-09-24,level,2026-09-24
 2025-02-01,KZ,national,monthly,LOANS_BUSINESS_FX,4034056.749627,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-02-01,KZ,national,monthly,LOANS_BUSINESS_KZT,10866992.629418,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -66082,6 +66288,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,KASE_RUB_VOLUME,89963073630.0,RUB,nbk,2026-09-24,level,2026-09-24
 2025-03-01,KZ,national,monthly,KASE_USD_VOLUME,4135038968.0,USD,nbk,2026-09-24,level,2026-09-24
 2025-03-01,KGZ,national,monthly,KG_CPI_YOY,106.9,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2025-03-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,104.1,basis points,kase,2026-09-26,level,2026-09-26
+2025-03-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.66,% per annum,kase,2026-09-26,level,2026-09-26
 2025-03-01,KZ,national,monthly,LENDING_RATE,20.491975970408085,%,nbk,2026-09-24,level,2026-09-24
 2025-03-01,KZ,national,monthly,LOANS_BUSINESS_FX,3883045.222707,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-03-01,KZ,national,monthly,LOANS_BUSINESS_KZT,11040192.14884,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -66426,6 +66634,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,monthly,KASE_RUB_VOLUME,81628404531.0,RUB,nbk,2026-09-24,level,2026-09-24
 2025-04-01,KZ,national,monthly,KASE_USD_VOLUME,5421679179.0,USD,nbk,2026-09-24,level,2026-09-24
 2025-04-01,KGZ,national,monthly,KG_CPI_YOY,107.1,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2025-04-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,136.0,basis points,kase,2026-09-26,level,2026-09-26
+2025-04-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.04,% per annum,kase,2026-09-26,level,2026-09-26
 2025-04-01,KZ,national,monthly,LENDING_RATE,20.442598884849115,%,nbk,2026-09-24,level,2026-09-24
 2025-04-01,KZ,national,monthly,LOANS_BUSINESS_FX,4027397.422839,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-04-01,KZ,national,monthly,LOANS_BUSINESS_KZT,11201967.741215,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -66710,6 +66920,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-05-01,KZ,national,monthly,KASE_RUB_VOLUME,101281187845.0,RUB,nbk,2026-09-24,level,2026-09-24
 2025-05-01,KZ,national,monthly,KASE_USD_VOLUME,4524405406.0,USD,nbk,2026-09-24,level,2026-09-24
 2025-05-01,KGZ,national,monthly,KG_CPI_YOY,108.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2025-05-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,120.0,basis points,kase,2026-09-26,level,2026-09-26
+2025-05-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.13,% per annum,kase,2026-09-26,level,2026-09-26
 2025-05-01,KZ,national,monthly,LENDING_RATE,20.3650349645139,%,nbk,2026-09-24,level,2026-09-24
 2025-05-01,KZ,national,monthly,LOANS_BUSINESS_FX,4131292.6568,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-05-01,KZ,national,monthly,LOANS_BUSINESS_KZT,11571412.467366,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -66952,6 +67164,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,KASE_RUB_VOLUME,60854321272.0,RUB,nbk,2026-09-24,level,2026-09-24
 2025-06-01,KZ,national,monthly,KASE_USD_VOLUME,4708212401.0,USD,nbk,2026-09-24,level,2026-09-24
 2025-06-01,KGZ,national,monthly,KG_CPI_YOY,108.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2025-06-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,113.0,basis points,kase,2026-09-26,level,2026-09-26
+2025-06-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.92,% per annum,kase,2026-09-26,level,2026-09-26
 2025-06-01,KZ,national,monthly,LENDING_RATE,19.723792375815165,%,nbk,2026-09-24,level,2026-09-24
 2025-06-01,KZ,national,monthly,LOANS_BUSINESS_FX,4243785.936504,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-06-01,KZ,national,monthly,LOANS_BUSINESS_KZT,11657320.067783,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -67293,6 +67507,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,monthly,KASE_RUB_VOLUME,86184780233.0,RUB,nbk,2026-09-24,level,2026-09-24
 2025-07-01,KZ,national,monthly,KASE_USD_VOLUME,5728745799.0,USD,nbk,2026-09-24,level,2026-09-24
 2025-07-01,KGZ,national,monthly,KG_CPI_YOY,108.8,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2025-07-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,92.1,basis points,kase,2026-09-26,level,2026-09-26
+2025-07-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.81,% per annum,kase,2026-09-26,level,2026-09-26
 2025-07-01,KZ,national,monthly,LENDING_RATE,20.840731904522425,%,nbk,2026-09-24,level,2026-09-24
 2025-07-01,KZ,national,monthly,LOANS_BUSINESS_FX,4431716.486833,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-07-01,KZ,national,monthly,LOANS_BUSINESS_KZT,11849132.458532,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -67606,6 +67822,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,KASE_RUB_VOLUME,82004785798.0,RUB,nbk,2026-09-24,level,2026-09-24
 2025-08-01,KZ,national,monthly,KASE_USD_VOLUME,4573596095.0,USD,nbk,2026-09-24,level,2026-09-24
 2025-08-01,KGZ,national,monthly,KG_CPI_YOY,109.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2025-08-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,77.7,basis points,kase,2026-09-26,level,2026-09-26
+2025-08-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.63,% per annum,kase,2026-09-26,level,2026-09-26
 2025-08-01,KZ,national,monthly,LENDING_RATE,20.185123301269897,%,nbk,2026-09-24,level,2026-09-24
 2025-08-01,KZ,national,monthly,LOANS_BUSINESS_FX,4752187.215659,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-08-01,KZ,national,monthly,LOANS_BUSINESS_KZT,11990591.646152,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -67872,6 +68090,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-01,KZ,national,monthly,KASE_RUB_VOLUME,122145774809.0,RUB,nbk,2026-09-24,level,2026-09-24
 2025-09-01,KZ,national,monthly,KASE_USD_VOLUME,5281301237.0,USD,nbk,2026-09-24,level,2026-09-24
 2025-09-01,KGZ,national,monthly,KG_CPI_YOY,108.4,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2025-09-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,73.1,basis points,kase,2026-09-26,level,2026-09-26
+2025-09-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.43,% per annum,kase,2026-09-26,level,2026-09-26
 2025-09-01,KZ,national,monthly,LENDING_RATE,20.358591103516808,%,nbk,2026-09-24,level,2026-09-24
 2025-09-01,KZ,national,monthly,LOANS_BUSINESS_FX,4952269.33045,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-09-01,KZ,national,monthly,LOANS_BUSINESS_KZT,12167602.634058,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -68211,6 +68431,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,monthly,KASE_RUB_VOLUME,144895339435.0,RUB,nbk,2026-09-24,level,2026-09-24
 2025-10-01,KZ,national,monthly,KASE_USD_VOLUME,6126620939.0,USD,nbk,2026-09-24,level,2026-09-24
 2025-10-01,KGZ,national,monthly,KG_CPI_YOY,109.3,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2025-10-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,81.5,basis points,kase,2026-09-26,level,2026-09-26
+2025-10-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.45,% per annum,kase,2026-09-26,level,2026-09-26
 2025-10-01,KZ,national,monthly,LENDING_RATE,20.759646478475155,%,nbk,2026-09-24,level,2026-09-24
 2025-10-01,KZ,national,monthly,LOANS_BUSINESS_FX,5191126.509013,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-10-01,KZ,national,monthly,LOANS_BUSINESS_KZT,12381475.533278,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -68510,6 +68732,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-01,KZ,national,monthly,KASE_RUB_VOLUME,129658560769.0,RUB,nbk,2026-09-24,level,2026-09-24
 2025-11-01,KZ,national,monthly,KASE_USD_VOLUME,5661082434.0,USD,nbk,2026-09-24,level,2026-09-24
 2025-11-01,KGZ,national,monthly,KG_CPI_YOY,109.2,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2025-11-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,66.1,basis points,kase,2026-09-26,level,2026-09-26
+2025-11-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.26,% per annum,kase,2026-09-26,level,2026-09-26
 2025-11-01,KZ,national,monthly,LENDING_RATE,19.72501394196683,%,nbk,2026-09-24,level,2026-09-24
 2025-11-01,KZ,national,monthly,LOANS_BUSINESS_FX,5323320.07453,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-11-01,KZ,national,monthly,LOANS_BUSINESS_KZT,12390019.603866,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -68771,6 +68995,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-01,KZ,national,monthly,KASE_RUB_VOLUME,134560334406.0,RUB,nbk,2026-09-24,level,2026-09-24
 2025-12-01,KZ,national,monthly,KASE_USD_VOLUME,7976520014.0,USD,nbk,2026-09-24,level,2026-09-24
 2025-12-01,KGZ,national,monthly,KG_CPI_YOY,109.4,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2025-12-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,78.7,basis points,kase,2026-09-26,level,2026-09-26
+2025-12-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.55,% per annum,kase,2026-09-26,level,2026-09-26
 2025-12-01,KZ,national,monthly,LENDING_RATE,19.6221573126321,%,nbk,2026-09-24,level,2026-09-24
 2025-12-01,KZ,national,monthly,LOANS_BUSINESS_FX,5262159.449336,million KZT,nbk,2026-09-24,level,2026-09-24
 2025-12-01,KZ,national,monthly,LOANS_BUSINESS_KZT,12606755.816417,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -69231,6 +69457,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,monthly,KASE_RUB_VOLUME,62859414953.0,RUB,nbk,2026-09-24,level,2026-09-24
 2026-01-01,KZ,national,monthly,KASE_USD_VOLUME,5890188211.0,USD,nbk,2026-09-24,level,2026-09-24
 2026-01-01,KGZ,national,monthly,KG_CPI_YOY,109.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2026-01-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,92.0,basis points,kase,2026-09-26,level,2026-09-26
+2026-01-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.71,% per annum,kase,2026-09-26,level,2026-09-26
 2026-01-01,KZ,national,quarterly,LABOR_FORCE,9838074.0,persons,bns,2026-09-24,level,2026-09-24
 2026-01-01,KZ,national,quarterly,LABOR_FORCE_PARTICIPATION_RATE,67.2,% of population 15+,bns,2026-09-24,level,2026-09-24
 2026-01-01,KZ,national,monthly,LENDING_RATE,21.61993369671556,%,nbk,2026-09-24,level,2026-09-24
@@ -69533,6 +69761,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-01,KZ,national,monthly,KASE_RUB_VOLUME,81634240432.0,RUB,nbk,2026-09-24,level,2026-09-24
 2026-02-01,KZ,national,monthly,KASE_USD_VOLUME,6783485791.0,USD,nbk,2026-09-24,level,2026-09-24
 2026-02-01,KGZ,national,monthly,KG_CPI_YOY,109.7,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2026-02-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,105.6,basis points,kase,2026-09-26,level,2026-09-26
+2026-02-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.59,% per annum,kase,2026-09-26,level,2026-09-26
 2026-02-01,KZ,national,monthly,LENDING_RATE,21.161309683366508,%,nbk,2026-09-24,level,2026-09-24
 2026-02-01,KZ,national,monthly,LOANS_BUSINESS_FX,5440008.031119,million KZT,nbk,2026-09-24,level,2026-09-24
 2026-02-01,KZ,national,monthly,LOANS_BUSINESS_KZT,12787324.874728,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -69792,6 +70022,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,monthly,KASE_RUB_VOLUME,70943760874.0,RUB,nbk,2026-09-24,level,2026-09-24
 2026-03-01,KZ,national,monthly,KASE_USD_VOLUME,6728781904.0,USD,nbk,2026-09-24,level,2026-09-24
 2026-03-01,KGZ,national,monthly,KG_CPI_YOY,111.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2026-03-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,102.0,basis points,kase,2026-09-26,level,2026-09-26
+2026-03-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.86,% per annum,kase,2026-09-26,level,2026-09-26
 2026-03-01,KZ,national,monthly,LENDING_RATE,21.324223612134443,%,nbk,2026-09-24,level,2026-09-24
 2026-03-01,KZ,national,monthly,LOANS_BUSINESS_FX,5391825.160983,million KZT,nbk,2026-09-24,level,2026-09-24
 2026-03-01,KZ,national,monthly,LOANS_BUSINESS_KZT,12875572.843493,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -70131,6 +70363,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,monthly,KASE_RUB_VOLUME,116228489175.0,RUB,nbk,2026-09-24,level,2026-09-24
 2026-04-01,KZ,national,monthly,KASE_USD_VOLUME,8840953580.0,USD,nbk,2026-09-24,level,2026-09-24
 2026-04-01,KGZ,national,monthly,KG_CPI_YOY,111.4,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2026-04-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,74.4,basis points,kase,2026-09-26,level,2026-09-26
+2026-04-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.67,% per annum,kase,2026-09-26,level,2026-09-26
 2026-04-01,KZ,national,quarterly,LABOR_FORCE,9844534.0,persons,bns,2026-09-24,level,2026-09-24
 2026-04-01,KZ,national,quarterly,LABOR_FORCE_PARTICIPATION_RATE,67.4,% of population 15+,bns,2026-09-24,level,2026-09-24
 2026-04-01,KZ,national,monthly,LENDING_RATE,21.50224740718959,%,nbk,2026-09-24,level,2026-09-24
@@ -70456,6 +70690,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,KASE_RUB_VOLUME,118723086810.0,RUB,nbk,2026-09-24,level,2026-09-24
 2026-05-01,KZ,national,monthly,KASE_USD_VOLUME,6838572326.0,USD,nbk,2026-09-24,level,2026-09-24
 2026-05-01,KGZ,national,monthly,KG_CPI_YOY,111.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2026-05-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,82.5,basis points,kase,2026-09-26,level,2026-09-26
+2026-05-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.76,% per annum,kase,2026-09-26,level,2026-09-26
 2026-05-01,KZ,national,monthly,LENDING_RATE,21.661628124946557,%,nbk,2026-09-24,level,2026-09-24
 2026-05-01,KZ,national,monthly,LOANS_BUSINESS_FX,5454222.788815,million KZT,nbk,2026-09-24,level,2026-09-24
 2026-05-01,KZ,national,monthly,LOANS_BUSINESS_KZT,13023120.247062,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -70766,6 +71002,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,KASE_RUB_VOLUME,152134566442.0,RUB,nbk,2026-09-24,level,2026-09-24
 2026-06-01,KZ,national,monthly,KASE_USD_VOLUME,8763583632.0,USD,nbk,2026-09-24,level,2026-09-24
 2026-06-01,KGZ,national,monthly,KG_CPI_YOY,111.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2026-06-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,80.6,basis points,kase,2026-09-26,level,2026-09-26
+2026-06-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.69,% per annum,kase,2026-09-26,level,2026-09-26
 2026-06-01,KZ,national,monthly,LENDING_RATE,20.268876944481192,%,nbk,2026-09-24,level,2026-09-24
 2026-06-01,KZ,national,monthly,LOANS_BUSINESS_FX,5916835.608669,million KZT,nbk,2026-09-24,level,2026-09-24
 2026-06-01,KZ,national,monthly,LOANS_BUSINESS_KZT,13063060.73271,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -71107,6 +71345,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,monthly,KASE_RUB_VOLUME,140762229004.0,RUB,nbk,2026-09-24,level,2026-09-24
 2026-07-01,KZ,national,monthly,KASE_USD_VOLUME,9695953843.0,USD,nbk,2026-09-24,level,2026-09-24
 2026-07-01,KGZ,national,monthly,KG_CPI_YOY,111.5,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2026-07-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,82.4,basis points,kase,2026-09-26,level,2026-09-26
+2026-07-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.05,% per annum,kase,2026-09-26,level,2026-09-26
 2026-07-01,KZ,national,monthly,LENDING_RATE,20.84661806814383,%,nbk,2026-09-24,level,2026-09-24
 2026-07-01,KZ,national,monthly,LOANS_BUSINESS_FX,6296439.999176,million KZT,nbk,2026-09-24,level,2026-09-24
 2026-07-01,KZ,national,monthly,LOANS_BUSINESS_KZT,13224956.315314,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -71398,6 +71638,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-01,KZ,national,monthly,INVESTMENT_FIXED_CAPITAL,13505738696.0,"thousand KZT, year-to-date cumulative",bns,2026-09-24,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-24
 2026-08-01,KZ,national,monthly,INVESTMENT_INDEX,108.1,"index, same period previous year = 100",bns,2026-09-24,level,2026-09-24
 2026-08-01,KGZ,national,monthly,KG_CPI_YOY,112.0,"index, same month previous year = 100",eec,2026-09-25,level,2026-09-25
+2026-08-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,76.4,basis points,kase,2026-09-26,level,2026-09-26
+2026-08-01,KZ,national,monthly,KZ_EUROBOND_YIELD,5.95,% per annum,kase,2026-09-26,level,2026-09-26
 2026-08-01,KZ,national,monthly,LOANS_BUSINESS_FX,6170862.02686,million KZT,nbk,2026-09-24,level,2026-09-24
 2026-08-01,KZ,national,monthly,LOANS_BUSINESS_KZT,13221291.334964,million KZT,nbk,2026-09-24,level,2026-09-24
 2026-08-01,KZ,national,monthly,LOANS_INDIVIDUALS_FX,2313.39731,million KZT,nbk,2026-09-24,level,2026-09-24
@@ -71575,6 +71817,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-09-01,KZ,national,monthly,GS_YIELD_3M,14.766,% per annum,kase,2026-09-25,level,2026-09-25
 2026-09-01,KZ,national,monthly,GS_YIELD_5Y,13.4123,% per annum,kase,2026-09-25,level,2026-09-25
 2026-09-01,KZ,national,monthly,GS_YIELD_6M,14.6907,% per annum,kase,2026-09-25,level,2026-09-25
+2026-09-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,65.1,basis points,kase,2026-09-26,level,2026-09-26
+2026-09-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.14,% per annum,kase,2026-09-26,level,2026-09-26
 2026-09-01,KZ,national,monthly,M0,4836727.0,million KZT,nbk,2026-09-25,level,2026-09-25
 2026-09-01,KZ,national,monthly,M1,12055165.0,million KZT,nbk,2026-09-25,level,2026-09-25
 2026-09-01,KZ,national,monthly,M2,48335637.0,million KZT,nbk,2026-09-25,level,2026-09-25

@@ -1,0 +1,21 @@
+{
+  "source": "kase",
+  "source_url": "https://kase.kz/ru/app-gateway/documents/risk/DD.MM.YYYY/ ; https://kase.kz/cms/api/market-prices",
+  "dataset_id": "kase/settlement-prices/MinFin-eurobonds",
+  "indicator_id": "EUROBOND_SPREAD_BY_ISSUE",
+  "indicator_name": "Spread of Kazakhstan MinFin USD Eurobonds over US Treasuries, by issue, end of month",
+  "description": "Спред долларовых еврооблигаций Минфина РК к UST, по выпускам, конец месяца",
+  "frequency": "monthly",
+  "unit": "basis points",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "YTM minus the FRED constant-maturity Treasury yield (DGS5/7/10/20/30) on the valuation date, linearly interpolated at the remaining maturity. USD bonds only.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2014-11-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

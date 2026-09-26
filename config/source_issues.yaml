@@ -135,3 +135,18 @@ issues:
     variable: POVERTY_HEADCOUNT
     evidence: 89 778 persons in 2024, about 0.44% of the population -- consistent with the below-food-basket measure, not the official ~5% share below the subsistence minimum.
     advice: Check the Taldau definition (index 2928350) before using it as the poverty rate.
+
+  - id: kase_eurobond_2020_2022_stale
+    kind: caveat
+    variable: EUROBOND_SPREAD_BY_ISSUE
+    observations:
+      - {date: "2022-05-01", item: XS1120709826, value: 34.0}
+      - {date: "2022-06-01", item: XS1120709826, value: 24.5}
+    evidence: >
+      KASE valuations 2020-11 to 2022-07 quote only the 2044 bond (XS1120709826), often flagged «Индикативная»,
+      with the clean price unchanged across May and June 2022 (119.9099) and spreads of 25-60 bp in a stress
+      period; from 2022-08 the 2045 bond shows ~300 bp while the 2044 bond shows 50-120 bp. From 2024 the long
+      bonds agree within ~20 bp.
+    advice: >
+      Do not use the 2044 bond for 2020-11 to 2023. The headline KZ_EUROBOND_SPREAD / KZ_EUROBOND_YIELD leave
+      2020-11 to 2022-07 missing and switch to the 2045 bond from 2022-08.

@@ -4895,3 +4895,23 @@ New fetcher `scripts/fetchers/bns_living.py` (every edition of BNS «Основ�
   DECILE_INCOME_RATIO_ANNUAL (2011–2025).
 - Quintiles are not stored separately: each quintile is two adjacent deciles (shares add, bounds are
   the even decile cut-offs).
+
+## 2026-09-26 — sovereign Eurobond spread (country risk premium)
+
+New fetcher `scripts/fetchers/kase_eurobonds.py`; 501 indicators.
+- **Source:** KASE's daily settlement-price valuations of every Ministry of Finance Eurobond (free
+  files, plain GET): the daily xls from 2024-08, the CMS archive of zips before (2014-2024, three
+  layouts, columns found by header). Last valuation of each month. Other free sources were checked
+  and rejected (AIX: no trades; LSE: history behind a signed widget; Deutsche Börse: requests need
+  headers computed from a key in the site's JavaScript — not reproduced; NBK/IMF/FRED/WB: no series).
+- **Item-level:** EUROBOND_PRICE_BY_ISSUE, EUROBOND_YTM_BY_ISSUE (all MinFin Eurobonds, USD and EUR,
+  2014-11 on) and EUROBOND_SPREAD_BY_ISSUE (USD bonds over the FRED constant-maturity Treasury curve
+  DGS5/7/10/20/30, interpolated at the remaining maturity on the valuation date).
+- **Headline:** KZ_EUROBOND_SPREAD (bp) and KZ_EUROBOND_YIELD — the 2044 bond to 2020-10, the 2045 bond
+  from 2022-08, **2020-11 to 2022-07 left missing** (only stale/indicative 2044 quotes; listed in
+  `config/source_issues.yaml`). 2015-08 377 bp, 2016-01 348, 2020-03 276, 2022-10 312, 2026-09 65.
+- **Checks:** YTM reproduces KASE's to 0.01 pp (a mismatch above 0.1 pp stops the run — it would mean a
+  wrong coupon/maturity or column); an independent re-computation agrees on all 121 benchmark months
+  within 0.9 bp; LSE's last trade in the 2045 bond (27.07.2026) is within 0.3 points of KASE's value.
+- Not EMBI: one bond, valued by KASE. Accumulates: the first run back-filled 2014-11..2026-09; daily
+  runs fetch only missing months and the last two.

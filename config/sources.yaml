@@ -7055,6 +7055,29 @@ agencies:
           2026-09-25. Zero-coupon government securities yield at 10Y: monthly average of the
           daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
           fetch_gs_yield_10y.
+      KZ_EUROBOND_SPREAD:
+        status: confirmed
+        download_url: "https://kase.kz/ru/app-gateway/documents/risk/DD.MM.YYYY/"
+        format: xls
+        notes: >
+          2026-09-26. KASE settlement-price valuations of the MinFin Eurobonds, plain GET, no login or signed
+          headers: daily xls from 2024-08-01 (trailing slash required; sheet «Расчетные цены_ФР»: code, ISIN,
+          clean, dirty, YTM, days to maturity on 30/360); before that the Strapi listing
+          https://kase.kz/cms/api/market-prices?filters[date][$gte]=...&filters[date][$lte]=...&populate=deep
+          -> file.url zips (weekly 2014-2016, daily after; layouts «Еврооблигации МФ РК» to 2020-06, clean only
+          2020-07..10, «Расчетные цены» with «Рыночная»/«Индикативная» 2020-11..2024-07). Columns found by
+          header text. Last valuation of each month; YTM computed from the clean price where blank (30/360
+          semi-annual, reproduces KASE to 0.01 pp). Treasury leg: FRED DGS5/7/10/20/30. Cross-check: LSE last
+          trade 27.07.2026 in XS1263139856 105.354 vs KASE 105.642; an independent re-computation agrees on all
+          121 benchmark months within 0.9 bp. Rejected: AIX (no trades), LSE (history behind a signed widget),
+          Deutsche Börse (requests need headers computed from a key in its JavaScript), NBK/IMF/FRED/WB (no series).
+          KASE sells licences for derived/non-display use of its data -- the files themselves are published free.
+          KASE resets connections under load: requests are spaced 1.5 s and retried.
+      KZ_EUROBOND_YIELD:
+        status: confirmed
+        download_url: "https://kase.kz/ru/app-gateway/documents/risk/DD.MM.YYYY/"
+        format: xls
+        notes: "Same files as KZ_EUROBOND_SPREAD; the benchmark's YTM."
   cbr:
     name: "Bank of Russia (ЦБ РФ) — key rate, official exchange rate"
     website: "https://www.cbr.ru"

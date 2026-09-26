@@ -1,0 +1,21 @@
+{
+  "source": "kase",
+  "source_url": "https://kase.kz/ru/app-gateway/documents/risk/DD.MM.YYYY/ ; https://kase.kz/cms/api/market-prices",
+  "dataset_id": "kase/settlement-prices/MinFin-eurobonds",
+  "indicator_id": "EUROBOND_YTM_BY_ISSUE",
+  "indicator_name": "Yield to maturity of Kazakhstan MinFin Eurobonds (KASE valuation), end of month",
+  "description": "Доходность к погашению еврооблигаций Минфина РК (оценка KASE), конец месяца",
+  "frequency": "monthly",
+  "unit": "% per annum",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "KASE's YTM; where KASE left it blank (USD bonds 2019-12 to 2020-10) computed from the clean price, 30/360 semi-annual (reproduces KASE's to 0.01 pp). EUR bonds (KZ_10_2811, KZ_14_2609, KZ_27_3409) are EUR yields.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2014-11-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
