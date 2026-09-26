@@ -9,7 +9,7 @@
   "unit": "million KZT",
   "currency": "KZT",
   "geography": "Kazakhstan (national)",
-  "methodology": "Million KZT, STATE budget (republican plus local) tax receipts, total, YEAR-TO-DATE cumulative (January to the month dated), from every Statistical Bulletin on every page of the listing (89 of 91 parsed). The latest edition wins where editions differ (10 revised points across the six series). Where an edition gave discrete quarters (2020 - mid 2021) they are cumulated to March/June/September/December. Months no edition covers are missing, not interpolated.",
+  "methodology": "Million KZT, STATE budget (republican plus local) tax receipts, total, YEAR-TO-DATE cumulative (January to the month dated), from every Statistical Bulletin on every page of the listing (91 of 91 parsed). The latest edition wins where editions differ (10 revised points across the six series). Where an edition gave discrete quarters (2020 - mid 2021) they are cumulated to March/June/September/December. Months no edition covers are missing, not interpolated.",
   "publication_date": null,
   "last_update_date": "2026-09-26",
   "download_date": "2026-09-26",

@@ -1,13 +1,8 @@
 # Update report — 2026-09-26
 
-> **Follow-up (same day):** the one error below, bns/FINAL_ENERGY_CONSUMPTION, was a source-format change — BNS
-> replaced element 8582's json_cube by an xlsx-as-JSON dump (now 1991–2025). The fetcher reads both formats;
-> the series was re-run (ok, 35 years), the unified dataset and project_knowledge rebuilt, and the test suite
-> passed (428). Full run time 56 min.
-
-Run timestamp: 2026-09-26T04:58:51.928767
-Unified dataset updated: False
-Tests passed: None
+Run timestamp: 2026-09-26T07:20:50.037254
+Unified dataset updated: True
+Tests passed: True
 
 ## Per-dataset results
 
@@ -94,8 +89,7 @@ Tests passed: None
 - **bns/DOCTORS_TOTAL** — fetch+validate+process: ok (downloaded=12, processed=12)
 - **bns/ENERGY_INTENSITY** — fetch+validate+process: ok (downloaded=11, processed=11)
 - **bns/ENERGY_CONSUMPTION** — fetch+validate+process: ok (downloaded=11, processed=11)
-- **bns/FINAL_ENERGY_CONSUMPTION** — fetch: error (downloaded=0, processed=0)
-  - ERROR: 'str' object has no attribute 'get'
+- **bns/FINAL_ENERGY_CONSUMPTION** — fetch+validate+process: ok (downloaded=35, processed=35)
 - **bns/RENEWABLE_ENERGY_SHARE** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **bns/POVERTY_HEADCOUNT** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Unexpected jump of 60.2% in value between 2017-12-31 (45777.0) and 2018-12-31 (73318.0).
@@ -1843,10 +1837,10 @@ Tests passed: None
 - **ardfm/BANK_PROVISIONS_IFRS** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_CAPITAL_ADEQUACY_K1** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_CAPITAL_ADEQUACY_K2** — fetch+validate+process: ok (downloaded=3, processed=3)
-- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=4, processed=4)
-- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=4, processed=4)
-- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=4, processed=4)
-  - warning: Unexpected jump of 100.0% in own-period contribution between 2026-03-01 (795.9) and 2026-04-01 (0.0).
+- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=5, processed=5)
+  - warning: Unexpected jump of 100.0% in own-period contribution between 2026-02-01 (795.9) and 2026-03-01 (0.0).
 - **ardfm/BANK_ASSETS_TOTAL** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_ASSETS_GROSS** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_LIABILITIES_TOTAL** — fetch+validate+process: ok (downloaded=3, processed=3)
@@ -1854,7 +1848,7 @@ Tests passed: None
 - **ardfm/BANK_DEPOSITS_LEGAL_ENTITIES** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_DEPOSITS_INDIVIDUALS** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_DEPOSITS_INDIVIDUALS_FX_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
-- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_ASSETS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_LOANS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
 - **ardfm/BANK_DEPOSITS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
