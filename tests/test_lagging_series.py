@@ -96,3 +96,14 @@ def test_passenger_turnover_monthly_has_the_taldau_history():
     assert min(ytd) <= "2021-01-01"
     # year-to-date: December is the year; 2021 and 2023 sit either side of the second break
     assert 100_000 < ytd["2021-12-01"] < 115_000 and 65_000 < ytd["2023-12-01"] < 80_000
+
+
+def test_one_failed_dataset_does_not_block_the_run():
+    import update_all
+    from lib.pipeline_logging import LogEntry
+    ok = [LogEntry(timestamp="t", source="bns", dataset=f"S{i}", action="fetch", status="ok") for i in range(99)]
+    bad = LogEntry(timestamp="t", source="imf", dataset="FSI_ROA", action="fetch", status="error", errors=["reset"])
+    proceed, failed = update_all.failure_gate(ok + [bad])
+    assert proceed and failed == [bad]
+    outage = [LogEntry(timestamp="t", source="imf", dataset=f"X{i}", action="fetch", status="error") for i in range(30)]
+    assert not update_all.failure_gate(ok[:70] + outage)[0]
