@@ -1,25 +1,33 @@
 # Kazakhstan Economic Data Pipeline
 
 Automated collection, validation, processing, and versioning of official
-Kazakhstan macroeconomic data from seven sources — Bureau of National
+Kazakhstan macroeconomic data from eight sources — Bureau of National
 Statistics (БНС), National Bank of Kazakhstan (НБ РК), Ministry of Finance
 (Минфин), the Agency for Regulation and Development of the Financial Market
-(АРРФР), the IMF, and, for world commodity prices, the World Bank (Pink Sheet,
+(АРРФР), the Kazakhstan Stock Exchange (KASE: TONIA, the government securities
+yield curve), the IMF, and, for world commodity prices, the World Bank (Pink Sheet,
 Commodity Markets Outlook) and the U.S. EIA (Short-Term Energy Outlook) — into a
 unified dataset, with a manual bridge into a Claude Project for analysis.
 
 ```
-БНС + НБ РК + Минфин + АРРФР + IMF + World Bank + EIA → RAW → VALIDATION → PROCESSED →
+БНС + НБ РК + Минфин + АРРФР + KASE + IMF + World Bank + EIA → RAW → VALIDATION → PROCESSED →
 METADATA → UNIFIED DATASET → GitHub → (manual "Sync now") → Claude Project "Экономика Казахстана"
 ```
 
 ## Scope
 
-430 indicators (see `config/indicators.yaml`), all connected end-to-end
+507 indicators (see `config/indicators.yaml`), all connected end-to-end
 against live official sources — past the original 18-indicator pilot and its
 100-150 indicator target (MASTER TASK section 17). No econometric modeling
 yet; see `project_knowledge/UPDATE_LOG.md` for the dated history of how the
 dataset grew and what was verified at each step.
+
+For the gravity model of Kazakhstan's trade, item-level datasets keyed by ISO3
+partner code (`config/dims.yaml`): trade by partner (BNS from 2020, WITS/UN Comtrade
+1995–2023), partner GDP and population (World Bank WDI), tariffs (WITS); distances and
+bilateral dummies (CEPII) are static tables in `data/reference/`. Input-output and
+supply-use tables (BNS, 2021–2024) are built into `data/reference/io/` by
+`scripts/build_io_tables.py`.
 
 ## Repository layout
 

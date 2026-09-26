@@ -17,7 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib import pipeline_logging, unified  # noqa: E402
-import update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_wb  # noqa: E402
+import update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_wb, update_kase, update_foreign  # noqa: E402
 import update_dims, update_derived  # noqa: E402
 import build_project_knowledge, build_calendar  # noqa: E402
 
@@ -29,7 +29,7 @@ def main() -> int:
     logger = pipeline_logging.RunLogger(run_timestamp=run_ts)
 
     # update_derived last: its scalar series are written from the item-level datasets
-    for module in (update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_wb, update_dims, update_derived):
+    for module in (update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_wb, update_kase, update_foreign, update_dims, update_derived):
         module.run(logger)
 
     if logger.has_errors():

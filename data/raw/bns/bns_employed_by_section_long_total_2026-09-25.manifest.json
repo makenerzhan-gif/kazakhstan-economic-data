@@ -1,0 +1,18 @@
+{
+  "downloaded_at": "2026-09-25T19:05:39.097255",
+  "raw_file": "bns_employed_by_section_long_total_2026-09-25.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "702840",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "23",
+    "p_term_id": "741880",
+    "p_terms": "741880,741885,741917,741935,3805694,4197331",
+    "p_dicIds": "67,915,749,576,1773,1793",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}

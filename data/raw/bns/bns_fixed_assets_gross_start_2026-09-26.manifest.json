@@ -1,0 +1,19 @@
+{
+  "downloaded_at": "2026-09-26T05:07:07.104665",
+  "raw_file": "bns_fixed_assets_gross_start_2026-09-25.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "703203",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "703203",
+    "p_keyword": "",
+    "p_period_id": "7",
+    "p_measure_id": "1",
+    "p_term_id": "741880",
+    "p_terms": "741880,741885,741927,455728,741908",
+    "p_dicIds": "68,915,90,77,1161",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}

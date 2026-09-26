@@ -1,0 +1,19 @@
+{
+  "downloaded_at": "2026-09-25T17:52:44.066927",
+  "raw_file": "bns_cpi_regulated_utilities_yoy_2026-09-25.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "index_id": "703076",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "703076",
+    "p_keyword": "",
+    "p_period_id": "4",
+    "p_measure_id": "7",
+    "p_term_id": "741880",
+    "p_terms": "741880,2695732,4772564",
+    "p_dicIds": "67,848,2753",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}

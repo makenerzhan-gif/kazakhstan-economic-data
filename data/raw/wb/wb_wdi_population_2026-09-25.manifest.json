@@ -1,0 +1,5 @@
+{
+  "downloaded_at": "2026-09-25T19:12:00.380709",
+  "raw_file": "wb_wdi_population_2026-09-25.json",
+  "source_url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json&per_page=20000&date=2000:2026"
+}

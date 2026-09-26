@@ -17,6 +17,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,AKM,TOTAL,Самостоятельно занятые,173.441,level
 2013-12-31,AKM,TOTAL,Самостоятельно занятые,168.193,level
 2014-12-31,AKM,TOTAL,Самостоятельно занятые,163.61,level
+2015-12-31,AKM,TOTAL,Самостоятельно занятые,141.445,level
 2016-12-31,AKM,TOTAL,Самостоятельно занятые,146.95,level
 2017-12-31,AKM,TOTAL,Самостоятельно занятые,139.602,level
 2018-12-31,AKM,TOTAL,Самостоятельно занятые,134.62,level
@@ -41,6 +42,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,AKT,TOTAL,Самостоятельно занятые,106.135,level
 2013-12-31,AKT,TOTAL,Самостоятельно занятые,104.938,level
 2014-12-31,AKT,TOTAL,Самостоятельно занятые,87.778,level
+2015-12-31,AKT,TOTAL,Самостоятельно занятые,72.226,level
 2016-12-31,AKT,TOTAL,Самостоятельно занятые,78.809,level
 2017-12-31,AKT,TOTAL,Самостоятельно занятые,68.998,level
 2018-12-31,AKT,TOTAL,Самостоятельно занятые,61.157,level
@@ -65,6 +67,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ALA,TOTAL,Самостоятельно занятые,59.514,level
 2013-12-31,ALA,TOTAL,Самостоятельно занятые,59.583,level
 2014-12-31,ALA,TOTAL,Самостоятельно занятые,60.203,level
+2015-12-31,ALA,TOTAL,Самостоятельно занятые,66.533,level
 2016-12-31,ALA,TOTAL,Самостоятельно занятые,64.397,level
 2017-12-31,ALA,TOTAL,Самостоятельно занятые,67.935,level
 2018-12-31,ALA,TOTAL,Самостоятельно занятые,70.727,level
@@ -89,6 +92,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ALM,TOTAL,Самостоятельно занятые,414.321,level
 2013-12-31,ALM,TOTAL,Самостоятельно занятые,404.132,level
 2014-12-31,ALM,TOTAL,Самостоятельно занятые,349.173,level
+2015-12-31,ALM,TOTAL,Самостоятельно занятые,247.557,level
 2016-12-31,ALM,TOTAL,Самостоятельно занятые,279.974,level
 2017-12-31,ALM,TOTAL,Самостоятельно занятые,266.767,level
 2018-12-31,ALM,TOTAL,Самостоятельно занятые,270.919,level
@@ -113,6 +117,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,AST,TOTAL,Самостоятельно занятые,29.846,level
 2013-12-31,AST,TOTAL,Самостоятельно занятые,27.562,level
 2014-12-31,AST,TOTAL,Самостоятельно занятые,20.497,level
+2015-12-31,AST,TOTAL,Самостоятельно занятые,23.244,level
 2016-12-31,AST,TOTAL,Самостоятельно занятые,23.437,level
 2017-12-31,AST,TOTAL,Самостоятельно занятые,30.583,level
 2018-12-31,AST,TOTAL,Самостоятельно занятые,35.716,level
@@ -137,6 +142,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ATY,TOTAL,Самостоятельно занятые,31.525,level
 2013-12-31,ATY,TOTAL,Самостоятельно занятые,33.455,level
 2014-12-31,ATY,TOTAL,Самостоятельно занятые,34.325,level
+2015-12-31,ATY,TOTAL,Самостоятельно занятые,29.939,level
 2016-12-31,ATY,TOTAL,Самостоятельно занятые,30.127,level
 2017-12-31,ATY,TOTAL,Самостоятельно занятые,30.292,level
 2018-12-31,ATY,TOTAL,Самостоятельно занятые,32.992,level
@@ -161,6 +167,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,KRG,TOTAL,Самостоятельно занятые,125.102,level
 2013-12-31,KRG,TOTAL,Самостоятельно занятые,106.933,level
 2014-12-31,KRG,TOTAL,Самостоятельно занятые,97.924,level
+2015-12-31,KRG,TOTAL,Самостоятельно занятые,75.303,level
 2016-12-31,KRG,TOTAL,Самостоятельно занятые,73.204,level
 2017-12-31,KRG,TOTAL,Самостоятельно занятые,56.221,level
 2018-12-31,KRG,TOTAL,Самостоятельно занятые,58.431,level
@@ -185,6 +192,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,KST,TOTAL,Самостоятельно занятые,216.372,level
 2013-12-31,KST,TOTAL,Самостоятельно занятые,201.192,level
 2014-12-31,KST,TOTAL,Самостоятельно занятые,173.344,level
+2015-12-31,KST,TOTAL,Самостоятельно занятые,163.021,level
 2016-12-31,KST,TOTAL,Самостоятельно занятые,169.076,level
 2017-12-31,KST,TOTAL,Самостоятельно занятые,160.654,level
 2018-12-31,KST,TOTAL,Самостоятельно занятые,156.586,level
@@ -209,6 +217,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,KZL,TOTAL,Самостоятельно занятые,109.481,level
 2013-12-31,KZL,TOTAL,Самостоятельно занятые,109.807,level
 2014-12-31,KZL,TOTAL,Самостоятельно занятые,88.857,level
+2015-12-31,KZL,TOTAL,Самостоятельно занятые,109.448,level
 2016-12-31,KZL,TOTAL,Самостоятельно занятые,121.647,level
 2017-12-31,KZL,TOTAL,Самостоятельно занятые,116.387,level
 2018-12-31,KZL,TOTAL,Самостоятельно занятые,114.753,level
@@ -233,6 +242,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,MNG,TOTAL,Самостоятельно занятые,18.925,level
 2013-12-31,MNG,TOTAL,Самостоятельно занятые,18.245,level
 2014-12-31,MNG,TOTAL,Самостоятельно занятые,20.975,level
+2015-12-31,MNG,TOTAL,Самостоятельно занятые,15.789,level
 2016-12-31,MNG,TOTAL,Самостоятельно занятые,14.057,level
 2017-12-31,MNG,TOTAL,Самостоятельно занятые,15.425,level
 2018-12-31,MNG,TOTAL,Самостоятельно занятые,22.877,level
@@ -257,6 +267,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,PVL,TOTAL,Самостоятельно занятые,90.738,level
 2013-12-31,PVL,TOTAL,Самостоятельно занятые,89.097,level
 2014-12-31,PVL,TOTAL,Самостоятельно занятые,88.897,level
+2015-12-31,PVL,TOTAL,Самостоятельно занятые,74.032,level
 2016-12-31,PVL,TOTAL,Самостоятельно занятые,69.433,level
 2017-12-31,PVL,TOTAL,Самостоятельно занятые,64.895,level
 2018-12-31,PVL,TOTAL,Самостоятельно занятые,61.684,level
@@ -272,6 +283,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,SHM,TOTAL,Самостоятельно занятые,81.836,level
 2013-12-31,SHM,TOTAL,Самостоятельно занятые,87.834,level
 2014-12-31,SHM,TOTAL,Самостоятельно занятые,98.77,level
+2015-12-31,SHM,TOTAL,Самостоятельно занятые,119.754,level
 2016-12-31,SHM,TOTAL,Самостоятельно занятые,124.844,level
 2017-12-31,SHM,TOTAL,Самостоятельно занятые,121.748,level
 2018-12-31,SHM,TOTAL,Самостоятельно занятые,121.222,level
@@ -296,6 +308,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,SKO,TOTAL,Самостоятельно занятые,117.527,level
 2013-12-31,SKO,TOTAL,Самостоятельно занятые,114.019,level
 2014-12-31,SKO,TOTAL,Самостоятельно занятые,94.577,level
+2015-12-31,SKO,TOTAL,Самостоятельно занятые,97.719,level
 2016-12-31,SKO,TOTAL,Самостоятельно занятые,91.605,level
 2017-12-31,SKO,TOTAL,Самостоятельно занятые,82.31,level
 2018-12-31,SKO,TOTAL,Самостоятельно занятые,82.279,level
@@ -311,6 +324,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,TRK,TOTAL,Самостоятельно занятые,471.589,level
 2013-12-31,TRK,TOTAL,Самостоятельно занятые,466.619,level
 2014-12-31,TRK,TOTAL,Самостоятельно занятые,426.28,level
+2015-12-31,TRK,TOTAL,Самостоятельно занятые,373.681,level
 2016-12-31,TRK,TOTAL,Самостоятельно занятые,377.929,level
 2017-12-31,TRK,TOTAL,Самостоятельно занятые,360.901,level
 2018-12-31,TRK,TOTAL,Самостоятельно занятые,359.79,level
@@ -339,6 +353,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,VKO,TOTAL,Самостоятельно занятые,230.739,level
 2013-12-31,VKO,TOTAL,Самостоятельно занятые,224.947,level
 2014-12-31,VKO,TOTAL,Самостоятельно занятые,219.928,level
+2015-12-31,VKO,TOTAL,Самостоятельно занятые,196.933,level
 2016-12-31,VKO,TOTAL,Самостоятельно занятые,200.951,level
 2017-12-31,VKO,TOTAL,Самостоятельно занятые,203.788,level
 2018-12-31,VKO,TOTAL,Самостоятельно занятые,200.184,level
@@ -372,6 +387,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ZHM,TOTAL,Самостоятельно занятые,290.683,level
 2013-12-31,ZHM,TOTAL,Самостоятельно занятые,280.373,level
 2014-12-31,ZHM,TOTAL,Самостоятельно занятые,255.14,level
+2015-12-31,ZHM,TOTAL,Самостоятельно занятые,222.436,level
 2016-12-31,ZHM,TOTAL,Самостоятельно занятые,225.909,level
 2017-12-31,ZHM,TOTAL,Самостоятельно занятые,194.451,level
 2018-12-31,ZHM,TOTAL,Самостоятельно занятые,180.41,level
@@ -400,6 +416,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ZKO,TOTAL,Самостоятельно занятые,125.695,level
 2013-12-31,ZKO,TOTAL,Самостоятельно занятые,124.036,level
 2014-12-31,ZKO,TOTAL,Самостоятельно занятые,120.092,level
+2015-12-31,ZKO,TOTAL,Самостоятельно занятые,109.365,level
 2016-12-31,ZKO,TOTAL,Самостоятельно занятые,118.192,level
 2017-12-31,ZKO,TOTAL,Самостоятельно занятые,118.265,level
 2018-12-31,ZKO,TOTAL,Самостоятельно занятые,118.175,level
@@ -424,6 +441,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,national,TOTAL,Самостоятельно занятые,2693.4,level
 2013-12-31,national,TOTAL,Самостоятельно занятые,2620.965,level
 2014-12-31,national,TOTAL,Самостоятельно занятые,2400.37,level
+2015-12-31,national,TOTAL,Самостоятельно занятые,2138.425,level
 2016-12-31,national,TOTAL,Самостоятельно занятые,2210.541,level
 2017-12-31,national,TOTAL,Самостоятельно занятые,2099.222,level
 2018-12-31,national,TOTAL,Самостоятельно занятые,2082.522,level

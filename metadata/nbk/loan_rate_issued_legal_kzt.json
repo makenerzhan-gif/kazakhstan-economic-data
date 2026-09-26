@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=486",
+  "dataset_id": "formId=486,currency=National currency,subject=Legal entity,all maturities",
+  "indicator_id": "LOAN_RATE_ISSUED_LEGAL_KZT",
+  "indicator_name": "Weighted Average Rate on Loans Issued by Banks to legal entities, KZT",
+  "description": "Средневзвешенная ставка по выданным кредитам БВУ юридическим лицам, тенге",
+  "frequency": "monthly",
+  "unit": "%",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "%. Weighted average rate on tenge loans issued by second-tier banks to legal entities during the month, all maturities, from 1997-01. Gaps where the API has no data: 2007-10/11, 2008-08..2008-12, 2009-02..2009-11, 2014-07..2014-12.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "1997-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

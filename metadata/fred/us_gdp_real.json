@@ -1,0 +1,21 @@
+{
+  "source": "fred",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDPC1",
+  "dataset_id": "FRED/GDPC1",
+  "indicator_id": "US_GDP_REAL",
+  "indicator_name": "US Real GDP (chained 2017 dollars, SAAR)",
+  "description": "Реальный ВВП США (цепные доллары 2017 г., SAAR)",
+  "frequency": "quarterly",
+  "unit": "billion chained 2017 USD, SAAR",
+  "currency": "",
+  "geography": "United States",
+  "methodology": "Billions of chained 2017 dollars, seasonally adjusted annual rate (rebased at comprehensive revisions). FRED series GDPC1.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "1947-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

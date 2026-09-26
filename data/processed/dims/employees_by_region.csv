@@ -17,6 +17,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,AKM,TOTAL,Наёмные работники,242.98,level
 2013-12-31,AKM,TOTAL,Наёмные работники,250.792,level
 2014-12-31,AKM,TOTAL,Наёмные работники,259.075,level
+2015-12-31,AKM,TOTAL,Наёмные работники,266.697,level
 2016-12-31,AKM,TOTAL,Наёмные работники,269.482,level
 2017-12-31,AKM,TOTAL,Наёмные работники,268.683,level
 2018-12-31,AKM,TOTAL,Наёмные работники,274.077,level
@@ -41,6 +42,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,AKT,TOTAL,Наёмные работники,304.806,level
 2013-12-31,AKT,TOTAL,Наёмные работники,307.72,level
 2014-12-31,AKT,TOTAL,Наёмные работники,322.253,level
+2015-12-31,AKT,TOTAL,Наёмные работники,332.586,level
 2016-12-31,AKT,TOTAL,Наёмные работники,329.747,level
 2017-12-31,AKT,TOTAL,Наёмные работники,339.869,level
 2018-12-31,AKT,TOTAL,Наёмные работники,356.404,level
@@ -65,6 +67,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ALA,TOTAL,Наёмные работники,671.523,level
 2013-12-31,ALA,TOTAL,Наёмные работники,683.488,level
 2014-12-31,ALA,TOTAL,Наёмные работники,704.254,level
+2015-12-31,ALA,TOTAL,Наёмные работники,771.927,level
 2016-12-31,ALA,TOTAL,Наёмные работники,803.501,level
 2017-12-31,ALA,TOTAL,Наёмные работники,821.671,level
 2018-12-31,ALA,TOTAL,Наёмные работники,841.196,level
@@ -89,6 +92,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ALM,TOTAL,Наёмные работники,555.379,level
 2013-12-31,ALM,TOTAL,Наёмные работники,589.008,level
 2014-12-31,ALM,TOTAL,Наёмные работники,664.093,level
+2015-12-31,ALM,TOTAL,Наёмные работники,695.467,level
 2016-12-31,ALM,TOTAL,Наёмные работники,705.373,level
 2017-12-31,ALM,TOTAL,Наёмные работники,721.674,level
 2018-12-31,ALM,TOTAL,Наёмные работники,723.561,level
@@ -113,6 +117,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,AST,TOTAL,Наёмные работники,364.103,level
 2013-12-31,AST,TOTAL,Наёмные работники,382.894,level
 2014-12-31,AST,TOTAL,Наёмные работники,411.099,level
+2015-12-31,AST,TOTAL,Наёмные работники,442.843,level
 2016-12-31,AST,TOTAL,Наёмные работники,442.619,level
 2017-12-31,AST,TOTAL,Наёмные работники,466.951,level
 2018-12-31,AST,TOTAL,Наёмные работники,471.757,level
@@ -137,6 +142,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ATY,TOTAL,Наёмные работники,245.798,level
 2013-12-31,ATY,TOTAL,Наёмные работники,246.04,level
 2014-12-31,ATY,TOTAL,Наёмные работники,251.802,level
+2015-12-31,ATY,TOTAL,Наёмные работники,266.355,level
 2016-12-31,ATY,TOTAL,Наёмные работники,266.251,level
 2017-12-31,ATY,TOTAL,Наёмные работники,269.82,level
 2018-12-31,ATY,TOTAL,Наёмные работники,271.042,level
@@ -161,6 +167,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,KRG,TOTAL,Наёмные работники,577.889,level
 2013-12-31,KRG,TOTAL,Наёмные работники,600.265,level
 2014-12-31,KRG,TOTAL,Наёмные работники,580.463,level
+2015-12-31,KRG,TOTAL,Наёмные работники,594.706,level
 2016-12-31,KRG,TOTAL,Наёмные работники,583.216,level
 2017-12-31,KRG,TOTAL,Наёмные работники,596.131,level
 2018-12-31,KRG,TOTAL,Наёмные работники,595.556,level
@@ -185,6 +192,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,KST,TOTAL,Наёмные работники,294.875,level
 2013-12-31,KST,TOTAL,Наёмные работники,302.456,level
 2014-12-31,KST,TOTAL,Наёмные работники,320.511,level
+2015-12-31,KST,TOTAL,Наёмные работники,321.174,level
 2016-12-31,KST,TOTAL,Наёмные работники,324.432,level
 2017-12-31,KST,TOTAL,Наёмные работники,331.428,level
 2018-12-31,KST,TOTAL,Наёмные работники,331.58,level
@@ -209,6 +217,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,KZL,TOTAL,Наёмные работники,219.616,level
 2013-12-31,KZL,TOTAL,Наёмные работники,224.546,level
 2014-12-31,KZL,TOTAL,Наёмные работники,222.287,level
+2015-12-31,KZL,TOTAL,Наёмные работники,198.338,level
 2016-12-31,KZL,TOTAL,Наёмные работники,206.904,level
 2017-12-31,KZL,TOTAL,Наёмные работники,214.175,level
 2018-12-31,KZL,TOTAL,Наёмные работники,218.187,level
@@ -233,6 +242,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,MNG,TOTAL,Наёмные работники,237.399,level
 2013-12-31,MNG,TOTAL,Наёмные работники,240.837,level
 2014-12-31,MNG,TOTAL,Наёмные работники,227.819,level
+2015-12-31,MNG,TOTAL,Наёмные работники,261.227,level
 2016-12-31,MNG,TOTAL,Наёмные работники,263.767,level
 2017-12-31,MNG,TOTAL,Наёмные работники,262.375,level
 2018-12-31,MNG,TOTAL,Наёмные работники,281.846,level
@@ -257,6 +267,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,PVL,TOTAL,Наёмные работники,326.743,level
 2013-12-31,PVL,TOTAL,Наёмные работники,328.879,level
 2014-12-31,PVL,TOTAL,Наёмные работники,331.379,level
+2015-12-31,PVL,TOTAL,Наёмные работники,331.104,level
 2016-12-31,PVL,TOTAL,Наёмные работники,331.705,level
 2017-12-31,PVL,TOTAL,Наёмные работники,331.495,level
 2018-12-31,PVL,TOTAL,Наёмные работники,331.656,level
@@ -272,6 +283,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,SHM,TOTAL,Наёмные работники,191.442,level
 2013-12-31,SHM,TOTAL,Наёмные работники,194.924,level
 2014-12-31,SHM,TOTAL,Наёмные работники,187.543,level
+2015-12-31,SHM,TOTAL,Наёмные работники,231.37,level
 2016-12-31,SHM,TOTAL,Наёмные работники,233.116,level
 2017-12-31,SHM,TOTAL,Наёмные работники,234.032,level
 2018-12-31,SHM,TOTAL,Наёмные работники,264.206,level
@@ -296,6 +308,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,SKO,TOTAL,Наёмные работники,213.719,level
 2013-12-31,SKO,TOTAL,Наёмные работники,215.297,level
 2014-12-31,SKO,TOTAL,Наёмные работники,219.204,level
+2015-12-31,SKO,TOTAL,Наёмные работники,215.11,level
 2016-12-31,SKO,TOTAL,Наёмные работники,211.49,level
 2017-12-31,SKO,TOTAL,Наёмные работники,212.847,level
 2018-12-31,SKO,TOTAL,Наёмные работники,213.934,level
@@ -311,6 +324,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,TRK,TOTAL,Наёмные работники,428.806,level
 2013-12-31,TRK,TOTAL,Наёмные работники,436.344,level
 2014-12-31,TRK,TOTAL,Наёмные работники,450.64,level
+2015-12-31,TRK,TOTAL,Наёмные работники,407.256,level
 2016-12-31,TRK,TOTAL,Наёмные работники,411.355,level
 2017-12-31,TRK,TOTAL,Наёмные работники,418.201,level
 2018-12-31,TRK,TOTAL,Наёмные работники,429.212,level
@@ -338,6 +352,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,VKO,TOTAL,Наёмные работники,479.697,level
 2013-12-31,VKO,TOTAL,Наёмные работники,483.302,level
 2014-12-31,VKO,TOTAL,Наёмные работники,485.527,level
+2015-12-31,VKO,TOTAL,Наёмные работники,482.726,level
 2016-12-31,VKO,TOTAL,Наёмные работники,483.335,level
 2017-12-31,VKO,TOTAL,Наёмные работники,483.794,level
 2018-12-31,VKO,TOTAL,Наёмные работники,478.864,level
@@ -371,6 +386,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ZHM,TOTAL,Наёмные работники,269.178,level
 2013-12-31,ZHM,TOTAL,Наёмные работники,270.467,level
 2014-12-31,ZHM,TOTAL,Наёмные работники,275.032,level
+2015-12-31,ZHM,TOTAL,Наёмные работники,276.072,level
 2016-12-31,ZHM,TOTAL,Наёмные работники,275.204,level
 2017-12-31,ZHM,TOTAL,Наёмные работники,310.829,level
 2018-12-31,ZHM,TOTAL,Наёмные работники,326.565,level
@@ -399,6 +415,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,ZKO,TOTAL,Наёмные работники,189.73,level
 2013-12-31,ZKO,TOTAL,Наёмные работники,192.424,level
 2014-12-31,ZKO,TOTAL,Наёмные работники,196.723,level
+2015-12-31,ZKO,TOTAL,Наёмные работники,199.93,level
 2016-12-31,ZKO,TOTAL,Наёмные работники,201.338,level
 2017-12-31,ZKO,TOTAL,Наёмные работники,201.956,level
 2018-12-31,ZKO,TOTAL,Наёмные работники,202.824,level
@@ -423,6 +440,7 @@ date,region,item_code,item_name,value,transformation
 2012-12-31,national,TOTAL,Наёмные работники,5813.683,level
 2013-12-31,national,TOTAL,Наёмные работники,5949.683,level
 2014-12-31,national,TOTAL,Наёмные работники,6109.704,level
+2015-12-31,national,TOTAL,Наёмные работники,6294.888,level
 2016-12-31,national,TOTAL,Наёмные работники,6342.835,level
 2017-12-31,national,TOTAL,Наёмные работники,6485.931,level
 2018-12-31,national,TOTAL,Наёмные работники,6612.467,level

@@ -101,7 +101,9 @@ def test_validate_with_year_to_date_cumulation_compares_own_period_contributions
 
 
 def test_every_quarterly_dataset_mirrors_its_annual_sibling():
-    quarterly = [d for d in update_dims.DATASETS.values() if d["id"].endswith("_QUARTERLY")]
+    # The bns_dims siblings (read by layout from the same element); the income-by-decile
+    # siblings come from other editions and are checked below.
+    quarterly = [d for d in update_dims.DATASETS.values() if d["id"].endswith("_QUARTERLY") and "fetcher" not in d]
     assert len(quarterly) == 15                      # 14 national-accounts siblings + GRP_NOMINAL_BY_REGION_QUARTERLY (5923)
     for q in quarterly:
         a = update_dims.DATASETS[q["id"][:-len("_QUARTERLY")]]
@@ -113,3 +115,12 @@ def test_every_quarterly_dataset_mirrors_its_annual_sibling():
         assert set(q.get("sheets") or []) <= set(a.get("sheets") or []), q["id"]   # the quarterly sibling reads the same sheets, or a subset (5923)
         assert q["transformation"] and q["unit"], q["id"]
         assert (q.get("cumulation") == "year_to_date") == ("year-to-date cumulative" in q["unit"]), q["id"]
+
+
+def test_income_decile_quarterly_datasets_mirror_their_annual_sibling():
+    quarterly = [d for d in update_dims.DATASETS.values()
+                 if d["id"].endswith("_QUARTERLY") and d.get("fetcher") == "bns_living"]
+    assert len(quarterly) == 3
+    for q in quarterly:
+        a = update_dims.DATASETS[q["id"][:-len("_QUARTERLY")]]
+        assert (q["kind"], a["kind"]) == ("quarterly", "annual") and q["measure"] == a["measure"] and q["unit"] == a["unit"]

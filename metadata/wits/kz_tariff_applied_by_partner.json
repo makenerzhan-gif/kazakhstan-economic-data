@@ -1,0 +1,21 @@
+{
+  "source": "wits",
+  "source_url": "https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-tariff/reporter/kaz/year/all/partner/all/product/Total/indicator/AHS-SMPL-AVRG?format=JSON",
+  "dataset_id": "wits/tradestats-tariff/all",
+  "indicator_id": "KZ_TARIFF_APPLIED_BY_PARTNER",
+  "indicator_name": "Kazakhstan effectively applied tariff by partner, simple average, percent",
+  "description": "Применяемая ставка импортных пошлин Казахстана по странам-партнёрам (простая средняя), %",
+  "frequency": "annual",
+  "unit": "percent",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "WITS TradeStats-Tariff AHS-SMPL-AVRG by partner: the bilateral tariff term of a gravity equation (zero for EAEU/CIS FTA partners).",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2004-12-31",
+  "period_end": "2023-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

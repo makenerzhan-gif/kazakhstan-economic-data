@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703215",
+  "indicator_id": "FIXED_ASSETS_NET",
+  "indicator_name": "Tangible fixed assets, net (book value), end of year",
+  "description": "Основные средства (материальные), балансовая стоимость на конец года",
+  "frequency": "annual",
+  "unit": "billion KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Billion KZT, net stock (book value, gross less accumulated depreciation) at the end of the year. Tangible fixed assets («Основные средства», Taldau term 455728, intangibles excluded) of all enterprises, form 11, national, from 2000. Historical-cost book values incl. revaluations -- not a volume measure. Taldau 703215.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2000-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

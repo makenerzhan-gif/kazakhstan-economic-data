@@ -1,0 +1,21 @@
+{
+  "source": "wb",
+  "source_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.KD?format=json&per_page=20000&date=2000:2026",
+  "dataset_id": "wdi/NY.GDP.MKTP.KD",
+  "indicator_id": "WDI_GDP_CONST_USD",
+  "indicator_name": "GDP of world economies, constant 2015 USD (World Bank WDI NY.GDP.MKTP.KD)",
+  "description": "ВВП стран мира, постоянные доллары США 2015 г. (Всемирный банк, WDI)",
+  "frequency": "annual",
+  "unit": "USD (constant 2015)",
+  "currency": "USD",
+  "geography": "All economies (WDI; aggregates excluded)",
+  "methodology": "Real partner GDP. Item = ISO3; 2000 onward. WDI last updated 2026-07-13.",
+  "publication_date": "2026-07-13",
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2000-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

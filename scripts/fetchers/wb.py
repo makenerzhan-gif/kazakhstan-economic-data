@@ -270,16 +270,16 @@ def fetch(ds: dict) -> tuple[list[dict], dict]:
     """Dimensional datasets (config/dims.yaml): table = annual_prices | annual_indices |
     forecast_prices | forecast_indices."""
     table = ds["table"]
-    kind = "forecasts" if table.startswith("forecast") else "annual"
+    kind = "forecasts" if table.startswith("forecast") else ("monthly" if table.startswith("monthly") else "annual")
     content, url, warnings = download(kind, ds["fallback_url"])
     _save_raw(ds["id"], content, {"source_url": url, "sheet": ds["sheet"]})
     grids = bns_dims._sheets(content)
     if ds["sheet"] not in grids:
         _structural(ds, "sheet not in the workbook", ds["sheet"], list(grids))
     grid = grids[ds["sheet"]]
-    if table == "annual_prices":
+    if table in ("annual_prices", "monthly_prices"):
         records = parse_prices(grid, ds)
-    elif table == "annual_indices":
+    elif table in ("annual_indices", "monthly_indices"):
         records = parse_indices(grid, ds)
     elif table in ("forecast_prices", "forecast_indices"):
         records = parse_forecasts(grid, ds)

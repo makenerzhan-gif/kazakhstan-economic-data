@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703217",
+  "indicator_id": "FIXED_ASSETS_RENEWAL",
+  "indicator_name": "Renewal ratio of tangible fixed assets",
+  "description": "Коэффициент обновления основных средств",
+  "frequency": "annual",
+  "unit": "percent",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Percent, renewal ratio, % (new assets put into operation / gross stock at the end of the year). Tangible fixed assets («Основные средства», Taldau term 455728, intangibles excluded) of all enterprises, form 11, national, from 2000. Historical-cost book values incl. revaluations -- not a volume measure. Taldau 703217.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2000-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

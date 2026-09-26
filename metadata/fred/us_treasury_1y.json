@@ -1,0 +1,21 @@
+{
+  "source": "fred",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GS1",
+  "dataset_id": "FRED/GS1",
+  "indicator_id": "US_TREASURY_1Y",
+  "indicator_name": "US 1-Year Treasury Yield",
+  "description": "Доходность 1-летних казначейских облигаций США",
+  "frequency": "monthly",
+  "unit": "% per annum",
+  "currency": "",
+  "geography": "United States",
+  "methodology": "Percent, 1-year Treasury constant-maturity yield, monthly average. FRED series GS1.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "1953-04-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

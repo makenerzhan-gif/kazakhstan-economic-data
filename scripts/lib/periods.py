@@ -86,6 +86,43 @@ def normalise(records: list[dict], frequency: str,
     return [{**r, "date": canonical_date(r.get("date", ""), frequency)} for r in records]
 
 
+# `date_basis` in indicators.yaml: how the SOURCE dates a flow or an average.
+# NEXT_PERIOD_START is the NBK open-data habit of stamping a period with the day
+# AFTER it ends -- report_date 2020-04-01 carries Q1 2020 of the balance of
+# payments, 2026-08-01 the July KASE turnover. The value is right, the label is
+# one period late, and every lag in a VAR built on it is off by one.
+NEXT_PERIOD_START = "next_period_start"
+
+
+def shift_back_one_period(iso_date: str, frequency: str) -> str:
+    """The start of the period BEFORE the one `iso_date` falls in (monthly, quarterly)."""
+    if frequency not in NORMALISED_FREQUENCIES:
+        return iso_date
+    try:
+        y, m, _ = (int(p) for p in str(iso_date).split("-"))
+    except ValueError:
+        return iso_date
+    step = 1 if frequency == "monthly" else 3
+    if frequency == "quarterly":
+        m = QUARTER_FIRST_MONTH[m]
+    m -= step
+    if m < 1:
+        y, m = y - 1, m + 12
+    return f"{y:04d}-{m:02d}-01"
+
+
+def apply_date_basis(records: list[dict], frequency: str, date_basis: str | None) -> list[dict]:
+    """Relabel a source's dates to the period the observation covers.
+
+    NOT idempotent, unlike `normalise`: call it exactly once, on freshly fetched
+    records, before `normalise` -- never on records read back from the processed
+    layer, which already carry the covered period.
+    """
+    if date_basis != NEXT_PERIOD_START:
+        return records
+    return [{**r, "date": shift_back_one_period(r.get("date", ""), frequency)} for r in records]
+
+
 def convention_of(iso_date: str, frequency: str) -> str:
     """'start', 'end' or 'other' -- what convention a single date follows.
 

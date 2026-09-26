@@ -1,0 +1,401 @@
+date,region,item_code,item_name,value,transformation
+2008-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,7771425.0,level
+2004-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,2907648.0,level
+2010-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,10228974.0,level
+2002-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,1987029.0,level
+2006-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,4533136.0,level
+2005-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,3486495.0,level
+2009-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,9068952.0,level
+2007-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,5916625.0,level
+2003-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,2506942.0,level
+2001-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,1570083.0,level
+2017-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,1843934.0,level
+2018-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,2025306.0,level
+2015-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,1540186.0,level
+2012-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,1205565.0,level
+2014-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,1469278.0,level
+2013-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,1369821.0,level
+2011-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,1067474.0,level
+2016-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,1667551.0,level
+2022-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,3270052.0,level
+2020-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,2445025.0,level
+2023-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,3655798.0,level
+2021-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,2814008.0,level
+2024-12-31,national,D01_MONEY_EXPENDITURE,D01: money expenditure,3906639.0,level
+2010-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,64149322.0,level
+2002-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,18632940.0,level
+2009-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,51830443.0,level
+2006-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,38384868.0,level
+2005-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,27295368.0,level
+2001-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,16551368.0,level
+2007-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,48547458.0,level
+2003-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,20536351.0,level
+2008-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,53749139.0,level
+2004-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,23289877.0,level
+2017-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,11154095.0,level
+2018-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,12482800.0,level
+2015-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,9033734.0,level
+2012-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,7449806.0,level
+2014-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,8705052.0,level
+2013-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,8113416.0,level
+2011-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,6964912.0,level
+2016-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,9799168.0,level
+2022-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,18843653.0,level
+2020-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,14668879.0,level
+2023-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,21892924.0,level
+2019-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,13601107.0,level
+2021-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,16935805.0,level
+2024-12-31,national,D10_MONEY_EXPENDITURE,D10: money expenditure,24432034.0,level
+2010-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,9914247.0,level
+2002-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,1946754.0,level
+2009-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,8780510.0,level
+2006-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,4422156.0,level
+2005-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,3389954.0,level
+2001-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,1540079.0,level
+2007-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,5747841.0,level
+2003-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,2437525.0,level
+2008-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,7593767.0,level
+2004-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,2820346.0,level
+2017-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,1760005.0,level
+2018-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,1957834.0,level
+2015-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,1478357.0,level
+2012-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,1167434.0,level
+2014-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,1414205.0,level
+2013-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,1320119.0,level
+2011-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,1031924.0,level
+2016-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,1605854.0,level
+2022-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,3153030.0,level
+2020-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,2367623.0,level
+2023-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,3526696.0,level
+2021-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,2720336.0,level
+2024-12-31,national,D01_CONSUMER_EXPENDITURE,D01: consumer expenditure,3802690.0,level
+2008-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,48163447.0,level
+2001-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,15786404.0,level
+2010-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,58502884.0,level
+2009-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,46088011.0,level
+2007-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,43658878.0,level
+2002-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,17484868.0,level
+2006-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,34678508.0,level
+2005-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,24661114.0,level
+2003-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,19128992.0,level
+2004-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,21380147.0,level
+2017-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,10013731.0,level
+2018-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,11207867.0,level
+2015-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,8125316.0,level
+2012-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,6676835.0,level
+2014-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,7769776.0,level
+2013-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,7273862.0,level
+2011-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,6311881.0,level
+2016-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,8845921.0,level
+2022-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,16832190.0,level
+2020-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,13190603.0,level
+2023-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,19370929.0,level
+2019-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,12224396.0,level
+2021-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,15259949.0,level
+2024-12-31,national,D10_CONSUMER_EXPENDITURE,D10: consumer expenditure,21368925.0,level
+2004-12-31,national,D01_FOOD,D01: food,1571952.0,level
+2010-12-31,national,D01_FOOD,D01: food,5039245.0,level
+2007-12-31,national,D01_FOOD,D01: food,3072628.0,level
+2009-12-31,national,D01_FOOD,D01: food,4612088.0,level
+2005-12-31,national,D01_FOOD,D01: food,1870078.0,level
+2008-12-31,national,D01_FOOD,D01: food,4220611.0,level
+2006-12-31,national,D01_FOOD,D01: food,2436628.0,level
+2017-12-31,national,D01_FOOD,D01: food,1029596.0,level
+2018-12-31,national,D01_FOOD,D01: food,1177789.0,level
+2015-12-31,national,D01_FOOD,D01: food,856172.0,level
+2012-12-31,national,D01_FOOD,D01: food,610665.0,level
+2014-12-31,national,D01_FOOD,D01: food,772746.0,level
+2013-12-31,national,D01_FOOD,D01: food,687895.0,level
+2011-12-31,national,D01_FOOD,D01: food,564344.0,level
+2016-12-31,national,D01_FOOD,D01: food,936521.0,level
+2022-12-31,national,D01_FOOD,D01: food,1900652.0,level
+2020-12-31,national,D01_FOOD,D01: food,1490158.0,level
+2023-12-31,national,D01_FOOD,D01: food,2180421.0,level
+2019-12-31,national,D01_FOOD,D01: food,1277405.0,level
+2021-12-31,national,D01_FOOD,D01: food,1679083.0,level
+2024-12-31,national,D01_FOOD,D01: food,2366338.0,level
+2007-12-31,national,D10_FOOD,D10: food,13752646.0,level
+2005-12-31,national,D10_FOOD,D10: food,9182173.0,level
+2008-12-31,national,D10_FOOD,D10: food,17012947.0,level
+2004-12-31,national,D10_FOOD,D10: food,8322714.0,level
+2010-12-31,national,D10_FOOD,D10: food,23695300.0,level
+2006-12-31,national,D10_FOOD,D10: food,10977404.0,level
+2009-12-31,national,D10_FOOD,D10: food,17855728.0,level
+2017-12-31,national,D10_FOOD,D10: food,4440418.0,level
+2018-12-31,national,D10_FOOD,D10: food,5273791.0,level
+2015-12-31,national,D10_FOOD,D10: food,3378640.0,level
+2012-12-31,national,D10_FOOD,D10: food,2807252.0,level
+2014-12-31,national,D10_FOOD,D10: food,3178812.0,level
+2013-12-31,national,D10_FOOD,D10: food,3038602.0,level
+2011-12-31,national,D10_FOOD,D10: food,2783286.0,level
+2016-12-31,national,D10_FOOD,D10: food,3795111.0,level
+2022-12-31,national,D10_FOOD,D10: food,8356759.0,level
+2020-12-31,national,D10_FOOD,D10: food,7237155.0,level
+2023-12-31,national,D10_FOOD,D10: food,9706714.0,level
+2019-12-31,national,D10_FOOD,D10: food,6143426.0,level
+2021-12-31,national,D10_FOOD,D10: food,7928150.0,level
+2024-12-31,national,D10_FOOD,D10: food,10470272.0,level
+2010-12-31,national,D01_EATING_OUT,D01: eating out,130376.0,level
+2009-12-31,national,D01_EATING_OUT,D01: eating out,98990.0,level
+2008-12-31,national,D01_EATING_OUT,D01: eating out,79640.0,level
+2007-12-31,national,D01_EATING_OUT,D01: eating out,59259.0,level
+2004-12-31,national,D01_EATING_OUT,D01: eating out,21507.0,level
+2006-12-31,national,D01_EATING_OUT,D01: eating out,44032.0,level
+2005-12-31,national,D01_EATING_OUT,D01: eating out,23702.0,level
+2017-12-31,national,D01_EATING_OUT,D01: eating out,23057.0,level
+2018-12-31,national,D01_EATING_OUT,D01: eating out,21734.0,level
+2015-12-31,national,D01_EATING_OUT,D01: eating out,20620.0,level
+2012-12-31,national,D01_EATING_OUT,D01: eating out,19012.0,level
+2014-12-31,national,D01_EATING_OUT,D01: eating out,23959.0,level
+2013-12-31,national,D01_EATING_OUT,D01: eating out,22674.0,level
+2011-12-31,national,D01_EATING_OUT,D01: eating out,16009.0,level
+2016-12-31,national,D01_EATING_OUT,D01: eating out,18388.0,level
+2022-12-31,national,D01_EATING_OUT,D01: eating out,20718.0,level
+2020-12-31,national,D01_EATING_OUT,D01: eating out,12537.0,level
+2023-12-31,national,D01_EATING_OUT,D01: eating out,36596.0,level
+2019-12-31,national,D01_EATING_OUT,D01: eating out,21093.0,level
+2021-12-31,national,D01_EATING_OUT,D01: eating out,13352.0,level
+2024-12-31,national,D01_EATING_OUT,D01: eating out,33553.0,level
+2010-12-31,national,D10_EATING_OUT,D10: eating out,2041874.0,level
+2004-12-31,national,D10_EATING_OUT,D10: eating out,780899.0,level
+2007-12-31,national,D10_EATING_OUT,D10: eating out,1353826.0,level
+2006-12-31,national,D10_EATING_OUT,D10: eating out,1002376.0,level
+2009-12-31,national,D10_EATING_OUT,D10: eating out,1520949.0,level
+2008-12-31,national,D10_EATING_OUT,D10: eating out,1489563.0,level
+2005-12-31,national,D10_EATING_OUT,D10: eating out,861307.0,level
+2017-12-31,national,D10_EATING_OUT,D10: eating out,326962.0,level
+2018-12-31,national,D10_EATING_OUT,D10: eating out,358663.0,level
+2015-12-31,national,D10_EATING_OUT,D10: eating out,255869.0,level
+2012-12-31,national,D10_EATING_OUT,D10: eating out,223426.0,level
+2014-12-31,national,D10_EATING_OUT,D10: eating out,242706.0,level
+2013-12-31,national,D10_EATING_OUT,D10: eating out,269737.0,level
+2011-12-31,national,D10_EATING_OUT,D10: eating out,238618.0,level
+2016-12-31,national,D10_EATING_OUT,D10: eating out,274191.0,level
+2022-12-31,national,D10_EATING_OUT,D10: eating out,438965.0,level
+2020-12-31,national,D10_EATING_OUT,D10: eating out,188070.0,level
+2023-12-31,national,D10_EATING_OUT,D10: eating out,595958.0,level
+2019-12-31,national,D10_EATING_OUT,D10: eating out,290926.0,level
+2021-12-31,national,D10_EATING_OUT,D10: eating out,312247.0,level
+2024-12-31,national,D10_EATING_OUT,D10: eating out,723354.0,level
+2005-12-31,national,D01_NONFOOD,D01: nonfood,784688.0,level
+2009-12-31,national,D01_NONFOOD,D01: nonfood,2166518.0,level
+2008-12-31,national,D01_NONFOOD,D01: nonfood,1721171.0,level
+2007-12-31,national,D01_NONFOOD,D01: nonfood,1416092.0,level
+2001-12-31,national,D01_NONFOOD,D01: nonfood,292491.0,level
+2004-12-31,national,D01_NONFOOD,D01: nonfood,662501.0,level
+2006-12-31,national,D01_NONFOOD,D01: nonfood,1033048.0,level
+2002-12-31,national,D01_NONFOOD,D01: nonfood,353408.0,level
+2010-12-31,national,D01_NONFOOD,D01: nonfood,2659636.0,level
+2003-12-31,national,D01_NONFOOD,D01: nonfood,520747.0,level
+2017-12-31,national,D01_NONFOOD,D01: nonfood,417323.0,level
+2018-12-31,national,D01_NONFOOD,D01: nonfood,435154.0,level
+2015-12-31,national,D01_NONFOOD,D01: nonfood,341043.0,level
+2012-12-31,national,D01_NONFOOD,D01: nonfood,348496.0,level
+2014-12-31,national,D01_NONFOOD,D01: nonfood,393685.0,level
+2013-12-31,national,D01_NONFOOD,D01: nonfood,401194.0,level
+2011-12-31,national,D01_NONFOOD,D01: nonfood,267641.0,level
+2016-12-31,national,D01_NONFOOD,D01: nonfood,391017.0,level
+2022-12-31,national,D01_NONFOOD,D01: nonfood,688160.0,level
+2020-12-31,national,D01_NONFOOD,D01: nonfood,500249.0,level
+2023-12-31,national,D01_NONFOOD,D01: nonfood,683832.0,level
+2019-12-31,national,D01_NONFOOD,D01: nonfood,458312.0,level
+2021-12-31,national,D01_NONFOOD,D01: nonfood,565183.0,level
+2024-12-31,national,D01_NONFOOD,D01: nonfood,733565.0,level
+2008-12-31,national,D10_NONFOOD,D10: nonfood,17040700.0,level
+2004-12-31,national,D10_NONFOOD,D10: nonfood,7545142.0,level
+2010-12-31,national,D10_NONFOOD,D10: nonfood,18757882.0,level
+2002-12-31,national,D10_NONFOOD,D10: nonfood,5438771.0,level
+2006-12-31,national,D10_NONFOOD,D10: nonfood,14350296.0,level
+2005-12-31,national,D10_NONFOOD,D10: nonfood,8744363.0,level
+2009-12-31,national,D10_NONFOOD,D10: nonfood,15323064.0,level
+2007-12-31,national,D10_NONFOOD,D10: nonfood,17453743.0,level
+2003-12-31,national,D10_NONFOOD,D10: nonfood,6183266.0,level
+2001-12-31,national,D10_NONFOOD,D10: nonfood,4650550.0,level
+2017-12-31,national,D10_NONFOOD,D10: nonfood,2881599.0,level
+2018-12-31,national,D10_NONFOOD,D10: nonfood,3058325.0,level
+2015-12-31,national,D10_NONFOOD,D10: nonfood,2582023.0,level
+2012-12-31,national,D10_NONFOOD,D10: nonfood,2199775.0,level
+2014-12-31,national,D10_NONFOOD,D10: nonfood,2559201.0,level
+2013-12-31,national,D10_NONFOOD,D10: nonfood,2393279.0,level
+2011-12-31,national,D10_NONFOOD,D10: nonfood,1962805.0,level
+2016-12-31,national,D10_NONFOOD,D10: nonfood,2631257.0,level
+2022-12-31,national,D10_NONFOOD,D10: nonfood,5283181.0,level
+2020-12-31,national,D10_NONFOOD,D10: nonfood,3784617.0,level
+2023-12-31,national,D10_NONFOOD,D10: nonfood,5742762.0,level
+2019-12-31,national,D10_NONFOOD,D10: nonfood,3281909.0,level
+2021-12-31,national,D10_NONFOOD,D10: nonfood,4610518.0,level
+2024-12-31,national,D10_NONFOOD,D10: nonfood,6260717.0,level
+2010-12-31,national,D01_SERVICES,D01: services,2215366.0,level
+2001-12-31,national,D01_SERVICES,D01: services,239789.0,level
+2007-12-31,national,D01_SERVICES,D01: services,1259121.0,level
+2006-12-31,national,D01_SERVICES,D01: services,952480.0,level
+2003-12-31,national,D01_SERVICES,D01: services,489110.0,level
+2002-12-31,national,D01_SERVICES,D01: services,359109.0,level
+2008-12-31,national,D01_SERVICES,D01: services,1651985.0,level
+2005-12-31,national,D01_SERVICES,D01: services,735188.0,level
+2004-12-31,national,D01_SERVICES,D01: services,585893.0,level
+2009-12-31,national,D01_SERVICES,D01: services,2001904.0,level
+2017-12-31,national,D01_SERVICES,D01: services,313086.0,level
+2018-12-31,national,D01_SERVICES,D01: services,344891.0,level
+2015-12-31,national,D01_SERVICES,D01: services,281142.0,level
+2012-12-31,national,D01_SERVICES,D01: services,208273.0,level
+2014-12-31,national,D01_SERVICES,D01: services,247774.0,level
+2013-12-31,national,D01_SERVICES,D01: services,231030.0,level
+2011-12-31,national,D01_SERVICES,D01: services,199939.0,level
+2016-12-31,national,D01_SERVICES,D01: services,278316.0,level
+2022-12-31,national,D01_SERVICES,D01: services,564218.0,level
+2020-12-31,national,D01_SERVICES,D01: services,377216.0,level
+2023-12-31,national,D01_SERVICES,D01: services,662443.0,level
+2019-12-31,national,D01_SERVICES,D01: services,409548.0,level
+2021-12-31,national,D01_SERVICES,D01: services,476070.0,level
+2024-12-31,national,D01_SERVICES,D01: services,702787.0,level
+2008-12-31,national,D10_SERVICES,D10: services,14109800.0,level
+2001-12-31,national,D10_SERVICES,D10: services,3494773.0,level
+2010-12-31,national,D10_SERVICES,D10: services,16049702.0,level
+2009-12-31,national,D10_SERVICES,D10: services,12909219.0,level
+2007-12-31,national,D10_SERVICES,D10: services,12452489.0,level
+2002-12-31,national,D10_SERVICES,D10: services,3776930.0,level
+2006-12-31,national,D10_SERVICES,D10: services,9350808.0,level
+2005-12-31,national,D10_SERVICES,D10: services,6734578.0,level
+2003-12-31,national,D10_SERVICES,D10: services,4217042.0,level
+2004-12-31,national,D10_SERVICES,D10: services,5512291.0,level
+2017-12-31,national,D10_SERVICES,D10: services,2691715.0,level
+2018-12-31,national,D10_SERVICES,D10: services,2875751.0,level
+2015-12-31,national,D10_SERVICES,D10: services,2164653.0,level
+2012-12-31,national,D10_SERVICES,D10: services,1669808.0,level
+2014-12-31,national,D10_SERVICES,D10: services,2031763.0,level
+2013-12-31,national,D10_SERVICES,D10: services,1841981.0,level
+2011-12-31,national,D10_SERVICES,D10: services,1565790.0,level
+2016-12-31,national,D10_SERVICES,D10: services,2419553.0,level
+2022-12-31,national,D10_SERVICES,D10: services,3192250.0,level
+2020-12-31,national,D10_SERVICES,D10: services,2168831.0,level
+2023-12-31,national,D10_SERVICES,D10: services,3921453.0,level
+2019-12-31,national,D10_SERVICES,D10: services,2799061.0,level
+2021-12-31,national,D10_SERVICES,D10: services,2721281.0,level
+2024-12-31,national,D10_SERVICES,D10: services,4637936.0,level
+2004-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,48540.0,level
+2010-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,202445.0,level
+2008-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,73395.0,level
+2009-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,121252.0,level
+2007-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,87803.0,level
+2005-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,48457.0,level
+2006-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,50964.0,level
+2017-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,54815.0,level
+2018-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,39533.0,level
+2015-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,37816.0,level
+2012-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,24940.0,level
+2014-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,30925.0,level
+2013-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,32023.0,level
+2011-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,22316.0,level
+2016-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,36940.0,level
+2022-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,35846.0,level
+2020-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,25751.0,level
+2023-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,32540.0,level
+2019-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,36667.0,level
+2021-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,30780.0,level
+2024-12-31,national,D01_TRANSFERS_TO_HOUSEHOLDS,D01: transfers to households,26330.0,level
+2005-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,1238675.0,level
+2007-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,1946863.0,level
+2009-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,2501898.0,level
+2006-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,1671696.0,level
+2008-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,2177208.0,level
+2004-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,1054486.0,level
+2010-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,2538510.0,level
+2017-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,509395.0,level
+2018-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,503495.0,level
+2015-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,419166.0,level
+2012-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,375878.0,level
+2014-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,463928.0,level
+2013-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,406578.0,level
+2011-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,326574.0,level
+2016-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,442094.0,level
+2022-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,522101.0,level
+2020-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,474465.0,level
+2023-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,656563.0,level
+2019-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,534950.0,level
+2021-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,515394.0,level
+2024-12-31,national,D10_TRANSFERS_TO_HOUSEHOLDS,D10: transfers to households,721340.0,level
+2009-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,8526.0,level
+2008-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,9093.0,level
+2010-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,10549.0,level
+2005-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,6199.0,level
+2004-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,4503.0,level
+2007-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,6961.0,level
+2006-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,3228.0,level
+2017-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,1340.0,level
+2018-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,2012.0,level
+2015-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,1662.0,level
+2012-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,1581.0,level
+2014-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,1625.0,level
+2013-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,1765.0,level
+2011-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,2058.0,level
+2016-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,1562.0,level
+2022-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,4111.0,level
+2020-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,3072.0,level
+2023-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,3268.0,level
+2019-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,2250.0,level
+2021-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,2606.0,level
+2024-12-31,national,D01_TAXES_AND_PAYMENTS,D01: taxes and payments,5719.0,level
+2004-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,64345.0,level
+2008-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,90271.0,level
+2005-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,73343.0,level
+2007-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,105614.0,level
+2006-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,58600.0,level
+2010-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,116456.0,level
+2009-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,134138.0,level
+2017-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,23415.0,level
+2018-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,31118.0,level
+2015-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,25699.0,level
+2012-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,16455.0,level
+2014-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,20651.0,level
+2013-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,19365.0,level
+2011-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,16507.0,level
+2016-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,27350.0,level
+2022-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,35752.0,level
+2020-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,32820.0,level
+2023-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,51511.0,level
+2019-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,35924.0,level
+2021-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,29549.0,level
+2024-12-31,national,D10_TAXES_AND_PAYMENTS,D10: taxes and payments,54379.0,level
+2010-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,101733.0,level
+2006-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,56788.0,level
+2009-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,158664.0,level
+2007-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,74020.0,level
+2005-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,41885.0,level
+2004-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,34259.0,level
+2008-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,95170.0,level
+2017-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,27774.0,level
+2018-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,25927.0,level
+2015-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,22351.0,level
+2012-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,11610.0,level
+2014-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,22523.0,level
+2013-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,15914.0,level
+2011-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,11176.0,level
+2016-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,23195.0,level
+2022-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,77065.0,level
+2020-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,48579.0,level
+2023-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,93294.0,level
+2019-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,35366.0,level
+2021-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,60286.0,level
+2024-12-31,national,D01_DEBT_REPAYMENT,D01: debt repayment,71900.0,level
+2004-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,790899.0,level
+2005-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,1322236.0,level
+2010-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,2991472.0,level
+2006-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,1976064.0,level
+2007-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,2836103.0,level
+2009-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,3106396.0,level
+2008-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,3318213.0,level
+2017-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,607553.0,level
+2018-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,740320.0,level
+2015-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,463553.0,level
+2012-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,380640.0,level
+2014-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,450697.0,level
+2013-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,413611.0,level
+2011-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,309950.0,level
+2016-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,483803.0,level
+2022-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,1453610.0,level
+2020-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,970991.0,level
+2023-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,1813921.0,level
+2019-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,805837.0,level
+2021-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,1130913.0,level
+2024-12-31,national,D10_DEBT_REPAYMENT,D10: debt repayment,2287390.0,level

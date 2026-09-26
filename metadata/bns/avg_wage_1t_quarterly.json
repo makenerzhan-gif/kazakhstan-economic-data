@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/5674/file/ru/",
+  "dataset_id": "5674",
+  "indicator_id": "AVG_WAGE_1T_QUARTERLY",
+  "indicator_name": "Average Monthly Nominal Wage (form 1-T), quarterly",
+  "description": "Среднемесячная номинальная заработная плата (форма 1-Т), поквартально",
+  "frequency": "quarterly",
+  "unit": "KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "KZT per month, statistical form 1-Т «Отчет по труду», national, quarterly from 2015Q1 (118 638 KZT) -- stat.gov.kz element 5674, equal to Taldau index 702972. A different coverage from AVG_WAGE_QUARTERLY (461 486 here against 445 068 there for 2026Q1).",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2015-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

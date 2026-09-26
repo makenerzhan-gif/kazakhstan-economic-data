@@ -1,0 +1,21 @@
+{
+  "source": "derived",
+  "source_url": "data/processed",
+  "dataset_id": "derived/kzt-carry-excess-return",
+  "indicator_id": "KZT_CARRY_EXCESS_RETURN",
+  "indicator_name": "Ex-post tenge carry excess return: overnight differential minus tenge depreciation, annualised",
+  "description": "Избыточная доходность тенгового керри (ex post): дифференциал овернайт минус ослабление тенге, годовых",
+  "frequency": "monthly",
+  "unit": "% per annum",
+  "currency": "",
+  "geography": "Kazakhstan (trade-weighted partners)",
+  "methodology": "Percent per annum, ex-post: the return of rolling tenge overnight (TONIA) rather than dollars (effective fed funds) over the month, net of the tenge's depreciation against the dollar over the month (NBK official rate, last fixing of the month vs the previous month), annualised: (TONIA - FF) - 1200 ln(S_m / S_m-1). Under UIP its mean is zero; its sample mean estimates the average tenge risk premium, its variation is dominated by the exchange rate (2014-08 and 2015-08 devaluations). Overnight rates, so no term premium; onshore TONIA, not an offshore rate.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2001-10-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

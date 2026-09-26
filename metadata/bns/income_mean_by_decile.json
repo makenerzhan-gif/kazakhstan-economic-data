@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/labor-and-income/stat-life/spreadsheets/?name=18651&year=YYYY",
+  "dataset_id": "bns/18651",
+  "indicator_id": "INCOME_MEAN_BY_DECILE",
+  "indicator_name": "Mean monthly money income per capita by decile, annual",
+  "description": "Среднемесячный денежный доход на душу населения по децильным группам, годовой",
+  "frequency": "annual",
+  "unit": "KZT per month per capita",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Mean of each decile, from the annual editions (2022 onward; Taldau has the levels only for the bottom and top decile). 2025: 44 360 (D01) to 265 626 (D10). Editions read: 37365 2022, 179025 2023, 341348 2024, 341349 2025.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2022-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

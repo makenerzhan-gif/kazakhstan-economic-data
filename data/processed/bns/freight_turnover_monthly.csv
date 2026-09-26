@@ -1,5 +1,5 @@
 date,value,transformation
-2026-05-01,213301.16,level
-2026-06-01,255817.02,level
-2026-07-01,298327.53,level
-2026-08-01,342570.17,level
+2026-05-01,213301.16,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-06-01,255817.02,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-07-01,298327.53,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2026-08-01,342570.17,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"

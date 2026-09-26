@@ -15,3 +15,63 @@ def test_fetchers_registered_for_every_indicator():
     assert set(update_bns.FETCHERS.keys()) == set(update_bns.INDICATOR_IDS)
     for indicator_id, fn in update_bns.FETCHERS.items():
         assert callable(fn), f"{indicator_id}'s fetcher is not callable"
+
+
+def _xlsx(sheet: str, rows: list[list]) -> bytes:
+    import io
+    import openpyxl
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = sheet
+    for r in rows:
+        ws.append(r)
+    buf = io.BytesIO()
+    wb.save(buf)
+    return buf.getvalue()
+
+
+def test_labour_block_reads_quarters_and_a_footnoted_year():
+    """Element 5830 heads 2014 as '20142)'; read as 2013 it duplicated four quarters."""
+    from fetchers import bns
+    content = _xlsx("ОИРТ", [
+        ["Занятое население"], ["тыс."], ["Наименование региона", 2013, None], [None, "I квартал", "год"],
+        ["Республика Казахстан", 8000, 8100],
+        [" Уровень безработицы"], ["%"],
+        ["Наименование региона", 2013, None, None, None, None, "20142)", None],
+        [None, "I квартал", "II квартал", "III квартал", "IV квартал ", "год", "I квартал", "год"],
+        ["Республика Казахстан", 5.3, 5.2, 5.2, 5.2, 5.2, 5.1, 5.0],
+        ["Акмолинская ", 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0],
+    ])
+    recs = bns.parse_labour_indicator_block(content, "Уровень безработицы")
+    assert [r["date"] for r in recs] == ["2013-03-31", "2013-06-30", "2013-09-30", "2013-12-31", "2014-03-31"]
+    assert recs[-1]["value"] == 5.1
+
+
+def test_wage_1t_quarterly_pairs_of_label_and_value_rows():
+    from fetchers import bns
+    content = _xlsx("Показатель", [
+        [None, "Январь", "Февраль"],
+        [2014, 104654, 104949],
+        [2015, "1 квартал", None, None, "2 квартал", None, None, "3 квартал", None, None, "4 квартал"],
+        [None, 118638, None, None, 124227, None, None, 124656, None, None, 136094],
+        [2026, "1 квартал", None, None, "2 квартал", None, None, "3 квартал"],
+        [None, 461486, None, None, 486388, None, None, None],
+    ])
+    recs = bns.parse_wage_1t_quarterly(content)
+    assert [(r["date"], r["value"]) for r in recs] == [
+        ("2015-03-31", 118638.0), ("2015-06-30", 124227.0), ("2015-09-30", 124656.0), ("2015-12-31", 136094.0),
+        ("2026-03-31", 461486.0), ("2026-06-30", 486388.0)]
+
+
+def test_sheet_dump_row_final_energy_new_format():
+    """BNS element 8582 became an xlsx-as-JSON dump on 2026-09-26 (was a json_cube)."""
+    from fetchers import bns as _bns
+    data = {"Показатель": [
+        {"A": "Общее конечное потребление энергии", "B": None, "C": None, "D": None},
+        {"A": None, "B": None, "C": "Единица", "D": 1991, "E": 1992, "F": 1993, "G": 1994, "H": 2025},
+        {"A": 1, "B": "Общее  конечное потребление энергии ", "C": "1000 т.н.э.", "D": 62556.9, "E": 65762.9,
+         "F": 54518, "G": 41665.7, "H": 48482.8},
+        {"A": 2, "B": "Промышленность", "C": "1000 т.н.э.", "D": 1.0, "E": 1.0, "F": 1.0, "G": 1.0, "H": 1.0}]}
+    got = _bns.parse_sheet_dump_row(data, "Показатель", "Общее конечное потребление энергии")
+    assert got[0] == {"date": "1991-12-31", "value": 62556.9} and got[-1] == {"date": "2025-12-31", "value": 48482.8}
+    assert len(got) == 5

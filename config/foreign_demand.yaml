@@ -1,0 +1,19 @@
+# Weights of the foreign-demand index FOREIGN_DEMAND_YOY (update_foreign.py): Kazakhstan's
+# export shares by partner, average of 2023-2025, from BNS «Основные показатели внешней
+# торговли Республики Казахстан по странам» (indicator 312101; stat.gov.kz elements 347386
+# for 2023, 347387 for 2024-2025, thousand USD). Read and recomputed 2026-09-25:
+#
+#   partner       2023    2024    2025    mean
+#   EU (27)       39.16   46.70   43.87   43.24
+#   China         18.53   18.23   19.18   18.65
+#   Russia        12.90   11.70   10.41   11.67
+#
+# The three cover 73.6% of exports; the weights are the means rescaled to sum to one.
+# Caveats: the EU share is mostly crude oil to Italy and the Netherlands, so it tracks oil
+# routing as much as European demand; the euro area's GDP stands in for the EU's. Review the
+# weights when the 2026 annual table is published (next edition of indicator 312101).
+reviewed: "2026-09-25"
+partners:
+  - {name: euro area, share: 43.24, growth: {indicator: EA_GDP_REAL, agency: ecb, kind: level}}
+  - {name: China, share: 18.65, growth: {indicator: CN_GDP_REAL_YOY, agency: nbs, kind: yoy_index}}
+  - {name: Russia, share: 11.67, growth: {indicator: RU_GDP_REAL, agency: imf, kind: level}}

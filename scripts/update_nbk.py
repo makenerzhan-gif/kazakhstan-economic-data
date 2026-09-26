@@ -20,6 +20,9 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 FETCHERS = {
     "BASE_RATE": nbk_fetchers.fetch_base_rate,
     "EXCHANGE_RATE": nbk_fetchers.fetch_exchange_rate_usd,
+    "EXCHANGE_RATE_EUR": nbk_fetchers.fetch_exchange_rate_eur,
+    "EXCHANGE_RATE_CNY": nbk_fetchers.fetch_exchange_rate_cny,
+    "EXCHANGE_RATE_RUB": nbk_fetchers.fetch_exchange_rate_rub,
     "M2": nbk_fetchers.fetch_m2,
     "M3": nbk_fetchers.fetch_m3,
     "MONETARY_BASE": nbk_fetchers.fetch_monetary_base,
@@ -29,11 +32,18 @@ FETCHERS = {
     "NATIONAL_FUND_ASSETS": nbk_fetchers.fetch_national_fund_assets,
     "REER": nbk_fetchers.fetch_reer,
     "NEER": nbk_fetchers.fetch_neer,
+    "RER_USD": nbk_fetchers.fetch_rer_usd,
+    "RER_RUB": nbk_fetchers.fetch_rer_rub,
+    "RER_EUR": nbk_fetchers.fetch_rer_eur,
+    "RER_CNY": nbk_fetchers.fetch_rer_cny,
+    "REER_EX_OIL": nbk_fetchers.fetch_reer_ex_oil,
+    "NEER_EX_OIL": nbk_fetchers.fetch_neer_ex_oil,
     "DEPOSITS_TOTAL": nbk_fetchers.fetch_deposits_total,
     "EXTERNAL_DEBT": nbk_fetchers.fetch_external_debt,
     "LENDING_RATE": nbk_fetchers.fetch_lending_rate,
     "DEPOSIT_RATE": nbk_fetchers.fetch_deposit_rate,
-    "TONIA": nbk_fetchers.fetch_tonia,
+    "LOAN_RATE_ISSUED_LEGAL_KZT": nbk_fetchers.fetch_loan_rate_issued_legal_kzt,
+    "LOAN_RATE_ISSUED_INDIVIDUAL_KZT": nbk_fetchers.fetch_loan_rate_issued_individual_kzt,
     "NATIONAL_FUND_TRANSFERS": nbk_fetchers.fetch_national_fund_transfers,
     "KASE_USD_VOLUME": nbk_fetchers.fetch_kase_usd_volume,
     "REMITTANCES_SENT": nbk_fetchers.fetch_remittances_sent,
@@ -162,10 +172,10 @@ FETCHERS = {
 }
 
 INDICATOR_IDS = [
-    "BASE_RATE", "EXCHANGE_RATE", "M2", "M3", "MONETARY_BASE", "M0", "M1",
+    "BASE_RATE", "EXCHANGE_RATE", "EXCHANGE_RATE_EUR", "EXCHANGE_RATE_CNY", "EXCHANGE_RATE_RUB", "M2", "M3", "MONETARY_BASE", "M0", "M1",
     "FX_RESERVES", "NATIONAL_FUND_ASSETS", "REER", "NEER", "DEPOSITS_TOTAL",
-    "EXTERNAL_DEBT", "LENDING_RATE", "DEPOSIT_RATE",
-    "TONIA", "NATIONAL_FUND_TRANSFERS", "KASE_USD_VOLUME",
+    "EXTERNAL_DEBT", "LENDING_RATE", "DEPOSIT_RATE", "LOAN_RATE_ISSUED_LEGAL_KZT", "LOAN_RATE_ISSUED_INDIVIDUAL_KZT",
+    "NATIONAL_FUND_TRANSFERS", "KASE_USD_VOLUME",
     "REMITTANCES_SENT", "REMITTANCES_RECEIVED",
     "INFLATION_EXPECTATIONS", "BUSINESS_ACTIVITY_INDEX",
     "NON_CASH_PAYMENTS_SHARE", "CAPITAL_ADEQUACY_RATIO", "NPL_RATIO",
@@ -264,6 +274,7 @@ INDICATOR_IDS = [
     "FINANCIAL_ACCOUNT_BALANCE",
     "BOP_OVERALL_BALANCE_GDP_SHARE",
     "INFLATION_TARGET",
+    "RER_USD", "RER_RUB", "RER_EUR", "RER_CNY", "REER_EX_OIL", "NEER_EX_OIL",
 ]
 
 
@@ -315,9 +326,11 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
         # first run after the convention change. write_processed still
         # normalises as a backstop for any other caller.
         _meta = _indicator_meta(indicator_id)
-        records = periods.normalise(
-            records, manifest_info.get("frequency") or _meta["frequency"],
-            _meta.get("observation_type"))
+        _freq = manifest_info.get("frequency") or _meta["frequency"]
+        # The source's own date first (once, on fresh records): flows and averages it
+        # stamps with the day after the period move back to the period they cover.
+        records = periods.apply_date_basis(records, _freq, _meta.get("date_basis"))
+        records = periods.normalise(records, _freq, _meta.get("observation_type"))
         result = validation.run_all(records, indicator_id, expected_frequency=manifest_info.get("frequency", "daily"),
                                      cumulation=_meta.get("cumulation"))
         if not result.ok:

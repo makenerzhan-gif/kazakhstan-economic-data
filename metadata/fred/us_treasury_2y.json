@@ -1,0 +1,21 @@
+{
+  "source": "fred",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GS2",
+  "dataset_id": "FRED/GS2",
+  "indicator_id": "US_TREASURY_2Y",
+  "indicator_name": "US 2-Year Treasury Yield",
+  "description": "Доходность 2-летних казначейских облигаций США",
+  "frequency": "monthly",
+  "unit": "% per annum",
+  "currency": "",
+  "geography": "United States",
+  "methodology": "Percent, 2-year Treasury constant-maturity yield, monthly average. FRED series GS2.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "1976-06-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

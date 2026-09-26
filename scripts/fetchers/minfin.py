@@ -645,6 +645,13 @@ def fetch_gg_social_contributions() -> tuple[list[dict], dict]:
     return _fetch_gg_row(12, "GG_SOCIAL_CONTRIBUTIONS")
 
 
+def fetch_gg_interest() -> tuple[list[dict], dict]:
+    """General government interest expense (IMF GFS, all levels combined), million KZT,
+    quarterly. Row code 24 ('Interest'). Added 2026-09-25 for rating models (interest /
+    revenue); 2025: 982.0, 687.6, 655.3, 334.5 bn by quarter in the Q4-2025 file."""
+    return _fetch_gg_row(24, "GG_INTEREST")
+
+
 def fetch_gg_cash_surplus_deficit() -> tuple[list[dict], dict]:
     """General government cash surplus/deficit (IMF GFS methodology, all
     levels of government combined), million KZT, quarterly -- a broader
@@ -700,6 +707,19 @@ RU_MONTH_TO_NUM = {
     "январь": 1, "февраль": 2, "март": 3, "апрель": 4, "май": 5, "июнь": 6,
     "июль": 7, "август": 8, "сентябрь": 9, "октябрь": 10, "ноябрь": 11, "декабрь": 12,
 }
+# Matched by stem, not by the full word: the January-February 2026 bulletin heads
+# табл 3 "январь-феврал отчет" (no soft sign) and the exact lookup dropped that
+# edition from six STATE_*_YTD series (audit 2026-09-25). Stems also cover the
+# genitive forms ("мая", "августа") a header may use.
+RU_MONTH_STEMS = (("январ", 1), ("феврал", 2), ("март", 3), ("апрел", 4), ("ма", 5), ("июн", 6),
+                  ("июл", 7), ("август", 8), ("сентябр", 9), ("октябр", 10), ("ноябр", 11), ("декабр", 12))
+
+
+def _ru_month(name: str | None) -> int | None:
+    name = (name or "").strip().lower()
+    if name in RU_MONTH_TO_NUM:
+        return RU_MONTH_TO_NUM[name]
+    return next((num for stem, num in RU_MONTH_STEMS if name.startswith(stem) and len(name) <= len(stem) + 3), None)
 CUSTOMS_DUTIES_ROW_LABEL = "Таможенные платежи"
 
 
@@ -769,7 +789,7 @@ def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str, value_c
             continue
 
         end_month_name = (period_match.group(1) or "январь").lower()
-        end_month = RU_MONTH_TO_NUM.get(end_month_name)
+        end_month = _ru_month(end_month_name)
         year = int(period_match.group(2))
         value = target_row[value_col] if -len(target_row) <= value_col < len(target_row) else None
         if end_month is None or value in (None, ""):
@@ -1476,7 +1496,7 @@ def fetch_gov_financial_assets_sold() -> tuple[list[dict], dict]:
             continue
 
         end_month_name = (period_match.group(2) or period_match.group(1)).lower()
-        end_month = RU_MONTH_TO_NUM.get(end_month_name)
+        end_month = _ru_month(end_month_name)
         year = int(period_match.group(3))
         value = target_row[1] if len(target_row) > 1 else None
         if end_month is None or value in (None, ""):
@@ -3062,3 +3082,237 @@ def fetch_state_financial_assets_balance_ytd() -> tuple[list[dict], dict]:
         "Acquisition minus disposal of financial assets (379,454 mln KZT for January-June 2026). "
         "The second of the two lines between the revenue-expenditure gap and the headline deficit; "
         "not previously in the dataset at any frequency.")
+
+
+# ---------------------------------------------------------------------------
+# Monthly state-budget TAX receipts for nowcasting (added 2026-09-25), 2020 onward.
+#
+# The bulletin series above read only the first page of the listing (100 newest
+# documents), which reaches back to 2025. The listing has more pages (X-Has-Next /
+# X-Next-Pages headers); older bulletins are titled "Statistical Bulletin" with a capital
+# B, which the case-sensitive marker above does not match either. Here every page is read
+# and every bulletin's 'табл 3' (STATE budget, million KZT) parsed.
+#
+# 'табл 3' has had three layouts, so the period of each column is read from its header
+# text, never from its position:
+#   2020-mid 2021  annual 'YYYY ж. есеп' columns, then four '1-тоқсан … 4-тоқсан' columns
+#                  under the current year -- DISCRETE quarters, cumulated here to Mar, Jun,
+#                  Sep, Dec year-to-date;
+#   some editions  annual columns only (the December edition): the last one is Jan-Dec;
+#   mid 2021 on    annual columns; the prior year split into 'жылдық/годовой' and
+#                  'қантар-шілде/январь-июль' (the prior-year same period), then
+#                  'YYYY ж. қантар-шілде есеп/январь-июль отчет' (the current year to date).
+# Where editions disagree on a (year, month) the most recent edition wins (revisions);
+# the number of revised points is reported in the note. Checked 2026-09-25: December
+# year-to-date equals the annual column of the next editions for 2022-2025 (e.g. tax
+# 2024: 19 700 516.9 -- equal to KGD's 19 700 516 947 thousand to the thousand).
+# ---------------------------------------------------------------------------
+BULLETIN_TITLE_RE = re.compile(r"statistical\s+bulletin|бюллетен", re.IGNORECASE)
+YEAR_IN_HEADER_RE = re.compile(r"(\d{4})\s*ж\.")
+QUARTER_IN_HEADER_RE = re.compile(r"(\d)\s*-\s*тоқсан")
+RU_RANGE_RE = re.compile(r"январ[ьяе]?\s*(?:-\s*([а-яё]+))?", re.IGNORECASE)
+STATE_TAX_ROWS = {
+    # Kazakh label in column 0 of 'табл 3'; the first matching row after «I. КІРІСТЕР».
+    "STATE_TAX_REVENUE_YTD": lambda s: s.startswith("салықтық түс"),
+    "STATE_CIT_YTD": lambda s: "табыс салығы" in s and ("корпорат" in s or "корпорац" in s),
+    "STATE_PIT_YTD": lambda s: s.startswith("жеке табыс салығы"),
+    "STATE_SOCIAL_TAX_YTD": lambda s: s.startswith("әлеуметт") and "салық" in s,
+    "STATE_VAT_YTD": lambda s: s.startswith("қосылған құн салығы"),
+    "STATE_EXCISE_YTD": lambda s: s.startswith("акциз"),
+}
+
+
+def _list_all_documents(**params) -> list[dict]:
+    """Every page of the listing (the first-page helper above stops at 100 documents)."""
+    key = ("ALL",) + tuple(sorted(params.items()))
+    if key not in _LISTING_CACHE:
+        docs, page = [], 1
+        while page <= 50:
+            resp = requests.get(LISTING_URL, headers=HEADERS, timeout=60,
+                                params={"sort-by": "created_date:DESC", "page": str(page), "size": "100", **params})
+            resp.raise_for_status()
+            docs += resp.json()
+            if resp.headers.get("X-Has-Next", "false").lower() != "true":
+                break
+            page += 1
+        _LISTING_CACHE[key] = docs
+    return _LISTING_CACHE[key]
+
+
+def bulletin_state_budget_columns(header: list, subheader: list) -> dict[int, tuple[int, int, str]]:
+    """{column: (year, last month covered, kind)} for 'табл 3'. kind: 'ytd' (January to
+    that month), 'annual', or 'quarter' (a DISCRETE quarter; month = its last month)."""
+    out: dict[int, tuple[int, int, str]] = {}
+    parent = None
+    for j in range(1, max(len(header), len(subheader))):
+        top = str(header[j]) if j < len(header) and header[j] not in (None, "") else None
+        sub = str(subheader[j]) if j < len(subheader) and subheader[j] not in (None, "") else None
+        if top is not None:
+            if not YEAR_IN_HEADER_RE.search(top):
+                parent = None                               # «Наименование»: the Russian label column
+                continue
+            parent = top
+        if parent is None:
+            continue
+        year = int(YEAR_IN_HEADER_RE.search(parent).group(1))
+        text = sub if sub is not None else (parent if top is not None else None)
+        if text is None:
+            continue
+        q = QUARTER_IN_HEADER_RE.search(text)
+        if q:
+            out[j] = (year, 3 * int(q.group(1)), "quarter")
+            continue
+        if "жылдық" in text or "годов" in text:
+            out[j] = (year, 12, "annual")
+            continue
+        ru = text.split("/", 1)[-1]
+        m = RU_RANGE_RE.search(ru) if "қантар" in text.lower() or "январ" in ru.lower() else None
+        if m:
+            month = _ru_month(m.group(1)) if m.group(1) else 1
+            if month:
+                out[j] = (year, month, "ytd")
+            continue
+        if sub is None:
+            out[j] = (year, 12, "annual")
+    return out
+
+
+def parse_bulletin_state_taxes(rows: list[list]) -> dict[str, dict[tuple[int, int], float]]:
+    """{indicator: {(year, month): year-to-date million KZT}} from one bulletin's 'табл 3'."""
+    hi = next((i for i, r in enumerate(rows) if r and isinstance(r[0], str) and r[0].strip().startswith("Атауы")), None)
+    if hi is None:
+        return {}
+    columns = bulletin_state_budget_columns(rows[hi], rows[hi + 1] if hi + 1 < len(rows) else [])
+    start = next((i for i, r in enumerate(rows) if r and isinstance(r[0], str) and r[0].strip().startswith("I. К")), hi)
+    out: dict[str, dict[tuple[int, int], float]] = {}
+    for ind, matches in STATE_TAX_ROWS.items():
+        row = next((r for r in rows[start:] if r and isinstance(r[0], str)
+                    and matches(" ".join(r[0].replace("_x000D_", " ").split()).lower())), None)
+        if row is None:
+            continue
+        vals: dict[tuple[int, int], float] = {}
+        quarters: dict[int, dict[int, float]] = {}
+        for j, (year, month, kind) in columns.items():
+            cell = row[j] if j < len(row) else None
+            try:
+                v = float(cell)
+            except (TypeError, ValueError):
+                continue
+            if kind == "quarter":
+                quarters.setdefault(year, {})[month] = v
+            else:
+                vals[(year, month)] = v
+        for year, qs in quarters.items():                   # discrete quarters -> year to date
+            running = 0.0
+            for month in (3, 6, 9, 12):
+                if month not in qs:
+                    break
+                running += qs[month]
+                vals.setdefault((year, month), running)
+        out[ind] = vals
+    return out
+
+
+_STATE_TAX_CACHE: dict = {}
+
+
+def _state_tax_history() -> tuple[dict[str, dict[tuple[int, int], float]], dict]:
+    if _STATE_TAX_CACHE:
+        return _STATE_TAX_CACHE["data"], _STATE_TAX_CACHE["info"]
+    docs = [d for d in _list_all_documents(directions=BUDGET_DIRECTION_ID)
+            if BULLETIN_TITLE_RE.search(d.get("title") or "")
+            and d.get("full_text") and str(d["full_text"][0].get("document", "")).lower().endswith((".xlsx", ".xls"))]
+    docs.sort(key=lambda d: d.get("created_date") or "")          # oldest first: later editions overwrite
+    data: dict[str, dict[tuple[int, int], float]] = {k: {} for k in STATE_TAX_ROWS}
+    revised = 0
+    parsed, skipped = [], []
+    today = date.today()
+    for doc in docs:
+        path = doc["full_text"][0]["document"]
+        try:
+            content = _download(path)
+            kind, wb = _open_workbook(content, path)
+        except Exception:  # noqa: BLE001 -- one unreadable edition must not sink the history
+            skipped.append(doc.get("id"))
+            continue
+        names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
+        sheet = next((s for s in names if s.strip() == BULLETIN_STATE_BUDGET_SHEET_NAME), None)
+        if sheet is None:
+            skipped.append(doc.get("id"))
+            continue
+        rows = list(_iter_rows(kind, wb, sheet))
+        got = parse_bulletin_state_taxes(rows)
+        if not got.get("STATE_TAX_REVENUE_YTD"):
+            skipped.append(doc.get("id"))
+            continue
+        parsed.append(doc.get("id"))
+        # The sheet read, not the 0.5-2 MB workbook: 40-odd editions would add ~70 MB to the
+        # archive for one table. Identical bytes are stored once (raw_store dedups).
+        sheet_json = json.dumps({"document": path, "created_date": doc.get("created_date"), "title": doc.get("title"),
+                                 "sheet": sheet, "rows": rows}, ensure_ascii=False, default=str).encode("utf-8")
+        raw_store.save_raw_bytes(SOURCE, f"BULLETIN_TABLE3_{str(doc.get('created_date', ''))[:10]}_{doc.get('id')}", today, "json",
+                                 sheet_json)
+        for ind, vals in got.items():
+            for k, v in vals.items():
+                old = data[ind].get(k)
+                if old is not None and abs(old - v) > 0.5:
+                    revised += 1
+                data[ind][k] = v
+    info = {"n_bulletins": len(docs), "parsed": len(parsed), "skipped": skipped, "revised_points": revised}
+    raw_store.write_download_manifest(SOURCE, "STATE_TAX_BULLETINS", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
+        **info})
+    _STATE_TAX_CACHE.update(data=data, info=info)
+    return data, info
+
+
+STATE_TAX_NAMES = {
+    "STATE_TAX_REVENUE_YTD": "tax receipts, total", "STATE_CIT_YTD": "corporate income tax",
+    "STATE_PIT_YTD": "individual income tax", "STATE_SOCIAL_TAX_YTD": "social tax",
+    "STATE_VAT_YTD": "value added tax", "STATE_EXCISE_YTD": "excise duties",
+}
+
+
+def _fetch_state_tax(indicator_id: str) -> tuple[list[dict], dict]:
+    data, info = _state_tax_history()
+    vals = data[indicator_id]
+    if len(vals) < 40:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+            f"WHAT CHANGED: only {len(vals)} months parsed from {info['parsed']} of {info['n_bulletins']} bulletins",
+            f"ACTION REQUIRED: inspect 'табл 3' of a recent bulletin ({LISTING_URL}?directions={BUDGET_DIRECTION_ID})"]))
+    records = [{"date": f"{y:04d}-{m:02d}-01", "value": v} for (y, m), v in sorted(vals.items())]
+    return records, {
+        "frequency": "monthly", "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
+        "dataset_id": "gov.kz-statistical-bulletin,sheet=табл 3,all pages",
+        "note": (f"Million KZT, STATE budget (republican plus local) {STATE_TAX_NAMES[indicator_id]}, YEAR-TO-DATE "
+                 "cumulative (January to the month dated), from every Statistical Bulletin on every page of the "
+                 f"listing ({info['parsed']} of {info['n_bulletins']} parsed). The latest edition wins where editions "
+                 f"differ ({info['revised_points']} revised points across the six series). Where an edition gave "
+                 "discrete quarters (2020 - mid 2021) they are cumulated to March/June/September/December. Months "
+                 "no edition covers are missing, not interpolated."),
+    }
+
+
+def fetch_state_tax_revenue_ytd() -> tuple[list[dict], dict]:
+    return _fetch_state_tax("STATE_TAX_REVENUE_YTD")
+
+
+def fetch_state_cit_ytd() -> tuple[list[dict], dict]:
+    return _fetch_state_tax("STATE_CIT_YTD")
+
+
+def fetch_state_pit_ytd() -> tuple[list[dict], dict]:
+    return _fetch_state_tax("STATE_PIT_YTD")
+
+
+def fetch_state_social_tax_ytd() -> tuple[list[dict], dict]:
+    return _fetch_state_tax("STATE_SOCIAL_TAX_YTD")
+
+
+def fetch_state_vat_ytd() -> tuple[list[dict], dict]:
+    return _fetch_state_tax("STATE_VAT_YTD")
+
+
+def fetch_state_excise_ytd() -> tuple[list[dict], dict]:
+    return _fetch_state_tax("STATE_EXCISE_YTD")

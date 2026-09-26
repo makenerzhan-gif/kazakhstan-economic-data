@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703076",
+  "indicator_id": "CPI_REGULATED_UTILITIES_YOY",
+  "indicator_name": "CPI: regulated utility services, year-on-year",
+  "description": "ИПЦ: регулируемые коммунальные услуги, к соответствующему месяцу прошлого года",
+  "frequency": "monthly",
+  "unit": "index, same month previous year = 100",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, same month of the previous year = 100: CPI for regulated utility services (Taldau index 703076, term 4772564), monthly from 2011-01, national. Same index and dictionaries as the headline CPI; December year-on-year values equal BNS element 1548 for 2011-2025.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2011-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,0 +1,1170 @@
+date,region,item_code,item_name,value,transformation
+2021-12-31,national,ARM,Армения,10332.81156,level
+2021-12-31,national,BLR,Беларусь,110295.76861,level
+2021-12-31,national,KGZ,Кыргызстан,674755.15526,level
+2021-12-31,national,RUS,Россия,7018745.76433,level
+2021-12-31,national,AZE,Азербайджан,287885.16583,level
+2021-12-31,national,MDA,"Молдова, Республика",27739.63747,level
+2021-12-31,national,TJK,Таджикистан,800259.09274,level
+2021-12-31,national,TKM,Туркменистан,211359.5061,level
+2021-12-31,national,UKR,Украина,575241.8181,level
+2021-12-31,national,UZB,Узбекистан,2776871.15288,level
+2021-12-31,national,AUT,Австрия,3279.10353,level
+2021-12-31,national,BEL,Бельгия,262806.50013,level
+2021-12-31,national,BGR,Болгария,354479.35322,level
+2021-12-31,national,CYP,Кипр,5575.78131,level
+2021-12-31,national,CZE,Чешская Республика,87229.8488,level
+2021-12-31,national,DEU,Германия,398537.55969,level
+2021-12-31,national,DNK,Дания,18429.22453,level
+2021-12-31,national,EST,Эстония,4623.31356,level
+2021-12-31,national,ESP,Испания,1633864.90024,level
+2021-12-31,national,FIN,Финляндия,158448.10867,level
+2021-12-31,national,FRA,Франция,2394660.28567,level
+2021-12-31,national,GBR,Соединенное Королевство,855071.35172,level
+2021-12-31,national,GRC,Греция,1321596.39692,level
+2021-12-31,national,HRV,Хорватия,661843.29976,level
+2021-12-31,national,HUN,Венгрия,15350.65136,level
+2021-12-31,national,IRL,Ирландия,3.7662,level
+2021-12-31,national,ITA,Италия,8889096.06214,level
+2021-12-31,national,LTU,Литва,356272.15632,level
+2021-12-31,national,LUX,Люксембург,237.41352,level
+2021-12-31,national,LVA,Республика Латвия,33980.79826,level
+2021-12-31,national,MLT,Мальта,293751.05737,level
+2021-12-31,national,NLD,Нидерланды,4384191.07353,level
+2021-12-31,national,POL,Польша,386589.99413,level
+2021-12-31,national,PRT,Португалия,11.40508,level
+2021-12-31,national,ROU,Румыния,1521127.69872,level
+2021-12-31,national,SWE,Швеция,57726.89545,level
+2021-12-31,national,SVN,Словения,9330.57794,level
+2021-12-31,national,SVK,Словакия,1195.29014,level
+2021-12-31,national,AND,Андорра,0.0,level
+2021-12-31,national,ALB,Албания,5448.67457,level
+2021-12-31,national,BIH,Босния И Герцеговина,2230.49627,level
+2021-12-31,national,CHE,Швейцария,1078018.1555,level
+2021-12-31,national,FRO,Фарерские Острова,0.0,level
+2021-12-31,national,GGY,Гернси,0.0,level
+2021-12-31,national,GIB,Гибралтар (Брит.),0.0,level
+2021-12-31,national,IMN,Остров Мэн,0.0,level
+2021-12-31,national,IOT,Британская Территория В Индийском Океане,0.0,level
+2021-12-31,national,ISL,Исландия,0.0,level
+2021-12-31,national,JEY,Джерси,0.0,level
+2021-12-31,national,LIE,Лихтенштейн,35.63814,level
+2021-12-31,national,MCO,Монако,0.0,level
+2021-12-31,national,MNE,Черногория (Монтенегро),22350.70074,level
+2021-12-31,national,MKD,Македония,140.41705,level
+2021-12-31,national,NOR,Норвегия,6641.75884,level
+2021-12-31,national,SRB,Сербия,3701.53498,level
+2021-12-31,national,SMR,Сан-Марино,0.0,level
+2021-12-31,national,ARE,Объединенные Арабские Эмираты,633895.3255,level
+2021-12-31,national,AFG,Афганистан,469377.20218,level
+2021-12-31,national,BGD,Бангладеш,0.0,level
+2021-12-31,national,BHR,Бахрейн,289.82708,level
+2021-12-31,national,BRN,Бруней-Даруссалам,887339.71831,level
+2021-12-31,national,CHN,Китай,9772505.63304,level
+2021-12-31,national,GEO,Грузия,28086.78363,level
+2021-12-31,national,HKG,Гонконг,11740.05544,level
+2021-12-31,national,IDN,Индонезия,135371.53421,level
+2021-12-31,national,ISR,Израиль,223743.9766,level
+2021-12-31,national,IND,Индия,1625706.52817,level
+2021-12-31,national,IRQ,"Ирак, Республика Ирак",721.42036,level
+2021-12-31,national,IRN,"Иран, Исламская Республика",275290.57394,level
+2021-12-31,national,JOR,Иордания,103.56269,level
+2021-12-31,national,JPN,Япония,557259.94041,level
+2021-12-31,national,KHM,Камбоджа,0.0,level
+2021-12-31,national,KOR,Республика Корея,1877226.67617,level
+2021-12-31,national,KWT,Кувейт,181.16497,level
+2021-12-31,national,LAO,Лаосская Народно-Демократическая Республика,0.0,level
+2021-12-31,national,LBN,Ливан,1160.91128,level
+2021-12-31,national,LKA,Шри-Ланка,3820.51244,level
+2021-12-31,national,MMR,Мьянма,0.0,level
+2021-12-31,national,MNG,Монголия,54688.98248,level
+2021-12-31,national,MAC,Макао,0.4,level
+2021-12-31,national,MDV,Мальдивы,1.344,level
+2021-12-31,national,MYS,Малайзия,1229.30437,level
+2021-12-31,national,NPL,Непал,0.0,level
+2021-12-31,national,OMN,Оман,2466.16443,level
+2021-12-31,national,PHL,Филиппины,4414.60227,level
+2021-12-31,national,PAK,Пакистан,65892.53539,level
+2021-12-31,national,PSE,"Палестина, Государство",0.0,level
+2021-12-31,national,QAT,Катар,5921.04214,level
+2021-12-31,national,SAU,Саудовская Аравия,5472.87773,level
+2021-12-31,national,SGP,Сингапур,1116291.05368,level
+2021-12-31,national,SYR,Сирийская Арабская Республика,49.25013,level
+2021-12-31,national,THA,Таиланд,17583.1179,level
+2021-12-31,national,TLS,Тимор-Лесте,0.0,level
+2021-12-31,national,TUR,Турция,2964665.64832,level
+2021-12-31,national,TWN,Тайвань (Китай),37975.79637,level
+2021-12-31,national,VNM,Вьетнам,81019.59863,level
+2021-12-31,national,YEM,Йемен,0.0,level
+2021-12-31,national,AIA,Ангилья (Брит.),0.0,level
+2021-12-31,national,ARG,Аргентина,18560.87163,level
+2021-12-31,national,BRB,Барбадос,0.0,level
+2021-12-31,national,BLM,Сен-Бартелеми,0.0,level
+2021-12-31,national,BMU,Бермуды,0.0,level
+2021-12-31,national,BOL,Боливия,16.3067,level
+2021-12-31,national,BRA,Бразилия,72621.5878,level
+2021-12-31,national,BHS,Багамы,0.0,level
+2021-12-31,national,CAN,Канада,409777.78402,level
+2021-12-31,national,CHL,Чили,7854.01735,level
+2021-12-31,national,COL,Колумбия,346.90399,level
+2021-12-31,national,CRI,Коста-Рика,0.0,level
+2021-12-31,national,CUB,Куба,0.85911,level
+2021-12-31,national,DOM,Доминиканская Республика,8895.46162,level
+2021-12-31,national,ECU,Эквадор,180.01459,level
+2021-12-31,national,GUF,Французская Гвиана,0.0,level
+2021-12-31,national,GRL,Гренландия,0.0,level
+2021-12-31,national,GLP,Гваделупа,0.0,level
+2021-12-31,national,GTM,Гватемала,0.0,level
+2021-12-31,national,HND,Гондурас,0.0,level
+2021-12-31,national,HTI,Гаити,0.0,level
+2021-12-31,national,JAM,Ямайка,0.0,level
+2021-12-31,national,KNA,Сент-Китс И Невис,0.0,level
+2021-12-31,national,CYM,Каймановы Острова (Брит.),2749.83671,level
+2021-12-31,national,MEX,Мексика,19192.40983,level
+2021-12-31,national,NIC,Никарагуа,0.0,level
+2021-12-31,national,PAN,Панама,25.32743,level
+2021-12-31,national,PER,Перу,7.68768,level
+2021-12-31,national,PRI,Пуэрто-Рико,0.0,level
+2021-12-31,national,PRY,Парагвай,0.0,level
+2021-12-31,national,SUR,Суринам,0.0,level
+2021-12-31,national,SLV,Сальвадор,233.27,level
+2021-12-31,national,TCA,Острова Теркс и Кайкос,0.0,level
+2021-12-31,national,TTO,Тринидад и Тобаго,1166.42261,level
+2021-12-31,national,USA,Соединенные Штаты Америки,872151.73994,level
+2021-12-31,national,URY,Уругвай,0.0,level
+2021-12-31,national,VGB,Виргинские Острова (Брит.),0.0,level
+2021-12-31,national,VIR,"Виргинские Острова, Сша",0.0,level
+2021-12-31,national,AGO,Ангола,106.5787,level
+2021-12-31,national,BFA,Буркина-Фасо,4.8745,level
+2021-12-31,national,BDI,Бурунди,0.0,level
+2021-12-31,national,BEN,Бенин,2892.46724,level
+2021-12-31,national,COD,Демократическая Республика Конго,0.0,level
+2021-12-31,national,CAF,Центрально-Африканская Республика,38.985,level
+2021-12-31,national,COG,Конго,14.49924,level
+2021-12-31,national,CIV,Кот-Д'Ивуар,22.33572,level
+2021-12-31,national,CMR,Камерун,426.47721,level
+2021-12-31,national,CPV,Кабо-Верде,0.0,level
+2021-12-31,national,DZA,Алжир,108993.67747,level
+2021-12-31,national,EGY,Египет,6974.17193,level
+2021-12-31,national,ESH,Западная Сахара,0.0,level
+2021-12-31,national,ETH,Эфиопия,0.0,level
+2021-12-31,national,GAB,Габон,105.25343,level
+2021-12-31,national,GHA,Гана,342.89605,level
+2021-12-31,national,GMB,Гамбия,2.445,level
+2021-12-31,national,GIN,Гвинея,56.1046,level
+2021-12-31,national,KEN,Кения,11.75532,level
+2021-12-31,national,COM,Коморские Острова,0.0,level
+2021-12-31,national,LSO,Лесото,0.0,level
+2021-12-31,national,LBY,Ливия,50.54737,level
+2021-12-31,national,MAR,Марокко,117415.87423,level
+2021-12-31,national,MDG,Мадагаскар,0.0,level
+2021-12-31,national,MLI,Мали,0.0,level
+2021-12-31,national,MUS,Маврикий,0.0,level
+2021-12-31,national,MWI,Малави,0.0,level
+2021-12-31,national,MOZ,Мозамбик,0.0,level
+2021-12-31,national,NAM,Намибия,20.434,level
+2021-12-31,national,NER,Нигер,0.0,level
+2021-12-31,national,NGA,Нигерия,2620.50554,level
+2021-12-31,national,RWA,Руанда,0.0,level
+2021-12-31,national,SYC,Сейшелы,0.0,level
+2021-12-31,national,SLE,Сьерра-Леоне,0.0,level
+2021-12-31,national,SEN,Сенегал,37328.30507,level
+2021-12-31,national,SOM,Сомали,0.0,level
+2021-12-31,national,SWZ,Свазиленд,0.0,level
+2021-12-31,national,TCD,Чад,45.0,level
+2021-12-31,national,TGO,Того,10.296,level
+2021-12-31,national,TUN,Тунис,27443.1678,level
+2021-12-31,national,TZA,"Танзания, Объединенная Республика",383.06,level
+2021-12-31,national,UGA,Уганда,0.0,level
+2021-12-31,national,ZAF,Южная Африка,9889.10117,level
+2021-12-31,national,ZMB,Замбия,0.0,level
+2021-12-31,national,ZWE,Зимбабве,0.0,level
+2021-12-31,national,AUS,Австралия,9170.70523,level
+2021-12-31,national,CXR,Остров Рождества,0.0,level
+2021-12-31,national,FJI,Фиджи,0.0,level
+2021-12-31,national,GUM,Гуам (Сша),0.0,level
+2021-12-31,national,MHL,Маршалловы Острова,0.0,level
+2021-12-31,national,MNP,Северные Марианские Острова,0.0,level
+2021-12-31,national,NCL,Новая Каледония,0.0,level
+2021-12-31,national,NZL,Новая Зеландия,16.791,level
+2021-12-31,national,PNG,Папуа-новая Гвинея,1.40968,level
+2021-12-31,national,TKL,Токелау,0.0,level
+2020-12-31,national,ARM,Армения,6405.98412,level
+2020-12-31,national,BLR,Беларусь,77322.97447,level
+2020-12-31,national,KGZ,Кыргызстан,581009.71084,level
+2020-12-31,national,RUS,Россия,5007142.52335,level
+2020-12-31,national,AZE,Азербайджан,84145.3441,level
+2020-12-31,national,MDA,"Молдова, Республика",62967.4168,level
+2020-12-31,national,TJK,Таджикистан,693293.31307,level
+2020-12-31,national,TKM,Туркменистан,76623.3149,level
+2020-12-31,national,UKR,Украина,424680.93317,level
+2020-12-31,national,UZB,Узбекистан,2137667.82021,level
+2020-12-31,national,AUT,Австрия,3228.63561,level
+2020-12-31,national,BEL,Бельгия,217555.44883,level
+2020-12-31,national,BGR,Болгария,207505.67886,level
+2020-12-31,national,CYP,Кипр,6596.2207,level
+2020-12-31,national,CZE,Чешская Республика,70195.67062,level
+2020-12-31,national,DEU,Германия,247559.2676,level
+2020-12-31,national,DNK,Дания,18694.20309,level
+2020-12-31,national,EST,Эстония,1357.57457,level
+2020-12-31,national,ESP,Испания,1215228.28542,level
+2020-12-31,national,FIN,Финляндия,185029.92752,level
+2020-12-31,national,FRA,Франция,1858500.3094,level
+2020-12-31,national,GBR,Соединенное Королевство,688020.73373,level
+2020-12-31,national,GRC,Греция,1401536.50415,level
+2020-12-31,national,HRV,Хорватия,311558.81139,level
+2020-12-31,national,HUN,Венгрия,9362.36823,level
+2020-12-31,national,IRL,Ирландия,6314.71873,level
+2020-12-31,national,ITA,Италия,6644417.79822,level
+2020-12-31,national,LTU,Литва,360471.66552,level
+2020-12-31,national,LUX,Люксембург,46.03446,level
+2020-12-31,national,LVA,Республика Латвия,36154.66401,level
+2020-12-31,national,MLT,Мальта,30709.68837,level
+2020-12-31,national,NLD,Нидерланды,3148952.30769,level
+2020-12-31,national,POL,Польша,366560.41284,level
+2020-12-31,national,PRT,Португалия,5.51422,level
+2020-12-31,national,ROU,Румыния,1263679.43015,level
+2020-12-31,national,SWE,Швеция,32966.34528,level
+2020-12-31,national,SVN,Словения,7345.50923,level
+2020-12-31,national,SVK,Словакия,1798.61404,level
+2020-12-31,national,ALB,Албания,1461.55474,level
+2020-12-31,national,BIH,Босния и Герцеговина,111.97252,level
+2020-12-31,national,CHE,Швейцария,1570246.01668,level
+2020-12-31,national,FRO,Фарерские Острова,0.0,level
+2020-12-31,national,GIB,Гибралтар (Брит.),0.0,level
+2020-12-31,national,ISL,Исландия,0.0,level
+2020-12-31,national,LIE,Лихтенштейн,14.49847,level
+2020-12-31,national,MCO,Монако,0.0,level
+2020-12-31,national,MNE,Черногория (Монтенегро),0.0,level
+2020-12-31,national,MKD,Македония,0.0,level
+2020-12-31,national,NOR,Норвегия,4146.69537,level
+2020-12-31,national,SRB,Сербия,1784.97499,level
+2020-12-31,national,SMR,Сан-Марино,0.0,level
+2020-12-31,national,VAT,"Ватикан, Государство-Город",0.0,level
+2020-12-31,national,ARE,Объединенные Арабские Эмираты,378659.63116,level
+2020-12-31,national,AFG,Афганистан,620716.36572,level
+2020-12-31,national,BGD,Бангладеш,955.0382,level
+2020-12-31,national,BHR,Бахрейн,280.90509,level
+2020-12-31,national,BRN,Бруней-Даруссалам,346332.56969,level
+2020-12-31,national,CHN,Китай,9420579.06064,level
+2020-12-31,national,GEO,Грузия,84029.48863,level
+2020-12-31,national,HKG,Гонконг,7084.72299,level
+2020-12-31,national,IDN,Индонезия,50202.7425,level
+2020-12-31,national,ISR,Израиль,327026.09546,level
+2020-12-31,national,IND,Индия,1991591.69436,level
+2020-12-31,national,IRQ,"Ирак, Республика Ирак",1566.31007,level
+2020-12-31,national,IRN,"Иран, Исламская Республика",128515.6055,level
+2020-12-31,national,JOR,Иордания,2433.98359,level
+2020-12-31,national,JPN,Япония,664736.17114,level
+2020-12-31,national,KHM,Камбоджа,291.835,level
+2020-12-31,national,PRK,"Корея, народно-Демократическая Республика",0.083,level
+2020-12-31,national,KOR,Республика Корея,1003919.39427,level
+2020-12-31,national,KWT,Кувейт,340.10288,level
+2020-12-31,national,LAO,Лаосская Народно-Демократическая Республика,0.0,level
+2020-12-31,national,LBN,Ливан,922.15999,level
+2020-12-31,national,LKA,Шри-Ланка,3721.2003,level
+2020-12-31,national,MMR,Мьянма,0.0,level
+2020-12-31,national,MNG,Монголия,27433.42126,level
+2020-12-31,national,MAC,Макао,0.0,level
+2020-12-31,national,MDV,Мальдивы,0.0,level
+2020-12-31,national,MYS,Малайзия,56662.54615,level
+2020-12-31,national,NPL,Непал,0.0,level
+2020-12-31,national,OMN,Оман,267.37199,level
+2020-12-31,national,PHL,Филиппины,4324.54478,level
+2020-12-31,national,PAK,Пакистан,16146.6848,level
+2020-12-31,national,PSE,"Палестина, Государство",0.0,level
+2020-12-31,national,QAT,Катар,5757.53518,level
+2020-12-31,national,SAU,Саудовская Аравия,1435.85552,level
+2020-12-31,national,SGP,Сингапур,76874.14879,level
+2020-12-31,national,SYR,Сирийская Арабская Республика,13.20071,level
+2020-12-31,national,THA,Таиланд,723.96583,level
+2020-12-31,national,TUR,Турция,2131513.78488,level
+2020-12-31,national,TWN,Тайвань (Китай),14174.7323,level
+2020-12-31,national,VNM,Вьетнам,57334.07285,level
+2020-12-31,national,ARG,Аргентина,9875.21068,level
+2020-12-31,national,BRB,Барбадос,0.0,level
+2020-12-31,national,BLM,Сен-Бартелеми,0.0,level
+2020-12-31,national,BMU,Бермуды,0.0,level
+2020-12-31,national,BOL,Боливия,3.36982,level
+2020-12-31,national,BRA,Бразилия,47561.18342,level
+2020-12-31,national,BHS,Багамы,5317.93929,level
+2020-12-31,national,CAN,Канада,258458.33582,level
+2020-12-31,national,CHL,Чили,310.13041,level
+2020-12-31,national,COL,Колумбия,1705.68777,level
+2020-12-31,national,CRI,Коста-Рика,0.0,level
+2020-12-31,national,CUB,Куба,0.33623,level
+2020-12-31,national,DMA,Доминика,0.0,level
+2020-12-31,national,DOM,Доминиканская Республика,5482.20276,level
+2020-12-31,national,ECU,Эквадор,3.66903,level
+2020-12-31,national,GUF,Французская Гвиана,0.0,level
+2020-12-31,national,GTM,Гватемала,69.95185,level
+2020-12-31,national,GUY,Гайана,0.22423,level
+2020-12-31,national,HND,Гондурас,0.0,level
+2020-12-31,national,HTI,Гаити,0.0,level
+2020-12-31,national,JAM,Ямайка,0.0,level
+2020-12-31,national,CYM,Каймановы Острова (Брит.),39.921,level
+2020-12-31,national,LCA,Сент-Люсия,0.0,level
+2020-12-31,national,MTQ,Мартиника,0.0,level
+2020-12-31,national,MSR,Монтсеррат,0.0,level
+2020-12-31,national,MEX,Мексика,2919.89987,level
+2020-12-31,national,NIC,Никарагуа,85.56,level
+2020-12-31,national,PAN,Панама,0.0,level
+2020-12-31,national,PER,Перу,0.0,level
+2020-12-31,national,PRI,Пуэрто-Рико,0.0,level
+2020-12-31,national,PRY,Парагвай,0.0,level
+2020-12-31,national,SUR,Суринам,0.0,level
+2020-12-31,national,SLV,Сальвадор,108.89,level
+2020-12-31,national,TCA,Острова Теркс и Кайкос,0.0,level
+2020-12-31,national,TTO,Тринидад И Тобаго,56.85912,level
+2020-12-31,national,UMI,Малые Тихоокеан.отдален.ост-ва С.Ш.,0.0,level
+2020-12-31,national,USA,Соединенные Штаты Америки,536097.21065,level
+2020-12-31,national,URY,Уругвай,0.0,level
+2020-12-31,national,VEN,Венесуэла,0.0,level
+2020-12-31,national,AGO,Ангола,202.15291,level
+2020-12-31,national,BDI,Бурунди,0.0,level
+2020-12-31,national,BEN,Бенин,3992.54817,level
+2020-12-31,national,COD,Демократическая Республика Конго,0.0,level
+2020-12-31,national,COG,Конго,11.65827,level
+2020-12-31,national,CIV,Кот-Д'Ивуар,23.60693,level
+2020-12-31,national,CMR,Камерун,169.29,level
+2020-12-31,national,DZA,Алжир,63163.82464,level
+2020-12-31,national,EGY,Египет,5452.07809,level
+2020-12-31,national,ETH,Эфиопия,0.115,level
+2020-12-31,national,GHA,Гана,90.03539,level
+2020-12-31,national,KEN,Кения,2840.85842,level
+2020-12-31,national,COM,Коморские Острова,0.0,level
+2020-12-31,national,LSO,Лесото,0.0,level
+2020-12-31,national,LBY,Ливия,1.25428,level
+2020-12-31,national,MAR,Марокко,55623.27332,level
+2020-12-31,national,MDG,Мадагаскар,0.0,level
+2020-12-31,national,MLI,Мали,0.93857,level
+2020-12-31,national,MRT,Мавритания,0.0,level
+2020-12-31,national,MUS,Маврикий,0.0,level
+2020-12-31,national,MWI,Малави,0.0,level
+2020-12-31,national,MOZ,Мозамбик,3.00961,level
+2020-12-31,national,NAM,Намибия,0.0,level
+2020-12-31,national,NGA,Нигерия,936.55853,level
+2020-12-31,national,REU,Реюньон,0.0,level
+2020-12-31,national,RWA,Руанда,0.0,level
+2020-12-31,national,SYC,Сейшелы,0.0,level
+2020-12-31,national,SDN,Судан,155.25,level
+2020-12-31,national,SLE,Сьерра-Леоне,0.0,level
+2020-12-31,national,SEN,Сенегал,11095.35685,level
+2020-12-31,national,SSD,Южный Судан,0.0,level
+2020-12-31,national,STP,Сан-Томе и Принсипи,0.0,level
+2020-12-31,national,SWZ,Свазиленд,0.0,level
+2020-12-31,national,TCD,Чад,6.2,level
+2020-12-31,national,TUN,Тунис,16530.99834,level
+2020-12-31,national,TZA,"Танзания, Объединенная Республика",0.0,level
+2020-12-31,national,UGA,Уганда,0.0,level
+2020-12-31,national,ZAF,Южная Африка,2776.40117,level
+2020-12-31,national,ZMB,Замбия,0.0,level
+2020-12-31,national,ZWE,Зимбабве,0.0,level
+2020-12-31,national,AUS,Австралия,12652.27931,level
+2020-12-31,national,CXR,Остров Рождества,0.0,level
+2020-12-31,national,FJI,Фиджи,0.0,level
+2020-12-31,national,FSM,"Микронезия, Федеративные Штаты",0.0,level
+2020-12-31,national,NZL,Новая Зеландия,3.55487,level
+2020-12-31,national,PNG,Папуа-новая Гвинея,0.45556,level
+2020-12-31,national,WSM,"Самоа, Независимое Государство",0.0,level
+2022-12-31,national,ARM,Армения,28048.90452,level
+2022-12-31,national,BLR,Беларусь,186537.53345,level
+2022-12-31,national,KGZ,Кыргызстан,792951.72644,level
+2022-12-31,national,RUS,Россия,9091390.9169,level
+2022-12-31,national,AZE,Азербайджан,375014.6337,level
+2022-12-31,national,MDA,"Молдова, Республика",21388.53279,level
+2022-12-31,national,TJK,Таджикистан,877222.58046,level
+2022-12-31,national,TKM,Туркменистан,340352.99979,level
+2022-12-31,national,UKR,Украина,239391.84055,level
+2022-12-31,national,UZB,Узбекистан,3635821.70289,level
+2022-12-31,national,AUT,Австрия,4721.54684,level
+2022-12-31,national,BEL,Бельгия,271913.84287,level
+2022-12-31,national,BGR,Болгария,142394.81533,level
+2022-12-31,national,CYP,Кипр,177988.84714,level
+2022-12-31,national,CZE,Чешская Республика,123663.99805,level
+2022-12-31,national,DEU,Германия,530891.8852,level
+2022-12-31,national,DNK,Дания,37315.84561,level
+2022-12-31,national,EST,Эстония,58524.28856,level
+2022-12-31,national,ESP,Испания,2322368.19661,level
+2022-12-31,national,FIN,Финляндия,44419.89335,level
+2022-12-31,national,FRA,Франция,3071434.54802,level
+2022-12-31,national,GBR,Соединенное Королевство,1462333.13719,level
+2022-12-31,national,GRC,Греция,1608852.62962,level
+2022-12-31,national,HRV,Хорватия,340948.84683,level
+2022-12-31,national,HUN,Венгрия,10928.91333,level
+2022-12-31,national,IRL,Ирландия,18.05986,level
+2022-12-31,national,ITA,Италия,13853726.85389,level
+2022-12-31,national,LTU,Литва,446373.99668,level
+2022-12-31,national,LUX,Люксембург,13.99481,level
+2022-12-31,national,LVA,Республика Латвия,184397.56174,level
+2022-12-31,national,MLT,Мальта,245075.35072,level
+2022-12-31,national,NLD,Нидерланды,5488196.42488,level
+2022-12-31,national,POL,Польша,773859.12986,level
+2022-12-31,national,PRT,Португалия,83.57263,level
+2022-12-31,national,ROU,Румыния,2512710.8839,level
+2022-12-31,national,SWE,Швеция,96071.87691,level
+2022-12-31,national,SVN,Словения,55387.01471,level
+2022-12-31,national,SVK,Словакия,1896.65502,level
+2022-12-31,national,AND,Андорра,0.0,level
+2022-12-31,national,ALB,Албания,7311.74692,level
+2022-12-31,national,ALA,Аландские Острова,0.0,level
+2022-12-31,national,BIH,Босния И Герцеговина,596.4335,level
+2022-12-31,national,CHE,Швейцария,1076830.28602,level
+2022-12-31,national,FRO,Фарерские Острова,0.0,level
+2022-12-31,national,GIB,Гибралтар (Брит.),6202.68207,level
+2022-12-31,national,SGS,Южн.Джорджия И Южн.Сандвич.Острова,0.0,level
+2022-12-31,national,IMN,Остров Мэн,0.0,level
+2022-12-31,national,ISL,Исландия,21.17248,level
+2022-12-31,national,JEY,Джерси,0.0,level
+2022-12-31,national,LIE,Лихтенштейн,0.0,level
+2022-12-31,national,MCO,Монако,0.0,level
+2022-12-31,national,MNE,Черногория (Монтенегро),31.0,level
+2022-12-31,national,MKD,Македония,7261.78664,level
+2022-12-31,national,NOR,Норвегия,23533.34312,level
+2022-12-31,national,SRB,Сербия,8182.31802,level
+2022-12-31,national,SMR,Сан-Марино,0.0,level
+2022-12-31,national,VAT,"Ватикан, Государство-Город",0.0,level
+2022-12-31,national,ARE,Объединенные Арабские Эмираты,560339.15139,level
+2022-12-31,national,AFG,Афганистан,978002.61659,level
+2022-12-31,national,BGD,Бангладеш,2478.444,level
+2022-12-31,national,BHR,Бахрейн,107.85241,level
+2022-12-31,national,BRN,Бруней-Даруссалам,547744.44012,level
+2022-12-31,national,CHN,Китай,13060205.47911,level
+2022-12-31,national,GEO,Грузия,538402.51436,level
+2022-12-31,national,HKG,Гонконг,35559.9914,level
+2022-12-31,national,IDN,Индонезия,244261.28921,level
+2022-12-31,national,ISR,Израиль,817006.69185,level
+2022-12-31,national,IND,Индия,1889555.72155,level
+2022-12-31,national,IRQ,"Ирак, Республика Ирак",2013.21854,level
+2022-12-31,national,IRN,"Иран, Исламская Республика",309694.58338,level
+2022-12-31,national,JOR,Иордания,247.0125,level
+2022-12-31,national,JPN,Япония,782099.3117,level
+2022-12-31,national,KHM,Камбоджа,0.0,level
+2022-12-31,national,KOR,Республика Корея,4545835.60042,level
+2022-12-31,national,KWT,Кувейт,2041.82845,level
+2022-12-31,national,LAO,Лаосская Народно-Демократическая Республика,0.0,level
+2022-12-31,national,LBN,Ливан,115.9647,level
+2022-12-31,national,LKA,Шри-Ланка,3788.60601,level
+2022-12-31,national,MMR,Мьянма,0.0,level
+2022-12-31,national,MNG,Монголия,97088.68049,level
+2022-12-31,national,MAC,Макао,0.0,level
+2022-12-31,national,MDV,Мальдивы,0.0,level
+2022-12-31,national,MYS,Малайзия,485.11137,level
+2022-12-31,national,NPL,Непал,0.0,level
+2022-12-31,national,OMN,Оман,581.86271,level
+2022-12-31,national,PHL,Филиппины,59.36493,level
+2022-12-31,national,PAK,Пакистан,35875.22628,level
+2022-12-31,national,PSE,"Палестина, Государство",0.0,level
+2022-12-31,national,QAT,Катар,5562.89103,level
+2022-12-31,national,SAU,Саудовская Аравия,4695.14787,level
+2022-12-31,national,SGP,Сингапур,1873298.10352,level
+2022-12-31,national,SYR,Сирийская Арабская Республика,0.0,level
+2022-12-31,national,THA,Таиланд,3089.91379,level
+2022-12-31,national,TLS,Тимор-Лесте,0.0,level
+2022-12-31,national,TUR,Турция,4750978.69254,level
+2022-12-31,national,TWN,Тайвань (Китай),9279.16455,level
+2022-12-31,national,VNM,Вьетнам,125410.65228,level
+2022-12-31,national,YEM,Йемен,0.0,level
+2022-12-31,national,ATG,Антигуа И Барбуда,0.0,level
+2022-12-31,national,AIA,Ангилья (Брит.),0.0,level
+2022-12-31,national,ARG,Аргентина,27027.97135,level
+2022-12-31,national,BRB,Барбадос,0.0,level
+2022-12-31,national,BLM,Сен-Бартелеми,0.0,level
+2022-12-31,national,BMU,Бермуды,0.0,level
+2022-12-31,national,BOL,Боливия,49.50004,level
+2022-12-31,national,BRA,Бразилия,84755.16697,level
+2022-12-31,national,BHS,Багамы,195.04786,level
+2022-12-31,national,BLZ,Белиз,0.0,level
+2022-12-31,national,CAN,Канада,679748.53817,level
+2022-12-31,national,CHL,Чили,10957.14031,level
+2022-12-31,national,COL,Колумбия,542.05812,level
+2022-12-31,national,CRI,Коста-Рика,0.0,level
+2022-12-31,national,CUB,Куба,0.38733,level
+2022-12-31,national,DMA,Доминика,0.0,level
+2022-12-31,national,DOM,Доминиканская Республика,1746.16188,level
+2022-12-31,national,ECU,Эквадор,146.882,level
+2022-12-31,national,FLK,Фолклендские Острова (Мальвинские),0.0,level
+2022-12-31,national,GRD,Гренада,0.0,level
+2022-12-31,national,GUF,Французская Гвиана,0.0,level
+2022-12-31,national,GRL,Гренландия,0.0,level
+2022-12-31,national,GLP,Гваделупа,0.0,level
+2022-12-31,national,GTM,Гватемала,0.0,level
+2022-12-31,national,GUY,Гайана,80.78601,level
+2022-12-31,national,HND,Гондурас,0.0,level
+2022-12-31,national,HTI,Гаити,0.0,level
+2022-12-31,national,JAM,Ямайка,0.0,level
+2022-12-31,national,KNA,Сент-Китс И Невис,0.0,level
+2022-12-31,national,CYM,Каймановы Острова (Брит.),0.0,level
+2022-12-31,national,MTQ,Мартиника,0.0,level
+2022-12-31,national,MEX,Мексика,1836.30208,level
+2022-12-31,national,NIC,Никарагуа,0.0,level
+2022-12-31,national,PAN,Панама,115619.83481,level
+2022-12-31,national,PER,Перу,22.82053,level
+2022-12-31,national,PRI,Пуэрто-Рико,15.6,level
+2022-12-31,national,PRY,Парагвай,0.0,level
+2022-12-31,national,SUR,Суринам,0.0,level
+2022-12-31,national,SLV,Сальвадор,381.977,level
+2022-12-31,national,TCA,Острова Теркс И Кайкос,0.0,level
+2022-12-31,national,TTO,Тринидад И Тобаго,34.43971,level
+2022-12-31,national,USA,Соединенные Штаты Америки,1152310.86117,level
+2022-12-31,national,URY,Уругвай,0.0,level
+2022-12-31,national,VCT,Сент-Винсент И Гренадины,0.0,level
+2022-12-31,national,VEN,Венесуэла,0.0,level
+2022-12-31,national,VGB,Виргинские Острова (Брит.),0.0,level
+2022-12-31,national,AGO,Ангола,23.15117,level
+2022-12-31,national,BFA,Буркина-Фасо,0.0,level
+2022-12-31,national,BDI,Бурунди,0.0,level
+2022-12-31,national,BEN,Бенин,3908.04742,level
+2022-12-31,national,BWA,Ботсвана,0.0,level
+2022-12-31,national,COD,Демократическая Республика Конго,3.243,level
+2022-12-31,national,COG,Конго,0.74457,level
+2022-12-31,national,CIV,Кот-Д'Ивуар,27.09552,level
+2022-12-31,national,CMR,Камерун,67.171,level
+2022-12-31,national,CPV,Кабо-Верде,1.0569,level
+2022-12-31,national,DZA,Алжир,145837.38217,level
+2022-12-31,national,EGY,Египет,36709.61465,level
+2022-12-31,national,ERI,Эритрея,0.0,level
+2022-12-31,national,ETH,Эфиопия,0.60222,level
+2022-12-31,national,GAB,Габон,1.09674,level
+2022-12-31,national,GHA,Гана,208.25068,level
+2022-12-31,national,GIN,Гвинея,137.64659,level
+2022-12-31,national,KEN,Кения,14.992,level
+2022-12-31,national,COM,Коморские Острова,0.0,level
+2022-12-31,national,LSO,Лесото,0.0,level
+2022-12-31,national,LBY,Ливия,3.55113,level
+2022-12-31,national,MAR,Марокко,372115.15737,level
+2022-12-31,national,MDG,Мадагаскар,0.0,level
+2022-12-31,national,MLI,Мали,323.38594,level
+2022-12-31,national,MRT,Мавритания,17.66697,level
+2022-12-31,national,MUS,Маврикий,0.0,level
+2022-12-31,national,MWI,Малави,0.0,level
+2022-12-31,national,MOZ,Мозамбик,0.10002,level
+2022-12-31,national,NAM,Намибия,2.7,level
+2022-12-31,national,NER,Нигер,0.0,level
+2022-12-31,national,NGA,Нигерия,188.23856,level
+2022-12-31,national,REU,Реюньон,0.0,level
+2022-12-31,national,RWA,Руанда,0.0,level
+2022-12-31,national,SYC,Сейшелы,2.5,level
+2022-12-31,national,SDN,Судан,19.17483,level
+2022-12-31,national,SLE,Сьерра-Леоне,0.0,level
+2022-12-31,national,SEN,Сенегал,33096.96666,level
+2022-12-31,national,SOM,Сомали,179.70318,level
+2022-12-31,national,SWZ,Свазиленд,0.0,level
+2022-12-31,national,TCD,Чад,94.22694,level
+2022-12-31,national,TUN,Тунис,59459.9009,level
+2022-12-31,national,TZA,"Танзания, Объединенная Республика",12645.17346,level
+2022-12-31,national,UGA,Уганда,1.79767,level
+2022-12-31,national,ZAF,Южная Африка,28143.61032,level
+2022-12-31,national,ZMB,Замбия,20.22488,level
+2022-12-31,national,ZWE,Зимбабве,470.7195,level
+2022-12-31,national,ASM,Американское Самоа,0.0,level
+2022-12-31,national,AUS,Австралия,11994.83078,level
+2022-12-31,national,CXR,Остров Рождества,0.0,level
+2022-12-31,national,FJI,Фиджи,0.0,level
+2022-12-31,national,GUM,Гуам (Сша),0.0,level
+2022-12-31,national,KIR,Кирибати,0.0,level
+2022-12-31,national,NCL,Новая Каледония,0.0,level
+2022-12-31,national,NRU,Науру,0.0,level
+2022-12-31,national,NIU,Ниуэ,0.0,level
+2022-12-31,national,NZL,Новая Зеландия,1282.44579,level
+2022-12-31,national,PYF,Французская Полинезия,0.0,level
+2022-12-31,national,PNG,Папуа-новая Гвинея,86.55697,level
+2022-12-31,national,PCN,Питкерн,0.0,level
+2022-12-31,national,SLB,Соломоновы Острова,0.0,level
+2022-12-31,national,TKL,Токелау,0.0,level
+2023-12-31,national,ARM,Армения,34991.44433,level
+2023-12-31,national,BLR,Беларусь,183492.34882,level
+2023-12-31,national,KGZ,Кыргызстан,1147176.21754,level
+2023-12-31,national,RUS,Россия,10207415.70534,level
+2023-12-31,national,AZE,Азербайджан,483593.66203,level
+2023-12-31,national,MDA,"Молдова, Республика",17932.20572,level
+2023-12-31,national,TJK,Таджикистан,859407.4442,level
+2023-12-31,national,TKM,Туркменистан,396831.17172,level
+2023-12-31,national,UKR,Украина,54973.58272,level
+2023-12-31,national,UZB,Узбекистан,3129992.90657,level
+2023-12-31,national,AUT,Австрия,9685.22772,level
+2023-12-31,national,BEL,Бельгия,220681.63677,level
+2023-12-31,national,BGR,Болгария,27277.76988,level
+2023-12-31,national,CYP,Кипр,243.55447,level
+2023-12-31,national,CZE,Чешская Республика,147699.0275,level
+2023-12-31,national,DEU,Германия,740874.29802,level
+2023-12-31,national,DNK,Дания,75672.61661,level
+2023-12-31,national,EST,Эстония,78125.25445,level
+2023-12-31,national,ESP,Испания,1485486.40399,level
+2023-12-31,national,FIN,Финляндия,3062.86085,level
+2023-12-31,national,FRA,Франция,2949547.90147,level
+2023-12-31,national,GRC,Греция,2218335.63009,level
+2023-12-31,national,HRV,Хорватия,397982.33184,level
+2023-12-31,national,HUN,Венгрия,4726.14432,level
+2023-12-31,national,IRL,Ирландия,1700.25967,level
+2023-12-31,national,ITA,Италия,14833289.8896,level
+2023-12-31,national,LTU,Литва,92870.67954,level
+2023-12-31,national,LUX,Люксембург,12.59721,level
+2023-12-31,national,LVA,Республика Латвия,278943.27154,level
+2023-12-31,national,MLT,Мальта,1103.10139,level
+2023-12-31,national,NLD,Нидерланды,4056525.65033,level
+2023-12-31,national,POL,Польша,527937.12629,level
+2023-12-31,national,PRT,Португалия,4912.1092,level
+2023-12-31,national,ROU,Румыния,2767115.07351,level
+2023-12-31,national,SWE,Швеция,60093.83278,level
+2023-12-31,national,SVN,Словения,2735.7098,level
+2023-12-31,national,SVK,Словакия,2177.24703,level
+2023-12-31,national,AND,Андорра,0.0,level
+2023-12-31,national,ALB,Албания,32.50046,level
+2023-12-31,national,BIH,Босния И Герцеговина,237.41199,level
+2023-12-31,national,CHE,Швейцария,940663.49856,level
+2023-12-31,national,FRO,Фарерские Острова,0.0,level
+2023-12-31,national,GBR,Соединенное Королевство,702757.14629,level
+2023-12-31,national,GGY,Гернси,0.0,level
+2023-12-31,national,GIB,Гибралтар (Брит.),0.0,level
+2023-12-31,national,ISL,Исландия,138.44222,level
+2023-12-31,national,JEY,Джерси,0.0,level
+2023-12-31,national,LIE,Лихтенштейн,87.16106,level
+2023-12-31,national,MCO,Монако,0.0,level
+2023-12-31,national,MNE,Черногория (Монтенегро),4.6715,level
+2023-12-31,national,MKD,Македония,289.11808,level
+2023-12-31,national,NOR,Норвегия,2992.89776,level
+2023-12-31,national,SRB,Сербия,11350.74413,level
+2023-12-31,national,SMR,Сан-Марино,0.0,level
+2023-12-31,national,ATF,Французские Южные Территории,0.0,level
+2023-12-31,national,ARE,Объединенные Арабские Эмираты,209469.91002,level
+2023-12-31,national,AFG,Афганистан,615131.0118,level
+2023-12-31,national,BGD,Бангладеш,8030.56225,level
+2023-12-31,national,BHR,Бахрейн,63.0127,level
+2023-12-31,national,BRN,Бруней-Даруссалам,503408.83374,level
+2023-12-31,national,BTN,Бутан,0.0,level
+2023-12-31,national,CHN,Китай,14666158.3001,level
+2023-12-31,national,GEO,Грузия,222860.34226,level
+2023-12-31,national,HKG,Гонконг,48002.36855,level
+2023-12-31,national,IDN,Индонезия,95227.55847,level
+2023-12-31,national,ISR,Израиль,363354.94748,level
+2023-12-31,national,IND,Индия,449211.60373,level
+2023-12-31,national,IRQ,"Ирак, Республика Ирак",1516.03946,level
+2023-12-31,national,IRN,"Иран, Исламская Республика",83105.56995,level
+2023-12-31,national,JOR,Иордания,4021.54926,level
+2023-12-31,national,JPN,Япония,587607.16716,level
+2023-12-31,national,KHM,Камбоджа,228.60682,level
+2023-12-31,national,KOR,Республика Корея,3812795.97355,level
+2023-12-31,national,KWT,Кувейт,2977.89154,level
+2023-12-31,national,LAO,Лаосская Народно-Демократическая Республика,0.0,level
+2023-12-31,national,LBN,Ливан,49.61918,level
+2023-12-31,national,LKA,Шри-Ланка,5282.74488,level
+2023-12-31,national,MMR,Мьянма,1.184,level
+2023-12-31,national,MNG,Монголия,124277.18179,level
+2023-12-31,national,MAC,Макао,0.0,level
+2023-12-31,national,MDV,Мальдивы,1.103,level
+2023-12-31,national,MYS,Малайзия,33062.90981,level
+2023-12-31,national,NPL,Непал,0.0,level
+2023-12-31,national,OMN,Оман,812.1698,level
+2023-12-31,national,PHL,Филиппины,249.50523,level
+2023-12-31,national,PAK,Пакистан,5679.55762,level
+2023-12-31,national,PSE,"Палестина, Государство",0.0,level
+2023-12-31,national,QAT,Катар,5619.16551,level
+2023-12-31,national,SAU,Саудовская Аравия,7892.18531,level
+2023-12-31,national,SGP,Сингапур,1700318.52496,level
+2023-12-31,national,SYR,Сирийская Арабская Республика,196.37322,level
+2023-12-31,national,THA,Таиланд,55284.93543,level
+2023-12-31,national,TLS,Тимор-Лесте,0.0,level
+2023-12-31,national,TUR,Турция,3943304.27028,level
+2023-12-31,national,TWN,Тайвань (Китай),4293.30016,level
+2023-12-31,national,VNM,Вьетнам,180135.81425,level
+2023-12-31,national,YEM,Йемен,0.0,level
+2023-12-31,national,ATG,Антигуа И Барбуда,0.0,level
+2023-12-31,national,AIA,Ангилья (Брит.),0.0,level
+2023-12-31,national,ARG,Аргентина,26851.99471,level
+2023-12-31,national,BRB,Барбадос,0.0,level
+2023-12-31,national,BMU,Бермуды,0.0,level
+2023-12-31,national,BOL,Боливия,2.949,level
+2023-12-31,national,BRA,Бразилия,20901.97362,level
+2023-12-31,national,BHS,Багамы,30.37728,level
+2023-12-31,national,BLZ,Белиз,0.0,level
+2023-12-31,national,CAN,Канада,250965.06899,level
+2023-12-31,national,CHL,Чили,1862.41773,level
+2023-12-31,national,COL,Колумбия,1218.99401,level
+2023-12-31,national,CRI,Коста-Рика,0.0,level
+2023-12-31,national,CUB,Куба,1.10448,level
+2023-12-31,national,CUW,Кюрасао,0.0,level
+2023-12-31,national,DMA,Доминика,0.0,level
+2023-12-31,national,DOM,Доминиканская Республика,531.0875,level
+2023-12-31,national,ECU,Эквадор,183.6511,level
+2023-12-31,national,GRD,Гренада,0.0,level
+2023-12-31,national,GUF,Французская Гвиана,0.0,level
+2023-12-31,national,GRL,Гренландия,0.0,level
+2023-12-31,national,GLP,Гваделупа,0.0,level
+2023-12-31,national,GTM,Гватемала,4.26,level
+2023-12-31,national,GUY,Гайана,15.22988,level
+2023-12-31,national,HND,Гондурас,13.51429,level
+2023-12-31,national,HTI,Гаити,0.0,level
+2023-12-31,national,JAM,Ямайка,0.0,level
+2023-12-31,national,CYM,Каймановы Острова (Брит.),0.0,level
+2023-12-31,national,MEX,Мексика,3913.15617,level
+2023-12-31,national,NIC,Никарагуа,0.45852,level
+2023-12-31,national,PAN,Панама,95265.26172,level
+2023-12-31,national,PER,Перу,1135.54432,level
+2023-12-31,national,PRI,Пуэрто-Рико,46.8,level
+2023-12-31,national,PRY,Парагвай,0.0,level
+2023-12-31,national,SUR,Суринам,2.22628,level
+2023-12-31,national,SLV,Сальвадор,79.2814,level
+2023-12-31,national,TCA,Острова Теркс И Кайкос,0.0,level
+2023-12-31,national,TTO,Тринидад И Тобаго,1.83461,level
+2023-12-31,national,USA,Соединенные Штаты Америки,1509824.21518,level
+2023-12-31,national,URY,Уругвай,14.0562,level
+2023-12-31,national,VEN,Венесуэла,0.0,level
+2023-12-31,national,VGB,Виргинские Острова (Брит.),0.0,level
+2023-12-31,national,VIR,"Виргинские Острова, Сша",0.0,level
+2023-12-31,national,AGO,Ангола,678.64622,level
+2023-12-31,national,BFA,Буркина-Фасо,0.0,level
+2023-12-31,national,BDI,Бурунди,0.0,level
+2023-12-31,national,BWA,Ботсвана,0.0,level
+2023-12-31,national,COD,Демократическая Республика Конго,4.50875,level
+2023-12-31,national,CAF,Центрально-Африканская Республика,0.0,level
+2023-12-31,national,COG,Конго,14.53495,level
+2023-12-31,national,CIV,Кот-Д'Ивуар,81.99793,level
+2023-12-31,national,CMR,Камерун,59.1404,level
+2023-12-31,national,CPV,Кабо-Верде,0.0,level
+2023-12-31,national,DZA,Алжир,73638.05262,level
+2023-12-31,national,EGY,Египет,23655.15237,level
+2023-12-31,national,ESH,Западная Сахара,0.0,level
+2023-12-31,national,ERI,Эритрея,0.0,level
+2023-12-31,national,ETH,Эфиопия,0.0,level
+2023-12-31,national,GAB,Габон,0.0,level
+2023-12-31,national,GHA,Гана,104.1473,level
+2023-12-31,national,GMB,Гамбия,0.0,level
+2023-12-31,national,GIN,Гвинея,165.47511,level
+2023-12-31,national,GNQ,Экваториальная Гвинея,0.8386,level
+2023-12-31,national,KEN,Кения,64.3875,level
+2023-12-31,national,COM,Коморские Острова,0.0,level
+2023-12-31,national,LBR,Либерия,2.55,level
+2023-12-31,national,LSO,Лесото,0.0,level
+2023-12-31,national,LBY,Ливия,527.60867,level
+2023-12-31,national,MAR,Марокко,143785.52209,level
+2023-12-31,national,MDG,Мадагаскар,0.0,level
+2023-12-31,national,MLI,Мали,41.72197,level
+2023-12-31,national,MRT,Мавритания,0.0,level
+2023-12-31,national,MUS,Маврикий,0.0,level
+2023-12-31,national,MWI,Малави,0.0,level
+2023-12-31,national,MOZ,Мозамбик,0.39,level
+2023-12-31,national,NAM,Намибия,5052.40911,level
+2023-12-31,national,NER,Нигер,0.0,level
+2023-12-31,national,NGA,Нигерия,913.35134,level
+2023-12-31,national,REU,Реюньон,0.0,level
+2023-12-31,national,RWA,Руанда,0.0,level
+2023-12-31,national,SYC,Сейшелы,0.0,level
+2023-12-31,national,SDN,Судан,28.4765,level
+2023-12-31,national,SLE,Сьерра-Леоне,0.0,level
+2023-12-31,national,SEN,Сенегал,22097.68592,level
+2023-12-31,national,SOM,Сомали,627.32448,level
+2023-12-31,national,STP,Сан-Томе И Принсипи,0.0,level
+2023-12-31,national,SWZ,Свазиленд,0.0,level
+2023-12-31,national,TUN,Тунис,33433.14219,level
+2023-12-31,national,TZA,"Танзания, Объединенная Республика",48.013,level
+2023-12-31,national,UGA,Уганда,143.05765,level
+2023-12-31,national,MYT,Майотта,0.0,level
+2023-12-31,national,ZAF,Южная Африка,8458.73354,level
+2023-12-31,national,ZMB,Замбия,145.94525,level
+2023-12-31,national,ZWE,Зимбабве,0.0,level
+2023-12-31,national,AUS,Австралия,9215.45507,level
+2023-12-31,national,CCK,Кокосовые (Килинг) Острова,0.0,level
+2023-12-31,national,COK,Острова Кука (Н.Зел.),0.0,level
+2023-12-31,national,FJI,Фиджи,0.0,level
+2023-12-31,national,NCL,Новая Каледония,0.0,level
+2023-12-31,national,NRU,Науру,0.0,level
+2023-12-31,national,NIU,Ниуэ,0.0,level
+2023-12-31,national,NZL,Новая Зеландия,77.42717,level
+2023-12-31,national,PYF,Французская Полинезия,0.0,level
+2023-12-31,national,PNG,Папуа-новая Гвинея,14.24449,level
+2023-12-31,national,SLB,Соломоновы Острова,0.0,level
+2023-12-31,national,TUV,Тувалу,0.0,level
+2023-12-31,national,WLF,Уоллис И Футуна,0.0,level
+2024-12-31,national,ARM,Армения,36250.00667,level
+2024-12-31,national,BLR,Беларусь,171270.48687,level
+2024-12-31,national,KGZ,Кыргызстан,1285786.93981,level
+2024-12-31,national,RUS,Россия,9551856.18063,level
+2024-12-31,national,AZE,Азербайджан,485349.51617,level
+2024-12-31,national,MDA,"Молдова, Республика",50504.55383,level
+2024-12-31,national,TJK,Таджикистан,996140.27433,level
+2024-12-31,national,TKM,Туркменистан,335013.19541,level
+2024-12-31,national,UKR,Украина,68156.05913,level
+2024-12-31,national,UZB,Узбекистан,2826582.60922,level
+2024-12-31,national,AUT,Австрия,4132.56199,level
+2024-12-31,national,BEL,Бельгия,210396.32956,level
+2024-12-31,national,BGR,Болгария,303594.69158,level
+2024-12-31,national,CYP,Кипр,6157.05277,level
+2024-12-31,national,CZE,Чешская Республика,151931.66227,level
+2024-12-31,national,DEU,Германия,1160773.27423,level
+2024-12-31,national,DNK,Дания,34924.72259,level
+2024-12-31,national,EST,Эстония,38736.29795,level
+2024-12-31,national,ESP,Испания,1354582.18223,level
+2024-12-31,national,FIN,Финляндия,8560.24175,level
+2024-12-31,national,FRA,Франция,3688788.68227,level
+2024-12-31,national,GRC,Греция,2757526.9705,level
+2024-12-31,national,HRV,Хорватия,253506.11655,level
+2024-12-31,national,HUN,Венгрия,5309.20039,level
+2024-12-31,national,IRL,Ирландия,647400.01407,level
+2024-12-31,national,ITA,Италия,18663764.8458,level
+2024-12-31,national,LTU,Литва,71631.45416,level
+2024-12-31,national,LUX,Люксембург,36.51097,level
+2024-12-31,national,LVA,Республика Латвия,166650.29184,level
+2024-12-31,national,MLT,Мальта,511.45705,level
+2024-12-31,national,NLD,Нидерланды,5295626.59023,level
+2024-12-31,national,POL,Польша,487852.71887,level
+2024-12-31,national,PRT,Португалия,4738.69346,level
+2024-12-31,national,ROU,Румыния,2788441.91939,level
+2024-12-31,national,SWE,Швеция,27687.09549,level
+2024-12-31,national,SVN,Словения,5733.90301,level
+2024-12-31,national,SVK,Словакия,2930.15321,level
+2024-12-31,national,AND,Андорра,0.0,level
+2024-12-31,national,ALB,Албания,7.21375,level
+2024-12-31,national,ALA,Аландские Острова,0.0,level
+2024-12-31,national,BIH,Босния И Герцеговина,42.46577,level
+2024-12-31,national,CHE,Швейцария,1228215.84156,level
+2024-12-31,national,FRO,Фарерские Острова,0.0,level
+2024-12-31,national,GBR,Соединенное Королевство,420100.00961,level
+2024-12-31,national,GIB,Гибралтар (Брит.),0.0,level
+2024-12-31,national,IOT,Британская Территория В Индийском Океане,0.0,level
+2024-12-31,national,ISL,Исландия,2869.81806,level
+2024-12-31,national,JEY,Джерси,0.0,level
+2024-12-31,national,LIE,Лихтенштейн,67.73814,level
+2024-12-31,national,MCO,Монако,1.5,level
+2024-12-31,national,MNE,Черногория (Монтенегро),0.0,level
+2024-12-31,national,MKD,Македония,300.94598,level
+2024-12-31,national,NOR,Норвегия,4786.82136,level
+2024-12-31,national,SRB,Сербия,15869.77914,level
+2024-12-31,national,SMR,Сан-Марино,0.0,level
+2024-12-31,national,ATF,Французские Южные Территории,0.0,level
+2024-12-31,national,ARE,Объединенные Арабские Эмираты,130734.46354,level
+2024-12-31,national,AFG,Афганистан,527766.20602,level
+2024-12-31,national,BGD,Бангладеш,6591.781,level
+2024-12-31,national,BHR,Бахрейн,0.121,level
+2024-12-31,national,BRN,Бруней-Даруссалам,184928.21395,level
+2024-12-31,national,BTN,Бутан,0.0,level
+2024-12-31,national,CHN,Китай,14891441.47478,level
+2024-12-31,national,GEO,Грузия,117480.79193,level
+2024-12-31,national,HKG,Гонконг,94521.53201,level
+2024-12-31,national,IDN,Индонезия,120787.50696,level
+2024-12-31,national,ISR,Израиль,167590.25694,level
+2024-12-31,national,IND,Индия,464210.02355,level
+2024-12-31,national,IRQ,"Ирак, Республика Ирак",2209.85957,level
+2024-12-31,national,IRN,"Иран, Исламская Республика",123349.46322,level
+2024-12-31,national,JOR,Иордания,3716.524,level
+2024-12-31,national,JPN,Япония,506550.30137,level
+2024-12-31,national,KHM,Камбоджа,47.04079,level
+2024-12-31,national,PRK,"Корея, народно-Демократическая Республика",0.0,level
+2024-12-31,national,KOR,Республика Корея,1252449.01295,level
+2024-12-31,national,KWT,Кувейт,3395.91943,level
+2024-12-31,national,LAO,Лаосская Народно-Демократическая Республика,46.21704,level
+2024-12-31,national,LBN,Ливан,71.324,level
+2024-12-31,national,LKA,Шри-Ланка,32.72244,level
+2024-12-31,national,MMR,Мьянма,3.98,level
+2024-12-31,national,MNG,Монголия,120156.40605,level
+2024-12-31,national,MAC,Макао,0.0,level
+2024-12-31,national,MDV,Мальдивы,182.38548,level
+2024-12-31,national,MYS,Малайзия,3756.30118,level
+2024-12-31,national,NPL,Непал,0.0,level
+2024-12-31,national,OMN,Оман,757.63994,level
+2024-12-31,national,PHL,Филиппины,96.06245,level
+2024-12-31,national,PAK,Пакистан,11845.71325,level
+2024-12-31,national,PSE,"Палестина, Государство",0.0,level
+2024-12-31,national,QAT,Катар,4787.4988,level
+2024-12-31,national,SAU,Саудовская Аравия,3644.15664,level
+2024-12-31,national,SGP,Сингапур,854608.23933,level
+2024-12-31,national,SYR,Сирийская Арабская Республика,266.01941,level
+2024-12-31,national,THA,Таиланд,6112.71871,level
+2024-12-31,national,TUR,Турция,3314354.44011,level
+2024-12-31,national,TWN,Тайвань (Китай),3747.10865,level
+2024-12-31,national,VNM,Вьетнам,204993.20055,level
+2024-12-31,national,ATG,Антигуа И Барбуда,0.0,level
+2024-12-31,national,AIA,Ангилья (Брит.),0.0,level
+2024-12-31,national,ARG,Аргентина,2462.44038,level
+2024-12-31,national,BRB,Барбадос,0.0,level
+2024-12-31,national,BLM,Сен-Бартелеми,0.0,level
+2024-12-31,national,BMU,Бермуды,0.0,level
+2024-12-31,national,BOL,Боливия,0.0,level
+2024-12-31,national,BRA,Бразилия,90723.96257,level
+2024-12-31,national,BHS,Багамы,51010.29508,level
+2024-12-31,national,CAN,Канада,253907.80764,level
+2024-12-31,national,CHL,Чили,2565.59127,level
+2024-12-31,national,COL,Колумбия,753.10728,level
+2024-12-31,national,CRI,Коста-Рика,0.0,level
+2024-12-31,national,CUB,Куба,2.77741,level
+2024-12-31,national,CUW,Кюрасао,0.0,level
+2024-12-31,national,DOM,Доминиканская Республика,198.5708,level
+2024-12-31,national,ECU,Эквадор,63.11671,level
+2024-12-31,national,GRD,Гренада,0.0,level
+2024-12-31,national,GRL,Гренландия,0.0,level
+2024-12-31,national,GLP,Гваделупа,0.0,level
+2024-12-31,national,GTM,Гватемала,0.0,level
+2024-12-31,national,GUY,Гайана,0.0,level
+2024-12-31,national,HND,Гондурас,0.0,level
+2024-12-31,national,HTI,Гаити,0.0,level
+2024-12-31,national,JAM,Ямайка,7.335,level
+2024-12-31,national,CYM,Каймановы Острова (Брит.),0.0,level
+2024-12-31,national,MSR,Монтсеррат,0.0,level
+2024-12-31,national,MEX,Мексика,6570.68429,level
+2024-12-31,national,NIC,Никарагуа,0.0,level
+2024-12-31,national,PAN,Панама,68.748,level
+2024-12-31,national,PER,Перу,3187.5444,level
+2024-12-31,national,SPM,Сен-Пьер И Микелон,0.0,level
+2024-12-31,national,PRI,Пуэрто-Рико,0.0,level
+2024-12-31,national,PRY,Парагвай,0.0,level
+2024-12-31,national,SUR,Суринам,0.0,level
+2024-12-31,national,SLV,Сальвадор,0.0,level
+2024-12-31,national,TCA,Острова Теркс И Кайкос,0.0,level
+2024-12-31,national,TTO,Тринидад И Тобаго,1.78116,level
+2024-12-31,national,USA,Соединенные Штаты Америки,1974025.62258,level
+2024-12-31,national,URY,Уругвай,100142.28535,level
+2024-12-31,national,VEN,Венесуэла,0.0,level
+2024-12-31,national,VGB,Виргинские Острова (Брит.),0.0,level
+2024-12-31,national,VIR,"Виргинские Острова, Сша",0.0,level
+2024-12-31,national,AGO,Ангола,986.9196,level
+2024-12-31,national,BFA,Буркина-Фасо,0.0,level
+2024-12-31,national,BDI,Бурунди,0.0,level
+2024-12-31,national,COD,Демократическая Республика Конго,91.86627,level
+2024-12-31,national,CAF,Центрально-Африканская Республика,0.0,level
+2024-12-31,national,COG,Конго,53.16351,level
+2024-12-31,national,CIV,Кот-Д'Ивуар,0.17079,level
+2024-12-31,national,CMR,Камерун,156.1724,level
+2024-12-31,national,DZA,Алжир,3135.83993,level
+2024-12-31,national,EGY,Египет,137194.6388,level
+2024-12-31,national,ERI,Эритрея,0.0,level
+2024-12-31,national,ETH,Эфиопия,0.0,level
+2024-12-31,national,GAB,Габон,1.28024,level
+2024-12-31,national,GHA,Гана,293.152,level
+2024-12-31,national,GMB,Гамбия,0.0,level
+2024-12-31,national,GIN,Гвинея,406.04979,level
+2024-12-31,national,GNQ,Экваториальная Гвинея,0.60283,level
+2024-12-31,national,KEN,Кения,0.4,level
+2024-12-31,national,LSO,Лесото,0.0,level
+2024-12-31,national,LBY,Ливия,293.7349,level
+2024-12-31,national,MAR,Марокко,250252.75778,level
+2024-12-31,national,MDG,Мадагаскар,0.0,level
+2024-12-31,national,MLI,Мали,0.0,level
+2024-12-31,national,MRT,Мавритания,1665.0,level
+2024-12-31,national,MUS,Маврикий,0.0,level
+2024-12-31,national,MWI,Малави,0.0,level
+2024-12-31,national,MOZ,Мозамбик,0.0,level
+2024-12-31,national,NAM,Намибия,4.51568,level
+2024-12-31,national,NER,Нигер,0.0,level
+2024-12-31,national,NGA,Нигерия,2124.65157,level
+2024-12-31,national,RWA,Руанда,0.0,level
+2024-12-31,national,SYC,Сейшелы,0.0,level
+2024-12-31,national,SHN,Остров Святой Елены,0.0,level
+2024-12-31,national,SLE,Сьерра-Леоне,0.0,level
+2024-12-31,national,SEN,Сенегал,14467.92258,level
+2024-12-31,national,SOM,Сомали,1297.76726,level
+2024-12-31,national,SWZ,Свазиленд,0.0,level
+2024-12-31,national,TGO,Того,0.0,level
+2024-12-31,national,TUN,Тунис,9781.82412,level
+2024-12-31,national,TZA,"Танзания, Объединенная Республика",7.44326,level
+2024-12-31,national,UGA,Уганда,2.985,level
+2024-12-31,national,MYT,Майотта,0.0,level
+2024-12-31,national,ZAF,Южная Африка,5128.1889,level
+2024-12-31,national,ZMB,Замбия,249.89488,level
+2024-12-31,national,ZWE,Зимбабве,1.14,level
+2024-12-31,national,AUS,Австралия,12406.00895,level
+2024-12-31,national,COK,Острова Кука (Н.Зел.),0.0,level
+2024-12-31,national,FJI,Фиджи,0.0,level
+2024-12-31,national,NCL,Новая Каледония,0.0,level
+2024-12-31,national,NZL,Новая Зеландия,14.65912,level
+2024-12-31,national,PYF,Французская Полинезия,0.0,level
+2024-12-31,national,PNG,Папуа-новая Гвинея,12.40716,level
+2024-12-31,national,PCN,Питкерн,0.0,level
+2024-12-31,national,TKL,Токелау,0.0,level
+2024-12-31,national,WSM,"Самоа, Независимое Государство",0.0,level
+2025-12-31,national,ARM,Армения,52080.39406,level
+2025-12-31,national,BLR,Беларусь,229789.34538,level
+2025-12-31,national,KGZ,Кыргызстан,1759288.13112,level
+2025-12-31,national,RUS,Россия,8248320.16808,level
+2025-12-31,national,AZE,Азербайджан,402364.57215,level
+2025-12-31,national,MDA,"Молдова, Республика",15725.35931,level
+2025-12-31,national,TJK,Таджикистан,1123960.29361,level
+2025-12-31,national,TKM,Туркменистан,316299.18854,level
+2025-12-31,national,UKR,Украина,40878.59767,level
+2025-12-31,national,UZB,Узбекистан,3485648.32986,level
+2025-12-31,national,AUT,Австрия,15733.16152,level
+2025-12-31,national,BEL,Бельгия,311391.40403,level
+2025-12-31,national,BGR,Болгария,278581.0209,level
+2025-12-31,national,CYP,Кипр,115.56476,level
+2025-12-31,national,CZE,Чешская Республика,121296.17061,level
+2025-12-31,national,DEU,Германия,1306002.21636,level
+2025-12-31,national,DNK,Дания,40754.58047,level
+2025-12-31,national,EST,Эстония,43027.90639,level
+2025-12-31,national,ESP,Испания,1485219.55612,level
+2025-12-31,national,FIN,Финляндия,11561.50311,level
+2025-12-31,national,FRA,Франция,3325812.97465,level
+2025-12-31,national,GRC,Греция,2348935.47767,level
+2025-12-31,national,HRV,Хорватия,376382.37986,level
+2025-12-31,national,HUN,Венгрия,16338.5413,level
+2025-12-31,national,IRL,Ирландия,20251.66475,level
+2025-12-31,national,ITA,Италия,15639066.66077,level
+2025-12-31,national,LTU,Литва,65564.68207,level
+2025-12-31,national,LUX,Люксембург,3298.15562,level
+2025-12-31,national,LVA,Республика Латвия,99890.39345,level
+2025-12-31,national,MLT,Мальта,2205.99471,level
+2025-12-31,national,NLD,Нидерланды,5981852.55599,level
+2025-12-31,national,POL,Польша,549987.24914,level
+2025-12-31,national,PRT,Португалия,6649.72739,level
+2025-12-31,national,ROU,Румыния,2626893.71323,level
+2025-12-31,national,SWE,Швеция,75923.66173,level
+2025-12-31,national,SVN,Словения,4554.96106,level
+2025-12-31,national,SVK,Словакия,3150.82867,level
+2025-12-31,national,AND,Андорра,5346.51678,level
+2025-12-31,national,ALB,Албания,226.39311,level
+2025-12-31,national,ALA,Аландские Острова,0.0,level
+2025-12-31,national,BIH,Босния И Герцеговина,247.06283,level
+2025-12-31,national,CHE,Швейцария,1078132.90861,level
+2025-12-31,national,FRO,Фарерские Острова,0.0,level
+2025-12-31,national,GBR,Соединенное Королевство,1220351.17333,level
+2025-12-31,national,GGY,Гернси,0.0,level
+2025-12-31,national,GIB,Гибралтар (Брит.),0.0,level
+2025-12-31,national,ISL,Исландия,525.07449,level
+2025-12-31,national,JEY,Джерси,0.0,level
+2025-12-31,national,LIE,Лихтенштейн,0.0,level
+2025-12-31,national,MCO,Монако,0.0,level
+2025-12-31,national,MNE,Черногория (Монтенегро),0.0,level
+2025-12-31,national,MKD,Македония,66.31311,level
+2025-12-31,national,NOR,Норвегия,7842.17806,level
+2025-12-31,national,SRB,Сербия,28624.97402,level
+2025-12-31,national,SMR,Сан-Марино,0.0,level
+2025-12-31,national,ARE,Объединенные Арабские Эмираты,129991.60942,level
+2025-12-31,national,AFG,Афганистан,518889.92549,level
+2025-12-31,national,BGD,Бангладеш,8191.3105,level
+2025-12-31,national,BHR,Бахрейн,0.0,level
+2025-12-31,national,BRN,Бруней-Даруссалам,291982.68914,level
+2025-12-31,national,BTN,Бутан,0.0,level
+2025-12-31,national,CHN,Китай,15196007.83155,level
+2025-12-31,national,GEO,Грузия,91088.66214,level
+2025-12-31,national,HKG,Гонконг,132957.37733,level
+2025-12-31,national,IDN,Индонезия,74673.93271,level
+2025-12-31,national,ISR,Израиль,119242.22286,level
+2025-12-31,national,IND,Индия,415689.39879,level
+2025-12-31,national,IRQ,"Ирак, Республика Ирак",7611.75958,level
+2025-12-31,national,IRN,"Иран, Исламская Республика",239077.37446,level
+2025-12-31,national,JOR,Иордания,368.56381,level
+2025-12-31,national,JPN,Япония,435220.6244,level
+2025-12-31,national,KHM,Камбоджа,0.0,level
+2025-12-31,national,KOR,Республика Корея,928192.53227,level
+2025-12-31,national,KWT,Кувейт,1343.35853,level
+2025-12-31,national,LAO,Лаосская Народно-Демократическая Республика,0.0,level
+2025-12-31,national,LBN,Ливан,29.54,level
+2025-12-31,national,LKA,Шри-Ланка,735.36804,level
+2025-12-31,national,MMR,Мьянма,0.0,level
+2025-12-31,national,MNG,Монголия,123057.45765,level
+2025-12-31,national,MAC,Макао,0.0,level
+2025-12-31,national,MDV,Мальдивы,23.08,level
+2025-12-31,national,MYS,Малайзия,15767.16968,level
+2025-12-31,national,NPL,Непал,234.922,level
+2025-12-31,national,OMN,Оман,656.77537,level
+2025-12-31,national,PHL,Филиппины,241.25056,level
+2025-12-31,national,PAK,Пакистан,56443.06634,level
+2025-12-31,national,PSE,"Палестина, Государство",0.0,level
+2025-12-31,national,QAT,Катар,4336.34994,level
+2025-12-31,national,SAU,Саудовская Аравия,3242.88038,level
+2025-12-31,national,SGP,Сингапур,814790.82412,level
+2025-12-31,national,SYR,Сирийская Арабская Республика,67.3925,level
+2025-12-31,national,THA,Таиланд,38627.39594,level
+2025-12-31,national,TLS,Тимор-Лесте,0.0,level
+2025-12-31,national,TUR,Турция,3896866.09185,level
+2025-12-31,national,TWN,Тайвань (Китай),9085.04455,level
+2025-12-31,national,VNM,Вьетнам,120156.35426,level
+2025-12-31,national,ATG,Антигуа И Барбуда,0.0,level
+2025-12-31,national,AIA,Ангилья (Брит.),0.0,level
+2025-12-31,national,ARG,Аргентина,2355.796,level
+2025-12-31,national,BRB,Барбадос,22.0,level
+2025-12-31,national,BLM,Сен-Бартелеми,0.0,level
+2025-12-31,national,BMU,Бермуды,0.0,level
+2025-12-31,national,BOL,Боливия,4760.2938,level
+2025-12-31,national,BRA,Бразилия,111155.34582,level
+2025-12-31,national,BHS,Багамы,131236.67796,level
+2025-12-31,national,BLZ,Белиз,0.0,level
+2025-12-31,national,CAN,Канада,334167.86667,level
+2025-12-31,national,CHL,Чили,1426.32298,level
+2025-12-31,national,COL,Колумбия,72.80044,level
+2025-12-31,national,CRI,Коста-Рика,0.005,level
+2025-12-31,national,CUB,Куба,46.27616,level
+2025-12-31,national,DMA,Доминика,0.0,level
+2025-12-31,national,DOM,Доминиканская Республика,0.0,level
+2025-12-31,national,ECU,Эквадор,4.33009,level
+2025-12-31,national,GUF,Французская Гвиана,0.0,level
+2025-12-31,national,GRL,Гренландия,0.0,level
+2025-12-31,national,GTM,Гватемала,0.0,level
+2025-12-31,national,GUY,Гайана,1.4418,level
+2025-12-31,national,HND,Гондурас,0.0,level
+2025-12-31,national,HTI,Гаити,0.0,level
+2025-12-31,national,JAM,Ямайка,5.045,level
+2025-12-31,national,CYM,Каймановы Острова (Брит.),0.0,level
+2025-12-31,national,LCA,Сент-Люсия,0.0,level
+2025-12-31,national,MEX,Мексика,2625.47221,level
+2025-12-31,national,NIC,Никарагуа,84.44325,level
+2025-12-31,national,PAN,Панама,338541.10186,level
+2025-12-31,national,PER,Перу,15185.24356,level
+2025-12-31,national,PRI,Пуэрто-Рико,0.0,level
+2025-12-31,national,PRY,Парагвай,0.0,level
+2025-12-31,national,SUR,Суринам,0.73022,level
+2025-12-31,national,SLV,Сальвадор,68.557,level
+2025-12-31,national,TCA,Острова Теркс И Кайкос,0.0,level
+2025-12-31,national,TTO,Тринидад И Тобаго,25.76277,level
+2025-12-31,national,UMI,Малые Тихоокеан.Отдален.Ост-Ва С.Ш.,0.0,level
+2025-12-31,national,USA,Соединенные Штаты Америки,1031503.92481,level
+2025-12-31,national,URY,Уругвай,0.0,level
+2025-12-31,national,VEN,Венесуэла,0.0,level
+2025-12-31,national,VGB,Виргинские Острова (Брит.),0.0,level
+2025-12-31,national,VIR,"Виргинские Острова, Сша",0.0,level
+2025-12-31,national,AGO,Ангола,57.77191,level
+2025-12-31,national,BFA,Буркина-Фасо,0.0,level
+2025-12-31,national,BDI,Бурунди,0.0,level
+2025-12-31,national,BEN,Бенин,0.0,level
+2025-12-31,national,COD,Демократическая Республика Конго,0.0,level
+2025-12-31,national,COG,Конго,23.01262,level
+2025-12-31,national,CIV,Кот-Д'Ивуар,6.21447,level
+2025-12-31,national,CMR,Камерун,252.35565,level
+2025-12-31,national,DJI,Джибути,0.0,level
+2025-12-31,national,DZA,Алжир,75865.84223,level
+2025-12-31,national,EGY,Египет,209742.57704,level
+2025-12-31,national,ERI,Эритрея,0.0,level
+2025-12-31,national,ETH,Эфиопия,3.613,level
+2025-12-31,national,GAB,Габон,1.02035,level
+2025-12-31,national,GHA,Гана,494.23092,level
+2025-12-31,national,GIN,Гвинея,121.76417,level
+2025-12-31,national,KEN,Кения,1.0,level
+2025-12-31,national,COM,Коморские Острова,0.0,level
+2025-12-31,national,LBR,Либерия,2.326,level
+2025-12-31,national,LSO,Лесото,0.0,level
+2025-12-31,national,LBY,Ливия,1122.18025,level
+2025-12-31,national,MAR,Марокко,434006.14407,level
+2025-12-31,national,MDG,Мадагаскар,0.0,level
+2025-12-31,national,MLI,Мали,0.0,level
+2025-12-31,national,MRT,Мавритания,1517.77304,level
+2025-12-31,national,MUS,Маврикий,0.0,level
+2025-12-31,national,MWI,Малави,0.0,level
+2025-12-31,national,MOZ,Мозамбик,0.0,level
+2025-12-31,national,NAM,Намибия,14759.45651,level
+2025-12-31,national,NER,Нигер,0.0,level
+2025-12-31,national,NGA,Нигерия,2840.79824,level
+2025-12-31,national,RWA,Руанда,13.338,level
+2025-12-31,national,SDN,Судан,25.626,level
+2025-12-31,national,SHN,Остров Святой Елены,0.0,level
+2025-12-31,national,SLE,Сьерра-Леоне,0.0,level
+2025-12-31,national,SEN,Сенегал,29205.06573,level
+2025-12-31,national,SOM,Сомали,119.05899,level
+2025-12-31,national,STP,Сан-Томе И Принсипи,0.0,level
+2025-12-31,national,SWZ,Свазиленд,0.0,level
+2025-12-31,national,TCD,Чад,1632.64616,level
+2025-12-31,national,TUN,Тунис,28030.97423,level
+2025-12-31,national,TZA,"Танзания, Объединенная Республика",83.74674,level
+2025-12-31,national,UGA,Уганда,141.4624,level
+2025-12-31,national,ZAF,Южная Африка,1745.8878,level
+2025-12-31,national,ZMB,Замбия,7.3739,level
+2025-12-31,national,ZWE,Зимбабве,0.0,level
+2025-12-31,national,ASM,Американское Самоа,0.0,level
+2025-12-31,national,AUS,Австралия,3338.03383,level
+2025-12-31,national,CCK,Кокосовые (Килинг) Острова,0.0,level
+2025-12-31,national,FJI,Фиджи,0.0,level
+2025-12-31,national,GUM,Гуам (Сша),0.0,level
+2025-12-31,national,KIR,Кирибати,0.0,level
+2025-12-31,national,NCL,Новая Каледония,0.0,level
+2025-12-31,national,NRU,Науру,0.0,level
+2025-12-31,national,NIU,Ниуэ,0.0,level
+2025-12-31,national,NZL,Новая Зеландия,0.0,level
+2025-12-31,national,PCN,Питкерн,0.0,level
+2025-12-31,national,TKL,Токелау,0.0,level

@@ -59,7 +59,7 @@ indicators:
     name_en: "Consumer Price Index (Inflation)"
     agency: bns
     frequency: monthly
-    unit: "% change vs previous month"
+    unit: "index, previous month = 100"
     category: prices
     source_status: confirmed
     observation_type: comparison_index
@@ -77,8 +77,7 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "примечание: методология LFS/МОТ, как у остальных квартальных обследований рабочей силы"
-    lifecycle: stale_source
-    lifecycle_note: "the quarterly cube stopped at 2025-06. LABOR_FORCE and UNEMPLOYED_PERSONS from the ARDFM-era labour publication give the rate, but no drop-in rate series was connected"
+    source_note: "с 2026-09-25 — элемент 5830 БНС «Основные индикаторы рынка труда» (2001Q1 и далее) вместо куба 102790 (2023Q1-2025Q2); на всех 10 общих кварталах значения совпадают"
 
   - id: INVESTMENT
     name_ru: "Инвестиции в основной капитал"
@@ -138,6 +137,39 @@ indicators:
     source_status: confirmed
     observation_type: point_in_time
     observation_evidence: "официальный курс на дату"
+
+  - id: EXCHANGE_RATE_EUR
+    name_ru: "Официальный курс тенге к евро (EUR/KZT)"
+    name_en: "Official EUR/KZT Exchange Rate"
+    agency: nbk
+    frequency: daily
+    unit: "KZT per EUR"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "официальный рыночный курс, устанавливаемый на дату"
+
+  - id: EXCHANGE_RATE_CNY
+    name_ru: "Официальный курс тенге к китайскому юаню (CNY/KZT)"
+    name_en: "Official CNY/KZT Exchange Rate"
+    agency: nbk
+    frequency: daily
+    unit: "KZT per CNY"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "официальный рыночный курс, устанавливаемый на дату"
+
+  - id: EXCHANGE_RATE_RUB
+    name_ru: "Официальный курс тенге к российскому рублю (RUB/KZT)"
+    name_en: "Official RUB/KZT Exchange Rate"
+    agency: nbk
+    frequency: daily
+    unit: "KZT per RUB"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "официальный рыночный курс, устанавливаемый на дату"
 
   - id: M2
     name_ru: "Денежная масса M2"
@@ -249,7 +281,7 @@ indicators:
     name_en: "GDP Deflator (production method)"
     agency: bns
     frequency: annual
-    unit: "% change vs previous period"
+    unit: "index, previous year = 100"
     category: national_accounts
     source_status: confirmed
     observation_type: period_ratio
@@ -265,19 +297,23 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "паспорт: валовое накопление основного капитала — поток СНС"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_NOMINAL, item: GFCF, region: national, scale: 1000000}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_NOMINAL), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: GFCF_VOLUME_INDEX
     name_ru: "Индекс физического объема валового накопления основного капитала"
     name_en: "GFCF Physical Volume Index"
     agency: bns
     frequency: annual
-    unit: "% change vs previous period"
+    unit: "index, previous year = 100"
     category: national_accounts
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "паспорт: сравнение двух периодов (между двумя периодами)"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_VOLUME_INDEX, item: GFCF, region: national}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_VOLUME_INDEX), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: NET_EXPORTS
     name_ru: "Чистый экспорт"
@@ -289,6 +325,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "паспорт: поток за период (разница между экспортом)"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_NOMINAL, item: NET_EXPORTS, region: national, scale: 1000000}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_NOMINAL), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: HOUSEHOLD_CONSUMPTION
     name_ru: "Расходы на конечное потребление домашних хозяйств"
@@ -300,6 +338,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "паспорт: поток за период (расходы на)"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_NOMINAL, item: HOUSEHOLDS, region: national, scale: 1000000}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_NOMINAL), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: COMPENSATION_EMPLOYEES
     name_ru: "Оплата труда"
@@ -630,32 +670,38 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "паспорт: совокупный показатель СНС, сумма статей накопления за период"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_NOMINAL, item: GROSS_CAPITAL_FORMATION, region: national, scale: 1000000}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_NOMINAL), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: IMPORT_VOLUME_INDEX
     name_ru: "Индекс физического объема импорта товаров и услуг"
     name_en: "Import Physical Volume Index"
     agency: bns
     frequency: annual
-    unit: "% change vs previous period"
+    unit: "index, previous year = 100"
     category: national_accounts
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "паспорт: сравнение двух периодов (между двумя периодами)"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_VOLUME_INDEX, item: IMPORTS, region: national}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_VOLUME_INDEX), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: EXPORT_VOLUME_INDEX
     name_ru: "Индекс физического объема экспорта товаров и услуг"
     name_en: "Export Physical Volume Index"
     agency: bns
     frequency: annual
-    unit: "% change vs previous period"
+    unit: "index, previous year = 100"
     category: national_accounts
     source_status: confirmed
     observation_type: comparison_index
     observation_evidence: "паспорт: сравнение двух периодов (между двумя периодами)"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_VOLUME_INDEX, item: EXPORTS, region: national}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_VOLUME_INDEX), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: TOTAL_CONSUMPTION_EXPENDITURE
     name_ru: "Расходы на конечное потребление"
@@ -667,6 +713,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "паспорт: поток за период (расходы на)"
+    gaps_filled_from: {dataset: GDP_EXPENDITURE_NOMINAL, item: FINAL_CONSUMPTION, region: national, scale: 1000000}
+    gaps_filled_note: "the Taldau series skips 2010-2013; those years come from the «ВВП методом конечного использования» sheet of table 4439 (item-level GDP_EXPENDITURE_NOMINAL), filled only while the two agree on every shared year -- identical to 1e-16 on all 15 of them (audit 2026-09-25)"
 
   - id: CAPITAL_CONSUMPTION
     name_ru: "Потребление основного капитала"
@@ -770,6 +818,84 @@ indicators:
     observation_evidence: "единица: индекс сравнения"
     comparison_basis: fixed_base
     comparison_basis_evidence: "декабрь 2016 = 100 (проверено: ровно 100.0 на 2016-12-01 во всех трёх вариантах формы 299)"
+
+  - id: RER_USD
+    name_ru: "Реальный обменный курс тенге к доллару США"
+    name_en: "Real Exchange Rate of the Tenge vs US Dollar"
+    agency: nbk
+    frequency: monthly
+    unit: "index, December 2016 = 100"
+    category: monetary
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "форма 299 НБ РК: индекс, рост = реальное укрепление тенге (август 2015: RER к USD 149,6 -> 108,4)"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100: ровно 100.0 на 2016-12-01 во всех восьми рядах формы 299 (архив 2026-09-03)"
+
+  - id: RER_RUB
+    name_ru: "Реальный обменный курс тенге к российскому рублю"
+    name_en: "Real Exchange Rate of the Tenge vs Russian Ruble"
+    agency: nbk
+    frequency: monthly
+    unit: "index, December 2016 = 100"
+    category: monetary
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "форма 299 НБ РК: индекс, рост = реальное укрепление тенге (август 2015: RER к USD 149,6 -> 108,4)"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100: ровно 100.0 на 2016-12-01 во всех восьми рядах формы 299 (архив 2026-09-03)"
+
+  - id: RER_EUR
+    name_ru: "Реальный обменный курс тенге к евро"
+    name_en: "Real Exchange Rate of the Tenge vs Euro"
+    agency: nbk
+    frequency: monthly
+    unit: "index, December 2016 = 100"
+    category: monetary
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "форма 299 НБ РК: индекс, рост = реальное укрепление тенге (август 2015: RER к USD 149,6 -> 108,4)"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100: ровно 100.0 на 2016-12-01 во всех восьми рядах формы 299 (архив 2026-09-03)"
+
+  - id: RER_CNY
+    name_ru: "Реальный обменный курс тенге к юаню"
+    name_en: "Real Exchange Rate of the Tenge vs Chinese Yuan"
+    agency: nbk
+    frequency: monthly
+    unit: "index, December 2016 = 100"
+    category: monetary
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "форма 299 НБ РК: индекс, рост = реальное укрепление тенге (август 2015: RER к USD 149,6 -> 108,4)"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100: ровно 100.0 на 2016-12-01 во всех восьми рядах формы 299 (архив 2026-09-03)"
+
+  - id: REER_EX_OIL
+    name_ru: "Реальный эффективный обменный курс тенге (без нефтяной торговли)"
+    name_en: "Real Effective Exchange Rate, excluding oil trade"
+    agency: nbk
+    frequency: monthly
+    unit: "index, December 2016 = 100"
+    category: monetary
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "форма 299 НБ РК: индекс, рост = реальное укрепление тенге (август 2015: RER к USD 149,6 -> 108,4)"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100: ровно 100.0 на 2016-12-01 во всех восьми рядах формы 299 (архив 2026-09-03)"
+
+  - id: NEER_EX_OIL
+    name_ru: "Номинальный эффективный обменный курс тенге (без нефтяной торговли)"
+    name_en: "Nominal Effective Exchange Rate, excluding oil trade"
+    agency: nbk
+    frequency: monthly
+    unit: "index, December 2016 = 100"
+    category: monetary
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "форма 299 НБ РК: индекс, рост = реальное укрепление тенге (август 2015: RER к USD 149,6 -> 108,4)"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "декабрь 2016 = 100: ровно 100.0 на 2016-12-01 во всех восьми рядах формы 299 (архив 2026-09-03)"
 
   - id: DEPOSITS_TOTAL
     name_ru: "Депозиты резидентов в депозитных организациях, всего"
@@ -943,10 +1069,12 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "то же построение: 'Средневзвешенные ставки'"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 27: значение на 2026-08-01 уже было в файле, скачанном 2026-08-30, до конца августа -- это июль (аудит 2026-09-25)"
 
   - id: DEPOSIT_RATE
-    name_ru: "Средневзвешенная ставка вознаграждения по депозитам физических лиц (тенге)"
-    name_en: "Weighted Average Deposit Rate, Individuals (National Currency)"
+    name_ru: "Средневзвешенная ставка по привлечённым депозитам физических лиц (тенге)"
+    name_en: "Weighted Average Rate on New Deposits, Individuals (National Currency)"
     agency: nbk
     frequency: monthly
     unit: "%"
@@ -954,6 +1082,32 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "название формы: 'Средневзвешенные ставки' — явно взвешенное среднее"
+
+  - id: LOAN_RATE_ISSUED_LEGAL_KZT
+    name_ru: "Средневзвешенная ставка по выданным кредитам БВУ юридическим лицам, тенге"
+    name_en: "Weighted Average Rate on Loans Issued by Banks to legal entities, KZT"
+    agency: nbk
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "форма 486 «Ставки вознаграждения по кредитам, выданным БВУ» — средневзвешенная за месяц"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 486: месяц m страницы/xlsx НБ РК = report_date m+1 API во всех 1332 из 1332 значений (исследование 2026-09-25)"
+
+  - id: LOAN_RATE_ISSUED_INDIVIDUAL_KZT
+    name_ru: "Средневзвешенная ставка по выданным кредитам БВУ физическим лицам (включая ИП), тенге"
+    name_en: "Weighted Average Rate on Loans Issued by Banks to individuals (incl. sole proprietors), KZT"
+    agency: nbk
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "форма 486 «Ставки вознаграждения по кредитам, выданным БВУ» — средневзвешенная за месяц"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 486: месяц m страницы/xlsx НБ РК = report_date m+1 API во всех 1332 из 1332 значений (исследование 2026-09-25)"
 
   - id: CONSTRUCTION
     name_ru: "Объем выполненных строительных работ (услуг)"
@@ -1085,16 +1239,115 @@ indicators:
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
   - id: TONIA
-    name_ru: "Индикатор TONIA (однодневный межбанковский своп)"
-    name_en: "TONIA Overnight Interbank Rate"
-    agency: nbk
+    name_ru: "Индикатор TONIA (однодневное репо с ГЦБ на KASE)"
+    name_en: "TONIA Overnight Repo Rate"
+    agency: kase
     frequency: daily
-    unit: "%"
+    unit: "% per annum"
     category: monetary
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "Tenge OverNight Index AVERAGE — усреднение в самом названии индекса"
 
+
+  - id: SWAP_1D
+    name_ru: "Индикатор SWAP-1D (USD): ставка однодневных валютных свопов USD/KZT на KASE"
+    name_en: "SWAP-1D (USD): one-day USD/KZT FX swap rate on KASE"
+    agency: kase
+    frequency: daily
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "KASE: средневзвешенная ставка по сделкам валютного свопа USD/KZT на один день"
+  - id: GS_YIELD_3M
+    name_ru: "Бескупонная доходность ГЦБ, 3 месяца (кривая KASE, среднее за месяц)"
+    name_en: "Government Securities Zero-Coupon Yield, 3M (KASE curve, monthly average)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднее за месяц по ежедневным кривым Нельсона-Сигеля KASE"
+
+  - id: GS_YIELD_6M
+    name_ru: "Бескупонная доходность ГЦБ, 6 месяцев (кривая KASE, среднее за месяц)"
+    name_en: "Government Securities Zero-Coupon Yield, 6M (KASE curve, monthly average)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднее за месяц по ежедневным кривым Нельсона-Сигеля KASE"
+
+  - id: GS_YIELD_1Y
+    name_ru: "Бескупонная доходность ГЦБ, 1 год (кривая KASE, среднее за месяц)"
+    name_en: "Government Securities Zero-Coupon Yield, 1Y (KASE curve, monthly average)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднее за месяц по ежедневным кривым Нельсона-Сигеля KASE"
+
+  - id: GS_YIELD_2Y
+    name_ru: "Бескупонная доходность ГЦБ, 2 года (кривая KASE, среднее за месяц)"
+    name_en: "Government Securities Zero-Coupon Yield, 2Y (KASE curve, monthly average)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднее за месяц по ежедневным кривым Нельсона-Сигеля KASE"
+
+  - id: GS_YIELD_5Y
+    name_ru: "Бескупонная доходность ГЦБ, 5 лет (кривая KASE, среднее за месяц)"
+    name_en: "Government Securities Zero-Coupon Yield, 5Y (KASE curve, monthly average)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднее за месяц по ежедневным кривым Нельсона-Сигеля KASE"
+
+  - id: GS_YIELD_10Y
+    name_ru: "Бескупонная доходность ГЦБ, 10 лет (кривая KASE, среднее за месяц)"
+    name_en: "Government Securities Zero-Coupon Yield, 10Y (KASE curve, monthly average)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднее за месяц по ежедневным кривым Нельсона-Сигеля KASE"
+
+
+  - id: KZ_EUROBOND_YIELD
+    name_ru: "Доходность суверенных еврооблигаций РК в долларах США (бенчмарк 2044/2045, оценка KASE на конец месяца)"
+    name_en: "Kazakhstan sovereign USD Eurobond yield (2044/2045 benchmark, KASE valuation, end of month)"
+    agency: kase
+    frequency: monthly
+    unit: "% per annum"
+    category: monetary
+    source_status: confirmed
+    observation_type: end_of_period
+    observation_evidence: "последняя расчётная цена KASE в месяце; 2044 (XS1120709826) до 2020-10, 2045 (XS1263139856) с 2022-08; 2020-11..2022-07 нет"
+
+  - id: KZ_EUROBOND_SPREAD
+    name_ru: "Спред суверенных еврооблигаций РК к казначейским облигациям США (бенчмарк 2044/2045, конец месяца)"
+    name_en: "Kazakhstan sovereign USD Eurobond spread over US Treasuries (2044/2045 benchmark, end of month)"
+    agency: kase
+    frequency: monthly
+    unit: "basis points"
+    category: monetary
+    source_status: confirmed
+    observation_type: end_of_period
+    observation_evidence: "YTM бенчмарка минус доходность UST постоянной срочности (FRED DGS1/2/3/5/7/10/20/30), интерполированная на срок до погашения"
   - id: NATIONAL_FUND_TRANSFERS
     name_ru: "Трансферты из Национального фонда в республиканский бюджет"
     name_en: "Transfers from the National Fund"
@@ -1116,6 +1369,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — results of trades"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 35: строка с report_date 2026-08-01 несёт поле period = 'jul' -- оборот за июль (аудит 2026-09-25)"
 
   - id: IMF_GOV_EXPENDITURE
     name_ru: "IMF WEO: расходы сектора госуправления, уровень"
@@ -1510,6 +1765,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: 'flows for the period'"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: GOV_SECURITIES_MEUKAM
     name_ru: "Объем МЕУКАМ в обращении"
@@ -1565,6 +1822,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "тождество проверено в этой сессии: сумма BOP_GOODS+SERVICES+PRIMARY+SECONDARY (все period_total) сходится с точностью 0.01"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: BANK_ROA
     name_ru: "Рентабельность активов банков (ROA)"
@@ -1616,6 +1875,8 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "единица: 'year-to-date cumulative'"
+    date_basis: next_period_start
+    date_basis_evidence: "нарастающий итог с датой следующего месяца (форма 132): точка 2026-09-01 была в файле от 2026-09-16, до конца сентября; YYYY-01-01 -- весь прошлый год (аудит 2026-09-25)"
 
   - id: INSURANCE_PREMIUMS_LIFE
     name_ru: "Страховые премии, страхование жизни"
@@ -1628,6 +1889,8 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "единица: 'year-to-date cumulative'"
+    date_basis: next_period_start
+    date_basis_evidence: "нарастающий итог с датой следующего месяца (форма 132): точка 2026-09-01 была в файле от 2026-09-16, до конца сентября; YYYY-01-01 -- весь прошлый год (аудит 2026-09-25)"
 
   - id: PENSION_PAYMENTS
     name_ru: "Пенсионные выплаты из ЕНПФ"
@@ -1640,6 +1903,8 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "единица: 'year-to-date cumulative'"
+    date_basis: next_period_start
+    date_basis_evidence: "нарастающий итог с датой следующего месяца: точка YYYY-01-01 -- весь прошлый год (PENSION_PAYMENTS 2025-01-01 = 904 923 = год 2024), YYYY-02-01 -- январь; без сдвига декумуляция давала отрицательный февраль (аудит 2026-09-25)"
 
   - id: RESERVES_IMPORT_COVER
     name_ru: "Покрытие импорта международными резервами"
@@ -2256,6 +2521,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "поле type: transactions volume"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 16: полный месячный оборот с датой 2026-09-01 был в файле от 2026-09-23, до конца сентября -- это август (аудит 2026-09-25)"
 
   - id: TOURISM_VALUE_ADDED
     name_ru: "Валовая добавленная стоимость, создаваемая непосредственно в туризме"
@@ -2386,6 +2653,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "поле type: average rate"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 41: значение на дату M совпадает со средним официальным курсом месяца M-1 (средняя ошибка 0,42% против 1,61% к месяцу M; USD 2026-07-01 = 486,16 при среднем за июнь 487,85 и за июль 472,12) (аудит 2026-09-25)"
 
   - id: EXCHANGE_RATE_RUB_OTC
     name_ru: "Средний курс рубля на внебиржевом рынке (покупка)"
@@ -2397,6 +2666,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "поле type: average rate"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 41: значение на дату M совпадает со средним официальным курсом месяца M-1 (средняя ошибка 0,42% против 1,61% к месяцу M; USD 2026-07-01 = 486,16 при среднем за июнь 487,85 и за июль 472,12) (аудит 2026-09-25)"
 
   - id: EXCHANGE_RATE_USD_OTC
     name_ru: "Средний курс доллара на внебиржевом рынке (покупка)"
@@ -2408,6 +2679,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "поле type: average rate"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 41: значение на дату M совпадает со средним официальным курсом месяца M-1 (средняя ошибка 0,42% против 1,61% к месяцу M; USD 2026-07-01 = 486,16 при среднем за июнь 487,85 и за июль 472,12) (аудит 2026-09-25)"
 
   - id: FX_OTC_VOLUME_USD
     name_ru: "Объём покупки долларов на внебиржевом рынке"
@@ -2419,6 +2692,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — otc operations"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 41: значение на дату M совпадает со средним официальным курсом месяца M-1 (средняя ошибка 0,42% против 1,61% к месяцу M; USD 2026-07-01 = 486,16 при среднем за июнь 487,85 и за июль 472,12) (аудит 2026-09-25)"
 
   - id: FX_OTC_VOLUME_EUR
     name_ru: "Объём покупки евро на внебиржевом рынке"
@@ -2430,6 +2705,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — otc operations"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 41: значение на дату M совпадает со средним официальным курсом месяца M-1 (средняя ошибка 0,42% против 1,61% к месяцу M; USD 2026-07-01 = 486,16 при среднем за июнь 487,85 и за июль 472,12) (аудит 2026-09-25)"
 
   - id: FX_OTC_VOLUME_RUB
     name_ru: "Объём покупки рублей на внебиржевом рынке"
@@ -2441,6 +2718,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — otc operations"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 41: значение на дату M совпадает со средним официальным курсом месяца M-1 (средняя ошибка 0,42% против 1,61% к месяцу M; USD 2026-07-01 = 486,16 при среднем за июнь 487,85 и за июль 472,12) (аудит 2026-09-25)"
 
   - id: OFC_NET_FOREIGN_ASSETS
     name_ru: "Чистые иностранные активы прочих финорганизаций"
@@ -2683,6 +2962,8 @@ indicators:
     source_status: confirmed
     observation_type: period_ratio
     observation_evidence: "единица: доля"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 485, та же разметка, что у платёжного баланса: «Резервные активы на конец периода» на 2026-04-01 равны форме 34 на 2026-04-01 -- конец I кв.; отношение относится к I кв. (аудит 2026-09-25)"
 
   - id: NATIONAL_FUND_GDP_SHARE
     name_ru: "Активы Нацфонда, % ВВП"
@@ -2694,6 +2975,8 @@ indicators:
     source_status: confirmed
     observation_type: period_ratio
     observation_evidence: "единица: доля"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 485, та же разметка, что у платёжного баланса: «Резервные активы на конец периода» на 2026-04-01 равны форме 34 на 2026-04-01 -- конец I кв.; отношение относится к I кв. (аудит 2026-09-25)"
 
   - id: RESERVE_ASSETS_GDP_SHARE
     name_ru: "Резервные активы НБ РК, % ВВП"
@@ -2705,6 +2988,8 @@ indicators:
     source_status: confirmed
     observation_type: period_ratio
     observation_evidence: "единица: доля"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 485, та же разметка, что у платёжного баланса: «Резервные активы на конец периода» на 2026-04-01 равны форме 34 на 2026-04-01 -- конец I кв.; отношение относится к I кв. (аудит 2026-09-25)"
 
   - id: FINANCIAL_ACCOUNT_BALANCE
     name_ru: "Финансовый счёт платёжного баланса"
@@ -2716,6 +3001,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — financial account of the balance"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: BOP_OVERALL_BALANCE_GDP_SHARE
     name_ru: "Общий баланс платёжного баланса, % ВВП"
@@ -2727,6 +3014,8 @@ indicators:
     source_status: confirmed
     observation_type: period_ratio
     observation_evidence: "единица: доля"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: CRUDE_BIRTH_RATE
     name_ru: "Родившихся на 1000 человек населения"
@@ -3424,6 +3713,310 @@ indicators:
     comparison_basis: ytd_base
     comparison_basis_evidence: "единица: 'December of previous year = 100'"
 
+  - id: CPI_FOOD
+    name_ru: "ИПЦ: продовольственные товары, к предыдущему месяцу"
+    name_en: "CPI: food products, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695730 «отчетный период к предыдущему периоду»"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: CPI_FOOD_YOY
+    name_ru: "ИПЦ: продовольственные товары, к соответствующему месяцу прошлого года"
+    name_en: "CPI: food products, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695732 «к соответствующему периоду прошлого года»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года; декабрь 2011-2025 = элемент 1548 БНС"
+
+  - id: CPI_NONFOOD
+    name_ru: "ИПЦ: непродовольственные товары, к предыдущему месяцу"
+    name_en: "CPI: non-food products, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695730 «отчетный период к предыдущему периоду»"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: CPI_NONFOOD_YOY
+    name_ru: "ИПЦ: непродовольственные товары, к соответствующему месяцу прошлого года"
+    name_en: "CPI: non-food products, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695732 «к соответствующему периоду прошлого года»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года; декабрь 2011-2025 = элемент 1548 БНС"
+
+  - id: CPI_SERVICES
+    name_ru: "ИПЦ: платные услуги, к предыдущему месяцу"
+    name_en: "CPI: paid services, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695730 «отчетный период к предыдущему периоду»"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: CPI_SERVICES_YOY
+    name_ru: "ИПЦ: платные услуги, к соответствующему месяцу прошлого года"
+    name_en: "CPI: paid services, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695732 «к соответствующему периоду прошлого года»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года; декабрь 2011-2025 = элемент 1548 БНС"
+
+  - id: CPI_UTILITIES
+    name_ru: "ИПЦ: жилищно-коммунальные услуги, к предыдущему месяцу"
+    name_en: "CPI: housing and utility services, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695730 «отчетный период к предыдущему периоду»"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: CPI_UTILITIES_YOY
+    name_ru: "ИПЦ: жилищно-коммунальные услуги, к соответствующему месяцу прошлого года"
+    name_en: "CPI: housing and utility services, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695732 «к соответствующему периоду прошлого года»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года; декабрь 2011-2025 = элемент 1548 БНС"
+
+  - id: CPI_REGULATED_UTILITIES
+    name_ru: "ИПЦ: регулируемые коммунальные услуги, к предыдущему месяцу"
+    name_en: "CPI: regulated utility services, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695730 «отчетный период к предыдущему периоду»"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: CPI_REGULATED_UTILITIES_YOY
+    name_ru: "ИПЦ: регулируемые коммунальные услуги, к соответствующему месяцу прошлого года"
+    name_en: "CPI: regulated utility services, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703076, термин 2695732 «к соответствующему периоду прошлого года»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года; декабрь 2011-2025 = элемент 1548 БНС"
+
+  - id: PPI_MONTHLY
+    name_ru: "Индекс цен производителей промышленной продукции, к предыдущему месяцу"
+    name_en: "Producer Price Index, industrial products, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703039, термин 2695730"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: PPI_YOY_MONTHLY
+    name_ru: "Индекс цен производителей промышленной продукции, к соответствующему месяцу прошлого года"
+    name_en: "Producer Price Index, industrial products, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 703039, термин 2695732"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732; декабрь к декабрю 2011-2025 = элемент 1626 БНС"
+
+  - id: IND_PROD_MONTHLY_YOY
+    name_ru: "Индекс промышленного производства, к соответствующему месяцу прошлого года"
+    name_en: "Industrial Production Index, monthly, year-on-year"
+    agency: bns
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: production
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 701625, термин 2695732"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732; октябрь 2025 = 107,1 как в релизе БНС"
+
+  - id: IND_PROD_MONTHLY_MOM
+    name_ru: "Индекс промышленного производства, к предыдущему месяцу"
+    name_en: "Industrial Production Index, monthly, month-on-month"
+    agency: bns
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: production
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 701625, термин 2695730; без сезонной корректировки"
+    comparison_basis: mom
+    comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: AVG_WAGE_1T_QUARTERLY
+    name_ru: "Среднемесячная номинальная заработная плата (форма 1-Т), поквартально"
+    name_en: "Average Monthly Nominal Wage (form 1-T), quarterly"
+    agency: bns
+    frequency: quarterly
+    unit: "KZT"
+    category: labor
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "среднемесячная за квартал, элемент 5674 БНС / Taldau 702972"
+
+
+  # Production-function inputs for potential output / output gap (added 2026-09-25).
+  - id: FIXED_ASSETS_GROSS
+    name_ru: "Основные средства (материальные), первоначальная стоимость на конец года"
+    name_en: "Tangible fixed assets, gross (original cost), end of year"
+    agency: bns
+    frequency: annual
+    unit: "billion KZT"
+    category: investment
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Taldau 703214 «наличие основных средств на конец года», форма 11; термин 455728"
+
+  - id: FIXED_ASSETS_GROSS_START
+    name_ru: "Основные средства (материальные), первоначальная стоимость на начало года"
+    name_en: "Tangible fixed assets, gross (original cost), start of year"
+    agency: bns
+    frequency: annual
+    unit: "billion KZT"
+    category: investment
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Taldau 703203 «на начало года»; отличается от конца предыдущего года (переоценка, охват)"
+
+  - id: FIXED_ASSETS_NET
+    name_ru: "Основные средства (материальные), балансовая стоимость на конец года"
+    name_en: "Tangible fixed assets, net (book value), end of year"
+    agency: bns
+    frequency: annual
+    unit: "billion KZT"
+    category: investment
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Taldau 703215 «балансовая стоимость на конец года»"
+
+  - id: FIXED_ASSETS_COMMISSIONED
+    name_ru: "Ввод в действие новых основных средств"
+    name_en: "New tangible fixed assets put into operation"
+    agency: bns
+    frequency: annual
+    unit: "billion KZT"
+    category: investment
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "Taldau 703205 «введено в действие за год»"
+
+  - id: FIXED_ASSETS_DEPRECIATION
+    name_ru: "Начисленный износ (амортизация) основных средств за год"
+    name_en: "Depreciation of tangible fixed assets during the year"
+    agency: bns
+    frequency: annual
+    unit: "billion KZT"
+    category: investment
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "Taldau 703220 «начислено износа за год»"
+
+  - id: FIXED_ASSETS_WEAR
+    name_ru: "Степень износа основных средств на конец года"
+    name_en: "Degree of wear of tangible fixed assets, end of year"
+    agency: bns
+    frequency: annual
+    unit: "percent"
+    category: investment
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Taldau 703216; = 1 − балансовая/первоначальная в каждом году"
+
+  - id: FIXED_ASSETS_RENEWAL
+    name_ru: "Коэффициент обновления основных средств"
+    name_en: "Renewal ratio of tangible fixed assets"
+    agency: bns
+    frequency: annual
+    unit: "percent"
+    category: investment
+    source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "Taldau 703217: ввод новых / наличие на конец года"
+
+  - id: HOURS_WORKED
+    name_ru: "Фактически отработанное время работниками, годовое (региональный сегмент Taldau)"
+    name_en: "Hours actually worked by employees, annual"
+    agency: bns
+    frequency: annual
+    unit: "million man-hours"
+    category: labor
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "Taldau 703017, мера 112 (человеко-час); 2013-2016 нет в этом сегменте"
+
+  - id: HOURS_WORKED_QUARTERLY
+    name_ru: "Фактически отработанное время работниками, поквартально"
+    name_en: "Hours actually worked by employees, quarterly"
+    agency: bns
+    frequency: quarterly
+    unit: "million man-hours"
+    category: labor
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "Taldau 703017, период 5 (квартал), с 2016-Q1; без сезонной корректировки"
+
+  - id: HOURS_PER_EMPLOYEE
+    name_ru: "Фактически отработанное время в расчете на одного работника, за год"
+    name_en: "Hours actually worked per employee, annual"
+    agency: bns
+    frequency: annual
+    unit: "hours per employee"
+    category: labor
+    source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "Taldau 703018 (в минутах, пересчитано в часы), с 2013"
   - id: FINAL_ENERGY_CONSUMPTION
     name_ru: "Общее конечное энергопотребление"
     name_en: "Total Final Energy Consumption"
@@ -3456,6 +4049,89 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "ГФС: налоговые поступления за квартал"
+
+  - id: GG_INTEREST
+    name_ru: "Процентные расходы сектора государственного управления (МВФ методология)"
+    name_en: "General Government Interest Expense (IMF GFS Methodology)"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "ГФС: строка 24 «Interest», за квартал"
+
+  - id: STATE_TAX_REVENUE_YTD
+    name_ru: "Налоговые поступления государственного бюджета, нарастающим итогом с начала года, помесячно"
+    name_en: "State budget tax receipts, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Статбюллетень МФ, «табл 3», январь–месяц отчётного года; все страницы списка, с 2020"
+
+  - id: STATE_CIT_YTD
+    name_ru: "Корпоративный подоходный налог (государственный бюджет), нарастающим итогом с начала года, помесячно"
+    name_en: "State budget corporate income tax, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Статбюллетень МФ, «табл 3», январь–месяц отчётного года; все страницы списка, с 2020"
+
+  - id: STATE_PIT_YTD
+    name_ru: "Индивидуальный подоходный налог (государственный бюджет), нарастающим итогом с начала года, помесячно"
+    name_en: "State budget individual income tax, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Статбюллетень МФ, «табл 3», январь–месяц отчётного года; все страницы списка, с 2020"
+
+  - id: STATE_SOCIAL_TAX_YTD
+    name_ru: "Социальный налог (государственный бюджет), нарастающим итогом с начала года, помесячно"
+    name_en: "State budget social tax, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Статбюллетень МФ, «табл 3», январь–месяц отчётного года; все страницы списка, с 2020"
+
+  - id: STATE_VAT_YTD
+    name_ru: "Налог на добавленную стоимость (государственный бюджет), нарастающим итогом с начала года, помесячно"
+    name_en: "State budget value added tax, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Статбюллетень МФ, «табл 3», январь–месяц отчётного года; все страницы списка, с 2020"
+
+  - id: STATE_EXCISE_YTD
+    name_ru: "Акцизы (государственный бюджет), нарастающим итогом с начала года, помесячно"
+    name_en: "State budget excise duties, year-to-date, monthly"
+    agency: minfin
+    frequency: monthly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    cumulation: year_to_date
+    observation_evidence: "Статбюллетень МФ, «табл 3», январь–месяц отчётного года; все страницы списка, с 2020"
 
   - id: GG_SOCIAL_CONTRIBUTIONS
     name_ru: "Социальные отчисления сектора государственного управления (МВФ методология)"
@@ -4123,6 +4799,28 @@ indicators:
     observation_type: period_average
     observation_evidence: "обследование домохозяйств за квартал"
 
+
+  - id: GINI_COEFFICIENT_ANNUAL
+    name_ru: "Коэффициент Джини (по 10% группам населения), годовой"
+    name_en: "Gini Coefficient (decile groups), annual"
+    agency: bns
+    frequency: annual
+    unit: "coefficient (0-1)"
+    category: labor
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "ВОДХ за год; Taldau 704502 (с 2001) и годовые выпуски «Основные показатели дифференциации доходов» (с 2022)"
+
+  - id: DECILE_INCOME_RATIO_ANNUAL
+    name_ru: "Коэффициент фондов (доходы 10% наиболее к 10% наименее обеспеченных), годовой"
+    name_en: "Decile Income Ratio, annual"
+    agency: bns
+    frequency: annual
+    unit: "ratio"
+    category: labor
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "Taldau 704504 (2011-2022) и годовые выпуски (с 2022)"
   - id: POVERTY_DEPTH
     name_ru: "Глубина бедности"
     name_en: "Poverty Depth"
@@ -4155,6 +4853,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "квартальный поток платёжного баланса"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: BOP_SERVICES_BALANCE
     name_ru: "Сальдо баланса услуг"
@@ -4166,6 +4866,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "квартальный поток платёжного баланса"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: BOP_PRIMARY_INCOME
     name_ru: "Сальдо первичных доходов"
@@ -4177,6 +4879,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "квартальный поток платёжного баланса"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: BOP_SECONDARY_INCOME
     name_ru: "Сальдо вторичных доходов"
@@ -4188,6 +4892,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "квартальный поток платёжного баланса"
+    date_basis: next_period_start
+    date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
 
   - id: STATE_BUDGET_REVENUE_YTD
     name_ru: "Доходы государственного бюджета, нарастающим итогом"
@@ -4282,6 +4988,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — results of trades"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 35: строка с report_date 2026-08-01 несёт поле period = 'jul' -- оборот за июль (аудит 2026-09-25)"
 
   - id: KASE_EUR_VOLUME
     name_ru: "Объём торгов EUR/KZT на KASE"
@@ -4293,6 +5001,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — results of trades"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 35: строка с report_date 2026-08-01 несёт поле period = 'jul' -- оборот за июль (аудит 2026-09-25)"
 
   - id: KASE_RUB_VOLUME
     name_ru: "Объём торгов RUB/KZT на KASE"
@@ -4304,6 +5014,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "название формы: оборот за период — results of trades"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 35: строка с report_date 2026-08-01 несёт поле period = 'jul' -- оборот за июль (аудит 2026-09-25)"
 
   - id: PAYMENTS_TOTAL_COUNT
     name_ru: "Количество платёжных транзакций, всего"
@@ -4447,6 +5159,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "сноска: среднегодовые за 12 месяцев"
+    date_basis: next_period_start
+    date_basis_evidence: "отчёт АРРФР «на 01.07.2026»: поток/среднее относится к периоду до этой даты (чистый доход -- январь-июнь, ликвидные активы -- среднее за июнь, ROA/ROE -- последние 12 месяцев по июнь) (аудит 2026-09-25)"
 
   - id: BANK_ROE_MONTHLY
     name_ru: "Рентабельность капитала банков (ROE), помесячно"
@@ -4458,6 +5172,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "сноска: среднегодовые за 12 месяцев"
+    date_basis: next_period_start
+    date_basis_evidence: "отчёт АРРФР «на 01.07.2026»: поток/среднее относится к периоду до этой даты (чистый доход -- январь-июнь, ликвидные активы -- среднее за июнь, ROA/ROE -- последние 12 месяцев по июнь) (аудит 2026-09-25)"
 
   - id: BANK_NET_INCOME
     name_ru: "Чистый доход банковского сектора"
@@ -4470,6 +5186,8 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "нарастающий итог: 795,9 / 1035,7 / 1195,6"
+    date_basis: next_period_start
+    date_basis_evidence: "отчёт АРРФР «на 01.07.2026»: поток/среднее относится к периоду до этой даты (чистый доход -- январь-июнь, ликвидные активы -- среднее за июнь, ROA/ROE -- последние 12 месяцев по июнь) (аудит 2026-09-25)"
 
   - id: BANK_ASSETS_TOTAL
     name_ru: "Совокупные активы банков"
@@ -4558,6 +5276,8 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "строка: среднемесячное значение"
+    date_basis: next_period_start
+    date_basis_evidence: "отчёт АРРФР «на 01.07.2026»: поток/среднее относится к периоду до этой даты (чистый доход -- январь-июнь, ликвидные активы -- среднее за июнь, ROA/ROE -- последние 12 месяцев по июнь) (аудит 2026-09-25)"
 
   - id: BANK_ASSETS_TO_GDP
     name_ru: "Отношение активов банков к ВВП"
@@ -4897,3 +5617,300 @@ indicators:
     observation_evidence: "к соответствующему кварталу прошлого года"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+
+  # ---------------------------------------------------------------- external block (added 2026-09-25)
+  # Russia and the United States for the QPM/BVAR models; sources in scripts/fetchers/foreign.py.
+
+  - id: RU_KEY_RATE
+    name_ru: "Ключевая ставка Банка России"
+    name_en: "Bank of Russia Key Rate"
+    agency: cbr
+    frequency: irregular
+    unit: "% per annum"
+    category: international
+    country: RUS
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "ставка, действующая с даты (дата вступления в силу)"
+
+  - id: RUB_USD
+    name_ru: "Официальный курс рубля к доллару США (ЦБ РФ)"
+    name_en: "Official RUB/USD Exchange Rate (Bank of Russia)"
+    agency: cbr
+    frequency: daily
+    unit: "RUB per USD"
+    category: international
+    country: RUS
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "официальный курс на дату"
+
+  - id: RU_CPI_MOM
+    name_ru: "ИПЦ России, к предыдущему месяцу"
+    name_en: "Russia CPI, month-on-month"
+    agency: eec
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: international
+    country: RUS
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "ЕЭК, Series_CPI/CPI_1.xls: в процентах к предыдущему месяцу"
+    comparison_basis: mom
+    comparison_basis_evidence: "ЕЭК CPI_1 = к предыдущему периоду"
+
+  - id: RU_CPI_YOY
+    name_ru: "ИПЦ России, к соответствующему месяцу прошлого года"
+    name_en: "Russia CPI, year-on-year"
+    agency: eec
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: international
+    country: RUS
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "ЕЭК, Series_CPI/CPI_3.xls: к соответствующему месяцу прошлого года"
+    comparison_basis: yoy
+    comparison_basis_evidence: "ЕЭК CPI_3; совпадает с таблицей ЦБ РФ за 2013-09..2026-08 в пределах 0,05"
+
+  - id: RU_GDP_REAL
+    name_ru: "Реальный ВВП России (цены 2021 г., без сезонной корректировки)"
+    name_en: "Russia Real GDP (2021 prices, NSA)"
+    agency: imf
+    frequency: quarterly
+    unit: "RUB, 2021 prices"
+    category: international
+    country: RUS
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "МВФ QNEA B1GQ, PRICE_TYPE=Q, NSA, XDC — поток за квартал"
+
+  - id: US_FED_FUNDS
+    name_ru: "Эффективная ставка по федеральным фондам США"
+    name_en: "US Effective Federal Funds Rate"
+    agency: fred
+    frequency: monthly
+    unit: "% per annum"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED FEDFUNDS — среднее за месяц"
+
+  - id: US_TREASURY_2Y
+    name_ru: "Доходность 2-летних казначейских облигаций США"
+    name_en: "US 2-Year Treasury Yield"
+    agency: fred
+    frequency: monthly
+    unit: "% per annum"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED GS2 — среднее за месяц"
+
+
+  - id: US_TREASURY_1Y
+    name_ru: "Доходность 1-летних казначейских облигаций США"
+    name_en: "US 1-Year Treasury Yield"
+    agency: fred
+    frequency: monthly
+    unit: "% per annum"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED GS1 — среднее за месяц"
+  - id: US_TREASURY_10Y
+    name_ru: "Доходность 10-летних казначейских облигаций США"
+    name_en: "US 10-Year Treasury Yield"
+    agency: fred
+    frequency: monthly
+    unit: "% per annum"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED GS10 — среднее за месяц"
+
+  - id: US_CPI
+    name_ru: "Индекс потребительских цен США (с сезонной корректировкой)"
+    name_en: "US Consumer Price Index (SA)"
+    agency: fred
+    frequency: monthly
+    unit: "index, 1982-84 = 100"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "FRED CPIAUCSL — индекс с фиксированной базой"
+    comparison_basis: fixed_base
+    comparison_basis_evidence: "1982-84 = 100 (FRED CPIAUCSL)"
+
+  - id: US_GDP_REAL
+    name_ru: "Реальный ВВП США (цепные доллары 2017 г., SAAR)"
+    name_en: "US Real GDP (chained 2017 dollars, SAAR)"
+    agency: fred
+    frequency: quarterly
+    unit: "billion chained 2017 USD, SAAR"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "FRED GDPC1 — поток за квартал в годовом выражении"
+
+  - id: BY_CPI_YOY
+    name_ru: "ИПЦ Беларуси, к соответствующему месяцу прошлого года"
+    name_en: "Belarus CPI, year-on-year"
+    agency: eec
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: international
+    country: BLR
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "ЕЭК CPI_3.xls, строка «Беларусь»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "ЕЭК CPI_3"
+
+  - id: KG_CPI_YOY
+    name_ru: "ИПЦ Кыргызстана, к соответствующему месяцу прошлого года"
+    name_en: "Kyrgyzstan CPI, year-on-year"
+    agency: eec
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: international
+    country: KGZ
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "ЕЭК CPI_3.xls, строка «Кыргызстан»"
+    comparison_basis: yoy
+    comparison_basis_evidence: "ЕЭК CPI_3"
+
+  - id: CN_CPI_YOY
+    name_ru: "ИПЦ Китая, % к соответствующему месяцу прошлого года"
+    name_en: "China CPI, % year-on-year"
+    agency: imf
+    frequency: monthly
+    unit: "% change, same month previous year"
+    category: international
+    country: CHN
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "МВФ CPI 5.0.0, YOY_PCH_PA_PT"
+    comparison_basis: yoy
+    comparison_basis_evidence: "процентное изменение к соответствующему месяцу прошлого года"
+
+  - id: CN_GDP_REAL_YOY
+    name_ru: "Реальный ВВП Китая, квартал к кварталу прошлого года"
+    name_en: "China Real GDP, same quarter previous year = 100"
+    agency: nbs
+    frequency: quarterly
+    unit: "index, same quarter previous year = 100"
+    category: international
+    country: CHN
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "НБС Китая, 国内生产总值指数 当季值"
+    comparison_basis: yoy
+    comparison_basis_evidence: "上年同期=100"
+
+  - id: EA_HICP_YOY
+    name_ru: "Инфляция в еврозоне (HICP), % г/г"
+    name_en: "Euro Area HICP Inflation, % y/y"
+    agency: ecb
+    frequency: monthly
+    unit: "% change, same month previous year"
+    category: international
+    country: EA
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "ЕЦБ HICP ANR — годовой темп изменения"
+    comparison_basis: yoy
+    comparison_basis_evidence: "annual rate of change"
+
+  - id: EA_GDP_REAL
+    name_ru: "Реальный ВВП еврозоны (цепные объёмы 2015 г., SA)"
+    name_en: "Euro Area Real GDP (chain-linked 2015, SA)"
+    agency: ecb
+    frequency: quarterly
+    unit: "million EUR, chain-linked 2015"
+    category: international
+    country: EA
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "ЕЦБ MNA B1GQ LR — поток за квартал"
+
+  - id: EA_DEPOSIT_RATE
+    name_ru: "Ставка по депозитной линии ЕЦБ"
+    name_en: "ECB Deposit Facility Rate"
+    agency: ecb
+    frequency: irregular
+    unit: "% per annum"
+    category: international
+    country: EA
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "ставка, действующая с даты изменения"
+
+  - id: FOREIGN_DEMAND_YOY
+    name_ru: "Индекс внешнего спроса: рост реального ВВП партнёров, взвешенный по экспорту"
+    name_en: "Foreign Demand Index: export-weighted partner real GDP growth"
+    agency: derived
+    frequency: quarterly
+    unit: "index, same quarter previous year = 100"
+    category: international
+    country: KZ
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "средневзвешенный рост ВВП еврозоны, Китая и России по долям экспорта 2023-2025 (config/foreign_demand.yaml)"
+    comparison_basis: yoy
+    comparison_basis_evidence: "каждый компонент — к соответствующему кварталу прошлого года"
+
+  - id: KZT_USD_RATE_DIFF_ON
+    name_ru: "Дифференциал овернайт-ставок: TONIA минус ставка ФРС"
+    name_en: "Overnight rate differential: TONIA minus effective fed funds"
+    agency: derived
+    frequency: monthly
+    unit: "percentage points"
+    category: international
+    country: KZ
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "средние за месяц TONIA (KASE) и FEDFUNDS (FRED)"
+
+  - id: KZT_USD_RATE_DIFF_1Y
+    name_ru: "Дифференциал доходностей 1 год: ГЦБ РК (кривая KASE) минус UST"
+    name_en: "1-year yield differential: KZ government securities (KASE curve) minus US Treasuries"
+    agency: derived
+    frequency: monthly
+    unit: "percentage points"
+    category: international
+    country: KZ
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "средние за месяц GS_YIELD_1Y и FRED GS1"
+
+  - id: KZT_USD_RATE_DIFF_10Y
+    name_ru: "Дифференциал доходностей 10 лет: ГЦБ РК (кривая KASE) минус UST"
+    name_en: "10-year yield differential: KZ government securities (KASE curve) minus US Treasuries"
+    agency: derived
+    frequency: monthly
+    unit: "percentage points"
+    category: international
+    country: KZ
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "средние за месяц GS_YIELD_10Y и FRED GS10"
+
+  - id: KZT_CARRY_EXCESS_RETURN
+    name_ru: "Избыточная доходность тенгового керри (ex post): дифференциал овернайт минус ослабление тенге, годовых"
+    name_en: "Ex-post tenge carry excess return: overnight differential minus tenge depreciation, annualised"
+    agency: derived
+    frequency: monthly
+    unit: "% per annum"
+    category: international
+    country: KZ
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "(TONIA−FF) за месяц − 1200·ln(S_m/S_m−1), официальный курс НБ РК на конец месяца"

@@ -1,0 +1,21 @@
+{
+  "source": "kase",
+  "source_url": "https://kase.kz/en/app-gateway/documents/curve/",
+  "dataset_id": "kase-gs-curve/2Y",
+  "indicator_id": "GS_YIELD_2Y",
+  "indicator_name": "Government Securities Zero-Coupon Yield, 2Y (KASE curve, monthly average)",
+  "description": "Бескупонная доходность ГЦБ, 2 года (кривая KASE, среднее за месяц)",
+  "frequency": "monthly",
+  "unit": "% per annum",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Percent per annum, zero-coupon yield of government securities at 2Y, the MONTHLY AVERAGE of KASE's daily Nelson-Siegel curves (r(t) = B0 + B1*f + B2*(f - exp(-t/TAU))), from 2019-11. The latest month (2026-09) averages the 19 curves so far. Before 2024 TAU varied from 0.08 to 5.5, so the long end of individual daily fits can be an artefact; the monthly mean damps it but does not remove it.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2019-11-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

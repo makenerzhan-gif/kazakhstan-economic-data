@@ -1,0 +1,21 @@
+{
+  "source": "kase",
+  "source_url": "https://kase.kz/tv-charts/indicators/history?symbol=SWAP_1D&resolution=D",
+  "dataset_id": "kase-tv/SWAP_1D",
+  "indicator_id": "SWAP_1D",
+  "indicator_name": "SWAP-1D (USD): one-day USD/KZT FX swap rate on KASE",
+  "description": "Индикатор SWAP-1D (USD): ставка однодневных валютных свопов USD/KZT на KASE",
+  "frequency": "daily",
+  "unit": "% per annum",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Percent per annum, KASE indicator «SWAP-1D (USD)» (fini code SWAP_USDKZT_1): weighted average annualised rate on one-day USD/KZT FX swaps on KASE, by trade date, from 2014-06-09. KASE publishes no definition beyond the name and unit. Behaviour checked 2026-09-26 against TONIA and the Fed funds rate (monthly means): 2024-2026 it tracks the differential TONIA - fed funds (mean gap -0.5 pp), but from 2022-12 to 2023-06, with the Fed at 4-5 %, it stayed at TONIA + 1 (15-17 %) instead of falling to the differential (11-12 %) -- either a large covered-parity deviation in those months or a different construction; read it with that in mind.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2014-06-09",
+  "period_end": "2026-09-25",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -126,9 +126,11 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
         # first run after the convention change. write_processed still
         # normalises as a backstop for any other caller.
         _meta = _indicator_meta(indicator_id)
-        records = periods.normalise(
-            records, manifest_info.get("frequency") or _meta["frequency"],
-            _meta.get("observation_type"))
+        _freq = manifest_info.get("frequency") or _meta["frequency"]
+        # The source's own date first (once, on fresh records): flows and averages it
+        # stamps with the day after the period move back to the period they cover.
+        records = periods.apply_date_basis(records, _freq, _meta.get("date_basis"))
+        records = periods.normalise(records, _freq, _meta.get("observation_type"))
         result = validation.run_all(records, indicator_id, expected_frequency=manifest_info.get("frequency", "monthly"),
                                      cumulation=_meta.get("cumulation"))
         status = "ok" if result.ok else "error"

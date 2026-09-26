@@ -1,0 +1,21 @@
+{
+  "source": "derived",
+  "source_url": "data/processed",
+  "dataset_id": "derived/kzt_usd_rate_diff_10y",
+  "indicator_id": "KZT_USD_RATE_DIFF_10Y",
+  "indicator_name": "10-year yield differential: KZ government securities (KASE curve) minus US Treasuries",
+  "description": "Дифференциал доходностей 10 лет: ГЦБ РК (кривая KASE) минус UST",
+  "frequency": "monthly",
+  "unit": "percentage points",
+  "currency": "",
+  "geography": "Kazakhstan (trade-weighted partners)",
+  "methodology": "Percentage points, monthly means: KASE zero-coupon government securities yield at 10 years (GS_YIELD_10Y) minus the 10-year Treasury constant-maturity yield (FRED GS10), from 2019-11. The KASE 10-year point is an extrapolation of thinly traded long bonds before 2024 (see GS_YIELD_10Y).",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2019-11-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

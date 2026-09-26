@@ -1,0 +1,21 @@
+{
+  "source": "fred",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL",
+  "dataset_id": "FRED/CPIAUCSL",
+  "indicator_id": "US_CPI",
+  "indicator_name": "US Consumer Price Index (SA)",
+  "description": "Индекс потребительских цен США (с сезонной корректировкой)",
+  "frequency": "monthly",
+  "unit": "index, 1982-84 = 100",
+  "currency": "",
+  "geography": "United States",
+  "methodology": "Index 1982-84 = 100, CPI for all urban consumers, seasonally adjusted (seasonal factors are revised every February). FRED series CPIAUCSL.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "1947-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

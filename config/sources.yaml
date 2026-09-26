@@ -29,6 +29,55 @@ agencies:
     protection: none
     endpoints:
       # ---- dimensional tables (config/dims.yaml, scripts/update_dims.py) ----
+      FIXED_ASSETS_GROSS:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json_api
+        notes: >
+          2026-09-25. Taldau index 703214 (gross, end of year), 703203 (start of year), 703215 (net),
+          703205 (commissioned), 703220 (depreciation): period 7, measure 1 (tenge), p_dicIds
+          68,915,90,77,1161, p_terms 741880,741885,741927,455728,741908 -- asset term 455728
+          «Основные средства» (tangible); the default 741881 adds intangibles. 703216 (wear) and
+          703217 (renewal): measure 7, dictionaries 68,915,90,77. 2000-2025; the 2025 values equal the
+          publication «Основные фонды РК (2025)» (element 347772). By section: p_parent_id=p_term_id=741885,
+          idx=1; by asset type: 455728, idx=3 (config/dims.yaml FIXED_ASSETS_*_BY_*).
+      HOURS_WORKED:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json_api
+        notes: >
+          2026-09-25. Taldau 703017 (man-hours, measure 112): annual on dictionaries 67,1212,2813,576
+          (terms 741880,741885,3629946,741935) for 2000-2012 and 2017-2025; the section segment
+          68,859,2813 carries 2013-2016 annual (lower coverage, not spliced) and the quarterly series
+          from 2016-Q1 (HOURS_WORKED_QUARTERLY). 703018 (minutes per employee, measure 35) on the section
+          segment from 2013 (HOURS_PER_EMPLOYEE).
+      INCOME_SHARE_BY_DECILE:
+        status: confirmed_xlsx
+        download_url: "https://stat.gov.kz/ru/industries/labor-and-income/stat-life/spreadsheets/?name=18651&year=YYYY"
+        format: xlsx_table
+        notes: >
+          2026-09-25. «Основные показатели дифференциации доходов населения»: 19 editions (annual 2022-2025,
+          quarterly III 2022 - I 2026). Period from the cover sheet (the listing dates are unreliable: the
+          2022 annual edition is listed as 24.04.2022, its cover says released 24.04.2023). Tables found by
+          title: «Распределение доходов по 10-процентным группам населения» (bounds, share, mean) and
+          «Основные показатели бедности» (depth, severity, Gini 10%/20%, top/bottom decile ratio; the national
+          row is «Қазақстан Республикасы» in quarterly editions, «Республика Казахстан» in annual ones).
+          History from Taldau (POST GetIndexTreeData): 704515 decile shares (p_dicIds 67,838, decile root
+          term 742656, children 742657-742666), 704502 Gini, 704504 decile ratio, 704518 expenditure of the
+          bottom/top decile (dictionaries 67,749,270,735,838). Taldau annual = editions exactly; Taldau
+          quarterly lacks 2017-Q1..Q3, 2021-Q2, 2025-Q4, 2026-Q1 and differs in the 2nd decimal on some
+          quarters, so it is used only before 2022-Q3.
+      KZ_EXPORTS_BY_PARTNER:
+        status: confirmed_xlsx
+        download_url: "https://stat.gov.kz/ru/industries/economy/foreign-market/spreadsheets/?year=YYYY&name=19182&period=&type=spreadsheets"
+        format: xlsx_table
+        notes: >
+          2026-09-25. «Основные показатели внешней торговли РК по странам» (312101): the listing page
+          per publication year names each edition (row id bx_<n>_<elementId>); the file is
+          /api/iblock/element/<elementId>/file/ru/ (xls or xlsx). Full-year editions: preliminary
+          «(январь-декабрь YYYYг.)» in February, final «(YYYYг.)» in July; sheets 'YYYY' or '12_YYYY'
+          (the 2021 edition also carries 12_2020). Columns: partner, turnover, share, exports, share,
+          imports, share, thousand USD. KZ_IMPORTS_BY_PARTNER reads the same files.
       EXPORTS_VALUE_BY_COMMODITY_GROUP:
         status: confirmed_xlsx
         element_id: 446905
@@ -363,6 +412,7 @@ agencies:
       # ---- scalar indicators ----
       GDP_NOMINAL:
         status: derived   # 2026-09-23: was confirmed_json; the series is now written from GVA_NOMINAL_BY_SECTION_QUARTERLY[GDP] x 1e6 (scripts/update_derived.py), the xlsx export of the same element 4439 -- equal to this cube on all 66 quarters; the trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset GVA_NOMINAL_BY_SECTION_QUARTERLY (item GDP) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/open-data/national-accounts/474289/"
         element_id: 4439
         download_url: "https://stat.gov.kz/api/iblock/element/4439/json/file/ru/"
@@ -412,6 +462,7 @@ agencies:
           above by capturing the real browser request instead of guessing further.
       IND_PROD:
         status: derived   # 2026-09-15: was confirmed; the series is now written from INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY[IND] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY (item IND) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
         element_id: 5809
         download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
@@ -429,6 +480,7 @@ agencies:
           Now implemented in scripts/fetchers/bns.py:fetch_ind_prod and connected.
       IND_PROD_MINING:
         status: derived   # 2026-09-15: was confirmed; the series is now written from INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY[B] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY (item B) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
         element_id: 5809
         download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
@@ -446,6 +498,7 @@ agencies:
           periods (2009-2023) as IND_PROD itself. fetch_ind_prod_mining.
       IND_PROD_MANUFACTURING:
         status: derived   # 2026-09-15: was confirmed; the series is now written from INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY[C] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY (item C) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
         element_id: 5809
         download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
@@ -456,6 +509,7 @@ agencies:
           предыдущему периоду']. fetch_ind_prod_manufacturing.
       IND_PROD_ELECTRICITY:
         status: derived   # 2026-09-15: was confirmed; the series is now written from INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY[D] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY (item D) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-industrial-production/"
         element_id: 5809
         download_url: "https://stat.gov.kz/api/iblock/element/5809/json/file/ru/"
@@ -467,14 +521,106 @@ agencies:
           fetch_ind_prod_electricity.
       CPI:
         status: confirmed
+        current_source: "2026-09-25 (audit): the fetcher reads Taldau index 703076 (monthly, 2011-01 onward, through 2026-08), not element 1549, whose cube stopped at 2025-10 -- see metadata/bns/cpi.json. The element 1549 description below is the history of the connection."
         page_url: "https://stat.gov.kz/ru/open-data/stat-prices/474295/"
         element_id: 1549
         download_url: "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/"
         format: tsv_utf8_bom
         columns: ["NAM", "DAT", "PERIOD", "КАТО", "LКАТО", "ССП", "LССП", "category_code", "category_name", "VAL"]
         notes: "Actually downloaded and parsed this session. PERIOD like 201911 = Nov 2019. Regional breakdown; filter LКАТО for national total."
+      CPI_FOOD:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695730,4772574. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_food.
+      CPI_FOOD_YOY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695732,4772574. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_food_yoy.
+      CPI_NONFOOD:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695730,4772568. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_nonfood.
+      CPI_NONFOOD_YOY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695732,4772568. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_nonfood_yoy.
+      CPI_SERVICES:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695730,4772555. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_services.
+      CPI_SERVICES_YOY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695732,4772555. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_services_yoy.
+      CPI_UTILITIES:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695730,4772562. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_utilities.
+      CPI_UTILITIES_YOY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695732,4772562. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_utilities_yoy.
+      CPI_REGULATED_UTILITIES:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695730,4772564. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_regulated_utilities.
+      CPI_REGULATED_UTILITIES_YOY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695732,4772564. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_regulated_utilities_yoy.
+      PPI_MONTHLY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703039, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2513,2854,3068, p_terms=741880,2695730,4150464,15698719,18716910. Dec/Dec 2011-2025 equal element 1626. fetch_ppi_monthly.
+      PPI_YOY_MONTHLY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 703039, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2513,2854,3068, p_terms=741880,2695732,4150464,15698719,18716910. Dec/Dec 2011-2025 equal element 1626. fetch_ppi_yoy_monthly.
+      IND_PROD_MONTHLY_YOY:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 701625, p_period_id=4, p_measure_id=7, p_dicIds=68,4303,848 (comparison last), p_terms=741880,3079117,2695732. Monthly from 2014-01. fetch_ind_prod_monthly_yoy.
+      IND_PROD_MONTHLY_MOM:
+        status: confirmed
+        download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
+        format: json
+        notes: >
+          2026-09-25. Taldau index 701625, p_period_id=4, p_measure_id=7, p_dicIds=68,4303,848 (comparison last), p_terms=741880,3079117,2695730. Monthly from 2014-01. fetch_ind_prod_monthly_mom.
+      AVG_WAGE_1T_QUARTERLY:
+        status: confirmed
+        download_url: "https://stat.gov.kz/api/iblock/element/5674/file/ru/"
+        format: xlsx
+        notes: >
+          2026-09-25. Sheet «Показатель»: from 2015 each year is a row of quarter labels followed by a row of values (columns 1, 4, 7, 10); 2007-2014 monthly rows above are not used. Equal to Taldau index 702972. fetch_avg_wage_1t_quarterly.
       UNEMPLOYMENT:
         status: confirmed
+        current_source: "2026-09-25: stat.gov.kz element 5830 «Основные индикаторы рынка труда» (xlsx, sheet «ОИРТ», block «Уровень безработицы», national row), quarterly 2001Q1 onward; the cube 102790 described below stopped at 2025Q2."
         page_url: "https://stat.gov.kz/ru/open-data/labor-statistics/474294/"
         element_id: 102790
         download_url: "https://stat.gov.kz/api/iblock/element/102790/json/file/ru/"
@@ -492,6 +638,7 @@ agencies:
           knows to look for it rather than assuming 2.5 years is all that exists.
       INVESTMENT:
         status: derived   # 2026-09-15: was confirmed; the series is now written from INVESTMENT_BY_REGION[TOTAL] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset INVESTMENT_BY_REGION (item TOTAL) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/industries/business-statistics/stat-invest/"
         element_id: 5546
         download_url: "https://stat.gov.kz/api/iblock/element/5546/json/file/ru/"
@@ -510,6 +657,7 @@ agencies:
           scripts/fetchers/bns.py:fetch_investment and connected.
       EXPORTS:
         status: derived   # 2026-09-15: was confirmed; the series is now written from EXPORTS_VALUE_BY_COMMODITY_GROUP[TOTAL] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset EXPORTS_VALUE_BY_COMMODITY_GROUP (item TOTAL) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         page_url: "https://stat.gov.kz/ru/open-data/international-trade/474298/"
         element_id: 446905
         download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
@@ -529,6 +677,7 @@ agencies:
           implemented in scripts/fetchers/bns.py:fetch_exports and connected.
       OIL_EXPORTS_VOLUME:
         status: derived   # 2026-09-15: was confirmed; the series is now written from EXPORTS_VOLUME_BY_COMMODITY_GROUP[CRUDE_OIL] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset EXPORTS_VOLUME_BY_COMMODITY_GROUP (item CRUDE_OIL) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
         format: xlsx
         notes: >
@@ -559,6 +708,7 @@ agencies:
           error. 89 monthly points, 2019-01 to 2026-06. fetch_oil_exports_volume.
       OIL_EXPORTS_VALUE:
         status: derived   # 2026-09-15: was confirmed; the series is now written from EXPORTS_VALUE_BY_COMMODITY_GROUP[CRUDE_OIL] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset EXPORTS_VALUE_BY_COMMODITY_GROUP (item CRUDE_OIL) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         download_url: "https://stat.gov.kz/api/iblock/element/446905/file/ru/"
         format: xlsx
         notes: >
@@ -1029,6 +1179,7 @@ agencies:
 
       CORE_CPI_YOY_EX3:
         status: confirmed
+        current_source: "2026-09-25 (audit): the series is MONTHLY (44 points, 2023-01 to 2026-08; the fetcher queries the monthly period). The quarterly description below predates that and is historical."
         source_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         index_id: 55056856
         format: json
@@ -1065,6 +1216,7 @@ agencies:
           checked before shipping.
       CORE_CPI_MOM_EX3:
         status: confirmed
+        current_source: "2026-09-25 (audit): the series is MONTHLY (44 points, 2023-01 to 2026-08; the fetcher queries the monthly period). The quarterly description below predates that and is historical."
         index_id: 55056856
         format: json
         notes: >
@@ -1073,6 +1225,7 @@ agencies:
           year-on-year series, which is why both are carried.
       CORE_CPI_YOY_EX7:
         status: confirmed
+        current_source: "2026-09-25 (audit): the series is MONTHLY (44 points, 2023-01 to 2026-08; the fetcher queries the monthly period). The quarterly description below predates that and is historical."
         index_id: 55056857
         format: json
         notes: >
@@ -1084,6 +1237,7 @@ agencies:
           which says those prices were rising more slowly than the rest of the basket.
       CORE_CPI_MOM_EX7:
         status: confirmed
+        current_source: "2026-09-25 (audit): the series is MONTHLY (44 points, 2023-01 to 2026-08; the fetcher queries the monthly period). The quarterly description below predates that and is historical."
         index_id: 55056857
         format: json
         notes: >
@@ -1273,6 +1427,7 @@ agencies:
           всего', same column and same caveats. fetch_import_price_index.
       CPI_YOY:
         status: confirmed
+        current_source: "2026-09-25 (audit): now read from Taldau index 703076 like CPI (188 monthly points to 2026-08); the element 1549 description below is historical."
         download_url: "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/"
         format: csv
         notes: >
@@ -1293,6 +1448,7 @@ agencies:
           in February 2026 and 10.2% by August 2026 there. fetch_cpi_yoy.
       CPI_YTD:
         status: confirmed
+        current_source: "2026-09-25 (audit): now read from Taldau index 703076 like CPI; the element 1549 description below is historical."
         download_url: "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/"
         format: csv
         notes: >
@@ -1476,6 +1632,7 @@ agencies:
           trillion KZT (2020) to ~10.8 trillion KZT (2025). fetch_construction.
       POPULATION_BNS:
         status: derived   # 2026-09-15: was confirmed; the series is now written from POPULATION_AVG_BY_REGION[ALL] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset POPULATION_AVG_BY_REGION (item ALL) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         index_id: 703834
         format: json
@@ -1499,6 +1656,7 @@ agencies:
           plausible. fetch_real_wage_index.
       EMPLOYED_TOTAL:
         status: derived   # 2026-09-15: was confirmed; the series is now written from EMPLOYED_BY_REGION[TOTAL] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset EMPLOYED_BY_REGION (item TOTAL) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         index_id: 702840
         format: json
@@ -2263,6 +2421,7 @@ agencies:
           label. fetch_renewable_energy_share.
       ELECTRICITY_PRODUCTION:
         status: derived   # 2026-09-15: was confirmed; the series is now written from PRODUCTION_NATURAL_BY_REGION[ELECTRICITY] (scripts/update_derived.py) -- the research trail below stays
+        current_source: "2026-09-25 (audit): derived from the item-level dataset PRODUCTION_NATURAL_BY_REGION (item ELECTRICITY) -- see derived_from/derived_note in indicators.yaml; the source described below is no longer fetched."
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         index_id: 19197226
         format: json
@@ -2540,6 +2699,66 @@ agencies:
           only one other dimension: subcategory (Including / Excluding oil trade). Used
           "Including oil trade" as primary since oil dominates KZ's actual trade weights.
           fetch_reer.
+      RER_USD:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: >
+          2026-09-25. The remaining series of formId=299 (same form and pagination as REER),
+          pinned on category / fx_currency_pair / subcategory. December 2016 = 100; a rise is a
+          real appreciation of the tenge. Monthly from 1995-01. Built from the form download
+          archived 2026-09-03 (the network was closed to data.nationalbank.kz that day); the
+          next pipeline run refreshes it. fetch_rer_usd.
+      RER_RUB:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: >
+          2026-09-25. The remaining series of formId=299 (same form and pagination as REER),
+          pinned on category / fx_currency_pair / subcategory. December 2016 = 100; a rise is a
+          real appreciation of the tenge. Monthly from 1995-01. Built from the form download
+          archived 2026-09-03 (the network was closed to data.nationalbank.kz that day); the
+          next pipeline run refreshes it. fetch_rer_rub.
+      RER_EUR:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: >
+          2026-09-25. The remaining series of formId=299 (same form and pagination as REER),
+          pinned on category / fx_currency_pair / subcategory. December 2016 = 100; a rise is a
+          real appreciation of the tenge. Monthly from 1995-01. Built from the form download
+          archived 2026-09-03 (the network was closed to data.nationalbank.kz that day); the
+          next pipeline run refreshes it. fetch_rer_eur.
+      RER_CNY:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: >
+          2026-09-25. The remaining series of formId=299 (same form and pagination as REER),
+          pinned on category / fx_currency_pair / subcategory. December 2016 = 100; a rise is a
+          real appreciation of the tenge. Monthly from 1995-01. Built from the form download
+          archived 2026-09-03 (the network was closed to data.nationalbank.kz that day); the
+          next pipeline run refreshes it. fetch_rer_cny.
+      REER_EX_OIL:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: >
+          2026-09-25. The remaining series of formId=299 (same form and pagination as REER),
+          pinned on category / fx_currency_pair / subcategory. December 2016 = 100; a rise is a
+          real appreciation of the tenge. Monthly from 1995-01. Built from the form download
+          archived 2026-09-03 (the network was closed to data.nationalbank.kz that day); the
+          next pipeline run refreshes it. fetch_reer_ex_oil.
+      NEER_EX_OIL:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
+        format: json
+        notes: >
+          2026-09-25. The remaining series of formId=299 (same form and pagination as REER),
+          pinned on category / fx_currency_pair / subcategory. December 2016 = 100; a rise is a
+          real appreciation of the tenge. Monthly from 1995-01. Built from the form download
+          archived 2026-09-03 (the network was closed to data.nationalbank.kz that day); the
+          next pipeline run refreshes it. fetch_neer_ex_oil.
       NEER:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data?formId=299"
@@ -2612,8 +2831,8 @@ agencies:
           here to keep this as the specific BPM6 "net inflow" concept. Verified live with full
           pagination (proved the page=0/page=1 boundary behavior is a harmless 1-row overlap,
           not a data-loss bug -- see the module comment in nbk.py for the verification): 85
-          quarterly points, 2005-Q2 through 2026-Q2, USD million, ranging down to -2,495.6
-          (2026-Q1, a net-disinvestment quarter) -- genuinely volatile including negative
+          quarterly points, 2005-Q1 through 2026-Q1, USD million, ranging down to -2,495.6
+          (2025-Q4, a net-disinvestment quarter) -- genuinely volatile including negative
           quarters, expected for BPM6 net FDI flows. fetch_fdi_net_inflow.
       GOV_SECURITIES_MEUKAM:
         status: confirmed
@@ -2695,10 +2914,10 @@ agencies:
           supplying CURRENT_ACCOUNT_BALANCE. Match: code='Goods',
           instrument_type_code='Goods and services', instrument_subtype1_code='Goods',
           account_type_code='Current account', type='mln USD', period='Quarter', and no other
-          classification field set. 24 quarters, 2020-04-01 to 2026-04-01.
+          classification field set. 24 quarters, 2020-Q1 to 2026-Q1 (the source stamps each quarter with the day after it -- 2020-04-01 to 2026-04-01 -- restated by date_basis).
           Closes the audit's BoP gap. The dataset held the current account as a single number, so
           the deficit could not be decomposed -- and for Kazakhstan the decomposition IS the story:
-          in Q2 2026 goods ran a SURPLUS of 4,068.9 mln USD while primary income ran a DEFICIT of
+          in Q1 2026 goods ran a SURPLUS of 4,068.9 mln USD while primary income ran a DEFICIT of
           5,956.5 mln. The current account deficit is an income deficit, not a trade deficit.
           WHY NOT formId=481, WHICH HAS FOUR TIMES THE HISTORY. 481 ('standard presentation')
           carries the same five lines back to 2000-04-01 and its headline matches the stored series
@@ -4153,6 +4372,7 @@ agencies:
           WHEN the target moves. fetch_inflation_target.
       TONIA:
         status: confirmed
+        current_source: "2026-09-25: moved to agency kase (KASE TradingView feed, trade-dated, from 2001-09-02); this NBK widget is no longer fetched."
         download_url: "https://data.nationalbank.kz/api/v1/data/indicators"
         format: json
         notes: >
@@ -4972,6 +5192,10 @@ agencies:
         notes: >
           2026-08-30. Same document set and mechanism as GOV_DEBT_DOMESTIC -- see its notes
           for the full explanation, including the GOV_DEBT scope caveat. fetch_gov_debt_external.
+      GG_INTEREST:
+        status: confirmed
+        format: xlsx_table
+        notes: "2026-09-25. Same 'General government data' document as GG_TAXES, row code 24 ('Interest'), billion KZT converted to million."
       GG_TAXES:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
@@ -5494,6 +5718,19 @@ agencies:
           (republican + local combined) -- broader scope than GOV_REVENUE (republican-only, from
           the separate "Dynamics of execution" file). Verified live: 24,917,246.14 (2023) to
           29,871,047.82 (2025) million KZT. fetch_state_budget_revenue.
+      STATE_TAX_REVENUE_YTD:
+        status: confirmed
+        download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        format: xlsx_table
+        notes: >
+          2026-09-25. Every page of the listing (page=N, size=100; X-Has-Next / X-Next-Pages headers)
+          and every title matching /statistical bulletin|бюллетен/i -- 91 editions from 2019-10.
+          Sheet 'табл 3', rows by Kazakh label: «Салықтық түсімдер» (total), корпоративтік/корпорациялық
+          табыс салығы, жеке табыс салығы, әлеуметтік салық, қосылған құн салығы, акциздер. Column periods
+          from the header text: 'YYYY ж. есеп' (annual), 'жылдық/годовой' and 'қантар-X/январь-X' under the
+          prior year, 'YYYY ж. қантар-X есеп/январь-X отчет' (current YTD), 'N-тоқсан' (discrete quarters,
+          2020 - mid 2021). Also STATE_CIT_YTD, STATE_PIT_YTD, STATE_SOCIAL_TAX_YTD, STATE_VAT_YTD,
+          STATE_EXCISE_YTD. Cross-check: KGD «Динамика поступлений налогов» 2024 = 19 700 516 947 thousand.
       STATE_BUDGET_REVENUE_YTD:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
@@ -5862,6 +6099,18 @@ agencies:
     access_type: api
     protection: none
     endpoints:
+      CN_CPI_YOY:
+        status: confirmed
+        download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/CPI/5.0.0/CHN.CPI._T.YOY_PCH_PA_PT.M"
+        format: sdmx csv
+        notes: >
+          2026-09-25. From 1994-01; 2024 average 0.22 (official 0.2). FRED China series stopped in 2023-25. fetch_cn_cpi_yoy.
+      RU_GDP_REAL:
+        status: confirmed
+        download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/QNEA/7.0.0/RUS.*.*.*.*.Q"
+        format: sdmx csv
+        notes: >
+          2026-09-25. INDICATOR=B1GQ, PRICE_TYPE=Q (2021 prices), S_ADJUSTMENT=NSA, TYPE_OF_TRANSFORMATION=XDC, from 2014-Q1 only (2011-13 on another base). Annual growth 2020-2025 -2.65/5.87/-1.44/4.07/4.92/1.0. fetch_ru_gdp_real.
       OIL_PRICE:
         status: confirmed
         download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/PCPS/9.0.0/G001.POILAPSP.USD.M"
@@ -6675,6 +6924,39 @@ agencies:
         download_url: "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx"
         format: xlsx_table
         notes: "Sheet 'Monthly Prices', column 'Crude oil, Brent' ($/bbl), rows '1960M01' … '2026M08'. The monthly file lists 71 series (two more than the annual: rapeseed and sunflower oil) and marks some names with '**' — the dictionary regexes ignore the marker."
+      WDI_GDP_USD:
+        status: confirmed
+        download_url: "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?format=json&per_page=20000&date=2000:2026"
+        format: json_api
+        notes: "World Bank API v2 (added 2026-09-25 for the gravity model), no key. [meta, rows]; rows carry countryiso3code, date, value. Aggregates dropped via /v2/country?format=json&per_page=400 (region.value == 'Aggregates'). Same call with NY.GDP.MKTP.KD (WDI_GDP_CONST_USD) and SP.POP.TOTL (WDI_POPULATION)."
+  wits:
+    name: "World Bank WITS — TradeStats (UN Comtrade and TRAINS data)"
+    website: "https://wits.worldbank.org"
+    status: confirmed
+    notes: >
+      Added 2026-09-25 for the gravity model. SDMX 2.1 REST, JSON, no key:
+      /API/V1/SDMX/V21/datasource/tradestats-trade/reporter/kaz/year/all/partner/all/product/Total/indicator/<XPRT-TRD-VL|MPRT-TRD-VL>?format=JSON
+      (Kazakhstan's reported exports/imports by partner, thousand USD, 1995-2023 on 2026-09-25) and
+      .../tradestats-tariff/reporter/kaz/year/all/partner/<wld|all>/product/Total/indicator/<MFN-SMPL-AVRG|...>?format=JSON.
+      A few partners keep pre-ISO codes (ROM, SER, ZAR, SUD, MNT, TMP). Checked against BNS 312101:
+      identical for EAEU partners, but non-EAEU flows in 2020-2022 are well below BNS (world exports
+      2021: 53.1 vs 60.3 bn USD) -- the pipeline's BNS series are preferred from 2020.
+    access_type: api
+    protection: none
+    endpoints:
+      WITS_KZ_EXPORTS_BY_PARTNER:
+        status: confirmed
+        download_url: "https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/kaz/year/all/partner/all/product/Total/indicator/XPRT-TRD-VL?format=JSON"
+        format: sdmx_json
+      WITS_KZ_IMPORTS_BY_PARTNER:
+        status: confirmed
+        download_url: "https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/kaz/year/all/partner/all/product/Total/indicator/MPRT-TRD-VL?format=JSON"
+        format: sdmx_json
+      KZ_TARIFF_AVERAGES:
+        status: confirmed
+        download_url: "https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-tariff/reporter/kaz/year/all/partner/wld/product/Total/indicator/MFN-SMPL-AVRG?format=JSON"
+        format: sdmx_json
+        notes: "Also MFN-WGHTD-AVRG, AHS-SMPL-AVRG, AHS-WGHTD-AVRG; partner/all with AHS-SMPL-AVRG gives KZ_TARIFF_APPLIED_BY_PARTNER."
   eia:
     name: "U.S. Energy Information Administration — Short-Term Energy Outlook"
     website: "https://www.eia.gov/outlooks/steo/"
@@ -6698,3 +6980,271 @@ agencies:
         download_url: "https://www.eia.gov/outlooks/steo/xls/STEO_m.xlsx"
         format: xlsx_table
         notes: "Sheet '2tab', rows BREPUUS (Brent Spot Average) and WTIPUUS (WTI Spot Average), $/bbl, January 2022 – December 2027 in the September 2026 release; months after 202608 are forecasts."
+  kase:
+    name: "Kazakhstan Stock Exchange (KASE) — TONIA and the government securities yield curve"
+    website: "https://kase.kz"
+    status: confirmed
+    notes: >
+      Added 2026-09-25 as the eighth agency, for the monetary block of the QPM/BVAR models. kase.kz
+      was rebuilt as an Angular app; its indicator charts read a TradingView feed
+      (/tv-charts/indicators/history?symbol=SYM&resolution=D&from=0&to=<unix>, JSON t/c arrays,
+      t = UTC midnight of the trade date) and its yield-curve page links an .xls with the whole
+      daily history of the Nelson-Siegel parameters (/en/app-gateway/documents/curve/). Neither
+      needs authentication. The earlier note that kase.kz had no JSON surface (UPDATE_LOG,
+      2026-09-01) predates the rebuild. Verified live: TONIA dates are trade dates (working
+      Sunday 2025-01-05 present); the tenors computed from the file's parameters equal the curve
+      KASE plots from /api/indicators/gsec-curve/ within 0.001 pp on 2026-09-25.
+    access_type: json + xls
+    protection: none
+    endpoints:
+      TONIA:
+        status: confirmed
+        download_url: "https://kase.kz/tv-charts/indicators/history?symbol=TONIA&resolution=D&from=0"
+        format: json
+        notes: >
+          2026-09-25. Daily from 2001-09-02 by trade date, % per annum. Replaces the NBK widget
+          (nationalbank.kz indicators, 2026-02-24 onward, publication-dated with weekends
+          filled). Other money-market series on the same feed, not connected: SWAP_1D/2D (from
+          2014), TWINA and MM_INDEX (from 2010), TRION (from 2020), KZGB_Ys/Ym/Yl (from 2022).
+          fetch_tonia.
+      GS_YIELD_3M:
+        status: confirmed
+        download_url: "https://kase.kz/en/app-gateway/documents/curve/"
+        format: xls
+        notes: >
+          2026-09-25. Zero-coupon government securities yield at 3M: monthly average of the
+          daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
+          fetch_gs_yield_3m.
+      GS_YIELD_6M:
+        status: confirmed
+        download_url: "https://kase.kz/en/app-gateway/documents/curve/"
+        format: xls
+        notes: >
+          2026-09-25. Zero-coupon government securities yield at 6M: monthly average of the
+          daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
+          fetch_gs_yield_6m.
+      GS_YIELD_1Y:
+        status: confirmed
+        download_url: "https://kase.kz/en/app-gateway/documents/curve/"
+        format: xls
+        notes: >
+          2026-09-25. Zero-coupon government securities yield at 1Y: monthly average of the
+          daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
+          fetch_gs_yield_1y.
+      GS_YIELD_2Y:
+        status: confirmed
+        download_url: "https://kase.kz/en/app-gateway/documents/curve/"
+        format: xls
+        notes: >
+          2026-09-25. Zero-coupon government securities yield at 2Y: monthly average of the
+          daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
+          fetch_gs_yield_2y.
+      GS_YIELD_5Y:
+        status: confirmed
+        download_url: "https://kase.kz/en/app-gateway/documents/curve/"
+        format: xls
+        notes: >
+          2026-09-25. Zero-coupon government securities yield at 5Y: monthly average of the
+          daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
+          fetch_gs_yield_5y.
+      GS_YIELD_10Y:
+        status: confirmed
+        download_url: "https://kase.kz/en/app-gateway/documents/curve/"
+        format: xls
+        notes: >
+          2026-09-25. Zero-coupon government securities yield at 10Y: monthly average of the
+          daily Nelson-Siegel curves (B0, B1, B2 decimals, TAU years) from 2019-11-04.
+          fetch_gs_yield_10y.
+      SWAP_1D:
+        status: confirmed
+        download_url: "https://kase.kz/tv-charts/indicators/history?symbol=SWAP_1D&resolution=D&from=0&to=<unix>"
+        format: json
+        notes: >
+          2026-09-26. The same TradingView feed as TONIA; KASE's catalogue (https://kase.kz/api/indicators/) names it
+          «SWAP-1D (USD)», fini code SWAP_USDKZT_1, unit «% годовых», with no methodology published. Daily from
+          2014-06-09. Tracks TONIA - fed funds in 2024-2026 (mean gap -0.5 pp) but sat at TONIA + 1 in 2022-12..2023-06
+          while the Fed was at 4-5 %: either a covered-parity deviation or a different construction.
+      KZ_EUROBOND_SPREAD:
+        status: confirmed
+        download_url: "https://kase.kz/ru/app-gateway/documents/risk/DD.MM.YYYY/"
+        format: xls
+        notes: >
+          2026-09-26. KASE settlement-price valuations of the MinFin Eurobonds, plain GET, no login or signed
+          headers: daily xls from 2024-08-01 (trailing slash required; sheet «Расчетные цены_ФР»: code, ISIN,
+          clean, dirty, YTM, days to maturity on 30/360); before that the Strapi listing
+          https://kase.kz/cms/api/market-prices?filters[date][$gte]=...&filters[date][$lte]=...&populate=deep
+          -> file.url zips (weekly 2014-2016, daily after; layouts «Еврооблигации МФ РК» to 2020-06, clean only
+          2020-07..10, «Расчетные цены» with «Рыночная»/«Индикативная» 2020-11..2024-07). Columns found by
+          header text. Last valuation of each month; YTM computed from the clean price where blank (30/360
+          semi-annual, reproduces KASE to 0.01 pp). Treasury leg: FRED DGS1/2/3/5/7/10/20/30. Cross-check: LSE last
+          trade 27.07.2026 in XS1263139856 105.354 vs KASE 105.642; an independent re-computation agrees on all
+          121 benchmark months within 0.9 bp. Rejected: AIX (no trades), LSE (history behind a signed widget),
+          Deutsche Börse (requests need headers computed from a key in its JavaScript), NBK/IMF/FRED/WB (no series).
+          KASE sells licences for derived/non-display use of its data -- the files themselves are published free.
+          KASE resets connections under load: requests are spaced 1.5 s and retried.
+      KZ_EUROBOND_YIELD:
+        status: confirmed
+        download_url: "https://kase.kz/ru/app-gateway/documents/risk/DD.MM.YYYY/"
+        format: xls
+        notes: "Same files as KZ_EUROBOND_SPREAD; the benchmark's YTM."
+  cbr:
+    name: "Bank of Russia (ЦБ РФ) — key rate, official exchange rate"
+    website: "https://www.cbr.ru"
+    status: confirmed
+    notes: >
+      Added 2026-09-25 for the external block. The key rate comes from the DailyInfo SOAP web
+      service (method KeyRateXML; a plain GET to the .asmx method answers with an error page and
+      HTTP 200), the USD/RUB rate from /scripts/XML_dynamic.asp (windows-1251 XML, decimal commas).
+      Rosstat (rosstat.gov.ru) is not reachable from the runner.
+    access_type: soap + xml
+    protection: none
+    endpoints:
+      RU_KEY_RATE:
+        status: confirmed
+        download_url: "https://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx"
+        format: soap xml
+        notes: >
+          2026-09-25. KeyRateXML(fromDate, ToDate) -> <KR><DT/><Rate/></KR> daily from 2013-09-17, 66 changes; kept as change points dated by effective date. Checked: 5.5 (2013-09-17), 20.0 (2022-02-28), 16.0 (2023-12-18), 21.0 (2024-10-28). fetch_ru_key_rate.
+      RUB_USD:
+        status: confirmed
+        download_url: "https://www.cbr.ru/scripts/XML_dynamic.asp?VAL_NM_RQ=R01235"
+        format: xml
+        notes: >
+          2026-09-25. date_req1/date_req2 dd/mm/yyyy; <Record Date><Nominal/><Value/>. From 1998-01-01 (post-redenomination); 2022-03-11 = 120.3785. Accumulated, 60-day refresh. fetch_rub_usd.
+  eec:
+    name: "Eurasian Economic Commission (ЕЭК) — EAEU macro statistics"
+    website: "https://eec.eaeunion.org/comission/department/dep_stat/econstat/"
+    status: confirmed
+    notes: >
+      Added 2026-09-25. Legacy .xls series files under /upload/files/dep_stat/econstat/: one block
+      per year («2005 год»), one row per member state, months across. Used for Russia's CPI, which
+      Rosstat's own site does not serve to the runner; the other EAEU members are in the same files.
+    access_type: xls
+    protection: none
+    endpoints:
+      KG_CPI_YOY:
+        status: confirmed
+        download_url: "https://eec.eaeunion.org/upload/files/dep_stat/econstat/Series_CPI/CPI_3.xls"
+        format: xls
+        notes: >
+          2026-09-25. Row «Кыргызстан»; 2026-08 112.0. fetch_kg_cpi_yoy.
+      BY_CPI_YOY:
+        status: confirmed
+        download_url: "https://eec.eaeunion.org/upload/files/dep_stat/econstat/Series_CPI/CPI_3.xls"
+        format: xls
+        notes: >
+          2026-09-25. Row «Беларусь»; 2026-08 104.5. fetch_by_cpi_yoy.
+      RU_CPI_MOM:
+        status: confirmed
+        download_url: "https://eec.eaeunion.org/upload/files/dep_stat/econstat/Series_CPI/CPI_1.xls"
+        format: xls
+        notes: >
+          2026-09-25. «в процентах к предыдущему месяцу», row «Россия», 2005-01 onward. 2022-03 = 107.6. fetch_ru_cpi_mom.
+      RU_CPI_YOY:
+        status: confirmed
+        download_url: "https://eec.eaeunion.org/upload/files/dep_stat/econstat/Series_CPI/CPI_3.xls"
+        format: xls
+        notes: >
+          2026-09-25. Same month of the previous year = 100; equals the Bank of Russia table within 0.05 in all 156 months 2013-09..2026-08. fetch_ru_cpi_yoy.
+  fred:
+    name: "Federal Reserve Bank of St. Louis (FRED) — US rates, prices, output"
+    website: "https://fred.stlouisfed.org"
+    status: confirmed
+    notes: >
+      Added 2026-09-25. https://fred.stlouisfed.org/graph/fredgraph.csv?id=<SERIES> returns
+      observation_date,<SERIES> without an API key. FRED's Russia series (OECD MEI) all ended in
+      2021-22 and are not used.
+    access_type: csv
+    protection: none
+    endpoints:
+      US_FED_FUNDS:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=FEDFUNDS"
+        format: csv
+        notes: >
+          2026-09-25. FRED FEDFUNDS, checked against known values. fetch_us_fed_funds.
+      US_TREASURY_2Y:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GS2"
+        format: csv
+        notes: >
+          2026-09-25. FRED GS2, checked against known values. fetch_us_treasury_2y.
+      US_TREASURY_10Y:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GS10"
+        format: csv
+        notes: >
+          2026-09-25. FRED GS10, checked against known values. fetch_us_treasury_10y.
+      US_CPI:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL"
+        format: csv
+        notes: >
+          2026-09-25. FRED CPIAUCSL, checked against known values. fetch_us_cpi.
+      US_GDP_REAL:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDPC1"
+        format: csv
+        notes: >
+          2026-09-25. FRED GDPC1, checked against known values. fetch_us_gdp_real.
+  nbs:
+    name: "National Bureau of Statistics of China — real GDP growth"
+    website: "https://data.stats.gov.cn/dg/website/page.html"
+    status: confirmed
+    notes: >
+      Added 2026-09-25. The old easyquery.htm API answers 403 (WAF) since the site moved to
+      /dg/website/; the new site's JSON endpoint (POST .../external/stream/esData with catalog id,
+      indicator id and a period range such as 199201SS-202604SS) needs no login but is
+      undocumented -- the fetcher checks the count and range of what it gets.
+    access_type: json
+    protection: none
+    endpoints:
+      CN_GDP_REAL_YOY:
+        status: confirmed
+        download_url: "https://data.stats.gov.cn/dg/website/publicrelease/web/external/stream/esData"
+        format: json
+        notes: >
+          2026-09-25. Catalog f9b694c9b79e4ce5958bc88c6410fa67, indicator 170e7f00f8c24ede863c0526b42ae81f (当季值), root a94b8b7365a94874968cabbe392cf679; 1993-Q1 onward; 2020-Q1 93.2. fetch_cn_gdp_real_yoy.
+  ecb:
+    name: "European Central Bank Data Portal — euro area prices, output, policy rate"
+    website: "https://data.ecb.europa.eu"
+    status: confirmed
+    notes: >
+      Added 2026-09-25. https://data-api.ecb.europa.eu/service/data/<flow>/<key>?format=csvdata,
+      no key. HICP moved on 2026-02-04 from dataflow ICP (ends 2025-12) to HICP (provider 4D0).
+    access_type: csv
+    protection: none
+    endpoints:
+      EA_HICP_YOY:
+        status: confirmed
+        download_url: "https://data-api.ecb.europa.eu/service/data/HICP/M.U2.N.000000.4D0.ANR?format=csvdata"
+        format: csv
+        notes: >
+          2026-09-25. 2022-10 10.6, 2024-12 2.4. fetch_ea_hicp_yoy.
+      EA_GDP_REAL:
+        status: confirmed
+        download_url: "https://data-api.ecb.europa.eu/service/data/MNA/Q.Y.I9.W2.S1.S1.B.B1GQ._Z._Z._Z.EUR.LR.N?format=csvdata"
+        format: csv
+        notes: >
+          2026-09-25. EA20, chain-linked 2015, SCA, from 1995-Q1. fetch_ea_gdp_real.
+      EA_DEPOSIT_RATE:
+        status: confirmed
+        download_url: "https://data-api.ecb.europa.eu/service/data/FM/B.U2.EUR.4F.KR.DFR.LEV?format=csvdata"
+        format: csv
+        notes: >
+          2026-09-25. 69 change dates from 1999-01-01; -0.5 (2019-09-18), 4.0 (2023-09-20). fetch_ea_deposit_rate.
+  derived:
+    name: "Computed in this pipeline from other connected series"
+    website: "https://github.com/makenerzhan-gif/kazakhstan-economic-data"
+    status: confirmed
+    notes: >
+      Series built here, not downloaded: each names its inputs and weights in its own config file.
+    access_type: computed
+    protection: none
+    endpoints:
+      FOREIGN_DEMAND_YOY:
+        status: confirmed
+        download_url: "config/foreign_demand.yaml"
+        format: computed
+        notes: >
+          2026-09-25. Export-share-weighted real GDP growth of the euro area, China and Russia (weights from BNS indicator 312101, 2023-2025). fetch_foreign_demand_yoy.

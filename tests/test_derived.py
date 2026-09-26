@@ -45,9 +45,9 @@ def test_every_derived_indicator_points_at_a_real_dataset_and_has_no_fetcher_of_
 
 def test_scalar_ids_are_either_fetched_or_derived_never_both_and_never_neither():
     indicators = yaml.safe_load((REPO_ROOT / "config" / "indicators.yaml").read_text(encoding="utf-8"))["indicators"]
-    import update_ardfm, update_imf, update_minfin, update_nbk, update_wb
+    import update_ardfm, update_foreign, update_imf, update_kase, update_minfin, update_nbk, update_wb
     fetched = set()
-    for m in (update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_wb):
+    for m in (update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_wb, update_kase, update_foreign):
         fetched |= set(m.FETCHERS)
     derived = {i["id"] for i in indicators if i.get("derived_from")}
     assert not fetched & derived
@@ -93,3 +93,22 @@ def test_downloads_are_made_once_per_process(monkeypatch):
     assert calls == [("https://example.org/a", None), ("https://example.org/form", {"formId": 51}), ("https://example.org/form", {"formId": 34})]
     bns._DOWNLOAD_CACHE.clear()
     nbk._DOWNLOAD_CACHE.clear()
+
+
+def test_gaps_are_filled_only_from_a_series_that_agrees_on_every_shared_year():
+    ind = {"id": "GFCF", "gaps_filled_from": {"dataset": "GDP_EXPENDITURE_NOMINAL", "item": "GFCF", "region": "national", "scale": 1000000}}
+    dims_rows = [{"date": f"{y}-12-31", "region": "national", "item_code": "GFCF", "item_name": "", "value": str(v), "transformation": "level"}
+                 for y, v in ((2009, 4726718.7), (2010, 5307136.6), (2014, 8552487.1))]
+    own = [{"date": "2009-12-31", "value": "4726718700000.0"}, {"date": "2014-12-31", "value": "8552487100000.0"}]
+    merged, added = update_derived.fill_gaps(ind, own, dims_rows)
+    assert added == 1 and [r["date"] for r in merged] == ["2009-12-31", "2010-12-31", "2014-12-31"]
+    own[0]["value"] = "4700000000000.0"
+    with pytest.raises(Exception):
+        update_derived.fill_gaps(ind, own, dims_rows)
+
+
+def test_expenditure_components_cover_2010_to_2013():
+    for ind in update_derived.gap_filled_indicators():
+        path = REPO_ROOT / "data" / "processed" / ind["agency"] / f"{ind['id'].lower()}.csv"
+        years = {line.split(",")[0][:4] for line in path.read_text(encoding="utf-8").splitlines()[1:]}
+        assert {"2010", "2011", "2012", "2013"} <= years, ind["id"]

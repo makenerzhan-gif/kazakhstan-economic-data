@@ -38,6 +38,13 @@ FETCHERS = {
     "GOV_DEBT_DOMESTIC": minfin_fetchers.fetch_gov_debt_domestic,
     "GOV_DEBT_EXTERNAL": minfin_fetchers.fetch_gov_debt_external,
     "GG_TAXES": minfin_fetchers.fetch_gg_taxes,
+    "GG_INTEREST": minfin_fetchers.fetch_gg_interest,
+    "STATE_TAX_REVENUE_YTD": minfin_fetchers.fetch_state_tax_revenue_ytd,
+    "STATE_CIT_YTD": minfin_fetchers.fetch_state_cit_ytd,
+    "STATE_PIT_YTD": minfin_fetchers.fetch_state_pit_ytd,
+    "STATE_SOCIAL_TAX_YTD": minfin_fetchers.fetch_state_social_tax_ytd,
+    "STATE_VAT_YTD": minfin_fetchers.fetch_state_vat_ytd,
+    "STATE_EXCISE_YTD": minfin_fetchers.fetch_state_excise_ytd,
     "GG_SOCIAL_CONTRIBUTIONS": minfin_fetchers.fetch_gg_social_contributions,
     "GG_CASH_SURPLUS_DEFICIT": minfin_fetchers.fetch_gg_cash_surplus_deficit,
     "CUSTOMS_DUTIES": minfin_fetchers.fetch_customs_duties,
@@ -106,7 +113,8 @@ INDICATOR_IDS = [
     "GOV_DEFENSE_SPENDING", "GOV_GENERAL_SERVICES_SPENDING", "GOV_TRANSPORT_SPENDING",
     "GOV_DEBT_SERVICING", "NET_BUDGET_LENDING", "BUDGET_DEFICIT", "NON_OIL_BUDGET_DEFICIT",
     "EXCISE_TAX_REVENUE", "GOV_DEBT_DOMESTIC", "GOV_DEBT_EXTERNAL",
-    "GG_TAXES", "GG_SOCIAL_CONTRIBUTIONS", "GG_CASH_SURPLUS_DEFICIT",
+    "GG_TAXES", "GG_SOCIAL_CONTRIBUTIONS", "GG_CASH_SURPLUS_DEFICIT", "GG_INTEREST",
+    "STATE_TAX_REVENUE_YTD", "STATE_CIT_YTD", "STATE_PIT_YTD", "STATE_SOCIAL_TAX_YTD", "STATE_VAT_YTD", "STATE_EXCISE_YTD",
     "CUSTOMS_DUTIES",
     "GOV_WAGES_EXPENDITURE", "GOV_CAPITAL_EXPENDITURE",
     "GOV_PENSIONS_EXPENDITURE", "GOV_SUBSIDIES_EXPENDITURE",
@@ -158,6 +166,32 @@ def _load_old_processed(indicator_id: str) -> list[dict]:
         return list(csv.DictReader(f))
 
 
+def _period_key(iso_date: str, frequency: str) -> str:
+    """What makes two dates the same observation: the quarter for quarterly, the year
+    for annual, the exact date otherwise (the year-to-date bulletins are month-ends)."""
+    if frequency.startswith("quarterly"):
+        return periods.canonical_date(iso_date, "quarterly")
+    if frequency.startswith("annual"):
+        return iso_date[:4]
+    return iso_date
+
+
+def keep_unlisted_history(records: list[dict], old_records: list[dict], frequency: str) -> tuple[list[dict], int]:
+    """Add back the earlier points the source no longer serves.
+
+    Minfin publishes through a rolling gov.kz listing: when a bulletin drops off it,
+    the next run rebuilt the series without that period and the history was gone
+    (Jan-Feb 2025 vanished from 23 series on 2026-09-15; TAX_ARREARS_TOTAL lost
+    1 January 2025 when table 26 moved on). A period the source still serves is
+    always taken fresh -- a changed value is logged as a revision as before -- and
+    only a period absent from the fresh fetch is carried over from the previous run.
+    """
+    fresh = {_period_key(r["date"], frequency) for r in records}
+    kept = [{"date": r["date"], "value": float(r["value"])} for r in old_records
+            if r.get("value") not in (None, "") and _period_key(r["date"], frequency) not in fresh]
+    return sorted(records + kept, key=lambda r: r["date"]), len(kept)
+
+
 def run(run_logger: pipeline_logging.RunLogger) -> None:
     today = date.today()
     for indicator_id in INDICATOR_IDS:
@@ -195,6 +229,11 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
         records = periods.normalise(
             records, manifest_info.get("frequency") or _meta["frequency"],
             _meta.get("observation_type"))
+        old_records = _load_old_processed(indicator_id)
+        records, kept = keep_unlisted_history(records, old_records, manifest_info.get("frequency") or _meta["frequency"])
+        if kept:
+            manifest_info["note"] = (manifest_info.get("note", "") + f" {kept} earlier point(s) carried over "
+                                     "from previous runs: their documents are no longer in the gov.kz listing.").strip()
         result = validation.run_all(records, indicator_id, expected_frequency=manifest_info.get("frequency", "annual"),
                                      cumulation=_meta.get("cumulation"))
         if not result.ok:
@@ -205,7 +244,6 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
             ))
             continue
 
-        old_records = _load_old_processed(indicator_id)
         revs = revisions.detect_revisions(indicator_id, AGENCY, old_records, records, today)
         if revs:
             revisions.append_revisions(revs)

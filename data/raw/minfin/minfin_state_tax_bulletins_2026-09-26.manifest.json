@@ -1,0 +1,11 @@
+{
+  "downloaded_at": "2026-09-26T05:28:36.627527",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448",
+  "n_bulletins": 91,
+  "parsed": 89,
+  "skipped": [
+    97511,
+    249337
+  ],
+  "revised_points": 10
+}

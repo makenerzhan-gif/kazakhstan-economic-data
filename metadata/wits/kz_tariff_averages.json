@@ -1,0 +1,21 @@
+{
+  "source": "wits",
+  "source_url": "https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-tariff/reporter/kaz/year/all/partner/wld/product/Total/indicator/MFN-SMPL-AVRG,MFN-WGHTD-AVRG,AHS-SMPL-AVRG,AHS-WGHTD-AVRG?format=JSON",
+  "dataset_id": "wits/tradestats-tariff/wld",
+  "indicator_id": "KZ_TARIFF_AVERAGES",
+  "indicator_name": "Kazakhstan import tariff averages (MFN and applied, simple and weighted), percent",
+  "description": "Средние ставки импортных пошлин Казахстана (MFN и применяемые, простые и взвешенные), %",
+  "frequency": "annual",
+  "unit": "percent",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "WITS TradeStats-Tariff, all products. MFN = most-favoured-nation rate; AHS = effectively applied (preferential where one exists: zero inside the EAEU). Since 2010 Kazakhstan applies the EAEU common external tariff.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "1996-12-31",
+  "period_end": "2023-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

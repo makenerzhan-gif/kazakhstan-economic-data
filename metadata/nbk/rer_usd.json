@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=299",
+  "dataset_id": "formId=299,category=Real exchange rate,pair=US dollars,subcategory=None",
+  "indicator_id": "RER_USD",
+  "indicator_name": "Real Exchange Rate of the Tenge vs US Dollar",
+  "description": "Реальный обменный курс тенге к доллару США",
+  "frequency": "monthly",
+  "unit": "index, December 2016 = 100",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, December 2016 = 100: the real exchange rate of the tenge against US dollars. A rise is a real appreciation of the tenge.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "1995-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

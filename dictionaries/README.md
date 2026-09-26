@@ -22,6 +22,7 @@ matches no entry, or more than one, is a structural change and stops the dataset
 | `products.csv` | physical-output products (the GDP model's natural rows) | production in kind, 5814 |
 | `wb_commodities.csv` | 69 World Bank Pink Sheet price series (`name_en`, `unit` too) | WB annual/monthly prices, CMO price forecasts, OIL_PRICE_BRENT |
 | `wb_commodity_indices.csv` | 16 World Bank commodity price indices, 2010=100 | WB annual indices, CMO index forecasts |
+| `partner_countries.csv` | ISO 3166 alpha-3 code ← the Russian partner name BNS prints (235 names, `name_en` too; no `match` column — exact, whitespace- and case-folded lookup) | trade by partner country (KZ_EXPORTS/IMPORTS_BY_PARTNER) |
 | `hs_export_groups.csv` | 23 export commodity groups as HS prefixes (`hs` column, `\|`-separated) + TOTAL | exports by commodity group (value, tonnes) |
 
 The World Bank files stopped carrying a mnemonic row, so the codes in the two

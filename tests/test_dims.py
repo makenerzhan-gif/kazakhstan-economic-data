@@ -24,8 +24,24 @@ def test_every_dataset_has_a_fetcher_and_a_known_layout():
                                     "year_blocks_items_regions_ytd", "month_rows", "region_blocks_months", "sector_columns")
         elif key == "bns_trade":
             assert ds["measure"] in ("usd", "tonnes") and ds["dictionary"] == "hs_export_groups" and ds["frequency"] == "monthly"
+        elif key == "taldau":
+            assert ds["index_id"] and ds["dic_ids"].count(",") == ds["terms"].count(",")
+            assert ds["terms"].split(",")[ds["expand_pos"]] == ds["expand_term"]
+        elif key == "kase_eurobonds":
+            assert ds["measure"] in ("clean", "ytm", "spread") and ds["frequency"] == "monthly"
+        elif key == "bns_living":
+            assert ds["table"] in ("deciles", "expenditure_tails")
+            if ds["table"] == "deciles":
+                assert ds["kind"] == ds["frequency"] and ds["measure"] in ("share", "mean", "upper")
+        elif key == "nbk_debt_schedule":
+            assert ds["form_id"] == "346" and ds["frequency"] == "quarterly"
+        elif key == "nbk_survey":
+            assert ds["form_id"] and ds["indicator_code"] and ds["frequency"] == "quarterly"
+        elif key == "gravity":
+            assert ds["table"] in update_dims.gravity.TABLES and ds["frequency"] == "annual"
         elif ds["agency"] == "wb":
-            assert ds["table"] in ("annual_prices", "annual_indices", "forecast_prices", "forecast_indices")
+            assert ds["table"] in ("annual_prices", "annual_indices", "monthly_prices", "monthly_indices",
+                                   "forecast_prices", "forecast_indices")
             assert ds["fallback_url"].startswith("https://thedocs.worldbank.org/") and ds["sheet"]
         elif ds["agency"] == "eia":
             assert ds["sheet"] and ds["items"]
@@ -314,3 +330,24 @@ def test_unified_long_file_is_written_gzipped_and_read_back(tmp_path):
     plain = dims.write_long_csv(rows, tmp_path / "plain.csv")
     assert model_sync.load_unified_dims(plain)[("X", "A", "national")][0].value == 1.5
     assert dims.UNIFIED_PATH.name.endswith(".csv.gz")
+
+
+def test_year_patterns_accept_a_footnoted_year_but_not_a_longer_number():
+    """The labour tables head 2015 as '20152)' (year + footnote 2). The old pattern
+    `(\\d{4})(?!\\d)` rejected it, and 2015 vanished from six regional datasets and
+    EMPLOYED_TOTAL (audit 2026-09-25)."""
+    patterns = {ds["year_regex"] for ds in dims.load_config()["datasets"] if "(?=" in ds.get("year_regex", "")}
+    assert patterns
+    for p in patterns:
+        rx = re.compile(p)
+        assert rx.search("20152)").group(1) == "2015"
+        assert rx.search("2016").group(1) == "2016"
+        assert rx.search("2021 1)").group(1) == "2021"
+        assert rx.search("201501") is None
+
+
+def test_regional_labour_tables_have_no_missing_year():
+    for ds_id in ("EMPLOYED_BY_REGION", "LABOUR_FORCE_BY_REGION", "UNEMPLOYED_BY_REGION",
+                  "EMPLOYEES_BY_REGION", "SELF_EMPLOYED_BY_REGION", "UNEMPLOYMENT_RATE_BY_REGION"):
+        years = sorted({int(r["date"][:4]) for r in dims.load_processed(ds_id) if r.get("region") == dims.NATIONAL})
+        assert years == list(range(years[0], years[-1] + 1)), ds_id

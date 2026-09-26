@@ -1,0 +1,21 @@
+{
+  "source": "wits",
+  "source_url": "https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/kaz/year/all/partner/all/product/Total/indicator/XPRT-TRD-VL?format=JSON",
+  "dataset_id": "wits/tradestats-trade/XPRT-TRD-VL",
+  "indicator_id": "WITS_KZ_EXPORTS_BY_PARTNER",
+  "indicator_name": "Kazakhstan exports by partner, thousand USD (WITS TradeStats, UN Comtrade)",
+  "description": "Экспорт Казахстана по странам-партнёрам (WITS/UN Comtrade), тыс. долларов США",
+  "frequency": "annual",
+  "unit": "thousand USD",
+  "currency": "USD",
+  "geography": "Kazakhstan (national)",
+  "methodology": "1995 onward, as reported by Kazakhstan to UN Comtrade. Matches BNS for EAEU partners; understates non-EAEU flows in 2020-2022 -- prefer KZ_EXPORTS_BY_PARTNER from 2020. Legacy partner codes ROM/SER/ZAR/SUD/MNT/TMP mapped to ISO3; regional aggregates dropped.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "1995-12-31",
+  "period_end": "2023-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

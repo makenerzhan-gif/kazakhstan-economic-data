@@ -1,0 +1,21 @@
+{
+  "source": "derived",
+  "source_url": "data/processed",
+  "dataset_id": "derived/kzt_usd_rate_diff_on",
+  "indicator_id": "KZT_USD_RATE_DIFF_ON",
+  "indicator_name": "Overnight rate differential: TONIA minus effective fed funds",
+  "description": "Дифференциал овернайт-ставок: TONIA минус ставка ФРС",
+  "frequency": "monthly",
+  "unit": "percentage points",
+  "currency": "",
+  "geography": "Kazakhstan (trade-weighted partners)",
+  "methodology": "Percentage points, monthly: TONIA (monthly mean of KASE's daily index) minus the effective federal funds rate (FRED FEDFUNDS, monthly mean). The overnight tenge-dollar interest differential.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2001-09-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

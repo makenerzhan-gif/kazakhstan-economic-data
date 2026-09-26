@@ -8,9 +8,9 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 import sys
 import time
-import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
@@ -56,12 +56,17 @@ def fetch_base_rate() -> tuple[list[dict], dict]:
     the rate stays constant between MPC decisions, so gaps of several weeks
     between records are expected and not a data quality problem.
     """
-    resp = _download(BASE_RATE_URL)
+    # FULL HISTORY (found 2026-09-25): the endpoint takes `from` and `to` -- BOTH are
+    # required; with neither, or `from` alone, it returns the 15 latest decisions,
+    # which is what the note below records. With both: 91 decisions from the
+    # introduction of the rate on 2015-09-02 (12%, corridor 7-17), holds included.
+    params = {"from": "2000-01-01", "to": (date.today().replace(year=date.today().year + 1)).isoformat()}
+    resp = _download(BASE_RATE_URL, params)
     content = resp.content
     today = date.today()
     raw_store.save_raw_bytes(SOURCE, "BASE_RATE", today, "json", content)
     raw_store.write_download_manifest(SOURCE, "BASE_RATE", today, {
-        "downloaded_at": datetime.now().isoformat(), "source_url": BASE_RATE_URL,
+        "downloaded_at": datetime.now().isoformat(), "source_url": BASE_RATE_URL, "params": params,
     })
 
     data = resp.json()
@@ -91,25 +96,6 @@ def fetch_base_rate() -> tuple[list[dict], dict]:
         "note": "event-dated (rate valid until the next MPC decision), not literal daily observations",
     }
     return records, manifest
-
-
-def _parse_usd_from_rates_xml(content: bytes) -> float | None:
-    """Pull the USD rate out of one get_rates.cfm response, or None."""
-    try:
-        root = ET.fromstring(content)
-    except ET.ParseError:
-        return None
-    for item in root.findall(".//item"):
-        title_el = item.find("title")
-        if title_el is not None and (title_el.text or "").strip() == "USD":
-            desc_el = item.find("description")
-            if desc_el is not None and desc_el.text:
-                try:
-                    return float(desc_el.text.strip())
-                except ValueError:
-                    return None
-            return None
-    return None
 
 
 def _assert_no_isolated_spike(ordered: list[dict]) -> None:
@@ -144,113 +130,215 @@ def _assert_no_isolated_spike(ordered: list[dict]) -> None:
                     "EXPECTED: the tenge moves in sustained steps, not one-day spikes that reverse",
                     "ACTUAL: this is the signature of the endpoint returning the latest available "
                     "rate for a date it does not publish, instead of reporting no data",
-                    f"ACTION REQUIRED: request {ordered[i]['date']} from {RATES_CFM_URL} directly, "
+                    f"ACTION REQUIRED: compare {ordered[i]['date']} in {OFFICIAL_RATES_REPORT_URL} with its neighbours, "
                     "compare it against its neighbours, and exclude the date if the source is "
                     "substituting a value",
                 ])
             )
 
 
-def fetch_exchange_rate_usd(recheck_days: int = 14, max_new: int | None = None) -> tuple[list[dict], dict]:
-    """Official daily USD/KZT rate, accumulated across runs.
+# ---------------------------------------------------------------------------
+# OFFICIAL RATES FROM THE NBK ARCHIVE REPORT (2026-09-25). The page behind «Ежедневные
+# официальные (рыночные) курсы валют» answers a date range for several currencies in
+# one request: .../report?rates[]=5&rates[]=6&rates[]=8&rates[]=16&beginDate=DD.MM.YYYY
+# &endDate=DD.MM.YYYY -> an HTML table, one row per CALENDAR day (weekend days carry the
+# Friday-set rate), a quantity and a rate column per currency. Coverage from 1999-10-19.
+# It replaced one-request-per-date get_rates.cfm, whose window only reached back to May
+# 2021: all 1 386 points of the accumulated USD series equal the archive, and the archive
+# carries 07.05.2021 correctly (426.99, where get_rates.cfm substituted 464.77). The one
+# real hole, 2023-07-28..2023-08-21, is a hole in both.
+# Each run asks for the last EXCHANGE_RATE_REFRESH_DAYS days and accumulates, so the
+# daily raw copy stays small; the history before that was loaded once, on 2026-09-25,
+# from the full 1999-2026 report archived under raw/nbk/.
+# Weekdays only, as before: weekend rows are the Friday rate carried forward.
+# ---------------------------------------------------------------------------
+OFFICIAL_RATES_REPORT_URL = ("https://nationalbank.kz/ru/exchangerates/"
+                             "ezhednevnye-oficialnye-rynochnye-kursy-valyut/report")
+OFFICIAL_RATE_CURRENCIES = {  # code: (the report's currency id, its column header)
+    "USD": ("5", "ДОЛЛАР США"), "EUR": ("6", "ЕВРО"),
+    "CNY": ("8", "КИТАЙСКИЙ ЮАНЬ"), "RUB": ("16", "РОССИЙСКИЙ РУБЛЬ"),
+}
+EXCHANGE_RATE_REFRESH_DAYS = 45
+# The report's first rows, 1999-10-19..21, are malformed for every currency but USD (EUR
+# 54 -> 65 -> 160, CNY 65 -> 4 -> 5.21, RUB 56 -> 5.23) and are followed by a gap to
+# 1999-11-17, from which all four run plausibly (EUR 146.76, CNY 16.89, RUB 5.28).
+OFFICIAL_RATES_FIRST_DATE = "1999-11-01"
+_OFFICIAL_RATES_CACHE: dict[str, dict[str, dict[str, float]]] = {}
 
-    The source serves ONE DATE PER REQUEST: nationalbank.kz/rss/get_rates.cfm
-    ?fdate=DD.MM.YYYY. Verified live 2026-09-01 that it offers no range
-    interface -- passing `tdate` alongside `fdate` is silently ignored and the
-    response still covers the single `fdate` -- and that rates_all.xml carries
-    only today's snapshot across 48 currencies, not a history.
 
-    The window is LIMITED AND ROLLING. Probing back on 2026-09-01: 2020, 2015,
-    2010, 2005 and 2000 all answer "на выбранную дату информации нет", while
-    2022 through 2026 answer normally, and the boundary sits in early May 2021
-    (05.05.2021 absent, 11.05.2021 present). Because the window rolls forward,
-    history reachable today stops being reachable later -- so this fetcher
-    ACCUMULATES rather than re-pulling a fixed recent window: it reads what has
-    already been processed, requests only the dates still missing plus the last
-    `recheck_days` days, and returns the merged series.
+def parse_official_rates_report(html: str) -> dict[str, dict[str, float]]:
+    """{currency code: {ISO date: KZT per ONE unit}} from the report's table."""
+    table = re.search(r"<table[^>]*>(.*?)</table>", html, re.S)
+    if not table:
+        return {}
+    heads = [re.sub(r"\s+", " ", h).strip() for h in re.findall(r"<th[^>]*>(.*?)</th>", table.group(1), re.S)]
+    columns = {}  # code -> index of its rate column in a data row
+    for code, (_, header) in OFFICIAL_RATE_CURRENCIES.items():
+        if header in heads:
+            columns[code] = heads.index(header)
+    out: dict[str, dict[str, float]] = {code: {} for code in columns}
+    for row in re.findall(r"<tr>(.*?)</tr>", table.group(1), re.S):
+        cells = [re.sub(r"<[^>]+>", "", c).strip() for c in re.findall(r"<td[^>]*>(.*?)</td>", row, re.S)]
+        if not cells or not re.match(r"^\d{4}-\d{2}-\d{2}$", cells[0]):
+            continue
+        for code, i in columns.items():
+            try:
+                quantity, rate = float(cells[i - 1].replace(",", ".")), float(cells[i].replace(",", "."))
+            except (IndexError, ValueError):
+                continue
+            if quantity > 0:
+                out[code][cells[0]] = round(rate / quantity, 6)
+    return out
 
-    This replaces an implementation that re-fetched a 14-day window every run and
-    therefore always produced a 14-day series, discarding everything older. The
-    dataset held only 2026-08-19..2026-09-01 for what is the most-used
-    macroeconomic series in the country.
 
-    Only weekdays are requested -- no rate is published for weekends. Public
-    holidays stay permanently "missing" and are re-asked each run, which costs a
-    few dozen requests rather than thousands.
-
-    Each date's raw XML is archived separately rather than merged before saving,
-    keeping raw data an unmodified copy of what the source returned.
-    """
+def _official_rates(begin: date | None = None) -> dict[str, dict[str, float]]:
     today = date.today()
-    existing = _load_processed_series("EXCHANGE_RATE")
+    begin = begin or today - timedelta(days=EXCHANGE_RATE_REFRESH_DAYS)
+    key = begin.isoformat()
+    if key not in _OFFICIAL_RATES_CACHE:
+        params = [("rates[]", cid) for cid, _ in OFFICIAL_RATE_CURRENCIES.values()]
+        params += [("beginDate", begin.strftime("%d.%m.%Y")), ("endDate", today.strftime("%d.%m.%Y"))]
+        resp = requests.get(OFFICIAL_RATES_REPORT_URL, headers=HEADERS, params=params, timeout=120)
+        resp.raise_for_status()
+        raw_store.save_raw_bytes(SOURCE, "EXCHANGE_RATES_OFFICIAL", today, "html", resp.content)
+        raw_store.write_download_manifest(SOURCE, "EXCHANGE_RATES_OFFICIAL", today, {
+            "downloaded_at": datetime.now().isoformat(), "source_url": OFFICIAL_RATES_REPORT_URL,
+            "params": params, "read_by": "EXCHANGE_RATE, EXCHANGE_RATE_EUR, EXCHANGE_RATE_CNY, EXCHANGE_RATE_RUB"})
+        _OFFICIAL_RATES_CACHE[key] = parse_official_rates_report(resp.content.decode("utf-8", "replace"))
+    return _OFFICIAL_RATES_CACHE[key]
 
-    wanted: list[date] = []
-    d = EXCHANGE_RATE_EARLIEST
-    while d <= today:
-        if d.weekday() < 5:
-            wanted.append(d)
-        d += timedelta(days=1)
 
-    recheck_from = today - timedelta(days=recheck_days)
-    to_fetch = [d for d in wanted if d.isoformat() not in existing or d >= recheck_from]
-    if max_new is not None:
-        # Keep the tail when capped, so a capped run still advances the current
-        # end of the series rather than only backfilling ancient history.
-        to_fetch = to_fetch[-max_new:]
-
-    fetched: dict[str, float] = {}
-    attempted = 0
-    for d in to_fetch:
-        attempted += 1
-        try:
-            resp = requests.get(RATES_CFM_URL, headers=HEADERS,
-                                params={"fdate": d.strftime("%d.%m.%Y")}, timeout=30)
-        except requests.exceptions.RequestException:
-            continue
-        if resp.status_code != 200 or not resp.content:
-            continue
-        raw_store.save_raw_bytes(SOURCE, f"EXCHANGE_RATE_{d.isoformat()}", today, "xml", resp.content)
-        value = _parse_usd_from_rates_xml(resp.content)
-        if value is not None:
-            fetched[d.isoformat()] = value
-        time.sleep(0.25)
-
-    merged = {**existing, **fetched}
-    if not merged:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                "STRUCTURAL CHANGE DETECTED in nbk/EXCHANGE_RATE",
-                f"WHAT CHANGED: no USD rate parsed from any of {attempted} requests, and no "
-                "previously-processed history exists to fall back on",
-                "EXPECTED: a USD item carrying a rate for at least one requested date",
-                f"ACTUAL: zero parseable USD entries across {attempted} requests to {RATES_CFM_URL}",
-                "ACTION REQUIRED: inspect the live XML response and update scripts/fetchers/nbk.py",
-            ])
-        )
-
-    raw_store.write_download_manifest(SOURCE, "EXCHANGE_RATE", today, {
-        "downloaded_at": datetime.now().isoformat(), "source_url": RATES_CFM_URL,
-        "earliest_available": EXCHANGE_RATE_EARLIEST.isoformat(),
-        "already_had": len(existing), "requested": attempted, "newly_parsed": len(fetched),
-        "total_after_merge": len(merged),
-    })
-
-    records = [{"date": k, "value": v} for k, v in sorted(merged.items())]
-    _assert_no_isolated_spike(records)
-
+def _fetch_official_rate(code: str, indicator_id: str, begin: date | None = None) -> tuple[list[dict], dict]:
+    fresh = {d: v for d, v in _official_rates(begin).get(code, {}).items()
+             if date.fromisoformat(d).weekday() < 5 and d >= OFFICIAL_RATES_FIRST_DATE}
+    records = _merge_accumulated(indicator_id, fresh)
+    if not records:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+            f"WHAT CHANGED: no {code} column (header {OFFICIAL_RATE_CURRENCIES[code][1]!r}) or no rows in the report, "
+            "and no previously processed history",
+            f"ACTION REQUIRED: inspect {OFFICIAL_RATES_REPORT_URL} and update scripts/fetchers/nbk.py",
+        ]))
+    # The spike guard was written for get_rates.cfm, which substituted the latest rate for a
+    # date it did not publish. It runs on the dollar's last 60 days only: over the history it
+    # fires on 2015-08-25 (252.47 -> 218.61 -> 230.11), which is real -- EUR, CNY and RUB,
+    # cross rates through the dollar, fall in the same proportion that day.
+    if code == "USD":
+        recent = (date.today() - timedelta(days=60)).isoformat()
+        _assert_no_isolated_spike([r for r in records if r["date"] in fresh and r["date"] >= recent])
     manifest = {
-        "frequency": "daily",
-        "source_url": RATES_CFM_URL,
-        "dataset_id": "get_rates.cfm",
-        "note": "Official NBK USD/KZT rate. The endpoint serves one date per request and its "
-                "window rolls forward (nothing before early May 2021 was reachable on "
-                "2026-09-01), so this series is accumulated across runs: each run fetches only "
-                "the dates still missing plus the last two weeks, then merges with what was "
-                "already processed. Weekends are not requested. The series starts 2021-05-10 "
-                "rather than at the window edge because 07.05.2021, a public holiday, is served "
-                "with a substituted rate instead of a no-data response.",
+        "frequency": "daily", "source_url": OFFICIAL_RATES_REPORT_URL,
+        "dataset_id": f"official-rates-report/{code}",
+        "note": f"Official NBK {code}/KZT rate, KZT per one {code}, weekdays, from 1999-11 (the archive "
+                "report's first rows, 1999-10-19..21, are malformed). Accumulated: each run reads the last "
+                f"{EXCHANGE_RATE_REFRESH_DAYS} days of the report and merges them with the processed history, "
+                "which was loaded in full on 2026-09-25. No rate is published for 2023-07-28..2023-08-21.",
     }
     return records, manifest
+
+
+def fetch_exchange_rate_usd() -> tuple[list[dict], dict]:
+    """Official daily USD/KZT rate, weekdays, from 1999-10-19."""
+    return _fetch_official_rate("USD", "EXCHANGE_RATE")
+
+
+def fetch_exchange_rate_eur() -> tuple[list[dict], dict]:
+    return _fetch_official_rate("EUR", "EXCHANGE_RATE_EUR")
+
+
+def fetch_exchange_rate_cny() -> tuple[list[dict], dict]:
+    return _fetch_official_rate("CNY", "EXCHANGE_RATE_CNY")
+
+
+def fetch_exchange_rate_rub() -> tuple[list[dict], dict]:
+    return _fetch_official_rate("RUB", "EXCHANGE_RATE_RUB")
+
+
+# ---------------------------------------------------------------------------
+# MONEY FROM THE NBK PAGE RECORDS (2026-09-25). The page «Денежная база и агрегаты
+# широкой денежной массы» is fed by .../records?beginMount=1&beginYear=1990&endMount=12
+# &endYear=YYYY -> JSON, one record per month from 1994-01: m_b_r_m (monetary base),
+# m_0, m_1, m_2, m_3, million KZT, stocks at the END of the month in `reporting_date`
+# (its year-month; the day is noise). Dated here "as at" the first day of the NEXT
+# month, which is how open-data form 51 stamps the same stock and how these series were
+# dated before. Form 51, used until now, starts in 2021-12 and carried WRONG M0-M3 for
+# its first 13 report dates (2021-12-01..2022-12-01: M3 4.50 trn against 28.70 trn on
+# the page); from 2023-01 the two agree on every month, and the monetary base on every
+# month of the overlap. DEPOSITS_TOTAL is M3 - M0, an identity that held exactly in
+# form 62's own figures.
+# ---------------------------------------------------------------------------
+MONEY_RECORDS_URL = ("https://nationalbank.kz/ru/monetarybase/"
+                     "denezhnaya-baza-i-agregaty-shirokoy-denezhnoy-massy/records")
+_MONEY_RECORDS: list[dict] = []
+
+
+def _money_records() -> list[dict]:
+    if not _MONEY_RECORDS:
+        params = {"beginMount": 1, "beginYear": 1990, "endMount": 12, "endYear": date.today().year}
+        resp = _download(MONEY_RECORDS_URL, params)
+        raw_store.save_raw_bytes(SOURCE, "MONEY_RECORDS", date.today(), "json", resp.content)
+        raw_store.write_download_manifest(SOURCE, "MONEY_RECORDS", date.today(), {
+            "downloaded_at": datetime.now().isoformat(), "source_url": MONEY_RECORDS_URL, "params": params,
+            "read_by": "MONETARY_BASE, M0, M1, M2, M3, DEPOSITS_TOTAL"})
+        data = resp.json()
+        if not isinstance(data, list) or not data or "m_3" not in data[0] or "reporting_date" not in data[0]:
+            raise validation.StructuralChangeError("\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/MONEY_RECORDS",
+                "WHAT CHANGED: the records endpoint no longer returns a list of {reporting_date, m_0..m_3, m_b_r_m}",
+                f"ACTUAL: {str(data)[:300]}",
+                f"ACTION REQUIRED: inspect {MONEY_RECORDS_URL} and update scripts/fetchers/nbk.py",
+            ]))
+        _MONEY_RECORDS.extend(data)
+    return _MONEY_RECORDS
+
+
+def money_as_at(reporting_date: str) -> str:
+    """'2026-08-31 22:00:00' (the stock at the end of August) -> '2026-09-01'."""
+    y, m = int(reporting_date[:4]), int(reporting_date[5:7])
+    y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+    return f"{y:04d}-{m:02d}-01"
+
+
+def _fetch_money(indicator_id: str, value_of, what: str) -> tuple[list[dict], dict]:
+    by_date: dict[str, float] = {}
+    for r in _money_records():
+        v = value_of(r)
+        if v is not None:
+            by_date[money_as_at(r["reporting_date"])] = float(v)
+    records = [{"date": d, "value": v} for d, v in sorted(by_date.items())]
+    manifest = {
+        "frequency": "monthly", "source_url": MONEY_RECORDS_URL, "dataset_id": f"nbk-money-records/{indicator_id}",
+        "note": f"Million KZT, {what}, stock at the end of the month, dated as at the first day of the next "
+                "month; from 1994 (NBK page records). Replaced open-data form 51 on 2026-09-25, whose "
+                "2021-12..2022-12 values were wrong.",
+    }
+    return records, manifest
+
+
+def fetch_monetary_base() -> tuple[list[dict], dict]:
+    return _fetch_money("MONETARY_BASE", lambda r: r.get("m_b_r_m"), "monetary base (reserve money, broad)")
+
+
+def fetch_m0() -> tuple[list[dict], dict]:
+    return _fetch_money("M0", lambda r: r.get("m_0"), "M0 -- cash in circulation outside banks")
+
+
+def fetch_m1() -> tuple[list[dict], dict]:
+    return _fetch_money("M1", lambda r: r.get("m_1"), "M1")
+
+
+def fetch_m2() -> tuple[list[dict], dict]:
+    return _fetch_money("M2", lambda r: r.get("m_2"), "M2")
+
+
+def fetch_m3() -> tuple[list[dict], dict]:
+    return _fetch_money("M3", lambda r: r.get("m_3"), "M3 -- broad money")
+
+
+def fetch_deposits_total() -> tuple[list[dict], dict]:
+    return _fetch_money("DEPOSITS_TOTAL",
+                        lambda r: (r["m_3"] - r["m_0"]) if r.get("m_3") is not None and r.get("m_0") is not None else None,
+                        "resident deposits in depository organizations, total (M3 - M0)")
 
 
 MONETARY_AGGREGATES_URL = "https://data.nationalbank.kz/api/v1/data"
@@ -270,135 +358,11 @@ ROW_CODE_M2 = "4"
 ROW_CODE_M3 = "5"
 
 
-def _fetch_monetary_aggregate_rows(row_code: str, indicator_id: str) -> tuple[list[dict], bytes]:
-    all_rows: list[dict] = []
-    raw_pages: list[dict] = []
-    page = 0
-    while True:
-        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
-                             params={"formId": MONETARY_AGGREGATES_FORM_ID, "page": str(page), "pageSize": "500"},
-                             timeout=30)
-        resp.raise_for_status()
-        data = resp.json()
-        raw_pages.append(data)
-        all_rows.extend(data["rows"])
-        if len(all_rows) >= data["totalRows"]:
-            break
-        page += 1
-
-    raw_content = json.dumps(raw_pages, ensure_ascii=False).encode("utf-8")
-    today = date.today()
-    raw_store.save_raw_bytes(SOURCE, indicator_id, today, "json", raw_content)
-    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
-        "downloaded_at": datetime.now().isoformat(),
-        "source_url": MONETARY_AGGREGATES_URL, "form_id": MONETARY_AGGREGATES_FORM_ID,
-        "row_code": row_code, "n_pages": len(raw_pages), "total_rows_all_codes": raw_pages[0]["totalRows"],
-    })
-
-    matching = [r for r in all_rows if r.get("row_code") == row_code]
-    if not matching:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
-                f"WHAT CHANGED: no rows found with row_code={row_code!r} in formId=51",
-                "EXPECTED: at least one row for this code (previously verified against the "
-                "human-facing table at nationalbank.kz/ru/monetarybase/...)",
-                "ACTUAL: zero matching rows",
-                f"ACTION REQUIRED: re-verify the row_code mapping at {MONETARY_AGGREGATES_URL} "
-                "and the human-facing page before trusting this indicator again.",
-            ])
-        )
-    return matching, raw_content
-
-
-def fetch_m2() -> tuple[list[dict], dict]:
-    """M2 money supply. See ROW_CODE_M2 comment above for how the mapping was verified."""
-    rows, _ = _fetch_monetary_aggregate_rows(ROW_CODE_M2, "M2")
-    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in rows]
-    records.sort(key=lambda r: r["date"])
-    manifest = {
-        "frequency": "monthly",
-        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={MONETARY_AGGREGATES_FORM_ID}",
-        "dataset_id": "formId=51,row_code=4",
-        "note": "report_date is the API's own field, observed to run about one month ahead "
-                "of the corresponding column label on the human-facing NBK page -- not shifted here.",
-    }
-    return records, manifest
-
-
-def fetch_m3() -> tuple[list[dict], dict]:
-    """M3 money supply. See ROW_CODE_M3 comment above for how the mapping was verified."""
-    rows, _ = _fetch_monetary_aggregate_rows(ROW_CODE_M3, "M3")
-    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in rows]
-    records.sort(key=lambda r: r["date"])
-    manifest = {
-        "frequency": "monthly",
-        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={MONETARY_AGGREGATES_FORM_ID}",
-        "dataset_id": "formId=51,row_code=5",
-        "note": "report_date is the API's own field, observed to run about one month ahead "
-                "of the corresponding column label on the human-facing NBK page -- not shifted here.",
-    }
-    return records, manifest
-
-
-# row_code=1 "Денежная база (резервные деньги)" / row_code=2 "M0" / row_code=3 "M1".
-# Verified live 2026-08-30 the same way as M2/M3: cross-referenced against the human-facing
-# table's numbered rows and confirmed matching values (accounting for the same ~1-month
-# report_date offset noted above).
 ROW_CODE_MONETARY_BASE = "1"
 ROW_CODE_M0 = "2"
 ROW_CODE_M1 = "3"
 
 
-def fetch_monetary_base() -> tuple[list[dict], dict]:
-    """Monetary base (reserve money). row_code=1 -- see comment above ROW_CODE_MONETARY_BASE."""
-    rows, _ = _fetch_monetary_aggregate_rows(ROW_CODE_MONETARY_BASE, "MONETARY_BASE")
-    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in rows]
-    records.sort(key=lambda r: r["date"])
-    manifest = {
-        "frequency": "monthly",
-        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={MONETARY_AGGREGATES_FORM_ID}",
-        "dataset_id": "formId=51,row_code=1",
-        "note": "report_date runs about one month ahead of the human page's column label -- not shifted here.",
-    }
-    return records, manifest
-
-
-def fetch_m0() -> tuple[list[dict], dict]:
-    """M0 -- cash in circulation outside the banking system. row_code=2."""
-    rows, _ = _fetch_monetary_aggregate_rows(ROW_CODE_M0, "M0")
-    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in rows]
-    records.sort(key=lambda r: r["date"])
-    manifest = {
-        "frequency": "monthly",
-        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={MONETARY_AGGREGATES_FORM_ID}",
-        "dataset_id": "formId=51,row_code=2",
-        "note": "report_date runs about one month ahead of the human page's column label -- not shifted here.",
-    }
-    return records, manifest
-
-
-def fetch_m1() -> tuple[list[dict], dict]:
-    """M1. row_code=3."""
-    rows, _ = _fetch_monetary_aggregate_rows(ROW_CODE_M1, "M1")
-    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in rows]
-    records.sort(key=lambda r: r["date"])
-    manifest = {
-        "frequency": "monthly",
-        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={MONETARY_AGGREGATES_FORM_ID}",
-        "dataset_id": "formId=51,row_code=3",
-        "note": "report_date runs about one month ahead of the human page's column label -- not shifted here.",
-    }
-    return records, manifest
-
-
-# formId=34, "International Reserves and foreign currency assets of the National Fund of
-# Republic of Kazakhstan" -- found 2026-08-30 via GET /api/v1/data/categories (category
-# "monetary" -> subcategory "monetary statistics"). Confirmed live: total gross reserves
-# (no subtype) = sum of its own subtype breakdown (monetary gold + assets in CFC) to the
-# cent for a sample date, confirming this is a real total+breakdown structure, not
-# fabricated. Same endpoint conveniently also carries National Fund FX assets as a
-# `subtype`, discovered while investigating reserves -- solves both in one form.
 RESERVES_NATFUND_FORM_ID = "34"
 
 
@@ -539,6 +503,79 @@ def fetch_reer() -> tuple[list[dict], dict]:
     return records, manifest
 
 
+# ---------------------------------------------------------------------------
+# The rest of formId=299 (added 2026-09-25 for the QPM/BVAR external block): the
+# BILATERAL real exchange rates of the tenge against the US dollar, the ruble, the euro
+# and the yuan, and the effective rates on the basket EXCLUDING oil trade. Monthly from
+# 1995-01, December 2016 = 100 in all eight series of the form (checked on the archived
+# download of 2026-09-03). A RISE is a real APPRECIATION of the tenge: the August 2015
+# float took the dollar RER from 149.6 (July) to 108.4 (September). Each series is
+# pinned on its full signature -- category, fx_currency_pair and subcategory -- and a
+# date carrying two different amounts stops the fetch rather than being guessed at.
+# ---------------------------------------------------------------------------
+FORM_299_SERIES = {
+    "RER_USD": ("Real exchange rate", "US dollars", None),
+    "RER_RUB": ("Real exchange rate", "Russian ruble", None),
+    "RER_EUR": ("Real exchange rate", "Euro", None),
+    "RER_CNY": ("Real exchange rate", "Chinese renminbi (yuan)", None),
+    "REER_EX_OIL": ("Real effective exchange rate", None, "Excluding oil trade"),
+    "NEER_EX_OIL": ("The nominal effective exchange rate", None, "Excluding oil trade"),
+}
+
+
+def _fetch_form_299_series(indicator_id: str) -> tuple[list[dict], dict]:
+    category, pair, subcategory = FORM_299_SERIES[indicator_id]
+    rows = _fetch_nbk_form_paginated(REER_NEER_FORM_ID, indicator_id)
+    by_date: dict[str, set] = {}
+    for r in rows:
+        if (r.get("category") == category and (r.get("fx_currency_pair") or None) == pair
+                and (r.get("subcategory") or None) == subcategory):
+            by_date.setdefault(r["report_date"], set()).add(float(r["amount"]))
+    conflicting = sorted(d for d, v in by_date.items() if len(v) > 1)
+    if not by_date or conflicting:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+            f"WHAT CHANGED: formId={REER_NEER_FORM_ID} returned "
+            + (f"two amounts for {conflicting[:3]}" if conflicting else "no rows")
+            + f" for category={category!r}, fx_currency_pair={pair!r}, subcategory={subcategory!r}",
+            "EXPECTED: one index value per month",
+            f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={REER_NEER_FORM_ID} and update scripts/fetchers/nbk.py",
+        ]))
+    records = [{"date": d, "value": next(iter(v))} for d, v in sorted(by_date.items())]
+    what = f"real exchange rate of the tenge against {pair}" if pair else f"{category.lower()}, basket excluding oil trade"
+    manifest = {
+        "frequency": "monthly",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={REER_NEER_FORM_ID}",
+        "dataset_id": f"formId={REER_NEER_FORM_ID},category={category},pair={pair},subcategory={subcategory}",
+        "note": f"Index, December 2016 = 100: the {what}. A rise is a real appreciation of the tenge.",
+    }
+    return records, manifest
+
+
+def fetch_rer_usd() -> tuple[list[dict], dict]:
+    return _fetch_form_299_series("RER_USD")
+
+
+def fetch_rer_rub() -> tuple[list[dict], dict]:
+    return _fetch_form_299_series("RER_RUB")
+
+
+def fetch_rer_eur() -> tuple[list[dict], dict]:
+    return _fetch_form_299_series("RER_EUR")
+
+
+def fetch_rer_cny() -> tuple[list[dict], dict]:
+    return _fetch_form_299_series("RER_CNY")
+
+
+def fetch_reer_ex_oil() -> tuple[list[dict], dict]:
+    return _fetch_form_299_series("REER_EX_OIL")
+
+
+def fetch_neer_ex_oil() -> tuple[list[dict], dict]:
+    return _fetch_form_299_series("NEER_EX_OIL")
+
+
 def fetch_neer() -> tuple[list[dict], dict]:
     """Nominal effective exchange rate (NEER) index, including oil trade in the basket weights."""
     rows = _fetch_effective_rate_rows("The nominal effective exchange rate")
@@ -576,56 +613,6 @@ DEPOSITS_FORM_ID = "62"
 ROW_CODE_DEPOSITS_TOTAL = "1"
 
 
-def fetch_deposits_total() -> tuple[list[dict], dict]:
-    """Total resident deposits (individuals + non-bank legal entities) in second-tier
-    banks and NBK, excluding central government/interbank deposits. Million KZT, monthly."""
-    all_rows: list[dict] = []
-    page = 0
-    while True:
-        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
-                             params={"formId": DEPOSITS_FORM_ID, "page": str(page), "pageSize": "500"},
-                             timeout=30)
-        resp.raise_for_status()
-        data = resp.json()
-        all_rows.extend(data["rows"])
-        if len(all_rows) >= data["totalRows"]:
-            break
-        page += 1
-
-    today = date.today()
-    content = json.dumps(all_rows, ensure_ascii=False).encode("utf-8")
-    raw_store.save_raw_bytes(SOURCE, "DEPOSITS_TOTAL", today, "json", content)
-    raw_store.write_download_manifest(SOURCE, "DEPOSITS_TOTAL", today, {
-        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={DEPOSITS_FORM_ID}",
-    })
-
-    matching = [r for r in all_rows if r.get("row_code") == ROW_CODE_DEPOSITS_TOTAL]
-    if not matching:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                "STRUCTURAL CHANGE DETECTED in nbk/DEPOSITS_TOTAL",
-                f"WHAT CHANGED: no rows found with row_code={ROW_CODE_DEPOSITS_TOTAL!r}",
-                f"ACTION REQUIRED: inspect formId={DEPOSITS_FORM_ID} and update scripts/fetchers/nbk.py",
-            ])
-        )
-    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in matching], key=lambda r: r["date"])
-    manifest = {
-        "frequency": "monthly",
-        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={DEPOSITS_FORM_ID}",
-        "dataset_id": f"formId={DEPOSITS_FORM_ID},row_code={ROW_CODE_DEPOSITS_TOTAL}",
-        "note": "Million KZT. report_date runs about one month ahead of the human page's column label -- not shifted here.",
-    }
-    return records, manifest
-
-
-# formId=353, "Абсолютные и относительные параметры внешнего долга" (Absolute and relative
-# parameters of external debt), found 2026-08-30 via GET /api/v1/data/categories -> category
-# "external sector" -> subcategory "external debt". Resolves the gap logged earlier as
-# EXTERNAL_DEBT_NOT_CONNECTED (formIds 358/293 checked then had no clean total row): this
-# form's ed_code='Absolute indicators - External debt' with period='quarter' is a genuinely
-# pre-aggregated single headline total, 85 rows, one per quarter, 2005-Q2 onward, no other
-# dimension to sum across. (period='Year' rows for the same dates/values also exist and are
-# excluded here to avoid mixing two granularities of the same already-aggregated series.)
 EXTERNAL_DEBT_FORM_ID = "353"
 
 
@@ -743,61 +730,93 @@ def fetch_lending_rate() -> tuple[list[dict], dict]:
 DEPOSIT_RATE_FORM_ID = "268"
 
 
+DEPOSIT_RATE_RECORDS_URL = ("https://nationalbank.kz/ru/interestratesofbanksonat/"
+                            "stavki-voznagrazhdeniya-bankov-po-privlechennym-depozitampo-srokam-i-vidam-valyut/records")
+
+
 def fetch_deposit_rate() -> tuple[list[dict], dict]:
-    """Weighted average deposit rate, second-tier banks, individuals, national currency,
-    %, monthly. Verified live 2026-08-30. See DEPOSIT_RATE_FORM_ID comment for how the
-    aggregate was found. Sanity check: sits below LENDING_RATE and below BASE_RATE for
-    the same recent months -- the expected deposit < lending spread direction."""
-    all_rows: list[dict] = []
-    page = 0
-    while True:
-        resp = requests.get(MONETARY_AGGREGATES_URL, headers=HEADERS,
-                             params={"formId": DEPOSIT_RATE_FORM_ID, "page": str(page), "pageSize": "500"},
-                             timeout=30)
-        resp.raise_for_status()
-        data = resp.json()
-        all_rows.extend(data["rows"])
-        if len(all_rows) >= data["totalRows"]:
-            break
-        page += 1
+    """Weighted average rate on deposits ATTRACTED from individuals in tenge, monthly from
+    1996-12 (NBK page records, field d_o_i_kzt), dated by the month the deposits were
+    attracted.
 
+    Moved 2026-09-25 from open-data form 268 (2023 onward), which stamps month m at
+    report_date m+1 -- the series had been one month late. The page's month m equals the
+    form's report_date m+1 in 42 of the 44 shared months (the two others differ by 0.05
+    and 0.13 pp, the page publishing one decimal)."""
+    params = {"beginMount": 1, "beginYear": 1990, "endMount": 12, "endYear": date.today().year}
+    resp = _download(DEPOSIT_RATE_RECORDS_URL, params)
     today = date.today()
-    content = json.dumps(all_rows, ensure_ascii=False).encode("utf-8")
-    raw_store.save_raw_bytes(SOURCE, "DEPOSIT_RATE", today, "json", content)
+    raw_store.save_raw_bytes(SOURCE, "DEPOSIT_RATE", today, "json", resp.content)
     raw_store.write_download_manifest(SOURCE, "DEPOSIT_RATE", today, {
-        "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_AGGREGATES_URL}?formId={DEPOSIT_RATE_FORM_ID}",
-    })
-
-    matching = [r for r in all_rows
-                if r.get("deposit_term") is None and r.get("deposit_type") is None
-                and r.get("agent") == "Individuals" and r.get("currency") == "National currency"]
-    if not matching:
-        raise validation.StructuralChangeError(
-            "\n".join([
-                "STRUCTURAL CHANGE DETECTED in nbk/DEPOSIT_RATE",
-                "WHAT CHANGED: no rows found with deposit_term=None, deposit_type=None, "
-                "agent='Individuals', currency='National currency'",
-                f"ACTION REQUIRED: inspect formId={DEPOSIT_RATE_FORM_ID} and update scripts/fetchers/nbk.py",
-            ])
-        )
-    records = sorted([{"date": r["report_date"], "value": float(r["amount"])} for r in matching], key=lambda r: r["date"])
+        "downloaded_at": datetime.now().isoformat(), "source_url": DEPOSIT_RATE_RECORDS_URL, "params": params})
+    data = resp.json()
+    if not isinstance(data, list) or not data or "d_o_i_kzt" not in data[0]:
+        raise validation.StructuralChangeError("\n".join([
+            "STRUCTURAL CHANGE DETECTED in nbk/DEPOSIT_RATE",
+            "WHAT CHANGED: the records endpoint no longer returns a list with d_o_i_kzt",
+            f"ACTUAL: {str(data)[:300]}",
+            f"ACTION REQUIRED: inspect {DEPOSIT_RATE_RECORDS_URL} and update scripts/fetchers/nbk.py",
+        ]))
+    by_month = {r["reporting_date"][:7] + "-01": float(r["d_o_i_kzt"]) for r in data if r.get("d_o_i_kzt") is not None}
+    records = [{"date": d, "value": v} for d, v in sorted(by_month.items())]
     manifest = {
-        "frequency": "monthly",
-        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={DEPOSIT_RATE_FORM_ID}",
-        "dataset_id": f"formId={DEPOSIT_RATE_FORM_ID},agent=Individuals,currency=National currency",
-        "note": "%. Weighted average deposit rate, individuals, national-currency deposits only, "
-                "all terms/types aggregated by NBK itself.",
+        "frequency": "monthly", "source_url": DEPOSIT_RATE_RECORDS_URL, "dataset_id": "nbk-deposit-rate-records/d_o_i_kzt",
+        "note": "%. Weighted average rate on tenge deposits attracted from individuals during the month, all "
+                "terms, from 1996-12 (NBK page records). Dated by the month itself.",
     }
     return records, manifest
 
 
-# TONIA (Tenge OverNight Index Average), interbank overnight rate. Found 2026-08-30 via
-# GET /api/v1/data/indicators, the same small endpoint that backs the homepage's headline
-# indicators widget (base rate, inflation target, annual inflation, TONIA) -- NOT one of the
-# formId-keyed Open Data forms. Supports from/to query params for history, but only returns
-# data from late February 2026 onward (a rolling window, not the full API's usual multi-year
-# depth) -- confirmed by testing 2020 and 2015 date ranges, both empty. Documented as a real
-# limitation, not treated as broken.
+# formId=486, «Ставки вознаграждения по кредитам, выданным БВУ» (added 2026-09-25): the rate on
+# loans ISSUED during the month, by currency and borrower, from report_date 1997-02-01. The
+# all-maturity rows carry agg_level='1' and an empty maturity. Every row before 2026-05 comes
+# twice with different row_id and the same value; a date with two DIFFERENT values stops the
+# fetch. report_date is the first day of the month AFTER the one described (date_basis in
+# indicators.yaml). The API lacks 2007-11/12, 2008-09..2009-01, 2009-03..12 and
+# 2014-08..2015-01 (the NBK xlsx behind the page has them, but its link id changes).
+LOAN_RATE_ISSUED_FORM_ID = "486"
+LOAN_RATE_ISSUED_SERIES = {
+    "LOAN_RATE_ISSUED_LEGAL_KZT": ("National currency", "Legal entity"),
+    "LOAN_RATE_ISSUED_INDIVIDUAL_KZT": ("National currency", "Individual"),
+}
+
+
+def _fetch_loan_rate_issued(indicator_id: str) -> tuple[list[dict], dict]:
+    currency, subject = LOAN_RATE_ISSUED_SERIES[indicator_id]
+    rows = _fetch_nbk_form_paginated(LOAN_RATE_ISSUED_FORM_ID, indicator_id)
+    by_date: dict[str, set] = {}
+    for r in rows:
+        if (r.get("currency") == currency and r.get("subject_type_detailed") == subject
+                and str(r.get("agg_level")) == "1" and not r.get("maturity_detailed")):
+            by_date.setdefault(r["report_date"], set()).add(float(r["amount"]))
+    conflicting = sorted(d for d, v in by_date.items() if len(v) > 1)
+    if not by_date or conflicting:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+            f"WHAT CHANGED: formId={LOAN_RATE_ISSUED_FORM_ID} returned "
+            + (f"two different rates for {conflicting[:3]}" if conflicting else "no all-maturity rows")
+            + f" for currency={currency!r}, subject={subject!r}",
+            f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={LOAN_RATE_ISSUED_FORM_ID} and update scripts/fetchers/nbk.py",
+        ]))
+    records = [{"date": d, "value": next(iter(v))} for d, v in sorted(by_date.items())]
+    manifest = {
+        "frequency": "monthly", "source_url": f"{MONETARY_AGGREGATES_URL}?formId={LOAN_RATE_ISSUED_FORM_ID}",
+        "dataset_id": f"formId={LOAN_RATE_ISSUED_FORM_ID},currency={currency},subject={subject},all maturities",
+        "note": f"%. Weighted average rate on tenge loans issued by second-tier banks to "
+                f"{'legal entities' if subject == 'Legal entity' else 'individuals (incl. individual entrepreneurs)'} "
+                "during the month, all maturities, from 1997-01. Gaps where the API has no data: 2007-10/11, "
+                "2008-08..2008-12, 2009-02..2009-11, 2014-07..2014-12.",
+    }
+    return records, manifest
+
+
+def fetch_loan_rate_issued_legal_kzt() -> tuple[list[dict], dict]:
+    return _fetch_loan_rate_issued("LOAN_RATE_ISSUED_LEGAL_KZT")
+
+
+def fetch_loan_rate_issued_individual_kzt() -> tuple[list[dict], dict]:
+    return _fetch_loan_rate_issued("LOAN_RATE_ISSUED_INDIVIDUAL_KZT")
+
 INDICATORS_URL = "https://data.nationalbank.kz/api/v1/data/indicators"
 
 
@@ -1268,8 +1287,8 @@ def fetch_loans_to_economy() -> tuple[list[dict], dict]:
 # investment' -- a different, netted-against-outflow headline figure, not
 # used here to keep this indicator as the standard BPM6 "net inflow"
 # concept specifically). Verified live 2026-08-31 with full pagination: 85
-# quarterly points, 2005-Q2 through 2026-Q2, ranging from USD -2,495.6
-# million (2026-Q1, a net-disinvestment quarter) to several USD 4,000+
+# quarterly points, 2005-Q1 through 2026-Q1, ranging from USD -2,495.6
+# million (2025-Q4, a net-disinvestment quarter) to several USD 4,000+
 # million quarters around 2008-2009 -- genuinely volatile, including
 # negative quarters, a real and expected pattern for BPM6 net FDI flows
 # (loan repayments/divestments can exceed new investment in a given
@@ -1532,8 +1551,8 @@ def fetch_iip_liabilities() -> tuple[list[dict], dict]:
 # plus one completely unclassified headline row per quarter -- code='Current
 # account', account_type_code='Current account', every other classification
 # field empty -- was the very first row returned by the API, no search
-# needed. Verified live: 24 quarterly points, 2020-Q2 through 2026-Q2, USD
-# million, recently negative (e.g. -5,180.4 in 2026-Q1) -- a current account
+# needed. Verified live: 24 quarterly points, 2020-Q1 through 2026-Q1, USD
+# million, recently negative (e.g. -5,180.4 in 2025-Q4) -- a current account
 # deficit, a plausible and well-known pattern for Kazakhstan given large
 # FDI-related income outflows even alongside a goods trade surplus.
 # ---------------------------------------------------------------------------
@@ -1560,14 +1579,15 @@ def fetch_current_account_balance() -> tuple[list[dict], dict]:
             ])
         )
 
-    records = [{"date": r["report_date"], "value": float(r["amount"])} for r in matching]
-    records.sort(key=lambda r: r["date"])
+    recent = {r["report_date"]: float(r["amount"]) for r in matching}
+    history, history_note = _bop_history("CURRENT_ACCOUNT", "CURRENT_ACCOUNT_BALANCE", recent)
+    records = [{"date": d, "value": v} for d, v in sorted({**history, **recent}.items())]
     manifest = {
         "frequency": "quarterly",
         "source_url": f"{MONETARY_AGGREGATES_URL}?formId={CURRENT_ACCOUNT_FORM_ID}",
         "dataset_id": f"formId={CURRENT_ACCOUNT_FORM_ID},code={CURRENT_ACCOUNT_CODE}",
         "note": "USD million. Current account balance of the balance of payments. Negative "
-                "values indicate a deficit.",
+                f"values indicate a deficit. History: {history_note}.",
     }
     return records, manifest
 
@@ -2986,13 +3006,14 @@ def fetch_inflation_target() -> tuple[list[dict], dict]:
 #
 # Closes the audit's BoP gap. The dataset held CURRENT_ACCOUNT_BALANCE as a
 # single number, so the deficit could not be decomposed -- and for Kazakhstan
-# the decomposition is the whole story. In Q2 2026 goods ran a SURPLUS of
+# the decomposition is the whole story. In Q1 2026 goods ran a SURPLUS of
 # 4,068.9 mln USD while primary income ran a DEFICIT of 5,956.5 mln, which is
 # profit repatriation by foreign investors in the oil sector. The current
 # account deficit is an INCOME deficit, not a trade deficit, and the headline
 # number alone hides that completely.
 #
-# WHY NOT formId=481, WHICH HAS FOUR TIMES THE HISTORY. 481 ("standard
+# WHY NOT formId=481 FOR RECENT QUARTERS (its pre-2020 history IS used -- see
+# _bop_history below). 481 ("standard
 # presentation") carries the same five lines back to 2000-04-01 against 324's
 # 2020-04-01, and its headline matches the stored series to six decimals. It
 # was built out first and then REJECTED, because on ten quarters in 2023-2024
@@ -3150,16 +3171,74 @@ def _verify_bop_identity(all_rows: list[dict], indicator_id: str) -> int:
     return len(dates)
 
 
+# ---------------------------------------------------------------------------
+# HISTORY BEFORE 2020 FROM formId=481 (added 2026-09-25). 324 starts at Q1 2020; 481
+# carries the same five lines from Q1 2000. What disqualified 481 above -- two
+# different amounts under one signature -- occurs from report_date 2023-04-01 on,
+# all of it inside 324's own range. So 481 is read ONLY for the quarters before 324's
+# first one, and only while every check below holds on the day's download:
+#   - each of those quarters resolves to exactly one amount per line;
+#   - goods + services + primary + secondary = current account in each of them;
+#   - on every quarter both forms carry unambiguously, 481 equals 324 (1e-6).
+# Checked 2026-09-25 on the archived 2026-09-02 download: 80 quarters, identity holds
+# in all, 14-15 overlap quarters identical, and the four quarters of every year
+# 2000-2024 add up to the IMF WEO annual current account within 0.8 mln USD.
+# If any check fails the history is left out (logged in the manifest), never guessed.
+# ---------------------------------------------------------------------------
+BOP_HISTORY_FORM_ID = "481"
+BOP_HISTORY_TYPE = "USD mln"   # 481's word order; 324 says "mln USD"
+
+
+def _bop_history(line: str, indicator_id: str, recent: dict[str, float]) -> tuple[dict[str, float], str]:
+    """({report_date: amount} for the quarters before 324's first, a note on what was done)."""
+    rows = [{**r, "type": "mln USD"} if _bop_norm(r.get("type")) == _bop_norm(BOP_HISTORY_TYPE) else r
+            for r in _fetch_nbk_form_paginated(BOP_HISTORY_FORM_ID, indicator_id)]
+    first_recent = min(recent)
+
+    def select(target: str) -> dict[str, set]:
+        match = {**BOP_BASE_MATCH, **BOP_LINES[target]}
+        wanted = {k: _bop_norm(v) for k, v in match.items()}
+        out: dict[str, set] = {}
+        for row in rows:
+            if all(k in row and _bop_norm(row[k]) == v for k, v in wanted.items()) and all(
+                    k in NON_CLASSIFICATION_FIELDS or k in match or row[k] in (None, "") for k in row):
+                out.setdefault(row["report_date"], set()).add(round(float(row["amount"]), 6))
+        return out
+
+    lines = {name: select(name) for name in BOP_IDENTITY_PARTS + ("CURRENT_ACCOUNT",)}
+    history = {d: v for d, v in lines[line].items() if d < first_recent}
+    if not history:
+        return {}, f"formId={BOP_HISTORY_FORM_ID}: no quarter before {first_recent}; history not added"
+    if any(len(v) > 1 for v in history.values()):
+        bad = sorted(d for d, v in history.items() if len(v) > 1)
+        return {}, f"formId={BOP_HISTORY_FORM_ID}: two amounts for {bad[:3]}; history not added"
+    for d in history:
+        parts = [lines[p].get(d, set()) for p in BOP_IDENTITY_PARTS]
+        ca = lines["CURRENT_ACCOUNT"].get(d, set())
+        if any(len(p) != 1 for p in parts) or len(ca) != 1 or \
+                abs(sum(next(iter(p)) for p in parts) - next(iter(ca))) > BOP_IDENTITY_TOLERANCE:
+            return {}, f"formId={BOP_HISTORY_FORM_ID}: identity fails on {d}; history not added"
+    overlap = [d for d, v in lines[line].items() if d in recent and len(v) == 1]
+    differing = [d for d in overlap if abs(next(iter(lines[line][d])) - recent[d]) > 1e-6]
+    if not overlap or differing:
+        return {}, (f"formId={BOP_HISTORY_FORM_ID}: differs from {BOP_FORM_ID} on {differing[:3]}"
+                    if differing else f"formId={BOP_HISTORY_FORM_ID}: no unambiguous overlap to prove it") + "; history not added"
+    return ({d: next(iter(v)) for d, v in history.items()},
+            f"{len(history)} quarters before {first_recent} from formId={BOP_HISTORY_FORM_ID}, "
+            f"equal to {BOP_FORM_ID} on all {len(overlap)} shared unambiguous quarters, identity checked")
+
+
 def _fetch_bop_line(line: str, indicator_id: str, note: str) -> tuple[list[dict], dict]:
     all_rows = _fetch_nbk_form_paginated(BOP_FORM_ID, indicator_id)
     series = _bop_select(all_rows, line, indicator_id)
     checked = _verify_bop_identity(all_rows, indicator_id)
-    records = [{"date": d, "value": v} for d, v in sorted(series.items())]
+    history, history_note = _bop_history(line, indicator_id, series)
+    records = [{"date": d, "value": v} for d, v in sorted({**history, **series}.items())]
     manifest = {
         "frequency": "quarterly",
         "source_url": f"{MONETARY_AGGREGATES_URL}?formId={BOP_FORM_ID}",
         "dataset_id": f"nbk-form-{BOP_FORM_ID}/{line}",
-        "note": note,
+        "note": f"{note} History: {history_note}.",
         "identity_quarters_checked": checked,
     }
     return records, manifest
@@ -3170,7 +3249,7 @@ def fetch_bop_goods_balance() -> tuple[list[dict], dict]:
     return _fetch_bop_line(
         "GOODS", "BOP_GOODS_BALANCE",
         "Million USD, quarterly. Exports minus imports of goods. Kazakhstan runs a goods SURPLUS "
-        "(4,068.9 mln in Q2 2026) alongside a current account DEFICIT -- the deficit comes from "
+        "(4,068.9 mln in Q1 2026) alongside a current account DEFICIT -- the deficit comes from "
         "primary income, not trade. Beware: this form uses the code 'Goods' twice, the second "
         "time for goods bought by travellers under Travel, which is 0.0 throughout; the two are "
         "told apart only by the instrument fields. Every fetch re-checks that goods + services + "
@@ -3183,7 +3262,7 @@ def fetch_bop_services_balance() -> tuple[list[dict], dict]:
         "SERVICES", "BOP_SERVICES_BALANCE",
         "Million USD, quarterly. Services exports minus imports -- transport, travel, "
         "construction, business services. Persistently negative but small next to the income "
-        "account (-219.1 mln in Q2 2026).")
+        "account (-219.1 mln in Q1 2026).")
 
 
 def fetch_bop_primary_income() -> tuple[list[dict], dict]:
@@ -3191,7 +3270,7 @@ def fetch_bop_primary_income() -> tuple[list[dict], dict]:
     return _fetch_bop_line(
         "PRIMARY_INCOME", "BOP_PRIMARY_INCOME",
         "Million USD, quarterly. Investment income and compensation of employees, net. THIS IS "
-        "THE DRIVER OF KAZAKHSTAN'S CURRENT ACCOUNT DEFICIT: -5,956.5 mln in Q2 2026 against a "
+        "THE DRIVER OF KAZAKHSTAN'S CURRENT ACCOUNT DEFICIT: -5,956.5 mln in Q1 2026 against a "
         "goods surplus of +4,068.9 mln. It is dominated by profit repatriation by foreign "
         "investors in the oil sector, so it tracks oil earnings rather than domestic demand.")
 
@@ -3202,7 +3281,7 @@ def fetch_bop_secondary_income() -> tuple[list[dict], dict]:
         "SECONDARY_INCOME", "BOP_SECONDARY_INCOME",
         "Million USD, quarterly. Current transfers, net -- personal transfers, government "
         "transfers and other current transfers. The smallest of the four components (+98.7 mln "
-        "in Q2 2026).")
+        "in Q1 2026).")
 
 
 # ---------------------------------------------------------------------------

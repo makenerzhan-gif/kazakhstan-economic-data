@@ -1,0 +1,243 @@
+date,region,item_code,item_name,value,transformation
+2026-01-01,national,BANKS_INTEREST_AFTER_2Y,Banks | Interests (forecast) | after 2 years,0.0,level
+2026-04-01,national,BANKS_INTEREST_AFTER_2Y,Banks | Interests (forecast) | after 2 years,0.0,level
+2026-01-01,national,BANKS_INTEREST_M01_03,Banks | Interests (forecast) | within 1-3 months,257.410422,level
+2026-04-01,national,BANKS_INTEREST_M01_03,Banks | Interests (forecast) | within 1-3 months,244.667158,level
+2026-01-01,national,BANKS_INTEREST_M04_06,Banks | Interests (forecast) | within 4-6 months,228.542087,level
+2026-04-01,national,BANKS_INTEREST_M04_06,Banks | Interests (forecast) | within 4-6 months,198.177037,level
+2026-01-01,national,BANKS_INTEREST_M07_09,Banks | Interests (forecast) | within 7-9 months,204.283938,level
+2026-04-01,national,BANKS_INTEREST_M07_09,Banks | Interests (forecast) | within 7-9 months,182.869034,level
+2026-01-01,national,BANKS_INTEREST_M10_12,Banks | Interests (forecast) | within 10-12 months,191.677853,level
+2026-04-01,national,BANKS_INTEREST_M10_12,Banks | Interests (forecast) | within 10-12 months,171.472115,level
+2026-01-01,national,BANKS_INTEREST_M13_15,Banks | Interests (forecast) | within 13-15 months,178.677995,level
+2026-04-01,national,BANKS_INTEREST_M13_15,Banks | Interests (forecast) | within 13-15 months,159.636253,level
+2026-01-01,national,BANKS_INTEREST_M16_18,Banks | Interests (forecast) | within 16-18 months,173.172408,level
+2026-04-01,national,BANKS_INTEREST_M16_18,Banks | Interests (forecast) | within 16-18 months,140.164466,level
+2026-01-01,national,BANKS_INTEREST_M19_21,Banks | Interests (forecast) | within 19-21 months,151.661875,level
+2026-04-01,national,BANKS_INTEREST_M19_21,Banks | Interests (forecast) | within 19-21 months,131.295879,level
+2026-01-01,national,BANKS_INTEREST_M22_24,Banks | Interests (forecast) | within 22-24 months,142.61316,level
+2026-04-01,national,BANKS_INTEREST_M22_24,Banks | Interests (forecast) | within 22-24 months,122.587257,level
+2026-01-01,national,BANKS_INTEREST_NO_INFO,Banks | Interests (forecast) | no information,0.0,level
+2026-04-01,national,BANKS_INTEREST_NO_INFO,Banks | Interests (forecast) | no information,0.0,level
+2026-01-01,national,BANKS_INTEREST_ON_DEMAND,Banks | Interests (forecast) | on demand,0.0,level
+2026-04-01,national,BANKS_INTEREST_ON_DEMAND,Banks | Interests (forecast) | on demand,0.0,level
+2026-01-01,national,BANKS_PRINCIPAL_AFTER_2Y,Banks | Principal (forecast) | after 2 years,6644.993795,level
+2026-04-01,national,BANKS_PRINCIPAL_AFTER_2Y,Banks | Principal (forecast) | after 2 years,6609.555878,level
+2026-01-01,national,BANKS_PRINCIPAL_M01_03,Banks | Principal (forecast) | within 1-3 months,1823.493371,level
+2026-04-01,national,BANKS_PRINCIPAL_M01_03,Banks | Principal (forecast) | within 1-3 months,3081.595896,level
+2026-01-01,national,BANKS_PRINCIPAL_M04_06,Banks | Principal (forecast) | within 4-6 months,1554.305239,level
+2026-04-01,national,BANKS_PRINCIPAL_M04_06,Banks | Principal (forecast) | within 4-6 months,1229.16262,level
+2026-01-01,national,BANKS_PRINCIPAL_M07_09,Banks | Principal (forecast) | within 7-9 months,1082.317957,level
+2026-04-01,national,BANKS_PRINCIPAL_M07_09,Banks | Principal (forecast) | within 7-9 months,998.930021,level
+2026-01-01,national,BANKS_PRINCIPAL_M10_12,Banks | Principal (forecast) | within 10-12 months,1102.719841,level
+2026-04-01,national,BANKS_PRINCIPAL_M10_12,Banks | Principal (forecast) | within 10-12 months,1037.310433,level
+2026-01-01,national,BANKS_PRINCIPAL_M13_15,Banks | Principal (forecast) | within 13-15 months,367.28231,level
+2026-04-01,national,BANKS_PRINCIPAL_M13_15,Banks | Principal (forecast) | within 13-15 months,1151.672673,level
+2026-01-01,national,BANKS_PRINCIPAL_M16_18,Banks | Principal (forecast) | within 16-18 months,1138.17723,level
+2026-04-01,national,BANKS_PRINCIPAL_M16_18,Banks | Principal (forecast) | within 16-18 months,623.451647,level
+2026-01-01,national,BANKS_PRINCIPAL_M19_21,Banks | Principal (forecast) | within 19-21 months,520.10302,level
+2026-04-01,national,BANKS_PRINCIPAL_M19_21,Banks | Principal (forecast) | within 19-21 months,609.423081,level
+2026-01-01,national,BANKS_PRINCIPAL_M22_24,Banks | Principal (forecast) | within 22-24 months,670.831841,level
+2026-04-01,national,BANKS_PRINCIPAL_M22_24,Banks | Principal (forecast) | within 22-24 months,289.223123,level
+2026-01-01,national,BANKS_PRINCIPAL_NO_INFO,Banks | Principal (forecast) | no information,0.0,level
+2026-04-01,national,BANKS_PRINCIPAL_NO_INFO,Banks | Principal (forecast) | no information,0.0,level
+2026-01-01,national,BANKS_PRINCIPAL_ON_DEMAND,Banks | Principal (forecast) | on demand,3383.185562,level
+2026-04-01,national,BANKS_PRINCIPAL_ON_DEMAND,Banks | Principal (forecast) | on demand,3521.814773,level
+2026-01-01,national,CB_INTEREST_AFTER_2Y,Central Bank | Interests (forecast) | after 2 years,0.0,level
+2026-04-01,national,CB_INTEREST_AFTER_2Y,Central Bank | Interests (forecast) | after 2 years,0.0,level
+2026-01-01,national,CB_INTEREST_M01_03,Central Bank | Interests (forecast) | within 1-3 months,16.27827,level
+2026-04-01,national,CB_INTEREST_M01_03,Central Bank | Interests (forecast) | within 1-3 months,29.18308,level
+2026-01-01,national,CB_INTEREST_M04_06,Central Bank | Interests (forecast) | within 4-6 months,16.27827,level
+2026-04-01,national,CB_INTEREST_M04_06,Central Bank | Interests (forecast) | within 4-6 months,29.18308,level
+2026-01-01,national,CB_INTEREST_M07_09,Central Bank | Interests (forecast) | within 7-9 months,16.27827,level
+2026-04-01,national,CB_INTEREST_M07_09,Central Bank | Interests (forecast) | within 7-9 months,29.18308,level
+2026-01-01,national,CB_INTEREST_M10_12,Central Bank | Interests (forecast) | within 10-12 months,16.27827,level
+2026-04-01,national,CB_INTEREST_M10_12,Central Bank | Interests (forecast) | within 10-12 months,29.18308,level
+2026-01-01,national,CB_INTEREST_M13_15,Central Bank | Interests (forecast) | within 13-15 months,16.27827,level
+2026-04-01,national,CB_INTEREST_M13_15,Central Bank | Interests (forecast) | within 13-15 months,29.18308,level
+2026-01-01,national,CB_INTEREST_M16_18,Central Bank | Interests (forecast) | within 16-18 months,16.27827,level
+2026-04-01,national,CB_INTEREST_M16_18,Central Bank | Interests (forecast) | within 16-18 months,29.18308,level
+2026-01-01,national,CB_INTEREST_M19_21,Central Bank | Interests (forecast) | within 19-21 months,16.27827,level
+2026-04-01,national,CB_INTEREST_M19_21,Central Bank | Interests (forecast) | within 19-21 months,29.18308,level
+2026-01-01,national,CB_INTEREST_M22_24,Central Bank | Interests (forecast) | within 22-24 months,16.27827,level
+2026-04-01,national,CB_INTEREST_M22_24,Central Bank | Interests (forecast) | within 22-24 months,29.18308,level
+2026-01-01,national,CB_INTEREST_NO_INFO,Central Bank | Interests (forecast) | no information,0.0,level
+2026-04-01,national,CB_INTEREST_NO_INFO,Central Bank | Interests (forecast) | no information,0.0,level
+2026-01-01,national,CB_INTEREST_ON_DEMAND,Central Bank | Interests (forecast) | on demand,0.0,level
+2026-04-01,national,CB_INTEREST_ON_DEMAND,Central Bank | Interests (forecast) | on demand,0.0,level
+2026-01-01,national,CB_PRINCIPAL_AFTER_2Y,Central Bank | Principal (forecast) | after 2 years,1999.059088,level
+2026-04-01,national,CB_PRINCIPAL_AFTER_2Y,Central Bank | Principal (forecast) | after 2 years,1980.214069,level
+2026-01-01,national,CB_PRINCIPAL_M01_03,Central Bank | Principal (forecast) | within 1-3 months,295.698475,level
+2026-04-01,national,CB_PRINCIPAL_M01_03,Central Bank | Principal (forecast) | within 1-3 months,260.693057,level
+2026-01-01,national,CB_PRINCIPAL_M04_06,Central Bank | Principal (forecast) | within 4-6 months,0.0,level
+2026-04-01,national,CB_PRINCIPAL_M04_06,Central Bank | Principal (forecast) | within 4-6 months,0.0,level
+2026-01-01,national,CB_PRINCIPAL_M07_09,Central Bank | Principal (forecast) | within 7-9 months,0.0,level
+2026-04-01,national,CB_PRINCIPAL_M07_09,Central Bank | Principal (forecast) | within 7-9 months,0.0,level
+2026-01-01,national,CB_PRINCIPAL_M10_12,Central Bank | Principal (forecast) | within 10-12 months,0.0,level
+2026-04-01,national,CB_PRINCIPAL_M10_12,Central Bank | Principal (forecast) | within 10-12 months,0.0,level
+2026-01-01,national,CB_PRINCIPAL_M13_15,Central Bank | Principal (forecast) | within 13-15 months,0.0,level
+2026-04-01,national,CB_PRINCIPAL_M13_15,Central Bank | Principal (forecast) | within 13-15 months,0.0,level
+2026-01-01,national,CB_PRINCIPAL_M16_18,Central Bank | Principal (forecast) | within 16-18 months,0.0,level
+2026-04-01,national,CB_PRINCIPAL_M16_18,Central Bank | Principal (forecast) | within 16-18 months,0.0,level
+2026-01-01,national,CB_PRINCIPAL_M19_21,Central Bank | Principal (forecast) | within 19-21 months,0.0,level
+2026-04-01,national,CB_PRINCIPAL_M19_21,Central Bank | Principal (forecast) | within 19-21 months,0.0,level
+2026-01-01,national,CB_PRINCIPAL_M22_24,Central Bank | Principal (forecast) | within 22-24 months,0.0,level
+2026-04-01,national,CB_PRINCIPAL_M22_24,Central Bank | Principal (forecast) | within 22-24 months,0.0,level
+2026-01-01,national,CB_PRINCIPAL_NO_INFO,Central Bank | Principal (forecast) | no information,0.0,level
+2026-04-01,national,CB_PRINCIPAL_NO_INFO,Central Bank | Principal (forecast) | no information,0.0,level
+2026-01-01,national,CB_PRINCIPAL_ON_DEMAND,Central Bank | Principal (forecast) | on demand,299.6748,level
+2026-04-01,national,CB_PRINCIPAL_ON_DEMAND,Central Bank | Principal (forecast) | on demand,140.884212,level
+2026-01-01,national,FDI_LOANS_INTEREST_AFTER_2Y,Direct investment: Intercompany lending | Interests (forecast) | after 2 years,0.0,level
+2026-04-01,national,FDI_LOANS_INTEREST_AFTER_2Y,Direct investment: Intercompany lending | Interests (forecast) | after 2 years,0.0,level
+2026-01-01,national,FDI_LOANS_INTEREST_M01_03,Direct investment: Intercompany lending | Interests (forecast) | within 1-3 months,2238.936342,level
+2026-04-01,national,FDI_LOANS_INTEREST_M01_03,Direct investment: Intercompany lending | Interests (forecast) | within 1-3 months,2180.623559,level
+2026-01-01,national,FDI_LOANS_INTEREST_M04_06,Direct investment: Intercompany lending | Interests (forecast) | within 4-6 months,2209.812615,level
+2026-04-01,national,FDI_LOANS_INTEREST_M04_06,Direct investment: Intercompany lending | Interests (forecast) | within 4-6 months,2165.281214,level
+2026-01-01,national,FDI_LOANS_INTEREST_M07_09,Direct investment: Intercompany lending | Interests (forecast) | within 7-9 months,2188.10291,level
+2026-04-01,national,FDI_LOANS_INTEREST_M07_09,Direct investment: Intercompany lending | Interests (forecast) | within 7-9 months,2128.039986,level
+2026-01-01,national,FDI_LOANS_INTEREST_M10_12,Direct investment: Intercompany lending | Interests (forecast) | within 10-12 months,2173.086349,level
+2026-04-01,national,FDI_LOANS_INTEREST_M10_12,Direct investment: Intercompany lending | Interests (forecast) | within 10-12 months,2047.665456,level
+2026-01-01,national,FDI_LOANS_INTEREST_M13_15,Direct investment: Intercompany lending | Interests (forecast) | within 13-15 months,2053.466892,level
+2026-04-01,national,FDI_LOANS_INTEREST_M13_15,Direct investment: Intercompany lending | Interests (forecast) | within 13-15 months,2044.569582,level
+2026-01-01,national,FDI_LOANS_INTEREST_M16_18,Direct investment: Intercompany lending | Interests (forecast) | within 16-18 months,2051.628564,level
+2026-04-01,national,FDI_LOANS_INTEREST_M16_18,Direct investment: Intercompany lending | Interests (forecast) | within 16-18 months,2039.133435,level
+2026-01-01,national,FDI_LOANS_INTEREST_M19_21,Direct investment: Intercompany lending | Interests (forecast) | within 19-21 months,2049.109178,level
+2026-04-01,national,FDI_LOANS_INTEREST_M19_21,Direct investment: Intercompany lending | Interests (forecast) | within 19-21 months,2026.619481,level
+2026-01-01,national,FDI_LOANS_INTEREST_M22_24,Direct investment: Intercompany lending | Interests (forecast) | within 22-24 months,2043.604596,level
+2026-04-01,national,FDI_LOANS_INTEREST_M22_24,Direct investment: Intercompany lending | Interests (forecast) | within 22-24 months,1984.961624,level
+2026-01-01,national,FDI_LOANS_INTEREST_NO_INFO,Direct investment: Intercompany lending | Interests (forecast) | no information,0.0,level
+2026-04-01,national,FDI_LOANS_INTEREST_NO_INFO,Direct investment: Intercompany lending | Interests (forecast) | no information,0.0,level
+2026-01-01,national,FDI_LOANS_INTEREST_ON_DEMAND,Direct investment: Intercompany lending | Interests (forecast) | on demand,0.0,level
+2026-04-01,national,FDI_LOANS_INTEREST_ON_DEMAND,Direct investment: Intercompany lending | Interests (forecast) | on demand,0.0,level
+2026-01-01,national,FDI_LOANS_PRINCIPAL_AFTER_2Y,Direct investment: Intercompany lending | Principal (forecast) | after 2 years,58240.02556,level
+2026-04-01,national,FDI_LOANS_PRINCIPAL_AFTER_2Y,Direct investment: Intercompany lending | Principal (forecast) | after 2 years,59617.196024,level
+2026-01-01,national,FDI_LOANS_PRINCIPAL_M01_03,Direct investment: Intercompany lending | Principal (forecast) | within 1-3 months,5038.73437,level
+2026-04-01,national,FDI_LOANS_PRINCIPAL_M01_03,Direct investment: Intercompany lending | Principal (forecast) | within 1-3 months,5020.725993,level
+2026-01-01,national,FDI_LOANS_PRINCIPAL_M04_06,Direct investment: Intercompany lending | Principal (forecast) | within 4-6 months,2896.698808,level
+2026-04-01,national,FDI_LOANS_PRINCIPAL_M04_06,Direct investment: Intercompany lending | Principal (forecast) | within 4-6 months,3398.122154,level
+2026-01-01,national,FDI_LOANS_PRINCIPAL_M07_09,Direct investment: Intercompany lending | Principal (forecast) | within 7-9 months,4053.128616,level
+2026-04-01,national,FDI_LOANS_PRINCIPAL_M07_09,Direct investment: Intercompany lending | Principal (forecast) | within 7-9 months,2101.003006,level
+2026-01-01,national,FDI_LOANS_PRINCIPAL_M10_12,Direct investment: Intercompany lending | Principal (forecast) | within 10-12 months,3610.89261,level
+2026-04-01,national,FDI_LOANS_PRINCIPAL_M10_12,Direct investment: Intercompany lending | Principal (forecast) | within 10-12 months,2127.602403,level
+2026-01-01,national,FDI_LOANS_PRINCIPAL_M13_15,Direct investment: Intercompany lending | Principal (forecast) | within 13-15 months,2370.647692,level
+2026-04-01,national,FDI_LOANS_PRINCIPAL_M13_15,Direct investment: Intercompany lending | Principal (forecast) | within 13-15 months,2173.730438,level
+2026-01-01,national,FDI_LOANS_PRINCIPAL_M16_18,Direct investment: Intercompany lending | Principal (forecast) | within 16-18 months,2328.779811,level
+2026-04-01,national,FDI_LOANS_PRINCIPAL_M16_18,Direct investment: Intercompany lending | Principal (forecast) | within 16-18 months,2618.783048,level
+2026-01-01,national,FDI_LOANS_PRINCIPAL_M19_21,Direct investment: Intercompany lending | Principal (forecast) | within 19-21 months,2478.165235,level
+2026-04-01,national,FDI_LOANS_PRINCIPAL_M19_21,Direct investment: Intercompany lending | Principal (forecast) | within 19-21 months,1950.697192,level
+2026-01-01,national,FDI_LOANS_PRINCIPAL_M22_24,Direct investment: Intercompany lending | Principal (forecast) | within 22-24 months,2863.210474,level
+2026-04-01,national,FDI_LOANS_PRINCIPAL_M22_24,Direct investment: Intercompany lending | Principal (forecast) | within 22-24 months,1921.954412,level
+2026-01-01,national,FDI_LOANS_PRINCIPAL_NO_INFO,Direct investment: Intercompany lending | Principal (forecast) | no information,5990.121719,level
+2026-04-01,national,FDI_LOANS_PRINCIPAL_NO_INFO,Direct investment: Intercompany lending | Principal (forecast) | no information,6418.078432,level
+2026-01-01,national,FDI_LOANS_PRINCIPAL_ON_DEMAND,Direct investment: Intercompany lending | Principal (forecast) | on demand,26.97104,level
+2026-04-01,national,FDI_LOANS_PRINCIPAL_ON_DEMAND,Direct investment: Intercompany lending | Principal (forecast) | on demand,30.483439,level
+2026-01-01,national,GG_INTEREST_AFTER_2Y,General government | Interests (forecast) | after 2 years,0.0,level
+2026-04-01,national,GG_INTEREST_AFTER_2Y,General government | Interests (forecast) | after 2 years,0.0,level
+2026-01-01,national,GG_INTEREST_M01_03,General government | Interests (forecast) | within 1-3 months,142.484453,level
+2026-04-01,national,GG_INTEREST_M01_03,General government | Interests (forecast) | within 1-3 months,134.775266,level
+2026-01-01,national,GG_INTEREST_M04_06,General government | Interests (forecast) | within 4-6 months,142.212335,level
+2026-04-01,national,GG_INTEREST_M04_06,General government | Interests (forecast) | within 4-6 months,130.649739,level
+2026-01-01,national,GG_INTEREST_M07_09,General government | Interests (forecast) | within 7-9 months,137.957712,level
+2026-04-01,national,GG_INTEREST_M07_09,General government | Interests (forecast) | within 7-9 months,128.629477,level
+2026-01-01,national,GG_INTEREST_M10_12,General government | Interests (forecast) | within 10-12 months,135.849438,level
+2026-04-01,national,GG_INTEREST_M10_12,General government | Interests (forecast) | within 10-12 months,126.796678,level
+2026-01-01,national,GG_INTEREST_M13_15,General government | Interests (forecast) | within 13-15 months,133.940036,level
+2026-04-01,national,GG_INTEREST_M13_15,General government | Interests (forecast) | within 13-15 months,125.010179,level
+2026-01-01,national,GG_INTEREST_M16_18,General government | Interests (forecast) | within 16-18 months,132.082247,level
+2026-04-01,national,GG_INTEREST_M16_18,General government | Interests (forecast) | within 16-18 months,122.825487,level
+2026-01-01,national,GG_INTEREST_M19_21,General government | Interests (forecast) | within 19-21 months,130.167844,level
+2026-04-01,national,GG_INTEREST_M19_21,General government | Interests (forecast) | within 19-21 months,119.028538,level
+2026-01-01,national,GG_INTEREST_M22_24,General government | Interests (forecast) | within 22-24 months,126.22536,level
+2026-04-01,national,GG_INTEREST_M22_24,General government | Interests (forecast) | within 22-24 months,116.841191,level
+2026-01-01,national,GG_INTEREST_NO_INFO,General government | Interests (forecast) | no information,0.0,level
+2026-04-01,national,GG_INTEREST_NO_INFO,General government | Interests (forecast) | no information,0.0,level
+2026-01-01,national,GG_INTEREST_ON_DEMAND,General government | Interests (forecast) | on demand,0.0,level
+2026-04-01,national,GG_INTEREST_ON_DEMAND,General government | Interests (forecast) | on demand,0.0,level
+2026-01-01,national,GG_PRINCIPAL_AFTER_2Y,General government | Principal (forecast) | after 2 years,14133.2919,level
+2026-04-01,national,GG_PRINCIPAL_AFTER_2Y,General government | Principal (forecast) | after 2 years,14459.677499,level
+2026-01-01,national,GG_PRINCIPAL_M01_03,General government | Principal (forecast) | within 1-3 months,117.139778,level
+2026-04-01,national,GG_PRINCIPAL_M01_03,General government | Principal (forecast) | within 1-3 months,404.691357,level
+2026-01-01,national,GG_PRINCIPAL_M04_06,General government | Principal (forecast) | within 4-6 months,321.753017,level
+2026-04-01,national,GG_PRINCIPAL_M04_06,General government | Principal (forecast) | within 4-6 months,351.213674,level
+2026-01-01,national,GG_PRINCIPAL_M07_09,General government | Principal (forecast) | within 7-9 months,359.874365,level
+2026-04-01,national,GG_PRINCIPAL_M07_09,General government | Principal (forecast) | within 7-9 months,201.317366,level
+2026-01-01,national,GG_PRINCIPAL_M10_12,General government | Principal (forecast) | within 10-12 months,200.153106,level
+2026-04-01,national,GG_PRINCIPAL_M10_12,General government | Principal (forecast) | within 10-12 months,196.531084,level
+2026-01-01,national,GG_PRINCIPAL_M13_15,General government | Principal (forecast) | within 13-15 months,185.457272,level
+2026-04-01,national,GG_PRINCIPAL_M13_15,General government | Principal (forecast) | within 13-15 months,225.845154,level
+2026-01-01,national,GG_PRINCIPAL_M16_18,General government | Principal (forecast) | within 16-18 months,191.108714,level
+2026-04-01,national,GG_PRINCIPAL_M16_18,General government | Principal (forecast) | within 16-18 months,294.50792,level
+2026-01-01,national,GG_PRINCIPAL_M19_21,General government | Principal (forecast) | within 19-21 months,299.636235,level
+2026-04-01,national,GG_PRINCIPAL_M19_21,General government | Principal (forecast) | within 19-21 months,226.119688,level
+2026-01-01,national,GG_PRINCIPAL_M22_24,General government | Principal (forecast) | within 22-24 months,191.110371,level
+2026-04-01,national,GG_PRINCIPAL_M22_24,General government | Principal (forecast) | within 22-24 months,181.5848,level
+2026-01-01,national,GG_PRINCIPAL_NO_INFO,General government | Principal (forecast) | no information,0.0,level
+2026-04-01,national,GG_PRINCIPAL_NO_INFO,General government | Principal (forecast) | no information,0.0,level
+2026-01-01,national,GG_PRINCIPAL_ON_DEMAND,General government | Principal (forecast) | on demand,0.0,level
+2026-04-01,national,GG_PRINCIPAL_ON_DEMAND,General government | Principal (forecast) | on demand,0.0,level
+2026-01-01,national,MEMO_GOODS_AFTER_2Y,Repayment of external debt in the form of goods (forecast) | after 2 years,35169.900361,level
+2026-04-01,national,MEMO_GOODS_AFTER_2Y,Repayment of external debt in the form of goods (forecast) | after 2 years,36362.065824,level
+2026-01-01,national,MEMO_GOODS_M01_03,Repayment of external debt in the form of goods (forecast) | within 1-3 months,3127.199435,level
+2026-04-01,national,MEMO_GOODS_M01_03,Repayment of external debt in the form of goods (forecast) | within 1-3 months,2931.177237,level
+2026-01-01,national,MEMO_GOODS_M04_06,Repayment of external debt in the form of goods (forecast) | within 4-6 months,3006.832435,level
+2026-04-01,national,MEMO_GOODS_M04_06,Repayment of external debt in the form of goods (forecast) | within 4-6 months,2579.376657,level
+2026-01-01,national,MEMO_GOODS_M07_09,Repayment of external debt in the form of goods (forecast) | within 7-9 months,2844.677565,level
+2026-04-01,national,MEMO_GOODS_M07_09,Repayment of external debt in the form of goods (forecast) | within 7-9 months,2686.945347,level
+2026-01-01,national,MEMO_GOODS_M10_12,Repayment of external debt in the form of goods (forecast) | within 10-12 months,2952.246255,level
+2026-04-01,national,MEMO_GOODS_M10_12,Repayment of external debt in the form of goods (forecast) | within 10-12 months,2871.908463,level
+2026-01-01,national,MEMO_GOODS_M13_15,Repayment of external debt in the form of goods (forecast) | within 13-15 months,3159.283788,level
+2026-04-01,national,MEMO_GOODS_M13_15,Repayment of external debt in the form of goods (forecast) | within 13-15 months,2712.701303,level
+2026-01-01,national,MEMO_GOODS_M16_18,Repayment of external debt in the form of goods (forecast) | within 16-18 months,3000.076628,level
+2026-04-01,national,MEMO_GOODS_M16_18,Repayment of external debt in the form of goods (forecast) | within 16-18 months,2725.752413,level
+2026-01-01,national,MEMO_GOODS_M19_21,Repayment of external debt in the form of goods (forecast) | within 19-21 months,3013.127738,level
+2026-04-01,national,MEMO_GOODS_M19_21,Repayment of external debt in the form of goods (forecast) | within 19-21 months,2710.369913,level
+2026-01-01,national,MEMO_GOODS_M22_24,Repayment of external debt in the form of goods (forecast) | within 22-24 months,2997.745238,level
+2026-04-01,national,MEMO_GOODS_M22_24,Repayment of external debt in the form of goods (forecast) | within 22-24 months,2597.302361,level
+2026-01-01,national,MEMO_GOODS_NO_INFO,Repayment of external debt in the form of goods (forecast) | no information,0.0,level
+2026-04-01,national,MEMO_GOODS_NO_INFO,Repayment of external debt in the form of goods (forecast) | no information,0.0,level
+2026-01-01,national,MEMO_GOODS_ON_DEMAND,Repayment of external debt in the form of goods (forecast) | on demand,0.0,level
+2026-04-01,national,MEMO_GOODS_ON_DEMAND,Repayment of external debt in the form of goods (forecast) | on demand,0.0,level
+2026-01-01,national,OTHER_INTEREST_AFTER_2Y,Other sectors | Interests (forecast) | after 2 years,0.0,level
+2026-04-01,national,OTHER_INTEREST_AFTER_2Y,Other sectors | Interests (forecast) | after 2 years,0.0,level
+2026-01-01,national,OTHER_INTEREST_M01_03,Other sectors | Interests (forecast) | within 1-3 months,545.808334,level
+2026-04-01,national,OTHER_INTEREST_M01_03,Other sectors | Interests (forecast) | within 1-3 months,534.935252,level
+2026-01-01,national,OTHER_INTEREST_M04_06,Other sectors | Interests (forecast) | within 4-6 months,532.639748,level
+2026-04-01,national,OTHER_INTEREST_M04_06,Other sectors | Interests (forecast) | within 4-6 months,519.673346,level
+2026-01-01,national,OTHER_INTEREST_M07_09,Other sectors | Interests (forecast) | within 7-9 months,516.580609,level
+2026-04-01,national,OTHER_INTEREST_M07_09,Other sectors | Interests (forecast) | within 7-9 months,494.673849,level
+2026-01-01,national,OTHER_INTEREST_M10_12,Other sectors | Interests (forecast) | within 10-12 months,502.390295,level
+2026-04-01,national,OTHER_INTEREST_M10_12,Other sectors | Interests (forecast) | within 10-12 months,480.292415,level
+2026-01-01,national,OTHER_INTEREST_M13_15,Other sectors | Interests (forecast) | within 13-15 months,474.79113,level
+2026-04-01,national,OTHER_INTEREST_M13_15,Other sectors | Interests (forecast) | within 13-15 months,455.667387,level
+2026-01-01,national,OTHER_INTEREST_M16_18,Other sectors | Interests (forecast) | within 16-18 months,466.831997,level
+2026-04-01,national,OTHER_INTEREST_M16_18,Other sectors | Interests (forecast) | within 16-18 months,448.34944,level
+2026-01-01,national,OTHER_INTEREST_M19_21,Other sectors | Interests (forecast) | within 19-21 months,446.611841,level
+2026-04-01,national,OTHER_INTEREST_M19_21,Other sectors | Interests (forecast) | within 19-21 months,427.910313,level
+2026-01-01,national,OTHER_INTEREST_M22_24,Other sectors | Interests (forecast) | within 22-24 months,431.995998,level
+2026-04-01,national,OTHER_INTEREST_M22_24,Other sectors | Interests (forecast) | within 22-24 months,419.928575,level
+2026-01-01,national,OTHER_INTEREST_NO_INFO,Other sectors | Interests (forecast) | no information,0.0,level
+2026-04-01,national,OTHER_INTEREST_NO_INFO,Other sectors | Interests (forecast) | no information,0.0,level
+2026-01-01,national,OTHER_INTEREST_ON_DEMAND,Other sectors | Interests (forecast) | on demand,0.0,level
+2026-04-01,national,OTHER_INTEREST_ON_DEMAND,Other sectors | Interests (forecast) | on demand,0.0,level
+2026-01-01,national,OTHER_PRINCIPAL_AFTER_2Y,Other sectors | Principal (forecast) | after 2 years,25994.561826,level
+2026-04-01,national,OTHER_PRINCIPAL_AFTER_2Y,Other sectors | Principal (forecast) | after 2 years,26208.84214,level
+2026-01-01,national,OTHER_PRINCIPAL_M01_03,Other sectors | Principal (forecast) | within 1-3 months,3965.619453,level
+2026-04-01,national,OTHER_PRINCIPAL_M01_03,Other sectors | Principal (forecast) | within 1-3 months,4269.399494,level
+2026-01-01,national,OTHER_PRINCIPAL_M04_06,Other sectors | Principal (forecast) | within 4-6 months,4046.764137,level
+2026-04-01,national,OTHER_PRINCIPAL_M04_06,Other sectors | Principal (forecast) | within 4-6 months,5189.010342,level
+2026-01-01,national,OTHER_PRINCIPAL_M07_09,Other sectors | Principal (forecast) | within 7-9 months,4057.025952,level
+2026-04-01,national,OTHER_PRINCIPAL_M07_09,Other sectors | Principal (forecast) | within 7-9 months,4272.309205,level
+2026-01-01,national,OTHER_PRINCIPAL_M10_12,Other sectors | Principal (forecast) | within 10-12 months,4991.506272,level
+2026-04-01,national,OTHER_PRINCIPAL_M10_12,Other sectors | Principal (forecast) | within 10-12 months,5157.053537,level
+2026-01-01,national,OTHER_PRINCIPAL_M13_15,Other sectors | Principal (forecast) | within 13-15 months,619.385981,level
+2026-04-01,national,OTHER_PRINCIPAL_M13_15,Other sectors | Principal (forecast) | within 13-15 months,731.405032,level
+2026-01-01,national,OTHER_PRINCIPAL_M16_18,Other sectors | Principal (forecast) | within 16-18 months,1680.878518,level
+2026-04-01,national,OTHER_PRINCIPAL_M16_18,Other sectors | Principal (forecast) | within 16-18 months,1701.321659,level
+2026-01-01,national,OTHER_PRINCIPAL_M19_21,Other sectors | Principal (forecast) | within 19-21 months,1223.83628,level
+2026-04-01,national,OTHER_PRINCIPAL_M19_21,Other sectors | Principal (forecast) | within 19-21 months,633.747208,level
+2026-01-01,national,OTHER_PRINCIPAL_M22_24,Other sectors | Principal (forecast) | within 22-24 months,1033.797799,level
+2026-04-01,national,OTHER_PRINCIPAL_M22_24,Other sectors | Principal (forecast) | within 22-24 months,843.691993,level
+2026-01-01,national,OTHER_PRINCIPAL_NO_INFO,Other sectors | Principal (forecast) | no information,7415.542215,level
+2026-04-01,national,OTHER_PRINCIPAL_NO_INFO,Other sectors | Principal (forecast) | no information,8280.736846,level
+2026-01-01,national,OTHER_PRINCIPAL_ON_DEMAND,Other sectors | Principal (forecast) | on demand,33.928708,level
+2026-04-01,national,OTHER_PRINCIPAL_ON_DEMAND,Other sectors | Principal (forecast) | on demand,36.924969,level
