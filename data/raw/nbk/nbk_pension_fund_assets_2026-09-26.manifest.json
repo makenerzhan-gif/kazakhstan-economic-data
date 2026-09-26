@@ -1,7 +1,11 @@
 {
-  "downloaded_at": "2026-09-26T09:42:18.100786",
+  "downloaded_at": "2026-09-26T11:57:15.168353",
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "25",
   "n_pages": 3,
-  "total_rows": 1100
+  "total_rows": 1100,
+  "rows_archived": 1100,
+  "raw_file": "nbk_pension_fund_assets_2026-09-26_115715.json",
+  "raw_format": "nbk-open-data-form/canonical-v1",
+  "raw_normalisation": "all rows of all pages, unchanged and none dropped, sorted by report_date then full row content; page envelope fields common to all pages kept once; distinct column entries of all pages, sorted; keys sorted. Page boundaries and the API's row order are not kept (they vary between identical downloads)."
 }

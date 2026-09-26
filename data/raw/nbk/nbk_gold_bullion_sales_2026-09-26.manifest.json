@@ -1,7 +1,11 @@
 {
-  "downloaded_at": "2026-09-26T07:43:26.043245",
+  "downloaded_at": "2026-09-26T12:02:17.085304",
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "476",
   "n_pages": 1,
-  "total_rows": 36
+  "total_rows": 36,
+  "rows_archived": 36,
+  "raw_file": "nbk_gold_bullion_sales_2026-09-26.json",
+  "raw_format": "nbk-open-data-form/canonical-v1",
+  "raw_normalisation": "all rows of all pages, unchanged and none dropped, sorted by report_date then full row content; page envelope fields common to all pages kept once; distinct column entries of all pages, sorted; keys sorted. Page boundaries and the API's row order are not kept (they vary between identical downloads)."
 }

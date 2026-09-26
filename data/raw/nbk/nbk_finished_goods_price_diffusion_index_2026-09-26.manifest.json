@@ -1,7 +1,11 @@
 {
-  "downloaded_at": "2026-09-26T07:42:41.456814",
+  "downloaded_at": "2026-09-26T12:01:32.861905",
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "387",
   "n_pages": 5,
-  "total_rows": 2408
+  "total_rows": 2408,
+  "rows_archived": 2408,
+  "raw_file": "nbk_finished_goods_price_diffusion_index_2026-09-26.json",
+  "raw_format": "nbk-open-data-form/canonical-v1",
+  "raw_normalisation": "all rows of all pages, unchanged and none dropped, sorted by report_date then full row content; page envelope fields common to all pages kept once; distinct column entries of all pages, sorted; keys sorted. Page boundaries and the API's row order are not kept (they vary between identical downloads)."
 }

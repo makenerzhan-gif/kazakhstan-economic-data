@@ -1,7 +1,11 @@
 {
-  "downloaded_at": "2026-09-26T07:41:41.726576",
+  "downloaded_at": "2026-09-26T12:00:33.175763",
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "29",
   "n_pages": 22,
-  "total_rows": 10800
+  "total_rows": 10800,
+  "rows_archived": 10800,
+  "raw_file": "nbk_pension_payments_2026-09-26_120033.json",
+  "raw_format": "nbk-open-data-form/canonical-v1",
+  "raw_normalisation": "all rows of all pages, unchanged and none dropped, sorted by report_date then full row content; page envelope fields common to all pages kept once; distinct column entries of all pages, sorted; keys sorted. Page boundaries and the API's row order are not kept (they vary between identical downloads)."
 }

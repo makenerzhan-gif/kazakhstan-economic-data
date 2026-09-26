@@ -73919,6 +73919,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-30,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,4121454.18482001,"million KZT, year-to-date cumulative",minfin,2026-09-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-26
 2025-11-30,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,280505.95981457,million KZT,minfin,2026-09-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-26
 2025-11-30,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-9269989.67502493,million KZT,minfin,2026-09-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-26
+2025-12-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-09-26,level,2026-09-26
+2025-12-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-09-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-26
+2025-12-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-09-26,level,2026-09-26
+2025-12-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-09-26,level,2026-09-26
 2025-12-01,KZ,national,irregular,BASE_RATE,18.0,% p.a.,nbk,2026-09-26,level,2026-09-26
 2025-12-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.9,index,nbk,2026-09-26,level,2026-09-26
 2025-12-01,BLR,national,monthly,BY_CPI_YOY,106.8,"index, same month previous year = 100",eec,2026-09-26,level,2026-09-26
