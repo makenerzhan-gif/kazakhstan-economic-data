@@ -175,3 +175,26 @@ def test_dedup_nbk_forms_removes_copies_equal_in_canonical_form(raw_root):
     assert set(record["nbk_forms_removed"]) == {rel + name for name, _ in old}
     assert all(record["removed"][rel + name] == rel + canonical for name, _ in old)
     assert record["nbk_forms_rule"]
+
+
+def test_dedup_wits_removes_answers_equal_apart_from_the_stamp(raw_root):
+    folder = raw_root / "wits"
+    folder.mkdir()
+
+    def answer(prepared, value=1.0):
+        return json.dumps({"header": {"id": "x", "prepared": prepared}, "dataSets": [{"v": value}]}).encode()
+
+    (folder / "wits_exports_2026-09-25.json").write_bytes(answer("2026-09-25T14:53:30"))
+    (folder / "wits_exports_2026-09-26.json").write_bytes(answer("2026-09-26T01:54:18"))
+    (folder / "wits_exports_2026-09-26_082354.json").write_bytes(answer("2026-09-26T08:23:54"))
+    (folder / "wits_exports_2026-09-27.json").write_bytes(answer("2026-09-27T01:00:00", 2.0))     # new data
+    m = folder / "wits_exports_2026-09-26.manifest.json"
+    m.write_text(json.dumps({"raw_file": "wits_exports_2026-09-26_082354.json"}), encoding="utf-8")
+
+    assert dedup_raw.main(["--wits"]) == 0
+    assert sorted(p.name for p in folder.glob("*.json") if not p.name.endswith(".manifest.json")) == [
+        "wits_exports_2026-09-25.json", "wits_exports_2026-09-27.json"]
+    info = json.loads(m.read_text(encoding="utf-8"))
+    assert info["raw_file"] == "wits_exports_2026-09-25.json" and "header.prepared" in info["raw_file_note"]
+    record = json.loads(next(raw_root.glob("dedup_*.json")).read_text(encoding="utf-8"))
+    assert len(record["wits_removed"]) == 2 and record["wits_rule"]

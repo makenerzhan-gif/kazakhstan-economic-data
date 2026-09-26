@@ -102,7 +102,21 @@
   "data/raw/nbk/nbk_insurance_premiums_general_2026-09-26.json": "data/raw/nbk/nbk_insurance_premiums_general_2026-09-26_142347.json",
   "data/raw/nbk/nbk_insurance_premiums_general_2026-09-23_150956.json": "data/raw/nbk/nbk_insurance_premiums_general_2026-09-26_142347.json",
   "data/raw/nbk/nbk_insurance_premiums_general_2026-09-23_182046.json": "data/raw/nbk/nbk_insurance_premiums_general_2026-09-26_142347.json",
-  "data/raw/nbk/nbk_insurance_premiums_general_2026-09-26_074105.json": "data/raw/nbk/nbk_insurance_premiums_general_2026-09-26_142347.json"
+  "data/raw/nbk/nbk_insurance_premiums_general_2026-09-26_074105.json": "data/raw/nbk/nbk_insurance_premiums_general_2026-09-26_142347.json",
+  "data/raw/wits/wits_kz_tariff_applied_by_partner_ahs-smpl-avrg_2026-09-26.json": "data/raw/wits/wits_kz_tariff_applied_by_partner_ahs-smpl-avrg_2026-09-25.json",
+  "data/raw/wits/wits_kz_tariff_applied_by_partner_ahs-smpl-avrg_2026-09-26_082409.json": "data/raw/wits/wits_kz_tariff_applied_by_partner_ahs-smpl-avrg_2026-09-25.json",
+  "data/raw/wits/wits_kz_tariff_averages_ahs-smpl-avrg_2026-09-26.json": "data/raw/wits/wits_kz_tariff_averages_ahs-smpl-avrg_2026-09-25.json",
+  "data/raw/wits/wits_kz_tariff_averages_ahs-smpl-avrg_2026-09-26_082403.json": "data/raw/wits/wits_kz_tariff_averages_ahs-smpl-avrg_2026-09-25.json",
+  "data/raw/wits/wits_kz_tariff_averages_ahs-wghtd-avrg_2026-09-26.json": "data/raw/wits/wits_kz_tariff_averages_ahs-wghtd-avrg_2026-09-25.json",
+  "data/raw/wits/wits_kz_tariff_averages_ahs-wghtd-avrg_2026-09-26_082406.json": "data/raw/wits/wits_kz_tariff_averages_ahs-wghtd-avrg_2026-09-25.json",
+  "data/raw/wits/wits_kz_tariff_averages_mfn-smpl-avrg_2026-09-26.json": "data/raw/wits/wits_kz_tariff_averages_mfn-smpl-avrg_2026-09-25.json",
+  "data/raw/wits/wits_kz_tariff_averages_mfn-smpl-avrg_2026-09-26_082359.json": "data/raw/wits/wits_kz_tariff_averages_mfn-smpl-avrg_2026-09-25.json",
+  "data/raw/wits/wits_kz_tariff_averages_mfn-wghtd-avrg_2026-09-26.json": "data/raw/wits/wits_kz_tariff_averages_mfn-wghtd-avrg_2026-09-25.json",
+  "data/raw/wits/wits_kz_tariff_averages_mfn-wghtd-avrg_2026-09-26_082401.json": "data/raw/wits/wits_kz_tariff_averages_mfn-wghtd-avrg_2026-09-25.json",
+  "data/raw/wits/wits_wits_kz_exports_by_partner_2026-09-26.json": "data/raw/wits/wits_wits_kz_exports_by_partner_2026-09-25.json",
+  "data/raw/wits/wits_wits_kz_exports_by_partner_2026-09-26_082354.json": "data/raw/wits/wits_wits_kz_exports_by_partner_2026-09-25.json",
+  "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-26.json": "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-25.json",
+  "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-26_082356.json": "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-25.json"
  },
  "nbk_forms_rule": "NBK paginated form downloads whose canonical form (scripts/lib/nbk_pages.py) is identical -- same rows and values, differing only in page arrangement, row order and per-page column labels -- kept once; a file already in canonical form is kept when the group has one, otherwise the earliest. These removals are listed in nbk_forms_removed and, with the file kept, in removed.",
  "nbk_forms_removed": [
@@ -208,5 +222,34 @@
   "data/raw/nbk/nbk_insurance_premiums_life_2026-09-15_085745.json",
   "data/raw/nbk/nbk_insurance_premiums_life_2026-09-15_101918.json"
  ],
- "removed_files": 101
+ "removed_files": 115,
+ "wits_rule": "WITS SDMX-JSON answers identical apart from header.prepared (the time WITS built the answer) kept once, the earliest; gravity._save_raw meant to skip them but compared each download with a manifest (raw_store.latest_raw_file returned one) until 2026-09-26. These removals are listed in wits_removed and, with the file kept, in removed.",
+ "wits_removed": [
+  "data/raw/wits/wits_kz_tariff_applied_by_partner_ahs-smpl-avrg_2026-09-26.json",
+  "data/raw/wits/wits_kz_tariff_applied_by_partner_ahs-smpl-avrg_2026-09-26_082409.json",
+  "data/raw/wits/wits_kz_tariff_averages_ahs-smpl-avrg_2026-09-26.json",
+  "data/raw/wits/wits_kz_tariff_averages_ahs-smpl-avrg_2026-09-26_082403.json",
+  "data/raw/wits/wits_kz_tariff_averages_ahs-wghtd-avrg_2026-09-26.json",
+  "data/raw/wits/wits_kz_tariff_averages_ahs-wghtd-avrg_2026-09-26_082406.json",
+  "data/raw/wits/wits_kz_tariff_averages_mfn-smpl-avrg_2026-09-26.json",
+  "data/raw/wits/wits_kz_tariff_averages_mfn-smpl-avrg_2026-09-26_082359.json",
+  "data/raw/wits/wits_kz_tariff_averages_mfn-wghtd-avrg_2026-09-26.json",
+  "data/raw/wits/wits_kz_tariff_averages_mfn-wghtd-avrg_2026-09-26_082401.json",
+  "data/raw/wits/wits_wits_kz_exports_by_partner_2026-09-26.json",
+  "data/raw/wits/wits_wits_kz_exports_by_partner_2026-09-26_082354.json",
+  "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-26.json",
+  "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-26_082356.json"
+ ],
+ "wits_never_committed": {
+  "note": "Manifests of 2026-09-25 named these files, which were written by a second run that day but never committed (commit 826002bc has the manifests, not the files). Not removals: their content is unknown. Each manifest now names the file archived that day (the value here).",
+  "files": {
+   "data/raw/wits/wits_kz_tariff_applied_by_partner_ahs-smpl-avrg_2026-09-25_185707.json": "data/raw/wits/wits_kz_tariff_applied_by_partner_ahs-smpl-avrg_2026-09-25.json",
+   "data/raw/wits/wits_kz_tariff_averages_ahs-smpl-avrg_2026-09-25_185701.json": "data/raw/wits/wits_kz_tariff_averages_ahs-smpl-avrg_2026-09-25.json",
+   "data/raw/wits/wits_kz_tariff_averages_ahs-wghtd-avrg_2026-09-25_185704.json": "data/raw/wits/wits_kz_tariff_averages_ahs-wghtd-avrg_2026-09-25.json",
+   "data/raw/wits/wits_kz_tariff_averages_mfn-smpl-avrg_2026-09-25_185657.json": "data/raw/wits/wits_kz_tariff_averages_mfn-smpl-avrg_2026-09-25.json",
+   "data/raw/wits/wits_kz_tariff_averages_mfn-wghtd-avrg_2026-09-25_185659.json": "data/raw/wits/wits_kz_tariff_averages_mfn-wghtd-avrg_2026-09-25.json",
+   "data/raw/wits/wits_wits_kz_exports_by_partner_2026-09-25_185653.json": "data/raw/wits/wits_wits_kz_exports_by_partner_2026-09-25.json",
+   "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-25_185655.json": "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-25.json"
+  }
+ }
 }

@@ -1,5 +1,6 @@
 {
   "downloaded_at": "2026-09-25T18:57:04.911218",
-  "raw_file": "wits_kz_tariff_averages_ahs-wghtd-avrg_2026-09-25_185704.json",
-  "source_url": "https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-tariff/reporter/kaz/year/all/partner/wld/product/Total/indicator/AHS-WGHTD-AVRG?format=JSON"
+  "raw_file": "wits_kz_tariff_averages_ahs-wghtd-avrg_2026-09-25.json",
+  "source_url": "https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-tariff/reporter/kaz/year/all/partner/wld/product/Total/indicator/AHS-WGHTD-AVRG?format=JSON",
+  "raw_file_note": "wits_kz_tariff_averages_ahs-wghtd-avrg_2026-09-25_185704.json (the second download of 2026-09-25, 18:56) was never committed -- it is in no commit and no dedup record, so its bytes cannot be checked; wits_kz_tariff_averages_ahs-wghtd-avrg_2026-09-25.json is the download of the same day that was archived. Every later WITS answer for this series (2026-09-26, twice) equals wits_kz_tariff_averages_ahs-wghtd-avrg_2026-09-25.json apart from header.prepared. Re-pointed 2026-09-26."
 }

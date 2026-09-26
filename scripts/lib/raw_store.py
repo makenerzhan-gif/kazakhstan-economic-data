@@ -144,9 +144,13 @@ def save_raw_bytes(agency: str, indicator_id: str, download_date: date, ext: str
 
 
 def latest_raw_file(agency: str, indicator_id: str) -> Path | None:
-    """Most recent raw file on disk for this (agency, indicator), by filename date."""
+    """Most recent raw file on disk for this (agency, indicator), by filename date. Never a
+    manifest: `x_2026-09-25.manifest.json` sorts after `x_2026-09-25.json` and was returned
+    until 2026-09-26 -- gravity._save_raw compared each WITS download with a manifest,
+    never matched, and archived every unchanged WITS answer again (data/raw/dedup_2026-09-26.json)."""
     pattern = f"{agency}_{indicator_id.lower()}_*"
-    candidates = sorted((RAW_ROOT / agency).glob(pattern)) if (RAW_ROOT / agency).exists() else []
+    candidates = sorted(p for p in (RAW_ROOT / agency).glob(pattern)
+                        if not p.name.endswith(".manifest.json")) if (RAW_ROOT / agency).exists() else []
     return candidates[-1] if candidates else None
 
 

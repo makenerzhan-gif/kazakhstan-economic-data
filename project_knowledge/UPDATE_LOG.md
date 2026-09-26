@@ -634,3 +634,12 @@ each, replaced by today's canonical copies) and re-pointed their manifests; a ma
 read form 324 and, for 2000–2019, form 481 under the same id, so the 481 download overwrote the dated manifest
 of the 324 one and was filed as a same-day "revision" (`_HHMMSS`). `_bop_history` now archives 481 under
 `<ID>_HISTORY`: two manifests per series per day, no false revision; the series are unchanged (104 quarters).
+
+**WITS.** Every WITS answer (7 series) was archived again on every run although only `header.prepared`, the
+time WITS built the answer, differed. `gravity._save_raw` was meant to skip such answers, but
+`raw_store.latest_raw_file` returned the dated *manifest* (it sorts after the `.json`), so the check never
+matched. `latest_raw_file` now never returns a manifest, and `_save_raw` still writes the day's manifest,
+naming the file that holds the data. `dedup_raw --wits` removed 14 copies (record: `wits_removed`). Seven
+manifests of 2026-09-25 named files from a second run that day that were never committed; they now name
+the file archived that day, with a note, and are listed under `wits_never_committed` (not as removals —
+their bytes are unknown). No dangling manifest left. Checked live: two WITS runs, no new file.

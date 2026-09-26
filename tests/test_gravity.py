@@ -1,5 +1,6 @@
 """Gravity-model datasets (scripts/fetchers/gravity.py): BNS trade by partner, WITS, WDI."""
 import csv
+import json
 import io
 import sys
 from pathlib import Path
@@ -96,3 +97,22 @@ def test_reference_tables_are_keyed_by_iso3():
     assert geo["iso3"].is_unique and not grav.duplicated(["iso3", "year"]).any()
     rus = grav[(grav.iso3 == "RUS") & (grav.year == 2021)].iloc[0]
     assert rus.contig == 1 and rus.fta_wto == 1
+
+
+def _wits_answer(prepared: str, value: float = 1.0) -> bytes:
+    return json.dumps({"header": {"id": "x", "prepared": prepared},
+                       "dataSets": [{"series": {"0": {"observations": {"0": [value]}}}}]}).encode()
+
+
+def test_unchanged_wits_answer_with_a_new_stamp_is_not_archived_again(tmp_path, monkeypatch):
+    monkeypatch.setattr(gravity.raw_store, "RAW_ROOT", tmp_path)
+    gravity._save_raw("wits", "WITS_KZ_EXPORTS", _wits_answer("2026-09-25T14:53:30"), "json", {"source_url": "u"})
+    first = sorted(p.name for p in (tmp_path / "wits").iterdir())
+    gravity._save_raw("wits", "WITS_KZ_EXPORTS", _wits_answer("2026-09-26T01:54:18"), "json", {"source_url": "u"})
+    files = sorted(p.name for p in (tmp_path / "wits").glob("*.json") if not p.name.endswith(".manifest.json"))
+    assert len(files) == 1 and files[0] in first
+    today = gravity.date.today().isoformat()
+    manifest = json.loads((tmp_path / "wits" / f"wits_wits_kz_exports_{today}.manifest.json").read_text(encoding="utf-8"))
+    assert manifest["raw_file"] == files[0]                      # the day's download is still recorded
+    gravity._save_raw("wits", "WITS_KZ_EXPORTS", _wits_answer("2026-09-26T09:00:00", 2.0), "json", {"source_url": "u"})
+    assert len([p for p in (tmp_path / "wits").glob("*.json") if not p.name.endswith(".manifest.json")]) == 2
