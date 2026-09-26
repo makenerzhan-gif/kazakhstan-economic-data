@@ -1,0 +1,21 @@
+{
+  "source": "imf",
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/FSIC/+/KAZ.S12CFSI.ROE_CFSI_PT.Q",
+  "dataset_id": "IMF.STA/FSIC/KAZ.S12CFSI.ROE_CFSI_PT.Q",
+  "indicator_id": "FSI_ROE",
+  "indicator_name": "Return on equity, deposit takers (IMF FSI)",
+  "description": "Рентабельность капитала депозитных организаций, % годовых (МВФ FSI)",
+  "frequency": "quarterly",
+  "unit": "% a year",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "IMF Financial Soundness Indicators (dataflow IMF.STA/FSIC), core indicators for deposit takers, reported by the Kazakh authorities (NBK, then ARDFM), quarterly. Return on equity, % a year, deposit takers. Equal to NBK BANK_ROE shifted one quarter.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2009-01-01",
+  "period_end": "2025-10-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

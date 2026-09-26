@@ -3349,7 +3349,10 @@ def _transport_num(cell):
 
 
 def _fetch_transport_column(column: int, indicator_id: str, note: str,
-                            cumulative: bool) -> tuple[list[dict], dict]:
+                            cumulative: bool,
+                            history: dict[str, float] | None = None) -> tuple[list[dict], dict]:
+    """`history`, when given, is the same series from Taldau: lowest priority, so the
+    bulletin and the processed layer win wherever they have a value."""
     existing = {}
     path = (Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE
             / f"{indicator_id.lower()}.csv")
@@ -3405,7 +3408,7 @@ def _fetch_transport_column(column: int, indicator_id: str, note: str,
                    "column": column})
         fetched[f"{period[0]:04d}-{period[1]:02d}-01"] = value
 
-    merged = {**existing, **fetched}
+    merged = {**(history or {}), **existing, **fetched}
     if not merged:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -3456,17 +3459,57 @@ def fetch_freight_turnover_monthly() -> tuple[list[dict], dict]:
         "cells as TEXT rather than numbers.", cumulative=True)
 
 
+# Taldau index 2972310 «пассажирооборот расчетный» (code 18110201), period 8 = «Месяц с
+# накоплением»: the SAME series as the bulletin column (January-June 2026 45,342.76 mln p-km
+# in both, January-July 54,627.91), with history from January 2021. Found 2026-09-26 via
+# NewIndex/GetPeriodList and GetSegmentList, which give each period its own dictionaries.
+PASSENGER_TURNOVER_TALDAU = {"index_id": "2972310", "period_id": "8", "measure_id": "41",
+                             "dic_ids": "68,1214,59", "terms": "741880,741335,741907"}
+
+
+def _taldau_monthly(spec: dict, indicator_id: str, scale: float) -> dict[str, float]:
+    """{YYYY-MM-01: value / scale} for the national node of a monthly Taldau index; empty
+    (with a note on stdout) if Taldau cannot be reached -- the history is kept by the
+    processed layer, so an outage must not cost the bulletin's current month."""
+    body = {"p_parent_id": "", "p_index_id": spec["index_id"], "p_keyword": "",
+            "p_period_id": spec["period_id"], "p_measure_id": spec["measure_id"],
+            "p_term_id": NATIONAL_TERM_ID, "p_terms": spec["terms"], "p_dicIds": spec["dic_ids"],
+            "idx": "0", "filter": '[{"property":null,"value":null}]', "id": ""}
+    try:
+        resp = requests.post(TALDAU_TREE_DATA_URL, data=body,
+                             headers={**HEADERS, "X-Requested-With": "XMLHttpRequest"}, timeout=60)
+        resp.raise_for_status()
+        nodes = resp.json()
+    except (requests.RequestException, ValueError) as exc:
+        print(f"bns/{indicator_id}: Taldau history unavailable ({exc}); using processed history only")
+        return {}
+    _save_raw(f"{indicator_id}_taldau", resp.content, "json",
+              {"source_url": TALDAU_TREE_DATA_URL, "request_body": body})
+    out: dict[str, float] = {}
+    for node in nodes[:1]:
+        for k, v in node.items():
+            if isinstance(k, str) and len(k) == 7 and k[0] == "y" and k[1:].isdigit():
+                try:
+                    out[f"{int(k[3:]):04d}-{int(k[1:3]):02d}-01"] = float(v) / scale
+                except (TypeError, ValueError):  # 'x' = confidential, '' = not yet
+                    continue
+    return out
+
+
 def fetch_passenger_turnover_monthly() -> tuple[list[dict], dict]:
-    """Passenger turnover, million passenger-km, year-to-date cumulative."""
+    """Passenger turnover, million passenger-km, year-to-date cumulative, from January 2021."""
     return _fetch_transport_column(
         TRANSPORT_COL_PASSENGER_TURNOVER, "PASSENGER_TURNOVER_MONTHLY",
-        "Million passenger-km, YEAR-TO-DATE CUMULATIVE, all modes. DO NOT SPLICE THIS ONTO THE "
-        "ANNUAL PASSENGER_TURNOVER SERIES. That series ends in 2016 at 266.8 bn p-km, while this "
-        "one reads 54,627.9 mln p-km for January-July 2026, or about 94 bn annualised -- roughly "
-        "a third of the old level. The break is unexplained: nothing published in this section "
-        "resolves it, since the long-run archive there covers passengers CARRIED, a different "
-        "indicator. Kept as a separate series and flagged rather than smoothed over.",
-        cumulative=True)
+        "Million passenger-km, YEAR-TO-DATE CUMULATIVE, all modes; history from January 2021 "
+        "from Taldau index 2972310 «пассажирооборот расчетный», identical to the bulletin where "
+        "both exist. DO NOT SPLICE THIS ONTO THE ANNUAL PASSENGER_TURNOVER SERIES: Taldau's "
+        "older index 702177 ends in December 2017 at 272.8 bn p-km for the year, this one "
+        "starts at 106.8 bn for 2021, and it has a second level break of its own (116.5 bn in "
+        "2022, 72.8 bn in 2023). BNS publishes no bridge or revised back series; the 2972310 "
+        "passport describes an estimate for the unobserved sector (unregistered carriers, "
+        "individual entrepreneurs), which is the likely source of both breaks.",
+        cumulative=True,
+        history=_taldau_monthly(PASSENGER_TURNOVER_TALDAU, "PASSENGER_TURNOVER_MONTHLY", 1e6))
 
 
 def fetch_freight_carried() -> tuple[list[dict], dict]:

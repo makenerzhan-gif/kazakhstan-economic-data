@@ -16,6 +16,14 @@ AGENCY = "imf"
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 FETCHERS = {
+    "FSI_CAPITAL_ADEQUACY": imf_fetchers.fetch_fsi_capital_adequacy,
+    "FSI_TIER1_CAPITAL": imf_fetchers.fetch_fsi_tier1_capital,
+    "FSI_NPL_RATIO": imf_fetchers.fetch_fsi_npl_ratio,
+    "FSI_ROA": imf_fetchers.fetch_fsi_roa,
+    "FSI_ROE": imf_fetchers.fetch_fsi_roe,
+    "FSI_LIQUID_ASSETS": imf_fetchers.fetch_fsi_liquid_assets,
+    "FSI_LIQUID_TO_SHORT_TERM_LIABILITIES": imf_fetchers.fetch_fsi_liquid_to_short_term_liabilities,
+    "FSI_FX_LOANS_SHARE": imf_fetchers.fetch_fsi_fx_loans_share,
     "IMF_GDP_GROWTH": imf_fetchers.fetch_gdp_growth,
     "IMF_INFLATION": imf_fetchers.fetch_inflation,
     "IMF_CURRENT_ACCOUNT": imf_fetchers.fetch_current_account,
@@ -53,6 +61,14 @@ FETCHERS = {
 }
 
 INDICATOR_IDS = [
+    "FSI_CAPITAL_ADEQUACY",
+    "FSI_TIER1_CAPITAL",
+    "FSI_NPL_RATIO",
+    "FSI_ROA",
+    "FSI_ROE",
+    "FSI_LIQUID_ASSETS",
+    "FSI_LIQUID_TO_SHORT_TERM_LIABILITIES",
+    "FSI_FX_LOANS_SHARE",
     "IMF_GDP_GROWTH", "IMF_INFLATION", "IMF_CURRENT_ACCOUNT",
     "IMF_UNEMPLOYMENT", "IMF_GOV_BALANCE", "IMF_GOV_DEBT",
     "IMF_POPULATION", "IMF_NOMINAL_GDP", "IMF_NOMINAL_GDP_USD",
@@ -153,7 +169,7 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
             unit=ind["unit"],
             currency="",
             geography="Kazakhstan (national)",
-            methodology="IMF World Economic Outlook (WEO), biannual exercise (April/October vintages)",
+            methodology=manifest_info.get("methodology") or "IMF World Economic Outlook (WEO), biannual exercise (April/October vintages)",
             publication_date=None,
             last_update_date=today.isoformat(),
             download_date=today.isoformat(),

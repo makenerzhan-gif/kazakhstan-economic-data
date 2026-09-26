@@ -1,0 +1,17 @@
+{"indicator_id": "BANK_ROE", "period": "2020-01-01", "old_value": 25.16, "new_value": 27.02, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2020-04-01", "old_value": 27.02, "new_value": 20.04, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2020-07-01", "old_value": 20.04, "new_value": 21.39, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2020-10-01", "old_value": 21.39, "new_value": 19.28, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2021-01-01", "old_value": 19.28, "new_value": 28.31, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2021-04-01", "old_value": 28.31, "new_value": 32.57, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2021-07-01", "old_value": 32.57, "new_value": 29.9, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2021-10-01", "old_value": 29.9, "new_value": 30.65, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2022-01-01", "old_value": 30.65, "new_value": 31.32, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2022-04-01", "old_value": 31.32, "new_value": 15.55, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2022-07-01", "old_value": 15.55, "new_value": 25.74, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2022-10-01", "old_value": 25.74, "new_value": 30.72, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2023-01-01", "old_value": 30.72, "new_value": 37.38, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2023-04-01", "old_value": 37.38, "new_value": 37.96, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2023-07-01", "old_value": 37.96, "new_value": 36.84, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2023-10-01", "old_value": 36.84, "new_value": 36.7, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BANK_ROE", "period": "2024-01-01", "old_value": 36.7, "new_value": 31.7, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}

@@ -1,7 +1,7 @@
 {
   "source": "minfin",
-  "source_url": "https://www.gov.kz/uploads/2026/3/5/71fcc8edafebcf71ee4abea8704fcbb8_original.58166.xlsx",
-  "dataset_id": "gov.kz-doc-979292",
+  "source_url": "https://www.gov.kz/uploads/2026/9/17/ae13269fc23720d115ba8c99698c5382b2b160a11870eb04524c5e023e119a58_original.57374.xlsx",
+  "dataset_id": "gov.kz-doc-1067916",
   "indicator_id": "GG_TAXES",
   "indicator_name": "General Government Tax Revenue (IMF GFS Methodology)",
   "description": "Налоговые поступления сектора государственного управления (МВФ методология)",
@@ -13,8 +13,8 @@
   "publication_date": null,
   "last_update_date": "2026-09-26",
   "download_date": "2026-09-26",
-  "period_start": "2025-01-01",
-  "period_end": "2025-10-01",
+  "period_start": "2019-10-01",
+  "period_end": "2026-04-01",
   "next_update_date": null,
   "transformation": "level",
   "revision_status": "original"

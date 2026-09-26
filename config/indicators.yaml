@@ -1486,7 +1486,7 @@ indicators:
     observation_evidence: "паспорт: поток за период (объем работы)"
     lifecycle: superseded_not_spliceable
     superseded_by: PASSENGER_TURNOVER_MONTHLY
-    lifecycle_note: "UNEXPLAINED LEVEL BREAK: 266.8 bn p-km here against ~94 bn annualised in the replacement. Freight from the same source reconciles, so this is not a units error. Do not join."
+    lifecycle_note: "LEVEL BREAKS, not a units error (freight from the same source reconciles). Taldau index 702177 publishes the annual slice for 2014-2016 only (266.8 bn p-km in 2016) and months to 2017-12 (272.8 bn for 2017). Its successor, index 2972310 «пассажирооборот расчетный» (= PASSENGER_TURNOVER_MONTHLY), starts in 2021 at 106.8 bn and breaks again in 2023 (116.5 bn in 2022, 72.8 bn in 2023). 2018-2020 are not published at all. BNS gives no bridge; the 2972310 passport describes an estimate for the unobserved sector, the likely cause. Do not join."
 
   - id: REMITTANCES_SENT
     name_ru: "Исходящие международные денежные переводы через СМДП"
@@ -1657,6 +1657,94 @@ indicators:
     observation_type: period_ratio
     observation_evidence: "доля безналичных платежей населения от общего объёма за год"
 
+  - id: FSI_CAPITAL_ADEQUACY
+    name_ru: "Достаточность капитала депозитных организаций: регулятивный капитал к активам, взвешенным по риску (МВФ FSI)"
+    name_en: "Regulatory capital to risk-weighted assets, deposit takers (IMF FSI)"
+    agency: imf
+    frequency: quarterly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "FSI688: отношение двух остатков на конец квартала"
+
+  - id: FSI_TIER1_CAPITAL
+    name_ru: "Капитал первого уровня к активам, взвешенным по риску (МВФ FSI)"
+    name_en: "Tier 1 capital to risk-weighted assets, deposit takers (IMF FSI)"
+    agency: imf
+    frequency: quarterly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "FSI626: отношение двух остатков на конец квартала"
+
+  - id: FSI_NPL_RATIO
+    name_ru: "Доля неработающих кредитов, определение МВФ FSI"
+    name_en: "Nonperforming loans to total gross loans, deposit takers (IMF FSI)"
+    agency: imf
+    frequency: quarterly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "FSI17: отношение двух остатков на конец квартала; не равно NPL_RATIO НБК (иное определение)"
+
+  - id: FSI_ROA
+    name_ru: "Рентабельность активов депозитных организаций, % годовых (МВФ FSI)"
+    name_en: "Return on assets, deposit takers (IMF FSI)"
+    agency: imf
+    frequency: quarterly
+    unit: "% a year"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "ROA FSI: чистый доход за период в годовом выражении к средним активам"
+
+  - id: FSI_ROE
+    name_ru: "Рентабельность капитала депозитных организаций, % годовых (МВФ FSI)"
+    name_en: "Return on equity, deposit takers (IMF FSI)"
+    agency: imf
+    frequency: quarterly
+    unit: "% a year"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "ROE FSI: чистый доход за период в годовом выражении к среднему капиталу"
+
+  - id: FSI_LIQUID_ASSETS
+    name_ru: "Ликвидные активы к совокупным активам депозитных организаций (МВФ FSI)"
+    name_en: "Liquid assets to total assets, deposit takers (IMF FSI)"
+    agency: imf
+    frequency: quarterly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "FSI283: отношение двух остатков на конец квартала"
+
+  - id: FSI_LIQUID_TO_SHORT_TERM_LIABILITIES
+    name_ru: "Ликвидные активы к краткосрочным обязательствам депозитных организаций (МВФ FSI)"
+    name_en: "Liquid assets to short-term liabilities, deposit takers (IMF FSI)"
+    agency: imf
+    frequency: quarterly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "FSI765: отношение двух остатков на конец квартала"
+
+  - id: FSI_FX_LOANS_SHARE
+    name_ru: "Доля займов в иностранной валюте в совокупных займах депозитных организаций (МВФ FSI)"
+    name_en: "Foreign-currency loans to total loans, deposit takers (IMF FSI)"
+    agency: imf
+    frequency: quarterly
+    unit: "%"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "FSI131: отношение двух остатков на конец квартала"
+
   - id: CAPITAL_ADEQUACY_RATIO
     name_ru: "Коэффициент достаточности капитала банков второго уровня"
     name_en: "Bank Capital Adequacy Ratio"
@@ -1667,9 +1755,9 @@ indicators:
     source_status: confirmed
     observation_type: point_in_time
     observation_evidence: "FSI: 'Regulatory capital to risk-weighted assets' — оба члена суть остатки на дату"
-    lifecycle: superseded_not_spliceable
-    superseded_by: BANK_CAPITAL_ADEQUACY_K2
-    lifecycle_note: "ARDFM; k2 is the closest counterpart but not the identical ratio"
+    lifecycle: superseded
+    superseded_by: FSI_CAPITAL_ADEQUACY
+    lifecycle_note: "NBK form 314 stopped at 01.04.2024. IMF FSI FSI688 is the same number (|diff| <= 0.005 pp over 2019Q4-2024Q1, this series' 'на 01.04' = FSI's Q1) and runs to 2025Q4. ARDFM k2 (BANK_CAPITAL_ADEQUACY_K2) is a related but different ratio."
 
   - id: NPL_RATIO
     name_ru: "Доля неработающих кредитов"
@@ -1683,7 +1771,7 @@ indicators:
     observation_evidence: "FSI: 'Nonperforming loans to total gross loans' — оба члена суть остатки на дату"
     lifecycle: superseded_not_spliceable
     superseded_by: BANK_NPL_90_SHARE
-    lifecycle_note: "ARDFM, not NBK: different compiler, monthly not quarterly, definitions not verified to match"
+    lifecycle_note: "ARDFM, not NBK: different compiler, monthly not quarterly, definitions not verified to match. The IMF FSI NPL ratio (FSI_NPL_RATIO, 2008Q1-2025Q4) is not this series either: 5.3 % against 8.1 % at end-2019, converging to 0.03 pp by 2024Q1 -- the national and FSI NPL definitions differ."
 
   - id: IND_PROD_MINING
     name_ru: "Индекс промышленного производства: горнодобывающая промышленность"
@@ -1835,9 +1923,11 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "FSI: доходность строится по скользящему периоду, как ARDFM BANK_ROA_MONTHLY"
-    lifecycle: superseded_not_spliceable
-    superseded_by: BANK_ROA_MONTHLY
-    lifecycle_note: "ARDFM; the replacement is a trailing twelve-month average, which this series is not"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 314: значение «на 01.04.2024» равно ROA МВФ FSI за 2024Q1 (18 кварталов 2019Q4-2024Q1, расхождение <= 0,005 п.п.); без сдвига ряд стоял на квартал позже (проверка 2026-09-26)"
+    lifecycle: superseded
+    superseded_by: FSI_ROA
+    lifecycle_note: "NBK form 314 stopped at 2024Q1. IMF FSI ROA is the same number and runs to 2025Q4. ARDFM BANK_ROA_MONTHLY is a trailing twelve-month average, a different construction."
 
   - id: BANK_ROE
     name_ru: "Рентабельность капитала банков (ROE)"
@@ -1849,9 +1939,11 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "FSI: доходность строится по скользящему периоду, как ARDFM BANK_ROE_MONTHLY"
-    lifecycle: superseded_not_spliceable
-    superseded_by: BANK_ROE_MONTHLY
-    lifecycle_note: "ARDFM; same trailing-average caveat as BANK_ROA"
+    date_basis: next_period_start
+    date_basis_evidence: "форма 314: значение «на 01.04.2024» равно ROE МВФ FSI за 2024Q1 (18 кварталов, расхождение <= 0,005 п.п.) (проверка 2026-09-26)"
+    lifecycle: superseded
+    superseded_by: FSI_ROE
+    lifecycle_note: "NBK form 314 stopped at 2024Q1. IMF FSI ROE is the same number and runs to 2025Q4. ARDFM BANK_ROE_MONTHLY: same trailing-average caveat as BANK_ROA."
 
   - id: PENSION_FUND_ASSETS
     name_ru: "Пенсионные накопления ЕНПФ"
