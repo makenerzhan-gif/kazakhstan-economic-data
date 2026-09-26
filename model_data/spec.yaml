@@ -1,0 +1,133 @@
+# Model-ready panels for the QPM / BVAR / output-gap work. Read by scripts/build_model_data.py,
+# which reads only data/unified/ (macro_long.csv, macro_dims_long.csv.gz) and writes
+# model_data/{monthly,quarterly,annual}.csv and model_data/VARIABLES.md.
+#
+# Everything built here is DERIVED BY THIS REPOSITORY (chaining, seasonal adjustment,
+# aggregation, the capital stock), not published by a source -- the reason it lives in its
+# own folder beside analysis/, not in data/. See model_data/README.md.
+#
+# Variable entry:
+#   name        column stem in the panel
+#   source      {series: ID} (macro_long) | {dims: DATASET, item: CODE} | {monthly: name}
+#               (quarterly only: aggregate a monthly panel variable)
+#   ops         applied in order at the source's own frequency, before the panel:
+#                 chain            m/m index (previous = 100) -> level index (first month = 100)
+#                 decumulate_ytd   year-to-date flow -> own-period flow (January/Q1 kept)
+#                 asat_to_eop      a stock dated "as at the 1st" -> end of the previous period
+#   to_monthly  daily or event-dated source -> month: mean | last  (event series are stepped)
+#   agg         quarterly from monthly: mean | sum | last
+#   sa          log | additive | official | none  -- STL (robust) on ln(level) or on the level;
+#               official = the source already publishes it seasonally adjusted
+#   kind        level (default) | rate (percent or bp: no log, no growth rates)
+#   from        first date kept (drops thin early history)
+#   note        what a model user must know (breaks, gaps, definitions)
+#
+# Output columns per variable: <name> (level after ops), <name>_sa (if sa), and for levels
+# <name>_yoy (% change on the same period a year earlier, from the NSA level) and
+# <name>_saar (% annualised change on the previous period, from the SA level).
+
+version: 1
+
+parameters:
+  stl_robust: true
+  panel_start: "1994-01-01"     # the tenge was introduced in November 1993
+  # Production function (quarterly): Y = A K^alpha L^(1-alpha). alpha = 1 - mean labour share
+  # (compensation / (GDP - net taxes on production and imports), QNA income approach).
+  capital:
+    # depreciation: median of BNS book depreciation / gross fixed assets at the start of the year,
+    # 2000-2025 without the 2019-2021 revaluation years (13-16 %); override with a number.
+    delta: book_median
+    exclude_years: [2019, 2020, 2021]
+    # initial stock at end-1999: Harberger steady state I_2000 / (g + delta), g = mean real GDP
+    # growth 2000-2009.
+    initial: harberger
+
+monthly:
+  # ---------------------------------------------------------------- prices
+  - {name: cpi, source: {series: CPI}, ops: [chain], sa: log, note: "Headline CPI, chained from BNS m/m indices (rounded to 0.1): cpi_yoy differs from the published CPI_YOY by 0.07 pp on average, 0.35 at most -- use CPI_YOY for y/y inflation itself."}
+  - {name: cpi_core_ex3, source: {series: CORE_CPI_MOM_EX3}, ops: [chain], sa: log, note: "Core CPI excluding fruit and vegetables, petrol and coal (BNS)."}
+  - {name: cpi_core_ex7, source: {series: CORE_CPI_MOM_EX7}, ops: [chain], sa: log, note: "Core CPI excluding seven volatile groups (BNS)."}
+  - {name: cpi_food, source: {series: CPI_FOOD}, ops: [chain], sa: log}
+  - {name: cpi_nonfood, source: {series: CPI_NONFOOD}, ops: [chain], sa: log}
+  - {name: cpi_services, source: {series: CPI_SERVICES}, ops: [chain], sa: log}
+  - {name: cpi_regulated, source: {series: CPI_REGULATED_UTILITIES}, ops: [chain], sa: log, note: "Regulated utility tariffs: administered, step-like; SA removes little."}
+  - {name: ppi, source: {series: PPI_MONTHLY}, ops: [chain], sa: log, note: "Producer prices, dominated by oil; chained from m/m."}
+  - {name: infl_expect, source: {series: INFLATION_EXPECTATIONS}, kind: rate, sa: none, note: "Household survey, expected inflation next 12 months, %."}
+  # ---------------------------------------------------------------- activity
+  - {name: ip, source: {series: IND_PROD_MONTHLY_MOM}, ops: [chain], sa: log, note: "Industrial production volume, chained from m/m (from 2014)."}
+  - {name: retail_nominal, source: {series: RETAIL_TRADE_MONTHLY}, sa: log, note: "Retail turnover, thousand KZT, nominal."}
+  - {name: freight, source: {series: FREIGHT_TURNOVER_MONTHLY}, ops: [decumulate_ytd], sa: log, note: "Freight turnover, million tonne-km, own month from YTD."}
+  - {name: exports_usd, source: {series: EXPORTS}, sa: log, note: "Goods exports, thousand USD (BNS), from 2015."}
+  - {name: imports_usd, source: {series: IMPORTS}, sa: log, note: "Goods imports, thousand USD (BNS)."}
+  - {name: tax_revenue, source: {series: STATE_TAX_REVENUE_YTD}, ops: [decumulate_ytd], sa: log, note: "State budget tax receipts, million KZT, own month from YTD (2018 on). 2026-04 missing in the source, so 2026-04 and 2026-05 are missing here."}
+  # ---------------------------------------------------------------- money and rates
+  - {name: base_rate, source: {series: BASE_RATE}, to_monthly: mean, kind: rate, sa: none, note: "NBK base rate, monthly mean of the daily step function (from 2015-08)."}
+  - {name: tonia, source: {series: TONIA}, to_monthly: mean, kind: rate, sa: none}
+  - {name: loan_rate_corp, source: {series: LOAN_RATE_ISSUED_LEGAL_KZT}, kind: rate, sa: none, note: "Rate on new tenge loans to legal entities."}
+  - {name: loan_rate_hh, source: {series: LOAN_RATE_ISSUED_INDIVIDUAL_KZT}, kind: rate, sa: none}
+  - {name: deposit_rate, source: {series: DEPOSIT_RATE}, kind: rate, sa: none}
+  - {name: gs_yield_1y, source: {series: GS_YIELD_1Y}, kind: rate, sa: none, note: "KASE zero-coupon curve, monthly mean (from 2019-11)."}
+  - {name: gs_yield_10y, source: {series: GS_YIELD_10Y}, kind: rate, sa: none}
+  - {name: m0, source: {series: M0}, ops: [asat_to_eop], sa: log, note: "End of month (the source dates it as at the 1st of the next month)."}
+  - {name: m2, source: {series: M2}, ops: [asat_to_eop], sa: log}
+  - {name: m3, source: {series: M3}, ops: [asat_to_eop], sa: log}
+  # ---------------------------------------------------------------- exchange rates
+  - {name: usdkzt, source: {series: EXCHANGE_RATE}, to_monthly: mean, sa: none, note: "Official KZT per USD, monthly mean. Devaluations 2014-02, 2015-08."}
+  - {name: usdkzt_eop, source: {series: EXCHANGE_RATE}, to_monthly: last, sa: none}
+  - {name: neer, source: {series: NEER}, sa: none}
+  - {name: reer, source: {series: REER}, sa: none}
+  # ---------------------------------------------------------------- external
+  - {name: brent, source: {series: OIL_PRICE_BRENT}, sa: none, note: "USD/bbl, World Bank monthly average."}
+  - {name: fed_funds, source: {series: US_FED_FUNDS}, kind: rate, sa: none}
+  - {name: ust_10y, source: {series: US_TREASURY_10Y}, kind: rate, sa: none}
+  - {name: us_cpi, source: {series: US_CPI}, sa: official, note: "Seasonally adjusted by BLS."}
+  - {name: ru_key_rate, source: {series: RU_KEY_RATE}, to_monthly: mean, kind: rate, sa: none, note: "From 2013-09."}
+  - {name: rubusd, source: {series: RUB_USD}, to_monthly: mean, sa: none}
+  - {name: ru_cpi, source: {series: RU_CPI_MOM}, ops: [chain], sa: log}
+  - {name: ea_hicp_yoy, source: {series: EA_HICP_YOY}, kind: rate, sa: none}
+  - {name: cn_cpi_yoy, source: {series: CN_CPI_YOY}, kind: rate, sa: none}
+  # ---------------------------------------------------------------- risk premia
+  - {name: eurobond_spread, source: {series: KZ_EUROBOND_SPREAD}, kind: rate, sa: none, note: "bp, month-end; 2020-11..2022-07 missing by design (stale quotes), benchmark switches 2044 -> 2045 bond in 2022-08."}
+  - {name: rate_diff_on, source: {series: KZT_USD_RATE_DIFF_ON}, kind: rate, sa: none}
+  - {name: carry_excess, source: {series: KZT_CARRY_EXCESS_RETURN}, kind: rate, sa: none, note: "Ex-post, annualised; dominated by the exchange rate."}
+
+quarterly:
+  # ---------------------------------------------------------------- national accounts (BNS, 2010 prices)
+  - {name: gdp, source: {dims: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: GDP}, sa: official, note: "Real GDP, average 2010 prices, BNS seasonally and calendar adjusted (2010-Q1 on); the column itself is SA."}
+  - {name: gdp_nsa, source: {dims: QNA_GDP_EXPENDITURE_CONSTANT_2010, item: GDP}, sa: log, note: "Real GDP, 2010 prices, not adjusted; its _sa is our STL for comparison with the official gdp."}
+  - {name: consumption_hh, source: {dims: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: HOUSEHOLDS}, sa: official}
+  - {name: consumption_gov, source: {dims: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: GOVERNMENT}, sa: official}
+  - {name: gfcf, source: {dims: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: GFCF}, sa: official}
+  - {name: exports_real, source: {dims: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: EXPORTS}, sa: official}
+  - {name: imports_real, source: {dims: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: IMPORTS}, sa: official}
+  - {name: gva_mining, source: {dims: QNA_GVA_BY_SECTION_SA_CONSTANT_2010, item: B}, sa: official, note: "Section B, SA, 2010 prices."}
+  - {name: gva_manufacturing, source: {dims: QNA_GVA_BY_SECTION_SA_CONSTANT_2010, item: C}, sa: official}
+  - {name: gdp_nominal, source: {dims: QNA_GDP_EXPENDITURE, item: GDP}, sa: log, note: "Nominal GDP, million KZT, discrete quarter."}
+  # ---------------------------------------------------------------- labour
+  - {name: employment, source: {dims: EMPLOYED_BY_SECTION_QUARTERLY, item: TOTAL}, sa: log, note: "Employed, thousand persons (LFS)."}
+  - {name: unemployment_rate, source: {series: UNEMPLOYMENT}, kind: rate, sa: additive, note: "%, from 2001-Q1."}
+  - {name: wage_nominal, source: {series: AVG_WAGE_1T_QUARTERLY}, sa: log, note: "Average monthly wage, form 1-T, KZT (from 2015)."}
+  - {name: hours_worked, source: {series: HOURS_WORKED_QUARTERLY}, sa: log, note: "Employees' hours, million man-hours (enterprise survey, from 2016)."}
+  - {name: capacity_utilization, source: {series: CAPACITY_UTILIZATION}, kind: rate, sa: additive, note: "NBK enterprise survey, %."}
+  # ---------------------------------------------------------------- external
+  - {name: foreign_demand_yoy, source: {series: FOREIGN_DEMAND_YOY}, kind: rate, sa: none, note: "Export-weighted partner real GDP growth, index (previous year = 100)."}
+  - {name: us_gdp, source: {series: US_GDP_REAL}, sa: official}
+  - {name: ea_gdp, source: {series: EA_GDP_REAL}, sa: official}
+  - {name: ru_gdp, source: {series: RU_GDP_REAL}, sa: log, note: "Russia, 2021 prices, not adjusted (from 2014-Q1)."}
+  - {name: current_account, source: {series: CURRENT_ACCOUNT_BALANCE}, kind: rate, sa: none, note: "Million USD, flow in the quarter (a balance: no logs)."}
+  # ---------------------------------------------------------------- quarterly means of monthly variables
+  - {name: cpi, source: {monthly: cpi}, agg: mean}
+  - {name: cpi_core_ex3, source: {monthly: cpi_core_ex3}, agg: mean}
+  - {name: base_rate, source: {monthly: base_rate}, agg: mean, kind: rate}
+  - {name: tonia, source: {monthly: tonia}, agg: mean, kind: rate}
+  - {name: usdkzt, source: {monthly: usdkzt}, agg: mean}
+  - {name: neer, source: {monthly: neer}, agg: mean}
+  - {name: reer, source: {monthly: reer}, agg: mean}
+  - {name: brent, source: {monthly: brent}, agg: mean}
+  - {name: fed_funds, source: {monthly: fed_funds}, agg: mean, kind: rate}
+  - {name: ru_key_rate, source: {monthly: ru_key_rate}, agg: mean, kind: rate}
+  - {name: rubusd, source: {monthly: rubusd}, agg: mean}
+  - {name: m2, source: {monthly: m2}, agg: last}
+  - {name: eurobond_spread, source: {monthly: eurobond_spread}, agg: mean, kind: rate}
+  - {name: carry_excess, source: {monthly: carry_excess}, agg: mean, kind: rate}
+  - {name: infl_expect, source: {monthly: infl_expect}, agg: mean, kind: rate}

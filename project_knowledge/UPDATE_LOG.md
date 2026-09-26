@@ -4943,3 +4943,22 @@ New fetcher `scripts/fetchers/kase_eurobonds.py`; 501 indicators.
   dump of the xlsx ({sheet: rows}). `fetch_final_energy_consumption` now reads both; the new file carries the
   series from 1991 (was 2015), 2015-2025 unchanged (2022 rounded to 41 156.45 from 41 156.454). An unknown shape
   is a StructuralChangeError, not an AttributeError.
+
+## 2026-09-26 — model_data/: model-ready panels (derived)
+
+New top-level `model_data/` (derived by this repository, like `analysis/`): `scripts/build_model_data.py`
+reads `data/unified/` and `model_data/spec.yaml` and writes `monthly.csv` (1994-01 on, 40 variables),
+`quarterly.csv` (35 variables + production function), `annual.csv` and `VARIABLES.md` (a card per variable).
+Chained price and production indices, YTD flows decumulated, stocks moved from "as at the 1st" to end of
+month, policy rates as monthly means of the step function, STL (robust) seasonal adjustment where the source
+publishes none (BNS quarterly accounts and FRED are used as published), `_yoy`/`_saar` columns.
+- **Capital stock:** perpetual inventory at 2010 prices from 2000 (annual GFCF chained with its volume index;
+  δ = 8.3 %, the median BNS book depreciation rate outside the 2019-21 revaluations; Harberger start), quarterly
+  from 2010 with BNS SA GFCF benchmarked to the annual figures (the 2010-22 quarterly accounts are an older,
+  higher vintage). K/Y 1.3 (2010) -> 2.1 (2026).
+- **TFP** (Solow residual, α = 0.665 from the QNA labour share): −17 log points 2010-Q1..2026-Q1; −12 to −22 for
+  δ between 12 % and 5 % — heavy investment (Tengiz, infrastructure) with little output yet.
+- Checks: chained CPI y/y vs BNS CPI_YOY 0.07 pp mean gap (0.35 max, m/m rounding); our STL on real GDP vs
+  BNS's own SA: q/q correlation 0.91.
+- Found on the way: the scalar EMPLOYED_QUARTERLY holds only 2 quarters (the item-level
+  EMPLOYED_BY_SECTION_QUARTERLY has 2010 on and is used here).

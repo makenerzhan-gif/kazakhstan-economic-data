@@ -29,6 +29,10 @@ bilateral dummies (CEPII) are static tables in `data/reference/`. Input-output a
 supply-use tables (BNS, 2021–2024) are built into `data/reference/io/` by
 `scripts/build_io_tables.py`.
 
+Model-ready monthly and quarterly panels (seasonally adjusted, chained, with a
+perpetual-inventory capital stock and TFP) are derived into `model_data/` by
+`scripts/build_model_data.py` — see `model_data/README.md`.
+
 ## Repository layout
 
 ```
