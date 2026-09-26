@@ -33,6 +33,10 @@ Model-ready monthly and quarterly panels (seasonally adjusted, chained, with a
 perpetual-inventory capital stock and TFP) are derived into `model_data/` by
 `scripts/build_model_data.py` — see `model_data/README.md`.
 
+Three models are estimated on top of them into `models/` (derived; a report in Russian,
+charts and CSVs each — see `models/README.md`): a PPML gravity model of Kazakhstan's trade,
+a BVAR with an exogenous external block, and r* with the output gap.
+
 ## Repository layout
 
 ```

@@ -4962,3 +4962,20 @@ publishes none (BNS quarterly accounts and FRED are used as published), `_yoy`/`
   BNS's own SA: q/q correlation 0.91.
 - Found on the way: the scalar EMPLOYED_QUARTERLY holds only 2 quarters (the item-level
   EMPLOYED_BY_SECTION_QUARTERLY has 2010 on and is used here).
+
+## 2026-09-26 — models/: gravity, BVAR, r* (derived)
+
+New top-level `models/` with `scripts/models/{common,gravity,bvar,rstar}.py`; each writes a Russian report,
+charts and CSVs. Not part of `update_all.py`.
+- **Gravity (PPML), 2000–2025:** WITS flows to 2019, BNS from 2020 — WITS 2020–22 imports are incomplete (2020:
+  22 bn USD vs BNS 39 bn); Russia/Belarus 2010 dropped (customs-union gap in WITS: imports 24.0 vs official 31.1
+  bn). Partner FE: the EAEU adds nothing over the CIS free-trade area (imports −3 %, 95 % CI −18…+15 %; exports
+  −7 %). Year-FE elasticities: GDP 0.78 / 0.96, distance −1.13 / −0.65 (exports / imports). The trade-weighted
+  applied tariff does not identify σ (β = +3.3, s.e. 2.3).
+- **BVAR, 2011Q2–2026Q1:** 7 variables, external block exogenous, λ = 0.75, μ = 5, crisis-quarter scale s = 5
+  (log ML +91 over s = 1). Pass-through 0.11 at 4 quarters, 0.19 at 8 (0.24 / 0.29 without the crisis
+  scaling); +1 pp TONIA: prices −0.18 % at 8 quarters, GDP −0.12 % at 4; +10 % Brent: prices +0.7 % at 8.
+- **r\* and output gap, 2012Q1–2026Q1:** r* 1.4 % in 2026Q1 (±6 pp state s.d.), real rate 6.3 %, P(r > r*) 80 %;
+  trend growth 4.2 %; gap −0.5 % (production function −0.1 %, HP +0.5 %; the three gaps correlate at 0.93+).
+  Maximum likelihood without priors: gap persistence 0.14, a_r −0.04, z flat at its initial value.
+- Corrected `data/reference/README.md`: CEPII `col_dep_ever` is 0 for every KAZ pair (it said KAZ–RUS = 1).
