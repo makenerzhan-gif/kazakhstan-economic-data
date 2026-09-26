@@ -9,79 +9,79 @@
 
 | Следующее обновление | Набор | Агентство | Последнее обновление (публикация) | Где в модели |
 |---|---|---|---|---|
-| 2026-09-30 | `GVA_DEFLATOR_BY_SECTION` | bns | 2026-09-24 (2026-08-14) | «Факт_БНС» (fact_bns_gva_deflator); «Дефляторы_производ_регионы» (gva_deflator_sections) |
-| 2026-09-30 | `GVA_NOMINAL_BY_SECTION` | bns | 2026-09-24 (2026-08-14) | «Факт_БНС» (fact_bns_gva_nominal); «ВДС_производ_регионы» (gva_sections_control) |
-| 2026-09-30 | `GVA_VOLUME_INDEX_BY_SECTION` | bns | 2026-09-24 (2026-08-14) | «Факт_БНС» (fact_bns_gva_volume_index); «ИФО_производ_регионы» (gva_volume_index_control) |
-| 2026-10-01 | `INCOME_CFC_BY_SECTION` | bns | 2026-09-24 (2026-08-03) | «ВВП_доходы» (income_cfc) |
-| 2026-10-01 | `INCOME_COMPENSATION_BY_SECTION` | bns | 2026-09-24 (2026-08-03) | «ВВП_доходы» (income_compensation) |
-| 2026-10-01 | `INCOME_OTHER_TAXES_BY_SECTION` | bns | 2026-09-24 (2026-08-03) | «ВВП_доходы» (income_other_taxes) |
-| 2026-10-01 | `INCOME_PROFIT_BY_SECTION` | bns | 2026-09-24 (2026-08-03) | «ВВП_доходы» (income_profit) |
-| 2026-10-12 | `GDP_EXPENDITURE_DEFLATOR` | bns | 2026-09-24 (2026-07-13) | «ВВП_расходы_МКИ» (expenditure_deflator) |
-| 2026-10-12 | `GDP_EXPENDITURE_NOMINAL` | bns | 2026-09-24 (2026-07-13) | «ВВП_расходы_МКИ» (expenditure_nominal) |
-| 2026-10-12 | `GDP_EXPENDITURE_VOLUME_INDEX` | bns | 2026-09-24 (2026-07-13) | «ВВП_расходы_МКИ» (expenditure_volume_index) |
-| 2026-10-12 | `GRP_VOLUME_INDEX_BY_REGION` | bns | 2026-09-24 (2026-08-24) | «ИФО_производ_регионы» (grp_ifo_regions) |
-| 2026-10-12 | `GVA_NOMINAL_BY_REGION_SECTION` | bns | 2026-09-24 (2026-08-24) | «ВДС_производ_регионы» (vrp_regions_sections) |
-| 2026-10-28 | `QNA_GDP_EXPENDITURE` | bns | 2026-09-24 (2026-07-28) | «Факт_КНС» (fact_qna_gdp_expenditure) |
-| 2026-10-28 | `QNA_GDP_EXPENDITURE_VOLUME_INDEX_YTD` | bns | 2026-09-24 (2026-07-28) | «Факт_КНС» (fact_qna_gdp_expenditure_volume_index_ytd) |
-| 2026-11-12 | `EMPLOYED_BY_SECTION` | bns | 2026-09-24 (2026-08-13) | «Занятое население» (employed_sections, employed_sections_control) |
-| 2027-03-31 | `EMPLOYED_AGRICULTURE_BY_REGION` | bns | 2026-09-24 (2026-03-30) | «Факт_БНС» (fact_bns_employed_agriculture) |
-| 2027-03-31 | `EMPLOYED_BY_REGION` | bns | 2026-09-24 (2026-03-30) | «Внешние и внутренние факторы» (employed_regions); «Факт_БНС» (fact_bns_employed_total) |
-| 2027-03-31 | `EMPLOYED_INDUSTRY_CONSTRUCTION_BY_REGION` | bns | 2026-09-24 (2026-03-30) | «Факт_БНС» (fact_bns_employed_industry_construction) |
-| 2027-03-31 | `EMPLOYED_SERVICES_BY_REGION` | bns | 2026-09-24 (2026-03-30) | «Факт_БНС» (fact_bns_employed_services) |
-| 2027-03-31 | `EMPLOYED_TOTAL` | bns | 2026-09-24 (2026-03-30) | «Внешние и внутренние факторы» (employed); «Прогнозы ЦГО 2024-29» (employed) |
-| 2027-03-31 | `EMPLOYEES_BY_REGION` | bns | 2026-09-24 (2026-03-30) | «Прогнозы ЦГО 2024-29» (cgo_employees) |
-| 2027-03-31 | `LABOUR_FORCE_BY_REGION` | bns | 2026-09-24 (2026-03-30) | «Внешние и внутренние факторы» (labour_force_regions, labour_force_national); «Прогнозы ЦГО 2024-29» (cgo_labour_force) |
-| 2027-03-31 | `SELF_EMPLOYED_BY_REGION` | bns | 2026-09-24 (2026-03-30) | «Внешние и внутренние факторы» (self_employed_regions, self_employed_national); «Прогнозы ЦГО 2024-29» (cgo_self_employed) |
-| 2027-03-31 | `UNEMPLOYED_BY_REGION` | bns | 2026-09-24 (2026-03-30) | «Внешние и внутренние факторы» (unemployed_regions, unemployed_national); «Прогнозы ЦГО 2024-29» (cgo_unemployed) |
-| 2027-03-31 | `UNEMPLOYMENT_RATE_BY_REGION` | bns | 2026-09-24 (2026-03-30) | «Внешние и внутренние факторы» (unemployment_rate_regions, unemployment_rate_national); «Прогнозы ЦГО 2024-29» (cgo_unemployment_rate) |
-| 2027-04-30 | `POPULATION_AVG_BY_REGION` | bns | 2026-09-24 (2026-04-30) | «Внешние и внутренние факторы» (population_regions, population_urban_rural_national) |
-| 2027-04-30 | `POPULATION_BNS` | bns | 2026-09-24 (2026-04-30) | «Внешние и внутренние факторы» (population) |
-| 2027-07-03 | `PRODUCTION_NATURAL_BY_REGION` | bns | 2026-09-24 (2026-07-03) | «ВДС_производ_регионы» (natural_output_rows); «Прогнозы ЦГО 2024-29» (cgo_oil_fact, cgo_gas_fact) |
-| 2027-07-31 | `NOE_ILLEGAL_SHARE_BY_SECTION` | bns | 2026-09-24 (2026-07-31) | «Ненаблюд_незакон_экономика» (noe_illegal_share) |
-| 2027-07-31 | `NOE_SHARE_BY_SECTION` | bns | 2026-09-24 (2026-07-31) | «Ненаблюд_незакон_экономика» (noe_share) |
-| 2027-08-23 | `GVA_NOMINAL_INDUSTRY_DIVISIONS` | bns | 2026-09-24 (2026-08-24) | «Факт_БНС» (fact_bns_industry_divisions) |
-| 2027-08-23 | `GVA_VOLUME_INDEX_BY_REGION_SECTION` | bns | 2026-09-24 (2026-08-24) | «ИФО_производ_регионы» (ifo_regions_sections) |
-| — | `AGRICULTURE_VOLUME_INDEX_BY_ACTIVITY` | bns | 2026-09-24 (—) | «Факт_БНС» (fact_bns_agriculture_indices) |
-| — | `AVG_WAGE` | bns | 2026-09-24 (—) | «Прогнозы ЦГО 2024-29» (average_wage) |
-| — | `CAPITAL_CONSUMPTION` | bns | 2026-09-24 (—) | «ВВП_доходы» (consumption_of_fixed_capital) |
-| — | `COMPENSATION_EMPLOYEES` | bns | 2026-09-24 (—) | «ВВП_доходы» (compensation_of_employees) |
-| — | `CPI_YTD` | bns | 2026-09-24 (—) | «Внешние и внутренние факторы» (cpi_december) |
-| — | `EXPORTS` | bns | 2026-09-24 (—) | «Экспорт» (exports_total) |
-| — | `EXPORTS_VALUE_BY_COMMODITY_GROUP` | bns | 2026-09-24 (—) | «Экспорт» (exports_value_groups) |
-| — | `EXPORTS_VOLUME_BY_COMMODITY_GROUP` | bns | 2026-09-24 (—) | «Экспорт» (exports_volume_tonnes, exports_volume_thousand_tonnes) |
-| — | `EXPORT_VOLUME_INDEX` | bns | 2026-09-24 (—) | «ВВП_расходы_МКИ» (export_volume_index) |
-| — | `GDP_DEFLATOR` | bns | 2026-09-24 (—) | «Дефляторы_производ_регионы» (gdp_deflator) |
-| — | `GDP_INCOME_METHOD` | bns | 2026-09-24 (—) | «ВДС_производ_регионы» (gdp_nominal); «ВВП_доходы» (gdp_nominal) |
-| — | `GDP_REAL` | bns | 2026-09-24 (—) | «ИФО_производ_регионы» (gdp_real); «ВВП_расходы_МКИ» (gdp_real) |
-| — | `GFCF` | bns | 2026-09-24 (—) | «ВВП_расходы_МКИ» (gfcf) |
-| — | `GFCF_VOLUME_INDEX` | bns | 2026-09-24 (—) | «ВВП_расходы_МКИ» (gfcf_volume_index) |
-| — | `GRAIN_HARVEST_BY_REGION` | bns | 2026-09-24 (—) | «ВДС_производ_регионы» (grain_harvest_national, grain_harvest_regions); «Прогнозы ЦГО 2024-29» (cgo_grain_harvest) |
-| — | `GROSS_ACCUMULATION` | bns | 2026-09-24 (—) | «ВВП_расходы_МКИ» (gross_accumulation) |
-| — | `GVA_FOREIGN_BY_SECTION` | bns | 2026-09-24 (—) | «ВДС_формы_собственности» (ownership_foreign) |
-| — | `GVA_PRIVATE_BY_SECTION` | bns | 2026-09-24 (—) | «ВДС_формы_собственности» (ownership_private) |
-| — | `GVA_STATE_BY_SECTION` | bns | 2026-09-24 (—) | «ВДС_формы_собственности» (ownership_state) |
-| — | `HOUSEHOLD_CONSUMPTION` | bns | 2026-09-24 (—) | «ВВП_расходы_МКИ» (household_consumption) |
-| — | `IMPORT_VOLUME_INDEX` | bns | 2026-09-24 (—) | «ВВП_расходы_МКИ» (import_volume_index) |
-| — | `INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY` | bns | 2026-09-24 (—) | «Факт_БНС» (fact_bns_industry_indices) |
-| — | `INVESTMENT_BY_REGION` | bns | 2026-09-24 (—) | «ИОК» (investment_regions_iok); «ВВП_расходы_МКИ» (investment_regions_mki) |
-| — | `INVESTMENT_BY_SECTION` | bns | 2026-09-24 (—) | «ИОК» (investment_sections_iok); «ВВП_расходы_МКИ» (investment_sections_mki) |
-| — | `INVESTMENT_VOLUME_INDEX_BY_REGION` | bns | 2026-09-24 (—) | «ИОК» (investment_volume_regions_iok, investment_volume_national); «ВВП_расходы_МКИ» (investment_volume_regions_mki) |
-| — | `INVESTMENT_VOLUME_INDEX_BY_SECTION` | bns | 2026-09-24 (—) | «ВВП_расходы_МКИ» (investment_volume_sections_mki) |
-| — | `NET_EXPORTS` | bns | 2026-09-24 (—) | «ВВП_расходы_МКИ» (net_exports) |
-| — | `NET_TAXES_ON_PRODUCTS` | bns | 2026-09-24 (—) | «ВДС_производ_регионы» (net_taxes_on_products); «ВВП_доходы» (net_taxes_on_products) |
-| — | `QNA_GVA_BY_SECTION` | bns | 2026-09-24 (—) | «Факт_КНС» (fact_qna_gva_by_section) |
-| — | `QNA_GVA_DEFLATOR_BY_SECTION_YTD` | bns | 2026-09-24 (—) | «Факт_КНС» (fact_qna_gva_deflator_by_section_ytd) |
-| — | `QNA_GVA_VOLUME_INDEX_BY_SECTION_YTD` | bns | 2026-09-24 (—) | «Факт_КНС» (fact_qna_gva_volume_index_by_section_ytd) |
-| — | `REAL_WAGE_INDEX` | bns | 2026-09-24 (—) | «Прогнозы ЦГО 2024-29» (cgo_real_wage_index) |
-| — | `TAXES_ON_PRODUCTS` | bns | 2026-09-24 (—) | «ВДС_производ_регионы» (taxes_on_products) |
-| — | `TOTAL_CONSUMPTION_EXPENDITURE` | bns | 2026-09-24 (—) | «ВВП_расходы_МКИ» (final_consumption) |
-| — | `EIA_STEO_PRICES` | eia | 2026-09-24 (September 2026) | «Внешние и внутренние факторы» (brent_eia_forecast) |
-| — | `IMF_PPP_EXCHANGE_RATE` | imf | 2026-09-24 (—) | «Внешние и внутренние факторы» (ppp_exchange_rate) |
-| — | `EXCHANGE_RATE` | nbk | 2026-09-25 (—) | «Внешние и внутренние факторы» (exchange_rate) |
-| — | `WB_COMMODITY_INDEX_FORECASTS` | wb | 2026-09-24 (April 28, 2026) | «Внешние и внутренние факторы» (wb_index_forecasts) |
-| — | `WB_COMMODITY_INDICES_ANNUAL` | wb | 2026-09-24 (September 02, 2026) | «Внешние и внутренние факторы» (wb_indices_history) |
-| — | `WB_COMMODITY_PRICES_ANNUAL` | wb | 2026-09-24 (September 02, 2026) | «Внешние и внутренние факторы» (wb_prices_history, brent_reference_control) |
-| — | `WB_COMMODITY_PRICE_FORECASTS` | wb | 2026-09-24 (April 28, 2026) | «Внешние и внутренние факторы» (wb_price_forecasts, brent_wb_forecast) |
+| 2026-09-30 | `GVA_DEFLATOR_BY_SECTION` | bns | 2026-09-26 (2026-08-14) | «Факт_БНС» (fact_bns_gva_deflator); «Дефляторы_производ_регионы» (gva_deflator_sections) |
+| 2026-09-30 | `GVA_NOMINAL_BY_SECTION` | bns | 2026-09-26 (2026-08-14) | «Факт_БНС» (fact_bns_gva_nominal); «ВДС_производ_регионы» (gva_sections_control) |
+| 2026-09-30 | `GVA_VOLUME_INDEX_BY_SECTION` | bns | 2026-09-26 (2026-08-14) | «Факт_БНС» (fact_bns_gva_volume_index); «ИФО_производ_регионы» (gva_volume_index_control) |
+| 2026-10-01 | `INCOME_CFC_BY_SECTION` | bns | 2026-09-26 (2026-08-03) | «ВВП_доходы» (income_cfc) |
+| 2026-10-01 | `INCOME_COMPENSATION_BY_SECTION` | bns | 2026-09-26 (2026-08-03) | «ВВП_доходы» (income_compensation) |
+| 2026-10-01 | `INCOME_OTHER_TAXES_BY_SECTION` | bns | 2026-09-26 (2026-08-03) | «ВВП_доходы» (income_other_taxes) |
+| 2026-10-01 | `INCOME_PROFIT_BY_SECTION` | bns | 2026-09-26 (2026-08-03) | «ВВП_доходы» (income_profit) |
+| 2026-10-12 | `GDP_EXPENDITURE_DEFLATOR` | bns | 2026-09-26 (2026-07-13) | «ВВП_расходы_МКИ» (expenditure_deflator) |
+| 2026-10-12 | `GDP_EXPENDITURE_NOMINAL` | bns | 2026-09-26 (2026-07-13) | «ВВП_расходы_МКИ» (expenditure_nominal) |
+| 2026-10-12 | `GDP_EXPENDITURE_VOLUME_INDEX` | bns | 2026-09-26 (2026-07-13) | «ВВП_расходы_МКИ» (expenditure_volume_index) |
+| 2026-10-12 | `GRP_VOLUME_INDEX_BY_REGION` | bns | 2026-09-26 (2026-08-24) | «ИФО_производ_регионы» (grp_ifo_regions) |
+| 2026-10-12 | `GVA_NOMINAL_BY_REGION_SECTION` | bns | 2026-09-26 (2026-08-24) | «ВДС_производ_регионы» (vrp_regions_sections) |
+| 2026-10-28 | `QNA_GDP_EXPENDITURE` | bns | 2026-09-26 (2026-07-28) | «Факт_КНС» (fact_qna_gdp_expenditure) |
+| 2026-10-28 | `QNA_GDP_EXPENDITURE_VOLUME_INDEX_YTD` | bns | 2026-09-26 (2026-07-28) | «Факт_КНС» (fact_qna_gdp_expenditure_volume_index_ytd) |
+| 2026-11-12 | `EMPLOYED_BY_SECTION` | bns | 2026-09-26 (2026-08-13) | «Занятое население» (employed_sections, employed_sections_control) |
+| 2027-03-31 | `EMPLOYED_AGRICULTURE_BY_REGION` | bns | 2026-09-26 (2026-03-30) | «Факт_БНС» (fact_bns_employed_agriculture) |
+| 2027-03-31 | `EMPLOYED_BY_REGION` | bns | 2026-09-26 (2026-03-30) | «Внешние и внутренние факторы» (employed_regions); «Факт_БНС» (fact_bns_employed_total) |
+| 2027-03-31 | `EMPLOYED_INDUSTRY_CONSTRUCTION_BY_REGION` | bns | 2026-09-26 (2026-03-30) | «Факт_БНС» (fact_bns_employed_industry_construction) |
+| 2027-03-31 | `EMPLOYED_SERVICES_BY_REGION` | bns | 2026-09-26 (2026-03-30) | «Факт_БНС» (fact_bns_employed_services) |
+| 2027-03-31 | `EMPLOYED_TOTAL` | bns | 2026-09-26 (2026-03-30) | «Внешние и внутренние факторы» (employed); «Прогнозы ЦГО 2024-29» (employed) |
+| 2027-03-31 | `EMPLOYEES_BY_REGION` | bns | 2026-09-26 (2026-03-30) | «Прогнозы ЦГО 2024-29» (cgo_employees) |
+| 2027-03-31 | `LABOUR_FORCE_BY_REGION` | bns | 2026-09-26 (2026-03-30) | «Внешние и внутренние факторы» (labour_force_regions, labour_force_national); «Прогнозы ЦГО 2024-29» (cgo_labour_force) |
+| 2027-03-31 | `SELF_EMPLOYED_BY_REGION` | bns | 2026-09-26 (2026-03-30) | «Внешние и внутренние факторы» (self_employed_regions, self_employed_national); «Прогнозы ЦГО 2024-29» (cgo_self_employed) |
+| 2027-03-31 | `UNEMPLOYED_BY_REGION` | bns | 2026-09-26 (2026-03-30) | «Внешние и внутренние факторы» (unemployed_regions, unemployed_national); «Прогнозы ЦГО 2024-29» (cgo_unemployed) |
+| 2027-03-31 | `UNEMPLOYMENT_RATE_BY_REGION` | bns | 2026-09-26 (2026-03-30) | «Внешние и внутренние факторы» (unemployment_rate_regions, unemployment_rate_national); «Прогнозы ЦГО 2024-29» (cgo_unemployment_rate) |
+| 2027-04-30 | `POPULATION_AVG_BY_REGION` | bns | 2026-09-26 (2026-04-30) | «Внешние и внутренние факторы» (population_regions, population_urban_rural_national) |
+| 2027-04-30 | `POPULATION_BNS` | bns | 2026-09-26 (2026-04-30) | «Внешние и внутренние факторы» (population) |
+| 2027-07-03 | `PRODUCTION_NATURAL_BY_REGION` | bns | 2026-09-26 (2026-07-03) | «ВДС_производ_регионы» (natural_output_rows); «Прогнозы ЦГО 2024-29» (cgo_oil_fact, cgo_gas_fact) |
+| 2027-07-31 | `NOE_ILLEGAL_SHARE_BY_SECTION` | bns | 2026-09-26 (2026-07-31) | «Ненаблюд_незакон_экономика» (noe_illegal_share) |
+| 2027-07-31 | `NOE_SHARE_BY_SECTION` | bns | 2026-09-26 (2026-07-31) | «Ненаблюд_незакон_экономика» (noe_share) |
+| 2027-08-23 | `GVA_NOMINAL_INDUSTRY_DIVISIONS` | bns | 2026-09-26 (2026-08-24) | «Факт_БНС» (fact_bns_industry_divisions) |
+| 2027-08-23 | `GVA_VOLUME_INDEX_BY_REGION_SECTION` | bns | 2026-09-26 (2026-08-24) | «ИФО_производ_регионы» (ifo_regions_sections) |
+| — | `AGRICULTURE_VOLUME_INDEX_BY_ACTIVITY` | bns | 2026-09-26 (—) | «Факт_БНС» (fact_bns_agriculture_indices) |
+| — | `AVG_WAGE` | bns | 2026-09-26 (—) | «Прогнозы ЦГО 2024-29» (average_wage) |
+| — | `CAPITAL_CONSUMPTION` | bns | 2026-09-26 (—) | «ВВП_доходы» (consumption_of_fixed_capital) |
+| — | `COMPENSATION_EMPLOYEES` | bns | 2026-09-26 (—) | «ВВП_доходы» (compensation_of_employees) |
+| — | `CPI_YTD` | bns | 2026-09-26 (—) | «Внешние и внутренние факторы» (cpi_december) |
+| — | `EXPORTS` | bns | 2026-09-26 (—) | «Экспорт» (exports_total) |
+| — | `EXPORTS_VALUE_BY_COMMODITY_GROUP` | bns | 2026-09-26 (—) | «Экспорт» (exports_value_groups) |
+| — | `EXPORTS_VOLUME_BY_COMMODITY_GROUP` | bns | 2026-09-26 (—) | «Экспорт» (exports_volume_tonnes, exports_volume_thousand_tonnes) |
+| — | `EXPORT_VOLUME_INDEX` | bns | 2026-09-26 (—) | «ВВП_расходы_МКИ» (export_volume_index) |
+| — | `GDP_DEFLATOR` | bns | 2026-09-26 (—) | «Дефляторы_производ_регионы» (gdp_deflator) |
+| — | `GDP_INCOME_METHOD` | bns | 2026-09-26 (—) | «ВДС_производ_регионы» (gdp_nominal); «ВВП_доходы» (gdp_nominal) |
+| — | `GDP_REAL` | bns | 2026-09-26 (—) | «ИФО_производ_регионы» (gdp_real); «ВВП_расходы_МКИ» (gdp_real) |
+| — | `GFCF` | bns | 2026-09-26 (—) | «ВВП_расходы_МКИ» (gfcf) |
+| — | `GFCF_VOLUME_INDEX` | bns | 2026-09-26 (—) | «ВВП_расходы_МКИ» (gfcf_volume_index) |
+| — | `GRAIN_HARVEST_BY_REGION` | bns | 2026-09-26 (—) | «ВДС_производ_регионы» (grain_harvest_national, grain_harvest_regions); «Прогнозы ЦГО 2024-29» (cgo_grain_harvest) |
+| — | `GROSS_ACCUMULATION` | bns | 2026-09-26 (—) | «ВВП_расходы_МКИ» (gross_accumulation) |
+| — | `GVA_FOREIGN_BY_SECTION` | bns | 2026-09-26 (—) | «ВДС_формы_собственности» (ownership_foreign) |
+| — | `GVA_PRIVATE_BY_SECTION` | bns | 2026-09-26 (—) | «ВДС_формы_собственности» (ownership_private) |
+| — | `GVA_STATE_BY_SECTION` | bns | 2026-09-26 (—) | «ВДС_формы_собственности» (ownership_state) |
+| — | `HOUSEHOLD_CONSUMPTION` | bns | 2026-09-26 (—) | «ВВП_расходы_МКИ» (household_consumption) |
+| — | `IMPORT_VOLUME_INDEX` | bns | 2026-09-26 (—) | «ВВП_расходы_МКИ» (import_volume_index) |
+| — | `INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY` | bns | 2026-09-26 (—) | «Факт_БНС» (fact_bns_industry_indices) |
+| — | `INVESTMENT_BY_REGION` | bns | 2026-09-26 (—) | «ИОК» (investment_regions_iok); «ВВП_расходы_МКИ» (investment_regions_mki) |
+| — | `INVESTMENT_BY_SECTION` | bns | 2026-09-26 (—) | «ИОК» (investment_sections_iok); «ВВП_расходы_МКИ» (investment_sections_mki) |
+| — | `INVESTMENT_VOLUME_INDEX_BY_REGION` | bns | 2026-09-26 (—) | «ИОК» (investment_volume_regions_iok, investment_volume_national); «ВВП_расходы_МКИ» (investment_volume_regions_mki) |
+| — | `INVESTMENT_VOLUME_INDEX_BY_SECTION` | bns | 2026-09-26 (—) | «ВВП_расходы_МКИ» (investment_volume_sections_mki) |
+| — | `NET_EXPORTS` | bns | 2026-09-26 (—) | «ВВП_расходы_МКИ» (net_exports) |
+| — | `NET_TAXES_ON_PRODUCTS` | bns | 2026-09-26 (—) | «ВДС_производ_регионы» (net_taxes_on_products); «ВВП_доходы» (net_taxes_on_products) |
+| — | `QNA_GVA_BY_SECTION` | bns | 2026-09-26 (—) | «Факт_КНС» (fact_qna_gva_by_section) |
+| — | `QNA_GVA_DEFLATOR_BY_SECTION_YTD` | bns | 2026-09-26 (—) | «Факт_КНС» (fact_qna_gva_deflator_by_section_ytd) |
+| — | `QNA_GVA_VOLUME_INDEX_BY_SECTION_YTD` | bns | 2026-09-26 (—) | «Факт_КНС» (fact_qna_gva_volume_index_by_section_ytd) |
+| — | `REAL_WAGE_INDEX` | bns | 2026-09-26 (—) | «Прогнозы ЦГО 2024-29» (cgo_real_wage_index) |
+| — | `TAXES_ON_PRODUCTS` | bns | 2026-09-26 (—) | «ВДС_производ_регионы» (taxes_on_products) |
+| — | `TOTAL_CONSUMPTION_EXPENDITURE` | bns | 2026-09-26 (—) | «ВВП_расходы_МКИ» (final_consumption) |
+| — | `EIA_STEO_PRICES` | eia | 2026-09-26 (September 2026) | «Внешние и внутренние факторы» (brent_eia_forecast) |
+| — | `IMF_PPP_EXCHANGE_RATE` | imf | 2026-09-26 (—) | «Внешние и внутренние факторы» (ppp_exchange_rate) |
+| — | `EXCHANGE_RATE` | nbk | 2026-09-26 (—) | «Внешние и внутренние факторы» (exchange_rate) |
+| — | `WB_COMMODITY_INDEX_FORECASTS` | wb | 2026-09-26 (April 28, 2026) | «Внешние и внутренние факторы» (wb_index_forecasts) |
+| — | `WB_COMMODITY_INDICES_ANNUAL` | wb | 2026-09-26 (September 02, 2026) | «Внешние и внутренние факторы» (wb_indices_history) |
+| — | `WB_COMMODITY_PRICES_ANNUAL` | wb | 2026-09-26 (September 02, 2026) | «Внешние и внутренние факторы» (wb_prices_history, brent_reference_control) |
+| — | `WB_COMMODITY_PRICE_FORECASTS` | wb | 2026-09-26 (April 28, 2026) | «Внешние и внутренние факторы» (wb_price_forecasts, brent_wb_forecast) |
 
 ## Источники с фиксированным ритмом и ручные документы
 

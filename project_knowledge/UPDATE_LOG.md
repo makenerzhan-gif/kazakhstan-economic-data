@@ -4935,3 +4935,11 @@ New fetcher `scripts/fetchers/kase_eurobonds.py`; 501 indicators.
 - **Not available openly:** expected depreciation (NBK open data has inflation expectations only), so the
   ex-ante currency premium is not published as a series — it is the differential minus expected depreciation,
   to be estimated in the model.
+
+## 2026-09-26 — first full run of the extended pipeline; BNS energy format change
+
+- `update_all.py` end to end with every change of 2026-09-25/26: 56 min, 663 of 664 updates ok.
+- The failure was the source: BNS replaced element 8582 (FINAL_ENERGY_CONSUMPTION) — a json_cube list — with a
+  dump of the xlsx ({sheet: rows}). `fetch_final_energy_consumption` now reads both; the new file carries the
+  series from 1991 (was 2015), 2015-2025 unchanged (2022 rounded to 41 156.45 from 41 156.454). An unknown shape
+  is a StructuralChangeError, not an AttributeError.

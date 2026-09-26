@@ -1,0 +1,6510 @@
+# Update report — 2026-09-26
+
+> **Follow-up (same day):** the one error below, bns/FINAL_ENERGY_CONSUMPTION, was a source-format change — BNS
+> replaced element 8582's json_cube by an xlsx-as-JSON dump (now 1991–2025). The fetcher reads both formats;
+> the series was re-run (ok, 35 years), the unified dataset and project_knowledge rebuilt, and the test suite
+> passed (428). Full run time 56 min.
+
+Run timestamp: 2026-09-26T04:58:51.928767
+Unified dataset updated: False
+Tests passed: None
+
+## Per-dataset results
+
+- **bns/GDP_REAL** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/CPI** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/UNEMPLOYMENT** — fetch+validate+process: ok (downloaded=102, processed=102)
+- **bns/IMPORTS** — fetch+validate+process: ok (downloaded=139, processed=139)
+- **bns/GDP_PER_CAPITA** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/GDP_DEFLATOR** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/GFCF** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 71.3% in value between 2000-12-31 (450258400000.0) and 2001-12-31 (771384600000.0).
+  - warning: Unexpected jump of 80.9% in value between 2009-12-31 (4726718700000.0) and 2014-12-31 (8552487100000.0).
+- **bns/GFCF_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/NET_EXPORTS** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 117.6% in value between 2000-12-31 (195126800000.0) and 2001-12-31 (-34424800000.0).
+  - warning: Unexpected jump of 94.5% in value between 2001-12-31 (-34424800000.0) and 2002-12-31 (-1903400000.0).
+  - warning: Unexpected jump of 13113.3% in value between 2002-12-31 (-1903400000.0) and 2003-12-31 (247695900000.0).
+  - warning: Unexpected jump of 103.6% in value between 2003-12-31 (247695900000.0) and 2004-12-31 (504339700000.0).
+  - warning: Unexpected jump of 63.7% in value between 2005-12-31 (654780800000.0) and 2006-12-31 (1072142400000.0).
+  - warning: Unexpected jump of 286.5% in value between 2007-12-31 (830611800000.0) and 2008-12-31 (3210257200000.0).
+  - warning: Unexpected jump of 58.1% in value between 2008-12-31 (3210257200000.0) and 2009-12-31 (1345437100000.0).
+  - warning: Unexpected jump of 304.3% in value between 2009-12-31 (1345437100000.0) and 2014-12-31 (5440144500000.0).
+  - warning: Unexpected jump of 70.1% in value between 2014-12-31 (5440144500000.0) and 2015-12-31 (1628696000000.0).
+  - warning: Unexpected jump of 173.3% in value between 2016-12-31 (1585830900000.0) and 2017-12-31 (4334058800000.0).
+  - warning: Unexpected jump of 67.2% in value between 2017-12-31 (4334058800000.0) and 2018-12-31 (7246783000000.0).
+  - warning: Unexpected jump of 154.1% in value between 2020-12-31 (2848124800000.0) and 2021-12-31 (7237563500000.0).
+  - warning: Unexpected jump of 112.2% in value between 2021-12-31 (7237563500000.0) and 2022-12-31 (15361139200000.0).
+- **bns/HOUSEHOLD_CONSUMPTION** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 137.7% in value between 2009-12-31 (7912607000000.0) and 2014-12-31 (18805873900000.0).
+- **bns/COMPENSATION_EMPLOYEES** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/AVG_WAGE** — fetch+validate+process: ok (downloaded=14, processed=14)
+- **bns/GDP_INCOME_METHOD** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/GROSS_OUTPUT** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/TAXES_ON_PRODUCTS** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 51.8% in value between 2009-12-31 (808272100000.0) and 2010-12-31 (1226970200000.0).
+  - warning: Unexpected jump of 110.4% in value between 2010-12-31 (1226970200000.0) and 2011-12-31 (2581518200000.0).
+  - warning: Unexpected jump of 50.7% in value between 2021-12-31 (5161134000000.0) and 2022-12-31 (7779408500000.0).
+- **bns/NET_TAXES_ON_PRODUCTS** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 114.4% in value between 2010-12-31 (1166485400000.0) and 2011-12-31 (2501177900000.0).
+  - warning: Unexpected jump of 52.4% in value between 2021-12-31 (4855517600000.0) and 2022-12-31 (7398002700000.0).
+- **bns/SUBSIDIES** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 120.5% in value between 2000-12-31 (1848100000.0) and 2001-12-31 (4074600000.0).
+  - warning: Unexpected jump of 52.4% in value between 2001-12-31 (4074600000.0) and 2002-12-31 (1941000000.0).
+  - warning: Unexpected jump of 87.0% in value between 2002-12-31 (1941000000.0) and 2003-12-31 (3628900000.0).
+  - warning: Unexpected jump of 91.3% in value between 2008-12-31 (13585000000.0) and 2009-12-31 (25989400000.0).
+  - warning: Unexpected jump of 132.7% in value between 2009-12-31 (25989400000.0) and 2010-12-31 (60484800000.0).
+  - warning: Unexpected jump of 157.1% in value between 2022-12-31 (381405800000.0) and 2023-12-31 (980720000000.0).
+- **bns/INTERMEDIATE_CONSUMPTION** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/GROSS_ACCUMULATION** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 85.3% in value between 2000-12-31 (471597400000.0) and 2001-12-31 (873643200000.0).
+  - warning: Unexpected jump of 52.2% in value between 2004-12-31 (1544496300000.0) and 2005-12-31 (2350789200000.0).
+  - warning: Unexpected jump of 104.5% in value between 2009-12-31 (5002725300000.0) and 2014-12-31 (10232495400000.0).
+- **bns/IMPORT_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/EXPORT_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/TOTAL_CONSUMPTION_EXPENDITURE** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 133.2% in value between 2009-12-31 (10066102700000.0) and 2014-12-31 (23477055500000.0).
+- **bns/CAPITAL_CONSUMPTION** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/RETAIL_TRADE** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/CONSTRUCTION** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **bns/REAL_WAGE_INDEX** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Gap of 731 days between 2019-12-31 and 2021-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/BIRTHS_TOTAL** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/DEATHS_TOTAL** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/HOUSING_COMMISSIONED** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **bns/PPI** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **bns/WHOLESALE_TRADE** — fetch+validate+process: ok (downloaded=25, processed=25)
+  - warning: Unexpected jump of 53.2% in value between 2003-12-31 (1565128050000.0) and 2004-12-31 (2398103407000.0).
+- **bns/RETAIL_TRADE_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **bns/EMISSIONS** — fetch+validate+process: ok (downloaded=13, processed=13)
+- **bns/FREIGHT_TURNOVER** — fetch+validate+process: ok (downloaded=9, processed=9)
+- **bns/PASSENGER_TURNOVER** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/AGRICULTURE_OUTPUT** — fetch+validate+process: ok (downloaded=16, processed=16)
+- **bns/PER_CAPITA_INCOME** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/REAL_INCOME_INDEX** — fetch+validate+process: ok (downloaded=25, processed=25)
+- **bns/TELECOM_SERVICES** — fetch+validate+process: ok (downloaded=9, processed=9)
+- **bns/DOCTORS_TOTAL** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **bns/ENERGY_INTENSITY** — fetch+validate+process: ok (downloaded=11, processed=11)
+- **bns/ENERGY_CONSUMPTION** — fetch+validate+process: ok (downloaded=11, processed=11)
+- **bns/FINAL_ENERGY_CONSUMPTION** — fetch: error (downloaded=0, processed=0)
+  - ERROR: 'str' object has no attribute 'get'
+- **bns/RENEWABLE_ENERGY_SHARE** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **bns/POVERTY_HEADCOUNT** — fetch+validate+process: ok (downloaded=15, processed=15)
+  - warning: Unexpected jump of 60.2% in value between 2017-12-31 (45777.0) and 2018-12-31 (73318.0).
+- **bns/MIGRATION_ARRIVALS** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 57.8% in value between 2021-12-31 (11039.0) and 2022-12-31 (17425.0).
+- **bns/MIGRATION_DEPARTURES** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/LABOR_PRODUCTIVITY** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/TOURISM_VALUE_ADDED** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Gap of 2556 days between 2004-12-31 and 2011-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Gap of 1096 days between 2011-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Gap of 731 days between 2014-12-31 and 2016-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 260.5% in value between 2004-12-31 (101010227800.0) and 2011-12-31 (364147563700.0).
+  - warning: Unexpected jump of 65.9% in value between 2014-12-31 (336751232000.0) and 2016-12-31 (558768504000.0).
+  - warning: Unexpected jump of 50.0% in value between 2019-12-31 (821469043000.0) and 2020-12-31 (410454652000.0).
+  - warning: Unexpected jump of 74.9% in value between 2021-12-31 (572512483000.0) and 2022-12-31 (1001040102000.0).
+- **bns/TOURISM_GDP_SHARE** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Gap of 2556 days between 2004-12-31 and 2011-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Gap of 1096 days between 2011-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Gap of 731 days between 2014-12-31 and 2016-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/TOURISM_EMPLOYMENT** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Gap of 2556 days between 2004-12-31 and 2011-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Gap of 1096 days between 2011-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Gap of 731 days between 2014-12-31 and 2016-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/TOURISM_EMPLOYMENT_SHARE** — fetch+validate+process: ok (downloaded=11, processed=11)
+  - warning: Gap of 1096 days between 2011-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Gap of 731 days between 2014-12-31 and 2016-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/TOURISM_INBOUND_CONSUMPTION** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Gap of 2556 days between 2004-12-31 and 2011-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Gap of 1096 days between 2011-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Gap of 731 days between 2014-12-31 and 2016-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 124.1% in value between 2004-12-31 (75884150000.0) and 2011-12-31 (170050898500.0).
+  - warning: Unexpected jump of 79.3% in value between 2011-12-31 (170050898500.0) and 2014-12-31 (304841612000.0).
+  - warning: Unexpected jump of 92.6% in value between 2014-12-31 (304841612000.0) and 2016-12-31 (587156825000.0).
+  - warning: Unexpected jump of 79.2% in value between 2019-12-31 (1120107522000.0) and 2020-12-31 (233106182000.0).
+  - warning: Unexpected jump of 147.9% in value between 2021-12-31 (324516492000.0) and 2022-12-31 (804393548000.0).
+- **bns/TOURISM_OUTBOUND_CONSUMPTION** — fetch+validate+process: ok (downloaded=13, processed=13)
+  - warning: Gap of 2556 days between 2004-12-31 and 2011-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Gap of 1096 days between 2011-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Gap of 731 days between 2014-12-31 and 2016-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 195.7% in value between 2004-12-31 (91742400000.0) and 2011-12-31 (271326097900.0).
+  - warning: Unexpected jump of 56.2% in value between 2014-12-31 (387668606000.0) and 2016-12-31 (605352893000.0).
+  - warning: Unexpected jump of 69.0% in value between 2019-12-31 (1132230210000.0) and 2020-12-31 (350973718000.0).
+  - warning: Unexpected jump of 107.3% in value between 2020-12-31 (350973718000.0) and 2021-12-31 (727678375000.0).
+  - warning: Unexpected jump of 59.8% in value between 2021-12-31 (727678375000.0) and 2022-12-31 (1163033132000.0).
+- **bns/TOURISM_INBOUND_TRIPS** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Gap of 730 days between 2020-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 132.4% in value between 2020-12-31 (2034753.0) and 2022-12-31 (4728800.0).
+  - warning: Unexpected jump of 94.6% in value between 2022-12-31 (4728800.0) and 2023-12-31 (9204200.0).
+- **bns/TOURISM_DOMESTIC_TRIPS** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Gap of 730 days between 2020-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 92.9% in value between 2020-12-31 (4463200.0) and 2022-12-31 (8607600.0).
+- **bns/TOURISM_OUTBOUND_TRIPS** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Gap of 730 days between 2020-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 167.7% in value between 2020-12-31 (2865004.0) and 2022-12-31 (7670000.0).
+- **bns/TOURISM_INBOUND_NIGHTS** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Gap of 730 days between 2020-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: Unexpected jump of 192.6% in value between 2020-12-31 (8041344.0) and 2022-12-31 (23525780.0).
+  - warning: Unexpected jump of 55.9% in value between 2022-12-31 (23525780.0) and 2023-12-31 (36669532.0).
+- **bns/LIFE_EXPECTANCY** — fetch+validate+process: ok (downloaded=25, processed=25)
+- **bns/CRUDE_BIRTH_RATE** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 730 days between 2005-12-31 and 2007-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/TOTAL_FERTILITY_RATE** — fetch+validate+process: ok (downloaded=8, processed=8)
+- **bns/CRUDE_DEATH_RATE** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 730 days between 2005-12-31 and 2007-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/INFANT_MORTALITY_RATE** — fetch+validate+process: ok (downloaded=24, processed=24)
+  - warning: Gap of 730 days between 2005-12-31 and 2007-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/UNDER5_MORTALITY_RATE** — fetch+validate+process: ok (downloaded=13, processed=13)
+- **bns/STILLBIRTH_RATE** — fetch+validate+process: ok (downloaded=17, processed=17)
+- **bns/INNOVATION_EXPENDITURE** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/ORGANIZATIONS_USING_COMPUTERS** — fetch+validate+process: ok (downloaded=21, processed=21)
+  - warning: Unexpected jump of 446.1% in value between 2007-12-31 (8747.0) and 2008-12-31 (47771.0).
+- **bns/COMPUTERS_IN_ORGANIZATIONS** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Unexpected jump of 50.1% in value between 2007-12-31 (266052.0) and 2008-12-31 (399327.0).
+- **bns/COMPUTERS_INTERNET_CONNECTED** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Unexpected jump of 129.9% in value between 2004-12-31 (27713.0) and 2005-12-31 (63709.0).
+  - warning: Unexpected jump of 52.9% in value between 2007-12-31 (121324.0) and 2008-12-31 (185487.0).
+- **bns/WORKERS_USING_COMPUTERS** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 74.6% in value between 2007-12-31 (222541.0) and 2008-12-31 (388584.0).
+  - warning: Unexpected jump of 71.1% in value between 2012-12-31 (619029.0) and 2013-12-31 (1059238.0).
+- **bns/WORKERS_USING_INTERNET** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 90.7% in value between 2007-12-31 (104245.0) and 2008-12-31 (198828.0).
+  - warning: Unexpected jump of 65.8% in value between 2012-12-31 (397229.0) and 2013-12-31 (658461.0).
+- **bns/ECOMMERCE_RETAIL_ORDERS** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 87.0% in value between 2024-12-31 (12163189.2208168) and 2025-12-31 (22742883.3608395).
+- **bns/ECOMMERCE_SERVICES_VALUE** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/DOCTORS_PER_10K** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **bns/HOSPITAL_BEDS** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **bns/HOSPITAL_BEDS_PER_10K** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **bns/SME_GDP_SHARE** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 56.1% in value between 2007-12-31 (10.7) and 2008-12-31 (16.7).
+  - warning: Unexpected jump of 55.1% in value between 2013-12-31 (16.7) and 2014-12-31 (25.9).
+- **bns/SMALL_BUSINESS_GDP_SHARE** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 151.6% in value between 2013-12-31 (6.4) and 2014-12-31 (16.1).
+- **bns/MEDIUM_BUSINESS_GDP_SHARE** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 410.0% in value between 2007-12-31 (2.0) and 2008-12-31 (10.2).
+- **bns/SMALL_BUSINESS_VALUE_ADDED** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 178.7% in value between 2013-12-31 (2300841842962.8) and 2014-12-31 (6411607477289.4).
+- **bns/MEDIUM_BUSINESS_VALUE_ADDED** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 554.3% in value between 2007-12-31 (248897770413.8) and 2008-12-31 (1628511690993.0).
+  - warning: Unexpected jump of 58.4% in value between 2009-12-31 (1867329865048.7) and 2010-12-31 (2958714440233.0).
+- **bns/HOUSING_INVESTMENT** — fetch+validate+process: ok (downloaded=13, processed=13)
+- **bns/ICT_SPECIALISTS** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **bns/GRADUATES_HIRED** — fetch+validate+process: ok (downloaded=25, processed=25)
+  - warning: Unexpected jump of 73.3% in value between 2012-12-31 (11628.0) and 2013-12-31 (20157.0).
+  - warning: Unexpected jump of 82.8% in value between 2019-12-31 (34139.0) and 2020-12-31 (62410.0).
+- **bns/OIL_PRODUCTION** — fetch+validate+process: ok (downloaded=9, processed=9)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **bns/INDUSTRIAL_OUTPUT** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **bns/INDUSTRIAL_PRODUCTION_INDEX** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/MINING_OUTPUT** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **bns/MANUFACTURING_OUTPUT** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **bns/INVESTMENT_FIXED_CAPITAL** — fetch+validate+process: ok (downloaded=6, processed=6)
+  - warning: Unexpected jump of 57.4% in own-period contribution between 2026-03-01 (3462954863.0) and 2026-04-01 (1473684514.0).
+  - warning: Unexpected jump of 53.4% in own-period contribution between 2026-05-01 (1805666700.0) and 2026-06-01 (2769798499.0).
+- **bns/INVESTMENT_INDEX** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **bns/RETAIL_TRADE_MONTHLY** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **bns/WHOLESALE_TRADE_MONTHLY** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **bns/RETAIL_TRADE_INDEX_MONTHLY** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **bns/WHOLESALE_TRADE_INDEX_MONTHLY** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **bns/CONSTRUCTION_OUTPUT** — fetch+validate+process: ok (downloaded=5, processed=5)
+  - warning: Unexpected jump of 61.5% in own-period contribution between 2026-04-01 (1739462042.0) and 2026-05-01 (670494333.0).
+  - warning: Unexpected jump of 147.9% in own-period contribution between 2026-05-01 (670494333.0) and 2026-06-01 (1662137034.0).
+- **bns/CONSTRUCTION_INDEX** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **bns/LABOR_FORCE** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/LABOR_FORCE_PARTICIPATION_RATE** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/EMPLOYED_QUARTERLY** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/UNEMPLOYED_PERSONS** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/YOUTH_UNEMPLOYMENT_RATE** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/LONG_TERM_UNEMPLOYMENT_RATE** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/AVG_WAGE_QUARTERLY** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_QUARTERLY** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/FREIGHT_TURNOVER_MONTHLY** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 80.1% in own-period contribution between 2026-05-01 (213301.16) and 2026-06-01 (42515.859999999986).
+- **bns/PASSENGER_TURNOVER_MONTHLY** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 76.4% in own-period contribution between 2026-05-01 (36685.9) and 2026-06-01 (8656.900000000001).
+- **bns/FREIGHT_CARRIED** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 78.9% in own-period contribution between 2026-05-01 (382123.01) and 2026-06-01 (80540.54999999999).
+- **bns/PASSENGERS_CARRIED** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 80.9% in own-period contribution between 2026-05-01 (822339.59) and 2026-06-01 (157091.29000000004).
+- **bns/GINI_COEFFICIENT** — fetch+validate+process: ok (downloaded=57, processed=57)
+  - warning: Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+- **bns/DECILE_INCOME_RATIO** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **bns/POVERTY_DEPTH** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **bns/POVERTY_SEVERITY** — fetch+validate+process: ok (downloaded=15, processed=15)
+  - warning: Unexpected jump of 100.0% in value between 2025-01-01 (0.1) and 2025-04-01 (0.2).
+- **bns/CORE_CPI_YOY_EX3** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **bns/CORE_CPI_MOM_EX3** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **bns/CORE_CPI_YOY_EX7** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **bns/CORE_CPI_MOM_EX7** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **bns/AVG_WAGE_MINING** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_MINING** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/AVG_WAGE_MANUFACTURING** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_MANUFACTURING** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/AVG_WAGE_AGRICULTURE** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_AGRICULTURE** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/AVG_WAGE_CONSTRUCTION** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_CONSTRUCTION** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/AVG_WAGE_FINANCE** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_FINANCE** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/AVG_WAGE_EDUCATION** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_EDUCATION** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/EXPORT_PRICE_INDEX** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/IMPORT_PRICE_INDEX** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **bns/CPI_YOY** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/CPI_YTD** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/CPI_FOOD** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/CPI_FOOD_YOY** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/CPI_NONFOOD** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/CPI_NONFOOD_YOY** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/CPI_SERVICES** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/CPI_SERVICES_YOY** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/CPI_UTILITIES** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/CPI_UTILITIES_YOY** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/CPI_REGULATED_UTILITIES** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/CPI_REGULATED_UTILITIES_YOY** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/PPI_MONTHLY** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/PPI_YOY_MONTHLY** — fetch+validate+process: ok (downloaded=188, processed=188)
+- **bns/IND_PROD_MONTHLY_YOY** — fetch+validate+process: ok (downloaded=152, processed=152)
+- **bns/IND_PROD_MONTHLY_MOM** — fetch+validate+process: ok (downloaded=152, processed=152)
+  - warning: Unexpected jump of 58.6% in value between 2026-01-01 (78.5) and 2026-02-01 (124.5).
+- **bns/AVG_WAGE_1T_QUARTERLY** — fetch+validate+process: ok (downloaded=46, processed=46)
+- **bns/FIXED_ASSETS_GROSS** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/FIXED_ASSETS_GROSS_START** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 50.1% in value between 2014-12-31 (36996.3317) and 2015-12-31 (55533.138893).
+- **bns/FIXED_ASSETS_NET** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 52.9% in value between 2014-12-31 (24881.5027) and 2015-12-31 (38037.99835).
+- **bns/FIXED_ASSETS_COMMISSIONED** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 107.1% in value between 2014-12-31 (4810.1211) and 2015-12-31 (9961.541071).
+- **bns/FIXED_ASSETS_DEPRECIATION** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 62.7% in value between 2001-12-31 (214.5393) and 2002-12-31 (349.05421).
+  - warning: Unexpected jump of 141.0% in value between 2018-12-31 (6697.689196) and 2019-12-31 (16144.398666).
+- **bns/FIXED_ASSETS_WEAR** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/FIXED_ASSETS_RENEWAL** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 57.5% in value between 2014-12-31 (10.2) and 2015-12-31 (16.0641092327334).
+- **bns/HOURS_WORKED** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 1826 days between 2012-12-31 and 2017-12-31 is outside expected range for frequency=annual (350-380d).
+- **bns/HOURS_WORKED_QUARTERLY** — fetch+validate+process: ok (downloaded=41, processed=41)
+- **bns/HOURS_PER_EMPLOYEE** — fetch+validate+process: ok (downloaded=13, processed=13)
+- **bns/GINI_COEFFICIENT_ANNUAL** — fetch+validate+process: ok (downloaded=25, processed=25)
+- **bns/DECILE_INCOME_RATIO_ANNUAL** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **nbk/BASE_RATE** — fetch+validate+process: ok (downloaded=91, processed=91)
+- **nbk/EXCHANGE_RATE** — fetch+validate+process: ok (downloaded=6973, processed=6973)
+  - warning: Gap of 12 days between 2003-03-21 and 2003-04-02 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 26 days between 2023-07-27 and 2023-08-22 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 7 days between 2023-08-22 and 2023-08-29 is outside expected range for frequency=daily (1-4d).
+- **nbk/EXCHANGE_RATE_EUR** — fetch+validate+process: ok (downloaded=6969, processed=6969)
+  - warning: Gap of 12 days between 2003-03-21 and 2003-04-02 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 26 days between 2023-07-27 and 2023-08-22 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 7 days between 2023-08-22 and 2023-08-29 is outside expected range for frequency=daily (1-4d).
+- **nbk/EXCHANGE_RATE_CNY** — fetch+validate+process: ok (downloaded=6969, processed=6969)
+  - warning: Gap of 12 days between 2003-03-21 and 2003-04-02 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 26 days between 2023-07-27 and 2023-08-22 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 7 days between 2023-08-22 and 2023-08-29 is outside expected range for frequency=daily (1-4d).
+- **nbk/EXCHANGE_RATE_RUB** — fetch+validate+process: ok (downloaded=6969, processed=6969)
+  - warning: Gap of 12 days between 2003-03-21 and 2003-04-02 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 26 days between 2023-07-27 and 2023-08-22 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 7 days between 2023-08-22 and 2023-08-29 is outside expected range for frequency=daily (1-4d).
+- **nbk/M2** — fetch+validate+process: ok (downloaded=392, processed=392)
+  - warning: Unexpected jump of 52.3% in value between 1994-02-01 (8232.0) and 1994-03-01 (12540.0).
+  - warning: Unexpected jump of 367.3% in value between 1994-03-01 (12540.0) and 1994-04-01 (58595.0).
+- **nbk/M3** — fetch+validate+process: ok (downloaded=392, processed=392)
+  - warning: Unexpected jump of 52.3% in value between 1994-02-01 (8232.0) and 1994-03-01 (12540.0).
+  - warning: Unexpected jump of 367.3% in value between 1994-03-01 (12540.0) and 1994-04-01 (58595.0).
+- **nbk/MONETARY_BASE** — fetch+validate+process: ok (downloaded=392, processed=392)
+  - warning: Unexpected jump of 278.1% in value between 1994-03-01 (6298.0) and 1994-04-01 (23814.0).
+- **nbk/M0** — fetch+validate+process: ok (downloaded=392, processed=392)
+- **nbk/M1** — fetch+validate+process: ok (downloaded=392, processed=392)
+  - warning: Unexpected jump of 53.8% in value between 1994-02-01 (7941.0) and 1994-03-01 (12211.0).
+  - warning: Unexpected jump of 376.6% in value between 1994-03-01 (12211.0) and 1994-04-01 (58198.0).
+- **nbk/FX_RESERVES** — fetch+validate+process: ok (downloaded=104, processed=104)
+- **nbk/NATIONAL_FUND_ASSETS** — fetch+validate+process: ok (downloaded=104, processed=104)
+- **nbk/REER** — fetch+validate+process: ok (downloaded=379, processed=379)
+- **nbk/NEER** — fetch+validate+process: ok (downloaded=380, processed=380)
+- **nbk/DEPOSITS_TOTAL** — fetch+validate+process: ok (downloaded=392, processed=392)
+  - warning: Unexpected jump of 65.5% in value between 1994-02-01 (5690.0) and 1994-03-01 (9417.0).
+  - warning: Unexpected jump of 474.9% in value between 1994-03-01 (9417.0) and 1994-04-01 (54135.0).
+- **nbk/EXTERNAL_DEBT** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **nbk/LENDING_RATE** — fetch+validate+process: ok (downloaded=57, processed=57)
+- **nbk/DEPOSIT_RATE** — fetch+validate+process: ok (downloaded=357, processed=357)
+  - warning: Unexpected jump of 73.7% in value between 1998-12-01 (1.9) and 1999-01-01 (3.3).
+  - warning: Unexpected jump of 212.5% in value between 1999-03-01 (1.6) and 1999-04-01 (5.0).
+  - warning: Unexpected jump of 54.2% in value between 1999-12-01 (2.4) and 2000-01-01 (3.7).
+  - warning: Unexpected jump of 59.1% in value between 2002-10-01 (2.2) and 2002-11-01 (3.5).
+  - warning: Unexpected jump of 52.8% in value between 2002-12-01 (3.6) and 2003-01-01 (5.5).
+  - warning: Unexpected jump of 80.9% in value between 2009-07-01 (6.8) and 2009-08-01 (1.3).
+  - warning: Unexpected jump of 223.1% in value between 2009-08-01 (1.3) and 2009-09-01 (4.2).
+  - warning: Unexpected jump of 117.9% in value between 2009-10-01 (3.9) and 2009-11-01 (8.5).
+- **nbk/LOAN_RATE_ISSUED_LEGAL_KZT** — fetch+validate+process: ok (downloaded=333, processed=333)
+  - warning: Gap of 91 days between 2007-09-01 and 2007-12-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 184 days between 2008-07-01 and 2009-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 334 days between 2009-01-01 and 2009-12-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 214 days between 2014-06-01 and 2015-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 67.3% in value between 2014-06-01 (10.4) and 2015-01-01 (17.4).
+  - warning: Unexpected jump of 61.3% in value between 2015-12-01 (16.0) and 2016-01-01 (25.8).
+- **nbk/LOAN_RATE_ISSUED_INDIVIDUAL_KZT** — fetch+validate+process: ok (downloaded=333, processed=333)
+  - warning: Gap of 91 days between 2007-09-01 and 2007-12-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 184 days between 2008-07-01 and 2009-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 334 days between 2009-01-01 and 2009-12-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 214 days between 2014-06-01 and 2015-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 53.4% in value between 1999-08-01 (26.2) and 1999-09-01 (40.2).
+  - warning: Unexpected jump of 68.7% in value between 1999-12-01 (16.3) and 2000-01-01 (27.5).
+- **nbk/NATIONAL_FUND_TRANSFERS** — fetch+validate+process: ok (downloaded=30, processed=30)
+  - warning: Unexpected jump of 80.0% in value between 2024-08-01 (250.0) and 2024-09-01 (450.0).
+  - warning: Unexpected jump of 51.8% in value between 2024-12-01 (635.0) and 2025-01-01 (306.0).
+  - warning: Unexpected jump of 79.7% in value between 2025-01-01 (306.0) and 2025-02-01 (550.0).
+- **nbk/KASE_USD_VOLUME** — fetch+validate+process: ok (downloaded=20, processed=20)
+- **nbk/REMITTANCES_SENT** — fetch+validate+process: ok (downloaded=59, processed=59)
+- **nbk/REMITTANCES_RECEIVED** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 50.1% in value between 2021-12-01 (27253.83888086) and 2022-01-01 (13594.67906766).
+  - warning: Unexpected jump of 105.1% in value between 2022-03-01 (25583.625044329) and 2022-04-01 (52467.054826664).
+- **nbk/INFLATION_EXPECTATIONS** — fetch+validate+process: ok (downloaded=127, processed=127)
+  - warning: Gap of 62 days between 2021-12-01 and 2022-02-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 89.6% in value between 2022-02-01 (9.6) and 2022-03-01 (18.2).
+- **nbk/BUSINESS_ACTIVITY_INDEX** — fetch+validate+process: ok (downloaded=80, processed=80)
+- **nbk/NON_CASH_PAYMENTS_SHARE** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **nbk/CAPITAL_ADEQUACY_RATIO** — fetch+validate+process: ok (downloaded=18, processed=18)
+- **nbk/NPL_RATIO** — fetch+validate+process: ok (downloaded=18, processed=18)
+- **nbk/LOANS_TO_ECONOMY** — fetch+validate+process: ok (downloaded=18, processed=18)
+- **nbk/FDI_NET_INFLOW** — fetch+validate+process: ok (downloaded=85, processed=85)
+  - warning: Unexpected jump of 185.2% in value between 2005-01-01 (687.62194) and 2005-04-01 (-586.11569).
+  - warning: Unexpected jump of 216.6% in value between 2005-04-01 (-586.11569) and 2005-07-01 (683.33019).
+  - warning: Unexpected jump of 73.6% in value between 2005-07-01 (683.33019) and 2005-10-01 (1186.38119).
+  - warning: Unexpected jump of 95.8% in value between 2005-10-01 (1186.38119) and 2006-01-01 (2323.04707).
+  - warning: Unexpected jump of 73.0% in value between 2006-04-01 (1270.70633) and 2006-07-01 (342.92216).
+  - warning: Unexpected jump of 582.8% in value between 2006-07-01 (342.92216) and 2006-10-01 (2341.4924).
+  - warning: Unexpected jump of 115.5% in value between 2007-07-01 (2057.79863) and 2007-10-01 (4433.82468).
+  - warning: Unexpected jump of 71.3% in value between 2010-10-01 (2468.72261) and 2011-01-01 (4228.0962).
+  - warning: Unexpected jump of 57.7% in value between 2011-07-01 (4320.742617) and 2011-10-01 (1825.913202).
+  - warning: Unexpected jump of 215.1% in value between 2011-10-01 (1825.913202) and 2012-01-01 (5752.75145).
+  - warning: Unexpected jump of 59.2% in value between 2012-01-01 (5752.75145) and 2012-04-01 (2345.73803).
+  - warning: Unexpected jump of 66.6% in value between 2012-04-01 (2345.73803) and 2012-07-01 (3907.74268).
+  - warning: Unexpected jump of 65.9% in value between 2012-07-01 (3907.74268) and 2012-10-01 (1330.766684).
+  - warning: Unexpected jump of 199.9% in value between 2012-10-01 (1330.766684) and 2013-01-01 (3990.40552).
+  - warning: Unexpected jump of 51.7% in value between 2013-01-01 (3990.40552) and 2013-04-01 (1925.680343).
+  - warning: Unexpected jump of 53.3% in value between 2014-01-01 (1902.24238) and 2014-04-01 (2916.637745).
+  - warning: Unexpected jump of 103.8% in value between 2014-07-01 (3815.68426) and 2014-10-01 (-145.16807).
+  - warning: Unexpected jump of 461.3% in value between 2014-10-01 (-145.16807) and 2015-01-01 (524.476384).
+  - warning: Unexpected jump of 92.8% in value between 2015-04-01 (722.78386) and 2015-07-01 (1393.418327).
+  - warning: Unexpected jump of 72.0% in value between 2015-10-01 (1415.934489) and 2016-01-01 (2434.808394).
+  - warning: Unexpected jump of 51.9% in value between 2016-01-01 (2434.808394) and 2016-04-01 (1170.129035).
+  - warning: Unexpected jump of 114.4% in value between 2016-04-01 (1170.129035) and 2016-07-01 (2508.685631).
+  - warning: Unexpected jump of 99.0% in value between 2017-04-01 (1690.135638) and 2017-07-01 (16.963638).
+  - warning: Unexpected jump of 1824.0% in value between 2017-07-01 (16.963638) and 2017-10-01 (326.37649).
+  - warning: Unexpected jump of 786.9% in value between 2017-10-01 (326.37649) and 2018-01-01 (2894.61363).
+  - warning: Unexpected jump of 89.7% in value between 2018-01-01 (2894.61363) and 2018-04-01 (297.32458).
+  - warning: Unexpected jump of 376.7% in value between 2018-04-01 (297.32458) and 2018-07-01 (1417.32302).
+  - warning: Unexpected jump of 150.2% in value between 2018-07-01 (1417.32302) and 2018-10-01 (-711.502595).
+  - warning: Unexpected jump of 504.2% in value between 2018-10-01 (-711.502595) and 2019-01-01 (2875.63331).
+  - warning: Unexpected jump of 150.2% in value between 2019-01-01 (2875.63331) and 2019-04-01 (-1442.792633).
+  - warning: Unexpected jump of 156.6% in value between 2019-04-01 (-1442.792633) and 2019-07-01 (817.19235).
+  - warning: Unexpected jump of 88.4% in value between 2020-04-01 (1425.519844) and 2020-07-01 (165.018106).
+  - warning: Unexpected jump of 477.3% in value between 2020-07-01 (165.018106) and 2020-10-01 (952.584054).
+  - warning: Unexpected jump of 78.3% in value between 2020-10-01 (952.584054) and 2021-01-01 (206.280745).
+  - warning: Unexpected jump of 444.3% in value between 2021-01-01 (206.280745) and 2021-04-01 (1122.71464).
+  - warning: Unexpected jump of 109.3% in value between 2021-04-01 (1122.71464) and 2021-07-01 (2349.42844).
+  - warning: Unexpected jump of 113.8% in value between 2021-07-01 (2349.42844) and 2021-10-01 (-325.17931).
+  - warning: Unexpected jump of 644.7% in value between 2021-10-01 (-325.17931) and 2022-01-01 (1771.28898).
+  - warning: Unexpected jump of 77.2% in value between 2022-01-01 (1771.28898) and 2022-04-01 (403.921307).
+  - warning: Unexpected jump of 1055.8% in value between 2022-04-01 (403.921307) and 2022-07-01 (4668.345663).
+  - warning: Unexpected jump of 106.5% in value between 2022-07-01 (4668.345663) and 2022-10-01 (-301.459891).
+  - warning: Unexpected jump of 983.2% in value between 2022-10-01 (-301.459891) and 2023-01-01 (2662.456823).
+  - warning: Unexpected jump of 68.3% in value between 2023-04-01 (1476.959941) and 2023-07-01 (468.012017).
+  - warning: Unexpected jump of 317.1% in value between 2023-07-01 (468.012017) and 2023-10-01 (-1016.17856).
+  - warning: Unexpected jump of 334.5% in value between 2023-10-01 (-1016.17856) and 2024-01-01 (2382.891878).
+  - warning: Unexpected jump of 113.2% in value between 2024-01-01 (2382.891878) and 2024-04-01 (-314.495466).
+  - warning: Unexpected jump of 375.1% in value between 2024-04-01 (-314.495466) and 2024-07-01 (-1494.10737).
+  - warning: Unexpected jump of 80.1% in value between 2024-07-01 (-1494.10737) and 2024-10-01 (-297.43038).
+  - warning: Unexpected jump of 1068.7% in value between 2024-10-01 (-297.43038) and 2025-01-01 (2881.19419).
+  - warning: Unexpected jump of 168.1% in value between 2025-01-01 (2881.19419) and 2025-04-01 (-1963.5226).
+  - warning: Unexpected jump of 136.5% in value between 2025-04-01 (-1963.5226) and 2025-07-01 (716.795427).
+  - warning: Unexpected jump of 448.2% in value between 2025-07-01 (716.795427) and 2025-10-01 (-2495.592967).
+  - warning: Unexpected jump of 223.0% in value between 2025-10-01 (-2495.592967) and 2026-01-01 (3069.95567).
+- **nbk/GOV_SECURITIES_MEUKAM** — fetch+validate+process: ok (downloaded=200, processed=200)
+- **nbk/IIP_NET** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **nbk/IIP_ASSETS** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **nbk/IIP_LIABILITIES** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **nbk/CURRENT_ACCOUNT_BALANCE** — fetch+validate+process: ok (downloaded=104, processed=104)
+  - warning: Gap of 183 days between 2025-04-01 and 2025-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 209.2% in value between 2000-01-01 (64.434431) and 2000-04-01 (199.204397).
+  - warning: Unexpected jump of 127.0% in value between 2000-04-01 (199.204397) and 2000-07-01 (-53.748708).
+  - warning: Unexpected jump of 391.4% in value between 2000-07-01 (-53.748708) and 2000-10-01 (156.601565).
+  - warning: Unexpected jump of 434.7% in value between 2001-01-01 (118.792311) and 2001-04-01 (-397.625624).
+  - warning: Unexpected jump of 105.0% in value between 2001-10-01 (-654.140546) and 2002-01-01 (33.000943).
+  - warning: Unexpected jump of 1022.4% in value between 2002-01-01 (33.000943) and 2002-04-01 (-304.410146).
+  - warning: Unexpected jump of 57.1% in value between 2002-04-01 (-304.410146) and 2002-07-01 (-478.127846).
+  - warning: Unexpected jump of 270.7% in value between 2002-10-01 (-274.620894) and 2003-01-01 (468.8316).
+  - warning: Unexpected jump of 141.8% in value between 2003-01-01 (468.8316) and 2003-04-01 (-195.926538).
+  - warning: Unexpected jump of 58.8% in value between 2003-04-01 (-195.926538) and 2003-07-01 (-80.791673).
+  - warning: Unexpected jump of 474.4% in value between 2003-07-01 (-80.791673) and 2003-10-01 (-464.072148).
+  - warning: Unexpected jump of 158.6% in value between 2003-10-01 (-464.072148) and 2004-01-01 (272.060382).
+  - warning: Unexpected jump of 214.0% in value between 2004-01-01 (272.060382) and 2004-04-01 (-310.239831).
+  - warning: Unexpected jump of 104.1% in value between 2004-04-01 (-310.239831) and 2004-07-01 (12.698997).
+  - warning: Unexpected jump of 2748.2% in value between 2004-07-01 (12.698997) and 2004-10-01 (361.688198).
+  - warning: Unexpected jump of 348.7% in value between 2004-10-01 (361.688198) and 2005-01-01 (1622.729013).
+  - warning: Unexpected jump of 92.4% in value between 2005-01-01 (1622.729013) and 2005-04-01 (123.502402).
+  - warning: Unexpected jump of 423.9% in value between 2005-04-01 (123.502402) and 2005-07-01 (-400.039783).
+  - warning: Unexpected jump of 146.9% in value between 2005-07-01 (-400.039783) and 2005-10-01 (-987.761917).
+  - warning: Unexpected jump of 276.4% in value between 2005-10-01 (-987.761917) and 2006-01-01 (1742.612032).
+  - warning: Unexpected jump of 67.0% in value between 2006-01-01 (1742.612032) and 2006-04-01 (574.227527).
+  - warning: Unexpected jump of 383.1% in value between 2006-04-01 (574.227527) and 2006-07-01 (-1625.609798).
+  - warning: Unexpected jump of 103.0% in value between 2006-10-01 (-1513.973567) and 2007-01-01 (45.856967).
+  - warning: Unexpected jump of 4126.8% in value between 2007-01-01 (45.856967) and 2007-04-01 (-1846.548299).
+  - warning: Unexpected jump of 579.9% in value between 2007-10-01 (-1000.429362) and 2008-01-01 (4801.391088).
+  - warning: Unexpected jump of 157.8% in value between 2008-04-01 (2627.498522) and 2008-07-01 (-1517.490616).
+  - warning: Unexpected jump of 204.7% in value between 2008-07-01 (-1517.490616) and 2008-10-01 (-4623.924862).
+  - warning: Unexpected jump of 99.1% in value between 2008-10-01 (-4623.924862) and 2009-01-01 (-41.992309).
+  - warning: Unexpected jump of 1405.3% in value between 2009-01-01 (-41.992309) and 2009-04-01 (-632.12913).
+  - warning: Unexpected jump of 143.2% in value between 2009-04-01 (-632.12913) and 2009-07-01 (273.22284).
+  - warning: Unexpected jump of 1304.6% in value between 2009-10-01 (266.604929) and 2010-01-01 (3744.765101).
+  - warning: Unexpected jump of 92.1% in value between 2010-01-01 (3744.765101) and 2010-04-01 (297.08936).
+  - warning: Unexpected jump of 396.8% in value between 2010-04-01 (297.08936) and 2010-07-01 (-881.667698).
+  - warning: Unexpected jump of 2150.7% in value between 2010-10-01 (-482.052571) and 2011-01-01 (9885.333775).
+  - warning: Unexpected jump of 83.3% in value between 2011-01-01 (9885.333775) and 2011-04-01 (1647.896048).
+  - warning: Unexpected jump of 228.0% in value between 2011-10-01 (1422.91034) and 2012-01-01 (4667.827771).
+  - warning: Unexpected jump of 94.5% in value between 2012-01-01 (4667.827771) and 2012-04-01 (254.603821).
+  - warning: Unexpected jump of 500.9% in value between 2012-04-01 (254.603821) and 2012-07-01 (-1020.808726).
+  - warning: Unexpected jump of 358.2% in value between 2012-10-01 (-1273.022183) and 2013-01-01 (3287.102638).
+  - warning: Unexpected jump of 99.3% in value between 2013-01-01 (3287.102638) and 2013-04-01 (22.583556).
+  - warning: Unexpected jump of 3633.7% in value between 2013-04-01 (22.583556) and 2013-07-01 (-798.046391).
+  - warning: Unexpected jump of 352.6% in value between 2013-07-01 (-798.046391) and 2013-10-01 (2015.578483).
+  - warning: Unexpected jump of 68.8% in value between 2013-10-01 (2015.578483) and 2014-01-01 (3402.958991).
+  - warning: Unexpected jump of 92.4% in value between 2014-01-01 (3402.958991) and 2014-04-01 (260.126363).
+  - warning: Unexpected jump of 1146.5% in value between 2014-04-01 (260.126363) and 2014-07-01 (-2722.171091).
+  - warning: Unexpected jump of 80.0% in value between 2014-10-01 (-3793.574707) and 2015-01-01 (-757.923474).
+  - warning: Unexpected jump of 374.8% in value between 2015-01-01 (-757.923474) and 2015-04-01 (-3598.305206).
+  - warning: Unexpected jump of 53.1% in value between 2015-07-01 (-3828.011863) and 2015-10-01 (-1795.286368).
+  - warning: Unexpected jump of 55.6% in value between 2016-10-01 (-1952.117735) and 2017-01-01 (-866.188681).
+  - warning: Unexpected jump of 106.0% in value between 2017-01-01 (-866.188681) and 2017-04-01 (-1784.322883).
+  - warning: Unexpected jump of 67.0% in value between 2017-04-01 (-1784.322883) and 2017-07-01 (-589.2386).
+  - warning: Unexpected jump of 68.3% in value between 2017-07-01 (-589.2386) and 2017-10-01 (-186.93651).
+  - warning: Unexpected jump of 196.8% in value between 2017-10-01 (-186.93651) and 2018-01-01 (180.979045).
+  - warning: Unexpected jump of 476.5% in value between 2018-04-01 (227.56885) and 2018-07-01 (-856.736604).
+  - warning: Unexpected jump of 53.8% in value between 2018-07-01 (-856.736604) and 2018-10-01 (-1317.559773).
+  - warning: Unexpected jump of 189.4% in value between 2018-10-01 (-1317.559773) and 2019-01-01 (1177.4966).
+  - warning: Unexpected jump of 315.4% in value between 2019-01-01 (1177.4966) and 2019-04-01 (-2536.713265).
+  - warning: Unexpected jump of 73.8% in value between 2019-10-01 (-2280.34354) and 2020-01-01 (-597.1990194).
+  - warning: Unexpected jump of 635.9% in value between 2020-01-01 (-597.1990194) and 2020-04-01 (-4394.67146).
+  - warning: Unexpected jump of 71.9% in value between 2020-07-01 (-4734.156817) and 2020-10-01 (-1329.008226).
+  - warning: Unexpected jump of 108.5% in value between 2020-10-01 (-1329.008226) and 2021-01-01 (113.3538939).
+  - warning: Unexpected jump of 845.4% in value between 2021-01-01 (113.3538939) and 2021-04-01 (-844.9059404).
+  - warning: Unexpected jump of 125.4% in value between 2021-04-01 (-844.9059404) and 2021-07-01 (-1904.807968).
+  - warning: Unexpected jump of 97.7% in value between 2021-07-01 (-1904.807968) and 2021-10-01 (-43.09866828).
+  - warning: Unexpected jump of 10356.2% in value between 2021-10-01 (-43.09866828) and 2022-01-01 (4420.288151).
+  - warning: Unexpected jump of 72.0% in value between 2022-01-01 (4420.288151) and 2022-04-01 (1236.914796).
+  - warning: Unexpected jump of 132.0% in value between 2022-07-01 (1146.724615) and 2022-10-01 (-367.5249435).
+  - warning: Unexpected jump of 344.2% in value between 2022-10-01 (-367.5249435) and 2023-01-01 (-1632.68135).
+  - warning: Unexpected jump of 109.6% in value between 2023-01-01 (-1632.68135) and 2023-04-01 (-3422.078801).
+  - warning: Unexpected jump of 51.6% in value between 2023-04-01 (-3422.078801) and 2023-07-01 (-1655.390208).
+  - warning: Unexpected jump of 57.4% in value between 2023-07-01 (-1655.390208) and 2023-10-01 (-2605.319332).
+  - warning: Unexpected jump of 90.3% in value between 2023-10-01 (-2605.319332) and 2024-01-01 (-253.4558463).
+  - warning: Unexpected jump of 560.2% in value between 2024-01-01 (-253.4558463) and 2024-04-01 (-1673.210249).
+  - warning: Unexpected jump of 85.4% in value between 2024-07-01 (-2105.194182) and 2024-10-01 (-3903.6348).
+  - warning: Unexpected jump of 73.6% in value between 2024-10-01 (-3903.6348) and 2025-01-01 (-1030.042341).
+  - warning: Unexpected jump of 177.8% in value between 2025-01-01 (-1030.042341) and 2025-04-01 (-2861.708944).
+  - warning: Unexpected jump of 81.0% in value between 2025-04-01 (-2861.708944) and 2025-10-01 (-5180.443517).
+  - warning: Unexpected jump of 61.2% in value between 2025-10-01 (-5180.443517) and 2026-01-01 (-2008.012157).
+- **nbk/BOP_GOODS_BALANCE** — fetch+validate+process: ok (downloaded=104, processed=104)
+  - warning: Gap of 183 days between 2025-04-01 and 2025-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 63.6% in value between 2000-07-01 (444.561018) and 2000-10-01 (727.459992).
+  - warning: Unexpected jump of 52.9% in value between 2001-01-01 (506.576597) and 2001-04-01 (238.509911).
+  - warning: Unexpected jump of 229.7% in value between 2001-10-01 (139.547537) and 2002-01-01 (460.155535).
+  - warning: Unexpected jump of 80.1% in value between 2002-07-01 (456.042029) and 2002-10-01 (821.499759).
+  - warning: Unexpected jump of 56.9% in value between 2002-10-01 (821.499759) and 2003-01-01 (1289.307749).
+  - warning: Unexpected jump of 88.0% in value between 2003-10-01 (756.1756) and 2004-01-01 (1421.728092).
+  - warning: Unexpected jump of 64.2% in value between 2004-04-01 (1172.462998) and 2004-07-01 (1924.867712).
+  - warning: Unexpected jump of 57.3% in value between 2004-10-01 (2271.75423) and 2005-01-01 (3574.301128).
+  - warning: Unexpected jump of 81.1% in value between 2005-10-01 (2677.875451) and 2006-01-01 (4849.073417).
+  - warning: Unexpected jump of 72.1% in value between 2007-10-01 (6262.920231) and 2008-01-01 (10777.937715).
+  - warning: Unexpected jump of 83.3% in value between 2008-07-01 (5884.722741) and 2008-10-01 (980.393606).
+  - warning: Unexpected jump of 189.2% in value between 2008-10-01 (980.393606) and 2009-01-01 (2835.074072).
+  - warning: Unexpected jump of 50.8% in value between 2009-01-01 (2835.074072) and 2009-04-01 (4276.587233).
+  - warning: Unexpected jump of 55.6% in value between 2009-10-01 (6059.703208) and 2010-01-01 (9429.071188).
+  - warning: Unexpected jump of 154.4% in value between 2010-10-01 (6822.637673) and 2011-01-01 (17355.677446).
+  - warning: Unexpected jump of 60.8% in value between 2014-07-01 (6017.87841) and 2014-10-01 (2360.584084).
+  - warning: Unexpected jump of 65.8% in value between 2015-04-01 (1968.216915) and 2015-07-01 (673.572903).
+  - warning: Unexpected jump of 153.2% in value between 2015-07-01 (673.572903) and 2015-10-01 (1705.634883).
+  - warning: Unexpected jump of 57.5% in value between 2016-10-01 (3083.274294) and 2017-01-01 (4856.938794).
+  - warning: Unexpected jump of 74.4% in value between 2018-10-01 (4314.891504) and 2019-01-01 (7523.850746).
+  - warning: Unexpected jump of 101.2% in value between 2020-01-01 (4229.801801) and 2020-04-01 (-48.73738356).
+  - warning: Unexpected jump of 79.3% in value between 2020-04-01 (-48.73738356) and 2020-07-01 (-87.38074753).
+  - warning: Unexpected jump of 2291.9% in value between 2020-07-01 (-87.38074753) and 2020-10-01 (1915.301376).
+  - warning: Unexpected jump of 191.3% in value between 2020-10-01 (1915.301376) and 2021-01-01 (5578.72849).
+  - warning: Unexpected jump of 60.9% in value between 2021-10-01 (7549.247832) and 2022-01-01 (12147.66415).
+  - warning: Unexpected jump of 114.1% in value between 2024-10-01 (2398.772959) and 2025-01-01 (5136.459851).
+  - warning: Unexpected jump of 88.0% in value between 2025-04-01 (2751.965382) and 2025-10-01 (329.801885).
+  - warning: Unexpected jump of 1133.7% in value between 2025-10-01 (329.801885) and 2026-01-01 (4068.863836).
+- **nbk/BOP_SERVICES_BALANCE** — fetch+validate+process: ok (downloaded=104, processed=104)
+  - warning: Gap of 183 days between 2025-04-01 and 2025-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 67.2% in value between 2000-04-01 (-193.564986) and 2000-07-01 (-323.632984).
+  - warning: Unexpected jump of 76.3% in value between 2001-01-01 (-235.583058) and 2001-04-01 (-415.300791).
+  - warning: Unexpected jump of 78.8% in value between 2002-01-01 (-317.740682) and 2002-04-01 (-568.163169).
+  - warning: Unexpected jump of 59.3% in value between 2005-01-01 (-794.829965) and 2005-04-01 (-1266.208562).
+  - warning: Unexpected jump of 57.9% in value between 2010-10-01 (-2342.041418) and 2011-01-01 (-986.190309).
+  - warning: Unexpected jump of 52.2% in value between 2014-10-01 (-1742.88508) and 2015-01-01 (-832.353533).
+  - warning: Unexpected jump of 77.3% in value between 2016-04-01 (-729.593086) and 2016-07-01 (-1293.567833).
+  - warning: Unexpected jump of 163.7% in value between 2022-07-01 (-206.7770768) and 2022-10-01 (-545.2781485).
+  - warning: Unexpected jump of 58.7% in value between 2025-01-01 (-206.5478619) and 2025-04-01 (-327.7333122).
+  - warning: Unexpected jump of 51.7% in value between 2025-10-01 (-453.717197) and 2026-01-01 (-219.085907).
+- **nbk/BOP_PRIMARY_INCOME** — fetch+validate+process: ok (downloaded=104, processed=104)
+  - warning: Gap of 183 days between 2025-04-01 and 2025-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 52.2% in value between 2004-04-01 (-585.603653) and 2004-07-01 (-891.274101).
+  - warning: Unexpected jump of 53.8% in value between 2006-01-01 (-1591.274331) and 2006-04-01 (-2447.899248).
+  - warning: Unexpected jump of 56.0% in value between 2008-10-01 (-3764.224413) and 2009-01-01 (-1657.26325).
+  - warning: Unexpected jump of 95.9% in value between 2009-01-01 (-1657.26325) and 2009-04-01 (-3246.104566).
+- **nbk/BOP_SECONDARY_INCOME** — fetch+validate+process: ok (downloaded=104, processed=104)
+  - warning: Gap of 183 days between 2025-04-01 and 2025-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 145.1% in value between 2000-04-01 (44.51928) and 2000-07-01 (109.11715).
+  - warning: Unexpected jump of 52.8% in value between 2000-07-01 (109.11715) and 2000-10-01 (51.55677).
+  - warning: Unexpected jump of 107.9% in value between 2002-07-01 (32.209844) and 2002-10-01 (-2.548263).
+  - warning: Unexpected jump of 376.3% in value between 2002-10-01 (-2.548263) and 2003-01-01 (7.041669).
+  - warning: Unexpected jump of 412.8% in value between 2003-01-01 (7.041669) and 2003-04-01 (-22.027499).
+  - warning: Unexpected jump of 98.1% in value between 2003-04-01 (-22.027499) and 2003-07-01 (-43.6417).
+  - warning: Unexpected jump of 143.0% in value between 2003-07-01 (-43.6417) and 2003-10-01 (-106.044519).
+  - warning: Unexpected jump of 82.5% in value between 2004-01-01 (-57.426857) and 2004-04-01 (-104.780612).
+  - warning: Unexpected jump of 57.2% in value between 2004-04-01 (-104.780612) and 2004-07-01 (-164.677519).
+  - warning: Unexpected jump of 93.4% in value between 2004-10-01 (-161.270743) and 2005-01-01 (-10.708657).
+  - warning: Unexpected jump of 513.6% in value between 2005-01-01 (-10.708657) and 2005-04-01 (-65.704042).
+  - warning: Unexpected jump of 130.5% in value between 2005-04-01 (-65.704042) and 2005-07-01 (-151.41537).
+  - warning: Unexpected jump of 64.3% in value between 2006-01-01 (-136.159885) and 2006-04-01 (-223.673377).
+  - warning: Unexpected jump of 63.6% in value between 2006-07-01 (-321.57944) and 2006-10-01 (-526.029099).
+  - warning: Unexpected jump of 55.5% in value between 2007-10-01 (-534.838109) and 2008-01-01 (-238.078341).
+  - warning: Unexpected jump of 116.7% in value between 2008-04-01 (-164.194876) and 2008-07-01 (-355.759816).
+  - warning: Unexpected jump of 71.6% in value between 2008-10-01 (-302.023759) and 2009-01-01 (-85.822108).
+  - warning: Unexpected jump of 122.9% in value between 2009-01-01 (-85.822108) and 2009-04-01 (-191.283144).
+  - warning: Unexpected jump of 102.8% in value between 2009-10-01 (-206.464961) and 2010-01-01 (5.680547).
+  - warning: Unexpected jump of 3377.1% in value between 2010-01-01 (5.680547) and 2010-04-01 (-186.156865).
+  - warning: Unexpected jump of 69.9% in value between 2010-07-01 (-237.40982) and 2010-10-01 (-71.357577).
+  - warning: Unexpected jump of 100.3% in value between 2010-10-01 (-71.357577) and 2011-01-01 (0.246382).
+  - warning: Unexpected jump of 5131.4% in value between 2011-01-01 (0.246382) and 2011-04-01 (-12.396369).
+  - warning: Unexpected jump of 604.4% in value between 2011-04-01 (-12.396369) and 2011-07-01 (-87.315996).
+  - warning: Unexpected jump of 89.8% in value between 2011-07-01 (-87.315996) and 2011-10-01 (-165.683126).
+  - warning: Unexpected jump of 118.0% in value between 2011-10-01 (-165.683126) and 2012-01-01 (29.883645).
+  - warning: Unexpected jump of 487.6% in value between 2012-01-01 (29.883645) and 2012-04-01 (-115.818085).
+  - warning: Unexpected jump of 113.7% in value between 2012-04-01 (-115.818085) and 2012-07-01 (-247.465531).
+  - warning: Unexpected jump of 75.6% in value between 2012-10-01 (-225.888489) and 2013-01-01 (-55.121442).
+  - warning: Unexpected jump of 274.3% in value between 2013-01-01 (-55.121442) and 2013-04-01 (-206.320472).
+  - warning: Unexpected jump of 105.8% in value between 2014-01-01 (-112.394922) and 2014-04-01 (-231.324813).
+  - warning: Unexpected jump of 82.8% in value between 2014-07-01 (-218.108231) and 2014-10-01 (-398.739303).
+  - warning: Unexpected jump of 165.2% in value between 2015-01-01 (-255.406549) and 2015-04-01 (-677.262214).
+  - warning: Unexpected jump of 53.4% in value between 2015-04-01 (-677.262214) and 2015-07-01 (-315.326974).
+  - warning: Unexpected jump of 83.4% in value between 2015-07-01 (-315.326974) and 2015-10-01 (-52.482367).
+  - warning: Unexpected jump of 57.4% in value between 2015-10-01 (-52.482367) and 2016-01-01 (-82.608932).
+  - warning: Unexpected jump of 76.3% in value between 2016-01-01 (-82.608932) and 2016-04-01 (-19.537231).
+  - warning: Unexpected jump of 87.3% in value between 2016-04-01 (-19.537231) and 2016-07-01 (-2.490919).
+  - warning: Unexpected jump of 2632.3% in value between 2016-07-01 (-2.490919) and 2016-10-01 (-68.060535).
+  - warning: Unexpected jump of 73.1% in value between 2017-04-01 (-19.957502) and 2017-07-01 (-5.370672).
+  - warning: Unexpected jump of 684.1% in value between 2017-07-01 (-5.370672) and 2017-10-01 (-42.111706).
+  - warning: Unexpected jump of 395.9% in value between 2017-10-01 (-42.111706) and 2018-01-01 (124.594644).
+  - warning: Unexpected jump of 156.0% in value between 2018-04-01 (126.266414) and 2018-07-01 (323.235004).
+  - warning: Unexpected jump of 82.6% in value between 2019-10-01 (330.22138) and 2020-01-01 (57.4467333).
+  - warning: Unexpected jump of 139.1% in value between 2020-01-01 (57.4467333) and 2020-04-01 (-22.45868373).
+  - warning: Unexpected jump of 229.8% in value between 2020-04-01 (-22.45868373) and 2020-07-01 (29.14823717).
+  - warning: Unexpected jump of 4296.7% in value between 2020-07-01 (29.14823717) and 2020-10-01 (1281.56756).
+  - warning: Unexpected jump of 109.9% in value between 2020-10-01 (1281.56756) and 2021-01-01 (-127.4366969).
+  - warning: Unexpected jump of 76.9% in value between 2021-01-01 (-127.4366969) and 2021-04-01 (-225.456334).
+  - warning: Unexpected jump of 58.2% in value between 2021-07-01 (-198.6415376) and 2021-10-01 (-83.11141562).
+  - warning: Unexpected jump of 300.5% in value between 2021-10-01 (-83.11141562) and 2022-01-01 (-332.8594033).
+  - warning: Unexpected jump of 61.5% in value between 2023-01-01 (-198.8091963) and 2023-04-01 (-321.1664373).
+  - warning: Unexpected jump of 72.5% in value between 2023-10-01 (-268.5742348) and 2024-01-01 (-73.72640656).
+  - warning: Unexpected jump of 69.4% in value between 2024-04-01 (-103.6553972) and 2024-07-01 (-175.6142774).
+  - warning: Unexpected jump of 145.4% in value between 2025-01-01 (-99.72807162) and 2025-04-01 (-244.6962967).
+  - warning: Unexpected jump of 67.7% in value between 2025-04-01 (-244.6962967) and 2025-10-01 (-79.09401).
+  - warning: Unexpected jump of 224.8% in value between 2025-10-01 (-79.09401) and 2026-01-01 (98.708601).
+- **nbk/EXCHANGE_RATE_CNY_KASE** — fetch+validate+process: ok (downloaded=20, processed=20)
+- **nbk/KASE_CNY_VOLUME** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 82.6% in value between 2025-05-01 (760677000.0) and 2025-06-01 (1388679877.0).
+  - warning: Unexpected jump of 62.8% in value between 2025-11-01 (1697196914.0) and 2025-12-01 (2762728044.0).
+  - warning: Unexpected jump of 55.7% in value between 2025-12-01 (2762728044.0) and 2026-01-01 (1223591921.0).
+  - warning: Unexpected jump of 111.4% in value between 2026-02-01 (880046786.0) and 2026-03-01 (1860457507.0).
+  - warning: Unexpected jump of 68.6% in value between 2026-03-01 (1860457507.0) and 2026-04-01 (3136384254.0).
+  - warning: Unexpected jump of 65.0% in value between 2026-04-01 (3136384254.0) and 2026-05-01 (1096257932.0).
+  - warning: Unexpected jump of 90.5% in value between 2026-05-01 (1096257932.0) and 2026-06-01 (2088053344.0).
+- **nbk/KASE_EUR_VOLUME** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 59.1% in value between 2025-01-01 (93731688.0) and 2025-02-01 (149081157.0).
+  - warning: Unexpected jump of 69.0% in value between 2025-02-01 (149081157.0) and 2025-03-01 (46255660.0).
+  - warning: Unexpected jump of 81.8% in value between 2025-06-01 (30062975.0) and 2025-07-01 (54643625.0).
+- **nbk/KASE_RUB_VOLUME** — fetch+validate+process: ok (downloaded=20, processed=20)
+  - warning: Unexpected jump of 53.3% in value between 2025-12-01 (134560334406.0) and 2026-01-01 (62859414953.0).
+  - warning: Unexpected jump of 63.8% in value between 2026-03-01 (70943760874.0) and 2026-04-01 (116228489175.0).
+- **nbk/PAYMENTS_TOTAL_COUNT** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/PAYMENT_CARDS_COUNT** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/CASHLESS_PAYMENTS_COUNT** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/CASH_WITHDRAWALS_COUNT** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/REMITTANCES_SENT_COUNT** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 55.6% in value between 2021-12-01 (226.259) and 2022-01-01 (100.472).
+  - warning: Unexpected jump of 53.0% in value between 2022-03-01 (167.585) and 2022-04-01 (256.327).
+- **nbk/REMITTANCES_RECEIVED_COUNT** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 86.5% in value between 2022-03-01 (96.643) and 2022-04-01 (180.237).
+- **nbk/BANK_ROA** — fetch+validate+process: ok (downloaded=18, processed=18)
+- **nbk/BANK_ROE** — fetch+validate+process: ok (downloaded=18, processed=18)
+  - warning: Unexpected jump of 50.4% in value between 2022-04-01 (31.32) and 2022-07-01 (15.55).
+  - warning: Unexpected jump of 65.5% in value between 2022-07-01 (15.55) and 2022-10-01 (25.74).
+- **nbk/PENSION_FUND_ASSETS** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Gap of 61 days between 2025-08-01 and 2025-10-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/INSURANCE_PREMIUMS_GENERAL** — fetch+validate+process: ok (downloaded=33, processed=33)
+  - warning: Gap of 365 days between 2024-12-01 and 2025-12-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 65.2% in own-period contribution between 2023-05-01 (35705.122) and 2023-06-01 (58985.56599999996).
+  - warning: Unexpected jump of 51.0% in own-period contribution between 2023-12-01 (56819.93200000003) and 2024-01-01 (85783.675).
+  - warning: Unexpected jump of 50.4% in own-period contribution between 2024-01-01 (85783.675) and 2024-02-01 (42507.29699999999).
+  - warning: Unexpected jump of 1068.1% in own-period contribution between 2024-12-01 (58703.5) and 2025-12-01 (685712.614).
+  - warning: Unexpected jump of 90.5% in own-period contribution between 2025-12-01 (685712.614) and 2026-01-01 (65238.985).
+- **nbk/INSURANCE_PREMIUMS_LIFE** — fetch+validate+process: ok (downloaded=33, processed=33)
+  - warning: Gap of 365 days between 2024-12-01 and 2025-12-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 801.0% in own-period contribution between 2024-12-01 (118218.70700000005) and 2025-12-01 (1065144.803).
+  - warning: Unexpected jump of 92.2% in own-period contribution between 2025-12-01 (1065144.803) and 2026-01-01 (82855.48).
+  - warning: Unexpected jump of 72.7% in own-period contribution between 2026-05-01 (87446.86000000004) and 2026-06-01 (150997.88400000002).
+- **nbk/PENSION_PAYMENTS** — fetch+validate+process: ok (downloaded=45, processed=45)
+  - warning: Unexpected jump of 97.3% in own-period contribution between 2022-12-01 (1155398.586) and 2023-01-01 (31166.536).
+  - warning: Unexpected jump of 106.9% in own-period contribution between 2023-06-01 (35425.995000000024) and 2023-07-01 (73284.788).
+  - warning: Unexpected jump of 62.9% in own-period contribution between 2024-06-01 (62270.37400000001) and 2024-07-01 (101424.41700000002).
+  - warning: Unexpected jump of 53.6% in own-period contribution between 2024-11-01 (90237.47000000009) and 2024-12-01 (138622.61).
+  - warning: Unexpected jump of 145.9% in own-period contribution between 2025-11-01 (114757.06499999994) and 2025-12-01 (282149.16500000004).
+  - warning: Unexpected jump of 69.1% in own-period contribution between 2025-12-01 (282149.16500000004) and 2026-01-01 (87285.341).
+  - warning: Unexpected jump of 54.9% in own-period contribution between 2026-06-01 (145690.06300000002) and 2026-07-01 (65645.93099999998).
+- **nbk/RESERVES_IMPORT_COVER** — fetch+validate+process: ok (downloaded=50, processed=50)
+- **nbk/PRODUCTION_VOLUME_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **nbk/PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **nbk/DEMAND_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=86, processed=86)
+- **nbk/DEMAND_EXPECTATIONS_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=86, processed=86)
+- **nbk/LOAN_RATE_ACCEPTABLE_KZT** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **nbk/LOAN_RATE_ACCEPTABLE_FX** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **nbk/LOAN_TERM_ACCEPTABLE_KZT** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **nbk/LOAN_TERM_ACCEPTABLE_FX** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **nbk/INVENTORIES_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **nbk/INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **nbk/IMPORT_PRICE_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **nbk/IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **nbk/RAW_MATERIALS_PRICE_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=86, processed=86)
+- **nbk/RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=86, processed=86)
+- **nbk/CAPACITY_UTILIZATION** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **nbk/FINISHED_GOODS_PRICE_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=86, processed=86)
+- **nbk/FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX** — fetch+validate+process: ok (downloaded=86, processed=86)
+- **nbk/OVERDUE_ACCOUNTS_PAYABLE_SHARE** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **nbk/OVERDUE_ACCOUNTS_RECEIVABLE_SHARE** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **nbk/OVERDUE_BANK_LOANS_SHARE** — fetch+validate+process: ok (downloaded=42, processed=42)
+  - warning: Unexpected jump of 402.7% in value between 2020-01-01 (2.418861) and 2020-04-01 (12.158809).
+- **nbk/ENTERPRISE_DEBT_BURDEN** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **nbk/EXPORTERS_SHARE** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **nbk/IMPORTERS_SHARE** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **nbk/PAYMENTS_TOTAL_VALUE** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/CASHLESS_PAYMENTS_VALUE** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/CASH_WITHDRAWALS_VALUE** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/PAYMENT_CARDS_VALUE** — fetch+validate+process: ok (downloaded=72, processed=72)
+  - warning: Gap of 243 days between 2025-08-01 and 2026-04-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_KZT** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_FX** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **nbk/HOUSEHOLD_DEPOSITS_DEMAND_KZT** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **nbk/HOUSEHOLD_DEPOSITS_DEMAND_FX** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **nbk/HOUSEHOLD_DEPOSITS_SAVING_KZT** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **nbk/HOUSEHOLD_DEPOSITS_SAVING_FX** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **nbk/LOANS_BUSINESS_KZT** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/LOANS_BUSINESS_FX** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/LOANS_INDIVIDUALS_KZT** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/LOANS_INDIVIDUALS_FX** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/LOANS_MICROFINANCE_INDIVIDUALS** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/LOANS_MICROFINANCE_BUSINESS** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+- **nbk/EXTERNAL_DEBT_LONG_TERM** — fetch+validate+process: ok (downloaded=47, processed=47)
+- **nbk/EXTERNAL_DEBT_SHORT_TERM** — fetch+validate+process: ok (downloaded=47, processed=47)
+- **nbk/PRIVATE_EXTERNAL_DEBT_INTERCOMPANY** — fetch+validate+process: ok (downloaded=47, processed=47)
+- **nbk/PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT** — fetch+validate+process: ok (downloaded=47, processed=47)
+- **nbk/GOLD_BULLION_SALES** — fetch+validate+process: ok (downloaded=36, processed=36)
+  - warning: Unexpected jump of 238.7% in value between 2017-07-01 (225.0) and 2017-10-01 (762.0).
+  - warning: Unexpected jump of 94.1% in value between 2018-04-01 (560.0) and 2018-07-01 (1087.0).
+  - warning: Unexpected jump of 54.5% in value between 2019-01-01 (1092.0) and 2019-04-01 (1687.0).
+  - warning: Unexpected jump of 295.3% in value between 2019-07-01 (1853.0) and 2019-10-01 (7324.0).
+  - warning: Unexpected jump of 66.8% in value between 2020-04-01 (2497.0) and 2020-07-01 (4166.0).
+  - warning: Unexpected jump of 57.1% in value between 2020-07-01 (4166.0) and 2020-10-01 (6545.0).
+  - warning: Unexpected jump of 77.1% in value between 2024-01-01 (10710.0) and 2024-04-01 (18969.0).
+  - warning: Unexpected jump of 68.2% in value between 2024-10-01 (13940.0) and 2025-01-01 (23445.0).
+  - warning: Unexpected jump of 52.7% in value between 2025-01-01 (23445.0) and 2025-04-01 (11084.0).
+  - warning: Unexpected jump of 63.8% in value between 2025-04-01 (11084.0) and 2025-07-01 (4008.0).
+  - warning: Unexpected jump of 127.3% in value between 2025-07-01 (4008.0) and 2025-10-01 (9110.0).
+  - warning: Unexpected jump of 82.2% in value between 2025-10-01 (9110.0) and 2026-01-01 (16597.0).
+  - warning: Unexpected jump of 59.7% in value between 2026-01-01 (16597.0) and 2026-04-01 (6681.0).
+- **nbk/REMITTANCES_SENT_USD** — fetch+validate+process: ok (downloaded=59, processed=59)
+- **nbk/REMITTANCES_SENT_KZT** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 65.3% in value between 2021-12-01 (7535.75044157) and 2022-01-01 (2616.94285723).
+  - warning: Unexpected jump of 63.8% in value between 2022-01-01 (2616.94285723) and 2022-02-01 (4287.82910448).
+  - warning: Unexpected jump of 84.3% in value between 2022-03-01 (5095.81663903) and 2022-04-01 (9390.57069132).
+  - warning: Unexpected jump of 52.7% in value between 2022-04-01 (9390.57069132) and 2022-05-01 (14339.6470739).
+  - warning: Unexpected jump of 79.4% in value between 2022-06-01 (13597.55890139) and 2022-07-01 (24396.72373385).
+- **nbk/REMITTANCES_SENT_RUB** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 70.6% in value between 2022-02-01 (4921.3584205) and 2022-03-01 (8394.11491677).
+  - warning: Unexpected jump of 69.3% in value between 2022-03-01 (8394.11491677) and 2022-04-01 (14209.19187954).
+  - warning: Unexpected jump of 55.6% in value between 2022-12-01 (12272.84606747) and 2023-01-01 (5444.04381183).
+- **nbk/REMITTANCES_RECEIVED_USD** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 131.7% in value between 2022-03-01 (16433.033167949) and 2022-04-01 (38079.979214164).
+- **nbk/REMITTANCES_RECEIVED_KZT** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 53.0% in value between 2021-12-01 (7228.53167229) and 2022-01-01 (3394.3982902).
+  - warning: Unexpected jump of 94.2% in value between 2022-03-01 (4486.05744728) and 2022-04-01 (8713.61985846).
+  - warning: Unexpected jump of 62.9% in value between 2022-04-01 (8713.61985846) and 2022-05-01 (14194.89113365).
+  - warning: Unexpected jump of 71.2% in value between 2022-06-01 (15181.31978941) and 2022-07-01 (25995.12395873).
+- **nbk/REMITTANCES_RECEIVED_RUB** — fetch+validate+process: ok (downloaded=59, processed=59)
+  - warning: Unexpected jump of 52.1% in value between 2021-12-01 (1743.38269675) and 2022-01-01 (834.67709836).
+  - warning: Unexpected jump of 141.4% in value between 2022-02-01 (1181.43375686) and 2022-03-01 (2851.80089685).
+- **nbk/EXTERNAL_DEBT_GOV_LOANS_LT** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **nbk/EXTERNAL_DEBT_BANKS_LOANS_LT** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 121.3% in value between 2022-01-01 (1541.171104) and 2022-04-01 (3411.103104).
+  - warning: Unexpected jump of 61.5% in value between 2022-07-01 (4404.157104) and 2022-10-01 (1697.076104).
+  - warning: Unexpected jump of 62.1% in value between 2025-04-01 (1852.913104) and 2025-07-01 (3002.922104).
+- **nbk/EXTERNAL_DEBT_BANKS_SECURITIES_LT** — fetch+validate+process: ok (downloaded=26, processed=26)
+  - warning: Unexpected jump of 97.1% in value between 2024-04-01 (510.06002) and 2024-07-01 (1005.192055).
+  - warning: Unexpected jump of 60.3% in value between 2025-10-01 (2242.385139) and 2026-01-01 (3593.993792).
+- **nbk/EXTERNAL_DEBT_OTHER_SECURITIES_LT** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **nbk/GOV_SECURITIES_SECONDARY_NBK_NOTES** — fetch+validate+process: ok (downloaded=45, processed=45)
+  - warning: Unexpected jump of 82.2% in value between 2023-05-01 (900203.22013916) and 2023-06-01 (160459.44686594).
+  - warning: Unexpected jump of 66.6% in value between 2023-07-01 (208770.41759544) and 2023-08-01 (347858.35572444).
+  - warning: Unexpected jump of 109.6% in value between 2023-10-01 (204966.35872824) and 2023-11-01 (429668.1746287).
+  - warning: Unexpected jump of 72.0% in value between 2023-11-01 (429668.1746287) and 2023-12-01 (120313.45265052).
+  - warning: Unexpected jump of 181.7% in value between 2023-12-01 (120313.45265052) and 2024-01-01 (338872.23811407).
+  - warning: Unexpected jump of 72.1% in value between 2024-02-01 (348934.50555998) and 2024-03-01 (97315.38623732).
+  - warning: Unexpected jump of 375.4% in value between 2024-03-01 (97315.38623732) and 2024-04-01 (462654.3142991).
+  - warning: Unexpected jump of 64.7% in value between 2024-04-01 (462654.3142991) and 2024-05-01 (163137.22263474).
+  - warning: Unexpected jump of 89.8% in value between 2025-01-01 (162398.49656527) and 2025-02-01 (16605.6953883).
+  - warning: Unexpected jump of 825.5% in value between 2025-02-01 (16605.6953883) and 2025-03-01 (153685.95133191).
+  - warning: Unexpected jump of 70.4% in value between 2025-05-01 (127791.02688463) and 2025-06-01 (37844.52712701).
+  - warning: Unexpected jump of 86.1% in value between 2025-09-01 (41286.17094888) and 2025-10-01 (5732.88289281).
+  - warning: Unexpected jump of 939.1% in value between 2025-10-01 (5732.88289281) and 2025-11-01 (59568.01594448).
+  - warning: Unexpected jump of 64.9% in value between 2025-12-01 (82567.22102183) and 2026-01-01 (28955.97168899).
+  - warning: Unexpected jump of 239.5% in value between 2026-01-01 (28955.97168899) and 2026-02-01 (98317.28749319).
+  - warning: Unexpected jump of 69.7% in value between 2026-02-01 (98317.28749319) and 2026-03-01 (166885.23968497).
+  - warning: Unexpected jump of 77.6% in value between 2026-06-01 (109574.25879704) and 2026-07-01 (194549.94580431).
+- **nbk/EXCHANGE_RATE_EUR_OTC** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **nbk/EXCHANGE_RATE_RUB_OTC** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **nbk/EXCHANGE_RATE_USD_OTC** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **nbk/FX_OTC_VOLUME_USD** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Unexpected jump of 315.8% in value between 2025-09-01 (7673.19460581) and 2025-10-01 (31903.14004966).
+- **nbk/FX_OTC_VOLUME_EUR** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Unexpected jump of 278.1% in value between 2023-02-01 (27.45185617) and 2023-03-01 (103.7886563).
+  - warning: Unexpected jump of 50.4% in value between 2023-03-01 (103.7886563) and 2023-04-01 (51.50716283).
+  - warning: Unexpected jump of 86.9% in value between 2023-04-01 (51.50716283) and 2023-05-01 (96.27563099).
+  - warning: Unexpected jump of 293.6% in value between 2023-11-01 (32.46711045) and 2023-12-01 (127.78599308).
+  - warning: Unexpected jump of 63.2% in value between 2024-05-01 (47.55011162) and 2024-06-01 (17.47688425).
+  - warning: Unexpected jump of 9764.8% in value between 2024-06-01 (17.47688425) and 2024-07-01 (1724.06505769).
+  - warning: Unexpected jump of 98.7% in value between 2024-07-01 (1724.06505769) and 2024-08-01 (22.48569887).
+  - warning: Unexpected jump of 58.4% in value between 2024-08-01 (22.48569887) and 2024-09-01 (9.35293447).
+  - warning: Unexpected jump of 307.7% in value between 2024-10-01 (8.31511494) and 2024-11-01 (33.89795482).
+  - warning: Unexpected jump of 84.2% in value between 2024-11-01 (33.89795482) and 2024-12-01 (62.44354394).
+  - warning: Unexpected jump of 93.8% in value between 2025-02-01 (43.47637811) and 2025-03-01 (2.71311907).
+  - warning: Unexpected jump of 38714.4% in value between 2025-03-01 (2.71311907) and 2025-04-01 (1053.08085191).
+  - warning: Unexpected jump of 98.2% in value between 2025-05-01 (1197.57744684) and 2025-06-01 (21.94826975).
+  - warning: Unexpected jump of 71.4% in value between 2025-06-01 (21.94826975) and 2025-07-01 (37.6295546).
+  - warning: Unexpected jump of 2576.4% in value between 2025-07-01 (37.6295546) and 2025-08-01 (1007.12166264).
+  - warning: Unexpected jump of 229.3% in value between 2025-08-01 (1007.12166264) and 2025-09-01 (3316.73066392).
+- **nbk/FX_OTC_VOLUME_RUB** — fetch+validate+process: ok (downloaded=44, processed=44)
+  - warning: Unexpected jump of 94.0% in value between 2022-12-01 (105058.08166441) and 2023-01-01 (6277.93852608).
+  - warning: Unexpected jump of 52.2% in value between 2023-04-01 (6328.62441345) and 2023-05-01 (9629.28545988).
+  - warning: Unexpected jump of 99.0% in value between 2023-06-01 (8497.83758494) and 2023-07-01 (16914.13384886).
+  - warning: Unexpected jump of 376.2% in value between 2023-09-01 (7307.38477158) and 2023-10-01 (34795.24853584).
+  - warning: Unexpected jump of 83.6% in value between 2023-10-01 (34795.24853584) and 2023-11-01 (5689.16127649).
+  - warning: Unexpected jump of 146.6% in value between 2023-11-01 (5689.16127649) and 2023-12-01 (14028.91267118).
+  - warning: Unexpected jump of 60.2% in value between 2024-02-01 (10828.63096657) and 2024-03-01 (4312.92394988).
+  - warning: Unexpected jump of 64.2% in value between 2024-03-01 (4312.92394988) and 2024-04-01 (7082.66701895).
+  - warning: Unexpected jump of 257.6% in value between 2024-09-01 (20032.31138816) and 2024-10-01 (71639.23431021).
+  - warning: Unexpected jump of 75.2% in value between 2024-10-01 (71639.23431021) and 2024-11-01 (17733.32086136).
+  - warning: Unexpected jump of 63.4% in value between 2024-11-01 (17733.32086136) and 2024-12-01 (28975.18712813).
+  - warning: Unexpected jump of 148.4% in value between 2025-01-01 (25358.91346323) and 2025-02-01 (62987.32398228).
+  - warning: Unexpected jump of 56.3% in value between 2025-12-01 (56774.97777926) and 2026-01-01 (24799.4919284).
+  - warning: Unexpected jump of 132.7% in value between 2026-02-01 (12708.96987589) and 2026-03-01 (29574.76288046).
+  - warning: Unexpected jump of 87.7% in value between 2026-05-01 (11778.6457546) and 2026-06-01 (22113.81732956).
+- **nbk/OFC_NET_FOREIGN_ASSETS** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **nbk/OFC_CLAIMS_ON_NONRESIDENTS** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **nbk/OFC_LIABILITIES_TO_NONRESIDENTS** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **nbk/OFC_CLAIMS_ON_BANKING_SYSTEM** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **nbk/EXTERNAL_DEBT_GENERAL_GOVERNMENT** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_CENTRAL_BANK** — fetch+validate+process: ok (downloaded=49, processed=49)
+  - warning: Unexpected jump of 105.0% in value between 2018-01-01 (926.315338) and 2018-04-01 (1899.180947).
+  - warning: Unexpected jump of 65.0% in value between 2020-10-01 (805.595509) and 2021-01-01 (1329.369253).
+  - warning: Unexpected jump of 78.0% in value between 2021-07-01 (1714.690681) and 2021-10-01 (3051.342042).
+- **nbk/EXTERNAL_DEBT_BANKS** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_OTHER_SECTORS** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_EX_INTERCOMPANY** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_PUBLIC_SECTOR** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_PRIVATE_SECTOR** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_GOV_GUARANTEED** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_LOANS** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_DEBT_SECURITIES** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_TRADE_CREDITS** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/EXTERNAL_DEBT_CURRENCY_DEPOSITS** — fetch+validate+process: ok (downloaded=49, processed=49)
+  - warning: Unexpected jump of 66.9% in value between 2022-07-01 (2461.514757) and 2022-10-01 (4108.944138).
+- **nbk/EXTERNAL_DEBT_SDR** — fetch+validate+process: ok (downloaded=49, processed=49)
+  - warning: Unexpected jump of 315.7% in value between 2021-07-01 (495.690733) and 2021-10-01 (2060.49031).
+- **nbk/EXTERNAL_DEBT_OTHER_LIABILITIES** — fetch+validate+process: ok (downloaded=49, processed=49)
+  - warning: Unexpected jump of 50.3% in value between 2017-07-01 (1445.802869) and 2017-10-01 (2172.574489).
+  - warning: Unexpected jump of 57.5% in value between 2017-10-01 (2172.574489) and 2018-01-01 (923.512828).
+  - warning: Unexpected jump of 68.3% in value between 2021-01-01 (799.938294) and 2021-04-01 (1346.108917).
+  - warning: Unexpected jump of 54.3% in value between 2021-10-01 (1292.050422) and 2022-01-01 (1993.129368).
+  - warning: Unexpected jump of 84.6% in value between 2025-01-01 (2455.07651) and 2025-04-01 (4530.964698).
+- **nbk/EXTERNAL_DEBT_DUE_WITHIN_YEAR** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **nbk/RESERVES_AND_NATIONAL_FUND** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **nbk/RESERVES_AND_NF_IMPORT_COVER** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **nbk/RESERVES_AND_NF_GDP_SHARE** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **nbk/NATIONAL_FUND_GDP_SHARE** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **nbk/RESERVE_ASSETS_GDP_SHARE** — fetch+validate+process: ok (downloaded=85, processed=85)
+  - warning: Unexpected jump of 97.5% in value between 2016-04-01 (11.629221) and 2016-07-01 (22.969044).
+- **nbk/FINANCIAL_ACCOUNT_BALANCE** — fetch+validate+process: ok (downloaded=85, processed=85)
+  - warning: Unexpected jump of 239.3% in value between 2005-01-01 (408.144181) and 2005-04-01 (1384.938676).
+  - warning: Unexpected jump of 106.1% in value between 2005-04-01 (1384.938676) and 2005-07-01 (-84.101483).
+  - warning: Unexpected jump of 795.4% in value between 2005-07-01 (-84.101483) and 2005-10-01 (584.845981).
+  - warning: Unexpected jump of 594.7% in value between 2005-10-01 (584.845981) and 2006-01-01 (-2893.374924).
+  - warning: Unexpected jump of 55.0% in value between 2006-04-01 (-2104.066685) and 2006-07-01 (-946.646455).
+  - warning: Unexpected jump of 519.0% in value between 2006-07-01 (-946.646455) and 2006-10-01 (-5859.3395).
+  - warning: Unexpected jump of 70.5% in value between 2006-10-01 (-5859.3395) and 2007-01-01 (-1727.743042).
+  - warning: Unexpected jump of 68.8% in value between 2007-01-01 (-1727.743042) and 2007-04-01 (-2916.879349).
+  - warning: Unexpected jump of 157.5% in value between 2007-04-01 (-2916.879349) and 2007-07-01 (1675.92162).
+  - warning: Unexpected jump of 82.6% in value between 2007-10-01 (975.076658) and 2008-01-01 (1780.609202).
+  - warning: Unexpected jump of 105.1% in value between 2008-04-01 (1425.073239) and 2008-07-01 (-73.275268).
+  - warning: Unexpected jump of 1881.4% in value between 2008-07-01 (-73.275268) and 2008-10-01 (-1451.877691).
+  - warning: Unexpected jump of 55.5% in value between 2009-01-01 (-1171.594212) and 2009-04-01 (-521.468936).
+  - warning: Unexpected jump of 227.9% in value between 2009-04-01 (-521.468936) and 2009-07-01 (-1709.920887).
+  - warning: Unexpected jump of 69.8% in value between 2009-07-01 (-1709.920887) and 2009-10-01 (-516.254659).
+  - warning: Unexpected jump of 340.6% in value between 2009-10-01 (-516.254659) and 2010-01-01 (1242.347592).
+  - warning: Unexpected jump of 256.4% in value between 2010-04-01 (1821.164568) and 2010-07-01 (6490.718657).
+  - warning: Unexpected jump of 83.4% in value between 2010-07-01 (6490.718657) and 2010-10-01 (1077.588682).
+  - warning: Unexpected jump of 310.3% in value between 2010-10-01 (1077.588682) and 2011-01-01 (-2266.699102).
+  - warning: Unexpected jump of 353.5% in value between 2011-01-01 (-2266.699102) and 2011-04-01 (5745.629302).
+  - warning: Unexpected jump of 60.9% in value between 2011-04-01 (5745.629302) and 2011-07-01 (2247.810675).
+  - warning: Unexpected jump of 69.2% in value between 2011-07-01 (2247.810675) and 2011-10-01 (3804.343766).
+  - warning: Unexpected jump of 88.2% in value between 2011-10-01 (3804.343766) and 2012-01-01 (447.861437).
+  - warning: Unexpected jump of 70.2% in value between 2012-01-01 (447.861437) and 2012-04-01 (133.54794).
+  - warning: Unexpected jump of 2396.3% in value between 2012-04-01 (133.54794) and 2012-07-01 (3333.748429).
+  - warning: Unexpected jump of 52.8% in value between 2012-07-01 (3333.748429) and 2012-10-01 (1572.061819).
+  - warning: Unexpected jump of 181.1% in value between 2013-01-01 (1245.46354) and 2013-04-01 (-1009.997894).
+  - warning: Unexpected jump of 150.4% in value between 2013-04-01 (-1009.997894) and 2013-07-01 (509.07076).
+  - warning: Unexpected jump of 192.7% in value between 2013-07-01 (509.07076) and 2013-10-01 (-471.74938).
+  - warning: Unexpected jump of 624.0% in value between 2013-10-01 (-471.74938) and 2014-01-01 (2472.201888).
+  - warning: Unexpected jump of 161.8% in value between 2014-01-01 (2472.201888) and 2014-04-01 (-1527.025653).
+  - warning: Unexpected jump of 189.0% in value between 2014-04-01 (-1527.025653) and 2014-07-01 (-4413.235227).
+  - warning: Unexpected jump of 99.9% in value between 2015-04-01 (-1604.457798) and 2015-07-01 (-3208.101348).
+  - warning: Unexpected jump of 57.5% in value between 2015-10-01 (-2528.469472) and 2016-01-01 (-1075.507929).
+  - warning: Unexpected jump of 199.2% in value between 2016-01-01 (-1075.507929) and 2016-04-01 (-3218.197998).
+  - warning: Unexpected jump of 70.0% in value between 2017-01-01 (-1608.850635) and 2017-04-01 (-482.7823).
+  - warning: Unexpected jump of 719.0% in value between 2017-04-01 (-482.7823) and 2017-07-01 (-3954.109438).
+  - warning: Unexpected jump of 113.2% in value between 2017-07-01 (-3954.109438) and 2017-10-01 (522.56489).
+  - warning: Unexpected jump of 138.6% in value between 2017-10-01 (522.56489) and 2018-01-01 (1246.869276).
+  - warning: Unexpected jump of 140.5% in value between 2018-04-01 (770.595905) and 2018-07-01 (-311.972239).
+  - warning: Unexpected jump of 415.7% in value between 2018-07-01 (-311.972239) and 2018-10-01 (984.781808).
+  - warning: Unexpected jump of 216.7% in value between 2018-10-01 (984.781808) and 2019-01-01 (3118.329105).
+  - warning: Unexpected jump of 97.7% in value between 2019-01-01 (3118.329105) and 2019-04-01 (72.483793).
+  - warning: Unexpected jump of 1161.9% in value between 2019-04-01 (72.483793) and 2019-07-01 (-769.72313).
+  - warning: Unexpected jump of 475.3% in value between 2020-01-01 (-904.845717) and 2020-04-01 (-5205.384567).
+  - warning: Unexpected jump of 82.6% in value between 2020-07-01 (-2786.229651) and 2020-10-01 (-5088.549054).
+  - warning: Unexpected jump of 92.1% in value between 2020-10-01 (-5088.549054) and 2021-01-01 (-402.894651).
+  - warning: Unexpected jump of 479.6% in value between 2021-01-01 (-402.894651) and 2021-04-01 (-2335.181491).
+  - warning: Unexpected jump of 213.3% in value between 2021-07-01 (-3467.437175) and 2021-10-01 (3929.334441).
+  - warning: Unexpected jump of 97.8% in value between 2022-04-01 (3314.275075) and 2022-07-01 (73.270242).
+  - warning: Unexpected jump of 477.8% in value between 2022-07-01 (73.270242) and 2022-10-01 (-276.831333).
+  - warning: Unexpected jump of 232.6% in value between 2022-10-01 (-276.831333) and 2023-01-01 (367.120334).
+  - warning: Unexpected jump of 426.8% in value between 2023-01-01 (367.120334) and 2023-04-01 (-1199.841612).
+  - warning: Unexpected jump of 162.3% in value between 2023-04-01 (-1199.841612) and 2023-07-01 (747.108013).
+  - warning: Unexpected jump of 314.2% in value between 2023-07-01 (747.108013) and 2023-10-01 (-1600.300265).
+  - warning: Unexpected jump of 55.5% in value between 2023-10-01 (-1600.300265) and 2024-01-01 (-711.734111).
+  - warning: Unexpected jump of 272.1% in value between 2024-01-01 (-711.734111) and 2024-04-01 (1224.813651).
+  - warning: Unexpected jump of 160.8% in value between 2024-04-01 (1224.813651) and 2024-07-01 (-745.15208).
+  - warning: Unexpected jump of 387.8% in value between 2024-07-01 (-745.15208) and 2024-10-01 (-3634.821816).
+  - warning: Unexpected jump of 120.8% in value between 2024-10-01 (-3634.821816) and 2025-01-01 (754.307952).
+  - warning: Unexpected jump of 184.3% in value between 2025-01-01 (754.307952) and 2025-04-01 (2144.677459).
+  - warning: Unexpected jump of 142.5% in value between 2025-04-01 (2144.677459) and 2025-07-01 (-910.699381).
+  - warning: Unexpected jump of 125.4% in value between 2025-07-01 (-910.699381) and 2025-10-01 (-2052.720089).
+  - warning: Unexpected jump of 137.0% in value between 2025-10-01 (-2052.720089) and 2026-01-01 (758.500412).
+- **nbk/BOP_OVERALL_BALANCE_GDP_SHARE** — fetch+validate+process: ok (downloaded=85, processed=85)
+  - warning: Unexpected jump of 670.1% in value between 2005-01-01 (-1.432245) and 2005-04-01 (8.165763).
+  - warning: Unexpected jump of 115.4% in value between 2005-04-01 (8.165763) and 2005-07-01 (-1.256623).
+  - warning: Unexpected jump of 662.3% in value between 2005-07-01 (-1.256623) and 2005-10-01 (7.066511).
+  - warning: Unexpected jump of 444.6% in value between 2005-10-01 (7.066511) and 2006-01-01 (-24.350994).
+  - warning: Unexpected jump of 58.4% in value between 2006-01-01 (-24.350994) and 2006-04-01 (-10.136972).
+  - warning: Unexpected jump of 86.9% in value between 2006-04-01 (-10.136972) and 2006-07-01 (-1.326354).
+  - warning: Unexpected jump of 1441.5% in value between 2006-07-01 (-1.326354) and 2006-10-01 (-20.445876).
+  - warning: Unexpected jump of 69.2% in value between 2007-01-01 (-10.817254) and 2007-04-01 (-3.326345).
+  - warning: Unexpected jump of 583.9% in value between 2007-04-01 (-3.326345) and 2007-07-01 (16.094759).
+  - warning: Unexpected jump of 68.5% in value between 2007-07-01 (16.094759) and 2007-10-01 (5.073619).
+  - warning: Unexpected jump of 176.2% in value between 2007-10-01 (5.073619) and 2008-01-01 (-3.863561).
+  - warning: Unexpected jump of 73.9% in value between 2008-01-01 (-3.863561) and 2008-04-01 (-6.718117).
+  - warning: Unexpected jump of 52.7% in value between 2008-04-01 (-6.718117) and 2008-07-01 (-3.176559).
+  - warning: Unexpected jump of 286.0% in value between 2008-07-01 (-3.176559) and 2008-10-01 (5.909267).
+  - warning: Unexpected jump of 56.8% in value between 2008-10-01 (5.909267) and 2009-01-01 (2.55514).
+  - warning: Unexpected jump of 56.6% in value between 2009-01-01 (2.55514) and 2009-04-01 (4.002334).
+  - warning: Unexpected jump of 245.3% in value between 2009-04-01 (4.002334) and 2009-07-01 (-5.816108).
+  - warning: Unexpected jump of 168.0% in value between 2009-10-01 (-5.855813) and 2010-01-01 (-15.695801).
+  - warning: Unexpected jump of 98.2% in value between 2010-01-01 (-15.695801) and 2010-04-01 (-0.281029).
+  - warning: Unexpected jump of 77.8% in value between 2010-04-01 (-0.281029) and 2010-07-01 (-0.06228).
+  - warning: Unexpected jump of 889.0% in value between 2010-07-01 (-0.06228) and 2010-10-01 (-0.615919).
+  - warning: Unexpected jump of 2787.4% in value between 2010-10-01 (-0.615919) and 2011-01-01 (-17.784116).
+  - warning: Unexpected jump of 115.7% in value between 2011-01-01 (-17.784116) and 2011-04-01 (2.783952).
+  - warning: Unexpected jump of 60.1% in value between 2011-07-01 (3.18643) and 2011-10-01 (5.100267).
+  - warning: Unexpected jump of 202.0% in value between 2011-10-01 (5.100267) and 2012-01-01 (-5.199976).
+  - warning: Unexpected jump of 82.3% in value between 2012-01-01 (-5.199976) and 2012-04-01 (-0.920648).
+  - warning: Unexpected jump of 828.3% in value between 2012-04-01 (-0.920648) and 2012-07-01 (6.705374).
+  - warning: Unexpected jump of 113.8% in value between 2012-10-01 (4.857544) and 2013-01-01 (-0.669359).
+  - warning: Unexpected jump of 272.1% in value between 2013-01-01 (-0.669359) and 2013-04-01 (1.151794).
+  - warning: Unexpected jump of 301.2% in value between 2013-04-01 (1.151794) and 2013-07-01 (4.620736).
+  - warning: Unexpected jump of 118.7% in value between 2013-07-01 (4.620736) and 2013-10-01 (-0.86181).
+  - warning: Unexpected jump of 214.3% in value between 2013-10-01 (-0.86181) and 2014-01-01 (-2.708741).
+  - warning: Unexpected jump of 137.3% in value between 2014-01-01 (-2.708741) and 2014-04-01 (1.01006).
+  - warning: Unexpected jump of 471.3% in value between 2014-04-01 (1.01006) and 2014-07-01 (-3.750485).
+  - warning: Unexpected jump of 50.4% in value between 2014-07-01 (-3.750485) and 2014-10-01 (-1.859795).
+  - warning: Unexpected jump of 218.2% in value between 2015-01-01 (-1.139902) and 2015-04-01 (1.34746).
+  - warning: Unexpected jump of 109.1% in value between 2015-07-01 (1.46202) and 2015-10-01 (-0.133532).
+  - warning: Unexpected jump of 3195.4% in value between 2015-10-01 (-0.133532) and 2016-01-01 (4.133345).
+  - warning: Unexpected jump of 180.2% in value between 2016-01-01 (4.133345) and 2016-04-01 (-3.313248).
+  - warning: Unexpected jump of 70.9% in value between 2016-04-01 (-3.313248) and 2016-07-01 (-0.965138).
+  - warning: Unexpected jump of 172.0% in value between 2016-07-01 (-0.965138) and 2016-10-01 (0.694645).
+  - warning: Unexpected jump of 149.6% in value between 2016-10-01 (0.694645) and 2017-01-01 (1.7341).
+  - warning: Unexpected jump of 455.6% in value between 2017-04-01 (0.888601) and 2017-07-01 (-3.159621).
+  - warning: Unexpected jump of 198.1% in value between 2017-07-01 (-3.159621) and 2017-10-01 (3.099605).
+  - warning: Unexpected jump of 90.8% in value between 2018-01-01 (2.450631) and 2018-04-01 (0.225871).
+  - warning: Unexpected jump of 216.0% in value between 2018-04-01 (0.225871) and 2018-07-01 (-0.262036).
+  - warning: Unexpected jump of 517.8% in value between 2018-07-01 (-0.262036) and 2018-10-01 (1.094829).
+  - warning: Unexpected jump of 1069.3% in value between 2018-10-01 (1.094829) and 2019-01-01 (12.801904).
+  - warning: Unexpected jump of 81.8% in value between 2019-01-01 (12.801904) and 2019-04-01 (2.33582).
+  - warning: Unexpected jump of 72.4% in value between 2019-04-01 (2.33582) and 2019-07-01 (0.645105).
+  - warning: Unexpected jump of 126.8% in value between 2019-07-01 (0.645105) and 2019-10-01 (1.463401).
+  - warning: Unexpected jump of 135.5% in value between 2019-10-01 (1.463401) and 2020-01-01 (3.445885).
+  - warning: Unexpected jump of 201.0% in value between 2020-01-01 (3.445885) and 2020-04-01 (-3.480762).
+  - warning: Unexpected jump of 267.3% in value between 2020-04-01 (-3.480762) and 2020-07-01 (5.823157).
+  - warning: Unexpected jump of 84.1% in value between 2020-07-01 (5.823157) and 2020-10-01 (0.926798).
+  - warning: Unexpected jump of 165.5% in value between 2020-10-01 (0.926798) and 2021-01-01 (-0.607402).
+  - warning: Unexpected jump of 692.4% in value between 2021-01-01 (-0.607402) and 2021-04-01 (3.598443).
+  - warning: Unexpected jump of 110.4% in value between 2021-04-01 (3.598443) and 2021-07-01 (-0.375566).
+  - warning: Unexpected jump of 1508.9% in value between 2021-07-01 (-0.375566) and 2021-10-01 (5.291228).
+  - warning: Unexpected jump of 53.6% in value between 2021-10-01 (5.291228) and 2022-01-01 (8.126961).
+  - warning: Unexpected jump of 80.9% in value between 2022-01-01 (8.126961) and 2022-04-01 (1.548226).
+  - warning: Unexpected jump of 390.7% in value between 2022-04-01 (1.548226) and 2022-07-01 (-4.500662).
+  - warning: Unexpected jump of 109.6% in value between 2022-07-01 (-4.500662) and 2022-10-01 (0.434229).
+  - warning: Unexpected jump of 679.3% in value between 2022-10-01 (0.434229) and 2023-01-01 (3.383904).
+  - warning: Unexpected jump of 98.3% in value between 2023-04-01 (2.963561) and 2023-07-01 (5.875824).
+  - warning: Unexpected jump of 119.0% in value between 2023-07-01 (5.875824) and 2023-10-01 (-1.113539).
+  - warning: Unexpected jump of 191.7% in value between 2023-10-01 (-1.113539) and 2024-01-01 (1.021658).
+  - warning: Unexpected jump of 128.4% in value between 2024-01-01 (1.021658) and 2024-04-01 (-0.289872).
+  - warning: Unexpected jump of 140.9% in value between 2024-04-01 (-0.289872) and 2024-07-01 (-0.698363).
+  - warning: Unexpected jump of 231.4% in value between 2024-07-01 (-0.698363) and 2024-10-01 (0.917813).
+  - warning: Unexpected jump of 141.2% in value between 2024-10-01 (0.917813) and 2025-01-01 (2.214093).
+  - warning: Unexpected jump of 84.8% in value between 2025-07-01 (2.629723) and 2025-10-01 (0.39885).
+  - warning: Unexpected jump of 905.7% in value between 2025-10-01 (0.39885) and 2026-01-01 (4.011331).
+- **nbk/INFLATION_TARGET** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **nbk/RER_USD** — fetch+validate+process: ok (downloaded=379, processed=379)
+- **nbk/RER_RUB** — fetch+validate+process: ok (downloaded=379, processed=379)
+- **nbk/RER_EUR** — fetch+validate+process: ok (downloaded=379, processed=379)
+- **nbk/RER_CNY** — fetch+validate+process: ok (downloaded=379, processed=379)
+- **nbk/REER_EX_OIL** — fetch+validate+process: ok (downloaded=379, processed=379)
+- **nbk/NEER_EX_OIL** — fetch+validate+process: ok (downloaded=380, processed=380)
+- **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=17, processed=17)
+  - warning: Gap of 275 days between 2018-04-01 and 2019-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 181 days between 2019-01-01 and 2019-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 458 days between 2019-10-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 1004 days between 2021-10-01 and 2024-07-01 is outside expected range for frequency=quarterly (80-100d).
+- **minfin/GOV_HEALTH_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_EDUCATION_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 56.2% in value between 2019-12-31 (611258.45367259) and 2020-12-31 (954637.17768033).
+- **minfin/GOV_SOCIAL_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/TAX_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/CORPORATE_TAX** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/VAT_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 58.4% in value between 2015-12-31 (944438.0303032) and 2016-12-31 (1495681.95848907).
+  - warning: Unexpected jump of 50.5% in value between 2021-12-31 (2807690.80407635) and 2022-12-31 (4226358.8257289).
+- **minfin/GOV_DEFENSE_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 50.1% in value between 2021-12-31 (715107.41201645) and 2022-12-31 (1073075.86488158).
+- **minfin/GOV_GENERAL_SERVICES_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 64.3% in value between 2014-12-31 (391635.72301001) and 2015-12-31 (643263.147279).
+  - warning: Unexpected jump of 62.5% in value between 2021-12-31 (645016.36510919) and 2022-12-31 (1047843.99067102).
+- **minfin/GOV_TRANSPORT_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_DEBT_SERVICING** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 76.4% in value between 2015-12-31 (296521.44413584) and 2016-12-31 (523210.60895779997).
+- **minfin/NET_BUDGET_LENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 97.7% in value between 2014-12-31 (39452.06622459) and 2015-12-31 (78007.09602019).
+  - warning: Unexpected jump of 183.9% in value between 2015-12-31 (78007.09602019) and 2016-12-31 (221428.4238677).
+  - warning: Unexpected jump of 90.2% in value between 2018-12-31 (131653.83127052) and 2019-12-31 (250348.08525519).
+  - warning: Unexpected jump of 123.7% in value between 2021-12-31 (213356.29830906) and 2022-12-31 (477376.10534981).
+  - warning: Unexpected jump of 71.0% in value between 2023-12-31 (402804.9704923) and 2024-12-31 (116738.4461162).
+- **minfin/BUDGET_DEFICIT** — fetch+validate+process: ok (downloaded=12, processed=12)
+  - warning: Unexpected jump of 83.1% in value between 2016-12-31 (-741185.2309437799) and 2017-12-31 (-1356975.10457842).
+  - warning: Unexpected jump of 77.8% in value between 2018-12-31 (-729188.09148399) and 2019-12-31 (-1296265.92006654).
+  - warning: Unexpected jump of 68.6% in value between 2019-12-31 (-1296265.92006654) and 2020-12-31 (-2185253.31915518).
+- **minfin/NON_OIL_BUDGET_DEFICIT** — fetch+validate+process: ok (downloaded=5, processed=5)
+  - warning: Unexpected jump of 440.1% in value between 2021-12-31 (2526271.2171565) and 2022-12-31 (-8592225.68932949).
+- **minfin/EXCISE_TAX_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_DEBT_DOMESTIC** — fetch+validate+process: ok (downloaded=11, processed=11)
+  - warning: Gap of 1004 days between 2021-10-01 and 2024-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 89.3% in value between 2021-10-01 (10664470.080022218) and 2024-07-01 (20186100.00286501).
+- **minfin/GOV_DEBT_EXTERNAL** — fetch+validate+process: ok (downloaded=11, processed=11)
+  - warning: Gap of 1004 days between 2021-10-01 and 2024-07-01 is outside expected range for frequency=quarterly (80-100d).
+- **minfin/GG_TAXES** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/GG_SOCIAL_CONTRIBUTIONS** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/GG_CASH_SURPLUS_DEFICIT** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 473.1% in value between 2025-01-01 (-337893.34243903897) and 2025-04-01 (-1936306.6720745338).
+  - warning: Unexpected jump of 225.0% in value between 2025-04-01 (-1936306.6720745338) and 2025-07-01 (2420012.540493233).
+- **minfin/GG_INTEREST** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/STATE_TAX_REVENUE_YTD** — fetch+validate+process: ok (downloaded=104, processed=104)
+  - warning: Gap of 365 days between 2016-12-01 and 2017-12-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 93.7% in own-period contribution between 2017-12-01 (6810851.28954204) and 2018-01-01 (429702.12077486).
+  - warning: Unexpected jump of 99.3% in own-period contribution between 2018-01-01 (429702.12077486) and 2018-02-01 (856526.0632877699).
+  - warning: Unexpected jump of 78.2% in own-period contribution between 2018-07-01 (496531.63144063996) and 2018-08-01 (884657.0791219305).
+  - warning: Unexpected jump of 66.0% in own-period contribution between 2018-10-01 (581897.1504793903) and 2018-11-01 (966047.4668562105).
+  - warning: Unexpected jump of 68.3% in own-period contribution between 2019-01-01 (566273.69055244) and 2019-02-01 (952996.9659786201).
+  - warning: Unexpected jump of 76.8% in own-period contribution between 2019-07-01 (570809.3445245996) and 2019-08-01 (1009301.1523623802).
+  - warning: Unexpected jump of 85.2% in own-period contribution between 2019-10-01 (608976.28142423) and 2019-11-01 (1128102.3129947).
+  - warning: Unexpected jump of 50.5% in own-period contribution between 2019-12-01 (1052889.48028005) and 2020-01-01 (520872.72104877).
+  - warning: Unexpected jump of 104.4% in own-period contribution between 2020-01-01 (520872.72104877) and 2020-02-01 (1064562.6531229).
+  - warning: Unexpected jump of 51.2% in own-period contribution between 2020-02-01 (1064562.6531229) and 2020-03-01 (519045.37117746007).
+  - warning: Unexpected jump of 54.9% in own-period contribution between 2020-04-01 (473602.5355567001) and 2020-05-01 (733712.7815900198).
+  - warning: Unexpected jump of 71.2% in own-period contribution between 2020-07-01 (511932.41143724043) and 2020-08-01 (876334.1761926096).
+  - warning: Unexpected jump of 88.4% in own-period contribution between 2020-10-01 (592851.9055396793) and 2020-11-01 (1116660.9979801504).
+  - warning: Unexpected jump of 55.0% in own-period contribution between 2020-12-01 (1089186.1375977602) and 2021-01-01 (490404.44033649).
+  - warning: Unexpected jump of 83.7% in own-period contribution between 2021-01-01 (490404.44033649) and 2021-02-01 (900826.8329477699).
+  - warning: Unexpected jump of 90.3% in own-period contribution between 2021-07-01 (666904.1152003305) and 2021-08-01 (1268823.0807812698).
+  - warning: Unexpected jump of 74.8% in own-period contribution between 2021-10-01 (760371.1795803905) and 2021-11-01 (1329023.43320564).
+  - warning: Unexpected jump of 64.1% in own-period contribution between 2022-07-01 (943013.2880558604) and 2022-08-01 (1547753.0941179795).
+  - warning: Unexpected jump of 73.8% in own-period contribution between 2022-10-01 (1036031.0249170009) and 2022-11-01 (1800456.8405944984).
+  - warning: Unexpected jump of 92.4% in own-period contribution between 2023-07-01 (1072690.655542571) and 2023-08-01 (2064237.898622999).
+  - warning: Unexpected jump of 81.2% in own-period contribution between 2023-10-01 (1162907.3641541004) and 2023-11-01 (2107443.5519939996).
+  - warning: Unexpected jump of 57.8% in own-period contribution between 2023-12-01 (2323055.033739401) and 2024-01-01 (979780.6135075199).
+  - warning: Unexpected jump of 115.7% in own-period contribution between 2024-01-01 (979780.6135075199) and 2024-02-01 (2112916.45465342).
+  - warning: Unexpected jump of 83.1% in own-period contribution between 2024-10-01 (1346309.4719158001) and 2024-11-01 (2465194.7516153995).
+  - warning: Unexpected jump of 82.9% in own-period contribution between 2025-01-01 (1317249.42631355) and 2025-02-01 (2409500.32104508).
+  - warning: Unexpected jump of 98.0% in own-period contribution between 2025-07-01 (1354055.6564871985) and 2025-08-01 (2680872.5787088014).
+  - warning: Unexpected jump of 100.9% in own-period contribution between 2025-10-01 (1420641.0180779006) and 2025-11-01 (2853450.894648999).
+  - warning: Unexpected jump of 88.3% in own-period contribution between 2026-01-01 (1540942.05331266) and 2026-02-01 (2901339.1008727197).
+  - warning: Unexpected jump of 169.7% in own-period contribution between 2026-03-01 (1755854.5208335798) and 2026-05-01 (4736355.25398144).
+  - warning: Unexpected jump of 65.3% in own-period contribution between 2026-05-01 (4736355.25398144) and 2026-06-01 (1642410.8566849995).
+- **minfin/STATE_CIT_YTD** — fetch+validate+process: ok (downloaded=104, processed=104)
+  - warning: Gap of 365 days between 2016-12-01 and 2017-12-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 92.3% in own-period contribution between 2017-12-01 (1538785.45160939) and 2018-01-01 (118970.02823301).
+  - warning: Unexpected jump of 58.4% in own-period contribution between 2018-04-01 (213927.02509081998) and 2018-05-01 (88894.68057060998).
+  - warning: Unexpected jump of 110.8% in own-period contribution between 2018-11-01 (154541.61783296987) and 2018-12-01 (325705.73188983).
+  - warning: Unexpected jump of 52.9% in own-period contribution between 2018-12-01 (325705.73188983) and 2019-01-01 (153266.21537952).
+  - warning: Unexpected jump of 58.3% in own-period contribution between 2019-04-01 (240492.95618245) and 2019-05-01 (100255.99833405996).
+  - warning: Unexpected jump of 104.4% in own-period contribution between 2019-11-01 (188543.10896095005) and 2019-12-01 (385334.04818966007).
+  - warning: Unexpected jump of 57.6% in own-period contribution between 2019-12-01 (385334.04818966007) and 2020-01-01 (163538.331966).
+  - warning: Unexpected jump of 210.2% in own-period contribution between 2020-11-01 (169007.06576725002) and 2020-12-01 (524243.0352838498).
+  - warning: Unexpected jump of 66.8% in own-period contribution between 2020-12-01 (524243.0352838498) and 2021-01-01 (174159.75245077).
+  - warning: Unexpected jump of 96.6% in own-period contribution between 2021-03-01 (188410.35515393002) and 2021-04-01 (370361.16344488994).
+  - warning: Unexpected jump of 66.6% in own-period contribution between 2021-04-01 (370361.16344488994) and 2021-05-01 (123537.44550370006).
+  - warning: Unexpected jump of 117.0% in own-period contribution between 2021-11-01 (263584.1096220501) and 2021-12-01 (571869.7994211898).
+  - warning: Unexpected jump of 61.7% in own-period contribution between 2022-04-01 (485330.89774117013) and 2022-05-01 (185828.3672859699).
+  - warning: Unexpected jump of 140.7% in own-period contribution between 2022-11-01 (296872.54654137) and 2022-12-01 (714522.1794547299).
+  - warning: Unexpected jump of 50.8% in own-period contribution between 2023-01-01 (635816.47938874) and 2023-02-01 (312940.94533964).
+  - warning: Unexpected jump of 186.4% in own-period contribution between 2023-11-01 (390065.4573149299) and 2023-12-01 (1117011.38915068).
+  - warning: Unexpected jump of 72.1% in own-period contribution between 2023-12-01 (1117011.38915068) and 2024-01-01 (311272.54279423).
+  - warning: Unexpected jump of 67.6% in own-period contribution between 2024-03-01 (412336.40711219003) and 2024-04-01 (691020.5035623).
+  - warning: Unexpected jump of 62.3% in own-period contribution between 2024-04-01 (691020.5035623) and 2024-05-01 (260514.64683830994).
+  - warning: Unexpected jump of 155.1% in own-period contribution between 2024-11-01 (419600.83173950994) and 2024-12-01 (1070196.4627475203).
+  - warning: Unexpected jump of 56.2% in own-period contribution between 2024-12-01 (1070196.4627475203) and 2025-01-01 (469026.77264745).
+  - warning: Unexpected jump of 87.1% in own-period contribution between 2025-03-01 (463305.63985248003) and 2025-04-01 (866883.2230448499).
+  - warning: Unexpected jump of 60.2% in own-period contribution between 2025-04-01 (866883.2230448499) and 2025-05-01 (344673.3830025401).
+  - warning: Unexpected jump of 148.3% in own-period contribution between 2025-11-01 (504342.6421938194) and 2025-12-01 (1252444.2181192301).
+  - warning: Unexpected jump of 57.9% in own-period contribution between 2025-12-01 (1252444.2181192301) and 2026-01-01 (526735.2777986).
+  - warning: Unexpected jump of 160.9% in own-period contribution between 2026-03-01 (497151.0200481999) and 2026-05-01 (1297026.37439972).
+  - warning: Unexpected jump of 66.9% in own-period contribution between 2026-05-01 (1297026.37439972) and 2026-06-01 (429844.40411316).
+- **minfin/STATE_PIT_YTD** — fetch+validate+process: ok (downloaded=104, processed=104)
+  - warning: Gap of 365 days between 2016-12-01 and 2017-12-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 91.6% in own-period contribution between 2017-12-01 (750211.81607165) and 2018-01-01 (63258.84148977).
+  - warning: Unexpected jump of 71.4% in own-period contribution between 2023-03-01 (140728.87692131003) and 2023-04-01 (241212.55424193002).
+  - warning: Unexpected jump of 115.0% in own-period contribution between 2026-03-01 (201431.39280406001) and 2026-05-01 (433147.29547732).
+  - warning: Unexpected jump of 53.4% in own-period contribution between 2026-05-01 (433147.29547732) and 2026-06-01 (201719.34801078006).
+- **minfin/STATE_SOCIAL_TAX_YTD** — fetch+validate+process: ok (downloaded=104, processed=104)
+  - warning: Gap of 365 days between 2016-12-01 and 2017-12-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 91.6% in own-period contribution between 2017-12-01 (576606.59728846) and 2018-01-01 (48229.01361239).
+  - warning: Unexpected jump of 56.4% in own-period contribution between 2018-11-01 (47153.45478100004) and 2018-12-01 (73758.69685270998).
+  - warning: Unexpected jump of 51.7% in own-period contribution between 2024-01-01 (120205.53505251) and 2024-02-01 (182399.94081897003).
+  - warning: Unexpected jump of 65.0% in own-period contribution between 2025-01-01 (128664.56113131) and 2025-02-01 (212336.12666170998).
+  - warning: Unexpected jump of 52.3% in own-period contribution between 2025-11-01 (137288.91119093006) and 2025-12-01 (209090.84050418995).
+  - warning: Unexpected jump of 93.2% in own-period contribution between 2026-03-01 (131877.73562066) and 2026-05-01 (254735.75640707003).
+- **minfin/STATE_VAT_YTD** — fetch+validate+process: ok (downloaded=104, processed=104)
+  - warning: Gap of 365 days between 2016-12-01 and 2017-12-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 93.7% in own-period contribution between 2017-12-01 (1664699.27011816) and 2018-01-01 (104935.25287738).
+  - warning: Unexpected jump of 178.3% in own-period contribution between 2018-01-01 (104935.25287738) and 2018-02-01 (291985.13109436).
+  - warning: Unexpected jump of 76.0% in own-period contribution between 2018-02-01 (291985.13109436) and 2018-03-01 (70133.09260356997).
+  - warning: Unexpected jump of 65.7% in own-period contribution between 2018-03-01 (70133.09260356997) and 2018-04-01 (116185.73910815001).
+  - warning: Unexpected jump of 111.4% in own-period contribution between 2018-04-01 (116185.73910815001) and 2018-05-01 (245575.22299788997).
+  - warning: Unexpected jump of 58.7% in own-period contribution between 2018-05-01 (245575.22299788997) and 2018-06-01 (101539.31754716998).
+  - warning: Unexpected jump of 185.9% in own-period contribution between 2018-07-01 (107580.76827420003) and 2018-08-01 (307521.2494518901).
+  - warning: Unexpected jump of 62.2% in own-period contribution between 2018-08-01 (307521.2494518901) and 2018-09-01 (116288.88634944987).
+  - warning: Unexpected jump of 121.0% in own-period contribution between 2018-10-01 (153870.35047397995) and 2018-11-01 (340088.7570531601).
+  - warning: Unexpected jump of 76.9% in own-period contribution between 2018-11-01 (340088.7570531601) and 2018-12-01 (78610.16698212991).
+  - warning: Unexpected jump of 80.1% in own-period contribution between 2018-12-01 (78610.16698212991) and 2019-01-01 (141603.1648106).
+  - warning: Unexpected jump of 149.5% in own-period contribution between 2019-01-01 (141603.1648106) and 2019-02-01 (353300.43593315).
+  - warning: Unexpected jump of 72.4% in own-period contribution between 2019-02-01 (353300.43593315) and 2019-03-01 (97647.50228986004).
+  - warning: Unexpected jump of 138.4% in own-period contribution between 2019-04-01 (137368.70437822992) and 2019-05-01 (327485.79907259997).
+  - warning: Unexpected jump of 61.1% in own-period contribution between 2019-05-01 (327485.79907259997) and 2019-06-01 (127530.62358908006).
+  - warning: Unexpected jump of 163.5% in own-period contribution between 2019-07-01 (146347.87849782011) and 2019-08-01 (385664.47197676986).
+  - warning: Unexpected jump of 56.9% in own-period contribution between 2019-08-01 (385664.47197676986) and 2019-09-01 (166235.4012575501).
+  - warning: Unexpected jump of 160.9% in own-period contribution between 2019-10-01 (175219.61345993984) and 2019-11-01 (457195.1113129202).
+  - warning: Unexpected jump of 61.2% in own-period contribution between 2019-11-01 (457195.1113129202) and 2019-12-01 (177528.4869043301).
+  - warning: Unexpected jump of 288.4% in own-period contribution between 2020-01-01 (111952.31487698) and 2020-02-01 (434815.19998718996).
+  - warning: Unexpected jump of 89.9% in own-period contribution between 2020-02-01 (434815.19998718996) and 2020-03-01 (43786.013476149994).
+  - warning: Unexpected jump of 429.8% in own-period contribution between 2020-04-01 (53329.08880739997) and 2020-05-01 (282511.35424128).
+  - warning: Unexpected jump of 62.9% in own-period contribution between 2020-05-01 (282511.35424128) and 2020-06-01 (104715.14611099008).
+  - warning: Unexpected jump of 152.3% in own-period contribution between 2020-07-01 (146783.58875962987) and 2020-08-01 (370401.5078869602).
+  - warning: Unexpected jump of 51.1% in own-period contribution between 2020-08-01 (370401.5078869602) and 2020-09-01 (180967.6176432399).
+  - warning: Unexpected jump of 182.9% in own-period contribution between 2020-10-01 (173720.51593772997) and 2020-11-01 (491488.3617955602).
+  - warning: Unexpected jump of 71.9% in own-period contribution between 2020-11-01 (491488.3617955602) and 2020-12-01 (138052.94002676988).
+  - warning: Unexpected jump of 182.3% in own-period contribution between 2021-01-01 (79815.30503486) and 2021-02-01 (225288.65199718002).
+  - warning: Unexpected jump of 136.1% in own-period contribution between 2021-04-01 (183071.43038764002) and 2021-05-01 (432312.89717560995).
+  - warning: Unexpected jump of 52.0% in own-period contribution between 2021-05-01 (432312.89717560995) and 2021-06-01 (207590.87191991997).
+  - warning: Unexpected jump of 189.2% in own-period contribution between 2021-07-01 (178477.30037106015) and 2021-08-01 (516101.6509291199).
+  - warning: Unexpected jump of 73.8% in own-period contribution between 2021-08-01 (516101.6509291199) and 2021-09-01 (135465.31740297005).
+  - warning: Unexpected jump of 241.3% in own-period contribution between 2021-10-01 (134486.68649514997) and 2021-11-01 (458938.75752311014).
+  - warning: Unexpected jump of 77.8% in own-period contribution between 2021-11-01 (458938.75752311014) and 2021-12-01 (101697.17597726965).
+  - warning: Unexpected jump of 83.4% in own-period contribution between 2021-12-01 (101697.17597726965) and 2022-01-01 (186505.42207922).
+  - warning: Unexpected jump of 236.8% in own-period contribution between 2022-01-01 (186505.42207922) and 2022-02-01 (628215.9508414201).
+  - warning: Unexpected jump of 72.0% in own-period contribution between 2022-02-01 (628215.9508414201) and 2022-03-01 (175676.0178826499).
+  - warning: Unexpected jump of 117.1% in own-period contribution between 2022-04-01 (245570.9007430101) and 2022-05-01 (533131.37600128).
+  - warning: Unexpected jump of 83.4% in own-period contribution between 2022-05-01 (533131.37600128) and 2022-06-01 (88437.50463444996).
+  - warning: Unexpected jump of 184.1% in own-period contribution between 2022-06-01 (88437.50463444996) and 2022-07-01 (251208.8239350398).
+  - warning: Unexpected jump of 145.7% in own-period contribution between 2022-07-01 (251208.8239350398) and 2022-08-01 (617202.82178568).
+  - warning: Unexpected jump of 51.9% in own-period contribution between 2022-08-01 (617202.82178568) and 2022-09-01 (296962.9682560102).
+  - warning: Unexpected jump of 157.4% in own-period contribution between 2022-10-01 (303484.79384105) and 2022-11-01 (781310.9326402401).
+  - warning: Unexpected jump of 84.8% in own-period contribution between 2022-11-01 (781310.9326402401) and 2022-12-01 (118651.31308884965).
+  - warning: Unexpected jump of 151.3% in own-period contribution between 2022-12-01 (118651.31308884965) and 2023-01-01 (298221.27112193).
+  - warning: Unexpected jump of 183.4% in own-period contribution between 2023-01-01 (298221.27112193) and 2023-02-01 (845125.1937270301).
+  - warning: Unexpected jump of 78.7% in own-period contribution between 2023-02-01 (845125.1937270301) and 2023-03-01 (180201.72446661).
+  - warning: Unexpected jump of 71.0% in own-period contribution between 2023-03-01 (180201.72446661) and 2023-04-01 (308082.4479982299).
+  - warning: Unexpected jump of 142.4% in own-period contribution between 2023-04-01 (308082.4479982299) and 2023-05-01 (746718.8958987002).
+  - warning: Unexpected jump of 65.9% in own-period contribution between 2023-05-01 (746718.8958987002) and 2023-06-01 (254800.34215111984).
+  - warning: Unexpected jump of 186.5% in own-period contribution between 2023-07-01 (297743.68429700006) and 2023-08-01 (853158.1127546299).
+  - warning: Unexpected jump of 62.3% in own-period contribution between 2023-08-01 (853158.1127546299) and 2023-09-01 (321314.67615078995).
+  - warning: Unexpected jump of 174.8% in own-period contribution between 2023-10-01 (311095.5477017802) and 2023-11-01 (854754.1778061902).
+  - warning: Unexpected jump of 52.9% in own-period contribution between 2023-11-01 (854754.1778061902) and 2023-12-01 (402894.5657242397).
+  - warning: Unexpected jump of 248.1% in own-period contribution between 2024-01-01 (202501.92123011) and 2024-02-01 (704949.48403242).
+  - warning: Unexpected jump of 63.3% in own-period contribution between 2024-02-01 (704949.48403242) and 2024-03-01 (258745.05685026).
+  - warning: Unexpected jump of 247.7% in own-period contribution between 2024-04-01 (188190.73086310993) and 2024-05-01 (654359.01122796).
+  - warning: Unexpected jump of 66.4% in own-period contribution between 2024-05-01 (654359.01122796) and 2024-06-01 (219725.36331412988).
+  - warning: Unexpected jump of 168.7% in own-period contribution between 2024-07-01 (280239.7449874603) and 2024-08-01 (752933.9217039598).
+  - warning: Unexpected jump of 56.9% in own-period contribution between 2024-08-01 (752933.9217039598) and 2024-09-01 (324626.4010362802).
+  - warning: Unexpected jump of 175.3% in own-period contribution between 2024-10-01 (358057.39708723966) and 2024-11-01 (985723.8923924798).
+  - warning: Unexpected jump of 74.7% in own-period contribution between 2024-11-01 (985723.8923924798) and 2024-12-01 (249325.17776677012).
+  - warning: Unexpected jump of 178.5% in own-period contribution between 2025-01-01 (292183.59833226) and 2025-02-01 (813671.90836474).
+  - warning: Unexpected jump of 73.6% in own-period contribution between 2025-02-01 (813671.90836474) and 2025-03-01 (214773.71504627005).
+  - warning: Unexpected jump of 145.6% in own-period contribution between 2025-04-01 (311541.11842981004) and 2025-05-01 (765243.2216039598).
+  - warning: Unexpected jump of 58.4% in own-period contribution between 2025-05-01 (765243.2216039598) and 2025-06-01 (318418.4380177902).
+  - warning: Unexpected jump of 191.3% in own-period contribution between 2025-07-01 (351759.13419984) and 2025-08-01 (1024740.8524831599).
+  - warning: Unexpected jump of 78.5% in own-period contribution between 2025-08-01 (1024740.8524831599) and 2025-09-01 (220798.63285580045).
+  - warning: Unexpected jump of 53.9% in own-period contribution between 2025-09-01 (220798.63285580045) and 2025-10-01 (339757.7083246).
+  - warning: Unexpected jump of 240.4% in own-period contribution between 2025-10-01 (339757.7083246) and 2025-11-01 (1156637.1604027292).
+  - warning: Unexpected jump of 73.9% in own-period contribution between 2025-11-01 (1156637.1604027292) and 2025-12-01 (302316.8503052108).
+  - warning: Unexpected jump of 413.9% in own-period contribution between 2026-01-01 (249948.89923012) and 2026-02-01 (1284550.30712193).
+  - warning: Unexpected jump of 66.7% in own-period contribution between 2026-02-01 (1284550.30712193) and 2026-03-01 (427985.38682341995).
+  - warning: Unexpected jump of 254.2% in own-period contribution between 2026-03-01 (427985.38682341995) and 2026-05-01 (1515837.18090255).
+  - warning: Unexpected jump of 75.2% in own-period contribution between 2026-05-01 (1515837.18090255) and 2026-06-01 (376448.3988522701).
+- **minfin/STATE_EXCISE_YTD** — fetch+validate+process: ok (downloaded=104, processed=104)
+  - warning: Gap of 365 days between 2016-12-01 and 2017-12-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 87.7% in own-period contribution between 2017-12-01 (255994.199021) and 2018-01-01 (31446.64878211).
+  - warning: Unexpected jump of 51.0% in own-period contribution between 2018-01-01 (31446.64878211) and 2018-02-01 (15395.92889776).
+  - warning: Unexpected jump of 53.3% in own-period contribution between 2018-12-01 (24585.783907770005) and 2019-01-01 (37689.92123937).
+  - warning: Unexpected jump of 59.4% in own-period contribution between 2019-01-01 (37689.92123937) and 2019-02-01 (15291.67419356).
+  - warning: Unexpected jump of 57.4% in own-period contribution between 2019-03-01 (15696.857244689993) and 2019-04-01 (24711.037246320004).
+  - warning: Unexpected jump of 56.7% in own-period contribution between 2019-06-01 (26123.717248309986) and 2019-07-01 (40942.43773619001).
+  - warning: Unexpected jump of 65.9% in own-period contribution between 2019-12-01 (28193.177040209994) and 2020-01-01 (46771.62678444).
+  - warning: Unexpected jump of 52.2% in own-period contribution between 2020-01-01 (46771.62678444) and 2020-02-01 (22343.103619300004).
+  - warning: Unexpected jump of 98.9% in own-period contribution between 2026-03-01 (98662.69879880999) and 2026-05-01 (196214.89860574).
+- **minfin/CUSTOMS_DUTIES** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 239.5% in own-period contribution between 2025-03-31 (179926.99258701) and 2025-06-30 (610816.1590650899).
+  - warning: Unexpected jump of 67.8% in own-period contribution between 2025-06-30 (610816.1590650899) and 2025-07-31 (196969.28752884013).
+  - warning: Unexpected jump of 65.9% in own-period contribution between 2025-11-30 (193954.57880074997) and 2026-01-31 (66067.6032816).
+  - warning: Unexpected jump of 219.3% in own-period contribution between 2026-02-28 (70290.29320559002) and 2026-03-31 (224403.42098376).
+  - warning: Unexpected jump of 114.4% in own-period contribution between 2026-03-31 (224403.42098376) and 2026-05-31 (481205.45174267).
+- **minfin/GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 183.7% in own-period contribution between 2025-03-31 (101598.26644796002) and 2025-06-30 (288276.09848342993).
+  - warning: Unexpected jump of 66.6% in own-period contribution between 2025-06-30 (288276.09848342993) and 2025-07-31 (96174.94124919001).
+  - warning: Unexpected jump of 51.5% in own-period contribution between 2026-01-31 (61529.58985924) and 2026-02-28 (93242.38302472001).
+  - warning: Unexpected jump of 67.5% in own-period contribution between 2026-03-31 (91794.99336654) and 2026-05-31 (153751.21168333).
+- **minfin/GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 233.4% in own-period contribution between 2025-03-31 (111263.74151851) and 2025-06-30 (370958.57849708).
+  - warning: Unexpected jump of 98.1% in own-period contribution between 2025-06-30 (370958.57849708) and 2025-07-31 (7178.721167659969).
+  - warning: Unexpected jump of 4615.3% in own-period contribution between 2025-07-31 (7178.721167659969) and 2025-08-31 (338494.78225987).
+  - warning: Unexpected jump of 62.2% in own-period contribution between 2025-08-31 (338494.78225987) and 2025-09-30 (128116.34557293996).
+  - warning: Unexpected jump of 108.7% in own-period contribution between 2025-10-31 (176384.75000433018) and 2025-11-30 (368195.38298157).
+  - warning: Unexpected jump of 99.7% in own-period contribution between 2025-11-30 (368195.38298157) and 2026-01-31 (1038.25063271).
+  - warning: Unexpected jump of 5999.5% in own-period contribution between 2026-01-31 (1038.25063271) and 2026-02-28 (63327.76409271).
+  - warning: Unexpected jump of 68.7% in own-period contribution between 2026-02-28 (63327.76409271) and 2026-03-31 (19852.408019149996).
+  - warning: Unexpected jump of 1341.1% in own-period contribution between 2026-03-31 (19852.408019149996) and 2026-05-31 (286095.19733116).
+  - warning: Unexpected jump of 75.5% in own-period contribution between 2026-05-31 (286095.19733116) and 2026-06-30 (70165.27093111997).
+- **minfin/GOV_PENSIONS_EXPENDITURE** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 52.1% in own-period contribution between 2025-02-28 (737170.079) and 2025-03-31 (353142.4629999999).
+  - warning: Unexpected jump of 202.5% in own-period contribution between 2025-03-31 (353142.4629999999) and 2025-06-30 (1068201.193).
+  - warning: Unexpected jump of 66.6% in own-period contribution between 2025-06-30 (1068201.193) and 2025-07-31 (357035.0959999999).
+  - warning: Unexpected jump of 100.5% in own-period contribution between 2026-03-31 (402843.7189999999) and 2026-05-31 (807846.9950000001).
+- **minfin/GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 85.2% in own-period contribution between 2025-02-28 (33689.77497058) and 2025-03-31 (4995.093155999995).
+  - warning: Unexpected jump of 1722.7% in own-period contribution between 2025-03-31 (4995.093155999995) and 2025-06-30 (91046.88939123).
+  - warning: Unexpected jump of 89.7% in own-period contribution between 2025-06-30 (91046.88939123) and 2025-07-31 (9400.000000000015).
+  - warning: Unexpected jump of 410.3% in own-period contribution between 2025-07-31 (9400.000000000015) and 2025-08-31 (47965.12536039998).
+  - warning: Unexpected jump of 84.6% in own-period contribution between 2025-08-31 (47965.12536039998) and 2025-09-30 (7375.523163240025).
+  - warning: Unexpected jump of 683.2% in own-period contribution between 2025-09-30 (7375.523163240025) and 2025-10-31 (57767.77685199).
+  - warning: Unexpected jump of 179.4% in own-period contribution between 2025-10-31 (57767.77685199) and 2025-11-30 (161382.49571515998).
+  - warning: Unexpected jump of 96.1% in own-period contribution between 2025-11-30 (161382.49571515998) and 2026-01-31 (6318.84247).
+  - warning: Unexpected jump of 345.9% in own-period contribution between 2026-01-31 (6318.84247) and 2026-02-28 (28177.3734).
+  - warning: Unexpected jump of 97.1% in own-period contribution between 2026-02-28 (28177.3734) and 2026-03-31 (814.6232999999993).
+  - warning: Unexpected jump of 20762.5% in own-period contribution between 2026-03-31 (814.6232999999993) and 2026-05-31 (169951.15417018).
+  - warning: Unexpected jump of 68.3% in own-period contribution between 2026-05-31 (169951.15417018) and 2026-06-30 (53840.49819845002).
+- **minfin/SUBVENTIONS_REPUBLICAN** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 135.1% in value between 2022-12-31 (2124711.058) and 2023-12-31 (4995054.752).
+- **minfin/LOCAL_GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 305.0% in own-period contribution between 2025-03-31 (279083.85229267) and 2025-06-30 (1130261.02039048).
+  - warning: Unexpected jump of 85.1% in own-period contribution between 2025-06-30 (1130261.02039048) and 2025-07-31 (167977.79210899002).
+  - warning: Unexpected jump of 111.2% in own-period contribution between 2026-03-31 (297021.01593821996) and 2026-05-31 (627282.1053952599).
+  - warning: Unexpected jump of 68.3% in own-period contribution between 2026-06-30 (573586.55167779) and 2026-07-31 (181731.89789270028).
+- **minfin/LOCAL_GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 454.8% in own-period contribution between 2025-03-31 (196309.62054389) and 2025-06-30 (1089189.33814686).
+  - warning: Unexpected jump of 68.9% in own-period contribution between 2025-06-30 (1089189.33814686) and 2025-07-31 (338510.22163932).
+  - warning: Unexpected jump of 61.9% in own-period contribution between 2025-07-31 (338510.22163932) and 2025-08-31 (548004.7882278298).
+  - warning: Unexpected jump of 94.2% in own-period contribution between 2025-11-30 (519742.8612377499) and 2026-01-31 (29938.10085496).
+  - warning: Unexpected jump of 629.4% in own-period contribution between 2026-01-31 (29938.10085496) and 2026-02-28 (218376.96496031998).
+  - warning: Unexpected jump of 115.5% in own-period contribution between 2026-03-31 (265641.88024702005) and 2026-05-31 (572358.6371081801).
+  - warning: Unexpected jump of 61.4% in own-period contribution between 2026-05-31 (572358.6371081801) and 2026-06-30 (221049.0228089299).
+  - warning: Unexpected jump of 63.0% in own-period contribution between 2026-06-30 (221049.0228089299) and 2026-07-31 (360340.42811658).
+- **minfin/LOCAL_GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 132.1% in own-period contribution between 2025-03-31 (155435.44731773) and 2025-06-30 (360762.45830079).
+  - warning: Unexpected jump of 69.5% in own-period contribution between 2025-06-30 (360762.45830079) and 2025-07-31 (110084.01989853999).
+  - warning: Unexpected jump of 375.7% in own-period contribution between 2026-01-31 (51783.37820779) and 2026-02-28 (246319.48696511003).
+  - warning: Unexpected jump of 62.7% in own-period contribution between 2026-05-31 (268667.04744740005) and 2026-06-30 (100232.50603562989).
+- **minfin/NATIONAL_FUND_STABILIZATION_PORTFOLIO** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **minfin/NATIONAL_FUND_SAVINGS_PORTFOLIO** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **minfin/NATIONAL_FUND_SAVINGS_BONDS** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **minfin/NATIONAL_FUND_EQUITIES** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **minfin/NATIONAL_FUND_GOLD** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **minfin/GOV_ACCOUNTS_PAYABLE** — fetch+validate+process: ok (downloaded=5, processed=5)
+  - warning: Unexpected jump of 66.7% in value between 2022-12-31 (178532.1413) and 2023-12-31 (297690.4338).
+  - warning: Unexpected jump of 105.1% in value between 2023-12-31 (297690.4338) and 2024-12-31 (610473.9903).
+  - warning: Unexpected jump of 68.0% in value between 2024-12-31 (610473.9903) and 2025-12-31 (1025433.3569).
+- **minfin/GOV_ACCOUNTS_RECEIVABLE** — fetch+validate+process: ok (downloaded=5, processed=5)
+  - warning: Unexpected jump of 61.0% in value between 2021-12-31 (715812.4396) and 2022-12-31 (1152795.4069).
+- **minfin/GOV_FINANCIAL_ASSETS_SOLD** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 75.4% in own-period contribution between 2025-02-28 (192.41) and 2025-03-31 (47.30000000000001).
+  - warning: Unexpected jump of 6703.8% in own-period contribution between 2025-03-31 (47.30000000000001) and 2025-06-30 (3218.2200000000003).
+  - warning: Unexpected jump of 95.6% in own-period contribution between 2025-06-30 (3218.2200000000003) and 2025-07-31 (140.26999999999953).
+  - warning: Unexpected jump of 105.9% in own-period contribution between 2025-07-31 (140.26999999999953) and 2025-08-31 (288.8300000000004).
+  - warning: Unexpected jump of 52.4% in own-period contribution between 2025-08-31 (288.8300000000004) and 2025-09-30 (137.48999999999978).
+  - warning: Unexpected jump of 60.8% in own-period contribution between 2025-10-31 (199.74000000000024) and 2025-11-30 (321.15999999999985).
+  - warning: Unexpected jump of 91.5% in own-period contribution between 2025-11-30 (321.15999999999985) and 2026-01-31 (27.3).
+  - warning: Unexpected jump of 1923.6% in own-period contribution between 2026-01-31 (27.3) and 2026-02-28 (552.4300000000001).
+  - warning: Unexpected jump of 78.2% in own-period contribution between 2026-02-28 (552.4300000000001) and 2026-03-31 (120.18000000000006).
+  - warning: Unexpected jump of 1036.2% in own-period contribution between 2026-03-31 (120.18000000000006) and 2026-04-30 (1365.5199999999998).
+  - warning: Unexpected jump of 104.0% in own-period contribution between 2026-06-30 (1329.02) and 2026-07-31 (-53.32999999999993).
+- **minfin/GOV_AUDIT_VIOLATIONS_AMOUNT** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 982.7% in own-period contribution between 2025-03-31 (24708.31394) and 2025-06-30 (267506.13612000004).
+  - warning: Unexpected jump of 94.6% in own-period contribution between 2025-06-30 (267506.13612000004) and 2025-07-31 (14436.548600000038).
+  - warning: Unexpected jump of 267.5% in own-period contribution between 2025-09-30 (10754.430300000007) and 2025-10-31 (39519.49048000004).
+  - warning: Unexpected jump of 79.6% in own-period contribution between 2025-10-31 (39519.49048000004) and 2025-11-30 (8050.425539999967).
+  - warning: Unexpected jump of 144.1% in own-period contribution between 2025-11-30 (8050.425539999967) and 2026-01-31 (19655.0).
+  - warning: Unexpected jump of 51.2% in own-period contribution between 2026-01-31 (19655.0) and 2026-02-28 (9591.476010000002).
+  - warning: Unexpected jump of 615.0% in own-period contribution between 2026-02-28 (9591.476010000002) and 2026-03-31 (68583.79942000001).
+  - warning: Unexpected jump of 331.7% in own-period contribution between 2026-03-31 (68583.79942000001) and 2026-05-31 (296078.54677).
+  - warning: Unexpected jump of 79.1% in own-period contribution between 2026-05-31 (296078.54677) and 2026-06-30 (61786.39249999996).
+- **minfin/TAX_ARREARS_TOTAL** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/PENSION_CONTRIBUTIONS_RECEIVED** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/PENSION_CONTRIBUTIONS_ARREARS** — fetch+validate+process: ok (downloaded=3, processed=3)
+  - warning: Unexpected jump of 32428.9% in value between 2024-01-01 (10105.837400000002) and 2025-01-01 (3287315.7021371904).
+- **minfin/GOV_PROCUREMENT_TOTAL_VALUE** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **minfin/INDIVIDUAL_INCOME_TAX** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/STATE_BUDGET_REVENUE** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/STATE_BUDGET_EXPENDITURE** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/STATE_BUDGET_DEFICIT** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/STATE_NON_OIL_DEFICIT** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/STATE_BUDGET_REVENUE_YTD** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 61.3% in own-period contribution between 2025-02-28 (5021312.6299602) and 2025-03-31 (1942996.4842439098).
+  - warning: Unexpected jump of 288.7% in own-period contribution between 2025-03-31 (1942996.4842439098) and 2025-06-30 (7552177.03748129).
+  - warning: Unexpected jump of 75.6% in own-period contribution between 2025-06-30 (7552177.03748129) and 2025-07-31 (1844621.610810401).
+  - warning: Unexpected jump of 71.8% in own-period contribution between 2025-07-31 (1844621.610810401) and 2025-08-31 (3169973.0242372975).
+  - warning: Unexpected jump of 84.0% in own-period contribution between 2025-10-31 (1851601.4260238) and 2025-11-30 (3406112.268912401).
+  - warning: Unexpected jump of 76.0% in own-period contribution between 2026-01-31 (1831699.95288981) and 2026-02-28 (3224296.936139439).
+  - warning: Unexpected jump of 156.1% in own-period contribution between 2026-03-31 (2188874.84540016) and 2026-05-31 (5605394.11743319).
+  - warning: Unexpected jump of 61.0% in own-period contribution between 2026-05-31 (5605394.11743319) and 2026-06-30 (2186041.2551839).
+- **minfin/STATE_BUDGET_EXPENDITURE_YTD** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 257.9% in own-period contribution between 2025-03-31 (2347535.5064948797) and 2025-06-30 (8401034.358076971).
+  - warning: Unexpected jump of 72.2% in own-period contribution between 2025-06-30 (8401034.358076971) and 2025-07-31 (2333014.891170198).
+  - warning: Unexpected jump of 53.7% in own-period contribution between 2025-11-30 (3222272.8987511024) and 2026-01-31 (1490668.35059184).
+  - warning: Unexpected jump of 111.4% in own-period contribution between 2026-01-31 (1490668.35059184) and 2026-02-28 (3151528.2209214997).
+  - warning: Unexpected jump of 111.5% in own-period contribution between 2026-03-31 (2982125.3225600105) and 2026-05-31 (6306914.0647625495).
+  - warning: Unexpected jump of 56.5% in own-period contribution between 2026-05-31 (6306914.0647625495) and 2026-06-30 (2746404.5593228005).
+- **minfin/STATE_BUDGET_DEFICIT_YTD** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 186.1% in own-period contribution between 2025-02-28 (560485.86500789) and 2025-03-31 (-482490.71069044).
+  - warning: Unexpected jump of 123.0% in own-period contribution between 2025-03-31 (-482490.71069044) and 2025-06-30 (-1075781.43851927).
+  - warning: Unexpected jump of 51.0% in own-period contribution between 2025-06-30 (-1075781.43851927) and 2025-07-31 (-527507.0082823).
+  - warning: Unexpected jump of 101.4% in own-period contribution between 2025-07-31 (-527507.0082823) and 2025-08-31 (7622.259513559984).
+  - warning: Unexpected jump of 6429.1% in own-period contribution between 2025-08-31 (7622.259513559984) and 2025-09-30 (-482419.26899283007).
+  - warning: Unexpected jump of 87.8% in own-period contribution between 2025-09-30 (-482419.26899283007) and 2025-10-31 (-905975.5639741097).
+  - warning: Unexpected jump of 102.7% in own-period contribution between 2025-10-31 (-905975.5639741097) and 2025-11-30 (24355.234332500026).
+  - warning: Unexpected jump of 1309.1% in own-period contribution between 2025-11-30 (24355.234332500026) and 2026-01-31 (343183.04233588).
+  - warning: Unexpected jump of 90.6% in own-period contribution between 2026-01-31 (343183.04233588) and 2026-02-28 (32169.022484519985).
+  - warning: Unexpected jump of 2485.8% in own-period contribution between 2026-02-28 (32169.022484519985) and 2026-03-31 (-767491.11289395).
+- **minfin/STATE_NON_OIL_DEFICIT_YTD** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 91.6% in own-period contribution between 2025-02-28 (-558145.66341105) and 2025-03-31 (-1069450.3902505198).
+  - warning: Unexpected jump of 201.2% in own-period contribution between 2025-03-31 (-1069450.3902505198) and 2025-06-30 (-3221237.99556168).
+  - warning: Unexpected jump of 68.0% in own-period contribution between 2025-06-30 (-3221237.99556168) and 2025-07-31 (-1032225.6862408901).
+  - warning: Unexpected jump of 50.2% in own-period contribution between 2025-07-31 (-1032225.6862408901) and 2025-08-31 (-513783.54966549017).
+  - warning: Unexpected jump of 95.4% in own-period contribution between 2025-08-31 (-513783.54966549017) and 2025-09-30 (-1003983.7721924).
+  - warning: Unexpected jump of 65.9% in own-period contribution between 2025-10-31 (-1395190.3206131002) and 2025-11-30 (-475972.29708980024).
+  - warning: Unexpected jump of 118.6% in own-period contribution between 2025-11-30 (-475972.29708980024) and 2026-01-31 (88489.87013678).
+  - warning: Unexpected jump of 357.0% in own-period contribution between 2026-01-31 (88489.87013678) and 2026-02-28 (-227428.5391961).
+  - warning: Unexpected jump of 465.6% in own-period contribution between 2026-02-28 (-227428.5391961) and 2026-03-31 (-1286279.63176726).
+  - warning: Unexpected jump of 65.0% in own-period contribution between 2026-03-31 (-1286279.63176726) and 2026-05-31 (-2122144.6837395).
+- **minfin/STATE_NET_BUDGET_LENDING_YTD** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 902.4% in own-period contribution between 2025-03-31 (11285.34477516) and 2025-06-30 (113127.10978918).
+  - warning: Unexpected jump of 97.9% in own-period contribution between 2025-06-30 (113127.10978918) and 2025-07-31 (2333.8072554899845).
+  - warning: Unexpected jump of 2612.7% in own-period contribution between 2025-07-31 (2333.8072554899845) and 2025-08-31 (63310.05097100002).
+  - warning: Unexpected jump of 78.7% in own-period contribution between 2025-08-31 (63310.05097100002) and 2025-09-30 (13469.154387279996).
+  - warning: Unexpected jump of 89.6% in own-period contribution between 2025-09-30 (13469.154387279996) and 2025-10-31 (1396.7152005899989).
+  - warning: Unexpected jump of 4413.9% in own-period contribution between 2025-10-31 (1396.7152005899989) and 2025-11-30 (63046.10404694997).
+  - warning: Unexpected jump of 106.1% in own-period contribution between 2025-11-30 (63046.10404694997) and 2026-01-31 (-3860.91629305).
+  - warning: Unexpected jump of 84.8% in own-period contribution between 2026-01-31 (-3860.91629305) and 2026-02-28 (-7134.34827522).
+  - warning: Unexpected jump of 398.5% in own-period contribution between 2026-02-28 (-7134.34827522) and 2026-03-31 (-35563.63214674).
+  - warning: Unexpected jump of 435.9% in own-period contribution between 2026-03-31 (-35563.63214674) and 2026-05-31 (119444.47101752).
+  - warning: Unexpected jump of 52.6% in own-period contribution between 2026-05-31 (119444.47101752) and 2026-06-30 (182276.14135581).
+  - warning: Unexpected jump of 87.7% in own-period contribution between 2026-06-30 (182276.14135581) and 2026-07-31 (22466.694242520025).
+- **minfin/STATE_FINANCIAL_ASSETS_BALANCE_YTD** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 70.7% in own-period contribution between 2025-03-31 (66666.34366431) and 2025-06-30 (113797.00813437998).
+  - warning: Unexpected jump of 67.7% in own-period contribution between 2025-06-30 (113797.00813437998) and 2025-07-31 (36779.920667).
+  - warning: Unexpected jump of 94.8% in own-period contribution between 2025-07-31 (36779.920667) and 2025-08-31 (71661.72834373004).
+  - warning: Unexpected jump of 57.0% in own-period contribution between 2025-09-30 (50158.57605628) and 2025-10-31 (21554.157407680003).
+  - warning: Unexpected jump of 347.4% in own-period contribution between 2025-10-31 (21554.157407680003) and 2025-11-30 (96438.03178174002).
+  - warning: Unexpected jump of 98.2% in own-period contribution between 2025-11-30 (96438.03178174002) and 2026-01-31 (1709.47625514).
+  - warning: Unexpected jump of 2692.3% in own-period contribution between 2026-01-31 (1709.47625514) and 2026-02-28 (47734.04100864).
+  - warning: Unexpected jump of 79.5% in own-period contribution between 2026-02-28 (47734.04100864) and 2026-03-31 (9804.267880840001).
+  - warning: Unexpected jump of 3049.2% in own-period contribution between 2026-03-31 (9804.267880840001) and 2026-05-31 (308760.85156531003).
+  - warning: Unexpected jump of 96.3% in own-period contribution between 2026-05-31 (308760.85156531003) and 2026-06-30 (11445.83908112999).
+  - warning: Unexpected jump of 319.0% in own-period contribution between 2026-06-30 (11445.83908112999) and 2026-07-31 (47963.46082879999).
+- **minfin/PROPERTY_TAX** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 94.6% in own-period contribution between 2025-02-28 (152083.54998406) and 2025-03-31 (8190.292633110017).
+  - warning: Unexpected jump of 1525.1% in own-period contribution between 2025-03-31 (8190.292633110017) and 2025-06-30 (133101.24530404998).
+  - warning: Unexpected jump of 91.1% in own-period contribution between 2025-06-30 (133101.24530404998) and 2025-07-31 (11887.206513479992).
+  - warning: Unexpected jump of 1166.3% in own-period contribution between 2025-07-31 (11887.206513479992) and 2025-08-31 (150528.41158767004).
+  - warning: Unexpected jump of 94.0% in own-period contribution between 2025-08-31 (150528.41158767004) and 2025-09-30 (9041.866354959959).
+  - warning: Unexpected jump of 2632.4% in own-period contribution between 2025-10-31 (6830.0820361700025) and 2025-11-30 (186626.10675878997).
+  - warning: Unexpected jump of 98.2% in own-period contribution between 2025-11-30 (186626.10675878997) and 2026-01-31 (3311.46366933).
+  - warning: Unexpected jump of 3862.2% in own-period contribution between 2026-01-31 (3311.46366933) and 2026-02-28 (131207.74150202).
+  - warning: Unexpected jump of 92.8% in own-period contribution between 2026-02-28 (131207.74150202) and 2026-03-31 (9434.401593219984).
+  - warning: Unexpected jump of 1103.0% in own-period contribution between 2026-03-31 (9434.401593219984) and 2026-05-31 (113497.63454210002).
+  - warning: Unexpected jump of 94.9% in own-period contribution between 2026-05-31 (113497.63454210002) and 2026-06-30 (5786.629913720011).
+- **minfin/LAND_TAX** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 70.5% in own-period contribution between 2025-02-28 (3867.95944128) and 2025-03-31 (1141.6494600299998).
+  - warning: Unexpected jump of 315.9% in own-period contribution between 2025-03-31 (1141.6494600299998) and 2025-06-30 (4748.41743608).
+  - warning: Unexpected jump of 92.5% in own-period contribution between 2025-06-30 (4748.41743608) and 2025-07-31 (356.51932905000103).
+  - warning: Unexpected jump of 601.7% in own-period contribution between 2025-07-31 (356.51932905000103) and 2025-08-31 (2501.6501554099996).
+  - warning: Unexpected jump of 62.3% in own-period contribution between 2025-08-31 (2501.6501554099996) and 2025-09-30 (944.2915166599996).
+  - warning: Unexpected jump of 440.0% in own-period contribution between 2025-10-31 (490.9776497700004) and 2025-11-30 (2651.360819829999).
+  - warning: Unexpected jump of 89.7% in own-period contribution between 2025-11-30 (2651.360819829999) and 2026-01-31 (274.36764823).
+  - warning: Unexpected jump of 407.8% in own-period contribution between 2026-01-31 (274.36764823) and 2026-02-28 (1393.24768148).
+  - warning: Unexpected jump of 252.8% in own-period contribution between 2026-03-31 (707.78531677) and 2026-05-31 (2496.82919807).
+  - warning: Unexpected jump of 93.3% in own-period contribution between 2026-05-31 (2496.82919807) and 2026-06-30 (166.47895567999967).
+  - warning: Unexpected jump of 201.1% in own-period contribution between 2026-06-30 (166.47895567999967) and 2026-07-31 (501.1912201900004).
+- **minfin/STATE_GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 272.6% in own-period contribution between 2025-03-31 (380682.11874063) and 2025-06-30 (1418537.11887391).
+  - warning: Unexpected jump of 81.4% in own-period contribution between 2025-06-30 (1418537.11887391) and 2025-07-31 (264152.73335818015).
+  - warning: Unexpected jump of 100.9% in own-period contribution between 2026-03-31 (388816.00930476) and 2026-05-31 (781033.3170785899).
+  - warning: Unexpected jump of 60.1% in own-period contribution between 2026-06-30 (662077.6398376902) and 2026-07-31 (264262.0260219197).
+- **minfin/STATE_GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 481.8% in own-period contribution between 2025-03-31 (203637.16656240003) and 2025-06-30 (1184855.64672294).
+  - warning: Unexpected jump of 71.0% in own-period contribution between 2025-06-30 (1184855.64672294) and 2025-07-31 (343477.13210697984).
+  - warning: Unexpected jump of 75.0% in own-period contribution between 2025-07-31 (343477.13210697984) and 2025-08-31 (600922.5503167002).
+  - warning: Unexpected jump of 94.5% in own-period contribution between 2025-11-30 (568058.1094548902) and 2026-01-31 (30976.35148767).
+  - warning: Unexpected jump of 670.6% in own-period contribution between 2026-01-31 (30976.35148767) and 2026-02-28 (238704.73305303).
+  - warning: Unexpected jump of 143.0% in own-period contribution between 2026-03-31 (276256.90326617) and 2026-05-31 (671331.0724393401).
+  - warning: Unexpected jump of 61.0% in own-period contribution between 2026-05-31 (671331.0724393401) and 2026-06-30 (261849.42174004996).
+- **minfin/STATE_GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 181.6% in own-period contribution between 2025-03-31 (160430.54047373) and 2025-06-30 (451809.34769201995).
+  - warning: Unexpected jump of 73.6% in own-period contribution between 2025-06-30 (451809.34769201995) and 2025-07-31 (119484.01989853999).
+  - warning: Unexpected jump of 82.3% in own-period contribution between 2025-09-30 (87134.34990342986) and 2025-10-31 (158847.94566410012).
+  - warning: Unexpected jump of 75.2% in own-period contribution between 2025-11-30 (234193.57285940996) and 2026-01-31 (58102.22067779).
+  - warning: Unexpected jump of 372.4% in own-period contribution between 2026-01-31 (58102.22067779) and 2026-02-28 (274496.86036511).
+  - warning: Unexpected jump of 106.2% in own-period contribution between 2026-03-31 (212744.93307739007) and 2026-05-31 (438618.2016175799).
+  - warning: Unexpected jump of 64.9% in own-period contribution between 2026-05-31 (438618.2016175799) and 2026-06-30 (154073.00423407997).
+- **minfin/STATE_DEBT_TOTAL** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
+- **minfin/GOV_DEBT_EXTERNAL_USD** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
+- **minfin/LOCAL_GOV_DEBT** — fetch+validate+process: ok (downloaded=21, processed=21)
+  - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
+- **minfin/STATE_GUARANTEED_DEBT** — fetch+validate+process: ok (downloaded=21, processed=21)
+  - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
+- **minfin/GOV_DEBT_EUROBONDS** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: Unexpected jump of 83.8% in value between 2022-07-01 (4098270.0) and 2022-10-01 (664800.0).
+  - warning: Unexpected jump of 515.5% in value between 2022-10-01 (664800.0) and 2023-01-01 (4091516.9999999995).
+- **minfin/LOCAL_BUDGET_REVENUE** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/LOCAL_BUDGET_EXPENDITURE** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/LOCAL_BUDGET_TAX_REVENUE** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/LOCAL_BUDGET_TRANSFERS** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/LOCAL_EDUCATION_EXPENDITURE** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/LOCAL_HOUSING_UTILITIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **minfin/BUDGET_FINANCING_TOTAL** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 226.9% in value between 2023-01-01 (382189.30892918) and 2023-04-01 (1249185.8589798997).
+  - warning: Unexpected jump of 52.6% in value between 2023-04-01 (1249185.8589798997) and 2023-07-01 (592247.5682603805).
+  - warning: Unexpected jump of 53.8% in value between 2023-10-01 (587477.8587479903) and 2024-01-01 (271312.85565738997).
+  - warning: Unexpected jump of 156.1% in value between 2024-01-01 (271312.85565738997) and 2024-04-01 (694701.4657485).
+  - warning: Unexpected jump of 57.2% in value between 2024-04-01 (694701.4657485) and 2024-07-01 (1091941.6557680902).
+  - warning: Unexpected jump of 105.1% in value between 2024-10-01 (1528085.8762104001) and 2025-01-01 (-77995.15451745004).
+  - warning: Unexpected jump of 1479.3% in value between 2025-01-01 (-77995.15451745004) and 2025-04-01 (1075781.4388192703).
+  - warning: Unexpected jump of 137.8% in value between 2025-07-01 (1002304.0176625791) and 2025-10-01 (2383780.764162641).
+  - warning: Unexpected jump of 83.5% in value between 2025-10-01 (2383780.764162641) and 2026-01-01 (392139.04807354993).
+  - warning: Unexpected jump of 380.4% in value between 2026-01-01 (392139.04807354993) and 2026-04-01 (1883810.5566879504).
+- **minfin/BUDGET_FINANCING_DOMESTIC** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 165.9% in value between 2023-01-01 (418017.00788573) and 2023-04-01 (1111614.68020404).
+  - warning: Unexpected jump of 57.8% in value between 2023-10-01 (903445.8565542502) and 2024-01-01 (381660.56728928).
+  - warning: Unexpected jump of 91.9% in value between 2024-01-01 (381660.56728928) and 2024-04-01 (732485.5298125099).
+  - warning: Unexpected jump of 61.8% in value between 2024-04-01 (732485.5298125099) and 2024-07-01 (1184891.7911424702).
+  - warning: Unexpected jump of 100.1% in value between 2024-10-01 (994933.1664410699) and 2025-01-01 (-702.522268980043).
+  - warning: Unexpected jump of 163513.5% in value between 2025-01-01 (-702.522268980043) and 2025-04-01 (1148015.9800942603).
+  - warning: Unexpected jump of 50.5% in value between 2025-07-01 (1083374.6466171192) and 2025-10-01 (1630278.8705836413).
+  - warning: Unexpected jump of 70.4% in value between 2025-10-01 (1630278.8705836413) and 2026-01-01 (482264.72980344994).
+  - warning: Unexpected jump of 270.8% in value between 2026-01-01 (482264.72980344994) and 2026-04-01 (1788131.8086110405).
+- **minfin/BUDGET_FINANCING_EXTERNAL** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 484.0% in value between 2023-01-01 (-35827.698956550004) and 2023-04-01 (137571.17877586).
+  - warning: Unexpected jump of 242.8% in value between 2023-04-01 (137571.17877586) and 2023-07-01 (-196505.5894).
+  - warning: Unexpected jump of 60.8% in value between 2023-07-01 (-196505.5894) and 2023-10-01 (-315967.99780625995).
+  - warning: Unexpected jump of 65.1% in value between 2023-10-01 (-315967.99780625995) and 2024-01-01 (-110347.71163189001).
+  - warning: Unexpected jump of 65.8% in value between 2024-01-01 (-110347.71163189001) and 2024-04-01 (-37784.06406400999).
+  - warning: Unexpected jump of 146.0% in value between 2024-04-01 (-37784.06406400999) and 2024-07-01 (-92950.13537438001).
+  - warning: Unexpected jump of 673.6% in value between 2024-07-01 (-92950.13537438001) and 2024-10-01 (533152.7097693301).
+  - warning: Unexpected jump of 114.5% in value between 2024-10-01 (533152.7097693301) and 2025-01-01 (-77292.63224846999).
+  - warning: Unexpected jump of 1029.4% in value between 2025-07-01 (-81070.62895453998) and 2025-10-01 (753501.8935789998).
+  - warning: Unexpected jump of 112.0% in value between 2025-10-01 (753501.8935789998) and 2026-01-01 (-90125.68172990001).
+  - warning: Unexpected jump of 206.2% in value between 2026-01-01 (-90125.68172990001) and 2026-04-01 (95678.74807691004).
+- **minfin/BUDGET_FINANCING_LONG_TERM_BONDS** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 418.4% in value between 2023-01-01 (241522.33122000005) and 2023-04-01 (1252048.2134678098).
+  - warning: Unexpected jump of 70.4% in value between 2023-04-01 (1252048.2134678098) and 2023-07-01 (370774.6680679901).
+  - warning: Unexpected jump of 56.7% in value between 2023-07-01 (370774.6680679901) and 2023-10-01 (160702.58095640037).
+  - warning: Unexpected jump of 405.5% in value between 2023-10-01 (160702.58095640037) and 2024-01-01 (812385.61813387).
+  - warning: Unexpected jump of 87.7% in value between 2024-07-01 (1019705.7262130701) and 2024-10-01 (124990.8274763599).
+  - warning: Unexpected jump of 807.9% in value between 2024-10-01 (124990.8274763599) and 2025-01-01 (1134831.99426041).
+- **minfin/BUDGET_FINANCING_BANKS** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 91.9% in value between 2023-01-01 (895406.5905271001) and 2023-04-01 (1717939.86949314).
+  - warning: Unexpected jump of 70.2% in value between 2023-04-01 (1717939.86949314) and 2023-07-01 (512191.7640182604).
+  - warning: Unexpected jump of 70.2% in value between 2023-07-01 (512191.7640182604) and 2023-10-01 (152597.5937606995).
+  - warning: Unexpected jump of 508.5% in value between 2023-10-01 (152597.5937606995) and 2024-01-01 (928581.9325015999).
+  - warning: Unexpected jump of 84.7% in value between 2024-07-01 (1408860.8460293403) and 2024-10-01 (214882.05279849004).
+  - warning: Unexpected jump of 204.1% in value between 2024-10-01 (214882.05279849004) and 2025-01-01 (653408.38420761).
+  - warning: Unexpected jump of 63.8% in value between 2025-01-01 (653408.38420761) and 2025-04-01 (1070014.22437744).
+  - warning: Unexpected jump of 88.2% in value between 2026-01-01 (776687.8649514401) and 2026-04-01 (1461605.8187005399).
+- **minfin/BUDGET_FINANCING_INTL_ORGANIZATIONS** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 422.4% in value between 2023-01-01 (-44337.9314908) and 2023-04-01 (142958.63756759).
+  - warning: Unexpected jump of 170.0% in value between 2023-04-01 (142958.63756759) and 2023-07-01 (-100097.21039999998).
+  - warning: Unexpected jump of 93.0% in value between 2023-10-01 (-56918.329300110054) and 2024-01-01 (-109871.14630338999).
+  - warning: Unexpected jump of 64.5% in value between 2024-01-01 (-109871.14630338999) and 2024-04-01 (-39010.08709452003).
+  - warning: Unexpected jump of 142.0% in value between 2024-04-01 (-39010.08709452003) and 2024-07-01 (-94414.12202318996).
+  - warning: Unexpected jump of 662.6% in value between 2024-07-01 (-94414.12202318996) and 2024-10-01 (531140.07071926).
+  - warning: Unexpected jump of 114.1% in value between 2024-10-01 (531140.07071926) and 2025-01-01 (-74988.84902248999).
+  - warning: Unexpected jump of 57.7% in value between 2025-10-01 (-53103.99076799996) and 2026-01-01 (-83765.43717707001).
+  - warning: Unexpected jump of 70.7% in value between 2026-01-01 (-83765.43717707001) and 2026-04-01 (-142951.75581631996).
+- **minfin/OIL_EXPORT_DUTY** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 247.2% in own-period contribution between 2025-03-31 (136959.67956008) and 2025-06-30 (475456.55704241).
+  - warning: Unexpected jump of 68.5% in own-period contribution between 2025-06-30 (475456.55704241) and 2025-07-31 (149718.67795858998).
+  - warning: Unexpected jump of 83.0% in own-period contribution between 2025-11-30 (145327.53142230003) and 2026-01-31 (24693.1721991).
+  - warning: Unexpected jump of 504.1% in own-period contribution between 2026-02-28 (29597.561680619998) and 2026-03-31 (178788.51887331).
+  - warning: Unexpected jump of 119.5% in own-period contribution between 2026-03-31 (178788.51887331) and 2026-05-31 (392419.41382727993).
+- **minfin/OIL_PRODUCTS_EXPORT_DUTY** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 112.7% in own-period contribution between 2025-03-31 (3476.106817) and 2025-06-30 (7392.131339269999).
+  - warning: Unexpected jump of 84.9% in own-period contribution between 2025-06-30 (7392.131339269999) and 2025-07-31 (1113.5744135100012).
+  - warning: Unexpected jump of 53.9% in own-period contribution between 2025-09-30 (1834.2507340500015) and 2025-10-31 (845.7633160000005).
+  - warning: Unexpected jump of 124.7% in own-period contribution between 2025-10-31 (845.7633160000005) and 2025-11-30 (1900.8445873700002).
+  - warning: Unexpected jump of 69.4% in own-period contribution between 2025-11-30 (1900.8445873700002) and 2026-01-31 (582.519388).
+  - warning: Unexpected jump of 58.2% in own-period contribution between 2026-01-31 (582.519388) and 2026-02-28 (921.6153099499999).
+  - warning: Unexpected jump of 92.8% in own-period contribution between 2026-02-28 (921.6153099499999) and 2026-03-31 (1776.7993867).
+  - warning: Unexpected jump of 182.9% in own-period contribution between 2026-03-31 (1776.7993867) and 2026-05-31 (5026.86259207).
+  - warning: Unexpected jump of 63.7% in own-period contribution between 2026-05-31 (5026.86259207) and 2026-06-30 (1822.499613).
+  - warning: Unexpected jump of 78.9% in own-period contribution between 2026-06-30 (1822.499613) and 2026-07-31 (385.11558830000104).
+- **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
+  - warning: Unexpected jump of 106.1% in value between 1995-12-31 (-8.2) and 1996-12-31 (0.5).
+  - warning: Unexpected jump of 240.0% in value between 1996-12-31 (0.5) and 1997-12-31 (1.7).
+  - warning: Unexpected jump of 211.8% in value between 1997-12-31 (1.7) and 1998-12-31 (-1.9).
+  - warning: Unexpected jump of 242.1% in value between 1998-12-31 (-1.9) and 1999-12-31 (2.7).
+  - warning: Unexpected jump of 263.0% in value between 1999-12-31 (2.7) and 2000-12-31 (9.800298).
+  - warning: Unexpected jump of 62.9% in value between 2007-12-31 (8.9) and 2008-12-31 (3.3).
+  - warning: Unexpected jump of 63.6% in value between 2008-12-31 (3.3) and 2009-12-31 (1.2).
+  - warning: Unexpected jump of 508.3% in value between 2009-12-31 (1.2) and 2010-12-31 (7.3).
+  - warning: Unexpected jump of 76.7% in value between 2014-12-31 (4.3) and 2015-12-31 (0.999999).
+  - warning: Unexpected jump of 333.3% in value between 2016-12-31 (0.9) and 2017-12-31 (3.900001).
+  - warning: Unexpected jump of 157.8% in value between 2019-12-31 (4.5) and 2020-12-31 (-2.6).
+  - warning: Unexpected jump of 257.7% in value between 2020-12-31 (-2.6) and 2021-12-31 (4.100001).
+  - warning: Unexpected jump of 59.4% in value between 2022-12-31 (3.199999) and 2023-12-31 (5.1).
+- **imf/IMF_INFLATION** — fetch+validate+process: ok (downloaded=39, processed=39)
+  - warning: Unexpected jump of 87.4% in value between 1994-12-31 (1401.986512) and 1995-12-31 (176.37918).
+  - warning: Unexpected jump of 77.8% in value between 1995-12-31 (176.37918) and 1996-12-31 (39.1803).
+  - warning: Unexpected jump of 55.6% in value between 1996-12-31 (39.1803) and 1997-12-31 (17.401233).
+  - warning: Unexpected jump of 59.0% in value between 1997-12-31 (17.401233) and 1998-12-31 (7.132416).
+  - warning: Unexpected jump of 58.0% in value between 1999-12-31 (8.322683) and 2000-12-31 (13.153821).
+  - warning: Unexpected jump of 58.9% in value between 2007-12-31 (10.795455) and 2008-12-31 (17.156177).
+  - warning: Unexpected jump of 57.4% in value between 2008-12-31 (17.156177) and 2009-12-31 (7.302029).
+  - warning: Unexpected jump of 115.8% in value between 2015-12-31 (6.750202) and 2016-12-31 (14.56519).
+  - warning: Unexpected jump of 87.3% in value between 2021-12-31 (8.002065) and 2022-12-31 (14.98566).
+- **imf/IMF_CURRENT_ACCOUNT** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 83.3% in value between 1992-12-31 (-51.659721) and 1993-12-31 (-8.636585).
+  - warning: Unexpected jump of 83.3% in value between 1994-12-31 (-7.662874) and 1995-12-31 (-1.280688).
+  - warning: Unexpected jump of 178.8% in value between 1995-12-31 (-1.280688) and 1996-12-31 (-3.570219).
+  - warning: Unexpected jump of 53.5% in value between 1997-12-31 (-3.605986) and 1998-12-31 (-5.533715).
+  - warning: Unexpected jump of 81.7% in value between 1998-12-31 (-5.533715) and 1999-12-31 (-1.013603).
+  - warning: Unexpected jump of 297.6% in value between 1999-12-31 (-1.013603) and 2000-12-31 (2.002567).
+  - warning: Unexpected jump of 413.2% in value between 2000-12-31 (2.002567) and 2001-12-31 (-6.272451).
+  - warning: Unexpected jump of 78.7% in value between 2002-12-31 (-4.157803) and 2003-12-31 (-0.884199).
+  - warning: Unexpected jump of 187.9% in value between 2003-12-31 (-0.884199) and 2004-12-31 (0.777323).
+  - warning: Unexpected jump of 261.8% in value between 2005-12-31 (0.628099) and 2006-12-31 (-1.016006).
+  - warning: Unexpected jump of 347.5% in value between 2006-12-31 (-1.016006) and 2007-12-31 (-4.54688).
+  - warning: Unexpected jump of 121.2% in value between 2007-12-31 (-4.54688) and 2008-12-31 (0.964616).
+  - warning: Unexpected jump of 112.1% in value between 2008-12-31 (0.964616) and 2009-12-31 (-0.116557).
+  - warning: Unexpected jump of 1651.7% in value between 2009-12-31 (-0.116557) and 2010-12-31 (1.808611).
+  - warning: Unexpected jump of 303.8% in value between 2010-12-31 (1.808611) and 2011-12-31 (7.302994).
+  - warning: Unexpected jump of 82.7% in value between 2011-12-31 (7.302994) and 2012-12-31 (1.263711).
+  - warning: Unexpected jump of 51.4% in value between 2012-12-31 (1.263711) and 2013-12-31 (1.913203).
+  - warning: Unexpected jump of 167.3% in value between 2013-12-31 (1.913203) and 2014-12-31 (-1.288437).
+  - warning: Unexpected jump of 320.1% in value between 2014-12-31 (-1.288437) and 2015-12-31 (-5.412162).
+  - warning: Unexpected jump of 59.5% in value between 2016-12-31 (-5.073343) and 2017-12-31 (-2.054124).
+  - warning: Unexpected jump of 52.1% in value between 2017-12-31 (-2.054124) and 2018-12-31 (-0.984499).
+  - warning: Unexpected jump of 293.0% in value between 2018-12-31 (-0.984499) and 2019-12-31 (-3.868725).
+  - warning: Unexpected jump of 67.0% in value between 2019-12-31 (-3.868725) and 2020-12-31 (-6.461683).
+  - warning: Unexpected jump of 79.0% in value between 2020-12-31 (-6.461683) and 2021-12-31 (-1.359327).
+  - warning: Unexpected jump of 310.0% in value between 2021-12-31 (-1.359327) and 2022-12-31 (2.854326).
+  - warning: Unexpected jump of 224.6% in value between 2022-12-31 (2.854326) and 2023-12-31 (-3.557706).
+  - warning: Unexpected jump of 73.2% in value between 2025-12-31 (-3.912392) and 2026-12-31 (-1.046644).
+  - warning: Unexpected jump of 94.1% in value between 2026-12-31 (-1.046644) and 2027-12-31 (-2.031753).
+- **imf/IMF_UNEMPLOYMENT** — fetch+validate+process: ok (downloaded=38, processed=38)
+- **imf/IMF_GOV_BALANCE** — fetch+validate+process: ok (downloaded=30, processed=30)
+  - warning: Unexpected jump of 107.7% in value between 2002-12-31 (1.923888) and 2003-12-31 (3.996049).
+  - warning: Unexpected jump of 84.9% in value between 2004-12-31 (3.28732) and 2005-12-31 (6.077755).
+  - warning: Unexpected jump of 76.1% in value between 2007-12-31 (5.134415) and 2008-12-31 (1.227135).
+  - warning: Unexpected jump of 208.2% in value between 2008-12-31 (1.227135) and 2009-12-31 (-1.328049).
+  - warning: Unexpected jump of 210.7% in value between 2009-12-31 (-1.328049) and 2010-12-31 (1.469692).
+  - warning: Unexpected jump of 295.4% in value between 2010-12-31 (1.469692) and 2011-12-31 (5.811036).
+  - warning: Unexpected jump of 352.2% in value between 2014-12-31 (2.481848) and 2015-12-31 (-6.259289).
+  - warning: Unexpected jump of 160.5% in value between 2017-12-31 (-4.265509) and 2018-12-31 (2.579564).
+  - warning: Unexpected jump of 122.1% in value between 2018-12-31 (2.579564) and 2019-12-31 (-0.569543).
+  - warning: Unexpected jump of 1135.5% in value between 2019-12-31 (-0.569543) and 2020-12-31 (-7.036965).
+  - warning: Unexpected jump of 102.1% in value between 2021-12-31 (-4.966052) and 2022-12-31 (0.105381).
+  - warning: Unexpected jump of 1440.3% in value between 2022-12-31 (0.105381) and 2023-12-31 (-1.41244).
+  - warning: Unexpected jump of 143.1% in value between 2023-12-31 (-1.41244) and 2024-12-31 (-3.434168).
+  - warning: Unexpected jump of 56.8% in value between 2025-12-31 (-3.113865) and 2026-12-31 (-1.343847).
+- **imf/IMF_GOV_DEBT** — fetch+validate+process: ok (downloaded=30, processed=30)
+  - warning: Unexpected jump of 65.3% in value between 2007-12-31 (4.091989) and 2008-12-31 (6.76587).
+  - warning: Unexpected jump of 51.2% in value between 2008-12-31 (6.76587) and 2009-12-31 (10.227029).
+  - warning: Unexpected jump of 50.9% in value between 2014-12-31 (14.496344) and 2015-12-31 (21.881937).
+- **imf/IMF_POPULATION** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_NOMINAL_GDP** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 1127.0% in value between 1992-12-31 (2435224000.0) and 1993-12-31 (29881368000.0).
+  - warning: Unexpected jump of 1317.2% in value between 1993-12-31 (29881368000.0) and 1994-12-31 (423469391000.0).
+  - warning: Unexpected jump of 139.5% in value between 1994-12-31 (423469391000.0) and 1995-12-31 (1014190936000.0).
+- **imf/IMF_NOMINAL_GDP_USD** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 79.2% in value between 1992-12-31 (2875117000.0) and 1993-12-31 (5151960000.0).
+  - warning: Unexpected jump of 130.6% in value between 1993-12-31 (5151960000.0) and 1994-12-31 (11881302000.0).
+- **imf/IMF_GDP_PPP** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_INVESTMENT_RATIO** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_SAVINGS_RATIO** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 88.0% in value between 1992-12-31 (7.50239) and 1993-12-31 (14.100873).
+  - warning: Unexpected jump of 63.2% in value between 1998-12-31 (10.270641) and 1999-12-31 (16.762557).
+- **imf/IMF_GOV_REVENUE_RATIO** — fetch+validate+process: ok (downloaded=38, processed=38)
+- **imf/IMF_GOV_EXPENDITURE_RATIO** — fetch+validate+process: ok (downloaded=30, processed=30)
+- **imf/IMF_EXPORT_VOLUME_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
+  - warning: Unexpected jump of 173.3% in value between 1993-12-31 (41.18507) and 1994-12-31 (-30.20871).
+  - warning: Unexpected jump of 182.2% in value between 1994-12-31 (-30.20871) and 1995-12-31 (24.822242).
+  - warning: Unexpected jump of 57.6% in value between 1995-12-31 (24.822242) and 1996-12-31 (10.52635).
+  - warning: Unexpected jump of 56.1% in value between 1997-12-31 (15.526554) and 1998-12-31 (6.817857).
+  - warning: Unexpected jump of 221.6% in value between 1998-12-31 (6.817857) and 1999-12-31 (-8.291821).
+  - warning: Unexpected jump of 793.4% in value between 1999-12-31 (-8.291821) and 2000-12-31 (57.497322).
+  - warning: Unexpected jump of 96.3% in value between 2000-12-31 (57.497322) and 2001-12-31 (2.109161).
+  - warning: Unexpected jump of 335.2% in value between 2001-12-31 (2.109161) and 2002-12-31 (9.178136).
+  - warning: Unexpected jump of 155.3% in value between 2003-12-31 (12.851903) and 2004-12-31 (32.806964).
+  - warning: Unexpected jump of 63.1% in value between 2005-12-31 (27.254613) and 2006-12-31 (10.047385).
+  - warning: Unexpected jump of 52.1% in value between 2006-12-31 (10.047385) and 2007-12-31 (15.284495).
+  - warning: Unexpected jump of 53.7% in value between 2007-12-31 (15.284495) and 2008-12-31 (7.076718).
+  - warning: Unexpected jump of 64.0% in value between 2008-12-31 (7.076718) and 2009-12-31 (2.546137).
+  - warning: Unexpected jump of 65.3% in value between 2009-12-31 (2.546137) and 2010-12-31 (0.884379).
+  - warning: Unexpected jump of 1440.7% in value between 2010-12-31 (0.884379) and 2011-12-31 (13.625383).
+  - warning: Unexpected jump of 82.0% in value between 2011-12-31 (13.625383) and 2012-12-31 (2.452397).
+  - warning: Unexpected jump of 445.2% in value between 2013-12-31 (3.254597) and 2014-12-31 (-11.234065).
+  - warning: Unexpected jump of 73.4% in value between 2014-12-31 (-11.234065) and 2015-12-31 (-2.989522).
+  - warning: Unexpected jump of 186.3% in value between 2015-12-31 (-2.989522) and 2016-12-31 (2.578905).
+  - warning: Unexpected jump of 340.5% in value between 2016-12-31 (2.578905) and 2017-12-31 (11.360109).
+  - warning: Unexpected jump of 77.9% in value between 2017-12-31 (11.360109) and 2018-12-31 (2.515169).
+  - warning: Unexpected jump of 155.3% in value between 2018-12-31 (2.515169) and 2019-12-31 (6.420229).
+  - warning: Unexpected jump of 250.3% in value between 2019-12-31 (6.420229) and 2020-12-31 (-9.651769).
+  - warning: Unexpected jump of 60.8% in value between 2020-12-31 (-9.651769) and 2021-12-31 (-3.783407).
+  - warning: Unexpected jump of 156.2% in value between 2021-12-31 (-3.783407) and 2022-12-31 (2.127327).
+  - warning: Unexpected jump of 688.0% in value between 2022-12-31 (2.127327) and 2023-12-31 (16.763316).
+  - warning: Unexpected jump of 85.8% in value between 2023-12-31 (16.763316) and 2024-12-31 (2.376243).
+  - warning: Unexpected jump of 168.9% in value between 2024-12-31 (2.376243) and 2025-12-31 (6.389339).
+  - warning: Unexpected jump of 67.2% in value between 2027-12-31 (4.537186) and 2028-12-31 (1.487022).
+  - warning: Unexpected jump of 225.8% in value between 2028-12-31 (1.487022) and 2029-12-31 (4.844065).
+- **imf/IMF_IMPORT_VOLUME_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39)
+  - warning: Unexpected jump of 258.7% in value between 1993-12-31 (13.087335) and 1994-12-31 (-20.773372).
+  - warning: Unexpected jump of 211.3% in value between 1994-12-31 (-20.773372) and 1995-12-31 (23.122596).
+  - warning: Unexpected jump of 88.1% in value between 1997-12-31 (17.288219) and 1998-12-31 (2.049388).
+  - warning: Unexpected jump of 400.9% in value between 1998-12-31 (2.049388) and 1999-12-31 (-6.165625).
+  - warning: Unexpected jump of 586.0% in value between 1999-12-31 (-6.165625) and 2000-12-31 (29.963725).
+  - warning: Unexpected jump of 78.9% in value between 2002-12-31 (12.199099) and 2003-12-31 (2.577467).
+  - warning: Unexpected jump of 992.8% in value between 2003-12-31 (2.577467) and 2004-12-31 (28.165955).
+  - warning: Unexpected jump of 61.5% in value between 2005-12-31 (28.303354) and 2006-12-31 (10.89743).
+  - warning: Unexpected jump of 124.0% in value between 2006-12-31 (10.89743) and 2007-12-31 (24.411257).
+  - warning: Unexpected jump of 74.8% in value between 2007-12-31 (24.411257) and 2008-12-31 (6.152312).
+  - warning: Unexpected jump of 278.6% in value between 2008-12-31 (6.152312) and 2009-12-31 (-10.988415).
+  - warning: Unexpected jump of 166.0% in value between 2010-12-31 (-5.88078) and 2011-12-31 (3.87992).
+  - warning: Unexpected jump of 615.2% in value between 2011-12-31 (3.87992) and 2012-12-31 (27.747337).
+  - warning: Unexpected jump of 75.1% in value between 2012-12-31 (27.747337) and 2013-12-31 (6.918568).
+  - warning: Unexpected jump of 185.4% in value between 2013-12-31 (6.918568) and 2014-12-31 (-5.911134).
+  - warning: Unexpected jump of 161.9% in value between 2015-12-31 (-5.271598) and 2016-12-31 (-13.804368).
+  - warning: Unexpected jump of 136.1% in value between 2016-12-31 (-13.804368) and 2017-12-31 (4.98587).
+  - warning: Unexpected jump of 69.0% in value between 2017-12-31 (4.98587) and 2018-12-31 (8.426656).
+  - warning: Unexpected jump of 317.5% in value between 2019-12-31 (12.602936) and 2020-12-31 (-27.405784).
+  - warning: Unexpected jump of 60.5% in value between 2020-12-31 (-27.405784) and 2021-12-31 (-10.813287).
+  - warning: Unexpected jump of 234.2% in value between 2021-12-31 (-10.813287) and 2022-12-31 (14.507729).
+  - warning: Unexpected jump of 73.3% in value between 2022-12-31 (14.507729) and 2023-12-31 (25.145606).
+  - warning: Unexpected jump of 90.1% in value between 2023-12-31 (25.145606) and 2024-12-31 (2.500878).
+  - warning: Unexpected jump of 155.1% in value between 2024-12-31 (2.500878) and 2025-12-31 (6.380637).
+  - warning: Unexpected jump of 90.0% in value between 2025-12-31 (6.380637) and 2026-12-31 (0.639714).
+  - warning: Unexpected jump of 426.7% in value between 2026-12-31 (0.639714) and 2027-12-31 (3.369352).
+  - warning: Unexpected jump of 77.1% in value between 2027-12-31 (3.369352) and 2028-12-31 (0.771599).
+  - warning: Unexpected jump of 492.7% in value between 2028-12-31 (0.771599) and 2029-12-31 (4.573309).
+- **imf/IMF_CURRENT_ACCOUNT_USD** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 70.0% in value between 1992-12-31 (-1485277000.0) and 1993-12-31 (-444953000.0).
+  - warning: Unexpected jump of 104.6% in value between 1993-12-31 (-444953000.0) and 1994-12-31 (-910449000.0).
+  - warning: Unexpected jump of 76.6% in value between 1994-12-31 (-910449000.0) and 1995-12-31 (-213100000.0).
+  - warning: Unexpected jump of 252.4% in value between 1995-12-31 (-213100000.0) and 1996-12-31 (-751000000.0).
+  - warning: Unexpected jump of 53.2% in value between 1997-12-31 (-799300000.0) and 1998-12-31 (-1224900000.0).
+  - warning: Unexpected jump of 86.0% in value between 1998-12-31 (-1224900000.0) and 1999-12-31 (-171000000.0).
+  - warning: Unexpected jump of 314.2% in value between 1999-12-31 (-171000000.0) and 2000-12-31 (366309000.0).
+  - warning: Unexpected jump of 479.3% in value between 2000-12-31 (366309000.0) and 2001-12-31 (-1389516000.0).
+  - warning: Unexpected jump of 73.4% in value between 2002-12-31 (-1024341000.0) and 2003-12-31 (-272631000.0).
+  - warning: Unexpected jump of 223.0% in value between 2003-12-31 (-272631000.0) and 2004-12-31 (335428000.0).
+  - warning: Unexpected jump of 329.4% in value between 2005-12-31 (358800000.0) and 2006-12-31 (-823000000.0).
+  - warning: Unexpected jump of 479.3% in value between 2006-12-31 (-823000000.0) and 2007-12-31 (-4767400000.0).
+  - warning: Unexpected jump of 127.0% in value between 2007-12-31 (-4767400000.0) and 2008-12-31 (1287200000.0).
+  - warning: Unexpected jump of 110.4% in value between 2008-12-31 (1287200000.0) and 2009-12-31 (-134400000.0).
+  - warning: Unexpected jump of 2092.3% in value between 2009-12-31 (-134400000.0) and 2010-12-31 (2677600000.0).
+  - warning: Unexpected jump of 425.4% in value between 2010-12-31 (2677600000.0) and 2011-12-31 (14067500000.0).
+  - warning: Unexpected jump of 81.3% in value between 2011-12-31 (14067500000.0) and 2012-12-31 (2628500000.0).
+  - warning: Unexpected jump of 72.2% in value between 2012-12-31 (2628500000.0) and 2013-12-31 (4527300000.0).
+  - warning: Unexpected jump of 163.0% in value between 2013-12-31 (4527300000.0) and 2014-12-31 (-2852800000.0).
+  - warning: Unexpected jump of 249.8% in value between 2014-12-31 (-2852800000.0) and 2015-12-31 (-9979400000.0).
+  - warning: Unexpected jump of 50.8% in value between 2016-12-31 (-6964600000.0) and 2017-12-31 (-3426400000.0).
+  - warning: Unexpected jump of 298.1% in value between 2018-12-31 (-1765600000.0) and 2019-12-31 (-7028200000.0).
+  - warning: Unexpected jump of 57.3% in value between 2019-12-31 (-7028200000.0) and 2020-12-31 (-11054800000.0).
+  - warning: Unexpected jump of 75.8% in value between 2020-12-31 (-11054800000.0) and 2021-12-31 (-2679400000.0).
+  - warning: Unexpected jump of 340.2% in value between 2021-12-31 (-2679400000.0) and 2022-12-31 (6436400000.0).
+  - warning: Unexpected jump of 244.7% in value between 2022-12-31 (6436400000.0) and 2023-12-31 (-9315500000.0).
+  - warning: Unexpected jump of 68.1% in value between 2025-12-31 (-11844600000.0) and 2026-12-31 (-3772688000.0).
+  - warning: Unexpected jump of 107.9% in value between 2026-12-31 (-3772688000.0) and 2027-12-31 (-7841870000.0).
+- **imf/IMF_GDP_PER_CAPITA_PPP** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_GDP_WORLD_SHARE_PPP** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_INFLATION_EOP** — fetch+validate+process: ok (downloaded=39, processed=39)
+  - warning: Unexpected jump of 60.5% in value between 1993-12-31 (2165.0) and 1994-12-31 (854.585082).
+  - warning: Unexpected jump of 92.9% in value between 1994-12-31 (854.585082) and 1995-12-31 (60.38836).
+  - warning: Unexpected jump of 52.5% in value between 1995-12-31 (60.38836) and 1996-12-31 (28.7).
+  - warning: Unexpected jump of 61.0% in value between 1996-12-31 (28.7) and 1997-12-31 (11.2).
+  - warning: Unexpected jump of 83.0% in value between 1997-12-31 (11.2) and 1998-12-31 (1.9).
+  - warning: Unexpected jump of 836.8% in value between 1998-12-31 (1.9) and 1999-12-31 (17.8).
+  - warning: Unexpected jump of 119.9% in value between 2006-12-31 (8.441558) and 2007-12-31 (18.562874).
+  - warning: Unexpected jump of 61.8% in value between 2013-12-31 (4.60177) and 2014-12-31 (7.445008).
+  - warning: Unexpected jump of 84.0% in value between 2014-12-31 (7.445008) and 2015-12-31 (13.700787).
+  - warning: Unexpected jump of 142.7% in value between 2021-12-31 (8.4) and 2022-12-31 (20.387454).
+  - warning: Unexpected jump of 52.3% in value between 2022-12-31 (20.387454) and 2023-12-31 (9.731801).
+- **imf/IMF_GOV_NET_DEBT_RATIO** — fetch+validate+process: ok (downloaded=30, processed=30)
+  - warning: Unexpected jump of 54.4% in value between 2002-12-31 (7.852133) and 2003-12-31 (3.579942).
+  - warning: Unexpected jump of 99.2% in value between 2003-12-31 (3.579942) and 2004-12-31 (0.028455).
+  - warning: Unexpected jump of 21702.0% in value between 2004-12-31 (0.028455) and 2005-12-31 (-6.146843).
+  - warning: Unexpected jump of 77.4% in value between 2005-12-31 (-6.146843) and 2006-12-31 (-10.903329).
+  - warning: Unexpected jump of 60.7% in value between 2014-12-31 (-19.140377) and 2015-12-31 (-30.753841).
+  - warning: Unexpected jump of 61.2% in value between 2020-12-31 (-8.623908) and 2021-12-31 (-3.346553).
+  - warning: Unexpected jump of 63.0% in value between 2021-12-31 (-3.346553) and 2022-12-31 (-1.238086).
+  - warning: Unexpected jump of 114.9% in value between 2022-12-31 (-1.238086) and 2023-12-31 (0.184939).
+  - warning: Unexpected jump of 1052.7% in value between 2023-12-31 (0.184939) and 2024-12-31 (2.131847).
+  - warning: Unexpected jump of 203.0% in value between 2024-12-31 (2.131847) and 2025-12-31 (6.458785).
+- **imf/IMF_GDP_DEFLATOR_INDEX** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 1251.4% in value between 1992-12-31 (0.043287) and 1993-12-31 (0.584972).
+  - warning: Unexpected jump of 1521.1% in value between 1993-12-31 (0.584972) and 1994-12-31 (9.482983).
+  - warning: Unexpected jump of 160.9% in value between 1994-12-31 (9.482983) and 1995-12-31 (24.740016).
+- **imf/IMF_REAL_GDP** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=30, processed=30)
+  - warning: Unexpected jump of 50.6% in value between 2006-12-31 (2022298111000.0) and 2007-12-31 (3045990034000.0).
+- **imf/IMF_GOV_REVENUE** — fetch+validate+process: ok (downloaded=38, processed=38)
+  - warning: Unexpected jump of 81.9% in value between 1994-12-31 (94000000000.0) and 1995-12-31 (171000000000.0).
+  - warning: Unexpected jump of 60.7% in value between 1999-12-31 (353651189000.0) and 2000-12-31 (568200000000.0).
+  - warning: Unexpected jump of 57.7% in value between 2021-12-31 (14358746726000.0) and 2022-12-31 (22644736046000.0).
+- **imf/IMF_CPI_INDEX** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 1662.2% in value between 1992-12-31 (0.013482) and 1993-12-31 (0.237583).
+  - warning: Unexpected jump of 1402.0% in value between 1993-12-31 (0.237583) and 1994-12-31 (3.568466).
+  - warning: Unexpected jump of 176.4% in value between 1994-12-31 (3.568466) and 1995-12-31 (9.862497).
+- **imf/IMF_GOV_BALANCE_LEVEL** — fetch+validate+process: ok (downloaded=30, processed=30)
+  - warning: Unexpected jump of 153.7% in value between 2002-12-31 (72651331000.0) and 2003-12-31 (184296769000.0).
+  - warning: Unexpected jump of 139.1% in value between 2004-12-31 (192970091000.0) and 2005-12-31 (461337688000.0).
+  - warning: Unexpected jump of 69.4% in value between 2005-12-31 (461337688000.0) and 2006-12-31 (781618891000.0).
+  - warning: Unexpected jump of 70.1% in value between 2007-12-31 (659761723000.0) and 2008-12-31 (196991013000.0).
+  - warning: Unexpected jump of 214.7% in value between 2008-12-31 (196991013000.0) and 2009-12-31 (-225869840000.0).
+  - warning: Unexpected jump of 241.9% in value between 2009-12-31 (-225869840000.0) and 2010-12-31 (320621004000.0).
+  - warning: Unexpected jump of 411.9% in value between 2010-12-31 (320621004000.0) and 2011-12-31 (1641213908000.0).
+  - warning: Unexpected jump of 359.9% in value between 2014-12-31 (984693820000.0) and 2015-12-31 (-2559056190000.0).
+  - warning: Unexpected jump of 168.7% in value between 2017-12-31 (-2319534930000.0) and 2018-12-31 (1594674728000.0).
+  - warning: Unexpected jump of 124.8% in value between 2018-12-31 (1594674728000.0) and 2019-12-31 (-396017997000.0).
+  - warning: Unexpected jump of 1155.4% in value between 2019-12-31 (-396017997000.0) and 2020-12-31 (-4971547795000.0).
+  - warning: Unexpected jump of 102.6% in value between 2021-12-31 (-4169079555000.0) and 2022-12-31 (109348717000.0).
+  - warning: Unexpected jump of 1642.8% in value between 2022-12-31 (109348717000.0) and 2023-12-31 (-1687050564000.0).
+  - warning: Unexpected jump of 178.3% in value between 2023-12-31 (-1687050564000.0) and 2024-12-31 (-4694277577000.0).
+  - warning: Unexpected jump of 51.8% in value between 2026-12-31 (-2528960197000.0) and 2027-12-31 (-3839076326000.0).
+- **imf/IMF_PPP_EXCHANGE_RATE** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 1220.1% in value between 1992-12-31 (0.020919) and 1993-12-31 (0.276147).
+  - warning: Unexpected jump of 1487.2% in value between 1993-12-31 (0.276147) and 1994-12-31 (4.383024).
+  - warning: Unexpected jump of 155.5% in value between 1994-12-31 (4.383024) and 1995-12-31 (11.200008).
+- **imf/IMF_STRUCTURAL_BALANCE** — fetch+validate+process: ok (downloaded=30, processed=30)
+  - warning: Unexpected jump of 79.8% in value between 2002-12-31 (2.150103) and 2003-12-31 (3.864873).
+  - warning: Unexpected jump of 58.4% in value between 2004-12-31 (4.377403) and 2005-12-31 (6.934694).
+  - warning: Unexpected jump of 100.4% in value between 2007-12-31 (4.668896) and 2008-12-31 (-0.020555).
+  - warning: Unexpected jump of 1382.3% in value between 2008-12-31 (-0.020555) and 2009-12-31 (0.26358).
+  - warning: Unexpected jump of 299.6% in value between 2009-12-31 (0.26358) and 2010-12-31 (1.053312).
+  - warning: Unexpected jump of 183.8% in value between 2010-12-31 (1.053312) and 2011-12-31 (2.989738).
+  - warning: Unexpected jump of 54.1% in value between 2013-12-31 (3.196389) and 2014-12-31 (1.467274).
+  - warning: Unexpected jump of 440.4% in value between 2014-12-31 (1.467274) and 2015-12-31 (-4.993904).
+  - warning: Unexpected jump of 195.6% in value between 2017-12-31 (-3.422213) and 2018-12-31 (3.270655).
+  - warning: Unexpected jump of 88.2% in value between 2018-12-31 (3.270655) and 2019-12-31 (0.387022).
+  - warning: Unexpected jump of 989.9% in value between 2019-12-31 (0.387022) and 2020-12-31 (-3.444065).
+  - warning: Unexpected jump of 113.8% in value between 2021-12-31 (-2.721354) and 2022-12-31 (0.376596).
+  - warning: Unexpected jump of 588.6% in value between 2022-12-31 (0.376596) and 2023-12-31 (-1.840185).
+  - warning: Unexpected jump of 152.0% in value between 2023-12-31 (-1.840185) and 2024-12-31 (-4.637583).
+  - warning: Unexpected jump of 60.3% in value between 2025-12-31 (-4.833013) and 2026-12-31 (-1.917856).
+- **imf/IMF_CPI_EOP_INDEX** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 2165.0% in value between 1992-12-31 (0.033765) and 1993-12-31 (0.764775).
+  - warning: Unexpected jump of 854.6% in value between 1993-12-31 (0.764775) and 1994-12-31 (7.300427).
+  - warning: Unexpected jump of 60.4% in value between 1994-12-31 (7.300427) and 1995-12-31 (11.709034).
+- **imf/IMF_GDP_PER_CAPITA_NATIONAL** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: Unexpected jump of 1137.8% in value between 1992-12-31 (142.842263) and 1993-12-31 (1768.128324).
+  - warning: Unexpected jump of 1415.8% in value between 1993-12-31 (1768.128324) and 1994-12-31 (26801.860179).
+  - warning: Unexpected jump of 141.4% in value between 1994-12-31 (26801.860179) and 1995-12-31 (64697.874176).
+- **imf/OIL_PRICE** — fetch+validate+process: ok (downloaded=416, processed=416)
+  - warning: Unexpected jump of 56.9% in value between 2026-02-01 (67.45116666666665) and 2026-03-01 (105.83).
+- **imf/COMMODITY_TERMS_OF_TRADE** — fetch+validate+process: ok (downloaded=413, processed=413)
+- **imf/COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS** — fetch+validate+process: ok (downloaded=413, processed=413)
+- **ardfm/BANK_NPL_90_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_NPL_90_AMOUNT** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LOANS_TOTAL** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_PROVISIONS_IFRS** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_CAPITAL_ADEQUACY_K1** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_CAPITAL_ADEQUACY_K2** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 100.0% in own-period contribution between 2026-03-01 (795.9) and 2026-04-01 (0.0).
+- **ardfm/BANK_ASSETS_TOTAL** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_ASSETS_GROSS** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LIABILITIES_TOTAL** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_CLIENT_DEPOSITS** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_DEPOSITS_LEGAL_ENTITIES** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_DEPOSITS_INDIVIDUALS** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_DEPOSITS_INDIVIDUALS_FX_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **ardfm/BANK_ASSETS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LOANS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_DEPOSITS_TO_GDP** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LOANS_CORPORATE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_NPL_90_CORPORATE_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LOANS_RETAIL** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_NPL_90_RETAIL_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_LOANS_SME** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_NPL_90_SME_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_SHARE_CAPITAL** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_TOP5_ASSETS_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_TOP5_LOANS_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **ardfm/BANK_TOP5_DEPOSITS_SHARE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **wb/OIL_PRICE_BRENT** — fetch+validate+process: ok (downloaded=800, processed=800)
+  - warning: Unexpected jump of 51.9% in value between 1973-09-01 (2.7) and 1973-10-01 (4.1).
+  - warning: Unexpected jump of 217.1% in value between 1973-12-01 (4.1) and 1974-01-01 (13.0).
+  - warning: Unexpected jump of 54.0% in value between 1990-07-01 (17.6) and 1990-08-01 (27.1).
+- **kase/TONIA** — fetch+validate+process: ok (downloaded=6193, processed=6193)
+  - warning: Gap of 5 days between 2001-12-14 and 2001-12-19 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2001-12-21 and 2001-12-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2001-12-29 and 2002-01-04 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2002-12-13 and 2002-12-18 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2002-12-30 and 2003-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2003-12-13 and 2003-12-18 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2003-12-31 and 2004-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2004-12-15 and 2004-12-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2004-12-31 and 2005-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2005-12-15 and 2005-12-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2005-12-30 and 2006-01-04 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2006-12-15 and 2006-12-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2006-12-29 and 2007-01-03 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2007-12-14 and 2007-12-19 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2007-12-29 and 2008-01-03 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2008-12-31 and 2009-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2009-12-15 and 2009-12-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2009-12-31 and 2010-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2010-03-19 and 2010-03-25 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2010-12-15 and 2010-12-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2010-12-31 and 2011-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2011-03-18 and 2011-03-24 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2011-12-15 and 2011-12-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2011-12-30 and 2012-01-04 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2012-03-20 and 2012-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2012-12-14 and 2012-12-19 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2012-12-29 and 2013-01-03 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2013-03-20 and 2013-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2013-05-08 and 2013-05-13 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2013-12-13 and 2013-12-18 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2013-12-31 and 2014-01-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2014-03-20 and 2014-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2014-05-06 and 2014-05-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2014-12-31 and 2015-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2015-03-20 and 2015-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2015-12-31 and 2016-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2016-03-18 and 2016-03-24 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-05-06 and 2016-05-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-12-15 and 2016-12-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-12-30 and 2017-01-04 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2017-03-18 and 2017-03-24 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-05-05 and 2017-05-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-07-05 and 2017-07-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-12-15 and 2017-12-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-12-29 and 2018-01-03 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-03-07 and 2018-03-12 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2018-03-20 and 2018-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-05-05 and 2018-05-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-08-29 and 2018-09-03 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-12-14 and 2018-12-19 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-12-29 and 2019-01-03 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2019-03-20 and 2019-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2019-05-08 and 2019-05-13 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2019-12-13 and 2019-12-18 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2019-12-31 and 2020-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2020-03-20 and 2020-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2020-05-06 and 2020-05-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2020-12-15 and 2020-12-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2020-12-31 and 2021-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2021-03-19 and 2021-03-25 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2021-05-06 and 2021-05-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2021-12-15 and 2021-12-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2021-12-31 and 2022-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2022-01-05 and 2022-01-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2022-03-18 and 2022-03-24 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2022-05-06 and 2022-05-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2022-12-30 and 2023-01-04 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2023-05-05 and 2023-05-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2023-07-05 and 2023-07-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2023-12-29 and 2024-01-03 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2024-03-20 and 2024-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2024-12-31 and 2025-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2025-03-20 and 2025-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2025-12-31 and 2026-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2026-03-20 and 2026-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Unexpected jump of 63.3% in value between 2001-09-14 (2.07) and 2001-09-17 (3.38).
+  - warning: Unexpected jump of 79.9% in value between 2001-09-17 (3.38) and 2001-09-18 (6.08).
+  - warning: Unexpected jump of 73.4% in value between 2001-09-21 (3.53) and 2001-09-24 (6.12).
+  - warning: Unexpected jump of 51.0% in value between 2001-09-24 (6.12) and 2001-09-25 (3.0).
+  - warning: Unexpected jump of 82.0% in value between 2001-09-25 (3.0) and 2001-09-26 (5.46).
+  - warning: Unexpected jump of 98.0% in value between 2001-10-12 (2.97) and 2001-10-15 (5.88).
+  - warning: Unexpected jump of 77.3% in value between 2001-11-05 (2.99) and 2001-11-06 (5.3).
+  - warning: Unexpected jump of 98.8% in value between 2001-11-09 (2.52) and 2001-11-12 (5.01).
+  - warning: Unexpected jump of 51.0% in value between 2001-11-16 (4.0) and 2001-11-19 (6.04).
+  - warning: Unexpected jump of 58.1% in value between 2001-11-19 (6.04) and 2001-11-20 (9.55).
+  - warning: Unexpected jump of 50.6% in value between 2001-12-19 (5.51) and 2001-12-20 (8.3).
+  - warning: Unexpected jump of 64.0% in value between 2001-12-20 (8.3) and 2001-12-21 (2.99).
+  - warning: Unexpected jump of 145.2% in value between 2001-12-21 (2.99) and 2001-12-26 (7.33).
+  - warning: Unexpected jump of 54.4% in value between 2001-12-28 (9.99) and 2001-12-29 (4.56).
+  - warning: Unexpected jump of 200.9% in value between 2002-12-26 (4.55) and 2002-12-27 (13.69).
+  - warning: Unexpected jump of 66.3% in value between 2002-12-27 (13.69) and 2002-12-28 (4.62).
+  - warning: Unexpected jump of 50.8% in value between 2003-04-11 (2.95) and 2003-04-14 (4.45).
+  - warning: Unexpected jump of 109.9% in value between 2003-06-13 (2.84) and 2003-06-16 (5.96).
+  - warning: Unexpected jump of 57.1% in value between 2003-08-01 (2.05) and 2003-08-04 (3.22).
+  - warning: Unexpected jump of 107.0% in value between 2003-08-14 (1.0) and 2003-08-15 (2.07).
+  - warning: Unexpected jump of 66.7% in value between 2003-08-15 (2.07) and 2003-08-18 (3.45).
+  - warning: Unexpected jump of 67.9% in value between 2003-08-27 (5.58) and 2003-08-28 (9.37).
+  - warning: Unexpected jump of 57.4% in value between 2003-08-28 (9.37) and 2003-08-29 (3.99).
+  - warning: Unexpected jump of 58.0% in value between 2003-09-12 (1.76) and 2003-09-15 (2.78).
+  - warning: Unexpected jump of 128.8% in value between 2003-09-15 (2.78) and 2003-09-16 (6.36).
+  - warning: Unexpected jump of 145.2% in value between 2003-09-17 (6.3) and 2003-09-18 (15.45).
+  - warning: Unexpected jump of 64.0% in value between 2003-09-25 (7.72) and 2003-09-26 (2.78).
+  - warning: Unexpected jump of 60.1% in value between 2003-09-26 (2.78) and 2003-09-29 (4.45).
+  - warning: Unexpected jump of 133.3% in value between 2003-10-10 (1.02) and 2003-10-13 (2.38).
+  - warning: Unexpected jump of 454.4% in value between 2003-10-14 (3.51) and 2003-10-15 (19.46).
+  - warning: Unexpected jump of 74.4% in value between 2003-10-16 (10.8) and 2003-10-17 (2.76).
+  - warning: Unexpected jump of 205.1% in value between 2003-10-17 (2.76) and 2003-10-20 (8.42).
+  - warning: Unexpected jump of 59.9% in value between 2003-10-22 (7.24) and 2003-10-23 (2.9).
+  - warning: Unexpected jump of 65.6% in value between 2003-11-10 (2.15) and 2003-11-11 (0.74).
+  - warning: Unexpected jump of 91.9% in value between 2003-11-11 (0.74) and 2003-11-12 (1.42).
+  - warning: Unexpected jump of 108.5% in value between 2003-11-12 (1.42) and 2003-11-13 (2.96).
+  - warning: Unexpected jump of 94.7% in value between 2003-11-19 (1.9) and 2003-11-20 (3.7).
+  - warning: Unexpected jump of 77.8% in value between 2003-12-02 (2.61) and 2003-12-03 (0.58).
+  - warning: Unexpected jump of 279.3% in value between 2003-12-03 (0.58) and 2003-12-04 (2.2).
+  - warning: Unexpected jump of 66.8% in value between 2003-12-04 (2.2) and 2003-12-05 (0.73).
+  - warning: Unexpected jump of 86.3% in value between 2003-12-05 (0.73) and 2003-12-08 (1.36).
+  - warning: Unexpected jump of 77.9% in value between 2003-12-08 (1.36) and 2003-12-09 (2.42).
+  - warning: Unexpected jump of 65.4% in value between 2003-12-10 (1.59) and 2003-12-11 (2.63).
+  - warning: Unexpected jump of 125.4% in value between 2003-12-12 (2.87) and 2003-12-13 (6.47).
+  - warning: Unexpected jump of 51.9% in value between 2003-12-13 (6.47) and 2003-12-18 (3.11).
+  - warning: Unexpected jump of 78.1% in value between 2003-12-18 (3.11) and 2003-12-19 (5.54).
+  - warning: Unexpected jump of 65.7% in value between 2003-12-31 (2.45) and 2004-01-05 (0.84).
+  - warning: Unexpected jump of 84.1% in value between 2004-01-06 (0.63) and 2004-01-07 (1.16).
+  - warning: Unexpected jump of 76.5% in value between 2004-01-13 (1.62) and 2004-01-14 (2.86).
+  - warning: Unexpected jump of 75.9% in value between 2004-01-14 (2.86) and 2004-01-15 (5.03).
+  - warning: Unexpected jump of 138.1% in value between 2004-01-16 (3.28) and 2004-01-19 (7.81).
+  - warning: Unexpected jump of 70.1% in value between 2004-02-06 (0.97) and 2004-02-09 (1.65).
+  - warning: Unexpected jump of 58.8% in value between 2004-02-09 (1.65) and 2004-02-10 (2.62).
+  - warning: Unexpected jump of 230.0% in value between 2004-02-17 (2.03) and 2004-02-18 (6.7).
+  - warning: Unexpected jump of 89.0% in value between 2004-03-15 (1.45) and 2004-03-16 (2.74).
+  - warning: Unexpected jump of 242.9% in value between 2004-04-05 (0.98) and 2004-04-06 (3.36).
+  - warning: Unexpected jump of 64.9% in value between 2004-04-09 (1.48) and 2004-04-12 (2.44).
+  - warning: Unexpected jump of 94.5% in value between 2004-04-13 (2.36) and 2004-04-14 (4.59).
+  - warning: Unexpected jump of 89.3% in value between 2004-04-16 (2.71) and 2004-04-19 (5.13).
+  - warning: Unexpected jump of 103.1% in value between 2004-05-14 (1.6) and 2004-05-17 (3.25).
+  - warning: Unexpected jump of 104.1% in value between 2004-05-19 (5.84) and 2004-05-20 (11.92).
+  - warning: Unexpected jump of 71.0% in value between 2004-05-20 (11.92) and 2004-05-21 (3.46).
+  - warning: Unexpected jump of 78.8% in value between 2004-05-28 (1.32) and 2004-05-31 (2.36).
+  - warning: Unexpected jump of 58.9% in value between 2004-05-31 (2.36) and 2004-06-01 (0.97).
+  - warning: Unexpected jump of 70.1% in value between 2004-06-01 (0.97) and 2004-06-02 (1.65).
+  - warning: Unexpected jump of 91.5% in value between 2004-06-03 (1.06) and 2004-06-04 (2.03).
+  - warning: Unexpected jump of 149.6% in value between 2004-06-11 (1.17) and 2004-06-14 (2.92).
+  - warning: Unexpected jump of 63.2% in value between 2004-06-29 (2.04) and 2004-06-30 (0.75).
+  - warning: Unexpected jump of 56.0% in value between 2004-06-30 (0.75) and 2004-07-01 (1.17).
+  - warning: Unexpected jump of 243.9% in value between 2004-07-16 (0.66) and 2004-07-19 (2.27).
+  - warning: Unexpected jump of 106.4% in value between 2004-07-21 (2.81) and 2004-07-22 (5.8).
+  - warning: Unexpected jump of 55.9% in value between 2004-07-22 (5.8) and 2004-07-23 (2.56).
+  - warning: Unexpected jump of 76.3% in value between 2004-07-28 (0.76) and 2004-07-29 (1.34).
+  - warning: Unexpected jump of 75.4% in value between 2004-07-29 (1.34) and 2004-07-30 (0.33).
+  - warning: Unexpected jump of 132.4% in value between 2004-08-04 (0.34) and 2004-08-05 (0.79).
+  - warning: Unexpected jump of 112.9% in value between 2004-08-11 (0.31) and 2004-08-12 (0.66).
+  - warning: Unexpected jump of 127.3% in value between 2004-08-16 (0.66) and 2004-08-17 (1.5).
+  - warning: Unexpected jump of 56.0% in value between 2004-08-17 (1.5) and 2004-08-18 (2.34).
+  - warning: Unexpected jump of 166.2% in value between 2004-08-18 (2.34) and 2004-08-19 (6.23).
+  - warning: Unexpected jump of 52.9% in value between 2004-08-24 (3.82) and 2004-08-25 (1.8).
+  - warning: Unexpected jump of 89.4% in value between 2004-08-27 (1.51) and 2004-08-31 (2.86).
+  - warning: Unexpected jump of 56.2% in value between 2004-09-02 (1.12) and 2004-09-03 (0.49).
+  - warning: Unexpected jump of 77.6% in value between 2004-09-03 (0.49) and 2004-09-06 (0.87).
+  - warning: Unexpected jump of 286.7% in value between 2004-09-07 (0.45) and 2004-09-08 (1.74).
+  - warning: Unexpected jump of 51.8% in value between 2004-09-09 (1.66) and 2004-09-10 (0.8).
+  - warning: Unexpected jump of 340.5% in value between 2004-09-13 (0.79) and 2004-09-14 (3.48).
+  - warning: Unexpected jump of 161.0% in value between 2004-09-15 (3.62) and 2004-09-16 (9.45).
+  - warning: Unexpected jump of 58.4% in value between 2004-09-16 (9.45) and 2004-09-17 (3.93).
+  - warning: Unexpected jump of 52.2% in value between 2004-10-04 (1.15) and 2004-10-05 (0.55).
+  - warning: Unexpected jump of 98.2% in value between 2004-10-05 (0.55) and 2004-10-06 (1.09).
+  - warning: Unexpected jump of 54.5% in value between 2004-10-11 (0.55) and 2004-10-12 (0.85).
+  - warning: Unexpected jump of 76.5% in value between 2004-10-12 (0.85) and 2004-10-13 (1.5).
+  - warning: Unexpected jump of 61.5% in value between 2004-10-14 (0.91) and 2004-10-15 (0.35).
+  - warning: Unexpected jump of 55.9% in value between 2004-10-18 (0.34) and 2004-10-19 (0.53).
+  - warning: Unexpected jump of 52.6% in value between 2004-10-22 (0.57) and 2004-10-26 (0.87).
+  - warning: Unexpected jump of 51.6% in value between 2004-11-01 (0.31) and 2004-11-02 (0.15).
+  - warning: Unexpected jump of 112.5% in value between 2004-11-03 (0.16) and 2004-11-04 (0.34).
+  - warning: Unexpected jump of 223.1% in value between 2004-11-09 (0.26) and 2004-11-10 (0.84).
+  - warning: Unexpected jump of 83.3% in value between 2004-11-11 (0.42) and 2004-11-12 (0.77).
+  - warning: Unexpected jump of 64.9% in value between 2004-11-17 (1.54) and 2004-11-18 (0.54).
+  - warning: Unexpected jump of 63.0% in value between 2004-11-18 (0.54) and 2004-11-19 (0.88).
+  - warning: Unexpected jump of 140.5% in value between 2004-11-30 (0.37) and 2004-12-01 (0.89).
+  - warning: Unexpected jump of 189.9% in value between 2004-12-09 (0.69) and 2004-12-10 (2.0).
+  - warning: Unexpected jump of 98.6% in value between 2004-12-13 (1.41) and 2004-12-14 (2.8).
+  - warning: Unexpected jump of 174.1% in value between 2004-12-23 (0.54) and 2004-12-24 (1.48).
+  - warning: Unexpected jump of 104.1% in value between 2004-12-28 (0.49) and 2004-12-29 (1.0).
+  - warning: Unexpected jump of 63.2% in value between 2005-01-12 (0.38) and 2005-01-13 (0.62).
+  - warning: Unexpected jump of 217.1% in value between 2005-01-14 (0.76) and 2005-01-17 (2.41).
+  - warning: Unexpected jump of 54.9% in value between 2005-01-24 (2.24) and 2005-01-25 (3.47).
+  - warning: Unexpected jump of 55.2% in value between 2005-01-27 (4.62) and 2005-01-28 (2.07).
+  - warning: Unexpected jump of 344.2% in value between 2005-02-21 (0.52) and 2005-02-22 (2.31).
+  - warning: Unexpected jump of 66.0% in value between 2005-03-03 (0.97) and 2005-03-04 (0.33).
+  - warning: Unexpected jump of 133.3% in value between 2005-03-04 (0.33) and 2005-03-05 (0.77).
+  - warning: Unexpected jump of 97.6% in value between 2005-03-11 (0.41) and 2005-03-14 (0.81).
+  - warning: Unexpected jump of 228.9% in value between 2005-03-17 (0.38) and 2005-03-18 (1.25).
+  - warning: Unexpected jump of 50.5% in value between 2005-03-24 (0.93) and 2005-03-25 (0.46).
+  - warning: Unexpected jump of 191.7% in value between 2005-03-28 (0.36) and 2005-03-29 (1.05).
+  - warning: Unexpected jump of 121.9% in value between 2005-03-29 (1.05) and 2005-03-30 (2.33).
+  - warning: Unexpected jump of 62.2% in value between 2005-03-30 (2.33) and 2005-03-31 (0.88).
+  - warning: Unexpected jump of 58.4% in value between 2005-04-04 (0.77) and 2005-04-05 (1.22).
+  - warning: Unexpected jump of 62.3% in value between 2005-04-05 (1.22) and 2005-04-06 (0.46).
+  - warning: Unexpected jump of 93.8% in value between 2005-04-08 (0.48) and 2005-04-11 (0.93).
+  - warning: Unexpected jump of 192.1% in value between 2005-04-13 (1.27) and 2005-04-14 (3.71).
+  - warning: Unexpected jump of 70.6% in value between 2005-04-14 (3.71) and 2005-04-15 (1.09).
+  - warning: Unexpected jump of 57.1% in value between 2005-05-05 (0.7) and 2005-05-06 (1.1).
+  - warning: Unexpected jump of 79.4% in value between 2005-05-12 (0.63) and 2005-05-13 (1.13).
+  - warning: Unexpected jump of 192.3% in value between 2005-05-23 (0.52) and 2005-05-24 (1.52).
+  - warning: Unexpected jump of 165.2% in value between 2005-05-27 (0.46) and 2005-05-30 (1.22).
+  - warning: Unexpected jump of 61.5% in value between 2005-06-02 (0.52) and 2005-06-03 (0.84).
+  - warning: Unexpected jump of 55.0% in value between 2005-06-20 (1.8) and 2005-06-21 (2.79).
+  - warning: Unexpected jump of 59.5% in value between 2005-06-21 (2.79) and 2005-06-22 (4.45).
+  - warning: Unexpected jump of 106.5% in value between 2005-06-22 (4.45) and 2005-06-23 (9.19).
+  - warning: Unexpected jump of 91.3% in value between 2005-06-23 (9.19) and 2005-06-24 (0.8).
+  - warning: Unexpected jump of 62.5% in value between 2005-06-24 (0.8) and 2005-06-27 (0.3).
+  - warning: Unexpected jump of 183.3% in value between 2005-06-27 (0.3) and 2005-06-28 (0.85).
+  - warning: Unexpected jump of 59.2% in value between 2005-06-29 (1.25) and 2005-06-30 (1.99).
+  - warning: Unexpected jump of 54.3% in value between 2005-06-30 (1.99) and 2005-07-01 (0.91).
+  - warning: Unexpected jump of 73.6% in value between 2005-07-01 (0.91) and 2005-07-04 (1.58).
+  - warning: Unexpected jump of 72.9% in value between 2005-07-07 (1.55) and 2005-07-08 (0.42).
+  - warning: Unexpected jump of 221.2% in value between 2005-07-12 (0.33) and 2005-07-13 (1.06).
+  - warning: Unexpected jump of 70.1% in value between 2005-07-18 (0.77) and 2005-07-19 (1.31).
+  - warning: Unexpected jump of 54.4% in value between 2005-07-21 (0.9) and 2005-07-22 (0.41).
+  - warning: Unexpected jump of 112.5% in value between 2005-07-29 (0.16) and 2005-08-01 (0.34).
+  - warning: Unexpected jump of 135.0% in value between 2005-08-04 (0.2) and 2005-08-05 (0.47).
+  - warning: Unexpected jump of 51.1% in value between 2005-08-05 (0.47) and 2005-08-08 (0.71).
+  - warning: Unexpected jump of 111.3% in value between 2005-08-08 (0.71) and 2005-08-09 (1.5).
+  - warning: Unexpected jump of 138.4% in value between 2005-08-12 (0.86) and 2005-08-15 (2.05).
+  - warning: Unexpected jump of 86.8% in value between 2005-08-15 (2.05) and 2005-08-16 (3.83).
+  - warning: Unexpected jump of 55.6% in value between 2005-08-18 (2.34) and 2005-08-19 (1.04).
+  - warning: Unexpected jump of 61.1% in value between 2005-09-05 (0.36) and 2005-09-06 (0.58).
+  - warning: Unexpected jump of 55.3% in value between 2005-09-08 (0.38) and 2005-09-09 (0.17).
+  - warning: Unexpected jump of 52.9% in value between 2005-09-09 (0.17) and 2005-09-12 (0.26).
+  - warning: Unexpected jump of 58.3% in value between 2005-09-19 (0.24) and 2005-09-20 (0.38).
+  - warning: Unexpected jump of 75.0% in value between 2005-09-27 (0.16) and 2005-09-28 (0.28).
+  - warning: Unexpected jump of 50.0% in value between 2005-09-29 (0.22) and 2005-09-30 (0.33).
+  - warning: Unexpected jump of 61.9% in value between 2005-10-06 (0.21) and 2005-10-07 (0.08).
+  - warning: Unexpected jump of 425.0% in value between 2005-10-07 (0.08) and 2005-10-10 (0.42).
+  - warning: Unexpected jump of 62.0% in value between 2005-10-12 (0.5) and 2005-10-13 (0.81).
+  - warning: Unexpected jump of 54.3% in value between 2005-10-13 (0.81) and 2005-10-14 (1.25).
+  - warning: Unexpected jump of 72.8% in value between 2005-10-14 (1.25) and 2005-10-17 (2.16).
+  - warning: Unexpected jump of 89.9% in value between 2005-10-19 (2.88) and 2005-10-20 (5.47).
+  - warning: Unexpected jump of 77.7% in value between 2005-10-27 (1.48) and 2005-10-28 (2.63).
+  - warning: Unexpected jump of 64.2% in value between 2005-11-17 (0.53) and 2005-11-18 (0.87).
+  - warning: Unexpected jump of 79.6% in value between 2005-11-30 (1.03) and 2005-12-01 (1.85).
+  - warning: Unexpected jump of 113.5% in value between 2005-12-15 (0.37) and 2005-12-20 (0.79).
+  - warning: Unexpected jump of 100.0% in value between 2005-12-23 (0.5) and 2005-12-26 (1.0).
+  - warning: Unexpected jump of 54.0% in value between 2005-12-26 (1.0) and 2005-12-27 (1.54).
+  - warning: Unexpected jump of 120.1% in value between 2005-12-28 (1.59) and 2005-12-29 (3.5).
+  - warning: Unexpected jump of 62.6% in value between 2005-12-30 (4.22) and 2006-01-04 (1.58).
+  - warning: Unexpected jump of 60.9% in value between 2006-01-06 (0.46) and 2006-01-09 (0.74).
+  - warning: Unexpected jump of 65.2% in value between 2006-01-13 (0.92) and 2006-01-14 (1.52).
+  - warning: Unexpected jump of 89.5% in value between 2006-01-14 (1.52) and 2006-01-16 (2.88).
+  - warning: Unexpected jump of 94.1% in value between 2006-01-16 (2.88) and 2006-01-17 (5.59).
+  - warning: Unexpected jump of 54.2% in value between 2006-01-19 (2.27) and 2006-01-20 (1.04).
+  - warning: Unexpected jump of 112.2% in value between 2006-01-24 (1.39) and 2006-01-25 (2.95).
+  - warning: Unexpected jump of 69.6% in value between 2006-01-26 (4.15) and 2006-01-27 (1.26).
+  - warning: Unexpected jump of 56.6% in value between 2006-02-13 (0.76) and 2006-02-14 (1.19).
+  - warning: Unexpected jump of 56.4% in value between 2006-02-21 (0.55) and 2006-02-22 (0.24).
+  - warning: Unexpected jump of 64.7% in value between 2006-02-23 (0.34) and 2006-02-24 (0.56).
+  - warning: Unexpected jump of 77.0% in value between 2006-02-27 (0.61) and 2006-02-28 (0.14).
+  - warning: Unexpected jump of 75.0% in value between 2006-03-01 (0.2) and 2006-03-02 (0.05).
+  - warning: Unexpected jump of 80.0% in value between 2006-03-02 (0.05) and 2006-03-03 (0.09).
+  - warning: Unexpected jump of 288.9% in value between 2006-03-03 (0.09) and 2006-03-06 (0.35).
+  - warning: Unexpected jump of 53.3% in value between 2006-03-09 (0.15) and 2006-03-10 (0.07).
+  - warning: Unexpected jump of 171.4% in value between 2006-03-10 (0.07) and 2006-03-13 (0.19).
+  - warning: Unexpected jump of 63.2% in value between 2006-03-13 (0.19) and 2006-03-14 (0.07).
+  - warning: Unexpected jump of 185.7% in value between 2006-03-14 (0.07) and 2006-03-15 (0.2).
+  - warning: Unexpected jump of 70.0% in value between 2006-03-15 (0.2) and 2006-03-16 (0.06).
+  - warning: Unexpected jump of 466.7% in value between 2006-03-16 (0.06) and 2006-03-17 (0.34).
+  - warning: Unexpected jump of 79.4% in value between 2006-03-17 (0.34) and 2006-03-20 (0.07).
+  - warning: Unexpected jump of 171.4% in value between 2006-03-21 (0.07) and 2006-03-23 (0.19).
+  - warning: Unexpected jump of 211.8% in value between 2006-03-30 (0.17) and 2006-03-31 (0.53).
+  - warning: Unexpected jump of 55.6% in value between 2006-04-03 (0.27) and 2006-04-04 (0.12).
+  - warning: Unexpected jump of 91.7% in value between 2006-04-04 (0.12) and 2006-04-05 (0.23).
+  - warning: Unexpected jump of 108.7% in value between 2006-04-06 (0.23) and 2006-04-07 (0.48).
+  - warning: Unexpected jump of 108.6% in value between 2006-04-17 (0.35) and 2006-04-18 (0.73).
+  - warning: Unexpected jump of 97.5% in value between 2006-04-20 (1.2) and 2006-04-21 (2.37).
+  - warning: Unexpected jump of 50.2% in value between 2006-04-21 (2.37) and 2006-04-24 (1.18).
+  - warning: Unexpected jump of 80.6% in value between 2006-05-22 (0.62) and 2006-05-23 (1.12).
+  - warning: Unexpected jump of 95.5% in value between 2006-05-29 (0.66) and 2006-05-30 (1.29).
+  - warning: Unexpected jump of 60.2% in value between 2006-05-31 (0.98) and 2006-06-01 (0.39).
+  - warning: Unexpected jump of 294.9% in value between 2006-06-01 (0.39) and 2006-06-02 (1.54).
+  - warning: Unexpected jump of 68.4% in value between 2006-06-06 (2.47) and 2006-06-07 (0.78).
+  - warning: Unexpected jump of 57.7% in value between 2006-06-07 (0.78) and 2006-06-08 (0.33).
+  - warning: Unexpected jump of 109.1% in value between 2006-06-08 (0.33) and 2006-06-09 (0.69).
+  - warning: Unexpected jump of 273.9% in value between 2006-06-09 (0.69) and 2006-06-12 (2.58).
+  - warning: Unexpected jump of 54.9% in value between 2006-06-13 (2.37) and 2006-06-14 (1.07).
+  - warning: Unexpected jump of 195.1% in value between 2006-06-15 (0.82) and 2006-06-16 (2.42).
+  - warning: Unexpected jump of 69.9% in value between 2006-06-21 (1.03) and 2006-06-22 (1.75).
+  - warning: Unexpected jump of 68.0% in value between 2006-06-22 (1.75) and 2006-06-23 (0.56).
+  - warning: Unexpected jump of 69.2% in value between 2006-06-30 (0.13) and 2006-07-03 (0.22).
+  - warning: Unexpected jump of 122.7% in value between 2006-07-03 (0.22) and 2006-07-04 (0.49).
+  - warning: Unexpected jump of 61.4% in value between 2006-07-06 (0.7) and 2006-07-07 (0.27).
+  - warning: Unexpected jump of 59.5% in value between 2006-07-13 (0.42) and 2006-07-14 (0.17).
+  - warning: Unexpected jump of 100.0% in value between 2006-07-14 (0.17) and 2006-07-17 (0.34).
+  - warning: Unexpected jump of 202.3% in value between 2006-07-18 (0.44) and 2006-07-19 (1.33).
+  - warning: Unexpected jump of 157.9% in value between 2006-07-19 (1.33) and 2006-07-20 (3.43).
+  - warning: Unexpected jump of 78.7% in value between 2006-07-20 (3.43) and 2006-07-21 (0.73).
+  - warning: Unexpected jump of 87.7% in value between 2006-07-21 (0.73) and 2006-07-24 (1.37).
+  - warning: Unexpected jump of 100.7% in value between 2006-07-26 (1.47) and 2006-07-27 (2.95).
+  - warning: Unexpected jump of 71.5% in value between 2006-07-27 (2.95) and 2006-07-28 (0.84).
+  - warning: Unexpected jump of 59.2% in value between 2006-08-16 (2.55) and 2006-08-17 (1.04).
+  - warning: Unexpected jump of 53.6% in value between 2006-08-18 (0.69) and 2006-08-21 (1.06).
+  - warning: Unexpected jump of 50.9% in value between 2006-08-21 (1.06) and 2006-08-22 (1.6).
+  - warning: Unexpected jump of 120.0% in value between 2006-08-22 (1.6) and 2006-08-23 (3.52).
+  - warning: Unexpected jump of 50.2% in value between 2006-08-28 (2.87) and 2006-08-29 (1.43).
+  - warning: Unexpected jump of 106.8% in value between 2006-09-01 (1.9) and 2006-09-04 (3.93).
+  - warning: Unexpected jump of 156.9% in value between 2006-10-05 (1.67) and 2006-10-06 (4.29).
+  - warning: Unexpected jump of 58.9% in value between 2006-10-10 (4.53) and 2006-10-11 (1.86).
+  - warning: Unexpected jump of 93.5% in value between 2006-10-12 (2.32) and 2006-10-13 (4.49).
+  - warning: Unexpected jump of 56.8% in value between 2006-10-23 (1.99) and 2006-10-24 (0.86).
+  - warning: Unexpected jump of 159.3% in value between 2006-10-24 (0.86) and 2006-10-26 (2.23).
+  - warning: Unexpected jump of 52.9% in value between 2006-10-26 (2.23) and 2006-10-27 (3.41).
+  - warning: Unexpected jump of 169.6% in value between 2006-11-02 (0.92) and 2006-11-03 (2.48).
+  - warning: Unexpected jump of 56.9% in value between 2006-11-03 (2.48) and 2006-11-06 (3.89).
+  - warning: Unexpected jump of 82.1% in value between 2006-11-20 (2.35) and 2006-11-21 (0.42).
+  - warning: Unexpected jump of 345.2% in value between 2006-11-21 (0.42) and 2006-11-22 (1.87).
+  - warning: Unexpected jump of 66.5% in value between 2006-12-14 (2.63) and 2006-12-15 (4.38).
+  - warning: Unexpected jump of 117.2% in value between 2006-12-20 (2.27) and 2006-12-21 (4.93).
+  - warning: Unexpected jump of 75.3% in value between 2006-12-21 (4.93) and 2006-12-22 (1.22).
+  - warning: Unexpected jump of 91.0% in value between 2006-12-22 (1.22) and 2006-12-25 (2.33).
+  - warning: Unexpected jump of 56.6% in value between 2006-12-27 (1.22) and 2006-12-28 (0.53).
+  - warning: Unexpected jump of 135.8% in value between 2006-12-28 (0.53) and 2006-12-29 (1.25).
+  - warning: Unexpected jump of 74.0% in value between 2007-01-04 (1.31) and 2007-01-05 (2.28).
+  - warning: Unexpected jump of 71.9% in value between 2007-01-05 (2.28) and 2007-01-08 (0.64).
+  - warning: Unexpected jump of 242.4% in value between 2007-01-11 (0.33) and 2007-01-12 (1.13).
+  - warning: Unexpected jump of 99.1% in value between 2007-01-12 (1.13) and 2007-01-15 (2.25).
+  - warning: Unexpected jump of 82.3% in value between 2007-01-17 (3.11) and 2007-01-18 (0.55).
+  - warning: Unexpected jump of 178.2% in value between 2007-01-18 (0.55) and 2007-01-19 (1.53).
+  - warning: Unexpected jump of 77.3% in value between 2007-01-24 (0.75) and 2007-01-25 (0.17).
+  - warning: Unexpected jump of 1064.7% in value between 2007-01-25 (0.17) and 2007-01-26 (1.98).
+  - warning: Unexpected jump of 81.7% in value between 2007-01-31 (0.82) and 2007-02-01 (1.49).
+  - warning: Unexpected jump of 61.3% in value between 2007-02-08 (1.81) and 2007-02-09 (2.92).
+  - warning: Unexpected jump of 58.1% in value between 2007-02-13 (2.1) and 2007-02-14 (0.88).
+  - warning: Unexpected jump of 81.8% in value between 2007-02-14 (0.88) and 2007-02-15 (1.6).
+  - warning: Unexpected jump of 215.6% in value between 2007-02-15 (1.6) and 2007-02-16 (5.05).
+  - warning: Unexpected jump of 79.0% in value between 2007-02-28 (1.19) and 2007-03-01 (2.13).
+  - warning: Unexpected jump of 51.5% in value between 2007-03-07 (2.27) and 2007-03-11 (1.1).
+  - warning: Unexpected jump of 166.1% in value between 2007-03-14 (1.15) and 2007-03-15 (3.06).
+  - warning: Unexpected jump of 75.2% in value between 2007-03-16 (3.87) and 2007-03-19 (0.96).
+  - warning: Unexpected jump of 64.6% in value between 2007-03-19 (0.96) and 2007-03-20 (1.58).
+  - warning: Unexpected jump of 71.2% in value between 2007-03-21 (1.98) and 2007-03-25 (0.57).
+  - warning: Unexpected jump of 404.4% in value between 2007-03-28 (0.45) and 2007-03-29 (2.27).
+  - warning: Unexpected jump of 56.1% in value between 2007-04-06 (1.96) and 2007-04-09 (0.86).
+  - warning: Unexpected jump of 109.3% in value between 2007-04-09 (0.86) and 2007-04-10 (1.8).
+  - warning: Unexpected jump of 143.4% in value between 2007-04-11 (1.89) and 2007-04-12 (4.6).
+  - warning: Unexpected jump of 60.5% in value between 2007-04-23 (5.64) and 2007-04-24 (2.23).
+  - warning: Unexpected jump of 214.2% in value between 2007-04-25 (1.62) and 2007-04-26 (5.09).
+  - warning: Unexpected jump of 69.0% in value between 2007-05-08 (1.26) and 2007-05-10 (2.13).
+  - warning: Unexpected jump of 104.2% in value between 2007-05-10 (2.13) and 2007-05-11 (4.35).
+  - warning: Unexpected jump of 56.0% in value between 2007-05-28 (1.34) and 2007-05-29 (2.09).
+  - warning: Unexpected jump of 83.5% in value between 2007-06-07 (2.24) and 2007-06-08 (4.11).
+  - warning: Unexpected jump of 57.8% in value between 2007-06-28 (4.41) and 2007-06-29 (6.96).
+  - warning: Unexpected jump of 115.4% in value between 2007-08-09 (4.36) and 2007-08-10 (9.39).
+  - warning: Unexpected jump of 53.0% in value between 2007-08-15 (6.4) and 2007-08-16 (9.79).
+  - warning: Unexpected jump of 63.3% in value between 2007-09-20 (9.94) and 2007-09-21 (3.65).
+  - warning: Unexpected jump of 120.2% in value between 2007-10-02 (3.72) and 2007-10-03 (8.19).
+  - warning: Unexpected jump of 63.8% in value between 2007-10-11 (5.42) and 2007-10-12 (1.96).
+  - warning: Unexpected jump of 138.5% in value between 2007-10-17 (0.78) and 2007-10-18 (1.86).
+  - warning: Unexpected jump of 239.8% in value between 2007-10-18 (1.86) and 2007-10-19 (6.32).
+  - warning: Unexpected jump of 107.6% in value between 2007-11-02 (1.05) and 2007-11-05 (2.18).
+  - warning: Unexpected jump of 113.8% in value between 2007-11-05 (2.18) and 2007-11-06 (4.66).
+  - warning: Unexpected jump of 56.1% in value between 2007-11-15 (4.26) and 2007-11-16 (1.87).
+  - warning: Unexpected jump of 189.7% in value between 2007-11-19 (2.24) and 2007-11-20 (6.49).
+  - warning: Unexpected jump of 58.8% in value between 2007-11-21 (3.69) and 2007-11-22 (1.52).
+  - warning: Unexpected jump of 149.4% in value between 2007-11-27 (0.87) and 2007-11-28 (2.17).
+  - warning: Unexpected jump of 91.7% in value between 2007-12-11 (1.2) and 2007-12-12 (2.3).
+  - warning: Unexpected jump of 53.0% in value between 2007-12-12 (2.3) and 2007-12-13 (3.52).
+  - warning: Unexpected jump of 52.3% in value between 2007-12-13 (3.52) and 2007-12-14 (5.36).
+  - warning: Unexpected jump of 65.5% in value between 2007-12-19 (7.46) and 2007-12-21 (2.57).
+  - warning: Unexpected jump of 224.7% in value between 2007-12-27 (0.77) and 2007-12-28 (2.5).
+  - warning: Unexpected jump of 218.4% in value between 2007-12-28 (2.5) and 2007-12-29 (7.96).
+  - warning: Unexpected jump of 102.5% in value between 2008-01-16 (2.85) and 2008-01-17 (5.77).
+  - warning: Unexpected jump of 149.4% in value between 2008-01-18 (4.15) and 2008-01-21 (10.35).
+  - warning: Unexpected jump of 71.5% in value between 2008-01-23 (4.25) and 2008-01-24 (1.21).
+  - warning: Unexpected jump of 235.9% in value between 2008-01-29 (0.64) and 2008-01-30 (2.15).
+  - warning: Unexpected jump of 53.6% in value between 2008-01-31 (2.39) and 2008-02-01 (1.11).
+  - warning: Unexpected jump of 83.8% in value between 2008-02-01 (1.11) and 2008-02-04 (2.04).
+  - warning: Unexpected jump of 53.6% in value between 2008-02-06 (1.1) and 2008-02-07 (0.51).
+  - warning: Unexpected jump of 55.8% in value between 2008-02-11 (0.43) and 2008-02-12 (0.19).
+  - warning: Unexpected jump of 1217.6% in value between 2008-02-13 (0.17) and 2008-02-14 (2.24).
+  - warning: Unexpected jump of 71.5% in value between 2008-02-21 (6.5) and 2008-02-22 (1.85).
+  - warning: Unexpected jump of 52.6% in value between 2008-02-25 (1.35) and 2008-02-26 (0.64).
+  - warning: Unexpected jump of 68.8% in value between 2008-02-26 (0.64) and 2008-02-27 (0.2).
+  - warning: Unexpected jump of 1265.0% in value between 2008-02-27 (0.2) and 2008-02-28 (2.73).
+  - warning: Unexpected jump of 52.4% in value between 2008-02-29 (1.45) and 2008-03-03 (0.69).
+  - warning: Unexpected jump of 71.0% in value between 2008-03-03 (0.69) and 2008-03-04 (0.2).
+  - warning: Unexpected jump of 450.0% in value between 2008-03-05 (0.1) and 2008-03-06 (0.55).
+  - warning: Unexpected jump of 318.2% in value between 2008-03-06 (0.55) and 2008-03-07 (2.3).
+  - warning: Unexpected jump of 93.7% in value between 2008-03-19 (2.05) and 2008-03-20 (3.97).
+  - warning: Unexpected jump of 60.3% in value between 2008-03-21 (3.98) and 2008-03-25 (1.58).
+  - warning: Unexpected jump of 426.5% in value between 2008-04-03 (0.34) and 2008-04-04 (1.79).
+  - warning: Unexpected jump of 57.9% in value between 2008-04-09 (1.33) and 2008-04-10 (2.1).
+  - warning: Unexpected jump of 534.6% in value between 2008-04-11 (1.53) and 2008-04-14 (9.71).
+  - warning: Unexpected jump of 192.2% in value between 2008-04-18 (3.72) and 2008-04-21 (10.87).
+  - warning: Unexpected jump of 60.6% in value between 2008-04-23 (9.7) and 2008-04-24 (3.82).
+  - warning: Unexpected jump of 69.3% in value between 2008-04-25 (3.55) and 2008-04-28 (6.01).
+  - warning: Unexpected jump of 67.3% in value between 2008-04-30 (2.97) and 2008-05-04 (0.97).
+  - warning: Unexpected jump of 112.9% in value between 2008-05-08 (0.31) and 2008-05-12 (0.66).
+  - warning: Unexpected jump of 54.5% in value between 2008-05-15 (0.33) and 2008-05-16 (0.51).
+  - warning: Unexpected jump of 54.9% in value between 2008-05-16 (0.51) and 2008-05-19 (0.23).
+  - warning: Unexpected jump of 133.3% in value between 2008-05-26 (0.12) and 2008-05-27 (0.28).
+  - warning: Unexpected jump of 90.5% in value between 2008-05-28 (0.42) and 2008-05-29 (0.8).
+  - warning: Unexpected jump of 154.4% in value between 2008-06-04 (0.57) and 2008-06-05 (1.45).
+  - warning: Unexpected jump of 50.7% in value between 2008-06-06 (0.73) and 2008-06-09 (1.1).
+  - warning: Unexpected jump of 101.9% in value between 2008-06-16 (0.52) and 2008-06-18 (1.05).
+  - warning: Unexpected jump of 133.3% in value between 2008-06-18 (1.05) and 2008-06-19 (2.45).
+  - warning: Unexpected jump of 202.8% in value between 2008-07-02 (1.09) and 2008-07-03 (3.3).
+  - warning: Unexpected jump of 55.7% in value between 2008-07-04 (4.24) and 2008-07-08 (1.88).
+  - warning: Unexpected jump of 82.8% in value between 2008-07-10 (1.16) and 2008-07-11 (2.12).
+  - warning: Unexpected jump of 134.9% in value between 2008-07-11 (2.12) and 2008-07-14 (4.98).
+  - warning: Unexpected jump of 147.1% in value between 2008-07-17 (2.04) and 2008-07-18 (5.04).
+  - warning: Unexpected jump of 88.4% in value between 2008-07-25 (2.24) and 2008-07-28 (4.22).
+  - warning: Unexpected jump of 65.4% in value between 2008-07-30 (1.59) and 2008-07-31 (2.63).
+  - warning: Unexpected jump of 165.6% in value between 2008-08-08 (1.89) and 2008-08-11 (5.02).
+  - warning: Unexpected jump of 52.4% in value between 2008-08-12 (4.5) and 2008-08-13 (2.14).
+  - warning: Unexpected jump of 97.7% in value between 2008-08-13 (2.14) and 2008-08-14 (4.23).
+  - warning: Unexpected jump of 86.3% in value between 2008-09-04 (1.97) and 2008-09-05 (3.67).
+  - warning: Unexpected jump of 76.2% in value between 2008-09-17 (2.48) and 2008-09-18 (4.37).
+  - warning: Unexpected jump of 59.9% in value between 2008-10-07 (2.32) and 2008-10-08 (3.71).
+  - warning: Unexpected jump of 170.7% in value between 2008-10-16 (1.81) and 2008-10-17 (4.9).
+  - warning: Unexpected jump of 53.4% in value between 2008-10-20 (6.57) and 2008-10-21 (3.06).
+  - warning: Unexpected jump of 61.8% in value between 2008-11-04 (2.2) and 2008-11-05 (3.56).
+  - warning: Unexpected jump of 116.4% in value between 2008-11-13 (3.23) and 2008-11-14 (6.99).
+  - warning: Unexpected jump of 69.0% in value between 2008-11-19 (4.32) and 2008-11-20 (7.3).
+  - warning: Unexpected jump of 53.8% in value between 2008-11-20 (7.3) and 2008-11-21 (11.23).
+  - warning: Unexpected jump of 68.5% in value between 2008-11-26 (8.4) and 2008-11-27 (2.65).
+  - warning: Unexpected jump of 149.4% in value between 2008-11-28 (2.39) and 2008-12-01 (5.96).
+  - warning: Unexpected jump of 60.7% in value between 2008-12-01 (5.96) and 2008-12-02 (9.58).
+  - warning: Unexpected jump of 97.9% in value between 2008-12-10 (3.88) and 2008-12-11 (7.68).
+  - warning: Unexpected jump of 156.8% in value between 2008-12-15 (2.66) and 2008-12-18 (6.83).
+  - warning: Unexpected jump of 51.7% in value between 2008-12-18 (6.83) and 2008-12-19 (10.36).
+  - warning: Unexpected jump of 68.2% in value between 2008-12-23 (7.27) and 2008-12-24 (2.31).
+  - warning: Unexpected jump of 146.0% in value between 2008-12-26 (2.74) and 2008-12-29 (6.74).
+  - warning: Unexpected jump of 67.1% in value between 2009-02-03 (11.86) and 2009-02-04 (19.82).
+  - warning: Unexpected jump of 54.9% in value between 2009-02-04 (19.82) and 2009-02-05 (8.94).
+  - warning: Unexpected jump of 105.3% in value between 2009-02-10 (2.46) and 2009-02-11 (5.05).
+  - warning: Unexpected jump of 73.3% in value between 2009-02-17 (6.56) and 2009-02-18 (11.37).
+  - warning: Unexpected jump of 66.7% in value between 2009-02-19 (8.96) and 2009-02-20 (2.98).
+  - warning: Unexpected jump of 51.8% in value between 2009-02-25 (2.24) and 2009-02-26 (3.4).
+  - warning: Unexpected jump of 85.6% in value between 2009-03-16 (1.32) and 2009-03-17 (2.45).
+  - warning: Unexpected jump of 54.8% in value between 2009-03-27 (0.42) and 2009-03-30 (0.65).
+  - warning: Unexpected jump of 110.8% in value between 2009-03-30 (0.65) and 2009-03-31 (1.37).
+  - warning: Unexpected jump of 105.6% in value between 2009-04-06 (0.36) and 2009-04-07 (0.74).
+  - warning: Unexpected jump of 53.1% in value between 2009-04-09 (0.96) and 2009-04-10 (0.45).
+  - warning: Unexpected jump of 68.9% in value between 2009-04-10 (0.45) and 2009-04-13 (0.76).
+  - warning: Unexpected jump of 81.6% in value between 2009-04-13 (0.76) and 2009-04-14 (1.38).
+  - warning: Unexpected jump of 96.7% in value between 2009-04-22 (0.3) and 2009-04-23 (0.59).
+  - warning: Unexpected jump of 135.7% in value between 2009-05-05 (0.28) and 2009-05-06 (0.66).
+  - warning: Unexpected jump of 90.4% in value between 2009-05-15 (0.52) and 2009-05-18 (0.99).
+  - warning: Unexpected jump of 250.0% in value between 2009-05-22 (0.6) and 2009-05-25 (2.1).
+  - warning: Unexpected jump of 169.6% in value between 2009-05-29 (0.46) and 2009-06-01 (1.24).
+  - warning: Unexpected jump of 77.9% in value between 2009-06-08 (0.68) and 2009-06-09 (1.21).
+  - warning: Unexpected jump of 54.5% in value between 2009-06-15 (1.67) and 2009-06-16 (2.58).
+  - warning: Unexpected jump of 51.3% in value between 2009-06-19 (1.19) and 2009-06-22 (1.8).
+  - warning: Unexpected jump of 82.5% in value between 2009-07-03 (0.57) and 2009-07-07 (1.04).
+  - warning: Unexpected jump of 111.6% in value between 2009-07-14 (0.95) and 2009-07-15 (2.01).
+  - warning: Unexpected jump of 50.6% in value between 2009-07-23 (0.83) and 2009-07-24 (0.41).
+  - warning: Unexpected jump of 71.4% in value between 2009-08-24 (0.49) and 2009-08-25 (0.84).
+  - warning: Unexpected jump of 54.2% in value between 2009-09-18 (0.48) and 2009-09-21 (0.74).
+  - warning: Unexpected jump of 255.6% in value between 2009-09-25 (0.45) and 2009-09-28 (1.6).
+  - warning: Unexpected jump of 62.5% in value between 2009-09-28 (1.6) and 2009-09-29 (0.6).
+  - warning: Unexpected jump of 106.2% in value between 2009-11-10 (0.16) and 2009-11-11 (0.33).
+  - warning: Unexpected jump of 57.1% in value between 2009-11-12 (0.49) and 2009-11-13 (0.21).
+  - warning: Unexpected jump of 70.0% in value between 2009-11-17 (0.2) and 2009-11-18 (0.34).
+  - warning: Unexpected jump of 73.5% in value between 2009-11-18 (0.34) and 2009-11-19 (0.59).
+  - warning: Unexpected jump of 63.0% in value between 2009-11-24 (0.46) and 2009-11-25 (0.75).
+  - warning: Unexpected jump of 75.0% in value between 2009-12-03 (0.12) and 2009-12-04 (0.21).
+  - warning: Unexpected jump of 311.1% in value between 2009-12-10 (0.18) and 2009-12-11 (0.74).
+  - warning: Unexpected jump of 59.5% in value between 2009-12-11 (0.74) and 2009-12-14 (0.3).
+  - warning: Unexpected jump of 346.2% in value between 2009-12-23 (0.13) and 2009-12-24 (0.58).
+  - warning: Unexpected jump of 70.7% in value between 2009-12-25 (0.75) and 2009-12-28 (0.22).
+  - warning: Unexpected jump of 156.2% in value between 2009-12-30 (0.16) and 2009-12-31 (0.41).
+  - warning: Unexpected jump of 53.7% in value between 2009-12-31 (0.41) and 2010-01-05 (0.19).
+  - warning: Unexpected jump of 85.7% in value between 2010-01-13 (0.14) and 2010-01-14 (0.26).
+  - warning: Unexpected jump of 190.0% in value between 2010-01-27 (0.1) and 2010-01-28 (0.29).
+  - warning: Unexpected jump of 55.2% in value between 2010-01-28 (0.29) and 2010-01-29 (0.13).
+  - warning: Unexpected jump of 54.5% in value between 2010-02-17 (0.11) and 2010-02-18 (0.17).
+  - warning: Unexpected jump of 175.0% in value between 2010-02-24 (0.04) and 2010-02-25 (0.11).
+  - warning: Unexpected jump of 54.5% in value between 2010-02-25 (0.11) and 2010-02-26 (0.05).
+  - warning: Unexpected jump of 140.0% in value between 2010-02-26 (0.05) and 2010-03-01 (0.12).
+  - warning: Unexpected jump of 54.5% in value between 2010-03-25 (0.11) and 2010-03-26 (0.05).
+  - warning: Unexpected jump of 75.0% in value between 2010-04-01 (0.08) and 2010-04-02 (0.14).
+  - warning: Unexpected jump of 87.5% in value between 2010-04-05 (0.16) and 2010-04-06 (0.3).
+  - warning: Unexpected jump of 69.2% in value between 2010-04-27 (0.13) and 2010-04-28 (0.22).
+  - warning: Unexpected jump of 50.0% in value between 2010-05-05 (0.18) and 2010-05-06 (0.27).
+  - warning: Unexpected jump of 103.7% in value between 2010-05-20 (0.27) and 2010-05-21 (0.55).
+  - warning: Unexpected jump of 56.4% in value between 2010-05-21 (0.55) and 2010-05-24 (0.86).
+  - warning: Unexpected jump of 67.7% in value between 2010-05-25 (0.93) and 2010-05-26 (0.3).
+  - warning: Unexpected jump of 61.9% in value between 2010-06-02 (0.21) and 2010-06-03 (0.34).
+  - warning: Unexpected jump of 66.7% in value between 2010-06-23 (0.21) and 2010-06-24 (0.35).
+  - warning: Unexpected jump of 126.3% in value between 2010-06-29 (0.19) and 2010-06-30 (0.43).
+  - warning: Unexpected jump of 81.8% in value between 2010-07-16 (0.11) and 2010-07-19 (0.2).
+  - warning: Unexpected jump of 192.3% in value between 2010-07-22 (0.26) and 2010-07-23 (0.76).
+  - warning: Unexpected jump of 63.2% in value between 2010-07-23 (0.76) and 2010-07-26 (0.28).
+  - warning: Unexpected jump of 59.1% in value between 2010-07-27 (0.22) and 2010-07-28 (0.35).
+  - warning: Unexpected jump of 1263.6% in value between 2010-08-23 (0.11) and 2010-08-24 (1.5).
+  - warning: Unexpected jump of 87.3% in value between 2010-08-24 (1.5) and 2010-08-25 (2.81).
+  - warning: Unexpected jump of 89.7% in value between 2010-08-26 (2.03) and 2010-08-27 (0.21).
+  - warning: Unexpected jump of 56.2% in value between 2010-08-31 (0.16) and 2010-09-01 (0.25).
+  - warning: Unexpected jump of 68.2% in value between 2010-09-06 (0.22) and 2010-09-07 (0.37).
+  - warning: Unexpected jump of 107.7% in value between 2010-09-23 (0.13) and 2010-09-24 (0.27).
+  - warning: Unexpected jump of 63.2% in value between 2010-09-27 (0.19) and 2010-09-28 (0.31).
+  - warning: Unexpected jump of 62.9% in value between 2010-10-04 (0.35) and 2010-10-05 (0.57).
+  - warning: Unexpected jump of 66.7% in value between 2010-10-20 (0.21) and 2010-10-21 (0.35).
+  - warning: Unexpected jump of 51.4% in value between 2010-10-21 (0.35) and 2010-10-22 (0.17).
+  - warning: Unexpected jump of 111.8% in value between 2010-11-22 (0.17) and 2010-11-24 (0.36).
+  - warning: Unexpected jump of 54.2% in value between 2010-12-29 (0.24) and 2010-12-30 (0.11).
+  - warning: Unexpected jump of 54.5% in value between 2010-12-30 (0.11) and 2010-12-31 (0.17).
+  - warning: Unexpected jump of 52.9% in value between 2010-12-31 (0.17) and 2011-01-05 (0.26).
+  - warning: Unexpected jump of 54.5% in value between 2011-01-20 (0.22) and 2011-01-21 (0.1).
+  - warning: Unexpected jump of 130.0% in value between 2011-01-21 (0.1) and 2011-01-24 (0.23).
+  - warning: Unexpected jump of 90.0% in value between 2011-02-15 (0.1) and 2011-02-16 (0.19).
+  - warning: Unexpected jump of 73.7% in value between 2011-02-16 (0.19) and 2011-02-17 (0.33).
+  - warning: Unexpected jump of 161.5% in value between 2011-02-23 (0.13) and 2011-02-24 (0.34).
+  - warning: Unexpected jump of 58.8% in value between 2011-02-24 (0.34) and 2011-02-25 (0.14).
+  - warning: Unexpected jump of 66.7% in value between 2011-03-05 (0.12) and 2011-03-09 (0.2).
+  - warning: Unexpected jump of 63.6% in value between 2011-03-18 (0.33) and 2011-03-24 (0.12).
+  - warning: Unexpected jump of 257.1% in value between 2011-03-28 (0.07) and 2011-03-29 (0.25).
+  - warning: Unexpected jump of 53.8% in value between 2011-03-30 (0.13) and 2011-03-31 (0.06).
+  - warning: Unexpected jump of 100.0% in value between 2011-04-01 (0.09) and 2011-04-04 (0.18).
+  - warning: Unexpected jump of 72.2% in value between 2011-04-04 (0.18) and 2011-04-05 (0.31).
+  - warning: Unexpected jump of 54.8% in value between 2011-04-05 (0.31) and 2011-04-06 (0.14).
+  - warning: Unexpected jump of 75.0% in value between 2011-04-22 (0.08) and 2011-04-25 (0.14).
+  - warning: Unexpected jump of 133.3% in value between 2011-04-26 (0.09) and 2011-04-27 (0.21).
+  - warning: Unexpected jump of 61.9% in value between 2011-04-27 (0.21) and 2011-04-28 (0.08).
+  - warning: Unexpected jump of 116.7% in value between 2011-05-06 (0.06) and 2011-05-10 (0.13).
+  - warning: Unexpected jump of 300.0% in value between 2011-05-13 (0.08) and 2011-05-16 (0.32).
+  - warning: Unexpected jump of 140.0% in value between 2011-05-20 (0.15) and 2011-05-23 (0.36).
+  - warning: Unexpected jump of 50.0% in value between 2011-05-23 (0.36) and 2011-05-24 (0.54).
+  - warning: Unexpected jump of 188.9% in value between 2011-05-24 (0.54) and 2011-05-25 (1.56).
+  - warning: Unexpected jump of 92.7% in value between 2011-05-27 (1.77) and 2011-05-30 (0.13).
+  - warning: Unexpected jump of 100.0% in value between 2011-06-07 (0.09) and 2011-06-08 (0.18).
+  - warning: Unexpected jump of 105.9% in value between 2011-06-14 (0.17) and 2011-06-15 (0.35).
+  - warning: Unexpected jump of 100.0% in value between 2011-06-27 (0.12) and 2011-06-28 (0.24).
+  - warning: Unexpected jump of 54.2% in value between 2011-06-28 (0.24) and 2011-06-29 (0.11).
+  - warning: Unexpected jump of 147.4% in value between 2011-07-04 (0.19) and 2011-07-05 (0.47).
+  - warning: Unexpected jump of 61.7% in value between 2011-07-05 (0.47) and 2011-07-07 (0.18).
+  - warning: Unexpected jump of 92.9% in value between 2011-07-19 (0.14) and 2011-07-20 (0.27).
+  - warning: Unexpected jump of 53.3% in value between 2011-07-27 (0.15) and 2011-07-28 (0.07).
+  - warning: Unexpected jump of 214.3% in value between 2011-07-28 (0.07) and 2011-07-29 (0.22).
+  - warning: Unexpected jump of 100.0% in value between 2011-08-01 (0.13) and 2011-08-02 (0.26).
+  - warning: Unexpected jump of 126.7% in value between 2011-08-03 (0.15) and 2011-08-04 (0.34).
+  - warning: Unexpected jump of 155.0% in value between 2011-08-05 (0.2) and 2011-08-08 (0.51).
+  - warning: Unexpected jump of 364.7% in value between 2011-08-08 (0.51) and 2011-08-09 (2.37).
+  - warning: Unexpected jump of 97.9% in value between 2011-08-09 (2.37) and 2011-08-10 (4.69).
+  - warning: Unexpected jump of 73.3% in value between 2011-08-11 (2.7) and 2011-08-12 (0.72).
+  - warning: Unexpected jump of 55.6% in value between 2011-08-12 (0.72) and 2011-08-15 (0.32).
+  - warning: Unexpected jump of 121.9% in value between 2011-08-15 (0.32) and 2011-08-16 (0.71).
+  - warning: Unexpected jump of 168.9% in value between 2011-08-23 (0.45) and 2011-08-24 (1.21).
+  - warning: Unexpected jump of 72.0% in value between 2011-08-26 (0.82) and 2011-08-27 (0.23).
+  - warning: Unexpected jump of 73.9% in value between 2011-08-27 (0.23) and 2011-08-31 (0.4).
+  - warning: Unexpected jump of 70.0% in value between 2011-09-01 (0.4) and 2011-09-02 (0.12).
+  - warning: Unexpected jump of 66.7% in value between 2011-09-06 (0.12) and 2011-09-07 (0.2).
+  - warning: Unexpected jump of 59.3% in value between 2011-09-08 (0.27) and 2011-09-09 (0.11).
+  - warning: Unexpected jump of 270.0% in value between 2011-09-21 (0.1) and 2011-09-22 (0.37).
+  - warning: Unexpected jump of 294.6% in value between 2011-09-22 (0.37) and 2011-09-23 (1.46).
+  - warning: Unexpected jump of 75.3% in value between 2011-09-23 (1.46) and 2011-09-26 (2.56).
+  - warning: Unexpected jump of 73.5% in value between 2011-09-27 (1.66) and 2011-09-28 (0.44).
+  - warning: Unexpected jump of 72.7% in value between 2011-09-28 (0.44) and 2011-09-29 (0.12).
+  - warning: Unexpected jump of 266.7% in value between 2011-09-29 (0.12) and 2011-09-30 (0.44).
+  - warning: Unexpected jump of 70.5% in value between 2011-09-30 (0.44) and 2011-10-03 (0.75).
+  - warning: Unexpected jump of 169.0% in value between 2011-10-04 (1.0) and 2011-10-05 (2.69).
+  - warning: Unexpected jump of 71.8% in value between 2011-10-07 (2.66) and 2011-10-10 (0.75).
+  - warning: Unexpected jump of 136.5% in value between 2011-10-12 (0.74) and 2011-10-13 (1.75).
+  - warning: Unexpected jump of 59.9% in value between 2011-10-19 (1.77) and 2011-10-20 (0.71).
+  - warning: Unexpected jump of 64.7% in value between 2011-10-24 (0.34) and 2011-10-25 (0.12).
+  - warning: Unexpected jump of 458.3% in value between 2011-10-26 (0.12) and 2011-10-27 (0.67).
+  - warning: Unexpected jump of 88.1% in value between 2011-10-27 (0.67) and 2011-10-28 (0.08).
+  - warning: Unexpected jump of 212.5% in value between 2011-10-28 (0.08) and 2011-10-31 (0.25).
+  - warning: Unexpected jump of 58.3% in value between 2011-11-02 (0.12) and 2011-11-03 (0.19).
+  - warning: Unexpected jump of 66.7% in value between 2011-11-07 (0.06) and 2011-11-08 (0.1).
+  - warning: Unexpected jump of 88.9% in value between 2011-11-09 (0.09) and 2011-11-10 (0.17).
+  - warning: Unexpected jump of 58.8% in value between 2011-11-10 (0.17) and 2011-11-11 (0.07).
+  - warning: Unexpected jump of 66.7% in value between 2011-11-14 (0.06) and 2011-11-15 (0.1).
+  - warning: Unexpected jump of 1063.6% in value between 2011-11-21 (0.11) and 2011-11-22 (1.28).
+  - warning: Unexpected jump of 420.5% in value between 2011-11-23 (1.32) and 2011-11-24 (6.87).
+  - warning: Unexpected jump of 72.0% in value between 2011-11-28 (3.53) and 2011-11-29 (0.99).
+  - warning: Unexpected jump of 90.9% in value between 2011-11-29 (0.99) and 2011-11-30 (0.09).
+  - warning: Unexpected jump of 266.7% in value between 2011-12-09 (0.03) and 2011-12-12 (0.11).
+  - warning: Unexpected jump of 816.7% in value between 2011-12-13 (0.06) and 2011-12-14 (0.55).
+  - warning: Unexpected jump of 76.4% in value between 2011-12-14 (0.55) and 2011-12-15 (0.13).
+  - warning: Unexpected jump of 136.8% in value between 2011-12-21 (0.19) and 2011-12-22 (0.45).
+  - warning: Unexpected jump of 53.3% in value between 2011-12-23 (0.3) and 2011-12-26 (0.14).
+  - warning: Unexpected jump of 78.6% in value between 2011-12-26 (0.14) and 2011-12-27 (0.03).
+  - warning: Unexpected jump of 3500.0% in value between 2011-12-27 (0.03) and 2011-12-28 (1.08).
+  - warning: Unexpected jump of 62.8% in value between 2011-12-30 (0.94) and 2012-01-04 (0.35).
+  - warning: Unexpected jump of 74.3% in value between 2012-01-04 (0.35) and 2012-01-05 (0.09).
+  - warning: Unexpected jump of 80.0% in value between 2012-01-13 (0.05) and 2012-01-16 (0.09).
+  - warning: Unexpected jump of 55.6% in value between 2012-01-16 (0.09) and 2012-01-17 (0.14).
+  - warning: Unexpected jump of 740.0% in value between 2012-01-26 (0.05) and 2012-01-27 (0.42).
+  - warning: Unexpected jump of 71.4% in value between 2012-01-27 (0.42) and 2012-01-30 (0.12).
+  - warning: Unexpected jump of 61.5% in value between 2012-02-02 (0.13) and 2012-02-03 (0.05).
+  - warning: Unexpected jump of 60.0% in value between 2012-02-03 (0.05) and 2012-02-06 (0.08).
+  - warning: Unexpected jump of 112.5% in value between 2012-02-07 (0.08) and 2012-02-08 (0.17).
+  - warning: Unexpected jump of 88.9% in value between 2012-02-22 (0.09) and 2012-02-23 (0.17).
+  - warning: Unexpected jump of 88.2% in value between 2012-02-23 (0.17) and 2012-02-24 (0.32).
+  - warning: Unexpected jump of 378.1% in value between 2012-02-24 (0.32) and 2012-02-27 (1.53).
+  - warning: Unexpected jump of 89.5% in value between 2012-02-27 (1.53) and 2012-02-28 (0.16).
+  - warning: Unexpected jump of 237.5% in value between 2012-03-05 (0.08) and 2012-03-06 (0.27).
+  - warning: Unexpected jump of 52.9% in value between 2012-03-11 (0.17) and 2012-03-12 (0.26).
+  - warning: Unexpected jump of 83.3% in value between 2012-03-19 (0.06) and 2012-03-20 (0.11).
+  - warning: Unexpected jump of 900.0% in value between 2012-03-27 (0.03) and 2012-03-28 (0.3).
+  - warning: Unexpected jump of 63.3% in value between 2012-03-28 (0.3) and 2012-03-29 (0.11).
+  - warning: Unexpected jump of 54.5% in value between 2012-03-29 (0.11) and 2012-03-30 (0.05).
+  - warning: Unexpected jump of 366.7% in value between 2012-04-03 (0.03) and 2012-04-04 (0.14).
+  - warning: Unexpected jump of 57.1% in value between 2012-04-04 (0.14) and 2012-04-05 (0.06).
+  - warning: Unexpected jump of 133.3% in value between 2012-04-05 (0.06) and 2012-04-06 (0.14).
+  - warning: Unexpected jump of 64.3% in value between 2012-04-06 (0.14) and 2012-04-09 (0.05).
+  - warning: Unexpected jump of 520.0% in value between 2012-04-09 (0.05) and 2012-04-10 (0.31).
+  - warning: Unexpected jump of 151.6% in value between 2012-04-11 (0.31) and 2012-04-12 (0.78).
+  - warning: Unexpected jump of 65.4% in value between 2012-04-12 (0.78) and 2012-04-13 (0.27).
+  - warning: Unexpected jump of 74.1% in value between 2012-04-13 (0.27) and 2012-04-16 (0.07).
+  - warning: Unexpected jump of 442.9% in value between 2012-04-16 (0.07) and 2012-04-17 (0.38).
+  - warning: Unexpected jump of 52.6% in value between 2012-04-17 (0.38) and 2012-04-18 (0.18).
+  - warning: Unexpected jump of 54.5% in value between 2012-04-19 (0.11) and 2012-04-20 (0.05).
+  - warning: Unexpected jump of 1075.0% in value between 2012-04-25 (0.04) and 2012-04-26 (0.47).
+  - warning: Unexpected jump of 70.2% in value between 2012-04-26 (0.47) and 2012-04-27 (0.14).
+  - warning: Unexpected jump of 78.6% in value between 2012-04-27 (0.14) and 2012-04-28 (0.25).
+  - warning: Unexpected jump of 52.0% in value between 2012-04-28 (0.25) and 2012-05-02 (0.12).
+  - warning: Unexpected jump of 91.7% in value between 2012-05-02 (0.12) and 2012-05-03 (0.23).
+  - warning: Unexpected jump of 56.5% in value between 2012-05-03 (0.23) and 2012-05-04 (0.1).
+  - warning: Unexpected jump of 66.7% in value between 2012-05-11 (0.09) and 2012-05-14 (0.15).
+  - warning: Unexpected jump of 62.5% in value between 2012-05-16 (0.16) and 2012-05-17 (0.26).
+  - warning: Unexpected jump of 73.1% in value between 2012-05-17 (0.26) and 2012-05-18 (0.07).
+  - warning: Unexpected jump of 128.6% in value between 2012-05-18 (0.07) and 2012-05-21 (0.16).
+  - warning: Unexpected jump of 350.0% in value between 2012-05-21 (0.16) and 2012-05-22 (0.72).
+  - warning: Unexpected jump of 645.8% in value between 2012-05-22 (0.72) and 2012-05-23 (5.37).
+  - warning: Unexpected jump of 79.1% in value between 2012-05-23 (5.37) and 2012-05-24 (9.62).
+  - warning: Unexpected jump of 74.6% in value between 2012-05-24 (9.62) and 2012-05-25 (2.44).
+  - warning: Unexpected jump of 79.9% in value between 2012-05-25 (2.44) and 2012-05-28 (0.49).
+  - warning: Unexpected jump of 336.7% in value between 2012-05-28 (0.49) and 2012-05-29 (2.14).
+  - warning: Unexpected jump of 93.5% in value between 2012-05-29 (2.14) and 2012-05-30 (0.14).
+  - warning: Unexpected jump of 178.6% in value between 2012-06-01 (0.14) and 2012-06-04 (0.39).
+  - warning: Unexpected jump of 64.1% in value between 2012-06-04 (0.39) and 2012-06-05 (0.64).
+  - warning: Unexpected jump of 57.0% in value between 2012-06-13 (0.86) and 2012-06-14 (0.37).
+  - warning: Unexpected jump of 67.6% in value between 2012-06-14 (0.37) and 2012-06-15 (0.12).
+  - warning: Unexpected jump of 158.3% in value between 2012-06-15 (0.12) and 2012-06-18 (0.31).
+  - warning: Unexpected jump of 69.2% in value between 2012-06-19 (0.26) and 2012-06-20 (0.44).
+  - warning: Unexpected jump of 912.5% in value between 2012-06-26 (0.24) and 2012-06-27 (2.43).
+  - warning: Unexpected jump of 90.1% in value between 2012-06-27 (2.43) and 2012-06-28 (0.24).
+  - warning: Unexpected jump of 60.5% in value between 2012-07-05 (0.38) and 2012-07-09 (0.61).
+  - warning: Unexpected jump of 57.1% in value between 2012-07-13 (0.28) and 2012-07-16 (0.12).
+  - warning: Unexpected jump of 283.3% in value between 2012-07-16 (0.12) and 2012-07-17 (0.46).
+  - warning: Unexpected jump of 52.9% in value between 2012-07-20 (0.17) and 2012-07-23 (0.26).
+  - warning: Unexpected jump of 1714.3% in value between 2012-07-26 (0.07) and 2012-07-27 (1.27).
+  - warning: Unexpected jump of 69.3% in value between 2012-07-27 (1.27) and 2012-07-30 (0.39).
+  - warning: Unexpected jump of 108.0% in value between 2012-08-08 (0.25) and 2012-08-09 (0.52).
+  - warning: Unexpected jump of 73.7% in value between 2012-08-13 (0.38) and 2012-08-14 (0.66).
+  - warning: Unexpected jump of 61.5% in value between 2012-08-16 (0.39) and 2012-08-17 (0.63).
+  - warning: Unexpected jump of 75.6% in value between 2012-08-20 (0.45) and 2012-08-21 (0.79).
+  - warning: Unexpected jump of 163.3% in value between 2012-08-21 (0.79) and 2012-08-22 (2.08).
+  - warning: Unexpected jump of 336.1% in value between 2012-08-22 (2.08) and 2012-08-23 (9.07).
+  - warning: Unexpected jump of 108.7% in value between 2012-08-24 (6.3) and 2012-08-27 (13.15).
+  - warning: Unexpected jump of 64.5% in value between 2012-08-27 (13.15) and 2012-08-28 (4.67).
+  - warning: Unexpected jump of 89.5% in value between 2012-08-28 (4.67) and 2012-08-29 (0.49).
+  - warning: Unexpected jump of 96.7% in value between 2012-09-03 (0.92) and 2012-09-04 (1.81).
+  - warning: Unexpected jump of 63.0% in value between 2012-09-04 (1.81) and 2012-09-05 (2.95).
+  - warning: Unexpected jump of 52.2% in value between 2012-09-05 (2.95) and 2012-09-06 (1.41).
+  - warning: Unexpected jump of 68.8% in value between 2012-09-06 (1.41) and 2012-09-07 (0.44).
+  - warning: Unexpected jump of 150.0% in value between 2012-09-13 (0.1) and 2012-09-14 (0.25).
+  - warning: Unexpected jump of 120.0% in value between 2012-09-14 (0.25) and 2012-09-17 (0.55).
+  - warning: Unexpected jump of 87.5% in value between 2012-09-21 (0.4) and 2012-09-24 (0.75).
+  - warning: Unexpected jump of 54.7% in value between 2012-09-24 (0.75) and 2012-09-25 (1.16).
+  - warning: Unexpected jump of 182.8% in value between 2012-09-25 (1.16) and 2012-09-26 (3.28).
+  - warning: Unexpected jump of 61.6% in value between 2012-09-26 (3.28) and 2012-09-27 (1.26).
+  - warning: Unexpected jump of 253.5% in value between 2012-10-08 (0.43) and 2012-10-09 (1.52).
+  - warning: Unexpected jump of 61.2% in value between 2012-10-09 (1.52) and 2012-10-10 (2.45).
+  - warning: Unexpected jump of 181.2% in value between 2012-10-10 (2.45) and 2012-10-11 (6.89).
+  - warning: Unexpected jump of 110.3% in value between 2012-10-29 (0.87) and 2012-10-30 (1.83).
+  - warning: Unexpected jump of 72.7% in value between 2012-10-30 (1.83) and 2012-10-31 (0.5).
+  - warning: Unexpected jump of 54.0% in value between 2012-10-31 (0.5) and 2012-11-01 (0.23).
+  - warning: Unexpected jump of 126.7% in value between 2012-11-02 (0.15) and 2012-11-05 (0.34).
+  - warning: Unexpected jump of 52.9% in value between 2012-11-05 (0.34) and 2012-11-06 (0.16).
+  - warning: Unexpected jump of 52.9% in value between 2012-11-07 (0.17) and 2012-11-08 (0.26).
+  - warning: Unexpected jump of 94.4% in value between 2012-11-09 (0.18) and 2012-11-12 (0.35).
+  - warning: Unexpected jump of 86.4% in value between 2012-11-20 (0.22) and 2012-11-21 (0.41).
+  - warning: Unexpected jump of 285.4% in value between 2012-11-21 (0.41) and 2012-11-22 (1.58).
+  - warning: Unexpected jump of 205.1% in value between 2012-11-22 (1.58) and 2012-11-23 (4.82).
+  - warning: Unexpected jump of 51.8% in value between 2012-11-28 (3.34) and 2012-11-29 (5.07).
+  - warning: Unexpected jump of 56.5% in value between 2012-12-05 (3.38) and 2012-12-06 (1.47).
+  - warning: Unexpected jump of 95.4% in value between 2012-12-13 (1.09) and 2012-12-14 (2.13).
+  - warning: Unexpected jump of 53.3% in value between 2012-12-19 (2.46) and 2012-12-20 (1.15).
+  - warning: Unexpected jump of 279.5% in value between 2012-12-26 (1.32) and 2012-12-27 (5.01).
+  - warning: Unexpected jump of 62.3% in value between 2012-12-27 (5.01) and 2012-12-28 (1.89).
+  - warning: Unexpected jump of 51.0% in value between 2013-01-03 (1.47) and 2013-01-04 (0.72).
+  - warning: Unexpected jump of 66.7% in value between 2013-01-04 (0.72) and 2013-01-08 (0.24).
+  - warning: Unexpected jump of 60.0% in value between 2013-01-16 (0.1) and 2013-01-17 (0.16).
+  - warning: Unexpected jump of 51.6% in value between 2013-01-23 (0.31) and 2013-01-24 (0.47).
+  - warning: Unexpected jump of 63.8% in value between 2013-01-24 (0.47) and 2013-01-25 (0.17).
+  - warning: Unexpected jump of 627.8% in value between 2013-01-28 (0.18) and 2013-01-29 (1.31).
+  - warning: Unexpected jump of 59.5% in value between 2013-01-29 (1.31) and 2013-01-30 (0.53).
+  - warning: Unexpected jump of 86.8% in value between 2013-01-30 (0.53) and 2013-01-31 (0.07).
+  - warning: Unexpected jump of 160.0% in value between 2013-02-01 (0.1) and 2013-02-04 (0.26).
+  - warning: Unexpected jump of 68.1% in value between 2013-02-07 (0.47) and 2013-02-08 (0.15).
+  - warning: Unexpected jump of 90.5% in value between 2013-02-11 (0.21) and 2013-02-12 (0.4).
+  - warning: Unexpected jump of 74.3% in value between 2013-02-20 (0.35) and 2013-02-21 (0.61).
+  - warning: Unexpected jump of 380.0% in value between 2013-02-22 (0.75) and 2013-02-25 (3.6).
+  - warning: Unexpected jump of 126.1% in value between 2013-02-25 (3.6) and 2013-02-26 (8.14).
+  - warning: Unexpected jump of 88.9% in value between 2013-02-26 (8.14) and 2013-02-27 (0.9).
+  - warning: Unexpected jump of 61.1% in value between 2013-02-27 (0.9) and 2013-02-28 (0.35).
+  - warning: Unexpected jump of 67.9% in value between 2013-03-11 (0.28) and 2013-03-12 (0.09).
+  - warning: Unexpected jump of 88.9% in value between 2013-03-12 (0.09) and 2013-03-13 (0.01).
+  - warning: Unexpected jump of 700.0% in value between 2013-03-13 (0.01) and 2013-03-14 (0.08).
+  - warning: Unexpected jump of 150.0% in value between 2013-03-14 (0.08) and 2013-03-15 (0.2).
+  - warning: Unexpected jump of 109.1% in value between 2013-04-23 (0.11) and 2013-04-24 (0.23).
+  - warning: Unexpected jump of 521.7% in value between 2013-04-24 (0.23) and 2013-04-25 (1.43).
+  - warning: Unexpected jump of 81.2% in value between 2013-04-26 (2.07) and 2013-04-29 (0.39).
+  - warning: Unexpected jump of 71.8% in value between 2013-04-29 (0.39) and 2013-04-30 (0.11).
+  - warning: Unexpected jump of 263.6% in value between 2013-05-17 (0.11) and 2013-05-20 (0.4).
+  - warning: Unexpected jump of 65.0% in value between 2013-05-20 (0.4) and 2013-05-21 (0.14).
+  - warning: Unexpected jump of 3580.0% in value between 2013-05-22 (0.1) and 2013-05-23 (3.68).
+  - warning: Unexpected jump of 69.8% in value between 2013-05-23 (3.68) and 2013-05-24 (6.25).
+  - warning: Unexpected jump of 66.9% in value between 2013-05-24 (6.25) and 2013-05-27 (2.07).
+  - warning: Unexpected jump of 73.4% in value between 2013-05-28 (2.14) and 2013-05-29 (3.71).
+  - warning: Unexpected jump of 72.8% in value between 2013-05-29 (3.71) and 2013-05-30 (1.01).
+  - warning: Unexpected jump of 116.8% in value between 2013-05-30 (1.01) and 2013-05-31 (2.19).
+  - warning: Unexpected jump of 52.5% in value between 2013-05-31 (2.19) and 2013-06-03 (3.34).
+  - warning: Unexpected jump of 66.2% in value between 2013-06-19 (1.3) and 2013-06-20 (0.44).
+  - warning: Unexpected jump of 72.7% in value between 2013-06-20 (0.44) and 2013-06-21 (0.12).
+  - warning: Unexpected jump of 91.7% in value between 2013-06-21 (0.12) and 2013-06-24 (0.23).
+  - warning: Unexpected jump of 54.2% in value between 2013-06-26 (0.24) and 2013-06-27 (0.11).
+  - warning: Unexpected jump of 90.9% in value between 2013-06-27 (0.11) and 2013-06-28 (0.21).
+  - warning: Unexpected jump of 52.4% in value between 2013-06-28 (0.21) and 2013-07-01 (0.1).
+  - warning: Unexpected jump of 145.5% in value between 2013-07-04 (0.11) and 2013-07-05 (0.27).
+  - warning: Unexpected jump of 59.3% in value between 2013-07-05 (0.27) and 2013-07-09 (0.43).
+  - warning: Unexpected jump of 57.5% in value between 2013-07-17 (0.4) and 2013-07-18 (0.17).
+  - warning: Unexpected jump of 111.8% in value between 2013-07-18 (0.17) and 2013-07-19 (0.36).
+  - warning: Unexpected jump of 227.8% in value between 2013-07-19 (0.36) and 2013-07-22 (1.18).
+  - warning: Unexpected jump of 77.1% in value between 2013-07-22 (1.18) and 2013-07-23 (2.09).
+  - warning: Unexpected jump of 143.1% in value between 2013-07-23 (2.09) and 2013-07-24 (5.08).
+  - warning: Unexpected jump of 54.9% in value between 2013-07-26 (5.21) and 2013-07-29 (8.07).
+  - warning: Unexpected jump of 69.9% in value between 2013-07-30 (4.89) and 2013-07-31 (1.47).
+  - warning: Unexpected jump of 136.5% in value between 2013-08-01 (1.37) and 2013-08-02 (3.24).
+  - warning: Unexpected jump of 201.5% in value between 2013-08-02 (3.24) and 2013-08-05 (9.77).
+  - warning: Unexpected jump of 56.1% in value between 2013-08-06 (10.26) and 2013-08-07 (4.5).
+  - warning: Unexpected jump of 60.2% in value between 2013-08-07 (4.5) and 2013-08-08 (1.79).
+  - warning: Unexpected jump of 57.1% in value between 2013-08-12 (2.05) and 2013-08-13 (0.88).
+  - warning: Unexpected jump of 124.1% in value between 2013-08-15 (0.54) and 2013-08-16 (1.21).
+  - warning: Unexpected jump of 70.5% in value between 2013-08-19 (0.61) and 2013-08-20 (1.04).
+  - warning: Unexpected jump of 696.4% in value between 2013-08-21 (0.55) and 2013-08-22 (4.38).
+  - warning: Unexpected jump of 296.6% in value between 2013-08-22 (4.38) and 2013-08-23 (17.37).
+  - warning: Unexpected jump of 55.5% in value between 2013-08-27 (13.34) and 2013-08-28 (5.93).
+  - warning: Unexpected jump of 59.0% in value between 2013-08-28 (5.93) and 2013-08-29 (2.43).
+  - warning: Unexpected jump of 383.5% in value between 2013-08-29 (2.43) and 2013-09-02 (11.75).
+  - warning: Unexpected jump of 57.5% in value between 2013-09-04 (10.37) and 2013-09-05 (4.41).
+  - warning: Unexpected jump of 79.4% in value between 2013-09-05 (4.41) and 2013-09-06 (0.91).
+  - warning: Unexpected jump of 62.2% in value between 2013-09-11 (1.19) and 2013-09-12 (0.45).
+  - warning: Unexpected jump of 54.2% in value between 2013-09-13 (0.24) and 2013-09-16 (0.37).
+  - warning: Unexpected jump of 71.4% in value between 2013-09-17 (0.35) and 2013-09-18 (0.6).
+  - warning: Unexpected jump of 76.7% in value between 2013-09-18 (0.6) and 2013-09-19 (0.14).
+  - warning: Unexpected jump of 512.5% in value between 2013-09-24 (0.08) and 2013-09-25 (0.49).
+  - warning: Unexpected jump of 52.0% in value between 2013-09-27 (0.25) and 2013-09-30 (0.38).
+  - warning: Unexpected jump of 57.9% in value between 2013-09-30 (0.38) and 2013-10-01 (0.16).
+  - warning: Unexpected jump of 62.5% in value between 2013-10-01 (0.16) and 2013-10-02 (0.26).
+  - warning: Unexpected jump of 65.5% in value between 2013-10-03 (0.29) and 2013-10-04 (0.48).
+  - warning: Unexpected jump of 54.2% in value between 2013-10-04 (0.48) and 2013-10-07 (0.74).
+  - warning: Unexpected jump of 228.4% in value between 2013-10-07 (0.74) and 2013-10-08 (2.43).
+  - warning: Unexpected jump of 88.1% in value between 2013-10-08 (2.43) and 2013-10-09 (4.57).
+  - warning: Unexpected jump of 223.0% in value between 2013-10-09 (4.57) and 2013-10-10 (14.76).
+  - warning: Unexpected jump of 70.3% in value between 2013-10-11 (8.19) and 2013-10-12 (2.43).
+  - warning: Unexpected jump of 130.4% in value between 2013-10-18 (1.58) and 2013-10-21 (3.64).
+  - warning: Unexpected jump of 70.7% in value between 2013-11-06 (0.41) and 2013-11-07 (0.7).
+  - warning: Unexpected jump of 60.0% in value between 2013-11-07 (0.7) and 2013-11-08 (0.28).
+  - warning: Unexpected jump of 128.6% in value between 2013-11-08 (0.28) and 2013-11-11 (0.64).
+  - warning: Unexpected jump of 59.2% in value between 2013-11-13 (0.71) and 2013-11-14 (0.29).
+  - warning: Unexpected jump of 59.5% in value between 2013-11-15 (0.42) and 2013-11-18 (0.67).
+  - warning: Unexpected jump of 191.0% in value between 2013-11-18 (0.67) and 2013-11-19 (1.95).
+  - warning: Unexpected jump of 96.3% in value between 2013-11-20 (2.44) and 2013-11-21 (4.79).
+  - warning: Unexpected jump of 85.6% in value between 2013-11-21 (4.79) and 2013-11-22 (8.89).
+  - warning: Unexpected jump of 190.8% in value between 2013-11-22 (8.89) and 2013-11-25 (25.85).
+  - warning: Unexpected jump of 72.9% in value between 2013-11-25 (25.85) and 2013-11-26 (7.01).
+  - warning: Unexpected jump of 76.4% in value between 2013-11-28 (3.3) and 2013-11-29 (0.78).
+  - warning: Unexpected jump of 93.6% in value between 2013-11-29 (0.78) and 2013-12-03 (1.51).
+  - warning: Unexpected jump of 127.2% in value between 2013-12-03 (1.51) and 2013-12-04 (3.43).
+  - warning: Unexpected jump of 62.8% in value between 2013-12-05 (2.39) and 2013-12-06 (0.89).
+  - warning: Unexpected jump of 53.2% in value between 2013-12-09 (0.79) and 2013-12-10 (1.21).
+  - warning: Unexpected jump of 68.6% in value between 2013-12-10 (1.21) and 2013-12-11 (0.38).
+  - warning: Unexpected jump of 273.7% in value between 2013-12-11 (0.38) and 2013-12-12 (1.42).
+  - warning: Unexpected jump of 187.9% in value between 2013-12-13 (1.24) and 2013-12-18 (3.57).
+  - warning: Unexpected jump of 65.3% in value between 2013-12-20 (1.93) and 2013-12-23 (0.67).
+  - warning: Unexpected jump of 162.3% in value between 2013-12-25 (1.06) and 2013-12-26 (2.78).
+  - warning: Unexpected jump of 72.0% in value between 2013-12-28 (2.14) and 2013-12-30 (0.6).
+  - warning: Unexpected jump of 165.0% in value between 2013-12-30 (0.6) and 2013-12-31 (1.59).
+  - warning: Unexpected jump of 76.1% in value between 2014-01-08 (0.71) and 2014-01-09 (0.17).
+  - warning: Unexpected jump of 85.7% in value between 2014-01-14 (0.07) and 2014-01-15 (0.13).
+  - warning: Unexpected jump of 938.5% in value between 2014-01-15 (0.13) and 2014-01-16 (1.35).
+  - warning: Unexpected jump of 69.7% in value between 2014-01-17 (1.52) and 2014-01-20 (0.46).
+  - warning: Unexpected jump of 621.7% in value between 2014-01-20 (0.46) and 2014-01-21 (3.32).
+  - warning: Unexpected jump of 61.1% in value between 2014-02-03 (2.65) and 2014-02-04 (1.03).
+  - warning: Unexpected jump of 504.7% in value between 2014-02-10 (1.06) and 2014-02-11 (6.41).
+  - warning: Unexpected jump of 61.6% in value between 2014-02-11 (6.41) and 2014-02-12 (2.46).
+  - warning: Unexpected jump of 51.6% in value between 2014-02-12 (2.46) and 2014-02-13 (1.19).
+  - warning: Unexpected jump of 57.1% in value between 2014-02-13 (1.19) and 2014-02-14 (0.51).
+  - warning: Unexpected jump of 88.2% in value between 2014-02-14 (0.51) and 2014-02-17 (0.96).
+  - warning: Unexpected jump of 53.1% in value between 2014-02-18 (0.64) and 2014-02-19 (0.98).
+  - warning: Unexpected jump of 55.1% in value between 2014-02-19 (0.98) and 2014-02-20 (0.44).
+  - warning: Unexpected jump of 140.9% in value between 2014-02-20 (0.44) and 2014-02-21 (1.06).
+  - warning: Unexpected jump of 285.8% in value between 2014-02-21 (1.06) and 2014-02-24 (4.09).
+  - warning: Unexpected jump of 208.6% in value between 2014-02-26 (3.96) and 2014-02-27 (12.22).
+  - warning: Unexpected jump of 237.4% in value between 2014-03-03 (15.08) and 2014-03-04 (50.88).
+  - warning: Unexpected jump of 55.2% in value between 2014-03-05 (71.65) and 2014-03-06 (32.1).
+  - warning: Unexpected jump of 51.4% in value between 2014-03-06 (32.1) and 2014-03-07 (15.59).
+  - warning: Unexpected jump of 88.2% in value between 2014-03-19 (12.7) and 2014-03-20 (1.5).
+  - warning: Unexpected jump of 72.8% in value between 2014-03-26 (1.84) and 2014-03-27 (3.18).
+  - warning: Unexpected jump of 72.3% in value between 2014-03-31 (0.94) and 2014-04-01 (0.26).
+  - warning: Unexpected jump of 57.7% in value between 2014-04-01 (0.26) and 2014-04-02 (0.41).
+  - warning: Unexpected jump of 70.0% in value between 2014-04-04 (0.3) and 2014-04-07 (0.51).
+  - warning: Unexpected jump of 181.6% in value between 2014-04-08 (0.49) and 2014-04-09 (1.38).
+  - warning: Unexpected jump of 74.6% in value between 2014-04-11 (0.67) and 2014-04-14 (1.17).
+  - warning: Unexpected jump of 60.8% in value between 2014-04-15 (1.66) and 2014-04-16 (0.65).
+  - warning: Unexpected jump of 72.3% in value between 2014-04-16 (0.65) and 2014-04-17 (1.12).
+  - warning: Unexpected jump of 165.5% in value between 2014-04-23 (0.29) and 2014-04-24 (0.77).
+  - warning: Unexpected jump of 157.5% in value between 2014-04-25 (0.4) and 2014-04-28 (1.03).
+  - warning: Unexpected jump of 61.2% in value between 2014-04-28 (1.03) and 2014-04-29 (0.4).
+  - warning: Unexpected jump of 259.1% in value between 2014-05-04 (0.22) and 2014-05-05 (0.79).
+  - warning: Unexpected jump of 111.8% in value between 2014-05-15 (0.51) and 2014-05-16 (1.08).
+  - warning: Unexpected jump of 55.8% in value between 2014-05-20 (0.43) and 2014-05-21 (0.19).
+  - warning: Unexpected jump of 957.1% in value between 2014-05-22 (0.21) and 2014-05-23 (2.22).
+  - warning: Unexpected jump of 61.8% in value between 2014-05-26 (1.44) and 2014-05-27 (0.55).
+  - warning: Unexpected jump of 71.9% in value between 2014-05-29 (0.32) and 2014-05-30 (0.55).
+  - warning: Unexpected jump of 157.6% in value between 2014-06-02 (0.33) and 2014-06-03 (0.85).
+  - warning: Unexpected jump of 113.0% in value between 2014-06-09 (0.54) and 2014-06-10 (1.15).
+  - warning: Unexpected jump of 53.0% in value between 2014-06-10 (1.15) and 2014-06-11 (0.54).
+  - warning: Unexpected jump of 93.7% in value between 2014-06-13 (0.79) and 2014-06-16 (1.53).
+  - warning: Unexpected jump of 117.0% in value between 2014-06-19 (0.47) and 2014-06-20 (1.02).
+  - warning: Unexpected jump of 157.1% in value between 2014-07-02 (1.12) and 2014-07-03 (2.88).
+  - warning: Unexpected jump of 69.0% in value between 2014-07-04 (2.45) and 2014-07-08 (0.76).
+  - warning: Unexpected jump of 393.4% in value between 2014-07-10 (0.61) and 2014-07-11 (3.01).
+  - warning: Unexpected jump of 73.1% in value between 2014-07-11 (3.01) and 2014-07-14 (5.21).
+  - warning: Unexpected jump of 68.9% in value between 2014-07-14 (5.21) and 2014-07-15 (1.62).
+  - warning: Unexpected jump of 86.4% in value between 2014-07-15 (1.62) and 2014-07-16 (0.22).
+  - warning: Unexpected jump of 213.6% in value between 2014-07-16 (0.22) and 2014-07-17 (0.69).
+  - warning: Unexpected jump of 60.8% in value between 2014-07-21 (0.51) and 2014-07-22 (0.82).
+  - warning: Unexpected jump of 120.3% in value between 2014-07-23 (0.79) and 2014-07-24 (1.74).
+  - warning: Unexpected jump of 72.4% in value between 2014-07-24 (1.74) and 2014-07-25 (0.48).
+  - warning: Unexpected jump of 466.7% in value between 2014-07-29 (0.33) and 2014-07-30 (1.87).
+  - warning: Unexpected jump of 107.5% in value between 2014-07-30 (1.87) and 2014-07-31 (3.88).
+  - warning: Unexpected jump of 64.8% in value between 2014-08-05 (1.42) and 2014-08-06 (2.34).
+  - warning: Unexpected jump of 88.4% in value between 2014-08-07 (1.73) and 2014-08-08 (3.26).
+  - warning: Unexpected jump of 56.4% in value between 2014-08-20 (0.78) and 2014-08-21 (1.22).
+  - warning: Unexpected jump of 104.1% in value between 2014-08-21 (1.22) and 2014-08-22 (2.49).
+  - warning: Unexpected jump of 55.8% in value between 2014-08-22 (2.49) and 2014-08-25 (3.88).
+  - warning: Unexpected jump of 53.2% in value between 2014-08-27 (3.08) and 2014-08-28 (1.44).
+  - warning: Unexpected jump of 68.1% in value between 2014-08-28 (1.44) and 2014-08-29 (2.42).
+  - warning: Unexpected jump of 50.4% in value between 2014-08-29 (2.42) and 2014-09-02 (1.2).
+  - warning: Unexpected jump of 50.8% in value between 2014-09-02 (1.2) and 2014-09-03 (0.59).
+  - warning: Unexpected jump of 109.4% in value between 2014-09-08 (0.32) and 2014-09-09 (0.67).
+  - warning: Unexpected jump of 50.7% in value between 2014-09-10 (0.71) and 2014-09-11 (0.35).
+  - warning: Unexpected jump of 188.2% in value between 2014-09-17 (0.17) and 2014-09-18 (0.49).
+  - warning: Unexpected jump of 55.1% in value between 2014-09-18 (0.49) and 2014-09-19 (0.22).
+  - warning: Unexpected jump of 414.3% in value between 2014-09-22 (0.14) and 2014-09-23 (0.72).
+  - warning: Unexpected jump of 94.3% in value between 2014-09-26 (0.87) and 2014-09-29 (1.69).
+  - warning: Unexpected jump of 113.7% in value between 2014-10-13 (2.11) and 2014-10-14 (4.51).
+  - warning: Unexpected jump of 78.3% in value between 2014-10-14 (4.51) and 2014-10-15 (8.04).
+  - warning: Unexpected jump of 202.0% in value between 2014-10-15 (8.04) and 2014-10-16 (24.28).
+  - warning: Unexpected jump of 76.5% in value between 2014-10-16 (24.28) and 2014-10-17 (5.7).
+  - warning: Unexpected jump of 150.1% in value between 2014-10-20 (5.33) and 2014-10-21 (13.33).
+  - warning: Unexpected jump of 54.8% in value between 2014-10-22 (15.28) and 2014-10-23 (23.66).
+  - warning: Unexpected jump of 60.5% in value between 2014-10-23 (23.66) and 2014-10-24 (9.34).
+  - warning: Unexpected jump of 86.4% in value between 2014-10-24 (9.34) and 2014-10-27 (1.27).
+  - warning: Unexpected jump of 90.6% in value between 2014-10-27 (1.27) and 2014-10-28 (2.42).
+  - warning: Unexpected jump of 68.2% in value between 2014-10-28 (2.42) and 2014-10-29 (4.07).
+  - warning: Unexpected jump of 51.2% in value between 2014-11-07 (2.46) and 2014-11-10 (3.72).
+  - warning: Unexpected jump of 72.8% in value between 2014-11-17 (7.44) and 2014-11-18 (12.86).
+  - warning: Unexpected jump of 84.4% in value between 2014-11-21 (9.15) and 2014-11-24 (16.87).
+  - warning: Unexpected jump of 61.1% in value between 2014-11-24 (16.87) and 2014-11-25 (6.57).
+  - warning: Unexpected jump of 223.8% in value between 2014-11-28 (4.04) and 2014-12-02 (13.08).
+  - warning: Unexpected jump of 147.9% in value between 2014-12-02 (13.08) and 2014-12-03 (32.43).
+  - warning: Unexpected jump of 50.7% in value between 2015-04-09 (3.73) and 2015-04-10 (5.62).
+  - warning: Unexpected jump of 65.4% in value between 2015-04-17 (7.45) and 2015-04-20 (12.32).
+  - warning: Unexpected jump of 51.2% in value between 2015-05-28 (6.51) and 2015-05-29 (3.18).
+  - warning: Unexpected jump of 72.3% in value between 2015-05-29 (3.18) and 2015-06-01 (5.48).
+  - warning: Unexpected jump of 52.1% in value between 2015-06-16 (2.36) and 2015-06-17 (1.13).
+  - warning: Unexpected jump of 59.3% in value between 2015-06-17 (1.13) and 2015-06-18 (0.46).
+  - warning: Unexpected jump of 51.6% in value between 2015-06-23 (0.64) and 2015-06-24 (0.97).
+  - warning: Unexpected jump of 103.8% in value between 2015-06-29 (1.04) and 2015-06-30 (2.12).
+  - warning: Unexpected jump of 87.3% in value between 2015-07-03 (1.5) and 2015-07-07 (2.81).
+  - warning: Unexpected jump of 159.6% in value between 2015-07-14 (1.66) and 2015-07-15 (4.31).
+  - warning: Unexpected jump of 431.2% in value between 2015-08-18 (3.46) and 2015-08-19 (18.38).
+  - warning: Unexpected jump of 94.9% in value between 2015-08-19 (18.38) and 2015-08-20 (35.83).
+  - warning: Unexpected jump of 83.6% in value between 2015-08-20 (35.83) and 2015-08-21 (5.89).
+  - warning: Unexpected jump of 327.2% in value between 2015-08-21 (5.89) and 2015-08-24 (25.16).
+  - warning: Unexpected jump of 54.1% in value between 2015-08-24 (25.16) and 2015-08-25 (11.55).
+  - warning: Unexpected jump of 203.5% in value between 2015-11-05 (16.59) and 2015-11-06 (50.35).
+  - warning: Unexpected jump of 129.4% in value between 2015-11-12 (10.22) and 2015-11-13 (23.44).
+  - warning: Unexpected jump of 141.4% in value between 2015-11-13 (23.44) and 2015-11-16 (56.59).
+  - warning: Unexpected jump of 54.6% in value between 2015-11-16 (56.59) and 2015-11-17 (25.68).
+  - warning: Unexpected jump of 65.6% in value between 2015-11-20 (13.05) and 2015-11-23 (21.61).
+  - warning: Unexpected jump of 51.1% in value between 2015-11-26 (15.86) and 2015-11-27 (23.96).
+  - warning: Unexpected jump of 183.7% in value between 2015-12-11 (13.47) and 2015-12-14 (38.21).
+  - warning: Unexpected jump of 224.1% in value between 2015-12-14 (38.21) and 2015-12-15 (123.84).
+  - warning: Unexpected jump of 84.8% in value between 2015-12-15 (123.84) and 2015-12-18 (228.82).
+  - warning: Unexpected jump of 78.8% in value between 2015-12-22 (161.1) and 2015-12-23 (34.2).
+  - warning: Unexpected jump of 72.7% in value between 2015-12-23 (34.2) and 2015-12-24 (59.05).
+  - warning: Unexpected jump of 54.6% in value between 2020-03-06 (8.68) and 2020-03-10 (13.42).
+- **kase/SWAP_1D** — fetch+validate+process: ok (downloaded=2808, processed=2808)
+  - warning: Gap of 6 days between 2014-07-02 and 2014-07-08 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2014-10-09 and 2014-10-14 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2014-11-07 and 2014-11-12 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2014-12-31 and 2015-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2015-01-15 and 2015-01-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2015-02-12 and 2015-02-17 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2015-03-20 and 2015-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2015-05-21 and 2015-05-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2015-09-03 and 2015-09-08 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2015-10-08 and 2015-10-13 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2015-12-23 and 2015-12-28 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2015-12-31 and 2016-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-01-14 and 2016-01-19 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-02-11 and 2016-02-16 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2016-03-03 and 2016-03-09 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2016-03-18 and 2016-03-24 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-05-06 and 2016-05-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-05-26 and 2016-05-31 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-06-30 and 2016-07-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-09-01 and 2016-09-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-10-06 and 2016-10-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-11-09 and 2016-11-14 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-12-15 and 2016-12-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-12-22 and 2016-12-27 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-12-30 and 2017-01-04 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-01-12 and 2017-01-17 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-02-16 and 2017-02-21 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 10 days between 2017-02-27 and 2017-03-09 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 8 days between 2017-03-16 and 2017-03-24 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 8 days between 2017-03-29 and 2017-04-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-04-07 and 2017-04-12 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-05-05 and 2017-05-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-05-25 and 2017-05-30 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2017-06-29 and 2017-07-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-07-05 and 2017-07-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 7 days between 2017-08-29 and 2017-09-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-10-05 and 2017-10-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-12-15 and 2017-12-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-12-21 and 2017-12-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-12-29 and 2018-01-03 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-01-11 and 2018-01-16 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-02-15 and 2018-02-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-03-07 and 2018-03-12 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2018-03-20 and 2018-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2018-04-26 and 2018-05-02 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 7 days between 2018-05-03 and 2018-05-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-05-24 and 2018-05-29 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 7 days between 2018-08-28 and 2018-09-04 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-10-04 and 2018-10-09 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-11-08 and 2018-11-13 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-12-14 and 2018-12-19 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-12-21 and 2018-12-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 7 days between 2018-12-27 and 2019-01-03 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2019-01-17 and 2019-01-22 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2019-02-14 and 2019-02-19 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2019-03-20 and 2019-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2019-05-08 and 2019-05-13 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2019-08-29 and 2019-09-03 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2019-12-13 and 2019-12-18 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2019-12-31 and 2020-01-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2020-03-20 and 2020-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2020-05-06 and 2020-05-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2020-10-08 and 2020-10-13 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2020-12-15 and 2020-12-21 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2020-12-31 and 2021-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2021-03-19 and 2021-03-25 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2021-05-06 and 2021-05-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2021-07-02 and 2021-07-07 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2021-12-15 and 2021-12-20 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2021-12-31 and 2022-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 7 days between 2022-01-05 and 2022-01-12 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2022-03-04 and 2022-03-09 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2022-03-18 and 2022-03-24 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2022-05-06 and 2022-05-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2022-08-26 and 2022-08-31 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2022-10-21 and 2022-10-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2022-12-30 and 2023-01-04 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2023-05-05 and 2023-05-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2023-07-05 and 2023-07-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2023-12-29 and 2024-01-03 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2024-03-20 and 2024-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2024-08-29 and 2024-09-03 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2024-12-31 and 2025-01-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2025-03-20 and 2025-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2025-07-03 and 2025-07-08 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2025-12-31 and 2026-01-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2026-03-20 and 2026-03-26 is outside expected range for frequency=daily (1-4d).
+  - warning: Unexpected jump of 100.0% in value between 2014-06-11 (1.9889924254809004) and 2014-06-12 (0.0).
+  - warning: Unexpected jump of 170.0% in value between 2014-06-13 (0.7366638612892223) and 2014-06-16 (1.9889924254809004).
+  - warning: Unexpected jump of 127.2% in value between 2014-06-20 (1.3073189651048172) and 2014-06-23 (2.9705650365696257).
+  - warning: Unexpected jump of 52.7% in value between 2014-07-08 (2.053880255967542) and 2014-07-09 (3.1363171484139225).
+  - warning: Unexpected jump of 58.6% in value between 2014-07-23 (1.9887756770010352) and 2014-07-24 (3.153262363016344).
+  - warning: Unexpected jump of 82.7% in value between 2014-07-30 (2.2160643258011534) and 2014-07-31 (4.049693396416098).
+  - warning: Unexpected jump of 65.4% in value between 2014-08-05 (2.1005325883374666) and 2014-08-06 (3.473802982731554).
+  - warning: Unexpected jump of 53.0% in value between 2014-08-21 (2.0054945054945055) and 2014-08-22 (3.068235183619799).
+  - warning: Unexpected jump of 65.1% in value between 2014-08-22 (3.068235183619799) and 2014-08-25 (5.066512434933488).
+  - warning: Unexpected jump of 51.6% in value between 2014-08-28 (3.707126207126207) and 2014-08-29 (1.7956171735241502).
+  - warning: Unexpected jump of 62.5% in value between 2014-08-29 (1.7956171735241502) and 2014-09-02 (2.917082917082917).
+  - warning: Unexpected jump of 100.0% in value between 2014-09-04 (2.0054945054945055) and 2014-09-05 (0.0).
+  - warning: Unexpected jump of 100.0% in value between 2014-09-10 (2.0054945054945055) and 2014-09-11 (0.0).
+  - warning: Unexpected jump of 100.0% in value between 2014-09-15 (1.025312204207505) and 2014-09-16 (0.0).
+  - warning: Unexpected jump of 80.6% in value between 2014-09-18 (1.780012307978124) and 2014-09-19 (0.34586993395305643).
+  - warning: Unexpected jump of 100.0% in value between 2014-09-19 (0.34586993395305643) and 2014-09-22 (0.0).
+  - warning: Unexpected jump of 76.9% in value between 2014-09-29 (2.006597031335899) and 2014-09-30 (0.4630608533852074).
+  - warning: Unexpected jump of 333.3% in value between 2014-09-30 (0.4630608533852074) and 2014-10-01 (2.006597031335899).
+  - warning: Unexpected jump of 55.9% in value between 2014-10-08 (2.0077007700770078) and 2014-10-09 (3.1300179707411733).
+  - warning: Unexpected jump of 83.8% in value between 2014-10-09 (3.1300179707411733) and 2014-10-14 (5.7524010828049095).
+  - warning: Unexpected jump of 110.9% in value between 2014-10-14 (5.7524010828049095) and 2014-10-15 (12.134124101457424).
+  - warning: Unexpected jump of 119.2% in value between 2014-10-15 (12.134124101457424) and 2014-10-16 (26.600930939488933).
+  - warning: Unexpected jump of 62.5% in value between 2014-10-16 (26.600930939488933) and 2014-10-17 (9.96885387634989).
+  - warning: Unexpected jump of 255.4% in value between 2014-10-20 (9.306165099268547) and 2014-10-21 (33.0718703232981).
+  - warning: Unexpected jump of 67.6% in value between 2014-10-24 (6.236345120448299) and 2014-10-27 (2.018023995134627).
+  - warning: Unexpected jump of 54.9% in value between 2014-10-27 (2.018023995134627) and 2014-10-28 (3.125661225546866).
+  - warning: Unexpected jump of 155.0% in value between 2014-11-21 (18.756266309757766) and 2014-11-24 (47.83114117287006).
+  - warning: Unexpected jump of 76.8% in value between 2014-11-24 (47.83114117287006) and 2014-11-25 (11.088924844718303).
+  - warning: Unexpected jump of 218.8% in value between 2014-11-28 (5.875053727770971) and 2014-12-02 (18.728026579785375).
+  - warning: Unexpected jump of 258.7% in value between 2014-12-02 (18.728026579785375) and 2014-12-03 (67.18271468822736).
+  - warning: Unexpected jump of 89.1% in value between 2014-12-05 (30.65026513361684) and 2014-12-08 (57.96948597732647).
+  - warning: Unexpected jump of 94.4% in value between 2014-12-15 (57.41393628517579) and 2014-12-18 (111.63171627030493).
+  - warning: Unexpected jump of 52.7% in value between 2015-04-08 (6.253708810762701) and 2015-04-09 (2.9572085945465).
+  - warning: Unexpected jump of 143.0% in value between 2015-04-10 (3.424424457457631) and 2015-04-13 (8.319676932932238).
+  - warning: Unexpected jump of 58.2% in value between 2015-04-13 (8.319676932932238) and 2015-04-14 (13.162586417623345).
+  - warning: Unexpected jump of 66.5% in value between 2015-05-28 (11.091162605755715) and 2015-05-29 (3.7198038766560773).
+  - warning: Unexpected jump of 68.0% in value between 2015-06-16 (4.181016320450165) and 2015-06-17 (1.3398786363335398).
+  - warning: Unexpected jump of 102.6% in value between 2015-06-17 (1.3398786363335398) and 2015-06-18 (-0.03528485999160897).
+  - warning: Unexpected jump of 768.8% in value between 2015-06-18 (-0.03528485999160897) and 2015-06-19 (0.23600069931484483).
+  - warning: Unexpected jump of 402.8% in value between 2015-06-19 (0.23600069931484483) and 2015-06-22 (1.1865480882313697).
+  - warning: Unexpected jump of 76.2% in value between 2015-06-24 (1.626596887355166) and 2015-06-25 (2.8659210360897847).
+  - warning: Unexpected jump of 52.5% in value between 2015-06-29 (2.58218696483032) and 2015-06-30 (3.9385525436178384).
+  - warning: Unexpected jump of 65.9% in value between 2015-07-03 (2.516771650676328) and 2015-07-07 (4.175646740029498).
+  - warning: Unexpected jump of 66.7% in value between 2015-07-14 (2.9111791615110953) and 2015-07-15 (4.85324152824805).
+  - warning: Unexpected jump of 89.7% in value between 2015-07-15 (4.85324152824805) and 2015-07-16 (9.208799380757103).
+  - warning: Unexpected jump of 59.4% in value between 2015-08-12 (6.268766443081714) and 2015-08-13 (9.993010754108269).
+  - warning: Unexpected jump of 121.2% in value between 2015-08-18 (3.827152104239784) and 2015-08-19 (8.465851318456956).
+  - warning: Unexpected jump of 397.8% in value between 2015-08-19 (8.465851318456956) and 2015-08-20 (42.14573001811317).
+  - warning: Unexpected jump of 81.2% in value between 2015-08-20 (42.14573001811317) and 2015-08-21 (7.905626315779305).
+  - warning: Unexpected jump of 551.0% in value between 2015-08-21 (7.905626315779305) and 2015-08-24 (51.46439130686787).
+  - warning: Unexpected jump of 50.4% in value between 2015-08-24 (51.46439130686787) and 2015-08-25 (25.517766302566145).
+  - warning: Unexpected jump of 174.2% in value between 2015-09-14 (10.702615324222) and 2015-09-15 (29.34168213501649).
+  - warning: Unexpected jump of 54.5% in value between 2015-09-21 (21.722606499468142) and 2015-09-22 (33.57112037240941).
+  - warning: Unexpected jump of 60.1% in value between 2015-09-29 (22.49818118346597) and 2015-09-30 (36.012320594861784).
+  - warning: Unexpected jump of 80.7% in value between 2015-10-23 (22.20079104754838) and 2015-10-26 (40.12789926096136).
+  - warning: Unexpected jump of 90.2% in value between 2015-11-05 (23.115981255864988) and 2015-11-06 (43.97504395364223).
+  - warning: Unexpected jump of 246.2% in value between 2015-11-06 (43.97504395364223) and 2015-11-09 (152.24072572785846).
+  - warning: Unexpected jump of 88.5% in value between 2015-11-09 (152.24072572785846) and 2015-11-12 (17.465365905891012).
+  - warning: Unexpected jump of 69.6% in value between 2015-11-13 (15.262736573366736) and 2015-11-16 (25.886367644826397).
+  - warning: Unexpected jump of 117.8% in value between 2015-11-16 (25.886367644826397) and 2015-11-17 (56.38504390248724).
+  - warning: Unexpected jump of 58.5% in value between 2015-11-17 (56.38504390248724) and 2015-11-18 (23.39472501494202).
+  - warning: Unexpected jump of 84.5% in value between 2015-11-20 (13.62278330980693) and 2015-11-23 (25.135066233127148).
+  - warning: Unexpected jump of 91.3% in value between 2015-12-14 (32.65603021090892) and 2015-12-15 (62.47123710670794).
+  - warning: Unexpected jump of 159.2% in value between 2015-12-15 (62.47123710670794) and 2015-12-18 (161.90936446296004).
+  - warning: Unexpected jump of 105.9% in value between 2015-12-18 (161.90936446296004) and 2015-12-21 (333.44323478362617).
+  - warning: Unexpected jump of 89.7% in value between 2015-12-22 (389.81697663136816) and 2015-12-23 (40.062143156154704).
+  - warning: Unexpected jump of 99.4% in value between 2015-12-23 (40.062143156154704) and 2015-12-28 (79.87303866805993).
+  - warning: Unexpected jump of 57.4% in value between 2016-12-14 (11.006885890949972) and 2016-12-15 (4.693936499873).
+  - warning: Unexpected jump of 74.9% in value between 2016-12-15 (4.693936499873) and 2016-12-20 (1.1789519147710912).
+  - warning: Unexpected jump of 552.4% in value between 2016-12-20 (1.1789519147710912) and 2016-12-21 (7.691160949868074).
+  - warning: Unexpected jump of 68.7% in value between 2016-12-28 (3.5664488017429194) and 2016-12-29 (6.01551724137931).
+  - warning: Unexpected jump of 56.2% in value between 2017-01-17 (6.854399415845199) and 2017-01-18 (3.0).
+  - warning: Unexpected jump of 166.7% in value between 2017-01-18 (3.0) and 2017-01-19 (8.0).
+  - warning: Unexpected jump of 55.7% in value between 2017-02-03 (5.0) and 2017-02-06 (7.786127167630058).
+  - warning: Unexpected jump of 65.8% in value between 2018-06-06 (6.634228187919463) and 2018-06-08 (11.0).
+  - warning: Unexpected jump of 53.8% in value between 2020-03-06 (9.0) and 2020-03-10 (13.843907156673113).
+  - warning: Unexpected jump of 55.3% in value between 2020-11-13 (7.404203699697101) and 2020-11-16 (11.5).
+  - warning: Unexpected jump of 54.4% in value between 2024-04-24 (7.413568779337309) and 2024-04-25 (11.443233835409476).
+  - warning: Unexpected jump of 74.0% in value between 2024-05-24 (5.185040124649931) and 2024-05-28 (9.023720315451154).
+  - warning: Unexpected jump of 90.4% in value between 2024-07-11 (4.79292799762069) and 2024-07-12 (9.128015835642469).
+  - warning: Unexpected jump of 70.7% in value between 2024-07-17 (6.239703048575448) and 2024-07-18 (10.651442420277322).
+  - warning: Unexpected jump of 58.7% in value between 2024-08-01 (5.804614081896983) and 2024-08-02 (9.210646005266389).
+  - warning: Unexpected jump of 50.4% in value between 2024-11-27 (8.608011017762324) and 2024-11-29 (12.945384375649109).
+  - warning: Unexpected jump of 61.3% in value between 2025-12-30 (7.505790642949474) and 2025-12-31 (2.90130459058863).
+  - warning: Unexpected jump of 157.9% in value between 2025-12-31 (2.90130459058863) and 2026-01-05 (7.483270545280518).
+- **kase/GS_YIELD_3M** — fetch+validate+process: ok (downloaded=83, processed=83)
+- **kase/GS_YIELD_6M** — fetch+validate+process: ok (downloaded=83, processed=83)
+- **kase/GS_YIELD_1Y** — fetch+validate+process: ok (downloaded=83, processed=83)
+- **kase/GS_YIELD_2Y** — fetch+validate+process: ok (downloaded=83, processed=83)
+- **kase/GS_YIELD_5Y** — fetch+validate+process: ok (downloaded=83, processed=83)
+- **kase/GS_YIELD_10Y** — fetch+validate+process: ok (downloaded=83, processed=83)
+- **kase/KZ_EUROBOND_YIELD** — fetch+validate+process: ok (downloaded=122, processed=122)
+  - warning: Gap of 669 days between 2020-10-01 and 2022-08-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 140.9% in value between 2020-10-01 (2.6524) and 2022-08-01 (6.39).
+- **kase/KZ_EUROBOND_SPREAD** — fetch+validate+process: ok (downloaded=122, processed=122)
+  - warning: Gap of 669 days between 2020-10-01 and 2022-08-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 83.0% in value between 2020-02-01 (150.9) and 2020-03-01 (276.1).
+  - warning: Unexpected jump of 158.6% in value between 2020-10-01 (113.5) and 2022-08-01 (293.5).
+- **cbr/RU_KEY_RATE** — fetch+validate+process: ok (downloaded=66, processed=66)
+  - warning: Unexpected jump of 61.9% in value between 2014-12-12 (10.5) and 2014-12-16 (17.0).
+  - warning: Unexpected jump of 110.5% in value between 2022-02-14 (9.5) and 2022-02-28 (20.0).
+- **cbr/RUB_USD** — fetch+validate+process: ok (downloaded=7130, processed=7130)
+  - warning: Gap of 5 days between 1998-01-01 and 1998-01-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 1998-05-01 and 1998-05-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 1999-01-01 and 1999-01-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 1999-05-01 and 1999-05-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2000-01-01 and 2000-01-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2000-04-29 and 2000-05-04 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2000-12-30 and 2001-01-04 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2001-04-29 and 2001-05-04 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2002-05-01 and 2002-05-07 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2002-05-09 and 2002-05-14 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2003-05-01 and 2003-05-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2003-06-12 and 2003-06-17 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2004-01-01 and 2004-01-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2004-05-01 and 2004-05-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2005-01-01 and 2005-01-12 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2005-05-07 and 2005-05-12 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2005-12-31 and 2006-01-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2006-12-30 and 2007-01-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2007-12-30 and 2008-01-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2008-06-12 and 2008-06-17 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2009-01-01 and 2009-01-12 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2010-01-01 and 2010-01-12 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2010-02-20 and 2010-02-25 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2010-11-04 and 2010-11-09 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2011-01-01 and 2011-01-12 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2011-12-31 and 2012-01-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2012-05-06 and 2012-05-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2012-12-30 and 2013-01-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2013-05-01 and 2013-05-07 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2013-05-09 and 2013-05-14 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 9 days between 2014-01-01 and 2014-01-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2014-05-01 and 2014-05-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2014-06-12 and 2014-06-17 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2014-11-01 and 2014-11-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 12 days between 2015-01-01 and 2015-01-13 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2015-05-01 and 2015-05-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2016-01-01 and 2016-01-12 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-03-05 and 2016-03-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2016-04-30 and 2016-05-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 10 days between 2016-12-31 and 2017-01-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-02-23 and 2017-02-28 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2017-05-06 and 2017-05-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2017-12-30 and 2018-01-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-03-08 and 2018-03-13 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2018-04-29 and 2018-05-04 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2018-12-30 and 2019-01-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2019-05-01 and 2019-05-07 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2019-05-09 and 2019-05-14 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 9 days between 2020-01-01 and 2020-01-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 10 days between 2020-03-28 and 2020-04-07 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 6 days between 2020-05-01 and 2020-05-07 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2021-01-01 and 2021-01-12 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2021-11-04 and 2021-11-09 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2021-12-31 and 2022-01-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2022-04-30 and 2022-05-05 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2022-05-07 and 2022-05-12 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 10 days between 2022-12-31 and 2023-01-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2023-02-23 and 2023-02-28 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2023-05-06 and 2023-05-11 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 11 days between 2023-12-30 and 2024-01-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2024-04-28 and 2024-05-03 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2024-05-09 and 2024-05-14 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 12 days between 2024-12-29 and 2025-01-10 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2025-05-01 and 2025-05-06 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2025-05-08 and 2025-05-13 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 5 days between 2025-06-12 and 2025-06-17 is outside expected range for frequency=daily (1-4d).
+  - warning: Gap of 13 days between 2025-12-31 and 2026-01-13 is outside expected range for frequency=daily (1-4d).
+- **eec/RU_CPI_MOM** — fetch+validate+process: ok (downloaded=260, processed=260)
+- **eec/RU_CPI_YOY** — fetch+validate+process: ok (downloaded=260, processed=260)
+- **imf/RU_GDP_REAL** — fetch+validate+process: ok (downloaded=49, processed=49)
+- **fred/US_FED_FUNDS** — fetch+validate+process: ok (downloaded=866, processed=866)
+  - warning: Unexpected jump of 52.5% in value between 1954-07-01 (0.8) and 1954-08-01 (1.22).
+  - warning: Unexpected jump of 54.2% in value between 1954-11-01 (0.83) and 1954-12-01 (1.28).
+  - warning: Unexpected jump of 125.0% in value between 1958-07-01 (0.68) and 1958-08-01 (1.53).
+  - warning: Unexpected jump of 75.2% in value between 1961-01-01 (1.45) and 1961-02-01 (2.54).
+  - warning: Unexpected jump of 70.9% in value between 1961-07-01 (1.17) and 1961-08-01 (2.0).
+  - warning: Unexpected jump of 59.8% in value between 2008-10-01 (0.97) and 2008-11-01 (0.39).
+  - warning: Unexpected jump of 59.0% in value between 2008-11-01 (0.39) and 2008-12-01 (0.16).
+  - warning: Unexpected jump of 100.0% in value between 2015-11-01 (0.12) and 2015-12-01 (0.24).
+  - warning: Unexpected jump of 58.9% in value between 2020-02-01 (1.58) and 2020-03-01 (0.65).
+  - warning: Unexpected jump of 92.3% in value between 2020-03-01 (0.65) and 2020-04-01 (0.05).
+  - warning: Unexpected jump of 60.0% in value between 2020-05-01 (0.05) and 2020-06-01 (0.08).
+  - warning: Unexpected jump of 150.0% in value between 2022-02-01 (0.08) and 2022-03-01 (0.2).
+  - warning: Unexpected jump of 65.0% in value between 2022-03-01 (0.2) and 2022-04-01 (0.33).
+  - warning: Unexpected jump of 133.3% in value between 2022-04-01 (0.33) and 2022-05-01 (0.77).
+  - warning: Unexpected jump of 57.1% in value between 2022-05-01 (0.77) and 2022-06-01 (1.21).
+- **fred/US_TREASURY_1Y** — fetch+validate+process: ok (downloaded=881, processed=881)
+  - warning: Unexpected jump of 55.3% in value between 1958-07-01 (1.61) and 1958-08-01 (2.5).
+  - warning: Unexpected jump of 54.2% in value between 2008-11-01 (1.07) and 2008-12-01 (0.49).
+  - warning: Unexpected jump of 61.5% in value between 2014-11-01 (0.13) and 2014-12-01 (0.21).
+  - warning: Unexpected jump of 84.6% in value between 2015-10-01 (0.26) and 2015-11-01 (0.48).
+  - warning: Unexpected jump of 76.6% in value between 2020-02-01 (1.41) and 2020-03-01 (0.33).
+  - warning: Unexpected jump of 63.6% in value between 2021-10-01 (0.11) and 2021-11-01 (0.18).
+  - warning: Unexpected jump of 66.7% in value between 2021-11-01 (0.18) and 2021-12-01 (0.3).
+  - warning: Unexpected jump of 83.3% in value between 2021-12-01 (0.3) and 2022-01-01 (0.55).
+  - warning: Unexpected jump of 81.8% in value between 2022-01-01 (0.55) and 2022-02-01 (1.0).
+- **fred/US_TREASURY_2Y** — fetch+validate+process: ok (downloaded=603, processed=603)
+  - warning: Unexpected jump of 66.2% in value between 2020-02-01 (1.33) and 2020-03-01 (0.45).
+  - warning: Unexpected jump of 51.1% in value between 2020-03-01 (0.45) and 2020-04-01 (0.22).
+  - warning: Unexpected jump of 62.5% in value between 2021-09-01 (0.24) and 2021-10-01 (0.39).
+- **fred/US_TREASURY_10Y** — fetch+validate+process: ok (downloaded=881, processed=881)
+- **fred/US_CPI** — fetch+validate+process: ok (downloaded=955, processed=955)
+  - warning: Gap of 61 days between 2025-09-01 and 2025-11-01 is outside expected range for frequency=monthly (25-40d).
+- **fred/US_GDP_REAL** — fetch+validate+process: ok (downloaded=318, processed=318)
+- **eec/BY_CPI_YOY** — fetch+validate+process: ok (downloaded=260, processed=260)
+- **eec/KG_CPI_YOY** — fetch+validate+process: ok (downloaded=260, processed=260)
+- **imf/CN_CPI_YOY** — fetch+validate+process: ok (downloaded=392, processed=392)
+  - warning: Unexpected jump of 63.6% in value between 1997-11-01 (1.1) and 1997-12-01 (0.4).
+  - warning: Unexpected jump of 133.3% in value between 1998-01-01 (0.3) and 1998-02-01 (-0.1).
+  - warning: Unexpected jump of 800.0% in value between 1998-02-01 (-0.1) and 1998-03-01 (0.7).
+  - warning: Unexpected jump of 142.9% in value between 1998-03-01 (0.7) and 1998-04-01 (-0.3).
+  - warning: Unexpected jump of 233.3% in value between 1998-04-01 (-0.3) and 1998-05-01 (-1.0).
+  - warning: Unexpected jump of 50.0% in value between 1999-10-01 (-0.6) and 1999-11-01 (-0.9).
+  - warning: Unexpected jump of 80.0% in value between 1999-12-01 (-1.0) and 2000-01-01 (-0.2).
+  - warning: Unexpected jump of 450.0% in value between 2000-01-01 (-0.2) and 2000-02-01 (0.7).
+  - warning: Unexpected jump of 128.6% in value between 2000-02-01 (0.7) and 2000-03-01 (-0.2).
+  - warning: Unexpected jump of 133.3% in value between 2000-04-01 (-0.3) and 2000-05-01 (0.1).
+  - warning: Unexpected jump of 400.0% in value between 2000-05-01 (0.1) and 2000-06-01 (0.5).
+  - warning: Unexpected jump of 100.0% in value between 2000-08-01 (0.3) and 2000-09-01 (0.0).
+  - warning: Unexpected jump of 100.0% in value between 2001-01-01 (1.2) and 2001-02-01 (0.0).
+  - warning: Unexpected jump of 100.0% in value between 2001-03-01 (0.8) and 2001-04-01 (1.6).
+  - warning: Unexpected jump of 110.0% in value between 2001-08-01 (1.0) and 2001-09-01 (-0.1).
+  - warning: Unexpected jump of 300.0% in value between 2001-09-01 (-0.1) and 2001-10-01 (0.2).
+  - warning: Unexpected jump of 250.0% in value between 2001-10-01 (0.2) and 2001-11-01 (-0.3).
+  - warning: Unexpected jump of 237.3% in value between 2001-12-01 (-0.3) and 2002-01-01 (-1.0119).
+  - warning: Unexpected jump of 97.7% in value between 2002-01-01 (-1.0119) and 2002-02-01 (-0.023).
+  - warning: Unexpected jump of 3061.3% in value between 2002-02-01 (-0.023) and 2002-03-01 (-0.7271).
+  - warning: Unexpected jump of 68.1% in value between 2002-03-01 (-0.7271) and 2002-04-01 (-1.2224).
+  - warning: Unexpected jump of 185.7% in value between 2002-12-01 (-0.4276) and 2003-01-01 (0.3666).
+  - warning: Unexpected jump of 54.2% in value between 2003-01-01 (0.3666) and 2003-02-01 (0.168).
+  - warning: Unexpected jump of 422.9% in value between 2003-02-01 (0.168) and 2003-03-01 (0.8784).
+  - warning: Unexpected jump of 53.0% in value between 2003-05-01 (0.5745) and 2003-06-01 (0.27).
+  - warning: Unexpected jump of 74.8% in value between 2003-06-01 (0.27) and 2003-07-01 (0.472).
+  - warning: Unexpected jump of 84.9% in value between 2003-07-01 (0.472) and 2003-08-01 (0.8727).
+  - warning: Unexpected jump of 65.8% in value between 2003-09-01 (1.0724) and 2003-10-01 (1.7785).
+  - warning: Unexpected jump of 63.0% in value between 2003-10-01 (1.7785) and 2003-11-01 (2.8992).
+  - warning: Unexpected jump of 113.3% in value between 2005-01-01 (1.8007) and 2005-02-01 (3.8408).
+  - warning: Unexpected jump of 57.1% in value between 2006-01-01 (2.2888) and 2006-02-01 (0.9825).
+  - warning: Unexpected jump of 51.6% in value between 2006-03-01 (0.9825) and 2006-04-01 (1.489).
+  - warning: Unexpected jump of 51.2% in value between 2006-10-01 (1.1884) and 2006-11-01 (1.7973).
+  - warning: Unexpected jump of 56.4% in value between 2006-11-01 (1.7973) and 2006-12-01 (2.8112).
+  - warning: Unexpected jump of 266.6% in value between 2009-01-01 (0.9598) and 2009-02-01 (-1.5986).
+  - warning: Unexpected jump of 181.6% in value between 2009-10-01 (-0.6076) and 2009-11-01 (0.4955).
+  - warning: Unexpected jump of 243.9% in value between 2009-11-01 (0.4955) and 2009-12-01 (1.7039).
+  - warning: Unexpected jump of 87.6% in value between 2010-01-01 (1.3956) and 2010-02-01 (2.6182).
+  - warning: Unexpected jump of 60.1% in value between 2013-01-01 (2.0248) and 2013-02-01 (3.2421).
+  - warning: Unexpected jump of 99.0% in value between 2015-01-01 (0.7099) and 2015-02-01 (1.4127).
+  - warning: Unexpected jump of 69.7% in value between 2017-01-01 (2.5717) and 2017-02-01 (0.779).
+  - warning: Unexpected jump of 100.4% in value between 2018-01-01 (1.4465) and 2018-02-01 (2.8985).
+  - warning: Unexpected jump of 51.7% in value between 2019-02-01 (1.5023) and 2019-03-01 (2.2792).
+  - warning: Unexpected jump of 68.7% in value between 2020-09-01 (1.7304) and 2020-10-01 (0.5415).
+  - warning: Unexpected jump of 183.0% in value between 2020-10-01 (0.5415) and 2020-11-01 (-0.4496).
+  - warning: Unexpected jump of 160.0% in value between 2020-11-01 (-0.4496) and 2020-12-01 (0.2698).
+  - warning: Unexpected jump of 182.1% in value between 2020-12-01 (0.2698) and 2021-01-01 (-0.2216).
+  - warning: Unexpected jump of 90.8% in value between 2021-01-01 (-0.2216) and 2021-02-01 (-0.4228).
+  - warning: Unexpected jump of 176.1% in value between 2021-02-01 (-0.4228) and 2021-03-01 (0.3219).
+  - warning: Unexpected jump of 186.6% in value between 2021-03-01 (0.3219) and 2021-04-01 (0.9226).
+  - warning: Unexpected jump of 78.2% in value between 2021-04-01 (0.9226) and 2021-05-01 (1.6444).
+  - warning: Unexpected jump of 54.2% in value between 2021-06-01 (1.2402) and 2021-07-01 (1.9126).
+  - warning: Unexpected jump of 66.5% in value between 2021-07-01 (1.9126) and 2021-08-01 (0.6416).
+  - warning: Unexpected jump of 210.5% in value between 2021-09-01 (0.4614) and 2021-10-01 (1.4328).
+  - warning: Unexpected jump of 72.9% in value between 2021-10-01 (1.4328) and 2021-11-01 (2.4773).
+  - warning: Unexpected jump of 50.7% in value between 2022-02-01 (0.9852) and 2022-03-01 (1.4851).
+  - warning: Unexpected jump of 52.7% in value between 2023-01-01 (2.0608) and 2023-02-01 (0.9756).
+  - warning: Unexpected jump of 85.8% in value between 2023-03-01 (0.6829) and 2023-04-01 (0.0972).
+  - warning: Unexpected jump of 100.3% in value between 2023-04-01 (0.0972) and 2023-05-01 (0.1947).
+  - warning: Unexpected jump of 100.0% in value between 2023-05-01 (0.1947) and 2023-06-01 (0.0).
+  - warning: Unexpected jump of 133.4% in value between 2023-07-01 (-0.2907) and 2023-08-01 (0.097).
+  - warning: Unexpected jump of 100.0% in value between 2023-08-01 (0.097) and 2023-09-01 (0.0).
+  - warning: Unexpected jump of 150.5% in value between 2023-10-01 (-0.1932) and 2023-11-01 (-0.484).
+  - warning: Unexpected jump of 197.7% in value between 2023-12-01 (-0.2907) and 2024-01-01 (-0.8654).
+  - warning: Unexpected jump of 178.1% in value between 2024-01-01 (-0.8654) and 2024-02-01 (0.6763).
+  - warning: Unexpected jump of 85.7% in value between 2024-02-01 (0.6763) and 2024-03-01 (0.0969).
+  - warning: Unexpected jump of 100.4% in value between 2024-03-01 (0.0969) and 2024-04-01 (0.1942).
+  - warning: Unexpected jump of 50.1% in value between 2024-04-01 (0.1942) and 2024-05-01 (0.2915).
+  - warning: Unexpected jump of 149.6% in value between 2024-06-01 (0.1947) and 2024-07-01 (0.4859).
+  - warning: Unexpected jump of 50.1% in value between 2024-11-01 (0.1946) and 2024-12-01 (0.0972).
+  - warning: Unexpected jump of 399.0% in value between 2024-12-01 (0.0972) and 2025-01-01 (0.485).
+  - warning: Unexpected jump of 258.3% in value between 2025-01-01 (0.485) and 2025-02-01 (-0.7678).
+  - warning: Unexpected jump of 87.4% in value between 2025-02-01 (-0.7678) and 2025-03-01 (-0.0968).
+  - warning: Unexpected jump of 248.8% in value between 2025-05-01 (-0.074) and 2025-06-01 (0.1101).
+  - warning: Unexpected jump of 83.8% in value between 2025-06-01 (0.1101) and 2025-07-01 (0.0178).
+  - warning: Unexpected jump of 2145.5% in value between 2025-07-01 (0.0178) and 2025-08-01 (-0.3641).
+  - warning: Unexpected jump of 185.4% in value between 2025-09-01 (-0.2707) and 2025-10-01 (0.2313).
+  - warning: Unexpected jump of 209.5% in value between 2025-10-01 (0.2313) and 2025-11-01 (0.7158).
+  - warning: Unexpected jump of 72.0% in value between 2025-12-01 (0.8181) and 2026-01-01 (0.2291).
+  - warning: Unexpected jump of 481.4% in value between 2026-01-01 (0.2291) and 2026-02-01 (1.3319).
+  - warning: Unexpected jump of 50.0% in value between 2026-06-01 (1.0001) and 2026-07-01 (0.5).
+  - warning: Unexpected jump of 60.0% in value between 2026-07-01 (0.5) and 2026-08-01 (0.8).
+- **nbs/CN_GDP_REAL_YOY** — fetch+validate+process: ok (downloaded=134, processed=134)
+- **ecb/EA_HICP_YOY** — fetch+validate+process: ok (downloaded=356, processed=356)
+  - warning: Unexpected jump of 100.0% in value between 2009-04-01 (0.6) and 2009-05-01 (0.0).
+  - warning: Unexpected jump of 600.0% in value between 2009-06-01 (-0.1) and 2009-07-01 (-0.7).
+  - warning: Unexpected jump of 71.4% in value between 2009-07-01 (-0.7) and 2009-08-01 (-0.2).
+  - warning: Unexpected jump of 66.7% in value between 2009-09-01 (-0.3) and 2009-10-01 (-0.1).
+  - warning: Unexpected jump of 600.0% in value between 2009-10-01 (-0.1) and 2009-11-01 (0.5).
+  - warning: Unexpected jump of 80.0% in value between 2009-11-01 (0.5) and 2009-12-01 (0.9).
+  - warning: Unexpected jump of 100.0% in value between 2010-02-01 (0.8) and 2010-03-01 (1.6).
+  - warning: Unexpected jump of 166.7% in value between 2014-11-01 (0.3) and 2014-12-01 (-0.2).
+  - warning: Unexpected jump of 200.0% in value between 2014-12-01 (-0.2) and 2015-01-01 (-0.6).
+  - warning: Unexpected jump of 66.7% in value between 2015-02-01 (-0.3) and 2015-03-01 (-0.1).
+  - warning: Unexpected jump of 300.0% in value between 2015-03-01 (-0.1) and 2015-04-01 (0.2).
+  - warning: Unexpected jump of 200.0% in value between 2015-04-01 (0.2) and 2015-05-01 (0.6).
+  - warning: Unexpected jump of 100.0% in value between 2015-09-01 (0.2) and 2015-10-01 (0.4).
+  - warning: Unexpected jump of 75.0% in value between 2015-10-01 (0.4) and 2015-11-01 (0.1).
+  - warning: Unexpected jump of 100.0% in value between 2015-11-01 (0.1) and 2015-12-01 (0.2).
+  - warning: Unexpected jump of 133.3% in value between 2016-01-01 (0.3) and 2016-02-01 (-0.1).
+  - warning: Unexpected jump of 100.0% in value between 2016-02-01 (-0.1) and 2016-03-01 (0.0).
+  - warning: Unexpected jump of 66.7% in value between 2016-04-01 (-0.3) and 2016-05-01 (-0.1).
+  - warning: Unexpected jump of 200.0% in value between 2016-05-01 (-0.1) and 2016-06-01 (0.1).
+  - warning: Unexpected jump of 100.0% in value between 2016-06-01 (0.1) and 2016-07-01 (0.2).
+  - warning: Unexpected jump of 100.0% in value between 2016-08-01 (0.2) and 2016-09-01 (0.4).
+  - warning: Unexpected jump of 83.3% in value between 2016-11-01 (0.6) and 2016-12-01 (1.1).
+  - warning: Unexpected jump of 54.5% in value between 2016-12-01 (1.1) and 2017-01-01 (1.7).
+  - warning: Unexpected jump of 66.7% in value between 2018-04-01 (1.2) and 2018-05-01 (2.0).
+  - warning: Unexpected jump of 57.1% in value between 2020-03-01 (0.7) and 2020-04-01 (0.3).
+  - warning: Unexpected jump of 66.7% in value between 2020-04-01 (0.3) and 2020-05-01 (0.1).
+  - warning: Unexpected jump of 200.0% in value between 2020-05-01 (0.1) and 2020-06-01 (0.3).
+  - warning: Unexpected jump of 150.0% in value between 2020-07-01 (0.4) and 2020-08-01 (-0.2).
+  - warning: Unexpected jump of 400.0% in value between 2020-12-01 (-0.3) and 2021-01-01 (0.9).
+- **ecb/EA_GDP_REAL** — fetch+validate+process: ok (downloaded=125, processed=125)
+- **ecb/EA_DEPOSIT_RATE** — fetch+validate+process: ok (downloaded=69, processed=69)
+  - warning: Unexpected jump of 100.0% in value between 2009-05-13 (0.25) and 2011-04-13 (0.5).
+  - warning: Unexpected jump of 100.0% in value between 2011-12-14 (0.25) and 2012-07-11 (0.0).
+  - warning: Unexpected jump of 100.0% in value between 2014-06-11 (-0.1) and 2014-09-10 (-0.2).
+  - warning: Unexpected jump of 100.0% in value between 2019-09-18 (-0.5) and 2022-07-27 (0.0).
+  - warning: Unexpected jump of 100.0% in value between 2022-09-14 (0.75) and 2022-11-02 (1.5).
+- **derived/FOREIGN_DEMAND_YOY** — fetch+validate+process: ok (downloaded=45, processed=45)
+- **derived/KZT_USD_RATE_DIFF_ON** — fetch+validate+process: ok (downloaded=300, processed=300)
+  - warning: Unexpected jump of 238.9% in value between 2001-09-01 (0.3229) and 2001-10-01 (1.0943).
+  - warning: Unexpected jump of 205.5% in value between 2001-10-01 (1.0943) and 2001-11-01 (3.3429).
+  - warning: Unexpected jump of 58.7% in value between 2003-08-01 (2.6395) and 2003-09-01 (4.1895).
+  - warning: Unexpected jump of 63.2% in value between 2003-10-01 (3.485) and 2003-11-01 (1.284).
+  - warning: Unexpected jump of 55.3% in value between 2003-11-01 (1.284) and 2003-12-01 (1.9943).
+  - warning: Unexpected jump of 90.4% in value between 2004-03-01 (0.9919) and 2004-04-01 (1.8882).
+  - warning: Unexpected jump of 52.7% in value between 2004-05-01 (2.1411) and 2004-06-01 (1.0127).
+  - warning: Unexpected jump of 85.1% in value between 2004-06-01 (1.0127) and 2004-07-01 (0.1509).
+  - warning: Unexpected jump of 247.8% in value between 2004-07-01 (0.1509) and 2004-08-01 (0.5248).
+  - warning: Unexpected jump of 309.1% in value between 2004-09-01 (0.4827) and 2004-10-01 (-1.0095).
+  - warning: Unexpected jump of 54.5% in value between 2004-12-01 (-0.8924) and 2005-01-01 (-0.4063).
+  - warning: Unexpected jump of 255.0% in value between 2005-01-01 (-0.4063) and 2005-02-01 (-1.4425).
+  - warning: Unexpected jump of 89.6% in value between 2005-06-01 (-1.3141) and 2005-07-01 (-2.4914).
+  - warning: Unexpected jump of 61.0% in value between 2006-01-01 (-2.3747) and 2006-02-01 (-3.823).
+  - warning: Unexpected jump of 69.0% in value between 2006-08-01 (-3.3977) and 2006-09-01 (-1.0533).
+  - warning: Unexpected jump of 131.0% in value between 2006-10-01 (-1.3962) and 2006-11-01 (-3.2259).
+  - warning: Unexpected jump of 57.5% in value between 2007-03-01 (-3.657) and 2007-04-01 (-1.5538).
+  - warning: Unexpected jump of 65.6% in value between 2007-04-01 (-1.5538) and 2007-05-01 (-2.5738).
+  - warning: Unexpected jump of 75.2% in value between 2007-05-01 (-2.5738) and 2007-06-01 (-0.6381).
+  - warning: Unexpected jump of 75.8% in value between 2007-06-01 (-0.6381) and 2007-07-01 (-0.1545).
+  - warning: Unexpected jump of 2324.7% in value between 2007-07-01 (-0.1545) and 2007-08-01 (3.4371).
+  - warning: Unexpected jump of 107.3% in value between 2007-09-01 (2.5343) and 2007-10-01 (-0.1859).
+  - warning: Unexpected jump of 695.1% in value between 2007-10-01 (-0.1859) and 2007-11-01 (-1.4781).
+  - warning: Unexpected jump of 96.1% in value between 2007-12-01 (-1.6206) and 2008-01-01 (-0.063).
+  - warning: Unexpected jump of 1723.8% in value between 2008-01-01 (-0.063) and 2008-02-01 (-1.149).
+  - warning: Unexpected jump of 272.7% in value between 2008-03-01 (-1.1) and 2008-04-01 (1.8995).
+  - warning: Unexpected jump of 181.2% in value between 2008-04-01 (1.8995) and 2008-05-01 (-1.542).
+  - warning: Unexpected jump of 55.4% in value between 2008-05-01 (-1.542) and 2008-06-01 (-0.6875).
+  - warning: Unexpected jump of 239.6% in value between 2008-06-01 (-0.6875) and 2008-07-01 (0.96).
+  - warning: Unexpected jump of 90.5% in value between 2008-09-01 (1.1771) and 2008-10-01 (2.2423).
+  - warning: Unexpected jump of 127.1% in value between 2008-10-01 (2.2423) and 2008-11-01 (5.0915).
+  - warning: Unexpected jump of 71.1% in value between 2008-12-01 (6.319) and 2009-01-01 (10.8147).
+  - warning: Unexpected jump of 76.4% in value between 2009-02-01 (6.3285) and 2009-03-01 (1.494).
+  - warning: Unexpected jump of 62.0% in value between 2009-03-01 (1.494) and 2009-04-01 (0.5673).
+  - warning: Unexpected jump of 69.7% in value between 2009-05-01 (0.6474) and 2009-06-01 (1.0986).
+  - warning: Unexpected jump of 63.3% in value between 2009-12-01 (0.1557) and 2010-01-01 (0.0572).
+  - warning: Unexpected jump of 121.0% in value between 2010-01-01 (0.0572) and 2010-02-01 (-0.012).
+  - warning: Unexpected jump of 343.3% in value between 2010-02-01 (-0.012) and 2010-03-01 (-0.0532).
+  - warning: Unexpected jump of 552.1% in value between 2010-04-01 (-0.0305) and 2010-05-01 (0.1379).
+  - warning: Unexpected jump of 57.5% in value between 2010-05-01 (0.1379) and 2010-06-01 (0.0586).
+  - warning: Unexpected jump of 255.5% in value between 2010-07-01 (0.0805) and 2010-08-01 (0.2862).
+  - warning: Unexpected jump of 72.9% in value between 2010-08-01 (0.2862) and 2010-09-01 (0.0777).
+  - warning: Unexpected jump of 91.2% in value between 2010-09-01 (0.0777) and 2010-10-01 (0.1486).
+  - warning: Unexpected jump of 82.6% in value between 2010-10-01 (0.1486) and 2010-11-01 (0.0258).
+  - warning: Unexpected jump of 84.5% in value between 2010-11-01 (0.0258) and 2010-12-01 (0.0476).
+  - warning: Unexpected jump of 50.6% in value between 2010-12-01 (0.0476) and 2011-01-01 (0.0717).
+  - warning: Unexpected jump of 82.6% in value between 2011-01-01 (0.0717) and 2011-02-01 (0.0125).
+  - warning: Unexpected jump of 119.2% in value between 2011-02-01 (0.0125) and 2011-03-01 (0.0274).
+  - warning: Unexpected jump of 1090.0% in value between 2011-04-01 (0.0271) and 2011-05-01 (0.3225).
+  - warning: Unexpected jump of 74.9% in value between 2011-05-01 (0.3225) and 2011-06-01 (0.0809).
+  - warning: Unexpected jump of 691.8% in value between 2011-07-01 (0.1085) and 2011-08-01 (0.8591).
+  - warning: Unexpected jump of 60.2% in value between 2011-08-01 (0.8591) and 2011-09-01 (0.3418).
+  - warning: Unexpected jump of 195.8% in value between 2011-09-01 (0.3418) and 2011-10-01 (1.011).
+  - warning: Unexpected jump of 75.4% in value between 2011-11-01 (0.9036) and 2011-12-01 (0.2225).
+  - warning: Unexpected jump of 87.2% in value between 2011-12-01 (0.2225) and 2012-01-01 (0.0285).
+  - warning: Unexpected jump of 185.6% in value between 2012-01-01 (0.0285) and 2012-02-01 (0.0814).
+  - warning: Unexpected jump of 100.0% in value between 2012-02-01 (0.0814) and 2012-03-01 (0.0).
+  - warning: Unexpected jump of 1922.5% in value between 2012-04-01 (0.0457) and 2012-05-01 (0.9243).
+  - warning: Unexpected jump of 57.3% in value between 2012-05-01 (0.9243) and 2012-06-01 (0.3943).
+  - warning: Unexpected jump of 691.7% in value between 2012-07-01 (0.23) and 2012-08-01 (1.8209).
+  - warning: Unexpected jump of 57.6% in value between 2012-08-01 (1.8209) and 2012-09-01 (0.7725).
+  - warning: Unexpected jump of 90.9% in value between 2012-09-01 (0.7725) and 2012-10-01 (1.475).
+  - warning: Unexpected jump of 87.7% in value between 2012-12-01 (1.7361) and 2013-01-01 (0.213).
+  - warning: Unexpected jump of 267.1% in value between 2013-01-01 (0.213) and 2013-02-01 (0.782).
+  - warning: Unexpected jump of 92.8% in value between 2013-02-01 (0.782) and 2013-03-01 (0.0565).
+  - warning: Unexpected jump of 129.2% in value between 2013-03-01 (0.0565) and 2013-04-01 (0.1295).
+  - warning: Unexpected jump of 697.7% in value between 2013-04-01 (0.1295) and 2013-05-01 (1.033).
+  - warning: Unexpected jump of 170.1% in value between 2013-07-01 (1.6536) and 2013-08-01 (4.4657).
+  - warning: Unexpected jump of 53.1% in value between 2013-08-01 (4.4657) and 2013-09-01 (2.0943).
+  - warning: Unexpected jump of 98.6% in value between 2014-01-01 (1.5405) and 2014-02-01 (3.0595).
+  - warning: Unexpected jump of 564.9% in value between 2014-02-01 (3.0595) and 2014-03-01 (20.3424).
+  - warning: Unexpected jump of 97.1% in value between 2014-03-01 (20.3424) and 2014-04-01 (0.5882).
+  - warning: Unexpected jump of 105.9% in value between 2014-06-01 (0.6633) and 2014-07-01 (1.3659).
+  - warning: Unexpected jump of 60.7% in value between 2014-07-01 (1.3659) and 2014-08-01 (2.1948).
+  - warning: Unexpected jump of 77.1% in value between 2014-08-01 (2.1948) and 2014-09-01 (0.5019).
+  - warning: Unexpected jump of 1086.5% in value between 2014-09-01 (0.5019) and 2014-10-01 (5.9548).
+  - warning: Unexpected jump of 579.9% in value between 2014-11-01 (6.083) and 2014-12-01 (41.356).
+  - warning: Unexpected jump of 64.0% in value between 2014-12-01 (41.356) and 2015-01-01 (14.8874).
+  - warning: Unexpected jump of 76.2% in value between 2015-05-01 (11.04) and 2015-06-01 (2.6314).
+  - warning: Unexpected jump of 210.8% in value between 2015-07-01 (2.7082) and 2015-08-01 (8.418).
+  - warning: Unexpected jump of 56.1% in value between 2015-08-01 (8.418) and 2015-09-01 (13.1367).
+  - warning: Unexpected jump of 209.5% in value between 2015-11-01 (23.3062) and 2015-12-01 (72.1365).
+  - warning: Unexpected jump of 65.1% in value between 2016-01-01 (45.1783) and 2016-02-01 (15.76).
+  - warning: Unexpected jump of 52.9% in value between 2020-02-01 (7.631) and 2020-03-01 (11.6667).
+- **derived/KZT_USD_RATE_DIFF_1Y** — fetch+validate+process: ok (downloaded=82, processed=82)
+- **derived/KZT_USD_RATE_DIFF_10Y** — fetch+validate+process: ok (downloaded=82, processed=82)
+- **derived/KZT_CARRY_EXCESS_RETURN** — fetch+validate+process: ok (downloaded=299, processed=299)
+  - warning: Unexpected jump of 86.2% in value between 2001-10-01 (-2.1512) and 2001-11-01 (-0.2978).
+  - warning: Unexpected jump of 3038.1% in value between 2001-11-01 (-0.2978) and 2001-12-01 (-9.3454).
+  - warning: Unexpected jump of 74.2% in value between 2002-01-01 (-6.0268) and 2002-02-01 (-1.5528).
+  - warning: Unexpected jump of 123.3% in value between 2002-02-01 (-1.5528) and 2002-03-01 (0.3613).
+  - warning: Unexpected jump of 323.6% in value between 2002-03-01 (0.3613) and 2002-04-01 (-0.8077).
+  - warning: Unexpected jump of 357.7% in value between 2002-04-01 (-0.8077) and 2002-05-01 (2.0811).
+  - warning: Unexpected jump of 56.7% in value between 2002-05-01 (2.0811) and 2002-06-01 (0.9009).
+  - warning: Unexpected jump of 381.2% in value between 2002-06-01 (0.9009) and 2002-07-01 (-2.5337).
+  - warning: Unexpected jump of 142.7% in value between 2002-07-01 (-2.5337) and 2002-08-01 (1.0814).
+  - warning: Unexpected jump of 144.1% in value between 2002-08-01 (1.0814) and 2002-09-01 (-0.477).
+  - warning: Unexpected jump of 1053.1% in value between 2002-09-01 (-0.477) and 2002-10-01 (4.5462).
+  - warning: Unexpected jump of 250.8% in value between 2002-11-01 (4.571) and 2002-12-01 (-6.8944).
+  - warning: Unexpected jump of 195.9% in value between 2002-12-01 (-6.8944) and 2003-01-01 (6.6117).
+  - warning: Unexpected jump of 248.2% in value between 2003-01-01 (6.6117) and 2003-02-01 (23.0214).
+  - warning: Unexpected jump of 124.2% in value between 2003-03-01 (13.931) and 2003-04-01 (-3.3721).
+  - warning: Unexpected jump of 516.1% in value between 2003-04-01 (-3.3721) and 2003-05-01 (14.0307).
+  - warning: Unexpected jump of 65.2% in value between 2003-05-01 (14.0307) and 2003-06-01 (23.1765).
+  - warning: Unexpected jump of 113.8% in value between 2003-07-01 (12.2237) and 2003-08-01 (-1.6842).
+  - warning: Unexpected jump of 406.3% in value between 2003-08-01 (-1.6842) and 2003-09-01 (-8.5279).
+  - warning: Unexpected jump of 226.2% in value between 2003-09-01 (-8.5279) and 2003-10-01 (10.7587).
+  - warning: Unexpected jump of 69.0% in value between 2003-11-01 (12.8507) and 2003-12-01 (21.7176).
+  - warning: Unexpected jump of 96.2% in value between 2003-12-01 (21.7176) and 2004-01-01 (42.6146).
+  - warning: Unexpected jump of 93.4% in value between 2004-01-01 (42.6146) and 2004-02-01 (2.8148).
+  - warning: Unexpected jump of 136.4% in value between 2004-04-01 (5.1761) and 2004-05-01 (12.2339).
+  - warning: Unexpected jump of 84.3% in value between 2004-06-01 (8.8144) and 2004-07-01 (1.3828).
+  - warning: Unexpected jump of 252.8% in value between 2004-07-01 (1.3828) and 2004-08-01 (-2.1134).
+  - warning: Unexpected jump of 981.4% in value between 2004-08-01 (-2.1134) and 2004-09-01 (18.6267).
+  - warning: Unexpected jump of 104.1% in value between 2004-11-01 (17.2995) and 2004-12-01 (-0.7078).
+  - warning: Unexpected jump of 439.2% in value between 2004-12-01 (-0.7078) and 2005-01-01 (-3.8168).
+  - warning: Unexpected jump of 115.3% in value between 2005-01-01 (-3.8168) and 2005-02-01 (0.5842).
+  - warning: Unexpected jump of 4224.0% in value between 2005-02-01 (0.5842) and 2005-03-01 (-24.0922).
+  - warning: Unexpected jump of 123.3% in value between 2005-03-01 (-24.0922) and 2005-04-01 (5.6078).
+  - warning: Unexpected jump of 253.0% in value between 2005-04-01 (5.6078) and 2005-05-01 (-8.5795).
+  - warning: Unexpected jump of 204.7% in value between 2005-05-01 (-8.5795) and 2005-06-01 (-26.1441).
+  - warning: Unexpected jump of 75.2% in value between 2005-06-01 (-26.1441) and 2005-07-01 (-6.4771).
+  - warning: Unexpected jump of 127.6% in value between 2005-07-01 (-6.4771) and 2005-08-01 (1.7903).
+  - warning: Unexpected jump of 392.8% in value between 2005-08-01 (1.7903) and 2005-09-01 (8.8226).
+  - warning: Unexpected jump of 134.6% in value between 2005-09-01 (8.8226) and 2005-10-01 (-3.05).
+  - warning: Unexpected jump of 776.6% in value between 2005-12-01 (-2.0612) and 2006-01-01 (13.9471).
+  - warning: Unexpected jump of 191.4% in value between 2006-03-01 (12.7445) and 2006-04-01 (37.1332).
+  - warning: Unexpected jump of 106.1% in value between 2006-06-01 (24.1451) and 2006-07-01 (-1.471).
+  - warning: Unexpected jump of 4705.7% in value between 2006-07-01 (-1.471) and 2006-08-01 (-70.6922).
+  - warning: Unexpected jump of 73.2% in value between 2006-08-01 (-70.6922) and 2006-09-01 (-18.9329).
+  - warning: Unexpected jump of 57.8% in value between 2006-09-01 (-18.9329) and 2006-10-01 (-7.986).
+  - warning: Unexpected jump of 142.7% in value between 2006-11-01 (-4.7271) and 2006-12-01 (2.0171).
+  - warning: Unexpected jump of 257.6% in value between 2006-12-01 (2.0171) and 2007-01-01 (7.2132).
+  - warning: Unexpected jump of 193.3% in value between 2007-01-01 (7.2132) and 2007-02-01 (21.1577).
+  - warning: Unexpected jump of 119.1% in value between 2007-02-01 (21.1577) and 2007-03-01 (-4.0449).
+  - warning: Unexpected jump of 969.5% in value between 2007-03-01 (-4.0449) and 2007-04-01 (35.1722).
+  - warning: Unexpected jump of 152.5% in value between 2007-04-01 (35.1722) and 2007-05-01 (-18.4655).
+  - warning: Unexpected jump of 94.4% in value between 2007-05-01 (-18.4655) and 2007-06-01 (-1.0327).
+  - warning: Unexpected jump of 1762.7% in value between 2007-06-01 (-1.0327) and 2007-07-01 (-19.236).
+  - warning: Unexpected jump of 335.0% in value between 2007-08-01 (-21.922) and 2007-09-01 (51.5207).
+  - warning: Unexpected jump of 93.4% in value between 2007-09-01 (51.5207) and 2007-10-01 (3.3838).
+  - warning: Unexpected jump of 152.5% in value between 2007-10-01 (3.3838) and 2007-11-01 (-1.776).
+  - warning: Unexpected jump of 328.1% in value between 2007-11-01 (-1.776) and 2007-12-01 (4.0518).
+  - warning: Unexpected jump of 81.9% in value between 2007-12-01 (4.0518) and 2008-01-01 (0.7353).
+  - warning: Unexpected jump of 1136.3% in value between 2008-01-01 (0.7353) and 2008-02-01 (-7.6197).
+  - warning: Unexpected jump of 109.0% in value between 2008-02-01 (-7.6197) and 2008-03-01 (0.6884).
+  - warning: Unexpected jump of 609.8% in value between 2008-03-01 (0.6884) and 2008-04-01 (4.8861).
+  - warning: Unexpected jump of 147.9% in value between 2008-04-01 (4.8861) and 2008-05-01 (-2.3391).
+  - warning: Unexpected jump of 288.2% in value between 2008-06-01 (-3.4733) and 2008-07-01 (6.5382).
+  - warning: Unexpected jump of 106.8% in value between 2008-08-01 (6.2931) and 2008-09-01 (-0.4265).
+  - warning: Unexpected jump of 625.7% in value between 2008-09-01 (-0.4265) and 2008-10-01 (2.2423).
+  - warning: Unexpected jump of 113.6% in value between 2008-10-01 (2.2423) and 2008-11-01 (-0.3049).
+  - warning: Unexpected jump of 801.4% in value between 2008-11-01 (-0.3049) and 2008-12-01 (2.1385).
+  - warning: Unexpected jump of 8393.1% in value between 2009-01-01 (2.9907) and 2009-02-01 (-248.0225).
+  - warning: Unexpected jump of 96.9% in value between 2009-02-01 (-248.0225) and 2009-03-01 (-7.5759).
+  - warning: Unexpected jump of 178.8% in value between 2009-03-01 (-7.5759) and 2009-04-01 (5.9691).
+  - warning: Unexpected jump of 71.3% in value between 2009-05-01 (3.2776) and 2009-06-01 (0.9391).
+  - warning: Unexpected jump of 256.4% in value between 2009-06-01 (0.9391) and 2009-07-01 (-1.4683).
+  - warning: Unexpected jump of 92.8% in value between 2009-07-01 (-1.4683) and 2009-08-01 (-0.1059).
+  - warning: Unexpected jump of 479.3% in value between 2009-08-01 (-0.1059) and 2009-09-01 (-0.6135).
+  - warning: Unexpected jump of 446.2% in value between 2009-09-01 (-0.6135) and 2009-10-01 (2.1242).
+  - warning: Unexpected jump of 673.3% in value between 2009-10-01 (2.1242) and 2009-11-01 (16.4259).
+  - warning: Unexpected jump of 81.3% in value between 2009-11-01 (16.4259) and 2009-12-01 (3.064).
+  - warning: Unexpected jump of 53.2% in value between 2009-12-01 (3.064) and 2010-01-01 (1.433).
+  - warning: Unexpected jump of 386.6% in value between 2010-01-01 (1.433) and 2010-02-01 (6.9723).
+  - warning: Unexpected jump of 75.0% in value between 2010-02-01 (6.9723) and 2010-03-01 (1.7401).
+  - warning: Unexpected jump of 53.1% in value between 2010-03-01 (1.7401) and 2010-04-01 (2.6644).
+  - warning: Unexpected jump of 420.2% in value between 2010-05-01 (2.4292) and 2010-06-01 (-7.7792).
+  - warning: Unexpected jump of 88.5% in value between 2010-06-01 (-7.7792) and 2010-07-01 (-0.8957).
+  - warning: Unexpected jump of 532.0% in value between 2010-07-01 (-0.8957) and 2010-08-01 (3.8693).
+  - warning: Unexpected jump of 167.5% in value between 2010-08-01 (3.8693) and 2010-09-01 (-2.6106).
+  - warning: Unexpected jump of 74.5% in value between 2010-09-01 (-2.6106) and 2010-10-01 (-0.6649).
+  - warning: Unexpected jump of 201.7% in value between 2010-10-01 (-0.6649) and 2010-11-01 (0.6765).
+  - warning: Unexpected jump of 505.2% in value between 2010-12-01 (0.7801) and 2011-01-01 (4.7211).
+  - warning: Unexpected jump of 63.4% in value between 2011-02-01 (6.8151) and 2011-03-01 (2.4957).
+  - warning: Unexpected jump of 56.0% in value between 2011-03-01 (2.4957) and 2011-04-01 (1.0983).
+  - warning: Unexpected jump of 102.1% in value between 2011-04-01 (1.0983) and 2011-05-01 (2.22).
+  - warning: Unexpected jump of 433.7% in value between 2011-05-01 (2.22) and 2011-06-01 (-7.4091).
+  - warning: Unexpected jump of 115.9% in value between 2011-06-01 (-7.4091) and 2011-07-01 (1.1756).
+  - warning: Unexpected jump of 229.3% in value between 2011-07-01 (1.1756) and 2011-08-01 (-1.5202).
+  - warning: Unexpected jump of 660.8% in value between 2011-08-01 (-1.5202) and 2011-09-01 (-11.5653).
+  - warning: Unexpected jump of 131.9% in value between 2011-09-01 (-11.5653) and 2011-10-01 (3.692).
+  - warning: Unexpected jump of 115.2% in value between 2011-10-01 (3.692) and 2011-11-01 (-0.5595).
+  - warning: Unexpected jump of 324.3% in value between 2011-11-01 (-0.5595) and 2011-12-01 (-2.3742).
+  - warning: Unexpected jump of 89.6% in value between 2011-12-01 (-2.3742) and 2012-01-01 (-4.5022).
+  - warning: Unexpected jump of 272.8% in value between 2012-01-01 (-4.5022) and 2012-02-01 (7.7777).
+  - warning: Unexpected jump of 100.0% in value between 2012-02-01 (7.7777) and 2012-03-01 (0.0).
+  - warning: Unexpected jump of 140.0% in value between 2012-04-01 (-1.9033) and 2012-05-01 (0.762).
+  - warning: Unexpected jump of 1384.1% in value between 2012-05-01 (0.762) and 2012-06-01 (-9.7849).
+  - warning: Unexpected jump of 202.1% in value between 2012-07-01 (-5.8683) and 2012-08-01 (5.9901).
+  - warning: Unexpected jump of 167.4% in value between 2012-08-01 (5.9901) and 2012-09-01 (-4.0368).
+  - warning: Unexpected jump of 165.1% in value between 2012-10-01 (-3.7134) and 2012-11-01 (2.4156).
+  - warning: Unexpected jump of 100.7% in value between 2012-11-01 (2.4156) and 2012-12-01 (-0.0165).
+  - warning: Unexpected jump of 2467.9% in value between 2012-12-01 (-0.0165) and 2013-01-01 (-0.4237).
+  - warning: Unexpected jump of 980.2% in value between 2013-01-01 (-0.4237) and 2013-02-01 (3.7295).
+  - warning: Unexpected jump of 188.2% in value between 2013-02-01 (3.7295) and 2013-03-01 (-3.2888).
+  - warning: Unexpected jump of 182.0% in value between 2013-04-01 (-2.8098) and 2013-05-01 (2.3032).
+  - warning: Unexpected jump of 274.5% in value between 2013-05-01 (2.3032) and 2013-06-01 (-4.018).
+  - warning: Unexpected jump of 127.2% in value between 2013-06-01 (-4.018) and 2013-07-01 (-9.1307).
+  - warning: Unexpected jump of 176.4% in value between 2013-07-01 (-9.1307) and 2013-08-01 (6.976).
+  - warning: Unexpected jump of 160.9% in value between 2013-08-01 (6.976) and 2013-09-01 (-4.2498).
+  - warning: Unexpected jump of 304.7% in value between 2013-10-01 (-2.5729) and 2013-11-01 (5.2658).
+  - warning: Unexpected jump of 368.8% in value between 2013-12-01 (5.0019) and 2014-01-01 (-13.4427).
+  - warning: Unexpected jump of 1380.1% in value between 2014-01-01 (-13.4427) and 2014-02-01 (-198.9711).
+  - warning: Unexpected jump of 116.9% in value between 2014-02-01 (-198.9711) and 2014-03-01 (33.5848).
+  - warning: Unexpected jump of 98.4% in value between 2014-03-01 (33.5848) and 2014-04-01 (0.5223).
+  - warning: Unexpected jump of 1815.0% in value between 2014-04-01 (0.5223) and 2014-05-01 (-8.9573).
+  - warning: Unexpected jump of 106.7% in value between 2014-05-01 (-8.9573) and 2014-06-01 (0.5979).
+  - warning: Unexpected jump of 106.6% in value between 2014-06-01 (0.5979) and 2014-07-01 (1.2351).
+  - warning: Unexpected jump of 891.1% in value between 2014-07-01 (1.2351) and 2014-08-01 (12.2405).
+  - warning: Unexpected jump of 90.5% in value between 2014-08-01 (12.2405) and 2014-09-01 (1.1614).
+  - warning: Unexpected jump of 999.4% in value between 2014-09-01 (1.1614) and 2014-10-01 (12.769).
+  - warning: Unexpected jump of 52.4% in value between 2014-10-01 (12.769) and 2014-11-01 (6.083).
+  - warning: Unexpected jump of 419.1% in value between 2014-11-01 (6.083) and 2014-12-01 (31.5767).
+  - warning: Unexpected jump of 96.4% in value between 2014-12-01 (31.5767) and 2015-01-01 (1.1468).
+  - warning: Unexpected jump of 849.8% in value between 2015-01-01 (1.1468) and 2015-02-01 (10.8918).
+  - warning: Unexpected jump of 99.5% in value between 2015-05-01 (11.04) and 2015-06-01 (0.0507).
+  - warning: Unexpected jump of 10594.7% in value between 2015-06-01 (0.0507) and 2015-07-01 (-5.3208).
+  - warning: Unexpected jump of 5094.3% in value between 2015-07-01 (-5.3208) and 2015-08-01 (-276.3767).
+  - warning: Unexpected jump of 84.5% in value between 2015-09-01 (-141.7368) and 2015-10-01 (-22.0174).
+  - warning: Unexpected jump of 314.8% in value between 2015-10-01 (-22.0174) and 2015-11-01 (-91.3356).
+  - warning: Unexpected jump of 239.4% in value between 2016-01-01 (-63.1791) and 2016-02-01 (88.0776).
+  - warning: Unexpected jump of 56.8% in value between 2016-02-01 (88.0776) and 2016-03-01 (38.055).
+  - warning: Unexpected jump of 56.9% in value between 2016-03-01 (38.055) and 2016-04-01 (59.7186).
+  - warning: Unexpected jump of 115.0% in value between 2016-04-01 (59.7186) and 2016-05-01 (-8.9681).
+  - warning: Unexpected jump of 167.1% in value between 2016-05-01 (-8.9681) and 2016-06-01 (6.021).
+  - warning: Unexpected jump of 696.3% in value between 2016-06-01 (6.021) and 2016-07-01 (-35.9036).
+  - warning: Unexpected jump of 265.8% in value between 2016-07-01 (-35.9036) and 2016-08-01 (59.5276).
+  - warning: Unexpected jump of 56.0% in value between 2016-08-01 (59.5276) and 2016-09-01 (26.1816).
+  - warning: Unexpected jump of 180.0% in value between 2016-10-01 (16.3649) and 2016-11-01 (-13.0926).
+  - warning: Unexpected jump of 373.9% in value between 2016-11-01 (-13.0926) and 2016-12-01 (35.8562).
+  - warning: Unexpected jump of 70.1% in value between 2017-01-01 (36.4768) and 2017-02-01 (62.0551).
+  - warning: Unexpected jump of 99.1% in value between 2017-02-01 (62.0551) and 2017-03-01 (0.5869).
+  - warning: Unexpected jump of 2106.0% in value between 2017-03-01 (0.5869) and 2017-04-01 (12.947).
+  - warning: Unexpected jump of 50.0% in value between 2017-04-01 (12.947) and 2017-05-01 (19.4252).
+  - warning: Unexpected jump of 255.8% in value between 2017-05-01 (19.4252) and 2017-06-01 (-30.2559).
+  - warning: Unexpected jump of 63.3% in value between 2017-06-01 (-30.2559) and 2017-07-01 (-11.097).
+  - warning: Unexpected jump of 85.8% in value between 2017-07-01 (-11.097) and 2017-08-01 (-20.6161).
+  - warning: Unexpected jump of 352.4% in value between 2017-09-01 (-12.2789) and 2017-10-01 (30.9936).
+  - warning: Unexpected jump of 341.2% in value between 2017-12-01 (9.105) and 2018-01-01 (40.1721).
+  - warning: Unexpected jump of 73.0% in value between 2018-02-01 (21.3768) and 2018-03-01 (5.7821).
+  - warning: Unexpected jump of 510.8% in value between 2018-03-01 (5.7821) and 2018-04-01 (-23.7547).
+  - warning: Unexpected jump of 75.2% in value between 2018-04-01 (-23.7547) and 2018-05-01 (-5.8903).
+  - warning: Unexpected jump of 438.1% in value between 2018-05-01 (-5.8903) and 2018-06-01 (-31.6981).
+  - warning: Unexpected jump of 56.6% in value between 2018-06-01 (-31.6981) and 2018-07-01 (-13.7516).
+  - warning: Unexpected jump of 254.4% in value between 2018-07-01 (-13.7516) and 2018-08-01 (-48.7302).
+  - warning: Unexpected jump of 124.2% in value between 2018-08-01 (-48.7302) and 2018-09-01 (11.8148).
+  - warning: Unexpected jump of 236.5% in value between 2018-09-01 (11.8148) and 2018-10-01 (-16.1307).
+  - warning: Unexpected jump of 82.8% in value between 2018-10-01 (-16.1307) and 2018-11-01 (-2.782).
+  - warning: Unexpected jump of 1156.8% in value between 2018-11-01 (-2.782) and 2018-12-01 (-34.9637).
+  - warning: Unexpected jump of 149.9% in value between 2018-12-01 (-34.9637) and 2019-01-01 (17.4455).
+  - warning: Unexpected jump of 118.9% in value between 2019-02-01 (16.1529) and 2019-03-01 (-3.0476).
+  - warning: Unexpected jump of 93.1% in value between 2019-03-01 (-3.0476) and 2019-04-01 (-0.2095).
+  - warning: Unexpected jump of 3659.3% in value between 2019-04-01 (-0.2095) and 2019-05-01 (7.4567).
+  - warning: Unexpected jump of 184.6% in value between 2019-06-01 (10.7148) and 2019-07-01 (-9.069).
+  - warning: Unexpected jump of 72.3% in value between 2019-07-01 (-9.069) and 2019-08-01 (-2.512).
+  - warning: Unexpected jump of 349.2% in value between 2019-08-01 (-2.512) and 2019-09-01 (6.2593).
+  - warning: Unexpected jump of 271.3% in value between 2019-10-01 (3.8518) and 2019-11-01 (14.3019).
+  - warning: Unexpected jump of 63.5% in value between 2019-11-01 (14.3019) and 2019-12-01 (23.3853).
+  - warning: Unexpected jump of 68.3% in value between 2020-01-01 (14.596) and 2020-02-01 (4.6253).
+  - warning: Unexpected jump of 4136.4% in value between 2020-02-01 (4.6253) and 2020-03-01 (-186.6962).
+  - warning: Unexpected jump of 132.2% in value between 2020-03-01 (-186.6962) and 2020-04-01 (60.1559).
+  - warning: Unexpected jump of 197.0% in value between 2020-06-01 (34.012) and 2020-07-01 (-32.9959).
+  - warning: Unexpected jump of 108.1% in value between 2020-07-01 (-32.9959) and 2020-08-01 (2.6648).
+  - warning: Unexpected jump of 779.4% in value between 2020-08-01 (2.6648) and 2020-09-01 (-18.1055).
+  - warning: Unexpected jump of 107.1% in value between 2020-09-01 (-18.1055) and 2020-10-01 (1.2887).
+  - warning: Unexpected jump of 2400.1% in value between 2020-10-01 (1.2887) and 2020-11-01 (32.2187).
+  - warning: Unexpected jump of 97.5% in value between 2020-12-01 (17.2777) and 2021-01-01 (0.425).
+  - warning: Unexpected jump of 7758.7% in value between 2021-01-01 (0.425) and 2021-02-01 (33.3995).
+  - warning: Unexpected jump of 154.7% in value between 2021-02-01 (33.3995) and 2021-03-01 (-18.2688).
+  - warning: Unexpected jump of 94.6% in value between 2021-03-01 (-18.2688) and 2021-04-01 (-0.9779).
+  - warning: Unexpected jump of 880.9% in value between 2021-04-01 (-0.9779) and 2021-05-01 (7.6365).
+  - warning: Unexpected jump of 105.1% in value between 2021-06-01 (8.5699) and 2021-07-01 (17.5752).
+  - warning: Unexpected jump of 69.0% in value between 2021-07-01 (17.5752) and 2021-08-01 (5.4505).
+  - warning: Unexpected jump of 65.8% in value between 2021-08-01 (5.4505) and 2021-09-01 (9.0369).
+  - warning: Unexpected jump of 60.1% in value between 2021-09-01 (9.0369) and 2021-10-01 (3.6095).
+  - warning: Unexpected jump of 319.3% in value between 2021-10-01 (3.6095) and 2021-11-01 (-7.9141).
+  - warning: Unexpected jump of 304.2% in value between 2021-11-01 (-7.9141) and 2021-12-01 (16.1591).
+  - warning: Unexpected jump of 73.9% in value between 2021-12-01 (16.1591) and 2022-01-01 (4.2174).
+  - warning: Unexpected jump of 1942.3% in value between 2022-01-01 (4.2174) and 2022-02-01 (-77.6965).
+  - warning: Unexpected jump of 147.5% in value between 2022-02-01 (-77.6965) and 2022-03-01 (36.9278).
+  - warning: Unexpected jump of 82.5% in value between 2022-04-01 (39.1447) and 2022-05-01 (71.4468).
+  - warning: Unexpected jump of 224.7% in value between 2022-05-01 (71.4468) and 2022-06-01 (-89.0973).
+  - warning: Unexpected jump of 73.7% in value between 2022-06-01 (-89.0973) and 2022-07-01 (-23.4326).
+  - warning: Unexpected jump of 264.6% in value between 2022-07-01 (-23.4326) and 2022-08-01 (38.5779).
+  - warning: Unexpected jump of 127.1% in value between 2022-08-01 (38.5779) and 2022-09-01 (-10.4679).
+  - warning: Unexpected jump of 450.6% in value between 2022-09-01 (-10.4679) and 2022-10-01 (36.6964).
+  - warning: Unexpected jump of 78.2% in value between 2022-10-01 (36.6964) and 2022-11-01 (7.9916).
+  - warning: Unexpected jump of 293.0% in value between 2022-11-01 (7.9916) and 2022-12-01 (31.4079).
+  - warning: Unexpected jump of 54.6% in value between 2022-12-01 (31.4079) and 2023-01-01 (14.251).
+  - warning: Unexpected jump of 180.9% in value between 2023-01-01 (14.251) and 2023-02-01 (40.026).
+  - warning: Unexpected jump of 62.9% in value between 2023-02-01 (40.026) and 2023-03-01 (14.8352).
+  - warning: Unexpected jump of 164.5% in value between 2023-03-01 (14.8352) and 2023-04-01 (-9.5681).
+  - warning: Unexpected jump of 474.4% in value between 2023-04-01 (-9.5681) and 2023-05-01 (35.8268).
+  - warning: Unexpected jump of 121.5% in value between 2023-05-01 (35.8268) and 2023-06-01 (-7.7099).
+  - warning: Unexpected jump of 593.1% in value between 2023-06-01 (-7.7099) and 2023-07-01 (38.0187).
+  - warning: Unexpected jump of 188.7% in value between 2023-07-01 (38.0187) and 2023-08-01 (-33.7044).
+  - warning: Unexpected jump of 186.1% in value between 2023-09-01 (-29.5543) and 2023-10-01 (25.4515).
+  - warning: Unexpected jump of 70.5% in value between 2023-10-01 (25.4515) and 2023-11-01 (43.3826).
+  - warning: Unexpected jump of 96.7% in value between 2024-01-01 (24.0857) and 2024-02-01 (0.8042).
+  - warning: Unexpected jump of 1988.1% in value between 2024-02-01 (0.8042) and 2024-03-01 (16.7923).
+  - warning: Unexpected jump of 57.7% in value between 2024-03-01 (16.7923) and 2024-04-01 (26.4767).
+  - warning: Unexpected jump of 103.2% in value between 2024-04-01 (26.4767) and 2024-05-01 (-0.8452).
+  - warning: Unexpected jump of 5388.6% in value between 2024-05-01 (-0.8452) and 2024-06-01 (-46.3894).
+  - warning: Unexpected jump of 62.9% in value between 2024-06-01 (-46.3894) and 2024-07-01 (-17.1888).
+  - warning: Unexpected jump of 54.0% in value between 2024-07-01 (-17.1888) and 2024-08-01 (-7.914).
+  - warning: Unexpected jump of 280.6% in value between 2024-08-01 (-7.914) and 2024-09-01 (14.2923).
+  - warning: Unexpected jump of 197.5% in value between 2024-09-01 (14.2923) and 2024-10-01 (-13.9373).
+  - warning: Unexpected jump of 256.7% in value between 2024-10-01 (-13.9373) and 2024-11-01 (-49.7203).
+  - warning: Unexpected jump of 71.7% in value between 2024-11-01 (-49.7203) and 2024-12-01 (-14.068).
+  - warning: Unexpected jump of 243.9% in value between 2024-12-01 (-14.068) and 2025-01-01 (20.2382).
+  - warning: Unexpected jump of 158.9% in value between 2025-01-01 (20.2382) and 2025-02-01 (52.387).
+  - warning: Unexpected jump of 87.5% in value between 2025-02-01 (52.387) and 2025-03-01 (6.55).
+  - warning: Unexpected jump of 243.7% in value between 2025-03-01 (6.55) and 2025-04-01 (-9.4109).
+  - warning: Unexpected jump of 297.3% in value between 2025-04-01 (-9.4109) and 2025-05-01 (18.5647).
+  - warning: Unexpected jump of 179.9% in value between 2025-05-01 (18.5647) and 2025-06-01 (-14.8293).
+  - warning: Unexpected jump of 218.2% in value between 2025-06-01 (-14.8293) and 2025-07-01 (-47.1881).
+  - warning: Unexpected jump of 164.1% in value between 2025-07-01 (-47.1881) and 2025-08-01 (30.2532).
+  - warning: Unexpected jump of 142.1% in value between 2025-08-01 (30.2532) and 2025-09-01 (-12.7347).
+  - warning: Unexpected jump of 525.2% in value between 2025-09-01 (-12.7347) and 2025-10-01 (54.1522).
+  - warning: Unexpected jump of 73.7% in value between 2025-12-01 (46.975) and 2026-01-01 (12.3419).
+  - warning: Unexpected jump of 273.2% in value between 2026-02-01 (17.0158) and 2026-03-01 (63.4958).
+  - warning: Unexpected jump of 171.6% in value between 2026-04-01 (65.2423) and 2026-05-01 (-46.7161).
+  - warning: Unexpected jump of 127.3% in value between 2026-05-01 (-46.7161) and 2026-06-01 (12.752).
+  - warning: Unexpected jump of 220.4% in value between 2026-06-01 (12.752) and 2026-07-01 (40.8595).
+- **bns/GVA_NOMINAL_BY_SECTION** — fetch+validate+process: ok (downloaded=465, processed=465)
+  - warning: [K] Unexpected jump of 50.5% in value between 2012-12-31 (655348.0) and 2013-12-31 (986543.5).
+  - warning: [M] Unexpected jump of 50.9% in value between 2010-12-31 (841846.1) and 2011-12-31 (1270049.0).
+  - warning: [NET_TAXES] Unexpected jump of 114.4% in value between 2010-12-31 (1166485.4) and 2011-12-31 (2501177.9).
+  - warning: [NET_TAXES] Unexpected jump of 52.4% in value between 2021-12-31 (4855517.6) and 2022-12-31 (7398002.7).
+  - warning: [S] Unexpected jump of 155.6% in value between 2012-12-31 (380462.2) and 2013-12-31 (972543.9).
+  - warning: [T] Unexpected jump of 108.8% in value between 2011-12-31 (13492.0) and 2012-12-31 (28167.8).
+  - warning: [T] Unexpected jump of 220.7% in value between 2022-12-31 (62741.0) and 2023-12-31 (201231.5).
+  - warning: [TAXES] Unexpected jump of 110.4% in value between 2010-12-31 (1226970.2) and 2011-12-31 (2581518.2).
+  - warning: [TAXES] Unexpected jump of 50.7% in value between 2021-12-31 (5161134.0) and 2022-12-31 (7779408.5).
+- **bns/GVA_VOLUME_INDEX_BY_SECTION** — fetch+validate+process: ok (downloaded=465, processed=465)
+- **bns/GVA_DEFLATOR_BY_SECTION** — fetch+validate+process: ok (downloaded=465, processed=465)
+  - warning: [B] Unexpected jump of 52.0% in value between 2020-12-31 (89.3) and 2021-12-31 (135.7).
+  - warning: [NET_TAXES] Unexpected jump of 67.6% in value between 2015-12-31 (75.1) and 2016-12-31 (125.9).
+  - warning: [S] Unexpected jump of 140.8% in value between 2012-12-31 (106.0) and 2013-12-31 (255.2).
+  - warning: [S] Unexpected jump of 56.0% in value between 2013-12-31 (255.2) and 2014-12-31 (112.4).
+  - warning: [SUBSIDIES] Unexpected jump of 53.9% in value between 2010-12-31 (244.0) and 2011-12-31 (112.6).
+  - warning: [T] Unexpected jump of 87.8% in value between 2011-12-31 (111.2) and 2012-12-31 (208.8).
+  - warning: [TAXES] Unexpected jump of 64.3% in value between 2015-12-31 (76.2) and 2016-12-31 (125.2).
+- **bns/GVA_NOMINAL_INDUSTRY_DIVISIONS** — fetch+validate+process: ok (downloaded=481, processed=481)
+  - warning: [05] Unexpected jump of 51.2% in value between 2021-12-31 (220950.7) and 2022-12-31 (334136.4).
+  - warning: [08] Unexpected jump of 56.4% in value between 2021-12-31 (202437.7) and 2022-12-31 (316599.8).
+  - warning: [12] Unexpected jump of 92.2% in value between 2019-12-31 (64903.5) and 2020-12-31 (124742.8).
+  - warning: [12] Unexpected jump of 51.2% in value between 2024-12-31 (199943.5) and 2025-12-31 (302284.1).
+  - warning: [21] Unexpected jump of 53.4% in value between 2024-12-31 (370487.3000000001) and 2025-12-31 (172759.9).
+  - warning: [26] Unexpected jump of 53.6% in value between 2018-12-31 (11261.1) and 2019-12-31 (17292.4).
+  - warning: [26] Unexpected jump of 75.2% in value between 2023-12-31 (16695.5) and 2024-12-31 (29252.5).
+  - warning: [26] Unexpected jump of 70.7% in value between 2024-12-31 (29252.5) and 2025-12-31 (49943.0).
+  - warning: [27] Unexpected jump of 52.8% in value between 2015-12-31 (45620.4) and 2016-12-31 (69709.5).
+  - warning: [27] Unexpected jump of 57.5% in value between 2017-12-31 (78855.4) and 2018-12-31 (124231.89999999998).
+  - warning: [29] Unexpected jump of 52.5% in value between 2014-12-31 (78622.5) and 2015-12-31 (37380.5).
+  - warning: [29] Unexpected jump of 184.9% in value between 2016-12-31 (23348.199999999997) and 2017-12-31 (66528.40000000001).
+  - warning: [29] Unexpected jump of 59.3% in value between 2017-12-31 (66528.40000000001) and 2018-12-31 (106000.4).
+  - warning: [29] Unexpected jump of 51.4% in value between 2018-12-31 (106000.4) and 2019-12-31 (160446.19999999998).
+  - warning: [29] Unexpected jump of 84.6% in value between 2019-12-31 (160446.19999999998) and 2020-12-31 (296183.80000000005).
+  - warning: [29] Unexpected jump of 54.5% in value between 2022-12-31 (622894.3000000002) and 2023-12-31 (962522.7000000001).
+  - warning: [30] Unexpected jump of 87.4% in value between 2019-12-31 (48376.69999999999) and 2020-12-31 (90658.59999999999).
+  - warning: [30] Unexpected jump of 56.0% in value between 2020-12-31 (90658.59999999999) and 2021-12-31 (141415.3).
+  - warning: [30] Unexpected jump of 54.8% in value between 2023-12-31 (176505.40000000002) and 2024-12-31 (273179.9).
+  - warning: [32] Unexpected jump of 78.8% in value between 2017-12-31 (8959.699999999999) and 2018-12-31 (16015.799999999997).
+- **bns/GDP_EXPENDITURE_NOMINAL** — fetch+validate+process: ok (downloaded=268, processed=268)
+  - warning: [EXPORTS] Unexpected jump of 52.7% in value between 2021-12-31 (28245396.0) and 2022-12-31 (43134297.5).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 84.0% in value between 2019-12-31 (2521921.2) and 2020-12-31 (4639415.9).
+  - warning: [INVENTORIES] Unexpected jump of 84.9% in value between 2007-12-31 (707915.8) and 2008-12-31 (106800.8).
+  - warning: [INVENTORIES] Unexpected jump of 158.4% in value between 2008-12-31 (106800.8) and 2009-12-31 (276006.6).
+  - warning: [INVENTORIES] Unexpected jump of 89.8% in value between 2010-12-31 (228234.3) and 2011-12-31 (433091.3).
+  - warning: [INVENTORIES] Unexpected jump of 73.8% in value between 2011-12-31 (433091.3) and 2012-12-31 (752584.7).
+  - warning: [INVENTORIES] Unexpected jump of 73.7% in value between 2013-12-31 (967444.1) and 2014-12-31 (1680008.3).
+  - warning: [NET_EXPORTS] Unexpected jump of 286.5% in value between 2007-12-31 (830611.8000000007) and 2008-12-31 (3210257.2).
+  - warning: [NET_EXPORTS] Unexpected jump of 58.1% in value between 2008-12-31 (3210257.2) and 2009-12-31 (1345437.1000000006).
+  - warning: [NET_EXPORTS] Unexpected jump of 132.7% in value between 2009-12-31 (1345437.1000000006) and 2010-12-31 (3130547.0).
+  - warning: [NET_EXPORTS] Unexpected jump of 78.7% in value between 2010-12-31 (3130547.0) and 2011-12-31 (5595363.499999999).
+  - warning: [NET_EXPORTS] Unexpected jump of 70.1% in value between 2014-12-31 (5440144.5) and 2015-12-31 (1628696.0).
+  - warning: [NET_EXPORTS] Unexpected jump of 173.3% in value between 2016-12-31 (1585830.8999999985) and 2017-12-31 (4334058.799999999).
+  - warning: [NET_EXPORTS] Unexpected jump of 67.2% in value between 2017-12-31 (4334058.799999999) and 2018-12-31 (7246783.000000002).
+  - warning: [NET_EXPORTS] Unexpected jump of 154.1% in value between 2020-12-31 (2848124.8000000007) and 2021-12-31 (7237563.5).
+  - warning: [NET_EXPORTS] Unexpected jump of 112.2% in value between 2021-12-31 (7237563.5) and 2022-12-31 (15361139.2).
+  - warning: [NPISH] Unexpected jump of 62.8% in value between 2021-12-31 (933541.7) and 2022-12-31 (347176.5).
+  - warning: [STAT_DISCREPANCY] Unexpected jump of 241.8% in value between 2007-12-31 (238229.8) and 2008-12-31 (-337874.7).
+  - warning: [STAT_DISCREPANCY] Unexpected jump of 275.6% in value between 2008-12-31 (-337874.7) and 2009-12-31 (593381.9).
+  - warning: [STAT_DISCREPANCY] Unexpected jump of 50.1% in value between 2009-12-31 (593381.9) and 2010-12-31 (890843.4000000022).
+  - warning: [STAT_DISCREPANCY] Unexpected jump of 58.6% in value between 2013-12-31 (1272199.3) and 2014-12-31 (526137.5).
+  - warning: [STAT_DISCREPANCY] Unexpected jump of 114.3% in value between 2014-12-31 (526137.5) and 2015-12-31 (1127525.9).
+  - warning: [STAT_DISCREPANCY] Unexpected jump of 51.1% in value between 2019-12-31 (2045684.3) and 2020-12-31 (1000230.9).
+  - warning: [STAT_DISCREPANCY] Unexpected jump of 62.4% in value between 2020-12-31 (1000230.9) and 2021-12-31 (1624311.0).
+  - warning: [STAT_DISCREPANCY] Unexpected jump of 81.9% in value between 2021-12-31 (1624311.0) and 2022-12-31 (294681.1).
+  - warning: [STAT_DISCREPANCY] Unexpected jump of 692.2% in value between 2022-12-31 (294681.1) and 2023-12-31 (2334504.6).
+  - warning: [STAT_DISCREPANCY] Unexpected jump of 51.4% in value between 2023-12-31 (2334504.6) and 2024-12-31 (3535484.8).
+  - warning: [VALUABLES] Unexpected jump of 67.7% in value between 2023-12-31 (41699.1) and 2024-12-31 (69913.5).
+- **bns/GDP_EXPENDITURE_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=209, processed=209)
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 51.9% in value between 2018-12-31 (71.3) and 2019-12-31 (108.3).
+- **bns/GDP_EXPENDITURE_DEFLATOR** — fetch+validate+process: ok (downloaded=228, processed=228)
+  - warning: [EXPORTS] Unexpected jump of 72.4% in value between 2015-12-31 (77.9) and 2016-12-31 (134.3).
+- **bns/INCOME_COMPENSATION_BY_SECTION** — fetch+validate+process: ok (downloaded=384, processed=384)
+  - warning: [L] Unexpected jump of 59.1% in value between 2010-12-31 (190165.1) and 2011-12-31 (302636.6).
+  - warning: [S] Unexpected jump of 50.3% in value between 2012-12-31 (139123.9) and 2013-12-31 (209129.9).
+  - warning: [T] Unexpected jump of 54.3% in value between 2013-12-31 (5889.6) and 2014-12-31 (2688.9).
+  - warning: [T] Unexpected jump of 431.0% in value between 2014-12-31 (2688.9) and 2015-12-31 (14276.8).
+  - warning: [T] Unexpected jump of 507.9% in value between 2022-12-31 (33102.4) and 2023-12-31 (201231.5).
+- **bns/INCOME_OTHER_TAXES_BY_SECTION** — fetch+validate+process: ok (downloaded=400, processed=400)
+  - warning: [A] Unexpected jump of 58.4% in value between 2019-12-31 (2669.1) and 2020-12-31 (4228.1).
+  - warning: [A] Unexpected jump of 203.9% in value between 2020-12-31 (4228.1) and 2021-12-31 (12850.0).
+  - warning: [A] Unexpected jump of 2142.3% in value between 2022-12-31 (14131.1) and 2023-12-31 (-288593.2).
+  - warning: [B] Unexpected jump of 83.1% in value between 2019-12-31 (395877.9) and 2020-12-31 (725031.2).
+  - warning: [B] Unexpected jump of 63.2% in value between 2020-12-31 (725031.2) and 2021-12-31 (266637.8).
+  - warning: [C] Unexpected jump of 87.5% in value between 2019-12-31 (96372.2) and 2020-12-31 (180676.5).
+  - warning: [C] Unexpected jump of 66.5% in value between 2022-12-31 (164323.1) and 2023-12-31 (55103.9).
+  - warning: [C] Unexpected jump of 66.1% in value between 2023-12-31 (55103.9) and 2024-12-31 (91520.9).
+  - warning: [D] Unexpected jump of 83.2% in value between 2019-12-31 (18840.1) and 2020-12-31 (34506.4).
+  - warning: [D] Unexpected jump of 87.8% in value between 2020-12-31 (34506.4) and 2021-12-31 (64794.8).
+  - warning: [E] Unexpected jump of 83.2% in value between 2019-12-31 (3697.5) and 2020-12-31 (6772.0).
+  - warning: [E] Unexpected jump of 78.5% in value between 2020-12-31 (6772.0) and 2021-12-31 (12086.4).
+  - warning: [F] Unexpected jump of 83.2% in value between 2019-12-31 (13833.7) and 2020-12-31 (25336.9).
+  - warning: [F] Unexpected jump of 171.7% in value between 2020-12-31 (25336.9) and 2021-12-31 (68838.8).
+  - warning: [G] Unexpected jump of 51.0% in value between 2012-12-31 (11309.7) and 2013-12-31 (17073.8).
+  - warning: [G] Unexpected jump of 83.2% in value between 2019-12-31 (24906.0) and 2020-12-31 (45616.1).
+  - warning: [G] Unexpected jump of 105.7% in value between 2020-12-31 (45616.1) and 2021-12-31 (93810.7).
+  - warning: [G] Unexpected jump of 52.1% in value between 2023-12-31 (134666.3) and 2024-12-31 (204891.4).
+  - warning: [GOODS] Unexpected jump of 83.8% in value between 2019-12-31 (531290.5) and 2020-12-31 (976551.1).
+  - warning: [GOODS] Unexpected jump of 61.9% in value between 2022-12-31 (621348.7) and 2023-12-31 (236936.1).
+  - warning: [GOODS] Unexpected jump of 77.9% in value between 2023-12-31 (236936.1) and 2024-12-31 (421469.19999999995).
+  - warning: [H] Unexpected jump of 77.5% in value between 2019-12-31 (61475.1) and 2020-12-31 (109118.2).
+  - warning: [I] Unexpected jump of 83.2% in value between 2019-12-31 (2765.7) and 2020-12-31 (5066.8).
+  - warning: [I] Unexpected jump of 171.1% in value between 2020-12-31 (5066.8) and 2021-12-31 (13734.3).
+  - warning: [IND] Unexpected jump of 84.0% in value between 2019-12-31 (514787.7) and 2020-12-31 (946986.1).
+  - warning: [J] Unexpected jump of 83.2% in value between 2019-12-31 (17315.5) and 2020-12-31 (31714.1).
+  - warning: [J] Unexpected jump of 308.1% in value between 2021-12-31 (30170.7) and 2022-12-31 (123113.4).
+  - warning: [J] Unexpected jump of 61.4% in value between 2022-12-31 (123113.4) and 2023-12-31 (47541.4).
+  - warning: [K] Unexpected jump of 63.1% in value between 2012-12-31 (9375.2) and 2013-12-31 (15290.4).
+  - warning: [K] Unexpected jump of 83.2% in value between 2019-12-31 (20651.1) and 2020-12-31 (37823.1).
+  - warning: ... 28 more warnings not listed
+- **bns/INCOME_CFC_BY_SECTION** — fetch+validate+process: ok (downloaded=384, processed=384)
+  - warning: [A] Unexpected jump of 56.4% in value between 2010-12-31 (110074.9) and 2011-12-31 (172115.1).
+  - warning: [E] Unexpected jump of 67.0% in value between 2015-12-31 (12503.2) and 2016-12-31 (20878.8).
+  - warning: [F] Unexpected jump of 67.1% in value between 2015-12-31 (318122.1) and 2016-12-31 (531438.1).
+  - warning: [K] Unexpected jump of 84.7% in value between 2012-12-31 (19504.5) and 2013-12-31 (36029.8).
+  - warning: [M] Unexpected jump of 50.6% in value between 2011-12-31 (73519.6) and 2012-12-31 (110704.3).
+  - warning: [O] Unexpected jump of 116.0% in value between 2012-12-31 (112141.0) and 2013-12-31 (242216.9).
+  - warning: [O] Unexpected jump of 69.6% in value between 2018-12-31 (188503.3) and 2019-12-31 (319761.0).
+  - warning: [O] Unexpected jump of 60.4% in value between 2022-12-31 (397186.7) and 2023-12-31 (637034.0).
+  - warning: [P] Unexpected jump of 92.7% in value between 2021-12-31 (123625.0) and 2022-12-31 (238239.6).
+  - warning: [S] Unexpected jump of 70.5% in value between 2012-12-31 (17491.3) and 2013-12-31 (29831.3).
+  - warning: [S] Unexpected jump of 62.5% in value between 2013-12-31 (29831.3) and 2014-12-31 (48471.6).
+  - warning: [S] Unexpected jump of 76.3% in value between 2015-12-31 (52989.2) and 2016-12-31 (12557.4).
+  - warning: [S] Unexpected jump of 72.2% in value between 2016-12-31 (12557.4) and 2017-12-31 (21629.2).
+  - warning: [S] Unexpected jump of 74.0% in value between 2023-12-31 (39349.7) and 2024-12-31 (68449.1).
+- **bns/INCOME_PROFIT_BY_SECTION** — fetch+validate+process: ok (downloaded=385, processed=385)
+  - warning: [B] Unexpected jump of 54.3% in value between 2020-12-31 (4599532.1) and 2021-12-31 (7095939.1).
+  - warning: [D] Unexpected jump of 87.2% in value between 2010-12-31 (33284.3) and 2011-12-31 (62310.3).
+  - warning: [D] Unexpected jump of 58.0% in value between 2011-12-31 (62310.3) and 2012-12-31 (98466.6).
+  - warning: [D] Unexpected jump of 52.8% in value between 2015-12-31 (132213.5) and 2016-12-31 (202017.9).
+  - warning: [E] Unexpected jump of 63.8% in value between 2010-12-31 (5645.3) and 2011-12-31 (9244.8).
+  - warning: [E] Unexpected jump of 78.1% in value between 2011-12-31 (9244.8) and 2012-12-31 (16468.8).
+  - warning: [E] Unexpected jump of 52.5% in value between 2012-12-31 (16468.8) and 2013-12-31 (7816.1).
+  - warning: [E] Unexpected jump of 172.3% in value between 2013-12-31 (7816.1) and 2014-12-31 (21282.4).
+  - warning: [E] Unexpected jump of 58.5% in value between 2016-12-31 (22608.3) and 2017-12-31 (35825.9).
+  - warning: [I] Unexpected jump of 50.8% in value between 2010-12-31 (87727.2) and 2011-12-31 (132292.4).
+  - warning: [K] Unexpected jump of 64.9% in value between 2010-12-31 (521631.1) and 2011-12-31 (183089.4).
+  - warning: [K] Unexpected jump of 62.6% in value between 2011-12-31 (183089.4) and 2012-12-31 (297699.9).
+  - warning: [K] Unexpected jump of 79.1% in value between 2012-12-31 (297699.9) and 2013-12-31 (533065.3).
+  - warning: [M] Unexpected jump of 83.1% in value between 2010-12-31 (286117.9) and 2011-12-31 (523982.7).
+  - warning: [M] Unexpected jump of 61.8% in value between 2015-12-31 (778064.4) and 2016-12-31 (1258542.6).
+  - warning: [P] Unexpected jump of 54.9% in value between 2016-12-31 (201911.5) and 2017-12-31 (312765.4).
+  - warning: [P] Unexpected jump of 69.8% in value between 2019-12-31 (285466.3) and 2020-12-31 (484719.7).
+  - warning: [P] Unexpected jump of 68.7% in value between 2021-12-31 (642423.8) and 2022-12-31 (1083480.6).
+  - warning: [Q] Unexpected jump of 94.1% in value between 2013-12-31 (24802.0) and 2014-12-31 (48134.3).
+  - warning: [Q] Unexpected jump of 232.1% in value between 2014-12-31 (48134.3) and 2015-12-31 (159833.8).
+  - warning: [Q] Unexpected jump of 104.5% in value between 2015-12-31 (159833.8) and 2016-12-31 (326867.7).
+  - warning: [R] Unexpected jump of 59.1% in value between 2010-12-31 (34313.6) and 2011-12-31 (54577.7).
+  - warning: [R] Unexpected jump of 58.5% in value between 2019-12-31 (123543.8) and 2020-12-31 (195818.4).
+  - warning: [S] Unexpected jump of 110.4% in value between 2010-12-31 (80533.3) and 2011-12-31 (169449.0).
+  - warning: [S] Unexpected jump of 228.6% in value between 2012-12-31 (222773.2) and 2013-12-31 (731980.2).
+  - warning: [T] Unexpected jump of 154.7% in value between 2011-12-31 (7903.6) and 2012-12-31 (20132.5).
+  - warning: [T] Unexpected jump of 100.0% in value between 2022-12-31 (29449.9) and 2023-12-31 (0.0).
+- **bns/NOE_SHARE_BY_SECTION** — fetch+validate+process: ok (downloaded=299, processed=299)
+  - warning: [B] Unexpected jump of 99.0% in value between 2014-12-31 (1.97) and 2015-12-31 (0.02).
+  - warning: [B] Unexpected jump of 150.0% in value between 2015-12-31 (0.02) and 2016-12-31 (0.05).
+  - warning: [B] Unexpected jump of 740.0% in value between 2016-12-31 (0.05) and 2017-12-31 (0.42).
+  - warning: [B] Unexpected jump of 52.4% in value between 2019-12-31 (0.21) and 2020-12-31 (0.1).
+  - warning: [B] Unexpected jump of 75.0% in value between 2021-12-31 (0.08) and 2022-12-31 (0.14).
+  - warning: [B] Unexpected jump of 100.0% in value between 2024-12-31 (0.14) and 2025-12-31 (0.0).
+  - warning: [D] Unexpected jump of 91.3% in value between 2014-12-31 (0.23) and 2015-12-31 (0.02).
+  - warning: [D] Unexpected jump of 550.0% in value between 2016-12-31 (0.02) and 2017-12-31 (0.13).
+  - warning: [D] Unexpected jump of 100.0% in value between 2020-12-31 (0.07) and 2021-12-31 (0.14).
+  - warning: [D] Unexpected jump of 71.4% in value between 2021-12-31 (0.14) and 2022-12-31 (0.24).
+  - warning: [D] Unexpected jump of 58.3% in value between 2022-12-31 (0.24) and 2023-12-31 (0.1).
+  - warning: [D] Unexpected jump of 100.0% in value between 2024-12-31 (0.05) and 2025-12-31 (0.0).
+  - warning: [E] Unexpected jump of 75.0% in value between 2014-12-31 (0.04) and 2015-12-31 (0.01).
+  - warning: [E] Unexpected jump of 400.0% in value between 2016-12-31 (0.01) and 2017-12-31 (0.05).
+  - warning: [E] Unexpected jump of 700.0% in value between 2020-12-31 (0.01) and 2021-12-31 (0.08).
+  - warning: [E] Unexpected jump of 100.0% in value between 2024-12-31 (0.02) and 2025-12-31 (0.0).
+  - warning: [F] Unexpected jump of 67.4% in value between 2014-12-31 (0.86) and 2015-12-31 (1.44).
+  - warning: [F] Unexpected jump of 223.0% in value between 2016-12-31 (0.87) and 2017-12-31 (2.81).
+  - warning: [F] Unexpected jump of 73.5% in value between 2020-12-31 (1.13) and 2021-12-31 (1.96).
+  - warning: [G] Unexpected jump of 70.5% in value between 2014-12-31 (4.78) and 2015-12-31 (8.15).
+  - warning: [G] Unexpected jump of 50.3% in value between 2020-12-31 (5.57) and 2021-12-31 (2.77).
+  - warning: [GOODS] Unexpected jump of 65.4% in value between 2016-12-31 (4.62) and 2017-12-31 (7.64).
+  - warning: [I] Unexpected jump of 64.3% in value between 2014-12-31 (0.14) and 2015-12-31 (0.05).
+  - warning: [I] Unexpected jump of 300.0% in value between 2016-12-31 (0.06) and 2017-12-31 (0.24).
+  - warning: [I] Unexpected jump of 153.8% in value between 2020-12-31 (0.13) and 2021-12-31 (0.33).
+  - warning: [I] Unexpected jump of 65.4% in value between 2022-12-31 (0.26) and 2023-12-31 (0.43).
+  - warning: [J] Unexpected jump of 55.6% in value between 2014-12-31 (0.18) and 2015-12-31 (0.08).
+  - warning: [J] Unexpected jump of 75.0% in value between 2015-12-31 (0.08) and 2016-12-31 (0.02).
+  - warning: [J] Unexpected jump of 1600.0% in value between 2016-12-31 (0.02) and 2017-12-31 (0.34).
+  - warning: [K] Unexpected jump of 100.0% in value between 2014-12-31 (0.26) and 2015-12-31 (0.0).
+  - warning: ... 29 more warnings not listed
+- **bns/NOE_ILLEGAL_SHARE_BY_SECTION** — fetch+validate+process: ok (downloaded=299, processed=299)
+  - warning: [G] Unexpected jump of 55.6% in value between 2019-12-31 (0.18) and 2020-12-31 (0.28).
+  - warning: [G] Unexpected jump of 57.7% in value between 2024-12-31 (0.26) and 2025-12-31 (0.41).
+- **bns/GVA_STATE_BY_SECTION** — fetch+validate+process: ok (downloaded=321, processed=321)
+  - warning: [A] Unexpected jump of 58.4% in value between 2010-12-31 (60506.6) and 2011-12-31 (95812.8).
+  - warning: [A] Unexpected jump of 56.4% in value between 2016-12-31 (92247.0) and 2017-12-31 (40204.0).
+  - warning: [A] Unexpected jump of 91.7% in value between 2022-12-31 (71146.2) and 2023-12-31 (5881.4).
+  - warning: [B] Unexpected jump of 111.4% in value between 2011-12-31 (500.3) and 2012-12-31 (1057.7).
+  - warning: [B] Unexpected jump of 72.8% in value between 2014-12-31 (598.3) and 2015-12-31 (1034.1).
+  - warning: [B] Unexpected jump of 100.0% in value between 2016-12-31 (604.8) and 2017-12-31 (0.0).
+  - warning: [B] Unexpected jump of 111.5% in value between 2024-12-31 (36141.9) and 2025-12-31 (76428.0).
+  - warning: [C] Unexpected jump of 125.0% in value between 2018-12-31 (13592.8) and 2019-12-31 (30581.8).
+  - warning: [C] Unexpected jump of 280.4% in value between 2023-12-31 (23917.2) and 2024-12-31 (90978.9).
+  - warning: [D] Unexpected jump of 118.1% in value between 2021-12-31 (107624.9) and 2022-12-31 (234683.4).
+  - warning: [D] Unexpected jump of 66.5% in value between 2022-12-31 (234683.4) and 2023-12-31 (390762.8).
+  - warning: [D] Unexpected jump of 61.6% in value between 2024-12-31 (569979.8) and 2025-12-31 (921191.4).
+  - warning: [E] Unexpected jump of 56.5% in value between 2010-12-31 (15635.3) and 2011-12-31 (24471.3).
+  - warning: [E] Unexpected jump of 71.6% in value between 2020-12-31 (37687.4) and 2021-12-31 (64688.2).
+  - warning: [F] Unexpected jump of 63.0% in value between 2016-12-31 (48869.0) and 2017-12-31 (18079.5).
+  - warning: [F] Unexpected jump of 63.3% in value between 2020-12-31 (14596.5) and 2021-12-31 (23836.8).
+  - warning: [F] Unexpected jump of 65.5% in value between 2022-12-31 (20163.8) and 2023-12-31 (33365.3).
+  - warning: [F] Unexpected jump of 77.1% in value between 2024-12-31 (35408.7) and 2025-12-31 (62703.6).
+  - warning: [G] Unexpected jump of 97.6% in value between 2011-12-31 (3030.8) and 2012-12-31 (72.5).
+  - warning: [G] Unexpected jump of 6930.3% in value between 2012-12-31 (72.5) and 2013-12-31 (5097.0).
+  - warning: [G] Unexpected jump of 241.1% in value between 2017-12-31 (8915.0) and 2018-12-31 (30407.4).
+  - warning: [G] Unexpected jump of 504.0% in value between 2021-12-31 (28011.2) and 2022-12-31 (169174.8).
+  - warning: [G] Unexpected jump of 173.4% in value between 2023-12-31 (223912.8) and 2024-12-31 (612155.1).
+  - warning: [H] Unexpected jump of 60.7% in value between 2016-12-31 (271414.1) and 2017-12-31 (106592.5).
+  - warning: [H] Unexpected jump of 266.7% in value between 2021-12-31 (110134.4) and 2022-12-31 (403857.3).
+  - warning: [H] Unexpected jump of 75.7% in value between 2023-12-31 (381908.6) and 2024-12-31 (670916.8).
+  - warning: [H] Unexpected jump of 336.6% in value between 2024-12-31 (670916.8) and 2025-12-31 (2928908.6).
+  - warning: [I] Unexpected jump of 76.6% in value between 2016-12-31 (1540.3) and 2017-12-31 (2719.4).
+  - warning: [I] Unexpected jump of 66.2% in value between 2018-12-31 (2642.8) and 2019-12-31 (892.8).
+  - warning: [I] Unexpected jump of 84.1% in value between 2019-12-31 (892.8) and 2020-12-31 (142.4).
+  - warning: ... 26 more warnings not listed
+- **bns/GVA_PRIVATE_BY_SECTION** — fetch+validate+process: ok (downloaded=322, processed=322)
+  - warning: [K] Unexpected jump of 52.9% in value between 2012-12-31 (560322.5) and 2013-12-31 (856648.6).
+  - warning: [M] Unexpected jump of 60.3% in value between 2010-12-31 (550042.2) and 2011-12-31 (881599.6).
+  - warning: [O] Gap of 3653 days between 2010-12-31 and 2020-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [P] Unexpected jump of 51.8% in value between 2019-12-31 (358323.1) and 2020-12-31 (543802.6).
+  - warning: [P] Unexpected jump of 61.3% in value between 2021-12-31 (753815.3) and 2022-12-31 (1216008.0).
+  - warning: [P] Unexpected jump of 68.9% in value between 2024-12-31 (1964150.5) and 2025-12-31 (611098.4).
+  - warning: [Q] Unexpected jump of 320.3% in value between 2010-12-31 (40962.1) and 2011-12-31 (172176.2).
+  - warning: [R] Unexpected jump of 66.3% in value between 2020-12-31 (138900.7) and 2021-12-31 (230942.7).
+  - warning: [R] Unexpected jump of 52.8% in value between 2024-12-31 (418770.7) and 2025-12-31 (639804.1).
+  - warning: [S] Unexpected jump of 164.1% in value between 2012-12-31 (362451.9) and 2013-12-31 (957074.6).
+  - warning: [T] Unexpected jump of 108.8% in value between 2011-12-31 (13492.0) and 2012-12-31 (28167.8).
+  - warning: [T] Unexpected jump of 220.7% in value between 2022-12-31 (62741.0) and 2023-12-31 (201231.5).
+- **bns/GVA_FOREIGN_BY_SECTION** — fetch+validate+process: ok (downloaded=307, processed=307)
+  - warning: [A] Unexpected jump of 1601.7% in value between 2010-12-31 (2468.5) and 2011-12-31 (42005.8).
+  - warning: [A] Unexpected jump of 98.3% in value between 2011-12-31 (42005.8) and 2012-12-31 (712.3).
+  - warning: [A] Unexpected jump of 135.5% in value between 2012-12-31 (712.3) and 2013-12-31 (1677.7).
+  - warning: [A] Unexpected jump of 175.1% in value between 2015-12-31 (1041.8) and 2016-12-31 (2865.7).
+  - warning: [A] Unexpected jump of 72.8% in value between 2016-12-31 (2865.7) and 2017-12-31 (4950.9).
+  - warning: [A] Unexpected jump of 151.3% in value between 2020-12-31 (8402.1) and 2021-12-31 (21113.6).
+  - warning: [A] Unexpected jump of 50.6% in value between 2021-12-31 (21113.6) and 2022-12-31 (31804.4).
+  - warning: [D] Unexpected jump of 57.4% in value between 2010-12-31 (5477.3) and 2011-12-31 (8620.8).
+  - warning: [D] Unexpected jump of 75.1% in value between 2012-12-31 (9335.2) and 2013-12-31 (2321.3).
+  - warning: [D] Unexpected jump of 229.6% in value between 2013-12-31 (2321.3) and 2014-12-31 (7650.3).
+  - warning: [D] Unexpected jump of 126.7% in value between 2014-12-31 (7650.3) and 2015-12-31 (17339.8).
+  - warning: [D] Unexpected jump of 143.4% in value between 2017-12-31 (9710.9) and 2018-12-31 (23637.6).
+  - warning: [D] Unexpected jump of 122.3% in value between 2019-12-31 (19367.4) and 2020-12-31 (43054.6).
+  - warning: [D] Unexpected jump of 51.3% in value between 2020-12-31 (43054.6) and 2021-12-31 (20957.2).
+  - warning: [D] Unexpected jump of 448.7% in value between 2022-12-31 (25771.1) and 2023-12-31 (141404.4).
+  - warning: [D] Unexpected jump of 53.9% in value between 2023-12-31 (141404.4) and 2024-12-31 (65179.4).
+  - warning: [D] Unexpected jump of 57.2% in value between 2024-12-31 (65179.4) and 2025-12-31 (102487.8).
+  - warning: [E] Unexpected jump of 534.6% in value between 2010-12-31 (1069.0) and 2011-12-31 (6783.5).
+  - warning: [E] Unexpected jump of 98.2% in value between 2013-12-31 (5770.9) and 2014-12-31 (11436.9).
+  - warning: [E] Unexpected jump of 69.1% in value between 2019-12-31 (25273.8) and 2020-12-31 (42737.9).
+  - warning: [E] Unexpected jump of 62.8% in value between 2022-12-31 (44660.2) and 2023-12-31 (16631.8).
+  - warning: [G] Unexpected jump of 55.9% in value between 2011-12-31 (330355.7) and 2012-12-31 (515002.2).
+  - warning: [G] Unexpected jump of 66.2% in value between 2016-12-31 (815393.7) and 2017-12-31 (1355079.8).
+  - warning: [G] Unexpected jump of 99.3% in value between 2020-12-31 (2051728.0) and 2021-12-31 (4089635.5).
+  - warning: [H] Unexpected jump of 61.9% in value between 2021-12-31 (200397.8) and 2022-12-31 (324533.6).
+  - warning: [H] Unexpected jump of 112.6% in value between 2022-12-31 (324533.6) and 2023-12-31 (689830.8).
+  - warning: [J] Unexpected jump of 72.9% in value between 2011-12-31 (95111.0) and 2012-12-31 (164403.3).
+  - warning: [J] Unexpected jump of 54.5% in value between 2022-12-31 (492903.2) and 2023-12-31 (761347.7).
+  - warning: [K] Unexpected jump of 71.5% in value between 2015-12-31 (104441.4) and 2016-12-31 (179113.4).
+  - warning: [L] Unexpected jump of 62.6% in value between 2010-12-31 (86213.0) and 2011-12-31 (32248.1).
+  - warning: ... 22 more warnings not listed
+- **bns/GVA_NOMINAL_BY_REGION_SECTION** — fetch+validate+process: ok (downloaded=6282, processed=6282)
+  - warning: [A@AKM] Unexpected jump of 116.7% in value between 2010-12-31 (79126.8) and 2011-12-31 (171431.9).
+  - warning: [A@ALA] Unexpected jump of 55.3% in value between 2011-12-31 (1066.0) and 2012-12-31 (476.7).
+  - warning: [A@ALA] Unexpected jump of 395.8% in value between 2013-12-31 (681.5) and 2014-12-31 (3378.7).
+  - warning: [A@ALA] Unexpected jump of 391.5% in value between 2024-12-31 (5243.0) and 2025-12-31 (25769.8).
+  - warning: [A@AST] Unexpected jump of 155.3% in value between 2010-12-31 (877.5) and 2011-12-31 (2240.2).
+  - warning: [A@AST] Unexpected jump of 68.1% in value between 2012-12-31 (2976.9) and 2013-12-31 (5004.9).
+  - warning: [A@AST] Unexpected jump of 67.2% in value between 2022-12-31 (6697.2) and 2023-12-31 (2194.3).
+  - warning: [A@AST] Unexpected jump of 65.5% in value between 2023-12-31 (2194.3) and 2024-12-31 (3632.0).
+  - warning: [A@AST] Unexpected jump of 343.5% in value between 2024-12-31 (3632.0) and 2025-12-31 (16108.5).
+  - warning: [A@ATY] Unexpected jump of 58.2% in value between 2012-12-31 (30214.8) and 2013-12-31 (47811.3).
+  - warning: [A@KST] Unexpected jump of 70.8% in value between 2010-12-31 (141244.0) and 2011-12-31 (241263.6).
+  - warning: [A@KST] Unexpected jump of 60.7% in value between 2021-12-31 (343354.9) and 2022-12-31 (551718.1).
+  - warning: [A@MNG] Unexpected jump of 69.1% in value between 2012-12-31 (5305.0) and 2013-12-31 (8973.3).
+  - warning: [A@SHM] Unexpected jump of 98.0% in value between 2011-12-31 (1741.0) and 2012-12-31 (3446.9).
+  - warning: [A@SHM] Unexpected jump of 155.1% in value between 2013-12-31 (3234.1) and 2014-12-31 (8250.1).
+  - warning: [A@SKO] Unexpected jump of 94.2% in value between 2010-12-31 (111385.9) and 2011-12-31 (216280.6).
+  - warning: [B@ABY] Unexpected jump of 91.9% in value between 2022-12-31 (356631.7) and 2023-12-31 (684217.0).
+  - warning: [B@AKM] Unexpected jump of 57.6% in value between 2011-12-31 (17156.9) and 2012-12-31 (27038.6).
+  - warning: [B@AKM] Unexpected jump of 54.3% in value between 2021-12-31 (88159.1) and 2022-12-31 (136052.1).
+  - warning: [B@AKM] Unexpected jump of 52.6% in value between 2022-12-31 (136052.1) and 2023-12-31 (207678.8).
+  - warning: [B@ALA] Unexpected jump of 100.0% in value between 2012-12-31 (35.6) and 2013-12-31 (0.0).
+  - warning: [B@ALA] Unexpected jump of 100.0% in value between 2014-12-31 (147.2) and 2015-12-31 (0.0).
+  - warning: [B@ALA] Unexpected jump of 100.0% in value between 2022-12-31 (0.4) and 2023-12-31 (0.0).
+  - warning: [B@ALM] Unexpected jump of 50.6% in value between 2013-12-31 (6618.3) and 2014-12-31 (9970.0).
+  - warning: [B@ALM] Unexpected jump of 302.3% in value between 2024-12-31 (13186.1) and 2025-12-31 (53042.2).
+  - warning: [B@AST] Unexpected jump of 1040.0% in value between 2011-12-31 (0.5) and 2012-12-31 (5.7).
+  - warning: [B@AST] Unexpected jump of 91.2% in value between 2012-12-31 (5.7) and 2013-12-31 (0.5).
+  - warning: [B@AST] Unexpected jump of 100.0% in value between 2013-12-31 (0.5) and 2014-12-31 (0.0).
+  - warning: [B@ATY] Unexpected jump of 52.0% in value between 2020-12-31 (3071656.4) and 2021-12-31 (4670445.1).
+  - warning: [B@KST] Unexpected jump of 60.7% in value between 2020-12-31 (357344.8) and 2021-12-31 (574268.3).
+  - warning: ... 401 more warnings not listed
+- **bns/GVA_VOLUME_INDEX_BY_REGION_SECTION** — fetch+validate+process: ok (downloaded=3820, processed=3820)
+  - warning: [A@AKM] Unexpected jump of 178.3% in value between 2010-12-31 (62.6) and 2011-12-31 (174.2).
+  - warning: [A@AKM] Unexpected jump of 65.7% in value between 2011-12-31 (174.2) and 2012-12-31 (59.8).
+  - warning: [A@AKM] Unexpected jump of 118.9% in value between 2012-12-31 (59.8) and 2013-12-31 (130.9).
+  - warning: [A@AKM] Unexpected jump of 100.0% in value between 2023-12-31 (73.1) and 2024-12-31 (146.2).
+  - warning: [A@ALA] Unexpected jump of 60.8% in value between 2015-12-31 (69.1) and 2016-12-31 (111.1).
+  - warning: [A@ALA] Unexpected jump of 56.6% in value between 2022-12-31 (56.7) and 2023-12-31 (88.8).
+  - warning: [A@ALA] Unexpected jump of 56.1% in value between 2023-12-31 (88.8) and 2024-12-31 (138.6).
+  - warning: [A@AST] Unexpected jump of 52.7% in value between 2020-12-31 (83.7) and 2021-12-31 (127.8).
+  - warning: [A@KST] Unexpected jump of 97.6% in value between 2010-12-31 (80.8) and 2011-12-31 (159.7).
+  - warning: [A@KST] Unexpected jump of 69.5% in value between 2011-12-31 (159.7) and 2012-12-31 (48.7).
+  - warning: [A@KST] Unexpected jump of 180.5% in value between 2012-12-31 (48.7) and 2013-12-31 (136.6).
+  - warning: [A@KST] Unexpected jump of 53.0% in value between 2019-12-31 (79.0) and 2020-12-31 (120.9).
+  - warning: [A@KST] Unexpected jump of 75.6% in value between 2021-12-31 (84.0) and 2022-12-31 (147.5).
+  - warning: [A@PVL] Unexpected jump of 54.3% in value between 2023-12-31 (85.5) and 2024-12-31 (131.9).
+  - warning: [A@SKO] Unexpected jump of 98.0% in value between 2010-12-31 (78.7) and 2011-12-31 (155.8).
+  - warning: [A@SKO] Unexpected jump of 55.2% in value between 2011-12-31 (155.8) and 2012-12-31 (69.8).
+  - warning: [A@SKO] Unexpected jump of 60.0% in value between 2012-12-31 (69.8) and 2013-12-31 (111.7).
+  - warning: [A@SKO] Unexpected jump of 63.9% in value between 2023-12-31 (83.2) and 2024-12-31 (136.4).
+  - warning: [B@ALA] Gap of 1461 days between 2014-12-31 and 2018-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [B@ALA] Unexpected jump of 100.0% in value between 2014-12-31 (81.9) and 2018-12-31 (0.0).
+  - warning: [B@SKO] Unexpected jump of 112.5% in value between 2016-12-31 (66.2) and 2017-12-31 (140.7).
+  - warning: [B@SKO] Unexpected jump of 64.1% in value between 2024-12-31 (68.3) and 2025-12-31 (112.1).
+  - warning: [D@ATY] Unexpected jump of 126.3% in value between 2018-12-31 (64.6) and 2019-12-31 (146.2).
+  - warning: [D@SKO] Unexpected jump of 58.6% in value between 2022-12-31 (74.6) and 2023-12-31 (118.3).
+  - warning: [D@TRK] Unexpected jump of 54.5% in value between 2020-12-31 (105.3) and 2021-12-31 (162.7).
+  - warning: [E@AKT] Unexpected jump of 105.3% in value between 2020-12-31 (88.8) and 2021-12-31 (182.3).
+  - warning: [E@ATY] Unexpected jump of 102.9% in value between 2020-12-31 (69.0) and 2021-12-31 (140.0).
+  - warning: [E@ATY] Unexpected jump of 69.5% in value between 2024-12-31 (154.6) and 2025-12-31 (47.1).
+  - warning: [E@KZL] Unexpected jump of 210.9% in value between 2010-12-31 (40.2) and 2011-12-31 (125.0).
+  - warning: [E@PVL] Unexpected jump of 67.0% in value between 2014-12-31 (54.3) and 2015-12-31 (90.7).
+  - warning: ... 31 more warnings not listed
+- **bns/GRP_VOLUME_INDEX_BY_REGION** — fetch+validate+process: ok (downloaded=461, processed=461)
+- **bns/POPULATION_AVG_BY_REGION** — fetch+validate+process: ok (downloaded=3060, processed=3060)
+  - warning: [URBAN@ALM] Unexpected jump of 58.7% in value between 2021-12-31 (184736.0) and 2022-12-31 (293189.0).
+  - warning: [URBAN_MEN@ALM] Unexpected jump of 64.7% in value between 2021-12-31 (87768.0) and 2022-12-31 (144546.5).
+  - warning: [URBAN_WOMEN@ALM] Unexpected jump of 53.3% in value between 2021-12-31 (96968.0) and 2022-12-31 (148642.5).
+- **bns/LABOUR_FORCE_BY_REGION** — fetch+validate+process: ok (downloaded=453, processed=453)
+- **bns/EMPLOYED_BY_REGION** — fetch+validate+process: ok (downloaded=453, processed=453)
+- **bns/UNEMPLOYED_BY_REGION** — fetch+validate+process: ok (downloaded=453, processed=453)
+- **bns/EMPLOYEES_BY_REGION** — fetch+validate+process: ok (downloaded=452, processed=452)
+- **bns/SELF_EMPLOYED_BY_REGION** — fetch+validate+process: ok (downloaded=453, processed=453)
+  - warning: [TOTAL@ALA] Unexpected jump of 51.5% in value between 2004-12-31 (94.8) and 2005-12-31 (46.0).
+  - warning: [TOTAL@AST] Unexpected jump of 83.7% in value between 2018-12-31 (35.716) and 2019-12-31 (65.619).
+  - warning: [TOTAL@VKO] Unexpected jump of 62.1% in value between 2021-12-31 (193.812) and 2022-12-31 (73.475).
+- **bns/UNEMPLOYMENT_RATE_BY_REGION** — fetch+validate+process: ok (downloaded=449, processed=449)
+- **bns/EMPLOYED_AGRICULTURE_BY_REGION** — fetch+validate+process: ok (downloaded=192, processed=192)
+  - warning: [TOTAL@ALA] Unexpected jump of 52.4% in value between 2023-12-31 (3272.0) and 2024-12-31 (4988.0).
+  - warning: [TOTAL@AST] Unexpected jump of 59.4% in value between 2016-12-31 (4814.0) and 2017-12-31 (1955.0).
+  - warning: [TOTAL@AST] Unexpected jump of 53.8% in value between 2018-12-31 (2304.0) and 2019-12-31 (3543.0).
+  - warning: [TOTAL@KRG] Unexpected jump of 55.6% in value between 2022-12-31 (24421.0) and 2023-12-31 (37994.0).
+  - warning: [TOTAL@MNG] Unexpected jump of 91.5% in value between 2019-12-31 (1449.0) and 2020-12-31 (2775.0).
+  - warning: [TOTAL@MNG] Unexpected jump of 58.3% in value between 2020-12-31 (2775.0) and 2021-12-31 (4392.0).
+  - warning: [TOTAL@MNG] Unexpected jump of 51.5% in value between 2024-12-31 (4634.0) and 2025-12-31 (7021.0).
+  - warning: [TOTAL@VKO] Unexpected jump of 53.2% in value between 2021-12-31 (101600.0) and 2022-12-31 (47533.0).
+- **bns/EMPLOYED_INDUSTRY_CONSTRUCTION_BY_REGION** — fetch+validate+process: ok (downloaded=192, processed=192)
+- **bns/EMPLOYED_SERVICES_BY_REGION** — fetch+validate+process: ok (downloaded=192, processed=192)
+- **bns/EMPLOYED_BY_SECTION** — fetch+validate+process: ok (downloaded=336, processed=336)
+- **bns/INVESTMENT_BY_REGION** — fetch+validate+process: ok (downloaded=411, processed=411)
+  - warning: [TOTAL@AKM] Unexpected jump of 54.5% in value between 2003-12-31 (15809.0) and 2004-12-31 (24428.0).
+  - warning: [TOTAL@AKM] Unexpected jump of 56.3% in value between 2004-12-31 (24428.0) and 2005-12-31 (38189.0).
+  - warning: [TOTAL@AKM] Unexpected jump of 133.9% in value between 2006-12-31 (44059.0) and 2007-12-31 (103071.0).
+  - warning: [TOTAL@AKM] Unexpected jump of 63.5% in value between 2024-12-31 (585509.0) and 2025-12-31 (957185.0).
+  - warning: [TOTAL@ALA] Unexpected jump of 67.5% in value between 2003-12-31 (166241.0) and 2004-12-31 (278490.0).
+  - warning: [TOTAL@ALM] Unexpected jump of 75.5% in value between 2004-12-31 (56687.0) and 2005-12-31 (99501.0).
+  - warning: [TOTAL@ALM] Unexpected jump of 66.0% in value between 2007-12-31 (142636.0) and 2008-12-31 (236717.0).
+  - warning: [TOTAL@AST] Unexpected jump of 60.0% in value between 2003-12-31 (137863.0) and 2004-12-31 (220560.0).
+  - warning: [TOTAL@ATY] Unexpected jump of 59.5% in value between 2004-12-31 (447424.0) and 2005-12-31 (713681.0).
+  - warning: [TOTAL@KRG] Unexpected jump of 58.8% in value between 2004-12-31 (96650.0) and 2005-12-31 (153438.0).
+  - warning: [TOTAL@KRG] Unexpected jump of 65.9% in value between 2018-12-31 (489030.0) and 2019-12-31 (811433.0).
+  - warning: [TOTAL@KRG] Unexpected jump of 66.2% in value between 2023-12-31 (876522.0) and 2024-12-31 (1456701.0).
+  - warning: [TOTAL@KST] Unexpected jump of 51.1% in value between 2006-12-31 (63831.0) and 2007-12-31 (96419.0).
+  - warning: [TOTAL@KZL] Unexpected jump of 54.9% in value between 2006-12-31 (66455.0) and 2007-12-31 (102934.0).
+  - warning: [TOTAL@KZL] Unexpected jump of 67.4% in value between 2007-12-31 (102934.0) and 2008-12-31 (172339.0).
+  - warning: [TOTAL@MNG] Unexpected jump of 60.5% in value between 2005-12-31 (143108.0) and 2006-12-31 (229755.0).
+  - warning: [TOTAL@MNG] Unexpected jump of 52.4% in value between 2007-12-31 (251416.0) and 2008-12-31 (383199.0).
+  - warning: [TOTAL@PVL] Unexpected jump of 55.5% in value between 2004-12-31 (41213.0) and 2005-12-31 (64072.0).
+  - warning: [TOTAL@PVL] Unexpected jump of 87.3% in value between 2005-12-31 (64072.0) and 2006-12-31 (120019.0).
+  - warning: [TOTAL@PVL] Unexpected jump of 59.5% in value between 2024-12-31 (839747.0) and 2025-12-31 (1339114.0).
+  - warning: [TOTAL@SHM] Unexpected jump of 66.8% in value between 2018-12-31 (588034.0) and 2019-12-31 (194958.0).
+  - warning: [TOTAL@SHM] Unexpected jump of 65.9% in value between 2020-12-31 (278737.0) and 2021-12-31 (462482.0).
+  - warning: [TOTAL@SKO] Unexpected jump of 104.7% in value between 2004-12-31 (18186.0) and 2005-12-31 (37229.0).
+  - warning: [TOTAL@TRK] Unexpected jump of 59.1% in value between 2019-12-31 (443503.0) and 2020-12-31 (705722.0).
+  - warning: [TOTAL@VKO] Unexpected jump of 62.0% in value between 2004-12-31 (50748.0) and 2005-12-31 (82197.0).
+  - warning: [TOTAL@VKO] Unexpected jump of 67.0% in value between 2010-12-31 (144670.0) and 2011-12-31 (241630.0).
+  - warning: [TOTAL@YKO] Unexpected jump of 50.4% in value between 2006-12-31 (84542.0) and 2007-12-31 (127175.0).
+  - warning: [TOTAL@YKO] Unexpected jump of 59.8% in value between 2007-12-31 (127175.0) and 2008-12-31 (203213.0).
+  - warning: [TOTAL@YKO] Unexpected jump of 57.0% in value between 2008-12-31 (203213.0) and 2009-12-31 (319043.0).
+  - warning: [TOTAL@ZHM] Unexpected jump of 313.2% in value between 2007-12-31 (29940.0) and 2008-12-31 (123726.0).
+  - warning: ... 4 more warnings not listed
+- **bns/INVESTMENT_VOLUME_INDEX_BY_REGION** — fetch+validate+process: ok (downloaded=411, processed=411)
+  - warning: [TOTAL@AKM] Unexpected jump of 102.3% in value between 2006-12-31 (109.0) and 2007-12-31 (220.5).
+  - warning: [TOTAL@AKM] Unexpected jump of 58.7% in value between 2010-12-31 (67.8) and 2011-12-31 (107.6).
+  - warning: [TOTAL@AKM] Unexpected jump of 66.4% in value between 2024-12-31 (95.0) and 2025-12-31 (158.1).
+  - warning: [TOTAL@AKT] Unexpected jump of 66.2% in value between 2015-12-31 (65.1) and 2016-12-31 (108.2).
+  - warning: [TOTAL@AKT] Unexpected jump of 51.5% in value between 2024-12-31 (87.6) and 2025-12-31 (132.7).
+  - warning: [TOTAL@ALA] Unexpected jump of 53.1% in value between 2003-12-31 (103.0) and 2004-12-31 (157.7).
+  - warning: [TOTAL@KZL] Unexpected jump of 51.2% in value between 2003-12-31 (160.6) and 2004-12-31 (78.4).
+  - warning: [TOTAL@KZL] Unexpected jump of 74.1% in value between 2004-12-31 (78.4) and 2005-12-31 (136.5).
+  - warning: [TOTAL@KZL] Unexpected jump of 51.6% in value between 2013-12-31 (140.2) and 2014-12-31 (67.9).
+  - warning: [TOTAL@SHM] Unexpected jump of 87.4% in value between 2018-12-31 (262.2) and 2019-12-31 (33.0).
+  - warning: [TOTAL@SHM] Unexpected jump of 327.3% in value between 2019-12-31 (33.0) and 2020-12-31 (141.0).
+  - warning: [TOTAL@SKO] Unexpected jump of 54.1% in value between 2005-12-31 (191.9) and 2006-12-31 (88.0).
+  - warning: [TOTAL@VKO] Unexpected jump of 58.9% in value between 2010-12-31 (98.3) and 2011-12-31 (156.2).
+  - warning: [TOTAL@ZHM] Unexpected jump of 84.5% in value between 2003-12-31 (342.9) and 2004-12-31 (53.3).
+  - warning: [TOTAL@ZHM] Unexpected jump of 119.5% in value between 2004-12-31 (53.3) and 2005-12-31 (117.0).
+  - warning: [TOTAL@ZHM] Unexpected jump of 243.5% in value between 2007-12-31 (111.5) and 2008-12-31 (383.0).
+  - warning: [TOTAL@ZHM] Unexpected jump of 55.2% in value between 2008-12-31 (383.0) and 2009-12-31 (171.5).
+  - warning: [TOTAL@ZHM] Unexpected jump of 63.0% in value between 2009-12-31 (171.5) and 2010-12-31 (63.5).
+  - warning: [TOTAL@ZHM] Unexpected jump of 95.1% in value between 2011-12-31 (69.1) and 2012-12-31 (134.8).
+- **bns/INVESTMENT_BY_SECTION** — fetch+validate+process: ok (downloaded=483, processed=483)
+  - warning: [A] Unexpected jump of 75.6% in value between 2003-12-31 (25123.0) and 2004-12-31 (44110.0).
+  - warning: [A] Unexpected jump of 54.8% in value between 2015-12-31 (163907.0) and 2016-12-31 (253691.0).
+  - warning: [A] Unexpected jump of 56.3% in value between 2024-12-31 (737891.0) and 2025-12-31 (1153599.0).
+  - warning: [B] Unexpected jump of 51.8% in value between 2017-12-31 (2960272.0) and 2018-12-31 (4493990.0).
+  - warning: [C] Unexpected jump of 52.3% in value between 2004-12-31 (178175.0) and 2005-12-31 (271305.0).
+  - warning: [D] Unexpected jump of 50.1% in value between 2005-12-31 (53282.0) and 2006-12-31 (79958.0).
+  - warning: [D] Unexpected jump of 64.7% in value between 2006-12-31 (79958.0) and 2007-12-31 (131681.0).
+  - warning: [D] Unexpected jump of 68.4% in value between 2018-12-31 (543644.0) and 2019-12-31 (915455.0).
+  - warning: [D] Unexpected jump of 52.6% in value between 2022-12-31 (828749.0) and 2023-12-31 (1265074.0).
+  - warning: [D] Unexpected jump of 65.3% in value between 2024-12-31 (1346410.0) and 2025-12-31 (2226105.0).
+  - warning: [E] Unexpected jump of 62.4% in value between 2005-12-31 (28497.0) and 2006-12-31 (46285.0).
+  - warning: [E] Unexpected jump of 54.9% in value between 2007-12-31 (64841.0) and 2008-12-31 (100422.0).
+  - warning: [F] Unexpected jump of 62.5% in value between 2003-12-31 (41946.0) and 2004-12-31 (68167.0).
+  - warning: [F] Unexpected jump of 76.2% in value between 2021-12-31 (126672.0) and 2022-12-31 (223242.0).
+  - warning: [H] Unexpected jump of 81.5% in value between 2007-12-31 (415638.0) and 2008-12-31 (754359.0).
+  - warning: [H] Unexpected jump of 55.1% in value between 2022-12-31 (1725317.0) and 2023-12-31 (2675960.0).
+  - warning: [I] Unexpected jump of 92.2% in value between 2003-12-31 (6720.0) and 2004-12-31 (12916.0).
+  - warning: [I] Unexpected jump of 88.6% in value between 2005-12-31 (13701.0) and 2006-12-31 (25836.0).
+  - warning: [I] Unexpected jump of 67.1% in value between 2015-12-31 (48336.0) and 2016-12-31 (80780.0).
+  - warning: [I] Unexpected jump of 60.3% in value between 2016-12-31 (80780.0) and 2017-12-31 (129496.0).
+  - warning: [J] Unexpected jump of 131.8% in value between 2010-12-31 (59119.0) and 2011-12-31 (137041.0).
+  - warning: [J] Unexpected jump of 63.3% in value between 2019-12-31 (103483.0) and 2020-12-31 (168996.0).
+  - warning: [J] Unexpected jump of 127.8% in value between 2022-12-31 (192395.0) and 2023-12-31 (438366.0).
+  - warning: [K] Unexpected jump of 113.6% in value between 2006-12-31 (30097.0) and 2007-12-31 (64301.0).
+  - warning: [K] Unexpected jump of 93.5% in value between 2024-12-31 (160894.0) and 2025-12-31 (311271.0).
+  - warning: [L] Unexpected jump of 143.8% in value between 2003-12-31 (79812.0) and 2004-12-31 (194544.0).
+  - warning: [L] Unexpected jump of 63.9% in value between 2004-12-31 (194544.0) and 2005-12-31 (318912.0).
+  - warning: [M] Unexpected jump of 183.0% in value between 2003-12-31 (41855.0) and 2004-12-31 (118467.0).
+  - warning: [M] Unexpected jump of 157.2% in value between 2007-12-31 (147453.0) and 2008-12-31 (379224.0).
+  - warning: [M] Unexpected jump of 68.1% in value between 2018-12-31 (45698.0) and 2019-12-31 (76806.0).
+  - warning: ... 26 more warnings not listed
+- **bns/INVESTMENT_VOLUME_INDEX_BY_SECTION** — fetch+validate+process: ok (downloaded=462, processed=462)
+  - warning: [A] Unexpected jump of 60.1% in value between 2015-12-31 (91.9) and 2016-12-31 (147.1).
+  - warning: [A] Unexpected jump of 91.2% in value between 2024-12-31 (79.4) and 2025-12-31 (151.8).
+  - warning: [D] Unexpected jump of 82.7% in value between 2018-12-31 (90.8) and 2019-12-31 (165.9).
+  - warning: [D] Unexpected jump of 50.8% in value between 2019-12-31 (165.9) and 2020-12-31 (81.7).
+  - warning: [D] Unexpected jump of 56.5% in value between 2024-12-31 (103.4) and 2025-12-31 (161.8).
+  - warning: [E] Unexpected jump of 79.9% in value between 2013-12-31 (69.7) and 2014-12-31 (125.4).
+  - warning: [F] Unexpected jump of 62.8% in value between 2006-12-31 (131.4) and 2007-12-31 (48.9).
+  - warning: [F] Unexpected jump of 91.6% in value between 2007-12-31 (48.9) and 2008-12-31 (93.7).
+  - warning: [F] Unexpected jump of 57.7% in value between 2009-12-31 (76.3) and 2010-12-31 (120.3).
+  - warning: [F] Unexpected jump of 55.2% in value between 2015-12-31 (138.3) and 2016-12-31 (61.9).
+  - warning: [F] Unexpected jump of 127.9% in value between 2016-12-31 (61.9) and 2017-12-31 (141.1).
+  - warning: [F] Unexpected jump of 77.0% in value between 2021-12-31 (97.1) and 2022-12-31 (171.9).
+  - warning: [F] Unexpected jump of 66.4% in value between 2022-12-31 (171.9) and 2023-12-31 (57.7).
+  - warning: [F] Unexpected jump of 92.9% in value between 2023-12-31 (57.7) and 2024-12-31 (111.3).
+  - warning: [G] Unexpected jump of 70.7% in value between 2007-12-31 (65.5) and 2008-12-31 (111.8).
+  - warning: [G] Unexpected jump of 67.4% in value between 2020-12-31 (80.7) and 2021-12-31 (135.1).
+  - warning: [H] Unexpected jump of 60.4% in value between 2010-12-31 (72.9) and 2011-12-31 (116.9).
+  - warning: [I] Unexpected jump of 79.4% in value between 2005-12-31 (100.1) and 2006-12-31 (179.6).
+  - warning: [I] Unexpected jump of 54.2% in value between 2013-12-31 (84.8) and 2014-12-31 (130.8).
+  - warning: [I] Unexpected jump of 68.0% in value between 2015-12-31 (95.2) and 2016-12-31 (159.9).
+  - warning: [I] Unexpected jump of 51.4% in value between 2022-12-31 (72.2) and 2023-12-31 (109.3).
+  - warning: [J] Unexpected jump of 209.3% in value between 2010-12-31 (71.1) and 2011-12-31 (219.9).
+  - warning: [J] Unexpected jump of 57.7% in value between 2011-12-31 (219.9) and 2012-12-31 (93.1).
+  - warning: [J] Unexpected jump of 151.5% in value between 2016-12-31 (52.2) and 2017-12-31 (131.3).
+  - warning: [J] Unexpected jump of 58.2% in value between 2019-12-31 (102.7) and 2020-12-31 (162.5).
+  - warning: [J] Unexpected jump of 75.5% in value between 2022-12-31 (127.3) and 2023-12-31 (223.4).
+  - warning: [J] Unexpected jump of 64.4% in value between 2023-12-31 (223.4) and 2024-12-31 (79.6).
+  - warning: [J] Unexpected jump of 65.8% in value between 2024-12-31 (79.6) and 2025-12-31 (132.0).
+  - warning: [K] Unexpected jump of 54.1% in value between 2006-12-31 (131.0) and 2007-12-31 (201.9).
+  - warning: [K] Unexpected jump of 65.3% in value between 2007-12-31 (201.9) and 2008-12-31 (70.0).
+  - warning: ... 51 more warnings not listed
+- **bns/PRODUCTION_NATURAL_BY_REGION** — fetch+validate+process: ok (downloaded=10221, processed=10221)
+  - warning: [ASBESTOS@KST] Gap of 1095 days between 2016-12-31 and 2019-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ASBESTOS@KST] Unexpected jump of 67.4% in value between 1999-12-31 (139.3) and 2000-12-31 (233.2).
+  - warning: [ASBESTOS] Gap of 1095 days between 2016-12-31 and 2019-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ASBESTOS] Unexpected jump of 67.4% in value between 1999-12-31 (139.3) and 2000-12-31 (233.2).
+  - warning: [BAUXITE@KST] Gap of 2191 days between 2017-12-31 and 2023-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [BAUXITE] Gap of 2191 days between 2017-12-31 and 2023-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [BEER@AKM] Gap of 730 days between 2016-12-31 and 2018-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [BEER@AKM] Unexpected jump of 56.6% in value between 1995-12-31 (3040.0) and 1996-12-31 (1320.0).
+  - warning: [BEER@AKM] Unexpected jump of 93.2% in value between 1996-12-31 (1320.0) and 1997-12-31 (90.0).
+  - warning: [BEER@AKM] Unexpected jump of 834.1% in value between 1997-12-31 (90.0) and 1998-12-31 (840.7).
+  - warning: [BEER@AKM] Unexpected jump of 50.7% in value between 1998-12-31 (840.7) and 1999-12-31 (414.6).
+  - warning: [BEER@AKM] Unexpected jump of 75.6% in value between 1999-12-31 (414.6) and 2000-12-31 (101.1).
+  - warning: [BEER@AKM] Unexpected jump of 601.2% in value between 2000-12-31 (101.1) and 2001-12-31 (708.9).
+  - warning: [BEER@AKM] Unexpected jump of 85.7% in value between 2002-12-31 (536.8) and 2003-12-31 (76.8).
+  - warning: [BEER@AKM] Unexpected jump of 68.6% in value between 2005-12-31 (34.4) and 2006-12-31 (10.8).
+  - warning: [BEER@AKM] Unexpected jump of 311.1% in value between 2006-12-31 (10.8) and 2007-12-31 (44.4).
+  - warning: [BEER@AKM] Unexpected jump of 52.3% in value between 2007-12-31 (44.4) and 2008-12-31 (21.2).
+  - warning: [BEER@AKM] Unexpected jump of 83.1% in value between 2010-12-31 (11.8) and 2011-12-31 (2.0).
+  - warning: [BEER@AKM] Unexpected jump of 245.0% in value between 2011-12-31 (2.0) and 2012-12-31 (6.9).
+  - warning: [BEER@AKM] Unexpected jump of 85.5% in value between 2012-12-31 (6.9) and 2013-12-31 (12.8).
+  - warning: [BEER@AKM] Unexpected jump of 50.8% in value between 2013-12-31 (12.8) and 2014-12-31 (6.3).
+  - warning: [BEER@AKM] Unexpected jump of 902.8% in value between 2016-12-31 (3.6) and 2018-12-31 (36.1).
+  - warning: [BEER@AKM] Unexpected jump of 118.0% in value between 2018-12-31 (36.1) and 2019-12-31 (78.7).
+  - warning: [BEER@AKM] Unexpected jump of 58.2% in value between 2023-12-31 (55.7) and 2024-12-31 (23.3).
+  - warning: [BEER@AKT] Unexpected jump of 66.7% in value between 1998-12-31 (2250.0) and 1999-12-31 (749.7).
+  - warning: [BEER@AKT] Unexpected jump of 187.7% in value between 2001-12-31 (364.1) and 2002-12-31 (1047.4).
+  - warning: [BEER@AKT] Unexpected jump of 62.3% in value between 2002-12-31 (1047.4) and 2003-12-31 (1699.7).
+  - warning: [BEER@AKT] Unexpected jump of 58.9% in value between 2006-12-31 (1853.6) and 2007-12-31 (762.1).
+  - warning: [BEER@AKT] Unexpected jump of 134.5% in value between 2008-12-31 (605.0) and 2009-12-31 (1419.0).
+  - warning: [BEER@AKT] Unexpected jump of 50.6% in value between 2009-12-31 (1419.0) and 2010-12-31 (2137.1).
+  - warning: ... 2167 more warnings not listed
+- **bns/INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY** — fetch+validate+process: ok (downloaded=1839, processed=1839)
+  - warning: [05] Unexpected jump of 53.3% in value between 1999-12-31 (83.7) and 2000-12-31 (128.3).
+  - warning: [06.2] Unexpected jump of 103.7% in value between 1994-12-31 (61.8) and 1995-12-31 (125.9).
+  - warning: [06.2] Unexpected jump of 54.1% in value between 1998-12-31 (87.6) and 1999-12-31 (135.0).
+  - warning: [07.1] Unexpected jump of 76.0% in value between 1994-12-31 (83.2) and 1995-12-31 (146.4).
+  - warning: [07.1] Unexpected jump of 57.9% in value between 1998-12-31 (68.2) and 1999-12-31 (107.7).
+  - warning: [07.1] Unexpected jump of 50.3% in value between 1999-12-31 (107.7) and 2000-12-31 (161.9).
+  - warning: [08] Unexpected jump of 85.6% in value between 1994-12-31 (52.1) and 1995-12-31 (96.7).
+  - warning: [10.2] Unexpected jump of 62.5% in value between 1999-12-31 (76.9) and 2000-12-31 (125.0).
+  - warning: [10.3] Unexpected jump of 65.5% in value between 1990-12-31 (252.4) and 1991-12-31 (87.2).
+  - warning: [10.3] Unexpected jump of 137.5% in value between 1995-12-31 (37.1) and 1996-12-31 (88.1).
+  - warning: [10.3] Unexpected jump of 57.2% in value between 1998-12-31 (77.6) and 1999-12-31 (122.0).
+  - warning: [10.3] Unexpected jump of 102.2% in value between 2020-12-31 (72.9) and 2021-12-31 (147.4).
+  - warning: [10.4] Gap of 731 days between 1999-12-31 and 2001-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [10.4] Unexpected jump of 287.0% in value between 1998-12-31 (52.3) and 1999-12-31 (202.4).
+  - warning: [10.4] Unexpected jump of 51.9% in value between 2002-12-31 (104.4) and 2003-12-31 (158.6).
+  - warning: [10.4] Unexpected jump of 52.4% in value between 2021-12-31 (92.4) and 2022-12-31 (140.8).
+  - warning: [10.6] Unexpected jump of 64.4% in value between 1999-12-31 (81.5) and 2000-12-31 (134.0).
+  - warning: [10.8] Unexpected jump of 60.8% in value between 1992-12-31 (62.0) and 1993-12-31 (99.7).
+  - warning: [10.8] Unexpected jump of 100.8% in value between 1995-12-31 (59.8) and 1996-12-31 (120.1).
+  - warning: [10.8] Unexpected jump of 56.2% in value between 2015-12-31 (85.0) and 2016-12-31 (132.8).
+  - warning: [11] Unexpected jump of 60.1% in value between 1995-12-31 (67.5) and 1996-12-31 (108.1).
+  - warning: [13] Unexpected jump of 96.4% in value between 1995-12-31 (50.6) and 1996-12-31 (99.4).
+  - warning: [14] Unexpected jump of 58.5% in value between 1990-12-31 (214.2) and 1991-12-31 (89.0).
+  - warning: [14] Unexpected jump of 56.1% in value between 1995-12-31 (28.5) and 1996-12-31 (44.5).
+  - warning: [14] Unexpected jump of 115.6% in value between 1999-12-31 (69.3) and 2000-12-31 (149.4).
+  - warning: [15] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [15] Unexpected jump of 194.8% in value between 1999-12-31 (65.0) and 2000-12-31 (191.6).
+  - warning: [15] Unexpected jump of 76.0% in value between 2010-12-31 (68.3) and 2011-12-31 (120.2).
+  - warning: [15] Unexpected jump of 53.6% in value between 2024-12-31 (76.0) and 2025-12-31 (116.7).
+  - warning: [16] Unexpected jump of 50.1% in value between 1993-12-31 (88.4) and 1994-12-31 (44.1).
+  - warning: ... 82 more warnings not listed
+- **bns/AGRICULTURE_VOLUME_INDEX_BY_ACTIVITY** — fetch+validate+process: ok (downloaded=629, processed=629)
+  - warning: [011] Unexpected jump of 82.9% in value between 2010-12-31 (79.77517387154904) and 2011-12-31 (145.94442352551192).
+  - warning: [011] Unexpected jump of 52.1% in value between 2012-12-31 (77.22429886189394) and 2013-12-31 (117.48423056176537).
+  - warning: [0111] Unexpected jump of 261.1% in value between 2010-12-31 (60.25646738976469) and 2011-12-31 (217.61157696324335).
+  - warning: [0111] Unexpected jump of 77.0% in value between 2011-12-31 (217.61157696324335) and 2012-12-31 (50.15635392953822).
+  - warning: [0111] Unexpected jump of 187.9% in value between 2012-12-31 (50.15635392953822) and 2013-12-31 (144.41546378992993).
+  - warning: [0111] Unexpected jump of 59.7% in value between 2021-12-31 (84.38637214269986) and 2022-12-31 (134.7335155741497).
+  - warning: [0111] Unexpected jump of 101.3% in value between 2023-12-31 (75.46503471677896) and 2024-12-31 (151.89762873347496).
+  - warning: [01111] Unexpected jump of 294.1% in value between 2010-12-31 (57.4611770105065) and 2011-12-31 (226.45912302404975).
+  - warning: [01111] Unexpected jump of 79.4% in value between 2011-12-31 (226.45912302404975) and 2012-12-31 (46.612188535156626).
+  - warning: [01111] Unexpected jump of 204.8% in value between 2012-12-31 (46.612188535156626) and 2013-12-31 (142.05385203913548).
+  - warning: [01111] Unexpected jump of 67.3% in value between 2021-12-31 (82.58643511968224) and 2022-12-31 (138.20652050159882).
+  - warning: [01111] Unexpected jump of 96.1% in value between 2023-12-31 (77.16400682200958) and 2024-12-31 (151.2988089497114).
+  - warning: [01112] Unexpected jump of 83.4% in value between 2012-12-31 (85.2404264783347) and 2013-12-31 (156.35064370961322).
+  - warning: [01112] Unexpected jump of 124.0% in value between 2023-12-31 (68.97973042198585) and 2024-12-31 (154.52552662338945).
+  - warning: [01133] Unexpected jump of 52.5% in value between 2011-12-31 (140.04022007718063) and 2012-12-31 (66.49085268163725).
+  - warning: [01133] Unexpected jump of 1714.2% in value between 2014-12-31 (40.19240427874808) and 2015-12-31 (729.1565947237186).
+  - warning: [01133] Unexpected jump of 72.1% in value between 2015-12-31 (729.1565947237186) and 2016-12-31 (203.71323357945852).
+  - warning: [01133] Unexpected jump of 80.3% in value between 2022-12-31 (92.60597800936952) and 2023-12-31 (166.99485800427084).
+  - warning: [01133] Unexpected jump of 76.6% in value between 2024-12-31 (248.32026188094795) and 2025-12-31 (58.17592889137826).
+  - warning: [0115] Unexpected jump of 130.7% in value between 2010-12-31 (37.92678132104957) and 2011-12-31 (87.48265947838327).
+  - warning: [0115] Unexpected jump of 58.7% in value between 2016-12-31 (72.20715991031201) and 2017-12-31 (114.5652661932917).
+  - warning: [0115] Unexpected jump of 90.4% in value between 2023-12-31 (105.99195373397035) and 2024-12-31 (10.196610412435488).
+  - warning: [0115] Unexpected jump of 830.5% in value between 2024-12-31 (10.196610412435488) and 2025-12-31 (94.88401547597574).
+  - warning: [0116] Unexpected jump of 57.7% in value between 2010-12-31 (88.82922854709085) and 2011-12-31 (140.11165830997822).
+  - warning: [0116] Unexpected jump of 67.8% in value between 2024-12-31 (92.04474556786563) and 2025-12-31 (154.4426451277826).
+  - warning: [01161] Unexpected jump of 57.7% in value between 2010-12-31 (88.82922854709085) and 2011-12-31 (140.11165830997822).
+  - warning: [01161] Unexpected jump of 67.8% in value between 2024-12-31 (92.04474556786563) and 2025-12-31 (154.4426451277826).
+  - warning: [01192] Unexpected jump of 69.2% in value between 2010-12-31 (114.01286654913379) and 2011-12-31 (35.0792944080215).
+  - warning: [01192] Unexpected jump of 238.0% in value between 2011-12-31 (35.0792944080215) and 2012-12-31 (118.57702286993388).
+  - warning: [01192] Unexpected jump of 228.1% in value between 2023-12-31 (71.68832326336285) and 2024-12-31 (235.2236610055931).
+  - warning: ... 24 more warnings not listed
+- **bns/GRAIN_HARVEST_BY_REGION** — fetch+validate+process: ok (downloaded=702, processed=702)
+  - warning: [TOTAL@AKM] Unexpected jump of 68.3% in value between 2008-12-31 (3011.6) and 2009-12-31 (5067.8).
+  - warning: [TOTAL@AKM] Unexpected jump of 57.7% in value between 2009-12-31 (5067.8) and 2010-12-31 (2141.9).
+  - warning: [TOTAL@AKM] Unexpected jump of 208.0% in value between 2010-12-31 (2141.9) and 2011-12-31 (6597.6).
+  - warning: [TOTAL@AKM] Unexpected jump of 57.2% in value between 2011-12-31 (6597.6) and 2012-12-31 (2822.0).
+  - warning: [TOTAL@AKM] Unexpected jump of 56.3% in value between 2012-12-31 (2822.0) and 2013-12-31 (4411.7).
+  - warning: [TOTAL@AKM] Unexpected jump of 87.7% in value between 2023-12-31 (3215.53224) and 2024-12-31 (6036.08104).
+  - warning: [TOTAL@AKT] Unexpected jump of 255.1% in value between 2006-12-31 (129.3) and 2007-12-31 (459.2).
+  - warning: [TOTAL@AKT] Unexpected jump of 83.7% in value between 2009-12-31 (394.7) and 2010-12-31 (64.4).
+  - warning: [TOTAL@AKT] Unexpected jump of 565.5% in value between 2010-12-31 (64.4) and 2011-12-31 (428.6).
+  - warning: [TOTAL@AKT] Unexpected jump of 77.9% in value between 2011-12-31 (428.6) and 2012-12-31 (94.7).
+  - warning: [TOTAL@AKT] Unexpected jump of 124.5% in value between 2012-12-31 (94.7) and 2013-12-31 (212.6).
+  - warning: [TOTAL@AKT] Unexpected jump of 147.5% in value between 2015-12-31 (164.9) and 2016-12-31 (408.2).
+  - warning: [TOTAL@AKT] Unexpected jump of 108.3% in value between 2021-12-31 (252.69244) and 2022-12-31 (526.38825).
+  - warning: [TOTAL@ALA] Gap of 730 days between 2012-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ALA] Gap of 1461 days between 2020-12-31 and 2024-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ALA] Unexpected jump of 66.7% in value between 2004-12-31 (0.3) and 2005-12-31 (0.5).
+  - warning: [TOTAL@ALA] Unexpected jump of 60.0% in value between 2005-12-31 (0.5) and 2006-12-31 (0.2).
+  - warning: [TOTAL@ALA] Unexpected jump of 66.7% in value between 2007-12-31 (0.3) and 2008-12-31 (0.1).
+  - warning: [TOTAL@ALA] Unexpected jump of 200.0% in value between 2008-12-31 (0.1) and 2009-12-31 (0.3).
+  - warning: [TOTAL@ALA] Unexpected jump of 66.7% in value between 2011-12-31 (0.3) and 2012-12-31 (0.1).
+  - warning: [TOTAL@ALA] Unexpected jump of 600.0% in value between 2015-12-31 (0.1) and 2016-12-31 (0.7).
+  - warning: [TOTAL@ALA] Unexpected jump of 100.0% in value between 2016-12-31 (0.7) and 2017-12-31 (0.0).
+  - warning: [TOTAL@ALA] Unexpected jump of 58.3% in value between 2019-12-31 (0.1802) and 2020-12-31 (0.0751).
+  - warning: [TOTAL@ALA] Unexpected jump of 168.6% in value between 2020-12-31 (0.0751) and 2024-12-31 (0.20169).
+  - warning: [TOTAL@ALM] Unexpected jump of 80.4% in value between 2008-12-31 (659.7) and 2009-12-31 (1190.2).
+  - warning: [TOTAL@ALM] Unexpected jump of 55.3% in value between 2021-12-31 (1361.70359) and 2022-12-31 (608.6755400000001).
+  - warning: [TOTAL@AST] Unexpected jump of 66.7% in value between 2011-12-31 (0.3) and 2012-12-31 (0.5).
+  - warning: [TOTAL@AST] Unexpected jump of 66.7% in value between 2014-12-31 (0.3) and 2015-12-31 (0.1).
+  - warning: [TOTAL@AST] Unexpected jump of 900.0% in value between 2015-12-31 (0.1) and 2016-12-31 (1.0).
+  - warning: [TOTAL@AST] Unexpected jump of 80.0% in value between 2016-12-31 (1.0) and 2017-12-31 (0.2).
+  - warning: ... 139 more warnings not listed
+- **bns/GRAIN_SOWN_AREA_BY_REGION** — fetch+validate+process: ok (downloaded=706, processed=706)
+  - warning: [TOTAL@ALA] Gap of 730 days between 2012-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ALA] Gap of 1461 days between 2020-12-31 and 2024-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ALA] Unexpected jump of 70.1% in value between 2012-12-31 (0.335) and 2014-12-31 (0.1).
+  - warning: [TOTAL@ALA] Unexpected jump of 600.0% in value between 2015-12-31 (0.1) and 2016-12-31 (0.7).
+  - warning: [TOTAL@ALA] Unexpected jump of 57.1% in value between 2016-12-31 (0.7) and 2017-12-31 (0.3).
+  - warning: [TOTAL@ALA] Unexpected jump of 53.3% in value between 2018-12-31 (0.2117) and 2019-12-31 (0.0988).
+  - warning: [TOTAL@ALM] Unexpected jump of 62.6% in value between 2021-12-31 (486.1009) and 2022-12-31 (181.8367).
+  - warning: [TOTAL@AST] Unexpected jump of 192.7% in value between 2011-12-31 (0.3) and 2012-12-31 (0.878).
+  - warning: [TOTAL@AST] Unexpected jump of 250.0% in value between 2015-12-31 (0.4) and 2016-12-31 (1.4).
+  - warning: [TOTAL@AST] Unexpected jump of 71.4% in value between 2016-12-31 (1.4) and 2017-12-31 (0.4).
+  - warning: [TOTAL@AST] Unexpected jump of 327.3% in value between 2018-12-31 (0.37) and 2019-12-31 (1.581).
+  - warning: [TOTAL@AST] Unexpected jump of 51.9% in value between 2023-12-31 (1.343) and 2024-12-31 (0.646).
+  - warning: [TOTAL@ATY] Gap of 731 days between 2018-12-31 and 2020-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ATY] Gap of 730 days between 2020-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ATY] Gap of 731 days between 2023-12-31 and 2025-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ATY] Unexpected jump of 80.0% in value between 2009-12-31 (0.5) and 2010-12-31 (0.1).
+  - warning: [TOTAL@ATY] Unexpected jump of 2000.0% in value between 2010-12-31 (0.1) and 2011-12-31 (2.1).
+  - warning: [TOTAL@ATY] Unexpected jump of 76.2% in value between 2011-12-31 (2.1) and 2012-12-31 (0.5).
+  - warning: [TOTAL@ATY] Unexpected jump of 150.0% in value between 2016-12-31 (0.4) and 2017-12-31 (1.0).
+  - warning: [TOTAL@ATY] Unexpected jump of 65.0% in value between 2017-12-31 (1.0) and 2018-12-31 (0.35).
+  - warning: [TOTAL@ATY] Unexpected jump of 91.4% in value between 2018-12-31 (0.35) and 2020-12-31 (0.03).
+  - warning: [TOTAL@ATY] Unexpected jump of 666.7% in value between 2020-12-31 (0.03) and 2022-12-31 (0.23).
+  - warning: [TOTAL@ATY] Unexpected jump of 82.6% in value between 2022-12-31 (0.23) and 2023-12-31 (0.04).
+  - warning: [TOTAL@ATY] Unexpected jump of 192.5% in value between 2023-12-31 (0.04) and 2025-12-31 (0.117).
+  - warning: [TOTAL@MNG] Gap of 730 days between 2016-12-31 and 2018-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@MNG] Unexpected jump of 83.3% in value between 2016-12-31 (0.012) and 2018-12-31 (0.002).
+  - warning: [TOTAL@VKO] Unexpected jump of 52.4% in value between 2021-12-31 (599.6135) and 2022-12-31 (285.6182).
+  - warning: [WHEAT@ALA] Gap of 1461 days between 2005-12-31 and 2009-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [WHEAT@ALA] Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [WHEAT@ALA] Gap of 731 days between 2018-12-31 and 2020-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: ... 15 more warnings not listed
+- **bns/GRAIN_YIELD_BY_REGION** — fetch+validate+process: ok (downloaded=701, processed=701)
+  - warning: [TOTAL@AKM] Unexpected jump of 53.6% in value between 2009-12-31 (11.2) and 2010-12-31 (5.2).
+  - warning: [TOTAL@AKM] Unexpected jump of 200.0% in value between 2010-12-31 (5.2) and 2011-12-31 (15.6).
+  - warning: [TOTAL@AKM] Unexpected jump of 55.1% in value between 2011-12-31 (15.6) and 2012-12-31 (7.0).
+  - warning: [TOTAL@AKM] Unexpected jump of 89.9% in value between 2023-12-31 (6.9) and 2024-12-31 (13.1).
+  - warning: [TOTAL@AKT] Unexpected jump of 169.0% in value between 2006-12-31 (2.9) and 2007-12-31 (7.8).
+  - warning: [TOTAL@AKT] Unexpected jump of 61.9% in value between 2009-12-31 (6.3) and 2010-12-31 (2.4).
+  - warning: [TOTAL@AKT] Unexpected jump of 212.5% in value between 2010-12-31 (2.4) and 2011-12-31 (7.5).
+  - warning: [TOTAL@AKT] Unexpected jump of 61.3% in value between 2011-12-31 (7.5) and 2012-12-31 (2.9).
+  - warning: [TOTAL@AKT] Unexpected jump of 72.9% in value between 2012-12-31 (2.9) and 2013-12-31 (5.0146).
+  - warning: [TOTAL@AKT] Unexpected jump of 112.5% in value between 2015-12-31 (5.6) and 2016-12-31 (11.9).
+  - warning: [TOTAL@AKT] Unexpected jump of 146.6% in value between 2021-12-31 (5.8) and 2022-12-31 (14.3).
+  - warning: [TOTAL@ALA] Gap of 730 days between 2012-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ALA] Gap of 1096 days between 2021-12-31 and 2024-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ALA] Unexpected jump of 52.4% in value between 2011-12-31 (10.3) and 2012-12-31 (4.9).
+  - warning: [TOTAL@ALA] Unexpected jump of 175.5% in value between 2012-12-31 (4.9) and 2014-12-31 (13.5).
+  - warning: [TOTAL@ALA] Unexpected jump of 78.4% in value between 2017-12-31 (6.9) and 2018-12-31 (12.3099).
+  - warning: [TOTAL@ALA] Unexpected jump of 69.8% in value between 2019-12-31 (18.2389) and 2020-12-31 (5.5).
+  - warning: [TOTAL@ALA] Unexpected jump of 359.0% in value between 2021-12-31 (3.9) and 2024-12-31 (17.9).
+  - warning: [TOTAL@ALM] Unexpected jump of 58.0% in value between 2008-12-31 (16.2) and 2009-12-31 (25.6).
+  - warning: [TOTAL@AST] Gap of 730 days between 2020-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@AST] Unexpected jump of 121.9% in value between 2010-12-31 (6.4) and 2011-12-31 (14.2).
+  - warning: [TOTAL@AST] Unexpected jump of 59.9% in value between 2011-12-31 (14.2) and 2012-12-31 (5.7).
+  - warning: [TOTAL@AST] Unexpected jump of 124.2% in value between 2015-12-31 (3.3) and 2016-12-31 (7.4).
+  - warning: [TOTAL@AST] Unexpected jump of 153.7% in value between 2023-12-31 (5.4) and 2024-12-31 (13.7).
+  - warning: [TOTAL@AST] Unexpected jump of 52.6% in value between 2024-12-31 (13.7) and 2025-12-31 (6.5).
+  - warning: [TOTAL@ATY] Gap of 730 days between 2013-12-31 and 2015-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ATY] Gap of 731 days between 2018-12-31 and 2020-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ATY] Gap of 730 days between 2020-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ATY] Unexpected jump of 54.8% in value between 2004-12-31 (3.1) and 2005-12-31 (1.4).
+  - warning: [TOTAL@ATY] Unexpected jump of 400.0% in value between 2007-12-31 (1.3) and 2008-12-31 (6.5).
+  - warning: ... 109 more warnings not listed
+- **bns/GVA_NOMINAL_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1821, processed=1821)
+  - warning: [A] Unexpected jump of 51.3% in own-period contribution between 2010-01-01 (90224.5) and 2010-04-01 (136481.3).
+  - warning: [A] Unexpected jump of 198.1% in own-period contribution between 2010-04-01 (136481.3) and 2010-07-01 (406817.2).
+  - warning: [A] Unexpected jump of 67.1% in own-period contribution between 2010-10-01 (350471.9) and 2011-01-01 (115401.2).
+  - warning: [A] Unexpected jump of 260.1% in own-period contribution between 2011-04-01 (138049.5) and 2011-07-01 (497155.49999999994).
+  - warning: [A] Unexpected jump of 79.7% in own-period contribution between 2011-10-01 (658432.4000000001) and 2012-01-01 (133618.7).
+  - warning: [A] Unexpected jump of 244.6% in own-period contribution between 2012-04-01 (159308.59999999998) and 2012-07-01 (548922.7).
+  - warning: [A] Unexpected jump of 72.4% in own-period contribution between 2012-10-01 (488183.6000000001) and 2013-01-01 (134647.2).
+  - warning: [A] Unexpected jump of 269.1% in own-period contribution between 2013-04-01 (201307.2) and 2013-07-01 (742958.1).
+  - warning: [A] Unexpected jump of 70.2% in own-period contribution between 2013-10-01 (542320.0) and 2014-01-01 (161844.2).
+  - warning: [A] Unexpected jump of 228.0% in own-period contribution between 2014-04-01 (231650.09999999998) and 2014-07-01 (759914.5999999999).
+  - warning: [A] Unexpected jump of 68.2% in own-period contribution between 2014-10-01 (564377.1000000001) and 2015-01-01 (179588.5).
+  - warning: [A] Unexpected jump of 246.2% in own-period contribution between 2015-04-01 (255580.40000000002) and 2015-07-01 (884813.9).
+  - warning: [A] Unexpected jump of 68.1% in own-period contribution between 2015-10-01 (605883.7) and 2016-01-01 (193406.6).
+  - warning: [A] Unexpected jump of 239.6% in own-period contribution between 2016-04-01 (287342.1) and 2016-07-01 (975887.5).
+  - warning: [A] Unexpected jump of 68.6% in own-period contribution between 2016-10-01 (683371.4000000001) and 2017-01-01 (214414.1).
+  - warning: [A] Unexpected jump of 239.9% in own-period contribution between 2017-04-01 (307733.4) and 2017-07-01 (1046075.6000000001).
+  - warning: [A] Unexpected jump of 73.2% in own-period contribution between 2017-10-01 (888061.5) and 2018-01-01 (238092.5).
+  - warning: [A] Unexpected jump of 54.5% in own-period contribution between 2018-01-01 (238092.5) and 2018-04-01 (367971.30000000005).
+  - warning: [A] Unexpected jump of 186.1% in own-period contribution between 2018-04-01 (367971.30000000005) and 2018-07-01 (1052895.5999999999).
+  - warning: [A] Unexpected jump of 74.1% in own-period contribution between 2018-10-01 (1058539.7000000002) and 2019-01-01 (274580.6).
+  - warning: [A] Unexpected jump of 201.3% in own-period contribution between 2019-04-01 (404331.20000000007) and 2019-07-01 (1218270.7).
+  - warning: [A] Unexpected jump of 72.1% in own-period contribution between 2019-10-01 (1208378.2000000002) and 2020-01-01 (336754.6).
+  - warning: [A] Unexpected jump of 226.4% in own-period contribution between 2020-04-01 (466856.20000000007) and 2020-07-01 (1523635.0999999999).
+  - warning: [A] Unexpected jump of 73.2% in own-period contribution between 2020-10-01 (1481643.2000000002) and 2021-01-01 (397251.6).
+  - warning: [A] Unexpected jump of 240.1% in own-period contribution between 2021-04-01 (525432.6) and 2021-07-01 (1786872.5999999999).
+  - warning: [A] Unexpected jump of 69.0% in own-period contribution between 2021-10-01 (1513209.7000000002) and 2022-01-01 (468601.8).
+  - warning: [A] Unexpected jump of 256.8% in own-period contribution between 2022-04-01 (640830.8999999999) and 2022-07-01 (2286692.5).
+  - warning: [A] Unexpected jump of 73.5% in own-period contribution between 2022-10-01 (2048602.0999999996) and 2023-01-01 (542781.1).
+  - warning: [A] Unexpected jump of 148.2% in own-period contribution between 2023-04-01 (733480.9) and 2023-07-01 (1820458.2000000002).
+  - warning: [A] Unexpected jump of 60.0% in own-period contribution between 2023-10-01 (1471951.0999999996) and 2024-01-01 (588856.8).
+  - warning: ... 363 more warnings not listed
+- **bns/GVA_VOLUME_INDEX_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1821, processed=1821)
+  - warning: [NET_TAXES] Gap of 365 days between 2010-10-01 and 2011-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 366 days between 2011-10-01 and 2012-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2012-10-01 and 2013-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2013-10-01 and 2014-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2014-10-01 and 2015-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 366 days between 2015-10-01 and 2016-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2017-10-01 and 2018-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2018-10-01 and 2019-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 366 days between 2019-10-01 and 2020-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2020-10-01 and 2021-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2021-10-01 and 2022-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2022-10-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 366 days between 2023-10-01 and 2024-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2024-10-01 and 2025-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2010-10-01 and 2011-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 366 days between 2011-10-01 and 2012-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2012-10-01 and 2013-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2013-10-01 and 2014-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2014-10-01 and 2015-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 366 days between 2015-10-01 and 2016-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2017-10-01 and 2018-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2018-10-01 and 2019-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 366 days between 2019-10-01 and 2020-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2020-10-01 and 2021-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2021-10-01 and 2022-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2022-10-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 366 days between 2023-10-01 and 2024-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2024-10-01 and 2025-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: ... 2 more warnings not listed
+- **bns/GVA_DEFLATOR_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1821, processed=1821)
+  - warning: [FISIM] Unexpected jump of 62.9% in value between 2010-01-01 (44.9) and 2010-04-01 (73.1589060080724).
+  - warning: [FISIM] Unexpected jump of 81.6% in value between 2010-10-01 (119.8) and 2011-01-01 (217.6).
+  - warning: [NET_TAXES] Gap of 365 days between 2010-10-01 and 2011-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 366 days between 2011-10-01 and 2012-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2012-10-01 and 2013-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2013-10-01 and 2014-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2014-10-01 and 2015-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 366 days between 2015-10-01 and 2016-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2017-10-01 and 2018-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2018-10-01 and 2019-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 366 days between 2019-10-01 and 2020-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2020-10-01 and 2021-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2021-10-01 and 2022-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2022-10-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 366 days between 2023-10-01 and 2024-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Gap of 365 days between 2024-10-01 and 2025-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [NET_TAXES] Unexpected jump of 67.6% in value between 2015-10-01 (75.1) and 2016-10-01 (125.9).
+  - warning: [R] Unexpected jump of 52.9% in value between 2021-10-01 (108.6) and 2022-01-01 (166.0).
+  - warning: [S] Unexpected jump of 134.8% in value between 2013-07-01 (108.7) and 2013-10-01 (255.2).
+  - warning: [S] Unexpected jump of 70.7% in value between 2013-10-01 (255.2) and 2014-01-01 (74.7).
+  - warning: [SUBSIDIES] Gap of 365 days between 2010-10-01 and 2011-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 366 days between 2011-10-01 and 2012-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2012-10-01 and 2013-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2013-10-01 and 2014-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2014-10-01 and 2015-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 366 days between 2015-10-01 and 2016-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2017-10-01 and 2018-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [SUBSIDIES] Gap of 365 days between 2018-10-01 and 2019-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: ... 9 more warnings not listed
+- **bns/GVA_NOMINAL_INDUSTRY_DIVISIONS_QUARTERLY** — fetch+validate+process: ok (downloaded=1961, processed=1961)
+  - warning: [05] Unexpected jump of 57.1% in own-period contribution between 2013-04-01 (27356.6) and 2013-07-01 (42987.19999999999).
+  - warning: [05] Unexpected jump of 61.3% in own-period contribution between 2014-04-01 (28926.09999999999) and 2014-07-01 (46663.0).
+  - warning: [05] Unexpected jump of 59.7% in own-period contribution between 2015-04-01 (28705.899999999987) and 2015-07-01 (45829.90000000001).
+  - warning: [05] Unexpected jump of 122.1% in own-period contribution between 2016-04-01 (27694.59999999999) and 2016-07-01 (61514.09999999999).
+  - warning: [05] Unexpected jump of 72.9% in own-period contribution between 2017-04-01 (37134.40000000001) and 2017-07-01 (64189.29999999999).
+  - warning: [05] Unexpected jump of 58.6% in own-period contribution between 2018-07-01 (52471.09999999998) and 2018-10-01 (83199.1).
+  - warning: [05] Unexpected jump of 101.9% in own-period contribution between 2019-07-01 (56423.2) and 2019-10-01 (113930.90000000002).
+  - warning: [05] Unexpected jump of 52.2% in own-period contribution between 2019-10-01 (113930.90000000002) and 2020-01-01 (54497.600000000006).
+  - warning: [05] Unexpected jump of 58.8% in own-period contribution between 2020-07-01 (56175.5) and 2020-10-01 (23130.50000000003).
+  - warning: [05] Unexpected jump of 151.2% in own-period contribution between 2020-10-01 (23130.50000000003) and 2021-01-01 (58114.899999999994).
+  - warning: [05] Unexpected jump of 88.1% in own-period contribution between 2021-10-01 (46972.20000000001) and 2022-01-01 (88344.49999999999).
+  - warning: [05] Unexpected jump of 112.7% in own-period contribution between 2022-04-01 (53504.90000000001) and 2022-07-01 (113801.9).
+  - warning: [05] Unexpected jump of 190.2% in own-period contribution between 2023-07-01 (42633.99999999997) and 2023-10-01 (123707.79999999993).
+  - warning: [05] Unexpected jump of 158.5% in own-period contribution between 2024-07-01 (53704.40000000002) and 2024-10-01 (138812.19999999995).
+  - warning: [05] Unexpected jump of 51.3% in own-period contribution between 2025-04-01 (101391.8) and 2025-07-01 (49362.70000000001).
+  - warning: [05] Unexpected jump of 299.2% in own-period contribution between 2025-07-01 (49362.70000000001) and 2025-10-01 (197032.60000000006).
+  - warning: [06] Unexpected jump of 50.8% in own-period contribution between 2017-07-01 (1199921.1) and 2017-10-01 (1809521.5999999996).
+  - warning: [06] Unexpected jump of 53.6% in own-period contribution between 2019-07-01 (1484766.0999999996) and 2019-10-01 (2281287.000000001).
+  - warning: [07] Unexpected jump of 60.1% in own-period contribution between 2013-04-01 (97149.20000000004) and 2013-07-01 (155510.7).
+  - warning: [07] Unexpected jump of 61.0% in own-period contribution between 2013-07-01 (155510.7) and 2013-10-01 (250441.49999999988).
+  - warning: [07] Unexpected jump of 62.2% in own-period contribution between 2014-04-01 (104840.6) and 2014-07-01 (170036.09999999992).
+  - warning: [07] Unexpected jump of 63.9% in own-period contribution between 2014-07-01 (170036.09999999992) and 2014-10-01 (278768.10000000015).
+  - warning: [07] Unexpected jump of 55.2% in own-period contribution between 2015-07-01 (144015.90000000002) and 2015-10-01 (223526.6000000001).
+  - warning: [07] Unexpected jump of 62.2% in own-period contribution between 2020-04-01 (420448.1) and 2020-07-01 (682006.5000000002).
+  - warning: [07] Unexpected jump of 84.1% in own-period contribution between 2021-04-01 (421176.80000000005) and 2021-07-01 (775304.1).
+  - warning: [07] Unexpected jump of 63.5% in own-period contribution between 2022-04-01 (462977.09999999986) and 2022-07-01 (756740.8999999999).
+  - warning: [07] Unexpected jump of 143.0% in own-period contribution between 2023-07-01 (757992.9000000001) and 2023-10-01 (1841597.7).
+  - warning: [07] Unexpected jump of 59.1% in own-period contribution between 2023-10-01 (1841597.7) and 2024-01-01 (753453.8999999999).
+  - warning: [07] Unexpected jump of 62.6% in own-period contribution between 2024-04-01 (605231.4000000001) and 2024-07-01 (983868.9999999998).
+  - warning: [07] Unexpected jump of 132.7% in own-period contribution between 2024-07-01 (983868.9999999998) and 2024-10-01 (2289084.0999999996).
+  - warning: ... 637 more warnings not listed
+- **bns/GDP_EXPENDITURE_NOMINAL_QUARTERLY** — fetch+validate+process: ok (downloaded=1080, processed=1080)
+  - warning: [EXPORTS] Unexpected jump of 52.0% in own-period contribution between 2011-01-01 (2557371.6) and 2011-04-01 (3887602.4).
+  - warning: [FINAL_CONSUMPTION] Unexpected jump of 59.3% in own-period contribution between 2011-07-01 (3530563.999999999) and 2011-10-01 (5623353.1000000015).
+  - warning: [FINAL_CONSUMPTION] Unexpected jump of 56.1% in own-period contribution between 2012-07-01 (4120172.5999999987) and 2012-10-01 (6432451.600000003).
+  - warning: [FINAL_CONSUMPTION] Unexpected jump of 53.2% in own-period contribution between 2013-07-01 (5242258.699999999) and 2013-10-01 (8030857.6).
+  - warning: [FINAL_CONSUMPTION] Unexpected jump of 58.6% in own-period contribution between 2017-07-01 (7898539.199999999) and 2017-10-01 (12530882.799999997).
+  - warning: [FINAL_CONSUMPTION] Unexpected jump of 61.6% in own-period contribution between 2018-07-01 (8602189.6) and 2018-10-01 (13899131.8).
+  - warning: [FINAL_CONSUMPTION] Unexpected jump of 65.7% in own-period contribution between 2019-07-01 (9771327.500000004) and 2019-10-01 (16186410.299999993).
+  - warning: [FINAL_CONSUMPTION] Unexpected jump of 56.5% in own-period contribution between 2020-07-01 (11139004.100000001) and 2020-10-01 (17427102.399999995).
+  - warning: [FINAL_CONSUMPTION] Unexpected jump of 63.8% in own-period contribution between 2021-07-01 (12391031.100000001) and 2021-10-01 (20301137.700000003).
+  - warning: [FINAL_CONSUMPTION] Unexpected jump of 84.3% in own-period contribution between 2022-07-01 (14035014.299999997) and 2022-10-01 (25859781.400000006).
+  - warning: [FINAL_CONSUMPTION] Unexpected jump of 80.7% in own-period contribution between 2023-07-01 (16794630.800000004) and 2023-10-01 (30339516.599999994).
+  - warning: [FINAL_CONSUMPTION] Unexpected jump of 86.2% in own-period contribution between 2024-07-01 (19887778.999999996) and 2024-10-01 (37023965.20000002).
+  - warning: [FINAL_CONSUMPTION] Unexpected jump of 85.0% in own-period contribution between 2025-07-01 (23619049.400000006) and 2025-10-01 (43691991.2).
+  - warning: [GDP] Unexpected jump of 54.0% in own-period contribution between 2019-07-01 (16389294.000000007) and 2019-10-01 (25234714.399999984).
+  - warning: [GDP] Unexpected jump of 50.4% in own-period contribution between 2022-07-01 (25453465.299999997) and 2022-10-01 (38277720.300000004).
+  - warning: [GDP] Unexpected jump of 55.1% in own-period contribution between 2023-07-01 (28302148.799999982) and 2023-10-01 (43895469.400000006).
+  - warning: [GDP] Unexpected jump of 58.6% in own-period contribution between 2024-07-01 (32619885.799999997) and 2024-10-01 (51730692.20000002).
+  - warning: [GDP] Unexpected jump of 56.1% in own-period contribution between 2025-07-01 (38353076.59999999) and 2025-10-01 (59858852.2).
+  - warning: [GFCF] Unexpected jump of 115.8% in own-period contribution between 2007-01-01 (550683.9) and 2007-04-01 (1188365.2999999998).
+  - warning: [GFCF] Unexpected jump of 96.6% in own-period contribution between 2008-01-01 (645575.8) and 2008-04-01 (1269030.8).
+  - warning: [GFCF] Unexpected jump of 66.6% in own-period contribution between 2009-01-01 (624901.5) and 2009-04-01 (1040832.0).
+  - warning: [GFCF] Unexpected jump of 57.2% in own-period contribution between 2009-04-01 (1040832.0) and 2009-07-01 (1636293.7999999998).
+  - warning: [GFCF] Unexpected jump of 70.5% in own-period contribution between 2010-07-01 (1295524.9) and 2010-10-01 (2208388.3).
+  - warning: [GFCF] Unexpected jump of 53.8% in own-period contribution between 2010-10-01 (2208388.3) and 2011-01-01 (1019222.9).
+  - warning: [GFCF] Unexpected jump of 87.9% in own-period contribution between 2011-07-01 (1402332.4999999998) and 2011-10-01 (2635565.4000000004).
+  - warning: [GFCF] Unexpected jump of 54.0% in own-period contribution between 2011-10-01 (2635565.4000000004) and 2012-01-01 (1212072.0).
+  - warning: [GFCF] Unexpected jump of 53.8% in own-period contribution between 2012-04-01 (1026720.1000000001) and 2012-07-01 (1578667.1999999997).
+  - warning: [GFCF] Unexpected jump of 106.2% in own-period contribution between 2012-07-01 (1578667.1999999997) and 2012-10-01 (3254982.2).
+  - warning: [GFCF] Unexpected jump of 57.5% in own-period contribution between 2012-10-01 (3254982.2) and 2013-01-01 (1382212.5).
+  - warning: [GFCF] Unexpected jump of 94.6% in own-period contribution between 2013-04-01 (1176435.9) and 2013-07-01 (2288947.3000000003).
+  - warning: ... 212 more warnings not listed
+- **bns/GDP_EXPENDITURE_VOLUME_INDEX_QUARTERLY** — fetch+validate+process: ok (downloaded=847, processed=847)
+  - warning: [GROSS_CAPITAL_FORMATION] Unexpected jump of 59.1% in value between 2008-10-01 (87.2) and 2009-01-01 (138.7).
+- **bns/GDP_EXPENDITURE_DEFLATOR_QUARTERLY** — fetch+validate+process: ok (downloaded=924, processed=924)
+  - warning: [EXPORTS] Unexpected jump of 82.5% in value between 2009-10-01 (88.0) and 2010-01-01 (160.6).
+  - warning: [EXPORTS] Unexpected jump of 99.5% in value between 2015-10-01 (77.9) and 2016-01-01 (155.4).
+  - warning: [IMPORTS] Unexpected jump of 61.9% in value between 2015-10-01 (98.7) and 2016-01-01 (159.8).
+- **bns/INCOME_COMPENSATION_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1560, processed=1560)
+  - warning: [A] Unexpected jump of 89.8% in own-period contribution between 2010-01-01 (28752.8) and 2010-04-01 (54577.5).
+  - warning: [A] Unexpected jump of 55.5% in own-period contribution between 2010-07-01 (57274.7) and 2010-10-01 (89033.9).
+  - warning: [A] Unexpected jump of 59.9% in own-period contribution between 2010-10-01 (89033.9) and 2011-01-01 (35702.6).
+  - warning: [A] Unexpected jump of 57.9% in own-period contribution between 2011-01-01 (35702.6) and 2011-04-01 (56363.4).
+  - warning: [A] Unexpected jump of 59.8% in own-period contribution between 2011-04-01 (56363.4) and 2011-07-01 (90061.4).
+  - warning: [A] Unexpected jump of 63.9% in own-period contribution between 2011-10-01 (121244.4) and 2012-01-01 (43737.0).
+  - warning: [A] Unexpected jump of 82.5% in own-period contribution between 2012-04-01 (61308.899999999994) and 2012-07-01 (111885.6).
+  - warning: [A] Unexpected jump of 113.1% in own-period contribution between 2013-04-01 (72146.4) and 2013-07-01 (153777.50000000003).
+  - warning: [A] Unexpected jump of 96.6% in own-period contribution between 2014-04-01 (77724.6) and 2014-07-01 (152844.5).
+  - warning: [A] Unexpected jump of 57.5% in own-period contribution between 2014-10-01 (139956.40000000002) and 2015-01-01 (59504.9).
+  - warning: [A] Unexpected jump of 54.2% in own-period contribution between 2015-01-01 (59504.9) and 2015-04-01 (91751.1).
+  - warning: [A] Unexpected jump of 90.7% in own-period contribution between 2015-04-01 (91751.1) and 2015-07-01 (174995.2).
+  - warning: [A] Unexpected jump of 59.7% in own-period contribution between 2015-10-01 (152440.09999999998) and 2016-01-01 (61426.2).
+  - warning: [A] Unexpected jump of 56.2% in own-period contribution between 2016-01-01 (61426.2) and 2016-04-01 (95933.50000000001).
+  - warning: [A] Unexpected jump of 94.0% in own-period contribution between 2016-04-01 (95933.50000000001) and 2016-07-01 (186081.09999999998).
+  - warning: [A] Unexpected jump of 110.2% in own-period contribution between 2017-04-01 (102739.9) and 2017-07-01 (215924.09999999998).
+  - warning: [A] Unexpected jump of 62.7% in own-period contribution between 2017-10-01 (217525.20000000007) and 2018-01-01 (81233.9).
+  - warning: [A] Unexpected jump of 50.7% in own-period contribution between 2018-01-01 (81233.9) and 2018-04-01 (122404.1).
+  - warning: [A] Unexpected jump of 77.5% in own-period contribution between 2018-04-01 (122404.1) and 2018-07-01 (217283.5).
+  - warning: [A] Unexpected jump of 62.2% in own-period contribution between 2018-10-01 (248782.90000000002) and 2019-01-01 (94144.9).
+  - warning: [A] Unexpected jump of 78.4% in own-period contribution between 2019-04-01 (139380.7) and 2019-07-01 (248597.1).
+  - warning: [A] Unexpected jump of 63.6% in own-period contribution between 2019-10-01 (287775.89999999997) and 2020-01-01 (104724.9).
+  - warning: [A] Unexpected jump of 87.4% in own-period contribution between 2020-04-01 (154574.80000000002) and 2020-07-01 (289729.10000000003).
+  - warning: [A] Unexpected jump of 59.9% in own-period contribution between 2020-10-01 (303331.69999999995) and 2021-01-01 (121593.9).
+  - warning: [A] Unexpected jump of 50.3% in own-period contribution between 2021-01-01 (121593.9) and 2021-04-01 (182731.4).
+  - warning: [A] Unexpected jump of 82.0% in own-period contribution between 2021-04-01 (182731.4) and 2021-07-01 (332615.10000000003).
+  - warning: [A] Unexpected jump of 54.9% in own-period contribution between 2021-10-01 (315491.6) and 2022-01-01 (142260.2).
+  - warning: [A] Unexpected jump of 51.8% in own-period contribution between 2022-01-01 (142260.2) and 2022-04-01 (216011.89999999997).
+  - warning: [A] Unexpected jump of 100.0% in own-period contribution between 2022-04-01 (216011.89999999997) and 2022-07-01 (431957.70000000007).
+  - warning: [A] Unexpected jump of 63.7% in own-period contribution between 2022-10-01 (453216.30000000005) and 2023-01-01 (164683.8).
+  - warning: ... 494 more warnings not listed
+- **bns/INCOME_OTHER_TAXES_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1625, processed=1625)
+  - warning: [A] Unexpected jump of 51.7% in own-period contribution between 2014-07-01 (390.20000000000005) and 2014-10-01 (591.8).
+  - warning: [A] Unexpected jump of 289.7% in own-period contribution between 2020-07-01 (624.8999999999999) and 2020-10-01 (2435.3).
+  - warning: [A] Unexpected jump of 71.7% in own-period contribution between 2020-10-01 (2435.3) and 2021-01-01 (688.9).
+  - warning: [A] Unexpected jump of 1649.9% in own-period contribution between 2021-07-01 (618.7) and 2021-10-01 (10826.7).
+  - warning: [A] Unexpected jump of 72.8% in own-period contribution between 2021-10-01 (10826.7) and 2022-01-01 (2940.6).
+  - warning: [A] Unexpected jump of 7352.6% in own-period contribution between 2023-07-01 (4146.900000000001) and 2023-10-01 (-300758.9).
+  - warning: [A] Unexpected jump of 101.4% in own-period contribution between 2023-10-01 (-300758.9) and 2024-01-01 (4113.9).
+  - warning: [A] Unexpected jump of 4129.5% in own-period contribution between 2024-07-01 (7650.700000000001) and 2024-10-01 (-308284.8).
+  - warning: [A] Unexpected jump of 101.5% in own-period contribution between 2024-10-01 (-308284.8) and 2025-01-01 (4474.3).
+  - warning: [A] Unexpected jump of 53.7% in own-period contribution between 2025-04-01 (5668.999999999999) and 2025-07-01 (8711.900000000001).
+  - warning: [A] Unexpected jump of 3275.9% in own-period contribution between 2025-07-01 (8711.900000000001) and 2025-10-01 (-276683.1).
+  - warning: [A] Unexpected jump of 101.8% in own-period contribution between 2025-10-01 (-276683.1) and 2026-01-01 (4844.3).
+  - warning: [B] Unexpected jump of 437.7% in own-period contribution between 2020-07-01 (87928.1) and 2020-10-01 (472760.69999999995).
+  - warning: [B] Unexpected jump of 79.5% in own-period contribution between 2020-10-01 (472760.69999999995) and 2021-01-01 (96946.0).
+  - warning: [B] Unexpected jump of 120.8% in own-period contribution between 2021-07-01 (87068.20000000001) and 2021-10-01 (-18082.400000000023).
+  - warning: [B] Unexpected jump of 514.9% in own-period contribution between 2021-10-01 (-18082.400000000023) and 2022-01-01 (75031.4).
+  - warning: [B] Unexpected jump of 102.6% in own-period contribution between 2023-10-01 (60688.80000000002) and 2024-01-01 (122944.7).
+  - warning: [C] Unexpected jump of 76.3% in own-period contribution between 2014-07-01 (9806.200000000004) and 2014-10-01 (17288.1).
+  - warning: [C] Unexpected jump of 67.5% in own-period contribution between 2015-07-01 (10281.899999999998) and 2015-10-01 (17219.700000000004).
+  - warning: [C] Unexpected jump of 52.6% in own-period contribution between 2019-07-01 (21333.899999999994) and 2019-10-01 (32545.0).
+  - warning: [C] Unexpected jump of 437.7% in own-period contribution between 2020-07-01 (21910.6) and 2020-10-01 (117814.1).
+  - warning: [C] Unexpected jump of 79.5% in own-period contribution between 2020-10-01 (117814.1) and 2021-01-01 (24157.7).
+  - warning: [C] Unexpected jump of 269.4% in own-period contribution between 2021-07-01 (21696.5) and 2021-10-01 (80148.70000000001).
+  - warning: [C] Unexpected jump of 277.2% in own-period contribution between 2023-07-01 (63376.29999999999) and 2023-10-01 (-112297.5).
+  - warning: [C] Unexpected jump of 164.2% in own-period contribution between 2023-10-01 (-112297.5) and 2024-01-01 (72136.8).
+  - warning: [C] Unexpected jump of 259.7% in own-period contribution between 2024-07-01 (67406.4) and 2024-10-01 (-107665.20000000001).
+  - warning: [C] Unexpected jump of 181.6% in own-period contribution between 2024-10-01 (-107665.20000000001) and 2025-01-01 (87899.8).
+  - warning: [C] Unexpected jump of 252.2% in own-period contribution between 2025-07-01 (79014.19999999998) and 2025-10-01 (-120222.4).
+  - warning: [C] Unexpected jump of 178.2% in own-period contribution between 2025-10-01 (-120222.4) and 2026-01-01 (94011.7).
+  - warning: [D] Unexpected jump of 85.0% in own-period contribution between 2014-07-01 (2454.0) and 2014-10-01 (4539.700000000001).
+  - warning: ... 295 more warnings not listed
+- **bns/INCOME_CFC_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1560, processed=1560)
+  - warning: [A] Unexpected jump of 100.1% in own-period contribution between 2010-01-01 (6999.8) and 2010-04-01 (14004.2).
+  - warning: [A] Unexpected jump of 254.3% in own-period contribution between 2010-04-01 (14004.2) and 2010-07-01 (49619.8).
+  - warning: [A] Unexpected jump of 76.9% in own-period contribution between 2010-10-01 (39451.09999999999) and 2011-01-01 (9099.3).
+  - warning: [A] Unexpected jump of 57.0% in own-period contribution between 2011-01-01 (9099.3) and 2011-04-01 (14285.5).
+  - warning: [A] Unexpected jump of 342.6% in own-period contribution between 2011-04-01 (14285.5) and 2011-07-01 (63230.0).
+  - warning: [A] Unexpected jump of 87.9% in own-period contribution between 2011-10-01 (85500.3) and 2012-01-01 (10385.5).
+  - warning: [A] Unexpected jump of 53.7% in own-period contribution between 2012-01-01 (10385.5) and 2012-04-01 (15959.3).
+  - warning: [A] Unexpected jump of 317.3% in own-period contribution between 2012-04-01 (15959.3) and 2012-07-01 (66591.7).
+  - warning: [A] Unexpected jump of 76.5% in own-period contribution between 2012-10-01 (46006.899999999994) and 2013-01-01 (10807.6).
+  - warning: [A] Unexpected jump of 163.7% in own-period contribution between 2013-01-01 (10807.6) and 2013-04-01 (28499.200000000004).
+  - warning: [A] Unexpected jump of 179.9% in own-period contribution between 2013-04-01 (28499.200000000004) and 2013-07-01 (79770.4).
+  - warning: [A] Unexpected jump of 79.1% in own-period contribution between 2013-10-01 (60526.59999999999) and 2014-01-01 (12646.8).
+  - warning: [A] Unexpected jump of 159.3% in own-period contribution between 2014-01-01 (12646.8) and 2014-04-01 (32787.600000000006).
+  - warning: [A] Unexpected jump of 147.9% in own-period contribution between 2014-04-01 (32787.600000000006) and 2014-07-01 (81288.5).
+  - warning: [A] Unexpected jump of 79.2% in own-period contribution between 2014-10-01 (75552.4) and 2015-01-01 (15736.9).
+  - warning: [A] Unexpected jump of 96.3% in own-period contribution between 2015-01-01 (15736.9) and 2015-04-01 (30888.6).
+  - warning: [A] Unexpected jump of 221.1% in own-period contribution between 2015-04-01 (30888.6) and 2015-07-01 (99178.20000000001).
+  - warning: [A] Unexpected jump of 83.7% in own-period contribution between 2015-10-01 (100886.69999999998) and 2016-01-01 (16426.9).
+  - warning: [A] Unexpected jump of 115.0% in own-period contribution between 2016-01-01 (16426.9) and 2016-04-01 (35315.9).
+  - warning: [A] Unexpected jump of 215.0% in own-period contribution between 2016-04-01 (35315.9) and 2016-07-01 (111248.2).
+  - warning: [A] Unexpected jump of 72.0% in own-period contribution between 2016-10-01 (82193.9) and 2017-01-01 (22999.8).
+  - warning: [A] Unexpected jump of 253.3% in own-period contribution between 2017-04-01 (33724.0) and 2017-07-01 (119159.2).
+  - warning: [A] Unexpected jump of 77.9% in own-period contribution between 2017-10-01 (114868.20000000001) and 2018-01-01 (25358.8).
+  - warning: [A] Unexpected jump of 57.6% in own-period contribution between 2018-01-01 (25358.8) and 2018-04-01 (39959.0).
+  - warning: [A] Unexpected jump of 201.4% in own-period contribution between 2018-04-01 (39959.0) and 2018-07-01 (120439.2).
+  - warning: [A] Unexpected jump of 73.7% in own-period contribution between 2018-10-01 (110082.20000000001) and 2019-01-01 (28977.4).
+  - warning: [A] Unexpected jump of 51.2% in own-period contribution between 2019-01-01 (28977.4) and 2019-04-01 (43812.99999999999).
+  - warning: [A] Unexpected jump of 215.1% in own-period contribution between 2019-04-01 (43812.99999999999) and 2019-07-01 (138043.6).
+  - warning: [A] Unexpected jump of 76.0% in own-period contribution between 2019-10-01 (146943.7) and 2020-01-01 (35202.7).
+  - warning: [A] Unexpected jump of 60.9% in own-period contribution between 2020-01-01 (35202.7) and 2020-04-01 (56651.100000000006).
+  - warning: ... 539 more warnings not listed
+- **bns/INCOME_PROFIT_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1567, processed=1567)
+  - warning: [A] Unexpected jump of 342.9% in own-period contribution between 2010-04-01 (67666.8) and 2010-07-01 (299667.7).
+  - warning: [A] Unexpected jump of 68.3% in own-period contribution between 2010-10-01 (221659.49999999994) and 2011-01-01 (70333.9).
+  - warning: [A] Unexpected jump of 412.1% in own-period contribution between 2011-04-01 (67096.9) and 2011-07-01 (343583.8).
+  - warning: [A] Unexpected jump of 82.4% in own-period contribution between 2011-10-01 (451419.6) and 2012-01-01 (79235.6).
+  - warning: [A] Unexpected jump of 353.3% in own-period contribution between 2012-04-01 (81661.19999999998) and 2012-07-01 (370148.50000000006).
+  - warning: [A] Unexpected jump of 78.8% in own-period contribution between 2012-10-01 (353933.3999999999) and 2013-01-01 (74873.8).
+  - warning: [A] Unexpected jump of 407.6% in own-period contribution between 2013-04-01 (100270.59999999999) and 2013-07-01 (508940.9).
+  - warning: [A] Unexpected jump of 74.7% in own-period contribution between 2013-10-01 (380565.19999999995) and 2014-01-01 (96278.9).
+  - warning: [A] Unexpected jump of 335.1% in own-period contribution between 2014-04-01 (120744.80000000002) and 2014-07-01 (525391.3999999999).
+  - warning: [A] Unexpected jump of 70.2% in own-period contribution between 2014-10-01 (348276.5000000001) and 2015-01-01 (103910.3).
+  - warning: [A] Unexpected jump of 360.4% in own-period contribution between 2015-04-01 (132530.3) and 2015-07-01 (610234.9).
+  - warning: [A] Unexpected jump of 67.3% in own-period contribution between 2015-10-01 (351966.5) and 2016-01-01 (114946.2).
+  - warning: [A] Unexpected jump of 336.6% in own-period contribution between 2016-04-01 (155265.8) and 2016-07-01 (677927.2).
+  - warning: [A] Unexpected jump of 74.1% in own-period contribution between 2016-10-01 (471060.1000000001) and 2017-01-01 (122223.9).
+  - warning: [A] Unexpected jump of 316.2% in own-period contribution between 2017-04-01 (170716.30000000002) and 2017-07-01 (710455.7).
+  - warning: [A] Unexpected jump of 76.4% in own-period contribution between 2017-10-01 (555055.4999999999) and 2018-01-01 (130930.0).
+  - warning: [A] Unexpected jump of 56.6% in own-period contribution between 2018-01-01 (130930.0) and 2018-04-01 (205028.5).
+  - warning: [A] Unexpected jump of 248.5% in own-period contribution between 2018-04-01 (205028.5) and 2018-07-01 (714590.5).
+  - warning: [A] Unexpected jump of 78.4% in own-period contribution between 2018-10-01 (699013.0) and 2019-01-01 (150866.9).
+  - warning: [A] Unexpected jump of 276.8% in own-period contribution between 2019-04-01 (220517.1) and 2019-07-01 (830978.3).
+  - warning: [A] Unexpected jump of 74.6% in own-period contribution between 2019-10-01 (772853.0) and 2020-01-01 (196253.3).
+  - warning: [A] Unexpected jump of 318.5% in own-period contribution between 2020-04-01 (255036.10000000003) and 2020-07-01 (1067277.9).
+  - warning: [A] Unexpected jump of 76.8% in own-period contribution between 2020-10-01 (1004307.5999999999) and 2021-01-01 (232686.4).
+  - warning: [A] Unexpected jump of 353.5% in own-period contribution between 2021-04-01 (277326.4) and 2021-07-01 (1257776.8).
+  - warning: [A] Unexpected jump of 73.1% in own-period contribution between 2021-10-01 (1014662.3999999999) and 2022-01-01 (273046.7).
+  - warning: [A] Unexpected jump of 365.6% in own-period contribution between 2022-04-01 (343745.99999999994) and 2022-07-01 (1600580.2).
+  - warning: [A] Unexpected jump of 76.6% in own-period contribution between 2022-10-01 (1354832.7000000002) and 2023-01-01 (316373.8).
+  - warning: [A] Unexpected jump of 228.8% in own-period contribution between 2023-04-01 (393236.00000000006) and 2023-07-01 (1293150.4).
+  - warning: [A] Unexpected jump of 73.5% in own-period contribution between 2023-10-01 (1295641.2) and 2024-01-01 (342953.9).
+  - warning: [A] Unexpected jump of 278.6% in own-period contribution between 2024-04-01 (389693.1) and 2024-07-01 (1475563.7000000002).
+  - warning: ... 588 more warnings not listed
+- **bns/GVA_NOMINAL_BY_REGION_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=25256, processed=25256)
+  - warning: [A@ABY] Gap of 182 days between 2021-10-01 and 2022-04-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [A@ABY] Unexpected jump of 72.8% in own-period contribution between 2021-10-01 (246471.5) and 2022-04-01 (66929.7).
+  - warning: [A@ABY] Unexpected jump of 128.2% in own-period contribution between 2022-07-01 (82369.00000000001) and 2022-10-01 (187967.3).
+  - warning: [A@ABY] Unexpected jump of 84.0% in own-period contribution between 2022-10-01 (187967.3) and 2023-01-01 (30091.1).
+  - warning: [A@ABY] Unexpected jump of 58.3% in own-period contribution between 2023-01-01 (30091.1) and 2023-04-01 (47628.700000000004).
+  - warning: [A@ABY] Unexpected jump of 86.0% in own-period contribution between 2023-04-01 (47628.700000000004) and 2023-07-01 (88570.90000000001).
+  - warning: [A@ABY] Unexpected jump of 62.2% in own-period contribution between 2023-10-01 (96074.09999999998) and 2024-01-01 (36282.6).
+  - warning: [A@ABY] Unexpected jump of 127.2% in own-period contribution between 2024-04-01 (41357.299999999996) and 2024-07-01 (93944.9).
+  - warning: [A@ABY] Unexpected jump of 75.5% in own-period contribution between 2024-10-01 (139315.3) and 2025-01-01 (34187.6).
+  - warning: [A@ABY] Unexpected jump of 225.2% in own-period contribution between 2025-04-01 (36921.799999999996) and 2025-07-01 (120087.0).
+  - warning: [A@ABY] Unexpected jump of 75.5% in own-period contribution between 2025-07-01 (120087.0) and 2025-10-01 (210697.1).
+  - warning: [A@ABY] Unexpected jump of 78.9% in own-period contribution between 2025-10-01 (210697.1) and 2026-01-01 (44485.2).
+  - warning: [A@AKM] Unexpected jump of 283.9% in own-period contribution between 2010-04-01 (9719.800000000001) and 2010-07-01 (37315.7).
+  - warning: [A@AKM] Unexpected jump of 63.9% in own-period contribution between 2010-10-01 (25201.9) and 2011-01-01 (9108.0).
+  - warning: [A@AKM] Unexpected jump of 273.1% in own-period contribution between 2011-04-01 (12812.0) and 2011-07-01 (47801.5).
+  - warning: [A@AKM] Unexpected jump of 112.8% in own-period contribution between 2011-07-01 (47801.5) and 2011-10-01 (101710.4).
+  - warning: [A@AKM] Unexpected jump of 91.3% in own-period contribution between 2011-10-01 (101710.4) and 2012-01-01 (8894.1).
+  - warning: [A@AKM] Unexpected jump of 460.9% in own-period contribution between 2012-04-01 (10156.6) and 2012-07-01 (56964.7).
+  - warning: [A@AKM] Unexpected jump of 54.2% in own-period contribution between 2012-07-01 (56964.7) and 2012-10-01 (26069.0).
+  - warning: [A@AKM] Unexpected jump of 62.8% in own-period contribution between 2012-10-01 (26069.0) and 2013-01-01 (9707.8).
+  - warning: [A@AKM] Unexpected jump of 530.7% in own-period contribution between 2013-04-01 (12534.7) and 2013-07-01 (79061.7).
+  - warning: [A@AKM] Unexpected jump of 78.2% in own-period contribution between 2013-10-01 (50295.500000000015) and 2014-01-01 (10965.6).
+  - warning: [A@AKM] Unexpected jump of 475.4% in own-period contribution between 2014-04-01 (13699.6) and 2014-07-01 (78832.40000000001).
+  - warning: [A@AKM] Unexpected jump of 80.7% in own-period contribution between 2014-10-01 (58080.79999999999) and 2015-01-01 (11189.7).
+  - warning: [A@AKM] Unexpected jump of 538.5% in own-period contribution between 2015-04-01 (15414.099999999999) and 2015-07-01 (98412.8).
+  - warning: [A@AKM] Unexpected jump of 77.7% in own-period contribution between 2015-10-01 (55380.69999999998) and 2016-01-01 (12347.1).
+  - warning: [A@AKM] Unexpected jump of 550.4% in own-period contribution between 2016-04-01 (17225.6) and 2016-07-01 (112026.90000000001).
+  - warning: [A@AKM] Unexpected jump of 76.2% in own-period contribution between 2016-10-01 (60710.5) and 2017-01-01 (14461.5).
+  - warning: [A@AKM] Unexpected jump of 458.1% in own-period contribution between 2017-04-01 (20943.9) and 2017-07-01 (116880.5).
+  - warning: [A@AKM] Unexpected jump of 79.0% in own-period contribution between 2017-10-01 (76789.0) and 2018-01-01 (16146.0).
+  - warning: ... 9322 more warnings not listed
+- **bns/GRP_VOLUME_INDEX_BY_REGION_QUARTERLY** — fetch+validate+process: ok (downloaded=1099, processed=1099)
+  - warning: [GDP@ABY] Gap of 182 days between 2021-10-01 and 2022-04-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@SHM] Gap of 366 days between 2011-10-01 and 2012-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@SHM] Gap of 365 days between 2012-10-01 and 2013-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@SHM] Gap of 365 days between 2013-10-01 and 2014-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@SHM] Gap of 365 days between 2014-10-01 and 2015-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@SHM] Gap of 366 days between 2015-10-01 and 2016-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@SHM] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@SHM] Gap of 182 days between 2017-10-01 and 2018-04-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@TRK] Gap of 366 days between 2011-10-01 and 2012-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@TRK] Gap of 365 days between 2012-10-01 and 2013-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@TRK] Gap of 365 days between 2013-10-01 and 2014-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@TRK] Gap of 365 days between 2014-10-01 and 2015-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@TRK] Gap of 366 days between 2015-10-01 and 2016-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@TRK] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@TRK] Gap of 182 days between 2017-10-01 and 2018-04-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@ZHT] Gap of 182 days between 2021-10-01 and 2022-04-01 is outside expected range for frequency=quarterly (80-100d).
+- **bns/EMPLOYED_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1386, processed=1386)
+- **bns/QNA_GVA_BY_SECTION** — fetch+validate+process: ok (downloaded=1690, processed=1690)
+  - warning: [A] Unexpected jump of 71.0% in value between 2010-01-01 (103120.12925070136) and 2010-04-01 (176367.4999048501).
+  - warning: [A] Unexpected jump of 198.5% in value between 2010-04-01 (176367.4999048501) and 2010-07-01 (526478.6883581614).
+  - warning: [A] Unexpected jump of 57.8% in value between 2010-10-01 (308022.7824862869) and 2011-01-01 (129949.39035872386).
+  - warning: [A] Unexpected jump of 262.2% in value between 2011-04-01 (193448.42273658174) and 2011-07-01 (700714.6084939835).
+  - warning: [A] Unexpected jump of 73.7% in value between 2011-10-01 (555404.8784107106) and 2012-01-01 (145934.5190040875).
+  - warning: [A] Unexpected jump of 211.8% in value between 2012-04-01 (212668.70113932647) and 2012-07-01 (663046.6107833413).
+  - warning: [A] Unexpected jump of 64.9% in value between 2012-10-01 (481451.0690732441) and 2013-01-01 (168800.47665827288).
+  - warning: [A] Unexpected jump of 250.8% in value between 2013-04-01 (233850.76242688345) and 2013-07-01 (820319.1316482357).
+  - warning: [A] Unexpected jump of 63.3% in value between 2013-10-01 (528108.829266608) and 2014-01-01 (194029.63217893447).
+  - warning: [A] Unexpected jump of 219.1% in value between 2014-04-01 (271783.87217359303) and 2014-07-01 (867181.2480135062).
+  - warning: [A] Unexpected jump of 61.7% in value between 2014-10-01 (523532.1476339665) and 2015-01-01 (200745.7417838541).
+  - warning: [A] Unexpected jump of 217.6% in value between 2015-04-01 (297877.771970146) and 2015-07-01 (945985.1492945465).
+  - warning: [A] Unexpected jump of 60.8% in value between 2015-10-01 (553150.1369514533) and 2016-01-01 (216993.78886839916).
+  - warning: [A] Unexpected jump of 225.2% in value between 2016-04-01 (309479.95905295823) and 2016-07-01 (1006473.2998631425).
+  - warning: [A] Unexpected jump of 61.7% in value between 2016-10-01 (659955.3522155) and 2017-01-01 (252439.72303429636).
+  - warning: [A] Unexpected jump of 252.5% in value between 2017-04-01 (335828.33032825275) and 2017-07-01 (1183761.5496017924).
+  - warning: [A] Unexpected jump of 58.5% in value between 2017-10-01 (648393.6970356588) and 2018-01-01 (269029.70197999594).
+  - warning: [A] Unexpected jump of 211.2% in value between 2018-04-01 (399956.53469658486) and 2018-07-01 (1244685.7412182053).
+  - warning: [A] Unexpected jump of 57.6% in value between 2018-10-01 (766662.522105214) and 2019-01-01 (325313.752638589).
+  - warning: [A] Unexpected jump of 210.9% in value between 2019-04-01 (452724.98961353436) and 2019-07-01 (1407399.459927798).
+  - warning: [A] Unexpected jump of 57.4% in value between 2019-10-01 (874730.8978200789) and 2020-01-01 (372423.787731886).
+  - warning: [A] Unexpected jump of 252.4% in value between 2020-04-01 (506173.8105939681) and 2020-07-01 (1783860.7151897794).
+  - warning: [A] Unexpected jump of 60.5% in value between 2020-10-01 (1097639.1864843655) and 2021-01-01 (434045.3959696288).
+  - warning: [A] Unexpected jump of 239.6% in value between 2021-04-01 (596987.7731760887) and 2021-07-01 (2027360.2163336931).
+  - warning: [A] Unexpected jump of 56.2% in value between 2021-10-01 (1112921.0145205883) and 2022-01-01 (487108.02238713857).
+  - warning: [A] Unexpected jump of 311.9% in value between 2022-04-01 (602722.9298543459) and 2022-07-01 (2482398.520748665).
+  - warning: [A] Unexpected jump of 62.4% in value between 2022-10-01 (1345872.7270098506) and 2023-01-01 (506435.6556617369).
+  - warning: [A] Unexpected jump of 226.4% in value between 2023-04-01 (641774.1267893128) and 2023-07-01 (2094579.1061956312).
+  - warning: [A] Unexpected jump of 62.1% in value between 2023-10-01 (1325882.4113533194) and 2024-01-01 (502742.82327371114).
+  - warning: [A] Unexpected jump of 316.5% in value between 2024-04-01 (594094.8979015638) and 2024-07-01 (2474226.9268880617).
+  - warning: ... 62 more warnings not listed
+- **bns/QNA_GVA_BY_SECTION_CONSTANT_2010** — fetch+validate+process: ok (downloaded=1690, processed=1690)
+  - warning: [A] Unexpected jump of 71.0% in value between 2010-01-01 (101264.639902818) and 2010-04-01 (173194.03590937087).
+  - warning: [A] Unexpected jump of 198.5% in value between 2010-04-01 (173194.03590937087) and 2010-07-01 (517005.5078527217).
+  - warning: [A] Unexpected jump of 64.5% in value between 2010-10-01 (302480.38260799344) and 2011-01-01 (107392.32768176544).
+  - warning: [A] Unexpected jump of 61.3% in value between 2011-01-01 (107392.32768176544) and 2011-04-01 (173220.11069522804).
+  - warning: [A] Unexpected jump of 253.9% in value between 2011-04-01 (173220.11069522804) and 2011-07-01 (613009.905964887).
+  - warning: [A] Unexpected jump of 76.5% in value between 2011-10-01 (432647.47862048005) and 2012-01-01 (101742.01976826873).
+  - warning: [A] Unexpected jump of 269.1% in value between 2012-04-01 (151912.6381147253) and 2012-07-01 (560759.4733153967).
+  - warning: [A] Unexpected jump of 67.3% in value between 2012-10-01 (316101.90127405146) and 2013-01-01 (103368.75515860211).
+  - warning: [A] Unexpected jump of 56.5% in value between 2013-01-01 (103368.75515860211) and 2013-04-01 (161749.44246549616).
+  - warning: [A] Unexpected jump of 261.3% in value between 2013-04-01 (161749.44246549616) and 2013-07-01 (584367.9738402214).
+  - warning: [A] Unexpected jump of 70.7% in value between 2013-10-01 (384233.56094782206) and 2014-01-01 (112724.6051357965).
+  - warning: [A] Unexpected jump of 258.3% in value between 2014-04-01 (166397.42793963177) and 2014-07-01 (596192.2377323647).
+  - warning: [A] Unexpected jump of 69.2% in value between 2014-10-01 (373274.38834771357) and 2015-01-01 (115086.40286581207).
+  - warning: [A] Unexpected jump of 262.3% in value between 2015-04-01 (171689.6597467063) and 2015-07-01 (621974.9878616988).
+  - warning: [A] Unexpected jump of 68.9% in value between 2015-10-01 (383828.9063648188) and 2016-01-01 (119288.63051964012).
+  - warning: [A] Unexpected jump of 277.8% in value between 2016-04-01 (177212.6480367748) and 2016-07-01 (669480.7764129716).
+  - warning: [A] Unexpected jump of 67.8% in value between 2016-10-01 (395393.4262573237) and 2017-01-01 (127329.00631797413).
+  - warning: [A] Unexpected jump of 277.9% in value between 2017-04-01 (188568.0603137543) and 2017-07-01 (712524.5150189715).
+  - warning: [A] Unexpected jump of 64.6% in value between 2017-10-01 (375838.02704554936) and 2018-01-01 (132994.0382709287).
+  - warning: [A] Unexpected jump of 258.4% in value between 2018-04-01 (197898.47144463958) and 2018-07-01 (709320.6762709467).
+  - warning: [A] Unexpected jump of 66.0% in value between 2018-10-01 (416922.34776088165) and 2019-01-01 (141763.6800742531).
+  - warning: [A] Unexpected jump of 227.0% in value between 2019-04-01 (211262.94734198757) and 2019-07-01 (690748.0236792697).
+  - warning: [A] Unexpected jump of 65.2% in value between 2019-10-01 (412923.70742409857) and 2020-01-01 (143644.08612735482).
+  - warning: [A] Unexpected jump of 266.0% in value between 2020-04-01 (209674.58576475608) and 2020-07-01 (767403.7491024688).
+  - warning: [A] Unexpected jump of 67.6% in value between 2020-10-01 (421336.5374595419) and 2021-01-01 (136388.0280109635).
+  - warning: [A] Unexpected jump of 54.0% in value between 2021-01-01 (136388.0280109635) and 2021-04-01 (209982.95436482568).
+  - warning: [A] Unexpected jump of 276.3% in value between 2021-04-01 (209982.95436482568) and 2021-07-01 (790250.9821407617).
+  - warning: [A] Unexpected jump of 53.3% in value between 2021-07-01 (790250.9821407617) and 2021-10-01 (368920.5736071031).
+  - warning: [A] Unexpected jump of 64.3% in value between 2021-10-01 (368920.5736071031) and 2022-01-01 (131637.58525458988).
+  - warning: [A] Unexpected jump of 54.5% in value between 2022-01-01 (131637.58525458988) and 2022-04-01 (203416.76102506372).
+  - warning: ... 86 more warnings not listed
+- **bns/QNA_GVA_VOLUME_INDEX_BY_SECTION** — fetch+validate+process: ok (downloaded=1586, processed=1586)
+  - warning: [E] Unexpected jump of 68.6% in value between 2012-01-01 (68.66875735019465) and 2012-04-01 (115.76086146356464).
+  - warning: [E] Unexpected jump of 74.2% in value between 2012-07-01 (73.16993481002885) and 2012-10-01 (127.43361226086408).
+  - warning: [E] Unexpected jump of 57.8% in value between 2013-04-01 (60.4592388673408) and 2013-07-01 (95.41633803110541).
+  - warning: [E] Unexpected jump of 58.3% in value between 2017-10-01 (82.20815285069824) and 2018-01-01 (130.1077517928808).
+  - warning: [E] Unexpected jump of 52.2% in value between 2019-01-01 (80.12588695493133) and 2019-04-01 (121.97262655079857).
+  - warning: [G] Unexpected jump of 79.3% in value between 2011-01-01 (78.75781654231818) and 2011-04-01 (141.19822304095484).
+  - warning: [M] Unexpected jump of 55.2% in value between 2011-01-01 (181.56626403534577) and 2011-04-01 (81.27244738569043).
+  - warning: [NET_TAXES] Unexpected jump of 61.2% in value between 2011-07-01 (134.91527363620457) and 2011-10-01 (52.35472607201934).
+  - warning: [NET_TAXES] Unexpected jump of 90.5% in value between 2011-10-01 (52.35472607201934) and 2012-01-01 (99.740387987598).
+- **bns/QNA_GVA_VOLUME_INDEX_BY_SECTION_YTD** — fetch+validate+process: ok (downloaded=1586, processed=1586)
+- **bns/QNA_GVA_DEFLATOR_BY_SECTION_YTD** — fetch+validate+process: ok (downloaded=1586, processed=1586)
+  - warning: [I] Unexpected jump of 82.0% in value between 2014-10-01 (107.903561449925) and 2015-01-01 (196.39367234158883).
+  - warning: [I] Unexpected jump of 52.7% in value between 2016-10-01 (123.00169998092441) and 2017-01-01 (58.14681984652943).
+  - warning: [NET_TAXES] Unexpected jump of 102.4% in value between 2015-10-01 (77.5305608084925) and 2016-01-01 (156.94158434827781).
+  - warning: [NET_TAXES] Unexpected jump of 55.6% in value between 2021-01-01 (79.87973626760882) and 2021-04-01 (124.26062656539584).
+  - warning: [NET_TAXES] Unexpected jump of 50.9% in value between 2021-10-01 (116.90456527431918) and 2022-01-01 (176.3984522202365).
+  - warning: [T] Unexpected jump of 69.9% in value between 2011-10-01 (135.05325757520222) and 2012-01-01 (229.43671834835584).
+  - warning: [T] Unexpected jump of 60.9% in value between 2024-01-01 (94.3967739325467) and 2024-04-01 (151.83910430373555).
+  - warning: [T] Unexpected jump of 89.5% in value between 2025-10-01 (107.72161309582357) and 2026-01-01 (204.09923999844327).
+- **bns/QNA_GVA_BY_SECTION_SA** — fetch+validate+process: ok (downloaded=1690, processed=1690)
+  - warning: [E] Unexpected jump of 58.1% in value between 2010-04-01 (14003.951601337396) and 2010-07-01 (22134.13724802903).
+  - warning: [I] Unexpected jump of 141.0% in value between 2015-10-01 (70074.6397916146) and 2016-01-01 (168853.9155861423).
+  - warning: [K] Unexpected jump of 50.4% in value between 2010-07-01 (145933.97022825913) and 2010-10-01 (219512.20896114624).
+  - warning: [M] Unexpected jump of 127.3% in value between 2010-10-01 (137456.71736327134) and 2011-01-01 (312416.6192277593).
+  - warning: [NET_TAXES] Unexpected jump of 148.7% in value between 2010-07-01 (296276.2534101968) and 2010-10-01 (736839.9168742864).
+  - warning: [NET_TAXES] Unexpected jump of 62.1% in value between 2021-01-01 (911551.5065871462) and 2021-04-01 (1477452.8601543251).
+  - warning: [R] Unexpected jump of 62.1% in value between 2012-10-01 (35801.489664773406) and 2013-01-01 (58041.85998975117).
+  - warning: [T] Unexpected jump of 98.8% in value between 2011-10-01 (4170.314037992877) and 2012-01-01 (8288.873135837324).
+  - warning: [T] Unexpected jump of 50.8% in value between 2022-10-01 (36837.32022554901) and 2023-01-01 (55535.37449121542).
+  - warning: [T] Unexpected jump of 64.8% in value between 2023-01-01 (55535.37449121542) and 2023-04-01 (19534.749849047268).
+  - warning: [T] Unexpected jump of 259.4% in value between 2023-04-01 (19534.749849047268) and 2023-07-01 (70201.78693088226).
+- **bns/QNA_GVA_BY_SECTION_SA_CONSTANT_2010** — fetch+validate+process: ok (downloaded=1690, processed=1690)
+  - warning: [E] Unexpected jump of 51.2% in value between 2012-01-01 (14195.54563023754) and 2012-04-01 (21464.22238524936).
+  - warning: [K] Unexpected jump of 50.4% in value between 2010-07-01 (146162.7338168026) and 2010-10-01 (219856.31254212765).
+  - warning: [M] Unexpected jump of 116.3% in value between 2010-01-01 (124889.18237569637) and 2010-04-01 (270107.9075999751).
+  - warning: [NET_TAXES] Unexpected jump of 155.9% in value between 2010-07-01 (310085.46240374085) and 2010-10-01 (793531.3939633456).
+- **bns/QNA_GDP_EXPENDITURE** — fetch+validate+process: ok (downloaded=1040, processed=1040)
+  - warning: [GFCF] Unexpected jump of 71.9% in value between 2010-01-01 (713569.3043009947) and 2010-04-01 (1226907.9114631638).
+  - warning: [GFCF] Unexpected jump of 66.7% in value between 2010-10-01 (2236135.253910146) and 2011-01-01 (744819.5280438955).
+  - warning: [GFCF] Unexpected jump of 100.1% in value between 2011-01-01 (744819.5280438955) and 2011-04-01 (1490442.7082472383).
+  - warning: [GFCF] Unexpected jump of 59.5% in value between 2011-10-01 (2447124.1610434083) and 2012-01-01 (991027.8899567894).
+  - warning: [GFCF] Unexpected jump of 76.6% in value between 2012-01-01 (991027.8899567894) and 2012-04-01 (1750020.0696120802).
+  - warning: [GFCF] Unexpected jump of 58.1% in value between 2012-10-01 (2694663.9905311572) and 2013-01-01 (1130399.42639081).
+  - warning: [GFCF] Unexpected jump of 76.0% in value between 2013-01-01 (1130399.42639081) and 2013-04-01 (1989329.6457495743).
+  - warning: [GFCF] Unexpected jump of 57.5% in value between 2013-10-01 (2981317.2094208086) and 2014-01-01 (1267830.1023301072).
+  - warning: [GFCF] Unexpected jump of 86.6% in value between 2014-01-01 (1267830.1023301072) and 2014-04-01 (2365684.022874728).
+  - warning: [GFCF] Unexpected jump of 56.6% in value between 2014-10-01 (3017574.2233789177) and 2015-01-01 (1308124.0591000207).
+  - warning: [GFCF] Unexpected jump of 85.4% in value between 2015-01-01 (1308124.0591000207) and 2015-04-01 (2425723.1065989668).
+  - warning: [GFCF] Unexpected jump of 61.6% in value between 2016-01-01 (1664036.282670747) and 2016-04-01 (2689234.3439236176).
+  - warning: [GFCF] Unexpected jump of 52.1% in value between 2016-10-01 (3840652.6033026427) and 2017-01-01 (1840749.481331509).
+  - warning: [GFCF] Unexpected jump of 57.8% in value between 2017-01-01 (1840749.481331509) and 2017-04-01 (2904522.402319994).
+  - warning: [GFCF] Unexpected jump of 87.0% in value between 2019-01-01 (2325199.5100448783) and 2019-04-01 (4348385.189048457).
+  - warning: [GFCF] Unexpected jump of 51.2% in value between 2020-10-01 (6251926.72907683) and 2021-01-01 (3052543.1477225213).
+  - warning: [GFCF] Unexpected jump of 50.7% in value between 2021-01-01 (3052543.1477225213) and 2021-04-01 (4600158.867976596).
+  - warning: [GFCF] Unexpected jump of 55.0% in value between 2023-10-01 (10729679.662968455) and 2024-01-01 (4831479.106034282).
+  - warning: [GFCF] Unexpected jump of 56.7% in value between 2024-10-01 (12512352.268279327) and 2025-01-01 (5421722.467211343).
+  - warning: [GFCF] Unexpected jump of 59.4% in value between 2025-01-01 (5421722.467211343) and 2025-04-01 (8644205.220402488).
+  - warning: [GFCF] Unexpected jump of 57.2% in value between 2025-10-01 (14706204.710277786) and 2026-01-01 (6288231.550639415).
+  - warning: [GOVERNMENT] Unexpected jump of 55.3% in value between 2023-07-01 (2754437.4999999986) and 2023-10-01 (4276472.100000001).
+  - warning: [GOV_COLLECTIVE] Unexpected jump of 70.2% in value between 2010-07-01 (306527.7783839999) and 2010-10-01 (521822.25241599994).
+  - warning: [GOV_COLLECTIVE] Unexpected jump of 128.1% in value between 2011-07-01 (283885.964469) and 2011-10-01 (647625.635531).
+  - warning: [GOV_COLLECTIVE] Unexpected jump of 53.9% in value between 2012-10-01 (598571.7999999996) and 2013-01-01 (276031.0683600002).
+  - warning: [GOV_COLLECTIVE] Unexpected jump of 91.1% in value between 2013-01-01 (276031.0683600002) and 2013-04-01 (527502.93164).
+  - warning: [GOV_COLLECTIVE] Unexpected jump of 62.5% in value between 2019-01-01 (603747.3999999992) and 2019-04-01 (981302.1999999991).
+  - warning: [GOV_COLLECTIVE] Unexpected jump of 50.6% in value between 2019-07-01 (895449.9000000006) and 2019-10-01 (1348924.2000000011).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 50.2% in value between 2010-01-01 (239870.89999999985) and 2010-04-01 (360323.74177999987).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 82.6% in value between 2010-10-01 (185514.99071999997) and 2011-01-01 (338768.10000000003).
+  - warning: ... 72 more warnings not listed
+- **bns/QNA_GDP_EXPENDITURE_CONSTANT_2010** — fetch+validate+process: ok (downloaded=910, processed=910)
+  - warning: [GFCF] Unexpected jump of 71.9% in value between 2010-01-01 (720906.2370960319) and 2010-04-01 (1239523.0013189733).
+  - warning: [GFCF] Unexpected jump of 68.2% in value between 2010-10-01 (2259127.2379818596) and 2011-01-01 (718310.2910224266).
+  - warning: [GFCF] Unexpected jump of 99.1% in value between 2011-01-01 (718310.2910224266) and 2011-04-01 (1429992.4910317955).
+  - warning: [GFCF] Unexpected jump of 60.5% in value between 2011-10-01 (2334197.032418851) and 2012-01-01 (922909.8688067636).
+  - warning: [GFCF] Unexpected jump of 71.9% in value between 2012-01-01 (922909.8688067636) and 2012-04-01 (1586512.0886600865).
+  - warning: [GFCF] Unexpected jump of 59.3% in value between 2012-10-01 (2365958.7823176454) and 2013-01-01 (963979.4309635663).
+  - warning: [GFCF] Unexpected jump of 75.7% in value between 2013-01-01 (963979.4309635663) and 2013-04-01 (1694158.8640465084).
+  - warning: [GFCF] Unexpected jump of 59.3% in value between 2013-10-01 (2493596.5172831016) and 2014-01-01 (1013767.337907788).
+  - warning: [GFCF] Unexpected jump of 82.1% in value between 2014-01-01 (1013767.337907788) and 2014-04-01 (1846450.639632609).
+  - warning: [GFCF] Unexpected jump of 57.1% in value between 2014-10-01 (2442794.765429792) and 2015-01-01 (1048347.4326541522).
+  - warning: [GFCF] Unexpected jump of 84.1% in value between 2015-01-01 (1048347.4326541522) and 2015-04-01 (1929952.7469287214).
+  - warning: [GFCF] Unexpected jump of 50.2% in value between 2015-10-01 (2539585.758805332) and 2016-01-01 (1264137.1024545657).
+  - warning: [GFCF] Unexpected jump of 57.2% in value between 2016-01-01 (1264137.1024545657) and 2016-04-01 (1986614.5556640613).
+  - warning: [GFCF] Unexpected jump of 53.1% in value between 2016-10-01 (2750579.726735429) and 2017-01-01 (1289038.0888242775).
+  - warning: [GFCF] Unexpected jump of 57.1% in value between 2017-01-01 (1289038.0888242775) and 2017-04-01 (2024870.6913943638).
+  - warning: [GFCF] Unexpected jump of 82.5% in value between 2019-01-01 (1469296.4140058183) and 2019-04-01 (2680887.950480928).
+  - warning: [GFCF] Unexpected jump of 51.2% in value between 2020-10-01 (3423130.5653964155) and 2021-01-01 (1669977.924160277).
+  - warning: [GFCF] Unexpected jump of 54.9% in value between 2023-10-01 (4187741.3820220283) and 2024-01-01 (1887343.2565678176).
+  - warning: [GFCF] Unexpected jump of 57.1% in value between 2024-10-01 (4766204.421404655) and 2025-01-01 (2045866.3812072915).
+  - warning: [GFCF] Unexpected jump of 57.5% in value between 2025-01-01 (2045866.3812072915) and 2025-04-01 (3221768.5086809155).
+  - warning: [GFCF] Unexpected jump of 58.5% in value between 2025-10-01 (5266214.004210978) and 2026-01-01 (2184145.2950732713).
+  - warning: [GOV_COLLECTIVE] Unexpected jump of 70.2% in value between 2010-07-01 (310343.6621436578) and 2010-10-01 (528318.2805049382).
+  - warning: [GOV_COLLECTIVE] Unexpected jump of 72.1% in value between 2011-07-01 (298967.0877476635) and 2011-10-01 (514416.7879605436).
+  - warning: [GOV_COLLECTIVE] Unexpected jump of 51.1% in value between 2023-04-01 (536840.0514806856) and 2023-07-01 (811090.033639568).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 50.2% in value between 2010-01-01 (238818.4561482883) and 2010-04-01 (358742.8059238286).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 70.5% in value between 2010-10-01 (184701.03574929037) and 2011-01-01 (314857.73868500657).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 50.5% in value between 2011-10-01 (243777.0689335676) and 2012-01-01 (366901.9460819879).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 65.1% in value between 2022-07-01 (320083.7812214724) and 2022-10-01 (528556.2951930029).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 54.7% in value between 2023-01-01 (424498.12745811656) and 2023-04-01 (656516.6386233441).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 87.3% in value between 2023-07-01 (330496.7095100516) and 2023-10-01 (619123.0493907267).
+  - warning: ... 19 more warnings not listed
+- **bns/QNA_GDP_EXPENDITURE_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=854, processed=854)
+  - warning: [EXPORTS] Unexpected jump of 60.4% in value between 2015-07-01 (75.85877718694483) and 2015-10-01 (121.66276081000755).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 84.1% in value between 2012-07-01 (79.34963073797908) and 2012-10-01 (146.10699572994648).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 52.7% in value between 2022-07-01 (71.17966589294335) and 2022-10-01 (108.70771297826839).
+  - warning: [VALUABLES] Unexpected jump of 50.7% in value between 2013-01-01 (90.14539935150756) and 2013-04-01 (135.83579980464495).
+  - warning: [VALUABLES] Unexpected jump of 60.0% in value between 2023-04-01 (98.17122674245043) and 2023-07-01 (157.04010996521356).
+- **bns/QNA_GDP_EXPENDITURE_VOLUME_INDEX_YTD** — fetch+validate+process: ok (downloaded=854, processed=854)
+  - warning: [EXPORTS] Unexpected jump of 51.0% in value between 2015-10-01 (83.0709609230671) and 2016-01-01 (125.47051300004097).
+  - warning: [VALUABLES] Unexpected jump of 51.2% in value between 2016-10-01 (65.50000000000003) and 2017-01-01 (99.03474586636784).
+- **bns/QNA_GDP_EXPENDITURE_DEFLATOR_YTD** — fetch+validate+process: ok (downloaded=854, processed=854)
+  - warning: [VALUABLES] Unexpected jump of 62.8% in value between 2015-10-01 (113.89407731178399) and 2016-01-01 (185.39844511099776).
+- **bns/QNA_GDP_EXPENDITURE_SA** — fetch+validate+process: ok (downloaded=910, processed=910)
+  - warning: [GOV_COLLECTIVE] Unexpected jump of 54.8% in value between 2011-07-01 (311056.0183195738) and 2011-10-01 (481481.0156182915).
+  - warning: [GOV_COLLECTIVE] Unexpected jump of 50.3% in value between 2013-01-01 (374359.2082291498) and 2013-04-01 (562486.8317662085).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 50.2% in value between 2010-01-01 (239870.89999999985) and 2010-04-01 (360323.74177999987).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 82.6% in value between 2010-10-01 (185514.99071999997) and 2011-01-01 (338768.10000000003).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 52.9% in value between 2011-10-01 (282906.83314799995) and 2012-01-01 (432694.59999999986).
+  - warning: [NET_EXPORTS] Unexpected jump of 119.8% in value between 2010-10-01 (872247.6622545988) and 2011-01-01 (1917432.3779916302).
+  - warning: [NET_EXPORTS] Unexpected jump of 73.2% in value between 2014-07-01 (998326.079866593) and 2014-10-01 (267642.6788990599).
+  - warning: [NET_EXPORTS] Unexpected jump of 51.5% in value between 2014-10-01 (267642.6788990599) and 2015-01-01 (129872.63960915653).
+  - warning: [NET_EXPORTS] Unexpected jump of 66.0% in value between 2015-04-01 (176005.76149000996) and 2015-07-01 (59919.58812531826).
+  - warning: [NET_EXPORTS] Unexpected jump of 344.7% in value between 2015-07-01 (59919.58812531826) and 2015-10-01 (266459.7239412879).
+  - warning: [NET_EXPORTS] Unexpected jump of 240.2% in value between 2016-01-01 (200311.41524146823) and 2016-04-01 (681379.8358457331).
+  - warning: [NET_EXPORTS] Unexpected jump of 58.3% in value between 2017-04-01 (916846.9590897681) and 2017-07-01 (1450929.2898549275).
+  - warning: [NET_EXPORTS] Unexpected jump of 77.2% in value between 2018-10-01 (1160895.8723083197) and 2019-01-01 (2057669.7102949223).
+  - warning: [NET_EXPORTS] Unexpected jump of 132.1% in value between 2020-01-01 (827195.2465223845) and 2020-04-01 (-265914.38800427585).
+  - warning: [NET_EXPORTS] Unexpected jump of 50.2% in value between 2020-04-01 (-265914.38800427585) and 2020-07-01 (-132515.85662413485).
+  - warning: [NET_EXPORTS] Unexpected jump of 588.7% in value between 2020-07-01 (-132515.85662413485) and 2020-10-01 (647542.9730363607).
+  - warning: [NET_EXPORTS] Unexpected jump of 166.9% in value between 2020-10-01 (647542.9730363607) and 2021-01-01 (1728055.4686979447).
+  - warning: [NET_EXPORTS] Unexpected jump of 58.6% in value between 2021-10-01 (3099669.039520619) and 2022-01-01 (4915747.688345447).
+  - warning: [NET_EXPORTS] Unexpected jump of 80.1% in value between 2025-07-01 (1696053.5408603512) and 2025-10-01 (338176.0271278327).
+  - warning: [NET_EXPORTS] Unexpected jump of 336.4% in value between 2025-10-01 (338176.0271278327) and 2026-01-01 (1475770.7143597943).
+  - warning: [VALUABLES] Unexpected jump of 67.0% in value between 2010-07-01 (352.45561792696947) and 2010-10-01 (588.6484059410255).
+- **bns/QNA_GDP_EXPENDITURE_SA_CONSTANT_2010** — fetch+validate+process: ok (downloaded=845, processed=845)
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 50.2% in value between 2010-01-01 (238818.4561482883) and 2010-04-01 (358742.8059238286).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 70.5% in value between 2010-10-01 (184701.03574929037) and 2011-01-01 (314857.73868500657).
+  - warning: [GOV_INDIVIDUAL] Unexpected jump of 50.5% in value between 2011-10-01 (243777.0689335676) and 2012-01-01 (366901.9460819879).
+  - warning: [VALUABLES] Unexpected jump of 55.2% in value between 2010-07-01 (387.7736750635104) and 2010-10-01 (601.8144323639815).
+- **bns/QNA_GDP_INCOME** — fetch+validate+process: ok (downloaded=260, processed=260)
+  - warning: [NET_TAXES_PRODUCTION_IMPORTS] Unexpected jump of 122.1% in value between 2010-07-01 (403442.8179986378) and 2010-10-01 (895963.1422442418).
+  - warning: [NET_TAXES_PRODUCTION_IMPORTS] Unexpected jump of 50.8% in value between 2021-01-01 (1107178.274921615) and 2021-04-01 (1670087.616016778).
+- **bns/QNA_INCOME_COMPENSATION_BY_SECTION** — fetch+validate+process: ok (downloaded=1560, processed=1560)
+  - warning: [A] Unexpected jump of 91.4% in value between 2010-01-01 (25257.948928484348) and 2010-04-01 (48334.20551641375).
+  - warning: [A] Unexpected jump of 137.5% in value between 2010-04-01 (48334.20551641375) and 2010-07-01 (114797.61202502086).
+  - warning: [A] Unexpected jump of 60.5% in value between 2010-10-01 (83111.33353008101) and 2011-01-01 (32806.70716357042).
+  - warning: [A] Unexpected jump of 66.0% in value between 2011-01-01 (32806.70716357042) and 2011-04-01 (54471.458283422835).
+  - warning: [A] Unexpected jump of 171.9% in value between 2011-04-01 (54471.458283422835) and 2011-07-01 (148095.24730862977).
+  - warning: [A] Unexpected jump of 78.2% in value between 2011-10-01 (158399.58724437715) and 2012-01-01 (34569.1495840899).
+  - warning: [A] Unexpected jump of 68.5% in value between 2012-01-01 (34569.1495840899) and 2012-04-01 (58251.248164625526).
+  - warning: [A] Unexpected jump of 148.3% in value between 2012-04-01 (58251.248164625526) and 2012-07-01 (144628.7507566072).
+  - warning: [A] Unexpected jump of 69.0% in value between 2012-10-01 (129096.75149467743) and 2013-01-01 (39978.162393442384).
+  - warning: [A] Unexpected jump of 51.2% in value between 2013-01-01 (39978.162393442384) and 2013-04-01 (60458.3384510575).
+  - warning: [A] Unexpected jump of 187.0% in value between 2013-04-01 (60458.3384510575) and 2013-07-01 (173492.1971746833).
+  - warning: [A] Unexpected jump of 68.0% in value between 2013-10-01 (141579.70198081687) and 2014-01-01 (45325.67321599077).
+  - warning: [A] Unexpected jump of 54.2% in value between 2014-01-01 (45325.67321599077) and 2014-04-01 (69911.89432021532).
+  - warning: [A] Unexpected jump of 163.4% in value between 2014-04-01 (69911.89432021532) and 2014-07-01 (184128.51237656327).
+  - warning: [A] Unexpected jump of 65.7% in value between 2014-10-01 (140893.02008723057) and 2015-01-01 (48388.29598480056).
+  - warning: [A] Unexpected jump of 58.3% in value between 2015-01-01 (48388.29598480056) and 2015-04-01 (76587.50098790765).
+  - warning: [A] Unexpected jump of 175.8% in value between 2015-04-01 (76587.50098790765) and 2015-07-01 (211235.43466669074).
+  - warning: [A] Unexpected jump of 65.1% in value between 2015-10-01 (149352.168360601) and 2016-01-01 (52084.71324461).
+  - warning: [A] Unexpected jump of 52.0% in value between 2016-01-01 (52084.71324461) and 2016-04-01 (79183.39785279814).
+  - warning: [A] Unexpected jump of 181.7% in value between 2016-04-01 (79183.39785279814) and 2016-07-01 (223084.43397536787).
+  - warning: [A] Unexpected jump of 67.6% in value between 2016-10-01 (181174.05492722397) and 2017-01-01 (58771.84060797951).
+  - warning: [A] Unexpected jump of 222.5% in value between 2017-04-01 (83512.55750430067) and 2017-07-01 (269297.8297288787).
+  - warning: [A] Unexpected jump of 64.9% in value between 2017-10-01 (176934.57215884104) and 2018-01-01 (62185.008854416534).
+  - warning: [A] Unexpected jump of 63.2% in value between 2018-01-01 (62185.008854416534) and 2018-04-01 (101459.21178132387).
+  - warning: [A] Unexpected jump of 183.6% in value between 2018-04-01 (101459.21178132387) and 2018-07-01 (287752.17911576864).
+  - warning: [A] Unexpected jump of 64.4% in value between 2018-10-01 (205901.70024849087) and 2019-01-01 (73370.15159726326).
+  - warning: [A] Unexpected jump of 54.6% in value between 2019-01-01 (73370.15159726326) and 2019-04-01 (113422.36753047057).
+  - warning: [A] Unexpected jump of 178.2% in value between 2019-04-01 (113422.36753047057) and 2019-07-01 (315491.6573077025).
+  - warning: [A] Unexpected jump of 67.3% in value between 2019-10-01 (242691.62356456363) and 2020-01-01 (79456.57525192622).
+  - warning: [A] Unexpected jump of 200.3% in value between 2020-04-01 (118229.00097170599) and 2020-07-01 (355001.12263270083).
+  - warning: ... 47 more warnings not listed
+- **bns/QNA_INCOME_OTHER_NET_TAXES_BY_SECTION** — fetch+validate+process: ok (downloaded=1560, processed=1560)
+  - warning: [A] Unexpected jump of 67.7% in value between 2010-01-01 (-1908.9573471550266) and 2010-04-01 (-3202.042559258737).
+  - warning: [A] Unexpected jump of 219.2% in value between 2010-04-01 (-3202.042559258737) and 2010-07-01 (-10220.46984819555).
+  - warning: [A] Unexpected jump of 58.9% in value between 2010-10-01 (-5739.130245390689) and 2011-01-01 (-2358.3921326079953).
+  - warning: [A] Unexpected jump of 313.3% in value between 2011-04-01 (-3486.305308645781) and 2011-07-01 (-14408.515644770861).
+  - warning: [A] Unexpected jump of 70.8% in value between 2011-10-01 (-12643.786913975362) and 2012-01-01 (-3690.205270746839).
+  - warning: [A] Unexpected jump of 59.3% in value between 2012-01-01 (-3690.205270746839) and 2012-04-01 (-5877.349810052917).
+  - warning: [A] Unexpected jump of 254.5% in value between 2012-04-01 (-5877.349810052917) and 2012-07-01 (-20833.88264564005).
+  - warning: [A] Unexpected jump of 72.6% in value between 2012-10-01 (-13865.262273560189) and 2013-01-01 (-3797.1954147289475).
+  - warning: [A] Unexpected jump of 224.5% in value between 2013-04-01 (-4236.662628980281) and 2013-07-01 (-13747.874304868012).
+  - warning: [A] Unexpected jump of 54.0% in value between 2013-10-01 (-9983.267651422755) and 2014-01-01 (-4592.149365641954).
+  - warning: [A] Unexpected jump of 76.1% in value between 2014-01-01 (-4592.149365641954) and 2014-04-01 (-8086.11932595056).
+  - warning: [A] Unexpected jump of 315.8% in value between 2014-04-01 (-8086.11932595056) and 2014-07-01 (-33625.55764588071).
+  - warning: [A] Unexpected jump of 53.4% in value between 2014-10-01 (-25252.97366252678) and 2015-01-01 (-11760.597781186492).
+  - warning: [A] Unexpected jump of 72.6% in value between 2015-01-01 (-11760.597781186492) and 2015-04-01 (-20304.53178200067).
+  - warning: [A] Unexpected jump of 275.4% in value between 2015-04-01 (-20304.53178200067) and 2015-07-01 (-76217.81620454839).
+  - warning: [A] Unexpected jump of 62.0% in value between 2015-10-01 (-44679.854232264435) and 2016-01-01 (-16981.685835297863).
+  - warning: [A] Unexpected jump of 237.6% in value between 2016-04-01 (-23607.19648178624) and 2016-07-01 (-79701.97345789384).
+  - warning: [A] Unexpected jump of 64.9% in value between 2016-10-01 (-49345.04422502207) and 2017-01-01 (-17325.98954357566).
+  - warning: [A] Unexpected jump of 257.2% in value between 2017-04-01 (-21811.52835291963) and 2017-07-01 (-77907.5579069762).
+  - warning: [A] Unexpected jump of 61.8% in value between 2017-10-01 (-39805.024196528524) and 2018-01-01 (-15194.344415561447).
+  - warning: [A] Unexpected jump of 221.6% in value between 2018-04-01 (-21739.415514862303) and 2018-07-01 (-69913.14038654935).
+  - warning: [A] Unexpected jump of 61.1% in value between 2018-10-01 (-40368.299683026904) and 2019-01-01 (-15715.445838876212).
+  - warning: [A] Unexpected jump of 221.1% in value between 2019-04-01 (-21221.69796933222) and 2019-07-01 (-68133.8721733927).
+  - warning: [A] Unexpected jump of 58.7% in value between 2019-10-01 (-41725.88401839888) and 2020-01-01 (-17248.125469248873).
+  - warning: [A] Unexpected jump of 278.6% in value between 2020-04-01 (-24832.105779252546) and 2020-07-01 (-94013.2730386554).
+  - warning: [A] Unexpected jump of 63.0% in value between 2020-10-01 (-56869.39571284316) and 2021-01-01 (-21059.273277947636).
+  - warning: [A] Unexpected jump of 262.1% in value between 2021-04-01 (-29157.573718067626) and 2021-07-01 (-105572.41486291242).
+  - warning: [A] Unexpected jump of 56.4% in value between 2021-10-01 (-58572.138141072326) and 2022-01-01 (-25523.816572167285).
+  - warning: [A] Unexpected jump of 350.4% in value between 2022-04-01 (-33927.410390646844) and 2022-07-01 (-152799.04816926725).
+  - warning: [A] Unexpected jump of 63.6% in value between 2022-10-01 (-82362.42486791866) and 2023-01-01 (-29994.135409283925).
+  - warning: ... 96 more warnings not listed
+- **bns/QNA_INCOME_GROSS_PROFIT_BY_SECTION** — fetch+validate+process: ok (downloaded=1560, processed=1560)
+  - warning: [A] Unexpected jump of 64.5% in value between 2010-01-01 (79771.13766937204) and 2010-04-01 (131235.3369476951).
+  - warning: [A] Unexpected jump of 221.5% in value between 2010-04-01 (131235.3369476951) and 2010-07-01 (421901.54618133605).
+  - warning: [A] Unexpected jump of 56.9% in value between 2010-10-01 (230650.57920159656) and 2011-01-01 (99501.07532776143).
+  - warning: [A] Unexpected jump of 298.0% in value between 2011-04-01 (142463.2697618047) and 2011-07-01 (567027.8768301248).
+  - warning: [A] Unexpected jump of 71.9% in value between 2011-10-01 (409649.0780803089) and 2012-01-01 (115055.57469074443).
+  - warning: [A] Unexpected jump of 236.4% in value between 2012-04-01 (160294.80278475385) and 2012-07-01 (539251.7426723744).
+  - warning: [A] Unexpected jump of 63.8% in value between 2012-10-01 (366219.57985212695) and 2013-01-01 (132619.5096795594).
+  - warning: [A] Unexpected jump of 271.9% in value between 2013-04-01 (177629.08660480622) and 2013-07-01 (660574.8087784206).
+  - warning: [A] Unexpected jump of 61.3% in value between 2013-10-01 (396512.3949372139) and 2014-01-01 (153296.10832858566).
+  - warning: [A] Unexpected jump of 241.3% in value between 2014-04-01 (209958.09717932827) and 2014-07-01 (716678.2932828235).
+  - warning: [A] Unexpected jump of 59.8% in value between 2014-10-01 (407892.10120926274) and 2015-01-01 (164118.04358023996).
+  - warning: [A] Unexpected jump of 235.7% in value between 2015-04-01 (241594.80276423902) and 2015-07-01 (810967.530832404).
+  - warning: [A] Unexpected jump of 59.4% in value between 2015-10-01 (448477.82282311673) and 2016-01-01 (181890.761459087).
+  - warning: [A] Unexpected jump of 239.9% in value between 2016-04-01 (253903.7576819464) and 2016-07-01 (863090.8393456686).
+  - warning: [A] Unexpected jump of 60.0% in value between 2016-10-01 (528126.341513298) and 2017-01-01 (210993.87196989253).
+  - warning: [A] Unexpected jump of 262.0% in value between 2017-04-01 (274127.30117687164) and 2017-07-01 (992371.2777798898).
+  - warning: [A] Unexpected jump of 56.6% in value between 2017-10-01 (511264.1490733462) and 2018-01-01 (222039.03754114086).
+  - warning: [A] Unexpected jump of 220.7% in value between 2018-04-01 (320236.73843012325) and 2018-07-01 (1026846.702488986).
+  - warning: [A] Unexpected jump of 55.5% in value between 2018-10-01 (601129.12153975) and 2019-01-01 (267659.04688020196).
+  - warning: [A] Unexpected jump of 221.8% in value between 2019-04-01 (360524.32005239604) and 2019-07-01 (1160041.6747934883).
+  - warning: [A] Unexpected jump of 54.0% in value between 2019-10-01 (673765.1582739139) and 2020-01-01 (310215.3379492087).
+  - warning: [A] Unexpected jump of 268.9% in value between 2020-04-01 (412776.9154015146) and 2020-07-01 (1522872.8655957342).
+  - warning: [A] Unexpected jump of 57.7% in value between 2020-10-01 (864673.2810535417) and 2021-01-01 (366065.85032838595).
+  - warning: [A] Unexpected jump of 257.1% in value between 2021-04-01 (484572.38671702234) and 2021-07-01 (1730282.6491187883).
+  - warning: [A] Unexpected jump of 50.0% in value between 2021-07-01 (1730282.6491187883) and 2021-10-01 (864336.6138358025).
+  - warning: [A] Unexpected jump of 52.3% in value between 2021-10-01 (864336.6138358025) and 2022-01-01 (412158.3762440004).
+  - warning: [A] Unexpected jump of 337.1% in value between 2022-04-01 (486142.1132205784) and 2022-07-01 (2124924.7037337767).
+  - warning: [A] Unexpected jump of 50.3% in value between 2022-07-01 (2124924.7037337767) and 2022-10-01 (1056470.6068016451).
+  - warning: [A] Unexpected jump of 59.4% in value between 2022-10-01 (1056470.6068016451) and 2023-01-01 (429145.80026648036).
+  - warning: [A] Unexpected jump of 251.2% in value between 2023-04-01 (519309.13661548146) and 2023-07-01 (1823813.6779258908).
+  - warning: ... 156 more warnings not listed
+- **bns/QNA_GVA_BY_REGION_SECTION** — fetch+validate+process: ok (downloaded=14616, processed=14616)
+  - warning: cumulative twin sheet 'ВДС квартал с накоплением' disagrees with the running sum of the discrete quarters on 8 of 14616 points (discrete values kept as published): GDP@AKM 2025-10-01: cumulative sheet 5157380.8, sum of discrete quarters 5273503.4; GDP@AKT 2025-10-01: cumulative sheet 5242807.6, sum of discrete quarters 6289890.2; GDP@ATY 2025-10-01: cumulative sheet 16646367.7, sum of discrete quarters 19158507.8; GDP@ZHM 2025-10-01: cumulative sheet 3346587.3, sum of discrete quarters 3881456.6; GDP@ZKO 2025-10-01: cumulative sheet 4985921.8, sum of discrete quarters 5804191.0; GVA@AKM 2025-10-01: cumulative sheet 5012710.9, sum of discrete quarters 5128833.5; IND@AKM 2025-10-01: cumulative sheet 1805824.3, sum of discrete quarters 1921946.9; S@SHM 2025-01-01: cumulative sheet 87836.2, sum of discrete quarters 87836.1
+  - warning: [A@ABY] Unexpected jump of 210.9% in value between 2019-04-01 (29639.85018722757) and 2019-07-01 (92142.27202579373).
+  - warning: [A@ABY] Unexpected jump of 62.9% in value between 2019-10-01 (57268.525838740476) and 2020-01-01 (21246.652056516796).
+  - warning: [A@ABY] Unexpected jump of 252.4% in value between 2020-04-01 (28877.04595699353) and 2020-07-01 (101768.65490722105).
+  - warning: [A@ABY] Unexpected jump of 59.5% in value between 2020-10-01 (62619.94707926861) and 2021-01-01 (25382.135438419595).
+  - warning: [A@ABY] Unexpected jump of 239.6% in value between 2021-04-01 (34910.690574163535) and 2021-07-01 (118556.10512464955).
+  - warning: [A@ABY] Unexpected jump of 91.3% in value between 2021-10-01 (65081.46886276733) and 2022-01-01 (5685.177662633501).
+  - warning: [A@ABY] Unexpected jump of 796.1% in value between 2022-01-01 (5685.177662633501) and 2022-04-01 (50946.56288816516).
+  - warning: [A@ABY] Unexpected jump of 142.3% in value between 2022-04-01 (50946.56288816516) and 2022-07-01 (123461.5224968893).
+  - warning: [A@ABY] Unexpected jump of 74.9% in value between 2022-10-01 (106587.83695231199) and 2023-01-01 (26787.54747974514).
+  - warning: [A@ABY] Unexpected jump of 74.1% in value between 2023-01-01 (26787.54747974514) and 2023-04-01 (46638.552246841595).
+  - warning: [A@ABY] Unexpected jump of 105.6% in value between 2023-04-01 (46638.552246841595) and 2023-07-01 (95865.58851505567).
+  - warning: [A@ABY] Unexpected jump of 63.5% in value between 2023-10-01 (93073.11175835755) and 2024-01-01 (33965.229922878076).
+  - warning: [A@ABY] Unexpected jump of 168.8% in value between 2024-04-01 (43326.92326953532) and 2024-07-01 (116480.61985618692).
+  - warning: [A@ABY] Unexpected jump of 70.0% in value between 2024-10-01 (117127.32695139962) and 2025-01-01 (35168.2562223441).
+  - warning: [A@ABY] Unexpected jump of 191.6% in value between 2025-04-01 (52737.92675647597) and 2025-07-01 (153776.60835722127).
+  - warning: [A@ABY] Unexpected jump of 76.4% in value between 2025-10-01 (160210.70866395868) and 2026-01-01 (37733.9).
+  - warning: [A@AKM] Unexpected jump of 359.5% in value between 2019-04-01 (32092.242037204036) and 2019-07-01 (147449.81324796486).
+  - warning: [A@AKM] Unexpected jump of 59.7% in value between 2019-10-01 (74305.93278669972) and 2020-01-01 (29927.93645819948).
+  - warning: [A@AKM] Unexpected jump of 489.4% in value between 2020-04-01 (36925.1282978401) and 2020-07-01 (217648.26078628493).
+  - warning: [A@AKM] Unexpected jump of 56.6% in value between 2020-07-01 (217648.26078628493) and 2020-10-01 (94399.07445767554).
+  - warning: [A@AKM] Unexpected jump of 51.9% in value between 2020-10-01 (94399.07445767554) and 2021-01-01 (45428.753693855084).
+  - warning: [A@AKM] Unexpected jump of 362.2% in value between 2021-04-01 (54968.01177860883) and 2021-07-01 (254048.57346399355).
+  - warning: [A@AKM] Unexpected jump of 66.9% in value between 2021-07-01 (254048.57346399355) and 2021-10-01 (84050.0610635426).
+  - warning: [A@AKM] Unexpected jump of 516.7% in value between 2022-04-01 (59657.23374381671) and 2022-07-01 (367884.6966614967).
+  - warning: [A@AKM] Unexpected jump of 63.2% in value between 2022-07-01 (367884.6966614967) and 2022-10-01 (135481.29533498918).
+  - warning: [A@AKM] Unexpected jump of 57.0% in value between 2022-10-01 (135481.29533498918) and 2023-01-01 (58212.99824779342).
+  - warning: [A@AKM] Unexpected jump of 235.7% in value between 2023-04-01 (64034.74788399033) and 2023-07-01 (214957.05026333072).
+  - warning: [A@AKM] Unexpected jump of 60.0% in value between 2023-10-01 (123309.70360488555) and 2024-01-01 (49326.14040127462).
+  - warning: [A@AKM] Unexpected jump of 462.8% in value between 2024-04-01 (58257.658193508665) and 2024-07-01 (327895.881405175).
+  - warning: [A@AKM] Unexpected jump of 66.8% in value between 2024-10-01 (183021.02000004158) and 2025-01-01 (60680.32285698559).
+  - warning: ... 1995 more warnings not listed
+- **bns/OUTPUT_BY_REGION_SECTION** — fetch+validate+process: ok (downloaded=1785, processed=1785)
+  - warning: [A@ALA] Unexpected jump of 273.2% in value between 2024-12-31 (9410.5) and 2025-12-31 (35122.5).
+  - warning: [A@AST] Unexpected jump of 63.9% in value between 2022-12-31 (11989.4) and 2023-12-31 (4327.7).
+  - warning: [A@AST] Unexpected jump of 209.8% in value between 2024-12-31 (5661.5) and 2025-12-31 (17537.0).
+  - warning: [B@ALA] Unexpected jump of 100.0% in value between 2022-12-31 (0.5) and 2023-12-31 (0.0).
+  - warning: [B@ALM] Unexpected jump of 297.3% in value between 2024-12-31 (20931.8) and 2025-12-31 (83170.3).
+  - warning: [B@ZHM] Unexpected jump of 58.2% in value between 2024-12-31 (238659.7) and 2025-12-31 (377544.4).
+  - warning: [C@ULT] Unexpected jump of 67.8% in value between 2024-12-31 (1652936.1) and 2025-12-31 (2773805.6).
+  - warning: [E@ATY] Unexpected jump of 61.9% in value between 2023-12-31 (82286.9) and 2024-12-31 (133219.0).
+  - warning: [E@ATY] Unexpected jump of 65.0% in value between 2024-12-31 (133219.0) and 2025-12-31 (46637.4).
+  - warning: [F@KZL] Unexpected jump of 56.1% in value between 2023-12-31 (316953.8) and 2024-12-31 (494636.5).
+  - warning: [F@ZHT] Unexpected jump of 59.7% in value between 2022-12-31 (274223.1) and 2023-12-31 (437822.5).
+  - warning: [F@ZHT] Unexpected jump of 64.1% in value between 2023-12-31 (437822.5) and 2024-12-31 (718442.3).
+  - warning: [G@ZHT] Unexpected jump of 50.1% in value between 2022-12-31 (195504.7) and 2023-12-31 (293473.7).
+  - warning: [H@ALA] Unexpected jump of 126.0% in value between 2024-12-31 (1670209.4) and 2025-12-31 (3774774.5).
+  - warning: [H@KST] Unexpected jump of 51.0% in value between 2024-12-31 (402837.4) and 2025-12-31 (608479.2).
+  - warning: [H@SHM] Unexpected jump of 53.5% in value between 2024-12-31 (331997.1) and 2025-12-31 (509775.1).
+  - warning: [H@ULT] Unexpected jump of 78.7% in value between 2023-12-31 (127224.5) and 2024-12-31 (227302.8).
+  - warning: [I@ALA] Unexpected jump of 63.0% in value between 2024-12-31 (737719.5) and 2025-12-31 (1202502.5).
+  - warning: [I@ALM] Unexpected jump of 72.5% in value between 2023-12-31 (50501.5) and 2024-12-31 (87090.8).
+  - warning: [I@AST] Unexpected jump of 57.6% in value between 2023-12-31 (448247.8) and 2024-12-31 (706259.1).
+  - warning: [I@KRG] Unexpected jump of 51.5% in value between 2023-12-31 (75123.9) and 2024-12-31 (113807.3).
+  - warning: [I@KRG] Unexpected jump of 50.1% in value between 2024-12-31 (113807.3) and 2025-12-31 (170829.5).
+  - warning: [I@ZKO] Unexpected jump of 53.2% in value between 2024-12-31 (95707.8) and 2025-12-31 (146665.1).
+  - warning: [J@ALA] Unexpected jump of 56.9% in value between 2022-12-31 (1227330.9) and 2023-12-31 (1925175.9).
+  - warning: [J@ALA] Unexpected jump of 53.3% in value between 2024-12-31 (2312583.8) and 2025-12-31 (3545146.4).
+  - warning: [J@ALM] Unexpected jump of 81.3% in value between 2022-12-31 (20574.0) and 2023-12-31 (37301.5).
+  - warning: [J@KST] Unexpected jump of 51.9% in value between 2022-12-31 (28452.7) and 2023-12-31 (43207.0).
+  - warning: [J@SKO] Unexpected jump of 51.1% in value between 2022-12-31 (25162.4) and 2023-12-31 (38028.1).
+  - warning: [J@ULT] Unexpected jump of 79.7% in value between 2022-12-31 (3462.5) and 2023-12-31 (6222.0).
+  - warning: [J@ZKO] Unexpected jump of 273.2% in value between 2022-12-31 (18311.8) and 2023-12-31 (68334.4).
+  - warning: ... 88 more warnings not listed
+- **bns/PRODUCTION_ACCOUNT_BY_REGION** — fetch+validate+process: ok (downloaded=420, processed=420)
+  - warning: [NET_TAXES@ABY] Unexpected jump of 69.7% in value between 2022-12-31 (153810.4) and 2023-12-31 (46543.9).
+  - warning: [NET_TAXES@AKM] Unexpected jump of 52.4% in value between 2022-12-31 (224840.9) and 2023-12-31 (107095.3).
+  - warning: [NET_TAXES@ALA] Unexpected jump of 89.2% in value between 2022-12-31 (1237770.8) and 2023-12-31 (2342476.8).
+  - warning: [NET_TAXES@ALM] Unexpected jump of 102.9% in value between 2022-12-31 (275374.0) and 2023-12-31 (558708.5).
+  - warning: [NET_TAXES@ATY] Unexpected jump of 64.0% in value between 2022-12-31 (1283000.1) and 2023-12-31 (2104189.5).
+  - warning: [NET_TAXES@KRG] Unexpected jump of 65.1% in value between 2022-12-31 (469613.0) and 2023-12-31 (163824.4).
+  - warning: [NET_TAXES@KRG] Unexpected jump of 55.9% in value between 2024-12-31 (138402.6) and 2025-12-31 (215749.7).
+  - warning: [NET_TAXES@KST] Unexpected jump of 57.5% in value between 2022-12-31 (269846.5) and 2023-12-31 (114619.5).
+  - warning: [NET_TAXES@KST] Unexpected jump of 66.9% in value between 2024-12-31 (67865.7) and 2025-12-31 (113249.4).
+  - warning: [NET_TAXES@MNG] Unexpected jump of 60.4% in value between 2022-12-31 (382219.2) and 2023-12-31 (612920.3).
+  - warning: [NET_TAXES@SKO] Unexpected jump of 50.2% in value between 2022-12-31 (141879.6) and 2023-12-31 (70643.6).
+  - warning: [NET_TAXES@ULT] Unexpected jump of 60.7% in value between 2022-12-31 (103867.5) and 2023-12-31 (40841.4).
+  - warning: [NET_TAXES@VKO] Unexpected jump of 87.0% in value between 2023-12-31 (158607.4) and 2024-12-31 (20643.3).
+  - warning: [NET_TAXES@VKO] Unexpected jump of 59.6% in value between 2024-12-31 (20643.3) and 2025-12-31 (32947.7).
+  - warning: [NET_TAXES@ZHM] Unexpected jump of 68.0% in value between 2022-12-31 (173278.5) and 2023-12-31 (55519.9).
+  - warning: [NET_TAXES@ZHT] Unexpected jump of 136.3% in value between 2022-12-31 (92068.7) and 2023-12-31 (217541.9).
+  - warning: [NET_TAXES@ZKO] Unexpected jump of 65.7% in value between 2022-12-31 (438370.7) and 2023-12-31 (150470.3).
+- **bns/SNA_AGGREGATES** — fetch+validate+process: ok (downloaded=90, processed=90)
+- **bns/LABOUR_PRODUCTIVITY_BY_SECTION_YTD** — fetch+validate+process: ok (downloaded=1495, processed=1495)
+  - warning: [A] Unexpected jump of 148.3% in value between 2010-01-01 (40.2) and 2010-04-01 (99.8).
+  - warning: [A] Unexpected jump of 178.2% in value between 2010-04-01 (99.8) and 2010-07-01 (277.6).
+  - warning: [A] Unexpected jump of 54.5% in value between 2010-07-01 (277.6) and 2010-10-01 (428.8).
+  - warning: [A] Unexpected jump of 88.1% in value between 2010-10-01 (428.8) and 2011-01-01 (51.2).
+  - warning: [A] Unexpected jump of 119.1% in value between 2011-01-01 (51.2) and 2011-04-01 (112.2).
+  - warning: [A] Unexpected jump of 196.8% in value between 2011-04-01 (112.2) and 2011-07-01 (333.0).
+  - warning: [A] Unexpected jump of 92.7% in value between 2011-07-01 (333.0) and 2011-10-01 (641.6).
+  - warning: [A] Unexpected jump of 90.3% in value between 2011-10-01 (641.6) and 2012-01-01 (62.2).
+  - warning: [A] Unexpected jump of 116.2% in value between 2012-01-01 (62.2) and 2012-04-01 (134.5).
+  - warning: [A] Unexpected jump of 186.1% in value between 2012-04-01 (134.5) and 2012-07-01 (384.8).
+  - warning: [A] Unexpected jump of 59.1% in value between 2012-07-01 (384.8) and 2012-10-01 (612.2).
+  - warning: [A] Unexpected jump of 89.3% in value between 2012-10-01 (612.2) and 2013-01-01 (65.6).
+  - warning: [A] Unexpected jump of 147.7% in value between 2013-01-01 (65.6) and 2013-04-01 (162.5).
+  - warning: [A] Unexpected jump of 218.2% in value between 2013-04-01 (162.5) and 2013-07-01 (517.0).
+  - warning: [A] Unexpected jump of 51.2% in value between 2013-07-01 (517.0) and 2013-10-01 (781.9).
+  - warning: [A] Unexpected jump of 89.2% in value between 2013-10-01 (781.9) and 2014-01-01 (84.5).
+  - warning: [A] Unexpected jump of 139.8% in value between 2014-01-01 (84.5) and 2014-04-01 (202.6).
+  - warning: [A] Unexpected jump of 193.5% in value between 2014-04-01 (202.6) and 2014-07-01 (594.6).
+  - warning: [A] Unexpected jump of 80.0% in value between 2014-07-01 (594.6) and 2014-10-01 (1070.2).
+  - warning: [A] Unexpected jump of 88.3% in value between 2014-10-01 (1070.2) and 2015-01-01 (125.2).
+  - warning: [A] Unexpected jump of 130.4% in value between 2015-01-01 (125.2) and 2015-04-01 (288.4).
+  - warning: [A] Unexpected jump of 193.8% in value between 2015-04-01 (288.4) and 2015-07-01 (847.3).
+  - warning: [A] Unexpected jump of 88.7% in value between 2015-10-01 (1242.3) and 2016-01-01 (140.6).
+  - warning: [A] Unexpected jump of 133.6% in value between 2016-01-01 (140.6) and 2016-04-01 (328.5).
+  - warning: [A] Unexpected jump of 193.1% in value between 2016-04-01 (328.5) and 2016-07-01 (962.8).
+  - warning: [A] Unexpected jump of 87.9% in value between 2016-10-01 (1401.9) and 2017-01-01 (170.1).
+  - warning: [A] Unexpected jump of 125.9% in value between 2017-01-01 (170.1) and 2017-04-01 (384.3).
+  - warning: [A] Unexpected jump of 189.4% in value between 2017-04-01 (384.3) and 2017-07-01 (1112.2).
+  - warning: [A] Unexpected jump of 56.1% in value between 2017-07-01 (1112.2) and 2017-10-01 (1735.9).
+  - warning: [A] Unexpected jump of 89.0% in value between 2017-10-01 (1735.9) and 2018-01-01 (190.4).
+  - warning: ... 1223 more warnings not listed
+- **bns/LABOUR_PRODUCTIVITY_INDEX_BY_SECTION_YTD** — fetch+validate+process: ok (downloaded=1495, processed=1495)
+  - warning: [E] Unexpected jump of 84.6% in value between 2010-07-01 (56.6) and 2010-10-01 (104.5).
+  - warning: [N] Unexpected jump of 112.6% in value between 2010-07-01 (59.5) and 2010-10-01 (126.5).
+  - warning: [R] Unexpected jump of 70.1% in value between 2010-07-01 (88.0) and 2010-10-01 (149.7).
+- **bns/LABOUR_PRODUCTIVITY_INDEX_BY_SECTION_2022_BASE** — fetch+validate+process: ok (downloaded=391, processed=391)
+- **bns/LABOUR_PRODUCTIVITY_BY_REGION_SECTION_YTD** — fetch+validate+process: ok (downloaded=23581, processed=23581)
+  - warning: [A@ABY] Gap of 182 days between 2021-10-01 and 2022-04-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [A@ABY] Unexpected jump of 71.4% in value between 2021-10-01 (4323.8) and 2022-04-01 (1235.0).
+  - warning: [A@ABY] Unexpected jump of 146.7% in value between 2022-04-01 (1235.0) and 2022-07-01 (3046.2).
+  - warning: [A@ABY] Unexpected jump of 152.4% in value between 2022-07-01 (3046.2) and 2022-10-01 (7689.8).
+  - warning: [A@ABY] Unexpected jump of 84.6% in value between 2022-10-01 (7689.8) and 2023-01-01 (1182.7).
+  - warning: [A@ABY] Unexpected jump of 137.1% in value between 2023-01-01 (1182.7) and 2023-04-01 (2804.3).
+  - warning: [A@ABY] Unexpected jump of 109.0% in value between 2023-04-01 (2804.3) and 2023-07-01 (5860.3).
+  - warning: [A@ABY] Unexpected jump of 59.8% in value between 2023-07-01 (5860.3) and 2023-10-01 (9367.2).
+  - warning: [A@ABY] Unexpected jump of 83.1% in value between 2023-10-01 (9367.2) and 2024-01-01 (1582.5).
+  - warning: [A@ABY] Unexpected jump of 77.3% in value between 2024-01-01 (1582.5) and 2024-04-01 (2805.6).
+  - warning: [A@ABY] Unexpected jump of 104.5% in value between 2024-04-01 (2805.6) and 2024-07-01 (5737.5).
+  - warning: [A@ABY] Unexpected jump of 71.1% in value between 2024-07-01 (5737.5) and 2024-10-01 (9818.7).
+  - warning: [A@ABY] Unexpected jump of 86.4% in value between 2024-10-01 (9818.7) and 2025-01-01 (1335.7).
+  - warning: [A@ABY] Unexpected jump of 80.4% in value between 2025-01-01 (1335.7) and 2025-04-01 (2409.3).
+  - warning: [A@ABY] Unexpected jump of 158.5% in value between 2025-04-01 (2409.3) and 2025-07-01 (6228.5).
+  - warning: [A@ABY] Unexpected jump of 108.0% in value between 2025-07-01 (6228.5) and 2025-10-01 (12953.9).
+  - warning: [A@ABY] Unexpected jump of 89.1% in value between 2025-10-01 (12953.9) and 2026-01-01 (1405.8).
+  - warning: [A@AKM] Unexpected jump of 140.2% in value between 2010-01-01 (44.0) and 2010-04-01 (105.7).
+  - warning: [A@AKM] Unexpected jump of 223.0% in value between 2010-04-01 (105.7) and 2010-07-01 (341.4).
+  - warning: [A@AKM] Unexpected jump of 88.5% in value between 2010-10-01 (499.9) and 2011-01-01 (57.4).
+  - warning: [A@AKM] Unexpected jump of 140.1% in value between 2011-01-01 (57.4) and 2011-04-01 (137.8).
+  - warning: [A@AKM] Unexpected jump of 231.5% in value between 2011-04-01 (137.8) and 2011-07-01 (456.8).
+  - warning: [A@AKM] Unexpected jump of 150.9% in value between 2011-07-01 (456.8) and 2011-10-01 (1146.2).
+  - warning: [A@AKM] Unexpected jump of 94.6% in value between 2011-10-01 (1146.2) and 2012-01-01 (61.6).
+  - warning: [A@AKM] Unexpected jump of 109.6% in value between 2012-01-01 (61.6) and 2012-04-01 (129.1).
+  - warning: [A@AKM] Unexpected jump of 294.0% in value between 2012-04-01 (129.1) and 2012-07-01 (508.6).
+  - warning: [A@AKM] Unexpected jump of 90.7% in value between 2012-10-01 (682.4) and 2013-01-01 (63.4).
+  - warning: [A@AKM] Unexpected jump of 129.7% in value between 2013-01-01 (63.4) and 2013-04-01 (145.6).
+  - warning: [A@AKM] Unexpected jump of 360.7% in value between 2013-04-01 (145.6) and 2013-07-01 (670.8).
+  - warning: [A@AKM] Unexpected jump of 51.8% in value between 2013-07-01 (670.8) and 2013-10-01 (1018.0).
+  - warning: ... 17818 more warnings not listed
+- **bns/LABOUR_PRODUCTIVITY_INDEX_BY_REGION_SECTION_YTD** — fetch+validate+process: ok (downloaded=22237, processed=22237)
+  - warning: [A@ABY] Gap of 182 days between 2021-10-01 and 2022-04-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [A@ABY] Unexpected jump of 59.2% in value between 2022-10-01 (128.4) and 2023-01-01 (204.4).
+  - warning: [A@AKM] Unexpected jump of 51.8% in value between 2011-07-01 (121.4) and 2011-10-01 (184.3).
+  - warning: [A@AKM] Unexpected jump of 66.2% in value between 2012-10-01 (59.8) and 2013-01-01 (99.4).
+  - warning: [A@AKM] Unexpected jump of 50.1% in value between 2023-10-01 (76.9) and 2024-01-01 (115.4).
+  - warning: [A@AKM] Unexpected jump of 88.1% in value between 2024-04-01 (117.3) and 2024-07-01 (220.6).
+  - warning: [A@AKT] Unexpected jump of 73.6% in value between 2024-07-01 (61.7) and 2024-10-01 (107.1).
+  - warning: [A@AKT] Unexpected jump of 62.0% in value between 2025-04-01 (144.3) and 2025-07-01 (233.8).
+  - warning: [A@ALA] Unexpected jump of 86.5% in value between 2011-01-01 (36.2) and 2011-04-01 (67.5).
+  - warning: [A@ALA] Unexpected jump of 98.8% in value between 2014-07-01 (121.0) and 2014-10-01 (240.6).
+  - warning: [A@ALA] Unexpected jump of 63.5% in value between 2014-10-01 (240.6) and 2015-01-01 (87.8).
+  - warning: [A@ALA] Unexpected jump of 95.0% in value between 2015-10-01 (58.0) and 2016-01-01 (113.1).
+  - warning: [A@ALA] Unexpected jump of 52.1% in value between 2017-07-01 (66.0) and 2017-10-01 (100.4).
+  - warning: [A@ALA] Unexpected jump of 136.7% in value between 2022-10-01 (53.7) and 2023-01-01 (127.1).
+  - warning: [A@ALA] Unexpected jump of 75.5% in value between 2023-04-01 (69.4) and 2023-07-01 (121.8).
+  - warning: [A@AST] Unexpected jump of 88.0% in value between 2012-07-01 (37.4) and 2012-10-01 (70.3).
+  - warning: [A@AST] Unexpected jump of 62.6% in value between 2012-10-01 (70.3) and 2013-01-01 (26.3).
+  - warning: [A@AST] Unexpected jump of 104.6% in value between 2013-10-01 (47.8) and 2014-01-01 (97.8).
+  - warning: [A@AST] Unexpected jump of 171.0% in value between 2015-07-01 (73.4) and 2015-10-01 (198.9).
+  - warning: [A@AST] Unexpected jump of 51.5% in value between 2015-10-01 (198.9) and 2016-01-01 (96.4).
+  - warning: [A@AST] Unexpected jump of 66.7% in value between 2016-07-01 (152.1) and 2016-10-01 (50.7).
+  - warning: [A@AST] Unexpected jump of 322.3% in value between 2016-10-01 (50.7) and 2017-01-01 (214.1).
+  - warning: [A@AST] Unexpected jump of 61.6% in value between 2017-07-01 (150.1) and 2017-10-01 (242.6).
+  - warning: [A@AST] Unexpected jump of 63.9% in value between 2018-07-01 (191.0) and 2018-10-01 (69.0).
+  - warning: [A@AST] Unexpected jump of 51.2% in value between 2019-10-01 (64.4) and 2020-01-01 (97.4).
+  - warning: [A@AST] Unexpected jump of 57.9% in value between 2025-10-01 (74.4) and 2026-01-01 (117.5).
+  - warning: [A@KST] Unexpected jump of 56.0% in value between 2011-10-01 (159.4) and 2012-01-01 (70.1).
+  - warning: [A@KST] Unexpected jump of 91.6% in value between 2012-10-01 (49.0) and 2013-01-01 (93.9).
+  - warning: [A@KZL] Unexpected jump of 79.5% in value between 2016-10-01 (84.1) and 2017-01-01 (151.0).
+  - warning: [A@MNG] Unexpected jump of 51.9% in value between 2011-07-01 (108.5) and 2011-10-01 (164.8).
+  - warning: ... 954 more warnings not listed
+- **bns/LABOUR_PRODUCTIVITY_INDEX_BY_REGION_2022_BASE** — fetch+validate+process: ok (downloaded=340, processed=340)
+- **bns/OIL_GAS_SECTOR_GVA** — fetch+validate+process: ok (downloaded=484, processed=484)
+  - warning: [A02] Unexpected jump of 68.0% in value between 2012-12-31 (14567.6) and 2013-12-31 (24474.9).
+  - warning: [A02] Unexpected jump of 68.8% in value between 2022-12-31 (47505.7) and 2023-12-31 (14799.7).
+  - warning: [A03] Unexpected jump of 389.4% in value between 2012-12-31 (14072.6) and 2013-12-31 (68870.4).
+  - warning: [GEOLOGICAL_EXPLORATION] Unexpected jump of 53.0% in value between 2020-12-31 (126985.1) and 2021-12-31 (59704.5).
+  - warning: [GEOLOGICAL_EXPLORATION] Unexpected jump of 77.6% in value between 2021-12-31 (59704.5) and 2022-12-31 (106055.1).
+  - warning: [MINERAL_EXPLORATION] Unexpected jump of 114.4% in value between 2010-12-31 (4077.0) and 2011-12-31 (8739.1).
+  - warning: [MINERAL_EXPLORATION] Unexpected jump of 181.8% in value between 2020-12-31 (8287.9) and 2021-12-31 (23358.7).
+  - warning: [MINERAL_EXPLORATION] Unexpected jump of 61.2% in value between 2021-12-31 (23358.7) and 2022-12-31 (37649.8).
+  - warning: [MINERAL_EXPLORATION] Unexpected jump of 58.4% in value between 2022-12-31 (37649.8) and 2023-12-31 (15660.5).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 78.4% in value between 2010-12-31 (1742.6) and 2011-12-31 (3109.6).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 63.8% in value between 2011-12-31 (3109.6) and 2012-12-31 (5093.2).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 77.2% in value between 2013-12-31 (5065.1) and 2014-12-31 (8975.7).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 177.8% in value between 2014-12-31 (8975.7) and 2015-12-31 (24933.0).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 62.4% in value between 2015-12-31 (24933.0) and 2016-12-31 (9376.7).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 53.5% in value between 2017-12-31 (6291.4) and 2018-12-31 (9659.9).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 213.5% in value between 2020-12-31 (7966.9) and 2021-12-31 (24975.2).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 238.3% in value between 2022-12-31 (14383.0) and 2023-12-31 (48655.8).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 50.4% in value between 2023-12-31 (48655.8) and 2024-12-31 (24119.4).
+  - warning: [OIL_GAS_TERTIARY] Unexpected jump of 65.3% in value between 2010-12-31 (1459455.1) and 2011-12-31 (2413116.5).
+  - warning: [OIL_GAS_TERTIARY] Unexpected jump of 55.4% in value between 2017-12-31 (2996134.3) and 2018-12-31 (4656787.7).
+  - warning: [OTHER_CONSTRUCTION] Unexpected jump of 89.8% in value between 2015-12-31 (88517.7) and 2016-12-31 (168030.8).
+  - warning: [OTHER_CONSTRUCTION] Unexpected jump of 100.0% in value between 2017-12-31 (131055.4) and 2018-12-31 (0.0).
+  - warning: [PIPELINE_CONSTRUCTION_LOCAL] Unexpected jump of 189.3% in value between 2010-12-31 (12814.6) and 2011-12-31 (37079.0).
+  - warning: [PIPELINE_CONSTRUCTION_LOCAL] Unexpected jump of 62.1% in value between 2013-12-31 (41340.0) and 2014-12-31 (15680.0).
+  - warning: [PIPELINE_CONSTRUCTION_LOCAL] Unexpected jump of 65.5% in value between 2014-12-31 (15680.0) and 2015-12-31 (25954.9).
+  - warning: [PIPELINE_CONSTRUCTION_LOCAL] Unexpected jump of 59.8% in value between 2019-12-31 (45109.9) and 2020-12-31 (72103.2).
+  - warning: [PIPELINE_CONSTRUCTION_MAIN] Unexpected jump of 63.5% in value between 2012-12-31 (60000.7) and 2013-12-31 (98108.3).
+  - warning: [PIPELINE_CONSTRUCTION_MAIN] Unexpected jump of 72.3% in value between 2015-12-31 (100806.2) and 2016-12-31 (173720.6).
+  - warning: [PIPELINE_CONSTRUCTION_MAIN] Unexpected jump of 81.2% in value between 2016-12-31 (173720.6) and 2017-12-31 (32743.1).
+  - warning: [PIPELINE_CONSTRUCTION_MAIN] Unexpected jump of 388.4% in value between 2018-12-31 (39783.0) and 2019-12-31 (194319.1).
+  - warning: ... 46 more warnings not listed
+- **bns/OIL_GAS_SECTOR_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=479, processed=479)
+  - warning: [GEOLOGICAL_EXPLORATION] Unexpected jump of 252.4% in value between 2021-12-31 (45.2) and 2022-12-31 (159.3).
+  - warning: [MINERAL_EXPLORATION] Unexpected jump of 54.1% in value between 2012-12-31 (112.4) and 2013-12-31 (51.6).
+  - warning: [MINERAL_EXPLORATION] Unexpected jump of 124.8% in value between 2013-12-31 (51.6) and 2014-12-31 (116.0).
+  - warning: [MINERAL_EXPLORATION] Unexpected jump of 55.5% in value between 2014-12-31 (116.0) and 2015-12-31 (51.6).
+  - warning: [MINERAL_EXPLORATION] Unexpected jump of 180.8% in value between 2015-12-31 (51.6) and 2016-12-31 (144.9).
+  - warning: [MINERAL_EXPLORATION] Unexpected jump of 244.5% in value between 2020-12-31 (78.7) and 2021-12-31 (271.1).
+  - warning: [MINERAL_EXPLORATION] Unexpected jump of 77.5% in value between 2022-12-31 (144.6) and 2023-12-31 (32.5).
+  - warning: [MINERAL_EXPLORATION] Unexpected jump of 298.2% in value between 2023-12-31 (32.5) and 2024-12-31 (129.4).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 53.1% in value between 2010-12-31 (309.7) and 2011-12-31 (145.2).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 51.1% in value between 2013-12-31 (105.6) and 2014-12-31 (159.6).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 56.3% in value between 2014-12-31 (159.6) and 2015-12-31 (249.5).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 66.6% in value between 2015-12-31 (249.5) and 2016-12-31 (83.4).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 56.4% in value between 2019-12-31 (116.4) and 2020-12-31 (50.8).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 491.7% in value between 2020-12-31 (50.8) and 2021-12-31 (300.6).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 80.7% in value between 2021-12-31 (300.6) and 2022-12-31 (58.0).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 401.2% in value between 2022-12-31 (58.0) and 2023-12-31 (290.7).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 83.2% in value between 2023-12-31 (290.7) and 2024-12-31 (48.8).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 116.0% in value between 2024-12-31 (48.8) and 2025-12-31 (105.4).
+  - warning: [OTHER_CONSTRUCTION] Gap of 1826 days between 2017-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [OTHER_CONSTRUCTION] Unexpected jump of 100.0% in value between 2017-12-31 (117.0) and 2022-12-31 (0.0).
+  - warning: [OTHER_CONSTRUCTION] Unexpected jump of 108.9% in value between 2024-12-31 (49.6) and 2025-12-31 (103.6).
+  - warning: [PIPELINE_CONSTRUCTION_LOCAL] Unexpected jump of 232.6% in value between 2010-12-31 (89.7) and 2011-12-31 (298.3).
+  - warning: [PIPELINE_CONSTRUCTION_LOCAL] Unexpected jump of 53.1% in value between 2011-12-31 (298.3) and 2012-12-31 (139.8).
+  - warning: [PIPELINE_CONSTRUCTION_LOCAL] Unexpected jump of 60.1% in value between 2013-12-31 (84.2) and 2014-12-31 (33.6).
+  - warning: [PIPELINE_CONSTRUCTION_LOCAL] Unexpected jump of 433.3% in value between 2014-12-31 (33.6) and 2015-12-31 (179.2).
+  - warning: [PIPELINE_CONSTRUCTION_LOCAL] Unexpected jump of 55.0% in value between 2015-12-31 (179.2) and 2016-12-31 (80.6).
+  - warning: [PIPELINE_CONSTRUCTION_LOCAL] Unexpected jump of 138.1% in value between 2016-12-31 (80.6) and 2017-12-31 (191.9).
+  - warning: [PIPELINE_CONSTRUCTION_LOCAL] Unexpected jump of 58.4% in value between 2017-12-31 (191.9) and 2018-12-31 (79.8).
+  - warning: [PIPELINE_CONSTRUCTION_MAIN] Unexpected jump of 130.0% in value between 2012-12-31 (73.3) and 2013-12-31 (168.6).
+  - warning: [PIPELINE_CONSTRUCTION_MAIN] Unexpected jump of 63.0% in value between 2013-12-31 (168.6) and 2014-12-31 (62.3).
+  - warning: ... 52 more warnings not listed
+- **bns/OIL_GAS_SECTOR_GDP_SHARE** — fetch+validate+process: ok (downloaded=477, processed=477)
+  - warning: [A02] Unexpected jump of 100.0% in value between 2010-12-31 (0.1) and 2011-12-31 (0.0).
+  - warning: [A02] Unexpected jump of 100.0% in value between 2018-12-31 (0.1) and 2019-12-31 (0.0).
+  - warning: [A02] Unexpected jump of 100.0% in value between 2021-12-31 (0.1) and 2022-12-31 (0.0).
+  - warning: [A03] Unexpected jump of 100.0% in value between 2011-12-31 (0.1) and 2012-12-31 (0.0).
+  - warning: [OILFIELD_EQUIPMENT_RENTAL] Unexpected jump of 100.0% in value between 2015-12-31 (0.1) and 2016-12-31 (0.0).
+  - warning: [OTHER_CONSTRUCTION] Gap of 730 days between 2020-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [OTHER_CONSTRUCTION] Unexpected jump of 100.0% in value between 2015-12-31 (0.2) and 2016-12-31 (0.4).
+  - warning: [OTHER_CONSTRUCTION] Unexpected jump of 100.0% in value between 2017-12-31 (0.2) and 2018-12-31 (0.0).
+  - warning: [PIPELINE_CONSTRUCTION_LOCAL] Unexpected jump of 100.0% in value between 2011-12-31 (0.1) and 2012-12-31 (0.2).
+  - warning: [PIPELINE_CONSTRUCTION_LOCAL] Unexpected jump of 100.0% in value between 2013-12-31 (0.1) and 2014-12-31 (0.0).
+  - warning: [PIPELINE_CONSTRUCTION_MAIN] Unexpected jump of 100.0% in value between 2015-12-31 (0.2) and 2016-12-31 (0.4).
+  - warning: [PIPELINE_CONSTRUCTION_MAIN] Unexpected jump of 75.0% in value between 2016-12-31 (0.4) and 2017-12-31 (0.1).
+  - warning: [PIPELINE_CONSTRUCTION_MAIN] Unexpected jump of 200.0% in value between 2018-12-31 (0.1) and 2019-12-31 (0.3).
+  - warning: [PIPELINE_CONSTRUCTION_MAIN] Unexpected jump of 66.7% in value between 2019-12-31 (0.3) and 2020-12-31 (0.1).
+  - warning: [PIPELINE_CONSTRUCTION_MAIN] Unexpected jump of 100.0% in value between 2021-12-31 (0.1) and 2022-12-31 (0.0).
+  - warning: [PIPELINE_CONSTRUCTION_MAIN] Unexpected jump of 100.0% in value between 2024-12-31 (0.1) and 2025-12-31 (0.0).
+  - warning: [RAIL_OIL_TRANSPORT] Unexpected jump of 100.0% in value between 2024-12-31 (0.1) and 2025-12-31 (0.2).
+  - warning: [WHOLESALE_AVIATION_FUEL] Unexpected jump of 100.0% in value between 2012-12-31 (0.1) and 2013-12-31 (0.0).
+  - warning: [WHOLESALE_AVIATION_FUEL] Unexpected jump of 100.0% in value between 2020-12-31 (0.1) and 2021-12-31 (0.0).
+  - warning: [WHOLESALE_CRUDE] Unexpected jump of 100.0% in value between 2012-12-31 (0.1) and 2013-12-31 (0.2).
+  - warning: [WHOLESALE_CRUDE] Unexpected jump of 400.0% in value between 2016-12-31 (0.1) and 2017-12-31 (0.5).
+  - warning: [WHOLESALE_CRUDE] Unexpected jump of 100.0% in value between 2017-12-31 (0.5) and 2018-12-31 (1.0).
+  - warning: [WHOLESALE_DIESEL] Unexpected jump of 75.0% in value between 2017-12-31 (0.4) and 2018-12-31 (0.7).
+  - warning: [WHOLESALE_DIESEL] Unexpected jump of 66.7% in value between 2023-12-31 (0.3) and 2024-12-31 (0.5).
+  - warning: [WHOLESALE_FUEL_OIL] Unexpected jump of 75.0% in value between 2012-12-31 (0.4) and 2013-12-31 (0.1).
+  - warning: [WHOLESALE_FUEL_OIL] Unexpected jump of 100.0% in value between 2013-12-31 (0.1) and 2014-12-31 (0.2).
+  - warning: [WHOLESALE_FUEL_OIL] Unexpected jump of 100.0% in value between 2020-12-31 (0.1) and 2021-12-31 (0.0).
+  - warning: [WHOLESALE_FUEL_OIL] Unexpected jump of 100.0% in value between 2022-12-31 (0.1) and 2023-12-31 (0.0).
+  - warning: [WHOLESALE_GAS] Unexpected jump of 75.0% in value between 2010-12-31 (1.2) and 2011-12-31 (2.1).
+  - warning: [WHOLESALE_GAS] Unexpected jump of 52.9% in value between 2012-12-31 (1.7) and 2013-12-31 (0.8).
+  - warning: ... 5 more warnings not listed
+- **bns/KEI_MONTHLY** — fetch+validate+process: ok (downloaded=68, processed=68)
+- **bns/KEI_YTD** — fetch+validate+process: ok (downloaded=68, processed=68)
+- **bns/KEI_VOLUME_INDEX_YTD** — fetch+validate+process: ok (downloaded=68, processed=68)
+- **bns/KEI_VOLUME_INDEX_BY_REGION_YTD** — fetch+validate+process: ok (downloaded=1377, processed=1377)
+- **bns/KEI_VOLUME_INDEX_BY_REGION_ACTIVITY_YTD** — fetch+validate+process: ok (downloaded=11907, processed=11907)
+  - warning: [B@AST] Unexpected jump of 50.0% in value between 2025-04-01 (245.5) and 2025-05-01 (122.7).
+  - warning: [B@AST] Unexpected jump of 109.5% in value between 2025-06-01 (81.8) and 2025-07-01 (171.4).
+  - warning: [B@AST] Unexpected jump of 100.0% in value between 2025-12-01 (214.8) and 2026-01-01 (0.0).
+  - warning: [B@ATY] Unexpected jump of 53.0% in value between 2025-12-01 (120.8) and 2026-01-01 (56.8).
+  - warning: [B@SHM] Unexpected jump of 85.6% in value between 2025-12-01 (84.7) and 2026-01-01 (12.2).
+  - warning: [B@SHM] Unexpected jump of 253.3% in value between 2026-01-01 (12.2) and 2026-02-01 (43.1).
+  - warning: [B@SHM] Unexpected jump of 142.5% in value between 2026-02-01 (43.1) and 2026-03-01 (104.5).
+  - warning: [B@SKO] Unexpected jump of 51.5% in value between 2024-06-01 (68.3) and 2024-07-01 (103.5).
+  - warning: [B@ZHT] Unexpected jump of 144.1% in value between 2026-01-01 (98.8) and 2026-02-01 (241.2).
+  - warning: [COMMUNICATIONS@ABY] Unexpected jump of 50.5% in value between 2022-12-01 (110.9) and 2023-01-01 (166.9).
+  - warning: [COMMUNICATIONS@ALM] Unexpected jump of 54.9% in value between 2022-12-01 (97.9) and 2023-01-01 (151.6).
+  - warning: [COMMUNICATIONS@ULT] Unexpected jump of 53.1% in value between 2022-12-01 (102.3) and 2023-01-01 (156.6).
+  - warning: [COMMUNICATIONS@ZHT] Unexpected jump of 65.0% in value between 2022-12-01 (108.9) and 2023-01-01 (179.7).
+  - warning: [D@KZL] Unexpected jump of 51.1% in value between 2025-12-01 (90.2) and 2026-01-01 (136.3).
+  - warning: [E@AST] Unexpected jump of 61.8% in value between 2026-01-01 (86.6) and 2026-02-01 (140.1).
+  - warning: [E@ATY] Unexpected jump of 98.8% in value between 2025-12-01 (67.6) and 2026-01-01 (134.4).
+  - warning: [E@PVL] Unexpected jump of 97.3% in value between 2026-01-01 (82.4) and 2026-02-01 (162.6).
+  - warning: [E@SHM] Unexpected jump of 96.8% in value between 2025-12-01 (58.7) and 2026-01-01 (115.5).
+  - warning: [F@ABY] Unexpected jump of 102.1% in value between 2023-12-01 (119.1) and 2024-01-01 (240.7).
+  - warning: [F@ABY] Unexpected jump of 55.0% in value between 2024-01-01 (240.7) and 2024-02-01 (108.3).
+  - warning: [F@AKM] Unexpected jump of 56.9% in value between 2022-12-01 (136.8) and 2023-01-01 (214.6).
+  - warning: [F@AKM] Unexpected jump of 89.0% in value between 2024-12-01 (122.8) and 2025-01-01 (232.1).
+  - warning: [F@ALM] Unexpected jump of 307.1% in value between 2023-12-01 (103.2) and 2024-01-01 (420.1).
+  - warning: [F@ALM] Unexpected jump of 71.2% in value between 2024-01-01 (420.1) and 2024-02-01 (121.0).
+  - warning: [F@KST] Unexpected jump of 71.1% in value between 2026-02-01 (62.3) and 2026-03-01 (106.6).
+  - warning: [F@MNG] Unexpected jump of 59.5% in value between 2021-03-01 (66.2) and 2021-04-01 (105.6).
+  - warning: [F@MNG] Unexpected jump of 86.2% in value between 2022-02-01 (65.9) and 2022-03-01 (122.7).
+  - warning: [F@MNG] Unexpected jump of 63.7% in value between 2022-12-01 (78.7) and 2023-01-01 (128.8).
+  - warning: [F@MNG] Unexpected jump of 54.6% in value between 2023-12-01 (149.7) and 2024-01-01 (67.9).
+  - warning: [F@MNG] Unexpected jump of 100.1% in value between 2024-12-01 (111.6) and 2025-01-01 (223.3).
+  - warning: ... 13 more warnings not listed
+- **bns/GRP_NOMINAL_BY_REGION** — fetch+validate+process: ok (downloaded=594, processed=594)
+  - warning: [GDP@AKM] Unexpected jump of 1260.0% in value between 1993-12-31 (2341.4) and 1994-12-31 (31842.6).
+  - warning: [GDP@AKM] Unexpected jump of 78.9% in value between 1994-12-31 (31842.6) and 1995-12-31 (56957.1).
+  - warning: [GDP@AKM] Unexpected jump of 60.0% in value between 1998-12-31 (48922.2) and 1999-12-31 (78275.9).
+  - warning: [GDP@AKM] Unexpected jump of 59.8% in value between 2006-12-31 (254186.2) and 2007-12-31 (406298.4).
+  - warning: [GDP@AKT] Unexpected jump of 1441.5% in value between 1993-12-31 (1400.8) and 1994-12-31 (21594.0).
+  - warning: [GDP@AKT] Unexpected jump of 118.9% in value between 1994-12-31 (21594.0) and 1995-12-31 (47263.5).
+  - warning: [GDP@ALA] Unexpected jump of 1383.4% in value between 1993-12-31 (2055.6) and 1994-12-31 (30492.9).
+  - warning: [GDP@ALA] Unexpected jump of 146.2% in value between 1994-12-31 (30492.9) and 1995-12-31 (75065.7).
+  - warning: [GDP@ALA] Unexpected jump of 147.0% in value between 1995-12-31 (75065.7) and 1996-12-31 (185389.7).
+  - warning: [GDP@ALA] Unexpected jump of 51.8% in value between 2005-12-31 (1497351.1) and 2006-12-31 (2272682.9).
+  - warning: [GDP@ALM] Unexpected jump of 1363.4% in value between 1993-12-31 (1496.8) and 1994-12-31 (21903.6).
+  - warning: [GDP@ALM] Unexpected jump of 115.8% in value between 1994-12-31 (21903.6) and 1995-12-31 (47263.5).
+  - warning: [GDP@ALM] Unexpected jump of 74.4% in value between 1995-12-31 (47263.5) and 1996-12-31 (82431.8).
+  - warning: [GDP@AST] Unexpected jump of 135.4% in value between 1997-12-31 (25719.2) and 1998-12-31 (60533.1).
+  - warning: [GDP@AST] Unexpected jump of 53.4% in value between 1998-12-31 (60533.1) and 1999-12-31 (92836.1).
+  - warning: [GDP@AST] Unexpected jump of 51.5% in value between 2000-12-31 (134931.9) and 2001-12-31 (204425.9).
+  - warning: [GDP@AST] Unexpected jump of 55.1% in value between 2003-12-31 (302164.2) and 2004-12-31 (468769.9).
+  - warning: [GDP@AST] Unexpected jump of 51.8% in value between 2004-12-31 (468769.9) and 2005-12-31 (711612.0).
+  - warning: [GDP@ATY] Unexpected jump of 3130.6% in value between 1993-12-31 (606.2) and 1994-12-31 (19584.1).
+  - warning: [GDP@ATY] Unexpected jump of 188.7% in value between 1994-12-31 (19584.1) and 1995-12-31 (56530.9).
+  - warning: [GDP@ATY] Unexpected jump of 51.8% in value between 1995-12-31 (56530.9) and 1996-12-31 (85840.6).
+  - warning: [GDP@ATY] Unexpected jump of 77.1% in value between 1999-12-31 (138607.8) and 2000-12-31 (245478.2).
+  - warning: [GDP@KRG] Unexpected jump of 1678.7% in value between 1993-12-31 (3199.5) and 1994-12-31 (56910.3).
+  - warning: [GDP@KRG] Unexpected jump of 165.4% in value between 1994-12-31 (56910.3) and 1995-12-31 (151058.1).
+  - warning: [GDP@KST] Unexpected jump of 1103.2% in value between 1993-12-31 (3773.4) and 1994-12-31 (45401.0).
+  - warning: [GDP@KST] Unexpected jump of 57.4% in value between 1996-12-31 (81782.4) and 1997-12-31 (128724.8).
+  - warning: [GDP@KZL] Unexpected jump of 1563.3% in value between 1993-12-31 (512.3) and 1994-12-31 (8521.3).
+  - warning: [GDP@KZL] Unexpected jump of 139.3% in value between 1994-12-31 (8521.3) and 1995-12-31 (20388.2).
+  - warning: [GDP@KZL] Unexpected jump of 61.6% in value between 1995-12-31 (20388.2) and 1996-12-31 (32947.4).
+  - warning: [GDP@KZL] Unexpected jump of 50.1% in value between 2005-12-31 (242378.5) and 2006-12-31 (363797.3).
+  - warning: ... 23 more warnings not listed
+- **bns/GRP_NOMINAL_BY_REGION_QUARTERLY** — fetch+validate+process: ok (downloaded=1338, processed=1338)
+  - warning: [GDP@ABY] Gap of 182 days between 2021-10-01 and 2022-04-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [GDP@ABY] Unexpected jump of 52.6% in own-period contribution between 2021-10-01 (1836042.7) and 2022-04-01 (871120.8).
+  - warning: [GDP@ABY] Unexpected jump of 62.1% in own-period contribution between 2022-07-01 (577161.0) and 2022-10-01 (935471.5999999999).
+  - warning: [GDP@ABY] Unexpected jump of 58.3% in own-period contribution between 2024-04-01 (586362.5999999999) and 2024-07-01 (928394.8999999999).
+  - warning: [GDP@ABY] Unexpected jump of 64.0% in own-period contribution between 2025-04-01 (626798.9000000001) and 2025-07-01 (1028258.1999999997).
+  - warning: [GDP@ABY] Unexpected jump of 69.5% in own-period contribution between 2025-07-01 (1028258.1999999997) and 2025-10-01 (1742508.1).
+  - warning: [GDP@AKM] Unexpected jump of 62.3% in own-period contribution between 2009-04-01 (105081.90000000001) and 2009-07-01 (170508.19999999998).
+  - warning: [GDP@AKM] Unexpected jump of 50.5% in own-period contribution between 2009-10-01 (172155.7) and 2010-01-01 (85155.8).
+  - warning: [GDP@AKM] Unexpected jump of 77.9% in own-period contribution between 2011-04-01 (132280.19999999998) and 2011-07-01 (235296.2).
+  - warning: [GDP@AKM] Unexpected jump of 53.4% in own-period contribution between 2011-10-01 (313750.5) and 2012-01-01 (146217.9).
+  - warning: [GDP@AKM] Unexpected jump of 70.5% in own-period contribution between 2013-04-01 (173702.7) and 2013-07-01 (296223.8).
+  - warning: [GDP@AKM] Unexpected jump of 59.4% in own-period contribution between 2015-04-01 (231863.60000000003) and 2015-07-01 (369674.29999999993).
+  - warning: [GDP@AKM] Unexpected jump of 56.6% in own-period contribution between 2016-04-01 (267064.5) and 2016-07-01 (418233.0).
+  - warning: [GDP@AKM] Unexpected jump of 57.7% in own-period contribution between 2021-07-01 (663415.8) and 2021-10-01 (1046292.5).
+  - warning: [GDP@AKM] Unexpected jump of 50.3% in own-period contribution between 2022-07-01 (915666.3) and 2022-10-01 (1376279.4).
+  - warning: [GDP@AKM] Unexpected jump of 50.1% in own-period contribution between 2022-10-01 (1376279.4) and 2023-01-01 (687254.4).
+  - warning: [GDP@AKM] Unexpected jump of 62.6% in own-period contribution between 2023-07-01 (839945.2000000002) and 2023-10-01 (1365795.1999999997).
+  - warning: [GDP@AKM] Unexpected jump of 83.4% in own-period contribution between 2025-07-01 (1187975.4) and 2025-10-01 (2178423.3).
+  - warning: [GDP@AKM] Unexpected jump of 54.7% in own-period contribution between 2025-10-01 (2178423.3) and 2026-01-01 (986539.6).
+  - warning: [GDP@AKT] Unexpected jump of 54.1% in own-period contribution between 2010-07-01 (281911.7) and 2010-10-01 (434559.9999999999).
+  - warning: [GDP@AKT] Unexpected jump of 58.5% in own-period contribution between 2012-07-01 (417663.19999999995) and 2012-10-01 (661879.4000000001).
+  - warning: [GDP@ALA] Unexpected jump of 50.1% in own-period contribution between 2010-07-01 (945075.3) and 2010-10-01 (1418234.1).
+  - warning: [GDP@ALA] Unexpected jump of 74.7% in own-period contribution between 2013-07-01 (1653744.6) and 2013-10-01 (2888834.7).
+  - warning: [GDP@ALA] Unexpected jump of 56.1% in own-period contribution between 2014-04-01 (1399752.1999999997) and 2014-07-01 (2184719.2).
+  - warning: [GDP@ALA] Unexpected jump of 59.8% in own-period contribution between 2015-07-01 (2215626.3) and 2015-10-01 (3539654.7).
+  - warning: [GDP@ALA] Unexpected jump of 78.0% in own-period contribution between 2016-07-01 (2389337.5) and 2016-10-01 (4252118.100000001).
+  - warning: [GDP@ALA] Unexpected jump of 76.2% in own-period contribution between 2017-07-01 (2723417.0) and 2017-10-01 (4798866.300000001).
+  - warning: [GDP@ALA] Unexpected jump of 50.1% in own-period contribution between 2017-10-01 (4798866.300000001) and 2018-01-01 (2396132.2).
+  - warning: [GDP@ALA] Unexpected jump of 68.2% in own-period contribution between 2018-07-01 (2733747.3999999994) and 2018-10-01 (4598722.6).
+  - warning: [GDP@ALA] Unexpected jump of 87.2% in own-period contribution between 2019-07-01 (2851258.3999999994) and 2019-10-01 (5336950.600000001).
+  - warning: ... 171 more warnings not listed
+- **bns/NOE_SHARE_OF_GDP_BY_REGION** — fetch+validate+process: ok (downloaded=241, processed=241)
+  - warning: [NOE_SHARE@ALA] Unexpected jump of 53.7% in value between 2014-12-31 (5.03) and 2015-12-31 (7.73).
+  - warning: [NOE_SHARE@AST] Unexpected jump of 58.1% in value between 2013-12-31 (1.72) and 2014-12-31 (2.72).
+  - warning: [NOE_SHARE@ATY] Unexpected jump of 91.3% in value between 2016-12-31 (1.26) and 2017-12-31 (2.41).
+  - warning: [NOE_SHARE@MNG] Unexpected jump of 54.1% in value between 2013-12-31 (0.74) and 2014-12-31 (1.14).
+  - warning: [NOE_SHARE@MNG] Unexpected jump of 61.5% in value between 2016-12-31 (0.65) and 2017-12-31 (1.05).
+- **bns/NOE_SHARE_OF_GRP_BY_REGION** — fetch+validate+process: ok (downloaded=228, processed=228)
+  - warning: [NOE_SHARE@AST] Unexpected jump of 51.0% in value between 2013-12-31 (17.78) and 2014-12-31 (26.85).
+  - warning: [NOE_SHARE@ATY] Unexpected jump of 93.6% in value between 2016-12-31 (11.38) and 2017-12-31 (22.03).
+  - warning: [NOE_SHARE@ULT] Unexpected jump of 53.8% in value between 2024-12-31 (10.75) and 2025-12-31 (4.97).
+- **bns/NOE_SHARE_OF_GDP_BY_REGION_ACTIVITY** — fetch+validate+process: ok (downloaded=1560, processed=1560)
+  - warning: [A@ALA] Unexpected jump of 633.3% in value between 2020-12-31 (0.03) and 2021-12-31 (0.22).
+  - warning: [A@ALA] Unexpected jump of 95.5% in value between 2021-12-31 (0.22) and 2022-12-31 (0.01).
+  - warning: [A@ALA] Unexpected jump of 100.0% in value between 2023-12-31 (0.01) and 2024-12-31 (0.02).
+  - warning: [A@AST] Unexpected jump of 200.0% in value between 2020-12-31 (0.01) and 2021-12-31 (0.03).
+  - warning: [A@AST] Unexpected jump of 66.7% in value between 2021-12-31 (0.03) and 2022-12-31 (0.01).
+  - warning: [A@SHM] Unexpected jump of 100.0% in value between 2022-12-31 (0.01) and 2023-12-31 (0.02).
+  - warning: [A@SHM] Unexpected jump of 110.0% in value between 2024-12-31 (0.01) and 2025-12-31 (0.021).
+  - warning: [A@TRK] Unexpected jump of 65.4% in value between 2021-12-31 (0.26) and 2022-12-31 (0.43).
+  - warning: [A@ULT] Unexpected jump of 66.7% in value between 2022-12-31 (0.03) and 2023-12-31 (0.05).
+  - warning: [A@ULT] Unexpected jump of 60.0% in value between 2023-12-31 (0.05) and 2024-12-31 (0.02).
+  - warning: [B@ABY] Unexpected jump of 100.0% in value between 2024-12-31 (0.01) and 2025-12-31 (0.0).
+  - warning: [B@AKT] Unexpected jump of 100.0% in value between 2022-12-31 (0.01) and 2023-12-31 (0.0).
+  - warning: [B@AKT] Unexpected jump of 100.0% in value between 2024-12-31 (0.01) and 2025-12-31 (0.0).
+  - warning: [B@ATY] Unexpected jump of 75.0% in value between 2021-12-31 (0.04) and 2022-12-31 (0.07).
+  - warning: [B@ATY] Unexpected jump of 100.0% in value between 2024-12-31 (0.06) and 2025-12-31 (0.0).
+  - warning: [B@KRG] Unexpected jump of 100.0% in value between 2021-12-31 (0.01) and 2022-12-31 (0.0).
+  - warning: [B@KRG] Unexpected jump of 100.0% in value between 2024-12-31 (0.01) and 2025-12-31 (0.0).
+  - warning: [B@KZL] Unexpected jump of 100.0% in value between 2020-12-31 (0.01) and 2021-12-31 (0.0).
+  - warning: [B@MNG] Unexpected jump of 100.0% in value between 2021-12-31 (0.01) and 2022-12-31 (0.02).
+  - warning: [B@MNG] Unexpected jump of 100.0% in value between 2024-12-31 (0.02) and 2025-12-31 (0.0).
+  - warning: [B@PVL] Unexpected jump of 100.0% in value between 2022-12-31 (0.01) and 2023-12-31 (0.0).
+  - warning: [B@ULT] Unexpected jump of 100.0% in value between 2024-12-31 (0.01) and 2025-12-31 (0.0).
+  - warning: [B@VKO] Unexpected jump of 100.0% in value between 2022-12-31 (0.01) and 2023-12-31 (0.0).
+  - warning: [B@ZKO] Unexpected jump of 100.0% in value between 2021-12-31 (0.01) and 2022-12-31 (0.02).
+  - warning: [B@ZKO] Unexpected jump of 100.0% in value between 2024-12-31 (0.02) and 2025-12-31 (0.0).
+  - warning: [B] Unexpected jump of 75.0% in value between 2021-12-31 (0.08) and 2022-12-31 (0.14).
+  - warning: [B] Unexpected jump of 100.0% in value between 2024-12-31 (0.14) and 2025-12-31 (0.0).
+  - warning: [C@ABY] Unexpected jump of 100.0% in value between 2022-12-31 (0.01) and 2023-12-31 (0.02).
+  - warning: [C@AKM] Unexpected jump of 100.0% in value between 2021-12-31 (0.04) and 2022-12-31 (0.08).
+  - warning: [C@AKM] Unexpected jump of 53.3% in value between 2024-12-31 (0.06) and 2025-12-31 (0.028).
+  - warning: ... 189 more warnings not listed
+- **bns/QUASI_STATE_GVA_BY_REGION_SECTION** — fetch+validate+process: ok (downloaded=3744, processed=3744)
+  - warning: [A@ABY] Unexpected jump of 100.0% in value between 2024-12-31 (124.151508) and 2025-12-31 (0.0).
+  - warning: [A@AKM] Unexpected jump of 80.7% in value between 2019-12-31 (1365.976455) and 2020-12-31 (264.0542980000001).
+  - warning: [A@AKM] Unexpected jump of 100.0% in value between 2023-12-31 (313.68483299999997) and 2024-12-31 (0.0).
+  - warning: [A@AKT] Unexpected jump of 100.0% in value between 2024-12-31 (308.169784) and 2025-12-31 (0.0).
+  - warning: [A@ALA] Unexpected jump of 58.6% in value between 2021-12-31 (1251.382202) and 2022-12-31 (517.489466).
+  - warning: [A@ALA] Unexpected jump of 904.7% in value between 2024-12-31 (456.59980799999994) and 2025-12-31 (4587.433536).
+  - warning: [A@ALM] Unexpected jump of 76.3% in value between 2019-12-31 (520.44897888) and 2020-12-31 (123.438888).
+  - warning: [A@ALM] Unexpected jump of 50.6% in value between 2020-12-31 (123.438888) and 2021-12-31 (185.879362).
+  - warning: [A@ALM] Unexpected jump of 138.2% in value between 2022-12-31 (93.12581999999999) and 2023-12-31 (221.804243).
+  - warning: [A@ALM] Unexpected jump of 96.6% in value between 2023-12-31 (221.804243) and 2024-12-31 (7.49826).
+  - warning: [A@ALM] Unexpected jump of 7851.5% in value between 2024-12-31 (7.49826) and 2025-12-31 (596.2205339999999).
+  - warning: [A@AST] Unexpected jump of 95.0% in value between 2022-12-31 (31662.581706999998) and 2023-12-31 (1571.082114).
+  - warning: [A@ATY] Unexpected jump of 79.1% in value between 2021-12-31 (149.480823) and 2022-12-31 (267.695602).
+  - warning: [A@ATY] Unexpected jump of 100.0% in value between 2023-12-31 (332.552196) and 2024-12-31 (0.0).
+  - warning: [A@KRG] Unexpected jump of 100.0% in value between 2018-12-31 (2.9881599999999997) and 2019-12-31 (0.0).
+  - warning: [A@KRG] Unexpected jump of 100.0% in value between 2020-12-31 (76.84947) and 2021-12-31 (0.0).
+  - warning: [A@KRG] Unexpected jump of 100.0% in value between 2024-12-31 (268.37574399999994) and 2025-12-31 (0.0).
+  - warning: [A@KST] Unexpected jump of 100.0% in value between 2020-12-31 (2.5385219999999995) and 2021-12-31 (0.0).
+  - warning: [A@KZL] Unexpected jump of 51.2% in value between 2018-12-31 (425.48981) and 2019-12-31 (207.728433).
+  - warning: [A@KZL] Unexpected jump of 58.1% in value between 2022-12-31 (182.51411000000002) and 2023-12-31 (288.50145000000003).
+  - warning: [A@MNG] Unexpected jump of 100.0% in value between 2019-12-31 (46.344046) and 2020-12-31 (0.0).
+  - warning: [A@PVL] Unexpected jump of 100.0% in value between 2020-12-31 (4.385685490000002) and 2021-12-31 (0.0).
+  - warning: [A@PVL] Unexpected jump of 100.0% in value between 2024-12-31 (43.694585999999994) and 2025-12-31 (0.0).
+  - warning: [A@SKO] Unexpected jump of 123.7% in value between 2020-12-31 (23.15623) and 2021-12-31 (51.8038206).
+  - warning: [A@SKO] Unexpected jump of 100.0% in value between 2021-12-31 (51.8038206) and 2022-12-31 (0.0).
+  - warning: [A@SKO] Unexpected jump of 235.4% in value between 2024-12-31 (12.31342) and 2025-12-31 (41.296594).
+  - warning: [A@TRK] Unexpected jump of 65.9% in value between 2018-12-31 (654.0880399999999) and 2019-12-31 (223.049967).
+  - warning: [A@TRK] Unexpected jump of 71.0% in value between 2019-12-31 (223.049967) and 2020-12-31 (64.591072).
+  - warning: [A@TRK] Unexpected jump of 2419.3% in value between 2021-12-31 (37.771804) and 2022-12-31 (951.6020099999998).
+  - warning: [A@TRK] Unexpected jump of 240.0% in value between 2022-12-31 (951.6020099999998) and 2023-12-31 (3235.4483360000004).
+  - warning: ... 764 more warnings not listed
+- **bns/QUASI_STATE_GVA_GDP_SHARE_BY_REGION** — fetch+validate+process: ok (downloaded=156, processed=156)
+  - warning: [QUASI_GVA_SHARE@AKM] Unexpected jump of 134.1% in value between 2021-12-31 (0.09100563184909775) and 2022-12-31 (0.21304694040066963).
+  - warning: [QUASI_GVA_SHARE@AKM] Unexpected jump of 65.2% in value between 2022-12-31 (0.21304694040066963) and 2023-12-31 (0.07408376220897243).
+  - warning: [QUASI_GVA_SHARE@AKM] Unexpected jump of 61.7% in value between 2023-12-31 (0.07408376220897243) and 2024-12-31 (0.11982143213140509).
+  - warning: [QUASI_GVA_SHARE@AKT] Unexpected jump of 480.0% in value between 2023-12-31 (0.14700357127915975) and 2024-12-31 (0.852679432200747).
+  - warning: [QUASI_GVA_SHARE@AKT] Unexpected jump of 86.1% in value between 2024-12-31 (0.852679432200747) and 2025-12-31 (0.11893452718729582).
+  - warning: [QUASI_GVA_SHARE@ALA] Unexpected jump of 59.3% in value between 2023-12-31 (1.5097967695815193) and 2024-12-31 (0.6149379884996908).
+  - warning: [QUASI_GVA_SHARE@ALA] Unexpected jump of 178.2% in value between 2024-12-31 (0.6149379884996908) and 2025-12-31 (1.71084645998197).
+  - warning: [QUASI_GVA_SHARE@ALM] Unexpected jump of 58.7% in value between 2021-12-31 (0.1469370583884097) and 2022-12-31 (0.060739711445685234).
+  - warning: [QUASI_GVA_SHARE@SHM] Unexpected jump of 56.2% in value between 2018-12-31 (0.41473108185262947) and 2019-12-31 (0.18157830307402523).
+  - warning: [QUASI_GVA_SHARE@SHM] Unexpected jump of 54.7% in value between 2019-12-31 (0.18157830307402523) and 2020-12-31 (0.0823163444978324).
+  - warning: [QUASI_GVA_SHARE@TRK] Unexpected jump of 342.8% in value between 2023-12-31 (0.23244075056198463) and 2024-12-31 (1.0291891379098226).
+  - warning: [QUASI_GVA_SHARE@TRK] Unexpected jump of 59.0% in value between 2024-12-31 (1.0291891379098226) and 2025-12-31 (0.421557297489225).
+  - warning: [QUASI_GVA_SHARE@ULT] Unexpected jump of 59.1% in value between 2022-12-31 (0.046679775442975614) and 2023-12-31 (0.019088260745222466).
+  - warning: [QUASI_GVA_SHARE@ULT] Unexpected jump of 417.7% in value between 2023-12-31 (0.019088260745222466) and 2024-12-31 (0.09882155889546505).
+  - warning: [QUASI_GVA_SHARE@ULT] Unexpected jump of 84.6% in value between 2024-12-31 (0.09882155889546505) and 2025-12-31 (0.015260675565588688).
+  - warning: [QUASI_GVA_SHARE@VKO] Unexpected jump of 335.0% in value between 2019-12-31 (0.17910958671144236) and 2020-12-31 (0.779208860458168).
+  - warning: [QUASI_GVA_SHARE@ZHM] Unexpected jump of 50.7% in value between 2020-12-31 (0.07206765374075916) and 2021-12-31 (0.10858118020231042).
+  - warning: [QUASI_GVA_SHARE@ZHM] Unexpected jump of 225.9% in value between 2023-12-31 (0.07031930305225884) and 2024-12-31 (0.22916931097282464).
+  - warning: [QUASI_GVA_SHARE@ZHM] Unexpected jump of 70.6% in value between 2024-12-31 (0.22916931097282464) and 2025-12-31 (0.06731289818247574).
+  - warning: [QUASI_GVA_SHARE@ZKO] Unexpected jump of 511.4% in value between 2023-12-31 (0.07952887649080287) and 2024-12-31 (0.48624510353780775).
+  - warning: [QUASI_GVA_SHARE@ZKO] Unexpected jump of 83.9% in value between 2024-12-31 (0.48624510353780775) and 2025-12-31 (0.0782644258283354).
+- **bns/QUASI_STATE_PRODUCTIVITY_LARGE_BY_SECTION** — fetch+validate+process: ok (downloaded=174, processed=174)
+  - warning: [A] Unexpected jump of 85.3% in value between 2020-12-31 (16150.714301216092) and 2021-12-31 (29919.640134567904).
+  - warning: [A] Unexpected jump of 94.9% in value between 2022-12-31 (40478.076947169815) and 2023-12-31 (2051.021036553525).
+  - warning: [B] Unexpected jump of 112.9% in value between 2021-12-31 (104460.39297086079) and 2022-12-31 (222442.58123129586).
+  - warning: [C] Unexpected jump of 108.2% in value between 2021-12-31 (12296.226469322342) and 2022-12-31 (25606.501644720494).
+  - warning: [E] Unexpected jump of 81.4% in value between 2018-12-31 (9252.04519835304) and 2019-12-31 (1720.4989408250995).
+  - warning: [E] Unexpected jump of 96.3% in value between 2020-12-31 (2304.7907332339073) and 2021-12-31 (4524.117930864197).
+  - warning: [E] Unexpected jump of 64.5% in value between 2022-12-31 (2897.250334102141) and 2023-12-31 (4765.121785370352).
+  - warning: [F] Unexpected jump of 443.0% in value between 2018-12-31 (5128.571959302326) and 2019-12-31 (27849.16143801653).
+  - warning: [F] Unexpected jump of 64.2% in value between 2023-12-31 (45748.3497844546) and 2024-12-31 (75102.64595958903).
+  - warning: [G] Unexpected jump of 67.3% in value between 2018-12-31 (41605.23922051282) and 2019-12-31 (13603.902631578947).
+  - warning: [G] Unexpected jump of 5662.3% in value between 2020-12-31 (10460.18152173913) and 2021-12-31 (602745.045128991).
+  - warning: [G] Unexpected jump of 99.1% in value between 2021-12-31 (602745.045128991) and 2022-12-31 (5701.6021163101595).
+  - warning: [G] Unexpected jump of 100.0% in value between 2022-12-31 (5701.6021163101595) and 2023-12-31 (0.0).
+  - warning: [GOODS] Unexpected jump of 51.3% in value between 2020-12-31 (36921.15418957748) and 2021-12-31 (55857.830218847004).
+  - warning: [I] Unexpected jump of 51.4% in value between 2018-12-31 (4076.8652062780275) and 2019-12-31 (6173.782914675768).
+  - warning: [I] Unexpected jump of 86.2% in value between 2021-12-31 (4763.38296581197) and 2022-12-31 (8868.415983739838).
+  - warning: [I] Unexpected jump of 57.7% in value between 2023-12-31 (12007.714823412698) and 2024-12-31 (18935.784279069765).
+  - warning: [IND] Unexpected jump of 51.1% in value between 2020-12-31 (37151.22913144121) and 2021-12-31 (56152.934343327455).
+  - warning: [J] Unexpected jump of 52.0% in value between 2020-12-31 (44206.82565705007) and 2021-12-31 (67194.96325492075).
+  - warning: [K] Unexpected jump of 87.6% in value between 2021-12-31 (161555.114) and 2022-12-31 (19994.603972359324).
+  - warning: [K] Unexpected jump of 239.4% in value between 2024-12-31 (33232.086244186044) and 2025-12-31 (112802.28223637649).
+  - warning: [M] Unexpected jump of 60.0% in value between 2023-12-31 (13598.822777697756) and 2024-12-31 (21751.63659665897).
+  - warning: [M] Unexpected jump of 108.6% in value between 2024-12-31 (21751.63659665897) and 2025-12-31 (45370.90631469107).
+  - warning: [O] Gap of 1096 days between 2019-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [O] Unexpected jump of 91.4% in value between 2019-12-31 (5033.42492178771) and 2022-12-31 (430.81893520518355).
+  - warning: [O] Unexpected jump of 100.0% in value between 2022-12-31 (430.81893520518355) and 2023-12-31 (0.0).
+  - warning: [P] Unexpected jump of 63.0% in value between 2019-12-31 (2445.2393185801056) and 2020-12-31 (904.5322124105412).
+  - warning: [P] Unexpected jump of 73.9% in value between 2020-12-31 (904.5322124105412) and 2021-12-31 (1573.3461820011487).
+  - warning: [R] Unexpected jump of 74.7% in value between 2021-12-31 (2277.742733310788) and 2022-12-31 (3980.252975898041).
+- **bns/QUASI_STATE_GVA_BY_SECTION_SMALL** — fetch+validate+process: ok (downloaded=192, processed=192)
+  - warning: [A] Unexpected jump of 73.4% in value between 2019-12-31 (2199.5827301519225) and 2020-12-31 (585.62166749).
+  - warning: [A] Unexpected jump of 142.3% in value between 2023-12-31 (669.401712) and 2024-12-31 (1621.932726).
+  - warning: [B] Unexpected jump of 75.2% in value between 2018-12-31 (100361.96289999998) and 2019-12-31 (24896.130716000003).
+  - warning: [B] Unexpected jump of 129.5% in value between 2023-12-31 (19061.608099) and 2024-12-31 (43740.605712000004).
+  - warning: [C] Unexpected jump of 75.5% in value between 2018-12-31 (130707.502544) and 2019-12-31 (229404.745912).
+  - warning: [C] Unexpected jump of 52.0% in value between 2023-12-31 (415392.883679) and 2024-12-31 (631270.1576650001).
+  - warning: [C] Unexpected jump of 52.8% in value between 2024-12-31 (631270.1576650001) and 2025-12-31 (964472.4462359999).
+  - warning: [D] Unexpected jump of 87.4% in value between 2020-12-31 (9627.098346) and 2021-12-31 (18044.832632).
+  - warning: [D] Unexpected jump of 57.2% in value between 2021-12-31 (18044.832632) and 2022-12-31 (7727.884683).
+  - warning: [D] Unexpected jump of 77.6% in value between 2023-12-31 (10584.520095999998) and 2024-12-31 (18797.500818).
+  - warning: [D] Unexpected jump of 51.4% in value between 2024-12-31 (18797.500818) and 2025-12-31 (28450.993489999997).
+  - warning: [F] Unexpected jump of 86.0% in value between 2018-12-31 (19822.012837299993) and 2019-12-31 (2767.8720099999996).
+  - warning: [F] Unexpected jump of 87.1% in value between 2019-12-31 (2767.8720099999996) and 2020-12-31 (356.54482).
+  - warning: [F] Unexpected jump of 2238.1% in value between 2020-12-31 (356.54482) and 2021-12-31 (8336.306591999999).
+  - warning: [F] Unexpected jump of 95.3% in value between 2021-12-31 (8336.306591999999) and 2022-12-31 (395.44362000000007).
+  - warning: [F] Unexpected jump of 425.5% in value between 2022-12-31 (395.44362000000007) and 2023-12-31 (2078.117536).
+  - warning: [F] Unexpected jump of 91.8% in value between 2024-12-31 (1425.460688) and 2025-12-31 (2733.6437789999995).
+  - warning: [G] Unexpected jump of 94.5% in value between 2022-12-31 (101950.18422400001) and 2023-12-31 (198311.33217650003).
+  - warning: [G] Unexpected jump of 599.8% in value between 2024-12-31 (142378.86167399999) and 2025-12-31 (996413.1595800002).
+  - warning: [GOODS] Unexpected jump of 54.2% in value between 2023-12-31 (459596.65945000004) and 2024-12-31 (708752.528435).
+  - warning: [GVA] Unexpected jump of 100.4% in value between 2024-12-31 (1337562.3401952) and 2025-12-31 (2680993.4473962).
+  - warning: [H] Unexpected jump of 350.6% in value between 2021-12-31 (10458.446464) and 2022-12-31 (47121.8481406).
+  - warning: [H] Unexpected jump of 92.5% in value between 2022-12-31 (47121.8481406) and 2023-12-31 (3511.185648).
+  - warning: [H] Unexpected jump of 561.3% in value between 2023-12-31 (3511.185648) and 2024-12-31 (23218.209832).
+  - warning: [H] Unexpected jump of 52.6% in value between 2024-12-31 (23218.209832) and 2025-12-31 (35429.20966760001).
+  - warning: [I] Unexpected jump of 102.0% in value between 2018-12-31 (20.583108) and 2019-12-31 (41.573633).
+  - warning: [I] Unexpected jump of 100.0% in value between 2019-12-31 (41.573633) and 2020-12-31 (0.0).
+  - warning: [I] Unexpected jump of 86.0% in value between 2021-12-31 (91.440873) and 2022-12-31 (12.78624).
+  - warning: [I] Unexpected jump of 295.2% in value between 2022-12-31 (12.78624) and 2023-12-31 (50.535951999999995).
+  - warning: [IND] Unexpected jump of 54.5% in value between 2023-12-31 (456849.14020200004) and 2024-12-31 (705705.135021).
+  - warning: ... 30 more warnings not listed
+- **bns/QUASI_STATE_GVA_BY_SECTION_MEDIUM** — fetch+validate+process: ok (downloaded=192, processed=192)
+  - warning: [A] Unexpected jump of 190.5% in value between 2022-12-31 (1452.070792) and 2023-12-31 (4218.462753000001).
+  - warning: [A] Unexpected jump of 94.4% in value between 2024-12-31 (4051.190308) and 2025-12-31 (7874.33191).
+  - warning: [B] Unexpected jump of 80.4% in value between 2018-12-31 (6624.621665999999) and 2019-12-31 (11947.687380000001).
+  - warning: [B] Unexpected jump of 80.0% in value between 2019-12-31 (11947.687380000001) and 2020-12-31 (2393.15165).
+  - warning: [B] Unexpected jump of 182.2% in value between 2021-12-31 (2039.6992240000002) and 2022-12-31 (5756.821302000004).
+  - warning: [B] Unexpected jump of 465.0% in value between 2022-12-31 (5756.821302000004) and 2023-12-31 (32526.434880000004).
+  - warning: [C] Unexpected jump of 178.3% in value between 2018-12-31 (7059.811471000001) and 2019-12-31 (19645.837462).
+  - warning: [C] Unexpected jump of 345.0% in value between 2022-12-31 (22771.663402000002) and 2023-12-31 (101335.874513).
+  - warning: [C] Unexpected jump of 63.7% in value between 2023-12-31 (101335.874513) and 2024-12-31 (165907.302737).
+  - warning: [C] Unexpected jump of 53.4% in value between 2024-12-31 (165907.302737) and 2025-12-31 (254448.095183).
+  - warning: [D] Unexpected jump of 55.0% in value between 2019-12-31 (16436.831072999998) and 2020-12-31 (25471.867412).
+  - warning: [D] Unexpected jump of 55.8% in value between 2020-12-31 (25471.867412) and 2021-12-31 (39686.483669).
+  - warning: [D] Unexpected jump of 58.2% in value between 2023-12-31 (28385.072376) and 2024-12-31 (44912.208936).
+  - warning: [F] Unexpected jump of 8500.1% in value between 2018-12-31 (132.99271599999997) and 2019-12-31 (11437.531083999998).
+  - warning: [F] Unexpected jump of 97.1% in value between 2019-12-31 (11437.531083999998) and 2020-12-31 (331.94361).
+  - warning: [F] Unexpected jump of 498.6% in value between 2020-12-31 (331.94361) and 2021-12-31 (1986.9102919999998).
+  - warning: [F] Unexpected jump of 96.1% in value between 2021-12-31 (1986.9102919999998) and 2022-12-31 (77.13585).
+  - warning: [F] Unexpected jump of 881.7% in value between 2023-12-31 (99.392608) and 2024-12-31 (975.726902).
+  - warning: [G] Unexpected jump of 156.7% in value between 2019-12-31 (273105.75474) and 2020-12-31 (701040.5099100001).
+  - warning: [G] Unexpected jump of 51.0% in value between 2020-12-31 (701040.5099100001) and 2021-12-31 (343576.48874400003).
+  - warning: [G] Unexpected jump of 135.1% in value between 2021-12-31 (343576.48874400003) and 2022-12-31 (807730.994265).
+  - warning: [G] Unexpected jump of 53.1% in value between 2023-12-31 (1039397.8411900001) and 2024-12-31 (1591136.3165145).
+  - warning: [GOODS] Unexpected jump of 107.5% in value between 2022-12-31 (90741.07145500001) and 2023-12-31 (188251.062129).
+  - warning: [GVA] Unexpected jump of 55.9% in value between 2019-12-31 (814343.7638251396) and 2020-12-31 (1269445.7739686077).
+  - warning: [GVA] Unexpected jump of 52.4% in value between 2021-12-31 (974629.5945258247) and 2022-12-31 (1485608.9550443003).
+  - warning: [I] Unexpected jump of 436.2% in value between 2020-12-31 (147.252644) and 2021-12-31 (789.5943699999999).
+  - warning: [I] Unexpected jump of 61.0% in value between 2021-12-31 (789.5943699999999) and 2022-12-31 (1271.100341).
+  - warning: [I] Unexpected jump of 90.1% in value between 2022-12-31 (1271.100341) and 2023-12-31 (2415.8612540000004).
+  - warning: [I] Unexpected jump of 114.5% in value between 2024-12-31 (2752.880255000001) and 2025-12-31 (5905.624097999999).
+  - warning: [IND] Unexpected jump of 106.2% in value between 2022-12-31 (89211.86481300001) and 2023-12-31 (183933.206768).
+  - warning: ... 18 more warnings not listed
+- **bns/QUASI_STATE_GVA_BY_SECTION_LARGE** — fetch+validate+process: ok (downloaded=192, processed=192)
+  - warning: [A] Unexpected jump of 95.1% in value between 2022-12-31 (32180.071173) and 2023-12-31 (1571.082114).
+  - warning: [B] Unexpected jump of 50.9% in value between 2020-12-31 (3335405.2331290003) and 2021-12-31 (5032651.370623999).
+  - warning: [C] Unexpected jump of 115.2% in value between 2019-12-31 (307804.63475100003) and 2020-12-31 (662275.8205478999).
+  - warning: [E] Unexpected jump of 55.0% in value between 2019-12-31 (30898.557083000007) and 2020-12-31 (47907.380181).
+  - warning: [E] Unexpected jump of 51.1% in value between 2022-12-31 (61552.08334799999) and 2023-12-31 (93024.707494).
+  - warning: [F] Unexpected jump of 80.4% in value between 2018-12-31 (154341.93242300002) and 2019-12-31 (30327.736806).
+  - warning: [F] Unexpected jump of 56.6% in value between 2023-12-31 (70040.72352) and 2024-12-31 (109649.863101).
+  - warning: [G] Unexpected jump of 62.8% in value between 2018-12-31 (24339.064943999998) and 2019-12-31 (9046.59525).
+  - warning: [G] Unexpected jump of 4804.2% in value between 2020-12-31 (9623.367) and 2021-12-31 (471949.370336).
+  - warning: [G] Unexpected jump of 99.1% in value between 2021-12-31 (471949.370336) and 2022-12-31 (4264.798382999999).
+  - warning: [G] Unexpected jump of 100.0% in value between 2022-12-31 (4264.798382999999) and 2023-12-31 (0.0).
+  - warning: [I] Unexpected jump of 95.7% in value between 2021-12-31 (2229.2632280000003) and 2022-12-31 (4363.260664).
+  - warning: [I] Unexpected jump of 182.5% in value between 2023-12-31 (6051.888271) and 2024-12-31 (17099.013203999995).
+  - warning: [K] Unexpected jump of 62.3% in value between 2022-12-31 (60763.60147199998) and 2023-12-31 (98624.51648399999).
+  - warning: [K] Unexpected jump of 54.9% in value between 2024-12-31 (102886.539012) and 2025-12-31 (159389.6248).
+  - warning: [M] Unexpected jump of 62.9% in value between 2021-12-31 (47328.732374499996) and 2022-12-31 (77109.764305).
+  - warning: [M] Unexpected jump of 129.7% in value between 2024-12-31 (141276.8796953) and 2025-12-31 (324583.4637752999).
+  - warning: [N] Unexpected jump of 61.2% in value between 2020-12-31 (79087.8661523) and 2021-12-31 (30670.505415).
+  - warning: [N] Unexpected jump of 81.9% in value between 2022-12-31 (40592.84886690001) and 2023-12-31 (73849.67328909998).
+  - warning: [O] Unexpected jump of 63.4% in value between 2018-12-31 (2465.0099450000002) and 2019-12-31 (900.9830610000001).
+  - warning: [O] Unexpected jump of 100.0% in value between 2019-12-31 (900.9830610000001) and 2020-12-31 (0.0).
+  - warning: [O] Unexpected jump of 100.0% in value between 2022-12-31 (598.4075009999999) and 2023-12-31 (0.0).
+  - warning: [P] Unexpected jump of 56.9% in value between 2019-12-31 (108196.94936853253) and 2020-12-31 (46600.59505117867).
+  - warning: [P] Unexpected jump of 81.6% in value between 2020-12-31 (46600.59505117867) and 2021-12-31 (84619.27770656778).
+  - warning: [R] Unexpected jump of 89.6% in value between 2021-12-31 (21326.9553402) and 2022-12-31 (40443.35048809999).
+- **bns/GDP_COMPONENTS_BY_SECTOR_OUTPUT** — fetch+validate+process: ok (downloaded=1296, processed=1296)
+  - warning: [A_S11] Unexpected jump of 89.1% in value between 2015-12-31 (1003079.2) and 2016-12-31 (1896971.3).
+  - warning: [A_S11] Unexpected jump of 56.5% in value between 2022-12-31 (7174434.4) and 2023-12-31 (3119301.7).
+  - warning: [C_S14] Unexpected jump of 74.8% in value between 2012-12-31 (146098.0) and 2013-12-31 (255325.6).
+  - warning: [C_S14] Unexpected jump of 91.3% in value between 2022-12-31 (487493.5) and 2023-12-31 (932513.2).
+  - warning: [D_S13] Unexpected jump of 151.6% in value between 2021-12-31 (3293.3) and 2022-12-31 (8286.0).
+  - warning: [D_S14] Unexpected jump of 66.5% in value between 2024-12-31 (1138.0) and 2025-12-31 (381.3).
+  - warning: [E_S1] Unexpected jump of 69.3% in value between 2020-12-31 (403825.2) and 2021-12-31 (683840.8).
+  - warning: [E_S11] Unexpected jump of 70.5% in value between 2020-12-31 (397609.3) and 2021-12-31 (677923.2).
+  - warning: [E_S13] Unexpected jump of 79.2% in value between 2019-12-31 (3469.3) and 2020-12-31 (6215.9).
+  - warning: [E_S14] Unexpected jump of 100.0% in value between 2021-12-31 (81.5) and 2022-12-31 (0.0).
+  - warning: [F_S1] Unexpected jump of 69.8% in value between 2010-12-31 (2156740.8) and 2011-12-31 (3662434.6).
+  - warning: [F_S11] Unexpected jump of 71.8% in value between 2010-12-31 (1983455.7) and 2011-12-31 (3408011.6).
+  - warning: [F_S13] Unexpected jump of 103.5% in value between 2017-12-31 (17435.8) and 2018-12-31 (35484.0).
+  - warning: [F_S13] Unexpected jump of 61.7% in value between 2019-12-31 (24890.8) and 2020-12-31 (40260.7).
+  - warning: [F_S14] Unexpected jump of 54.5% in value between 2014-12-31 (291343.9) and 2015-12-31 (450027.6).
+  - warning: [GVA_S12] Unexpected jump of 59.3% in value between 2021-12-31 (4132342.5) and 2022-12-31 (6580770.6).
+  - warning: [GVA_S15] Unexpected jump of 76.3% in value between 2011-12-31 (179597.8) and 2012-12-31 (316613.1).
+  - warning: [G_S11] Unexpected jump of 56.1% in value between 2010-12-31 (3232208.3) and 2011-12-31 (5046894.3).
+  - warning: [G_S14] Unexpected jump of 72.2% in value between 2012-12-31 (1514995.6) and 2013-12-31 (421520.6).
+  - warning: [G_S14] Unexpected jump of 64.7% in value between 2019-12-31 (384150.0) and 2020-12-31 (135471.6).
+  - warning: [G_S14] Unexpected jump of 2009.9% in value between 2022-12-31 (177743.4) and 2023-12-31 (3750196.5).
+  - warning: [H_S13] Unexpected jump of 112.5% in value between 2013-12-31 (146333.8) and 2014-12-31 (310971.0).
+  - warning: [H_S14] Unexpected jump of 53.6% in value between 2022-12-31 (2786441.6) and 2023-12-31 (1293337.1).
+  - warning: [IND_S13] Unexpected jump of 63.8% in value between 2019-12-31 (5987.3) and 2020-12-31 (9805.5).
+  - warning: [IND_S14] Unexpected jump of 74.8% in value between 2012-12-31 (146098.0) and 2013-12-31 (255325.6).
+  - warning: [IND_S14] Unexpected jump of 93.8% in value between 2022-12-31 (487493.5) and 2023-12-31 (944830.7).
+  - warning: [I_S14] Unexpected jump of 50.5% in value between 2015-12-31 (41477.7) and 2016-12-31 (20513.9).
+  - warning: [I_S14] Unexpected jump of 174.8% in value between 2016-12-31 (20513.9) and 2017-12-31 (56378.3).
+  - warning: [I_S14] Unexpected jump of 71.8% in value between 2019-12-31 (70002.5) and 2020-12-31 (19711.2).
+  - warning: [I_S14] Unexpected jump of 1677.0% in value between 2022-12-31 (30114.3) and 2023-12-31 (535125.8).
+  - warning: ... 87 more warnings not listed
+- **bns/GDP_COMPONENTS_BY_SECTOR_INTERMEDIATE_CONSUMPTION** — fetch+validate+process: ok (downloaded=1296, processed=1296)
+  - warning: [A_S11] Unexpected jump of 95.3% in value between 2015-12-31 (482208.1) and 2016-12-31 (941758.7).
+  - warning: [A_S11] Unexpected jump of 59.2% in value between 2022-12-31 (3640614.4) and 2023-12-31 (1485585.3).
+  - warning: [B_S1] Unexpected jump of 60.6% in value between 2010-12-31 (3583250.2) and 2011-12-31 (5753646.7).
+  - warning: [B_S1] Unexpected jump of 50.0% in value between 2016-12-31 (4990951.0) and 2017-12-31 (7488166.2).
+  - warning: [B_S1] Unexpected jump of 50.8% in value between 2020-12-31 (6326739.1) and 2021-12-31 (9537867.4).
+  - warning: [B_S11] Unexpected jump of 60.6% in value between 2010-12-31 (3583250.2) and 2011-12-31 (5753646.7).
+  - warning: [B_S11] Unexpected jump of 50.0% in value between 2016-12-31 (4990951.0) and 2017-12-31 (7488166.2).
+  - warning: [B_S11] Unexpected jump of 50.8% in value between 2020-12-31 (6326739.1) and 2021-12-31 (9537867.4).
+  - warning: [C_S14] Unexpected jump of 74.7% in value between 2012-12-31 (43829.4) and 2013-12-31 (76580.9).
+  - warning: [C_S14] Unexpected jump of 52.8% in value between 2020-12-31 (90423.6) and 2021-12-31 (138154.7).
+  - warning: [C_S14] Unexpected jump of 148.4% in value between 2022-12-31 (130469.1) and 2023-12-31 (324132.9).
+  - warning: [D_S13] Unexpected jump of 151.1% in value between 2021-12-31 (3074.1) and 2022-12-31 (7720.4).
+  - warning: [D_S14] Unexpected jump of 68.8% in value between 2024-12-31 (534.1) and 2025-12-31 (166.7).
+  - warning: [E_S1] Unexpected jump of 66.4% in value between 2016-12-31 (147305.6) and 2017-12-31 (245067.7).
+  - warning: [E_S1] Unexpected jump of 97.2% in value between 2020-12-31 (235232.0) and 2021-12-31 (463934.1).
+  - warning: [E_S11] Unexpected jump of 64.1% in value between 2016-12-31 (147305.6) and 2017-12-31 (241685.1).
+  - warning: [E_S11] Unexpected jump of 99.9% in value between 2020-12-31 (229349.9) and 2021-12-31 (458470.1).
+  - warning: [E_S13] Unexpected jump of 81.7% in value between 2019-12-31 (3237.9) and 2020-12-31 (5882.1).
+  - warning: [E_S14] Unexpected jump of 100.0% in value between 2021-12-31 (16.3) and 2022-12-31 (0.0).
+  - warning: [F_S1] Unexpected jump of 287.6% in value between 2010-12-31 (476238.3) and 2011-12-31 (1845823.1).
+  - warning: [F_S1] Unexpected jump of 97.9% in value between 2016-12-31 (1628023.1) and 2017-12-31 (3222018.8).
+  - warning: [F_S1] Unexpected jump of 63.5% in value between 2020-12-31 (2297236.6) and 2021-12-31 (3755354.8).
+  - warning: [F_S11] Unexpected jump of 292.9% in value between 2010-12-31 (438635.4) and 2011-12-31 (1723456.7).
+  - warning: [F_S11] Unexpected jump of 98.4% in value between 2016-12-31 (1472033.8) and 2017-12-31 (2919996.4).
+  - warning: [F_S11] Unexpected jump of 67.0% in value between 2020-12-31 (2031321.9) and 2021-12-31 (3391574.7).
+  - warning: [F_S11] Unexpected jump of 51.0% in value between 2021-12-31 (3391574.7) and 2022-12-31 (5121054.7).
+  - warning: [F_S13] Unexpected jump of 209.5% in value between 2010-12-31 (2243.2) and 2011-12-31 (6942.5).
+  - warning: [F_S13] Unexpected jump of 52.0% in value between 2011-12-31 (6942.5) and 2012-12-31 (10552.2).
+  - warning: [F_S13] Unexpected jump of 128.6% in value between 2016-12-31 (6889.2) and 2017-12-31 (15748.4).
+  - warning: [F_S13] Unexpected jump of 111.5% in value between 2017-12-31 (15748.4) and 2018-12-31 (33315.2).
+  - warning: ... 224 more warnings not listed
+- **bns/GDP_COMPONENTS_BY_SECTOR_GVA** — fetch+validate+process: ok (downloaded=1345, processed=1345)
+  - warning: [A_S11] Unexpected jump of 83.4% in value between 2015-12-31 (520871.1) and 2016-12-31 (955212.6).
+  - warning: [A_S11] Unexpected jump of 50.6% in value between 2021-12-31 (2345955.2) and 2022-12-31 (3533820.0).
+  - warning: [A_S11] Unexpected jump of 53.8% in value between 2022-12-31 (3533820.0) and 2023-12-31 (1633716.4).
+  - warning: [A_S13] Unexpected jump of 59.2% in value between 2016-12-31 (89381.4) and 2017-12-31 (36490.8).
+  - warning: [A_S14] Unexpected jump of 54.0% in value between 2010-12-31 (608619.6) and 2011-12-31 (937252.6).
+  - warning: [A_S14] Unexpected jump of 58.9% in value between 2022-12-31 (1846828.7) and 2023-12-31 (2934954.9).
+  - warning: [C_S14] Unexpected jump of 74.8% in value between 2012-12-31 (102268.6) and 2013-12-31 (178744.7).
+  - warning: [C_S14] Unexpected jump of 70.4% in value between 2022-12-31 (357024.4) and 2023-12-31 (608380.3).
+  - warning: [D_S13] Unexpected jump of 158.0% in value between 2021-12-31 (219.2) and 2022-12-31 (565.6).
+  - warning: [D_S14] Unexpected jump of 64.5% in value between 2024-12-31 (603.9) and 2025-12-31 (214.6).
+  - warning: [E_S14] Unexpected jump of 100.0% in value between 2021-12-31 (65.2) and 2022-12-31 (0.0).
+  - warning: [F_S13] Unexpected jump of 87.3% in value between 2016-12-31 (13244.9) and 2017-12-31 (1687.4).
+  - warning: [F_S13] Unexpected jump of 50.6% in value between 2019-12-31 (2087.0) and 2020-12-31 (3142.9).
+  - warning: [F_S14] Unexpected jump of 70.1% in value between 2014-12-31 (147447.4) and 2015-12-31 (250742.2).
+  - warning: [GVA_S12] Unexpected jump of 50.5% in value between 2012-12-31 (655348.0) and 2013-12-31 (986543.5).
+  - warning: [GVA_S14] Unexpected jump of 59.0% in value between 2022-12-31 (11928952.3) and 2023-12-31 (18966308.7).
+  - warning: [GVA_S15] Unexpected jump of 63.3% in value between 2021-12-31 (286618.5) and 2022-12-31 (105325.7).
+  - warning: [G_S14] Unexpected jump of 68.0% in value between 2012-12-31 (998018.6) and 2013-12-31 (318964.5).
+  - warning: [G_S14] Unexpected jump of 62.9% in value between 2019-12-31 (261858.3) and 2020-12-31 (97048.9).
+  - warning: [G_S14] Unexpected jump of 1970.1% in value between 2022-12-31 (129392.9) and 2023-12-31 (2678570.0).
+  - warning: [G_S14] Unexpected jump of 54.7% in value between 2023-12-31 (2678570.0) and 2024-12-31 (4144420.5).
+  - warning: [H_S13] Unexpected jump of 58.9% in value between 2010-12-31 (45469.2) and 2011-12-31 (72264.4).
+  - warning: [H_S13] Unexpected jump of 108.9% in value between 2013-12-31 (94323.6) and 2014-12-31 (197007.9).
+  - warning: [H_S13] Unexpected jump of 75.8% in value between 2016-12-31 (243177.2) and 2017-12-31 (58903.0).
+  - warning: [IND_S14] Unexpected jump of 74.8% in value between 2012-12-31 (102268.6) and 2013-12-31 (178744.7).
+  - warning: [IND_S14] Unexpected jump of 72.2% in value between 2022-12-31 (357024.4) and 2023-12-31 (614862.4).
+  - warning: [I_S14] Unexpected jump of 51.1% in value between 2015-12-31 (31362.1) and 2016-12-31 (15333.5).
+  - warning: [I_S14] Unexpected jump of 168.4% in value between 2016-12-31 (15333.5) and 2017-12-31 (41156.1).
+  - warning: [I_S14] Unexpected jump of 78.2% in value between 2019-12-31 (49295.6) and 2020-12-31 (10758.9).
+  - warning: [I_S14] Unexpected jump of 1462.2% in value between 2022-12-31 (18864.7) and 2023-12-31 (294711.5).
+  - warning: ... 81 more warnings not listed
+- **bns/GDP_COMPONENTS_BY_SECTOR_COMPENSATION** — fetch+validate+process: ok (downloaded=1296, processed=1296)
+  - warning: [A_S11] Unexpected jump of 59.1% in value between 2016-12-31 (203776.6) and 2017-12-31 (324132.0).
+  - warning: [A_S13] Unexpected jump of 179.9% in value between 2012-12-31 (10457.8) and 2013-12-31 (29270.1).
+  - warning: [A_S14] Unexpected jump of 58.8% in value between 2022-12-31 (364394.9) and 2023-12-31 (578775.0).
+  - warning: [C_S14] Unexpected jump of 246.6% in value between 2022-12-31 (16879.4) and 2023-12-31 (58508.0).
+  - warning: [D_S13] Unexpected jump of 151.4% in value between 2021-12-31 (135.7) and 2022-12-31 (341.2).
+  - warning: [D_S14] Unexpected jump of 64.4% in value between 2024-12-31 (247.3) and 2025-12-31 (88.0).
+  - warning: [E_S14] Unexpected jump of 100.0% in value between 2021-12-31 (22.1) and 2022-12-31 (0.0).
+  - warning: [F_S13] Unexpected jump of 81.7% in value between 2011-12-31 (3205.3) and 2012-12-31 (5823.6).
+  - warning: [F_S13] Unexpected jump of 75.9% in value between 2016-12-31 (5166.6) and 2017-12-31 (1245.6).
+  - warning: [GVA_S14] Unexpected jump of 242.7% in value between 2022-12-31 (1252204.8) and 2023-12-31 (4290875.8).
+  - warning: [GVA_S15] Unexpected jump of 69.4% in value between 2021-12-31 (215050.7) and 2022-12-31 (65756.9).
+  - warning: [G_S14] Unexpected jump of 62.8% in value between 2019-12-31 (213199.0) and 2020-12-31 (79213.3).
+  - warning: [G_S14] Unexpected jump of 1232.8% in value between 2022-12-31 (102123.3) and 2023-12-31 (1361089.5).
+  - warning: [G_S14] Unexpected jump of 55.2% in value between 2023-12-31 (1361089.5) and 2024-12-31 (2112396.3).
+  - warning: [H_S13] Unexpected jump of 62.0% in value between 2010-12-31 (14110.4) and 2011-12-31 (22863.0).
+  - warning: [H_S13] Unexpected jump of 79.0% in value between 2012-12-31 (19945.0) and 2013-12-31 (4183.3).
+  - warning: [H_S13] Unexpected jump of 77.2% in value between 2013-12-31 (4183.3) and 2014-12-31 (952.9).
+  - warning: [H_S13] Unexpected jump of 123.4% in value between 2015-12-31 (1005.5) and 2016-12-31 (2246.6).
+  - warning: [H_S13] Unexpected jump of 81.7% in value between 2016-12-31 (2246.6) and 2017-12-31 (410.3).
+  - warning: [H_S14] Unexpected jump of 55.0% in value between 2012-12-31 (244183.3) and 2013-12-31 (109840.1).
+  - warning: [H_S14] Unexpected jump of 62.6% in value between 2017-12-31 (140226.3) and 2018-12-31 (227998.2).
+  - warning: [H_S14] Unexpected jump of 86.7% in value between 2022-12-31 (134721.0) and 2023-12-31 (251549.2).
+  - warning: [IND_S14] Unexpected jump of 264.3% in value between 2022-12-31 (16879.4) and 2023-12-31 (61492.2).
+  - warning: [I_S14] Unexpected jump of 54.5% in value between 2010-12-31 (15262.3) and 2011-12-31 (6944.5).
+  - warning: [I_S14] Unexpected jump of 115.2% in value between 2012-12-31 (6147.2) and 2013-12-31 (13230.5).
+  - warning: [I_S14] Unexpected jump of 61.7% in value between 2016-12-31 (12548.5) and 2017-12-31 (20293.0).
+  - warning: [I_S14] Unexpected jump of 78.0% in value between 2019-12-31 (23798.2) and 2020-12-31 (5240.5).
+  - warning: [I_S14] Unexpected jump of 876.4% in value between 2022-12-31 (9290.8) and 2023-12-31 (90715.1).
+  - warning: [J_S13] Unexpected jump of 71.0% in value between 2010-12-31 (4484.1) and 2011-12-31 (1301.5).
+  - warning: [J_S13] Unexpected jump of 248.4% in value between 2013-12-31 (1259.2) and 2014-12-31 (4387.3).
+  - warning: ... 84 more warnings not listed
+- **bns/GDP_COMPONENTS_BY_SECTOR_OTHER_TAXES** — fetch+validate+process: ok (downloaded=1296, processed=1296)
+  - warning: [A_S1] Unexpected jump of 58.4% in value between 2019-12-31 (2669.1) and 2020-12-31 (4228.1).
+  - warning: [A_S1] Unexpected jump of 203.9% in value between 2020-12-31 (4228.1) and 2021-12-31 (12850.0).
+  - warning: [A_S1] Unexpected jump of 2142.3% in value between 2022-12-31 (14131.1) and 2023-12-31 (-288593.2).
+  - warning: [A_S11] Unexpected jump of 146.6% in value between 2015-12-31 (495.6) and 2016-12-31 (1222.2).
+  - warning: [A_S11] Unexpected jump of 55.3% in value between 2019-12-31 (1706.0) and 2020-12-31 (2648.6).
+  - warning: [A_S11] Unexpected jump of 145.5% in value between 2020-12-31 (2648.6) and 2021-12-31 (6501.9).
+  - warning: [A_S11] Unexpected jump of 1369.9% in value between 2022-12-31 (8253.5) and 2023-12-31 (-104812.9).
+  - warning: [A_S13] Unexpected jump of 80.9% in value between 2016-12-31 (93.2) and 2017-12-31 (17.8).
+  - warning: [A_S13] Unexpected jump of 6209.8% in value between 2020-12-31 (20.4) and 2021-12-31 (1287.2).
+  - warning: [A_S14] Unexpected jump of 61.6% in value between 2012-12-31 (726.2) and 2013-12-31 (1173.9).
+  - warning: [A_S14] Unexpected jump of 64.9% in value between 2019-12-31 (945.3) and 2020-12-31 (1559.1).
+  - warning: [A_S14] Unexpected jump of 224.6% in value between 2020-12-31 (1559.1) and 2021-12-31 (5060.9).
+  - warning: [A_S14] Unexpected jump of 4360.7% in value between 2022-12-31 (4313.4) and 2023-12-31 (-183780.3).
+  - warning: [B_S1] Unexpected jump of 83.1% in value between 2019-12-31 (395877.9) and 2020-12-31 (725031.2).
+  - warning: [B_S1] Unexpected jump of 63.2% in value between 2020-12-31 (725031.2) and 2021-12-31 (266637.8).
+  - warning: [B_S11] Unexpected jump of 83.1% in value between 2019-12-31 (395877.9) and 2020-12-31 (725031.2).
+  - warning: [B_S11] Unexpected jump of 63.2% in value between 2020-12-31 (725031.2) and 2021-12-31 (266637.8).
+  - warning: [C_S1] Unexpected jump of 87.5% in value between 2019-12-31 (96372.2) and 2020-12-31 (180676.5).
+  - warning: [C_S1] Unexpected jump of 66.5% in value between 2022-12-31 (164323.1) and 2023-12-31 (55103.9).
+  - warning: [C_S1] Unexpected jump of 66.1% in value between 2023-12-31 (55103.9) and 2024-12-31 (91520.9).
+  - warning: [C_S11] Unexpected jump of 87.8% in value between 2019-12-31 (94974.8) and 2020-12-31 (178396.8).
+  - warning: [C_S11] Unexpected jump of 66.8% in value between 2022-12-31 (162243.3) and 2023-12-31 (53892.6).
+  - warning: [C_S11] Unexpected jump of 64.4% in value between 2023-12-31 (53892.6) and 2024-12-31 (88583.5).
+  - warning: [C_S14] Unexpected jump of 147.2% in value between 2010-12-31 (291.1) and 2011-12-31 (719.6).
+  - warning: [C_S14] Unexpected jump of 63.1% in value between 2019-12-31 (1397.4) and 2020-12-31 (2279.7).
+  - warning: [C_S14] Unexpected jump of 142.5% in value between 2023-12-31 (1211.3) and 2024-12-31 (2937.4).
+  - warning: [D_S1] Unexpected jump of 83.2% in value between 2019-12-31 (18840.1) and 2020-12-31 (34506.4).
+  - warning: [D_S1] Unexpected jump of 87.8% in value between 2020-12-31 (34506.4) and 2021-12-31 (64794.8).
+  - warning: [D_S11] Unexpected jump of 83.2% in value between 2019-12-31 (18836.9) and 2020-12-31 (34500.3).
+  - warning: [D_S11] Unexpected jump of 87.8% in value between 2020-12-31 (34500.3) and 2021-12-31 (64788.7).
+  - warning: ... 233 more warnings not listed
+- **bns/GDP_COMPONENTS_BY_SECTOR_CFC** — fetch+validate+process: ok (downloaded=1293, processed=1293)
+  - warning: [A_S1] Unexpected jump of 56.4% in value between 2010-12-31 (110074.9) and 2011-12-31 (172115.1).
+  - warning: [A_S11] Unexpected jump of 95.9% in value between 2010-12-31 (30604.3) and 2011-12-31 (59952.4).
+  - warning: [A_S11] Unexpected jump of 57.3% in value between 2022-12-31 (402765.4) and 2023-12-31 (171971.8).
+  - warning: [A_S13] Unexpected jump of 74.4% in value between 2010-12-31 (25891.6) and 2011-12-31 (6620.3).
+  - warning: [A_S13] Unexpected jump of 78.8% in value between 2012-12-31 (6657.4) and 2013-12-31 (11904.9).
+  - warning: [A_S14] Unexpected jump of 97.0% in value between 2010-12-31 (53579.0) and 2011-12-31 (105542.4).
+  - warning: [A_S14] Unexpected jump of 74.6% in value between 2022-12-31 (192947.2) and 2023-12-31 (336885.5).
+  - warning: [C_S14] Unexpected jump of 65.1% in value between 2022-12-31 (24582.3) and 2023-12-31 (40591.4).
+  - warning: [D_S13] Unexpected jump of 170.8% in value between 2021-12-31 (77.4) and 2022-12-31 (209.6).
+  - warning: [D_S14] Unexpected jump of 64.5% in value between 2024-12-31 (164.1) and 2025-12-31 (58.3).
+  - warning: [E_S1] Unexpected jump of 67.0% in value between 2015-12-31 (12503.2) and 2016-12-31 (20878.8).
+  - warning: [E_S11] Unexpected jump of 67.0% in value between 2015-12-31 (12503.2) and 2016-12-31 (20878.8).
+  - warning: [E_S13] Unexpected jump of 74.0% in value between 2019-12-31 (82.8) and 2020-12-31 (144.1).
+  - warning: [E_S14] Unexpected jump of 100.0% in value between 2021-12-31 (9.3) and 2022-12-31 (0.0).
+  - warning: [F_S1] Unexpected jump of 67.1% in value between 2015-12-31 (318122.1) and 2016-12-31 (531438.1).
+  - warning: [F_S11] Unexpected jump of 65.4% in value between 2015-12-31 (283070.4) and 2016-12-31 (468316.3).
+  - warning: [F_S13] Unexpected jump of 84.2% in value between 2012-12-31 (1175.8) and 2013-12-31 (2165.6).
+  - warning: [F_S13] Unexpected jump of 81.9% in value between 2016-12-31 (2410.4) and 2017-12-31 (435.4).
+  - warning: [F_S13] Unexpected jump of 104.7% in value between 2017-12-31 (435.4) and 2018-12-31 (891.4).
+  - warning: [F_S13] Unexpected jump of 60.7% in value between 2019-12-31 (623.2) and 2020-12-31 (1001.7).
+  - warning: [F_S14] Unexpected jump of 63.5% in value between 2012-12-31 (13197.0) and 2013-12-31 (21575.4).
+  - warning: [F_S14] Unexpected jump of 87.1% in value between 2015-12-31 (32451.7) and 2016-12-31 (60711.4).
+  - warning: [GVA_S12] Unexpected jump of 84.7% in value between 2012-12-31 (19504.5) and 2013-12-31 (36029.8).
+  - warning: [GVA_S13] Unexpected jump of 54.1% in value between 2012-12-31 (224630.1) and 2013-12-31 (346083.9).
+  - warning: [GVA_S13] Unexpected jump of 61.1% in value between 2021-12-31 (430674.3) and 2022-12-31 (693617.0).
+  - warning: [GVA_S15] Unexpected jump of 78.1% in value between 2015-12-31 (16019.1) and 2016-12-31 (3504.8).
+  - warning: [GVA_S15] Unexpected jump of 113.5% in value between 2016-12-31 (3504.8) and 2017-12-31 (7481.7).
+  - warning: [GVA_S15] Unexpected jump of 68.5% in value between 2021-12-31 (7725.5) and 2022-12-31 (2435.9).
+  - warning: [GVA_S15] Unexpected jump of 705.7% in value between 2022-12-31 (2435.9) and 2023-12-31 (19626.5).
+  - warning: [G_S14] Unexpected jump of 76.1% in value between 2012-12-31 (77333.6) and 2013-12-31 (18515.8).
+  - warning: ... 141 more warnings not listed
+- **bns/GDP_COMPONENTS_BY_SECTOR_PROFIT** — fetch+validate+process: ok (downloaded=1297, processed=1297)
+  - warning: [A_S11] Unexpected jump of 120.9% in value between 2015-12-31 (290607.2) and 2016-12-31 (641904.9).
+  - warning: [A_S11] Unexpected jump of 51.3% in value between 2021-12-31 (1511776.9) and 2022-12-31 (2287032.4).
+  - warning: [A_S11] Unexpected jump of 52.1% in value between 2022-12-31 (2287032.4) and 2023-12-31 (1095326.7).
+  - warning: [A_S13] Unexpected jump of 504.2% in value between 2010-12-31 (6000.1) and 2011-12-31 (36250.2).
+  - warning: [A_S13] Unexpected jump of 51.4% in value between 2012-12-31 (49206.6) and 2013-12-31 (23906.5).
+  - warning: [A_S13] Unexpected jump of 100.0% in value between 2016-12-31 (29987.2) and 2017-12-31 (0.0).
+  - warning: [A_S14] Unexpected jump of 52.2% in value between 2010-12-31 (415792.6) and 2011-12-31 (632891.7).
+  - warning: [A_S14] Unexpected jump of 71.4% in value between 2022-12-31 (1285173.2) and 2023-12-31 (2203074.7).
+  - warning: [B_S1] Unexpected jump of 54.3% in value between 2020-12-31 (4599532.1) and 2021-12-31 (7095939.1).
+  - warning: [B_S11] Unexpected jump of 54.3% in value between 2020-12-31 (4599532.1) and 2021-12-31 (7095939.1).
+  - warning: [C_S14] Unexpected jump of 142.2% in value between 2012-12-31 (62267.5) and 2013-12-31 (150816.5).
+  - warning: [C_S14] Unexpected jump of 62.1% in value between 2022-12-31 (313482.9) and 2023-12-31 (508069.6).
+  - warning: [D_S1] Unexpected jump of 87.2% in value between 2010-12-31 (33284.3) and 2011-12-31 (62310.3).
+  - warning: [D_S1] Unexpected jump of 58.0% in value between 2011-12-31 (62310.3) and 2012-12-31 (98466.6).
+  - warning: [D_S1] Unexpected jump of 52.8% in value between 2015-12-31 (132213.5) and 2016-12-31 (202017.9).
+  - warning: [D_S11] Unexpected jump of 87.2% in value between 2010-12-31 (33284.3) and 2011-12-31 (62310.3).
+  - warning: [D_S11] Unexpected jump of 58.0% in value between 2011-12-31 (62310.3) and 2012-12-31 (98466.6).
+  - warning: [D_S11] Unexpected jump of 52.8% in value between 2015-12-31 (132213.5) and 2016-12-31 (202017.9).
+  - warning: [D_S14] Unexpected jump of 64.9% in value between 2024-12-31 (177.3) and 2025-12-31 (62.3).
+  - warning: [E_S1] Unexpected jump of 63.8% in value between 2010-12-31 (5645.3) and 2011-12-31 (9244.8).
+  - warning: [E_S1] Unexpected jump of 78.1% in value between 2011-12-31 (9244.8) and 2012-12-31 (16468.8).
+  - warning: [E_S1] Unexpected jump of 52.5% in value between 2012-12-31 (16468.8) and 2013-12-31 (7816.1).
+  - warning: [E_S1] Unexpected jump of 172.3% in value between 2013-12-31 (7816.1) and 2014-12-31 (21282.4).
+  - warning: [E_S1] Unexpected jump of 58.5% in value between 2016-12-31 (22608.3) and 2017-12-31 (35825.9).
+  - warning: [E_S11] Unexpected jump of 63.8% in value between 2010-12-31 (5645.3) and 2011-12-31 (9244.8).
+  - warning: [E_S11] Unexpected jump of 78.1% in value between 2011-12-31 (9244.8) and 2012-12-31 (16468.8).
+  - warning: [E_S11] Unexpected jump of 52.5% in value between 2012-12-31 (16468.8) and 2013-12-31 (7816.1).
+  - warning: [E_S11] Unexpected jump of 172.3% in value between 2013-12-31 (7816.1) and 2014-12-31 (21282.4).
+  - warning: [E_S11] Unexpected jump of 58.5% in value between 2016-12-31 (22608.3) and 2017-12-31 (35825.9).
+  - warning: [E_S14] Unexpected jump of 100.0% in value between 2021-12-31 (30.6) and 2022-12-31 (0.0).
+  - warning: ... 184 more warnings not listed
+- **bns/EXPORTS_VALUE_BY_COMMODITY_GROUP** — fetch+validate+process: ok (downloaded=3313, processed=3313)
+  - warning: [WHEAT] Gap of 61 days between 2022-08-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [WHEAT] Unexpected jump of 68.2% in value between 2015-08-01 (30687.49575) and 2015-09-01 (51601.52895000001).
+  - warning: [WHEAT] Unexpected jump of 50.5% in value between 2016-07-01 (40038.20557) and 2016-08-01 (19810.04941).
+  - warning: [WHEAT] Unexpected jump of 205.7% in value between 2016-08-01 (19810.04941) and 2016-09-01 (60562.81775).
+  - warning: [WHEAT] Unexpected jump of 62.8% in value between 2017-09-01 (42449.253079999995) and 2017-10-01 (69108.62504000001).
+  - warning: [WHEAT] Unexpected jump of 69.4% in value between 2019-09-01 (58598.14051999999) and 2019-10-01 (99242.01624999997).
+  - warning: [WHEAT] Unexpected jump of 83.9% in value between 2020-01-01 (45057.29879) and 2020-02-01 (82843.57494).
+  - warning: [WHEAT] Unexpected jump of 63.6% in value between 2020-08-01 (67160.88837999999) and 2020-09-01 (109848.67972999997).
+  - warning: [WHEAT] Unexpected jump of 221.1% in value between 2022-08-01 (74674.27811) and 2022-10-01 (239778.61194000003).
+  - warning: [FLOUR] Gap of 61 days between 2022-08-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [FLOUR] Unexpected jump of 65.5% in value between 2019-09-01 (27058.56229) and 2019-10-01 (44784.40332).
+  - warning: [FLOUR] Unexpected jump of 64.8% in value between 2020-04-01 (23415.60762) and 2020-05-01 (38580.05993).
+  - warning: [FLOUR] Unexpected jump of 55.2% in value between 2020-08-01 (28752.08591999999) and 2020-09-01 (44630.90751).
+  - warning: [FLOUR] Unexpected jump of 56.4% in value between 2020-12-01 (54199.50778) and 2021-01-01 (23615.70817).
+  - warning: [FLOUR] Unexpected jump of 54.7% in value between 2021-09-01 (33090.898870000005) and 2021-10-01 (51191.660379999994).
+  - warning: [FLOUR] Unexpected jump of 100.4% in value between 2022-07-01 (29574.41986) and 2022-08-01 (59280.49290999999).
+  - warning: [FLOUR] Unexpected jump of 62.0% in value between 2022-08-01 (59280.49290999999) and 2022-10-01 (96048.37336).
+  - warning: [IRON_ORE] Gap of 61 days between 2022-08-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [IRON_ORE] Unexpected jump of 51.6% in value between 2015-10-01 (19503.420050000004) and 2015-11-01 (29569.52577).
+  - warning: [IRON_ORE] Unexpected jump of 50.5% in value between 2019-12-01 (54895.718969999994) and 2020-01-01 (82604.17123).
+  - warning: [IRON_ORE] Unexpected jump of 83.4% in value between 2020-06-01 (68650.09577) and 2020-07-01 (125910.25752).
+  - warning: [IRON_ORE] Unexpected jump of 62.4% in value between 2021-03-01 (106890.32483) and 2021-04-01 (173639.72644999996).
+  - warning: [IRON_ORE] Unexpected jump of 88.4% in value between 2022-02-01 (76062.87663) and 2022-03-01 (143331.29356).
+  - warning: [IRON_ORE] Unexpected jump of 50.9% in value between 2022-04-01 (83778.19735000002) and 2022-05-01 (41099.59048).
+  - warning: [IRON_ORE] Unexpected jump of 58.1% in value between 2022-06-01 (53998.63949) and 2022-07-01 (22631.173260000003).
+  - warning: [IRON_ORE] Unexpected jump of 50.3% in value between 2023-01-01 (46332.29124) and 2023-02-01 (23024.63677).
+  - warning: [IRON_ORE] Unexpected jump of 238.8% in value between 2023-02-01 (23024.63677) and 2023-03-01 (78002.80635).
+  - warning: [IRON_ORE] Unexpected jump of 51.5% in value between 2024-09-01 (77519.46796000001) and 2024-10-01 (37599.775239999995).
+  - warning: [IRON_ORE] Unexpected jump of 63.7% in value between 2025-10-01 (51321.654650000004) and 2025-11-01 (83992.58708999999).
+  - warning: [IRON_ORE] Unexpected jump of 96.5% in value between 2026-02-01 (36105.17233) and 2026-03-01 (70959.26521999999).
+  - warning: ... 547 more warnings not listed
+- **bns/EXPORTS_VOLUME_BY_COMMODITY_GROUP** — fetch+validate+process: ok (downloaded=3313, processed=3313)
+  - warning: [WHEAT] Gap of 61 days between 2022-08-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [WHEAT] Unexpected jump of 83.0% in value between 2015-08-01 (158920.693) and 2015-09-01 (290887.66).
+  - warning: [WHEAT] Unexpected jump of 219.7% in value between 2016-08-01 (130588.05) and 2016-09-01 (417480.41599999997).
+  - warning: [WHEAT] Unexpected jump of 62.2% in value between 2017-09-01 (280917.79600000003) and 2017-10-01 (455537.4770000001).
+  - warning: [WHEAT] Unexpected jump of 61.3% in value between 2019-09-01 (313287.33900000004) and 2019-10-01 (505388.271).
+  - warning: [WHEAT] Unexpected jump of 83.7% in value between 2020-01-01 (214946.632) and 2020-02-01 (394783.004).
+  - warning: [WHEAT] Unexpected jump of 63.3% in value between 2020-08-01 (320860.645) and 2020-09-01 (524045.68600000005).
+  - warning: [WHEAT] Unexpected jump of 250.6% in value between 2022-08-01 (233062.38369) and 2022-10-01 (817174.7779000001).
+  - warning: [FLOUR] Gap of 61 days between 2022-08-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [FLOUR] Unexpected jump of 60.4% in value between 2019-09-01 (112765.10642000001) and 2019-10-01 (180863.728).
+  - warning: [FLOUR] Unexpected jump of 58.3% in value between 2020-04-01 (82770.652) and 2020-05-01 (131060.97199999998).
+  - warning: [FLOUR] Unexpected jump of 54.7% in value between 2020-08-01 (103199.053) and 2020-09-01 (159625.11299999998).
+  - warning: [FLOUR] Unexpected jump of 55.3% in value between 2020-12-01 (190500.13700000002) and 2021-01-01 (85241.718).
+  - warning: [FLOUR] Unexpected jump of 108.0% in value between 2022-07-01 (70325.65999999999) and 2022-08-01 (146284.115).
+  - warning: [FLOUR] Unexpected jump of 66.3% in value between 2022-08-01 (146284.115) and 2022-10-01 (243323.679).
+  - warning: [IRON_ORE] Gap of 61 days between 2022-08-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [IRON_ORE] Unexpected jump of 77.1% in value between 2020-06-01 (986034.6) and 2020-07-01 (1746142.85).
+  - warning: [IRON_ORE] Unexpected jump of 68.4% in value between 2021-03-01 (947925.8999999999) and 2021-04-01 (1595904.303).
+  - warning: [IRON_ORE] Unexpected jump of 66.8% in value between 2022-02-01 (768948.003) and 2022-03-01 (1282747.3).
+  - warning: [IRON_ORE] Unexpected jump of 188.6% in value between 2023-02-01 (404781.36) and 2023-03-01 (1168086.9).
+  - warning: [IRON_ORE] Unexpected jump of 56.4% in value between 2024-08-01 (693552.2) and 2024-09-01 (1084471.3990000002).
+  - warning: [IRON_ORE] Unexpected jump of 52.4% in value between 2025-04-01 (610151.016) and 2025-05-01 (929998.1410000002).
+  - warning: [IRON_ORE] Unexpected jump of 68.6% in value between 2025-10-01 (762004.0135) and 2025-11-01 (1284896.1419999998).
+  - warning: [IRON_ORE] Unexpected jump of 78.4% in value between 2026-02-01 (622207.958) and 2026-03-01 (1109745.988).
+  - warning: [ZINC_ORE] Gap of 61 days between 2022-08-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [ZINC_ORE] Unexpected jump of 76.8% in value between 2015-02-01 (16322.125) and 2015-03-01 (28852.754999999997).
+  - warning: [ZINC_ORE] Unexpected jump of 64.9% in value between 2016-01-01 (29690.87) and 2016-02-01 (10428.947).
+  - warning: [ZINC_ORE] Unexpected jump of 129.5% in value between 2016-02-01 (10428.947) and 2016-03-01 (23938.478000000003).
+  - warning: [ZINC_ORE] Unexpected jump of 51.5% in value between 2016-11-01 (26884.913) and 2016-12-01 (40729.3215).
+  - warning: [ZINC_ORE] Unexpected jump of 61.4% in value between 2019-05-01 (12675.91) and 2019-06-01 (20463.42).
+  - warning: ... 455 more warnings not listed
+- **wb/WB_COMMODITY_PRICES_ANNUAL** — fetch+validate+process: ok (downloaded=4099, processed=4099)
+  - warning: [CRUDE_PETRO@world] Unexpected jump of 55.6% in value between 1972-12-31 (1.8) and 1973-12-31 (2.8).
+  - warning: [CRUDE_PETRO@world] Unexpected jump of 292.9% in value between 1973-12-31 (2.8) and 1974-12-31 (11.0).
+  - warning: [CRUDE_PETRO@world] Unexpected jump of 140.3% in value between 1978-12-31 (12.9) and 1979-12-31 (31.0).
+  - warning: [CRUDE_PETRO@world] Unexpected jump of 55.8% in value between 1999-12-31 (18.1) and 2000-12-31 (28.2).
+  - warning: [CRUDE_PETRO@world] Unexpected jump of 67.3% in value between 2020-12-31 (41.3) and 2021-12-31 (69.1).
+  - warning: [CRUDE_BRENT@world] Unexpected jump of 55.6% in value between 1972-12-31 (1.8) and 1973-12-31 (2.8).
+  - warning: [CRUDE_BRENT@world] Unexpected jump of 292.9% in value between 1973-12-31 (2.8) and 1974-12-31 (11.0).
+  - warning: [CRUDE_BRENT@world] Unexpected jump of 148.8% in value between 1978-12-31 (12.9) and 1979-12-31 (32.1).
+  - warning: [CRUDE_BRENT@world] Unexpected jump of 59.0% in value between 1999-12-31 (17.8) and 2000-12-31 (28.3).
+  - warning: [CRUDE_BRENT@world] Unexpected jump of 66.4% in value between 2020-12-31 (42.3) and 2021-12-31 (70.4).
+  - warning: [CRUDE_DUBAI@world] Unexpected jump of 55.6% in value between 1972-12-31 (1.8) and 1973-12-31 (2.8).
+  - warning: [CRUDE_DUBAI@world] Unexpected jump of 292.9% in value between 1973-12-31 (2.8) and 1974-12-31 (11.0).
+  - warning: [CRUDE_DUBAI@world] Unexpected jump of 131.0% in value between 1978-12-31 (12.9) and 1979-12-31 (29.8).
+  - warning: [CRUDE_DUBAI@world] Unexpected jump of 50.2% in value between 1985-12-31 (26.5) and 1986-12-31 (13.2).
+  - warning: [CRUDE_DUBAI@world] Unexpected jump of 51.7% in value between 1999-12-31 (17.2) and 2000-12-31 (26.1).
+  - warning: [CRUDE_DUBAI@world] Unexpected jump of 63.0% in value between 2020-12-31 (42.2) and 2021-12-31 (68.8).
+  - warning: [NGAS_US@world] Unexpected jump of 58.7% in value between 1995-12-31 (1.72) and 1996-12-31 (2.73).
+  - warning: [NGAS_US@world] Unexpected jump of 89.9% in value between 1999-12-31 (2.27) and 2000-12-31 (4.31).
+  - warning: [NGAS_US@world] Unexpected jump of 63.4% in value between 2002-12-31 (3.36) and 2003-12-31 (5.49).
+  - warning: [NGAS_US@world] Unexpected jump of 51.4% in value between 2004-12-31 (5.89) and 2005-12-31 (8.92).
+  - warning: [NGAS_US@world] Unexpected jump of 55.4% in value between 2008-12-31 (8.86) and 2009-12-31 (3.95).
+  - warning: [NGAS_US@world] Unexpected jump of 91.5% in value between 2020-12-31 (2.01) and 2021-12-31 (3.85).
+  - warning: [NGAS_US@world] Unexpected jump of 65.5% in value between 2021-12-31 (3.85) and 2022-12-31 (6.37).
+  - warning: [NGAS_US@world] Unexpected jump of 60.1% in value between 2022-12-31 (6.37) and 2023-12-31 (2.54).
+  - warning: [NGAS_US@world] Unexpected jump of 61.2% in value between 2024-12-31 (2.19) and 2025-12-31 (3.53).
+  - warning: [NGAS_EUR@world] Unexpected jump of 150.7% in value between 1973-12-31 (0.69) and 1974-12-31 (1.73).
+  - warning: [NGAS_EUR@world] Unexpected jump of 81.2% in value between 1999-12-31 (2.13) and 2000-12-31 (3.86).
+  - warning: [NGAS_EUR@world] Unexpected jump of 56.7% in value between 2007-12-31 (8.56) and 2008-12-31 (13.41).
+  - warning: [NGAS_EUR@world] Unexpected jump of 397.5% in value between 2020-12-31 (3.24) and 2021-12-31 (16.12).
+  - warning: [NGAS_EUR@world] Unexpected jump of 150.2% in value between 2021-12-31 (16.12) and 2022-12-31 (40.34).
+  - warning: ... 189 more warnings not listed
+- **wb/WB_COMMODITY_INDICES_ANNUAL** — fetch+validate+process: ok (downloaded=1056, processed=1056)
+  - warning: [TOTAL@world] Unexpected jump of 53.2% in value between 1972-12-31 (9.4) and 1973-12-31 (14.4).
+  - warning: [TOTAL@world] Unexpected jump of 72.9% in value between 1973-12-31 (14.4) and 1974-12-31 (24.9).
+  - warning: [TOTAL@world] Unexpected jump of 61.7% in value between 1978-12-31 (27.4) and 1979-12-31 (44.3).
+  - warning: [TOTAL@world] Unexpected jump of 59.9% in value between 2020-12-31 (63.1) and 2021-12-31 (100.9).
+  - warning: [ENERGY@world] Unexpected jump of 228.6% in value between 1973-12-31 (4.2) and 1974-12-31 (13.8).
+  - warning: [ENERGY@world] Unexpected jump of 120.3% in value between 1978-12-31 (17.7) and 1979-12-31 (39.0).
+  - warning: [ENERGY@world] Unexpected jump of 60.7% in value between 1999-12-31 (24.4) and 2000-12-31 (39.2).
+  - warning: [ENERGY@world] Unexpected jump of 81.0% in value between 2020-12-31 (52.7) and 2021-12-31 (95.4).
+  - warning: [ENERGY@world] Unexpected jump of 60.0% in value between 2021-12-31 (95.4) and 2022-12-31 (152.6).
+  - warning: [NON_ENERGY@world] Unexpected jump of 56.4% in value between 1972-12-31 (22.5) and 1973-12-31 (35.2).
+  - warning: [AGRICULTURE@world] Unexpected jump of 63.6% in value between 1972-12-31 (26.1) and 1973-12-31 (42.7).
+  - warning: [BEVERAGES@world] Unexpected jump of 77.9% in value between 1975-12-31 (41.2) and 1976-12-31 (73.3).
+  - warning: [BEVERAGES@world] Unexpected jump of 73.7% in value between 1976-12-31 (73.3) and 1977-12-31 (127.3).
+  - warning: [BEVERAGES@world] Unexpected jump of 59.9% in value between 1993-12-31 (42.4) and 1994-12-31 (67.8).
+  - warning: [BEVERAGES@world] Unexpected jump of 63.6% in value between 2023-12-31 (107.8) and 2024-12-31 (176.4).
+  - warning: [FOOD@world] Unexpected jump of 74.8% in value between 1972-12-31 (28.6) and 1973-12-31 (50.0).
+  - warning: [OILS_MEALS@world] Unexpected jump of 101.8% in value between 1972-12-31 (27.9) and 1973-12-31 (56.3).
+  - warning: [GRAINS@world] Unexpected jump of 95.8% in value between 1972-12-31 (28.8) and 1973-12-31 (56.4).
+  - warning: [OTHER_FOOD@world] Unexpected jump of 69.0% in value between 1973-12-31 (36.1) and 1974-12-31 (61.0).
+  - warning: [OTHER_RAW_MATERIALS@world] Unexpected jump of 53.7% in value between 1972-12-31 (20.3) and 1973-12-31 (31.2).
+  - warning: [FERTILIZERS@world] Unexpected jump of 65.5% in value between 1972-12-31 (11.9) and 1973-12-31 (19.7).
+  - warning: [FERTILIZERS@world] Unexpected jump of 257.9% in value between 1973-12-31 (19.7) and 1974-12-31 (70.5).
+  - warning: [FERTILIZERS@world] Unexpected jump of 127.9% in value between 2007-12-31 (83.4) and 2008-12-31 (190.1).
+  - warning: [FERTILIZERS@world] Unexpected jump of 104.2% in value between 2020-12-31 (74.6) and 2021-12-31 (152.3).
+  - warning: [FERTILIZERS@world] Unexpected jump of 54.8% in value between 2021-12-31 (152.3) and 2022-12-31 (235.7).
+  - warning: [METALS_MINERALS@world] Unexpected jump of 56.2% in value between 1987-12-31 (36.1) and 1988-12-31 (56.4).
+  - warning: [METALS_MINERALS@world] Unexpected jump of 52.9% in value between 2005-12-31 (60.1) and 2006-12-31 (91.9).
+  - warning: [BASE_METALS@world] Unexpected jump of 62.6% in value between 1987-12-31 (40.4) and 1988-12-31 (65.7).
+  - warning: [BASE_METALS@world] Unexpected jump of 60.4% in value between 2005-12-31 (63.7) and 2006-12-31 (102.2).
+  - warning: [PRECIOUS_METALS@world] Unexpected jump of 61.8% in value between 1972-12-31 (5.5) and 1973-12-31 (8.9).
+  - warning: ... 3 more warnings not listed
+- **wb/WB_COMMODITY_PRICES_MONTHLY** — fetch+validate+process: ok (downloaded=50383, processed=50383)
+  - warning: [CRUDE_PETRO@world] Unexpected jump of 51.9% in value between 1973-09-01 (2.7) and 1973-10-01 (4.1).
+  - warning: [CRUDE_PETRO@world] Unexpected jump of 217.1% in value between 1973-12-01 (4.1) and 1974-01-01 (13.0).
+  - warning: [CRUDE_PETRO@world] Unexpected jump of 53.5% in value between 1990-07-01 (17.2) and 1990-08-01 (26.4).
+  - warning: [CRUDE_BRENT@world] Unexpected jump of 51.9% in value between 1973-09-01 (2.7) and 1973-10-01 (4.1).
+  - warning: [CRUDE_BRENT@world] Unexpected jump of 217.1% in value between 1973-12-01 (4.1) and 1974-01-01 (13.0).
+  - warning: [CRUDE_BRENT@world] Unexpected jump of 54.0% in value between 1990-07-01 (17.6) and 1990-08-01 (27.1).
+  - warning: [CRUDE_DUBAI@world] Unexpected jump of 51.9% in value between 1973-09-01 (2.7) and 1973-10-01 (4.1).
+  - warning: [CRUDE_DUBAI@world] Unexpected jump of 217.1% in value between 1973-12-01 (4.1) and 1974-01-01 (13.0).
+  - warning: [CRUDE_DUBAI@world] Unexpected jump of 61.8% in value between 1979-04-01 (21.2) and 1979-05-01 (34.3).
+  - warning: [CRUDE_DUBAI@world] Unexpected jump of 54.4% in value between 1986-07-01 (7.9) and 1986-08-01 (12.2).
+  - warning: [CRUDE_DUBAI@world] Unexpected jump of 63.4% in value between 1990-07-01 (15.3) and 1990-08-01 (25.0).
+  - warning: [NGAS_US@world] Unexpected jump of 50.2% in value between 1996-01-01 (2.93) and 1996-02-01 (4.4).
+  - warning: [NGAS_US@world] Unexpected jump of 61.3% in value between 2000-11-01 (5.55) and 2000-12-01 (8.95).
+  - warning: [NGAS_US@world] Unexpected jump of 89.9% in value between 2021-01-01 (2.67) and 2021-02-01 (5.07).
+  - warning: [NGAS_US@world] Unexpected jump of 78.4% in value between 2025-12-01 (4.25) and 2026-01-01 (7.58).
+  - warning: [NGAS_US@world] Unexpected jump of 52.4% in value between 2026-01-01 (7.58) and 2026-02-01 (3.61).
+  - warning: [NGAS_EUR@world] Unexpected jump of 150.7% in value between 1973-12-01 (0.69) and 1974-01-01 (1.73).
+  - warning: [NGAS_EUR@world] Unexpected jump of 58.9% in value between 2020-07-01 (1.8) and 2020-08-01 (2.86).
+  - warning: [NGAS_EUR@world] Unexpected jump of 55.7% in value between 2022-02-01 (27.23) and 2022-03-01 (42.39).
+  - warning: [NGAS_EUR@world] Unexpected jump of 52.9% in value between 2022-06-01 (33.56) and 2022-07-01 (51.33).
+  - warning: [NGAS_EUR@world] Unexpected jump of 59.3% in value between 2026-02-01 (11.24) and 2026-03-01 (17.91).
+  - warning: [COCOA@world] Unexpected jump of 76.6% in value between 1972-12-01 (0.64) and 1973-01-01 (1.13).
+  - warning: [COFFEE_ARABIC@world] Unexpected jump of 52.8% in value between 1994-06-01 (3.16) and 1994-07-01 (4.83).
+  - warning: [TEA_AVG@world] Unexpected jump of 64.3% in value between 1979-03-01 (1.26) and 1979-04-01 (2.07).
+  - warning: [TEA_COLOMBO@world] Unexpected jump of 51.2% in value between 1979-06-01 (0.43) and 1979-07-01 (0.65).
+  - warning: [TEA_COLOMBO@world] Unexpected jump of 50.2% in value between 1990-02-01 (2.01) and 1990-03-01 (3.02).
+  - warning: [TEA_KOLKATA@world] Unexpected jump of 133.3% in value between 1971-03-01 (0.66) and 1971-04-01 (1.54).
+  - warning: [TEA_KOLKATA@world] Unexpected jump of 75.9% in value between 1974-03-01 (0.83) and 1974-04-01 (1.46).
+  - warning: [TEA_KOLKATA@world] Unexpected jump of 79.6% in value between 1975-03-01 (1.13) and 1975-04-01 (2.03).
+  - warning: [TEA_KOLKATA@world] Unexpected jump of 86.7% in value between 1978-03-01 (1.65) and 1978-04-01 (3.08).
+  - warning: ... 85 more warnings not listed
+- **wb/WB_COMMODITY_INDICES_MONTHLY** — fetch+validate+process: ok (downloaded=12800, processed=12800)
+  - warning: [ENERGY@world] Unexpected jump of 185.7% in value between 1973-12-01 (5.6) and 1974-01-01 (16.0).
+  - warning: [FERTILIZERS@world] Unexpected jump of 52.8% in value between 1972-12-01 (12.3) and 1973-01-01 (18.8).
+  - warning: [FERTILIZERS@world] Unexpected jump of 196.1% in value between 1973-12-01 (20.6) and 1974-01-01 (61.0).
+  - warning: [FERTILIZERS@world] Unexpected jump of 88.1% in value between 1976-12-01 (25.3) and 1977-01-01 (47.6).
+  - warning: [PRECIOUS_METALS@world] Unexpected jump of 58.4% in value between 1979-12-01 (51.2) and 1980-01-01 (81.1).
+- **wb/WB_COMMODITY_PRICE_FORECASTS** — fetch+validate+process: ok (downloaded=92, processed=92)
+- **wb/WB_COMMODITY_INDEX_FORECASTS** — fetch+validate+process: ok (downloaded=32, processed=32)
+- **eia/EIA_STEO_PRICES** — fetch+validate+process: ok (downloaded=144, processed=144)
+- **bns/KZ_EXPORTS_BY_PARTNER** — fetch+validate+process: ok (downloaded=1169, processed=1169)
+  - warning: [ARM] Unexpected jump of 61.3% in value between 2020-12-31 (6405.98412) and 2021-12-31 (10332.81156).
+  - warning: [ARM] Unexpected jump of 171.5% in value between 2021-12-31 (10332.81156) and 2022-12-31 (28048.90452).
+  - warning: [BLR] Unexpected jump of 69.1% in value between 2021-12-31 (110295.76861) and 2022-12-31 (186537.53345).
+  - warning: [AZE] Unexpected jump of 242.1% in value between 2020-12-31 (84145.3441) and 2021-12-31 (287885.16583).
+  - warning: [MDA] Unexpected jump of 55.9% in value between 2020-12-31 (62967.4168) and 2021-12-31 (27739.63747).
+  - warning: [MDA] Unexpected jump of 181.6% in value between 2023-12-31 (17932.20572) and 2024-12-31 (50504.55383).
+  - warning: [MDA] Unexpected jump of 68.9% in value between 2024-12-31 (50504.55383) and 2025-12-31 (15725.35931).
+  - warning: [TKM] Unexpected jump of 175.8% in value between 2020-12-31 (76623.3149) and 2021-12-31 (211359.5061).
+  - warning: [TKM] Unexpected jump of 61.0% in value between 2021-12-31 (211359.5061) and 2022-12-31 (340352.99979).
+  - warning: [UKR] Unexpected jump of 58.4% in value between 2021-12-31 (575241.8181) and 2022-12-31 (239391.84055).
+  - warning: [UKR] Unexpected jump of 77.0% in value between 2022-12-31 (239391.84055) and 2023-12-31 (54973.58272).
+  - warning: [AUT] Unexpected jump of 105.1% in value between 2022-12-31 (4721.54684) and 2023-12-31 (9685.22772).
+  - warning: [AUT] Unexpected jump of 57.3% in value between 2023-12-31 (9685.22772) and 2024-12-31 (4132.56199).
+  - warning: [AUT] Unexpected jump of 280.7% in value between 2024-12-31 (4132.56199) and 2025-12-31 (15733.16152).
+  - warning: [BGR] Unexpected jump of 70.8% in value between 2020-12-31 (207505.67886) and 2021-12-31 (354479.35322).
+  - warning: [BGR] Unexpected jump of 59.8% in value between 2021-12-31 (354479.35322) and 2022-12-31 (142394.81533).
+  - warning: [BGR] Unexpected jump of 80.8% in value between 2022-12-31 (142394.81533) and 2023-12-31 (27277.76988).
+  - warning: [BGR] Unexpected jump of 1013.0% in value between 2023-12-31 (27277.76988) and 2024-12-31 (303594.69158).
+  - warning: [CYP] Unexpected jump of 3092.2% in value between 2021-12-31 (5575.78131) and 2022-12-31 (177988.84714).
+  - warning: [CYP] Unexpected jump of 99.9% in value between 2022-12-31 (177988.84714) and 2023-12-31 (243.55447).
+  - warning: [CYP] Unexpected jump of 2428.0% in value between 2023-12-31 (243.55447) and 2024-12-31 (6157.05277).
+  - warning: [CYP] Unexpected jump of 98.1% in value between 2024-12-31 (6157.05277) and 2025-12-31 (115.56476).
+  - warning: [DEU] Unexpected jump of 61.0% in value between 2020-12-31 (247559.2676) and 2021-12-31 (398537.55969).
+  - warning: [DEU] Unexpected jump of 56.7% in value between 2023-12-31 (740874.29802) and 2024-12-31 (1160773.27423).
+  - warning: [DNK] Unexpected jump of 102.5% in value between 2021-12-31 (18429.22453) and 2022-12-31 (37315.84561).
+  - warning: [DNK] Unexpected jump of 102.8% in value between 2022-12-31 (37315.84561) and 2023-12-31 (75672.61661).
+  - warning: [DNK] Unexpected jump of 53.8% in value between 2023-12-31 (75672.61661) and 2024-12-31 (34924.72259).
+  - warning: [EST] Unexpected jump of 240.6% in value between 2020-12-31 (1357.57457) and 2021-12-31 (4623.31356).
+  - warning: [EST] Unexpected jump of 1165.9% in value between 2021-12-31 (4623.31356) and 2022-12-31 (58524.28856).
+  - warning: [EST] Unexpected jump of 50.4% in value between 2023-12-31 (78125.25445) and 2024-12-31 (38736.29795).
+  - warning: ... 380 more warnings not listed
+- **bns/KZ_IMPORTS_BY_PARTNER** — fetch+validate+process: ok (downloaded=1169, processed=1169)
+  - warning: [ARM] Unexpected jump of 356.8% in value between 2022-12-31 (15035.06907) and 2023-12-31 (68682.04477).
+  - warning: [AZE] Unexpected jump of 77.3% in value between 2020-12-31 (25012.4465) and 2021-12-31 (44357.31453).
+  - warning: [AZE] Unexpected jump of 99.2% in value between 2021-12-31 (44357.31453) and 2022-12-31 (88372.80736).
+  - warning: [TJK] Unexpected jump of 270.4% in value between 2020-12-31 (98135.20674) and 2021-12-31 (363522.7611).
+  - warning: [TKM] Unexpected jump of 129.5% in value between 2021-12-31 (42851.98792) and 2022-12-31 (98338.69106).
+  - warning: [TKM] Unexpected jump of 68.9% in value between 2022-12-31 (98338.69106) and 2023-12-31 (166117.84405).
+  - warning: [AUT] Unexpected jump of 62.9% in value between 2022-12-31 (198236.03519) and 2023-12-31 (322910.57991).
+  - warning: [BEL] Unexpected jump of 56.3% in value between 2021-12-31 (155500.23358) and 2022-12-31 (242984.0904).
+  - warning: [BGR] Unexpected jump of 74.6% in value between 2022-12-31 (38873.30138) and 2023-12-31 (67878.12522).
+  - warning: [CYP] Unexpected jump of 90.1% in value between 2020-12-31 (4370.34056) and 2021-12-31 (432.57234).
+  - warning: [CYP] Unexpected jump of 205.6% in value between 2021-12-31 (432.57234) and 2022-12-31 (1322.04334).
+  - warning: [CYP] Unexpected jump of 55.1% in value between 2024-12-31 (1512.54092) and 2025-12-31 (678.63656).
+  - warning: [CZE] Unexpected jump of 81.0% in value between 2021-12-31 (165465.47347) and 2022-12-31 (299424.09387).
+  - warning: [CZE] Unexpected jump of 60.2% in value between 2022-12-31 (299424.09387) and 2023-12-31 (479626.20709).
+  - warning: [DNK] Unexpected jump of 75.5% in value between 2022-12-31 (76475.25263) and 2023-12-31 (134232.53047).
+  - warning: [EST] Unexpected jump of 345.0% in value between 2021-12-31 (14230.60991) and 2022-12-31 (63321.76504).
+  - warning: [EST] Unexpected jump of 57.9% in value between 2023-12-31 (79381.51889) and 2024-12-31 (33441.93695).
+  - warning: [ESP] Unexpected jump of 95.1% in value between 2022-12-31 (269734.93797) and 2023-12-31 (526325.27002).
+  - warning: [GRC] Unexpected jump of 57.7% in value between 2022-12-31 (22777.08633) and 2023-12-31 (35928.0662).
+  - warning: [GRC] Unexpected jump of 147.9% in value between 2024-12-31 (32803.6041) and 2025-12-31 (81326.49833).
+  - warning: [HRV] Unexpected jump of 66.1% in value between 2022-12-31 (20483.70303) and 2023-12-31 (34031.10602).
+  - warning: [IRL] Unexpected jump of 101.0% in value between 2023-12-31 (234570.55394) and 2024-12-31 (471388.7271).
+  - warning: [LUX] Unexpected jump of 66.6% in value between 2020-12-31 (2421.90107) and 2021-12-31 (4036.06458).
+  - warning: [LUX] Unexpected jump of 157.0% in value between 2021-12-31 (4036.06458) and 2022-12-31 (10371.49759).
+  - warning: [LUX] Unexpected jump of 150.7% in value between 2022-12-31 (10371.49759) and 2023-12-31 (26006.28026).
+  - warning: [LVA] Unexpected jump of 125.5% in value between 2022-12-31 (34231.00355) and 2023-12-31 (77181.11605).
+  - warning: [MLT] Unexpected jump of 114.4% in value between 2021-12-31 (358.1383) and 2022-12-31 (767.72448).
+  - warning: [MLT] Unexpected jump of 111.7% in value between 2022-12-31 (767.72448) and 2023-12-31 (1624.99575).
+  - warning: [MLT] Unexpected jump of 623.9% in value between 2023-12-31 (1624.99575) and 2024-12-31 (11763.66449).
+  - warning: [MLT] Unexpected jump of 70.7% in value between 2024-12-31 (11763.66449) and 2025-12-31 (3441.37801).
+  - warning: ... 435 more warnings not listed
+- **wits/WITS_KZ_EXPORTS_BY_PARTNER** — fetch+validate+process: ok (downloaded=3331, processed=3331)
+  - warning: [AFG] Unexpected jump of 97.0% in value between 1995-12-31 (2916.694) and 1996-12-31 (5746.695).
+  - warning: [AFG] Unexpected jump of 50.3% in value between 1996-12-31 (5746.695) and 1997-12-31 (8637.493).
+  - warning: [AFG] Unexpected jump of 406.9% in value between 1999-12-31 (11427.181) and 2000-12-31 (57927.9).
+  - warning: [AFG] Unexpected jump of 68.6% in value between 2000-12-31 (57927.9) and 2001-12-31 (18184.3).
+  - warning: [AFG] Unexpected jump of 71.2% in value between 2001-12-31 (18184.3) and 2002-12-31 (31130.2).
+  - warning: [AFG] Unexpected jump of 58.8% in value between 2002-12-31 (31130.2) and 2003-12-31 (49446.0).
+  - warning: [AFG] Unexpected jump of 74.7% in value between 2003-12-31 (49446.0) and 2004-12-31 (86387.353).
+  - warning: [AFG] Unexpected jump of 89.7% in value between 2004-12-31 (86387.353) and 2005-12-31 (163914.679).
+  - warning: [AFG] Unexpected jump of 220.6% in value between 2007-12-31 (192512.521) and 2008-12-31 (617120.596).
+  - warning: [AFG] Unexpected jump of 101.1% in value between 2021-12-31 (455652.62812) and 2022-12-31 (916207.10233).
+  - warning: [AGO] Gap of 731 days between 1999-12-31 and 2001-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO] Unexpected jump of 524.5% in value between 1999-12-31 (40.0) and 2001-12-31 (249.8).
+  - warning: [AGO] Unexpected jump of 59.5% in value between 2001-12-31 (249.8) and 2002-12-31 (101.2).
+  - warning: [AGO] Unexpected jump of 82.3% in value between 2002-12-31 (101.2) and 2003-12-31 (17.9).
+  - warning: [AGO] Unexpected jump of 75.4% in value between 2004-12-31 (24.405) and 2005-12-31 (42.799).
+  - warning: [AGO] Unexpected jump of 691.3% in value between 2005-12-31 (42.799) and 2006-12-31 (338.673).
+  - warning: [AGO] Unexpected jump of 63.6% in value between 2006-12-31 (338.673) and 2007-12-31 (123.326).
+  - warning: [AGO] Unexpected jump of 296.0% in value between 2007-12-31 (123.326) and 2008-12-31 (488.413).
+  - warning: [AGO] Unexpected jump of 93.9% in value between 2008-12-31 (488.413) and 2009-12-31 (29.623).
+  - warning: [AGO] Unexpected jump of 5629.0% in value between 2009-12-31 (29.623) and 2010-12-31 (1697.101).
+  - warning: [AGO] Unexpected jump of 88.7% in value between 2010-12-31 (1697.101) and 2011-12-31 (190.928).
+  - warning: [AGO] Unexpected jump of 111.7% in value between 2012-12-31 (137.9) and 2013-12-31 (291.889).
+  - warning: [AGO] Unexpected jump of 367.7% in value between 2013-12-31 (291.889) and 2014-12-31 (1365.058).
+  - warning: [AGO] Unexpected jump of 97.7% in value between 2014-12-31 (1365.058) and 2015-12-31 (32.073).
+  - warning: [AGO] Unexpected jump of 154.1% in value between 2016-12-31 (39.485) and 2017-12-31 (100.32795).
+  - warning: [AGO] Unexpected jump of 91.1% in value between 2017-12-31 (100.32795) and 2018-12-31 (191.74639).
+  - warning: [AGO] Unexpected jump of 86.5% in value between 2018-12-31 (191.74639) and 2019-12-31 (25.92203).
+  - warning: [AGO] Unexpected jump of 58.1% in value between 2019-12-31 (25.92203) and 2020-12-31 (10.85691).
+  - warning: [AGO] Unexpected jump of 282.2% in value between 2020-12-31 (10.85691) and 2021-12-31 (41.49549).
+  - warning: [AGO] Unexpected jump of 95.8% in value between 2021-12-31 (41.49549) and 2022-12-31 (1.76219).
+  - warning: ... 2191 more warnings not listed
+- **wits/WITS_KZ_IMPORTS_BY_PARTNER** — fetch+validate+process: ok (downloaded=4621, processed=4621)
+  - warning: [ABW] Unexpected jump of 87.2% in value between 2012-12-31 (27.3) and 2013-12-31 (3.499).
+  - warning: [AFG] Unexpected jump of 63.3% in value between 1995-12-31 (89.197) and 1996-12-31 (32.699).
+  - warning: [AFG] Unexpected jump of 82.3% in value between 1996-12-31 (32.699) and 1997-12-31 (5.8).
+  - warning: [AFG] Unexpected jump of 5467.2% in value between 1997-12-31 (5.8) and 1998-12-31 (322.898).
+  - warning: [AFG] Unexpected jump of 82.6% in value between 1999-12-31 (164.297) and 2000-12-31 (28.6).
+  - warning: [AFG] Unexpected jump of 79.5% in value between 2001-12-31 (33.7) and 2002-12-31 (6.9).
+  - warning: [AFG] Unexpected jump of 6929.2% in value between 2003-12-31 (3.7) and 2004-12-31 (260.079).
+  - warning: [AFG] Unexpected jump of 463.5% in value between 2005-12-31 (158.122) and 2006-12-31 (891.056).
+  - warning: [AFG] Unexpected jump of 350.4% in value between 2006-12-31 (891.056) and 2007-12-31 (4013.427).
+  - warning: [AFG] Unexpected jump of 65.9% in value between 2007-12-31 (4013.427) and 2008-12-31 (6658.347).
+  - warning: [AFG] Unexpected jump of 81.9% in value between 2008-12-31 (6658.347) and 2009-12-31 (1204.087).
+  - warning: [AFG] Unexpected jump of 211.0% in value between 2010-12-31 (1232.666) and 2011-12-31 (3833.021).
+  - warning: [AFG] Unexpected jump of 84.5% in value between 2011-12-31 (3833.021) and 2012-12-31 (593.5).
+  - warning: [AFG] Unexpected jump of 398.3% in value between 2012-12-31 (593.5) and 2013-12-31 (2957.629).
+  - warning: [AFG] Unexpected jump of 102.2% in value between 2017-12-31 (2064.35032) and 2018-12-31 (4174.42644).
+  - warning: [AFG] Unexpected jump of 148.3% in value between 2020-12-31 (1611.68409) and 2021-12-31 (4001.30794).
+  - warning: [AFG] Unexpected jump of 122.2% in value between 2021-12-31 (4001.30794) and 2022-12-31 (8892.33045).
+  - warning: [AFG] Unexpected jump of 138.1% in value between 2022-12-31 (8892.33045) and 2023-12-31 (21170.07937).
+  - warning: [AGO] Gap of 2557 days between 1995-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO] Gap of 731 days between 2003-12-31 and 2005-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO] Gap of 731 days between 2011-12-31 and 2013-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO] Gap of 1096 days between 2013-12-31 and 2016-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO] Gap of 730 days between 2016-12-31 and 2018-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO] Gap of 1096 days between 2019-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO] Unexpected jump of 53.5% in value between 1995-12-31 (28.199) and 2002-12-31 (13.1).
+  - warning: [AGO] Unexpected jump of 96.9% in value between 2002-12-31 (13.1) and 2003-12-31 (0.4).
+  - warning: [AGO] Unexpected jump of 754.2% in value between 2003-12-31 (0.4) and 2005-12-31 (3.417).
+  - warning: [AGO] Unexpected jump of 580.3% in value between 2005-12-31 (3.417) and 2006-12-31 (23.247).
+  - warning: [AGO] Unexpected jump of 98.7% in value between 2006-12-31 (23.247) and 2007-12-31 (46.2).
+  - warning: [AGO] Unexpected jump of 66.1% in value between 2007-12-31 (46.2) and 2008-12-31 (15.664).
+  - warning: ... 2679 more warnings not listed
+- **wits/KZ_TARIFF_AVERAGES** — fetch+validate+process: ok (downloaded=65, processed=65)
+  - warning: [MFN_SMPL_AVRG] Gap of 2922 days between 1996-12-31 and 2004-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [MFN_SMPL_AVRG] Gap of 1461 days between 2004-12-31 and 2008-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [MFN_SMPL_AVRG] Gap of 730 days between 2008-12-31 and 2010-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [MFN_SMPL_AVRG] Unexpected jump of 70.1% in value between 1996-12-31 (9.45350118809639) and 2004-12-31 (2.82552622360184).
+  - warning: [MFN_SMPL_AVRG] Unexpected jump of 95.3% in value between 2004-12-31 (2.82552622360184) and 2008-12-31 (5.51950490619315).
+  - warning: [MFN_SMPL_AVRG] Unexpected jump of 56.4% in value between 2008-12-31 (5.51950490619315) and 2010-12-31 (8.63248104268445).
+  - warning: [MFN_WGHTD_AVRG] Gap of 1461 days between 2004-12-31 and 2008-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [MFN_WGHTD_AVRG] Gap of 730 days between 2008-12-31 and 2010-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [MFN_WGHTD_AVRG] Unexpected jump of 148.5% in value between 2004-12-31 (1.91051236537065) and 2008-12-31 (4.748080082226).
+  - warning: [MFN_WGHTD_AVRG] Unexpected jump of 51.0% in value between 2008-12-31 (4.748080082226) and 2010-12-31 (7.16766860435901).
+  - warning: [AHS_SMPL_AVRG] Gap of 1461 days between 2004-12-31 and 2008-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AHS_SMPL_AVRG] Gap of 730 days between 2008-12-31 and 2010-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AHS_SMPL_AVRG] Unexpected jump of 85.3% in value between 2004-12-31 (2.41720651193124) and 2008-12-31 (4.47834512285481).
+  - warning: [AHS_SMPL_AVRG] Unexpected jump of 68.8% in value between 2008-12-31 (4.47834512285481) and 2010-12-31 (7.56072528681301).
+  - warning: [AHS_WGHTD_AVRG] Gap of 1461 days between 2004-12-31 and 2008-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AHS_WGHTD_AVRG] Gap of 730 days between 2008-12-31 and 2010-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AHS_WGHTD_AVRG] Unexpected jump of 98.0% in value between 2008-12-31 (2.22352165489152) and 2010-12-31 (4.40173664562136).
+- **wits/KZ_TARIFF_APPLIED_BY_PARTNER** — fetch+validate+process: ok (downloaded=2758, processed=2758)
+  - warning: [AFG] Gap of 1461 days between 2004-12-31 and 2008-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG] Gap of 730 days between 2008-12-31 and 2010-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG] Unexpected jump of 50.0% in value between 2004-12-31 (3.33333333333333) and 2008-12-31 (5.0).
+  - warning: [AFG] Unexpected jump of 56.7% in value between 2010-12-31 (3.8125) and 2011-12-31 (1.65).
+  - warning: [AFG] Unexpected jump of 190.6% in value between 2011-12-31 (1.65) and 2012-12-31 (4.79454694475446).
+  - warning: [AFG] Unexpected jump of 65.9% in value between 2016-12-31 (2.15909090909091) and 2017-12-31 (3.58232547929793).
+  - warning: [AFG] Unexpected jump of 50.1% in value between 2018-12-31 (2.16897211202349) and 2019-12-31 (3.25466174200604).
+  - warning: [AFG] Unexpected jump of 112.7% in value between 2020-12-31 (2.89948057215952) and 2021-12-31 (6.16729983687401).
+  - warning: [AGO] Gap of 730 days between 2008-12-31 and 2010-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO] Gap of 731 days between 2011-12-31 and 2013-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO] Gap of 1096 days between 2013-12-31 and 2016-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO] Gap of 730 days between 2016-12-31 and 2018-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO] Gap of 730 days between 2020-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO] Unexpected jump of 66.0% in value between 2013-12-31 (9.54545497894287) and 2016-12-31 (3.25).
+  - warning: [AGO] Unexpected jump of 129.2% in value between 2016-12-31 (3.25) and 2018-12-31 (7.44878438538547).
+  - warning: [AGO] Unexpected jump of 77.2% in value between 2022-12-31 (5.64329230537017) and 2023-12-31 (10.0).
+  - warning: [AIA] Gap of 1461 days between 2004-12-31 and 2008-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AIA] Gap of 730 days between 2008-12-31 and 2010-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AIA] Gap of 1096 days between 2019-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AIA] Unexpected jump of 543.2% in value between 2004-12-31 (0.666666666666667) and 2008-12-31 (4.28787873008034).
+  - warning: [AIA] Unexpected jump of 91.3% in value between 2008-12-31 (4.28787873008034) and 2010-12-31 (8.20075758298238).
+  - warning: [AIA] Unexpected jump of 127.2% in value between 2011-12-31 (5.82589280605316) and 2012-12-31 (13.2345779158852).
+  - warning: [AIA] Unexpected jump of 70.7% in value between 2014-12-31 (5.97961216926575) and 2015-12-31 (1.75).
+  - warning: [AIA] Unexpected jump of 471.4% in value between 2015-12-31 (1.75) and 2016-12-31 (10.0).
+  - warning: [AIA] Unexpected jump of 100.0% in value between 2017-12-31 (8.7715277671814) and 2018-12-31 (0.0).
+  - warning: [ALB] Gap of 1461 days between 2004-12-31 and 2008-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB] Gap of 730 days between 2008-12-31 and 2010-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB] Unexpected jump of 188.9% in value between 2004-12-31 (2.5) and 2008-12-31 (7.22222222222222).
+  - warning: [ALB] Unexpected jump of 73.5% in value between 2020-12-31 (5.23011816852598) and 2021-12-31 (9.07659925205607).
+  - warning: [AND] Gap of 730 days between 2008-12-31 and 2010-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: ... 1045 more warnings not listed
+- **wb/WDI_GDP_USD** — fetch+validate+process: ok (downloaded=5428, processed=5428)
+  - warning: [AGO@world] Unexpected jump of 93.7% in value between 2001-12-31 (8936079117.73136) and 2002-12-31 (17311512433.1938).
+  - warning: [AGO@world] Unexpected jump of 53.3% in value between 2004-12-31 (26997977896.2907) and 2005-12-31 (41396636383.8231).
+  - warning: [AGO@world] Unexpected jump of 63.8% in value between 2021-12-31 (78283923543.8237) and 2022-12-31 (128233959333.275).
+  - warning: [ARG@world] Unexpected jump of 63.6% in value between 2001-12-31 (268696750000.0) and 2002-12-31 (97724004251.8602).
+  - warning: [AZE@world] Unexpected jump of 52.6% in value between 2004-12-31 (8680405740.94125) and 2005-12-31 (13245421880.834).
+  - warning: [AZE@world] Unexpected jump of 58.4% in value between 2005-12-31 (13245421880.834) and 2006-12-31 (20981929497.6188).
+  - warning: [AZE@world] Unexpected jump of 57.5% in value between 2006-12-31 (20981929497.6188) and 2007-12-31 (33049419431.2244).
+  - warning: [TCD@world] Unexpected jump of 61.3% in value between 2003-12-31 (2742815071.5744) and 2004-12-31 (4422855660.82592).
+  - warning: [TCD@world] Unexpected jump of 95.7% in value between 2004-12-31 (4422855660.82592) and 2005-12-31 (8655892392.92919).
+  - warning: [CHI@world] Gap of 731 days between 2007-12-31 and 2009-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [COD@world] Unexpected jump of 61.0% in value between 2000-12-31 (19088046305.7971) and 2001-12-31 (7438189100.33333).
+  - warning: [DJI@world] Unexpected jump of 51.0% in value between 2012-12-31 (1353632941.5207) and 2013-12-31 (2044440443.16654).
+  - warning: [DOM@world] Unexpected jump of 60.3% in value between 2004-12-31 (22322387382.494) and 2005-12-31 (35777560683.9366).
+  - warning: [GNQ@world] Unexpected jump of 77.5% in value between 2003-12-31 (2484745935.09329) and 2004-12-31 (4410764338.66733).
+  - warning: [GNQ@world] Unexpected jump of 86.3% in value between 2004-12-31 (4410764338.66733) and 2005-12-31 (8217369092.65224).
+  - warning: [GNQ@world] Unexpected jump of 51.1% in value between 2007-12-31 (13071718758.7373) and 2008-12-31 (19749893536.3204).
+  - warning: [SWZ@world] Unexpected jump of 54.2% in value between 2002-12-31 (1393945030.65105) and 2003-12-31 (2149632433.27703).
+  - warning: [GMB@world] Unexpected jump of 97.5% in value between 2003-12-31 (487038685.045496) and 2004-12-31 (961900651.423441).
+  - warning: [GHA@world] Unexpected jump of 94.4% in value between 2005-12-31 (10744568381.4456) and 2006-12-31 (20885037596.6963).
+  - warning: [GHA@world] Unexpected jump of 52.3% in value between 2012-12-31 (41271701060.954) and 2013-12-31 (62845721959.827).
+  - warning: [GUY@world] Unexpected jump of 188.5% in value between 2005-12-31 (824880550.343965) and 2006-12-31 (2379817990.6918).
+  - warning: [GUY@world] Unexpected jump of 83.0% in value between 2021-12-31 (8041362110.31175) and 2022-12-31 (14718388489.2086).
+  - warning: [IRQ@world] Unexpected jump of 67.1% in value between 2003-12-31 (21921569478.8163) and 2004-12-31 (36633669269.3981).
+  - warning: [LBY@world] Unexpected jump of 92.1% in value between 2011-12-31 (48169263294.1007) and 2012-12-31 (92540938129.1315).
+  - warning: [MAC@world] Unexpected jump of 54.1% in value between 2019-12-31 (55025172016.004) and 2020-12-31 (25280064167.7333).
+  - warning: [MAC@world] Unexpected jump of 83.0% in value between 2022-12-31 (24929307447.3237) and 2023-12-31 (45626467279.891).
+  - warning: [MWI@world] Unexpected jump of 103.7% in value between 2001-12-31 (2498008664.6691) and 2002-12-31 (5087328437.8737).
+  - warning: [MNG@world] Unexpected jump of 56.8% in value between 2009-12-31 (4583850367.88972) and 2010-12-31 (7189481998.90094).
+  - warning: [MMR@world] Unexpected jump of 54.4% in value between 2002-12-31 (6777632512.0781) and 2003-12-31 (10467109977.6717).
+  - warning: [MMR@world] Unexpected jump of 57.9% in value between 2007-12-31 (20182477480.5512) and 2008-12-31 (31862554101.9378).
+  - warning: ... 24 more warnings not listed
+- **wb/WDI_GDP_CONST_USD** — fetch+validate+process: ok (downloaded=5345, processed=5345)
+  - warning: [GNQ@world] Unexpected jump of 63.4% in value between 2000-12-31 (2699948863.55525) and 2001-12-31 (4411173089.8169).
+  - warning: [GUY@world] Unexpected jump of 63.3% in value between 2021-12-31 (8735441012.70968) and 2022-12-31 (14268000638.322).
+  - warning: [IRQ@world] Unexpected jump of 53.4% in value between 2003-12-31 (60307856288.9303) and 2004-12-31 (92503535426.8886).
+  - warning: [LBY@world] Unexpected jump of 50.3% in value between 2010-12-31 (83912660700.3206) and 2011-12-31 (41672273290.5727).
+  - warning: [LBY@world] Unexpected jump of 86.8% in value between 2011-12-31 (41672273290.5727) and 2012-12-31 (77854953189.632).
+  - warning: [MAC@world] Unexpected jump of 54.4% in value between 2019-12-31 (50886936460.4335) and 2020-12-31 (23203378176.6445).
+  - warning: [MAC@world] Unexpected jump of 75.3% in value between 2022-12-31 (23028683194.5103) and 2023-12-31 (40371220293.3995).
+  - warning: [TCA@world] Unexpected jump of 74.6% in value between 2016-12-31 (1156461656.30247) and 2017-12-31 (2019043138.35929).
+- **wb/WDI_POPULATION** — fetch+validate+process: ok (downloaded=5642, processed=5642)
+- **bns/FIXED_ASSETS_GROSS_BY_SECTION** — fetch+validate+process: ok (downloaded=521, processed=521)
+  - warning: [D] Unexpected jump of 50.5% in value between 2007-12-31 (634.61915) and 2008-12-31 (955.3322).
+  - warning: [D] Unexpected jump of 190.0% in value between 2018-12-31 (4844.333011) and 2019-12-31 (14046.185625).
+  - warning: [E] Unexpected jump of 105.0% in value between 2008-12-31 (138.3736) and 2009-12-31 (283.6021).
+  - warning: [F] Unexpected jump of 112.5% in value between 2002-12-31 (98.66833) and 2003-12-31 (209.62457).
+  - warning: [F] Unexpected jump of 69.9% in value between 2005-12-31 (379.40096) and 2006-12-31 (644.55597).
+  - warning: [F] Unexpected jump of 61.4% in value between 2007-12-31 (495.8181) and 2008-12-31 (800.2498).
+  - warning: [F] Unexpected jump of 71.1% in value between 2022-12-31 (2447.342537) and 2023-12-31 (4186.382414).
+  - warning: [G] Unexpected jump of 64.9% in value between 2004-12-31 (174.64043) and 2005-12-31 (287.95651).
+  - warning: [G] Unexpected jump of 51.1% in value between 2006-12-31 (347.43921) and 2007-12-31 (524.81804).
+  - warning: [G] Unexpected jump of 517.9% in value between 2014-12-31 (1012.1874) and 2015-12-31 (6254.076552).
+  - warning: [G] Unexpected jump of 62.8% in value between 2017-12-31 (8503.373128) and 2018-12-31 (13843.776196).
+  - warning: [G] Unexpected jump of 89.9% in value between 2018-12-31 (13843.776196) and 2019-12-31 (26294.942354).
+  - warning: [H] Unexpected jump of 71.7% in value between 2000-12-31 (217.43435) and 2001-12-31 (373.2462).
+  - warning: [H] Unexpected jump of 91.8% in value between 2001-12-31 (373.2462) and 2002-12-31 (715.80175).
+  - warning: [H] Unexpected jump of 90.6% in value between 2004-12-31 (641.566) and 2005-12-31 (1222.93879).
+  - warning: [I] Unexpected jump of 76.8% in value between 2000-12-31 (156.92554) and 2001-12-31 (36.3348).
+  - warning: [I] Unexpected jump of 52.1% in value between 2009-12-31 (120.8372) and 2010-12-31 (183.7345).
+  - warning: [I] Unexpected jump of 66.6% in value between 2017-12-31 (398.311318) and 2018-12-31 (663.426694).
+  - warning: [J] Unexpected jump of 152.5% in value between 2003-12-31 (154.65965) and 2004-12-31 (390.4383).
+  - warning: [J] Unexpected jump of 59.2% in value between 2013-12-31 (1125.2828) and 2014-12-31 (1791.9944).
+  - warning: [K] Unexpected jump of 447.9% in value between 2005-12-31 (124.04895) and 2006-12-31 (679.7098).
+  - warning: [K] Unexpected jump of 64.4% in value between 2006-12-31 (679.7098) and 2007-12-31 (242.26647).
+  - warning: [L] Unexpected jump of 65.1% in value between 2001-12-31 (19.1354) and 2002-12-31 (31.5858).
+  - warning: [L] Unexpected jump of 68.9% in value between 2003-12-31 (45.08366) and 2004-12-31 (76.16295).
+  - warning: [L] Unexpected jump of 162.4% in value between 2005-12-31 (69.78474) and 2006-12-31 (183.12794).
+  - warning: [L] Unexpected jump of 76.4% in value between 2007-12-31 (209.6973) and 2008-12-31 (369.8378).
+  - warning: [L] Unexpected jump of 70.6% in value between 2024-12-31 (3293.645859) and 2025-12-31 (5618.090012).
+  - warning: [M] Unexpected jump of 528.4% in value between 2003-12-31 (142.24818) and 2004-12-31 (893.88303).
+  - warning: [M] Unexpected jump of 189.1% in value between 2012-12-31 (995.893) and 2013-12-31 (2878.7936).
+  - warning: [M] Unexpected jump of 151.9% in value between 2013-12-31 (2878.7936) and 2014-12-31 (7250.3605).
+  - warning: ... 17 more warnings not listed
+- **bns/FIXED_ASSETS_NET_BY_SECTION** — fetch+validate+process: ok (downloaded=521, processed=521)
+  - warning: [B] Unexpected jump of 65.6% in value between 2006-12-31 (1254.23243) and 2007-12-31 (2076.61364).
+  - warning: [B] Unexpected jump of 59.5% in value between 2015-12-31 (6105.910637) and 2016-12-31 (9740.960344).
+  - warning: [B] Unexpected jump of 60.7% in value between 2023-12-31 (18536.362494) and 2024-12-31 (29789.924967).
+  - warning: [F] Unexpected jump of 134.9% in value between 2002-12-31 (71.30727) and 2003-12-31 (167.52914).
+  - warning: [F] Unexpected jump of 71.6% in value between 2005-12-31 (267.5325) and 2006-12-31 (459.21161).
+  - warning: [F] Unexpected jump of 73.5% in value between 2019-12-31 (944.78868) and 2020-12-31 (1639.38327).
+  - warning: [F] Unexpected jump of 55.8% in value between 2022-12-31 (1392.517964) and 2023-12-31 (2169.704935).
+  - warning: [G] Unexpected jump of 64.2% in value between 2004-12-31 (144.22349) and 2005-12-31 (236.85408).
+  - warning: [G] Unexpected jump of 769.6% in value between 2014-12-31 (639.54) and 2015-12-31 (5561.48798).
+  - warning: [G] Unexpected jump of 59.5% in value between 2017-12-31 (7700.451946) and 2018-12-31 (12280.874913).
+  - warning: [G] Unexpected jump of 81.9% in value between 2018-12-31 (12280.874913) and 2019-12-31 (22342.315839).
+  - warning: [H] Unexpected jump of 54.6% in value between 2000-12-31 (147.56802) and 2001-12-31 (228.0726).
+  - warning: [H] Unexpected jump of 170.0% in value between 2001-12-31 (228.0726) and 2002-12-31 (615.83202).
+  - warning: [H] Unexpected jump of 60.4% in value between 2004-12-31 (496.64205) and 2005-12-31 (796.79195).
+  - warning: [I] Unexpected jump of 69.8% in value between 2000-12-31 (98.12387) and 2001-12-31 (29.6183).
+  - warning: [I] Unexpected jump of 65.8% in value between 2009-12-31 (86.5809) and 2010-12-31 (143.5782).
+  - warning: [I] Unexpected jump of 85.9% in value between 2017-12-31 (270.97032) and 2018-12-31 (503.748701).
+  - warning: [J] Unexpected jump of 197.6% in value between 2003-12-31 (96.23525) and 2004-12-31 (286.41569).
+  - warning: [J] Unexpected jump of 60.1% in value between 2006-12-31 (167.51686) and 2007-12-31 (268.14712).
+  - warning: [K] Unexpected jump of 484.0% in value between 2005-12-31 (91.70702) and 2006-12-31 (535.56735).
+  - warning: [K] Unexpected jump of 64.1% in value between 2006-12-31 (535.56735) and 2007-12-31 (192.08003).
+  - warning: [K] Unexpected jump of 56.6% in value between 2015-12-31 (462.626029) and 2016-12-31 (724.408622).
+  - warning: [L] Unexpected jump of 79.4% in value between 2001-12-31 (14.5714) and 2002-12-31 (26.14215).
+  - warning: [L] Unexpected jump of 79.1% in value between 2003-12-31 (35.52917) and 2004-12-31 (63.63488).
+  - warning: [L] Unexpected jump of 182.5% in value between 2005-12-31 (54.72651) and 2006-12-31 (154.59053).
+  - warning: [L] Unexpected jump of 74.5% in value between 2007-12-31 (171.48637) and 2008-12-31 (299.3071).
+  - warning: [L] Unexpected jump of 55.1% in value between 2018-12-31 (1317.954748) and 2019-12-31 (2044.305436).
+  - warning: [L] Unexpected jump of 58.3% in value between 2024-12-31 (2089.324259) and 2025-12-31 (3307.094198).
+  - warning: [M] Unexpected jump of 620.3% in value between 2003-12-31 (98.98684) and 2004-12-31 (712.97413).
+  - warning: [M] Unexpected jump of 72.7% in value between 2005-12-31 (487.90124) and 2006-12-31 (133.43177).
+  - warning: ... 28 more warnings not listed
+- **bns/FIXED_ASSETS_WEAR_BY_SECTION** — fetch+validate+process: ok (downloaded=481, processed=481)
+  - warning: [A] Gap of 731 days between 2003-12-31 and 2005-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [A] Gap of 731 days between 2006-12-31 and 2008-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [B] Gap of 1096 days between 2003-12-31 and 2006-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [C] Gap of 730 days between 2005-12-31 and 2007-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [D] Gap of 1461 days between 2001-12-31 and 2005-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [D] Gap of 1096 days between 2005-12-31 and 2008-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [D] Unexpected jump of 113.9% in value between 2018-12-31 (35.3) and 2019-12-31 (75.5).
+  - warning: [E] Gap of 2191 days between 2001-12-31 and 2007-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [E] Unexpected jump of 57.7% in value between 2008-12-31 (34.5) and 2009-12-31 (54.4).
+  - warning: [G] Unexpected jump of 69.8% in value between 2014-12-31 (36.8) and 2015-12-31 (11.1).
+  - warning: [G] Unexpected jump of 93.3% in value between 2019-12-31 (15.0) and 2020-12-31 (29.0).
+  - warning: [H] Unexpected jump of 64.0% in value between 2001-12-31 (38.9) and 2002-12-31 (14.0).
+  - warning: [H] Unexpected jump of 54.0% in value between 2004-12-31 (22.6) and 2005-12-31 (34.8).
+  - warning: [I] Gap of 2191 days between 2000-12-31 and 2006-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [J] Gap of 730 days between 2001-12-31 and 2003-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [J] Gap of 730 days between 2005-12-31 and 2007-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [K] Gap of 730 days between 2001-12-31 and 2003-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [K] Gap of 1096 days between 2003-12-31 and 2006-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [L] Gap of 730 days between 2001-12-31 and 2003-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [L] Gap of 1827 days between 2003-12-31 and 2008-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [L] Unexpected jump of 69.5% in value between 2000-12-31 (14.1) and 2001-12-31 (23.9).
+  - warning: [L] Unexpected jump of 56.6% in value between 2022-12-31 (29.5) and 2023-12-31 (46.2).
+  - warning: [M] Unexpected jump of 238.7% in value between 2005-12-31 (19.4) and 2006-12-31 (65.7).
+  - warning: [M] Unexpected jump of 68.1% in value between 2014-12-31 (76.7) and 2015-12-31 (24.5).
+  - warning: [M] Unexpected jump of 71.5% in value between 2017-12-31 (20.7) and 2018-12-31 (35.5).
+  - warning: [N] Gap of 730 days between 2004-12-31 and 2006-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [N] Gap of 731 days between 2006-12-31 and 2008-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [N] Unexpected jump of 61.2% in value between 2024-12-31 (28.6) and 2025-12-31 (46.1).
+  - warning: [P] Gap of 730 days between 2001-12-31 and 2003-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [Q] Gap of 731 days between 2006-12-31 and 2008-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: ... 3 more warnings not listed
+- **bns/FIXED_ASSETS_GROSS_BY_ASSET** — fetch+validate+process: ok (downloaded=134, processed=134)
+  - warning: [456307] Unexpected jump of 64.1% in value between 2008-12-31 (682.724) and 2009-12-31 (1120.046).
+  - warning: [456307] Unexpected jump of 299.5% in value between 2014-12-31 (2492.2745) and 2015-12-31 (9957.440552).
+  - warning: [456307] Unexpected jump of 120.3% in value between 2018-12-31 (6177.436502) and 2019-12-31 (13606.799947).
+  - warning: [456367] Unexpected jump of 67.6% in value between 2013-12-31 (75.4597) and 2014-12-31 (126.4585).
+  - warning: [456367] Unexpected jump of 94.2% in value between 2019-12-31 (191.080644) and 2020-12-31 (371.141739).
+  - warning: [456421] Unexpected jump of 63.1% in value between 2014-12-31 (351.4373) and 2015-12-31 (573.224133).
+- **bns/EMPLOYED_BY_SECTION_LONG** — fetch+validate+process: ok (downloaded=407, processed=407)
+  - warning: [S] Unexpected jump of 55.2% in value between 2011-12-31 (141.974) and 2012-12-31 (220.355).
+  - warning: [T] Unexpected jump of 64.1% in value between 2013-12-31 (14.591) and 2014-12-31 (5.245).
+  - warning: [U] Gap of 1096 days between 2009-12-31 and 2012-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [U] Unexpected jump of 508.7% in value between 2001-12-31 (0.046) and 2002-12-31 (0.28).
+  - warning: [U] Unexpected jump of 63.8% in value between 2003-12-31 (0.293) and 2004-12-31 (0.48).
+  - warning: [U] Unexpected jump of 53.2% in value between 2006-12-31 (0.171) and 2007-12-31 (0.08).
+  - warning: [U] Unexpected jump of 565.3% in value between 2009-12-31 (0.075) and 2012-12-31 (0.499).
+  - warning: [U] Unexpected jump of 54.7% in value between 2014-12-31 (0.552) and 2015-12-31 (0.25).
+- **nbk/CAPACITY_UTILIZATION_BY_SECTOR** — fetch+validate+process: ok (downloaded=588, processed=588)
+- **wb/WGI_GE** — fetch+validate+process: ok (downloaded=5168, processed=5168)
+  - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Unexpected jump of 55.1% in value between 2004-12-31 (-0.449955899999999) and 2005-12-31 (-0.697942699999999).
+  - warning: [ALB@world] Unexpected jump of 122.5% in value between 2013-12-31 (-0.356418399999999) and 2014-12-31 (0.0801175).
+  - warning: [ALB@world] Unexpected jump of 129.1% in value between 2014-12-31 (0.0801175) and 2015-12-31 (0.1835585).
+  - warning: [ALB@world] Unexpected jump of 90.1% in value between 2018-12-31 (0.2684643) and 2019-12-31 (0.0266494).
+  - warning: [ALB@world] Unexpected jump of 496.7% in value between 2020-12-31 (0.0187103) and 2021-12-31 (0.1116368).
+  - warning: [ALB@world] Unexpected jump of 72.9% in value between 2021-12-31 (0.1116368) and 2022-12-31 (0.1929668).
+  - warning: [ALB@world] Unexpected jump of 52.1% in value between 2022-12-31 (0.1929668) and 2023-12-31 (0.293429).
+  - warning: [DZA@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Unexpected jump of 72.3% in value between 2020-12-31 (-0.2693237) and 2021-12-31 (-0.4641151).
+  - warning: [ASM@world] Unexpected jump of 363.6% in value between 2004-12-31 (-0.0644599) and 2005-12-31 (-0.298856499999999).
+  - warning: [ASM@world] Unexpected jump of 172.6% in value between 2006-12-31 (-0.3018027) and 2007-12-31 (0.2189602).
+  - warning: [ASM@world] Unexpected jump of 225.1% in value between 2013-12-31 (0.23624) and 2014-12-31 (0.767958).
+  - warning: [AND@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Unexpected jump of 70.0% in value between 2005-12-31 (0.7337585) and 2006-12-31 (1.2471197).
+  - warning: [AGO@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Unexpected jump of 95.6% in value between 1996-12-31 (-0.5703424) and 1998-12-31 (-1.11557479999999).
+  - warning: [ATG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: ... 1158 more warnings not listed
+- **wb/WGI_RQ** — fetch+validate+process: ok (downloaded=5169, processed=5169)
+  - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Unexpected jump of 63.1% in value between 2005-12-31 (-0.355651799999999) and 2006-12-31 (-0.1313664).
+  - warning: [ALB@world] Unexpected jump of 94.7% in value between 2006-12-31 (-0.1313664) and 2007-12-31 (-0.00691089999999999).
+  - warning: [ALB@world] Unexpected jump of 653.1% in value between 2007-12-31 (-0.00691089999999999) and 2008-12-31 (0.0382242).
+  - warning: [ALB@world] Unexpected jump of 234.0% in value between 2008-12-31 (0.0382242) and 2009-12-31 (0.1276639).
+  - warning: [ALB@world] Unexpected jump of 255.3% in value between 2011-12-31 (0.053824) and 2012-12-31 (-0.0835796999999999).
+  - warning: [ALB@world] Unexpected jump of 188.4% in value between 2013-12-31 (-0.0639441999999999) and 2014-12-31 (0.056535).
+  - warning: [ALB@world] Unexpected jump of 71.9% in value between 2016-12-31 (0.0642829999999999) and 2017-12-31 (0.1105237).
+  - warning: [ALB@world] Unexpected jump of 121.3% in value between 2019-12-31 (0.0917374) and 2020-12-31 (-0.0195592999999999).
+  - warning: [ALB@world] Unexpected jump of 74.7% in value between 2020-12-31 (-0.0195592999999999) and 2021-12-31 (-0.0049463).
+  - warning: [ALB@world] Unexpected jump of 414.9% in value between 2021-12-31 (-0.0049463) and 2022-12-31 (0.0155769).
+  - warning: [ALB@world] Unexpected jump of 306.1% in value between 2022-12-31 (0.0155769) and 2023-12-31 (0.0632513).
+  - warning: [ALB@world] Unexpected jump of 114.6% in value between 2023-12-31 (0.0632513) and 2024-12-31 (0.1357347).
+  - warning: [DZA@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ASM@world] Unexpected jump of 494.7% in value between 2004-12-31 (0.0975081) and 2005-12-31 (0.5798426).
+  - warning: [ASM@world] Unexpected jump of 74.2% in value between 2013-12-31 (0.5635653) and 2014-12-31 (0.1453016).
+  - warning: [ASM@world] Unexpected jump of 147.2% in value between 2016-12-31 (0.1589592) and 2017-12-31 (-0.0750966).
+  - warning: [ASM@world] Unexpected jump of 660.5% in value between 2019-12-31 (-0.0709177) and 2020-12-31 (0.3974735).
+  - warning: [AND@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: ... 1071 more warnings not listed
+- **wb/WGI_RL** — fetch+validate+process: ok (downloaded=5296, processed=5296)
+  - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Unexpected jump of 120.9% in value between 1996-12-31 (-0.394600599999999) and 1998-12-31 (-0.871855199999999).
+  - warning: [ALB@world] Unexpected jump of 67.1% in value between 2018-12-31 (-0.1743527) and 2019-12-31 (-0.291428099999999).
+  - warning: [DZA@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ASM@world] Unexpected jump of 91.5% in value between 2004-12-31 (0.5451769) and 2005-12-31 (1.0437479).
+  - warning: [AND@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Unexpected jump of 64.4% in value between 2014-12-31 (0.5532204) and 2015-12-31 (0.9093919).
+  - warning: [ARG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ARG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ARG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ARG@world] Unexpected jump of 73.6% in value between 1996-12-31 (0.1293667) and 1998-12-31 (0.0341532).
+  - warning: [ARG@world] Unexpected jump of 570.1% in value between 1998-12-31 (0.0341532) and 2000-12-31 (-0.160553).
+  - warning: [ARG@world] Unexpected jump of 401.3% in value between 2000-12-31 (-0.160553) and 2002-12-31 (-0.804874299999999).
+  - warning: [ARG@world] Unexpected jump of 67.2% in value between 2018-12-31 (-0.2022099) and 2019-12-31 (-0.338125599999999).
+  - warning: [ARM@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: ... 976 more warnings not listed
+- **wb/WGI_CC** — fetch+validate+process: ok (downloaded=5201, processed=5201)
+  - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Unexpected jump of 74.5% in value between 1998-12-31 (-0.563184) and 2000-12-31 (-0.982770199999999).
+  - warning: [DZA@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Unexpected jump of 56.8% in value between 1996-12-31 (-0.6307227) and 1998-12-31 (-0.988979899999999).
+  - warning: [DZA@world] Unexpected jump of 53.3% in value between 2013-12-31 (-0.4058013) and 2014-12-31 (-0.6220502).
+  - warning: [ASM@world] Unexpected jump of 53.5% in value between 2005-12-31 (0.8590847) and 2006-12-31 (0.3992334).
+  - warning: [ASM@world] Unexpected jump of 199.4% in value between 2013-12-31 (0.3889352) and 2014-12-31 (1.1646295).
+  - warning: [ASM@world] Unexpected jump of 53.1% in value between 2016-12-31 (1.1716528) and 2017-12-31 (1.7934572).
+  - warning: [AND@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Unexpected jump of 54.0% in value between 2005-12-31 (0.6825636) and 2006-12-31 (1.0512639).
+  - warning: [ATG@world] Unexpected jump of 59.2% in value between 2013-12-31 (1.3250051) and 2014-12-31 (0.5405831).
+  - warning: [ATG@world] Unexpected jump of 69.3% in value between 2016-12-31 (0.6379406) and 2017-12-31 (0.1957295).
+  - warning: [ARG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ARG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ARG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: ... 1043 more warnings not listed
+- **wb/WGI_VA** — fetch+validate+process: ok (downloaded=5285, processed=5285)
+  - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Unexpected jump of 59.0% in value between 2000-12-31 (-0.524937099999999) and 2002-12-31 (-0.2153127).
+  - warning: [ALB@world] Unexpected jump of 91.7% in value between 2003-12-31 (-0.1267372) and 2004-12-31 (-0.0105244).
+  - warning: [ALB@world] Unexpected jump of 1056.2% in value between 2004-12-31 (-0.0105244) and 2005-12-31 (0.1006314).
+  - warning: [ALB@world] Unexpected jump of 75.9% in value between 2007-12-31 (0.0980996) and 2008-12-31 (0.1726).
+  - warning: [ALB@world] Unexpected jump of 103.8% in value between 2010-12-31 (0.1270914) and 2011-12-31 (-0.0048785).
+  - warning: [ALB@world] Unexpected jump of 1073.9% in value between 2011-12-31 (-0.0048785) and 2012-12-31 (-0.0572675).
+  - warning: [ALB@world] Unexpected jump of 259.8% in value between 2013-12-31 (-0.0615944) and 2014-12-31 (0.0984136999999999).
+  - warning: [ALB@world] Unexpected jump of 100.7% in value between 2020-12-31 (0.0554688) and 2021-12-31 (-0.000404299999999999).
+  - warning: [ALB@world] Unexpected jump of 6079.7% in value between 2021-12-31 (-0.000404299999999999) and 2022-12-31 (0.024176).
+  - warning: [ALB@world] Unexpected jump of 250.5% in value between 2022-12-31 (0.024176) and 2023-12-31 (-0.0363936).
+  - warning: [ALB@world] Unexpected jump of 65.9% in value between 2023-12-31 (-0.0363936) and 2024-12-31 (-0.0124167999999999).
+  - warning: [DZA@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ASM@world] Gap of 730 days between 2017-12-31 and 2019-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ASM@world] Unexpected jump of 131.2% in value between 2004-12-31 (0.263356) and 2005-12-31 (0.6088416).
+  - warning: [ASM@world] Unexpected jump of 71.4% in value between 2006-12-31 (0.6195371) and 2007-12-31 (1.0616691).
+  - warning: [AND@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: ... 1063 more warnings not listed
+- **wb/WGI_PV** — fetch+validate+process: ok (downloaded=5255, processed=5255)
+  - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Unexpected jump of 65.7% in value between 2006-12-31 (-0.549163) and 2007-12-31 (-0.188559199999999).
+  - warning: [ALB@world] Unexpected jump of 85.3% in value between 2007-12-31 (-0.188559199999999) and 2008-12-31 (-0.0276847).
+  - warning: [ALB@world] Unexpected jump of 533.3% in value between 2009-12-31 (-0.0272379) and 2010-12-31 (-0.1725061).
+  - warning: [ALB@world] Unexpected jump of 101.8% in value between 2010-12-31 (-0.1725061) and 2011-12-31 (-0.348045).
+  - warning: [ALB@world] Unexpected jump of 235.1% in value between 2013-12-31 (-0.1931708) and 2014-12-31 (0.2608816).
+  - warning: [ALB@world] Unexpected jump of 52.0% in value between 2014-12-31 (0.2608816) and 2015-12-31 (0.1252711).
+  - warning: [ALB@world] Unexpected jump of 97.1% in value between 2018-12-31 (0.1502032) and 2019-12-31 (0.00437499999999999).
+  - warning: [ALB@world] Unexpected jump of 214.0% in value between 2019-12-31 (0.00437499999999999) and 2020-12-31 (-0.0049854).
+  - warning: [ALB@world] Unexpected jump of 580.5% in value between 2020-12-31 (-0.0049854) and 2021-12-31 (0.0239536).
+  - warning: [ALB@world] Unexpected jump of 51.8% in value between 2021-12-31 (0.0239536) and 2022-12-31 (0.0115425).
+  - warning: [ALB@world] Unexpected jump of 113.6% in value between 2022-12-31 (0.0115425) and 2023-12-31 (0.0246567).
+  - warning: [DZA@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Unexpected jump of 66.8% in value between 2018-12-31 (-0.6370211) and 2019-12-31 (-1.06252749999999).
+  - warning: [ASM@world] Unexpected jump of 73.7% in value between 2004-12-31 (0.4095694) and 2005-12-31 (0.7112288).
+  - warning: [AND@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Unexpected jump of 81.8% in value between 2010-12-31 (-0.2720682) and 2011-12-31 (-0.494662599999999).
+  - warning: [AGO@world] Unexpected jump of 52.8% in value between 2019-12-31 (-0.420703899999999) and 2020-12-31 (-0.6427634).
+  - warning: ... 1424 more warnings not listed
+- **nbk/EXTERNAL_DEBT_SERVICE_SCHEDULE** — fetch+validate+process: ok (downloaded=242, processed=242)
+  - warning: [BANKS_PRINCIPAL_M01_03] Unexpected jump of 69.0% in value between 2026-01-01 (1823.493371) and 2026-04-01 (3081.595896).
+  - warning: [BANKS_PRINCIPAL_M13_15] Unexpected jump of 213.6% in value between 2026-01-01 (367.28231) and 2026-04-01 (1151.672673).
+  - warning: [BANKS_PRINCIPAL_M22_24] Unexpected jump of 56.9% in value between 2026-01-01 (670.831841) and 2026-04-01 (289.223123).
+  - warning: [CB_INTEREST_M01_03] Unexpected jump of 79.3% in value between 2026-01-01 (16.27827) and 2026-04-01 (29.18308).
+  - warning: [CB_INTEREST_M04_06] Unexpected jump of 79.3% in value between 2026-01-01 (16.27827) and 2026-04-01 (29.18308).
+  - warning: [CB_INTEREST_M07_09] Unexpected jump of 79.3% in value between 2026-01-01 (16.27827) and 2026-04-01 (29.18308).
+  - warning: [CB_INTEREST_M10_12] Unexpected jump of 79.3% in value between 2026-01-01 (16.27827) and 2026-04-01 (29.18308).
+  - warning: [CB_INTEREST_M13_15] Unexpected jump of 79.3% in value between 2026-01-01 (16.27827) and 2026-04-01 (29.18308).
+  - warning: [CB_INTEREST_M16_18] Unexpected jump of 79.3% in value between 2026-01-01 (16.27827) and 2026-04-01 (29.18308).
+  - warning: [CB_INTEREST_M19_21] Unexpected jump of 79.3% in value between 2026-01-01 (16.27827) and 2026-04-01 (29.18308).
+  - warning: [CB_INTEREST_M22_24] Unexpected jump of 79.3% in value between 2026-01-01 (16.27827) and 2026-04-01 (29.18308).
+  - warning: [CB_PRINCIPAL_ON_DEMAND] Unexpected jump of 53.0% in value between 2026-01-01 (299.6748) and 2026-04-01 (140.884212).
+  - warning: [GG_PRINCIPAL_M01_03] Unexpected jump of 245.5% in value between 2026-01-01 (117.139778) and 2026-04-01 (404.691357).
+  - warning: [GG_PRINCIPAL_M16_18] Unexpected jump of 54.1% in value between 2026-01-01 (191.108714) and 2026-04-01 (294.50792).
+- **bns/INCOME_SHARE_BY_DECILE** — fetch+validate+process: ok (downloaded=150, processed=150)
+- **bns/INCOME_SHARE_BY_DECILE_QUARTERLY** — fetch+validate+process: ok (downloaded=570, processed=570)
+  - warning: [D01] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D01] Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D02] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D02] Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D03] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D03] Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D04] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D04] Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D05] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D05] Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D06] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D06] Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D07] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D07] Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D08] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D08] Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D09] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D09] Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D10] Gap of 365 days between 2016-10-01 and 2017-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [D10] Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+- **bns/INCOME_MEAN_BY_DECILE** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **bns/INCOME_MEAN_BY_DECILE_QUARTERLY** — fetch+validate+process: ok (downloaded=150, processed=150)
+- **bns/INCOME_UPPER_BOUND_BY_DECILE** — fetch+validate+process: ok (downloaded=40, processed=40)
+  - warning: [D10] Unexpected jump of 137.6% in value between 2022-12-31 (1768255.0) and 2023-12-31 (4201945.0).
+  - warning: [D10] Unexpected jump of 52.2% in value between 2024-12-31 (5428190.0) and 2025-12-31 (2593486.0).
+- **bns/INCOME_UPPER_BOUND_BY_DECILE_QUARTERLY** — fetch+validate+process: ok (downloaded=150, processed=150)
+  - warning: [D10] Unexpected jump of 88.0% in value between 2022-10-01 (1578072.0) and 2023-01-01 (2966418.0).
+  - warning: [D10] Unexpected jump of 78.0% in value between 2023-07-01 (2360503.0) and 2023-10-01 (4201945.0).
+  - warning: [D10] Unexpected jump of 57.0% in value between 2023-10-01 (4201945.0) and 2024-01-01 (1806770.0).
+  - warning: [D10] Unexpected jump of 264.0% in value between 2024-04-01 (1517958.0) and 2024-07-01 (5524982.0).
+  - warning: [D10] Unexpected jump of 64.6% in value between 2024-07-01 (5524982.0) and 2024-10-01 (1953537.0).
+- **bns/HH_EXPENDITURE_BOTTOM_TOP_DECILE** — fetch+validate+process: ok (downloaded=400, processed=400)
+  - warning: [D01_MONEY_EXPENDITURE] Gap of 731 days between 2018-12-31 and 2020-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [D01_MONEY_EXPENDITURE] Unexpected jump of 89.6% in value between 2010-12-31 (10228974.0) and 2011-12-31 (1067474.0).
+  - warning: [D10_MONEY_EXPENDITURE] Unexpected jump of 89.1% in value between 2010-12-31 (64149322.0) and 2011-12-31 (6964912.0).
+  - warning: [D01_CONSUMER_EXPENDITURE] Gap of 731 days between 2018-12-31 and 2020-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [D01_CONSUMER_EXPENDITURE] Unexpected jump of 89.6% in value between 2010-12-31 (9914247.0) and 2011-12-31 (1031924.0).
+  - warning: [D10_CONSUMER_EXPENDITURE] Unexpected jump of 89.2% in value between 2010-12-31 (58502884.0) and 2011-12-31 (6311881.0).
+  - warning: [D01_FOOD] Unexpected jump of 88.8% in value between 2010-12-31 (5039245.0) and 2011-12-31 (564344.0).
+  - warning: [D10_FOOD] Unexpected jump of 88.3% in value between 2010-12-31 (23695300.0) and 2011-12-31 (2783286.0).
+  - warning: [D01_EATING_OUT] Unexpected jump of 85.8% in value between 2005-12-31 (23702.0) and 2006-12-31 (44032.0).
+  - warning: [D01_EATING_OUT] Unexpected jump of 87.7% in value between 2010-12-31 (130376.0) and 2011-12-31 (16009.0).
+  - warning: [D01_EATING_OUT] Unexpected jump of 55.2% in value between 2021-12-31 (13352.0) and 2022-12-31 (20718.0).
+  - warning: [D01_EATING_OUT] Unexpected jump of 76.6% in value between 2022-12-31 (20718.0) and 2023-12-31 (36596.0).
+  - warning: [D10_EATING_OUT] Unexpected jump of 88.3% in value between 2010-12-31 (2041874.0) and 2011-12-31 (238618.0).
+  - warning: [D10_EATING_OUT] Unexpected jump of 66.0% in value between 2020-12-31 (188070.0) and 2021-12-31 (312247.0).
+  - warning: [D01_NONFOOD] Unexpected jump of 89.9% in value between 2010-12-31 (2659636.0) and 2011-12-31 (267641.0).
+  - warning: [D10_NONFOOD] Unexpected jump of 64.1% in value between 2005-12-31 (8744363.0) and 2006-12-31 (14350296.0).
+  - warning: [D10_NONFOOD] Unexpected jump of 89.5% in value between 2010-12-31 (18757882.0) and 2011-12-31 (1962805.0).
+  - warning: [D01_SERVICES] Unexpected jump of 91.0% in value between 2010-12-31 (2215366.0) and 2011-12-31 (199939.0).
+  - warning: [D10_SERVICES] Unexpected jump of 90.2% in value between 2010-12-31 (16049702.0) and 2011-12-31 (1565790.0).
+  - warning: [D01_TRANSFERS_TO_HOUSEHOLDS] Unexpected jump of 72.3% in value between 2006-12-31 (50964.0) and 2007-12-31 (87803.0).
+  - warning: [D01_TRANSFERS_TO_HOUSEHOLDS] Unexpected jump of 65.2% in value between 2008-12-31 (73395.0) and 2009-12-31 (121252.0).
+  - warning: [D01_TRANSFERS_TO_HOUSEHOLDS] Unexpected jump of 67.0% in value between 2009-12-31 (121252.0) and 2010-12-31 (202445.0).
+  - warning: [D01_TRANSFERS_TO_HOUSEHOLDS] Unexpected jump of 89.0% in value between 2010-12-31 (202445.0) and 2011-12-31 (22316.0).
+  - warning: [D10_TRANSFERS_TO_HOUSEHOLDS] Unexpected jump of 87.1% in value between 2010-12-31 (2538510.0) and 2011-12-31 (326574.0).
+  - warning: [D01_TAXES_AND_PAYMENTS] Unexpected jump of 115.6% in value between 2006-12-31 (3228.0) and 2007-12-31 (6961.0).
+  - warning: [D01_TAXES_AND_PAYMENTS] Unexpected jump of 80.5% in value between 2010-12-31 (10549.0) and 2011-12-31 (2058.0).
+  - warning: [D01_TAXES_AND_PAYMENTS] Unexpected jump of 50.1% in value between 2017-12-31 (1340.0) and 2018-12-31 (2012.0).
+  - warning: [D01_TAXES_AND_PAYMENTS] Unexpected jump of 57.8% in value between 2021-12-31 (2606.0) and 2022-12-31 (4111.0).
+  - warning: [D01_TAXES_AND_PAYMENTS] Unexpected jump of 75.0% in value between 2023-12-31 (3268.0) and 2024-12-31 (5719.0).
+  - warning: [D10_TAXES_AND_PAYMENTS] Unexpected jump of 80.2% in value between 2006-12-31 (58600.0) and 2007-12-31 (105614.0).
+  - warning: ... 5 more warnings not listed
+- **kase/EUROBOND_PRICE_BY_ISSUE** — fetch+validate+process: ok (downloaded=616, processed=616)
+  - warning: [XS1901718335] Gap of 153 days between 2020-06-01 and 2020-11-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [XS2050933899] Gap of 153 days between 2020-06-01 and 2020-11-01 is outside expected range for frequency=monthly (25-40d).
+- **kase/EUROBOND_YTM_BY_ISSUE** — fetch+validate+process: ok (downloaded=616, processed=616)
+  - warning: [XS1263054519] Unexpected jump of 74.2% in value between 2020-02-01 (2.0326) and 2020-03-01 (3.54).
+  - warning: [XS1263054519] Unexpected jump of 52.6% in value between 2022-07-01 (3.25) and 2022-08-01 (4.96).
+  - warning: [XS1901718335] Gap of 153 days between 2020-06-01 and 2020-11-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [XS1901718335] Unexpected jump of 221.2% in value between 2020-02-01 (0.6885) and 2020-03-01 (2.2115).
+  - warning: [XS1901718335] Unexpected jump of 56.0% in value between 2020-06-01 (1.773) and 2020-11-01 (0.78).
+  - warning: [XS1901718335] Unexpected jump of 67.4% in value between 2021-12-01 (0.86) and 2022-01-01 (1.44).
+  - warning: [XS1901718335] Unexpected jump of 53.5% in value between 2022-01-01 (1.44) and 2022-02-01 (2.21).
+  - warning: [XS1901718335] Unexpected jump of 63.3% in value between 2022-02-01 (2.21) and 2022-03-01 (3.61).
+  - warning: [XS1901718335] Unexpected jump of 71.8% in value between 2024-05-01 (2.41) and 2024-06-01 (0.68).
+  - warning: [XS1901718335] Unexpected jump of 410.3% in value between 2024-06-01 (0.68) and 2024-07-01 (3.47).
+  - warning: [XS1901718335] Unexpected jump of 72.1% in value between 2024-09-01 (1.97) and 2024-10-01 (3.39).
+  - warning: [XS1901718335] Unexpected jump of 171.1% in value between 2026-08-01 (3.81) and 2026-09-01 (10.33).
+  - warning: [XS2050933899] Gap of 153 days between 2020-06-01 and 2020-11-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [XS2050933899] Unexpected jump of 56.2% in value between 2020-06-01 (1.554) and 2020-11-01 (0.68).
+  - warning: [XS2050933899] Unexpected jump of 69.7% in value between 2021-12-01 (0.76) and 2022-01-01 (1.29).
+  - warning: [XS2050933899] Unexpected jump of 59.7% in value between 2022-01-01 (1.29) and 2022-02-01 (2.06).
+  - warning: [XS2050933899] Unexpected jump of 68.9% in value between 2022-02-01 (2.06) and 2022-03-01 (3.48).
+  - warning: [XS2050933899] Unexpected jump of 79.2% in value between 2022-11-01 (2.89) and 2022-12-01 (0.6).
+  - warning: [XS2050933899] Unexpected jump of 435.0% in value between 2022-12-01 (0.6) and 2023-01-01 (3.21).
+  - warning: [XS2050933899] Unexpected jump of 206.9% in value between 2026-08-01 (3.9) and 2026-09-01 (11.97).
+- **kase/EUROBOND_SPREAD_BY_ISSUE** — fetch+validate+process: ok (downloaded=415, processed=415)
+  - warning: [XS1120709669] Unexpected jump of 50.9% in value between 2019-12-01 (53.0) and 2020-01-01 (80.0).
+  - warning: [XS1120709669] Unexpected jump of 97.0% in value between 2020-01-01 (80.0) and 2020-02-01 (157.6).
+  - warning: [XS1120709669] Unexpected jump of 59.3% in value between 2020-02-01 (157.6) and 2020-03-01 (251.1).
+  - warning: [XS1120709669] Unexpected jump of 87.7% in value between 2022-03-01 (147.8) and 2022-04-01 (18.2).
+  - warning: [XS1120709669] Unexpected jump of 602.5% in value between 2022-06-01 (12.0) and 2022-07-01 (84.3).
+  - warning: [XS1120709669] Unexpected jump of 83.7% in value between 2022-07-01 (84.3) and 2022-08-01 (154.9).
+  - warning: [XS1120709669] Unexpected jump of 84.5% in value between 2022-12-01 (122.3) and 2023-01-01 (19.0).
+  - warning: [XS1120709669] Unexpected jump of 427.4% in value between 2023-01-01 (19.0) and 2023-02-01 (100.2).
+  - warning: [XS1120709669] Unexpected jump of 64.7% in value between 2023-02-01 (100.2) and 2023-03-01 (35.4).
+  - warning: [XS1120709669] Unexpected jump of 257.3% in value between 2023-03-01 (35.4) and 2023-04-01 (-55.7).
+  - warning: [XS1120709669] Unexpected jump of 64.8% in value between 2023-04-01 (-55.7) and 2023-05-01 (-91.8).
+  - warning: [XS1120709826] Unexpected jump of 83.0% in value between 2020-02-01 (150.9) and 2020-03-01 (276.1).
+  - warning: [XS1120709826] Unexpected jump of 90.1% in value between 2021-03-01 (48.5) and 2021-04-01 (92.2).
+  - warning: [XS1120709826] Unexpected jump of 56.9% in value between 2022-01-01 (60.6) and 2022-02-01 (95.1).
+  - warning: [XS1120709826] Unexpected jump of 54.6% in value between 2022-03-01 (108.8) and 2022-04-01 (49.4).
+  - warning: [XS1120709826] Unexpected jump of 460.8% in value between 2022-06-01 (24.5) and 2022-07-01 (137.4).
+  - warning: [XS1120709826] Unexpected jump of 57.0% in value between 2022-08-01 (118.5) and 2022-09-01 (50.9).
+  - warning: [XS1120709826] Unexpected jump of 102.2% in value between 2022-10-01 (49.3) and 2022-11-01 (99.7).
+  - warning: [XS1120709826] Unexpected jump of 101.7% in value between 2023-02-01 (94.8) and 2023-03-01 (191.2).
+  - warning: [XS1120709826] Unexpected jump of 77.9% in value between 2023-05-01 (89.2) and 2023-06-01 (158.7).
+  - warning: [XS1120709826] Unexpected jump of 58.5% in value between 2024-06-01 (44.3) and 2024-07-01 (70.2).
+  - warning: [XS1120709826] Unexpected jump of 72.3% in value between 2025-03-01 (85.8) and 2025-04-01 (23.8).
+  - warning: [XS1120709826] Unexpected jump of 325.2% in value between 2025-04-01 (23.8) and 2025-05-01 (101.2).
+  - warning: [XS1263054519] Unexpected jump of 65.5% in value between 2019-12-01 (49.0) and 2020-01-01 (81.1).
+  - warning: [XS1263054519] Unexpected jump of 181.8% in value between 2020-02-01 (111.5) and 2020-03-01 (314.2).
+  - warning: [XS1263054519] Unexpected jump of 54.8% in value between 2021-09-01 (42.9) and 2021-10-01 (66.4).
+  - warning: [XS1263054519] Unexpected jump of 88.9% in value between 2022-03-01 (147.5) and 2022-04-01 (16.4).
+  - warning: [XS1263054519] Unexpected jump of 252.1% in value between 2022-06-01 (11.9) and 2022-07-01 (41.9).
+  - warning: [XS1263054519] Unexpected jump of 258.2% in value between 2022-07-01 (41.9) and 2022-08-01 (150.1).
+  - warning: [XS1263054519] Unexpected jump of 88.9% in value between 2022-08-01 (150.1) and 2022-09-01 (16.6).
+  - warning: ... 13 more warnings not listed
+- **bns/GDP_NOMINAL** — derive+validate+process: ok (downloaded=0, processed=66)
+  - warning: Unexpected jump of 54.0% in own-period contribution between 2019-07-01 (16389294000000.0) and 2019-10-01 (25234714400000.0).
+  - warning: Unexpected jump of 50.4% in own-period contribution between 2022-07-01 (25453465300000.0) and 2022-10-01 (38277720300000.0).
+  - warning: Unexpected jump of 55.1% in own-period contribution between 2023-07-01 (28302148800000.0) and 2023-10-01 (43895469400000.0).
+  - warning: Unexpected jump of 58.6% in own-period contribution between 2024-07-01 (32619885800000.0) and 2024-10-01 (51730692200000.0).
+  - warning: Unexpected jump of 56.1% in own-period contribution between 2025-07-01 (38353076600000.0) and 2025-10-01 (59883654400000.0).
+- **bns/IND_PROD** — derive+validate+process: ok (downloaded=0, processed=36)
+- **bns/INVESTMENT** — derive+validate+process: ok (downloaded=0, processed=23)
+- **bns/EXPORTS** — derive+validate+process: ok (downloaded=0, processed=139)
+  - warning: Unexpected jump of 51.5% in value between 2019-03-01 (3433642.2448500046) and 2019-04-01 (5201089.066599997).
+  - warning: Unexpected jump of 56.4% in value between 2026-05-01 (6276443.178570007) and 2026-06-01 (9816470.38185002).
+- **bns/POPULATION_BNS** — derive+validate+process: ok (downloaded=0, processed=17)
+- **bns/EMPLOYED_TOTAL** — derive+validate+process: ok (downloaded=0, processed=25)
+- **bns/ELECTRICITY_PRODUCTION** — derive+validate+process: ok (downloaded=0, processed=36)
+- **bns/IND_PROD_MINING** — derive+validate+process: ok (downloaded=0, processed=36)
+- **bns/IND_PROD_MANUFACTURING** — derive+validate+process: ok (downloaded=0, processed=36)
+- **bns/IND_PROD_ELECTRICITY** — derive+validate+process: ok (downloaded=0, processed=36)
+- **bns/OIL_EXPORTS_VOLUME** — derive+validate+process: ok (downloaded=0, processed=138)
+  - warning: Gap of 61 days between 2022-08-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 73.5% in value between 2015-11-01 (3505831.705) and 2015-12-01 (6081418.586).
+  - warning: Unexpected jump of 50.5% in value between 2016-10-01 (3619647.65) and 2016-11-01 (5446858.953000001).
+  - warning: Unexpected jump of 79.5% in value between 2019-03-01 (3672571.312) and 2019-04-01 (6591446.144).
+- **bns/OIL_EXPORTS_VALUE** — derive+validate+process: ok (downloaded=0, processed=138)
+  - warning: Gap of 61 days between 2022-08-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: Unexpected jump of 78.1% in value between 2015-11-01 (1204567.52033) and 2015-12-01 (2144858.4615100003).
+  - warning: Unexpected jump of 53.2% in value between 2016-10-01 (1255334.6315999997) and 2016-11-01 (1923385.0775900001).
+  - warning: Unexpected jump of 59.8% in value between 2018-11-01 (2546418.4177900003) and 2018-12-01 (4069650.12449).
+  - warning: Unexpected jump of 103.5% in value between 2019-03-01 (1491802.4709100001) and 2019-04-01 (3035310.9776399997).
+  - warning: Unexpected jump of 85.1% in value between 2020-07-01 (724067.95389) and 2020-08-01 (1340585.92528).
+  - warning: Unexpected jump of 86.7% in value between 2026-05-01 (2768427.89497) and 2026-06-01 (5169473.5938).
+- **bns/GFCF** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/GFCF_VOLUME_INDEX** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/NET_EXPORTS** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/HOUSEHOLD_CONSUMPTION** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/GROSS_ACCUMULATION** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/IMPORT_VOLUME_INDEX** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/EXPORT_VOLUME_INDEX** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/TOTAL_CONSUMPTION_EXPENDITURE** — fill_gaps: ok (downloaded=0, processed=4)

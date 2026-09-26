@@ -11,10 +11,10 @@
   "geography": "Kazakhstan (national)",
   "methodology": "%. Weighted average lending rate, national-currency loans only, all other dimensions (maturity/purpose/region/subject/entity size/funding source) aggregated by NBK itself.",
   "publication_date": null,
-  "last_update_date": "2026-09-24",
-  "download_date": "2026-09-24",
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
   "period_start": "2021-12-01",
-  "period_end": "2026-07-01",
+  "period_end": "2026-08-01",
   "next_update_date": null,
   "transformation": "level",
   "revision_status": "original"

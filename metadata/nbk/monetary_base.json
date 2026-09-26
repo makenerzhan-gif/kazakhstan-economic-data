@@ -11,11 +11,11 @@
   "geography": "Kazakhstan (national)",
   "methodology": "Million KZT, monetary base (reserve money, broad), stock at the end of the month, dated as at the first day of the next month; from 1994 (NBK page records). Replaced open-data form 51 on 2026-09-25, whose 2021-12..2022-12 values were wrong.",
   "publication_date": null,
-  "last_update_date": "2026-09-25",
-  "download_date": "2026-09-25",
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
   "period_start": "1994-02-01",
   "period_end": "2026-09-01",
   "next_update_date": null,
   "transformation": "level",
-  "revision_status": "revised"
+  "revision_status": "original"
 }

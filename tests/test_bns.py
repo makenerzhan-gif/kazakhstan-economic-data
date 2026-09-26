@@ -61,3 +61,17 @@ def test_wage_1t_quarterly_pairs_of_label_and_value_rows():
     assert [(r["date"], r["value"]) for r in recs] == [
         ("2015-03-31", 118638.0), ("2015-06-30", 124227.0), ("2015-09-30", 124656.0), ("2015-12-31", 136094.0),
         ("2026-03-31", 461486.0), ("2026-06-30", 486388.0)]
+
+
+def test_sheet_dump_row_final_energy_new_format():
+    """BNS element 8582 became an xlsx-as-JSON dump on 2026-09-26 (was a json_cube)."""
+    from fetchers import bns as _bns
+    data = {"Показатель": [
+        {"A": "Общее конечное потребление энергии", "B": None, "C": None, "D": None},
+        {"A": None, "B": None, "C": "Единица", "D": 1991, "E": 1992, "F": 1993, "G": 1994, "H": 2025},
+        {"A": 1, "B": "Общее  конечное потребление энергии ", "C": "1000 т.н.э.", "D": 62556.9, "E": 65762.9,
+         "F": 54518, "G": 41665.7, "H": 48482.8},
+        {"A": 2, "B": "Промышленность", "C": "1000 т.н.э.", "D": 1.0, "E": 1.0, "F": 1.0, "G": 1.0, "H": 1.0}]}
+    got = _bns.parse_sheet_dump_row(data, "Показатель", "Общее конечное потребление энергии")
+    assert got[0] == {"date": "1991-12-31", "value": 62556.9} and got[-1] == {"date": "2025-12-31", "value": 48482.8}
+    assert len(got) == 5

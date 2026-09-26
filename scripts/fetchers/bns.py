@@ -977,6 +977,33 @@ def fetch_energy_consumption() -> tuple[list[dict], dict]:
     )
 
 
+def parse_sheet_dump_row(data: dict, sheet: str, label: str) -> list[dict]:
+    """[{date: YYYY-12-31, value}] from a BNS xlsx-as-JSON dump ({sheet: [row dicts]}): the
+    header row is the one whose cells hold years, the data row the one with a cell equal to
+    `label` (whitespace-normalised)."""
+    rows = data.get(sheet)
+    if not isinstance(rows, list):
+        return []
+    years: dict[str, int] = {}
+    for r in rows:
+        cand = {k: int(v) for k, v in r.items() if isinstance(v, (int, float)) and not isinstance(v, bool)
+                and float(v).is_integer() and 1900 <= v <= 2100}
+        if len(cand) >= 5:
+            years = cand
+            break
+    target = " ".join(label.split())
+    for r in rows:
+        if any(isinstance(v, str) and " ".join(v.split()) == target for v in r.values()):
+            out = []
+            for k, y in years.items():
+                v = r.get(k)
+                if isinstance(v, (int, float)) and not isinstance(v, bool):
+                    out.append({"date": f"{y:04d}-12-31", "value": float(v)})
+            if out:                                 # a title row repeats the label without values
+                return sorted(out, key=lambda x: x["date"])
+    return []
+
+
 def fetch_final_energy_consumption() -> tuple[list[dict], dict]:
     """Total final energy consumption, thousand tonnes of oil equivalent,
     annual -- companion to ENERGY_CONSUMPTION (primary consumption, which
@@ -998,6 +1025,25 @@ def fetch_final_energy_consumption() -> tuple[list[dict], dict]:
 
     import json
     data = json.loads(content)
+
+    # 2026-09-26: BNS replaced this element's json_cube (a list of slices with termNames)
+    # by a dump of the xlsx -- {sheet name: [row dicts]} -- whose sheet «Показатель» carries
+    # the series from 1991 (the cube began in 2015). The overlapping 2015-2025 values are
+    # the same. Both formats are read; anything else is a structural change.
+    if isinstance(data, dict):
+        records = parse_sheet_dump_row(data, "Показатель", "Общее конечное потребление энергии")
+        if len(records) < 11:
+            raise validation.StructuralChangeError(
+                f"bns/FINAL_ENERGY_CONSUMPTION: sheet dump of {url} gave {len(records)} years; "
+                f"sheets {list(data)[:6]}")
+        return records, {
+            "frequency": "annual", "source_url": url, "dataset_id": str(element_id),
+            "note": "Thousand toe, from 1991 (BNS element 8582, sheet «Показатель»). Excludes "
+                    "conversion/transformation losses, unlike primary consumption (ENERGY_CONSUMPTION).",
+        }
+    if not isinstance(data, list) or not all(isinstance(e, dict) for e in data):
+        raise validation.StructuralChangeError(
+            f"bns/FINAL_ENERGY_CONSUMPTION: {url} is neither a json_cube list nor a sheet dump ({type(data).__name__})")
 
     TARGET = ["РЕСПУБЛИКА КАЗАХСТАН", "Всего"]
     match = next((entry for entry in data if entry.get("termNames") == TARGET), None)

@@ -1,0 +1,23 @@
+{
+  "downloaded_at": "2026-09-26T05:51:12.174976",
+  "raw_file": "nbs_cn_gdp_real_yoy_2026-09-25.json",
+  "source_url": "https://data.stats.gov.cn/dg/website/publicrelease/web/external/stream/esData",
+  "request_body": {
+    "cid": "f9b694c9b79e4ce5958bc88c6410fa67",
+    "indicatorIds": [
+      "170e7f00f8c24ede863c0526b42ae81f"
+    ],
+    "daCatalogId": "",
+    "das": [
+      {
+        "text": "全国",
+        "value": "000000000000"
+      }
+    ],
+    "dts": [
+      "199201SS-202604SS"
+    ],
+    "showType": "1",
+    "rootId": "a94b8b7365a94874968cabbe392cf679"
+  }
+}

@@ -11,10 +11,10 @@
   "geography": "Russian Federation",
   "methodology": "Rubles per US dollar, the Bank of Russia's official rate, dated by the day it APPLIES to (set the business day before), from 1998-01-01 (after the redenomination). Since mid-2024 it is set from the OTC market (Moscow Exchange dollar trading halted). Accumulated across runs.",
   "publication_date": null,
-  "last_update_date": "2026-09-25",
-  "download_date": "2026-09-25",
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
   "period_start": "1998-01-01",
-  "period_end": "2026-09-25",
+  "period_end": "2026-09-26",
   "next_update_date": null,
   "transformation": "level",
   "revision_status": "original"
