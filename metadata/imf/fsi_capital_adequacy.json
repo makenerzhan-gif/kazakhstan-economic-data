@@ -1,0 +1,21 @@
+{
+  "source": "imf",
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/FSIC/+/KAZ.S12CFSI.FSI688_CFSI_PT.Q",
+  "dataset_id": "IMF.STA/FSIC/KAZ.S12CFSI.FSI688_CFSI_PT.Q",
+  "indicator_id": "FSI_CAPITAL_ADEQUACY",
+  "indicator_name": "Regulatory capital to risk-weighted assets, deposit takers (IMF FSI)",
+  "description": "Достаточность капитала депозитных организаций: регулятивный капитал к активам, взвешенным по риску (МВФ FSI)",
+  "frequency": "quarterly",
+  "unit": "%",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "IMF Financial Soundness Indicators (dataflow IMF.STA/FSIC), core indicators for deposit takers, reported by the Kazakh authorities (NBK, then ARDFM), quarterly. Regulatory capital to risk-weighted assets, %, deposit takers, end of quarter. Equal to NBK CAPITAL_ADEQUACY_RATIO (form 314) over 2019Q4-2024Q1 to 0.005 pp.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2008-03-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

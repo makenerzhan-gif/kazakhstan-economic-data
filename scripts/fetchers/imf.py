@@ -489,6 +489,89 @@ def _fetch_sdmx_monthly(indicator_id: str, dataflow: str, version: str, key: str
     return records, manifest
 
 
+# ---------------------------------------------------------------------------
+# Financial Soundness Indicators (IMF.STA FSIC), deposit takers (sector S12CFSI),
+# quarterly from 2008Q1.
+#
+# WHY. NBK form 314 -- CAPITAL_ADEQUACY_RATIO, NPL_RATIO, BANK_ROA, BANK_ROE --
+# stopped at the report of 01.04.2024 when supervision moved to ARDFM, and ARDFM's
+# monthly bulletin keeps only its last three editions online, so the successors
+# start in 2026. Kazakhstan kept reporting FSIs to the IMF throughout. Checked on
+# 2026-09-26 over the 18 quarters both cover: regulatory capital to RWA, ROA and
+# ROE equal NBK form 314 to within 0.005 pp once NBK's report date is read as the
+# end of the previous quarter -- the same compiler's numbers, so these continue
+# form 314 through 2025Q4. NPL does NOT match (8.1 % against 5.3 % at end-2019,
+# converging to within 0.03 pp by 2024Q1): the national and FSI definitions of a
+# non-performing loan differ, so FSI_NPL_RATIO is a separate series.
+#
+# Dates: TIME_PERIOD 2025-Q4. Ratios of stocks (capital, NPL, liquidity, FX
+# loans) are point-in-time and keep the quarter-end date the parser gives;
+# ROA and ROE are annualised returns over the period and are normalised to the
+# quarter start, as every period series here is.
+FSI_DATAFLOW, FSI_VERSION = "FSIC", "+"  # '+' = latest version of the dataflow
+
+
+def _fetch_fsi(indicator_id: str, fsi_code: str, note: str) -> tuple[list[dict], dict]:
+    key = f"KAZ.S12CFSI.{fsi_code}.Q"
+    url = f"{BASE_URL}/IMF.STA/{FSI_DATAFLOW}/{FSI_VERSION}/{key}"
+    content = _download(url)
+    today = date.today()
+    raw_store.save_raw_bytes(SOURCE, indicator_id, today, "csv", content)
+    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
+        "source_url": url, "downloaded_at": datetime.now().isoformat(),
+        "dataflow": FSI_DATAFLOW, "version": FSI_VERSION, "series_key": key,
+    })
+    records = _parse_sdmx_csv(content, indicator_id, url)
+    return records, {"frequency": "quarterly", "source_url": url,
+                     "dataset_id": f"IMF.STA/{FSI_DATAFLOW}/{key}", "note": note,
+                     "methodology": "IMF Financial Soundness Indicators (dataflow IMF.STA/FSIC), core "
+                                    "indicators for deposit takers, reported by the Kazakh authorities "
+                                    "(NBK, then ARDFM), quarterly. " + note}
+
+
+def fetch_fsi_capital_adequacy() -> tuple[list[dict], dict]:
+    return _fetch_fsi("FSI_CAPITAL_ADEQUACY", "FSI688_CFSI_PT",
+                      "Regulatory capital to risk-weighted assets, %, deposit takers, end of quarter. "
+                      "Equal to NBK CAPITAL_ADEQUACY_RATIO (form 314) over 2019Q4-2024Q1 to 0.005 pp.")
+
+
+def fetch_fsi_tier1_capital() -> tuple[list[dict], dict]:
+    return _fetch_fsi("FSI_TIER1_CAPITAL", "FSI626_CFSI_PT",
+                      "Tier 1 capital to risk-weighted assets, %, deposit takers, end of quarter.")
+
+
+def fetch_fsi_npl_ratio() -> tuple[list[dict], dict]:
+    return _fetch_fsi("FSI_NPL_RATIO", "FSI17_CFSI_PT",
+                      "Nonperforming loans to total gross loans, %, deposit takers, end of quarter, IMF "
+                      "FSI definition. NOT the NBK NPL_RATIO: 5.3 % against 8.1 % at end-2019.")
+
+
+def fetch_fsi_roa() -> tuple[list[dict], dict]:
+    return _fetch_fsi("FSI_ROA", "ROA_CFSI_PT",
+                      "Return on assets, % a year, deposit takers. Equal to NBK BANK_ROA shifted one quarter.")
+
+
+def fetch_fsi_roe() -> tuple[list[dict], dict]:
+    return _fetch_fsi("FSI_ROE", "ROE_CFSI_PT",
+                      "Return on equity, % a year, deposit takers. Equal to NBK BANK_ROE shifted one quarter.")
+
+
+def fetch_fsi_liquid_assets() -> tuple[list[dict], dict]:
+    return _fetch_fsi("FSI_LIQUID_ASSETS", "FSI283_LIQATTA_PT",
+                      "Liquid assets to total assets, %, deposit takers, end of quarter.")
+
+
+def fetch_fsi_liquid_to_short_term_liabilities() -> tuple[list[dict], dict]:
+    return _fetch_fsi("FSI_LIQUID_TO_SHORT_TERM_LIABILITIES", "FSI765_CFSI_PT",
+                      "Liquid assets to short-term liabilities, %, deposit takers, end of quarter.")
+
+
+def fetch_fsi_fx_loans_share() -> tuple[list[dict], dict]:
+    return _fetch_fsi("FSI_FX_LOANS_SHARE", "FSI131_AFSI_PT",
+                      "Foreign-currency loans to total loans, %, deposit takers, end of quarter -- a "
+                      "dollarisation measure for the credit side.")
+
+
 def fetch_oil_price() -> tuple[list[dict], dict]:
     """Crude oil price, US dollars per barrel, monthly.
 

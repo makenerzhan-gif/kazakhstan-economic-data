@@ -1,7 +1,17 @@
 #!/usr/bin/env python3
 """Orchestrator: run every agency updater, rebuild the unified dataset, refresh
 metadata/project_knowledge, and stop the production dataset from updating if
-anything failed (MASTER TASK section 11).
+the run is broken as a whole (MASTER TASK section 11).
+
+A FAILED DATASET DOES NOT BLOCK THE OTHERS (2026-09-26). Until then one error
+anywhere -- a changed BNS file format on 2026-09-25, an IMF API reset -- stopped
+the unified rebuild and the commit, so ~660 healthy series went un-updated for a
+day over one broken one. Every updater logs `error` BEFORE it writes anything, so
+a failed dataset keeps its previous processed file and the unified dataset keeps
+its previous values; the failure is listed at the top of the update report and
+raised as a GitHub Actions warning. The run still stops when more than
+MAX_FAILED_SHARE of the datasets fail: that is an outage or a bug in shared code,
+not one source changing.
 
 Steps: check sources -> download -> save raw -> validate schema/quality ->
 process -> update unified dataset -> update metadata -> changelog -> run
@@ -22,6 +32,30 @@ import update_dims, update_derived  # noqa: E402
 import build_project_knowledge, build_calendar  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+MAX_FAILED_SHARE = 0.20
+
+
+def failure_gate(entries: list) -> tuple[bool, list]:
+    """(proceed, failed entries): proceed unless more than MAX_FAILED_SHARE of the
+    datasets attempted this run ended in `error`."""
+    failed = [e for e in entries if e.status == "error"]
+    attempted = {(e.source, e.dataset) for e in entries}
+    return len(failed) <= MAX_FAILED_SHARE * max(len(attempted), 1), failed
+
+
+def announce_failures(failed: list) -> None:
+    """One GitHub Actions warning per failed dataset (plain text outside Actions), and the
+    list in the job summary when the runner provides one."""
+    import os
+    for e in failed:
+        first = (e.errors[0].splitlines()[0] if e.errors else "")[:300]
+        print(f"::warning title=Dataset failed, previous data kept::{e.source}/{e.dataset}: {first}")
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary and failed:
+        with open(summary, "a", encoding="utf-8") as f:
+            f.write("## Datasets that failed this run (previous data kept)\n\n")
+            for e in failed:
+                f.write(f"- `{e.source}/{e.dataset}`: {(e.errors[0].splitlines()[0] if e.errors else '')[:300]}\n")
 
 
 def main() -> int:
@@ -32,11 +66,17 @@ def main() -> int:
     for module in (update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_wb, update_kase, update_foreign, update_dims, update_derived):
         module.run(logger)
 
-    if logger.has_errors():
-        print("update_all: one or more agency updates errored — NOT updating the unified "
+    proceed, failed = failure_gate(logger.entries)
+    if not proceed:
+        print(f"update_all: {len(failed)} dataset updates errored, more than {MAX_FAILED_SHARE:.0%} of "
+              "the run -- an outage or a shared-code bug, not one source. NOT updating the unified "
               "dataset or committing. See logs/ for details.", file=sys.stderr)
         _write_report(run_ts, logger, unified_updated=False)
         return 1
+    if failed:
+        print(f"update_all: {len(failed)} dataset(s) failed and keep their previous data; "
+              "continuing with the rest.", file=sys.stderr)
+        announce_failures(failed)
 
     indicators = yaml.safe_load((REPO_ROOT / "config" / "indicators.yaml").read_text(encoding="utf-8"))["indicators"]
     long_rows = unified.build_long(indicators)
@@ -82,9 +122,14 @@ def _write_report(run_ts: str, logger: pipeline_logging.RunLogger, unified_updat
         f"Unified dataset updated: {unified_updated}",
         f"Tests passed: {tests_passed}",
         "",
-        "## Per-dataset results",
-        "",
     ]
+    failed = [e for e in logger.entries if e.status == "error"]
+    if failed:
+        lines += ["## Failed this run — previous data kept", ""]
+        lines += [f"- **{e.source}/{e.dataset}**: {(e.errors[0].splitlines()[0] if e.errors else '')[:300]}"
+                  for e in failed]
+        lines.append("")
+    lines += ["## Per-dataset results", ""]
     for e in logger.entries:
         lines.append(f"- **{e.source}/{e.dataset}** — {e.action}: {e.status} "
                       f"(downloaded={e.records_downloaded}, processed={e.records_processed})")
