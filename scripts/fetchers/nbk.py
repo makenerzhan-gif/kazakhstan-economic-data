@@ -17,7 +17,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from lib import raw_store, validation  # noqa: E402
+from lib import nbk_pages, raw_store, validation  # noqa: E402
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; KZEconDataPipeline/1.0; +https://github.com/)"}
 SOURCE = "nbk"
@@ -1322,10 +1322,20 @@ def _fetch_nbk_form_paginated(form_id: str, indicator_id: str) -> list[dict]:
     production pageSize=500 -- adjacent pages just share one harmless
     overlapping boundary row -- see the FDI_NET_INFLOW/GOV_SECURITIES_MEUKAM
     module comments for the investigation that ruled out a data-loss bug
-    here). Saves every page as the raw archive and returns the flat row
-    list; callers filter for their own target row(s) and raise
-    StructuralChangeError themselves if nothing matches, since what
+    here). Archives every row of every page and returns the flat row list
+    (in the API's order); callers filter for their own target row(s) and
+    raise StructuralChangeError themselves if nothing matches, since what
     "matching" means is form-specific.
+
+    The archive is the CANONICAL form of the pages (lib/nbk_pages), not the
+    bytes as returned: the API labels columns differently from page to page
+    at random and does not promise a row order, so the same data came back as
+    different bytes on every call and the 13.7 MB insurance form (formId=132)
+    and the balance-of-payments form (324) were archived again on nearly every
+    run, 2026-08-31..09-26. Canonical = all rows unchanged and none dropped,
+    sorted by report_date then full row content; envelope fields once;
+    distinct column entries sorted; sorted keys. The manifest records this in
+    `raw_format` / `raw_normalisation`.
     """
     # One form serves up to seven series; the pages are fetched once per process and the
     # 21-page balance-of-payments form no longer costs 0.8 minutes per series (24 minutes
@@ -1349,13 +1359,15 @@ def _fetch_nbk_form_paginated(form_id: str, indicator_id: str) -> list[dict]:
     raw_pages, all_rows = _FORM_PAGES_CACHE[form_id]
     all_rows = list(all_rows)
 
-    raw_content = json.dumps(raw_pages, ensure_ascii=False).encode("utf-8")
+    raw_content = nbk_pages.canonical_form_bytes(raw_pages)
     today = date.today()
-    raw_store.save_raw_bytes(SOURCE, indicator_id, today, "json", raw_content)
+    path = raw_store.save_raw_bytes(SOURCE, indicator_id, today, "json", raw_content)
     raw_store.write_download_manifest(SOURCE, indicator_id, today, {
         "downloaded_at": datetime.now().isoformat(),
         "source_url": MONETARY_AGGREGATES_URL, "form_id": form_id,
-        "n_pages": len(raw_pages), "total_rows": raw_pages[0]["totalRows"],
+        "n_pages": len(raw_pages), "total_rows": raw_pages[0]["totalRows"], "rows_archived": len(all_rows),
+        "raw_file": path.name if path is not None else None,
+        "raw_format": nbk_pages.CANONICAL_FORMAT, "raw_normalisation": nbk_pages.NORMALISATION,
     })
     return all_rows
 
@@ -3190,9 +3202,14 @@ BOP_HISTORY_TYPE = "USD mln"   # 481's word order; 324 says "mln USD"
 
 
 def _bop_history(line: str, indicator_id: str, recent: dict[str, float]) -> tuple[dict[str, float], str]:
-    """({report_date: amount} for the quarters before 324's first, a note on what was done)."""
+    """({report_date: amount} for the quarters before 324's first, a note on what was done).
+
+    481 is archived under `<indicator_id>_HISTORY`: under the series' own id its download
+    overwrote the dated manifest of the 324 download made moments before (both forms,
+    one manifest; 2026-09-25..26 the manifest named only 481) and its raw file took a
+    time-suffixed name as if 324 had been revised."""
     rows = [{**r, "type": "mln USD"} if _bop_norm(r.get("type")) == _bop_norm(BOP_HISTORY_TYPE) else r
-            for r in _fetch_nbk_form_paginated(BOP_HISTORY_FORM_ID, indicator_id)]
+            for r in _fetch_nbk_form_paginated(BOP_HISTORY_FORM_ID, f"{indicator_id}_HISTORY")]
     first_recent = min(recent)
 
     def select(target: str) -> dict[str, set]:

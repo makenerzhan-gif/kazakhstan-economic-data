@@ -63,11 +63,13 @@ def _without_prepared_stamp(content: bytes) -> bytes | None:
 def _save_raw(agency: str, name: str, content: bytes, ext: str, info: dict) -> None:
     today = date.today()
     latest = raw_store.latest_raw_file(agency, name)
+    path = None
     if ext == "json" and latest is not None and latest.suffix == ".json":
         stripped = _without_prepared_stamp(content)
         if stripped is not None and stripped == _without_prepared_stamp(latest.read_bytes()):
-            return                                     # the same data as the last archived download
-    path = raw_store.save_raw_bytes(agency, name, today, ext, content)
+            path = latest                              # the same data as the last archived download
+    if path is None:
+        path = raw_store.save_raw_bytes(agency, name, today, ext, content)
     raw_store.write_download_manifest(agency, name, today, {
         "downloaded_at": datetime.now().isoformat(), "raw_file": path.name, **info})
 

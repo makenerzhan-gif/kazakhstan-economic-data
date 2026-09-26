@@ -682,3 +682,41 @@ Tests: full suite 459 passed after rebasing onto main (`tests/test_minfin_debt_s
 fallback, the section identity with row 3.1, the «табл 3» annual columns). Data files and the
 unified dataset were rebuilt locally for the nine «табл 22 кв» / «табл 3» indicators only;
 the scheduled CI run refreshes the rest.
+
+## 2026-09-26 — NBK form downloads archived in canonical form; 101 same-content copies removed
+
+**Why.** The insurance form (formId=132, 13.7 MB, read by INSURANCE_PREMIUMS_GENERAL/LIFE) was archived
+again on nearly every run since 2026-08-31, often several times a day: 102 files, 4 distinct contents.
+The rows were the same and in the same order; what changed on every call was the per-page `columns`
+block — the API labels `residency` "Residency of institutional units" on some pages and "residency"
+(null before 09-15) on others, in a new random mix each time — so the byte-level dedup of
+`lib/raw_store` never matched. Every other form already had one file per content; `row_id` is stable.
+
+**What.** `fetchers.nbk._fetch_nbk_form_paginated` now archives the canonical form of the pages
+(`scripts/lib/nbk_pages.py`): all rows unchanged and none dropped (repeats kept), sorted by
+report_date then full row content; envelope fields once, `n_pages`; distinct column entries sorted;
+sorted keys. Only page boundaries and the API's row order are not kept. The manifest records
+`raw_file`, `raw_format` (`nbk-open-data-form/canonical-v1`), `raw_normalisation`, `rows_archived`.
+Checked live: a second same-day run stores no new file. `scripts/dedup_raw.py --nbk-forms` groups the
+NBK form files by canonical content (keeping a canonical file where one exists, else the earliest),
+removed 101 files / 1 307 MB (insurance 98, the 324 and 481 forms under CURRENT_ACCOUNT_BALANCE one
+each, replaced by today's canonical copies) and re-pointed their manifests; a manifest without
+`raw_file` is now taken to name the file of its own stem. Record: `data/raw/dedup_2026-09-26.json`
+(`nbk_forms_removed`). Five new tests (`tests/test_nbk_pages.py`).
+
+**Also.** The five BoP series (CURRENT_ACCOUNT_BALANCE, BOP_GOODS/SERVICES_BALANCE, BOP_PRIMARY/SECONDARY_INCOME)
+read form 324 and, for 2000–2019, form 481 under the same id, so the 481 download overwrote the dated manifest
+of the 324 one and was filed as a same-day "revision" (`_HHMMSS`). `_bop_history` now archives 481 under
+`<ID>_HISTORY`: two manifests per series per day, no false revision; the series are unchanged (104 quarters).
+
+**WITS.** Every WITS answer (7 series) was archived again on every run although only `header.prepared`, the
+time WITS built the answer, differed. `gravity._save_raw` was meant to skip such answers, but
+`raw_store.latest_raw_file` returned the dated *manifest* (it sorts after the `.json`), so the check never
+matched. `latest_raw_file` now never returns a manifest, and `_save_raw` still writes the day's manifest,
+naming the file that holds the data. `dedup_raw --wits` removed 14 copies (record: `wits_removed`). Seven
+manifests of 2026-09-25 named files from a second run that day that were never committed; they now name
+the file archived that day, with a note, and are listed under `wits_never_committed` (not as removals —
+their bytes are unknown). No dangling manifest left. Checked live: two WITS runs, no new file.
+
+The CI run of 2026-09-26 09:45 (old code) added one more insurance copy (`…_094522.json`); removed on
+merging main, same record (116 files in all).

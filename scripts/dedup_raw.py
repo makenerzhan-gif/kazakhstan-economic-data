@@ -11,6 +11,24 @@ manifest of the removed file is pointed at the survivor (`raw_file`).
     python scripts/dedup_raw.py                     # do it
     python scripts/dedup_raw.py --dry-run           # report only
     python scripts/dedup_raw.py --repair-manifests  # re-point manifests left naming a file an earlier dedup removed
+    python scripts/dedup_raw.py --nbk-forms         # NBK form downloads equal in canonical form (below)
+    python scripts/dedup_raw.py --wits              # WITS answers equal apart from their time stamp (below)
+
+--nbk-forms compares the paginated NBK open-data form downloads (data/raw/nbk, the pages
+archived by fetchers.nbk._fetch_nbk_form_paginated) by their CANONICAL form (lib/nbk_pages):
+the API returns the same rows with per-page column labels that change on every call, and
+no promised row order, so byte comparison never matched them and the 13.7 MB insurance
+form was archived again on nearly every run from 2026-08-31. Files are grouped when their
+canonical bytes are equal -- same rows, same values, same envelope and column entries;
+only page arrangement, row order and per-page labels differ -- and one is kept: a file
+already in canonical form if the group has one (it is what the fetcher writes now, so the
+next unchanged download is recognised by raw_store.identical_twin), otherwise the earliest.
+
+--wits does the same for the WITS SDMX-JSON answers (data/raw/wits), which differ between
+two downloads of unchanged data only in header.prepared, the time WITS built the answer.
+fetchers.gravity archives them as returned and skips an answer equal to the last archived
+one apart from that stamp; until 2026-09-26 the check compared with a manifest and every
+answer was archived again. The earliest file of each content is kept.
 """
 from __future__ import annotations
 
@@ -22,6 +40,9 @@ import sys
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from lib import nbk_pages  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 RAW = REPO_ROOT / "data" / "raw"
@@ -59,6 +80,62 @@ def find_duplicates() -> list[tuple[Path, list[Path]]]:
     return out
 
 
+def _wits_without_prepared(content: bytes) -> bytes | None:
+    """A WITS SDMX-JSON answer without header.prepared, the time WITS built the answer --
+    the only thing that differs between two downloads of unchanged WITS data."""
+    try:
+        payload = json.loads(content)
+        payload["header"].pop("prepared")
+    except (ValueError, KeyError, TypeError, AttributeError):
+        return None
+    return json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")
+
+
+# --flag: (agency, content key -- None for a file the rule does not cover, note for re-pointed
+# manifests, rule text for the dedup record)
+EQUIVALENCE = {
+    "nbk_forms": ("nbk", nbk_pages.canonical_bytes_of_archived,
+                  "copy {removed} removed {today}: same NBK form content as {kept} (equal in the canonical form of "
+                  "scripts/lib/nbk_pages.py -- same rows and values; only page arrangement, row order and per-page "
+                  "column labels differed); the content is in {kept}",
+                  "NBK paginated form downloads whose canonical form (scripts/lib/nbk_pages.py) is identical -- same "
+                  "rows and values, differing only in page arrangement, row order and per-page column labels -- kept "
+                  "once; a file already in canonical form is kept when the group has one, otherwise the earliest."),
+    "wits": ("wits", _wits_without_prepared,
+             "copy {removed} removed {today}: same WITS answer as {kept} apart from header.prepared (the time WITS "
+             "built the answer); the content is in {kept}",
+             "WITS SDMX-JSON answers identical apart from header.prepared (the time WITS built the answer) kept once, "
+             "the earliest; gravity._save_raw meant to skip them but compared each download with a manifest "
+             "(raw_store.latest_raw_file returned one) until 2026-09-26."),
+}
+
+
+def find_equivalent_duplicates(rule: str) -> list[tuple[Path, list[Path]]]:
+    """[(kept, [duplicates])] among one agency's files whose content is equal under an
+    EQUIVALENCE rule. Files the rule does not cover are left out. A file already in the
+    rule's normal form (the key equals the bytes -- what the fetcher writes now) is kept
+    first, so the next unchanged download is recognised by raw_store.identical_twin."""
+    agency, key_of, _note, _text = EQUIVALENCE[rule]
+    groups: dict[str, list[tuple[bool, Path]]] = defaultdict(list)
+    for p in sorted((RAW / agency).glob(f"{agency}_*.json")):
+        if p.name.endswith(".manifest.json"):
+            continue
+        content = p.read_bytes()
+        key = key_of(content)
+        if key is not None:
+            groups[hashlib.sha256(key).hexdigest()].append((key == content, p))
+    out = []
+    for files in groups.values():
+        if len(files) > 1:
+            files.sort(key=lambda cp: (0 if cp[0] else 1, _rank(cp[1])))
+            out.append((files[0][1], [p for _, p in files[1:]]))
+    return out
+
+
+def find_nbk_form_duplicates() -> list[tuple[Path, list[Path]]]:
+    return find_equivalent_duplicates("nbk_forms")
+
+
 def _manifests(folder: Path):
     for manifest in sorted(folder.glob("*.manifest.json")):
         try:
@@ -69,22 +146,27 @@ def _manifests(folder: Path):
             yield manifest, info
 
 
-def _repoint(manifest: Path, info: dict, removed_name: str, kept_name: str, today: str) -> None:
+BYTE_NOTE = "byte-identical copy {removed} removed {today}; the bytes are in {kept}"
+
+
+def _repoint(manifest: Path, info: dict, removed_name: str, kept_name: str, today: str, note: str = BYTE_NOTE) -> None:
     info["raw_file"] = kept_name
-    info["raw_file_note"] = f"byte-identical copy {removed_name} removed {today}; the bytes are in {kept_name}"
+    info["raw_file_note"] = note.format(removed=removed_name, kept=kept_name, today=today)
     manifest.write_text(json.dumps(info, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-def point_manifests(removed: Path, kept: Path, today: str) -> int:
+def point_manifests(removed: Path, kept: Path, today: str, note: str = BYTE_NOTE) -> int:
     """Point every manifest in the folder that names the removed file at the survivor --
     not only the manifest named after the removed file: a shared workbook is named by
     the manifests of every indicator that reads it (the wage table 346883 feeds
     AVG_WAGE_QUARTERLY and AVG_WAGE_AGRICULTURE; until 2026-09-23 only the owner's
-    manifest was re-pointed and the others were left dangling)."""
+    manifest was re-pointed and the others were left dangling). A manifest with no
+    `raw_file` names the file of its own stem (the NBK form manifests before 2026-09-26)."""
     n = 0
+    own = removed.name.rsplit(".", 1)[0] + ".manifest.json"
     for manifest, info in _manifests(removed.parent):
-        if info.get("raw_file") == removed.name:
-            _repoint(manifest, info, removed.name, kept.name, today)
+        if info.get("raw_file", removed.name if manifest.name == own else None) == removed.name:
+            _repoint(manifest, info, removed.name, kept.name, today, note)
             n += 1
     return n
 
@@ -121,13 +203,19 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--repair-manifests", action="store_true",
                     help="only re-point manifests whose raw_file was removed by an earlier dedup (see repair_manifests)")
+    ap.add_argument("--nbk-forms", action="store_true",
+                    help="NBK form downloads with equal canonical content instead of byte-identical files (see above)")
+    ap.add_argument("--wits", action="store_true",
+                    help="WITS answers equal apart from header.prepared instead of byte-identical files (see above)")
     args = ap.parse_args(argv)
     today = date.today().isoformat()
     if args.repair_manifests:
         n = repair_manifests(today, dry_run=args.dry_run)
         print(f"dedup_raw --repair-manifests{' (dry run)' if args.dry_run else ''}: {n} manifests {'would be ' if args.dry_run else ''}re-pointed")
         return 0
-    groups = find_duplicates()
+    rule = "nbk_forms" if args.nbk_forms else "wits" if args.wits else None
+    groups = find_equivalent_duplicates(rule) if rule else find_duplicates()
+    note = EQUIVALENCE[rule][2] if rule else BYTE_NOTE
     removed: dict[str, str] = {}
     freed = 0
     for kept, dups in groups:
@@ -135,15 +223,20 @@ def main(argv: list[str] | None = None) -> int:
             freed += d.stat().st_size
             removed[d.relative_to(REPO_ROOT).as_posix()] = kept.relative_to(REPO_ROOT).as_posix()
             if not args.dry_run:
-                point_manifests(d, kept, today)
+                point_manifests(d, kept, today, note)
                 d.unlink()
-    print(f"dedup_raw{' (dry run)' if args.dry_run else ''}: {len(groups)} contents with copies, "
+    print(f"dedup_raw{' --' + rule.replace('_', '-') if rule else ''}{' (dry run)' if args.dry_run else ''}: "
+          f"{len(groups)} contents with copies, "
           f"{len(removed)} files {'would be ' if args.dry_run else ''}removed, {freed / 1e6:.0f} MB")
     if removed and not args.dry_run:
         record = RAW / f"dedup_{today}.json"
         existing = json.loads(record.read_text(encoding="utf-8")) if record.exists() else {
             "date": today, "rule": "byte-identical raw files kept once per agency; every removed file maps to the file holding its bytes", "removed": {}}
         existing["removed"].update(removed)
+        if rule:
+            existing[f"{rule}_rule"] = (f"{EQUIVALENCE[rule][3]} These removals are listed in {rule}_removed and, "
+                                        "with the file kept, in removed.")
+            existing[f"{rule}_removed"] = sorted(set(existing.get(f"{rule}_removed", [])) | set(removed))
         existing["removed_files"] = len(existing["removed"])
         record.write_text(json.dumps(existing, indent=1, ensure_ascii=False), encoding="utf-8")
         print(f"record: {record.relative_to(REPO_ROOT).as_posix()} ({existing['removed_files']} files)")

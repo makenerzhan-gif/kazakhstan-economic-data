@@ -95,3 +95,11 @@ def test_lfs_pointer_oid_reads_only_real_pointers():
     assert raw_store.lfs_pointer_oid(b"version 1\noid sha256:abc\n") is None
     assert raw_store.lfs_pointer_oid(b"PK\x03\x04 a real workbook") is None
     assert raw_store.lfs_pointer_oid(b"") is None
+
+
+def test_latest_raw_file_is_never_a_manifest(isolated_raw_root):
+    """`x_2026-09-25.manifest.json` sorts after `x_2026-09-25.json`; it was returned until
+    2026-09-26 and every unchanged WITS answer was compared with it, and archived again."""
+    path = raw_store.save_raw_bytes("wits", "EXPORTS", date(2026, 9, 25), "json", b"{}")
+    raw_store.write_download_manifest("wits", "EXPORTS", date(2026, 9, 25), {"raw_file": path.name})
+    assert raw_store.latest_raw_file("wits", "EXPORTS") == path

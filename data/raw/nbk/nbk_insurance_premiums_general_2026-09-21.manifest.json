@@ -3,5 +3,7 @@
   "source_url": "https://data.nationalbank.kz/api/v1/data",
   "form_id": "132",
   "n_pages": 86,
-  "total_rows": 42660
+  "total_rows": 42660,
+  "raw_file": "nbk_insurance_premiums_general_2026-09-26_142347.json",
+  "raw_file_note": "copy nbk_insurance_premiums_general_2026-09-21.json removed 2026-09-26: same NBK form content as nbk_insurance_premiums_general_2026-09-26_142347.json (equal in the canonical form of scripts/lib/nbk_pages.py -- same rows and values; only page arrangement, row order and per-page column labels differed); the content is in nbk_insurance_premiums_general_2026-09-26_142347.json"
 }
