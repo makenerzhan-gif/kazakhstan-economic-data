@@ -4943,3 +4943,39 @@ New fetcher `scripts/fetchers/kase_eurobonds.py`; 501 indicators.
   dump of the xlsx ({sheet: rows}). `fetch_final_energy_consumption` now reads both; the new file carries the
   series from 1991 (was 2015), 2015-2025 unchanged (2022 rounded to 41 156.45 from 41 156.454). An unknown shape
   is a StructuralChangeError, not an AttributeError.
+
+## 2026-09-26 — model_data/: model-ready panels (derived)
+
+New top-level `model_data/` (derived by this repository, like `analysis/`): `scripts/build_model_data.py`
+reads `data/unified/` and `model_data/spec.yaml` and writes `monthly.csv` (1994-01 on, 40 variables),
+`quarterly.csv` (35 variables + production function), `annual.csv` and `VARIABLES.md` (a card per variable).
+Chained price and production indices, YTD flows decumulated, stocks moved from "as at the 1st" to end of
+month, policy rates as monthly means of the step function, STL (robust) seasonal adjustment where the source
+publishes none (BNS quarterly accounts and FRED are used as published), `_yoy`/`_saar` columns.
+- **Capital stock:** perpetual inventory at 2010 prices from 2000 (annual GFCF chained with its volume index;
+  δ = 8.3 %, the median BNS book depreciation rate outside the 2019-21 revaluations; Harberger start), quarterly
+  from 2010 with BNS SA GFCF benchmarked to the annual figures (the 2010-22 quarterly accounts are an older,
+  higher vintage). K/Y 1.3 (2010) -> 2.1 (2026).
+- **TFP** (Solow residual, α = 0.665 from the QNA labour share): −17 log points 2010-Q1..2026-Q1; −12 to −22 for
+  δ between 12 % and 5 % — heavy investment (Tengiz, infrastructure) with little output yet.
+- Checks: chained CPI y/y vs BNS CPI_YOY 0.07 pp mean gap (0.35 max, m/m rounding); our STL on real GDP vs
+  BNS's own SA: q/q correlation 0.91.
+- Found on the way: the scalar EMPLOYED_QUARTERLY holds only 2 quarters (the item-level
+  EMPLOYED_BY_SECTION_QUARTERLY has 2010 on and is used here).
+
+## 2026-09-26 — models/: gravity, BVAR, r* (derived)
+
+New top-level `models/` with `scripts/models/{common,gravity,bvar,rstar}.py`; each writes a Russian report,
+charts and CSVs. Not part of `update_all.py`.
+- **Gravity (PPML), 2000–2025:** WITS flows to 2019, BNS from 2020 — WITS 2020–22 imports are incomplete (2020:
+  22 bn USD vs BNS 39 bn); Russia/Belarus 2010 dropped (customs-union gap in WITS: imports 24.0 vs official 31.1
+  bn). Partner FE: the EAEU adds nothing over the CIS free-trade area (imports −3 %, 95 % CI −18…+15 %; exports
+  −7 %). Year-FE elasticities: GDP 0.78 / 0.96, distance −1.13 / −0.65 (exports / imports). The trade-weighted
+  applied tariff does not identify σ (β = +3.3, s.e. 2.3).
+- **BVAR, 2011Q2–2026Q1:** 7 variables, external block exogenous, λ = 0.75, μ = 5, crisis-quarter scale s = 5
+  (log ML +91 over s = 1). Pass-through 0.11 at 4 quarters, 0.19 at 8 (0.24 / 0.29 without the crisis
+  scaling); +1 pp TONIA: prices −0.18 % at 8 quarters, GDP −0.12 % at 4; +10 % Brent: prices +0.7 % at 8.
+- **r\* and output gap, 2012Q1–2026Q1:** r* 1.4 % in 2026Q1 (±6 pp state s.d.), real rate 6.3 %, P(r > r*) 80 %;
+  trend growth 4.2 %; gap −0.5 % (production function −0.1 %, HP +0.5 %; the three gaps correlate at 0.93+).
+  Maximum likelihood without priors: gap persistence 0.14, a_r −0.04, z flat at its initial value.
+- Corrected `data/reference/README.md`: CEPII `col_dep_ever` is 0 for every KAZ pair (it said KAZ–RUS = 1).
