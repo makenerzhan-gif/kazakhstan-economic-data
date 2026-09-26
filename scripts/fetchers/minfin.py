@@ -2198,6 +2198,28 @@ def fetch_state_non_oil_deficit() -> tuple[list[dict], dict]:
     )
 
 
+STATE_BUDGET_DEBT_SERVICING_LABEL = "14. Обслуживание долга"
+
+
+def fetch_state_budget_debt_servicing() -> tuple[list[dict], dict]:
+    """Debt servicing (interest), STATE budget (republican + local combined),
+    million KZT, annual -- broader in scope than GOV_DEBT_SERVICING
+    (republican-only). Verified live 2026-09-26 against the 2026-08-01
+    bulletin: 1,865,648.998 (2023), 2,232,329.183 (2024), 2,660,521.406 (2025)
+    million KZT; the excess over GOV_DEBT_SERVICING (57.5 / 50.3 / 52.6 bn)
+    matches the local budgets' own row 14 in табл 12 (57.8 / 50.9 / 53.4 bn)
+    to within 1 bn, i.e. the state figure is republican + local with at most a
+    small consolidation of interest paid between the two levels."""
+    return _fetch_bulletin_annual_row(
+        BULLETIN_STATE_BUDGET_SHEET_NAME,
+        _state_budget_row_matcher(STATE_BUDGET_DEBT_SERVICING_LABEL),
+        "STATE_BUDGET_DEBT_SERVICING",
+        "Million KZT. Functional group 14 'Debt servicing' of the STATE budget (republican + local "
+        "government budgets combined) -- broader scope than GOV_DEBT_SERVICING, which is "
+        "republican-budget-only. The closest bulletin measure of general-government interest.",
+    )
+
+
 # ---------------------------------------------------------------------------
 # PROPERTY_TAX / LAND_TAX: found 2026-08-31 in sheet "табл 4" ("Поступления в
 # ГОСУДАРСТВЕННЫЙ бюджет" -- receipts to the STATE budget, republican + local
@@ -2458,7 +2480,21 @@ def _fetch_debt_structure_row(section: str, row_code: str, russian_marker: str,
         )
 
     want_usd = currency.upper() == "USD"
+    # Rate source for blank tenge cells: the section-I anchor row, which carries both
+    # currencies at every date (the II./III. anchors are themselves blank in tenge in 2020).
+    section_row = next((rr for rr in rows if rr and str(rr[0]).strip() == "I."), rows[section_start])
+
+    def _num(row, idx):
+        v = row[idx] if idx < len(row) else None
+        if v in (None, ""):
+            return None
+        try:
+            return float(v)
+        except (TypeError, ValueError):
+            return None
+
     records = []
+    converted: list[str] = []
     for col, (year, month) in sorted(date_cols.items()):
         idx = col + 1 if want_usd else col
         u = unit_at(idx)
@@ -2466,14 +2502,23 @@ def _fetch_debt_structure_row(section: str, row_code: str, russian_marker: str,
             continue
         if not want_usd and ("теңге" not in u and "тенге" not in u):
             continue
-        value = target_row[idx] if idx < len(target_row) else None
-        if value in (None, ""):
-            continue
-        try:
-            v = float(value)
-        except (TypeError, ValueError):
+        v = _num(target_row, idx)
+        if v is None and not want_usd:
+            # Early editions (the 2020-01-01 column) leave the tenge cell of some rows blank
+            # while the USD cell next to it is filled -- a blank there is NOT a zero. Convert
+            # the USD value at the sheet's own implied rate for that date, taken from the
+            # section-I anchor row, which always carries both currencies.
+            usd = _num(target_row, idx + 1) if "долл" in unit_at(idx + 1) else None
+            sec_kzt, sec_usd = _num(section_row, idx), _num(section_row, idx + 1)
+            if usd is not None and sec_kzt and sec_usd:
+                v = usd * sec_kzt / sec_usd
+                converted.append(f"{year:04d}-{month:02d}-01")
+        if v is None:
             continue
         records.append({"date": f"{year:04d}-{month:02d}-01", "value": v})
+    if converted:
+        note = (note + f" Tenge cell blank but USD cell filled at {converted}: value = USD x the sheet's own "
+                       f"implied rate for that date (section I row KZT / USD).")
 
     if not records:
         raise validation.StructuralChangeError(
@@ -2539,6 +2584,49 @@ def fetch_gov_debt_eurobonds() -> tuple[list[dict], dict]:
         "I.", "1.2.10.", "Еврооблигации",
         "GOV_DEBT_EUROBONDS",
         "Million KZT. Eurobonds within the Government's external debt -- the market-issued portion, as opposed to loans from international financial institutions.",
+        currency="KZT",
+    )
+
+
+# Three more rows of section I, added 2026-09-26 so that the PSDS debt concepts can be
+# assembled from the bulletin alone: row "1" (Government of the Republic), its external
+# part "1.2" in tenge, and row "2" (National Bank). Verified against the 2026-08-01
+# bulletin: row 1 = 1.1 + 1.2 exactly (28,471,879.43 + 8,352,366.46 = 36,824,245.89 at
+# 2026-07-01), and section I = row 1 + row 2 + row 3 - row 3.1 (local debt owed to the
+# Government, netted out by the sheet's footnote 1), so section I is already consolidated
+# and general government debt = section I - row 2. The National Bank row is sparse:
+# 2,927,277 mln KZT at 2021-01-01, falling to 0 by 2025-07-01; 2025-04-01 is blank in both
+# currencies (0 by the section identity) and the cells are BLANK from 2026-01-01 on -- the
+# parser skips blanks, so the series ends at the last filled date; a consumer needing a
+# full panel treats those later dates as zero. The 2020-01-01 tenge cell is blank while
+# the USD cell is filled (8,968.4 mln USD): the shared parser converts it at the sheet's
+# implied rate (see _fetch_debt_structure_row).
+def fetch_central_gov_debt() -> tuple[list[dict], dict]:
+    """Government of the Republic of Kazakhstan Debt (million KZT, quarterly)."""
+    return _fetch_debt_structure_row(
+        "I.", "1", "Правительства",
+        "CENTRAL_GOV_DEBT",
+        "Million KZT. Row 1 of section I: debt of the Government of the Republic of Kazakhstan (central government proper, = GOV_DEBT_DOMESTIC + GOV_DEBT_EXTERNAL exactly). Excludes the National Bank (row 2) and local executive bodies (row 3) that STATE_DEBT_TOTAL also carries, and the guarantees of sections II-III that GOV_DEBT carries. The denominator for a foreign-currency share of government debt.",
+        currency="KZT",
+    )
+
+
+def fetch_central_gov_debt_external() -> tuple[list[dict], dict]:
+    """Government of the Republic of Kazakhstan Debt, External (million KZT, quarterly)."""
+    return _fetch_debt_structure_row(
+        "I.", "1.2", "внешний",
+        "CENTRAL_GOV_DEBT_EXTERNAL",
+        "Million KZT. Row 1.2 of section I: external debt of the Government of the Republic of Kazakhstan, in the sheet's own tenge column -- the same concept as GOV_DEBT_EXTERNAL (quarterly snapshot documents, 11 dates from 2021-07-01 with gaps) but with the bulletin's 22 dates from 2020-01-01, and the tenge twin of GOV_DEBT_EXTERNAL_USD. Numerator of the foreign-currency share of government debt against CENTRAL_GOV_DEBT. 'External' in the bulletin is by market of borrowing (eurobonds, IFI loans), not by currency of denomination.",
+        currency="KZT",
+    )
+
+
+def fetch_nbk_debt() -> tuple[list[dict], dict]:
+    """National Bank of Kazakhstan Debt (million KZT, quarterly)."""
+    return _fetch_debt_structure_row(
+        "I.", "2", "Национального Банка",
+        "NBK_DEBT",
+        "Million KZT. Row 2 of section I: debt of the National Bank of Kazakhstan, counted inside Kazakhstan's 'state debt' by the Budget Code but outside general government under PSDS/GFSM (the central bank is a public corporation). Sparse: 3.4 trn KZT at 2020-01-01 (tenge cell blank, converted from 8,968.4 mln USD), 2.9 trn at 2021-01-01, 0 by 2025-07-01; 2025-04-01 blank in both currencies (= 0 by the section identity), blank cells (skipped) from 2026-01-01. Section I is already consolidated (I = row 1 + row 2 + row 3 - row 3.1), so general government debt on the bulletin's own definitions = STATE_DEBT_TOTAL - NBK_DEBT.",
         currency="KZT",
     )
 

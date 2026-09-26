@@ -52477,6 +52477,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,1651.922115,billion KZT,nbk,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,24889.118,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1134.698695,billion KZT,nbk,2026-09-26,level,2026-09-26
+2020-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,12851748.051495738,million KZT,minfin,2026-09-26,level,2026-09-26
+2020-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,5806462.163700075,million KZT,minfin,2026-09-26,level,2026-09-26
 2020-01-01,CHN,national,monthly,CN_CPI_YOY,5.4205,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2020-01-01,CHN,national,quarterly,CN_GDP_REAL_YOY,93.2,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,79.1670989990234,index,imf,2026-09-26,level,2026-09-26
@@ -52575,6 +52577,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,monthly,LOAN_RATE_ISSUED_LEGAL_KZT,12.1,%,nbk,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_FX,19.288952,months,nbk,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,quarterly,LOAN_TERM_ACCEPTABLE_KZT,24.641129,months,nbk,2026-09-26,level,2026-09-26
+2020-01-01,KZ,national,quarterly,LOCAL_GOV_DEBT,846655.199871365,million KZT,minfin,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,monthly,M0,2300505.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,monthly,M1,5928085.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,monthly,M2,16054341.0,million KZT,nbk,2026-09-26,level,2026-09-26
@@ -52582,6 +52585,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,monthly,MONETARY_BASE,6893176.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,61751.827114927204,USD million,nbk,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,30.187338,% of GDP,nbk,2026-09-26,level,2026-09-26
+2020-01-01,KZ,national,quarterly,NBK_DEBT,3418560.0645052996,million KZT,minfin,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,monthly,NEER,90.36163,index,nbk,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,monthly,NEER_EX_OIL,93.04681,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,quarterly,NPL_RATIO,8.14,%,nbk,2026-09-26,level,2026-09-26
@@ -52622,6 +52626,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,monthly,STATE_CIT_YTD,163538.331966,million KZT,minfin,2026-09-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-26
 2020-01-01,KZ,national,quarterly,STATE_DEBT_TOTAL,16486847.268489938,million KZT,minfin,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,monthly,STATE_EXCISE_YTD,46771.62678444,million KZT,minfin,2026-09-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-26
+2020-01-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,768487.0251295128,million KZT,minfin,2026-09-26,level,2026-09-26
 2020-01-01,KZ,national,monthly,STATE_PIT_YTD,77728.97014822,million KZT,minfin,2026-09-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-26
 2020-01-01,KZ,national,monthly,STATE_SOCIAL_TAX_YTD,55865.76450591,million KZT,minfin,2026-09-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-26
 2020-01-01,KZ,national,monthly,STATE_TAX_REVENUE_YTD,520872.72104877,million KZT,minfin,2026-09-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-26
@@ -55745,6 +55750,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,3673.808076,billion KZT,nbk,2026-09-26,level,2026-09-26
 2021-01-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,19899.181,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2021-01-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1237.404822,billion KZT,nbk,2026-09-26,level,2026-09-26
+2021-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,16658003.207355918,million KZT,minfin,2026-09-26,level,2026-09-26
+2021-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,6897091.11420951,million KZT,minfin,2026-09-26,level,2026-09-26
 2021-01-01,CHN,national,monthly,CN_CPI_YOY,-0.2216,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2021-01-01,CHN,national,quarterly,CN_GDP_REAL_YOY,118.9,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2021-01-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,77.352409362793,index,imf,2026-09-26,level,2026-09-26
@@ -55856,6 +55863,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,monthly,MONETARY_BASE,9777551.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2021-01-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58743.06233945499,USD million,nbk,2026-09-26,level,2026-09-26
 2021-01-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,32.388575,% of GDP,nbk,2026-09-26,level,2026-09-26
+2021-01-01,KZ,national,quarterly,NBK_DEBT,2927277.04607479,million KZT,minfin,2026-09-26,level,2026-09-26
 2021-01-01,KZ,national,monthly,NEER,82.57278,index,nbk,2026-09-26,level,2026-09-26
 2021-01-01,KZ,national,monthly,NEER_EX_OIL,88.41094,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2021-01-01,KZ,national,quarterly,NPL_RATIO,6.87,%,nbk,2026-09-26,level,2026-09-26
@@ -57308,6 +57316,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,6480.496943,billion KZT,nbk,2026-09-26,level,2026-09-26
 2021-07-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,22934.554,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2021-07-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1742.331304,billion KZT,nbk,2026-09-26,level,2026-09-26
+2021-07-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,17797103.9379484,million KZT,minfin,2026-09-26,level,2026-09-26
+2021-07-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,7491981.064672005,million KZT,minfin,2026-09-26,level,2026-09-26
 2021-07-01,CHN,national,monthly,CN_CPI_YOY,1.9126,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2021-07-01,CHN,national,quarterly,CN_GDP_REAL_YOY,105.5,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2021-07-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,94.5103454589844,index,imf,2026-09-26,level,2026-09-26
@@ -57421,6 +57431,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,monthly,MONETARY_BASE,10270127.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2021-07-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57343.36715300661,USD million,nbk,2026-09-26,level,2026-09-26
 2021-07-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,28.860719,% of GDP,nbk,2026-09-26,level,2026-09-26
+2021-07-01,KZ,national,quarterly,NBK_DEBT,3387853.6828742,million KZT,minfin,2026-09-26,level,2026-09-26
 2021-07-01,KZ,national,monthly,NEER,82.84246,index,nbk,2026-09-26,level,2026-09-26
 2021-07-01,KZ,national,monthly,NEER_EX_OIL,87.93906,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2021-07-01,KZ,national,quarterly,NPL_RATIO,4.78,%,nbk,2026-09-26,level,2026-09-26
@@ -58125,6 +58136,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,7470.358314,billion KZT,nbk,2026-09-26,level,2026-09-26
 2021-10-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,21879.445,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2021-10-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1798.517256,billion KZT,nbk,2026-09-26,level,2026-09-26
+2021-10-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,18042924.518947657,million KZT,minfin,2026-09-26,level,2026-09-26
+2021-10-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,7378454.438925441,million KZT,minfin,2026-09-26,level,2026-09-26
 2021-10-01,CHN,national,monthly,CN_CPI_YOY,1.4328,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2021-10-01,CHN,national,quarterly,CN_GDP_REAL_YOY,104.5,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2021-10-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,103.574501037598,index,imf,2026-09-26,level,2026-09-26
@@ -58238,6 +58251,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,monthly,MONETARY_BASE,10689698.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2021-10-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,55058.18207939864,USD million,nbk,2026-09-26,level,2026-09-26
 2021-10-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,26.849448,% of GDP,nbk,2026-09-26,level,2026-09-26
+2021-10-01,KZ,national,quarterly,NBK_DEBT,2741175.75646801,million KZT,minfin,2026-09-26,level,2026-09-26
 2021-10-01,KZ,national,monthly,NEER,83.23922,index,nbk,2026-09-26,level,2026-09-26
 2021-10-01,KZ,national,monthly,NEER_EX_OIL,87.49963,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2021-10-01,KZ,national,quarterly,NPL_RATIO,4.3,%,nbk,2026-09-26,level,2026-09-26
@@ -59101,6 +59115,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,5384.410021,billion KZT,nbk,2026-09-26,level,2026-09-26
 2022-01-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,17958.336,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2022-01-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1280.612076,billion KZT,nbk,2026-09-26,level,2026-09-26
+2022-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,18729972.6572751,million KZT,minfin,2026-09-26,level,2026-09-26
+2022-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,7399531.866024084,million KZT,minfin,2026-09-26,level,2026-09-26
 2022-01-01,CHN,national,monthly,CN_CPI_YOY,0.9911,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2022-01-01,CHN,national,quarterly,CN_GDP_REAL_YOY,104.8,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2022-01-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,102.254981994629,index,imf,2026-09-26,level,2026-09-26
@@ -59213,6 +59229,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,monthly,MONETARY_BASE,10957714.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2022-01-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,55324.062102130614,USD million,nbk,2026-09-26,level,2026-09-26
 2022-01-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,24.929067,% of GDP,nbk,2026-09-26,level,2026-09-26
+2022-01-01,KZ,national,quarterly,NBK_DEBT,2102537.95985598,million KZT,minfin,2026-09-26,level,2026-09-26
 2022-01-01,KZ,national,monthly,NEER,86.35498,index,nbk,2026-09-26,level,2026-09-26
 2022-01-01,KZ,national,monthly,NEER_EX_OIL,89.93196,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2022-01-01,KZ,national,annual,NON_CASH_PAYMENTS_SHARE,73.5999984741211,%,nbk,2026-09-26,level,2026-09-26
@@ -59910,6 +59927,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,7448.400711,billion KZT,nbk,2026-09-26,level,2026-09-26
 2022-04-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,22327.054,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2022-04-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1841.376074,billion KZT,nbk,2026-09-26,level,2026-09-26
+2022-04-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,19179129.892447293,million KZT,minfin,2026-09-26,level,2026-09-26
+2022-04-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,7718434.337807931,million KZT,minfin,2026-09-26,level,2026-09-26
 2022-04-01,CHN,national,monthly,CN_CPI_YOY,2.1847,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2022-04-01,CHN,national,quarterly,CN_GDP_REAL_YOY,100.8,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2022-04-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,118.413536071777,index,imf,2026-09-26,level,2026-09-26
@@ -60027,6 +60046,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,monthly,MONETARY_BASE,10791800.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2022-04-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,52985.65302352513,USD million,nbk,2026-09-26,level,2026-09-26
 2022-04-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,23.533914,% of GDP,nbk,2026-09-26,level,2026-09-26
+2022-04-01,KZ,national,quarterly,NBK_DEBT,1432855.47644134,million KZT,minfin,2026-09-26,level,2026-09-26
 2022-04-01,KZ,national,monthly,NEER,86.72132,index,nbk,2026-09-26,level,2026-09-26
 2022-04-01,KZ,national,monthly,NEER_EX_OIL,90.16768,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2022-04-01,KZ,national,quarterly,NPL_RATIO,3.57,%,nbk,2026-09-26,level,2026-09-26
@@ -60743,6 +60763,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,9167.165778,billion KZT,nbk,2026-09-26,level,2026-09-26
 2022-07-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,21938.88,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2022-07-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1844.859938,billion KZT,nbk,2026-09-26,level,2026-09-26
+2022-07-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,20051873.225690596,million KZT,minfin,2026-09-26,level,2026-09-26
+2022-07-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,7951723.234862213,million KZT,minfin,2026-09-26,level,2026-09-26
 2022-07-01,CHN,national,monthly,CN_CPI_YOY,2.6866,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2022-07-01,CHN,national,quarterly,CN_GDP_REAL_YOY,104.0,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2022-07-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,114.602989196777,index,imf,2026-09-26,level,2026-09-26
@@ -60861,6 +60883,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,monthly,MONETARY_BASE,10688772.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2022-07-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,51863.83706318833,USD million,nbk,2026-09-26,level,2026-09-26
 2022-07-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,22.961746,% of GDP,nbk,2026-09-26,level,2026-09-26
+2022-07-01,KZ,national,quarterly,NBK_DEBT,1796203.73637762,million KZT,minfin,2026-09-26,level,2026-09-26
 2022-07-01,KZ,national,monthly,NEER,79.42857,index,nbk,2026-09-26,level,2026-09-26
 2022-07-01,KZ,national,monthly,NEER_EX_OIL,79.12543,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2022-07-01,KZ,national,quarterly,NPL_RATIO,3.61,%,nbk,2026-09-26,level,2026-09-26
@@ -61594,6 +61617,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,9843.614835,billion KZT,nbk,2026-09-26,level,2026-09-26
 2022-10-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,21042.443,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2022-10-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1798.202529,billion KZT,nbk,2026-09-26,level,2026-09-26
+2022-10-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,21041119.850929834,million KZT,minfin,2026-09-26,level,2026-09-26
+2022-10-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,7874875.357047764,million KZT,minfin,2026-09-26,level,2026-09-26
 2022-10-01,CHN,national,monthly,CN_CPI_YOY,2.1718,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2022-10-01,CHN,national,quarterly,CN_GDP_REAL_YOY,103.0,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2022-10-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,101.858345031738,index,imf,2026-09-26,level,2026-09-26
@@ -61710,6 +61735,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,monthly,MONETARY_BASE,11871384.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2022-10-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,51587.7439285939,USD million,nbk,2026-09-26,level,2026-09-26
 2022-10-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,23.655425,% of GDP,nbk,2026-09-26,level,2026-09-26
+2022-10-01,KZ,national,quarterly,NBK_DEBT,1722178.63678252,million KZT,minfin,2026-09-26,level,2026-09-26
 2022-10-01,KZ,national,monthly,NEER,83.74855,index,nbk,2026-09-26,level,2026-09-26
 2022-10-01,KZ,national,monthly,NEER_EX_OIL,83.59354,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2022-10-01,KZ,national,quarterly,NPL_RATIO,3.6,%,nbk,2026-09-26,level,2026-09-26
@@ -62608,6 +62634,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,8800.30636,billion KZT,nbk,2026-09-26,level,2026-09-26
 2023-01-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,17261.36,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2023-01-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1489.103556,billion KZT,nbk,2026-09-26,level,2026-09-26
+2023-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,22008766.32130886,million KZT,minfin,2026-09-26,level,2026-09-26
+2023-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,7843729.801983136,million KZT,minfin,2026-09-26,level,2026-09-26
 2023-01-01,CHN,national,monthly,CN_CPI_YOY,2.0608,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2023-01-01,CHN,national,quarterly,CN_GDP_REAL_YOY,104.7,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2023-01-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,94.3374099731445,index,imf,2026-09-26,level,2026-09-26
@@ -62743,6 +62771,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,monthly,MONETARY_BASE,11874422.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2023-01-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,55739.47491624338,USD million,nbk,2026-09-26,level,2026-09-26
 2023-01-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,23.848721,% of GDP,nbk,2026-09-26,level,2026-09-26
+2023-01-01,KZ,national,quarterly,NBK_DEBT,2236247.7334572403,million KZT,minfin,2026-09-26,level,2026-09-26
 2023-01-01,KZ,national,monthly,NEER,84.61646,index,nbk,2026-09-26,level,2026-09-26
 2023-01-01,KZ,national,monthly,NEER_EX_OIL,86.68843,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2023-01-01,KZ,national,annual,NON_CASH_PAYMENTS_SHARE,83.0999984741211,%,nbk,2026-09-26,level,2026-09-26
@@ -63512,6 +63541,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,10549.32772,billion KZT,nbk,2026-09-26,level,2026-09-26
 2023-04-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,20426.841,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2023-04-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1880.150029,billion KZT,nbk,2026-09-26,level,2026-09-26
+2023-04-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,22717972.63784391,million KZT,minfin,2026-09-26,level,2026-09-26
+2023-04-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,7563952.40900827,million KZT,minfin,2026-09-26,level,2026-09-26
 2023-04-01,CHN,national,monthly,CN_CPI_YOY,0.0972,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2023-04-01,CHN,national,quarterly,CN_GDP_REAL_YOY,106.5,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2023-04-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,93.673225402832,index,imf,2026-09-26,level,2026-09-26
@@ -63647,6 +63678,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,monthly,MONETARY_BASE,10284491.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2023-04-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58426.09439684753,USD million,nbk,2026-09-26,level,2026-09-26
 2023-04-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,23.784055,% of GDP,nbk,2026-09-26,level,2026-09-26
+2023-04-01,KZ,national,quarterly,NBK_DEBT,2631826.78525275,million KZT,minfin,2026-09-26,level,2026-09-26
 2023-04-01,KZ,national,monthly,NEER,89.96932,index,nbk,2026-09-26,level,2026-09-26
 2023-04-01,KZ,national,monthly,NEER_EX_OIL,94.0118,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2023-04-01,KZ,national,quarterly,NPL_RATIO,3.44,%,nbk,2026-09-26,level,2026-09-26
@@ -65270,6 +65302,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,13113.24621,billion KZT,nbk,2026-09-26,level,2026-09-26
 2023-10-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,20736.147,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2023-10-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2040.686931,billion KZT,nbk,2026-09-26,level,2026-09-26
+2023-10-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,25199826.173919857,million KZT,minfin,2026-09-26,level,2026-09-26
+2023-10-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,7609583.2865034,million KZT,minfin,2026-09-26,level,2026-09-26
 2023-10-01,CHN,national,monthly,CN_CPI_YOY,-0.1932,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2023-10-01,CHN,national,quarterly,CN_GDP_REAL_YOY,105.3,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2023-10-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,98.0662841796875,index,imf,2026-09-26,level,2026-09-26
@@ -65405,6 +65439,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,monthly,MONETARY_BASE,8843495.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2023-10-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,57858.378675153326,USD million,nbk,2026-09-26,level,2026-09-26
 2023-10-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,22.000833,% of GDP,nbk,2026-09-26,level,2026-09-26
+2023-10-01,KZ,national,quarterly,NBK_DEBT,2852545.68972926,million KZT,minfin,2026-09-26,level,2026-09-26
 2023-10-01,KZ,national,monthly,NEER,93.35106,index,nbk,2026-09-26,level,2026-09-26
 2023-10-01,KZ,national,monthly,NEER_EX_OIL,99.08271,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2023-10-01,KZ,national,quarterly,NPL_RATIO,3.27,%,nbk,2026-09-26,level,2026-09-26
@@ -66311,6 +66346,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,SMALL_BUSINESS_GDP_SHARE,30.2,% of GDP,bns,2026-09-26,level,2026-09-26
 2023-12-31,KZ,national,annual,SMALL_BUSINESS_VALUE_ADDED,35961700300000.0,KZT,bns,2026-09-26,level,2026-09-26
 2023-12-31,KZ,national,annual,SME_GDP_SHARE,36.9,% of GDP,bns,2026-09-26,level,2026-09-26
+2023-12-31,KZ,national,annual,STATE_BUDGET_DEBT_SERVICING,1865648.99764759,million KZT,minfin,2026-09-26,level,2026-09-26
 2023-12-31,KZ,national,annual,STATE_BUDGET_DEFICIT,-2811100.5949108,million KZT,minfin,2026-09-26,level,2026-09-26
 2023-12-31,KZ,national,annual,STATE_BUDGET_EXPENDITURE,26760000.2949759,million KZT,minfin,2026-09-26,level,2026-09-26
 2023-12-31,KZ,national,annual,STATE_BUDGET_REVENUE,24917246.139965,million KZT,minfin,2026-09-26,level,2026-09-26
@@ -66360,6 +66396,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,10082.91529,billion KZT,nbk,2026-09-26,level,2026-09-26
 2024-01-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,19670.71,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2024-01-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1820.251835,billion KZT,nbk,2026-09-26,level,2026-09-26
+2024-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,24914692.13778554,million KZT,minfin,2026-09-26,level,2026-09-26
+2024-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,7080707.696831649,million KZT,minfin,2026-09-26,level,2026-09-26
 2024-01-01,CHN,national,monthly,CN_CPI_YOY,-0.8654,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2024-01-01,CHN,national,quarterly,CN_GDP_REAL_YOY,105.3,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2024-01-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,88.8807220458984,index,imf,2026-09-26,level,2026-09-26
@@ -66499,6 +66537,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,monthly,MONETARY_BASE,11539973.0,million KZT,nbk,2026-09-26,level,2026-09-26
 2024-01-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60024.18771396999,USD million,nbk,2026-09-26,level,2026-09-26
 2024-01-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,21.728109,% of GDP,nbk,2026-09-26,level,2026-09-26
+2024-01-01,KZ,national,quarterly,NBK_DEBT,1199999.99991635,million KZT,minfin,2026-09-26,level,2026-09-26
 2024-01-01,KZ,national,monthly,NEER,95.28228,index,nbk,2026-09-26,level,2026-09-26
 2024-01-01,KZ,national,monthly,NEER_EX_OIL,101.41692,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2024-01-01,KZ,national,annual,NON_CASH_PAYMENTS_SHARE,88.6999969482422,%,nbk,2026-09-26,level,2026-09-26
@@ -67278,6 +67317,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,12336.30503,billion KZT,nbk,2026-09-26,level,2026-09-26
 2024-04-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,20437.273,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2024-04-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2042.198031,billion KZT,nbk,2026-09-26,level,2026-09-26
+2024-04-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,25861525.82,million KZT,minfin,2026-09-26,level,2026-09-26
+2024-04-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,6795162.781,million KZT,minfin,2026-09-26,level,2026-09-26
 2024-04-01,CHN,national,monthly,CN_CPI_YOY,0.1942,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2024-04-01,CHN,national,quarterly,CN_GDP_REAL_YOY,104.7,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2024-04-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,96.7830352783203,index,imf,2026-09-26,level,2026-09-26
@@ -67418,6 +67459,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60788.264179238104,USD million,nbk,2026-09-26,level,2026-09-26
 2024-04-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,21.690596,% of GDP,nbk,2026-09-26,level,2026-09-26
 2024-04-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,450.0,billion KZT,nbk,2026-09-26,level,2026-09-26
+2024-04-01,KZ,national,quarterly,NBK_DEBT,500000.0,million KZT,minfin,2026-09-26,level,2026-09-26
 2024-04-01,KZ,national,monthly,NEER,98.76039,index,nbk,2026-09-26,level,2026-09-26
 2024-04-01,KZ,national,monthly,NEER_EX_OIL,105.23357,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2024-04-01,KZ,national,quarterly,NPL_RATIO,3.06,%,nbk,2026-09-26,level,2026-09-26
@@ -68201,6 +68243,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,14727.81934,billion KZT,nbk,2026-09-26,level,2026-09-26
 2024-07-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,20477.329,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2024-07-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2254.925523,billion KZT,nbk,2026-09-26,level,2026-09-26
+2024-07-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,27324785.331769034,million KZT,minfin,2026-09-26,level,2026-09-26
+2024-07-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,7138685.328904026,million KZT,minfin,2026-09-26,level,2026-09-26
 2024-07-01,CHN,national,monthly,CN_CPI_YOY,0.4859,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2024-07-01,CHN,national,quarterly,CN_GDP_REAL_YOY,104.6,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2024-07-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,92.7298812866211,index,imf,2026-09-26,level,2026-09-26
@@ -68343,6 +68387,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,61490.21390998176,USD million,nbk,2026-09-26,level,2026-09-26
 2024-07-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,21.470463,% of GDP,nbk,2026-09-26,level,2026-09-26
 2024-07-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,299.0,billion KZT,nbk,2026-09-26,level,2026-09-26
+2024-07-01,KZ,national,quarterly,NBK_DEBT,400628.87211084005,million KZT,minfin,2026-09-26,level,2026-09-26
 2024-07-01,KZ,national,monthly,NEER,91.11614,index,nbk,2026-09-26,level,2026-09-26
 2024-07-01,KZ,national,monthly,NEER_EX_OIL,96.62082,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2024-07-01,KZ,national,quarterly,OFC_CLAIMS_ON_BANKING_SYSTEM,1988659.90186612,million KZT,nbk,2026-09-26,level,2026-09-26
@@ -69141,6 +69186,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15590.89924,billion KZT,nbk,2026-09-26,level,2026-09-26
 2024-10-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,20305.598,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2024-10-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2270.910639,billion KZT,nbk,2026-09-26,level,2026-09-26
+2024-10-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,28784676.087769262,million KZT,minfin,2026-09-26,level,2026-09-26
+2024-10-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,7217026.519217961,million KZT,minfin,2026-09-26,level,2026-09-26
 2024-10-01,CHN,national,monthly,CN_CPI_YOY,0.2904,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2024-10-01,CHN,national,quarterly,CN_GDP_REAL_YOY,105.4,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2024-10-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,85.5921630859375,index,imf,2026-09-26,level,2026-09-26
@@ -69283,6 +69330,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,62611.422223420064,USD million,nbk,2026-09-26,level,2026-09-26
 2024-10-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,19.296879,% of GDP,nbk,2026-09-26,level,2026-09-26
 2024-10-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,570.0,billion KZT,nbk,2026-09-26,level,2026-09-26
+2024-10-01,KZ,national,quarterly,NBK_DEBT,499999.99999993,million KZT,minfin,2026-09-26,level,2026-09-26
 2024-10-01,KZ,national,monthly,NEER,90.53203,index,nbk,2026-09-26,level,2026-09-26
 2024-10-01,KZ,national,monthly,NEER_EX_OIL,97.0385,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2024-10-01,KZ,national,quarterly,OFC_CLAIMS_ON_BANKING_SYSTEM,2056738.26499183,million KZT,nbk,2026-09-26,level,2026-09-26
@@ -70200,6 +70248,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,SMALL_BUSINESS_GDP_SHARE,32.2,% of GDP,bns,2026-09-26,level,2026-09-26
 2024-12-31,KZ,national,annual,SMALL_BUSINESS_VALUE_ADDED,43947996454750.8,KZT,bns,2026-09-26,level,2026-09-26
 2024-12-31,KZ,national,annual,SME_GDP_SHARE,38.9,% of GDP,bns,2026-09-26,level,2026-09-26
+2024-12-31,KZ,national,annual,STATE_BUDGET_DEBT_SERVICING,2232329.18284857,million KZT,minfin,2026-09-26,level,2026-09-26
 2024-12-31,KZ,national,annual,STATE_BUDGET_DEFICIT,-3586041.85373077,million KZT,minfin,2026-09-26,level,2026-09-26
 2024-12-31,KZ,national,annual,STATE_BUDGET_EXPENDITURE,30318236.4587978,million KZT,minfin,2026-09-26,level,2026-09-26
 2024-12-31,KZ,national,annual,STATE_BUDGET_REVENUE,27132164.9675629,million KZT,minfin,2026-09-26,level,2026-09-26
@@ -70248,6 +70297,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,12926.54097,billion KZT,nbk,2026-09-26,level,2026-09-26
 2025-01-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,17597.831,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2025-01-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,1928.366473,billion KZT,nbk,2026-09-26,level,2026-09-26
+2025-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,30074943.445461772,million KZT,minfin,2026-09-26,level,2026-09-26
+2025-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,8309718.93365078,million KZT,minfin,2026-09-26,level,2026-09-26
 2025-01-01,CHN,national,monthly,CN_CPI_YOY,0.485,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2025-01-01,CHN,national,quarterly,CN_GDP_REAL_YOY,105.4,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2025-01-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,88.4770660400391,index,imf,2026-09-26,level,2026-09-26
@@ -70393,6 +70444,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,58839.049756129956,USD million,nbk,2026-09-26,level,2026-09-26
 2025-01-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,19.760249,% of GDP,nbk,2026-09-26,level,2026-09-26
 2025-01-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,306.0,billion KZT,nbk,2026-09-26,level,2026-09-26
+2025-01-01,KZ,national,quarterly,NBK_DEBT,454128.80091756,million KZT,minfin,2026-09-26,level,2026-09-26
 2025-01-01,KZ,national,monthly,NEER,86.15251,index,nbk,2026-09-26,level,2026-09-26
 2025-01-01,KZ,national,monthly,NEER_EX_OIL,92.34002,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2025-01-01,KZ,national,annual,NON_CASH_PAYMENTS_SHARE,89.0,%,nbk,2026-09-26,level,2026-09-26
@@ -71220,6 +71272,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15055.64296,billion KZT,nbk,2026-09-26,level,2026-09-26
 2025-04-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,20143.544,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2025-04-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2295.789622,billion KZT,nbk,2026-09-26,level,2026-09-26
+2025-04-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,30574985.5243136,million KZT,minfin,2026-09-26,level,2026-09-26
+2025-04-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,8005188.35284317,million KZT,minfin,2026-09-26,level,2026-09-26
 2025-04-01,CHN,national,monthly,CN_CPI_YOY,-0.0746,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2025-04-01,CHN,national,quarterly,CN_GDP_REAL_YOY,105.2,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2025-04-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,77.5907745361328,index,imf,2026-09-26,level,2026-09-26
@@ -72179,6 +72233,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,16242.413,billion KZT,nbk,2026-09-26,level,2026-09-26
 2025-07-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,20206.104,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2025-07-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2469.848726,billion KZT,nbk,2026-09-26,level,2026-09-26
+2025-07-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,32191714.273779526,million KZT,minfin,2026-09-26,level,2026-09-26
+2025-07-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,8397706.045038655,million KZT,minfin,2026-09-26,level,2026-09-26
 2025-07-01,CHN,national,monthly,CN_CPI_YOY,0.0178,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2025-07-01,CHN,national,quarterly,CN_GDP_REAL_YOY,104.8,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2025-07-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,80.6834411621094,index,imf,2026-09-26,level,2026-09-26
@@ -72323,6 +72379,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,60260.29798799996,USD million,nbk,2026-09-26,level,2026-09-26
 2025-07-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,20.995228,% of GDP,nbk,2026-09-26,level,2026-09-26
 2025-07-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,500.0,billion KZT,nbk,2026-09-26,level,2026-09-26
+2025-07-01,KZ,national,quarterly,NBK_DEBT,0.0,million KZT,minfin,2026-09-26,level,2026-09-26
 2025-07-01,KZ,national,monthly,NEER,77.05435,index,nbk,2026-09-26,level,2026-09-26
 2025-07-01,KZ,national,monthly,NEER_EX_OIL,82.14587,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2025-07-01,KZ,national,quarterly,OFC_CLAIMS_ON_BANKING_SYSTEM,2191881.54340663,million KZT,nbk,2026-09-26,level,2026-09-26
@@ -73191,6 +73248,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.6,index,nbk,2026-09-26,level,2026-09-26
 2025-10-01,BLR,national,monthly,BY_CPI_YOY,106.9,"index, same month previous year = 100",eec,2026-09-26,level,2026-09-26
 2025-10-01,KZ,national,quarterly,CAPACITY_UTILIZATION,51.978148,percent,nbk,2026-09-26,level,2026-09-26
+2025-10-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,33953281.336,million KZT,minfin,2026-09-26,level,2026-09-26
+2025-10-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,8730378.771,million KZT,minfin,2026-09-26,level,2026-09-26
 2025-10-01,CHN,national,monthly,CN_CPI_YOY,0.2313,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2025-10-01,CHN,national,quarterly,CN_GDP_REAL_YOY,104.5,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2025-10-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,75.3424453735352,index,imf,2026-09-26,level,2026-09-26
@@ -73336,6 +73395,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,monthly,NATIONAL_FUND_ASSETS,62738.94112556005,USD million,nbk,2026-09-26,level,2026-09-26
 2025-10-01,KZ,national,quarterly,NATIONAL_FUND_GDP_SHARE,20.494094,% of GDP,nbk,2026-09-26,level,2026-09-26
 2025-10-01,KZ,national,monthly,NATIONAL_FUND_TRANSFERS,355.0,billion KZT,nbk,2026-09-26,level,2026-09-26
+2025-10-01,KZ,national,quarterly,NBK_DEBT,0.0,million KZT,minfin,2026-09-26,level,2026-09-26
 2025-10-01,KZ,national,monthly,NEER,76.31148,index,nbk,2026-09-26,level,2026-09-26
 2025-10-01,KZ,national,monthly,NEER_EX_OIL,81.36361,"index, December 2016 = 100",nbk,2026-09-26,level,2026-09-26
 2025-10-01,KZ,national,quarterly,OFC_CLAIMS_ON_BANKING_SYSTEM,2183259.21688353,million KZT,nbk,2026-09-26,level,2026-09-26
@@ -74272,6 +74332,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,RENEWABLE_ENERGY_SHARE,7.02,%,bns,2026-09-26,level,2026-09-26
 2025-12-31,KZ,national,annual,RETAIL_TRADE,27709302232409.5,KZT,bns,2026-09-26,level,2026-09-26
 2025-12-31,RUS,national,daily,RUB_USD,78.2267,RUB per USD,cbr,2026-09-26,level,2026-09-26
+2025-12-31,KZ,national,annual,STATE_BUDGET_DEBT_SERVICING,2660521.40591048,million KZT,minfin,2026-09-26,level,2026-09-26
 2025-12-31,KZ,national,annual,STATE_BUDGET_DEFICIT,-4383871.06572581,million KZT,minfin,2026-09-26,level,2026-09-26
 2025-12-31,KZ,national,annual,STATE_BUDGET_EXPENDITURE,33442828.7686143,million KZT,minfin,2026-09-26,level,2026-09-26
 2025-12-31,KZ,national,annual,STATE_BUDGET_REVENUE,29871047.8198312,million KZT,minfin,2026-09-26,level,2026-09-26
@@ -74316,6 +74377,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-09-26,level,2026-09-26
 2026-01-01,BLR,national,monthly,BY_CPI_YOY,106.4,"index, same month previous year = 100",eec,2026-09-26,level,2026-09-26
 2026-01-01,KZ,national,quarterly,CAPACITY_UTILIZATION,52.020391,percent,nbk,2026-09-26,level,2026-09-26
+2026-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,34845067.38551747,million KZT,minfin,2026-09-26,level,2026-09-26
+2026-01-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,8698208.234496133,million KZT,minfin,2026-09-26,level,2026-09-26
 2026-01-01,CHN,national,monthly,CN_CPI_YOY,0.2291,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2026-01-01,CHN,national,quarterly,CN_GDP_REAL_YOY,105.0,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2026-01-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,75.6549301147461,index,imf,2026-09-26,level,2026-09-26
@@ -75310,6 +75373,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,15606.9783,billion KZT,nbk,2026-09-26,level,2026-09-26
 2026-04-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,18964.1,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2026-04-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2196.1035,billion KZT,nbk,2026-09-26,level,2026-09-26
+2026-04-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,35330930.46963738,million KZT,minfin,2026-09-26,level,2026-09-26
+2026-04-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,8185792.40162799,million KZT,minfin,2026-09-26,level,2026-09-26
 2026-04-01,CHN,national,monthly,CN_CPI_YOY,1.2,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2026-04-01,CHN,national,quarterly,CN_GDP_REAL_YOY,104.3,"index, same quarter previous year = 100",nbs,2026-09-26,level,2026-09-26
 2026-04-01,KZ,national,monthly,COMMODITY_TERMS_OF_TRADE,110.161270141602,index,imf,2026-09-26,level,2026-09-26
@@ -76399,6 +76464,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,monthly,CASHLESS_PAYMENTS_VALUE,17599.504892091,billion KZT,nbk,2026-09-26,level,2026-09-26
 2026-07-01,KZ,national,monthly,CASH_WITHDRAWALS_COUNT,18946.849,thousand transactions,nbk,2026-09-26,level,2026-09-26
 2026-07-01,KZ,national,monthly,CASH_WITHDRAWALS_VALUE,2313.278926905,billion KZT,nbk,2026-09-26,level,2026-09-26
+2026-07-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,36824245.888925985,million KZT,minfin,2026-09-26,level,2026-09-26
+2026-07-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,8352366.460626001,million KZT,minfin,2026-09-26,level,2026-09-26
 2026-07-01,CHN,national,monthly,CN_CPI_YOY,0.5,"% change, same month previous year",imf,2026-09-26,level,2026-09-26
 2026-07-01,KZ,national,monthly,CONSTRUCTION_INDEX,115.3,index (same period previous year = 100),bns,2026-09-26,level,2026-09-26
 2026-07-01,KZ,national,monthly,CONSTRUCTION_OUTPUT,5061072753.0,thousand KZT,bns,2026-09-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-09-26

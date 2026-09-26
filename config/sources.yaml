@@ -4829,6 +4829,66 @@ agencies:
           are anchored to the section and additionally verified against the expected Russian
           label 'Еврооблигации' before any value is read; a re-ordering upstream raises instead of
           silently returning the wrong row. fetch_gov_debt_eurobonds.
+      CENTRAL_GOV_DEBT:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 22 кв"
+        format: xlsx
+        notes: >
+          2026-09-26. Same sheet and parser as STATE_DEBT_TOTAL. Matched as section=I., row
+          code=1, currency=KZT, label 'Правительства' -- the first row coded '1' inside
+          section I (the '1' under sections II and III is their internal split, never reached
+          because the scan stops at the next section anchor). Debt of the Government of the
+          Republic of Kazakhstan; equals GOV_DEBT_DOMESTIC + GOV_DEBT_EXTERNAL exactly
+          (36,824,245.89 at 2026-07-01) but with 22 dates from 2020-01-01 against the
+          snapshot documents' 11. Added so that the sovereign-rating models can compute the
+          foreign-currency share of GOVERNMENT debt with a like-for-like denominator (the
+          earlier denominator, GOV_DEBT, also carries the National Bank, local bodies and
+          guarantees). fetch_central_gov_debt.
+      CENTRAL_GOV_DEBT_EXTERNAL:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 22 кв"
+        format: xlsx
+        notes: >
+          2026-09-26. Same sheet and parser. Matched as section=I., row code=1.2, currency=KZT,
+          label 'внешний' -- the tenge twin of GOV_DEBT_EXTERNAL_USD and the same concept as
+          GOV_DEBT_EXTERNAL (quarterly snapshot documents), kept as a separate id because the
+          bulletin carries 22 dates from 2020-01-01 where the snapshot documents give 11 with
+          gaps in 2022-2023; the sovereign-rating models need it at every 1 January to divide
+          by CENTRAL_GOV_DEBT without a currency conversion. 'External' is by market of
+          borrowing (eurobonds, IFI loans), not by currency. fetch_central_gov_debt_external.
+      NBK_DEBT:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        sheet: "табл 22 кв"
+        format: xlsx
+        notes: >
+          2026-09-26. Same sheet and parser. Matched as section=I., row code=2, currency=KZT,
+          label 'Национального Банка'. Debt of the National Bank -- inside Kazakhstan's
+          'state debt' (Budget Code) but outside general government under PSDS/GFSM. Sparse
+          by nature: 3.42 trn KZT at 2020-01-01 (the tenge cell is BLANK there while the USD
+          cell holds 8,968.4 mln -- the shared parser converts it at the sheet's own implied
+          rate, section-I KZT/USD, because a blank in the 2020 column is not a zero),
+          2,927,277 mln at 2021-01-01, 454,129 at 2025-01-01, 0 at 2025-07-01 and 2025-10-01;
+          2025-04-01 is blank in both currencies (= 0 by the section identity) and the cells
+          are BLANK from 2026-01-01 (the parser skips blanks, so the series ends at
+          2025-10-01). Section I is already consolidated (I = row 1 + row 2 + row 3 - row 3.1,
+          local debt owed to the Government), so the three PSDS concepts follow from the
+          bulletin: state debt (section I), general government (section I minus NBK_DEBT,
+          guarantees excluded), state and state-guaranteed (GOV_DEBT = I + II + III).
+          fetch_nbk_debt.
+      MINFIN_TABLE22_BLANK_CELLS (scope note):
+        status: confirmed
+        notes: >
+          2026-09-26. In the 2020-01-01 column of 'табл 22 кв' the tenge cells of rows 2 (NBK),
+          3 (local bodies), II and III are blank while the USD cells are filled; from 2021 the
+          tenge cells are filled everywhere. _fetch_debt_structure_row therefore falls back to
+          USD x (section I row KZT / USD -- the sheet's own rate for that date, 381.2 at
+          2020-01-01; the II./III. anchor rows are themselves blank in tenge there) for a blank
+          tenge cell that has a filled USD neighbour, and appends the converted dates to the
+          dataset note. A cell blank in BOTH currencies is still skipped (never assumed zero).
+          Affected: NBK_DEBT, LOCAL_GOV_DEBT, STATE_GUARANTEED_DEBT (each gains 2020-01-01).
       MINFIN_BULLETIN_SHEET_COVERAGE (scope note):
         status: out_of_scope
         notes: >
@@ -5864,6 +5924,22 @@ agencies:
           2026-08-31. Same sheet. State non-oil budget deficit (surplus) -- broader scope than
           NON_OIL_BUDGET_DEFICIT (republican-only). Verified live: -8,454,245.45 (2023) to
           -11,393,479.39 (2025) million KZT. fetch_state_non_oil_deficit.
+      STATE_BUDGET_DEBT_SERVICING:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 3"
+        target_row_label: "14. Обслуживание долга"
+        format: xlsx
+        frequency: annual
+        notes: >
+          2026-09-26. Same sheet (functional expenditure group 14). State budget debt
+          servicing -- broader scope than GOV_DEBT_SERVICING (republican-only). Verified live
+          against the 2026-08-01 bulletin: 1,865,648.998 (2023), 2,232,329.183 (2024),
+          2,660,521.406 (2025) million KZT; the excess over GOV_DEBT_SERVICING (57.5 / 50.3 /
+          52.6 bn) matches the local budgets' row 14 in табл 12 (57.8 / 50.9 / 53.4 bn) to
+          within 1 bn. Added as the general-government interest numerator for the
+          sovereign-rating models. fetch_state_budget_debt_servicing.
       PROPERTY_TAX:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
