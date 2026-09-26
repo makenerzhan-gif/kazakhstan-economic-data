@@ -640,6 +640,49 @@ the update report and raises one GitHub Actions warning per failure (plus the jo
 more than 20 % of datasets fail — an outage or a shared-code bug. Test: `failure_gate` in
 tests/test_lagging_series.py.
 
+## 2026-09-26 — debt structure completed for the sovereign-rating models: 515 -> 519 indicators
+
+**Why.** An independent check of the Fitch / Moody's / S&P input sheets (project «Проект
+обновление данных в моделях») found that the foreign-currency share of government debt divided
+the Government's external debt (row 1.2 of the bulletin's «табл 22 кв») by GOV_DEBT — the
+«Total State and State Guaranteed debt» line (sections I + II + III, i.e. including the
+National Bank, local executive bodies and guarantees) — and took the 1 October snapshot as the
+year's value. A like-for-like denominator, the National Bank row and a general-government
+interest figure were missing from the dataset.
+
+**Minfin (4), all from documents the pipeline already reads daily:**
+- CENTRAL_GOV_DEBT — section I, row 1 «Долг Правительства Республики Казахстан» (36.82 trillion
+  KZT at 2026-07-01; = GOV_DEBT_DOMESTIC + GOV_DEBT_EXTERNAL exactly, but 22 dates from
+  2020-01-01 against the snapshot documents' 11).
+- CENTRAL_GOV_DEBT_EXTERNAL — row 1.2 in the sheet's tenge column (8.35 trillion), the tenge twin
+  of GOV_DEBT_EXTERNAL_USD; kept as its own id for the same coverage reason.
+- NBK_DEBT — row 2 «Долг Национального Банка» (2.93 trillion at 2021-01-01, 0 by 2025-07-01,
+  blank from 2026-01-01 — the parser skips blanks). Section I is already consolidated
+  (I = row 1 + row 2 + row 3 − row 3.1, verified to the cent), so general-government debt on the
+  bulletin's own definitions is section I − NBK_DEBT; guarantees (II, III) are contingent.
+- STATE_BUDGET_DEBT_SERVICING — «табл 3», functional group 14 «Обслуживание долга» of the STATE
+  budget (1.87 / 2.23 / 2.66 trillion for 2023–2025); the excess over the republican-only
+  GOV_DEBT_SERVICING (57.5 / 50.3 / 52.6 bn) matches the local budgets' own row 14 in «табл 12»
+  to within 1 bn.
+
+**Parser change, shared by every «табл 22 кв» series.** In the 2020-01-01 column the tenge cells
+of rows 2, 3, II and III are blank while the USD cells are filled (NBK: 8,968.4 mln USD) — a
+blank there is not a zero. `_fetch_debt_structure_row` now converts such a cell at the sheet's
+own implied rate for that date (section I row KZT / USD, 381.2 for 2020-01-01 — the II./III.
+anchor rows are themselves blank in tenge there) and appends the converted dates to the dataset
+note; a cell blank in both currencies is still skipped. LOCAL_GOV_DEBT and STATE_GUARANTEED_DEBT
+thereby gain their 2020-01-01 point (21 → 22 dates each); nothing else in those series changes.
+
+**Cross-check against IMF WEO.** General government gross debt (GGXWDG, 24.56% of 2025 GDP =
+38.74 trillion KZT) equals section I − NBK_DEBT + II + III at 2026-01-01 (36.44 − 0 + 2.29 +
+0.006 = 38.74): the WEO series includes state guarantees but not the National Bank's debt — the
+two coincide with I + II + III only in 2025, when NBK_DEBT is already zero.
+
+Tests: full suite 459 passed after rebasing onto main (`tests/test_minfin_debt_structure.py`: section-anchored row lookup, the USD
+fallback, the section identity with row 3.1, the «табл 3» annual columns). Data files and the
+unified dataset were rebuilt locally for the nine «табл 22 кв» / «табл 3» indicators only;
+the scheduled CI run refreshes the rest.
+
 ## 2026-09-26 — NBK form downloads archived in canonical form; 101 same-content copies removed
 
 **Why.** The insurance form (formId=132, 13.7 MB, read by INSURANCE_PREMIUMS_GENERAL/LIFE) was archived
@@ -674,3 +717,6 @@ naming the file that holds the data. `dedup_raw --wits` removed 14 copies (recor
 manifests of 2026-09-25 named files from a second run that day that were never committed; they now name
 the file archived that day, with a note, and are listed under `wits_never_committed` (not as removals —
 their bytes are unknown). No dangling manifest left. Checked live: two WITS runs, no new file.
+
+The CI run of 2026-09-26 09:45 (old code) added one more insurance copy (`…_094522.json`); removed on
+merging main, same record (116 files in all).

@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/uploads/2026/9/4/0f480349a6d5a3d479e612d5eecb8906_original.1216239.xlsx",
+  "dataset_id": "gov.kz-doc-1062506,sheet=табл 3",
+  "indicator_id": "STATE_BUDGET_DEBT_SERVICING",
+  "indicator_name": "State Budget Debt Servicing",
+  "description": "Расходы государственного бюджета на обслуживание долга",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT. Functional group 14 'Debt servicing' of the STATE budget (republican + local government budgets combined) -- broader scope than GOV_DEBT_SERVICING, which is republican-budget-only. The closest bulletin measure of general-government interest.",
+  "publication_date": null,
+  "last_update_date": "2026-09-26",
+  "download_date": "2026-09-26",
+  "period_start": "2023-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

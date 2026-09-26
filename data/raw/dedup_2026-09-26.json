@@ -116,7 +116,8 @@
   "data/raw/wits/wits_wits_kz_exports_by_partner_2026-09-26.json": "data/raw/wits/wits_wits_kz_exports_by_partner_2026-09-25.json",
   "data/raw/wits/wits_wits_kz_exports_by_partner_2026-09-26_082354.json": "data/raw/wits/wits_wits_kz_exports_by_partner_2026-09-25.json",
   "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-26.json": "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-25.json",
-  "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-26_082356.json": "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-25.json"
+  "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-26_082356.json": "data/raw/wits/wits_wits_kz_imports_by_partner_2026-09-25.json",
+  "data/raw/nbk/nbk_insurance_premiums_general_2026-09-26_094522.json": "data/raw/nbk/nbk_insurance_premiums_general_2026-09-26_142347.json"
  },
  "nbk_forms_rule": "NBK paginated form downloads whose canonical form (scripts/lib/nbk_pages.py) is identical -- same rows and values, differing only in page arrangement, row order and per-page column labels -- kept once; a file already in canonical form is kept when the group has one, otherwise the earliest. These removals are listed in nbk_forms_removed and, with the file kept, in removed.",
  "nbk_forms_removed": [
@@ -176,6 +177,7 @@
   "data/raw/nbk/nbk_insurance_premiums_general_2026-09-24.json",
   "data/raw/nbk/nbk_insurance_premiums_general_2026-09-26.json",
   "data/raw/nbk/nbk_insurance_premiums_general_2026-09-26_074105.json",
+  "data/raw/nbk/nbk_insurance_premiums_general_2026-09-26_094522.json",
   "data/raw/nbk/nbk_insurance_premiums_life_2026-08-31.json",
   "data/raw/nbk/nbk_insurance_premiums_life_2026-08-31_172347.json",
   "data/raw/nbk/nbk_insurance_premiums_life_2026-08-31_210445.json",
@@ -222,7 +224,7 @@
   "data/raw/nbk/nbk_insurance_premiums_life_2026-09-15_085745.json",
   "data/raw/nbk/nbk_insurance_premiums_life_2026-09-15_101918.json"
  ],
- "removed_files": 115,
+ "removed_files": 116,
  "wits_rule": "WITS SDMX-JSON answers identical apart from header.prepared (the time WITS built the answer) kept once, the earliest; gravity._save_raw meant to skip them but compared each download with a manifest (raw_store.latest_raw_file returned one) until 2026-09-26. These removals are listed in wits_removed and, with the file kept, in removed.",
  "wits_removed": [
   "data/raw/wits/wits_kz_tariff_applied_by_partner_ahs-smpl-avrg_2026-09-26.json",
