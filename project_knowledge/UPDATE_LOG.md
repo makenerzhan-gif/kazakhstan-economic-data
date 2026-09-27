@@ -771,3 +771,53 @@ annual reports only.
 month, per item and region, indices and contributions.
 
 Tests: `tests/test_history_extensions.py` (9).
+
+## 2026-09-27 — supply and use by product and region: production, trade, domestic use
+
+Asked for: production, exports, imports and domestic consumption in physical and value terms,
+by industry/product and by region. All new data are item-level datasets
+(config/dims.yaml → data/unified/macro_dims_long.csv.gz).
+
+**Trade by commodity and region** (the BNS customs workbooks 446905/446906, monthly 2015-01 …
+2026-07, both flows, thousand USD and tonnes). EXPORTS_/IMPORTS_{VALUE,VOLUME}_BY_HS_CHAPTER:
+the 96 HS chapters, national. EXPORTS_/IMPORTS_{VALUE,VOLUME}_BY_REGION_HS_SECTION: 21 HS
+sections × 20 regions. EXPORTS_/IMPORTS_VOLUME_BY_REGION_PRODUCT: 19 commodities (coal, crude,
+petroleum products, ores, cement, steel, ferroalloys, non-ferrous metals, flour, sugar,
+sunflower oil, fertilisers) by region. Each file is read once for all its datasets
+(fetchers/bns_trade.scan); every group is re-checked against the published national and
+regional totals. September 2022: the national rows are 1-4 % below their own regions
+(source_issues trade_national_row_2022_09); the Almaty-city import block misses its heading
+by ≤0.003 % in four 2023 months (tolerance now 0.01 %). Region = where the trader is registered.
+
+**Resources and use, national, physical units** (BNS publication 19065, archive 72035; 85
+editions read by scripts/backfill_resource_use.py). RESOURCE_USE_MONTHLY (the month),
+RESOURCE_USE_YTD (January to the month) 2018-03 … 2026-07, RESOURCE_USE_ANNUAL (final, 2021-24):
+~270 industrial products, grain and vegetables, socially important foods (315 in all) —
+resources, production, imports, use, exports, sales on the home market. Checked: coal
+January–July 2026 production 63 029 kt, exports 17 833 kt, wheat exports 4.95 Mt — the
+edition's own figures; resources = production + imports in 99 % of rows. BNS revises past
+months only inside the cumulative figures (wheat exports January–March 2026: 3.66 Mt first,
+~2.6 Mt implied by July), so for totals use the YTD dataset.
+
+**Annual balances.** AGRI_BALANCE (publication 19517, 2017-2025): grain, grain products, meat,
+milk, eggs, potatoes, fruit, sugar beet, sunflower seed, vegetable oil — stocks, production,
+imports, feed/seed/processing/losses, exports, personal consumption (total and per head),
+stocks; grain 2024: production 25.2 Mt, exports 8.25 Mt, feed 3.97 Mt. ENERGY_BALANCE_TJ /
+_NATURAL (publication 19275, 2021-2025): the fuel-energy balance, ~40 fuels × ~85 flows (supply,
+transformation by plant type, own use, final consumption by 20 sectors); production + imports
++ exports + bunkers + stock change = total primary supply every year (2025: 3.35 million TJ).
+No regional energy balance is published after 2020.
+
+**Industry by region, monthly** (Taldau, 2020-01 onward). INDUSTRY_OUTPUT_BY_REGION_MONTHLY
+(701592): output in million KZT, 20 regions × ОКЭД sections and divisions (31 items); the
+regions add up to the national figure exactly. INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY
+(701608) and INDUSTRY_SHIPMENTS_BY_REGION_MONTHLY (701622, total and to the domestic market):
+69 products (BNS's main-products list and further КПВЭД products), unit in item_name.
+Re-downloaded weekly (refresh_days). REGIONAL_PRODUCT_BALANCE: derived production − exports +
+imports by region for the 19 commodities, with the domestic shipments beside it — a cross-check,
+not a statistic (BNS publishes no regional product balance).
+
+**Project.** `latest/resource_use_latest.csv` (78 KB): the resources-and-use table for the
+latest January–month against a year earlier.
+
+Tests: `tests/test_supply_use.py`.

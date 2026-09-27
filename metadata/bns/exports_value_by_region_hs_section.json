@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/446905/file/ru/",
+  "dataset_id": "446905,measure=usd",
+  "indicator_id": "EXPORTS_VALUE_BY_REGION_HS_SECTION",
+  "indicator_name": "Goods exports by region and HS section, thousand USD, monthly",
+  "description": "Экспорт товаров по регионам и разделам ТН ВЭД ЕАЭС, тыс. долларов США, помесячно",
+  "frequency": "monthly",
+  "unit": "thousand USD",
+  "currency": "USD",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "21 regions plus national. TOTAL is the published row (national or the region's heading row); a section is the sum of its 6-digit lines in the region, kept only when the region's lines reproduce its heading row. Region = where the exporter is registered, not where the good is produced or consumed. OTHER = code 999999. Raw file: bns_exports_2026-09-16.xlsx.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2015-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

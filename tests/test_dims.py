@@ -23,7 +23,17 @@ def test_every_dataset_has_a_fetcher_and_a_known_layout():
                                     "year_months", "year_sheets", "year_blocks_regions_items", "year_blocks_items_regions",
                                     "year_blocks_items_regions_ytd", "month_rows", "region_blocks_months", "sector_columns")
         elif key == "bns_trade":
-            assert ds["measure"] in ("usd", "tonnes") and ds["dictionary"] == "hs_export_groups" and ds["frequency"] == "monthly"
+            assert ds["measure"] in ("usd", "tonnes") and ds["frequency"] == "monthly"
+            assert ds["dictionary"] in ("hs_export_groups", "hs_chapters", "hs_sections", "hs_balance_products")
+            assert ds.get("flow", "exports") in ("exports", "imports")
+        elif key == "taldau_regional":
+            assert ds["index_id"] and ds["dic_ids"].count(",") == ds["terms"].count(",") and ds["items"]
+            assert len({i["code"] for i in ds["items"]}) == len(ds["items"]) and ds["frequency"] == "monthly"
+            assert all(i["name"] and i["term"] for i in ds["items"])
+        elif key == "bns_resource_use":
+            assert ds["period"] in ("monthly", "ytd", "annual")
+        elif key == "bns_balances":
+            assert ds["balance"] in ("agri", "energy_natural", "energy_tj") and ds["frequency"] == "annual"
         elif key == "taldau":
             assert ds["index_id"] and ds["dic_ids"].count(",") == ds["terms"].count(",")
             assert ds["terms"].split(",")[ds["expand_pos"]] == ds["expand_term"]

@@ -270,6 +270,45 @@ def refresh_cpi_detail() -> None:
             w.writerows(rows)
 
 
+RESOURCE_USE_COLUMNS = (("PROD", "production"), ("IMP", "imports"), ("EXP", "exports"), ("DOM", "domestic_sales"))
+
+
+def resource_use_snapshot() -> list[dict]:
+    """BNS «Ресурсы и использование отдельных видов продукции»: January to the latest month and
+    the same period a year earlier, one row per product -- production, imports, exports and
+    sales on the home market in the product's own unit. History: RESOURCE_USE_* in
+    data/processed/dims/ (not synced)."""
+    path = REPO_ROOT / "data" / "processed" / "dims" / "resource_use_ytd.csv"
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8") as f:
+        recs = list(csv.DictReader(f))
+    last = max(r["date"] for r in recs)
+    prev = f"{int(last[:4]) - 1}{last[4:]}"
+    rows: dict[str, dict] = {}
+    for r in recs:
+        if r["date"] not in (last, prev):
+            continue
+        product, art = r["item_code"].rsplit(".", 1)
+        col = dict(RESOURCE_USE_COLUMNS).get(art)
+        if col is None:
+            continue
+        row = rows.setdefault(product, {"period_end": last[:7], "product_code": product,
+                                        "product": r["item_name"].rsplit(" — ", 1)[0],
+                                        **{f"{c}{s}": "" for _a, c in RESOURCE_USE_COLUMNS for s in ("", "_prev_year")}})
+        row[col + ("" if r["date"] == last else "_prev_year")] = r["value"]
+    return [r for r in rows.values() if r["production"] or r["exports"] or r["imports"]]
+
+
+def refresh_resource_use() -> None:
+    rows = resource_use_snapshot()
+    if rows:
+        with (PK / "latest" / "resource_use_latest.csv").open("w", encoding="utf-8", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0]))
+            w.writeheader()
+            w.writerows(sorted(rows, key=lambda r: (r["product_code"].startswith(("crops_", "szpt_")), r["product_code"])))
+
+
 def refresh_models() -> None:
     """Copy each model's report (text only, no charts) so the Project sees current estimates."""
     out = PK / "models"
@@ -295,6 +334,7 @@ def main() -> int:
     (PK / "SOURCES.md").write_text(build_sources_md(sources), encoding="utf-8")
     refresh_latest(indicators)
     refresh_cpi_detail()
+    refresh_resource_use()
     refresh_models()
     print("project_knowledge/ refreshed.")
     return 0

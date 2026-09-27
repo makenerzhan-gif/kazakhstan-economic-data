@@ -186,3 +186,17 @@ issues:
       printed deficit of −1 657 256 (90 372 mln apart). Every other month of 2019-2026 reconciles
       within 1 mln.
     advice: For January-September 2021 derive the deficit from its components, or check the Q3 2021 figure against the annual report.
+
+  - id: trade_national_row_2022_09
+    kind: inconsistent
+    variable: IMPORTS_VALUE_BY_REGION_HS_SECTION
+    observations:
+      - {date: "2022-09-01", item: TOTAL, value: 4532374.79174}
+    evidence: >
+      BNS trade workbooks (elements 446905/446906), sheet «2022», September 2022: the national row
+      «Республики Казахстан» is below the sum of the 21 regional heading rows and of the 6-digit
+      lines -- imports by 3.8 % (USD) and 3.9 % (tonnes), exports by 1.1 % (USD) and 1.5 % (tonnes).
+      Every other month from January 2015 adds up to within 0.01 %. The regional rows are internally
+      consistent (lines = heading), so the national row looks stale. The national rows of the item-level
+      trade datasets keep TOTAL only for this month; the regional breakdowns are complete.
+    advice: For September 2022 prefer the sum of the regions (national TOTAL + 3.8 % for imports, + 1.1 % for exports in USD).
