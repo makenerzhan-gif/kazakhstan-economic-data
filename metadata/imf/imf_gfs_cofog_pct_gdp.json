@@ -1,7 +1,7 @@
 {
   "source": "imf",
-  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/GFS_COFOG/+/KAZ.*.*.*.POGDP_PT.A",
-  "dataset_id": "IMF.STA/GFS_COFOG/KAZ.*.*.*.POGDP_PT.A",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "IMF_GFS_COFOG_PCT_GDP",
   "indicator_name": "General government expenditure by function (COFOG, IMF GFS), percent of GDP",
   "description": "Расходы сектора госуправления по функциям (КФОГУ, МВФ GFS), % ВВП",

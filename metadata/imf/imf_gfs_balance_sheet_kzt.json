@@ -1,7 +1,7 @@
 {
   "source": "imf",
-  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/GFS_BS/+/KAZ.*.*.*.XDC.A",
-  "dataset_id": "IMF.STA/GFS_BS/KAZ.*.*.*.XDC.A",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "IMF_GFS_BALANCE_SHEET_KZT",
   "indicator_name": "General government balance sheet (IMF GFS), billion KZT, end of year",
   "description": "Баланс активов и обязательств сектора госуправления (МВФ GFS), млрд тенге, на конец года",

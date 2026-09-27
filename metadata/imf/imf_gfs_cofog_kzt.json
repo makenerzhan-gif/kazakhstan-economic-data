@@ -1,7 +1,7 @@
 {
   "source": "imf",
-  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/GFS_COFOG/+/KAZ.*.*.*.XDC.A",
-  "dataset_id": "IMF.STA/GFS_COFOG/KAZ.*.*.*.XDC.A",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "IMF_GFS_COFOG_KZT",
   "indicator_name": "General government expenditure by function (COFOG, IMF GFS), billion KZT",
   "description": "Расходы сектора госуправления по функциям (КФОГУ, МВФ GFS), млрд тенге",

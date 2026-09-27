@@ -1,7 +1,7 @@
 {
   "source": "imf",
-  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/QGFS/+/KAZ.*.*.*.Q",
-  "dataset_id": "IMF.STA/QGFS/KAZ.*.*.*.Q",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "IMF_QGFS_KZT",
   "indicator_name": "IMF quarterly GFS: statement of sources and uses of cash, general government, billion KZT",
   "description": "Квартальная статистика госфинансов МВФ (QGFS): источники и использование денежных средств сектора госуправления, млрд тенге",
