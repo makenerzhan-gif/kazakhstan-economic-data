@@ -1,7 +1,12 @@
 {
-  "downloaded_at": "2026-09-27T11:31:09.658231",
-  "n_documents_listed": 13,
-  "n_parsed": 13,
-  "skipped_document_ids": [],
+  "downloaded_at": "2026-09-27T15:45:49.376635",
+  "n_documents_listed": 164,
+  "n_parsed": 156,
+  "skipped_document_ids": [
+    2699,
+    26687,
+    26733,
+    "yearly:2013:Стат_бюлл_декабрь  2013_12(180).xls"
+  ],
   "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
 }

@@ -1,7 +1,12 @@
 {
-  "downloaded_at": "2026-09-27T11:30:34.351231",
-  "n_documents_listed": 13,
-  "n_parsed": 13,
-  "skipped_document_ids": [],
+  "downloaded_at": "2026-09-27T15:45:56.474461",
+  "n_documents_listed": 164,
+  "n_parsed": 157,
+  "skipped_document_ids": [
+    2699,
+    26687,
+    "yearly:2013:Стат_бюллетень_июль  2013.xls",
+    "yearly:2018:на 1 апреля 2018 1 квартал.xlsx"
+  ],
   "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
 }

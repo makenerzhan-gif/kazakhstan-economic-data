@@ -1,4 +1,8 @@
 date,value,transformation
+2011-08-31,3228477.0234290003,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2012-01-31,326215.3315647,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2012-02-29,803813.7188183,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2012-07-31,3367827.7808691,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
 2013-01-31,307079.6537916001,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
 2013-02-28,897585.0062723,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
 2013-03-31,1357341.9409135,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
@@ -8,6 +12,8 @@ date,value,transformation
 2013-07-31,3642517.4335931004,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
 2013-08-31,4203745.2638325,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
 2013-09-30,4839138.332247401,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2013-10-31,5401423.85846612,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
+2013-11-30,5983736.198764459,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
 2013-12-31,6852711.30570356,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
 2014-01-31,392506.22429029,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"
 2014-02-28,980179.43634582,"level (year-to-date cumulative, as published -- not decumulated to discrete months)"

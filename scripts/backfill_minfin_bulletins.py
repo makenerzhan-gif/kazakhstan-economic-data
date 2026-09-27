@@ -14,7 +14,7 @@ budget built from them. The archive's workbooks are not copied into data/raw.
 --yearly FIRST-LAST: also the years before 2019. Minfin keeps them as one RAR per year («Статистический
 бюллетень за 2017 год (12 месяцев)», 12 monthly editions inside; the tables are those of the 2019
 editions, same sheet names and labels). Each archive is downloaded into the cache, unpacked with
-7z (which must be installed) and its xls/xlsx editions are read like the monthly documents. 2013-2018
+7z or unar (one must be installed) and its xls/xlsx editions are read like the monthly documents. 2013-2018
 are spreadsheets; 2008-2012 are mostly PDF and are not read.
 
 --cache DIR: a folder with the bulletins already downloaded, named <document id>.xlsx/.xls
@@ -68,7 +68,10 @@ def yearly_editions(years: range, cache: Path) -> list[dict]:
             if not rar.exists():
                 rar.write_bytes(minfin._download(found[0]["full_text"][0]["document"]))
             folder.mkdir()
-            subprocess.run(["7z", "x", "-y", f"-o{folder}", str(rar)], check=True, capture_output=True)
+            try:
+                subprocess.run(["7z", "x", "-y", f"-o{folder}", str(rar)], check=True, capture_output=True)
+            except (subprocess.CalledProcessError, FileNotFoundError):   # 7z crashes on the 2011 archive
+                subprocess.run(["unar", "-q", "-f", "-o", str(folder), str(rar)], check=True, capture_output=True)
         files = sorted(f for f in glob.glob(str(folder / "**" / "*"), recursive=True) if f.lower().endswith((".xls", ".xlsx")))
         print(f"{year}: {len(files)} editions from document {found[0]['id']}")
         docs += [{"id": f"yearly:{year}:{Path(f).name}", "title": f"yearly {year} {Path(f).name}", "created_date": f"{year}-12-31",

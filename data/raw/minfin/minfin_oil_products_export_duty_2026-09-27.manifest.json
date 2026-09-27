@@ -1,7 +1,10 @@
 {
-  "downloaded_at": "2026-09-27T11:49:07.737308",
-  "n_documents_listed": 13,
-  "n_parsed": 13,
-  "skipped_document_ids": [],
+  "downloaded_at": "2026-09-27T15:46:00.799485",
+  "n_documents_listed": 164,
+  "n_parsed": 158,
+  "skipped_document_ids": [
+    26698,
+    "yearly:2018:на 1 апреля 2018 1 квартал.xlsx"
+  ],
   "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
 }
