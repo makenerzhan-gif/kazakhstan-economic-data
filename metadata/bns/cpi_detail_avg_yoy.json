@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/economy/prices/spreadsheets/?name=19117",
+  "dataset_id": "19117",
+  "indicator_id": "CPI_DETAIL_AVG_YOY",
+  "indicator_name": "CPI by group, COICOP division, item and region, January–month over January–month of previous year = 100",
+  "description": "ИПЦ по группам, разделам КООЛИЦ, товарам и услугам и по регионам, январь–месяц к январю–месяцу прошлого года",
+  "frequency": "monthly",
+  "unit": "index, same period (January to month) of previous year = 100",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "As CPI_DETAIL_MOM: the average price level since January against the same months a year earlier (the annual average inflation in December).",
+  "publication_date": "2026-09-08",
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2004-07-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
