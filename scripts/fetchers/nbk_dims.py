@@ -20,6 +20,9 @@ SURVEY_SECTORS = {
     "Water supply": "E", "Construction": "F", "Trade": "G", "Transport and warehousing": "H",
     "Accommodation and food service": "I", "Information and communication": "J", "Real estate activities": "L",
     "Professional, scientific and technical activities": "M", "N.R.S": "NRS",
+    # formIds 362-366 and 384 print the same pooled slot as «Other industries» (checked
+    # 2026-09-27: the 13 other sectors are identical and no form has both labels).
+    "Other industries": "NRS",
 }
 
 
@@ -112,3 +115,67 @@ def fetch_debt_schedule(ds: dict) -> tuple[list[dict], dict]:
         "frequency": "quarterly", "source_url": f"{nbk.MONETARY_AGGREGATES_URL}?formId={ds['form_id']}",
         "dataset_id": f"formId={ds['form_id']}", "note": ds.get("note", "") +
         f" Vintages from the API: {sorted(fresh)}; carried forward from the archive: {sorted({r['date'] for r in kept})}."}
+
+
+# ---------------------------------------------------------------- classified open-data forms
+# Added 2026-09-27 for the quasi-fiscal block. A form whose rows are classified by a few text
+# fields (formId=445 creditor × currency × borrower; 470 National Fund operations; 50 NBK
+# monetary survey lines). The dataset's `item_fields` name the fields forming the item, each
+# with a code map (or `survey_sectors` for the enterprise survey's 14 sectors, as
+# SURVEY_SECTORS above); `filters` pin the remaining fields. A value missing from a code map stops
+# the dataset (a new creditor type or line must be looked at, not silently dropped). Rows
+# whose amount is empty are skipped; two rows for the same item and date must agree. Text is
+# compared without case and outer spaces: the API returns formId=445's period as «Month» on
+# one call and «month» on the next, and a creditor as «other public sector » with a space.
+def _norm(text) -> str:
+    return " ".join(str(text or "").split()).casefold()
+
+
+def classified_records(rows: list[dict], ds: dict) -> list[dict]:
+    filters = ds.get("filters", {})
+    out: dict[tuple[str, str], dict] = {}
+    unknown = set()
+    for r in rows:
+        if any(_norm(r.get(k)) != _norm(v) for k, v in filters.items()) or r.get("amount") in (None, ""):
+            continue
+        codes, names = [], []
+        for field in ds["item_fields"]:
+            raw = (r.get(field["field"]) or "").strip()
+            code_map = SURVEY_SECTORS if field["codes"] == "survey_sectors" else field["codes"]
+            code = {_norm(k): c for k, c in code_map.items()}.get(_norm(raw))
+            if code is None:
+                unknown.add((field["field"], raw))
+                break
+            codes.append(code)
+            names.append({_norm(k): n for k, n in field.get("names", {}).items()}.get(_norm(raw), raw))
+        else:
+            key = (".".join(codes), r["report_date"][:10])
+            value = float(r["amount"]) * ds.get("scale", 1.0)
+            if key in out and abs(out[key]["value"] - value) > 1e-6 * max(1.0, abs(value)):
+                raise validation.StructuralChangeError(
+                    f"nbk/{ds['id']}: two different values for {key}: {out[key]['value']} and {value}")
+            out[key] = {"date": key[1], "region": dims.NATIONAL, "item_code": key[0],
+                        "item_name": " | ".join(names), "value": value}
+    if unknown:
+        raise validation.StructuralChangeError(
+            f"nbk/{ds['id']}: values not in the dataset's item_fields code maps (config/dims.yaml): {sorted(unknown)}")
+    return sorted(out.values(), key=lambda r: (r["item_code"], r["date"]))
+
+
+def fetch_classified(ds: dict) -> tuple[list[dict], dict]:
+    rows = nbk._fetch_nbk_form_paginated(ds["form_id"], ds["id"])
+    records = classified_records(rows, ds)
+    if len({r["item_code"] for r in records}) < ds.get("min_items", 1):
+        raise validation.StructuralChangeError(
+            f"nbk/{ds['id']}: only {len({r['item_code'] for r in records})} items in formId={ds['form_id']}")
+    for check in ds.get("sum_checks", []):  # {total: CODE, parts: [CODE, ...]}
+        by = {(r["item_code"], r["date"]): r["value"] for r in records}
+        for d in sorted({r["date"] for r in records}):
+            if (check["total"], d) in by and all((p, d) in by for p in check["parts"]):
+                gap = by[(check["total"], d)] - sum(by[(p, d)] for p in check["parts"])
+                if abs(gap) > check.get("tolerance", 1.0):
+                    raise validation.StructuralChangeError(
+                        f"nbk/{ds['id']}: {check['total']} at {d} differs from the sum of its parts by {gap:.1f}")
+    return records, {"frequency": ds.get("frequency", "monthly"),
+                     "source_url": f"{nbk.MONETARY_AGGREGATES_URL}?formId={ds['form_id']}",
+                     "dataset_id": f"formId={ds['form_id']}", "note": ds.get("note", "")}

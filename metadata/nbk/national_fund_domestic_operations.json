@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=470",
+  "dataset_id": "formId=470",
+  "indicator_id": "NATIONAL_FUND_DOMESTIC_OPERATIONS",
+  "indicator_name": "National Fund operations and its holdings of Kazakh issuers' instruments",
+  "description": "Операции Национального фонда и финансовые инструменты казахстанских эмитентов в его портфеле",
+  "frequency": "monthly",
+  "unit": "billion KZT (FX_SALES_USD: million USD)",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "NBK formId=470, monthly from 2024-02, dated report_date. DEBT_* = bonds of Kazakh issuers (quasi-public: Baiterek, KSF, Samruk-Kazyna and others) held by the National Fund -- the NF's financing of the quasi-public sector; EQUITY_* mainly the Samruk-Kazyna/KazMunayGas shares. TRANSFERS = the scalar NATIONAL_FUND_TRANSFERS. Units differ by item (see item_name).",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2024-02-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "derived",
+  "source_url": "",
+  "dataset_id": "derived",
+  "indicator_id": "NEER_IMPORT_WEIGHTED",
+  "indicator_name": "Nominal effective exchange rate of the tenge, consumer-import and total-import weights (2020 = 100, up = appreciation)",
+  "description": "Номинальный эффективный курс тенге с весами потребительского и всего импорта (2020 = 100, рост = укрепление)",
+  "frequency": "monthly",
+  "unit": "index, 2020 = 100",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Geometric chain of monthly changes of 18 NBK official rates, weights = previous year's import shares by partner currency (UN Comtrade reported by Kazakhstan; euro-area members from euro adoption; Ecuador, Panama, El Salvador, Hong Kong to USD); partners without an NBK rate dropped, weights renormalised among currencies quoted in both months. From 2011-01. NEER_CONSUMER: BEC 112, 122, 522, 61, 62, 63 -- the pass-through-relevant basket (Russia ~31%, China ~24% of 2024 consumer imports); NEER_TOTAL: all goods. Coverage and weights by year in NEER_IMPORT_WEIGHTS. Differs from the NBK NEER (trade weights of exports and imports, IMF-style).",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2010-12-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

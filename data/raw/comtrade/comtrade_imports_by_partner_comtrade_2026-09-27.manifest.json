@@ -1,0 +1,23 @@
+{
+  "downloaded_at": "2026-09-27T16:32:15.125249",
+  "raw_file": "comtrade_imports_by_partner_comtrade_2026-09-27.json.gz",
+  "source_url": "https://comtradeapi.un.org/public/v1/preview/C/A/<B4|HS>",
+  "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ]
+}

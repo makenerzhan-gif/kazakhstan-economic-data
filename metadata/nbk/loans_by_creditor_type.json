@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=445",
+  "dataset_id": "formId=445",
+  "indicator_id": "LOANS_BY_CREDITOR_TYPE",
+  "indicator_name": "Loans to the economy by creditor type (banks, other public sector, microfinance, mortgage companies), currency and borrower",
+  "description": "Кредиты экономике по типу кредитора (банки, прочий госсектор, МФО, ипотечные организации), валюте и заёмщику",
+  "frequency": "monthly",
+  "unit": "million KZT, end of period",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "NBK formId=445, stocks at report_date (the first day of the month after the reference month, like the scalar LOANS_* series). Quarterly 2022-01…2023-07, monthly from 2023-07. Item = CREDITOR.CURRENCY.BORROWER; OPS = «other public sector» (state development institutions); BANKS.KZT.BUS equals the scalar LOANS_BUSINESS_KZT. OPS.FX.BUS appears from 2025-06, OPS.FX.HH only in 2026-07.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2022-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

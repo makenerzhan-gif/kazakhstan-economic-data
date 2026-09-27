@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://nationalbank.kz/ru/exchangerates/ezhednevnye-oficialnye-rynochnye-kursy-valyut/report",
+  "dataset_id": "official-rates-report/monthly-mean",
+  "indicator_id": "EXCHANGE_RATES_OFFICIAL_MONTHLY",
+  "indicator_name": "Official KZT exchange rates against partner currencies, monthly average",
+  "description": "Официальные курсы тенге к валютам торговых партнёров, среднее за месяц",
+  "frequency": "monthly",
+  "unit": "KZT per one unit of the currency",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Weekday mean of the NBK official rate, 18 currencies (USD, EUR, CNY, RUB, TRY, KRW, UZS, KGS, BYN, JPY, GBP, INR, CHF, CZK, PLN, AED, TJS, AZN) from 2010-01. UZS and BYN from 2014-02 (printed below 1 KZT per unit before, too coarse to use); BYN restated in post-2016 roubles (÷10 000 redenomination applied to earlier quotes). Item USD, EUR, CNY and RUB are the monthly means of the scalar daily EXCHANGE_RATE* series.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2010-01-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

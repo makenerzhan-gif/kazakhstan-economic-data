@@ -1,0 +1,21 @@
+{
+  "source": "derived",
+  "source_url": "",
+  "dataset_id": "derived",
+  "indicator_id": "NEER_IMPORT_WEIGHTS",
+  "indicator_name": "Currency weights of the import-weighted NEER (previous year's import shares), percent",
+  "description": "Веса валют в NEER по структуре импорта предыдущего года, %",
+  "frequency": "annual",
+  "unit": "percent",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Dated the year the weights are used in NEER_IMPORT_WEIGHTED (shares of the previous year's imports). Items BASKET.CURRENCY and COVERAGE_BASKET = share of the basket's imports from partners with a currency in the index.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2011-12-31",
+  "period_end": "2026-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

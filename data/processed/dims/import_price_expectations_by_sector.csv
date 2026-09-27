@@ -1,0 +1,589 @@
+date,region,item_code,item_name,value,transformation
+2016-04-01,national,A,Agriculture,62.0,level
+2016-07-01,national,A,Agriculture,59.94152,level
+2016-10-01,national,A,Agriculture,57.848837,level
+2017-01-01,national,A,Agriculture,57.758621,level
+2017-04-01,national,A,Agriculture,55.965909,level
+2017-07-01,national,A,Agriculture,55.898876,level
+2017-10-01,national,A,Agriculture,60.27027,level
+2018-01-01,national,A,Agriculture,60.416667,level
+2018-04-01,national,A,Agriculture,56.684492,level
+2018-07-01,national,A,Agriculture,58.549223,level
+2018-10-01,national,A,Agriculture,59.090909,level
+2019-01-01,national,A,Agriculture,59.59596,level
+2019-04-01,national,A,Agriculture,58.333333,level
+2019-07-01,national,A,Agriculture,59.487179,level
+2019-10-01,national,A,Agriculture,57.908163,level
+2020-01-01,national,A,Agriculture,56.345178,level
+2020-04-01,national,A,Agriculture,63.819095,level
+2020-07-01,national,A,Agriculture,61.0,level
+2020-10-01,national,A,Agriculture,61.0,level
+2021-01-01,national,A,Agriculture,59.898477,level
+2021-04-01,national,A,Agriculture,59.94898,level
+2021-07-01,national,A,Agriculture,61.111111,level
+2021-10-01,national,A,Agriculture,61.025641,level
+2022-01-01,national,A,Agriculture,58.928571,level
+2022-04-01,national,A,Agriculture,63.959391,level
+2022-07-01,national,A,Agriculture,64.615385,level
+2022-10-01,national,A,Agriculture,60.301508,level
+2023-01-01,national,A,Agriculture,60.552764,level
+2023-04-01,national,A,Agriculture,58.75,level
+2023-07-01,national,A,Agriculture,57.106599,level
+2023-10-01,national,A,Agriculture,56.443299,level
+2024-01-01,national,A,Agriculture,56.382979,level
+2024-04-01,national,A,Agriculture,57.671958,level
+2024-07-01,national,A,Agriculture,58.421053,level
+2024-10-01,national,A,Agriculture,55.347594,level
+2025-01-01,national,A,Agriculture,58.421053,level
+2025-04-01,national,A,Agriculture,58.684211,level
+2025-07-01,national,A,Agriculture,58.854167,level
+2025-10-01,national,A,Agriculture,58.121827,level
+2026-01-01,national,A,Agriculture,58.549223,level
+2026-04-01,national,A,Agriculture,58.376963,level
+2026-07-01,national,A,Agriculture,56.914894,level
+2016-04-01,national,B,Mining,58.181818,level
+2016-07-01,national,B,Mining,58.529412,level
+2016-10-01,national,B,Mining,58.579882,level
+2017-01-01,national,B,Mining,60.059172,level
+2017-04-01,national,B,Mining,59.82659,level
+2017-07-01,national,B,Mining,58.479532,level
+2017-10-01,national,B,Mining,62.790698,level
+2018-01-01,national,B,Mining,58.187135,level
+2018-04-01,national,B,Mining,57.988166,level
+2018-07-01,national,B,Mining,57.627119,level
+2018-10-01,national,B,Mining,57.142857,level
+2019-01-01,national,B,Mining,60.106383,level
+2019-04-01,national,B,Mining,59.840426,level
+2019-07-01,national,B,Mining,57.105263,level
+2019-10-01,national,B,Mining,56.878307,level
+2020-01-01,national,B,Mining,57.368421,level
+2020-04-01,national,B,Mining,62.303665,level
+2020-07-01,national,B,Mining,58.730159,level
+2020-10-01,national,B,Mining,58.684211,level
+2021-01-01,national,B,Mining,59.390863,level
+2021-04-01,national,B,Mining,60.10101,level
+2021-07-01,national,B,Mining,59.75,level
+2021-10-01,national,B,Mining,60.0,level
+2022-01-01,national,B,Mining,59.558824,level
+2022-04-01,national,B,Mining,63.480392,level
+2022-07-01,national,B,Mining,63.768116,level
+2022-10-01,national,B,Mining,61.057692,level
+2023-01-01,national,B,Mining,61.165049,level
+2023-04-01,national,B,Mining,61.244019,level
+2023-07-01,national,B,Mining,60.238095,level
+2023-10-01,national,B,Mining,58.018868,level
+2024-01-01,national,B,Mining,59.677419,level
+2024-04-01,national,B,Mining,57.954545,level
+2024-07-01,national,B,Mining,58.863636,level
+2024-10-01,national,B,Mining,58.863636,level
+2025-01-01,national,B,Mining,61.111111,level
+2025-04-01,national,B,Mining,61.304348,level
+2025-07-01,national,B,Mining,60.381356,level
+2025-10-01,national,B,Mining,60.612245,level
+2026-01-01,national,B,Mining,61.316872,level
+2026-04-01,national,B,Mining,58.921162,level
+2026-07-01,national,B,Mining,57.613169,level
+2016-04-01,national,C,Manufacturing,60.863095,level
+2016-07-01,national,C,Manufacturing,59.435364,level
+2016-10-01,national,C,Manufacturing,57.738095,level
+2017-01-01,national,C,Manufacturing,61.498516,level
+2017-04-01,national,C,Manufacturing,58.618128,level
+2017-07-01,national,C,Manufacturing,57.026627,level
+2017-10-01,national,C,Manufacturing,60.856721,level
+2018-01-01,national,C,Manufacturing,61.25731,level
+2018-04-01,national,C,Manufacturing,60.590778,level
+2018-07-01,national,C,Manufacturing,60.215827,level
+2018-10-01,national,C,Manufacturing,60.97561,level
+2019-01-01,national,C,Manufacturing,62.732475,level
+2019-04-01,national,C,Manufacturing,61.41844,level
+2019-07-01,national,C,Manufacturing,62.269504,level
+2019-10-01,national,C,Manufacturing,60.578279,level
+2020-01-01,national,C,Manufacturing,60.835694,level
+2020-04-01,national,C,Manufacturing,65.144928,level
+2020-07-01,national,C,Manufacturing,61.659514,level
+2020-10-01,national,C,Manufacturing,62.073864,level
+2021-01-01,national,C,Manufacturing,63.068182,level
+2021-04-01,national,C,Manufacturing,65.078236,level
+2021-07-01,national,C,Manufacturing,64.735336,level
+2021-10-01,national,C,Manufacturing,65.466102,level
+2022-01-01,national,C,Manufacturing,64.739069,level
+2022-04-01,national,C,Manufacturing,70.277778,level
+2022-07-01,national,C,Manufacturing,70.220083,level
+2022-10-01,national,C,Manufacturing,67.105263,level
+2023-01-01,national,C,Manufacturing,66.005472,level
+2023-04-01,national,C,Manufacturing,64.14966,level
+2023-07-01,national,C,Manufacturing,61.911171,level
+2023-10-01,national,C,Manufacturing,62.533333,level
+2024-01-01,national,C,Manufacturing,62.041885,level
+2024-04-01,national,C,Manufacturing,60.779221,level
+2024-07-01,national,C,Manufacturing,62.83871,level
+2024-10-01,national,C,Manufacturing,61.959288,level
+2025-01-01,national,C,Manufacturing,64.739517,level
+2025-04-01,national,C,Manufacturing,62.484157,level
+2025-07-01,national,C,Manufacturing,62.70648,level
+2025-10-01,national,C,Manufacturing,62.230672,level
+2026-01-01,national,C,Manufacturing,66.082603,level
+2026-04-01,national,C,Manufacturing,62.201258,level
+2026-07-01,national,C,Manufacturing,61.869619,level
+2016-04-01,national,D,Electricity supply,58.235294,level
+2016-07-01,national,D,Electricity supply,57.831325,level
+2016-10-01,national,D,Electricity supply,57.228916,level
+2017-01-01,national,D,Electricity supply,57.926829,level
+2017-04-01,national,D,Electricity supply,56.097561,level
+2017-07-01,national,D,Electricity supply,54.320988,level
+2017-10-01,national,D,Electricity supply,58.024691,level
+2018-01-01,national,D,Electricity supply,61.111111,level
+2018-04-01,national,D,Electricity supply,54.320988,level
+2018-07-01,national,D,Electricity supply,56.024096,level
+2018-10-01,national,D,Electricity supply,58.433735,level
+2019-01-01,national,D,Electricity supply,59.411765,level
+2019-04-01,national,D,Electricity supply,55.851064,level
+2019-07-01,national,D,Electricity supply,55.154639,level
+2019-10-01,national,D,Electricity supply,53.608247,level
+2020-01-01,national,D,Electricity supply,55.154639,level
+2020-04-01,national,D,Electricity supply,53.092784,level
+2020-07-01,national,D,Electricity supply,52.604167,level
+2020-10-01,national,D,Electricity supply,54.166667,level
+2021-01-01,national,D,Electricity supply,56.25,level
+2021-04-01,national,D,Electricity supply,56.770833,level
+2021-07-01,national,D,Electricity supply,55.154639,level
+2021-10-01,national,D,Electricity supply,55.102041,level
+2022-01-01,national,D,Electricity supply,57.575758,level
+2022-04-01,national,D,Electricity supply,57.070707,level
+2022-07-01,national,D,Electricity supply,59.59596,level
+2022-10-01,national,D,Electricity supply,58.163265,level
+2023-01-01,national,D,Electricity supply,58.5,level
+2023-04-01,national,D,Electricity supply,55.882353,level
+2023-07-01,national,D,Electricity supply,55.660377,level
+2023-10-01,national,D,Electricity supply,54.761905,level
+2024-01-01,national,D,Electricity supply,54.166667,level
+2024-04-01,national,D,Electricity supply,53.211009,level
+2024-07-01,national,D,Electricity supply,54.954955,level
+2024-10-01,national,D,Electricity supply,53.947368,level
+2025-01-01,national,D,Electricity supply,56.086957,level
+2025-04-01,national,D,Electricity supply,55.963303,level
+2025-07-01,national,D,Electricity supply,54.761905,level
+2025-10-01,national,D,Electricity supply,54.761905,level
+2026-01-01,national,D,Electricity supply,57.54717,level
+2026-04-01,national,D,Electricity supply,57.33945,level
+2026-07-01,national,D,Electricity supply,57.079646,level
+2016-04-01,national,E,Water supply,56.060606,level
+2016-07-01,national,E,Water supply,55.882353,level
+2016-10-01,national,E,Water supply,54.545455,level
+2017-01-01,national,E,Water supply,56.25,level
+2017-04-01,national,E,Water supply,55.882353,level
+2017-07-01,national,E,Water supply,56.060606,level
+2017-10-01,national,E,Water supply,57.575758,level
+2018-01-01,national,E,Water supply,59.090909,level
+2018-04-01,national,E,Water supply,55.882353,level
+2018-07-01,national,E,Water supply,55.555556,level
+2018-10-01,national,E,Water supply,59.459459,level
+2019-01-01,national,E,Water supply,59.722222,level
+2019-04-01,national,E,Water supply,58.108108,level
+2019-07-01,national,E,Water supply,55.263158,level
+2019-10-01,national,E,Water supply,55.128205,level
+2020-01-01,national,E,Water supply,55.0,level
+2020-04-01,national,E,Water supply,53.658537,level
+2020-07-01,national,E,Water supply,51.219512,level
+2020-10-01,national,E,Water supply,50.0,level
+2021-01-01,national,E,Water supply,53.75,level
+2021-04-01,national,E,Water supply,53.26087,level
+2021-07-01,national,E,Water supply,54.347826,level
+2021-10-01,national,E,Water supply,54.347826,level
+2022-01-01,national,E,Water supply,54.444444,level
+2022-04-01,national,E,Water supply,54.444444,level
+2022-07-01,national,E,Water supply,55.555556,level
+2022-10-01,national,E,Water supply,55.434783,level
+2023-01-01,national,E,Water supply,55.434783,level
+2023-04-01,national,E,Water supply,53.333333,level
+2023-07-01,national,E,Water supply,55.681818,level
+2023-10-01,national,E,Water supply,53.333333,level
+2024-01-01,national,E,Water supply,54.255319,level
+2024-04-01,national,E,Water supply,52.173913,level
+2024-07-01,national,E,Water supply,53.125,level
+2024-10-01,national,E,Water supply,53.061224,level
+2025-01-01,national,E,Water supply,54.081633,level
+2025-04-01,national,E,Water supply,55.0,level
+2025-07-01,national,E,Water supply,55.0,level
+2025-10-01,national,E,Water supply,52.0,level
+2026-01-01,national,E,Water supply,52.0,level
+2026-04-01,national,E,Water supply,54.0,level
+2026-07-01,national,E,Water supply,51.041667,level
+2016-04-01,national,F,Construction,60.436137,level
+2016-07-01,national,F,Construction,61.111111,level
+2016-10-01,national,F,Construction,57.716049,level
+2017-01-01,national,F,Construction,57.275542,level
+2017-04-01,national,F,Construction,56.635802,level
+2017-07-01,national,F,Construction,58.90625,level
+2017-10-01,national,F,Construction,60.350318,level
+2018-01-01,national,F,Construction,57.836991,level
+2018-04-01,national,F,Construction,58.43949,level
+2018-07-01,national,F,Construction,57.87037,level
+2018-10-01,national,F,Construction,57.941176,level
+2019-01-01,national,F,Construction,58.902077,level
+2019-04-01,national,F,Construction,58.382353,level
+2019-07-01,national,F,Construction,58.62069,level
+2019-10-01,national,F,Construction,57.464789,level
+2020-01-01,national,F,Construction,57.541899,level
+2020-04-01,national,F,Construction,60.653409,level
+2020-07-01,national,F,Construction,57.020057,level
+2020-10-01,national,F,Construction,56.779661,level
+2021-01-01,national,F,Construction,58.284884,level
+2021-04-01,national,F,Construction,58.119658,level
+2021-07-01,national,F,Construction,58.357349,level
+2021-10-01,national,F,Construction,58.115942,level
+2022-01-01,national,F,Construction,57.225434,level
+2022-04-01,national,F,Construction,61.764706,level
+2022-07-01,national,F,Construction,62.762763,level
+2022-10-01,national,F,Construction,59.480122,level
+2023-01-01,national,F,Construction,58.641975,level
+2023-04-01,national,F,Construction,58.0,level
+2023-07-01,national,F,Construction,58.307692,level
+2023-10-01,national,F,Construction,58.282209,level
+2024-01-01,national,F,Construction,57.716049,level
+2024-04-01,national,F,Construction,57.165605,level
+2024-07-01,national,F,Construction,55.919003,level
+2024-10-01,national,F,Construction,56.68693,level
+2025-01-01,national,F,Construction,57.561728,level
+2025-04-01,national,F,Construction,58.049536,level
+2025-07-01,national,F,Construction,58.823529,level
+2025-10-01,national,F,Construction,58.598726,level
+2026-01-01,national,F,Construction,58.095238,level
+2026-04-01,national,F,Construction,55.660377,level
+2026-07-01,national,F,Construction,55.956113,level
+2016-04-01,national,G,Trade,61.736111,level
+2016-07-01,national,G,Trade,60.77886,level
+2016-10-01,national,G,Trade,59.297521,level
+2017-01-01,national,G,Trade,59.742896,level
+2017-04-01,national,G,Trade,59.379217,level
+2017-07-01,national,G,Trade,57.652399,level
+2017-10-01,national,G,Trade,60.72335,level
+2018-01-01,national,G,Trade,59.228824,level
+2018-04-01,national,G,Trade,59.8125,level
+2018-07-01,national,G,Trade,60.529483,level
+2018-10-01,national,G,Trade,61.026838,level
+2019-01-01,national,G,Trade,63.103448,level
+2019-04-01,national,G,Trade,60.45977,level
+2019-07-01,national,G,Trade,61.858609,level
+2019-10-01,national,G,Trade,59.675615,level
+2020-01-01,national,G,Trade,59.587514,level
+2020-04-01,national,G,Trade,63.493841,level
+2020-07-01,national,G,Trade,59.647189,level
+2020-10-01,national,G,Trade,59.085963,level
+2021-01-01,national,G,Trade,61.099138,level
+2021-04-01,national,G,Trade,63.538296,level
+2021-07-01,national,G,Trade,62.835661,level
+2021-10-01,national,G,Trade,64.712154,level
+2022-01-01,national,G,Trade,63.621795,level
+2022-04-01,national,G,Trade,66.950959,level
+2022-07-01,national,G,Trade,66.382979,level
+2022-10-01,national,G,Trade,64.247599,level
+2023-01-01,national,G,Trade,63.011542,level
+2023-04-01,national,G,Trade,61.44958,level
+2023-07-01,national,G,Trade,58.761805,level
+2023-10-01,national,G,Trade,59.978881,level
+2024-01-01,national,G,Trade,60.83691,level
+2024-04-01,national,G,Trade,59.193548,level
+2024-07-01,national,G,Trade,59.935897,level
+2024-10-01,national,G,Trade,58.93617,level
+2025-01-01,national,G,Trade,62.222222,level
+2025-04-01,national,G,Trade,63.473684,level
+2025-07-01,national,G,Trade,62.329486,level
+2025-10-01,national,G,Trade,62.989691,level
+2026-01-01,national,G,Trade,65.42887,level
+2026-04-01,national,G,Trade,62.668744,level
+2026-07-01,national,G,Trade,60.61246,level
+2016-04-01,national,H,Transport and warehousing,55.579399,level
+2016-07-01,national,H,Transport and warehousing,54.893617,level
+2016-10-01,national,H,Transport and warehousing,55.844156,level
+2017-01-01,national,H,Transport and warehousing,56.798246,level
+2017-04-01,national,H,Transport and warehousing,53.289474,level
+2017-07-01,national,H,Transport and warehousing,52.422907,level
+2017-10-01,national,H,Transport and warehousing,56.521739,level
+2018-01-01,national,H,Transport and warehousing,55.627706,level
+2018-04-01,national,H,Transport and warehousing,53.829787,level
+2018-07-01,national,H,Transport and warehousing,54.564315,level
+2018-10-01,national,H,Transport and warehousing,54.918033,level
+2019-01-01,national,H,Transport and warehousing,56.477733,level
+2019-04-01,national,H,Transport and warehousing,55.0,level
+2019-07-01,national,H,Transport and warehousing,55.642023,level
+2019-10-01,national,H,Transport and warehousing,55.686275,level
+2020-01-01,national,H,Transport and warehousing,54.296875,level
+2020-04-01,national,H,Transport and warehousing,55.846774,level
+2020-07-01,national,H,Transport and warehousing,54.365079,level
+2020-10-01,national,H,Transport and warehousing,54.435484,level
+2021-01-01,national,H,Transport and warehousing,53.6,level
+2021-04-01,national,H,Transport and warehousing,54.330709,level
+2021-07-01,national,H,Transport and warehousing,55.905512,level
+2021-10-01,national,H,Transport and warehousing,56.547619,level
+2022-01-01,national,H,Transport and warehousing,54.92126,level
+2022-04-01,national,H,Transport and warehousing,58.235294,level
+2022-07-01,national,H,Transport and warehousing,60.311284,level
+2022-10-01,national,H,Transport and warehousing,59.423077,level
+2023-01-01,national,H,Transport and warehousing,57.279693,level
+2023-04-01,national,H,Transport and warehousing,56.902985,level
+2023-07-01,national,H,Transport and warehousing,56.037736,level
+2023-10-01,national,H,Transport and warehousing,55.740741,level
+2024-01-01,national,H,Transport and warehousing,56.319703,level
+2024-04-01,national,H,Transport and warehousing,55.783582,level
+2024-07-01,national,H,Transport and warehousing,55.639098,level
+2024-10-01,national,H,Transport and warehousing,54.664179,level
+2025-01-01,national,H,Transport and warehousing,57.063197,level
+2025-04-01,national,H,Transport and warehousing,54.372624,level
+2025-07-01,national,H,Transport and warehousing,55.323194,level
+2025-10-01,national,H,Transport and warehousing,55.37037,level
+2026-01-01,national,H,Transport and warehousing,56.25,level
+2026-04-01,national,H,Transport and warehousing,54.444444,level
+2026-07-01,national,H,Transport and warehousing,55.128205,level
+2016-04-01,national,I,Accommodation and food service,60.294118,level
+2016-07-01,national,I,Accommodation and food service,57.042254,level
+2016-10-01,national,I,Accommodation and food service,58.333333,level
+2017-01-01,national,I,Accommodation and food service,57.432432,level
+2017-04-01,national,I,Accommodation and food service,56.081081,level
+2017-07-01,national,I,Accommodation and food service,55.333333,level
+2017-10-01,national,I,Accommodation and food service,56.578947,level
+2018-01-01,national,I,Accommodation and food service,56.410256,level
+2018-04-01,national,I,Accommodation and food service,56.17284,level
+2018-07-01,national,I,Accommodation and food service,58.045977,level
+2018-10-01,national,I,Accommodation and food service,57.065217,level
+2019-01-01,national,I,Accommodation and food service,56.451613,level
+2019-04-01,national,I,Accommodation and food service,57.065217,level
+2019-07-01,national,I,Accommodation and food service,56.989247,level
+2019-10-01,national,I,Accommodation and food service,53.723404,level
+2020-01-01,national,I,Accommodation and food service,50.510204,level
+2020-04-01,national,I,Accommodation and food service,56.451613,level
+2020-07-01,national,I,Accommodation and food service,54.301075,level
+2020-10-01,national,I,Accommodation and food service,54.210526,level
+2021-01-01,national,I,Accommodation and food service,53.723404,level
+2021-04-01,national,I,Accommodation and food service,57.065217,level
+2021-07-01,national,I,Accommodation and food service,54.83871,level
+2021-10-01,national,I,Accommodation and food service,54.83871,level
+2022-01-01,national,I,Accommodation and food service,50.549451,level
+2022-04-01,national,I,Accommodation and food service,56.741573,level
+2022-07-01,national,I,Accommodation and food service,59.340659,level
+2022-10-01,national,I,Accommodation and food service,59.550562,level
+2023-01-01,national,I,Accommodation and food service,57.471264,level
+2023-04-01,national,I,Accommodation and food service,59.52381,level
+2023-07-01,national,I,Accommodation and food service,56.321839,level
+2023-10-01,national,I,Accommodation and food service,56.321839,level
+2024-01-01,national,I,Accommodation and food service,56.097561,level
+2024-04-01,national,I,Accommodation and food service,55.063291,level
+2024-07-01,national,I,Accommodation and food service,54.605263,level
+2024-10-01,national,I,Accommodation and food service,56.410256,level
+2025-01-01,national,I,Accommodation and food service,57.142857,level
+2025-04-01,national,I,Accommodation and food service,58.441558,level
+2025-07-01,national,I,Accommodation and food service,59.375,level
+2025-10-01,national,I,Accommodation and food service,57.142857,level
+2026-01-01,national,I,Accommodation and food service,57.432432,level
+2026-04-01,national,I,Accommodation and food service,56.849315,level
+2026-07-01,national,I,Accommodation and food service,55.555556,level
+2016-04-01,national,J,Information and communication,61.702128,level
+2016-07-01,national,J,Information and communication,59.782609,level
+2016-10-01,national,J,Information and communication,59.782609,level
+2017-01-01,national,J,Information and communication,61.111111,level
+2017-04-01,national,J,Information and communication,59.090909,level
+2017-07-01,national,J,Information and communication,61.627907,level
+2017-10-01,national,J,Information and communication,59.090909,level
+2018-01-01,national,J,Information and communication,56.521739,level
+2018-04-01,national,J,Information and communication,60.0,level
+2018-07-01,national,J,Information and communication,58.0,level
+2018-10-01,national,J,Information and communication,57.692308,level
+2019-01-01,national,J,Information and communication,61.111111,level
+2019-04-01,national,J,Information and communication,55.737705,level
+2019-07-01,national,J,Information and communication,54.6875,level
+2019-10-01,national,J,Information and communication,57.377049,level
+2020-01-01,national,J,Information and communication,57.03125,level
+2020-04-01,national,J,Information and communication,58.333333,level
+2020-07-01,national,J,Information and communication,54.83871,level
+2020-10-01,national,J,Information and communication,58.064516,level
+2021-01-01,national,J,Information and communication,54.761905,level
+2021-04-01,national,J,Information and communication,56.818182,level
+2021-07-01,national,J,Information and communication,53.731343,level
+2021-10-01,national,J,Information and communication,54.411765,level
+2022-01-01,national,J,Information and communication,55.147059,level
+2022-04-01,national,J,Information and communication,57.142857,level
+2022-07-01,national,J,Information and communication,59.230769,level
+2022-10-01,national,J,Information and communication,60.0,level
+2023-01-01,national,J,Information and communication,59.230769,level
+2023-04-01,national,J,Information and communication,54.83871,level
+2023-07-01,national,J,Information and communication,55.932203,level
+2023-10-01,national,J,Information and communication,54.098361,level
+2024-01-01,national,J,Information and communication,53.278689,level
+2024-04-01,national,J,Information and communication,52.419355,level
+2024-07-01,national,J,Information and communication,55.084746,level
+2024-10-01,national,J,Information and communication,54.032258,level
+2025-01-01,national,J,Information and communication,56.451613,level
+2025-04-01,national,J,Information and communication,54.6875,level
+2025-07-01,national,J,Information and communication,56.349206,level
+2025-10-01,national,J,Information and communication,54.477612,level
+2026-01-01,national,J,Information and communication,55.072464,level
+2026-04-01,national,J,Information and communication,53.030303,level
+2026-07-01,national,J,Information and communication,53.90625,level
+2016-04-01,national,L,Real estate activities,54.661017,level
+2016-07-01,national,L,Real estate activities,52.564103,level
+2016-10-01,national,L,Real estate activities,52.5,level
+2017-01-01,national,L,Real estate activities,52.5,level
+2017-04-01,national,L,Real estate activities,52.916667,level
+2017-07-01,national,L,Real estate activities,52.479339,level
+2017-10-01,national,L,Real estate activities,54.918033,level
+2018-01-01,national,L,Real estate activities,56.048387,level
+2018-04-01,national,L,Real estate activities,53.030303,level
+2018-07-01,national,L,Real estate activities,52.61194,level
+2018-10-01,national,L,Real estate activities,55.639098,level
+2019-01-01,national,L,Real estate activities,55.147059,level
+2019-04-01,national,L,Real estate activities,53.521127,level
+2019-07-01,national,L,Real estate activities,53.597122,level
+2019-10-01,national,L,Real estate activities,54.642857,level
+2020-01-01,national,L,Real estate activities,56.028369,level
+2020-04-01,national,L,Real estate activities,56.20438,level
+2020-07-01,national,L,Real estate activities,54.014599,level
+2020-10-01,national,L,Real estate activities,55.035971,level
+2021-01-01,national,L,Real estate activities,54.316547,level
+2021-04-01,national,L,Real estate activities,55.514706,level
+2021-07-01,national,L,Real estate activities,57.857143,level
+2021-10-01,national,L,Real estate activities,56.521739,level
+2022-01-01,national,L,Real estate activities,55.357143,level
+2022-04-01,national,L,Real estate activities,55.797101,level
+2022-07-01,national,L,Real estate activities,57.913669,level
+2022-10-01,national,L,Real estate activities,56.428571,level
+2023-01-01,national,L,Real estate activities,55.357143,level
+2023-04-01,national,L,Real estate activities,54.744526,level
+2023-07-01,national,L,Real estate activities,54.850746,level
+2023-10-01,national,L,Real estate activities,55.223881,level
+2024-01-01,national,L,Real estate activities,54.697987,level
+2024-04-01,national,L,Real estate activities,53.311258,level
+2024-07-01,national,L,Real estate activities,54.333333,level
+2024-10-01,national,L,Real estate activities,53.97351,level
+2025-01-01,national,L,Real estate activities,53.642384,level
+2025-04-01,national,L,Real estate activities,53.642384,level
+2025-07-01,national,L,Real estate activities,53.691275,level
+2025-10-01,national,L,Real estate activities,53.169014,level
+2026-01-01,national,L,Real estate activities,53.103448,level
+2026-04-01,national,L,Real estate activities,53.846154,level
+2026-07-01,national,L,Real estate activities,52.287582,level
+2016-04-01,national,M,"Professional, scientific and technical activities",58.396947,level
+2016-07-01,national,M,"Professional, scientific and technical activities",55.639098,level
+2016-10-01,national,M,"Professional, scientific and technical activities",56.20155,level
+2017-01-01,national,M,"Professional, scientific and technical activities",56.343284,level
+2017-04-01,national,M,"Professional, scientific and technical activities",55.597015,level
+2017-07-01,national,M,"Professional, scientific and technical activities",54.676259,level
+2017-10-01,national,M,"Professional, scientific and technical activities",58.865248,level
+2018-01-01,national,M,"Professional, scientific and technical activities",58.214286,level
+2018-04-01,national,M,"Professional, scientific and technical activities",58.391608,level
+2018-07-01,national,M,"Professional, scientific and technical activities",57.638889,level
+2018-10-01,national,M,"Professional, scientific and technical activities",58.802817,level
+2019-01-01,national,M,"Professional, scientific and technical activities",59.655172,level
+2019-04-01,national,M,"Professional, scientific and technical activities",59.121622,level
+2019-07-01,national,M,"Professional, scientific and technical activities",56.164384,level
+2019-10-01,national,M,"Professional, scientific and technical activities",54.081633,level
+2020-01-01,national,M,"Professional, scientific and technical activities",55.405405,level
+2020-04-01,national,M,"Professional, scientific and technical activities",56.291391,level
+2020-07-01,national,M,"Professional, scientific and technical activities",55.483871,level
+2020-10-01,national,M,"Professional, scientific and technical activities",54.220779,level
+2021-01-01,national,M,"Professional, scientific and technical activities",53.525641,level
+2021-04-01,national,M,"Professional, scientific and technical activities",56.050955,level
+2021-07-01,national,M,"Professional, scientific and technical activities",55.063291,level
+2021-10-01,national,M,"Professional, scientific and technical activities",56.012658,level
+2022-01-01,national,M,"Professional, scientific and technical activities",56.818182,level
+2022-04-01,national,M,"Professional, scientific and technical activities",59.602649,level
+2022-07-01,national,M,"Professional, scientific and technical activities",61.666667,level
+2022-10-01,national,M,"Professional, scientific and technical activities",61.0,level
+2023-01-01,national,M,"Professional, scientific and technical activities",60.596026,level
+2023-04-01,national,M,"Professional, scientific and technical activities",60.544218,level
+2023-07-01,national,M,"Professional, scientific and technical activities",58.041958,level
+2023-10-01,national,M,"Professional, scientific and technical activities",56.164384,level
+2024-01-01,national,M,"Professional, scientific and technical activities",54.577465,level
+2024-04-01,national,M,"Professional, scientific and technical activities",54.347826,level
+2024-07-01,national,M,"Professional, scientific and technical activities",53.284672,level
+2024-10-01,national,M,"Professional, scientific and technical activities",53.23741,level
+2025-01-01,national,M,"Professional, scientific and technical activities",55.555556,level
+2025-04-01,national,M,"Professional, scientific and technical activities",55.970149,level
+2025-07-01,national,M,"Professional, scientific and technical activities",55.30303,level
+2025-10-01,national,M,"Professional, scientific and technical activities",57.142857,level
+2026-01-01,national,M,"Professional, scientific and technical activities",54.316547,level
+2026-04-01,national,M,"Professional, scientific and technical activities",55.319149,level
+2026-07-01,national,M,"Professional, scientific and technical activities",53.900709,level
+2016-04-01,national,NRS,Other industries,55.405405,level
+2016-07-01,national,NRS,Other industries,57.317073,level
+2016-10-01,national,NRS,Other industries,54.761905,level
+2017-01-01,national,NRS,Other industries,55.681818,level
+2017-04-01,national,NRS,Other industries,55.319149,level
+2017-07-01,national,NRS,Other industries,54.255319,level
+2017-10-01,national,NRS,Other industries,54.0,level
+2018-01-01,national,NRS,Other industries,55.660377,level
+2018-04-01,national,NRS,Other industries,54.310345,level
+2018-07-01,national,NRS,Other industries,53.278689,level
+2018-10-01,national,NRS,Other industries,58.474576,level
+2019-01-01,national,NRS,Other industries,57.258065,level
+2019-04-01,national,NRS,Other industries,57.692308,level
+2019-07-01,national,NRS,Other industries,55.147059,level
+2019-10-01,national,NRS,Other industries,55.147059,level
+2020-01-01,national,NRS,Other industries,55.405405,level
+2020-04-01,national,NRS,Other industries,59.027778,level
+2020-07-01,national,NRS,Other industries,58.108108,level
+2020-10-01,national,NRS,Other industries,57.894737,level
+2021-01-01,national,NRS,Other industries,58.860759,level
+2021-04-01,national,NRS,Other industries,56.25,level
+2021-07-01,national,NRS,Other industries,58.641975,level
+2021-10-01,national,NRS,Other industries,58.62069,level
+2022-01-01,national,NRS,Other industries,56.043956,level
+2022-04-01,national,NRS,Other industries,58.947368,level
+2022-07-01,national,NRS,Other industries,59.574468,level
+2022-10-01,national,NRS,Other industries,61.578947,level
+2023-01-01,national,NRS,Other industries,61.111111,level
+2023-04-01,national,NRS,Other industries,60.10101,level
+2023-07-01,national,NRS,Other industries,54.6875,level
+2023-10-01,national,NRS,Other industries,56.25,level
+2024-01-01,national,NRS,Other industries,55.339806,level
+2024-04-01,national,NRS,Other industries,54.910714,level
+2024-07-01,national,NRS,Other industries,54.910714,level
+2024-10-01,national,NRS,Other industries,56.140351,level
+2025-01-01,national,NRS,Other industries,56.355932,level
+2025-04-01,national,NRS,Other industries,58.75,level
+2025-07-01,national,NRS,Other industries,55.416667,level
+2025-10-01,national,NRS,Other industries,56.746032,level
+2026-01-01,national,NRS,Other industries,58.527132,level
+2026-04-01,national,NRS,Other industries,56.439394,level
+2026-07-01,national,NRS,Other industries,55.639098,level
+2016-04-01,national,TOTAL,All sectors,59.928699,level
+2016-07-01,national,TOTAL,All sectors,58.927938,level
+2016-10-01,national,TOTAL,All sectors,57.697765,level
+2017-01-01,national,TOTAL,All sectors,58.879493,level
+2017-04-01,national,TOTAL,All sectors,57.473684,level
+2017-07-01,national,TOTAL,All sectors,56.644691,level
+2017-10-01,national,TOTAL,All sectors,59.783728,level
+2018-01-01,national,TOTAL,All sectors,58.970438,level
+2018-04-01,national,TOTAL,All sectors,58.308106,level
+2018-07-01,national,TOTAL,All sectors,58.491492,level
+2018-10-01,national,TOTAL,All sectors,59.210526,level
+2019-01-01,national,TOTAL,All sectors,60.666667,level
+2019-04-01,national,TOTAL,All sectors,59.075235,level
+2019-07-01,national,TOTAL,All sectors,59.356543,level
+2019-10-01,national,TOTAL,All sectors,58.03021,level
+2020-01-01,national,TOTAL,All sectors,57.945499,level
+2020-04-01,national,TOTAL,All sectors,61.414392,level
+2020-07-01,national,TOTAL,All sectors,58.389674,level
+2020-10-01,national,TOTAL,All sectors,58.379121,level
+2021-01-01,national,TOTAL,All sectors,59.218132,level
+2021-04-01,national,TOTAL,All sectors,60.645064,level
+2021-07-01,national,TOTAL,All sectors,60.51042,level
+2021-10-01,national,TOTAL,All sectors,61.244738,level
+2022-01-01,national,TOTAL,All sectors,60.306031,level
+2022-04-01,national,TOTAL,All sectors,64.142172,level
+2022-07-01,national,TOTAL,All sectors,64.691801,level
+2022-10-01,national,TOTAL,All sectors,62.529976,level
+2023-01-01,national,TOTAL,All sectors,61.600238,level
+2023-04-01,national,TOTAL,All sectors,60.371471,level
+2023-07-01,national,TOTAL,All sectors,58.64069,level
+2023-10-01,national,TOTAL,All sectors,58.805218,level
+2024-01-01,national,TOTAL,All sectors,58.874778,level
+2024-04-01,national,TOTAL,All sectors,57.821724,level
+2024-07-01,national,TOTAL,All sectors,58.58571,level
+2024-10-01,national,TOTAL,All sectors,57.942974,level
+2025-01-01,national,TOTAL,All sectors,60.298811,level
+2025-04-01,national,TOTAL,All sectors,60.115942,level
+2025-07-01,national,TOTAL,All sectors,59.83203,level
+2025-10-01,national,TOTAL,All sectors,59.847614,level
+2026-01-01,national,TOTAL,All sectors,61.530729,level
+2026-04-01,national,TOTAL,All sectors,59.306987,level
+2026-07-01,national,TOTAL,All sectors,58.354719,level

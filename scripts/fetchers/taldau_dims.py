@@ -11,8 +11,9 @@ children are checked to add up to the total in the latest year before anything i
 
 Dataset keys (config/dims.yaml, fetcher: taldau): index_id, period_id, measure_id, dic_ids,
 terms, expand_pos (the dimension's position), expand_term (its root term), dictionary
-(okved_sections, or from_table: the Taldau term id is the code), scale (divide by),
-sum_check (false for ratios).
+(okved_sections, or from_table: the Taldau term id is the code), term_codes ({term id: code},
+in place of a dictionary; an unlisted child stops the dataset), scale (divide by), sum_check
+(false for ratios). Monthly values are dated the first day of the month.
 """
 from __future__ import annotations
 
@@ -63,6 +64,8 @@ def node_values(node: dict, frequency: str) -> dict[str, float]:
             continue
         if frequency == "quarterly":
             out[f"{year:04d}-{month - 2:02d}-01"] = value      # the quarter's first day, the dims convention
+        elif frequency == "monthly":
+            out[f"{year:04d}-{month:02d}-01"] = value          # the month's first day, as the CPI detail
         else:
             out[f"{year:04d}-{month:02d}-{calendar.monthrange(year, month)[1]:02d}"] = value
     return out
@@ -82,14 +85,19 @@ def fetch(ds: dict) -> tuple[list[dict], dict]:
         _structural(ds, "no national root node")
     total = node_values(total_nodes[0], freq)
     children = _tree(ds, parent=ds["expand_term"], pos=str(ds["expand_pos"]), term=ds["expand_term"])
-    dictionary = None if ds["dictionary"] == "from_table" else dims.load_dictionary(ds["dictionary"])
+    dictionary = None if ds.get("dictionary", "from_table") == "from_table" else dims.load_dictionary(ds["dictionary"])
     records = []
     for node in children:
         values = node_values(node, freq)
         if not values:
             continue
         label = " ".join(str(node.get("text", "")).split())
-        if dictionary is None:
+        if ds.get("term_codes"):
+            code = ds["term_codes"].get(int(node["id"]))
+            if code is None:
+                _structural(ds, f"child {node['id']} {label!r} is not in the dataset's term_codes")
+            name = label
+        elif dictionary is None:
             code, name = str(node["id"]), label
         else:
             hit = dims.match_item(label, dictionary)
@@ -107,6 +115,7 @@ def fetch(ds: dict) -> tuple[list[dict], dict]:
             _structural(ds, f"children sum to {parts:.0f} in {latest}, the total is {total[latest]:.0f}")
     records += [{"date": d, "region": dims.NATIONAL, "item_code": "TOTAL", "item_name": "Всего", "value": round(v / scale, 6)}
                 for d, v in total.items()]
+    records.sort(key=lambda r: (r["item_code"], r["date"]))
     return records, {"frequency": freq, "source_url": TREE_URL, "dataset_id": f"taldau-index-{ds['index_id']}",
                      "note": ds.get("note", "")}
 

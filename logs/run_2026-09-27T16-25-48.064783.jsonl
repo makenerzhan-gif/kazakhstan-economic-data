@@ -1,0 +1,1 @@
+{"timestamp": "2026-09-27T16:26:28.508920", "source": "nbk", "dataset": "EXCHANGE_RATES_OFFICIAL_MONTHLY", "action": "fetch+validate+process", "status": "ok", "records_downloaded": 3408, "records_processed": 3408, "errors": [], "warnings": []}

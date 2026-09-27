@@ -1,6 +1,6 @@
 # Update Log — archive (2026-08-30 .. 2026-09-23)
 
-Older entries of project_knowledge/UPDATE_LOG.md, moved here on 2026-09-26 so the Claude Project's
+Older entries of project_knowledge/UPDATE_LOG.md, moved here on 2026-09-26 and 2026-09-27 so the Claude Project's
 context holds only the recent log. Oldest first; nothing edited.
 
 ## 2026-08-30 — repository scaffold
@@ -4536,3 +4536,143 @@ production (`GDP_PRODUCTION`) from GDP. Tests 338 → 349 (`tests/test_qna.py`,
 
 **Left out.** The cumulative twins as data (running sums); the ВДС component of the income
 account (four points differ, noted); any use in the model.
+
+## 2026-09-23 — the second vintage in the model: sheet «Факт_КНС» (1 662 values from the QNA_* datasets), option Б
+
+**Why.** The comparison of the two vintages (report https://claude.ai/artifact/Ay5rFQ8Mmc2etvmYy5qefq:
+GDP 2010 +9.4 %, 2017–2022 −1.5…−2.9 %, transport −21 % in 2022, a 2022/2023 seam inside table
+4439 that breaks nominal × ИФО × deflator = nominal by +1.5 % for GDP and +27 % for transport)
+ended with three options; the author chose Б — load the quarterly national accounts' annual
+values into the model as a separate block, leave the history sheets and the published vintage
+untouched.
+
+**What.** A new sheet «Факт_КНС» (after «Контроль») with five tables, row 1 carrying the years
+2010–2025 in C..R as every mapped sheet does: (1) ВДС by section in current prices — the sum of
+the four discrete quarters of QNA_GVA_BY_SECTION (26 items, 416 values); (2) ИФО ВДС — the «год»
+value of QNA_GVA_VOLUME_INDEX_BY_SECTION_YTD (2011–2025, 390); (3) deflators — likewise (390);
+(4) GDP by expenditure, sum of quarters of QNA_GDP_EXPENDITURE (16 components, 256); (5) its
+volume index, «год» value (14 components, 210). Codes in column A follow «Факт_БНС» (ВДС, ЧН,
+ВВП) plus ПТ/ПУ/ПР for goods/services/industry and short codes for the expenditure components;
+blue font marks pipeline data; the header rows 2–4 state the source files (283162 of
+17.08.2026, 283161 of 28.07.2026), the vintage difference and that no formula reads the sheet.
+Written with scripts/lib/excel_apply.ps1 (39 ops, 11 s) from scratchpad/quarterly/plan_qna.py;
+«Журнал_правок» gained 7 rows (1 495 → 1 502). Every other sheet is unchanged cell for cell
+(formulas and cached values; «Контроль» included).
+
+Five mappings in `config/model_map.yaml` (`fact_qna_*`, `rows_by_item`, `annual: sum` for the
+flows and `annual: last` on the year-to-date index datasets, years 2010–2025 / 2011–2025) make
+the sheet part of the daily contract: model_sync on the new copy reports the block as
+1 662 ok / 0 diff / 0 missing; the full check is 7 407 ok, 0 diff, 3 control, 183 missing (the
+three controls are formula cells that differ from today's pipeline value by more than their
+tolerance, one of them in gva_deflator_sections — reported, never overwritten). model_coverage: 68 318 numbers, 5 871 from the
+pipeline, 62 447 manual, 0 unaccounted. `default_file` now points at the author's renamed
+folder «Модель ВВП по производству».
+
+The revised copy replaced `…_rev_2026-09-14.xlsx` on Yandex.Disk after checking the previous
+hash (b115ea6f); new SHA-256 bc2f716e…; the original 15.01.2025 file is untouched (3f5a1228…).
+
+**Left out.** No formula of the model uses the new sheet — how the author wants the structure or
+contribution calculations to read it is their call; the history sheets stay on the dynamic-table
+vintage until BNS revises those tables (the daily check will show it as revisions).
+
+## 2026-09-23 — the rest of the national-accounts page: 15 tables, 35 datasets, 84 492 rows
+
+**Why.** The user asked whether every table on the BNS national-accounts «Динамические
+таблицы» page is in the pipeline. Of 47, 20 were; 6 are derivable from those (structure
+shares, regional shares, GRP per capita, GDP by income as a whole, GDP per capita in tenge);
+6 are one-off or narrow publications (experimental SUT-based GDP/GRP 2024, the financial
+balance-sheet pilot, creative industries, supply-use tables in previous-year prices — offered
+to the МОБ project instead). The user said «Добавь» to the remaining 15.
+
+**What.** 35 datasets, 84 492 rows, eight new sheet layouts in `scripts/fetchers/bns_dims.py`
+(described in its docstring): `year_sheets` (81477 gross output by region and section, 81478
+the production account by region, 2022–2025), `periods_across` with new dictionaries (286855
+six annual SNA aggregates 2010–2024; 4445 the oil-and-gas / commodity sector tables — 32 items:
+sector aggregates and their product lines, `dictionaries/oil_gas_sectors.csv`; 5923 GRP by
+region from 1993 — 1990–1992 are in roubles and skipped — plus its year-to-date quarterly
+series 2008 Q1 on; 5932 the non-observed economy's share of GDP and of GRP by region; 75044's
+quasi-public GVA share and large-enterprise productivity), `year_quarters` with a cumulative
+flag (4449 labour productivity by section, 4450 its index y/y and 2022 = 100, 5934's regional
+index 2022 = 100), `year_blocks_items_regions_ytd` (5933/5934 productivity and its index by
+region and section since 2010/2011 — 23 581 and 22 237 rows), `year_blocks_regions_items`
+(5932 NOE by region and activity), `year_blocks_items_regions` (75044 quasi-public GVA by
+region and section, the year read from each block's title), `year_subcolumns` (75044 GVA by
+enterprise size, three datasets), `month_rows` / `year_months` / `region_blocks_months` (5941–
+5943 the short-term economic indicator: monthly level, year-to-date level, volume index by
+country, region and region × activity from January 2021), `sector_columns` (410224 GDP
+components by institutional sector S11–S15 and total: output, intermediate consumption, GVA,
+compensation, other taxes, consumption of fixed capital, net profit — items «<activity>_<sector>»,
+seven datasets). New dictionaries `sna_aggregates`, `production_account`, `oil_gas_sectors`,
+`kei_activities` (the indicator's «Связь» stays COMMUNICATIONS, not folded into J);
+`regions.csv` learnt «Нур-Султан» (AST) and BNS's misspelt «Карагандиская». Quirks handled
+loudly rather than guessed: 5933/5934's current-year block repeats «1 квартал» in all four
+sub-columns (the last block may stop early); 81478's sheet «2023 год » has a trailing space
+(all «YYYY год» sheets are taken); 5941 puts the year marker in column B for 2025–2026 and
+column C before; 5943's column labels carry their own year («ИФО, января 2022г. к …»);
+5932's third sheet has one header for all year blocks. Every dataset states in `note` what it
+reads. Live run: 35/35 ok; the 15 files are 1.9 MB together, one raw copy each.
+`macro_dims_long.csv`: 133 105 → 217 597 rows, 115 datasets. Tests 349 → 359
+(`tests/test_na_page_layouts.py`).
+
+**Not taken, and why.** 4450's sub-industry sheets (agriculture, ICT by division) and 5934's
+«к уровню 2019» — older base; 4445 «Свод» and 75044 «Доля по КРП» — derived from the sheets
+read; 469090/471272 (experimental GDP/GRP 2024 on a SUT basis — text sheets), 466862
+(financial assets by sector, one year), 345748 (creative industries 2018–2023), 470989
+(supply-use tables in previous-year prices, experimental — for the МОБ model, not this
+pipeline). Nothing in `config/model_map.yaml` changed.
+
+## 2026-09-23 — the unified item-level file is gzip-compressed: macro_dims_long.csv.gz (2.2 MB instead of 61 MB)
+
+**Why.** With 115 datasets the unified item-level file reached 217 597 rows and 61 MB; GitHub
+warned on the push that it exceeds the recommended 50 MB, and every daily run rewrites it. Git
+LFS was rejected (a public repository's LFS quota would be consumed by a 61 MB daily rewrite);
+dropping the file from the repository was the alternative, but it is the one place a reader
+finds every item-level series at once.
+
+**What.** `lib/dims.UNIFIED_PATH` is `data/unified/macro_dims_long.csv.gz`; `write_long_csv`
+and `model_sync.load_unified_dims` go through `dims.open_unified`, which gzips by the file's
+name and still reads a plain .csv (tests cover both). The plain file was removed from the
+repository; the columns and content are unchanged (2 180 176 bytes compressed, 28× smaller).
+`pandas.read_csv` and `csv` over `gzip.open` read it directly; the scalar `macro_long.csv`
+(1.8 MB) stays plain. README, config comments and docstrings updated. Tests 359 → 360.
+
+## 2026-09-23 — raw store: an LFS pointer counts as the archived copy (CI stored every BNS workbook again each day)
+
+**Found.** The manual run 35877301328 (54 min, 545/545 ok, no data change) added 76 raw BNS
+workbooks, and every scheduled run since 2026-09-16 added 58 — all byte-identical to files
+already archived (`cmp` on 4439 for 22 and 23 September: identical). The workflow checks the
+repository out with `lfs: false`, so in CI each archived `data/raw/bns/*.xlsx` is a 130-byte
+Git LFS pointer; `raw_store.identical_twin` compared bytes, saw a "different" file and archived
+the unchanged download again under a time-suffixed name. At HEAD: 790 pointer files for 88
+distinct objects (597 MB of content, 702 duplicate pointers). GitHub LFS storage is
+content-addressed, so the duplicates cost repository clutter and 2.3 GB of smudged copies in
+a local checkout, not LFS quota.
+
+**What.** `raw_store.holds_content` treats a file as holding the download either literally or as
+an LFS pointer whose `oid sha256:` equals the download's sha256; `identical_twin` and the
+same-day branch of `save_raw_bytes` use it. Revised content still lands as a new file; nothing
+archived is touched. Verified on a real workbook against a simulated CI worktree (pointer
+stub for the previous day → twin found, nothing written) and against the local archive.
+Tests 360 → 362 (`tests/test_raw_store.py`). The 702 duplicate pointers already in the
+repository are left in place; removing them is the same operation as the 2026-09-15 dedup
+(a record file mapping each removed file to the file that holds its bytes) and is the
+author's decision.
+
+## 2026-09-23 — 702 duplicate raw copies removed; every manifest re-pointed (user: «Удали дубликаты»)
+
+**What.** `scripts/dedup_raw.py` removed the 702 byte-identical BNS workbooks that the CI runs of
+2026-09-16..23 had archived again (80 distinct contents, 2 326 MB of smudged copies; verified
+before removal that each removed pointer's LFS oid equals the surviving file's). Record:
+`data/raw/dedup_2026-09-23.json` (removed → kept, 702 entries). Nothing with distinct content
+was touched; the raw tree keeps one file per content, the earliest archive of it.
+
+**Found and fixed on the way.** The dedup of 2026-09-15 re-pointed only the manifest named after
+a removed file; the manifests of the other indicators that read the same shared workbook (346883
+feeds AVG_WAGE_QUARTERLY and AVG_WAGE_AGRICULTURE; 335623 the construction index and output;
+5831 the employment tables …) kept naming the removed file. Today's removal would have left 732
+such manifests dangling. `dedup_raw.point_manifests` now re-points every manifest in the folder
+that names the removed file, and `--repair-manifests` follows the dedup records (across chains)
+for manifests left dangling earlier: 732 repaired, 0 dangling among the 10 502 manifests
+afterwards. `raw_file` in a manifest is written by the fetchers and read by nobody in the
+pipeline, so nothing had failed — the record was simply wrong. Tests 362 → 364
+(`tests/test_dedup_raw.py`).
