@@ -302,8 +302,54 @@ def fetch_wdi(ds: dict) -> tuple[list[dict], dict]:
                      "release": meta.get("lastupdated")}
 
 
+# Every WDI series for one economy (added 2026-09-27): the World Bank's sources API returns
+# the whole database for a country in pages of 20 000 (source 2 = WDI; about 1 500 series x 66
+# years for Kazakhstan, most of them empty). Item = the WDI code, name = its English name; the
+# unit is part of the name («(% of GDP)», «(current US$)»), so the dataset's unit says so.
+WDI_COUNTRY_URL = ("https://api.worldbank.org/v2/sources/{source}/country/{country}/series/all/time/all"
+                   "?format=json&per_page=20000&page={page}")
+
+
+def fetch_wdi_country(ds: dict) -> tuple[list[dict], dict]:
+    import gzip
+    import io
+    from fetchers import imf_dims
+    fresh = imf_dims.stored_if_fresh(ds, "wb", f"{ds['id']}_p1")
+    if fresh:
+        return fresh
+    country, source = ds.get("country_code", "KAZ"), ds.get("wb_source", 2)
+    records, last_updated, page, pages = [], None, 1, 1
+    while page <= pages:
+        url = WDI_COUNTRY_URL.format(source=source, country=country, page=page)
+        content = _get(url, timeout=300)
+        payload = json.loads(content)
+        if not isinstance(payload, dict) or "source" not in payload:
+            _structural(ds, f"unexpected answer: {content[:200]!r}", url)
+        buf = io.BytesIO()
+        with gzip.GzipFile(fileobj=buf, mode="wb", mtime=0) as gz:
+            gz.write(content)
+        _save_raw("wb", f"{ds['id']}_p{page}", buf.getvalue(), "json.gz", {"source_url": url})
+        pages, last_updated = int(payload["pages"]), payload.get("lastupdated")
+        for obs in payload["source"]["data"]:
+            if obs.get("value") is None:
+                continue
+            var = {v["concept"]: v for v in obs["variable"]}
+            year = var["Time"]["value"]
+            if not re.fullmatch(r"\d{4}", str(year)):
+                continue
+            records.append({"date": f"{year}-12-31", "region": "national", "item_code": var["Series"]["id"],
+                            "item_name": var["Series"]["value"], "value": float(obs["value"])})
+        page += 1
+    n = len({r["item_code"] for r in records})
+    if n < ds.get("min_items", 500):
+        _structural(ds, f"only {n} series with data", WDI_COUNTRY_URL.format(source=source, country=country, page=1))
+    return records, {"frequency": "annual", "source_url": WDI_COUNTRY_URL.format(source=source, country=country, page=1),
+                     "dataset_id": f"wdi/{country}", "release": last_updated,
+                     "note": ds.get("note", "") + f" WDI last updated {last_updated}."}
+
+
 TABLES = {"bns_partner_trade": fetch_bns_partner_trade, "wits_partner_trade": fetch_wits_partner_trade,
-          "wits_tariffs": fetch_wits_tariffs, "wdi": fetch_wdi}
+          "wits_tariffs": fetch_wits_tariffs, "wdi": fetch_wdi, "wdi_country": fetch_wdi_country}
 
 
 def fetch(ds: dict) -> tuple[list[dict], dict]:
