@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/economy/prices/spreadsheets/?name=19117",
+  "dataset_id": "19117",
+  "indicator_id": "CPI_DETAIL_YTD",
+  "indicator_name": "CPI by group, COICOP division, item and region, December of previous year = 100",
+  "description": "ИПЦ по группам, разделам КООЛИЦ, товарам и услугам и по регионам, к декабрю предыдущего года",
+  "frequency": "monthly",
+  "unit": "index, December of previous year = 100",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "As CPI_DETAIL_MOM.",
+  "publication_date": "2026-09-08",
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2004-07-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

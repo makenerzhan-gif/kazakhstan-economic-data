@@ -2478,3 +2478,115 @@ datasets:
     unit: "basis points"
     category: monetary
     note: "YTM minus the FRED constant-maturity Treasury yield (DGS1/2/3/5/7/10/20/30) on the valuation date, linearly interpolated at the remaining maturity. USD bonds with at least a year to maturity. The 2024 and 2025 bonds are unreliable from 2022-04 (near-zero, then negative spreads 2023-04..2024-04; config/source_issues.yaml)."
+
+  # ---------------------------------------------------------------- CPI publication (added 2026-09-27)
+  # scripts/fetchers/bns_cpi.py: BNS «Индекс потребительских цен и производные показатели в
+  # Республике Казахстан» (Т-15-02-М, spreadsheets listing name=19117, monthly from October 2022);
+  # history from July 2004 out of its predecessor «Индекс потребительских цен в РК» (listing
+  # 166775, 1999-2022) and «Вклад отдельных составляющих …» (27168, 2020-2022), loaded once by
+  # scripts/backfill_cpi_publication.py. Each daily run re-reads the latest three editions and any
+  # month not yet stored. One dataset per comparison base; items = the total (TOTAL / GOODS), the
+  # groups (FOOD, NONFOOD, SERVICES) and the COICOP divisions (CP01…CP12, from 2026 CP12_2018 and
+  # CP13_2018) coded through dictionaries/cpi_aggregates.csv; the individual goods and services by
+  # a transliterated slug of their Russian name (a renamed item starts a new series); the three
+  # core-inflation baskets CORE_EX_FV / CORE_EX3 / CORE_EX7. Regions: the total and the three
+  # groups by region (the item-by-region blocks of the old tables are not kept).
+  - id: CPI_DETAIL_MOM
+    name_ru: "ИПЦ по группам, разделам КООЛИЦ, товарам и услугам и по регионам, к предыдущему месяцу"
+    name_en: "CPI by group, COICOP division, item and region, previous month = 100"
+    agency: bns
+    fetcher: bns_cpi
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    note: "BNS Т-15-02-М and predecessors, 2004-07 onward (items and regions); core inflation baskets from 2022-10 (the scalar CORE_CPI_* carry the Taldau history from 2023). Equal to the scalar CPI, CPI_FOOD, CPI_NONFOOD, CPI_SERVICES and CORE_CPI_* on every common month (2011-2026; one 0.1 difference, CPI_FOOD_YOY 2022-06)."
+
+  - id: CPI_DETAIL_YTD
+    name_ru: "ИПЦ по группам, разделам КООЛИЦ, товарам и услугам и по регионам, к декабрю предыдущего года"
+    name_en: "CPI by group, COICOP division, item and region, December of previous year = 100"
+    agency: bns
+    fetcher: bns_cpi
+    frequency: monthly
+    unit: "index, December of previous year = 100"
+    category: prices
+    note: "As CPI_DETAIL_MOM."
+
+  - id: CPI_DETAIL_YOY
+    name_ru: "ИПЦ по группам, разделам КООЛИЦ, товарам и услугам и по регионам, к соответствующему месяцу прошлого года"
+    name_en: "CPI by group, COICOP division, item and region, same month of previous year = 100"
+    agency: bns
+    fetcher: bns_cpi
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    note: "As CPI_DETAIL_MOM. BNS mislabelled this column «июню» in July 2024 and July 2025 and «январю 2025г.» in February 2026; read as year-on-year (the manifest says so)."
+
+  - id: CPI_DETAIL_AVG_YOY
+    name_ru: "ИПЦ по группам, разделам КООЛИЦ, товарам и услугам и по регионам, январь–месяц к январю–месяцу прошлого года"
+    name_en: "CPI by group, COICOP division, item and region, January–month over January–month of previous year = 100"
+    agency: bns
+    fetcher: bns_cpi
+    frequency: monthly
+    unit: "index, same period (January to month) of previous year = 100"
+    category: prices
+    note: "As CPI_DETAIL_MOM: the average price level since January against the same months a year earlier (the annual average inflation in December)."
+
+  - id: RETAIL_PRICES_MOM
+    name_ru: "Индекс розничных цен (товары) по группам и регионам, к предыдущему месяцу"
+    name_en: "Retail price index (goods) by group and region, previous month = 100"
+    agency: bns
+    fetcher: bns_cpi
+    frequency: monthly
+    unit: "index, previous month = 100"
+    category: prices
+    note: "Т-15-02-М tables 4-5, from 2022-10. Goods only (GOODS = «Товары»); the retail trade basket, not the CPI weights."
+
+  - id: RETAIL_PRICES_YTD
+    name_ru: "Индекс розничных цен (товары) по группам и регионам, к декабрю предыдущего года"
+    name_en: "Retail price index (goods) by group and region, December of previous year = 100"
+    agency: bns
+    fetcher: bns_cpi
+    frequency: monthly
+    unit: "index, December of previous year = 100"
+    category: prices
+    note: "As RETAIL_PRICES_MOM. February-June 2026: the national food row of table 5 differs from table 4 by 0.7-0.8 (table 4 kept)."
+
+  - id: RETAIL_PRICES_YOY
+    name_ru: "Индекс розничных цен (товары) по группам и регионам, к соответствующему месяцу прошлого года"
+    name_en: "Retail price index (goods) by group and region, same month of previous year = 100"
+    agency: bns
+    fetcher: bns_cpi
+    frequency: monthly
+    unit: "index, same month previous year = 100"
+    category: prices
+    note: "As RETAIL_PRICES_MOM."
+
+  - id: RETAIL_PRICES_AVG_YOY
+    name_ru: "Индекс розничных цен (товары) по группам и регионам, январь–месяц к январю–месяцу прошлого года"
+    name_en: "Retail price index (goods) by group and region, January–month over January–month of previous year = 100"
+    agency: bns
+    fetcher: bns_cpi
+    frequency: monthly
+    unit: "index, same period (January to month) of previous year = 100"
+    category: prices
+    note: "As RETAIL_PRICES_MOM. February 2026: BNS's own column carries values that cannot be averages (cereals 86.1 against 107.8 year-on-year); kept as published."
+
+  - id: CPI_CONTRIBUTION_MOM
+    name_ru: "Вклад отдельных составляющих в прирост ИПЦ за месяц, п.п."
+    name_en: "Contribution of CPI components to month-on-month CPI growth, percentage points"
+    agency: bns
+    fetcher: bns_cpi
+    frequency: monthly
+    unit: "percentage points"
+    category: prices
+    note: "Т-15-02-М table 6 (2023-01 onward) and BNS «Вклад отдельных составляющих …» (2020-01 to 2022-12). TOTAL is the CPI growth itself (0.571 for August 2026). May 2021 was printed in Kazakh only; its row labels are taken from April/June 2021, whose 46 rows are identical."
+
+  - id: CPI_CONTRIBUTION_YTD
+    name_ru: "Вклад отдельных составляющих в прирост ИПЦ с начала года (к декабрю), п.п."
+    name_en: "Contribution of CPI components to CPI growth since December, percentage points"
+    agency: bns
+    fetcher: bns_cpi
+    frequency: monthly
+    unit: "percentage points"
+    category: prices
+    note: "As CPI_CONTRIBUTION_MOM. In August 2024 the housing-and-utilities row is printed twice with different year-to-date contributions (1.112 and 2.53); the division row (first) is kept."

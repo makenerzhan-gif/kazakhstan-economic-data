@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/economy/prices/spreadsheets/?name=19117",
+  "dataset_id": "19117",
+  "indicator_id": "RETAIL_PRICES_YTD",
+  "indicator_name": "Retail price index (goods) by group and region, December of previous year = 100",
+  "description": "Индекс розничных цен (товары) по группам и регионам, к декабрю предыдущего года",
+  "frequency": "monthly",
+  "unit": "index, December of previous year = 100",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "As RETAIL_PRICES_MOM. February-June 2026: the national food row of table 5 differs from table 4 by 0.7-0.8 (table 4 kept).",
+  "publication_date": "2026-09-08",
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2022-10-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
