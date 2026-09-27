@@ -789,7 +789,7 @@ def _bulletin_documents() -> list[dict]:
     if not BULLETIN_ARCHIVE:
         return docs
     found = {d.get("id"): d for d in docs}
-    for title in ("Статистический бюллетень", "Statistical bulletin"):
+    for title in ("Статистический бюллетень", "Statistical bulletin", "Статистикалық бюллетень"):
         for page in range(1, 8):
             batch = _list_documents(title=title, projects="minfin", page=str(page))
             for d in batch:
@@ -842,6 +842,45 @@ def _ru_month(name: str | None) -> int | None:
     if name in RU_MONTH_TO_NUM:
         return RU_MONTH_TO_NUM[name]
     return next((num for stem, num in RU_MONTH_STEMS if name.startswith(stem) and len(name) <= len(stem) + 3), None)
+
+
+# The period a bulletin covers, as a header cell names it: «январь-июль отчет 2026 г.» (2021
+# onward) or «2019 г. январь-ноябрь отчет» (the 2019-2021 табл 3). BULLETIN_PERIOD_RE knew only
+# the first form, so the older tables and the December editions («на 1 января», whose табл 3
+# has annual columns only) were skipped: added 2026-09-27.
+_PERIOD_ANY_RE = re.compile(r"январ\w*(?:\s*-\s*([а-я]+))?\s+отчет\s+(\d{4})"
+                            r"|(\d{4})\s*г\.?\s*январ\w*(?:\s*-\s*([а-я]+))?\s+отчет", re.IGNORECASE)
+
+
+def _period_of(cell) -> tuple[int, int] | None:
+    """(year, last month) of a header cell naming a January-to-month report, else None."""
+    if not isinstance(cell, str):
+        return None
+    m = _PERIOD_ANY_RE.search(" ".join(cell.split()))
+    if not m:
+        return None
+    month = _ru_month(m.group(1) or m.group(4) or "январь")
+    return (int(m.group(2) or m.group(3)), month) if month else None
+
+
+def _find_period(rows: list[list]) -> tuple[int, int, int] | None:
+    """(year, month, column) of the first period header in a sheet's top rows."""
+    for row in rows[:15]:
+        for j, cell in enumerate(row or []):
+            p = _period_of(cell)
+            if p:
+                return p[0], p[1], j
+    return None
+
+
+def _row_label(row) -> str:
+    """A row's Russian label: its last non-empty text cell (older editions pad rows with
+    empty cells, so r[-1] is None there)."""
+    return next((c.strip() for c in reversed(row) if isinstance(c, str) and c.strip()), "")
+
+
+def _label_matcher(label: str):
+    return lambda r: _row_label(r) == label
 CUSTOMS_DUTIES_ROW_LABEL = "Таможенные платежи"
 
 
@@ -863,7 +902,9 @@ def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str, value_c
     confirmed live that -2 silently lands on a None padding cell in 4 of 13
     vintages there, dropping those records. An absolute column index (5, the
     value's real fixed position in that sheet) is used instead for that
-    sheet's fetchers.
+    sheet's fetchers. `value_col="period"` takes the column whose header names the period
+    (the economic-classification tables, whose rows the 2019-2021 editions pad with empty
+    cells); a callable gets (rows, year, month).
     """
     bulletins = _bulletin_documents()
     if not bulletins:
@@ -893,26 +934,27 @@ def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str, value_c
             continue
 
         rows = list(_iter_rows(kind, wb, target_sheet))
-        header_row = next((r for r in rows if r and any(
-            isinstance(c, str) and BULLETIN_PERIOD_RE.search(c) for c in r if c
-        )), None)
-        period_match = None
-        if header_row:
-            for cell in header_row:
-                if isinstance(cell, str):
-                    m = BULLETIN_PERIOD_RE.search(cell)
-                    if m:
-                        period_match = m
-                        break
-        target_row = next((r for r in rows if r and row_matcher(r)), None)
-        if period_match is None or target_row is None:
+        period = _find_period(rows)
+        period_col = period[2] if period else None
+        if period is None:
+            # the sheet names no January-to-month period (табл 3 of a December edition, or of
+            # February 2020): the edition's period from its other tables
+            for other in sorted(sheet_names, key=lambda n: n.strip() != BULLETIN_STATE_REVENUE_SHEET_NAME):
+                if other != target_sheet and (period := _find_period(list(_iter_rows(kind, wb, other)))):
+                    break
+        matchers = row_matcher if isinstance(row_matcher, (list, tuple)) else [row_matcher]
+        target_row = next((r for m in matchers for r in rows if r and m(r)), None)   # first matcher that finds a row
+        if period is None or target_row is None:
             skipped.append(doc["id"])
             continue
 
-        end_month_name = (period_match.group(1) or "январь").lower()
-        end_month = _ru_month(end_month_name)
-        year = int(period_match.group(2))
-        col = value_col(rows, year) if callable(value_col) else value_col
+        year, end_month = period[0], period[1]
+        if value_col == "period":
+            col = period_col
+        elif callable(value_col):
+            col = value_col(rows, year, end_month)
+        else:
+            col = value_col
         value = target_row[col] if col is not None and -len(target_row) <= col < len(target_row) else None
         if end_month is None or value in (None, "") or not isinstance(value, (int, float)):
             skipped.append(doc["id"])
@@ -980,8 +1022,10 @@ def fetch_customs_duties() -> tuple[list[dict], dict]:
     ~1,165bn in Jun)."""
     return _fetch_bulletin_row(
         BULLETIN_REVENUE_SHEET_NAME,
-        lambda r: len(r) > 3 and r[3] == "1" and r[-1] == CUSTOMS_DUTIES_ROW_LABEL,
+        # the class code «1» sits in column D since 2021, in column C before
+        lambda r: _row_label(r) == CUSTOMS_DUTIES_ROW_LABEL and any(c in ("1", 1) for c in r[:4]),
         "CUSTOMS_DUTIES",
+        value_col="period",
     )
 
 
@@ -997,6 +1041,9 @@ def fetch_customs_duties() -> tuple[list[dict], dict]:
 # consistent with the same year-to-date cumulative pattern as CUSTOMS_DUTIES.
 # ---------------------------------------------------------------------------
 BULLETIN_EXPENDITURE_ECONOMIC_SHEET_NAME = "табл 10"
+# Specific 311, the only item under 310 «Бюджетные субсидии»: equal to it in all 128 table-editions
+# that print both (2019-2026), and the only subsidies row the September 2022 - May 2024 editions print.
+SUBSIDIES_311_LABEL = "Субсидии физическим и юридическим лицам, в том числе крестьянским (фермерским) хозяйствам"
 
 
 def fetch_gov_wages_expenditure() -> tuple[list[dict], dict]:
@@ -1006,8 +1053,9 @@ def fetch_gov_wages_expenditure() -> tuple[list[dict], dict]:
     ~180bn Feb to ~1,015bn Nov; 2026: ~62bn Jan to ~489bn Jun)."""
     return _fetch_bulletin_row(
         BULLETIN_EXPENDITURE_ECONOMIC_SHEET_NAME,
-        lambda r: r[-1] == "Заработная плата",
+        _label_matcher("Заработная плата"),
         "GOV_WAGES_EXPENDITURE",
+        value_col="period",
     )
 
 
@@ -1020,8 +1068,9 @@ def fetch_gov_capital_expenditure() -> tuple[list[dict], dict]:
     spending later in the fiscal year)."""
     return _fetch_bulletin_row(
         BULLETIN_EXPENDITURE_ECONOMIC_SHEET_NAME,
-        lambda r: r[-1] == "Капитальные затраты",
+        _label_matcher("Капитальные затраты"),
         "GOV_CAPITAL_EXPENDITURE",
+        value_col="period",
     )
 
 
@@ -1032,8 +1081,9 @@ def fetch_gov_pensions_expenditure() -> tuple[list[dict], dict]:
     ~3,949bn Nov; 2026: ~431bn Jan to ~2,454bn Jun)."""
     return _fetch_bulletin_row(
         BULLETIN_EXPENDITURE_ECONOMIC_SHEET_NAME,
-        lambda r: r[-1] == "Пенсии",
+        _label_matcher("Пенсии"),
         "GOV_PENSIONS_EXPENDITURE",
+        value_col="period",
     )
 
 
@@ -1046,8 +1096,9 @@ def fetch_gov_subsidies_expenditure() -> tuple[list[dict], dict]:
     Jan to ~259bn Jun)."""
     return _fetch_bulletin_row(
         BULLETIN_EXPENDITURE_ECONOMIC_SHEET_NAME,
-        lambda r: r[-1] == "Бюджетные субсидии",
+        [_label_matcher("Бюджетные субсидии"), _label_matcher(SUBSIDIES_311_LABEL)],
         "GOV_SUBSIDIES_EXPENDITURE",
+        value_col="period",
     )
 
 
@@ -1247,8 +1298,9 @@ def fetch_local_gov_wages_expenditure() -> tuple[list[dict], dict]:
     parsed, exactly one matching row in each."""
     return _fetch_bulletin_row(
         BULLETIN_LOCAL_EXPENDITURE_ECONOMIC_SHEET_NAME,
-        lambda r: r[-1] == "Заработная плата",
+        _label_matcher("Заработная плата"),
         "LOCAL_GOV_WAGES_EXPENDITURE",
+        value_col="period",
     )
 
 
@@ -1258,8 +1310,9 @@ def fetch_local_gov_capital_expenditure() -> tuple[list[dict], dict]:
     documents parsed, exactly one matching row in each."""
     return _fetch_bulletin_row(
         BULLETIN_LOCAL_EXPENDITURE_ECONOMIC_SHEET_NAME,
-        lambda r: r[-1] == "Капитальные затраты",
+        _label_matcher("Капитальные затраты"),
         "LOCAL_GOV_CAPITAL_EXPENDITURE",
+        value_col="period",
     )
 
 
@@ -1269,8 +1322,9 @@ def fetch_local_gov_subsidies_expenditure() -> tuple[list[dict], dict]:
     documents parsed, exactly one matching row in each."""
     return _fetch_bulletin_row(
         BULLETIN_LOCAL_EXPENDITURE_ECONOMIC_SHEET_NAME,
-        lambda r: r[-1] == "Бюджетные субсидии",
+        [_label_matcher("Бюджетные субсидии"), _label_matcher(SUBSIDIES_311_LABEL)],
         "LOCAL_GOV_SUBSIDIES_EXPENDITURE",
+        value_col="period",
     )
 
 
@@ -2269,15 +2323,23 @@ def fetch_state_non_oil_deficit() -> tuple[list[dict], dict]:
     """State non-oil budget deficit (surplus), STATE budget (republican +
     local combined), million KZT, annual -- broader in scope than
     NON_OIL_BUDGET_DEFICIT (republican-only). Verified live 2026-08-31:
-    -8,454,245.45 (2023) to -11,393,479.39 (2025) million KZT."""
-    return _fetch_bulletin_annual_row(
+    -8,454,245.45 (2023) to -11,393,479.39 (2025) million KZT. The 2019-2021
+    columns repeat the financing row; those years come from the identity."""
+    records, manifest = _fetch_bulletin_annual_row(
         BULLETIN_STATE_BUDGET_SHEET_NAME,
         _state_budget_row_matcher(STATE_NON_OIL_DEFICIT_LABEL),
         "STATE_NON_OIL_DEFICIT",
         "Million KZT. State non-oil budget deficit (surplus), STATE budget (republican + local "
         "government budgets combined) -- broader scope than NON_OIL_BUDGET_DEFICIT, which is "
-        "republican-budget-only. Negative values indicate a deficit.",
+        "republican-budget-only. Negative values indicate a deficit. 2019-2021: the bulletin's "
+        "columns repeat the financing row, so these years are deficit - National Fund transfers - "
+        "crude oil export duty (the identity every printed month satisfies).",
     )
+    december_duty = {d: v for d, v in _processed_history("OIL_EXPORT_DUTY").items() if d[5:7] == "12"}
+    fixed, replaced = _non_oil_with_identity(records, "STATE_BUDGET_DEFICIT", december_duty)
+    if replaced:
+        manifest.setdefault("warnings", []).append(f"printed values equal to minus the deficit replaced by the identity: {replaced}")
+    return fixed, manifest
 
 
 STATE_BUDGET_DEBT_SERVICING_LABEL = "14. Обслуживание долга"
@@ -2384,8 +2446,9 @@ def fetch_state_gov_wages_expenditure() -> tuple[list[dict], dict]:
     exactly one matching row in each."""
     return _fetch_bulletin_row(
         BULLETIN_STATE_ECONOMIC_SHEET_NAME,
-        lambda r: r[-1] == "Заработная плата",
+        _label_matcher("Заработная плата"),
         "STATE_GOV_WAGES_EXPENDITURE",
+        value_col="period",
     )
 
 
@@ -2395,8 +2458,9 @@ def fetch_state_gov_capital_expenditure() -> tuple[list[dict], dict]:
     parsed, exactly one matching row in each."""
     return _fetch_bulletin_row(
         BULLETIN_STATE_ECONOMIC_SHEET_NAME,
-        lambda r: r[-1] == "Капитальные затраты",
+        _label_matcher("Капитальные затраты"),
         "STATE_GOV_CAPITAL_EXPENDITURE",
+        value_col="period",
     )
 
 
@@ -2406,8 +2470,9 @@ def fetch_state_gov_subsidies_expenditure() -> tuple[list[dict], dict]:
     exactly one matching row in each."""
     return _fetch_bulletin_row(
         BULLETIN_STATE_ECONOMIC_SHEET_NAME,
-        lambda r: r[-1] == "Бюджетные субсидии",
+        [_label_matcher("Бюджетные субсидии"), _label_matcher(SUBSIDIES_311_LABEL)],
         "STATE_GOV_SUBSIDIES_EXPENDITURE",
+        value_col="period",
     )
 
 
@@ -3164,15 +3229,30 @@ def _state_budget_row_matcher(label: str):
     return matcher
 
 
-def _state_budget_ytd_col(rows: list[list], year: int) -> int | None:
+def _state_budget_ytd_col(rows: list[list], year: int, month: int | None = None) -> int | None:
     """The current year's January-to-month column of табл 3, from its header: «2026 ж.
     қантар-маусым есеп / 2026 г. январь-июнь отчет». Column F (5) since mid-2021, column E (4)
-    in the 2019-2021 layout, where F onward are quarters. The previous year's January-to-month
-    column next to it has no year in its header and is not picked."""
-    for row in rows[:10]:
+    in the 2019-2021 layout, where F onward are quarters; in February 2020 the month sits in
+    the sub-header under «2020ж. есеп/ отчет 2020г.». The previous year's January-to-month
+    column next to it has no year in its header and is not picked. A December edition («на 1
+    января») has annual columns only: the rightmost one of the year (not a quarter) is the
+    January-December report."""
+    top = rows[:10]
+    for i, row in enumerate(top):
         for j, cell in enumerate(row):
-            if isinstance(cell, str) and str(year) in cell and re.search(r"январ|қаңтар|қантар", cell.lower()):
+            below = top[i + 1][j] if i + 1 < len(top) and j < len(top[i + 1]) else None
+            text = f"{cell if isinstance(cell, str) else ''} {below if isinstance(below, str) else ''}".lower()
+            if isinstance(cell, str) and str(year) in cell and re.search(r"январ|қаңтар|қантар", text):
                 return j
+    if month == 12:
+        found = None
+        for i, row in enumerate(top):
+            for j, cell in enumerate(row):
+                below = top[i + 1][j] if i + 1 < len(top) and j < len(top[i + 1]) else None
+                if (isinstance(cell, str) and str(year) in cell and re.search(r"есеп|отчет", cell.lower())
+                        and not (isinstance(below, str) and re.search(r"(?<![а-яәғқңөұүһі])тоқсан|квартал", below.lower()))):
+                    found = j if found is None or j > found else found
+        return found
     return None
 
 
@@ -3263,7 +3343,21 @@ def _fetch_state_budget_ytd(line: str, indicator_id: str, note: str,
         note_override=note)
     if check_identity:
         manifest["identity_checked_against"] = _verify_state_budget_identity(indicator_id)
+    # January-December is the «на 1 января» edition's; where that edition is not online (2025
+    # as of 2026-09), the annual report of the same table (same line, same scope) stands in.
+    annual_id = STATE_BUDGET_YTD_ANNUAL.get(line)
+    if annual_id:
+        have = {r["date"] for r in records}
+        added = [{"date": d, "value": v} for d, v in _processed_history(annual_id).items()
+                 if d.endswith("-12-31") and d not in have and d >= min(have, default="9999")]
+        if added:
+            records = sorted(records + added, key=lambda r: r["date"])
+            manifest.setdefault("warnings", []).append(f"December from the annual report {annual_id}: {[r['date'] for r in added]}")
     return records, manifest
+
+
+STATE_BUDGET_YTD_ANNUAL = {"revenue": "STATE_BUDGET_REVENUE", "expenditure": "STATE_BUDGET_EXPENDITURE",
+                           "deficit": "STATE_BUDGET_DEFICIT", "non_oil_deficit": "STATE_NON_OIL_DEFICIT"}
 
 
 _STATE_BUDGET_YTD_COMMON = (
@@ -3303,14 +3397,49 @@ def fetch_state_budget_deficit_ytd() -> tuple[list[dict], dict]:
         check_identity=True)
 
 
+def non_oil_by_identity(deficit: dict[str, float], nf_transfers: dict[str, float],
+                        oil_duty: dict[str, float]) -> dict[str, float]:
+    """Non-oil deficit = deficit − transfers from the National Fund − export duty on crude oil,
+    by month (keys 'YYYY-MM-DD'; the NF series is dated the 1st, the budget ones the last day).
+    Exact to 1 mln KZT in all 44 months Minfin printed both, April 2022 – July 2026."""
+    tr = {d[:7]: v for d, v in nf_transfers.items()}
+    duty = {d[:7]: v for d, v in oil_duty.items()}
+    return {d: v - tr[d[:7]] - duty[d[:7]] for d, v in deficit.items() if d[:7] in tr and d[:7] in duty}
+
+
+def _non_oil_with_identity(records: list[dict], deficit_id: str, duty: dict[str, float]) -> tuple[list[dict], list[str]]:
+    """The printed non-oil deficit where it is genuine, the identity elsewhere. A printed value
+    equal to minus the deficit is BNS/Minfin's copy of the financing row (the 2019-2021 columns of
+    табл 3, config/source_issues.yaml non_oil_deficit_2021) and is replaced."""
+    deficit = _processed_history(deficit_id)
+    derived = non_oil_by_identity(deficit, _processed_history("NF_TRANSFERS_YTD"), duty)
+    out, replaced = {}, []
+    for r in records:
+        if r["date"] in deficit and abs(r["value"] + deficit[r["date"]]) < 1.0 and deficit[r["date"]] != 0:
+            replaced.append(r["date"])
+            continue
+        out[r["date"]] = r["value"]
+    for d, v in derived.items():
+        out.setdefault(d, round(v, 6))
+    return [{"date": d, "value": v} for d, v in sorted(out.items())], replaced
+
+
 def fetch_state_non_oil_deficit_ytd() -> tuple[list[dict], dict]:
-    """State budget non-oil deficit, million KZT, year-to-date."""
-    return _fetch_state_budget_ytd(
+    """State budget non-oil deficit, million KZT, year-to-date: printed from April 2022, by
+    identity before (deficit − NF transfers − crude oil export duty), January 2019 onward."""
+    records, manifest = _fetch_state_budget_ytd(
         "non_oil_deficit", "STATE_NON_OIL_DEFICIT_YTD",
         _STATE_BUDGET_YTD_COMMON +
         "The deficit excluding oil revenue -- -5,037,288 mln KZT for January-June 2026 against a "
         "headline deficit of -2,275,950. The gap between the two is what oil contributed to the "
-        "budget, and it is the number that shows the underlying fiscal position.")
+        "budget, and it is the number that shows the underlying fiscal position. Printed from "
+        "April 2022; January 2019 - March 2022 and the Decembers by the identity non-oil deficit = "
+        "deficit - transfers from the National Fund - export customs duty on crude oil, exact to "
+        "1 mln KZT in every month both exist.")
+    records, replaced = _non_oil_with_identity(records, "STATE_BUDGET_DEFICIT_YTD", _processed_history("OIL_EXPORT_DUTY"))
+    if replaced:
+        manifest.setdefault("warnings", []).append(f"printed values equal to minus the deficit replaced by the identity: {replaced}")
+    return records, manifest
 
 
 def fetch_state_net_budget_lending_ytd() -> tuple[list[dict], dict]:
@@ -4053,12 +4182,13 @@ STATE_BUDGET_QUARTERLY = {
 
 
 def state_budget_quarters(ytd: dict[str, float], annual: dict[str, float]) -> dict[str, float]:
-    """{quarter start: value} from month-end January-to-month values and 31-December annual ones."""
+    """{quarter start: value} from month-end January-to-month values and 31-December annual ones
+    (the annual report, else January-December of the «на 1 января» edition -- 2013-2015)."""
     out: dict[str, float] = {}
     years = {int(d[:4]) for d in ytd} | {int(d[:4]) for d in annual}
     for y in sorted(years):
         m3, m6, m9 = ytd.get(f"{y}-03-31"), ytd.get(f"{y}-06-30"), ytd.get(f"{y}-09-30")
-        a = annual.get(f"{y}-12-31")
+        a = annual.get(f"{y}-12-31", ytd.get(f"{y}-12-31"))
         if m3 is not None:
             out[f"{y}-01-01"] = m3
         if m6 is not None and m3 is not None:
