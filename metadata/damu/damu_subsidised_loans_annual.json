@@ -1,0 +1,21 @@
+{
+  "source": "damu",
+  "source_url": "https://damu.kz/upload/iblock/c4c/gjvagrqacwesogtruxmd9uwxrjw227gu/%D0%9E%D1%82%D1%87%D0%B5%D1%82%20%D0%BF%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%20%D1%81%D1%83%D0%B1%D1%81%D0%B8%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BD%D0%B0%2001.09.2026%D0%B3.xlsx",
+  "dataset_id": "damu subsidy report as of 2026-09-01",
+  "indicator_id": "DAMU_SUBSIDISED_LOANS_ANNUAL",
+  "indicator_name": "Damu Fund: loans approved for interest-rate subsidy by approval year, region, programme, ОКЭД section and business size",
+  "description": "Фонд «Даму»: кредиты, одобренные к субсидированию ставки, по годам одобрения, регионам, программам, отраслям и размеру бизнеса",
+  "frequency": "annual",
+  "unit": "billion KZT (COUNT.TOTAL: projects)",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Sum of project rows of Damu's subsidy report (all programmes since 2010: ДКБ-2020/2025, Нацпроект, портфельное субсидирование, ПСЭ, ЕКП, ЭПВ, Іскер аймақ), dated by approval year. Items TOTAL, COUNT.TOTAL, PROG.*, SEC.<ОКЭД letter>, SIZE.*. Region = region of the project. Loans APPROVED for subsidy, not disbursements; the latest edition is a snapshot (cancelled projects drop out, earlier years get revised). Region totals checked against the file's summary sheet. Edition as of 2026-09-01: 120429 projects.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2010-01-01",
+  "period_end": "2026-01-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

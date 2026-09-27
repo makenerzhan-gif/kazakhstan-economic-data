@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents",
+  "dataset_id": "Statistical Bulletin tables 12, 12.x, 18",
+  "indicator_id": "REGIONAL_BUDGETS_YTD",
+  "indicator_name": "Local budget execution by region, year to date: revenues (PIT, social tax, transfers), spending by function, subventions and withdrawals",
+  "description": "Исполнение местных бюджетов по регионам с начала года: доходы (ИПН, соцналог, трансферты), расходы по функциям, субвенции и изъятия",
+  "frequency": "monthly",
+  "unit": "million KZT, January to the month",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Minfin Statistical Bulletin tables 12 (all local budgets = national), 12.1-12.20 (one per region, matched by the sheet title) and 18 (17 before 2021-09; general transfers), every edition since 2013-01 (2013-2018 from the yearly archives, via scripts/backfill_minfin_bulletins.py --dims). Dated the first day of the period's last month; year to date (difference within a year for the month). Items: REV, REV.TAX, REV.CIT, REV.PIT, REV.SOCIAL_TAX, REV.EXCISE, REV.NONTAX, REV.CAPITAL, REV.TRANSFERS, EXP, EXP.01-EXP.15 (functional groups; 04 education, 05 health, 06 social assistance, 07 housing), NET_LENDING, FIN_ASSETS, BALANCE, SUBVENTIONS, WITHDRAWALS. Regions: 16 to 2017, + Shymkent 2018, + Abai, Zhetisu, Ulytau from the 2022-11 edition (the parent regions shrink then). Targeted transfers received = REV.TRANSFERS - SUBVENTIONS. REV.PIT and REV.SOCIAL_TAX by region = a monthly regional wage-bill proxy. National rows of 2013-2014 are absent (table 12 without a period header); the regions are there.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2013-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

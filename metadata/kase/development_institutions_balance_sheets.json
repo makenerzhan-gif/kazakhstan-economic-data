@@ -1,0 +1,21 @@
+{
+  "source": "kase",
+  "source_url": "https://kase.kz/ru/listing/issuers/<CODE>/",
+  "dataset_id": "KASE issuer financial statements",
+  "indicator_id": "DEVELOPMENT_INSTITUTIONS_BALANCE_SHEETS",
+  "indicator_name": "IFRS balance sheets of state development institutions (Baiterek, Development Bank of Kazakhstan, Kazakhstan Sustainability Fund, Agrarian Credit Corporation)",
+  "description": "Балансы институтов развития по МСФО (Байтерек, Банк развития Казахстана, Казахстанский фонд устойчивости, Аграрная кредитная корпорация)",
+  "frequency": "quarterly",
+  "unit": "billion KZT, end of period",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Balance-sheet lines of the quarterly and annual IFRS statements on KASE, dated at the balance-sheet date (quarter end); the latest statement wins when two give the same date (restatements). Item ISSUER.LINE: TOTAL_ASSETS, TOTAL_LIABILITIES, EQUITY (only columns with assets = liabilities + equity within 0.5% are kept), LOANS_CUSTOMERS, LOANS_BANKS, FIN_LEASE, DEBT_SECURITIES, GOV_LOANS, PARENT_LOANS, GOV_SUBSIDIES (deferred income from below-market state funding), CUSTOMER_FUNDS. Coverage: BRKZ from 2013-12, AGKK from 2013-12 (separate statements to 2021, consolidated from 2022 -- a break), BTRK from 2018-12, KFUS from 2020-12; quarters the issuer did not file in xlsx are missing (BTRK has no June statement 2020-2024). BTRK consolidates BRKZ, AGKK (via KazAgro since 2021), Damu and Otbasy bank, so do not add issuers.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2013-12-31",
+  "period_end": "2026-06-30",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

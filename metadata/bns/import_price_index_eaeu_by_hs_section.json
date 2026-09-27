@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-19073960",
+  "indicator_id": "IMPORT_PRICE_INDEX_EAEU_BY_HS_SECTION",
+  "indicator_name": "Import price indices from EAEU countries by HS section, vs December of the previous year",
+  "description": "Индексы цен импорта из стран ЕАЭС по разделам ТН ВЭД, к декабрю прошлого года",
+  "frequency": "monthly",
+  "unit": "index, December of the previous year = 100",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Taldau 19073960 (partner group «Страны ЕАЭС», i.e. mostly Russia), monthly from 2020-01; as IMPORT_PRICE_INDEX_BY_HS_SECTION.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2020-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

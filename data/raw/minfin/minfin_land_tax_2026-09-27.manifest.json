@@ -1,7 +1,18 @@
 {
-  "downloaded_at": "2026-09-27T11:44:45.963705",
-  "n_documents_listed": 13,
-  "n_parsed": 13,
-  "skipped_document_ids": [],
+  "downloaded_at": "2026-09-27T15:45:58.656624",
+  "n_documents_listed": 164,
+  "n_parsed": 150,
+  "skipped_document_ids": [
+    "yearly:2013:Стат.бюллетень_октябрь 2013.xls",
+    "yearly:2013:Стат_бюлл_3_(171)_март 2013.xls",
+    "yearly:2013:Стат_бюлл_4_(172)_апрель_ 2013.xls",
+    "yearly:2013:Стат_бюлл_5_(173)_май_ 2013.xls",
+    "yearly:2013:Стат_бюлл_декабрь  2013_12(180).xls",
+    "yearly:2013:Стат_бюллетень_август  2013.xls",
+    "yearly:2013:Стат_бюллетень_июль  2013.xls",
+    "yearly:2013:Стат_бюллетень_ноябрь 2013_11(179).xls",
+    "yearly:2013:Стат_бюллетень_сентябрь  2013-2.xls",
+    "yearly:2014:Стат_бюл_январь  2014.xls"
+  ],
   "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
 }

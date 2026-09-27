@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=363",
+  "dataset_id": "formId=363,indicator_code=Price expectations for imported goods - Diffusion index",
+  "indicator_id": "IMPORT_PRICE_EXPECTATIONS_BY_SECTOR",
+  "indicator_name": "Expected change in prices of imported goods next quarter by sector (NBK enterprise survey)",
+  "description": "Ожидаемое изменение цен на импортные товары по отраслям (мониторинг предприятий НБК)",
+  "frequency": "quarterly",
+  "unit": "diffusion index (0-100, 50 = no change)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Quarterly from 2016-Q2; item TOTAL = the scalar IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2016-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "comtrade",
+  "source_url": "https://comtradeapi.un.org/public/v1/preview/C/A/B4",
+  "dataset_id": "comtrade-preview reporter 398 imports",
+  "indicator_id": "IMPORTS_BY_PARTNER_COMTRADE",
+  "indicator_name": "Kazakhstan's imports by partner country (UN Comtrade): consumer goods by BEC and all goods",
+  "description": "Импорт Казахстана по странам-партнёрам (UN Comtrade): потребительские товары по BEC и все товары",
+  "frequency": "annual",
+  "unit": "million USD, CIF",
+  "currency": "USD",
+  "geography": "Kazakhstan (reporter) by partner country",
+  "methodology": "Item BASKET.M49 partner code (0 = World). CONSUMER = BEC rev.4 112+122+522+61+62+63 (household food and drink, passenger cars, durable/semi-durable/non-durable consumer goods); TOTAL = all goods (HS TOTAL). Reported by Kazakhstan: EAEU partners by survey, China under-recorded against the mirror, partner attribution shifts in 2020-2022. The last three years are re-read on each refresh.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2010-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

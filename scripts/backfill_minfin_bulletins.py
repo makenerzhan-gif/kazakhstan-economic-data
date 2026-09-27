@@ -2,7 +2,7 @@
 """One-off: read every monthly Statistical Bulletin Minfin keeps online (January 2019 on,
 91 xlsx on 2026-09-27) into the bulletin series' processed history.
 
-    python scripts/backfill_minfin_bulletins.py [--cache DIR] [--only ID ...] [--yearly 2013-2018]
+    python scripts/backfill_minfin_bulletins.py [--cache DIR] [--only ID ...] [--yearly 2013-2018] [--dims ID ...]
 
 The daily run sees only the budget direction's latest ~14 bulletins and lays them over the
 processed history (fetchers/minfin._with_history); this script supplies that history. It sets
@@ -14,8 +14,11 @@ budget built from them. The archive's workbooks are not copied into data/raw.
 --yearly FIRST-LAST: also the years before 2019. Minfin keeps them as one RAR per year («Статистический
 бюллетень за 2017 год (12 месяцев)», 12 monthly editions inside; the tables are those of the 2019
 editions, same sheet names and labels). Each archive is downloaded into the cache, unpacked with
-7z (which must be installed) and its xls/xlsx editions are read like the monthly documents. 2013-2018
+7z or unar (one must be installed) and its xls/xlsx editions are read like the monthly documents. 2013-2018
 are spreadsheets; 2008-2012 are mostly PDF and are not read.
+
+--dims ID ...: run these item-level datasets of config/dims.yaml instead (the bulletin readers of
+fetchers/minfin_regions.py), then rebuild data/unified/macro_dims_long.csv.gz.
 
 --cache DIR: a folder with the bulletins already downloaded, named <document id>.xlsx/.xls
 (downloaded there when missing). Each workbook is read once, in openpyxl's read-only mode, and
@@ -68,7 +71,10 @@ def yearly_editions(years: range, cache: Path) -> list[dict]:
             if not rar.exists():
                 rar.write_bytes(minfin._download(found[0]["full_text"][0]["document"]))
             folder.mkdir()
-            subprocess.run(["7z", "x", "-y", f"-o{folder}", str(rar)], check=True, capture_output=True)
+            try:
+                subprocess.run(["7z", "x", "-y", f"-o{folder}", str(rar)], check=True, capture_output=True)
+            except (subprocess.CalledProcessError, FileNotFoundError):   # 7z crashes on the 2011 archive
+                subprocess.run(["unar", "-q", "-f", "-o", str(folder), str(rar)], check=True, capture_output=True)
         files = sorted(f for f in glob.glob(str(folder / "**" / "*"), recursive=True) if f.lower().endswith((".xls", ".xlsx")))
         print(f"{year}: {len(files)} editions from document {found[0]['id']}")
         docs += [{"id": f"yearly:{year}:{Path(f).name}", "title": f"yearly {year} {Path(f).name}", "created_date": f"{year}-12-31",
@@ -138,6 +144,8 @@ def main() -> None:
     ap.add_argument("--cache", type=Path, default=Path(tempfile.gettempdir()) / "minfin_bulletins")
     ap.add_argument("--only", nargs="*")
     ap.add_argument("--yearly", help="also the yearly archives, e.g. 2013-2018")
+    ap.add_argument("--dims", nargs="*", help="item-level datasets read from the bulletins (config/dims.yaml), e.g. REGIONAL_BUDGETS_YTD; "
+                    "only these are run")
     args = ap.parse_args()
     args.cache.mkdir(parents=True, exist_ok=True)
 
@@ -151,9 +159,14 @@ def main() -> None:
     print(f"{len(docs)} bulletins, {docs[-1].get('created_date', '')[:10]} … {docs[0].get('created_date', '')[:10]}")
     install_cache(args.cache)
 
-    update_minfin.INDICATOR_IDS = args.only or bulletin_series()
     log = pipeline_logging.RunLogger(run_timestamp=datetime.now().isoformat())
-    update_minfin.run(log)
+    if args.dims:
+        import update_dims
+        update_dims.run(log, set(args.dims))
+        update_dims.build_unified()
+    else:
+        update_minfin.INDICATOR_IDS = args.only or bulletin_series()
+        update_minfin.run(log)
     for e in log.entries:
         print(f"{e.dataset:40} {e.status:8} {e.records_processed or 0:4}", (e.errors or [""])[0][:120])
 

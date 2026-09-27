@@ -59,8 +59,28 @@ issues:
     variable: INFLATION_EXPECTATIONS
     observations:
       - {date: "2022-02-01", value: 9.6}
-    evidence: 9.6 between 16.6 (2021-12) and 18.2 (2022-03); January 2022 is absent from the source.
-    advice: Treat February 2022 as missing.
+    evidence: >
+      9.6 between 16.6 (2021-12) and 18.2 (2022-03); January 2022 is absent from the source. Cause
+      found 2026-09-27 in the NBK survey workbook (INFLATION_EXPECTATIONS_SURVEY): the February 2022
+      answer shares printed for Q6 («на сколько вырастут цены», 14.4 / 26.5 / 16.8 / 9.6 / 7.5) are
+      the shares of Q5 («как изменятся цены») for the same month -- the only such copy between any
+      two questions in 2016-2026 -- and the published median is computed from them.
+    advice: Treat February 2022 as missing (also Q6.* and MEDIAN.EXPECTED_12M of INFLATION_EXPECTATIONS_SURVEY).
+
+  - id: inflation_expectations_survey_2022_02_q6
+    kind: error
+    variable: INFLATION_EXPECTATIONS_SURVEY
+    observations:
+      - {date: "2022-02-01", item: Q6.1, region: national, value: 14.4}
+      - {date: "2022-02-01", item: Q5.1, region: national, value: 14.4}
+      - {date: "2022-02-01", item: MEDIAN.EXPECTED_12M, region: national, value: 9.6}
+    evidence: >
+      February 2022, Q6 (expected price growth in the next 12 months by bucket, 1-5% / 6-10% / 11-15% /
+      16-20% / >20%) prints 14.4 / 26.5 / 16.8 / 9.6 / 7.5 -- exactly Q5's five shares for the month
+      (faster / same / slower / unchanged / falling). Q6 was 4.9 / 13.2 / 14.4 / 22.3 / 24.2 in 2021-12
+      and 2.2 / 9.7 / 11.2 / 25.7 / 32.9 in 2022-03. The median 9.6 (the scalar INFLATION_EXPECTATIONS)
+      follows from the copied row. MEDIAN.PERCEIVED_12M (18.2) is not affected.
+    advice: Treat Q6.* and MEDIAN.EXPECTED_12M at 2022-02 as missing; interpolate 2021-12 → 2022-03 if a value is needed.
 
   - id: subsidies_concept_2023
     kind: break
@@ -216,7 +236,7 @@ issues:
       crude oil to 1 mln KZT (44 months).
     advice: >
       Fixed in the pipeline: those values are replaced by the identity (2019 -5 509 000, 2020 -8 161 050,
-      2021 -8 057 811 mln KZT); STATE_NON_OIL_DEFICIT_YTD before April 2022 is the same identity (from 2018-01).
+      2021 -8 057 811 mln KZT); STATE_NON_OIL_DEFICIT_YTD before April 2022 is the same identity (from 2013-01, with the transfers row of the bulletin; four 2011-2012 months).
 
   - id: republican_subsidies_2017_11
     kind: inconsistent
@@ -239,3 +259,41 @@ issues:
       local (таб 11) tables print specific 311, which equals 310 wherever both appear (128 table-editions),
       and those series use it. The state-level series has no value for these 21 months.
     advice: For the state budget in 2022-09 … 2024-05 add the republican and local subsidies.
+
+  - id: regional_budgets_shymkent_2020_02
+    kind: error
+    variable: REGIONAL_BUDGETS_YTD
+    observations:
+      - {date: "2020-02-01", item: REV, region: SHM, value: 28626.40829837}
+      - {date: "2020-02-01", item: EXP, region: SHM, value: 13908.53587542}
+    evidence: >
+      The February 2020 bulletin's Shymkent sheet (January-February) repeats the January 2020 sheet cell for
+      cell (revenue 28 626.4, expenditure 13 908.5, PIT 2 027.3 mln KZT in both); the regions then fall 3.1%
+      short of table 12 (952 817) instead of adding up to it, as in every other month of 2018-2022.
+    advice: Treat Shymkent's February 2020 as missing (the other regions and the national total are fine).
+
+  - id: regional_budgets_national_2021_q1
+    kind: error
+    variable: REGIONAL_BUDGETS_YTD
+    observations:
+      - {date: "2021-02-01", item: REV, region: national, value: 573713.46881241}
+      - {date: "2021-03-01", item: REV, region: national, value: 867559.58707728}
+    evidence: >
+      Table 12 («all local budgets») of the February and March 2021 bulletins: revenue 573.7 and 867.6 bn KZT,
+      about half of its own 17 region tables (1 123.8 and 1 715.8 bn); expenditure 754.4 / 1 246.5 against
+      832.6 / 1 370.7. The same table prints 2020's annual revenue as 3 190.5 bn while its four 2020 quarters
+      sum to 7 720 bn. January and April 2021 add up.
+    advice: For national local-budget totals of 2021-02 and 2021-03 use the sum of the regions.
+
+  - id: regional_budgets_new_regions_2022_2024
+    kind: caveat
+    variable: REGIONAL_BUDGETS_YTD
+    observations:
+      - {date: "2023-12-01", item: REV, region: national, value: 13552443.1162465}
+    evidence: >
+      Abai, Zhetisu and Ulytau regions exist from June 2022, but the bulletins print their budgets as separate
+      tables only from the August 2024 edition (January-July 2024). The 2022-09 … 2024-07 editions have 17 region
+      tables whose parent regions (East Kazakhstan, Almaty, Karaganda) already exclude them, so the regions sum
+      to 1-8% less than table 12 (2023: 12 513.5 against 13 552.4 bn).
+    advice: Regional panels 2022-09 … 2024-07 miss three regions; use table 12 (national) for totals.
+

@@ -143,7 +143,8 @@ def test_non_oil_deficit_identity_and_the_copied_financing_row(monkeypatch):
     deficit = {"2019-03-31": -100.0, "2019-12-31": -300.0}
     got = minfin.non_oil_by_identity(deficit, {"2019-03-01": 400.0, "2019-12-01": 900.0}, {"2019-03-31": 50.0})
     assert got == {"2019-03-31": -550.0}
-    monkeypatch.setattr(minfin, "_processed_history", lambda i: {"D": deficit, "NF_TRANSFERS_YTD": {"2019-12-01": 900.0}}[i])
+    monkeypatch.setattr(minfin, "_processed_history",
+                        lambda i: {"D": deficit, "NF_TRANSFERS_YTD": {"2019-12-01": 900.0}, "STATE_TRANSFERS_RECEIVED_YTD": {}}[i])
     out, replaced = minfin._non_oil_with_identity([{"date": "2019-12-31", "value": 300.0}], "D", {"2019-12-31": 80.0})
     assert replaced == ["2019-12-31"] and out == [{"date": "2019-12-31", "value": -1280.0}]
 
@@ -153,7 +154,11 @@ def test_budget_series_now_cover_december_and_2019_2021():
     for y in range(2019, 2026):
         assert abs(rev_ytd[f"{y}-12-31"] - rev[f"{y}-12-31"]) < 1.0, y
     nod = _series("minfin", "STATE_NON_OIL_DEFICIT_YTD")
-    assert min(nod) == "2018-01-31" and len(nod) >= 95                            # NF transfers start in 2018
+    assert min(nod) <= "2013-01-31" and sum(d >= "2013" for d in nod) >= 155       # the budget's own transfers row from 2013
+    tr_budget, tr_nf = _series("minfin", "STATE_TRANSFERS_RECEIVED_YTD"), _series("minfin", "NF_TRANSFERS_YTD")
+    nf = {k[:7]: v for k, v in tr_nf.items()}
+    common = [k for k in tr_budget if k[:7] in nf]
+    assert len(common) > 90 and all(abs(tr_budget[k] - nf[k[:7]]) < 1.0 for k in common)
     d, tr, duty = (_series("minfin", i) for i in ("STATE_BUDGET_DEFICIT_YTD", "NF_TRANSFERS_YTD", "OIL_EXPORT_DUTY"))
     tr = {k[:7]: v for k, v in tr.items()}
     printed = [k for k in nod if k >= "2022-04" and k[5:7] != "12" and k in duty and k[:7] in tr]
@@ -167,12 +172,24 @@ def test_budget_series_now_cover_december_and_2019_2021():
 def test_yearly_archives_extend_the_state_budget_to_2013():
     rev, exp, dfc = (_series("minfin", i) for i in ("STATE_BUDGET_REVENUE_YTD", "STATE_BUDGET_EXPENDITURE_YTD", "STATE_BUDGET_DEFICIT_YTD"))
     lend, fa = _series("minfin", "STATE_NET_BUDGET_LENDING_YTD"), _series("minfin", "STATE_FINANCIAL_ASSETS_BALANCE_YTD")
-    assert min(rev) == "2013-01-31" and sum(d < "2019" for d in rev) >= 68
+    assert min(rev) <= "2013-01-31" and sum("2013" <= d < "2019" for d in rev) >= 68
     assert abs(rev["2017-06-30"] - 5010193.2) < 0.1                               # «на 1 июля 2017», табл 3
     early = [d for d in rev if d < "2019" and all(d in x for x in (exp, dfc, lend, fa))]
     assert len(early) >= 68 and all(abs(rev[d] - exp[d] - lend[d] - fa[d] - dfc[d]) < 1.5 for d in early)
     annual = _series("minfin", "STATE_BUDGET_REVENUE")
     assert all(abs(rev[f"{y}-12-31"] - annual[f"{y}-12-31"]) < 1.0 for y in (2016, 2017, 2018))
     q = _series("minfin", "STATE_BUDGET_REVENUE_Q")
-    assert min(q) == "2013-01-01" and abs(sum(q[f"2017-{m}-01"] for m in ("01", "04", "07", "10")) - annual["2017-12-31"]) < 1.0
+    assert min(q) == "2010-01-01" and min(annual) <= "2009-12-31"                  # printed quarters, annual columns
+    for y in (2010, 2011, 2012, 2017):
+        assert abs(sum(q[f"{y}-{m}-01"] for m in ("01", "04", "07", "10")) - annual[f"{y}-12-31"]) < 1.0, y
     assert min(_series("minfin", "GOV_WAGES_EXPENDITURE")) == "2013-01-31"
+
+
+def test_printed_quarter_columns_carry_the_year_across_merged_cells():
+    rows = [["Атауы", "2011ж. есеп/  отчет 2011г.", "2012ж. қантар есеп/  январь отчет ", "2011ж. есеп/ 2011г. отчет", None, None, None, "Наименование"],
+            [None, "жылдық / годовой", "қантар/ январь", "1 - тоқсан/ 1-й квартал", "2 - тоқсан/ 2-й квартал",
+             "3 - тоқсан/ 3-й квартал", "4 - тоқсан/ 4-й квартал1"],
+            ["I. КІРІСТЕР", 5370826.0, 346690.25, 1075486.29, 1531235.19, 1371503.9, 1392600.62, "I. ДОХОДЫ"]]
+    got = minfin.printed_quarters(rows, minfin._state_budget_row_matcher("I. ДОХОДЫ"))
+    assert got == {"2011-01-01": 1075486.29, "2011-04-01": 1531235.19, "2011-07-01": 1371503.9, "2011-10-01": 1392600.62}
+    assert abs(sum(got.values()) - 5370826.0) < 1.0

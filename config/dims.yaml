@@ -3204,3 +3204,449 @@ datasets:
     unit: "as named in item_name (WDI indicator; unit in parentheses)"
     category: international
     note: "item_code = WDI code (NY.GDP.MKTP.KD.ZG, SL.UEM.TOTL.ZS, SI.POV.GINI …), item_name = its English name with the unit. Only non-empty values; 1960 onward. Many WDI series for Kazakhstan are IMF/ILO/UN estimates, not national statistics — check the WDI source note before using one instead of a BNS series."
+
+  # ---------------------------------------------------------------- quasi-fiscal lending (added 2026-09-27)
+  # scripts/fetchers/nbk_dims.fetch_classified: open-data forms classified by text fields.
+  # «Other public sector» of formId=445 = lending by state development institutions (Baiterek
+  # group: DBK, Damu, KazAgro/ACC, Otbasy is a bank and sits in «Banking sector»), the direct
+  # measure of preferential credit outside the banks.
+  - id: LOANS_BY_CREDITOR_TYPE
+    name_ru: "Кредиты экономике по типу кредитора (банки, прочий госсектор, МФО, ипотечные организации), валюте и заёмщику"
+    name_en: "Loans to the economy by creditor type (banks, other public sector, microfinance, mortgage companies), currency and borrower"
+    agency: nbk
+    fetcher: nbk_classified
+    form_id: "445"
+    filters: {type: "mln. of KZT, end of period", period: "Month"}
+    item_fields:
+      - field: creditors
+        codes: {"Banking sector": BANKS, "other public sector": OPS, "Microfinance activities": MFO, "Mortgage companies": MORTGAGE}
+        names: {"Banking sector": "Банковский сектор", "other public sector": "Прочий государственный сектор (институты развития)", "Microfinance activities": "Микрофинансовые организации", "Mortgage companies": "Ипотечные организации"}
+      - field: currency
+        codes: {"National currency": KZT, "Foreign currency": FX}
+        names: {"National currency": "в тенге", "Foreign currency": "в иностранной валюте"}
+      - field: subject_type
+        codes: {"Business": BUS, "Individuals": HH}
+        names: {"Business": "юридическим лицам и ИП", "Individuals": "физическим лицам"}
+    min_items: 10
+    frequency: monthly
+    unit: "million KZT, end of period"
+    category: monetary
+    note: "NBK formId=445, stocks at report_date (the first day of the month after the reference month, like the scalar LOANS_* series). Quarterly 2022-01…2023-07, monthly from 2023-07. Item = CREDITOR.CURRENCY.BORROWER; OPS = «other public sector» (state development institutions); BANKS.KZT.BUS equals the scalar LOANS_BUSINESS_KZT. OPS.FX.BUS appears from 2025-06, OPS.FX.HH only in 2026-07."
+
+  - id: NATIONAL_FUND_DOMESTIC_OPERATIONS
+    name_ru: "Операции Национального фонда и финансовые инструменты казахстанских эмитентов в его портфеле"
+    name_en: "National Fund operations and its holdings of Kazakh issuers' instruments"
+    agency: nbk
+    fetcher: nbk_classified
+    form_id: "470"
+    filters: {type: "in conventional units", period: "Month"}
+    item_fields:
+      - field: data_type
+        codes: {"Debt instruments At face value": DEBT_FACE, "Debt instruments At fair value": DEBT_FAIR,
+                "Equity instruments At fair value": EQUITY_FAIR, "Equity instruments At purchase value": EQUITY_COST,
+                "National fund tenge account balance": KZT_ACCOUNT, "Other operations": OTHER_OPS,
+                "Sales volume, KZT": FX_SALES_KZT, "Sales volume, USD": FX_SALES_USD,
+                "Transfers from National fund": TRANSFERS}
+        names: {"Debt instruments At face value": "Долговые инструменты казахстанских эмитентов, по номиналу, млрд тенге, на конец периода",
+                "Debt instruments At fair value": "Долговые инструменты казахстанских эмитентов, по справедливой стоимости, млрд тенге, на конец периода",
+                "Equity instruments At fair value": "Долевые инструменты казахстанских эмитентов, по справедливой стоимости, млрд тенге, на конец периода",
+                "Equity instruments At purchase value": "Долевые инструменты казахстанских эмитентов, по стоимости приобретения, млрд тенге, на конец периода",
+                "National fund tenge account balance": "Остаток на тенговом счёте Нацфонда, млрд тенге, на конец периода",
+                "Other operations": "Прочие операции, млрд тенге, за период",
+                "Sales volume, KZT": "Продажа валюты из Нацфонда, млрд тенге, за период",
+                "Sales volume, USD": "Продажа валюты из Нацфонда, млн долл. США, за период",
+                "Transfers from National fund": "Трансферты из Нацфонда в бюджет, млрд тенге, за период"}
+    min_items: 8
+    frequency: monthly
+    unit: "billion KZT (FX_SALES_USD: million USD)"
+    category: fiscal
+    note: "NBK formId=470, monthly from 2024-02, dated report_date. DEBT_* = bonds of Kazakh issuers (quasi-public: Baiterek, KSF, Samruk-Kazyna and others) held by the National Fund -- the NF's financing of the quasi-public sector; EQUITY_* mainly the Samruk-Kazyna/KazMunayGas shares. TRANSFERS = the scalar NATIONAL_FUND_TRANSFERS. Units differ by item (see item_name)."
+
+  - id: NBK_MONETARY_SURVEY
+    name_ru: "Монетарный обзор Национального Банка РК (баланс НБК по статьям)"
+    name_en: "Monetary survey of the National Bank of Kazakhstan (NBK balance sheet by line)"
+    agency: nbk
+    fetcher: nbk_classified
+    form_id: "50"
+    filters: {type: "mln. tenge"}
+    item_fields:
+      - field: code
+        codes: {net_total_assets_ext: "1", net_assets_ir: "1.1", gross_assets_ir: "1.1.1", liab_ext: "1.1.2",
+                assets_ext_nf: "1.2", net_assets_other_ext: "1.3", net_total_assets_dom: "2", net_claims_gov: "2.1",
+                claims_gov: "2.1.1", liab_gov: "2.1.2", gross_assets_nf: "2.2", claims_banks: "2.3",
+                claims_nonbanks: "2.4", claims_others: "2.5", net_claims_other: "2.6", total_liabilities: "3",
+                liab_mbr: "3.0.a", liab_res_money: "3.1", liab_currency: "3.1.1", liab_deposits_banks: "3.1.2",
+                liab_transf_dep_nonbanks: "3.1.3", liab_curr_acc_nonfin: "3.1.4", liab_other_dep_nonbanks: "3.2",
+                liab_securities: "3.3", liab_credits: "3.4", liab_fin_derivatives: "3.5"}
+        names: {net_total_assets_ext: "Чистые внешние активы", net_assets_ir: "Чистые международные резервы",
+                gross_assets_ir: "Валовые международные резервы", liab_ext: "Внешние обязательства (со знаком минус)",
+                assets_ext_nf: "Внешние активы Национального фонда", net_assets_other_ext: "Прочие чистые внешние активы",
+                net_total_assets_dom: "Чистые внутренние активы", net_claims_gov: "Чистые требования к правительству",
+                claims_gov: "Требования к правительству", liab_gov: "Обязательства перед правительством (со знаком минус)",
+                gross_assets_nf: "Обязательства перед Национальным фондом (со знаком минус)",
+                claims_banks: "Требования к банкам (нетто, чистое изъятие ликвидности со знаком минус)",
+                claims_nonbanks: "Требования к небанковским финансовым организациям",
+                claims_others: "Требования к прочим секторам", net_claims_other: "Прочие статьи (нетто)",
+                total_liabilities: "Обязательства (итого)", liab_mbr: "Справочно: широкие резервные деньги (liab_mbr)",
+                liab_res_money: "Резервные деньги", liab_currency: "Наличные деньги в обращении",
+                liab_deposits_banks: "Депозиты банков", liab_transf_dep_nonbanks: "Переводные депозиты небанковских организаций",
+                liab_curr_acc_nonfin: "Текущие счета нефинансовых организаций", liab_other_dep_nonbanks: "Прочие депозиты небанковских организаций",
+                liab_securities: "Ценные бумаги НБК (ноты)", liab_credits: "Полученные займы", liab_fin_derivatives: "Производные финансовые инструменты"}
+    min_items: 20
+    sum_checks:
+      - {total: "1", parts: ["1.1", "1.2", "1.3"]}
+      - {total: "1.1", parts: ["1.1.1", "1.1.2"]}
+      - {total: "2.1", parts: ["2.1.1", "2.1.2"]}
+      - {total: "3", parts: ["1", "2"], tolerance: 5.0}
+      - {total: "3.1", parts: ["3.1.1", "3.1.2", "3.1.3", "3.1.4"]}
+    frequency: monthly
+    unit: "million KZT, end of period"
+    category: monetary
+    note: "NBK formId=50, stocks at report_date, monthly from 2023-01. The API gives a mnemonic `code` with each row_code; item = row_code, Russian names read from the mnemonics and checked by the identities 1 = 1.1+1.2+1.3, 1.1 = 1.1.1+1.1.2, 2.1 = 2.1.1+2.1.2, 3 = 1+2, 3.1 = Σ3.1.x (enforced; liabilities carry a minus sign). 2 is not the sum of 2.1…2.6 (gap 0.9–6.5 trn, an unpublished line). 2.4 = NBK claims on non-bank financial institutions (KSF, Problem Loans Fund, DBK bonds) -- the NBK's quasi-fiscal channel. 3.0.a (liab_mbr) is a memo item whose exact definition is not published."
+
+  # ---------------------------------------------------------------- Damu subsidised loans (added 2026-09-27)
+  # scripts/fetchers/damu.py: the project-level xlsx «Отчет по проектам субсидирования» (monthly).
+  - id: DAMU_SUBSIDISED_LOANS_ANNUAL
+    name_ru: "Фонд «Даму»: кредиты, одобренные к субсидированию ставки, по годам одобрения, регионам, программам, отраслям и размеру бизнеса"
+    name_en: "Damu Fund: loans approved for interest-rate subsidy by approval year, region, programme, ОКЭД section and business size"
+    agency: damu
+    fetcher: damu
+    frequency: annual
+    refresh_days: 7
+    unit: "billion KZT (COUNT.TOTAL: projects)"
+    category: fiscal
+    note: "Sum of project rows of Damu's subsidy report (all programmes since 2010: ДКБ-2020/2025, Нацпроект, портфельное субсидирование, ПСЭ, ЕКП, ЭПВ, Іскер аймақ), dated by approval year. Items TOTAL, COUNT.TOTAL, PROG.*, SEC.<ОКЭД letter>, SIZE.*. Region = region of the project. Loans APPROVED for subsidy, not disbursements; the latest edition is a snapshot (cancelled projects drop out, earlier years get revised). Region totals checked against the file's summary sheet."
+  - id: DAMU_SUBSIDISED_LOANS_MONTHLY
+    name_ru: "Фонд «Даму»: кредиты, одобренные к субсидированию ставки, по месяцам одобрения (с 2024 г.), регионам и программам"
+    name_en: "Damu Fund: loans approved for interest-rate subsidy by approval month (from 2024), region and programme"
+    agency: damu
+    fetcher: damu
+    frequency: monthly
+    refresh_days: 7
+    unit: "billion KZT (COUNT.TOTAL: projects)"
+    category: fiscal
+    note: "As DAMU_SUBSIDISED_LOANS_ANNUAL, for the projects whose approval month is given (all projects from 2024; none before). Items TOTAL, COUNT.TOTAL, PROG.*, SIZE.*. The current month is incomplete until the next edition."
+
+  # ---------------------------------------------------------------- expectations (added 2026-09-27)
+  # scripts/fetchers/nbk_expectations.py: the NBK household survey workbook (every question) and
+  # the analysts' macroeconomic survey chronology; enterprise expectations by sector reuse
+  # nbk_survey (formIds 387/364/363/366, 14 sectors) and nbk_classified (384, price factors).
+  - id: INFLATION_EXPECTATIONS_SURVEY
+    name_ru: "Опрос населения по инфляционным ожиданиям НБК: все вопросы (доли ответов) и медианные оценки"
+    name_en: "NBK household inflation expectations survey: every question (answer shares) and median estimates"
+    agency: nbk
+    fetcher: nbk_expectations
+    survey: households
+    page_url: "https://nationalbank.kz/ru/page/inflyacionnye-ozhidaniya"
+    file_title: "Результаты опроса по инфляционным ожиданиям"
+    refresh_days: 7
+    min_items: 150
+    frequency: monthly
+    unit: "percent of respondents (MEDIAN.*: percent)"
+    category: monetary
+    note: "Monthly from 2016-01 (FusionLab, ~1 500 adults). Item Q<N>.<answer> = share of respondents giving that answer (base in item_name); MEDIAN.PERCEIVED_12M / EXPECTED_12M / EXPECTED_5Y = the NBK's interval medians (EXPECTED_12M is the scalar INFLATION_EXPECTATIONS). Breaks: wording of Q1-Q6 changed 2020-01; 2022-01 not surveyed; Q6 answer buckets changed 2025-01 (second block = Q6.v2.*); from 2026-01 several questions quarterly or dropped. 2022-02: the printed Q6 shares are a copy of Q5's (source_issues inflation_expectations_2022_02)."
+
+  - id: PROFESSIONAL_FORECASTS_SURVEY
+    name_ru: "Макроэкономический опрос НБК (аналитики): медианы прогнозов по раундам"
+    name_en: "NBK macroeconomic survey of analysts: median forecasts by round"
+    agency: nbk
+    fetcher: nbk_expectations
+    survey: forecasters
+    page_url: "https://nationalbank.kz/ru/news/macrosurvey/rubrics/2669"
+    file_title: "ХРОНОЛОГИЯ РЕЗУЛЬТАТОВ ОПРОСА"
+    refresh_days: 7
+    min_items: 20
+    frequency: monthly
+    unit: "as named in item_name (%, USD per barrel, bn USD, KZT per USD)"
+    category: monetary
+    note: "Rounds from 2022-08 (8-10 a year, 12-15 respondents), dated by round. Item VARIABLE.YEAR = median forecast for that calendar year: CPI_DEC (Dec/Dec inflation), GDP (real growth), BASE_RATE (annual average), BRENT, USDKZT (annual average), EXPORTS / IMPORTS (goods and services, bn USD); NEUTRAL_RATE, LR_GDP (potential growth, 5-year horizon), CPI_5Y without a year. Irregular rounds: gaps between dates are not missing data."
+
+  - id: FINISHED_GOODS_PRICE_EXPECTATIONS_BY_SECTOR
+    name_ru: "Ожидаемое изменение цен на готовую продукцию в следующем квартале по отраслям (мониторинг предприятий НБК)"
+    name_en: "Expected change in finished-goods prices next quarter by sector (NBK enterprise survey)"
+    agency: nbk
+    fetcher: nbk_survey
+    form_id: "387"
+    indicator_code: "Price for finished goods expectations - Diffusion index"
+    min_items: 12
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50 = no change)"
+    category: monetary
+    note: "Quarterly from 2005-Q2, dated like the scalar FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX (item TOTAL = that series). Sectors as CAPACITY_UTILIZATION_BY_SECTOR."
+
+  - id: FINISHED_GOODS_PRICE_BY_SECTOR
+    name_ru: "Изменение цен на готовую продукцию за квартал по отраслям (мониторинг предприятий НБК)"
+    name_en: "Change in finished-goods prices over the quarter by sector (NBK enterprise survey)"
+    agency: nbk
+    fetcher: nbk_survey
+    form_id: "387"
+    indicator_code: "Price for finished goods - Diffusion index"
+    min_items: 12
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50 = no change)"
+    category: monetary
+    note: "Quarterly from 2005-Q2; item TOTAL = the scalar FINISHED_GOODS_PRICE_DIFFUSION_INDEX."
+
+  - id: RAW_MATERIALS_PRICE_EXPECTATIONS_BY_SECTOR
+    name_ru: "Ожидаемое изменение цен на сырьё и материалы по отраслям (мониторинг предприятий НБК)"
+    name_en: "Expected change in raw-material prices next quarter by sector (NBK enterprise survey)"
+    agency: nbk
+    fetcher: nbk_survey
+    form_id: "364"
+    indicator_code: "Price for raw materials expectations - Diffusion index"
+    min_items: 12
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50 = no change)"
+    category: monetary
+    note: "Quarterly from 2005-Q2; item TOTAL = the scalar RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX."
+
+  - id: IMPORT_PRICE_EXPECTATIONS_BY_SECTOR
+    name_ru: "Ожидаемое изменение цен на импортные товары по отраслям (мониторинг предприятий НБК)"
+    name_en: "Expected change in prices of imported goods next quarter by sector (NBK enterprise survey)"
+    agency: nbk
+    fetcher: nbk_survey
+    form_id: "363"
+    indicator_code: "Price expectations for imported goods - Diffusion index"
+    min_items: 12
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50 = no change)"
+    category: monetary
+    note: "Quarterly from 2016-Q2; item TOTAL = the scalar IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX."
+
+  - id: DEMAND_EXPECTATIONS_BY_SECTOR
+    name_ru: "Ожидаемое изменение спроса на продукцию по отраслям (мониторинг предприятий НБК)"
+    name_en: "Expected change in demand next quarter by sector (NBK enterprise survey)"
+    agency: nbk
+    fetcher: nbk_survey
+    form_id: "366"
+    indicator_code: "Demand expectations - Diffusion index"
+    min_items: 12
+    frequency: quarterly
+    unit: "diffusion index (0-100, 50 = no change)"
+    category: monetary
+    note: "Quarterly from 2005-Q2; item TOTAL = the scalar DEMAND_EXPECTATIONS_DIFFUSION_INDEX."
+
+  - id: PRICE_FACTORS_BY_SECTOR
+    name_ru: "Факторы изменения цен на готовую продукцию по отраслям: доля предприятий, отметивших фактор (мониторинг НБК)"
+    name_en: "Factors behind finished-goods price changes by sector: share of enterprises citing each factor (NBK enterprise survey)"
+    agency: nbk
+    fetcher: nbk_classified
+    form_id: "384"
+    filters: {type: "share of respondents in %", period: "quarter"}
+    item_fields:
+      - field: indicator_code
+        codes: {"Demand": DEMAND, "Price of raw materials": RAW_MATERIALS, "Work force expenses": WAGES, "Competitor's price": COMPETITORS,
+                "Exchange rate": FX, "Fuel price": FUEL, "Productivity": PRODUCTIVITY, "Taxes/fees": TAXES, "Other factors": OTHER}
+        names: {"Demand": "Спрос", "Price of raw materials": "Цены на сырьё и материалы", "Work force expenses": "Расходы на оплату труда",
+                "Competitor's price": "Цены конкурентов", "Exchange rate": "Обменный курс", "Fuel price": "Цены на топливо",
+                "Productivity": "Производительность", "Taxes/fees": "Налоги и сборы", "Other factors": "Прочие факторы"}
+      - field: industry
+        codes: survey_sectors
+    min_items: 100
+    frequency: quarterly
+    unit: "percent of respondents"
+    category: monetary
+    note: "NBK formId=384, quarterly from 2020-Q2. Item FACTOR.SECTOR (sectors as CAPACITY_UTILIZATION_BY_SECTOR: TOTAL, ОКЭД letters, NRS). Several factors per respondent, so shares do not sum to 100."
+
+  # ---------------------------------------------------------------- development institutions' balance sheets (added 2026-09-27)
+  # scripts/fetchers/kase_ifrs.py: every IFRS statement the issuers file on KASE.
+  - id: DEVELOPMENT_INSTITUTIONS_BALANCE_SHEETS
+    name_ru: "Балансы институтов развития по МСФО (Байтерек, Банк развития Казахстана, Казахстанский фонд устойчивости, Аграрная кредитная корпорация)"
+    name_en: "IFRS balance sheets of state development institutions (Baiterek, Development Bank of Kazakhstan, Kazakhstan Sustainability Fund, Agrarian Credit Corporation)"
+    agency: kase
+    fetcher: kase_ifrs
+    issuers:
+      BTRK: "Холдинг «Байтерек» (консолидированно)"
+      BRKZ: "Банк развития Казахстана (консолидированно)"
+      KFUS: "Казахстанский фонд устойчивости"
+      AGKK: "Аграрная кредитная корпорация"
+    refresh_days: 7
+    frequency: quarterly
+    unit: "billion KZT, end of period"
+    category: fiscal
+    note: "Balance-sheet lines of the quarterly and annual IFRS statements on KASE, dated at the balance-sheet date (quarter end); the latest statement wins when two give the same date (restatements). Item ISSUER.LINE: TOTAL_ASSETS, TOTAL_LIABILITIES, EQUITY (only columns with assets = liabilities + equity within 0.5% are kept), LOANS_CUSTOMERS, LOANS_BANKS, FIN_LEASE, DEBT_SECURITIES, GOV_LOANS, PARENT_LOANS, GOV_SUBSIDIES (deferred income from below-market state funding), CUSTOMER_FUNDS. Coverage: BRKZ from 2013-12, AGKK from 2013-12 (separate statements to 2021, consolidated from 2022 -- a break), BTRK from 2018-12, KFUS from 2020-12; quarters the issuer did not file in xlsx are missing (BTRK has no June statement 2020-2024). BTRK consolidates BRKZ, AGKK (via KazAgro since 2021), Damu and Otbasy bank, so do not add issuers."
+
+  # ---------------------------------------------------------------- import prices by HS section (added 2026-09-27)
+  # Taldau 19073959 (all partners) / 19073960 (EAEU) / 19073961 (outside the EAEU), period 4
+  # (month); dimension 1 = ТН ВЭД, expanded one level into its 21 sections (term ids below).
+  - id: IMPORT_PRICE_INDEX_BY_HS_SECTION
+    name_ru: "Индексы цен импорта по разделам ТН ВЭД, отчётный месяц к декабрю прошлого года"
+    name_en: "Import price indices by HS section, month vs December of the previous year"
+    agency: bns
+    fetcher: taldau
+    index_id: "19073959"
+    period_id: "4"
+    measure_id: "0"
+    dic_ids: "67,146,846,848,4020"
+    terms: "741880,741897,2695687,2695731,19072559"
+    expand_pos: 1
+    expand_term: "741897"
+    term_codes: &hs_section_terms {808743: I, 808744: II, 808745: III, 808746: IV, 808747: V, 808748: VI, 808749: VII, 808750: VIII, 808751: IX, 808752: X, 808753: XI, 808754: XII, 808755: XIII, 808756: XIV, 808757: XV, 808758: XVI, 808759: XVII, 808760: XVIII, 808761: XIX, 808762: XX, 808763: XXI}
+    sum_check: false
+    min_items: 18
+    frequency: monthly
+    unit: "index, December of the previous year = 100"
+    category: prices
+    note: "Taldau 19073959, monthly from 2020-01. Items = HS sections I-XXI (roman numerals as dictionaries/hs_sections.csv; XXI from 2024) and TOTAL. Month-on-month = I(t)/I(t-1) within a year, January = I(Jan). Laspeyres, CIF, customs duties excluded, in tenge (BNS methodology). Consumer goods: IV (prepared food), XI (textiles, clothing), XII (footwear), XVI (appliances), XVII (cars), VI (pharmaceuticals, with chemicals)."
+
+  - id: IMPORT_PRICE_INDEX_EAEU_BY_HS_SECTION
+    name_ru: "Индексы цен импорта из стран ЕАЭС по разделам ТН ВЭД, к декабрю прошлого года"
+    name_en: "Import price indices from EAEU countries by HS section, vs December of the previous year"
+    agency: bns
+    fetcher: taldau
+    index_id: "19073960"
+    period_id: "4"
+    measure_id: "0"
+    dic_ids: "67,146,846,848,4020"
+    terms: "741880,741897,2695687,2695731,19072561"
+    expand_pos: 1
+    expand_term: "741897"
+    term_codes: *hs_section_terms
+    sum_check: false
+    min_items: 18
+    frequency: monthly
+    unit: "index, December of the previous year = 100"
+    category: prices
+    note: "Taldau 19073960 (partner group «Страны ЕАЭС», i.e. mostly Russia), monthly from 2020-01; as IMPORT_PRICE_INDEX_BY_HS_SECTION."
+
+  - id: IMPORT_PRICE_INDEX_NON_EAEU_BY_HS_SECTION
+    name_ru: "Индексы цен импорта из стран вне ЕАЭС по разделам ТН ВЭД, к декабрю прошлого года"
+    name_en: "Import price indices from outside the EAEU by HS section, vs December of the previous year"
+    agency: bns
+    fetcher: taldau
+    index_id: "19073961"
+    period_id: "4"
+    measure_id: "0"
+    dic_ids: "67,146,846,848,4020"
+    terms: "741880,741897,2695687,2695731,19073953"
+    expand_pos: 1
+    expand_term: "741897"
+    term_codes: *hs_section_terms
+    sum_check: false
+    min_items: 18
+    frequency: monthly
+    unit: "index, December of the previous year = 100"
+    category: prices
+    note: "Taldau 19073961 (partner group «Все страны мира кроме ЕАЭС», mostly China and the EU), monthly from 2020-01; as IMPORT_PRICE_INDEX_BY_HS_SECTION."
+
+  - id: IMPORT_PRICE_INDEX_YOY_BY_HS_SECTION
+    name_ru: "Индексы цен импорта по разделам ТН ВЭД, к соответствующему месяцу прошлого года (2016-2019)"
+    name_en: "Import price indices by HS section, year on year (2016-2019)"
+    agency: bns
+    fetcher: taldau
+    index_id: "19073959"
+    period_id: "4"
+    measure_id: "0"
+    dic_ids: "67,146,848,4020"
+    terms: "741880,741897,2695732,19072559"
+    expand_pos: 1
+    expand_term: "741897"
+    term_codes: *hs_section_terms
+    sum_check: false
+    min_items: 18
+    frequency: monthly
+    unit: "index, same month of the previous year = 100"
+    category: prices
+    note: "Taldau 19073959, second segment (no import/export dimension): month vs the same month of the previous year, 2016-01 to 2019-12 only -- the bridge to IMPORT_PRICE_INDEX_BY_HS_SECTION (from 2020, December-based). Methodology amended in July 2017 (prices converted to tenge); check the level of 2016-2017 before chaining."
+
+  # ---------------------------------------------------------------- import-weighted effective exchange rate (added 2026-09-27)
+  # fetchers/nbk_fx.py (rates), fetchers/comtrade.py (weights), fetchers/neer_import.py (index).
+  - id: EXCHANGE_RATES_OFFICIAL_MONTHLY
+    name_ru: "Официальные курсы тенге к валютам торговых партнёров, среднее за месяц"
+    name_en: "Official KZT exchange rates against partner currencies, monthly average"
+    agency: nbk
+    fetcher: nbk_fx
+    frequency: monthly
+    unit: "KZT per one unit of the currency"
+    category: monetary
+    note: "Weekday mean of the NBK official rate, 18 currencies (USD, EUR, CNY, RUB, TRY, KRW, UZS, KGS, BYN, JPY, GBP, INR, CHF, CZK, PLN, AED, TJS, AZN) from 2010-01. UZS and BYN from 2014-02 (printed below 1 KZT per unit before, too coarse to use); BYN restated in post-2016 roubles (÷10 000 redenomination applied to earlier quotes). Item USD, EUR, CNY and RUB are the monthly means of the scalar daily EXCHANGE_RATE* series."
+
+  - id: IMPORTS_BY_PARTNER_COMTRADE
+    name_ru: "Импорт Казахстана по странам-партнёрам (UN Comtrade): потребительские товары по BEC и все товары"
+    name_en: "Kazakhstan's imports by partner country (UN Comtrade): consumer goods by BEC and all goods"
+    agency: comtrade
+    fetcher: comtrade
+    first_year: 2010
+    refresh_days: 30
+    frequency: annual
+    unit: "million USD, CIF"
+    category: trade
+    geography: "Kazakhstan (reporter) by partner country"
+    note: "Item BASKET.M49 partner code (0 = World). CONSUMER = BEC rev.4 112+122+522+61+62+63 (household food and drink, passenger cars, durable/semi-durable/non-durable consumer goods); TOTAL = all goods (HS TOTAL). Reported by Kazakhstan: EAEU partners by survey, China under-recorded against the mirror, partner attribution shifts in 2020-2022. The last three years are re-read on each refresh."
+
+  # ---------------------------------------------------------------- monthly wage-bill proxies and regional budgets (added 2026-09-27)
+  - id: SOCIAL_CONTRIBUTIONS_BY_REGION
+    name_ru: "Социальные отчисления в ГФСС и число участников по регионам, помесячно (форма 5-СО)"
+    name_en: "Social contributions to the State Social Insurance Fund and insured participants by region, monthly (form 5-СО)"
+    agency: gfss
+    fetcher: gfss
+    refresh_days: 7
+    frequency: monthly
+    unit: "million KZT (PARTICIPANTS: thousand persons)"
+    category: labour
+    note: "ГФСС form 5-СО from 2016-01, the month of receipt. CONTRIBUTIONS / PARTICIPANTS = contributions per insured person, a monthly proxy of the average formal wage (rate 3.5% of income between 1 and 7 minimum wages to 2024, 5% from 2025 -- a level break in 2025-01); PARTICIPANTS = persons with contributions paid in the month, a formal-employment proxy (includes the self-employed paying the single payment). Regions follow the 2022 split (ABY, ZHT, ULT from 2022 on). *_UNALLOCATED = not attributed to a region (in the national total)."
+
+  - id: PENSION_FUND_FLOWS_YTD
+    name_ru: "Поступления и выбытия пенсионных активов ЕНПФ с начала года: взносы (ОПВ, ОППВ, ДПВ), инвестдоход, выплаты"
+    name_en: "UAPF pension assets receipts and disposals, year to date: contributions (mandatory, professional, voluntary), investment income, payments"
+    agency: nbk
+    fetcher: nbk_classified
+    form_id: "25"
+    filters: {type: "thsd. tenge", period: "Since the beginning of the year"}
+    scale: 0.001
+    item_fields:
+      - field: class_type
+        codes: {"Receipts": IN, "Disposals": OUT}
+        names: {"Receipts": "Поступления", "Disposals": "Выбытия"}
+      - field: class_subtype1
+        codes: {"Pension contributions": CONTRIB, "Accrued investment income": INV_INCOME, "Other receipts": OTHER,
+                "Penalties and fines": PENALTIES, "Commission fee due to the pension fund": FEE, "Other expenses": OTHER_EXP,
+                "Pension payments": PAYMENTS}
+        names: {"Pension contributions": "пенсионные взносы", "Accrued investment income": "начисленный инвестиционный доход",
+                "Other receipts": "прочие поступления", "Penalties and fines": "пени и штрафы", "Commission fee due to the pension fund": "комиссия ЕНПФ",
+                "Other expenses": "прочие выбытия", "Pension payments": "пенсионные выплаты"}
+      - field: class_subtype2
+        codes: {"Compulsory": OPV, "Compulsory-professional": OPPV, "Voluntary": DPV, "": ALL,
+                "From investment income/loss on placed pension assets": FROM_INCOME, "From pension assets": FROM_ASSETS,
+                "Transfers to insurance companies": TO_INSURERS, "For improper management of pension assets": MGMT,
+                "For late transfer of compulsory pension contributions": LATE_OPV,
+                "For late transfer of compulsory professional pension contributions": LATE_OPPV,
+                "For late transfers of pension savings": LATE_SAVINGS}
+        names: {"Compulsory": "обязательные (ОПВ)", "Compulsory-professional": "обязательные профессиональные (ОППВ)",
+                "Voluntary": "добровольные (ДПВ)", "": "всего"}
+    min_items: 12
+    frequency: monthly
+    unit: "million KZT, year to date"
+    category: labour
+    note: "NBK formId=25, from 2023-01 (the API keeps no earlier dates), year to date, dated report_date = the first day of the month after the period (the 2025-01-01 point is the 2024 total). IN.CONTRIB.OPV = mandatory 10% employee contributions, a monthly wage-bill proxy (difference consecutive points within a year for the month). The employer contribution (ОПВР, 1.5% 2024 → 2.5% 2025 → 3.5% 2026) is not a separate line of this form."
+
+  # Derived from EXCHANGE_RATES_OFFICIAL_MONTHLY and IMPORTS_BY_PARTNER_COMTRADE (run after both).
+  - id: NEER_IMPORT_WEIGHTED
+    name_ru: "Номинальный эффективный курс тенге с весами потребительского и всего импорта (2020 = 100, рост = укрепление)"
+    name_en: "Nominal effective exchange rate of the tenge, consumer-import and total-import weights (2020 = 100, up = appreciation)"
+    agency: derived
+    fetcher: neer_import
+    frequency: monthly
+    unit: "index, 2020 = 100"
+    category: monetary
+    note: "Geometric chain of monthly changes of 18 NBK official rates, weights = previous year's import shares by partner currency (UN Comtrade reported by Kazakhstan; euro-area members from euro adoption; Ecuador, Panama, El Salvador, Hong Kong to USD); partners without an NBK rate dropped, weights renormalised among currencies quoted in both months. From 2011-01. NEER_CONSUMER: BEC 112, 122, 522, 61, 62, 63 -- the pass-through-relevant basket (Russia ~31%, China ~24% of 2024 consumer imports); NEER_TOTAL: all goods. Coverage and weights by year in NEER_IMPORT_WEIGHTS. Differs from the NBK NEER (trade weights of exports and imports, IMF-style)."
+  - id: NEER_IMPORT_WEIGHTS
+    name_ru: "Веса валют в NEER по структуре импорта предыдущего года, %"
+    name_en: "Currency weights of the import-weighted NEER (previous year's import shares), percent"
+    agency: derived
+    fetcher: neer_import
+    output: weights
+    frequency: annual
+    unit: "percent"
+    category: monetary
+    note: "Dated the year the weights are used in NEER_IMPORT_WEIGHTED (shares of the previous year's imports). Items BASKET.CURRENCY and COVERAGE_BASKET = share of the basket's imports from partners with a currency in the index."
+
+  - id: REGIONAL_BUDGETS_YTD
+    name_ru: "Исполнение местных бюджетов по регионам с начала года: доходы (ИПН, соцналог, трансферты), расходы по функциям, субвенции и изъятия"
+    name_en: "Local budget execution by region, year to date: revenues (PIT, social tax, transfers), spending by function, subventions and withdrawals"
+    agency: minfin
+    fetcher: minfin_regions
+    frequency: monthly
+    unit: "million KZT, January to the month"
+    category: fiscal
+    note: "Minfin Statistical Bulletin tables 12 (all local budgets = national), 12.1-12.20 (one per region, matched by the sheet title) and 18 (17 before 2021-09; general transfers), every edition since 2013-01 (2013-2018 from the yearly archives, via scripts/backfill_minfin_bulletins.py --dims). Dated the first day of the period's last month; year to date (difference within a year for the month). Items: REV, REV.TAX, REV.CIT, REV.PIT, REV.SOCIAL_TAX, REV.EXCISE, REV.NONTAX, REV.CAPITAL, REV.TRANSFERS, EXP, EXP.01-EXP.15 (functional groups; 04 education, 05 health, 06 social assistance, 07 housing), NET_LENDING, FIN_ASSETS, BALANCE, SUBVENTIONS, WITHDRAWALS. Regions: 16 to mid-2018 (South Kazakhstan), then 17 (Turkestan and Shymkent), 20 from the August 2024 edition (Abai, Zhetisu, Ulytau; the 2022-09…2024-07 editions omit them though the parent regions already exclude them -- source_issues). Checked: the regions add up to table 12 within 0.5% in every edition with all region tables, except the source errors of 2020-02 (Shymkent) and 2021-02/03 (table 12) in source_issues. Targeted transfers received = REV.TRANSFERS - SUBVENTIONS. REV.PIT and REV.SOCIAL_TAX by region = a monthly regional wage-bill proxy. National rows start in 2014-12 (earlier table 12 has no period column); the regions are there from 2013-01. Missing editions: 2020-04, 2025-12, 2026-04."

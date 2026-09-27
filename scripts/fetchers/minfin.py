@@ -845,11 +845,12 @@ def _ru_month(name: str | None) -> int | None:
 
 
 # The period a bulletin covers, as a header cell names it: «январь-июль отчет 2026 г.» (2021
-# onward) or «2019 г. январь-ноябрь отчет» (the 2019-2021 табл 3). BULLETIN_PERIOD_RE knew only
+# onward), «2019 г. январь-ноябрь отчет» (the 2019-2021 табл 3) or «январь-октябрь 2013г. отчет». BULLETIN_PERIOD_RE knew only
 # the first form, so the older tables and the December editions («на 1 января», whose табл 3
 # has annual columns only) were skipped: added 2026-09-27.
 _PERIOD_ANY_RE = re.compile(r"январ\w*(?:\s*-\s*([а-я]+))?\s+отчет\s+(\d{4})"
-                            r"|(\d{4})\s*г\.?\s*январ\w*(?:\s*-\s*([а-я]+))?\s+отчет", re.IGNORECASE)
+                            r"|(\d{4})\s*г\.?\s*январ\w*(?:\s*-\s*([а-я]+))?\s+отчет"
+                            r"|январ\w*(?:\s*-\s*([а-я]+))?\s+(\d{4})\s*г\.?\s*отчет", re.IGNORECASE)   # 2013-2014
 
 
 def _period_of(cell) -> tuple[int, int] | None:
@@ -859,8 +860,8 @@ def _period_of(cell) -> tuple[int, int] | None:
     m = _PERIOD_ANY_RE.search(" ".join(cell.split()))
     if not m:
         return None
-    month = _ru_month(m.group(1) or m.group(4) or "январь")
-    return (int(m.group(2) or m.group(3)), month) if month else None
+    month = _ru_month(m.group(1) or m.group(4) or m.group(5) or "январь")
+    return (int(m.group(2) or m.group(3) or m.group(6)), month) if month else None
 
 
 def _find_period(rows: list[list]) -> tuple[int, int, int] | None:
@@ -871,6 +872,12 @@ def _find_period(rows: list[list]) -> tuple[int, int, int] | None:
             if p:
                 return p[0], p[1], j
     return None
+
+
+def _sheet_key(name: str) -> str:
+    """«таб 4», «табл4» and «табл 4»; «табл 8(доходы)» and «табл 8 (дох)» -- the 2013-2014 spellings."""
+    s = re.sub(r"\s+", "", name.strip().lower()).replace("табл", "таб")
+    return s.replace("(доходы)", "(дох)").replace("(расходы)", "(расх)")
 
 
 def _row_label(row) -> str:
@@ -928,7 +935,8 @@ def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str, value_c
         content = _download(file_path)
         kind, wb = _open_workbook(content, file_path)
         sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
-        target_sheet = next((s for s in sheet_names if s.strip() == sheet_name), None)
+        target_sheet = next((s for s in sheet_names if s.strip() == sheet_name), None) or \
+            next((s for s in sheet_names if _sheet_key(s) == _sheet_key(sheet_name)), None)
         if target_sheet is None:
             skipped.append(doc["id"])
             continue
@@ -956,6 +964,8 @@ def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str, value_c
         else:
             col = value_col
         value = target_row[col] if col is not None and -len(target_row) <= col < len(target_row) else None
+        if isinstance(value, str) and re.fullmatch(r"\s*-?[\d\s\xa0]+([.,]\d+)?\s*", value):
+            value = float(re.sub(r"[\s\xa0]", "", value).replace(",", "."))      # «  677 000» (2017 editions)
         if end_month is None or value in (None, "") or not isinstance(value, (int, float)):
             skipped.append(doc["id"])
             continue
@@ -3155,9 +3165,11 @@ def fetch_oil_export_duty() -> tuple[list[dict], dict]:
     year-to-date cumulative."""
     return _fetch_bulletin_row(
         BULLETIN_STATE_REVENUE_SHEET_NAME,
-        lambda r: len(r) > 4 and isinstance(r[4], str) and r[4].strip() == OIL_EXPORT_DUTY_KZ_LABEL,
+        # the Russian label as well: the 2013-2014 editions spell Kazakh in a legacy font encoding
+        [lambda r: len(r) > 4 and isinstance(r[4], str) and r[4].strip() == OIL_EXPORT_DUTY_KZ_LABEL,
+         _label_matcher("Вывозные таможенные пошлины на сырую нефть")],
         "OIL_EXPORT_DUTY",
-        value_col=5,
+        value_col="period",
     )
 
 
@@ -3166,9 +3178,11 @@ def fetch_oil_products_export_duty() -> tuple[list[dict], dict]:
     KZT, year-to-date cumulative."""
     return _fetch_bulletin_row(
         BULLETIN_STATE_REVENUE_SHEET_NAME,
-        lambda r: len(r) > 4 and isinstance(r[4], str) and r[4].strip() == OIL_PRODUCTS_EXPORT_DUTY_KZ_LABEL,
+        # the Russian label as well: the 2013-2014 editions spell Kazakh in a legacy font encoding
+        [lambda r: len(r) > 4 and isinstance(r[4], str) and r[4].strip() == OIL_PRODUCTS_EXPORT_DUTY_KZ_LABEL,
+         _label_matcher("Вывозные таможенные пошлины на товары, выработанные из нефти")],
         "OIL_PRODUCTS_EXPORT_DUTY",
-        value_col=5,
+        value_col="period",
     )
 
 
@@ -3216,6 +3230,7 @@ STATE_BUDGET_LINES = {
     "financial_assets": "IV. САЛЬДО ПО ОПЕРАЦИЯМ С ФИНАНСОВЫМИ АКТИВАМИ",
     "deficit": "V. ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА",
     "non_oil_deficit": "VI. НЕНЕФТЯНОЙ ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА",
+    "transfers": "Поступления трансфертов",
 }
 STATE_BUDGET_IDENTITY_TOLERANCE = 1.0  # million KZT
 
@@ -3224,8 +3239,8 @@ def _state_budget_row_matcher(label: str):
     """The row whose Russian label starts with `label`, in whichever column the edition puts
     it: column G (6) since mid-2021, column K (10) in the 2019-2021 layout that also carried
     quarterly columns."""
-    def matcher(row) -> bool:
-        return any(isinstance(c, str) and c.strip().startswith(label) for c in row)
+    def matcher(row) -> bool:     # spacing normalised: «Поступления  трансфертов» before 2021
+        return any(isinstance(c, str) and " ".join(c.split()).startswith(label) for c in row)
     return matcher
 
 
@@ -3412,7 +3427,11 @@ def _non_oil_with_identity(records: list[dict], deficit_id: str, duty: dict[str,
     equal to minus the deficit is BNS/Minfin's copy of the financing row (the 2019-2021 columns of
     табл 3, config/source_issues.yaml non_oil_deficit_2021) and is replaced."""
     deficit = _processed_history(deficit_id)
-    derived = non_oil_by_identity(deficit, _processed_history("NF_TRANSFERS_YTD"), duty)
+    # the state budget's own transfers row (табл 3, from 2013) where read, the National Fund's
+    # report otherwise; the two are equal in every month both exist (2018-2026)
+    transfers = {d[:7]: v for d, v in _processed_history("NF_TRANSFERS_YTD").items()}
+    transfers.update({d[:7]: v for d, v in _processed_history("STATE_TRANSFERS_RECEIVED_YTD").items()})
+    derived = non_oil_by_identity(deficit, {f"{m}-01": v for m, v in transfers.items()}, duty)
     out, replaced = {}, []
     for r in records:
         if r["date"] in deficit and abs(r["value"] + deficit[r["date"]]) < 1.0 and deficit[r["date"]] != 0:
@@ -3440,6 +3459,17 @@ def fetch_state_non_oil_deficit_ytd() -> tuple[list[dict], dict]:
     if replaced:
         manifest.setdefault("warnings", []).append(f"printed values equal to minus the deficit replaced by the identity: {replaced}")
     return records, manifest
+
+
+def fetch_state_transfers_received_ytd() -> tuple[list[dict], dict]:
+    """Transfers received by the state budget, million KZT, year-to-date: at the level of the
+    state budget (republican + local, intra-budget transfers netted) the transfers from the
+    National Fund -- the guaranteed and the targeted ones."""
+    return _fetch_state_budget_ytd(
+        "transfers", "STATE_TRANSFERS_RECEIVED_YTD",
+        _STATE_BUDGET_YTD_COMMON +
+        "Row «Поступления трансфертов» of табл 3 (under I. ДОХОДЫ): 2 320 000 mln KZT for January-July "
+        "2026. At the state-budget level these are the National Fund's transfers.")
 
 
 def fetch_state_net_budget_lending_ytd() -> tuple[list[dict], dict]:
@@ -4200,14 +4230,68 @@ def state_budget_quarters(ytd: dict[str, float], annual: dict[str, float]) -> di
     return out
 
 
+STATE_BUDGET_QUARTER_LINES = {"STATE_BUDGET_REVENUE_Q": "revenue", "STATE_BUDGET_EXPENDITURE_Q": "expenditure",
+                              "STATE_BUDGET_DEFICIT_Q": "deficit"}
+_QUARTER_SUB_RE = re.compile(r"([1-4])\s*-?\s*(?:й\s*)?квартал|([1-4])\s*-\s*тоқсан", re.IGNORECASE)
+
+
+def printed_quarters(rows: list[list], row_matcher) -> dict[str, float]:
+    """{quarter start: value} from the explicit quarterly columns of табл 3: a «2011ж. есеп/ 2011г.
+    отчет» header over four «N-й квартал» sub-headers (the header text sits in the first of its
+    merged cells only, so it is carried to the right). Printed by the January editions for the
+    previous year (2011 in January 2012, 2012 in January 2013) and in the 2019-2021 layout."""
+    target = next((r for r in rows if r and row_matcher(r)), None)
+    if target is None:
+        return {}
+    for i, row in enumerate(rows[:12]):
+        sub = rows[i + 1] if i + 1 < len(rows) else []
+        out, year = {}, None
+        for j in range(max(len(row), len(sub))):
+            head = row[j] if j < len(row) else None
+            if isinstance(head, str) and head.strip():
+                m = re.search(r"(\d{4})", head)
+                year = int(m.group(1)) if m and re.search(r"есеп|отчет", head.lower()) else None
+            q = _QUARTER_SUB_RE.search(str(sub[j])) if j < len(sub) and isinstance(sub[j], str) else None
+            v = target[j] if j < len(target) else None
+            if isinstance(v, str) and re.fullmatch(r"\s*-?[\d\s\xa0]+([.,]\d+)?\s*", v):
+                v = float(re.sub(r"[\s\xa0]", "", v).replace(",", "."))
+            if year and q and isinstance(v, (int, float)) and not isinstance(v, bool):
+                n = int(q.group(1) or q.group(2))
+                out.setdefault(f"{year:04d}-{3 * n - 2:02d}-01", float(v))
+        if out:
+            return out
+    return {}
+
+
+def _archive_quarters(indicator_id: str) -> dict[str, float]:
+    """The printed quarters of every edition the archive run reads (the yearly 2011-2018 volumes
+    included), newest edition first."""
+    matcher = _state_budget_row_matcher(STATE_BUDGET_LINES[STATE_BUDGET_QUARTER_LINES[indicator_id]])
+    out: dict[str, float] = {}
+    for doc in _bulletin_documents():
+        path = doc["full_text"][0]["document"]
+        kind, wb = _open_workbook(_download(path), path)
+        names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
+        sheet = next((n for n in names if _sheet_key(n) == _sheet_key(BULLETIN_STATE_BUDGET_SHEET_NAME)), None)
+        if sheet:
+            for d, v in printed_quarters(list(_iter_rows(kind, wb, sheet)), matcher).items():
+                out.setdefault(d, v)
+    return out
+
+
 def _fetch_state_budget_quarterly(indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    """Quarters from the January-to-month and annual figures; before 2013 (and wherever those
+    are missing) the quarters the editions print themselves (archive runs), kept in the
+    processed history."""
     ytd_id, annual_id = STATE_BUDGET_QUARTERLY[indicator_id]
     quarters = state_budget_quarters(_processed_history(ytd_id), _processed_history(annual_id))
     if not quarters:
         raise validation.StructuralChangeError(
             f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}\nWHAT CHANGED: no quarter could be formed "
             f"from {ytd_id} and {annual_id}\nACTION REQUIRED: check those two series first")
-    return ([{"date": d, "value": v} for d, v in sorted(quarters.items())],
+    printed = _archive_quarters(indicator_id) if BULLETIN_ARCHIVE else {}
+    merged = {**_processed_history(indicator_id), **printed, **quarters}
+    return ([{"date": d, "value": v} for d, v in sorted(merged.items())],
             {"frequency": "quarterly", "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
              "dataset_id": f"derived:{ytd_id}+{annual_id}", "note": note})
 

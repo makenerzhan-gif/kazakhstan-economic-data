@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=366",
+  "dataset_id": "formId=366,indicator_code=Demand expectations - Diffusion index",
+  "indicator_id": "DEMAND_EXPECTATIONS_BY_SECTOR",
+  "indicator_name": "Expected change in demand next quarter by sector (NBK enterprise survey)",
+  "description": "Ожидаемое изменение спроса на продукцию по отраслям (мониторинг предприятий НБК)",
+  "frequency": "quarterly",
+  "unit": "diffusion index (0-100, 50 = no change)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Quarterly from 2005-Q2; item TOTAL = the scalar DEMAND_EXPECTATIONS_DIFFUSION_INDEX.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2005-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
