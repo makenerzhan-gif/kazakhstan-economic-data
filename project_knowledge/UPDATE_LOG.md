@@ -694,3 +694,36 @@ retail avg-YoY column of February 2026 (cereals 86.1 against 107.8 y/y).
 
 Tests: `tests/test_bns_cpi.py` (35). Full suite: 530 passed. macro_dims_long.csv.gz grows from
 3.1 to 5.3 MB.
+
+## 2026-09-27 — IMF BOP, IIP and GFS, and every WDI series for Kazakhstan
+
+**What.** Twelve item-level datasets (config/dims.yaml):
+
+| Dataset | Source (IMF SDMX 3.0 / World Bank) | Series | Period |
+|---|---|---|---|
+| `IMF_BOP_QUARTERLY` / `_ANNUAL` | IMF.STA/BOP, BPM6, million USD | 853 / 894 | 1995Q1 – 2026Q1 / 1995 – 2025 |
+| `IMF_IIP_QUARTERLY` / `_ANNUAL` | IMF.STA/IIP, positions, million USD | 464 / 462 | 1998Q1 – 2026Q1 / 1997 – 2025 |
+| `IMF_GFS_OPERATIONS_KZT` / `_PCT_GDP` | GFS_SOO: revenue, expense, net lending, financing, by subsector | ~1 540 | 1992 – 2023 |
+| `IMF_GFS_COFOG_KZT` / `_PCT_GDP` | GFS_COFOG: expenditure by function and subsector | 566 | 1997 – 2023 |
+| `IMF_GFS_BALANCE_SHEET_KZT` / `_PCT_GDP` | GFS_BS: financial assets and liabilities by instrument | ~440 | 1992 – 2023 |
+| `IMF_QGFS_KZT` | QGFS: cash sources and uses, S13 and S1311B, billion KZT | 96 | 1999Q1 – 2025Q4 |
+| `WDI_KAZ` | World Bank WDI, every non-empty series for KAZ | 1 329 | 1960 – 2025 |
+
+New `scripts/fetchers/imf_dims.py` (fetcher `imf_sdmx`): one generic reader for any IMF dataflow —
+series key with wildcards, the dimensions that form the item code (`NETCD_T.CAB`, `S13.G1_T`),
+English names from the dataflow's own codelists (structure query, references=all), a divisor
+(USD → million USD, KZT → billion KZT). Quarterly flows dated at the quarter's first day, positions
+at its last day. The IMF data are re-downloaded once a week (`REFRESH_DAYS`; the full set takes
+~6 minutes), the stored records returned in between. `gravity.fetch_wdi_country` pages through the
+World Bank sources API (source 2, KAZ, 5 pages × 20 000). Raw answers archived gzip-compressed.
+GFS 1972–1991 (zeros) dropped.
+
+**Checks.** IMF current account = NBK CURRENT_ACCOUNT_BALANCE in 94 of 104 common quarters;
+2023Q1–2025Q2 differ by 14–350 mn USD (NBK revised them, the IMF's BOP not yet — NBK stays the
+source for the headline balances). IMF net IIP = NBK IIP_NET on all 22 common quarters (one day
+earlier). WDI nominal GDP = WEO nominal GDP 1994–2024 within 0.1 %. GFS general government:
+revenue − expense − net investment in nonfinancial assets = net lending every year 2010–2023.
+GFS revenue is NOT the WEO revenue series (2023: 27 897 against 26 253 bn KZT — different coverage
+of the National Fund's income); both kept.
+
+Tests: `tests/test_imf_dims.py` (14). Full suite: 544 passed. macro_dims_long.csv.gz 5.3 → 7.6 MB.

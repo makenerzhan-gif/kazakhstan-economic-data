@@ -2590,3 +2590,207 @@ datasets:
     unit: "percentage points"
     category: prices
     note: "As CPI_CONTRIBUTION_MOM. In August 2024 the housing-and-utilities row is printed twice with different year-to-date contributions (1.112 and 2.53); the division row (first) is kept."
+
+  # ---------------------------------------------------------------- IMF statistics and WDI for Kazakhstan (added 2026-09-27)
+  # scripts/fetchers/imf_dims.py (fetcher imf_sdmx): IMF SDMX 3.0 API, latest version of each
+  # dataflow, every series the dataflow has for KAZ. item_code joins the code_dims («NETCD_T.CAB»),
+  # item_name their English codelist names. Values in the unit named (the API gives units: USD,
+  # KZT). Quarterly flows dated at the quarter's first day, quarterly positions at its last day,
+  # annual 31 December. BOP/IIP: BPM6, as NBK reports them to the IMF — NBK's own scalar series
+  # (CURRENT_ACCOUNT_BALANCE, BOP_*, IIP_*) stay the primary source for the headline numbers; these
+  # add the standard components behind them. GFS: the IMF's GFSM 2014 presentation of the
+  # general government and its subsectors (S13 general government, S1311 central government,
+  # S1311B budgetary central government, S13112 extrabudgetary units, S1313MIXED local
+  # government, S1314 social security funds, S1321 public financial corporations …), which is
+  # where the National Fund sits inside the general government.
+  - id: IMF_BOP_QUARTERLY
+    name_ru: "Платёжный баланс Казахстана (МВФ, РПБ6), все стандартные компоненты, поквартально"
+    name_en: "Kazakhstan balance of payments (IMF BOP, BPM6), all standard components, quarterly"
+    agency: imf
+    fetcher: imf_sdmx
+    flow: IMF.STA/BOP
+    key: "KAZ.*.*.USD.Q"
+    code_dims: [BOP_ACCOUNTING_ENTRY, INDICATOR]
+    divisor: 1000000
+    period: flow
+    min_items: 300
+    required_items: [NETCD_T.CAB, NETCD_T.G, NETCD_T.S, NETCD_T.IN1, NNAFANIL_T.FAB]
+    frequency: quarterly
+    unit: "million USD"
+    category: international
+    note: "Item = accounting entry . indicator: CD_T credit, DB_T debit, NETCD_T net (credit less debit), A_NFA_T net acquisition of financial assets, L_NIL_T net incurrence of liabilities, NNAFANIL_T net (assets less liabilities), A_T reserve assets. 1995Q1 onward (most detail from 2005). NETCD_T.CAB equals NBK CURRENT_ACCOUNT_BALANCE in 94 of 104 common quarters; 2023Q1-2025Q2 differ by 14-350 mn USD (NBK has revised them, the IMF's BOP not yet) — NBK stays the primary source for the headline balances."
+
+  - id: IMF_BOP_ANNUAL
+    name_ru: "Платёжный баланс Казахстана (МВФ, РПБ6), все стандартные компоненты, годовой"
+    name_en: "Kazakhstan balance of payments (IMF BOP, BPM6), all standard components, annual"
+    agency: imf
+    fetcher: imf_sdmx
+    flow: IMF.STA/BOP
+    key: "KAZ.*.*.USD.A"
+    code_dims: [BOP_ACCOUNTING_ENTRY, INDICATOR]
+    divisor: 1000000
+    min_items: 300
+    required_items: [NETCD_T.CAB]
+    frequency: annual
+    unit: "million USD"
+    category: international
+    note: "As IMF_BOP_QUARTERLY, calendar years from 1995."
+
+  - id: IMF_IIP_QUARTERLY
+    name_ru: "Международная инвестиционная позиция Казахстана (МВФ), все компоненты, на конец квартала"
+    name_en: "Kazakhstan international investment position (IMF IIP), all components, end of quarter"
+    agency: imf
+    fetcher: imf_sdmx
+    flow: IMF.STA/IIP
+    key: "KAZ.*.*.USD.Q"
+    code_dims: [BOP_ACCOUNTING_ENTRY, INDICATOR]
+    divisor: 1000000
+    period: stock
+    min_items: 150
+    required_items: [NETAL_P.NIIP]
+    frequency: quarterly
+    unit: "million USD"
+    category: international
+    note: "Positions at the end of the quarter (dated 31 March … 31 December; NBK's IIP_NET dates the same position 1 April … 1 January). Item = A_P assets, L_P liabilities, NETAL_P net . indicator. NETAL_P.NIIP equals NBK IIP_NET on all 22 common quarters (2021 onward), dated one day earlier."
+
+  - id: IMF_IIP_ANNUAL
+    name_ru: "Международная инвестиционная позиция Казахстана (МВФ), все компоненты, на конец года"
+    name_en: "Kazakhstan international investment position (IMF IIP), all components, end of year"
+    agency: imf
+    fetcher: imf_sdmx
+    flow: IMF.STA/IIP
+    key: "KAZ.*.*.USD.A"
+    code_dims: [BOP_ACCOUNTING_ENTRY, INDICATOR]
+    divisor: 1000000
+    period: stock
+    min_items: 150
+    required_items: [NETAL_P.NIIP]
+    frequency: annual
+    unit: "million USD"
+    category: international
+    note: "As IMF_IIP_QUARTERLY, positions at 31 December."
+
+  - id: IMF_GFS_OPERATIONS_KZT
+    name_ru: "Статистика госфинансов МВФ (GFS): отчёт об операциях сектора госуправления и подсекторов, млрд тенге"
+    name_en: "IMF Government Finance Statistics: statement of operations, general government and subsectors, billion KZT"
+    agency: imf
+    fetcher: imf_sdmx
+    flow: IMF.STA/GFS_SOO
+    key: "KAZ.*.*.*.XDC.A"
+    code_dims: [SECTOR, INDICATOR]
+    divisor: 1000000000
+    min_items: 300
+    required_items: [S13.G1_T, S13.G2_T, S13.GNLB_T]
+    from_year: 1992          # 1972-1991 are zero placeholders in the IMF file
+    frequency: annual
+    unit: "billion KZT"
+    category: fiscal
+    note: "GFSM 2014: revenue G1 (taxes G11, social contributions G12, grants G13, other G14), expense G2 (G21 compensation … G28 other), net acquisition of nonfinancial assets G31, net lending/borrowing GNLB, financial assets/liabilities transactions. Item = sector . indicator (S13 general government, S1311 central government incl. the National Fund, S1313MIXED local government …). Annual to 2023 (the IMF's latest)."
+
+  - id: IMF_GFS_OPERATIONS_PCT_GDP
+    name_ru: "Статистика госфинансов МВФ (GFS): отчёт об операциях сектора госуправления и подсекторов, % ВВП"
+    name_en: "IMF Government Finance Statistics: statement of operations, general government and subsectors, percent of GDP"
+    agency: imf
+    fetcher: imf_sdmx
+    flow: IMF.STA/GFS_SOO
+    key: "KAZ.*.*.*.POGDP_PT.A"
+    code_dims: [SECTOR, INDICATOR]
+    min_items: 300
+    required_items: [S13.G1_T, S13.G2_T]
+    frequency: annual
+    unit: "percent of GDP"
+    category: fiscal
+    note: "As IMF_GFS_OPERATIONS_KZT, in percent of GDP as the IMF computes it."
+
+  - id: IMF_GFS_COFOG_KZT
+    name_ru: "Расходы сектора госуправления по функциям (КФОГУ, МВФ GFS), млрд тенге"
+    name_en: "General government expenditure by function (COFOG, IMF GFS), billion KZT"
+    agency: imf
+    fetcher: imf_sdmx
+    flow: IMF.STA/GFS_COFOG
+    key: "KAZ.*.*.*.XDC.A"
+    code_dims: [SECTOR, INDICATOR]
+    divisor: 1000000000
+    min_items: 100
+    required_items: [S13.GF01_T, S13.GF10_T]
+    frequency: annual
+    unit: "billion KZT"
+    category: fiscal
+    note: "COFOG divisions GF01 general public services … GF10 social protection and their groups, by sector; 1997-2023."
+
+  - id: IMF_GFS_COFOG_PCT_GDP
+    name_ru: "Расходы сектора госуправления по функциям (КФОГУ, МВФ GFS), % ВВП"
+    name_en: "General government expenditure by function (COFOG, IMF GFS), percent of GDP"
+    agency: imf
+    fetcher: imf_sdmx
+    flow: IMF.STA/GFS_COFOG
+    key: "KAZ.*.*.*.POGDP_PT.A"
+    code_dims: [SECTOR, INDICATOR]
+    min_items: 100
+    required_items: [S13.GF10_T]
+    frequency: annual
+    unit: "percent of GDP"
+    category: fiscal
+    note: "As IMF_GFS_COFOG_KZT, in percent of GDP."
+
+  - id: IMF_GFS_BALANCE_SHEET_KZT
+    name_ru: "Баланс активов и обязательств сектора госуправления (МВФ GFS), млрд тенге, на конец года"
+    name_en: "General government balance sheet (IMF GFS), billion KZT, end of year"
+    agency: imf
+    fetcher: imf_sdmx
+    flow: IMF.STA/GFS_BS
+    key: "KAZ.*.*.*.XDC.A"
+    code_dims: [SECTOR, INDICATOR]
+    divisor: 1000000000
+    period: stock
+    min_items: 100
+    from_year: 1992          # 1972-1991 are zero placeholders in the IMF file
+    frequency: annual
+    unit: "billion KZT"
+    category: fiscal
+    note: "Financial assets and liabilities by instrument (F2 currency and deposits, F3 debt securities, F4 loans, F5 equity …), domestic/foreign, by sector; stocks at 31 December."
+
+  - id: IMF_GFS_BALANCE_SHEET_PCT_GDP
+    name_ru: "Баланс активов и обязательств сектора госуправления (МВФ GFS), % ВВП, на конец года"
+    name_en: "General government balance sheet (IMF GFS), percent of GDP, end of year"
+    agency: imf
+    fetcher: imf_sdmx
+    flow: IMF.STA/GFS_BS
+    key: "KAZ.*.*.*.POGDP_PT.A"
+    code_dims: [SECTOR, INDICATOR]
+    period: stock
+    min_items: 100
+    frequency: annual
+    unit: "percent of GDP"
+    category: fiscal
+    note: "As IMF_GFS_BALANCE_SHEET_KZT, in percent of GDP."
+
+  - id: IMF_QGFS_KZT
+    name_ru: "Квартальная статистика госфинансов МВФ (QGFS): источники и использование денежных средств сектора госуправления, млрд тенге"
+    name_en: "IMF quarterly GFS: statement of sources and uses of cash, general government, billion KZT"
+    agency: imf
+    fetcher: imf_sdmx
+    flow: IMF.STA/QGFS
+    key: "KAZ.*.*.*.Q"
+    code_dims: [SECTOR, INDICATOR]
+    divisor: 1000000000
+    period: flow
+    min_items: 30
+    frequency: quarterly
+    unit: "billion KZT"
+    category: fiscal
+    note: "Cash-basis transactions (TCB) of the general government (S13) and budgetary central government (S1311B), discrete quarters, to 2025Q4."
+
+  - id: WDI_KAZ
+    name_ru: "Показатели мирового развития (WDI, Всемирный банк) по Казахстану — все ряды"
+    name_en: "World Development Indicators (World Bank), Kazakhstan — every series"
+    agency: wb
+    fetcher: gravity
+    table: wdi_country
+    country_code: KAZ
+    wb_source: 2
+    min_items: 500
+    frequency: annual
+    unit: "as named in item_name (WDI indicator; unit in parentheses)"
+    category: international
+    note: "item_code = WDI code (NY.GDP.MKTP.KD.ZG, SL.UEM.TOTL.ZS, SI.POV.GINI …), item_name = its English name with the unit. Only non-empty values; 1960 onward. Many WDI series for Kazakhstan are IMF/ILO/UN estimates, not national statistics — check the WDI source note before using one instead of a BNS series."

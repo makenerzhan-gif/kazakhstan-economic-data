@@ -1,0 +1,21 @@
+{
+  "source": "imf",
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/QGFS/+/KAZ.*.*.*.Q",
+  "dataset_id": "IMF.STA/QGFS/KAZ.*.*.*.Q",
+  "indicator_id": "IMF_QGFS_KZT",
+  "indicator_name": "IMF quarterly GFS: statement of sources and uses of cash, general government, billion KZT",
+  "description": "Квартальная статистика госфинансов МВФ (QGFS): источники и использование денежных средств сектора госуправления, млрд тенге",
+  "frequency": "quarterly",
+  "unit": "billion KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Cash-basis transactions (TCB) of the general government (S13) and budgetary central government (S1311B), discrete quarters, to 2025Q4.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "1999-01-01",
+  "period_end": "2025-10-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
