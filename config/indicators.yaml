@@ -2372,6 +2372,114 @@ indicators:
     observation_type: point_in_time
     observation_evidence: "поле type: balance"
 
+  - id: BANK_LOANS_STB_TOTAL
+    name_ru: "Кредиты БВУ экономике, всего"
+    name_en: "Second-tier bank loans to the economy, total"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "НБ РК «Кредиты экономике от БВУ (исторические данные)»: на конец периода"
+    source_note: "остаток на конец месяца m датирован 1-м числом m+1, как денежные агрегаты; конец 2021 = 2022-01-01 совпадает с формой 445"
+
+  - id: BANK_LOANS_STB_KZT
+    name_ru: "Кредиты БВУ экономике в национальной валюте"
+    name_en: "Second-tier bank loans to the economy, tenge"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "НБ РК «Кредиты экономике от БВУ (исторические данные)»: на конец периода"
+    source_note: "остаток на конец месяца m датирован 1-м числом m+1, как денежные агрегаты; конец 2021 = 2022-01-01 совпадает с формой 445"
+
+  - id: BANK_LOANS_STB_FX
+    name_ru: "Кредиты БВУ экономике в иностранной валюте"
+    name_en: "Second-tier bank loans to the economy, foreign currency"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "НБ РК «Кредиты экономике от БВУ (исторические данные)»: на конец периода"
+    source_note: "остаток на конец месяца m датирован 1-м числом m+1, как денежные агрегаты; конец 2021 = 2022-01-01 совпадает с формой 445"
+
+  - id: BANK_LOANS_STB_SHORT_TERM
+    name_ru: "Кредиты БВУ экономике, краткосрочные"
+    name_en: "Second-tier bank loans to the economy, short-term"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "НБ РК «Кредиты экономике от БВУ (исторические данные)»: на конец периода"
+    source_note: "остаток на конец месяца m датирован 1-м числом m+1, как денежные агрегаты; конец 2021 = 2022-01-01 совпадает с формой 445"
+
+  - id: BANK_LOANS_STB_LONG_TERM
+    name_ru: "Кредиты БВУ экономике, долгосрочные"
+    name_en: "Second-tier bank loans to the economy, long-term"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "НБ РК «Кредиты экономике от БВУ (исторические данные)»: на конец периода"
+    source_note: "остаток на конец месяца m датирован 1-м числом m+1, как денежные агрегаты; конец 2021 = 2022-01-01 совпадает с формой 445"
+
+  - id: BANK_LOANS_STB_LEGAL_ENTITIES
+    name_ru: "Кредиты БВУ юридическим лицам"
+    name_en: "Second-tier bank loans to legal entities"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "НБ РК «Кредиты экономике от БВУ (исторические данные)»: на конец периода"
+    source_note: "остаток на конец месяца m датирован 1-м числом m+1, как денежные агрегаты; конец 2021 = 2022-01-01 совпадает с формой 445"
+
+  - id: BANK_LOANS_STB_INDIVIDUALS
+    name_ru: "Кредиты БВУ физическим лицам, включая ИП"
+    name_en: "Second-tier bank loans to individuals incl. entrepreneurs"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "НБ РК «Кредиты экономике от БВУ (исторические данные)»: на конец периода"
+    source_note: "остаток на конец месяца m датирован 1-м числом m+1, как денежные агрегаты; конец 2021 = 2022-01-01 совпадает с формой 445"
+
+  - id: BANK_LOANS_STB_BUSINESS
+    name_ru: "Кредиты БВУ бизнесу, включая ИП на предпринимательские цели"
+    name_en: "Second-tier bank loans to business"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "НБ РК «Кредиты экономике от БВУ (исторические данные)»: на конец периода"
+    source_note: "остаток на конец месяца m датирован 1-м числом m+1, как денежные агрегаты; конец 2021 = 2022-01-01 совпадает с формой 445"
+
+  - id: BANK_LOANS_STB_HOUSEHOLDS
+    name_ru: "Кредиты БВУ населению (не на предпринимательство)"
+    name_en: "Second-tier bank loans to households"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "НБ РК «Кредиты экономике от БВУ (исторические данные)»: на конец периода"
+    source_note: "остаток на конец месяца m датирован 1-м числом m+1, как денежные агрегаты; конец 2021 = 2022-01-01 совпадает с формой 445"
+
   - id: LOANS_BUSINESS_KZT
     name_ru: "Кредиты банков бизнесу в тенге"
     name_en: "Bank Loans to Business, Tenge"
@@ -4917,6 +5025,45 @@ indicators:
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
 
+  - id: RETAIL_TRADE_INDEX_FOOD_MONTHLY
+    name_ru: "Индекс физического объёма розничной торговли продовольственными товарами, помесячно"
+    name_en: "Retail Trade Physical Volume Index, food products, monthly"
+    agency: bns
+    frequency: monthly
+    unit: "index (same month previous year = 100)"
+    category: trade
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 702041, термин 2695732 «к соответствующему периоду прошлого года», товарная группа 18224345"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года"
+
+  - id: RETAIL_TRADE_INDEX_NONFOOD_MONTHLY
+    name_ru: "Индекс физического объёма розничной торговли непродовольственными товарами, помесячно"
+    name_en: "Retail Trade Physical Volume Index, non-food products, monthly"
+    agency: bns
+    frequency: monthly
+    unit: "index (same month previous year = 100)"
+    category: trade
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 702041, термин 2695732, товарная группа 18224350"
+    comparison_basis: yoy
+    comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года"
+
+  - id: RETAIL_TRADE_INDEX_YTD
+    name_ru: "Индекс физического объёма розничной торговли, январь–месяц к январю–месяцу прошлого года"
+    name_en: "Retail Trade Physical Volume Index, January to month over the same period of previous year"
+    agency: bns
+    frequency: monthly
+    unit: "index (same period previous year = 100)"
+    category: trade
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 702041, период 8 «месяц с накоплением», термин 2695732"
+    comparison_basis: ytd_yoy
+    comparison_basis_evidence: "Taldau: период с накоплением против того же периода прошлого года"
+
   - id: WHOLESALE_TRADE_INDEX_MONTHLY
     name_ru: "Индекс физического объёма оптовой торговли, помесячно"
     name_en: "Wholesale Trade Physical Volume Index, monthly"
@@ -5210,6 +5357,39 @@ indicators:
     observation_evidence: "квартальный поток платёжного баланса"
     date_basis: next_period_start
     date_basis_evidence: "НБ РК ставит report_date на день после квартала: сумма точек Y-04-01..(Y+1)-01-01 формы 324/481 равна годовому текущему счёту МВФ (2020 -11 054,8; 2024 -7 935,5 млн USD), календарная разметка расходится на сотни-тысячи млн (аудит 2026-09-25)"
+
+  - id: STATE_BUDGET_REVENUE_Q
+    name_ru: "Доходы государственного бюджета, поквартально"
+    name_en: "State Budget Revenue, quarterly"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "квартал = разность нарастающих итогов бюллетеня (март, июнь, сентябрь) и годового отчёта"
+
+  - id: STATE_BUDGET_EXPENDITURE_Q
+    name_ru: "Затраты государственного бюджета, поквартально"
+    name_en: "State Budget Expenditure, quarterly"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "квартал = разность нарастающих итогов бюллетеня (март, июнь, сентябрь) и годового отчёта"
+
+  - id: STATE_BUDGET_DEFICIT_Q
+    name_ru: "Дефицит (профицит) государственного бюджета, поквартально"
+    name_en: "State Budget Deficit (Surplus), quarterly"
+    agency: minfin
+    frequency: quarterly
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "квартал = разность нарастающих итогов бюллетеня (март, июнь, сентябрь) и годового отчёта"
 
   - id: STATE_BUDGET_REVENUE_YTD
     name_ru: "Доходы государственного бюджета, нарастающим итогом"

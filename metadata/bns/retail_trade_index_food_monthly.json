@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau/702041",
+  "indicator_id": "RETAIL_TRADE_INDEX_FOOD_MONTHLY",
+  "indicator_name": "Retail Trade Physical Volume Index, food products, monthly",
+  "description": "Индекс физического объёма розничной торговли продовольственными товарами, помесячно",
+  "frequency": "monthly",
+  "unit": "index (same month previous year = 100)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, same month of the previous year = 100: retail sales of food products in real terms, Taldau 702041 (goods group 18224345), from 2016-01.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2016-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

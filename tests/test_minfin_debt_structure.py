@@ -67,6 +67,7 @@ def _patch(monkeypatch, content: bytes):
              "full_text": [{"document": "/b.xlsx"}]}]
     monkeypatch.setattr(minfin, "_list_documents", lambda **kw: docs)
     monkeypatch.setattr(minfin, "_download", lambda path: content)
+    monkeypatch.setattr(minfin, "_processed_history", lambda indicator_id: {})   # the fixture alone
     monkeypatch.setattr(minfin.raw_store, "save_raw_bytes", lambda *a, **k: None)
     monkeypatch.setattr(minfin.raw_store, "write_download_manifest", lambda *a, **k: None)
 

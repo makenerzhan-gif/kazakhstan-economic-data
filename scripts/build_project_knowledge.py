@@ -227,6 +227,49 @@ def refresh_latest(indicators: list[dict]) -> None:
     (latest_dir / "macro_metadata.json").unlink(missing_ok=True)
 
 
+CPI_DETAIL_MEASURES = (("mom", "CPI_DETAIL_MOM"), ("ytd", "CPI_DETAIL_YTD"), ("yoy", "CPI_DETAIL_YOY"),
+                       ("avg_yoy", "CPI_DETAIL_AVG_YOY"), ("contrib_mom_pp", "CPI_CONTRIBUTION_MOM"),
+                       ("contrib_ytd_pp", "CPI_CONTRIBUTION_YTD"))
+
+
+def cpi_detail_snapshot() -> list[dict]:
+    """The BNS CPI publication for its latest month, one row per (region, item): the four
+    indices and the two contributions side by side. The item-level history is not synced
+    (data/processed/dims/cpi_detail_*.csv in the repo); this puts the latest month's COICOP
+    divisions, goods and services, regions, core baskets and contributions in the Project."""
+    tables = {}
+    for col, ds in CPI_DETAIL_MEASURES:
+        path = REPO_ROOT / "data" / "processed" / "dims" / f"{ds.lower()}.csv"
+        if path.exists():
+            with path.open(encoding="utf-8") as f:
+                tables[col] = list(csv.DictReader(f))
+    if "mom" not in tables:
+        return []
+    last = max(r["date"] for r in tables["mom"])
+    rows: dict[tuple, dict] = {}
+    for col, recs in tables.items():
+        for r in recs:
+            if r["date"] != last:
+                continue
+            key = (r["region"], r["item_code"])
+            row = rows.setdefault(key, {"date": last, "region": r["region"], "item_code": r["item_code"],
+                                        "item_name": r["item_name"], **{c: "" for c, _ in CPI_DETAIL_MEASURES}})
+            row[col] = r["value"]
+    order = {"TOTAL": 0, "GOODS": 1, "FOOD": 2, "NONFOOD": 3, "SERVICES": 4}
+    return sorted(rows.values(), key=lambda r: (r["region"] != "national", r["region"],
+                                                order.get(r["item_code"], 5 if r["item_code"].isupper() else 6),
+                                                r["item_code"]))
+
+
+def refresh_cpi_detail() -> None:
+    rows = cpi_detail_snapshot()
+    if rows:
+        with (PK / "latest" / "cpi_detail_latest.csv").open("w", encoding="utf-8", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0]))
+            w.writeheader()
+            w.writerows(rows)
+
+
 def refresh_models() -> None:
     """Copy each model's report (text only, no charts) so the Project sees current estimates."""
     out = PK / "models"
@@ -251,6 +294,7 @@ def main() -> int:
     (PK / "DATA_DICTIONARY.md").write_text(build_data_dictionary(indicators), encoding="utf-8")
     (PK / "SOURCES.md").write_text(build_sources_md(sources), encoding="utf-8")
     refresh_latest(indicators)
+    refresh_cpi_detail()
     refresh_models()
     print("project_knowledge/ refreshed.")
     return 0

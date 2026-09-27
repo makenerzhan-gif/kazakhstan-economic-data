@@ -12,6 +12,7 @@ document Minfin publishes next without code changes.
 from __future__ import annotations
 
 import calendar
+import csv
 import io
 import json
 import re
@@ -768,6 +769,60 @@ def fetch_gg_cash_surplus_deficit() -> tuple[list[dict], dict]:
 # interpolated into a fake annual figure.
 # ---------------------------------------------------------------------------
 STATISTICAL_BULLETIN_TITLE_MARKER = "Statistical bulletin"
+# THE ARCHIVE (added 2026-09-27). The budget direction's listing holds only its latest 100
+# documents, so the daily run sees about 14 bulletins (early 2025 onward). Minfin keeps the
+# monthly bulletins back to January 2019 online, reachable by title search («Статистический
+# бюллетень …», «Statistical Bulletin …»; 91 xlsx on 2026-09-27). scripts/backfill_minfin_bulletins.py
+# sets BULLETIN_ARCHIVE and reads them all once; every bulletin series then keeps that history in
+# its processed file, and the daily run lays the listed editions over it (_with_history). The
+# pdf/rar annual volumes («… за 2009 год») are a different publication and are not read.
+BULLETIN_ARCHIVE = False
+BULLETIN_TITLE_RE = re.compile(r"statistical bulletin|статистический бюллетень", re.IGNORECASE)
+_ANNUAL_VOLUME_RE = re.compile(r"за\s+\d{4}\s+год|\d{4}\s*ж\.", re.IGNORECASE)
+
+
+def _bulletin_documents() -> list[dict]:
+    """The monthly bulletins, newest first: the budget direction's listing, and in archive mode
+    every bulletin a title search finds as well."""
+    docs = [d for d in _list_documents(directions=BUDGET_DIRECTION_ID)
+            if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    if not BULLETIN_ARCHIVE:
+        return docs
+    found = {d.get("id"): d for d in docs}
+    for title in ("Статистический бюллетень", "Statistical bulletin"):
+        for page in range(1, 8):
+            batch = _list_documents(title=title, projects="minfin", page=str(page))
+            for d in batch:
+                found.setdefault(d.get("id"), d)
+            if len(batch) < 100:
+                break
+    keep = [d for d in found.values()
+            if BULLETIN_TITLE_RE.search(d.get("title") or "") and not _ANNUAL_VOLUME_RE.search(d.get("title") or "")
+            and d.get("full_text") and str(d["full_text"][0].get("document", "")).lower().endswith((".xlsx", ".xls"))]
+    return sorted(keep, key=lambda d: d.get("created_date") or "", reverse=True)
+
+
+def _processed_history(indicator_id: str) -> dict[str, float]:
+    path = Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE / f"{indicator_id.lower()}.csv"
+    if not path.exists():
+        return {}
+    with path.open(encoding="utf-8") as f:
+        out = {}
+        for r in csv.DictReader(f):
+            try:
+                out[r["date"]] = float(r["value"])
+            except (KeyError, TypeError, ValueError):
+                continue
+        return out
+
+
+def _with_history(indicator_id: str, records: list[dict]) -> list[dict]:
+    """The stored series with this run's records laid over it: the listing keeps only the
+    latest editions, the processed file keeps what the archive and earlier runs read."""
+    merged = {**_processed_history(indicator_id), **{r["date"]: r["value"] for r in records}}
+    return [{"date": d, "value": v} for d, v in sorted(merged.items())]
+
+
 BULLETIN_REVENUE_SHEET_NAME = "табл 8 (дох)"
 BULLETIN_PERIOD_RE = re.compile(r"январь(?:-(\w+))?\s+отчет\s+(\d{4})", re.IGNORECASE)
 RU_MONTH_TO_NUM = {
@@ -810,8 +865,7 @@ def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str, value_c
     value's real fixed position in that sheet) is used instead for that
     sheet's fetchers.
     """
-    docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    bulletins = _bulletin_documents()
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -858,15 +912,17 @@ def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str, value_c
         end_month_name = (period_match.group(1) or "январь").lower()
         end_month = _ru_month(end_month_name)
         year = int(period_match.group(2))
-        value = target_row[value_col] if -len(target_row) <= value_col < len(target_row) else None
-        if end_month is None or value in (None, ""):
+        col = value_col(rows, year) if callable(value_col) else value_col
+        value = target_row[col] if col is not None and -len(target_row) <= col < len(target_row) else None
+        if end_month is None or value in (None, "") or not isinstance(value, (int, float)):
             skipped.append(doc["id"])
             continue
 
         last_day = calendar.monthrange(year, end_month)[1]
         iso_date = f"{year:04d}-{end_month:02d}-{last_day:02d}"
-        raw_store.save_raw_bytes(SOURCE, f"{indicator_id}_{iso_date}", today,
-                                  "xls" if file_path.lower().endswith(".xls") else "xlsx", content)
+        if not BULLETIN_ARCHIVE:     # the archive's 91 workbooks (82 MB) are not copied into data/raw
+            raw_store.save_raw_bytes(SOURCE, f"{indicator_id}_{iso_date}", today,
+                                      "xls" if file_path.lower().endswith(".xls") else "xlsx", content)
         if iso_date in seen_dates:
             continue
         seen_dates.add(iso_date)
@@ -888,7 +944,7 @@ def _fetch_bulletin_row(sheet_name: str, row_matcher, indicator_id: str, value_c
         "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
     })
 
-    records.sort(key=lambda r: r["date"])
+    records = _with_history(indicator_id, records)
     manifest = {
         "frequency": "irregular (year-to-date cumulative, roughly monthly)",
         "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
@@ -1039,8 +1095,7 @@ def _fetch_bulletin_annual_row(sheet_name: str, row_matcher, indicator_id: str, 
     mislabels every record by up to a full year, so it must match the
     header's own semantics, not just its year regex.
     """
-    docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    bulletins = _bulletin_documents()
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -1051,18 +1106,46 @@ def _fetch_bulletin_annual_row(sheet_name: str, row_matcher, indicator_id: str, 
                 f"ACTION REQUIRED: inspect {LISTING_URL}?directions={BUDGET_DIRECTION_ID} and update scripts/fetchers/minfin.py",
             ])
         )
+    # The latest edition must parse; in archive mode every older one is read as well, oldest
+    # first, so a newer edition's figure for a year replaces an older one's (revisions).
+    editions = list(reversed(bulletins)) if BULLETIN_ARCHIVE else bulletins[:1]
+    merged: dict[str, float] = {}
+    for doc in editions:
+        try:
+            recs, file_path = _bulletin_annual_values(doc, sheet_name, row_matcher, indicator_id, header_re, date_for_year)
+        except validation.StructuralChangeError:
+            if doc is bulletins[0]:
+                raise
+            continue
+        merged.update({r["date"]: r["value"] for r in recs})
     doc = bulletins[0]
+    records = _with_history(indicator_id, [{"date": d, "value": v} for d, v in merged.items()])
+    manifest = {
+        "frequency": "annual",
+        "source_url": GOV_KZ_BASE + doc["full_text"][0]["document"],
+        "dataset_id": f"gov.kz-doc-{doc['id']},sheet={sheet_name}",
+        "note": note,
+    }
+    return records, manifest
+
+
+def _bulletin_annual_values(doc: dict, sheet_name: str, row_matcher, indicator_id: str,
+                            header_re: re.Pattern, date_for_year) -> tuple[list[dict], str]:
+    """The annual columns of one edition. In the 2019-2021 layout a «YYYY ж. есеп» header also
+    heads that year's four quarterly columns; a column whose sub-header names a quarter is not
+    an annual figure and is skipped, and the first column of a year wins."""
     file_path = doc["full_text"][0]["document"]
     content = _download(file_path)
 
     today = date.today()
     ext = "xls" if file_path.lower().endswith(".xls") else "xlsx"
-    raw_store.save_raw_bytes(SOURCE, indicator_id, today, ext, content)
-    raw_store.write_download_manifest(SOURCE, indicator_id, today, {
-        "downloaded_at": datetime.now().isoformat(),
-        "source_document_id": doc["id"], "source_title": doc.get("title"),
-        "source_url": GOV_KZ_BASE + file_path,
-    })
+    if not BULLETIN_ARCHIVE:
+        raw_store.save_raw_bytes(SOURCE, indicator_id, today, ext, content)
+        raw_store.write_download_manifest(SOURCE, indicator_id, today, {
+            "downloaded_at": datetime.now().isoformat(),
+            "source_document_id": doc["id"], "source_title": doc.get("title"),
+            "source_url": GOV_KZ_BASE + file_path,
+        })
 
     kind, wb = _open_workbook(content, file_path)
     sheet_names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
@@ -1077,9 +1160,11 @@ def _fetch_bulletin_annual_row(sheet_name: str, row_matcher, indicator_id: str, 
         )
 
     rows = list(_iter_rows(kind, wb, target_sheet))
-    header_row = next((r for r in rows if r and any(
+    header_i = next((i for i, r in enumerate(rows) if r and any(
         isinstance(c, str) and header_re.search(c) for c in r if c
     )), None)
+    header_row = rows[header_i] if header_i is not None else None
+    sub_row = rows[header_i + 1] if header_i is not None and header_i + 1 < len(rows) else []
     target_row = next((r for r in rows if r and row_matcher(r)), None)
     if header_row is None or target_row is None:
         raise validation.StructuralChangeError(
@@ -1091,17 +1176,21 @@ def _fetch_bulletin_annual_row(sheet_name: str, row_matcher, indicator_id: str, 
             ])
         )
 
-    records = []
+    records, seen = [], set()
     for col_idx, header_cell in enumerate(header_row):
         if not isinstance(header_cell, str):
             continue
         m = header_re.search(header_cell)
         if not m:
             continue
+        sub = sub_row[col_idx] if col_idx < len(sub_row) else None
+        if isinstance(sub, str) and re.search(r"тоқсан|квартал", sub.lower()):
+            continue
         year = int(m.group(1))
         value = target_row[col_idx] if col_idx < len(target_row) else None
-        if value in (None, ""):
+        if value in (None, "") or year in seen or not isinstance(value, (int, float)):
             continue
+        seen.add(year)
         records.append({"date": date_for_year(year), "value": float(value)})
 
     if not records:
@@ -1112,14 +1201,7 @@ def _fetch_bulletin_annual_row(sheet_name: str, row_matcher, indicator_id: str, 
                 "ACTION REQUIRED: inspect the sheet layout and update scripts/fetchers/minfin.py",
             ])
         )
-    records.sort(key=lambda r: r["date"])
-    manifest = {
-        "frequency": "annual",
-        "source_url": GOV_KZ_BASE + file_path,
-        "dataset_id": f"gov.kz-doc-{doc['id']},sheet={sheet_name}",
-        "note": note,
-    }
-    return records, manifest
+    return records, file_path
 
 
 def fetch_subventions_republican() -> tuple[list[dict], dict]:
@@ -3074,12 +3156,24 @@ STATE_BUDGET_IDENTITY_TOLERANCE = 1.0  # million KZT
 
 
 def _state_budget_row_matcher(label: str):
+    """The row whose Russian label starts with `label`, in whichever column the edition puts
+    it: column G (6) since mid-2021, column K (10) in the 2019-2021 layout that also carried
+    quarterly columns."""
     def matcher(row) -> bool:
-        if len(row) <= BULLETIN_STATE_BUDGET_LABEL_COL:
-            return False
-        cell = row[BULLETIN_STATE_BUDGET_LABEL_COL]
-        return isinstance(cell, str) and cell.strip().startswith(label)
+        return any(isinstance(c, str) and c.strip().startswith(label) for c in row)
     return matcher
+
+
+def _state_budget_ytd_col(rows: list[list], year: int) -> int | None:
+    """The current year's January-to-month column of табл 3, from its header: «2026 ж.
+    қантар-маусым есеп / 2026 г. январь-июнь отчет». Column F (5) since mid-2021, column E (4)
+    in the 2019-2021 layout, where F onward are quarters. The previous year's January-to-month
+    column next to it has no year in its header and is not picked."""
+    for row in rows[:10]:
+        for j, cell in enumerate(row):
+            if isinstance(cell, str) and str(year) in cell and re.search(r"январ|қаңтар|қантар", cell.lower()):
+                return j
+    return None
 
 
 def _verify_state_budget_identity(indicator_id: str) -> str:
@@ -3165,7 +3259,7 @@ def _fetch_state_budget_ytd(line: str, indicator_id: str, note: str,
         BULLETIN_STATE_BUDGET_SHEET_NAME,
         _state_budget_row_matcher(STATE_BUDGET_LINES[line]),
         indicator_id,
-        value_col=BULLETIN_STATE_BUDGET_YTD_COL,
+        value_col=_state_budget_ytd_col,
         note_override=note)
     if check_identity:
         manifest["identity_checked_against"] = _verify_state_budget_identity(indicator_id)
@@ -3938,3 +4032,70 @@ def fetch_nf_investment_income_ytd(): return _fetch_nf("NF_INVESTMENT_INCOME_YTD
 def fetch_nf_guaranteed_transfer_ytd(): return _fetch_nf("NF_GUARANTEED_TRANSFER_YTD")          # noqa: E704
 def fetch_nf_targeted_transfers_ytd(): return _fetch_nf("NF_TARGETED_TRANSFERS_YTD")            # noqa: E704
 def fetch_nf_transfers_ytd(): return _fetch_nf("NF_TRANSFERS_YTD")                              # noqa: E704
+
+
+# ---------------------------------------------------------------------------
+# STATE BUDGET BY QUARTER (added 2026-09-27), for fiscal shocks in a quarterly model: revenue,
+# expenditure and the deficit of the state budget (republican + local) in each discrete quarter,
+# from the bulletin's January-to-month figures (STATE_BUDGET_*_YTD, month-end dates) and the
+# year's report (STATE_BUDGET_REVENUE / _EXPENDITURE / _DEFICIT): Q1 = January-March, Q2 =
+# January-June less January-March, Q3 likewise, Q4 = the year less January-September. A
+# quarter is left out when an edition it needs is missing — never interpolated. The four
+# quarters of a year add up to the year's report by construction. Dated at the quarter's first
+# day. The 2019-2021 bulletins also printed quarterly columns directly; the history from 2019
+# is covered by the January-to-month figures, so those columns are not read.
+# ---------------------------------------------------------------------------
+STATE_BUDGET_QUARTERLY = {
+    "STATE_BUDGET_REVENUE_Q": ("STATE_BUDGET_REVENUE_YTD", "STATE_BUDGET_REVENUE"),
+    "STATE_BUDGET_EXPENDITURE_Q": ("STATE_BUDGET_EXPENDITURE_YTD", "STATE_BUDGET_EXPENDITURE"),
+    "STATE_BUDGET_DEFICIT_Q": ("STATE_BUDGET_DEFICIT_YTD", "STATE_BUDGET_DEFICIT"),
+}
+
+
+def state_budget_quarters(ytd: dict[str, float], annual: dict[str, float]) -> dict[str, float]:
+    """{quarter start: value} from month-end January-to-month values and 31-December annual ones."""
+    out: dict[str, float] = {}
+    years = {int(d[:4]) for d in ytd} | {int(d[:4]) for d in annual}
+    for y in sorted(years):
+        m3, m6, m9 = ytd.get(f"{y}-03-31"), ytd.get(f"{y}-06-30"), ytd.get(f"{y}-09-30")
+        a = annual.get(f"{y}-12-31")
+        if m3 is not None:
+            out[f"{y}-01-01"] = m3
+        if m6 is not None and m3 is not None:
+            out[f"{y}-04-01"] = m6 - m3
+        if m9 is not None and m6 is not None:
+            out[f"{y}-07-01"] = m9 - m6
+        if a is not None and m9 is not None:
+            out[f"{y}-10-01"] = a - m9
+    return out
+
+
+def _fetch_state_budget_quarterly(indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    ytd_id, annual_id = STATE_BUDGET_QUARTERLY[indicator_id]
+    quarters = state_budget_quarters(_processed_history(ytd_id), _processed_history(annual_id))
+    if not quarters:
+        raise validation.StructuralChangeError(
+            f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}\nWHAT CHANGED: no quarter could be formed "
+            f"from {ytd_id} and {annual_id}\nACTION REQUIRED: check those two series first")
+    return ([{"date": d, "value": v} for d, v in sorted(quarters.items())],
+            {"frequency": "quarterly", "source_url": f"{LISTING_URL}?directions={BUDGET_DIRECTION_ID}",
+             "dataset_id": f"derived:{ytd_id}+{annual_id}", "note": note})
+
+
+_STATE_BUDGET_Q_COMMON = (
+    "Million KZT, STATE budget (republican + local), one discrete quarter, from the Statistical "
+    "Bulletin's January-to-month figures and the annual report (Q4 = year less January-September). ")
+
+
+def fetch_state_budget_revenue_q() -> tuple[list[dict], dict]:
+    return _fetch_state_budget_quarterly("STATE_BUDGET_REVENUE_Q", _STATE_BUDGET_Q_COMMON + "Total revenue.")
+
+
+def fetch_state_budget_expenditure_q() -> tuple[list[dict], dict]:
+    return _fetch_state_budget_quarterly("STATE_BUDGET_EXPENDITURE_Q", _STATE_BUDGET_Q_COMMON + "Total expenditure («затраты»).")
+
+
+def fetch_state_budget_deficit_q() -> tuple[list[dict], dict]:
+    return _fetch_state_budget_quarterly("STATE_BUDGET_DEFICIT_Q", _STATE_BUDGET_Q_COMMON +
+                                         "Deficit (-) / surplus (+): revenue less expenditure, net budget lending "
+                                         "and the balance on financial assets.")

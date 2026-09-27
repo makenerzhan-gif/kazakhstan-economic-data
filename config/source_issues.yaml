@@ -163,3 +163,26 @@ issues:
       from 2023-04 to 2024-04 (down to -112 bp) while the 2045 bond stood at 120-170 bp -- valued off local trades
       close to par, not the external market. So they cannot fill the 2020-11..2022-07 gap of the headline either.
     advice: Do not use the 2024 and 2025 bonds' spreads from 2022-04 on.
+
+  - id: bank_loans_short_term_2000_08
+    kind: error
+    variable: BANK_LOANS_STB_SHORT_TERM
+    observations:
+      - {date: "2000-08-01", value: 994402.0}
+    evidence: >
+      NBK «Кредиты экономике от банков второго уровня (исторические данные)», row 07.00: short-term
+      994 402 against a total of 198 047 and long-term 98 645 — total less long-term is 99 402, so a
+      digit was added. Neighbouring months: 91 567 and 104 046. (08.04 is 100 mln off the total too.)
+    advice: Use 99 402 (total less long-term) or treat as missing.
+
+  - id: state_budget_identity_2021_09
+    kind: inconsistent
+    variable: STATE_BUDGET_DEFICIT_YTD
+    observations:
+      - {date: "2021-09-30", value: -1657256.05016014}
+    evidence: >
+      Minfin Statistical Bulletin, табл 3, January-September 2021: revenue 11 305 984 − expenditure
+      12 503 080 − net budget lending 413 809 − financial assets 136 724 = −1 747 628, against a
+      printed deficit of −1 657 256 (90 372 mln apart). Every other month of 2019-2026 reconciles
+      within 1 mln.
+    advice: For January-September 2021 derive the deficit from its components, or check the Q3 2021 figure against the annual report.

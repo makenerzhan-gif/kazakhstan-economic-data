@@ -3563,3 +3563,141 @@ def fetch_remittances_received_count() -> tuple[list[dict], dict]:
         "sends far more transfers than it receives -- 160,313 against 44,854 thousand transactions "
         "in June 2026 -- so the two are not symmetric and should not be netted casually.",
         "monthly")
+
+
+# ---------------------------------------------------------------------------
+# BANK LOANS TO THE ECONOMY, 1996 ONWARD (added 2026-09-27). NBK «Кредиты экономике от банков
+# второго уровня (исторические данные)», an xlsx on the page below: outstanding loans of
+# second-tier banks at the end of each month from January 1996 (business and households from
+# January 2003), million KZT, by currency, by maturity, legal entities / individuals (incl.
+# individual entrepreneurs) and business (incl. entrepreneurs' business loans) / households.
+# The open-data forms (445, 4, 488) start in 2022-2023. The file's link id changes with every
+# update, so it is found by its anchor text on the page. Columns are found by their header
+# text, periods by the «MM.YY» cell of column B. Dated like the money stock (money_as_at): the
+# end-of-December 2021 figure is 2022-01-01 — checked: households at end-2021, 10 037 548 mln,
+# equal form 445's individuals (tenge + foreign currency) at report_date 2022-01-01 to the
+# million. Business differs from form 445's: 445 is the banking sector in the expanded definition.
+# ---------------------------------------------------------------------------
+BANK_LOANS_HISTORY_PAGE = "https://nationalbank.kz/ru/news/loans-to-economy-from-second-tier-banks"
+BANK_LOANS_HISTORY_ANCHOR = "Кредиты экономике от банков второго уровня"
+BANK_LOANS_COLUMNS = {           # indicator id -> regex on the lowest header cell of its column
+    "BANK_LOANS_STB_TOTAL": r"^всего$",
+    "BANK_LOANS_STB_KZT": r"в национальной валюте",
+    "BANK_LOANS_STB_FX": r"в иностранной валюте",
+    "BANK_LOANS_STB_SHORT_TERM": r"^краткосрочные",
+    "BANK_LOANS_STB_LONG_TERM": r"^долгосрочные",
+    "BANK_LOANS_STB_LEGAL_ENTITIES": r"юридическим лицам",
+    "BANK_LOANS_STB_INDIVIDUALS": r"физическим лицам",
+    "BANK_LOANS_STB_BUSINESS": r"^бизнесу",
+    "BANK_LOANS_STB_HOUSEHOLDS": r"^населению",
+}
+_BANK_LOANS_TABLE: dict = {}
+
+
+def _bank_loans_history() -> dict[str, dict[str, float]]:
+    """{indicator id: {as-at date: million KZT}} from the latest file, once per process."""
+    if _BANK_LOANS_TABLE:
+        return _BANK_LOANS_TABLE
+    import html as html_lib
+    import io
+    import openpyxl
+    page = _download(BANK_LOANS_HISTORY_PAGE).text
+    links = [(h, html_lib.unescape(re.sub(r"<[^>]+>", "", t)).strip())
+             for h, t in re.findall(r'<a[^>]+href="(/file/download/\d+)"[^>]*>(.*?)</a>', page, re.S)]
+    href = next((h for h, t in links if t.startswith(BANK_LOANS_HISTORY_ANCHOR)), None)
+    if href is None:
+        raise validation.StructuralChangeError("\n".join([
+            "STRUCTURAL CHANGE DETECTED in nbk/BANK_LOANS_STB_*",
+            f"WHAT CHANGED: no link titled {BANK_LOANS_HISTORY_ANCHOR!r} on the page",
+            f"ACTION REQUIRED: inspect {BANK_LOANS_HISTORY_PAGE} and update scripts/fetchers/nbk.py"]))
+    url = "https://nationalbank.kz" + href
+    content = _download(url).content
+    today = date.today()
+    raw_store.save_raw_bytes(SOURCE, "BANK_LOANS_STB_HISTORY", today, "xlsx", content)
+    raw_store.write_download_manifest(SOURCE, "BANK_LOANS_STB_HISTORY", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": url, "page": BANK_LOANS_HISTORY_PAGE})
+    wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+    rows = [list(r) for r in wb.worksheets[0].iter_rows(values_only=True)]
+    wb.close()
+    period_re = re.compile(r"^\s*(\d{2})\.(\d{2})\s*$")
+    first = next((i for i, r in enumerate(rows) if len(r) > 1 and isinstance(r[1], str) and period_re.match(r[1])), None)
+    if first is None:
+        raise validation.StructuralChangeError(f"STRUCTURAL CHANGE DETECTED in nbk/BANK_LOANS_STB_*\n"
+                                               f"WHAT CHANGED: no «MM.YY» period in column B\nACTION REQUIRED: inspect {url}")
+    width = max(len(r) for r in rows)
+    headers = {}
+    for j in range(2, width):
+        cells = [re.sub(r"\s+", " ", str(r[j])).strip().lower() for r in rows[:first] if j < len(r) and r[j] not in (None, "")]
+        if cells:
+            headers[j] = cells[-1]
+    cols = {}
+    for ind, rx in BANK_LOANS_COLUMNS.items():
+        hits = [j for j, h in headers.items() if re.search(rx, h)]
+        if len(hits) != 1:
+            raise validation.StructuralChangeError("\n".join([
+                f"STRUCTURAL CHANGE DETECTED in nbk/{ind}",
+                f"WHAT CHANGED: header /{rx}/ matches {len(hits)} columns: {[headers[j] for j in hits]}",
+                f"ACTION REQUIRED: inspect {url} and update BANK_LOANS_COLUMNS"]))
+        cols[ind] = hits[0]
+    out: dict[str, dict[str, float]] = {ind: {} for ind in cols}
+    for r in rows[first:]:
+        m = period_re.match(str(r[1] or "")) if len(r) > 1 else None
+        if not m:
+            continue
+        month, yy = int(m.group(1)), int(m.group(2))
+        year = 1900 + yy if yy >= 90 else 2000 + yy
+        as_at = money_as_at(f"{year:04d}-{month:02d}-01")
+        for ind, j in cols.items():
+            v = r[j] if j < len(r) else None
+            if isinstance(v, (int, float)):
+                out[ind][as_at] = float(v)
+    if len(out["BANK_LOANS_STB_TOTAL"]) < 300:
+        raise validation.StructuralChangeError(f"STRUCTURAL CHANGE DETECTED in nbk/BANK_LOANS_STB_TOTAL\n"
+                                               f"WHAT CHANGED: only {len(out['BANK_LOANS_STB_TOTAL'])} months\nACTION REQUIRED: inspect {url}")
+    _BANK_LOANS_TABLE.update(out)
+    _BANK_LOANS_TABLE["_url"] = url
+    return _BANK_LOANS_TABLE
+
+
+def _fetch_bank_loans_stb(indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    table = _bank_loans_history()
+    records = [{"date": d, "value": v} for d, v in sorted(table[indicator_id].items())]
+    return records, {"frequency": "monthly", "source_url": table["_url"], "dataset_id": "nbk-loans-stb-history",
+                     "note": "Million KZT, outstanding at the end of the month, dated the first day of the next "
+                             "month (as the money stock). Second-tier banks, NBK historical series. " + note}
+
+
+def fetch_bank_loans_stb_total():
+    return _fetch_bank_loans_stb("BANK_LOANS_STB_TOTAL", "All loans to the economy, from 1996.")
+
+
+def fetch_bank_loans_stb_kzt():
+    return _fetch_bank_loans_stb("BANK_LOANS_STB_KZT", "In tenge.")
+
+
+def fetch_bank_loans_stb_fx():
+    return _fetch_bank_loans_stb("BANK_LOANS_STB_FX", "In foreign currency, at the month-end rate.")
+
+
+def fetch_bank_loans_stb_short_term():
+    return _fetch_bank_loans_stb("BANK_LOANS_STB_SHORT_TERM", "Short-term (up to one year).")
+
+
+def fetch_bank_loans_stb_long_term():
+    return _fetch_bank_loans_stb("BANK_LOANS_STB_LONG_TERM", "Long-term (over one year).")
+
+
+def fetch_bank_loans_stb_legal_entities():
+    return _fetch_bank_loans_stb("BANK_LOANS_STB_LEGAL_ENTITIES", "To legal entities.")
+
+
+def fetch_bank_loans_stb_individuals():
+    return _fetch_bank_loans_stb("BANK_LOANS_STB_INDIVIDUALS", "To individuals, including individual entrepreneurs.")
+
+
+def fetch_bank_loans_stb_business():
+    return _fetch_bank_loans_stb("BANK_LOANS_STB_BUSINESS", "To business, including entrepreneurs' business loans; from 2003.")
+
+
+def fetch_bank_loans_stb_households():
+    return _fetch_bank_loans_stb("BANK_LOANS_STB_HOUSEHOLDS", "To households for purposes other than business; from 2003.")

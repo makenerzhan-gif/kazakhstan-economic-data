@@ -10,6 +10,10 @@ full histories, full metadata and raw archives stay in the repository.
 - `latest/macro_latest.csv` — one row per series (507): Russian name, agency, frequency,
   unit, first date, number of observations, the latest value, the one before it and the
   value a year earlier. The full history is `data/unified/` in the repository.
+- `latest/cpi_detail_latest.csv` — the BNS CPI publication (Т-15-02-М) for its latest month:
+  per item and region the index to the previous month, to December, year on year and
+  January–month year on year, and the contribution to CPI growth (p.p.) — COICOP divisions,
+  goods and services, core baskets, regions. History: `data/processed/dims/cpi_detail_*.csv`.
 - `DATA_CATALOG.md` — counts by agency and frequency, what is not connected, and the known
   problems in the sources (config/source_issues.yaml).
 - `DATA_DICTIONARY.md` — per series: unit, frequency, period, the first sentence of the
