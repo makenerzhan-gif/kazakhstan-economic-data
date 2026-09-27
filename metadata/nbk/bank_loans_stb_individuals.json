@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://nationalbank.kz/file/download/135680",
+  "dataset_id": "nbk-loans-stb-history",
+  "indicator_id": "BANK_LOANS_STB_INDIVIDUALS",
+  "indicator_name": "Second-tier bank loans to individuals incl. entrepreneurs",
+  "description": "Кредиты БВУ физическим лицам, включая ИП",
+  "frequency": "monthly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT, outstanding at the end of the month, dated the first day of the next month (as the money stock). Second-tier banks, NBK historical series. To individuals, including individual entrepreneurs.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "1996-02-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

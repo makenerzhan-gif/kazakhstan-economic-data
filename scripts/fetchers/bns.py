@@ -2798,14 +2798,71 @@ def fetch_wholesale_trade_monthly() -> tuple[list[dict], dict]:
         "9.0 trillion KZT over January-May 2026). Monthly companion to the annual WHOLESALE_TRADE.")
 
 
+# RETAIL VOLUME HISTORY (added 2026-09-27). Taldau index 702041 «Индекс физического объема
+# розничной торговли», monthly (period 4), dictionaries 68 region, 776 locality, 848 comparison,
+# 3013 goods group: «Всего» 18224344, «Продовольственные товары» 18224345, «Непродовольственные
+# товары» 18224350; from 2016-01. Its April 2026 total, 104.96, is the bulletin's 105.0 for that
+# month. Taldau gives the index unrounded; the bulletin to one decimal, and wins where both exist.
+# Period 8 («месяц с накоплением») is January-to-month against the same months a year earlier.
+# The month-on-month slice (dictionary 316) is not taken: its January values (41.6 %, 47.9 %) are
+# the seasonal fall of the raw level, not something a model should read as a volume change.
+RETAIL_VOLUME_TALDAU = {"index_id": "702041", "period_id": "4", "measure_id": "7",
+                        "dic_ids": "68,776,848,3013"}
+RETAIL_VOLUME_GROUPS = {"TOTAL": "18224344", "FOOD": "18224345", "NONFOOD": "18224350"}
+
+
+def _retail_volume_taldau(group: str, indicator_id: str, period_id: str = "4") -> dict[str, float]:
+    spec = {**RETAIL_VOLUME_TALDAU, "period_id": period_id,
+            "terms": f"{NATIONAL_TERM_ID},741917,2695732,{RETAIL_VOLUME_GROUPS[group]}"}
+    return _taldau_monthly(spec, indicator_id, 1.0)
+
+
+def _taldau_only_monthly(indicator_id: str, history: dict[str, float], note: str) -> tuple[list[dict], dict]:
+    """A monthly series that only Taldau carries, kept across runs: the stored history with
+    whatever Taldau returned laid over it (an outage costs nothing already stored)."""
+    merged = {**_load_local_market_history(indicator_id), **history}
+    if not merged:
+        raise validation.StructuralChangeError(
+            f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id}\nWHAT CHANGED: Taldau returned nothing "
+            f"and no processed history exists\nACTION REQUIRED: inspect {TALDAU_TREE_DATA_URL}")
+    return ([{"date": d, "value": v} for d, v in sorted(merged.items())],
+            {"frequency": "monthly", "source_url": TALDAU_TREE_DATA_URL, "dataset_id": "taldau/702041", "note": note})
+
+
 def fetch_retail_trade_index_monthly() -> tuple[list[dict], dict]:
     """Retail trade physical volume index, same month previous year = 100."""
-    return _fetch_local_market_index(
+    records, manifest = _fetch_local_market_index(
         "Розничная торговля", "Розничная торговля, всего", "RETAIL_TRADE_INDEX_MONTHLY",
         "Index, same month of the previous year = 100 -- retail volume in REAL terms, the "
         "consumption-side companion to RETAIL_TRADE_MONTHLY, which is in current prices. Monthly "
         "replacement for the annual RETAIL_TRADE_VOLUME_INDEX. The source row also publishes "
-        "month-on-month and year-to-date comparisons; this is the year-on-year monthly one.")
+        "month-on-month and year-to-date comparisons; this is the year-on-year monthly one. "
+        "History from 2016-01 out of Taldau index 702041 (unrounded there; the bulletin's "
+        "one-decimal value wins where both exist).")
+    have = {r["date"] for r in records}
+    older = {d: v for d, v in _retail_volume_taldau("TOTAL", "RETAIL_TRADE_INDEX_MONTHLY").items() if d not in have}
+    return sorted(records + [{"date": d, "value": v} for d, v in older.items()], key=lambda r: r["date"]), manifest
+
+
+def fetch_retail_trade_index_food_monthly() -> tuple[list[dict], dict]:
+    """Retail trade volume index, food products, same month previous year = 100."""
+    return _taldau_only_monthly("RETAIL_TRADE_INDEX_FOOD_MONTHLY", _retail_volume_taldau("FOOD", "RETAIL_TRADE_INDEX_FOOD_MONTHLY"),
+                                "Index, same month of the previous year = 100: retail sales of food products "
+                                "in real terms, Taldau 702041 (goods group 18224345), from 2016-01.")
+
+
+def fetch_retail_trade_index_nonfood_monthly() -> tuple[list[dict], dict]:
+    """Retail trade volume index, non-food products, same month previous year = 100."""
+    return _taldau_only_monthly("RETAIL_TRADE_INDEX_NONFOOD_MONTHLY", _retail_volume_taldau("NONFOOD", "RETAIL_TRADE_INDEX_NONFOOD_MONTHLY"),
+                                "Index, same month of the previous year = 100: retail sales of non-food products "
+                                "in real terms, Taldau 702041 (goods group 18224350), from 2016-01.")
+
+
+def fetch_retail_trade_index_ytd() -> tuple[list[dict], dict]:
+    """Retail trade volume index, January-to-month against the same months a year earlier."""
+    return _taldau_only_monthly("RETAIL_TRADE_INDEX_YTD", _retail_volume_taldau("TOTAL", "RETAIL_TRADE_INDEX_YTD", "8"),
+                                "Index, January to the month against the same months of the previous year = 100 "
+                                "(«месяц с накоплением»), total retail trade in real terms, Taldau 702041, from 2016-01.")
 
 
 def fetch_wholesale_trade_index_monthly() -> tuple[list[dict], dict]:
@@ -3658,12 +3715,32 @@ CORE_CPI_EX3_DICS = "67,848,4791"
 CORE_CPI_EX7_DICS = "67,848,4792"
 
 
+# HISTORY 2011-2022 (added 2026-09-27). Taldau index 703082 «Базовый индекс потребительских
+# цен» is the same three-component basket («Все товары и услуги без фруктов и овощей, бензина
+# и угля», dictionary 2293, term 4008742) under its pre-2023 index: monthly 2011-01 to 2022-12,
+# where 55056856 starts in 2023-01. Checked before splicing: its October-December 2022 values
+# equal the ones BNS printed in the Т-15-02-М tables for those months (CPI_DETAIL_*, item
+# CORE_EX3) to the rounding (101.6/101.62, 119.8/119.75 …), and twelve chained month-on-month
+# values reproduce the year-on-year one within 0.6 points in all 132 months. The seven-component
+# basket has no pre-2023 series on Taldau; CORE_CPI_*_EX7 still start in 2023.
+CORE_CPI_EX3_HISTORY = {"index_id": "703082", "period_id": "4", "measure_id": "7",
+                        "dic_ids": "67,848,2293", "basket": "4008742"}
+
+
 def _fetch_core_cpi(index_id: str, basket_term: str, dic_ids: str, comparison_term: str,
-                    indicator_id: str, note: str) -> tuple[list[dict], dict]:
-    return _fetch_taldau_annual_index(
+                    indicator_id: str, note: str, history: dict | None = None) -> tuple[list[dict], dict]:
+    records, manifest = _fetch_taldau_annual_index(
         index_id, indicator_id, note, measure_id="7",
         terms=f"{CORE_CPI_REGION_TERM},{comparison_term},{basket_term}",
         dic_ids=dic_ids, period_id=TALDAU_PERIOD_MONTHLY)
+    if history:
+        spec = {**history, "terms": f"{CORE_CPI_REGION_TERM},{comparison_term},{history['basket']}"}
+        first = min(r["date"][:7] for r in records)
+        older = {d: v for d, v in _taldau_monthly(spec, f"{indicator_id}_703082", 1.0).items() if d[:7] < first}
+        records = [{"date": d, "value": v} for d, v in sorted(older.items())] + records
+        manifest["note"] = (manifest.get("note") or note) + (
+            f" {len(older)} months before {first} from Taldau index 703082 (the same basket's pre-2023 index).")
+    return records, manifest
 
 
 def fetch_core_cpi_yoy_ex3() -> tuple[list[dict], dict]:
@@ -3675,7 +3752,7 @@ def fetch_core_cpi_yoy_ex3() -> tuple[list[dict], dict]:
         "vegetables, petrol and coal -- 110.7 for August 2026, so 10.7%. MONTHLY (the Taldau "
         "query uses the monthly period; an earlier note here said quarterly, corrected "
         "2026-09-25). Sits just below the headline CPI_YOY, which is the expected relationship "
-        "since the excluded items are the volatile ones.")
+        "since the excluded items are the volatile ones.", history=CORE_CPI_EX3_HISTORY)
 
 
 def fetch_core_cpi_mom_ex3() -> tuple[list[dict], dict]:
@@ -3685,7 +3762,7 @@ def fetch_core_cpi_mom_ex3() -> tuple[list[dict], dict]:
         "CORE_CPI_MOM_EX3",
         "Index, previous month = 100 -- 100.8 for August 2026. The momentum reading of "
         "CORE_CPI_YOY_EX3: it turns before the year-on-year series does, which is the point of "
-        "carrying both.")
+        "carrying both.", history=CORE_CPI_EX3_HISTORY)
 
 
 def fetch_core_cpi_yoy_ex7() -> tuple[list[dict], dict]:

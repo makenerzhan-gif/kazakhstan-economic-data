@@ -727,3 +727,47 @@ GFS revenue is NOT the WEO revenue series (2023: 27 897 against 26 253 bn KZT �
 of the National Fund's income); both kept.
 
 Tests: `tests/test_imf_dims.py` (14). Full suite: 544 passed. macro_dims_long.csv.gz 5.3 → 7.6 MB.
+
+## 2026-09-27 — history for the fiscal, core-inflation, retail and credit blocks
+
+Asked for: the budget monthly and quarterly before 2025, core inflation before 2023, retail
+volume by goods group, credit by type before 2022, and the CPI detail visible in the Project.
+
+**Budget.** The Minfin monthly Statistical Bulletins are online back to January 2019 (90 xlsx,
+found by title search; the budget direction's listing shows only the latest ~14). New
+`scripts/backfill_minfin_bulletins.py` read them all once (`minfin.BULLETIN_ARCHIVE`); every
+bulletin series now keeps that history and the daily run lays the listed editions over it
+(`_with_history`). Табл 3's January-to-month column and row labels are found by header text (the
+2019-2021 layout had them in other columns, with quarterly columns in between); a «YYYY ж. есеп»
+header over quarterly columns is no longer read as an annual figure. Result: STATE_BUDGET_*_YTD
+2019-01 … 2026-07 (80 months, was 14), the 20 other bulletin series from 2019, annual state and
+local budget from 2016; new quarterly STATE_BUDGET_REVENUE_Q / _EXPENDITURE_Q / _DEFICIT_Q,
+2019Q1 … 2026Q2, discrete quarters from the January-to-month figures and the annual report.
+Checks: on the 14 months stored before, every value is unchanged; the derived quarters equal the
+quarterly columns the 2020-21 bulletins printed (2019Q1-Q3, 2020Q1-Q4) to the unit; the four
+quarters add to the annual report; revenue − expenditure − lending − financial assets = deficit
+every month except 2021-09 (90 bn apart in the bulletin itself, source_issues). The general
+government quarterly cash operations 2008Q1 … 2025Q4 were added this morning (IMF_QGFS_KZT).
+
+**Core inflation.** CORE_CPI_YOY_EX3 / CORE_CPI_MOM_EX3 from 2011-01 (were 2023-01): Taldau 703082,
+the same «без фруктов и овощей, бензина и угля» basket under its pre-2023 index. Its Oct-Dec 2022
+equal the Т-15-02-М tables to the rounding; twelve chained m/m reproduce y/y within 0.6 in all 132
+months. The seven-component basket has no pre-2023 series on Taldau.
+
+**Retail.** RETAIL_TRADE_INDEX_MONTHLY from 2016-01 (Taldau 702041; April 2026: 104.96 there, 105.0 in
+the bulletin, which wins); new RETAIL_TRADE_INDEX_FOOD_MONTHLY, _NONFOOD_MONTHLY (y/y) and
+RETAIL_TRADE_INDEX_YTD (January-to-month), 2016-01 … 2026-04. October 2025 is missing on Taldau.
+
+**Credit.** New BANK_LOANS_STB_{TOTAL, KZT, FX, SHORT_TERM, LONG_TERM, LEGAL_ENTITIES, INDIVIDUALS,
+BUSINESS, HOUSEHOLDS}: NBK «Кредиты экономике от БВУ (исторические данные)», end of month, 1996-01 …
+2026-08 (business/households from 2003), dated as the money stock (end of month m = 1st of m+1). The
+currency, status and business/household splits add to the total every month; households equal form
+445's individuals in all 44 common months. Short-term 2000-08 carries an extra digit (source_issues).
+No official time series of subsidised («льготное») lending was found: NBK's open data has only the
+state agricultural lenders' portfolio (form 59, quarterly from 2025); Damu and Baiterek publish
+annual reports only.
+
+**Project.** `project_knowledge/latest/cpi_detail_latest.csv` (38 KB): the CPI publication's latest
+month, per item and region, indices and contributions.
+
+Tests: `tests/test_history_extensions.py` (9).

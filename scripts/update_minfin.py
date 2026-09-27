@@ -79,6 +79,9 @@ FETCHERS = {
     "STATE_NON_OIL_DEFICIT_YTD": minfin_fetchers.fetch_state_non_oil_deficit_ytd,
     "STATE_NET_BUDGET_LENDING_YTD": minfin_fetchers.fetch_state_net_budget_lending_ytd,
     "STATE_FINANCIAL_ASSETS_BALANCE_YTD": minfin_fetchers.fetch_state_financial_assets_balance_ytd,
+    "STATE_BUDGET_REVENUE_Q": minfin_fetchers.fetch_state_budget_revenue_q,
+    "STATE_BUDGET_EXPENDITURE_Q": minfin_fetchers.fetch_state_budget_expenditure_q,
+    "STATE_BUDGET_DEFICIT_Q": minfin_fetchers.fetch_state_budget_deficit_q,
     "STATE_NON_OIL_DEFICIT": minfin_fetchers.fetch_state_non_oil_deficit,
     "PROPERTY_TAX": minfin_fetchers.fetch_property_tax,
     "LAND_TAX": minfin_fetchers.fetch_land_tax,
@@ -148,6 +151,8 @@ INDICATOR_IDS = [
     "INDIVIDUAL_INCOME_TAX", "STATE_BUDGET_REVENUE", "STATE_BUDGET_EXPENDITURE",
     "STATE_BUDGET_DEFICIT", "STATE_NON_OIL_DEFICIT",
     "STATE_BUDGET_REVENUE_YTD", "STATE_BUDGET_EXPENDITURE_YTD", "STATE_BUDGET_DEFICIT_YTD", "STATE_NON_OIL_DEFICIT_YTD", "STATE_NET_BUDGET_LENDING_YTD", "STATE_FINANCIAL_ASSETS_BALANCE_YTD",
+    # after the YTD and annual series above: the quarters are formed from their processed files
+    "STATE_BUDGET_REVENUE_Q", "STATE_BUDGET_EXPENDITURE_Q", "STATE_BUDGET_DEFICIT_Q",
     "PROPERTY_TAX", "LAND_TAX",
     "STATE_GOV_WAGES_EXPENDITURE", "STATE_GOV_CAPITAL_EXPENDITURE", "STATE_GOV_SUBSIDIES_EXPENDITURE",
     "STATE_DEBT_TOTAL",

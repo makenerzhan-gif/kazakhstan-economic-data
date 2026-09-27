@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448",
+  "dataset_id": "derived:STATE_BUDGET_EXPENDITURE_YTD+STATE_BUDGET_EXPENDITURE",
+  "indicator_id": "STATE_BUDGET_EXPENDITURE_Q",
+  "indicator_name": "State Budget Expenditure, quarterly",
+  "description": "Затраты государственного бюджета, поквартально",
+  "frequency": "quarterly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT, STATE budget (republican + local), one discrete quarter, from the Statistical Bulletin's January-to-month figures and the annual report (Q4 = year less January-September). Total expenditure («затраты»).",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2019-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
