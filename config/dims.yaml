@@ -346,7 +346,7 @@ datasets:
     agency: bns
     element_id: 6576
     layout: group_blocks
-    sheets: ["2009-2025"]
+    sheets: ["1991-2008", "2009-2025"]
     year_regex: "^\\s*(\\d{4})"
     groups: {ALL: "^все население", URBAN: "^городское население", RURAL: "^сельское население", MEN: "^мужчины", WOMEN: "^женщины"}
     subgroups: [MEN, WOMEN]
@@ -355,7 +355,25 @@ datasets:
     frequency: annual
     unit: "persons"
     category: population
-    note: "Items ALL, URBAN, RURAL and their MEN/WOMEN splits (ALL_MEN, URBAN_WOMEN …); 2009 onwards, recalculated by BNS for the 2022 regions."
+    note: "Items ALL, URBAN, RURAL and their MEN/WOMEN splits (ALL_MEN, URBAN_WOMEN …). 1991-2008 on the old boundaries (16 regions: Алматинская incl. Жетісу, ВКО incl. Абай, Карагандинская incl. Ұлытау, YKO = Туркестанская + Шымкент); 2009 onwards recalculated by BNS for the 2022 regions -- do not splice regions across 2008/2009. 1991-2007 = mean of the adjacent 1 January stocks (POPULATION_BOY_BY_REGION) exactly. 2008 is printed as the post-census 1 Jan 2009 stock (15 982 370), not an average (source_issues population_avg_2008). Census steps not backcast: +204 869 in 2008/09, +380 751 in 2021/22."
+
+  - id: POPULATION_BOY_BY_REGION
+    name_ru: "Численность населения на начало года по регионам: всё население, город, село, по полу"
+    name_en: "Population at 1 January by region: total, urban, rural, by sex"
+    agency: bns
+    element_id: 6584
+    layout: group_blocks
+    sheets: ["1991-2008", "2009-2026"]
+    year_regex: "^\\s*(\\d{4})"
+    groups: {ALL: "^все население", URBAN: "^городское население", RURAL: "^сельское население", MEN: "^мужчины", WOMEN: "^женщины"}
+    subgroups: [MEN, WOMEN]
+    as_at_start_of_year: true
+    min_items: 9
+    min_regions: 20
+    frequency: annual
+    unit: "persons"
+    category: population
+    note: "BNS table 6584 (KSP 611101), dated at the as-at date 1 January (the column «2009» = 2009-01-01). 1 Jan 1991 16 358 222; 1 Jan 1999 14 955 106; 1 Jan 2009 15 982 352; 1 Jan 2026 20 499 822. Old boundaries to 2008 and BNS's 2022-region recalculation from 2009 (as POPULATION_AVG_BY_REGION). The official series is not backcast after the censuses: the 1 Jan 2009 step includes +204 869 and the 1 Jan 2022 step +380 751 of census adjustment (demographic balance residual; zero in every other year 2000-2025)."
 
   - id: LABOUR_FORCE_BY_REGION
     name_ru: "Рабочая сила (15 лет и старше), по регионам"
@@ -2493,7 +2511,8 @@ datasets:
     frequency: annual
     unit: "USD"
     category: international
-    note: "Partner mass term of the gravity model. Item = ISO3 of the economy; 2000 onward."
+    first_year: 1960
+    note: "Partner mass term of the gravity model. Item = ISO3 of the economy; 1960 onward (1990s for the transition economies)."
 
   - id: WDI_GDP_CONST_USD
     name_ru: "ВВП стран мира, постоянные доллары США 2015 г. (Всемирный банк, WDI)"
@@ -2508,7 +2527,8 @@ datasets:
     frequency: annual
     unit: "USD (constant 2015)"
     category: international
-    note: "Real partner GDP. Item = ISO3; 2000 onward."
+    first_year: 1960
+    note: "Real partner GDP. Item = ISO3; 1960 onward (1990s for the transition economies)."
 
   - id: WDI_POPULATION
     name_ru: "Население стран мира (Всемирный банк, WDI)"
@@ -2523,7 +2543,160 @@ datasets:
     frequency: annual
     unit: "persons"
     category: international
-    note: "Item = ISO3; 2000 onward."
+    first_year: 1960
+    note: "Item = ISO3; 1960 onward. UN World Population Prospects estimates, not national statistics (Kazakhstan 1991: 17.28 mln against the BNS average 16.40 mln; use POPULATION_BNS)."
+
+  # ---------------------------------------------------------------- GDP before 2000 (added 2026-09-27)
+  # The early sheets of BNS tables 4439/4440/4441 (1990-1997 in the Soviet ОКОНХ branches,
+  # 1998-2006 and 2007-2009 in the older ОКЭД editions): the GDP aggregates only; branch
+  # detail is not comparable with today's sections and is not spliced.
+  - id: GDP_VOLUME_INDEX_AGGREGATES
+    name_ru: "ИФО ВВП методом производства и его агрегатов, 1991-2009 (ранние листы таблицы 4440)"
+    name_en: "GDP volume index by production approach, aggregates, 1991-2009 (early sheets of table 4440)"
+    agency: bns
+    element_id: 4440
+    layout: periods_across
+    sheets: ["1990-1997 (ОКОНХ)", "1998-2006 (ОКЭД ГК РК 03-2003)", "2007-2009 (ОКЭД ГК РК 03-2007)"]
+    label_col: 0
+    dictionary: gdp_production_aggregates
+    strict: false
+    min_items: 5
+    frequency: annual
+    category: national_accounts
+    unit: "% of previous year"
+    note: "Official BNS: GDP 1991 89.0, 1992 94.7, 1993 90.8, 1994 87.4, 1995 91.8, 1996 100.5, 1997 101.7, 1998 98.1, 1999 102.7 (= CIS Stat and the compendia «Национальные счета 1990-1999», «Казахстан за годы независимости»). Equal to GDP_REAL on every shared year 2000-2009; fills GDP_REAL 1991-1999. Items GDP, GVA, NET_TAXES, TAXES_PRODUCTS, SUBSIDIES_PRODUCTS, FISIM, TOTAL_BRANCHES."
+
+  - id: GDP_DEFLATOR_AGGREGATES
+    name_ru: "Дефлятор ВВП методом производства и его агрегатов, 1991-2009 (ранние листы таблицы 4441)"
+    name_en: "GDP deflator by production approach, aggregates, 1991-2009 (early sheets of table 4441)"
+    agency: bns
+    element_id: 4441
+    layout: periods_across
+    sheets: ["1990-1997 (ОКОНХ)", "1998-2006 (ОКЭД ГК РК 03-2003)", "2007-2009 (ОКЭД ГК РК 03-2007)"]
+    label_col: 0
+    dictionary: gdp_production_aggregates
+    strict: false
+    min_items: 5
+    frequency: annual
+    category: national_accounts
+    unit: "% of previous year"
+    note: "Official BNS: GDP deflator 1991 201.5, 1992 1 497.5, 1993 1 330.6. Equal to GDP_DEFLATOR 2000-2009; fills 1991-1999."
+
+  - id: GDP_PRODUCTION_AGGREGATES
+    name_ru: "ВВП методом производства и его агрегаты в текущих ценах, 1993-2009 (ранние листы таблицы 4439)"
+    name_en: "GDP by production approach and aggregates, current prices, 1993-2009 (early sheets of table 4439)"
+    agency: bns
+    element_id: 4439
+    layout: periods_across
+    sheets: ["1990-1997 (ОКОНХ)", " 1998-2006 (ОКЭД ГК РК 03-2003)", "2007-2009 (ОКЭД ГК РК 03-2007)"]
+    label_col: 0
+    dictionary: gdp_production_aggregates
+    strict: false
+    min_items: 5
+    frequency: annual
+    category: national_accounts
+    years_from: 1993
+    unit: "million KZT"
+    note: "BNS table 4439, tenge years only (1993 restated in tenge at 500 roubles = 1 tenge: 29 423.1 million; 1990-1992 are roubles and are not read -- 1990 47 870.5, 1991 85 863.1, 1992 1 217 689.2 million roubles). GDP equals GDP_INCOME_METHOD 2000-2009 (the production and income totals are the same figure); fills it for 1993-1999."
+
+  # ---------------------------------------------------------------- comparison countries from 1960 (added 2026-09-27)
+  # World Bank WDI panels of all economies, 1960 onward (the transition economies from 1989-1992);
+  # the three panels above were extended from 2000 to 1960 the same day.
+  - id: WDI_GDP_GROWTH
+    name_ru: "Рост реального ВВП стран мира, % (Всемирный банк, WDI)"
+    name_en: "Real GDP growth of world economies, percent (World Bank WDI NY.GDP.MKTP.KD.ZG)"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: NY.GDP.MKTP.KD.ZG
+    first_year: 1960
+    region: world
+    country: WLD
+    geography: "All economies (WDI; aggregates excluded)"
+    frequency: annual
+    unit: "percent, annual change"
+    category: international
+    note: "Item = ISO3; 1961 onward. For the CIS 1991-2000 equal to the CIS Stat official volume indices except Turkmenistan (1993: WDI +1.5, CIS Stat -10.0; 1995-99 differ) and Tajikistan 1992 (-29.0 vs -29.6). Kazakhstan 1991 -11.0, 1992 -5.3 = BNS table 4440."
+
+  - id: WDI_CPI_INFLATION
+    name_ru: "Инфляция (ИПЦ, среднегодовая), % — страны мира (Всемирный банк, WDI)"
+    name_en: "CPI inflation (annual average), percent — world economies (World Bank WDI FP.CPI.TOTL.ZG)"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: FP.CPI.TOTL.ZG
+    first_year: 1960
+    region: world
+    country: WLD
+    geography: "All economies (WDI; aggregates excluded)"
+    frequency: annual
+    unit: "percent, annual average change"
+    category: international
+    note: "Item = ISO3. IMF IFS-based; 1990s gaps: none for Uzbekistan, Tajikistan, Turkmenistan; Kazakhstan from 1994, Kyrgyzstan from 1996. Known errors: Azerbaijan 1992 -10.6% (CIS Stat +912%), Armenia 1994 3 374% (CIS Stat 4 962%). For the CIS prefer CIS_* datasets."
+
+  - id: WDI_GDP_DEFLATOR_INFLATION
+    name_ru: "Инфляция по дефлятору ВВП, % — страны мира (Всемирный банк, WDI)"
+    name_en: "GDP deflator inflation, percent — world economies (World Bank WDI NY.GDP.DEFL.KD.ZG)"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: NY.GDP.DEFL.KD.ZG
+    first_year: 1960
+    region: world
+    country: WLD
+    geography: "All economies (WDI; aggregates excluded)"
+    frequency: annual
+    unit: "percent, annual change"
+    category: international
+    note: "Item = ISO3; covers the early 1990s where CPI is missing (Kazakhstan 1992 1 472%)."
+
+  - id: WDI_GDP_PC_PPP
+    name_ru: "ВВП на душу населения по ППС, постоянные межд. доллары 2021 г. — страны мира (WDI)"
+    name_en: "GDP per capita, PPP, constant 2021 international dollars — world economies (WDI NY.GDP.PCAP.PP.KD)"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: NY.GDP.PCAP.PP.KD
+    first_year: 1960
+    region: world
+    country: WLD
+    geography: "All economies (WDI; aggregates excluded)"
+    frequency: annual
+    unit: "constant 2021 international dollars"
+    category: international
+    note: "Item = ISO3; 1990 onward."
+
+  - id: WDI_FX_OFFICIAL
+    name_ru: "Официальный курс национальной валюты к доллару США, среднее за год — страны мира (WDI)"
+    name_en: "Official exchange rate, LCU per USD, period average — world economies (WDI PA.NUS.FCRF)"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: PA.NUS.FCRF
+    first_year: 1960
+    region: world
+    country: WLD
+    geography: "All economies (WDI; aggregates excluded)"
+    frequency: annual
+    unit: "local currency units per USD, annual average"
+    category: international
+    note: "Item = ISO3. Denominations are mixed across redenominations (no adjustment); Russia 1994-95 missing; the euro area members carry the euro rate from 1999."
+
+  - id: WDI_NET_MIGRATION
+    name_ru: "Чистая миграция — страны мира (Всемирный банк, WDI)"
+    name_en: "Net migration — world economies (World Bank WDI SM.POP.NETM)"
+    agency: wb
+    fetcher: gravity
+    table: wdi
+    indicator: SM.POP.NETM
+    first_year: 1960
+    region: world
+    country: WLD
+    geography: "All economies (WDI; aggregates excluded)"
+    frequency: annual
+    unit: "persons"
+    category: international
+    note: "Item = ISO3. UN World Population Prospects estimates (not registration data); Kazakhstan's official registered flows are MIGRATION_ARRIVALS / MIGRATION_DEPARTURES."
 
   # ---------------------------------------------------------------- Taldau breakdowns (added 2026-09-25)
   # scripts/fetchers/taldau_dims.py: one dimension of a Taldau index opened into its children;
@@ -3650,3 +3823,55 @@ datasets:
     unit: "million KZT, January to the month"
     category: fiscal
     note: "Minfin Statistical Bulletin tables 12 (all local budgets = national), 12.1-12.20 (one per region, matched by the sheet title) and 18 (17 before 2021-09; general transfers), every edition since 2013-01 (2013-2018 from the yearly archives, via scripts/backfill_minfin_bulletins.py --dims). Dated the first day of the period's last month; year to date (difference within a year for the month). Items: REV, REV.TAX, REV.CIT, REV.PIT, REV.SOCIAL_TAX, REV.EXCISE, REV.NONTAX, REV.CAPITAL, REV.TRANSFERS, EXP, EXP.01-EXP.15 (functional groups; 04 education, 05 health, 06 social assistance, 07 housing), NET_LENDING, FIN_ASSETS, BALANCE, SUBVENTIONS, WITHDRAWALS. Regions: 16 to mid-2018 (South Kazakhstan), then 17 (Turkestan and Shymkent), 20 from the August 2024 edition (Abai, Zhetisu, Ulytau; the 2022-09…2024-07 editions omit them though the parent regions already exclude them -- source_issues). Checked: the regions add up to table 12 within 0.5% in every edition with all region tables, except the source errors of 2020-02 (Shymkent) and 2021-02/03 (table 12) in source_issues. Targeted transfers received = REV.TRANSFERS - SUBVENTIONS. REV.PIT and REV.SOCIAL_TAX by region = a monthly regional wage-bill proxy. National rows start in 2014-12 (earlier table 12 has no period column); the regions are there from 2013-01. Missing editions: 2020-04, 2025-12, 2026-04."
+
+  # ---------------------------------------------------------------- IMF WEO, all economies (added 2026-09-27)
+  - id: IMF_WEO_WORLD
+    name_ru: "МВФ WEO по всем странам: рост ВВП, инфляция, ВВП в долларах и по ППС, население, счёт текущих операций, долг, безработица"
+    name_en: "IMF WEO for all economies: GDP growth, inflation, GDP in USD and PPP, population, current account, debt, unemployment"
+    agency: imf
+    fetcher: imf_sdmx
+    flow: IMF.RES/WEO
+    key: "*.NGDP_RPCH+PCPIPCH+PCPIEPCH+NGDPD+NGDPDPC+PPPPC+LP+BCA_NGDPD+GGXWDG_NGDP+LUR+NGDP_D.A"
+    code_dims: [COUNTRY, INDICATOR]
+    region: world
+    countries_only: true
+    weo_outturn_only: true
+    geography: "All economies (IMF WEO; country groups excluded)"
+    min_items: 1000
+    frequency: annual
+    unit: "as named in item_name (percent; billions of USD; USD; international dollars; millions of persons; percent of GDP; index)"
+    category: international
+    note: "Item COUNTRY.INDICATOR (ISO3 . WEO code): NGDP_RPCH real GDP growth, PCPIPCH / PCPIEPCH CPI inflation (average / end of period), NGDPD GDP in billions of USD, NGDPDPC per capita USD, PPPPC per capita PPP, LP population (millions), BCA_NGDPD current account % of GDP, GGXWDG_NGDP gross government debt % of GDP, LUR unemployment, NGDP_D deflator. Latest WEO vintage in the API (October 2025 on 2026-09-27); only outturns are kept (years before each country's COUNTRY_UPDATE_DATE year). 1980 onward; the CIS mostly from 1992-1993 (no Russia 1992 growth). IMF staff figures, often different from national data in the 1990s (Kyrgyzstan 1993 -13.0 vs official -15.5; Kazakhstan CPI 1994 1 402% vs BNS 1 877%); for the CIS prefer CIS_* (CIS Stat). The Kazakh IMF_* scalars come from the same flow."
+
+  # ---------------------------------------------------------------- CPI basket weights (added 2026-09-27)
+  - id: CPI_WEIGHTS
+    name_ru: "Веса ИПЦ по разделам КООЛИЦ (официальные: БНС через МВФ 2005-2019, схема БНС 2022, доли продовольственных/непродовольственных товаров и услуг)"
+    name_en: "CPI weights by COICOP division (official: BNS via the IMF 2005-2019, the BNS 2022 scheme, food/non-food/services shares)"
+    agency: bns
+    fetcher: cpi_weights
+    refresh_days: 30
+    frequency: annual
+    unit: "percent of the basket"
+    category: prices
+    note: "2005-2019: CP01-CP12 (COICOP 1999) as BNS reports them to the IMF (IMF.STA/CPI WGT_PT, December of each year; January 2014 repeats 2013 and is not used). 2022: the full BNS scheme (divisions, food groups CP011_*, GOODS/FOOD/NONFOOD/SERVICES). FOOD/NONFOOD/SERVICES: 2023-2026 from BNS January releases, 2014/2016/2017/2019/2020 from press reprints of them (item_name says so). FOOD = CP01+CP02 (IMF 2014 36.97 vs published 37.0). No official division weights exist in public for 2020-2021 and 2023-2026 -- see CPI_WEIGHTS_ESTIMATED; none below the food groups, none by region, none before 2005."
+  - id: CPI_WEIGHTS_ESTIMATED
+    name_ru: "Веса ИПЦ по разделам КООЛИЦ, оценка по вкладам в прирост ИПЦ, 2020-2026"
+    name_en: "CPI weights by COICOP division estimated from contributions to CPI growth, 2020-2026"
+    agency: derived
+    fetcher: cpi_weights
+    output: estimated
+    frequency: annual
+    unit: "percent of the basket"
+    category: prices
+    note: "Derived, not published: w = 100·Σc·(I−100)/Σ(I−100)² per year from CPI_CONTRIBUTION_YTD and CPI_DETAIL_YTD, food divisions rescaled to the published FOOD share and the rest to 100 − FOOD. Error against the official 2022 scheme 0.1-0.5 pp for most divisions (CP01 38.87 vs 38.75), up to ±2 pp for CP04/CP06/CP12. From 2026 COICOP 2018 (CP12_2018, CP13_2018)."
+
+  # Derived from the year-to-date tables 4439/4440 (run after GVA_*_BY_SECTION_QUARTERLY).
+  - id: GVA_VOLUME_INDEX_BY_SECTION_DISCRETE
+    name_ru: "ИФО ВВП и ВДС по видам деятельности за отдельный квартал, к тому же кварталу прошлого года (выведено из нарастающих итогов)"
+    name_en: "GDP and GVA volume index by section for the discrete quarter, same quarter of previous year = 100 (derived from year-to-date data)"
+    agency: derived
+    fetcher: gdp_discrete
+    frequency: quarterly
+    unit: "% of the same quarter of the previous year"
+    category: national_accounts
+    note: "Derived from GVA_VOLUME_INDEX_BY_SECTION_QUARTERLY and GVA_NOMINAL_BY_SECTION_QUARTERLY: I_k = (I_ytd,k·N_ytd,k,t−1 − I_ytd,k−1·N_ytd,k−1,t−1)/(N_ytd,k,t−1 − N_ytd,k−1,t−1), previous-year prices. Gives the latest quarter before BNS's quarterly accounts (QNA_* end at 2026 Q1 on 2026-09-27; their Q2 is due with element 283161 on 28.10.2026). Rounding band about ±0.15 pp for GDP; Q4 carries the annual-survey residual of table 4439; the 4439/4440 basis differs from the QNA basis -- do not splice without a note. 2026 Q2: GDP 105.2."

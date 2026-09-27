@@ -1,0 +1,21 @@
+{
+  "source": "wb",
+  "source_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.DEFL.KD.ZG?format=json&per_page=20000&date=1960:2026",
+  "dataset_id": "wdi/NY.GDP.DEFL.KD.ZG",
+  "indicator_id": "WDI_GDP_DEFLATOR_INFLATION",
+  "indicator_name": "GDP deflator inflation, percent — world economies (World Bank WDI NY.GDP.DEFL.KD.ZG)",
+  "description": "Инфляция по дефлятору ВВП, % — страны мира (Всемирный банк, WDI)",
+  "frequency": "annual",
+  "unit": "percent, annual change",
+  "currency": "",
+  "geography": "All economies (WDI; aggregates excluded)",
+  "methodology": "Item = ISO3; covers the early 1990s where CPI is missing (Kazakhstan 1992 1 472%). WDI last updated 2026-07-13.",
+  "publication_date": "2026-07-13",
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "1961-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

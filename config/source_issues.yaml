@@ -297,3 +297,27 @@ issues:
       to 1-8% less than table 12 (2023: 12 513.5 against 13 552.4 bn).
     advice: Regional panels 2022-09 … 2024-07 miss three regions; use table 12 (national) for totals.
 
+  - id: population_avg_2008
+    kind: error
+    variable: POPULATION_BNS
+    observations:
+      - {date: "2008-12-31", value: 15982370.0}
+    evidence: >
+      BNS table 6576 (and Taldau 703834) print the 2008 «average annual population» as 15 982 370 -- the
+      post-census 1 January 2009 stock -- for the country and every region, urban/rural and sex split.
+      Every other year 1991-2007 equals the mean of the adjacent 1 January stocks of table 6584 exactly.
+      CIS Stat (15 776.95 thousand) and UNECE (15 776 938) publish the mean of the stocks.
+    advice: For per-capita work use 15 776 938 for 2008 (mean of the pre-census stocks), or the mean of POPULATION_BOY_BNS.
+
+  - id: population_census_steps
+    kind: break
+    variable: POPULATION_BOY_BNS
+    observations:
+      - {date: "2009-01-01", value: 15982352.0}
+      - {date: "2022-01-01", value: 19503159.0}
+    evidence: >
+      BNS did not backcast the population after the 2009 and 2021 censuses. The demographic balance
+      stock(t+1) − stock(t) − (births − deaths) − net migration is zero in every year 2000-2025 except
+      2008→2009 (+204 869, the 2009 census) and 2021→2022 (+380 751, the 2021 census).
+    advice: Add step dummies at 2009 and 2022, or spread each census residual over the intercensal years, before using population growth.
+

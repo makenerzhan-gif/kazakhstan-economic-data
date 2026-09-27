@@ -1,0 +1,21 @@
+{
+  "source": "wb",
+  "source_url": "https://api.worldbank.org/v2/country/all/indicator/PA.NUS.FCRF?format=json&per_page=20000&date=1960:2026",
+  "dataset_id": "wdi/PA.NUS.FCRF",
+  "indicator_id": "WDI_FX_OFFICIAL",
+  "indicator_name": "Official exchange rate, LCU per USD, period average — world economies (WDI PA.NUS.FCRF)",
+  "description": "Официальный курс национальной валюты к доллару США, среднее за год — страны мира (WDI)",
+  "frequency": "annual",
+  "unit": "local currency units per USD, annual average",
+  "currency": "USD",
+  "geography": "All economies (WDI; aggregates excluded)",
+  "methodology": "Item = ISO3. Denominations are mixed across redenominations (no adjustment); Russia 1994-95 missing; the euro area members carry the euro rate from 1999. WDI last updated 2026-07-13.",
+  "publication_date": "2026-07-13",
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "1960-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -12,6 +12,8 @@ wildcards, e.g. KAZ.*.*.USD.Q), the dimensions that make the item code and a div
     code_dims: [BOP_ACCOUNTING_ENTRY, INDICATOR]      → item_code "NETCD_T.CAB"
     divisor: 1000000                                   → million USD (the API gives units)
     period: flow | stock                               → how a quarter is dated
+    region: world, countries_only: true                → an all-country panel (WEO; groups dropped)
+    weo_outturn_only: true                             → drop the vintage's estimates/projections
 
 The item name joins the English names of the code dimensions from the dataflow's own
 codelists (the structure query, references=all): «Net (credits less debits) | Current
@@ -141,12 +143,19 @@ def parse(content: bytes, ds: dict, names: dict[str, dict[str, str]]) -> list[di
             value = float(raw) / divisor
         except ValueError:
             continue
+        if ds.get("countries_only") and not re.fullmatch(r"[A-Z]{3}", r.get("COUNTRY", "")):
+            continue                      # WEO country groups (G001, GX123 …) are not economies
+        if ds.get("weo_outturn_only"):
+            vintage = imf.weo_vintage_year(r)
+            if vintage is not None and int(d[:4]) >= vintage:
+                continue                  # estimates/projections of the WEO vintage are not kept
         code = ".".join(r[k] for k in code_dims)
         name = " | ".join(names.get(k, {}).get(r[k], r[k]) for k in code_dims)
         if (d, code) in seen:
             raise ValueError(f"{ds['id']}: two observations for {code} on {d} — code_dims do not identify a series")
         seen[(d, code)] = True
-        records.append({"date": d, "region": "national", "item_code": code, "item_name": name, "value": round(value, 6)})
+        records.append({"date": d, "region": ds.get("region", "national"), "item_code": code, "item_name": name,
+                        "value": round(value, 6)})
     return records
 
 

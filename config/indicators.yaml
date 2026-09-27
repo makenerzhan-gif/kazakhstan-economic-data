@@ -24,6 +24,8 @@ indicators:
     observation_evidence: "единица: 'index (physical volume, % of previous period)'"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    gaps_filled_from: {dataset: GDP_VOLUME_INDEX_AGGREGATES, item: GDP, region: national}
+    gaps_filled_note: "1991-1999 from the early sheets of BNS table 4440 (1991 89.0, 1992 94.7, 1995 91.8); equal to the Taldau series on 2000-2009."
 
   - id: GDP_NOMINAL
     name_ru: "ВВП, номинальный"
@@ -286,6 +288,8 @@ indicators:
     source_status: confirmed
     observation_type: period_ratio
     observation_evidence: "паспорт: отношение к базе (отношение вдс отчетного периода к )"
+    gaps_filled_from: {dataset: GDP_DEFLATOR_AGGREGATES, item: GDP, region: national}
+    gaps_filled_note: "1991-1999 from the early sheets of BNS table 4441 (1992 1 497.5); equal to the Taldau series on 2000-2009."
 
   - id: GFCF
     name_ru: "Валовое накопление основного капитала"
@@ -604,6 +608,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "паспорт: ВВП методом доходов — поток СНС"
+    gaps_filled_from: {dataset: GDP_PRODUCTION_AGGREGATES, item: GDP, region: national, scale: 1000000}
+    gaps_filled_note: "1993-1999 from the production-method GDP of BNS table 4439 (the same total as the income method on 2000-2009)."
 
   - id: GROSS_OUTPUT
     name_ru: "Валовой выпуск"
@@ -1133,6 +1139,19 @@ indicators:
     derived_from: {dataset: POPULATION_AVG_BY_REGION, item: ALL, region: national}
     derived_note: "national row of table 6576; 2009-2025 instead of Taldau's 2021-2025, equal to it except 2021 (19 000 687 vs 19 000 987.5 -- a later BNS revision)"
 
+
+  - id: POPULATION_BOY_BNS
+    name_ru: "Численность населения на 1 января"
+    name_en: "Population at 1 January"
+    agency: bns
+    frequency: annual
+    unit: "persons"
+    category: demographic
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "таблица 6584: численность населения на начало года"
+    derived_from: {dataset: POPULATION_BOY_BY_REGION, item: ALL, region: national}
+    derived_note: "national row of table 6584, 1 Jan 1991 onward, dated at the as-at date (YYYY-01-01); census steps 2009 (+204 869) and 2022 (+380 751) are not backcast by BNS (source_issues)"
   - id: REAL_WAGE_INDEX
     name_ru: "Индекс реальной заработной платы"
     name_en: "Real Wage Index"

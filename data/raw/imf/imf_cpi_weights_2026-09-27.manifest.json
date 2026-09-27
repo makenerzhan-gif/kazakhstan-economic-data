@@ -1,0 +1,6 @@
+{
+  "downloaded_at": "2026-09-27T19:12:35.236524",
+  "raw_file": "imf_cpi_weights_2026-09-27.json",
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/CPI/+/KAZ.CPI.*.WGT_PT.M?dimensionAtObservation=TIME_PERIOD&attributes=none&measures=all",
+  "seed": "bns_cpi_weights.csv"
+}

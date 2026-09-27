@@ -1,0 +1,125 @@
+date,region,item_code,item_name,value,transformation
+1991-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,202.2,level
+1992-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,1420.0,level
+1993-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,1309.7,level
+1994-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,1700.1,level
+1995-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,261.1,level
+1996-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,134.5,level
+1997-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,84.5,level
+1998-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,117.2,level
+1999-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,180.1,level
+2000-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,117.1,level
+2001-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,107.2,level
+2002-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,114.0,level
+2003-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,102.4,level
+2004-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,112.1,level
+2005-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,100.9,level
+2006-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,120.6,level
+2007-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,115.2,level
+2008-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,126.3,level
+2009-12-31,national,FISIM,Косвенно-измеряемые услуги финансового посредничества,85.7,level
+1991-12-31,national,GDP,Валовой внутренний продукт,201.5,level
+1992-12-31,national,GDP,Валовой внутренний продукт,1497.5,level
+1993-12-31,national,GDP,Валовой внутренний продукт,1330.6,level
+1994-12-31,national,GDP,Валовой внутренний продукт,1646.7,level
+1995-12-31,national,GDP,Валовой внутренний продукт,260.9,level
+1996-12-31,national,GDP,Валовой внутренний продукт,138.9,level
+1997-12-31,national,GDP,Валовой внутренний продукт,116.1,level
+1998-12-31,national,GDP,Валовой внутренний продукт,105.6,level
+1999-12-31,national,GDP,Валовой внутренний продукт,113.3,level
+2000-12-31,national,GDP,Валовой внутренний продукт,117.4,level
+2001-12-31,national,GDP,Валовой внутренний продукт,110.1,level
+2002-12-31,national,GDP,Валовой внутренний продукт,105.9,level
+2003-12-31,national,GDP,Валовой внутренний продукт,111.7,level
+2004-12-31,national,GDP,Валовой внутренний продукт,116.1,level
+2005-12-31,national,GDP,Валовой внутренний продукт,117.9,level
+2006-12-31,national,GDP,Валовой внутренний продукт,121.5,level
+2007-12-31,national,GDP,Валовой внутренний продукт,115.5,level
+2008-12-31,national,GDP,Валовой внутренний продукт,121.0,level
+2009-12-31,national,GDP,Валовой внутренний продукт,104.7,level
+1991-12-31,national,GVA,Валовая добавленная стоимость,202.2,level
+1992-12-31,national,GVA,Валовая добавленная стоимость,1420.4,level
+1993-12-31,national,GVA,Валовая добавленная стоимость,1309.6,level
+1994-12-31,national,GVA,Валовая добавленная стоимость,1694.8,level
+1995-12-31,national,GVA,Валовая добавленная стоимость,260.9,level
+1996-12-31,national,GVA,Валовая добавленная стоимость,138.9,level
+1997-12-31,national,GVA,Валовая добавленная стоимость,116.8,level
+1998-12-31,national,GVA,Валовая добавленная стоимость,104.3,level
+1999-12-31,national,GVA,Валовая добавленная стоимость,113.6,level
+2000-12-31,national,GVA,Валовая добавленная стоимость,116.4,level
+2001-12-31,national,GVA,Валовая добавленная стоимость,109.7,level
+2002-12-31,national,GVA,Валовая добавленная стоимость,105.6,level
+2003-12-31,national,GVA,Валовая добавленная стоимость,112.2,level
+2004-12-31,national,GVA,Валовая добавленная стоимость,117.1,level
+2005-12-31,national,GVA,Валовая добавленная стоимость,117.9,level
+2006-12-31,national,GVA,Валовая добавленная стоимость,121.2,level
+2007-12-31,national,GVA,Валовая добавленная стоимость,114.8,level
+2008-12-31,national,GVA,Валовая добавленная стоимость,121.2,level
+2009-12-31,national,GVA,Валовая добавленная стоимость,107.0,level
+2000-12-31,national,NET_TAXES,Чистые налоги на продукты и импорт,133.3,level
+2001-12-31,national,NET_TAXES,Чистые налоги на продукты и импорт,115.5,level
+2002-12-31,national,NET_TAXES,Чистые налоги на продукты и импорт,109.1,level
+2003-12-31,national,NET_TAXES,Чистые налоги на продукты и импорт,105.7,level
+2004-12-31,national,NET_TAXES,Чистые налоги на продукты и импорт,103.1,level
+2005-12-31,national,NET_TAXES,Чистые налоги на продукты и импорт,117.6,level
+2006-12-31,national,NET_TAXES,Чистые налоги на продукты и импорт,126.5,level
+2007-12-31,national,NET_TAXES,Чистые налоги на продукты и импорт,125.3,level
+2008-12-31,national,NET_TAXES,Чистые налоги на продукты и импорт,118.3,level
+2009-12-31,national,NET_TAXES,Чистые налоги на продукты и импорт,72.3,level
+1991-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),144.3,level
+1992-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),428.9,level
+1993-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),1227.0,level
+1994-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),1466.4,level
+1995-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),261.1,level
+1996-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),139.0,level
+1997-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),116.8,level
+1998-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),107.1,level
+1999-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),107.1,level
+2000-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),113.2,level
+2001-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),108.4,level
+2002-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),105.9,level
+2003-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),110.9,level
+2004-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),115.4,level
+2005-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),124.3,level
+2006-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),119.3,level
+2007-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),101.7,level
+2008-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),130.9,level
+2009-12-31,national,SUBSIDIES_PRODUCTS,Субсидии на продукты (и импорт),108.0,level
+1991-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),135.5,level
+1992-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),1450.7,level
+1993-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),1601.2,level
+1994-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),1026.5,level
+1995-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),261.0,level
+1996-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),139.0,level
+1997-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),84.5,level
+1998-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),130.6,level
+1999-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),109.0,level
+2000-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),133.0,level
+2001-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),115.4,level
+2002-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),109.1,level
+2003-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),105.7,level
+2004-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),103.2,level
+2005-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),117.7,level
+2006-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),126.4,level
+2007-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),125.0,level
+2008-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),118.5,level
+2009-12-31,national,TAXES_PRODUCTS,Налоги на продукты (и импорт),73.1,level
+1991-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,202.2,level
+1992-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,1420.4,level
+1993-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,1309.6,level
+1994-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,1694.8,level
+1995-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,260.9,level
+1996-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,138.9,level
+1997-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,116.8,level
+1998-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,104.4,level
+1999-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,114.0,level
+2000-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,116.4,level
+2001-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,109.7,level
+2002-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,105.7,level
+2003-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,112.0,level
+2004-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,117.0,level
+2005-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,117.4,level
+2006-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,121.2,level
+2007-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,114.9,level
+2008-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,121.4,level
+2009-12-31,national,TOTAL_BRANCHES,Итого (всего) по отраслям,106.1,level

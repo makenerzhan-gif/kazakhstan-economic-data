@@ -1,0 +1,21 @@
+{
+  "source": "wb",
+  "source_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.PP.KD?format=json&per_page=20000&date=1960:2026",
+  "dataset_id": "wdi/NY.GDP.PCAP.PP.KD",
+  "indicator_id": "WDI_GDP_PC_PPP",
+  "indicator_name": "GDP per capita, PPP, constant 2021 international dollars — world economies (WDI NY.GDP.PCAP.PP.KD)",
+  "description": "ВВП на душу населения по ППС, постоянные межд. доллары 2021 г. — страны мира (WDI)",
+  "frequency": "annual",
+  "unit": "constant 2021 international dollars",
+  "currency": "",
+  "geography": "All economies (WDI; aggregates excluded)",
+  "methodology": "Item = ISO3; 1990 onward. WDI last updated 2026-07-13.",
+  "publication_date": "2026-07-13",
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "1990-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

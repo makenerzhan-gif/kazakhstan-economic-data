@@ -18,7 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib import dims, metadata, pipeline_logging, revisions, validation  # noqa: E402
-from fetchers import bns_balances, bns_cpi, comtrade, damu, gfss, minfin_regions, neer_import, kase_ifrs, nbk_expectations, nbk_fx, bns_dims, bns_living, bns_resource_use, bns_trade, eia, gravity, imf_dims, kase_eurobonds, nbk_dims, regional_balance, taldau_dims, wb  # noqa: E402
+from fetchers import bns_balances, bns_cpi, comtrade, cpi_weights, gdp_discrete, damu, gfss, minfin_regions, neer_import, kase_ifrs, nbk_expectations, nbk_fx, bns_dims, bns_living, bns_resource_use, bns_trade, eia, gravity, imf_dims, kase_eurobonds, nbk_dims, regional_balance, taldau_dims, wb  # noqa: E402
 
 # Keyed by a dataset's `fetcher` when it names one, else by its agency.
 AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb.fetch, "eia": eia.fetch,
@@ -32,7 +32,9 @@ AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb
                    "nbk_expectations": nbk_expectations.fetch, "kase_ifrs": kase_ifrs.fetch,
                    "nbk_fx": nbk_fx.fetch, "comtrade": comtrade.fetch,
                    "gfss": gfss.fetch, "neer_import": neer_import.fetch,
-                   "minfin_regions": minfin_regions.fetch}
+                   "minfin_regions": minfin_regions.fetch,
+                   "cpi_weights": cpi_weights.fetch,
+                   "gdp_discrete": gdp_discrete.fetch}
 METHODOLOGY = {"bns": "Bureau of National Statistics official methodology",
                "wb": "World Bank Commodity Markets (Pink Sheet / Commodity Markets Outlook), nominal US dollars",
                "eia": "U.S. EIA Short-Term Energy Outlook, monthly release",
