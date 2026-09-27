@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/business-statistics/stat-energy/spreadsheets/?name=19275",
+  "dataset_id": "19275",
+  "indicator_id": "ENERGY_BALANCE_NATURAL",
+  "indicator_name": "Energy balance of Kazakhstan (fuels × flows), natural units",
+  "description": "Топливно-энергетический баланс Республики Казахстан, в натуральном выражении",
+  "frequency": "annual",
+  "unit": "the fuel's own unit, in item_name (тыс. тонн, млн куб. м, млн кВт·ч, тыс. Гкал); S0.teplotvornaya_* = net calorific value, TJ per unit",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Same flows as ENERGY_BALANCE_TJ; the fuel code includes the unit, so a fuel whose unit changed starts a new series.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2021-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

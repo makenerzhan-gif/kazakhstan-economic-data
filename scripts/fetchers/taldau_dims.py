@@ -17,6 +17,8 @@ sum_check (false for ratios).
 from __future__ import annotations
 
 import calendar
+import gzip
+import io
 import json
 import sys
 from datetime import date, datetime
@@ -107,3 +109,90 @@ def fetch(ds: dict) -> tuple[list[dict], dict]:
                 for d, v in total.items()]
     return records, {"frequency": freq, "source_url": TREE_URL, "dataset_id": f"taldau-index-{ds['index_id']}",
                      "note": ds.get("note", "")}
+
+
+# ---------------------------------------------------------------- regional × item, monthly (fetcher: taldau_regional)
+#
+# Added 2026-09-27 for industry by region: an index with a region dimension and an item
+# dimension (ОКЭД activity, industrial product, shipment direction …). For each configured
+# item two calls: the national node, then the region dimension opened one level (the oblasts
+# and the three cities). Items are listed in config/dims.yaml (`items`: Taldau term id and
+# code), so the dataset does not drift when BNS adds terms. Other dimensions stay at the
+# segment's defaults (`terms`); `fixed` pins extra positions per item group (e.g. the
+# shipment direction). Monthly values are dated the first day of the month (the dims
+# convention for flows); the raw answers of a run are archived as one gzipped JSON file.
+
+def _post(ds: dict, terms: str, parent: str = "", pos: str = "0", term: str = NATIONAL_TERM) -> list[dict]:
+    body = {"p_parent_id": parent, "p_index_id": ds["index_id"], "p_keyword": "", "p_period_id": ds.get("period_id", "4"),
+            "p_measure_id": ds.get("measure_id", "0"), "p_term_id": term, "p_terms": terms, "p_dicIds": ds["dic_ids"],
+            "idx": pos, "filter": '[{"property":null,"value":null}]', "id": ""}
+    last = None
+    for attempt in range(3):
+        try:
+            resp = requests.post(TREE_URL, data=body, headers=HEADERS, timeout=120)
+            resp.raise_for_status()
+            return json.loads(resp.content)
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout, ValueError) as exc:
+            last = exc
+    raise last  # type: ignore[misc]
+
+
+def monthly_values(node: dict) -> dict[str, float]:
+    """{YYYY-MM-01: value} from a node's 'yMMYYYY' keys (period 4 = month)."""
+    return {d[:8] + "01": v for d, v in node_values(node, "monthly").items()}
+
+
+def fetch_regional(ds: dict) -> tuple[list[dict], dict]:
+    """`refresh_days` (default 0): the stored records are returned while the last download is
+    younger -- a product dataset takes a few hundred calls and Taldau updates monthly."""
+    if ds.get("refresh_days"):
+        from fetchers import imf_dims
+        fresh = imf_dims.stored_if_fresh(ds, "bns", ds["id"])
+        if fresh:
+            return fresh
+    today = date.today()
+    scale = float(ds.get("scale", 1))
+    base = ds["terms"].split(",")
+    rp, ip = int(ds.get("region_pos", 0)), int(ds["item_pos"])
+    variants = ds.get("variants") or [{"suffix": "", "fixed": {}}]
+    records, raw, unknown, missing = [], [], set(), []
+    for item in ds["items"]:
+        for var in variants:
+            terms = list(base)
+            terms[ip], terms[rp] = str(item["term"]), NATIONAL_TERM
+            for p, t in (var.get("fixed") or {}).items():
+                terms[int(p)] = str(t)
+            tstr = ",".join(terms)
+            code = f"{item['code']}{var['suffix']}"
+            top = [n for n in _post(ds, tstr) if str(n.get("id")) == NATIONAL_TERM]
+            regions = _post(ds, tstr, parent=NATIONAL_TERM, pos=str(rp), term=NATIONAL_TERM) if top and str(top[0].get("leaf")).lower() != "true" else []
+            raw.append({"code": code, "terms": tstr, "national": top, "regions": regions})
+            if not top:
+                missing.append(code)
+                continue
+            name = " ".join(str(item["name"]).split())      # the node's own text is the region's
+            unit = top[0].get("measureName")
+            name = f"{name}{var.get('name', '')}" + (f", {unit.lower()}" if unit and ds.get("unit_in_name") else "")
+            for d, v in monthly_values(top[0]).items():
+                records.append({"date": d, "region": dims.NATIONAL, "item_code": code, "item_name": name, "value": round(v / scale, 6)})
+            for node in regions:
+                hit = dims.match_region(node.get("text", ""))
+                if hit is None:
+                    unknown.add(node.get("text"))
+                    continue
+                for d, v in monthly_values(node).items():
+                    records.append({"date": d, "region": hit[0], "item_code": code, "item_name": name, "value": round(v / scale, 6)})
+    if unknown:
+        _structural(ds, f"region nodes matching no entry of dictionaries/regions.csv: {sorted(unknown)}")
+    if len(missing) > len(ds["items"]) * len(variants) * 0.2:
+        _structural(ds, f"no national node for {missing}")
+    # gzip with a fixed mtime: an unchanged answer gives identical bytes (raw_store dedups them)
+    buf = io.BytesIO()
+    with gzip.GzipFile(fileobj=buf, mode="wb", mtime=0) as gz:
+        gz.write(json.dumps(raw, ensure_ascii=False).encode())
+    path = raw_store.save_raw_bytes("bns", ds["id"], today, "json.gz", buf.getvalue())
+    raw_store.write_download_manifest("bns", ds["id"], today, {
+        "downloaded_at": datetime.now().isoformat(), "raw_file": path.name, "source_url": TREE_URL, "index_id": ds["index_id"]})
+    warnings = [f"no national node (term not in this index any more?): {missing}"] if missing else []
+    return records, {"frequency": ds["frequency"], "source_url": TREE_URL, "dataset_id": f"taldau-index-{ds['index_id']}",
+                     "note": ds.get("note", ""), "warnings": warnings}

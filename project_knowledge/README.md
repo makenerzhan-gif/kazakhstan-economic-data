@@ -14,6 +14,10 @@ full histories, full metadata and raw archives stay in the repository.
   per item and region the index to the previous month, to December, year on year and
   January–month year on year, and the contribution to CPI growth (p.p.) — COICOP divisions,
   goods and services, core baskets, regions. History: `data/processed/dims/cpi_detail_*.csv`.
+- `latest/resource_use_latest.csv` — BNS «Ресурсы и использование отдельных видов продукции»:
+  January to the latest month and the same period a year earlier, per product (~300 mining,
+  manufacturing and food products, grain) — production, imports, exports, sales on the home
+  market, in the product's own unit. History and the monthly figures: `RESOURCE_USE_*`.
 - `DATA_CATALOG.md` — counts by agency and frequency, what is not connected, and the known
   problems in the sources (config/source_issues.yaml).
 - `DATA_DICTIONARY.md` — per series: unit, frequency, period, the first sentence of the

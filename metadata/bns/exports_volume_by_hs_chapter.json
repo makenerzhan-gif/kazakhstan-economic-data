@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/446905/file/ru/",
+  "dataset_id": "446905,measure=tonnes",
+  "indicator_id": "EXPORTS_VOLUME_BY_HS_CHAPTER",
+  "indicator_name": "Goods exports by HS chapter (2 digits), tonnes, monthly",
+  "description": "Экспорт товаров по группам (главам) ТН ВЭД ЕАЭС, тонн, помесячно",
+  "frequency": "monthly",
+  "unit": "tonnes",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "National. TOTAL is the published national row; a chapter is the sum of its 6-digit lines over the regional blocks (months whose lines miss the national row keep TOTAL only). HS99 = code 999999 «Прочие товары»; chapter 93 is not published. Tonnes: natural gas (271121) and electricity (2716) are published in additional units only — zero tonnes. Raw file: bns_exports_2026-09-16.xlsx.",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2015-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

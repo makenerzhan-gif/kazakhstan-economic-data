@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/ru/industries/economy/foreign-market/spreadsheets/?name=19065",
+  "dataset_id": "19065",
+  "indicator_id": "RESOURCE_USE_ANNUAL",
+  "indicator_name": "Resources and use of individual products, annual final data, physical units",
+  "description": "Ресурсы и использование отдельных видов продукции (товаров) и сырья, годовые (окончательные) данные",
+  "frequency": "annual",
+  "unit": "physical units, as in item_name",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "The annual editions («… (2024г.)», published about eleven months after the year), 2021 onward; same items as RESOURCE_USE_MONTHLY. Years before 2021: sum RESOURCE_USE_MONTHLY.",
+  "publication_date": "2026-09-21",
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2021-12-31",
+  "period_end": "2024-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

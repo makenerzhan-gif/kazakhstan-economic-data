@@ -1849,6 +1849,7 @@ datasets:
     name_en: "Goods exports by commodity group (HS prefixes), thousand USD, monthly"
     agency: bns
     fetcher: bns_trade
+    flow: exports
     element_id: 446905
     measure: usd
     dictionary: hs_export_groups
@@ -1869,6 +1870,415 @@ datasets:
     unit: "tonnes"
     category: external_trade
     note: "Same groups as EXPORTS_VALUE_BY_COMMODITY_GROUP. Natural gas (271121) is published in cubic metres only — its tonnes are zero here."
+
+  - id: EXPORTS_VALUE_BY_HS_CHAPTER
+    name_ru: "Экспорт товаров по группам (главам) ТН ВЭД ЕАЭС, тыс. долларов США, помесячно"
+    name_en: "Goods exports by HS chapter (2 digits), thousand USD, monthly"
+    agency: bns
+    fetcher: bns_trade
+    flow: exports
+    element_id: 446905
+    measure: usd
+    dictionary: hs_chapters
+    min_items: 80
+    frequency: monthly
+    unit: "thousand USD"
+    category: external_trade
+    note: "National. TOTAL is the published national row; a chapter is the sum of its 6-digit lines over the regional blocks (months whose lines miss the national row keep TOTAL only). HS99 = code 999999 «Прочие товары»; chapter 93 is not published."
+
+  - id: EXPORTS_VOLUME_BY_HS_CHAPTER
+    name_ru: "Экспорт товаров по группам (главам) ТН ВЭД ЕАЭС, тонн, помесячно"
+    name_en: "Goods exports by HS chapter (2 digits), tonnes, monthly"
+    agency: bns
+    fetcher: bns_trade
+    flow: exports
+    element_id: 446905
+    measure: tonnes
+    dictionary: hs_chapters
+    min_items: 80
+    frequency: monthly
+    unit: "tonnes"
+    category: external_trade
+    note: "National. TOTAL is the published national row; a chapter is the sum of its 6-digit lines over the regional blocks (months whose lines miss the national row keep TOTAL only). HS99 = code 999999 «Прочие товары»; chapter 93 is not published. Tonnes: natural gas (271121) and electricity (2716) are published in additional units only — zero tonnes."
+
+  - id: IMPORTS_VALUE_BY_HS_CHAPTER
+    name_ru: "Импорт товаров по группам (главам) ТН ВЭД ЕАЭС, тыс. долларов США, помесячно"
+    name_en: "Goods imports by HS chapter (2 digits), thousand USD, monthly"
+    agency: bns
+    fetcher: bns_trade
+    flow: imports
+    element_id: 446906
+    measure: usd
+    dictionary: hs_chapters
+    min_items: 80
+    frequency: monthly
+    unit: "thousand USD"
+    category: external_trade
+    note: "National. TOTAL is the published national row; a chapter is the sum of its 6-digit lines over the regional blocks (months whose lines miss the national row keep TOTAL only). HS99 = code 999999 «Прочие товары»; chapter 93 is not published."
+
+  - id: IMPORTS_VOLUME_BY_HS_CHAPTER
+    name_ru: "Импорт товаров по группам (главам) ТН ВЭД ЕАЭС, тонн, помесячно"
+    name_en: "Goods imports by HS chapter (2 digits), tonnes, monthly"
+    agency: bns
+    fetcher: bns_trade
+    flow: imports
+    element_id: 446906
+    measure: tonnes
+    dictionary: hs_chapters
+    min_items: 80
+    frequency: monthly
+    unit: "tonnes"
+    category: external_trade
+    note: "National. TOTAL is the published national row; a chapter is the sum of its 6-digit lines over the regional blocks (months whose lines miss the national row keep TOTAL only). HS99 = code 999999 «Прочие товары»; chapter 93 is not published. Tonnes: natural gas (271121) and electricity (2716) are published in additional units only — zero tonnes."
+
+  - id: EXPORTS_VOLUME_BY_REGION_PRODUCT
+    name_ru: "Экспорт основных сырьевых и промышленных товаров по регионам, тонн, помесячно"
+    name_en: "Goods exports of main commodities by region, tonnes, monthly"
+    agency: bns
+    fetcher: bns_trade
+    flow: exports
+    element_id: 446905
+    measure: tonnes
+    dictionary: hs_balance_products
+    by_region: true
+    min_items: 10
+    frequency: monthly
+    unit: "tonnes"
+    category: external_trade
+    note: "The products of REGIONAL_PRODUCT_BALANCE (dictionaries/hs_balance_products.csv, codes as in INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY), by the region where the exporter is registered. TOTAL is the published row."
+
+  - id: IMPORTS_VOLUME_BY_REGION_PRODUCT
+    name_ru: "Импорт основных сырьевых и промышленных товаров по регионам, тонн, помесячно"
+    name_en: "Goods imports of main commodities by region, tonnes, monthly"
+    agency: bns
+    fetcher: bns_trade
+    flow: imports
+    element_id: 446906
+    measure: tonnes
+    dictionary: hs_balance_products
+    by_region: true
+    min_items: 10
+    frequency: monthly
+    unit: "tonnes"
+    category: external_trade
+    note: "The products of REGIONAL_PRODUCT_BALANCE (dictionaries/hs_balance_products.csv, codes as in INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY), by the region where the importer is registered. TOTAL is the published row."
+
+  - id: EXPORTS_VALUE_BY_REGION_HS_SECTION
+    name_ru: "Экспорт товаров по регионам и разделам ТН ВЭД ЕАЭС, тыс. долларов США, помесячно"
+    name_en: "Goods exports by region and HS section, thousand USD, monthly"
+    agency: bns
+    fetcher: bns_trade
+    flow: exports
+    element_id: 446905
+    measure: usd
+    dictionary: hs_sections
+    by_region: true
+    min_items: 20
+    frequency: monthly
+    unit: "thousand USD"
+    category: external_trade
+    note: "21 regions plus national. TOTAL is the published row (national or the region's heading row); a section is the sum of its 6-digit lines in the region, kept only when the region's lines reproduce its heading row. Region = where the exporter is registered, not where the good is produced or consumed. OTHER = code 999999."
+
+  - id: EXPORTS_VOLUME_BY_REGION_HS_SECTION
+    name_ru: "Экспорт товаров по регионам и разделам ТН ВЭД ЕАЭС, тонн, помесячно"
+    name_en: "Goods exports by region and HS section, tonnes, monthly"
+    agency: bns
+    fetcher: bns_trade
+    flow: exports
+    element_id: 446905
+    measure: tonnes
+    dictionary: hs_sections
+    by_region: true
+    min_items: 20
+    frequency: monthly
+    unit: "tonnes"
+    category: external_trade
+    note: "21 regions plus national. TOTAL is the published row (national or the region's heading row); a section is the sum of its 6-digit lines in the region, kept only when the region's lines reproduce its heading row. Region = where the exporter is registered, not where the good is produced or consumed. OTHER = code 999999."
+
+  - id: IMPORTS_VALUE_BY_REGION_HS_SECTION
+    name_ru: "Импорт товаров по регионам и разделам ТН ВЭД ЕАЭС, тыс. долларов США, помесячно"
+    name_en: "Goods imports by region and HS section, thousand USD, monthly"
+    agency: bns
+    fetcher: bns_trade
+    flow: imports
+    element_id: 446906
+    measure: usd
+    dictionary: hs_sections
+    by_region: true
+    min_items: 20
+    frequency: monthly
+    unit: "thousand USD"
+    category: external_trade
+    note: "21 regions plus national. TOTAL is the published row (national or the region's heading row); a section is the sum of its 6-digit lines in the region, kept only when the region's lines reproduce its heading row. Region = where the importer is registered, not where the good is produced or consumed. OTHER = code 999999."
+
+  - id: IMPORTS_VOLUME_BY_REGION_HS_SECTION
+    name_ru: "Импорт товаров по регионам и разделам ТН ВЭД ЕАЭС, тонн, помесячно"
+    name_en: "Goods imports by region and HS section, tonnes, monthly"
+    agency: bns
+    fetcher: bns_trade
+    flow: imports
+    element_id: 446906
+    measure: tonnes
+    dictionary: hs_sections
+    by_region: true
+    min_items: 20
+    frequency: monthly
+    unit: "tonnes"
+    category: external_trade
+    note: "21 regions plus national. TOTAL is the published row (national or the region's heading row); a section is the sum of its 6-digit lines in the region, kept only when the region's lines reproduce its heading row. Region = where the importer is registered, not where the good is produced or consumed. OTHER = code 999999."
+
+
+  # ---------------------------------------------------------------- resources and use of products (physical units)
+  # BNS «Ресурсы и использование отдельных видов продукции (товаров) и сырья в РК», publication
+  # 19065 (archive 72035), scripts/fetchers/bns_resource_use.py. Item «<product>.<article>»:
+  # RES = PROD + IMP (+ EST), USE = RES, DOM = USE − EXP. History from 2018-03 was read once by
+  # scripts/backfill_resource_use.py; a daily run re-reads the latest editions over it.
+  - id: RESOURCE_USE_MONTHLY
+    name_ru: "Ресурсы и использование отдельных видов продукции (товаров) и сырья: производство, импорт, экспорт, реализация на внутреннем рынке, помесячно"
+    name_en: "Resources and use of individual products: production, imports, exports, domestic sales, monthly, physical units"
+    agency: bns
+    fetcher: bns_resource_use
+    period: monthly
+    min_items: 150
+    frequency: monthly
+    unit: "physical units, as in item_name (тыс. тонн, тонн, млн. куб. м, млн. кВт·ч, штук …)"
+    category: production
+    note: "National. ~270 industrial products (table 1), grain and vegetables (crops_*, imports and exports only since 2022), socially important foods (szpt_*, from 2022-05). Articles: RES ресурсы, PROD производство, IMP импорт, EST оценка, USE использование, EXP экспорт, DOM реализация на внутреннем рынке. Each month carries its latest print (the edition a year later). 2018-04 is missing (that edition is a rar archive)."
+
+  - id: RESOURCE_USE_YTD
+    name_ru: "Ресурсы и использование отдельных видов продукции (товаров) и сырья, с начала года (январь–месяц)"
+    name_en: "Resources and use of individual products, January to the month (year-to-date), physical units"
+    agency: bns
+    fetcher: bns_resource_use
+    period: ytd
+    cumulation: year_to_date
+    transformation: "level (year-to-date cumulative, as published -- not decumulated to months)"
+    min_items: 150
+    frequency: monthly
+    unit: "physical units, as in item_name"
+    category: production
+    note: "Same items as RESOURCE_USE_MONTHLY; dated the first day of the last month (January–July 2026 = 2026-07-01). The latest print of each cumulative figure -- BNS revises earlier months only inside it, so the sum of RESOURCE_USE_MONTHLY can differ (wheat exports January–July 2026: 4.95 Mt here, 5.99 Mt summing the months)."
+
+  - id: RESOURCE_USE_ANNUAL
+    name_ru: "Ресурсы и использование отдельных видов продукции (товаров) и сырья, годовые (окончательные) данные"
+    name_en: "Resources and use of individual products, annual final data, physical units"
+    agency: bns
+    fetcher: bns_resource_use
+    period: annual
+    min_items: 150
+    frequency: annual
+    unit: "physical units, as in item_name"
+    category: production
+    note: "The annual editions («… (2024г.)», published about eleven months after the year), 2021 onward; same items as RESOURCE_USE_MONTHLY. Years before 2021: sum RESOURCE_USE_MONTHLY."
+
+  # ---------------------------------------------------------------- annual balances (scripts/fetchers/bns_balances.py)
+  - id: AGRI_BALANCE
+    name_ru: "Баланс ресурсов и использования основных продуктов сельского хозяйства"
+    name_en: "Supply and use balances of the main agricultural products (grain, meat, milk, eggs, potatoes, fruit, sugar beet, sunflower seed, oils)"
+    agency: bns
+    fetcher: bns_balances
+    balance: agri
+    min_items: 100
+    frequency: annual
+    unit: "as in item_name: thousand tonnes (eggs: million pieces); per head kg or pieces a year; kcal a day; percent"
+    category: agriculture
+    note: "BNS publication 19517, national, 2017 onward; the latest edition covering a year wins (livestock 2022-2023 revised in the 2025 edition). Item «<PRODUCT>.<ARTICLE>»: STOCK_BEGIN, PROD, IMP, RES, PROD_USE (FEED, SEED, INCUB), FOOD_PROC, OTHER_IND, LOSS, EXP, CONS, CONS_PC, KCAL, STOCK_END, STOCK_CHG, IMPORT_SHARE."
+
+  - id: ENERGY_BALANCE_TJ
+    name_ru: "Топливно-энергетический баланс Республики Казахстан, ТДж"
+    name_en: "Energy balance of Kazakhstan (fuels × flows), terajoules"
+    agency: bns
+    fetcher: bns_balances
+    balance: energy_tj
+    min_items: 300
+    frequency: annual
+    unit: "TJ"
+    category: energy
+    note: "BNS publication 19275, national, 2021 onward. Item «<fuel>.<flow>», fuel TOTAL = «Всего». Flows: S1.* supply (production, imports, exports with a minus sign, bunkers, stocks, total primary energy supply), TRANSFORM_IN/OUT.* by plant type, ENERGY_OWN_USE.*, S2.* losses and availability, FINAL_ENERGY[.INDUSTRY/.TRANSPORT/.OTHER].*, FINAL_NON_ENERGY.*. The 2021 edition splits some fuels differently (crude oil and condensate apart, electricity by source)."
+
+  - id: ENERGY_BALANCE_NATURAL
+    name_ru: "Топливно-энергетический баланс Республики Казахстан, в натуральном выражении"
+    name_en: "Energy balance of Kazakhstan (fuels × flows), natural units"
+    agency: bns
+    fetcher: bns_balances
+    balance: energy_natural
+    min_items: 300
+    frequency: annual
+    unit: "the fuel's own unit, in item_name (тыс. тонн, млн куб. м, млн кВт·ч, тыс. Гкал); S0.teplotvornaya_* = net calorific value, TJ per unit"
+    category: energy
+    note: "Same flows as ENERGY_BALANCE_TJ; the fuel code includes the unit, so a fuel whose unit changed starts a new series."
+
+  # ---------------------------------------------------------------- industry by region, monthly (Taldau, fetcher taldau_regional)
+  - id: INDUSTRY_OUTPUT_BY_REGION_MONTHLY
+    name_ru: "Объем производства промышленной продукции (товаров, услуг) по регионам и видам деятельности, помесячно"
+    name_en: "Industrial output (value) by region and ОКЭД section/division, monthly, current prices"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "701592"
+    period_id: "4"
+    dic_ids: "68,776,4303,524"
+    terms: "741880,741917,3079117,679489"
+    item_pos: 2
+    scale: 1000000
+    refresh_days: 7
+    items:
+      - {code: "IND", term: "3079117", name: "Промышленность"}
+      - {code: "B", term: "3078703", name: "Горнодобывающая промышленность и разработка карьеров"}
+      - {code: "05", term: "3078704", name: "Добыча угля"}
+      - {code: "06", term: "3078709", name: "Добыча сырой нефти и природного газа"}
+      - {code: "07", term: "3078714", name: "Добыча металлических руд"}
+      - {code: "08", term: "3078720", name: "Добыча прочих полезных ископаемых"}
+      - {code: "09", term: "3078729", name: "Предоставление услуг в горнодобывающей промышленности"}
+      - {code: "C", term: "3078734", name: "Обрабатывающая промышленность"}
+      - {code: "10", term: "3078735", name: "Производство продуктов питания"}
+      - {code: "11", term: "3078770", name: "Производство напитков"}
+      - {code: "12", term: "3078779", name: "Производство табачных изделий"}
+      - {code: "13-15", term: "3079124", name: "Легкая промышленность"}
+      - {code: "16", term: "3078815", name: "Производство деревянных и пробковых изделий, кроме мебели; производство изделий из соломки и материалов для плетения"}
+      - {code: "17", term: "3078824", name: "Производство бумаги и бумажной продукции"}
+      - {code: "18", term: "19073630", name: "Полиграфическая деятельность и воспроизведение записанных носителей информации"}
+      - {code: "19", term: "3078842", name: "Производство кокса и продуктов нефтепереработки"}
+      - {code: "20", term: "3078847", name: "Производство продуктов химической промышленности"}
+      - {code: "21", term: "3078870", name: "Производство основных фармацевтических продуктов и фармацевтических препаратов"}
+      - {code: "22", term: "3078875", name: "Производство резиновых и пластмассовых изделий"}
+      - {code: "23", term: "3078884", name: "Производство прочей не металлической минеральной продукции"}
+      - {code: "24", term: "3078917", name: "Металлургическое производство"}
+      - {code: "25", term: "3078939", name: "Производство готовых металлических изделий, кроме машин и оборудования"}
+      - {code: "26-30", term: "3079122", name: "Машиностроение"}
+      - {code: "31", term: "3079050", name: "Производство мебели"}
+      - {code: "32", term: "3079056", name: "Производство прочих готовых изделий"}
+      - {code: "D", term: "3079084", name: "Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом"}
+      - {code: "E", term: "3079097", name: "Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений"}
+      - {code: "36", term: "3079098", name: "Забор, обработка и распределение воды"}
+      - {code: "37", term: "3079101", name: "Сбор и обработка сточных вод"}
+      - {code: "38", term: "3079104", name: "Сбор, обработка и удаление отходов; утилизация (восстановление) материалов"}
+      - {code: "39", term: "3079114", name: "Деятельность по ликвидации загрязнений и прочие услуги в области удаления отходов"}
+    min_items: 25
+    frequency: monthly
+    unit: "million KZT"
+    category: production
+    note: "Taldau 701592, January 2020 onward, the month's output in current prices. Items are ОКЭД: IND industry, B mining, C manufacturing, D electricity/gas/steam, E water/waste, and their divisions; 13-15 is BNS's «Лёгкая промышленность», 26-30 «Машиностроение». Regions: 17 oblasts and 3 cities (Абай, Жетісу, Ұлытау from June 2022). A division a region does not have, or keeps confidential, is absent."
+
+  - id: INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY
+    name_ru: "Производство основных видов промышленной продукции в натуральном выражении по регионам, помесячно"
+    name_en: "Production of main industrial products in physical units by region, monthly"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "701608"
+    period_id: "4"
+    dic_ids: "68,776,524,1973"
+    terms: "741880,741917,679489,4659579"
+    item_pos: 3
+    unit_in_name: true
+    refresh_days: 7
+    items: &taldau_products
+      - {code: OIL_CONDENSATE, term: "4659551", name: "Нефть, включая конденсат газовый"}
+      - {code: NATURAL_GAS, term: "4659552", name: "Газ природный"}
+      - {code: IRON_ORE_BNS, term: "4659553", name: "Руды железные агломерированные и неагломерированные"}
+      - {code: MEAT, term: "4659554", name: "Мясо и субпродукты пищевые"}
+      - {code: MEAT_LIVESTOCK, term: "20353610", name: "Мясо и субпродукты пищевые скота крупного рогатого, свиней, овец, коз, лошадей и животных семейства лошадиных"}
+      - {code: MEAT_POULTRY, term: "20353611", name: "Мясо и субпродукты пищевые птицы домашней"}
+      - {code: CANNED_MEAT, term: "4659555", name: "Консервы из мяса"}
+      - {code: CANNED_MEAT_VEG, term: "4659556", name: "Консервы мясорастительные"}
+      - {code: JUICE_VEG, term: "4659557", name: "Соки овощные"}
+      - {code: JUICE_FRUIT, term: "4659558", name: "Соки фруктовые"}
+      - {code: CANNED_VEG, term: "4659559", name: "Консервы овощные"}
+      - {code: CANNED_FRUIT, term: "4659560", name: "Консервы фруктовые"}
+      - {code: CANNED_TOMATO, term: "4659561", name: "Консервы томатные"}
+      - {code: VEG_OIL, term: "4659562", name: "Масло растительное рафинированное и нерафинированное"}
+      - {code: SUNFLOWER_OIL, term: "4659563", name: "Масло подсолнечное рафинированное и нерафинированное"}
+      - {code: SUGAR_CANE, term: "4659576", name: "Сахар тростниковый"}
+      - {code: SUGAR_BEET, term: "4659577", name: "Сахар свекловичный"}
+      - {code: BABY_FOOD, term: "4659578", name: "Питание детское"}
+      - {code: ALCOHOL_DRINKS, term: "4659579", name: "Hапитки алкогольные"}
+      - {code: VODKA, term: "4659580", name: "Водка и ликероводочные изделия"}
+      - {code: LIQUEURS, term: "4659581", name: "Ликероводочные изделия"}
+      - {code: WINE, term: "4659582", name: "Вино виноградное в натуральном выражении"}
+      - {code: OIL_PRODUCTS, term: "4659584", name: "Продукты переработки нефти в общем объеме"}
+      - {code: ETHANOL, term: "4659585", name: "Спирт этиловый"}
+      - {code: FLAT_ROLLED, term: "4659586", name: "Плоский прокат"}
+      - {code: DAIRY, term: "4660224", name: "Продукты молочные (без учета молока свежего)"}
+      - {code: COAL, term: "18793519", name: "Уголь каменный, включая лигнит и концентрат угольный"}
+      - {code: FABRICS, term: "18798811", name: "Ткани в натуральном выражении"}
+      - {code: PETROLEUM_GASES, term: "19834401", name: "Нефтяные газы и прочие газообразные углеводороды, кроме отбензиненного газа"}
+      - {code: FISH_PROCESSED, term: "20353832", name: "Рыба, ракообразные и моллюски переработанные и консервированные, без учета непригодных для употребления в пищу"}
+      - {code: KEROSENE, term: "20353836", name: "Керосин, включая топливо реактивное типа керосина"}
+      - {code: FERTILIZERS, term: "20353837", name: "Удобрения минеральные или химические"}
+      - {code: MEDICINES, term: "20353838", name: "Лекарства в натуральном выражении"}
+      - {code: PHARMA_OTHER, term: "20353839", name: "Препараты фармацевтические прочие в натуральном выражении"}
+      - {code: CRUDE_OIL, term: "4117150", name: "Нефть сырая (природная смесь углеводородов), включая нефть, полученную из минералов битуминозных"}
+      - {code: ASSOCIATED_GAS, term: "18749737", name: "Газ нефтяной попутный (кроме газов нефтяных, полученных в процессе перегонки нефти)"}
+      - {code: IRON_ORE, term: "4117215", name: "Руды железные"}
+      - {code: COPPER_ORE, term: "4121265", name: "Руды и концентраты медные"}
+      - {code: CHROME_ORE, term: "4124812", name: "Руды и концентраты хромовые"}
+      - {code: CEMENT, term: "4116835", name: "Цемент"}
+      - {code: CONCRETE, term: "4119650", name: "Бетон товарный"}
+      - {code: PIG_IRON, term: "4119978", name: "Чугун передельный, литейный или зеркальный в чушках, болванках или в виде форм первичных прочих"}
+      - {code: STEEL, term: "4120596", name: "Сталь нерафинированная"}
+      - {code: FERROALLOYS, term: "4118146", name: "Ферросплавы"}
+      - {code: ALUMINA, term: "4116967", name: "Оксид алюминия, кроме корунда искусственного"}
+      - {code: ALUMINIUM, term: "4119170", name: "Алюминий необработанный"}
+      - {code: COPPER_REFINED, term: "4118944", name: "Медь рафинированная и сплавы медные, необработанные; лигатуры на основе меди"}
+      - {code: ZINC, term: "4116970", name: "Цинк необработанный"}
+      - {code: LEAD, term: "4116968", name: "Свинец необработанный"}
+      - {code: GOLD, term: "4119092", name: "Золото необработанное и полуобработанное или в виде порошка"}
+      - {code: SILVER, term: "4119045", name: "Серебро необработанное и полуобработанное или в виде порошка"}
+      - {code: PETROL, term: "4121800", name: "Бензин моторный (температура перегонки - 30-220 градусов Цельсия) для двигателей с искровым зажиганием, с содержанием свинца не более 0,013 г/л, без добавок TEL или TML"}
+      - {code: DIESEL, term: "4123349", name: "Топливо дизельное (температура перегонки 180-380 градусов Цельсия) для транспорта автомобильного и железнодорожного"}
+      - {code: FUEL_OIL, term: "4123355", name: "Топливо нефтяное (мазут), не включенное в другие группировки"}
+      - {code: PETROLEUM_COKE, term: "4124447", name: "Кокс нефтяной и сланцевый"}
+      - {code: ELECTRICITY, term: "4126735", name: "Электроэнергия"}
+      - {code: HEAT, term: "18789752", name: "Пар и горячая вода (тепловая энергия)"}
+      - {code: FLOUR, term: "18749887", name: "Мука мелкого помола из пшеницы и меслины (смеси пшеницы и ржи)"}
+      - {code: BREAD, term: "18749944", name: "Хлеб, кондитерские изделия и пирожные, свежие"}
+      - {code: MILK, term: "4124899", name: "Молоко обработанное жидкое"}
+      - {code: BUTTER, term: "18749859", name: "Масло сливочное и спреды (пасты) молочные"}
+      - {code: CHEESE, term: "4123271", name: "Сыр и творог"}
+      - {code: SUGAR_WHITE, term: "4122294", name: "Сахар рафинированный тростниковый или свекловичный, сахароза химически чистая в твердом состоянии, без добавок ароматических и красящих"}
+      - {code: BEER, term: "4122667", name: "Пиво, кроме осадков и отходов пивоварения"}
+      - {code: MINERAL_WATER, term: "4121518", name: "Воды минеральные и напитки безалкогольные"}
+      - {code: CIGARETTES, term: "4122817", name: "Сигареты, содержащие табак, или смеси табака с заменителями табака"}
+      - {code: CARS, term: "4116567", name: "Автомобили легковые пассажирские"}
+      - {code: SULPHURIC_ACID, term: "4122302", name: "Кислота серная; олеум"}
+      - {code: POLYPROPYLENE, term: "4122940", name: "Полипропилен в первичных формах"}
+    min_items: 40
+    frequency: monthly
+    unit: "physical units, as in item_name (Taldau's measureName)"
+    category: production
+    note: "Taldau 701608, January 2020 onward. Items: BNS's list of main products (OIL_CONDENSATE … PHARMA_OTHER) and further КПВЭД products (CRUDE_OIL … POLYPROPYLENE), chosen 2026-09-27 from the product tree of index 701622 (CRUDE_OIL has no series in 701608 -- use OIL_CONDENSATE; it is kept for the shipments). A region's value is absent where BNS keeps it confidential, so regions need not add up to the national figure. Re-downloaded weekly (refresh_days)."
+
+  - id: INDUSTRY_SHIPMENTS_BY_REGION_MONTHLY
+    name_ru: "Отгружено продукции собственного производства: всего и на внутренний рынок, по регионам, помесячно"
+    name_en: "Shipments of own-produced industrial products, total and to the domestic market, by region, monthly, physical units"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "701622"
+    period_id: "4"
+    dic_ids: "68,559,1973"
+    terms: "741880,450237,4659562"
+    item_pos: 2
+    unit_in_name: true
+    refresh_days: 7
+    variants:
+      - {suffix: ".TOTAL", fixed: {1: "450237"}, name: " — отгружено всего"}
+      - {suffix: ".DOM", fixed: {1: "450238"}, name: " — на внутренний рынок"}
+    items: *taldau_products
+    min_items: 60
+    frequency: monthly
+    unit: "physical units, as in item_name"
+    category: production
+    note: "Taldau 701622, January 2019 onward (the region × product breakdown since 2020). <product>.TOTAL all shipments, <product>.DOM to the domestic market; the rest («прочие», mostly exports) is TOTAL − DOM. The closest official regional measure of domestic use of a region's output. Same products as INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY; confidential regions are absent. Re-downloaded weekly."
+
+  - id: REGIONAL_PRODUCT_BALANCE
+    name_ru: "Производный региональный баланс товаров: производство, экспорт, импорт, видимое потребление, отгрузка на внутренний рынок, тонн"
+    name_en: "Derived regional commodity balance: production, exports, imports, apparent use, domestic shipments, tonnes, monthly"
+    agency: bns
+    fetcher: regional_balance
+    min_items: 20
+    frequency: monthly
+    unit: "tonnes"
+    category: production
+    note: "Built by scripts/fetchers/regional_balance.py from INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY, INDUSTRY_SHIPMENTS_BY_REGION_MONTHLY and EXPORTS_/IMPORTS_VOLUME_BY_REGION_PRODUCT; January 2020 onward. APPARENT_USE = PROD − EXP + IMP. Not an official statistic: trade is attributed to the region where the trader is registered and stocks are ignored -- compare with SHIP_DOM."
 
   # ---------------------------------------------------------------- World Bank, Commodity Markets
   # Links verified 2026-09-15 (files downloaded and read). The CMO page is read at run time

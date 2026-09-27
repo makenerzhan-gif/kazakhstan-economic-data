@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-701608",
+  "indicator_id": "INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY",
+  "indicator_name": "Production of main industrial products in physical units by region, monthly",
+  "description": "Производство основных видов промышленной продукции в натуральном выражении по регионам, помесячно",
+  "frequency": "monthly",
+  "unit": "physical units, as in item_name (Taldau's measureName)",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Taldau 701608, January 2020 onward. Items: BNS's list of main products (OIL_CONDENSATE … PHARMA_OTHER) and further КПВЭД products (CRUDE_OIL … POLYPROPYLENE), chosen 2026-09-27 from the product tree of index 701622. A region's value is absent where BNS keeps it confidential, so regions need not add up to the national figure. Re-downloaded weekly (refresh_days).",
+  "publication_date": null,
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "2020-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
