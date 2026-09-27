@@ -2,7 +2,7 @@
 """One-off: read every monthly Statistical Bulletin Minfin keeps online (January 2019 on,
 91 xlsx on 2026-09-27) into the bulletin series' processed history.
 
-    python scripts/backfill_minfin_bulletins.py [--cache DIR] [--only ID ...]
+    python scripts/backfill_minfin_bulletins.py [--cache DIR] [--only ID ...] [--yearly 2013-2018]
 
 The daily run sees only the budget direction's latest ~14 bulletins and lays them over the
 processed history (fetchers/minfin._with_history); this script supplies that history. It sets
@@ -10,6 +10,12 @@ minfin.BULLETIN_ARCHIVE, so the documents come from title searches too, and runs
 for every series read from the bulletin — the January-to-month ones (_fetch_bulletin_row, state
 budget table 3) and the annual ones (_fetch_bulletin_annual_row), then the quarterly state
 budget built from them. The archive's workbooks are not copied into data/raw.
+
+--yearly FIRST-LAST: also the years before 2019. Minfin keeps them as one RAR per year («Статистический
+бюллетень за 2017 год (12 месяцев)», 12 monthly editions inside; the tables are those of the 2019
+editions, same sheet names and labels). Each archive is downloaded into the cache, unpacked with
+7z (which must be installed) and its xls/xlsx editions are read like the monthly documents. 2013-2018
+are spreadsheets; 2008-2012 are mostly PDF and are not read.
 
 --cache DIR: a folder with the bulletins already downloaded, named <document id>.xlsx/.xls
 (downloaded there when missing). Each workbook is read once, in openpyxl's read-only mode, and
@@ -40,6 +46,36 @@ def bulletin_series() -> list[str]:
     return [i for i in update_minfin.INDICATOR_IDS if i in ids] + list(minfin.STATE_BUDGET_QUARTERLY)
 
 
+YEARLY_TITLE = "Статистический бюллетень за {year} год"
+
+
+def yearly_editions(years: range, cache: Path) -> list[dict]:
+    """Pseudo-documents for the xls/xlsx editions inside the yearly RAR archives; the local path
+    stands in for the gov.kz file path (install_cache reads it back)."""
+    import glob
+    import subprocess
+    docs = []
+    for year in years:
+        found = [d for d in minfin._list_documents(title=YEARLY_TITLE.format(year=year), projects="minfin")
+                 if d.get("full_text") and str(d["full_text"][0].get("document", "")).lower().endswith(".rar")
+                 and str(year) in (d.get("title") or "")]
+        if not found:
+            print(f"{year}: no yearly archive found")
+            continue
+        folder = cache / f"yearly_{year}"
+        if not folder.exists():
+            rar = cache / f"yearly_{year}.rar"
+            if not rar.exists():
+                rar.write_bytes(minfin._download(found[0]["full_text"][0]["document"]))
+            folder.mkdir()
+            subprocess.run(["7z", "x", "-y", f"-o{folder}", str(rar)], check=True, capture_output=True)
+        files = sorted(f for f in glob.glob(str(folder / "**" / "*"), recursive=True) if f.lower().endswith((".xls", ".xlsx")))
+        print(f"{year}: {len(files)} editions from document {found[0]['id']}")
+        docs += [{"id": f"yearly:{year}:{Path(f).name}", "title": f"yearly {year} {Path(f).name}", "created_date": f"{year}-12-31",
+                  "full_text": [{"document": f}]} for f in files]
+    return docs
+
+
 class _Sheets:
     def __init__(self, sheets: dict[str, list[list]]):
         self.sheets = sheets
@@ -58,6 +94,8 @@ def install_cache(cache: Path) -> None:
     download = minfin._download
 
     def cached_download(path: str) -> bytes:
+        if path.startswith(str(cache)):                   # an edition unpacked from a yearly archive
+            return str(Path(path).relative_to(cache)).encode()
         name = by_path.get(path) or path.rstrip("/").split("/")[-1]
         f = cache / name
         if not f.exists():
@@ -69,7 +107,7 @@ def install_cache(cache: Path) -> None:
         if name not in parsed:
             f = cache / name
             sheets: dict[str, list[list]] = {}
-            if f.suffix.lower() == ".xls":
+            if f.suffix.lower() == ".xls" and f.read_bytes()[:4] != b"PK\x03\x04":
                 book = xlrd.open_workbook(str(f))
                 for sh in book.sheets():
                     sheets[sh.name] = [[sh.cell_value(r, c) for c in range(sh.ncols)] for r in range(sh.nrows)]
@@ -99,10 +137,16 @@ def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--cache", type=Path, default=Path(tempfile.gettempdir()) / "minfin_bulletins")
     ap.add_argument("--only", nargs="*")
+    ap.add_argument("--yearly", help="also the yearly archives, e.g. 2013-2018")
     args = ap.parse_args()
     args.cache.mkdir(parents=True, exist_ok=True)
 
     minfin.BULLETIN_ARCHIVE = True
+    if args.yearly:
+        first, last = (int(y) for y in args.yearly.split("-"))
+        extra = yearly_editions(range(first, last + 1), args.cache)
+        listed = minfin._bulletin_documents
+        minfin._bulletin_documents = lambda: listed() + extra      # the monthly documents first (newer editions win)
     docs = minfin._bulletin_documents()
     print(f"{len(docs)} bulletins, {docs[-1].get('created_date', '')[:10]} … {docs[0].get('created_date', '')[:10]}")
     install_cache(args.cache)

@@ -821,3 +821,39 @@ not a statistic (BNS publishes no regional product balance).
 latest January–month against a year earlier.
 
 Tests: `tests/test_supply_use.py`.
+
+## 2026-09-27 — the budget back to 2013, December, gaps, non-oil deficit before 2022
+
+**Pre-2019.** Minfin keeps the same monthly Statistical Bulletin for 2003-2018 as one RAR per year
+(«Статистический бюллетень за 2017 год (12 месяцев)»); 2013-2018 are xls/xlsx with the tables of the
+current editions. `scripts/backfill_minfin_bulletins.py --yearly 2013-2018` downloads and unpacks them
+(7z) and reads табл 3, 4, 8, 10 and 11 (not табл 6 and the higher tables, numbered differently before
+2019). STATE_BUDGET_{REVENUE,EXPENDITURE,DEFICIT}_YTD, net lending and financial assets now start in
+January 2013 (158 months); the quarterly STATE_BUDGET_*_Q in 2013Q1 (54 quarters); republican
+wages/capital/pensions from 2013, local economic-classification lines from late 2014, oil export
+duties, property and land tax from 2013. Checked: January-June 2017 revenue 5 010 193.2 as printed;
+January-December 2016-2018 equal the annual reports; revenue − expenditure − net lending − financial
+assets = deficit in all 70 months 2013-2018. 2008-2012 are PDF (number columns not separable from the
+text layer) and are not read.
+
+**December.** The «на 1 января» editions carry January-December but their табл 3 has annual columns
+only, and the period was read from табл 3 alone: every December was missing. The period now comes from
+any table of the edition, and the January-December column is the year's report column. Where that
+edition is not online (2025) the annual report stands in. December now equals the annual report in
+every year 2016-2025 (2020 expenditure: the report was later revised by 2.8 bn).
+
+**Gaps.** Rows padded with empty cells (2019-2021 editions) and the class code in another column hid
+the economic-classification lines and customs duties; a Kazakh-titled edition (May 2023) was not found
+by the title search; the September 2022 - May 2024 editions print subsidies as specific 311 only (equal
+to 310 in all 128 table-editions that print both). Republican/local wages, capital, pensions and
+subsidies went from 50-71 to 86 months 2019-2026, customs duties from 62 to 87. Still missing, because
+the editions are not online: April 2020, December 2025 (except табл 3 lines), April 2026; state
+subsidies (табл 6) 2022-09 … 2024-05, where the table printed no subsidies line (source_issues).
+
+**Non-oil deficit.** Minfin prints it from April 2022. In every printed month it equals deficit −
+transfers from the National Fund − export duty on crude oil (44 months, to 1 mln KZT), so
+STATE_NON_OIL_DEFICIT_YTD now starts in January 2018 by that identity. The annual
+STATE_NON_OIL_DEFICIT for 2019-2021 was the financing row copied into the non-oil line by Minfin
+(+1.29, +2.81, +2.53 trn); replaced by the identity (−5.51, −8.16, −8.06 trn; source_issues).
+
+Tests: `tests/test_history_extensions.py` (15).

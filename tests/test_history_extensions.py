@@ -111,3 +111,68 @@ def test_cpi_detail_snapshot_is_one_row_per_item_and_region():
     total = next(r for r in rows if r["region"] == "national" and r["item_code"] == "TOTAL")
     assert float(total["mom"]) > 90 and total["contrib_mom_pp"] != ""
     assert sum(r["region"] != "national" for r in rows) >= 60 and any(r["item_code"] == "CORE_EX3" for r in rows)
+
+
+# ---------------------------------------------------------------- bulletin gaps, December, non-oil deficit (2026-09-27, second pass)
+
+def test_period_headers_in_both_word_orders():
+    assert minfin._period_of("2026 ж. қаңтар-шілде/ январь-июль отчет 2026 г.") == (2026, 7)
+    assert minfin._period_of("2019 ж. қантар-қараша есеп/ 2019 г. январь-ноябрь отчет") == (2019, 11)
+    assert minfin._period_of("январь-декабрь отчет 2023 г.") == (2023, 12)
+    assert minfin._period_of("2023ж. есеп/ отчет 2023г.") is None
+
+
+def test_ytd_column_in_february_2020_and_in_december_editions():
+    feb_2020 = [["Атауы", "2018 ж. есеп/ 2018 г. отчет", "2019ж. есеп/ отчет 2019г.", "2020ж. есеп/ отчет 2020г.",
+                 "2019 ж. есеп/ 2019 г. отчет", "2019 ж. есеп/ 2019 г. отчет"],
+                [None, "жылдық/ годовой", "жылдық/ годовой", "қантар/ январь", "1-тоқсан/\n1 квартал", "2-тоқсан/\n2 квартал"]]
+    assert minfin._state_budget_ytd_col(feb_2020, 2020, 1) == 3
+    december = [["Атауы", "2021ж. есеп/ 2021г. отчет", "2022 ж. есеп/ 2022 г. отчет", "2023ж. есеп/ отчет 2023г.", "Наименование"]]
+    assert minfin._state_budget_ytd_col(december, 2023, 12) == 3
+    assert minfin._state_budget_ytd_col(december, 2023, 11) is None
+    with_quarters = [["Атауы", "2019ж. есеп/ отчет 2019г.", "2019 ж. есеп/ 2019 г. отчет"], [None, "жылдық/ годовой", "4-тоқсан/ 4 квартал"]]
+    assert minfin._state_budget_ytd_col(with_quarters, 2019, 12) == 1
+
+
+def test_row_label_skips_trailing_empty_cells():
+    assert minfin._row_label(["L01", "110", None, "Жалақы", 1.0, "Заработная плата", None, None]) == "Заработная плата"
+    assert minfin._label_matcher("Пенсии")(["1", "323", "Зейнетақы", 5.0, "Пенсии", None])
+
+
+def test_non_oil_deficit_identity_and_the_copied_financing_row(monkeypatch):
+    deficit = {"2019-03-31": -100.0, "2019-12-31": -300.0}
+    got = minfin.non_oil_by_identity(deficit, {"2019-03-01": 400.0, "2019-12-01": 900.0}, {"2019-03-31": 50.0})
+    assert got == {"2019-03-31": -550.0}
+    monkeypatch.setattr(minfin, "_processed_history", lambda i: {"D": deficit, "NF_TRANSFERS_YTD": {"2019-12-01": 900.0}}[i])
+    out, replaced = minfin._non_oil_with_identity([{"date": "2019-12-31", "value": 300.0}], "D", {"2019-12-31": 80.0})
+    assert replaced == ["2019-12-31"] and out == [{"date": "2019-12-31", "value": -1280.0}]
+
+
+def test_budget_series_now_cover_december_and_2019_2021():
+    rev_ytd, rev = _series("minfin", "STATE_BUDGET_REVENUE_YTD"), _series("minfin", "STATE_BUDGET_REVENUE")
+    for y in range(2019, 2026):
+        assert abs(rev_ytd[f"{y}-12-31"] - rev[f"{y}-12-31"]) < 1.0, y
+    nod = _series("minfin", "STATE_NON_OIL_DEFICIT_YTD")
+    assert min(nod) == "2018-01-31" and len(nod) >= 95                            # NF transfers start in 2018
+    d, tr, duty = (_series("minfin", i) for i in ("STATE_BUDGET_DEFICIT_YTD", "NF_TRANSFERS_YTD", "OIL_EXPORT_DUTY"))
+    tr = {k[:7]: v for k, v in tr.items()}
+    printed = [k for k in nod if k >= "2022-04" and k[5:7] != "12" and k in duty and k[:7] in tr]
+    assert len(printed) > 40 and all(abs(nod[k] - (d[k] - tr[k[:7]] - duty[k])) < 1.0 for k in printed)
+    annual = _series("minfin", "STATE_NON_OIL_DEFICIT")
+    assert all(v < 0 for v in annual.values())                                   # 2019-2021 were +financing
+    for sid in ("GOV_WAGES_EXPENDITURE", "GOV_SUBSIDIES_EXPENDITURE", "CUSTOMS_DUTIES", "LOCAL_GOV_SUBSIDIES_EXPENDITURE"):
+        assert len(_series("minfin", sid)) >= 85, sid
+
+
+def test_yearly_archives_extend_the_state_budget_to_2013():
+    rev, exp, dfc = (_series("minfin", i) for i in ("STATE_BUDGET_REVENUE_YTD", "STATE_BUDGET_EXPENDITURE_YTD", "STATE_BUDGET_DEFICIT_YTD"))
+    lend, fa = _series("minfin", "STATE_NET_BUDGET_LENDING_YTD"), _series("minfin", "STATE_FINANCIAL_ASSETS_BALANCE_YTD")
+    assert min(rev) == "2013-01-31" and sum(d < "2019" for d in rev) >= 68
+    assert abs(rev["2017-06-30"] - 5010193.2) < 0.1                               # «на 1 июля 2017», табл 3
+    early = [d for d in rev if d < "2019" and all(d in x for x in (exp, dfc, lend, fa))]
+    assert len(early) >= 68 and all(abs(rev[d] - exp[d] - lend[d] - fa[d] - dfc[d]) < 1.5 for d in early)
+    annual = _series("minfin", "STATE_BUDGET_REVENUE")
+    assert all(abs(rev[f"{y}-12-31"] - annual[f"{y}-12-31"]) < 1.0 for y in (2016, 2017, 2018))
+    q = _series("minfin", "STATE_BUDGET_REVENUE_Q")
+    assert min(q) == "2013-01-01" and abs(sum(q[f"2017-{m}-01"] for m in ("01", "04", "07", "10")) - annual["2017-12-31"]) < 1.0
+    assert min(_series("minfin", "GOV_WAGES_EXPENDITURE")) == "2013-01-31"

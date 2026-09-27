@@ -47,3 +47,7 @@ From config/source_issues.yaml (audit 2026-09-25). The values are what the offic
 | BANK_LOANS_STB_SHORT_TERM | 2000-08-01 | error | still in the data | Use 99 402 (total less long-term) or treat as missing. |
 | STATE_BUDGET_DEFICIT_YTD | 2021-09-30 | inconsistent | still in the data | For January-September 2021 derive the deficit from its components, or check the Q3 2021 figure against the annual report. |
 | IMPORTS_VALUE_BY_REGION_HS_SECTION | 2022-09-01 | inconsistent | still in the data | For September 2022 prefer the sum of the regions (national TOTAL + 3.8 % for imports, + 1.1 % for exports in USD). |
+| STATE_NON_OIL_DEFICIT | 2019-12-31, 2020-12-31, 2021-12-31 | error | no longer in the data -- source corrected? remove the entry | Fixed in the pipeline: those values are replaced by the identity (2019 -5 509 000, 2020 -8 161 050, 2021 -8 057 811 mln KZT); STATE_NON_OIL_DEFICIT_YTD before April 2022 is the same identity (from 2018-01).
+ |
+| GOV_SUBSIDIES_EXPENDITURE | 2017-11-30 | inconsistent | still in the data | Treat the implied November 2017 flow (-3 045) as a revision, not spending. |
+| STATE_GOV_SUBSIDIES_EXPENDITURE | - | caveat | caveat | For the state budget in 2022-09 … 2024-05 add the republican and local subsidies. |

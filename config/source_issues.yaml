@@ -200,3 +200,42 @@ issues:
       consistent (lines = heading), so the national row looks stale. The national rows of the item-level
       trade datasets keep TOTAL only for this month; the regional breakdowns are complete.
     advice: For September 2022 prefer the sum of the regions (national TOTAL + 3.8 % for imports, + 1.1 % for exports in USD).
+
+  - id: state_non_oil_deficit_2019_2021
+    kind: error
+    variable: STATE_NON_OIL_DEFICIT
+    observations:
+      - {date: "2019-12-31", value: 1285306.7183763}
+      - {date: "2020-12-31", value: 2808962.17986238}
+      - {date: "2021-12-31", value: 2534806.1730886}
+    evidence: >
+      Minfin Statistical Bulletin, табл 3, row «VI. НЕНЕФТЯНОЙ ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА»: the 2019, 2020 and
+      2021 report columns (and January-November 2021) repeat row VII, the financing of the deficit -- minus the
+      headline deficit -- as NON_OIL_BUDGET_DEFICIT's 2021 does in the Dynamics file. Every month Minfin prints
+      from April 2022 satisfies non-oil deficit = deficit - transfers from the National Fund - export duty on
+      crude oil to 1 mln KZT (44 months).
+    advice: >
+      Fixed in the pipeline: those values are replaced by the identity (2019 -5 509 000, 2020 -8 161 050,
+      2021 -8 057 811 mln KZT); STATE_NON_OIL_DEFICIT_YTD before April 2022 is the same identity (from 2018-01).
+
+  - id: republican_subsidies_2017_11
+    kind: inconsistent
+    variable: GOV_SUBSIDIES_EXPENDITURE
+    observations:
+      - {date: "2017-11-30", value: 81392.23977242}
+    evidence: >
+      Statistical Bulletin «на 1 декабря 2017», табл 10, row 310 «Бюджетные субсидии»: January-November 81 392
+      mln KZT against 84 437 for January-October in the previous edition -- a cumulative figure that falls
+      (a refund or reclassification, not explained). January-December is 89 303.
+    advice: Treat the implied November 2017 flow (-3 045) as a revision, not spending.
+
+  - id: state_subsidies_classification_2022_2024
+    kind: caveat
+    variable: STATE_GOV_SUBSIDIES_EXPENDITURE
+    observations: []
+    evidence: >
+      табл 6 (state budget by economic classification), September 2022 - May 2024 editions: code 310 is
+      «Текущие трансферты юридическим лицам» and no subsidies line is printed; the republican (табл 10) and
+      local (таб 11) tables print specific 311, which equals 310 wherever both appear (128 table-editions),
+      and those series use it. The state-level series has no value for these 21 months.
+    advice: For the state budget in 2022-09 … 2024-05 add the republican and local subsidies.
