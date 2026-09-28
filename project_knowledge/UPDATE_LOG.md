@@ -1,270 +1,8 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-23 —
-702 duplicate raw copies removed» are in docs/UPDATE_LOG_ARCHIVE.md in the repository (not synced into
-the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-25 — independent data audit and the fixes it called for (user: «проверь все данные», «исправляй»)
-
-**Audit.** `reports/data_audit_2026-09-25.md`: all 430 indicators and 115 item-level datasets
-re-parsed from `data/raw/` with parsers written for the audit (not the pipeline's). Every value
-matched its raw file; the problems were dates, gaps, labels and errors inside the sources.
-
-**Fixed in the pipeline.**
-- *NBK / ARDFM flows dated one period late.* NBK open data stamps a flow or an average with the day
-  after its period (report_date 2020-04-01 = Q1 2020 of the balance of payments). New
-  `date_basis: next_period_start` (with `date_basis_evidence`) on 30 indicators — the BOP lines and
-  GDP ratios of form 485, OTC rates and volumes (form 41), KASE volumes (form 35), LENDING_RATE,
-  PENSION_PAYMENTS, INSURANCE_PREMIUMS_*, GOV_SECURITIES_SECONDARY_NBK_NOTES, and ARDFM's
-  BANK_NET_INCOME / ROA / ROE / LIQUID_ASSETS; `periods.apply_date_basis` moves them back once, in
-  `update_nbk` / `update_ardfm`, before normalisation. Proof: the four quarters of each year
-  2020-2024 now add up to the IMF annual current account to 1 mln USD. Enterprise surveys, stocks
-  «as at the 1st» and DEPOSIT_RATE (evidence inconclusive) are unchanged.
-- *Point-in-time stocks restated to the period start.* `processed_store.write_processed` now passes
-  `observation_type` to `periods.normalise`; the five National Fund portfolio series return to their
-  quarter-end dates (2026-06-30, not 2026-04-01).
-- *2015 lost from six regional labour tables and EMPLOYED_TOTAL.* The year pattern rejected the
-  footnoted header «20152)»; `year_regex` now allows a footnote digit (16 datasets; re-parsed from the
-  archived workbooks: only the 2015 column is added, nothing else changes).
-- *Minfin.* Month names matched by stem («январь-феврал отчет» had dropped Jan-Feb 2026 from six
-  STATE_*_YTD series); `update_minfin.keep_unlisted_history` carries over periods the gov.kz listing no
-  longer serves; 49 lost points restored from the 33 archived bulletins (no conflict with any value
-  already held), incl. Jan-Feb 2025 for 23 series, Jan-Feb 2026 for six, TAX_ARREARS_TOTAL on 1 January 2024 and
-  2025, and the 2021-2022 annual columns of older editions for 18 annual series.
-- *Expenditure GDP components 2010-2013.* `gaps_filled_from` fills the Taldau gap in GFCF,
-  HOUSEHOLD_CONSUMPTION, NET_EXPORTS, GROSS_ACCUMULATION, TOTAL_CONSUMPTION_EXPENDITURE and the three
-  volume indices from table 4439 — only while the two agree on every shared year (15 of 15, to 1e-16).
-- *Labels.* IMF WEO years stamped at 31 December like BNS (a date join returned nothing before), and
-  every year from the vintage's COUNTRY_UPDATE_DATE on is labelled «IMF WEO estimate/projection» in
-  `transformation`; year-to-date series say so in `transformation` (34, was 1); unit strings of CPI,
-  GDP_DEFLATOR and three volume indices now say «index, … = 100»; core CPI notes say monthly;
-  youth unemployment is ages 15-34; stale `sources.yaml` entries carry `current_source`.
-
-**Source errors are kept as published** and listed in `config/source_issues.yaml` (export tonnage
-June 2026, NBK money 2021-12..2022, 2021 non-oil deficit, eurobonds 2022-Q4, …); DATA_CATALOG.md
-shows each with a status that flips when a source corrects it. Tests 364 → 382.
-
-## 2026-09-25 — model data, step 1 (what the archive allows): BOP from 2000, bilateral real exchange rates (user: «Сделай пункт 1»)
-
-The network to the sources was closed in this session (stat.gov.kz, nationalbank.kz, kase.kz, gov.kz
-answer 403 through the environment's proxy), so only what the archived downloads already hold was added.
-
-- **Balance of payments from 2000-Q1 (was 2020-Q1).** CURRENT_ACCOUNT_BALANCE and the four BOP_* lines
-  now read formId=481 for the 80 quarters before formId=324's first (`nbk._bop_history`). 481 was
-  rejected earlier because it serves two amounts for some quarters -- but only from report_date
-  2023-04-01, inside 324's range. Each download is checked: one amount per early quarter, the
-  identity goods + services + primary + secondary = current account in every one of them, and 481
-  equal to 324 on every quarter both carry unambiguously; any failure leaves the history out and says
-  so in the manifest. The four quarters of every year 2000-2024 add up to the IMF WEO annual current
-  account within 0.8 mln USD (test: tests/test_date_basis.py).
-- **Six new NBK series from formId=299** (436 indicators): RER_USD, RER_RUB, RER_EUR, RER_CNY --
-  bilateral real exchange rates of the tenge -- and REER_EX_OIL, NEER_EX_OIL. Monthly from 1995-01,
-  December 2016 = 100, a rise is a real appreciation. Built from the form archived 2026-09-03 (to
-  2026-06); the next CI run refreshes them.
-
-**Still needed for QPM / BVAR, blocked on network access:** CPI by group (food / non-food / services /
-regulated, Taldau terms not yet identified), monthly PPI, the base rate before 2024-10, the official
-exchange rate before 2021-05, M0-M3 and bank rates before 2021-12 (most NBK forms serve a window from
-2023-01 by default -- the date parameter still has to be found live), TONIA before 2026-02, the
-government yield curve, rates and volumes of new loans, quarterly unemployment before 2023, a monthly
-industrial production index.
-
-## 2026-09-25 — model data, step 1 continued (network opened): BNS prices, production, labour
-
-Queries found through Taldau's own endpoints (getSearchPageGridData, GetPeriodList, GetSegmentList)
-and checked against BNS's releases before wiring in. 451 indicators.
-- **CPI by group**, monthly from 2011-01, month-on-month and year-on-year: CPI_FOOD, CPI_NONFOOD,
-  CPI_SERVICES, CPI_UTILITIES, CPI_REGULATED_UTILITIES (+ _YOY). December y/y 2011-2025 equal BNS
-  element 1548 in every year (Dec 2022: food 125.3, non-food 119.4, services 114.1).
-- **PPI_MONTHLY / PPI_YOY_MONTHLY** from 2011-01 (Dec/Dec 2011-2025 equal element 1626).
-- **IND_PROD_MONTHLY_YOY / _MOM** from 2014-01 (October 2025: 107.1 / 99.4 as released).
-- **UNEMPLOYMENT** from 2001Q1 (was 2023Q1-2025Q2, stale): element 5830 «Основные индикаторы рынка
-  труда»; identical to the old cube on all 10 shared quarters. Its 2014 column is headed «20142)» —
-  the same footnote trap as the 2015 labour tables; the validator's duplicate-date check caught it.
-- **AVG_WAGE_1T_QUARTERLY** from 2015Q1 (element 5674, form 1-Т) — a different coverage from
-  AVG_WAGE_QUARTERLY (2026Q1: 461 486 against 445 068 KZT), so a separate series.
-
-## 2026-09-25 — model data, step 1 continued: KASE as the eighth agency, long NBK histories
-
-Sources found live and checked before wiring in (research notes in the PR); 462 indicators.
-- **KASE (new agency, `scripts/fetchers/kase.py`, `update_kase.py`).** kase.kz now has JSON/xls
-  surfaces. **TONIA** moved here from the NBK widget: daily by TRADE date from 2001-09-02 (was
-  2026-02-24 onward, publication-dated, weekends filled). **GS_YIELD_3M/6M/1Y/2Y/5Y/10Y**: monthly
-  averages of KASE's daily Nelson-Siegel zero-coupon curves from 2019-11; the tenors computed from
-  the file's parameters equal the curve KASE plots within 0.001 pp.
-- **BASE_RATE**: all 91 decisions from 2015-09-02 — the endpoint needs both `from` and `to`; with
-  one or none it serves the last 15.
-- **EXCHANGE_RATE** from 1999-11 (was 2021-05) and new **EXCHANGE_RATE_EUR / _CNY / _RUB**: the NBK
-  archive report (one request, all currencies). The 1 386 accumulated USD points are unchanged; the
-  archive also carries 07.05.2021 correctly. Each run now reads the last 45 days and accumulates. The
-  report's first rows (1999-10-19..21) are malformed and dropped. The isolated-spike guard now looks
-  only at the dollar's last 60 days: over the history it fired on 2015-08-25, which is real.
-- **M0-M3, MONETARY_BASE, DEPOSITS_TOTAL** from 1994 (was 2021-12): NBK page records. This also
-  **fixes the 2021-12..2022-12 values** that open-data form 51 got wrong (M3 4.5 trn → 28.7 trn); the
-  entry is gone from `config/source_issues.yaml`. From 2023 the two sources agree on every month.
-- **DEPOSIT_RATE** from 1996-12 (page records) — and one month earlier than before: form 268 stamps
-  month m at m+1 like the other flows (42 of 44 months equal after the shift), which the audit had
-  flagged as unproven.
-- **LOAN_RATE_ISSUED_LEGAL_KZT / _INDIVIDUAL_KZT** from 1997-01 (form 486, `date_basis`); the API
-  lacks a few months in 2007-09 and 2014.
-
-## 2026-09-25 — model data, step 2 (external block), part 1: Russia, the United States, world prices
-
-New agencies `cbr`, `eec`, `fred` (one updater, `update_foreign.py`, `scripts/fetchers/foreign.py`);
-472 indicators. Every source checked live against known values before wiring in.
-- **Russia:** RU_KEY_RATE (Bank of Russia SOAP KeyRateXML, 66 changes from 2013-09-17, dated by
-  effective date); RUB_USD (official, daily from 1998); RU_CPI_MOM / RU_CPI_YOY (EEC, monthly from
-  2005 — Rosstat is unreachable from the runner; EEC y/y equals the Bank of Russia's table within
-  0.05 in 156 of 156 months); RU_GDP_REAL (IMF QNEA, 2021 prices, NSA, from 2014-Q1 — 2011-13 are on
-  another base). FRED's Russia series ended in 2021-22 and are not used.
-- **United States (FRED, no key):** US_FED_FUNDS, US_TREASURY_2Y, US_TREASURY_10Y (monthly averages),
-  US_CPI (SA), US_GDP_REAL (chained 2017 USD, SAAR).
-- **World prices:** item-level WB_COMMODITY_PRICES_MONTHLY (71 series) and
-  WB_COMMODITY_INDICES_MONTHLY (16) from 1960-01, from the monthly Pink Sheet.
-
-## 2026-09-25 — model data, step 2 (external block), part 2: China, euro area, EAEU, foreign demand
-
-New agencies `nbs`, `ecb`, `derived`; 480 indicators. Checked live against known values.
-- **China:** CN_CPI_YOY (IMF CPI, % y/y, from 1994 — FRED's China series stopped in 2023-25);
-  CN_GDP_REAL_YOY (NBS, single-quarter y/y, from 1993 — via the new data.stats.gov.cn JSON endpoint,
-  the old easyquery API is behind a WAF; the IMF's QNEA volume for China breaks its base in 2026).
-- **Euro area (ECB Data Portal):** EA_HICP_YOY (dataflow HICP — ICP ended at 2025-12), EA_GDP_REAL
-  (chain-linked 2015, SCA, EA20), EA_DEPOSIT_RATE (69 changes from 1999).
-- **EAEU:** BY_CPI_YOY, KG_CPI_YOY from the same EEC file as Russia.
-- **FOREIGN_DEMAND_YOY:** real GDP growth of the euro area, China and Russia weighted by Kazakhstan's
-  2023-2025 export shares (43.2 / 18.6 / 11.7 %, rescaled; BNS indicator 312101, recomputed from the
-  2024-2025 table), quarterly from 2015-Q1. Weights and caveats in `config/foreign_demand.yaml`.
-
-## 2026-09-25 — model data, step 5: the gravity model
-
-New module `scripts/fetchers/gravity.py` (item-level, `config/dims.yaml`; items are ISO3 partner
-codes), new agency `wits`, static CEPII tables in `data/reference/`. All checked live.
-- **KZ_EXPORTS_BY_PARTNER / KZ_IMPORTS_BY_PARTNER** (BNS 312101, thousand USD, 2020–2025, 233
-  partners): each year from its final July edition (the 2021 edition's second sheet gives 2020);
-  country rows sum exactly to «Всего» (2025 exports 79.23 bn: China 15.20, Italy 15.64, Russia
-  8.25). A partner with a blank cell is a zero flow, stored as 0 (PPML needs the zeros). Russian
-  names → ISO3 through the new `dictionaries/partner_countries.csv` (235 names; an unknown name
-  stops the dataset).
-- **WITS_KZ_EXPORTS/IMPORTS_BY_PARTNER** (UN Comtrade via WITS, 1995–2023): the long history. Equal
-  to BNS for EAEU partners but well below it for non-EAEU flows in 2020–2022 (world exports 2021:
-  53.1 vs 60.3 bn) — splice to BNS from 2020.
-- **KZ_TARIFF_AVERAGES** (MFN and applied, simple and weighted, 1996–2023; applied simple 4.26 %
-  in 2023) and **KZ_TARIFF_APPLIED_BY_PARTNER** (2004–2023).
-- **WDI_GDP_USD, WDI_GDP_CONST_USD, WDI_POPULATION** (World Bank API, 2000–2025, 213–217
-  economies, aggregates dropped).
-- **data/reference/cepii_geodist_kaz.csv** (GeoDist: distances, contiguity, language, colonial
-  ties) and **cepii_gravity_kaz.csv** (Gravity V202211, 1992–2021: harmonic weighted distance,
-  RTA/FTA, WTO/GATT, EU, sibling/dependency links). Static research releases, not refreshed.
-
-## 2026-09-25 — model data, step 3: potential output and the output gap
-
-Production-function inputs; 490 indicators. All checked live against BNS publications.
-- **Capital (BNS form 11, Taldau, 2000–2025, billion KZT):** FIXED_ASSETS_GROSS (216 944 in 2025),
-  _GROSS_START, _NET (114 878), _COMMISSIONED, _DEPRECIATION, FIXED_ASSETS_WEAR (47.0 %),
-  FIXED_ASSETS_RENEWAL. Tangible assets only (term 455728 — the Taldau default adds intangibles:
-  222 829). 2025 equals the publication «Основные фонды РК (2025)» to the tenge. **Book values at
-  historical cost incl. revaluations (2024: +22.5 %)** — not a volume measure of K; deflate or build
-  a perpetual-inventory stock from GFCF before using it in a production function.
-- **Item-level (new fetcher `taldau`, `scripts/fetchers/taldau_dims.py`):** FIXED_ASSETS_GROSS/NET/
-  WEAR_BY_SECTION (ОКЭД A–T, 2000–2025; mining 2025: 67.7 trn, wear 59.9 %), FIXED_ASSETS_GROSS_BY_ASSET
-  (buildings, structures, machinery 98.2 trn, other, biological), EMPLOYED_BY_SECTION_LONG (2001–2019:
-  adds 2001–2009 to EMPLOYED_BY_SECTION; equal on 2010–2019 once T and U — folded into S by element
-  5831 — are added back). Children are checked to sum to the total. Dictionary okved_sections gains U.
-- **Hours:** HOURS_WORKED (million man-hours, 2000–2012 and 2017–2025), HOURS_WORKED_QUARTERLY (from
-  2016-Q1), HOURS_PER_EMPLOYEE (1 835 h in 2025). The annual 2013–2016 values exist only on a Taldau
-  segment with ~8 % lower coverage (2017: 6 353 summed over quarters vs 6 848) and are NOT spliced in —
-  a splice would show +9 % "growth" in 2017.
-- **CAPACITY_UTILIZATION_BY_SECTOR** (NBK form 369, 13 sectors + total, 2016-Q2 onward; new fetcher
-  `nbk_survey`); TOTAL equals the scalar CAPACITY_UTILIZATION in every quarter.
-- **Not added:** a Eurobond country-risk spread. The one free daily price source found (the Deutsche
-  Börse web API) authenticates requests with a key scraped from the site's JavaScript — the pipeline
-  does not reproduce another site's client authentication.
-
-## 2026-09-25 — model data, steps 4, 6, 7: nowcasting, МОБ/CGE, sovereign rating
-
-497 indicators. Checked live.
-- **Nowcasting — monthly state-budget taxes, 2018-01 to 2026-07** (Minfin Statistical Bulletin,
-  'табл 3', million KZT, year-to-date): STATE_TAX_REVENUE_YTD, STATE_CIT_YTD, STATE_PIT_YTD,
-  STATE_SOCIAL_TAX_YTD, STATE_VAT_YTD, STATE_EXCISE_YTD (+ December 2016-17). The bulletin series
-  so far read only the listing's first page (to 2025) and missed the older «Statistical Bulletin»
-  titles; now all pages are read (91 editions) and the period of every column is read from its
-  header across three layouts (discrete quarters 2020-21 are cumulated). Only 2026-04 is missing
-  (no edition). Tax 2024 = 19 700 517 mln KZT, equal to KGD's figure to the thousand. The archive
-  keeps each edition's 'табл 3' as JSON rather than the ~70 MB of workbooks.
-- **Ratings:** WGI_GE/RQ/RL/CC/VA/PV (Worldwide Governance Indicators, estimate, all economies,
-  1996-2024; the codes changed to GOV_WGI_*.EST in the 2025 revision; KAZ 2024: GE 0.15, RL −0.38,
-  VA −0.82); EXTERNAL_DEBT_SERVICE_SCHEDULE (NBK form 346: principal and interest due by sector and
-  horizon; principal sums to EXTERNAL_DEBT — 182 778 mln USD at 2026-04-01 — enforced; 43.0 bn due
-  within 12 months incl. on demand; the API keeps two vintages, older ones are carried forward);
-  GG_INTEREST (general government interest, GFS row 24, quarterly). No machine-readable source of
-  the rating history itself was found.
-- **МОБ / CGE (CAEM):** `scripts/build_io_tables.py` → `data/reference/io/`: symmetric input-output
-  tables (68 products, 10 tables incl. A and the Leontief inverse) and supply-use tables (125 × 72)
-  for 2021-2024, long gzip CSV. L = (I − A)⁻¹ checked on every build (≤ 4e-15). BNS's A divides by
-  output + imports. Run after each December release; not part of the daily run.
-- **Not done yet:** household income/expenditure by decile (BNS 18651 gives decile income shares;
-  Taldau expenditure by decile has only D1/D10 before 2024).
-
-## 2026-09-25 — income by decile (CGE/CAEM calibration, distribution)
-
-New fetcher `scripts/fetchers/bns_living.py` (every edition of BNS «Основные показатели
-дифференциации доходов населения», listing 18651, plus Taldau history); 499 indicators.
-- **Item-level, D01–D10:** INCOME_SHARE_BY_DECILE (annual 2011–2025) and _QUARTERLY (2011-Q1 to
-  2026-Q1; Taldau lacks 2017-Q1..Q3 and 2021-Q2); INCOME_MEAN_BY_DECILE (mean monthly money income per
-  capita, annual 2022–2025; 2025: 44 360 to 265 626 KZT) and _QUARTERLY (2022-Q3 on);
-  INCOME_UPPER_BOUND_BY_DECILE (the decile cut-offs) annual and quarterly; HH_EXPENDITURE_BOTTOM_TOP_DECILE
-  (money expenditure of D01 and D10 by item, 2001–2024, Taldau 704518 — equal to the 2024 edition's
-  table 10 to the tenge).
-- Shares add to 100 in every period (enforced). Taldau's annual shares equal the editions on all 30
-  common points; its quarterly shares differ in the second decimal on 16 of 122 and miss quarters, so
-  they are used only before the first quarterly edition (2022-Q3).
-- **Fixed: GINI_COEFFICIENT, DECILE_INCOME_RATIO, POVERTY_DEPTH, POVERTY_SEVERITY held ONE quarter
-  each** (the fetcher saw only the edition linked from the section page). Now 15 quarters from the
-  editions, and the Gini 57 quarters with Taldau's history from 2011 (equal to the editions on every
-  common quarter). New: GINI_COEFFICIENT_ANNUAL (2001–2025; 0.339 in 2001, 0.291 in 2025) and
-  DECILE_INCOME_RATIO_ANNUAL (2011–2025).
-- Quintiles are not stored separately: each quintile is two adjacent deciles (shares add, bounds are
-  the even decile cut-offs).
-
-## 2026-09-26 — sovereign Eurobond spread (country risk premium)
-
-New fetcher `scripts/fetchers/kase_eurobonds.py`; 501 indicators.
-- **Source:** KASE's daily settlement-price valuations of every Ministry of Finance Eurobond (free
-  files, plain GET): the daily xls from 2024-08, the CMS archive of zips before (2014-2024, three
-  layouts, columns found by header). Last valuation of each month. Other free sources were checked
-  and rejected (AIX: no trades; LSE: history behind a signed widget; Deutsche Börse: requests need
-  headers computed from a key in the site's JavaScript — not reproduced; NBK/IMF/FRED/WB: no series).
-- **Item-level:** EUROBOND_PRICE_BY_ISSUE, EUROBOND_YTM_BY_ISSUE (all MinFin Eurobonds, USD and EUR,
-  2014-11 on) and EUROBOND_SPREAD_BY_ISSUE (USD bonds over the FRED constant-maturity Treasury curve
-  DGS5/7/10/20/30, interpolated at the remaining maturity on the valuation date).
-- **Headline:** KZ_EUROBOND_SPREAD (bp) and KZ_EUROBOND_YIELD — the 2044 bond to 2020-10, the 2045 bond
-  from 2022-08, **2020-11 to 2022-07 left missing** (only stale/indicative 2044 quotes; listed in
-  `config/source_issues.yaml`). 2015-08 377 bp, 2016-01 348, 2020-03 276, 2022-10 312, 2026-09 65.
-- **Checks:** YTM reproduces KASE's to 0.01 pp (a mismatch above 0.1 pp stops the run — it would mean a
-  wrong coupon/maturity or column); an independent re-computation agrees on all 121 benchmark months
-  within 0.9 bp; LSE's last trade in the 2045 bond (27.07.2026) is within 0.3 points of KASE's value.
-- Not EMBI: one bond, valued by KASE. Accumulates: the first run back-filled 2014-11..2026-09; daily
-  runs fetch only missing months and the last two.
-
-## 2026-09-26 — country risk: short Treasury tenors, and the tenge's side of UIP
-
-507 indicators.
-- **Eurobond spreads:** the Treasury curve now has 1/2/3-year points (FRED DGS1/2/3), and a bond in its last
-  year gets no spread (EMBI's 12-month rule). The 2020-11..2022-07 gap of KZ_EUROBOND_SPREAD stays: the short
-  2024/2025 bonds are quoted in that window but are no better — 12-18 bp in April-June 2022, ninefold
-  disagreement in 2022-09 and NEGATIVE spreads (to -112 bp) every month 2023-04..2024-04 while the 2045 bond
-  stood at 120-170 bp (`config/source_issues.yaml`).
-- **SWAP_1D** (KASE «SWAP-1D (USD)», daily from 2014-06): one-day USD/KZT FX swap rate. No KASE methodology is
-  published; in 2024-2026 it tracks TONIA - fed funds, in 2022-12..2023-06 it sat at TONIA + 1 (15-17 %) while
-  the differential was 11-12 %.
-- **Derived (monthly):** KZT_USD_RATE_DIFF_ON (TONIA - fed funds, from 2001), KZT_USD_RATE_DIFF_1Y and _10Y
-  (KASE zero-coupon curve - Treasury constant maturity, from 2019-11), and KZT_CARRY_EXCESS_RETURN — the
-  ex-post excess return of tenge over dollars, (TONIA - FF) - 1200 ln(S_m/S_m-1): its mean is the average UIP
-  premium (2016-2026: 7.1 % p.a., s.e. 3.1; 2023-2026: 10.9, s.e. 4.6); devaluation months -199 (2014-02) and
-  -276 (2015-08). New US_TREASURY_1Y (FRED GS1).
-- **Not available openly:** expected depreciation (NBK open data has inflation expectations only), so the
-  ex-ante currency premium is not published as a series — it is the differential minus expected depreciation,
-  to be estimated in the model.
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-26 — country
+risk: short Treasury tenors, and the tenge's side of UIP» are in docs/UPDATE_LOG_ARCHIVE.md in the
+repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
 
 ## 2026-09-26 — first full run of the extended pipeline; BNS energy format change
 
@@ -797,3 +535,174 @@ regions.csv learnt «Абайская», «Жетысуская», «Улыта�
 LFS for data/raw/damu and data/raw/kase xlsx. Slow sources refresh weekly (refresh_days).
 
 Tests: `tests/test_policy_gaps.py` (33); full suite 608 passed.
+
+## 2026-09-27 — history back to 1991 and 1990s peers: GDP, population, WDI from 1960, IMF WEO for all economies, CPI weights, discrete quarterly GDP (user: «Чего в пайплайне нет …», «Что ещё не хватает …»)
+
+**GDP from 1991.** The early sheets of BNS tables 4439-4441 («1990-1997 (ОКОНХ)», «1998-2006 (ОКЭД ГК РК 03-2003)»,
+«2007-2009 (ОКЭД ГК РК 03-2007)») are read as GDP_VOLUME_INDEX_AGGREGATES, GDP_DEFLATOR_AGGREGATES and
+GDP_PRODUCTION_AGGREGATES (dictionary `gdp_production_aggregates`). `gaps_filled_from` extends GDP_REAL and
+GDP_DEFLATOR to 1991 and GDP_INCOME_METHOD to 1993, only while the two sources agree on every shared year
+(2000-2009). Real GDP, % of the previous year: 1991 89.0, 1992 94.7, 1993 90.8; deflator 1991 201.5, 1992
+1 497.5; nominal GDP 1993 29 423.1 mln KZT. This closes the 1991-1992 gap of the IMF series (from 1993).
+
+**Population from 1991.** POPULATION_AVG_BY_REGION now reads both sheets of table 6576 (1991-2008, 2009-2025);
+new POPULATION_BOY_BY_REGION (table 6584, 1 January stocks, dated YYYY-01-01 via `as_at_start_of_year`) and the
+derived scalar POPULATION_BOY_BNS. POPULATION_BNS from 1991 (16 404 966.5). Source issues: the 2008 average is the
+post-census 1 January 2009 stock (population_avg_2008); the stocks jump by +204 869 at 2009 and +380 751 at 2022
+(census steps, not backcast).
+
+**Peers.** WDI panels from 1960 (GDP in USD, constant USD, population) plus GDP growth, CPI inflation, deflator
+inflation, GDP per capita PPP, the official exchange rate and net migration for every economy. IMF_WEO_WORLD: the
+WEO for 197 countries 1980-2024 (growth, inflation, GDP in USD and PPP per capita, population, current account,
+debt, unemployment; outturns only — years from each country's COUNTRY_UPDATE_DATE on are dropped; group codes
+dropped).
+
+**CPI weights before 2020.** CPI_WEIGHTS: the 12 COICOP divisions 2005-2019 as BNS reports them to the IMF
+(IMF.STA/CPI WGT_PT; 2005 CP01 43.061, 2019 36.976; CP01+CP02 equals BNS's published food share, and the weights
+reproduce the year-to-date CPI within 0.02-0.07 points), the 2022 scheme of the BNS brochure, and food / non-food
+/ services shares for 2014-2026 (data/reference/bns_cpi_weights.csv). CPI_WEIGHTS_ESTIMATED 2020-2026: division
+weights recovered from BNS's contributions to year-to-date CPI (2022 check: CP01 38.74 against 38.75).
+
+**Real GDP for 2026 Q2.** GVA_VOLUME_INDEX_BY_SECTION_DISCRETE derives discrete quarters from the year-to-date
+tables: GDP 105.2 in 2026 Q2 (manufacturing 111.1, construction 115.5). Its basis differs from the quarterly
+accounts (2025 Q2: 107.0 against 109.0 in QNA), so it is not spliced into QNA_*; BNS's own Q2 is due 28.10.2026.
+
+## 2026-09-27 — X-13ARIMA-SEATS replaces STL for seasonal adjustment
+
+model_data/ and the seasonal-decomposition report now use X-13ARIMA-SEATS, US Census Bureau v1.1 build 62
+(the official Linux ASCII build, vendored in tools/x13as/ via git LFS, sha256 72e4735d…; downloaded and
+checked on demand when absent), driven by a new scripts/lib/x13.py with a hand-written spec: automatic
+ARIMA (automdl), automatic AO/LS/TC outliers, log-vs-level by AICC (or forced by the spec), X-11
+decomposition (SEATS optional), and a Kazakhstan calendar — working days under the holiday law (weekend
+holidays moved to the next working day, Kurban Ait and Orthodox Christmas not moved, holiday list by year:
+Nauryz 21-23 March from 2010, 7 May from 2013, 17 Dec and 1 Dec until 2021, 25 Oct 1995-2008 and from 2022)
+plus a Kurban Ait regressor (dates 1990-2035, Kazakhstan observance) — kept only when AICC prefers it.
+STL (robust) remains an explicit option and the fallback when no binary is available, recorded in each
+variable card. Check: our X-13 on BNS's unadjusted real GDP reproduces BNS's own X13/JDemetra+ adjusted q/q
+growth 2010-Q2..2026-Q1 with correlation 0.999 and RMSE 0.13 pp (STL: 0.907 and 1.19 pp). Against STL on the
+24 variables we adjust, SA growth correlates 0.91 at the median (0.55 m0, 0.59 tax receipts, 0.67 imports:
+hyperinflation-era outliers, the 2022-01 tax break, and a working-day effect in imports with t = 7.3). PPI
+shows no identifiable seasonality (M7 2.11, Q 1.02). VARIABLES.md now lists model, calendar effects,
+outliers and M7/Q per variable. Seasonal strength in analysis/reports/seasonal_decomposition_2026-09-28.md:
+GDP_NOMINAL 0.996, IMPORTS 0.877, EXPORTS 0.463, CPI 0.131 (STL: 0.985, 0.688, 0.204, 0.174).
+
+## 2026-09-27 — utility tariff decisions and CPI tariff jumps (TARIFF_DECISIONS, TARIFF_CHANGE_MONTHS)
+
+**TARIFF_DECISIONS** (new, `scripts/fetchers/krem_tariffs.py`, agency `krem`) is an event dataset of
+utility-tariff decisions for inflation modelling: one record per decision and service, dated by the month the
+decision takes effect; item_code REGION.SERVICE.KIND.SOURCE_ID. (1) КРЕМ and its regional departments publish
+into one gov.kz project, «krem»; the tariff orders are read from their titles (the files are scans): heat,
+water, sewerage, electricity transmission and supply, gas distribution, transport and storage; value NaN; the
+effective date is stated, or estimated as the month after the order date (or after publication for
+Карагандинская and Шымкент). (2) КРЕМ press releases (gov.kz news; the endpoint needs a cookie ticket from
+/api/v1/public/_/c/k6) give the stated % change, e.g. ГКП «Семей Водоканал» water −11.78% from 2026-04.
+(3) Ministry of Energy electricity generation caps (order 514, order 508-н/қ and amendments, old.adilet.zan.kz):
+mean % change across producer groups, e.g. +16.34% from 2023-06 and +26.33% from 2025-02. (4) Wholesale gas caps
+by region 2015-2027, e.g. Almaty city 29 873 → 39 044 KZT/1000 m3 from 2025-07 (+30.7%); the 2027-07 period is
+marked forecast. Coverage is uneven: departments that put order dates in titles dominate (Карагандинская,
+Костанайская), and Атырауская, ВКО, СКО, Туркестанская and Павлодарская are sparse (their order files need OCR).
+
+**TARIFF_CHANGE_MONTHS** (new, derived, `scripts/fetchers/tariff_jumps.py`) lists the months from 2004 on in
+which a national CPI utility item (electricity, hot and cold water, heating, sewerage, network gas, LPG,
+garbage; BNS slugs chained across the re-bases) moved by at least 3% m/m, or by at least 1.5% with a robust
+z-score of at least 5: e.g. ELECTRICITY 2023-08 +6.7, HEATING 2023-11 +16.1, NETWORK_GAS 2025-08 +24.1. It dates
+when the CPI registered a change, not when it was decided; national only.
+
+## 2026-09-27 — the quasi-fiscal block before 2022: budget lending by recipient, holdings' balance sheets, NBK surveys from 1997
+
+**RB_QUASIFISCAL_YTD** (new, `fetchers/minfin_quasifiscal.py`): budget loans (LOAN) and acquisitions of
+financial assets (EQUITY) of the republican budget from the Statistical Bulletin «табл 8 (расх)», January to
+the month, 2013-01 … 2026-07 (2020-04 and 2026-04 not online; 2025-12 from the untitled gov.kz document 964016).
+The recipient is read from the programme label, not the codes: the first entity named is the direct
+counterparty, the last one before «через» the final recipient. Items: totals; SEC.DI (development institutions
+and holdings); 18 final recipients (DBK, IDF, Damu, ACC, Otbasy, Samruk-Kazyna, KTZ, the Problem Loans Fund …);
+six families; the three holdings as direct counterparties; the non-quasi-fiscal rest, so the parts add up.
+Checks: programmes = section header in every edition; headers = табл 7 (except its errors of 2021-02/03);
+LOAN.DI = табл 10 specifics 513+519. Loans to development institutions, bn KZT: 60.0 (2013), 58.9, 68.9,
+182.5, 194.1, 146.5, 246.5, 245.2, 284.7, 577.3 (2022, of which IDF 361.7), 410.3 (2023, Samruk 162.6), 274.0,
+235.5 (2025). Equity: 433.1 bn in 2014 (Problem Loans Fund 250.0). Not covered: current transfers booked as
+spending (2 092.9 bn to the Problem Loans Fund in 2017, Damu subsidies) and bond purchases by the National Fund,
+the NBK or UAPF.
+
+**DEVELOPMENT_INSTITUTIONS_BALANCE_SHEETS** extended (`fetchers/kase_ifrs.py`): FPKR, the Problem Loans Fund
+(consolidated, 2017-12 … 2021-06, left on the KASE server after its bonds were annulled; equity -716.3 bn and
+the reserve for conditional distribution -3 645.1 bn at 2019-12-31), KZAG (KazAgro consolidated, 2012-12 …
+2020-09), SKKZ (Samruk-Kazyna consolidated, from 2021-12) and SKKZ_SEP (its separate Minfin Form 1, 2012-12 …
+2016-03); KASE fin-data key indicators BTRK.FD_* (from 2015-12) and SKKZ.FD_* (from 2006-12). Discovery moved to
+the KASE documents API; .xls statements are read (BRKZ from 2012-12). Docstring corrected: KFUS is the
+Kazakhstan Sustainability Fund (2017), not the Problem Loans Fund. Fixed: BTRK.GOV_SUBSIDIES had taken the
+asset «субсидии к получению» at 2020-12-31 and 2021-09-30. Aggregation: BTRK + KZAG (to 2020) + FPKR + KFUS
+(+ SKKZ_SEP); never add a subsidiary to its parent.
+
+**NBK surveys from 1997** (`fetchers/nbk_records.py`, the JSON «records» behind the NBK monetary-statistics
+pages): NBK_SURVEY_HISTORY (CB), BANKS_SURVEY_HISTORY (ODC), BANKING_SYSTEM_SURVEY_HISTORY (BS) monthly from
+1998, OFC_SURVEY and FINANCIAL_SECTOR_SURVEY quarterly from 2015. Stocks are dated the first day of the next
+period, as form 50 (the year-month of `reporting_date` is the month-end). Enforced: the survey identities,
+BS = CB + ODC for claims on NBFIs and the rest of the economy from 2002-11, CB = form 50 on the 44 common dates,
+OFC = form 26. Quasi-fiscal lines: NBK claims on NBFIs (KSF, Problem Loans Fund, mostly equity) 146.2 bn at
+end-2011, 1 230.1 bn (end-2017), 3 044.0 (end-2019), 5 317.6 (end-2021), 5 137.7 (end-2026-08); banks' claims on
+public nonfinancial organisations; OFC claims on them (DBK among the OFCs). **BANKS_GOV_HOLDING_BORROWINGS**
+(`fetchers/nbk_balance_groups.py`): banks' borrowings from the government, local executive bodies and the
+national managing holding (account group 2030), IFIs (2040) and other banks (2050), monthly from 2010 (G2030
+58.4 bn at 2011-01-01, 399.8 at 2015-01-01, 712.0 at 2026-08-01; break 2023-02 when Damu joined group 2030).
+Source issues registered: the misdated 2003-04 banks' record, six NBK identity errors, the unpublished NDA line
+from 2009, the 2015-06 step in NBK claims on the rest of the economy, the 2023-02 Damu reclassification.
+
+## 2026-09-28 — official exchange rates back to the tenge's introduction (November 1993)
+
+EXCHANGE_RATE, EXCHANGE_RATE_RUB (from 1993-11-18), EXCHANGE_RATE_CNY (from 1996-02-05) and
+EXCHANGE_RATE_EUR (from 1999-01-04) now reach back before the NBK daily report, whose first usable
+day is 1999-11-17. The history comes from the NBK archive workbook «Архив официальных курсов валют
+с 1993 по 1999» (nationalbank.kz/file/download/22756): effective-date rows turned into the rate in
+force on each weekday, the series' existing definition. The archive is re-read on every run and must
+equal the report on all 33 weekdays of 1999-11-17..12-31 (0 differences), or the fetcher stops. USD at
+year-end: 6.31 (1993), 54.26, 63.95, 73.30, 75.55, 83.80 (1998), 138.20 (1999), all equal to IMF IFS;
+the float of April 1999 runs 87.50 (2 April) -> 100.00 (5 April) -> 118.00 (7 April). Monthly means
+match the NBK's published averages within 0.05 except 1994-01, 1997-01 and 1998-01. The rouble is in
+new (post-1998) roubles throughout: the archive's quote per 1000 roubles before 1998 is one new rouble
+(13.00 on both sides of 1 January 1998). No euro before 1999: the archive's ECU and Deutsche mark are
+not spliced. Rates were set once or twice a week before April 1999, so the early daily series is a
+step function. Tests: tests/test_fx_history.py (14).
+
+## 2026-09-28 — CIS Stat: the CIS countries since 1991, Kazakhstan migration before 2000
+
+New fetcher `scripts/fetchers/cisstat.py` (agency `cisstat`) reads the JSON service of the CIS Stat
+database «Статистика СНГ» (new.cisstat.org/consstat, no key) into four item-level datasets whose
+`region` is the reporting country's ISO3 code: CIS_GDP_VOLUME_INDEX (fact 714662, real GDP % of the
+previous year, 11 countries 1991-2025), CIS_CPI (fact 43370, December on December and annual average
+as separate items, by consumer group), CIS_POPULATION (facts 44176/44177, 1 January and annual
+average) and CIS_MIGRATION (facts 4650866/4679599 by flow, 44243/44245 by partner country from 2016;
+net = arrivals - departures). Kazakhstan's GDP index equals BNS GDP_REAL in every year 1991-2025
+(1991 89.0, 1992 94.7, 1993 90.8) and its Dec/Dec CPI equals BNS CPI_YOY in 2011-2025; the 1990s CPI
+(1994: average 1 877%, Dec/Dec 1 158%) differs from the IMF's (1 402% / 855%). MIGRATION_ARRIVALS and
+MIGRATION_DEPARTURES now start in 1991 (1994: 70 389 arrived, 477 068 left) via `gaps_filled_from`
+CIS_MIGRATION; the sources agree on 2000-2025 except 2008 (CIS Stat 46 404 / 45 287, BNS 46 113 /
+44 813), which `fill_gaps` now skips through the new `known_differences` key, keeping BNS's value.
+Hard checks: header columns, every country/flow/group/base/sex/area label mapped, numeric values, no
+conflicting duplicates, Kazakhstan present 1991-1999, and for Kazakhstan the partner sums and the two
+migration facts' totals. Tests: tests/test_cisstat.py (19, no network).
+
+## 2026-09-28 — national CPI back to 1991
+
+CPI and CPI_YTD now start in January 1991 and CPI_YOY in January 1994 (BNS published no
+year-on-year index for 1991-1993); before, all three started with Taldau in January 2011. The
+240 (204) earlier months are BNS's own printed figures from three stat.gov.kz sources — «Цены в
+Казахстане за 1991-2021 годы» (element 17216, docx: Dec/Dec 1991-2021, m/m 1992-2021), «Цены в
+Казахстане в 1991-2000 гг.» (element 21933, pdf: m/m, since December and, from 1994, y/y) and the
+140 monthly editions of publication 166775 (May 1999 – December 2010) — loaded by
+`scripts/load_cpi_history.py` into `data/reference/bns_cpi_history.csv`. Every month two sources
+print is the same number in both (228 of 240 m/m months have a second source; the editions equal
+CPI_DETAIL on all 234 values 2004-07…2010-12), and the three measures satisfy the CPI identities
+within rounding (chain of m/m = since-December; y/y = product of 12 m/m = ytd(t)/ytd(t−12)·Dec/Dec).
+One printed inconsistency is kept as published: February 1993 m/m 131.9 where the since-December
+figures imply 131.7. The fetcher prepends only months before 2011 and stops if the file differs
+from Taldau on any of the 132 m/m months and 11 Decembers of 2011-2021 the docx repeats (all equal).
+December/December: 1991 247.1, 1992 3060.8, 1993 2265.0, 1994 1258.3, 1995 160.3, 1996 128.7,
+1997 111.2, 1998 101.9, 1999 117.8, 2000 109.8. Tests: tests/test_cpi_history.py (25).
+The analysis and model layers keep their CPI sample from 2011: `model_data/spec.yaml` `cpi` has
+`from: "2011-01-01"` (now applied before chaining, so the level is still 100 in 2011-01), and the CPI
+targets of `scripts/analysis/seasonal_targets.py` / `forecast_targets.py` carry `sample_start`
+(new, passed to `timeseries.prepare_level`). Move the start to 1996 only after checking the X-13
+diagnostics; 1991-1995 hold m/m values up to 312.3 (source issue cpi_1991_1995_hyperinflation).
+model_data's `usdkzt` now starts in 1994-01 (the NBK archive); 1999-11 is 139.63, the NBK's
+published average, instead of 138.80 from the report's last 11 weekdays.

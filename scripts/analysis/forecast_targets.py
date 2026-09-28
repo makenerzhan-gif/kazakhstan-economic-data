@@ -34,6 +34,9 @@ class ForecastTarget:
     period: int  # 12 = monthly, 4 = quarterly -- same meaning as SeasonalTarget.period
     horizon: int  # forecast steps ahead; cross-checked against PERIOD_TO_HORIZON at run time
     interpretation: str = ""
+    # First date used; None = the whole series. CPI starts in 2011: its 1991-2010 BNS history
+    # holds the 1991-1995 hyperinflation (m/m up to 312.3), which is not a seasonal pattern.
+    sample_start: str | None = None
 
 
 FORECAST_TARGETS: list[ForecastTarget] = [
@@ -50,7 +53,7 @@ FORECAST_TARGETS: list[ForecastTarget] = [
             "the four candidates. Value range 99.9-105.2 across the full "
             "history, never near zero -- MAPE is safe to compute."
         ),
-        period=12, horizon=12,
+        period=12, horizon=12, sample_start="2011-01-01",
         interpretation=(
             "Same 2022 KZT devaluation / 2020 COVID shock caveat as the "
             "decomposition pass's CPI entry, but ETS(A,A,A) has no analogue "

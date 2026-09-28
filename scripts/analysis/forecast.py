@@ -171,6 +171,7 @@ def forecast_target(
         target.indicator_id, meta, long_df,
         acknowledged_lifecycle=targets_config.ACKNOWLEDGED_LIFECYCLE,
         forecast_cutoff_year=targets_config.FORECAST_CUTOFF_YEAR.get(target.indicator_id),
+        sample_start=target.sample_start,
     )
     # prepare_level already verified this is gap-free on this exact
     # (frequency-implied) regular grid -- asfreq here only attaches that

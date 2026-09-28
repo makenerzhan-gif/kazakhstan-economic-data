@@ -248,14 +248,14 @@ def build_variable(v: dict, long, dims, per_year: int, sa_cfg: dict | bool, mont
     info["source_frequency"] = freq
     if v.get("to_monthly"):
         s = to_monthly(s, v["to_monthly"], src.get("series") in EVENT_SERIES)
+    if v.get("from"):                                     # sample start, before the ops: a chain is 100 there
+        s = s[s.index >= pd.Timestamp(v["from"])]
     for op in v.get("ops", []):
         s = {"chain": chain, "decumulate_ytd": lambda x: decumulate_ytd(x, per_year),
              "asat_to_eop": lambda x: asat_to_eop(x, per_year)}[op](s)
     if per_year == 4:                                     # quarterly panel: quarter-start dates
         s.index = s.index.to_period("Q").to_timestamp()
         s = s[~s.index.duplicated(keep="last")]
-    if v.get("from"):
-        s = s[s.index >= pd.Timestamp(v["from"])]
     s.name = v["name"]
     mode = v.get("sa", "none")
     sa = None

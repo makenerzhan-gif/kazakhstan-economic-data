@@ -59,7 +59,7 @@ parameters:
 
 monthly:
   # ---------------------------------------------------------------- prices
-  - {name: cpi, source: {series: CPI}, ops: [chain], sa: log, note: "Headline CPI, chained from BNS m/m indices (rounded to 0.1): cpi_yoy differs from the published CPI_YOY by 0.07 pp on average, 0.35 at most -- use CPI_YOY for y/y inflation itself."}
+  - {name: cpi, source: {series: CPI}, ops: [chain], sa: log, from: "2011-01-01", note: "From 2011 (BNS history 1991-2010 in CPI holds the 1991-1995 hyperinflation; move the start to 1996 after checking X-13 diagnostics). Headline CPI, chained from BNS m/m indices (rounded to 0.1): cpi_yoy differs from the published CPI_YOY by 0.07 pp on average, 0.35 at most -- use CPI_YOY for y/y inflation itself."}
   - {name: cpi_core_ex3, source: {series: CORE_CPI_MOM_EX3}, ops: [chain], sa: log, note: "Core CPI excluding fruit and vegetables, petrol and coal (BNS)."}
   - {name: cpi_core_ex7, source: {series: CORE_CPI_MOM_EX7}, ops: [chain], sa: log, note: "Core CPI excluding seven volatile groups (BNS)."}
   - {name: cpi_food, source: {series: CPI_FOOD}, ops: [chain], sa: log}

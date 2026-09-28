@@ -35,6 +35,12 @@ targeted transfers) are read monthly from Minfin's report on the Fund (from 2018
 taxes reach back to 2002 through KGD's by-tax workbooks, loaded once by
 `scripts/load_nf_receipts_history.py` into `data/reference/nf_receipts_kgd_history.csv`.
 
+The national CPI (m/m, since December, y/y) reaches back to 1991 (y/y to 1994): the months before
+Taldau's 2011-01 are BNS's printed history — «Цены в Казахстане за 1991-2021 годы», «Цены в Казахстане
+в 1991-2000 гг.» and the monthly editions of 1999-2010 — loaded once by `scripts/load_cpi_history.py`
+into `data/reference/bns_cpi_history.csv` and prepended by the BNS fetcher while it equals Taldau on
+every month both carry.
+
 Model-ready monthly and quarterly panels (seasonally adjusted, chained, with a
 perpetual-inventory capital stock and TFP) are derived into `model_data/` by
 `scripts/build_model_data.py` — see `model_data/README.md`.

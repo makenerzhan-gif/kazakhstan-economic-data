@@ -16,7 +16,7 @@ Curated set of 4 targets, hand-picked for having enough dense, gap-free history 
 
 *Why this candidate:* Already a published MoM comparison index (observation_type=comparison_index, comparison_basis=mom, unit 'index, previous month = 100') -- decompose as published, same 'already a comparison, don't transform it' rule scripts/analysis/correlate.py already uses. Textbook seasonal candidate: 187 gap-free monthly points (2011-01..2026-07), 15.5x this pass's 3-cycle minimum.
 
-- Prepared as: verified gap-free on a regular calendar grid; level as published (no growth-rate transform)
+- Prepared as: sample from 2011-01-01; verified gap-free on a regular calendar grid; level as published (no growth-rate transform)
 - Method: X-13 X-11 -- log; (1 0 0)(0 0 1); calendar: none kept; outliers: LS2011.Mar, TC2014.Feb, TC2015.Oct, TC2015.Dec, AO2017.Oct, AO2022.Mar, TC2022.Mar, TC2022.Sep, LS2024.Oct; M7 0.73; Q 1.17.
 - Window: 2011-01-01 .. 2026-08-01 -- 188 observations, period=12 (monthly).
 - **Seasonal strength: 0.131** (0-1 scale; see Methodology for the formula).
@@ -47,7 +47,7 @@ Window includes the 2022 KZT devaluation's inflation spike and the 2020 COVID di
 
 **Exports (total), monthly level**
 
-*Why this candidate:* Raw monthly trade-flow level (thousand USD, observation_type=period_total, no cumulation) -- decompose the level, not a growth rate: STL separates trend/seasonal/residual out of the level itself, and a growth-rate series would already be partially deseasonalized before STL ever saw it. 90 gap-free monthly points (2019-01..2026-06), 7.5x the minimum -- shorter margin than CPI, still comfortable.
+*Why this candidate:* Raw monthly trade-flow level (thousand USD, observation_type=period_total, no cumulation) -- decompose the level, not a growth rate: the decomposition separates trend/seasonal/residual out of the level itself, and a growth-rate series would already be partially deseasonalized before the decomposition ever saw it. 90 gap-free monthly points (2019-01..2026-06), 7.5x the minimum -- shorter margin than CPI, still comfortable.
 
 - Prepared as: verified gap-free on a regular calendar grid; level as published (no growth-rate transform)
 - Method: X-13 X-11 -- none; (0 1 1)(0 1 1); calendar: kzwd(t=0.3)+kurban(t=-1.6); outliers: AO2019.Mar, LS2026.Jun; M7 1.03; Q 0.87.

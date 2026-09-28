@@ -101,6 +101,7 @@ def prepare_level(
     *,
     acknowledged_lifecycle: dict[str, str] | None = None,
     forecast_cutoff_year: int | None = None,
+    sample_start: str | None = None,
 ) -> tuple[pd.Series, str]:
     """Decumulate (if cumulation == year_to_date) -> forecast cutoff (if an
     IMF international_projection series) -> verify gap-free on a regular
@@ -145,6 +146,10 @@ def prepare_level(
             transformations.decumulate_ytd(_to_transform_series(s)), indicator_id
         )
         steps.append("de-cumulated (year-to-date total -> own-period contribution)")
+
+    if sample_start:
+        s = s[s.index >= pd.Timestamp(sample_start)]
+        steps.append(f"sample from {sample_start}")
 
     _check_gap_free(s, indicator_id, meta.get("frequency", ""))
     steps.append("verified gap-free on a regular calendar grid")

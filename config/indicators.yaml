@@ -68,6 +68,7 @@ indicators:
     observation_evidence: "к предыдущему месяцу"
     comparison_basis: mom
     comparison_basis_evidence: "единица: 'previous month = 100'"
+    source_note: "с 1991-01: до 2011-01 — напечатанная история БНС (data/reference/bns_cpi_history.csv, scripts/load_cpi_history.py: сборники «Цены в Казахстане за 1991-2021 годы», «... в 1991-2000 гг.» и ежемесячные выпуски 166775); равна Taldau 703076 на всех 132 общих месяцах 2011-2021"
 
   - id: UNEMPLOYMENT
     name_ru: "Уровень безработицы"
@@ -3951,6 +3952,7 @@ indicators:
     observation_evidence: "к соответствующему месяцу прошлого года"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    source_note: "с 1994-01 (за 1991-1993 годовые индексы к соответствующему месяцу не публиковались): до 2011-01 — напечатанная история БНС (data/reference/bns_cpi_history.csv); равна Taldau во всех 11 общих декабрях 2011-2021"
 
   - id: CPI_YTD
     name_ru: "Инфляция с начала года (ИПЦ)"
@@ -3964,6 +3966,7 @@ indicators:
     observation_evidence: "к декабрю прошлого года"
     comparison_basis: ytd_base
     comparison_basis_evidence: "единица: 'December of previous year = 100'"
+    source_note: "с 1991-01: до 2011-01 — напечатанная история БНС (data/reference/bns_cpi_history.csv); декабрь к декабрю 1992 3060.8, 1993 2265.0, 1994 1258.3; равна Taldau во всех 11 общих декабрях 2011-2021"
 
   - id: CPI_FOOD
     name_ru: "ИПЦ: продовольственные товары, к предыдущему месяцу"

@@ -24,6 +24,9 @@ class SeasonalTarget:
     rationale: str
     period: int  # 12 = monthly, 4 = quarterly -- the seasonal cycle length
     interpretation: str = ""
+    # First date used; None = the whole series. CPI starts in 2011: its 1991-2010 BNS history
+    # holds the 1991-1995 hyperinflation (m/m up to 312.3), which is not a seasonal pattern.
+    sample_start: str | None = None
 
 
 SEASONAL_TARGETS: list[SeasonalTarget] = [
@@ -37,7 +40,7 @@ SEASONAL_TARGETS: list[SeasonalTarget] = [
             "Textbook seasonal candidate: 187 gap-free monthly points "
             "(2011-01..2026-07), 15.5x this pass's 3-cycle minimum."
         ),
-        period=12,
+        period=12, sample_start="2011-01-01",
         interpretation=(
             "Window includes the 2022 KZT devaluation's inflation spike and the "
             "2020 COVID disruption -- both large, transient, non-seasonal shocks. "

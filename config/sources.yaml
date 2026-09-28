@@ -520,6 +520,7 @@ agencies:
           кондиционированным воздухом', 'отчетный период к предыдущему периоду'].
           fetch_ind_prod_electricity.
       CPI:
+        history: "2026-09-28: months before 2011-01 (CPI, CPI_YTD from 1991-01; CPI_YOY from 1994-01) from data/reference/bns_cpi_history.csv, built by scripts/load_cpi_history.py from stat.gov.kz elements 17216 (docx 1991-2021), 21933 (pdf 1991-2000) and the 140 editions of publication 166775 (1999-05..2010-12); every month printed by two sources is equal in both; prepended by splice_cpi_history in scripts/fetchers/bns.py, which stops if the file and Taldau differ on any shared month."
         status: confirmed
         current_source: "2026-09-25 (audit): the fetcher reads Taldau index 703076 (monthly, 2011-01 onward, through 2026-08), not element 1549, whose cube stopped at 2025-10 -- see metadata/bns/cpi.json. The element 1549 description below is the history of the connection."
         page_url: "https://stat.gov.kz/ru/open-data/stat-prices/474295/"
@@ -1426,6 +1427,7 @@ agencies:
           2026-09-01. Sheet 2 of the same publication as EXPORT_PRICE_INDEX, row 'Импорт -
           всего', same column and same caveats. fetch_import_price_index.
       CPI_YOY:
+        history: "2026-09-28: months before 2011-01 (CPI, CPI_YTD from 1991-01; CPI_YOY from 1994-01) from data/reference/bns_cpi_history.csv, built by scripts/load_cpi_history.py from stat.gov.kz elements 17216 (docx 1991-2021), 21933 (pdf 1991-2000) and the 140 editions of publication 166775 (1999-05..2010-12); every month printed by two sources is equal in both; prepended by splice_cpi_history in scripts/fetchers/bns.py, which stops if the file and Taldau differ on any shared month."
         status: confirmed
         current_source: "2026-09-25 (audit): now read from Taldau index 703076 like CPI (188 monthly points to 2026-08); the element 1549 description below is historical."
         download_url: "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/"
@@ -1447,6 +1449,7 @@ agencies:
           separately sourced NBK ANNUAL_INFLATION -- 12.6% here for October 2025 runs into 12.2%
           in February 2026 and 10.2% by August 2026 there. fetch_cpi_yoy.
       CPI_YTD:
+        history: "2026-09-28: months before 2011-01 (CPI, CPI_YTD from 1991-01; CPI_YOY from 1994-01) from data/reference/bns_cpi_history.csv, built by scripts/load_cpi_history.py from stat.gov.kz elements 17216 (docx 1991-2021), 21933 (pdf 1991-2000) and the 140 editions of publication 166775 (1999-05..2010-12); every month printed by two sources is equal in both; prepended by splice_cpi_history in scripts/fetchers/bns.py, which stops if the file and Taldau differ on any shared month."
         status: confirmed
         current_source: "2026-09-25 (audit): now read from Taldau index 703076 like CPI; the element 1549 description below is historical."
         download_url: "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/"
