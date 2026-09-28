@@ -221,6 +221,16 @@ def test_fetcher_splices_the_archive_before_the_report(monkeypatch, tmp_path):
     assert "Before 1999-11-17" in manifest["note"] and "from 1993-11-18" in manifest["note"]
 
 
+def test_fetcher_drops_weekend_rows_already_stored(monkeypatch, tmp_path):
+    # 2026-08-22/23 and 08-29/30 (Saturdays and Sundays) were stored by an earlier fetcher
+    stored = {"1999-11-17": 139.8, "2026-08-21": 456.88, "2026-08-22": 456.88, "2026-08-23": 456.88,
+              "2026-08-24": 457.1}
+    _offline(monkeypatch, tmp_path, stored=stored)
+    s = {r["date"]: r["value"] for r in nbk.fetch_exchange_rate_usd()[0]}
+    assert "2026-08-22" not in s and "2026-08-23" not in s
+    assert s["2026-08-21"] == 456.88 and s["2026-08-24"] == 457.1
+
+
 def test_fetcher_eur_starts_1999_and_rub_note_names_the_unit(monkeypatch, tmp_path):
     _offline(monkeypatch, tmp_path)
     eur, m_eur = nbk.fetch_exchange_rate_eur()

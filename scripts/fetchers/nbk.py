@@ -220,7 +220,11 @@ def _fetch_official_rate(code: str, indicator_id: str, begin: date | None = None
     # Before the report's first usable day (1999-11-17) the NBK archive 1993-1999 takes over,
     # checked day by day against the report where both publish (see _archive_splice).
     history, history_note = _archive_splice(code, indicator_id)
-    records = _merge_accumulated(indicator_id, {**history, **fresh})
+    # Weekdays only, the stored history included: rows written for a Saturday or Sunday by an
+    # earlier fetcher (2026-08-22/23 and 08-29/30 repeated Friday's USD rate) are dropped, so a
+    # monthly mean is over the same days as the NBK's.
+    records = [r for r in _merge_accumulated(indicator_id, {**history, **fresh})
+               if date.fromisoformat(r["date"]).weekday() < 5]
     if not records:
         raise validation.StructuralChangeError("\n".join([
             f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",

@@ -92877,9 +92877,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-21,RUS,national,daily,RUB_USD,83.355,RUB per USD,cbr,2026-09-27,level,2026-09-27
 2026-08-21,KZ,national,daily,SWAP_1D,12.183104561501118,% per annum,kase,2026-09-27,level,2026-09-27
 2026-08-21,KZ,national,daily,TONIA,16.04,% per annum,kase,2026-09-27,level,2026-09-27
-2026-08-22,KZ,national,daily,EXCHANGE_RATE,456.88,KZT per 1 USD,nbk,2026-09-28,level,2026-09-28
 2026-08-22,RUS,national,daily,RUB_USD,82.9211,RUB per USD,cbr,2026-09-27,level,2026-09-27
-2026-08-23,KZ,national,daily,EXCHANGE_RATE,456.88,KZT per 1 USD,nbk,2026-09-28,level,2026-09-28
 2026-08-24,KZ,national,daily,EXCHANGE_RATE,456.88,KZT per 1 USD,nbk,2026-09-28,level,2026-09-28
 2026-08-24,KZ,national,daily,EXCHANGE_RATE_CNY,67.98,KZT per CNY,nbk,2026-09-28,level,2026-09-28
 2026-08-24,KZ,national,daily,EXCHANGE_RATE_EUR,534.64,KZT per EUR,nbk,2026-09-28,level,2026-09-28
@@ -92914,9 +92912,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-28,RUS,national,daily,RUB_USD,85.9541,RUB per USD,cbr,2026-09-27,level,2026-09-27
 2026-08-28,KZ,national,daily,SWAP_1D,12.808046520739335,% per annum,kase,2026-09-27,level,2026-09-27
 2026-08-28,KZ,national,daily,TONIA,16.91,% per annum,kase,2026-09-27,level,2026-09-27
-2026-08-29,KZ,national,daily,EXCHANGE_RATE,464.77,KZT per 1 USD,nbk,2026-09-28,level,2026-09-28
 2026-08-29,RUS,national,daily,RUB_USD,85.6007,RUB per USD,cbr,2026-09-27,level,2026-09-27
-2026-08-30,KZ,national,daily,EXCHANGE_RATE,464.77,KZT per 1 USD,nbk,2026-09-28,level,2026-09-28
 2026-08-31,KZ,national,daily,EXCHANGE_RATE,464.77,KZT per 1 USD,nbk,2026-09-28,level,2026-09-28
 2026-08-31,KZ,national,daily,EXCHANGE_RATE_CNY,69.16,KZT per CNY,nbk,2026-09-28,level,2026-09-28
 2026-08-31,KZ,national,daily,EXCHANGE_RATE_EUR,541.36,KZT per EUR,nbk,2026-09-28,level,2026-09-28
