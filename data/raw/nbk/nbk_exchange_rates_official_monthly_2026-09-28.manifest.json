@@ -1,19 +1,11 @@
 {
-  "downloaded_at": "2026-09-28T03:04:36.257430",
-  "raw_file": "nbk_exchange_rates_official_monthly_2026-09-28.json.gz",
+  "downloaded_at": "2026-09-28T13:35:10.113029",
+  "raw_file": "nbk_exchange_rates_official_monthly_2026-09-28_133510.json.gz",
   "source_url": "https://nationalbank.kz/ru/exchangerates/ezhednevnye-oficialnye-rynochnye-kursy-valyut/report",
-  "begin": "1999-11-01",
+  "begin": "2026-08-01",
   "windows": [
     [
-      "1999-11-01",
-      "2008-12-31"
-    ],
-    [
-      "2009-01-01",
-      "2018-12-31"
-    ],
-    [
-      "2019-01-01",
+      "2026-08-01",
       "2026-09-28"
     ]
   ],
@@ -37,25 +29,6 @@
     "TJS": "44",
     "AZN": "48"
   },
-  "archive": {
-    "source_url": "https://nationalbank.kz/file/download/22756",
-    "raw": "raw/nbk/nbk_exchange_rates_archive_1993_1999_<date>.xls",
-    "spliced": [
-      "USD: archive to 1999-11-17, equal to the report on every common weekday to 1999-12-31, from 1993-11-18",
-      "EUR: archive to 1999-11-17, equal to the report on every common weekday to 1999-12-31, from 1999-01-04",
-      "CNY: archive to 1999-11-17, equal to the report on every common weekday to 1999-12-31, from 1996-02-05",
-      "RUB: archive to 1999-11-17, equal to the report on every common weekday to 1999-12-31, from 1993-11-18",
-      "TRY: archive only (no overlap with the report), from 1994-05-13",
-      "UZS: archive only (no overlap with the report), from 1993-12-21",
-      "KGS: archive to 1999-11-17, equal to the report on every common weekday to 1999-12-31, from 1994-01-24",
-      "BYN: archive only (no overlap with the report), from 1994-01-05",
-      "JPY: archive to 1999-11-17, equal to the report on every common weekday to 1999-12-31, from 1994-02-03",
-      "GBP: archive to 1999-11-17, equal to the report on every common weekday to 1999-12-31, from 1993-11-18",
-      "CHF: archive to 1999-11-17, equal to the report on every common weekday to 1999-12-31, from 1993-11-18"
-    ]
-  },
-  "redenominations_checked": [
-    "RUB RUR->RUB 1998-01-01 (archive): quoted in new units, no step (x1.000)",
-    "BYN BYR->BYN 2016-07-02 (report): x10,162 at the date"
-  ]
+  "archive": null,
+  "redenominations_checked": []
 }

@@ -1,7 +1,7 @@
 {
   "source": "comtrade",
-  "source_url": "https://comtradeapi.un.org/public/v1/preview/C/A/B4",
-  "dataset_id": "comtrade-preview reporter 398 imports",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "IMPORTS_BY_PARTNER_COMTRADE",
   "indicator_name": "Kazakhstan's imports by partner country (UN Comtrade): consumer goods by BEC and all goods",
   "description": "Импорт Казахстана по странам-партнёрам (UN Comtrade): потребительские товары по BEC и все товары",

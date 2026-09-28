@@ -1,7 +1,7 @@
 {
   "source": "kase",
-  "source_url": "https://kase.kz/api/companies/documents/?language=ru&org_code=<CODE>",
-  "dataset_id": "KASE issuer financial statements",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "DEVELOPMENT_INSTITUTIONS_BALANCE_SHEETS",
   "indicator_name": "Balance sheets of state development institutions and quasi-fiscal holdings from their KASE statements (Baiterek, DBK, Kazakhstan Sustainability Fund, Agrarian Credit Corporation, Problem Loans Fund, KazAgro, Samruk-Kazyna)",
   "description": "Балансы институтов развития и квазифискальных холдингов по отчетности на KASE (Байтерек, БРК, КФУ, АКК, Фонд проблемных кредитов, КазАгро, Самрук-Казына)",
@@ -17,5 +17,5 @@
   "period_end": "2026-06-30",
   "next_update_date": null,
   "transformation": "level",
-  "revision_status": "revised"
+  "revision_status": "original"
 }

@@ -1,7 +1,7 @@
 {
   "source": "krem",
-  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?projects=krem",
-  "dataset_id": "gov.kz krem documents + news; adilet Minenergo price-cap orders",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "TARIFF_DECISIONS",
   "indicator_name": "Utility tariff decisions (КРЕМ and its regional departments) and Ministry of Energy electricity and gas price caps: events by month of entry into force",
   "description": "Решения о тарифах на коммунальные услуги (КРЕМ, ДКРЕМ) и предельные цены Минэнерго на электроэнергию и газ: события по месяцу вступления в силу",
@@ -17,5 +17,5 @@
   "period_end": "2027-07-01",
   "next_update_date": null,
   "transformation": "level",
-  "revision_status": "original"
+  "revision_status": "revised"
 }

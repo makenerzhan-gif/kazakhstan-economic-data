@@ -1,7 +1,7 @@
 {
   "source": "nbk",
-  "source_url": "https://nationalbank.kz/ru/news/banks-performance",
-  "dataset_id": "nbk-banks-performance/balance-accounts",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "BANKS_GOV_HOLDING_BORROWINGS",
   "indicator_name": "Second-tier banks' borrowings from the government, local executive bodies and the national managing holding (account group 2030), from international financial organisations (2040) and from other banks (2050)",
   "description": "Займы, полученные банками второго уровня от Правительства РК, МИО и национального управляющего холдинга (группа счетов 2030), от МФО (2040) и от других банков (2050)",
