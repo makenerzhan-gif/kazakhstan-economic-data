@@ -19,6 +19,15 @@ currency entering or leaving the table does not move the index. Rebased to the 2
     NEER_TOTAL      weights = all goods imports
     COVERAGE_*      share of the basket's imports assigned to a currency, %
 
+History (2026-09-28): the rates reach back to 1993-11 (EXCHANGE_RATES_OFFICIAL_MONTHLY: the NBK
+archive 1993-1999 before the daily report) and Comtrade to 1995, Kazakhstan's first reported
+year, so the index starts in 1995-12 (weights of 1995 used from 1996-01). Before 1999 the
+euro-area partners have no rate in the table (their national currencies are not carried) and
+are left out of the basket -- see COVERAGE_*. A basket-year that Comtrade converts only in
+part (INCOMPLETE_SHARE: CONSUMER 2000, 36 mln USD of 4 987 total, against 661 in 1999) is not
+used: its year takes the last complete year's structure (carry_forward), and the weights
+dataset names the year whose structure it holds.
+
 Weights dataset (output: weights): <BASKET>.<currency> = weight in year y, %.
 """
 from __future__ import annotations
@@ -36,9 +45,10 @@ EURO_SINCE = {40: 1999, 56: 1999, 196: 2008, 233: 2011, 246: 1999, 251: 1999, 27
               724: 1999, 191: 2023, 499: 2002, 492: 1999, 674: 1999, 20: 1999}
 CURRENCY_OF = {643: "RUB", 156: "CNY", 792: "TRY", 860: "UZS", 842: "USD", 112: "BYN", 616: "PLN", 699: "INR",
                757: "CHF", 438: "CHF", 410: "KRW", 826: "GBP", 417: "KGS", 203: "CZK", 762: "TJS", 392: "JPY",
-               784: "AED", 31: "AZN",
+               784: "AED", 31: "AZN", 840: "USD",   # 840: the United States in Kazakhstan's 1995-1999 reports
                # dollarised, or pegged to the dollar
                218: "USD", 222: "USD", 591: "USD", 344: "USD"}
+INCOMPLETE_SHARE = 0.05   # a sub-basket below 5% of all goods imports that year is a partial conversion (normal 12-20%)
 BASKET_LABELS = {"CONSUMER": "потребительского импорта (BEC 112, 122, 522, 61, 62, 63)", "TOTAL": "всего импорта товаров"}
 
 
@@ -62,10 +72,23 @@ def weights(imports: dict[tuple[str, int, int], float]) -> tuple[dict[tuple[str,
     shares, coverage = {}, {}
     for key, cur in by.items():
         total = sum(cur.values())
+        if key[0] != "TOTAL" and world.get(("TOTAL", key[1])) and world.get(key, 0) < INCOMPLETE_SHARE * world[("TOTAL", key[1])]:
+            continue          # see INCOMPLETE_SHARE
         if total > 0 and world.get(key):
             shares[key] = {c: v / total for c, v in cur.items()}
             coverage[key] = 100 * total / world[key]
     return shares, coverage
+
+
+def carry_forward(by_year: dict[int, dict[str, float]]) -> dict[int, tuple[int, dict[str, float]]]:
+    """{year: (year whose structure is used, shares)} over first..last year: a year without
+    weights takes the last year before it that has them."""
+    out: dict[int, tuple[int, dict[str, float]]] = {}
+    if not by_year:
+        return out
+    for y in range(min(by_year), max(by_year) + 1):
+        out[y] = (y, by_year[y]) if y in by_year else out[y - 1]
+    return out
 
 
 def chain(rates: dict[str, dict[str, float]], w_by_year: dict[int, dict[str, float]]) -> dict[str, float]:
@@ -102,18 +125,20 @@ def fetch(ds: dict) -> tuple[list[dict], dict]:
         raise validation.StructuralChangeError(
             "neer_import: an input is empty -- run EXCHANGE_RATES_OFFICIAL_MONTHLY and IMPORTS_BY_PARTNER_COMTRADE first")
     shares, coverage = weights(imports)
+    by_basket = {basket: carry_forward({y: s for (b, y), s in shares.items() if b == basket}) for basket in BASKET_LABELS}
     records = []
     if ds.get("output") == "weights":
-        for (basket, year), cur in sorted(shares.items()):
-            for c, s in cur.items():
-                records.append({"date": f"{year + 1}-12-31", "region": dims.NATIONAL, "item_code": f"{basket}.{c}",
-                                "item_name": f"Вес {c} в NEER по структуре {BASKET_LABELS[basket]} {year} г., %", "value": round(100 * s, 4)})
-            records.append({"date": f"{year + 1}-12-31", "region": dims.NATIONAL, "item_code": f"COVERAGE_{basket}",
-                            "item_name": f"Доля {BASKET_LABELS[basket]} {year} г., отнесённая к валютам с курсом НБК, %",
-                            "value": round(coverage[(basket, year)], 4)})
+        for basket, years in by_basket.items():
+            for year, (source, cur) in sorted(years.items()):
+                for c, s in cur.items():
+                    records.append({"date": f"{year + 1}-12-31", "region": dims.NATIONAL, "item_code": f"{basket}.{c}",
+                                    "item_name": f"Вес {c} в NEER по структуре {BASKET_LABELS[basket]} {source} г., %", "value": round(100 * s, 4)})
+                records.append({"date": f"{year + 1}-12-31", "region": dims.NATIONAL, "item_code": f"COVERAGE_{basket}",
+                                "item_name": f"Доля {BASKET_LABELS[basket]} {source} г., отнесённая к валютам с курсом НБК, %",
+                                "value": round(coverage[(basket, source)], 4)})
         return records, {"frequency": "annual", "source_url": "", "dataset_id": "derived", "note": ds.get("note", "")}
     for basket in BASKET_LABELS:
-        index = chain(rates, {y: s for (b, y), s in shares.items() if b == basket})
+        index = chain(rates, {y: s for y, (_, s) in by_basket[basket].items()})
         records += [{"date": m, "region": dims.NATIONAL, "item_code": f"NEER_{basket}",
                      "item_name": f"Номинальный эффективный курс тенге, веса {BASKET_LABELS[basket]} (2020 = 100, рост = укрепление)",
                      "value": round(v, 4)} for m, v in index.items()]

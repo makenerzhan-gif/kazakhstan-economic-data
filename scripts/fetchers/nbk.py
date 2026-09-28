@@ -302,6 +302,8 @@ def fetch_exchange_rate_rub() -> tuple[list[dict], dict]:
 # «Официальные курсы валют в среднем за период» PDFs) within 0.05 in all but three months
 # (1994-01 7.99 vs 8.17, 1997-01 74.58 vs 74.70, 1998-01 76.04 vs 76.09); IMF IFS KAZ
 # XDC_USD PA_RT equals 7.99 for 1994-01, and every end-of-month value equals IFS EOP_RT.
+# The same workbook feeds the dims EXCHANGE_RATES_OFFICIAL_MONTHLY for the 11 of its 18 currencies
+# the archive carries (fetchers/nbk_fx.py: official_rates_archive_sheets, min_printed).
 # ---------------------------------------------------------------------------
 OFFICIAL_RATES_ARCHIVE_URL = "https://nationalbank.kz/file/download/22756"
 ARCHIVE_SHEETS = ("1993-1998", "1999")
@@ -379,12 +381,15 @@ def _archive_header(rows: list[list], sheet: str) -> int:
     raise _archive_structural(f"sheet {sheet!r}: no header row with the code USD in its first 15 rows")
 
 
-def parse_official_rates_archive(sheets: dict[str, list[list]]) -> dict[str, list[tuple[date, float | None]]]:
+def parse_official_rates_archive(sheets: dict[str, list[list]],
+                                 min_printed: float | None = None) -> dict[str, list[tuple[date, float | None]]]:
     """{ISO code: [(effective date, KZT per ONE unit or None), ...]} in sheet order.
 
     Quantities: sheet '1993-1998' by the asterisks after the code, sheet '1999' by the number
     that opens the Russian name. Redenominated currencies (ARCHIVE_REDENOMINATION: the
-    rouble) are restated in NEW units throughout."""
+    rouble) are restated in NEW units throughout. With `min_printed`, a figure printed below
+    it (before division by the quantity) counts as no rate -- the precision rule of
+    fetchers/nbk_fx.py (two decimals: 0.26 per 1000 Turkish lira is +-2%)."""
     for name in ARCHIVE_SHEETS:
         if name not in sheets:
             raise _archive_structural(f"no sheet {name!r} (sheets: {sorted(sheets)})")
@@ -429,6 +434,8 @@ def parse_official_rates_archive(sheets: dict[str, list[list]]) -> dict[str, lis
                     continue
                 v = _archive_number(row[c])
                 per_unit = None
+                if v is not None and min_printed is not None and v < min_printed:
+                    v = None
                 if v is not None:
                     quantity = units[c]
                     redenom = ARCHIVE_REDENOMINATION.get(code)
@@ -493,9 +500,9 @@ def check_archive_overlap(code: str, archive: dict[str, float], report: dict[str
     return min(rep)
 
 
-def _official_rates_archive() -> dict[str, dict[str, float]]:
-    """Download (once per process), archive and parse the NBK 1993-1999 workbook."""
-    if "series" not in _ARCHIVE_CACHE:
+def official_rates_archive_sheets() -> dict[str, list[list]]:
+    """Download (once per process), archive and open the NBK 1993-1999 workbook."""
+    if "sheets" not in _ARCHIVE_CACHE:
         today = date.today()
         resp = requests.get(OFFICIAL_RATES_ARCHIVE_URL, headers=HEADERS, timeout=120)
         resp.raise_for_status()
@@ -503,12 +510,19 @@ def _official_rates_archive() -> dict[str, dict[str, float]]:
         raw_store.write_download_manifest(SOURCE, "EXCHANGE_RATES_ARCHIVE_1993_1999", today, {
             "downloaded_at": datetime.now().isoformat(), "source_url": OFFICIAL_RATES_ARCHIVE_URL,
             "raw_file": path.name, "sha256": raw_store.sha256_of(resp.content),
-            "read_by": "EXCHANGE_RATE, EXCHANGE_RATE_EUR, EXCHANGE_RATE_CNY, EXCHANGE_RATE_RUB (before 1999-11-17)"})
+            "read_by": "EXCHANGE_RATE, EXCHANGE_RATE_EUR, EXCHANGE_RATE_CNY, EXCHANGE_RATE_RUB (before 1999-11-17); "
+                       "dims EXCHANGE_RATES_OFFICIAL_MONTHLY (fetchers/nbk_fx.py)"})
         try:
-            sheets = archive_sheet_rows(resp.content)
+            _ARCHIVE_CACHE["sheets"] = archive_sheet_rows(resp.content)
         except Exception as exc:  # noqa: BLE001 -- not an xls any more
             raise _archive_structural(f"the file no longer opens as an .xls workbook ({exc})") from exc
-        _ARCHIVE_CACHE["series"] = archive_weekday_series(parse_official_rates_archive(sheets))
+    return _ARCHIVE_CACHE["sheets"]
+
+
+def _official_rates_archive() -> dict[str, dict[str, float]]:
+    """The NBK 1993-1999 workbook as weekday series (once per process)."""
+    if "series" not in _ARCHIVE_CACHE:
+        _ARCHIVE_CACHE["series"] = archive_weekday_series(parse_official_rates_archive(official_rates_archive_sheets()))
     return _ARCHIVE_CACHE["series"]
 
 

@@ -529,3 +529,61 @@ issues:
       As for CPI_FOOD, and paid-service tariffs kept catching up after the goods: December/December
       1992 3019.7, 1993 4143.4, 1994 2522.6, 1995 258.0, 1996 239.3, 1997 138.8.
     advice: Start models on services in 1998 or later, or dummy 1991-1997.
+
+  - id: nbk_archive_chf_1995_04_17
+    kind: error
+    variable: EXCHANGE_RATES_OFFICIAL_MONTHLY
+    observations:
+      - {date: "1995-04-01", item: CHF, value: 50.3655}
+    evidence: >
+      NBK archive of official rates 1993-1999 (nbk_exchange_rates_archive_1993_1999_*.xls), sheet '1993-1998',
+      row 17.04.1995: CHF 12.83 -- the French franc's figure of the same row (FRF 12.83); CHF 53.83 on 14.04 and
+      55.38 on 19.04 with USD 62.0-62.25. In force 17-18 April 1995.
+    advice: CHF April 1995 mean without those two days is about 54.5; exclude or bridge 1995-04 for CHF.
+
+  - id: nbk_archive_chf_1998_11_09
+    kind: error
+    variable: EXCHANGE_RATES_OFFICIAL_MONTHLY
+    observations:
+      - {date: "1998-11-01", item: CHF, value: 66.031905}
+    evidence: >
+      Same archive, row 09.11.1998: CHF 74.55 between 62.85 (02.11) and 64.38 (16.11) while USD moves 81.7 -> 82.0
+      -> 82.4 (implies USD/CHF 1.10 against ~1.37 in November 1998). In force for the week 9-13 November.
+    advice: CHF November 1998 mean without that week is about 63.4; exclude or bridge.
+
+  - id: nbk_archive_kgs_1999_08_07
+    kind: error
+    variable: EXCHANGE_RATES_OFFICIAL_MONTHLY
+    observations:
+      - {date: "1999-08-01", item: KGS, value: 3.814091}
+    evidence: >
+      Same archive, sheet '1999', row '7,8,9.08.1999': KGS 3.24 between 3.92 (06.08) and 3.87 (10.08); a one-row
+      spike of -17%/+19%. Probably a typo, not provable from the file.
+    advice: Minor (one weekday, 9 August, in the monthly mean); treat as a likely error.
+
+  - id: comtrade_consumer_basket_2000_and_h0
+    kind: break
+    variable: IMPORTS_BY_PARTNER_COMTRADE
+    observations:
+      - {date: "2000-12-31", item: CONSUMER.0, value: 36.0475}
+      - {date: "1999-12-31", item: CONSUMER.0, value: 660.969005}
+    evidence: >
+      UN Comtrade B4 (BEC rev.4) conversion for Kazakhstan: 2000 (reported in H1) converts 36 mln USD of consumer
+      goods against 661 in 1999 and 775 in 2001, while HS TOTAL 2000 is complete (4 987 mln). 1995-1999 are
+      reported in H0, whose BEC conversion puts passenger cars in 522 (1999: 223 mln, 156 from Russia); from 2000
+      cars are in 51 and 522 is 5-50 mln.
+    advice: Do not use CONSUMER 2000; CONSUMER 1995-1999 includes passenger cars. NEER_IMPORT_WEIGHTED uses the
+      1999 structure for 2001.
+
+  - id: nbk_fx_monthly_precision_gaps
+    kind: caveat
+    variable: EXCHANGE_RATES_OFFICIAL_MONTHLY
+    observations:
+      - {date: "1996-02-01", item: TRY, value: 1022.352941}
+      - {date: "2005-01-01", item: TRY, value: 96.066667}
+      - {date: "1994-09-01", item: BYN, value: 113625.0}
+    evidence: >
+      Both NBK sources print two decimals; figures printed below 1.0 are dropped (the archive's Turkish lira per
+      1000 from 1996, BYB per 100 after 1994-09, the report's UZS and BYR per unit until 2014-02). TRY, UZS and BYN
+      therefore have multi-year gaps; restated to the current unit (TRL/1 000 000, BYB/10 000 000).
+    advice: Treat the 1990s TRY/BYN/UZS segments as separate short series; do not interpolate across the gaps.

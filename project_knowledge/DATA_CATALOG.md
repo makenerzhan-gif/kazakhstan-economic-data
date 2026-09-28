@@ -70,3 +70,12 @@ From config/source_issues.yaml (audit 2026-09-25). The values are what the offic
 | MIGRATION_ARRIVALS | 2008-12-31 | inconsistent | still in the data | The pipeline keeps BNS's 2008 (gaps_filled_from known_differences); 1991-1999 come from CIS Stat. |
 | CPI | 1993-02-01 | inconsistent | still in the data | For levels use CPI_YTD (the published since-December chain); the m/m value is kept as printed. |
 | CPI | 1991-04-01, 1992-01-01 | caveat | still in the data | Start models, seasonal adjustment and forecasts in 1995-1996 or later, or dummy 1991-1995. |
+| CPI_FOOD | 2004-06-01 | inconsistent | still in the data | The docx's 100.0 is kept (PRINTED_DIFFERENCES in scripts/load_cpi_history.py); a 0.1 difference, no action needed. |
+| CPI_FOOD | 1991-04-01, 1992-01-01 | caveat | still in the data | Start models, seasonal adjustment and forecasts in 1995-1996 or later, or dummy 1991-1995. |
+| CPI_NONFOOD | 1991-04-01, 1992-01-01 | caveat | still in the data | Start models, seasonal adjustment and forecasts in 1995-1996 or later, or dummy 1991-1995. |
+| CPI_SERVICES | 1991-04-01, 1992-01-01 | caveat | still in the data | Start models on services in 1998 or later, or dummy 1991-1997. |
+| EXCHANGE_RATES_OFFICIAL_MONTHLY | 1995-04-01 | error | still in the data | CHF April 1995 mean without those two days is about 54.5; exclude or bridge 1995-04 for CHF. |
+| EXCHANGE_RATES_OFFICIAL_MONTHLY | 1998-11-01 | error | still in the data | CHF November 1998 mean without that week is about 63.4; exclude or bridge. |
+| EXCHANGE_RATES_OFFICIAL_MONTHLY | 1999-08-01 | error | still in the data | Minor (one weekday, 9 August, in the monthly mean); treat as a likely error. |
+| IMPORTS_BY_PARTNER_COMTRADE | 1999-12-31, 2000-12-31 | break | still in the data | Do not use CONSUMER 2000; CONSUMER 1995-1999 includes passenger cars. NEER_IMPORT_WEIGHTED uses the 1999 structure for 2001. |
+| EXCHANGE_RATES_OFFICIAL_MONTHLY | 1994-09-01, 1996-02-01, 2005-01-01 | caveat | still in the data | Treat the 1990s TRY/BYN/UZS segments as separate short series; do not interpolate across the gaps. |

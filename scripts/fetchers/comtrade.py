@@ -79,15 +79,19 @@ def basket_values(answers: list[dict]) -> dict[int, float]:
 
 
 def fetch(ds: dict) -> tuple[list[dict], dict]:
-    fresh = imf_dims.stored_if_fresh(ds, "comtrade", ds["id"])
-    if fresh:
-        return fresh
     names = PARTNER_NAMES
     stored = dims.load_processed(ds["id"])
     have_years = {r["date"][:4] for r in stored}
     last_year = date.today().year - 1
+    # Years before the stored ones (first_year moved back: 2010 -> 1995 on 2026-09-28) are read even
+    # inside the refresh window, and only they: the refresh of recent years keeps its own schedule.
+    backfill = [y for y in range(ds.get("first_year", 2010), last_year - 2) if str(y) not in have_years]
+    fresh = imf_dims.stored_if_fresh(ds, "comtrade", ds["id"])
+    if fresh and not backfill:
+        return fresh
     # Past years are revised for about two years after first release; older years are kept.
-    years = [y for y in range(ds.get("first_year", 2010), last_year + 1) if str(y) not in have_years or y >= last_year - 2]
+    years = backfill if fresh else [y for y in range(ds.get("first_year", 2010), last_year + 1)
+                                    if str(y) not in have_years or y >= last_year - 2]
     raw, records, warnings = {}, [], []
     for year in years:
         for basket, (clf, cmds) in BASKETS.items():
