@@ -3980,16 +3980,23 @@ TALDAU_PERIOD_MONTHLY = "4"
 # series. splice_cpi_history prepends only months before the first Taldau month and before
 # 2011-01, never replaces a Taldau value, and raises if any overlap month differs from
 # Taldau or if the two would not join month to month.
+# The same file holds the three CPI groups (column `item`: FOOD, NONFOOD, SERVICES; TOTAL
+# is the headline), from the same three publications (docx tables 1.4-1.6 and the columns of
+# table 1.1, the pdf's columns 2-4, the editions' group rows); _fetch_cpi_group splices them
+# into CPI_FOOD / CPI_NONFOOD / CPI_SERVICES (m/m, from 1991-01) and their _YOY (from 1994-01)
+# with the same check (2026-09-28).
 CPI_HISTORY_PATH = Path(__file__).resolve().parents[2] / "data" / "reference" / "bns_cpi_history.csv"
 CPI_HISTORY_END = "2011-01-01"
 
 
-def load_cpi_history(measure: str, path: Path = CPI_HISTORY_PATH) -> dict[str, float]:
-    """{date: value} of one measure (mom / ytd / yoy) of the reference file; {} if it is absent."""
+def load_cpi_history(measure: str, path: Path = CPI_HISTORY_PATH, item: str = "TOTAL") -> dict[str, float]:
+    """{date: value} of one measure (mom / ytd / yoy) of one item (TOTAL, FOOD, NONFOOD,
+    SERVICES) of the reference file; {} if it is absent."""
     if not path.exists():
         return {}
     with path.open(encoding="utf-8") as f:
-        return {r["date"]: float(r["value"]) for r in csv.DictReader(f) if r["measure"] == measure}
+        return {r["date"]: float(r["value"]) for r in csv.DictReader(f)
+                if r["measure"] == measure and r.get("item", "TOTAL") == item}
 
 
 def _next_month(d: str) -> str:
@@ -4106,16 +4113,28 @@ CPI_GROUP_NAMES = {
 }
 
 
+# Groups with printed history before 2011 in data/reference/bns_cpi_history.csv (see
+# HISTORY BEFORE TALDAU above); the utilities groups have none there.
+CPI_GROUPS_WITH_HISTORY = ("FOOD", "NONFOOD", "SERVICES")
+
+
 def _fetch_cpi_group(group: str, comparison_term: str, indicator_id: str) -> tuple[list[dict], dict]:
     basis = "previous month = 100" if comparison_term == CPI_TERM_MOM else "same month of the previous year = 100"
+    history = group in CPI_GROUPS_WITH_HISTORY
     records, manifest = _fetch_taldau_annual_index(
         CPI_TALDAU_INDEX, indicator_id,
         f"Index, {basis}: CPI for {CPI_GROUP_NAMES[group]} (Taldau index 703076, term "
         f"{CPI_GROUP_TERMS[group]}), monthly from 2011-01, national. Same index and dictionaries "
-        "as the headline CPI; December year-on-year values equal BNS element 1548 for 2011-2025.",
+        "as the headline CPI; December year-on-year values equal BNS element 1548 for 2011-2025."
+        + (" Before 2011: " + ("1991-01" if comparison_term == CPI_TERM_MOM else "1994-01")
+           + " onward from BNS's printed history." if history else ""),
         measure_id="7", terms=f"{NATIONAL_TERM_ID},{comparison_term},{CPI_GROUP_TERMS[group]}",
         dic_ids=CPI_TALDAU_DICS, period_id=TALDAU_PERIOD_MONTHLY)
-    return records, manifest
+    if not history:
+        return records, manifest
+    measure = "mom" if comparison_term == CPI_TERM_MOM else "yoy"
+    records, history_note = splice_cpi_history(indicator_id, records, load_cpi_history(measure, item=group))
+    return records, {**manifest, "note": f"{manifest['note']} History: {history_note}."}
 
 
 def fetch_cpi_food() -> tuple[list[dict], dict]:

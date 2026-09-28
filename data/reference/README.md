@@ -39,21 +39,29 @@ equals Minfin in every December both cover (2018–2024: all seven taxes, to the
 
 ## bns_cpi_history.csv
 
-The national CPI (all goods and services) before Taldau, as BNS printed it (`date, measure,
-value, source_url, source_note`; dates are the first day of the month; 838 rows): `mom`
-(previous month = 100) and `ytd` (December of the previous year = 100) 1991-01 – 2010-12,
-`yoy` (same month of the previous year = 100) 1994-01 – 2010-12 (nothing year on year was
-published for 1991–1993). Sources, all on stat.gov.kz, in order of preference: «Цены в
-Казахстане за 1991-2021 годы» (element 17216, docx, tables 1.1 Dec/Dec and 1.3 m/m), «Цены в
-Казахстане в 1991-2000 гг.» (element 21933, pdf pp. 39–45: m/m, since December, and from 1994
-year on year) and the monthly editions of «Индекс потребительских цен в Республике Казахстан»
-(publication 166775, May 1999 – December 2010: html to June 2004, xls after). Every month two
-or three of them print is the same number in all of them; `source_note` names the others.
-The 154 rows from 2011-01 (every docx m/m month to 2021-12, and the Decembers of `ytd`/`yoy`)
-are the overlap with Taldau 703076: the BNS fetcher prepends only the months before 2011 to
-CPI, CPI_YTD and CPI_YOY and stops if any overlap month differs (`splice_cpi_history` in
-`scripts/fetchers/bns.py`). Built by `scripts/load_cpi_history.py` (2026-09-28; the 142
-archives are cached outside the repository, not in `data/raw`); the identities between the
-three measures are checked there and in `tests/test_cpi_history.py`. December on December:
-1991 247.1, 1992 3060.8, 1993 2265.0, 1994 1258.3, 1995 160.3, 1996 128.7, 1997 111.2,
-1998 101.9, 1999 117.8, 2000 109.8.
+The national CPI (all goods and services) and its three groups before Taldau, as BNS printed
+them (`date, item, measure, value, source_url, source_note`; dates are the first day of the
+month; 3 352 rows, 838 per item). `item`: TOTAL (all goods and services), FOOD
+(«Продовольственные товары»), NONFOOD («Непродовольственные товары»), SERVICES («Платные
+услуги»). For each item: `mom` (previous month = 100) and `ytd` (December of the previous
+year = 100) 1991-01 – 2010-12, `yoy` (same month of the previous year = 100) 1994-01 – 2010-12
+(nothing year on year was published for 1991–1993). Sources, all on stat.gov.kz, in order of
+preference: «Цены в Казахстане за 1991-2021 годы» (element 17216, docx, table 1.1 Dec/Dec with
+one column per item, tables 1.3–1.6 m/m for TOTAL, FOOD, NONFOOD, SERVICES), «Цены в Казахстане
+в 1991-2000 гг.» (element 21933, pdf pp. 39–45, four columns: m/m, since December, and from
+1994 year on year) and the monthly editions of «Индекс потребительских цен в Республике
+Казахстан» (publication 166775, May 1999 – December 2010: html to June 2004, xls after). Every
+month two or three of them print is the same number in all of them, with one exception kept as
+the docx prints it and named in `source_note`: FOOD m/m June 2004, 100.0 in the docx and in the
+edition's own m/m table, 99.9 in the edition's summary row «Продукты питания, напитки и
+табачные изделия» (`PRINTED_DIFFERENCES` in the loader). The 154 rows per item from 2011-01
+(every docx m/m month to 2021-12, and the Decembers of `ytd`/`yoy`) are the overlap with
+Taldau 703076: the BNS fetcher prepends only the months before 2011 to CPI, CPI_YTD, CPI_YOY,
+CPI_FOOD, CPI_NONFOOD, CPI_SERVICES and their _YOY, and stops if any overlap month differs
+(`splice_cpi_history` in `scripts/fetchers/bns.py`). Built by `scripts/load_cpi_history.py`
+(2026-09-28; the 142 archives are cached outside the repository, not in `data/raw`); the
+identities between the three measures are checked there and in `tests/test_cpi_history.py`.
+December on December, TOTAL: 1991 247.1, 1992 3060.8, 1993 2265.0, 1994 1258.3, 1995 160.3,
+1996 128.7, 1997 111.2, 1998 101.9, 1999 117.8, 2000 109.8; FOOD: 1991 204.7, 1992 2108.3,
+1993 2297.1, 1994 1155.7, 1995 158.7, 1999 120.6; NONFOOD: 1992 3897.8, 1993 1795.6, 1994
+1159.9, 1995 133.5; SERVICES: 1992 3019.7, 1993 4143.4, 1994 2522.6, 1995 258.0.

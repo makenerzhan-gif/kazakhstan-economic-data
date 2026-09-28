@@ -530,36 +530,42 @@ agencies:
         columns: ["NAM", "DAT", "PERIOD", "КАТО", "LКАТО", "ССП", "LССП", "category_code", "category_name", "VAL"]
         notes: "Actually downloaded and parsed this session. PERIOD like 201911 = Nov 2019. Regional breakdown; filter LКАТО for national total."
       CPI_FOOD:
+        history: "2026-09-28: months before 2011-01 (from 1991-01) from data/reference/bns_cpi_history.csv, item FOOD, built by scripts/load_cpi_history.py from stat.gov.kz elements 17216 (docx 1991-2021: table 1.4 m/m, table 1.1 Dec/Dec), 21933 (pdf 1991-2000) and the 140 editions of publication 166775 (1999-05..2010-12); every month printed by two sources is equal in both except June 2004 m/m (docx 100.0 kept; the edition's summary row prints 99.9, its own m/m table 100.0); prepended by splice_cpi_history in scripts/fetchers/bns.py, which stops if the file and Taldau differ on any shared month."
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         format: json
         notes: >
           2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695730,4772574. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_food.
       CPI_FOOD_YOY:
+        history: "2026-09-28: months before 2011-01 (from 1994-01) from data/reference/bns_cpi_history.csv, item FOOD, built by scripts/load_cpi_history.py from stat.gov.kz elements 17216 (docx 1991-2021: table 1.4 m/m, table 1.1 Dec/Dec), 21933 (pdf 1991-2000) and the 140 editions of publication 166775 (1999-05..2010-12); every month printed by two sources is equal in both; prepended by splice_cpi_history in scripts/fetchers/bns.py, which stops if the file and Taldau differ on any shared month."
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         format: json
         notes: >
           2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695732,4772574. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_food_yoy.
       CPI_NONFOOD:
+        history: "2026-09-28: months before 2011-01 (from 1991-01) from data/reference/bns_cpi_history.csv, item NONFOOD, built by scripts/load_cpi_history.py from stat.gov.kz elements 17216 (docx 1991-2021: table 1.5 m/m, table 1.1 Dec/Dec), 21933 (pdf 1991-2000) and the 140 editions of publication 166775 (1999-05..2010-12); every month printed by two sources is equal in both; prepended by splice_cpi_history in scripts/fetchers/bns.py, which stops if the file and Taldau differ on any shared month."
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         format: json
         notes: >
           2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695730,4772568. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_nonfood.
       CPI_NONFOOD_YOY:
+        history: "2026-09-28: months before 2011-01 (from 1994-01) from data/reference/bns_cpi_history.csv, item NONFOOD, built by scripts/load_cpi_history.py from stat.gov.kz elements 17216 (docx 1991-2021: table 1.5 m/m, table 1.1 Dec/Dec), 21933 (pdf 1991-2000) and the 140 editions of publication 166775 (1999-05..2010-12); every month printed by two sources is equal in both; prepended by splice_cpi_history in scripts/fetchers/bns.py, which stops if the file and Taldau differ on any shared month."
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         format: json
         notes: >
           2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695732,4772568. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_nonfood_yoy.
       CPI_SERVICES:
+        history: "2026-09-28: months before 2011-01 (from 1991-01) from data/reference/bns_cpi_history.csv, item SERVICES, built by scripts/load_cpi_history.py from stat.gov.kz elements 17216 (docx 1991-2021: table 1.6 m/m, table 1.1 Dec/Dec), 21933 (pdf 1991-2000) and the 140 editions of publication 166775 (1999-05..2010-12); every month printed by two sources is equal in both; prepended by splice_cpi_history in scripts/fetchers/bns.py, which stops if the file and Taldau differ on any shared month."
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         format: json
         notes: >
           2026-09-25. Taldau index 703076, p_period_id=4, p_measure_id=7, p_dicIds=67,848,2753, p_terms=741880,2695730,4772555. Terms found with GetSegmentList and GetIndexTreeData(p_parent_id=7358, idx=2); December y/y 2011-2025 equal element 1548. fetch_cpi_services.
       CPI_SERVICES_YOY:
+        history: "2026-09-28: months before 2011-01 (from 1994-01) from data/reference/bns_cpi_history.csv, item SERVICES, built by scripts/load_cpi_history.py from stat.gov.kz elements 17216 (docx 1991-2021: table 1.6 m/m, table 1.1 Dec/Dec), 21933 (pdf 1991-2000) and the 140 editions of publication 166775 (1999-05..2010-12); every month printed by two sources is equal in both; prepended by splice_cpi_history in scripts/fetchers/bns.py, which stops if the file and Taldau differ on any shared month."
         status: confirmed
         download_url: "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
         format: json

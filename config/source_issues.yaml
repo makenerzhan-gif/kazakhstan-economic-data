@@ -483,3 +483,49 @@ issues:
       Price reform of April 1991 and liberalisation of January 1992; rouble zone until the tenge
       (15 November 1993). December/December 1992 3060.8, 1993 2265.0, 1994 1258.3, 1995 160.3.
     advice: Start models, seasonal adjustment and forecasts in 1995-1996 or later, or dummy 1991-1995.
+
+  - id: cpi_food_2004_06_mom_two_prints
+    kind: inconsistent
+    variable: CPI_FOOD
+    observations:
+      - {date: "2004-06-01", value: 100.0}
+    evidence: >
+      «Цены в Казахстане за 1991-2021 годы» (docx table 1.4) prints food m/m June 2004 100.0, as does the
+      June 2004 edition of «Индекс потребительских цен в Республике Казахстан» (element 168399) in its
+      table «в процентах к предыдущему месяцу» (column «Товары продовольственные», equal to the docx in all
+      1 792 values of the 2002-2004 editions) and its text («индекс цен на продовольственные товары
+      составил 100,0%»); the same edition's summary table prints 99.9 in the row «Продукты питания,
+      напитки и табачные изделия». The since-December 103.0 fits either.
+    advice: The docx's 100.0 is kept (PRINTED_DIFFERENCES in scripts/load_cpi_history.py); a 0.1 difference, no action needed.
+
+  - id: cpi_food_1991_1995_hyperinflation
+    kind: caveat
+    variable: CPI_FOOD
+    observations:
+      - {date: "1991-04-01", value: 154.8}
+      - {date: "1992-01-01", value: 356.4}
+    evidence: >
+      Price reform of April 1991 and liberalisation of January 1992; rouble zone until the tenge
+      (15 November 1993). Food December/December 1992 2108.3, 1993 2297.1, 1994 1155.7, 1995 158.7.
+    advice: Start models, seasonal adjustment and forecasts in 1995-1996 or later, or dummy 1991-1995.
+
+  - id: cpi_nonfood_1991_1995_hyperinflation
+    kind: caveat
+    variable: CPI_NONFOOD
+    observations:
+      - {date: "1991-04-01", value: 170.3}
+      - {date: "1992-01-01", value: 264.0}
+    evidence: >
+      As for CPI_FOOD. Non-food December/December 1992 3897.8, 1993 1795.6, 1994 1159.9, 1995 133.5.
+    advice: Start models, seasonal adjustment and forecasts in 1995-1996 or later, or dummy 1991-1995.
+
+  - id: cpi_services_1991_1997_tariff_catch_up
+    kind: caveat
+    variable: CPI_SERVICES
+    observations:
+      - {date: "1991-04-01", value: 148.3}
+      - {date: "1992-01-01", value: 286.9}
+    evidence: >
+      As for CPI_FOOD, and paid-service tariffs kept catching up after the goods: December/December
+      1992 3019.7, 1993 4143.4, 1994 2522.6, 1995 258.0, 1996 239.3, 1997 138.8.
+    advice: Start models on services in 1998 or later, or dummy 1991-1997.

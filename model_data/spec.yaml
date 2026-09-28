@@ -62,9 +62,9 @@ monthly:
   - {name: cpi, source: {series: CPI}, ops: [chain], sa: log, from: "2011-01-01", note: "From 2011 (BNS history 1991-2010 in CPI holds the 1991-1995 hyperinflation; move the start to 1996 after checking X-13 diagnostics). Headline CPI, chained from BNS m/m indices (rounded to 0.1): cpi_yoy differs from the published CPI_YOY by 0.07 pp on average, 0.35 at most -- use CPI_YOY for y/y inflation itself."}
   - {name: cpi_core_ex3, source: {series: CORE_CPI_MOM_EX3}, ops: [chain], sa: log, note: "Core CPI excluding fruit and vegetables, petrol and coal (BNS)."}
   - {name: cpi_core_ex7, source: {series: CORE_CPI_MOM_EX7}, ops: [chain], sa: log, note: "Core CPI excluding seven volatile groups (BNS)."}
-  - {name: cpi_food, source: {series: CPI_FOOD}, ops: [chain], sa: log}
-  - {name: cpi_nonfood, source: {series: CPI_NONFOOD}, ops: [chain], sa: log}
-  - {name: cpi_services, source: {series: CPI_SERVICES}, ops: [chain], sa: log}
+  - {name: cpi_food, source: {series: CPI_FOOD}, ops: [chain], sa: log, from: "2011-01-01", note: "From 2011, like cpi (CPI_FOOD holds BNS's printed history from 1991, with the 1991-1995 hyperinflation)."}
+  - {name: cpi_nonfood, source: {series: CPI_NONFOOD}, ops: [chain], sa: log, from: "2011-01-01", note: "From 2011, like cpi (CPI_NONFOOD holds BNS's printed history from 1991, with the 1991-1995 hyperinflation)."}
+  - {name: cpi_services, source: {series: CPI_SERVICES}, ops: [chain], sa: log, from: "2011-01-01", note: "From 2011, like cpi (CPI_SERVICES holds BNS's printed history from 1991, with the 1991-1995 hyperinflation)."}
   - {name: cpi_regulated, source: {series: CPI_REGULATED_UTILITIES}, ops: [chain], sa: log, note: "Regulated utility tariffs: administered, step-like; SA removes little."}
   - {name: ppi, source: {series: PPI_MONTHLY}, ops: [chain], sa: log, note: "Producer prices, dominated by oil; chained from m/m."}
   - {name: infl_expect, source: {series: INFLATION_EXPECTATIONS}, kind: rate, sa: none, note: "Household survey, expected inflation next 12 months, %."}
