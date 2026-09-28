@@ -1,29 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-26 — project_knowledge/ cut from 6.6 MB to 0.29 MB to fit the Claude Project's context» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-26 — lagging series: bank soundness, Minfin general government, passenger turnover» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-26 — lagging series: bank soundness, Minfin general government, passenger turnover
-
-- **Bank soundness.** NBK form 314 (CAPITAL_ADEQUACY_RATIO, NPL_RATIO, BANK_ROA, BANK_ROE) stops at 2024Q1, and
-  ARDFM's successors hold only 2026 (gov.kz keeps just the last three monthly bulletins). New: 8 IMF FSI series
-  (IMF.STA/FSIC, KAZ deposit takers, 2008Q1–2025Q4) — FSI_CAPITAL_ADEQUACY, FSI_TIER1_CAPITAL, FSI_NPL_RATIO,
-  FSI_ROA, FSI_ROE, FSI_LIQUID_ASSETS, FSI_LIQUID_TO_SHORT_TERM_LIABILITIES, FSI_FX_LOANS_SHARE. Over 18 common
-  quarters capital adequacy, ROA and ROE equal form 314 to 0.005 pp, so they continue it; NPL differs by definition
-  (5.3 % vs 8.1 % at end-2019) and is kept apart.
-- **Dating fix.** That comparison showed BANK_ROA and BANK_ROE one quarter late (form 314's «на 01.04» carries
-  Q1): `date_basis: next_period_start` added; they now end at 2024Q1.
-- **Minfin GG_* (IMF-methodology general government).** Minfin renamed the file ("General government sector data
-  for Q2 2026", and a Russian title for Q1 2026), the fixed title marker missed both, and the series stayed at
-  2025Q4. The lookup is now a pattern over all 23 listed editions (2020-03 .. 2026-09); each file holds only its
-  own year, so the history is their union: 2019Q4, 2020Q1, 2021Q1–2026Q2 (was 2025Q1–Q4). Dropped as not data:
-  pre-filled zeros for unreported quarters, and the Q2 2020 file's columns headed "2019/1", "2019/2" (its first
-  column equals the Q1 2020 file's 2020/1). 2020Q2–Q4 are not in any listed file.
-- **Passenger turnover.** PASSENGER_TURNOVER_MONTHLY equals Taldau index 2972310 «пассажирооборот расчетный»
-  (period «месяц с накоплением»); history from 2021-01 added (68 months, was 4). The annual PASSENGER_TURNOVER
-  (index 702177) is published only to 2017 (272.8 bn p-km); 2972310 starts at 106.8 bn in 2021 and breaks again in
-  2023 (116.5 → 72.8 bn); 2018–2020 are not published. Not joined; lifecycle note rewritten.
-- Tests: tests/test_lagging_series.py (10).
 
 ## 2026-09-26 — a failed dataset no longer blocks the daily run
 
@@ -702,3 +680,13 @@ NEER_IMPORT_WEIGHTS in 1996; its monthly changes correlate 0.84 with the NBK's o
 Comtrade conversion (36 mln USD) and is replaced by the 1999 structure; 1995-1999 CONSUMER includes passenger
 cars (H0 conversion). Three archive typos (CHF 17.04.1995, 09.11.1998; KGS 09.08.1999) are kept as printed and
 registered in source_issues. Tests: tests/test_fx_monthly_history.py (15).
+
+## 2026-09-28 — weekend rows removed from the daily official USD rate (user: «Почисти записи за выходные в дневном ряде USD»)
+
+EXCHANGE_RATE held four weekend rows (2026-08-22/23 at 456.88 and 2026-08-29/30 at 464.77, Friday's
+rate repeated) written by an earlier fetcher; the fetch kept them because only the fresh report rows
+were filtered to weekdays, not the stored history they were merged with. `nbk._fetch_official_rate`
+now keeps weekdays only after the merge, for all four official-rate series (EUR, CNY and RUB had no
+weekend rows). The August 2026 mean of the daily series moves from 463.96 to 464.55, equal to
+EXCHANGE_RATES_OFFICIAL_MONTHLY USD (464.551429); model_data usdkzt 2026-08 likewise (usdkzt_yoy
+-13.91 -> -13.80). Test: tests/test_fx_history.py::test_fetcher_drops_weekend_rows_already_stored.
