@@ -1,0 +1,57 @@
+year,code,name_ru,weight_pct,status,source
+2014,FOOD,Продовольственные товары,37.0,official_secondary,press (kt.kz via search); secondary; equals IMF CP01+CP02 (Feb-Dec 2014) 36.97
+2014,NONFOOD,Непродовольственные товары,32.0,official_secondary,press (kt.kz via search); secondary; equals IMF CP01+CP02 (Feb-Dec 2014) 36.97
+2014,SERVICES,Платные услуги,31.0,official_secondary,press (kt.kz via search); secondary; equals IMF CP01+CP02 (Feb-Dec 2014) 36.97
+2016,FOOD,Продовольственные товары,36.7,official_secondary,press (search snippet); secondary; equals IMF CP01+CP02 36.73
+2016,NONFOOD,Непродовольственные товары,31.4,official_secondary,press (search snippet); secondary; equals IMF CP01+CP02 36.73
+2016,SERVICES,Платные услуги,31.9,official_secondary,press (search snippet); secondary; equals IMF CP01+CP02 36.73
+2017,FOOD,Продовольственные товары,37.6,official_secondary,MNE press service via forbes.kz 2017-07-03; secondary; equals IMF CP01+CP02 37.64
+2017,NONFOOD,Непродовольственные товары,30.2,official_secondary,MNE press service via forbes.kz 2017-07-03; secondary; equals IMF CP01+CP02 37.64
+2017,SERVICES,Платные услуги,32.2,official_secondary,MNE press service via forbes.kz 2017-07-03; secondary; equals IMF CP01+CP02 37.64
+2019,FOOD,Продовольственные товары,38.8,official_secondary,press (search snippet); secondary; equals IMF CP01+CP02 38.77
+2019,NONFOOD,Непродовольственные товары,29.8,official_secondary,press (search snippet); secondary; equals IMF CP01+CP02 38.77
+2019,SERVICES,Платные услуги,31.4,official_secondary,press (search snippet); secondary; equals IMF CP01+CP02 38.77
+2020,FOOD,Продовольственные товары,39.0,official_secondary,press (search snippet); secondary
+2020,NONFOOD,Непродовольственные товары,28.9,official_secondary,press (search snippet); secondary
+2020,SERVICES,Платные услуги,32.1,official_secondary,press (search snippet); secondary
+2022,CP01,Продукты питания и безалкогольные напитки,38.75,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP011_bread,Хлебобулочные изделия и крупы,6.75,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP011_eggs,Яйца,0.89,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP011_fish,Рыба и морепродукты,1.49,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP011_fruitveg,Фрукты и овощи,6.14,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP011_meat,Мясо,10.71,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP011_milk,Молочные продукты,4.16,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP011_nec,"Продукты питания, не отнесенные к другим категориям",1.33,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP011_oils,Масла и жиры,2.29,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP011_sugar,"Сахар, джем, мед, шоколад, кондитерские изделия",2.75,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP012,Безалкогольные напитки,2.24,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP02,"Алкогольные напитки, табачные изделия",1.95,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP021,Алкогольные напитки,1.18,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP022,Табачные изделия,0.77,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP03,Одежда и обувь,10.07,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP04,"Жилищные услуги, вода, электроэнергия, газ и другие виды топлива",14.60,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP05,"Предметы домашнего обихода, бытовая техника и повседневная деятельность по содержанию жилища",5.30,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP06,Здравоохранение,5.85,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP07,Транспорт,7.64,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP08,Связь,4.28,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP09,Отдых и культура,2.03,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP10,Образование,1.93,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP11,Рестораны и гостиницы,0.74,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,CP12,Разные товары и услуги,6.88,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,FOOD,Продовольственные товары,40.70,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,GOODS,Товары,70.87,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,NONFOOD,Непродовольственные товары,30.17,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,SERVICES,Платные услуги,29.13,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2022,TOTAL,Товары и услуги,100,official,"BNS brochure «Индекс потребительских цен: вопросы и ответы», «Схема взвешивания для расчета ИПЦ, используемая в 2022 году» (stat.gov.kz)"
+2023,FOOD,Продовольственные товары,41.8,official,stat.gov.kz/ru/news/inflyatsiya-v-respsssssublike-kazakhstan/ (01.11.2023); verified on stat.gov.kz
+2023,NONFOOD,Непродовольственные товары,29.6,official,stat.gov.kz/ru/news/inflyatsiya-v-respsssssublike-kazakhstan/ (01.11.2023); verified on stat.gov.kz
+2023,SERVICES,Платные услуги,28.6,official,stat.gov.kz/ru/news/inflyatsiya-v-respsssssublike-kazakhstan/ (01.11.2023); verified on stat.gov.kz
+2024,FOOD,Продовольственные товары,42.0,official,stat.gov.kz/ru/news/inflyatsisya-v-respublike-kazakhstan-/ (05.01.2025); verified on stat.gov.kz
+2024,NONFOOD,Непродовольственные товары,29.8,official,stat.gov.kz/ru/news/inflyatsisya-v-respublike-kazakhstan-/ (05.01.2025); verified on stat.gov.kz
+2024,SERVICES,Платные услуги,28.2,official,stat.gov.kz/ru/news/inflyatsisya-v-respublike-kazakhstan-/ (05.01.2025); verified on stat.gov.kz
+2025,FOOD,Продовольственные товары,40.0,official,stat.gov.kz/ru/news/inflyat%D1%81%D1%81siya-v-respublike-kazakhstan-/ (03.02.2025); verified on stat.gov.kz
+2025,NONFOOD,Непродовольственные товары,30.3,official,stat.gov.kz/ru/news/inflyat%D1%81%D1%81siya-v-respublike-kazakhstan-/ (03.02.2025); verified on stat.gov.kz
+2025,SERVICES,Платные услуги,29.7,official,stat.gov.kz/ru/news/inflyat%D1%81%D1%81siya-v-respublike-kazakhstan-/ (03.02.2025); verified on stat.gov.kz
+2026,FOOD,Продовольственные товары,41.1,official,stat.gov.kz/ru/news/inflyatvvvsiya-v-respublike-kazakhstan/ (02.02.2026); verified on stat.gov.kz
+2026,NONFOOD,Непродовольственные товары,28.4,official,stat.gov.kz/ru/news/inflyatvvvsiya-v-respublike-kazakhstan/ (02.02.2026); verified on stat.gov.kz
+2026,SERVICES,Платные услуги,30.5,official,stat.gov.kz/ru/news/inflyatvvvsiya-v-respublike-kazakhstan/ (02.02.2026); verified on stat.gov.kz

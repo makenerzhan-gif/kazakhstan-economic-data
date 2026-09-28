@@ -18,11 +18,31 @@ Dates: monthly and quarterly periods are dated at their first day (the pipeline'
 convention); a stock "as at the 1st" is moved to the end of the previous period by
 `asat_to_eop`, so month m holds the end-of-m stock.
 
-Seasonal adjustment: statsmodels STL, robust, on ln(level) (`sa: log`) or the level
-(`sa: additive`), on the longest run without gaps that covers at least three years; months
-outside that run get no SA value. X-13ARIMA-SEATS is not available in this environment.
+Seasonal adjustment (since 2026-09-27): X-13ARIMA-SEATS, US Census Bureau, v1.1 build 62
+(scripts/lib/x13.py; binary vendored in tools/x13as/), X-11 decomposition after a regARIMA
+pre-adjustment: automatic ARIMA (automdl), automatic AO/LS/TC outliers, and the Kazakhstan
+calendar (working days under the holiday law with weekend transfers, plus Kurban Ait) kept
+only when AICC prefers it. `sa: log` forces the log transform (multiplicative adjustment),
+`sa: additive` none, `sa: auto` lets AICC choose. It runs on the longest run without gaps
+that covers at least three years; months outside that run get no SA value.
+`parameters.sa_method: stl` (or a variable's own `sa_method: stl`) keeps the earlier robust
+STL on ln(level) or the level. When no X-13 binary can be found or downloaded, the build falls
+back to STL only if `parameters.sa_fallback: stl`, with a warning, and every variable card
+says which method made its `_sa` column; an X-13 error on one series is never papered over
+by STL -- it stops the build (override that variable with `sa_method: stl` if need be).
 Where the source publishes an adjusted series (BNS quarterly national accounts, FRED) that
 series is used as is (`sa: official`).
+
+X-13 vs STL on the 2026-09-27 data (pending/x13.md has the per-variable table). The check
+that matters: BNS publishes its own seasonally and calendar adjusted real GDP (`gdp`), and our
+X-13 on the unadjusted series (`gdp_nsa_sa`) reproduces its q/q growth 2010-Q2..2026-Q1 with
+correlation 0.999 and RMSE 0.13 pp; STL managed 0.907 and 1.19 pp. Across the 24 variables the
+correlation of X-13 and STL period-on-period growth has median 0.91 (0.55 m0 -- 0.96
+gdp_nominal); the gaps sit at level shifts and outliers (1994-95 hyperinflation in the money
+stocks, the 2015 devaluation, tax receipts in 2022-01, the 2026-01 IP break), which X-13
+models as outliers and STL spreads into the seasonal factors and the neighbouring periods,
+and in imports, where X-13 also removes the working-day effect (t = 7.3). X-13 takes about 90 s for the whole panel
+(CPI and money stocks ~9-15 s each: automdl's differencing test with outliers).
 """
 from __future__ import annotations
 
@@ -36,6 +56,9 @@ import numpy as np
 import pandas as pd
 import yaml
 from statsmodels.tsa.seasonal import STL
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from lib import x13  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 UNIFIED = REPO_ROOT / "data" / "unified"
@@ -112,35 +135,64 @@ def to_monthly(s: pd.Series, how: str, event: bool) -> pd.Series:
     return m[m.index <= last_month]
 
 
-def seasonal_adjust(s: pd.Series, period: int, mode: str, robust: bool) -> pd.Series:
-    """STL on the longest gap-free run (>= MIN_SA_YEARS years); NaN elsewhere."""
-    s = s.dropna()
-    if s.empty:
-        return s
-    step = 12 // period
-    expected = pd.date_range(s.index.min(), s.index.max(), freq=f"{step}MS")
-    full = s.reindex(expected)
-    runs, cur = [], []
-    for d, v in full.items():
-        if pd.isna(v):
-            if cur:
-                runs.append(cur)
-            cur = []
-        else:
-            cur.append(d)
-    if cur:
-        runs.append(cur)
-    best = max(runs, key=len)
-    if len(best) < MIN_SA_YEARS * period:
+def seasonal_adjust(s: pd.Series, period: int, mode: str, robust: bool = True, method: str = "x13",
+                    x13_opts: dict | None = None, info: dict | None = None) -> pd.Series:
+    """Seasonally adjusted `s` on its longest gap-free run (>= MIN_SA_YEARS years); NaN
+    elsewhere, empty when no run is long enough. mode: log | additive | auto (auto: X-13's
+    AICC test; STL treats it as log for a positive series). method: x13 | stl. `info`, when
+    given, receives what was done (method, span, and X-13's model and diagnostics)."""
+    info = {} if info is None else info
+    x = x13.longest_run(s, period)
+    if len(x) < MIN_SA_YEARS * period:
+        info.update(method="none", reason=f"longest gap-free run {len(x)} < {MIN_SA_YEARS * period}")
         return pd.Series(dtype=float)
-    x = full.loc[best]
-    if mode == "log":
+    info.update(span=(x.index[0], x.index[-1]), n=len(x))
+    if method == "x13":
+        opts = dict(x13_opts or {})
+        transform = {"log": "log", "additive": "none", "auto": "auto"}[mode]
+        try:
+            res = x13.adjust(x, period, transform=transform, method=opts.get("method", "x11"),
+                             calendar=opts.get("calendar", "kz"),
+                             outliers=tuple(opts.get("outliers", ("ao", "ls", "tc"))),
+                             title=str(s.name or "series"), binary=opts.get("binary"))
+        except x13.X13Unavailable:
+            raise
+        except x13.X13Error as e:
+            raise SystemExit(f"model_data: X-13 failed on {s.name}: {e}\n"
+                             f"  -> fix the series, or set `sa_method: stl` on this variable in spec.yaml") from e
+        info.update(method="x13", result=res)
+        return res.sa
+    if method != "stl":
+        raise SystemExit(f"model_data: unknown sa_method {method!r} (x13 | stl)")
+    info.update(method="stl")
+    if mode in ("log", "auto"):
         if (x <= 0).any():
-            raise SystemExit(f"model_data: log SA on a non-positive series ({x.name})")
+            raise SystemExit(f"model_data: log SA on a non-positive series ({s.name})")
         fit = STL(np.log(x.values), period=period, robust=robust).fit()
         return pd.Series(np.exp(np.log(x.values) - fit.seasonal), index=x.index)
     fit = STL(x.values, period=period, robust=robust).fit()
     return pd.Series(x.values - fit.seasonal, index=x.index)
+
+
+def resolve_sa(params: dict) -> dict:
+    """The panel-wide SA settings: method x13 unless the spec says stl; x13 falls back to
+    STL (with a warning) only when no binary exists and `sa_fallback: stl` allows it."""
+    method = params.get("sa_method", "x13")
+    opts = dict(params.get("x13") or {})
+    cfg = {"method": method, "robust": bool(params.get("stl_robust", True)), "x13": opts, "fallback_note": ""}
+    if method != "x13":
+        return cfg
+    try:
+        opts["binary"] = x13.ensure_binary(download=bool(opts.get("download", True)))
+    except x13.X13Unavailable as e:
+        if params.get("sa_fallback", "none") != "stl":
+            raise SystemExit(f"model_data: {e}\n  -> vendor/download the binary, set X13PATH, or allow "
+                             "`sa_fallback: stl` in model_data/spec.yaml") from e
+        print(f"WARNING: model_data: X-13ARIMA-SEATS unavailable ({e}); falling back to STL for every "
+              "variable -- the cards say so.", file=sys.stderr)
+        cfg["method"] = "stl"
+        cfg["fallback_note"] = f"STL fallback: X-13 unavailable ({e})"
+    return cfg
 
 
 def derived_columns(name: str, level: pd.Series, sa: pd.Series | None, kind: str, per_year: int) -> dict:
@@ -161,7 +213,12 @@ def derived_columns(name: str, level: pd.Series, sa: pd.Series | None, kind: str
 EVENT_SERIES = {"BASE_RATE", "RU_KEY_RATE", "EA_DEPOSIT_RATE"}
 
 
-def build_variable(v: dict, long, dims, per_year: int, robust: bool, monthly_panel=None) -> tuple[dict, dict]:
+def build_variable(v: dict, long, dims, per_year: int, sa_cfg: dict | bool, monthly_panel=None,
+                   monthly_info: dict | None = None) -> tuple[dict, dict]:
+    """One panel variable. sa_cfg: resolve_sa()'s settings (a bare bool = STL robust flag,
+    the pre-X-13 call). monthly_info: the monthly cards by name, for quarterly aggregates."""
+    if isinstance(sa_cfg, bool):
+        sa_cfg = {"method": "stl", "robust": sa_cfg, "x13": {}, "fallback_note": ""}
     kind = v.get("kind", "level")
     src = v["source"]
     info = {"name": v["name"], "source": src, "ops": list(v.get("ops", [])), "sa": v.get("sa", "none"),
@@ -182,26 +239,39 @@ def build_variable(v: dict, long, dims, per_year: int, robust: bool, monthly_pan
             cols[v["name"] + suffix] = agg
         level = cols[v["name"]]
         sa = cols.get(v["name"] + "_sa")
+        m_info = (monthly_info or {}).get(src["monthly"], {})
+        if sa is not None:
+            info["sa_detail"] = {"method": "aggregate", "of": src["monthly"],
+                                 "monthly_method": m_info.get("sa_detail", {}).get("method", "")}
         return derived_columns(v["name"], level, sa, kind, per_year), info
     s, freq = series_of(long, dims, src)
     info["source_frequency"] = freq
     if v.get("to_monthly"):
         s = to_monthly(s, v["to_monthly"], src.get("series") in EVENT_SERIES)
+    if v.get("from"):                                     # sample start, before the ops: a chain is 100 there
+        s = s[s.index >= pd.Timestamp(v["from"])]
     for op in v.get("ops", []):
         s = {"chain": chain, "decumulate_ytd": lambda x: decumulate_ytd(x, per_year),
              "asat_to_eop": lambda x: asat_to_eop(x, per_year)}[op](s)
     if per_year == 4:                                     # quarterly panel: quarter-start dates
         s.index = s.index.to_period("Q").to_timestamp()
         s = s[~s.index.duplicated(keep="last")]
-    if v.get("from"):
-        s = s[s.index >= pd.Timestamp(v["from"])]
     s.name = v["name"]
     mode = v.get("sa", "none")
     sa = None
-    if mode in ("log", "additive"):
-        sa = seasonal_adjust(s, per_year, mode, robust)
+    if mode in ("log", "additive", "auto"):
+        method = v.get("sa_method", sa_cfg["method"])
+        if method == "x13" and sa_cfg.get("fallback_note"):      # binary unavailable: fallback
+            method = "stl"
+        opts = {**sa_cfg["x13"], **(v.get("x13") or {})}
+        detail: dict = {}
+        sa = seasonal_adjust(s, per_year, mode, sa_cfg["robust"], method=method, x13_opts=opts, info=detail)
+        if detail.get("method") == "stl" and sa_cfg.get("fallback_note") and "sa_method" not in v:
+            detail["note"] = sa_cfg["fallback_note"]
+        info["sa_detail"] = detail
     elif mode == "official":
         sa = s.copy()
+        info["sa_detail"] = {"method": "official"}
     return derived_columns(v["name"], s, sa, kind, per_year), info
 
 
@@ -308,17 +378,58 @@ def card(info: dict, df: pd.DataFrame, per_year: int) -> str:
     fmt = (lambda d: d.strftime("%Y-%m")) if per_year == 12 else (lambda d: f"{d.year}-Q{(d.month - 1) // 3 + 1}")
     sample = f"{fmt(s.index[0])} … {fmt(s.index[-1])}, {len(s)} obs" if len(s) else "no data"
     cols = [c for c in df.columns if c == name or c.startswith(name + "_") and c[len(name) + 1:] in ("sa", "yoy", "saar")]
-    line = f"| `{name}` | {src_txt} | {ops} | {info['sa']} | {sample} | {', '.join('`' + c + '`' for c in cols)} | {info['note']} |"
+    line = f"| `{name}` | {src_txt} | {ops} | {sa_label(info)} | {sample} | {', '.join('`' + c + '`' for c in cols)} | {info['note']} |"
     return line
+
+
+METHOD_NAMES = {"x13": "X-13", "stl": "STL"}
+
+
+def sa_label(info: dict) -> str:
+    """The SA cell of a card: the spec's mode and the method that made the `_sa` column."""
+    mode, d = info["sa"], info.get("sa_detail") or {}
+    m = d.get("method")
+    if m in ("x13", "stl"):
+        res = d.get("result")
+        extra = f" {res.method.upper().replace('X11', 'X-11')}" if res is not None else ""
+        return f"{mode} · {METHOD_NAMES[m]}{extra}" + (" (fallback)" if d.get("note") else "")
+    if m == "aggregate":
+        return f"{info.get('agg')} of monthly `_sa` ({METHOD_NAMES.get(d.get('monthly_method'), d.get('monthly_method') or '?')})"
+    if m == "none" and mode not in ("none", "official"):
+        return f"{mode} · none ({d.get('reason')})"
+    return mode
+
+
+def sa_rows(infos: list[dict], per_year: int) -> list[str]:
+    """One diagnostics row per variable this repository adjusted itself."""
+    fmt = (lambda d: d.strftime("%Y-%m")) if per_year == 12 else (lambda d: f"{d.year}-Q{(d.month - 1) // 3 + 1}")
+    rows = []
+    for i in infos:
+        d = i.get("sa_detail") or {}
+        if d.get("method") not in ("x13", "stl"):
+            continue
+        span = f"{fmt(d['span'][0])} … {fmt(d['span'][1])} ({d['n']})"
+        res = d.get("result")
+        if res is None:
+            rows.append(f"| `{i['name']}` | STL robust, {'log' if i['sa'] in ('log', 'auto') else 'additive'} | {span} "
+                        f"| — | — | — | — | {d.get('note', '')} |")
+            continue
+        cal = ", ".join(res.calendar) if res.calendar else ("not modelled" if res.calendar_option == "none" else "none kept (AICC)")
+        outl = ", ".join(res.outliers) if res.outliers else "none"
+        diag = " ".join(x for x in (f"M7 {res.m7:.2f}" if res.m7 is not None else "",
+                                    f"Q {res.q:.2f}" if res.q is not None else "") if x) or "—"
+        rows.append(f"| `{i['name']}` | X-13 {res.method.upper().replace('X11', 'X-11')}, {res.mode} | {span} "
+                    f"| {res.model} | {cal} | {outl} | {diag} | {d.get('note', '')} |")
+    return rows
 
 
 def main() -> int:
     spec = yaml.safe_load((OUT / "spec.yaml").read_text(encoding="utf-8"))
-    robust = bool(spec["parameters"].get("stl_robust", True))
+    sa_cfg = resolve_sa(spec["parameters"])
     long, dims = load_long(), load_dims()
     mcols, minfo = {}, []
     for v in spec["monthly"]:
-        cols, info = build_variable(v, long, dims, 12, robust)
+        cols, info = build_variable(v, long, dims, 12, sa_cfg)
         mcols.update(cols)
         minfo.append(info)
     start = pd.Timestamp(spec["parameters"].get("panel_start", "1994-01-01"))
@@ -326,7 +437,8 @@ def main() -> int:
     monthly = monthly[monthly.index >= start]
     qcols, qinfo = {}, []
     for v in spec["quarterly"]:
-        cols, info = build_variable(v, long, dims, 4, robust, monthly_panel=monthly)
+        cols, info = build_variable(v, long, dims, 4, sa_cfg, monthly_panel=monthly,
+                                    monthly_info={i["name"]: i for i in minfo})
         qcols.update(cols)
         qinfo.append(info)
     quarterly = assemble(qcols, 4)
@@ -355,6 +467,21 @@ def write_cards(minfo, monthly, qinfo, quarterly, meta) -> None:
         "",
         "## Monthly (`monthly.csv`)", "", head, *[card(i, monthly, 12) for i in minfo], "",
         "## Quarterly (`quarterly.csv`)", "", head, *[card(i, quarterly, 4) for i in qinfo], "",
+        "## Seasonal adjustment by this repository", "",
+        "X-13ARIMA-SEATS v1.1 build 62 (US Census Bureau; `scripts/lib/x13.py`, binary in `tools/x13as/`): "
+        "regARIMA model chosen by automdl, automatic additive-outlier / level-shift / temporary-change "
+        "detection, and the Kazakhstan calendar -- `kzwd` working days (holiday law, weekend holidays "
+        "moved to the next working day, Kurban Ait and Orthodox Christmas not moved) and `kurban` "
+        "(the month of Kurban Ait) -- tested as one group by AICC and kept only when it lowers AICC "
+        "(t-values in brackets); then the X-11 decomposition (3x5 seasonal filters chosen by the "
+        "moving-seasonality ratio, Henderson trend). M7 < 1 and Q < 1 are X-11's acceptance "
+        "thresholds (identifiable, stable seasonality). Outliers are part of the adjusted series; they "
+        "are listed to show where the model saw breaks. `sa: official` columns are the source's own "
+        "adjustment; quarterly `_sa` of a monthly variable aggregates the monthly `_sa`.", "",
+        "| variable | method | span (obs) | ARIMA | calendar | outliers | M7 / Q | note |",
+        "|---|---|---|---|---|---|---|---|",
+        *sa_rows(minfo, 12), *sa_rows([i for i in qinfo if (i.get("sa_detail") or {}).get("method") != "aggregate"], 4),
+        "",
         "## Production function (`quarterly.csv`: `capital`, `labour_share`, `tfp_log`; `annual.csv`)", "",
         f"- **Capital** — perpetual inventory at average 2010 prices, million KZT. Annual real GFCF: the 2010 "
         f"nominal level chained with BNS `GFCF_VOLUME_INDEX` (2000–2025). Depreciation δ = {meta['delta']:.4f} a year "

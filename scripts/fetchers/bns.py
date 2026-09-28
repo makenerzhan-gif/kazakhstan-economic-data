@@ -3968,12 +3968,78 @@ CPI_TERM_YOY = "2695732"               # отчетный период к соо
 TALDAU_PERIOD_MONTHLY = "4"
 
 
-def _fetch_cpi_taldau(comparison_term: str, indicator_id: str,
-                      note: str) -> tuple[list[dict], dict]:
-    return _fetch_taldau_annual_index(
+# HISTORY BEFORE TALDAU (2026-09-28). Taldau starts in January 2011; BNS printed the
+# national CPI from January 1991 (month on month, since December) and from January 1994
+# (year on year) in «Цены в Казахстане за 1991-2021 годы» (element 17216), «Цены в
+# Казахстане в 1991-2000 гг.» (element 21933) and the monthly editions of publication
+# 166775 (May 1999 - December 2010). scripts/load_cpi_history.py reads all three into
+# data/reference/bns_cpi_history.csv, stops if any two of them print a month differently,
+# and checks the identities between the three measures (tests/test_cpi_history.py).
+# The file also repeats the 2011-2021 months the 1991-2021 docx prints (every mom, the
+# Decembers of ytd and yoy): they are the overlap that proves the file and Taldau are one
+# series. splice_cpi_history prepends only months before the first Taldau month and before
+# 2011-01, never replaces a Taldau value, and raises if any overlap month differs from
+# Taldau or if the two would not join month to month.
+CPI_HISTORY_PATH = Path(__file__).resolve().parents[2] / "data" / "reference" / "bns_cpi_history.csv"
+CPI_HISTORY_END = "2011-01-01"
+
+
+def load_cpi_history(measure: str, path: Path = CPI_HISTORY_PATH) -> dict[str, float]:
+    """{date: value} of one measure (mom / ytd / yoy) of the reference file; {} if it is absent."""
+    if not path.exists():
+        return {}
+    with path.open(encoding="utf-8") as f:
+        return {r["date"]: float(r["value"]) for r in csv.DictReader(f) if r["measure"] == measure}
+
+
+def _next_month(d: str) -> str:
+    y, m = int(d[:4]), int(d[5:7])
+    return f"{y + (m == 12):04d}-{m % 12 + 1:02d}-01"
+
+
+def splice_cpi_history(indicator_id: str, records: list[dict], history: dict[str, float]) -> tuple[list[dict], str]:
+    """(records with the history months prepended, note). Only months before both the first
+    record and CPI_HISTORY_END are added; the records themselves are returned unchanged."""
+    def fail(what: str, actual: str) -> None:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in bns/{indicator_id} (history splice)",
+            f"WHAT CHANGED: {what}",
+            "EXPECTED: data/reference/bns_cpi_history.csv equal to Taldau 703076 on every month both carry, "
+            "and ending the month before Taldau's first",
+            f"ACTUAL: {actual}",
+            "ACTION REQUIRED: compare Taldau with the BNS publications named in the file's source_url "
+            "column; if BNS revised the series, rerun scripts/load_cpi_history.py. Do not loosen the check.",
+        ]))
+
+    if not history:
+        fail("the reference file is missing or holds no row for this measure", str(CPI_HISTORY_PATH))
+    own = {r["date"]: float(r["value"]) for r in records}
+    first = min(own)
+    shared = sorted(set(own) & set(history))
+    if not shared:
+        fail("no month in common with Taldau", f"history {min(history)}..{max(history)}, Taldau from {first}")
+    differ = [f"{d}: file {history[d]}, Taldau {own[d]}" for d in shared if abs(history[d] - own[d]) > 1e-6]
+    if differ:
+        fail(f"{len(differ)} of {len(shared)} shared months differ", "; ".join(differ[:6]))
+    before = {d: v for d, v in history.items() if d < first and d < CPI_HISTORY_END}
+    if not before:
+        return records, "history: none before Taldau's first month"
+    if _next_month(max(before)) != first:
+        fail("the history does not join Taldau month to month", f"history ends {max(before)}, Taldau starts {first}")
+    spliced = [{"date": d, "value": v} for d, v in sorted(before.items())] + records
+    return spliced, (f"{min(before)[:7]}..{max(before)[:7]} ({len(before)} months) from BNS's printed history "
+                     f"(data/reference/bns_cpi_history.csv, scripts/load_cpi_history.py), equal to Taldau on all "
+                     f"{len(shared)} months both carry ({shared[0][:7]}..{shared[-1][:7]})")
+
+
+def _fetch_cpi_taldau(comparison_term: str, indicator_id: str, note: str,
+                      history_measure: str) -> tuple[list[dict], dict]:
+    records, manifest = _fetch_taldau_annual_index(
         CPI_TALDAU_INDEX, indicator_id, note, measure_id="7",
         terms=f"{CORE_CPI_REGION_TERM},{comparison_term},{CPI_TALDAU_BASKET}",
         dic_ids=CPI_TALDAU_DICS, period_id=TALDAU_PERIOD_MONTHLY)
+    records, history_note = splice_cpi_history(indicator_id, records, load_cpi_history(history_measure))
+    return records, {**manifest, "note": f"{manifest['note']} History: {history_note}."}
 
 
 def fetch_cpi() -> tuple[list[dict], dict]:
@@ -3984,7 +4050,8 @@ def fetch_cpi() -> tuple[list[dict], dict]:
         "Taldau index 703076 on 2026-09-03: the cube stops at October 2025 (confirmed by reading "
         "its own PERIOD column, so the source and not the fetcher), while Taldau carries the same "
         "series through July 2026. The two agree to within 0.05 index points across all 178 "
-        "overlapping months, so this is the same series on a channel that is still updating.")
+        "overlapping months, so this is the same series on a channel that is still updating. "
+        "Before 2011: 1991-01 onward from BNS's printed history.", "mom")
 
 
 def fetch_cpi_yoy() -> tuple[list[dict], dict]:
@@ -3993,7 +4060,9 @@ def fetch_cpi_yoy() -> tuple[list[dict], dict]:
         CPI_TERM_YOY, "CPI_YOY",
         "Index, same month of the previous year = 100 -- 110.2 for July 2026, so 10.2% headline "
         "inflation. The independently sourced NBK ANNUAL_INFLATION reads 10.2% for August 2026, "
-        "which is the cross-check. Same Taldau move as CPI; see that note for the verification.")
+        "which is the cross-check. Same Taldau move as CPI; see that note for the verification. "
+        "Before 2011: 1994-01 onward from BNS's printed history (nothing year on year was "
+        "published for 1991-1993).", "yoy")
 
 
 def fetch_cpi_ytd() -> tuple[list[dict], dict]:
@@ -4002,7 +4071,8 @@ def fetch_cpi_ytd() -> tuple[list[dict], dict]:
         CPI_TERM_YTD, "CPI_YTD",
         "Index, December of the previous year = 100 -- 105.7 for July 2026, cumulative inflation "
         "so far this year and the form Kazakhstan's own commentary usually quotes. Same Taldau "
-        "move as CPI.")
+        "move as CPI. Before 2011: 1991-01 onward from BNS's printed history (December 1992 "
+        "3060.8, 1993 2265.0, 1994 1258.3).", "ytd")
 
 
 # ---------------------------------------------------------------------------

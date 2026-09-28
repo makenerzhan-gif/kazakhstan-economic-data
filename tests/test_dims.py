@@ -49,6 +49,8 @@ def test_every_dataset_has_a_fetcher_and_a_known_layout():
             assert ds["form_id"] and ds["indicator_code"] and ds["frequency"] == "quarterly"
         elif key == "gravity":
             assert ds["table"] in update_dims.gravity.TABLES and ds["frequency"] == "annual"
+        elif key == "cisstat":
+            assert ds["table"] in update_dims.cisstat.TABLES and ds["frequency"] == "annual"
         elif ds["agency"] == "wb":
             assert ds["table"] in ("annual_prices", "annual_indices", "monthly_prices", "monthly_indices",
                                    "forecast_prices", "forecast_indices")
@@ -60,7 +62,8 @@ def test_every_dataset_has_a_fetcher_and_a_known_layout():
         if ds.get("row_dimension") == "region":
             assert ds["fixed_item"], f"{ds['id']}: region rows need a fixed item"
         if ds.get("country", "KZ") != "KZ":        # a world-price dataset: its region tag and geography must be explicit
-            assert ds.get("region") == "world" and ds.get("geography"), f"{ds['id']}: a non-Kazakh dataset must say its region and geography"
+            # 'by_country': a country panel whose records carry the ISO3 code as region (CIS_*, fetcher cisstat)
+            assert ds.get("region") in ("world", "by_country") and ds.get("geography"), f"{ds['id']}: a non-Kazakh dataset must say its region and geography"
 
 
 def test_dictionaries_have_unique_codes_and_unambiguous_patterns():

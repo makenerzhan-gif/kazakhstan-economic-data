@@ -1,6 +1,6 @@
 """Shared level-preparation for time-series passes that want a series' history
 AS A LEVEL, not as-published-comparison or growth-rate -- today:
-scripts/analysis/decompose.py (STL). Anticipated: a forecasting slice, which
+scripts/analysis/decompose.py (X-13, STL fallback). Anticipated: a forecasting slice, which
 wants the same level and the same two guardrails (lifecycle, IMF
 forecast-year contamination) -- see analysis/README.md's note that
 forecasting risks exactly that contamination if built before this exists.
@@ -9,7 +9,7 @@ Reads data/unified/macro_long.csv only -- same boundary as correlate.py.
 
 NOT correlate.prepare_indicator: that one defaults to growth_rate for
 anything not already a published comparison index. Decomposition (and
-forecasting) want the level itself -- STL separates trend/seasonal/residual
+forecasting) want the level itself -- X-13 (or STL) separates trend/seasonal/residual
 OUT of the level, so growth-rate-ing first would hand it an already
 partially-deseasonalized series.
 """
@@ -71,7 +71,7 @@ def _from_transform_series(rows: transformations.Series, name: str) -> pd.Series
 def _check_gap_free(s: pd.Series, indicator_id: str, frequency: str) -> None:
     """Reindex onto a regular calendar grid; raise if that reveals a gap.
 
-    STL (and any future forecaster) assumes row N means the same calendar
+    X-13 or STL (and any future forecaster) assumes row N means the same calendar
     position every cycle. All indicators this module has been used on so far
     are gap-free -- this check is what keeps that true as the pipeline
     re-runs daily and new months/quarters land, not a defense against a
@@ -101,6 +101,7 @@ def prepare_level(
     *,
     acknowledged_lifecycle: dict[str, str] | None = None,
     forecast_cutoff_year: int | None = None,
+    sample_start: str | None = None,
 ) -> tuple[pd.Series, str]:
     """Decumulate (if cumulation == year_to_date) -> forecast cutoff (if an
     IMF international_projection series) -> verify gap-free on a regular
@@ -145,6 +146,10 @@ def prepare_level(
             transformations.decumulate_ytd(_to_transform_series(s)), indicator_id
         )
         steps.append("de-cumulated (year-to-date total -> own-period contribution)")
+
+    if sample_start:
+        s = s[s.index >= pd.Timestamp(sample_start)]
+        steps.append(f"sample from {sample_start}")
 
     _check_gap_free(s, indicator_id, meta.get("frequency", ""))
     steps.append("verified gap-free on a regular calendar grid")

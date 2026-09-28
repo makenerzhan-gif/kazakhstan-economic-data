@@ -1,0 +1,7 @@
+{
+  "downloaded_at": "2026-09-28T02:15:13.553081",
+  "raw_file": "cisstat_cis_migration_4650866_2026-09-28.json.gz",
+  "source_url": "https://new.cisstat.org/consstat/service/fact/data/4650866/freq/44?locale=ru",
+  "fact": 4650866,
+  "role": "arrivals"
+}

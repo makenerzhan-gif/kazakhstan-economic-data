@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/4441/file/ru/",
+  "dataset_id": "4441",
+  "indicator_id": "GDP_DEFLATOR_AGGREGATES",
+  "indicator_name": "GDP deflator by production approach, aggregates, 1991-2009 (early sheets of table 4441)",
+  "description": "Дефлятор ВВП методом производства и его агрегатов, 1991-2009 (ранние листы таблицы 4441)",
+  "frequency": "annual",
+  "unit": "% of previous year",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Official BNS: GDP deflator 1991 201.5, 1992 1 497.5, 1993 1 330.6. Equal to GDP_DEFLATOR 2000-2009; fills 1991-1999.",
+  "publication_date": "2026-08-14",
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "1991-12-31",
+  "period_end": "2009-12-31",
+  "next_update_date": "2026-09-30",
+  "transformation": "level",
+  "revision_status": "original"
+}

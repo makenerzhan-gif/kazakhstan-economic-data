@@ -18,7 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib import dims, metadata, pipeline_logging, revisions, validation  # noqa: E402
-from fetchers import bns_balances, bns_cpi, comtrade, damu, gfss, minfin_regions, neer_import, kase_ifrs, nbk_expectations, nbk_fx, bns_dims, bns_living, bns_resource_use, bns_trade, eia, gravity, imf_dims, kase_eurobonds, nbk_dims, regional_balance, taldau_dims, wb  # noqa: E402
+from fetchers import bns_balances, bns_cpi, cisstat, comtrade, cpi_weights, gdp_discrete, krem_tariffs, minfin_quasifiscal, nbk_balance_groups, nbk_records, tariff_jumps, damu, gfss, minfin_regions, neer_import, kase_ifrs, nbk_expectations, nbk_fx, bns_dims, bns_living, bns_resource_use, bns_trade, eia, gravity, imf_dims, kase_eurobonds, nbk_dims, regional_balance, taldau_dims, wb  # noqa: E402
 
 # Keyed by a dataset's `fetcher` when it names one, else by its agency.
 AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb.fetch, "eia": eia.fetch,
@@ -32,14 +32,22 @@ AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb
                    "nbk_expectations": nbk_expectations.fetch, "kase_ifrs": kase_ifrs.fetch,
                    "nbk_fx": nbk_fx.fetch, "comtrade": comtrade.fetch,
                    "gfss": gfss.fetch, "neer_import": neer_import.fetch,
-                   "minfin_regions": minfin_regions.fetch}
+                   "minfin_regions": minfin_regions.fetch,
+                   "cpi_weights": cpi_weights.fetch,
+                   "gdp_discrete": gdp_discrete.fetch,
+                   "minfin_quasifiscal": minfin_quasifiscal.fetch,
+                   "nbk_records": nbk_records.fetch, "nbk_balance_groups": nbk_balance_groups.fetch,
+                   "krem_tariffs": krem_tariffs.fetch, "tariff_jumps": tariff_jumps.fetch,
+                   "cisstat": cisstat.fetch}
 METHODOLOGY = {"bns": "Bureau of National Statistics official methodology",
                "wb": "World Bank Commodity Markets (Pink Sheet / Commodity Markets Outlook), nominal US dollars",
                "eia": "U.S. EIA Short-Term Energy Outlook, monthly release",
                "wits": "World Bank WITS TradeStats (UN Comtrade / TRAINS data)",
                "nbk": "National Bank of Kazakhstan, enterprise monitoring survey",
-               "kase": "Kazakhstan Stock Exchange settlement-price valuation",
+               "kase": "Kazakhstan Stock Exchange settlement-price valuation; issuer financial statements (IFRS and Minfin Form 1) and key indicators",
+               "krem": "Committee for Regulation of Natural Monopolies (КРЕМ МНЭ РК) and its regional departments: tariff orders and press releases (gov.kz); Ministry of Energy price-cap orders (adilet)",
                "imf": "IMF statistical datasets (SDMX 3.0 API), as reported by the Kazakh authorities",
+               "cisstat": "Interstate Statistical Committee of the CIS (CIS Stat), database «Статистика СНГ», national data as reported by the member states",
                "comtrade": "UN Comtrade (reporter Kazakhstan), BEC rev.4 conversion by UN Statistics",
                "gfss": "State Social Insurance Fund (ГФСС), form 5-СО",
                "minfin": "Ministry of Finance, monthly Statistical Bulletin (budget execution)",

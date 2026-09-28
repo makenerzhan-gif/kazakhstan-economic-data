@@ -3,7 +3,7 @@
 Deliberately a small, hand-picked list, not every monthly/quarterly indicator
 in the dataset -- a full sweep of all 247 monthly+quarterly indicators' actual
 processed CSVs found only 4 that are both genuinely economically-seasonal and
-have enough dense, gap-free history for STL to mean anything. See
+have enough dense, gap-free history for seasonal decomposition to mean anything. See
 analysis/README.md for the full sweep and why the rest were left out.
 
 `rationale` is why the target was picked, written before seeing a result.
@@ -22,8 +22,11 @@ class SeasonalTarget:
     indicator_id: str
     label: str
     rationale: str
-    period: int  # 12 = monthly, 4 = quarterly -- STL's seasonal cycle length
+    period: int  # 12 = monthly, 4 = quarterly -- the seasonal cycle length
     interpretation: str = ""
+    # First date used; None = the whole series. CPI starts in 2011: its 1991-2010 BNS history
+    # holds the 1991-1995 hyperinflation (m/m up to 312.3), which is not a seasonal pattern.
+    sample_start: str | None = None
 
 
 SEASONAL_TARGETS: list[SeasonalTarget] = [
@@ -37,7 +40,7 @@ SEASONAL_TARGETS: list[SeasonalTarget] = [
             "Textbook seasonal candidate: 187 gap-free monthly points "
             "(2011-01..2026-07), 15.5x this pass's 3-cycle minimum."
         ),
-        period=12,
+        period=12, sample_start="2011-01-01",
         interpretation=(
             "Window includes the 2022 KZT devaluation's inflation spike and the "
             "2020 COVID disruption -- both large, transient, non-seasonal shocks. "
@@ -51,9 +54,9 @@ SEASONAL_TARGETS: list[SeasonalTarget] = [
         rationale=(
             "Raw monthly trade-flow level (thousand USD, observation_type="
             "period_total, no cumulation) -- decompose the level, not a growth "
-            "rate: STL separates trend/seasonal/residual out of the level itself, "
+            "rate: the decomposition separates trend/seasonal/residual out of the level itself, "
             "and a growth-rate series would already be partially deseasonalized "
-            "before STL ever saw it. 90 gap-free monthly points (2019-01..2026-06), "
+            "before the decomposition ever saw it. 90 gap-free monthly points (2019-01..2026-06), "
             "7.5x the minimum -- shorter margin than CPI, still comfortable."
         ),
         period=12,

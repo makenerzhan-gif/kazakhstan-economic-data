@@ -16,8 +16,12 @@
 #                 asat_to_eop      a stock dated "as at the 1st" -> end of the previous period
 #   to_monthly  daily or event-dated source -> month: mean | last  (event series are stepped)
 #   agg         quarterly from monthly: mean | sum | last
-#   sa          log | additive | official | none  -- STL (robust) on ln(level) or on the level;
-#               official = the source already publishes it seasonally adjusted
+#   sa          log | additive | auto | official | none -- X-13ARIMA-SEATS (default) with the
+#               log transform forced (multiplicative), none forced (additive), or chosen by
+#               AICC (auto); official = the source already publishes it seasonally adjusted
+#   sa_method   x13 | stl  -- overrides parameters.sa_method for this variable
+#   x13         {calendar: kz | builtin | none, method: x11 | seats, outliers: [ao, ls, tc]}
+#               overrides parameters.x13 for this variable
 #   kind        level (default) | rate (percent or bp: no log, no growth rates)
 #   from        first date kept (drops thin early history)
 #   note        what a model user must know (breaks, gaps, definitions)
@@ -29,7 +33,18 @@
 version: 1
 
 parameters:
-  stl_robust: true
+  # Seasonal adjustment: X-13ARIMA-SEATS (US Census Bureau, v1.1 b62, scripts/lib/x13.py; the
+  # binary is vendored in tools/x13as/). STL (statsmodels, robust) only as an explicit choice
+  # (sa_method: stl) or, when sa_fallback: stl, if no X-13 binary can be found or downloaded --
+  # a warning is printed and the cards say so. An X-13 error on one series stops the build.
+  sa_method: x13
+  sa_fallback: stl
+  x13:
+    method: x11          # x11 | seats
+    calendar: kz         # Kazakhstan working days + Kurban Ait, kept only if AICC prefers them
+    outliers: [ao, ls, tc]
+    download: true       # fetch the pinned Census tarball into ~/.cache if tools/x13as is missing
+  stl_robust: true       # STL only
   panel_start: "1994-01-01"     # the tenge was introduced in November 1993
   # Production function (quarterly): Y = A K^alpha L^(1-alpha). alpha = 1 - mean labour share
   # (compensation / (GDP - net taxes on production and imports), QNA income approach).
@@ -44,7 +59,7 @@ parameters:
 
 monthly:
   # ---------------------------------------------------------------- prices
-  - {name: cpi, source: {series: CPI}, ops: [chain], sa: log, note: "Headline CPI, chained from BNS m/m indices (rounded to 0.1): cpi_yoy differs from the published CPI_YOY by 0.07 pp on average, 0.35 at most -- use CPI_YOY for y/y inflation itself."}
+  - {name: cpi, source: {series: CPI}, ops: [chain], sa: log, from: "2011-01-01", note: "From 2011 (BNS history 1991-2010 in CPI holds the 1991-1995 hyperinflation; move the start to 1996 after checking X-13 diagnostics). Headline CPI, chained from BNS m/m indices (rounded to 0.1): cpi_yoy differs from the published CPI_YOY by 0.07 pp on average, 0.35 at most -- use CPI_YOY for y/y inflation itself."}
   - {name: cpi_core_ex3, source: {series: CORE_CPI_MOM_EX3}, ops: [chain], sa: log, note: "Core CPI excluding fruit and vegetables, petrol and coal (BNS)."}
   - {name: cpi_core_ex7, source: {series: CORE_CPI_MOM_EX7}, ops: [chain], sa: log, note: "Core CPI excluding seven volatile groups (BNS)."}
   - {name: cpi_food, source: {series: CPI_FOOD}, ops: [chain], sa: log}
@@ -68,9 +83,10 @@ monthly:
   - {name: deposit_rate, source: {series: DEPOSIT_RATE}, kind: rate, sa: none}
   - {name: gs_yield_1y, source: {series: GS_YIELD_1Y}, kind: rate, sa: none, note: "KASE zero-coupon curve, monthly mean (from 2019-11)."}
   - {name: gs_yield_10y, source: {series: GS_YIELD_10Y}, kind: rate, sa: none}
-  - {name: m0, source: {series: M0}, ops: [asat_to_eop], sa: log, note: "End of month (the source dates it as at the 1st of the next month)."}
-  - {name: m2, source: {series: M2}, ops: [asat_to_eop], sa: log}
-  - {name: m3, source: {series: M3}, ops: [asat_to_eop], sa: log}
+  # Stocks: working days in the month are a flow calendar, so no calendar regressors.
+  - {name: m0, source: {series: M0}, ops: [asat_to_eop], sa: log, x13: {calendar: none}, note: "End of month (the source dates it as at the 1st of the next month)."}
+  - {name: m2, source: {series: M2}, ops: [asat_to_eop], sa: log, x13: {calendar: none}}
+  - {name: m3, source: {series: M3}, ops: [asat_to_eop], sa: log, x13: {calendar: none}}
   # ---------------------------------------------------------------- exchange rates
   - {name: usdkzt, source: {series: EXCHANGE_RATE}, to_monthly: mean, sa: none, note: "Official KZT per USD, monthly mean. Devaluations 2014-02, 2015-08."}
   - {name: usdkzt_eop, source: {series: EXCHANGE_RATE}, to_monthly: last, sa: none}
@@ -83,7 +99,7 @@ monthly:
   - {name: us_cpi, source: {series: US_CPI}, sa: official, note: "Seasonally adjusted by BLS."}
   - {name: ru_key_rate, source: {series: RU_KEY_RATE}, to_monthly: mean, kind: rate, sa: none, note: "From 2013-09."}
   - {name: rubusd, source: {series: RUB_USD}, to_monthly: mean, sa: none}
-  - {name: ru_cpi, source: {series: RU_CPI_MOM}, ops: [chain], sa: log}
+  - {name: ru_cpi, source: {series: RU_CPI_MOM}, ops: [chain], sa: log, x13: {calendar: none}, note: "Russian CPI: the Kazakhstan calendar does not apply."}
   - {name: ea_hicp_yoy, source: {series: EA_HICP_YOY}, kind: rate, sa: none}
   - {name: cn_cpi_yoy, source: {series: CN_CPI_YOY}, kind: rate, sa: none}
   # ---------------------------------------------------------------- risk premia
@@ -94,7 +110,7 @@ monthly:
 quarterly:
   # ---------------------------------------------------------------- national accounts (BNS, 2010 prices)
   - {name: gdp, source: {dims: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: GDP}, sa: official, note: "Real GDP, average 2010 prices, BNS seasonally and calendar adjusted (2010-Q1 on); the column itself is SA."}
-  - {name: gdp_nsa, source: {dims: QNA_GDP_EXPENDITURE_CONSTANT_2010, item: GDP}, sa: log, note: "Real GDP, 2010 prices, not adjusted; its _sa is our STL for comparison with the official gdp."}
+  - {name: gdp_nsa, source: {dims: QNA_GDP_EXPENDITURE_CONSTANT_2010, item: GDP}, sa: log, note: "Real GDP, 2010 prices, not adjusted; its _sa is our X-13 (with the Kazakhstan calendar) for comparison with the official gdp."}
   - {name: consumption_hh, source: {dims: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: HOUSEHOLDS}, sa: official}
   - {name: consumption_gov, source: {dims: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: GOVERNMENT}, sa: official}
   - {name: gfcf, source: {dims: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: GFCF}, sa: official}
@@ -113,7 +129,7 @@ quarterly:
   - {name: foreign_demand_yoy, source: {series: FOREIGN_DEMAND_YOY}, kind: rate, sa: none, note: "Export-weighted partner real GDP growth, index (previous year = 100)."}
   - {name: us_gdp, source: {series: US_GDP_REAL}, sa: official}
   - {name: ea_gdp, source: {series: EA_GDP_REAL}, sa: official}
-  - {name: ru_gdp, source: {series: RU_GDP_REAL}, sa: log, note: "Russia, 2021 prices, not adjusted (from 2014-Q1)."}
+  - {name: ru_gdp, source: {series: RU_GDP_REAL}, sa: log, x13: {calendar: builtin}, note: "Russia, 2021 prices, not adjusted (from 2014-Q1); X-13 with its own weekday regressors (AICC-tested), not the Kazakhstan calendar."}
   - {name: current_account, source: {series: CURRENT_ACCOUNT_BALANCE}, kind: rate, sa: none, note: "Million USD, flow in the quarter (a balance: no logs)."}
   # ---------------------------------------------------------------- quarterly means of monthly variables
   - {name: cpi, source: {monthly: cpi}, agg: mean}

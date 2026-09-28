@@ -34,12 +34,45 @@ def test_asat_to_eop_and_event_months():
     assert m.loc["2024-02-01"] == 12.0
 
 
-def test_seasonal_adjust_removes_a_pure_seasonal():
+def test_seasonal_adjust_stl_removes_a_pure_seasonal():
     idx = pd.date_range("2015-01-01", periods=96, freq="MS")
     trend = np.linspace(100, 200, 96)
     s = pd.Series(trend * (1 + 0.1 * np.sin(2 * np.pi * np.arange(96) / 12)), index=idx)
-    sa = B.seasonal_adjust(s, 12, "log", True)
+    info = {}
+    sa = B.seasonal_adjust(s, 12, "log", True, method="stl", info=info)
+    assert (sa / trend - 1).abs().max() < 0.02 and info["method"] == "stl"
+
+
+@pytest.mark.skipif(not B.x13.available(), reason="no X-13ARIMA-SEATS binary")
+def test_seasonal_adjust_x13_is_the_default():
+    rng = np.random.default_rng(7)
+    idx = pd.date_range("2015-01-01", periods=96, freq="MS")
+    trend = np.linspace(100, 200, 96)
+    s = pd.Series(trend * (1 + 0.1 * np.sin(2 * np.pi * np.arange(96) / 12)) * np.exp(rng.normal(0, 0.003, 96)),
+                  index=idx, name="synthetic")
+    info = {}
+    sa = B.seasonal_adjust(s, 12, "log", info=info)
+    assert info["method"] == "x13" and info["result"].mode == "multiplicative"
     assert (sa / trend - 1).abs().max() < 0.02
+    assert B.sa_label({"sa": "log", "sa_detail": info}) == "log · X-13 X-11"
+
+
+def test_seasonal_adjust_short_run_gives_nothing():
+    s = pd.Series(np.arange(1.0, 30.0), index=pd.date_range("2020-01-01", periods=29, freq="MS"))
+    info = {}
+    assert B.seasonal_adjust(s, 12, "log", info=info).empty and info["method"] == "none"
+
+
+def test_resolve_sa_falls_back_to_stl_only_when_allowed(monkeypatch, capsys):
+    def unavailable(download=True):
+        raise B.x13.X13Unavailable("no binary here")
+    monkeypatch.setattr(B.x13, "ensure_binary", unavailable)
+    cfg = B.resolve_sa({"sa_method": "x13", "sa_fallback": "stl"})
+    assert cfg["method"] == "stl" and "no binary here" in cfg["fallback_note"]
+    assert "WARNING" in capsys.readouterr().err
+    with pytest.raises(SystemExit, match="sa_fallback"):
+        B.resolve_sa({"sa_method": "x13"})
+    assert B.resolve_sa({"sa_method": "stl"})["method"] == "stl"
 
 
 def test_built_panels_are_consistent():
@@ -53,3 +86,6 @@ def test_built_panels_are_consistent():
         assert col in q
     assert q["capital"].dropna().is_monotonic_increasing          # net investment has stayed positive
     assert 0.25 < q["labour_share"].dropna().mean() < 0.45
+    cards = (REPO / "model_data" / "VARIABLES.md").read_text(encoding="utf-8")
+    assert "## Seasonal adjustment by this repository" in cards
+    assert "| `cpi` | `CPI` | chain | log · X-13" in cards or "log · STL (fallback)" in cards

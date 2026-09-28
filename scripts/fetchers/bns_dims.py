@@ -1047,7 +1047,11 @@ def parse(content: bytes, ds: dict) -> list[dict]:
 
 
 def _finish(records: list[dict], ds: dict) -> list[dict]:
-    """De-duplicate on (date, region, item) — a later sheet wins — sort, and apply the size gates."""
+    """De-duplicate on (date, region, item) — a later sheet wins — sort, and apply the size gates.
+    `as_at_start_of_year: true` (a stock «на 1 января YYYY», 6584): the column YYYY is dated
+    YYYY-01-01, its as-at date, not 31 December."""
+    if ds.get("as_at_start_of_year"):
+        records = [{**r, "date": r["date"][:4] + "-01-01"} if r["date"].endswith("-12-31") else r for r in records]
     seen = {}
     for r in records:                                   # a later sheet wins on an overlapping (year, region, item)
         seen[(r["date"], r["region"], r["item_code"])] = r

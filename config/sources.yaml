@@ -520,6 +520,7 @@ agencies:
           кондиционированным воздухом', 'отчетный период к предыдущему периоду'].
           fetch_ind_prod_electricity.
       CPI:
+        history: "2026-09-28: months before 2011-01 (CPI, CPI_YTD from 1991-01; CPI_YOY from 1994-01) from data/reference/bns_cpi_history.csv, built by scripts/load_cpi_history.py from stat.gov.kz elements 17216 (docx 1991-2021), 21933 (pdf 1991-2000) and the 140 editions of publication 166775 (1999-05..2010-12); every month printed by two sources is equal in both; prepended by splice_cpi_history in scripts/fetchers/bns.py, which stops if the file and Taldau differ on any shared month."
         status: confirmed
         current_source: "2026-09-25 (audit): the fetcher reads Taldau index 703076 (monthly, 2011-01 onward, through 2026-08), not element 1549, whose cube stopped at 2025-10 -- see metadata/bns/cpi.json. The element 1549 description below is the history of the connection."
         page_url: "https://stat.gov.kz/ru/open-data/stat-prices/474295/"
@@ -1426,6 +1427,7 @@ agencies:
           2026-09-01. Sheet 2 of the same publication as EXPORT_PRICE_INDEX, row 'Импорт -
           всего', same column and same caveats. fetch_import_price_index.
       CPI_YOY:
+        history: "2026-09-28: months before 2011-01 (CPI, CPI_YTD from 1991-01; CPI_YOY from 1994-01) from data/reference/bns_cpi_history.csv, built by scripts/load_cpi_history.py from stat.gov.kz elements 17216 (docx 1991-2021), 21933 (pdf 1991-2000) and the 140 editions of publication 166775 (1999-05..2010-12); every month printed by two sources is equal in both; prepended by splice_cpi_history in scripts/fetchers/bns.py, which stops if the file and Taldau differ on any shared month."
         status: confirmed
         current_source: "2026-09-25 (audit): now read from Taldau index 703076 like CPI (188 monthly points to 2026-08); the element 1549 description below is historical."
         download_url: "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/"
@@ -1447,6 +1449,7 @@ agencies:
           separately sourced NBK ANNUAL_INFLATION -- 12.6% here for October 2025 runs into 12.2%
           in February 2026 and 10.2% by August 2026 there. fetch_cpi_yoy.
       CPI_YTD:
+        history: "2026-09-28: months before 2011-01 (CPI, CPI_YTD from 1991-01; CPI_YOY from 1994-01) from data/reference/bns_cpi_history.csv, built by scripts/load_cpi_history.py from stat.gov.kz elements 17216 (docx 1991-2021), 21933 (pdf 1991-2000) and the 140 editions of publication 166775 (1999-05..2010-12); every month printed by two sources is equal in both; prepended by splice_cpi_history in scripts/fetchers/bns.py, which stops if the file and Taldau differ on any shared month."
         status: confirmed
         current_source: "2026-09-25 (audit): now read from Taldau index 703076 like CPI; the element 1549 description below is historical."
         download_url: "https://stat.gov.kz/api/iblock/element/1549/csv/file/ru/"
@@ -7409,6 +7412,41 @@ agencies:
         format: csv
         notes: >
           2026-09-25. 69 change dates from 1999-01-01; -0.5 (2019-09-18), 4.0 (2023-09-20). fetch_ea_deposit_rate.
+  cisstat:
+    name: "Interstate Statistical Committee of the CIS (Статкомитет СНГ) — database «Статистика СНГ»"
+    website: "https://new.cisstat.org"
+    status: confirmed
+    notes: >
+      Added 2026-09-28 for 1990s data on Kazakhstan and the other CIS countries. JSON service behind
+      the pivot pages (https://new.cisstat.org/consstat/pivot/?language=ru&factId={fact}), no key:
+      /consstat/service/fact/data/{fact}/freq/{freq}?locale=ru (freq 44 = year, 41 = month) ->
+      {"data": [[header], [row], ...], "maxUpdateDate": ...}, values as strings, countries as Russian
+      names. Also /consstat/service/fact/meta/{fact}?locale=ru (metadata) and
+      /consstat/service/fact/sdmx/datafile/{fact} (SDMX-ML 2.0, zip). The fact catalogue is the left
+      menu of https://new.cisstat.org/web/guest/cis-stat-home. Kazakhstan's GDP volume index equals
+      BNS 1991-2025, CPI Dec/Dec equals BNS 2011-2025, migration equals BNS 2000-2025 except 2008.
+    access_type: api
+    protection: none
+    endpoints:
+      CIS_GDP_VOLUME_INDEX:
+        status: confirmed
+        download_url: "https://new.cisstat.org/consstat/service/fact/data/714662/freq/44?locale=ru"
+        format: json_api
+      CIS_CPI:
+        status: confirmed
+        download_url: "https://new.cisstat.org/consstat/service/fact/data/43370/freq/44?locale=ru"
+        format: json_api
+      CIS_POPULATION:
+        status: confirmed
+        download_url: "https://new.cisstat.org/consstat/service/fact/data/44176/freq/44?locale=ru"
+        format: json_api
+        notes: "And fact 44177 (annual average)."
+      CIS_MIGRATION:
+        status: confirmed
+        download_url: "https://new.cisstat.org/consstat/service/fact/data/4650866/freq/44?locale=ru"
+        format: json_api
+        notes: "And facts 4679599 (departures by flow), 44243 / 44245 (arrivals / departures by partner country)."
+
   derived:
     name: "Computed in this pipeline from other connected series"
     website: "https://github.com/makenerzhan-gif/kazakhstan-economic-data"

@@ -1,0 +1,21 @@
+{
+  "source": "wb",
+  "source_url": "https://api.worldbank.org/v2/country/all/indicator/FP.CPI.TOTL.ZG?format=json&per_page=20000&date=1960:2026",
+  "dataset_id": "wdi/FP.CPI.TOTL.ZG",
+  "indicator_id": "WDI_CPI_INFLATION",
+  "indicator_name": "CPI inflation (annual average), percent — world economies (World Bank WDI FP.CPI.TOTL.ZG)",
+  "description": "Инфляция (ИПЦ, среднегодовая), % — страны мира (Всемирный банк, WDI)",
+  "frequency": "annual",
+  "unit": "percent, annual average change",
+  "currency": "",
+  "geography": "All economies (WDI; aggregates excluded)",
+  "methodology": "Item = ISO3. IMF IFS-based; 1990s gaps: none for Uzbekistan, Tajikistan, Turkmenistan; Kazakhstan from 1994, Kyrgyzstan from 1996. Known errors: Azerbaijan 1992 -10.6% (CIS Stat +912%), Armenia 1994 3 374% (CIS Stat 4 962%). For the CIS prefer CIS_* datasets. WDI last updated 2026-07-13.",
+  "publication_date": "2026-07-13",
+  "last_update_date": "2026-09-27",
+  "download_date": "2026-09-27",
+  "period_start": "1960-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
