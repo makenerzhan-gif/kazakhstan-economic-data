@@ -1,0 +1,22 @@
+{
+  "downloaded_at": "2026-09-28T02:51:05.902132",
+  "raw_file": "comtrade_imports_by_partner_comtrade_2026-09-28.json.gz",
+  "source_url": "https://comtradeapi.un.org/public/v1/preview/C/A/<B4|HS>",
+  "years": [
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+  ]
+}

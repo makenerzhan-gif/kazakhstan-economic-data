@@ -1,65 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-26 — country
-risk: short Treasury tenors, and the tenge's side of UIP» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-26 — project_knowledge/ cut from 6.6 MB to 0.29 MB to fit the Claude Project's context» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-26 — first full run of the extended pipeline; BNS energy format change
-
-- `update_all.py` end to end with every change of 2026-09-25/26: 56 min, 663 of 664 updates ok.
-- The failure was the source: BNS replaced element 8582 (FINAL_ENERGY_CONSUMPTION) — a json_cube list — with a
-  dump of the xlsx ({sheet: rows}). `fetch_final_energy_consumption` now reads both; the new file carries the
-  series from 1991 (was 2015), 2015-2025 unchanged (2022 rounded to 41 156.45 from 41 156.454). An unknown shape
-  is a StructuralChangeError, not an AttributeError.
-
-## 2026-09-26 — model_data/: model-ready panels (derived)
-
-New top-level `model_data/` (derived by this repository, like `analysis/`): `scripts/build_model_data.py`
-reads `data/unified/` and `model_data/spec.yaml` and writes `monthly.csv` (1994-01 on, 40 variables),
-`quarterly.csv` (35 variables + production function), `annual.csv` and `VARIABLES.md` (a card per variable).
-Chained price and production indices, YTD flows decumulated, stocks moved from "as at the 1st" to end of
-month, policy rates as monthly means of the step function, STL (robust) seasonal adjustment where the source
-publishes none (BNS quarterly accounts and FRED are used as published), `_yoy`/`_saar` columns.
-- **Capital stock:** perpetual inventory at 2010 prices from 2000 (annual GFCF chained with its volume index;
-  δ = 8.3 %, the median BNS book depreciation rate outside the 2019-21 revaluations; Harberger start), quarterly
-  from 2010 with BNS SA GFCF benchmarked to the annual figures (the 2010-22 quarterly accounts are an older,
-  higher vintage). K/Y 1.3 (2010) -> 2.1 (2026).
-- **TFP** (Solow residual, α = 0.665 from the QNA labour share): −17 log points 2010-Q1..2026-Q1; −12 to −22 for
-  δ between 12 % and 5 % — heavy investment (Tengiz, infrastructure) with little output yet.
-- Checks: chained CPI y/y vs BNS CPI_YOY 0.07 pp mean gap (0.35 max, m/m rounding); our STL on real GDP vs
-  BNS's own SA: q/q correlation 0.91.
-- Found on the way: the scalar EMPLOYED_QUARTERLY holds only 2 quarters (the item-level
-  EMPLOYED_BY_SECTION_QUARTERLY has 2010 on and is used here).
-
-## 2026-09-26 — models/: gravity, BVAR, r* (derived)
-
-New top-level `models/` with `scripts/models/{common,gravity,bvar,rstar}.py`; each writes a Russian report,
-charts and CSVs. Not part of `update_all.py`.
-- **Gravity (PPML), 2000–2025:** WITS flows to 2019, BNS from 2020 — WITS 2020–22 imports are incomplete (2020:
-  22 bn USD vs BNS 39 bn); Russia/Belarus 2010 dropped (customs-union gap in WITS: imports 24.0 vs official 31.1
-  bn). Partner FE: the EAEU adds nothing over the CIS free-trade area (imports −3 %, 95 % CI −18…+15 %; exports
-  −7 %). Year-FE elasticities: GDP 0.78 / 0.96, distance −1.13 / −0.65 (exports / imports). The trade-weighted
-  applied tariff does not identify σ (β = +3.3, s.e. 2.3).
-- **BVAR, 2011Q2–2026Q1:** 7 variables, external block exogenous, λ = 0.75, μ = 5, crisis-quarter scale s = 5
-  (log ML +91 over s = 1). Pass-through 0.11 at 4 quarters, 0.19 at 8 (0.24 / 0.29 without the crisis
-  scaling); +1 pp TONIA: prices −0.18 % at 8 quarters, GDP −0.12 % at 4; +10 % Brent: prices +0.7 % at 8.
-- **r\* and output gap, 2012Q1–2026Q1:** r* 1.4 % in 2026Q1 (±6 pp state s.d.), real rate 6.3 %, P(r > r*) 80 %;
-  trend growth 4.2 %; gap −0.5 % (production function −0.1 %, HP +0.5 %; the three gaps correlate at 0.93+).
-  Maximum likelihood without priors: gap persistence 0.14, a_r −0.04, z flat at its initial value.
-- Corrected `data/reference/README.md`: CEPII `col_dep_ever` is 0 for every KAZ pair (it said KAZ–RUS = 1).
-
-## 2026-09-26 — project_knowledge/ cut from 6.6 MB to 0.29 MB to fit the Claude Project's context
-
-Nothing removed from the data: full histories stay in `data/unified/`, full metadata in `metadata/`.
-- `latest/macro_latest.csv`: was a copy of `macro_wide.csv` (5.5 MB, every series since 1947); now one row
-  per series — name, agency, frequency, unit, first date, n, latest value, previous value, year-ago value
-  (102 KB).
-- `latest/macro_metadata.json` (535 KB) removed; `DATA_DICTIONARY.md` is a table per agency with the first
-  sentence of the methodology (359 → 73 KB); `DATA_CATALOG.md` is a summary plus the known source problems
-  (86 → 3.5 KB), the per-series list being `macro_latest.csv`.
-- `UPDATE_LOG.md`: entries 2026-08-30 .. 09-15 moved to `docs/UPDATE_LOG_ARCHIVE.md` (357 → 48 KB here).
-- New `models/{gravity,bvar,rstar}.md`: the model reports, text only.
-- `tests/test_project_knowledge.py` fails if the folder passes 600 KB.
 
 ## 2026-09-26 — lagging series: bank soundness, Minfin general government, passenger turnover
 
@@ -706,3 +648,57 @@ targets of `scripts/analysis/seasonal_targets.py` / `forecast_targets.py` carry 
 diagnostics; 1991-1995 hold m/m values up to 312.3 (source issue cpi_1991_1995_hyperinflation).
 model_data's `usdkzt` now starts in 1994-01 (the NBK archive); 1999-11 is 139.63, the NBK's
 published average, instead of 138.80 from the report's last 11 weekdays.
+
+## 2026-09-28 — CPI groups (food, non-food, paid services) back to 1991 (user: «Сделай все три пункта»)
+
+CPI_FOOD, CPI_NONFOOD and CPI_SERVICES (m/m) now start in January 1991 and their _YOY in January
+1994, like the headline; before, all six started with Taldau in January 2011. The 240 (204) earlier
+months come from the same three BNS publications, now read per group: «Цены в Казахстане за
+1991-2021 годы» (element 17216, docx: tables 1.4-1.6 m/m 1992-2021 and the group columns of table
+1.1 Dec/Dec), «Цены в Казахстане в 1991-2000 гг.» (element 21933, pdf columns 2-4) and the 140
+monthly editions of publication 166775 (1999-05…2010-12; html rows «Продукты питания, напитки и
+табачные изделия» / «Непродовольственные товары» / «Платные услуги», xls through the CPI_DETAIL
+parser). `data/reference/bns_cpi_history.csv` gained an `item` column (TOTAL for the 838 headline
+rows, values unchanged; 3 352 rows). Per group 228 of 240 m/m months have a second source, and
+every month two sources print agrees except food June 2004: the docx and the edition's own m/m
+table print 100.0, its summary row «Продукты питания, напитки и табачные изделия» 99.9 — kept as
+100.0 and listed in the loader's PRINTED_DIFFERENCES (source issue cpi_food_2004_06_mom_two_prints).
+The xls editions equal CPI_DETAIL on all 936 values 2004-07…2010-12. The identities hold within
+rounding for every group with no slack (chain of m/m vs since-December at most 0.38 pp from 1995,
+y/y vs 12 m/m at most 0.40 pp from 1996). The fetcher stops if the file differs from Taldau on any
+of the 132 m/m months or 11 Decembers of 2011-2021 per group (all equal); no stored 2011-2026 value
+changed. December/December, food: 1992 2108.3, 1993 2297.1, 1994 1155.7, 1995 158.7, 1999 120.6;
+non-food: 1992 3897.8, 1993 1795.6, 1994 1159.9, 1995 133.5, 1999 119.8; paid services: 1992
+3019.7, 1993 4143.4, 1994 2522.6, 1995 258.0, 1996 239.3, 1999 109.9. model_data keeps cpi_food /
+cpi_nonfood / cpi_services from 2011 (`from: "2011-01-01"` in spec.yaml; the panels are unchanged).
+CPI_UTILITIES and CPI_REGULATED_UTILITIES still start in 2011. Tests: tests/test_cpi_history.py (54).
+
+The official quarterly accounts for 2026 Q2 (BNS, element 283161, due 28.10.2026) are picked up by the
+daily update_all run; a check is scheduled for 29.10.2026 to compare them with the discrete estimate
+(GVA_VOLUME_INDEX_BY_SECTION_DISCRETE: GDP 105.2) and rebuild model_data.
+
+## 2026-09-28 — partner-currency rates back to 1993, import-weighted NEER from 1995
+
+EXCHANGE_RATES_OFFICIAL_MONTHLY (18 currencies, KZT per one current unit, weekday means) now starts in
+1993-11 instead of 2010-01. 1999-11..2009-12 come from the NBK daily report (read once in 10-year windows,
+first usable day 1999-11-17, malformed October 1999 rows dropped); before the report, the NBK archive
+«Архив официальных курсов валют с 1993 по 1999» (rate in force on each weekday) for the 11 currencies it
+carries, equal to the report on every common weekday of 1999-11-17..12-31 for USD, EUR, CNY, RUB, GBP, CHF,
+JPY and KGS (enforced). Printed figures below 1.0 are dropped in both sources, so TRY runs 1994-05..1996-02
+then from 2005, UZS and BYN have 1990s fragments then start in 2014-02; KRW from 2000-05, AED 2001-07, PLN
+2004-09, CZK 2009-03, EUR 1999-01, CNY 1996-02; INR, TJS and AZN still from 2011-2014. Redenominations are
+listed in nbk_fx.REDENOMINATIONS and checked against the data: RUB 1998 (archive already per new rouble,
+13.00 on both sides), TRY 2005 (TRL x10^6), BYN 2000 and 2016 (BYB x10^7; BYR x10^4 up to Friday 1 July 2016
+inclusive -- the report's rate in force that day is still per 100 BYR, first BYN quote 2 July, step x10 162),
+UZS 1994 (archive per 1000 coupons = one sum); any other step above x8 within a month stops the fetcher.
+This corrects BYN 2016-07 (163.00 -> 171.00; NEER 2016-07 by -0.1, recorded in the revisions files); every
+other stored month since 2010 is unchanged. USD/EUR/CNY/RUB equal the monthly means of the daily
+EXCHANGE_RATE* series in every month. Monthly USD 1999-12 138.22, 2005-01 130.10, 2009-12 148.70; RUB 5.12,
+4.66, 4.97; EUR 143.15, 171.38, 217.64; TRY 2005-01 96.07, 2009-12 98.70. IMPORTS_BY_PARTNER_COMTRADE now
+starts in 1995 (Kazakhstan's first Comtrade year), so NEER_IMPORT_WEIGHTED starts in 1995-12 (NEER_TOTAL,
+2020 = 100: 93.9; 1998-09 158.8 after the rouble crash, 1999-03 266.4, 1999-06 179.1 after the float) and
+NEER_IMPORT_WEIGHTS in 1996; its monthly changes correlate 0.84 with the NBK's own NEER in 1996-2009. Before
+1999 the euro-area partners have no rate (coverage 59-77%; 80-92% from 2000); CONSUMER 2000 is a partial
+Comtrade conversion (36 mln USD) and is replaced by the 1999 structure; 1995-1999 CONSUMER includes passenger
+cars (H0 conversion). Three archive typos (CHF 17.04.1995, 09.11.1998; KGS 09.08.1999) are kept as printed and
+registered in source_issues. Tests: tests/test_fx_monthly_history.py (15).

@@ -4938,3 +4938,60 @@ New fetcher `scripts/fetchers/kase_eurobonds.py`; 501 indicators.
 - **Not available openly:** expected depreciation (NBK open data has inflation expectations only), so the
   ex-ante currency premium is not published as a series — it is the differential minus expected depreciation,
   to be estimated in the model.
+
+## 2026-09-26 — first full run of the extended pipeline; BNS energy format change
+
+- `update_all.py` end to end with every change of 2026-09-25/26: 56 min, 663 of 664 updates ok.
+- The failure was the source: BNS replaced element 8582 (FINAL_ENERGY_CONSUMPTION) — a json_cube list — with a
+  dump of the xlsx ({sheet: rows}). `fetch_final_energy_consumption` now reads both; the new file carries the
+  series from 1991 (was 2015), 2015-2025 unchanged (2022 rounded to 41 156.45 from 41 156.454). An unknown shape
+  is a StructuralChangeError, not an AttributeError.
+
+## 2026-09-26 — model_data/: model-ready panels (derived)
+
+New top-level `model_data/` (derived by this repository, like `analysis/`): `scripts/build_model_data.py`
+reads `data/unified/` and `model_data/spec.yaml` and writes `monthly.csv` (1994-01 on, 40 variables),
+`quarterly.csv` (35 variables + production function), `annual.csv` and `VARIABLES.md` (a card per variable).
+Chained price and production indices, YTD flows decumulated, stocks moved from "as at the 1st" to end of
+month, policy rates as monthly means of the step function, STL (robust) seasonal adjustment where the source
+publishes none (BNS quarterly accounts and FRED are used as published), `_yoy`/`_saar` columns.
+- **Capital stock:** perpetual inventory at 2010 prices from 2000 (annual GFCF chained with its volume index;
+  δ = 8.3 %, the median BNS book depreciation rate outside the 2019-21 revaluations; Harberger start), quarterly
+  from 2010 with BNS SA GFCF benchmarked to the annual figures (the 2010-22 quarterly accounts are an older,
+  higher vintage). K/Y 1.3 (2010) -> 2.1 (2026).
+- **TFP** (Solow residual, α = 0.665 from the QNA labour share): −17 log points 2010-Q1..2026-Q1; −12 to −22 for
+  δ between 12 % and 5 % — heavy investment (Tengiz, infrastructure) with little output yet.
+- Checks: chained CPI y/y vs BNS CPI_YOY 0.07 pp mean gap (0.35 max, m/m rounding); our STL on real GDP vs
+  BNS's own SA: q/q correlation 0.91.
+- Found on the way: the scalar EMPLOYED_QUARTERLY holds only 2 quarters (the item-level
+  EMPLOYED_BY_SECTION_QUARTERLY has 2010 on and is used here).
+
+## 2026-09-26 — models/: gravity, BVAR, r* (derived)
+
+New top-level `models/` with `scripts/models/{common,gravity,bvar,rstar}.py`; each writes a Russian report,
+charts and CSVs. Not part of `update_all.py`.
+- **Gravity (PPML), 2000–2025:** WITS flows to 2019, BNS from 2020 — WITS 2020–22 imports are incomplete (2020:
+  22 bn USD vs BNS 39 bn); Russia/Belarus 2010 dropped (customs-union gap in WITS: imports 24.0 vs official 31.1
+  bn). Partner FE: the EAEU adds nothing over the CIS free-trade area (imports −3 %, 95 % CI −18…+15 %; exports
+  −7 %). Year-FE elasticities: GDP 0.78 / 0.96, distance −1.13 / −0.65 (exports / imports). The trade-weighted
+  applied tariff does not identify σ (β = +3.3, s.e. 2.3).
+- **BVAR, 2011Q2–2026Q1:** 7 variables, external block exogenous, λ = 0.75, μ = 5, crisis-quarter scale s = 5
+  (log ML +91 over s = 1). Pass-through 0.11 at 4 quarters, 0.19 at 8 (0.24 / 0.29 without the crisis
+  scaling); +1 pp TONIA: prices −0.18 % at 8 quarters, GDP −0.12 % at 4; +10 % Brent: prices +0.7 % at 8.
+- **r\* and output gap, 2012Q1–2026Q1:** r* 1.4 % in 2026Q1 (±6 pp state s.d.), real rate 6.3 %, P(r > r*) 80 %;
+  trend growth 4.2 %; gap −0.5 % (production function −0.1 %, HP +0.5 %; the three gaps correlate at 0.93+).
+  Maximum likelihood without priors: gap persistence 0.14, a_r −0.04, z flat at its initial value.
+- Corrected `data/reference/README.md`: CEPII `col_dep_ever` is 0 for every KAZ pair (it said KAZ–RUS = 1).
+
+## 2026-09-26 — project_knowledge/ cut from 6.6 MB to 0.29 MB to fit the Claude Project's context
+
+Nothing removed from the data: full histories stay in `data/unified/`, full metadata in `metadata/`.
+- `latest/macro_latest.csv`: was a copy of `macro_wide.csv` (5.5 MB, every series since 1947); now one row
+  per series — name, agency, frequency, unit, first date, n, latest value, previous value, year-ago value
+  (102 KB).
+- `latest/macro_metadata.json` (535 KB) removed; `DATA_DICTIONARY.md` is a table per agency with the first
+  sentence of the methodology (359 → 73 KB); `DATA_CATALOG.md` is a summary plus the known source problems
+  (86 → 3.5 KB), the per-series list being `macro_latest.csv`.
+- `UPDATE_LOG.md`: entries 2026-08-30 .. 09-15 moved to `docs/UPDATE_LOG_ARCHIVE.md` (357 → 48 KB here).
+- New `models/{gravity,bvar,rstar}.md`: the model reports, text only.
+- `tests/test_project_knowledge.py` fails if the folder passes 600 KB.
