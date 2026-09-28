@@ -424,3 +424,27 @@ issues:
       развития частного предпринимательства»: 2030 +126.4 bn and 2050 -167.2 bn that month (Damu's placements
       reclassified from other lenders to 2030).
     advice: Use G2030 + G2050 across 2023-02, or a step dummy at 2023-02-01.
+
+  - id: nbk_rub_per_1000_before_1998
+    kind: caveat
+    variable: EXCHANGE_RATE_RUB
+    observations:
+      - {date: "1997-12-31", value: 13.0}
+      - {date: "1998-01-05", value: 13.0}
+    evidence: >
+      NBK archive of official rates 1993-1999 (nbk_exchange_rates_archive_1993_1999_*.xls), sheet '1993-1998',
+      footnote ****: the rouble was quoted per 1000 roubles until 1 January 1998 and per 1 rouble after. Russia
+      redenominated 1000:1 on 1998-01-01, so the pre-1998 figure is KZT per one NEW rouble and is stored as printed.
+    advice: Read EXCHANGE_RATE_RUB as KZT per post-1998 rouble throughout; do not rescale before 1998.
+
+  - id: nbk_fx_weekly_fixing_before_1999_04
+    kind: caveat
+    variable: EXCHANGE_RATE
+    observations:
+      - {date: "1999-04-02", value: 87.5}
+      - {date: "1999-04-05", value: 100.0}
+    evidence: >
+      Until the float of 5 April 1999 the NBK set the official rate once or twice a week (weekly, Mondays, from
+      late 1995); the archive gives effective dates and the daily series carries each rate to the next one.
+      1994-01: the NBK's published monthly average is 8.17, the mean of its own daily rates 7.99 (IMF PA_RT 7.99).
+    advice: Before 1999-04 use monthly or lower frequency; daily changes are step changes, not market moves.

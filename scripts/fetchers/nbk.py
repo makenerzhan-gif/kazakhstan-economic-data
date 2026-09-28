@@ -191,19 +191,25 @@ def parse_official_rates_report(html: str) -> dict[str, dict[str, float]]:
     return out
 
 
-def _official_rates(begin: date | None = None) -> dict[str, dict[str, float]]:
+def _official_rates(begin: date | None = None, end: date | None = None,
+                    raw_id: str = "EXCHANGE_RATES_OFFICIAL") -> dict[str, dict[str, float]]:
+    """The report for begin..end (default: the last EXCHANGE_RATE_REFRESH_DAYS days to
+    today), once per process. `raw_id` keeps a fixed historical window (the archive overlap,
+    ARCHIVE_OVERLAP_*) apart from the daily window in the raw store."""
     today = date.today()
     begin = begin or today - timedelta(days=EXCHANGE_RATE_REFRESH_DAYS)
-    key = begin.isoformat()
+    end = end or today
+    key = f"{begin.isoformat()}/{end.isoformat()}"
     if key not in _OFFICIAL_RATES_CACHE:
         params = [("rates[]", cid) for cid, _ in OFFICIAL_RATE_CURRENCIES.values()]
-        params += [("beginDate", begin.strftime("%d.%m.%Y")), ("endDate", today.strftime("%d.%m.%Y"))]
+        params += [("beginDate", begin.strftime("%d.%m.%Y")), ("endDate", end.strftime("%d.%m.%Y"))]
         resp = requests.get(OFFICIAL_RATES_REPORT_URL, headers=HEADERS, params=params, timeout=120)
         resp.raise_for_status()
-        raw_store.save_raw_bytes(SOURCE, "EXCHANGE_RATES_OFFICIAL", today, "html", resp.content)
-        raw_store.write_download_manifest(SOURCE, "EXCHANGE_RATES_OFFICIAL", today, {
+        path = raw_store.save_raw_bytes(SOURCE, raw_id, today, "html", resp.content)
+        raw_store.write_download_manifest(SOURCE, raw_id, today, {
             "downloaded_at": datetime.now().isoformat(), "source_url": OFFICIAL_RATES_REPORT_URL,
-            "params": params, "read_by": "EXCHANGE_RATE, EXCHANGE_RATE_EUR, EXCHANGE_RATE_CNY, EXCHANGE_RATE_RUB"})
+            "raw_file": path.name, "params": params,
+            "read_by": "EXCHANGE_RATE, EXCHANGE_RATE_EUR, EXCHANGE_RATE_CNY, EXCHANGE_RATE_RUB"})
         _OFFICIAL_RATES_CACHE[key] = parse_official_rates_report(resp.content.decode("utf-8", "replace"))
     return _OFFICIAL_RATES_CACHE[key]
 
@@ -211,7 +217,10 @@ def _official_rates(begin: date | None = None) -> dict[str, dict[str, float]]:
 def _fetch_official_rate(code: str, indicator_id: str, begin: date | None = None) -> tuple[list[dict], dict]:
     fresh = {d: v for d, v in _official_rates(begin).get(code, {}).items()
              if date.fromisoformat(d).weekday() < 5 and d >= OFFICIAL_RATES_FIRST_DATE}
-    records = _merge_accumulated(indicator_id, fresh)
+    # Before the report's first usable day (1999-11-17) the NBK archive 1993-1999 takes over,
+    # checked day by day against the report where both publish (see _archive_splice).
+    history, history_note = _archive_splice(code, indicator_id)
+    records = _merge_accumulated(indicator_id, {**history, **fresh})
     if not records:
         raise validation.StructuralChangeError("\n".join([
             f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
@@ -229,16 +238,18 @@ def _fetch_official_rate(code: str, indicator_id: str, begin: date | None = None
     manifest = {
         "frequency": "daily", "source_url": OFFICIAL_RATES_REPORT_URL,
         "dataset_id": f"official-rates-report/{code}",
-        "note": f"Official NBK {code}/KZT rate, KZT per one {code}, weekdays, from 1999-11 (the archive "
-                "report's first rows, 1999-10-19..21, are malformed). Accumulated: each run reads the last "
-                f"{EXCHANGE_RATE_REFRESH_DAYS} days of the report and merges them with the processed history, "
-                "which was loaded in full on 2026-09-25. No rate is published for 2023-07-28..2023-08-21.",
+        "history_source_url": OFFICIAL_RATES_ARCHIVE_URL,
+        "note": f"Official NBK {code}/KZT rate, KZT per one {code}, weekdays (the rate in force on the day). "
+                f"From 1999-11-17: the NBK daily report (its first rows, 1999-10-19..21, are malformed). "
+                f"Accumulated: each run reads the last {EXCHANGE_RATE_REFRESH_DAYS} days of the report and merges "
+                "them with the processed history, which was loaded in full on 2026-09-25. No rate is published for "
+                f"2023-07-28..2023-08-21. {history_note}",
     }
     return records, manifest
 
 
 def fetch_exchange_rate_usd() -> tuple[list[dict], dict]:
-    """Official daily USD/KZT rate, weekdays, from 1999-10-19."""
+    """Official daily USD/KZT rate, weekdays, from 1993-11-18 (the NBK archive before 1999-11-17)."""
     return _fetch_official_rate("USD", "EXCHANGE_RATE")
 
 
@@ -252,6 +263,282 @@ def fetch_exchange_rate_cny() -> tuple[list[dict], dict]:
 
 def fetch_exchange_rate_rub() -> tuple[list[dict], dict]:
     return _fetch_official_rate("RUB", "EXCHANGE_RATE_RUB")
+
+
+# ---------------------------------------------------------------------------
+# OFFICIAL RATES 1993-1999 FROM THE NBK ARCHIVE (2026-09-28). The report above serves
+# nothing usable before 1999-11-17. The NBK publishes the earlier official rates as one
+# workbook, «Архив официальных курсов валют с 1993 по 1999» (OFFICIAL_RATES_ARCHIVE_URL,
+# file "dlia saita s 9399rus.xls"):
+#   sheet '1993-1998': one row per EFFECTIVE DATE («Дата вступления в силу»), 1993-11-18
+#     (the tenge's first day) .. 1998-12-28; rates set about twice a week to 1995, weekly
+#     (Mondays) from late 1995. A row of month-name/1st-of-month with no values heads each
+#     month. Codes in row «ATS AUD BEF** ...»; asterisks give the quantity: ** per 10,
+#     *** per 100, **** per 1000 (footnotes at the bottom). '-' = no rate in force.
+#   sheet '1999': one row per date or per span of days ('4-8.01.1999', '24,25,26.11.1999'),
+#     daily from the float of 1999-04-05; quantity in the Russian name ('10 бельг. франков').
+#     The yuan is coded CHY. One label, '4.05.2002' between 06.05 and '8-10.05.1999', is a
+#     typo for 07.05.1999 (ARCHIVE_LABEL_FIXES).
+# The archive is turned into the pipeline's definition -- the rate in force on each weekday,
+# weekends dropped (the report's weekend rows repeat Friday) -- and spliced in BEFORE the
+# report's first day. Where both publish (1999-11-17..1999-12-31: 33 weekdays) every value
+# must be equal, or the fetcher stops (StructuralChangeError): verified 2026-09-28 for USD,
+# EUR, CNY and RUB, 0 differences.
+#   USD from 1993-11-18. End of year: 1993 6.31, 1994 54.26, 1995 63.95, 1996 73.30,
+#     1997 75.55, 1998 83.80; the float of April 1999: 87.50 (to Fri 02.04) -> 100.00
+#     (05.04) -> 118.00 (07.04) -> 114.00 (mid-April) -> 138.20 at end-1999.
+#   RUB from 1993-11-18, in KZT per ONE NEW (post-1998) rouble throughout. Until 1997-12-31
+#     the archive quotes per 1000 roubles (footnote: «номинал 1*1000 действовал до 1 января
+#     1998 года»); Russia redenominated 1000:1 on 1998-01-01, so the figure per 1000 old
+#     roubles IS the price of one new rouble and is stored as printed -- 13.00 at 29.12.1997
+#     and 13.00 at 05.01.1998, no break. (Restating in old roubles would put 0.013 before
+#     1998 and a 1000x step into the series.)
+#   CNY from 1996-02-05 ('-' before); the week from 1996-05-13 is '- -' in the source and
+#     stays a hole (1996-05-13..17).
+#   EUR from 1999-01-04 only. Before 1999 the archive carries the ECU and the Deutsche mark,
+#     neither of which is the euro (the ECU was a basket including sterling; converting
+#     DEM at 1.95583 would be a synthetic series, not an NBK rate) -- not spliced.
+# Monthly means of this weekday series match the NBK's published monthly averages (yearly
+# «Официальные курсы валют в среднем за период» PDFs) within 0.05 in all but three months
+# (1994-01 7.99 vs 8.17, 1997-01 74.58 vs 74.70, 1998-01 76.04 vs 76.09); IMF IFS KAZ
+# XDC_USD PA_RT equals 7.99 for 1994-01, and every end-of-month value equals IFS EOP_RT.
+# ---------------------------------------------------------------------------
+OFFICIAL_RATES_ARCHIVE_URL = "https://nationalbank.kz/file/download/22756"
+ARCHIVE_SHEETS = ("1993-1998", "1999")
+ARCHIVE_END = date(1999, 12, 31)
+ARCHIVE_CODE_ALIASES = {"RUR": "RUB", "CHY": "CNY", "SDR": "XDR"}
+ARCHIVE_LABEL_FIXES = {("1999", "4.05.2002"): date(1999, 5, 7)}
+ARCHIVE_ASTERISK_UNITS = {2: 10, 3: 100, 4: 1000}
+ARCHIVE_REDENOMINATION = {"RUB": (date(1998, 1, 1), 1000)}  # (date of the new unit, old units per new one)
+# The report is read back over this window and must equal the archive on every day both carry.
+ARCHIVE_OVERLAP_BEGIN, ARCHIVE_OVERLAP_END = date(1999, 11, 1), date(1999, 12, 31)
+ARCHIVE_MIN_OVERLAP_DAYS = 20
+_ARCHIVE_CACHE: dict[str, object] = {}
+
+_ARCHIVE_LABEL = re.compile(r"^\s*(\d{1,2})(?:\s*[-,]\s*\d{1,2})*\s*\.\s*(\d{1,2})\s*\.\s*(\d{4})\s*$")
+
+
+def _archive_structural(what: str, action: str = "") -> validation.StructuralChangeError:
+    return validation.StructuralChangeError("\n".join([
+        "STRUCTURAL CHANGE DETECTED in nbk/EXCHANGE_RATE (archive 1993-1999)",
+        f"WHAT CHANGED: {what}",
+        f"ACTION REQUIRED: {action or f'inspect {OFFICIAL_RATES_ARCHIVE_URL} and update scripts/fetchers/nbk.py'}",
+    ]))
+
+
+def archive_sheet_rows(content: bytes) -> dict[str, list[list]]:
+    """{sheet name: rows} of the archive workbook. Column A becomes a `date` where the cell
+    is an Excel date (or a date serial); every other cell keeps xlrd's value (float or text)."""
+    import xlrd
+    wb = xlrd.open_workbook(file_contents=content)
+    out = {}
+    for sh in wb.sheets():
+        rows = []
+        for r in range(sh.nrows):
+            row = []
+            for c in range(sh.ncols):
+                cell = sh.cell(r, c)
+                if c == 0 and (cell.ctype == xlrd.XL_CELL_DATE
+                               or (cell.ctype == xlrd.XL_CELL_NUMBER and 30000 < cell.value < 40000)):
+                    row.append(xlrd.xldate_as_datetime(cell.value, wb.datemode).date())
+                else:
+                    row.append(cell.value)
+            rows.append(row)
+        out[sh.name] = rows
+    return out
+
+
+def _archive_label_date(sheet: str, label) -> date | None:
+    """Start date of a row label: an Excel date, 'DD.MM.YYYY', or a span '4-8.01.1999' /
+    '24,25,26.11.1999' (the first day). None for month headers, notes and blanks."""
+    if isinstance(label, date):
+        return label
+    text = str(label).strip()
+    if (sheet, text) in ARCHIVE_LABEL_FIXES:
+        return ARCHIVE_LABEL_FIXES[(sheet, text)]
+    m = _ARCHIVE_LABEL.match(text)
+    if not m:
+        return None
+    return date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+
+
+def _archive_number(v) -> float | None:
+    if isinstance(v, (int, float)) and not isinstance(v, bool):
+        return float(v)
+    text = str(v).strip().replace(",", ".")
+    try:
+        return float(text)
+    except ValueError:
+        return None        # '-', '- -', '' -- no rate in force
+
+
+def _archive_header(rows: list[list], sheet: str) -> int:
+    for i, row in enumerate(rows[:15]):
+        if any(re.sub(r"[^A-Z]", "", str(v)) == "USD" for v in row[1:]):
+            return i
+    raise _archive_structural(f"sheet {sheet!r}: no header row with the code USD in its first 15 rows")
+
+
+def parse_official_rates_archive(sheets: dict[str, list[list]]) -> dict[str, list[tuple[date, float | None]]]:
+    """{ISO code: [(effective date, KZT per ONE unit or None), ...]} in sheet order.
+
+    Quantities: sheet '1993-1998' by the asterisks after the code, sheet '1999' by the number
+    that opens the Russian name. Redenominated currencies (ARCHIVE_REDENOMINATION: the
+    rouble) are restated in NEW units throughout."""
+    for name in ARCHIVE_SHEETS:
+        if name not in sheets:
+            raise _archive_structural(f"no sheet {name!r} (sheets: {sorted(sheets)})")
+    out: dict[str, list[tuple[date, float | None]]] = {}
+    last_date: date | None = None
+    for name in ARCHIVE_SHEETS:
+        rows = sheets[name]
+        h = _archive_header(rows, name)
+        codes, units = [], []
+        for c, raw_code in enumerate(rows[h]):
+            code = re.sub(r"[^A-Z]", "", str(raw_code))
+            codes.append(ARCHIVE_CODE_ALIASES.get(code, code))
+            if name == "1993-1998":
+                units.append(ARCHIVE_ASTERISK_UNITS.get(str(raw_code).count("*"), 1))
+            else:
+                m = re.match(r"\s*(\d+)\s", str(rows[h - 1][c]) if h > 0 and c < len(rows[h - 1]) else "")
+                units.append(int(m.group(1)) if m else 1)
+        if name == "1993-1998":
+            notes = " ".join(str(r[0]) for r in rows[h + 1:] if r and isinstance(r[0], str))
+            if "до 1 января 1998" not in notes or "за 1000" not in notes:
+                raise _archive_structural(
+                    "sheet '1993-1998' no longer carries the footnote on the rouble's quantity "
+                    "(«за 1000 единиц ... номинал 1*1000 действовал до 1 января 1998 года»)",
+                    "re-check how the archive quotes RUR before 1998 before trusting the RUB history")
+        for row in rows[h + 1:]:
+            if not row:
+                continue
+            d = _archive_label_date(name, row[0])
+            if d is None:
+                continue
+            values = row[1:]
+            if all(str(v).strip() == "" for v in values):
+                continue          # month header row
+            if d.year != int(name[-4:]) and not (name == "1993-1998" and 1993 <= d.year <= 1998):
+                raise _archive_structural(f"sheet {name!r}: row label {row[0]!r} reads as {d}, outside the sheet's years")
+            if last_date is not None and d < last_date:
+                raise _archive_structural(f"sheet {name!r}: row {row[0]!r} ({d}) comes before the previous row ({last_date})")
+            last_date = d
+            for c in range(1, len(row)):
+                code = codes[c]
+                if not code:
+                    continue
+                v = _archive_number(row[c])
+                per_unit = None
+                if v is not None:
+                    quantity = units[c]
+                    redenom = ARCHIVE_REDENOMINATION.get(code)
+                    if redenom:
+                        # before the redenomination the quote is per `quantity` OLD units, i.e. per
+                        # quantity/ratio NEW ones; from that date it is per ONE new unit (the
+                        # sheet's asterisk no longer applies -- footnote ****)
+                        quantity = quantity / redenom[1] if d < redenom[0] else 1
+                    per_unit = round(v / quantity, 6)
+                out.setdefault(code, []).append((d, per_unit))
+    return out
+
+
+def archive_weekday_series(schedule: dict[str, list[tuple[date, float | None]]],
+                           end: date = ARCHIVE_END) -> dict[str, dict[str, float]]:
+    """The rate IN FORCE on each weekday -- the pipeline's EXCHANGE_RATE definition -- from the
+    effective-date schedule: a rate holds from its date until the next row; None ('-') leaves a
+    hole until the next quoted rate. A currency the last sheet does not quote ends with its
+    last sheet's year."""
+    last_year = end.year
+    out: dict[str, dict[str, float]] = {}
+    for code, points in schedule.items():
+        steps: dict[date, float | None] = {}
+        for d, v in points:
+            steps[d] = v                  # a repeated date: the later row wins
+        quoted = [d for d, v in steps.items() if v is not None]
+        if not quoted:
+            continue
+        stop = end if max(quoted).year == last_year else date(max(quoted).year, 12, 31)
+        keys = sorted(steps)
+        day, i, cur, series = min(quoted), 0, None, {}
+        while day <= stop:
+            while i < len(keys) and keys[i] <= day:
+                cur = steps[keys[i]]
+                i += 1
+            if cur is not None and day.weekday() < 5:
+                series[day.isoformat()] = cur
+            day += timedelta(days=1)
+        out[code] = series
+    return out
+
+
+def check_archive_overlap(code: str, archive: dict[str, float], report: dict[str, float]) -> str:
+    """First day of the report's usable series for `code`; raises unless the archive equals the
+    report on every weekday of ARCHIVE_OVERLAP_* that both carry (and there are enough of them)."""
+    rep = {d: v for d, v in report.items()
+           if d >= OFFICIAL_RATES_FIRST_DATE and d <= ARCHIVE_OVERLAP_END.isoformat()
+           and date.fromisoformat(d).weekday() < 5}
+    if not rep:
+        raise _archive_structural(
+            f"the report returns no {code} rate for {OFFICIAL_RATES_FIRST_DATE}..{ARCHIVE_OVERLAP_END} "
+            "to check the archive against")
+    common = sorted(set(rep) & set(archive))
+    diffs = [(d, archive[d], rep[d]) for d in common if abs(archive[d] - rep[d]) > 1e-6]
+    if diffs or len(common) < ARCHIVE_MIN_OVERLAP_DAYS:
+        shown = ", ".join(f"{d}: archive {a} vs report {b}" for d, a, b in diffs[:5])
+        raise _archive_structural(
+            f"{code}: the archive and the report disagree on {len(diffs)} of {len(common)} common weekdays "
+            f"({ARCHIVE_OVERLAP_BEGIN}..{ARCHIVE_OVERLAP_END}; at least {ARCHIVE_MIN_OVERLAP_DAYS} needed, "
+            f"0 differences expected){': ' + shown if shown else ''}",
+            f"compare {OFFICIAL_RATES_ARCHIVE_URL} with {OFFICIAL_RATES_REPORT_URL} for late 1999 before splicing")
+    return min(rep)
+
+
+def _official_rates_archive() -> dict[str, dict[str, float]]:
+    """Download (once per process), archive and parse the NBK 1993-1999 workbook."""
+    if "series" not in _ARCHIVE_CACHE:
+        today = date.today()
+        resp = requests.get(OFFICIAL_RATES_ARCHIVE_URL, headers=HEADERS, timeout=120)
+        resp.raise_for_status()
+        path = raw_store.save_raw_bytes(SOURCE, "EXCHANGE_RATES_ARCHIVE_1993_1999", today, "xls", resp.content)
+        raw_store.write_download_manifest(SOURCE, "EXCHANGE_RATES_ARCHIVE_1993_1999", today, {
+            "downloaded_at": datetime.now().isoformat(), "source_url": OFFICIAL_RATES_ARCHIVE_URL,
+            "raw_file": path.name, "sha256": raw_store.sha256_of(resp.content),
+            "read_by": "EXCHANGE_RATE, EXCHANGE_RATE_EUR, EXCHANGE_RATE_CNY, EXCHANGE_RATE_RUB (before 1999-11-17)"})
+        try:
+            sheets = archive_sheet_rows(resp.content)
+        except Exception as exc:  # noqa: BLE001 -- not an xls any more
+            raise _archive_structural(f"the file no longer opens as an .xls workbook ({exc})") from exc
+        _ARCHIVE_CACHE["series"] = archive_weekday_series(parse_official_rates_archive(sheets))
+    return _ARCHIVE_CACHE["series"]
+
+
+def _archive_splice(code: str, indicator_id: str) -> tuple[dict[str, float], str]:
+    """Archive points for `code` before the report's first usable day, checked against the
+    report on their overlap. A network failure is tolerated only when the processed history
+    already reaches back before the report (it was spliced on an earlier run); a mismatch or
+    a layout change always stops the fetcher."""
+    try:
+        archive = _official_rates_archive().get(code, {})
+        report = _official_rates(ARCHIVE_OVERLAP_BEGIN, ARCHIVE_OVERLAP_END,
+                                 raw_id="EXCHANGE_RATES_OFFICIAL_1999").get(code, {})
+    except requests.RequestException as exc:
+        stored = _load_processed_series(indicator_id)
+        if stored and min(stored) < OFFICIAL_RATES_FIRST_DATE:
+            print(f"nbk/{indicator_id}: archive 1993-1999 not reachable ({exc}); keeping the history already processed")
+            return {}, "History before 1999-11-17 as processed earlier (the archive was not reachable on this run)."
+        raise
+    if not archive:
+        raise _archive_structural(f"no {code} column in the archive")
+    first = check_archive_overlap(code, archive, report)
+    history = {d: v for d, v in archive.items() if d < first}
+    return history, (f"Before {first}: the NBK archive of official rates 1993-1999 ({OFFICIAL_RATES_ARCHIVE_URL}), "
+                     f"the rate in force on each weekday, from {min(history) if history else first}; equal to the report "
+                     f"on every common weekday {first}..{ARCHIVE_OVERLAP_END} (enforced)."
+                     + {"RUB": " KZT per one new rouble throughout: until 1997 the archive quotes per 1000 roubles, "
+                               "which after the 1000:1 redenomination of 1998-01-01 is one new rouble.",
+                        "EUR": " No euro before 1999-01-04; the archive's ECU and Deutsche mark are not spliced in.",
+                        "CNY": " The archive quotes the yuan from 1996-02-05; no rate for 1996-05-13..17.",
+                        }.get(code, ""))
 
 
 # ---------------------------------------------------------------------------
