@@ -3992,3 +3992,62 @@ datasets:
     z_threshold: 5.0
     min_pct: 1.5
     note: "Derived, not published: the months in which the national CPI item of a utility moved by at least 3% m/m, or by at least 1.5% with a robust z-score (median/MAD over the item's history) of at least 5; both directions. Items ELECTRICITY, HOT_WATER, COLD_WATER, HEATING, SEWERAGE, NETWORK_GAS, LPG, GARBAGE, each a chain of the BNS item slugs of CPI_DETAIL_MOM across basket re-bases (item_name names the slug). Measures when a tariff change reached the prices BNS registers, NOT the decision date (TARIFF_DECISIONS); a change in one city moves the national item by a fraction of its size. National only: the regional CPI rows carry no utility items. 314 flagged months 2004-2026 (2026-09-27)."
+
+  # ---------------------------------------------------------------- CIS Stat: the CIS countries since 1991 (added 2026-09-28)
+  # scripts/fetchers/cisstat.py: the JSON service of the CIS Stat database «Статистика СНГ»
+  # (new.cisstat.org/consstat). region = ISO3 of the reporting country, item = the measure.
+  - id: CIS_GDP_VOLUME_INDEX
+    name_ru: "Индексы физического объема ВВП стран СНГ (Статкомитет СНГ), в % к предыдущему году"
+    name_en: "Real GDP volume index of the CIS countries (CIS Stat), percent of previous year"
+    agency: cisstat
+    fetcher: cisstat
+    table: gdp_volume
+    country: CIS
+    region: by_country
+    geography: "CIS and former-USSR countries (CIS Stat); region = ISO3 of the country"
+    frequency: annual
+    unit: "index, previous year = 100"
+    category: international
+    note: "CIS Stat fact 714662 «Индексы физического объема валового внутреннего продукта (в постоянных ценах; в процентах к предыдущему году)», annual 1991 onward. region = ISO3 (ARM, AZE, BLR, KAZ, KGZ, MDA, RUS, TJK, TKM, UKR, UZB; UKR to 2021, TKM from 1993, MDA/TJK from 1992); item GDP. Kazakhstan equals BNS GDP_REAL in all 35 years 1991-2025 (1991 89.0, 1992 94.7, 1993 90.8, 1994 87.4); Russia 1992 85.5, Kyrgyzstan 1993 84.5, Ukraine 1993 85.8. National data as reported to the committee; prefer it to IMF WEO / WDI for the 1990s CIS (see IMF_WEO_WORLD)."
+
+  - id: CIS_CPI
+    name_ru: "Индексы потребительских цен стран СНГ (Статкомитет СНГ): декабрь к декабрю и в среднем за год"
+    name_en: "Consumer price indices of the CIS countries (CIS Stat): December on December and annual average"
+    agency: cisstat
+    fetcher: cisstat
+    table: cpi
+    country: CIS
+    region: by_country
+    geography: "CIS and former-USSR countries (CIS Stat); region = ISO3 of the country"
+    frequency: annual
+    unit: "index, same basis of the previous year = 100"
+    category: international
+    note: "CIS Stat fact 43370 «Индекс потребительских цен», December rows only. item <GROUP>.<BASIS>: GROUP TOTAL (all goods and services), GOODS, FOOD, NONFOOD, SERVICES; BASIS DEC_DEC = «к декабрю предыдущего года» (December on December), AVG = «период с начала года к соответствующему периоду предыдущего года» in December (annual average on annual average). Two separate items, never mixed. Kazakhstan TOTAL.DEC_DEC 1991-1999: 247.1, 3060.8, 2265.0, 1258.3, 160.33, 128.7, 111.16, 101.93, 117.83; TOTAL.AVG: 190.9, 1614.8, 1758.4, 1977.4, 276.2, 139.35, 117.39, 107.12, 108.31. Equal to BNS CPI_YOY December in all 15 common years 2011-2025. IMF WEO differs for 1994 (average 1 402% vs 1 877%, end of period 855% vs 1 158%). Coverage: UZB from 1997, TKM from 1993-94, UKR to 2021."
+
+  - id: CIS_POPULATION
+    name_ru: "Численность постоянного населения стран СНГ (Статкомитет СНГ): на начало года и среднегодовая, тыс. человек"
+    name_en: "Resident population of the CIS countries (CIS Stat): at 1 January and annual average, thousand persons"
+    agency: cisstat
+    fetcher: cisstat
+    table: population
+    country: CIS
+    region: by_country
+    geography: "CIS and former-USSR countries (CIS Stat); region = ISO3 of the country"
+    frequency: annual
+    unit: "thousand persons"
+    category: international
+    note: "CIS Stat facts 44176 (at the start of the year; dated 1 January, as POPULATION_BOY_BY_REGION) and 44177 (annual average; dated 31 December). Items BOY, BOY.URBAN, BOY.RURAL, BOY.MEN, BOY.WOMEN (and BOY.MEN.URBAN … where given), AVG, AVG.URBAN, AVG.RURAL. Kazakhstan 1 Jan 1991 16 358.2, 1 Jan 1999 14 955.0; average 1991 16 404.95. 1 January stocks equal POPULATION_BOY_BNS within 0.4 thousand in all 36 years; the annual average equals POPULATION_BNS within 1.6 thousand except the census years 2008 (15 776.95 vs BNS 15 982.37) and 2021 (BNS 190.7 thousand lower) -- for Kazakhstan use the BNS series."
+
+  - id: CIS_MIGRATION
+    name_ru: "Международная миграция стран СНГ (Статкомитет СНГ): прибывшие, выбывшие, сальдо; по странам СНГ с 2016 г."
+    name_en: "International migration of the CIS countries (CIS Stat): arrivals, departures, net; by CIS partner from 2016"
+    agency: cisstat
+    fetcher: cisstat
+    table: migration
+    country: CIS
+    region: by_country
+    geography: "CIS and former-USSR countries (CIS Stat); region = ISO3 of the reporting country"
+    frequency: annual
+    unit: "persons"
+    category: international
+    note: "CIS Stat facts 4650866 / 4679599 («Прибывшие/Выбывшие по потокам», persons; items ARRIVALS, DEPARTURES = «Международная миграция - всего», ARRIVALS.CIS / .NON_CIS and DEPARTURES.CIS / .NON_CIS where given) and 44243 / 44245 (by partner country, «Тип местности» = «Всего»; items ARRIVALS.<ISO3>, DEPARTURES.<ISO3>, 2016 onward, the reporting country's own row included). NET = ARRIVALS - DEPARTURES, computed here (transformation «arrivals minus departures»); the committee's own net fact 5320380 is not used (Kazakhstan 2016: -20 193 against 13 755 - 34 900 = -21 145). Kazakhstan 1991-1999: arrivals 170 787, 161 499, 111 082, 70 389, 71 137, 53 874, 38 067, 40 624, 41 320; departures 228 473, 317 760, 330 107, 477 068, 309 632, 229 412, 299 455, 243 663, 164 947. Equal to BNS MIGRATION_ARRIVALS / MIGRATION_DEPARTURES in 2000-2025 except 2008 (CIS Stat 46 404 / 45 287, BNS 46 113 / 44 813). «Неизвестно» and internal moves are not kept (the answer repeats them under a parent it does not show). No Turkmenistan as reporter."

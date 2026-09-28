@@ -7409,6 +7409,41 @@ agencies:
         format: csv
         notes: >
           2026-09-25. 69 change dates from 1999-01-01; -0.5 (2019-09-18), 4.0 (2023-09-20). fetch_ea_deposit_rate.
+  cisstat:
+    name: "Interstate Statistical Committee of the CIS (Статкомитет СНГ) — database «Статистика СНГ»"
+    website: "https://new.cisstat.org"
+    status: confirmed
+    notes: >
+      Added 2026-09-28 for 1990s data on Kazakhstan and the other CIS countries. JSON service behind
+      the pivot pages (https://new.cisstat.org/consstat/pivot/?language=ru&factId={fact}), no key:
+      /consstat/service/fact/data/{fact}/freq/{freq}?locale=ru (freq 44 = year, 41 = month) ->
+      {"data": [[header], [row], ...], "maxUpdateDate": ...}, values as strings, countries as Russian
+      names. Also /consstat/service/fact/meta/{fact}?locale=ru (metadata) and
+      /consstat/service/fact/sdmx/datafile/{fact} (SDMX-ML 2.0, zip). The fact catalogue is the left
+      menu of https://new.cisstat.org/web/guest/cis-stat-home. Kazakhstan's GDP volume index equals
+      BNS 1991-2025, CPI Dec/Dec equals BNS 2011-2025, migration equals BNS 2000-2025 except 2008.
+    access_type: api
+    protection: none
+    endpoints:
+      CIS_GDP_VOLUME_INDEX:
+        status: confirmed
+        download_url: "https://new.cisstat.org/consstat/service/fact/data/714662/freq/44?locale=ru"
+        format: json_api
+      CIS_CPI:
+        status: confirmed
+        download_url: "https://new.cisstat.org/consstat/service/fact/data/43370/freq/44?locale=ru"
+        format: json_api
+      CIS_POPULATION:
+        status: confirmed
+        download_url: "https://new.cisstat.org/consstat/service/fact/data/44176/freq/44?locale=ru"
+        format: json_api
+        notes: "And fact 44177 (annual average)."
+      CIS_MIGRATION:
+        status: confirmed
+        download_url: "https://new.cisstat.org/consstat/service/fact/data/4650866/freq/44?locale=ru"
+        format: json_api
+        notes: "And facts 4679599 (departures by flow), 44243 / 44245 (arrivals / departures by partner country)."
+
   derived:
     name: "Computed in this pipeline from other connected series"
     website: "https://github.com/makenerzhan-gif/kazakhstan-economic-data"

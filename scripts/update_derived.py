@@ -143,11 +143,17 @@ def fill_gaps(ind: dict, own_rows: list[dict], dims_records: list[dict], toleran
     Taldau skips 2010-2013 while the xlsx table 4439's expenditure sheet carries them,
     and on the fifteen years both hold they are the same numbers to 1e-16. A single
     disagreement means they are no longer the same series and nothing is filled.
+
+    `known_differences` ({date: reason}) names shared dates on which the two sources are
+    known to publish different figures (CIS Stat keeps BNS's first 2008 migration count,
+    BNS revised it): those dates are left out of the comparison -- the indicator keeps its
+    own value there -- and every OTHER shared date must still agree. A listed date that no
+    longer differs is harmless; an unlisted difference still stops the fill.
     """
     spec = ind["gaps_filled_from"]
     other = {r["date"]: r["value"] for r in derive({"derived_from": spec}, dims_records)}
     own = {r["date"]: float(r["value"]) for r in own_rows if r.get("value") not in (None, "")}
-    shared = set(own) & set(other)
+    shared = (set(own) & set(other)) - {str(d) for d in (spec.get("known_differences") or {})}
     if not shared:
         raise validation.StructuralChangeError(f"{ind['id']}: no date in common with {spec['dataset']}[{spec['item']}] -- cannot prove they are one series")
     worst = max(abs(own[d] - other[d]) / max(abs(own[d]), 1e-12) for d in shared)

@@ -448,3 +448,14 @@ issues:
       late 1995); the archive gives effective dates and the daily series carries each rate to the next one.
       1994-01: the NBK's published monthly average is 8.17, the mean of its own daily rates 7.99 (IMF PA_RT 7.99).
     advice: Before 1999-04 use monthly or lower frequency; daily changes are step changes, not market moves.
+
+  - id: migration_2008_bns_vs_cisstat
+    kind: inconsistent
+    variable: MIGRATION_ARRIVALS
+    observations:
+      - {date: "2008-12-31", value: 46113.0}
+    evidence: >
+      BNS (Taldau) 2008: arrivals 46 113, departures 44 813. CIS Stat facts 4650866 / 4679599 (as reported
+      by BNS to the committee): 46 404 / 45 287. All other years 1991-2025 of the two sources agree
+      exactly where both exist (2000-2025). MIGRATION_DEPARTURES 2008 = 44 813 likewise.
+    advice: The pipeline keeps BNS's 2008 (gaps_filled_from known_differences); 1991-1999 come from CIS Stat.

@@ -4620,6 +4620,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "паспорт: поток за период (за отчетный период)"
+    gaps_filled_from: {dataset: CIS_MIGRATION, item: ARRIVALS, region: KAZ, known_differences: {"2008-12-31": "BNS revised 2008 to 46 113; CIS Stat keeps 46 404"}}
+    gaps_filled_note: "1991-1999 from CIS Stat fact 4650866 (1991 170 787, 1994 70 389, 1999 41 320); equal to the BNS series on 2000-2025 except 2008 (known difference, BNS kept)."
 
   - id: MIGRATION_DEPARTURES
     name_ru: "Внешняя миграция по всем потокам - выбытие"
@@ -4631,6 +4633,8 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "паспорт: поток за период (за отчетный период)"
+    gaps_filled_from: {dataset: CIS_MIGRATION, item: DEPARTURES, region: KAZ, known_differences: {"2008-12-31": "BNS revised 2008 to 44 813; CIS Stat keeps 45 287"}}
+    gaps_filled_note: "1991-1999 from CIS Stat fact 4679599 (1991 228 473, 1994 477 068, 1999 164 947); equal to the BNS series on 2000-2025 except 2008 (known difference, BNS kept)."
 
   - id: LABOR_PRODUCTIVITY
     name_ru: "Производительность труда"
