@@ -127,33 +127,36 @@ which year is the last real one.
 not every monthly/quarterly indicator in the dataset. A full sweep of all 247
 monthly+quarterly indicators' actual processed CSVs found only 4 that are
 both genuinely economically-seasonal and have enough dense, gap-free history
-for STL decomposition to mean anything: `CPI`, `EXPORTS`, `IMPORTS`,
+for seasonal decomposition to mean anything: `CPI`, `EXPORTS`, `IMPORTS`,
 `GDP_NOMINAL` (the last de-cumulated from year-to-date first). The "obvious"
 candidates — industrial production, retail trade, construction, tourism — are
 all brand-new series with 3-5 data points, onboarded in just the last few
 months; completely unusable right now despite being exactly what you'd reach
 for first.
 
-Method: `statsmodels.tsa.seasonal.STL`, `robust=True` on every target (each
-one's window contains at least one large transient shock — 2020 COVID, the
-2022 KZT devaluation — and a non-robust fit would let one anomalous period
-distort the seasonal estimate for that calendar position across every year).
-Reported per target: the average seasonal effect by calendar month/quarter (a
-12- or 4-row table, not a dump of every observation), trend direction, and
-**seasonal strength** — the standard Hyndman & Athanasopoulos measure
-(`max(0, 1 - Var(resid)/Var(seasonal+resid))`), not a raw variance fraction,
-since the naive version would be dominated by trend for a strongly-growing
-series like `GDP_NOMINAL`. Every target must clear 3 full seasonal cycles of
-history before decomposition runs at all — refused, not attempted with a
-louder caveat, below that bar.
+Method: X-13ARIMA-SEATS (US Census Bureau v1.1 b62, `scripts/lib/x13.py`,
+binary in `tools/x13as/`): automatic ARIMA and AO/LS/TC outliers (which keep
+2020 and the 2022 devaluation out of the seasonal factors), log-vs-level by
+AICC, the Kazakhstan working-day and Kurban Ait regressors kept only when AICC
+prefers them, X-11 seasonal factors (D10). Robust STL is the fallback when no
+binary is available or X-13 rejects a target, and the report says so per
+target. Reported per target: the method and model, the average seasonal factor
+(multiplicative) and effect in the series' units by calendar month/quarter,
+trend direction, and **seasonal strength** — the Hyndman & Athanasopoulos
+measure (`max(0, 1 - Var(resid)/Var(seasonal+resid))`, on logs for a
+multiplicative fit), not a raw variance fraction, since the naive version would
+be dominated by trend for a strongly-growing series like `GDP_NOMINAL`. Every
+target must clear 3 full seasonal cycles of history (X-13's own minimum) —
+refused, not attempted with a louder caveat, below that bar.
 
-**What it found, run live**: `GDP_NOMINAL` comes back with seasonal strength
-0.985 — Q4 running far above Q1-Q2 in every cycle, consistent with the same
-Q3→Q4 pattern the outlier-check work found independently while fixing
-`validate_outliers`'s cumulation-awareness. `IMPORTS` (0.688) shows
-meaningfully more seasonal structure than `EXPORTS` (0.204); `CPI` is weakest
-of the four (0.174) once the 2022 devaluation's spike is downweighted by
-`robust=True` rather than read as a permanent November/December effect.
+**What it found, run live** (X-13, 2026-09-28): `GDP_NOMINAL` comes back with
+seasonal strength 0.996 — Q4 running far above Q1-Q2 in every cycle, consistent
+with the same Q3→Q4 pattern the outlier-check work found independently while
+fixing `validate_outliers`'s cumulation-awareness. `IMPORTS` (0.877; X-13 also
+finds a working-day effect, t = 7.3) shows more seasonal structure than
+`EXPORTS` (0.463); `CPI` is weakest of the four (0.131) once the 2022
+devaluation is taken out as outliers rather than read as a permanent
+November/December effect. (STL gave 0.985, 0.688, 0.204 and 0.174.)
 
 **Deliberately left out, and why** (from the full feasibility sweep, not just
 unchecked): `INDUSTRIAL_PRODUCTION_INDEX`, `RETAIL_TRADE_MONTHLY`,
@@ -172,7 +175,7 @@ A shared `scripts/analysis/timeseries.py::prepare_level` module handles the
 same decumulation/lifecycle/forecast-cutoff guardrails as the correlation
 pass's `prepare_indicator`, plus one new one: after decumulation, the series
 is reindexed onto a regular calendar grid and refused if that reveals a gap
-(STL assumes row *N* means the same calendar position every cycle — all 4
+(the seasonal filter assumes row *N* means the same calendar position every cycle — all 4
 targets are gap-free today, but this pipeline re-runs daily, and this is what
 keeps that true going forward rather than re-verifying by hand each time).
 Deliberately a *shared* module, not folded into `decompose.py`: the
@@ -203,7 +206,7 @@ backtest accuracy of the identical model spec. `horizon` is 12 periods for
 monthly targets, 4 for quarterly (`forecast_targets.PERIOD_TO_HORIZON`) — a
 one-year-ahead framing for both. Every target's post-holdout training length
 must clear 3 full seasonal cycles (`forecast.MIN_CYCLES=3`) before either fit
-runs — the same philosophy `decompose.py` applies to STL, independently
+runs — the same philosophy `decompose.py` applies to X-13, independently
 redeclared here since it gates a different quantity (post-holdout training
 length, not the full series).
 

@@ -4,3 +4,6 @@ data/raw/damu/*.xlsx filter=lfs diff=lfs merge=lfs -text
 data/raw/kase/*.xlsx filter=lfs diff=lfs merge=lfs -text
 data/raw/gfss/*.xls filter=lfs diff=lfs merge=lfs -text
 data/raw/gfss/*.xlsx filter=lfs diff=lfs merge=lfs -text
+tools/x13as/x13as_ascii filter=lfs diff=lfs merge=lfs -text
+data/raw/nbk/nbk_banks_balance_accounts_*.xls filter=lfs diff=lfs merge=lfs -text
+data/raw/nbk/nbk_banks_balance_accounts_*.xlsx filter=lfs diff=lfs merge=lfs -text

@@ -58,12 +58,61 @@ def test_decompose_target_recovers_a_known_seasonal_shape():
     meta = {"frequency": "monthly", "observation_type": "period_total"}
     target = seasonal_targets.SeasonalTarget("TEST_SEASONAL", "test", "test rationale", period=12)
 
-    result = decompose.decompose_target(target, long_df, {"TEST_SEASONAL": meta})
+    result = decompose.decompose_target(target, long_df, {"TEST_SEASONAL": meta}, method="stl")
 
+    assert result.method == "STL" and not result.caveats
     assert result.seasonal_strength == pytest.approx(1.0, abs=0.01)
     recovered = {e.period_of_year: e.mean_effect for e in result.seasonal_by_period}
     for month, expected in enumerate(true_seasonal, start=1):
         assert recovered[month] == pytest.approx(expected, abs=0.05)
+
+
+def _noisy_seasonal_long_df(indicator_id):
+    import numpy as np
+    rng = np.random.default_rng(42)
+    true_seasonal = [4, 2, -1, -3, -4, -2, 0, 1, 3, 2, -1, -1]
+    dates = pd.date_range("2015-01-01", periods=96, freq="MS")
+    observed = [100 + 0.8 * t + true_seasonal[t % 12] + rng.normal(0, 0.3) for t in range(96)]
+    return true_seasonal, _long_df(indicator_id, list(zip((d.strftime("%Y-%m-%d") for d in dates), observed)))
+
+
+@pytest.mark.skipif(not decompose.x13.available(), reason="no X-13ARIMA-SEATS binary")
+def test_decompose_target_x13_recovers_a_known_seasonal_shape():
+    true_seasonal, long_df = _noisy_seasonal_long_df("TEST_X13")
+    meta = {"frequency": "monthly", "observation_type": "period_total"}
+    target = seasonal_targets.SeasonalTarget("TEST_X13", "test", "test rationale", period=12)
+    result = decompose.decompose_target(target, long_df, {"TEST_X13": meta})       # default: X-13
+    assert result.method == "X-13 X-11" and not result.caveats
+    assert "(" in result.model_description and "M7" in result.model_description
+    assert result.seasonal_strength > 0.9
+    recovered = {e.period_of_year: e.mean_effect for e in result.seasonal_by_period}
+    for month, expected in enumerate(true_seasonal, start=1):
+        assert recovered[month] == pytest.approx(expected, abs=0.4)
+    text = seasonal_report.build_report([result], run_date="2026-09-27")
+    assert "Method: X-13 X-11 -- " in text and "X-13ARIMA-SEATS" in text
+
+
+def test_decompose_target_falls_back_to_stl_when_x13_is_unavailable(monkeypatch):
+    def unavailable(*a, **k):
+        raise decompose.x13.X13Unavailable("no binary")
+    monkeypatch.setattr(decompose.x13, "adjust", unavailable)
+    _, long_df = _noisy_seasonal_long_df("TEST_FALLBACK")
+    meta = {"frequency": "monthly", "observation_type": "period_total"}
+    target = seasonal_targets.SeasonalTarget("TEST_FALLBACK", "test", "test rationale", period=12)
+    result = decompose.decompose_target(target, long_df, {"TEST_FALLBACK": meta})
+    assert result.method == "STL" and "fell back to robust STL" in result.caveats[0]
+    assert "fell back to robust STL" in seasonal_report.build_report([result], run_date="2026-09-27")
+
+
+def test_report_shows_the_multiplicative_factor_column():
+    result = decompose.DecompositionResult(
+        indicator_id="TEST_M", label="m", rationale="why", interpretation="", prep_description="level",
+        period=4, n=40, date_start="2016-01-01", date_end="2025-10-01", robust=False,
+        seasonal_strength=0.9, trend_strength=0.8, trend_start=1.0, trend_end=2.0, trend_change_pct=100.0,
+        seasonal_by_period=[decompose.SeasonalEffect(1, -5.0, 10, mean_factor_pct=-12.345)],
+        method="X-13 X-11", model_description="log; (0 1 1)(0 1 1)")
+    text = seasonal_report.build_report([result], run_date="2026-09-27")
+    assert "| Q1 | -12.35% | -5.00 | 10 |" in text and "Mean seasonal factor" in text
 
 
 def test_decompose_target_raises_below_min_cycles():
@@ -130,7 +179,7 @@ def test_render_target_chart_writes_a_valid_png(tmp_path):
     long_df = _long_df("TEST_CHART", list(zip((d.strftime("%Y-%m-%d") for d in dates), observed)))
     meta = {"frequency": "monthly", "observation_type": "period_total"}
     target = seasonal_targets.SeasonalTarget("TEST_CHART", "test", "test rationale", period=12)
-    result = decompose.decompose_target(target, long_df, {"TEST_CHART": meta})
+    result = decompose.decompose_target(target, long_df, {"TEST_CHART": meta}, method="stl")
 
     path = seasonal_charts.render_target_chart(result, run_date="2026-09-04", out_dir=tmp_path)
 

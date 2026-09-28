@@ -29,26 +29,40 @@ QUARTER_NAMES = ["Q1", "Q2", "Q3", "Q4"]
 def _methodology(min_cycles: int) -> str:
     return f"""## Methodology and limitations
 
-- Decomposition is STL (`statsmodels.tsa.seasonal.STL`, seasonal-trend
-  decomposition via LOESS), run with `robust=True` on every target: each
-  target's window contains at least one large, transient, non-seasonal shock
-  (the 2020 COVID disruption, the 2022 KZT devaluation), and a non-robust fit
-  would let one anomalous period bleed into the seasonal estimate for that
-  calendar position across every year, not just the year it happened.
+- Decomposition is X-13ARIMA-SEATS (US Census Bureau, version 1.1 build 62,
+  driven by `scripts/lib/x13.py`): a regARIMA model with the ARIMA orders
+  chosen automatically (automdl), automatic additive-outlier / level-shift /
+  temporary-change detection, the log-vs-level choice made by AICC, and the
+  Kazakhstan calendar -- a working-day count under the holiday law (weekend
+  holidays moved to the next working day; Kurban Ait and Orthodox Christmas
+  not moved) plus a Kurban Ait month regressor -- kept only when AICC prefers
+  it; then the X-11 filters give the seasonal factors (table D10), the
+  trend (D12) and the irregular (D13). The regARIMA outliers keep the 2020
+  COVID disruption and the 2022 KZT devaluation out of the seasonal factors,
+  the job STL's robust weights did before. M7 and Q below 1 are X-11's own
+  acceptance thresholds for an identifiable, stable seasonal pattern.
+- In a multiplicative (log) adjustment the table shows both the mean seasonal
+  factor (% above or below the trend-level) and the effect in the series' own
+  units, SA x (factor - 1), averaged over the years; in an additive one only
+  the latter. X-13's seasonal effect is net of the calendar effects it
+  removes separately.
+- STL (`statsmodels.tsa.seasonal.STL`, `robust=True`) is the fallback: used
+  for a target only when no X-13 binary is available or X-13 rejects the
+  series, and then the target's section says so.
 - Every target is required to clear {min_cycles} full seasonal cycles of
-  history before decomposition runs at all (stricter than STL's own
-  documented ~2-cycle minimum) -- refused, not attempted with a louder
+  history before decomposition runs at all (X-13's own minimum; stricter than
+  STL's documented ~2-cycle minimum) -- refused, not attempted with a louder
   caveat, below that bar.
 - **Seasonal strength** is `max(0, 1 - Var(resid)/Var(seasonal+resid))` (the
-  standard Hyndman & Athanasopoulos measure), not `Var(seasonal)/Var(original)`.
-  The difference matters for a strongly-trending series: the naive ratio would
-  be dominated by trend and understate seasonality. 0 means the seasonal
-  component explains nothing beyond noise; 1 means the residual is
-  negligible next to it.
-- STL's trend estimate is a LOESS smooth and is less reliable at the very
-  start and end of the window than in the middle (less data on one side to
-  smooth against) -- the reported trend start/end values inherit that edge
-  effect and should be read as approximate, not exact boundary values.
+  standard Hyndman & Athanasopoulos measure), not `Var(seasonal)/Var(original)`,
+  computed on logs for a multiplicative adjustment. The difference matters for
+  a strongly-trending series: the naive ratio would be dominated by trend and
+  understate seasonality. 0 means the seasonal component explains nothing
+  beyond noise; 1 means the residual is negligible next to it.
+- The trend (X-11 Henderson filter or STL's LOESS) is less reliable at the very
+  start and end of the window than in the middle (X-13 extends the series with
+  ARIMA forecasts, STL does not) -- the reported trend start/end values inherit
+  that edge effect and should be read as approximate, not exact boundary values.
 - This is a curated set of hand-picked targets, not every monthly/quarterly
   indicator in the dataset -- see `analysis/README.md` for the full
   feasibility sweep and why the rest were left out."""
@@ -67,16 +81,22 @@ def _format_effect(v: float) -> str:
 
 def _seasonal_table(result: DecompositionResult) -> list[str]:
     names = MONTH_NAMES if result.period == 12 else QUARTER_NAMES
+    with_factor = any(e.mean_factor_pct is not None for e in result.seasonal_by_period)
     lines = [
         "",
         "**Average seasonal effect by calendar " + ("month" if result.period == 12 else "quarter") + ":**",
         "",
+        "| Period | Mean seasonal factor | Mean seasonal effect | Cycles averaged |" if with_factor else
         "| Period | Mean seasonal effect | Cycles averaged |",
-        "|---|---|---|",
+        "|---|---|---|---|" if with_factor else "|---|---|---|",
     ]
     for effect in result.seasonal_by_period:
         name = names[effect.period_of_year - 1]
-        lines.append(f"| {name} | {_format_effect(effect.mean_effect)} | {effect.n_cycles} |")
+        if with_factor:
+            f = "" if effect.mean_factor_pct is None else f"{effect.mean_factor_pct:+.2f}%"
+            lines.append(f"| {name} | {f} | {_format_effect(effect.mean_effect)} | {effect.n_cycles} |")
+        else:
+            lines.append(f"| {name} | {_format_effect(effect.mean_effect)} | {effect.n_cycles} |")
     return lines
 
 
@@ -97,6 +117,8 @@ def _target_section(result: DecompositionResult, run_date: str) -> str:
         f"*Why this candidate:* {result.rationale}",
         "",
         f"- Prepared as: {result.prep_description}",
+        f"- Method: {result.method}" + (f" -- {result.model_description}" if result.model_description
+                                        and result.method != "STL" else "") + ".",
         f"- Window: {result.date_start} .. {result.date_end} -- {result.n} observations, "
         f"period={result.period} ({'monthly' if result.period == 12 else 'quarterly'}).",
         f"- **Seasonal strength: {result.seasonal_strength:.3f}** (0-1 scale; see "
@@ -123,7 +145,7 @@ def build_report(results: list[DecompositionResult], run_date: str) -> str:
         DISCLAIMER,
         "",
         f"Curated set of {n_targets} targets, hand-picked for having enough dense, "
-        f"gap-free history to make STL decomposition meaningful, and being "
+        f"gap-free history to make a seasonal decomposition meaningful, and being "
         f"genuinely seasonal in the classic sense -- not every monthly/quarterly "
         f"indicator in the dataset. See `analysis/README.md` for the full "
         f"feasibility sweep and why the rest were left out.",

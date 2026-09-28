@@ -3477,6 +3477,78 @@ datasets:
     category: monetary
     note: "NBK formId=50, stocks at report_date, monthly from 2023-01. The API gives a mnemonic `code` with each row_code; item = row_code, Russian names read from the mnemonics and checked by the identities 1 = 1.1+1.2+1.3, 1.1 = 1.1.1+1.1.2, 2.1 = 2.1.1+2.1.2, 3 = 1+2, 3.1 = Σ3.1.x (enforced; liabilities carry a minus sign). 2 is not the sum of 2.1…2.6 (gap 0.9–6.5 trn, an unpublished line). 2.4 = NBK claims on non-bank financial institutions (KSF, Problem Loans Fund, DBK bonds) -- the NBK's quasi-fiscal channel. 3.0.a (liab_mbr) is a memo item whose exact definition is not published."
 
+  # ---------------------------------------------------------------- NBK monetary surveys, full history (added 2026-09-27)
+  # scripts/fetchers/nbk_records.py: the JSON "records" behind the NBK monetary-statistics pages.
+  - id: NBK_SURVEY_HISTORY
+    name_ru: "Монетарный обзор Национального Банка РК (история с 1997 г., данные страницы НБК)"
+    name_en: "Monetary survey of the National Bank of Kazakhstan, history from 1997 (NBK page records)"
+    agency: nbk
+    fetcher: nbk_records
+    survey: CB
+    frequency: monthly
+    unit: "million KZT, stock at the end of the previous month (as at the date)"
+    category: monetary
+    note: "NBK page «Монетарный обзор НБК» (records JSON), stock at the end of each month from 1997-12, dated the first day of the next month (as at, like form 50): the year-month of reporting_date is the month-end, its day and published_at are noise. Item CB.<NBK key>, Russian label from the page. Equals form 50 (NBK_MONETARY_SURVEY) lines 1, 2.1, 2.3-2.6, 3, 3.1, 3.1.1 on all 44 common dates 2023-01..2026-08 within 0.9 mln (enforced). Quasi-fiscal line CB.n_d_a_r_non_banking = NBK claims on non-bank financial organisations (KSF, Problem Loans Fund; mostly equity: 5.09 of 5.32 trn at 2021-12): 146 208 mln at 2012-01-01 (end-2011), 1 230 126 (2018-01-01), 3 044 011 (2020-01-01), 5 317 553 (2022-01-01), 5 137 668 (2026-09-01). CB.n_d_a_r_rest_economy steps from 59 711 to 821 820 at 2015-07-01 (read as a ~750 bn NBK equity claim on public nonfinancial corporations; not named by the NBK). Identities enforced: n_i_r, n_e_a, net claims on government, l = n_e_a + n_d_a, l = liabilities, r_m = its parts; n_d_a = its published lines only through 2009-02-01 (from 2009-03-01 an unpublished line of 0.6-6.7 trn, as in form 50 line 2). Items «Минус: …» are positive numbers subtracted."
+
+  - id: BANKS_SURVEY_HISTORY
+    name_ru: "Монетарный обзор по банкам (история с 1998 г., данные страницы НБК)"
+    name_en: "Monetary survey of banks (other depository corporations), history from 1998 (NBK page records)"
+    agency: nbk
+    fetcher: nbk_records
+    survey: ODC
+    frequency: monthly
+    unit: "million KZT, stock at the end of the previous month (as at the date)"
+    category: monetary
+    note: "NBK page «Монетарный обзор по банкам» (records JSON), month-end stocks from 1998-01 dated the first day of the next month. Item ODC.<NBK key>. Quasi-fiscal lines: ODC.r_f_s_n_f_o = banks' claims on public nonfinancial organisations (897 205 mln at 2012-01-01, 318 120 at 2016-01-01, 605 536 at 2022-01-01, 1 239 746 at 2026-09-01; = IMF MFS_ODC); ODC.l_o = loans RECEIVED by banks, including from the NBK (728 538 at 2012-01-01 = IMF ODC loans 297 603 + liabilities to the central bank 430 937; 2 152 007 at 2022-01-01). ODC.r_f_n_b_f_i (claims on NBFIs) includes UAPF, insurers, KASE repo and BTA Bank after 2015 (3 315 926 at 2016-01-01) -- not development institutions only. The source has no record for 2003-04 and two for 2005-04; the one with reporting_date 2005-04-14 holds the 2003-04 values and is dated 2003-05-01 (it closes the BS = CB + ODC identity exactly). Identities enforced: d_a and l = n_e_a + d_a = liabilities, and BS claims on NBFIs / on the rest of the economy = CB + ODC from 2002-11-01."
+
+  - id: BANKING_SYSTEM_SURVEY_HISTORY
+    name_ru: "Монетарный обзор по банковской системе (история с 1997 г., данные страницы НБК)"
+    name_en: "Monetary survey of the banking system (depository corporations), history from 1997 (NBK page records)"
+    agency: nbk
+    fetcher: nbk_records
+    survey: BS
+    frequency: monthly
+    unit: "million KZT, stock at the end of the previous month (as at the date)"
+    category: monetary
+    note: "NBK page «Монетарный обзор по банковской системе» (records JSON), month-end stocks from 1997-12 dated the first day of the next month. Item BS.<NBK key>. BS.i_a_r_nb_f_o = CB.n_d_a_r_non_banking + ODC.r_f_n_b_f_i and BS claims on local government, public and non-state nonfinancial organisations, NPISH and households = CB «остальная экономика» + the ODC lines, on every month from 2002-11-01 (enforced; 2001-12..2002-09 hold ~2 977 mln in NBFIs in the NBK survey and in the rest of the economy here). i_a = its published lines only through 2009-02-01 (the NBK's unpublished line after that)."
+
+  - id: OFC_SURVEY
+    name_ru: "Обзор других финансовых организаций (квартальный, с 2015 г.)"
+    name_en: "Survey of other financial organisations (quarterly, from 2015)"
+    agency: nbk
+    fetcher: nbk_records
+    survey: OFC
+    frequency: quarterly
+    unit: "million KZT, stock at the end of the previous quarter (as at the date)"
+    category: monetary
+    note: "NBK page «Обзор других финансовых организаций» (records JSON), quarter-end stocks from 2015-Q1 dated the first day of the next quarter (2015-04-01 … 2026-07-01), as form 26. Coverage: Development Bank of Kazakhstan, mortgage companies, insurers, pension funds (NBK methodology /file/download/87908) -- claims mix DBK lending with UAPF and insurers' bond holdings. Quasi-fiscal lines: OFC.r_o_s_r_s_nf_o claims on public nonfinancial organisations (438 758 mln at 2015-04-01, 966 553 at 2022-01-01, 1 968 351 at 2026-07-01; = IMF MFS_OFC S12R_A_ACO_S11001_OFCS), OFC.r_o_s_r_ng_nf_o on non-state ones (858 531, 2 201 762, 2 921 591), OFC.c loans received. n_e_a, n_e_a_r_nr and r_b_s equal the form 26 scalars OFC_NET_FOREIGN_ASSETS / OFC_CLAIMS_ON_NONRESIDENTS / OFC_CLAIMS_ON_BANKING_SYSTEM on the 15 common dates within 0.5 mln (enforced). No OFC survey exists before 2015 (NBK or IMF)."
+
+  - id: FINANCIAL_SECTOR_SURVEY
+    name_ru: "Обзор финансового сектора (квартальный, с 2015 г.)"
+    name_en: "Financial-sector survey (quarterly, from 2015)"
+    agency: nbk
+    fetcher: nbk_records
+    survey: FS
+    frequency: quarterly
+    unit: "million KZT, stock at the end of the previous quarter (as at the date)"
+    category: monetary
+    note: "NBK page «Обзор финансового сектора» (records JSON), quarter-end stocks from 2015-Q1 dated the first day of the next quarter. Item FS.<NBK key>; FS.r_f_s_n_f_o = financial sector's claims on public nonfinancial organisations (1 442 961 mln at 2015-04-01, 5 149 050 at 2026-07-01). Identities enforced: n_e_a = claims - liabilities to nonresidents = liabilities side - domestic claims; i_r = net claims on government + claims on other sectors."
+
+  # ---------------------------------------------------------------- banks' balance-account groups (added 2026-09-27)
+  # scripts/fetchers/nbk_balance_groups.py: yearly workbooks, one sheet per as-at date.
+  - id: BANKS_GOV_HOLDING_BORROWINGS
+    name_ru: "Займы, полученные банками второго уровня от Правительства РК, МИО и национального управляющего холдинга (группа счетов 2030), от МФО (2040) и от других банков (2050)"
+    name_en: "Second-tier banks' borrowings from the government, local executive bodies and the national managing holding (account group 2030), from international financial organisations (2040) and from other banks (2050)"
+    agency: nbk
+    fetcher: nbk_balance_groups
+    from_year: 2010
+    refresh_days: 7
+    frequency: monthly
+    unit: "million KZT, as at the date"
+    category: monetary
+    note: "NBK «Сведения по остаткам на балансовых и внебалансовых счетах» (banks-performance rubric, one workbook per year, one sheet per 01.MM), total row of all second-tier banks, thousand KZT / 1000; 01.01 from the sheet after final turnovers («с ЗО»). Items G2030, G2040, G2050. G2030 (bn): 47.5 at 2010-01-01, 58.4 (2011-01-01), 329.4 (2013-01-01), 399.8 (2015-01-01), 162.0 (2016-01-01), 69.8 (2021-12-01), 85.5 (2023-01-01), 211.9 (2023-02-01), 683.7 (2026-01-01), 712.0 (2026-08-01). BREAK 2023-02-01: group 2030 adds «специального фонда развития частного предпринимательства» (Damu): +126 bn in 2030, -167 bn in 2050 that month; G2030 + G2050 is continuous across it. G2050 also holds interbank borrowing (1.4-1.75 trn in 2022-04..09). Checked on every sheet: total = sum of bank rows; group names match the known wordings (a new wording stops the dataset). Past years are carried forward; the current and previous year's workbooks are re-read on each weekly refresh."
+
+
   # ---------------------------------------------------------------- Damu subsidised loans (added 2026-09-27)
   # scripts/fetchers/damu.py: the project-level xlsx «Отчет по проектам субсидирования» (monthly).
   - id: DAMU_SUBSIDISED_LOANS_ANNUAL
@@ -3621,11 +3693,12 @@ datasets:
     category: monetary
     note: "NBK formId=384, quarterly from 2020-Q2. Item FACTOR.SECTOR (sectors as CAPACITY_UTILIZATION_BY_SECTOR: TOTAL, ОКЭД letters, NRS). Several factors per respondent, so shares do not sum to 100."
 
-  # ---------------------------------------------------------------- development institutions' balance sheets (added 2026-09-27)
-  # scripts/fetchers/kase_ifrs.py: every IFRS statement the issuers file on KASE.
+  # ---------------------------------------------------------------- development institutions' and quasi-fiscal holdings' balance sheets (added 2026-09-27)
+  # scripts/fetchers/kase_ifrs.py: every statement the issuers file on KASE (documents API; FPKR/KZAG from a static
+  # list of files left on the server after delisting) plus the KASE fin-data key indicators for `fin_data`.
   - id: DEVELOPMENT_INSTITUTIONS_BALANCE_SHEETS
-    name_ru: "Балансы институтов развития по МСФО (Байтерек, Банк развития Казахстана, Казахстанский фонд устойчивости, Аграрная кредитная корпорация)"
-    name_en: "IFRS balance sheets of state development institutions (Baiterek, Development Bank of Kazakhstan, Kazakhstan Sustainability Fund, Agrarian Credit Corporation)"
+    name_ru: "Балансы институтов развития и квазифискальных холдингов по отчетности на KASE (Байтерек, БРК, КФУ, АКК, Фонд проблемных кредитов, КазАгро, Самрук-Казына)"
+    name_en: "Balance sheets of state development institutions and quasi-fiscal holdings from their KASE statements (Baiterek, DBK, Kazakhstan Sustainability Fund, Agrarian Credit Corporation, Problem Loans Fund, KazAgro, Samruk-Kazyna)"
     agency: kase
     fetcher: kase_ifrs
     issuers:
@@ -3633,11 +3706,16 @@ datasets:
       BRKZ: "Банк развития Казахстана (консолидированно)"
       KFUS: "Казахстанский фонд устойчивости"
       AGKK: "Аграрная кредитная корпорация"
+      FPKR: "Фонд проблемных кредитов (консолидированно)"
+      KZAG: "НУХ «КазАгро» (консолидированно)"
+      SKKZ: "ФНБ «Самрук-Казына» (консолидированно)"
+      SKKZ_SEP: "ФНБ «Самрук-Казына» (отдельная отчетность)"
+    fin_data: [BTRK, SKKZ]
     refresh_days: 7
     frequency: quarterly
     unit: "billion KZT, end of period"
     category: fiscal
-    note: "Balance-sheet lines of the quarterly and annual IFRS statements on KASE, dated at the balance-sheet date (quarter end); the latest statement wins when two give the same date (restatements). Item ISSUER.LINE: TOTAL_ASSETS, TOTAL_LIABILITIES, EQUITY (only columns with assets = liabilities + equity within 0.5% are kept), LOANS_CUSTOMERS, LOANS_BANKS, FIN_LEASE, DEBT_SECURITIES, GOV_LOANS, PARENT_LOANS, GOV_SUBSIDIES (deferred income from below-market state funding), CUSTOMER_FUNDS. Coverage: BRKZ from 2013-12, AGKK from 2013-12 (separate statements to 2021, consolidated from 2022 -- a break), BTRK from 2018-12, KFUS from 2020-12; quarters the issuer did not file in xlsx are missing (BTRK has no June statement 2020-2024). BTRK consolidates BRKZ, AGKK (via KazAgro since 2021), Damu and Otbasy bank, so do not add issuers."
+    note: "Balance-sheet lines of the quarterly and annual statements on KASE, dated at the balance-sheet date; the latest statement wins when two give the same date (restatements). Item ISSUER.LINE: TOTAL_ASSETS, TOTAL_LIABILITIES, EQUITY (only columns with assets = liabilities + equity within 0.5% are kept), LOANS_CUSTOMERS, LOANS_BANKS, LOANS_ISSUED (SK: loans issued and finance-lease investments), FIN_LEASE, ACQUIRED_CLAIMS (FPK: rights of claim bought from banks), DEBT_SECURITIES (tenge bonds + Eurobonds), GOV_LOANS (loans and funds from the Government), PARENT_LOANS, BORROWINGS (loans received, funds of credit institutions), GOV_SUBSIDIES (deferred income from below-market state funding), CUSTOMER_FUNDS, DISTRIBUTION_RESERVE (equity reserve for conditional distribution: FPK's cumulative transfers to banks, -3 645.1 bn at 2019-12-31). Lines are summed over current and long-term rows. ISSUER.FD_TOTAL_ASSETS / FD_TOTAL_LIABILITIES / FD_EQUITY: KASE fin-data key indicators, for BTRK (year ends 2015-2017, quarterly from 2018-06) and SKKZ (half-yearly from 2006-12; liabilities from 2015-12). Issuers: BTRK consolidated from 2018-12 (no June statement 2020-2024); BRKZ from 2012-12; KFUS = АО «Казахстанский фонд устойчивости» (2017-; not the Problem Loans Fund) from 2019-12, absorbed Баспана 25.12.2019 (break: 1 536.6 bn at 2019-12-31 -> 2 909.1 bn at 2020-03-31); AGKK from 2012-12 (separate to 2021, consolidated from 2022, a break); FPKR = АО «Фонд проблемных кредитов» 2017-12 to 2021-06 (bonds annulled 21.09.2021, filing stopped; negative equity from 2018; the 2021-03-31 statement is on a different basis: assets 492.3 bn vs 352.4 at 2020-12-31 and 369.5 at 2021-06-30, no ACQUIRED_CLAIMS line); KZAG consolidated 2012-12 to 2020-09 (merged into BTRK in 2021); SKKZ consolidated from 2021-12 (dominated by KMG, KTZ, KAP); SKKZ_SEP = Samruk-Kazyna's separate balance sheet (Minfin Form 1), 2012-12 to 2016-03. Aggregation: quasi-fiscal total = BTRK + KZAG (to 2020-12) + FPKR + KFUS (+ SKKZ_SEP); never add a subsidiary to its parent (BTRK consolidates BRKZ, and AGKK via KazAgro from 2021; KZAG consolidates AGKK to 2020)."
 
   # ---------------------------------------------------------------- import prices by HS section (added 2026-09-27)
   # Taldau 19073959 (all partners) / 19073960 (EAEU) / 19073961 (outside the EAEU), period 4
@@ -3824,6 +3902,17 @@ datasets:
     category: fiscal
     note: "Minfin Statistical Bulletin tables 12 (all local budgets = national), 12.1-12.20 (one per region, matched by the sheet title) and 18 (17 before 2021-09; general transfers), every edition since 2013-01 (2013-2018 from the yearly archives, via scripts/backfill_minfin_bulletins.py --dims). Dated the first day of the period's last month; year to date (difference within a year for the month). Items: REV, REV.TAX, REV.CIT, REV.PIT, REV.SOCIAL_TAX, REV.EXCISE, REV.NONTAX, REV.CAPITAL, REV.TRANSFERS, EXP, EXP.01-EXP.15 (functional groups; 04 education, 05 health, 06 social assistance, 07 housing), NET_LENDING, FIN_ASSETS, BALANCE, SUBVENTIONS, WITHDRAWALS. Regions: 16 to mid-2018 (South Kazakhstan), then 17 (Turkestan and Shymkent), 20 from the August 2024 edition (Abai, Zhetisu, Ulytau; the 2022-09…2024-07 editions omit them though the parent regions already exclude them -- source_issues). Checked: the regions add up to table 12 within 0.5% in every edition with all region tables, except the source errors of 2020-02 (Shymkent) and 2021-02/03 (table 12) in source_issues. Targeted transfers received = REV.TRANSFERS - SUBVENTIONS. REV.PIT and REV.SOCIAL_TAX by region = a monthly regional wage-bill proxy. National rows start in 2014-12 (earlier table 12 has no period column); the regions are there from 2013-01. Missing editions: 2020-04, 2025-12, 2026-04."
 
+  - id: RB_QUASIFISCAL_YTD
+    name_ru: "Квазифискальные операции через республиканский бюджет с начала года: бюджетные кредиты и взносы в уставный капитал институтов развития и нацхолдингов (Байтерек, БРК, ФРП, Даму, АКК, Отбасы, Самрук-Казына, ФПК …)"
+    name_en: "Quasi-fiscal flows through the republican budget, year to date: budget loans and equity to development institutions and national holdings (Baiterek, DBK, IDF, Damu, ACC, Otbasy, Samruk-Kazyna, Problem Loans Fund …)"
+    agency: minfin
+    fetcher: minfin_quasifiscal
+    frequency: monthly
+    cumulation: year_to_date
+    unit: "million KZT, January to the month"
+    category: fiscal
+    note: "Minfin Statistical Bulletin «табл 8 (расх)» (republican budget spending by programme), sections БЮДЖЕТНЫЕ КРЕДИТЫ (LOAN) and ПРИОБРЕТЕНИЕ ФИНАНСОВЫХ АКТИВОВ (EQUITY), every edition since 2013-01 (2013-2018 from the yearly archives, via scripts/backfill_minfin_bulletins.py --dims). Dated the first day of the period's last month; year to date (difference within a year for the month). Recipient read from the programme label, not the codes (codes change with reorganisations): the first entity named is the direct counterparty, the last one before «через» the final recipient; БРК-Лизинг = IDF. Items for SEC in LOAN, EQUITY: SEC (section total), SEC.DI (development institutions and holdings), SEC.<final recipient> (BAITEREK, DBK, IDF, DAMU, KAZAKHEXPORT, QIC, KAZAGRO, ACC, KAF, FCC, OTBASY, KHC, KMC, HCGF, KMGF, SAMRUK, KTZ, FPK), SEC.FAM.<DEV_FINANCE|SME|AGRI|HOUSING|SAMRUK|FPK>, SEC.VIA.<BAITEREK|KAZAGRO|SAMRUK> (direct counterparty), and the rest SEC.LOCAL_GOV, SEC.GUARANTEE_CALL, SEC.INTL_ORG, SEC.OTHER_QUASI, SEC.OTHER, so SEC = SEC.DI + the five; SEC.DI = sum of recipients = sum of families. Items that are zero in every edition are left out. Checked: programmes add up to the section header in every edition (hard check); headers = табл 7 except its known errors of 2021-02/03; LOAN.DI = табл 10 specifics 513+519 in every edition. December YTD LOAN.DI 2013-2025 (bn): 60.0, 58.9, 68.9, 182.5, 194.1, 146.5, 246.5, 245.2, 284.7, 577.3, 410.3, 274.0, 235.5. Out of scope: current transfers in the ЗАТРАТЫ section (217/202 FPK 2 092.9 bn in 2017, Даму subsidies 243/087), National Fund/NBK/UAPF purchases of holding bonds, local-budget lending (REGIONAL_BUDGETS_YTD NET_LENDING). Missing editions: 2020-04, 2026-04."
+
   # ---------------------------------------------------------------- IMF WEO, all economies (added 2026-09-27)
   - id: IMF_WEO_WORLD
     name_ru: "МВФ WEO по всем странам: рост ВВП, инфляция, ВВП в долларах и по ППС, население, счёт текущих операций, долг, безработица"
@@ -3875,3 +3964,31 @@ datasets:
     unit: "% of the same quarter of the previous year"
     category: national_accounts
     note: "Derived from GVA_VOLUME_INDEX_BY_SECTION_QUARTERLY and GVA_NOMINAL_BY_SECTION_QUARTERLY: I_k = (I_ytd,k·N_ytd,k,t−1 − I_ytd,k−1·N_ytd,k−1,t−1)/(N_ytd,k,t−1 − N_ytd,k−1,t−1), previous-year prices. Gives the latest quarter before BNS's quarterly accounts (QNA_* end at 2026 Q1 on 2026-09-27; their Q2 is due with element 283161 on 28.10.2026). Rounding band about ±0.15 pp for GDP; Q4 carries the annual-survey residual of table 4439; the 4439/4440 basis differs from the QNA basis -- do not splice without a note. 2026 Q2: GDP 105.2."
+
+  # ---------------------------------------------------------------- utility tariffs and administered prices (added 2026-09-27)
+  - id: TARIFF_DECISIONS
+    name_ru: "Решения о тарифах на коммунальные услуги (КРЕМ, ДКРЕМ) и предельные цены Минэнерго на электроэнергию и газ: события по месяцу вступления в силу"
+    name_en: "Utility tariff decisions (КРЕМ and its regional departments) and Ministry of Energy electricity and gas price caps: events by month of entry into force"
+    agency: krem
+    fetcher: krem_tariffs
+    refresh_days: 1
+    frequency: monthly
+    unit: "percent change of the tariff (NaN when the source does not state it)"
+    category: prices
+    geography: "Kazakhstan (national and regions)"
+    note: "EVENT dataset, one record per decision and service, dated by the first day of the month the decision takes effect. item_code = REGION.SERVICE.KIND.SOURCE_ID (REGION KZ = national; SERVICE HEAT, HOT_WATER, WATER, WATER_BULK, SEWER, ELEC_TRANS, ELEC_SUPPLY, GAS_DISTR, GAS_TRANS, GAS_STORAGE, GAS_RETAIL, ELEC_GEN_CAP, GAS_WHOLESALE_CAP; KIND APPROVE, AMEND, TEMP_COMP (temporary compensating tariff: a cut), EMERGENCY, CAP_CUT, PRICE_CAP, NEWS, ORDER, PERIOD; SOURCE_ID D<gov.kz document>, N<gov.kz news>_<n>, V…/G… adilet act). item_name: service | decision | company | order | effective date and its basis | change | source URL. (1) КРЕМ/ДКРЕМ orders from the gov.kz «krem» documents listing, read from the TITLE (the order files are scans): 3 413 records 2011-2026, value NaN; effective date stated in 178, estimated as the month after the order date in 2 689 and as the month after publication in 546 (only Карагандинская and Шымкент, which publish within days). (2) КРЕМ press releases: 90 records, 53 with the stated % change (2019-2026). (3) Minenergo electricity generation caps (orders 514 and 508-н/қ and their amendments, old.adilet.zan.kz): 20 acts 2019-2026, value = mean % change of the caps across producer groups for the effective year (16 with a value). (4) Minenergo wholesale gas caps by region (yearly orders 2014-2022, order 210 of 2023 with periods to 2027/28): 202 region-period events, value = % change against the previous period; the 2027-07 period is transformation «forecast». Coverage is uneven across regions: departments that put order dates in titles dominate (Карагандинская 1 116, Костанайская 753, Алматы 428 records; Мангистауская 15, Северо-Казахстанская 10). Sources overlap (a release may report an order that is also listed): aggregate by (date, region, service). See TARIFF_CHANGE_MONTHS for the months the CPI registered the changes."
+
+  # Derived from CPI_DETAIL_MOM (run after it).
+  - id: TARIFF_CHANGE_MONTHS
+    name_ru: "Месяцы изменения цен на коммунальные услуги в ИПЦ (м/м), по услугам"
+    name_en: "Months with a utility price change in the CPI (month on month), by service"
+    agency: derived
+    fetcher: tariff_jumps
+    frequency: monthly
+    unit: "percent change, month on month"
+    transformation: "percent change, month on month (index - 100); flagged months only"
+    category: prices
+    threshold_pct: 3.0
+    z_threshold: 5.0
+    min_pct: 1.5
+    note: "Derived, not published: the months in which the national CPI item of a utility moved by at least 3% m/m, or by at least 1.5% with a robust z-score (median/MAD over the item's history) of at least 5; both directions. Items ELECTRICITY, HOT_WATER, COLD_WATER, HEATING, SEWERAGE, NETWORK_GAS, LPG, GARBAGE, each a chain of the BNS item slugs of CPI_DETAIL_MOM across basket re-bases (item_name names the slug). Measures when a tariff change reached the prices BNS registers, NOT the decision date (TARIFF_DECISIONS); a change in one city moves the national item by a fraction of its size. National only: the regional CPI rows carry no utility items. 314 flagged months 2004-2026 (2026-09-27)."

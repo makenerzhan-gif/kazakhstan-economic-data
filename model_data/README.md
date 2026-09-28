@@ -23,8 +23,14 @@ level). Rates and balances (`kind: rate`) get no logs or growth rates.
 Conventions and choices, each explained in the script's docstring and the cards:
 - periods are dated at their first day; stocks the source dates "as at the 1st" are moved
   to the end of the previous period;
-- seasonal adjustment is STL (robust) on logs or levels; the official BNS/FRED adjustment is
-  used where it exists (`sa: official`); X-13ARIMA-SEATS is not available here;
+- seasonal adjustment is X-13ARIMA-SEATS (US Census Bureau v1.1 build 62, binary vendored in
+  `tools/x13as/`, driver `scripts/lib/x13.py`): automatic ARIMA and AO/LS/TC outliers, the
+  Kazakhstan working-day and Kurban Ait regressors kept only when AICC prefers them, X-11
+  decomposition, on logs (multiplicative) or levels (additive). `VARIABLES.md` lists the model,
+  calendar effects, outliers and M7/Q per variable. STL (robust) remains as an explicit option
+  (`sa_method: stl`) and as the fallback when no X-13 binary is available (`sa_fallback: stl`,
+  with a warning, recorded in the cards). The official BNS/FRED adjustment is used where it
+  exists (`sa: official`);
 - policy rates are monthly means of the daily step function;
 - quarterly means/sums/end values of monthly variables use complete quarters only;
 - the capital stock is a perpetual inventory at 2010 prices with δ from BNS book depreciation;

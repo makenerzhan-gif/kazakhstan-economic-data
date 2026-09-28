@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://nationalbank.kz/ru/overviewfinancialsector/obzor-finansovogo-sektora-/records",
+  "dataset_id": "nbk-records/overviewfinancialsector",
+  "indicator_id": "FINANCIAL_SECTOR_SURVEY",
+  "indicator_name": "Financial-sector survey (quarterly, from 2015)",
+  "description": "Обзор финансового сектора (квартальный, с 2015 г.)",
+  "frequency": "quarterly",
+  "unit": "million KZT, stock at the end of the previous quarter (as at the date)",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "NBK page «Обзор финансового сектора» (records JSON), quarter-end stocks from 2015-Q1 dated the first day of the next quarter. Item FS.<NBK key>; FS.r_f_s_n_f_o = financial sector's claims on public nonfinancial organisations (1 442 961 mln at 2015-04-01, 5 149 050 at 2026-07-01). Identities enforced: n_e_a = claims - liabilities to nonresidents = liabilities side - domestic claims; i_r = net claims on government + claims on other sectors.",
+  "publication_date": "2026-08-28",
+  "last_update_date": "2026-09-28",
+  "download_date": "2026-09-28",
+  "period_start": "2015-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
