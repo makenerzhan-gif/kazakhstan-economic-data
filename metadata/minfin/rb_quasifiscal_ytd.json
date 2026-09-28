@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents",
+  "dataset_id": "Statistical Bulletin table 8 (расх)",
+  "indicator_id": "RB_QUASIFISCAL_YTD",
+  "indicator_name": "Quasi-fiscal flows through the republican budget, year to date: budget loans and equity to development institutions and national holdings (Baiterek, DBK, IDF, Damu, ACC, Otbasy, Samruk-Kazyna, Problem Loans Fund …)",
+  "description": "Квазифискальные операции через республиканский бюджет с начала года: бюджетные кредиты и взносы в уставный капитал институтов развития и нацхолдингов (Байтерек, БРК, ФРП, Даму, АКК, Отбасы, Самрук-Казына, ФПК …)",
+  "frequency": "monthly",
+  "unit": "million KZT, January to the month",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Minfin Statistical Bulletin «табл 8 (расх)» (republican budget spending by programme), sections БЮДЖЕТНЫЕ КРЕДИТЫ (LOAN) and ПРИОБРЕТЕНИЕ ФИНАНСОВЫХ АКТИВОВ (EQUITY), every edition since 2013-01 (2013-2018 from the yearly archives, via scripts/backfill_minfin_bulletins.py --dims). Dated the first day of the period's last month; year to date (difference within a year for the month). Recipient read from the programme label, not the codes (codes change with reorganisations): the first entity named is the direct counterparty, the last one before «через» the final recipient; БРК-Лизинг = IDF. Items for SEC in LOAN, EQUITY: SEC (section total), SEC.DI (development institutions and holdings), SEC.<final recipient> (BAITEREK, DBK, IDF, DAMU, KAZAKHEXPORT, QIC, KAZAGRO, ACC, KAF, FCC, OTBASY, KHC, KMC, HCGF, KMGF, SAMRUK, KTZ, FPK), SEC.FAM.<DEV_FINANCE|SME|AGRI|HOUSING|SAMRUK|FPK>, SEC.VIA.<BAITEREK|KAZAGRO|SAMRUK> (direct counterparty), and the rest SEC.LOCAL_GOV, SEC.GUARANTEE_CALL, SEC.INTL_ORG, SEC.OTHER_QUASI, SEC.OTHER, so SEC = SEC.DI + the five; SEC.DI = sum of recipients = sum of families. Items that are zero in every edition are left out. Checked: programmes add up to the section header in every edition (hard check); headers = табл 7 except its known errors of 2021-02/03; LOAN.DI = табл 10 specifics 513+519 in every edition. December YTD LOAN.DI 2013-2025 (bn): 60.0, 58.9, 68.9, 182.5, 194.1, 146.5, 246.5, 245.2, 284.7, 577.3, 410.3, 274.0, 235.5. Out of scope: current transfers in the ЗАТРАТЫ section (217/202 FPK 2 092.9 bn in 2017, Даму subsidies 243/087), National Fund/NBK/UAPF purchases of holding bonds, local-budget lending (REGIONAL_BUDGETS_YTD NET_LENDING). Missing editions: 2020-04, 2026-04.",
+  "publication_date": null,
+  "last_update_date": "2026-09-28",
+  "download_date": "2026-09-28",
+  "period_start": "2013-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
