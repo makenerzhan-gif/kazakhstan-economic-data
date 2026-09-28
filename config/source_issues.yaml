@@ -353,8 +353,8 @@ issues:
     kind: inconsistent
     variable: DEVELOPMENT_INSTITUTIONS_BALANCE_SHEETS
     observations:
-      - {date: "2019-12-31", item: KFUS.TOTAL_ASSETS, value: 1477.3}
-      - {date: "2020-06-30", item: KFUS.TOTAL_ASSETS, value: 2953.6}
+      - {date: "2019-12-31", item: KFUS.TOTAL_ASSETS, value: 1477.291129}
+      - {date: "2020-06-30", item: KFUS.TOTAL_ASSETS, value: 2953.630061}
     evidence: >
       KFUS 2019-12-31 is 1 536.6 bn in the 3M and 6M-2020 comparatives and in the KASE key indicators, but 1 477.3 bn
       (equity 1 477.1) in the 9M-2020 comparative (latest, kept). kfusfm2_2020: assets 2 953.6, equity 2 643.4 bn at

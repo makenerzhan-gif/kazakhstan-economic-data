@@ -1,0 +1,19 @@
+{
+  "downloaded_at": "2026-09-28T02:13:23.352762",
+  "source_url": "https://kase.kz/api/companies/documents/?language=ru&org_code=<CODE>",
+  "issuers": [
+    "BTRK",
+    "BRKZ",
+    "KFUS",
+    "AGKK",
+    "FPKR",
+    "KZAG",
+    "SKKZ",
+    "SKKZ_SEP"
+  ],
+  "fin_data": [
+    "BTRK",
+    "SKKZ"
+  ],
+  "files": 160
+}
