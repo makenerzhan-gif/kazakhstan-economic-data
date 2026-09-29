@@ -1,0 +1,18 @@
+{
+  "downloaded_at": "2026-09-29T11:48:31.442602",
+  "raw_file": "bns_retail_trade_index_nonfood_monthly_taldau_2026-09-28.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "702041",
+    "p_keyword": "",
+    "p_period_id": "4",
+    "p_measure_id": "7",
+    "p_term_id": "741880",
+    "p_terms": "741880,741917,2695732,18224350",
+    "p_dicIds": "68,776,848,3013",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}
