@@ -1,1 +1,2 @@
 {"indicator_id": "GDP_NOMINAL", "period": "2010-04-01", "old_value": 8712143851205.14, "new_value": 8712143900000.0, "detected_date": "2026-09-23", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "GDP_NOMINAL", "period": "2026-04-01", "old_value": 70948693300000.0, "new_value": 71215382400000.0, "detected_date": "2026-09-30", "source": "bns", "reason": "not stated by source"}

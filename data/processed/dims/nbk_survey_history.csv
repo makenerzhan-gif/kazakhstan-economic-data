@@ -343,7 +343,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CB.n_e_a,Чистые внешние активы,64773455.0,level
 2026-07-01,national,CB.n_e_a,Чистые внешние активы,61309469.0,level
 2026-08-01,national,CB.n_e_a,Чистые внешние активы,61300140.0,level
-2026-09-01,national,CB.n_e_a,Чистые внешние активы,64181265.0,level
+2026-09-01,national,CB.n_e_a,Чистые внешние активы,63546853.0,level
 1998-01-01,national,CB.n_i_r,Чистые внешние активы: Чистые международные резервы,130463.0,level
 1998-02-01,national,CB.n_i_r,Чистые внешние активы: Чистые международные резервы,119807.0,level
 1998-03-01,national,CB.n_i_r,Чистые внешние активы: Чистые международные резервы,115589.0,level
@@ -688,7 +688,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CB.n_i_r,Чистые внешние активы: Чистые международные резервы,31722402.0,level
 2026-07-01,national,CB.n_i_r,Чистые внешние активы: Чистые международные резервы,28756698.0,level
 2026-08-01,national,CB.n_i_r,Чистые внешние активы: Чистые международные резервы,29046733.0,level
-2026-09-01,national,CB.n_i_r,Чистые внешние активы: Чистые международные резервы,31696723.0,level
+2026-09-01,national,CB.n_i_r,Чистые внешние активы: Чистые международные резервы,31531573.0,level
 1998-01-01,national,CB.n_i_r_scv,"Валовые международные активы, СКВ",173102.0,level
 1998-02-01,national,CB.n_i_r_scv,"Валовые международные активы, СКВ",162088.0,level
 1998-03-01,national,CB.n_i_r_scv,"Валовые международные активы, СКВ",157811.0,level
@@ -1033,7 +1033,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CB.n_i_r_scv,"Валовые международные активы, СКВ",32727076.0,level
 2026-07-01,national,CB.n_i_r_scv,"Валовые международные активы, СКВ",29722263.0,level
 2026-08-01,national,CB.n_i_r_scv,"Валовые международные активы, СКВ",29989717.0,level
-2026-09-01,national,CB.n_i_r_scv,"Валовые международные активы, СКВ",32625812.0,level
+2026-09-01,national,CB.n_i_r_scv,"Валовые международные активы, СКВ",32460662.0,level
 1998-01-01,national,CB.n_i_r_scv_minus,"Минус: Внешние обязательства, СКВ",42640.0,level
 1998-02-01,national,CB.n_i_r_scv_minus,"Минус: Внешние обязательства, СКВ",42281.0,level
 1998-03-01,national,CB.n_i_r_scv_minus,"Минус: Внешние обязательства, СКВ",42222.0,level
@@ -1686,7 +1686,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CB.n_i_r_national_fund,Чистые внешние активы: Активы Национального Фонда,32185027.0,level
 2026-07-01,national,CB.n_i_r_national_fund,Чистые внешние активы: Активы Национального Фонда,31485920.0,level
 2026-08-01,national,CB.n_i_r_national_fund,Чистые внешние активы: Активы Национального Фонда,31314436.0,level
-2026-09-01,national,CB.n_i_r_national_fund,Чистые внешние активы: Активы Национального Фонда,31547660.0,level
+2026-09-01,national,CB.n_i_r_national_fund,Чистые внешние активы: Активы Национального Фонда,31055294.0,level
 1998-01-01,national,CB.n_i_r_other_asset,"Прочие чистые внешние активы, ПВВ",-8.0,level
 1998-02-01,national,CB.n_i_r_other_asset,"Прочие чистые внешние активы, ПВВ",-4.0,level
 1998-03-01,national,CB.n_i_r_other_asset,"Прочие чистые внешние активы, ПВВ",-5.0,level
@@ -2031,7 +2031,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CB.n_i_r_other_asset,"Прочие чистые внешние активы, ПВВ",866026.0,level
 2026-07-01,national,CB.n_i_r_other_asset,"Прочие чистые внешние активы, ПВВ",1066851.0,level
 2026-08-01,national,CB.n_i_r_other_asset,"Прочие чистые внешние активы, ПВВ",938971.0,level
-2026-09-01,national,CB.n_i_r_other_asset,"Прочие чистые внешние активы, ПВВ",936882.0,level
+2026-09-01,national,CB.n_i_r_other_asset,"Прочие чистые внешние активы, ПВВ",959986.0,level
 1998-01-01,national,CB.n_d_a,Чистые внутренние активы,-15048.0,level
 1998-02-01,national,CB.n_d_a,Чистые внутренние активы,-25921.0,level
 1998-03-01,national,CB.n_d_a,Чистые внутренние активы,-23160.0,level
@@ -2376,7 +2376,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CB.n_d_a,Чистые внутренние активы,-48262923.0,level
 2026-07-01,national,CB.n_d_a,Чистые внутренние активы,-43748061.0,level
 2026-08-01,national,CB.n_d_a,Чистые внутренние активы,-42591463.0,level
-2026-09-01,national,CB.n_d_a,Чистые внутренние активы,-46529990.0,level
+2026-09-01,national,CB.n_d_a,Чистые внутренние активы,-45895578.0,level
 1998-01-01,national,CB.n_d_a_central_goverment,Чистые требования к Центральному Правительству,23538.0,level
 1998-02-01,national,CB.n_d_a_central_goverment,Чистые требования к Центральному Правительству,11716.0,level
 1998-03-01,national,CB.n_d_a_central_goverment,Чистые требования к Центральному Правительству,14798.0,level
@@ -3719,7 +3719,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CB.n_d_a_fund_national_fund,Чистые внутренние активы: Средства Национального Фонда,38607835.0,level
 2026-07-01,national,CB.n_d_a_fund_national_fund,Чистые внутренние активы: Средства Национального Фонда,38109629.0,level
 2026-08-01,national,CB.n_d_a_fund_national_fund,Чистые внутренние активы: Средства Национального Фонда,37888380.0,level
-2026-09-01,national,CB.n_d_a_fund_national_fund,Чистые внутренние активы: Средства Национального Фонда,38468257.0,level
+2026-09-01,national,CB.n_d_a_fund_national_fund,Чистые внутренние активы: Средства Национального Фонда,37975892.0,level
 1998-01-01,national,CB.n_d_a_b_r_not_nbk,Требования к банкам (за вычетом обязательств НБК по краткосрочным нотам),1393.0,level
 1998-02-01,national,CB.n_d_a_b_r_not_nbk,Требования к банкам (за вычетом обязательств НБК по краткосрочным нотам),6074.0,level
 1998-03-01,national,CB.n_d_a_b_r_not_nbk,Требования к банкам (за вычетом обязательств НБК по краткосрочным нотам),5339.0,level
@@ -5099,7 +5099,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CB.n_d_a_r_other_domestic,Прочие чистые внутренние активы,-18890684.0,level
 2026-07-01,national,CB.n_d_a_r_other_domestic,Прочие чистые внутренние активы,-15758636.0,level
 2026-08-01,national,CB.n_d_a_r_other_domestic,Прочие чистые внутренние активы,-15476079.0,level
-2026-09-01,national,CB.n_d_a_r_other_domestic,Прочие чистые внутренние активы,-18002530.0,level
+2026-09-01,national,CB.n_d_a_r_other_domestic,Прочие чистые внутренние активы,-17860483.0,level
 1998-01-01,national,CB.l,Пассивы,115407.0,level
 1998-02-01,national,CB.l,Пассивы,93883.0,level
 1998-03-01,national,CB.l,Пассивы,92423.0,level

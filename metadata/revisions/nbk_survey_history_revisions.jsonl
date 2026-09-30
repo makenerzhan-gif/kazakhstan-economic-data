@@ -1,0 +1,8 @@
+{"indicator_id": "NBK_SURVEY_HISTORY", "period": "2026-09-01 CB.n_e_a", "old_value": 64181265.0, "new_value": 63546853.0, "detected_date": "2026-09-30", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_SURVEY_HISTORY", "period": "2026-09-01 CB.n_i_r", "old_value": 31696723.0, "new_value": 31531573.0, "detected_date": "2026-09-30", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_SURVEY_HISTORY", "period": "2026-09-01 CB.n_i_r_scv", "old_value": 32625812.0, "new_value": 32460662.0, "detected_date": "2026-09-30", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_SURVEY_HISTORY", "period": "2026-09-01 CB.n_i_r_national_fund", "old_value": 31547660.0, "new_value": 31055294.0, "detected_date": "2026-09-30", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_SURVEY_HISTORY", "period": "2026-09-01 CB.n_i_r_other_asset", "old_value": 936882.0, "new_value": 959986.0, "detected_date": "2026-09-30", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_SURVEY_HISTORY", "period": "2026-09-01 CB.n_d_a", "old_value": -46529990.0, "new_value": -45895578.0, "detected_date": "2026-09-30", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_SURVEY_HISTORY", "period": "2026-09-01 CB.n_d_a_fund_national_fund", "old_value": 38468257.0, "new_value": 37975892.0, "detected_date": "2026-09-30", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_SURVEY_HISTORY", "period": "2026-09-01 CB.n_d_a_r_other_domestic", "old_value": -18002530.0, "new_value": -17860483.0, "detected_date": "2026-09-30", "source": "nbk", "reason": "not stated by source"}
