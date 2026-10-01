@@ -1,0 +1,11 @@
+{
+  "downloaded_at": "2026-10-01T13:19:06.533132",
+  "source_url": "https://nationalbank.kz/ru/monetaryreviewbank/monetarnyy-obzor-po-bankam-/records",
+  "params": {
+    "beginMount": 1,
+    "beginYear": 1990,
+    "endMount": 12,
+    "endYear": 2026
+  },
+  "read_by": "fetchers/nbk_records.py"
+}

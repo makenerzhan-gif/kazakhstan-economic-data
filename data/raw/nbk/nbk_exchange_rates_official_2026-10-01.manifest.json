@@ -1,0 +1,32 @@
+{
+  "downloaded_at": "2026-10-01T12:09:43.697774",
+  "source_url": "https://nationalbank.kz/ru/exchangerates/ezhednevnye-oficialnye-rynochnye-kursy-valyut/report",
+  "raw_file": "nbk_exchange_rates_official_2026-10-01.html",
+  "params": [
+    [
+      "rates[]",
+      "5"
+    ],
+    [
+      "rates[]",
+      "6"
+    ],
+    [
+      "rates[]",
+      "8"
+    ],
+    [
+      "rates[]",
+      "16"
+    ],
+    [
+      "beginDate",
+      "17.08.2026"
+    ],
+    [
+      "endDate",
+      "01.10.2026"
+    ]
+  ],
+  "read_by": "EXCHANGE_RATE, EXCHANGE_RATE_EUR, EXCHANGE_RATE_CNY, EXCHANGE_RATE_RUB"
+}

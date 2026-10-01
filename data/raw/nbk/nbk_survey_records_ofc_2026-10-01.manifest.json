@@ -1,0 +1,11 @@
+{
+  "downloaded_at": "2026-10-01T13:19:16.160926",
+  "source_url": "https://nationalbank.kz/ru/otherfinancialinstitutions/obzor-drugih-finansovyh-organizaciy-/records",
+  "params": {
+    "beginMount": 1,
+    "beginYear": 1990,
+    "endMount": 12,
+    "endYear": 2026
+  },
+  "read_by": "fetchers/nbk_records.py"
+}

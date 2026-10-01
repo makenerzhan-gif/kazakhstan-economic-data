@@ -1,0 +1,18 @@
+{
+  "downloaded_at": "2026-10-01T12:07:13.719457",
+  "raw_file": "bns_core_cpi_yoy_ex3_703082_taldau_2026-09-28.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "703082",
+    "p_keyword": "",
+    "p_period_id": "4",
+    "p_measure_id": "7",
+    "p_term_id": "741880",
+    "p_terms": "741880,2695732,4008742",
+    "p_dicIds": "67,848,2293",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}

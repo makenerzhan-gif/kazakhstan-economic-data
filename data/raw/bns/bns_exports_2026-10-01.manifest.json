@@ -1,0 +1,7 @@
+{
+  "downloaded_at": "2026-10-01T13:10:43.007691",
+  "source_url": "https://stat.gov.kz/api/iblock/element/446905/file/ru/",
+  "element_id": 446905,
+  "raw_file": "bns_exports_2026-09-16.xlsx",
+  "note": "read by the EXPORTS_*_BY_* datasets of config/dims.yaml (fetcher bns_trade)"
+}
