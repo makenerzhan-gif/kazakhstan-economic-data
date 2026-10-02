@@ -11,10 +11,10 @@
   "geography": "Kazakhstan (trade-weighted partners)",
   "methodology": "Percentage points, monthly: TONIA (monthly mean of KASE's daily index) minus the effective federal funds rate (FRED FEDFUNDS, monthly mean). The overnight tenge-dollar interest differential.",
   "publication_date": null,
-  "last_update_date": "2026-10-01",
-  "download_date": "2026-10-01",
+  "last_update_date": "2026-10-02",
+  "download_date": "2026-10-02",
   "period_start": "2001-09-01",
-  "period_end": "2026-08-01",
+  "period_end": "2026-09-01",
   "next_update_date": null,
   "transformation": "level",
   "revision_status": "original"

@@ -1,0 +1,18 @@
+{
+  "downloaded_at": "2026-10-02T12:52:05.481728",
+  "raw_file": "bns_import_price_index_yoy_by_hs_section_children_2026-09-27.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "request_body": {
+    "p_parent_id": "741897",
+    "p_index_id": "19073959",
+    "p_keyword": "",
+    "p_period_id": "4",
+    "p_measure_id": "0",
+    "p_term_id": "741897",
+    "p_terms": "741880,741897,2695732,19072559",
+    "p_dicIds": "67,146,848,4020",
+    "idx": "1",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}
