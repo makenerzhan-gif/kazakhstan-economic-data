@@ -4,3 +4,4 @@
 {"indicator_id": "KZ_EUROBOND_SPREAD", "period": "2026-09-01", "old_value": 83.3, "new_value": 79.5, "detected_date": "2026-10-01", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "KZ_EUROBOND_SPREAD", "period": "2026-09-01", "old_value": 79.5, "new_value": 75.7, "detected_date": "2026-10-02", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "KZ_EUROBOND_SPREAD", "period": "2026-10-01", "old_value": 80.5, "new_value": 90.7, "detected_date": "2026-10-02", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KZ_EUROBOND_SPREAD", "period": "2026-10-01", "old_value": 90.7, "new_value": 94.8, "detected_date": "2026-10-03", "source": "kase", "reason": "not stated by source"}

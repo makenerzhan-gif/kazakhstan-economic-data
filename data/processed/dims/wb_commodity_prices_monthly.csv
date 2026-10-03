@@ -31296,7 +31296,7 @@ date,region,item_code,item_name,value,transformation
 2004-01-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",212.8,level
 2004-01-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",198.0,level
 2004-01-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",171.0,level
-2004-01-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",198.8175,level
+2004-01-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",198.8,level
 2004-01-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",155.9,level
 2004-01-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",166.3,level
 2004-01-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.94,level
@@ -31367,7 +31367,7 @@ date,region,item_code,item_name,value,transformation
 2004-02-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",213.3,level
 2004-02-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",200.0,level
 2004-02-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",181.8,level
-2004-02-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",204.07,level
+2004-02-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",204.1,level
 2004-02-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",157.5,level
 2004-02-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",161.4,level
 2004-02-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.97,level
@@ -31438,7 +31438,7 @@ date,region,item_code,item_name,value,transformation
 2004-03-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",237.8,level
 2004-03-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",225.6,level
 2004-03-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",207.4,level
-2004-03-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",225.802,level
+2004-03-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",225.8,level
 2004-03-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",156.5,level
 2004-03-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",166.3,level
 2004-03-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.06,level
@@ -31509,7 +31509,7 @@ date,region,item_code,item_name,value,transformation
 2004-04-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",240.8,level
 2004-04-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",229.3,level
 2004-04-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",215.0,level
-2004-04-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",240.71,level
+2004-04-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",240.7,level
 2004-04-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",157.2,level
 2004-04-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",166.6,level
 2004-04-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.88,level
@@ -31580,7 +31580,7 @@ date,region,item_code,item_name,value,transformation
 2004-05-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",232.0,level
 2004-05-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",222.0,level
 2004-05-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",212.8,level
-2004-05-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",236.1425,level
+2004-05-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",236.1,level
 2004-05-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",148.3,level
 2004-05-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",163.7,level
 2004-05-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.92,level
@@ -31651,7 +31651,7 @@ date,region,item_code,item_name,value,transformation
 2004-06-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",229.0,level
 2004-06-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",219.8,level
 2004-06-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",212.5,level
-2004-06-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",230.742,level
+2004-06-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",230.7,level
 2004-06-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",137.2,level
 2004-06-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",154.7,level
 2004-06-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.85,level
@@ -31722,7 +31722,7 @@ date,region,item_code,item_name,value,transformation
 2004-07-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",230.8,level
 2004-07-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",221.0,level
 2004-07-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",210.0,level
-2004-07-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",228.9625,level
+2004-07-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",229.0,level
 2004-07-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",131.6,level
 2004-07-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",150.6,level
 2004-07-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.72,level
@@ -31793,7 +31793,7 @@ date,region,item_code,item_name,value,transformation
 2004-08-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",239.0,level
 2004-08-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",228.2,level
 2004-08-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",212.4,level
-2004-08-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",232.715,level
+2004-08-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",232.7,level
 2004-08-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",129.1,level
 2004-08-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",141.3,level
 2004-08-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.6,level
@@ -31864,7 +31864,7 @@ date,region,item_code,item_name,value,transformation
 2004-09-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",235.3,level
 2004-09-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",224.5,level
 2004-09-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",206.3,level
-2004-09-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",224.172,level
+2004-09-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",224.2,level
 2004-09-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",138.2,level
 2004-09-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",151.0,level
 2004-09-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.8,level
@@ -31935,7 +31935,7 @@ date,region,item_code,item_name,value,transformation
 2004-10-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",244.0,level
 2004-10-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",230.3,level
 2004-10-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",201.3,level
-2004-10-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",222.145,level
+2004-10-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",222.1,level
 2004-10-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",141.4,level
 2004-10-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",150.1,level
 2004-10-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.77,level
@@ -32006,7 +32006,7 @@ date,region,item_code,item_name,value,transformation
 2004-11-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",259.2,level
 2004-11-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",244.8,level
 2004-11-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",211.6,level
-2004-11-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",233.07,level
+2004-11-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",233.1,level
 2004-11-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",140.8,level
 2004-11-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",156.6,level
 2004-11-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.09,level
@@ -32077,7 +32077,7 @@ date,region,item_code,item_name,value,transformation
 2004-12-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",278.3,level
 2004-12-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",261.8,level
 2004-12-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",219.8,level
-2004-12-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",238.512,level
+2004-12-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",238.5,level
 2004-12-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",139.5,level
 2004-12-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",153.9,level
 2004-12-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.1,level
@@ -32148,7 +32148,7 @@ date,region,item_code,item_name,value,transformation
 2005-01-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",287.0,level
 2005-01-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",268.6,level
 2005-01-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",226.2,level
-2005-01-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",255.3225,level
+2005-01-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",255.3,level
 2005-01-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",142.5,level
 2005-01-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",153.6,level
 2005-01-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.15,level
@@ -32219,7 +32219,7 @@ date,region,item_code,item_name,value,transformation
 2005-02-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",290.0,level
 2005-02-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",270.5,level
 2005-02-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",231.8,level
-2005-02-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",265.6425,level
+2005-02-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",265.6,level
 2005-02-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",141.6,level
 2005-02-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",151.2,level
 2005-02-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.31,level
@@ -32290,7 +32290,7 @@ date,region,item_code,item_name,value,transformation
 2005-03-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",292.8,level
 2005-03-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",272.5,level
 2005-03-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",230.0,level
-2005-03-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",262.916,level
+2005-03-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",262.9,level
 2005-03-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",152.2,level
 2005-03-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",151.0,level
 2005-03-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.39,level
@@ -32361,7 +32361,7 @@ date,region,item_code,item_name,value,transformation
 2005-04-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",297.3,level
 2005-04-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",276.3,level
 2005-04-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",225.5,level
-2005-04-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",259.925,level
+2005-04-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",259.9,level
 2005-04-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",132.1,level
 2005-04-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",140.9,level
 2005-04-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.33,level
@@ -32432,7 +32432,7 @@ date,region,item_code,item_name,value,transformation
 2005-05-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",293.8,level
 2005-05-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",272.6,level
 2005-05-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",220.4,level
-2005-05-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",256.145,level
+2005-05-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",256.1,level
 2005-05-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",133.1,level
 2005-05-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",143.3,level
 2005-05-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.47,level
@@ -32503,7 +32503,7 @@ date,region,item_code,item_name,value,transformation
 2005-06-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",285.0,level
 2005-06-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",262.5,level
 2005-06-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",210.8,level
-2005-06-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",241.488,level
+2005-06-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",241.5,level
 2005-06-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",131.1,level
 2005-06-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",141.9,level
 2005-06-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.23,level
@@ -32574,7 +32574,7 @@ date,region,item_code,item_name,value,transformation
 2005-07-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",276.8,level
 2005-07-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",256.5,level
 2005-07-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",207.3,level
-2005-07-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",237.285,level
+2005-07-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",237.3,level
 2005-07-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",130.9,level
 2005-07-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",143.9,level
 2005-07-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.91,level
@@ -32645,7 +32645,7 @@ date,region,item_code,item_name,value,transformation
 2005-08-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",282.8,level
 2005-08-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",261.4,level
 2005-08-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",212.8,level
-2005-08-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",255.654,level
+2005-08-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",255.7,level
 2005-08-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",131.8,level
 2005-08-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",149.4,level
 2005-08-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.0,level
@@ -32716,7 +32716,7 @@ date,region,item_code,item_name,value,transformation
 2005-09-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",285.3,level
 2005-09-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",264.3,level
 2005-09-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",215.5,level
-2005-09-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",256.9975,level
+2005-09-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",257.0,level
 2005-09-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",128.2,level
 2005-09-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",159.7,level
 2005-09-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.1,level
@@ -32787,7 +32787,7 @@ date,region,item_code,item_name,value,transformation
 2005-10-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",286.4,level
 2005-10-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",265.2,level
 2005-10-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",217.4,level
-2005-10-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",269.3575,level
+2005-10-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",269.4,level
 2005-10-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",135.3,level
 2005-10-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",167.8,level
 2005-10-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.06,level
@@ -32999,7 +32999,7 @@ date,region,item_code,item_name,value,transformation
 2006-01-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",291.3,level
 2006-01-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",266.3,level
 2006-01-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",211.0,level
-2006-01-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",263.85666666667,level
+2006-01-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",263.9,level
 2006-01-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",144.2,level
 2006-01-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",167.2,level
 2006-01-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.95,level
@@ -33070,7 +33070,7 @@ date,region,item_code,item_name,value,transformation
 2006-02-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",301.5,level
 2006-02-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",274.8,level
 2006-02-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",216.8,level
-2006-02-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",264.2875,level
+2006-02-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",264.3,level
 2006-02-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",149.2,level
 2006-02-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",179.8,level
 2006-02-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.0,level
@@ -33141,7 +33141,7 @@ date,region,item_code,item_name,value,transformation
 2006-03-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",303.5,level
 2006-03-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",274.5,level
 2006-03-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",216.5,level
-2006-03-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",244.856,level
+2006-03-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",244.9,level
 2006-03-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",142.7,level
 2006-03-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",174.4,level
 2006-03-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.0,level
@@ -33212,7 +33212,7 @@ date,region,item_code,item_name,value,transformation
 2006-04-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",302.3,level
 2006-04-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",271.5,level
 2006-04-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",218.5,level
-2006-04-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",244.25,level
+2006-04-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",244.3,level
 2006-04-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",140.8,level
 2006-04-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",180.3,level
 2006-04-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.97,level
@@ -33283,7 +33283,7 @@ date,region,item_code,item_name,value,transformation
 2006-05-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",308.0,level
 2006-05-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",276.0,level
 2006-05-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",219.4,level
-2006-05-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",256.228,level
+2006-05-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",256.2,level
 2006-05-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",150.9,level
 2006-05-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",193.2,level
 2006-05-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.05,level
@@ -33354,7 +33354,7 @@ date,region,item_code,item_name,value,transformation
 2006-06-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",312.5,level
 2006-06-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",280.5,level
 2006-06-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",216.5,level
-2006-06-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",259.4275,level
+2006-06-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",259.4,level
 2006-06-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",140.1,level
 2006-06-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",195.2,level
 2006-06-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.95,level
@@ -33425,7 +33425,7 @@ date,region,item_code,item_name,value,transformation
 2006-07-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",315.4,level
 2006-07-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",286.6,level
 2006-07-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",218.6,level
-2006-07-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",257.43,level
+2006-07-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",257.4,level
 2006-07-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",143.9,level
 2006-07-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",202.4,level
 2006-07-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.75,level
@@ -33496,7 +33496,7 @@ date,region,item_code,item_name,value,transformation
 2006-08-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",312.7,level
 2006-08-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",284.3,level
 2006-08-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",220.0,level
-2006-08-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",263.628,level
+2006-08-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",263.6,level
 2006-08-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",148.4,level
 2006-08-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",189.9,level
 2006-08-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.76,level
@@ -33567,7 +33567,7 @@ date,region,item_code,item_name,value,transformation
 2006-09-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",309.2,level
 2006-09-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",282.8,level
 2006-09-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",224.4,level
-2006-09-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",267.71,level
+2006-09-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",267.7,level
 2006-09-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",166.9,level
 2006-09-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",196.0,level
 2006-09-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.8,level
@@ -33638,7 +33638,7 @@ date,region,item_code,item_name,value,transformation
 2006-10-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",301.0,level
 2006-10-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",274.8,level
 2006-10-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",223.5,level
-2006-10-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",283.2125,level
+2006-10-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",283.2,level
 2006-10-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",197.8,level
 2006-10-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",212.1,level
 2006-10-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.79,level
@@ -33990,7 +33990,7 @@ date,region,item_code,item_name,value,transformation
 2007-03-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",318.7,level
 2007-03-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",299.3,level
 2007-03-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",262.3,level
-2007-03-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",304.93,level
+2007-03-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",304.9,level
 2007-03-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",168.5,level
 2007-03-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",199.1,level
 2007-03-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.06,level
@@ -34061,7 +34061,7 @@ date,region,item_code,item_name,value,transformation
 2007-04-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",316.5,level
 2007-04-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",296.0,level
 2007-04-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",258.5,level
-2007-04-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",302.25,level
+2007-04-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",302.3,level
 2007-04-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",175.3,level
 2007-04-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",198.3,level
 2007-04-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.12,level
@@ -34132,7 +34132,7 @@ date,region,item_code,item_name,value,transformation
 2007-05-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",317.6,level
 2007-05-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",295.8,level
 2007-05-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",255.4,level
-2007-05-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",300.355,level
+2007-05-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",300.4,level
 2007-05-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",180.8,level
 2007-05-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",195.7,level
 2007-05-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.04,level
@@ -34203,7 +34203,7 @@ date,region,item_code,item_name,value,transformation
 2007-06-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",323.3,level
 2007-06-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",300.5,level
 2007-06-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",257.0,level
-2007-06-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",302.486,level
+2007-06-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",302.5,level
 2007-06-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",205.0,level
 2007-06-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",223.0,level
 2007-06-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.98,level
@@ -34274,7 +34274,7 @@ date,region,item_code,item_name,value,transformation
 2007-07-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",328.8,level
 2007-07-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",306.8,level
 2007-07-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",260.4,level
-2007-07-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",302.7125,level
+2007-07-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",302.7,level
 2007-07-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",225.6,level
 2007-07-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",238.4,level
 2007-07-01,world,BANANA_EU,"Бананы, Европа, $/кг",0.95,level
@@ -34416,7 +34416,7 @@ date,region,item_code,item_name,value,transformation
 2007-09-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",325.0,level
 2007-09-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",306.3,level
 2007-09-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",272.3,level
-2007-09-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",315.25,level
+2007-09-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",315.3,level
 2007-09-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",323.0,level
 2007-09-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",326.5,level
 2007-09-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.11,level
@@ -49861,7 +49861,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,world,GRNUT,"Арахис, $/м.т.",1206.0,level
 2026-01-01,world,FISH_MEAL,"Рыбная мука, $/м.т.",1820.0,level
 2026-01-01,world,GRNUT_OIL,"Арахисовое масло, $/м.т.",1723.0,level
-2026-01-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1005.0,level
+2026-01-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1013.0,level
 2026-01-01,world,PLMKRNL_OIL,"Пальмоядровое масло, $/м.т.",2125.0,level
 2026-01-01,world,SOYBEANS,"Соевые бобы, $/м.т.",425.0,level
 2026-01-01,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1154.0,level
@@ -49929,7 +49929,7 @@ date,region,item_code,item_name,value,transformation
 2026-02-01,world,GRNUT,"Арахис, $/м.т.",1238.0,level
 2026-02-01,world,FISH_MEAL,"Рыбная мука, $/м.т.",1840.0,level
 2026-02-01,world,GRNUT_OIL,"Арахисовое масло, $/м.т.",1800.0,level
-2026-02-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1039.0,level
+2026-02-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1064.0,level
 2026-02-01,world,PLMKRNL_OIL,"Пальмоядровое масло, $/м.т.",2295.0,level
 2026-02-01,world,SOYBEANS,"Соевые бобы, $/м.т.",459.0,level
 2026-02-01,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1282.0,level
@@ -49997,7 +49997,7 @@ date,region,item_code,item_name,value,transformation
 2026-03-01,world,GRNUT,"Арахис, $/м.т.",1250.0,level
 2026-03-01,world,FISH_MEAL,"Рыбная мука, $/м.т.",1837.0,level
 2026-03-01,world,GRNUT_OIL,"Арахисовое масло, $/м.т.",1682.0,level
-2026-03-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1109.0,level
+2026-03-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1167.0,level
 2026-03-01,world,PLMKRNL_OIL,"Пальмоядровое масло, $/м.т.",2574.0,level
 2026-03-01,world,SOYBEANS,"Соевые бобы, $/м.т.",473.0,level
 2026-03-01,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1493.0,level
@@ -50065,7 +50065,7 @@ date,region,item_code,item_name,value,transformation
 2026-04-01,world,GRNUT,"Арахис, $/м.т.",1250.0,level
 2026-04-01,world,FISH_MEAL,"Рыбная мука, $/м.т.",1946.0,level
 2026-04-01,world,GRNUT_OIL,"Арахисовое масло, $/м.т.",1906.0,level
-2026-04-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1146.0,level
+2026-04-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1181.0,level
 2026-04-01,world,PLMKRNL_OIL,"Пальмоядровое масло, $/м.т.",2606.0,level
 2026-04-01,world,SOYBEANS,"Соевые бобы, $/м.т.",463.0,level
 2026-04-01,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1643.0,level
@@ -50133,7 +50133,7 @@ date,region,item_code,item_name,value,transformation
 2026-05-01,world,GRNUT,"Арахис, $/м.т.",1250.0,level
 2026-05-01,world,FISH_MEAL,"Рыбная мука, $/м.т.",2045.0,level
 2026-05-01,world,GRNUT_OIL,"Арахисовое масло, $/м.т.",1831.0,level
-2026-05-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1136.0,level
+2026-05-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1168.0,level
 2026-05-01,world,PLMKRNL_OIL,"Пальмоядровое масло, $/м.т.",2416.0,level
 2026-05-01,world,SOYBEANS,"Соевые бобы, $/м.т.",473.0,level
 2026-05-01,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1781.0,level
@@ -50201,7 +50201,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,world,GRNUT,"Арахис, $/м.т.",1250.0,level
 2026-06-01,world,FISH_MEAL,"Рыбная мука, $/м.т.",2145.0,level
 2026-06-01,world,GRNUT_OIL,"Арахисовое масло, $/м.т.",1790.0,level
-2026-06-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1104.0,level
+2026-06-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1142.0,level
 2026-06-01,world,PLMKRNL_OIL,"Пальмоядровое масло, $/м.т.",2166.0,level
 2026-06-01,world,SOYBEANS,"Соевые бобы, $/м.т.",464.0,level
 2026-06-01,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1740.0,level
@@ -50269,7 +50269,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,world,GRNUT,"Арахис, $/м.т.",1250.0,level
 2026-07-01,world,FISH_MEAL,"Рыбная мука, $/м.т.",2103.0,level
 2026-07-01,world,GRNUT_OIL,"Арахисовое масло, $/м.т.",1691.0,level
-2026-07-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1101.0,level
+2026-07-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1133.0,level
 2026-07-01,world,PLMKRNL_OIL,"Пальмоядровое масло, $/м.т.",2413.0,level
 2026-07-01,world,SOYBEANS,"Соевые бобы, $/м.т.",478.0,level
 2026-07-01,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1658.0,level
@@ -50292,6 +50292,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,world,SUGAR_EU,"Сахар, ЕС, $/кг",0.37,level
 2026-07-01,world,SUGAR_US,"Сахар, США, $/кг",0.79,level
 2026-07-01,world,SUGAR_WLD,"Сахар, мир, $/кг",0.34,level
+2026-07-01,world,TOBAC_US,"Табак, США (импортная цена), $/м.т.",6775.0,level
 2026-07-01,world,LOGS_CMR,"Бревна, Африка (Камерун), $/куб.м.",399.7,level
 2026-07-01,world,LOGS_MYS,"Бревна, Юго-Восточная Азия (Малайзия), $/куб.м.",183.2,level
 2026-07-01,world,SAWNWD_CMR,"Пиломатериалы, Африка (Камерун), $/куб.м.",640.9,level
@@ -50323,8 +50324,8 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,world,COAL_SAFRICA,"Уголь, ЮАР, $/м.т.",96.8,level
 2026-08-01,world,NGAS_US,"Природный газ, США, $/млн брит. тепл. ед.",2.77,level
 2026-08-01,world,NGAS_EUR,"Природный газ, Европа, $/млн брит. тепл. ед.",21.11,level
-2026-08-01,world,NGAS_JP,"Сжиженный природный газ, Япония, $/млн брит. тепл. ед.",13.94,level
-2026-08-01,world,NGAS_INDEX,"Индекс цен на природный газ, 2010=100",143.4,level
+2026-08-01,world,NGAS_JP,"Сжиженный природный газ, Япония, $/млн брит. тепл. ед.",15.27,level
+2026-08-01,world,NGAS_INDEX,"Индекс цен на природный газ, 2010=100",144.3,level
 2026-08-01,world,COCOA,"Какао, $/кг",5.95,level
 2026-08-01,world,COFFEE_ARABIC,"Кофе, арабика, $/кг",7.97,level
 2026-08-01,world,COFFEE_ROBUS,"Кофе, робуста, $/кг",3.98,level
@@ -50332,17 +50333,17 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,world,TEA_COLOMBO,"Чай, Коломбо, $/кг",3.61,level
 2026-08-01,world,TEA_KOLKATA,"Чай, Калькутта, $/кг",2.85,level
 2026-08-01,world,TEA_MOMBASA,"Чай, Момбаса, $/кг",2.25,level
-2026-08-01,world,COCONUT_OIL,"Кокосовое масло, $/м.т.",1853.0,level
-2026-08-01,world,GRNUT,"Арахис, $/м.т.",1250.0,level
-2026-08-01,world,FISH_MEAL,"Рыбная мука, $/м.т.",2500.0,level
+2026-08-01,world,COCONUT_OIL,"Кокосовое масло, $/м.т.",1981.0,level
+2026-08-01,world,GRNUT,"Арахис, $/м.т.",1500.0,level
+2026-08-01,world,FISH_MEAL,"Рыбная мука, $/м.т.",2605.0,level
 2026-08-01,world,GRNUT_OIL,"Арахисовое масло, $/м.т.",1833.0,level
-2026-08-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1117.0,level
+2026-08-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1132.0,level
 2026-08-01,world,PLMKRNL_OIL,"Пальмоядровое масло, $/м.т.",2264.0,level
 2026-08-01,world,SOYBEANS,"Соевые бобы, $/м.т.",482.0,level
-2026-08-01,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1638.0,level
-2026-08-01,world,SOYBEAN_MEAL,"Соевый шрот, $/м.т.",403.0,level
+2026-08-01,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1639.0,level
+2026-08-01,world,SOYBEAN_MEAL,"Соевый шрот, $/м.т.",406.0,level
 2026-08-01,world,RAPESEED_OIL,"Рапсовое масло, $/м.т.",1474.0,level
-2026-08-01,world,SUNFLOWER_OIL,"Подсолнечное масло, $/м.т.",1492.0,level
+2026-08-01,world,SUNFLOWER_OIL,"Подсолнечное масло, $/м.т.",1484.0,level
 2026-08-01,world,MAIZE,"Маис, $/м.т.",224.0,level
 2026-08-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",471.0,level
 2026-08-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",447.0,level
@@ -50382,3 +50383,70 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,world,GOLD,"Золото, $/тройская унция",4411.0,level
 2026-08-01,world,PLATINUM,"Платина, $/тройская унция",1780.0,level
 2026-08-01,world,SILVER,"Серебро, $/тройская унция",65.4,level
+2026-09-01,world,CRUDE_PETRO,"Нефть, средняя (Brent, Dubai, WTI), $/баррель",102.3,level
+2026-09-01,world,CRUDE_BRENT,"Сырая нефть марки Брент, $/баррель",116.8,level
+2026-09-01,world,CRUDE_DUBAI,"Сырая нефть Dubai, $/баррель",93.3,level
+2026-09-01,world,CRUDE_WTI,"Сырая нефть WTI, $/баррель",96.9,level
+2026-09-01,world,COAL_AUS,"Уголь, Австралия, $/м.т.",147.1,level
+2026-09-01,world,COAL_SAFRICA,"Уголь, ЮАР, $/м.т.",98.2,level
+2026-09-01,world,NGAS_US,"Природный газ, США, $/млн брит. тепл. ед.",2.95,level
+2026-09-01,world,NGAS_EUR,"Природный газ, Европа, $/млн брит. тепл. ед.",25.42,level
+2026-09-01,world,NGAS_JP,"Сжиженный природный газ, Япония, $/млн брит. тепл. ед.",14.25,level
+2026-09-01,world,NGAS_INDEX,"Индекс цен на природный газ, 2010=100",166.4,level
+2026-09-01,world,COCOA,"Какао, $/кг",5.92,level
+2026-09-01,world,COFFEE_ARABIC,"Кофе, арабика, $/кг",7.26,level
+2026-09-01,world,COFFEE_ROBUS,"Кофе, робуста, $/кг",3.69,level
+2026-09-01,world,TEA_AVG,"Чай, средний (3 аукциона), $/кг",2.85,level
+2026-09-01,world,TEA_COLOMBO,"Чай, Коломбо, $/кг",3.73,level
+2026-09-01,world,TEA_KOLKATA,"Чай, Калькутта, $/кг",2.53,level
+2026-09-01,world,TEA_MOMBASA,"Чай, Момбаса, $/кг",2.3,level
+2026-09-01,world,COCONUT_OIL,"Кокосовое масло, $/м.т.",2083.0,level
+2026-09-01,world,GRNUT,"Арахис, $/м.т.",1563.0,level
+2026-09-01,world,FISH_MEAL,"Рыбная мука, $/м.т.",2916.0,level
+2026-09-01,world,GRNUT_OIL,"Арахисовое масло, $/м.т.",1860.0,level
+2026-09-01,world,PALM_OIL,"Пальмовое масло, $/м.т.",1180.0,level
+2026-09-01,world,PLMKRNL_OIL,"Пальмоядровое масло, $/м.т.",2355.0,level
+2026-09-01,world,SOYBEANS,"Соевые бобы, $/м.т.",524.0,level
+2026-09-01,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1615.0,level
+2026-09-01,world,SOYBEAN_MEAL,"Соевый шрот, $/м.т.",447.0,level
+2026-09-01,world,RAPESEED_OIL,"Рапсовое масло, $/м.т.",1440.0,level
+2026-09-01,world,SUNFLOWER_OIL,"Подсолнечное масло, $/м.т.",1390.0,level
+2026-09-01,world,MAIZE,"Маис, $/м.т.",239.6,level
+2026-09-01,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",482.0,level
+2026-09-01,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",461.0,level
+2026-09-01,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",473.2,level
+2026-09-01,world,RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.",418.5,level
+2026-09-01,world,WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.",278.6,level
+2026-09-01,world,WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.",347.0,level
+2026-09-01,world,BANANA_EU,"Бананы, Европа, $/кг",1.12,level
+2026-09-01,world,BANANA_US,"Бананы, США, $/кг",1.12,level
+2026-09-01,world,ORANGE,"Апельсины, $/кг",0.79,level
+2026-09-01,world,BEEF,"Говядина, $/кг",6.86,level
+2026-09-01,world,CHICKEN,"Курица, $/кг",1.81,level
+2026-09-01,world,LAMB,"Баранина, $/кг",7.26,level
+2026-09-01,world,SUGAR_EU,"Сахар, ЕС, $/кг",0.38,level
+2026-09-01,world,SUGAR_US,"Сахар, США, $/кг",0.85,level
+2026-09-01,world,SUGAR_WLD,"Сахар, мир, $/кг",0.41,level
+2026-09-01,world,LOGS_CMR,"Бревна, Африка (Камерун), $/куб.м.",402.9,level
+2026-09-01,world,LOGS_MYS,"Бревна, Юго-Восточная Азия (Малайзия), $/куб.м.",190.3,level
+2026-09-01,world,SAWNWD_CMR,"Пиломатериалы, Африка (Камерун), $/куб.м.",642.9,level
+2026-09-01,world,SAWNWD_MYS,"Пиломатериалы, Юго-Восточная Азия (Малайзия), $/куб.м.",731.3,level
+2026-09-01,world,PLYWOOD,"Фанера, ¢/лист",349.1,level
+2026-09-01,world,COTTON_A_INDX,"Хлопок, индекс A, $/кг",2.1,level
+2026-09-01,world,RUBBER_TSR20,"Каучук, TSR20, $/кг",2.41,level
+2026-09-01,world,RUBBER1_MYSG,"Каучук, RSS3, $/кг",2.75,level
+2026-09-01,world,PHOSROCK,"Фосфатная порода, $/м.т.",170.0,level
+2026-09-01,world,DAP,"Диаммоний фосфат (DAP), $/м.т.",800.6,level
+2026-09-01,world,TSP,"Тройной суперфосфат (TSP), $/м.т.",690.0,level
+2026-09-01,world,UREA_EE_BULK,"Карбамид, Восточная Европа, $/м.т.",407.5,level
+2026-09-01,world,POTASH,"Хлорид калия, $/м.т.",367.5,level
+2026-09-01,world,ALUMINUM,"Алюминий, $/м.т.",3283.0,level
+2026-09-01,world,IRON_ORE,"Железная руда, $/сух. м.т.",97.7,level
+2026-09-01,world,COPPER,"Медь, $/м.т.",14474.0,level
+2026-09-01,world,LEAD,"Свинец, $/м.т.",1873.0,level
+2026-09-01,world,TIN,"Олово, $/м.т.",53712.0,level
+2026-09-01,world,NICKEL,"Никель, $/м.т.",16324.0,level
+2026-09-01,world,ZINC,"Цинк, $/м.т.",4021.0,level
+2026-09-01,world,GOLD,"Золото, $/тройская унция",4319.0,level
+2026-09-01,world,PLATINUM,"Платина, $/тройская унция",1784.0,level
+2026-09-01,world,SILVER,"Серебро, $/тройская унция",64.6,level

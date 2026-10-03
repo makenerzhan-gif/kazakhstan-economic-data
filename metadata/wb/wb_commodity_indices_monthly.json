@@ -9,13 +9,13 @@
   "unit": "index, 2010=100",
   "currency": "",
   "geography": "World (benchmark prices)",
-  "methodology": " File release: September 02, 2026.",
-  "publication_date": "September 02, 2026",
-  "last_update_date": "2026-10-02",
-  "download_date": "2026-10-02",
+  "methodology": " File release: October 02, 2026.",
+  "publication_date": "October 02, 2026",
+  "last_update_date": "2026-10-03",
+  "download_date": "2026-10-03",
   "period_start": "1960-01-01",
-  "period_end": "2026-08-01",
+  "period_end": "2026-09-01",
   "next_update_date": null,
   "transformation": "level",
-  "revision_status": "original"
+  "revision_status": "revised"
 }

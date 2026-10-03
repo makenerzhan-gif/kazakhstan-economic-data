@@ -1,0 +1,11 @@
+{
+  "downloaded_at": "2026-10-03T11:03:53.126217",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "481",
+  "n_pages": 58,
+  "total_rows": 28704,
+  "rows_archived": 28704,
+  "raw_file": "nbk_current_account_balance_2026-09-26_142446.json",
+  "raw_format": "nbk-open-data-form/canonical-v1",
+  "raw_normalisation": "all rows of all pages, unchanged and none dropped, sorted by report_date then full row content; page envelope fields common to all pages kept once; distinct column entries of all pages, sorted; keys sorted. Page boundaries and the API's row order are not kept (they vary between identical downloads)."
+}

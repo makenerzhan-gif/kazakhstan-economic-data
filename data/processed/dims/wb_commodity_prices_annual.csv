@@ -36,6 +36,7 @@ date,region,item_code,item_name,value,transformation
 1960-12-31,world,COTTON_A_INDX,"Хлопок, индекс A, $/кг",0.65,level
 1960-12-31,world,RUBBER1_MYSG,"Каучук, RSS3, $/кг",0.78,level
 1960-12-31,world,PHOSROCK,"Фосфатная порода, $/м.т.",13.0,level
+1960-12-31,world,DAP,"Диаммоний фосфат (DAP), $/м.т.",68.5,level
 1960-12-31,world,TSP,"Тройной суперфосфат (TSP), $/м.т.",53.0,level
 1960-12-31,world,UREA_EE_BULK,"Карбамид, Восточная Европа, $/м.т.",42.3,level
 1960-12-31,world,POTASH,"Хлорид калия, $/м.т.",28.5,level
@@ -86,6 +87,7 @@ date,region,item_code,item_name,value,transformation
 1961-12-31,world,COTTON_A_INDX,"Хлопок, индекс A, $/кг",0.67,level
 1961-12-31,world,RUBBER1_MYSG,"Каучук, RSS3, $/кг",0.6,level
 1961-12-31,world,PHOSROCK,"Фосфатная порода, $/м.т.",13.0,level
+1961-12-31,world,DAP,"Диаммоний фосфат (DAP), $/м.т.",68.5,level
 1961-12-31,world,TSP,"Тройной суперфосфат (TSP), $/м.т.",52.0,level
 1961-12-31,world,UREA_EE_BULK,"Карбамид, Восточная Европа, $/м.т.",42.3,level
 1961-12-31,world,POTASH,"Хлорид калия, $/м.т.",30.0,level
@@ -136,6 +138,7 @@ date,region,item_code,item_name,value,transformation
 1962-12-31,world,COTTON_A_INDX,"Хлопок, индекс A, $/кг",0.65,level
 1962-12-31,world,RUBBER1_MYSG,"Каучук, RSS3, $/кг",0.56,level
 1962-12-31,world,PHOSROCK,"Фосфатная порода, $/м.т.",11.5,level
+1962-12-31,world,DAP,"Диаммоний фосфат (DAP), $/м.т.",68.5,level
 1962-12-31,world,TSP,"Тройной суперфосфат (TSP), $/м.т.",51.0,level
 1962-12-31,world,UREA_EE_BULK,"Карбамид, Восточная Европа, $/м.т.",42.3,level
 1962-12-31,world,POTASH,"Хлорид калия, $/м.т.",30.0,level
@@ -186,6 +189,7 @@ date,region,item_code,item_name,value,transformation
 1963-12-31,world,COTTON_A_INDX,"Хлопок, индекс A, $/кг",0.65,level
 1963-12-31,world,RUBBER1_MYSG,"Каучук, RSS3, $/кг",0.52,level
 1963-12-31,world,PHOSROCK,"Фосфатная порода, $/м.т.",11.5,level
+1963-12-31,world,DAP,"Диаммоний фосфат (DAP), $/м.т.",68.5,level
 1963-12-31,world,TSP,"Тройной суперфосфат (TSP), $/м.т.",52.0,level
 1963-12-31,world,UREA_EE_BULK,"Карбамид, Восточная Европа, $/м.т.",42.3,level
 1963-12-31,world,POTASH,"Хлорид калия, $/м.т.",30.0,level
@@ -236,6 +240,7 @@ date,region,item_code,item_name,value,transformation
 1964-12-31,world,COTTON_A_INDX,"Хлопок, индекс A, $/кг",0.65,level
 1964-12-31,world,RUBBER1_MYSG,"Каучук, RSS3, $/кг",0.49,level
 1964-12-31,world,PHOSROCK,"Фосфатная порода, $/м.т.",12.5,level
+1964-12-31,world,DAP,"Диаммоний фосфат (DAP), $/м.т.",68.5,level
 1964-12-31,world,TSP,"Тройной суперфосфат (TSP), $/м.т.",53.0,level
 1964-12-31,world,UREA_EE_BULK,"Карбамид, Восточная Европа, $/м.т.",60.5,level
 1964-12-31,world,POTASH,"Хлорид калия, $/м.т.",32.5,level
@@ -286,6 +291,7 @@ date,region,item_code,item_name,value,transformation
 1965-12-31,world,COTTON_A_INDX,"Хлопок, индекс A, $/кг",0.64,level
 1965-12-31,world,RUBBER1_MYSG,"Каучук, RSS3, $/кг",0.5,level
 1965-12-31,world,PHOSROCK,"Фосфатная порода, $/м.т.",14.0,level
+1965-12-31,world,DAP,"Диаммоний фосфат (DAP), $/м.т.",68.5,level
 1965-12-31,world,TSP,"Тройной суперфосфат (TSP), $/м.т.",54.0,level
 1965-12-31,world,UREA_EE_BULK,"Карбамид, Восточная Европа, $/м.т.",65.8,level
 1965-12-31,world,POTASH,"Хлорид калия, $/м.т.",29.5,level
@@ -336,6 +342,7 @@ date,region,item_code,item_name,value,transformation
 1966-12-31,world,COTTON_A_INDX,"Хлопок, индекс A, $/кг",0.62,level
 1966-12-31,world,RUBBER1_MYSG,"Каучук, RSS3, $/кг",0.47,level
 1966-12-31,world,PHOSROCK,"Фосфатная порода, $/м.т.",13.0,level
+1966-12-31,world,DAP,"Диаммоний фосфат (DAP), $/м.т.",68.5,level
 1966-12-31,world,TSP,"Тройной суперфосфат (TSP), $/м.т.",50.0,level
 1966-12-31,world,UREA_EE_BULK,"Карбамид, Восточная Европа, $/м.т.",59.3,level
 1966-12-31,world,POTASH,"Хлорид калия, $/м.т.",27.5,level
@@ -3791,7 +3798,9 @@ date,region,item_code,item_name,value,transformation
 2021-12-31,world,SOYBEANS,"Соевые бобы, $/м.т.",583.0,level
 2021-12-31,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1385.0,level
 2021-12-31,world,SOYBEAN_MEAL,"Соевый шрот, $/м.т.",481.0,level
+2021-12-31,world,BARLEY,"Ячмень, $/м.т.",123.8,level
 2021-12-31,world,MAIZE,"Маис, $/м.т.",259.5,level
+2021-12-31,world,SORGHUM,"Сорго, $/м.т.",233.4,level
 2021-12-31,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",458.3,level
 2021-12-31,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",448.3,level
 2021-12-31,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",436.1,level
@@ -3858,7 +3867,9 @@ date,region,item_code,item_name,value,transformation
 2022-12-31,world,SOYBEANS,"Соевые бобы, $/м.т.",675.0,level
 2022-12-31,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1667.0,level
 2022-12-31,world,SOYBEAN_MEAL,"Соевый шрот, $/м.т.",548.0,level
+2022-12-31,world,BARLEY,"Ячмень, $/м.т.",204.6,level
 2022-12-31,world,MAIZE,"Маис, $/м.т.",318.8,level
+2022-12-31,world,SORGHUM,"Сорго, $/м.т.",309.8,level
 2022-12-31,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",436.8,level
 2022-12-31,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",429.7,level
 2022-12-31,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",417.7,level
@@ -3925,7 +3936,9 @@ date,region,item_code,item_name,value,transformation
 2023-12-31,world,SOYBEANS,"Соевые бобы, $/м.т.",598.0,level
 2023-12-31,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1119.0,level
 2023-12-31,world,SOYBEAN_MEAL,"Соевый шрот, $/м.т.",541.0,level
+2023-12-31,world,BARLEY,"Ячмень, $/м.т.",208.7,level
 2023-12-31,world,MAIZE,"Маис, $/м.т.",252.7,level
+2023-12-31,world,SORGHUM,"Сорго, $/м.т.",292.9,level
 2023-12-31,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",553.7,level
 2023-12-31,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",532.9,level
 2023-12-31,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",536.2,level
@@ -3992,7 +4005,9 @@ date,region,item_code,item_name,value,transformation
 2024-12-31,world,SOYBEANS,"Соевые бобы, $/м.т.",462.0,level
 2024-12-31,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1022.0,level
 2024-12-31,world,SOYBEAN_MEAL,"Соевый шрот, $/м.т.",442.0,level
+2024-12-31,world,BARLEY,"Ячмень, $/м.т.",183.9,level
 2024-12-31,world,MAIZE,"Маис, $/м.т.",190.6,level
+2024-12-31,world,SORGHUM,"Сорго, $/м.т.",236.8,level
 2024-12-31,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",588.4,level
 2024-12-31,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",559.1,level
 2024-12-31,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",572.7,level
@@ -4058,7 +4073,9 @@ date,region,item_code,item_name,value,transformation
 2025-12-31,world,SOYBEANS,"Соевые бобы, $/м.т.",414.0,level
 2025-12-31,world,SOYBEAN_OIL,"Соевое масло, $/м.т.",1140.0,level
 2025-12-31,world,SOYBEAN_MEAL,"Соевый шрот, $/м.т.",366.0,level
+2025-12-31,world,BARLEY,"Ячмень, $/м.т.",170.6,level
 2025-12-31,world,MAIZE,"Маис, $/м.т.",203.2,level
+2025-12-31,world,SORGHUM,"Сорго, $/м.т.",214.9,level
 2025-12-31,world,RICE_05,"Рис, Таиланд, 5%, $/м.т.",407.8,level
 2025-12-31,world,RICE_25,"Рис, Таиланд, 25%, $/м.т.",396.4,level
 2025-12-31,world,RICE_A1,"Рис, Таиланд, A.1, $/м.т.",386.3,level
