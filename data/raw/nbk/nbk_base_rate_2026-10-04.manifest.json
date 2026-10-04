@@ -1,0 +1,8 @@
+{
+  "downloaded_at": "2026-10-04T11:37:44.883880",
+  "source_url": "https://data.nationalbank.kz/api/v1/data/base-rate",
+  "params": {
+    "from": "2000-01-01",
+    "to": "2027-10-04"
+  }
+}
