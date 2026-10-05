@@ -2,3 +2,4 @@
 {"indicator_id": "GS_YIELD_5Y", "period": "2026-09-01", "old_value": 13.4096, "new_value": 13.4066, "detected_date": "2026-09-29", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "GS_YIELD_5Y", "period": "2026-09-01", "old_value": 13.4066, "new_value": 13.4049, "detected_date": "2026-09-30", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "GS_YIELD_5Y", "period": "2026-10-01", "old_value": 13.3818, "new_value": 13.3829, "detected_date": "2026-10-02", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "GS_YIELD_5Y", "period": "2026-10-01", "old_value": 13.3829, "new_value": 13.3847, "detected_date": "2026-10-05", "source": "kase", "reason": "not stated by source"}

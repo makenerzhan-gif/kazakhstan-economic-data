@@ -1,0 +1,7 @@
+{
+  "downloaded_at": "2026-10-05T15:11:00.493749",
+  "raw_file": "cisstat_cis_migration_44245_2026-09-28.json.gz",
+  "source_url": "https://new.cisstat.org/consstat/service/fact/data/44245/freq/44?locale=ru",
+  "fact": 44245,
+  "role": "departures_partner"
+}

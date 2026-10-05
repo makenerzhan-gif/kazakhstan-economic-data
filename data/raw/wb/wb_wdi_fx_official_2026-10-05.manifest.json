@@ -1,0 +1,5 @@
+{
+  "downloaded_at": "2026-10-05T14:12:05.968940",
+  "raw_file": "wb_wdi_fx_official_2026-09-27.json",
+  "source_url": "https://api.worldbank.org/v2/country/all/indicator/PA.NUS.FCRF?format=json&per_page=20000&date=1960:2026"
+}

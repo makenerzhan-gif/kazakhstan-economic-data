@@ -1,0 +1,7 @@
+{
+  "downloaded_at": "2026-10-05T15:10:39.510740",
+  "raw_file": "cisstat_cis_gdp_volume_index_714662_2026-09-28.json.gz",
+  "source_url": "https://new.cisstat.org/consstat/service/fact/data/714662/freq/44?locale=ru",
+  "fact": 714662,
+  "role": "gdp"
+}

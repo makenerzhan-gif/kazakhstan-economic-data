@@ -1,0 +1,5 @@
+{
+  "downloaded_at": "2026-10-05T14:12:05.614214",
+  "raw_file": "wb_wdi_gdp_pc_ppp_2026-09-27.json",
+  "source_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.PP.KD?format=json&per_page=20000&date=1960:2026"
+}
