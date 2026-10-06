@@ -1,0 +1,11 @@
+{
+  "downloaded_at": "2026-10-06T13:54:29.056856",
+  "source_url": "https://nationalbank.kz/ru/overviewfinancialsector/obzor-finansovogo-sektora-/records",
+  "params": {
+    "beginMount": 1,
+    "beginYear": 1990,
+    "endMount": 12,
+    "endYear": 2026
+  },
+  "read_by": "fetchers/nbk_records.py"
+}

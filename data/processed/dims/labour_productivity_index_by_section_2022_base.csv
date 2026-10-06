@@ -16,6 +16,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,A,"Сельское, лесное и рыбное хозяйство",131.6,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,A,"Сельское, лесное и рыбное хозяйство",132.9,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,A,"Сельское, лесное и рыбное хозяйство",134.9,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,A,"Сельское, лесное и рыбное хозяйство",143.9,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,B,Горнодобывающая промышленность и разработка карьеров,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,B,Горнодобывающая промышленность и разработка карьеров,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,B,Горнодобывающая промышленность и разработка карьеров,100.0,as published: year-to-date period in % of the same period of 2022
@@ -33,6 +34,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,B,Горнодобывающая промышленность и разработка карьеров,106.5,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,B,Горнодобывающая промышленность и разработка карьеров,108.7,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,B,Горнодобывающая промышленность и разработка карьеров,87.7,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,B,Горнодобывающая промышленность и разработка карьеров,99.1,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,C,Обрабатывающая промышленность,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,C,Обрабатывающая промышленность,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,C,Обрабатывающая промышленность,100.0,as published: year-to-date period in % of the same period of 2022
@@ -50,6 +52,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,C,Обрабатывающая промышленность,107.2,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,C,Обрабатывающая промышленность,117.0,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,C,Обрабатывающая промышленность,124.5,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,C,Обрабатывающая промышленность,119.0,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",100.0,as published: year-to-date period in % of the same period of 2022
@@ -67,6 +70,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",106.1,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",102.4,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",99.2,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",107.6,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",100.0,as published: year-to-date period in % of the same period of 2022
@@ -84,6 +88,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",88.4,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",96.5,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",109.3,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",101.6,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,F,Строительство,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,F,Строительство,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,F,Строительство,100.0,as published: year-to-date period in % of the same period of 2022
@@ -101,6 +106,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,F,Строительство,144.7,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,F,Строительство,159.5,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,F,Строительство,179.2,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,F,Строительство,169.0,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,100.0,as published: year-to-date period in % of the same period of 2022
@@ -118,6 +124,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,116.2,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,121.9,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,119.2,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,121.0,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,GOODS,Производство товаров,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,GOODS,Производство товаров,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,GOODS,Производство товаров,100.0,as published: year-to-date period in % of the same period of 2022
@@ -135,6 +142,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,GOODS,Производство товаров,125.5,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,GOODS,Производство товаров,128.6,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,GOODS,Производство товаров,125.0,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,GOODS,Производство товаров,130.3,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,H,Транспорт и складирование,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,H,Транспорт и складирование,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,H,Транспорт и складирование,100.0,as published: year-to-date period in % of the same period of 2022
@@ -152,6 +160,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,H,Транспорт и складирование,130.8,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,H,Транспорт и складирование,145.7,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,H,Транспорт и складирование,149.1,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,H,Транспорт и складирование,139.7,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,I,Предоставление услуг по проживанию и питанию,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,I,Предоставление услуг по проживанию и питанию,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,I,Предоставление услуг по проживанию и питанию,100.0,as published: year-to-date period in % of the same period of 2022
@@ -169,6 +178,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,I,Предоставление услуг по проживанию и питанию,90.2,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,I,Предоставление услуг по проживанию и питанию,93.3,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,I,Предоставление услуг по проживанию и питанию,80.1,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,I,Предоставление услуг по проживанию и питанию,92.0,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,IND,Промышленность,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,IND,Промышленность,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,IND,Промышленность,100.0,as published: year-to-date period in % of the same period of 2022
@@ -186,6 +196,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,IND,Промышленность,107.7,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,IND,Промышленность,112.3,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,IND,Промышленность,105.1,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,IND,Промышленность,108.0,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,J,Информация и связь,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,J,Информация и связь,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,J,Информация и связь,100.0,as published: year-to-date period in % of the same period of 2022
@@ -203,6 +214,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,J,Информация и связь,111.3,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,J,Информация и связь,98.5,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,J,Информация и связь,113.7,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,J,Информация и связь,118.9,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,K,Финансовая и страховая деятельность,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,K,Финансовая и страховая деятельность,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,K,Финансовая и страховая деятельность,100.0,as published: year-to-date period in % of the same period of 2022
@@ -220,6 +232,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,K,Финансовая и страховая деятельность,97.6,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,K,Финансовая и страховая деятельность,97.5,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,K,Финансовая и страховая деятельность,96.2,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,K,Финансовая и страховая деятельность,98.5,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,L,Операции с недвижимым имуществом,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,L,Операции с недвижимым имуществом,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,L,Операции с недвижимым имуществом,100.0,as published: year-to-date period in % of the same period of 2022
@@ -237,6 +250,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,L,Операции с недвижимым имуществом,116.3,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,L,Операции с недвижимым имуществом,93.7,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,L,Операции с недвижимым имуществом,96.9,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,L,Операции с недвижимым имуществом,93.7,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,M,"Профессиональная, научная и техническая деятельность",100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,M,"Профессиональная, научная и техническая деятельность",100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,M,"Профессиональная, научная и техническая деятельность",100.0,as published: year-to-date period in % of the same period of 2022
@@ -254,6 +268,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,M,"Профессиональная, научная и техническая деятельность",92.1,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,M,"Профессиональная, научная и техническая деятельность",92.0,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,M,"Профессиональная, научная и техническая деятельность",94.4,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,M,"Профессиональная, научная и техническая деятельность",93.7,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,N,Деятельность в области административного и вспомогательного обслуживания,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,N,Деятельность в области административного и вспомогательного обслуживания,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,N,Деятельность в области административного и вспомогательного обслуживания,100.0,as published: year-to-date period in % of the same period of 2022
@@ -271,6 +286,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,N,Деятельность в области административного и вспомогательного обслуживания,100.6,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,N,Деятельность в области административного и вспомогательного обслуживания,94.7,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,N,Деятельность в области административного и вспомогательного обслуживания,97.4,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,N,Деятельность в области административного и вспомогательного обслуживания,101.2,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,100.0,as published: year-to-date period in % of the same period of 2022
@@ -288,6 +304,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,103.3,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,104.1,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,95.5,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,101.9,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,P,Образование,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,P,Образование,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,P,Образование,100.0,as published: year-to-date period in % of the same period of 2022
@@ -305,6 +322,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,P,Образование,97.5,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,P,Образование,98.5,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,P,Образование,99.0,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,P,Образование,98.5,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,Q,Здравоохранение и социальное обслуживание населения,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,Q,Здравоохранение и социальное обслуживание населения,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,Q,Здравоохранение и социальное обслуживание населения,100.0,as published: year-to-date period in % of the same period of 2022
@@ -322,6 +340,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,Q,Здравоохранение и социальное обслуживание населения,96.9,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,Q,Здравоохранение и социальное обслуживание населения,98.5,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,Q,Здравоохранение и социальное обслуживание населения,95.1,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,Q,Здравоохранение и социальное обслуживание населения,95.1,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,R,"Искусство, развлечения и отдых",100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,R,"Искусство, развлечения и отдых",100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,R,"Искусство, развлечения и отдых",100.0,as published: year-to-date period in % of the same period of 2022
@@ -339,6 +358,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,R,"Искусство, развлечения и отдых",91.7,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,R,"Искусство, развлечения и отдых",77.3,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,R,"Искусство, развлечения и отдых",71.5,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,R,"Искусство, развлечения и отдых",86.7,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,S,Предоставление прочих видов услуг,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,S,Предоставление прочих видов услуг,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,S,Предоставление прочих видов услуг,100.0,as published: year-to-date period in % of the same period of 2022
@@ -356,6 +376,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,S,Предоставление прочих видов услуг,78.9,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,S,Предоставление прочих видов услуг,80.6,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,S,Предоставление прочих видов услуг,84.8,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,S,Предоставление прочих видов услуг,84.4,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,SERVICES,Производство услуг,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,SERVICES,Производство услуг,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,SERVICES,Производство услуг,100.0,as published: year-to-date period in % of the same period of 2022
@@ -373,6 +394,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,SERVICES,Производство услуг,106.6,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,SERVICES,Производство услуг,108.8,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,SERVICES,Производство услуг,107.2,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,SERVICES,Производство услуг,109.0,as published: year-to-date period in % of the same period of 2022
 2022-01-01,national,TOTAL,Итого по отраслям,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,national,TOTAL,Итого по отраслям,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,national,TOTAL,Итого по отраслям,100.0,as published: year-to-date period in % of the same period of 2022
@@ -390,3 +412,4 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,TOTAL,Итого по отраслям,112.1,as published: year-to-date period in % of the same period of 2022
 2025-10-01,national,TOTAL,Итого по отраслям,115.0,as published: year-to-date period in % of the same period of 2022
 2026-01-01,national,TOTAL,Итого по отраслям,112.7,as published: year-to-date period in % of the same period of 2022
+2026-04-01,national,TOTAL,Итого по отраслям,115.3,as published: year-to-date period in % of the same period of 2022

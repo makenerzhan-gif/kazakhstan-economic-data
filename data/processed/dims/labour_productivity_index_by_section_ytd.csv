@@ -64,6 +64,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,A,"Сельское, лесное и рыбное хозяйство",112.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,A,"Сельское, лесное и рыбное хозяйство",111.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,A,"Сельское, лесное и рыбное хозяйство",102.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,A,"Сельское, лесное и рыбное хозяйство",104.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,B,Горнодобывающая промышленность и разработка карьеров,106.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,B,Горнодобывающая промышленность и разработка карьеров,107.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,B,Горнодобывающая промышленность и разработка карьеров,106.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -129,6 +130,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,B,Горнодобывающая промышленность и разработка карьеров,104.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,B,Горнодобывающая промышленность и разработка карьеров,107.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,B,Горнодобывающая промышленность и разработка карьеров,85.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,B,Горнодобывающая промышленность и разработка карьеров,93.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,C,Обрабатывающая промышленность,116.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,C,Обрабатывающая промышленность,119.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,C,Обрабатывающая промышленность,114.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -194,6 +196,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,C,Обрабатывающая промышленность,105.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,C,Обрабатывающая промышленность,107.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,C,Обрабатывающая промышленность,108.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,C,Обрабатывающая промышленность,111.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",115.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",117.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",119.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -259,6 +262,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",102.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",100.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",99.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",103.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",61.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",52.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",56.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -324,6 +328,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",96.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",98.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",120.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",108.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,F,Строительство,94.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,F,Строительство,102.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,F,Строительство,105.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -389,6 +394,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,F,Строительство,116.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,F,Строительство,121.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,F,Строительство,113.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,F,Строительство,114.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,108.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,107.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,106.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -454,6 +460,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,105.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,105.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,105.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,106.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,GOODS,Производство товаров,107.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,GOODS,Производство товаров,108.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,GOODS,Производство товаров,105.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -519,6 +526,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,GOODS,Производство товаров,111.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,GOODS,Производство товаров,112.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,GOODS,Производство товаров,101.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,GOODS,Производство товаров,104.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,H,Транспорт и складирование,92.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,H,Транспорт и складирование,96.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,H,Транспорт и складирование,98.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -584,6 +592,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,H,Транспорт и складирование,120.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,H,Транспорт и складирование,119.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,H,Транспорт и складирование,114.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,H,Транспорт и складирование,108.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,I,Предоставление услуг по проживанию и питанию,96.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,I,Предоставление услуг по проживанию и питанию,97.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,I,Предоставление услуг по проживанию и питанию,107.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -649,6 +658,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,I,Предоставление услуг по проживанию и питанию,98.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,I,Предоставление услуг по проживанию и питанию,102.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,I,Предоставление услуг по проживанию и питанию,95.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,I,Предоставление услуг по проживанию и питанию,98.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,IND,Промышленность,108.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,IND,Промышленность,108.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,IND,Промышленность,106.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -714,6 +724,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,IND,Промышленность,106.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,IND,Промышленность,107.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,IND,Промышленность,98.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,IND,Промышленность,102.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,J,Информация и связь,163.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,J,Информация и связь,171.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,J,Информация и связь,170.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -779,6 +790,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,J,Информация и связь,97.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,J,Информация и связь,97.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,J,Информация и связь,99.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,J,Информация и связь,103.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,K,Финансовая и страховая деятельность,69.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,K,Финансовая и страховая деятельность,80.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,K,Финансовая и страховая деятельность,82.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -844,6 +856,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,K,Финансовая и страховая деятельность,105.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,K,Финансовая и страховая деятельность,103.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,K,Финансовая и страховая деятельность,96.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,K,Финансовая и страховая деятельность,98.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,L,Операции с недвижимым имуществом,128.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,L,Операции с недвижимым имуществом,147.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,L,Операции с недвижимым имуществом,155.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -909,6 +922,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,L,Операции с недвижимым имуществом,102.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,L,Операции с недвижимым имуществом,80.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,L,Операции с недвижимым имуществом,80.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,L,Операции с недвижимым имуществом,80.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,M,"Профессиональная, научная и техническая деятельность",111.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,M,"Профессиональная, научная и техническая деятельность",89.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,M,"Профессиональная, научная и техническая деятельность",82.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -974,6 +988,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,M,"Профессиональная, научная и техническая деятельность",99.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,M,"Профессиональная, научная и техническая деятельность",96.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,M,"Профессиональная, научная и техническая деятельность",97.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,M,"Профессиональная, научная и техническая деятельность",98.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,N,Деятельность в области административного и вспомогательного обслуживания,72.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,N,Деятельность в области административного и вспомогательного обслуживания,61.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,N,Деятельность в области административного и вспомогательного обслуживания,59.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1039,6 +1054,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,N,Деятельность в области административного и вспомогательного обслуживания,96.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,N,Деятельность в области административного и вспомогательного обслуживания,91.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,N,Деятельность в области административного и вспомогательного обслуживания,100.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,N,Деятельность в области административного и вспомогательного обслуживания,102.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,100.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,97.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,99.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1104,6 +1120,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,101.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,100.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,98.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,98.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,P,Образование,98.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,P,Образование,98.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,P,Образование,99.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1169,6 +1186,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,P,Образование,99.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,P,Образование,99.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,P,Образование,101.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,P,Образование,100.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,Q,Здравоохранение и социальное обслуживание населения,97.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,Q,Здравоохранение и социальное обслуживание населения,99.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,Q,Здравоохранение и социальное обслуживание населения,99.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1234,6 +1252,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,Q,Здравоохранение и социальное обслуживание населения,96.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,Q,Здравоохранение и социальное обслуживание населения,99.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,Q,Здравоохранение и социальное обслуживание населения,99.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,Q,Здравоохранение и социальное обслуживание населения,98.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,R,"Искусство, развлечения и отдых",110.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,R,"Искусство, развлечения и отдых",102.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,R,"Искусство, развлечения и отдых",88.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1299,6 +1318,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,R,"Искусство, развлечения и отдых",98.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,R,"Искусство, развлечения и отдых",98.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,R,"Искусство, развлечения и отдых",95.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,R,"Искусство, развлечения и отдых",97.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,S,Предоставление прочих видов услуг,61.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,S,Предоставление прочих видов услуг,65.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,S,Предоставление прочих видов услуг,80.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1364,6 +1384,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,S,Предоставление прочих видов услуг,90.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,S,Предоставление прочих видов услуг,93.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,S,Предоставление прочих видов услуг,104.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,S,Предоставление прочих видов услуг,103.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,SERVICES,Производство услуг,99.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,SERVICES,Производство услуг,100.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,SERVICES,Производство услуг,101.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1429,6 +1450,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,SERVICES,Производство услуг,102.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,SERVICES,Производство услуг,102.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,SERVICES,Производство услуг,102.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,SERVICES,Производство услуг,102.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-01-01,national,TOTAL,Итого по отраслям,103.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-04-01,national,TOTAL,Итого по отраслям,103.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2010-07-01,national,TOTAL,Итого по отраслям,103.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1494,3 +1516,4 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,national,TOTAL,Итого по отраслям,105.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2025-10-01,national,TOTAL,Итого по отраслям,105.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-01-01,national,TOTAL,Итого по отраслям,102.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-04-01,national,TOTAL,Итого по отраслям,103.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods

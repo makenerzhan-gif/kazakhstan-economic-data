@@ -1,0 +1,34 @@
+{
+  "downloaded_at": "2026-10-06T13:55:24.613083",
+  "raw_file": "nbk_exchange_rates_official_monthly_2026-10-06.json.gz",
+  "source_url": "https://nationalbank.kz/ru/exchangerates/ezhednevnye-oficialnye-rynochnye-kursy-valyut/report",
+  "begin": "2026-09-01",
+  "windows": [
+    [
+      "2026-09-01",
+      "2026-10-06"
+    ]
+  ],
+  "currencies": {
+    "USD": "5",
+    "EUR": "6",
+    "CNY": "8",
+    "RUB": "16",
+    "TRY": "41",
+    "KRW": "25",
+    "UZS": "20",
+    "KGS": "10",
+    "BYN": "38",
+    "JPY": "26",
+    "GBP": "2",
+    "INR": "49",
+    "CHF": "23",
+    "CZK": "43",
+    "PLN": "39",
+    "AED": "4",
+    "TJS": "44",
+    "AZN": "48"
+  },
+  "archive": null,
+  "redenominations_checked": []
+}

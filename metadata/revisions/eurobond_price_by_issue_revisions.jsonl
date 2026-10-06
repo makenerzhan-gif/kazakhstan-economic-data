@@ -36,3 +36,10 @@
 {"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS3093655341", "old_value": 95.965, "new_value": 95.902, "detected_date": "2026-10-05", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS3093658014", "old_value": 94.438, "new_value": 94.323, "detected_date": "2026-10-05", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS3212533262", "old_value": 95.901, "new_value": 95.879, "detected_date": "2026-10-05", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS1120709826", "old_value": 83.586, "new_value": 83.02743538630692, "detected_date": "2026-10-06", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS1263139856", "old_value": 99.412, "new_value": 99.242, "detected_date": "2026-10-06", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS2050933626", "old_value": 79.86558107222082, "new_value": 79.91688731792719, "detected_date": "2026-10-06", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS2914770545", "old_value": 91.83745500132217, "new_value": 91.466, "detected_date": "2026-10-06", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS3093655341", "old_value": 95.902, "new_value": 95.876, "detected_date": "2026-10-06", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS3093658014", "old_value": 94.323, "new_value": 94.331, "detected_date": "2026-10-06", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS3212533262", "old_value": 95.879, "new_value": 96.261, "detected_date": "2026-10-06", "source": "kase", "reason": "not stated by source"}
