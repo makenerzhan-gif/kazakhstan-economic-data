@@ -690,3 +690,16 @@ now keeps weekdays only after the merge, for all four official-rate series (EUR,
 weekend rows). The August 2026 mean of the daily series moves from 463.96 to 464.55, equal to
 EXCHANGE_RATES_OFFICIAL_MONTHLY USD (464.551429); model_data usdkzt 2026-08 likewise (usdkzt_yoy
 -13.91 -> -13.80). Test: tests/test_fx_history.py::test_fetcher_drops_weekend_rows_already_stored.
+
+## 2026-10-08 — the daily run's push now survives a GitHub outage (user: «почему прогон сломался?»)
+
+The 2026-10-07 run collected everything (12:11-15:09 UTC, a commit of 1,740 files) and then lost it:
+`git push` stopped in git-lfs's pre-push lock check ("Fatal error: Unable to verify locks"), which fell
+into GitHub's 15:06-15:16 UTC outage of git operations and Actions (githubstatus.com). The runner image
+and git were the same as in the green 2026-10-06 run. The repository never uses LFS file locking, so
+`update.yml` now sets `lfs.locksverify false` (git-lfs then sends only the objects/batch upload request;
+checked with GIT_TRACE), and retries pull --rebase + push after pauses of 1, 3, 10 and 20 minutes
+(5 attempts over ~34 minutes). A rebase conflict still fails at once. The step was run against a local
+remote for four cases: push failing twice then succeeding, a conflict, push failing every time, no
+changes. The next run refetches every source; only the raw snapshots dated 2026-10-07 are lost, and
+that day's logs/ and reports/ are in the run's diagnostics artifact until 2027-01-05.

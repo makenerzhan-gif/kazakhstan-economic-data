@@ -66,6 +66,12 @@ jobs:
         run: |
           git config user.name "kz-data-bot"
           git config user.email "actions@users.noreply.github.com"
+          # This repo never uses LFS file locking, but for a github.com remote
+          # git-lfs asks the server to verify locks before every push carrying LFS
+          # objects, and any error there aborts the push. On 2026-10-07 that request
+          # fell into GitHub's 15:06-15:16 UTC outage ("Fatal error: Unable to verify
+          # locks") and the whole run's output was lost. Skip the check.
+          git config lfs.locksverify false
           git add data/ metadata/ dictionaries/ project_knowledge/ reports/ logs/
           if git diff --cached --quiet; then
             echo "No changes to commit."
@@ -81,6 +87,27 @@ jobs:
             # project_knowledge/UPDATE_LOG.md's content or anything under
             # scripts/, so a genuine conflict here would mean something worth
             # a human looking at, not routine noise to suppress.
-            git pull --rebase origin main
-            git push
+            #
+            # The push itself can also fail on GitHub's side (the 2026-10-07 outage
+            # above; git operations were degraded again until ~15:50), so retry for
+            # about half an hour, rebasing again each time in case main moved. A
+            # rebase conflict is not retried: it needs a human, as above.
+            for delay in 0 60 180 600 1200; do
+              sleep "$delay"
+              if ! git pull --rebase origin main; then
+                if [ -d .git/rebase-merge ] || [ -d .git/rebase-apply ]; then
+                  git rebase --abort
+                  echo "::error::Rebase onto origin/main conflicts; not pushing."
+                  exit 1
+                fi
+                echo "Pull failed; retrying."
+                continue
+              fi
+              if git push; then
+                exit 0
+              fi
+              echo "Push failed; retrying."
+            done
+            echo "::error::Push still failing after 5 attempts."
+            exit 1
           fi
