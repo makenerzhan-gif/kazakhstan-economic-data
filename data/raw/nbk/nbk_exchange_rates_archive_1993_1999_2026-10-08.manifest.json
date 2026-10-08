@@ -1,0 +1,7 @@
+{
+  "downloaded_at": "2026-10-08T12:44:28.640634",
+  "source_url": "https://nationalbank.kz/file/download/22756",
+  "raw_file": "nbk_exchange_rates_archive_1993_1999_2026-09-28.xls",
+  "sha256": "2d59a1596f680fcd80fd50f5ce47de6dc83d3338b56d5a6dd6d10a601d4c6ea5",
+  "read_by": "EXCHANGE_RATE, EXCHANGE_RATE_EUR, EXCHANGE_RATE_CNY, EXCHANGE_RATE_RUB (before 1999-11-17); dims EXCHANGE_RATES_OFFICIAL_MONTHLY (fetchers/nbk_fx.py)"
+}

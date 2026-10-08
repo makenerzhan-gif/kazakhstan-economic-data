@@ -79,6 +79,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CP01,Продукты питания и безалкогольные напитки,0.213229,level
 2026-07-01,national,CP01,Продукты питания и безалкогольные напитки,0.057953,level
 2026-08-01,national,CP01,Продукты питания и безалкогольные напитки,-0.019908,level
+2026-09-01,national,CP01,Продукты питания и безалкогольные напитки,0.048,level
 2020-01-01,national,CP02,Алкогольные напитки и табачные изделия,0.014,level
 2020-02-01,national,CP02,Алкогольные напитки и табачные изделия,0.014,level
 2020-03-01,national,CP02,Алкогольные напитки и табачные изделия,0.011,level
@@ -159,6 +160,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CP02,Алкогольные напитки и табачные изделия,0.007399,level
 2026-07-01,national,CP02,Алкогольные напитки и табачные изделия,0.012898,level
 2026-08-01,national,CP02,Алкогольные напитки и табачные изделия,0.028481,level
+2026-09-01,national,CP02,Алкогольные напитки и табачные изделия,0.013,level
 2020-01-01,national,CP03,Одежда и обувь,0.026,level
 2020-02-01,national,CP03,Одежда и обувь,0.024,level
 2020-03-01,national,CP03,Одежда и обувь,0.027,level
@@ -239,6 +241,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CP03,Одежда и обувь,0.098094,level
 2026-07-01,national,CP03,Одежда и обувь,0.073676,level
 2026-08-01,national,CP03,Одежда и обувь,0.054697,level
+2026-09-01,national,CP03,Одежда и обувь,0.11,level
 2020-01-01,national,CP04,"Жилищные услуги, вода, электроэнергия, газ и другие виды топлива",0.042,level
 2020-02-01,national,CP04,"Жилищные услуги, вода, электроэнергия, газ и другие виды топлива",0.09,level
 2020-03-01,national,CP04,"Жилищные услуги, вода, электроэнергия, газ и другие виды топлива",0.025,level
@@ -319,6 +322,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CP04,"Жилищные услуги, вода, электроэнергия, газ и другие виды топлива",0.015517,level
 2026-07-01,national,CP04,"Жилищные услуги, вода, электроэнергия, газ и другие виды топлива",0.121032,level
 2026-08-01,national,CP04,"Жилищные услуги, вода, электроэнергия, газ и другие виды топлива",0.318932,level
+2026-09-01,national,CP04,"Жилищные услуги, вода, электроэнергия, газ и другие виды топлива",0.091,level
 2026-01-01,national,CP05,"Предметы домашнего обихода, бытовая техника и текущее обслуживание жилья",0.089,level
 2026-02-01,national,CP05,"Предметы домашнего обихода, бытовая техника и текущее обслуживание жилья",0.045,level
 2026-03-01,national,CP05,"Предметы домашнего обихода, бытовая техника и текущее обслуживание жилья",0.017927,level
@@ -327,6 +331,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CP05,"Предметы домашнего обихода, бытовая техника и текущее обслуживание жилья",0.048266,level
 2026-07-01,national,CP05,"Предметы домашнего обихода, бытовая техника и текущее обслуживание жилья",0.048736,level
 2026-08-01,national,CP05,"Предметы домашнего обихода, бытовая техника и текущее обслуживание жилья",0.049178,level
+2026-09-01,national,CP05,"Предметы домашнего обихода, бытовая техника и текущее обслуживание жилья",0.033,level
 2020-01-01,national,CP06,Здравоохранение,0.013,level
 2020-02-01,national,CP06,Здравоохранение,0.016,level
 2020-03-01,national,CP06,Здравоохранение,0.013,level
@@ -407,6 +412,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CP06,Здравоохранение,0.060217,level
 2026-07-01,national,CP06,Здравоохранение,0.089977,level
 2026-08-01,national,CP06,Здравоохранение,0.068869,level
+2026-09-01,national,CP06,Здравоохранение,0.062,level
 2020-01-01,national,CP07,Транспорт,0.151,level
 2020-02-01,national,CP07,Транспорт,0.082,level
 2020-03-01,national,CP07,Транспорт,0.1,level
@@ -487,6 +493,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CP07,Транспорт,0.058271,level
 2026-07-01,national,CP07,Транспорт,0.064095,level
 2026-08-01,national,CP07,Транспорт,-0.0462,level
+2026-09-01,national,CP07,Транспорт,0.047,level
 2020-01-01,national,CP08,Связь,0.012,level
 2020-02-01,national,CP08,Связь,0.004,level
 2020-03-01,national,CP08,Связь,0.032,level
@@ -567,6 +574,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CP08,Связь,0.078295,level
 2026-07-01,national,CP08,Связь,0.013533,level
 2026-08-01,national,CP08,Связь,0.040396,level
+2026-09-01,national,CP08,Связь,0.006,level
 2020-01-01,national,CP09,Отдых и культура,0.008,level
 2020-02-01,national,CP09,Отдых и культура,0.004,level
 2020-03-01,national,CP09,Отдых и культура,0.004,level
@@ -647,6 +655,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CP09,Отдых и культура,0.113045,level
 2026-07-01,national,CP09,Отдых и культура,0.033155,level
 2026-08-01,national,CP09,Отдых и культура,0.001753,level
+2026-09-01,national,CP09,Отдых и культура,0.03,level
 2020-01-01,national,CP10,Образование,0.001,level
 2020-02-01,national,CP10,Образование,0.016,level
 2020-03-01,national,CP10,Образование,0.003,level
@@ -727,6 +736,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CP10,Образование,0.005213,level
 2026-07-01,national,CP10,Образование,0.001552,level
 2026-08-01,national,CP10,Образование,0.024431,level
+2026-09-01,national,CP10,Образование,0.106,level
 2020-01-01,national,CP11,Рестораны и гостиницы,0.003,level
 2020-02-01,national,CP11,Рестораны и гостиницы,0.005,level
 2020-03-01,national,CP11,Рестораны и гостиницы,0.001,level
@@ -807,6 +817,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CP11,Рестораны и гостиницы,0.02157,level
 2026-07-01,national,CP11,Рестораны и гостиницы,0.007189,level
 2026-08-01,national,CP11,Рестораны и гостиницы,0.003366,level
+2026-09-01,national,CP11,Рестораны и гостиницы,0.018,level
 2020-01-01,national,CP12,Разные товары и услуги,0.023,level
 2020-02-01,national,CP12,Разные товары и услуги,0.023,level
 2020-03-01,national,CP12,Разные товары и услуги,0.036,level
@@ -887,6 +898,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CP12_2018,Страхование и финансовые услуги,0.001789,level
 2026-07-01,national,CP12_2018,Страхование и финансовые услуги,-0.003372,level
 2026-08-01,national,CP12_2018,Страхование и финансовые услуги,0.0,level
+2026-09-01,national,CP12_2018,Страхование и финансовые услуги,0.002,level
 2026-01-01,national,CP13_2018,"Личный уход, социальная защита и прочие товары и услуги",0.147,level
 2026-02-01,national,CP13_2018,"Личный уход, социальная защита и прочие товары и услуги",0.095,level
 2026-03-01,national,CP13_2018,"Личный уход, социальная защита и прочие товары и услуги",0.069582,level
@@ -895,6 +907,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CP13_2018,"Личный уход, социальная защита и прочие товары и услуги",0.1111,level
 2026-07-01,national,CP13_2018,"Личный уход, социальная защита и прочие товары и услуги",0.049376,level
 2026-08-01,national,CP13_2018,"Личный уход, социальная защита и прочие товары и услуги",0.047507,level
+2026-09-01,national,CP13_2018,"Личный уход, социальная защита и прочие товары и услуги",0.022,level
 2020-01-01,national,FOOD,Продовольственные товары,0.38,level
 2020-02-01,national,FOOD,Продовольственные товары,0.359,level
 2020-03-01,national,FOOD,Продовольственные товары,0.665,level
@@ -975,6 +988,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,FOOD,Продовольственные товары,0.220628,level
 2026-07-01,national,FOOD,Продовольственные товары,0.070851,level
 2026-08-01,national,FOOD,Продовольственные товары,0.008573,level
+2026-09-01,national,FOOD,Продовольственные товары,0.062,level
 2020-01-01,national,NONFOOD,Непродовольственные товары,0.157,level
 2020-02-01,national,NONFOOD,Непродовольственные товары,0.138,level
 2020-03-01,national,NONFOOD,Непродовольственные товары,0.11,level
@@ -1055,6 +1069,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,NONFOOD,Непродовольственные товары,0.263194,level
 2026-07-01,national,NONFOOD,Непродовольственные товары,0.248402,level
 2026-08-01,national,NONFOOD,Непродовольственные товары,0.215071,level
+2026-09-01,national,NONFOOD,Непродовольственные товары,0.264,level
 2020-01-01,national,SERVICES,Платные услуги,0.14,level
 2020-02-01,national,SERVICES,Платные услуги,0.151,level
 2020-03-01,national,SERVICES,Платные услуги,0.152,level
@@ -1135,6 +1150,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,SERVICES,Платные услуги,0.348183,level
 2026-07-01,national,SERVICES,Платные услуги,0.250547,level
 2026-08-01,national,SERVICES,Платные услуги,0.347858,level
+2026-09-01,national,SERVICES,Платные услуги,0.261,level
 2020-01-01,national,TOTAL,Товары и услуги,0.677,level
 2020-02-01,national,TOTAL,Товары и услуги,0.648,level
 2020-03-01,national,TOTAL,Товары и услуги,0.927,level
@@ -1215,6 +1231,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,TOTAL,Товары и услуги,0.832005,level
 2026-07-01,national,TOTAL,Товары и услуги,0.5698,level
 2026-08-01,national,TOTAL,Товары и услуги,0.571502,level
+2026-09-01,national,TOTAL,Товары и услуги,0.587,level
 2020-01-01,national,arenda_zhilya,аренда жилья,0.01,level
 2020-02-01,national,arenda_zhilya,аренда жилья,0.007,level
 2020-03-01,national,arenda_zhilya,аренда жилья,0.021,level
@@ -1295,6 +1312,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,arendnaya_plata_za_blagoustroennoe_zhile,Арендная плата за благоустроенное жилье,0.008096,level
 2026-07-01,national,arendnaya_plata_za_blagoustroennoe_zhile,Арендная плата за благоустроенное жилье,0.03507,level
 2026-08-01,national,arendnaya_plata_za_blagoustroennoe_zhile,Арендная плата за благоустроенное жилье,0.071356,level
+2026-09-01,national,arendnaya_plata_za_blagoustroennoe_zhile,Арендная плата за благоустроенное жилье,0.055,level
 2020-01-01,national,benzin,Бензин,0.083,level
 2020-02-01,national,benzin,Бензин,0.067,level
 2020-03-01,national,benzin,Бензин,0.014,level
@@ -1448,6 +1466,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,bezalkogolnye_napitki,Безалкогольные напитки,-0.004722,level
 2026-07-01,national,bezalkogolnye_napitki,Безалкогольные напитки,0.027007,level
 2026-08-01,national,bezalkogolnye_napitki,Безалкогольные напитки,0.003482,level
+2026-09-01,national,bezalkogolnye_napitki,Безалкогольные напитки,0.0,level
 2026-02-01,national,dizelnoe_toplivo,Дизельное топливо,0.0,level
 2026-03-01,national,dizelnoe_toplivo,Дизельное топливо,-2e-06,level
 2026-04-01,national,dizelnoe_toplivo,Дизельное топливо,0.000189,level
@@ -1455,6 +1474,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,dizelnoe_toplivo,Дизельное топливо,0.001341,level
 2026-07-01,national,dizelnoe_toplivo,Дизельное топливо,0.001738,level
 2026-08-01,national,dizelnoe_toplivo,Дизельное топливо,0.000201,level
+2026-09-01,national,dizelnoe_toplivo,Дизельное топливо,0.002,level
 2020-01-01,national,domofon,домофон,0.006,level
 2020-02-01,national,domofon,домофон,0.003,level
 2020-03-01,national,domofon,домофон,0.001,level
@@ -1535,6 +1555,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,domofon,Домофон,0.0,level
 2026-07-01,national,domofon,Домофон,0.002449,level
 2026-08-01,national,domofon,Домофон,0.000336,level
+2026-09-01,national,domofon,Домофон,0.0,level
 2020-01-01,national,elektroenergiya,электроэнергия,0.021,level
 2020-02-01,national,elektroenergiya,электроэнергия,0.044,level
 2020-03-01,national,elektroenergiya,электроэнергия,0.004,level
@@ -1615,6 +1636,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,elektroenergiya_obshchiy,Электроэнергия (общий),0.0,level
 2026-07-01,national,elektroenergiya_obshchiy,Электроэнергия (общий),0.039871,level
 2026-08-01,national,elektroenergiya_obshchiy,Электроэнергия (общий),0.011655,level
+2026-09-01,national,elektroenergiya_obshchiy,Электроэнергия (общий),0.009,level
 2020-01-01,national,frukty_i_ovoshchi,Фрукты и овощи,0.215,level
 2020-02-01,national,frukty_i_ovoshchi,Фрукты и овощи,0.203,level
 2020-03-01,national,frukty_i_ovoshchi,Фрукты и овощи,0.303,level
@@ -1768,6 +1790,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,gaz,Газ,0.003212,level
 2026-07-01,national,gaz,Газ,0.002691,level
 2026-08-01,national,gaz,Газ,0.207545,level
+2026-09-01,national,gaz,Газ,0.0,level
 2026-01-01,national,gaz_szhizhennyy,газ сжиженный,0.002,level
 2026-02-01,national,gaz_szhizhennyy_v_ballonakh,Газ сжиженный (в баллонах),0.003,level
 2026-03-01,national,gaz_szhizhennyy_v_ballonakh,Газ сжиженный (в баллонах),0.001237,level
@@ -1776,6 +1799,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,gaz_szhizhennyy_v_ballonakh,Газ сжиженный (в баллонах),0.001249,level
 2026-07-01,national,gaz_szhizhennyy_v_ballonakh,Газ сжиженный (в баллонах),0.001869,level
 2026-08-01,national,gaz_szhizhennyy_v_ballonakh,Газ сжиженный (в баллонах),0.000607,level
+2026-09-01,national,gaz_szhizhennyy_v_ballonakh,Газ сжиженный (в баллонах),0.0,level
 2020-01-01,national,gaz_transportiruemyy_po_raspredelitelnym_setyam,"газ, транспортируемый по распределительным сетям",0.0,level
 2020-02-01,national,gaz_transportiruemyy_po_raspredelitelnym_setyam,"газ, транспортируемый по распределительным сетям",-0.002,level
 2020-03-01,national,gaz_transportiruemyy_po_raspredelitelnym_setyam,"газ, транспортируемый по распределительным сетям",0.0,level
@@ -1856,6 +1880,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,gaz_transportiruemyy_po_raspredelitelnym_setyam,"Газ, транспортируемый по распределительным сетям",0.001963,level
 2026-07-01,national,gaz_transportiruemyy_po_raspredelitelnym_setyam,"Газ, транспортируемый по распределительным сетям",0.000822,level
 2026-08-01,national,gaz_transportiruemyy_po_raspredelitelnym_setyam,"Газ, транспортируемый по распределительным сетям",0.206938,level
+2026-09-01,national,gaz_transportiruemyy_po_raspredelitelnym_setyam,"Газ, транспортируемый по распределительным сетям",0.0,level
 2020-01-01,national,goryachaya_voda,горячая вода,0.0,level
 2020-02-01,national,goryachaya_voda,горячая вода,0.009,level
 2020-03-01,national,goryachaya_voda,горячая вода,0.0,level
@@ -1936,6 +1961,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,goryachaya_voda_za_1_kub_metr,"Горячая вода, за 1 куб. метр",-0.010043,level
 2026-07-01,national,goryachaya_voda_za_1_kub_metr,"Горячая вода, за 1 куб. метр",0.0,level
 2026-08-01,national,goryachaya_voda_za_1_kub_metr,"Горячая вода, за 1 куб. метр",0.00242,level
+2026-09-01,national,goryachaya_voda_za_1_kub_metr,"Горячая вода, за 1 куб. метр",0.0,level
 2020-01-01,national,kanalizatsiya,канализация,-0.001,level
 2020-02-01,national,kanalizatsiya,канализация,-0.002,level
 2020-03-01,national,kanalizatsiya,канализация,0.0,level
@@ -2101,6 +2127,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,kholodnaya_voda_za_1_kub_metr,"Холодная вода, за 1 куб. метр",-0.017844,level
 2026-07-01,national,kholodnaya_voda_za_1_kub_metr,"Холодная вода, за 1 куб. метр",-0.000207,level
 2026-08-01,national,kholodnaya_voda_za_1_kub_metr,"Холодная вода, за 1 куб. метр",0.002433,level
+2026-09-01,national,kholodnaya_voda_za_1_kub_metr,"Холодная вода, за 1 куб. метр",0.0,level
 2026-01-01,national,kislomolochnye_produkty,кисломолочные продукты,0.014,level
 2026-01-01,national,kolbasy_izdeliya_iz_myasa,"колбасы, изделия из мяса",0.03,level
 2026-01-01,national,krupy,крупы,0.004,level
@@ -2111,6 +2138,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,krupy_i_zernovye_produkty,Крупы и зерновые продукты,0.036402,level
 2026-07-01,national,krupy_i_zernovye_produkty,Крупы и зерновые продукты,0.079623,level
 2026-08-01,national,krupy_i_zernovye_produkty,Крупы и зерновые продукты,0.027772,level
+2026-09-01,national,krupy_i_zernovye_produkty,Крупы и зерновые продукты,0.035,level
 2020-01-01,national,masla_i_zhiry,Масла и жиры,0.008,level
 2020-02-01,national,masla_i_zhiry,Масла и жиры,0.018,level
 2020-03-01,national,masla_i_zhiry,Масла и жиры,0.014,level
@@ -2191,6 +2219,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,masla_i_zhiry,Масла и жиры,0.017438,level
 2026-07-01,national,masla_i_zhiry,Масла и жиры,0.040043,level
 2026-08-01,national,masla_i_zhiry,Масла и жиры,0.007171,level
+2026-09-01,national,masla_i_zhiry,Масла и жиры,0.003,level
 2026-02-01,national,molochnye_izdeliya_syr_i_yaytsa,"Молочные изделия, сыр и яйца",0.079,level
 2026-03-01,national,molochnye_izdeliya_syr_i_yaytsa,"Молочные изделия, сыр и яйца",0.090332,level
 2026-04-01,national,molochnye_izdeliya_syr_i_yaytsa,"Молочные изделия, сыр и яйца",0.065664,level
@@ -2198,6 +2227,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,molochnye_izdeliya_syr_i_yaytsa,"Молочные изделия, сыр и яйца",-0.027842,level
 2026-07-01,national,molochnye_izdeliya_syr_i_yaytsa,"Молочные изделия, сыр и яйца",0.004583,level
 2026-08-01,national,molochnye_izdeliya_syr_i_yaytsa,"Молочные изделия, сыр и яйца",0.014944,level
+2026-09-01,national,molochnye_izdeliya_syr_i_yaytsa,"Молочные изделия, сыр и яйца",0.045,level
 2020-01-01,national,molochnye_produkty,Молочные продукты,0.037,level
 2020-02-01,national,molochnye_produkty,Молочные продукты,0.027,level
 2020-03-01,national,molochnye_produkty,Молочные продукты,0.036,level
@@ -2290,6 +2320,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,moyushchie_i_chistyashchie_sredstva,Моющие и чистящие средства,0.011003,level
 2026-07-01,national,moyushchie_i_chistyashchie_sredstva,Моющие и чистящие средства,0.009229,level
 2026-08-01,national,moyushchie_i_chistyashchie_sredstva,Моющие и чистящие средства,0.011837,level
+2026-09-01,national,moyushchie_i_chistyashchie_sredstva,Моющие и чистящие средства,0.011,level
 2021-01-01,national,moyushchie_sredstva,Моющие средства,0.002,level
 2021-02-01,national,moyushchie_sredstva,Моющие средства,0.01,level
 2021-03-01,national,moyushchie_sredstva,Моющие средства,0.008,level
@@ -2358,6 +2389,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,myaso,Мясо,0.103166,level
 2026-07-01,national,myaso,Мясо,0.110762,level
 2026-08-01,national,myaso,Мясо,0.073668,level
+2026-09-01,national,myaso,Мясо,0.08,level
 2021-01-01,national,myaso_i_myasoprodukty,Мясо и мясопродукты,0.015,level
 2021-02-01,national,myaso_i_myasoprodukty,Мясо и мясопродукты,0.085,level
 2021-03-01,national,myaso_i_myasoprodukty,Мясо и мясопродукты,0.077,level
@@ -2499,6 +2531,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,obsluzhivanie_remont_i_obespechenie_bezopasnosti_zhilykh_pomeshcheniy,"Обслуживание, ремонт и обеспечение безопасности жилых помещений",0.026669,level
 2026-07-01,national,obsluzhivanie_remont_i_obespechenie_bezopasnosti_zhilykh_pomeshcheniy,"Обслуживание, ремонт и обеспечение безопасности жилых помещений",0.034334,level
 2026-08-01,national,obsluzhivanie_remont_i_obespechenie_bezopasnosti_zhilykh_pomeshcheniy,"Обслуживание, ремонт и обеспечение безопасности жилых помещений",0.019751,level
+2026-09-01,national,obsluzhivanie_remont_i_obespechenie_bezopasnosti_zhilykh_pomeshcheniy,"Обслуживание, ремонт и обеспечение безопасности жилых помещений",0.015,level
 2020-01-01,national,obuv,Обувь,0.004,level
 2020-02-01,national,obuv,Обувь,0.008,level
 2020-03-01,national,obuv,Обувь,0.009,level
@@ -2579,6 +2612,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,obuv,Обувь,0.033629,level
 2026-07-01,national,obuv,Обувь,0.022563,level
 2026-08-01,national,obuv,Обувь,0.01822,level
+2026-09-01,national,obuv,Обувь,0.037,level
 2020-01-01,national,odezhda,Одежда,0.022,level
 2020-02-01,national,odezhda,Одежда,0.014,level
 2020-03-01,national,odezhda,Одежда,0.017,level
@@ -2659,6 +2693,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,odezhda,Одежда,0.064465,level
 2026-07-01,national,odezhda,Одежда,0.051113,level
 2026-08-01,national,odezhda,Одежда,0.036477,level
+2026-09-01,national,odezhda,Одежда,0.072,level
 2026-01-01,national,oplata_za_lift,оплата за лифт,0.001,level
 2026-02-01,national,oplata_za_lift,Оплата за лифт,0.0,level
 2026-03-01,national,oplata_za_lift,Оплата за лифт,1e-05,level
@@ -2667,6 +2702,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,oplata_za_lift,Оплата за лифт,0.000437,level
 2026-07-01,national,oplata_za_lift,Оплата за лифт,0.0009,level
 2026-08-01,national,oplata_za_lift,Оплата за лифт,0.0,level
+2026-09-01,national,oplata_za_lift,Оплата за лифт,0.0,level
 2021-01-01,national,oplata_za_soderzhanie_zhilishcha,оплата за содержание жилища,0.002,level
 2021-02-01,national,oplata_za_soderzhanie_zhilishcha,оплата за содержание жилища,0.004,level
 2021-03-01,national,oplata_za_soderzhanie_zhilishcha,оплата за содержание жилища,0.001,level
@@ -2807,6 +2843,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,otoplenie_tsentralnoe_za_1_gkal,"Отопление центральное, за 1 Гкал",0.0,level
 2026-07-01,national,otoplenie_tsentralnoe_za_1_gkal,"Отопление центральное, за 1 Гкал",0.0,level
 2026-08-01,national,otoplenie_tsentralnoe_za_1_gkal,"Отопление центральное, за 1 Гкал",0.0,level
+2026-09-01,national,otoplenie_tsentralnoe_za_1_gkal,"Отопление центральное, за 1 Гкал",0.0,level
 2026-01-01,national,ovoshchi,овощи,0.042,level
 2020-01-01,national,predmety_domashnego_obikhoda,Предметы домашнего обихода,0.018,level
 2020-02-01,national,predmety_domashnego_obikhoda,Предметы домашнего обихода,0.025,level
@@ -2887,6 +2924,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,prochie_predmety_pribory_i_tovary_lichnogo_polzovaniya,"Прочие предметы, приборы и товары личного пользования",0.027472,level
 2026-07-01,national,prochie_predmety_pribory_i_tovary_lichnogo_polzovaniya,"Прочие предметы, приборы и товары личного пользования",0.0173,level
 2026-08-01,national,prochie_predmety_pribory_i_tovary_lichnogo_polzovaniya,"Прочие предметы, приборы и товары личного пользования",0.019133,level
+2026-09-01,national,prochie_predmety_pribory_i_tovary_lichnogo_polzovaniya,"Прочие предметы, приборы и товары личного пользования",-0.006,level
 2020-01-01,national,remont_zhilya_i_tovary_dlya_nego,ремонт жилья и товары для него,0.002,level
 2020-02-01,national,remont_zhilya_i_tovary_dlya_nego,ремонт жилья и товары для него,0.0,level
 2020-03-01,national,remont_zhilya_i_tovary_dlya_nego,ремонт жилья и товары для него,0.004,level
@@ -2979,6 +3017,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,sakhar,Сахар,0.011166,level
 2026-07-01,national,sakhar,Сахар,0.032035,level
 2026-08-01,national,sakhar,Сахар,0.003167,level
+2026-09-01,national,sakhar,Сахар,-0.007,level
 2020-01-01,national,sbor_musora,сбор мусора,0.0,level
 2020-02-01,national,sbor_musora,сбор мусора,0.017,level
 2020-03-01,national,sbor_musora,сбор мусора,0.0,level
@@ -2999,6 +3038,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,soderzhanie_i_obsluzhivanie_zhilya,Содержание и обслуживание жилья,0.004169,level
 2026-07-01,national,soderzhanie_i_obsluzhivanie_zhilya,Содержание и обслуживание жилья,2.9e-05,level
 2026-08-01,national,soderzhanie_i_obsluzhivanie_zhilya,Содержание и обслуживание жилья,0.002728,level
+2026-09-01,national,soderzhanie_i_obsluzhivanie_zhilya,Содержание и обслуживание жилья,0.0,level
 2020-01-01,national,soderzhanie_zhilya,содержание жилья,0.002,level
 2020-02-01,national,soderzhanie_zhilya,содержание жилья,0.0,level
 2020-03-01,national,soderzhanie_zhilya,содержание жилья,0.0,level
@@ -3237,6 +3277,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,tverdoe_toplivo,Твердое топливо,0.000821,level
 2026-07-01,national,tverdoe_toplivo,Твердое топливо,0.00027,level
 2026-08-01,national,tverdoe_toplivo,Твердое топливо,0.000861,level
+2026-09-01,national,tverdoe_toplivo,Твердое топливо,0.006,level
 2021-01-01,national,vodootvedenie,водоотведение,0.0,level
 2021-02-01,national,vodootvedenie,водоотведение,-0.001,level
 2021-03-01,national,vodootvedenie,водоотведение,0.0,level
@@ -3305,6 +3346,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,vodootvedenie_za_1_kub_metr,"Водоотведение, за 1 куб. метр",0.0,level
 2026-07-01,national,vodootvedenie_za_1_kub_metr,"Водоотведение, за 1 куб. метр",0.0,level
 2026-08-01,national,vodootvedenie_za_1_kub_metr,"Водоотведение, за 1 куб. метр",-0.000153,level
+2026-09-01,national,vodootvedenie_za_1_kub_metr,"Водоотведение, за 1 куб. метр",0.0,level
 2021-01-01,national,vyvoz_musora,вывоз мусора,-0.003,level
 2021-02-01,national,vyvoz_musora,вывоз мусора,0.0,level
 2021-03-01,national,vyvoz_musora,вывоз мусора,0.0,level

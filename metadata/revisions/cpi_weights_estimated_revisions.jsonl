@@ -1,0 +1,11 @@
+{"indicator_id": "CPI_WEIGHTS_ESTIMATED", "period": "2026-12-31 CP01", "old_value": 39.596, "new_value": 39.595, "detected_date": "2026-10-08", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "CPI_WEIGHTS_ESTIMATED", "period": "2026-12-31 CP02", "old_value": 1.504, "new_value": 1.505, "detected_date": "2026-10-08", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "CPI_WEIGHTS_ESTIMATED", "period": "2026-12-31 CP04", "old_value": 9.634, "new_value": 9.631, "detected_date": "2026-10-08", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "CPI_WEIGHTS_ESTIMATED", "period": "2026-12-31 CP05", "old_value": 5.554, "new_value": 5.564, "detected_date": "2026-10-08", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "CPI_WEIGHTS_ESTIMATED", "period": "2026-12-31 CP06", "old_value": 5.746, "new_value": 5.745, "detected_date": "2026-10-08", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "CPI_WEIGHTS_ESTIMATED", "period": "2026-12-31 CP07", "old_value": 8.688, "new_value": 8.678, "detected_date": "2026-10-08", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "CPI_WEIGHTS_ESTIMATED", "period": "2026-12-31 CP08", "old_value": 4.711, "new_value": 4.715, "detected_date": "2026-10-08", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "CPI_WEIGHTS_ESTIMATED", "period": "2026-12-31 CP09", "old_value": 3.323, "new_value": 3.324, "detected_date": "2026-10-08", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "CPI_WEIGHTS_ESTIMATED", "period": "2026-12-31 CP10", "old_value": 2.581, "new_value": 2.574, "detected_date": "2026-10-08", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "CPI_WEIGHTS_ESTIMATED", "period": "2026-12-31 CP11", "old_value": 1.802, "new_value": 1.803, "detected_date": "2026-10-08", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "CPI_WEIGHTS_ESTIMATED", "period": "2026-12-31 CP13_2018", "old_value": 7.01, "new_value": 7.014, "detected_date": "2026-10-08", "source": "derived", "reason": "not stated by source"}

@@ -11,10 +11,10 @@
   "geography": "Kazakhstan (national)",
   "methodology": "Official NBK RUB/KZT rate, KZT per one RUB, weekdays (the rate in force on the day). From 1999-11-17: the NBK daily report (its first rows, 1999-10-19..21, are malformed). Accumulated: each run reads the last 45 days of the report and merges them with the processed history, which was loaded in full on 2026-09-25. No rate is published for 2023-07-28..2023-08-21. Before 1999-11-17: the NBK archive of official rates 1993-1999 (https://nationalbank.kz/file/download/22756), the rate in force on each weekday, from 1993-11-18; equal to the report on every common weekday 1999-11-17..1999-12-31 (enforced). KZT per one new rouble throughout: until 1997 the archive quotes per 1000 roubles, which after the 1000:1 redenomination of 1998-01-01 is one new rouble.",
   "publication_date": null,
-  "last_update_date": "2026-10-06",
-  "download_date": "2026-10-06",
+  "last_update_date": "2026-10-08",
+  "download_date": "2026-10-08",
   "period_start": "1993-11-18",
-  "period_end": "2026-10-06",
+  "period_end": "2026-10-08",
   "next_update_date": null,
   "transformation": "level",
   "revision_status": "original"

@@ -1,0 +1,11 @@
+{
+  "downloaded_at": "2026-10-08T16:02:18.993233",
+  "source_url": "https://nationalbank.kz/ru/monetaryreviewbankingsystem/monetarnyy-obzor-po-bankovskoy-sisteme-/records",
+  "params": {
+    "beginMount": 1,
+    "beginYear": 1990,
+    "endMount": 12,
+    "endYear": 2026
+  },
+  "read_by": "fetchers/nbk_records.py"
+}
