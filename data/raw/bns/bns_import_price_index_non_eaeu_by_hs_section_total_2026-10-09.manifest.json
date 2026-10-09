@@ -1,0 +1,18 @@
+{
+  "downloaded_at": "2026-10-09T13:49:48.948207",
+  "raw_file": "bns_import_price_index_non_eaeu_by_hs_section_total_2026-09-27.json",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "request_body": {
+    "p_parent_id": "",
+    "p_index_id": "19073961",
+    "p_keyword": "",
+    "p_period_id": "4",
+    "p_measure_id": "0",
+    "p_term_id": "741880",
+    "p_terms": "741880,741897,2695687,2695731,19073953",
+    "p_dicIds": "67,146,846,848,4020",
+    "idx": "0",
+    "filter": "[{\"property\":null,\"value\":null}]",
+    "id": ""
+  }
+}

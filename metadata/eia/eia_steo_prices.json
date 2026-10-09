@@ -11,11 +11,11 @@
   "geography": "World (benchmark prices)",
   "methodology": "Table 2 'Energy Prices' of the monthly STEO workbook; months after the release's last historical month carry transformation 'forecast'. The model takes the annual mean (annual: mean). STEO release: October 2026; last historical month 202609.",
   "publication_date": "October 2026",
-  "last_update_date": "2026-10-08",
-  "download_date": "2026-10-08",
+  "last_update_date": "2026-10-09",
+  "download_date": "2026-10-09",
   "period_start": "2022-01-01",
   "period_end": "2027-12-01",
   "next_update_date": null,
   "transformation": "level (history) / forecast (months after the last historical month)",
-  "revision_status": "revised"
+  "revision_status": "original"
 }
