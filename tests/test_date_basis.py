@@ -54,21 +54,36 @@ def test_every_date_basis_is_evidenced_and_applies_to_flows_only():
         assert i.get("observation_type") != "point_in_time", i["id"]
 
 
+# The NBK revises the balance of payments for the last three years or so, and the IMF's
+# WEO and the NBK's open-data forms take a revision up at different times. On 2026-10-13
+# the October WEO had 2023 at -8 284.3 mln USD -- the NBK's own workbook of 30.09.2026
+# says -8 284.4 -- while form 324 still summed to -9 315.5, and the WEO's 2024 (-6 763.9)
+# matched neither form 324 (-7 935.5) nor that workbook (-6 819.4). Both 2022 and every
+# earlier year were equal in all three.
+BOP_REVISION_WINDOW_YEARS = 3
+
+
 def test_quarterly_current_account_sums_to_the_imf_calendar_year():
     """The proof the shift is right: four quarters of a calendar year add up to the
-    IMF's annual figure only after the relabelling (2020: -11 054.8 mln USD)."""
+    IMF's annual figure only after the relabelling (2020: -11 054.8 mln USD). Checked
+    on the years both publications have settled, i.e. before the IMF's last
+    BOP_REVISION_WINDOW_YEARS actual years, where the two vintages may differ."""
     quarters = _processed("nbk", "CURRENT_ACCOUNT_BALANCE")
-    imf = {d[:4]: v / 1e6 for d, v in _processed("imf", "IMF_CURRENT_ACCOUNT_USD").items()}
+    path = REPO_ROOT / "data" / "processed" / "imf" / "imf_current_account_usd.csv"
+    with path.open(encoding="utf-8") as f:
+        imf_rows = list(csv.DictReader(f))
+    imf = {r["date"][:4]: float(r["value"]) / 1e6 for r in imf_rows}
+    last_actual = max(int(r["date"][:4]) for r in imf_rows if r["transformation"] == "level")
     by_year = defaultdict(list)
     for d, v in quarters.items():
         by_year[d[:4]].append(v)
     checked = 0
     # 2000-2019 from formId=481, 2020 on from 324 (see nbk._bop_history).
-    for year in (str(y) for y in range(2000, 2025)):
+    for year in (str(y) for y in range(2000, last_actual - BOP_REVISION_WINDOW_YEARS + 1)):
         assert len(by_year[year]) == 4, year
         assert abs(sum(by_year[year]) - imf[year]) < 1.0, (year, sum(by_year[year]), imf[year])
         checked += 1
-    assert checked == 25
+    assert checked >= 22, (last_actual, checked)
 
 
 def test_year_to_date_pension_payments_restart_in_january():

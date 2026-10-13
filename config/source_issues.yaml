@@ -587,3 +587,22 @@ issues:
       1000 from 1996, BYB per 100 after 1994-09, the report's UZS and BYR per unit until 2014-02). TRY, UZS and BYN
       therefore have multi-year gaps; restated to the current unit (TRL/1 000 000, BYB/10 000 000).
     advice: Treat the 1990s TRY/BYN/UZS segments as separate short series; do not interpolate across the gaps.
+
+  - id: nbk_bop_form_324_stale_2023_2026
+    kind: inconsistent
+    variable: CURRENT_ACCOUNT_BALANCE
+    also: [BOP_GOODS_BALANCE, BOP_SERVICES_BALANCE, BOP_PRIMARY_INCOME, BOP_SECONDARY_INCOME]
+    observations:
+      - {date: "2023-01-01", value: -1632.68135}
+      - {date: "2026-01-01", value: -2008.012157}
+    evidence: >
+      NBK open-data formId=324 last changed on 2026-09-26 (the 2026-10-13 download is byte-identical) and
+      disagrees with the NBK's own workbook «Платежный баланс Республики Казахстан за период с 2000 года по
+      1 полугодие 2026 года» (nationalbank.kz/file/download/137396, 30.09.2026, sheet «2. Аналитический ПБ»)
+      in all five current-account lines from 2023-Q1 on; 2000-2022 are equal in every quarter. Current
+      account, mln USD, form vs workbook: 2023 -9 315.5 vs -8 284.4 (Q1 -1 632.7 vs -1 405.2), 2024 -7 935.5
+      vs -6 819.4, 2026-Q1 -2 008.0 vs -796.1. The form also has no 2025-Q3 (workbook -3 688.6) and no 2026-Q2
+      (+3 171.0). The October 2026 WEO carries the revised 2023 (-8 284.3).
+    advice: >-
+      Treat 2023-Q1 onward as a superseded vintage with a hole in 2025-Q3; until form 324 is refreshed, take
+      current quarterly values from the NBK balance-of-payments workbook (nationalbank.kz/file/download/137396).
