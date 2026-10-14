@@ -1,1 +1,7 @@
 {"indicator_id": "NEER_EX_OIL", "period": "2026-07-01", "old_value": 90.65535, "new_value": 90.59432, "detected_date": "2026-09-26", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NEER_EX_OIL", "period": "2026-01-01", "old_value": 84.27937, "new_value": 84.22114, "detected_date": "2026-10-14", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NEER_EX_OIL", "period": "2026-02-01", "old_value": 85.6, "new_value": 85.54847, "detected_date": "2026-10-14", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NEER_EX_OIL", "period": "2026-03-01", "old_value": 88.90315, "new_value": 88.84436, "detected_date": "2026-10-14", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NEER_EX_OIL", "period": "2026-04-01", "old_value": 90.5174, "new_value": 90.4548, "detected_date": "2026-10-14", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NEER_EX_OIL", "period": "2026-05-01", "old_value": 88.8062, "new_value": 88.74172, "detected_date": "2026-10-14", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NEER_EX_OIL", "period": "2026-06-01", "old_value": 86.3819, "new_value": 86.32012, "detected_date": "2026-10-14", "source": "nbk", "reason": "not stated by source"}

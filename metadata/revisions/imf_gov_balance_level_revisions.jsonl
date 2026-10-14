@@ -1,0 +1,8 @@
+{"indicator_id": "IMF_GOV_BALANCE_LEVEL", "period": "2022-12-31", "old_value": 109348717000.0, "new_value": 109448090000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_GOV_BALANCE_LEVEL", "period": "2025-12-31", "old_value": -4911846796000.0, "new_value": -4914871277000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_GOV_BALANCE_LEVEL", "period": "2026-12-31", "old_value": -2528960197000.0, "new_value": -1988342694000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_GOV_BALANCE_LEVEL", "period": "2027-12-31", "old_value": -3839076326000.0, "new_value": -5026874564000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_GOV_BALANCE_LEVEL", "period": "2028-12-31", "old_value": -4904685959000.0, "new_value": -5967039583000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_GOV_BALANCE_LEVEL", "period": "2029-12-31", "old_value": -5341162087000.0, "new_value": -6313076275000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_GOV_BALANCE_LEVEL", "period": "2030-12-31", "old_value": -5202603556000.0, "new_value": -5147356461000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_GOV_BALANCE_LEVEL", "period": "2031-12-31", "old_value": -5601896717000.0, "new_value": -5717079261000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}

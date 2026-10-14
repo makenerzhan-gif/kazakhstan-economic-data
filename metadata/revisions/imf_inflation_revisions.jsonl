@@ -1,0 +1,6 @@
+{"indicator_id": "IMF_INFLATION", "period": "2026-12-31", "old_value": 10.688503, "new_value": 10.316253, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_INFLATION", "period": "2027-12-31", "old_value": 10.053376, "new_value": 8.151043, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_INFLATION", "period": "2028-12-31", "old_value": 8.782549, "new_value": 7.105449, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_INFLATION", "period": "2029-12-31", "old_value": 7.599685, "new_value": 5.818956, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_INFLATION", "period": "2030-12-31", "old_value": 5.848574, "new_value": 5.142061, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_INFLATION", "period": "2031-12-31", "old_value": 4.999999, "new_value": 4.999998, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}

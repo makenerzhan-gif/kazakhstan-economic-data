@@ -1,0 +1,9 @@
+{"indicator_id": "IMF_CURRENT_ACCOUNT_USD", "period": "2023-12-31", "old_value": -9315500000.0, "new_value": -8284300000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_CURRENT_ACCOUNT_USD", "period": "2024-12-31", "old_value": -7935500000.0, "new_value": -6763900000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_CURRENT_ACCOUNT_USD", "period": "2025-12-31", "old_value": -11844600000.0, "new_value": -12450900000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_CURRENT_ACCOUNT_USD", "period": "2026-12-31", "old_value": -3772688000.0, "new_value": 2169198000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_CURRENT_ACCOUNT_USD", "period": "2027-12-31", "old_value": -7841870000.0, "new_value": -2884587000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_CURRENT_ACCOUNT_USD", "period": "2028-12-31", "old_value": -9967879000.0, "new_value": -11400911000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_CURRENT_ACCOUNT_USD", "period": "2029-12-31", "old_value": -10072789000.0, "new_value": -12681657000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_CURRENT_ACCOUNT_USD", "period": "2030-12-31", "old_value": -10366111000.0, "new_value": -15033151000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "IMF_CURRENT_ACCOUNT_USD", "period": "2031-12-31", "old_value": -9953315000.0, "new_value": -16038067000.0, "detected_date": "2026-10-14", "source": "imf", "reason": "not stated by source"}
