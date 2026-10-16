@@ -78,7 +78,7 @@ def test_quarterly_current_account_sums_to_the_imf_calendar_year():
     for d, v in quarters.items():
         by_year[d[:4]].append(v)
     checked = 0
-    # 2000-2019 from formId=481, 2020 on from 324 (see nbk._bop_history).
+    # formId=481 from 2000, 324 where 481 has no single amount (see nbk._bop_merge).
     for year in (str(y) for y in range(2000, last_actual - BOP_REVISION_WINDOW_YEARS + 1)):
         assert len(by_year[year]) == 4, year
         assert abs(sum(by_year[year]) - imf[year]) < 1.0, (year, sum(by_year[year]), imf[year])

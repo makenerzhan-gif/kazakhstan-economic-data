@@ -2,6 +2,7 @@
 data served with rows in another order or spread differently over the pages, or with the
 per-page column labels the API varies at random (formId=132, 2026-08-31..09-26), must give
 the same bytes -- so raw_store stores it once -- while every row and value is kept."""
+import contextlib
 import json
 import random
 import sys
@@ -13,7 +14,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import dedup_raw  # noqa: E402
 from fetchers import nbk  # noqa: E402
-from lib import nbk_pages, raw_store  # noqa: E402
+from lib import nbk_pages, raw_store, validation  # noqa: E402
 
 COLUMNS = [{"key": "report_date", "label": "Report date", "colId": None},
            {"key": "amount", "label": "Amount", "colId": None},
@@ -114,8 +115,8 @@ def test_a_second_run_with_the_same_data_stores_no_new_file(raw_root, monkeypatc
 
 
 def test_bop_history_form_gets_its_own_raw_file_and_manifest(raw_root, monkeypatch):
-    """A BoP series reads 324 and, for the quarters before 2020, 481; each download keeps
-    its own dated manifest (481 used to overwrite 324's) and neither is a "revision"."""
+    """A BoP series reads 324 and 481; each download keeps its own dated manifest (481
+    used to overwrite 324's) and neither is a "revision"."""
     def form(form_id: int, amount: float) -> list[dict]:
         rows = [{"report_date": "2020-01-01", "amount": amount, "code": "Goods", "row_id": "1"}]
         return [{"locale": "en", "formId": form_id, "columns": COLUMNS, "rows": rows, "page": 0,
@@ -136,7 +137,8 @@ def test_bop_history_form_gets_its_own_raw_file_and_manifest(raw_root, monkeypat
     monkeypatch.setattr(nbk.requests, "get", lambda url, headers, params, timeout: Resp(served[params["formId"]][0]))
     nbk._FORM_PAGES_CACHE.clear()
     nbk._fetch_nbk_form_paginated(nbk.BOP_FORM_ID, "BOP_GOODS_BALANCE")
-    nbk._bop_history("GOODS", "BOP_GOODS_BALANCE", {"2020-01-01": 1.0})
+    with contextlib.suppress(validation.StructuralChangeError):   # the fake rows carry no BoP signature
+        nbk._bop_merge("GOODS", "BOP_GOODS_BALANCE", {"2020-01-01": 1.0})
     today = date.today().isoformat()
     folder = raw_root / "nbk"
     assert sorted(p.name for p in folder.glob("*.json") if not p.name.endswith(".manifest.json")) == [

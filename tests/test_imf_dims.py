@@ -97,13 +97,17 @@ def _scalar(agency, indicator):
 
 
 def test_imf_current_account_is_nbks():
-    """Same quarters, same dates (quarter start). 2023Q1-2025Q2 differ by 14-350 mn: NBK has revised them
-    and the IMF's BOP does not carry the revision yet — NBK stays the primary source."""
+    """Same quarters, same dates (quarter start). The two differ only inside the NBK's
+    revision window -- the last three years or so, which each publication takes up at its
+    own pace (2026-10-16: the IMF had the NBK's 2023 revision but not its 2024-2026 one,
+    up to 1 212 mn in 2026-Q1) -- so NBK stays the primary source and must reach as far."""
     imf, nbk = _item("IMF_BOP_QUARTERLY", "NETCD_T.CAB"), _scalar("nbk", "CURRENT_ACCOUNT_BALANCE")
     common = sorted(set(imf) & set(nbk))
     same = [d for d in common if abs(imf[d] - nbk[d]) < 1.0]
     assert len(common) >= 100 and len(same) >= 0.85 * len(common)
-    assert all(d in same for d in common[-2:])
+    window_start = f"{int(common[-1][:4]) - 3}-01-01"
+    assert all(d >= window_start for d in common if d not in same), [d for d in common if d not in same]
+    assert max(imf) in nbk
 
 
 def test_imf_net_iip_is_nbks_one_day_earlier():

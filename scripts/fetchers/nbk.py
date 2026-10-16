@@ -1897,14 +1897,14 @@ def fetch_current_account_balance() -> tuple[list[dict], dict]:
         )
 
     recent = {r["report_date"]: float(r["amount"]) for r in matching}
-    history, history_note = _bop_history("CURRENT_ACCOUNT", "CURRENT_ACCOUNT_BALANCE", recent)
-    records = [{"date": d, "value": v} for d, v in sorted({**history, **recent}.items())]
+    merged, merge_note = _bop_merge("CURRENT_ACCOUNT", "CURRENT_ACCOUNT_BALANCE", recent)
+    records = [{"date": d, "value": v} for d, v in sorted(merged.items())]
     manifest = {
         "frequency": "quarterly",
-        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={CURRENT_ACCOUNT_FORM_ID}",
-        "dataset_id": f"formId={CURRENT_ACCOUNT_FORM_ID},code={CURRENT_ACCOUNT_CODE}",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={BOP_HISTORY_FORM_ID}",
+        "dataset_id": f"formId={BOP_HISTORY_FORM_ID}+{CURRENT_ACCOUNT_FORM_ID},code={CURRENT_ACCOUNT_CODE}",
         "note": "USD million. Current account balance of the balance of payments. Negative "
-                f"values indicate a deficit. History: {history_note}.",
+                f"values indicate a deficit. Quarters: {merge_note}.",
     }
     return records, manifest
 
@@ -3329,8 +3329,8 @@ def fetch_inflation_target() -> tuple[list[dict], dict]:
 # account deficit is an INCOME deficit, not a trade deficit, and the headline
 # number alone hides that completely.
 #
-# WHY NOT formId=481 FOR RECENT QUARTERS (its pre-2020 history IS used -- see
-# _bop_history below). 481 ("standard
+# WHY NOT formId=481 FOR RECENT QUARTERS (superseded 2026-10-16: 481 is now the
+# primary form and 324 fills in -- see _bop_merge below). 481 ("standard
 # presentation") carries the same five lines back to 2000-04-01 against 324's
 # 2020-04-01, and its headline matches the stored series to six decimals. It
 # was built out first and then REJECTED, because on ten quarters in 2023-2024
@@ -3489,33 +3489,39 @@ def _verify_bop_identity(all_rows: list[dict], indicator_id: str) -> int:
 
 
 # ---------------------------------------------------------------------------
-# HISTORY BEFORE 2020 FROM formId=481 (added 2026-09-25). 324 starts at Q1 2020; 481
-# carries the same five lines from Q1 2000. What disqualified 481 above -- two
-# different amounts under one signature -- occurs from report_date 2023-04-01 on,
-# all of it inside 324's own range. So 481 is read ONLY for the quarters before 324's
-# first one, and only while every check below holds on the day's download:
-#   - each of those quarters resolves to exactly one amount per line;
-#   - goods + services + primary + secondary = current account in each of them;
-#   - on every quarter both forms carry unambiguously, 481 equals 324 (1e-6).
-# Checked 2026-09-25 on the archived 2026-09-02 download: 80 quarters, identity holds
-# in all, 14-15 overlap quarters identical, and the four quarters of every year
-# 2000-2024 add up to the IMF WEO annual current account within 0.8 mln USD.
-# If any check fails the history is left out (logged in the manifest), never guessed.
+# formId=481 IS THE PRIMARY FORM SINCE 2026-10-16; 324 FILLS IN. Until then 481 was read
+# only for the quarters before 324's first (2020-Q1), and only while it equalled 324 on
+# every shared quarter. Three things turned that round:
+#   - 481 was always the more complete form: 2025-Q3 was in it on 2026-09-26 and never
+#     in 324 until 2026-10-16; 2026-Q2 reached 481 on 2026-10-14, 324 two days later;
+#   - the NBK's revision of 2023-2026 (its workbook «Платежный баланс Республики
+#     Казахстан за период с 2000 года по 1 полугодие 2026 года», 30.09.2026) reached 481
+#     in full, but 324 took it from 2024 only and still carries the old 2023;
+#   - the two-amounts defect above is gone from the 2026-10-16 download: all five lines,
+#     106 quarters 2000-Q1..2026-Q2, one amount each, every one equal to that workbook.
+# The old rule then dropped 2000-2019 altogether (the 2023 quarters differed), and the
+# daily runs of 2026-10-15 and 10-16 stopped on the cut series. Now each quarter takes
+# 481's amount when it has exactly one, else 324's; a quarter with two amounts in 481 and
+# none in 324 stops the fetch (where the two agree, 324's seventh decimal is kept). 481
+# must equal 324 on the first four quarters both carry (2020: settled, so a mismatch
+# there means a wrong row, not a revision), and goods + services + primary + secondary
+# must equal the current account in 481 wherever all five are unambiguous. Where 324 and 481 differ the manifest note names the quarters. Any
+# failure raises: the stored series is kept rather than cut to 324's 2020 start.
 # ---------------------------------------------------------------------------
 BOP_HISTORY_FORM_ID = "481"
 BOP_HISTORY_TYPE = "USD mln"   # 481's word order; 324 says "mln USD"
+BOP_SAME_LINE_QUARTERS = 4
 
 
-def _bop_history(line: str, indicator_id: str, recent: dict[str, float]) -> tuple[dict[str, float], str]:
-    """({report_date: amount} for the quarters before 324's first, a note on what was done).
+def _bop_merge(line: str, indicator_id: str, recent: dict[str, float]) -> tuple[dict[str, float], str]:
+    """({report_date: amount} over 481's range plus any quarter only 324 has, a note).
 
-    481 is archived under `<indicator_id>_HISTORY`: under the series' own id its download
-    overwrote the dated manifest of the 324 download made moments before (both forms,
-    one manifest; 2026-09-25..26 the manifest named only 481) and its raw file took a
-    time-suffixed name as if 324 had been revised."""
+    `recent` is 324's series for the line. 481 is archived under `<indicator_id>_HISTORY`:
+    under the series' own id its download overwrote the dated manifest of the 324 download
+    made moments before (both forms, one manifest; 2026-09-25..26 the manifest named only
+    481) and its raw file took a time-suffixed name as if 324 had been revised."""
     rows = [{**r, "type": "mln USD"} if _bop_norm(r.get("type")) == _bop_norm(BOP_HISTORY_TYPE) else r
             for r in _fetch_nbk_form_paginated(BOP_HISTORY_FORM_ID, f"{indicator_id}_HISTORY")]
-    first_recent = min(recent)
 
     def select(target: str) -> dict[str, set]:
         match = {**BOP_BASE_MATCH, **BOP_LINES[target]}
@@ -3527,40 +3533,64 @@ def _bop_history(line: str, indicator_id: str, recent: dict[str, float]) -> tupl
                 out.setdefault(row["report_date"], set()).add(round(float(row["amount"]), 6))
         return out
 
+    def fail(what: str) -> None:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+            f"WHAT CHANGED: formId={BOP_HISTORY_FORM_ID} {what}",
+            f"EXPECTED: the {line} line from 2000 on, one amount per quarter (or formId={BOP_FORM_ID}'s "
+            "where 481 has two), reconciling to the current account",
+            f"ACTION REQUIRED: inspect {MONETARY_AGGREGATES_URL}?formId={BOP_HISTORY_FORM_ID} and "
+            "update scripts/fetchers/nbk.py",
+        ]))
+
     lines = {name: select(name) for name in BOP_IDENTITY_PARTS + ("CURRENT_ACCOUNT",)}
-    history = {d: v for d, v in lines[line].items() if d < first_recent}
-    if not history:
-        return {}, f"formId={BOP_HISTORY_FORM_ID}: no quarter before {first_recent}; history not added"
-    if any(len(v) > 1 for v in history.values()):
-        bad = sorted(d for d, v in history.items() if len(v) > 1)
-        return {}, f"formId={BOP_HISTORY_FORM_ID}: two amounts for {bad[:3]}; history not added"
-    for d in history:
+    own = lines[line]
+    if not own:
+        fail("returns no row for this line")
+    single = {d: next(iter(v)) for d, v in own.items() if len(v) == 1}
+    first_shared = sorted(d for d in single if d in recent)[:BOP_SAME_LINE_QUARTERS]
+    if len(first_shared) < BOP_SAME_LINE_QUARTERS or any(abs(single[d] - recent[d]) > 1e-6 for d in first_shared):
+        fail(f"does not equal formId={BOP_FORM_ID} on the first quarters both carry ({first_shared}): "
+             "not the same line")
+    merged, from_324 = {}, []
+    for d in sorted(set(own) | set(recent)):
+        if d in single and d in recent and abs(single[d] - recent[d]) <= 1e-6:
+            merged[d] = recent[d]   # the same number; 324 prints a seventh decimal, 481 six
+        elif d in single:
+            merged[d] = single[d]
+        elif d in recent:
+            merged[d] = recent[d]
+            from_324.append(d)
+        else:
+            fail(f"gives {sorted(own[d])} for {d} and formId={BOP_FORM_ID} has no amount to decide")
+    checked = 0
+    for d in single:
         parts = [lines[p].get(d, set()) for p in BOP_IDENTITY_PARTS]
         ca = lines["CURRENT_ACCOUNT"].get(d, set())
-        if any(len(p) != 1 for p in parts) or len(ca) != 1 or \
-                abs(sum(next(iter(p)) for p in parts) - next(iter(ca))) > BOP_IDENTITY_TOLERANCE:
-            return {}, f"formId={BOP_HISTORY_FORM_ID}: identity fails on {d}; history not added"
-    overlap = [d for d, v in lines[line].items() if d in recent and len(v) == 1]
-    differing = [d for d in overlap if abs(next(iter(lines[line][d])) - recent[d]) > 1e-6]
-    if not overlap or differing:
-        return {}, (f"formId={BOP_HISTORY_FORM_ID}: differs from {BOP_FORM_ID} on {differing[:3]}"
-                    if differing else f"formId={BOP_HISTORY_FORM_ID}: no unambiguous overlap to prove it") + "; history not added"
-    return ({d: next(iter(v)) for d, v in history.items()},
-            f"{len(history)} quarters before {first_recent} from formId={BOP_HISTORY_FORM_ID}, "
-            f"equal to {BOP_FORM_ID} on all {len(overlap)} shared unambiguous quarters, identity checked")
+        if all(len(p) == 1 for p in parts) and len(ca) == 1:
+            if abs(sum(next(iter(p)) for p in parts) - next(iter(ca))) > BOP_IDENTITY_TOLERANCE:
+                fail(f"breaks goods + services + primary + secondary = current account on {d}")
+            checked += 1
+    revised = sorted(d for d in recent if d in single and abs(single[d] - recent[d]) > 1e-6)
+    note = (f"formId={BOP_HISTORY_FORM_ID} for {len(single)} quarters, report dates {min(single)}..{max(single)} "
+            f"(identity checked on {checked}); formId={BOP_FORM_ID} for {len(from_324)} where 481 has no single amount")
+    if revised:
+        note += (f"; {BOP_FORM_ID} differs on {len(revised)} report dates ({revised[0]}..{revised[-1]}), "
+                 f"{BOP_HISTORY_FORM_ID} taken")
+    return merged, note
 
 
 def _fetch_bop_line(line: str, indicator_id: str, note: str) -> tuple[list[dict], dict]:
     all_rows = _fetch_nbk_form_paginated(BOP_FORM_ID, indicator_id)
     series = _bop_select(all_rows, line, indicator_id)
     checked = _verify_bop_identity(all_rows, indicator_id)
-    history, history_note = _bop_history(line, indicator_id, series)
-    records = [{"date": d, "value": v} for d, v in sorted({**history, **series}.items())]
+    merged, merge_note = _bop_merge(line, indicator_id, series)
+    records = [{"date": d, "value": v} for d, v in sorted(merged.items())]
     manifest = {
         "frequency": "quarterly",
-        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={BOP_FORM_ID}",
-        "dataset_id": f"nbk-form-{BOP_FORM_ID}/{line}",
-        "note": f"{note} History: {history_note}.",
+        "source_url": f"{MONETARY_AGGREGATES_URL}?formId={BOP_HISTORY_FORM_ID}",
+        "dataset_id": f"nbk-form-{BOP_HISTORY_FORM_ID}+{BOP_FORM_ID}/{line}",
+        "note": f"{note} Quarters: {merge_note}.",
         "identity_quarters_checked": checked,
     }
     return records, manifest
