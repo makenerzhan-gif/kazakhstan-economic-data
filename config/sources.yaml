@@ -2914,6 +2914,10 @@ agencies:
           through 2026-Q2, USD million, recently negative (e.g. -5,180.4 in 2026-Q1) -- a
           plausible current account deficit for Kazakhstan given large FDI-related income
           outflows even alongside a goods trade surplus. fetch_current_account_balance.
+          SINCE 2026-10-16 formId=481 IS THE PRIMARY FORM AND 324 FILLS IN (nbk._bop_merge): 481 has
+          every quarter from 2000-Q1, the NBK's revision of 30.09.2026 in full and one amount per
+          quarter on all five lines, equal to the NBK's balance-of-payments workbook in all 106;
+          324 lacked 2025-Q3 until 2026-10-16 and still carries the unrevised 2023.
       BOP_GOODS_BALANCE:
         status: confirmed
         api_url: "https://data.nationalbank.kz/api/v1/data?formId=324"
@@ -2956,6 +2960,10 @@ agencies:
           lookups rather than restating one number. All 24 quarters reconcile, and in the unified
           dataset the four components sum to exactly the stored CURRENT_ACCOUNT_BALANCE
           (-2008.012157 for 2026-04-01). Verified to FIRE when a component is perturbed.
+          SINCE 2026-10-16 formId=481 IS THE PRIMARY FORM AND 324 FILLS IN (nbk._bop_merge): 481 has
+          every quarter from 2000-Q1, the NBK's revision of 30.09.2026 in full and one amount per
+          quarter on all five lines, equal to the NBK's balance-of-payments workbook in all 106;
+          324 lacked 2025-Q3 until 2026-10-16 and still carries the unrevised 2023.
 
       BOP_SERVICES_BALANCE:
         status: confirmed

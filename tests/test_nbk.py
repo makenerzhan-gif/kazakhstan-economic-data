@@ -28,24 +28,45 @@ def _bop_quarter(date, goods, services=-1.0, primary=-2.0, secondary=0.5, form_t
     ]
 
 
-def test_bop_history_is_taken_from_481_only_before_324_and_only_when_it_proves_out(monkeypatch):
-    """481 carries 2000 onward but gives two amounts for some recent quarters; its early
-    quarters are spliced in only when unambiguous, identity-consistent and equal to 324
-    where both publish (audit 2026-09-25)."""
+def _goods(date, amount):
+    return _bop_row(date, "Goods", amount, instrument_type_code="Goods and services", instrument_subtype1_code="Goods")
+
+
+def test_bop_quarters_come_from_481_with_324_filling_in(monkeypatch):
+    """481 carries 2000 on and, since 2026-10-16, the NBK's current vintage; 324 lagged it
+    (2023 unrevised, 2025-Q3 missing). Each quarter takes 481's single amount, else 324's."""
+    import pytest
     from fetchers import nbk
-    rows = _bop_quarter("2019-10-01", 5.0) + _bop_quarter("2020-01-01", 6.0) + _bop_quarter("2020-04-01", 7.0)
-    rows += [_bop_row("2023-04-01", "Goods", 9.0, instrument_type_code="Goods and services", instrument_subtype1_code="Goods"),
-             _bop_row("2023-04-01", "Goods", 9.9, instrument_type_code="Goods and services", instrument_subtype1_code="Goods")]
+    from lib import validation
+    shared = ["2020-04-01", "2020-07-01", "2020-10-01", "2021-01-01"]
+    rows = _bop_quarter("2019-10-01", 5.0) + _bop_quarter("2020-01-01", 6.0)
+    for i, d in enumerate(shared):
+        rows += _bop_quarter(d, 7.0 + i)
+    rows += _bop_quarter("2023-04-01", 9.0)                              # revised in 481
+    rows += [_goods("2024-04-01", 3.0), _goods("2024-04-01", 3.3)]       # two vintages in 481
+    rows += _bop_quarter("2025-10-01", 4.0)                              # absent from 324
     monkeypatch.setattr(nbk, "_fetch_nbk_form_paginated", lambda form, ind: rows)
-    history, note = nbk._bop_history("GOODS", "BOP_GOODS_BALANCE", {"2020-04-01": 7.0, "2023-04-01": 9.0})
-    assert history == {"2019-10-01": 5.0, "2020-01-01": 6.0}, note
-    # A disagreement with 324 on a shared quarter: no history at all, never a guess.
-    history, note = nbk._bop_history("GOODS", "BOP_GOODS_BALANCE", {"2020-04-01": 7.5})
-    assert history == {} and "differs" in note
-    # Two amounts for an early quarter: no history.
-    rows.append(_bop_row("2019-10-01", "Goods", 5.5, instrument_type_code="Goods and services", instrument_subtype1_code="Goods"))
-    history, note = nbk._bop_history("GOODS", "BOP_GOODS_BALANCE", {"2020-04-01": 7.0})
-    assert history == {} and "two amounts" in note
+    recent = {**{d: 7.0 + i for i, d in enumerate(shared)}, "2023-04-01": 8.5, "2024-04-01": 3.3, "2026-01-01": 2.0}
+    recent["2021-01-01"] = 10.0000004                                     # 324's seventh decimal
+    merged, note = nbk._bop_merge("GOODS", "BOP_GOODS_BALANCE", recent)
+    assert merged == {"2019-10-01": 5.0, "2020-01-01": 6.0, **{d: 7.0 + i for i, d in enumerate(shared)},
+                      "2021-01-01": 10.0000004, "2023-04-01": 9.0, "2024-04-01": 3.3, "2025-10-01": 4.0,
+                      "2026-01-01": 2.0}, note
+    assert "324 differs on 1 report dates (2023-04-01..2023-04-01), 481 taken" in note
+    # A different line, not a revision: 481 and 324 disagree on the first shared quarters.
+    with pytest.raises(validation.StructuralChangeError, match="not the same line"):
+        nbk._bop_merge("GOODS", "BOP_GOODS_BALANCE", {**recent, "2020-04-01": 7.5})
+    # Two amounts in 481 and nothing in 324 to decide: stop rather than guess or leave a hole.
+    with pytest.raises(validation.StructuralChangeError, match="no amount to decide"):
+        nbk._bop_merge("GOODS", "BOP_GOODS_BALANCE", {d: v for d, v in recent.items() if d != "2024-04-01"})
+    # The components no longer add up to the current account in 481.
+    next(r for r in rows if r["report_date"] == "2019-10-01" and r["code"] == "Current account")["amount"] = 99.0
+    with pytest.raises(validation.StructuralChangeError, match="breaks goods"):
+        nbk._bop_merge("SERVICES", "BOP_SERVICES_BALANCE", {d: -1.0 for d in shared})
+    # 481 gone: the stored series is kept (the fetch fails) instead of being cut to 324's 2020 start.
+    monkeypatch.setattr(nbk, "_fetch_nbk_form_paginated", lambda form, ind: [])
+    with pytest.raises(validation.StructuralChangeError, match="no row for this line"):
+        nbk._bop_merge("GOODS", "BOP_GOODS_BALANCE", recent)
 
 
 def test_form_299_real_exchange_rates_are_based_on_december_2016():

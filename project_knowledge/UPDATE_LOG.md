@@ -1,50 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-26 — debt structure completed for the sovereign-rating models: 515 -> 519 indicators» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-26 — NBK form downloads archived in canonical form; 101 same-content copies removed» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-26 — NBK form downloads archived in canonical form; 101 same-content copies removed
-
-**Why.** The insurance form (formId=132, 13.7 MB, read by INSURANCE_PREMIUMS_GENERAL/LIFE) was archived
-again on nearly every run since 2026-08-31, often several times a day: 102 files, 4 distinct contents.
-The rows were the same and in the same order; what changed on every call was the per-page `columns`
-block — the API labels `residency` "Residency of institutional units" on some pages and "residency"
-(null before 09-15) on others, in a new random mix each time — so the byte-level dedup of
-`lib/raw_store` never matched. Every other form already had one file per content; `row_id` is stable.
-
-**What.** `fetchers.nbk._fetch_nbk_form_paginated` now archives the canonical form of the pages
-(`scripts/lib/nbk_pages.py`): all rows unchanged and none dropped (repeats kept), sorted by
-report_date then full row content; envelope fields once, `n_pages`; distinct column entries sorted;
-sorted keys. Only page boundaries and the API's row order are not kept. The manifest records
-`raw_file`, `raw_format` (`nbk-open-data-form/canonical-v1`), `raw_normalisation`, `rows_archived`.
-Checked live: a second same-day run stores no new file. `scripts/dedup_raw.py --nbk-forms` groups the
-NBK form files by canonical content (keeping a canonical file where one exists, else the earliest),
-removed 101 files / 1 307 MB (insurance 98, the 324 and 481 forms under CURRENT_ACCOUNT_BALANCE one
-each, replaced by today's canonical copies) and re-pointed their manifests; a manifest without
-`raw_file` is now taken to name the file of its own stem. Record: `data/raw/dedup_2026-09-26.json`
-(`nbk_forms_removed`). Five new tests (`tests/test_nbk_pages.py`).
-
-**Also.** The five BoP series (CURRENT_ACCOUNT_BALANCE, BOP_GOODS/SERVICES_BALANCE, BOP_PRIMARY/SECONDARY_INCOME)
-read form 324 and, for 2000–2019, form 481 under the same id, so the 481 download overwrote the dated manifest
-of the 324 one and was filed as a same-day "revision" (`_HHMMSS`). `_bop_history` now archives 481 under
-`<ID>_HISTORY`: two manifests per series per day, no false revision; the series are unchanged (104 quarters).
-
-**WITS.** Every WITS answer (7 series) was archived again on every run although only `header.prepared`, the
-time WITS built the answer, differed. `gravity._save_raw` was meant to skip such answers, but
-`raw_store.latest_raw_file` returned the dated *manifest* (it sorts after the `.json`), so the check never
-matched. `latest_raw_file` now never returns a manifest, and `_save_raw` still writes the day's manifest,
-naming the file that holds the data. `dedup_raw --wits` removed 14 copies (record: `wits_removed`). Seven
-manifests of 2026-09-25 named files from a second run that day that were never committed; they now name
-the file archived that day, with a note, and are listed under `wits_never_committed` (not as removals —
-their bytes are unknown). No dangling manifest left. Checked live: two WITS runs, no new file.
-
-The CI run of 2026-09-26 09:45 (old code) added one more insurance copy (`…_094522.json`); removed on
-merging main, same record (116 files in all).
-
-**First CI run on the new code (2026-09-26, run 36239472600).** No new insurance or WITS copy. It archived
-38 NBK forms for the first time in canonical form (18.4 MB); each held the same data as the form's last
-old-format file, so those 38 old copies (18.5 MB) were removed with `dedup_raw --nbk-forms` (same record).
-From now on an NBK form or WITS answer is stored again only when its data change.
 
 ## 2026-09-26 — National Fund receipts by tax and payment: 519 -> 534 indicators
 
@@ -668,3 +625,33 @@ the source's own unshifted dating), since the two publications take revisions up
 (the WEO's 2024, -6 763.9, matches neither NBK vintage). The stale vintage is registered in
 config/source_issues.yaml (nbk_bop_form_324_stale_2023_2026) and shows in DATA_CATALOG. No number was
 changed. The run's failure was reproduced locally with the refetched IMF series, and the new test passes on it.
+
+## 2026-10-16 — balance of payments from NBK form 481, with 324 filling in (user: «почему упал прогон»)
+
+The runs of 2026-10-15 and 10-16 fetched everything and committed nothing: CURRENT_ACCOUNT_BALANCE
+came out with 25-26 quarters instead of 104, so test_quarterly_current_account_sums_to_the_imf_calendar_year
+(no quarters for 2000) and test_imf_current_account_is_nbks (25 < 100 shared quarters) failed. The NBK
+had refreshed both of its balance-of-payments forms, unevenly. formId=481 (2000 on) now carries its
+revision of 30.09.2026 in full: on 2026-10-16 all five current-account lines, 106 quarters 2000-Q1 to
+2026-Q2, one amount each, every one equal to the NBK's workbook «Платежный баланс Республики Казахстан за
+период с 2000 года по 1 полугодие 2026 года». formId=324 (2020 on) took the revision from 2024 and
+added 2025-Q3 and 2026-Q2, but still carries the unrevised 2023 (current account Q1 -1 632.7 against
+-1 405.2). The fetcher spliced 481 in only for the quarters before 2020 and only while 481 equalled 324
+on every shared quarter, so the 2023 disagreement dropped 2000-2019 from all five series.
+
+481 had been the more complete form all along (2025-Q3 was in it on 2026-09-26 and reached 324 on
+2026-10-16; 2026-Q2 reached 481 on 10-14, 324 on 10-16), and the two-amounts-per-quarter defect that
+once disqualified it is gone from the 2026-10-16 download. nbk._bop_merge now takes 481's amount for
+every quarter where it has exactly one and 324's otherwise (where the two agree to 1e-6, 324's
+value, which prints a seventh decimal, so only genuinely revised quarters enter the revisions files);
+it raises, keeping the stored series, when
+481 is empty, disagrees with 324 on the first four quarters both carry (2020: a wrong row, not a
+revision), gives two amounts where 324 has none, or breaks goods + services + primary + secondary =
+current account. The manifest note names the quarters where 324 differs. test_imf_current_account_is_nbks
+no longer requires the last two shared quarters to agree: the IMF's quarterly BOP has the NBK's 2023
+revision but not its 2024-2026 one (2026-Q1 -2 008.0 against -796.1); differences must now lie in the
+last three years and NBK must reach the IMF's latest quarter. config/source_issues.yaml drops
+nbk_bop_form_324_stale_2023_2026 (the series no longer uses 324's 2023). Run locally on the day's
+download: all five series 106 quarters 2000-Q1 to 2026-Q2, identity holding in all 106, current
+account 2023 -8 284.4, 2024 -6 819.4, 2025 -13 093.5, 2026-H1 +2 374.9 (equal to the NBK workbook);
+the revisions files record 2023-Q1..2026-Q1 only; 830 tests pass on that data and on main's.
