@@ -1,0 +1,11 @@
+{"indicator_id": "BOP_SECONDARY_INCOME", "period": "2023-01-01", "old_value": -198.8091963, "new_value": -47.628945, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BOP_SECONDARY_INCOME", "period": "2023-04-01", "old_value": -321.1664373, "new_value": -152.175767, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BOP_SECONDARY_INCOME", "period": "2023-07-01", "old_value": -248.0567004, "new_value": -93.072294, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BOP_SECONDARY_INCOME", "period": "2023-10-01", "old_value": -268.5742348, "new_value": -105.041077, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BOP_SECONDARY_INCOME", "period": "2024-01-01", "old_value": -73.72640656, "new_value": 82.157974, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BOP_SECONDARY_INCOME", "period": "2024-04-01", "old_value": -103.6553972, "new_value": 60.231568, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BOP_SECONDARY_INCOME", "period": "2024-07-01", "old_value": -175.6142774, "new_value": -22.052465, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BOP_SECONDARY_INCOME", "period": "2024-10-01", "old_value": -131.5326766, "new_value": 63.822606, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BOP_SECONDARY_INCOME", "period": "2025-01-01", "old_value": -99.72807162, "new_value": 37.282972, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BOP_SECONDARY_INCOME", "period": "2025-04-01", "old_value": -244.6962967, "new_value": -106.081023, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "BOP_SECONDARY_INCOME", "period": "2026-01-01", "old_value": 98.708601, "new_value": 98.504654, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}

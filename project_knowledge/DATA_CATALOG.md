@@ -28,7 +28,7 @@ From config/source_issues.yaml (audit 2026-09-25). The values are what the offic
 
 | Variable | Dates | Kind | Status | What to do |
 |---|---|---|---|---|
-| EXPORTS_VOLUME_BY_COMMODITY_GROUP | 2026-06-01 | error | still in the data | Treat June 2026 export tonnage (FLAT_ROLLED and TOTAL) as missing. Value series (USD) are unaffected. |
+| EXPORTS_VOLUME_BY_COMMODITY_GROUP | 2026-06-01 | error | no longer in the data -- source corrected? remove the entry | Treat June 2026 export tonnage (FLAT_ROLLED and TOTAL) as missing. Value series (USD) are unaffected. |
 | NON_OIL_BUDGET_DEFICIT | 2021-12-31 | error | still in the data | Treat 2021 as missing. |
 | GOV_DEBT_EUROBONDS | 2022-10-01 | error | still in the data | Treat 2022-10-01 as missing or interpolate. |
 | UNEMPLOYMENT_RATE_BY_REGION | 2019-12-31 | inconsistent | still in the data | Use 4.8 or IMF_UNEMPLOYMENT for 2019. |

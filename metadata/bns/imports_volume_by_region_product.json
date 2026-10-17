@@ -9,13 +9,13 @@
   "unit": "tonnes",
   "currency": "",
   "geography": "Kazakhstan (national and regions)",
-  "methodology": "The products of REGIONAL_PRODUCT_BALANCE (dictionaries/hs_balance_products.csv, codes as in INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY), by the region where the importer is registered. TOTAL is the published row. Raw file: bns_imports_2026-09-15.xlsx.",
+  "methodology": "The products of REGIONAL_PRODUCT_BALANCE (dictionaries/hs_balance_products.csv, codes as in INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY), by the region where the importer is registered. TOTAL is the published row. Raw file: bns_imports_2026-10-17.xlsx.",
   "publication_date": null,
-  "last_update_date": "2026-10-14",
-  "download_date": "2026-10-14",
+  "last_update_date": "2026-10-17",
+  "download_date": "2026-10-17",
   "period_start": "2015-01-01",
-  "period_end": "2026-07-01",
+  "period_end": "2026-08-01",
   "next_update_date": null,
   "transformation": "level",
-  "revision_status": "original"
+  "revision_status": "revised"
 }

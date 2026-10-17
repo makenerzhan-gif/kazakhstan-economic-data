@@ -1,7 +1,7 @@
 {
   "source": "nbk",
-  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=324",
-  "dataset_id": "formId=324,code=Current account",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=481",
+  "dataset_id": "formId=481+324,code=Current account",
   "indicator_id": "CURRENT_ACCOUNT_BALANCE",
   "indicator_name": "Current Account Balance",
   "description": "Сальдо счета текущих операций",
@@ -9,13 +9,13 @@
   "unit": "million USD",
   "currency": "",
   "geography": "Kazakhstan (national)",
-  "methodology": "USD million. Current account balance of the balance of payments. Negative values indicate a deficit. History: 80 quarters before 2020-04-01 from formId=481, equal to 324 on all 14 shared unambiguous quarters, identity checked.",
+  "methodology": "USD million. Current account balance of the balance of payments. Negative values indicate a deficit. Quarters: formId=481 for 106 quarters, report dates 2000-04-01..2026-07-01 (identity checked on 106); formId=324 for 0 where 481 has no single amount; 324 differs on 4 report dates (2023-04-01..2024-01-01), 481 taken.",
   "publication_date": null,
-  "last_update_date": "2026-10-14",
-  "download_date": "2026-10-14",
+  "last_update_date": "2026-10-17",
+  "download_date": "2026-10-17",
   "period_start": "2000-01-01",
-  "period_end": "2026-01-01",
+  "period_end": "2026-04-01",
   "next_update_date": null,
   "transformation": "level",
-  "revision_status": "original"
+  "revision_status": "revised"
 }

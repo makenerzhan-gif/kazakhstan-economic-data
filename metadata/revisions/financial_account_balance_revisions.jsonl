@@ -1,0 +1,9 @@
+{"indicator_id": "FINANCIAL_ACCOUNT_BALANCE", "period": "2024-01-01", "old_value": -711.734111, "new_value": -713.875321, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "FINANCIAL_ACCOUNT_BALANCE", "period": "2024-04-01", "old_value": 1224.813651, "new_value": 1233.791491, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "FINANCIAL_ACCOUNT_BALANCE", "period": "2024-07-01", "old_value": -745.15208, "new_value": -754.20349, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "FINANCIAL_ACCOUNT_BALANCE", "period": "2024-10-01", "old_value": -3634.821816, "new_value": -3588.017666, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "FINANCIAL_ACCOUNT_BALANCE", "period": "2025-01-01", "old_value": 754.307952, "new_value": 732.744262, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "FINANCIAL_ACCOUNT_BALANCE", "period": "2025-04-01", "old_value": 2144.677459, "new_value": 2114.425759, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "FINANCIAL_ACCOUNT_BALANCE", "period": "2025-07-01", "old_value": -910.699381, "new_value": -909.521501, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "FINANCIAL_ACCOUNT_BALANCE", "period": "2025-10-01", "old_value": -2052.720089, "new_value": -3313.188989, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "FINANCIAL_ACCOUNT_BALANCE", "period": "2026-01-01", "old_value": 758.500412, "new_value": 1583.191703, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}

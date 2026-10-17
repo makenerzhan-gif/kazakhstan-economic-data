@@ -10,12 +10,12 @@
   "currency": "KZT",
   "geography": "Kazakhstan (national)",
   "methodology": "Sheet «2021-2026», column D = year-to-date level.",
-  "publication_date": "2026-09-15",
-  "last_update_date": "2026-10-14",
-  "download_date": "2026-10-14",
+  "publication_date": "2026-10-15",
+  "last_update_date": "2026-10-17",
+  "download_date": "2026-10-17",
   "period_start": "2021-01-01",
-  "period_end": "2026-08-01",
-  "next_update_date": "2026-10-15",
+  "period_end": "2026-09-01",
+  "next_update_date": "2026-11-16",
   "transformation": "level (year-to-date cumulative, as published -- not decumulated to months)",
   "revision_status": "original"
 }

@@ -11,11 +11,11 @@
   "geography": "Kazakhstan (national)",
   "methodology": "Percent of GDP. OVERALL BALANCE of the balance of payments.",
   "publication_date": null,
-  "last_update_date": "2026-10-14",
-  "download_date": "2026-10-14",
+  "last_update_date": "2026-10-17",
+  "download_date": "2026-10-17",
   "period_start": "2005-01-01",
-  "period_end": "2026-01-01",
+  "period_end": "2026-04-01",
   "next_update_date": null,
   "transformation": "level",
-  "revision_status": "original"
+  "revision_status": "revised"
 }

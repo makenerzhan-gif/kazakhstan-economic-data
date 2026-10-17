@@ -46,3 +46,11 @@
 {"indicator_id": "RESERVES_IMPORT_COVER", "period": "2025-04-01", "old_value": 8.02288701005653, "new_value": 8.084539, "detected_date": "2026-10-14", "source": "nbk", "reason": "not stated by source"}
 {"indicator_id": "RESERVES_IMPORT_COVER", "period": "2025-07-01", "old_value": 8.15631437684291, "new_value": 8.182725, "detected_date": "2026-10-14", "source": "nbk", "reason": "not stated by source"}
 {"indicator_id": "RESERVES_IMPORT_COVER", "period": "2025-10-01", "old_value": 8.88756561317871, "new_value": 8.89214, "detected_date": "2026-10-14", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "RESERVES_IMPORT_COVER", "period": "2024-07-01", "old_value": 6.684036, "new_value": 6.683948, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "RESERVES_IMPORT_COVER", "period": "2024-10-01", "old_value": 7.383543, "new_value": 7.383447, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "RESERVES_IMPORT_COVER", "period": "2025-01-01", "old_value": 7.45555, "new_value": 7.455455, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "RESERVES_IMPORT_COVER", "period": "2025-04-01", "old_value": 8.084539, "new_value": 8.062738, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "RESERVES_IMPORT_COVER", "period": "2025-07-01", "old_value": 8.182725, "new_value": 8.150905, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "RESERVES_IMPORT_COVER", "period": "2025-10-01", "old_value": 8.89214, "new_value": 8.84835, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "RESERVES_IMPORT_COVER", "period": "2026-01-01", "old_value": 9.776402, "new_value": 9.70387, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "RESERVES_IMPORT_COVER", "period": "2026-04-01", "old_value": 9.752253, "new_value": 9.674267, "detected_date": "2026-10-17", "source": "nbk", "reason": "not stated by source"}

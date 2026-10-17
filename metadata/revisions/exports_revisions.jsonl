@@ -4,3 +4,10 @@
 {"indicator_id": "EXPORTS", "period": "2026-04-01", "old_value": 5761887.189630023, "new_value": 6008920.310440027, "detected_date": "2026-09-16", "source": "bns", "reason": "not stated by source"}
 {"indicator_id": "EXPORTS", "period": "2026-05-01", "old_value": 6147393.583650006, "new_value": 6276443.178570007, "detected_date": "2026-09-16", "source": "bns", "reason": "not stated by source"}
 {"indicator_id": "EXPORTS", "period": "2026-06-01", "old_value": 9807366.906380022, "new_value": 9816470.38185002, "detected_date": "2026-09-16", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "EXPORTS", "period": "2026-01-01", "old_value": 6471049.994700029, "new_value": 6478407.812470027, "detected_date": "2026-10-17", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "EXPORTS", "period": "2026-02-01", "old_value": 5927379.062060006, "new_value": 5939665.038769995, "detected_date": "2026-10-17", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "EXPORTS", "period": "2026-03-01", "old_value": 6218241.350329981, "new_value": 6220626.898149988, "detected_date": "2026-10-17", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "EXPORTS", "period": "2026-04-01", "old_value": 6008920.310440027, "new_value": 6020205.813540035, "detected_date": "2026-10-17", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "EXPORTS", "period": "2026-05-01", "old_value": 6276443.178570007, "new_value": 6275164.492850004, "detected_date": "2026-10-17", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "EXPORTS", "period": "2026-06-01", "old_value": 9816470.38185002, "new_value": 9820130.494390013, "detected_date": "2026-10-17", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "EXPORTS", "period": "2026-07-01", "old_value": 10169912.73756003, "new_value": 10175921.460140029, "detected_date": "2026-10-17", "source": "bns", "reason": "not stated by source"}

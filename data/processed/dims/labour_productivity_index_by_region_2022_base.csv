@@ -16,6 +16,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,ABY,PRODUCTIVITY_INDEX,Индекс производительности труда,109.3,as published: year-to-date period in % of the same period of 2022
 2025-10-01,ABY,PRODUCTIVITY_INDEX,Индекс производительности труда,107.4,as published: year-to-date period in % of the same period of 2022
 2026-01-01,ABY,PRODUCTIVITY_INDEX,Индекс производительности труда,123.0,as published: year-to-date period in % of the same period of 2022
+2026-04-01,ABY,PRODUCTIVITY_INDEX,Индекс производительности труда,130.0,as published: year-to-date period in % of the same period of 2022
 2022-01-01,AKM,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,AKM,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,AKM,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -33,6 +34,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,AKM,PRODUCTIVITY_INDEX,Индекс производительности труда,98.4,as published: year-to-date period in % of the same period of 2022
 2025-10-01,AKM,PRODUCTIVITY_INDEX,Индекс производительности труда,113.7,as published: year-to-date period in % of the same period of 2022
 2026-01-01,AKM,PRODUCTIVITY_INDEX,Индекс производительности труда,101.0,as published: year-to-date period in % of the same period of 2022
+2026-04-01,AKM,PRODUCTIVITY_INDEX,Индекс производительности труда,110.3,as published: year-to-date period in % of the same period of 2022
 2022-01-01,AKT,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,AKT,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,AKT,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -50,6 +52,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,AKT,PRODUCTIVITY_INDEX,Индекс производительности труда,89.0,as published: year-to-date period in % of the same period of 2022
 2025-10-01,AKT,PRODUCTIVITY_INDEX,Индекс производительности труда,108.2,as published: year-to-date period in % of the same period of 2022
 2026-01-01,AKT,PRODUCTIVITY_INDEX,Индекс производительности труда,96.3,as published: year-to-date period in % of the same period of 2022
+2026-04-01,AKT,PRODUCTIVITY_INDEX,Индекс производительности труда,93.0,as published: year-to-date period in % of the same period of 2022
 2022-01-01,ALA,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,ALA,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,ALA,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -67,6 +70,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,ALA,PRODUCTIVITY_INDEX,Индекс производительности труда,91.6,as published: year-to-date period in % of the same period of 2022
 2025-10-01,ALA,PRODUCTIVITY_INDEX,Индекс производительности труда,107.4,as published: year-to-date period in % of the same period of 2022
 2026-01-01,ALA,PRODUCTIVITY_INDEX,Индекс производительности труда,107.1,as published: year-to-date period in % of the same period of 2022
+2026-04-01,ALA,PRODUCTIVITY_INDEX,Индекс производительности труда,103.1,as published: year-to-date period in % of the same period of 2022
 2022-01-01,ALM,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,ALM,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,ALM,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -84,6 +88,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,ALM,PRODUCTIVITY_INDEX,Индекс производительности труда,87.0,as published: year-to-date period in % of the same period of 2022
 2025-10-01,ALM,PRODUCTIVITY_INDEX,Индекс производительности труда,120.3,as published: year-to-date period in % of the same period of 2022
 2026-01-01,ALM,PRODUCTIVITY_INDEX,Индекс производительности труда,99.5,as published: year-to-date period in % of the same period of 2022
+2026-04-01,ALM,PRODUCTIVITY_INDEX,Индекс производительности труда,102.0,as published: year-to-date period in % of the same period of 2022
 2022-01-01,AST,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,AST,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,AST,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -101,6 +106,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,AST,PRODUCTIVITY_INDEX,Индекс производительности труда,86.1,as published: year-to-date period in % of the same period of 2022
 2025-10-01,AST,PRODUCTIVITY_INDEX,Индекс производительности труда,99.7,as published: year-to-date period in % of the same period of 2022
 2026-01-01,AST,PRODUCTIVITY_INDEX,Индекс производительности труда,102.2,as published: year-to-date period in % of the same period of 2022
+2026-04-01,AST,PRODUCTIVITY_INDEX,Индекс производительности труда,92.8,as published: year-to-date period in % of the same period of 2022
 2022-01-01,ATY,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,ATY,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,ATY,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -118,6 +124,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,ATY,PRODUCTIVITY_INDEX,Индекс производительности труда,97.2,as published: year-to-date period in % of the same period of 2022
 2025-10-01,ATY,PRODUCTIVITY_INDEX,Индекс производительности труда,108.1,as published: year-to-date period in % of the same period of 2022
 2026-01-01,ATY,PRODUCTIVITY_INDEX,Индекс производительности труда,76.5,as published: year-to-date period in % of the same period of 2022
+2026-04-01,ATY,PRODUCTIVITY_INDEX,Индекс производительности труда,87.9,as published: year-to-date period in % of the same period of 2022
 2022-01-01,KRG,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,KRG,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,KRG,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -135,6 +142,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,KRG,PRODUCTIVITY_INDEX,Индекс производительности труда,110.9,as published: year-to-date period in % of the same period of 2022
 2025-10-01,KRG,PRODUCTIVITY_INDEX,Индекс производительности труда,124.3,as published: year-to-date period in % of the same period of 2022
 2026-01-01,KRG,PRODUCTIVITY_INDEX,Индекс производительности труда,109.2,as published: year-to-date period in % of the same period of 2022
+2026-04-01,KRG,PRODUCTIVITY_INDEX,Индекс производительности труда,114.3,as published: year-to-date period in % of the same period of 2022
 2022-01-01,KST,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,KST,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,KST,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -152,6 +160,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,KST,PRODUCTIVITY_INDEX,Индекс производительности труда,106.8,as published: year-to-date period in % of the same period of 2022
 2025-10-01,KST,PRODUCTIVITY_INDEX,Индекс производительности труда,128.2,as published: year-to-date period in % of the same period of 2022
 2026-01-01,KST,PRODUCTIVITY_INDEX,Индекс производительности труда,120.6,as published: year-to-date period in % of the same period of 2022
+2026-04-01,KST,PRODUCTIVITY_INDEX,Индекс производительности труда,126.3,as published: year-to-date period in % of the same period of 2022
 2022-01-01,KZL,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,KZL,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,KZL,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -169,6 +178,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,KZL,PRODUCTIVITY_INDEX,Индекс производительности труда,97.4,as published: year-to-date period in % of the same period of 2022
 2025-10-01,KZL,PRODUCTIVITY_INDEX,Индекс производительности труда,113.0,as published: year-to-date period in % of the same period of 2022
 2026-01-01,KZL,PRODUCTIVITY_INDEX,Индекс производительности труда,103.9,as published: year-to-date period in % of the same period of 2022
+2026-04-01,KZL,PRODUCTIVITY_INDEX,Индекс производительности труда,111.4,as published: year-to-date period in % of the same period of 2022
 2022-01-01,MNG,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,MNG,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,MNG,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -186,6 +196,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,MNG,PRODUCTIVITY_INDEX,Индекс производительности труда,86.3,as published: year-to-date period in % of the same period of 2022
 2025-10-01,MNG,PRODUCTIVITY_INDEX,Индекс производительности труда,91.9,as published: year-to-date period in % of the same period of 2022
 2026-01-01,MNG,PRODUCTIVITY_INDEX,Индекс производительности труда,87.2,as published: year-to-date period in % of the same period of 2022
+2026-04-01,MNG,PRODUCTIVITY_INDEX,Индекс производительности труда,92.3,as published: year-to-date period in % of the same period of 2022
 2022-01-01,PVL,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,PVL,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,PVL,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -203,6 +214,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,PVL,PRODUCTIVITY_INDEX,Индекс производительности труда,107.4,as published: year-to-date period in % of the same period of 2022
 2025-10-01,PVL,PRODUCTIVITY_INDEX,Индекс производительности труда,119.6,as published: year-to-date period in % of the same period of 2022
 2026-01-01,PVL,PRODUCTIVITY_INDEX,Индекс производительности труда,118.5,as published: year-to-date period in % of the same period of 2022
+2026-04-01,PVL,PRODUCTIVITY_INDEX,Индекс производительности труда,119.3,as published: year-to-date period in % of the same period of 2022
 2022-01-01,SHM,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,SHM,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,SHM,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -220,6 +232,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,SHM,PRODUCTIVITY_INDEX,Индекс производительности труда,87.5,as published: year-to-date period in % of the same period of 2022
 2025-10-01,SHM,PRODUCTIVITY_INDEX,Индекс производительности труда,117.0,as published: year-to-date period in % of the same period of 2022
 2026-01-01,SHM,PRODUCTIVITY_INDEX,Индекс производительности труда,108.1,as published: year-to-date period in % of the same period of 2022
+2026-04-01,SHM,PRODUCTIVITY_INDEX,Индекс производительности труда,108.5,as published: year-to-date period in % of the same period of 2022
 2022-01-01,SKO,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,SKO,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,SKO,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -237,6 +250,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,SKO,PRODUCTIVITY_INDEX,Индекс производительности труда,111.9,as published: year-to-date period in % of the same period of 2022
 2025-10-01,SKO,PRODUCTIVITY_INDEX,Индекс производительности труда,143.0,as published: year-to-date period in % of the same period of 2022
 2026-01-01,SKO,PRODUCTIVITY_INDEX,Индекс производительности труда,148.7,as published: year-to-date period in % of the same period of 2022
+2026-04-01,SKO,PRODUCTIVITY_INDEX,Индекс производительности труда,145.8,as published: year-to-date period in % of the same period of 2022
 2022-01-01,TRK,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,TRK,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,TRK,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -254,6 +268,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,TRK,PRODUCTIVITY_INDEX,Индекс производительности труда,93.7,as published: year-to-date period in % of the same period of 2022
 2025-10-01,TRK,PRODUCTIVITY_INDEX,Индекс производительности труда,113.3,as published: year-to-date period in % of the same period of 2022
 2026-01-01,TRK,PRODUCTIVITY_INDEX,Индекс производительности труда,104.9,as published: year-to-date period in % of the same period of 2022
+2026-04-01,TRK,PRODUCTIVITY_INDEX,Индекс производительности труда,109.9,as published: year-to-date period in % of the same period of 2022
 2022-01-01,ULT,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,ULT,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,ULT,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -271,6 +286,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,ULT,PRODUCTIVITY_INDEX,Индекс производительности труда,117.1,as published: year-to-date period in % of the same period of 2022
 2025-10-01,ULT,PRODUCTIVITY_INDEX,Индекс производительности труда,119.7,as published: year-to-date period in % of the same period of 2022
 2026-01-01,ULT,PRODUCTIVITY_INDEX,Индекс производительности труда,141.7,as published: year-to-date period in % of the same period of 2022
+2026-04-01,ULT,PRODUCTIVITY_INDEX,Индекс производительности труда,140.6,as published: year-to-date period in % of the same period of 2022
 2022-01-01,VKO,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,VKO,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,VKO,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -288,6 +304,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,VKO,PRODUCTIVITY_INDEX,Индекс производительности труда,95.2,as published: year-to-date period in % of the same period of 2022
 2025-10-01,VKO,PRODUCTIVITY_INDEX,Индекс производительности труда,115.0,as published: year-to-date period in % of the same period of 2022
 2026-01-01,VKO,PRODUCTIVITY_INDEX,Индекс производительности труда,95.0,as published: year-to-date period in % of the same period of 2022
+2026-04-01,VKO,PRODUCTIVITY_INDEX,Индекс производительности труда,96.2,as published: year-to-date period in % of the same period of 2022
 2022-01-01,ZHM,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,ZHM,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,ZHM,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -305,6 +322,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,ZHM,PRODUCTIVITY_INDEX,Индекс производительности труда,97.1,as published: year-to-date period in % of the same period of 2022
 2025-10-01,ZHM,PRODUCTIVITY_INDEX,Индекс производительности труда,117.1,as published: year-to-date period in % of the same period of 2022
 2026-01-01,ZHM,PRODUCTIVITY_INDEX,Индекс производительности труда,110.7,as published: year-to-date period in % of the same period of 2022
+2026-04-01,ZHM,PRODUCTIVITY_INDEX,Индекс производительности труда,119.7,as published: year-to-date period in % of the same period of 2022
 2022-01-01,ZHT,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,ZHT,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,ZHT,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -322,6 +340,7 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,ZHT,PRODUCTIVITY_INDEX,Индекс производительности труда,128.6,as published: year-to-date period in % of the same period of 2022
 2025-10-01,ZHT,PRODUCTIVITY_INDEX,Индекс производительности труда,143.4,as published: year-to-date period in % of the same period of 2022
 2026-01-01,ZHT,PRODUCTIVITY_INDEX,Индекс производительности труда,146.8,as published: year-to-date period in % of the same period of 2022
+2026-04-01,ZHT,PRODUCTIVITY_INDEX,Индекс производительности труда,149.4,as published: year-to-date period in % of the same period of 2022
 2022-01-01,ZKO,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-04-01,ZKO,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2022-07-01,ZKO,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
@@ -339,3 +358,4 @@ date,region,item_code,item_name,value,transformation
 2025-07-01,ZKO,PRODUCTIVITY_INDEX,Индекс производительности труда,100.0,as published: year-to-date period in % of the same period of 2022
 2025-10-01,ZKO,PRODUCTIVITY_INDEX,Индекс производительности труда,113.2,as published: year-to-date period in % of the same period of 2022
 2026-01-01,ZKO,PRODUCTIVITY_INDEX,Индекс производительности труда,92.9,as published: year-to-date period in % of the same period of 2022
+2026-04-01,ZKO,PRODUCTIVITY_INDEX,Индекс производительности труда,97.3,as published: year-to-date period in % of the same period of 2022
