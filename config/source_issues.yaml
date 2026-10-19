@@ -587,3 +587,22 @@ issues:
       1000 from 1996, BYB per 100 after 1994-09, the report's UZS and BYR per unit until 2014-02). TRY, UZS and BYN
       therefore have multi-year gaps; restated to the current unit (TRL/1 000 000, BYB/10 000 000).
     advice: Treat the 1990s TRY/BYN/UZS segments as separate short series; do not interpolate across the gaps.
+
+  - id: nbk_iip_forms_stale_2024_2026
+    kind: inconsistent
+    variable: IIP_NET
+    also: [IIP_ASSETS, IIP_LIABILITIES]
+    observations:
+      - {date: "2026-01-01", value: -34458.748207}
+      - {date: "2026-04-01", value: -38741.704766}
+    evidence: >
+      NBK open-data formId=309 (and 320, 321) end with the 1 April 2026 position and carry none of the
+      revision in the NBK's own workbook «Международная инвестиционная позиция Республики Казахстан»
+      (nationalbank.kz/file/download/136322, 30.09.2026, sheet «1.МИП стандартное представление»), which
+      the IMF's quarterly IIP took up on 2026-10-18. Net IIP, mln USD, form 309 vs workbook: end-2024
+      -52 758.1 vs -52 775.1, end-2025 -34 458.7 vs -35 639.2, end-2026-Q1 -38 741.7 vs -39 373.9;
+      the revision runs from end-2024-Q1, -12 to -36 mln a quarter before end-2025. The IMF also has the
+      end-2026-Q2 position, published by the NBK on 09.10.2026 (nationalbank.kz/file/download/137258).
+    advice: >-
+      Treat the positions from 1 April 2024 on as a superseded vintage; until form 309 is refreshed, take
+      current net IIP from IMF_IIP_QUARTERLY (NETAL_P.NIIP), which equals the NBK workbook.
