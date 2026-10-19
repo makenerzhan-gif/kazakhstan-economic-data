@@ -9,3 +9,4 @@
 {"indicator_id": "GS_YIELD_3M", "period": "2026-10-01", "old_value": 14.7681, "new_value": 14.7699, "detected_date": "2026-10-12", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "GS_YIELD_3M", "period": "2026-10-01", "old_value": 14.7699, "new_value": 14.7678, "detected_date": "2026-10-14", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "GS_YIELD_3M", "period": "2026-10-01", "old_value": 14.7678, "new_value": 14.7675, "detected_date": "2026-10-17", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "GS_YIELD_3M", "period": "2026-10-01", "old_value": 14.7675, "new_value": 14.7618, "detected_date": "2026-10-19", "source": "kase", "reason": "not stated by source"}

@@ -8,3 +8,4 @@
 {"indicator_id": "GS_YIELD_6M", "period": "2026-10-01", "old_value": 14.689, "new_value": 14.6893, "detected_date": "2026-10-12", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "GS_YIELD_6M", "period": "2026-10-01", "old_value": 14.6893, "new_value": 14.6877, "detected_date": "2026-10-14", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "GS_YIELD_6M", "period": "2026-10-01", "old_value": 14.6877, "new_value": 14.6885, "detected_date": "2026-10-17", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "GS_YIELD_6M", "period": "2026-10-01", "old_value": 14.6885, "new_value": 14.6859, "detected_date": "2026-10-19", "source": "kase", "reason": "not stated by source"}
