@@ -248,7 +248,10 @@ runs of 16–23 September archived again (LFS pointers compared by bytes, see
   file for every revision; byte-identical downloads are stored once (see above).
 - A structural change in a source stops that dataset's pipeline loudly
   (WHAT CHANGED / EXPECTED / ACTUAL / ACTION REQUIRED) rather than continuing silently.
-- Production data is only updated if validation and tests pass.
+- Production data is only updated if validation and tests pass. The exception is the
+  tests marked `cross_source`, which compare two publications that revise on their own
+  schedules (NBK vs IMF, two NBK forms, two BNS releases): a failure there is a warning
+  in the run and the update report, and the data is still committed.
 
 ## Manual step this pipeline cannot automate
 

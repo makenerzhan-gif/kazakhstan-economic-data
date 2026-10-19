@@ -12,6 +12,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+import pytest
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
@@ -63,6 +64,7 @@ def test_every_date_basis_is_evidenced_and_applies_to_flows_only():
 BOP_REVISION_WINDOW_YEARS = 3
 
 
+@pytest.mark.cross_source
 def test_quarterly_current_account_sums_to_the_imf_calendar_year():
     """The proof the shift is right: four quarters of a calendar year add up to the
     IMF's annual figure only after the relabelling (2020: -11 054.8 mln USD). Checked

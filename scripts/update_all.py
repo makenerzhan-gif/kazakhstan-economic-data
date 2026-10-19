@@ -13,6 +13,14 @@ raised as a GitHub Actions warning. The run still stops when more than
 MAX_FAILED_SHARE of the datasets fail: that is an outage or a bug in shared code,
 not one source changing.
 
+CROSS-SOURCE CHECKS DO NOT BLOCK EITHER (2026-10-19). Tests marked `cross_source`
+compare two publications that each take a revision up at their own pace -- NBK against
+the IMF, two NBK forms, two BNS releases. Between 2026-10-13 and 10-19 such checks
+stopped five daily runs, every time because one publication had the NBK's revision of
+30.09.2026 and the other did not yet. They now run apart from the rest: a failure is a
+GitHub Actions warning and a section of the update report, and the data is committed.
+Every other test still blocks the commit.
+
 Steps: check sources -> download -> save raw -> validate schema/quality ->
 process -> update unified dataset -> update metadata -> changelog -> run
 tests -> (caller decides whether to git commit) -> update report.
@@ -33,6 +41,7 @@ import build_project_knowledge, build_calendar  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MAX_FAILED_SHARE = 0.20
+CROSS_SOURCE_MARKER = "cross_source"
 
 
 def failure_gate(entries: list) -> tuple[bool, list]:
@@ -56,6 +65,45 @@ def announce_failures(failed: list) -> None:
             f.write("## Datasets that failed this run (previous data kept)\n\n")
             for e in failed:
                 f.write(f"- `{e.source}/{e.dataset}`: {(e.errors[0].splitlines()[0] if e.errors else '')[:300]}\n")
+
+
+def failed_tests(pytest_output: str) -> list[str]:
+    """`path::test - message` for each FAILED or ERROR line of pytest's short summary."""
+    return [line.split(" ", 1)[1].strip() for line in pytest_output.splitlines()
+            if line.startswith(("FAILED ", "ERROR "))]
+
+
+def run_tests() -> tuple[subprocess.CompletedProcess, subprocess.CompletedProcess, list[str]]:
+    """(the blocking run, the cross-source run, the cross-source checks that failed)."""
+    import os
+
+    def pytest(selection: str) -> subprocess.CompletedProcess:
+        # A wide "terminal", or pytest cuts each summary line's message to 80 columns.
+        return subprocess.run(
+            [sys.executable, "-m", "pytest", str(REPO_ROOT / "tests"), "-q", "-m", selection],
+            cwd=REPO_ROOT, capture_output=True, text=True, env={**os.environ, "COLUMNS": "400"},
+        )
+
+    blocking = pytest(f"not {CROSS_SOURCE_MARKER}")
+    cross = pytest(CROSS_SOURCE_MARKER)
+    failed = failed_tests(cross.stdout)
+    if cross.returncode not in (0, 5) and not failed:   # 5: nothing selected
+        tail = (cross.stdout + cross.stderr).strip().splitlines()[-1:] or [""]
+        failed = [f"cross-source run exited {cross.returncode}: {tail[0][:300]}"]
+    return blocking, cross, failed
+
+
+def announce_cross_source(failed: list[str]) -> None:
+    """One GitHub Actions warning per failed cross-source check, and the list in the job summary."""
+    import os
+    for f in failed:
+        print(f"::warning title=Cross-source check failed, data committed::{f[:300]}")
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary and failed:
+        with open(summary, "a", encoding="utf-8") as fh:
+            fh.write("## Cross-source checks that failed this run (data committed)\n\n")
+            for f in failed:
+                fh.write(f"- `{f[:300]}`\n")
 
 
 def main() -> int:
@@ -85,17 +133,21 @@ def main() -> int:
     unified.write_wide_csv(fieldnames, wide_rows)
     update_dims.build_unified()   # item-level series: data/unified/macro_dims_long.csv.gz
 
-    test_result = subprocess.run(
-        [sys.executable, "-m", "pytest", str(REPO_ROOT / "tests"), "-q"],
-        cwd=REPO_ROOT, capture_output=True, text=True,
-    )
+    test_result, cross_result, cross_failed = run_tests()
     print(test_result.stdout)
+    print(cross_result.stdout)
     if test_result.returncode != 0:
         print(test_result.stderr, file=sys.stderr)
         print("update_all: tests failed — production dataset changes will NOT be committed.",
               file=sys.stderr)
-        _write_report(run_ts, logger, unified_updated=True, tests_passed=False)
+        _write_report(run_ts, logger, unified_updated=True, tests_passed=False,
+                      cross_source_failed=cross_failed)
         return 1
+    if cross_failed:
+        print(f"update_all: {len(cross_failed)} cross-source check(s) failed -- one publication is "
+              "probably behind another's revision; the data is committed and the checks reported.",
+              file=sys.stderr)
+        announce_cross_source(cross_failed)
 
     # Refresh project_knowledge/ only once the data behind it is known-good --
     # this is the only folder synced into the Claude Project, so it should
@@ -103,14 +155,15 @@ def main() -> int:
     build_project_knowledge.main()
     build_calendar.main()          # project_knowledge/CALENDAR.md: what the model's sources update next
 
-    _write_report(run_ts, logger, unified_updated=True, tests_passed=True)
+    _write_report(run_ts, logger, unified_updated=True, tests_passed=True,
+                  cross_source_failed=cross_failed)
     print("update_all: completed successfully. Review changes and commit "
           "(this script does not push to GitHub itself outside of CI).")
     return 0
 
 
 def _write_report(run_ts: str, logger: pipeline_logging.RunLogger, unified_updated: bool,
-                   tests_passed: bool | None = None) -> None:
+                   tests_passed: bool | None = None, cross_source_failed: list[str] | None = None) -> None:
     reports_dir = REPO_ROOT / "reports"
     reports_dir.mkdir(parents=True, exist_ok=True)
     today = datetime.now().date().isoformat()
@@ -121,8 +174,15 @@ def _write_report(run_ts: str, logger: pipeline_logging.RunLogger, unified_updat
         f"Run timestamp: {run_ts}",
         f"Unified dataset updated: {unified_updated}",
         f"Tests passed: {tests_passed}",
+        f"Cross-source checks failed: {len(cross_source_failed or [])}",
         "",
     ]
+    if cross_source_failed:
+        lines += ["## Cross-source checks that failed (they never block the commit)", "",
+                  "Two publications disagree, usually because one has not yet taken up the other's "
+                  "revision; see config/source_issues.yaml.", ""]
+        lines += [f"- `{f[:300]}`" for f in cross_source_failed]
+        lines.append("")
     failed = [e for e in logger.entries if e.status == "error"]
     if failed:
         lines += ["## Failed this run — previous data kept", ""]

@@ -672,3 +672,22 @@ main's data. NBK's own workbook of 30.09.2026
 (nationalbank.kz/file/download/136322) has the IMF's figures (end-2025 -35 639.21, end-2026-Q1
 -39 373.94); forms 309, 320 and 321 all still end at 1 April 2026 without the revision, so
 config/source_issues.yaml registers nbk_iip_forms_stale_2024_2026 (IIP_NET, IIP_ASSETS, IIP_LIABILITIES).
+
+## 2026-10-19 — comparisons between publications no longer block the daily commit (user: «ок, 2»)
+
+Five daily runs between 2026-10-13 and 10-19 committed nothing for the same reason: a test comparing
+two publications failed because one had taken up the NBK's revision of 30.09.2026 and the other had
+not yet (the WEO against NBK form 324, form 481 against 324, the IMF's quarterly IIP against NBK form
+309). Each was a true statement about the sources, not a fault in the pipeline, yet it withheld
+every series for the day. Tests that compare two publications revising on their own schedules are now
+marked `cross_source` (tests/conftest.py registers the marker): the current account against the WEO
+and against the IMF's quarterly BOP, net IIP against the IMF, WDI GDP against the WEO, NBK ROA/ROE and
+capital adequacy against the IMF FSIs and the FSIs' coverage, the BNS CPI publication against the
+Taldau series, and loans to business by creditor against form 445's series. The STB loan test was
+split: its components-add-up-to-the-total part still blocks; the match with form 445's household
+loans is cross-source. update_all.run_tests runs the two groups apart (pytest -m "not cross_source",
+then -m cross_source): only the first decides the commit; each failure of the second is a GitHub
+Actions warning, a job-summary line and a section of the update report («Cross-source checks failed:
+N»), with pytest's message in full (COLUMNS=400). Checked on the real data with one settled IIP
+quarter set wrong: 816 blocking tests pass, the IIP comparison fails and is reported as
+`AssertionError: ['2021-04-01']`. 17 of 833 test cases are cross-source.

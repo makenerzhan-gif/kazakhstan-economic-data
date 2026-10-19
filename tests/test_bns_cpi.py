@@ -127,6 +127,7 @@ def _scalar(indicator):
     ("CPI_FOOD", "CPI_DETAIL_MOM", "FOOD"), ("CPI_NONFOOD_YOY", "CPI_DETAIL_YOY", "NONFOOD"),
     ("CPI_SERVICES", "CPI_DETAIL_MOM", "SERVICES"), ("CORE_CPI_YOY_EX7", "CPI_DETAIL_YOY", "CORE_EX7"),
 ])
+@pytest.mark.cross_source
 def test_publication_equals_the_scalar_series(scalar, dataset, code):
     a, b = _scalar(scalar), _series(dataset, code)
     common = set(a) & set(b)

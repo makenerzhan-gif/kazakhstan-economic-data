@@ -6,6 +6,8 @@ import csv
 import sys
 from pathlib import Path
 
+import pytest
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 from fetchers import minfin  # noqa: E402
@@ -89,16 +91,21 @@ def test_retail_volume_by_group_from_2016():
 
 # ---------------------------------------------------------------- bank loans
 
-def test_bank_loans_breakdowns_add_up_and_match_form_445():
+def test_bank_loans_breakdowns_add_up():
     s = {k: _series("nbk", f"BANK_LOANS_STB_{k}") for k in
          ("TOTAL", "KZT", "FX", "LEGAL_ENTITIES", "INDIVIDUALS", "BUSINESS", "HOUSEHOLDS")}
     assert min(s["TOTAL"]) == "1996-02-01" and min(s["BUSINESS"]) == "2003-02-01"
     for a, b in (("KZT", "FX"), ("LEGAL_ENTITIES", "INDIVIDUALS"), ("BUSINESS", "HOUSEHOLDS")):
         common = [d for d in s["TOTAL"] if d in s[a] and d in s[b]]
         assert common and all(abs(s[a][d] + s[b][d] - s["TOTAL"][d]) < 2 for d in common)
+
+
+@pytest.mark.cross_source
+def test_bank_loans_to_households_match_form_445():
+    households = _series("nbk", "BANK_LOANS_STB_HOUSEHOLDS")
     kzt, fx = _series("nbk", "LOANS_INDIVIDUALS_KZT"), _series("nbk", "LOANS_INDIVIDUALS_FX")
-    common = [d for d in s["HOUSEHOLDS"] if d in kzt and d in fx]
-    assert len(common) >= 40 and all(abs(s["HOUSEHOLDS"][d] - kzt[d] - fx[d]) < 1 for d in common)
+    common = [d for d in households if d in kzt and d in fx]
+    assert len(common) >= 40 and all(abs(households[d] - kzt[d] - fx[d]) < 1 for d in common)
 
 
 # ---------------------------------------------------------------- project knowledge

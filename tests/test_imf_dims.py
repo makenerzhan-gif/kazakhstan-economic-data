@@ -96,6 +96,7 @@ def _scalar(agency, indicator):
         return {r["date"]: float(r["value"]) for r in csv.DictReader(f) if r["value"]}
 
 
+@pytest.mark.cross_source
 def test_imf_current_account_is_nbks():
     """Same quarters, same dates (quarter start). The two differ only inside the NBK's
     revision window -- the last three years or so, which each publication takes up at its
@@ -110,6 +111,7 @@ def test_imf_current_account_is_nbks():
     assert max(imf) in nbk
 
 
+@pytest.mark.cross_source
 def test_imf_net_iip_is_nbks_one_day_earlier():
     """The IMF's end-of-quarter position is the NBK's next-day one. Equal on every settled
     quarter; inside the last three years the two take revisions up at their own pace
@@ -123,6 +125,7 @@ def test_imf_net_iip_is_nbks_one_day_earlier():
     assert all(abs(shifted[d] - nbk[d]) < 1.0 for d in settled), [d for d in settled if abs(shifted[d] - nbk[d]) >= 1.0]
 
 
+@pytest.mark.cross_source
 def test_wdi_gdp_equals_the_weo_outturns():
     wdi, weo = _item("WDI_KAZ", "NY.GDP.MKTP.CN"), _scalar("imf", "IMF_NOMINAL_GDP")
     years = [d for d in set(wdi) & set(weo) if "1994-12-31" <= d <= "2024-12-31"]
