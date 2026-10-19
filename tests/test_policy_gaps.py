@@ -67,6 +67,7 @@ def test_other_industries_is_the_pooled_nrs_slot():
     assert nbk_dims.SURVEY_SECTORS["Other industries"] == nbk_dims.SURVEY_SECTORS["N.R.S"] == "NRS"
 
 
+@pytest.mark.cross_source
 def test_loans_by_creditor_banks_equal_the_scalar_business_loans():
     loans = _dims("LOANS_BY_CREDITOR_TYPE")
     with (REPO_ROOT / "data" / "processed" / "nbk" / "loans_business_kzt.csv").open(encoding="utf-8") as f:

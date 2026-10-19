@@ -96,6 +96,7 @@ def _scalar(agency, indicator):
         return {r["date"]: float(r["value"]) for r in csv.DictReader(f) if r["value"]}
 
 
+@pytest.mark.cross_source
 def test_imf_current_account_is_nbks():
     """Same quarters, same dates (quarter start). The two differ only inside the NBK's
     revision window -- the last three years or so, which each publication takes up at its
@@ -110,13 +111,21 @@ def test_imf_current_account_is_nbks():
     assert max(imf) in nbk
 
 
+@pytest.mark.cross_source
 def test_imf_net_iip_is_nbks_one_day_earlier():
+    """The IMF's end-of-quarter position is the NBK's next-day one. Equal on every settled
+    quarter; inside the last three years the two take revisions up at their own pace
+    (2026-10-18: the IMF had a revision from end-2024-Q1 on, -12 to -36 mn, -1 180 mn at
+    end-2025, and the end-2026-Q2 position, none of which NBK form 309 carried yet)."""
     imf, nbk = _item("IMF_IIP_QUARTERLY", "NETAL_P.NIIP"), _scalar("nbk", "IIP_NET")
     shifted = {(date.fromisoformat(d) + timedelta(days=1)).isoformat(): v for d, v in imf.items()}
-    common = set(shifted) & set(nbk)
-    assert len(common) >= 20 and all(abs(shifted[d] - nbk[d]) < 1.0 for d in common)
+    common = sorted(set(shifted) & set(nbk))
+    settled = [d for d in common if d < f"{int(common[-1][:4]) - 3}-01-01"]
+    assert len(common) >= 20 and len(settled) >= 8
+    assert all(abs(shifted[d] - nbk[d]) < 1.0 for d in settled), [d for d in settled if abs(shifted[d] - nbk[d]) >= 1.0]
 
 
+@pytest.mark.cross_source
 def test_wdi_gdp_equals_the_weo_outturns():
     wdi, weo = _item("WDI_KAZ", "NY.GDP.MKTP.CN"), _scalar("imf", "IMF_NOMINAL_GDP")
     years = [d for d in set(wdi) & set(weo) if "1994-12-31" <= d <= "2024-12-31"]

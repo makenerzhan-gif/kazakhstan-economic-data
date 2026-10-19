@@ -17,6 +17,7 @@ def _processed(agency: str, indicator_id: str) -> dict[str, float]:
         return {r["date"]: float(r["value"]) for r in csv.DictReader(f)}
 
 
+@pytest.mark.cross_source
 @pytest.mark.parametrize("nbk_id,fsi_id", [("BANK_ROA", "FSI_ROA"), ("BANK_ROE", "FSI_ROE")])
 def test_nbk_returns_equal_imf_fsi_once_dated_to_their_quarter(nbk_id, fsi_id):
     nbk, fsi = _processed("nbk", nbk_id), _processed("imf", fsi_id)
@@ -25,6 +26,7 @@ def test_nbk_returns_equal_imf_fsi_once_dated_to_their_quarter(nbk_id, fsi_id):
     assert all(abs(nbk[d] - fsi[d]) < 0.01 for d in common)
 
 
+@pytest.mark.cross_source
 def test_nbk_capital_ratio_as_at_the_1st_equals_the_imf_quarter_end():
     """Point-in-time: NBK's 'на 01.04.2024' and IMF's 2024-03-31 are the same stock."""
     nbk, fsi = _processed("nbk", "CAPITAL_ADEQUACY_RATIO"), _processed("imf", "FSI_CAPITAL_ADEQUACY")
@@ -36,6 +38,7 @@ def test_nbk_capital_ratio_as_at_the_1st_equals_the_imf_quarter_end():
     assert max(fsi) >= "2025-12-31"
 
 
+@pytest.mark.cross_source
 def test_imf_fsi_runs_past_the_nbk_stop():
     assert max(_processed("imf", "FSI_NPL_RATIO")) > max(_processed("nbk", "NPL_RATIO"))
     assert min(_processed("imf", "FSI_NPL_RATIO")) <= "2008-03-31"
@@ -107,3 +110,42 @@ def test_one_failed_dataset_does_not_block_the_run():
     assert proceed and failed == [bad]
     outage = [LogEntry(timestamp="t", source="imf", dataset=f"X{i}", action="fetch", status="error") for i in range(30)]
     assert not update_all.failure_gate(ok[:70] + outage)[0]
+
+
+def test_a_failed_cross_source_check_is_reported_not_blocking(monkeypatch, tmp_path):
+    """Tests marked cross_source run apart from the blocking ones: their failures come back
+    as a list for the warnings and the report, and the blocking run never selects them."""
+    import subprocess
+    import update_all
+    from lib.pipeline_logging import RunLogger
+    line = "tests/test_imf_dims.py::test_imf_net_iip_is_nbks_one_day_earlier - AssertionError: x"
+    selections = []
+
+    def fake_run(cmd, **kwargs):
+        selections.append(cmd[-1])
+        if cmd[-1] == "cross_source":
+            return subprocess.CompletedProcess(cmd, 1, f"F.\nFAILED {line}\n1 failed, 1 passed\n", "")
+        return subprocess.CompletedProcess(cmd, 0, "814 passed\n", "")
+
+    monkeypatch.setattr(update_all.subprocess, "run", fake_run)
+    blocking, _, failed = update_all.run_tests()
+    assert selections == ["not cross_source", "cross_source"]
+    assert blocking.returncode == 0 and failed == [line]
+    # A cross-source run that dies without a FAILED line is still reported.
+    monkeypatch.setattr(update_all.subprocess, "run",
+                        lambda cmd, **kw: subprocess.CompletedProcess(cmd, 0 if cmd[-1] != "cross_source" else 2,
+                                                                      "", "ImportError: boom"))
+    assert update_all.run_tests()[2] == ["cross-source run exited 2: ImportError: boom"]
+    monkeypatch.setattr(update_all, "REPO_ROOT", tmp_path)
+    update_all._write_report("t", RunLogger(run_timestamp="t"), unified_updated=True, tests_passed=True,
+                             cross_source_failed=[line])
+    report = next((tmp_path / "reports").glob("update_report_*.md")).read_text(encoding="utf-8")
+    assert "Cross-source checks failed: 1" in report and line in report
+
+
+def test_the_comparisons_between_publications_are_marked_cross_source():
+    from tests import test_date_basis, test_imf_dims
+    for fn in (test_date_basis.test_quarterly_current_account_sums_to_the_imf_calendar_year,
+               test_imf_dims.test_imf_net_iip_is_nbks_one_day_earlier,
+               test_nbk_returns_equal_imf_fsi_once_dated_to_their_quarter):
+        assert "cross_source" in {m.name for m in getattr(fn, "pytestmark", [])}, fn.__name__

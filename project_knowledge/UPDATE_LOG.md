@@ -655,3 +655,39 @@ nbk_bop_form_324_stale_2023_2026 (the series no longer uses 324's 2023). Run loc
 download: all five series 106 quarters 2000-Q1 to 2026-Q2, identity holding in all 106, current
 account 2023 -8 284.4, 2024 -6 819.4, 2025 -13 093.5, 2026-H1 +2 374.9 (equal to the NBK workbook);
 the revisions files record 2023-Q1..2026-Q1 only; 830 tests pass on that data and on main's.
+
+## 2026-10-19 — the IIP comparison with the IMF allows the revision window (user: «почему упал прогнон»)
+
+The runs of 2026-10-18 and 10-19 committed nothing: test_imf_net_iip_is_nbks_one_day_earlier
+failed. The IMF's quarterly IIP for Kazakhstan was updated on 2026-10-18: it now runs to end-2026-Q2
+and revises net IIP from end-2024-Q1 on (-12 to -36 mln USD through end-2025-Q3; end-2025 -35 639.2
+against the NBK's -34 458.7, end-2026-Q1 -39 373.9 against -38 741.7). NBK open-data formId=309, the
+source of IIP_NET/IIP_ASSETS/IIP_LIABILITIES, had not changed: it still ends with the 1 April 2026
+position and carries none of the revision. The test demanded equality on every
+shared quarter. Like the two current-account comparisons fixed on 2026-10-13 and 10-16, it now
+demands it on the settled quarters, those before the last three years of the shared range (8
+quarters 2021-2022 today; the NBK series starts in 2021), and tolerates differences inside them.
+The old test fails on the refreshed IMF series exactly as in CI; the new one passes on it and on
+main's data. NBK's own workbook of 30.09.2026
+(nationalbank.kz/file/download/136322) has the IMF's figures (end-2025 -35 639.21, end-2026-Q1
+-39 373.94); forms 309, 320 and 321 all still end at 1 April 2026 without the revision, so
+config/source_issues.yaml registers nbk_iip_forms_stale_2024_2026 (IIP_NET, IIP_ASSETS, IIP_LIABILITIES).
+
+## 2026-10-19 — comparisons between publications no longer block the daily commit (user: «ок, 2»)
+
+Five daily runs between 2026-10-13 and 10-19 committed nothing for the same reason: a test comparing
+two publications failed because one had taken up the NBK's revision of 30.09.2026 and the other had
+not yet (the WEO against NBK form 324, form 481 against 324, the IMF's quarterly IIP against NBK form
+309). Each was a true statement about the sources, not a fault in the pipeline, yet it withheld
+every series for the day. Tests that compare two publications revising on their own schedules are now
+marked `cross_source` (tests/conftest.py registers the marker): the current account against the WEO
+and against the IMF's quarterly BOP, net IIP against the IMF, WDI GDP against the WEO, NBK ROA/ROE and
+capital adequacy against the IMF FSIs and the FSIs' coverage, the BNS CPI publication against the
+Taldau series, and loans to business by creditor against form 445's series. The STB loan test was
+split: its components-add-up-to-the-total part still blocks; the match with form 445's household
+loans is cross-source. update_all.run_tests runs the two groups apart (pytest -m "not cross_source",
+then -m cross_source): only the first decides the commit; each failure of the second is a GitHub
+Actions warning, a job-summary line and a section of the update report («Cross-source checks failed:
+N»), with pytest's message in full (COLUMNS=400). Checked on the real data with one settled IIP
+quarter set wrong: 816 blocking tests pass, the IIP comparison fails and is reported as
+`AssertionError: ['2021-04-01']`. 17 of 833 test cases are cross-source.
