@@ -5112,3 +5112,80 @@ merging main, same record (116 files in all).
 38 NBK forms for the first time in canonical form (18.4 MB); each held the same data as the form's last
 old-format file, so those 38 old copies (18.5 MB) were removed with `dedup_raw --nbk-forms` (same record).
 From now on an NBK form or WITS answer is stored again only when its data change.
+
+## 2026-09-26 — National Fund receipts by tax and payment: 519 -> 534 indicators
+
+**Why.** The pipeline had the National Fund's assets, portfolios and the NBK's monthly transfer
+flow (from 2024), but not what flows into the Fund by tax. CAEM (`NFRK_R_oil_*`) and the fiscal
+blocks of the models need the oil-sector taxes; the CAEM mission file stops in 2023 and has holes.
+Sources were surveyed beforehand (`Справочники_МВФ/sources_nf_receipts.md`).
+
+**Minfin (15 series, monthly, year to date, million KZT; source thousand KZT).** Every «Statement
+of receipts and application of the National Fund … as of 1 <month>» / «Отчет о поступлениях и
+использовании Национального фонда» of activity 7294 on gov.kz (all listing pages; 106 documents,
+reports as of 1 Feb 2018 … 1 Jul 2026, all parsed). Series: NF_OIL_CIT_YTD, NF_EXCESS_PROFIT_TAX_YTD,
+NF_BONUSES_YTD, NF_MET_YTD, NF_RENT_TAX_EXPORT_YTD, NF_PSA_SHARE_YTD, NF_PSA_ADDITIONAL_PAYMENT_YTD,
+their line NF_OIL_DIRECT_TAXES_YTD, NF_OIL_OTHER_RECEIPTS_YTD (fines, damages, other non-tax),
+NF_OIL_RECEIPTS_YTD (the two lines added), NF_PRIVATIZATION_YTD (privatization + transfer of
+national-company assets to the competitive environment; the sale of bank-loan-portfolio assets is
+not in it), NF_INVESTMENT_INCOME_YTD (the receipts line «investment income from the Fund
+management» only: the NBK-approved income of the last approved period, a quarter to three quarters
+behind the month; December is the full year only in 2018, 2020, 2021 — nine months in 2019 and
+2023, 30.3 bn in 2022 — and there is no December 2024 or 2025, the approved annual reports book no
+investment income in receipts; their item «Investment income, total», the NBK's full-year result
+with the exchange-rate revaluation, is not used), NF_GUARANTEED_TRANSFER_YTD,
+NF_TARGETED_TRANSFERS_YTD and NF_TRANSFERS_YTD. The flow series NATIONAL_FUND_TRANSFERS (NBK, from 2024-02) stays; the Minfin
+total is year to date by type from 2018 (2025: 5 250 bn against 5 201 bn summed from NBK months).
+- Lines are found by EN/RU label (rows moved: budget-loan repayment lines in 2025–2026, investment
+  income moved out of receipts in the approved annual reports); a line printed blank is zero.
+- The period is read from the sheet heading, not the listing title (25467 says 2020 for 2019;
+  26492, listed as 1 December 2018, is a second copy of 1 November). Document 638881 is headed
+  «1 March 2024» but its numbers lie between 1 March and 1 May and it was posted on 2024-04-03:
+  `DOC_PERIOD_OVERRIDES` makes it 1 April 2024. The approved annual reports for 2018 (26493) and
+  2024 (866047) stand in for the missing reports as of 1 January 2019 and 2025. The approved 2023
+  report (677412) has lines 21–23 one row up (land sales 53 349 = KGD code 303102 stand as
+  privatization): `DOC_LINE_EXCLUSIONS` takes 2023 privatization from the 1 January 2024 report.
+- Four identities on every report (2 thousand KZT): seven taxes = direct taxes, four items =
+  other oil-sector receipts, first-level lines = «Receipts, total», lines = «Application, total». A
+  failing report is left out and named in the note. Two documents are repaired first
+  (`NF_DOC_FIXES`, each fix checked against the labels it expects): in 866029 (as of 1 July 2025,
+  the re-issue with the half-year income) every value from the second budget-loan line to the
+  management expenses sits one row too high — found by the two total identities, the only report
+  failing them; moved back, 2025-06 reads guaranteed transfer 2 000 bn (was 1 120), targeted 1 120
+  (was 23.7), privatization 0.608 (was 1.0), investment income 2 480.8 (was 0). In 946754 (as of 1
+  January 2026) 23 000 000 thousand stands against «transfer to the competitive environment» and
+  the bank-asset line is missing; the approved report for 2025 (Decree No. 1328, NBK file 135446,
+  p. 4) has 2.5 blank and 2.6 «sale of assets by the organization improving banks' loan
+  portfolios» = 23 000 000: 2025-12 privatization is 1.284 bn (was 24.284). All 106 pass.
+- The daily run reads a report from `data/raw/minfin/` when its id is archived there with the size
+  gov.kz writes into the upload path (`…_original.36864.xls`), and downloads only new or re-uploaded
+  ones (checked: 0 of 106 downloaded on the second run).
+- Missing months: May 2018, November 2018 (no report as of 1 June / 1 December 2018), April–May
+  2026 (not published). Not interpolated.
+
+**History 2002–2017 (the seven taxes).** KGD «Динамика поступлений налогов и платежей в
+Национальный фонд», one by-tax workbook per year, loaded once by the new
+`scripts/load_nf_receipts_history.py` into `data/reference/nf_receipts_kgd_history.csv` (1 433
+rows; workbooks archived as `minfin_nf_receipts_history_kgd_<year>_2026-09-26.*`). Rows by
+Russian label; a workbook is kept only if its tax rows add up to «ИТОГО по налоговым
+поступлениям» in every month — 2005 fails (misplaced numbers) and there is no 2006 file; 2003–2004
+start in August. The fetcher prepends KGD months before 2018-01 only while KGD equals Minfin in
+every shared December (2018–2024: 7 of 7 for all seven taxes). Within the year KGD and Minfin
+differ now and then by payment timing (CIT: 21 of 79 months equal, largest gap 2.3 bn; rent tax
+largest 12.3 bn); the note says so.
+
+**Cross-checks (December, bn KZT).** Against the source note: 2022 CIT 2 266.198, MET 1 582.031,
+PSA share 1 477.397; 2023 1 532.974 / 1 282.495 / 1 035.543; 2024 1 265.822 / 680.875 / 1 202.176;
+2025 1 300.317 / 899.223 / 1 045.387 — all equal. Against CAEM `nfrk_detail.csv` 2014–2023, all
+seven taxes: largest difference 0.000008 bn. CAEM's holes are filled here: PSA share 2014 (357.477),
+MET and PSA share 2017 (626.350, 285.893), also EPT 2008/2012 and PSA share 2008–2009. 2002–2004
+and 2007–2013 equal CAEM wherever both have a value.
+
+Tests: `tests/test_minfin_nf_receipts.py` (25: synthetic sheets with moved rows and RU labels, the
+four identities one by one, blank = zero, investment income only from the receipts line, the
+heading → period table incl. the typos, the two document fixes on the archived reports and their
+label guard, the period override, the line exclusion, the latest posting winning, a failing report
+left out, the archive read, December = KGD's January–December column for 2023 and 2024, the
+December overlap rule, the KGD workbook identity). Full suite: 495 passed. Only the 15 new fetchers
+were run live; the unified long file gained 2 285 rows, the wide file 15 columns, no existing row
+or cell changed (against origin/main dfc74557).

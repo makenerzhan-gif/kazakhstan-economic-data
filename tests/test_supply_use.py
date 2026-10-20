@@ -151,12 +151,16 @@ def test_resource_use_titles_headers_and_codes():
 
 
 def test_resource_use_data_matches_the_publication():
+    """Pinned on a final print. Each monthly edition carries the cumulative figures for t, t-1
+    and t-12, so January–July 2026 is reprinted -- and was revised: coal exports 17 833.073 ->
+    17 771.911 kt in the January–August 2026 edition -- while January–July 2025 was printed for
+    the last time in the January–July 2026 edition (its «январь-июль 2025г.» column)."""
     ytd = _dims("RESOURCE_USE_YTD")
     coal = "ugol_kamennyy_i_lignit_ugol_buryy_tys_tonn"
-    assert ytd[("2026-07-01", "national", f"{coal}.PROD")] == 63029.033                 # edition January–July 2026
-    assert ytd[("2026-07-01", "national", f"{coal}.EXP")] == 17833.073
+    assert ytd[("2025-07-01", "national", f"{coal}.PROD")] == 63330.303
+    assert ytd[("2025-07-01", "national", f"{coal}.EXP")] == 16428.615
     wheat = "crops_pshenitsa_tverdaya_pshenitsa_myagkaya_i_surzhik_meslin_tonn"
-    assert abs(ytd[("2026-07-01", "national", f"{wheat}.EXP")] - 4947050.527) < 0.01
+    assert abs(ytd[("2025-07-01", "national", f"{wheat}.EXP")] - 4384954.666) < 0.01
     annual = _dims("RESOURCE_USE_ANNUAL")
     assert annual[("2024-12-31", "national", f"{coal}.PROD")] == pytest.approx(ytd[("2024-12-01", "national", f"{coal}.PROD")])
     monthly = _dims("RESOURCE_USE_MONTHLY")
