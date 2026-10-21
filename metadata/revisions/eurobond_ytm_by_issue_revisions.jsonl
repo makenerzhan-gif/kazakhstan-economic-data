@@ -79,3 +79,9 @@
 {"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS3093655341", "old_value": 5.61, "new_value": 5.58, "detected_date": "2026-10-19", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS3093658014", "old_value": 5.98, "new_value": 5.93, "detected_date": "2026-10-19", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS3212533262", "old_value": 5.33, "new_value": 5.19, "detected_date": "2026-10-19", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS1120709826", "old_value": 6.15, "new_value": 6.16, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS1263139856", "old_value": 6.29, "new_value": 6.28, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS2050933626", "old_value": 4.35, "new_value": 4.33, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS2914770545", "old_value": 5.73, "new_value": 5.75, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS3093658014", "old_value": 5.93, "new_value": 5.94, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS3212533262", "old_value": 5.19, "new_value": 5.3, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}

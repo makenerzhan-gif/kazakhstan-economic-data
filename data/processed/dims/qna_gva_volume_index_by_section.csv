@@ -59,8 +59,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,A,"Сельское, лесное и рыбное хозяйство",108.62954763030324,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,A,"Сельское, лесное и рыбное хозяйство",103.41584420804611,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,A,"Сельское, лесное и рыбное хозяйство",106.26634971343475,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,A,"Сельское, лесное и рыбное хозяйство",97.46878494440381,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,A,"Сельское, лесное и рыбное хозяйство",99.55653381197408,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,B,Горнодобывающая промышленность и разработка карьеров,100.78364725576442,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,B,Горнодобывающая промышленность и разработка карьеров,110.23492777470115,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,B,Горнодобывающая промышленность и разработка карьеров,105.27445823211715,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -121,8 +119,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,B,Горнодобывающая промышленность и разработка карьеров,112.21503389985166,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,B,Горнодобывающая промышленность и разработка карьеров,106.81102655284624,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,B,Горнодобывающая промышленность и разработка карьеров,102.14070645869066,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,B,Горнодобывающая промышленность и разработка карьеров,84.36278065292352,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,B,Горнодобывающая промышленность и разработка карьеров,122.68815944368288,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,C,Обрабатывающая промышленность,93.87735082671269,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,C,Обрабатывающая промышленность,125.92840659893963,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,C,Обрабатывающая промышленность,106.93673136342447,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -183,8 +179,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,C,Обрабатывающая промышленность,115.64940415075407,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,C,Обрабатывающая промышленность,100.52562712796392,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,C,Обрабатывающая промышленность,105.50897334734509,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,C,Обрабатывающая промышленность,123.02474137461031,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,C,Обрабатывающая промышленность,152.63008139411969,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",98.28019406811994,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",82.8654996568699,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",115.40469202852331,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -245,8 +239,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",115.89429378159167,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",108.55984605535389,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",109.11315430936183,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",108.89894529720895,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,D,"Снабжение электроэнергией, газом, паром, горячей водой и кондиционированным воздухом",101.09757539936712,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",101.99199907620998,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",114.8946327840102,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",101.87334815676185,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -307,8 +299,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",97.40693700181762,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",87.79072934297979,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",88.9657085506947,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",125.48865816985943,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,E,"Водоснабжение; водоотведение; сбор, обработка и удаление отходов, деятельность по ликвидации загрязнений",140.58794637999105,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,F,Строительство,101.47935457229067,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,F,Строительство,106.29511699512403,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,F,Строительство,103.95571766499188,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -369,8 +359,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,F,Строительство,118.1983498778094,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,F,Строительство,113.53677922367112,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,F,Строительство,120.61446874430199,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,F,Строительство,115.32064777303982,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,F,Строительство,114.17343574047518,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,78.75781654231818,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,141.19822304095484,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,109.03305933409601,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -431,8 +419,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,114.77088190852147,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,108.48989522321024,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,106.3648940481969,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,103.57896725464586,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,G,Оптовая и розничная торговля; ремонт автомобилей и мотоциклов,100.6243014456554,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,GDP,Валовой внутренний продукт,106.19353227584317,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,GDP,Валовой внутренний продукт,116.2783014221964,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,GDP,Валовой внутренний продукт,109.0469781018555,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -493,8 +479,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,GDP,Валовой внутренний продукт,108.92565186673005,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,GDP,Валовой внутренний продукт,105.43410300310194,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,GDP,Валовой внутренний продукт,106.95385313163193,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,GDP,Валовой внутренний продукт,104.31285676786752,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,GDP,Валовой внутренний продукт,113.76381818613935,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,GOODS,Производство товаров,98.9384341036395,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,GOODS,Производство товаров,112.42567013652538,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,GOODS,Производство товаров,108.15190753969958,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -555,8 +539,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,GOODS,Производство товаров,114.4622282543533,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,GOODS,Производство товаров,104.82288257732729,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,GOODS,Производство товаров,107.97353790864274,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,GOODS,Производство товаров,104.29964544544973,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,GOODS,Производство товаров,131.18299268586148,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,GVA,Валовая добавленная стоимость,102.17893177994324,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,GVA,Валовая добавленная стоимость,113.70517682546921,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,GVA,Валовая добавленная стоимость,107.70539741637714,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -617,8 +599,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,GVA,Валовая добавленная стоимость,109.16520312415668,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,GVA,Валовая добавленная стоимость,105.2877729211337,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,GVA,Валовая добавленная стоимость,106.95779113618666,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,GVA,Валовая добавленная стоимость,104.38342780495297,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,GVA,Валовая добавленная стоимость,114.48741179738408,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,H,Транспорт и складирование,97.02798532158475,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,H,Транспорт и складирование,105.31612006077661,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,H,Транспорт и складирование,98.83729898295432,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -679,8 +659,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,H,Транспорт и складирование,122.48126648923434,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,H,Транспорт и складирование,117.63884830256768,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,H,Транспорт и складирование,117.86489705833635,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,H,Транспорт и складирование,93.55758206809433,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,H,Транспорт и складирование,88.75889330433554,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,I,Предоставление услуг по проживанию и питанию,108.43021477918842,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,I,Предоставление услуг по проживанию и питанию,97.51254114085228,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,I,Предоставление услуг по проживанию и питанию,114.01396987053599,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -741,8 +719,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,I,Предоставление услуг по проживанию и питанию,110.3616603750528,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,I,Предоставление услуг по проживанию и питанию,102.0168151693447,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,I,Предоставление услуг по проживанию и питанию,93.45846049273854,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,I,Предоставление услуг по проживанию и питанию,120.75885250166732,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,I,Предоставление услуг по проживанию и питанию,115.85105083322259,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,IND,Промышленность,98.17043751331056,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,IND,Промышленность,115.07535785339911,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,IND,Промышленность,106.39398953731603,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -803,8 +779,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,IND,Промышленность,113.63499063848477,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,IND,Промышленность,103.53703503492994,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,IND,Промышленность,104.36283218713598,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,IND,Промышленность,103.05531998661333,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,IND,Промышленность,137.04285190456298,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,J,Информация и связь,112.05841550032876,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,J,Информация и связь,114.17129931818022,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,J,Информация и связь,124.50187910797004,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -865,8 +839,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,J,Информация и связь,99.7575102029259,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,J,Информация и связь,117.47119955480441,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,J,Информация и связь,116.69888040649555,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,J,Информация и связь,115.13654659577962,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,J,Информация и связь,119.80544955039883,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,K,Финансовая и страховая деятельность,118.81176900013179,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,K,Финансовая и страховая деятельность,114.14062285569243,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,K,Финансовая и страховая деятельность,127.62012283132891,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -927,8 +899,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,K,Финансовая и страховая деятельность,100.49536164577368,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,K,Финансовая и страховая деятельность,103.2472543244929,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,K,Финансовая и страховая деятельность,109.45681233289127,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,K,Финансовая и страховая деятельность,107.58084046942467,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,K,Финансовая и страховая деятельность,104.46696322418022,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,L,Операции с недвижимым имуществом,130.19882834288435,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,L,Операции с недвижимым имуществом,117.51320362708127,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,L,Операции с недвижимым имуществом,97.67517916416512,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -989,8 +959,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,L,Операции с недвижимым имуществом,94.13413691802798,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,L,Операции с недвижимым имуществом,102.7908528546655,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,L,Операции с недвижимым имуществом,114.53307203651488,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,L,Операции с недвижимым имуществом,119.18532145341693,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,L,Операции с недвижимым имуществом,125.81118127154546,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,M,"Профессиональная, научная и техническая деятельность",181.56626403534577,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,M,"Профессиональная, научная и техническая деятельность",81.27244738569043,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,M,"Профессиональная, научная и техническая деятельность",100.31391351682869,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -1051,8 +1019,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,M,"Профессиональная, научная и техническая деятельность",89.87248289488134,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,M,"Профессиональная, научная и техническая деятельность",93.17853738393435,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,M,"Профессиональная, научная и техническая деятельность",99.43795679320078,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,M,"Профессиональная, научная и техническая деятельность",109.47110866400358,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,M,"Профессиональная, научная и техническая деятельность",110.44873059864716,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,N,Деятельность в области административного и вспомогательного обслуживания,114.23381695937172,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,N,Деятельность в области административного и вспомогательного обслуживания,108.68115433155944,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,N,Деятельность в области административного и вспомогательного обслуживания,99.34256952876181,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -1113,8 +1079,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,N,Деятельность в области административного и вспомогательного обслуживания,94.02886404184294,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,N,Деятельность в области административного и вспомогательного обслуживания,97.19998495781243,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,N,Деятельность в области административного и вспомогательного обслуживания,95.31662667526025,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,N,Деятельность в области административного и вспомогательного обслуживания,96.06177821753376,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,N,Деятельность в области административного и вспомогательного обслуживания,97.65451992539033,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,NET_TAXES,Чистые налоги на продукты,204.5007516784485,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,NET_TAXES,Чистые налоги на продукты,174.16213472864948,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,NET_TAXES,Чистые налоги на продукты,134.91527363620457,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -1175,8 +1139,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,NET_TAXES,Чистые налоги на продукты,105.94371984611524,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,NET_TAXES,Чистые налоги на продукты,106.13074209495952,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,NET_TAXES,Чистые налоги на продукты,104.71506705429,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,NET_TAXES,Чистые налоги на продукты,103.77732195938395,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,NET_TAXES,Чистые налоги на продукты,102.16875970177304,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,113.23751547390258,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,100.56093708295406,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,107.0879030973312,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -1237,8 +1199,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,101.58780066275598,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,105.33252667363956,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,100.2765103089316,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,104.4407422780236,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,O,Государственное управление и оборона; обязательное социальное обеспечение,102.88991759770857,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,P,Образование,102.39183538965632,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,P,Образование,102.62369784385955,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,P,Образование,109.98627747003032,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -1299,8 +1259,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,P,Образование,102.18187623676441,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,P,Образование,102.48361751662013,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,P,Образование,100.986976264359,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,P,Образование,100.42114020445759,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,P,Образование,102.50033211314195,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,Q,Здравоохранение и социальное обслуживание населения,104.8398267966462,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,Q,Здравоохранение и социальное обслуживание населения,104.6724270559972,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,Q,Здравоохранение и социальное обслуживание населения,107.00817466808724,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -1361,8 +1319,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,Q,Здравоохранение и социальное обслуживание населения,101.76475115037769,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,Q,Здравоохранение и социальное обслуживание населения,103.51795455385812,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,Q,Здравоохранение и социальное обслуживание населения,101.8361156361323,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,Q,Здравоохранение и социальное обслуживание населения,100.49973879922594,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,Q,Здравоохранение и социальное обслуживание населения,102.84315420677116,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,R,"Искусство, развлечения и отдых",116.14149112300832,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,R,"Искусство, развлечения и отдых",108.769140691505,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,R,"Искусство, развлечения и отдых",130.61551177787936,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -1423,8 +1379,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,R,"Искусство, развлечения и отдых",98.7723991368305,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,R,"Искусство, развлечения и отдых",104.92317158337981,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,R,"Искусство, развлечения и отдых",101.2455734590695,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,R,"Искусство, развлечения и отдых",104.32033219934665,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,R,"Искусство, развлечения и отдых",110.94531052689888,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,S,Предоставление прочих видов услуг,104.79010984073058,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,S,Предоставление прочих видов услуг,94.41006983404021,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,S,Предоставление прочих видов услуг,117.79908218549363,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -1485,8 +1439,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,S,Предоставление прочих видов услуг,100.35626705761364,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,S,Предоставление прочих видов услуг,95.8847812616481,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,S,Предоставление прочих видов услуг,92.72525837228919,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,S,Предоставление прочих видов услуг,90.55218455882675,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,S,Предоставление прочих видов услуг,97.21160944867057,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,SERVICES,Производство услуг,104.79038974556117,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,SERVICES,Производство услуг,114.71807796884225,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,SERVICES,Производство услуг,107.29808318776544,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -1547,8 +1499,6 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,SERVICES,Производство услуг,106.03713781396209,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,SERVICES,Производство услуг,105.7635548564243,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,SERVICES,Производство услуг,106.44434096268563,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,SERVICES,Производство услуг,104.4015745596396,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,SERVICES,Производство услуг,104.81154100248897,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-01-01,national,T,"Деятельность домашних хозяйств, нанимающих домашнюю прислугу и производящих товары и услуги для собственного потребления",123.47114718512584,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-04-01,national,T,"Деятельность домашних хозяйств, нанимающих домашнюю прислугу и производящих товары и услуги для собственного потребления",119.35015052031716,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2011-07-01,national,T,"Деятельность домашних хозяйств, нанимающих домашнюю прислугу и производящих товары и услуги для собственного потребления",99.97435723174253,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
@@ -1609,5 +1559,3 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,T,"Деятельность домашних хозяйств, нанимающих домашнюю прислугу и производящих товары и услуги для собственного потребления",90.20195695076434,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-07-01,national,T,"Деятельность домашних хозяйств, нанимающих домашнюю прислугу и производящих товары и услуги для собственного потребления",88.58160606741936,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
 2025-10-01,national,T,"Деятельность домашних хозяйств, нанимающих домашнюю прислугу и производящих товары и услуги для собственного потребления",89.71451322714971,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-01-01,national,T,"Деятельность домашних хозяйств, нанимающих домашнюю прислугу и производящих товары и услуги для собственного потребления",94.1249449173082,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata
-2026-04-01,national,T,"Деятельность домашних хозяйств, нанимающих домашнюю прислугу и производящих товары и услуги для собственного потребления",97.19107768368492,as published: quarter in % of the same quarter of the previous year; quarterly national accounts vintage -- see metadata

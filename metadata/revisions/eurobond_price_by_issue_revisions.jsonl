@@ -85,3 +85,10 @@
 {"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS3093655341", "old_value": 97.056, "new_value": 97.203, "detected_date": "2026-10-19", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS3093658014", "old_value": 96.245, "new_value": 96.647, "detected_date": "2026-10-19", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS3212533262", "old_value": 96.713, "new_value": 97.194, "detected_date": "2026-10-19", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS1120709826", "old_value": 86.258, "new_value": 86.14, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS1263139856", "old_value": 102.258, "new_value": 102.373, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS2050933626", "old_value": 81.19836067526002, "new_value": 81.30010002780115, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS2914770545", "old_value": 93.243, "new_value": 93.108, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS3093655341", "old_value": 97.203, "new_value": 97.193, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS3093658014", "old_value": 96.647, "new_value": 96.547, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-10-01 XS3212533262", "old_value": 97.194, "new_value": 96.838, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}
