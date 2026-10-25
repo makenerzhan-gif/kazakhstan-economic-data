@@ -1,0 +1,11 @@
+{
+  "downloaded_at": "2026-10-25T11:33:37.638662",
+  "raw_file": "kase_tonia_2026-10-24.json",
+  "source_url": "https://kase.kz/tv-charts/indicators/history",
+  "params": {
+    "symbol": "TONIA",
+    "resolution": "D",
+    "from": 0,
+    "to": 1793014415
+  }
+}

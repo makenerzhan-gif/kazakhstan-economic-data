@@ -11,11 +11,11 @@
   "geography": "Kazakhstan (national)",
   "methodology": "USD million. Net foreign direct investment inflow to Kazakhstan (BPM6 directional principle) -- from the balance of payments financial account, not the same concept as domestic fixed-capital investment (INVESTMENT).",
   "publication_date": null,
-  "last_update_date": "2026-10-24",
-  "download_date": "2026-10-24",
+  "last_update_date": "2026-10-25",
+  "download_date": "2026-10-25",
   "period_start": "2005-01-01",
-  "period_end": "2026-01-01",
+  "period_end": "2026-04-01",
   "next_update_date": null,
   "transformation": "level",
-  "revision_status": "original"
+  "revision_status": "revised"
 }
