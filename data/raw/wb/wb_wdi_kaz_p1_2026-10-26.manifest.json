@@ -1,0 +1,5 @@
+{
+  "downloaded_at": "2026-10-26T13:29:08.388932",
+  "raw_file": "wb_wdi_kaz_p1_2026-10-11.json.gz",
+  "source_url": "https://api.worldbank.org/v2/sources/2/country/KAZ/series/all/time/all?format=json&per_page=20000&page=1"
+}
