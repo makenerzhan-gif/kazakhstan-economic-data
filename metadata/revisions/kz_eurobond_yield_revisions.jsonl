@@ -11,3 +11,4 @@
 {"indicator_id": "KZ_EUROBOND_YIELD", "period": "2026-10-01", "old_value": 6.43, "new_value": 6.35, "detected_date": "2026-10-17", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "KZ_EUROBOND_YIELD", "period": "2026-10-01", "old_value": 6.35, "new_value": 6.29, "detected_date": "2026-10-19", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "KZ_EUROBOND_YIELD", "period": "2026-10-01", "old_value": 6.29, "new_value": 6.28, "detected_date": "2026-10-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KZ_EUROBOND_YIELD", "period": "2026-10-01", "old_value": 6.28, "new_value": 6.3, "detected_date": "2026-10-27", "source": "kase", "reason": "not stated by source"}
