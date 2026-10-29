@@ -3963,7 +3963,7 @@ datasets:
     frequency: quarterly
     unit: "% of the same quarter of the previous year"
     category: national_accounts
-    note: "Derived from GVA_VOLUME_INDEX_BY_SECTION_QUARTERLY and GVA_NOMINAL_BY_SECTION_QUARTERLY: I_k = (I_ytd,k·N_ytd,k,t−1 − I_ytd,k−1·N_ytd,k−1,t−1)/(N_ytd,k,t−1 − N_ytd,k−1,t−1), previous-year prices. Gives the latest quarter before BNS's quarterly accounts (QNA_* end at 2026 Q1 on 2026-09-27; their Q2 is due with element 283161 on 28.10.2026). Rounding band about ±0.15 pp for GDP; Q4 carries the annual-survey residual of table 4439; the 4439/4440 basis differs from the QNA basis -- do not splice without a note. 2026 Q2: GDP 105.2."
+    note: "Derived from GVA_VOLUME_INDEX_BY_SECTION_QUARTERLY and GVA_NOMINAL_BY_SECTION_QUARTERLY: I_k = (I_ytd,k·N_ytd,k,t−1 − I_ytd,k−1·N_ytd,k−1,t−1)/(N_ytd,k,t−1 − N_ytd,k−1,t−1), previous-year prices. Gives the latest quarter before BNS's quarterly accounts (on 2026-10-29 the expenditure QNA ends at 2026 Q1 -- element 283161's Q2, due 28.10.2026, had not appeared -- and the production QNA at 2025 Q4, BNS having withdrawn its 2026 columns on 20.10.2026: source_issues qna_production_2026_withdrawn). Rounding band about ±0.15 pp for GDP; Q4 carries the annual-survey residual of table 4439; the 4439/4440 basis differs from the QNA basis -- do not splice without a note. 2026 Q2: GDP 105.2."
 
   # ---------------------------------------------------------------- utility tariffs and administered prices (added 2026-09-27)
   - id: TARIFF_DECISIONS

@@ -606,3 +606,21 @@ issues:
     advice: >-
       Treat the positions from 1 April 2024 on as a superseded vintage; until form 309 is refreshed, take
       current net IIP from IMF_IIP_QUARTERLY (NETAL_P.NIIP), which equals the NBK workbook.
+
+  - id: qna_production_2026_withdrawn
+    kind: caveat
+    variable: QNA_GVA_BY_SECTION
+    also: [QNA_GVA_BY_SECTION_CONSTANT_2010, QNA_GVA_VOLUME_INDEX_BY_SECTION, QNA_GVA_VOLUME_INDEX_BY_SECTION_YTD,
+           QNA_GVA_DEFLATOR_BY_SECTION_YTD, QNA_GVA_BY_SECTION_SA, QNA_GVA_BY_SECTION_SA_CONSTANT_2010]
+    evidence: >
+      BNS element 283162 «ВВП методом производства (на квартальной основе)» carried 2026 Q1-Q2 from 16-17.10.2026
+      (archived bns_qna_gva_by_section_2026-10-17.xlsx and _2026-10-19.xlsx) and was replaced on 20.10.2026 by a file
+      ending at 2025 Q4 (bns_qna_gva_by_section_2026-10-21.xlsx, still the live file on 29.10.2026), so the series
+      lost 2026 again in the run of 2026-10-21. The withdrawn release had GDP 2026 Q2 at 113.8 % of Q2 2025 in
+      2010 prices (11 623.7 against 10 217.4 bn KZT), H1 109.5 %, seasonally adjusted Q2/Q1 +7.6 %, while BNS's
+      own cumulative table 4439/4440 gives GDP Q1 103.0 %, H1 104.1 % (Q2 alone 105.2 %, GVA_VOLUME_INDEX_BY_SECTION_DISCRETE).
+      Its nominal Q2 growth (+18.9 %) matches table 4439's (+20.1 %), so the gap is in the deflator: about 104.5 %
+      against CPI 110.4 % and industrial producer prices 111-117 % y/y in Q2 2026.
+    advice: >-
+      Do not use the 2026 columns of the archived 16-17.10.2026 files; until BNS republishes the quarterly accounts
+      for 2026, take quarterly growth from GVA_VOLUME_INDEX_BY_SECTION_DISCRETE (table 4439/4440 basis).
