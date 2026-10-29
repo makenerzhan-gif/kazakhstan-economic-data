@@ -43,6 +43,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,IN.CONTRIB.DPV,Поступления | пенсионные взносы | добровольные (ДПВ),1038.877,level
 2026-08-01,national,IN.CONTRIB.DPV,Поступления | пенсионные взносы | добровольные (ДПВ),1251.279,level
 2026-09-01,national,IN.CONTRIB.DPV,Поступления | пенсионные взносы | добровольные (ДПВ),1412.374,level
+2026-10-01,national,IN.CONTRIB.DPV,Поступления | пенсионные взносы | добровольные (ДПВ),1616.5330000000001,level
 2023-01-01,national,IN.CONTRIB.OPPV,Поступления | пенсионные взносы | обязательные профессиональные (ОППВ),77041.727,level
 2023-02-01,national,IN.CONTRIB.OPPV,Поступления | пенсионные взносы | обязательные профессиональные (ОППВ),9021.021,level
 2023-03-01,national,IN.CONTRIB.OPPV,Поступления | пенсионные взносы | обязательные профессиональные (ОППВ),16459.056,level
@@ -87,6 +88,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,IN.CONTRIB.OPPV,Поступления | пенсионные взносы | обязательные профессиональные (ОППВ),75426.35800000001,level
 2026-08-01,national,IN.CONTRIB.OPPV,Поступления | пенсионные взносы | обязательные профессиональные (ОППВ),87690.201,level
 2026-09-01,national,IN.CONTRIB.OPPV,Поступления | пенсионные взносы | обязательные профессиональные (ОППВ),100973.117,level
+2026-10-01,national,IN.CONTRIB.OPPV,Поступления | пенсионные взносы | обязательные профессиональные (ОППВ),113504.675,level
 2023-01-01,national,IN.CONTRIB.OPV,Поступления | пенсионные взносы | обязательные (ОПВ),1647501.02,level
 2023-02-01,national,IN.CONTRIB.OPV,Поступления | пенсионные взносы | обязательные (ОПВ),146796.56100000002,level
 2023-03-01,national,IN.CONTRIB.OPV,Поступления | пенсионные взносы | обязательные (ОПВ),302811.002,level
@@ -131,6 +133,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,IN.CONTRIB.OPV,Поступления | пенсионные взносы | обязательные (ОПВ),1390380.859,level
 2026-08-01,national,IN.CONTRIB.OPV,Поступления | пенсионные взносы | обязательные (ОПВ),1630678.437,level
 2026-09-01,national,IN.CONTRIB.OPV,Поступления | пенсионные взносы | обязательные (ОПВ),1865709.553,level
+2026-10-01,national,IN.CONTRIB.OPV,Поступления | пенсионные взносы | обязательные (ОПВ),2091265.767,level
 2023-01-01,national,IN.INV_INCOME.ALL,Поступления | начисленный инвестиционный доход | всего,914399.3470000001,level
 2023-02-01,national,IN.INV_INCOME.ALL,Поступления | начисленный инвестиционный доход | всего,66381.001,level
 2023-03-01,national,IN.INV_INCOME.ALL,Поступления | начисленный инвестиционный доход | всего,210545.44700000001,level
@@ -175,6 +178,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,IN.INV_INCOME.ALL,Поступления | начисленный инвестиционный доход | всего,1114841.828,level
 2026-08-01,national,IN.INV_INCOME.ALL,Поступления | начисленный инвестиционный доход | всего,1163793.371,level
 2026-09-01,national,IN.INV_INCOME.ALL,Поступления | начисленный инвестиционный доход | всего,1119613.956,level
+2026-10-01,national,IN.INV_INCOME.ALL,Поступления | начисленный инвестиционный доход | всего,780026.471,level
 2023-01-01,national,IN.OTHER.ALL,Поступления | прочие поступления | всего,164502.402,level
 2023-02-01,national,IN.OTHER.ALL,Поступления | прочие поступления | всего,3411.352,level
 2023-03-01,national,IN.OTHER.ALL,Поступления | прочие поступления | всего,6763.475,level
@@ -219,6 +223,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,IN.OTHER.ALL,Поступления | прочие поступления | всего,81590.528,level
 2026-08-01,national,IN.OTHER.ALL,Поступления | прочие поступления | всего,91820.587,level
 2026-09-01,national,IN.OTHER.ALL,Поступления | прочие поступления | всего,96923.299,level
+2026-10-01,national,IN.OTHER.ALL,Поступления | прочие поступления | всего,102422.196,level
 2023-01-01,national,IN.PENALTIES.LATE_OPPV,Поступления | пени и штрафы | For late transfer of compulsory professional pension contributions,368.335,level
 2023-02-01,national,IN.PENALTIES.LATE_OPPV,Поступления | пени и штрафы | For late transfer of compulsory professional pension contributions,1.8860000000000001,level
 2023-03-01,national,IN.PENALTIES.LATE_OPPV,Поступления | пени и штрафы | For late transfer of compulsory professional pension contributions,16.457,level
@@ -263,6 +268,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,IN.PENALTIES.LATE_OPPV,Поступления | пени и штрафы | For late transfer of compulsory professional pension contributions,688.612,level
 2026-08-01,national,IN.PENALTIES.LATE_OPPV,Поступления | пени и штрафы | For late transfer of compulsory professional pension contributions,1137.203,level
 2026-09-01,national,IN.PENALTIES.LATE_OPPV,Поступления | пени и штрафы | For late transfer of compulsory professional pension contributions,1995.0430000000001,level
+2026-10-01,national,IN.PENALTIES.LATE_OPPV,Поступления | пени и штрафы | For late transfer of compulsory professional pension contributions,2277.8,level
 2023-01-01,national,IN.PENALTIES.LATE_OPV,Поступления | пени и штрафы | For late transfer of compulsory pension contributions,2153.2980000000002,level
 2023-02-01,national,IN.PENALTIES.LATE_OPV,Поступления | пени и штрафы | For late transfer of compulsory pension contributions,195.514,level
 2023-03-01,national,IN.PENALTIES.LATE_OPV,Поступления | пени и штрафы | For late transfer of compulsory pension contributions,542.91,level
@@ -307,6 +313,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,IN.PENALTIES.LATE_OPV,Поступления | пени и штрафы | For late transfer of compulsory pension contributions,1801.467,level
 2026-08-01,national,IN.PENALTIES.LATE_OPV,Поступления | пени и штрафы | For late transfer of compulsory pension contributions,2017.5910000000001,level
 2026-09-01,national,IN.PENALTIES.LATE_OPV,Поступления | пени и штрафы | For late transfer of compulsory pension contributions,2406.764,level
+2026-10-01,national,IN.PENALTIES.LATE_OPV,Поступления | пени и штрафы | For late transfer of compulsory pension contributions,2776.888,level
 2023-01-01,national,IN.PENALTIES.LATE_SAVINGS,Поступления | пени и штрафы | For late transfers of pension savings,0.0,level
 2023-02-01,national,IN.PENALTIES.LATE_SAVINGS,Поступления | пени и штрафы | For late transfers of pension savings,0.0,level
 2023-03-01,national,IN.PENALTIES.LATE_SAVINGS,Поступления | пени и штрафы | For late transfers of pension savings,0.0,level
@@ -351,6 +358,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,IN.PENALTIES.LATE_SAVINGS,Поступления | пени и штрафы | For late transfers of pension savings,0.0,level
 2026-08-01,national,IN.PENALTIES.LATE_SAVINGS,Поступления | пени и штрафы | For late transfers of pension savings,0.0,level
 2026-09-01,national,IN.PENALTIES.LATE_SAVINGS,Поступления | пени и штрафы | For late transfers of pension savings,0.0,level
+2026-10-01,national,IN.PENALTIES.LATE_SAVINGS,Поступления | пени и штрафы | For late transfers of pension savings,0.0,level
 2023-01-01,national,IN.PENALTIES.MGMT,Поступления | пени и штрафы | For improper management of pension assets,0.0,level
 2023-02-01,national,IN.PENALTIES.MGMT,Поступления | пени и штрафы | For improper management of pension assets,0.0,level
 2023-03-01,national,IN.PENALTIES.MGMT,Поступления | пени и штрафы | For improper management of pension assets,0.0,level
@@ -395,6 +403,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,IN.PENALTIES.MGMT,Поступления | пени и штрафы | For improper management of pension assets,0.0,level
 2026-08-01,national,IN.PENALTIES.MGMT,Поступления | пени и штрафы | For improper management of pension assets,0.0,level
 2026-09-01,national,IN.PENALTIES.MGMT,Поступления | пени и штрафы | For improper management of pension assets,0.0,level
+2026-10-01,national,IN.PENALTIES.MGMT,Поступления | пени и штрафы | For improper management of pension assets,0.0,level
 2023-01-01,national,OUT.FEE.FROM_ASSETS,Выбытия | комиссия ЕНПФ | From pension assets,16128.214,level
 2023-02-01,national,OUT.FEE.FROM_ASSETS,Выбытия | комиссия ЕНПФ | From pension assets,1458.739,level
 2023-03-01,national,OUT.FEE.FROM_ASSETS,Выбытия | комиссия ЕНПФ | From pension assets,2929.928,level
@@ -439,6 +448,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,OUT.FEE.FROM_ASSETS,Выбытия | комиссия ЕНПФ | From pension assets,11730.27,level
 2026-08-01,national,OUT.FEE.FROM_ASSETS,Выбытия | комиссия ЕНПФ | From pension assets,13692.363000000001,level
 2026-09-01,national,OUT.FEE.FROM_ASSETS,Выбытия | комиссия ЕНПФ | From pension assets,15659.859,level
+2026-10-01,national,OUT.FEE.FROM_ASSETS,Выбытия | комиссия ЕНПФ | From pension assets,17631.785,level
 2023-01-01,national,OUT.FEE.FROM_INCOME,Выбытия | комиссия ЕНПФ | From investment income/loss on placed pension assets,16469.708,level
 2023-02-01,national,OUT.FEE.FROM_INCOME,Выбытия | комиссия ЕНПФ | From investment income/loss on placed pension assets,1004.235,level
 2023-03-01,national,OUT.FEE.FROM_INCOME,Выбытия | комиссия ЕНПФ | From investment income/loss on placed pension assets,3166.739,level
@@ -483,6 +493,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,OUT.FEE.FROM_INCOME,Выбытия | комиссия ЕНПФ | From investment income/loss on placed pension assets,16857.406,level
 2026-08-01,national,OUT.FEE.FROM_INCOME,Выбытия | комиссия ЕНПФ | From investment income/loss on placed pension assets,17604.836,level
 2026-09-01,national,OUT.FEE.FROM_INCOME,Выбытия | комиссия ЕНПФ | From investment income/loss on placed pension assets,17043.954,level
+2026-10-01,national,OUT.FEE.FROM_INCOME,Выбытия | комиссия ЕНПФ | From investment income/loss on placed pension assets,11872.718,level
 2023-01-01,national,OUT.OTHER_EXP.ALL,Выбытия | прочие выбытия | всего,0.0,level
 2023-02-01,national,OUT.OTHER_EXP.ALL,Выбытия | прочие выбытия | всего,0.0,level
 2023-03-01,national,OUT.OTHER_EXP.ALL,Выбытия | прочие выбытия | всего,0.0,level
@@ -527,6 +538,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,OUT.OTHER_EXP.ALL,Выбытия | прочие выбытия | всего,0.0,level
 2026-08-01,national,OUT.OTHER_EXP.ALL,Выбытия | прочие выбытия | всего,0.0,level
 2026-09-01,national,OUT.OTHER_EXP.ALL,Выбытия | прочие выбытия | всего,0.0,level
+2026-10-01,national,OUT.OTHER_EXP.ALL,Выбытия | прочие выбытия | всего,0.0,level
 2023-01-01,national,OUT.PAYMENTS.ALL,Выбытия | пенсионные выплаты | всего,1182338.18,level
 2023-02-01,national,OUT.PAYMENTS.ALL,Выбытия | пенсионные выплаты | всего,33127.159,level
 2023-03-01,national,OUT.PAYMENTS.ALL,Выбытия | пенсионные выплаты | всего,65145.658,level
@@ -571,6 +583,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,OUT.PAYMENTS.ALL,Выбытия | пенсионные выплаты | всего,932088.375,level
 2026-08-01,national,OUT.PAYMENTS.ALL,Выбытия | пенсионные выплаты | всего,1083510.864,level
 2026-09-01,national,OUT.PAYMENTS.ALL,Выбытия | пенсионные выплаты | всего,1242345.644,level
+2026-10-01,national,OUT.PAYMENTS.ALL,Выбытия | пенсионные выплаты | всего,1402366.425,level
 2023-01-01,national,OUT.PAYMENTS.TO_INSURERS,Выбытия | пенсионные выплаты | Transfers to insurance companies,25993.652000000002,level
 2023-02-01,national,OUT.PAYMENTS.TO_INSURERS,Выбытия | пенсионные выплаты | Transfers to insurance companies,1847.073,level
 2023-03-01,national,OUT.PAYMENTS.TO_INSURERS,Выбытия | пенсионные выплаты | Transfers to insurance companies,3071.272,level
@@ -615,3 +628,4 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,OUT.PAYMENTS.TO_INSURERS,Выбытия | пенсионные выплаты | Transfers to insurance companies,292780.406,level
 2026-08-01,national,OUT.PAYMENTS.TO_INSURERS,Выбытия | пенсионные выплаты | Transfers to insurance companies,378556.96400000004,level
 2026-09-01,national,OUT.PAYMENTS.TO_INSURERS,Выбытия | пенсионные выплаты | Transfers to insurance companies,470476.496,level
+2026-10-01,national,OUT.PAYMENTS.TO_INSURERS,Выбытия | пенсионные выплаты | Transfers to insurance companies,564393.424,level
