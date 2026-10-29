@@ -628,3 +628,19 @@ right and the test's assumption was not. It now pins January–July 2025 (coal p
 coal exports 16 428.615 kt, wheat exports 4 384 954.666 t), printed for the last time in the
 «январь-июль 2025г.» column of the January–July 2026 edition and absent from the August one. The old
 test fails on the refreshed dataset exactly as in CI; the new one passes on it and on main's data.
+
+## 2026-10-29 — quarterly national accounts for 2026 Q2: not yet published; BNS withdrew its production release (scheduled check from «Сделай все три пункта», point 3)
+
+The expenditure QNA (element 283161, the source of model_data's gdp, gdp_sa, gdp_nsa) was due on 28.10.2026;
+on 29.10.2026 09:30 UTC its file is still the one of 28.07.2026, ending at 2026 Q1. The production QNA (283162)
+carried 2026 Q1-Q2 from 16-17.10.2026 and was replaced on 20.10.2026 by a file ending at 2025 Q4, so the run of
+2026-10-21 dropped 2026 from the seven QNA_GVA_* datasets (1 716 -> 1 664 records each for the level tables).
+The withdrawn release had GDP Q2 2026 at 113.8 % of Q2 2025 in 2010 prices, H1 109.5 %, seasonally adjusted
+Q2/Q1 +7.6 %; BNS's cumulative table 4439/4440 has GDP Q1 103.0 %, H1 104.1 %, Q2 alone 105.2 %
+(GVA_VOLUME_INDEX_BY_SECTION_DISCRETE). Nominal Q2 growth agrees (+18.9 % QNA, +20.1 % table 4439); the
+release's implied deflator, about 104.5 %, does not fit CPI 110.4 % or industrial producer prices 111-117 % y/y,
+so the 13.8 % was most likely a deflation error, and the withdrawal is consistent with that. The income QNA
+(283160, nominal only) keeps Q2 2026 from 16.10.2026: GDP 43 553.8 bn KZT, in line with the 2025 gap between the
+QNA quarters and table 4439's. Registered as source issue qna_production_2026_withdrawn (caveat); the
+GVA_VOLUME_INDEX_BY_SECTION_DISCRETE note now states the QNA's status. No data or model_data change: the
+expenditure QNA has no Q2 to add. The check is re-armed.
