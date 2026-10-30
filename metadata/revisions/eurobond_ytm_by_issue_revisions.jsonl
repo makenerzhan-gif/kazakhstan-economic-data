@@ -115,3 +115,11 @@
 {"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS3093655341", "old_value": 5.53, "new_value": 5.52, "detected_date": "2026-10-29", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS3093658014", "old_value": 5.9, "new_value": 5.88, "detected_date": "2026-10-29", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS3212533262", "old_value": 5.26, "new_value": 5.15, "detected_date": "2026-10-29", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS1120709826", "old_value": 6.12, "new_value": 6.1, "detected_date": "2026-10-30", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS1263139856", "old_value": 6.27, "new_value": 6.25, "detected_date": "2026-10-30", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS1901718335", "old_value": 3.4, "new_value": 3.39, "detected_date": "2026-10-30", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS2050933626", "old_value": 4.2, "new_value": 4.16, "detected_date": "2026-10-30", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS2914770545", "old_value": 5.65, "new_value": 5.63, "detected_date": "2026-10-30", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS3093655341", "old_value": 5.52, "new_value": 5.47, "detected_date": "2026-10-30", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS3093658014", "old_value": 5.88, "new_value": 5.85, "detected_date": "2026-10-30", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_YTM_BY_ISSUE", "period": "2026-10-01 XS3212533262", "old_value": 5.15, "new_value": 5.16, "detected_date": "2026-10-30", "source": "kase", "reason": "not stated by source"}
