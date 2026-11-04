@@ -39,3 +39,11 @@
 {"indicator_id": "WB_COMMODITY_INDICES_MONTHLY", "period": "2026-08-01 OILS_MEALS @world", "old_value": 119.3, "new_value": 120.4, "detected_date": "2026-10-03", "source": "wb", "reason": "not stated by source"}
 {"indicator_id": "WB_COMMODITY_INDICES_MONTHLY", "period": "2026-08-01 RAW_MATERIALS @world", "old_value": 89.9, "new_value": 90.0, "detected_date": "2026-10-03", "source": "wb", "reason": "not stated by source"}
 {"indicator_id": "WB_COMMODITY_INDICES_MONTHLY", "period": "2026-08-01 OTHER_RAW_MATERIALS @world", "old_value": 97.9, "new_value": 98.1, "detected_date": "2026-10-03", "source": "wb", "reason": "not stated by source"}
+{"indicator_id": "WB_COMMODITY_INDICES_MONTHLY", "period": "2026-08-01 RAW_MATERIALS @world", "old_value": 90.0, "new_value": 90.1, "detected_date": "2026-11-04", "source": "wb", "reason": "not stated by source"}
+{"indicator_id": "WB_COMMODITY_INDICES_MONTHLY", "period": "2026-08-01 OTHER_RAW_MATERIALS @world", "old_value": 98.1, "new_value": 98.2, "detected_date": "2026-11-04", "source": "wb", "reason": "not stated by source"}
+{"indicator_id": "WB_COMMODITY_INDICES_MONTHLY", "period": "2026-09-01 TOTAL @world", "old_value": 142.8, "new_value": 142.9, "detected_date": "2026-11-04", "source": "wb", "reason": "not stated by source"}
+{"indicator_id": "WB_COMMODITY_INDICES_MONTHLY", "period": "2026-09-01 ENERGY @world", "old_value": 148.9, "new_value": 149.0, "detected_date": "2026-11-04", "source": "wb", "reason": "not stated by source"}
+{"indicator_id": "WB_COMMODITY_INDICES_MONTHLY", "period": "2026-09-01 AGRICULTURE @world", "old_value": 121.3, "new_value": 121.4, "detected_date": "2026-11-04", "source": "wb", "reason": "not stated by source"}
+{"indicator_id": "WB_COMMODITY_INDICES_MONTHLY", "period": "2026-09-01 OILS_MEALS @world", "old_value": 127.0, "new_value": 126.9, "detected_date": "2026-11-04", "source": "wb", "reason": "not stated by source"}
+{"indicator_id": "WB_COMMODITY_INDICES_MONTHLY", "period": "2026-09-01 RAW_MATERIALS @world", "old_value": 90.8, "new_value": 90.9, "detected_date": "2026-11-04", "source": "wb", "reason": "not stated by source"}
+{"indicator_id": "WB_COMMODITY_INDICES_MONTHLY", "period": "2026-09-01 OTHER_RAW_MATERIALS @world", "old_value": 100.2, "new_value": 100.3, "detected_date": "2026-11-04", "source": "wb", "reason": "not stated by source"}
