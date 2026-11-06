@@ -1,4 +1,5 @@
 date,value,transformation
+2023-02-01,24.85,level
 2023-03-01,24.85,level
 2023-04-01,24.85,level
 2023-05-01,24.85,level
@@ -39,3 +40,5 @@ date,value,transformation
 2026-04-01,24.85,level
 2026-05-01,23.81,level
 2026-06-01,24.14,level
+2026-07-01,23.2,level
+2026-08-01,22.9,level
