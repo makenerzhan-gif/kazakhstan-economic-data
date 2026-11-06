@@ -14,8 +14,8 @@ DS = {"id": "TEST", "element_id": 0, "layout": "year_quarters", "dictionary": "o
 
 
 def test_year_cells_and_year_to_date_labels_are_recognised():
-    assert [bool(bns_dims.YEAR_CELL.match(s)) for s in ("2010", " 2025 ", "20253)", "2025 3)", "2010.0", "2146592.05", "год", "")] == \
-        [True, True, True, True, True, False, False, False]
+    assert [bool(bns_dims.YEAR_CELL.match(s)) for s in ("2010", " 2025 ", "20253)", "2025 3)", "2010.0", "2025*", "2146592.05", "год", "")] == \
+        [True, True, True, True, True, True, False, False, False]
     assert [bns_dims.ytd_of(s) for s in ("I квартал", "1 квартал", "I кв.", "I полугодие", "9 месяцев", "год", "Январь - Март ", "Январь - Июнь", "Январь - Сентябрь", "II квартал", None)] == \
         [1, 1, 1, 2, 3, 4, 1, 2, 3, None, None]
     assert [bns_dims.quarter_of(s) for s in ("I кв.", "IV кв", "II квартал", "I полугодие")] == [1, 4, 2, None]
@@ -41,6 +41,23 @@ def test_year_quarters_reads_discrete_quarters_dated_at_quarter_start():
     assert ("GOODS", "2025-04-01") not in by                       # "-" is a missing value, not zero
     assert by[("A", "2025-04-01")] == 2.5 and by[("GDP", "2024-07-01")] == 300.0
     assert len(recs) == 5 + 6 + 6 and all(r["region"] == "national" for r in recs)
+
+
+def test_a_preliminary_year_is_read_and_an_unreadable_one_stops_the_parse():
+    """Element 283161 of 04.11.2026 heads 2025 «2025*»; before the fix its four quarters were
+    dropped without a word, so the tables ran from 2024 Q4 straight to 2026 Q1."""
+    d = dims.load_dictionary("okved_sections")
+    q = ["I квартал", "II квартал", "III квартал", "IV квартал"]
+    grid = _grid(q)
+    grid[1] = ["ОКЭД", "наименование ОКЭД", 2023, None, None, None, "2024*", None, None, None, 2025, None, None, None]
+    grid[2] = [None, None, *q, *q, *q]
+    for row in grid[3:6]:
+        row += [7.0, None, None, None]
+    by = {(r["item_code"], r["date"]): r["value"] for r in bns_dims.parse_year_quarters(grid, d, DS)}
+    assert by[("GDP", "2024-01-01")] == 110.0 and by[("GDP", "2025-01-01")] == 7.0
+    grid[1][6] = "2024**)"
+    with pytest.raises(validation.StructuralChangeError, match=r"no readable year cell for \[2024\]"):
+        bns_dims.parse_year_quarters(grid, d, DS)
 
 
 def test_year_quarters_cumulative_sheets_use_the_year_to_date_labels():
