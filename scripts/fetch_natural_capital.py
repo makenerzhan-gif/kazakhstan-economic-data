@@ -52,6 +52,11 @@ BNS_SEED_IDS = ["504418", "509558", "509550", "478736", "479809", "479470"]
 KEYWORDS = ("минерал", "энергетическ", "актив", "запас", "природно-эконом", "seea", "mineral", "asset",
             "счет", "счёт")
 
+NEA_PDF_DIRECT = [
+    "https://www.oecdnea.org/upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf",
+    "https://www.oecd-nea.org/upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf",
+    "https://oecd-nea.org/upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf",
+]
 NEA_PAGES = [
     "https://www.oecd-nea.org/jcms/pl_121658/uranium-2026-resources-production-and-demand",
     "https://www.oecd-nea.org/jcms/pl_121582/adequate-uranium-resources-available-but-sustained-investment-essential-to-support-global-nuclear-capacity-growth",
@@ -175,7 +180,7 @@ def nea() -> None:
     log = LOG["nea"]
     NEA_DIR.mkdir(parents=True, exist_ok=True)
     TMP_DIR.mkdir(parents=True, exist_ok=True)
-    candidates: list[str] = []
+    candidates: list[str] = list(NEA_PDF_DIRECT)
     for page in NEA_PAGES:
         r = get(page)
         log.setdefault("pages", []).append({"url": page, "ok": r is not None})
