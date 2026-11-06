@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - scripts/fetch_natural_capital.py
+      - scripts/fetch_resource_history.py
       - .github/workflows/natural-capital.yml
 
 concurrency:
@@ -33,6 +34,12 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: python scripts/fetch_natural_capital.py
 
+      - name: Long historical resource series (EI, EIA, World Bank, Comtrade, USGS)
+        if: always()
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python scripts/fetch_resource_history.py
+
       - name: Keep the Red Book PDF and raw files as an artifact (not committed)
         if: always()
         uses: actions/upload-artifact@v4
@@ -40,6 +47,7 @@ jobs:
           name: natural-capital-${{ github.run_id }}
           path: |
             tmp_natural_capital/
+            data/raw/resource_history/
             data/raw/bns_seea/
             data/raw/nea/
             reports/natural_capital_fetch.json
@@ -51,7 +59,7 @@ jobs:
           git config user.name "kz-data-bot"
           git config user.email "actions@users.noreply.github.com"
           git config lfs.locksverify false
-          git add data/raw/bns_seea/ data/raw/nea/ reports/natural_capital_fetch.json || true
+          git add data/raw/bns_seea/ data/raw/nea/ data/raw/resource_history/ reports/natural_capital_fetch.json reports/resource_history_fetch.json || true
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
