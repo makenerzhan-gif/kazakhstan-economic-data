@@ -1,5 +1,5 @@
 {
- "started_utc": "2026-11-06T20:05:17.257412+00:00",
+ "started_utc": "2026-11-06T20:08:52.410732+00:00",
  "bns": {
   "listings": [
    {
@@ -140,7 +140,45 @@
     "bytes": 39964,
     "sha256": "51218f603556a08b5eba5113faed93c3d2d0a72b0e0ffc548243def6e6a0af25"
    }
-  ]
+  ],
+  "asset_account": {
+   "source": "bns_seea_478736_ru.xlsx",
+   "rows": 1616,
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "resources": [
+    "Уголь (млн. тонн)",
+    "Нефть (млн. тонн)",
+    "Газ (млрд.м³)",
+    "Конденсат (млн. тонн)",
+    "Золото (тонн)",
+    "Медь (млн. тонн)",
+    "Свинец (млн. тонн)",
+    "Цинк (млн. тонн)",
+    "Никель (млн. тонн)",
+    "Бокситы (млн. тонн)",
+    "Хромовые руды (млн. тонн)",
+    "Железные руды (млн. тонн)",
+    "Марганцевые руды (млн. тонн)",
+    "Уран (тыс. тонн)",
+    "Фосфориты - Р₂О₅ (млн. тонн)",
+    "Серебро (тыс. тонн)",
+    "Кобальт (тыс. тонн)",
+    "Молибден (тыс. тонн)",
+    "Олово (тыс. тонн)"
+   ]
+  }
  },
  "nea": {
   "pages": [
@@ -167,28 +205,20 @@
   "pdf_sha256": "0fdaef83b4d53f25dd0d7befa068b4089c660456f921da936570fad2e6123de4",
   "pdf_pages": 568,
   "kazakhstan_report_pages": [
-   13,
-   15,
-   25,
-   40,
-   42,
-   57,
-   58,
-   76,
-   89,
-   91,
-   121,
-   129,
-   267,
    317,
    318,
+   319,
    320,
    321,
    322,
    323,
-   415
+   324,
+   325,
+   326,
+   327,
+   328
   ],
-  "extract_lines": 736
+  "extract_lines": 2091
  },
  "http_errors": [
   {
@@ -216,5 +246,5 @@
    "error": "HTTPSConnectionPool(host='www.oecdnea.org', port=443): Max retries exceeded with url: /upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch"
   }
  ],
- "finished_utc": "2026-11-06T20:07:04.040828+00:00"
+ "finished_utc": "2026-11-06T20:10:21.723077+00:00"
 }
