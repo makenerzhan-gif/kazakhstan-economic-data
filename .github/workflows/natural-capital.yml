@@ -26,7 +26,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install "requests>=2.31" "pypdf>=4.0"
+        run: pip install "requests>=2.31" "pypdf>=4.0" "openpyxl>=3.1"
 
       - name: Fetch
         env:

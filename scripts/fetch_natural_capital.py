@@ -175,6 +175,53 @@ def bns() -> None:
     log["files"] = files
 
 
+def parse_asset_account() -> None:
+    """Long table of the «Счёт учёта активов для минеральных и энергетических ресурсов» workbook
+    (one sheet, years stacked, 16-19 resources in columns): year, resource, item, value."""
+    import csv
+    import openpyxl
+    src = None
+    for f in sorted(BNS_DIR.glob("bns_seea_*_ru.xlsx")):
+        wb = openpyxl.load_workbook(f, read_only=True, data_only=True)
+        first = next(wb.worksheets[0].iter_rows(max_row=3, values_only=True), ())
+        if any(isinstance(c, str) and "активов для минеральных" in c for c in first):
+            src = f
+            break
+    if src is None:
+        LOG["bns"]["asset_account"] = "not found among downloaded xlsx"
+        return
+    rows = list(openpyxl.load_workbook(src, data_only=True).worksheets[0].iter_rows(values_only=True))
+    hi = next(i for i, r in enumerate(rows) if any(isinstance(c, str) and c.strip().startswith("Уголь") for c in r))
+    hdr = {j: re.sub(r"\s+", " ", c).strip() for j, c in enumerate(rows[hi]) if isinstance(c, str) and c.strip()}
+    out, year = [], None
+    for r in rows[hi + 1:]:
+        lab = next((c for c in r if isinstance(c, str) and c.strip()), None)
+        first = next((c for c in r if c not in (None, "")), None)
+        if isinstance(first, (int, float)) and 2000 < first < 2100 and lab is None:
+            year = int(first)
+            continue
+        if lab and re.fullmatch(r"\s*(20\d\d)\s*", lab):
+            year = int(lab)
+            continue
+        if year is None or lab is None:
+            continue
+        for j, res in hdr.items():
+            v = r[j] if j < len(r) else None
+            try:
+                v = float(str(v).replace(",", ".").replace(" ", "")) if v not in (None, "") else None
+            except ValueError:
+                v = None
+            if v is not None:
+                out.append((year, res, re.sub(r"\s+", " ", lab).strip(), v))
+    dest = BNS_DIR / "seea_mineral_asset_account_long.csv"
+    with dest.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.writer(fh)
+        w.writerow(["year", "resource", "item", "value"])
+        w.writerows(out)
+    LOG["bns"]["asset_account"] = {"source": src.name, "rows": len(out), "years": sorted({o[0] for o in out}),
+                                   "resources": list(hdr.values())}
+
+
 # ------------------------------------------------------------------ Red Book
 def nea() -> None:
     log = LOG["nea"]
@@ -210,17 +257,18 @@ def nea() -> None:
     out = []
     kz_pages = []
     for i, p in enumerate(pages, 1):
-        n = p.count("Kazakhstan")
-        if n == 0:
+        if "Kazakhstan" not in p and "KAZAKHSTAN" not in p:
             continue
         lines = [ln.strip() for ln in p.splitlines() if ln.strip()]
-        # country report pages: page header/running title "Kazakhstan" and dense mentions
-        is_report = n >= 3 or (lines and lines[0].startswith("Kazakhstan")) or (lines and lines[-1].startswith("Kazakhstan"))
+        # the country report carries the running head "NATIONAL REPORTS: KAZAKHSTAN" on every page
+        is_report = "NATIONAL REPORTS: KAZAKHSTAN" in p
         if is_report:
             kz_pages.append(i)
-            keep = [ln for ln in lines if re.search(r"\d", ln) or ln.isupper() or ln.lower().startswith(("table", "kazakhstan", "reasonably", "inferred", "identified", "prognosticated", "speculative", "production", "cost"))]
+            keep = [ln for ln in lines if re.search(r"\d", ln) or ln.lower().startswith(("table", "reasonably", "inferred", "identified", "prognosticated", "speculative", "production", "cost", "resource", "uranium"))]
         else:
-            keep = [ln for ln in lines if "Kazakhstan" in ln or ln.lower().startswith("table")]
+            # global tables: title and column headers (top of page) plus Kazakhstan's own rows
+            head = [ln for ln in lines[:30] if not re.search(r"^[A-Z][a-z].*\d", ln) or ln.lower().startswith("table")]
+            keep = head[:25] + ["..."] + [ln for ln in lines if "Kazakhstan" in ln or ln.lower().startswith(("table", "total"))]
         out.append(f"===== page {i} ({'country report' if is_report else 'global table'}) =====")
         out.extend(keep)
     (NEA_DIR / "redbook2026_kazakhstan_lines.txt").write_text("\n".join(out), encoding="utf-8")
@@ -229,7 +277,7 @@ def nea() -> None:
 
 
 def main() -> int:
-    for part in (bns, nea):
+    for part in (bns, parse_asset_account, nea):
         try:
             part()
         except Exception as exc:  # noqa: BLE001 -- the report must still be written
