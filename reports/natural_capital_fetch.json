@@ -1,5 +1,5 @@
 {
- "started_utc": "2026-11-06T20:02:28.855613+00:00",
+ "started_utc": "2026-11-06T20:05:17.257412+00:00",
  "bns": {
   "listings": [
    {
@@ -157,8 +157,38 @@
     "ok": false
    }
   ],
-  "pdf_candidates": [],
-  "error": "no Red Book PDF found among candidates"
+  "pdf_candidates": [
+   "https://www.oecdnea.org/upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf",
+   "https://www.oecd-nea.org/upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf",
+   "https://oecd-nea.org/upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf"
+  ],
+  "pdf_url": "https://www.oecd-nea.org/upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf",
+  "pdf_bytes": 13241194,
+  "pdf_sha256": "0fdaef83b4d53f25dd0d7befa068b4089c660456f921da936570fad2e6123de4",
+  "pdf_pages": 568,
+  "kazakhstan_report_pages": [
+   13,
+   15,
+   25,
+   40,
+   42,
+   57,
+   58,
+   76,
+   89,
+   91,
+   121,
+   129,
+   267,
+   317,
+   318,
+   320,
+   321,
+   322,
+   323,
+   415
+  ],
+  "extract_lines": 736
  },
  "http_errors": [
   {
@@ -172,7 +202,19 @@
   {
    "url": "https://www.iaea.org/newscenter/pressreleases/adequate-uranium-resources-available-but-sustained-investment-essential-to-support-global-nuclear-capacity-growth",
    "status": 403
+  },
+  {
+   "url": "https://www.oecdnea.org/upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf",
+   "error": "HTTPSConnectionPool(host='www.oecdnea.org', port=443): Max retries exceeded with url: /upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch"
+  },
+  {
+   "url": "https://www.oecdnea.org/upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf",
+   "error": "HTTPSConnectionPool(host='www.oecdnea.org', port=443): Max retries exceeded with url: /upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch"
+  },
+  {
+   "url": "https://www.oecdnea.org/upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf",
+   "error": "HTTPSConnectionPool(host='www.oecdnea.org', port=443): Max retries exceeded with url: /upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch"
   }
  ],
- "finished_utc": "2026-11-06T20:02:59.803797+00:00"
+ "finished_utc": "2026-11-06T20:07:04.040828+00:00"
 }

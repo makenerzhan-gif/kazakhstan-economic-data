@@ -1,0 +1,736 @@
+===== page 9 (global table) =====
+TABLE OF CONTENTS
+Kazakhstan .................................................................................................................................... 315
+===== page 13 (country report) =====
+EXECUTIVE SUMMARY
+URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026 11
+Uranium 2026: Resources, Production and Demand provides a cohesive summary of world uranium
+46 country reports covering uranium exploration, resources, production and reactor -related
+requirements, 39 of which were prepared from officially reported government data and
+nuclear generating capacity and reactor-related uranium requirements through 2050, as well as
+The data reporting period for Uranium 2026: Resources, Production and Demand (also known as the
+“Red Book”) covers 1 January 2023 to 1 January 2025 (calendar years 2023 and 2024), although
+some relevant information for 2025 and 2026 is also included in the discussions.
+Global uranium resources (as of 1 January 2025) marginally increased compared to the previous edition of
+the Red Book (2024), with total identified recoverable resources at <USD 260/kg of just over 8.1 million tU
+(+2.1%), comprised of 61% reasonably assured resources (1% increase from previous edition) and 39%
+inferred resources. At <USD 130/kgU, total identified recoverable resources of 5.9 million remained largely
+unchanged compared to 1 January 2023, with slight increases at <USD 80kg/U (+3.5%) and <USD 40/kgU
+(+2.1%), respectively. Increases in the <USD 80kg/U cost category are largely attributed to Canada reporting
+a 70% increase of identified recoverable resources in this category. The increase in the lowest cost category
+previous edition, continued. As of 1 January 2025, only four countries reported resources in the
+<USD 40/kgU cost category, with an unchanged 75% of the global total attributed to Kazakhstan.
+29% of identified recoverable resources at costs <USD  130/kgU and 24% at costs <USD  260/kgU.
+Notably, approximately 69% of Australia ’s uranium endowment, which is equivalent to about
+17% of global identified recoverable resources, is contained in the Olympic Dam deposit in South
+Australia is followed by Kazakhstan, which holds approximately 14% of the world’s identified
+recoverable resources at <USD 130/kgU and 11% at <USD 260/kgU. Canada ranks third, with 9% of
+identified recoverable resources at <USD 130/kgU and 10% at <USD 260/kgU.
+20% in the <USD 130/kgU category and 19% in the <USD  260/kgU category, primarily as a result
+<USD 260/kgU category, due in part to an approximate 8% increase in reasonably assured
+===== page 14 (global table) =====
+Kazakhstan was the only country reporting significant resource figures, recording a minor
+300 000 tU. Smaller downward revisions were also reported by Argentina, Kazakhstan and Russia.
+===== page 15 (country report) =====
+EXECUTIVE SUMMARY
+URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026 13
+The upward trend in domestic uranium exploration expenditures observed since 2021 continued,
+doubled from USD 490 million in 2021 to approximately USD 970 million in 2024. Total spending for 2025
+is anticipated to reach USD 1 billion, based on preliminary data of around USD 930 million, as several
+spending, declined from USD 70 million in 2022 to USD 50 million in 2023 and underwent a further
+decline to USD 40 million in 2024. This decrease is largely attributable to reduced non-domestic
+likely to increase significantly in 2025, reflecting renewed interest in overseas activities by China
+Total exploration and development expenditures for the 2023 -2024 period amounted to
+approximately USD 1.8 billion, representing a substantial increase of 46% compared with the 2021-
+2022 period and continuing the upward trend observed since 2021. Canada and China have led
+global expenditures over the past decade, a pattern that remained unchanged in 2023 -2024.
+Canada accounted for 39% of total expenditures, followed by China at 26%, the United States at
+7% and India at 6%. Australia and Uzbekistan each represented a further 5% of total spending.
+The total volume of exploration and development drilling reported for 2023 and 2024
+amounted to approximately 8 500 km, representing a 27% increase compared with the previous
+of all drillholes were undertaken for development purposes. During the 2023 -2024 period,
+Uzbekistan, China, Kazakhstan and the United States accounted for 31%, 28%, 12% and 11% of
+total drilling, respectively, while Namibia, Canada and India collectively contributed a further 16%.
+Production
+Global uranium mine production increased by approximately 20% between the 2021-2022 and 2023-2024
+reporting periods. Total production amounted to 96 851 tU for the two years 2021- 2022 and rose to
+116 487 tU for 2023-2024. This increase marks a clear reversal of the previous downward trend observed
+from 2017, which bottomed out in 2021, and is expected to continue in the near and medium term due to
+As of 1 January 2025 (with some updates through December 2025), idled uranium mines
+represented a combined annual production capacity of just over 21 100 tU. Of this total, mines
+accounting for approximately 9  400 tU of annual capacity have either recently restarted
+production or have firm commitments with restart activities underway. The remaining
+11 750 tU of idled capacity represents additional potential supply, although with notable
+production, and likely at levels below the nominal listed capacity.
+During the 2023- 2024 period, Kazakhstan remained the world’s leading producer,
+accounting for 38% of total production, followed by Canada (22%), Namibia (12%), and Australia
+and Uzbekistan, each contributing 8%. Collectively, these five countries accounted  for nearly
+90% of global uranium production. Additional contributions were made by Russia (5%) and
+China (3%), with several other countries producing smaller amounts.
+In 2024 alone, uranium production reached 61 924 tU , approaching levels last observed in
+2016. Production has been increasing since 2022, following a five-year period of declining output,
+with production reaching a low of 47  371 tU in 2021, primarily due to mine shutdowns and
+production reductions, in response to depressed uranium market conditions. The 20% increase
+in output since 2022 is largely attributable to the return of Canadian mines to full production,
+===== page 16 (global table) =====
+mining capacity in Kazakhstan, and increased output in Uzbekistan following a presidential
+===== page 18 (global table) =====
+and plans or considerations by several countries, including Ghana, Kazakhstan, Kenya, Poland,
+===== page 25 (country report) =====
+URANIUM SUPPLY
+URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026 23
+Table 1.1. Changes in identified recoverable uranium resources 2023-2025
+(as of 1 January 2025, tonnes U, rounded to nearest 100 tonnes†)
+Resource category 2023 2025 Change(a) % change
+<USD 260/kgU 7 934 500 8 104 500 170 000 2.1
+<USD 130/kgU 5 925 700 5 864 500 -61 200 -1.0
+<USD 80/kgU(b) 1 881 100 1 946 400 65 300 3.5
+<USD 40/kgU(b) 666 900 680 600 13 700 2.1
+Reasonably assured resources
+<USD 260/kgU 4 778 700 4 970 800 192 100 4.0
+<USD 130/kgU 3 868 800 3 904 400 35 600 0.9
+<USD 80/kgU(b) 1 180 700 1 251 100 70 400 6.0
+<USD 40/kgU(b) 364 700 367 400 2 700 0.7
+Inferred resources
+<USD 260/kgU 3 155 700 3 133 700 -22 000 -0.7
+<USD 130/kgU 2 056 900 1 960 100 -96 800 -4.7
+<USD 80/kgU(b) 700 400 695 400 -5 000 -0.7
+<USD 40/kgU(b) 302 200 313 200 11 000 3.6
+(a) Changes might not equal differences between 2023 and 2025 because of independent rounding.
+(b) Totals for <USD 40/kgU and <USD 80/kgU cost ranges should be regarded with some caution as certain countries do not report low-
+cost resource estimates, whereas other (non-producing) countries may underestimate mining costs.
+From 1  January 2023 to 1 January 2025 there was a modest increase in global identified
+recoverable conventional uranium resources at the <USD 260/kgU cost category to a total of
+8.1 million tU, an increase of 2.1% (170 000 tU) from 2023. At the other cost categories, the overall
+picture is mixed, with a -1.0% (61 000 tU) decrease in identified recoverable conventional uranium
+resources at the <USD 130/kgU cost category, and increases of 3.5% (65 000 tU) and 2.1% (14 000 tU)
+at the <USD 80/kgU and <USD 40/kgU cost categories, respectively. At the <USD  260/kgU cost
+category, RAR increased by 4%, compared with a 2.1 % increase in total identified resources,
+lowest cost category (<USD 40/kgU), the increase in total identified resources was primarily the
+result of a 3.6% increase in IR, with minimal contribution from a 0.7% increase in RAR.
+The increase in the lowest cost category (<USD 40/kgU) of identified conventional resources is
+the result of an additional 13 700 tU reported in this cost category by Kazakhstan. Notably, as of
+1 January 2025, only Brazil  (86 800 tU), China (73 200 tU), Kazakhstan (512 500 tU) and Spain
+(8 100 tU) reported uranium resources in the lowest cost category (<USD 40/kgU). At the highest
+cost category (<USD  260/kgU), the increase in total identified resources is the net result of
+These additions were partially offset by resource depletion from mining (116 500 tU over the two
+===== page 26 (global table) =====
+Table 1.2a. Identified recoverable uranium resources
+Kazakhstan(a) 512 500 744 300 827 500 886 900
+===== page 28 (global table) =====
+Table 1.2b. Identified in situ uranium resources
+Kazakhstan 575 800 836 900 933 100 1 004 700
+===== page 31 (global table) =====
+Table 1.3a. Reasonably assured recoverable uranium resources
+Kazakhstan(a) 274 500 384 500 435 900 455 600
+===== page 33 (global table) =====
+Table 1.3b. Reasonably assured in situ uranium resources (cont’d)
+Kazakhstan 308 400 432 300 491 300 514 900
+===== page 34 (global table) =====
+Table 1.4a. Inferred recoverable uranium resources
+Kazakhstan(a) 238 000 359 800 391 500 431 400
+===== page 36 (global table) =====
+Table 1.4b. Inferred in situ uranium resources
+Kazakhstan 267 400 404 500 441 800 489 800
+===== page 38 (global table) =====
+Table 1.5. Major identified recoverable uranium resources, changes by country
+Kazakhstan
+===== page 40 (country report) =====
+URANIUM SUPPLY
+38 URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026
+(<USD 130/kgU, <USD 260/kgU) owing mainly to mining depletion, a decrease in IR at
+<USD 260/kgU attributable to removal of a deposit resource estimate, and increases to lower-cost
+(<USD 80/kgU) RAR and IR due to reclassification consistent with published technical study cost
+China. In India, ongoing exploration efforts led to an 8% increase in high-cost (<USD 260/kgU) RAR
+and IR, compared to 2023. Kazakhstan reported increased RAR in all cost categories, partially offset
+by decreased IR in all but the lowest-cost (<USD 40/kgU) category, due to exploration success at
+higher cost categories (<USD 130/kgU, <USD 260/kgU) and a substantial decrease at the lower-cost
+category (<USD 80/kgU), arising from a comprehensive reassessment of their identified uranium
+resources. The United States reported an 8% increase in RAR at <USD 260/kgU, and a Secretariat
+at higher cost categories (<USD 130/kgU, <USD 260/kgU) from successful exploration results and
+global identified conventional uranium resources (53% at USD 130/kgU, 45% at <USD  260/kgU).
+Australia dominates the world’s uranium resources with 29% of the total identified recoverable
+resources at <USD 130/kgU and 24% of identified resources at <USD  260/kgU. Fully 69% of
+Australia’s uranium resources (and nearly 17% of global identified resources) are attributed to
+copper. Kazakhstan remains second, hosting approximately 14% of worldwide identified
+resources at <USD 130/kgU and 11% at <USD 260/kgU. Canada’s share reduced slightly from that
+reported in the 2024 edition to about 9% in the <USD 130/kgU category and 10% in the
+<USD 260/kgU category. Fifteen countries represent approximately 95% of the total identified
+resources in the <USD 130/kgU cost category (see Figure 1.1) and almost 90% at <USD 260/kgU.
+resources in the lowest cost category (<USD 40/kgU), and of these  Kazakhstan has by far the
+largest share (75%), followed by Brazil (13%), China (11%) and Spain (1%). In the <USD 80/kgU cost
+category, Kazakhstan holds a 38% share, followed by Canada (21%), South Africa (12%), China (9%)
+and Brazil (4%), with nine other countries each holding shares of 1% to 2% in this cost category.
+of <USD 40/kgU (<USD 15/lb U3O8) are extremely low and, in the case of undeveloped resources,
+report in the <USD 40/kgU category. Costs of <USD 80/kgU (<USD 30/lb U3O8) should be viewed as
+generally, studies have proven to underestimate actual costs. A total of 21 countries reported
+recoverable uranium resources in the <USD 80/kgU category. Ten of these countries, accounting
+for approximately 5% of the <USD 80/kgU resources, warrant thorough review for the next Red
+===== page 41 (global table) =====
+Table 1.6 (RAR): mainly ISL acid, ISL alkaline and co -product/by-product production methods.
+Low-cost resources amenable to production by ISL, mainly in Kazakhstan and to a lesser extent in
+Table 1.6. Reasonably assured recoverable uranium resources by production method
+In the <USD 80/kgU category, resources amenable to production by ISL (Kazakhstan , China,
+===== page 42 (country report) =====
+URANIUM SUPPLY
+40 URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026
+In the <USD 130/kgU category, resources in the by-product/co-product category make up 34%
+Namibia, Niger and Tanzania) resources contribute 24% and 22% respectively, followed by ISL
+acid at 16%.
+In the <USD  260/kgU category, the underground (predominantly Australia , Canada, India,
+Africa) production methods contribute about 30% each, followed by open-pit mining (mainly in
+Australia, Namibia and Niger) at 21% and ISL acid at 14%. Australia  holds the largest resource
+The pattern of resource distribution by production method for IR (Table 1.7) is similar to that
+for RAR. In the lowest cost categories (<USD 40/kgU and <USD 80/kgU), resources amenable to ISL
+production dominate, principally in Kazakhstan. In the <USD  130/kgU category, ISL amenable
+Australia, Namibia and Niger). In the highest cost category (<USD 260/kgU), underground mining
+Table 1.7. Inferred recoverable resources by production method
+(as of 1 January 2025, tonnes U, rounded to nearest 100 tonnes†)
+Production method <USD 40/kgU <USD 80/kgU <USD 130/kgU <USD 260/kgU
+Open-pit mining 0 39 600 327 600 571 800
+Underground mining 0 71 500 543 700 911 000
+In situ leaching acid 249 000 420 500 521 900 641 900
+In situ leaching alkaline 30 400 64 700 89 000 123 100
+Co-product/by-product 33 800 97 100 443 800 636 500
+Unspecified 0 1 800 34 100 249 500
+Total 313 200 695 400 1 960 100 3 133 700
+With only four countries reporting resources at the lowest cost category (<USD 40/kgU),
+Kazakhstan ISL acid amenable RAR dominate ( See Table 1.8). At <USD 80/kgU, conventional
+RAR from Canada and South Africa. At the higher cost categories (<USD 130/kgU and <USD 260/kgU),
+===== page 44 (global table) =====
+tables. Considering only ISL acid, this processing method makes up 14% of total RAR and 20% of
+Sandstone-type RAR, mainly in Australia, China, Kazakhstan, Niger and the United States, tops
+Table 1.10. Reasonably assured recoverable resources by deposit type
+type deposits (from Australia), metasomatite (mainly Kazakhstan, Russia and Ukraine), intrusive
+===== page 45 (global table) =====
+Table 1.11. Inferred recoverable resources by deposit type
+cost category for Canada and Kazakhstan. Resources proximal to existing and committed
+Canada, Kazakhstan, Niger and Australia, slightly offset by a decrease for Namibia.
+===== page 46 (global table) =====
+Table 1.12. Identified recoverable resources proximate
+Kazakhstan 744 300 698 000 94% 827 500 698 000 84%
+===== page 47 (global table) =====
+Table 1.13. Undiscovered (prognosticated and speculative) in situ resources
+Kazakhstan 85 800 113 700 113 700 186 300 186 300 NA 186 300
+===== page 48 (global table) =====
+Table 1.13. China’s country report previously included a comment that  systematic nationwide
+from Uzbekistan, with minor changes for India and Kazakhstan, and insignificant adjustments
+290 000 tU less than the previous estimate. Three other countries (Kazakhstan, Argentina and
+===== page 49 (global table) =====
+bones) in Kazakhstan. In the former German Democratic Republic, low grade (<0.006% U) Silurian
+of grades and production levels. Kazakhstan contains uranium in phosphates and lignite coal, but
+===== page 53 (global table) =====
+activities continued in Namibia, Kazakhstan and Tanzania, raising non-domestic expenditures by
+Table 1.14. Non-domestic uranium exploration and development expenditures*
+===== page 54 (global table) =====
+do not report preliminary estimates:  notably Kazakhstan, Saudi Arabia and the United States,
+===== page 55 (global table) =====
+Table 1.15. Domestic (industry and government) uranium exploration
+Kazakhstan 685 280 37 252 18 779 13 367 9 767 9 489 14 286 18 406 NA
+===== page 57 (country report) =====
+URANIUM SUPPLY
+URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026 55
+Amongst the 24 countries with reported exploration and mine development expenditures for
+2023, 2024 and 2025 (preliminary estimate) , the total expenditures over the three- year period
+amounts to USD 2.7 billion. Nearly two-thirds of these expenditures were concentrated in just two
+countries, Canada (USD 1 093 million, or 40.5% of the total) and China (USD 687 million or 25.4%
+exploration. The next six countries in order of expenditures, India (USD 171 million, 6.3%),
+Uzbekistan (USD 168 million, 6.2%), the United States (USD 122 million, 4.5%, excluding 2025),
+Namibia (USD 121 million, 4.5%), Australia  (USD 117 million, 4.3%) and Russia (USD 98 million,
+3.6%), together accounted for another 29.5% of the total. As a result, just eight countries accounted
+for 95% of the total exploration and development expenditures over the three -year period.
+Another five countries reported expenditures greater than USD  10 million over this period :
+Kazakhstan (USD 33 million) and Saudi Arabia (USD 31 million), both excluding 2025, Argentina
+(USD 14 million), Zambia (USD 11 million, excluding 2025) and Jordan (USD 10 million). In total,
+these 13 countries make up 99% of the three- year reported exploration and development
+exceptions. For Niger, annual expenditures averaged close to USD 6 million from 2018 to 2022 but
+decreased to USD 2.1 million and 1.6 million for 2023 and 2024,  respectively, as the country’s
+political change in July 2023 has had a significant impact reducing activity in the uranium industry.
+In Ukraine, expenditures averaged USD 2 million from 2018 to 2021 but decreased more than ten-
+fold to an average of less than USD 0.2 million from 2022 to 2024 as the war in Ukraine continued.
+In the case of Türkiye, as shown in Table 1.15, expenditures appear to have generally decreased
+since 2019; however, this is due to the extreme devaluation of the Turkish lira (TRY) over this
+from TRY 50 million (USD 7.3 million) in 2020 to TRY 95 million (USD 2.9 million) in 2024.
+Reported expected global exploration and mine development expenditures for 2025 total
+USD 927 million, a 4% decrease compared to 2024; however, a modest increase is instead likely
+since expected 2025 expenditures were not reported for several key countries such as Kazakhstan,
+countries represented 13% (USD 120 million) of total global expenditures for 2024, it is reasonable
+to instead anticipate 2025 global expenditures between USD 1.0 and 1.1 billion.
+For the 2023 to 2025 period, of the countries that separately reported exploration and
+mine development than exploration expenditures (except , in 2023 Kazakhstan and Namibia
+Building on the table first introduced in the 2022 edition of the Red Book, Table 1.16
+total, 19 countries reported drilling information for this edition, and an additional 3 countries
+(Egypt, Mexico and Niger) are included in the table with information for 2022 and 2023, from the
+case of two countries (Uzbekistan and Zambia), 2022 data have been updated/corrected from what
+was reported in the previous (2024) edition. For the countries reporting data, total drilling
+increased by 21% from 2022 (3 893 668 m) to 2024 (4 716 179 m). A total of more than 3 436 000 m
+drilling is expected for 2025 among the limited number of only 11 countries that provided forecast
+data for 2025. For the countries reporting exploration and development drilling meterage
+separately, development drilling accounted for 64% of total drilling in 2022, 47% in 2023, and 54%
+in 2024, although this includes only 12 countries for 2022 and 2023, and 11 countries for 2024.
+2022 to 2024. The trend continues to be one of increasing drilling, although still down from 2012,
+when 17 countries drilled 5 368 268 m as reported in the 2016 edition of the Red Book.
+===== page 58 (country report) =====
+URANIUM SUPPLY
+56 URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026
+Table 1.16. Exploration and development drilling data for select countries
+(as of 1 January 2025, for 2022-2025, in metres)
+2022 2023 2024 2025 (expected)
+Argentina 6 880 0 6 880 3 171 0 3 171 4 960 0 4 960 10 895 0 10 895
+Brazil 0 0 0 0 0 0 0 0 0 0 0 0
+Canada 200 127 64 230 264 357 227 134 34 855 261 989 330 198 18 428 348 626 NA NA NA
+China*** 1 040 000 NA 1 040 000 1 150 000 NA 1 150 000 1 200 000 NA 1 200 000 1 200 000 NA 1 200 000
+Egypt*** 950 650 1 600 950 650 1 600 NA NA NA NA NA NA
+India 395 783 NA 395 783 264 767 NA 264 767 157 313 NA 157 313 205 900 NA 205 900
+Indonesia 600 0 600 0 0 0 0 0 0 0 0 0
+Kazakhstan 188 046 899 497 1 087 543 107 404 347 005 454 409 38 938 501 370 540 308 NA NA NA
+Mauritania(a,c) 5 000 NA 5 000 7 630 NA 7 630 7 633 NA 7 633 NA NA NA
+Mexico*** 0 0 0 NA NA NA NA NA NA NA NA NA
+Mongolia 40 662 0 40 662 0 0 0 0 0 0 NA NA NA
+Namibia*** 77 262 19 083 96 345 108 209 9 634 117 843 213 352 27 713 241 065 111 559 23 619 135 178
+Niger***(b) 6 500 NA 6 500 NA NA NA NA NA NA NA NA NA
+Paraguay(c) 0 0 0 0 0 0 0 0 0 0 0 0
+Russia 23 244 NA 23 244 9 657 NA 9 657 13 031 NA 13 031 31 804 NA 31 804
+Saudi Arabia(c) 38 687 0 38 687 20 242 0 20 242 20 241 0 20 241 NA NA NA
+Spain 0 0 0 0 0 0 0 0 0 0 0 0
+Türkiye*** 57 740 0 57 740 41 844 NA 41 844 29 968 NA 29 968 NA NA NA
+Ukraine 0 2 065 2 065 0 706 706 0 2 203 2 203 NA NA NA
+United States 46 000 117 000 163 000 156 000 170 000 326 000 187 000 384 000 571 000 NA NA NA
+Uzbekistan** 643 672 NA 643 672 1 060 468 NA 1 060 468 1 579 831 NA 1 579 831 1 849 050 NA 1 849 050
+Zambia** 19 990 0 19 990 15 835 0 15 835 0 0 0 3 500 0 3 500
+Totals 2 791 143 1 102 525 3 893 668 3 173 311 562 850 3 736 161 3 782 465 933 714 4 716 179 3 412 708 23 619 3 436 327
+* Country added to drilling data table for this Red Book 2026 edition. Data not previously provided.
+** 2022 information updated and changed from what was reported in Red Book 2024.
+*** 2022, and in some cases 2023 (preliminary), information from Red Book 2024.
+(a) Aura Energy's Tiris project drilling only. (b) 2022 drilling data – Global Atomic Corporation's (GAC) Dasa project and ENRG Elements' Takardeit
+In terms of exploration drilling metreage from 2022 to 2025, eight countries reported
+Saudi Arabia  and Zambia reported variable drilling distance. Excluding 2025 (as numerous
+countries did not report), the exploration drilling for the combined years of 2022 to 2024 totalled
+more than 9 746 000 m, and 99% of this was reported from the top ten drilling countries – China
+(3 390 000 m, 35%), Uzbekistan (3 283 971 m, 34%), India (817 863 m, 8%), Canada (757 459 m, 8%),
+Namibia (398 823 m, 4%), the United States (389 000 m, 4%), Kazakhstan (334 388 m, 3%), Türkiye
+(129 552 m, 1%), Saudi Arabia (79 170 m, 1%) and Russia (45 932 m, 0.5%).
+===== page 59 (global table) =====
+development drilling countries – Kazakhstan (1 747 872 m, 67%), the United States (671 000 m,
+===== page 64 (global table) =====
+resources in Canada, Gabon, Kazakhstan, Mongolia, Namibia, Niger and Uzbekistan. Total non-
+Kazakhstan and Niger, Orano is also involved in uranium mining operations. Since the July 2023
+===== page 65 (global table) =====
+uranium at joint ventures in Kazakhstan, exploration at the Wings deposit in Namibia and at the
+Mkuju River deposit in Tanzania. In Kazakhstan, five uranium mines jointly owned by Uranium
+===== page 72 (global table) =====
+expenditures were in India and 36% in Uzbekistan; however, Kazakhstan and Saudi Arabia also
+===== page 73 (global table) =====
+In Kazakhstan, exploration and development expenditures increased from a 15-year low of
+===== page 76 (country report) =====
+URANIUM SUPPLY
+74 URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026
+In total, 2 350 000 m drilling was completed between 2023 and 2024 (1 150 000 m in 2023 and
+1 200 000 m in 2024), resulting in a substantial increase of uranium resources in northern China
+Overall, this exploration resulted in a 79 800 tU (37 000 tU  RAR, 42 800 tU IR), or a 20% increase
+to in situ identified uranium resources, compared to the 2024 edition.
+Other than a single year (2020) of data being unavailable, China has consistently reported
+non-domestic exploration and development expenditures, since 2007. However, the 2023 to 2025
+reported at USD 1.1 million in 2023, USD 6.4 million in 2024 and USD  30.9 million expected for
+2025, whereas China General Nuclear Power Corporation (CGN) non -domestic expenditure
+Kazakhstan and Niger. CNNC is the largest shareholder in the Rössing uranium mine in Namibia
+External Field Reinforcement”, which started in 2024 and will continue through 2026,  and
+in 2026.
+in the range of USD 2.4 million to USD 2.9 million for 2022 to 2024, with USD 6.9 million expected
+for 2025. The Japan Organization for Metals and Energy Security (JOGMEC) continued exploration
+Kazakhstan.
+In Mongolia, after minimal activity from 2019 to 2021, 40 700 m of drilling was reported for
+2022, but no drilling was carried out in 2023 or 2024. Industry exploration expenditures rebounded
+from the 2019 to 2021 annual average of USD 100 000, to USD 4.2 million in 2022, USD 2.7 million
+in 2023 and USD 4.1 million in 2024. Estimates of expenditures or drilling were not available for
+2025.
+As outlined in the 2024 Red Book edition, four companies are engaged in uranium exploration,
+development activities during 2019 to 2020 at the Zuuvch Ovoo and Dulaan Uul deposits in
+Ovoo deposit to 93  300 tU and a technical report submitted to the Mongolian Professional
+Committee of Resources,  in February 2020.  After receipt of all required authorisations from
+government authorities, a pilot ISL test was started in 2021 and operated until December 2022,
+===== page 78 (global table) =====
+In 2024, 18 countries produced uranium, with the global total amounting to 61 924 tU. Kazakhstan
+Table 1.17 summarises major changes in uranium production and Table  1.18 shows
+===== page 79 (global table) =====
+Table 1.17. Uranium production in selected countries and reasons for major changes
+Kazakhstan 21 279 23 270 1 991 Restoration of uranium production due to favourable market conditions and ramp up at new Budenovskoye 6,7 mine launched in 2023.
+Table 1.18. Historical uranium production
+===== page 80 (global table) =====
+Table 1.18. Historical uranium production (cont’d)
+Kazakhstan 402 417 21 279 21 112 23 270 468 078 25 789
+===== page 81 (global table) =====
+Kazakhstan, 23 270, 38%
+Kazakhstan Canada Namibia Australia Uzbekistan
+===== page 82 (global table) =====
+example, shortages of key reagents or materials such as sulphuric acid in Kazakhstan, permitting
+increases in Kazakhstan; however, it remains the dominant North American producer, and
+===== page 88 (global table) =====
+principally by the world’s largest producer, Kazakhstan , which accounted for 37.6% of global
+Uranium production in Kazakhstan, was 21 112 tU in 2023 and 23 270 tU in 2024, an increase
+===== page 89 (country report) =====
+URANIUM SUPPLY
+URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026 87
+aggregated nominal capacity of the 15 uranium production centres in Kazakhstan was
+31 200 tU/yr. This marks a 6 000 tU/yr increase in total capacity, associated with Budenovskoye
+LLP starting commercial production in 2024 at areas 6 and 7 of the Budenovskoye deposit; however,
+a multiple year ramp-up will be required to reach its 6 000 tU/yr.
+With the largest share by far (38%) of the world’s lower-cost (<USD 80/kgU) resource base, with
+94% of those identified uranium resources associated with existing production centres, and with
+more than 30  000 tU/yr of existing approved production capacity, Kazakhstan is expected to
+remain the world’s largest producer for the near future. From 2018 to 2024, JSC NAC Kazatomprom
+flexed down all Kazakhstan production (initially by 20% and later by 10%) below subsoil use
+years where this has occurred, any shortfall is typically no more than 5% to 10% of aggregated
+estimated annual production at 50 tU/yr. Small -scale uranium mining is understood to be
+Uzbekistan uranium production amounted to 4 050 tU in 2023 and 5 200 tU in 2024, an
+increase of 46% from 2022, and account ed for 8.4% of global production as the country became
+the world’s fourth largest producer. From 2015 to 2022, Uzbekistan maintained annual
+production at 3 300 tU to 3 500 tU.  Since 1995, Uzbekistan has been producing uranium using
+In 2024, 22 uranium mines were in operation, and 3 more deposits are planned for development
+during 2025 to 2026.
+In January 2022, the Navoiy Mining and Metallurgy Combinat was split into three
+Zafarabad Mining Unit, the largest division of the three, operates 17 deposits. All mining units
+In July 2022, Uzbekistan’s President signed a resolution to increase the country’s uranium
+production from the 2021 output of 3 500 tU to 7 100 tU by 2030. Navoiyuran’s ability to reach this
+deposits that are being exhausted. From 2025 to 2030, Navoiyuran plans to modernise, re-equip
+China, the only producing country in East  Asia, reported production of 1 728 tU in 2023 and
+1 956 tU in 2024, accounting for over 3% of global production as the world’s seventh largest
+producer. After maintaining annual production between 1 500 tU and 1 650 tU for the decade
+from 2013 to 2022, production increased by 26% from 2022 to 2024, and China expects to increase
+production further to 2 160 tU in 2025.
+production capacity has increased. Th e ISL production centres in Yining and Tongliao have
+===== page 91 (country report) =====
+URANIUM SUPPLY
+URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026 89
+Table 1.19. Ownership of uranium production
+(as of 1 January 2025, based on 2024 production output)
+Australia(a) 0 0 2 842 61 0 0 1 814 39 4 656
+Brazil 85 100 0 0 0 0 0 0 85
+Canada 0 0 9 012 63 5 315 37 0 0 14 327
+China 1 956 100 0 0 0 0 0 0 1 956
+Czechia 17 100 0 0 0 0 0 0 17
+Hungary 3 100 0 0 0 0 0 0 3
+India* 485 100 0 0 0 0 0 0 485
+Iran, Islamic Rep of* 21 100 0 0 0 0 0 0 21
+Kazakhstan 12 286 53 0 0 8 371 36 2 613 11 23 270
+Namibia* 519 7 0 0 6 240 85 573 8 7 332
+Niger* 351 37 0 0 608 63 0 0 959
+Pakistan* 50 100 0 0 0 0 0 0 50
+Romania 0.7 100 0 0 0 0 0 0 0.7
+Russia 2 738 100 0 0 0 0 0 0 2 738
+South Africa* 0 0 235 100 0 0 0 0 235
+Ukraine 329 100 0 0 0 0 0 0 329
+United States(b) 0 0 260 100 0 0 0 0 260
+Uzbekistan 5 200 100 0 0 0 0 0 0 5 200
+Total 24 041 38.8 12 349 19.9 20 534 33.2 5 000 8.1 61 924
+companies         44 575 72.0%     61 924
+privately-owned entities             17 349 28.0%
+Table 1.19 provides insight to the structure of the uranium industry across different
+countries. In 11 of the 18 uranium producing countries, production is 100% by domestic ,
+uranium into world markets. At the other end of the spectrum, four of the 18 countries have no
+government) ownership. Three of the 18 countries have a mix of domestic government -owned
+production and non -domestic ownership – Kazakhstan, Namibia and Niger. In the case of
+===== page 92 (global table) =====
+production, and Russia , Australia, Uzbekistan, Namibia, Ukraine and Kazakhstan reported
+Table 1.20. Employment in existing uranium production centres (2018-2025)
+Kazakhstan(e) 20 801 20 684 21 186 20 825 20 558 21 392 22 066 22 100*
+===== page 93 (global table) =====
+Table 1.21 shows employment directly related to uranium production (excluding head office,
+reported by Uzbekistan, Kazakhstan, Ukraine, Canada, the United States, Australia, Namibia
+Table 1.21. Employment directly related to uranium production
+Kazakhstan 6 934 21 279 7 484 21 112 7 820 23 270 3.0
+===== page 94 (global table) =====
+Table 1.22. The category “other methods” includes recovery of uranium from water treatment
+growth of this low-cost method of production in Kazakhstan, and to a lesser extent in Australia,
+Table 1.22. World uranium production by production method (2022-2025)
+===== page 95 (global table) =====
+Table 1.23. World uranium production capability to 2050
+Kazakhstan^ 26 000 29 000 14 000 23 000 9 000 14 000 7 000 12 000 4 000 10 000
+table reported by country. *** Secretariat estimate for 2040 to 2050, as values for those years were NA in table reported by country.  ^ Secretariat
+through 2045, and Kazakhstan and Russia reported through 2040, whereas Malawi and Mongolia
+===== page 96 (global table) =====
+in Kazakhstan. There are three projects in progress that have already been underway for the past
+Table 1.24. Recent committed mines and expansions
+===== page 101 (global table) =====
+important exception is Kazakhstan, where about 58% of identified uranium resources are reported
+in global supplier countries (Australia, Canada, Kazakhstan, Namibia, South Africa  and
+===== page 121 (country report) =====
+URANIUM DEMAND AND ADEQUACY BETWEEN SUPPLY AND DEMAND
+URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026 119
+As of 1 January 2025,  the Islamic Republic of Iran  had one operational 915 MW reactor
+(Bushehr-1). Supplied by Atomstroyexport, it provided 1.68% of domestic electricity production in
+2024. A second reactor, Bushehr-2, also of Russian design, has been under construction since 2019
+and is expected to start commercial operation around 2029. Initial construction work on the IR-
+360 unit at the Darkhowin/Darkhovain site , as well as on 5 GWe Iran -Hormoz plant , was
+announced in 2022 and 2024, respectively. In an effort to decrease the country’s reliance on fossil
+20 GWe of nuclear power capacity by 2040.
+In Pakistan, six nuclear reactors (with 3.26 GWe net capacity) were operational as of 1 January
+2025, supplying about 16.7% of domestic electricity production in 2024. Kanupp units 2 and 3, at
+Karachi were connected to the grid in March 2021 and March 2022. Chashma- 5 (based on the
+Chinese Hualong One design) began construction in late 2024 and will add an additional 1.1 GWe
+In the United Arab Emirates, four nuclear reactors provided 5.3 GWe of capacity, making up
+21.7% of the UAE’s electricity needs as of the end of 2024. In 2009, the Emirates Nuclear Energy
+UAE’s first nuclear reactors, four APR1400 reactors. All four units were built at the Barakah Nuclear
+Energy Plant and were connected to the grid between 2020-2024. The UAE is looking into options
+for further deploying nuclear energy. In November 2024, the ENEC and Abu Dhabi National Oil
+Kazakhstan continues to be the world’s largest uranium producer but currently has no active
+with Russia in May 2014 regarding the construction of a new nuclear power plant. In August 2023,
+for the location of a nuclear power plant. In October 2024, a referendum was held in Kazakhstan,
+In June 2025, Russia’s Rosato m was selected to lead an international consortium to build
+Kazakhstan’s first planned nuclear power plant. China is expected to play a leading role in the
+two 1.4 GWe PWR nuclear units and then expand their nuclear fleet to 17 GWe, by 2040.
+introduce nuclear energy. A national electricity development strategy,  prepared in 2020 with
+international support, aims to substantially expand installed power generation capacity by 2030,
+including the introduction of nuclear power , with planned capacity of around 2.4  GWe.
+Uzbekistan’s energy strategy aims for nuclear energy to supply around 15% of domestic electricity
+generation once the planned reactors are operational. In 2018, the Uzbek Agency for the
+Rosatom to build Uzbekistan’s two first VVER-1200 PWRs. In addition, in May 2024, Uzbekistan
+of 330 MW.  In September 2024, a protocol was signed signifying the start of works at the
+===== page 126 (global table) =====
+Table 2.3. Installed nuclear generating capacity to 2050*
+plan and several potential newcomer countries (Kazakhstan, Saudi Arabia and Uzbekistan). In the
+Table 2.4).
+===== page 129 (country report) =====
+URANIUM DEMAND AND ADEQUACY BETWEEN SUPPLY AND DEMAND
+URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026 127
+Figure 2.4. Uranium production and reactor-related requirements
+(2024 data)
+Kazakhstan remained the world’s largest producer of uranium, being responsible for around
+38% of world uranium production in 2024. The top six producing countries in 2024 (Kazakhstan,
+around 93% of world production, and  over 99% of world uranium production took place in the
+top 10 uranium producing countries (the above named six countries and China, Niger, India and
+gap has started to narrow. In 2024, world uranium production (61 924 tU) rep resented around
+96% of 2024 world reactor requirements (64 584 tU), a 9% increase compared to 2022 values.
+past years; however, production remains insufficient to meet demand. In 2024, OECD M ember
+countries’ production of 19 263 tU provided only around 44% of their requirements (43 361 tU),
+which is 14% more , compared to 2022 values. Remaining reactor requirements were met by
+0.4%
+3%
+4%
+0.4%
+0.5%
+1%
+2%
+8%
+8%
+12%
+23%
+38%
+33%
+16%
+11%
+6%
+6%
+3%
+2%
+2%
+1%
+1%
+1%
+1%
+0.5%
+2%
+3%
+2%
+Kazakhstan
+Production, tU/yrRequirements, tU/yr
+25 000 25 00015 000 15 0005 000 5 0000
+===== page 131 (global table) =====
+from Kazakhstan, but also from Russia and Uzbekistan. Despite these developments and more
+===== page 134 (global table) =====
+disrupted and cannot be restored by commercial means. In August 2015, Kazakhstan signed an
+===== page 139 (global table) =====
+Kazakhstan’s supply disruptions due to shortages of s ulfuric acid; and a conflict -related
+===== page 164 (global table) =====
+Czechia, Canada, Kazakhstan, Namibia).
+===== page 237 (global table) =====
+Kazakhstan and Niger. CNNC is the largest stakeholder in the Rössing uranium mine in Namibia
+===== page 238 (global table) =====
+equity stakes in the Semizbay, Irkol, Central Mynkuduk and Zhalpak mines in Kazakhstan.
+In Kazakhstan the CGN owns a 49% stake in the Semizbay -U LLP, with Semizbay and Irkol
+===== page 263 (global table) =====
+TVO comes from Kazakhstan, Canada and Australia, and the nuclear fuel assemblies ordered
+===== page 267 (country report) =====
+NATIONAL REPORTS: FRANCE
+URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026 265
+Uranium exploration began in 1946, focussing on previously discovered deposits and a few
+occurrences discovered during radium exploration. In 1948, this exploration led to the discovery
+of the La  Crouzille deposit, which at one time was of major importance. By 1955, additional
+No domestic activities have been carried out in France since 1999.
+Kazakhstan and Niger, Orano is also involved in uranium mining operations. In addition, as a non-
+Since the coup in Niger in July 2023, Orano has been subject to increasing interference by the
+Orano’s operational control over its Nigerien subsidiaries as of December 2024.
+Identified conventional resources (reasonably assured and inferred resources)
+===== page 272 (global table) =====
+0 0 0 0 1 218 51 0 0 1 218 51 Kazakhstan
+===== page 305 (global table) =====
+in Canada and Kazakhstan.
+===== page 317 (country report) =====
+NATIONAL REPORTS: KAZAKHSTAN
+URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026 315
+Kazakhstan
+Since the beginning of uranium exploration in 1944 in Kazakhstan, about 60  uranium deposits
+Caspian, Balkhash and Ili. By the late 1970s, unique large deposits suitable for uranium mining
+In 2021-2024, exploration was carried out at the Budenovskoye, Inkai, Northern Kharasan and
+JSC NAC Kazatomprom has been conducting exploration at sites No. 2 and No. 3 of the Inkai
+deposit since 2018. Exploration work continues at site No. 2, and pilot industrial uranium mining
+was planned to start at site No. 3 in 2025. Re- evaluation of uranium resources at the Western
+site of the Mynkuduk deposit was completed by APPAK LLC in 2023. In 2023, JV Turanium LLP
+In 2023, JV Katco LLC  completed an analysis of the depletion of uranium reserves at site
+No. 1 of the Moinkum deposit, based on the results of which a revaluation of uranium reserves
+The 2021-2024 exploration resulted in resource additions of 77 345 tU, including: 3 890 tU at
+sites No. 6 and No. 7 of the Budenovskoye deposit, 4 034 tU at the Western site of the Mynkuduk
+deposit, 48 704 tU at site No.2 of the Budenovskoye deposit, 9 506 tU at site No.1 of the Moinkum
+deposit and 11 211 tU at site No. 1 of the Northern Kharasan deposit.
+In 2024, licen ces for uranium exploration were issued to Kazatomprom for the following
+Budenovskoye North, Budenovskoye #5-1 and #5-3.
+Identified conventional resources (reasonably assured and inferred resources)
+As of 1  January 2025, identified in situ uranium resources available at a cost of <USD  260/kgU
+amounted to 1  004 696 tU, including 836 076 tU of resources amenable to ISL recovery. Total
+to 886 934 tU, including 744 107 tU amenable to ISL mining.
+===== page 318 (country report) =====
+NATIONAL REPORTS: KAZAKHSTAN
+316 URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026
+Compared to the previous report, total identified in situ resources increased by 15  201 tU. This
+Mynkuduk, Moinkum and Kharasan deposits, and resources depletion from mining in 2023 and
+2024.
+In Kazakhstan, 95% of identified uranium resources in the cost category <USD  40/kgU,
+94% in the cost category <USD 80/kgU and 84% in the cost category <USD 130/kgU  have been
+contracted or licensed as of 01 January 2025.
+Prognosticated and speculative resources (P1+P2+P3)
+Production capability, and recent and ongoing activities
+In 2023, uranium production amounted to 21  112 tU. In 2024, it increased by 10% and reached
+23 270 tU. Uranium was produced at the Kanzhugan, Moinkum, Akdala, Mynkuduk, Inkai,
+with further uranyl salts precipitation, refining and final production of U3O8 concentrates.
+The development of the East Mynkuduk, Kanzhugan, and Moinkum fields (site No. 3) is carried
+deposit, site No. 1 (Northern) and site No. 2 (Tortkuduk). JV Inkai LLP operates the Inkai deposit
+site No. 1. In 2018, JSC NAC Kazatomprom obtained exploration contracts for areas No. 2 and
+No. 3 of the Inkai deposit. Appak  LLP develops the Western site of the Mynkuduk deposit. JV
+Akbastau JSC operates deposit Budenovskoye (sites No. 1, No. 3 and No. 4), Karatau LLP develops
+site No. 2 of the Budenovskoye deposit and performs processing of solutions extracted from the
+sites No. 1 and No.  3 of the Budenovskoye deposit. JV South Mining Chemical Company LLP
+(SMCC) operates the Akdala and Inkai (site No.  4) deposits. JV Budenovskoye LLP operates the
+Budenovskoye deposit (sites No. 6-7).
+JSC NAC Kazatomprom, through the Mining Group -6 LLP, operates the North and South
+carries out uranium production at the Northern Kharasan (site Kharasan -2) deposit. JV
+===== page 319 (global table) =====
+Northern Kazakhstan uranium province
+===== page 320 (country report) =====
+NATIONAL REPORTS: KAZAKHSTAN
+318 URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026
+(as of 1 January 2025)
+Centre # 9 Centre #10 Centre #11 Centre # 12 Centre # 13 Centre # 14 Centre # 15
+Production centre
+production (year) 2007 2008 2008 2009 2009 2007 2024
+(site 1)
+(site 2)
+(sites 1, 3, 4)
+(sites 6, 7)
+Resources in situ (tU) 31 549 17 604 41 779 13 127 31 969 7 412 113 339
+Grade (% U) 0.047 0.027 0.204 0.117 0.089 0.050 0.072
+recovery (%) 90 90 90 90 90 87 NA
+Size (kilolitre/day) 70 000 60 000 50 000 60 000 20 000 85 000 NA
+recovery (%) 98.5 98.9 98.5 98.5 98.9 98.6 NA
+capacity (tU/year) 2 000 1 000 1 400 2 000 600 1 200 6 000
+In 2024, the JSC NAC Kazatomprom share of uranium production in Kazakhstan was 5 3%
+(12 286 tU). Sixty -three per  cent of JSC NAC Kazatomprom is owned by the state -owned
+company, Samruk-Kazyna JSC national wealth fund, 12% belongs to the Ministry of Finance of
+the Republic of Kazakhstan and 25% of shares are traded at the London Stock Exchange. The
+production share of private, foreign companies in Kazakhstan amounted to 10%, while the share
+of foreign state-owned companies in Kazakhstan amounted to 37% of total production.
+In 2024, JSC NAC Kazatomprom had shares in joint ventures with private companies from
+===== page 321 (country report) =====
+NATIONAL REPORTS: KAZAKHSTAN
+URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026 319
+abroad. To date, there are 32 universities in specialised areas (for details see Kazakhstan country
+report in the Red Book 2022).
+In 2023, the social project of educational grants “Murager ” was launched, aimed at
+Kazatomprom have been developed and implemented in 14 profile areas of activity.
+use, the annual mandatory costs for training and retraining of personnel amounts to 1% of the
+annual costs of exploration and 1% of the annual costs of operation, during uranium mining.
+Total employment in existing production centres amounted to 21 392 persons in 2023 and
+22 066 in 2024, an approximate 7% increase from 2022 (20 558 persons). About 35% of employment
+Since 2019, exploration has been conducted by NAC Kazatomprom at sections 2 and 3 of the
+Kazatomprom in 2024, and then transferred to its 100% subsidiary Kazatomprom -SaUran LLP.
+===== page 322 (country report) =====
+NATIONAL REPORTS: KAZAKHSTAN
+320 URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026
+Production and/or use of mixed oxide fuels
+Production and/or use of re-enriched tails
+Kazakhstan. Contributions to the reclamation fund during the exploration and extraction of
+subsurface users are produced annually at a rate of at least 1% of the annual cost of exploration
+In 2024, over 3.7 billion tenge (USD 8 million) was allocated for social and charitable
+Investments in external social projects in 2024 were made in the following areas:
+• Infrastructure development – more than 390 million tenge (USD 850 000);
+• Support in emergency situations – 3 billion tenge (USD 6.5 million);
+• Charitable initiatives – more than 340 million tenge (USD 740 000).
+Development of social infrastructure remains one of the key areas. In 2024, more than
+390 million tenge (USD  850 000) were allocated for these purposes. Investments covered the
+===== page 323 (country report) =====
+NATIONAL REPORTS: KAZAKHSTAN
+URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026 321
+of 2024, Kazatomprom provided support to the victims in the shortest possible time. The total
+amount of emergency assistance amounted to 3 billion tenge (USD 6.5 million), which was the
+As part of the recovery efforts, Kazatomprom sent about 120 units of special equipment, which
+In 2024, more than 340 million tenge (USD 740 000) were allocated for charity projects. These
+During 2024, within the terms of the contracts for subsoil use, the Company ’s uranium
+mining enterprises transferred 3.9 billion tenge (USD 8.5 million) to regional budgets.
+Expenditures on environmental activities and social-cultural issues in 2024
+Improving technological processes, including reduction of fugitive emissions into the environment. 349
+Improving the efficiency of existing dust and gas collection and water treatment plants. 7
+Carrying out research activities in the field of environmental protection. 424
+Implementing environmental monitoring. 310
+===== page 324 (global table) =====
+In January 2017, due to the prolonged downturn in the uranium market, Kazakhstan’s national
+atomic company, JSC NAC Kazatomprom, reduced Kazakhstan’s uranium production by
+===== page 412 (global table) =====
+Rosatom, Russia continued exploration for uranium in joint ventures in Kazakhstan,
+In Kazakhstan, all five uranium mines jointly owned by the Uranium One Group are in
+===== page 415 (country report) =====
+NATIONAL REPORTS: RUSSIA
+URANIUM 2026: RESOURCES, PRODUCTION AND DEMAND, NEA No. 7770, © OECD 2026 413
+(as of 1 January 2023)
+Centre #1 Centre #2 Centre #3 Centre #4
+Production centre classification Existing Existing Existing Prospective
+Date of first production 1968 2004 2010 After 2035
+Recoverable resources (tU) 71 800 7 900 21 600 303 000
+Grade (% U) 0.16 0.04 0.05 0.15
+Size (tonnes ore/day) 3 300 NA NA 5 500
+Average mining recovery (%) 95 75 75 85
+Size (tonnes ore/day) 4 700 No data No data No data
+Average process recovery (%) 95 98 98 95
+Nominal production capacity (tU/year) 1 200 600 1 300 5 000
+Plans for expansion Mine #6 Dobrovolnoye dep. Yes No
+Since 2017, the development of deposits in the Elkon uranium ore region  has been suspended
+ore region will be considered after 2035.
+In 2024, the number of employees working in the uranium industry amounted to 7 106, of which
+5 917 were Priargunsky (PIMCU) employees, 491 were Dalur employees and 698 were Khiagda
+production amounted to 3 570.
+As of 1 January 2025, there were 10 nuclear power plants in Russia, comprised of 34 units, plus
+one floating nuclear power plant, with a total installed capacity of 28.6 GWe. During 2024,
+Russian nuclear power plants generated 215.5 TWhr of electricity, which amounted to 18.2% of
+the electricity produced in the country. In late January 2024, Unit #2 of Kurskaya Nuclear Power
+equivalent of about 4 000 tU. Uranium fuel requirements are supplied by uranium produced in
+Kazakhstan and Russia, from uranium stockpiles and secondary sources.
+===== page 416 (global table) =====
+* Expenditures in Kazakhstan accounted proportionally to Russian shares in JVs with NAC Kazatomprom.
+===== page 422 (global table) =====
+largely through in-situ leach (ISL) mining (Australia, China, Kazakhstan, Niger and the United
+Arabia similar to sandstone-type deposits in Kazakhstan;
+===== page 500 (global table) =====
+of foreign origin. Canada was the top source, at 38% of total deliveries, followed by Kazakhstan
+===== page 531 (global table) =====
+Kazakhstan National Atomic Company Kazatomprom JSC NAC, 17/12, Syganak Street, Z05T1X3
+===== page 537 (global table) =====
+Kazakhstan Ms Aliya Akzholova  National Atomic Company “Kazatomprom”
+===== page 542 (global table) =====
+Russia, Kazakhstan,
+===== page 549 (global table) =====
+(Kazakhstan); Crow  Butte and Smith Ranch (United States) and Bukinay, Sugraly and
+===== page 551 (global table) =====
+fish remains that are uraniferous (Melovoye, Kazakhstan). Deposits in continental
+and South Dakota (U nited States), Koldjat and Nizhne Iliyskoe (Kazakhstan), Freital
+===== page 562 (global table) =====
+Kazakhstan               1994
+===== page 563 (global table) =====
+1996 1998 2000 2002 2004 2006 2008 2010 2012 2014 2016 2018 2020 2022 2024 2026 Kazakhstan
