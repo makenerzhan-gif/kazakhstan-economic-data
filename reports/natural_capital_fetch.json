@@ -1,0 +1,178 @@
+{
+ "started_utc": "2026-11-06T20:02:28.855613+00:00",
+ "bns": {
+  "listings": [
+   {
+    "url": "https://stat.gov.kz/ru/industries/environment/stat-speu/publications/",
+    "ok": true,
+    "new_ids": 0,
+    "bytes": 50256
+   },
+   {
+    "url": "https://stat.gov.kz/ru/industries/environment/stat-speu/spreadsheets/",
+    "ok": true,
+    "new_ids": 6,
+    "bytes": 56802
+   },
+   {
+    "url": "https://stat.gov.kz/ru/industries/environment/stat-speu/spreadsheets/?PAGEN_1=2",
+    "ok": true,
+    "new_ids": 0,
+    "bytes": 56832
+   },
+   {
+    "url": "https://stat.gov.kz/ru/industries/environment/stat-speu/",
+    "ok": true,
+    "new_ids": 6,
+    "bytes": 55909
+   },
+   {
+    "url": "https://stat.gov.kz/ru/industries/environment/stat-speu/?PAGEN_1=2",
+    "ok": true,
+    "new_ids": 0,
+    "bytes": 55929
+   },
+   {
+    "url": "https://stat.gov.kz/en/industries/environment/stat-speu/publications/",
+    "ok": true,
+    "new_ids": 0,
+    "bytes": 48347
+   }
+  ],
+  "ids_found": {
+   "517583": "",
+   "513233": "",
+   "509474": "",
+   "479809": "",
+   "479808": "",
+   "479807": "",
+   "478741": "",
+   "478740": "",
+   "478739": "",
+   "478737": "",
+   "478736": "",
+   "478735": "",
+   "504418": "(seed)",
+   "509558": "(seed)",
+   "509550": "(seed)",
+   "479470": "(seed)"
+  },
+  "targets": {
+   "504418": "(seed) | Счет минеральных и энергетических ресурсов Республики Казахстан (На конец 2024 года)",
+   "478736": "(file linked from 504418)",
+   "479809": "(file linked from 504418)",
+   "509558": "(seed) | Отрасли - Бюро национальной статистики Агентства по стратегическому планированию и реформам Республики Казахстан",
+   "509550": "(seed) | Отрасли - Бюро национальной статистики Агентства по стратегическому планированию и реформам Республики Казахстан",
+   "479470": "(seed) | Счет экологических налогов (2024)",
+   "8531": "(file linked from 479470)",
+   "358461": "(file linked from 479470)"
+  },
+  "files": [
+   {
+    "element_id": "358461",
+    "lang": "ru",
+    "title": "(file linked from 479470)",
+    "file": "bns_seea_358461_ru.xlsx",
+    "bytes": 90158,
+    "sha256": "b1886a4606e565b95d0dc50639779edc285e53796ac75c4d0606e797d4566836"
+   },
+   {
+    "element_id": "478736",
+    "lang": "ru",
+    "title": "(file linked from 504418)",
+    "file": "bns_seea_478736_ru.xlsx",
+    "bytes": 32669,
+    "sha256": "a5c33c9e0457e201635a411acb4e81d4278d9ee12aa63e33d12e6374a595f5ef"
+   },
+   {
+    "element_id": "479470",
+    "lang": "ru",
+    "title": "(seed) | Счет экологических налогов (2024)",
+    "file": "bns_seea_479470_ru.pdf",
+    "bytes": 430501,
+    "sha256": "8b8cad4e9088e7aeed37b001689c16a17acb183a6f8cf76298493308f8c164ff",
+    "pages": 3,
+    "first_page": "Счет экологических налогов Дата опубликования: 25.12.2025 Дата следующего опубликования: 25.12.2026 1. Ключевые моменты 2. Структура экологических налогов 3. Доля экологических налогов 4. Глоссарий 5. Методологические пояснения 6. Ссылки на связанные публикации 7. Полезные ссылки 1. Ключевые моменты"
+   },
+   {
+    "element_id": "479809",
+    "lang": "ru",
+    "title": "(file linked from 504418)",
+    "file": "bns_seea_479809_ru.xlsx",
+    "bytes": 90158,
+    "sha256": "b1886a4606e565b95d0dc50639779edc285e53796ac75c4d0606e797d4566836"
+   },
+   {
+    "element_id": "504418",
+    "lang": "ru",
+    "title": "(seed) | Счет минеральных и энергетических ресурсов Республики Казахстан (На конец 2024 года)",
+    "file": "bns_seea_504418_ru.pdf",
+    "bytes": 701372,
+    "sha256": "6f0719024437f7efc555b72ad2a1535578c5fdd568eb2b9f4850ccfd59ef6cfa",
+    "pages": 3,
+    "first_page": "Счет минеральных и энергетических ресурсов Республики Казахстан Дата опубликования: Дата следующего опубликования: 1. Ключевые моменты 2. Основные результаты 3. Глоссарий 4. Методологические пояснения 5. Ссылки на связанные публикации 6. Полезные ссылки 1. Ключевые моменты 28 718,5 млн . тонн запасы"
+   },
+   {
+    "element_id": "509550",
+    "lang": "ru",
+    "title": "(seed) | Отрасли - Бюро национальной статистики Агентства по стратегическому планированию и реформам Республики Казахстан",
+    "file": "bns_seea_509550_ru.pdf",
+    "bytes": 215018,
+    "sha256": "254f784afe74f603ab3c9d5d99e76bbe1152acc6372321d752b4fefc783ce075",
+    "pages": 3,
+    "first_page": "Қазақстан Республикасының минералдық және энергетикалық ресурстарының шоты Жарияланған күні: 22.01.2026 Келесі жарияланым күні: 18.06.2026 1. Түйінді тұстар 2. Негізгі нәтижелер 3. Динамикалық кестелер 4. Глоссарий 5. Әдіснамалық түсіндірмелер 6. Қатысты жарияланымдарға сілтемелер 7. Пайдалы сілтеме"
+   },
+   {
+    "element_id": "509558",
+    "lang": "ru",
+    "title": "(seed) | Отрасли - Бюро национальной статистики Агентства по стратегическому планированию и реформам Республики Казахстан",
+    "file": "bns_seea_509558_ru.pdf",
+    "bytes": 163349,
+    "sha256": "372504bde59aa95e8529f5334d089770fa64f83acc4dd855e9e992c5a93e30b7",
+    "pages": 3,
+    "first_page": "Mineral and Energy Resource Accounts of the Republic of Kazakhstan Publication date: 22.01.2026 Next publication date: 18.06.2026 1. Key indicators 2. Main Results 3. Glossary 4. Methodological Notes 5. References to Related Publications 6. Useful Links 1. Key indicators 28 718,5 million tonnes Coal"
+   },
+   {
+    "element_id": "8531",
+    "lang": "ru",
+    "title": "(file linked from 479470)",
+    "file": "bns_seea_8531_ru.xlsx",
+    "bytes": 39964,
+    "sha256": "51218f603556a08b5eba5113faed93c3d2d0a72b0e0ffc548243def6e6a0af25"
+   }
+  ]
+ },
+ "nea": {
+  "pages": [
+   {
+    "url": "https://www.oecd-nea.org/jcms/pl_121658/uranium-2026-resources-production-and-demand",
+    "ok": false
+   },
+   {
+    "url": "https://www.oecd-nea.org/jcms/pl_121582/adequate-uranium-resources-available-but-sustained-investment-essential-to-support-global-nuclear-capacity-growth",
+    "ok": false
+   },
+   {
+    "url": "https://www.iaea.org/newscenter/pressreleases/adequate-uranium-resources-available-but-sustained-investment-essential-to-support-global-nuclear-capacity-growth",
+    "ok": false
+   }
+  ],
+  "pdf_candidates": [],
+  "error": "no Red Book PDF found among candidates"
+ },
+ "http_errors": [
+  {
+   "url": "https://www.oecd-nea.org/jcms/pl_121658/uranium-2026-resources-production-and-demand",
+   "status": 403
+  },
+  {
+   "url": "https://www.oecd-nea.org/jcms/pl_121582/adequate-uranium-resources-available-but-sustained-investment-essential-to-support-global-nuclear-capacity-growth",
+   "status": 403
+  },
+  {
+   "url": "https://www.iaea.org/newscenter/pressreleases/adequate-uranium-resources-available-but-sustained-investment-essential-to-support-global-nuclear-capacity-growth",
+   "status": 403
+  }
+ ],
+ "finished_utc": "2026-11-06T20:02:59.803797+00:00"
+}
