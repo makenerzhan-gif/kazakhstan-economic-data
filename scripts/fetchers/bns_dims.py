@@ -148,8 +148,9 @@ def ytd_of(label) -> int | None:
 
 
 # A bare year cell of a header row: 2010, "2010", "2010 год", "2024г.", "2025 3)" or "20253)"
-# (a footnote mark glued to the year), never a data cell such as "2146592.05".
-YEAR_CELL = re.compile(r"^\s*(\d{4})(?:\.0)?\s*(?:год|г\.?)?\s*(?:\d\))*\s*$")
+# (a footnote mark glued to the year), "2025*" (preliminary, element 283161 from 04.11.2026),
+# never a data cell such as "2146592.05".
+YEAR_CELL = re.compile(r"^\s*(\d{4})(?:\.0)?\s*(?:год|г\.?)?\s*(?:\d\)|\*)*\s*$")
 
 MONTH_STEMS = (("январ", 1), ("феврал", 2), ("март", 3), ("апрел", 4), ("ма[йя]", 5), ("июн", 6), ("июл", 7), ("август", 8),
                ("сентябр", 9), ("октябр", 10), ("ноябр", 11), ("декабр", 12))
@@ -566,6 +567,10 @@ def year_period_columns(grid: list[list], ds: dict, kind: str) -> tuple[int, dic
     if header_i is None:
         _structural(ds, "no year row followed by a row of period labels", f"years across, {expected} under each", grid[:6])
     years, subs = _annual_columns(grid[header_i], YEAR_CELL), grid[header_i + 1]
+    missing = sorted(set(range(min(years), max(years) + 1)) - set(years))
+    if missing:   # an unreadable year cell («2025*» before 04.11.2026) dropped its quarters silently
+        _structural(ds, f"no readable year cell for {missing} between {min(years)} and {max(years)}",
+                    "one year cell per year, consecutive", [c for c in grid[header_i] if c not in (None, "")][-6:])
     cols: dict = {}
     last_year = max(years)
     for y, c in years.items():

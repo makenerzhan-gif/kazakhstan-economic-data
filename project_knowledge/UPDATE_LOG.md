@@ -644,3 +644,21 @@ so the 13.8 % was most likely a deflation error, and the withdrawal is consisten
 QNA quarters and table 4439's. Registered as source issue qna_production_2026_withdrawn (caveat); the
 GVA_VOLUME_INDEX_BY_SECTION_DISCRETE note now states the QNA's status. No data or model_data change: the
 expenditure QNA has no Q2 to add. The check is re-armed.
+
+## 2026-11-06 — quarterly national accounts for 2026 Q2 (expenditure, published 04.11.2026); «2025*» parse fix (scheduled check from «Сделай все три пункта», point 3)
+
+BNS published element 283161 (GDP by expenditure, SA) with 2026 Q2 on 04.11.2026, a week after the 28.10 date.
+The new file heads 2025 «2025*» (preliminary); YEAR_CELL did not read the asterisk, so the daily run of
+2026-11-04 silently dropped all four 2025 quarters from the five non-SA QNA_GDP_EXPENDITURE* tables (2024 Q4 ->
+2026 Q1, logged only as 457-day gap warnings). YEAR_CELL now accepts trailing asterisks, and
+bns_dims.year_period_columns raises when the year cells are not consecutive, so an unreadable year can no longer
+vanish (tests/test_qna.py, both fail without the fix). Reloaded: 66 quarters 2010 Q1 - 2026 Q2 again.
+
+GDP, % of the same quarter a year earlier (QNA vs table 4439/4440 basis, GVA_VOLUME_INDEX_BY_SECTION_DISCRETE):
+Q1 2026 101.4 (revised from 104.1) vs 103.0; Q2 108.2 vs 105.2; H1 105.1 vs 104.1. Seasonally adjusted, 2010
+prices: Q1 -1.2 % q/q, Q2 +6.5 %. Nominal Q2 +17.0 %, implied Q2 deflator 108.2 % (CPI 110.4 %). The QNA moves
+growth from Q1 into Q2 against the operational tables; over the half-year they differ by 1 pp. Q2 by component:
+final consumption 99.9 (households 100.1), gross fixed capital formation 103.9, exports 106.0, imports 95.4 --
+the quarter's growth is net exports. The production QNA (283162) still ends at 2025 Q4
+(qna_production_2026_withdrawn stays). model_data rebuilt (first time since 2026-09-28): gdp/gdp_sa through
+2026 Q2.
