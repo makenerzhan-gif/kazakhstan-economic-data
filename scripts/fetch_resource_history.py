@@ -115,6 +115,20 @@ def energy_institute() -> None:
             break
 
 
+def owid_energy() -> None:
+    """Our World in Data energy dataset (GitHub): Energy Institute series in TWh, 1985- for Kazakhstan.
+    Used because energyinst.org refuses automated downloads (403)."""
+    log = LOG.setdefault("owid", {})
+    r = get("https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv", timeout=300)
+    if r is None:
+        return
+    rd = csv.reader(io.StringIO(r.content.decode("utf-8-sig", "replace")))
+    header = next(rd)
+    rows = [row for row in rd if row and row[0] == "Kazakhstan"]
+    keep = [i for i in range(len(header)) if any(i < len(x) and x[i].strip() for x in rows)]
+    log["rows"] = write_csv("owid_energy_kazakhstan.csv", [header[i] for i in keep], [[x[i] for i in keep] for x in rows])
+
+
 # ------------------------------------------------------------------ EIA bulk
 def eia() -> None:
     log = LOG.setdefault("eia", {})
@@ -233,9 +247,9 @@ def usgs_myb() -> None:
     d = OUT / "usgs_myb"
     d.mkdir(parents=True, exist_ok=True)
     found = {}
-    for y in range(1994, 2025):
+    for y in range(1994, 2016):
         yy = str(y)
-        names = [f"myb3-{yy}-kazakhstan.xlsx", f"myb3-{yy}-kazakhstan.xls", f"myb3-{yy}-kaz.xls", f"myb3-{yy}-kaz.xlsx",
+        names = [f"myb3-{yy}-kz.xlsx", f"myb3-{yy}-kz.xls", f"myb3-{yy}-kazak.xls", f"myb3-{yy}-kazakhstan.xlsx", f"myb3-{yy}-kazakhstan.xls", f"myb3-{yy}-kaz.xls", f"myb3-{yy}-kaz.xlsx",
                  f"myb3-{y - 1}-{str(y)[2:]}-kazakhstan.xlsx", f"myb3-{yy}-{str(y + 1)[2:]}-kazakhstan.xlsx"]
         for vol in (f"vol3/{yy}", f"vol3/{y - 1}-{str(y)[2:]}", f"vol3/{yy}-{str(y + 1)[2:]}"):
             for n in names:
@@ -263,7 +277,10 @@ def bgs() -> None:
 
 
 def main() -> int:
-    for part in (energy_institute, eia, world_bank, comtrade, usgs_myb, bgs):
+    only = set(sys.argv[1:])
+    for part in (energy_institute, owid_energy, eia, world_bank, comtrade, usgs_myb, bgs):
+        if only and part.__name__ not in only:
+            continue
         try:
             part()
         except Exception as exc:  # noqa: BLE001

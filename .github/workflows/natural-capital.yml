@@ -3,7 +3,12 @@ name: Natural capital sources (BNS SEEA asset accounts, Red Book 2026)
 # On-demand fetch, separate from the daily pipeline (update.yml) so it runs in minutes,
 # not hours. Triggered manually or by a push touching the fetcher itself.
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      parts:
+        description: 'fetch_resource_history parts to run (space-separated; empty = all)'
+        required: false
+        default: ''
   push:
     paths:
       - scripts/fetch_natural_capital.py
@@ -38,7 +43,7 @@ jobs:
         if: always()
         env:
           PYTHONUNBUFFERED: "1"
-        run: python scripts/fetch_resource_history.py
+        run: python scripts/fetch_resource_history.py ${{ github.event.inputs.parts }}
 
       - name: Keep the Red Book PDF and raw files as an artifact (not committed)
         if: always()
