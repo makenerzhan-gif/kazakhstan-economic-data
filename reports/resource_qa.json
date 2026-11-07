@@ -3,16 +3,15 @@
  "summary": {
   "warning": {
    "break": 201,
-   "confidential": 15,
-   "cross_source": 53
+   "confidential": 17,
+   "cross_source": 69
   },
   "info": {
-   "gap": 114,
-   "freshness": 1
+   "gap": 114
   },
   "error": {
    "spike": 23,
-   "unit": 23
+   "unit": 28
   }
  },
  "issues": [
@@ -2022,16 +2021,6 @@
    "var": "copper_ore_export",
    "source": "UN Comtrade, зеркало",
    "series": "вес нетто",
-   "year": 1998,
-   "value": 0.0393,
-   "detail": "выброс: 0.0393 при 9.7 (1997) и 10.3 (1999)"
-  },
-  {
-   "check": "spike",
-   "severity": "error",
-   "var": "copper_ore_export",
-   "source": "UN Comtrade, зеркало",
-   "series": "вес нетто",
    "year": 2004,
    "value": 236.318229,
    "detail": "выброс: 236 при 135 (2003) и 138 (2005)"
@@ -2045,6 +2034,16 @@
    "year": 2014,
    "value": 893.314265,
    "detail": "выброс: 893 при 538 (2013) и 469 (2015)"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "copper_ore_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 2015,
+   "value": 468.501373,
+   "detail": "выброс: 469 при 893 (2014) и 843 (2016)"
   },
   {
    "check": "break",
@@ -2629,7 +2628,7 @@
   {
    "check": "spike",
    "severity": "error",
-   "var": "gold_export",
+   "var": "gold_export_mirror",
    "source": "UN Comtrade, зеркало",
    "series": "вес нетто",
    "year": 2007,
@@ -3414,7 +3413,7 @@
    "series": "вес нетто",
    "year": 2020,
    "value": 9.752185,
-   "detail": "экспорт РК почти нулевой: медиана соседних лет 224 — вероятно, данные закрыты"
+   "detail": "экспорт РК почти нулевой: зеркало 253; медиана соседних лет 224 — вероятно, данные закрыты"
   },
   {
    "check": "confidential",
@@ -3424,7 +3423,7 @@
    "series": "вес нетто",
    "year": 2021,
    "value": 16.966625,
-   "detail": "экспорт РК почти нулевой: медиана соседних лет 238 — вероятно, данные закрыты"
+   "detail": "экспорт РК почти нулевой: зеркало 234; медиана соседних лет 238 — вероятно, данные закрыты"
   },
   {
    "check": "confidential",
@@ -3434,7 +3433,7 @@
    "series": "вес нетто",
    "year": 2022,
    "value": 8.97137,
-   "detail": "экспорт РК почти нулевой: медиана соседних лет 242 — вероятно, данные закрыты"
+   "detail": "экспорт РК почти нулевой: зеркало 172; медиана соседних лет 242 — вероятно, данные закрыты"
   },
   {
    "check": "confidential",
@@ -3454,7 +3453,7 @@
    "series": "вес нетто",
    "year": 2020,
    "value": 2.579225,
-   "detail": "экспорт РК почти нулевой: медиана соседних лет 400 — вероятно, данные закрыты"
+   "detail": "экспорт РК почти нулевой: зеркало 448; медиана соседних лет 400 — вероятно, данные закрыты"
   },
   {
    "check": "confidential",
@@ -3464,7 +3463,7 @@
    "series": "вес нетто",
    "year": 2021,
    "value": 2.883294,
-   "detail": "экспорт РК почти нулевой: медиана соседних лет 402 — вероятно, данные закрыты"
+   "detail": "экспорт РК почти нулевой: зеркало 428; медиана соседних лет 402 — вероятно, данные закрыты"
   },
   {
    "check": "confidential",
@@ -3474,7 +3473,27 @@
    "series": "вес нетто",
    "year": 2022,
    "value": 0.674628,
-   "detail": "экспорт РК почти нулевой: медиана соседних лет 397 — вероятно, данные закрыты"
+   "detail": "экспорт РК почти нулевой: зеркало 452; медиана соседних лет 397 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "zinc_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2020,
+   "value": 37.715798,
+   "detail": "экспорт РК почти нулевой: зеркало 272 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "zinc_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2021,
+   "value": 50.410454,
+   "detail": "экспорт РК почти нулевой: зеркало 267 — вероятно, данные закрыты"
   },
   {
    "check": "confidential",
@@ -3484,7 +3503,7 @@
    "series": "вес нетто",
    "year": 2020,
    "value": 4.290375,
-   "detail": "экспорт РК почти нулевой: медиана соседних лет 105 — вероятно, данные закрыты"
+   "detail": "экспорт РК почти нулевой: зеркало 98; медиана соседних лет 105 — вероятно, данные закрыты"
   },
   {
    "check": "confidential",
@@ -3494,7 +3513,7 @@
    "series": "вес нетто",
    "year": 2021,
    "value": 6.995052,
-   "detail": "экспорт РК почти нулевой: медиана соседних лет 98.8 — вероятно, данные закрыты"
+   "detail": "экспорт РК почти нулевой: зеркало 98.1; медиана соседних лет 98.8 — вероятно, данные закрыты"
   },
   {
    "check": "confidential",
@@ -3504,27 +3523,7 @@
    "series": "вес нетто",
    "year": 2022,
    "value": 1.988797,
-   "detail": "экспорт РК почти нулевой: медиана соседних лет 92.5 — вероятно, данные закрыты"
-  },
-  {
-   "check": "confidential",
-   "severity": "warning",
-   "var": "gold_export",
-   "source": "UN Comtrade",
-   "series": "вес нетто",
-   "year": 2016,
-   "value": 0.615,
-   "detail": "экспорт РК почти нулевой: медиана соседних лет 8.3 — вероятно, данные закрыты"
-  },
-  {
-   "check": "confidential",
-   "severity": "warning",
-   "var": "gold_export",
-   "source": "UN Comtrade",
-   "series": "вес нетто",
-   "year": 2017,
-   "value": 0.01138,
-   "detail": "экспорт РК почти нулевой: медиана соседних лет 7.82 — вероятно, данные закрыты"
+   "detail": "экспорт РК почти нулевой: зеркало 73; медиана соседних лет 92.5 — вероятно, данные закрыты"
   },
   {
    "check": "confidential",
@@ -3542,9 +3541,29 @@
    "var": "titanium_export",
    "source": "UN Comtrade",
    "series": "вес нетто",
+   "year": 2020,
+   "value": 2.276757,
+   "detail": "экспорт РК почти нулевой: зеркало 12.3 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "titanium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2021,
+   "value": 2.84283,
+   "detail": "экспорт РК почти нулевой: зеркало 16 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "titanium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
    "year": 2022,
    "value": 0.398815,
-   "detail": "экспорт РК почти нулевой: медиана соседних лет 13.6 — вероятно, данные закрыты"
+   "detail": "экспорт РК почти нулевой: зеркало 13.8; медиана соседних лет 13.6 — вероятно, данные закрыты"
   },
   {
    "check": "unit",
@@ -3599,12 +3618,32 @@
   {
    "check": "unit",
    "severity": "error",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 2022,
+   "value": 9.286685,
+   "detail": "удельная стоимость 262 при медиане соседних лет 73.5 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
    "var": "coal_import",
    "source": "UN Comtrade",
    "series": "вес нетто",
    "year": 1999,
    "value": 10.789118,
    "detail": "удельная стоимость 1.73 при медиане соседних лет 26 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "uranium_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 2025,
+   "value": 8811.137313,
+   "detail": "удельная стоимость 0.406 при медиане соседних лет 0.118 — ошибка единиц веса"
   },
   {
    "check": "unit",
@@ -3625,6 +3664,16 @@
    "year": 1999,
    "value": 5.178948,
    "detail": "удельная стоимость 3.62 при медиане соседних лет 42 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "chrome_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 2023,
+   "value": 0.000349,
+   "detail": "удельная стоимость 650 при медиане соседних лет 205 — ошибка единиц веса"
   },
   {
    "check": "unit",
@@ -3755,6 +3804,26 @@
    "year": 2002,
    "value": 52.048,
    "detail": "удельная стоимость 2.4 при медиане соседних лет 9.13 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2017,
+   "value": 0.01138,
+   "detail": "удельная стоимость 0.256 при медиане соседних лет 28.9 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "gold_export_mirror",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 2018,
+   "value": 0.881232,
+   "detail": "удельная стоимость 11.4 при медиане соседних лет 35.4 — ошибка единиц веса"
   },
   {
    "check": "unit",
@@ -4109,6 +4178,116 @@
   {
    "check": "cross_source",
    "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2015,
+   "value": 45.803258,
+   "detail": "UN Comtrade, зеркало 45.8 vs UN Comtrade 63.58: -28.0% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2016,
+   "value": 40.732981,
+   "detail": "UN Comtrade, зеркало 40.73 vs UN Comtrade 62.28: -34.6% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2017,
+   "value": 49.684622,
+   "detail": "UN Comtrade, зеркало 49.68 vs UN Comtrade 68.76: -27.7% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2018,
+   "value": 49.1592,
+   "detail": "UN Comtrade, зеркало 49.16 vs UN Comtrade 69.8: -29.6% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2019,
+   "value": 48.454852,
+   "detail": "UN Comtrade, зеркало 48.45 vs UN Comtrade 70.01: -30.8% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2020,
+   "value": 48.701478,
+   "detail": "UN Comtrade, зеркало 48.7 vs UN Comtrade 70.58: -31.0% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2021,
+   "value": 41.794114,
+   "detail": "UN Comtrade, зеркало 41.79 vs UN Comtrade 65.71: -36.4% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2022,
+   "value": 46.679803,
+   "detail": "UN Comtrade, зеркало 46.68 vs UN Comtrade 65.2: -28.4% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2023,
+   "value": 58.925511,
+   "detail": "UN Comtrade, зеркало 58.93 vs UN Comtrade 70.67: -16.6% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2024,
+   "value": 61.893037,
+   "detail": "UN Comtrade, зеркало 61.89 vs UN Comtrade 71.02: -12.9% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2025,
+   "value": 67.115531,
+   "detail": "UN Comtrade, зеркало 67.12 vs UN Comtrade 76.29: -12.0% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
    "var": "coal_export",
    "source": "БНС Талдау (отгрузки)",
    "series": "UN Comtrade",
@@ -4220,6 +4399,56 @@
    "check": "cross_source",
    "severity": "warning",
    "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2017,
+   "value": 22.616255,
+   "detail": "UN Comtrade, зеркало 22.62 vs UN Comtrade 27.53: -17.8% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2022,
+   "value": 9.286685,
+   "detail": "UN Comtrade, зеркало 9.287 vs UN Comtrade 28.65: -67.6% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2023,
+   "value": 11.772689,
+   "detail": "UN Comtrade, зеркало 11.77 vs UN Comtrade 28.54: -58.8% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2024,
+   "value": 10.569474,
+   "detail": "UN Comtrade, зеркало 10.57 vs UN Comtrade 27.78: -62.0% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2025,
+   "value": 13.097483,
+   "detail": "UN Comtrade, зеркало 13.1 vs UN Comtrade 29.42: -55.5% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
    "source": "EIA",
    "series": "UN Comtrade",
    "year": 1999,
@@ -4305,16 +4534,6 @@
    "year": 2024,
    "value": 31.474321,
    "detail": "EIA 31.47 vs UN Comtrade 27.78: +13.3% (допуск ±10%)"
-  },
-  {
-   "check": "freshness",
-   "severity": "info",
-   "var": "*",
-   "source": "UN Comtrade, зеркало",
-   "series": "",
-   "year": 2015,
-   "value": null,
-   "detail": "последний год 2015, ожидается не раньше 2024"
   }
  ]
 }

@@ -130,6 +130,9 @@ def CT(flow, hs, scale):
     return {"src": "UN Comtrade", "kind": "ct", "flow": flow, "hs": hs, "scale": scale}
 
 
+# Mirror caveats: partners record origin, not shipper (KZ oil via CPC / Novorossiysk partly shows as
+# Russian), prices are CIF, and Russia stopped reporting to Comtrade from 2022, so mirror flows to
+# Russia (coal, chrome, uranium) collapse after 2021. The mirror stands in only for confidential years.
 def MIR(hs, scale):
     return {"src": "UN Comtrade, зеркало", "kind": "mir", "hs": hs, "scale": scale}
 
@@ -200,7 +203,9 @@ CATALOG = [
     ("ferroalloys", "Ферросплавы: производство", "тыс. т", "ферросплавы", [T("Ферросплавы"), USGS("ferroalloys_t", 1e-3)]),
     ("ferroalloys_export", "Ферросплавы: экспорт", "тыс. т", "экспорт, HS 7202", [CT("X", "7202", kt), MIR("7202", kt)]),
     ("gold_refined", "Золото необработанное: производство", "т", "аффинированное золото", [T("Золото необработанное"), USGS("gold_t", 1.0)]),
-    ("gold_export", "Золото: экспорт", "т", "экспорт, HS 7108 (с 2016 г. почти нет: преимущественное право Нацбанка)", [CT("X", "7108", t), MIR("7108", t)]),
+    ("gold_export", "Золото: экспорт", "т", "экспорт, HS 7108 (с 2016 г. почти нет: преимущественное право Нацбанка)", [CT("X", "7108", t)]),
+    ("gold_export_mirror", "Золото: импорт партнёров из РК (зеркало)", "т",
+     "зеркало HS 7108: включает продажи золота Нацбанком через Лондон — не товарный экспорт", [MIR("7108", t)]),
     ("silver_refined", "Серебро необработанное: производство", "т", "аффинированное серебро", [T("Серебро необработанное")]),
     ("silver_mine", "Серебро (USGS)", "т", "USGS: рудничное до 2021 г., с 2022 г. — данные БНС", [USGS("silver_t", 1.0)]),
     ("silver_export", "Серебро: экспорт", "т", "экспорт, HS 7106", [CT("X", "7106", t), MIR("7106", t)]),

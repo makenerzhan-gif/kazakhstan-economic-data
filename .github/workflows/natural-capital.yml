@@ -95,7 +95,7 @@ jobs:
           BRANCH="${GITHUB_REF_NAME}"
           for delay in 0 30 120; do
             sleep "$delay"
-            git pull --rebase origin "$BRANCH" || { git rebase --abort 2>/dev/null; continue; }
+            git pull --rebase -X theirs origin "$BRANCH" || { git rebase --abort 2>/dev/null; continue; }
             if git push origin "HEAD:$BRANCH"; then exit 0; fi
           done
           echo "::error::push failed"

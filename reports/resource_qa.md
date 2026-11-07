@@ -1,10 +1,10 @@
 # Контроль качества: природные ресурсы (2026-11-07)
 
-- **error**: spike 23, unit 23
-- **warning**: break 201, confidential 15, cross_source 53
-- **info**: freshness 1, gap 114
+- **error**: spike 23, unit 28
+- **warning**: break 201, confidential 17, cross_source 69
+- **info**: gap 114
 
-## error (46)
+## error (51)
 
 | Проверка | Показатель | Источник / ряд | Год | Описание |
 |---|---|---|---|---|
@@ -13,10 +13,10 @@
 | spike | coal_export | UN Comtrade / вес нетто | 2003 | выброс: 6.18 при 22.7 (2002) и 24.3 (2004) |
 | spike | coal_import | UN Comtrade / вес нетто | 2010 | выброс: 0.118 при 0.265 (2009) и 0.222 (2011) |
 | spike | coal_prod | USGS /  | 2006 | выброс: 2.64e+04 при 86.6 (2005) и 98.4 (2007) |
-| spike | copper_ore_export | UN Comtrade, зеркало / вес нетто | 1998 | выброс: 0.0393 при 9.7 (1997) и 10.3 (1999) |
 | spike | copper_ore_export | UN Comtrade, зеркало / вес нетто | 2004 | выброс: 236 при 135 (2003) и 138 (2005) |
 | spike | copper_ore_export | UN Comtrade, зеркало / вес нетто | 2014 | выброс: 893 при 538 (2013) и 469 (2015) |
-| spike | gold_export | UN Comtrade, зеркало / вес нетто | 2007 | выброс: 2.96 при 5.42 (2006) и 5.13 (2008) |
+| spike | copper_ore_export | UN Comtrade, зеркало / вес нетто | 2015 | выброс: 469 при 893 (2014) и 843 (2016) |
+| spike | gold_export_mirror | UN Comtrade, зеркало / вес нетто | 2007 | выброс: 2.96 при 5.42 (2006) и 5.13 (2008) |
 | spike | iron_ore_conc | БНС Талдау / отгружено всего | 2015 | выброс: 0.128 при 0.777 (2014) и 0.696 (2016) |
 | spike | iron_ore_usgs | USGS /  | 2019 | выброс: 22 при 41.9 (2018) и 39 (2020) |
 | spike | manganese_export | UN Comtrade / вес нетто | 1997 | выброс: 119 при 346 (1996) и 422 (1998) |
@@ -36,9 +36,11 @@
 | unit | aluminium_export | UN Comtrade / вес нетто | 1999 | удельная стоимость 0.0848 при медиане соседних лет 0.747 — ошибка единиц веса |
 | unit | aluminium_export | UN Comtrade / вес нетто | 2010 | удельная стоимость 0.0362 при медиане соседних лет 1.93 — ошибка единиц веса |
 | unit | chrome_export | UN Comtrade / вес нетто | 1999 | удельная стоимость 3.62 при медиане соседних лет 42 — ошибка единиц веса |
+| unit | chrome_export | UN Comtrade, зеркало / вес нетто | 2023 | удельная стоимость 650 при медиане соседних лет 205 — ошибка единиц веса |
 | unit | coal_export | UN Comtrade / вес нетто | 1999 | удельная стоимость 2.28 при медиане соседних лет 13.7 — ошибка единиц веса |
 | unit | coal_export | UN Comtrade / вес нетто | 2003 | удельная стоимость 40.4 при медиане соседних лет 11 — ошибка единиц веса |
 | unit | coal_export | UN Comtrade, зеркало / вес нетто | 2011 | удельная стоимость 115 при медиане соседних лет 31.3 — ошибка единиц веса |
+| unit | coal_export | UN Comtrade, зеркало / вес нетто | 2022 | удельная стоимость 262 при медиане соседних лет 73.5 — ошибка единиц веса |
 | unit | coal_import | UN Comtrade / вес нетто | 1999 | удельная стоимость 1.73 при медиане соседних лет 26 — ошибка единиц веса |
 | unit | copper_ore_export | UN Comtrade / вес нетто | 1999 | удельная стоимость 0.0189 при медиане соседних лет 0.235 — ошибка единиц веса |
 | unit | copper_refined_export | UN Comtrade / вес нетто | 1999 | удельная стоимость 0.149 при медиане соседних лет 1.57 — ошибка единиц веса |
@@ -46,6 +48,8 @@
 | unit | gold_export | UN Comtrade / вес нетто | 1998 | удельная стоимость 9.19 при медиане соседних лет 0.739 — ошибка единиц веса |
 | unit | gold_export | UN Comtrade / вес нетто | 1999 | удельная стоимость 0.739 при медиане соседних лет 5.2 — ошибка единиц веса |
 | unit | gold_export | UN Comtrade / вес нетто | 2002 | удельная стоимость 2.4 при медиане соседних лет 9.13 — ошибка единиц веса |
+| unit | gold_export | UN Comtrade / вес нетто | 2017 | удельная стоимость 0.256 при медиане соседних лет 28.9 — ошибка единиц веса |
+| unit | gold_export_mirror | UN Comtrade, зеркало / вес нетто | 2018 | удельная стоимость 11.4 при медиане соседних лет 35.4 — ошибка единиц веса |
 | unit | iron_ore_export | UN Comtrade / вес нетто | 1999 | удельная стоимость 1.1 при медиане соседних лет 20.9 — ошибка единиц веса |
 | unit | lead_export | UN Comtrade / вес нетто | 1999 | удельная стоимость 0.044 при медиане соседних лет 0.479 — ошибка единиц веса |
 | unit | manganese_export | UN Comtrade / вес нетто | 1999 | удельная стоимость 0.00689 при медиане соседних лет 0.0613 — ошибка единиц веса |
@@ -53,9 +57,10 @@
 | unit | oil_products_import | UN Comtrade / вес нетто | 1999 | удельная стоимость 14.9 при медиане соседних лет 226 — ошибка единиц веса |
 | unit | silver_export | UN Comtrade / вес нетто | 2018 | удельная стоимость 0.0709 при медиане соседних лет 0.509 — ошибка единиц веса |
 | unit | titanium_export | UN Comtrade / вес нетто | 1999 | удельная стоимость 0.482 при медиане соседних лет 4.32 — ошибка единиц веса |
+| unit | uranium_export | UN Comtrade, зеркало / вес нетто | 2025 | удельная стоимость 0.406 при медиане соседних лет 0.118 — ошибка единиц веса |
 | unit | zinc_export | UN Comtrade / вес нетто | 1999 | удельная стоимость 0.0792 при медиане соседних лет 0.833 — ошибка единиц веса |
 
-## warning (269)
+## warning (287)
 
 | Проверка | Показатель | Источник / ряд | Год | Описание |
 |---|---|---|---|---|
@@ -261,20 +266,22 @@
 | break | zinc_refined | БНС Талдау / отгружено на внутренний рынок | 2020 | скачок +667% к 2019 г. без возврата — реальное событие или смена учёта |
 | break | zinc_refined | БНС Талдау / отгружено на внутренний рынок | 2025 | скачок +82% к 2024 г. без возврата — реальное событие или смена учёта |
 | confidential | alumina_export | UN Comtrade / вес нетто | 2003 | экспорт РК почти нулевой: зеркало 1.39e+03 — вероятно, данные закрыты |
-| confidential | aluminium_export | UN Comtrade / вес нетто | 2020 | экспорт РК почти нулевой: медиана соседних лет 224 — вероятно, данные закрыты |
-| confidential | aluminium_export | UN Comtrade / вес нетто | 2021 | экспорт РК почти нулевой: медиана соседних лет 238 — вероятно, данные закрыты |
-| confidential | aluminium_export | UN Comtrade / вес нетто | 2022 | экспорт РК почти нулевой: медиана соседних лет 242 — вероятно, данные закрыты |
+| confidential | aluminium_export | UN Comtrade / вес нетто | 2020 | экспорт РК почти нулевой: зеркало 253; медиана соседних лет 224 — вероятно, данные закрыты |
+| confidential | aluminium_export | UN Comtrade / вес нетто | 2021 | экспорт РК почти нулевой: зеркало 234; медиана соседних лет 238 — вероятно, данные закрыты |
+| confidential | aluminium_export | UN Comtrade / вес нетто | 2022 | экспорт РК почти нулевой: зеркало 172; медиана соседних лет 242 — вероятно, данные закрыты |
 | confidential | copper_ore_export | UN Comtrade / вес нетто | 1998 | экспорт РК почти нулевой: зеркало 0.0393; медиана соседних лет 122 — вероятно, данные закрыты |
-| confidential | copper_refined_export | UN Comtrade / вес нетто | 2020 | экспорт РК почти нулевой: медиана соседних лет 400 — вероятно, данные закрыты |
-| confidential | copper_refined_export | UN Comtrade / вес нетто | 2021 | экспорт РК почти нулевой: медиана соседних лет 402 — вероятно, данные закрыты |
-| confidential | copper_refined_export | UN Comtrade / вес нетто | 2022 | экспорт РК почти нулевой: медиана соседних лет 397 — вероятно, данные закрыты |
-| confidential | gold_export | UN Comtrade / вес нетто | 2016 | экспорт РК почти нулевой: медиана соседних лет 8.3 — вероятно, данные закрыты |
-| confidential | gold_export | UN Comtrade / вес нетто | 2017 | экспорт РК почти нулевой: медиана соседних лет 7.82 — вероятно, данные закрыты |
-| confidential | lead_export | UN Comtrade / вес нетто | 2020 | экспорт РК почти нулевой: медиана соседних лет 105 — вероятно, данные закрыты |
-| confidential | lead_export | UN Comtrade / вес нетто | 2021 | экспорт РК почти нулевой: медиана соседних лет 98.8 — вероятно, данные закрыты |
-| confidential | lead_export | UN Comtrade / вес нетто | 2022 | экспорт РК почти нулевой: медиана соседних лет 92.5 — вероятно, данные закрыты |
+| confidential | copper_refined_export | UN Comtrade / вес нетто | 2020 | экспорт РК почти нулевой: зеркало 448; медиана соседних лет 400 — вероятно, данные закрыты |
+| confidential | copper_refined_export | UN Comtrade / вес нетто | 2021 | экспорт РК почти нулевой: зеркало 428; медиана соседних лет 402 — вероятно, данные закрыты |
+| confidential | copper_refined_export | UN Comtrade / вес нетто | 2022 | экспорт РК почти нулевой: зеркало 452; медиана соседних лет 397 — вероятно, данные закрыты |
+| confidential | lead_export | UN Comtrade / вес нетто | 2020 | экспорт РК почти нулевой: зеркало 98; медиана соседних лет 105 — вероятно, данные закрыты |
+| confidential | lead_export | UN Comtrade / вес нетто | 2021 | экспорт РК почти нулевой: зеркало 98.1; медиана соседних лет 98.8 — вероятно, данные закрыты |
+| confidential | lead_export | UN Comtrade / вес нетто | 2022 | экспорт РК почти нулевой: зеркало 73; медиана соседних лет 92.5 — вероятно, данные закрыты |
 | confidential | silver_export | UN Comtrade / вес нетто | 1999 | экспорт РК почти нулевой: медиана соседних лет 4.53e+07 — вероятно, данные закрыты |
-| confidential | titanium_export | UN Comtrade / вес нетто | 2022 | экспорт РК почти нулевой: медиана соседних лет 13.6 — вероятно, данные закрыты |
+| confidential | titanium_export | UN Comtrade / вес нетто | 2020 | экспорт РК почти нулевой: зеркало 12.3 — вероятно, данные закрыты |
+| confidential | titanium_export | UN Comtrade / вес нетто | 2021 | экспорт РК почти нулевой: зеркало 16 — вероятно, данные закрыты |
+| confidential | titanium_export | UN Comtrade / вес нетто | 2022 | экспорт РК почти нулевой: зеркало 13.8; медиана соседних лет 13.6 — вероятно, данные закрыты |
+| confidential | zinc_export | UN Comtrade / вес нетто | 2020 | экспорт РК почти нулевой: зеркало 272 — вероятно, данные закрыты |
+| confidential | zinc_export | UN Comtrade / вес нетто | 2021 | экспорт РК почти нулевой: зеркало 267 — вероятно, данные закрыты |
 | cross_source | alumina | USGS / БНС Талдау | 2012 | USGS 1,760 vs БНС Талдау 1,510: +16.6% (допуск ±5%) |
 | cross_source | coal_export | UN Comtrade, зеркало / UN Comtrade | 1995 | UN Comtrade, зеркало 4.309 vs UN Comtrade 20.77: -79.3% (допуск ±15%); зеркало: импорт партнёров |
 | cross_source | coal_export | UN Comtrade, зеркало / UN Comtrade | 1996 | UN Comtrade, зеркало 26.41 vs UN Comtrade 20.84: +26.7% (допуск ±15%); зеркало: импорт партнёров |
@@ -290,12 +297,17 @@
 | cross_source | coal_export | UN Comtrade, зеркало / UN Comtrade | 2012 | UN Comtrade, зеркало 23.8 vs UN Comtrade 33.7: -29.4% (допуск ±15%); зеркало: импорт партнёров |
 | cross_source | coal_export | EIA / UN Comtrade | 2012 | EIA 27.53 vs UN Comtrade 33.7: -18.3% (допуск ±10%) |
 | cross_source | coal_export | UN Comtrade, зеркало / UN Comtrade | 2013 | UN Comtrade, зеркало 25.38 vs UN Comtrade 30.82: -17.7% (допуск ±15%); зеркало: импорт партнёров |
+| cross_source | coal_export | UN Comtrade, зеркало / UN Comtrade | 2017 | UN Comtrade, зеркало 22.62 vs UN Comtrade 27.53: -17.8% (допуск ±15%); зеркало: импорт партнёров |
 | cross_source | coal_export | EIA / UN Comtrade | 2020 | EIA 23.83 vs UN Comtrade 26.55: -10.2% (допуск ±10%) |
 | cross_source | coal_export | EIA / UN Comtrade | 2021 | EIA 22.03 vs UN Comtrade 28.61: -23.0% (допуск ±10%) |
+| cross_source | coal_export | UN Comtrade, зеркало / UN Comtrade | 2022 | UN Comtrade, зеркало 9.287 vs UN Comtrade 28.65: -67.6% (допуск ±15%); зеркало: импорт партнёров |
 | cross_source | coal_export | EIA / UN Comtrade | 2022 | EIA 35.95 vs UN Comtrade 28.65: +25.5% (допуск ±10%) |
 | cross_source | coal_export | БНС Талдау (отгрузки) / UN Comtrade | 2023 | БНС Талдау (отгрузки) 24.51 vs UN Comtrade 28.54: -14.1% (допуск ±10%); косвенная оценка экспорта по отгрузкам |
+| cross_source | coal_export | UN Comtrade, зеркало / UN Comtrade | 2023 | UN Comtrade, зеркало 11.77 vs UN Comtrade 28.54: -58.8% (допуск ±15%); зеркало: импорт партнёров |
 | cross_source | coal_export | EIA / UN Comtrade | 2023 | EIA 34.02 vs UN Comtrade 28.54: +19.2% (допуск ±10%) |
+| cross_source | coal_export | UN Comtrade, зеркало / UN Comtrade | 2024 | UN Comtrade, зеркало 10.57 vs UN Comtrade 27.78: -62.0% (допуск ±15%); зеркало: импорт партнёров |
 | cross_source | coal_export | EIA / UN Comtrade | 2024 | EIA 31.47 vs UN Comtrade 27.78: +13.3% (допуск ±10%) |
+| cross_source | coal_export | UN Comtrade, зеркало / UN Comtrade | 2025 | UN Comtrade, зеркало 13.1 vs UN Comtrade 29.42: -55.5% (допуск ±15%); зеркало: импорт партнёров |
 | cross_source | coal_prod | EIA / БНС Талдау | 2017 | EIA 101.4 vs БНС Талдау 112.3: -9.7% (допуск ±5%) |
 | cross_source | coal_prod | EIA / БНС Талдау | 2018 | EIA 100.5 vs БНС Талдау 118.5: -15.2% (допуск ±5%) |
 | cross_source | coal_prod | EIA / БНС Талдау | 2019 | EIA 97.54 vs БНС Талдау 115: -15.2% (допуск ±5%) |
@@ -328,3 +340,14 @@
 | cross_source | oil_export | UN Comtrade, зеркало / UN Comtrade | 2013 | UN Comtrade, зеркало 51.25 vs UN Comtrade 70.7: -27.5% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит |
 | cross_source | oil_export | БНС Талдау (отгрузки) / UN Comtrade | 2014 | БНС Талдау (отгрузки) 39.3 vs UN Comtrade 68.22: -42.4% (допуск ±8%); косвенная оценка экспорта по отгрузкам |
 | cross_source | oil_export | UN Comtrade, зеркало / UN Comtrade | 2014 | UN Comtrade, зеркало 45.86 vs UN Comtrade 68.22: -32.8% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит |
+| cross_source | oil_export | UN Comtrade, зеркало / UN Comtrade | 2015 | UN Comtrade, зеркало 45.8 vs UN Comtrade 63.58: -28.0% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит |
+| cross_source | oil_export | UN Comtrade, зеркало / UN Comtrade | 2016 | UN Comtrade, зеркало 40.73 vs UN Comtrade 62.28: -34.6% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит |
+| cross_source | oil_export | UN Comtrade, зеркало / UN Comtrade | 2017 | UN Comtrade, зеркало 49.68 vs UN Comtrade 68.76: -27.7% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит |
+| cross_source | oil_export | UN Comtrade, зеркало / UN Comtrade | 2018 | UN Comtrade, зеркало 49.16 vs UN Comtrade 69.8: -29.6% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит |
+| cross_source | oil_export | UN Comtrade, зеркало / UN Comtrade | 2019 | UN Comtrade, зеркало 48.45 vs UN Comtrade 70.01: -30.8% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит |
+| cross_source | oil_export | UN Comtrade, зеркало / UN Comtrade | 2020 | UN Comtrade, зеркало 48.7 vs UN Comtrade 70.58: -31.0% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит |
+| cross_source | oil_export | UN Comtrade, зеркало / UN Comtrade | 2021 | UN Comtrade, зеркало 41.79 vs UN Comtrade 65.71: -36.4% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит |
+| cross_source | oil_export | UN Comtrade, зеркало / UN Comtrade | 2022 | UN Comtrade, зеркало 46.68 vs UN Comtrade 65.2: -28.4% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит |
+| cross_source | oil_export | UN Comtrade, зеркало / UN Comtrade | 2023 | UN Comtrade, зеркало 58.93 vs UN Comtrade 70.67: -16.6% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит |
+| cross_source | oil_export | UN Comtrade, зеркало / UN Comtrade | 2024 | UN Comtrade, зеркало 61.89 vs UN Comtrade 71.02: -12.9% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит |
+| cross_source | oil_export | UN Comtrade, зеркало / UN Comtrade | 2025 | UN Comtrade, зеркало 67.12 vs UN Comtrade 76.29: -12.0% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит |

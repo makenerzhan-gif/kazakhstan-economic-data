@@ -54,6 +54,9 @@ CROSS = [
     ("coal_export", "UN Comtrade", "UN Comtrade, зеркало", 0.15, "зеркало: импорт партнёров"),
     ("coal_export", "UN Comtrade", "EIA", 0.10, ""),
 ]
+# national export near zero for a known, genuine reason: not a confidentiality gap
+CONF_EXEMPT = {"gold_export": "с 2016 г. аффинированное золото выкупает Нацбанк (преимущественное право); "
+                              "зеркало Великобритании отражает движение монетарного золота, а не товарный экспорт"}
 # latest year a source should already have by today's date (lag in years)
 LAG = {"БНС Талдау": 1, "БНС Талдау (отгрузки)": 1, "UN Comtrade": 1, "UN Comtrade, зеркало": 2,
        "Energy Institute": 1, "EIA": 2, "USGS": 3, "БНС, счёт активов SEEA": 2}
@@ -137,6 +140,8 @@ def run(long: dict) -> list[dict]:
     nat = {var: e["values"] for (var, src, ser), e in long.items() if src == "UN Comtrade" and ser == "вес нетто"}
     mir = {var: e["values"] for (var, src, ser), e in long.items() if src == "UN Comtrade, зеркало" and ser == "вес нетто"}
     for var, nv in nat.items():
+        if var in CONF_EXEMPT:
+            continue
         mv = mir.get(var, {})
         for y, x in nv.items():
             nb = [nv[z] for z in range(y - 4, y + 5) if z != y and z in nv and nv[z] > 0]
