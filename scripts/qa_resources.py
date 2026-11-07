@@ -115,7 +115,7 @@ def run(long: dict) -> list[dict]:
     out: list[dict] = []
     for (var, src, ser), e in long.items():
         v = e["values"]
-        if len(v) >= 3 and not var.startswith("reserves_") and ser != "стоимость":
+        if len(v) >= 3 and not var.startswith("reserves_") and not var.endswith("_share") and ser != "стоимость":
             spikes_and_breaks(var, src, ser, v, out)
         if v:
             gaps(var, src, ser, v, out)
@@ -190,6 +190,8 @@ def run(long: dict) -> list[dict]:
                        f"{other} {o[y]:,.4g} vs {base} {b[y]:,.4g}: {o[y] / b[y] - 1:+.1%} (допуск ±{tol:.0%})"
                        + (f"; {note}" if note else ""))
 
+    classify_breaks(out, long)
+
     # freshness
     latest = defaultdict(int)
     for (var, src, ser), e in long.items():
@@ -201,6 +203,81 @@ def run(long: dict) -> list[dict]:
             _issue(out, "freshness", "info", "*", src, "", latest[src], None,
                    f"последний год {latest[src]}, ожидается не раньше {today - lag}")
     return out
+
+
+# Events that plausibly explain a level shift. Hypotheses to check, not established causes.
+EVENTS = [
+    (("oil", "gas", "coal", "iron", "chrom", "mangan", "bauxite", "alumin", "copper", "zinc", "lead", "ferro",
+      "gold", "silver", "titan", "uranium", "phosph", "steel", "pig"), range(1991, 1999), "down",
+     "трансформационный спад после распада СССР (1991–1998)"),
+    (("copper_ore", "copper_mine"), range(2015, 2019), "up", "ввод Бозшаколя (2016) и Актогая (2017, сульфидная руда)"),
+    (("uranium",), range(2001, 2011), "up", "наращивание добычи Казатомпрома, выход на 1-е место в мире (2009)"),
+    (("oil", "gas"), range(2016, 2018), "up", "возобновление добычи на Кашагане (конец 2016 г.)"),
+    (("oil", "gas"), (2025,), "up", "ввод Проекта будущего расширения на Тенгизе (2025)"),
+]
+SIBLING_SER = ("", "производство", "вес нетто", "экспорт")
+# indicators that measure the same activity under another definition: a jump in one should show in the other
+RELATED = [("copper_ore", "copper_mine_cu"), ("iron_ore_gross", "iron_ore_conc", "iron_ore_usgs"),
+           ("chrome_ore", "chromite_marketable"), ("zinc_refined", "zinc_mine"), ("lead_refined", "lead_mine"),
+           ("silver_refined", "silver_mine"), ("gas_gross_prod", "gas_assoc_prod", "gas_marketed_prod", "gas_dry_prod"),
+           ("alumina", "bauxite"), ("aluminium", "alumina"), ("oil_prod", "oil_products_prod")]
+
+
+def classify_breaks(issues: list[dict], long: dict) -> None:
+    """Adds i["class"] to break warnings: does the jump show in other measures of the same activity?
+    Production is compared with other sources and related definitions (not with shipments: ore is mostly
+    processed on site, so shipments move differently); shipments are compared with production."""
+    by_var = defaultdict(list)
+    for (var, src, ser), e in long.items():
+        if ser != "стоимость":
+            by_var[var].append((var, src, ser, e["values"]))
+    rel = defaultdict(set)
+    for grp in RELATED:
+        for a in grp:
+            rel[a] |= set(grp) - {a}
+    spikes = {(i["var"], i["source"], i["series"], i["year"]) for i in issues if i["check"] == "spike"}
+    drop = []
+    for i in issues:
+        if i["check"] != "break":
+            continue
+        var, y, ser = i["var"], i["year"], i["series"]
+        key = (var, i["source"], ser)
+        if (*key, y) in spikes or (*key, y - 1) in spikes:
+            drop.append(i)       # consequence of a one-year outlier already reported as an error
+            continue
+        own = next(v for _, s_, se, v in by_var[var] if s_ == i["source"] and se == ser)
+        chg = own[y] / own[y - 1] - 1
+        is_ship = ser.startswith("отгружено")
+        sib = []
+        pool = by_var[var] + ([] if is_ship else [x for r_ in rel[var] for x in by_var.get(r_, [])])
+        for v_, s_, se, v in pool:
+            if (v_, s_, se) == key or not (y in v and y - 1 in v and v[y - 1] > 0 and v[y] > 0):
+                continue
+            if is_ship and se != "производство":
+                continue
+            if not is_ship and (se.startswith("отгружено") or se not in SIBLING_SER):
+                continue
+            lab = (v_ + ": " if v_ != var else "") + s_ + (" / " + se if se else "")
+            sib.append((lab, v[y] / v[y - 1] - 1))
+        conf = [x for x in sib if x[1] * chg > 0 and abs(x[1]) >= max(0.15, 0.5 * abs(chg))]
+        flat = [x for x in sib if abs(x[1]) < 0.10]
+        fmt = lambda xs: "; ".join(f"{l} {c:+.0%}" for l, c in xs[:3])
+        if conf:
+            cls, why = "подтверждён", fmt(conf)
+        elif sib and len(flat) == len(sib):
+            cls, why = "только этот ряд", fmt(sib)
+        elif sib:
+            cls, why = "частично", fmt(sib)
+        else:
+            cls, why = "один источник", "сравнить не с чем"
+        ev = None
+        if not is_ship and ser != "экспорт":
+            ev = next((t for pref, yrs, d, t in EVENTS if var.startswith(pref) and y in yrs
+                       and ((d == "up") == (chg > 0))), None)
+        i["class"] = cls
+        i["detail"] += f" | класс: {cls} ({why})" + (f" | гипотеза: {ev}" if ev else "")
+    for i in drop:
+        issues.remove(i)
 
 
 def flags_index(issues: list[dict]) -> dict:
@@ -223,6 +300,15 @@ def write_reports(issues: list[dict]) -> None:
     lines = [f"# Контроль качества: природные ресурсы ({date.today().isoformat()})", ""]
     for sev in ("error", "warning", "info"):
         lines.append(f"- **{sev}**: " + ", ".join(f"{k} {v}" for k, v in sorted(summary[sev].items())) if summary[sev] else f"- **{sev}**: 0")
+    bc = defaultdict(int)
+    for i in issues:
+        if i["check"] == "break":
+            bc[i.get("class", "?")] += 1
+    if bc:
+        lines += ["", "Скачки (break) по классам: " + ", ".join(f"{k} — {v}" for k, v in sorted(bc.items())),
+                  "«подтверждён» — тот же скачок есть в другом источнике (вероятно реальная динамика); "
+                  "«только этот ряд» — другие источники стабильны (вероятна смена учёта или ошибка); "
+                  "«частично» — другие источники меняются слабее или разнонаправленно; «один источник» — проверить нечем."]
     for sev in ("error", "warning"):
         rows = [i for i in issues if i["severity"] == sev]
         if not rows:

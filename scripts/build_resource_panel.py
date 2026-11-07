@@ -50,16 +50,36 @@ def load_taldau():
     return d
 
 
-def load_comtrade(name):
+def load_comtrade(name, skip_reporter=None):
     d = defaultdict(lambda: defaultdict(float))
     f = RH / name
     if f.exists():
         for r in csv.DictReader(f.open(encoding="utf-8")):
+            if skip_reporter and str(r.get("reporter_code")) == skip_reporter:
+                continue
             for fld in ("value_usd", "net_weight_kg"):
                 x = r.get(fld)
                 if x not in (None, "", "None"):
                     d[(r["flow"], str(r["hs"]), fld)][int(r["year"])] += float(x)
     return d
+
+
+def load_partners():
+    """Kazakhstan-reported exports by partner: {(hs, field): {year: value}} for Russia and for all partners."""
+    ru, tot = defaultdict(lambda: defaultdict(float)), defaultdict(lambda: defaultdict(float))
+    f = RH / "comtrade_kazakhstan_by_partner.csv"
+    if f.exists():
+        for r in csv.DictReader(f.open(encoding="utf-8")):
+            if str(r["partner_code"]) == "0":
+                continue
+            for fld in ("value_usd", "net_weight_kg"):
+                x = r.get(fld)
+                if x in (None, "", "None"):
+                    continue
+                tot[(str(r["hs"]), fld)][int(r["year"])] += float(x)
+                if str(r["partner_code"]) == "643":
+                    ru[(str(r["hs"]), fld)][int(r["year"])] += float(x)
+    return ru, tot
 
 
 def load_eia():
@@ -130,6 +150,9 @@ def CT(flow, hs, scale):
     return {"src": "UN Comtrade", "kind": "ct", "flow": flow, "hs": hs, "scale": scale}
 
 
+# Mirror = partners' imports from KZ WITHOUT Russia's own records + Kazakhstan-reported exports to Russia
+# (comtrade_kazakhstan_by_partner.csv, from 2015; before 2015 Russia's own records are kept). Russia stopped
+# reporting from 2022, so this keeps the series comparable across 2021/2022.
 # Mirror caveats: partners record origin, not shipper (KZ oil via CPC / Novorossiysk partly shows as
 # Russian), prices are CIF, and Russia stopped reporting to Comtrade from 2022, so mirror flows to
 # Russia (coal, chrome, uranium) collapse after 2021. The mirror stands in only for confidential years.
@@ -230,7 +253,13 @@ BLOCKING = {"spike", "identity", "unit", "confidential"}
 
 
 def build_long():
-    TD, CTN, CTM = load_taldau(), load_comtrade("comtrade_kazakhstan.csv"), load_comtrade("comtrade_mirror_kazakhstan.csv")
+    TD, CTN = load_taldau(), load_comtrade("comtrade_kazakhstan.csv")
+    CTM = load_comtrade("comtrade_mirror_kazakhstan.csv")
+    CTMX = load_comtrade("comtrade_mirror_kazakhstan.csv", skip_reporter="643")
+    RU, PT = load_partners()
+    for (hs, fld), v in RU.items():          # years with KZ-by-partner data: replace Russia's own records
+        for y in {y for (h, f_), vv in PT.items() if h == hs and f_ == fld for y in vv}:
+            CTM[("M", hs, fld)][y] = CTMX[("M", hs, fld)].get(y, 0.0) + v.get(y, 0.0)
     EIAd, EId, US, SE = load_eia(), load_ei(), load_usgs(), load_seea()
     rows = []
 
@@ -262,6 +291,22 @@ def build_long():
                     {y: x * s["scale"] for y, x in D.get((flow, s["hs"], "net_weight_kg"), {}).items() if x > 0})
                 add(var, name, "млн $", concept, s["src"], "стоимость",
                     {y: x * 1e-6 for y, x in D.get((flow, s["hs"], "value_usd"), {}).items() if x > 0})
+    for var, name, unit, concept, specs in CATALOG:
+        ct = next((x for x in specs if x["kind"] == "ct" and x["flow"] == "X"), None)
+        if not ct:
+            continue
+        rv, tv = RU.get((ct["hs"], "net_weight_kg"), {}), PT.get((ct["hs"], "net_weight_kg"), {})
+        if not tv:
+            continue
+        add(var + "_russia", name.replace("экспорт", "экспорт в Россию"), unit,
+            f"экспорт в РФ по данным РК, HS {ct['hs']}", "UN Comtrade, по странам", "вес нетто",
+            {y: rv.get(y, 0.0) * ct["scale"] for y in tv})
+        # denominator: KZ total; where KZ withheld most of the total (2020-2022 metals), the mirror total
+        mv = CTM.get(("M", ct["hs"], "net_weight_kg"), {})
+        den = {y: (mv[y] if mv.get(y, 0) > 2 * tv[y] else tv[y]) for y in tv}
+        add(var + "_russia_share", name.replace("экспорт", "доля России в экспорте"), "доля",
+            f"доля РФ в экспорте, HS {ct['hs']}: РФ по данным РК / весь экспорт (при закрытых данных РК — зеркало)",
+            "UN Comtrade, по странам", "", {y: rv.get(y, 0.0) / den[y] for y in den if den[y] > 0})
     for res, (var, unit) in SEEA_VARS.items():
         v = SE.get((res, "Запасы минеральных и энергетических ресурсов на конец периода"), {})
         add(var, f"Запасы на конец года: {res.split(' (')[0]}", unit, "коммерчески извлекаемые запасы (SEEA)",
@@ -279,6 +324,9 @@ def pick(rows, issues):
         series[(var, src, ser)][y] = (x, unit)
     order = {var: [s["src"] for s in specs] for var, _, _, _, specs in CATALOG}
     order.update({v: ["БНС, счёт активов SEEA"] for v, _ in SEEA_VARS.values()})
+    for v in meta:
+        if v.endswith(("_russia", "_russia_share")):
+            order[v] = ["UN Comtrade, по странам"]
     qty_ser = ("производство", "", "вес нетто", "экспорт")
     panel = []
     for var in sorted(meta):
@@ -319,6 +367,7 @@ def main() -> int:
         w = csv.writer(fh)
         w.writerow(["var", "name", "unit", "concept", "year", "value", "source", "qa_flags", "n_sources", "note"])
         w.writerows(panel)
+    rus_vars = sorted({p[0] for p in panel if p[0].endswith(("_russia", "_russia_share"))})
     with (OUT / "catalog.csv").open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(["var", "name", "unit", "concept", "sources_priority"])
@@ -326,6 +375,9 @@ def main() -> int:
             w.writerow([var, name, unit, concept, " > ".join(dict.fromkeys(s["src"] for s in specs))])
         for res, (var, unit) in SEEA_VARS.items():
             w.writerow([var, f"Запасы на конец года: {res.split(' (')[0]}", unit, "коммерчески извлекаемые запасы (SEEA)", "БНС, счёт активов SEEA"])
+        for v in rus_vars:
+            rec = next(p for p in panel if p[0] == v)
+            w.writerow([v, rec[1], rec[2], rec[3], "UN Comtrade, по странам"])
     n_err = sum(i["severity"] == "error" for i in issues)
     print(f"long rows {len(rows)}, panel rows {len(panel)}, vars {len({p[0] for p in panel})}, "
           f"QA issues {len(issues)} (errors {n_err})")
