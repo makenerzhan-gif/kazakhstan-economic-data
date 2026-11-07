@@ -313,6 +313,30 @@ def test_group_blocks_with_labels_in_column_a_and_unknown_groups_skipped():
     assert {(r["item_code"], r["value"]) for r in recs} == {("TOTAL", 25204.8), ("TOTAL", 25946.3), ("WHEAT", 17000.0), ("WHEAT", 18000.0)}
 
 
+def test_group_blocks_initial_group_takes_the_rows_above_the_first_label():
+    """The yield table of 21.10.2026 (element 8158) has no «Всего» row over the first block."""
+    grid = [["Урожайность", None, None], [None, 2024.0, 2025.0], [None, None, None], ["Республика Казахстан", 15.2, 16.3],
+            ["Акмолинская", 14.0, 15.0], ["из них:\nпшеницы", None, None], ["Республика Казахстан", 14.2, 15.8]]
+    ds = {**DS, "label_col": 0, "groups": {"TOTAL": "^всего", "WHEAT": "пшениц"}, "skip_unknown_groups": True}
+    rx = re.compile(r"^\s*(\d{4})(?=\D|$|\d\))")
+    assert {r["item_code"] for r in bns_dims.parse_group_blocks(grid, ds, rx)} == {"WHEAT"}     # without it, the totals are lost
+    recs = bns_dims.parse_group_blocks(grid, {**ds, "initial_group": "TOTAL"}, rx)
+    assert {(r["item_code"], r["region"], r["date"][:4], r["value"]) for r in recs} == {
+        ("TOTAL", "national", "2024", 15.2), ("TOTAL", "national", "2025", 16.3), ("TOTAL", "AKM", "2024", 14.0), ("TOTAL", "AKM", "2025", 15.0),
+        ("WHEAT", "national", "2024", 14.2), ("WHEAT", "national", "2025", 15.8)}
+
+
+def test_grain_tables_read_the_elements_bns_lists_since_21_10_2026():
+    """BNS moved the crop tables on 21.10.2026: 8154 is now the harvest (it was the sown area),
+    8159 the sown area, 8158 the yield; 8160 and 8166 are no longer on the page."""
+    by_id = {d["id"]: d for d in update_dims.DATASETS.values()}
+    assert {i: (by_id[i]["element_id"], by_id[i]["sheets"]) for i in ("GRAIN_HARVEST_BY_REGION", "GRAIN_SOWN_AREA_BY_REGION", "GRAIN_YIELD_BY_REGION")} == {
+        "GRAIN_HARVEST_BY_REGION": (8154, ["зерновых и бобовых культур"]),
+        "GRAIN_SOWN_AREA_BY_REGION": (8159, ["зерновых и бобовых культур"]),
+        "GRAIN_YIELD_BY_REGION": (8158, ["зерновых и бобовых культур"])}
+    assert by_id["GRAIN_YIELD_BY_REGION"]["initial_group"] == "TOTAL"
+
+
 def test_periods_across_with_a_code_column_keeps_codes_and_skips_uncoded_rows():
     grid = [["Код ОКЭД", "Наименование", "2024.0", "2025.0"], ["А", "Сельское, лесное и рыбное хозяйство", 113.6, 105.9],
             ["011", "Выращивание сезонных культур", 122.8, 107.8], [None, "Сельское хозяйство", 113.7, 105.8]]

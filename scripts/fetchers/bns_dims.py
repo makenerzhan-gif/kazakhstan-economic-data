@@ -507,14 +507,17 @@ def parse_region_blocks(grid: list[list], ds: dict, dictionary: list[dict] | Non
 
 def parse_group_blocks(grid: list[list], ds: dict, year_regex: re.Pattern) -> list[dict]:
     """Group label rows («Все население», «Всего», «из них: пшеницы» …), each followed by the
-    country row and the regions (6576 with the names in column B; the grain tables 8154/8160/8166
+    country row and the regions (6576 with the names in column B; the grain tables 8154/8158/8159
     with the names in column A). Rows under a group that is not in `groups` are skipped."""
     head_i = _header_row(grid, year_regex, ds)
     year_cols = _annual_columns(grid[head_i], year_regex)
     label_col = int(ds.get("label_col", 1))
     groups = {code: re.compile(pat) for code, pat in ds["groups"].items()}
     subgroups = set(ds.get("subgroups", []))
-    top, item, records, unmatched = None, None, [], []
+    # `initial_group`: the group of the region rows above the first group label. The yield
+    # table of 21.10.2026 (element 8158) dropped the «Всего» row the older files had.
+    top = item = ds.get("initial_group")
+    records, unmatched = [], []
     for row in grid[head_i + 1:]:
         if len(row) <= label_col or row[label_col] is None or not str(row[label_col]).strip():
             continue

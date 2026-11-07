@@ -28,6 +28,9 @@ def test_english_normaliser_keeps_latin_letters_and_drops_footnotes():
     ("Liquefied natural gas, Japan", "NGAS_JP"), ("Tea, avg 3 auctions", "TEA_AVG"), ("Tea, average", "TEA_AVG"),
     ("Rice, Thai 5%", "RICE_05"), ("Rice, Thailand, 5%", "RICE_05"), ("Rice, Thai 25%", "RICE_25"),
     ("Wheat, US HRW", "WHEAT_US_HRW"), ("Wheat, U.S., HRW", "WHEAT_US_HRW"), ("Banana, US", "BANANA_US"), ("Bananas, U.S.", "BANANA_US"),
+    # the October 2026 CMO spells the country out
+    ("Natural gas, United States", "NGAS_US"), ("Wheat, United States, HRW", "WHEAT_US_HRW"), ("Wheat, United States, SRW", "WHEAT_US_SRW"),
+    ("Bananas, United States", "BANANA_US"),
     ("Orange", "ORANGE"), ("Oranges", "ORANGE"), ("Shrimps, Mexican", "SHRIMP_MEX"), ("Shrimp", "SHRIMP_MEX"),
     ("Sugar, world", "SUGAR_WLD"), ("Sugar, World", "SUGAR_WLD"), ("Sugar, US", "SUGAR_US"), ("Sugar, EU", "SUGAR_EU"),
     ("Tobacco, US import u.v.", "TOBAC_US"), ("Tobacco", "TOBAC_US"), ("Logs, Cameroon", "LOGS_CMR"), ("Logs, Africa", "LOGS_CMR"),
@@ -140,6 +143,35 @@ def test_parse_forecasts_stops_on_an_unknown_price_row():
     with pytest.raises(validation.StructuralChangeError) as exc:
         wb.parse_forecasts(grid, {**PRICES, "section": "prices"})
     assert "Lithium carbonate" in str(exc.value)
+
+
+def test_october_2026_cmo_sheet_name_footnotes_and_previous_edition_block():
+    """CMO-October-2026-Forecasts.xlsx: sheet 'Forecast vs CMO', footnote numbers after the
+    labels («Energy 2»), three 'f' blocks (levels, percent change, the April forecasts)."""
+    grid = [
+        ["TABLE 1. Commodity prices "] + [None] * 18 + ["Released: October 28, 2026"],
+        [None] * 20,
+        [None] * 14 + ["October 2026 forecasts (percent change \nfrom previous year)", None, None, None, "April 2026 forecasts (indexes)", None],
+        ["Commodity", None, None, None, None, None, "Unit", None, 2024, 2025, "2026f", "2027f", "2028f", None, "2026f", "2027f", "2028f", None, "2026f", "2027f"],
+        ["Indexes (in nominal U.S. dollars, 2010=100)"] + [None] * 19,
+        ["Energy 2", None, None, None, None, None, None, None, 101.5, 90, 118.8, 105.1, 92.7, None, 32, -11.5, -11.8, None, 111.3, 92.1],
+        ["Precious metals 5", None, None, None, None, None, None, None, 1, 2, 3.0, 4.0, 5.0, None, 9, 9, 9, None, 7, 7],
+        ["Prices (in nominal U.S. dollars)"] + [None] * 19,
+        ["Natural gas, United States", None, None, None, None, None, "$/mmbtu", None, 2.2, 3.5, 3.9, 4.1, 4.0, None, 11, 5, -2, None, 3.6, 3.8],
+    ]
+    indices = wb.parse_forecasts(grid, {**INDICES, "section": "indices"})
+    assert {(r["date"][:4], r["item_code"], r["value"]) for r in indices} == {
+        ("2026", "ENERGY", 118.8), ("2027", "ENERGY", 105.1), ("2028", "ENERGY", 92.7),
+        ("2026", "PRECIOUS_METALS", 3.0), ("2027", "PRECIOUS_METALS", 4.0), ("2028", "PRECIOUS_METALS", 5.0)}
+    prices = wb.parse_forecasts(grid, {**PRICES, "section": "prices"})
+    assert {(r["date"][:4], r["item_code"], r["value"]) for r in prices} == {("2026", "NGAS_US", 3.9), ("2027", "NGAS_US", 4.1), ("2028", "NGAS_US", 4.0)}
+    ds = {"id": "T", "sheet": "Forecast", "sheet_aliases": ["Forecast vs CMO"]}
+    assert wb.pick_sheet(ds, {"Forecast vs CMO": grid}) == "Forecast vs CMO"
+    assert wb.pick_sheet(ds, {"Forecast": grid, "Forecast vs CMO": grid}) == "Forecast"
+    with pytest.raises(validation.StructuralChangeError, match="sheet not in the workbook"):
+        wb.pick_sheet(ds, {"Table 1": grid})
+    configured = {d["id"]: d for d in update_dims.DATASETS.values()}
+    assert all("Forecast vs CMO" in configured[i]["sheet_aliases"] for i in ("WB_COMMODITY_PRICE_FORECASTS", "WB_COMMODITY_INDEX_FORECASTS"))
 
 
 def test_cmo_page_links_are_discovered_and_the_forecast_xlsx_sits_beside_the_pdf():
