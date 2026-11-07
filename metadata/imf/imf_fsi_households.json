@@ -1,7 +1,7 @@
 {
   "source": "imf",
-  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/FSIC/+/KAZ.S14.FSI179_AFSI_PT+FSI157_AFSI_PT+FSI85_AFSI_PT.Q",
-  "dataset_id": "IMF.STA/FSIC/KAZ.S14.FSI179_AFSI_PT+FSI157_AFSI_PT+FSI85_AFSI_PT.Q",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "IMF_FSI_HOUSEHOLDS",
   "indicator_name": "Household debt burden (IMF Financial Soundness Indicators): debt to GDP, debt to disposable income, debt service to income",
   "description": "Долговая нагрузка домашних хозяйств (МВФ, показатели финансовой устойчивости): долг к ВВП, долг к располагаемому доходу, обслуживание долга к доходу",
