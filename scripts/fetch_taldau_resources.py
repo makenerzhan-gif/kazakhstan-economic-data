@@ -200,6 +200,46 @@ def probe(index_id, name):
     return rec, rows
 
 
+PRODUCTS = {  # СКПП6731 terms, as in config/dims.yaml INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY
+    "4659551": "Нефть, включая конденсат газовый", "4117150": "Нефть сырая", "4659552": "Газ природный",
+    "19834401": "Нефтяные газы и прочие газообразные углеводороды", "18749737": "Газ нефтяной попутный",
+    "18793519": "Уголь каменный, включая лигнит и концентрат угольный", "4659553": "Руды железные агломерированные и неагломерированные",
+    "4117215": "Руды железные", "4121265": "Руды и концентраты медные", "4124812": "Руды и концентраты хромовые",
+    "4118146": "Ферросплавы", "4116967": "Оксид алюминия (глинозём)", "4119170": "Алюминий необработанный",
+    "4118944": "Медь рафинированная и сплавы медные", "4116970": "Цинк необработанный", "4116968": "Свинец необработанный",
+    "4119092": "Золото необработанное", "4119045": "Серебро необработанное", "4659584": "Продукты переработки нефти",
+    "4121800": "Бензин моторный", "4123349": "Топливо дизельное", "4123355": "Мазут", "4124447": "Кокс нефтяной",
+    "4119978": "Чугун", "4120596": "Сталь нерафинированная"}
+
+
+def products(rows):
+    """Annual national production of each product, Taldau 701608 (period 7, dictionaries 68 + 1973),
+    and shipments (701622: total / domestic market)."""
+    log = LOG.setdefault("products", {})
+    page = get("/NewIndex/GetIndex/701608?keyword=")
+    m = re.search(r"measure\s*:\s*\{[^}]*?id\s*:\s*['\"]?(\d+)", page.text) if page is not None else None
+    measure = m.group(1) if m else "7"
+    log["measure"] = measure
+    for term, nm in PRODUCTS.items():
+        for period in ("7",):
+            res = tree("701608", period, measure, f"{NATIONAL},{term}", "68,1973")
+            if not res:
+                log[term] = "empty"
+                continue
+            node = next((n for n in res if str(n.get("id")) == NATIONAL), res[0])
+            v = values(node)
+            log[term] = [nm, node.get("measureName"), min(v) if v else None, max(v) if v else None]
+            for y, x in v.items():
+                rows.append(["701608", "Произведено продукции в натуральном выражении", node.get("measureName"), nm, y, x])
+        for variant, label in (("450237", "отгружено всего"), ("450238", "отгружено на внутренний рынок")):
+            res = tree("701622", "7", measure, f"{NATIONAL},{variant},{term}", "68,559,1973")
+            if res:
+                node = next((n for n in res if str(n.get("id")) == NATIONAL), res[0])
+                for y, x in values(node).items():
+                    rows.append(["701622", label, node.get("measureName"), nm, y, x])
+        time.sleep(0.3)
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     cands = {}
@@ -217,8 +257,10 @@ def main():
     LOG["candidates"] = cands
     (OUT / "search_candidates.json").write_text(json.dumps(cands, ensure_ascii=False, indent=1), encoding="utf-8")
     allrows = []
+    allrows_pre = []
     order = list(TARGETS) + [k for k in cands if k not in TARGETS]
-    for iid in list(TARGETS):
+    products(allrows_pre := [])
+    for iid in ["20378223"]:
         nm = cands[iid]
         try:
             rec, rows = probe(iid, nm)
@@ -227,6 +269,7 @@ def main():
         LOG["indexes"][iid] = rec
         allrows += rows
         time.sleep(0.3)
+    allrows = allrows_pre + allrows
     with (OUT / "taldau_resources_long.csv").open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(["index_id", "index_name", "unit", "item", "year", "value"])
