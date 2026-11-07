@@ -63,15 +63,33 @@ def get(path, timeout=60):
         return None
 
 
+def _dicts(obj):
+    if isinstance(obj, dict):
+        yield obj
+        for v in obj.values():
+            yield from _dicts(v)
+    elif isinstance(obj, list):
+        for v in obj:
+            yield from _dicts(v)
+
+
 def search(keyword):
     r = post("/Search/getSearchPageGridData", {"keyword": keyword, "page": "1", "start": "0", "limit": "100"})
     if r is None:
         return []
+    raw = OUT / "search_raw"
+    raw.mkdir(exist_ok=True)
+    (raw / (re.sub(r"\W+", "_", keyword) + ".txt")).write_bytes(r.content[:300000])
     try:
         j = r.json()
     except ValueError:
         return []
-    items = j.get("data") or j.get("items") or j.get("rows") or (j if isinstance(j, list) else [])
+    items = []
+    for d in _dicts(j):
+        keys = {k.lower() for k in d}
+        if keys & {"id", "indexid", "index_id"} and keys & {"name", "text", "indexname", "title", "name_ru", "nameru"}:
+            items.append({"id": d.get("id") or d.get("indexId") or d.get("IndexId") or d.get("index_id"),
+                          "name": d.get("name") or d.get("text") or d.get("indexName") or d.get("title") or d.get("nameRu") or ""})
     return items
 
 
@@ -169,8 +187,8 @@ def main():
         items = search(kw)
         LOG["search"][kw] = len(items)
         for it in items:
-            iid = str(it.get("id") or it.get("indexId") or it.get("Id") or "")
-            nm = it.get("name") or it.get("text") or it.get("indexName") or ""
+            iid = str(it.get("id") or "")
+            nm = re.sub(r"<[^>]+>", "", str(it.get("name") or ""))
             if iid and NAME_OK.search(nm):
                 cands[iid] = nm
         time.sleep(0.5)
