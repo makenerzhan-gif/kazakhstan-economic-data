@@ -57,6 +57,12 @@ CROSS = [
 # national export near zero for a known, genuine reason: not a confidentiality gap
 CONF_EXEMPT = {"gold_export": "с 2016 г. аффинированное золото выкупает Нацбанк (преимущественное право); "
                               "зеркало Великобритании отражает движение монетарного золота, а не товарный экспорт"}
+# export var -> output var: a mirror figure above 1.3x domestic output cannot be Kazakhstan's export
+# (partners' re-exports or bullion flows), so it is not taken as evidence of withheld records
+EXPORT_OF = {"copper_refined_export": "copper_refined", "zinc_export": "zinc_refined", "lead_export": "lead_refined",
+             "aluminium_export": "aluminium", "alumina_export": "alumina", "silver_export": "silver_refined",
+             "ferroalloys_export": "ferroalloys", "coal_export": "coal_prod", "iron_ore_export": "iron_ore_gross",
+             "chrome_export": "chrome_ore", "oil_export": "oil_prod", "titanium_export": "titanium_sponge"}
 # latest year a source should already have by today's date (lag in years)
 LAG = {"БНС Талдау": 1, "БНС Талдау (отгрузки)": 1, "UN Comtrade": 1, "UN Comtrade, зеркало": 2,
        "Energy Institute": 1, "EIA": 2, "USGS": 3, "БНС, счёт активов SEEA": 2}
@@ -139,10 +145,22 @@ def run(long: dict) -> list[dict]:
     # confidential records: national export vs mirror and vs neighbours
     nat = {var: e["values"] for (var, src, ser), e in long.items() if src == "UN Comtrade" and ser == "вес нетто"}
     mir = {var: e["values"] for (var, src, ser), e in long.items() if src == "UN Comtrade, зеркало" and ser == "вес нетто"}
+    prod = defaultdict(dict)
+    for (v_, src, ser), e in long.items():
+        if ser in ("", "производство"):
+            for y, x in e["values"].items():
+                prod[v_][y] = max(prod[v_].get(y, 0.0), x)
     for var, nv in nat.items():
         if var in CONF_EXEMPT:
             continue
-        mv = mir.get(var, {})
+        mv = dict(mir.get(var, {}))
+        pv = prod.get(EXPORT_OF.get(var, ""), {})
+        for y in list(mv):
+            if y in pv and mv[y] > 1.3 * pv[y]:
+                _issue(out, "cross_source", "warning", var, "UN Comtrade, зеркало", "вес нетто", y, mv[y],
+                       f"зеркало {mv[y]:,.4g} > 130% выпуска {pv[y]:,.4g} — реэкспорт/движение слитков у партнёров; "
+                       "как замена не используется")
+                del mv[y]
         for y, x in nv.items():
             nb = [nv[z] for z in range(y - 4, y + 5) if z != y and z in nv and nv[z] > 0]
             low_vs_nb = len(nb) >= 3 and x < 0.10 * statistics.median(nb)
