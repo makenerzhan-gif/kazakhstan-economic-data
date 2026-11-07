@@ -179,10 +179,10 @@ def probe(index_id, name):
         if budget["n"] > 400:
             return
         budget["n"] += 1
-        kids = tree(index_id, period, measure, terms, dics, parent=parent, idx=str(pos), term=parent)
+        kids = tree(index_id, period, measure, terms, dics, parent=parent, idx=str(pos), term=parent or tl[pos])
         if not kids:
             return
-        (OUT / f"{index_id}_dim{pos}_{parent}.json").write_text(json.dumps(kids, ensure_ascii=False), encoding="utf-8")
+        (OUT / f"{index_id}_dim{pos}_{parent or 'top'}.json").write_text(json.dumps(kids, ensure_ascii=False), encoding="utf-8")
         rec["children"][f"{pos}:{parent}"] = len(kids)
         for k in kids:
             name_k = str(k.get("text") or k.get("name") or k.get("id"))
@@ -193,7 +193,8 @@ def probe(index_id, name):
                 expand(pos, str(k.get("id")), depth + 1, path + [name_k])
 
     for pos in range(1, len(dl)):
-        expand(pos, tl[pos], 0, [])
+        # the dimension's top level: no parent (segment [0] carries a default leaf term, not the root)
+        expand(pos, "", 0, [])
     rec["status"] = "ok"
     return rec, rows
 
@@ -216,7 +217,7 @@ def main():
     (OUT / "search_candidates.json").write_text(json.dumps(cands, ensure_ascii=False, indent=1), encoding="utf-8")
     allrows = []
     order = list(TARGETS) + [k for k in cands if k not in TARGETS]
-    for iid in order[:40]:
+    for iid in list(TARGETS):
         nm = cands[iid]
         try:
             rec, rows = probe(iid, nm)
