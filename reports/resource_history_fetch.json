@@ -1,24 +1,4 @@
 {
- "started_utc": "2026-11-07T02:58:39.059629+00:00",
- "usgs_myb": {
-  "files": {
-   "2007_myb3-2007-kz.xls": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/mineral-pubs/country/2007/myb3-2007-kz.xls",
-   "2009_myb3-2009-kz.xls": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/mineral-pubs/country/2009/myb3-2009-kz.xls",
-   "2010_myb3-2010-kz.xls": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/mineral-pubs/country/2010/myb3-2010-kz.xls",
-   "2011_myb3-2011-kz.xls": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/mineral-pubs/country/2011/myb3-2011-kz.xls",
-   "2012_myb3-2012-kz.xls": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/mineral-pubs/country/2012/myb3-2012-kz.xls",
-   "2013_myb3-2013-kz.xls": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/mineral-pubs/country/2013/myb3-2013-kz.xls",
-   "2014_myb3-2014-kz.xls": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/mineral-pubs/country/2014/myb3-2014-kz.xls"
-  },
-  "tried": 441,
-  "already_had": [
-   "myb3-2016-kazakhstan.xlsx",
-   "myb3-2017-18-kazakhstan.xlsx",
-   "myb3-2019-kazakhstan.xlsx",
-   "myb3-2020-21-kazakhstan.xlsx",
-   "myb3-2022-kazakhstan.xlsx",
-   "myb3-2023-kazakhstan.xlsx"
-  ]
- },
- "finished_utc": "2026-11-07T03:00:47.561136+00:00"
+ "started_utc": "2026-11-07T04:34:07.097598+00:00",
+ "finished_utc": "2026-11-07T04:34:07.097722+00:00"
 }

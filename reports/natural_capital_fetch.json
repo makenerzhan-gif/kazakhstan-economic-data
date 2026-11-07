@@ -1,5 +1,5 @@
 {
- "started_utc": "2026-11-07T02:57:22.290402+00:00",
+ "started_utc": "2026-11-07T04:32:34.344366+00:00",
  "bns": {
   "listings": [
    {
@@ -246,5 +246,5 @@
    "error": "HTTPSConnectionPool(host='www.oecdnea.org', port=443): Max retries exceeded with url: /upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch"
   }
  ],
- "finished_utc": "2026-11-07T02:58:38.897868+00:00"
+ "finished_utc": "2026-11-07T04:34:06.902975+00:00"
 }
