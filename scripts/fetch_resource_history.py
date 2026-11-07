@@ -287,6 +287,43 @@ def comtrade_mirror() -> None:
                              "net_weight_kg", "qty", "qty_unit"], rows)
 
 
+def comtrade_partners() -> None:
+    """Kazakhstan's own exports by destination country (all partners), 2015-2025: shows the
+    Russian share, which mirror data lose after 2021 (Russia stopped reporting to Comtrade)."""
+    log = LOG.setdefault("comtrade_partners", {})
+    rows, truncated, years_ok = [], [], set()
+    codes = list(HS)
+    batches = [codes[i:i + 7] for i in range(0, len(codes), 7)]
+    t0 = time.time()
+    for year in range(2025, 2014, -1):
+        for b in batches:
+            if time.time() - t0 > 25 * 60:
+                break
+            url = ("https://comtradeapi.un.org/public/v1/preview/C/A/HS"
+                   f"?reporterCode=398&period={year}&cmdCode={','.join(b)}&flowCode=X&partner2Code=0"
+                   "&customsCode=C00&motCode=0&includeDesc=true")
+            r = get(url, timeout=120)
+            time.sleep(1.2)
+            if r is None:
+                continue
+            try:
+                data = r.json().get("data") or []
+            except ValueError:
+                continue
+            print(f"partners {year} {b[0]}..: {len(data)} rows ({time.time() - t0:.0f}s)", flush=True)
+            if len(data) >= 500:
+                truncated.append(f"{year}:{','.join(b)}")
+            for d in data:
+                years_ok.add(year)
+                rows.append([year, d.get("partnerCode"), d.get("partnerISO") or d.get("partnerDesc"), "X",
+                             d.get("cmdCode"), HS.get(str(d.get("cmdCode")), d.get("cmdDesc")),
+                             d.get("primaryValue"), d.get("netWgt")])
+    log["years"] = sorted(years_ok)
+    log["truncated_calls"] = truncated
+    log["rows"] = write_csv("comtrade_kazakhstan_by_partner.csv",
+                            ["year", "partner_code", "partner", "flow", "hs", "name", "value_usd", "net_weight_kg"], rows)
+
+
 # ------------------------------------------------------------------ USGS Minerals Yearbook
 def usgs_myb() -> None:
     """USGS Minerals Yearbook, Kazakhstan chapter. 2016+ are xlsx on pubs.usgs.gov; older chapters are
@@ -349,7 +386,7 @@ def main() -> int:
     parts_file = ROOT / "config" / "resource_history_parts.txt"
     if not only and parts_file.exists():
         only = set(parts_file.read_text(encoding="utf-8").split())
-    for part in (energy_institute, owid_energy, eia, world_bank, comtrade, comtrade_mirror, usgs_myb, bgs):
+    for part in (energy_institute, owid_energy, eia, world_bank, comtrade, comtrade_mirror, comtrade_partners, usgs_myb, bgs):
         if only and part.__name__ not in only:
             continue
         try:

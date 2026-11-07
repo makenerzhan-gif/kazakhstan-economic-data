@@ -1,1 +1,1 @@
-comtrade comtrade_mirror eia world_bank
+comtrade_partners
