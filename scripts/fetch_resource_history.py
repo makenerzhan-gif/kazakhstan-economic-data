@@ -282,6 +282,13 @@ def comtrade_mirror() -> None:
     log["years"] = sorted(years_ok)
     log["truncated_calls"] = truncated
     log["skipped_years_time_budget"] = sorted(set(skipped))
+    # keep years this run did not fetch (1995-2009, or years cut by the time budget / rate limits)
+    old = OUT / "comtrade_mirror_kazakhstan.csv"
+    if old.exists():
+        with old.open(encoding="utf-8") as fh:
+            kept = [list(r.values()) for r in csv.DictReader(fh) if int(r["year"]) not in years_ok]
+        rows = kept + rows
+        log["kept_rows_from_previous_file"] = len(kept)
     log["rows"] = write_csv("comtrade_mirror_kazakhstan.csv",
                             ["year", "reporter_code", "reporter", "flow", "hs", "name", "value_usd",
                              "net_weight_kg", "qty", "qty_unit"], rows)
