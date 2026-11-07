@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=488",
+  "dataset_id": "formId=488",
+  "indicator_id": "LOANS_STOCK_BY_INDUSTRY",
+  "indicator_name": "Bank loans to the economy, principal outstanding at the start of the month, by borrower's industry, incl. overdue (analytical presentation)",
+  "description": "Кредиты банковского сектора экономике, основной долг на начало месяца, по отраслям заёмщиков, в т.ч. просроченный (аналитическое представление)",
+  "frequency": "monthly",
+  "unit": "million KZT, at the start of the month",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "NBK formId=488 (315 209 rows, 2023-02 … ; items are sums). Items as LOANS_ISSUED_BY_INDUSTRY plus <industry>.OVERDUE and OVERDUE (overdue principal), STB (second-tier banks) and NON_BANK (the rest of the banking sector). Stocks dated by report_date, the 1st of the month after the reference month (end-of-August stock = 2026-09-01), as BANK_LOANS_STB_*. STB at 2026-09-01 is 42 825 457.5 mln KZT, equal to BANK_LOANS_STB_TOTAL (NBK's historical xlsx) to the tenge (checked 2026-11-07).",
+  "publication_date": null,
+  "last_update_date": "2026-11-07",
+  "download_date": "2026-11-07",
+  "period_start": "2023-02-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

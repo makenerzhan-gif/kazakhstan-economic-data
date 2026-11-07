@@ -1381,6 +1381,11 @@ agencies:
       HOUSING_PRICE_INDEX (scope note):
         status: not_connected
         notes: >
+          SUPERSEDED 2026-11-07: connected as the item-level datasets HOUSING_PRICE_INDEX_BY_CITY and
+          HOUSING_PRICE_M2_BY_CITY (config/dims.yaml). Only the quarterly period (5) of 703083 is frozen at
+          2020; the monthly period (4) is current. The housing type is selected by its term at the
+          dictionary-2817 position, and a dimension's terms CAN be listed: GetIndexTreeData with
+          p_parent_id="", idx=<position>, p_term_id=<current term>. The original note follows.
           2026-09-01. The audit asked for a housing price index. It EXISTS on Taldau -- index
           703083 'Индексы цен на рынке жилья' (code 261605), with a companion 703116 'Цены на
           рынке жилья' -- but it is NOT connectable as a current indicator, for two independent
@@ -2817,6 +2822,8 @@ agencies:
           empty/aggregate value in any dimension. Also tried formId=488 ("Кредиты
           банковского сектора экономике (аналитическое представление) - основной долг") and
           formId=493 (same, "выдано за период") -- both pure microdata, no aggregation field.
+          [2026-11-07: the rows are a partition, so totals are their sums -- fetchers/nbk_cube.py,
+          datasets LOANS_STOCK_BY_* / LOANS_ISSUED_BY_*; form 488's banks equal BANK_LOANS_STB_TOTAL.]
           Resolution: went back to formId=314 (Financial Soundness Indicators, already
           connected for CAPITAL_ADEQUACY_RATIO/NPL_RATIO) and checked its other `indicator`
           values -- 'Total gross loans' under subject='Core FSIs for Deposit takers' is NBK's

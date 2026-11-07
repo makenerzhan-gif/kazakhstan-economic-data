@@ -28,8 +28,19 @@ def test_every_dataset_has_a_fetcher_and_a_known_layout():
             assert ds.get("flow", "exports") in ("exports", "imports")
         elif key == "taldau_regional":
             assert ds["index_id"] and ds["dic_ids"].count(",") == ds["terms"].count(",") and ds["items"]
-            assert len({i["code"] for i in ds["items"]}) == len(ds["items"]) and ds["frequency"] == "monthly"
+            assert len({i["code"] for i in ds["items"]}) == len(ds["items"]) and ds["frequency"] in ("monthly", "quarterly", "annual")
             assert all(i["name"] and i["term"] for i in ds["items"])
+            for seg in ds.get("segments") or []:
+                assert seg["dic_ids"].count(",") == seg["terms"].count(","), ds["id"]
+            if ds.get("flat_regions"):
+                assert ds["region_terms"] and set(ds["region_terms"].values()) - {None} <= {e["code"] for e in dims.load_dictionary("regions")}
+        elif key == "nbk_cube":
+            assert ds["form_id"] and ds["levels"] and all(f in ds["codes"] for level in ds["levels"] for f in level), ds["id"]
+            assert all(spec == "countries" or isinstance(spec, dict) for spec in ds["codes"].values()), ds["id"]
+        elif key == "manual_vintages":
+            assert (REPO_ROOT / ds["file"]).exists() and ds["frequency"] == "annual"
+        elif key in ("nbk_interventions", "nbk_open_position", "nbk_deposit_auctions"):
+            assert ds["frequency"] == "monthly" and ds["agency"] == "nbk"
         elif key == "bns_resource_use":
             assert ds["period"] in ("monthly", "ytd", "annual")
         elif key == "bns_balances":

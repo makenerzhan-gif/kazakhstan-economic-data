@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703116",
+  "indicator_id": "HOUSING_PRICE_M2_BY_CITY",
+  "indicator_name": "Average housing prices (new housing, resale apartments, rent) by city, KZT per square metre, monthly",
+  "description": "Средние цены на рынке жилья (новое жильё, перепродажа квартир, аренда) по городам, тенге за кв. м, помесячно",
+  "frequency": "monthly",
+  "unit": "KZT per square metre (rent: per square metre a month)",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Taldau 703116 «Цены на рынке жилья», period 4. Region column as HOUSING_PRICE_INDEX_BY_CITY (cities; the oblast code for an oblast centre). National 2026-08: NEW 625 435, RESALE 635 185, RENT 5 350 KZT per m2.",
+  "publication_date": null,
+  "last_update_date": "2026-11-07",
+  "download_date": "2026-11-07",
+  "period_start": "2011-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

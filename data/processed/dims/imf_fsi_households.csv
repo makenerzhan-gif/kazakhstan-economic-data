@@ -1,0 +1,196 @@
+date,region,item_code,item_name,value,transformation
+2008-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",91.435963,level
+2008-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",86.277329,level
+2008-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",81.088388,level
+2008-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",77.013799,level
+2009-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",77.047806,level
+2009-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",71.120967,level
+2009-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",67.691135,level
+2009-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",63.898979,level
+2010-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",59.114301,level
+2010-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",54.820183,level
+2010-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",52.692508,level
+2010-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",51.455444,level
+2011-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",44.912684,level
+2011-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",45.25256,level
+2011-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",43.579345,level
+2011-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",44.956622,level
+2012-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",43.492354,level
+2012-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",43.306721,level
+2012-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",44.977212,level
+2012-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",46.749775,level
+2013-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",46.448981,level
+2013-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",49.298449,level
+2013-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",51.005033,level
+2013-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",53.478706,level
+2014-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",56.473234,level
+2014-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",56.240866,level
+2014-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",55.545705,level
+2014-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",54.629597,level
+2015-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",52.063899,level
+2015-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",51.891616,level
+2015-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",52.549595,level
+2015-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",53.483006,level
+2016-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",49.052122,level
+2016-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",48.148244,level
+2016-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",48.250682,level
+2016-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",47.414919,level
+2017-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",45.518857,level
+2017-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",46.651172,level
+2017-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",48.170275,level
+2017-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",48.315792,level
+2018-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",46.357987,level
+2018-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",48.149782,level
+2018-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",49.597304,level
+2018-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",50.405438,level
+2019-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",46.792262,level
+2019-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",49.261965,level
+2019-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",51.652628,level
+2019-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",54.360855,level
+2020-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",54.035823,level
+2020-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",52.582503,level
+2020-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",53.659164,level
+2020-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",55.903042,level
+2021-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",53.385867,level
+2021-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",57.491553,level
+2021-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",63.21708,level
+2021-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",69.599355,level
+2022-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",65.295764,level
+2022-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",67.912484,level
+2022-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",72.147445,level
+2022-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",76.405083,level
+2023-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",69.209034,level
+2023-06-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",72.526616,level
+2023-09-30,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",77.052098,level
+2023-12-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",80.8864,level
+2024-03-31,national,FSI157_AFSI_PT,"Household debt to household disposal income, (Additional FSI), Percent",78.442928,level
+2008-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",17.641164,level
+2008-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",17.370666,level
+2008-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",17.042207,level
+2008-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",16.768516,level
+2009-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",16.655525,level
+2009-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",15.927552,level
+2009-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",15.601065,level
+2009-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",15.092493,level
+2010-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",11.402033,level
+2010-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",11.066374,level
+2010-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",11.101895,level
+2010-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",11.148123,level
+2011-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.599892,level
+2011-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.881782,level
+2011-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.833666,level
+2011-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.363057,level
+2012-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.64477,level
+2012-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.801736,level
+2012-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.355946,level
+2012-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.895088,level
+2013-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.783447,level
+2013-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.496849,level
+2013-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.214361,level
+2013-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.782324,level
+2014-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.406551,level
+2014-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.674871,level
+2014-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.783484,level
+2014-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.752015,level
+2015-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.241746,level
+2015-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.401682,level
+2015-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.685294,level
+2015-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.978816,level
+2016-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.222056,level
+2016-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.198997,level
+2016-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.365995,level
+2016-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.323807,level
+2017-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.054227,level
+2017-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.402994,level
+2017-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.852678,level
+2017-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.99741,level
+2018-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",7.958664,level
+2018-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.389911,level
+2018-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.81136,level
+2018-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.114185,level
+2019-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.016263,level
+2019-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",8.574361,level
+2019-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.140345,level
+2019-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.735312,level
+2020-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.911044,level
+2020-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.820633,level
+2020-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.200372,level
+2020-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.801486,level
+2021-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",9.34129,level
+2021-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.308694,level
+2021-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",11.532876,level
+2021-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",12.872443,level
+2022-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",10.823504,level
+2022-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",11.584131,level
+2022-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",12.636684,level
+2022-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",13.672099,level
+2023-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",12.281174,level
+2023-06-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",13.132353,level
+2023-09-30,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",14.296767,level
+2023-12-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",15.306819,level
+2024-03-31,national,FSI179_AFSI_PT,"Household debt to gross domestic product (GDP), (Additional FSI), Percent",14.093183,level
+2008-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.388654,level
+2008-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.346752,level
+2008-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.004204,level
+2008-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.758923,level
+2009-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.276764,level
+2009-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.151989,level
+2009-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.017428,level
+2009-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.811071,level
+2010-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.44705,level
+2010-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.254469,level
+2010-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.112722,level
+2010-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",2.964716,level
+2011-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.386127,level
+2011-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.360731,level
+2011-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.330387,level
+2011-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.282065,level
+2012-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.654588,level
+2012-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.73023,level
+2012-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.570331,level
+2012-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.497121,level
+2013-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.80827,level
+2013-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.765078,level
+2013-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.660948,level
+2013-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.624948,level
+2014-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.421838,level
+2014-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.161972,level
+2014-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.981311,level
+2014-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.899973,level
+2015-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.123782,level
+2015-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.011669,level
+2015-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.887472,level
+2015-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.810227,level
+2016-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.823358,level
+2016-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.683055,level
+2016-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.574647,level
+2016-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.46107,level
+2017-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.189029,level
+2017-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.132004,level
+2017-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.022932,level
+2017-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",3.940647,level
+2018-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.29199,level
+2018-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.234371,level
+2018-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.184916,level
+2018-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.096721,level
+2019-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",5.013337,level
+2019-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.70432,level
+2019-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.487918,level
+2019-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.329223,level
+2020-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",5.154781,level
+2020-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",5.065356,level
+2020-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.991803,level
+2020-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.925492,level
+2021-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",5.289935,level
+2021-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",5.179537,level
+2021-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",5.02741,level
+2021-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",4.94546,level
+2022-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",6.0252,level
+2022-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",5.827563,level
+2022-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",5.626258,level
+2022-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",5.431593,level
+2023-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",5.788385,level
+2023-06-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",5.787332,level
+2023-09-30,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",5.683357,level
+2023-12-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",5.485719,level
+2024-03-31,national,FSI85_AFSI_PT,"Household debt service and principal payments to income, (Additional FSI), Percent",6.346642,level

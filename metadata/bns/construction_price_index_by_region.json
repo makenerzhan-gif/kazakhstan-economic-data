@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703045",
+  "indicator_id": "CONSTRUCTION_PRICE_INDEX_BY_REGION",
+  "indicator_name": "Construction price index (total, construction and installation works, machinery and equipment) by region, monthly",
+  "description": "Индекс цен в строительстве (всего, строительно-монтажные работы, машины и оборудование) по регионам, помесячно",
+  "frequency": "monthly",
+  "unit": "% (previous month = 100 or same month a year earlier = 100)",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Taldau 703045 (total), 703046 (СМР), 703047 (machinery and equipment), period 4, 2011-01 onward. The components have no 2026-07 on Taldau. National 2026-09: TOTAL.MOM 100.4, TOTAL.YOY 110.4. Purchased building materials (703051) have no single total on Taldau and are not kept.",
+  "publication_date": null,
+  "last_update_date": "2026-11-07",
+  "download_date": "2026-11-07",
+  "period_start": "2011-01-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

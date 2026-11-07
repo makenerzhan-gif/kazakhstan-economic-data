@@ -1,0 +1,3001 @@
+date,region,item_code,item_name,value,transformation
+2010-02-01,national,MAOKAM,MAOKAM,9573.0,level
+2010-03-01,national,MAOKAM,MAOKAM,9515.0,level
+2010-04-01,national,MAOKAM,MAOKAM,9493.0,level
+2010-05-01,national,MAOKAM,MAOKAM,9458.0,level
+2010-06-01,national,MAOKAM,MAOKAM,9475.0,level
+2010-07-01,national,MAOKAM,MAOKAM,9530.0,level
+2010-08-01,national,MAOKAM,MAOKAM,9539.0,level
+2010-09-01,national,MAOKAM,MAOKAM,9516.0,level
+2010-10-01,national,MAOKAM,MAOKAM,9531.0,level
+2010-11-01,national,MAOKAM,MAOKAM,9528.0,level
+2010-12-01,national,MAOKAM,MAOKAM,9532.0,level
+2011-01-01,national,MAOKAM,MAOKAM,9527.0,level
+2011-02-01,national,MAOKAM,MAOKAM,9672.0,level
+2011-03-01,national,MAOKAM,MAOKAM,9672.0,level
+2011-04-01,national,MAOKAM,MAOKAM,9672.0,level
+2011-05-01,national,MAOKAM,MAOKAM,9672.0,level
+2011-06-01,national,MAOKAM,MAOKAM,9672.0,level
+2011-07-01,national,MAOKAM,MAOKAM,9672.0,level
+2011-08-01,national,MAOKAM,MAOKAM,9439.0,level
+2011-09-01,national,MAOKAM,MAOKAM,9460.0,level
+2011-10-01,national,MAOKAM,MAOKAM,9559.0,level
+2011-11-01,national,MAOKAM,MAOKAM,9544.0,level
+2011-12-01,national,MAOKAM,MAOKAM,9467.0,level
+2012-01-01,national,MAOKAM,MAOKAM,9513.0,level
+2012-02-01,national,MAOKAM,MAOKAM,9523.0,level
+2012-03-01,national,MAOKAM,MAOKAM,9470.0,level
+2012-04-01,national,MAOKAM,MAOKAM,9472.0,level
+2012-05-01,national,MAOKAM,MAOKAM,9480.0,level
+2012-06-01,national,MAOKAM,MAOKAM,9491.0,level
+2012-07-01,national,MAOKAM,MAOKAM,9578.0,level
+2012-08-01,national,MAOKAM,MAOKAM,9616.0,level
+2012-09-01,national,MAOKAM,MAOKAM,9588.0,level
+2012-10-01,national,MAOKAM,MAOKAM,9606.0,level
+2012-11-01,national,MAOKAM,MAOKAM,9665.0,level
+2012-12-01,national,MAOKAM,MAOKAM,0.0,level
+2013-01-01,national,MAOKAM,MAOKAM,0.0,level
+2013-02-01,national,MAOKAM,MAOKAM,0.0,level
+2013-03-01,national,MAOKAM,MAOKAM,0.0,level
+2013-04-01,national,MAOKAM,MAOKAM,0.0,level
+2013-05-01,national,MAOKAM,MAOKAM,0.0,level
+2013-06-01,national,MAOKAM,MAOKAM,0.0,level
+2013-07-01,national,MAOKAM,MAOKAM,0.0,level
+2013-08-01,national,MAOKAM,MAOKAM,0.0,level
+2013-09-01,national,MAOKAM,MAOKAM,0.0,level
+2013-10-01,national,MAOKAM,MAOKAM,0.0,level
+2013-11-01,national,MAOKAM,MAOKAM,0.0,level
+2013-12-01,national,MAOKAM,MAOKAM,0.0,level
+2014-01-01,national,MAOKAM,MAOKAM,0.0,level
+2014-02-01,national,MAOKAM,MAOKAM,0.0,level
+2014-03-01,national,MAOKAM,MAOKAM,0.0,level
+2014-04-01,national,MAOKAM,MAOKAM,0.0,level
+2014-05-01,national,MAOKAM,MAOKAM,0.0,level
+2014-06-01,national,MAOKAM,MAOKAM,0.0,level
+2014-07-01,national,MAOKAM,MAOKAM,0.0,level
+2014-08-01,national,MAOKAM,MAOKAM,0.0,level
+2014-09-01,national,MAOKAM,MAOKAM,0.0,level
+2014-10-01,national,MAOKAM,MAOKAM,0.0,level
+2014-11-01,national,MAOKAM,MAOKAM,0.0,level
+2014-12-01,national,MAOKAM,MAOKAM,0.0,level
+2015-01-01,national,MAOKAM,MAOKAM,0.0,level
+2015-02-01,national,MAOKAM,MAOKAM,0.0,level
+2015-03-01,national,MAOKAM,MAOKAM,0.0,level
+2015-04-01,national,MAOKAM,MAOKAM,0.0,level
+2015-05-01,national,MAOKAM,MAOKAM,0.0,level
+2015-06-01,national,MAOKAM,MAOKAM,0.0,level
+2015-07-01,national,MAOKAM,MAOKAM,0.0,level
+2015-08-01,national,MAOKAM,MAOKAM,0.0,level
+2015-09-01,national,MAOKAM,MAOKAM,0.0,level
+2015-10-01,national,MAOKAM,MAOKAM,0.0,level
+2015-11-01,national,MAOKAM,MAOKAM,0.0,level
+2015-12-01,national,MAOKAM,MAOKAM,0.0,level
+2016-01-01,national,MAOKAM,MAOKAM,0.0,level
+2016-02-01,national,MAOKAM,MAOKAM,0.0,level
+2016-03-01,national,MAOKAM,MAOKAM,0.0,level
+2016-04-01,national,MAOKAM,MAOKAM,0.0,level
+2016-05-01,national,MAOKAM,MAOKAM,0.0,level
+2016-06-01,national,MAOKAM,MAOKAM,0.0,level
+2016-07-01,national,MAOKAM,MAOKAM,0.0,level
+2016-08-01,national,MAOKAM,MAOKAM,0.0,level
+2016-09-01,national,MAOKAM,MAOKAM,0.0,level
+2016-10-01,national,MAOKAM,MAOKAM,0.0,level
+2016-11-01,national,MAOKAM,MAOKAM,0.0,level
+2016-12-01,national,MAOKAM,MAOKAM,0.0,level
+2017-01-01,national,MAOKAM,MAOKAM,0.0,level
+2017-02-01,national,MAOKAM,MAOKAM,0.0,level
+2017-03-01,national,MAOKAM,MAOKAM,0.0,level
+2017-04-01,national,MAOKAM,MAOKAM,0.0,level
+2017-05-01,national,MAOKAM,MAOKAM,0.0,level
+2017-06-01,national,MAOKAM,MAOKAM,0.0,level
+2017-07-01,national,MAOKAM,MAOKAM,0.0,level
+2017-08-01,national,MAOKAM,MAOKAM,0.0,level
+2017-09-01,national,MAOKAM,MAOKAM,0.0,level
+2017-10-01,national,MAOKAM,MAOKAM,0.0,level
+2017-11-01,national,MAOKAM,MAOKAM,0.0,level
+2017-12-01,national,MAOKAM,MAOKAM,0.0,level
+2018-01-01,national,MAOKAM,MAOKAM,0.0,level
+2018-02-01,national,MAOKAM,MAOKAM,0.0,level
+2018-03-01,national,MAOKAM,MAOKAM,0.0,level
+2018-04-01,national,MAOKAM,MAOKAM,0.0,level
+2018-05-01,national,MAOKAM,MAOKAM,0.0,level
+2018-06-01,national,MAOKAM,MAOKAM,0.0,level
+2018-07-01,national,MAOKAM,MAOKAM,0.0,level
+2018-08-01,national,MAOKAM,MAOKAM,0.0,level
+2018-09-01,national,MAOKAM,MAOKAM,0.0,level
+2018-10-01,national,MAOKAM,MAOKAM,0.0,level
+2018-11-01,national,MAOKAM,MAOKAM,0.0,level
+2018-12-01,national,MAOKAM,MAOKAM,0.0,level
+2019-01-01,national,MAOKAM,MAOKAM,0.0,level
+2019-02-01,national,MAOKAM,MAOKAM,0.0,level
+2019-03-01,national,MAOKAM,MAOKAM,0.0,level
+2019-04-01,national,MAOKAM,MAOKAM,0.0,level
+2019-05-01,national,MAOKAM,MAOKAM,0.0,level
+2019-06-01,national,MAOKAM,MAOKAM,0.0,level
+2019-07-01,national,MAOKAM,MAOKAM,0.0,level
+2019-08-01,national,MAOKAM,MAOKAM,0.0,level
+2019-09-01,national,MAOKAM,MAOKAM,0.0,level
+2019-10-01,national,MAOKAM,MAOKAM,0.0,level
+2019-11-01,national,MAOKAM,MAOKAM,0.0,level
+2019-12-01,national,MAOKAM,MAOKAM,0.0,level
+2020-01-01,national,MAOKAM,MAOKAM,0.0,level
+2020-02-01,national,MAOKAM,MAOKAM,0.0,level
+2020-03-01,national,MAOKAM,MAOKAM,0.0,level
+2020-04-01,national,MAOKAM,MAOKAM,0.0,level
+2020-05-01,national,MAOKAM,MAOKAM,0.0,level
+2020-06-01,national,MAOKAM,MAOKAM,0.0,level
+2020-07-01,national,MAOKAM,MAOKAM,0.0,level
+2020-08-01,national,MAOKAM,MAOKAM,0.0,level
+2020-09-01,national,MAOKAM,MAOKAM,0.0,level
+2020-10-01,national,MAOKAM,MAOKAM,0.0,level
+2020-11-01,national,MAOKAM,MAOKAM,0.0,level
+2020-12-01,national,MAOKAM,MAOKAM,0.0,level
+2021-01-01,national,MAOKAM,MAOKAM,0.0,level
+2021-02-01,national,MAOKAM,MAOKAM,0.0,level
+2021-03-01,national,MAOKAM,MAOKAM,0.0,level
+2021-04-01,national,MAOKAM,MAOKAM,0.0,level
+2021-05-01,national,MAOKAM,MAOKAM,0.0,level
+2021-06-01,national,MAOKAM,MAOKAM,0.0,level
+2021-07-01,national,MAOKAM,MAOKAM,0.0,level
+2021-08-01,national,MAOKAM,MAOKAM,0.0,level
+2021-09-01,national,MAOKAM,MAOKAM,0.0,level
+2021-10-01,national,MAOKAM,MAOKAM,0.0,level
+2021-11-01,national,MAOKAM,MAOKAM,0.0,level
+2021-12-01,national,MAOKAM,MAOKAM,0.0,level
+2022-01-01,national,MAOKAM,MAOKAM,0.0,level
+2022-02-01,national,MAOKAM,MAOKAM,0.0,level
+2022-03-01,national,MAOKAM,MAOKAM,0.0,level
+2022-04-01,national,MAOKAM,MAOKAM,0.0,level
+2022-05-01,national,MAOKAM,MAOKAM,0.0,level
+2022-06-01,national,MAOKAM,MAOKAM,0.0,level
+2022-07-01,national,MAOKAM,MAOKAM,0.0,level
+2022-08-01,national,MAOKAM,MAOKAM,0.0,level
+2022-09-01,national,MAOKAM,MAOKAM,0.0,level
+2022-10-01,national,MAOKAM,MAOKAM,0.0,level
+2022-11-01,national,MAOKAM,MAOKAM,0.0,level
+2022-12-01,national,MAOKAM,MAOKAM,0.0,level
+2023-01-01,national,MAOKAM,MAOKAM,0.0,level
+2023-02-01,national,MAOKAM,MAOKAM,0.0,level
+2023-03-01,national,MAOKAM,MAOKAM,0.0,level
+2023-04-01,national,MAOKAM,MAOKAM,0.0,level
+2023-05-01,national,MAOKAM,MAOKAM,0.0,level
+2023-06-01,national,MAOKAM,MAOKAM,0.0,level
+2023-07-01,national,MAOKAM,MAOKAM,0.0,level
+2023-08-01,national,MAOKAM,MAOKAM,0.0,level
+2023-09-01,national,MAOKAM,MAOKAM,0.0,level
+2023-10-01,national,MAOKAM,MAOKAM,0.0,level
+2023-11-01,national,MAOKAM,MAOKAM,0.0,level
+2023-12-01,national,MAOKAM,MAOKAM,0.0,level
+2024-01-01,national,MAOKAM,MAOKAM,0.0,level
+2024-02-01,national,MAOKAM,MAOKAM,0.0,level
+2024-03-01,national,MAOKAM,MAOKAM,0.0,level
+2024-04-01,national,MAOKAM,MAOKAM,0.0,level
+2024-05-01,national,MAOKAM,MAOKAM,0.0,level
+2024-06-01,national,MAOKAM,MAOKAM,0.0,level
+2024-07-01,national,MAOKAM,MAOKAM,0.0,level
+2024-08-01,national,MAOKAM,MAOKAM,0.0,level
+2024-09-01,national,MAOKAM,MAOKAM,0.0,level
+2024-10-01,national,MAOKAM,MAOKAM,0.0,level
+2024-11-01,national,MAOKAM,MAOKAM,0.0,level
+2024-12-01,national,MAOKAM,MAOKAM,0.0,level
+2025-01-01,national,MAOKAM,MAOKAM,0.0,level
+2025-02-01,national,MAOKAM,MAOKAM,0.0,level
+2025-03-01,national,MAOKAM,MAOKAM,0.0,level
+2025-04-01,national,MAOKAM,MAOKAM,0.0,level
+2025-05-01,national,MAOKAM,MAOKAM,0.0,level
+2025-06-01,national,MAOKAM,MAOKAM,0.0,level
+2025-07-01,national,MAOKAM,MAOKAM,0.0,level
+2025-08-01,national,MAOKAM,MAOKAM,0.0,level
+2025-09-01,national,MAOKAM,MAOKAM,0.0,level
+2025-10-01,national,MAOKAM,MAOKAM,0.0,level
+2025-11-01,national,MAOKAM,MAOKAM,0.0,level
+2025-12-01,national,MAOKAM,MAOKAM,0.0,level
+2026-01-01,national,MAOKAM,MAOKAM,0.0,level
+2026-02-01,national,MAOKAM,MAOKAM,0.0,level
+2026-03-01,national,MAOKAM,MAOKAM,0.0,level
+2026-04-01,national,MAOKAM,MAOKAM,0.0,level
+2026-05-01,national,MAOKAM,MAOKAM,0.0,level
+2026-06-01,national,MAOKAM,MAOKAM,0.0,level
+2026-07-01,national,MAOKAM,MAOKAM,0.0,level
+2026-08-01,national,MAOKAM,MAOKAM,0.0,level
+2026-09-01,national,MAOKAM,MAOKAM,0.0,level
+2010-02-01,national,MAOKO,MAOKO,0.0,level
+2010-03-01,national,MAOKO,MAOKO,0.0,level
+2010-04-01,national,MAOKO,MAOKO,0.0,level
+2010-05-01,national,MAOKO,MAOKO,0.0,level
+2010-06-01,national,MAOKO,MAOKO,0.0,level
+2010-07-01,national,MAOKO,MAOKO,0.0,level
+2010-08-01,national,MAOKO,MAOKO,0.0,level
+2010-09-01,national,MAOKO,MAOKO,0.0,level
+2010-10-01,national,MAOKO,MAOKO,0.0,level
+2010-11-01,national,MAOKO,MAOKO,0.0,level
+2010-12-01,national,MAOKO,MAOKO,0.0,level
+2011-01-01,national,MAOKO,MAOKO,0.0,level
+2011-02-01,national,MAOKO,MAOKO,0.0,level
+2011-03-01,national,MAOKO,MAOKO,0.0,level
+2011-04-01,national,MAOKO,MAOKO,0.0,level
+2011-05-01,national,MAOKO,MAOKO,0.0,level
+2011-06-01,national,MAOKO,MAOKO,0.0,level
+2011-07-01,national,MAOKO,MAOKO,0.0,level
+2011-08-01,national,MAOKO,MAOKO,0.0,level
+2011-09-01,national,MAOKO,MAOKO,0.0,level
+2011-10-01,national,MAOKO,MAOKO,0.0,level
+2011-11-01,national,MAOKO,MAOKO,0.0,level
+2011-12-01,national,MAOKO,MAOKO,0.0,level
+2012-01-01,national,MAOKO,MAOKO,0.0,level
+2012-02-01,national,MAOKO,MAOKO,0.0,level
+2012-03-01,national,MAOKO,MAOKO,0.0,level
+2012-04-01,national,MAOKO,MAOKO,0.0,level
+2012-05-01,national,MAOKO,MAOKO,0.0,level
+2012-06-01,national,MAOKO,MAOKO,0.0,level
+2012-07-01,national,MAOKO,MAOKO,0.0,level
+2012-08-01,national,MAOKO,MAOKO,0.0,level
+2012-09-01,national,MAOKO,MAOKO,0.0,level
+2012-10-01,national,MAOKO,MAOKO,0.0,level
+2012-11-01,national,MAOKO,MAOKO,0.0,level
+2012-12-01,national,MAOKO,MAOKO,0.0,level
+2013-01-01,national,MAOKO,MAOKO,0.0,level
+2013-02-01,national,MAOKO,MAOKO,0.0,level
+2013-03-01,national,MAOKO,MAOKO,0.0,level
+2013-04-01,national,MAOKO,MAOKO,0.0,level
+2013-05-01,national,MAOKO,MAOKO,0.0,level
+2013-06-01,national,MAOKO,MAOKO,0.0,level
+2013-07-01,national,MAOKO,MAOKO,0.0,level
+2013-08-01,national,MAOKO,MAOKO,0.0,level
+2013-09-01,national,MAOKO,MAOKO,0.0,level
+2013-10-01,national,MAOKO,MAOKO,0.0,level
+2013-11-01,national,MAOKO,MAOKO,0.0,level
+2013-12-01,national,MAOKO,MAOKO,0.0,level
+2014-01-01,national,MAOKO,MAOKO,0.0,level
+2014-02-01,national,MAOKO,MAOKO,0.0,level
+2014-03-01,national,MAOKO,MAOKO,0.0,level
+2014-04-01,national,MAOKO,MAOKO,0.0,level
+2014-05-01,national,MAOKO,MAOKO,0.0,level
+2014-06-01,national,MAOKO,MAOKO,0.0,level
+2014-07-01,national,MAOKO,MAOKO,0.0,level
+2014-08-01,national,MAOKO,MAOKO,0.0,level
+2014-09-01,national,MAOKO,MAOKO,0.0,level
+2014-10-01,national,MAOKO,MAOKO,0.0,level
+2014-11-01,national,MAOKO,MAOKO,0.0,level
+2014-12-01,national,MAOKO,MAOKO,0.0,level
+2015-01-01,national,MAOKO,MAOKO,0.0,level
+2015-02-01,national,MAOKO,MAOKO,0.0,level
+2015-03-01,national,MAOKO,MAOKO,0.0,level
+2015-04-01,national,MAOKO,MAOKO,0.0,level
+2015-05-01,national,MAOKO,MAOKO,0.0,level
+2015-06-01,national,MAOKO,MAOKO,0.0,level
+2015-07-01,national,MAOKO,MAOKO,0.0,level
+2015-08-01,national,MAOKO,MAOKO,0.0,level
+2015-09-01,national,MAOKO,MAOKO,0.0,level
+2015-10-01,national,MAOKO,MAOKO,0.0,level
+2015-11-01,national,MAOKO,MAOKO,0.0,level
+2015-12-01,national,MAOKO,MAOKO,0.0,level
+2016-01-01,national,MAOKO,MAOKO,0.0,level
+2016-02-01,national,MAOKO,MAOKO,0.0,level
+2016-03-01,national,MAOKO,MAOKO,0.0,level
+2016-04-01,national,MAOKO,MAOKO,0.0,level
+2016-05-01,national,MAOKO,MAOKO,0.0,level
+2016-06-01,national,MAOKO,MAOKO,0.0,level
+2016-07-01,national,MAOKO,MAOKO,0.0,level
+2016-08-01,national,MAOKO,MAOKO,0.0,level
+2016-09-01,national,MAOKO,MAOKO,0.0,level
+2016-10-01,national,MAOKO,MAOKO,0.0,level
+2016-11-01,national,MAOKO,MAOKO,0.0,level
+2016-12-01,national,MAOKO,MAOKO,0.0,level
+2017-01-01,national,MAOKO,MAOKO,0.0,level
+2017-02-01,national,MAOKO,MAOKO,0.0,level
+2017-03-01,national,MAOKO,MAOKO,0.0,level
+2017-04-01,national,MAOKO,MAOKO,0.0,level
+2017-05-01,national,MAOKO,MAOKO,0.0,level
+2017-06-01,national,MAOKO,MAOKO,0.0,level
+2017-07-01,national,MAOKO,MAOKO,0.0,level
+2017-08-01,national,MAOKO,MAOKO,0.0,level
+2017-09-01,national,MAOKO,MAOKO,0.0,level
+2017-10-01,national,MAOKO,MAOKO,0.0,level
+2017-11-01,national,MAOKO,MAOKO,0.0,level
+2017-12-01,national,MAOKO,MAOKO,0.0,level
+2018-01-01,national,MAOKO,MAOKO,0.0,level
+2018-02-01,national,MAOKO,MAOKO,0.0,level
+2018-03-01,national,MAOKO,MAOKO,0.0,level
+2018-04-01,national,MAOKO,MAOKO,0.0,level
+2018-05-01,national,MAOKO,MAOKO,0.0,level
+2018-06-01,national,MAOKO,MAOKO,0.0,level
+2018-07-01,national,MAOKO,MAOKO,0.0,level
+2018-08-01,national,MAOKO,MAOKO,0.0,level
+2018-09-01,national,MAOKO,MAOKO,0.0,level
+2018-10-01,national,MAOKO,MAOKO,0.0,level
+2018-11-01,national,MAOKO,MAOKO,0.0,level
+2018-12-01,national,MAOKO,MAOKO,0.0,level
+2019-01-01,national,MAOKO,MAOKO,0.0,level
+2019-02-01,national,MAOKO,MAOKO,0.0,level
+2019-03-01,national,MAOKO,MAOKO,0.0,level
+2019-04-01,national,MAOKO,MAOKO,0.0,level
+2019-05-01,national,MAOKO,MAOKO,0.0,level
+2019-06-01,national,MAOKO,MAOKO,0.0,level
+2019-07-01,national,MAOKO,MAOKO,0.0,level
+2019-08-01,national,MAOKO,MAOKO,0.0,level
+2019-09-01,national,MAOKO,MAOKO,0.0,level
+2019-10-01,national,MAOKO,MAOKO,0.0,level
+2019-11-01,national,MAOKO,MAOKO,0.0,level
+2019-12-01,national,MAOKO,MAOKO,0.0,level
+2020-01-01,national,MAOKO,MAOKO,0.0,level
+2020-02-01,national,MAOKO,MAOKO,0.0,level
+2020-03-01,national,MAOKO,MAOKO,0.0,level
+2020-04-01,national,MAOKO,MAOKO,0.0,level
+2020-05-01,national,MAOKO,MAOKO,0.0,level
+2020-06-01,national,MAOKO,MAOKO,0.0,level
+2020-07-01,national,MAOKO,MAOKO,0.0,level
+2020-08-01,national,MAOKO,MAOKO,0.0,level
+2020-09-01,national,MAOKO,MAOKO,0.0,level
+2020-10-01,national,MAOKO,MAOKO,0.0,level
+2020-11-01,national,MAOKO,MAOKO,0.0,level
+2020-12-01,national,MAOKO,MAOKO,0.0,level
+2021-01-01,national,MAOKO,MAOKO,0.0,level
+2021-02-01,national,MAOKO,MAOKO,0.0,level
+2021-03-01,national,MAOKO,MAOKO,0.0,level
+2021-04-01,national,MAOKO,MAOKO,0.0,level
+2021-05-01,national,MAOKO,MAOKO,0.0,level
+2021-06-01,national,MAOKO,MAOKO,0.0,level
+2021-07-01,national,MAOKO,MAOKO,0.0,level
+2021-08-01,national,MAOKO,MAOKO,0.0,level
+2021-09-01,national,MAOKO,MAOKO,0.0,level
+2021-10-01,national,MAOKO,MAOKO,0.0,level
+2021-11-01,national,MAOKO,MAOKO,0.0,level
+2021-12-01,national,MAOKO,MAOKO,0.0,level
+2022-01-01,national,MAOKO,MAOKO,0.0,level
+2022-02-01,national,MAOKO,MAOKO,0.0,level
+2022-03-01,national,MAOKO,MAOKO,0.0,level
+2022-04-01,national,MAOKO,MAOKO,0.0,level
+2022-05-01,national,MAOKO,MAOKO,0.0,level
+2022-06-01,national,MAOKO,MAOKO,0.0,level
+2022-07-01,national,MAOKO,MAOKO,0.0,level
+2022-08-01,national,MAOKO,MAOKO,0.0,level
+2022-09-01,national,MAOKO,MAOKO,0.0,level
+2022-10-01,national,MAOKO,MAOKO,0.0,level
+2022-11-01,national,MAOKO,MAOKO,0.0,level
+2022-12-01,national,MAOKO,MAOKO,0.0,level
+2023-01-01,national,MAOKO,MAOKO,0.0,level
+2023-02-01,national,MAOKO,MAOKO,0.0,level
+2023-03-01,national,MAOKO,MAOKO,0.0,level
+2023-04-01,national,MAOKO,MAOKO,0.0,level
+2023-05-01,national,MAOKO,MAOKO,0.0,level
+2023-06-01,national,MAOKO,MAOKO,0.0,level
+2023-07-01,national,MAOKO,MAOKO,0.0,level
+2023-08-01,national,MAOKO,MAOKO,0.0,level
+2023-09-01,national,MAOKO,MAOKO,0.0,level
+2023-10-01,national,MAOKO,MAOKO,0.0,level
+2023-11-01,national,MAOKO,MAOKO,0.0,level
+2023-12-01,national,MAOKO,MAOKO,0.0,level
+2024-01-01,national,MAOKO,MAOKO,0.0,level
+2024-02-01,national,MAOKO,MAOKO,0.0,level
+2024-03-01,national,MAOKO,MAOKO,0.0,level
+2024-04-01,national,MAOKO,MAOKO,0.0,level
+2024-05-01,national,MAOKO,MAOKO,0.0,level
+2024-06-01,national,MAOKO,MAOKO,0.0,level
+2024-07-01,national,MAOKO,MAOKO,0.0,level
+2024-08-01,national,MAOKO,MAOKO,0.0,level
+2024-09-01,national,MAOKO,MAOKO,0.0,level
+2024-10-01,national,MAOKO,MAOKO,0.0,level
+2024-11-01,national,MAOKO,MAOKO,0.0,level
+2024-12-01,national,MAOKO,MAOKO,0.0,level
+2025-01-01,national,MAOKO,MAOKO,0.0,level
+2025-02-01,national,MAOKO,MAOKO,0.0,level
+2025-03-01,national,MAOKO,MAOKO,0.0,level
+2025-04-01,national,MAOKO,MAOKO,0.0,level
+2025-05-01,national,MAOKO,MAOKO,0.0,level
+2025-06-01,national,MAOKO,MAOKO,0.0,level
+2025-07-01,national,MAOKO,MAOKO,0.0,level
+2025-08-01,national,MAOKO,MAOKO,0.0,level
+2025-09-01,national,MAOKO,MAOKO,0.0,level
+2025-10-01,national,MAOKO,MAOKO,0.0,level
+2025-11-01,national,MAOKO,MAOKO,0.0,level
+2025-12-01,national,MAOKO,MAOKO,0.0,level
+2026-01-01,national,MAOKO,MAOKO,0.0,level
+2026-02-01,national,MAOKO,MAOKO,0.0,level
+2026-03-01,national,MAOKO,MAOKO,0.0,level
+2026-04-01,national,MAOKO,MAOKO,0.0,level
+2026-05-01,national,MAOKO,MAOKO,0.0,level
+2026-06-01,national,MAOKO,MAOKO,0.0,level
+2026-07-01,national,MAOKO,MAOKO,0.0,level
+2026-08-01,national,MAOKO,MAOKO,0.0,level
+2026-09-01,national,MAOKO,MAOKO,0.0,level
+2010-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2010-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2010-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2010-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2010-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2010-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2010-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2010-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2010-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2010-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2010-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2011-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2011-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2011-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2011-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2011-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2011-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2011-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2011-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2011-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2011-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2011-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2011-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2012-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2012-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2012-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2012-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2012-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2012-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2012-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2012-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2012-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2012-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2012-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2012-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2013-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2013-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2013-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2013-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2013-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2013-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2013-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2013-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2013-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2013-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2013-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2013-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2014-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2014-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2014-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2014-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2014-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2014-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2014-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2014-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2014-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2014-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2014-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2014-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2015-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2015-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2015-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2015-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2015-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2015-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2015-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2015-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2015-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2015-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2015-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2015-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2016-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2016-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2016-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2016-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2016-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2016-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2016-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2016-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2016-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2016-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2016-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2016-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2017-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2017-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2017-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2017-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2017-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2017-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2017-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2017-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2017-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2017-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2017-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2017-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2018-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2018-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2018-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2018-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2018-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2018-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2018-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2018-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2018-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2018-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2018-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2018-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2019-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2019-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2019-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2019-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2019-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2019-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2019-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2019-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2019-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2019-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2019-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2019-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2020-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2020-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2020-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2020-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2020-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2020-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2020-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2020-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2020-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2020-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2020-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2020-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2021-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2021-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2021-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2021-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2021-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2021-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2021-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2021-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2021-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2021-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2021-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2021-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2022-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2022-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2022-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2022-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2022-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2022-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2022-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2022-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2022-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2022-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2022-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2022-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2023-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2023-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2023-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2023-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2023-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2023-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2023-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2023-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2023-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2023-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2023-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2023-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2024-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2024-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2024-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2024-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2024-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2024-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2024-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2024-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2024-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2024-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2024-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2024-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2025-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2025-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2025-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2025-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2025-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2025-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2025-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2025-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2025-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2025-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2025-11-01,national,MEAKAM,МЕАКАМ,0.0,level
+2025-12-01,national,MEAKAM,МЕАКАМ,0.0,level
+2026-01-01,national,MEAKAM,МЕАКАМ,0.0,level
+2026-02-01,national,MEAKAM,МЕАКАМ,0.0,level
+2026-03-01,national,MEAKAM,МЕАКАМ,0.0,level
+2026-04-01,national,MEAKAM,МЕАКАМ,0.0,level
+2026-05-01,national,MEAKAM,МЕАКАМ,0.0,level
+2026-06-01,national,MEAKAM,МЕАКАМ,0.0,level
+2026-07-01,national,MEAKAM,МЕАКАМ,0.0,level
+2026-08-01,national,MEAKAM,МЕАКАМ,0.0,level
+2026-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2010-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2010-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2010-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2010-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2010-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2010-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2010-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2010-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2010-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2010-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2010-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2011-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2011-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2011-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2011-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2011-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2011-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2011-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2011-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2011-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2011-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2011-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2011-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2012-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2012-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2012-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2012-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2012-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2012-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2012-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2012-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2012-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2012-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2012-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2012-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2013-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2013-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2013-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2013-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2013-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2013-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2013-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2013-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2013-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2013-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2013-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2013-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2014-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2014-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2014-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2014-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2014-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2014-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2014-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2014-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2014-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2014-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2014-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2014-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2015-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2015-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2015-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2015-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2015-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2015-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2015-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2015-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2015-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2015-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2015-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2015-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2016-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2016-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2016-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2016-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2016-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2016-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2016-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2016-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2016-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2016-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2016-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2016-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2017-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2017-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2017-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2017-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2017-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2017-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2017-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2017-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2017-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2017-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2017-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2017-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2018-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2018-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2018-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2018-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2018-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2018-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2018-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2018-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2018-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2018-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2018-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2018-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2019-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2019-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2019-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2019-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2019-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2019-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2019-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2019-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2019-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2019-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2019-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2019-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2020-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2020-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2020-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2020-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2020-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2020-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2020-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2020-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2020-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2020-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2020-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2020-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2021-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2021-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2021-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2021-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2021-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2021-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2021-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2021-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2021-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2021-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2021-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2021-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2022-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2022-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2022-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2022-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2022-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2022-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2022-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2022-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2022-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2022-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2022-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2022-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2023-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2023-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2023-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2023-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2023-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2023-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2023-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2023-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2023-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2023-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2023-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2023-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2024-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2024-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2024-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2024-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2024-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2024-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2024-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2024-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2024-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2024-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2024-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2024-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2025-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2025-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2025-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2025-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2025-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2025-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2025-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2025-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2025-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2025-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2025-11-01,national,MEIKAM,МЕIКАМ,0.0,level
+2025-12-01,national,MEIKAM,МЕIКАМ,0.0,level
+2026-01-01,national,MEIKAM,МЕIКАМ,0.0,level
+2026-02-01,national,MEIKAM,МЕIКАМ,0.0,level
+2026-03-01,national,MEIKAM,МЕIКАМ,0.0,level
+2026-04-01,national,MEIKAM,МЕIКАМ,0.0,level
+2026-05-01,national,MEIKAM,МЕIКАМ,0.0,level
+2026-06-01,national,MEIKAM,МЕIКАМ,0.0,level
+2026-07-01,national,MEIKAM,МЕIКАМ,0.0,level
+2026-08-01,national,MEIKAM,МЕIКАМ,0.0,level
+2026-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2010-02-01,national,MEKKAM,МЕККАМ,157791.0,level
+2010-03-01,national,MEKKAM,МЕККАМ,162013.0,level
+2010-04-01,national,MEKKAM,МЕККАМ,149563.0,level
+2010-05-01,national,MEKKAM,МЕККАМ,172559.0,level
+2010-06-01,national,MEKKAM,МЕККАМ,178488.0,level
+2010-07-01,national,MEKKAM,МЕККАМ,165289.0,level
+2010-08-01,national,MEKKAM,МЕККАМ,171519.0,level
+2010-09-01,national,MEKKAM,МЕККАМ,184423.0,level
+2010-10-01,national,MEKKAM,МЕККАМ,184896.0,level
+2010-11-01,national,MEKKAM,МЕККАМ,173831.0,level
+2010-12-01,national,MEKKAM,МЕККАМ,172132.0,level
+2011-01-01,national,MEKKAM,МЕККАМ,151989.0,level
+2011-02-01,national,MEKKAM,МЕККАМ,144762.0,level
+2011-03-01,national,MEKKAM,МЕККАМ,135258.0,level
+2011-04-01,national,MEKKAM,МЕККАМ,136999.0,level
+2011-05-01,national,MEKKAM,МЕККАМ,128764.0,level
+2011-06-01,national,MEKKAM,МЕККАМ,111092.0,level
+2011-07-01,national,MEKKAM,МЕККАМ,103843.0,level
+2011-08-01,national,MEKKAM,МЕККАМ,98830.0,level
+2011-09-01,national,MEKKAM,МЕККАМ,98830.0,level
+2011-10-01,national,MEKKAM,МЕККАМ,98830.0,level
+2011-11-01,national,MEKKAM,МЕККАМ,87718.0,level
+2011-12-01,national,MEKKAM,МЕККАМ,83477.0,level
+2012-01-01,national,MEKKAM,МЕККАМ,95423.0,level
+2012-02-01,national,MEKKAM,МЕККАМ,100834.0,level
+2012-03-01,national,MEKKAM,МЕККАМ,87057.0,level
+2012-04-01,national,MEKKAM,МЕККАМ,72289.0,level
+2012-05-01,national,MEKKAM,МЕККАМ,77476.0,level
+2012-06-01,national,MEKKAM,МЕККАМ,90554.0,level
+2012-07-01,national,MEKKAM,МЕККАМ,75800.0,level
+2012-08-01,national,MEKKAM,МЕККАМ,72805.0,level
+2012-09-01,national,MEKKAM,МЕККАМ,79411.0,level
+2012-10-01,national,MEKKAM,МЕККАМ,79411.0,level
+2012-11-01,national,MEKKAM,МЕККАМ,79993.0,level
+2012-12-01,national,MEKKAM,МЕККАМ,89810.0,level
+2013-01-01,national,MEKKAM,МЕККАМ,80817.0,level
+2013-02-01,national,MEKKAM,МЕККАМ,77030.0,level
+2013-03-01,national,MEKKAM,МЕККАМ,101326.0,level
+2013-04-01,national,MEKKAM,МЕККАМ,102945.0,level
+2013-05-01,national,MEKKAM,МЕККАМ,89404.0,level
+2013-06-01,national,MEKKAM,МЕККАМ,103008.0,level
+2013-07-01,national,MEKKAM,МЕККАМ,106406.0,level
+2013-08-01,national,MEKKAM,МЕККАМ,106921.0,level
+2013-09-01,national,MEKKAM,МЕККАМ,104114.0,level
+2013-10-01,national,MEKKAM,МЕККАМ,104114.0,level
+2013-11-01,national,MEKKAM,МЕККАМ,109081.0,level
+2013-12-01,national,MEKKAM,МЕККАМ,109081.0,level
+2014-01-01,national,MEKKAM,МЕККАМ,109081.0,level
+2014-02-01,national,MEKKAM,МЕККАМ,99372.0,level
+2014-03-01,national,MEKKAM,МЕККАМ,75076.0,level
+2014-04-01,national,MEKKAM,МЕККАМ,67062.0,level
+2014-05-01,national,MEKKAM,МЕККАМ,47579.0,level
+2014-06-01,national,MEKKAM,МЕККАМ,35119.0,level
+2014-07-01,national,MEKKAM,МЕККАМ,28154.0,level
+2014-08-01,national,MEKKAM,МЕККАМ,13911.0,level
+2014-09-01,national,MEKKAM,МЕККАМ,14151.0,level
+2014-10-01,national,MEKKAM,МЕККАМ,14151.0,level
+2014-11-01,national,MEKKAM,МЕККАМ,1384.0,level
+2014-12-01,national,MEKKAM,МЕККАМ,1384.0,level
+2015-01-01,national,MEKKAM,МЕККАМ,1384.0,level
+2015-02-01,national,MEKKAM,МЕККАМ,1384.0,level
+2015-03-01,national,MEKKAM,МЕККАМ,1384.0,level
+2015-04-01,national,MEKKAM,МЕККАМ,1384.0,level
+2015-05-01,national,MEKKAM,МЕККАМ,1384.0,level
+2015-06-01,national,MEKKAM,МЕККАМ,240.0,level
+2015-07-01,national,MEKKAM,МЕККАМ,240.0,level
+2015-08-01,national,MEKKAM,МЕККАМ,240.0,level
+2015-09-01,national,MEKKAM,МЕККАМ,0.0,level
+2015-10-01,national,MEKKAM,МЕККАМ,0.0,level
+2015-11-01,national,MEKKAM,МЕККАМ,0.0,level
+2015-12-01,national,MEKKAM,МЕККАМ,0.0,level
+2016-01-01,national,MEKKAM,МЕККАМ,0.0,level
+2016-02-01,national,MEKKAM,МЕККАМ,0.0,level
+2016-03-01,national,MEKKAM,МЕККАМ,0.0,level
+2016-04-01,national,MEKKAM,МЕККАМ,0.0,level
+2016-05-01,national,MEKKAM,МЕККАМ,0.0,level
+2016-06-01,national,MEKKAM,МЕККАМ,0.0,level
+2016-07-01,national,MEKKAM,МЕККАМ,0.0,level
+2016-08-01,national,MEKKAM,МЕККАМ,0.0,level
+2016-09-01,national,MEKKAM,МЕККАМ,0.0,level
+2016-10-01,national,MEKKAM,МЕККАМ,0.0,level
+2016-11-01,national,MEKKAM,МЕККАМ,0.0,level
+2016-12-01,national,MEKKAM,МЕККАМ,0.0,level
+2017-01-01,national,MEKKAM,МЕККАМ,0.0,level
+2017-02-01,national,MEKKAM,МЕККАМ,0.0,level
+2017-03-01,national,MEKKAM,МЕККАМ,0.0,level
+2017-04-01,national,MEKKAM,МЕККАМ,0.0,level
+2017-05-01,national,MEKKAM,МЕККАМ,0.0,level
+2017-06-01,national,MEKKAM,МЕККАМ,0.0,level
+2017-07-01,national,MEKKAM,МЕККАМ,0.0,level
+2017-08-01,national,MEKKAM,МЕККАМ,0.0,level
+2017-09-01,national,MEKKAM,МЕККАМ,0.0,level
+2017-10-01,national,MEKKAM,МЕККАМ,0.0,level
+2017-11-01,national,MEKKAM,МЕККАМ,0.0,level
+2017-12-01,national,MEKKAM,МЕККАМ,0.0,level
+2018-01-01,national,MEKKAM,МЕККАМ,0.0,level
+2018-02-01,national,MEKKAM,МЕККАМ,0.0,level
+2018-03-01,national,MEKKAM,МЕККАМ,0.0,level
+2018-04-01,national,MEKKAM,МЕККАМ,0.0,level
+2018-05-01,national,MEKKAM,МЕККАМ,0.0,level
+2018-06-01,national,MEKKAM,МЕККАМ,0.0,level
+2018-07-01,national,MEKKAM,МЕККАМ,0.0,level
+2018-08-01,national,MEKKAM,МЕККАМ,0.0,level
+2018-09-01,national,MEKKAM,МЕККАМ,0.0,level
+2018-10-01,national,MEKKAM,МЕККАМ,0.0,level
+2018-11-01,national,MEKKAM,МЕККАМ,0.0,level
+2018-12-01,national,MEKKAM,МЕККАМ,0.0,level
+2019-01-01,national,MEKKAM,МЕККАМ,0.0,level
+2019-02-01,national,MEKKAM,МЕККАМ,0.0,level
+2019-03-01,national,MEKKAM,МЕККАМ,0.0,level
+2019-04-01,national,MEKKAM,МЕККАМ,0.0,level
+2019-05-01,national,MEKKAM,МЕККАМ,0.0,level
+2019-06-01,national,MEKKAM,МЕККАМ,0.0,level
+2019-07-01,national,MEKKAM,МЕККАМ,0.0,level
+2019-08-01,national,MEKKAM,МЕККАМ,0.0,level
+2019-09-01,national,MEKKAM,МЕККАМ,0.0,level
+2019-10-01,national,MEKKAM,МЕККАМ,0.0,level
+2019-11-01,national,MEKKAM,МЕККАМ,0.0,level
+2019-12-01,national,MEKKAM,МЕККАМ,0.0,level
+2020-01-01,national,MEKKAM,МЕККАМ,0.0,level
+2020-02-01,national,MEKKAM,МЕККАМ,0.0,level
+2020-03-01,national,MEKKAM,МЕККАМ,0.0,level
+2020-04-01,national,MEKKAM,МЕККАМ,0.0,level
+2020-05-01,national,MEKKAM,МЕККАМ,0.0,level
+2020-06-01,national,MEKKAM,МЕККАМ,106007.0,level
+2020-07-01,national,MEKKAM,МЕККАМ,251310.0,level
+2020-08-01,national,MEKKAM,МЕККАМ,305143.0,level
+2020-09-01,national,MEKKAM,МЕККАМ,305143.0,level
+2020-10-01,national,MEKKAM,МЕККАМ,305143.0,level
+2020-11-01,national,MEKKAM,МЕККАМ,319363.0,level
+2020-12-01,national,MEKKAM,МЕККАМ,319363.0,level
+2021-01-01,national,MEKKAM,МЕККАМ,319363.0,level
+2021-02-01,national,MEKKAM,МЕККАМ,398586.0,level
+2021-03-01,national,MEKKAM,МЕККАМ,463090.0,level
+2021-04-01,national,MEKKAM,МЕККАМ,463090.0,level
+2021-05-01,national,MEKKAM,МЕККАМ,463090.0,level
+2021-06-01,national,MEKKAM,МЕККАМ,143727.0,level
+2021-07-01,national,MEKKAM,МЕККАМ,143727.0,level
+2021-08-01,national,MEKKAM,МЕККАМ,143727.0,level
+2021-09-01,national,MEKKAM,МЕККАМ,143727.0,level
+2021-10-01,national,MEKKAM,МЕККАМ,143727.0,level
+2021-11-01,national,MEKKAM,МЕККАМ,143727.0,level
+2021-12-01,national,MEKKAM,МЕККАМ,143727.0,level
+2022-01-01,national,MEKKAM,МЕККАМ,143727.0,level
+2022-02-01,national,MEKKAM,МЕККАМ,39415.0,level
+2022-03-01,national,MEKKAM,МЕККАМ,39415.0,level
+2022-04-01,national,MEKKAM,МЕККАМ,46898.0,level
+2022-05-01,national,MEKKAM,МЕККАМ,71026.0,level
+2022-06-01,national,MEKKAM,МЕККАМ,71026.0,level
+2022-07-01,national,MEKKAM,МЕККАМ,71026.0,level
+2022-08-01,national,MEKKAM,МЕККАМ,71026.0,level
+2022-09-01,national,MEKKAM,МЕККАМ,175876.0,level
+2022-10-01,national,MEKKAM,МЕККАМ,175876.0,level
+2022-11-01,national,MEKKAM,МЕККАМ,175876.0,level
+2022-12-01,national,MEKKAM,МЕККАМ,175876.0,level
+2023-01-01,national,MEKKAM,МЕККАМ,175876.0,level
+2023-02-01,national,MEKKAM,МЕККАМ,229432.0,level
+2023-03-01,national,MEKKAM,МЕККАМ,307602.0,level
+2023-04-01,national,MEKKAM,МЕККАМ,347400.0,level
+2023-05-01,national,MEKKAM,МЕККАМ,422335.0,level
+2023-06-01,national,MEKKAM,МЕККАМ,483091.0,level
+2023-07-01,national,MEKKAM,МЕККАМ,551576.0,level
+2023-08-01,national,MEKKAM,МЕККАМ,616150.0,level
+2023-09-01,national,MEKKAM,МЕККАМ,518821.0,level
+2023-10-01,national,MEKKAM,МЕККАМ,547508.0,level
+2023-11-01,national,MEKKAM,МЕККАМ,547508.0,level
+2023-12-01,national,MEKKAM,МЕККАМ,547508.0,level
+2024-01-01,national,MEKKAM,МЕККАМ,547508.0,level
+2024-02-01,national,MEKKAM,МЕККАМ,794386.0,level
+2024-03-01,national,MEKKAM,МЕККАМ,794386.0,level
+2024-04-01,national,MEKKAM,МЕККАМ,740020.0,level
+2024-05-01,national,MEKKAM,МЕККАМ,582865.0,level
+2024-06-01,national,MEKKAM,МЕККАМ,626581.0,level
+2024-07-01,national,MEKKAM,МЕККАМ,650306.0,level
+2024-08-01,national,MEKKAM,МЕККАМ,738346.0,level
+2024-09-01,national,MEKKAM,МЕККАМ,761919.0,level
+2024-10-01,national,MEKKAM,МЕККАМ,765298.0,level
+2024-11-01,national,MEKKAM,МЕККАМ,751991.0,level
+2024-12-01,national,MEKKAM,МЕККАМ,751991.0,level
+2025-01-01,national,MEKKAM,МЕККАМ,751991.0,level
+2025-02-01,national,MEKKAM,МЕККАМ,667441.0,level
+2025-03-01,national,MEKKAM,МЕККАМ,763168.0,level
+2025-04-01,national,MEKKAM,МЕККАМ,791008.0,level
+2025-05-01,national,MEKKAM,МЕККАМ,697672.0,level
+2025-06-01,national,MEKKAM,МЕККАМ,733640.0,level
+2025-07-01,national,MEKKAM,МЕККАМ,745390.0,level
+2025-08-01,national,MEKKAM,МЕККАМ,635608.0,level
+2025-09-01,national,MEKKAM,МЕККАМ,674523.0,level
+2025-10-01,national,MEKKAM,МЕККАМ,768124.0,level
+2025-11-01,national,MEKKAM,МЕККАМ,436247.0,level
+2025-12-01,national,MEKKAM,МЕККАМ,436247.0,level
+2026-01-01,national,MEKKAM,МЕККАМ,440900.0,level
+2026-02-01,national,MEKKAM,МЕККАМ,440900.0,level
+2026-03-01,national,MEKKAM,МЕККАМ,301946.0,level
+2026-04-01,national,MEKKAM,МЕККАМ,324543.0,level
+2026-05-01,national,MEKKAM,МЕККАМ,381720.0,level
+2026-06-01,national,MEKKAM,МЕККАМ,213641.0,level
+2026-07-01,national,MEKKAM,МЕККАМ,213641.0,level
+2026-08-01,national,MEKKAM,МЕККАМ,313672.0,level
+2026-09-01,national,MEKKAM,МЕККАМ,377939.0,level
+2010-02-01,national,MEOKAM,МЕОКАМ,428757.0,level
+2010-03-01,national,MEOKAM,МЕОКАМ,423625.0,level
+2010-04-01,national,MEOKAM,МЕОКАМ,438173.0,level
+2010-05-01,national,MEOKAM,МЕОКАМ,469173.0,level
+2010-06-01,national,MEOKAM,МЕОКАМ,477707.0,level
+2010-07-01,national,MEOKAM,МЕОКАМ,484374.0,level
+2010-08-01,national,MEOKAM,МЕОКАМ,482198.0,level
+2010-09-01,national,MEOKAM,МЕОКАМ,472739.0,level
+2010-10-01,national,MEOKAM,МЕОКАМ,470675.0,level
+2010-11-01,national,MEOKAM,МЕОКАМ,476179.0,level
+2010-12-01,national,MEOKAM,МЕОКАМ,471881.0,level
+2011-01-01,national,MEOKAM,МЕОКАМ,468111.0,level
+2011-02-01,national,MEOKAM,МЕОКАМ,466851.0,level
+2011-03-01,national,MEOKAM,МЕОКАМ,486179.0,level
+2011-04-01,national,MEOKAM,МЕОКАМ,484106.0,level
+2011-05-01,national,MEOKAM,МЕОКАМ,489109.0,level
+2011-06-01,national,MEOKAM,МЕОКАМ,495775.0,level
+2011-07-01,national,MEOKAM,МЕОКАМ,495775.0,level
+2011-08-01,national,MEOKAM,МЕОКАМ,494775.0,level
+2011-09-01,national,MEOKAM,МЕОКАМ,491075.0,level
+2011-10-01,national,MEOKAM,МЕОКАМ,481575.0,level
+2011-11-01,national,MEOKAM,МЕОКАМ,488744.0,level
+2011-12-01,national,MEOKAM,МЕОКАМ,483019.0,level
+2012-01-01,national,MEOKAM,МЕОКАМ,492186.0,level
+2012-02-01,national,MEOKAM,МЕОКАМ,498447.0,level
+2012-03-01,national,MEOKAM,МЕОКАМ,506212.0,level
+2012-04-01,national,MEOKAM,МЕОКАМ,512791.0,level
+2012-05-01,national,MEOKAM,МЕОКАМ,491480.0,level
+2012-06-01,national,MEOKAM,МЕОКАМ,494170.0,level
+2012-07-01,national,MEOKAM,МЕОКАМ,497226.0,level
+2012-08-01,national,MEOKAM,МЕОКАМ,499371.0,level
+2012-09-01,national,MEOKAM,МЕОКАМ,480520.0,level
+2012-10-01,national,MEOKAM,МЕОКАМ,513439.0,level
+2012-11-01,national,MEOKAM,МЕОКАМ,542359.0,level
+2012-12-01,national,MEOKAM,МЕОКАМ,566617.0,level
+2013-01-01,national,MEOKAM,МЕОКАМ,590952.0,level
+2013-02-01,national,MEOKAM,МЕОКАМ,613681.0,level
+2013-03-01,national,MEOKAM,МЕОКАМ,625638.0,level
+2013-04-01,national,MEOKAM,МЕОКАМ,630783.0,level
+2013-05-01,national,MEOKAM,МЕОКАМ,613801.0,level
+2013-06-01,national,MEOKAM,МЕОКАМ,620535.0,level
+2013-07-01,national,MEOKAM,МЕОКАМ,605868.0,level
+2013-08-01,national,MEOKAM,МЕОКАМ,617879.0,level
+2013-09-01,national,MEOKAM,МЕОКАМ,643481.0,level
+2013-10-01,national,MEOKAM,МЕОКАМ,643210.0,level
+2013-11-01,national,MEOKAM,МЕОКАМ,597344.0,level
+2013-12-01,national,MEOKAM,МЕОКАМ,596469.0,level
+2014-01-01,national,MEOKAM,МЕОКАМ,596724.0,level
+2014-02-01,national,MEOKAM,МЕОКАМ,578624.0,level
+2014-03-01,national,MEOKAM,МЕОКАМ,573391.0,level
+2014-04-01,national,MEOKAM,МЕОКАМ,573391.0,level
+2014-05-01,national,MEOKAM,МЕОКАМ,573391.0,level
+2014-06-01,national,MEOKAM,МЕОКАМ,558968.0,level
+2014-07-01,national,MEOKAM,МЕОКАМ,573818.0,level
+2014-08-01,national,MEOKAM,МЕОКАМ,551260.0,level
+2014-09-01,national,MEOKAM,МЕОКАМ,567435.0,level
+2014-10-01,national,MEOKAM,МЕОКАМ,585688.0,level
+2014-11-01,national,MEOKAM,МЕОКАМ,585688.0,level
+2014-12-01,national,MEOKAM,МЕОКАМ,575527.0,level
+2015-01-01,national,MEOKAM,МЕОКАМ,561781.0,level
+2015-02-01,national,MEOKAM,МЕОКАМ,540463.0,level
+2015-03-01,national,MEOKAM,МЕОКАМ,504908.0,level
+2015-04-01,national,MEOKAM,МЕОКАМ,483488.0,level
+2015-05-01,national,MEOKAM,МЕОКАМ,462345.0,level
+2015-06-01,national,MEOKAM,МЕОКАМ,440615.0,level
+2015-07-01,national,MEOKAM,МЕОКАМ,440615.0,level
+2015-08-01,national,MEOKAM,МЕОКАМ,440615.0,level
+2015-09-01,national,MEOKAM,МЕОКАМ,421983.0,level
+2015-10-01,national,MEOKAM,МЕОКАМ,399798.0,level
+2015-11-01,national,MEOKAM,МЕОКАМ,399798.0,level
+2015-12-01,national,MEOKAM,МЕОКАМ,399798.0,level
+2016-01-01,national,MEOKAM,МЕОКАМ,399798.0,level
+2016-02-01,national,MEOKAM,МЕОКАМ,399798.0,level
+2016-03-01,national,MEOKAM,МЕОКАМ,392033.0,level
+2016-04-01,national,MEOKAM,МЕОКАМ,378033.0,level
+2016-05-01,national,MEOKAM,МЕОКАМ,378033.0,level
+2016-06-01,national,MEOKAM,МЕОКАМ,346732.0,level
+2016-07-01,national,MEOKAM,МЕОКАМ,346732.0,level
+2016-08-01,national,MEOKAM,МЕОКАМ,310299.0,level
+2016-09-01,national,MEOKAM,МЕОКАМ,273167.0,level
+2016-10-01,national,MEOKAM,МЕОКАМ,273167.0,level
+2016-11-01,national,MEOKAM,МЕОКАМ,270167.0,level
+2016-12-01,national,MEOKAM,МЕОКАМ,244347.0,level
+2017-01-01,national,MEOKAM,МЕОКАМ,244347.0,level
+2017-02-01,national,MEOKAM,МЕОКАМ,292347.0,level
+2017-03-01,national,MEOKAM,МЕОКАМ,365005.0,level
+2017-04-01,national,MEOKAM,МЕОКАМ,321004.0,level
+2017-05-01,national,MEOKAM,МЕОКАМ,377333.0,level
+2017-06-01,national,MEOKAM,МЕОКАМ,454290.0,level
+2017-07-01,national,MEOKAM,МЕОКАМ,454290.0,level
+2017-08-01,national,MEOKAM,МЕОКАМ,721972.0,level
+2017-09-01,national,MEOKAM,МЕОКАМ,708032.0,level
+2017-10-01,national,MEOKAM,МЕОКАМ,671097.0,level
+2017-11-01,national,MEOKAM,МЕОКАМ,752129.0,level
+2017-12-01,national,MEOKAM,МЕОКАМ,794749.0,level
+2018-01-01,national,MEOKAM,МЕОКАМ,794749.0,level
+2018-02-01,national,MEOKAM,МЕОКАМ,794749.0,level
+2018-03-01,national,MEOKAM,МЕОКАМ,794749.0,level
+2018-04-01,national,MEOKAM,МЕОКАМ,795286.0,level
+2018-05-01,national,MEOKAM,МЕОКАМ,795286.0,level
+2018-06-01,national,MEOKAM,МЕОКАМ,795286.0,level
+2018-07-01,national,MEOKAM,МЕОКАМ,795286.0,level
+2018-08-01,national,MEOKAM,МЕОКАМ,795286.0,level
+2018-09-01,national,MEOKAM,МЕОКАМ,782321.0,level
+2018-10-01,national,MEOKAM,МЕОКАМ,782321.0,level
+2018-11-01,national,MEOKAM,МЕОКАМ,782321.0,level
+2018-12-01,national,MEOKAM,МЕОКАМ,782321.0,level
+2019-01-01,national,MEOKAM,МЕОКАМ,782321.0,level
+2019-02-01,national,MEOKAM,МЕОКАМ,782321.0,level
+2019-03-01,national,MEOKAM,МЕОКАМ,782321.0,level
+2019-04-01,national,MEOKAM,МЕОКАМ,782321.0,level
+2019-05-01,national,MEOKAM,МЕОКАМ,753306.0,level
+2019-06-01,national,MEOKAM,МЕОКАМ,753306.0,level
+2019-07-01,national,MEOKAM,МЕОКАМ,696813.0,level
+2019-08-01,national,MEOKAM,МЕОКАМ,696813.0,level
+2019-09-01,national,MEOKAM,МЕОКАМ,696813.0,level
+2019-10-01,national,MEOKAM,МЕОКАМ,698593.0,level
+2019-11-01,national,MEOKAM,МЕОКАМ,704707.0,level
+2019-12-01,national,MEOKAM,МЕОКАМ,710897.0,level
+2020-01-01,national,MEOKAM,МЕОКАМ,710897.0,level
+2020-02-01,national,MEOKAM,МЕОКАМ,662664.0,level
+2020-03-01,national,MEOKAM,МЕОКАМ,666550.0,level
+2020-04-01,national,MEOKAM,МЕОКАМ,674329.0,level
+2020-05-01,national,MEOKAM,МЕОКАМ,678770.0,level
+2020-06-01,national,MEOKAM,МЕОКАМ,678770.0,level
+2020-07-01,national,MEOKAM,МЕОКАМ,678770.0,level
+2020-08-01,national,MEOKAM,МЕОКАМ,678770.0,level
+2020-09-01,national,MEOKAM,МЕОКАМ,678770.0,level
+2020-10-01,national,MEOKAM,МЕОКАМ,678220.0,level
+2020-11-01,national,MEOKAM,МЕОКАМ,678220.0,level
+2020-12-01,national,MEOKAM,МЕОКАМ,678220.0,level
+2021-01-01,national,MEOKAM,МЕОКАМ,678220.0,level
+2021-02-01,national,MEOKAM,МЕОКАМ,678220.0,level
+2021-03-01,national,MEOKAM,МЕОКАМ,678220.0,level
+2021-04-01,national,MEOKAM,МЕОКАМ,678220.0,level
+2021-05-01,national,MEOKAM,МЕОКАМ,562568.0,level
+2021-06-01,national,MEOKAM,МЕОКАМ,562568.0,level
+2021-07-01,national,MEOKAM,МЕОКАМ,562568.0,level
+2021-08-01,national,MEOKAM,МЕОКАМ,562568.0,level
+2021-09-01,national,MEOKAM,МЕОКАМ,441565.0,level
+2021-10-01,national,MEOKAM,МЕОКАМ,479708.0,level
+2021-11-01,national,MEOKAM,МЕОКАМ,524143.0,level
+2021-12-01,national,MEOKAM,МЕОКАМ,607460.0,level
+2022-01-01,national,MEOKAM,МЕОКАМ,607460.0,level
+2022-02-01,national,MEOKAM,МЕОКАМ,500352.0,level
+2022-03-01,national,MEOKAM,МЕОКАМ,509149.0,level
+2022-04-01,national,MEOKAM,МЕОКАМ,607837.0,level
+2022-05-01,national,MEOKAM,МЕОКАМ,755690.0,level
+2022-06-01,national,MEOKAM,МЕОКАМ,812173.0,level
+2022-07-01,national,MEOKAM,МЕОКАМ,990803.0,level
+2022-08-01,national,MEOKAM,МЕОКАМ,687780.0,level
+2022-09-01,national,MEOKAM,МЕОКАМ,687780.0,level
+2022-10-01,national,MEOKAM,МЕОКАМ,824881.0,level
+2022-11-01,national,MEOKAM,МЕОКАМ,980886.0,level
+2022-12-01,national,MEOKAM,МЕОКАМ,931505.0,level
+2023-01-01,national,MEOKAM,МЕОКАМ,1189177.0,level
+2023-02-01,national,MEOKAM,МЕОКАМ,1385114.0,level
+2023-03-01,national,MEOKAM,МЕОКАМ,1477745.0,level
+2023-04-01,national,MEOKAM,МЕОКАМ,1547205.0,level
+2023-05-01,national,MEOKAM,МЕОКАМ,1642413.0,level
+2023-06-01,national,MEOKAM,МЕОКАМ,1725877.0,level
+2023-07-01,national,MEOKAM,МЕОКАМ,1741849.0,level
+2023-08-01,national,MEOKAM,МЕОКАМ,1793386.0,level
+2023-09-01,national,MEOKAM,МЕОКАМ,1818154.0,level
+2023-10-01,national,MEOKAM,МЕОКАМ,1863807.0,level
+2023-11-01,national,MEOKAM,МЕОКАМ,1911654.0,level
+2023-12-01,national,MEOKAM,МЕОКАМ,1911654.0,level
+2024-01-01,national,MEOKAM,МЕОКАМ,1927063.0,level
+2024-02-01,national,MEOKAM,МЕОКАМ,2007277.0,level
+2024-03-01,national,MEOKAM,МЕОКАМ,2056422.0,level
+2024-04-01,national,MEOKAM,МЕОКАМ,2081934.0,level
+2024-05-01,national,MEOKAM,МЕОКАМ,2081934.0,level
+2024-06-01,national,MEOKAM,МЕОКАМ,2081934.0,level
+2024-07-01,national,MEOKAM,МЕОКАМ,2154391.0,level
+2024-08-01,national,MEOKAM,МЕОКАМ,2154391.0,level
+2024-09-01,national,MEOKAM,МЕОКАМ,2154391.0,level
+2024-10-01,national,MEOKAM,МЕОКАМ,2175763.0,level
+2024-11-01,national,MEOKAM,МЕОКАМ,2203369.0,level
+2024-12-01,national,MEOKAM,МЕОКАМ,2225483.0,level
+2025-01-01,national,MEOKAM,МЕОКАМ,2225483.0,level
+2025-02-01,national,MEOKAM,МЕОКАМ,1992283.0,level
+2025-03-01,national,MEOKAM,МЕОКАМ,1736369.0,level
+2025-04-01,national,MEOKAM,МЕОКАМ,1736369.0,level
+2025-05-01,national,MEOKAM,МЕОКАМ,1659512.0,level
+2025-06-01,national,MEOKAM,МЕОКАМ,1659512.0,level
+2025-07-01,national,MEOKAM,МЕОКАМ,1626034.0,level
+2025-08-01,national,MEOKAM,МЕОКАМ,1626034.0,level
+2025-09-01,national,MEOKAM,МЕОКАМ,1764217.0,level
+2025-10-01,national,MEOKAM,МЕОКАМ,1896301.0,level
+2025-11-01,national,MEOKAM,МЕОКАМ,1907288.0,level
+2025-12-01,national,MEOKAM,МЕОКАМ,2005782.0,level
+2026-01-01,national,MEOKAM,МЕОКАМ,2059562.0,level
+2026-02-01,national,MEOKAM,МЕОКАМ,1811823.0,level
+2026-03-01,national,MEOKAM,МЕОКАМ,1902914.0,level
+2026-04-01,national,MEOKAM,МЕОКАМ,1950306.0,level
+2026-05-01,national,MEOKAM,МЕОКАМ,2021568.0,level
+2026-06-01,national,MEOKAM,МЕОКАМ,2021568.0,level
+2026-07-01,national,MEOKAM,МЕОКАМ,1909551.0,level
+2026-08-01,national,MEOKAM,МЕОКАМ,2107226.0,level
+2026-09-01,national,MEOKAM,МЕОКАМ,1842193.0,level
+2010-02-01,national,METICKAM,METIСKAM,0.0,level
+2010-03-01,national,METICKAM,METIСKAM,0.0,level
+2010-04-01,national,METICKAM,METIСKAM,0.0,level
+2010-05-01,national,METICKAM,METIСKAM,0.0,level
+2010-06-01,national,METICKAM,METIСKAM,0.0,level
+2010-07-01,national,METICKAM,METIСKAM,0.0,level
+2010-08-01,national,METICKAM,METIСKAM,0.0,level
+2010-09-01,national,METICKAM,METIСKAM,0.0,level
+2010-10-01,national,METICKAM,METIСKAM,0.0,level
+2010-11-01,national,METICKAM,METIСKAM,0.0,level
+2010-12-01,national,METICKAM,METIСKAM,0.0,level
+2011-01-01,national,METICKAM,METIСKAM,0.0,level
+2011-02-01,national,METICKAM,METIСKAM,0.0,level
+2011-03-01,national,METICKAM,METIСKAM,0.0,level
+2011-04-01,national,METICKAM,METIСKAM,0.0,level
+2011-05-01,national,METICKAM,METIСKAM,0.0,level
+2011-06-01,national,METICKAM,METIСKAM,0.0,level
+2011-07-01,national,METICKAM,METIСKAM,0.0,level
+2011-08-01,national,METICKAM,METIСKAM,0.0,level
+2011-09-01,national,METICKAM,METIСKAM,0.0,level
+2011-10-01,national,METICKAM,METIСKAM,0.0,level
+2011-11-01,national,METICKAM,METIСKAM,0.0,level
+2011-12-01,national,METICKAM,METIСKAM,0.0,level
+2012-01-01,national,METICKAM,METIСKAM,0.0,level
+2012-02-01,national,METICKAM,METIСKAM,0.0,level
+2012-03-01,national,METICKAM,METIСKAM,0.0,level
+2012-04-01,national,METICKAM,METIСKAM,0.0,level
+2012-05-01,national,METICKAM,METIСKAM,0.0,level
+2012-06-01,national,METICKAM,METIСKAM,0.0,level
+2012-07-01,national,METICKAM,METIСKAM,0.0,level
+2012-08-01,national,METICKAM,METIСKAM,0.0,level
+2012-09-01,national,METICKAM,METIСKAM,0.0,level
+2012-10-01,national,METICKAM,METIСKAM,0.0,level
+2012-11-01,national,METICKAM,METIСKAM,0.0,level
+2012-12-01,national,METICKAM,METIСKAM,0.0,level
+2013-01-01,national,METICKAM,METIСKAM,0.0,level
+2013-02-01,national,METICKAM,METIСKAM,0.0,level
+2013-03-01,national,METICKAM,METIСKAM,0.0,level
+2013-04-01,national,METICKAM,METIСKAM,0.0,level
+2013-05-01,national,METICKAM,METIСKAM,0.0,level
+2013-06-01,national,METICKAM,METIСKAM,0.0,level
+2013-07-01,national,METICKAM,METIСKAM,0.0,level
+2013-08-01,national,METICKAM,METIСKAM,0.0,level
+2013-09-01,national,METICKAM,METIСKAM,0.0,level
+2013-10-01,national,METICKAM,METIСKAM,0.0,level
+2013-11-01,national,METICKAM,METIСKAM,0.0,level
+2013-12-01,national,METICKAM,METIСKAM,0.0,level
+2014-01-01,national,METICKAM,METIСKAM,0.0,level
+2014-02-01,national,METICKAM,METIСKAM,0.0,level
+2014-03-01,national,METICKAM,METIСKAM,0.0,level
+2014-04-01,national,METICKAM,METIСKAM,0.0,level
+2014-05-01,national,METICKAM,METIСKAM,0.0,level
+2014-06-01,national,METICKAM,METIСKAM,0.0,level
+2014-07-01,national,METICKAM,METIСKAM,0.0,level
+2014-08-01,national,METICKAM,METIСKAM,0.0,level
+2014-09-01,national,METICKAM,METIСKAM,0.0,level
+2014-10-01,national,METICKAM,METIСKAM,0.0,level
+2014-11-01,national,METICKAM,METIСKAM,0.0,level
+2014-12-01,national,METICKAM,METIСKAM,0.0,level
+2015-01-01,national,METICKAM,METIСKAM,0.0,level
+2015-02-01,national,METICKAM,METIСKAM,0.0,level
+2015-03-01,national,METICKAM,METIСKAM,0.0,level
+2015-04-01,national,METICKAM,METIСKAM,0.0,level
+2015-05-01,national,METICKAM,METIСKAM,0.0,level
+2015-06-01,national,METICKAM,METIСKAM,0.0,level
+2015-07-01,national,METICKAM,METIСKAM,0.0,level
+2015-08-01,national,METICKAM,METIСKAM,0.0,level
+2015-09-01,national,METICKAM,METIСKAM,0.0,level
+2015-10-01,national,METICKAM,METIСKAM,0.0,level
+2015-11-01,national,METICKAM,METIСKAM,0.0,level
+2015-12-01,national,METICKAM,METIСKAM,0.0,level
+2016-01-01,national,METICKAM,METIСKAM,0.0,level
+2016-02-01,national,METICKAM,METIСKAM,0.0,level
+2016-03-01,national,METICKAM,METIСKAM,0.0,level
+2016-04-01,national,METICKAM,METIСKAM,0.0,level
+2016-05-01,national,METICKAM,METIСKAM,0.0,level
+2016-06-01,national,METICKAM,METIСKAM,0.0,level
+2016-07-01,national,METICKAM,METIСKAM,0.0,level
+2016-08-01,national,METICKAM,METIСKAM,0.0,level
+2016-09-01,national,METICKAM,METIСKAM,0.0,level
+2016-10-01,national,METICKAM,METIСKAM,0.0,level
+2016-11-01,national,METICKAM,METIСKAM,0.0,level
+2016-12-01,national,METICKAM,METIСKAM,0.0,level
+2017-01-01,national,METICKAM,METIСKAM,0.0,level
+2017-02-01,national,METICKAM,METIСKAM,0.0,level
+2017-03-01,national,METICKAM,METIСKAM,0.0,level
+2017-04-01,national,METICKAM,METIСKAM,0.0,level
+2017-05-01,national,METICKAM,METIСKAM,0.0,level
+2017-06-01,national,METICKAM,METIСKAM,0.0,level
+2017-07-01,national,METICKAM,METIСKAM,0.0,level
+2017-08-01,national,METICKAM,METIСKAM,0.0,level
+2017-09-01,national,METICKAM,METIСKAM,0.0,level
+2017-10-01,national,METICKAM,METIСKAM,0.0,level
+2017-11-01,national,METICKAM,METIСKAM,0.0,level
+2017-12-01,national,METICKAM,METIСKAM,0.0,level
+2018-01-01,national,METICKAM,METIСKAM,0.0,level
+2018-02-01,national,METICKAM,METIСKAM,0.0,level
+2018-03-01,national,METICKAM,METIСKAM,0.0,level
+2018-04-01,national,METICKAM,METIСKAM,0.0,level
+2018-05-01,national,METICKAM,METIСKAM,0.0,level
+2018-06-01,national,METICKAM,METIСKAM,0.0,level
+2018-07-01,national,METICKAM,METIСKAM,0.0,level
+2018-08-01,national,METICKAM,METIСKAM,0.0,level
+2018-09-01,national,METICKAM,METIСKAM,0.0,level
+2018-10-01,national,METICKAM,METIСKAM,0.0,level
+2018-11-01,national,METICKAM,METIСKAM,0.0,level
+2018-12-01,national,METICKAM,METIСKAM,0.0,level
+2019-01-01,national,METICKAM,METIСKAM,0.0,level
+2019-02-01,national,METICKAM,METIСKAM,0.0,level
+2019-03-01,national,METICKAM,METIСKAM,0.0,level
+2019-04-01,national,METICKAM,METIСKAM,0.0,level
+2019-05-01,national,METICKAM,METIСKAM,0.0,level
+2019-06-01,national,METICKAM,METIСKAM,0.0,level
+2019-07-01,national,METICKAM,METIСKAM,0.0,level
+2019-08-01,national,METICKAM,METIСKAM,0.0,level
+2019-09-01,national,METICKAM,METIСKAM,0.0,level
+2019-10-01,national,METICKAM,METIСKAM,0.0,level
+2019-11-01,national,METICKAM,METIСKAM,0.0,level
+2019-12-01,national,METICKAM,METIСKAM,0.0,level
+2020-01-01,national,METICKAM,METIСKAM,0.0,level
+2020-02-01,national,METICKAM,METIСKAM,0.0,level
+2020-03-01,national,METICKAM,METIСKAM,0.0,level
+2020-04-01,national,METICKAM,METIСKAM,0.0,level
+2020-05-01,national,METICKAM,METIСKAM,0.0,level
+2020-06-01,national,METICKAM,METIСKAM,0.0,level
+2020-07-01,national,METICKAM,METIСKAM,0.0,level
+2020-08-01,national,METICKAM,METIСKAM,0.0,level
+2020-09-01,national,METICKAM,METIСKAM,0.0,level
+2020-10-01,national,METICKAM,METIСKAM,0.0,level
+2020-11-01,national,METICKAM,METIСKAM,0.0,level
+2020-12-01,national,METICKAM,METIСKAM,0.0,level
+2021-01-01,national,METICKAM,METIСKAM,0.0,level
+2021-02-01,national,METICKAM,METIСKAM,0.0,level
+2021-03-01,national,METICKAM,METIСKAM,0.0,level
+2021-04-01,national,METICKAM,METIСKAM,0.0,level
+2021-05-01,national,METICKAM,METIСKAM,0.0,level
+2021-06-01,national,METICKAM,METIСKAM,0.0,level
+2021-07-01,national,METICKAM,METIСKAM,0.0,level
+2021-08-01,national,METICKAM,METIСKAM,0.0,level
+2021-09-01,national,METICKAM,METIСKAM,0.0,level
+2021-10-01,national,METICKAM,METIСKAM,0.0,level
+2021-11-01,national,METICKAM,METIСKAM,0.0,level
+2021-12-01,national,METICKAM,METIСKAM,0.0,level
+2022-01-01,national,METICKAM,METIСKAM,0.0,level
+2022-02-01,national,METICKAM,METIСKAM,0.0,level
+2022-03-01,national,METICKAM,METIСKAM,0.0,level
+2022-04-01,national,METICKAM,METIСKAM,0.0,level
+2022-05-01,national,METICKAM,METIСKAM,0.0,level
+2022-06-01,national,METICKAM,METIСKAM,0.0,level
+2022-07-01,national,METICKAM,METIСKAM,0.0,level
+2022-08-01,national,METICKAM,METIСKAM,0.0,level
+2022-09-01,national,METICKAM,METIСKAM,0.0,level
+2022-10-01,national,METICKAM,METIСKAM,0.0,level
+2022-11-01,national,METICKAM,METIСKAM,0.0,level
+2022-12-01,national,METICKAM,METIСKAM,0.0,level
+2023-01-01,national,METICKAM,METIСKAM,0.0,level
+2023-02-01,national,METICKAM,METIСKAM,0.0,level
+2023-03-01,national,METICKAM,METIСKAM,0.0,level
+2023-04-01,national,METICKAM,METIСKAM,0.0,level
+2023-05-01,national,METICKAM,METIСKAM,0.0,level
+2023-06-01,national,METICKAM,METIСKAM,0.0,level
+2023-07-01,national,METICKAM,METIСKAM,0.0,level
+2023-08-01,national,METICKAM,METIСKAM,0.0,level
+2023-09-01,national,METICKAM,METIСKAM,0.0,level
+2023-10-01,national,METICKAM,METIСKAM,0.0,level
+2023-11-01,national,METICKAM,METIСKAM,0.0,level
+2023-12-01,national,METICKAM,METIСKAM,0.0,level
+2024-01-01,national,METICKAM,METIСKAM,0.0,level
+2024-02-01,national,METICKAM,METIСKAM,0.0,level
+2024-03-01,national,METICKAM,METIСKAM,0.0,level
+2024-04-01,national,METICKAM,METIСKAM,0.0,level
+2024-05-01,national,METICKAM,METIСKAM,0.0,level
+2024-06-01,national,METICKAM,METIСKAM,0.0,level
+2024-07-01,national,METICKAM,METIСKAM,0.0,level
+2024-08-01,national,METICKAM,METIСKAM,0.0,level
+2024-09-01,national,METICKAM,METIСKAM,0.0,level
+2024-10-01,national,METICKAM,METIСKAM,0.0,level
+2024-11-01,national,METICKAM,METIСKAM,0.0,level
+2024-12-01,national,METICKAM,METIСKAM,0.0,level
+2025-01-01,national,METICKAM,METIСKAM,0.0,level
+2025-02-01,national,METICKAM,METIСKAM,0.0,level
+2025-03-01,national,METICKAM,METIСKAM,0.0,level
+2025-04-01,national,METICKAM,METIСKAM,0.0,level
+2025-05-01,national,METICKAM,METIСKAM,0.0,level
+2025-06-01,national,METICKAM,METIСKAM,0.0,level
+2025-07-01,national,METICKAM,METIСKAM,0.0,level
+2025-08-01,national,METICKAM,METIСKAM,29000.0,level
+2025-09-01,national,METICKAM,METIСKAM,29000.0,level
+2025-10-01,national,METICKAM,METIСKAM,29000.0,level
+2025-11-01,national,METICKAM,METIСKAM,29000.0,level
+2025-12-01,national,METICKAM,METIСKAM,29000.0,level
+2026-01-01,national,METICKAM,METIСKAM,29000.0,level
+2026-02-01,national,METICKAM,METIСKAM,29000.0,level
+2026-03-01,national,METICKAM,METIСKAM,29000.0,level
+2026-04-01,national,METICKAM,METIСKAM,29000.0,level
+2026-05-01,national,METICKAM,METIСKAM,29000.0,level
+2026-06-01,national,METICKAM,METIСKAM,199924.0,level
+2026-07-01,national,METICKAM,METIСKAM,320729.0,level
+2026-08-01,national,METICKAM,METIСKAM,367702.0,level
+2026-09-01,national,METICKAM,METIСKAM,570737.0,level
+2010-02-01,national,METIKAM,METIKAM,0.0,level
+2010-03-01,national,METIKAM,METIKAM,0.0,level
+2010-04-01,national,METIKAM,METIKAM,0.0,level
+2010-05-01,national,METIKAM,METIKAM,0.0,level
+2010-06-01,national,METIKAM,METIKAM,0.0,level
+2010-07-01,national,METIKAM,METIKAM,0.0,level
+2010-08-01,national,METIKAM,METIKAM,0.0,level
+2010-09-01,national,METIKAM,METIKAM,0.0,level
+2010-10-01,national,METIKAM,METIKAM,0.0,level
+2010-11-01,national,METIKAM,METIKAM,0.0,level
+2010-12-01,national,METIKAM,METIKAM,0.0,level
+2011-01-01,national,METIKAM,METIKAM,0.0,level
+2011-02-01,national,METIKAM,METIKAM,0.0,level
+2011-03-01,national,METIKAM,METIKAM,0.0,level
+2011-04-01,national,METIKAM,METIKAM,0.0,level
+2011-05-01,national,METIKAM,METIKAM,0.0,level
+2011-06-01,national,METIKAM,METIKAM,0.0,level
+2011-07-01,national,METIKAM,METIKAM,0.0,level
+2011-08-01,national,METIKAM,METIKAM,0.0,level
+2011-09-01,national,METIKAM,METIKAM,0.0,level
+2011-10-01,national,METIKAM,METIKAM,0.0,level
+2011-11-01,national,METIKAM,METIKAM,0.0,level
+2011-12-01,national,METIKAM,METIKAM,0.0,level
+2012-01-01,national,METIKAM,METIKAM,0.0,level
+2012-02-01,national,METIKAM,METIKAM,0.0,level
+2012-03-01,national,METIKAM,METIKAM,0.0,level
+2012-04-01,national,METIKAM,METIKAM,0.0,level
+2012-05-01,national,METIKAM,METIKAM,0.0,level
+2012-06-01,national,METIKAM,METIKAM,0.0,level
+2012-07-01,national,METIKAM,METIKAM,0.0,level
+2012-08-01,national,METIKAM,METIKAM,0.0,level
+2012-09-01,national,METIKAM,METIKAM,0.0,level
+2012-10-01,national,METIKAM,METIKAM,0.0,level
+2012-11-01,national,METIKAM,METIKAM,0.0,level
+2012-12-01,national,METIKAM,METIKAM,0.0,level
+2013-01-01,national,METIKAM,METIKAM,0.0,level
+2013-02-01,national,METIKAM,METIKAM,0.0,level
+2013-03-01,national,METIKAM,METIKAM,0.0,level
+2013-04-01,national,METIKAM,METIKAM,0.0,level
+2013-05-01,national,METIKAM,METIKAM,0.0,level
+2013-06-01,national,METIKAM,METIKAM,0.0,level
+2013-07-01,national,METIKAM,METIKAM,0.0,level
+2013-08-01,national,METIKAM,METIKAM,0.0,level
+2013-09-01,national,METIKAM,METIKAM,0.0,level
+2013-10-01,national,METIKAM,METIKAM,0.0,level
+2013-11-01,national,METIKAM,METIKAM,0.0,level
+2013-12-01,national,METIKAM,METIKAM,0.0,level
+2014-01-01,national,METIKAM,METIKAM,0.0,level
+2014-02-01,national,METIKAM,METIKAM,0.0,level
+2014-03-01,national,METIKAM,METIKAM,0.0,level
+2014-04-01,national,METIKAM,METIKAM,0.0,level
+2014-05-01,national,METIKAM,METIKAM,0.0,level
+2014-06-01,national,METIKAM,METIKAM,0.0,level
+2014-07-01,national,METIKAM,METIKAM,0.0,level
+2014-08-01,national,METIKAM,METIKAM,0.0,level
+2014-09-01,national,METIKAM,METIKAM,0.0,level
+2014-10-01,national,METIKAM,METIKAM,0.0,level
+2014-11-01,national,METIKAM,METIKAM,0.0,level
+2014-12-01,national,METIKAM,METIKAM,0.0,level
+2015-01-01,national,METIKAM,METIKAM,0.0,level
+2015-02-01,national,METIKAM,METIKAM,0.0,level
+2015-03-01,national,METIKAM,METIKAM,0.0,level
+2015-04-01,national,METIKAM,METIKAM,0.0,level
+2015-05-01,national,METIKAM,METIKAM,0.0,level
+2015-06-01,national,METIKAM,METIKAM,0.0,level
+2015-07-01,national,METIKAM,METIKAM,0.0,level
+2015-08-01,national,METIKAM,METIKAM,0.0,level
+2015-09-01,national,METIKAM,METIKAM,0.0,level
+2015-10-01,national,METIKAM,METIKAM,0.0,level
+2015-11-01,national,METIKAM,METIKAM,0.0,level
+2015-12-01,national,METIKAM,METIKAM,0.0,level
+2016-01-01,national,METIKAM,METIKAM,0.0,level
+2016-02-01,national,METIKAM,METIKAM,0.0,level
+2016-03-01,national,METIKAM,METIKAM,0.0,level
+2016-04-01,national,METIKAM,METIKAM,0.0,level
+2016-05-01,national,METIKAM,METIKAM,0.0,level
+2016-06-01,national,METIKAM,METIKAM,0.0,level
+2016-07-01,national,METIKAM,METIKAM,0.0,level
+2016-08-01,national,METIKAM,METIKAM,0.0,level
+2016-09-01,national,METIKAM,METIKAM,0.0,level
+2016-10-01,national,METIKAM,METIKAM,0.0,level
+2016-11-01,national,METIKAM,METIKAM,0.0,level
+2016-12-01,national,METIKAM,METIKAM,0.0,level
+2017-01-01,national,METIKAM,METIKAM,0.0,level
+2017-02-01,national,METIKAM,METIKAM,0.0,level
+2017-03-01,national,METIKAM,METIKAM,0.0,level
+2017-04-01,national,METIKAM,METIKAM,0.0,level
+2017-05-01,national,METIKAM,METIKAM,0.0,level
+2017-06-01,national,METIKAM,METIKAM,0.0,level
+2017-07-01,national,METIKAM,METIKAM,0.0,level
+2017-08-01,national,METIKAM,METIKAM,0.0,level
+2017-09-01,national,METIKAM,METIKAM,0.0,level
+2017-10-01,national,METIKAM,METIKAM,0.0,level
+2017-11-01,national,METIKAM,METIKAM,0.0,level
+2017-12-01,national,METIKAM,METIKAM,0.0,level
+2018-01-01,national,METIKAM,METIKAM,0.0,level
+2018-02-01,national,METIKAM,METIKAM,0.0,level
+2018-03-01,national,METIKAM,METIKAM,0.0,level
+2018-04-01,national,METIKAM,METIKAM,0.0,level
+2018-05-01,national,METIKAM,METIKAM,0.0,level
+2018-06-01,national,METIKAM,METIKAM,0.0,level
+2018-07-01,national,METIKAM,METIKAM,0.0,level
+2018-08-01,national,METIKAM,METIKAM,0.0,level
+2018-09-01,national,METIKAM,METIKAM,0.0,level
+2018-10-01,national,METIKAM,METIKAM,0.0,level
+2018-11-01,national,METIKAM,METIKAM,0.0,level
+2018-12-01,national,METIKAM,METIKAM,0.0,level
+2019-01-01,national,METIKAM,METIKAM,0.0,level
+2019-02-01,national,METIKAM,METIKAM,0.0,level
+2019-03-01,national,METIKAM,METIKAM,0.0,level
+2019-04-01,national,METIKAM,METIKAM,0.0,level
+2019-05-01,national,METIKAM,METIKAM,0.0,level
+2019-06-01,national,METIKAM,METIKAM,0.0,level
+2019-07-01,national,METIKAM,METIKAM,0.0,level
+2019-08-01,national,METIKAM,METIKAM,0.0,level
+2019-09-01,national,METIKAM,METIKAM,0.0,level
+2019-10-01,national,METIKAM,METIKAM,0.0,level
+2019-11-01,national,METIKAM,METIKAM,0.0,level
+2019-12-01,national,METIKAM,METIKAM,0.0,level
+2020-01-01,national,METIKAM,METIKAM,0.0,level
+2020-02-01,national,METIKAM,METIKAM,0.0,level
+2020-03-01,national,METIKAM,METIKAM,0.0,level
+2020-04-01,national,METIKAM,METIKAM,0.0,level
+2020-05-01,national,METIKAM,METIKAM,0.0,level
+2020-06-01,national,METIKAM,METIKAM,0.0,level
+2020-07-01,national,METIKAM,METIKAM,0.0,level
+2020-08-01,national,METIKAM,METIKAM,0.0,level
+2020-09-01,national,METIKAM,METIKAM,0.0,level
+2020-10-01,national,METIKAM,METIKAM,0.0,level
+2020-11-01,national,METIKAM,METIKAM,0.0,level
+2020-12-01,national,METIKAM,METIKAM,0.0,level
+2021-01-01,national,METIKAM,METIKAM,0.0,level
+2021-02-01,national,METIKAM,METIKAM,0.0,level
+2021-03-01,national,METIKAM,METIKAM,0.0,level
+2021-04-01,national,METIKAM,METIKAM,0.0,level
+2021-05-01,national,METIKAM,METIKAM,0.0,level
+2021-06-01,national,METIKAM,METIKAM,0.0,level
+2021-07-01,national,METIKAM,METIKAM,0.0,level
+2021-08-01,national,METIKAM,METIKAM,0.0,level
+2021-09-01,national,METIKAM,METIKAM,0.0,level
+2021-10-01,national,METIKAM,METIKAM,0.0,level
+2021-11-01,national,METIKAM,METIKAM,0.0,level
+2021-12-01,national,METIKAM,METIKAM,0.0,level
+2022-01-01,national,METIKAM,METIKAM,0.0,level
+2022-02-01,national,METIKAM,METIKAM,0.0,level
+2022-03-01,national,METIKAM,METIKAM,0.0,level
+2022-04-01,national,METIKAM,METIKAM,0.0,level
+2022-05-01,national,METIKAM,METIKAM,0.0,level
+2022-06-01,national,METIKAM,METIKAM,0.0,level
+2022-07-01,national,METIKAM,METIKAM,0.0,level
+2022-08-01,national,METIKAM,METIKAM,0.0,level
+2022-09-01,national,METIKAM,METIKAM,74374.0,level
+2022-10-01,national,METIKAM,METIKAM,157097.0,level
+2022-11-01,national,METIKAM,METIKAM,401538.0,level
+2022-12-01,national,METIKAM,METIKAM,660680.0,level
+2023-01-01,national,METIKAM,METIKAM,825313.0,level
+2023-02-01,national,METIKAM,METIKAM,845500.0,level
+2023-03-01,national,METIKAM,METIKAM,888241.0,level
+2023-04-01,national,METIKAM,METIKAM,913241.0,level
+2023-05-01,national,METIKAM,METIKAM,952408.0,level
+2023-06-01,national,METIKAM,METIKAM,952408.0,level
+2023-07-01,national,METIKAM,METIKAM,952408.0,level
+2023-08-01,national,METIKAM,METIKAM,952408.0,level
+2023-09-01,national,METIKAM,METIKAM,952408.0,level
+2023-10-01,national,METIKAM,METIKAM,952408.0,level
+2023-11-01,national,METIKAM,METIKAM,952408.0,level
+2023-12-01,national,METIKAM,METIKAM,952408.0,level
+2024-01-01,national,METIKAM,METIKAM,952408.0,level
+2024-02-01,national,METIKAM,METIKAM,952408.0,level
+2024-03-01,national,METIKAM,METIKAM,952408.0,level
+2024-04-01,national,METIKAM,METIKAM,952408.0,level
+2024-05-01,national,METIKAM,METIKAM,952408.0,level
+2024-06-01,national,METIKAM,METIKAM,952408.0,level
+2024-07-01,national,METIKAM,METIKAM,952408.0,level
+2024-08-01,national,METIKAM,METIKAM,952408.0,level
+2024-09-01,national,METIKAM,METIKAM,952408.0,level
+2024-10-01,national,METIKAM,METIKAM,952408.0,level
+2024-11-01,national,METIKAM,METIKAM,952408.0,level
+2024-12-01,national,METIKAM,METIKAM,952408.0,level
+2025-01-01,national,METIKAM,METIKAM,952408.0,level
+2025-02-01,national,METIKAM,METIKAM,952408.0,level
+2025-03-01,national,METIKAM,METIKAM,952408.0,level
+2025-04-01,national,METIKAM,METIKAM,960715.0,level
+2025-05-01,national,METIKAM,METIKAM,960715.0,level
+2025-06-01,national,METIKAM,METIKAM,960715.0,level
+2025-07-01,national,METIKAM,METIKAM,1041782.0,level
+2025-08-01,national,METIKAM,METIKAM,1040925.0,level
+2025-09-01,national,METIKAM,METIKAM,820180.0,level
+2025-10-01,national,METIKAM,METIKAM,820180.0,level
+2025-11-01,national,METIKAM,METIKAM,820180.0,level
+2025-12-01,national,METIKAM,METIKAM,820180.0,level
+2026-01-01,national,METIKAM,METIKAM,820180.0,level
+2026-02-01,national,METIKAM,METIKAM,820180.0,level
+2026-03-01,national,METIKAM,METIKAM,852918.0,level
+2026-04-01,national,METIKAM,METIKAM,903564.0,level
+2026-05-01,national,METIKAM,METIKAM,973590.0,level
+2026-06-01,national,METIKAM,METIKAM,973590.0,level
+2026-07-01,national,METIKAM,METIKAM,973590.0,level
+2026-08-01,national,METIKAM,METIKAM,1021314.0,level
+2026-09-01,national,METIKAM,METIKAM,1021314.0,level
+2010-02-01,national,MEUKAM,МЕUКАМ,290783.0,level
+2010-03-01,national,MEUKAM,МЕUКАМ,305783.0,level
+2010-04-01,national,MEUKAM,МЕUКАМ,317783.0,level
+2010-05-01,national,MEUKAM,МЕUКАМ,317783.0,level
+2010-06-01,national,MEUKAM,МЕUКАМ,338596.0,level
+2010-07-01,national,MEUKAM,МЕUКАМ,350596.0,level
+2010-08-01,national,MEUKAM,МЕUКАМ,377596.0,level
+2010-09-01,national,MEUKAM,МЕUКАМ,405596.0,level
+2010-10-01,national,MEUKAM,МЕUКАМ,433921.0,level
+2010-11-01,national,MEUKAM,МЕUКАМ,470339.0,level
+2010-12-01,national,MEUKAM,МЕUКАМ,483722.0,level
+2011-01-01,national,MEUKAM,МЕUКАМ,483722.0,level
+2011-02-01,national,MEUKAM,МЕUКАМ,486556.0,level
+2011-03-01,national,MEUKAM,МЕUКАМ,486231.0,level
+2011-04-01,national,MEUKAM,МЕUКАМ,526361.0,level
+2011-05-01,national,MEUKAM,МЕUКАМ,541361.0,level
+2011-06-01,national,MEUKAM,МЕUКАМ,571759.0,level
+2011-07-01,national,MEUKAM,МЕUКАМ,592083.0,level
+2011-08-01,national,MEUKAM,МЕUКАМ,611150.0,level
+2011-09-01,national,MEUKAM,МЕUКАМ,646078.0,level
+2011-10-01,national,MEUKAM,МЕUКАМ,669938.0,level
+2011-11-01,national,MEUKAM,МЕUКАМ,699938.0,level
+2011-12-01,national,MEUKAM,МЕUКАМ,718948.0,level
+2012-01-01,national,MEUKAM,МЕUКАМ,771446.0,level
+2012-02-01,national,MEUKAM,МЕUКАМ,787071.0,level
+2012-03-01,national,MEUKAM,МЕUКАМ,819771.0,level
+2012-04-01,national,MEUKAM,МЕUКАМ,854771.0,level
+2012-05-01,national,MEUKAM,МЕUКАМ,888371.0,level
+2012-06-01,national,MEUKAM,МЕUКАМ,939454.0,level
+2012-07-01,national,MEUKAM,МЕUКАМ,979087.0,level
+2012-08-01,national,MEUKAM,МЕUКАМ,999841.0,level
+2012-09-01,national,MEUKAM,МЕUКАМ,1017587.0,level
+2012-10-01,national,MEUKAM,МЕUКАМ,1043887.0,level
+2012-11-01,national,MEUKAM,МЕUКАМ,1084987.0,level
+2012-12-01,national,MEUKAM,МЕUКАМ,1111354.0,level
+2013-01-01,national,MEUKAM,МЕUКАМ,1130117.0,level
+2013-02-01,national,MEUKAM,МЕUКАМ,1148163.0,level
+2013-03-01,national,MEUKAM,МЕUКАМ,1163280.0,level
+2013-04-01,national,MEUKAM,МЕUКАМ,1186626.0,level
+2013-05-01,national,MEUKAM,МЕUКАМ,1214223.0,level
+2013-06-01,national,MEUKAM,МЕUКАМ,1236537.0,level
+2013-07-01,national,MEUKAM,МЕUКАМ,1268485.0,level
+2013-08-01,national,MEUKAM,МЕUКАМ,1300805.0,level
+2013-09-01,national,MEUKAM,МЕUКАМ,1332114.0,level
+2013-10-01,national,MEUKAM,МЕUКАМ,1347761.0,level
+2013-11-01,national,MEUKAM,МЕUКАМ,1391021.0,level
+2013-12-01,national,MEUKAM,МЕUКАМ,1434840.0,level
+2014-01-01,national,MEUKAM,МЕUКАМ,1579978.0,level
+2014-02-01,national,MEUKAM,МЕUКАМ,1634026.0,level
+2014-03-01,national,MEUKAM,МЕUКАМ,1673297.0,level
+2014-04-01,national,MEUKAM,МЕUКАМ,1682679.0,level
+2014-05-01,national,MEUKAM,МЕUКАМ,1722552.0,level
+2014-06-01,national,MEUKAM,МЕUКАМ,1847931.0,level
+2014-07-01,national,MEUKAM,МЕUКАМ,1918298.0,level
+2014-08-01,national,MEUKAM,МЕUКАМ,2023751.0,level
+2014-09-01,national,MEUKAM,МЕUКАМ,2077700.0,level
+2014-10-01,national,MEUKAM,МЕUКАМ,2263669.0,level
+2014-11-01,national,MEUKAM,МЕUКАМ,2263669.0,level
+2014-12-01,national,MEUKAM,МЕUКАМ,2249569.0,level
+2015-01-01,national,MEUKAM,МЕUКАМ,2241410.0,level
+2015-02-01,national,MEUKAM,МЕUКАМ,2395063.0,level
+2015-03-01,national,MEUKAM,МЕUКАМ,2465115.0,level
+2015-04-01,national,MEUKAM,МЕUКАМ,2530370.0,level
+2015-05-01,national,MEUKAM,МЕUКАМ,2526650.0,level
+2015-06-01,national,MEUKAM,МЕUКАМ,2526800.0,level
+2015-07-01,national,MEUKAM,МЕUКАМ,2527153.0,level
+2015-08-01,national,MEUKAM,МЕUКАМ,2627153.0,level
+2015-09-01,national,MEUKAM,МЕUКАМ,2627153.0,level
+2015-10-01,national,MEUKAM,МЕUКАМ,2627153.0,level
+2015-11-01,national,MEUKAM,МЕUКАМ,2657153.0,level
+2015-12-01,national,MEUKAM,МЕUКАМ,2657153.0,level
+2016-01-01,national,MEUKAM,МЕUКАМ,2657153.0,level
+2016-02-01,national,MEUKAM,МЕUКАМ,2639943.0,level
+2016-03-01,national,MEUKAM,МЕUКАМ,2636343.0,level
+2016-04-01,national,MEUKAM,МЕUКАМ,2621343.0,level
+2016-05-01,national,MEUKAM,МЕUКАМ,2621343.0,level
+2016-06-01,national,MEUKAM,МЕUКАМ,2595363.0,level
+2016-07-01,national,MEUKAM,МЕUКАМ,2586103.0,level
+2016-08-01,national,MEUKAM,МЕUКАМ,2586103.0,level
+2016-09-01,national,MEUKAM,МЕUКАМ,2586103.0,level
+2016-10-01,national,MEUKAM,МЕUКАМ,2583483.0,level
+2016-11-01,national,MEUKAM,МЕUКАМ,2548037.0,level
+2016-12-01,national,MEUKAM,МЕUКАМ,2548037.0,level
+2017-01-01,national,MEUKAM,МЕUКАМ,2548037.0,level
+2017-02-01,national,MEUKAM,МЕUКАМ,2572037.0,level
+2017-03-01,national,MEUKAM,МЕUКАМ,2596158.0,level
+2017-04-01,national,MEUKAM,МЕUКАМ,2597818.0,level
+2017-05-01,national,MEUKAM,МЕUКАМ,2586651.0,level
+2017-06-01,national,MEUKAM,МЕUКАМ,2586651.0,level
+2017-07-01,national,MEUKAM,МЕUКАМ,2546458.0,level
+2017-08-01,national,MEUKAM,МЕUКАМ,3285458.0,level
+2017-09-01,national,MEUKAM,МЕUКАМ,3270411.0,level
+2017-10-01,national,MEUKAM,МЕUКАМ,3270411.0,level
+2017-11-01,national,MEUKAM,МЕUКАМ,3277045.0,level
+2017-12-01,national,MEUKAM,МЕUКАМ,3343702.0,level
+2018-01-01,national,MEUKAM,МЕUКАМ,3373984.0,level
+2018-02-01,national,MEUKAM,МЕUКАМ,3396175.0,level
+2018-03-01,national,MEUKAM,МЕUКАМ,3396175.0,level
+2018-04-01,national,MEUKAM,МЕUКАМ,3424733.0,level
+2018-05-01,national,MEUKAM,МЕUКАМ,3452233.0,level
+2018-06-01,national,MEUKAM,МЕUКАМ,3469984.0,level
+2018-07-01,national,MEUKAM,МЕUКАМ,3545359.0,level
+2018-08-01,national,MEUKAM,МЕUКАМ,3685017.0,level
+2018-09-01,national,MEUKAM,МЕUКАМ,3798951.0,level
+2018-10-01,national,MEUKAM,МЕUКАМ,3874989.0,level
+2018-11-01,national,MEUKAM,МЕUКАМ,3874989.0,level
+2018-12-01,national,MEUKAM,МЕUКАМ,3789794.0,level
+2019-01-01,national,MEUKAM,МЕUКАМ,3867393.0,level
+2019-02-01,national,MEUKAM,МЕUКАМ,3982863.0,level
+2019-03-01,national,MEUKAM,МЕUКАМ,4084082.0,level
+2019-04-01,national,MEUKAM,МЕUКАМ,4139799.0,level
+2019-05-01,national,MEUKAM,МЕUКАМ,4245473.0,level
+2019-06-01,national,MEUKAM,МЕUКАМ,4354502.0,level
+2019-07-01,national,MEUKAM,МЕUКАМ,4580703.0,level
+2019-08-01,national,MEUKAM,МЕUКАМ,4929511.0,level
+2019-09-01,national,MEUKAM,МЕUКАМ,4914966.0,level
+2019-10-01,national,MEUKAM,МЕUКАМ,4947565.0,level
+2019-11-01,national,MEUKAM,МЕUКАМ,4885471.0,level
+2019-12-01,national,MEUKAM,МЕUКАМ,4939929.0,level
+2020-01-01,national,MEUKAM,МЕUКАМ,4969022.0,level
+2020-02-01,national,MEUKAM,МЕUКАМ,5137106.0,level
+2020-03-01,national,MEUKAM,МЕUКАМ,5197472.0,level
+2020-04-01,national,MEUKAM,МЕUКАМ,5423101.0,level
+2020-05-01,national,MEUKAM,МЕUКАМ,5747188.0,level
+2020-06-01,national,MEUKAM,МЕUКАМ,5822669.0,level
+2020-07-01,national,MEUKAM,МЕUКАМ,5971504.0,level
+2020-08-01,national,MEUKAM,МЕUКАМ,6354041.0,level
+2020-09-01,national,MEUKAM,МЕUКАМ,6494870.0,level
+2020-10-01,national,MEUKAM,МЕUКАМ,6665046.0,level
+2020-11-01,national,MEUKAM,МЕUКАМ,7052903.0,level
+2020-12-01,national,MEUKAM,МЕUКАМ,7213749.0,level
+2021-01-01,national,MEUKAM,МЕUКАМ,7193549.0,level
+2021-02-01,national,MEUKAM,МЕUКАМ,7388582.0,level
+2021-03-01,national,MEUKAM,МЕUКАМ,7562582.0,level
+2021-04-01,national,MEUKAM,МЕUКАМ,7724210.0,level
+2021-05-01,national,MEUKAM,МЕUКАМ,7799774.0,level
+2021-06-01,national,MEUKAM,МЕUКАМ,7944659.0,level
+2021-07-01,national,MEUKAM,МЕUКАМ,8083841.0,level
+2021-08-01,national,MEUKAM,МЕUКАМ,8296702.0,level
+2021-09-01,national,MEUKAM,МЕUКАМ,8379066.0,level
+2021-10-01,national,MEUKAM,МЕUКАМ,8513231.0,level
+2021-11-01,national,MEUKAM,МЕUКАМ,8666851.0,level
+2021-12-01,national,MEUKAM,МЕUКАМ,8997830.0,level
+2022-01-01,national,MEUKAM,МЕUКАМ,9056005.0,level
+2022-02-01,national,MEUKAM,МЕUКАМ,9171608.0,level
+2022-03-01,national,MEUKAM,МЕUКАМ,9374779.0,level
+2022-04-01,national,MEUKAM,МЕUКАМ,9296961.0,level
+2022-05-01,national,MEUKAM,МЕUКАМ,9381717.0,level
+2022-06-01,national,MEUKAM,МЕUКАМ,9189878.0,level
+2022-07-01,national,MEUKAM,МЕUКАМ,9459129.0,level
+2022-08-01,national,MEUKAM,МЕUКАМ,10050994.0,level
+2022-09-01,national,MEUKAM,МЕUКАМ,10301575.0,level
+2022-10-01,national,MEUKAM,МЕUКАМ,10341880.0,level
+2022-11-01,national,MEUKAM,МЕUКАМ,10314432.0,level
+2022-12-01,national,MEUKAM,МЕUКАМ,10314432.0,level
+2023-01-01,national,MEUKAM,МЕUКАМ,10447907.0,level
+2023-02-01,national,MEUKAM,МЕUКАМ,10556824.0,level
+2023-03-01,national,MEUKAM,МЕUКАМ,10671555.0,level
+2023-04-01,national,MEUKAM,МЕUКАМ,10882429.0,level
+2023-05-01,national,MEUKAM,МЕUКАМ,10941188.0,level
+2023-06-01,national,MEUKAM,МЕUКАМ,11287475.0,level
+2023-07-01,national,MEUKAM,МЕUКАМ,12190667.0,level
+2023-08-01,national,MEUKAM,МЕUКАМ,12442858.0,level
+2023-09-01,national,MEUKAM,МЕUКАМ,12511463.0,level
+2023-10-01,national,MEUKAM,МЕUКАМ,12598933.0,level
+2023-11-01,national,MEUKAM,МЕUКАМ,12719514.0,level
+2023-12-01,national,MEUKAM,МЕUКАМ,12807192.0,level
+2024-01-01,national,MEUKAM,МЕUКАМ,12821636.0,level
+2024-02-01,national,MEUKAM,МЕUКАМ,12924904.0,level
+2024-03-01,national,MEUKAM,МЕUКАМ,13307589.0,level
+2024-04-01,national,MEUKAM,МЕUКАМ,13644933.0,level
+2024-05-01,national,MEUKAM,МЕUКАМ,14039489.0,level
+2024-06-01,national,MEUKAM,МЕUКАМ,14032955.0,level
+2024-07-01,national,MEUKAM,МЕUКАМ,14468049.0,level
+2024-08-01,national,MEUKAM,МЕUКАМ,15278503.0,level
+2024-09-01,national,MEUKAM,МЕUКАМ,15411454.0,level
+2024-10-01,national,MEUKAM,МЕUКАМ,15519546.0,level
+2024-11-01,national,MEUKAM,МЕUКАМ,15678756.0,level
+2024-12-01,national,MEUKAM,МЕUКАМ,15704537.0,level
+2025-01-01,national,MEUKAM,МЕUКАМ,15704537.0,level
+2025-02-01,national,MEUKAM,МЕUКАМ,15990591.0,level
+2025-03-01,national,MEUKAM,МЕUКАМ,16523491.0,level
+2025-04-01,national,MEUKAM,МЕUКАМ,17041758.0,level
+2025-05-01,national,MEUKAM,МЕUКАМ,17593130.0,level
+2025-06-01,national,MEUKAM,МЕUКАМ,17777504.0,level
+2025-07-01,national,MEUKAM,МЕUКАМ,18208271.0,level
+2025-08-01,national,MEUKAM,МЕUКАМ,18680805.0,level
+2025-09-01,national,MEUKAM,МЕUКАМ,19082810.0,level
+2025-10-01,national,MEUKAM,МЕUКАМ,19291932.0,level
+2025-11-01,national,MEUKAM,МЕUКАМ,19580747.0,level
+2025-12-01,national,MEUKAM,МЕUКАМ,20017208.0,level
+2026-01-01,national,MEUKAM,МЕUКАМ,20222315.0,level
+2026-02-01,national,MEUKAM,МЕUКАМ,20536377.0,level
+2026-03-01,national,MEUKAM,МЕUКАМ,20894160.0,level
+2026-04-01,national,MEUKAM,МЕUКАМ,21295791.0,level
+2026-05-01,national,MEUKAM,МЕUКАМ,21617419.0,level
+2026-06-01,national,MEUKAM,МЕUКАМ,22011488.0,level
+2026-07-01,national,MEUKAM,МЕUКАМ,22104699.0,level
+2026-08-01,national,MEUKAM,МЕUКАМ,22366214.0,level
+2026-09-01,national,MEUKAM,МЕUКАМ,22628644.0,level
+2010-02-01,national,MEUZKAM,МЕUZКАМ,381752.0,level
+2010-03-01,national,MEUZKAM,МЕUZКАМ,399752.0,level
+2010-04-01,national,MEUZKAM,МЕUZКАМ,404752.0,level
+2010-05-01,national,MEUZKAM,МЕUZКАМ,418752.0,level
+2010-06-01,national,MEUZKAM,МЕUZКАМ,422752.0,level
+2010-07-01,national,MEUZKAM,МЕUZКАМ,435752.0,level
+2010-08-01,national,MEUZKAM,МЕUZКАМ,450752.0,level
+2010-09-01,national,MEUZKAM,МЕUZКАМ,465752.0,level
+2010-10-01,national,MEUZKAM,МЕUZКАМ,482752.0,level
+2010-11-01,national,MEUZKAM,МЕUZКАМ,497752.0,level
+2010-12-01,national,MEUZKAM,МЕUZКАМ,503202.0,level
+2011-01-01,national,MEUZKAM,МЕUZКАМ,503202.0,level
+2011-02-01,national,MEUZKAM,МЕUZКАМ,513202.0,level
+2011-03-01,national,MEUZKAM,МЕUZКАМ,527752.0,level
+2011-04-01,national,MEUZKAM,МЕUZКАМ,542752.0,level
+2011-05-01,national,MEUZKAM,МЕUZКАМ,546752.0,level
+2011-06-01,national,MEUZKAM,МЕUZКАМ,546752.0,level
+2011-07-01,national,MEUZKAM,МЕUZКАМ,561752.0,level
+2011-08-01,national,MEUZKAM,МЕUZКАМ,576752.0,level
+2011-09-01,national,MEUZKAM,МЕUZКАМ,576752.0,level
+2011-10-01,national,MEUZKAM,МЕUZКАМ,603752.0,level
+2011-11-01,national,MEUZKAM,МЕUZКАМ,619752.0,level
+2011-12-01,national,MEUZKAM,МЕUZКАМ,621152.0,level
+2012-01-01,national,MEUZKAM,МЕUZКАМ,658752.0,level
+2012-02-01,national,MEUZKAM,МЕUZКАМ,671925.0,level
+2012-03-01,national,MEUZKAM,МЕUZКАМ,691925.0,level
+2012-04-01,national,MEUZKAM,МЕUZКАМ,706925.0,level
+2012-05-01,national,MEUZKAM,МЕUZКАМ,726925.0,level
+2012-06-01,national,MEUZKAM,МЕUZКАМ,751925.0,level
+2012-07-01,national,MEUZKAM,МЕUZКАМ,761925.0,level
+2012-08-01,national,MEUZKAM,МЕUZКАМ,787158.0,level
+2012-09-01,national,MEUZKAM,МЕUZКАМ,817158.0,level
+2012-10-01,national,MEUZKAM,МЕUZКАМ,847158.0,level
+2012-11-01,national,MEUZKAM,МЕUZКАМ,927158.0,level
+2012-12-01,national,MEUZKAM,МЕUZКАМ,1028868.0,level
+2013-01-01,national,MEUZKAM,МЕUZКАМ,1050373.0,level
+2013-02-01,national,MEUZKAM,МЕUZКАМ,1055643.0,level
+2013-03-01,national,MEUZKAM,МЕUZКАМ,1060688.0,level
+2013-04-01,national,MEUZKAM,МЕUZКАМ,1060688.0,level
+2013-05-01,national,MEUZKAM,МЕUZКАМ,1046588.0,level
+2013-06-01,national,MEUZKAM,МЕUZКАМ,1056588.0,level
+2013-07-01,national,MEUZKAM,МЕUZКАМ,1086588.0,level
+2013-08-01,national,MEUZKAM,МЕUZКАМ,1101588.0,level
+2013-09-01,national,MEUZKAM,МЕUZКАМ,1101588.0,level
+2013-10-01,national,MEUZKAM,МЕUZКАМ,1181588.0,level
+2013-11-01,national,MEUZKAM,МЕUZКАМ,1260450.0,level
+2013-12-01,national,MEUZKAM,МЕUZКАМ,1274750.0,level
+2014-01-01,national,MEUZKAM,МЕUZКАМ,1304750.0,level
+2014-02-01,national,MEUZKAM,МЕUZКАМ,1318750.0,level
+2014-03-01,national,MEUZKAM,МЕUZКАМ,1339750.0,level
+2014-04-01,national,MEUZKAM,МЕUZКАМ,1339750.0,level
+2014-05-01,national,MEUZKAM,МЕUZКАМ,1339750.0,level
+2014-06-01,national,MEUZKAM,МЕUZКАМ,1339750.0,level
+2014-07-01,national,MEUZKAM,МЕUZКАМ,1339750.0,level
+2014-08-01,national,MEUZKAM,МЕUZКАМ,1339750.0,level
+2014-09-01,national,MEUZKAM,МЕUZКАМ,1339750.0,level
+2014-10-01,national,MEUZKAM,МЕUZКАМ,1339750.0,level
+2014-11-01,national,MEUZKAM,МЕUZКАМ,1339750.0,level
+2014-12-01,national,MEUZKAM,МЕUZКАМ,1339750.0,level
+2015-01-01,national,MEUZKAM,МЕUZКАМ,1339750.0,level
+2015-02-01,national,MEUZKAM,МЕUZКАМ,1278774.0,level
+2015-03-01,national,MEUZKAM,МЕUZКАМ,1278774.0,level
+2015-04-01,national,MEUZKAM,МЕUZКАМ,1278774.0,level
+2015-05-01,national,MEUZKAM,МЕUZКАМ,1278774.0,level
+2015-06-01,national,MEUZKAM,МЕUZКАМ,1278774.0,level
+2015-07-01,national,MEUZKAM,МЕUZКАМ,1278774.0,level
+2015-08-01,national,MEUZKAM,МЕUZКАМ,1278774.0,level
+2015-09-01,national,MEUZKAM,МЕUZКАМ,1278774.0,level
+2015-10-01,national,MEUZKAM,МЕUZКАМ,1278774.0,level
+2015-11-01,national,MEUZKAM,МЕUZКАМ,1278774.0,level
+2015-12-01,national,MEUZKAM,МЕUZКАМ,1278774.0,level
+2016-01-01,national,MEUZKAM,МЕUZКАМ,1278774.0,level
+2016-02-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2016-03-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2016-04-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2016-05-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2016-06-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2016-07-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2016-08-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2016-09-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2016-10-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2016-11-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2016-12-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2017-01-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2017-02-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2017-03-01,national,MEUZKAM,МЕUZКАМ,1450174.0,level
+2017-04-01,national,MEUZKAM,МЕUZКАМ,1421174.0,level
+2017-05-01,national,MEUZKAM,МЕUZКАМ,1421174.0,level
+2017-06-01,national,MEUZKAM,МЕUZКАМ,1421174.0,level
+2017-07-01,national,MEUZKAM,МЕUZКАМ,1409174.0,level
+2017-08-01,national,MEUZKAM,МЕUZКАМ,1409174.0,level
+2017-09-01,national,MEUZKAM,МЕUZКАМ,1409174.0,level
+2017-10-01,national,MEUZKAM,МЕUZКАМ,1409174.0,level
+2017-11-01,national,MEUZKAM,МЕUZКАМ,1407164.0,level
+2017-12-01,national,MEUZKAM,МЕUZКАМ,1407164.0,level
+2018-01-01,national,MEUZKAM,МЕUZКАМ,1407164.0,level
+2018-02-01,national,MEUZKAM,МЕUZКАМ,1407164.0,level
+2018-03-01,national,MEUZKAM,МЕUZКАМ,1407164.0,level
+2018-04-01,national,MEUZKAM,МЕUZКАМ,1407164.0,level
+2018-05-01,national,MEUZKAM,МЕUZКАМ,1407164.0,level
+2018-06-01,national,MEUZKAM,МЕUZКАМ,1394164.0,level
+2018-07-01,national,MEUZKAM,МЕUZКАМ,1394164.0,level
+2018-08-01,national,MEUZKAM,МЕUZКАМ,1394164.0,level
+2018-09-01,national,MEUZKAM,МЕUZКАМ,1394164.0,level
+2018-10-01,national,MEUZKAM,МЕUZКАМ,1394164.0,level
+2018-11-01,national,MEUZKAM,МЕUZКАМ,1363164.0,level
+2018-12-01,national,MEUZKAM,МЕUZКАМ,1363164.0,level
+2019-01-01,national,MEUZKAM,МЕUZКАМ,1363164.0,level
+2019-02-01,national,MEUZKAM,МЕUZКАМ,1362164.0,level
+2019-03-01,national,MEUZKAM,МЕUZКАМ,1362164.0,level
+2019-04-01,national,MEUZKAM,МЕUZКАМ,1362164.0,level
+2019-05-01,national,MEUZKAM,МЕUZКАМ,1362164.0,level
+2019-06-01,national,MEUZKAM,МЕUZКАМ,1362164.0,level
+2019-07-01,national,MEUZKAM,МЕUZКАМ,1362164.0,level
+2019-08-01,national,MEUZKAM,МЕUZКАМ,1347164.0,level
+2019-09-01,national,MEUZKAM,МЕUZКАМ,1347164.0,level
+2019-10-01,national,MEUZKAM,МЕUZКАМ,1330164.0,level
+2019-11-01,national,MEUZKAM,МЕUZКАМ,1330164.0,level
+2019-12-01,national,MEUZKAM,МЕUZКАМ,1330164.0,level
+2020-01-01,national,MEUZKAM,МЕUZКАМ,1330164.0,level
+2020-02-01,national,MEUZKAM,МЕUZКАМ,1330164.0,level
+2020-03-01,national,MEUZKAM,МЕUZКАМ,1330164.0,level
+2020-04-01,national,MEUZKAM,МЕUZКАМ,1330164.0,level
+2020-05-01,national,MEUZKAM,МЕUZКАМ,1316164.0,level
+2020-06-01,national,MEUZKAM,МЕUZКАМ,1316164.0,level
+2020-07-01,national,MEUZKAM,МЕUZКАМ,1306164.0,level
+2020-08-01,national,MEUZKAM,МЕUZКАМ,1306164.0,level
+2020-09-01,national,MEUZKAM,МЕUZКАМ,1306164.0,level
+2020-10-01,national,MEUZKAM,МЕUZКАМ,1306164.0,level
+2020-11-01,national,MEUZKAM,МЕUZКАМ,1286164.0,level
+2020-12-01,national,MEUZKAM,МЕUZКАМ,1286164.0,level
+2021-01-01,national,MEUZKAM,МЕUZКАМ,1286164.0,level
+2021-02-01,national,MEUZKAM,МЕUZКАМ,1286164.0,level
+2021-03-01,national,MEUZKAM,МЕUZКАМ,1271164.0,level
+2021-04-01,national,MEUZKAM,МЕUZКАМ,1271164.0,level
+2021-05-01,national,MEUZKAM,МЕUZКАМ,1234741.0,level
+2021-06-01,national,MEUZKAM,МЕUZКАМ,1234741.0,level
+2021-07-01,national,MEUZKAM,МЕUZКАМ,1234741.0,level
+2021-08-01,national,MEUZKAM,МЕUZКАМ,1204741.0,level
+2021-09-01,national,MEUZKAM,МЕUZКАМ,1204741.0,level
+2021-10-01,national,MEUZKAM,МЕUZКАМ,1204741.0,level
+2021-11-01,national,MEUZKAM,МЕUZКАМ,1204741.0,level
+2021-12-01,national,MEUZKAM,МЕUZКАМ,1204741.0,level
+2022-01-01,national,MEUZKAM,МЕUZКАМ,1204741.0,level
+2022-02-01,national,MEUZKAM,МЕUZКАМ,1204741.0,level
+2022-03-01,national,MEUZKAM,МЕUZКАМ,1204741.0,level
+2022-04-01,national,MEUZKAM,МЕUZКАМ,1199741.0,level
+2022-05-01,national,MEUZKAM,МЕUZКАМ,1189741.0,level
+2022-06-01,national,MEUZKAM,МЕUZКАМ,1171569.0,level
+2022-07-01,national,MEUZKAM,МЕUZКАМ,1171569.0,level
+2022-08-01,national,MEUZKAM,МЕUZКАМ,1171569.0,level
+2022-09-01,national,MEUZKAM,МЕUZКАМ,1170869.0,level
+2022-10-01,national,MEUZKAM,МЕUZКАМ,1170869.0,level
+2022-11-01,national,MEUZKAM,МЕUZКАМ,1092007.0,level
+2022-12-01,national,MEUZKAM,МЕUZКАМ,1025507.0,level
+2023-01-01,national,MEUZKAM,МЕUZКАМ,1017007.0,level
+2023-02-01,national,MEUZKAM,МЕUZКАМ,824007.0,level
+2023-03-01,national,MEUZKAM,МЕUZКАМ,824007.0,level
+2023-04-01,national,MEUZKAM,МЕUZКАМ,824007.0,level
+2023-05-01,national,MEUZKAM,МЕUZКАМ,814737.0,level
+2023-06-01,national,MEUZKAM,МЕUZКАМ,814737.0,level
+2023-07-01,national,MEUZKAM,МЕUZКАМ,814737.0,level
+2023-08-01,national,MEUZKAM,МЕUZКАМ,799737.0,level
+2023-09-01,national,MEUZKAM,МЕUZКАМ,799737.0,level
+2023-10-01,national,MEUZKAM,МЕUZКАМ,794070.0,level
+2023-11-01,national,MEUZKAM,МЕUZКАМ,794070.0,level
+2023-12-01,national,MEUZKAM,МЕUZКАМ,732860.0,level
+2024-01-01,national,MEUZKAM,МЕUZКАМ,732860.0,level
+2024-02-01,national,MEUZKAM,МЕUZКАМ,732860.0,level
+2024-03-01,national,MEUZKAM,МЕUZКАМ,717183.0,level
+2024-04-01,national,MEUZKAM,МЕUZКАМ,717183.0,level
+2024-05-01,national,MEUZKAM,МЕUZКАМ,707183.0,level
+2024-06-01,national,MEUZKAM,МЕUZКАМ,707183.0,level
+2024-07-01,national,MEUZKAM,МЕUZКАМ,707183.0,level
+2024-08-01,national,MEUZKAM,МЕUZКАМ,707183.0,level
+2024-09-01,national,MEUZKAM,МЕUZКАМ,692183.0,level
+2024-10-01,national,MEUZKAM,МЕUZКАМ,692183.0,level
+2024-11-01,national,MEUZKAM,МЕUZКАМ,632183.0,level
+2024-12-01,national,MEUZKAM,МЕUZКАМ,632183.0,level
+2025-01-01,national,MEUZKAM,МЕUZКАМ,632183.0,level
+2025-02-01,national,MEUZKAM,МЕUZКАМ,618183.0,level
+2025-03-01,national,MEUZKAM,МЕUZКАМ,618183.0,level
+2025-04-01,national,MEUZKAM,МЕUZКАМ,603183.0,level
+2025-05-01,national,MEUZKAM,МЕUZКАМ,583183.0,level
+2025-06-01,national,MEUZKAM,МЕUZКАМ,573183.0,level
+2025-07-01,national,MEUZKAM,МЕUZКАМ,573183.0,level
+2025-08-01,national,MEUZKAM,МЕUZКАМ,573183.0,level
+2025-09-01,national,MEUZKAM,МЕUZКАМ,573183.0,level
+2025-10-01,national,MEUZKAM,МЕUZКАМ,573183.0,level
+2025-11-01,national,MEUZKAM,МЕUZКАМ,541183.0,level
+2025-12-01,national,MEUZKAM,МЕUZКАМ,526883.0,level
+2026-01-01,national,MEUZKAM,МЕUZКАМ,526883.0,level
+2026-02-01,national,MEUZKAM,МЕUZКАМ,526883.0,level
+2026-03-01,national,MEUZKAM,МЕUZКАМ,526883.0,level
+2026-04-01,national,MEUZKAM,МЕUZКАМ,511883.0,level
+2026-05-01,national,MEUZKAM,МЕUZКАМ,511883.0,level
+2026-06-01,national,MEUZKAM,МЕUZКАМ,490883.0,level
+2026-07-01,national,MEUZKAM,МЕUZКАМ,490883.0,level
+2026-08-01,national,MEUZKAM,МЕUZКАМ,475883.0,level
+2026-09-01,national,MEUZKAM,МЕUZКАМ,445883.0,level
+2010-02-01,national,MUIKAM,МUIКАМ,52909.0,level
+2010-03-01,national,MUIKAM,МUIКАМ,52909.0,level
+2010-04-01,national,MUIKAM,МUIКАМ,52909.0,level
+2010-05-01,national,MUIKAM,МUIКАМ,52909.0,level
+2010-06-01,national,MUIKAM,МUIКАМ,52909.0,level
+2010-07-01,national,MUIKAM,МUIКАМ,52909.0,level
+2010-08-01,national,MUIKAM,МUIКАМ,52909.0,level
+2010-09-01,national,MUIKAM,МUIКАМ,52909.0,level
+2010-10-01,national,MUIKAM,МUIКАМ,52909.0,level
+2010-11-01,national,MUIKAM,МUIКАМ,52909.0,level
+2010-12-01,national,MUIKAM,МUIКАМ,52909.0,level
+2011-01-01,national,MUIKAM,МUIКАМ,52909.0,level
+2011-02-01,national,MUIKAM,МUIКАМ,52909.0,level
+2011-03-01,national,MUIKAM,МUIКАМ,52909.0,level
+2011-04-01,national,MUIKAM,МUIКАМ,52909.0,level
+2011-05-01,national,MUIKAM,МUIКАМ,52909.0,level
+2011-06-01,national,MUIKAM,МUIКАМ,52909.0,level
+2011-07-01,national,MUIKAM,МUIКАМ,52909.0,level
+2011-08-01,national,MUIKAM,МUIКАМ,52909.0,level
+2011-09-01,national,MUIKAM,МUIКАМ,52909.0,level
+2011-10-01,national,MUIKAM,МUIКАМ,52909.0,level
+2011-11-01,national,MUIKAM,МUIКАМ,52909.0,level
+2011-12-01,national,MUIKAM,МUIКАМ,52909.0,level
+2012-01-01,national,MUIKAM,МUIКАМ,52909.0,level
+2012-02-01,national,MUIKAM,МUIКАМ,52909.0,level
+2012-03-01,national,MUIKAM,МUIКАМ,52909.0,level
+2012-04-01,national,MUIKAM,МUIКАМ,52909.0,level
+2012-05-01,national,MUIKAM,МUIКАМ,52909.0,level
+2012-06-01,national,MUIKAM,МUIКАМ,52909.0,level
+2012-07-01,national,MUIKAM,МUIКАМ,52909.0,level
+2012-08-01,national,MUIKAM,МUIКАМ,52909.0,level
+2012-09-01,national,MUIKAM,МUIКАМ,52909.0,level
+2012-10-01,national,MUIKAM,МUIКАМ,52909.0,level
+2012-11-01,national,MUIKAM,МUIКАМ,52909.0,level
+2012-12-01,national,MUIKAM,МUIКАМ,52909.0,level
+2013-01-01,national,MUIKAM,МUIКАМ,52909.0,level
+2013-02-01,national,MUIKAM,МUIКАМ,52909.0,level
+2013-03-01,national,MUIKAM,МUIКАМ,52909.0,level
+2013-04-01,national,MUIKAM,МUIКАМ,52909.0,level
+2013-05-01,national,MUIKAM,МUIКАМ,52909.0,level
+2013-06-01,national,MUIKAM,МUIКАМ,52909.0,level
+2013-07-01,national,MUIKAM,МUIКАМ,28405.0,level
+2013-08-01,national,MUIKAM,МUIКАМ,28405.0,level
+2013-09-01,national,MUIKAM,МUIКАМ,28405.0,level
+2013-10-01,national,MUIKAM,МUIКАМ,28405.0,level
+2013-11-01,national,MUIKAM,МUIКАМ,28405.0,level
+2013-12-01,national,MUIKAM,МUIКАМ,28405.0,level
+2014-01-01,national,MUIKAM,МUIКАМ,28405.0,level
+2014-02-01,national,MUIKAM,МUIКАМ,28405.0,level
+2014-03-01,national,MUIKAM,МUIКАМ,12000.0,level
+2014-04-01,national,MUIKAM,МUIКАМ,12000.0,level
+2014-05-01,national,MUIKAM,МUIКАМ,12000.0,level
+2014-06-01,national,MUIKAM,МUIКАМ,12000.0,level
+2014-07-01,national,MUIKAM,МUIКАМ,12000.0,level
+2014-08-01,national,MUIKAM,МUIКАМ,12000.0,level
+2014-09-01,national,MUIKAM,МUIКАМ,12000.0,level
+2014-10-01,national,MUIKAM,МUIКАМ,12000.0,level
+2014-11-01,national,MUIKAM,МUIКАМ,12000.0,level
+2014-12-01,national,MUIKAM,МUIКАМ,12000.0,level
+2015-01-01,national,MUIKAM,МUIКАМ,12000.0,level
+2015-02-01,national,MUIKAM,МUIКАМ,12000.0,level
+2015-03-01,national,MUIKAM,МUIКАМ,12000.0,level
+2015-04-01,national,MUIKAM,МUIКАМ,12000.0,level
+2015-05-01,national,MUIKAM,МUIКАМ,0.0,level
+2015-06-01,national,MUIKAM,МUIКАМ,0.0,level
+2015-07-01,national,MUIKAM,МUIКАМ,0.0,level
+2015-08-01,national,MUIKAM,МUIКАМ,0.0,level
+2015-09-01,national,MUIKAM,МUIКАМ,0.0,level
+2015-10-01,national,MUIKAM,МUIКАМ,0.0,level
+2015-11-01,national,MUIKAM,МUIКАМ,0.0,level
+2015-12-01,national,MUIKAM,МUIКАМ,0.0,level
+2016-01-01,national,MUIKAM,МUIКАМ,0.0,level
+2016-02-01,national,MUIKAM,МUIКАМ,0.0,level
+2016-03-01,national,MUIKAM,МUIКАМ,0.0,level
+2016-04-01,national,MUIKAM,МUIКАМ,0.0,level
+2016-05-01,national,MUIKAM,МUIКАМ,0.0,level
+2016-06-01,national,MUIKAM,МUIКАМ,0.0,level
+2016-07-01,national,MUIKAM,МUIКАМ,0.0,level
+2016-08-01,national,MUIKAM,МUIКАМ,0.0,level
+2016-09-01,national,MUIKAM,МUIКАМ,0.0,level
+2016-10-01,national,MUIKAM,МUIКАМ,0.0,level
+2016-11-01,national,MUIKAM,МUIКАМ,0.0,level
+2016-12-01,national,MUIKAM,МUIКАМ,0.0,level
+2017-01-01,national,MUIKAM,МUIКАМ,0.0,level
+2017-02-01,national,MUIKAM,МUIКАМ,0.0,level
+2017-03-01,national,MUIKAM,МUIКАМ,0.0,level
+2017-04-01,national,MUIKAM,МUIКАМ,0.0,level
+2017-05-01,national,MUIKAM,МUIКАМ,0.0,level
+2017-06-01,national,MUIKAM,МUIКАМ,0.0,level
+2017-07-01,national,MUIKAM,МUIКАМ,0.0,level
+2017-08-01,national,MUIKAM,МUIКАМ,0.0,level
+2017-09-01,national,MUIKAM,МUIКАМ,0.0,level
+2017-10-01,national,MUIKAM,МUIКАМ,0.0,level
+2017-11-01,national,MUIKAM,МUIКАМ,0.0,level
+2017-12-01,national,MUIKAM,МUIКАМ,0.0,level
+2018-01-01,national,MUIKAM,МUIКАМ,0.0,level
+2018-02-01,national,MUIKAM,МUIКАМ,0.0,level
+2018-03-01,national,MUIKAM,МUIКАМ,0.0,level
+2018-04-01,national,MUIKAM,МUIКАМ,0.0,level
+2018-05-01,national,MUIKAM,МUIКАМ,0.0,level
+2018-06-01,national,MUIKAM,МUIКАМ,0.0,level
+2018-07-01,national,MUIKAM,МUIКАМ,0.0,level
+2018-08-01,national,MUIKAM,МUIКАМ,0.0,level
+2018-09-01,national,MUIKAM,МUIКАМ,0.0,level
+2018-10-01,national,MUIKAM,МUIКАМ,0.0,level
+2018-11-01,national,MUIKAM,МUIКАМ,0.0,level
+2018-12-01,national,MUIKAM,МUIКАМ,0.0,level
+2019-01-01,national,MUIKAM,МUIКАМ,0.0,level
+2019-02-01,national,MUIKAM,МUIКАМ,0.0,level
+2019-03-01,national,MUIKAM,МUIКАМ,0.0,level
+2019-04-01,national,MUIKAM,МUIКАМ,0.0,level
+2019-05-01,national,MUIKAM,МUIКАМ,0.0,level
+2019-06-01,national,MUIKAM,МUIКАМ,0.0,level
+2019-07-01,national,MUIKAM,МUIКАМ,0.0,level
+2019-08-01,national,MUIKAM,МUIКАМ,0.0,level
+2019-09-01,national,MUIKAM,МUIКАМ,0.0,level
+2019-10-01,national,MUIKAM,МUIКАМ,0.0,level
+2019-11-01,national,MUIKAM,МUIКАМ,0.0,level
+2019-12-01,national,MUIKAM,МUIКАМ,0.0,level
+2020-01-01,national,MUIKAM,МUIКАМ,0.0,level
+2020-02-01,national,MUIKAM,МUIКАМ,0.0,level
+2020-03-01,national,MUIKAM,МUIКАМ,0.0,level
+2020-04-01,national,MUIKAM,МUIКАМ,0.0,level
+2020-05-01,national,MUIKAM,МUIКАМ,0.0,level
+2020-06-01,national,MUIKAM,МUIКАМ,0.0,level
+2020-07-01,national,MUIKAM,МUIКАМ,0.0,level
+2020-08-01,national,MUIKAM,МUIКАМ,0.0,level
+2020-09-01,national,MUIKAM,МUIКАМ,0.0,level
+2020-10-01,national,MUIKAM,МUIКАМ,0.0,level
+2020-11-01,national,MUIKAM,МUIКАМ,0.0,level
+2020-12-01,national,MUIKAM,МUIКАМ,0.0,level
+2021-01-01,national,MUIKAM,МUIКАМ,0.0,level
+2021-02-01,national,MUIKAM,МUIКАМ,0.0,level
+2021-03-01,national,MUIKAM,МUIКАМ,0.0,level
+2021-04-01,national,MUIKAM,МUIКАМ,0.0,level
+2021-05-01,national,MUIKAM,МUIКАМ,0.0,level
+2021-06-01,national,MUIKAM,МUIКАМ,0.0,level
+2021-07-01,national,MUIKAM,МUIКАМ,0.0,level
+2021-08-01,national,MUIKAM,МUIКАМ,0.0,level
+2021-09-01,national,MUIKAM,МUIКАМ,0.0,level
+2021-10-01,national,MUIKAM,МUIКАМ,0.0,level
+2021-11-01,national,MUIKAM,МUIКАМ,0.0,level
+2021-12-01,national,MUIKAM,МUIКАМ,0.0,level
+2022-01-01,national,MUIKAM,МUIКАМ,0.0,level
+2022-02-01,national,MUIKAM,МUIКАМ,0.0,level
+2022-03-01,national,MUIKAM,МUIКАМ,0.0,level
+2022-04-01,national,MUIKAM,МUIКАМ,0.0,level
+2022-05-01,national,MUIKAM,МUIКАМ,0.0,level
+2022-06-01,national,MUIKAM,МUIКАМ,0.0,level
+2022-07-01,national,MUIKAM,МUIКАМ,0.0,level
+2022-08-01,national,MUIKAM,МUIКАМ,0.0,level
+2022-09-01,national,MUIKAM,МUIКАМ,0.0,level
+2022-10-01,national,MUIKAM,МUIКАМ,0.0,level
+2022-11-01,national,MUIKAM,МUIКАМ,0.0,level
+2022-12-01,national,MUIKAM,МUIКАМ,0.0,level
+2023-01-01,national,MUIKAM,МUIКАМ,0.0,level
+2023-02-01,national,MUIKAM,МUIКАМ,0.0,level
+2023-03-01,national,MUIKAM,МUIКАМ,0.0,level
+2023-04-01,national,MUIKAM,МUIКАМ,0.0,level
+2023-05-01,national,MUIKAM,МUIКАМ,0.0,level
+2023-06-01,national,MUIKAM,МUIКАМ,0.0,level
+2023-07-01,national,MUIKAM,МUIКАМ,0.0,level
+2023-08-01,national,MUIKAM,МUIКАМ,0.0,level
+2023-09-01,national,MUIKAM,МUIКАМ,0.0,level
+2023-10-01,national,MUIKAM,МUIКАМ,0.0,level
+2023-11-01,national,MUIKAM,МUIКАМ,0.0,level
+2023-12-01,national,MUIKAM,МUIКАМ,0.0,level
+2024-01-01,national,MUIKAM,МUIКАМ,0.0,level
+2024-02-01,national,MUIKAM,МUIКАМ,0.0,level
+2024-03-01,national,MUIKAM,МUIКАМ,0.0,level
+2024-04-01,national,MUIKAM,МUIКАМ,0.0,level
+2024-05-01,national,MUIKAM,МUIКАМ,0.0,level
+2024-06-01,national,MUIKAM,МUIКАМ,0.0,level
+2024-07-01,national,MUIKAM,МUIКАМ,0.0,level
+2024-08-01,national,MUIKAM,МUIКАМ,0.0,level
+2024-09-01,national,MUIKAM,МUIКАМ,0.0,level
+2024-10-01,national,MUIKAM,МUIКАМ,0.0,level
+2024-11-01,national,MUIKAM,МUIКАМ,0.0,level
+2024-12-01,national,MUIKAM,МUIКАМ,0.0,level
+2025-01-01,national,MUIKAM,МUIКАМ,0.0,level
+2025-02-01,national,MUIKAM,МUIКАМ,0.0,level
+2025-03-01,national,MUIKAM,МUIКАМ,0.0,level
+2025-04-01,national,MUIKAM,МUIКАМ,60000.0,level
+2025-05-01,national,MUIKAM,МUIКАМ,60000.0,level
+2025-06-01,national,MUIKAM,МUIКАМ,60000.0,level
+2025-07-01,national,MUIKAM,МUIКАМ,81162.0,level
+2025-08-01,national,MUIKAM,МUIКАМ,81162.0,level
+2025-09-01,national,MUIKAM,МUIКАМ,81162.0,level
+2025-10-01,national,MUIKAM,МUIКАМ,81162.0,level
+2025-11-01,national,MUIKAM,МUIКАМ,81162.0,level
+2025-12-01,national,MUIKAM,МUIКАМ,81162.0,level
+2026-01-01,national,MUIKAM,МUIКАМ,81162.0,level
+2026-02-01,national,MUIKAM,МUIКАМ,81162.0,level
+2026-03-01,national,MUIKAM,МUIКАМ,81162.0,level
+2026-04-01,national,MUIKAM,МUIКАМ,127025.0,level
+2026-05-01,national,MUIKAM,МUIКАМ,223021.0,level
+2026-06-01,national,MUIKAM,МUIКАМ,223021.0,level
+2026-07-01,national,MUIKAM,МUIКАМ,223021.0,level
+2026-08-01,national,MUIKAM,МUIКАМ,223021.0,level
+2026-09-01,national,MUIKAM,МUIКАМ,223021.0,level
+2010-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2010-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2010-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2010-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2010-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2010-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2010-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2010-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2010-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2010-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2010-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2011-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2011-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2011-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2011-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2011-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2011-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2011-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2011-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2011-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2011-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2011-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2011-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2012-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2012-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2012-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2012-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2012-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2012-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2012-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2012-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2012-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2012-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2012-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2012-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2013-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2013-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2013-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2013-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2013-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2013-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2013-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2013-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2013-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2013-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2013-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2013-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2014-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2014-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2014-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2014-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2014-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2014-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2014-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2014-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2014-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2014-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2014-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2014-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2015-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2015-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2015-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2015-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2015-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2015-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2015-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2015-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2015-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2015-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2015-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2015-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2016-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2016-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2016-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2016-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2016-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2016-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
+2016-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1700.0,level
+2016-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1700.0,level
+2016-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,32985.0,level
+2016-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,38214.0,level
+2016-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,38214.0,level
+2016-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,38214.0,level
+2017-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,38214.0,level
+2017-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,38214.0,level
+2017-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,38214.0,level
+2017-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,38893.0,level
+2017-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,52625.0,level
+2017-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,54409.0,level
+2017-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,73882.0,level
+2017-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,73882.0,level
+2017-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,81960.0,level
+2017-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,81960.0,level
+2017-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,112610.0,level
+2017-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,125036.0,level
+2018-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,125036.0,level
+2018-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,125036.0,level
+2018-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,126926.0,level
+2018-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,134949.0,level
+2018-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,138995.0,level
+2018-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,146732.0,level
+2018-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,147515.0,level
+2018-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,145944.0,level
+2018-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,152400.0,level
+2018-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,152517.0,level
+2018-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,165038.0,level
+2018-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,175204.0,level
+2019-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,189073.0,level
+2019-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,185073.0,level
+2019-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,195597.0,level
+2019-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,197936.0,level
+2019-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,195095.0,level
+2019-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,210033.0,level
+2019-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,222909.0,level
+2019-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,222591.0,level
+2019-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,223531.0,level
+2019-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,221928.0,level
+2019-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,214315.0,level
+2019-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,215221.0,level
+2020-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,215221.0,level
+2020-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,210531.0,level
+2020-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,209431.0,level
+2020-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,188942.0,level
+2020-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,369512.0,level
+2020-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,365301.0,level
+2020-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,578196.0,level
+2020-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,590474.0,level
+2020-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,789466.0,level
+2020-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,797070.0,level
+2020-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,998870.0,level
+2020-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1000815.0,level
+2021-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1055938.0,level
+2021-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1055938.0,level
+2021-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1012383.0,level
+2021-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1013823.0,level
+2021-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1001912.0,level
+2021-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,998203.0,level
+2021-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1035220.0,level
+2021-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1039553.0,level
+2021-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1054680.0,level
+2021-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1054680.0,level
+2021-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1089333.0,level
+2021-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1200617.0,level
+2022-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1140562.0,level
+2022-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1140562.0,level
+2022-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1028164.0,level
+2022-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1079603.0,level
+2022-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1089321.0,level
+2022-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1114436.0,level
+2022-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1102274.0,level
+2022-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1107159.0,level
+2022-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1102880.0,level
+2022-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1106190.0,level
+2022-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1113909.0,level
+2022-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1095863.0,level
+2023-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1070184.0,level
+2023-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1070184.0,level
+2023-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1069484.0,level
+2023-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1066613.0,level
+2023-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1068244.0,level
+2023-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1063039.0,level
+2023-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1073764.0,level
+2023-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1101697.0,level
+2023-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1104424.0,level
+2023-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1112311.0,level
+2023-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1118609.0,level
+2023-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1420721.0,level
+2024-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1048520.0,level
+2024-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1021391.0,level
+2024-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,994498.0,level
+2024-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,901163.0,level
+2024-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,891825.0,level
+2024-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,907413.0,level
+2024-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,993534.0,level
+2024-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1066314.0,level
+2024-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1168207.0,level
+2024-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1217635.0,level
+2024-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1266196.0,level
+2024-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1292700.0,level
+2025-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1308742.0,level
+2025-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1308742.0,level
+2025-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1308742.0,level
+2025-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1303242.0,level
+2025-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1326269.0,level
+2025-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1342551.0,level
+2025-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1342256.0,level
+2025-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1425900.0,level
+2025-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1474871.0,level
+2025-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1550176.0,level
+2025-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1610671.0,level
+2025-12-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1606071.0,level
+2026-01-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1598593.0,level
+2026-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1596593.0,level
+2026-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1571593.0,level
+2026-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1575361.0,level
+2026-05-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1605041.0,level
+2026-06-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1595793.0,level
+2026-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1679620.0,level
+2026-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1727491.0,level
+2026-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1825649.0,level
+2010-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,681021.0,level
+2010-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,824066.0,level
+2010-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,963346.0,level
+2010-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1110496.0,level
+2010-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1050732.0,level
+2010-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,990258.0,level
+2010-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,963735.0,level
+2010-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,971804.0,level
+2010-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1014378.0,level
+2010-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,950695.0,level
+2010-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,928745.0,level
+2011-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,899542.0,level
+2011-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1016401.0,level
+2011-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1253532.0,level
+2011-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1449137.0,level
+2011-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1451536.0,level
+2011-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1319307.0,level
+2011-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1330612.0,level
+2011-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1170298.0,level
+2011-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,989793.0,level
+2011-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,742568.0,level
+2011-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,648253.0,level
+2011-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,501657.0,level
+2012-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,509805.0,level
+2012-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,541400.0,level
+2012-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,576544.0,level
+2012-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,535980.0,level
+2012-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,598540.0,level
+2012-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,548326.0,level
+2012-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,449506.0,level
+2012-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,462737.0,level
+2012-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,448399.0,level
+2012-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,414916.0,level
+2012-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,325691.0,level
+2012-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,263042.0,level
+2013-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,186098.0,level
+2013-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,150652.0,level
+2013-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,124866.0,level
+2013-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,101911.0,level
+2013-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,89362.0,level
+2013-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,78437.0,level
+2013-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,44531.0,level
+2013-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,37951.0,level
+2013-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,34045.0,level
+2013-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,16385.0,level
+2013-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,7263.0,level
+2013-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3577.0,level
+2014-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3577.0,level
+2014-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,8920.0,level
+2014-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,8920.0,level
+2014-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,8920.0,level
+2014-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,8906.0,level
+2014-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,10890.0,level
+2014-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,10890.0,level
+2014-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,15850.0,level
+2014-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,20831.0,level
+2014-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,30751.0,level
+2014-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,43727.0,level
+2014-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,44720.0,level
+2015-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,26864.0,level
+2015-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,11904.0,level
+2015-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,0.0,level
+2015-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,0.0,level
+2015-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,0.0,level
+2015-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,0.0,level
+2015-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,0.0,level
+2015-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,0.0,level
+2015-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,0.0,level
+2015-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,149085.0,level
+2015-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,53303.0,level
+2015-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,291108.0,level
+2016-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,354000.0,level
+2016-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,306000.0,level
+2016-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,413822.0,level
+2016-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,408660.0,level
+2016-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1129368.0,level
+2016-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1378440.0,level
+2016-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1552424.0,level
+2016-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2063287.0,level
+2016-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1940795.0,level
+2016-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2266310.0,level
+2016-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2576168.0,level
+2016-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2401370.0,level
+2017-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2518658.0,level
+2017-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2760039.0,level
+2017-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2872834.0,level
+2017-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3198057.0,level
+2017-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2889863.0,level
+2017-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2717504.0,level
+2017-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2914219.0,level
+2017-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3090620.0,level
+2017-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2691849.0,level
+2017-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2741229.0,level
+2017-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2842137.0,level
+2017-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2832168.0,level
+2018-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3183439.0,level
+2018-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3957073.0,level
+2018-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,4001879.0,level
+2018-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,4186403.0,level
+2018-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,4171615.0,level
+2018-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,4015625.0,level
+2018-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3648269.0,level
+2018-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3329634.0,level
+2018-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3256685.0,level
+2018-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3387674.0,level
+2018-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3801005.0,level
+2018-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3503595.0,level
+2019-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3521623.0,level
+2019-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3823769.0,level
+2019-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3984739.0,level
+2019-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3781419.0,level
+2019-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,4272656.0,level
+2019-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3682194.0,level
+2019-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3148177.0,level
+2019-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2983450.0,level
+2019-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3158966.0,level
+2019-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2850602.0,level
+2019-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2986055.0,level
+2019-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3322490.0,level
+2020-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3418560.0,level
+2020-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3988769.0,level
+2020-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,4144381.0,level
+2020-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3420308.0,level
+2020-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3028593.0,level
+2020-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3159782.0,level
+2020-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3283562.0,level
+2020-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2795576.0,level
+2020-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3056172.0,level
+2020-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3173064.0,level
+2020-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2779616.0,level
+2020-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2730732.0,level
+2021-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2927277.0,level
+2021-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3274651.0,level
+2021-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3677531.0,level
+2021-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3446624.0,level
+2021-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3397502.0,level
+2021-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3173568.0,level
+2021-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3387854.0,level
+2021-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3313834.0,level
+2021-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3159788.0,level
+2021-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2741176.0,level
+2021-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2936940.0,level
+2021-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2473160.0,level
+2022-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2102538.0,level
+2022-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1740688.0,level
+2022-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1836300.0,level
+2022-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1432855.0,level
+2022-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1734918.0,level
+2022-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1701357.0,level
+2022-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1796204.0,level
+2022-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1788244.0,level
+2022-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1892553.0,level
+2022-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1722179.0,level
+2022-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1149572.0,level
+2022-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1593293.0,level
+2023-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2236248.0,level
+2023-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2367446.0,level
+2023-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2680279.0,level
+2023-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2631827.0,level
+2023-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2703630.0,level
+2023-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2535817.0,level
+2023-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2842289.0,level
+2023-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,3018015.0,level
+2023-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2800353.0,level
+2023-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2852546.0,level
+2023-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,2400000.0,level
+2023-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1600000.0,level
+2024-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1200000.0,level
+2024-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1000000.0,level
+2024-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,800000.0,level
+2024-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2024-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2024-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,424831.0,level
+2024-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,400629.0,level
+2024-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2024-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2024-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2024-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2024-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2025-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,454129.0,level
+2025-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2025-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2025-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2025-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2025-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2025-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2025-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2025-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2025-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2025-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,491145.0,level
+2025-12-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2026-01-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,500000.0,level
+2026-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,568309.0,level
+2026-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1123572.0,level
+2026-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1713384.0,level
+2026-05-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1456041.0,level
+2026-06-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1109690.0,level
+2026-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,928057.0,level
+2026-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,894530.0,level
+2026-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1144260.0,level
+2010-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2010-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2010-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2010-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2010-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2010-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2010-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2010-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2010-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2010-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2010-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2011-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2011-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2011-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2011-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2011-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2011-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2011-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2011-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2011-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2011-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2011-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2011-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2012-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2012-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2012-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2012-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2012-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2012-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2012-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2012-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2012-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2012-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2012-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2012-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2013-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2013-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2013-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2013-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2013-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2013-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2013-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2013-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2013-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2013-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2013-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2013-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2014-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2014-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2014-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2014-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2014-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2014-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2014-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2014-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2014-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2014-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2014-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2014-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2015-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2015-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2015-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2015-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2015-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2015-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2015-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2015-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2015-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2015-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2015-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2015-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2016-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2016-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2016-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2016-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2016-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2016-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2016-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2016-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2016-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2016-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2016-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2016-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2017-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2017-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2017-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2017-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2017-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2017-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2017-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2017-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2017-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2017-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2017-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2017-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2018-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2018-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2018-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2018-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2018-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2018-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2018-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2018-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2018-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2018-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2018-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2018-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2019-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2019-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2019-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2019-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2019-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2019-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2019-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2019-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2019-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2019-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2019-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2019-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2020-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2020-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2020-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2020-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2020-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2020-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2020-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2020-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2020-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2020-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2020-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2020-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2021-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2021-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2021-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2021-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2021-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2021-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2021-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2021-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2021-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2021-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2021-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2021-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2022-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2022-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2022-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2022-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2022-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2022-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2022-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2022-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2022-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2022-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2022-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2022-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2023-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2023-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2023-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2023-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2023-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2023-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2023-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2023-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2023-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2023-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2023-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2023-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2024-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2024-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2024-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2024-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2024-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2024-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2024-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2024-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2024-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2024-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2024-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2024-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2025-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2025-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2025-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2025-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2025-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2025-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2025-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2025-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2025-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2025-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2025-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2025-12-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2026-01-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2026-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2026-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2026-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2026-05-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2026-06-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2026-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2026-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2026-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2010-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2002586.0,level
+2010-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2177663.0,level
+2010-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2336019.0,level
+2010-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2551130.0,level
+2010-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2530659.0,level
+2010-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2488708.0,level
+2010-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2508248.0,level
+2010-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2562739.0,level
+2010-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2649062.0,level
+2010-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2631233.0,level
+2010-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2622123.0,level
+2011-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2569002.0,level
+2011-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2690353.0,level
+2011-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2951533.0,level
+2011-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3201936.0,level
+2011-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3220103.0,level
+2011-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3107266.0,level
+2011-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3146646.0,level
+2011-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3014153.0,level
+2011-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2864897.0,level
+2011-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2659131.0,level
+2011-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2606858.0,level
+2011-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2470629.0,level
+2012-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2590034.0,level
+2012-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2662109.0,level
+2012-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2743888.0,level
+2012-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2745137.0,level
+2012-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2845181.0,level
+2012-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2886829.0,level
+2012-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2826031.0,level
+2012-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2884437.0,level
+2012-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2905572.0,level
+2012-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2961326.0,level
+2012-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3022762.0,level
+2012-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3112600.0,level
+2013-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3091266.0,level
+2013-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3098078.0,level
+2013-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3128707.0,level
+2013-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3135862.0,level
+2013-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3106287.0,level
+2013-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3148014.0,level
+2013-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3140283.0,level
+2013-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3193549.0,level
+2013-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3243747.0,level
+2013-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3321463.0,level
+2013-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3393564.0,level
+2013-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3447122.0,level
+2014-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3622515.0,level
+2014-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3668097.0,level
+2014-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3682434.0,level
+2014-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3683802.0,level
+2014-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3704178.0,level
+2014-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3804658.0,level
+2014-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3882910.0,level
+2014-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",3956522.0,level
+2014-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4031867.0,level
+2014-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4246009.0,level
+2014-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4246218.0,level
+2014-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4222950.0,level
+2015-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4183189.0,level
+2015-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4239588.0,level
+2015-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4262181.0,level
+2015-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4306016.0,level
+2015-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4269153.0,level
+2015-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4246429.0,level
+2015-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4246782.0,level
+2015-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4346782.0,level
+2015-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4327910.0,level
+2015-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4454810.0,level
+2015-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4389028.0,level
+2015-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4626833.0,level
+2016-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4689725.0,level
+2016-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4795915.0,level
+2016-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4892372.0,level
+2016-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",4858210.0,level
+2016-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",5578918.0,level
+2016-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",5770709.0,level
+2016-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",5937133.0,level
+2016-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",6411563.0,level
+2016-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",6283224.0,level
+2016-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",6611348.0,level
+2016-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",6882760.0,level
+2016-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",6682142.0,level
+2017-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",6799430.0,level
+2017-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",7112811.0,level
+2017-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",7322385.0,level
+2017-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",7576946.0,level
+2017-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",7327646.0,level
+2017-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",7234028.0,level
+2017-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",7398023.0,level
+2017-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",8581106.0,level
+2017-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",8161426.0,level
+2017-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",8173871.0,level
+2017-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",8391085.0,level
+2017-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",8502819.0,level
+2018-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",8884372.0,level
+2018-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",9680197.0,level
+2018-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",9726893.0,level
+2018-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",9948535.0,level
+2018-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",9965293.0,level
+2018-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",9821791.0,level
+2018-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",9530593.0,level
+2018-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",9350045.0,level
+2018-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",9384521.0,level
+2018-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",9591665.0,level
+2018-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",9986517.0,level
+2018-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",9614078.0,level
+2019-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",9723574.0,level
+2019-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",10136190.0,level
+2019-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",10408903.0,level
+2019-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",10263639.0,level
+2019-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",10828694.0,level
+2019-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",10362199.0,level
+2019-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",10010766.0,level
+2019-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",10179529.0,level
+2019-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",10341440.0,level
+2019-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",10048852.0,level
+2019-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",10120712.0,level
+2019-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",10518701.0,level
+2020-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",10643864.0,level
+2020-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",11329234.0,level
+2020-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",11547998.0,level
+2020-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",11036844.0,level
+2020-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",11140227.0,level
+2020-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",11448693.0,level
+2020-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",12069506.0,level
+2020-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",12030168.0,level
+2020-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",12630585.0,level
+2020-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",12924707.0,level
+2020-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",13115136.0,level
+2020-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",13229043.0,level
+2021-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",13460511.0,level
+2021-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14082141.0,level
+2021-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14664970.0,level
+2021-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14597131.0,level
+2021-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14459587.0,level
+2021-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14057466.0,level
+2021-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14447951.0,level
+2021-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14561125.0,level
+2021-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14383567.0,level
+2021-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14137263.0,level
+2021-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14565735.0,level
+2021-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14627535.0,level
+2022-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14255033.0,level
+2022-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",13797366.0,level
+2022-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",13992548.0,level
+2022-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",13663895.0,level
+2022-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14222413.0,level
+2022-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14060439.0,level
+2022-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14591005.0,level
+2022-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",14876772.0,level
+2022-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",15405907.0,level
+2022-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",15498972.0,level
+2022-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",15228220.0,level
+2022-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",15797156.0,level
+2023-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",16961712.0,level
+2023-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",17278507.0,level
+2023-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",17918913.0,level
+2023-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",18212722.0,level
+2023-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",18544955.0,level
+2023-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",18862444.0,level
+2023-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",20167290.0,level
+2023-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",20724251.0,level
+2023-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",20505360.0,level
+2023-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",20721583.0,level
+2023-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",20443763.0,level
+2023-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",19972343.0,level
+2024-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",19229995.0,level
+2024-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",19433226.0,level
+2024-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",19622486.0,level
+2024-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",19537641.0,level
+2024-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",19755704.0,level
+2024-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",19733305.0,level
+2024-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",20326500.0,level
+2024-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",21397145.0,level
+2024-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",21640562.0,level
+2024-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",21822833.0,level
+2024-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",21984903.0,level
+2024-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",22059302.0,level
+2025-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",22029473.0,level
+2025-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",22029648.0,level
+2025-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",22402361.0,level
+2025-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",22996275.0,level
+2025-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",23380481.0,level
+2025-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",23607105.0,level
+2025-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",24118078.0,level
+2025-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",24592617.0,level
+2025-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",24999946.0,level
+2025-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",25510058.0,level
+2025-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",25497623.0,level
+2025-12-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",26022533.0,level
+2026-01-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",26278595.0,level
+2026-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",26411227.0,level
+2026-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",27284148.0,level
+2026-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",28430857.0,level
+2026-05-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",28819283.0,level
+2026-06-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",28839598.0,level
+2026-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",28843791.0,level
+2026-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",29497053.0,level
+2026-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",30079640.0,level

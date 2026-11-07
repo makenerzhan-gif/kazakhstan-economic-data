@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://nationalbank.kz/ru/depositauction/depozitnyy-aukcion-nbk/excel",
+  "dataset_id": "deposit auctions xlsx",
+  "indicator_id": "NBK_DEPOSIT_AUCTIONS",
+  "indicator_name": "National Bank deposit auctions: volume placed, number of auctions and volume-weighted yield, monthly",
+  "description": "Депозитные аукционы Национального Банка: объём размещения, число аукционов и средневзвешенная доходность, помесячно",
+  "frequency": "monthly",
+  "unit": "VOLUME billion KZT; N auctions; YIELD %",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Sum over the auctions of the month (by auction date) of the NBK's xlsx export, 2019-02 onward. YIELD is weighted by the volume placed. The stock outstanding is NBK_OPEN_POSITION's DEPOSIT_AUCTION.",
+  "publication_date": null,
+  "last_update_date": "2026-11-07",
+  "download_date": "2026-11-07",
+  "period_start": "2019-02-01",
+  "period_end": "2026-11-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=287",
+  "dataset_id": "formId=287",
+  "indicator_id": "FDI_GROSS_INFLOW_BY_COUNTRY",
+  "indicator_name": "Gross inflow of foreign direct investment into Kazakhstan from foreign direct investors, by country",
+  "description": "Валовой приток прямых иностранных инвестиций в Казахстан от иностранных прямых инвесторов, по странам",
+  "frequency": "quarterly",
+  "unit": "million USD, flow over the quarter",
+  "currency": "USD",
+  "geography": "Kazakhstan (national)",
+  "methodology": "NBK formId=287, one row per investor country (128 in 2005-2026). Items: ISO3 codes (dictionaries/partner_countries.csv; nbk_cube.COUNTRY_ALIASES for the NBK's spellings), INTORG = international organisations, UNALLOCATED = «Not determined by country», TOTAL = all rows. Dated by the quarter covered (the NBK's report_date is the day after it). TOTAL equals FDI_GROSS_INFLOW_BY_INDUSTRY's TOTAL in every quarter.",
+  "publication_date": null,
+  "last_update_date": "2026-11-07",
+  "download_date": "2026-11-07",
+  "period_start": "2005-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

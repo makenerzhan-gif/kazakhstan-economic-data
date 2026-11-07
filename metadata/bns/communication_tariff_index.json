@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-4649505",
+  "indicator_id": "COMMUNICATION_TARIFF_INDEX",
+  "indicator_name": "Communication services tariff index for legal entities, monthly",
+  "description": "Индекс тарифов на услуги связи для юридических лиц, помесячно",
+  "frequency": "monthly",
+  "unit": "% (previous month = 100 or same month a year earlier = 100)",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Taldau 4649505, period 4, 2011-01 onward.",
+  "publication_date": null,
+  "last_update_date": "2026-11-07",
+  "download_date": "2026-11-07",
+  "period_start": "2011-01-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

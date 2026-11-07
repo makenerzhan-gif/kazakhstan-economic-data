@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=47",
+  "dataset_id": "formId=47",
+  "indicator_id": "LOAN_PORTFOLIO_QUALITY",
+  "indicator_name": "Banks' loan portfolio quality: debt by days past due and provisions, by borrower type",
+  "description": "Структура качества ссудного портфеля банков: основной долг по срокам просрочки и провизии, по типам заёмщиков",
+  "frequency": "monthly",
+  "unit": "billion KZT, at the start of the month",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "NBK formId=47, summed over IFRS risk stages. Items <DEBT|PROVISION>.<borrower>[.<days past due>], DEBT and PROVISION over all borrowers, <DEBT|PROVISION>.<days past due>. Dated by report_date (1st of the month after the stock date). Monthly from 2026-01; also 2025-07-01 and 2025-10-01. DEBT.HH at 2026-09-01 is 26 471.8 bn KZT, of which DPD90 1 220.0 (4.61 %) and DPD1_30 680.2 -- equal to the ARDFM bulletin's retail-loan table (checked 2026-11-07).",
+  "publication_date": null,
+  "last_update_date": "2026-11-07",
+  "download_date": "2026-11-07",
+  "period_start": "2025-07-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
