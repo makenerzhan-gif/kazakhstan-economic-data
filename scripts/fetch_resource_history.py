@@ -243,28 +243,50 @@ def comtrade() -> None:
 
 # ------------------------------------------------------------------ USGS Minerals Yearbook
 def usgs_myb() -> None:
+    """USGS Minerals Yearbook, Kazakhstan chapter. 2016+ are xlsx on pubs.usgs.gov; older chapters are
+    xls/pdf on pubs.usgs.gov or on the USGS S3 archive of the former minerals.usgs.gov site."""
     log = LOG.setdefault("usgs_myb", {})
     d = OUT / "usgs_myb"
     d.mkdir(parents=True, exist_ok=True)
-    found = {}
+    have = {p.name for p in d.iterdir()}
+    found, tried = {}, 0
+    bases = ["https://pubs.usgs.gov/myb/vol3/{y}/",
+             "https://s3-us-west-2.amazonaws.com/prd-wret/assets/palladium/production/mineral-pubs/country/{y}/",
+             "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/mineral-pubs/country/{y}/"]
     for y in range(1994, 2016):
-        yy = str(y)
-        names = [f"myb3-{yy}-kz.xlsx", f"myb3-{yy}-kz.xls", f"myb3-{yy}-kazak.xls", f"myb3-{yy}-kazakhstan.xlsx", f"myb3-{yy}-kazakhstan.xls", f"myb3-{yy}-kaz.xls", f"myb3-{yy}-kaz.xlsx",
-                 f"myb3-{y - 1}-{str(y)[2:]}-kazakhstan.xlsx", f"myb3-{yy}-{str(y + 1)[2:]}-kazakhstan.xlsx"]
-        for vol in (f"vol3/{yy}", f"vol3/{y - 1}-{str(y)[2:]}", f"vol3/{yy}-{str(y + 1)[2:]}"):
+        yy = str(y)[2:]
+        names = [f"myb3-{y}-kz.xlsx", f"myb3-{y}-kz.xls", f"myb3-{y}-kz.pdf", f"kzmyb{yy}.pdf", f"kzmyb{yy}.xls",
+                 f"myb3-{y}-kazakhstan.xlsx", f"myb3-{y}-kazakhstan.pdf"]
+        got = False
+        for base in bases:
             for n in names:
-                if n in found:
+                if got and n.endswith(".pdf"):
                     continue
-                url = f"https://pubs.usgs.gov/myb/{vol}/{n}"
+                url = base.format(y=y) + n
+                tried += 1
                 try:
                     r = requests.get(url, headers=HEADERS, timeout=60)
                 except requests.RequestException:
                     continue
-                if r.status_code == 200 and r.content[:2] in (b"PK", bytes.fromhex("d0cf")):
-                    (d / n).write_bytes(r.content)
-                    found[n] = url
-    # pre-2000 country chapters live under minerals.usgs.gov archives as PDFs; the xls start ~2002
+                ok = r.status_code == 200 and (r.content[:2] in (b"PK", bytes.fromhex("d0cf")) or r.content[:4] == b"%PDF")
+                if ok:
+                    fn = f"{y}_{n}"
+                    (d / fn).write_bytes(r.content)
+                    found[fn] = url
+                    got = True
+                    if r.content[:4] == b"%PDF":
+                        try:
+                            from pypdf import PdfReader
+                            txt = "\n\n".join(f"===== page {i + 1} =====\n{(pg.extract_text() or '')}"
+                                               for i, pg in enumerate(PdfReader(io.BytesIO(r.content)).pages))
+                            (d / (fn + ".txt")).write_text(txt, encoding="utf-8")
+                        except Exception as exc:  # noqa: BLE001
+                            found[fn] += f" (pdf text error: {exc})"
+            if got:
+                break
     log["files"] = found
+    log["tried"] = tried
+    log["already_had"] = sorted(have)
 
 
 # ------------------------------------------------------------------ BGS
@@ -278,6 +300,9 @@ def bgs() -> None:
 
 def main() -> int:
     only = set(sys.argv[1:])
+    parts_file = ROOT / "config" / "resource_history_parts.txt"
+    if not only and parts_file.exists():
+        only = set(parts_file.read_text(encoding="utf-8").split())
     for part in (energy_institute, owid_energy, eia, world_bank, comtrade, usgs_myb, bgs):
         if only and part.__name__ not in only:
             continue

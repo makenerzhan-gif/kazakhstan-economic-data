@@ -13,6 +13,7 @@ on:
     paths:
       - scripts/fetch_natural_capital.py
       - scripts/fetch_resource_history.py
+      - config/resource_history_parts.txt
       - .github/workflows/natural-capital.yml
 
 concurrency:
