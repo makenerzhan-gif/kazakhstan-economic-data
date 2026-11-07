@@ -189,7 +189,8 @@ def probe(index_id, name):
             kv = values(k)
             for y, x in kv.items():
                 rows.append([index_id, name, rec.get("unit"), " / ".join(path + [name_k]), y, x])
-            if not k.get("leaf") and depth < 6 and (depth == 0 or EXPAND.search(name_k)):
+            is_leaf = str(k.get("leaf")).lower() == "true"
+            if not is_leaf and depth < 6 and (depth <= 1 or str(k.get("hidden")).lower() == "true" or EXPAND.search(name_k)):
                 expand(pos, str(k.get("id")), depth + 1, path + [name_k])
 
     for pos in range(1, len(dl)):
