@@ -1,0 +1,284 @@
+"""Taldau (taldau.stat.gov.kz) probe and download for natural-resource series: production of oil,
+gas, coal, ores and metals, exports in physical units, reserves -- national, annual, longest history.
+
+Method as documented in docs/UPDATE_LOG_ARCHIVE.md (2026-09-01, "the Taldau browser dependency is
+GONE") and used by fetchers/bns.py / taldau_dims.py:
+  1. POST /ru/Search/getSearchPageGridData  keyword + page/start/limit  -> candidate indexes
+  2. GET  /ru/NewIndex/GetIndex/<id>?keyword=                           -> options.measure.id
+  3. POST /ru/NewIndex/GetSegmentList node/indexId/periodId/keyword    -> dicIds + termIds (seg[0])
+  4. POST /ru/NewIndex/GetIndexTreeData                                 -> root node 'yMMYYYY' values;
+     when a non-region dimension is a product list, its children are opened one level (idx = its
+     position) so every product of the index comes out.
+Everything lands in data/raw/taldau_resources/ (raw JSON per index + tidy CSV) and the log in
+reports/taldau_resources.json.
+"""
+from __future__ import annotations
+
+import csv
+import json
+import re
+import sys
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+
+import requests
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "data" / "raw" / "taldau_resources"
+REPORT = ROOT / "reports" / "taldau_resources.json"
+BASE = "https://taldau.stat.gov.kz/ru"
+H = {"User-Agent": "Mozilla/5.0 (compatible; KZEconDataPipeline/1.0; +https://github.com/)",
+     "X-Requested-With": "XMLHttpRequest"}
+NATIONAL = "741880"
+KEYWORDS = ["нефть", "газовый конденсат", "газ природный", "уголь", "лигнит", "руды", "руда железная", "медь",
+            "цинк", "свинец", "ферросплав", "глинозем", "алюминий", "уран", "золото", "серебро", "хром",
+            "марганец", "в натуральном выражении", "добыча", "горнодобывающ", "запасы", "экспорт нефти",
+            "нефтепродукт", "производство продукции"]
+TARGETS = {"701608": "Произведено продукции в натуральном выражении",
+           "20378223": "Топливно-энергетический баланс в натуральном выражении",
+           "702142": "Производство отдельных видов продукции (товаров) и сырья",
+           "701622": "Объем отгруженной промышленной продукции собственного производства в натуральном выражении"}
+EXPAND = re.compile(r"горнодобыв|добыч|карьер|металл|руд|нефт|уголь|угл|лигнит|газ|конденсат|медь|медн|цинк|свин|"
+                    r"ферросплав|глинозем|алюмин|уран|золот|серебр|хром|марган|титан|вольфрам|молибден|фосфор|асбест|барит|"
+                    r"топлив|кокс|энерг", re.I)
+NAME_OK = re.compile(r"нефт|газ|угл|уголь|лигнит|руд|мед|цинк|свин|ферросплав|глинозем|алюмин|уран|золот|серебр|хром|"
+                     r"марган|добыч|натуральн|горнодобыв|запас|минерал", re.I)
+LOG: dict = {"started_utc": datetime.now(timezone.utc).isoformat(), "search": {}, "indexes": {}}
+
+
+def post(path, data, timeout=60):
+    for a in range(3):
+        try:
+            r = requests.post(BASE + path, data=data, headers=H, timeout=timeout)
+            if r.status_code == 200:
+                return r
+            LOG.setdefault("errors", []).append({"path": path, "status": r.status_code, "data": str(data)[:200]})
+            if r.status_code in (400, 404, 500):
+                return None
+        except requests.RequestException as e:
+            LOG.setdefault("errors", []).append({"path": path, "error": str(e)[:200]})
+        time.sleep(2 * (a + 1))
+    return None
+
+
+def get(path, timeout=60):
+    try:
+        r = requests.get(BASE + path, headers=H, timeout=timeout)
+        return r if r.status_code == 200 else None
+    except requests.RequestException:
+        return None
+
+
+def _dicts(obj):
+    if isinstance(obj, dict):
+        yield obj
+        for v in obj.values():
+            yield from _dicts(v)
+    elif isinstance(obj, list):
+        for v in obj:
+            yield from _dicts(v)
+
+
+def search(keyword):
+    r = post("/Search/getSearchPageGridData", {"keyword": keyword, "page": "1", "start": "0", "limit": "100"})
+    if r is None:
+        return []
+    raw = OUT / "search_raw"
+    raw.mkdir(exist_ok=True)
+    (raw / (re.sub(r"\W+", "_", keyword) + ".txt")).write_bytes(r.content[:300000])
+    try:
+        j = r.json()
+    except ValueError:
+        return []
+    items = []
+    for d in _dicts(j):
+        keys = {k.lower() for k in d}
+        if keys & {"id", "indexid", "index_id"} and keys & {"name", "text", "indexname", "title", "name_ru", "nameru"}:
+            items.append({"id": d.get("id") or d.get("indexId") or d.get("IndexId") or d.get("index_id"),
+                          "name": d.get("Name") or d.get("name") or d.get("text") or d.get("indexName") or d.get("title") or ""})
+    return items
+
+
+def tree(index_id, period, measure, terms, dics, parent="", idx="0", term=NATIONAL):
+    body = {"p_parent_id": parent, "p_index_id": index_id, "p_keyword": "", "p_period_id": period,
+            "p_measure_id": measure, "p_term_id": term, "p_terms": terms, "p_dicIds": dics, "idx": idx,
+            "filter": '[{"property":null,"value":null}]', "id": ""}
+    r = post("/NewIndex/GetIndexTreeData", body)
+    if r is None:
+        return None
+    try:
+        return r.json()
+    except ValueError:
+        return None
+
+
+def values(node):
+    out = {}
+    for k, v in node.items():
+        if isinstance(k, str) and len(k) == 7 and k[0] == "y" and k[1:].isdigit() and v not in (None, ""):
+            try:
+                out[int(k[3:])] = float(str(v).replace(",", ".").replace(" ", ""))
+            except ValueError:
+                pass
+    return out
+
+
+def probe(index_id, name):
+    rec = {"name": name}
+    page = get(f"/NewIndex/GetIndex/{index_id}?keyword=")
+    measure = None
+    if page is not None:
+        m = re.search(r"measure\s*:\s*\{[^}]*?id\s*:\s*['\"]?(\d+)", page.text) or \
+            re.search(r"\"measure\"\s*:\s*\{[^}]*?\"id\"\s*:\s*\"?(\d+)", page.text)
+        measure = m.group(1) if m else None
+        u = re.search(r"measure\s*:\s*\{[^}]*?name\s*:\s*['\"]([^'\"]+)", page.text)
+        rec["unit"] = u.group(1) if u else None
+    rec["measure"] = measure
+    periods = post("/NewIndex/GetPeriodList", {"indexId": index_id, "node": index_id, "keyword": ""})
+    try:
+        rec["periods"] = periods.json() if periods is not None else None
+    except ValueError:
+        rec["periods"] = None
+    period = "7"
+    if isinstance(rec["periods"], list) and rec["periods"]:
+        ids = [str(p.get("id") or p.get("periodId") or "") for p in rec["periods"]]
+        period = "7" if "7" in ids else ids[0]
+    rec["period"] = period
+    seg = post("/NewIndex/GetSegmentList", {"node": index_id, "indexId": index_id, "periodId": period, "keyword": ""})
+    try:
+        segs = seg.json() if seg is not None else []
+    except ValueError:
+        segs = []
+    rec["segments"] = segs[:12] if isinstance(segs, list) else segs
+    if not measure or not segs:
+        rec["status"] = "no measure or segments"
+        return rec, []
+    s0 = segs[0]
+    dics = str(s0.get("dicId", "")).replace("+", ",")
+    terms = str(s0.get("termIds", ""))
+    rec.update({"dicIds": dics, "terms": terms, "termNames": s0.get("termNames"), "dicNames": s0.get("dicNames") or s0.get("name")})
+    root = tree(index_id, period, measure, terms, dics)
+    rows = []
+    if not root:
+        rec["status"] = "tree empty"
+        return rec, rows
+    (OUT / f"{index_id}_root.json").write_text(json.dumps(root, ensure_ascii=False), encoding="utf-8")
+    nat = next((n for n in root if str(n.get("id")) == NATIONAL), root[0])
+    v = values(nat)
+    rec["root_years"] = [min(v), max(v)] if v else None
+    for y, x in v.items():
+        rows.append([index_id, name, rec.get("unit"), "Всего", y, x])
+    # open every non-region dimension, recursively along resource-related branches
+    dl = dics.split(",")
+    tl = terms.split(",")
+    rec["children"] = {}
+    budget = {"n": 0}
+
+    def expand(pos, parent, depth, path):
+        if budget["n"] > 400:
+            return
+        budget["n"] += 1
+        kids = tree(index_id, period, measure, terms, dics, parent=parent, idx=str(pos), term=parent or tl[pos])
+        if not kids:
+            return
+        (OUT / f"{index_id}_dim{pos}_{parent or 'top'}.json").write_text(json.dumps(kids, ensure_ascii=False), encoding="utf-8")
+        rec["children"][f"{pos}:{parent}"] = len(kids)
+        for k in kids:
+            name_k = str(k.get("text") or k.get("name") or k.get("id"))
+            kv = values(k)
+            for y, x in kv.items():
+                rows.append([index_id, name, rec.get("unit"), " / ".join(path + [name_k]), y, x])
+            is_leaf = str(k.get("leaf")).lower() == "true"
+            if not is_leaf and depth < 6 and (depth <= 1 or str(k.get("hidden")).lower() == "true" or EXPAND.search(name_k)):
+                expand(pos, str(k.get("id")), depth + 1, path + [name_k])
+
+    for pos in range(1, len(dl)):
+        # the dimension's top level: no parent (segment [0] carries a default leaf term, not the root)
+        expand(pos, "", 0, [])
+    rec["status"] = "ok"
+    return rec, rows
+
+
+PRODUCTS = {  # СКПП6731 terms, as in config/dims.yaml INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY
+    "4659551": "Нефть, включая конденсат газовый", "4117150": "Нефть сырая", "4659552": "Газ природный",
+    "19834401": "Нефтяные газы и прочие газообразные углеводороды", "18749737": "Газ нефтяной попутный",
+    "18793519": "Уголь каменный, включая лигнит и концентрат угольный", "4659553": "Руды железные агломерированные и неагломерированные",
+    "4117215": "Руды железные", "4121265": "Руды и концентраты медные", "4124812": "Руды и концентраты хромовые",
+    "4118146": "Ферросплавы", "4116967": "Оксид алюминия (глинозём)", "4119170": "Алюминий необработанный",
+    "4118944": "Медь рафинированная и сплавы медные", "4116970": "Цинк необработанный", "4116968": "Свинец необработанный",
+    "4119092": "Золото необработанное", "4119045": "Серебро необработанное", "4659584": "Продукты переработки нефти",
+    "4121800": "Бензин моторный", "4123349": "Топливо дизельное", "4123355": "Мазут", "4124447": "Кокс нефтяной",
+    "4119978": "Чугун", "4120596": "Сталь нерафинированная"}
+
+
+def products(rows):
+    """Annual national production of each product, Taldau 701608 (period 7, dictionaries 68 + 1973),
+    and shipments (701622: total / domestic market)."""
+    log = LOG.setdefault("products", {})
+    page = get("/NewIndex/GetIndex/701608?keyword=")
+    m = re.search(r"measure\s*:\s*\{[^}]*?id\s*:\s*['\"]?(\d+)", page.text) if page is not None else None
+    measure = m.group(1) if m else "7"
+    log["measure"] = measure
+    for term, nm in PRODUCTS.items():
+        for period in ("7",):
+            res = tree("701608", period, measure, f"{NATIONAL},{term}", "68,1973")
+            if not res:
+                log[term] = "empty"
+                continue
+            node = next((n for n in res if str(n.get("id")) == NATIONAL), res[0])
+            v = values(node)
+            log[term] = [nm, node.get("measureName"), min(v) if v else None, max(v) if v else None]
+            for y, x in v.items():
+                rows.append(["701608", "Произведено продукции в натуральном выражении", node.get("measureName"), nm, y, x])
+        for variant, label in (("450237", "отгружено всего"), ("450238", "отгружено на внутренний рынок")):
+            res = tree("701622", "7", measure, f"{NATIONAL},{variant},{term}", "68,559,1973")
+            if res:
+                node = next((n for n in res if str(n.get("id")) == NATIONAL), res[0])
+                for y, x in values(node).items():
+                    rows.append(["701622", label, node.get("measureName"), nm, y, x])
+        time.sleep(0.3)
+
+
+def main():
+    OUT.mkdir(parents=True, exist_ok=True)
+    cands = {}
+    for kw in KEYWORDS:
+        items = search(kw)
+        LOG["search"][kw] = len(items)
+        for it in items:
+            iid = str(it.get("id") or "")
+            nm = re.sub(r"<[^>]+>", "", str(it.get("name") or ""))
+            if iid and NAME_OK.search(nm):
+                cands[iid] = nm
+        time.sleep(0.5)
+    for k, v in TARGETS.items():
+        cands = {k: v, **cands}
+    LOG["candidates"] = cands
+    (OUT / "search_candidates.json").write_text(json.dumps(cands, ensure_ascii=False, indent=1), encoding="utf-8")
+    allrows = []
+    allrows_pre = []
+    order = list(TARGETS) + [k for k in cands if k not in TARGETS]
+    products(allrows_pre := [])
+    for iid in ["20378223"]:
+        nm = cands[iid]
+        try:
+            rec, rows = probe(iid, nm)
+        except Exception as e:  # noqa: BLE001
+            rec, rows = {"name": nm, "status": f"error {e!r}"[:300]}, []
+        LOG["indexes"][iid] = rec
+        allrows += rows
+        time.sleep(0.3)
+    allrows = allrows_pre + allrows
+    with (OUT / "taldau_resources_long.csv").open("w", newline="", encoding="utf-8") as fh:
+        w = csv.writer(fh)
+        w.writerow(["index_id", "index_name", "unit", "item", "year", "value"])
+        w.writerows(allrows)
+    LOG["rows"] = len(allrows)
+    LOG["finished_utc"] = datetime.now(timezone.utc).isoformat()
+    REPORT.write_text(json.dumps(LOG, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(json.dumps({k: v for k, v in LOG.items() if k != "indexes"}, ensure_ascii=False)[:5000])
+
+
+if __name__ == "__main__":
+    sys.exit(main())
