@@ -35,6 +35,13 @@ KEYWORDS = ["нефть", "газовый конденсат", "газ прир�
             "цинк", "свинец", "ферросплав", "глинозем", "алюминий", "уран", "золото", "серебро", "хром",
             "марганец", "в натуральном выражении", "добыча", "горнодобывающ", "запасы", "экспорт нефти",
             "нефтепродукт", "производство продукции"]
+TARGETS = {"701608": "Произведено продукции в натуральном выражении",
+           "20378223": "Топливно-энергетический баланс в натуральном выражении",
+           "702142": "Производство отдельных видов продукции (товаров) и сырья",
+           "701622": "Объем отгруженной промышленной продукции собственного производства в натуральном выражении"}
+EXPAND = re.compile(r"горнодобыв|добыч|карьер|металл|руд|нефт|уголь|угл|лигнит|газ|конденсат|медь|медн|цинк|свин|"
+                    r"ферросплав|глинозем|алюмин|уран|золот|серебр|хром|марган|титан|вольфрам|молибден|фосфор|асбест|барит|"
+                    r"топлив|кокс|энерг", re.I)
 NAME_OK = re.compile(r"нефт|газ|угл|уголь|лигнит|руд|мед|цинк|свин|ферросплав|глинозем|алюмин|уран|золот|серебр|хром|"
                      r"марган|добыч|натуральн|горнодобыв|запас|минерал", re.I)
 LOG: dict = {"started_utc": datetime.now(timezone.utc).isoformat(), "search": {}, "indexes": {}}
@@ -89,7 +96,7 @@ def search(keyword):
         keys = {k.lower() for k in d}
         if keys & {"id", "indexid", "index_id"} and keys & {"name", "text", "indexname", "title", "name_ru", "nameru"}:
             items.append({"id": d.get("id") or d.get("indexId") or d.get("IndexId") or d.get("index_id"),
-                          "name": d.get("name") or d.get("text") or d.get("indexName") or d.get("title") or d.get("nameRu") or ""})
+                          "name": d.get("Name") or d.get("name") or d.get("text") or d.get("indexName") or d.get("title") or ""})
     return items
 
 
@@ -162,20 +169,31 @@ def probe(index_id, name):
     rec["root_years"] = [min(v), max(v)] if v else None
     for y, x in v.items():
         rows.append([index_id, name, rec.get("unit"), "Всего", y, x])
-    # open every non-region dimension one level (products, types ...)
+    # open every non-region dimension, recursively along resource-related branches
     dl = dics.split(",")
     tl = terms.split(",")
     rec["children"] = {}
-    for pos in range(1, len(dl)):
-        kids = tree(index_id, period, measure, terms, dics, parent=tl[pos], idx=str(pos), term=tl[pos])
+    budget = {"n": 0}
+
+    def expand(pos, parent, depth, path):
+        if budget["n"] > 400:
+            return
+        budget["n"] += 1
+        kids = tree(index_id, period, measure, terms, dics, parent=parent, idx=str(pos), term=parent)
         if not kids:
-            continue
-        (OUT / f"{index_id}_dim{pos}.json").write_text(json.dumps(kids, ensure_ascii=False), encoding="utf-8")
-        rec["children"][pos] = len(kids)
+            return
+        (OUT / f"{index_id}_dim{pos}_{parent}.json").write_text(json.dumps(kids, ensure_ascii=False), encoding="utf-8")
+        rec["children"][f"{pos}:{parent}"] = len(kids)
         for k in kids:
+            name_k = str(k.get("text") or k.get("name") or k.get("id"))
             kv = values(k)
             for y, x in kv.items():
-                rows.append([index_id, name, rec.get("unit"), k.get("text") or k.get("name") or k.get("id"), y, x])
+                rows.append([index_id, name, rec.get("unit"), " / ".join(path + [name_k]), y, x])
+            if not k.get("leaf") and depth < 6 and (depth == 0 or EXPAND.search(name_k)):
+                expand(pos, str(k.get("id")), depth + 1, path + [name_k])
+
+    for pos in range(1, len(dl)):
+        expand(pos, tl[pos], 0, [])
     rec["status"] = "ok"
     return rec, rows
 
@@ -192,10 +210,14 @@ def main():
             if iid and NAME_OK.search(nm):
                 cands[iid] = nm
         time.sleep(0.5)
+    for k, v in TARGETS.items():
+        cands = {k: v, **cands}
     LOG["candidates"] = cands
     (OUT / "search_candidates.json").write_text(json.dumps(cands, ensure_ascii=False, indent=1), encoding="utf-8")
     allrows = []
-    for iid, nm in list(cands.items())[:120]:
+    order = list(TARGETS) + [k for k in cands if k not in TARGETS]
+    for iid in order[:40]:
+        nm = cands[iid]
         try:
             rec, rows = probe(iid, nm)
         except Exception as e:  # noqa: BLE001
