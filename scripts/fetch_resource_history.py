@@ -248,13 +248,18 @@ def comtrade() -> None:
 
 def comtrade_mirror() -> None:
     """Partner-reported imports from Kazakhstan. The preview API caps a call at 500 records,
-    so headings go in batches of four (about 60 partners each)."""
+    so headings go in batches of seven (about 40 partners each). Years from 2010: the span that
+    overlaps Taldau and covers the confidential years; a time budget keeps the job under 25 minutes."""
     log = LOG.setdefault("comtrade_mirror", {})
-    rows, truncated, years_ok = [], [], set()
+    rows, truncated, years_ok, skipped = [], [], set(), []
     codes = list(HS)
-    batches = [codes[i:i + 4] for i in range(0, len(codes), 4)]
-    for year in range(1995, 2026):
+    batches = [codes[i:i + 7] for i in range(0, len(codes), 7)]
+    t0 = time.time()
+    for year in range(2025, 2009, -1):
         for b in batches:
+            if time.time() - t0 > 25 * 60:
+                skipped.append(year)
+                break
             url = ("https://comtradeapi.un.org/public/v1/preview/C/A/HS"
                    f"?period={year}&partnerCode=398&cmdCode={','.join(b)}&flowCode=M&partner2Code=0"
                    "&customsCode=C00&motCode=0&includeDesc=true")
@@ -266,6 +271,7 @@ def comtrade_mirror() -> None:
                 data = r.json().get("data") or []
             except ValueError:
                 continue
+            print(f"mirror {year} {b[0]}..: {len(data)} rows ({time.time() - t0:.0f}s)", flush=True)
             if len(data) >= 500:
                 truncated.append(f"{year}:{','.join(b)}")
             for d in data:
@@ -275,6 +281,7 @@ def comtrade_mirror() -> None:
                              d.get("primaryValue"), d.get("netWgt"), d.get("qty"), d.get("qtyUnitAbbr")])
     log["years"] = sorted(years_ok)
     log["truncated_calls"] = truncated
+    log["skipped_years_time_budget"] = sorted(set(skipped))
     log["rows"] = write_csv("comtrade_mirror_kazakhstan.csv",
                             ["year", "reporter_code", "reporter", "flow", "hs", "name", "value_usd",
                              "net_weight_kg", "qty", "qty_unit"], rows)
