@@ -14,6 +14,7 @@ on:
       - scripts/fetch_natural_capital.py
       - scripts/fetch_resource_history.py
       - config/resource_history_parts.txt
+      - scripts/fetch_taldau_resources.py
       - .github/workflows/natural-capital.yml
 
 concurrency:
@@ -46,6 +47,12 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: python scripts/fetch_resource_history.py ${{ github.event.inputs.parts }}
 
+      - name: Taldau natural-resource series
+        if: always()
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python scripts/fetch_taldau_resources.py
+
       - name: Keep the Red Book PDF and raw files as an artifact (not committed)
         if: always()
         uses: actions/upload-artifact@v4
@@ -65,7 +72,7 @@ jobs:
           git config user.name "kz-data-bot"
           git config user.email "actions@users.noreply.github.com"
           git config lfs.locksverify false
-          git add data/raw/bns_seea/ data/raw/nea/ data/raw/resource_history/ reports/natural_capital_fetch.json reports/resource_history_fetch.json || true
+          git add data/raw/bns_seea/ data/raw/nea/ data/raw/resource_history/ data/raw/taldau_resources/ reports/natural_capital_fetch.json reports/resource_history_fetch.json reports/taldau_resources.json || true
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
