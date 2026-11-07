@@ -3,15 +3,16 @@
  "summary": {
   "warning": {
    "break": 201,
-   "confidential": 14,
-   "cross_source": 24
+   "confidential": 15,
+   "cross_source": 53
   },
   "info": {
-   "gap": 112
+   "gap": 114,
+   "freshness": 1
   },
   "error": {
-   "spike": 15,
-   "unit": 22
+   "spike": 23,
+   "unit": 23
   }
  },
  "issues": [
@@ -1066,6 +1067,26 @@
    "detail": "пропуск года внутри ряда"
   },
   {
+   "check": "spike",
+   "severity": "error",
+   "var": "uranium_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 2001,
+   "value": 3406.643,
+   "detail": "выброс: 3.41e+03 при 1.76e+03 (2000) и 1.54e+03 (2002)"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "uranium_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 2002,
+   "value": 1537.291,
+   "detail": "выброс: 1.54e+03 при 3.41e+03 (2001) и 3.04e+03 (2003)"
+  },
+  {
    "check": "break",
    "severity": "warning",
    "var": "iron_ore_gross",
@@ -1868,6 +1889,26 @@
   {
    "check": "gap",
    "severity": "info",
+   "var": "alumina_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 2010,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "стоимость",
+   "year": 2010,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
    "var": "aluminium",
    "source": "БНС Талдау",
    "series": "производство",
@@ -1974,6 +2015,36 @@
    "year": 2011,
    "value": null,
    "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "copper_ore_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 1998,
+   "value": 0.0393,
+   "detail": "выброс: 0.0393 при 9.7 (1997) и 10.3 (1999)"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "copper_ore_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 2004,
+   "value": 236.318229,
+   "detail": "выброс: 236 при 135 (2003) и 138 (2005)"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "copper_ore_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 2014,
+   "value": 893.314265,
+   "detail": "выброс: 893 при 538 (2013) и 469 (2015)"
   },
   {
    "check": "break",
@@ -2154,6 +2225,16 @@
    "year": 2000,
    "value": null,
    "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "zinc_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 2006,
+   "value": 678.480479,
+   "detail": "выброс: 678 при 315 (2005) и 358 (2007)"
   },
   {
    "check": "break",
@@ -2546,6 +2627,16 @@
    "detail": "пропуск года внутри ряда"
   },
   {
+   "check": "spike",
+   "severity": "error",
+   "var": "gold_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 2007,
+   "value": 2.956,
+   "detail": "выброс: 2.96 при 5.42 (2006) и 5.13 (2008)"
+  },
+  {
    "check": "break",
    "severity": "warning",
    "var": "silver_refined",
@@ -2834,6 +2925,16 @@
    "year": 2000,
    "value": null,
    "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "titanium_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 4.774652,
+   "detail": "выброс: 4.77 при 8.49 (1998) и 9.04 (2000)"
   },
   {
    "check": "break",
@@ -3298,6 +3399,16 @@
   {
    "check": "confidential",
    "severity": "warning",
+   "var": "alumina_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": 264.085965,
+   "detail": "экспорт РК почти нулевой: зеркало 1.39e+03 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
    "var": "aluminium_export",
    "source": "UN Comtrade",
    "series": "вес нетто",
@@ -3333,7 +3444,7 @@
    "series": "вес нетто",
    "year": 1998,
    "value": 9.7e-05,
-   "detail": "экспорт РК почти нулевой: медиана соседних лет 122 — вероятно, данные закрыты"
+   "detail": "экспорт РК почти нулевой: зеркало 0.0393; медиана соседних лет 122 — вероятно, данные закрыты"
   },
   {
    "check": "confidential",
@@ -3478,6 +3589,16 @@
   {
    "check": "unit",
    "severity": "error",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "вес нетто",
+   "year": 2011,
+   "value": 2.256755,
+   "detail": "удельная стоимость 115 при медиане соседних лет 31.3 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
    "var": "coal_import",
    "source": "UN Comtrade",
    "series": "вес нетто",
@@ -3529,11 +3650,11 @@
    "check": "unit",
    "severity": "error",
    "var": "alumina_export",
-   "source": "UN Comtrade",
+   "source": "UN Comtrade, зеркало",
    "series": "вес нетто",
-   "year": 2003,
-   "value": 264.085965,
-   "detail": "удельная стоимость 0.708 при медиане соседних лет 0.186 — ошибка единиц веса"
+   "year": 2011,
+   "value": 0.020002,
+   "detail": "удельная стоимость 0.967 при медиане соседних лет 0.29 — ошибка единиц веса"
   },
   {
    "check": "unit",
@@ -3798,12 +3919,302 @@
   {
    "check": "cross_source",
    "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 1995,
+   "value": 0.431534,
+   "detail": "UN Comtrade, зеркало 0.4315 vs UN Comtrade 11.31: -96.2% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 1996,
+   "value": 11.61144,
+   "detail": "UN Comtrade, зеркало 11.61 vs UN Comtrade 14.5: -19.9% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 1997,
+   "value": 14.236228,
+   "detail": "UN Comtrade, зеркало 14.24 vs UN Comtrade 16.38: -13.1% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 1998,
+   "value": 15.239563,
+   "detail": "UN Comtrade, зеркало 15.24 vs UN Comtrade 20.43: -25.4% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 1999,
+   "value": 16.882079,
+   "detail": "UN Comtrade, зеркало 16.88 vs UN Comtrade 252.1: -93.3% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2000,
+   "value": 20.674212,
+   "detail": "UN Comtrade, зеркало 20.67 vs UN Comtrade 27.71: -25.4% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2001,
+   "value": 20.34211,
+   "detail": "UN Comtrade, зеркало 20.34 vs UN Comtrade 32.38: -37.2% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2002,
+   "value": 25.504272,
+   "detail": "UN Comtrade, зеркало 25.5 vs UN Comtrade 39.13: -34.8% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2004,
+   "value": 30.670846,
+   "detail": "UN Comtrade, зеркало 30.67 vs UN Comtrade 52.42: -41.5% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2005,
+   "value": 31.67421,
+   "detail": "UN Comtrade, зеркало 31.67 vs UN Comtrade 52.4: -39.6% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2006,
+   "value": 34.99045,
+   "detail": "UN Comtrade, зеркало 34.99 vs UN Comtrade 54.57: -35.9% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2007,
+   "value": 37.083142,
+   "detail": "UN Comtrade, зеркало 37.08 vs UN Comtrade 60.8: -39.0% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2008,
+   "value": 38.61401,
+   "detail": "UN Comtrade, зеркало 38.61 vs UN Comtrade 60.71: -36.4% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2009,
+   "value": 40.831107,
+   "detail": "UN Comtrade, зеркало 40.83 vs UN Comtrade 67.26: -39.3% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2010,
+   "value": 46.598151,
+   "detail": "UN Comtrade, зеркало 46.6 vs UN Comtrade 67.47: -30.9% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2011,
+   "value": 50.851924,
+   "detail": "UN Comtrade, зеркало 50.85 vs UN Comtrade 69.61: -26.9% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2012,
+   "value": 48.201254,
+   "detail": "UN Comtrade, зеркало 48.2 vs UN Comtrade 68.14: -29.3% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2013,
+   "value": 51.251233,
+   "detail": "UN Comtrade, зеркало 51.25 vs UN Comtrade 70.7: -27.5% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2014,
+   "value": 45.855249,
+   "detail": "UN Comtrade, зеркало 45.86 vs UN Comtrade 68.22: -32.8% (допуск ±10%); зеркало: импорт партнёров, CIF, транзит"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
    "var": "coal_export",
    "source": "БНС Талдау (отгрузки)",
    "series": "UN Comtrade",
    "year": 2023,
    "value": 24.5114,
    "detail": "БНС Талдау (отгрузки) 24.51 vs UN Comtrade 28.54: -14.1% (допуск ±10%); косвенная оценка экспорта по отгрузкам"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 1995,
+   "value": 4.308549,
+   "detail": "UN Comtrade, зеркало 4.309 vs UN Comtrade 20.77: -79.3% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 1996,
+   "value": 26.408238,
+   "detail": "UN Comtrade, зеркало 26.41 vs UN Comtrade 20.84: +26.7% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 1997,
+   "value": 14.628248,
+   "detail": "UN Comtrade, зеркало 14.63 vs UN Comtrade 24.86: -41.2% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 1998,
+   "value": 14.589363,
+   "detail": "UN Comtrade, зеркало 14.59 vs UN Comtrade 23.58: -38.1% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 1999,
+   "value": 15.960397,
+   "detail": "UN Comtrade, зеркало 15.96 vs UN Comtrade 68.43: -76.7% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2003,
+   "value": 27.694573,
+   "detail": "UN Comtrade, зеркало 27.69 vs UN Comtrade 6.184: +347.8% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2010,
+   "value": 2.238071,
+   "detail": "UN Comtrade, зеркало 2.238 vs UN Comtrade 18.25: -87.7% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2011,
+   "value": 2.256755,
+   "detail": "UN Comtrade, зеркало 2.257 vs UN Comtrade 32.15: -93.0% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2012,
+   "value": 23.797271,
+   "detail": "UN Comtrade, зеркало 23.8 vs UN Comtrade 33.7: -29.4% (допуск ±15%); зеркало: импорт партнёров"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade, зеркало",
+   "series": "UN Comtrade",
+   "year": 2013,
+   "value": 25.380816,
+   "detail": "UN Comtrade, зеркало 25.38 vs UN Comtrade 30.82: -17.7% (допуск ±15%); зеркало: импорт партнёров"
   },
   {
    "check": "cross_source",
@@ -3894,6 +4305,16 @@
    "year": 2024,
    "value": 31.474321,
    "detail": "EIA 31.47 vs UN Comtrade 27.78: +13.3% (допуск ±10%)"
+  },
+  {
+   "check": "freshness",
+   "severity": "info",
+   "var": "*",
+   "source": "UN Comtrade, зеркало",
+   "series": "",
+   "year": 2015,
+   "value": null,
+   "detail": "последний год 2015, ожидается не раньше 2024"
   }
  ]
 }
