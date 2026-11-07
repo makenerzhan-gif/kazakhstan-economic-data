@@ -9,8 +9,13 @@ on:
         description: 'fetch_resource_history parts to run (space-separated; empty = all)'
         required: false
         default: ''
+  schedule:
+    - cron: "17 3 5 * *"   # monthly, 5th day 03:17 UTC: Taldau monthly release, Comtrade revisions
   push:
     paths:
+      - scripts/build_resource_panel.py
+      - scripts/qa_resources.py
+      - scripts/usgs_myb_parse.py
       - scripts/fetch_natural_capital.py
       - scripts/fetch_resource_history.py
       - config/resource_history_parts.txt
@@ -34,7 +39,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install "requests>=2.31" "pypdf>=4.0" "openpyxl>=3.1"
+        run: pip install "requests>=2.31" "pypdf>=4.0" "openpyxl>=3.1" "xlrd>=2.0"
 
       - name: Fetch
         env:
@@ -52,6 +57,15 @@ jobs:
         env:
           PYTHONUNBUFFERED: "1"
         run: python scripts/fetch_taldau_resources.py
+
+      - name: Harmonised panel and quality checks
+        if: always()
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          pip install xlrd >/dev/null
+          python scripts/build_resource_panel.py
+          cat reports/resource_qa.md >> "$GITHUB_STEP_SUMMARY" || true
 
       - name: Keep the Red Book PDF and raw files as an artifact (not committed)
         if: always()
@@ -72,7 +86,7 @@ jobs:
           git config user.name "kz-data-bot"
           git config user.email "actions@users.noreply.github.com"
           git config lfs.locksverify false
-          git add data/raw/bns_seea/ data/raw/nea/ data/raw/resource_history/ data/raw/taldau_resources/ reports/natural_capital_fetch.json reports/resource_history_fetch.json reports/taldau_resources.json || true
+          git add data/raw/bns_seea/ data/raw/nea/ data/raw/resource_history/ data/raw/taldau_resources/ reports/natural_capital_fetch.json reports/resource_history_fetch.json reports/taldau_resources.json data/processed/natural_resources/ reports/resource_qa.json reports/resource_qa.md || true
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0

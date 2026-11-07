@@ -10,6 +10,11 @@ of the big international files and written as tidy CSV under data/raw/resource_h
                            land and forest; 1960/1990-.
   comtrade_kazakhstan.csv  UN Comtrade (public preview API): exports and imports, value and net
                            weight, for HS headings of fuels, ores and metals; 1995-.
+  comtrade_mirror_kazakhstan.csv
+                           UN Comtrade mirror flows: imports FROM Kazakhstan (partner 398) reported by
+                           every partner country, same HS headings; 1995-. Fills years in which
+                           Kazakhstan's own export records are confidential (metals 2020-2022) and
+                           cross-checks the national records.
   usgs_myb/                USGS Minerals Yearbook, Kazakhstan country chapter tables (xls/xlsx),
                            every year found (each table carries five years).
   bgs/                     BGS World Mineral Statistics, if its export endpoint answers.
@@ -241,6 +246,40 @@ def comtrade() -> None:
                             ["year", "flow", "hs", "name", "value_usd", "net_weight_kg", "qty", "qty_unit", "classification"], rows)
 
 
+def comtrade_mirror() -> None:
+    """Partner-reported imports from Kazakhstan. The preview API caps a call at 500 records,
+    so headings go in batches of four (about 60 partners each)."""
+    log = LOG.setdefault("comtrade_mirror", {})
+    rows, truncated, years_ok = [], [], set()
+    codes = list(HS)
+    batches = [codes[i:i + 4] for i in range(0, len(codes), 4)]
+    for year in range(1995, 2026):
+        for b in batches:
+            url = ("https://comtradeapi.un.org/public/v1/preview/C/A/HS"
+                   f"?period={year}&partnerCode=398&cmdCode={','.join(b)}&flowCode=M&partner2Code=0"
+                   "&customsCode=C00&motCode=0&includeDesc=true")
+            r = get(url, timeout=120)
+            time.sleep(1.2)
+            if r is None:
+                continue
+            try:
+                data = r.json().get("data") or []
+            except ValueError:
+                continue
+            if len(data) >= 500:
+                truncated.append(f"{year}:{','.join(b)}")
+            for d in data:
+                years_ok.add(year)
+                rows.append([year, d.get("reporterCode"), d.get("reporterISO") or d.get("reporterDesc"), "M",
+                             d.get("cmdCode"), HS.get(str(d.get("cmdCode")), d.get("cmdDesc")),
+                             d.get("primaryValue"), d.get("netWgt"), d.get("qty"), d.get("qtyUnitAbbr")])
+    log["years"] = sorted(years_ok)
+    log["truncated_calls"] = truncated
+    log["rows"] = write_csv("comtrade_mirror_kazakhstan.csv",
+                            ["year", "reporter_code", "reporter", "flow", "hs", "name", "value_usd",
+                             "net_weight_kg", "qty", "qty_unit"], rows)
+
+
 # ------------------------------------------------------------------ USGS Minerals Yearbook
 def usgs_myb() -> None:
     """USGS Minerals Yearbook, Kazakhstan chapter. 2016+ are xlsx on pubs.usgs.gov; older chapters are
@@ -303,7 +342,7 @@ def main() -> int:
     parts_file = ROOT / "config" / "resource_history_parts.txt"
     if not only and parts_file.exists():
         only = set(parts_file.read_text(encoding="utf-8").split())
-    for part in (energy_institute, owid_energy, eia, world_bank, comtrade, usgs_myb, bgs):
+    for part in (energy_institute, owid_energy, eia, world_bank, comtrade, comtrade_mirror, usgs_myb, bgs):
         if only and part.__name__ not in only:
             continue
         try:

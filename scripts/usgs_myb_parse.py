@@ -2,7 +2,7 @@
 Returns {commodity: {year: value}} in the target units below; newer editions override older ones (revisions)."""
 import glob, os, re
 
-RAW = "" + str(__import__("pathlib").Path(__file__).resolve().parents[1] / "data/raw/resource_history/usgs_myb") + ""
+RAW = str(__import__("pathlib").Path(__file__).resolve().parents[1] / "data/raw/resource_history/usgs_myb")
 TOP = ("aluminum", "copper", "ferroalloys", "gold", "iron ore", "iron and steel", "lead", "manganese", "silver",
        "titanium", "zinc", "coal", "natural gas", "petroleum", "chromium", "chromite", "phosphate rock", "sulfur",
        "uranium", "bismuth", "stone", "sand", "clays", "nitrogen")
@@ -26,6 +26,7 @@ def grids():
     files = []
     for f in glob.glob(os.path.join(RAW, "*.xls*")):
         m = re.search(r"myb3-(\d{4})", os.path.basename(f))
+        if not m: continue
         files.append((int(m.group(1)), f))
     for y, f in sorted(files):
         if f.endswith(".xls"):

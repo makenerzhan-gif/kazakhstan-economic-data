@@ -1,0 +1,3899 @@
+{
+ "generated": "2026-11-07",
+ "summary": {
+  "warning": {
+   "break": 201,
+   "confidential": 14,
+   "cross_source": 24
+  },
+  "info": {
+   "gap": 112
+  },
+  "error": {
+   "spike": 15,
+   "unit": 22
+  }
+ },
+ "issues": [
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "oil_prod",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2015,
+   "value": 16.2321,
+   "detail": "скачок -59% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "oil_cons",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 2011,
+   "value": 12.515365,
+   "detail": "скачок +34% к 2010 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "oil_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "БНС Талдау (отгрузки)",
+   "series": "экспорт",
+   "year": 2015,
+   "value": 63.1239,
+   "detail": "скачок +61% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "oil_products_import",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2010,
+   "value": 0.726405,
+   "detail": "выброс: 0.726 при 1.58 (2009) и 1.47 (2011)"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_gross_prod",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2025,
+   "value": 36.4545,
+   "detail": "скачок +81% к 2024 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_gross_prod",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2025,
+   "value": 32.3062,
+   "detail": "скачок +99% к 2024 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_gross_prod",
+   "source": "USGS",
+   "series": "",
+   "year": 1995,
+   "value": 5.9,
+   "detail": "скачок +30% к 1994 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_gross_prod",
+   "source": "USGS",
+   "series": "",
+   "year": 2007,
+   "value": 29.561,
+   "detail": "скачок +105% к 2006 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_assoc_prod",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2015,
+   "value": 6.4629,
+   "detail": "скачок +35% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_assoc_prod",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2017,
+   "value": 11.0757,
+   "detail": "скачок +52% к 2016 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_assoc_prod",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2019,
+   "value": 18.9281,
+   "detail": "скачок +75% к 2018 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_assoc_prod",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2023,
+   "value": 10.067,
+   "detail": "скачок -39% к 2022 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_assoc_prod",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2025,
+   "value": 26.9467,
+   "detail": "скачок +180% к 2024 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_assoc_prod",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2015,
+   "value": 6.443,
+   "detail": "скачок +36% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_assoc_prod",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2022,
+   "value": 13.8899,
+   "detail": "скачок +31% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_assoc_prod",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2023,
+   "value": 6.0986,
+   "detail": "скачок -56% к 2022 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_assoc_prod",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2025,
+   "value": 22.7984,
+   "detail": "скачок +293% к 2024 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "gas_assoc_prod",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_marketed_prod",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 1995,
+   "value": 4.19384,
+   "detail": "скачок +32% к 1994 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_marketed_prod",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 2004,
+   "value": 16.40192,
+   "detail": "скачок +39% к 2003 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_dry_prod",
+   "source": "EIA",
+   "series": "",
+   "year": 1994,
+   "value": 4.500113,
+   "detail": "скачок -33% к 1993 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_dry_prod",
+   "source": "EIA",
+   "series": "",
+   "year": 1997,
+   "value": 6.100058,
+   "detail": "скачок +44% к 1996 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_dry_prod",
+   "source": "EIA",
+   "series": "",
+   "year": 2000,
+   "value": 8.900084,
+   "detail": "скачок +93% к 1999 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_dry_prod",
+   "source": "EIA",
+   "series": "",
+   "year": 2003,
+   "value": 7.196068,
+   "detail": "скачок -45% к 2002 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_dry_prod",
+   "source": "EIA",
+   "series": "",
+   "year": 2005,
+   "value": 12.110114,
+   "detail": "скачок +35% к 2004 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_cons",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 2000,
+   "value": 4.77995,
+   "detail": "скачок -43% к 1999 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_cons",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 2014,
+   "value": 14.82957,
+   "detail": "скачок +33% к 2013 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_cons",
+   "source": "EIA",
+   "series": "",
+   "year": 1996,
+   "value": 14.440176,
+   "detail": "скачок +33% к 1995 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_cons",
+   "source": "EIA",
+   "series": "",
+   "year": 2004,
+   "value": 13.669129,
+   "detail": "скачок +50% к 2003 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_cons",
+   "source": "EIA",
+   "series": "",
+   "year": 2007,
+   "value": 20.330192,
+   "detail": "скачок +91% к 2006 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_cons",
+   "source": "EIA",
+   "series": "",
+   "year": 2009,
+   "value": 13.310126,
+   "detail": "скачок -41% к 2008 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_flared",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 1992,
+   "value": 0.39,
+   "detail": "скачок -60% к 1991 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_flared",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 1994,
+   "value": 0.43875,
+   "detail": "скачок +50% к 1993 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_flared",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 1995,
+   "value": 0.6825,
+   "detail": "скачок +56% к 1994 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_flared",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 1998,
+   "value": 0.975,
+   "detail": "скачок +100% к 1997 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_flared",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 2002,
+   "value": 0.6825,
+   "detail": "скачок -36% к 2001 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_flared",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 2003,
+   "value": 0.39,
+   "detail": "скачок -43% к 2002 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_flared",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 2004,
+   "value": 1.56,
+   "detail": "скачок +300% к 2003 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_flared",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 2005,
+   "value": 2.4375,
+   "detail": "скачок +56% к 2004 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_flared",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 2011,
+   "value": 2.4375,
+   "detail": "скачок +32% к 2010 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_flared",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 2012,
+   "value": 5.370273,
+   "detail": "скачок +120% к 2011 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_flared",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 2016,
+   "value": 3.13767,
+   "detail": "скачок -43% к 2015 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_flared",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 2019,
+   "value": 1.620117,
+   "detail": "скачок -30% к 2018 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_flared",
+   "source": "Energy Institute",
+   "series": "",
+   "year": 2022,
+   "value": 0.823723,
+   "detail": "скачок -43% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_export",
+   "source": "EIA",
+   "series": "",
+   "year": 1994,
+   "value": 2.400136,
+   "detail": "скачок -65% к 1993 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_export",
+   "source": "EIA",
+   "series": "",
+   "year": 2000,
+   "value": 3.400032,
+   "detail": "скачок +70% к 1999 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_export",
+   "source": "EIA",
+   "series": "",
+   "year": 2002,
+   "value": 6.40006,
+   "detail": "скачок +56% к 2001 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_export",
+   "source": "EIA",
+   "series": "",
+   "year": 2006,
+   "value": 8.000076,
+   "detail": "скачок +61% к 2005 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_export",
+   "source": "EIA",
+   "series": "",
+   "year": 2007,
+   "value": 0.640006,
+   "detail": "скачок -92% к 2006 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_export",
+   "source": "EIA",
+   "series": "",
+   "year": 2009,
+   "value": 9.470089,
+   "detail": "скачок +1084% к 2008 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_export",
+   "source": "EIA",
+   "series": "",
+   "year": 2022,
+   "value": 6.728313,
+   "detail": "скачок -39% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_raw_shipped_out",
+   "source": "БНС Талдау (отгрузки)",
+   "series": "экспорт",
+   "year": 2016,
+   "value": 0.8241,
+   "detail": "скачок +106% к 2015 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_raw_shipped_out",
+   "source": "БНС Талдау (отгрузки)",
+   "series": "экспорт",
+   "year": 2017,
+   "value": 4.5823,
+   "detail": "скачок +456% к 2016 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_raw_shipped_out",
+   "source": "БНС Талдау (отгрузки)",
+   "series": "экспорт",
+   "year": 2019,
+   "value": 7.7915,
+   "detail": "скачок +86% к 2018 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_raw_shipped_out",
+   "source": "БНС Талдау (отгрузки)",
+   "series": "экспорт",
+   "year": 2022,
+   "value": 2.6493,
+   "detail": "скачок -60% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_raw_shipped_out",
+   "source": "БНС Талдау (отгрузки)",
+   "series": "экспорт",
+   "year": 2023,
+   "value": 3.9684,
+   "detail": "скачок +50% к 2022 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2004,
+   "value": 11.70011,
+   "detail": "скачок +34% к 2003 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2005,
+   "value": 4.000038,
+   "detail": "скачок -66% к 2004 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2013,
+   "value": 5.28005,
+   "detail": "скачок +34% к 2012 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2018,
+   "value": 9.049409,
+   "detail": "скачок +57% к 2017 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2020,
+   "value": 6.513578,
+   "detail": "скачок -33% к 2019 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2021,
+   "value": 2.303758,
+   "detail": "скачок -65% к 2020 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2022,
+   "value": 1.19701,
+   "detail": "скачок -48% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gas_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2024,
+   "value": 4.43453,
+   "detail": "скачок +251% к 2023 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "coal_prod",
+   "source": "USGS",
+   "series": "",
+   "year": 2006,
+   "value": 26382.0,
+   "detail": "выброс: 2.64e+04 при 86.6 (2005) и 98.4 (2007)"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_prod",
+   "source": "USGS",
+   "series": "",
+   "year": 2007,
+   "value": 98.384,
+   "detail": "скачок -100% к 2006 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_prod",
+   "source": "EIA",
+   "series": "",
+   "year": 2022,
+   "value": 114.938627,
+   "detail": "скачок +37% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "coal_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": 6.184063,
+   "detail": "выброс: 6.18 при 22.7 (2002) и 24.3 (2004)"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "coal_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "coal_export",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "EIA",
+   "series": "",
+   "year": 2000,
+   "value": 26.238193,
+   "detail": "скачок +53% к 1999 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "EIA",
+   "series": "",
+   "year": 2012,
+   "value": 27.531164,
+   "detail": "скачок +42% к 2011 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "EIA",
+   "series": "",
+   "year": 2022,
+   "value": 35.94814,
+   "detail": "скачок +63% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "coal_import",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2010,
+   "value": 0.118148,
+   "detail": "выброс: 0.118 при 0.265 (2009) и 0.222 (2011)"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "coal_import",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "coal_import",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "coal_import",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2019,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "coal_import",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2020,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "coal_import",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2021,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "coal_import",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2022,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "coal_import",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2023,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "coal_import",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_import",
+   "source": "EIA",
+   "series": "",
+   "year": 1996,
+   "value": 0.042208,
+   "detail": "скачок -56% к 1995 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_import",
+   "source": "EIA",
+   "series": "",
+   "year": 1997,
+   "value": 0.059005,
+   "detail": "скачок +40% к 1996 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_import",
+   "source": "EIA",
+   "series": "",
+   "year": 1998,
+   "value": 0.090091,
+   "detail": "скачок +53% к 1997 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_import",
+   "source": "EIA",
+   "series": "",
+   "year": 1999,
+   "value": 0.121177,
+   "detail": "скачок +35% к 1998 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2000,
+   "value": 0.228311,
+   "detail": "скачок +88% к 1999 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2003,
+   "value": 0.320938,
+   "detail": "скачок +64% к 2002 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2006,
+   "value": 0.299694,
+   "detail": "скачок -32% к 2005 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2010,
+   "value": 0.124891,
+   "detail": "скачок -54% к 2009 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2011,
+   "value": 0.012708,
+   "detail": "скачок -90% к 2010 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2012,
+   "value": 0.008435,
+   "detail": "скачок -34% к 2011 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2013,
+   "value": 0.002829,
+   "detail": "скачок -66% к 2012 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2022,
+   "value": 0.003967,
+   "detail": "скачок +1955% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "coal_import",
+   "source": "EIA",
+   "series": "",
+   "year": 2023,
+   "value": 0.093445,
+   "detail": "скачок +2256% к 2022 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "uranium_prod",
+   "source": "USGS",
+   "series": "",
+   "year": 1993,
+   "value": 2700.0,
+   "detail": "скачок +80% к 1992 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "uranium_prod",
+   "source": "USGS",
+   "series": "",
+   "year": 2002,
+   "value": 2800.0,
+   "detail": "скачок +37% к 2001 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "uranium_prod",
+   "source": "USGS",
+   "series": "",
+   "year": 2009,
+   "value": 14020.0,
+   "detail": "скачок +65% к 2008 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "uranium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "uranium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2001,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "uranium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "uranium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2012,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "uranium_export",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "uranium_export",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2001,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_gross",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2020,
+   "value": 62.865,
+   "detail": "скачок +39% к 2019 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_gross",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2015,
+   "value": 13.7721,
+   "detail": "скачок -37% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_gross",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2021,
+   "value": 33.3927,
+   "detail": "скачок +72% к 2020 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_gross",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2015,
+   "value": 5.3635,
+   "detail": "скачок -31% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_gross",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2021,
+   "value": 19.3831,
+   "detail": "скачок +242% к 2020 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_gross",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2024,
+   "value": 23.0466,
+   "detail": "скачок +50% к 2023 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2015,
+   "value": 17.111,
+   "detail": "скачок -30% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2020,
+   "value": 39.0169,
+   "detail": "скачок +77% к 2019 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2015,
+   "value": 0.1278,
+   "detail": "выброс: 0.128 при 0.777 (2014) и 0.696 (2016)"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2016,
+   "value": 0.6957,
+   "detail": "скачок +444% к 2015 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2017,
+   "value": 0.3754,
+   "detail": "скачок -46% к 2016 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2018,
+   "value": 0.5613,
+   "detail": "скачок +50% к 2017 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2020,
+   "value": 0.6383,
+   "detail": "скачок -30% к 2019 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2021,
+   "value": 14.4184,
+   "detail": "скачок +2159% к 2020 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2024,
+   "value": 17.9862,
+   "detail": "скачок +63% к 2023 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2015,
+   "value": 0.1278,
+   "detail": "скачок -83% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2016,
+   "value": 0.5187,
+   "detail": "скачок +306% к 2015 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2017,
+   "value": 0.3334,
+   "detail": "скачок -36% к 2016 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2018,
+   "value": 0.1059,
+   "detail": "скачок -68% к 2017 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2019,
+   "value": 0.1835,
+   "detail": "скачок +73% к 2018 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2020,
+   "value": 0.4391,
+   "detail": "скачок +139% к 2019 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2021,
+   "value": 13.8507,
+   "detail": "скачок +3054% к 2020 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_conc",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2024,
+   "value": 17.5132,
+   "detail": "скачок +63% к 2023 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_usgs",
+   "source": "USGS",
+   "series": "",
+   "year": 1995,
+   "value": 14.9,
+   "detail": "скачок +42% к 1994 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_usgs",
+   "source": "USGS",
+   "series": "",
+   "year": 2000,
+   "value": 16.16,
+   "detail": "скачок +68% к 1999 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_usgs",
+   "source": "USGS",
+   "series": "",
+   "year": 2012,
+   "value": 52.614,
+   "detail": "скачок +113% к 2011 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "iron_ore_usgs",
+   "source": "USGS",
+   "series": "",
+   "year": 2019,
+   "value": 21.9916,
+   "detail": "выброс: 22 при 41.9 (2018) и 39 (2020)"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "iron_ore_usgs",
+   "source": "USGS",
+   "series": "",
+   "year": 2020,
+   "value": 39.0169,
+   "detail": "скачок +77% к 2019 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "iron_ore_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "iron_ore_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "iron_ore_export",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "chrome_ore",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2023,
+   "value": 0.9568,
+   "detail": "выброс: 0.957 при 4.89 (2022) и 5.1 (2024)"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "chrome_ore",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2024,
+   "value": 5.0958,
+   "detail": "скачок +433% к 2023 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "chrome_ore",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "chromite_marketable",
+   "source": "USGS",
+   "series": "",
+   "year": 1996,
+   "value": 1.19,
+   "detail": "скачок -51% к 1995 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "chromite_marketable",
+   "source": "USGS",
+   "series": "",
+   "year": 1997,
+   "value": 1.7983,
+   "detail": "скачок +51% к 1996 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "chromite_marketable",
+   "source": "USGS",
+   "series": "",
+   "year": 1999,
+   "value": 2.4055,
+   "detail": "скачок +50% к 1998 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "chromite_marketable",
+   "source": "USGS",
+   "series": "",
+   "year": 2010,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "chromite_marketable",
+   "source": "USGS",
+   "series": "",
+   "year": 2011,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "chrome_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2020,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "manganese_ore",
+   "source": "USGS",
+   "series": "",
+   "year": 1998,
+   "value": 0.6341,
+   "detail": "скачок +59% к 1997 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "manganese_ore",
+   "source": "USGS",
+   "series": "",
+   "year": 1999,
+   "value": 0.9824,
+   "detail": "скачок +55% к 1998 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "manganese_ore",
+   "source": "USGS",
+   "series": "",
+   "year": 2003,
+   "value": 2.361,
+   "detail": "скачок +32% к 2002 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "manganese_ore",
+   "source": "USGS",
+   "series": "",
+   "year": 2015,
+   "value": 1.6257,
+   "detail": "скачок -38% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "manganese_ore",
+   "source": "USGS",
+   "series": "",
+   "year": 2021,
+   "value": 1.2487,
+   "detail": "скачок +53% к 2020 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "manganese_ore",
+   "source": "USGS",
+   "series": "",
+   "year": 2022,
+   "value": 0.349,
+   "detail": "скачок -72% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "manganese_ore",
+   "source": "USGS",
+   "series": "",
+   "year": 2023,
+   "value": 0.9307,
+   "detail": "скачок +167% к 2022 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "manganese_ore",
+   "source": "USGS",
+   "series": "",
+   "year": 2011,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "manganese_ore",
+   "source": "USGS",
+   "series": "",
+   "year": 2012,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "manganese_ore",
+   "source": "USGS",
+   "series": "",
+   "year": 2013,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "manganese_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1997,
+   "value": 119.328523,
+   "detail": "выброс: 119 при 346 (1996) и 422 (1998)"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "manganese_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 5501.947,
+   "detail": "выброс: 5.5e+03 при 422 (1998) и 519 (2000)"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "manganese_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2017,
+   "value": 448.15932,
+   "detail": "выброс: 448 при 217 (2016) и 198 (2018)"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "manganese_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "bauxite",
+   "source": "USGS",
+   "series": "",
+   "year": 2010,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "bauxite",
+   "source": "USGS",
+   "series": "",
+   "year": 2011,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2015,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2016,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2017,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2020,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2021,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2022,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2023,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2024,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2020,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2021,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2022,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2023,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2024,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2020,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2021,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2022,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2023,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2024,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "alumina_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": 264.085965,
+   "detail": "выброс: 264 при 1.37e+03 (2002) и 1.47e+03 (2004)"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "alumina_export",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "aluminium",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "aluminium",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "aluminium",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "aluminium",
+   "source": "USGS",
+   "series": "",
+   "year": 2008,
+   "value": 106.0,
+   "detail": "скачок +783% к 2007 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "aluminium",
+   "source": "USGS",
+   "series": "",
+   "year": 2010,
+   "value": 226.0,
+   "detail": "скачок +78% к 2009 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "aluminium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "aluminium_export",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "copper_ore",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2016,
+   "value": 95.2982,
+   "detail": "скачок +66% к 2015 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "copper_ore",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "copper_mine_cu",
+   "source": "USGS",
+   "series": "",
+   "year": 2010,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "copper_mine_cu",
+   "source": "USGS",
+   "series": "",
+   "year": 2011,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "copper_refined",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2015,
+   "value": 398.698,
+   "detail": "скачок +34% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "copper_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2015,
+   "value": 398.363,
+   "detail": "скачок +33% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "copper_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "copper_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2015,
+   "value": 306.831,
+   "detail": "скачок +46% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "copper_refined",
+   "source": "USGS",
+   "series": "",
+   "year": 2015,
+   "value": 394.641,
+   "detail": "скачок +34% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "copper_refined_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "copper_refined_export",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "zinc_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 2008,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "zinc_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 2009,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "zinc_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 2010,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "zinc_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 2011,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "zinc_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2016,
+   "value": 20.544,
+   "detail": "скачок +36% к 2015 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "zinc_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2019,
+   "value": 2.427,
+   "detail": "выброс: 2.43 при 16.4 (2018) и 18.6 (2020)"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "zinc_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2020,
+   "value": 18.607,
+   "detail": "скачок +667% к 2019 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "zinc_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2025,
+   "value": 39.288,
+   "detail": "скачок +82% к 2024 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "zinc_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2018,
+   "value": 102.177162,
+   "detail": "выброс: 102 при 299 (2017) и 297 (2019)"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "zinc_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "zinc_export",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "lead_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 1994,
+   "value": 57.0,
+   "detail": "скачок -40% к 1993 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "lead_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 2006,
+   "value": 48.1,
+   "detail": "скачок +55% к 2005 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "lead_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 2016,
+   "value": 70.5,
+   "detail": "скачок +73% к 2015 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "lead_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 2017,
+   "value": 111.2,
+   "detail": "скачок +58% к 2016 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "lead_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 2019,
+   "value": 55.7,
+   "detail": "скачок -36% к 2018 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "lead_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 2020,
+   "value": 30.2,
+   "detail": "скачок -46% к 2019 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "lead_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 2023,
+   "value": 45.9,
+   "detail": "скачок +53% к 2022 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "lead_refined",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2014,
+   "value": 127.064,
+   "detail": "скачок +40% к 2013 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "lead_refined",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "lead_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2015,
+   "value": 8.43,
+   "detail": "скачок -33% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "lead_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2016,
+   "value": 16.071,
+   "detail": "скачок +91% к 2015 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "lead_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2017,
+   "value": 23.42,
+   "detail": "скачок +46% к 2016 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "lead_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "lead_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2012,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "lead_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2023,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "lead_export",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "ferroalloys",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2015,
+   "value": 26.134,
+   "detail": "скачок +44% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "ferroalloys",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2019,
+   "value": 45.027,
+   "detail": "скачок +38% к 2018 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "ferroalloys",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2025,
+   "value": 25.565,
+   "detail": "скачок -56% к 2024 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "ferroalloys",
+   "source": "USGS",
+   "series": "",
+   "year": 1997,
+   "value": 845.0,
+   "detail": "скачок +53% к 1996 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "ferroalloys",
+   "source": "USGS",
+   "series": "",
+   "year": 1999,
+   "value": 1262.703,
+   "detail": "скачок +39% к 1998 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "ferroalloys_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "ferroalloys_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "ferroalloys_export",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gold_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2017,
+   "value": 84.96,
+   "detail": "скачок +44% к 2016 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gold_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2016,
+   "value": 58.718,
+   "detail": "скачок +45% к 2015 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gold_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2017,
+   "value": 84.96,
+   "detail": "скачок +45% к 2016 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gold_refined",
+   "source": "USGS",
+   "series": "",
+   "year": 1997,
+   "value": 18.7,
+   "detail": "скачок +50% к 1996 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gold_refined",
+   "source": "USGS",
+   "series": "",
+   "year": 2000,
+   "value": 28.171,
+   "detail": "скачок +41% к 1999 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "gold_refined",
+   "source": "USGS",
+   "series": "",
+   "year": 2010,
+   "value": 30.272,
+   "detail": "скачок +33% к 2009 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2019,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2020,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2021,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2022,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2023,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2024,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "silver_refined",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2012,
+   "value": 963.182,
+   "detail": "скачок +48% к 2011 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "silver_refined",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2015,
+   "value": 1308.926,
+   "detail": "скачок +32% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "silver_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2015,
+   "value": 1310.902,
+   "detail": "скачок +31% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "silver_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2015,
+   "value": 373.372,
+   "detail": "скачок +83% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "silver_refined",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "silver_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 1997,
+   "value": 690.0,
+   "detail": "скачок +48% к 1996 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "silver_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 2012,
+   "value": 963.182,
+   "detail": "скачок +48% к 2011 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "silver_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 2014,
+   "value": 474.991,
+   "detail": "скачок -51% к 2013 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "silver_mine",
+   "source": "USGS",
+   "series": "",
+   "year": 2022,
+   "value": 1013.069,
+   "detail": "скачок +153% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "silver_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1998,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "silver_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "silver_export",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "titanium_sponge",
+   "source": "USGS",
+   "series": "",
+   "year": 1993,
+   "value": 8.354,
+   "detail": "скачок -72% к 1992 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "titanium_sponge",
+   "source": "USGS",
+   "series": "",
+   "year": 1994,
+   "value": 3.809,
+   "detail": "выброс: 3.81 при 8.35 (1993) и 9.59 (1995)"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "titanium_sponge",
+   "source": "USGS",
+   "series": "",
+   "year": 1995,
+   "value": 9.592,
+   "detail": "скачок +152% к 1994 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "titanium_sponge",
+   "source": "USGS",
+   "series": "",
+   "year": 1996,
+   "value": 12.5,
+   "detail": "скачок +30% к 1995 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "titanium_sponge",
+   "source": "USGS",
+   "series": "",
+   "year": 2000,
+   "value": 8.28,
+   "detail": "скачок -31% к 1999 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "titanium_sponge",
+   "source": "USGS",
+   "series": "",
+   "year": 2001,
+   "value": 14.0,
+   "detail": "скачок +69% к 2000 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "titanium_sponge",
+   "source": "USGS",
+   "series": "",
+   "year": 2004,
+   "value": 16.5,
+   "detail": "скачок +32% к 2003 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "titanium_sponge",
+   "source": "USGS",
+   "series": "",
+   "year": 2009,
+   "value": 16.8,
+   "detail": "скачок -35% к 2008 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "titanium_sponge",
+   "source": "USGS",
+   "series": "",
+   "year": 2011,
+   "value": 20.7,
+   "detail": "скачок +43% к 2010 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "titanium_sponge",
+   "source": "USGS",
+   "series": "",
+   "year": 2013,
+   "value": 12.0,
+   "detail": "скачок -43% к 2012 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "titanium_sponge",
+   "source": "USGS",
+   "series": "",
+   "year": 2018,
+   "value": 16.0,
+   "detail": "скачок +45% к 2017 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "titanium_sponge",
+   "source": "USGS",
+   "series": "",
+   "year": 2020,
+   "value": 15.0,
+   "detail": "скачок -35% к 2019 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "titanium_sponge",
+   "source": "USGS",
+   "series": "",
+   "year": 2023,
+   "value": 22.9,
+   "detail": "скачок +50% к 2022 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "titanium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "titanium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "titanium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2012,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "titanium_export",
+   "source": "UN Comtrade",
+   "series": "стоимость",
+   "year": 2000,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "molybdenum",
+   "source": "USGS",
+   "series": "",
+   "year": 2007,
+   "value": 400.0,
+   "detail": "скачок +60% к 2006 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "molybdenum",
+   "source": "USGS",
+   "series": "",
+   "year": 2020,
+   "value": 384.0,
+   "detail": "скачок +84% к 2019 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "molybdenum",
+   "source": "USGS",
+   "series": "",
+   "year": 2021,
+   "value": 777.0,
+   "detail": "скачок +102% к 2020 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "molybdenum",
+   "source": "USGS",
+   "series": "",
+   "year": 2022,
+   "value": 2005.0,
+   "detail": "скачок +158% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "molybdenum",
+   "source": "USGS",
+   "series": "",
+   "year": 2023,
+   "value": 3727.0,
+   "detail": "скачок +86% к 2022 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "molybdenum",
+   "source": "USGS",
+   "series": "",
+   "year": 2011,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "molybdenum",
+   "source": "USGS",
+   "series": "",
+   "year": 2012,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "molybdenum",
+   "source": "USGS",
+   "series": "",
+   "year": 2013,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "molybdenum",
+   "source": "USGS",
+   "series": "",
+   "year": 2014,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "molybdenum",
+   "source": "USGS",
+   "series": "",
+   "year": 2015,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "molybdenum",
+   "source": "USGS",
+   "series": "",
+   "year": 2016,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "molybdenum",
+   "source": "USGS",
+   "series": "",
+   "year": 2017,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "molybdenum",
+   "source": "USGS",
+   "series": "",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "phosphate_rock",
+   "source": "USGS",
+   "series": "",
+   "year": 2001,
+   "value": 0.097,
+   "detail": "скачок +194% к 2000 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "phosphate_rock",
+   "source": "USGS",
+   "series": "",
+   "year": 2002,
+   "value": 0.1365,
+   "detail": "скачок +41% к 2001 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "phosphate_rock",
+   "source": "USGS",
+   "series": "",
+   "year": 2003,
+   "value": 0.37809,
+   "detail": "скачок +177% к 2002 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "phosphate_rock",
+   "source": "USGS",
+   "series": "",
+   "year": 2004,
+   "value": 0.51195,
+   "detail": "скачок +35% к 2003 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "phosphate_rock",
+   "source": "USGS",
+   "series": "",
+   "year": 2007,
+   "value": 0.3,
+   "detail": "скачок -33% к 2006 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "phosphate_rock",
+   "source": "USGS",
+   "series": "",
+   "year": 2016,
+   "value": 0.7808,
+   "detail": "скачок +42% к 2015 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "phosphate_rock",
+   "source": "USGS",
+   "series": "",
+   "year": 2017,
+   "value": 1.2079,
+   "detail": "скачок +55% к 2016 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "phosphate_rock",
+   "source": "USGS",
+   "series": "",
+   "year": 2008,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "phosphate_rock",
+   "source": "USGS",
+   "series": "",
+   "year": 2009,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "phosphate_rock",
+   "source": "USGS",
+   "series": "",
+   "year": 2010,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "phosphate_rock",
+   "source": "USGS",
+   "series": "",
+   "year": 2011,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2015,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "производство",
+   "year": 2016,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2015,
+   "value": 0.879,
+   "detail": "скачок +180% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2016,
+   "value": 16.822,
+   "detail": "скачок +1814% к 2015 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2021,
+   "value": 31.18,
+   "detail": "скачок -77% к 2020 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2022,
+   "value": 16.454,
+   "detail": "скачок -47% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2023,
+   "value": 104.798,
+   "detail": "скачок +537% к 2022 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2024,
+   "value": 173.547,
+   "detail": "скачок +66% к 2023 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2020,
+   "value": 70.132,
+   "detail": "скачок +431% к 2019 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2021,
+   "value": 21.681,
+   "detail": "скачок -69% к 2020 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2022,
+   "value": 1.611,
+   "detail": "скачок -93% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2023,
+   "value": 104.798,
+   "detail": "скачок +6405% к 2022 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2024,
+   "value": 165.683,
+   "detail": "скачок +58% к 2023 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "gap",
+   "severity": "info",
+   "var": "pig_iron",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2018,
+   "value": null,
+   "detail": "пропуск года внутри ряда"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "steel",
+   "source": "БНС Талдау",
+   "series": "отгружено всего",
+   "year": 2016,
+   "value": 558.096,
+   "detail": "скачок +83% к 2015 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "steel",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2015,
+   "value": 96.687,
+   "detail": "скачок +136% к 2014 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "steel",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2018,
+   "value": 37.234,
+   "detail": "скачок -33% к 2017 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "steel",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2020,
+   "value": 106.56,
+   "detail": "скачок +263% к 2019 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "spike",
+   "severity": "error",
+   "var": "steel",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2021,
+   "value": 50.747,
+   "detail": "выброс: 50.7 при 107 (2020) и 103 (2022)"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "steel",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2022,
+   "value": 102.755,
+   "detail": "скачок +102% к 2021 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "break",
+   "severity": "warning",
+   "var": "steel",
+   "source": "БНС Талдау",
+   "series": "отгружено на внутренний рынок",
+   "year": 2025,
+   "value": 194.995,
+   "detail": "скачок +85% к 2024 г. без возврата — реальное событие или смена учёта"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "aluminium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2020,
+   "value": 9.752185,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 224 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "aluminium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2021,
+   "value": 16.966625,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 238 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "aluminium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2022,
+   "value": 8.97137,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 242 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "copper_ore_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1998,
+   "value": 9.7e-05,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 122 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "copper_refined_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2020,
+   "value": 2.579225,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 400 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "copper_refined_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2021,
+   "value": 2.883294,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 402 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "copper_refined_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2022,
+   "value": 0.674628,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 397 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "lead_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2020,
+   "value": 4.290375,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 105 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "lead_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2021,
+   "value": 6.995052,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 98.8 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "lead_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2022,
+   "value": 1.988797,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 92.5 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2016,
+   "value": 0.615,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 8.3 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2017,
+   "value": 0.01138,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 7.82 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "silver_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 6363.0,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 4.53e+07 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "titanium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2022,
+   "value": 0.398815,
+   "detail": "экспорт РК почти нулевой: медиана соседних лет 13.6 — вероятно, данные закрыты"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "oil_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 252.051348,
+   "detail": "удельная стоимость 9.16 при медиане соседних лет 115 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "oil_products_import",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 6.277646,
+   "detail": "удельная стоимость 14.9 при медиане соседних лет 226 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "coal_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 68.432797,
+   "detail": "удельная стоимость 2.28 при медиане соседних лет 13.7 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "coal_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": 6.184063,
+   "detail": "удельная стоимость 40.4 при медиане соседних лет 11 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "coal_import",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 10.789118,
+   "detail": "удельная стоимость 1.73 при медиане соседних лет 26 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "iron_ore_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 34.606412,
+   "detail": "удельная стоимость 1.1 при медиане соседних лет 20.9 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "chrome_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 5.178948,
+   "detail": "удельная стоимость 3.62 при медиане соседних лет 42 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "manganese_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 5501.947,
+   "detail": "удельная стоимость 0.00689 при медиане соседних лет 0.0613 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "alumina_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 11620.959,
+   "detail": "удельная стоимость 0.0116 при медиане соседних лет 0.151 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "alumina_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": 264.085965,
+   "detail": "удельная стоимость 0.708 при медиане соседних лет 0.186 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "aluminium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 105.565,
+   "detail": "удельная стоимость 0.0848 при медиане соседних лет 0.747 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "aluminium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2010,
+   "value": 10023.541817,
+   "detail": "удельная стоимость 0.0362 при медиане соседних лет 1.93 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "copper_ore_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 125.297,
+   "detail": "удельная стоимость 0.0189 при медиане соседних лет 0.235 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "copper_refined_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 3550.608375,
+   "detail": "удельная стоимость 0.149 при медиане соседних лет 1.57 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "zinc_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 2112.367,
+   "detail": "удельная стоимость 0.0792 при медиане соседних лет 0.833 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "lead_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 1113.099,
+   "detail": "удельная стоимость 0.044 при медиане соседних лет 0.479 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "ferroalloys_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 7739.828,
+   "detail": "удельная стоимость 0.0291 при медиане соседних лет 0.383 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1998,
+   "value": 16.05,
+   "detail": "удельная стоимость 9.19 при медиане соседних лет 0.739 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 240.171,
+   "detail": "удельная стоимость 0.739 при медиане соседних лет 5.2 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "gold_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2002,
+   "value": 52.048,
+   "detail": "удельная стоимость 2.4 при медиане соседних лет 9.13 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "silver_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2018,
+   "value": 6351.3743,
+   "detail": "удельная стоимость 0.0709 при медиане соседних лет 0.509 — ошибка единиц веса"
+  },
+  {
+   "check": "unit",
+   "severity": "error",
+   "var": "titanium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 1999,
+   "value": 88.017,
+   "detail": "удельная стоимость 0.482 при медиане соседних лет 4.32 — ошибка единиц веса"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_prod",
+   "source": "EIA",
+   "series": "БНС Талдау",
+   "year": 2017,
+   "value": 101.407079,
+   "detail": "EIA 101.4 vs БНС Талдау 112.3: -9.7% (допуск ±5%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_prod",
+   "source": "EIA",
+   "series": "БНС Талдау",
+   "year": 2018,
+   "value": 100.468634,
+   "detail": "EIA 100.5 vs БНС Талдау 118.5: -15.2% (допуск ±5%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_prod",
+   "source": "EIA",
+   "series": "БНС Талдау",
+   "year": 2019,
+   "value": 97.540448,
+   "detail": "EIA 97.54 vs БНС Талдау 115: -15.2% (допуск ±5%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_prod",
+   "source": "EIA",
+   "series": "БНС Талдау",
+   "year": 2020,
+   "value": 96.065264,
+   "detail": "EIA 96.07 vs БНС Талдау 113.4: -15.3% (допуск ±5%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_prod",
+   "source": "EIA",
+   "series": "БНС Талдау",
+   "year": 2021,
+   "value": 83.75676,
+   "detail": "EIA 83.76 vs БНС Талдау 116.2: -27.9% (допуск ±5%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "copper_refined",
+   "source": "USGS",
+   "series": "БНС Талдау",
+   "year": 2017,
+   "value": 468.391,
+   "detail": "USGS 468.4 vs БНС Талдау 430.1: +8.9% (допуск ±5%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "copper_refined",
+   "source": "USGS",
+   "series": "БНС Талдау",
+   "year": 2018,
+   "value": 481.0,
+   "detail": "USGS 481 vs БНС Талдау 442.4: +8.7% (допуск ±5%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "copper_refined",
+   "source": "USGS",
+   "series": "БНС Талдау",
+   "year": 2019,
+   "value": 512.0,
+   "detail": "USGS 512 vs БНС Талдау 476.5: +7.4% (допуск ±5%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "copper_refined",
+   "source": "USGS",
+   "series": "БНС Талдау",
+   "year": 2020,
+   "value": 515.0,
+   "detail": "USGS 515 vs БНС Талдау 479.2: +7.5% (допуск ±5%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "copper_refined",
+   "source": "USGS",
+   "series": "БНС Талдау",
+   "year": 2021,
+   "value": 443.0,
+   "detail": "USGS 443 vs БНС Талдау 403.3: +9.9% (допуск ±5%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "copper_refined",
+   "source": "USGS",
+   "series": "БНС Талдау",
+   "year": 2022,
+   "value": 493.0,
+   "detail": "USGS 493 vs БНС Талдау 456.6: +8.0% (допуск ±5%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "copper_refined",
+   "source": "USGS",
+   "series": "БНС Талдау",
+   "year": 2023,
+   "value": 458.0,
+   "detail": "USGS 458 vs БНС Талдау 423.2: +8.2% (допуск ±5%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "alumina",
+   "source": "USGS",
+   "series": "БНС Талдау",
+   "year": 2012,
+   "value": 1760.412,
+   "detail": "USGS 1,760 vs БНС Талдау 1,510: +16.6% (допуск ±5%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "oil_export",
+   "source": "БНС Талдау (отгрузки)",
+   "series": "UN Comtrade",
+   "year": 2014,
+   "value": 39.3009,
+   "detail": "БНС Талдау (отгрузки) 39.3 vs UN Comtrade 68.22: -42.4% (допуск ±8%); косвенная оценка экспорта по отгрузкам"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "БНС Талдау (отгрузки)",
+   "series": "UN Comtrade",
+   "year": 2023,
+   "value": 24.5114,
+   "detail": "БНС Талдау (отгрузки) 24.51 vs UN Comtrade 28.54: -14.1% (допуск ±10%); косвенная оценка экспорта по отгрузкам"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "EIA",
+   "series": "UN Comtrade",
+   "year": 1999,
+   "value": 17.09798,
+   "detail": "EIA 17.1 vs UN Comtrade 68.43: -75.0% (допуск ±10%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "EIA",
+   "series": "UN Comtrade",
+   "year": 2003,
+   "value": 27.819719,
+   "detail": "EIA 27.82 vs UN Comtrade 6.184: +349.9% (допуск ±10%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "EIA",
+   "series": "UN Comtrade",
+   "year": 2011,
+   "value": 19.320647,
+   "detail": "EIA 19.32 vs UN Comtrade 32.15: -39.9% (допуск ±10%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "EIA",
+   "series": "UN Comtrade",
+   "year": 2012,
+   "value": 27.531164,
+   "detail": "EIA 27.53 vs UN Comtrade 33.7: -18.3% (допуск ±10%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "EIA",
+   "series": "UN Comtrade",
+   "year": 2020,
+   "value": 23.833354,
+   "detail": "EIA 23.83 vs UN Comtrade 26.55: -10.2% (допуск ±10%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "EIA",
+   "series": "UN Comtrade",
+   "year": 2021,
+   "value": 22.034118,
+   "detail": "EIA 22.03 vs UN Comtrade 28.61: -23.0% (допуск ±10%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "EIA",
+   "series": "UN Comtrade",
+   "year": 2022,
+   "value": 35.94814,
+   "detail": "EIA 35.95 vs UN Comtrade 28.65: +25.5% (допуск ±10%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "EIA",
+   "series": "UN Comtrade",
+   "year": 2023,
+   "value": 34.024881,
+   "detail": "EIA 34.02 vs UN Comtrade 28.54: +19.2% (допуск ±10%)"
+  },
+  {
+   "check": "cross_source",
+   "severity": "warning",
+   "var": "coal_export",
+   "source": "EIA",
+   "series": "UN Comtrade",
+   "year": 2024,
+   "value": 31.474321,
+   "detail": "EIA 31.47 vs UN Comtrade 27.78: +13.3% (допуск ±10%)"
+  }
+ ]
+}
