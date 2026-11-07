@@ -78,10 +78,10 @@
 | — | `EIA_STEO_PRICES` | eia | 2026-11-07 (October 2026) | «Внешние и внутренние факторы» (brent_eia_forecast) |
 | — | `IMF_PPP_EXCHANGE_RATE` | imf | 2026-11-07 (—) | «Внешние и внутренние факторы» (ppp_exchange_rate) |
 | — | `EXCHANGE_RATE` | nbk | 2026-11-07 (—) | «Внешние и внутренние факторы» (exchange_rate) |
-| — | `WB_COMMODITY_INDEX_FORECASTS` | wb | 2026-10-27 (April 28, 2026) | «Внешние и внутренние факторы» (wb_index_forecasts) |
+| — | `WB_COMMODITY_INDEX_FORECASTS` | wb | 2026-11-07 (October 28, 2026) | «Внешние и внутренние факторы» (wb_index_forecasts) |
 | — | `WB_COMMODITY_INDICES_ANNUAL` | wb | 2026-11-07 (September 02, 2026) | «Внешние и внутренние факторы» (wb_indices_history) |
 | — | `WB_COMMODITY_PRICES_ANNUAL` | wb | 2026-11-07 (September 02, 2026) | «Внешние и внутренние факторы» (wb_prices_history, brent_reference_control) |
-| — | `WB_COMMODITY_PRICE_FORECASTS` | wb | 2026-10-27 (April 28, 2026) | «Внешние и внутренние факторы» (wb_price_forecasts, brent_wb_forecast) |
+| — | `WB_COMMODITY_PRICE_FORECASTS` | wb | 2026-11-07 (October 28, 2026) | «Внешние и внутренние факторы» (wb_price_forecasts, brent_wb_forecast) |
 
 ## Источники с фиксированным ритмом и ручные документы
 

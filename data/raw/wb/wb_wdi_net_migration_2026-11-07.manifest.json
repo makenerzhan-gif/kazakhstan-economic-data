@@ -1,5 +1,5 @@
 {
-  "downloaded_at": "2026-11-07T12:57:12.444333",
+  "downloaded_at": "2026-11-07T17:45:21.669314",
   "raw_file": "wb_wdi_net_migration_2026-10-10.json",
   "source_url": "https://api.worldbank.org/v2/country/all/indicator/SM.POP.NETM?format=json&per_page=20000&date=1960:2026"
 }

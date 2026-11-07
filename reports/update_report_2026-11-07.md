@@ -1,6 +1,6 @@
 # Update report — 2026-11-07
 
-Run timestamp: 2026-11-07T12:00:09.866062
+Run timestamp: 2026-11-07T16:26:38.922877
 Unified dataset updated: True
 Tests passed: True
 Cross-source checks failed: 0
@@ -4775,9 +4775,9 @@ Cross-source checks failed: 0
 - **ardfm/BANK_PROVISIONS_IFRS** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_CAPITAL_ADEQUACY_K1** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_CAPITAL_ADEQUACY_K2** — fetch+validate+process: ok (downloaded=5, processed=5)
-- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=43, processed=43)
-- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=44, processed=44)
-- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=45, processed=45)
+- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=45, processed=45)
   - warning: Unexpected jump of 100.0% in own-period contribution between 2023-01-01 (795.9) and 2023-02-01 (0.0).
   - warning: Unexpected jump of 100.0% in own-period contribution between 2024-01-01 (795.9) and 2024-02-01 (0.0).
   - warning: Unexpected jump of 100.0% in own-period contribution between 2025-01-01 (795.9) and 2025-02-01 (0.0).
@@ -4789,7 +4789,7 @@ Cross-source checks failed: 0
 - **ardfm/BANK_DEPOSITS_LEGAL_ENTITIES** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_DEPOSITS_INDIVIDUALS** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_DEPOSITS_INDIVIDUALS_FX_SHARE** — fetch+validate+process: ok (downloaded=5, processed=5)
-- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=44, processed=44)
+- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=45, processed=45)
 - **ardfm/BANK_ASSETS_TO_GDP** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_LOANS_TO_GDP** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_DEPOSITS_TO_GDP** — fetch+validate+process: ok (downloaded=5, processed=5)
@@ -7068,12 +7068,38 @@ Cross-source checks failed: 0
   - warning: [TOTAL@AST] Unexpected jump of 900.0% in value between 2015-12-31 (0.1) and 2016-12-31 (1.0).
   - warning: [TOTAL@AST] Unexpected jump of 80.0% in value between 2016-12-31 (1.0) and 2017-12-31 (0.2).
   - warning: ... 139 more warnings not listed
-- **bns/GRAIN_SOWN_AREA_BY_REGION** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in bns/GRAIN_SOWN_AREA_BY_REGION (element 8154)
-WHAT CHANGED: sheet(s) ['посевная'] not in the workbook
-EXPECTED: sheets ['посевная']
-ACTUAL: ['Метаданные', 'зерновых и бобовых культур', 'масличные', 'овощей', 'картофель', 'свекла', 'хлопок']
-ACTION REQUIRED: open the xlsx export, compare with the layout described in scripts/fetchers/bns_dims.py, update the parser or dictionaries/, then re-run.
+- **bns/GRAIN_SOWN_AREA_BY_REGION** — fetch+validate+process: ok (downloaded=706, processed=706)
+  - warning: [TOTAL@ALA] Gap of 730 days between 2012-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ALA] Gap of 1461 days between 2020-12-31 and 2024-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ALA] Unexpected jump of 70.1% in value between 2012-12-31 (0.335) and 2014-12-31 (0.1).
+  - warning: [TOTAL@ALA] Unexpected jump of 600.0% in value between 2015-12-31 (0.1) and 2016-12-31 (0.7).
+  - warning: [TOTAL@ALA] Unexpected jump of 57.1% in value between 2016-12-31 (0.7) and 2017-12-31 (0.3).
+  - warning: [TOTAL@ALA] Unexpected jump of 53.3% in value between 2018-12-31 (0.2117) and 2019-12-31 (0.0988).
+  - warning: [TOTAL@ALM] Unexpected jump of 62.6% in value between 2021-12-31 (486.1009) and 2022-12-31 (181.8367).
+  - warning: [TOTAL@AST] Unexpected jump of 192.7% in value between 2011-12-31 (0.3) and 2012-12-31 (0.878).
+  - warning: [TOTAL@AST] Unexpected jump of 250.0% in value between 2015-12-31 (0.4) and 2016-12-31 (1.4).
+  - warning: [TOTAL@AST] Unexpected jump of 71.4% in value between 2016-12-31 (1.4) and 2017-12-31 (0.4).
+  - warning: [TOTAL@AST] Unexpected jump of 327.3% in value between 2018-12-31 (0.37) and 2019-12-31 (1.581).
+  - warning: [TOTAL@AST] Unexpected jump of 51.9% in value between 2023-12-31 (1.343) and 2024-12-31 (0.646).
+  - warning: [TOTAL@ATY] Gap of 731 days between 2018-12-31 and 2020-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ATY] Gap of 730 days between 2020-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ATY] Gap of 731 days between 2023-12-31 and 2025-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@ATY] Unexpected jump of 80.0% in value between 2009-12-31 (0.5) and 2010-12-31 (0.1).
+  - warning: [TOTAL@ATY] Unexpected jump of 2000.0% in value between 2010-12-31 (0.1) and 2011-12-31 (2.1).
+  - warning: [TOTAL@ATY] Unexpected jump of 76.2% in value between 2011-12-31 (2.1) and 2012-12-31 (0.5).
+  - warning: [TOTAL@ATY] Unexpected jump of 150.0% in value between 2016-12-31 (0.4) and 2017-12-31 (1.0).
+  - warning: [TOTAL@ATY] Unexpected jump of 65.0% in value between 2017-12-31 (1.0) and 2018-12-31 (0.35).
+  - warning: [TOTAL@ATY] Unexpected jump of 91.4% in value between 2018-12-31 (0.35) and 2020-12-31 (0.03).
+  - warning: [TOTAL@ATY] Unexpected jump of 666.7% in value between 2020-12-31 (0.03) and 2022-12-31 (0.23).
+  - warning: [TOTAL@ATY] Unexpected jump of 82.6% in value between 2022-12-31 (0.23) and 2023-12-31 (0.04).
+  - warning: [TOTAL@ATY] Unexpected jump of 192.5% in value between 2023-12-31 (0.04) and 2025-12-31 (0.117).
+  - warning: [TOTAL@MNG] Gap of 730 days between 2016-12-31 and 2018-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [TOTAL@MNG] Unexpected jump of 83.3% in value between 2016-12-31 (0.012) and 2018-12-31 (0.002).
+  - warning: [TOTAL@VKO] Unexpected jump of 52.4% in value between 2021-12-31 (599.6135) and 2022-12-31 (285.6182).
+  - warning: [WHEAT@ALA] Gap of 1461 days between 2005-12-31 and 2009-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [WHEAT@ALA] Gap of 1826 days between 2009-12-31 and 2014-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [WHEAT@ALA] Gap of 731 days between 2018-12-31 and 2020-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: ... 15 more warnings not listed
 - **bns/GRAIN_YIELD_BY_REGION** — fetch+validate+process: ok (downloaded=701, processed=701)
   - warning: [TOTAL@AKM] Unexpected jump of 53.6% in value between 2009-12-31 (11.2) and 2010-12-31 (5.2).
   - warning: [TOTAL@AKM] Unexpected jump of 200.0% in value between 2010-12-31 (5.2) and 2011-12-31 (15.6).
@@ -9382,18 +9408,8 @@ ACTION REQUIRED: open the xlsx export, compare with the layout described in scri
   - warning: [FERTILIZERS@world] Unexpected jump of 196.1% in value between 1973-12-01 (20.6) and 1974-01-01 (61.0).
   - warning: [FERTILIZERS@world] Unexpected jump of 88.1% in value between 1976-12-01 (25.3) and 1977-01-01 (47.6).
   - warning: [PRECIOUS_METALS@world] Unexpected jump of 58.4% in value between 1979-12-01 (51.2) and 1980-01-01 (81.1).
-- **wb/WB_COMMODITY_PRICE_FORECASTS** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in wb/WB_COMMODITY_PRICE_FORECASTS (sheet 'Forecast')
-WHAT CHANGED: sheet not in the workbook
-EXPECTED: Forecast
-ACTUAL: ['Forecast vs CMO']
-ACTION REQUIRED: open the World Bank file, compare with the layout described in scripts/fetchers/wb.py, update the parser or dictionaries/wb_*.csv, then re-run.
-- **wb/WB_COMMODITY_INDEX_FORECASTS** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: STRUCTURAL CHANGE DETECTED in wb/WB_COMMODITY_INDEX_FORECASTS (sheet 'Forecast')
-WHAT CHANGED: sheet not in the workbook
-EXPECTED: Forecast
-ACTUAL: ['Forecast vs CMO']
-ACTION REQUIRED: open the World Bank file, compare with the layout described in scripts/fetchers/wb.py, update the parser or dictionaries/wb_*.csv, then re-run.
+- **wb/WB_COMMODITY_PRICE_FORECASTS** — fetch+validate+process: ok (downloaded=138, processed=138)
+- **wb/WB_COMMODITY_INDEX_FORECASTS** — fetch+validate+process: ok (downloaded=48, processed=48)
 - **eia/EIA_STEO_PRICES** — fetch+validate+process: ok (downloaded=144, processed=144)
 - **bns/KZ_EXPORTS_BY_PARTNER** — fetch+validate+process: ok (downloaded=1169, processed=1169)
   - warning: [ARM] Unexpected jump of 61.3% in value between 2020-12-31 (6405.98412) and 2021-12-31 (10332.81156).
@@ -10897,8 +10913,38 @@ ACTION REQUIRED: open the World Bank file, compare with the layout described in 
   - warning: [SL.UEM.TOTL.MA.NE.ZS] Gap of 1096 days between 2017-12-31 and 2020-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [SL.UEM.TOTL.MA.NE.ZS] Gap of 730 days between 2020-12-31 and 2022-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: ... 4640 more warnings not listed
-- **nbk/LOANS_BY_CREDITOR_TYPE** — fetch: structural_change (downloaded=0, processed=0)
-  - ERROR: nbk/LOANS_BY_CREDITOR_TYPE: values not in the dataset's item_fields code maps (config/dims.yaml): [('creditors', 'Other public sector entities')]
+- **nbk/LOANS_BY_CREDITOR_TYPE** — fetch+validate+process: ok (downloaded=468, processed=468)
+  - warning: [BANKS.FX.BUS] Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.FX.BUS] Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.FX.BUS] Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.FX.BUS] Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.FX.BUS] Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.FX.BUS] Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.FX.HH] Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.FX.HH] Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.FX.HH] Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.FX.HH] Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.FX.HH] Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.FX.HH] Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.KZT.BUS] Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.KZT.BUS] Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.KZT.BUS] Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.KZT.BUS] Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.KZT.BUS] Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.KZT.BUS] Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.KZT.HH] Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.KZT.HH] Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.KZT.HH] Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.KZT.HH] Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.KZT.HH] Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BANKS.KZT.HH] Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [MFO.KZT.BUS] Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [MFO.KZT.BUS] Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [MFO.KZT.BUS] Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [MFO.KZT.BUS] Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [MFO.KZT.BUS] Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [MFO.KZT.BUS] Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: ... 31 more warnings not listed
 - **nbk/NATIONAL_FUND_DOMESTIC_OPERATIONS** — fetch+validate+process: ok (downloaded=288, processed=288)
   - warning: [FX_SALES_KZT] Unexpected jump of 270.2% in value between 2024-07-01 (191.0) and 2024-08-01 (707.0).
   - warning: [FX_SALES_KZT] Unexpected jump of 63.1% in value between 2024-08-01 (707.0) and 2024-09-01 (261.0).
@@ -11727,9 +11773,7 @@ ACTION REQUIRED: open the World Bank file, compare with the layout described in 
   - warning: [T] Gap of 365 days between 2010-01-01 and 2011-01-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: ... 9 more warnings not listed
 - **krem/TARIFF_DECISIONS** — fetch+validate+process: ok (downloaded=3790, processed=3790)
-  - warning: records by source: {'documents': 3478, 'news': 90, 'electricity caps': 20, 'gas caps': 202}
-  - warning: documents skipped by reason: {'estimate_only': 3, 'kazakh': 71, 'no_date': 154, 'no_service': 10, 'not_a_decision': 681, 'out_of_scope': 56}
-  - warning: news clauses skipped by reason: {'no_region': 24, 'no_verb': 31, 'out_of_scope': 1, 'plan_or_unchanged': 28}
+  - warning: not re-downloaded: last download 2026-11-07, refreshed every 1 days
 - **derived/TARIFF_CHANGE_MONTHS** — fetch+validate+process: ok (downloaded=304, processed=304)
   - warning: [COLD_WATER] Gap of 485 days between 2005-01-01 and 2006-05-01 is outside expected range for frequency=monthly (25-40d).
   - warning: [COLD_WATER] Gap of 549 days between 2006-05-01 and 2007-11-01 is outside expected range for frequency=monthly (25-40d).
