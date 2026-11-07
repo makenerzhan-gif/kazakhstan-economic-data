@@ -1,7 +1,7 @@
 name: Natural capital sources (BNS SEEA asset accounts, Red Book 2026)
 
 # On-demand fetch, separate from the daily pipeline (update.yml) so it runs in minutes,
-# not hours. Triggered manually or by a push touching the fetcher itself.
+# not hours. Triggered manually, monthly, or by a push to main touching the fetcher.
 on:
   workflow_dispatch:
     inputs:
@@ -12,6 +12,10 @@ on:
   schedule:
     - cron: "17 3 5 * *"   # monthly, 5th day 03:17 UTC: Taldau monthly release, Comtrade revisions
   push:
+    # main only. On 2026-11-07 a push of claude/confident-dijkstra-kk47n5 (a fast-forward to
+    # main, so carrying the fetcher's changes) started a run that committed its reports to
+    # that branch, which then diverged from main.
+    branches: [main]
     paths:
       - scripts/build_resource_panel.py
       - scripts/qa_resources.py

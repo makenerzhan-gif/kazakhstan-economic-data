@@ -5,7 +5,7 @@ CRUDE_DUBAI,"Сырая нефть Dubai, $/баррель","Crude oil, Dubai",$
 CRUDE_WTI,"Сырая нефть WTI, $/баррель","Crude oil, WTI",$/bbl,"^crude oil, wti"
 COAL_AUS,"Уголь, Австралия, $/м.т.","Coal, Australian",$/mt,"^coal, austral"
 COAL_SAFRICA,"Уголь, ЮАР, $/м.т.","Coal, South African",$/mt,"^coal, south afric"
-NGAS_US,"Природный газ, США, $/млн брит. тепл. ед.","Natural gas, US",$/mmbtu,"^natural gas, u\.?s\.?$"
+NGAS_US,"Природный газ, США, $/млн брит. тепл. ед.","Natural gas, US",$/mmbtu,"^natural gas, (u\.?s\.?|united states)$"
 NGAS_EUR,"Природный газ, Европа, $/млн брит. тепл. ед.","Natural gas, Europe",$/mmbtu,"^natural gas, europe"
 NGAS_JP,"Сжиженный природный газ, Япония, $/млн брит. тепл. ед.","Liquefied natural gas, Japan",$/mmbtu,^liquefied natural gas
 NGAS_INDEX,"Индекс цен на природный газ, 2010=100",Natural gas index,2010=100,^natural gas index
@@ -34,10 +34,10 @@ RICE_05,"Рис, Таиланд, 5%, $/м.т.","Rice, Thai 5%",$/mt,"^rice, thai
 RICE_25,"Рис, Таиланд, 25%, $/м.т.","Rice, Thai 25%",$/mt,"^rice, thai(land)?,? 25%"
 RICE_A1,"Рис, Таиланд, A.1, $/м.т.","Rice, Thai A.1",$/mt,"^rice, thai(land)?,? a\.1"
 RICE_05_VNM,"Рис, Вьетнам, 5%, $/м.т.","Rice, Viet Namese 5%",$/mt,"^rice, viet"
-WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.","Wheat, US SRW",$/mt,"^wheat, u\.?s\.?,? srw"
-WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.","Wheat, US HRW",$/mt,"^wheat, u\.?s\.?,? hrw"
+WHEAT_US_SRW,"Пшеница, США, SRW, $/м.т.","Wheat, US SRW",$/mt,"^wheat, (u\.?s\.?|united states),? srw"
+WHEAT_US_HRW,"Пшеница, США, HRW, $/м.т.","Wheat, US HRW",$/mt,"^wheat, (u\.?s\.?|united states),? hrw"
 BANANA_EU,"Бананы, Европа, $/кг","Banana, Europe",$/kg,"^bananas?, europe"
-BANANA_US,"Бананы, США, $/кг","Banana, US",$/kg,"^bananas?, u\.?s\.?$"
+BANANA_US,"Бананы, США, $/кг","Banana, US",$/kg,"^bananas?, (u\.?s\.?|united states)$"
 ORANGE,"Апельсины, $/кг",Orange,$/kg,^oranges?$
 BEEF,"Говядина, $/кг",Beef,$/kg,^beef$
 CHICKEN,"Курица, $/кг",Chicken,$/kg,^chicken$

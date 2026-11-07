@@ -16,7 +16,9 @@ Files (verified live 2026-09-14/15 by downloading and reading each one):
   monthly    CMO-Historical-Data-Monthly.xlsx, 'Monthly Prices': same shape with 'YYYYMmm'
              rows; scripts/update_wb.py takes the Brent column from it (OIL_PRICE_BRENT).
   forecasts  CMO-<Month>-<Year>-Forecasts.xlsx — the page links the PDF, the xlsx sits at
-             the same path (checked for April 2026). Sheet 'Forecast': a header row
+             the same path (checked for April 2026). Sheet 'Forecast' ('Forecast vs CMO' from
+             October 2026, with a third 'f' block holding the previous edition's
+             forecasts and footnote numbers after some labels, «Energy 2»): a header row
              'Commodity … Unit 2024 2025 2026f 2027f …' (the percent-change and
              difference blocks further right repeat the 'f' years), an INDEXES block and
              a PRICES block with group-heading rows (no values) in between. Only the
@@ -49,6 +51,8 @@ CMO_PAGE = "https://www.worldbank.org/en/research/commodity-markets"
 # Last confirmed links (2026-09-15); dims.yaml carries the same for the datasets it defines.
 FALLBACK_MONTHLY = "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx"
 LINK = re.compile(r"https://thedocs\.worldbank\.org/[^\"'\s<>]+?/related/(CMO-[^\"'\s<>]+?\.(?:xlsx|pdf))")
+# A footnote number after a forecast-table label: «Energy 2», «Total 1».
+FOOTNOTE = re.compile(r"\s+\d{1,2}$")
 FORECAST_PDF = re.compile(r"^CMO-[A-Za-z]+-\d{4}-Forecasts\.pdf$")
 YEAR_CELL = re.compile(r"^\s*(\d{4})(f?)\s*$")
 MONTH_CELL = re.compile(r"^\s*(\d{4})M(\d{2})\s*$")
@@ -103,6 +107,16 @@ def _save_raw(dataset_id: str, content: bytes, info: dict) -> None:
 
 
 # ---------------------------------------------------------------- parsing
+
+def pick_sheet(ds: dict, grids: dict) -> str:
+    """ds['sheet'], or the first of ds['sheet_aliases'] the workbook has. The October 2026
+    CMO forecast file renamed 'Forecast' to 'Forecast vs CMO' (same layout, a block of the
+    previous edition's forecasts added on the right); any other name is a structural change."""
+    for name in [ds["sheet"], *ds.get("sheet_aliases", [])]:
+        if name in grids:
+            return name
+    _structural(ds, "sheet not in the workbook", [ds["sheet"], *ds.get("sheet_aliases", [])], list(grids))
+
 
 def _structural(ds: dict, what: str, expected, actual) -> None:
     raise validation.StructuralChangeError("\n".join([
@@ -243,6 +257,7 @@ def parse_forecasts(grid: list[list], ds: dict) -> list[dict]:
     section, unmatched, records = None, [], []
     for row in grid[hdr + 1:]:
         label = next((str(c).strip() for c in row[:label_end] if isinstance(c, str) and c.strip()), "")
+        label = FOOTNOTE.sub("", label)                       # «Energy 2», «Precious metals 5» (October 2026)
         upper = label.upper()
         if upper.startswith("INDEXES"):
             section = "indices"
@@ -272,11 +287,10 @@ def fetch(ds: dict) -> tuple[list[dict], dict]:
     table = ds["table"]
     kind = "forecasts" if table.startswith("forecast") else ("monthly" if table.startswith("monthly") else "annual")
     content, url, warnings = download(kind, ds["fallback_url"])
-    _save_raw(ds["id"], content, {"source_url": url, "sheet": ds["sheet"]})
     grids = bns_dims._sheets(content)
-    if ds["sheet"] not in grids:
-        _structural(ds, "sheet not in the workbook", ds["sheet"], list(grids))
-    grid = grids[ds["sheet"]]
+    sheet = pick_sheet(ds, grids)
+    _save_raw(ds["id"], content, {"source_url": url, "sheet": sheet})
+    grid = grids[sheet]
     if table in ("annual_prices", "monthly_prices"):
         records = parse_prices(grid, ds)
     elif table in ("annual_indices", "monthly_indices"):
@@ -289,7 +303,7 @@ def fetch(ds: dict) -> tuple[list[dict], dict]:
     if n_items < ds.get("min_items", 1):
         _structural(ds, "fewer items than expected", f">= {ds['min_items']} item codes", f"{n_items}: {sorted({r['item_code'] for r in records})}")
     release = release_note(grid)
-    return records, {"frequency": ds["frequency"], "source_url": url, "dataset_id": f"{Path(url).name}#{ds['sheet']}",
+    return records, {"frequency": ds["frequency"], "source_url": url, "dataset_id": f"{Path(url).name}#{sheet}",
                      "note": ds.get("note", "") + (f" File release: {release}." if release else ""),
                      "release": release, "warnings": warnings,
                      "transformation": "forecast" if kind == "forecasts" else "level"}

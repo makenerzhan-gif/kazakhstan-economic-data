@@ -1,45 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-26 — National Fund receipts by tax and payment: 519 -> 534 indicators» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — BNS CPI publication «Индекс потребительских цен и производные показатели» (Т-15-02-М), 2004–2026» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-27 — BNS CPI publication «Индекс потребительских цен и производные показатели» (Т-15-02-М), 2004–2026
-
-**What.** Ten item-level datasets (config/dims.yaml, `fetcher: bns_cpi`), monthly, one per
-comparison base: `CPI_DETAIL_{MOM,YTD,YOY,AVG_YOY}` (total, food/non-food/services, the COICOP
-divisions, ~250–300 individual goods and services a year, the three core-inflation baskets, and the
-total and groups for every region), `RETAIL_PRICES_{MOM,YTD,YOY,AVG_YOY}` (retail price index,
-goods, national and regional, from 2022-10) and `CPI_CONTRIBUTION_{MOM,YTD}` (contribution to CPI
-growth, p.p., from 2020-01). 91 312 rows in CPI_DETAIL_MOM alone, 643 item codes, 2004-07 … 2026-08.
-
-**Sources.** stat.gov.kz → Экономика → Цены → Электронные таблицы: 19117 (Т-15-02-М, 47 editions
-2022-10 … 2026-08; read daily, the latest three editions and any month not yet stored), 166775
-«Индекс потребительских цен в РК» (284 editions 1999-05 … 2022-12; the 222 from 2004-07 read — the
-earlier ones are html text tables in a pre-COICOP grouping) and 27168 «Вклад отдельных
-составляющих…» (36 editions 2020–2022). History loaded once by `scripts/backfill_cpi_publication.py`
-(needs `unar` for the rar archives; the archives are not added to data/raw).
-
-**Layouts.** Russian labels 2004–2007; «Kazakh\nRussian» in one cell 2008–2012; both languages on
-one line or Kazakh alone 2012–2019 (the Russian label recovered from the clean editions); Kazakh
-in column A and Russian in the last column 2019–2022; Russian from 2022-10. Columns are read by
-their header text (the dative month and year), not position; the quarterly columns and the fixed
-December base are not kept. Fixed: BNS headed the year-on-year column «июню» in July 2024 and
-July 2025 and «январю 2025г.» in February 2026 (read as year-on-year, the manifest says so); a
-March 2008 row labelled «Продовольственные товары» that is alcohol and tobacco; «Мужская»,
-«Женская», «Детская», «Колготки», «Сорочка верхняя» printed twice (clothing / footwear) are
-qualified by the heading they sit under; May 2021 of the contribution table is Kazakh-only and
-takes its labels from April/June 2021 (46 identical rows).
-
-**Checks.** Equal to the scalar CPI, CPI_YOY, CPI_YTD, CPI_FOOD(_YOY), CPI_NONFOOD(_YOY),
-CPI_SERVICES(_YOY) and CORE_CPI_* on all common months (2011-01 … 2026-08; one 0.1 difference,
-CPI_FOOD_YOY 2022-06). The two publications agree on all 4 052 values of 2022-10 … 2022-12. The
-contribution of «Товары и услуги» equals CPI m/m − 100 within 0.06 every month. Left as published
-and reported: retail food YTD, table 4 against table 5, February–June 2026 (0.7–0.8 apart);
-housing-and-utilities contribution printed twice with different values in 2024-08 and 2025-04;
-retail avg-YoY column of February 2026 (cereals 86.1 against 107.8 y/y).
-
-Tests: `tests/test_bns_cpi.py` (35). Full suite: 530 passed. macro_dims_long.csv.gz grows from
-3.1 to 5.3 MB.
 
 ## 2026-09-27 — IMF BOP, IIP and GFS, and every WDI series for Kazakhstan
 
@@ -662,3 +624,34 @@ final consumption 99.9 (households 100.1), gross fixed capital formation 103.9, 
 the quarter's growth is net exports. The production QNA (283162) still ends at 2025 Q4
 (qna_production_2026_withdrawn stays). model_data rebuilt (first time since 2026-09-28): gdp/gdp_sa through
 2026 Q2.
+
+## 2026-11-07 — four datasets failing since mid-October fixed; natural-capital workflow limited to main
+
+Four item-level datasets had kept their previous data in every daily run since mid-October (the run passes, the
+dataset is reported as a structural change):
+
+- **GRAIN_SOWN_AREA_BY_REGION** (since 22.10). On 21.10.2026 BNS reshuffled the crop tables of «Сельское, лесное
+  и рыбное хозяйство → Динамические таблицы»: element 8154 is now «Валовый сбор основных с/х культур» (it was the
+  sown area), 8159 «Уточненная посевная площадь», 8158 «Урожайность»; each workbook has one sheet per crop
+  («зерновых и бобовых культур», «масличные», «овощей» …). The old harvest and yield elements 8160 and 8166 are no
+  longer on the page but still serve their September files, so GRAIN_HARVEST_BY_REGION and GRAIN_YIELD_BY_REGION
+  did not fail, they were reading files BNS no longer lists. All three now read 8154/8159/8158, sheet «зерновых и
+  бобовых культур». The yield sheet has no «Всего» row over the first block, so group_blocks takes a new
+  `initial_group` (TOTAL there). The values are identical to the stored ones (702 / 706 / 701 points, 2004-2025);
+  only the source changes.
+- **WB_COMMODITY_PRICE_FORECASTS, WB_COMMODITY_INDEX_FORECASTS** (since 28.10). The October 2026 CMO renamed the
+  sheet 'Forecast' to 'Forecast vs CMO' (new `sheet_aliases`), added footnote numbers after some labels («Energy 2»,
+  stripped in parse_forecasts) and spells out «United States» (dictionary regexes). Its third 'f' block holds the
+  April forecasts; the parser already takes the first 'f' column per year. The April 2026 forecasts are replaced by
+  October's and 2028 is added: Brent 91 / 79 / 70 $/bbl for 2026 / 2027 / 2028 (April: 86 / 70); the total index
+  121.1 / 112.6 / 102.7 (April 113.7 / 99.8). 46 prices and 16 indices, as before.
+- **LOANS_BY_CREDITOR_TYPE** (since 17.10). Form 445 renamed «other public sector» to «Other public sector
+  entities» over the whole history; the 104 stored OPS values are unchanged. Both names map to OPS; four new
+  values for 2026-09.
+
+Tests: tests/test_dims.py (initial_group, the grain element ids), tests/test_wb_eia.py (October 2026 layout,
+pick_sheet, «United States» labels), tests/test_policy_gaps.py (both creditor names).
+
+.github/workflows/natural-capital.yml: the push trigger is limited to main. On 2026-11-07 a push of
+claude/confident-dijkstra-kk47n5 (a fast-forward to main, so carrying the fetcher's changes) started a run that
+committed its reports to that branch, which then diverged from main (PR #26).

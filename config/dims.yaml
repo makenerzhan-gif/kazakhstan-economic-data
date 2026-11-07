@@ -676,9 +676,9 @@ datasets:
     name_ru: "Валовой сбор зерновых (включая рис) и бобовых культур, по регионам"
     name_en: "Gross harvest of grain (incl. rice) and pulses, by region"
     agency: bns
-    element_id: 8160
+    element_id: 8154
     layout: group_blocks
-    sheets: ["валовой сбор"]
+    sheets: ["зерновых и бобовых культур"]
     label_col: 0
     year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     groups: {TOTAL: "^всего", WHEAT: "пшениц"}
@@ -693,9 +693,9 @@ datasets:
     name_ru: "Уточнённая посевная площадь зерновых (включая рис) и бобовых культур, по регионам"
     name_en: "Sown area of grain (incl. rice) and pulses, by region"
     agency: bns
-    element_id: 8154
+    element_id: 8159
     layout: group_blocks
-    sheets: ["посевная"]
+    sheets: ["зерновых и бобовых культур"]
     label_col: 0
     year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     groups: {TOTAL: "^всего", WHEAT: "пшениц"}
@@ -710,9 +710,10 @@ datasets:
     name_ru: "Урожайность зерновых (включая рис) и бобовых культур, по регионам"
     name_en: "Yield of grain (incl. rice) and pulses, by region"
     agency: bns
-    element_id: 8166
+    element_id: 8158
     layout: group_blocks
-    sheets: ["урожайность"]
+    sheets: ["зерновых и бобовых культур"]
+    initial_group: TOTAL                    # the 21.10.2026 file has no «Всего» row over the first block
     label_col: 0
     year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
     groups: {TOTAL: "^всего", WHEAT: "пшениц"}
@@ -2374,6 +2375,7 @@ datasets:
     table: forecast_prices
     section: prices
     sheet: "Forecast"
+    sheet_aliases: ["Forecast vs CMO"]      # October 2026 CMO renamed the sheet
     fallback_url: "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.xlsx"
     dictionary: wb_commodities
     region: world
@@ -2392,6 +2394,7 @@ datasets:
     table: forecast_indices
     section: indices
     sheet: "Forecast"
+    sheet_aliases: ["Forecast vs CMO"]      # October 2026 CMO renamed the sheet
     fallback_url: "https://thedocs.worldbank.org/en/doc/f3138644a1e8e2bb631399ae11d6c408-0050012026/related/CMO-April-2026-Forecasts.xlsx"
     dictionary: wb_commodity_indices
     region: world
@@ -3392,8 +3395,8 @@ datasets:
     filters: {type: "mln. of KZT, end of period", period: "Month"}
     item_fields:
       - field: creditors
-        codes: {"Banking sector": BANKS, "other public sector": OPS, "Microfinance activities": MFO, "Mortgage companies": MORTGAGE}
-        names: {"Banking sector": "Банковский сектор", "other public sector": "Прочий государственный сектор (институты развития)", "Microfinance activities": "Микрофинансовые организации", "Mortgage companies": "Ипотечные организации"}
+        codes: {"Banking sector": BANKS, "other public sector": OPS, "Other public sector entities": OPS, "Microfinance activities": MFO, "Mortgage companies": MORTGAGE}
+        names: {"Banking sector": "Банковский сектор", "other public sector": "Прочий государственный сектор (институты развития)", "Other public sector entities": "Прочий государственный сектор (институты развития)", "Microfinance activities": "Микрофинансовые организации", "Mortgage companies": "Ипотечные организации"}
       - field: currency
         codes: {"National currency": KZT, "Foreign currency": FX}
         names: {"National currency": "в тенге", "Foreign currency": "в иностранной валюте"}
@@ -3404,7 +3407,7 @@ datasets:
     frequency: monthly
     unit: "million KZT, end of period"
     category: monetary
-    note: "NBK formId=445, stocks at report_date (the first day of the month after the reference month, like the scalar LOANS_* series). Quarterly 2022-01…2023-07, monthly from 2023-07. Item = CREDITOR.CURRENCY.BORROWER; OPS = «other public sector» (state development institutions); BANKS.KZT.BUS equals the scalar LOANS_BUSINESS_KZT. OPS.FX.BUS appears from 2025-06, OPS.FX.HH only in 2026-07."
+    note: "NBK formId=445, stocks at report_date (the first day of the month after the reference month, like the scalar LOANS_* series). Quarterly 2022-01…2023-07, monthly from 2023-07. Item = CREDITOR.CURRENCY.BORROWER; OPS = «other public sector» (state development institutions); BANKS.KZT.BUS equals the scalar LOANS_BUSINESS_KZT. OPS.FX.BUS appears from 2025-06, OPS.FX.HH only in 2026-07. By 17.10.2026 the NBK renamed «other public sector» to «Other public sector entities» over the whole history (values unchanged); both names map to OPS."
 
   - id: NATIONAL_FUND_DOMESTIC_OPERATIONS
     name_ru: "Операции Национального фонда и финансовые инструменты казахстанских эмитентов в его портфеле"

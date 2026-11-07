@@ -63,6 +63,19 @@ def test_classified_rows_stop_on_an_unknown_value_or_a_conflict():
                                      {**row, "creditors": "Banking sector", "amount": 6.0}], LOANS_DS)
 
 
+def test_loans_by_creditor_reads_both_names_of_the_other_public_sector():
+    """Form 445 renamed «other public sector» to «Other public sector entities» over its whole
+    history (seen 17.10.2026; values unchanged)."""
+    import yaml
+    cfg = next(d for d in yaml.safe_load((Path(__file__).resolve().parents[1] / "config" / "dims.yaml").read_text(encoding="utf-8"))["datasets"]
+               if d["id"] == "LOANS_BY_CREDITOR_TYPE")
+    creditors = next(f for f in cfg["item_fields"] if f["field"] == "creditors")
+    assert creditors["codes"]["other public sector"] == creditors["codes"]["Other public sector entities"] == "OPS"
+    row = {"report_date": "2026-09-01", "amount": 5.0, "type": "mln. of KZT, end of period", "period": "Month",
+           "creditors": "Other public sector entities", "currency": "National currency", "subject_type": "Business"}
+    assert [r["item_code"] for r in nbk_dims.classified_records([row], {**cfg, "id": "T"})] == ["OPS.KZT.BUS"]
+
+
 def test_other_industries_is_the_pooled_nrs_slot():
     assert nbk_dims.SURVEY_SECTORS["Other industries"] == nbk_dims.SURVEY_SECTORS["N.R.S"] == "NRS"
 

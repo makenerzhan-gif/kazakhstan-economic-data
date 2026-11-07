@@ -1,7 +1,7 @@
 {
   "source": "bns",
-  "source_url": "https://stat.gov.kz/api/iblock/element/8160/file/ru/",
-  "dataset_id": "8160",
+  "source_url": "https://stat.gov.kz/api/iblock/element/8154/file/ru/",
+  "dataset_id": "8154",
   "indicator_id": "GRAIN_HARVEST_BY_REGION",
   "indicator_name": "Gross harvest of grain (incl. rice) and pulses, by region",
   "description": "Валовой сбор зерновых (включая рис) и бобовых культур, по регионам",
