@@ -1,5 +1,5 @@
 {
- "started_utc": "2026-11-07T12:47:39.123890+00:00",
+ "started_utc": "2026-11-07T13:27:52.447897+00:00",
  "eia": {
   "zip_bytes": 24264743,
   "rows": 11929,
@@ -46,19 +46,23 @@
  },
  "http_errors": [
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=1996&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2000&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=1999&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2001&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2007&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2002&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2008&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2005&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2009&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
    "status": 429
   },
   {
@@ -66,7 +70,15 @@
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2012&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2011&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2013&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2014&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
    "status": 429
   },
   {
@@ -74,11 +86,11 @@
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2020&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2021&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2023&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2022&cmdCode=2601,2602,2603,2606,2607,2608,2610,2611,2612,2613,2616,2701,2702,2709,2710,2711,2818,2844,7108,7106,7202,7401,7403,7601,7801,7901,8101,8108&flowCode=X,M&partnerCode=0&partner2Code=0&customsCode=C00&motCode=0&inc",
    "status": 429
   },
   {
@@ -90,11 +102,19 @@
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2024&partnerCode=398&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&partnerCode=398&cmdCode=2710,2711,2818,2844,7108,7106,7202&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2024&partnerCode=398&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2024&partnerCode=398&cmdCode=2710,2711,2818,2844,7108,7106,7202&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2023&partnerCode=398&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
@@ -103,10 +123,6 @@
   },
   {
    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2023&partnerCode=398&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
-   "status": 429
-  },
-  {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2022&partnerCode=398&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
@@ -126,7 +142,11 @@
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2020&partnerCode=398&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2021&partnerCode=398&cmdCode=2710,2711,2818,2844,7108,7106,7202&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2021&partnerCode=398&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
@@ -134,15 +154,19 @@
    "status": 429
   },
   {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2020&partnerCode=398&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2019&partnerCode=398&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2019&partnerCode=398&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2018&partnerCode=398&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2019&partnerCode=398&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2018&partnerCode=398&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
@@ -150,11 +174,23 @@
    "status": 429
   },
   {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2018&partnerCode=398&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2017&partnerCode=398&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2017&partnerCode=398&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2017&partnerCode=398&cmdCode=2710,2711,2818,2844,7108,7106,7202&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2017&partnerCode=398&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
@@ -170,7 +206,11 @@
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2015&partnerCode=398&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2016&partnerCode=398&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2015&partnerCode=398&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
@@ -182,15 +222,15 @@
    "status": 429
   },
   {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2014&partnerCode=398&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2014&partnerCode=398&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2014&partnerCode=398&cmdCode=2710,2711,2818,2844,7108,7106,7202&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
-   "status": 429
-  },
-  {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2014&partnerCode=398&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
-   "status": 429
-  },
-  {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2013&partnerCode=398&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
@@ -198,15 +238,31 @@
    "status": 429
   },
   {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2012&partnerCode=398&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2012&partnerCode=398&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2012&partnerCode=398&cmdCode=2710,2711,2818,2844,7108,7106,7202&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2012&partnerCode=398&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2011&partnerCode=398&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2011&partnerCode=398&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2011&partnerCode=398&cmdCode=2710,2711,2818,2844,7108,7106,7202&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2011&partnerCode=398&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
@@ -222,11 +278,19 @@
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2025&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2010&partnerCode=398&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=M&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2024&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2025&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2025&cmdCode=2710,2711,2818,2844,7108,7106,7202&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2025&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
@@ -238,27 +302,15 @@
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2023&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
-   "status": 429
-  },
-  {
    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2023&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2023&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2022&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2022&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
-   "status": 429
-  },
-  {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2021&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
-   "status": 429
-  },
-  {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2020&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2022&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
@@ -266,7 +318,23 @@
    "status": 429
   },
   {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2019&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2018&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2018&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2018&cmdCode=2710,2711,2818,2844,7108,7106,7202&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "status": 429
+  },
+  {
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2018&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
@@ -278,7 +346,7 @@
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2017&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2017&cmdCode=2710,2711,2818,2844,7108,7106,7202&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
@@ -294,15 +362,11 @@
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2015&cmdCode=2601,2602,2603,2606,2607,2608,2610&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
-   "status": 429
-  },
-  {
    "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2015&cmdCode=2611,2612,2613,2616,2701,2702,2709&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   },
   {
-   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2015&cmdCode=7401,7403,7601,7801,7901,8101,8108&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=398&period=2015&cmdCode=2710,2711,2818,2844,7108,7106,7202&flowCode=X&partner2Code=0&customsCode=C00&motCode=0&includeDesc=true",
    "status": 429
   }
  ],
@@ -347,5 +411,5 @@
   "truncated_calls": [],
   "rows": 3028
  },
- "finished_utc": "2026-11-07T13:22:44.929036+00:00"
+ "finished_utc": "2026-11-07T14:08:18.343797+00:00"
 }
