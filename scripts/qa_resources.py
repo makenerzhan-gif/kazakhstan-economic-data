@@ -14,8 +14,8 @@ Checks (severity in brackets):
   gap          [info]    a missing year inside a series
   unit         [error]   Comtrade unit value ($/kg) off by more than 3x from the series
                          median (weight recorded in the wrong unit)
-  confidential [warning] national export below 20% of the partner-reported (mirror) figure,
-                         or below 10% of the neighbouring-years median (records withheld)
+  confidential [warning] national export below 50% of the partner-reported (mirror) figure,
+                         or below 10% of the neighbouring-years median; mirror threshold 50% (records withheld)
   cross_source [warning] two sources of the same concept differ by more than the tolerance
                          set for the pair in CROSS below
   freshness    [info]    the latest year a source holds is older than expected
@@ -146,7 +146,7 @@ def run(long: dict) -> list[dict]:
         for y, x in nv.items():
             nb = [nv[z] for z in range(y - 4, y + 5) if z != y and z in nv and nv[z] > 0]
             low_vs_nb = len(nb) >= 3 and x < 0.10 * statistics.median(nb)
-            low_vs_mir = y in mv and mv[y] > 0 and x < 0.20 * mv[y]
+            low_vs_mir = y in mv and mv[y] > 0 and x < 0.50 * mv[y]
             if low_vs_nb or low_vs_mir:
                 conf_years.add((var, y))
                 why = []

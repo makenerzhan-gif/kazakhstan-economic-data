@@ -3,7 +3,7 @@
  "summary": {
   "warning": {
    "break": 194,
-   "confidential": 17,
+   "confidential": 24,
    "cross_source": 64
   },
   "info": {
@@ -11,7 +11,7 @@
   },
   "error": {
    "spike": 26,
-   "unit": 24
+   "unit": 23
   }
  },
  "issues": [
@@ -109,7 +109,7 @@
    "series": "",
    "year": 2007,
    "value": 29.561,
-   "detail": "скачок +105% к 2006 г. без возврата — реальное событие или смена учёта | класс: частично (gas_dry_prod: EIA +20%; gas_marketed_prod: Energy Institute +13%)",
+   "detail": "скачок +105% к 2006 г. без возврата — реальное событие или смена учёта | класс: частично (gas_marketed_prod: Energy Institute +13%; gas_dry_prod: EIA +20%)",
    "class": "частично"
   },
   {
@@ -251,7 +251,7 @@
    "series": "",
    "year": 1994,
    "value": 4.500113,
-   "detail": "скачок -33% к 1993 г. без возврата — реальное событие или смена учёта | класс: подтверждён (gas_gross_prod: USGS -32%; gas_marketed_prod: Energy Institute -33%) | гипотеза: трансформационный спад после распада СССР (1991–1998)",
+   "detail": "скачок -33% к 1993 г. без возврата — реальное событие или смена учёта | класс: подтверждён (gas_marketed_prod: Energy Institute -33%; gas_gross_prod: USGS -32%) | гипотеза: трансформационный спад после распада СССР (1991–1998)",
    "class": "подтверждён"
   },
   {
@@ -262,7 +262,7 @@
    "series": "",
    "year": 1997,
    "value": 6.100058,
-   "detail": "скачок +44% к 1996 г. без возврата — реальное событие или смена учёта | класс: подтверждён (gas_gross_prod: USGS +25%; gas_marketed_prod: Energy Institute +24%)",
+   "detail": "скачок +44% к 1996 г. без возврата — реальное событие или смена учёта | класс: подтверждён (gas_marketed_prod: Energy Institute +24%; gas_gross_prod: USGS +25%)",
    "class": "подтверждён"
   },
   {
@@ -273,7 +273,7 @@
    "series": "",
    "year": 2000,
    "value": 8.900084,
-   "detail": "скачок +93% к 1999 г. без возврата — реальное событие или смена учёта | класс: частично (gas_gross_prod: USGS +17%; gas_marketed_prod: Energy Institute +16%)",
+   "detail": "скачок +93% к 1999 г. без возврата — реальное событие или смена учёта | класс: частично (gas_marketed_prod: Energy Institute +16%; gas_gross_prod: USGS +17%)",
    "class": "частично"
   },
   {
@@ -284,7 +284,7 @@
    "series": "",
    "year": 2003,
    "value": 7.196068,
-   "detail": "скачок -45% к 2002 г. без возврата — реальное событие или смена учёта | класс: частично (gas_gross_prod: USGS +12%; gas_marketed_prod: Energy Institute +18%)",
+   "detail": "скачок -45% к 2002 г. без возврата — реальное событие или смена учёта | класс: частично (gas_marketed_prod: Energy Institute +18%; gas_gross_prod: USGS +12%)",
    "class": "частично"
   },
   {
@@ -295,7 +295,7 @@
    "series": "",
    "year": 2005,
    "value": 12.110114,
-   "detail": "скачок +35% к 2004 г. без возврата — реальное событие или смена учёта | класс: частично (gas_gross_prod: USGS +1%; gas_marketed_prod: Energy Institute +16%)",
+   "detail": "скачок +35% к 2004 г. без возврата — реальное событие или смена учёта | класс: частично (gas_marketed_prod: Energy Institute +16%; gas_gross_prod: USGS +1%)",
    "class": "частично"
   },
   {
@@ -3572,12 +3572,42 @@
   {
    "check": "confidential",
    "severity": "warning",
+   "var": "coal_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": 6.184063,
+   "detail": "экспорт РК почти нулевой: зеркало 27.7 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "chrome_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": 0.17916,
+   "detail": "экспорт РК почти нулевой: зеркало 0.522 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
    "var": "alumina_export",
    "source": "UN Comtrade",
    "series": "вес нетто",
    "year": 2003,
    "value": 264.085965,
    "detail": "экспорт РК почти нулевой: зеркало 1.39e+03 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "aluminium_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2003,
+   "value": 11.539803,
+   "detail": "экспорт РК почти нулевой: зеркало 39.6 — вероятно, данные закрыты"
   },
   {
    "check": "confidential",
@@ -3655,6 +3685,26 @@
    "var": "zinc_export",
    "source": "UN Comtrade",
    "series": "вес нетто",
+   "year": 2006,
+   "value": 322.12562,
+   "detail": "экспорт РК почти нулевой: зеркало 678 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "zinc_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2018,
+   "value": 102.177162,
+   "detail": "экспорт РК почти нулевой: зеркало 334 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "zinc_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
    "year": 2020,
    "value": 37.715798,
    "detail": "экспорт РК почти нулевой: зеркало 272 — вероятно, данные закрыты"
@@ -3668,6 +3718,16 @@
    "year": 2021,
    "value": 50.410454,
    "detail": "экспорт РК почти нулевой: зеркало 268 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "zinc_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2022,
+   "value": 62.255696,
+   "detail": "экспорт РК почти нулевой: зеркало 237 — вероятно, данные закрыты"
   },
   {
    "check": "confidential",
@@ -3708,6 +3768,16 @@
    "year": 1999,
    "value": 6363.0,
    "detail": "экспорт РК почти нулевой: медиана соседних лет 4.53e+07 — вероятно, данные закрыты"
+  },
+  {
+   "check": "confidential",
+   "severity": "warning",
+   "var": "silver_export",
+   "source": "UN Comtrade",
+   "series": "вес нетто",
+   "year": 2025,
+   "value": 612.07168,
+   "detail": "экспорт РК почти нулевой: зеркало 1.94e+03 — вероятно, данные закрыты"
   },
   {
    "check": "confidential",
@@ -3768,16 +3838,6 @@
    "year": 1999,
    "value": 68.432797,
    "detail": "удельная стоимость 2.28 при медиане соседних лет 13.7 — ошибка единиц веса"
-  },
-  {
-   "check": "unit",
-   "severity": "error",
-   "var": "coal_export",
-   "source": "UN Comtrade",
-   "series": "вес нетто",
-   "year": 2003,
-   "value": 6.184063,
-   "detail": "удельная стоимость 40.4 при медиане соседних лет 11 — ошибка единиц веса"
   },
   {
    "check": "unit",
