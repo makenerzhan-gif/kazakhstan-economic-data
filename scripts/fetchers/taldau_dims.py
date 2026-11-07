@@ -151,50 +151,96 @@ def monthly_values(node: dict) -> dict[str, float]:
     return {d[:8] + "01": v for d, v in node_values(node, "monthly").items()}
 
 
+def _region_values(node: dict, frequency: str) -> dict[str, float]:
+    """Monthly and quarterly values on the period's first day, annual on 31 December."""
+    if frequency == "monthly":
+        return monthly_values(node)
+    return node_values(node, frequency)
+
+
 def fetch_regional(ds: dict) -> tuple[list[dict], dict]:
     """`refresh_days` (default 0): the stored records are returned while the last download is
-    younger -- a product dataset takes a few hundred calls and Taldau updates monthly."""
+    younger -- a product dataset takes a few hundred calls and Taldau updates monthly.
+
+    Added 2026-11-07 (housing, agricultural and construction prices, tariffs, legal entities,
+    regional wages):
+      item `index_id`  an item from another index with the same dimensions (registered and
+                       active legal entities, 701159 / 701160);
+      `frequency`      quarterly and annual values as node_values dates them;
+      `flat_regions`   the root answer itself lists the national node and the regional ones
+                       (the housing indices 703083 / 703116 list 21 cities, not oblasts);
+                       `region_terms` {term id: region code, or null to drop} then maps them,
+                       an unlisted term stops the dataset;
+      `segments`       [{dic_ids, terms}]: the same items under several dimension sets, later
+                       segments winning on a common date (freight tariffs, 703062, changed
+                       its classification in 2026).
+    """
     if ds.get("refresh_days"):
         from fetchers import imf_dims
         fresh = imf_dims.stored_if_fresh(ds, "bns", ds["id"])
         if fresh:
             return fresh
     today = date.today()
+    freq = ds["frequency"]
     scale = float(ds.get("scale", 1))
-    base = ds["terms"].split(",")
     rp, ip = int(ds.get("region_pos", 0)), int(ds["item_pos"])
     variants = ds.get("variants") or [{"suffix": "", "fixed": {}}]
-    records, raw, unknown, missing = [], [], set(), []
-    for item in ds["items"]:
-        for var in variants:
-            terms = list(base)
-            terms[ip], terms[rp] = str(item["term"]), NATIONAL_TERM
-            for p, t in (var.get("fixed") or {}).items():
-                terms[int(p)] = str(t)
-            tstr = ",".join(terms)
-            code = f"{item['code']}{var['suffix']}"
-            top = [n for n in _post(ds, tstr) if str(n.get("id")) == NATIONAL_TERM]
-            regions = _post(ds, tstr, parent=NATIONAL_TERM, pos=str(rp), term=NATIONAL_TERM) if top and str(top[0].get("leaf")).lower() != "true" else []
-            raw.append({"code": code, "terms": tstr, "national": top, "regions": regions})
-            if not top:
-                missing.append(code)
-                continue
-            name = " ".join(str(item["name"]).split())      # the node's own text is the region's
-            unit = top[0].get("measureName")
-            name = f"{name}{var.get('name', '')}" + (f", {unit.lower()}" if unit and ds.get("unit_in_name") else "")
-            for d, v in monthly_values(top[0]).items():
-                records.append({"date": d, "region": dims.NATIONAL, "item_code": code, "item_name": name, "value": round(v / scale, 6)})
-            for node in regions:
-                hit = dims.match_region(node.get("text", ""))
-                if hit is None:
-                    unknown.add(node.get("text"))
+    segments = ds.get("segments") or [{"dic_ids": ds["dic_ids"], "terms": ds["terms"]}]
+    region_terms = {str(k): v for k, v in (ds.get("region_terms") or {}).items()}
+    out: dict[tuple[str, str, str], dict] = {}
+    raw, unknown, missing = [], set(), []
+    for seg in segments:
+        base = seg["terms"].split(",")
+        for item in ds["items"]:
+            ids = {**ds, "dic_ids": seg["dic_ids"], "index_id": item.get("index_id", ds["index_id"])}
+            for var in variants:
+                terms = list(base)
+                terms[ip], terms[rp] = str(item["term"]), NATIONAL_TERM
+                for p, t in (var.get("fixed") or {}).items():
+                    terms[int(p)] = str(t)
+                tstr = ",".join(terms)
+                code = f"{item['code']}{var['suffix']}"
+                root = _post(ids, tstr)
+                top = [n for n in root if str(n.get("id")) == NATIONAL_TERM]
+                if ds.get("flat_regions"):
+                    regions = [n for n in root if str(n.get("id")) != NATIONAL_TERM]
+                elif top and str(top[0].get("leaf")).lower() != "true":
+                    regions = _post(ids, tstr, parent=NATIONAL_TERM, pos=str(rp), term=NATIONAL_TERM)
+                else:
+                    regions = []
+                raw.append({"code": code, "index_id": ids["index_id"], "terms": tstr, "national": top, "regions": regions})
+                if not top:
+                    missing.append(code)
                     continue
-                for d, v in monthly_values(node).items():
-                    records.append({"date": d, "region": hit[0], "item_code": code, "item_name": name, "value": round(v / scale, 6)})
+                name = " ".join(str(item["name"]).split())      # the node's own text is the region's
+                unit = top[0].get("measureName")
+                name = f"{name}{var.get('name', '')}" + (f", {unit.lower()}" if unit and ds.get("unit_in_name") else "")
+                for d, v in _region_values(top[0], freq).items():
+                    out[(d, dims.NATIONAL, code)] = {"date": d, "region": dims.NATIONAL, "item_code": code, "item_name": name,
+                                                     "value": round(v / scale, 6)}
+                for node in regions:
+                    if region_terms:
+                        if str(node.get("id")) not in region_terms:
+                            unknown.add(f"{node.get('id')} {node.get('text')}")
+                            continue
+                        reg = region_terms[str(node.get("id"))]
+                        if reg is None:
+                            continue
+                    else:
+                        hit = dims.match_region(node.get("text", ""))
+                        if hit is None:
+                            unknown.add(node.get("text"))
+                            continue
+                        reg = hit[0]
+                    for d, v in _region_values(node, freq).items():
+                        out[(d, reg, code)] = {"date": d, "region": reg, "item_code": code, "item_name": name,
+                                               "value": round(v / scale, 6)}
     if unknown:
-        _structural(ds, f"region nodes matching no entry of dictionaries/regions.csv: {sorted(unknown)}")
-    if len(missing) > len(ds["items"]) * len(variants) * 0.2:
+        where = "the dataset's region_terms" if region_terms else "dictionaries/regions.csv"
+        _structural(ds, f"region nodes matching no entry of {where}: {sorted(unknown)}")
+    if len(missing) > len(ds["items"]) * len(variants) * len(segments) * 0.2:
         _structural(ds, f"no national node for {missing}")
+    records = sorted(out.values(), key=lambda r: (r["item_code"], r["region"], r["date"]))
     # gzip with a fixed mtime: an unchanged answer gives identical bytes (raw_store dedups them)
     buf = io.BytesIO()
     with gzip.GzipFile(fileobj=buf, mode="wb", mtime=0) as gz:
@@ -203,5 +249,5 @@ def fetch_regional(ds: dict) -> tuple[list[dict], dict]:
     raw_store.write_download_manifest("bns", ds["id"], today, {
         "downloaded_at": datetime.now().isoformat(), "raw_file": path.name, "source_url": TREE_URL, "index_id": ds["index_id"]})
     warnings = [f"no national node (term not in this index any more?): {missing}"] if missing else []
-    return records, {"frequency": ds["frequency"], "source_url": TREE_URL, "dataset_id": f"taldau-index-{ds['index_id']}",
+    return records, {"frequency": freq, "source_url": TREE_URL, "dataset_id": f"taldau-index-{ds['index_id']}",
                      "note": ds.get("note", ""), "warnings": warnings}

@@ -1,40 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — BNS CPI publication «Индекс потребительских цен и производные показатели» (Т-15-02-М), 2004–2026» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — IMF BOP, IIP and GFS, and every WDI series for Kazakhstan» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-27 — IMF BOP, IIP and GFS, and every WDI series for Kazakhstan
-
-**What.** Twelve item-level datasets (config/dims.yaml):
-
-| Dataset | Source (IMF SDMX 3.0 / World Bank) | Series | Period |
-|---|---|---|---|
-| `IMF_BOP_QUARTERLY` / `_ANNUAL` | IMF.STA/BOP, BPM6, million USD | 853 / 894 | 1995Q1 – 2026Q1 / 1995 – 2025 |
-| `IMF_IIP_QUARTERLY` / `_ANNUAL` | IMF.STA/IIP, positions, million USD | 464 / 462 | 1998Q1 – 2026Q1 / 1997 – 2025 |
-| `IMF_GFS_OPERATIONS_KZT` / `_PCT_GDP` | GFS_SOO: revenue, expense, net lending, financing, by subsector | ~1 540 | 1992 – 2023 |
-| `IMF_GFS_COFOG_KZT` / `_PCT_GDP` | GFS_COFOG: expenditure by function and subsector | 566 | 1997 – 2023 |
-| `IMF_GFS_BALANCE_SHEET_KZT` / `_PCT_GDP` | GFS_BS: financial assets and liabilities by instrument | ~440 | 1992 – 2023 |
-| `IMF_QGFS_KZT` | QGFS: cash sources and uses, S13 and S1311B, billion KZT | 96 | 1999Q1 – 2025Q4 |
-| `WDI_KAZ` | World Bank WDI, every non-empty series for KAZ | 1 329 | 1960 – 2025 |
-
-New `scripts/fetchers/imf_dims.py` (fetcher `imf_sdmx`): one generic reader for any IMF dataflow —
-series key with wildcards, the dimensions that form the item code (`NETCD_T.CAB`, `S13.G1_T`),
-English names from the dataflow's own codelists (structure query, references=all), a divisor
-(USD → million USD, KZT → billion KZT). Quarterly flows dated at the quarter's first day, positions
-at its last day. The IMF data are re-downloaded once a week (`REFRESH_DAYS`; the full set takes
-~6 minutes), the stored records returned in between. `gravity.fetch_wdi_country` pages through the
-World Bank sources API (source 2, KAZ, 5 pages × 20 000). Raw answers archived gzip-compressed.
-GFS 1972–1991 (zeros) dropped.
-
-**Checks.** IMF current account = NBK CURRENT_ACCOUNT_BALANCE in 94 of 104 common quarters;
-2023Q1–2025Q2 differ by 14–350 mn USD (NBK revised them, the IMF's BOP not yet — NBK stays the
-source for the headline balances). IMF net IIP = NBK IIP_NET on all 22 common quarters (one day
-earlier). WDI nominal GDP = WEO nominal GDP 1994–2024 within 0.1 %. GFS general government:
-revenue − expense − net investment in nonfinancial assets = net lending every year 2010–2023.
-GFS revenue is NOT the WEO revenue series (2023: 27 897 against 26 253 bn KZT — different coverage
-of the National Fund's income); both kept.
-
-Tests: `tests/test_imf_dims.py` (14). Full suite: 544 passed. macro_dims_long.csv.gz 5.3 → 7.6 MB.
 
 ## 2026-09-27 — history for the fiscal, core-inflation, retail and credit blocks
 
@@ -655,3 +622,41 @@ pick_sheet, «United States» labels), tests/test_policy_gaps.py (both creditor 
 .github/workflows/natural-capital.yml: the push trigger is limited to main. On 2026-11-07 a push of
 claude/confident-dijkstra-kk47n5 (a fast-forward to main, so carrying the fetcher's changes) started a run that
 committed its reports to that branch, which then diverged from main (PR #26).
+
+## 2026-11-07 — 22 item-level datasets: housing prices, loans by industry and purpose, NBK operations, gross FDI, price chains, forecasts (the «11 пунктов» request)
+
+Item-level datasets 243 -> 265 (config/dims.yaml). New fetchers: fetchers/nbk_cube.py (sums of the NBK's fully
+disaggregated open-data forms), fetchers/nbk_operations.py (interventions, open position, deposit auctions),
+fetchers/manual_vintages.py (hand-kept forecast vintages); taldau_dims.fetch_regional gained per-item index_id,
+quarterly/annual dating, `flat_regions` + `region_terms` (city lists) and `segments` (an index whose dimensions changed).
+
+1. **Housing prices** (Taldau 703083 / 703116, monthly, by city): HOUSING_PRICE_INDEX_BY_CITY (new, resale, rent; m/m and
+   y/y), HOUSING_PRICE_M2_BY_CITY (KZT per m2). National 2026-08: new +0.6 % m/m, +13.1 % y/y; 625 435 KZT/m2.
+   sources.yaml had the index as frozen at 2020: only its quarterly period is.
+2. **Loans by industry and purpose, mortgages** (NBK forms 488 stock / 493 issued, monthly from 2023-01): LOANS_STOCK_BY_INDUSTRY,
+   LOANS_STOCK_BY_PURPOSE, LOANS_ISSUED_BY_INDUSTRY, LOANS_ISSUED_BY_PURPOSE. Form 488's second-tier banks at 2026-09-01,
+   42 825 457.5 mln KZT, equal BANK_LOANS_STB_TOTAL to the tenge. Housing loans to individuals: stock 8 195.6 bn KZT
+   (2026-09-01), issued 265.1 bn in August 2026. Form 47 (LOAN_PORTFOLIO_QUALITY): debt by days past due and provisions.
+3. **NBK operations**: NBK_FX_INTERVENTIONS (net, mln USD, 1996-01 on; gold-mirroring FX sales from 2025-01),
+   NBK_OPEN_POSITION (balance and instruments, monthly average and end of month, 2020-01 on; 2026-11-05 balance
+   -8 705.65 bn KZT), NBK_DEPOSIT_AUCTIONS (monthly volume, number, weighted yield, 2019-02 on),
+   GOV_SECURITIES_OUTSTANDING_BY_TYPE (form 430, incl. NBK notes; 454 129 mln at 2025-01-01 = the open position's notes).
+4. **Gross FDI inflow** (forms 286 / 287, quarterly 2005 Q1 on): by industry and by country; totals equal in all 86 quarters
+   (2024 17.9 bn USD, 2025 20.4 bn).
+5. **Wages by region**: WAGE_BY_REGION_QUARTERLY (Taldau 702972, 2016 Q1 on; 2026 Q2 national 486 386, Astana 647 920 KZT).
+6. **Agricultural producer prices**: AGRI_PRODUCER_PRICE_INDEX_BY_REGION (Taldau 703025; Taldau has no 2026-08).
+7. **Construction prices and tariffs**: CONSTRUCTION_PRICE_INDEX_BY_REGION (total, works, machinery), FREIGHT_TARIFF_INDEX_BY_REGION
+   (two Taldau segments stitched at 2026-01), COMMUNICATION_TARIFF_INDEX.
+8. **Legal entities**: LEGAL_ENTITIES_BY_REGION (registered / active, 2011-01 on; 559 558 / 451 479 on 1 October 2026).
+9. **Household debt**: IMF_FSI_HOUSEHOLDS (debt/GDP 15.3 %, debt/income 80.9 %, debt service 5.5 %, 2023 Q4; the IMF series
+   stops in 2024 Q1); current household lending by purpose and overdue from forms 488 / 47 above. Not machine-readable:
+   the Financial Stability Report, First Credit Bureau dashboards, number of borrowers.
+10. **NBK forecasts**: config/nbk_forecast_rounds.yaml -> NBK_FORECAST_ROUNDS, 16 rounds Dec-2022 … Aug-2026 (GDP and CPI
+    ranges, Brent); every number found in its report's text.
+11. **Government forecast (ПСЭР)**: config/gov_forecast_vintages.yaml -> GOV_MACRO_FORECAST_VINTAGES, 27 vintages 2015-2026
+    (GDP, growth, implied exchange rate, Brent, CPI band, oil output); the implied rate comes out round in every forecast
+    year, which checks the transcription. Both YAML files are maintained by hand: a new NBK round four times a year, a
+    new Government vintage each August (gov.kz misfiles them; the 2027-2029 forecast is under record 1060939).
+
+Big forms are fetched in full once and then from 6 months back (API startDate); their pages are archived gzipped.
+Tests: tests/test_new_sources_2026_11.py (12 + 2 cross-source), tests/test_dims.py config checks.

@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=493",
+  "dataset_id": "formId=493",
+  "indicator_id": "LOANS_ISSUED_BY_INDUSTRY",
+  "indicator_name": "Bank loans to the economy issued during the month, by borrower's industry (analytical presentation)",
+  "description": "Кредиты банковского сектора экономике, выданные за месяц, по отраслям заёмщиков (аналитическое представление)",
+  "frequency": "monthly",
+  "unit": "million KZT, issued during the month",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "NBK formId=493, one row per cell of industry x purpose x borrower x currency x maturity x region x size x bank/non-bank (111 273 rows, 2023-01 … ); items are sums. INDUSTRY splits into INDUSTRY.MANUFACTURING / .MINING / .OTHER_INDUSTRY; HOUSEHOLDS = loans to individuals (the form leaves their industry «undefined»). Dated by the month the loans were issued: the NBK stamps a month's flow with the 1st of the next month (as form 486, LOAN_RATE_ISSUED_*), shifted here. sources.yaml (2026-08) set 488/493 aside as «microdata with no aggregation field»; the rows are a partition and TOTAL is their sum.",
+  "publication_date": null,
+  "last_update_date": "2026-11-07",
+  "download_date": "2026-11-07",
+  "period_start": "2023-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

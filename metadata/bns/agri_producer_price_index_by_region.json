@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703025",
+  "indicator_id": "AGRI_PRODUCER_PRICE_INDEX_BY_REGION",
+  "indicator_name": "Producer price index of agricultural products (total, crops, livestock) by region, monthly",
+  "description": "Индекс цен производителей продукции сельского хозяйства (всего, растениеводство, животноводство) по регионам, помесячно",
+  "frequency": "monthly",
+  "unit": "% (previous month = 100 or same month a year earlier = 100)",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Taldau 703025, period 4, 2011-01 onward. Taldau has no 2026-08 at any base (the monthly bulletin, name=19100, has it). National 2026-09: TOTAL.MOM 99.6, TOTAL.YOY 106.2.",
+  "publication_date": null,
+  "last_update_date": "2026-11-07",
+  "download_date": "2026-11-07",
+  "period_start": "2011-01-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

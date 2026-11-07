@@ -1,0 +1,30 @@
+# The National Bank's own forecasts, base scenario, by forecasting round: table «Прогнозы по базовому сценарию» of the
+# Monetary Policy Report («Доклад о денежно-кредитной политике», ДоДКП), https://nationalbank.kz/ru/news/obzor-inflyacii.
+# Hand-maintained: the forecast paths are only in the PDF (the xlsx annex «Статистическая информация» carries the charts
+# as images), and the table's number, position and layout change between rounds. Four rounds a year (Feb, May, Aug, Nov
+# from 2023; Mar, Jun, Sep, Dec in 2022). The Mar, Jun and Sep 2022 reports give the forecasts in the text only and are
+# not listed. Read by scripts/fetchers/manual_vintages.py (dataset NBK_FORECAST_ROUNDS). Every number was checked
+# on 2026-11-07 to appear in the report's own text (pdftotext of /file/download/<report>).
+#
+# Per target year: gdp [low, high] % real growth y/y; cpi [low, high] % Dec/Dec (a single number "вблизи 5,0" is
+# [5.0, 5.0] with near: true); brent $/bbl, annual average (from Aug-2026 in «Внешние предпосылки прогноза»).
+# The first year of a round is the current year. Transcribed 2026-11-07.
+source: "Национальный Банк РК, Доклад о денежно-кредитной политике, таблица «Прогнозы по базовому сценарию»"
+base_url: "https://nationalbank.kz/file/download/"
+rounds:
+  - {round: "2022-12", report: 99543, years: {2022: {gdp: [2, 3], cpi: [20, 21], brent: 101.8}, 2023: {gdp: [3, 4], cpi: [11, 13], brent: 90}, 2024: {gdp: [3.5, 4.5], cpi: [7, 9], brent: 85}, 2025: {gdp: [3.5, 4.5], cpi: [4, 6], brent: 79}}}
+  - {round: "2023-02", report: 99545, years: {2023: {gdp: [3.5, 4.5], cpi: [9, 12], brent: 88}, 2024: {gdp: [3.5, 4.5], cpi: [6, 8], brent: 85}, 2025: {gdp: [3.5, 4.5], cpi: [4, 6], brent: 77}}}
+  - {round: "2023-05", report: 99548, years: {2023: {gdp: [4.2, 5.2], cpi: [11, 14], brent: 82}, 2024: {gdp: [3.5, 4.5], cpi: [9, 11], brent: 80}, 2025: {gdp: [3.5, 4.5], cpi: [5.5, 7.5], brent: 77}}}
+  - {round: "2023-08", report: 99551, years: {2023: {gdp: [4.2, 5.2], cpi: [10, 12], brent: 80}, 2024: {gdp: [4, 5], cpi: [7.5, 9.5], brent: 80}, 2025: {gdp: [4, 5], cpi: [5.5, 7.5], brent: 77}}}
+  - {round: "2023-11", report: 99554, years: {2023: {gdp: [4.2, 5.2], cpi: [9.3, 10.3], brent: 84}, 2024: {gdp: [3.2, 4.2], cpi: [7.5, 9.5], brent: 85}, 2025: {gdp: [5.5, 6.5], cpi: [5.5, 7.5], brent: 80}}}
+  - {round: "2024-02", report: 99680, years: {2024: {gdp: [3.5, 4.5], cpi: [7.5, 9.5], brent: 80}, 2025: {gdp: [5.5, 6.5], cpi: [5.5, 7.5], brent: 80}, 2026: {gdp: [3.5, 4.5], cpi: [5, 6], brent: 77}}}
+  - {round: "2024-05", report: 101985, years: {2024: {gdp: [3.5, 4.5], cpi: [7.5, 9.5], brent: 85}, 2025: {gdp: [4.8, 5.8], cpi: [5.5, 7.5], brent: 80}, 2026: {gdp: [4.9, 5.9], cpi: [5, 6], brent: 77}}}
+  - {round: "2024-08", report: 104139, years: {2024: {gdp: [3.5, 4.5], cpi: [7.5, 9.5], brent: 84.5}, 2025: {gdp: [5, 6], cpi: [5.5, 7.5], brent: 82.5}, 2026: {gdp: [4.9, 5.9], cpi: [5, 7], brent: 77.5}}}
+  - {round: "2024-11", report: 108593, years: {2024: {gdp: [4, 4.5], cpi: [8, 9], brent: 80.3}, 2025: {gdp: [4.5, 5.5], cpi: [6.5, 8.5], brent: 70}, 2026: {gdp: [4.6, 5.6], cpi: [5.5, 7.5], brent: 70}}}
+  - {round: "2025-02", report: 108587, years: {2025: {gdp: [4.2, 5.2], cpi: [10, 12], brent: 73}, 2026: {gdp: [4.2, 5.2], cpi: [9, 11], brent: 70}, 2027: {gdp: [3.5, 4.5], cpi: [5.5, 7.5], brent: 70}}}
+  - {round: "2025-05", report: 112220, years: {2025: {gdp: [5, 6], cpi: [10.5, 12.5], brent: 65}, 2026: {gdp: [4, 5], cpi: [9.5, 11.5], brent: 60}, 2027: {gdp: [3.5, 4.5], cpi: [5.5, 7.5], brent: 60}}}
+  - {round: "2025-08", report: 112228, years: {2025: {gdp: [5.5, 6.5], cpi: [11, 12.5], brent: 68}, 2026: {gdp: [4, 5], cpi: [9.5, 11.5], brent: 60}, 2027: {gdp: [3.5, 4.5], cpi: [5.5, 7.5], brent: 60}}}
+  - {round: "2025-11", report: 114378, years: {2025: {gdp: [6, 6.5], cpi: [12, 13], brent: 69}, 2026: {gdp: [3.5, 4.5], cpi: [9.5, 12.5], brent: 60}, 2027: {gdp: [4, 5], cpi: [5.5, 7.5], brent: 60}}}
+  - {round: "2026-02", report: 121777, years: {2026: {gdp: [3.5, 4.5], cpi: [9.5, 11.5], brent: 66.3}, 2027: {gdp: [4, 5], cpi: [5.5, 7.5], brent: 60}, 2028: {gdp: [3.5, 4.5], cpi: [5, 5], near: true, brent: 60}}}
+  - {round: "2026-05", report: 129045, years: {2026: {gdp: [4.5, 5.5], cpi: [9, 11], brent: 90.1}, 2027: {gdp: [3.5, 4.5], cpi: [5.5, 7.5], brent: 75}, 2028: {gdp: [3.5, 4.5], cpi: [5, 5], near: true, brent: 65}}}
+  - {round: "2026-08", report: 135239, years: {2026: {gdp: [4.5, 5.5], cpi: [9, 11], brent: 89.2}, 2027: {gdp: [3.5, 4.5], cpi: [6.5, 8.5], brent: 75}, 2028: {gdp: [4, 5], cpi: [5, 5], near: true, brent: 65}}}

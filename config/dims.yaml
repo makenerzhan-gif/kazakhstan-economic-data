@@ -4054,3 +4054,619 @@ datasets:
     unit: "persons"
     category: international
     note: "CIS Stat facts 4650866 / 4679599 («Прибывшие/Выбывшие по потокам», persons; items ARRIVALS, DEPARTURES = «Международная миграция - всего», ARRIVALS.CIS / .NON_CIS and DEPARTURES.CIS / .NON_CIS where given) and 44243 / 44245 (by partner country, «Тип местности» = «Всего»; items ARRIVALS.<ISO3>, DEPARTURES.<ISO3>, 2016 onward, the reporting country's own row included). NET = ARRIVALS - DEPARTURES, computed here (transformation «arrivals minus departures»); the committee's own net fact 5320380 is not used (Kazakhstan 2016: -20 193 against 13 755 - 34 900 = -21 145). Kazakhstan 1991-1999: arrivals 170 787, 161 499, 111 082, 70 389, 71 137, 53 874, 38 067, 40 624, 41 320; departures 228 473, 317 760, 330 107, 477 068, 309 632, 229 412, 299 455, 243 663, 164 947. Equal to BNS MIGRATION_ARRIVALS / MIGRATION_DEPARTURES in 2000-2025 except 2008 (CIS Stat 46 404 / 45 287, BNS 46 113 / 44 813). «Неизвестно» and internal moves are not kept (the answer repeats them under a parent it does not show). No Turkmenistan as reporter."
+
+  # ---------------------------------------------------------------- NBK cubes (fetcher nbk_cube, added 2026-11-07)
+  # Forms that publish only the cells of a cross-tabulation; items are sums of rows (fetchers/nbk_cube.py).
+  - id: FDI_GROSS_INFLOW_BY_INDUSTRY
+    name_ru: "Валовой приток прямых иностранных инвестиций в Казахстан от иностранных прямых инвесторов, по видам экономической деятельности резидентов"
+    name_en: "Gross inflow of foreign direct investment into Kazakhstan from foreign direct investors, by resident's economic activity"
+    agency: nbk
+    fetcher: nbk_cube
+    form_id: "286"
+    filters: {type: "over the period, mln. USD", period: "quarter"}
+    levels: [[industry], [industry, sub_industry_1]]
+    codes:
+      industry:
+        "AGRICULTURE, FORESTRY AND FISHING": A
+        "MINING AND QUARRYING": B
+        "MANUFACTURING": C
+        "ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY": D
+        "WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES": E
+        "CONSTRUCTION": F
+        "WHOLESALE AND RETAIL TRADE; REPAIR OF MOTOR VEHICLES AND MOTORCYCLES": G
+        "TRANSPORTATION AND STORAGE": H
+        "ACCOMMODATION AND FOOD SERVICE ACTIVITIES": I
+        "INFORMATION AND COMMUNICATION": J
+        "FINANCIAL AND INSURANCE ACTIVITIES": K
+        "REAL ESTATE ACTIVITIES": L
+        "PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES": M
+        "ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES": N
+        "PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY": O
+        "EDUCATION; HUMAN HEALTH AND SOCIAL WORK ACTIVITIES; ARTS, ENTERTAINMENT AND RECREATION": PQR
+        "OTHER SERVICE ACTIVITIES": S
+        "ACTIVITIES OF HOUSEHOLDS AS EMPLOYERS; UNDIFFERENTIATED GOODS- AND SERVICES-PRODUCING ACTIVITIES OF HOUSEHOLDS FOR OWN USE": T
+        "ACTIVITIES, N.E.C.": NEC
+      sub_industry_1:
+        "Extraction of crude petroleum and natural gas": OIL_GAS
+        "Mining of coal and lignite": COAL
+        "Mining of metal ores": METAL_ORES
+        "Mining support service activities": MINING_SUPPORT
+        "Other mining and quarrying": OTHER_MINING
+        "Manufacture of basic metals and fabricated metal products, except machinery and equipment": METALS
+        "Manufacture of basic pharmaceutical products and pharmaceutical preparations": PHARMA
+        "Manufacture of chemicals and chemical products": CHEMICALS
+        "Manufacture of coke and refined petroleum products": REFINING
+        "Manufacture of computer, electronic and optical products": ELECTRONICS
+        "Manufacture of electrical equipment": ELECTRICAL
+        "Manufacture of food products, beverages and tobacco products": FOOD
+        "Manufacture of machineryand equipment n.e.c.": MACHINERY
+        "Manufacture of rubber and plastics products, and other non-metallic mineral products": RUBBER_MINERALS
+        "Manufacture of textiles, apparel, leather and related products": TEXTILES
+        "Manufacture of transport equipment": TRANSPORT_EQUIPMENT
+        "Manufacture of wood and paper products, and printing": WOOD_PAPER
+        "Other manufacturing, and repair and installation of machinery and equipment": OTHER_MANUFACTURING
+        "Activities auxiliary to financial services and insurance activities": AUXILIARY
+        "Financial service activities, except insurance and pension funding": FINANCIAL_SERVICES
+        "Insurance, reinsurance and pension funding, except compulsorysocial security": INSURANCE
+        "IT and other information services": IT
+        "Publishing, audiovisual and broadcasting activities": PUBLISHING
+        "Telecommunications": TELECOM
+        "Activities of head offices; management consultancy activities": HEAD_OFFICES
+        "Architectural and engineering activities; technical testing and analysis activities": ENGINEERING
+        "Legal and accounting activities": LEGAL
+        "Other professional, scientific and technical activities": OTHER_PROFESSIONAL
+        "Scientific research and development": RESEARCH
+        "Air transport": AIR
+        "Land transport and transport via pipelines": LAND_PIPELINE
+        "Postal and courier activities": POSTAL
+        "Warehousing and support activities for transportation": WAREHOUSING
+        "Water transport": WATER_TRANSPORT
+        "WHOLESALE AND RETAIL TRADE; REPAIR OF MOTOR VEHICLES AND MOTORCYCLES, others": OTHER
+    names:
+      industry:
+        "AGRICULTURE, FORESTRY AND FISHING": "Сельское, лесное и рыбное хозяйство"
+        "MINING AND QUARRYING": "Горнодобывающая промышленность и разработка карьеров"
+        "MANUFACTURING": "Обрабатывающая промышленность"
+        "ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY": "Электроснабжение, подача газа, пара и воздушное кондиционирование"
+        "WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES": "Водоснабжение; канализационная система, контроль над сбором и распределением отходов"
+        "CONSTRUCTION": "Строительство"
+        "WHOLESALE AND RETAIL TRADE; REPAIR OF MOTOR VEHICLES AND MOTORCYCLES": "Оптовая и розничная торговля; ремонт автомобилей и мотоциклов"
+        "TRANSPORTATION AND STORAGE": "Транспорт и складирование"
+        "ACCOMMODATION AND FOOD SERVICE ACTIVITIES": "Услуги по проживанию и питанию"
+        "INFORMATION AND COMMUNICATION": "Информация и связь"
+        "FINANCIAL AND INSURANCE ACTIVITIES": "Финансовая и страховая деятельность"
+        "REAL ESTATE ACTIVITIES": "Операции с недвижимым имуществом"
+        "PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES": "Профессиональная, научная и техническая деятельность"
+        "ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES": "Деятельность в области административного и вспомогательного обслуживания"
+        "PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY": "Государственное управление и оборона; обязательное социальное обеспечение"
+        "EDUCATION; HUMAN HEALTH AND SOCIAL WORK ACTIVITIES; ARTS, ENTERTAINMENT AND RECREATION": "Образование; здравоохранение и социальные услуги; искусство, развлечения и отдых"
+        "OTHER SERVICE ACTIVITIES": "Предоставление прочих видов услуг"
+        "ACTIVITIES OF HOUSEHOLDS AS EMPLOYERS; UNDIFFERENTIATED GOODS- AND SERVICES-PRODUCING ACTIVITIES OF HOUSEHOLDS FOR OWN USE": "Деятельность домашних хозяйств как работодателей"
+        "ACTIVITIES, N.E.C.": "Виды деятельности, не определённые"
+    total: TOTAL
+    total_name: "Валовой приток ПИИ, всего"
+    date_basis: next_period_start
+    min_items: 20
+    frequency: quarterly
+    unit: "million USD, flow over the quarter"
+    category: monetary
+    note: "NBK formId=286, one row per activity (sections; mining, manufacturing, finance, ICT, professional and transport split into sub-industries; sub_industry_2 is not kept). Items: ОКЭД section letters (PQR = education, health and arts pooled by the NBK; NEC = not determined), <section>.<sub-industry> for the split ones, TOTAL = all rows. Dated by the quarter covered: the NBK stamps a quarter with the day after it (as FDI_NET_INFLOW), shifted here. TOTAL equals the sum over countries of FDI_GROSS_INFLOW_BY_COUNTRY in all 86 quarters 2005 Q1 - 2026 Q2 (checked 2026-11-07). Gross inflow from foreign direct investors, not the net BOP figure: FDI_NET_INFLOW nets out repayments and withdrawals."
+
+  - id: FDI_GROSS_INFLOW_BY_COUNTRY
+    name_ru: "Валовой приток прямых иностранных инвестиций в Казахстан от иностранных прямых инвесторов, по странам"
+    name_en: "Gross inflow of foreign direct investment into Kazakhstan from foreign direct investors, by country"
+    agency: nbk
+    fetcher: nbk_cube
+    form_id: "287"
+    filters: {type: "over the period, mln. USD", period: "quarter"}
+    levels: [[country]]
+    codes: {country: countries}
+    total: TOTAL
+    total_name: "Валовой приток ПИИ, всего"
+    date_basis: next_period_start
+    min_items: 50
+    frequency: quarterly
+    unit: "million USD, flow over the quarter"
+    category: monetary
+    note: "NBK formId=287, one row per investor country (128 in 2005-2026). Items: ISO3 codes (dictionaries/partner_countries.csv; nbk_cube.COUNTRY_ALIASES for the NBK's spellings), INTORG = international organisations, UNALLOCATED = «Not determined by country», TOTAL = all rows. Dated by the quarter covered (the NBK's report_date is the day after it). TOTAL equals FDI_GROSS_INFLOW_BY_INDUSTRY's TOTAL in every quarter."
+
+  - id: LOANS_ISSUED_BY_INDUSTRY
+    name_ru: "Кредиты банковского сектора экономике, выданные за месяц, по отраслям заёмщиков (аналитическое представление)"
+    name_en: "Bank loans to the economy issued during the month, by borrower's industry (analytical presentation)"
+    agency: nbk
+    fetcher: nbk_cube
+    form_id: "493"
+    filters: {type: "mln. of KZT, at the period", period: "Month"}
+    levels: [[consolidated_activities_1], [consolidated_activities_1, consolidated_activities_2]]
+    codes:
+      consolidated_activities_1: &loan_industry
+        "industry": INDUSTRY
+        "Agriculture": AGRICULTURE
+        "Construction": CONSTRUCTION
+        "Trade": TRADE
+        "Transport": TRANSPORT
+        "Communication": COMMUNICATION
+        "Other": OTHER
+        "undefined": HOUSEHOLDS
+      consolidated_activities_2: &loan_industry_2
+        "Manufacturing Industry": MANUFACTURING
+        "Mineral Resource Industry": MINING
+        "Other Industries": OTHER_INDUSTRY
+        "Agriculture, Hunting and Services in these Areas": null
+        "Construction": null
+        "Wholesale and retail trade; repair of motor vehicles and motorcycles": null
+        "Transport": null
+        "Communication": null
+        "Others": null
+        "undefined": null
+    names:
+      consolidated_activities_1: &loan_industry_names
+        "industry": "Промышленность"
+        "Agriculture": "Сельское хозяйство"
+        "Construction": "Строительство"
+        "Trade": "Торговля"
+        "Transport": "Транспорт"
+        "Communication": "Связь"
+        "Other": "Прочие отрасли"
+        "undefined": "Физические лица (отрасль не определяется)"
+      consolidated_activities_2: &loan_industry_2_names
+        "Manufacturing Industry": "Обрабатывающая промышленность"
+        "Mineral Resource Industry": "Горнодобывающая промышленность"
+        "Other Industries": "Прочая промышленность (энергетика, водоснабжение)"
+    total: TOTAL
+    total_name: "Кредиты экономике, выдано за месяц, всего"
+    date_basis: next_period_start
+    lookback_months: 6
+    min_items: 10
+    frequency: monthly
+    unit: "million KZT, issued during the month"
+    category: monetary
+    note: "NBK formId=493, one row per cell of industry x purpose x borrower x currency x maturity x region x size x bank/non-bank (111 273 rows, 2023-01 … ); items are sums. INDUSTRY splits into INDUSTRY.MANUFACTURING / .MINING / .OTHER_INDUSTRY; HOUSEHOLDS = loans to individuals (the form leaves their industry «undefined»). Dated by the month the loans were issued: the NBK stamps a month's flow with the 1st of the next month (as form 486, LOAN_RATE_ISSUED_*), shifted here. sources.yaml (2026-08) set 488/493 aside as «microdata with no aggregation field»; the rows are a partition and TOTAL is their sum."
+
+  - id: LOANS_ISSUED_BY_PURPOSE
+    name_ru: "Кредиты банковского сектора экономике, выданные за месяц, по целям кредитования и заёмщикам (в т.ч. на строительство и покупку жилья)"
+    name_en: "Bank loans to the economy issued during the month, by purpose and borrower (incl. construction and purchase of housing)"
+    agency: nbk
+    fetcher: nbk_cube
+    form_id: "493"
+    filters: {type: "mln. of KZT, at the period", period: "Month"}
+    levels: [[subject_type], [subject_type, object_type], [object_type], [subject_type, currency]]
+    codes:
+      subject_type: &loan_subject {"Business": BUS, "Individuals": HH}
+      object_type: &loan_purpose
+        "Construction and purchase of housing by citizens": HOUSING
+        "Consumer goals of citizens": CONSUMER
+        "Acquisition of working capital": WORKING_CAPITAL
+        "Acquisition of fixed assets": FIXED_ASSETS
+        "New construction and reconstruction": NEW_CONSTRUCTION
+        "Investment and acquisition of securities": SECURITIES
+        "Other goals": OTHER
+      currency: {"National 11362": KZT, "Foreign 11362": FX}
+    names:
+      subject_type: &loan_subject_names {"Business": "Юридические лица и ИП", "Individuals": "Физические лица"}
+      object_type: &loan_purpose_names
+        "Construction and purchase of housing by citizens": "Строительство и приобретение жилья гражданами"
+        "Consumer goals of citizens": "Потребительские цели граждан"
+        "Acquisition of working capital": "Пополнение оборотных средств"
+        "Acquisition of fixed assets": "Приобретение основных средств"
+        "New construction and reconstruction": "Новое строительство и реконструкция"
+        "Investment and acquisition of securities": "Инвестиции и приобретение ценных бумаг"
+        "Other goals": "Прочие цели"
+      currency: {"National 11362": "в тенге", "Foreign 11362": "в иностранной валюте"}
+    total: TOTAL
+    total_name: "Кредиты экономике, выдано за месяц, всего"
+    date_basis: next_period_start
+    lookback_months: 6
+    min_items: 20
+    frequency: monthly
+    unit: "million KZT, issued during the month"
+    category: monetary
+    note: "NBK formId=493 (see LOANS_ISSUED_BY_INDUSTRY). Items: BUS, HH; <BUS|HH>.<purpose>; <purpose> over all borrowers; <BUS|HH>.<KZT|FX>. HOUSING = «строительство и приобретение жилья гражданами»: HH.HOUSING is the mortgage-type lending to individuals (265.1 bn KZT in August 2026), HOUSING adds the small business part. Dated by the month of issue (report_date shifted back a month). August 2026: TOTAL 3 859.4 bn KZT, HH.CONSUMER 1 399.2 bn, BUS.WORKING_CAPITAL 1 315.5 bn."
+
+  # ---------------------------------------------------------------- Taldau, prices, tariffs, legal entities, wages by region (added 2026-11-07)
+  - id: HOUSING_PRICE_INDEX_BY_CITY
+    name_ru: "Индексы цен на рынке жилья (новое жильё, перепродажа квартир, аренда) по городам, помесячно"
+    name_en: "Housing price indices (new housing, resale apartments, rent) by city, monthly"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "703083"
+    period_id: "4"
+    measure_id: "7"
+    dic_ids: "67,848,2817"
+    terms: "741880,2695730,18596801"
+    item_pos: 2
+    flat_regions: true
+    region_terms: &housing_cities
+      268012: AST
+      268020: ALA
+      20242100: SHM
+      261477: SHM
+      260909: MNG
+      248877: AKT
+      252313: ATY
+      256637: ULT
+      247785: AKM
+      256621: KRG
+      250518: ALM
+      258744: KST
+      260101: KZL
+      253167: ZKO
+      264992: VKO
+      263011: PVL
+      264030: SKO
+      265068: ABY
+      250504: ZHT
+      255579: ZHM
+      20243034: TRK
+    items:
+      - {code: NEW, term: "18596801", name: "Продажа нового жилья (квартиры)"}
+      - {code: RESALE, term: "18844097", name: "Перепродажа квартир"}
+      - {code: RENT, term: "18120822", name: "Арендная плата за благоустроенное жильё"}
+    variants:
+      - {suffix: ".MOM", fixed: {1: "2695730"}, name: ", к предыдущему месяцу"}
+      - {suffix: ".YOY", fixed: {1: "2695732"}, name: ", к соответствующему месяцу предыдущего года"}
+    frequency: monthly
+    unit: "% (previous month = 100 or same month a year earlier = 100)"
+    category: prices
+    note: "Taldau 703083 «Индексы цен на рынке жилья», period 4 (month). The index is published for cities, not oblasts: the region column carries the code of the city's region (AST, ALA, SHM for the three cities of republican status; for the others the oblast whose centre it is -- AKM = Кокшетау, AKT = Актобе, ALM = Конаев, ATY = Атырау, ZKO = Уральск, ZHM = Тараз, ZHT = Талдыкорган, KRG = Караганда, KST = Костанай, KZL = Кызылорда, MNG = Актау, PVL = Павлодар, SKO = Петропавловск, TRK = Туркестан, VKO = Усть-Каменогорск, ABY = Семей, ULT = Жезказган). NEW and RESALE apartments from 2015-01 (before that BNS published «new housing» and «resale housing» as wider series, not kept), RENT from 2012-01. National 2026-08: NEW.MOM 100.6, NEW.YOY 113.1, RESALE.MOM 100.8, RENT.MOM 104.2. config/sources.yaml had HOUSING_PRICE_INDEX as frozen at 2020: only the quarterly period (5) is; the monthly one is current."
+
+  - id: HOUSING_PRICE_M2_BY_CITY
+    name_ru: "Средние цены на рынке жилья (новое жильё, перепродажа квартир, аренда) по городам, тенге за кв. м, помесячно"
+    name_en: "Average housing prices (new housing, resale apartments, rent) by city, KZT per square metre, monthly"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "703116"
+    period_id: "4"
+    measure_id: "1"
+    dic_ids: "67,2817"
+    terms: "741880,18596801"
+    item_pos: 1
+    flat_regions: true
+    region_terms: *housing_cities
+    items:
+      - {code: NEW, term: "18596801", name: "Продажа нового жилья (квартиры)"}
+      - {code: RESALE, term: "18844097", name: "Перепродажа квартир"}
+      - {code: RENT, term: "18120822", name: "Арендная плата за благоустроенное жильё (за месяц)"}
+    frequency: monthly
+    unit: "KZT per square metre (rent: per square metre a month)"
+    category: prices
+    note: "Taldau 703116 «Цены на рынке жилья», period 4. Region column as HOUSING_PRICE_INDEX_BY_CITY (cities; the oblast code for an oblast centre). National 2026-08: NEW 625 435, RESALE 635 185, RENT 5 350 KZT per m2."
+
+  - id: AGRI_PRODUCER_PRICE_INDEX_BY_REGION
+    name_ru: "Индекс цен производителей продукции сельского хозяйства (всего, растениеводство, животноводство) по регионам, помесячно"
+    name_en: "Producer price index of agricultural products (total, crops, livestock) by region, monthly"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "703025"
+    period_id: "4"
+    measure_id: "7"
+    dic_ids: "67,848,2775"
+    terms: "741880,2695730,18685108"
+    item_pos: 2
+    items:
+      - {code: TOTAL, term: "18685108", name: "Продукция сельского хозяйства"}
+      - {code: CROPS, term: "4792053", name: "Продукция растениеводства"}
+      - {code: LIVESTOCK, term: "473320", name: "Животные живые и продукция животноводства"}
+    variants:
+      - {suffix: ".MOM", fixed: {1: "2695730"}, name: ", к предыдущему месяцу"}
+      - {suffix: ".YOY", fixed: {1: "2695732"}, name: ", к соответствующему месяцу предыдущего года"}
+    frequency: monthly
+    unit: "% (previous month = 100 or same month a year earlier = 100)"
+    category: prices
+    note: "Taldau 703025, period 4, 2011-01 onward. Taldau has no 2026-08 at any base (the monthly bulletin, name=19100, has it). National 2026-09: TOTAL.MOM 99.6, TOTAL.YOY 106.2."
+
+  - id: CONSTRUCTION_PRICE_INDEX_BY_REGION
+    name_ru: "Индекс цен в строительстве (всего, строительно-монтажные работы, машины и оборудование) по регионам, помесячно"
+    name_en: "Construction price index (total, construction and installation works, machinery and equipment) by region, monthly"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "703045"
+    period_id: "4"
+    measure_id: "7"
+    dic_ids: "67,915,848"
+    terms: "741880,741885,2695730"
+    item_pos: 1
+    items:
+      - {code: TOTAL, term: "741885", name: "Строительство, всего"}
+      - {code: WORKS, term: "741885", index_id: "703046", name: "Строительно-монтажные работы"}
+      - {code: MACHINERY, term: "741885", index_id: "703047", name: "Машины и оборудование"}
+    variants:
+      - {suffix: ".MOM", fixed: {2: "2695730"}, name: ", к предыдущему месяцу"}
+      - {suffix: ".YOY", fixed: {2: "2695732"}, name: ", к соответствующему месяцу предыдущего года"}
+    frequency: monthly
+    unit: "% (previous month = 100 or same month a year earlier = 100)"
+    category: prices
+    note: "Taldau 703045 (total), 703046 (СМР), 703047 (machinery and equipment), period 4, 2011-01 onward. The components have no 2026-07 on Taldau. National 2026-09: TOTAL.MOM 100.4, TOTAL.YOY 110.4. Purchased building materials (703051) have no single total on Taldau and are not kept."
+
+  - id: FREIGHT_TARIFF_INDEX_BY_REGION
+    name_ru: "Индекс тарифов на перевозку грузов всеми видами транспорта по регионам, помесячно"
+    name_en: "Freight transport tariff index, all modes, by region, monthly"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "703062"
+    period_id: "4"
+    measure_id: "7"
+    dic_ids: "67,490,848,2533,3029"
+    terms: "741880,741916,2695730,5497866,18810419"
+    segments:
+      - {dic_ids: "67,490,848,2533,3029", terms: "741880,741916,2695730,5497866,18810419"}
+      - {dic_ids: "68,490,848,3029", terms: "741880,741916,2695730,18810419"}
+    item_pos: 1
+    items:
+      - {code: TOTAL, term: "741916", name: "Перевозка грузов всеми видами транспорта"}
+    variants:
+      - {suffix: ".MOM", fixed: {2: "2695730"}, name: ", к предыдущему месяцу"}
+      - {suffix: ".YOY", fixed: {2: "2695732"}, name: ", к соответствующему месяцу предыдущего года"}
+    frequency: monthly
+    unit: "% (previous month = 100 or same month a year earlier = 100)"
+    category: prices
+    note: "Taldau 703062, period 4. BNS changed the index's dimensions in 2026: 2011-01 … 2025-12 under 67,490,848,2533,3029, 2026-01 on under 68,490,848,3029; both are read and stitched (the later segment wins on a common month). National 2025-12: YOY 104.6; 2026-09: MOM 98.9. Rail is confidential; by mode of transport only in the monthly bulletin (name=19105)."
+
+  - id: COMMUNICATION_TARIFF_INDEX
+    name_ru: "Индекс тарифов на услуги связи для юридических лиц, помесячно"
+    name_en: "Communication services tariff index for legal entities, monthly"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "4649505"
+    period_id: "4"
+    measure_id: "7"
+    dic_ids: "67,848,2673"
+    terms: "741880,2695730,4021388"
+    item_pos: 2
+    items:
+      - {code: TOTAL, term: "4021388", name: "Услуги связи"}
+    variants:
+      - {suffix: ".MOM", fixed: {1: "2695730"}, name: ", к предыдущему месяцу"}
+      - {suffix: ".YOY", fixed: {1: "2695732"}, name: ", к соответствующему месяцу предыдущего года"}
+    frequency: monthly
+    unit: "% (previous month = 100 or same month a year earlier = 100)"
+    category: prices
+    note: "Taldau 4649505, period 4, 2011-01 onward."
+
+  - id: LEGAL_ENTITIES_BY_REGION
+    name_ru: "Количество зарегистрированных и действующих юридических лиц по регионам, на начало месяца"
+    name_en: "Number of registered and active legal entities by region, at the start of the month"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "701159"
+    period_id: "8"
+    measure_id: "5"
+    dic_ids: "67,915,90,59,61,277"
+    terms: "741880,741885,741927,741907,741926,741925"
+    item_pos: 1
+    items:
+      - {code: REGISTERED, term: "741885", name: "Зарегистрированные юридические лица"}
+      - {code: ACTIVE, term: "741885", index_id: "701160", name: "Действующие юридические лица"}
+    frequency: monthly
+    unit: "units"
+    category: production
+    note: "Taldau 701159 (registered) and 701160 (active), period 8 («месяц с накоплением»): the value of month m is the stock on the 1st of month m+1 (y092026 = на 1 октября 2026 = the monthly bulletin's figure, 559 558 registered, 451 479 active); dated here at month m's first day, like the other monthly dims. 2011-01 onward. New registrations in a month are only in the bulletin (name=19202, sheet 1.8.)."
+
+  - id: WAGE_BY_REGION_QUARTERLY
+    name_ru: "Среднемесячная номинальная заработная плата одного работника по регионам, поквартально"
+    name_en: "Average monthly nominal wage per employee by region, quarterly"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "702972"
+    period_id: "5"
+    measure_id: "1"
+    dic_ids: "68,859,681"
+    terms: "741880,741885,808076"
+    item_pos: 1
+    items:
+      - {code: TOTAL, term: "741885", name: "Среднемесячная номинальная заработная плата, всего"}
+    frequency: quarterly
+    unit: "KZT"
+    category: labor
+    note: "Taldau 702972, period 5 (quarter), 2016 Q1 onward (quarterly from 2015 per BNS; Taldau's quarterly segment starts in 2016). Survey 1-Т, excluding small enterprises (wages including them by size of enterprise: BNS element 520412). National 2026 Q1 461 486, Q2 486 386 KZT."
+
+  - id: LOANS_STOCK_BY_INDUSTRY
+    name_ru: "Кредиты банковского сектора экономике, основной долг на начало месяца, по отраслям заёмщиков, в т.ч. просроченный (аналитическое представление)"
+    name_en: "Bank loans to the economy, principal outstanding at the start of the month, by borrower's industry, incl. overdue (analytical presentation)"
+    agency: nbk
+    fetcher: nbk_cube
+    form_id: "488"
+    filters: {type: "Remaining principal debt (mln.KZT)", period: "Month"}
+    levels: [[consolidated_activities_1], [consolidated_activities_1, consolidated_activities_2], [consolidated_activities_1, is_overdue], [is_overdue], [is_stb]]
+    codes:
+      consolidated_activities_1: {<<: *loan_industry, "Undefined": HOUSEHOLDS}
+      consolidated_activities_2: {<<: *loan_industry_2, "Undefined": null}
+      is_overdue: &overdue {"Yes": OVERDUE, "No": null}
+      is_stb: &stb {"Yes": STB, "No": NON_BANK}
+    names:
+      consolidated_activities_1: {<<: *loan_industry_names, "Undefined": "Физические лица (отрасль не определяется)"}
+      consolidated_activities_2: *loan_industry_2_names
+      is_overdue: &overdue_names {"Yes": "просроченный долг"}
+      is_stb: &stb_names {"Yes": "Банки второго уровня", "No": "Небанковские организации банковского сектора"}
+    total: TOTAL
+    total_name: "Кредиты экономике, основной долг, всего"
+    lookback_months: 6
+    min_items: 15
+    frequency: monthly
+    unit: "million KZT, at the start of the month"
+    category: monetary
+    note: "NBK formId=488 (315 209 rows, 2023-02 … ; items are sums). Items as LOANS_ISSUED_BY_INDUSTRY plus <industry>.OVERDUE and OVERDUE (overdue principal), STB (second-tier banks) and NON_BANK (the rest of the banking sector). Stocks dated by report_date, the 1st of the month after the reference month (end-of-August stock = 2026-09-01), as BANK_LOANS_STB_*. STB at 2026-09-01 is 42 825 457.5 mln KZT, equal to BANK_LOANS_STB_TOTAL (NBK's historical xlsx) to the tenge (checked 2026-11-07)."
+
+  - id: LOANS_STOCK_BY_PURPOSE
+    name_ru: "Кредиты банковского сектора экономике, основной долг на начало месяца, по целям кредитования и заёмщикам (в т.ч. на жильё, просроченный)"
+    name_en: "Bank loans to the economy, principal outstanding at the start of the month, by purpose and borrower (incl. housing, overdue)"
+    agency: nbk
+    fetcher: nbk_cube
+    form_id: "488"
+    filters: {type: "Remaining principal debt (mln.KZT)", period: "Month"}
+    levels: [[subject_type], [subject_type, object_type], [object_type], [subject_type, object_type, is_overdue], [subject_type, currency]]
+    codes:
+      subject_type: *loan_subject
+      object_type: *loan_purpose
+      is_overdue: *overdue
+      currency: {"National 11822": KZT, "Foreign 11822": FX}
+    names:
+      subject_type: *loan_subject_names
+      object_type: *loan_purpose_names
+      is_overdue: *overdue_names
+      currency: {"National 11822": "в тенге", "Foreign 11822": "в иностранной валюте"}
+    total: TOTAL
+    total_name: "Кредиты экономике, основной долг, всего"
+    lookback_months: 6
+    min_items: 25
+    frequency: monthly
+    unit: "million KZT, at the start of the month"
+    category: monetary
+    note: "NBK formId=488 (see LOANS_STOCK_BY_INDUSTRY). Items: BUS, HH; <BUS|HH>.<purpose>; <purpose>; <BUS|HH>.<purpose>.OVERDUE; <BUS|HH>.<KZT|FX>. HH.HOUSING = loans to individuals for construction and purchase of housing (the mortgage-type portfolio): 8 195.6 bn KZT at 2026-09-01, HH.CONSUMER 17 639.2 bn, TOTAL 46 115.1 bn (banks and the rest of the banking sector)."
+
+  - id: IMF_FSI_HOUSEHOLDS
+    name_ru: "Долговая нагрузка домашних хозяйств (МВФ, показатели финансовой устойчивости): долг к ВВП, долг к располагаемому доходу, обслуживание долга к доходу"
+    name_en: "Household debt burden (IMF Financial Soundness Indicators): debt to GDP, debt to disposable income, debt service to income"
+    agency: imf
+    fetcher: imf_sdmx
+    flow: IMF.STA/FSIC
+    key: "KAZ.S14.FSI179_AFSI_PT+FSI157_AFSI_PT+FSI85_AFSI_PT.Q"
+    code_dims: [INDICATOR]
+    period: stock
+    min_items: 3
+    required_items: [FSI179_AFSI_PT, FSI157_AFSI_PT, FSI85_AFSI_PT]
+    frequency: quarterly
+    unit: "%"
+    category: monetary
+    note: "IMF FSIC, sector S14 (households), quarterly 2008 Q1 … 2024 Q1 (the dataflow stops there, like the deposit-taker FSIs of NBK form 314). FSI179 household debt / GDP (2023 Q4 15.31), FSI157 household debt / disposable income (80.89), FSI85 debt service and principal / income (2019 Q4 4.33, 2023 Q4 5.49). Dated at the end of the quarter. After 2024 Q1: LOANS_STOCK_BY_PURPOSE (HH) or BANK_LOANS_STB_HOUSEHOLDS against GDP; the NBK's Financial Stability Report quotes 17.5 % of GDP and debt service 5.9 % of income for 2025 (PDF only)."
+
+  - id: LOAN_PORTFOLIO_QUALITY
+    name_ru: "Структура качества ссудного портфеля банков: основной долг по срокам просрочки и провизии, по типам заёмщиков"
+    name_en: "Banks' loan portfolio quality: debt by days past due and provisions, by borrower type"
+    agency: nbk
+    fetcher: nbk_cube
+    form_id: "47"
+    levels: [[type, subject_type], [type, subject_type, pastdue], [type], [type, pastdue]]
+    codes:
+      type: {"debt (bln.KZT)": DEBT, "provision (bln.KZT)": PROVISION}
+      subject_type:
+        "individuals (except for individual entrepreneurs)": HH
+        "non-financial organization": NFC
+        "financial organization": FIN
+        "interbank": INTERBANK
+        "repo": REPO
+      pastdue:
+        "0 days": DPD0
+        "from 1 to 30 days": DPD1_30
+        "from 31 to 60 days": DPD31_60
+        "from 61 to 90 days": DPD61_90
+        "over 90 days": DPD90
+        "from 0 to 90 days": DPD0_90
+        "other": OTHER
+    names:
+      type: {"debt (bln.KZT)": "Основной долг", "provision (bln.KZT)": "Провизии"}
+      subject_type:
+        "individuals (except for individual entrepreneurs)": "Физические лица (кроме ИП)"
+        "non-financial organization": "Нефинансовые организации"
+        "financial organization": "Финансовые организации"
+        "interbank": "Межбанковские займы"
+        "repo": "Операции репо"
+      pastdue:
+        "0 days": "без просрочки"
+        "from 1 to 30 days": "просрочка 1-30 дней"
+        "from 31 to 60 days": "просрочка 31-60 дней"
+        "from 61 to 90 days": "просрочка 61-90 дней"
+        "over 90 days": "просрочка более 90 дней"
+        "from 0 to 90 days": "просрочка до 90 дней"
+        "other": "прочее (не распределено по срокам)"
+    min_items: 10
+    frequency: monthly
+    unit: "billion KZT, at the start of the month"
+    category: monetary
+    note: "NBK formId=47, summed over IFRS risk stages. Items <DEBT|PROVISION>.<borrower>[.<days past due>], DEBT and PROVISION over all borrowers, <DEBT|PROVISION>.<days past due>. Dated by report_date (1st of the month after the stock date). Monthly from 2026-01; also 2025-07-01 and 2025-10-01. DEBT.HH at 2026-09-01 is 26 471.8 bn KZT, of which DPD90 1 220.0 (4.61 %) and DPD1_30 680.2 -- equal to the ARDFM bulletin's retail-loan table (checked 2026-11-07)."
+
+  - id: GOV_SECURITIES_OUTSTANDING_BY_TYPE
+    name_ru: "Государственные ценные бумаги в обращении (в т.ч. краткосрочные ноты НБК) по видам, на конец месяца"
+    name_en: "Government securities outstanding (incl. NBK short-term notes) by type, end of month"
+    agency: nbk
+    fetcher: nbk_cube
+    form_id: "430"
+    filters: {type: "mln. of KZT, end of period", period: "Month"}
+    levels: [[sec_type]]
+    codes:
+      sec_type:
+        "Notes of NBK": NBK_NOTES
+        "МЕККАМ": MEKKAM
+        "МЕОКАМ": MEOKAM
+        "МЕUКАМ": MEUKAM
+        "МЕUZКАМ": MEUZKAM
+        "МЕАКАМ": MEAKAM
+        "МЕIКАМ": MEIKAM
+        "METIKAM": METIKAM
+        "METIСKAM": METICKAM
+        "МUIКАМ": MUIKAM
+        "MAOKAM": MAOKAM
+        "MAOKO": MAOKO
+        "National Savings Bonds": SAVINGS_BONDS
+        "Municipal Government Securities": MUNICIPAL
+    names:
+      sec_type:
+        "Notes of NBK": "Краткосрочные ноты Национального Банка"
+        "National Savings Bonds": "Национальные сберегательные облигации"
+        "Municipal Government Securities": "Государственные ценные бумаги местных исполнительных органов"
+    total: TOTAL
+    total_name: "Государственные ценные бумаги в обращении, всего (включая ноты НБК)"
+    min_items: 10
+    frequency: monthly
+    unit: "million KZT, end of month"
+    category: monetary
+    note: "NBK formId=430, 2010-01 onward (the scalar GOV_SECURITIES_MEUKAM is the MEUKAM row). Dated by report_date, the 1st of the month after the stock date (as GOV_SECURITIES_MEUKAM). NBK_NOTES = short-term NBK notes, an open-market liquidity-absorption instrument (681 021 mln at 2010-02-01, 1 200 000 at 2024-01-01, 1 144 260 at 2026-09-01); 454 129 at 2025-01-01 equals the notes in the NBK's daily open position on 31.12.2024 (NBK_OPEN_POSITION)."
+
+  # ---------------------------------------------------------------- forecast vintages kept by hand (added 2026-11-07)
+  - id: GOV_MACRO_FORECAST_VINTAGES
+    name_ru: "Прогноз социально-экономического развития РК (МНЭ): основные макропоказатели и сценарные условия по вариантам прогноза, 2015-2026"
+    name_en: "Government macroeconomic forecast (Ministry of National Economy, ПСЭР): key indicators and scenario conditions by vintage, 2015-2026"
+    agency: mne
+    fetcher: manual_vintages
+    file: config/gov_forecast_vintages.yaml
+    min_items: 50
+    frequency: annual
+    unit: "by item: bn KZT, %, bn USD, KZT per USD, USD per barrel, Mt"
+    category: fiscal
+    note: "27 vintages (12 August finals 2015-2026, 7 May first-stage drafts, 8 amendments). Item V<YYYY_MM>.<VAR>, dated at the target year; VAR = GDP_KZT_BN, REAL_GDP, GDP_USD_BN, USDKZT (implied: GDP in KZT / GDP in USD -- round in every forecast year of every vintage, which checks the transcription), BRENT (base scenario), CPI_LO / CPI_HI, OIL_MT (to the 2025-2029 vintage). August 2026 vintage (2027-2029, protocol 30): Brent 70, 480 KZT per USD, real growth 105.3 / 105.5 / 105.4 in 2027-2029."
+
+  - id: NBK_FORECAST_ROUNDS
+    name_ru: "Прогнозы Национального Банка по базовому сценарию (рост ВВП, инфляция, цена нефти) по прогнозным раундам, с декабря 2022 г."
+    name_en: "National Bank base-scenario forecasts (GDP growth, inflation, oil price) by forecasting round, from December 2022"
+    agency: nbk
+    fetcher: manual_vintages
+    file: config/nbk_forecast_rounds.yaml
+    min_items: 50
+    frequency: annual
+    unit: "% (GDP growth, CPI Dec/Dec), USD per barrel (Brent)"
+    category: monetary
+    note: "16 rounds, Dec-2022 … Aug-2026, Monetary Policy Report table «Прогнозы по базовому сценарию». Item V<YYYY_MM>.<VAR>, dated at the target year; VAR = GDP_LO / GDP_HI, CPI_LO / CPI_HI (the NBK's ranges; «вблизи 5,0» is 5 / 5), BRENT. Aug-2026 round: GDP 2026 4.5-5.5, 2027 3.5-4.5; CPI 2026 9-11, 2027 6.5-8.5; Brent 89.2 / 75 / 65. The analysts' consensus is PROFESSIONAL_FORECASTS_SURVEY."
+
+  # ---------------------------------------------------------------- NBK monetary operations (fetchers/nbk_operations.py, added 2026-11-07)
+  - id: NBK_FX_INTERVENTIONS
+    name_ru: "Операции Национального Банка на валютном рынке (интервенции), нетто, и продажи валюты в рамках зеркалирования покупок золота, помесячно"
+    name_en: "National Bank net operations on the FX market (interventions) and FX sales mirroring gold purchases, monthly"
+    agency: nbk
+    fetcher: nbk_interventions
+    min_items: 1
+    frequency: monthly
+    unit: "million USD (MIRRORING_KZT: billion KZT)"
+    category: monetary
+    note: "NET: «Объем операций НБРК на валютном рынке», mln USD, + net purchase / − net sale, 1996-01 onward (2014-10 −6 002.1, 2020-03 −1 487.6, 2022-03 −990.5, 2025-07 −125.6). July-November 2024 include the operations to buy Kazatomprom shares for the National Fund (footnote «*»; November 2024 −1 181 of which 133.8). MIRRORING_USD / MIRRORING_KZT: FX sales «для целей монетарной нейтральности» mirroring the NBK's priority purchases of refined gold, from 2025-01 (the KZT amount is set per quarter). Sales of the National Fund's FX for budget transfers are NATIONAL_FUND_DOMESTIC_OPERATIONS (form 470), not here. Dated by the month of the operations; published about the 10th of the month after next."
+
+  - id: NBK_OPEN_POSITION
+    name_ru: "Открытая позиция по операциям Национального Банка (сальдо и инструменты: депозиты, РЕПО, своп, депозитные аукционы, ноты), в среднем за месяц и на конец месяца"
+    name_en: "Open position of the National Bank's liquidity operations (balance and instruments: deposits, repo, swaps, deposit auctions, notes), monthly average and end of month"
+    agency: nbk
+    fetcher: nbk_open_position
+    min_items: 10
+    frequency: monthly
+    unit: "billion KZT (negative = the NBK absorbs liquidity)"
+    category: monetary
+    note: "Daily balances 2020-01-05 onward (MPR annexes to 2024-01, the page's JSON from 2023-11-08, identical on the overlap), kept as <ITEM>.AVG (mean of business days) and <ITEM>.EOM (last business day of the month). Items: BALANCE (= the sum of the others), standing facilities DEPOSITS, DIRECT_REPO, REVERSE_REPO, FX_SWAP; open market DEPOSIT_AUCTION, REPO_AUCTION, NOTES; OTHER (swaps with banks and the mortgage organisation, reverse repo with it, loans to banks); CORR_ACCOUNTS (banks' correspondent accounts at the NBK, memo, from 2023-11). The JSON's days are checked against the identity balance = sum of operations. 2026-11-05: BALANCE −8 705.65 (deposit auctions −6 562.75, notes −1 635.2, deposits −507.7)."
+
+  - id: NBK_DEPOSIT_AUCTIONS
+    name_ru: "Депозитные аукционы Национального Банка: объём размещения, число аукционов и средневзвешенная доходность, помесячно"
+    name_en: "National Bank deposit auctions: volume placed, number of auctions and volume-weighted yield, monthly"
+    agency: nbk
+    fetcher: nbk_deposit_auctions
+    min_items: 3
+    frequency: monthly
+    unit: "VOLUME billion KZT; N auctions; YIELD %"
+    category: monetary
+    note: "Sum over the auctions of the month (by auction date) of the NBK's xlsx export, 2019-02 onward. YIELD is weighted by the volume placed. The stock outstanding is NBK_OPEN_POSITION's DEPOSIT_AUCTION."

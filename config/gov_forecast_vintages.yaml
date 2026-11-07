@@ -1,0 +1,361 @@
+# Macroeconomic forecast of the Government of Kazakhstan («Прогноз социально-экономического развития», ПСЭР, Ministry
+# of National Economy): the scenario conditions of every vintage found, 2015-2026. Hand-maintained: the forecast is
+# approved by a protocol decision of the Government (not an adilet act), published on gov.kz only as PDF/DOCX
+# appendices whose layout changes every few years, and found there unreliably (the 2027-2029 forecast is filed under
+# an unrelated record, 1060939). One new vintage each August plus 0-2 amendments a year: add it here by hand.
+# Read by scripts/fetchers/manual_vintages.py (dataset GOV_MACRO_FORECAST_VINTAGES).
+#
+# Per year: gdp_kzt_bn (nominal GDP, bn KZT), real_gdp (% of previous year), gdp_usd_bn, usdkzt (= gdp_kzt / gdp_usd:
+# the forecast gives no exchange-rate row, GDP in dollars is "по расчётному курсу"; in a forecast year it comes out
+# round, which checks the transcription), brent ($/bbl, base scenario), cpi ([low, high], % Dec/Dec, the target band),
+# oil_mt (oil and condensate output, Mt; the row was dropped from the 2026-2028 vintage on). The first year of a vintage
+# is the Government's estimate for the current year. Values transcribed 2026-11-07 from the appendices
+# («Приложение 1 к Прогнозу…»); the 2023-08 and 2024-08 vintages from the English DOCX annex.
+
+source: "Министерство национальной экономики РК, Прогноз социально-экономического развития, приложение (основные макроэкономические показатели)"
+base_url: "https://www.gov.kz"
+vintages:
+  - vintage: "2015-08"
+    title: "ПСЭР 2016–2020"
+    kind: final           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2015-08-29 прот.35"
+    gov_kz_record: "26678"
+    appendix: "/uploads/2020/4/10/8171b03b45f7eb87695e016c7e65f1ec_original.317091.pdf"
+    years:
+      2015: {gdp_kzt_bn: 40719.1, real_gdp: 101.5, gdp_usd_bn: 191.7, usdkzt: 212.4, brent: 50.0, oil_mt: 80.5, cpi: [6.0, 8.0]}   # estimate
+      2016: {gdp_kzt_bn: 44005.2, real_gdp: 102.1, gdp_usd_bn: 176.0, usdkzt: 250.0, brent: 40.0, oil_mt: 77.0, cpi: [6.0, 8.0]}
+      2017: {gdp_kzt_bn: 48296.5, real_gdp: 103.6, gdp_usd_bn: 193.2, usdkzt: 250.0, brent: 40.0, oil_mt: 79.0, cpi: [6.0, 8.0]}
+      2018: {gdp_kzt_bn: 52898.1, real_gdp: 102.9, gdp_usd_bn: 211.6, usdkzt: 250.0, brent: 50.0, oil_mt: 82.0, cpi: [5.0, 7.0]}
+      2019: {gdp_kzt_bn: 57263.2, real_gdp: 103.0, gdp_usd_bn: 229.1, usdkzt: 249.9, brent: 50.0, oil_mt: 84.0, cpi: [4.0, 6.0]}
+      2020: {gdp_kzt_bn: 61521.1, real_gdp: 103.1, gdp_usd_bn: 246.1, usdkzt: 250.0, brent: 50.0, oil_mt: 92.0, cpi: [3.0, 4.0]}
+  - vintage: "2016-08"
+    title: "ПСЭР 2017–2021"
+    kind: final           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2016-08-31 прот.29"
+    gov_kz_record: "26683"
+    appendix: "/uploads/2020/4/10/a5f9a066a8ff083742801922be0218c3_original.320134.pdf"
+    years:
+      2016: {gdp_kzt_bn: 44354.0, real_gdp: 100.5, gdp_usd_bn: 123.2, usdkzt: 360.0, brent: 35.0, oil_mt: 75.5, cpi: [6.0, 8.0]}   # estimate
+      2017: {gdp_kzt_bn: 48391.8, real_gdp: 101.9, gdp_usd_bn: 134.4, usdkzt: 360.1, brent: 35.0, oil_mt: 79.5, cpi: [6.0, 8.0]}
+      2018: {gdp_kzt_bn: 51690.6, real_gdp: 102.1, gdp_usd_bn: 143.6, usdkzt: 360.0, brent: 35.0, oil_mt: 81.5, cpi: [5.0, 7.0]}
+      2019: {gdp_kzt_bn: 55280.2, real_gdp: 102.7, gdp_usd_bn: 153.6, usdkzt: 359.9, brent: 35.0, oil_mt: 84.5, cpi: [4.0, 6.0]}
+      2020: {gdp_kzt_bn: 59611.2, real_gdp: 102.9, gdp_usd_bn: 170.3, usdkzt: 350.0, brent: 40.0, oil_mt: 86.5, cpi: [3.0, 4.0]}
+      2021: {gdp_kzt_bn: 63643.9, real_gdp: 103.1, gdp_usd_bn: 187.2, usdkzt: 340.0, brent: 45.0, oil_mt: 86.5, cpi: [3.0, 4.0]}
+  - vintage: "2017-02"
+    title: "ПСЭР 2017–2021"
+    kind: amend           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2017-02-13 изм."
+    gov_kz_record: "26683"
+    years:
+      2016: {gdp_kzt_bn: 45473.8, real_gdp: 101.0, gdp_usd_bn: 132.9, usdkzt: 342.2, brent: 44.0, oil_mt: 78.0, cpi: [8.5, 8.5]}   # estimate
+      2017: {gdp_kzt_bn: 49740.6, real_gdp: 102.5, gdp_usd_bn: 150.7, usdkzt: 330.1, brent: 50.0, oil_mt: 81.0, cpi: [6.0, 8.0]}
+      2018: {gdp_kzt_bn: 51690.6, real_gdp: 102.1, gdp_usd_bn: 143.6, usdkzt: 360.0, brent: 35.0, oil_mt: 81.5, cpi: [5.0, 7.0]}
+      2019: {gdp_kzt_bn: 55280.2, real_gdp: 102.7, gdp_usd_bn: 153.6, usdkzt: 359.9, brent: 35.0, oil_mt: 84.5, cpi: [4.0, 6.0]}
+      2020: {gdp_kzt_bn: 59611.2, real_gdp: 102.9, gdp_usd_bn: 170.3, usdkzt: 350.0, brent: 40.0, oil_mt: 86.5, cpi: [3.0, 4.0]}
+      2021: {gdp_kzt_bn: 63643.9, real_gdp: 103.1, gdp_usd_bn: 187.2, usdkzt: 340.0, brent: 45.0, oil_mt: 86.5, cpi: [3.0, 4.0]}
+  - vintage: "2017-08"
+    title: "ПСЭР 2018–2022"
+    kind: final           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2017-08-29 прот.34"
+    gov_kz_record: "26689"
+    appendix: "/uploads/2020/4/10/772560e427e687d22ad000a42bf43bf5_original.323089.pdf"
+    years:
+      2017: {gdp_kzt_bn: 49740.6, real_gdp: 102.5, gdp_usd_bn: 150.7, usdkzt: 330.1, brent: 50.0, oil_mt: 81.0, cpi: [6.0, 8.0]}   # estimate
+      2018: {gdp_kzt_bn: 54130.3, real_gdp: 103.1, gdp_usd_bn: 164.0, usdkzt: 330.1, brent: 50.0, oil_mt: 86.0, cpi: [5.0, 7.0]}
+      2019: {gdp_kzt_bn: 58571.9, real_gdp: 103.0, gdp_usd_bn: 177.5, usdkzt: 330.0, brent: 50.0, oil_mt: 87.0, cpi: [4.0, 6.0]}
+      2020: {gdp_kzt_bn: 62558.5, real_gdp: 103.2, gdp_usd_bn: 189.6, usdkzt: 329.9, brent: 50.0, oil_mt: 87.0, cpi: [3.0, 4.0]}
+      2021: {gdp_kzt_bn: 66905.8, real_gdp: 103.3, gdp_usd_bn: 202.7, usdkzt: 330.1, brent: 50.0, oil_mt: 87.0, cpi: [3.0, 4.0]}
+      2022: {gdp_kzt_bn: 71714.9, real_gdp: 103.5, gdp_usd_bn: 217.3, usdkzt: 330.0, brent: 50.0, oil_mt: 87.0, cpi: [3.0, 4.0]}
+  - vintage: "2018-04"
+    title: "ПСЭР 2018–2022"
+    kind: amend           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2018-04-03 прот.14 изм."
+    gov_kz_record: "26689"
+    years:
+      2017: {gdp_kzt_bn: 51855.3, real_gdp: 103.4, gdp_usd_bn: 156.4, usdkzt: 331.6, brent: 50.0, oil_mt: 84.5, cpi: [6.0, 8.0]}   # estimate
+      2018: {gdp_kzt_bn: 55906.2, real_gdp: 103.1, gdp_usd_bn: 164.4, usdkzt: 340.1, brent: 45.0, oil_mt: 86.0, cpi: [5.0, 7.0]}
+      2019: {gdp_kzt_bn: 60800.0, real_gdp: 103.5, gdp_usd_bn: 178.8, usdkzt: 340.0, brent: 45.0, oil_mt: 87.0, cpi: [4.0, 6.0]}
+      2020: {gdp_kzt_bn: 65352.3, real_gdp: 103.9, gdp_usd_bn: 192.2, usdkzt: 340.0, brent: 45.0, oil_mt: 87.3, cpi: [3.0, 4.0]}
+      2021: {gdp_kzt_bn: 70362.3, real_gdp: 104.0, gdp_usd_bn: 206.9, usdkzt: 340.1, brent: 45.0, oil_mt: 87.5, cpi: [3.0, 4.0]}
+      2022: {gdp_kzt_bn: 75875.4, real_gdp: 104.2, gdp_usd_bn: 223.2, usdkzt: 339.9, brent: 45.0, oil_mt: 88.6, cpi: [3.0, 4.0]}
+  - vintage: "2018-05"
+    title: "ПСЭР 2019–2023"
+    kind: stage1           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2018-05 РБК (1 этап)"
+    gov_kz_record: "24358"
+    appendix: "/uploads/2020/3/26/58ef40105999f097a0fe118fd7cb66a7_original.315598.pdf"
+    years:
+      2018: {gdp_kzt_bn: 57206.7, real_gdp: 103.8, gdp_usd_bn: 168.3, usdkzt: 339.9, brent: 55.0, oil_mt: 87.0, cpi: [5.0, 7.0]}   # estimate
+      2019: {gdp_kzt_bn: 62139.1, real_gdp: 103.9, gdp_usd_bn: 182.8, usdkzt: 339.9, brent: 55.0, oil_mt: 88.0, cpi: [4.0, 6.0]}
+      2020: {gdp_kzt_bn: 66966.2, real_gdp: 104.1, gdp_usd_bn: 197.0, usdkzt: 339.9, brent: 55.0, oil_mt: 89.0, cpi: [3.0, 4.0]}
+      2021: {gdp_kzt_bn: 72257.2, real_gdp: 104.3, gdp_usd_bn: 212.5, usdkzt: 340.0, brent: 55.0, oil_mt: 90.0, cpi: [3.0, 4.0]}
+      2022: {gdp_kzt_bn: 77949.3, real_gdp: 104.2, gdp_usd_bn: 229.3, usdkzt: 339.9, brent: 55.0, oil_mt: 90.0, cpi: [3.0, 4.0]}
+      2023: {gdp_kzt_bn: 84339.0, real_gdp: 104.5, gdp_usd_bn: 248.1, usdkzt: 339.9, brent: 55.0, oil_mt: 99.0, cpi: [3.0, 4.0]}
+  - vintage: "2018-08"
+    title: "ПСЭР 2019–2023"
+    kind: final           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2018-08-28 прот.33"
+    gov_kz_record: "24355"
+    appendix: "/uploads/2020/3/26/66cdc68eb8d4c110d40cacfd929f2588_original.316555.pdf"
+    years:
+      2018: {gdp_kzt_bn: 58493.1, real_gdp: 103.8, gdp_usd_bn: 172.0, usdkzt: 340.1, brent: 65.0, oil_mt: 87.0, cpi: [5.0, 7.0]}   # estimate
+      2019: {gdp_kzt_bn: 64145.7, real_gdp: 103.9, gdp_usd_bn: 183.3, usdkzt: 349.9, brent: 60.0, oil_mt: 88.0, cpi: [4.0, 6.0]}
+      2020: {gdp_kzt_bn: 69079.6, real_gdp: 104.1, gdp_usd_bn: 197.4, usdkzt: 349.9, brent: 60.0, oil_mt: 89.0, cpi: [3.0, 4.0]}
+      2021: {gdp_kzt_bn: 74497.9, real_gdp: 104.3, gdp_usd_bn: 212.9, usdkzt: 349.9, brent: 60.0, oil_mt: 90.0, cpi: [3.0, 4.0]}
+      2022: {gdp_kzt_bn: 80317.7, real_gdp: 104.2, gdp_usd_bn: 229.5, usdkzt: 350.0, brent: 60.0, oil_mt: 90.0, cpi: [3.0, 4.0]}
+      2023: {gdp_kzt_bn: 86944.7, real_gdp: 104.6, gdp_usd_bn: 248.4, usdkzt: 350.0, brent: 60.0, oil_mt: 99.0, cpi: [3.0, 4.0]}
+  - vintage: "2018-10"
+    title: "ПСЭР 2018–2022"
+    kind: amend           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2018-10-09 прот.40 изм."
+    gov_kz_record: "26689"
+    appendix: "/uploads/2020/4/10/4ffba9293e7d2473699fa147cbe9c441_original.325850.pdf"
+    years:
+      2017: {gdp_kzt_bn: 52413.4, real_gdp: 104.0, gdp_usd_bn: 160.8, usdkzt: 326.0, brent: 54.4, oil_mt: 86.2, cpi: [6.0, 8.0]}   # estimate
+      2018: {gdp_kzt_bn: 57206.7, real_gdp: 103.8, gdp_usd_bn: 168.3, usdkzt: 339.9, brent: 55.0, oil_mt: 87.0, cpi: [5.0, 7.0]}
+      2019: {gdp_kzt_bn: 60800.0, real_gdp: 103.5, gdp_usd_bn: 178.8, usdkzt: 340.0, brent: 45.0, oil_mt: 87.0, cpi: [4.0, 6.0]}
+      2020: {gdp_kzt_bn: 65352.3, real_gdp: 103.9, gdp_usd_bn: 192.2, usdkzt: 340.0, brent: 45.0, oil_mt: 87.3, cpi: [3.0, 4.0]}
+      2021: {gdp_kzt_bn: 70362.3, real_gdp: 104.0, gdp_usd_bn: 206.9, usdkzt: 340.1, brent: 45.0, oil_mt: 87.5, cpi: [3.0, 4.0]}
+      2022: {gdp_kzt_bn: 75875.4, real_gdp: 104.2, gdp_usd_bn: 223.2, usdkzt: 339.9, brent: 45.0, oil_mt: 88.6, cpi: [3.0, 4.0]}
+  - vintage: "2018-11"
+    title: "ПСЭР 2019–2023"
+    kind: amend           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2018-11-26 прот.47 изм."
+    gov_kz_record: "24350"
+    appendix: "/uploads/2020/3/26/1e5bcc99524258cca21c6b7ee6a6eabb_original.319147.pdf"
+    years:
+      2018: {gdp_kzt_bn: 58242.9, real_gdp: 103.8, gdp_usd_bn: 166.4, usdkzt: 350.0, brent: 60.0, oil_mt: 87.0, cpi: [5.0, 7.0]}   # estimate
+      2019: {gdp_kzt_bn: 64011.5, real_gdp: 103.8, gdp_usd_bn: 173.0, usdkzt: 370.0, brent: 55.0, oil_mt: 88.0, cpi: [4.0, 6.0]}
+      2020: {gdp_kzt_bn: 68887.3, real_gdp: 104.0, gdp_usd_bn: 186.2, usdkzt: 370.0, brent: 55.0, oil_mt: 89.0, cpi: [3.0, 4.0]}
+      2021: {gdp_kzt_bn: 74231.5, real_gdp: 104.2, gdp_usd_bn: 200.6, usdkzt: 370.0, brent: 55.0, oil_mt: 90.0, cpi: [3.0, 4.0]}
+      2022: {gdp_kzt_bn: 79976.0, real_gdp: 104.1, gdp_usd_bn: 216.2, usdkzt: 369.9, brent: 55.0, oil_mt: 90.0, cpi: [3.0, 4.0]}
+      2023: {gdp_kzt_bn: 86450.7, real_gdp: 104.5, gdp_usd_bn: 233.7, usdkzt: 369.9, brent: 55.0, oil_mt: 99.0, cpi: [3.0, 4.0]}
+  - vintage: "2019-03"
+    title: "ПСЭР 2019–2023"
+    kind: amend           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2019-03-12 прот.9 изм."
+    gov_kz_record: "24346"
+    appendix: "/uploads/2020/3/26/d3374f374fbf7089da20bee9b8f6fdd6_original.317610.pdf"
+    years:
+      2018: {gdp_kzt_bn: 58785.7, real_gdp: 104.1, gdp_usd_bn: 170.5, usdkzt: 344.8, brent: 71.1, oil_mt: 90.4, cpi: [5.3, 5.3]}   # estimate
+      2019: {gdp_kzt_bn: 64335.0, real_gdp: 103.8, gdp_usd_bn: 173.9, usdkzt: 370.0, brent: 55.0, oil_mt: 89.0, cpi: [4.0, 6.0]}
+      2020: {gdp_kzt_bn: 68887.3, real_gdp: 104.0, gdp_usd_bn: 186.2, usdkzt: 370.0, brent: 55.0, oil_mt: 89.0, cpi: [3.0, 4.0]}
+      2021: {gdp_kzt_bn: 74231.5, real_gdp: 104.2, gdp_usd_bn: 200.6, usdkzt: 370.0, brent: 55.0, oil_mt: 90.0, cpi: [3.0, 4.0]}
+      2022: {gdp_kzt_bn: 79976.0, real_gdp: 104.1, gdp_usd_bn: 216.2, usdkzt: 369.9, brent: 55.0, oil_mt: 90.0, cpi: [3.0, 4.0]}
+      2023: {gdp_kzt_bn: 86450.7, real_gdp: 104.5, gdp_usd_bn: 233.7, usdkzt: 369.9, brent: 55.0, oil_mt: 99.0, cpi: [3.0, 4.0]}
+  - vintage: "2019-08"
+    title: "ПСЭР 2020–2024"
+    kind: final           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2019-08-27 прот.31"
+    gov_kz_record: "24374"
+    appendix: "/uploads/2020/3/26/6558147974407cdaf32006556bec2a46_original.320152.pdf"
+    years:
+      2019: {gdp_kzt_bn: 67668.4, real_gdp: 103.8, gdp_usd_bn: 182.9, usdkzt: 370.0, brent: 55.0, oil_mt: 89.0, cpi: [4.0, 6.0]}   # estimate
+      2020: {gdp_kzt_bn: 74526.0, real_gdp: 104.1, gdp_usd_bn: 196.1, usdkzt: 380.0, brent: 55.0, oil_mt: 90.0, cpi: [4.0, 6.0]}
+      2021: {gdp_kzt_bn: 81837.2, real_gdp: 104.3, gdp_usd_bn: 215.4, usdkzt: 379.9, brent: 55.0, oil_mt: 91.0, cpi: [4.0, 6.0]}
+      2022: {gdp_kzt_bn: 88995.6, real_gdp: 104.4, gdp_usd_bn: 234.2, usdkzt: 380.0, brent: 55.0, oil_mt: 91.0, cpi: [3.0, 5.0]}
+      2023: {gdp_kzt_bn: 97008.7, real_gdp: 104.6, gdp_usd_bn: 255.3, usdkzt: 380.0, brent: 55.0, oil_mt: 100.0, cpi: [3.0, 5.0]}
+      2024: {gdp_kzt_bn: 105789.7, real_gdp: 104.7, gdp_usd_bn: 278.4, usdkzt: 380.0, brent: 55.0, oil_mt: 100.0, cpi: [3.0, 5.0]}
+  - vintage: "2020-04"
+    title: "ПСЭР 2020–2024"
+    kind: amend           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2020-04-02 прот.9 изм."
+    gov_kz_record: "26451"
+    appendix: "/uploads/2020/4/9/ddd6af01dc4c71a2d1e56852e95fdce1_original.326568.pdf"
+    years:
+      2019: {gdp_kzt_bn: 68639.5, real_gdp: 104.5, gdp_usd_bn: 179.3, usdkzt: 382.8, brent: 64.0, oil_mt: 90.5, cpi: [5.4, 5.4]}   # estimate
+      2020: {gdp_kzt_bn: 69679.6, real_gdp: 99.1, gdp_usd_bn: 158.4, usdkzt: 439.9, brent: 20.0, oil_mt: 86.0, cpi: [9.0, 11.0]}
+      2021: {gdp_kzt_bn: 81837.2, real_gdp: 104.3, gdp_usd_bn: 215.4, usdkzt: 379.9, brent: 55.0, oil_mt: 91.0, cpi: [4.0, 6.0]}
+      2022: {gdp_kzt_bn: 88995.6, real_gdp: 104.4, gdp_usd_bn: 234.2, usdkzt: 380.0, brent: 55.0, oil_mt: 91.0, cpi: [3.0, 5.0]}
+      2023: {gdp_kzt_bn: 97008.7, real_gdp: 104.6, gdp_usd_bn: 255.3, usdkzt: 380.0, brent: 55.0, oil_mt: 100.0, cpi: [3.0, 5.0]}
+      2024: {gdp_kzt_bn: 105789.7, real_gdp: 104.7, gdp_usd_bn: 278.4, usdkzt: 380.0, brent: 55.0, oil_mt: 100.0, cpi: [3.0, 5.0]}
+  - vintage: "2020-06"
+    title: "ПСЭР 2021–2025"
+    kind: stage1           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2020-06 РБК (1 этап)"
+    gov_kz_record: "38445"
+    appendix: "/uploads/2020/6/1/b1176bd2dcbd1383a96f29c2906ff30a_original.311227.pdf"
+    years:
+      2020: {gdp_kzt_bn: 69679.6, real_gdp: 99.1, gdp_usd_bn: 158.4, usdkzt: 439.9, brent: 20.0, oil_mt: 86.0, cpi: [9.0, 11.0]}   # estimate
+      2021: {gdp_kzt_bn: 74961.6, real_gdp: 102.7, gdp_usd_bn: 174.3, usdkzt: 430.1, brent: 30.0, oil_mt: 86.0, cpi: [4.0, 6.0]}
+      2022: {gdp_kzt_bn: 80474.3, real_gdp: 103.5, gdp_usd_bn: 187.1, usdkzt: 430.1, brent: 30.0, oil_mt: 89.6, cpi: [3.0, 5.0]}
+      2023: {gdp_kzt_bn: 87535.7, real_gdp: 104.9, gdp_usd_bn: 203.6, usdkzt: 429.9, brent: 30.0, oil_mt: 100.8, cpi: [3.0, 5.0]}
+      2024: {gdp_kzt_bn: 94318.9, real_gdp: 103.9, gdp_usd_bn: 219.3, usdkzt: 430.1, brent: 30.0, oil_mt: 100.8, cpi: [3.0, 5.0]}
+      2025: {gdp_kzt_bn: 101743.9, real_gdp: 103.9, gdp_usd_bn: 236.6, usdkzt: 430.0, brent: 30.0, oil_mt: 100.7, cpi: [3.0, 5.0]}
+  - vintage: "2020-08"
+    title: "ПСЭР 2021–2025"
+    kind: final           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2020-08-25 прот.29"
+    gov_kz_record: "62731"
+    appendix: "/uploads/2020/9/1/1f013f5ad9e176577fc248aff171d7c0_original.284890.pdf"
+    years:
+      2020: {gdp_kzt_bn: 70803.5, real_gdp: 99.1, gdp_usd_bn: 170.6, usdkzt: 415.0, brent: 40.0, oil_mt: 85.0, cpi: [8.0, 8.5]}   # estimate
+      2021: {gdp_kzt_bn: 76661.8, real_gdp: 102.8, gdp_usd_bn: 182.5, usdkzt: 420.1, brent: 35.0, oil_mt: 86.0, cpi: [4.0, 6.0]}
+      2022: {gdp_kzt_bn: 82419.3, real_gdp: 103.7, gdp_usd_bn: 196.2, usdkzt: 420.1, brent: 35.0, oil_mt: 89.6, cpi: [4.0, 6.0]}
+      2023: {gdp_kzt_bn: 89378.2, real_gdp: 104.6, gdp_usd_bn: 212.8, usdkzt: 420.0, brent: 35.0, oil_mt: 100.8, cpi: [4.0, 5.0]}
+      2024: {gdp_kzt_bn: 96773.1, real_gdp: 104.4, gdp_usd_bn: 230.4, usdkzt: 420.0, brent: 35.0, oil_mt: 100.8, cpi: [4.0, 5.0]}
+      2025: {gdp_kzt_bn: 104811.3, real_gdp: 104.6, gdp_usd_bn: 249.6, usdkzt: 419.9, brent: 35.0, oil_mt: 100.7, cpi: [3.0, 4.0]}
+  - vintage: "2020-10"
+    title: "ПСЭР 2020–2024"
+    kind: amend           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2020-10-13 прот.36 изм."
+    gov_kz_record: "78291"
+    appendix: "/uploads/2020/10/20/4c6c1e5ef339434d2f098f5c075b12d0_original.279442.pdf"
+    years:
+      2019: {gdp_kzt_bn: 69532.6, real_gdp: 104.5, gdp_usd_bn: 181.7, usdkzt: 382.7, brent: 64.0, oil_mt: 90.5, cpi: [5.4, 5.4]}   # estimate
+      2020: {gdp_kzt_bn: 69781.4, real_gdp: 97.9, gdp_usd_bn: 168.1, usdkzt: 415.1, brent: 40.0, oil_mt: 85.0, cpi: [8.0, 8.0]}
+      2021: {gdp_kzt_bn: 81837.2, real_gdp: 104.3, gdp_usd_bn: 215.4, usdkzt: 379.9, brent: 55.0, oil_mt: 91.0, cpi: [4.0, 6.0]}
+      2022: {gdp_kzt_bn: 88995.6, real_gdp: 104.4, gdp_usd_bn: 234.2, usdkzt: 380.0, brent: 55.0, oil_mt: 91.0, cpi: [3.0, 5.0]}
+      2023: {gdp_kzt_bn: 97008.7, real_gdp: 104.6, gdp_usd_bn: 255.3, usdkzt: 380.0, brent: 55.0, oil_mt: 100.0, cpi: [3.0, 5.0]}
+      2024: {gdp_kzt_bn: 105789.7, real_gdp: 104.7, gdp_usd_bn: 278.4, usdkzt: 380.0, brent: 55.0, oil_mt: 100.0, cpi: [3.0, 5.0]}
+  - vintage: "2021-05"
+    title: "ПСЭР 2022–2026"
+    kind: stage1           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2021-05-12 РБК (1 этап)"
+    gov_kz_record: "170596"
+    appendix: "/uploads/2021/5/25/e87aa9158a85e5977cf1f7705ebdfd53_original.314181.pdf"
+    years:
+      2021: {gdp_kzt_bn: 78406.0, real_gdp: 103.1, gdp_usd_bn: 184.5, usdkzt: 425.0, brent: 50.0, oil_mt: 86.0, cpi: [4.0, 6.0]}   # estimate
+      2022: {gdp_kzt_bn: 85820.0, real_gdp: 103.7, gdp_usd_bn: 201.9, usdkzt: 425.1, brent: 50.0, oil_mt: 87.9, cpi: [4.0, 6.0]}
+      2023: {gdp_kzt_bn: 93474.0, real_gdp: 105.2, gdp_usd_bn: 219.9, usdkzt: 425.1, brent: 50.0, oil_mt: 99.1, cpi: [4.0, 5.0]}
+      2024: {gdp_kzt_bn: 101263.0, real_gdp: 104.6, gdp_usd_bn: 238.3, usdkzt: 424.9, brent: 50.0, oil_mt: 103.7, cpi: [4.0, 5.0]}
+      2025: {gdp_kzt_bn: 109401.0, real_gdp: 105.1, gdp_usd_bn: 257.4, usdkzt: 425.0, brent: 50.0, oil_mt: 103.7, cpi: [3.0, 4.0]}
+      2026: {gdp_kzt_bn: 118343.0, real_gdp: 105.2, gdp_usd_bn: 278.5, usdkzt: 424.9, brent: 50.0, oil_mt: 107.4, cpi: [3.0, 4.0]}
+  - vintage: "2021-08"
+    title: "ПСЭР 2022–2026"
+    kind: final           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2021-08-24 прот.27"
+    gov_kz_record: "208527"
+    appendix: "/uploads/2021/9/3/6a351686c705dd76c030e49b508c2bc6_original.408554.pdf"
+    years:
+      2021: {gdp_kzt_bn: 80302.1, real_gdp: 103.7, gdp_usd_bn: 188.9, usdkzt: 425.1, brent: 60.0, oil_mt: 86.0, cpi: [4.0, 6.0]}   # estimate
+      2022: {gdp_kzt_bn: 87075.6, real_gdp: 103.9, gdp_usd_bn: 204.9, usdkzt: 425.0, brent: 60.0, oil_mt: 87.9, cpi: [4.0, 6.0]}
+      2023: {gdp_kzt_bn: 94862.2, real_gdp: 105.3, gdp_usd_bn: 223.2, usdkzt: 425.0, brent: 60.0, oil_mt: 99.1, cpi: [4.0, 5.0]}
+      2024: {gdp_kzt_bn: 102715.7, real_gdp: 104.6, gdp_usd_bn: 241.7, usdkzt: 425.0, brent: 60.0, oil_mt: 103.7, cpi: [4.0, 5.0]}
+      2025: {gdp_kzt_bn: 110829.2, real_gdp: 105.0, gdp_usd_bn: 260.8, usdkzt: 425.0, brent: 60.0, oil_mt: 103.7, cpi: [3.0, 4.0]}
+      2026: {gdp_kzt_bn: 119856.3, real_gdp: 105.2, gdp_usd_bn: 282.0, usdkzt: 425.0, brent: 60.0, oil_mt: 107.4, cpi: [3.0, 4.0]}
+  - vintage: "2022-04"
+    title: "ПСЭР 2022–2026"
+    kind: amend           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2022-04-05 прот.12 изм."
+    gov_kz_record: "292163"
+    appendix: "/uploads/2022/4/12/b33fdbc215bb8808951a7d6da27ab735_original.414885.pdf"
+    years:
+      2021: {gdp_kzt_bn: 81269.2, real_gdp: 104.0, gdp_usd_bn: 190.8, usdkzt: 425.9, brent: 70.8, oil_mt: 85.9, cpi: [8.4, 8.4]}   # estimate
+      2022: {gdp_kzt_bn: 91543.9, real_gdp: 102.1, gdp_usd_bn: 199.0, usdkzt: 460.0, brent: 90.0, oil_mt: 85.7, cpi: [8.0, 10.0]}
+      2023: {gdp_kzt_bn: 94862.2, real_gdp: 105.3, gdp_usd_bn: 223.2, usdkzt: 425.0, brent: 60.0, oil_mt: 99.1, cpi: [4.0, 5.0]}
+      2024: {gdp_kzt_bn: 102715.7, real_gdp: 104.6, gdp_usd_bn: 241.7, usdkzt: 425.0, brent: 60.0, oil_mt: 103.7, cpi: [4.0, 5.0]}
+      2025: {gdp_kzt_bn: 110829.2, real_gdp: 105.0, gdp_usd_bn: 260.8, usdkzt: 425.0, brent: 60.0, oil_mt: 103.7, cpi: [3.0, 4.0]}
+      2026: {gdp_kzt_bn: 119856.3, real_gdp: 105.2, gdp_usd_bn: 282.0, usdkzt: 425.0, brent: 60.0, oil_mt: 107.4, cpi: [3.0, 4.0]}
+  - vintage: "2022-05"
+    title: "ПСЭР 2023–2027"
+    kind: stage1           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2022-05-19 РБК (1 этап)"
+    gov_kz_record: "310234"
+    appendix: "/uploads/2022/5/25/4d4b061eccecb80ad7b196cf07fc8b5c_original.418358.pdf"
+    years:
+      2022: {gdp_kzt_bn: 95469.7, real_gdp: 102.1, gdp_usd_bn: 207.5, usdkzt: 460.1, brent: 90.0, oil_mt: 85.7, cpi: [8.0, 10.0]}   # estimate
+      2023: {gdp_kzt_bn: 103833.8, real_gdp: 104.2, gdp_usd_bn: 225.7, usdkzt: 460.1, brent: 80.0, oil_mt: 92.6, cpi: [4.0, 6.0]}
+      2024: {gdp_kzt_bn: 113408.7, real_gdp: 104.2, gdp_usd_bn: 246.5, usdkzt: 460.1, brent: 80.0, oil_mt: 98.1, cpi: [4.0, 5.0]}
+      2025: {gdp_kzt_bn: 123194.5, real_gdp: 104.4, gdp_usd_bn: 267.8, usdkzt: 460.0, brent: 80.0, oil_mt: 103.2, cpi: [3.0, 4.0]}
+      2026: {gdp_kzt_bn: 132847.2, real_gdp: 103.4, gdp_usd_bn: 288.8, usdkzt: 460.0, brent: 80.0, oil_mt: 98.8, cpi: [3.0, 4.0]}
+      2027: {gdp_kzt_bn: 143905.3, real_gdp: 103.8, gdp_usd_bn: 312.8, usdkzt: 460.1, brent: 80.0, oil_mt: 99.9, cpi: [3.0, 4.0]}
+  - vintage: "2022-08"
+    title: "ПСЭР 2023–2027"
+    kind: final           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2022-08 (2 этап)"
+    gov_kz_record: "341405"
+    appendix: "/uploads/2022/9/5/3472adfa9580ecce7917b99302411ca4_original.419433.pdf"
+    years:
+      2022: {gdp_kzt_bn: 103570.4, real_gdp: 103.0, gdp_usd_bn: 225.2, usdkzt: 459.9, brent: 90.0, oil_mt: 85.7, cpi: [13.0, 15.0]}   # estimate
+      2023: {gdp_kzt_bn: 120670.6, real_gdp: 104.0, gdp_usd_bn: 256.7, usdkzt: 470.1, brent: 85.0, oil_mt: 92.6, cpi: [7.5, 9.5]}
+      2024: {gdp_kzt_bn: 133375.5, real_gdp: 104.0, gdp_usd_bn: 283.8, usdkzt: 470.0, brent: 85.0, oil_mt: 98.1, cpi: [4.0, 5.0]}
+      2025: {gdp_kzt_bn: 146517.1, real_gdp: 104.1, gdp_usd_bn: 311.7, usdkzt: 470.1, brent: 85.0, oil_mt: 103.2, cpi: [3.0, 4.0]}
+      2026: {gdp_kzt_bn: 159915.6, real_gdp: 103.2, gdp_usd_bn: 340.2, usdkzt: 470.1, brent: 85.0, oil_mt: 98.8, cpi: [3.0, 4.0]}
+      2027: {gdp_kzt_bn: 176571.5, real_gdp: 104.2, gdp_usd_bn: 375.7, usdkzt: 470.0, brent: 85.0, oil_mt: 99.9, cpi: [3.0, 4.0]}
+  - vintage: "2023-02"
+    title: "ПСЭР 2023–2027"
+    kind: amend           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2023-02-28 прот.8 изм."
+    gov_kz_record: "440531"
+    appendix: "/uploads/2023/3/9/85077f9f4043d9b8e9ac7d560553eccd_original.425292.pdf"
+    years:
+      2023: {gdp_kzt_bn: 120670.6, real_gdp: 104.0, gdp_usd_bn: 256.7, usdkzt: 470.1, brent: 85.0, oil_mt: 92.6, cpi: [7.5, 9.5]}   # estimate
+      2024: {gdp_kzt_bn: 133375.5, real_gdp: 104.0, gdp_usd_bn: 283.8, usdkzt: 470.0, brent: 85.0, oil_mt: 98.1, cpi: [4.0, 5.0]}
+      2025: {gdp_kzt_bn: 146517.1, real_gdp: 104.1, gdp_usd_bn: 311.7, usdkzt: 470.1, brent: 85.0, oil_mt: 103.2, cpi: [3.0, 4.0]}
+      2026: {gdp_kzt_bn: 159915.6, real_gdp: 103.2, gdp_usd_bn: 340.2, usdkzt: 470.1, brent: 85.0, oil_mt: 98.8, cpi: [3.0, 4.0]}
+      2027: {gdp_kzt_bn: 176571.5, real_gdp: 104.2, gdp_usd_bn: 375.7, usdkzt: 470.0, brent: 85.0, oil_mt: 99.9, cpi: [3.0, 4.0]}
+  - vintage: "2023-05"
+    title: "ПСЭР 2024–2028"
+    kind: stage1           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2023-05-17 РБК (1 этап)"
+    gov_kz_record: "470539"
+    appendix: "/uploads/2023/5/18/c2fe71fb3bf4b94306ce198f086551b5_original.419328.pdf"
+    years:
+      2023: {gdp_kzt_bn: 118286.9, real_gdp: 104.0, gdp_usd_bn: 251.5, usdkzt: 470.3, brent: 85.0, oil_mt: 90.5, cpi: [7.5, 9.5]}   # estimate
+      2024: {gdp_kzt_bn: 138360.0, real_gdp: 105.0, gdp_usd_bn: 300.8, usdkzt: 460.0, brent: 80.0, oil_mt: 95.4, cpi: [6.0, 8.0]}
+      2025: {gdp_kzt_bn: 156778.4, real_gdp: 105.5, gdp_usd_bn: 340.8, usdkzt: 460.0, brent: 80.0, oil_mt: 103.3, cpi: [4.0, 6.0]}
+      2026: {gdp_kzt_bn: 175113.7, real_gdp: 105.1, gdp_usd_bn: 380.7, usdkzt: 460.0, brent: 80.0, oil_mt: 99.4, cpi: [3.0, 4.0]}
+      2027: {gdp_kzt_bn: 196695.1, real_gdp: 105.7, gdp_usd_bn: 427.6, usdkzt: 460.0, brent: 80.0, oil_mt: 101.0, cpi: [3.0, 4.0]}
+      2028: {gdp_kzt_bn: 221518.0, real_gdp: 106.0, gdp_usd_bn: 481.6, usdkzt: 460.0, brent: 80.0, oil_mt: 102.0, cpi: [3.0, 4.0]}
+  - vintage: "2023-08"
+    title: "ПСЭР 2024–2028"
+    kind: final           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2023-08-29 прот.29"
+    gov_kz_record: "516751"
+    appendix: "/uploads/2023/10/12/6600e2b741d6fe6cfc94083c32021f1e_original.25808.docx"
+    years:
+      2023: {gdp_kzt_bn: 119123.7, real_gdp: 104.7, gdp_usd_bn: 264.7, usdkzt: 450.0, brent: 80.0, oil_mt: 90.5, cpi: [7.5, 9.5]}   # estimate
+      2024: {gdp_kzt_bn: 135010.8, real_gdp: 105.3, gdp_usd_bn: 293.5, usdkzt: 460.0, brent: 80.0, oil_mt: 95.4, cpi: [6.0, 8.0]}
+      2025: {gdp_kzt_bn: 153034.9, real_gdp: 105.6, gdp_usd_bn: 332.7, usdkzt: 460.0, brent: 80.0, oil_mt: 103.3, cpi: [5.5, 7.5]}
+      2026: {gdp_kzt_bn: 172590.8, real_gdp: 106.0, gdp_usd_bn: 375.2, usdkzt: 460.0, brent: 80.0, oil_mt: 99.4, cpi: [5.0, 5.0]}
+      2027: {gdp_kzt_bn: 194228.3, real_gdp: 106.0, gdp_usd_bn: 422.2, usdkzt: 460.0, brent: 80.0, oil_mt: 101.0, cpi: [5.0, 5.0]}
+      2028: {gdp_kzt_bn: 218452.8, real_gdp: 106.0, gdp_usd_bn: 474.9, usdkzt: 460.0, brent: 80.0, oil_mt: 102.0, cpi: [5.0, 5.0]}
+  - vintage: "2024-05"
+    title: "ПСЭР 2025–2029"
+    kind: stage1           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2024-05-22 РБК (1 этап)"
+    gov_kz_record: "670517"
+    appendix: "/uploads/2024/7/30/5b3024d18cc806158562bb6c779254f0_original.26392.docx"
+    years:
+      2024: {gdp_kzt_bn: 134952.3, real_gdp: 106.0, gdp_usd_bn: 299.9, usdkzt: 450.0, brent: 80.0, oil_mt: 90.3, cpi: [6.0, 8.0]}   # estimate
+      2025: {gdp_kzt_bn: 152207.8, real_gdp: 106.0, gdp_usd_bn: 330.9, usdkzt: 460.0, brent: 75.0, oil_mt: 98.2, cpi: [5.5, 7.5]}
+      2026: {gdp_kzt_bn: 172176.0, real_gdp: 106.0, gdp_usd_bn: 374.3, usdkzt: 460.0, brent: 75.0, oil_mt: 101.5, cpi: [5.0, 6.0]}
+      2027: {gdp_kzt_bn: 194005.4, real_gdp: 106.1, gdp_usd_bn: 421.8, usdkzt: 459.9, brent: 75.0, oil_mt: 105.5, cpi: [5.0, 5.0]}
+      2028: {gdp_kzt_bn: 217123.2, real_gdp: 106.0, gdp_usd_bn: 472.0, usdkzt: 460.0, brent: 75.0, oil_mt: 103.9, cpi: [5.0, 5.0]}
+      2029: {gdp_kzt_bn: 242682.8, real_gdp: 106.4, gdp_usd_bn: 527.6, usdkzt: 460.0, brent: 75.0, oil_mt: 104.8, cpi: [5.0, 5.0]}
+  - vintage: "2024-08"
+    title: "ПСЭР 2025–2029"
+    kind: final           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2024-08-27 прот.28"
+    gov_kz_record: "714587"
+    appendix: "/uploads/2024/9/5/924e3a42ce60ccfb4d7bab5440af23e5_original.40426.docx"
+    years:
+      2024: {gdp_kzt_bn: 134252.9, real_gdp: 106.0, gdp_usd_bn: 291.9, usdkzt: 459.9, brent: 80.0, oil_mt: 90.3, cpi: [6.0, 8.0]}   # estimate
+      2025: {gdp_kzt_bn: 150756.4, real_gdp: 105.6, gdp_usd_bn: 320.8, usdkzt: 469.9, brent: 75.0, oil_mt: 97.2, cpi: [5.5, 7.5]}
+      2026: {gdp_kzt_bn: 169429.7, real_gdp: 105.4, gdp_usd_bn: 360.5, usdkzt: 470.0, brent: 75.0, oil_mt: 101.5, cpi: [5.0, 6.0]}
+      2027: {gdp_kzt_bn: 189830.0, real_gdp: 105.5, gdp_usd_bn: 403.9, usdkzt: 470.0, brent: 75.0, oil_mt: 105.5, cpi: [5.0, 5.0]}
+      2028: {gdp_kzt_bn: 210874.1, real_gdp: 105.1, gdp_usd_bn: 448.7, usdkzt: 470.0, brent: 75.0, oil_mt: 103.9, cpi: [5.0, 5.0]}
+      2029: {gdp_kzt_bn: 234224.6, real_gdp: 105.6, gdp_usd_bn: 498.4, usdkzt: 470.0, brent: 75.0, oil_mt: 104.8, cpi: [5.0, 5.0]}
+  - vintage: "2025-08"
+    title: "ПСЭР 2026–2028"
+    kind: final           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2025-08-26 прот.32"
+    gov_kz_record: "897469"
+    appendix: "/uploads/2025/9/17/f9871e2cc2100db6282c46d08a2e49a2_original.345010.pdf"
+    years:
+      2025: {gdp_kzt_bn: 161860.5, real_gdp: 106.0, gdp_usd_bn: 311.3, usdkzt: 520.0, brent: 70.0, cpi: [10.0, 11.0]}   # estimate
+      2026: {gdp_kzt_bn: 183788.2, real_gdp: 105.4, gdp_usd_bn: 340.3, usdkzt: 540.1, brent: 60.0, cpi: [9.0, 11.0]}
+      2027: {gdp_kzt_bn: 206062.3, real_gdp: 105.4, gdp_usd_bn: 381.6, usdkzt: 540.0, brent: 60.0, cpi: [5.5, 7.5]}
+      2028: {gdp_kzt_bn: 229797.7, real_gdp: 105.0, gdp_usd_bn: 425.6, usdkzt: 539.9, brent: 60.0, cpi: [5.0, 7.0]}
+  - vintage: "2026-08"
+    title: "ПСЭР 2027–2029"
+    kind: final           # final = approved in August; stage1 = first-stage draft; amend = mid-year amendment
+    approved: "2026-08-25 прот.30"
+    gov_kz_record: "1060939"   # filed under an unrelated record (a draft order on state-owned companies)
+    appendix: "/uploads/2026/9/24/2d79c5d4ae85a08b74b7ece915f4ce72c2d95b50f7e3a47acd4341a1d9513b81_original.329903.pdf"
+    years:
+      2026: {gdp_kzt_bn: 182430.9, real_gdp: 105.4, gdp_usd_bn: 380.1, usdkzt: 480.0, brent: 85.0, cpi: [9.0, 11.0]}   # estimate
+      2027: {gdp_kzt_bn: 199348.5, real_gdp: 105.3, gdp_usd_bn: 415.3, usdkzt: 480.0, brent: 70.0, cpi: [7.5, 9.5]}
+      2028: {gdp_kzt_bn: 221072.7, real_gdp: 105.5, gdp_usd_bn: 460.6, usdkzt: 480.0, brent: 70.0, cpi: [6.0, 8.0]}
+      2029: {gdp_kzt_bn: 244959.1, real_gdp: 105.4, gdp_usd_bn: 510.3, usdkzt: 480.0, brent: 70.0, cpi: [6.0, 8.0]}
