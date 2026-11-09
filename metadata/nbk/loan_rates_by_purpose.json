@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=27",
+  "dataset_id": "formId=27",
+  "indicator_id": "LOAN_RATES_BY_PURPOSE",
+  "indicator_name": "Weighted average rates on bank loans issued in the month: total, by borrower, by purpose (mortgage, consumer), by enterprise size and maturity, KZT and FX",
+  "description": "Средневзвешенные ставки по кредитам, выданным банками за месяц: всего, по заёмщикам, по целям (ипотечные, потребительские), по размеру предприятия и срочности, в тенге и в валюте",
+  "frequency": "monthly",
+  "unit": "% per annum, weighted by the volume issued in the month",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "NBK formId=27 «Кредиты банковского сектора экономике - ставки», 2022-01 onward, one row per aggregation level (agg_level 1-4). Items <KZT|FX>[.<ALL|BUS|HH>[.<purpose or size>[.<ST|LT>]]]: KZT.ALL all loans in tenge; KZT.HH.MORTGAGE the mortgage rate (10.69 % in August 2026, subsidised programmes included), KZT.HH.CONSUMER 22.29 %, KZT.BUS.LARGE / .MEDIUM / .SMALL, and the same by maturity. Dated by the month the loans were issued: the NBK stamps a month's rate with the 1st of the next month (as form 486, LOAN_RATE_ISSUED_*). KZT.BUS (21.21 %) differs from LOAN_RATE_ISSUED_LEGAL_KZT (form 486, 19.35 %): form 27's business entities include individual entrepreneurs.",
+  "publication_date": null,
+  "last_update_date": "2026-11-09",
+  "download_date": "2026-11-09",
+  "period_start": "2021-12-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

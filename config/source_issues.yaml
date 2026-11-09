@@ -624,3 +624,22 @@ issues:
     advice: >-
       Do not use the 2026 columns of the archived 16-17.10.2026 files; until BNS republishes the quarterly accounts
       for 2026, take quarterly growth from GVA_VOLUME_INDEX_BY_SECTION_DISCRETE (table 4439/4440 basis).
+
+  - id: freight_rail_empty_wagons_2025
+    kind: break
+    variable: FREIGHT_BY_MODE_MONTHLY
+    also: [FREIGHT_TURNOVER_BY_MODE_MONTHLY]
+    observations:
+      - {date: "2024-12-01", item: RAIL, value: 46516.05}
+      - {date: "2025-01-01", item: RAIL, value: 27423.2918}
+    evidence: >
+      BNS tables 445258 and 3885 carry the footnote «По грузовому железнодорожному транспорту данные за отчетный
+      период и соответствующий период прошлого года сформированы без учета вагонов в порожнем состоянии»: from
+      January 2025 rail tonnes (and tonne-km) exclude empty wagons, which the earlier years include. Rail tonnes
+      drop from 46 516 thousand in December 2024 to about 30 000 a month in 2025-2026 with no change in actual
+      traffic (КТЖ reports loading up year on year). The all-modes total inherits the break.
+    advice: >-
+      Use rail tonnes and tonne-km from 2025 on as a new series, or compare 2025-2026 only with the restated
+      previous-year values BNS gives in its monthly bulletins; do not read the January 2025 drop as a fall in
+      traffic. Road and pipeline are unaffected.
+

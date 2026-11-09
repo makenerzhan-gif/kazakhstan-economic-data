@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=16",
+  "dataset_id": "formId=16",
+  "indicator_id": "GOV_SECURITIES_SECONDARY_MARKET",
+  "indicator_name": "Secondary market of government securities: transaction volume during the month, by instrument and term, million KZT",
+  "description": "Вторичный рынок государственных ценных бумаг: объём сделок за месяц по видам бумаг и срокам, млн тенге",
+  "frequency": "monthly",
+  "unit": "million KZT, traded during the month",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "NBK formId=16 «Secondary Market of the Government Securities», 2022-12 onward, items as GOV_SECURITIES_PRIMARY_AUCTIONS (plus EURONOTES). Dated by the month of trading.",
+  "publication_date": null,
+  "last_update_date": "2026-11-09",
+  "download_date": "2026-11-09",
+  "period_start": "2022-12-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "revised"
+}

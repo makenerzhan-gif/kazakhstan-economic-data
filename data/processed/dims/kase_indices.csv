@@ -1,0 +1,1777 @@
+date,region,item_code,item_name,value,transformation
+2000-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",101.5829,level
+2000-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",102.78,level
+2000-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",103.9541,level
+2000-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",104.07,level
+2000-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",110.2948,level
+2000-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",102.08,level
+2000-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",109.5276,level
+2000-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",106.16,level
+2000-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",106.3236,level
+2000-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",105.6,level
+2000-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",106.3957,level
+2000-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",106.35,level
+2001-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",106.095,level
+2001-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",105.92,level
+2001-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",105.7065,level
+2001-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",105.85,level
+2001-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",103.9085,level
+2001-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",101.85,level
+2001-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",103.1614,level
+2001-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",100.67,level
+2001-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",103.8886,level
+2001-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",103.67,level
+2001-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",102.9971,level
+2001-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",102.57,level
+2001-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",101.8386,level
+2001-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",96.92,level
+2001-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",107.1938,level
+2001-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",113.55,level
+2001-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",107.2052,level
+2001-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",106.88,level
+2001-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",104.3373,level
+2001-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",104.37,level
+2001-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",102.0336,level
+2001-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",100.42,level
+2001-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",103.3974,level
+2001-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",103.91,level
+2002-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",104.21,level
+2002-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",107.19,level
+2002-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",107.891,level
+2002-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",110.02,level
+2002-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",110.9737,level
+2002-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",111.8,level
+2002-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",111.36,level
+2002-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",108.74,level
+2002-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",113.7629,level
+2002-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",113.49,level
+2002-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",112.9615,level
+2002-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",113.1,level
+2002-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",111.5126,level
+2002-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",113.17,level
+2002-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",112.1186,level
+2002-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",112.15,level
+2002-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",112.1605,level
+2002-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",112.23,level
+2002-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",104.4577,level
+2002-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",111.78,level
+2002-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",111.2676,level
+2002-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",128.42,level
+2002-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",130.391,level
+2002-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",140.17,level
+2003-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",126.3186,level
+2003-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",124.65,level
+2003-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",128.6275,level
+2003-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",127.84,level
+2003-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",121.2921,level
+2003-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",117.72,level
+2003-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",117.9873,level
+2003-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",108.08,level
+2003-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",100.3995,level
+2003-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",99.5,level
+2003-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",99.8381,level
+2003-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",98.58,level
+2003-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",126.0587,level
+2003-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",130.81,level
+2003-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",139.6557,level
+2003-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",151.21,level
+2003-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",141.4148,level
+2003-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",139.05,level
+2003-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",133.5705,level
+2003-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",133.99,level
+2003-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",133.012,level
+2003-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",134.1,level
+2003-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",144.3057,level
+2003-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",142.42,level
+2004-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",147.9133,level
+2004-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",150.14,level
+2004-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",164.1463,level
+2004-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",167.55,level
+2004-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",173.6424,level
+2004-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",176.19,level
+2004-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",184.8718,level
+2004-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",186.73,level
+2004-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",187.2421,level
+2004-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",187.49,level
+2004-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",192.2723,level
+2004-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",192.51,level
+2004-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",196.2185,level
+2004-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",196.87,level
+2004-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",190.3543,level
+2004-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",188.31,level
+2004-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",193.2418,level
+2004-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",200.18,level
+2004-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",203.7889,level
+2004-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",204.56,level
+2004-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",206.87,level
+2004-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",207.47,level
+2004-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",213.5381,level
+2004-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",213.37,level
+2005-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",216.9563,level
+2005-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",217.83,level
+2005-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",214.785,level
+2005-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",216.47,level
+2005-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",227.6955,level
+2005-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",241.64,level
+2005-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",254.0224,level
+2005-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",265.9,level
+2005-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",287.9885,level
+2005-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",300.27,level
+2005-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",306.1568,level
+2005-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",311.87,level
+2005-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",345.0171,level
+2005-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",366.29,level
+2005-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",409.0273,level
+2005-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",411.0,level
+2005-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",410.2995,level
+2005-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",411.87,level
+2005-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",430.92,level
+2005-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",435.7,level
+2005-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",466.7018,level
+2005-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",512.63,level
+2005-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",594.4125,level
+2005-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",646.42,level
+2006-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",694.8574,level
+2006-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",781.45,level
+2006-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1017.673,level
+2006-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1114.23,level
+2006-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1381.2962,level
+2006-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1724.31,level
+2006-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2111.7705,level
+2006-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2062.6,level
+2006-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1798.1019,level
+2006-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1677.56,level
+2006-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1687.1777,level
+2006-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1679.03,level
+2006-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1711.2748,level
+2006-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1665.34,level
+2006-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1757.7743,level
+2006-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1797.05,level
+2006-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1839.4981,level
+2006-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1791.99,level
+2006-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1803.8885,level
+2006-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1767.19,level
+2006-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1884.2859,level
+2006-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2086.78,level
+2006-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2190.0032,level
+2006-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2418.08,level
+2007-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2408.0995,level
+2007-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2535.63,level
+2007-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2629.4875,level
+2007-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2562.05,level
+2007-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2564.3721,level
+2007-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2646.91,level
+2007-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2562.5252,level
+2007-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2555.26,level
+2007-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2601.529,level
+2007-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2561.73,level
+2007-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2625.8205,level
+2007-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2699.89,level
+2007-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2758.3645,level
+2007-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2708.14,level
+2007-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2600.2905,level
+2007-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2609.43,level
+2007-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2504.4962,level
+2007-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2545.79,level
+2007-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2573.0364,level
+2007-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2640.83,level
+2007-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2507.4514,level
+2007-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2567.35,level
+2007-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2559.9939,level
+2007-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2637.02,level
+2008-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2623.46,level
+2008-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2625.54,level
+2008-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2680.4481,level
+2008-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2701.84,level
+2008-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2661.3216,level
+2008-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2567.1,level
+2008-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2615.8255,level
+2008-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2583.25,level
+2008-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2686.666,level
+2008-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2654.89,level
+2008-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2654.101,level
+2008-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2613.76,level
+2008-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2419.0273,level
+2008-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2335.68,level
+2008-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2156.7529,level
+2008-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1996.3,level
+2008-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1682.0171,level
+2008-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1426.19,level
+2008-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1037.0491,level
+2008-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",971.83,level
+2008-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1041.5285,level
+2008-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",960.03,level
+2008-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",909.5525,level
+2008-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",903.55,level
+2009-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",800.6858,level
+2009-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",622.27,level
+2009-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",644.236,level
+2009-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",626.84,level
+2009-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",654.636,level
+2009-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",683.64,level
+2009-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",820.4709,level
+2009-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",899.98,level
+2009-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1084.9974,level
+2009-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1157.26,level
+2009-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1132.4282,level
+2009-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1069.77,level
+2009-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1065.4391,level
+2009-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1191.74,level
+2009-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1313.6845,level
+2009-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1394.47,level
+2009-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1465.0523,level
+2009-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1512.84,level
+2009-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1613.7509,level
+2009-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1681.2,level
+2009-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1729.059,level
+2009-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1837.76,level
+2009-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1789.3219,level
+2009-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1768.26,level
+2010-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1880.6883,level
+2010-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1838.82,level
+2010-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1796.366,level
+2010-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1747.64,level
+2010-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1836.3247,level
+2010-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1886.11,level
+2010-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1862.9414,level
+2010-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1804.7,level
+2010-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1520.9653,level
+2010-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1457.44,level
+2010-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1467.2505,level
+2010-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1407.99,level
+2010-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1412.1033,level
+2010-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1467.84,level
+2010-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1481.2419,level
+2010-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1408.43,level
+2010-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1467.1623,level
+2010-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1525.29,level
+2010-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1547.94,level
+2010-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1521.6,level
+2010-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1614.9276,level
+2010-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1600.5,level
+2010-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1676.1814,level
+2010-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1718.09,level
+2011-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1782.2,level
+2011-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1790.97,level
+2011-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1857.0115,level
+2011-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1815.83,level
+2011-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1776.9884,level
+2011-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1737.95,level
+2011-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1747.5643,level
+2011-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1714.42,level
+2011-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1622.591,level
+2011-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1628.17,level
+2011-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1566.2323,level
+2011-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1559.77,level
+2011-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1544.711,level
+2011-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1526.16,level
+2011-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1302.7541,level
+2011-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1249.16,level
+2011-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1207.4023,level
+2011-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1140.3,level
+2011-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1145.8671,level
+2011-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1181.11,level
+2011-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1129.2127,level
+2011-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1097.56,level
+2011-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1103.01,level
+2011-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1105.58,level
+2012-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1166.693,level
+2012-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1199.56,level
+2012-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1226.1262,level
+2012-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1253.36,level
+2012-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1252.7867,level
+2012-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1261.09,level
+2012-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1243.5481,level
+2012-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1225.67,level
+2012-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1105.3614,level
+2012-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1011.5,level
+2012-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",984.0624,level
+2012-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",980.52,level
+2012-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",985.2919,level
+2012-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",960.3,level
+2012-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",958.6645,level
+2012-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",926.89,level
+2012-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",977.7155,level
+2012-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",976.09,level
+2012-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",988.2464,level
+2012-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",989.78,level
+2012-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",954.6809,level
+2012-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",940.36,level
+2012-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",951.9294,level
+2012-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",969.7,level
+2013-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1057.9805,level
+2013-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1069.23,level
+2013-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1096.018,level
+2013-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1046.72,level
+2013-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1013.3088,level
+2013-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",963.14,level
+2013-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",940.4873,level
+2013-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",940.25,level
+2013-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",985.509,level
+2013-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",972.91,level
+2013-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",916.978,level
+2013-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",874.12,level
+2013-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",871.4114,level
+2013-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",903.65,level
+2013-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",906.8429,level
+2013-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",906.47,level
+2013-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",911.8114,level
+2013-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",900.4,level
+2013-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",902.1341,level
+2013-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",915.87,level
+2013-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",910.4586,level
+2013-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",932.73,level
+2013-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",908.841,level
+2013-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",918.01,level
+2014-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",930.0679,level
+2014-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",927.94,level
+2014-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1031.386,level
+2014-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1145.85,level
+2014-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1056.16,level
+2014-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1046.38,level
+2014-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1048.7818,level
+2014-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1049.39,level
+2014-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1064.17,level
+2014-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1055.89,level
+2014-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1105.1257,level
+2014-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1120.89,level
+2014-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1210.1736,level
+2014-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1289.35,level
+2014-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1293.2252,level
+2014-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1306.32,level
+2014-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1269.6752,level
+2014-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1203.85,level
+2014-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1101.3574,level
+2014-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1048.48,level
+2014-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1022.2505,level
+2014-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1003.37,level
+2014-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",937.321,level
+2014-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",941.86,level
+2015-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",876.6632,level
+2015-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",826.5,level
+2015-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",830.4225,level
+2015-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",826.28,level
+2015-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",800.0461,level
+2015-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",804.25,level
+2015-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",835.3068,level
+2015-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",861.93,level
+2015-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",857.0711,level
+2015-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",873.73,level
+2015-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",922.1791,level
+2015-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",899.6,level
+2015-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",872.6214,level
+2015-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",861.02,level
+2015-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",822.831,level
+2015-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",836.42,level
+2015-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",859.2605,level
+2015-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",799.72,level
+2015-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",882.9991,level
+2015-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",891.29,level
+2015-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",912.8805,level
+2015-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",918.42,level
+2015-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",883.116,level
+2015-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",858.79,level
+2016-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",839.9633,level
+2016-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",858.79,level
+2016-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",914.1348,level
+2016-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",940.69,level
+2016-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1008.2321,level
+2016-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",970.99,level
+2016-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",967.5876,level
+2016-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",939.51,level
+2016-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",984.8626,level
+2016-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1041.38,level
+2016-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1016.6186,level
+2016-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",985.16,level
+2016-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1018.08,level
+2016-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1061.9,level
+2016-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1087.9768,level
+2016-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1111.64,level
+2016-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1146.9038,level
+2016-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1191.3,level
+2016-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1234.6262,level
+2016-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1283.53,level
+2016-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1327.8486,level
+2016-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1328.34,level
+2016-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1360.6079,level
+2016-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1357.87,level
+2017-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1432.48,level
+2017-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1499.84,level
+2017-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1574.3035,level
+2017-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1557.56,level
+2017-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1560.9268,level
+2017-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1553.96,level
+2017-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1543.115,level
+2017-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1546.59,level
+2017-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1560.8215,level
+2017-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1562.85,level
+2017-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1573.6936,level
+2017-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1659.9,level
+2017-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1734.4145,level
+2017-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1800.38,level
+2017-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",1869.2445,level
+2017-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",1975.64,level
+2017-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2002.5765,level
+2017-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2049.24,level
+2017-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2046.1468,level
+2017-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2043.1,level
+2017-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2078.2186,level
+2017-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2057.28,level
+2017-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2123.9111,level
+2017-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2162.69,level
+2018-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2300.8481,level
+2018-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2329.23,level
+2018-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2334.0145,level
+2018-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2362.21,level
+2018-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2415.1283,level
+2018-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2437.05,level
+2018-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2434.1024,level
+2018-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2436.66,level
+2018-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2492.429,level
+2018-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2503.22,level
+2018-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2414.9952,level
+2018-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2412.01,level
+2018-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2389.4957,level
+2018-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2362.41,level
+2018-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2245.6219,level
+2018-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2231.84,level
+2018-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2185.1135,level
+2018-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2195.33,level
+2018-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2214.3865,level
+2018-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2204.81,level
+2018-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2226.0905,level
+2018-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2249.61,level
+2018-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2271.2744,level
+2018-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2304.94,level
+2019-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2299.9365,level
+2019-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2278.33,level
+2019-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2331.1995,level
+2019-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2365.55,level
+2019-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2383.3453,level
+2019-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2461.26,level
+2019-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2423.3068,level
+2019-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2333.17,level
+2019-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2295.1385,level
+2019-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2256.68,level
+2019-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2233.831,level
+2019-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2289.0,level
+2019-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2275.2359,level
+2019-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2273.64,level
+2019-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2187.5176,level
+2019-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2174.36,level
+2019-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2178.5243,level
+2019-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2218.65,level
+2019-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2200.9974,level
+2019-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2249.89,level
+2019-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2310.2129,level
+2019-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2318.23,level
+2019-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2326.2274,level
+2019-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2363.79,level
+2020-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2339.594,level
+2020-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2299.25,level
+2020-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2324.1935,level
+2020-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2222.59,level
+2020-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2167.0972,level
+2020-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2224.17,level
+2020-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2250.5509,level
+2020-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2274.98,level
+2020-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2282.1517,level
+2020-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2324.92,level
+2020-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2327.0264,level
+2020-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2343.21,level
+2020-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2408.5795,level
+2020-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2445.81,level
+2020-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2436.4155,level
+2020-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2475.71,level
+2020-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2462.6132,level
+2020-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2425.16,level
+2020-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2436.1336,level
+2020-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2456.93,level
+2020-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2529.5362,level
+2020-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2586.34,level
+2020-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2627.7085,level
+2020-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2675.58,level
+2021-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2801.5106,level
+2021-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2799.92,level
+2021-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2896.6765,level
+2021-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2957.76,level
+2021-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3011.9379,level
+2021-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3112.32,level
+2021-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3226.43,level
+2021-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3242.81,level
+2021-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3327.9361,level
+2021-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3381.66,level
+2021-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3364.5845,level
+2021-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3344.07,level
+2021-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3187.734,level
+2021-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3086.66,level
+2021-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3082.4605,level
+2021-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3172.45,level
+2021-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3339.6027,level
+2021-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3383.68,level
+2021-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3600.4581,level
+2021-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3751.85,level
+2021-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3744.4668,level
+2021-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3684.07,level
+2021-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3650.5845,level
+2021-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3675.28,level
+2022-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3516.3019,level
+2022-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3549.26,level
+2022-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3506.4955,level
+2022-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3361.98,level
+2022-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3325.81,level
+2022-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3348.63,level
+2022-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3171.621,level
+2022-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3033.48,level
+2022-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2765.4463,level
+2022-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2661.53,level
+2022-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2655.9036,level
+2022-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2674.72,level
+2022-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",2733.18,level
+2022-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",2953.54,level
+2022-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3038.3455,level
+2022-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3150.51,level
+2022-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3120.0223,level
+2022-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3083.79,level
+2022-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3118.6205,level
+2022-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3132.87,level
+2022-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3065.0173,level
+2022-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3064.93,level
+2022-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3188.291,level
+2022-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3251.64,level
+2023-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3292.455,level
+2023-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3299.91,level
+2023-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3348.387,level
+2023-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3338.9,level
+2023-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3297.5921,level
+2023-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3351.23,level
+2023-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3469.415,level
+2023-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3559.9,level
+2023-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3577.207,level
+2023-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3492.44,level
+2023-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3543.5005,level
+2023-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3604.75,level
+2023-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3642.9545,level
+2023-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3707.73,level
+2023-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3770.6168,level
+2023-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",3866.13,level
+2023-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",3948.2243,level
+2023-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",4103.83,level
+2023-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",4063.2648,level
+2023-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",4035.12,level
+2023-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",4102.7414,level
+2023-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",4167.17,level
+2023-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",4174.9,level
+2023-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",4187.38,level
+2024-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",4295.7671,level
+2024-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",4258.65,level
+2024-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",4543.81,level
+2024-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",4803.18,level
+2024-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",4967.9765,level
+2024-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5077.84,level
+2024-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",4990.6036,level
+2024-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5011.59,level
+2024-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5056.994,level
+2024-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5038.55,level
+2024-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5070.3805,level
+2024-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5151.81,level
+2024-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5232.1664,level
+2024-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5234.43,level
+2024-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5249.5757,level
+2024-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5304.09,level
+2024-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5201.5476,level
+2024-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5171.79,level
+2024-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5161.7286,level
+2024-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5213.61,level
+2024-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5380.4005,level
+2024-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5524.76,level
+2024-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5556.9486,level
+2024-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5578.1,level
+2025-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5720.3605,level
+2025-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5644.41,level
+2025-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5568.6515,level
+2025-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5620.34,level
+2025-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5629.9165,level
+2025-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5658.74,level
+2025-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5582.8809,level
+2025-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5622.1,level
+2025-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5648.7847,level
+2025-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",5561.46,level
+2025-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",5842.4725,level
+2025-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",6018.56,level
+2025-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",6264.0605,level
+2025-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",6413.66,level
+2025-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",6691.1857,level
+2025-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",6993.05,level
+2025-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7124.2143,level
+2025-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7149.42,level
+2025-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7064.1014,level
+2025-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7131.47,level
+2025-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",6911.4895,level
+2025-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",6818.9,level
+2025-12-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",6961.1223,level
+2025-12-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7031.32,level
+2026-01-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7361.3079,level
+2026-01-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7702.6,level
+2026-02-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7637.695,level
+2026-02-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7711.15,level
+2026-03-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7786.7617,level
+2026-03-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7734.6,level
+2026-04-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7801.215,level
+2026-04-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7842.91,level
+2026-05-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7684.0365,level
+2026-05-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7838.16,level
+2026-06-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7731.8836,level
+2026-06-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7712.53,level
+2026-07-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7700.98,level
+2026-07-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7807.55,level
+2026-08-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7996.7952,level
+2026-08-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",8121.46,level
+2026-09-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7920.915,level
+2026-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7795.44,level
+2026-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7845.9424,level
+2026-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7916.32,level
+2026-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7870.1917,level
+2026-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7872.77,level
+2024-12-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",5636.66,level
+2024-12-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",5636.66,level
+2025-01-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",5780.4205,level
+2025-01-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",5703.69,level
+2025-02-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",5627.134,level
+2025-02-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",5679.36,level
+2025-03-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",5689.0318,level
+2025-03-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",5718.15,level
+2025-04-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",5641.5114,level
+2025-04-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",5681.15,level
+2025-05-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",5812.2484,level
+2025-05-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",5768.86,level
+2025-06-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",6077.0365,level
+2025-06-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",6284.4,level
+2025-07-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",6560.4173,level
+2025-07-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",6758.45,level
+2025-08-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",7050.9048,level
+2025-08-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",7369.0,level
+2025-09-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",7524.7757,level
+2025-09-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",7595.3,level
+2025-10-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",7514.0368,level
+2025-10-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",7602.57,level
+2025-11-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",7368.058,level
+2025-11-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",7269.35,level
+2025-12-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",7420.9818,level
+2025-12-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",7495.82,level
+2026-01-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",7847.6047,level
+2026-01-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8211.44,level
+2026-02-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",8142.2515,level
+2026-02-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8220.57,level
+2026-03-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",8301.1839,level
+2026-03-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8245.58,level
+2026-04-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",8332.2055,level
+2026-04-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8476.76,level
+2026-05-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",8316.7365,level
+2026-05-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8508.78,level
+2026-06-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",8410.3041,level
+2026-06-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8399.44,level
+2026-07-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",8397.5091,level
+2026-07-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8550.26,level
+2026-08-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",8773.1695,level
+2026-08-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8976.41,level
+2026-09-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",8754.7559,level
+2026-09-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8616.07,level
+2026-10-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",8684.4614,level
+2026-10-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8771.82,level
+2026-11-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",8720.7083,level
+2026-11-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8723.56,level
+2017-09-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.293,level
+2017-09-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.26,level
+2017-10-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.2018,level
+2017-10-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.17,level
+2017-11-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.1314,level
+2017-11-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.14,level
+2017-12-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.345,level
+2017-12-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.35,level
+2018-01-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.3438,level
+2018-01-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.35,level
+2018-02-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.1875,level
+2018-02-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.17,level
+2018-03-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.2678,level
+2018-03-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.24,level
+2018-04-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.2019,level
+2018-04-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.19,level
+2018-05-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.2045,level
+2018-05-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.3,level
+2018-06-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.3862,level
+2018-06-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.38,level
+2018-07-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.3576,level
+2018-07-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.35,level
+2018-08-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.27,level
+2018-08-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.21,level
+2018-09-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.408,level
+2018-09-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.55,level
+2018-10-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.6087,level
+2018-10-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.7,level
+2018-11-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.8773,level
+2018-11-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.92,level
+2018-12-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",11.0178,level
+2018-12-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",11.14,level
+2019-01-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.925,level
+2019-01-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",11.01,level
+2019-02-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",11.057,level
+2019-02-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",11.0,level
+2019-03-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.7241,level
+2019-03-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.68,level
+2019-04-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.62,level
+2019-04-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.54,level
+2019-05-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.469,level
+2019-05-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.48,level
+2019-06-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.6115,level
+2019-06-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.69,level
+2019-07-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.6873,level
+2019-07-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.74,level
+2019-08-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.6829,level
+2019-08-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.75,level
+2019-09-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.6519,level
+2019-09-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.63,level
+2019-10-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.6135,level
+2019-10-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.71,level
+2019-11-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.5981,level
+2019-11-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.68,level
+2019-12-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.6258,level
+2019-12-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.84,level
+2020-01-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.6895,level
+2020-01-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.69,level
+2020-02-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.716,level
+2020-02-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.72,level
+2020-03-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.8572,level
+2020-03-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",11.2,level
+2020-04-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",11.2859,level
+2020-04-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",11.23,level
+2020-05-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",11.1956,level
+2020-05-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.94,level
+2020-06-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.9518,level
+2020-06-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.99,level
+2020-07-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.9576,level
+2020-07-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.92,level
+2020-08-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.998,level
+2020-08-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.99,level
+2020-09-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.7959,level
+2020-09-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.92,level
+2020-10-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.9223,level
+2020-10-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.93,level
+2020-11-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.9071,level
+2020-11-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.99,level
+2020-12-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.7565,level
+2020-12-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.76,level
+2021-01-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.7672,level
+2021-01-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.84,level
+2021-02-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.7155,level
+2021-02-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.77,level
+2021-03-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.6437,level
+2021-03-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.65,level
+2021-04-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.6209,level
+2021-04-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.64,level
+2021-05-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.5572,level
+2021-05-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.53,level
+2021-06-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.5218,level
+2021-06-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.49,level
+2021-07-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.438,level
+2021-07-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.36,level
+2021-08-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.291,level
+2021-08-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.21,level
+2021-09-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.2614,level
+2021-09-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.29,level
+2021-10-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.2919,level
+2021-10-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.3,level
+2021-11-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.2409,level
+2021-11-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.24,level
+2021-12-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.511,level
+2021-12-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.61,level
+2022-01-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.5325,level
+2022-01-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.46,level
+2022-02-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.596,level
+2022-02-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.75,level
+2022-03-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",11.0884,level
+2022-03-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.97,level
+2022-04-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",11.1581,level
+2022-04-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",11.19,level
+2022-05-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",11.3358,level
+2022-05-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",11.37,level
+2022-06-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",11.555,level
+2022-06-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",11.62,level
+2022-07-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",11.6555,level
+2022-07-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",11.61,level
+2022-08-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",11.6727,level
+2022-08-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",11.62,level
+2022-09-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",11.8114,level
+2022-09-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",11.85,level
+2022-10-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",12.0495,level
+2022-10-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",12.1,level
+2022-11-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",12.3282,level
+2022-11-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",12.21,level
+2022-12-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",12.6471,level
+2022-12-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",12.66,level
+2023-01-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",12.78,level
+2023-01-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",12.85,level
+2023-02-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",12.942,level
+2023-02-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",13.23,level
+2023-03-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",13.7268,level
+2023-03-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",13.66,level
+2023-04-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",13.6915,level
+2023-04-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",13.71,level
+2023-05-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",13.7785,level
+2023-05-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",13.77,level
+2023-06-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",13.9571,level
+2023-06-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.0,level
+2023-07-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.029,level
+2023-07-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.08,level
+2023-08-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.0945,level
+2023-08-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.05,level
+2023-09-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.4086,level
+2023-09-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.43,level
+2023-10-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.5124,level
+2023-10-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.53,level
+2023-11-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.495,level
+2023-11-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.37,level
+2023-12-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.5155,level
+2023-12-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.46,level
+2024-01-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.4014,level
+2024-01-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.38,level
+2024-02-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.2262,level
+2024-02-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.21,level
+2024-03-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.2235,level
+2024-03-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.18,level
+2024-04-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.085,level
+2024-04-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",13.97,level
+2024-05-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.044,level
+2024-05-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",13.89,level
+2024-06-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.079,level
+2024-06-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.1,level
+2024-07-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.0505,level
+2024-07-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",13.9,level
+2024-08-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",13.8519,level
+2024-08-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",13.75,level
+2024-09-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",13.6886,level
+2024-09-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",13.44,level
+2024-10-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",13.6173,level
+2024-10-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",13.59,level
+2024-11-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",13.5657,level
+2024-11-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",13.46,level
+2024-12-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",13.879,level
+2024-12-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",13.85,level
+2025-01-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.0205,level
+2025-01-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",13.91,level
+2025-02-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.0735,level
+2025-02-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.02,level
+2025-03-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.3394,level
+2025-03-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.39,level
+2025-04-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.5859,level
+2025-04-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.59,level
+2025-05-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.7926,level
+2025-05-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.75,level
+2025-06-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",14.839,level
+2025-06-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",14.92,level
+2025-07-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",15.5745,level
+2025-07-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",15.63,level
+2025-08-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",15.7976,level
+2025-08-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",15.73,level
+2025-09-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.0938,level
+2025-09-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",16.09,level
+2025-10-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.5532,level
+2025-10-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",17.02,level
+2025-11-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",17.048,level
+2025-11-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",17.03,level
+2025-12-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.8291,level
+2025-12-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",16.51,level
+2026-01-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.6121,level
+2026-01-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",16.74,level
+2026-02-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.7255,level
+2026-02-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",16.74,level
+2026-03-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.7344,level
+2026-03-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",16.75,level
+2026-04-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.7455,level
+2026-04-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",16.77,level
+2026-05-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.7529,level
+2026-05-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",16.75,level
+2026-06-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.5986,level
+2026-06-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",16.5,level
+2026-07-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.4673,level
+2026-07-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",16.34,level
+2026-08-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.3638,level
+2026-08-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",16.36,level
+2026-09-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.3314,level
+2026-09-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",16.31,level
+2026-10-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.0457,level
+2026-10-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",15.66,level
+2026-11-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",15.5183,level
+2026-11-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",15.5,level
+2017-09-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.1165,level
+2017-09-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.16,level
+2017-10-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.1877,level
+2017-10-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.16,level
+2017-11-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.2155,level
+2017-11-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.26,level
+2017-12-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.1728,level
+2017-12-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.24,level
+2018-01-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.3552,level
+2018-01-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.35,level
+2018-02-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.211,level
+2018-02-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.11,level
+2018-03-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.2478,level
+2018-03-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.3,level
+2018-04-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.47,level
+2018-04-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.55,level
+2018-05-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.5885,level
+2018-05-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.58,level
+2018-06-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.6495,level
+2018-06-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.66,level
+2018-07-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.6638,level
+2018-07-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.68,level
+2018-08-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.8343,level
+2018-08-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.87,level
+2018-09-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.132,level
+2018-09-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.73,level
+2018-10-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.6709,level
+2018-10-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.57,level
+2018-11-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.3595,level
+2018-11-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.3,level
+2018-12-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.2728,level
+2018-12-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.11,level
+2019-01-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.768,level
+2019-01-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.87,level
+2019-02-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.897,level
+2019-02-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.98,level
+2019-03-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.3,level
+2019-03-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.26,level
+2019-04-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.4182,level
+2019-04-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.26,level
+2019-05-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.4165,level
+2019-05-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.37,level
+2019-06-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.466,level
+2019-06-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.53,level
+2019-07-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.5868,level
+2019-07-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.49,level
+2019-08-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.6757,level
+2019-08-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.67,level
+2019-09-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.7448,level
+2019-09-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.82,level
+2019-10-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.847,level
+2019-10-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.61,level
+2019-11-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.911,level
+2019-11-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.73,level
+2019-12-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.8395,level
+2019-12-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.64,level
+2020-01-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.937,level
+2020-01-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.95,level
+2020-02-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.922,level
+2020-02-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.92,level
+2020-03-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.1639,level
+2020-03-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.66,level
+2020-04-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.6936,level
+2020-04-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.79,level
+2020-05-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.9978,level
+2020-05-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.29,level
+2020-06-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.3195,level
+2020-06-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.26,level
+2020-07-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.4019,level
+2020-07-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.58,level
+2020-08-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.678,level
+2020-08-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.82,level
+2020-09-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.9882,level
+2020-09-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",101.09,level
+2020-10-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",101.1418,level
+2020-10-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",101.13,level
+2020-11-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",101.2329,level
+2020-11-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",101.08,level
+2020-12-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",101.599,level
+2020-12-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",101.38,level
+2021-01-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",101.5944,level
+2021-01-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",101.46,level
+2021-02-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",101.808,level
+2021-02-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",101.48,level
+2021-03-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",101.9747,level
+2021-03-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",101.95,level
+2021-04-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",102.0986,level
+2021-04-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",102.05,level
+2021-05-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",102.3061,level
+2021-05-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",102.47,level
+2021-06-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",102.465,level
+2021-06-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",102.61,level
+2021-07-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",102.5895,level
+2021-07-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",102.63,level
+2021-08-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",102.6695,level
+2021-08-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",102.71,level
+2021-09-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",102.7627,level
+2021-09-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",102.83,level
+2021-10-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",102.8552,level
+2021-10-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",102.84,level
+2021-11-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",102.9132,level
+2021-11-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",103.08,level
+2021-12-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",102.7195,level
+2021-12-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",102.4,level
+2022-01-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",102.7244,level
+2022-01-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",102.96,level
+2022-02-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",102.686,level
+2022-02-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",102.3,level
+2022-03-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",102.0789,level
+2022-03-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",102.38,level
+2022-04-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",101.99,level
+2022-04-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",101.94,level
+2022-05-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",101.71,level
+2022-05-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",101.73,level
+2022-06-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",101.1305,level
+2022-06-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.78,level
+2022-07-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.779,level
+2022-07-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.89,level
+2022-08-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.9064,level
+2022-08-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.98,level
+2022-09-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.9364,level
+2022-09-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.86,level
+2022-10-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.735,level
+2022-10-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.62,level
+2022-11-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.1591,level
+2022-11-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.5,level
+2022-12-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.0543,level
+2022-12-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.07,level
+2023-01-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.9065,level
+2023-01-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.06,level
+2023-02-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.708,level
+2023-02-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",98.93,level
+2023-03-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.6153,level
+2023-03-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",98.79,level
+2023-04-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.8575,level
+2023-04-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",98.97,level
+2023-05-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.958,level
+2023-05-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.03,level
+2023-06-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.7757,level
+2023-06-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",98.74,level
+2023-07-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.7915,level
+2023-07-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",98.65,level
+2023-08-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.7977,level
+2023-08-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",98.89,level
+2023-09-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.7933,level
+2023-09-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",98.78,level
+2023-10-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.6729,level
+2023-10-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",98.72,level
+2023-11-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.9341,level
+2023-11-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.21,level
+2023-12-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.387,level
+2023-12-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.54,level
+2024-01-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.669,level
+2024-01-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.71,level
+2024-02-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.9924,level
+2024-02-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.2,level
+2024-03-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.1835,level
+2024-03-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.27,level
+2024-04-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.2818,level
+2024-04-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.6,level
+2024-05-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.505,level
+2024-05-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.87,level
+2024-06-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.6345,level
+2024-06-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.78,level
+2024-07-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.6605,level
+2024-07-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.94,level
+2024-08-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.9424,level
+2024-08-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",101.12,level
+2024-09-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.1857,level
+2024-09-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.7,level
+2024-10-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.275,level
+2024-10-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.58,level
+2024-11-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.4819,level
+2024-11-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.98,level
+2024-12-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.5762,level
+2024-12-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.84,level
+2025-01-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.6495,level
+2025-01-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.94,level
+2025-02-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.548,level
+2025-02-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.64,level
+2025-03-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.0512,level
+2025-03-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.11,level
+2025-04-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.7914,level
+2025-04-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.21,level
+2025-05-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.8,level
+2025-05-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.31,level
+2025-06-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.6125,level
+2025-06-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",98.83,level
+2025-07-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",97.3418,level
+2025-07-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",97.33,level
+2025-08-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",96.7824,level
+2025-08-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",96.92,level
+2025-09-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",96.7481,level
+2025-09-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",96.78,level
+2025-10-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",96.0573,level
+2025-10-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",95.38,level
+2025-11-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",95.4135,level
+2025-11-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",95.46,level
+2025-12-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",95.8359,level
+2025-12-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",96.11,level
+2026-01-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",96.1811,level
+2026-01-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",96.19,level
+2026-02-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",96.3395,level
+2026-02-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",96.36,level
+2026-03-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",96.6817,level
+2026-03-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",96.77,level
+2026-04-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",96.6464,level
+2026-04-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",96.55,level
+2026-05-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",96.7965,level
+2026-05-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",96.92,level
+2026-06-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",97.2314,level
+2026-06-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",97.48,level
+2026-07-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",97.4986,level
+2026-07-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",97.75,level
+2026-08-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",97.6043,level
+2026-08-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",97.6,level
+2026-09-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",97.6632,level
+2026-09-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",97.81,level
+2026-10-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.1771,level
+2026-10-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",98.92,level
+2026-11-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.21,level
+2026-11-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.19,level
+2010-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",-0.2322,level
+2010-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.1074,level
+2010-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.0506,level
+2010-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",-0.1907,level
+2010-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.042,level
+2010-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",-0.1511,level
+2010-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.1193,level
+2010-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.136,level
+2010-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.3931,level
+2010-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.0,level
+2010-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.1868,level
+2010-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.4918,level
+2010-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.1128,level
+2010-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.2237,level
+2010-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.3548,level
+2010-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.0,level
+2010-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.1657,level
+2010-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.2714,level
+2010-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.2207,level
+2010-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.1645,level
+2010-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.0919,level
+2010-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.0,level
+2010-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.4438,level
+2010-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.0442,level
+2011-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.1429,level
+2011-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",-0.0151,level
+2011-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.032,level
+2011-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.0959,level
+2011-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",-0.0448,level
+2011-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.0529,level
+2011-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",-0.1785,level
+2011-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",-2.6747,level
+2011-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.2611,level
+2011-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.1056,level
+2011-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.1641,level
+2011-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.1206,level
+2011-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.1051,level
+2011-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.1597,level
+2011-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",1.0221,level
+2011-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.3994,level
+2011-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.608,level
+2011-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",1.5656,level
+2011-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",1.1061,level
+2011-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.243,level
+2011-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.7774,level
+2011-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.3213,level
+2011-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",1.1284,level
+2011-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",7.647,level
+2012-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.3983,level
+2012-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.1892,level
+2012-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.1516,level
+2012-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.0724,level
+2012-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.1037,level
+2012-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",-0.0232,level
+2012-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.3676,level
+2012-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.0,level
+2012-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.9629,level
+2012-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.5257,level
+2012-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.7815,level
+2012-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.8184,level
+2012-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.4237,level
+2012-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.2275,level
+2012-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",3.1643,level
+2012-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.0,level
+2012-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",1.2856,level
+2012-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",2.441,level
+2012-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",2.2372,level
+2012-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.6208,level
+2012-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",3.8282,level
+2012-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",17.9458,level
+2012-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",2.4553,level
+2012-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.0,level
+2013-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.4749,level
+2013-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.5644,level
+2013-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",1.114,level
+2013-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",1.188,level
+2013-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.3006,level
+2013-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.1078,level
+2013-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.4158,level
+2013-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.2481,level
+2013-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",1.4062,level
+2013-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",3.2441,level
+2013-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",2.5927,level
+2013-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",2.13,level
+2013-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",2.9931,level
+2013-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",3.1089,level
+2013-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.2615,level
+2013-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.0,level
+2013-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",2.6397,level
+2013-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.9325,level
+2013-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",3.526,level
+2013-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",1.5695,level
+2013-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",7.0414,level
+2013-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",10.5039,level
+2013-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",3.6663,level
+2013-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.497,level
+2014-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",4.0154,level
+2014-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",10.3703,level
+2014-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",6.3312,level
+2014-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",20.7914,level
+2014-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",41.9058,level
+2014-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",2.3737,level
+2014-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",2.3069,level
+2014-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.0,level
+2014-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",1.0208,level
+2014-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",2.7601,level
+2014-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",1.9688,level
+2014-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",2.1979,level
+2014-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",1.8735,level
+2014-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",3.9966,level
+2014-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",3.7136,level
+2014-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",4.0512,level
+2014-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.7602,level
+2014-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.8856,level
+2014-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",6.5286,level
+2014-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.8474,level
+2014-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",7.6237,level
+2014-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",5.0966,level
+2014-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",47.0417,level
+2014-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.7645,level
+2015-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",15.4282,level
+2015-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.7032,level
+2015-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",15.5311,level
+2015-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.2142,level
+2015-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.4303,level
+2015-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.6683,level
+2015-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",11.1794,level
+2015-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.415,level
+2015-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",12.2745,level
+2015-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",3.6539,level
+2015-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",3.8018,level
+2015-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",3.5484,level
+2015-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",4.6879,level
+2015-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",4.1605,level
+2015-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",10.9833,level
+2015-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.783,level
+2015-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",17.6284,level
+2015-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",29.0174,level
+2015-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",21.2874,level
+2015-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",18.8114,level
+2015-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",28.1269,level
+2015-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",31.0292,level
+2015-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",79.7314,level
+2015-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",78.4129,level
+2016-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",45.9769,level
+2016-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",24.9338,level
+2016-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",16.2188,level
+2016-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.1663,level
+2016-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.5645,level
+2016-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.9471,level
+2016-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.7077,level
+2016-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.9585,level
+2016-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.0877,level
+2016-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.9628,level
+2016-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",13.6394,level
+2016-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",12.2078,level
+2016-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",12.699,level
+2016-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",12.2003,level
+2016-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",12.1917,level
+2016-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",12.0934,level
+2016-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",12.2089,level
+2016-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",12.2849,level
+2016-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",11.7165,level
+2016-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",11.8193,level
+2016-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",11.641,level
+2016-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",11.2876,level
+2016-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",10.4746,level
+2016-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",10.546,level
+2017-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",11.1986,level
+2017-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",11.2922,level
+2017-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",10.5205,level
+2017-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",10.1703,level
+2017-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",10.017,level
+2017-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",10.2188,level
+2017-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",10.4351,level
+2017-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",10.1191,level
+2017-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",10.0169,level
+2017-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",10.0085,level
+2017-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.5546,level
+2017-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.6374,level
+2017-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.6062,level
+2017-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.5012,level
+2017-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.4292,level
+2017-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.2555,level
+2017-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.2455,level
+2017-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.3235,level
+2017-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.2621,level
+2017-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.2579,level
+2017-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.4615,level
+2017-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.3226,level
+2017-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.4066,level
+2017-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.3989,level
+2018-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.943,level
+2018-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.8136,level
+2018-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.742,level
+2018-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.7921,level
+2018-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.5906,level
+2018-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.5124,level
+2018-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.5219,level
+2018-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.2618,level
+2018-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.2784,level
+2018-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.2901,level
+2018-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.0895,level
+2018-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",7.8231,level
+2018-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.2489,level
+2018-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.1381,level
+2018-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.5888,level
+2018-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.2812,level
+2018-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.5773,level
+2018-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.4959,level
+2018-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.1354,level
+2018-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.2417,level
+2018-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.234,level
+2018-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.3057,level
+2018-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.2924,level
+2018-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.2648,level
+2019-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.1445,level
+2019-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.1515,level
+2019-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.1203,level
+2019-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.2395,level
+2019-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.1591,level
+2019-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.2716,level
+2019-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.0652,level
+2019-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",7.9832,level
+2019-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",7.9802,level
+2019-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.7306,level
+2019-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.2435,level
+2019-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.6313,level
+2019-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.0903,level
+2019-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.217,level
+2019-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.6244,level
+2019-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.6862,level
+2019-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.7561,level
+2019-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.7927,level
+2019-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.458,level
+2019-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.4934,level
+2019-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.9368,level
+2019-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",10.1817,level
+2019-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.8925,level
+2019-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",10.0665,level
+2020-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.5767,level
+2020-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.1089,level
+2020-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.1511,level
+2020-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",10.2491,level
+2020-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",12.3328,level
+2020-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.284,level
+2020-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.3431,level
+2020-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",7.8877,level
+2020-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.4162,level
+2020-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.5988,level
+2020-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.4491,level
+2020-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.1957,level
+2020-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.4451,level
+2020-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.3829,level
+2020-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.8313,level
+2020-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.592,level
+2020-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.5619,level
+2020-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.8488,level
+2020-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.9708,level
+2020-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.5214,level
+2020-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.8363,level
+2020-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.8968,level
+2020-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.3309,level
+2020-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.25,level
+2021-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.1828,level
+2021-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.24,level
+2021-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.661,level
+2021-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.75,level
+2021-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.1516,level
+2021-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.28,level
+2021-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.6755,level
+2021-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.37,level
+2021-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.1061,level
+2021-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.11,level
+2021-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.3368,level
+2021-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.43,level
+2021-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.4285,level
+2021-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.74,level
+2021-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.0148,level
+2021-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",9.3,level
+2021-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",8.9209,level
+2021-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",8.98,level
+2021-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.011,level
+2021-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",10.33,level
+2021-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",9.3659,level
+2021-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",10.61,level
+2021-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",10.5065,level
+2021-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",10.52,level
+2022-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",10.2818,level
+2022-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",11.01,level
+2022-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",11.0405,level
+2022-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.58,level
+2022-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.2621,level
+2022-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.81,level
+2022-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",13.9448,level
+2022-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.76,level
+2022-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.5595,level
+2022-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.03,level
+2022-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",13.6141,level
+2022-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.55,level
+2022-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",13.1075,level
+2022-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.55,level
+2022-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",13.8605,level
+2022-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.33,level
+2022-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.5205,level
+2022-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.87,level
+2022-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.7185,level
+2022-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.63,level
+2022-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",15.4232,level
+2022-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",16.92,level
+2022-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",16.4767,level
+2022-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",17.85,level
+2023-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",15.864,level
+2023-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",16.16,level
+2023-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",16.104,level
+2023-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",17.54,level
+2023-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",16.4342,level
+2023-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",16.95,level
+2023-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",16.805,level
+2023-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",16.56,level
+2023-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",16.542,level
+2023-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",17.51,level
+2023-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",16.1029,level
+2023-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",17.6,level
+2023-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",16.8005,level
+2023-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",16.96,level
+2023-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",16.5286,level
+2023-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",16.89,level
+2023-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",16.3752,level
+2023-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",16.39,level
+2023-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",15.8643,level
+2023-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",16.39,level
+2023-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",15.2659,level
+2023-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",16.28,level
+2023-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.6485,level
+2023-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.19,level
+2024-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.2824,level
+2024-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.71,level
+2024-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",13.8186,level
+2024-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.43,level
+2024-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",12.9688,level
+2024-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.1,level
+2024-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",12.7841,level
+2024-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.65,level
+2024-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",12.81,level
+2024-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",12.28,level
+2024-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",12.859,level
+2024-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",12.18,level
+2024-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",12.3945,level
+2024-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",12.98,level
+2024-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",12.0962,level
+2024-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",12.44,level
+2024-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",12.4205,level
+2024-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",12.36,level
+2024-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",12.9795,level
+2024-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",12.8,level
+2024-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",13.0995,level
+2024-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.7,level
+2024-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.271,level
+2024-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",12.93,level
+2025-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.035,level
+2025-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.74,level
+2025-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",13.8645,level
+2025-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.27,level
+2025-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.6141,level
+2025-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.78,level
+2025-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",15.3114,level
+2025-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.25,level
+2025-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",15.1484,level
+2025-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.82,level
+2025-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.5895,level
+2025-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.08,level
+2025-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.6905,level
+2025-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.0,level
+2025-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.5071,level
+2025-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.8,level
+2025-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.8943,level
+2025-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.72,level
+2025-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",15.02,level
+2025-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.99,level
+2025-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",15.498,level
+2025-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",16.67,level
+2025-12-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",15.7855,level
+2025-12-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.0,level
+2026-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",16.3142,level
+2026-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",16.76,level
+2026-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",16.201,level
+2026-02-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",17.19,level
+2026-03-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",17.1367,level
+2026-03-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",17.83,level
+2026-04-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",17.3473,level
+2026-04-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",17.69,level
+2026-05-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",17.1541,level
+2026-05-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",18.2,level
+2026-06-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",16.3214,level
+2026-06-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.29,level
+2026-07-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",15.6105,level
+2026-07-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.92,level
+2026-08-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",15.0657,level
+2026-08-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",15.38,level
+2026-09-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.9868,level
+2026-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.87,level
+2026-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.3233,level
+2026-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.01,level
+2026-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.015,level
+2026-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.07,level
+2016-10-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",7652.1916,level
+2016-10-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",7793.8766,level
+2016-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",7734.3731,level
+2016-11-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",7617.4099,level
+2016-12-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",7746.7667,level
+2016-12-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",7722.4785,level
+2017-01-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",7872.3149,level
+2017-01-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",7997.3927,level
+2017-02-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",8111.2208,level
+2017-02-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",8199.5348,level
+2017-03-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",8275.8918,level
+2017-03-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",8465.7408,level
+2017-04-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",8266.4697,level
+2017-04-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",8217.441,level
+2017-05-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",8261.6509,level
+2017-05-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",8115.0411,level
+2017-06-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",8365.0829,level
+2017-06-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",8301.4369,level
+2017-07-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",9456.5892,level
+2017-07-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",9496.8668,level
+2017-08-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",9488.5343,level
+2017-08-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",9113.7229,level
+2017-09-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",9165.6163,level
+2017-09-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",9131.6373,level
+2017-10-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",9199.2199,level
+2017-10-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",9356.1294,level
+2017-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",9546.4994,level
+2017-11-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",9470.4151,level
+2017-12-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",9672.4997,level
+2017-12-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",9886.1629,level
+2018-01-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",10428.0146,level
+2018-01-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",10656.4385,level
+2018-02-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",10825.2971,level
+2018-02-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",10702.1905,level
+2018-03-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",10762.1462,level
+2018-03-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",10930.8966,level
+2018-04-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",10936.1156,level
+2018-04-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",10994.4064,level
+2018-05-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",10926.7816,level
+2018-05-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",10846.4326,level
+2018-06-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",10994.4786,level
+2018-06-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",10597.6432,level
+2018-07-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",10636.7678,level
+2018-07-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",10415.7861,level
+2018-08-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",10701.4761,level
+2018-08-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",10449.397,level
+2018-09-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",10446.7075,level
+2018-09-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",10658.1774,level
+2018-10-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",11063.179,level
+2018-10-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",11330.6281,level
+2018-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",11511.2135,level
+2018-11-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",11116.6645,level
+2018-12-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",11109.893,level
+2018-12-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",11324.7825,level
+2019-01-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",11402.1615,level
+2019-01-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",11610.6536,level
+2019-02-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",11911.4454,level
+2019-02-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",11496.7822,level
+2019-03-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",11676.4831,level
+2019-03-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",11367.4498,level
+2019-04-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",11852.8518,level
+2019-04-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",12271.7969,level
+2019-05-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",11642.0056,level
+2019-05-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",12418.4164,level
+2019-06-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",12428.4069,level
+2019-06-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",12083.0814,level
+2019-07-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",12285.7922,level
+2019-07-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",12302.4123,level
+2019-08-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",12604.853,level
+2019-08-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",12723.2262,level
+2019-09-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",12577.0095,level
+2019-09-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",12421.2756,level
+2019-10-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",12468.5228,level
+2019-10-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",12613.8798,level
+2019-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",12832.2201,level
+2019-11-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",12878.097,level
+2019-12-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",13007.1442,level
+2019-12-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",12980.243,level
+2020-01-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",13294.3502,level
+2020-01-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",13515.6526,level
+2020-02-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",13887.3305,level
+2020-02-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",13931.708,level
+2020-03-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",13883.8212,level
+2020-03-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",13887.8298,level
+2020-04-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",13749.0396,level
+2020-04-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",13833.9446,level
+2020-05-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",14049.9818,level
+2020-05-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",14237.1345,level
+2020-06-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",14525.253,level
+2020-06-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",15137.1168,level
+2020-07-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",14957.9421,level
+2020-07-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",15067.5646,level
+2020-08-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",15423.8523,level
+2020-08-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",15596.5541,level
+2020-09-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",15644.353,level
+2020-09-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",15993.4202,level
+2020-10-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",16113.7635,level
+2020-10-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",16231.2437,level
+2020-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",16334.651,level
+2020-11-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",16539.2992,level
+2020-12-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",16480.476,level
+2020-12-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",16728.8255,level
+2021-01-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",16918.453,level
+2021-01-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17351.2695,level
+2021-02-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",17837.1836,level
+2021-02-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17898.8243,level
+2021-03-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",17937.921,level
+2021-03-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17869.0708,level
+2021-04-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",17823.065,level
+2021-04-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17768.8741,level
+2021-05-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",17437.6385,level
+2021-05-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17335.6204,level
+2021-06-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",17778.806,level
+2021-06-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17779.1373,level
+2021-07-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",18009.6947,level
+2021-07-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",18084.963,level
+2021-08-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",18002.1503,level
+2021-08-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17870.0898,level
+2021-09-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",17554.9079,level
+2021-09-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17620.6462,level
+2021-10-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",17881.0766,level
+2021-10-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",18076.5161,level
+2021-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",17905.5383,level
+2021-11-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",18253.2113,level
+2021-12-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",18031.6126,level
+2021-12-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17821.8336,level
+2022-01-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",17432.0038,level
+2022-01-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17268.7639,level
+2022-02-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",17440.2189,level
+2022-02-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17664.4989,level
+2022-03-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",17567.902,level
+2022-03-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17266.897,level
+2022-04-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",17218.0333,level
+2022-04-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17332.0367,level
+2022-05-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",17496.1422,level
+2022-05-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",17817.0299,level
+2022-06-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",18035.1602,level
+2022-06-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",18537.1909,level
+2022-07-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",18550.3482,level
+2022-07-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",18874.4344,level
+2022-08-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",19129.1462,level
+2022-08-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",19369.6486,level
+2022-09-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",19469.4398,level
+2022-09-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",19534.3804,level
+2022-10-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",19705.2172,level
+2022-10-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",19769.471,level
+2022-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",20276.604,level
+2022-11-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",20477.8053,level
+2022-12-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",20828.1325,level
+2022-12-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",21542.2286,level
+2023-01-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",21937.9472,level
+2023-01-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",21847.0663,level
+2023-02-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",22292.517,level
+2023-02-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",22467.4041,level
+2023-03-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",22615.4659,level
+2023-03-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",22758.7973,level
+2023-04-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",23203.4744,level
+2023-04-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",23204.996,level
+2023-05-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",23591.5935,level
+2023-05-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",23464.3488,level
+2023-06-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",24055.9676,level
+2023-06-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",24859.8522,level
+2023-07-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",25173.0084,level
+2023-07-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",25389.6496,level
+2023-08-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",25634.3052,level
+2023-08-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",25255.404,level
+2023-09-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",25467.3962,level
+2023-09-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",25500.3975,level
+2023-10-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",25452.9581,level
+2023-10-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",26321.5898,level
+2023-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",24799.6005,level
+2023-11-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",24328.4066,level
+2023-12-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",24219.8226,level
+2023-12-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",23855.0418,level
+2024-01-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",23981.4434,level
+2024-01-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",24074.0602,level
+2024-02-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",24126.2706,level
+2024-02-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",24305.3533,level
+2024-03-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",24121.9316,level
+2024-03-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",24168.243,level
+2024-04-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",24207.4429,level
+2024-04-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",24888.5027,level
+2024-05-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",24504.3108,level
+2024-05-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",24662.9275,level
+2024-06-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",25148.6632,level
+2024-06-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",25445.8439,level
+2024-07-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",26091.7282,level
+2024-07-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",26730.6103,level
+2024-08-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",26802.7986,level
+2024-08-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",27052.7957,level
+2024-09-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",27194.7111,level
+2024-09-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",27261.1846,level
+2024-10-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",26986.8979,level
+2024-10-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",26763.7943,level
+2024-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",26835.0656,level
+2024-11-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",26961.7184,level
+2024-12-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",27022.0462,level
+2024-12-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",27013.3485,level
+2025-01-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",26942.2281,level
+2025-01-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",26971.1063,level
+2025-02-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",26968.5714,level
+2025-02-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",27904.5251,level
+2025-03-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",28096.4583,level
+2025-03-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",28569.5618,level
+2025-04-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",28997.3203,level
+2025-04-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",29122.3015,level
+2025-05-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",29460.4543,level
+2025-05-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",29370.7091,level
+2025-06-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",29639.2067,level
+2025-06-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",30041.4434,level
+2025-07-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",29658.6845,level
+2025-07-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",29538.6075,level
+2025-08-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",29606.4096,level
+2025-08-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",30016.7051,level
+2025-09-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",30326.7023,level
+2025-09-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",30654.917,level
+2025-10-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",30658.2978,level
+2025-10-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",30656.1195,level
+2025-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",30993.3431,level
+2025-11-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",31168.7269,level
+2025-12-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",31350.3541,level
+2025-12-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",31863.6739,level
+2026-01-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",31925.671,level
+2026-01-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",32009.3041,level
+2026-02-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",32348.3916,level
+2026-02-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",32904.2708,level
+2026-03-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",34063.2941,level
+2026-03-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",35120.0404,level
+2026-04-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",35017.6339,level
+2026-04-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",35299.3647,level
+2026-05-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",35971.6853,level
+2026-05-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",36187.8688,level
+2026-06-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",36342.7151,level
+2026-06-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",36255.2589,level
+2026-07-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",36066.6027,level
+2026-07-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",36395.4755,level
+2026-08-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",36351.4834,level
+2026-08-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",36690.9275,level
+2026-09-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",36729.1593,level
+2026-09-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",36586.4688,level
+2026-10-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",36982.6429,level
+2026-10-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",37469.8395,level
+2026-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",37555.5112,level
+2026-11-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",37602.6544,level

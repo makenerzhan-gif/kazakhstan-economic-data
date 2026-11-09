@@ -1,0 +1,21 @@
+{
+  "source": "un",
+  "source_url": "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/",
+  "dataset_id": "WPP2024 bulk csv, LocID 398",
+  "indicator_id": "UN_WPP_POPULATION",
+  "indicator_name": "Kazakhstan population, UN World Population Prospects 2024: projection variants, sex, broad age groups, demographic indicators, 1950-2100",
+  "description": "Население Казахстана по оценкам и прогнозу ООН (World Population Prospects 2024): варианты прогноза, пол, возрастные группы, демографические показатели, 1950-2100",
+  "frequency": "annual",
+  "unit": "thousand persons at 1 July (rates and ages as named)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "TOTAL.<VARIANT> for every WPP variant (MEDIUM, HIGH, LOW, CONSTANT_FERTILITY, ZERO_MIGRATION, …, the 80 % and 95 % prediction intervals); MALE, FEMALE, AGE_0_14, AGE_15_64, AGE_65, POP_1JAN, BIRTHS, DEATHS, TFR, LIFE_EXPECTANCY, NET_MIGRATION, MEDIAN_AGE, GROWTH_RATE, INFANT_MORTALITY for the medium variant. Estimates to 2023, projections 2024-2100. Medium: 2024 20 592.6 thousand (15-64: 12 761.9), 2050 26 544.3, 2100 33 672.2. The UN's estimate for 2024 is about 400 thousand above BNS (POPULATION_BNS) -- different census adjustments.",
+  "publication_date": null,
+  "last_update_date": "2026-11-09",
+  "download_date": "2026-11-09",
+  "period_start": "1950-12-31",
+  "period_end": "2101-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

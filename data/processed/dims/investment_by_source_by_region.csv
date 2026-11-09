@@ -1,0 +1,2456 @@
+date,region,item_code,item_name,value,transformation
+2022-12-31,ABY,BANK_LOANS,Кредиты банков,10745.415,level
+2023-12-31,ABY,BANK_LOANS,Кредиты банков,22515.123,level
+2024-12-31,ABY,BANK_LOANS,Кредиты банков,3560.834,level
+2025-12-31,ABY,BANK_LOANS,Кредиты банков,51569.038,level
+2013-12-31,AKM,BANK_LOANS,Кредиты банков,12252.661,level
+2014-12-31,AKM,BANK_LOANS,Кредиты банков,14601.222,level
+2015-12-31,AKM,BANK_LOANS,Кредиты банков,14322.505,level
+2016-12-31,AKM,BANK_LOANS,Кредиты банков,21462.848,level
+2017-12-31,AKM,BANK_LOANS,Кредиты банков,15188.07,level
+2018-12-31,AKM,BANK_LOANS,Кредиты банков,32509.437,level
+2019-12-31,AKM,BANK_LOANS,Кредиты банков,26466.284,level
+2020-12-31,AKM,BANK_LOANS,Кредиты банков,56269.389,level
+2021-12-31,AKM,BANK_LOANS,Кредиты банков,58598.232,level
+2022-12-31,AKM,BANK_LOANS,Кредиты банков,43476.961,level
+2023-12-31,AKM,BANK_LOANS,Кредиты банков,16402.316,level
+2024-12-31,AKM,BANK_LOANS,Кредиты банков,13567.653,level
+2025-12-31,AKM,BANK_LOANS,Кредиты банков,14315.81,level
+2013-12-31,AKT,BANK_LOANS,Кредиты банков,116779.042,level
+2014-12-31,AKT,BANK_LOANS,Кредиты банков,56857.726,level
+2015-12-31,AKT,BANK_LOANS,Кредиты банков,27836.684,level
+2016-12-31,AKT,BANK_LOANS,Кредиты банков,12362.064,level
+2017-12-31,AKT,BANK_LOANS,Кредиты банков,22083.345,level
+2018-12-31,AKT,BANK_LOANS,Кредиты банков,17097.434,level
+2019-12-31,AKT,BANK_LOANS,Кредиты банков,9632.76,level
+2020-12-31,AKT,BANK_LOANS,Кредиты банков,12931.624,level
+2021-12-31,AKT,BANK_LOANS,Кредиты банков,6820.811,level
+2022-12-31,AKT,BANK_LOANS,Кредиты банков,4104.565,level
+2023-12-31,AKT,BANK_LOANS,Кредиты банков,13722.164,level
+2024-12-31,AKT,BANK_LOANS,Кредиты банков,8290.227,level
+2025-12-31,AKT,BANK_LOANS,Кредиты банков,31362.518,level
+2013-12-31,ALA,BANK_LOANS,Кредиты банков,65833.037,level
+2014-12-31,ALA,BANK_LOANS,Кредиты банков,62710.591,level
+2015-12-31,ALA,BANK_LOANS,Кредиты банков,73367.679,level
+2016-12-31,ALA,BANK_LOANS,Кредиты банков,79965.964,level
+2017-12-31,ALA,BANK_LOANS,Кредиты банков,68297.261,level
+2018-12-31,ALA,BANK_LOANS,Кредиты банков,62609.553,level
+2019-12-31,ALA,BANK_LOANS,Кредиты банков,44478.431,level
+2020-12-31,ALA,BANK_LOANS,Кредиты банков,60595.734,level
+2021-12-31,ALA,BANK_LOANS,Кредиты банков,60648.089,level
+2022-12-31,ALA,BANK_LOANS,Кредиты банков,55301.976,level
+2023-12-31,ALA,BANK_LOANS,Кредиты банков,94017.66,level
+2024-12-31,ALA,BANK_LOANS,Кредиты банков,184370.076,level
+2025-12-31,ALA,BANK_LOANS,Кредиты банков,95714.698,level
+2013-12-31,ALM,BANK_LOANS,Кредиты банков,144130.217,level
+2014-12-31,ALM,BANK_LOANS,Кредиты банков,17346.687,level
+2015-12-31,ALM,BANK_LOANS,Кредиты банков,19426.526,level
+2016-12-31,ALM,BANK_LOANS,Кредиты банков,21991.751,level
+2017-12-31,ALM,BANK_LOANS,Кредиты банков,17911.005,level
+2018-12-31,ALM,BANK_LOANS,Кредиты банков,13784.095,level
+2019-12-31,ALM,BANK_LOANS,Кредиты банков,17764.492,level
+2020-12-31,ALM,BANK_LOANS,Кредиты банков,17370.169,level
+2021-12-31,ALM,BANK_LOANS,Кредиты банков,40652.531,level
+2022-12-31,ALM,BANK_LOANS,Кредиты банков,35500.478,level
+2023-12-31,ALM,BANK_LOANS,Кредиты банков,49597.357,level
+2024-12-31,ALM,BANK_LOANS,Кредиты банков,46849.688,level
+2025-12-31,ALM,BANK_LOANS,Кредиты банков,121065.86,level
+2013-12-31,AST,BANK_LOANS,Кредиты банков,17498.608,level
+2014-12-31,AST,BANK_LOANS,Кредиты банков,23462.328,level
+2015-12-31,AST,BANK_LOANS,Кредиты банков,36837.606,level
+2016-12-31,AST,BANK_LOANS,Кредиты банков,16335.225,level
+2017-12-31,AST,BANK_LOANS,Кредиты банков,26774.436,level
+2018-12-31,AST,BANK_LOANS,Кредиты банков,26694.131,level
+2019-12-31,AST,BANK_LOANS,Кредиты банков,64645.856,level
+2020-12-31,AST,BANK_LOANS,Кредиты банков,13199.033,level
+2021-12-31,AST,BANK_LOANS,Кредиты банков,11689.511,level
+2022-12-31,AST,BANK_LOANS,Кредиты банков,64193.845,level
+2023-12-31,AST,BANK_LOANS,Кредиты банков,33687.528,level
+2024-12-31,AST,BANK_LOANS,Кредиты банков,104164.356,level
+2025-12-31,AST,BANK_LOANS,Кредиты банков,44116.186,level
+2013-12-31,ATY,BANK_LOANS,Кредиты банков,81423.606,level
+2014-12-31,ATY,BANK_LOANS,Кредиты банков,61840.082,level
+2015-12-31,ATY,BANK_LOANS,Кредиты банков,114274.996,level
+2016-12-31,ATY,BANK_LOANS,Кредиты банков,172764.005,level
+2017-12-31,ATY,BANK_LOANS,Кредиты банков,349816.816,level
+2018-12-31,ATY,BANK_LOANS,Кредиты банков,60217.573,level
+2019-12-31,ATY,BANK_LOANS,Кредиты банков,118738.757,level
+2020-12-31,ATY,BANK_LOANS,Кредиты банков,3850.109,level
+2021-12-31,ATY,BANK_LOANS,Кредиты банков,6895.736,level
+2022-12-31,ATY,BANK_LOANS,Кредиты банков,109891.777,level
+2023-12-31,ATY,BANK_LOANS,Кредиты банков,110082.566,level
+2024-12-31,ATY,BANK_LOANS,Кредиты банков,119597.005,level
+2025-12-31,ATY,BANK_LOANS,Кредиты банков,105464.308,level
+2013-12-31,KRG,BANK_LOANS,Кредиты банков,16468.057,level
+2014-12-31,KRG,BANK_LOANS,Кредиты банков,15387.155,level
+2015-12-31,KRG,BANK_LOANS,Кредиты банков,20743.909,level
+2016-12-31,KRG,BANK_LOANS,Кредиты банков,16231.66,level
+2017-12-31,KRG,BANK_LOANS,Кредиты банков,24084.284,level
+2018-12-31,KRG,BANK_LOANS,Кредиты банков,10031.7,level
+2019-12-31,KRG,BANK_LOANS,Кредиты банков,10083.747,level
+2020-12-31,KRG,BANK_LOANS,Кредиты банков,30350.13,level
+2021-12-31,KRG,BANK_LOANS,Кредиты банков,10289.081,level
+2022-12-31,KRG,BANK_LOANS,Кредиты банков,34471.237,level
+2023-12-31,KRG,BANK_LOANS,Кредиты банков,32326.505,level
+2024-12-31,KRG,BANK_LOANS,Кредиты банков,44757.398,level
+2025-12-31,KRG,BANK_LOANS,Кредиты банков,47609.839,level
+2013-12-31,KST,BANK_LOANS,Кредиты банков,24585.966,level
+2014-12-31,KST,BANK_LOANS,Кредиты банков,10478.493,level
+2015-12-31,KST,BANK_LOANS,Кредиты банков,8636.278,level
+2016-12-31,KST,BANK_LOANS,Кредиты банков,7418.51,level
+2017-12-31,KST,BANK_LOANS,Кредиты банков,5905.388,level
+2018-12-31,KST,BANK_LOANS,Кредиты банков,5114.738,level
+2019-12-31,KST,BANK_LOANS,Кредиты банков,2181.354,level
+2020-12-31,KST,BANK_LOANS,Кредиты банков,5427.67,level
+2021-12-31,KST,BANK_LOANS,Кредиты банков,7703.367,level
+2022-12-31,KST,BANK_LOANS,Кредиты банков,8561.371,level
+2023-12-31,KST,BANK_LOANS,Кредиты банков,17805.605,level
+2024-12-31,KST,BANK_LOANS,Кредиты банков,20675.093,level
+2025-12-31,KST,BANK_LOANS,Кредиты банков,20898.312,level
+2013-12-31,KZL,BANK_LOANS,Кредиты банков,151090.362,level
+2014-12-31,KZL,BANK_LOANS,Кредиты банков,12816.847,level
+2015-12-31,KZL,BANK_LOANS,Кредиты банков,17619.285,level
+2016-12-31,KZL,BANK_LOANS,Кредиты банков,19669.281,level
+2017-12-31,KZL,BANK_LOANS,Кредиты банков,7167.38,level
+2018-12-31,KZL,BANK_LOANS,Кредиты банков,13308.683,level
+2019-12-31,KZL,BANK_LOANS,Кредиты банков,15576.166,level
+2020-12-31,KZL,BANK_LOANS,Кредиты банков,4583.765,level
+2021-12-31,KZL,BANK_LOANS,Кредиты банков,3404.43,level
+2022-12-31,KZL,BANK_LOANS,Кредиты банков,753.327,level
+2023-12-31,KZL,BANK_LOANS,Кредиты банков,7070.292,level
+2024-12-31,KZL,BANK_LOANS,Кредиты банков,60940.181,level
+2025-12-31,KZL,BANK_LOANS,Кредиты банков,57905.25,level
+2013-12-31,MNG,BANK_LOANS,Кредиты банков,10928.056,level
+2014-12-31,MNG,BANK_LOANS,Кредиты банков,6805.698,level
+2015-12-31,MNG,BANK_LOANS,Кредиты банков,15486.151,level
+2016-12-31,MNG,BANK_LOANS,Кредиты банков,22542.181,level
+2017-12-31,MNG,BANK_LOANS,Кредиты банков,10350.102,level
+2018-12-31,MNG,BANK_LOANS,Кредиты банков,11695.476,level
+2019-12-31,MNG,BANK_LOANS,Кредиты банков,11420.712,level
+2020-12-31,MNG,BANK_LOANS,Кредиты банков,11298.446,level
+2021-12-31,MNG,BANK_LOANS,Кредиты банков,15472.676,level
+2022-12-31,MNG,BANK_LOANS,Кредиты банков,5478.771,level
+2023-12-31,MNG,BANK_LOANS,Кредиты банков,14383.394,level
+2024-12-31,MNG,BANK_LOANS,Кредиты банков,15929.266,level
+2025-12-31,MNG,BANK_LOANS,Кредиты банков,33924.875,level
+2013-12-31,PVL,BANK_LOANS,Кредиты банков,19032.812,level
+2014-12-31,PVL,BANK_LOANS,Кредиты банков,36671.999,level
+2015-12-31,PVL,BANK_LOANS,Кредиты банков,37484.934,level
+2016-12-31,PVL,BANK_LOANS,Кредиты банков,5643.813,level
+2017-12-31,PVL,BANK_LOANS,Кредиты банков,30388.466,level
+2018-12-31,PVL,BANK_LOANS,Кредиты банков,9514.054,level
+2019-12-31,PVL,BANK_LOANS,Кредиты банков,25409.151,level
+2020-12-31,PVL,BANK_LOANS,Кредиты банков,9787.307,level
+2021-12-31,PVL,BANK_LOANS,Кредиты банков,19129.659,level
+2022-12-31,PVL,BANK_LOANS,Кредиты банков,20736.229,level
+2023-12-31,PVL,BANK_LOANS,Кредиты банков,14333.254,level
+2024-12-31,PVL,BANK_LOANS,Кредиты банков,49510.076,level
+2025-12-31,PVL,BANK_LOANS,Кредиты банков,34070.988,level
+2018-12-31,SHM,BANK_LOANS,Кредиты банков,396401.311,level
+2019-12-31,SHM,BANK_LOANS,Кредиты банков,13238.225,level
+2020-12-31,SHM,BANK_LOANS,Кредиты банков,17037.682,level
+2021-12-31,SHM,BANK_LOANS,Кредиты банков,28523.092,level
+2022-12-31,SHM,BANK_LOANS,Кредиты банков,21307.318,level
+2023-12-31,SHM,BANK_LOANS,Кредиты банков,13611.397,level
+2024-12-31,SHM,BANK_LOANS,Кредиты банков,17910.968,level
+2025-12-31,SHM,BANK_LOANS,Кредиты банков,55825.778,level
+2013-12-31,SKO,BANK_LOANS,Кредиты банков,1114.518,level
+2014-12-31,SKO,BANK_LOANS,Кредиты банков,2998.179,level
+2015-12-31,SKO,BANK_LOANS,Кредиты банков,3963.817,level
+2016-12-31,SKO,BANK_LOANS,Кредиты банков,5547.932,level
+2017-12-31,SKO,BANK_LOANS,Кредиты банков,11026.585,level
+2018-12-31,SKO,BANK_LOANS,Кредиты банков,11589.703,level
+2019-12-31,SKO,BANK_LOANS,Кредиты банков,6450.387,level
+2020-12-31,SKO,BANK_LOANS,Кредиты банков,13158.181,level
+2021-12-31,SKO,BANK_LOANS,Кредиты банков,10847.497,level
+2022-12-31,SKO,BANK_LOANS,Кредиты банков,7493.085,level
+2023-12-31,SKO,BANK_LOANS,Кредиты банков,15939.442,level
+2024-12-31,SKO,BANK_LOANS,Кредиты банков,35556.199,level
+2025-12-31,SKO,BANK_LOANS,Кредиты банков,32335.291,level
+2018-12-31,TRK,BANK_LOANS,Кредиты банков,16013.527,level
+2019-12-31,TRK,BANK_LOANS,Кредиты банков,12949.107,level
+2020-12-31,TRK,BANK_LOANS,Кредиты банков,10857.768,level
+2021-12-31,TRK,BANK_LOANS,Кредиты банков,22536.059,level
+2022-12-31,TRK,BANK_LOANS,Кредиты банков,14477.003,level
+2023-12-31,TRK,BANK_LOANS,Кредиты банков,9235.856,level
+2024-12-31,TRK,BANK_LOANS,Кредиты банков,23926.011,level
+2025-12-31,TRK,BANK_LOANS,Кредиты банков,209033.643,level
+2022-12-31,ULT,BANK_LOANS,Кредиты банков,382.347,level
+2023-12-31,ULT,BANK_LOANS,Кредиты банков,9777.441,level
+2024-12-31,ULT,BANK_LOANS,Кредиты банков,5132.74,level
+2025-12-31,ULT,BANK_LOANS,Кредиты банков,10680.154,level
+2013-12-31,VKO,BANK_LOANS,Кредиты банков,8095.734,level
+2014-12-31,VKO,BANK_LOANS,Кредиты банков,7979.539,level
+2015-12-31,VKO,BANK_LOANS,Кредиты банков,7870.153,level
+2016-12-31,VKO,BANK_LOANS,Кредиты банков,7721.281,level
+2017-12-31,VKO,BANK_LOANS,Кредиты банков,8527.078,level
+2018-12-31,VKO,BANK_LOANS,Кредиты банков,8536.109,level
+2019-12-31,VKO,BANK_LOANS,Кредиты банков,13607.178,level
+2020-12-31,VKO,BANK_LOANS,Кредиты банков,10521.913,level
+2021-12-31,VKO,BANK_LOANS,Кредиты банков,31026.424,level
+2022-12-31,VKO,BANK_LOANS,Кредиты банков,23192.802,level
+2023-12-31,VKO,BANK_LOANS,Кредиты банков,23104.63,level
+2024-12-31,VKO,BANK_LOANS,Кредиты банков,10749.522,level
+2025-12-31,VKO,BANK_LOANS,Кредиты банков,13707.758,level
+2013-12-31,YKO,BANK_LOANS,Кредиты банков,161318.793,level
+2014-12-31,YKO,BANK_LOANS,Кредиты банков,23499.11,level
+2015-12-31,YKO,BANK_LOANS,Кредиты банков,20205.782,level
+2016-12-31,YKO,BANK_LOANS,Кредиты банков,23131.997,level
+2017-12-31,YKO,BANK_LOANS,Кредиты банков,25607.833,level
+2013-12-31,ZHM,BANK_LOANS,Кредиты банков,164029.337,level
+2014-12-31,ZHM,BANK_LOANS,Кредиты банков,9860.894,level
+2015-12-31,ZHM,BANK_LOANS,Кредиты банков,11672.068,level
+2016-12-31,ZHM,BANK_LOANS,Кредиты банков,7048.453,level
+2017-12-31,ZHM,BANK_LOANS,Кредиты банков,10076.718,level
+2018-12-31,ZHM,BANK_LOANS,Кредиты банков,5182.515,level
+2019-12-31,ZHM,BANK_LOANS,Кредиты банков,9230.621,level
+2020-12-31,ZHM,BANK_LOANS,Кредиты банков,2388.457,level
+2021-12-31,ZHM,BANK_LOANS,Кредиты банков,2251.526,level
+2022-12-31,ZHM,BANK_LOANS,Кредиты банков,8819.116,level
+2023-12-31,ZHM,BANK_LOANS,Кредиты банков,5016.901,level
+2024-12-31,ZHM,BANK_LOANS,Кредиты банков,4801.215,level
+2025-12-31,ZHM,BANK_LOANS,Кредиты банков,18603.39,level
+2022-12-31,ZHT,BANK_LOANS,Кредиты банков,10992.234,level
+2023-12-31,ZHT,BANK_LOANS,Кредиты банков,7598.775,level
+2024-12-31,ZHT,BANK_LOANS,Кредиты банков,1364.507,level
+2025-12-31,ZHT,BANK_LOANS,Кредиты банков,58807.233,level
+2013-12-31,ZKO,BANK_LOANS,Кредиты банков,5312.637,level
+2014-12-31,ZKO,BANK_LOANS,Кредиты банков,12072.644,level
+2015-12-31,ZKO,BANK_LOANS,Кредиты банков,10434.205,level
+2016-12-31,ZKO,BANK_LOANS,Кредиты банков,6352.574,level
+2017-12-31,ZKO,BANK_LOANS,Кредиты банков,3999.876,level
+2018-12-31,ZKO,BANK_LOANS,Кредиты банков,4529.384,level
+2019-12-31,ZKO,BANK_LOANS,Кредиты банков,12358.399,level
+2020-12-31,ZKO,BANK_LOANS,Кредиты банков,7138.613,level
+2021-12-31,ZKO,BANK_LOANS,Кредиты банков,8883.824,level
+2022-12-31,ZKO,BANK_LOANS,Кредиты банков,3340.99,level
+2023-12-31,ZKO,BANK_LOANS,Кредиты банков,6320.674,level
+2024-12-31,ZKO,BANK_LOANS,Кредиты банков,8127.352,level
+2025-12-31,ZKO,BANK_LOANS,Кредиты банков,21621.369,level
+2013-12-31,national,BANK_LOANS,Кредиты банков,999893.443,level
+2014-12-31,national,BANK_LOANS,Кредиты банков,375389.194,level
+2015-12-31,national,BANK_LOANS,Кредиты банков,440182.578,level
+2016-12-31,national,BANK_LOANS,Кредиты банков,446189.539,level
+2017-12-31,national,BANK_LOANS,Кредиты банков,637204.643,level
+2018-12-31,national,BANK_LOANS,Кредиты банков,704829.423,level
+2019-12-31,national,BANK_LOANS,Кредиты банков,414231.627,level
+2020-12-31,national,BANK_LOANS,Кредиты банков,286765.99,level
+2021-12-31,national,BANK_LOANS,Кредиты банков,345372.545,level
+2022-12-31,national,BANK_LOANS,Кредиты банков,483220.847,level
+2023-12-31,national,BANK_LOANS,Кредиты банков,516548.88,level
+2024-12-31,national,BANK_LOANS,Кредиты банков,779780.367,level
+2025-12-31,national,BANK_LOANS,Кредиты банков,1078632.298,level
+2023-12-31,ABY,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,14463.045,level
+2020-12-31,AKM,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,40279.216,level
+2021-12-31,AKM,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,37387.271,level
+2022-12-31,AKM,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,21660.756,level
+2013-12-31,AKT,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,49246.353,level
+2014-12-31,AKT,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,34495.705,level
+2015-12-31,AKT,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,5222.508,level
+2017-12-31,AKT,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,9335.221,level
+2018-12-31,AKT,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,3770.473,level
+2013-12-31,ALA,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,4966.258,level
+2014-12-31,ALA,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,537.209,level
+2017-12-31,ALA,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,889.892,level
+2024-12-31,ALA,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,47827.047,level
+2025-12-31,ALA,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,15748.571,level
+2013-12-31,ALM,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,125356.383,level
+2025-12-31,ALM,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,180.142,level
+2013-12-31,AST,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,825.0,level
+2013-12-31,ATY,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,4691.282,level
+2014-12-31,ATY,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,6511.056,level
+2015-12-31,ATY,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,60191.098,level
+2016-12-31,ATY,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,72664.972,level
+2017-12-31,ATY,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,92198.635,level
+2018-12-31,ATY,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,33014.36,level
+2019-12-31,ATY,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,157.47,level
+2025-12-31,ATY,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,23552.452,level
+2013-12-31,KRG,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,3898.209,level
+2013-12-31,KZL,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,144011.757,level
+2014-12-31,KZL,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,215.784,level
+2018-12-31,KZL,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,9127.351,level
+2019-12-31,KZL,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,9121.736,level
+2021-12-31,KZL,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,425.37,level
+2013-12-31,MNG,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,7536.963,level
+2020-12-31,MNG,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,3151.77,level
+2021-12-31,MNG,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,9508.12,level
+2013-12-31,PVL,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,1826.878,level
+2014-12-31,PVL,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,7686.738,level
+2021-12-31,SHM,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,3512.221,level
+2021-12-31,TRK,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,13304.376,level
+2013-12-31,YKO,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,147359.806,level
+2013-12-31,ZHM,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,156693.003,level
+2013-12-31,national,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,646411.892,level
+2014-12-31,national,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,49446.492,level
+2015-12-31,national,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,65413.606,level
+2016-12-31,national,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,72664.972,level
+2017-12-31,national,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,102423.748,level
+2018-12-31,national,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,45912.184,level
+2019-12-31,national,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,9279.206,level
+2020-12-31,national,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,43490.577,level
+2021-12-31,national,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,65641.37,level
+2022-12-31,national,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,27004.598,level
+2023-12-31,national,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,59911.451,level
+2024-12-31,national,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,214313.446,level
+2025-12-31,national,BANK_LOANS_FOREIGN,из них кредиты иностранных банков,71763.41,level
+2022-12-31,ABY,LOCAL_BUDGET,Местный бюджет,84014.933,level
+2023-12-31,ABY,LOCAL_BUDGET,Местный бюджет,66573.958,level
+2024-12-31,ABY,LOCAL_BUDGET,Местный бюджет,68883.805,level
+2025-12-31,ABY,LOCAL_BUDGET,Местный бюджет,114475.936,level
+2003-12-31,AKM,LOCAL_BUDGET,Местный бюджет,1177.458,level
+2004-12-31,AKM,LOCAL_BUDGET,Местный бюджет,779.462,level
+2005-12-31,AKM,LOCAL_BUDGET,Местный бюджет,830.479,level
+2006-12-31,AKM,LOCAL_BUDGET,Местный бюджет,1133.694,level
+2007-12-31,AKM,LOCAL_BUDGET,Местный бюджет,3247.707,level
+2008-12-31,AKM,LOCAL_BUDGET,Местный бюджет,3830.95,level
+2009-12-31,AKM,LOCAL_BUDGET,Местный бюджет,3765.48,level
+2010-12-31,AKM,LOCAL_BUDGET,Местный бюджет,2197.731,level
+2011-12-31,AKM,LOCAL_BUDGET,Местный бюджет,7403.878,level
+2012-12-31,AKM,LOCAL_BUDGET,Местный бюджет,9530.393,level
+2013-12-31,AKM,LOCAL_BUDGET,Местный бюджет,7657.344,level
+2014-12-31,AKM,LOCAL_BUDGET,Местный бюджет,8454.929,level
+2015-12-31,AKM,LOCAL_BUDGET,Местный бюджет,7364.469,level
+2016-12-31,AKM,LOCAL_BUDGET,Местный бюджет,8035.118,level
+2017-12-31,AKM,LOCAL_BUDGET,Местный бюджет,13543.348,level
+2018-12-31,AKM,LOCAL_BUDGET,Местный бюджет,15689.796,level
+2019-12-31,AKM,LOCAL_BUDGET,Местный бюджет,14463.688,level
+2020-12-31,AKM,LOCAL_BUDGET,Местный бюджет,34643.384,level
+2021-12-31,AKM,LOCAL_BUDGET,Местный бюджет,32256.012,level
+2022-12-31,AKM,LOCAL_BUDGET,Местный бюджет,33018.581,level
+2023-12-31,AKM,LOCAL_BUDGET,Местный бюджет,70745.501,level
+2024-12-31,AKM,LOCAL_BUDGET,Местный бюджет,122768.593,level
+2025-12-31,AKM,LOCAL_BUDGET,Местный бюджет,180783.497,level
+2003-12-31,AKT,LOCAL_BUDGET,Местный бюджет,1171.455,level
+2004-12-31,AKT,LOCAL_BUDGET,Местный бюджет,2528.963,level
+2005-12-31,AKT,LOCAL_BUDGET,Местный бюджет,3306.601,level
+2006-12-31,AKT,LOCAL_BUDGET,Местный бюджет,5803.659,level
+2007-12-31,AKT,LOCAL_BUDGET,Местный бюджет,7336.571,level
+2008-12-31,AKT,LOCAL_BUDGET,Местный бюджет,12860.606,level
+2009-12-31,AKT,LOCAL_BUDGET,Местный бюджет,20646.732,level
+2010-12-31,AKT,LOCAL_BUDGET,Местный бюджет,12574.665,level
+2011-12-31,AKT,LOCAL_BUDGET,Местный бюджет,12775.355,level
+2012-12-31,AKT,LOCAL_BUDGET,Местный бюджет,16593.795,level
+2013-12-31,AKT,LOCAL_BUDGET,Местный бюджет,12590.068,level
+2014-12-31,AKT,LOCAL_BUDGET,Местный бюджет,35425.187,level
+2015-12-31,AKT,LOCAL_BUDGET,Местный бюджет,12804.239,level
+2016-12-31,AKT,LOCAL_BUDGET,Местный бюджет,12898.136,level
+2017-12-31,AKT,LOCAL_BUDGET,Местный бюджет,31107.769,level
+2018-12-31,AKT,LOCAL_BUDGET,Местный бюджет,33302.68,level
+2019-12-31,AKT,LOCAL_BUDGET,Местный бюджет,24763.183,level
+2020-12-31,AKT,LOCAL_BUDGET,Местный бюджет,52637.189,level
+2021-12-31,AKT,LOCAL_BUDGET,Местный бюджет,26017.398,level
+2022-12-31,AKT,LOCAL_BUDGET,Местный бюджет,32680.235,level
+2023-12-31,AKT,LOCAL_BUDGET,Местный бюджет,76102.842,level
+2024-12-31,AKT,LOCAL_BUDGET,Местный бюджет,124148.773,level
+2025-12-31,AKT,LOCAL_BUDGET,Местный бюджет,143812.283,level
+2003-12-31,ALA,LOCAL_BUDGET,Местный бюджет,10001.568,level
+2004-12-31,ALA,LOCAL_BUDGET,Местный бюджет,4327.418,level
+2005-12-31,ALA,LOCAL_BUDGET,Местный бюджет,4908.952,level
+2006-12-31,ALA,LOCAL_BUDGET,Местный бюджет,5728.162,level
+2007-12-31,ALA,LOCAL_BUDGET,Местный бюджет,20133.079,level
+2008-12-31,ALA,LOCAL_BUDGET,Местный бюджет,27020.137,level
+2009-12-31,ALA,LOCAL_BUDGET,Местный бюджет,10966.842,level
+2010-12-31,ALA,LOCAL_BUDGET,Местный бюджет,12192.219,level
+2011-12-31,ALA,LOCAL_BUDGET,Местный бюджет,25036.766,level
+2012-12-31,ALA,LOCAL_BUDGET,Местный бюджет,26160.057,level
+2013-12-31,ALA,LOCAL_BUDGET,Местный бюджет,25929.508,level
+2014-12-31,ALA,LOCAL_BUDGET,Местный бюджет,42513.232,level
+2015-12-31,ALA,LOCAL_BUDGET,Местный бюджет,54099.943,level
+2016-12-31,ALA,LOCAL_BUDGET,Местный бюджет,46082.727,level
+2017-12-31,ALA,LOCAL_BUDGET,Местный бюджет,88247.698,level
+2018-12-31,ALA,LOCAL_BUDGET,Местный бюджет,91540.699,level
+2019-12-31,ALA,LOCAL_BUDGET,Местный бюджет,56818.104,level
+2020-12-31,ALA,LOCAL_BUDGET,Местный бюджет,134687.111,level
+2021-12-31,ALA,LOCAL_BUDGET,Местный бюджет,138907.706,level
+2022-12-31,ALA,LOCAL_BUDGET,Местный бюджет,141237.307,level
+2023-12-31,ALA,LOCAL_BUDGET,Местный бюджет,138296.959,level
+2024-12-31,ALA,LOCAL_BUDGET,Местный бюджет,156470.24,level
+2025-12-31,ALA,LOCAL_BUDGET,Местный бюджет,392165.455,level
+2003-12-31,ALM,LOCAL_BUDGET,Местный бюджет,5538.747,level
+2004-12-31,ALM,LOCAL_BUDGET,Местный бюджет,3344.151,level
+2005-12-31,ALM,LOCAL_BUDGET,Местный бюджет,3022.061,level
+2006-12-31,ALM,LOCAL_BUDGET,Местный бюджет,4758.442,level
+2007-12-31,ALM,LOCAL_BUDGET,Местный бюджет,7468.797,level
+2008-12-31,ALM,LOCAL_BUDGET,Местный бюджет,13016.92,level
+2009-12-31,ALM,LOCAL_BUDGET,Местный бюджет,14785.099,level
+2010-12-31,ALM,LOCAL_BUDGET,Местный бюджет,20191.716,level
+2011-12-31,ALM,LOCAL_BUDGET,Местный бюджет,31176.152,level
+2012-12-31,ALM,LOCAL_BUDGET,Местный бюджет,40025.95,level
+2013-12-31,ALM,LOCAL_BUDGET,Местный бюджет,37990.237,level
+2014-12-31,ALM,LOCAL_BUDGET,Местный бюджет,50230.796,level
+2015-12-31,ALM,LOCAL_BUDGET,Местный бюджет,57268.551,level
+2016-12-31,ALM,LOCAL_BUDGET,Местный бюджет,68371.091,level
+2017-12-31,ALM,LOCAL_BUDGET,Местный бюджет,85253.584,level
+2018-12-31,ALM,LOCAL_BUDGET,Местный бюджет,93503.346,level
+2019-12-31,ALM,LOCAL_BUDGET,Местный бюджет,103924.222,level
+2020-12-31,ALM,LOCAL_BUDGET,Местный бюджет,157199.009,level
+2021-12-31,ALM,LOCAL_BUDGET,Местный бюджет,107286.106,level
+2022-12-31,ALM,LOCAL_BUDGET,Местный бюджет,97104.149,level
+2023-12-31,ALM,LOCAL_BUDGET,Местный бюджет,114348.459,level
+2024-12-31,ALM,LOCAL_BUDGET,Местный бюджет,139971.313,level
+2025-12-31,ALM,LOCAL_BUDGET,Местный бюджет,176855.948,level
+2003-12-31,AST,LOCAL_BUDGET,Местный бюджет,15332.212,level
+2004-12-31,AST,LOCAL_BUDGET,Местный бюджет,14162.19,level
+2005-12-31,AST,LOCAL_BUDGET,Местный бюджет,11903.303,level
+2006-12-31,AST,LOCAL_BUDGET,Местный бюджет,11648.688,level
+2007-12-31,AST,LOCAL_BUDGET,Местный бюджет,16733.145,level
+2008-12-31,AST,LOCAL_BUDGET,Местный бюджет,15637.263,level
+2009-12-31,AST,LOCAL_BUDGET,Местный бюджет,5292.6,level
+2010-12-31,AST,LOCAL_BUDGET,Местный бюджет,10033.172,level
+2011-12-31,AST,LOCAL_BUDGET,Местный бюджет,18646.108,level
+2012-12-31,AST,LOCAL_BUDGET,Местный бюджет,23567.649,level
+2013-12-31,AST,LOCAL_BUDGET,Местный бюджет,17726.273,level
+2014-12-31,AST,LOCAL_BUDGET,Местный бюджет,24524.616,level
+2015-12-31,AST,LOCAL_BUDGET,Местный бюджет,33712.029,level
+2016-12-31,AST,LOCAL_BUDGET,Местный бюджет,35741.117,level
+2017-12-31,AST,LOCAL_BUDGET,Местный бюджет,51224.033,level
+2018-12-31,AST,LOCAL_BUDGET,Местный бюджет,44550.396,level
+2019-12-31,AST,LOCAL_BUDGET,Местный бюджет,32209.86,level
+2020-12-31,AST,LOCAL_BUDGET,Местный бюджет,108469.635,level
+2021-12-31,AST,LOCAL_BUDGET,Местный бюджет,64369.806,level
+2022-12-31,AST,LOCAL_BUDGET,Местный бюджет,82918.366,level
+2023-12-31,AST,LOCAL_BUDGET,Местный бюджет,113367.509,level
+2024-12-31,AST,LOCAL_BUDGET,Местный бюджет,160913.239,level
+2025-12-31,AST,LOCAL_BUDGET,Местный бюджет,320373.059,level
+2003-12-31,ATY,LOCAL_BUDGET,Местный бюджет,6335.528,level
+2004-12-31,ATY,LOCAL_BUDGET,Местный бюджет,3588.547,level
+2005-12-31,ATY,LOCAL_BUDGET,Местный бюджет,2123.659,level
+2006-12-31,ATY,LOCAL_BUDGET,Местный бюджет,2821.236,level
+2007-12-31,ATY,LOCAL_BUDGET,Местный бюджет,5696.25,level
+2008-12-31,ATY,LOCAL_BUDGET,Местный бюджет,26595.422,level
+2009-12-31,ATY,LOCAL_BUDGET,Местный бюджет,23939.646,level
+2010-12-31,ATY,LOCAL_BUDGET,Местный бюджет,40843.746,level
+2011-12-31,ATY,LOCAL_BUDGET,Местный бюджет,23609.62,level
+2012-12-31,ATY,LOCAL_BUDGET,Местный бюджет,23603.517,level
+2013-12-31,ATY,LOCAL_BUDGET,Местный бюджет,13850.645,level
+2014-12-31,ATY,LOCAL_BUDGET,Местный бюджет,24783.746,level
+2015-12-31,ATY,LOCAL_BUDGET,Местный бюджет,22706.175,level
+2016-12-31,ATY,LOCAL_BUDGET,Местный бюджет,27031.847,level
+2017-12-31,ATY,LOCAL_BUDGET,Местный бюджет,44883.73,level
+2018-12-31,ATY,LOCAL_BUDGET,Местный бюджет,42361.971,level
+2019-12-31,ATY,LOCAL_BUDGET,Местный бюджет,81284.887,level
+2020-12-31,ATY,LOCAL_BUDGET,Местный бюджет,91560.029,level
+2021-12-31,ATY,LOCAL_BUDGET,Местный бюджет,130011.116,level
+2022-12-31,ATY,LOCAL_BUDGET,Местный бюджет,51821.077,level
+2023-12-31,ATY,LOCAL_BUDGET,Местный бюджет,103857.604,level
+2024-12-31,ATY,LOCAL_BUDGET,Местный бюджет,231296.259,level
+2025-12-31,ATY,LOCAL_BUDGET,Местный бюджет,250783.476,level
+2003-12-31,KRG,LOCAL_BUDGET,Местный бюджет,1773.766,level
+2004-12-31,KRG,LOCAL_BUDGET,Местный бюджет,2905.082,level
+2005-12-31,KRG,LOCAL_BUDGET,Местный бюджет,2475.476,level
+2006-12-31,KRG,LOCAL_BUDGET,Местный бюджет,4137.246,level
+2007-12-31,KRG,LOCAL_BUDGET,Местный бюджет,6569.779,level
+2008-12-31,KRG,LOCAL_BUDGET,Местный бюджет,9710.741,level
+2009-12-31,KRG,LOCAL_BUDGET,Местный бюджет,7985.935,level
+2010-12-31,KRG,LOCAL_BUDGET,Местный бюджет,5495.513,level
+2011-12-31,KRG,LOCAL_BUDGET,Местный бюджет,12071.082,level
+2012-12-31,KRG,LOCAL_BUDGET,Местный бюджет,11234.62,level
+2013-12-31,KRG,LOCAL_BUDGET,Местный бюджет,7905.919,level
+2014-12-31,KRG,LOCAL_BUDGET,Местный бюджет,10861.547,level
+2015-12-31,KRG,LOCAL_BUDGET,Местный бюджет,6748.033,level
+2016-12-31,KRG,LOCAL_BUDGET,Местный бюджет,6065.778,level
+2017-12-31,KRG,LOCAL_BUDGET,Местный бюджет,32729.127,level
+2018-12-31,KRG,LOCAL_BUDGET,Местный бюджет,27710.058,level
+2019-12-31,KRG,LOCAL_BUDGET,Местный бюджет,27287.765,level
+2020-12-31,KRG,LOCAL_BUDGET,Местный бюджет,70182.41,level
+2021-12-31,KRG,LOCAL_BUDGET,Местный бюджет,55280.435,level
+2022-12-31,KRG,LOCAL_BUDGET,Местный бюджет,37370.755,level
+2023-12-31,KRG,LOCAL_BUDGET,Местный бюджет,89724.765,level
+2024-12-31,KRG,LOCAL_BUDGET,Местный бюджет,114320.631,level
+2025-12-31,KRG,LOCAL_BUDGET,Местный бюджет,149152.458,level
+2003-12-31,KST,LOCAL_BUDGET,Местный бюджет,2779.359,level
+2004-12-31,KST,LOCAL_BUDGET,Местный бюджет,1524.365,level
+2005-12-31,KST,LOCAL_BUDGET,Местный бюджет,1253.354,level
+2006-12-31,KST,LOCAL_BUDGET,Местный бюджет,1366.728,level
+2007-12-31,KST,LOCAL_BUDGET,Местный бюджет,2140.322,level
+2008-12-31,KST,LOCAL_BUDGET,Местный бюджет,6182.068,level
+2009-12-31,KST,LOCAL_BUDGET,Местный бюджет,5210.485,level
+2010-12-31,KST,LOCAL_BUDGET,Местный бюджет,6564.646,level
+2011-12-31,KST,LOCAL_BUDGET,Местный бюджет,8829.433,level
+2012-12-31,KST,LOCAL_BUDGET,Местный бюджет,8268.925,level
+2013-12-31,KST,LOCAL_BUDGET,Местный бюджет,7390.6,level
+2014-12-31,KST,LOCAL_BUDGET,Местный бюджет,9492.494,level
+2015-12-31,KST,LOCAL_BUDGET,Местный бюджет,4605.14,level
+2016-12-31,KST,LOCAL_BUDGET,Местный бюджет,10820.067,level
+2017-12-31,KST,LOCAL_BUDGET,Местный бюджет,26358.954,level
+2018-12-31,KST,LOCAL_BUDGET,Местный бюджет,36107.633,level
+2019-12-31,KST,LOCAL_BUDGET,Местный бюджет,30360.965,level
+2020-12-31,KST,LOCAL_BUDGET,Местный бюджет,69675.724,level
+2021-12-31,KST,LOCAL_BUDGET,Местный бюджет,45363.999,level
+2022-12-31,KST,LOCAL_BUDGET,Местный бюджет,32414.113,level
+2023-12-31,KST,LOCAL_BUDGET,Местный бюджет,65695.585,level
+2024-12-31,KST,LOCAL_BUDGET,Местный бюджет,100766.629,level
+2025-12-31,KST,LOCAL_BUDGET,Местный бюджет,98725.999,level
+2003-12-31,KZL,LOCAL_BUDGET,Местный бюджет,1865.886,level
+2004-12-31,KZL,LOCAL_BUDGET,Местный бюджет,1978.26,level
+2005-12-31,KZL,LOCAL_BUDGET,Местный бюджет,4810.666,level
+2006-12-31,KZL,LOCAL_BUDGET,Местный бюджет,2612.441,level
+2007-12-31,KZL,LOCAL_BUDGET,Местный бюджет,3682.598,level
+2008-12-31,KZL,LOCAL_BUDGET,Местный бюджет,6137.278,level
+2009-12-31,KZL,LOCAL_BUDGET,Местный бюджет,10662.627,level
+2010-12-31,KZL,LOCAL_BUDGET,Местный бюджет,8736.883,level
+2011-12-31,KZL,LOCAL_BUDGET,Местный бюджет,7057.821,level
+2012-12-31,KZL,LOCAL_BUDGET,Местный бюджет,11468.413,level
+2013-12-31,KZL,LOCAL_BUDGET,Местный бюджет,20612.986,level
+2014-12-31,KZL,LOCAL_BUDGET,Местный бюджет,22555.283,level
+2015-12-31,KZL,LOCAL_BUDGET,Местный бюджет,12815.674,level
+2016-12-31,KZL,LOCAL_BUDGET,Местный бюджет,13459.149,level
+2017-12-31,KZL,LOCAL_BUDGET,Местный бюджет,21528.72,level
+2018-12-31,KZL,LOCAL_BUDGET,Местный бюджет,23078.823,level
+2019-12-31,KZL,LOCAL_BUDGET,Местный бюджет,31215.623,level
+2020-12-31,KZL,LOCAL_BUDGET,Местный бюджет,59899.16,level
+2021-12-31,KZL,LOCAL_BUDGET,Местный бюджет,46351.484,level
+2022-12-31,KZL,LOCAL_BUDGET,Местный бюджет,44334.994,level
+2023-12-31,KZL,LOCAL_BUDGET,Местный бюджет,90431.108,level
+2024-12-31,KZL,LOCAL_BUDGET,Местный бюджет,113307.903,level
+2025-12-31,KZL,LOCAL_BUDGET,Местный бюджет,133562.403,level
+2003-12-31,MNG,LOCAL_BUDGET,Местный бюджет,1888.226,level
+2004-12-31,MNG,LOCAL_BUDGET,Местный бюджет,2724.097,level
+2005-12-31,MNG,LOCAL_BUDGET,Местный бюджет,1377.718,level
+2006-12-31,MNG,LOCAL_BUDGET,Местный бюджет,1077.206,level
+2007-12-31,MNG,LOCAL_BUDGET,Местный бюджет,1946.564,level
+2008-12-31,MNG,LOCAL_BUDGET,Местный бюджет,13561.546,level
+2009-12-31,MNG,LOCAL_BUDGET,Местный бюджет,11758.746,level
+2010-12-31,MNG,LOCAL_BUDGET,Местный бюджет,12054.554,level
+2011-12-31,MNG,LOCAL_BUDGET,Местный бюджет,14728.095,level
+2012-12-31,MNG,LOCAL_BUDGET,Местный бюджет,7953.128,level
+2013-12-31,MNG,LOCAL_BUDGET,Местный бюджет,14770.733,level
+2014-12-31,MNG,LOCAL_BUDGET,Местный бюджет,17289.79,level
+2015-12-31,MNG,LOCAL_BUDGET,Местный бюджет,10876.591,level
+2016-12-31,MNG,LOCAL_BUDGET,Местный бюджет,6081.186,level
+2017-12-31,MNG,LOCAL_BUDGET,Местный бюджет,4983.998,level
+2018-12-31,MNG,LOCAL_BUDGET,Местный бюджет,11727.531,level
+2019-12-31,MNG,LOCAL_BUDGET,Местный бюджет,29887.022,level
+2020-12-31,MNG,LOCAL_BUDGET,Местный бюджет,53835.149,level
+2021-12-31,MNG,LOCAL_BUDGET,Местный бюджет,36797.243,level
+2022-12-31,MNG,LOCAL_BUDGET,Местный бюджет,30733.054,level
+2023-12-31,MNG,LOCAL_BUDGET,Местный бюджет,34562.914,level
+2024-12-31,MNG,LOCAL_BUDGET,Местный бюджет,126449.589,level
+2025-12-31,MNG,LOCAL_BUDGET,Местный бюджет,119993.134,level
+2003-12-31,PVL,LOCAL_BUDGET,Местный бюджет,1672.452,level
+2004-12-31,PVL,LOCAL_BUDGET,Местный бюджет,697.518,level
+2005-12-31,PVL,LOCAL_BUDGET,Местный бюджет,1770.299,level
+2006-12-31,PVL,LOCAL_BUDGET,Местный бюджет,3198.377,level
+2007-12-31,PVL,LOCAL_BUDGET,Местный бюджет,3877.943,level
+2008-12-31,PVL,LOCAL_BUDGET,Местный бюджет,6781.584,level
+2009-12-31,PVL,LOCAL_BUDGET,Местный бюджет,3743.19,level
+2010-12-31,PVL,LOCAL_BUDGET,Местный бюджет,3167.839,level
+2011-12-31,PVL,LOCAL_BUDGET,Местный бюджет,4090.008,level
+2012-12-31,PVL,LOCAL_BUDGET,Местный бюджет,6282.314,level
+2013-12-31,PVL,LOCAL_BUDGET,Местный бюджет,8912.61,level
+2014-12-31,PVL,LOCAL_BUDGET,Местный бюджет,8420.828,level
+2015-12-31,PVL,LOCAL_BUDGET,Местный бюджет,8503.748,level
+2016-12-31,PVL,LOCAL_BUDGET,Местный бюджет,8256.27,level
+2017-12-31,PVL,LOCAL_BUDGET,Местный бюджет,27284.744,level
+2018-12-31,PVL,LOCAL_BUDGET,Местный бюджет,30006.11,level
+2019-12-31,PVL,LOCAL_BUDGET,Местный бюджет,28968.382,level
+2020-12-31,PVL,LOCAL_BUDGET,Местный бюджет,49396.665,level
+2021-12-31,PVL,LOCAL_BUDGET,Местный бюджет,56821.377,level
+2022-12-31,PVL,LOCAL_BUDGET,Местный бюджет,44117.713,level
+2023-12-31,PVL,LOCAL_BUDGET,Местный бюджет,74553.198,level
+2024-12-31,PVL,LOCAL_BUDGET,Местный бюджет,85502.837,level
+2025-12-31,PVL,LOCAL_BUDGET,Местный бюджет,97498.213,level
+2018-12-31,SHM,LOCAL_BUDGET,Местный бюджет,27899.419,level
+2019-12-31,SHM,LOCAL_BUDGET,Местный бюджет,20756.955,level
+2020-12-31,SHM,LOCAL_BUDGET,Местный бюджет,85423.366,level
+2021-12-31,SHM,LOCAL_BUDGET,Местный бюджет,63916.783,level
+2022-12-31,SHM,LOCAL_BUDGET,Местный бюджет,68602.933,level
+2023-12-31,SHM,LOCAL_BUDGET,Местный бюджет,79738.114,level
+2024-12-31,SHM,LOCAL_BUDGET,Местный бюджет,121305.916,level
+2025-12-31,SHM,LOCAL_BUDGET,Местный бюджет,164657.004,level
+2003-12-31,SKO,LOCAL_BUDGET,Местный бюджет,1084.666,level
+2004-12-31,SKO,LOCAL_BUDGET,Местный бюджет,760.373,level
+2005-12-31,SKO,LOCAL_BUDGET,Местный бюджет,1272.977,level
+2006-12-31,SKO,LOCAL_BUDGET,Местный бюджет,1995.979,level
+2007-12-31,SKO,LOCAL_BUDGET,Местный бюджет,2320.752,level
+2008-12-31,SKO,LOCAL_BUDGET,Местный бюджет,4402.547,level
+2009-12-31,SKO,LOCAL_BUDGET,Местный бюджет,3031.801,level
+2010-12-31,SKO,LOCAL_BUDGET,Местный бюджет,3076.683,level
+2011-12-31,SKO,LOCAL_BUDGET,Местный бюджет,4196.401,level
+2012-12-31,SKO,LOCAL_BUDGET,Местный бюджет,4281.733,level
+2013-12-31,SKO,LOCAL_BUDGET,Местный бюджет,3710.258,level
+2014-12-31,SKO,LOCAL_BUDGET,Местный бюджет,3583.095,level
+2015-12-31,SKO,LOCAL_BUDGET,Местный бюджет,5466.843,level
+2016-12-31,SKO,LOCAL_BUDGET,Местный бюджет,10151.091,level
+2017-12-31,SKO,LOCAL_BUDGET,Местный бюджет,18009.895,level
+2018-12-31,SKO,LOCAL_BUDGET,Местный бюджет,18624.606,level
+2019-12-31,SKO,LOCAL_BUDGET,Местный бюджет,22813.765,level
+2020-12-31,SKO,LOCAL_BUDGET,Местный бюджет,45601.662,level
+2021-12-31,SKO,LOCAL_BUDGET,Местный бюджет,21586.477,level
+2022-12-31,SKO,LOCAL_BUDGET,Местный бюджет,29935.501,level
+2023-12-31,SKO,LOCAL_BUDGET,Местный бюджет,42670.117,level
+2024-12-31,SKO,LOCAL_BUDGET,Местный бюджет,74243.466,level
+2025-12-31,SKO,LOCAL_BUDGET,Местный бюджет,100773.003,level
+2018-12-31,TRK,LOCAL_BUDGET,Местный бюджет,67058.439,level
+2019-12-31,TRK,LOCAL_BUDGET,Местный бюджет,74999.756,level
+2020-12-31,TRK,LOCAL_BUDGET,Местный бюджет,159244.288,level
+2021-12-31,TRK,LOCAL_BUDGET,Местный бюджет,126931.217,level
+2022-12-31,TRK,LOCAL_BUDGET,Местный бюджет,101433.836,level
+2023-12-31,TRK,LOCAL_BUDGET,Местный бюджет,123485.15,level
+2024-12-31,TRK,LOCAL_BUDGET,Местный бюджет,157550.121,level
+2025-12-31,TRK,LOCAL_BUDGET,Местный бюджет,167304.92,level
+2022-12-31,ULT,LOCAL_BUDGET,Местный бюджет,11816.836,level
+2023-12-31,ULT,LOCAL_BUDGET,Местный бюджет,16116.885,level
+2024-12-31,ULT,LOCAL_BUDGET,Местный бюджет,24187.984,level
+2025-12-31,ULT,LOCAL_BUDGET,Местный бюджет,39860.551,level
+2003-12-31,VKO,LOCAL_BUDGET,Местный бюджет,2445.133,level
+2004-12-31,VKO,LOCAL_BUDGET,Местный бюджет,2490.04,level
+2005-12-31,VKO,LOCAL_BUDGET,Местный бюджет,3782.186,level
+2006-12-31,VKO,LOCAL_BUDGET,Местный бюджет,4191.94,level
+2007-12-31,VKO,LOCAL_BUDGET,Местный бюджет,6161.233,level
+2008-12-31,VKO,LOCAL_BUDGET,Местный бюджет,11054.403,level
+2009-12-31,VKO,LOCAL_BUDGET,Местный бюджет,7162.591,level
+2010-12-31,VKO,LOCAL_BUDGET,Местный бюджет,5837.458,level
+2011-12-31,VKO,LOCAL_BUDGET,Местный бюджет,14747.395,level
+2012-12-31,VKO,LOCAL_BUDGET,Местный бюджет,17215.196,level
+2013-12-31,VKO,LOCAL_BUDGET,Местный бюджет,13948.753,level
+2014-12-31,VKO,LOCAL_BUDGET,Местный бюджет,14649.373,level
+2015-12-31,VKO,LOCAL_BUDGET,Местный бюджет,11368.089,level
+2016-12-31,VKO,LOCAL_BUDGET,Местный бюджет,14491.237,level
+2017-12-31,VKO,LOCAL_BUDGET,Местный бюджет,34869.669,level
+2018-12-31,VKO,LOCAL_BUDGET,Местный бюджет,50718.031,level
+2019-12-31,VKO,LOCAL_BUDGET,Местный бюджет,54698.923,level
+2020-12-31,VKO,LOCAL_BUDGET,Местный бюджет,109759.796,level
+2021-12-31,VKO,LOCAL_BUDGET,Местный бюджет,144963.223,level
+2022-12-31,VKO,LOCAL_BUDGET,Местный бюджет,91716.721,level
+2023-12-31,VKO,LOCAL_BUDGET,Местный бюджет,126513.316,level
+2024-12-31,VKO,LOCAL_BUDGET,Местный бюджет,142298.89,level
+2025-12-31,VKO,LOCAL_BUDGET,Местный бюджет,181745.855,level
+2003-12-31,YKO,LOCAL_BUDGET,Местный бюджет,2936.052,level
+2004-12-31,YKO,LOCAL_BUDGET,Местный бюджет,4032.996,level
+2005-12-31,YKO,LOCAL_BUDGET,Местный бюджет,3434.913,level
+2006-12-31,YKO,LOCAL_BUDGET,Местный бюджет,4438.762,level
+2007-12-31,YKO,LOCAL_BUDGET,Местный бюджет,7741.444,level
+2008-12-31,YKO,LOCAL_BUDGET,Местный бюджет,12920.925,level
+2009-12-31,YKO,LOCAL_BUDGET,Местный бюджет,11364.125,level
+2010-12-31,YKO,LOCAL_BUDGET,Местный бюджет,25588.745,level
+2011-12-31,YKO,LOCAL_BUDGET,Местный бюджет,41110.345,level
+2012-12-31,YKO,LOCAL_BUDGET,Местный бюджет,44519.014,level
+2013-12-31,YKO,LOCAL_BUDGET,Местный бюджет,56712.28,level
+2014-12-31,YKO,LOCAL_BUDGET,Местный бюджет,95299.631,level
+2015-12-31,YKO,LOCAL_BUDGET,Местный бюджет,79835.94,level
+2016-12-31,YKO,LOCAL_BUDGET,Местный бюджет,86468.639,level
+2017-12-31,YKO,LOCAL_BUDGET,Местный бюджет,87405.998,level
+2003-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,2885.437,level
+2004-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,1682.802,level
+2005-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,2102.218,level
+2006-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,2100.134,level
+2007-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,2773.472,level
+2008-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,6163.949,level
+2009-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,5041.217,level
+2010-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,4122.157,level
+2011-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,10714.994,level
+2012-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,14825.364,level
+2013-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,10823.863,level
+2014-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,12104.93,level
+2015-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,10796.327,level
+2016-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,13376.491,level
+2017-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,28169.044,level
+2018-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,26069.2,level
+2019-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,28315.268,level
+2020-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,122665.058,level
+2021-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,98702.442,level
+2022-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,128435.326,level
+2023-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,94990.561,level
+2024-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,114588.338,level
+2025-12-31,ZHM,LOCAL_BUDGET,Местный бюджет,108538.398,level
+2022-12-31,ZHT,LOCAL_BUDGET,Местный бюджет,77878.903,level
+2023-12-31,ZHT,LOCAL_BUDGET,Местный бюджет,90916.086,level
+2024-12-31,ZHT,LOCAL_BUDGET,Местный бюджет,99680.518,level
+2025-12-31,ZHT,LOCAL_BUDGET,Местный бюджет,152207.359,level
+2003-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,2929.846,level
+2004-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,1602.213,level
+2005-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,3268.482,level
+2006-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,4657.059,level
+2007-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,5154.363,level
+2008-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,7713.733,level
+2009-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,9535.091,level
+2010-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,7826.696,level
+2011-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,3342.719,level
+2012-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,4233.003,level
+2013-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,3384.646,level
+2014-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,13132.881,level
+2015-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,10477.123,level
+2016-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,10806.642,level
+2017-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,20123.521,level
+2018-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,24486.04,level
+2019-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,21845.188,level
+2020-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,61394.099,level
+2021-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,31220.162,level
+2022-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,20705.877,level
+2023-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,55248.939,level
+2024-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,94584.132,level
+2025-12-31,ZKO,LOCAL_BUDGET,Местный бюджет,98044.05,level
+2003-12-31,national,LOCAL_BUDGET,Местный бюджет,61817.791,level
+2004-12-31,national,LOCAL_BUDGET,Местный бюджет,49128.477,level
+2005-12-31,national,LOCAL_BUDGET,Местный бюджет,51643.344,level
+2006-12-31,national,LOCAL_BUDGET,Местный бюджет,61669.753,level
+2007-12-31,national,LOCAL_BUDGET,Местный бюджет,102984.019,level
+2008-12-31,national,LOCAL_BUDGET,Местный бюджет,183590.072,level
+2009-12-31,national,LOCAL_BUDGET,Местный бюджет,154892.207,level
+2010-12-31,national,LOCAL_BUDGET,Местный бюджет,180504.423,level
+2011-12-31,national,LOCAL_BUDGET,Местный бюджет,239536.172,level
+2012-12-31,national,LOCAL_BUDGET,Местный бюджет,269763.071,level
+2013-12-31,national,LOCAL_BUDGET,Местный бюджет,263916.723,level
+2014-12-31,national,LOCAL_BUDGET,Местный бюджет,393322.358,level
+2015-12-31,national,LOCAL_BUDGET,Местный бюджет,349448.914,level
+2016-12-31,national,LOCAL_BUDGET,Местный бюджет,378136.586,level
+2017-12-31,national,LOCAL_BUDGET,Местный бюджет,615723.832,level
+2018-12-31,national,LOCAL_BUDGET,Местный бюджет,664434.778,level
+2019-12-31,national,LOCAL_BUDGET,Местный бюджет,684613.556,level
+2020-12-31,national,LOCAL_BUDGET,Местный бюджет,1466273.734,level
+2021-12-31,national,LOCAL_BUDGET,Местный бюджет,1226782.986,level
+2022-12-31,national,LOCAL_BUDGET,Местный бюджет,1242291.21,level
+2023-12-31,national,LOCAL_BUDGET,Местный бюджет,1667939.57,level
+2024-12-31,national,LOCAL_BUDGET,Местный бюджет,2373239.176,level
+2025-12-31,national,LOCAL_BUDGET,Местный бюджет,3191313.001,level
+2022-12-31,ABY,OTHER_BORROWED,Другие заёмные средства,11814.479,level
+2023-12-31,ABY,OTHER_BORROWED,Другие заёмные средства,64011.457,level
+2024-12-31,ABY,OTHER_BORROWED,Другие заёмные средства,120450.3,level
+2025-12-31,ABY,OTHER_BORROWED,Другие заёмные средства,134762.98,level
+2013-12-31,AKM,OTHER_BORROWED,Другие заёмные средства,10524.779,level
+2014-12-31,AKM,OTHER_BORROWED,Другие заёмные средства,19319.638,level
+2015-12-31,AKM,OTHER_BORROWED,Другие заёмные средства,24394.662,level
+2016-12-31,AKM,OTHER_BORROWED,Другие заёмные средства,23788.163,level
+2017-12-31,AKM,OTHER_BORROWED,Другие заёмные средства,30833.611,level
+2018-12-31,AKM,OTHER_BORROWED,Другие заёмные средства,47725.63,level
+2019-12-31,AKM,OTHER_BORROWED,Другие заёмные средства,39624.509,level
+2020-12-31,AKM,OTHER_BORROWED,Другие заёмные средства,84279.493,level
+2021-12-31,AKM,OTHER_BORROWED,Другие заёмные средства,66275.942,level
+2022-12-31,AKM,OTHER_BORROWED,Другие заёмные средства,66836.254,level
+2023-12-31,AKM,OTHER_BORROWED,Другие заёмные средства,43844.544,level
+2024-12-31,AKM,OTHER_BORROWED,Другие заёмные средства,74275.862,level
+2025-12-31,AKM,OTHER_BORROWED,Другие заёмные средства,175059.447,level
+2013-12-31,AKT,OTHER_BORROWED,Другие заёмные средства,50211.516,level
+2014-12-31,AKT,OTHER_BORROWED,Другие заёмные средства,35547.193,level
+2015-12-31,AKT,OTHER_BORROWED,Другие заёмные средства,24769.724,level
+2016-12-31,AKT,OTHER_BORROWED,Другие заёмные средства,40132.993,level
+2017-12-31,AKT,OTHER_BORROWED,Другие заёмные средства,33844.33,level
+2018-12-31,AKT,OTHER_BORROWED,Другие заёмные средства,72790.522,level
+2019-12-31,AKT,OTHER_BORROWED,Другие заёмные средства,90224.117,level
+2020-12-31,AKT,OTHER_BORROWED,Другие заёмные средства,50727.84,level
+2021-12-31,AKT,OTHER_BORROWED,Другие заёмные средства,60107.404,level
+2022-12-31,AKT,OTHER_BORROWED,Другие заёмные средства,50178.773,level
+2023-12-31,AKT,OTHER_BORROWED,Другие заёмные средства,46072.076,level
+2024-12-31,AKT,OTHER_BORROWED,Другие заёмные средства,60267.736,level
+2025-12-31,AKT,OTHER_BORROWED,Другие заёмные средства,143026.221,level
+2013-12-31,ALA,OTHER_BORROWED,Другие заёмные средства,40249.665,level
+2014-12-31,ALA,OTHER_BORROWED,Другие заёмные средства,14839.64,level
+2015-12-31,ALA,OTHER_BORROWED,Другие заёмные средства,8737.031,level
+2016-12-31,ALA,OTHER_BORROWED,Другие заёмные средства,12488.06,level
+2017-12-31,ALA,OTHER_BORROWED,Другие заёмные средства,23145.653,level
+2018-12-31,ALA,OTHER_BORROWED,Другие заёмные средства,37493.795,level
+2019-12-31,ALA,OTHER_BORROWED,Другие заёмные средства,52484.904,level
+2020-12-31,ALA,OTHER_BORROWED,Другие заёмные средства,104139.032,level
+2021-12-31,ALA,OTHER_BORROWED,Другие заёмные средства,121842.211,level
+2022-12-31,ALA,OTHER_BORROWED,Другие заёмные средства,117834.232,level
+2023-12-31,ALA,OTHER_BORROWED,Другие заёмные средства,27842.502,level
+2024-12-31,ALA,OTHER_BORROWED,Другие заёмные средства,58469.48,level
+2025-12-31,ALA,OTHER_BORROWED,Другие заёмные средства,284716.079,level
+2013-12-31,ALM,OTHER_BORROWED,Другие заёмные средства,17183.994,level
+2014-12-31,ALM,OTHER_BORROWED,Другие заёмные средства,122686.943,level
+2015-12-31,ALM,OTHER_BORROWED,Другие заёмные средства,117977.099,level
+2016-12-31,ALM,OTHER_BORROWED,Другие заёмные средства,107798.782,level
+2017-12-31,ALM,OTHER_BORROWED,Другие заёмные средства,56121.724,level
+2018-12-31,ALM,OTHER_BORROWED,Другие заёмные средства,50845.746,level
+2019-12-31,ALM,OTHER_BORROWED,Другие заёмные средства,94201.899,level
+2020-12-31,ALM,OTHER_BORROWED,Другие заёмные средства,96890.874,level
+2021-12-31,ALM,OTHER_BORROWED,Другие заёмные средства,55082.055,level
+2022-12-31,ALM,OTHER_BORROWED,Другие заёмные средства,44336.264,level
+2023-12-31,ALM,OTHER_BORROWED,Другие заёмные средства,105677.45,level
+2024-12-31,ALM,OTHER_BORROWED,Другие заёмные средства,172853.74,level
+2025-12-31,ALM,OTHER_BORROWED,Другие заёмные средства,194383.692,level
+2013-12-31,AST,OTHER_BORROWED,Другие заёмные средства,53493.638,level
+2014-12-31,AST,OTHER_BORROWED,Другие заёмные средства,93573.846,level
+2015-12-31,AST,OTHER_BORROWED,Другие заёмные средства,65603.238,level
+2016-12-31,AST,OTHER_BORROWED,Другие заёмные средства,90732.332,level
+2017-12-31,AST,OTHER_BORROWED,Другие заёмные средства,80188.906,level
+2018-12-31,AST,OTHER_BORROWED,Другие заёмные средства,182850.328,level
+2019-12-31,AST,OTHER_BORROWED,Другие заёмные средства,74972.134,level
+2020-12-31,AST,OTHER_BORROWED,Другие заёмные средства,43162.485,level
+2021-12-31,AST,OTHER_BORROWED,Другие заёмные средства,121220.572,level
+2022-12-31,AST,OTHER_BORROWED,Другие заёмные средства,86410.625,level
+2023-12-31,AST,OTHER_BORROWED,Другие заёмные средства,92852.859,level
+2024-12-31,AST,OTHER_BORROWED,Другие заёмные средства,213577.45,level
+2025-12-31,AST,OTHER_BORROWED,Другие заёмные средства,126427.061,level
+2013-12-31,ATY,OTHER_BORROWED,Другие заёмные средства,427238.613,level
+2014-12-31,ATY,OTHER_BORROWED,Другие заёмные средства,245929.962,level
+2015-12-31,ATY,OTHER_BORROWED,Другие заёмные средства,407807.757,level
+2016-12-31,ATY,OTHER_BORROWED,Другие заёмные средства,522083.697,level
+2017-12-31,ATY,OTHER_BORROWED,Другие заёмные средства,117858.435,level
+2018-12-31,ATY,OTHER_BORROWED,Другие заёмные средства,225653.405,level
+2019-12-31,ATY,OTHER_BORROWED,Другие заёмные средства,103586.206,level
+2020-12-31,ATY,OTHER_BORROWED,Другие заёмные средства,298345.567,level
+2021-12-31,ATY,OTHER_BORROWED,Другие заёмные средства,515634.57,level
+2022-12-31,ATY,OTHER_BORROWED,Другие заёмные средства,423262.108,level
+2023-12-31,ATY,OTHER_BORROWED,Другие заёмные средства,255151.872,level
+2024-12-31,ATY,OTHER_BORROWED,Другие заёмные средства,232517.54,level
+2025-12-31,ATY,OTHER_BORROWED,Другие заёмные средства,227934.065,level
+2013-12-31,KRG,OTHER_BORROWED,Другие заёмные средства,98434.528,level
+2014-12-31,KRG,OTHER_BORROWED,Другие заёмные средства,42818.349,level
+2015-12-31,KRG,OTHER_BORROWED,Другие заёмные средства,10117.835,level
+2016-12-31,KRG,OTHER_BORROWED,Другие заёмные средства,19668.649,level
+2017-12-31,KRG,OTHER_BORROWED,Другие заёмные средства,11043.486,level
+2018-12-31,KRG,OTHER_BORROWED,Другие заёмные средства,58753.179,level
+2019-12-31,KRG,OTHER_BORROWED,Другие заёмные средства,67487.681,level
+2020-12-31,KRG,OTHER_BORROWED,Другие заёмные средства,84780.08,level
+2021-12-31,KRG,OTHER_BORROWED,Другие заёмные средства,128004.874,level
+2022-12-31,KRG,OTHER_BORROWED,Другие заёмные средства,92297.612,level
+2023-12-31,KRG,OTHER_BORROWED,Другие заёмные средства,233823.872,level
+2024-12-31,KRG,OTHER_BORROWED,Другие заёмные средства,265934.569,level
+2025-12-31,KRG,OTHER_BORROWED,Другие заёмные средства,286480.47,level
+2013-12-31,KST,OTHER_BORROWED,Другие заёмные средства,4181.445,level
+2014-12-31,KST,OTHER_BORROWED,Другие заёмные средства,8492.016,level
+2015-12-31,KST,OTHER_BORROWED,Другие заёмные средства,3744.023,level
+2016-12-31,KST,OTHER_BORROWED,Другие заёмные средства,4063.481,level
+2017-12-31,KST,OTHER_BORROWED,Другие заёмные средства,14542.635,level
+2018-12-31,KST,OTHER_BORROWED,Другие заёмные средства,7688.091,level
+2019-12-31,KST,OTHER_BORROWED,Другие заёмные средства,11626.119,level
+2020-12-31,KST,OTHER_BORROWED,Другие заёмные средства,16601.324,level
+2021-12-31,KST,OTHER_BORROWED,Другие заёмные средства,32727.954,level
+2022-12-31,KST,OTHER_BORROWED,Другие заёмные средства,45292.319,level
+2023-12-31,KST,OTHER_BORROWED,Другие заёмные средства,48116.08,level
+2024-12-31,KST,OTHER_BORROWED,Другие заёмные средства,94287.675,level
+2025-12-31,KST,OTHER_BORROWED,Другие заёмные средства,205383.322,level
+2013-12-31,KZL,OTHER_BORROWED,Другие заёмные средства,9639.161,level
+2014-12-31,KZL,OTHER_BORROWED,Другие заёмные средства,48732.885,level
+2015-12-31,KZL,OTHER_BORROWED,Другие заёмные средства,17160.043,level
+2016-12-31,KZL,OTHER_BORROWED,Другие заёмные средства,30232.593,level
+2017-12-31,KZL,OTHER_BORROWED,Другие заёмные средства,16099.209,level
+2018-12-31,KZL,OTHER_BORROWED,Другие заёмные средства,25105.35,level
+2019-12-31,KZL,OTHER_BORROWED,Другие заёмные средства,41419.203,level
+2020-12-31,KZL,OTHER_BORROWED,Другие заёмные средства,24374.988,level
+2021-12-31,KZL,OTHER_BORROWED,Другие заёмные средства,19247.461,level
+2022-12-31,KZL,OTHER_BORROWED,Другие заёмные средства,51385.602,level
+2023-12-31,KZL,OTHER_BORROWED,Другие заёмные средства,69933.345,level
+2024-12-31,KZL,OTHER_BORROWED,Другие заёмные средства,72541.108,level
+2025-12-31,KZL,OTHER_BORROWED,Другие заёмные средства,67903.754,level
+2013-12-31,MNG,OTHER_BORROWED,Другие заёмные средства,56434.65,level
+2014-12-31,MNG,OTHER_BORROWED,Другие заёмные средства,65834.521,level
+2015-12-31,MNG,OTHER_BORROWED,Другие заёмные средства,28876.487,level
+2016-12-31,MNG,OTHER_BORROWED,Другие заёмные средства,71443.695,level
+2017-12-31,MNG,OTHER_BORROWED,Другие заёмные средства,100272.256,level
+2018-12-31,MNG,OTHER_BORROWED,Другие заёмные средства,39908.56,level
+2019-12-31,MNG,OTHER_BORROWED,Другие заёмные средства,54434.754,level
+2020-12-31,MNG,OTHER_BORROWED,Другие заёмные средства,34921.244,level
+2021-12-31,MNG,OTHER_BORROWED,Другие заёмные средства,16819.89,level
+2022-12-31,MNG,OTHER_BORROWED,Другие заёмные средства,6232.028,level
+2023-12-31,MNG,OTHER_BORROWED,Другие заёмные средства,10991.555,level
+2024-12-31,MNG,OTHER_BORROWED,Другие заёмные средства,10082.34,level
+2025-12-31,MNG,OTHER_BORROWED,Другие заёмные средства,31431.676,level
+2013-12-31,PVL,OTHER_BORROWED,Другие заёмные средства,54766.357,level
+2014-12-31,PVL,OTHER_BORROWED,Другие заёмные средства,78393.212,level
+2015-12-31,PVL,OTHER_BORROWED,Другие заёмные средства,160252.265,level
+2016-12-31,PVL,OTHER_BORROWED,Другие заёмные средства,145098.244,level
+2017-12-31,PVL,OTHER_BORROWED,Другие заёмные средства,13496.747,level
+2018-12-31,PVL,OTHER_BORROWED,Другие заёмные средства,11219.769,level
+2019-12-31,PVL,OTHER_BORROWED,Другие заёмные средства,11045.603,level
+2020-12-31,PVL,OTHER_BORROWED,Другие заёмные средства,17226.176,level
+2021-12-31,PVL,OTHER_BORROWED,Другие заёмные средства,26250.1,level
+2022-12-31,PVL,OTHER_BORROWED,Другие заёмные средства,28268.761,level
+2023-12-31,PVL,OTHER_BORROWED,Другие заёмные средства,30059.789,level
+2024-12-31,PVL,OTHER_BORROWED,Другие заёмные средства,54810.265,level
+2025-12-31,PVL,OTHER_BORROWED,Другие заёмные средства,120581.232,level
+2018-12-31,SHM,OTHER_BORROWED,Другие заёмные средства,8285.893,level
+2019-12-31,SHM,OTHER_BORROWED,Другие заёмные средства,22258.244,level
+2020-12-31,SHM,OTHER_BORROWED,Другие заёмные средства,55837.474,level
+2021-12-31,SHM,OTHER_BORROWED,Другие заёмные средства,14523.745,level
+2022-12-31,SHM,OTHER_BORROWED,Другие заёмные средства,1625.64,level
+2023-12-31,SHM,OTHER_BORROWED,Другие заёмные средства,9945.641,level
+2024-12-31,SHM,OTHER_BORROWED,Другие заёмные средства,14535.156,level
+2025-12-31,SHM,OTHER_BORROWED,Другие заёмные средства,27815.32,level
+2013-12-31,SKO,OTHER_BORROWED,Другие заёмные средства,5469.127,level
+2014-12-31,SKO,OTHER_BORROWED,Другие заёмные средства,8350.487,level
+2015-12-31,SKO,OTHER_BORROWED,Другие заёмные средства,7758.625,level
+2016-12-31,SKO,OTHER_BORROWED,Другие заёмные средства,12356.691,level
+2017-12-31,SKO,OTHER_BORROWED,Другие заёмные средства,26846.002,level
+2018-12-31,SKO,OTHER_BORROWED,Другие заёмные средства,14546.761,level
+2019-12-31,SKO,OTHER_BORROWED,Другие заёмные средства,13575.595,level
+2020-12-31,SKO,OTHER_BORROWED,Другие заёмные средства,35942.856,level
+2021-12-31,SKO,OTHER_BORROWED,Другие заёмные средства,89703.209,level
+2022-12-31,SKO,OTHER_BORROWED,Другие заёмные средства,76193.967,level
+2023-12-31,SKO,OTHER_BORROWED,Другие заёмные средства,109485.277,level
+2024-12-31,SKO,OTHER_BORROWED,Другие заёмные средства,196199.936,level
+2025-12-31,SKO,OTHER_BORROWED,Другие заёмные средства,162582.41,level
+2018-12-31,TRK,OTHER_BORROWED,Другие заёмные средства,19770.916,level
+2019-12-31,TRK,OTHER_BORROWED,Другие заёмные средства,42365.958,level
+2020-12-31,TRK,OTHER_BORROWED,Другие заёмные средства,117108.106,level
+2021-12-31,TRK,OTHER_BORROWED,Другие заёмные средства,66241.819,level
+2022-12-31,TRK,OTHER_BORROWED,Другие заёмные средства,29933.86,level
+2023-12-31,TRK,OTHER_BORROWED,Другие заёмные средства,53989.649,level
+2024-12-31,TRK,OTHER_BORROWED,Другие заёмные средства,103340.536,level
+2025-12-31,TRK,OTHER_BORROWED,Другие заёмные средства,249741.754,level
+2022-12-31,ULT,OTHER_BORROWED,Другие заёмные средства,835.973,level
+2023-12-31,ULT,OTHER_BORROWED,Другие заёмные средства,593.152,level
+2024-12-31,ULT,OTHER_BORROWED,Другие заёмные средства,2581.897,level
+2025-12-31,ULT,OTHER_BORROWED,Другие заёмные средства,38763.93,level
+2013-12-31,VKO,OTHER_BORROWED,Другие заёмные средства,20849.049,level
+2014-12-31,VKO,OTHER_BORROWED,Другие заёмные средства,101336.333,level
+2015-12-31,VKO,OTHER_BORROWED,Другие заёмные средства,183995.416,level
+2016-12-31,VKO,OTHER_BORROWED,Другие заёмные средства,197545.151,level
+2017-12-31,VKO,OTHER_BORROWED,Другие заёмные средства,81350.005,level
+2018-12-31,VKO,OTHER_BORROWED,Другие заёмные средства,58839.808,level
+2019-12-31,VKO,OTHER_BORROWED,Другие заёмные средства,44242.873,level
+2020-12-31,VKO,OTHER_BORROWED,Другие заёмные средства,70852.914,level
+2021-12-31,VKO,OTHER_BORROWED,Другие заёмные средства,65310.974,level
+2022-12-31,VKO,OTHER_BORROWED,Другие заёмные средства,24540.402,level
+2023-12-31,VKO,OTHER_BORROWED,Другие заёмные средства,18048.219,level
+2024-12-31,VKO,OTHER_BORROWED,Другие заёмные средства,58065.976,level
+2025-12-31,VKO,OTHER_BORROWED,Другие заёмные средства,72264.479,level
+2013-12-31,YKO,OTHER_BORROWED,Другие заёмные средства,28532.096,level
+2014-12-31,YKO,OTHER_BORROWED,Другие заёмные средства,119406.531,level
+2015-12-31,YKO,OTHER_BORROWED,Другие заёмные средства,81813.959,level
+2016-12-31,YKO,OTHER_BORROWED,Другие заёмные средства,83790.518,level
+2017-12-31,YKO,OTHER_BORROWED,Другие заёмные средства,106879.806,level
+2013-12-31,ZHM,OTHER_BORROWED,Другие заёмные средства,2741.659,level
+2014-12-31,ZHM,OTHER_BORROWED,Другие заёмные средства,95640.323,level
+2015-12-31,ZHM,OTHER_BORROWED,Другие заёмные средства,80266.603,level
+2016-12-31,ZHM,OTHER_BORROWED,Другие заёмные средства,47530.525,level
+2017-12-31,ZHM,OTHER_BORROWED,Другие заёмные средства,22478.389,level
+2018-12-31,ZHM,OTHER_BORROWED,Другие заёмные средства,13613.335,level
+2019-12-31,ZHM,OTHER_BORROWED,Другие заёмные средства,65312.646,level
+2020-12-31,ZHM,OTHER_BORROWED,Другие заёмные средства,47375.969,level
+2021-12-31,ZHM,OTHER_BORROWED,Другие заёмные средства,47301.472,level
+2022-12-31,ZHM,OTHER_BORROWED,Другие заёмные средства,45651.503,level
+2023-12-31,ZHM,OTHER_BORROWED,Другие заёмные средства,109282.748,level
+2024-12-31,ZHM,OTHER_BORROWED,Другие заёмные средства,90904.345,level
+2025-12-31,ZHM,OTHER_BORROWED,Другие заёмные средства,122448.171,level
+2022-12-31,ZHT,OTHER_BORROWED,Другие заёмные средства,22511.127,level
+2023-12-31,ZHT,OTHER_BORROWED,Другие заёмные средства,108756.212,level
+2024-12-31,ZHT,OTHER_BORROWED,Другие заёмные средства,277492.292,level
+2025-12-31,ZHT,OTHER_BORROWED,Другие заёмные средства,235596.273,level
+2013-12-31,ZKO,OTHER_BORROWED,Другие заёмные средства,29295.251,level
+2014-12-31,ZKO,OTHER_BORROWED,Другие заёмные средства,30044.228,level
+2015-12-31,ZKO,OTHER_BORROWED,Другие заёмные средства,11484.127,level
+2016-12-31,ZKO,OTHER_BORROWED,Другие заёмные средства,9936.167,level
+2017-12-31,ZKO,OTHER_BORROWED,Другие заёмные средства,6266.32,level
+2018-12-31,ZKO,OTHER_BORROWED,Другие заёмные средства,536.032,level
+2019-12-31,ZKO,OTHER_BORROWED,Другие заёмные средства,3120.672,level
+2020-12-31,ZKO,OTHER_BORROWED,Другие заёмные средства,17180.016,level
+2021-12-31,ZKO,OTHER_BORROWED,Другие заёмные средства,16494.703,level
+2022-12-31,ZKO,OTHER_BORROWED,Другие заёмные средства,12893.04,level
+2023-12-31,ZKO,OTHER_BORROWED,Другие заёмные средства,13130.482,level
+2024-12-31,ZKO,OTHER_BORROWED,Другие заёмные средства,59730.803,level
+2025-12-31,ZKO,OTHER_BORROWED,Другие заёмные средства,78763.451,level
+2013-12-31,national,OTHER_BORROWED,Другие заёмные средства,909245.528,level
+2014-12-31,national,OTHER_BORROWED,Другие заёмные средства,1130946.107,level
+2015-12-31,national,OTHER_BORROWED,Другие заёмные средства,1234758.894,level
+2016-12-31,national,OTHER_BORROWED,Другие заёмные средства,1418689.741,level
+2017-12-31,national,OTHER_BORROWED,Другие заёмные средства,741267.514,level
+2018-12-31,national,OTHER_BORROWED,Другие заёмные средства,875627.12,level
+2019-12-31,national,OTHER_BORROWED,Другие заёмные средства,831983.117,level
+2020-12-31,national,OTHER_BORROWED,Другие заёмные средства,1199746.438,level
+2021-12-31,national,OTHER_BORROWED,Другие заёмные средства,1462788.955,level
+2022-12-31,national,OTHER_BORROWED,Другие заёмные средства,1238334.569,level
+2023-12-31,national,OTHER_BORROWED,Другие заёмные средства,1451608.781,level
+2024-12-31,national,OTHER_BORROWED,Другие заёмные средства,2232919.006,level
+2025-12-31,national,OTHER_BORROWED,Другие заёмные средства,2986065.787,level
+2022-12-31,ABY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,647.377,level
+2023-12-31,ABY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,32112.014,level
+2024-12-31,ABY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,78463.18,level
+2025-12-31,ABY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,62708.636,level
+2013-12-31,AKM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1790.007,level
+2014-12-31,AKM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,425.399,level
+2015-12-31,AKM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,4123.888,level
+2016-12-31,AKM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,503.73,level
+2017-12-31,AKM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,390.194,level
+2018-12-31,AKM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,2416.865,level
+2019-12-31,AKM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,766.192,level
+2020-12-31,AKM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,687.957,level
+2021-12-31,AKM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,350.387,level
+2022-12-31,AKM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,904.203,level
+2023-12-31,AKM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1127.081,level
+2024-12-31,AKM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,6795.1,level
+2025-12-31,AKM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,36177.987,level
+2013-12-31,AKT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,12071.403,level
+2014-12-31,AKT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,17850.569,level
+2015-12-31,AKT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,5529.691,level
+2016-12-31,AKT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,9764.153,level
+2017-12-31,AKT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,11896.972,level
+2018-12-31,AKT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,27564.359,level
+2019-12-31,AKT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,65615.39,level
+2020-12-31,AKT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,35457.239,level
+2021-12-31,AKT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,31492.412,level
+2022-12-31,AKT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,17614.489,level
+2023-12-31,AKT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,14053.259,level
+2024-12-31,AKT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,42119.346,level
+2025-12-31,AKT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,65713.523,level
+2013-12-31,ALA,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,12578.572,level
+2014-12-31,ALA,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,6737.844,level
+2015-12-31,ALA,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1831.258,level
+2016-12-31,ALA,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,912.931,level
+2017-12-31,ALA,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,3124.075,level
+2018-12-31,ALA,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,4015.468,level
+2019-12-31,ALA,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,3677.518,level
+2020-12-31,ALA,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,11744.045,level
+2021-12-31,ALA,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,4715.908,level
+2022-12-31,ALA,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,4898.091,level
+2023-12-31,ALA,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,6953.984,level
+2024-12-31,ALA,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,9568.451,level
+2025-12-31,ALA,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,189705.341,level
+2013-12-31,ALM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,3199.099,level
+2014-12-31,ALM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,99881.1,level
+2015-12-31,ALM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,82670.096,level
+2016-12-31,ALM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,84919.182,level
+2017-12-31,ALM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,33991.021,level
+2018-12-31,ALM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,28097.241,level
+2019-12-31,ALM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,62088.242,level
+2020-12-31,ALM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,47225.725,level
+2021-12-31,ALM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,24521.009,level
+2022-12-31,ALM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,26146.162,level
+2023-12-31,ALM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,80708.625,level
+2024-12-31,ALM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,92235.087,level
+2025-12-31,ALM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,72271.364,level
+2013-12-31,AST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1175.349,level
+2014-12-31,AST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,2299.833,level
+2015-12-31,AST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,3330.987,level
+2016-12-31,AST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,8665.688,level
+2017-12-31,AST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,4967.551,level
+2018-12-31,AST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,106059.447,level
+2019-12-31,AST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,20431.552,level
+2020-12-31,AST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,9584.562,level
+2021-12-31,AST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,8221.381,level
+2022-12-31,AST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,53428.102,level
+2023-12-31,AST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,154.288,level
+2024-12-31,AST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,4765.957,level
+2025-12-31,AST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1206.874,level
+2013-12-31,ATY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,420568.837,level
+2014-12-31,ATY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,239510.826,level
+2015-12-31,ATY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,401214.837,level
+2016-12-31,ATY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,2198.933,level
+2017-12-31,ATY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,19197.78,level
+2018-12-31,ATY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1124.202,level
+2019-12-31,ATY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,52.717,level
+2021-12-31,ATY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,6129.617,level
+2022-12-31,ATY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,2230.927,level
+2023-12-31,ATY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,6248.838,level
+2024-12-31,ATY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,3336.708,level
+2025-12-31,ATY,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1287.141,level
+2013-12-31,KRG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,2951.177,level
+2014-12-31,KRG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,7995.911,level
+2015-12-31,KRG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,4064.336,level
+2016-12-31,KRG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,15510.406,level
+2017-12-31,KRG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1761.778,level
+2018-12-31,KRG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,48251.39,level
+2019-12-31,KRG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,62721.194,level
+2020-12-31,KRG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,58169.169,level
+2021-12-31,KRG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,78474.326,level
+2022-12-31,KRG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,74902.296,level
+2023-12-31,KRG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,160712.338,level
+2024-12-31,KRG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,145684.263,level
+2025-12-31,KRG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,107540.109,level
+2013-12-31,KST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,481.031,level
+2014-12-31,KST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,170.756,level
+2015-12-31,KST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,2423.906,level
+2016-12-31,KST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,588.126,level
+2017-12-31,KST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,6091.805,level
+2018-12-31,KST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,3193.908,level
+2019-12-31,KST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,3061.519,level
+2020-12-31,KST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1681.016,level
+2021-12-31,KST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,399.676,level
+2022-12-31,KST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,971.199,level
+2023-12-31,KST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1571.783,level
+2024-12-31,KST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1158.574,level
+2025-12-31,KST,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,19909.696,level
+2013-12-31,KZL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,3355.858,level
+2014-12-31,KZL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,35035.243,level
+2015-12-31,KZL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,10152.053,level
+2016-12-31,KZL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,14376.327,level
+2017-12-31,KZL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,4670.592,level
+2018-12-31,KZL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,16560.693,level
+2019-12-31,KZL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,27798.143,level
+2020-12-31,KZL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,8521.185,level
+2021-12-31,KZL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,9770.398,level
+2022-12-31,KZL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,39101.658,level
+2023-12-31,KZL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,46735.354,level
+2024-12-31,KZL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,43785.768,level
+2025-12-31,KZL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,39778.689,level
+2013-12-31,MNG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,8366.138,level
+2014-12-31,MNG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,42711.776,level
+2015-12-31,MNG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,23775.044,level
+2016-12-31,MNG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,41000.274,level
+2017-12-31,MNG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,21479.121,level
+2018-12-31,MNG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,12216.814,level
+2019-12-31,MNG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,24393.066,level
+2020-12-31,MNG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,6182.005,level
+2021-12-31,MNG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1552.449,level
+2022-12-31,MNG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,5194.733,level
+2023-12-31,MNG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,9685.929,level
+2024-12-31,MNG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,7502.122,level
+2025-12-31,MNG,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,9802.855,level
+2013-12-31,PVL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,48952.082,level
+2014-12-31,PVL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,76402.327,level
+2015-12-31,PVL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,156066.584,level
+2016-12-31,PVL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,140773.211,level
+2017-12-31,PVL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,10926.536,level
+2018-12-31,PVL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,5673.465,level
+2019-12-31,PVL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1638.702,level
+2020-12-31,PVL,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,532.219,level
+2018-12-31,SHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,172.114,level
+2019-12-31,SHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1.299,level
+2025-12-31,SHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1843.693,level
+2013-12-31,SKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,79.496,level
+2014-12-31,SKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,2040.504,level
+2015-12-31,SKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,2060.598,level
+2016-12-31,SKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1937.908,level
+2017-12-31,SKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,2311.434,level
+2018-12-31,SKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,232.979,level
+2019-12-31,SKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,95.532,level
+2020-12-31,SKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,2268.067,level
+2021-12-31,SKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,618.552,level
+2023-12-31,SKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,673.452,level
+2024-12-31,SKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1042.403,level
+2025-12-31,SKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,8926.09,level
+2018-12-31,TRK,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,14563.637,level
+2019-12-31,TRK,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,26784.923,level
+2020-12-31,TRK,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,79311.238,level
+2021-12-31,TRK,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,36565.887,level
+2022-12-31,TRK,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,15614.463,level
+2023-12-31,TRK,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,29400.121,level
+2024-12-31,TRK,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,31736.127,level
+2025-12-31,TRK,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,102809.242,level
+2013-12-31,VKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,10972.222,level
+2014-12-31,VKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,95401.911,level
+2015-12-31,VKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,175510.349,level
+2016-12-31,VKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,190240.808,level
+2017-12-31,VKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,63419.456,level
+2018-12-31,VKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,46169.984,level
+2019-12-31,VKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,28548.008,level
+2020-12-31,VKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,48573.062,level
+2021-12-31,VKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,36853.034,level
+2022-12-31,VKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,4872.861,level
+2023-12-31,VKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,4990.623,level
+2024-12-31,VKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,32052.26,level
+2025-12-31,VKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,41826.977,level
+2013-12-31,YKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,14475.596,level
+2014-12-31,YKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,98212.146,level
+2015-12-31,YKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,49504.732,level
+2016-12-31,YKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,62505.002,level
+2017-12-31,YKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,40230.454,level
+2013-12-31,ZHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,2156.166,level
+2014-12-31,ZHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,78880.091,level
+2015-12-31,ZHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,63927.439,level
+2016-12-31,ZHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,42003.546,level
+2017-12-31,ZHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,15864.359,level
+2018-12-31,ZHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,9994.273,level
+2019-12-31,ZHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,62701.982,level
+2020-12-31,ZHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,35201.859,level
+2021-12-31,ZHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,44266.045,level
+2022-12-31,ZHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,37750.751,level
+2023-12-31,ZHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,99084.465,level
+2024-12-31,ZHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,77015.157,level
+2025-12-31,ZHM,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,75728.952,level
+2022-12-31,ZHT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,9692.636,level
+2023-12-31,ZHT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,9552.259,level
+2024-12-31,ZHT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,21407.999,level
+2025-12-31,ZHT,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,17491.725,level
+2013-12-31,ZKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,14016.599,level
+2014-12-31,ZKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,7884.972,level
+2015-12-31,ZKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1615.845,level
+2016-12-31,ZKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,4650.75,level
+2017-12-31,ZKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,1339.553,level
+2018-12-31,ZKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,512.528,level
+2019-12-31,ZKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,987.037,level
+2020-12-31,ZKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,2145.834,level
+2021-12-31,ZKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,7596.138,level
+2022-12-31,ZKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,278.408,level
+2023-12-31,ZKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,2131.845,level
+2024-12-31,ZKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,29197.051,level
+2025-12-31,ZKO,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,55.313,level
+2013-12-31,national,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,557189.632,level
+2014-12-31,national,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,811441.208,level
+2015-12-31,national,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,987801.643,level
+2016-12-31,national,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,620550.975,level
+2017-12-31,national,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,241662.681,level
+2018-12-31,national,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,326819.367,level
+2019-12-31,national,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,391363.016,level
+2020-12-31,national,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,347296.642,level
+2021-12-31,national,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,291527.219,level
+2022-12-31,national,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,294974.652,level
+2023-12-31,national,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,506163.769,level
+2024-12-31,national,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,627865.553,level
+2025-12-31,national,OTHER_BORROWED_NONRES,из них другие заёмные средства нерезидентов,854784.207,level
+2022-12-31,ABY,OWN,Собственные средства,306658.882,level
+2023-12-31,ABY,OWN,Собственные средства,321391.787,level
+2024-12-31,ABY,OWN,Собственные средства,294362.096,level
+2025-12-31,ABY,OWN,Собственные средства,299021.642,level
+2003-12-31,AKM,OWN,Собственные средства,10661.597,level
+2004-12-31,AKM,OWN,Собственные средства,18888.077,level
+2005-12-31,AKM,OWN,Собственные средства,26937.982,level
+2006-12-31,AKM,OWN,Собственные средства,20610.28,level
+2007-12-31,AKM,OWN,Собственные средства,29887.392,level
+2008-12-31,AKM,OWN,Собственные средства,45749.006,level
+2009-12-31,AKM,OWN,Собственные средства,38086.735,level
+2010-12-31,AKM,OWN,Собственные средства,41674.989,level
+2011-12-31,AKM,OWN,Собственные средства,46047.843,level
+2012-12-31,AKM,OWN,Собственные средства,56993.182,level
+2013-12-31,AKM,OWN,Собственные средства,68275.928,level
+2014-12-31,AKM,OWN,Собственные средства,90450.863,level
+2015-12-31,AKM,OWN,Собственные средства,77354.14,level
+2016-12-31,AKM,OWN,Собственные средства,101667.815,level
+2017-12-31,AKM,OWN,Собственные средства,111790.407,level
+2018-12-31,AKM,OWN,Собственные средства,140947.781,level
+2019-12-31,AKM,OWN,Собственные средства,202692.789,level
+2020-12-31,AKM,OWN,Собственные средства,197491.83,level
+2021-12-31,AKM,OWN,Собственные средства,293566.259,level
+2022-12-31,AKM,OWN,Собственные средства,370663.632,level
+2023-12-31,AKM,OWN,Собственные средства,412048.499,level
+2024-12-31,AKM,OWN,Собственные средства,261656.612,level
+2025-12-31,AKM,OWN,Собственные средства,503839.128,level
+2003-12-31,AKT,OWN,Собственные средства,75343.379,level
+2004-12-31,AKT,OWN,Собственные средства,72380.252,level
+2005-12-31,AKT,OWN,Собственные средства,119814.064,level
+2006-12-31,AKT,OWN,Собственные средства,133012.697,level
+2007-12-31,AKT,OWN,Собственные средства,149592.744,level
+2008-12-31,AKT,OWN,Собственные средства,159807.483,level
+2009-12-31,AKT,OWN,Собственные средства,181934.697,level
+2010-12-31,AKT,OWN,Собственные средства,246067.646,level
+2011-12-31,AKT,OWN,Собственные средства,260638.713,level
+2012-12-31,AKT,OWN,Собственные средства,298791.398,level
+2013-12-31,AKT,OWN,Собственные средства,291913.397,level
+2014-12-31,AKT,OWN,Собственные средства,332037.832,level
+2015-12-31,AKT,OWN,Собственные средства,261654.58,level
+2016-12-31,AKT,OWN,Собственные средства,266460.86,level
+2017-12-31,AKT,OWN,Собственные средства,314774.075,level
+2018-12-31,AKT,OWN,Собственные средства,362924.432,level
+2019-12-31,AKT,OWN,Собственные средства,436033.362,level
+2020-12-31,AKT,OWN,Собственные средства,492937.626,level
+2021-12-31,AKT,OWN,Собственные средства,679241.769,level
+2022-12-31,AKT,OWN,Собственные средства,828912.15,level
+2023-12-31,AKT,OWN,Собственные средства,845961.955,level
+2024-12-31,AKT,OWN,Собственные средства,645739.75,level
+2025-12-31,AKT,OWN,Собственные средства,824381.08,level
+2003-12-31,ALA,OWN,Собственные средства,132988.174,level
+2004-12-31,ALA,OWN,Собственные средства,228208.812,level
+2005-12-31,ALA,OWN,Собственные средства,241844.084,level
+2006-12-31,ALA,OWN,Собственные средства,221406.036,level
+2007-12-31,ALA,OWN,Собственные средства,194275.611,level
+2008-12-31,ALA,OWN,Собственные средства,186845.935,level
+2009-12-31,ALA,OWN,Собственные средства,164948.707,level
+2010-12-31,ALA,OWN,Собственные средства,164668.297,level
+2011-12-31,ALA,OWN,Собственные средства,183651.23,level
+2012-12-31,ALA,OWN,Собственные средства,232286.256,level
+2013-12-31,ALA,OWN,Собственные средства,285778.898,level
+2014-12-31,ALA,OWN,Собственные средства,279631.236,level
+2015-12-31,ALA,OWN,Собственные средства,279504.684,level
+2016-12-31,ALA,OWN,Собственные средства,366646.001,level
+2017-12-31,ALA,OWN,Собственные средства,400986.556,level
+2018-12-31,ALA,OWN,Собственные средства,482141.255,level
+2019-12-31,ALA,OWN,Собственные средства,607156.064,level
+2020-12-31,ALA,OWN,Собственные средства,606979.099,level
+2021-12-31,ALA,OWN,Собственные средства,781373.785,level
+2022-12-31,ALA,OWN,Собственные средства,1004306.779,level
+2023-12-31,ALA,OWN,Собственные средства,1503481.916,level
+2024-12-31,ALA,OWN,Собственные средства,1591542.366,level
+2025-12-31,ALA,OWN,Собственные средства,1667698.068,level
+2003-12-31,ALM,OWN,Собственные средства,23523.424,level
+2004-12-31,ALM,OWN,Собственные средства,41115.401,level
+2005-12-31,ALM,OWN,Собственные средства,56481.372,level
+2006-12-31,ALM,OWN,Собственные средства,74511.675,level
+2007-12-31,ALM,OWN,Собственные средства,95108.674,level
+2008-12-31,ALM,OWN,Собственные средства,86710.833,level
+2009-12-31,ALM,OWN,Собственные средства,84511.745,level
+2010-12-31,ALM,OWN,Собственные средства,135790.101,level
+2011-12-31,ALM,OWN,Собственные средства,148366.975,level
+2012-12-31,ALM,OWN,Собственные средства,191527.283,level
+2013-12-31,ALM,OWN,Собственные средства,161013.123,level
+2014-12-31,ALM,OWN,Собственные средства,170622.47,level
+2015-12-31,ALM,OWN,Собственные средства,220357.245,level
+2016-12-31,ALM,OWN,Собственные средства,271416.255,level
+2017-12-31,ALM,OWN,Собственные средства,335364.528,level
+2018-12-31,ALM,OWN,Собственные средства,389124.843,level
+2019-12-31,ALM,OWN,Собственные средства,401003.151,level
+2020-12-31,ALM,OWN,Собственные средства,363579.096,level
+2021-12-31,ALM,OWN,Собственные средства,450151.595,level
+2022-12-31,ALM,OWN,Собственные средства,373495.334,level
+2023-12-31,ALM,OWN,Собственные средства,415055.274,level
+2024-12-31,ALM,OWN,Собственные средства,547502.029,level
+2025-12-31,ALM,OWN,Собственные средства,761388.243,level
+2003-12-31,AST,OWN,Собственные средства,59276.133,level
+2004-12-31,AST,OWN,Собственные средства,126029.882,level
+2005-12-31,AST,OWN,Собственные средства,167801.772,level
+2006-12-31,AST,OWN,Собственные средства,207513.339,level
+2007-12-31,AST,OWN,Собственные средства,197028.462,level
+2008-12-31,AST,OWN,Собственные средства,120974.634,level
+2009-12-31,AST,OWN,Собственные средства,77884.867,level
+2010-12-31,AST,OWN,Собственные средства,102092.865,level
+2011-12-31,AST,OWN,Собственные средства,288909.273,level
+2012-12-31,AST,OWN,Собственные средства,335959.855,level
+2013-12-31,AST,OWN,Собственные средства,251969.867,level
+2014-12-31,AST,OWN,Собственные средства,315739.637,level
+2015-12-31,AST,OWN,Собственные средства,369985.394,level
+2016-12-31,AST,OWN,Собственные средства,391880.798,level
+2017-12-31,AST,OWN,Собственные средства,617173.639,level
+2018-12-31,AST,OWN,Собственные средства,669745.183,level
+2019-12-31,AST,OWN,Собственные средства,622312.025,level
+2020-12-31,AST,OWN,Собственные средства,832295.161,level
+2021-12-31,AST,OWN,Собственные средства,891558.081,level
+2022-12-31,AST,OWN,Собственные средства,1025911.341,level
+2023-12-31,AST,OWN,Собственные средства,1087179.042,level
+2024-12-31,AST,OWN,Собственные средства,1094354.604,level
+2025-12-31,AST,OWN,Собственные средства,1459856.554,level
+2003-12-31,ATY,OWN,Собственные средства,214069.896,level
+2004-12-31,ATY,OWN,Собственные средства,264794.825,level
+2005-12-31,ATY,OWN,Собственные средства,288976.639,level
+2006-12-31,ATY,OWN,Собственные средства,316200.031,level
+2007-12-31,ATY,OWN,Собственные средства,321357.855,level
+2008-12-31,ATY,OWN,Собственные средства,253441.292,level
+2009-12-31,ATY,OWN,Собственные средства,162066.065,level
+2010-12-31,ATY,OWN,Собственные средства,202789.91,level
+2011-12-31,ATY,OWN,Собственные средства,248505.968,level
+2012-12-31,ATY,OWN,Собственные средства,421996.787,level
+2013-12-31,ATY,OWN,Собственные средства,493269.289,level
+2014-12-31,ATY,OWN,Собственные средства,778115.512,level
+2015-12-31,ATY,OWN,Собственные средства,920501.639,level
+2016-12-31,ATY,OWN,Собственные средства,1303308.405,level
+2017-12-31,ATY,OWN,Собственные средства,1890263.1,level
+2018-12-31,ATY,OWN,Собственные средства,3335043.046,level
+2019-12-31,ATY,OWN,Собственные средства,3988449.935,level
+2020-12-31,ATY,OWN,Собственные средства,2715944.176,level
+2021-12-31,ATY,OWN,Собственные средства,2222526.284,level
+2022-12-31,ATY,OWN,Собственные средства,2368454.931,level
+2023-12-31,ATY,OWN,Собственные средства,2397953.664,level
+2024-12-31,ATY,OWN,Собственные средства,1396078.219,level
+2025-12-31,ATY,OWN,Собственные средства,1210201.348,level
+2003-12-31,KRG,OWN,Собственные средства,47993.032,level
+2004-12-31,KRG,OWN,Собственные средства,61431.081,level
+2005-12-31,KRG,OWN,Собственные средства,74507.087,level
+2006-12-31,KRG,OWN,Собственные средства,92634.976,level
+2007-12-31,KRG,OWN,Собственные средства,106931.806,level
+2008-12-31,KRG,OWN,Собственные средства,137244.386,level
+2009-12-31,KRG,OWN,Собственные средства,124134.498,level
+2010-12-31,KRG,OWN,Собственные средства,163495.946,level
+2011-12-31,KRG,OWN,Собственные средства,181875.032,level
+2012-12-31,KRG,OWN,Собственные средства,232873.94,level
+2013-12-31,KRG,OWN,Собственные средства,250540.199,level
+2014-12-31,KRG,OWN,Собственные средства,264521.707,level
+2015-12-31,KRG,OWN,Собственные средства,246715.826,level
+2016-12-31,KRG,OWN,Собственные средства,217941.259,level
+2017-12-31,KRG,OWN,Собственные средства,259507.472,level
+2018-12-31,KRG,OWN,Собственные средства,353164.934,level
+2019-12-31,KRG,OWN,Собственные средства,664147.634,level
+2020-12-31,KRG,OWN,Собственные средства,454149.82,level
+2021-12-31,KRG,OWN,Собственные средства,559275.264,level
+2022-12-31,KRG,OWN,Собственные средства,522061.239,level
+2023-12-31,KRG,OWN,Собственные средства,488048.4,level
+2024-12-31,KRG,OWN,Собственные средства,972685.756,level
+2025-12-31,KRG,OWN,Собственные средства,921156.836,level
+2003-12-31,KST,OWN,Собственные средства,19180.583,level
+2004-12-31,KST,OWN,Собственные средства,31861.478,level
+2005-12-31,KST,OWN,Собственные средства,43269.555,level
+2006-12-31,KST,OWN,Собственные средства,43683.947,level
+2007-12-31,KST,OWN,Собственные средства,68380.477,level
+2008-12-31,KST,OWN,Собственные средства,82385.77,level
+2009-12-31,KST,OWN,Собственные средства,85526.898,level
+2010-12-31,KST,OWN,Собственные средства,88053.114,level
+2011-12-31,KST,OWN,Собственные средства,114184.052,level
+2012-12-31,KST,OWN,Собственные средства,122724.733,level
+2013-12-31,KST,OWN,Собственные средства,125566.347,level
+2014-12-31,KST,OWN,Собственные средства,126908.973,level
+2015-12-31,KST,OWN,Собственные средства,122801.267,level
+2016-12-31,KST,OWN,Собственные средства,135799.667,level
+2017-12-31,KST,OWN,Собственные средства,136075.771,level
+2018-12-31,KST,OWN,Собственные средства,176324.246,level
+2019-12-31,KST,OWN,Собственные средства,214866.22,level
+2020-12-31,KST,OWN,Собственные средства,201157.234,level
+2021-12-31,KST,OWN,Собственные средства,302908.254,level
+2022-12-31,KST,OWN,Собственные средства,352860.921,level
+2023-12-31,KST,OWN,Собственные средства,371615.79,level
+2024-12-31,KST,OWN,Собственные средства,365963.469,level
+2025-12-31,KST,OWN,Собственные средства,440519.537,level
+2003-12-31,KZL,OWN,Собственные средства,45295.684,level
+2004-12-31,KZL,OWN,Собственные средства,25956.974,level
+2005-12-31,KZL,OWN,Собственные средства,45230.034,level
+2006-12-31,KZL,OWN,Собственные средства,54096.834,level
+2007-12-31,KZL,OWN,Собственные средства,78842.486,level
+2008-12-31,KZL,OWN,Собственные средства,91399.566,level
+2009-12-31,KZL,OWN,Собственные средства,104056.941,level
+2010-12-31,KZL,OWN,Собственные средства,139139.573,level
+2011-12-31,KZL,OWN,Собственные средства,130940.709,level
+2012-12-31,KZL,OWN,Собственные средства,158431.871,level
+2013-12-31,KZL,OWN,Собственные средства,151237.659,level
+2014-12-31,KZL,OWN,Собственные средства,138991.958,level
+2015-12-31,KZL,OWN,Собственные средства,152991.692,level
+2016-12-31,KZL,OWN,Собственные средства,106551.416,level
+2017-12-31,KZL,OWN,Собственные средства,178278.42,level
+2018-12-31,KZL,OWN,Собственные средства,237688.595,level
+2019-12-31,KZL,OWN,Собственные средства,280746.747,level
+2020-12-31,KZL,OWN,Собственные средства,161834.669,level
+2021-12-31,KZL,OWN,Собственные средства,201503.786,level
+2022-12-31,KZL,OWN,Собственные средства,255205.74,level
+2023-12-31,KZL,OWN,Собственные средства,297302.227,level
+2024-12-31,KZL,OWN,Собственные средства,334446.247,level
+2025-12-31,KZL,OWN,Собственные средства,452128.36,level
+2003-12-31,MNG,OWN,Собственные средства,53272.08,level
+2004-12-31,MNG,OWN,Собственные средства,77966.67,level
+2005-12-31,MNG,OWN,Собственные средства,116726.383,level
+2006-12-31,MNG,OWN,Собственные средства,176290.008,level
+2007-12-31,MNG,OWN,Собственные средства,160038.13,level
+2008-12-31,MNG,OWN,Собственные средства,211311.788,level
+2009-12-31,MNG,OWN,Собственные средства,162264.893,level
+2010-12-31,MNG,OWN,Собственные средства,225939.107,level
+2011-12-31,MNG,OWN,Собственные средства,201318.797,level
+2012-12-31,MNG,OWN,Собственные средства,248589.932,level
+2013-12-31,MNG,OWN,Собственные средства,336793.3,level
+2014-12-31,MNG,OWN,Собственные средства,409751.224,level
+2015-12-31,MNG,OWN,Собственные средства,366806.979,level
+2016-12-31,MNG,OWN,Собственные средства,259625.159,level
+2017-12-31,MNG,OWN,Собственные средства,303659.078,level
+2018-12-31,MNG,OWN,Собственные средства,410162.19,level
+2019-12-31,MNG,OWN,Собственные средства,446199.181,level
+2020-12-31,MNG,OWN,Собственные средства,470236.869,level
+2021-12-31,MNG,OWN,Собственные средства,541328.001,level
+2022-12-31,MNG,OWN,Собственные средства,713430.917,level
+2023-12-31,MNG,OWN,Собственные средства,1003489.56,level
+2024-12-31,MNG,OWN,Собственные средства,902137.101,level
+2025-12-31,MNG,OWN,Собственные средства,920768.113,level
+2003-12-31,PVL,OWN,Собственные средства,27368.191,level
+2004-12-31,PVL,OWN,Собственные средства,34801.778,level
+2005-12-31,PVL,OWN,Собственные средства,44389.027,level
+2006-12-31,PVL,OWN,Собственные средства,92533.842,level
+2007-12-31,PVL,OWN,Собственные средства,70508.785,level
+2008-12-31,PVL,OWN,Собственные средства,97782.064,level
+2009-12-31,PVL,OWN,Собственные средства,75829.648,level
+2010-12-31,PVL,OWN,Собственные средства,129181.024,level
+2011-12-31,PVL,OWN,Собственные средства,133101.243,level
+2012-12-31,PVL,OWN,Собственные средства,165257.438,level
+2013-12-31,PVL,OWN,Собственные средства,161333.721,level
+2014-12-31,PVL,OWN,Собственные средства,177000.942,level
+2015-12-31,PVL,OWN,Собственные средства,174532.557,level
+2016-12-31,PVL,OWN,Собственные средства,228599.108,level
+2017-12-31,PVL,OWN,Собственные средства,344911.121,level
+2018-12-31,PVL,OWN,Собственные средства,270926.711,level
+2019-12-31,PVL,OWN,Собственные средства,344623.763,level
+2020-12-31,PVL,OWN,Собственные средства,367484.704,level
+2021-12-31,PVL,OWN,Собственные средства,458805.875,level
+2022-12-31,PVL,OWN,Собственные средства,629825.836,level
+2023-12-31,PVL,OWN,Собственные средства,640768.506,level
+2024-12-31,PVL,OWN,Собственные средства,598379.329,level
+2025-12-31,PVL,OWN,Собственные средства,1040117.599,level
+2018-12-31,SHM,OWN,Собственные средства,136527.961,level
+2019-12-31,SHM,OWN,Собственные средства,113554.579,level
+2020-12-31,SHM,OWN,Собственные средства,97424.748,level
+2021-12-31,SHM,OWN,Собственные средства,304087.915,level
+2022-12-31,SHM,OWN,Собственные средства,388892.749,level
+2023-12-31,SHM,OWN,Собственные средства,510753.326,level
+2024-12-31,SHM,OWN,Собственные средства,528993.334,level
+2025-12-31,SHM,OWN,Собственные средства,554714.091,level
+2003-12-31,SKO,OWN,Собственные средства,8098.712,level
+2004-12-31,SKO,OWN,Собственные средства,13176.305,level
+2005-12-31,SKO,OWN,Собственные средства,14752.538,level
+2006-12-31,SKO,OWN,Собственные средства,18611.428,level
+2007-12-31,SKO,OWN,Собственные средства,18683.681,level
+2008-12-31,SKO,OWN,Собственные средства,21986.804,level
+2009-12-31,SKO,OWN,Собственные средства,21423.405,level
+2010-12-31,SKO,OWN,Собственные средства,27470.238,level
+2011-12-31,SKO,OWN,Собственные средства,44353.31,level
+2012-12-31,SKO,OWN,Собственные средства,58531.456,level
+2013-12-31,SKO,OWN,Собственные средства,72706.109,level
+2014-12-31,SKO,OWN,Собственные средства,81563.092,level
+2015-12-31,SKO,OWN,Собственные средства,109402.673,level
+2016-12-31,SKO,OWN,Собственные средства,109261.272,level
+2017-12-31,SKO,OWN,Собственные средства,115632.035,level
+2018-12-31,SKO,OWN,Собственные средства,131159.225,level
+2019-12-31,SKO,OWN,Собственные средства,172883.262,level
+2020-12-31,SKO,OWN,Собственные средства,169994.931,level
+2021-12-31,SKO,OWN,Собственные средства,176327.196,level
+2022-12-31,SKO,OWN,Собственные средства,220274.363,level
+2023-12-31,SKO,OWN,Собственные средства,231466.56,level
+2024-12-31,SKO,OWN,Собственные средства,194247.69,level
+2025-12-31,SKO,OWN,Собственные средства,231693.699,level
+2018-12-31,TRK,OWN,Собственные средства,180583.138,level
+2019-12-31,TRK,OWN,Собственные средства,190791.286,level
+2020-12-31,TRK,OWN,Собственные средства,289989.384,level
+2021-12-31,TRK,OWN,Собственные средства,359369.482,level
+2022-12-31,TRK,OWN,Собственные средства,430056.413,level
+2023-12-31,TRK,OWN,Собственные средства,624076.941,level
+2024-12-31,TRK,OWN,Собственные средства,913491.581,level
+2025-12-31,TRK,OWN,Собственные средства,1057159.737,level
+2022-12-31,ULT,OWN,Собственные средства,154299.399,level
+2023-12-31,ULT,OWN,Собственные средства,183729.213,level
+2024-12-31,ULT,OWN,Собственные средства,184744.321,level
+2025-12-31,ULT,OWN,Собственные средства,186546.288,level
+2003-12-31,VKO,OWN,Собственные средства,33959.02,level
+2004-12-31,VKO,OWN,Собственные средства,37684.845,level
+2005-12-31,VKO,OWN,Собственные средства,46483.526,level
+2006-12-31,VKO,OWN,Собственные средства,69200.01,level
+2007-12-31,VKO,OWN,Собственные средства,72599.605,level
+2008-12-31,VKO,OWN,Собственные средства,101196.482,level
+2009-12-31,VKO,OWN,Собственные средства,89822.683,level
+2010-12-31,VKO,OWN,Собственные средства,92681.757,level
+2011-12-31,VKO,OWN,Собственные средства,152377.696,level
+2012-12-31,VKO,OWN,Собственные средства,153271.655,level
+2013-12-31,VKO,OWN,Собственные средства,203640.878,level
+2014-12-31,VKO,OWN,Собственные средства,174249.447,level
+2015-12-31,VKO,OWN,Собственные средства,176354.581,level
+2016-12-31,VKO,OWN,Собственные средства,186497.16,level
+2017-12-31,VKO,OWN,Собственные средства,262165.194,level
+2018-12-31,VKO,OWN,Собственные средства,328623.235,level
+2019-12-31,VKO,OWN,Собственные средства,449673.636,level
+2020-12-31,VKO,OWN,Собственные средства,485101.364,level
+2021-12-31,VKO,OWN,Собственные средства,569377.174,level
+2022-12-31,VKO,OWN,Собственные средства,390941.981,level
+2023-12-31,VKO,OWN,Собственные средства,456897.892,level
+2024-12-31,VKO,OWN,Собственные средства,484908.336,level
+2025-12-31,VKO,OWN,Собственные средства,541968.696,level
+2003-12-31,YKO,OWN,Собственные средства,15569.538,level
+2004-12-31,YKO,OWN,Собственные средства,24949.172,level
+2005-12-31,YKO,OWN,Собственные средства,30091.148,level
+2006-12-31,YKO,OWN,Собственные средства,40546.943,level
+2007-12-31,YKO,OWN,Собственные средства,52451.307,level
+2008-12-31,YKO,OWN,Собственные средства,60526.716,level
+2009-12-31,YKO,OWN,Собственные средства,52615.098,level
+2010-12-31,YKO,OWN,Собственные средства,79880.781,level
+2011-12-31,YKO,OWN,Собственные средства,87490.603,level
+2012-12-31,YKO,OWN,Собственные средства,124949.938,level
+2013-12-31,YKO,OWN,Собственные средства,116966.992,level
+2014-12-31,YKO,OWN,Собственные средства,168609.276,level
+2015-12-31,YKO,OWN,Собственные средства,201343.097,level
+2016-12-31,YKO,OWN,Собственные средства,151154.308,level
+2017-12-31,YKO,OWN,Собственные средства,211360.736,level
+2003-12-31,ZHM,OWN,Собственные средства,15115.945,level
+2004-12-31,ZHM,OWN,Собственные средства,11671.648,level
+2005-12-31,ZHM,OWN,Собственные средства,12614.866,level
+2006-12-31,ZHM,OWN,Собственные средства,16591.256,level
+2007-12-31,ZHM,OWN,Собственные средства,17681.44,level
+2008-12-31,ZHM,OWN,Собственные средства,20721.039,level
+2009-12-31,ZHM,OWN,Собственные средства,17480.485,level
+2010-12-31,ZHM,OWN,Собственные средства,17936.662,level
+2011-12-31,ZHM,OWN,Собственные средства,30718.404,level
+2012-12-31,ZHM,OWN,Собственные средства,48015.547,level
+2013-12-31,ZHM,OWN,Собственные средства,37604.976,level
+2014-12-31,ZHM,OWN,Собственные средства,55629.612,level
+2015-12-31,ZHM,OWN,Собственные средства,60505.361,level
+2016-12-31,ZHM,OWN,Собственные средства,120763.006,level
+2017-12-31,ZHM,OWN,Собственные средства,133107.171,level
+2018-12-31,ZHM,OWN,Собственные средства,188129.595,level
+2019-12-31,ZHM,OWN,Собственные средства,147429.497,level
+2020-12-31,ZHM,OWN,Собственные средства,160488.764,level
+2021-12-31,ZHM,OWN,Собственные средства,244674.161,level
+2022-12-31,ZHM,OWN,Собственные средства,242292.215,level
+2023-12-31,ZHM,OWN,Собственные средства,322354.673,level
+2024-12-31,ZHM,OWN,Собственные средства,296032.017,level
+2025-12-31,ZHM,OWN,Собственные средства,512692.997,level
+2022-12-31,ZHT,OWN,Собственные средства,137630.727,level
+2023-12-31,ZHT,OWN,Собственные средства,113936.753,level
+2024-12-31,ZHT,OWN,Собственные средства,128221.643,level
+2025-12-31,ZHT,OWN,Собственные средства,181012.547,level
+2003-12-31,ZKO,OWN,Собственные средства,11942.051,level
+2004-12-31,ZKO,OWN,Собственные средства,24521.792,level
+2005-12-31,ZKO,OWN,Собственные средства,27936.201,level
+2006-12-31,ZKO,OWN,Собственные средства,23454.929,level
+2007-12-31,ZKO,OWN,Собственные средства,22773.842,level
+2008-12-31,ZKO,OWN,Собственные средства,28020.174,level
+2009-12-31,ZKO,OWN,Собственные средства,48845.084,level
+2010-12-31,ZKO,OWN,Собственные средства,39091.044,level
+2011-12-31,ZKO,OWN,Собственные средства,28710.765,level
+2012-12-31,ZKO,OWN,Собственные средства,50559.914,level
+2013-12-31,ZKO,OWN,Собственные средства,131222.216,level
+2014-12-31,ZKO,OWN,Собственные средства,182745.73,level
+2015-12-31,ZKO,OWN,Собственные средства,307867.134,level
+2016-12-31,ZKO,OWN,Собственные средства,353543.761,level
+2017-12-31,ZKO,OWN,Собственные средства,344245.989,level
+2018-12-31,ZKO,OWN,Собственные средства,384207.722,level
+2019-12-31,ZKO,OWN,Собственные средства,520977.249,level
+2020-12-31,ZKO,OWN,Собственные средства,365108.851,level
+2021-12-31,ZKO,OWN,Собственные средства,326692.913,level
+2022-12-31,ZKO,OWN,Собственные средства,444865.529,level
+2023-12-31,ZKO,OWN,Собственные средства,517051.785,level
+2024-12-31,ZKO,OWN,Собственные средства,503650.265,level
+2025-12-31,ZKO,OWN,Собственные средства,600435.794,level
+2003-12-31,national,OWN,Собственные средства,793657.439,level
+2004-12-31,national,OWN,Собственные средства,1095438.992,level
+2005-12-31,national,OWN,Собственные средства,1357856.278,level
+2006-12-31,national,OWN,Собственные средства,1600898.231,level
+2007-12-31,national,OWN,Собственные средства,1656142.297,level
+2008-12-31,national,OWN,Собственные средства,1706103.972,level
+2009-12-31,national,OWN,Собственные средства,1491432.449,level
+2010-12-31,national,OWN,Собственные средства,1895953.054,level
+2011-12-31,national,OWN,Собственные средства,2281190.613,level
+2012-12-31,national,OWN,Собственные средства,2900761.185,level
+2013-12-31,national,OWN,Собственные средства,3139832.899,level
+2014-12-31,national,OWN,Собственные средства,3746569.511,level
+2015-12-31,national,OWN,Собственные средства,4048678.849,level
+2016-12-31,national,OWN,Собственные средства,4571116.25,level
+2017-12-31,national,OWN,Собственные средства,5959295.292,level
+2018-12-31,national,OWN,Собственные средства,8177424.092,level
+2019-12-31,national,OWN,Собственные средства,9803540.38,level
+2020-12-31,national,OWN,Собственные средства,8432198.326,level
+2021-12-31,national,OWN,Собственные средства,9362767.794,level
+2022-12-31,national,OWN,Собственные средства,11161041.078,level
+2023-12-31,national,OWN,Собственные средства,12744563.763,level
+2024-12-31,national,OWN,Собственные средства,12239136.765,level
+2025-12-31,national,OWN,Собственные средства,14367300.357,level
+2022-12-31,ABY,REP_BUDGET,Республиканский бюджет,1263.653,level
+2023-12-31,ABY,REP_BUDGET,Республиканский бюджет,52898.557,level
+2024-12-31,ABY,REP_BUDGET,Республиканский бюджет,72483.341,level
+2025-12-31,ABY,REP_BUDGET,Республиканский бюджет,54409.685,level
+2003-12-31,AKM,REP_BUDGET,Республиканский бюджет,3176.011,level
+2004-12-31,AKM,REP_BUDGET,Республиканский бюджет,3944.973,level
+2005-12-31,AKM,REP_BUDGET,Республиканский бюджет,4892.103,level
+2006-12-31,AKM,REP_BUDGET,Республиканский бюджет,17299.399,level
+2007-12-31,AKM,REP_BUDGET,Республиканский бюджет,58586.305,level
+2008-12-31,AKM,REP_BUDGET,Республиканский бюджет,63245.484,level
+2009-12-31,AKM,REP_BUDGET,Республиканский бюджет,60572.373,level
+2010-12-31,AKM,REP_BUDGET,Республиканский бюджет,44524.036,level
+2011-12-31,AKM,REP_BUDGET,Республиканский бюджет,50142.602,level
+2012-12-31,AKM,REP_BUDGET,Республиканский бюджет,49710.711,level
+2013-12-31,AKM,REP_BUDGET,Республиканский бюджет,43005.343,level
+2014-12-31,AKM,REP_BUDGET,Республиканский бюджет,48501.332,level
+2015-12-31,AKM,REP_BUDGET,Республиканский бюджет,75584.805,level
+2016-12-31,AKM,REP_BUDGET,Республиканский бюджет,68091.493,level
+2017-12-31,AKM,REP_BUDGET,Республиканский бюджет,93536.435,level
+2018-12-31,AKM,REP_BUDGET,Республиканский бюджет,41304.475,level
+2019-12-31,AKM,REP_BUDGET,Республиканский бюджет,50475.504,level
+2020-12-31,AKM,REP_BUDGET,Республиканский бюджет,63948.618,level
+2021-12-31,AKM,REP_BUDGET,Республиканский бюджет,63986.648,level
+2022-12-31,AKM,REP_BUDGET,Республиканский бюджет,65977.476,level
+2023-12-31,AKM,REP_BUDGET,Республиканский бюджет,70485.156,level
+2024-12-31,AKM,REP_BUDGET,Республиканский бюджет,113239.832,level
+2025-12-31,AKM,REP_BUDGET,Республиканский бюджет,83186.862,level
+2003-12-31,AKT,REP_BUDGET,Республиканский бюджет,7386.922,level
+2004-12-31,AKT,REP_BUDGET,Республиканский бюджет,12192.375,level
+2005-12-31,AKT,REP_BUDGET,Республиканский бюджет,21557.149,level
+2006-12-31,AKT,REP_BUDGET,Республиканский бюджет,9797.154,level
+2007-12-31,AKT,REP_BUDGET,Республиканский бюджет,13972.307,level
+2008-12-31,AKT,REP_BUDGET,Республиканский бюджет,20252.821,level
+2009-12-31,AKT,REP_BUDGET,Республиканский бюджет,33039.428,level
+2010-12-31,AKT,REP_BUDGET,Республиканский бюджет,42493.366,level
+2011-12-31,AKT,REP_BUDGET,Республиканский бюджет,44108.368,level
+2012-12-31,AKT,REP_BUDGET,Республиканский бюджет,44933.554,level
+2013-12-31,AKT,REP_BUDGET,Республиканский бюджет,24754.319,level
+2014-12-31,AKT,REP_BUDGET,Республиканский бюджет,66380.676,level
+2015-12-31,AKT,REP_BUDGET,Республиканский бюджет,22846.823,level
+2016-12-31,AKT,REP_BUDGET,Республиканский бюджет,42165.625,level
+2017-12-31,AKT,REP_BUDGET,Республиканский бюджет,36239.3,level
+2018-12-31,AKT,REP_BUDGET,Республиканский бюджет,30778.315,level
+2019-12-31,AKT,REP_BUDGET,Республиканский бюджет,38210.689,level
+2020-12-31,AKT,REP_BUDGET,Республиканский бюджет,38801.905,level
+2021-12-31,AKT,REP_BUDGET,Республиканский бюджет,44948.42,level
+2022-12-31,AKT,REP_BUDGET,Республиканский бюджет,44162.815,level
+2023-12-31,AKT,REP_BUDGET,Республиканский бюджет,43902.65,level
+2024-12-31,AKT,REP_BUDGET,Республиканский бюджет,72395.789,level
+2025-12-31,AKT,REP_BUDGET,Республиканский бюджет,86223.661,level
+2003-12-31,ALA,REP_BUDGET,Республиканский бюджет,3699.911,level
+2004-12-31,ALA,REP_BUDGET,Республиканский бюджет,14151.104,level
+2005-12-31,ALA,REP_BUDGET,Республиканский бюджет,24121.995,level
+2006-12-31,ALA,REP_BUDGET,Республиканский бюджет,44947.158,level
+2007-12-31,ALA,REP_BUDGET,Республиканский бюджет,55305.118,level
+2008-12-31,ALA,REP_BUDGET,Республиканский бюджет,80320.827,level
+2009-12-31,ALA,REP_BUDGET,Республиканский бюджет,121966.584,level
+2010-12-31,ALA,REP_BUDGET,Республиканский бюджет,136284.213,level
+2011-12-31,ALA,REP_BUDGET,Республиканский бюджет,92316.262,level
+2012-12-31,ALA,REP_BUDGET,Республиканский бюджет,91995.8,level
+2013-12-31,ALA,REP_BUDGET,Республиканский бюджет,65085.672,level
+2014-12-31,ALA,REP_BUDGET,Республиканский бюджет,111903.125,level
+2015-12-31,ALA,REP_BUDGET,Республиканский бюджет,117660.21,level
+2016-12-31,ALA,REP_BUDGET,Республиканский бюджет,76390.994,level
+2017-12-31,ALA,REP_BUDGET,Республиканский бюджет,63729.297,level
+2018-12-31,ALA,REP_BUDGET,Республиканский бюджет,59144.215,level
+2019-12-31,ALA,REP_BUDGET,Республиканский бюджет,59511.22,level
+2020-12-31,ALA,REP_BUDGET,Республиканский бюджет,70393.912,level
+2021-12-31,ALA,REP_BUDGET,Республиканский бюджет,84848.091,level
+2022-12-31,ALA,REP_BUDGET,Республиканский бюджет,89309.702,level
+2023-12-31,ALA,REP_BUDGET,Республиканский бюджет,39544.293,level
+2024-12-31,ALA,REP_BUDGET,Республиканский бюджет,79081.287,level
+2025-12-31,ALA,REP_BUDGET,Республиканский бюджет,107562.372,level
+2003-12-31,ALM,REP_BUDGET,Республиканский бюджет,5007.784,level
+2004-12-31,ALM,REP_BUDGET,Республиканский бюджет,6659.402,level
+2005-12-31,ALM,REP_BUDGET,Республиканский бюджет,8021.368,level
+2006-12-31,ALM,REP_BUDGET,Республиканский бюджет,12434.347,level
+2007-12-31,ALM,REP_BUDGET,Республиканский бюджет,16334.055,level
+2008-12-31,ALM,REP_BUDGET,Республиканский бюджет,32698.8,level
+2009-12-31,ALM,REP_BUDGET,Республиканский бюджет,29724.508,level
+2010-12-31,ALM,REP_BUDGET,Республиканский бюджет,78348.842,level
+2011-12-31,ALM,REP_BUDGET,Республиканский бюджет,80289.783,level
+2012-12-31,ALM,REP_BUDGET,Республиканский бюджет,99960.501,level
+2013-12-31,ALM,REP_BUDGET,Республиканский бюджет,71045.979,level
+2014-12-31,ALM,REP_BUDGET,Республиканский бюджет,92322.278,level
+2015-12-31,ALM,REP_BUDGET,Республиканский бюджет,75589.437,level
+2016-12-31,ALM,REP_BUDGET,Республиканский бюджет,59304.992,level
+2017-12-31,ALM,REP_BUDGET,Республиканский бюджет,29566.068,level
+2018-12-31,ALM,REP_BUDGET,Республиканский бюджет,31461.62,level
+2019-12-31,ALM,REP_BUDGET,Республиканский бюджет,30436.954,level
+2020-12-31,ALM,REP_BUDGET,Республиканский бюджет,47368.008,level
+2021-12-31,ALM,REP_BUDGET,Республиканский бюджет,80253.384,level
+2022-12-31,ALM,REP_BUDGET,Республиканский бюджет,63504.262,level
+2023-12-31,ALM,REP_BUDGET,Республиканский бюджет,53064.87,level
+2024-12-31,ALM,REP_BUDGET,Республиканский бюджет,110484.504,level
+2025-12-31,ALM,REP_BUDGET,Республиканский бюджет,102789.523,level
+2003-12-31,AST,REP_BUDGET,Республиканский бюджет,32977.273,level
+2004-12-31,AST,REP_BUDGET,Республиканский бюджет,54345.171,level
+2005-12-31,AST,REP_BUDGET,Республиканский бюджет,85803.939,level
+2006-12-31,AST,REP_BUDGET,Республиканский бюджет,129336.179,level
+2007-12-31,AST,REP_BUDGET,Республиканский бюджет,160292.27,level
+2008-12-31,AST,REP_BUDGET,Республиканский бюджет,188970.303,level
+2009-12-31,AST,REP_BUDGET,Республиканский бюджет,198522.445,level
+2010-12-31,AST,REP_BUDGET,Республиканский бюджет,224583.491,level
+2011-12-31,AST,REP_BUDGET,Республиканский бюджет,195955.196,level
+2012-12-31,AST,REP_BUDGET,Республиканский бюджет,194164.59,level
+2013-12-31,AST,REP_BUDGET,Республиканский бюджет,206801.441,level
+2014-12-31,AST,REP_BUDGET,Республиканский бюджет,189333.529,level
+2015-12-31,AST,REP_BUDGET,Республиканский бюджет,276187.855,level
+2016-12-31,AST,REP_BUDGET,Республиканский бюджет,323989.827,level
+2017-12-31,AST,REP_BUDGET,Республиканский бюджет,181529.787,level
+2018-12-31,AST,REP_BUDGET,Республиканский бюджет,143614.923,level
+2019-12-31,AST,REP_BUDGET,Республиканский бюджет,124966.892,level
+2020-12-31,AST,REP_BUDGET,Республиканский бюджет,128084.216,level
+2021-12-31,AST,REP_BUDGET,Республиканский бюджет,136189.085,level
+2022-12-31,AST,REP_BUDGET,Республиканский бюджет,203089.753,level
+2023-12-31,AST,REP_BUDGET,Республиканский бюджет,327945.047,level
+2024-12-31,AST,REP_BUDGET,Республиканский бюджет,419806.949,level
+2025-12-31,AST,REP_BUDGET,Республиканский бюджет,564385.015,level
+2003-12-31,ATY,REP_BUDGET,Республиканский бюджет,4605.228,level
+2004-12-31,ATY,REP_BUDGET,Республиканский бюджет,6037.955,level
+2005-12-31,ATY,REP_BUDGET,Республиканский бюджет,6315.301,level
+2006-12-31,ATY,REP_BUDGET,Республиканский бюджет,7131.296,level
+2007-12-31,ATY,REP_BUDGET,Республиканский бюджет,16952.945,level
+2008-12-31,ATY,REP_BUDGET,Республиканский бюджет,24489.14,level
+2009-12-31,ATY,REP_BUDGET,Республиканский бюджет,24023.085,level
+2010-12-31,ATY,REP_BUDGET,Республиканский бюджет,27057.544,level
+2011-12-31,ATY,REP_BUDGET,Республиканский бюджет,25949.626,level
+2012-12-31,ATY,REP_BUDGET,Республиканский бюджет,24962.396,level
+2013-12-31,ATY,REP_BUDGET,Республиканский бюджет,22655.979,level
+2014-12-31,ATY,REP_BUDGET,Республиканский бюджет,18957.5,level
+2015-12-31,ATY,REP_BUDGET,Республиканский бюджет,4971.412,level
+2016-12-31,ATY,REP_BUDGET,Республиканский бюджет,11664.333,level
+2017-12-31,ATY,REP_BUDGET,Республиканский бюджет,65748.311,level
+2018-12-31,ATY,REP_BUDGET,Республиканский бюджет,28125.196,level
+2019-12-31,ATY,REP_BUDGET,Республиканский бюджет,36176.104,level
+2020-12-31,ATY,REP_BUDGET,Республиканский бюджет,69260.124,level
+2021-12-31,ATY,REP_BUDGET,Республиканский бюджет,35046.548,level
+2022-12-31,ATY,REP_BUDGET,Республиканский бюджет,50073.291,level
+2023-12-31,ATY,REP_BUDGET,Республиканский бюджет,67788.615,level
+2024-12-31,ATY,REP_BUDGET,Республиканский бюджет,80097.06,level
+2025-12-31,ATY,REP_BUDGET,Республиканский бюджет,54771.76,level
+2003-12-31,KRG,REP_BUDGET,Республиканский бюджет,3822.214,level
+2004-12-31,KRG,REP_BUDGET,Республиканский бюджет,3119.414,level
+2005-12-31,KRG,REP_BUDGET,Республиканский бюджет,4517.719,level
+2006-12-31,KRG,REP_BUDGET,Республиканский бюджет,8844.888,level
+2007-12-31,KRG,REP_BUDGET,Республиканский бюджет,11047.447,level
+2008-12-31,KRG,REP_BUDGET,Республиканский бюджет,22540.859,level
+2009-12-31,KRG,REP_BUDGET,Республиканский бюджет,20734.917,level
+2010-12-31,KRG,REP_BUDGET,Республиканский бюджет,23661.789,level
+2011-12-31,KRG,REP_BUDGET,Республиканский бюджет,29110.727,level
+2012-12-31,KRG,REP_BUDGET,Республиканский бюджет,40183.353,level
+2013-12-31,KRG,REP_BUDGET,Республиканский бюджет,31666.429,level
+2014-12-31,KRG,REP_BUDGET,Республиканский бюджет,78263.234,level
+2015-12-31,KRG,REP_BUDGET,Республиканский бюджет,59025.5,level
+2016-12-31,KRG,REP_BUDGET,Республиканский бюджет,57663.822,level
+2017-12-31,KRG,REP_BUDGET,Республиканский бюджет,35902.481,level
+2018-12-31,KRG,REP_BUDGET,Республиканский бюджет,39369.95,level
+2019-12-31,KRG,REP_BUDGET,Республиканский бюджет,42425.907,level
+2020-12-31,KRG,REP_BUDGET,Республиканский бюджет,52885.078,level
+2021-12-31,KRG,REP_BUDGET,Республиканский бюджет,44016.713,level
+2022-12-31,KRG,REP_BUDGET,Республиканский бюджет,38717.002,level
+2023-12-31,KRG,REP_BUDGET,Республиканский бюджет,32599.0,level
+2024-12-31,KRG,REP_BUDGET,Республиканский бюджет,59002.512,level
+2025-12-31,KRG,REP_BUDGET,Республиканский бюджет,40334.489,level
+2003-12-31,KST,REP_BUDGET,Республиканский бюджет,6487.069,level
+2004-12-31,KST,REP_BUDGET,Республиканский бюджет,9153.407,level
+2005-12-31,KST,REP_BUDGET,Республиканский бюджет,9510.201,level
+2006-12-31,KST,REP_BUDGET,Республиканский бюджет,10552.501,level
+2007-12-31,KST,REP_BUDGET,Республиканский бюджет,8846.326,level
+2008-12-31,KST,REP_BUDGET,Республиканский бюджет,10778.582,level
+2009-12-31,KST,REP_BUDGET,Республиканский бюджет,14798.438,level
+2010-12-31,KST,REP_BUDGET,Республиканский бюджет,19988.397,level
+2011-12-31,KST,REP_BUDGET,Республиканский бюджет,21534.728,level
+2012-12-31,KST,REP_BUDGET,Республиканский бюджет,22880.61,level
+2013-12-31,KST,REP_BUDGET,Республиканский бюджет,18694.729,level
+2014-12-31,KST,REP_BUDGET,Республиканский бюджет,36762.292,level
+2015-12-31,KST,REP_BUDGET,Республиканский бюджет,23189.322,level
+2016-12-31,KST,REP_BUDGET,Республиканский бюджет,20349.939,level
+2017-12-31,KST,REP_BUDGET,Республиканский бюджет,19406.183,level
+2018-12-31,KST,REP_BUDGET,Республиканский бюджет,24104.797,level
+2019-12-31,KST,REP_BUDGET,Республиканский бюджет,29702.226,level
+2020-12-31,KST,REP_BUDGET,Республиканский бюджет,43736.751,level
+2021-12-31,KST,REP_BUDGET,Республиканский бюджет,42475.095,level
+2022-12-31,KST,REP_BUDGET,Республиканский бюджет,52940.936,level
+2023-12-31,KST,REP_BUDGET,Республиканский бюджет,58394.071,level
+2024-12-31,KST,REP_BUDGET,Республиканский бюджет,58523.324,level
+2025-12-31,KST,REP_BUDGET,Республиканский бюджет,36520.404,level
+2003-12-31,KZL,REP_BUDGET,Республиканский бюджет,3734.706,level
+2004-12-31,KZL,REP_BUDGET,Республиканский бюджет,5710.87,level
+2005-12-31,KZL,REP_BUDGET,Республиканский бюджет,8978.717,level
+2006-12-31,KZL,REP_BUDGET,Республиканский бюджет,5646.6,level
+2007-12-31,KZL,REP_BUDGET,Республиканский бюджет,8221.671,level
+2008-12-31,KZL,REP_BUDGET,Республиканский бюджет,23552.471,level
+2009-12-31,KZL,REP_BUDGET,Республиканский бюджет,27701.693,level
+2010-12-31,KZL,REP_BUDGET,Республиканский бюджет,33108.374,level
+2011-12-31,KZL,REP_BUDGET,Республиканский бюджет,22871.085,level
+2012-12-31,KZL,REP_BUDGET,Республиканский бюджет,32342.554,level
+2013-12-31,KZL,REP_BUDGET,Республиканский бюджет,39354.471,level
+2014-12-31,KZL,REP_BUDGET,Республиканский бюджет,39486.222,level
+2015-12-31,KZL,REP_BUDGET,Республиканский бюджет,36408.578,level
+2016-12-31,KZL,REP_BUDGET,Республиканский бюджет,46007.253,level
+2017-12-31,KZL,REP_BUDGET,Республиканский бюджет,20026.737,level
+2018-12-31,KZL,REP_BUDGET,Республиканский бюджет,33473.998,level
+2019-12-31,KZL,REP_BUDGET,Республиканский бюджет,31251.006,level
+2020-12-31,KZL,REP_BUDGET,Республиканский бюджет,41651.58,level
+2021-12-31,KZL,REP_BUDGET,Республиканский бюджет,38434.313,level
+2022-12-31,KZL,REP_BUDGET,Республиканский бюджет,61604.428,level
+2023-12-31,KZL,REP_BUDGET,Республиканский бюджет,48993.94,level
+2024-12-31,KZL,REP_BUDGET,Республиканский бюджет,92468.274,level
+2025-12-31,KZL,REP_BUDGET,Республиканский бюджет,160133.751,level
+2003-12-31,MNG,REP_BUDGET,Республиканский бюджет,1854.553,level
+2004-12-31,MNG,REP_BUDGET,Республиканский бюджет,1759.815,level
+2005-12-31,MNG,REP_BUDGET,Республиканский бюджет,3327.625,level
+2006-12-31,MNG,REP_BUDGET,Республиканский бюджет,6605.369,level
+2007-12-31,MNG,REP_BUDGET,Республиканский бюджет,9657.584,level
+2008-12-31,MNG,REP_BUDGET,Республиканский бюджет,24018.206,level
+2009-12-31,MNG,REP_BUDGET,Республиканский бюджет,26735.391,level
+2010-12-31,MNG,REP_BUDGET,Республиканский бюджет,32212.39,level
+2011-12-31,MNG,REP_BUDGET,Республиканский бюджет,51735.451,level
+2012-12-31,MNG,REP_BUDGET,Республиканский бюджет,33457.368,level
+2013-12-31,MNG,REP_BUDGET,Республиканский бюджет,21098.273,level
+2014-12-31,MNG,REP_BUDGET,Республиканский бюджет,32557.932,level
+2015-12-31,MNG,REP_BUDGET,Республиканский бюджет,36909.548,level
+2016-12-31,MNG,REP_BUDGET,Республиканский бюджет,45911.483,level
+2017-12-31,MNG,REP_BUDGET,Республиканский бюджет,15180.286,level
+2018-12-31,MNG,REP_BUDGET,Республиканский бюджет,31155.354,level
+2019-12-31,MNG,REP_BUDGET,Республиканский бюджет,14616.411,level
+2020-12-31,MNG,REP_BUDGET,Республиканский бюджет,11987.166,level
+2021-12-31,MNG,REP_BUDGET,Республиканский бюджет,18719.896,level
+2022-12-31,MNG,REP_BUDGET,Республиканский бюджет,29884.528,level
+2023-12-31,MNG,REP_BUDGET,Республиканский бюджет,38744.427,level
+2024-12-31,MNG,REP_BUDGET,Республиканский бюджет,31078.317,level
+2025-12-31,MNG,REP_BUDGET,Республиканский бюджет,58195.722,level
+2003-12-31,PVL,REP_BUDGET,Республиканский бюджет,1338.812,level
+2004-12-31,PVL,REP_BUDGET,Республиканский бюджет,3223.999,level
+2005-12-31,PVL,REP_BUDGET,Республиканский бюджет,4721.161,level
+2006-12-31,PVL,REP_BUDGET,Республиканский бюджет,9006.014,level
+2007-12-31,PVL,REP_BUDGET,Республиканский бюджет,10768.357,level
+2008-12-31,PVL,REP_BUDGET,Республиканский бюджет,15722.672,level
+2009-12-31,PVL,REP_BUDGET,Республиканский бюджет,23558.568,level
+2010-12-31,PVL,REP_BUDGET,Республиканский бюджет,22292.328,level
+2011-12-31,PVL,REP_BUDGET,Республиканский бюджет,17913.004,level
+2012-12-31,PVL,REP_BUDGET,Республиканский бюджет,23458.779,level
+2013-12-31,PVL,REP_BUDGET,Республиканский бюджет,32200.452,level
+2014-12-31,PVL,REP_BUDGET,Республиканский бюджет,52624.705,level
+2015-12-31,PVL,REP_BUDGET,Республиканский бюджет,70940.764,level
+2016-12-31,PVL,REP_BUDGET,Республиканский бюджет,52166.112,level
+2017-12-31,PVL,REP_BUDGET,Республиканский бюджет,67713.524,level
+2018-12-31,PVL,REP_BUDGET,Республиканский бюджет,90291.819,level
+2019-12-31,PVL,REP_BUDGET,Республиканский бюджет,84572.831,level
+2020-12-31,PVL,REP_BUDGET,Республиканский бюджет,43259.453,level
+2021-12-31,PVL,REP_BUDGET,Республиканский бюджет,10919.826,level
+2022-12-31,PVL,REP_BUDGET,Республиканский бюджет,19844.929,level
+2023-12-31,PVL,REP_BUDGET,Республиканский бюджет,37760.128,level
+2024-12-31,PVL,REP_BUDGET,Республиканский бюджет,51544.926,level
+2025-12-31,PVL,REP_BUDGET,Республиканский бюджет,46846.485,level
+2018-12-31,SHM,REP_BUDGET,Республиканский бюджет,18919.39,level
+2019-12-31,SHM,REP_BUDGET,Республиканский бюджет,25150.319,level
+2020-12-31,SHM,REP_BUDGET,Республиканский бюджет,23013.756,level
+2021-12-31,SHM,REP_BUDGET,Республиканский бюджет,51430.174,level
+2022-12-31,SHM,REP_BUDGET,Республиканский бюджет,69189.183,level
+2023-12-31,SHM,REP_BUDGET,Республиканский бюджет,47691.791,level
+2024-12-31,SHM,REP_BUDGET,Республиканский бюджет,85410.109,level
+2025-12-31,SHM,REP_BUDGET,Республиканский бюджет,61095.329,level
+2003-12-31,SKO,REP_BUDGET,Республиканский бюджет,1321.961,level
+2004-12-31,SKO,REP_BUDGET,Республиканский бюджет,2227.355,level
+2005-12-31,SKO,REP_BUDGET,Республиканский бюджет,4871.627,level
+2006-12-31,SKO,REP_BUDGET,Республиканский бюджет,4383.074,level
+2007-12-31,SKO,REP_BUDGET,Республиканский бюджет,6315.773,level
+2008-12-31,SKO,REP_BUDGET,Республиканский бюджет,8070.316,level
+2009-12-31,SKO,REP_BUDGET,Республиканский бюджет,11926.434,level
+2010-12-31,SKO,REP_BUDGET,Республиканский бюджет,11808.139,level
+2011-12-31,SKO,REP_BUDGET,Республиканский бюджет,11979.212,level
+2012-12-31,SKO,REP_BUDGET,Республиканский бюджет,22539.872,level
+2013-12-31,SKO,REP_BUDGET,Республиканский бюджет,18758.491,level
+2014-12-31,SKO,REP_BUDGET,Республиканский бюджет,20448.148,level
+2015-12-31,SKO,REP_BUDGET,Республиканский бюджет,28839.011,level
+2016-12-31,SKO,REP_BUDGET,Республиканский бюджет,29749.215,level
+2017-12-31,SKO,REP_BUDGET,Республиканский бюджет,20174.96,level
+2018-12-31,SKO,REP_BUDGET,Республиканский бюджет,38260.884,level
+2019-12-31,SKO,REP_BUDGET,Республиканский бюджет,18767.073,level
+2020-12-31,SKO,REP_BUDGET,Республиканский бюджет,21553.877,level
+2021-12-31,SKO,REP_BUDGET,Республиканский бюджет,34685.055,level
+2022-12-31,SKO,REP_BUDGET,Республиканский бюджет,34563.467,level
+2023-12-31,SKO,REP_BUDGET,Республиканский бюджет,44122.373,level
+2024-12-31,SKO,REP_BUDGET,Республиканский бюджет,65159.438,level
+2025-12-31,SKO,REP_BUDGET,Республиканский бюджет,65010.348,level
+2018-12-31,TRK,REP_BUDGET,Республиканский бюджет,30687.718,level
+2019-12-31,TRK,REP_BUDGET,Республиканский бюджет,122396.914,level
+2020-12-31,TRK,REP_BUDGET,Республиканский бюджет,128522.341,level
+2021-12-31,TRK,REP_BUDGET,Республиканский бюджет,84035.338,level
+2022-12-31,TRK,REP_BUDGET,Республиканский бюджет,166686.811,level
+2023-12-31,TRK,REP_BUDGET,Республиканский бюджет,138022.116,level
+2024-12-31,TRK,REP_BUDGET,Республиканский бюджет,197833.92,level
+2025-12-31,TRK,REP_BUDGET,Республиканский бюджет,147235.017,level
+2022-12-31,ULT,REP_BUDGET,Республиканский бюджет,8164.896,level
+2023-12-31,ULT,REP_BUDGET,Республиканский бюджет,18744.956,level
+2024-12-31,ULT,REP_BUDGET,Республиканский бюджет,27791.873,level
+2025-12-31,ULT,REP_BUDGET,Республиканский бюджет,14982.52,level
+2003-12-31,VKO,REP_BUDGET,Республиканский бюджет,4240.743,level
+2004-12-31,VKO,REP_BUDGET,Республиканский бюджет,4445.144,level
+2005-12-31,VKO,REP_BUDGET,Республиканский бюджет,11596.205,level
+2006-12-31,VKO,REP_BUDGET,Республиканский бюджет,11830.05,level
+2007-12-31,VKO,REP_BUDGET,Республиканский бюджет,17995.675,level
+2008-12-31,VKO,REP_BUDGET,Республиканский бюджет,21321.571,level
+2009-12-31,VKO,REP_BUDGET,Республиканский бюджет,21640.069,level
+2010-12-31,VKO,REP_BUDGET,Республиканский бюджет,31632.404,level
+2011-12-31,VKO,REP_BUDGET,Республиканский бюджет,51154.316,level
+2012-12-31,VKO,REP_BUDGET,Республиканский бюджет,55798.667,level
+2013-12-31,VKO,REP_BUDGET,Республиканский бюджет,54633.733,level
+2014-12-31,VKO,REP_BUDGET,Республиканский бюджет,47727.916,level
+2015-12-31,VKO,REP_BUDGET,Республиканский бюджет,32341.483,level
+2016-12-31,VKO,REP_BUDGET,Республиканский бюджет,30496.248,level
+2017-12-31,VKO,REP_BUDGET,Республиканский бюджет,49195.074,level
+2018-12-31,VKO,REP_BUDGET,Республиканский бюджет,47879.373,level
+2019-12-31,VKO,REP_BUDGET,Республиканский бюджет,59690.879,level
+2020-12-31,VKO,REP_BUDGET,Республиканский бюджет,52879.287,level
+2021-12-31,VKO,REP_BUDGET,Республиканский бюджет,23402.673,level
+2022-12-31,VKO,REP_BUDGET,Республиканский бюджет,24878.738,level
+2023-12-31,VKO,REP_BUDGET,Республиканский бюджет,24039.709,level
+2024-12-31,VKO,REP_BUDGET,Республиканский бюджет,77912.203,level
+2025-12-31,VKO,REP_BUDGET,Республиканский бюджет,37024.88,level
+2003-12-31,YKO,REP_BUDGET,Республиканский бюджет,3854.003,level
+2004-12-31,YKO,REP_BUDGET,Республиканский бюджет,5937.039,level
+2005-12-31,YKO,REP_BUDGET,Республиканский бюджет,12165.679,level
+2006-12-31,YKO,REP_BUDGET,Республиканский бюджет,15633.697,level
+2007-12-31,YKO,REP_BUDGET,Республиканский бюджет,25121.841,level
+2008-12-31,YKO,REP_BUDGET,Республиканский бюджет,42477.565,level
+2009-12-31,YKO,REP_BUDGET,Республиканский бюджет,75202.819,level
+2010-12-31,YKO,REP_BUDGET,Республиканский бюджет,68053.357,level
+2011-12-31,YKO,REP_BUDGET,Республиканский бюджет,60102.858,level
+2012-12-31,YKO,REP_BUDGET,Республиканский бюджет,78907.74,level
+2013-12-31,YKO,REP_BUDGET,Республиканский бюджет,51746.436,level
+2014-12-31,YKO,REP_BUDGET,Республиканский бюджет,42570.305,level
+2015-12-31,YKO,REP_BUDGET,Республиканский бюджет,34363.64,level
+2016-12-31,YKO,REP_BUDGET,Республиканский бюджет,36024.934,level
+2017-12-31,YKO,REP_BUDGET,Республиканский бюджет,54147.614,level
+2003-12-31,ZHM,REP_BUDGET,Республиканский бюджет,14065.794,level
+2004-12-31,ZHM,REP_BUDGET,Республиканский бюджет,4116.236,level
+2005-12-31,ZHM,REP_BUDGET,Республиканский бюджет,4635.088,level
+2006-12-31,ZHM,REP_BUDGET,Республиканский бюджет,4597.669,level
+2007-12-31,ZHM,REP_BUDGET,Республиканский бюджет,5667.659,level
+2008-12-31,ZHM,REP_BUDGET,Республиканский бюджет,12305.804,level
+2009-12-31,ZHM,REP_BUDGET,Республиканский бюджет,11985.427,level
+2010-12-31,ZHM,REP_BUDGET,Республиканский бюджет,18089.484,level
+2011-12-31,ZHM,REP_BUDGET,Республиканский бюджет,25219.305,level
+2012-12-31,ZHM,REP_BUDGET,Республиканский бюджет,34572.263,level
+2013-12-31,ZHM,REP_BUDGET,Республиканский бюджет,33642.595,level
+2014-12-31,ZHM,REP_BUDGET,Республиканский бюджет,35318.714,level
+2015-12-31,ZHM,REP_BUDGET,Республиканский бюджет,31081.007,level
+2016-12-31,ZHM,REP_BUDGET,Республиканский бюджет,27187.598,level
+2017-12-31,ZHM,REP_BUDGET,Республиканский бюджет,32031.642,level
+2018-12-31,ZHM,REP_BUDGET,Республиканский бюджет,31525.588,level
+2019-12-31,ZHM,REP_BUDGET,Республиканский бюджет,46109.9,level
+2020-12-31,ZHM,REP_BUDGET,Республиканский бюджет,17149.829,level
+2021-12-31,ZHM,REP_BUDGET,Республиканский бюджет,5679.575,level
+2022-12-31,ZHM,REP_BUDGET,Республиканский бюджет,3303.415,level
+2023-12-31,ZHM,REP_BUDGET,Республиканский бюджет,4950.538,level
+2024-12-31,ZHM,REP_BUDGET,Республиканский бюджет,27536.503,level
+2025-12-31,ZHM,REP_BUDGET,Республиканский бюджет,27092.312,level
+2022-12-31,ZHT,REP_BUDGET,Республиканский бюджет,42976.31,level
+2023-12-31,ZHT,REP_BUDGET,Республиканский бюджет,35508.769,level
+2024-12-31,ZHT,REP_BUDGET,Республиканский бюджет,30588.669,level
+2025-12-31,ZHT,REP_BUDGET,Республиканский бюджет,26832.794,level
+2003-12-31,ZKO,REP_BUDGET,Республиканский бюджет,5087.514,level
+2004-12-31,ZKO,REP_BUDGET,Республиканский бюджет,7294.4,level
+2005-12-31,ZKO,REP_BUDGET,Республиканский бюджет,16650.51,level
+2006-12-31,ZKO,REP_BUDGET,Республиканский бюджет,10491.37,level
+2007-12-31,ZKO,REP_BUDGET,Республиканский бюджет,8319.297,level
+2008-12-31,ZKO,REP_BUDGET,Республиканский бюджет,13946.184,level
+2009-12-31,ZKO,REP_BUDGET,Республиканский бюджет,10308.89,level
+2010-12-31,ZKO,REP_BUDGET,Республиканский бюджет,20583.203,level
+2011-12-31,ZKO,REP_BUDGET,Республиканский бюджет,32194.001,level
+2012-12-31,ZKO,REP_BUDGET,Республиканский бюджет,18304.887,level
+2013-12-31,ZKO,REP_BUDGET,Республиканский бюджет,24653.801,level
+2014-12-31,ZKO,REP_BUDGET,Республиканский бюджет,32096.881,level
+2015-12-31,ZKO,REP_BUDGET,Республиканский бюджет,25700.153,level
+2016-12-31,ZKO,REP_BUDGET,Республиканский бюджет,21006.988,level
+2017-12-31,ZKO,REP_BUDGET,Республиканский бюджет,32953.311,level
+2018-12-31,ZKO,REP_BUDGET,Республиканский бюджет,36623.014,level
+2019-12-31,ZKO,REP_BUDGET,Республиканский бюджет,27963.946,level
+2020-12-31,ZKO,REP_BUDGET,Республиканский бюджет,30663.621,level
+2021-12-31,ZKO,REP_BUDGET,Республиканский бюджет,45450.306,level
+2022-12-31,ZKO,REP_BUDGET,Республиканский бюджет,56080.791,level
+2023-12-31,ZKO,REP_BUDGET,Республиканский бюджет,83450.955,level
+2024-12-31,ZKO,REP_BUDGET,Республиканский бюджет,83818.615,level
+2025-12-31,ZKO,REP_BUDGET,Республиканский бюджет,94556.632,level
+2003-12-31,national,REP_BUDGET,Республиканский бюджет,102660.498,level
+2004-12-31,national,REP_BUDGET,Республиканский бюджет,144318.659,level
+2005-12-31,national,REP_BUDGET,Республиканский бюджет,231686.387,level
+2006-12-31,national,REP_BUDGET,Республиканский бюджет,308536.765,level
+2007-12-31,national,REP_BUDGET,Республиканский бюджет,433404.63,level
+2008-12-31,national,REP_BUDGET,Республиканский бюджет,604711.605,level
+2009-12-31,national,REP_BUDGET,Республиканский бюджет,712441.069,level
+2010-12-31,national,REP_BUDGET,Республиканский бюджет,834721.357,level
+2011-12-31,national,REP_BUDGET,Республиканский бюджет,812576.524,level
+2012-12-31,national,REP_BUDGET,Республиканский бюджет,868173.645,level
+2013-12-31,national,REP_BUDGET,Республиканский бюджет,759798.143,level
+2014-12-31,national,REP_BUDGET,Республиканский бюджет,945254.789,level
+2015-12-31,national,REP_BUDGET,Республиканский бюджет,951639.548,level
+2016-12-31,national,REP_BUDGET,Республиканский бюджет,948170.856,level
+2017-12-31,national,REP_BUDGET,Республиканский бюджет,817081.01,level
+2018-12-31,national,REP_BUDGET,Республиканский бюджет,756720.629,level
+2019-12-31,national,REP_BUDGET,Республиканский бюджет,842424.775,level
+2020-12-31,national,REP_BUDGET,Республиканский бюджет,885159.522,level
+2021-12-31,national,REP_BUDGET,Республиканский бюджет,844521.14,level
+2022-12-31,national,REP_BUDGET,Республиканский бюджет,1126216.386,level
+2023-12-31,national,REP_BUDGET,Республиканский бюджет,1268651.961,level
+2024-12-31,national,REP_BUDGET,Республиканский бюджет,1836257.445,level
+2025-12-31,national,REP_BUDGET,Республиканский бюджет,1869189.561,level
+2022-12-31,ABY,TOTAL,"Инвестиции в основной капитал, всего",414497.362,level
+2023-12-31,ABY,TOTAL,"Инвестиции в основной капитал, всего",527390.882,level
+2024-12-31,ABY,TOTAL,"Инвестиции в основной капитал, всего",559740.376,level
+2025-12-31,ABY,TOTAL,"Инвестиции в основной капитал, всего",654239.281,level
+2000-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",3293.383,level
+2001-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",11709.569,level
+2002-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",14494.319,level
+2003-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",15809.087,level
+2004-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",24428.006,level
+2005-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",38188.75,level
+2006-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",44058.987,level
+2007-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",103070.578,level
+2008-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",142549.209,level
+2009-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",149531.492,level
+2010-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",106864.174,level
+2011-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",122793.472,level
+2012-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",143782.202,level
+2013-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",141716.055,level
+2014-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",181327.984,level
+2015-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",199020.581,level
+2016-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",223045.437,level
+2017-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",264891.871,level
+2018-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",278177.119,level
+2019-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",333722.774,level
+2020-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",436632.714,level
+2021-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",514683.093,level
+2022-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",579972.904,level
+2023-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",613526.016,level
+2024-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",585508.552,level
+2025-12-31,AKM,TOTAL,"Инвестиции в основной капитал, всего",957184.744,level
+2000-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",41094.541,level
+2001-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",61921.061,level
+2002-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",82650.979,level
+2003-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",115842.164,level
+2004-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",130986.68,level
+2005-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",184130.552,level
+2006-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",187089.783,level
+2007-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",225175.842,level
+2008-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",287211.965,level
+2009-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",312523.213,level
+2010-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",364496.268,level
+2011-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",386124.439,level
+2012-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",432987.675,level
+2013-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",496248.342,level
+2014-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",526248.614,level
+2015-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",349912.05,level
+2016-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",374019.678,level
+2017-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",438048.819,level
+2018-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",516893.383,level
+2019-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",598864.111,level
+2020-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",648036.184,level
+2021-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",817135.802,level
+2022-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",960038.538,level
+2023-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",1025761.687,level
+2024-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",910842.275,level
+2025-12-31,AKT,TOTAL,"Инвестиции в основной капитал, всего",1228805.763,level
+2000-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",53909.28,level
+2001-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",114763.17,level
+2002-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",153395.062,level
+2003-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",166241.205,level
+2004-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",278490.514,level
+2005-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",334159.438,level
+2006-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",417421.388,level
+2007-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",492750.518,level
+2008-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",485067.748,level
+2009-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",382684.327,level
+2010-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",398408.497,level
+2011-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",415419.025,level
+2012-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",458275.814,level
+2013-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",482876.78,level
+2014-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",511597.824,level
+2015-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",533369.547,level
+2016-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",581573.746,level
+2017-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",644406.465,level
+2018-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",732929.517,level
+2019-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",820448.723,level
+2020-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",976794.888,level
+2021-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",1187619.882,level
+2022-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",1407989.996,level
+2023-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",1803183.33,level
+2024-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",2069933.449,level
+2025-12-31,ALA,TOTAL,"Инвестиции в основной капитал, всего",2547856.672,level
+2000-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",9985.883,level
+2001-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",17549.477,level
+2002-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",30294.085,level
+2003-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",49020.498,level
+2004-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",56686.929,level
+2005-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",99501.389,level
+2006-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",112414.021,level
+2007-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",142636.286,level
+2008-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",236716.953,level
+2009-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",314672.979,level
+2010-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",306604.916,level
+2011-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",372941.839,level
+2012-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",383785.905,level
+2013-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",431363.55,level
+2014-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",453209.174,level
+2015-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",490618.858,level
+2016-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",528882.871,level
+2017-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",524216.909,level
+2018-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",578719.65,level
+2019-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",647330.718,level
+2020-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",682407.156,level
+2021-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",733425.671,level
+2022-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",613940.487,level
+2023-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",737743.41,level
+2024-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",1017661.274,level
+2025-12-31,ALM,TOTAL,"Инвестиции в основной капитал, всего",1356483.266,level
+2000-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",58991.111,level
+2001-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",89517.904,level
+2002-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",102614.822,level
+2003-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",137863.318,level
+2004-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",220559.584,level
+2005-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",274745.691,level
+2006-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",354582.9,level
+2007-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",424245.121,level
+2008-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",454488.457,level
+2009-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",368248.195,level
+2010-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",396556.707,level
+2011-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",572163.917,level
+2012-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",617469.802,level
+2013-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",547489.827,level
+2014-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",646633.956,level
+2015-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",782326.122,level
+2016-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",858679.299,level
+2017-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",956890.801,level
+2018-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",1067454.961,level
+2019-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",919106.767,level
+2020-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",1125210.53,level
+2021-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",1225027.055,level
+2022-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",1462523.93,level
+2023-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",1655031.985,level
+2024-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",1992816.598,level
+2025-12-31,AST,TOTAL,"Инвестиции в основной капитал, всего",2515157.875,level
+2000-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",119347.448,level
+2001-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",231585.92,level
+2002-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",244494.384,level
+2003-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",338520.781,level
+2004-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",447424.378,level
+2005-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",713680.686,level
+2006-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",727634.812,level
+2007-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",764402.687,level
+2008-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",826373.007,level
+2009-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",1094394.18,level
+2010-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",1105401.057,level
+2011-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",1076932.998,level
+2012-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",1033960.65,level
+2013-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",1038438.132,level
+2014-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",1129626.802,level
+2015-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",1470261.979,level
+2016-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",2036852.287,level
+2017-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",2468570.392,level
+2018-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",3691401.191,level
+2019-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",4328235.889,level
+2020-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",3178960.005,level
+2021-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",2910114.254,level
+2022-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",3003503.184,level
+2023-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",2934834.321,level
+2024-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",2059586.083,level
+2025-12-31,ATY,TOTAL,"Инвестиции в основной капитал, всего",1849154.957,level
+2000-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",33191.565,level
+2001-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",55152.648,level
+2002-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",62584.053,level
+2003-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",67157.331,level
+2004-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",96650.114,level
+2005-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",153438.182,level
+2006-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",134157.248,level
+2007-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",151886.998,level
+2008-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",210247.34,level
+2009-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",214076.318,level
+2010-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",211084.984,level
+2011-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",253048.197,level
+2012-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",323816.247,level
+2013-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",405015.132,level
+2014-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",411851.992,level
+2015-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",343351.103,level
+2016-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",317571.168,level
+2017-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",363266.85,level
+2018-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",489029.821,level
+2019-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",811432.734,level
+2020-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",692347.518,level
+2021-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",796866.367,level
+2022-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",724917.845,level
+2023-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",876522.542,level
+2024-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",1456700.866,level
+2025-12-31,KRG,TOTAL,"Инвестиции в основной капитал, всего",1444734.092,level
+2000-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",9946.083,level
+2001-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",17376.633,level
+2002-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",19600.78,level
+2003-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",29278.656,level
+2004-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",42581.638,level
+2005-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",56074.453,level
+2006-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",63831.285,level
+2007-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",96419.025,level
+2008-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",108693.788,level
+2009-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",122203.586,level
+2010-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",120850.214,level
+2011-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",150730.445,level
+2012-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",163753.621,level
+2013-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",180419.087,level
+2014-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",192134.268,level
+2015-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",162976.03,level
+2016-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",178451.664,level
+2017-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",202288.931,level
+2018-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",249339.505,level
+2019-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",288736.884,level
+2020-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",336598.703,level
+2021-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",431178.669,level
+2022-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",492069.66,level
+2023-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",561627.131,level
+2024-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",640216.19,level
+2025-12-31,KST,TOTAL,"Инвестиции в основной капитал, всего",802047.574,level
+2000-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",9972.732,level
+2001-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",16411.342,level
+2002-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",32433.701,level
+2003-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",53092.561,level
+2004-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",42900.441,level
+2005-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",61470.752,level
+2006-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",66454.565,level
+2007-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",102933.841,level
+2008-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",172338.685,level
+2009-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",171033.466,level
+2010-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",246867.025,level
+2011-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",222004.198,level
+2012-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",255979.051,level
+2013-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",371934.639,level
+2014-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",262583.195,level
+2015-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",236995.272,level
+2016-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",215919.692,level
+2017-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",243100.466,level
+2018-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",332655.449,level
+2019-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",400208.745,level
+2020-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",292344.162,level
+2021-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",308941.474,level
+2022-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",413284.091,level
+2023-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",513730.912,level
+2024-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",673703.713,level
+2025-12-31,KZL,TOTAL,"Инвестиции в основной капитал, всего",871633.518,level
+2000-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",36979.076,level
+2001-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",56755.573,level
+2002-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",59933.203,level
+2003-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",75384.253,level
+2004-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",100518.078,level
+2005-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",143107.656,level
+2006-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",229754.932,level
+2007-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",251416.163,level
+2008-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",383198.584,level
+2009-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",314724.389,level
+2010-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",372038.937,level
+2011-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",369598.437,level
+2012-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",396385.151,level
+2013-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",440025.012,level
+2014-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",532239.165,level
+2015-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",458955.756,level
+2016-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",405603.704,level
+2017-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",434445.72,level
+2018-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",504649.111,level
+2019-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",556558.08,level
+2020-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",582278.874,level
+2021-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",629137.706,level
+2022-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",785759.298,level
+2023-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",1102171.85,level
+2024-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",1085676.613,level
+2025-12-31,MNG,TOTAL,"Инвестиции в основной капитал, всего",1164313.52,level
+2000-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",24559.012,level
+2001-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",26860.691,level
+2002-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",20597.424,level
+2003-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",33472.951,level
+2004-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",41213.328,level
+2005-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",64072.215,level
+2006-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",120019.446,level
+2007-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",129981.34,level
+2008-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",148435.44,level
+2009-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",165787.712,level
+2010-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",185491.906,level
+2011-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",207715.767,level
+2012-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",263513.4,level
+2013-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",276245.952,level
+2014-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",353111.686,level
+2015-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",451714.268,level
+2016-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",439763.547,level
+2017-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",483794.602,level
+2018-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",411958.463,level
+2019-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",494619.73,level
+2020-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",487154.305,level
+2021-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",571926.837,level
+2022-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",742793.468,level
+2023-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",797474.875,level
+2024-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",839747.433,level
+2025-12-31,PVL,TOTAL,"Инвестиции в основной капитал, всего",1339114.517,level
+2018-12-31,SHM,TOTAL,"Инвестиции в основной капитал, всего",588033.974,level
+2019-12-31,SHM,TOTAL,"Инвестиции в основной капитал, всего",194958.322,level
+2020-12-31,SHM,TOTAL,"Инвестиции в основной капитал, всего",278737.026,level
+2021-12-31,SHM,TOTAL,"Инвестиции в основной капитал, всего",462481.709,level
+2022-12-31,SHM,TOTAL,"Инвестиции в основной капитал, всего",549617.823,level
+2023-12-31,SHM,TOTAL,"Инвестиции в основной капитал, всего",661740.269,level
+2024-12-31,SHM,TOTAL,"Инвестиции в основной капитал, всего",768155.483,level
+2025-12-31,SHM,TOTAL,"Инвестиции в основной капитал, всего",864107.522,level
+2000-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",7399.463,level
+2001-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",6221.99,level
+2002-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",8545.691,level
+2003-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",12352.808,level
+2004-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",18185.751,level
+2005-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",37228.735,level
+2006-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",34328.273,level
+2007-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",37287.492,level
+2008-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",41278.791,level
+2009-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",49505.184,level
+2010-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",51203.085,level
+2011-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",68990.415,level
+2012-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",97998.845,level
+2013-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",101758.503,level
+2014-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",116943.001,level
+2015-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",155430.969,level
+2016-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",167066.201,level
+2017-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",191689.477,level
+2018-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",214181.179,level
+2019-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",234490.082,level
+2020-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",286251.507,level
+2021-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",333149.434,level
+2022-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",368460.383,level
+2023-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",443683.769,level
+2024-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",565406.729,level
+2025-12-31,SKO,TOTAL,"Инвестиции в основной капитал, всего",592394.751,level
+2018-12-31,TRK,TOTAL,"Инвестиции в основной капитал, всего",314113.738,level
+2019-12-31,TRK,TOTAL,"Инвестиции в основной капитал, всего",443503.021,level
+2020-12-31,TRK,TOTAL,"Инвестиции в основной капитал, всего",705721.887,level
+2021-12-31,TRK,TOTAL,"Инвестиции в основной капитал, всего",659113.915,level
+2022-12-31,TRK,TOTAL,"Инвестиции в основной капитал, всего",742587.923,level
+2023-12-31,TRK,TOTAL,"Инвестиции в основной капитал, всего",948809.712,level
+2024-12-31,TRK,TOTAL,"Инвестиции в основной капитал, всего",1396142.169,level
+2025-12-31,TRK,TOTAL,"Инвестиции в основной капитал, всего",1830475.071,level
+2022-12-31,ULT,TOTAL,"Инвестиции в основной капитал, всего",175499.451,level
+2023-12-31,ULT,TOTAL,"Инвестиции в основной капитал, всего",228961.647,level
+2024-12-31,ULT,TOTAL,"Инвестиции в основной капитал, всего",244438.815,level
+2025-12-31,ULT,TOTAL,"Инвестиции в основной капитал, всего",290833.443,level
+2000-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",37628.653,level
+2001-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",38748.153,level
+2002-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",36903.568,level
+2003-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",44839.947,level
+2004-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",50747.554,level
+2005-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",82196.865,level
+2006-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",116054.203,level
+2007-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",126537.413,level
+2008-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",161376.298,level
+2009-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",139227.45,level
+2010-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",144669.758,level
+2011-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",241629.929,level
+2012-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",266194.406,level
+2013-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",301168.147,level
+2014-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",345942.608,level
+2015-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",411929.722,level
+2016-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",436751.077,level
+2017-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",436107.02,level
+2018-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",494596.556,level
+2019-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",621913.489,level
+2020-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",729115.274,level
+2021-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",834080.468,level
+2022-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",555270.644,level
+2023-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",648603.766,level
+2024-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",773934.927,level
+2025-12-31,VKO,TOTAL,"Инвестиции в основной капитал, всего",846711.668,level
+2000-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",15624.321,level
+2001-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",26360.933,level
+2002-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",23803.943,level
+2003-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",31221.096,level
+2004-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",45230.771,level
+2005-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",64939.208,level
+2006-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",84541.87,level
+2007-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",127175.121,level
+2008-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",203213.285,level
+2009-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",319043.41,level
+2010-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",262594.799,level
+2011-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",273093.779,level
+2012-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",318168.439,level
+2013-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",415276.597,level
+2014-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",449384.853,level
+2015-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",417562.418,level
+2016-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",380570.396,level
+2017-12-31,YKO,TOTAL,"Инвестиции в основной капитал, всего",485401.987,level
+2000-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",2337.736,level
+2001-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",5241.999,level
+2002-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",9350.661,level
+2003-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",32674.516,level
+2004-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",18061.582,level
+2005-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",22181.94,level
+2006-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",25553.398,level
+2007-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",29939.627,level
+2008-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",123725.556,level
+2009-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",222799.841,level
+2010-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",146797.141,level
+2011-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",106605.629,level
+2012-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",152437.405,level
+2013-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",248842.43,level
+2014-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",208554.473,level
+2015-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",194321.366,level
+2016-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",215906.073,level
+2017-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",225862.964,level
+2018-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",264520.233,level
+2019-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",296397.932,level
+2020-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",350068.077,level
+2021-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",398609.176,level
+2022-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",428501.575,level
+2023-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",536595.421,level
+2024-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",533862.418,level
+2025-12-31,ZHM,TOTAL,"Инвестиции в основной капитал, всего",789375.268,level
+2022-12-31,ZHT,TOTAL,"Инвестиции в основной капитал, всего",291989.301,level
+2023-12-31,ZHT,TOTAL,"Инвестиции в основной капитал, всего",356716.595,level
+2024-12-31,ZHT,TOTAL,"Инвестиции в основной капитал, всего",537347.629,level
+2025-12-31,ZHT,TOTAL,"Инвестиции в основной капитал, всего",654456.206,level
+2000-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",131403.234,level
+2001-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",167220.484,level
+2002-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",198289.765,level
+2003-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",125093.025,level
+2004-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",89018.17,level
+2005-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",91859.853,level
+2006-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",106625.916,level
+2007-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",186263.99,level
+2008-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",225963.373,level
+2009-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",244841.966,level
+2010-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",233598.526,level
+2011-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",170438.669,level
+2012-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",164652.15,level
+2013-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",193868.551,level
+2014-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",270092.364,level
+2015-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",365962.742,level
+2016-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",401646.132,level
+2017-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",407589.017,level
+2018-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",450382.192,level
+2019-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",586265.454,level
+2020-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",481485.2,level
+2021-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",428741.908,level
+2022-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",537886.227,level
+2023-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",675202.835,level
+2024-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",749911.167,level
+2025-12-31,ZKO,TOTAL,"Инвестиции в основной капитал, всего",893421.296,level
+2000-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",595663.521,level
+2001-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",943397.547,level
+2002-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",1099986.44,level
+2003-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",1327864.197,level
+2004-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",1703683.518,level
+2005-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",2420976.365,level
+2006-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",2824523.027,level
+2007-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",3392122.042,level
+2008-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",4210878.479,level
+2009-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",4585297.708,level
+2010-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",4653527.994,level
+2011-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",5010231.155,level
+2012-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",5473160.763,level
+2013-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",6072686.736,level
+2014-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",6591481.959,level
+2015-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",7024708.783,level
+2016-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",7762302.972,level
+2017-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",8770572.291,level
+2018-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",11179036.042,level
+2019-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",12576793.455,level
+2020-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",12270144.01,level
+2021-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",13242233.42,level
+2022-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",15251104.09,level
+2023-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",17649312.955,level
+2024-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",19461332.759,level
+2025-12-31,national,TOTAL,"Инвестиции в основной капитал, всего",23492501.004,level

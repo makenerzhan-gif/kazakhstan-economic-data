@@ -889,6 +889,37 @@ def parse_month_rows(grid: list[list], ds: dict) -> list[dict]:
     return records
 
 
+def parse_year_rows_months(grid: list[list], ds: dict, sheet_name: str) -> list[dict]:
+    """445258 / 3885 (added 2026-11-09): one sheet per mode of transport (`sheet_items`: {sheet: code}),
+    a header row of the twelve month names, then one row per year (the year in column A, «2025*»
+    for a preliminary year) with the discrete monthly values across. National only."""
+    code = ds["sheet_items"][sheet_name]
+    name = ds.get("item_names", {}).get(code, sheet_name)
+    head_i = next((i for i, row in enumerate(grid) if sum(1 for c in row if month_of(c) and "-" not in str(c)) >= 12), None)
+    if head_i is None:
+        _structural(ds, f"no header row of twelve month names on sheet {sheet_name!r}", "«январь» … «декабрь» across", grid[:6])
+    cols = {}
+    for j, c in enumerate(grid[head_i]):
+        m = month_of(c)
+        if m and m not in cols.values() and "-" not in str(c):
+            cols[j] = m
+    if len(cols) != 12:
+        _structural(ds, f"{len(cols)} month columns on sheet {sheet_name!r}", "twelve", grid[head_i])
+    records = []
+    for row in grid[head_i + 1:]:
+        m = YEAR_CELL.match(str(row[0])) if row and row[0] not in (None, "") else None
+        if not m:
+            continue
+        year = int(m.group(1))
+        for j, month in cols.items():
+            v = _to_float(row[j]) if j < len(row) else None
+            if v is not None:
+                records.append(_rec(("m", year, month), dims.NATIONAL, code, name, v))
+    if not records:
+        _structural(ds, f"no year rows on sheet {sheet_name!r}", "rows headed by a year", grid[head_i:head_i + 4])
+    return records
+
+
 def parse_region_blocks_months(grid: list[list], dictionary: list[dict] | None, ds: dict) -> list[dict]:
     """5943: blocks that start with a region row (КАТО code in column A, name in column B); inside,
     a header row whose cells name year-to-date month periods with their year («ИФО, январь-март
@@ -1024,8 +1055,10 @@ def parse(content: bytes, ds: dict) -> list[dict]:
     records: list[dict] = []
     if ds["layout"] == "year_sheets":                    # every «YYYY год» sheet, whatever their number
         return _finish(parse_year_sheets(list(grids.items()), dictionary, ds), ds)
-    for _, grid in _pick_sheets(grids, ds):
-        if ds["layout"] in ("year_quarters", "year_months"):
+    for sheet_name, grid in _pick_sheets(grids, ds):
+        if ds["layout"] == "year_rows_months":
+            records += parse_year_rows_months(grid, ds, sheet_name)
+        elif ds["layout"] in ("year_quarters", "year_months"):
             records += parse_year_quarters(grid, dictionary, ds)
         elif ds["layout"] == "year_blocks_regions_items":
             records += parse_year_blocks_regions_items(grid, dictionary, ds)

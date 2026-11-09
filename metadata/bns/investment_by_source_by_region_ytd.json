@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-701827",
+  "indicator_id": "INVESTMENT_BY_SOURCE_BY_REGION_YTD",
+  "indicator_name": "Fixed capital investment by source of financing (own funds, republican and local budget, bank loans, other borrowed) by region, year to date",
+  "description": "Инвестиции в основной капитал по источникам финансирования (собственные средства, республиканский и местный бюджет, кредиты банков, другие заёмные) по регионам, с начала года",
+  "frequency": "monthly",
+  "unit": "million KZT, cumulative from January",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Taldau 701827, dictionary 459 (source of financing), period 8 («месяц с накоплением»), 2018-01 onward, national and 21 regions. OWN + REP_BUDGET + LOCAL_BUDGET + BANK_LOANS + OTHER_BORROWED = TOTAL (January-September 2026: 10 587.3 + 664.7 + 1 631.7 + 893.5 + 2 304.2 = 16 081.4 bn KZT); the two «из них» items are memo lines. Budget investment (REP_BUDGET + LOCAL_BUDGET) in the January-December release is the first estimate the GDP model's manual_inputs iok_budget_private_split carried (2 936.6 / 4 098.4 / 4 984.0 bn for 2023-2025); the revised annual figures are INVESTMENT_BY_SOURCE_BY_REGION.",
+  "publication_date": null,
+  "last_update_date": "2026-11-09",
+  "download_date": "2026-11-09",
+  "period_start": "2018-01-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

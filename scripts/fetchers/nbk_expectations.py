@@ -150,12 +150,52 @@ def forecaster_records(content: bytes) -> list[dict]:
     return sorted(out, key=lambda r: (r["item_code"], r["date"]))
 
 
-PARSERS = {"households": household_records, "forecasters": forecaster_records}
+# The NBK's consumer sentiment index («Индекс потребительских настроений», published in the monthly
+# «Инфляционные ожидания» reports until February 2026, then discontinued): the mean of five partial
+# indices, each = share of positive answers - share of negative answers + 100 (0-200, 100 neutral);
+# «хорошим, но не во всем» counts as positive and «плохим, но не во всем» as negative, «затрудняюсь»
+# is ignored. Current conditions = Q9, Q25; expectations = Q10, Q23, Q24. Reproduces the published
+# values (May 2022 104.1, December 2023 115.7, October 2025 99.1). From January 2026 Q9, Q10 and
+# Q25 are asked one month per quarter, so the index is quarterly from then on.
+SENTIMENT = {"Q9": (("1",), ("3",)), "Q10": (("1",), ("3",)), "Q23": (("1", "2"), ("4", "5")), "Q24": (("1",), ("3",)), "Q25": (("1",), ("3",))}
+SENTIMENT_GROUPS = {"CSI": ("Q9", "Q10", "Q23", "Q24", "Q25"), "CSI.CURRENT": ("Q9", "Q25"), "CSI.EXPECTATIONS": ("Q10", "Q23", "Q24")}
+SENTIMENT_NAMES = {"CSI": "Индекс потребительских настроений (среднее пяти частных индексов, 100 = нейтрально)",
+                   "CSI.CURRENT": "Индекс текущего состояния (материальное положение за год, время для крупных покупок)",
+                   "CSI.EXPECTATIONS": "Индекс потребительских ожиданий (материальное положение, перспективы страны на год и пять лет)"}
+
+
+def sentiment_records(records: list[dict]) -> list[dict]:
+    by = {(r["item_code"], r["date"]): r["value"] for r in records}
+    dates = sorted({r["date"] for r in records})
+    out = []
+    for d in dates:
+        partial = {}
+        for q, (pos, neg) in SENTIMENT.items():
+            keys = [f"{q}.{a}" for a in pos + neg]
+            if all((k, d) in by for k in keys):
+                partial[q] = sum(by[(f"{q}.{a}", d)] for a in pos) - sum(by[(f"{q}.{a}", d)] for a in neg) + 100
+        for code, qs in SENTIMENT_GROUPS.items():
+            if all(q in partial for q in qs):
+                out.append({"date": d, "region": dims.NATIONAL, "item_code": code, "item_name": SENTIMENT_NAMES[code],
+                            "value": round(sum(partial[q] for q in qs) / len(qs), 2)})
+        for q, v in partial.items():
+            out.append({"date": d, "region": dims.NATIONAL, "item_code": f"CSI.{q}", "item_name": f"Частный индекс настроений по вопросу {q[1:]}", "value": round(v, 2)})
+    return out
+
+
+def household_records_with_sentiment(content: bytes) -> list[dict]:
+    records = household_records(content)
+    return records + sentiment_records(records)
+
+
+PARSERS = {"households": household_records_with_sentiment, "forecasters": forecaster_records}
 
 
 def fetch(ds: dict) -> tuple[list[dict], dict]:
     fresh = imf_dims.stored_if_fresh(ds, "nbk", ds["id"])
     if fresh:
+        if ds["survey"] == "households" and not any(r["item_code"] == "CSI" for r in fresh[0]):
+            return fresh[0] + sentiment_records(fresh[0]), fresh[1]    # stored before the index was derived
         return fresh
     url = file_link(ds["page_url"], ds["file_title"])
     resp = requests.get(url, headers=HEADERS, timeout=120)

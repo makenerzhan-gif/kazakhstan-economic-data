@@ -1,7 +1,7 @@
 {
   "source": "nbk",
-  "source_url": "https://nationalbank.kz/file/download/139152",
-  "dataset_id": "Результаты опроса по инфляционным ожиданиям",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "INFLATION_EXPECTATIONS_SURVEY",
   "indicator_name": "NBK household inflation expectations survey: every question (answer shares) and median estimates",
   "description": "Опрос населения по инфляционным ожиданиям НБК: все вопросы (доли ответов) и медианные оценки",
