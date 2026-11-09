@@ -47,6 +47,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,CP01,Продукты питания и безалкогольные напитки,100.6,level
 2026-08-01,national,CP01,Продукты питания и безалкогольные напитки,99.9,level
 2026-09-01,national,CP01,Продукты питания и безалкогольные напитки,99.8,level
+2026-10-01,national,CP01,Продукты питания и безалкогольные напитки,100.2,level
 2022-10-01,national,CP02,Алкогольные напитки и табачные изделия,101.1,level
 2022-11-01,national,CP02,Алкогольные напитки и табачные изделия,100.8,level
 2022-12-01,national,CP02,Алкогольные напитки и табачные изделия,101.3,level
@@ -95,6 +96,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,CP02,Алкогольные напитки и табачные изделия,100.7,level
 2026-08-01,national,CP02,Алкогольные напитки и табачные изделия,102.1,level
 2026-09-01,national,CP02,Алкогольные напитки и табачные изделия,101.1,level
+2026-10-01,national,CP02,Алкогольные напитки и табачные изделия,100.6,level
 2022-10-01,ABY,FOOD,Продовольственные товары,101.5,level
 2022-11-01,ABY,FOOD,Продовольственные товары,101.6,level
 2022-12-01,ABY,FOOD,Продовольственные товары,101.4,level
@@ -143,6 +145,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ABY,FOOD,Продовольственные товары,100.3,level
 2026-08-01,ABY,FOOD,Продовольственные товары,100.2,level
 2026-09-01,ABY,FOOD,Продовольственные товары,99.5,level
+2026-10-01,ABY,FOOD,Продовольственные товары,100.0,level
 2022-10-01,AKM,FOOD,Продовольственные товары,101.7,level
 2022-11-01,AKM,FOOD,Продовольственные товары,101.8,level
 2022-12-01,AKM,FOOD,Продовольственные товары,101.0,level
@@ -191,6 +194,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,AKM,FOOD,Продовольственные товары,100.9,level
 2026-08-01,AKM,FOOD,Продовольственные товары,99.8,level
 2026-09-01,AKM,FOOD,Продовольственные товары,100.3,level
+2026-10-01,AKM,FOOD,Продовольственные товары,100.2,level
 2022-10-01,AKT,FOOD,Продовольственные товары,101.4,level
 2022-11-01,AKT,FOOD,Продовольственные товары,101.7,level
 2022-12-01,AKT,FOOD,Продовольственные товары,101.5,level
@@ -239,6 +243,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,AKT,FOOD,Продовольственные товары,100.4,level
 2026-08-01,AKT,FOOD,Продовольственные товары,100.4,level
 2026-09-01,AKT,FOOD,Продовольственные товары,99.9,level
+2026-10-01,AKT,FOOD,Продовольственные товары,99.8,level
 2022-10-01,ALA,FOOD,Продовольственные товары,101.5,level
 2022-11-01,ALA,FOOD,Продовольственные товары,101.7,level
 2022-12-01,ALA,FOOD,Продовольственные товары,101.1,level
@@ -287,6 +292,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ALA,FOOD,Продовольственные товары,100.1,level
 2026-08-01,ALA,FOOD,Продовольственные товары,100.1,level
 2026-09-01,ALA,FOOD,Продовольственные товары,99.6,level
+2026-10-01,ALA,FOOD,Продовольственные товары,100.2,level
 2022-10-01,ALM,FOOD,Продовольственные товары,100.8,level
 2022-11-01,ALM,FOOD,Продовольственные товары,101.9,level
 2022-12-01,ALM,FOOD,Продовольственные товары,101.0,level
@@ -335,6 +341,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ALM,FOOD,Продовольственные товары,100.9,level
 2026-08-01,ALM,FOOD,Продовольственные товары,99.8,level
 2026-09-01,ALM,FOOD,Продовольственные товары,100.1,level
+2026-10-01,ALM,FOOD,Продовольственные товары,100.7,level
 2022-10-01,AST,FOOD,Продовольственные товары,102.1,level
 2022-11-01,AST,FOOD,Продовольственные товары,102.1,level
 2022-12-01,AST,FOOD,Продовольственные товары,101.6,level
@@ -383,6 +390,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,AST,FOOD,Продовольственные товары,100.7,level
 2026-08-01,AST,FOOD,Продовольственные товары,100.4,level
 2026-09-01,AST,FOOD,Продовольственные товары,100.1,level
+2026-10-01,AST,FOOD,Продовольственные товары,99.9,level
 2022-10-01,ATY,FOOD,Продовольственные товары,100.9,level
 2022-11-01,ATY,FOOD,Продовольственные товары,101.3,level
 2022-12-01,ATY,FOOD,Продовольственные товары,101.5,level
@@ -431,6 +439,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ATY,FOOD,Продовольственные товары,100.6,level
 2026-08-01,ATY,FOOD,Продовольственные товары,100.6,level
 2026-09-01,ATY,FOOD,Продовольственные товары,100.3,level
+2026-10-01,ATY,FOOD,Продовольственные товары,99.7,level
 2022-10-01,KRG,FOOD,Продовольственные товары,101.6,level
 2022-11-01,KRG,FOOD,Продовольственные товары,101.6,level
 2022-12-01,KRG,FOOD,Продовольственные товары,101.6,level
@@ -479,6 +488,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,KRG,FOOD,Продовольственные товары,100.4,level
 2026-08-01,KRG,FOOD,Продовольственные товары,100.1,level
 2026-09-01,KRG,FOOD,Продовольственные товары,100.0,level
+2026-10-01,KRG,FOOD,Продовольственные товары,100.8,level
 2022-10-01,KST,FOOD,Продовольственные товары,100.9,level
 2022-11-01,KST,FOOD,Продовольственные товары,101.4,level
 2022-12-01,KST,FOOD,Продовольственные товары,102.1,level
@@ -527,6 +537,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,KST,FOOD,Продовольственные товары,100.4,level
 2026-08-01,KST,FOOD,Продовольственные товары,100.3,level
 2026-09-01,KST,FOOD,Продовольственные товары,100.7,level
+2026-10-01,KST,FOOD,Продовольственные товары,100.0,level
 2022-10-01,KZL,FOOD,Продовольственные товары,101.6,level
 2022-11-01,KZL,FOOD,Продовольственные товары,101.9,level
 2022-12-01,KZL,FOOD,Продовольственные товары,101.5,level
@@ -575,6 +586,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,KZL,FOOD,Продовольственные товары,102.2,level
 2026-08-01,KZL,FOOD,Продовольственные товары,100.5,level
 2026-09-01,KZL,FOOD,Продовольственные товары,100.9,level
+2026-10-01,KZL,FOOD,Продовольственные товары,99.8,level
 2022-10-01,MNG,FOOD,Продовольственные товары,101.7,level
 2022-11-01,MNG,FOOD,Продовольственные товары,100.9,level
 2022-12-01,MNG,FOOD,Продовольственные товары,100.8,level
@@ -623,6 +635,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,MNG,FOOD,Продовольственные товары,101.4,level
 2026-08-01,MNG,FOOD,Продовольственные товары,99.7,level
 2026-09-01,MNG,FOOD,Продовольственные товары,99.6,level
+2026-10-01,MNG,FOOD,Продовольственные товары,100.5,level
 2022-10-01,PVL,FOOD,Продовольственные товары,101.2,level
 2022-11-01,PVL,FOOD,Продовольственные товары,101.7,level
 2022-12-01,PVL,FOOD,Продовольственные товары,102.3,level
@@ -671,6 +684,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,PVL,FOOD,Продовольственные товары,100.5,level
 2026-08-01,PVL,FOOD,Продовольственные товары,99.9,level
 2026-09-01,PVL,FOOD,Продовольственные товары,99.1,level
+2026-10-01,PVL,FOOD,Продовольственные товары,100.4,level
 2022-10-01,SHM,FOOD,Продовольственные товары,103.0,level
 2022-11-01,SHM,FOOD,Продовольственные товары,101.5,level
 2022-12-01,SHM,FOOD,Продовольственные товары,101.0,level
@@ -719,6 +733,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,SHM,FOOD,Продовольственные товары,100.1,level
 2026-08-01,SHM,FOOD,Продовольственные товары,100.5,level
 2026-09-01,SHM,FOOD,Продовольственные товары,99.6,level
+2026-10-01,SHM,FOOD,Продовольственные товары,100.7,level
 2022-10-01,SKO,FOOD,Продовольственные товары,101.5,level
 2022-11-01,SKO,FOOD,Продовольственные товары,101.6,level
 2022-12-01,SKO,FOOD,Продовольственные товары,101.8,level
@@ -767,6 +782,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,SKO,FOOD,Продовольственные товары,100.8,level
 2026-08-01,SKO,FOOD,Продовольственные товары,99.9,level
 2026-09-01,SKO,FOOD,Продовольственные товары,99.8,level
+2026-10-01,SKO,FOOD,Продовольственные товары,100.2,level
 2022-10-01,TRK,FOOD,Продовольственные товары,101.1,level
 2022-11-01,TRK,FOOD,Продовольственные товары,102.1,level
 2022-12-01,TRK,FOOD,Продовольственные товары,102.5,level
@@ -815,6 +831,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,TRK,FOOD,Продовольственные товары,100.4,level
 2026-08-01,TRK,FOOD,Продовольственные товары,100.6,level
 2026-09-01,TRK,FOOD,Продовольственные товары,99.9,level
+2026-10-01,TRK,FOOD,Продовольственные товары,100.1,level
 2022-10-01,ULT,FOOD,Продовольственные товары,101.4,level
 2022-11-01,ULT,FOOD,Продовольственные товары,102.3,level
 2022-12-01,ULT,FOOD,Продовольственные товары,100.8,level
@@ -863,6 +880,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ULT,FOOD,Продовольственные товары,100.9,level
 2026-08-01,ULT,FOOD,Продовольственные товары,99.9,level
 2026-09-01,ULT,FOOD,Продовольственные товары,99.5,level
+2026-10-01,ULT,FOOD,Продовольственные товары,100.3,level
 2022-10-01,VKO,FOOD,Продовольственные товары,101.1,level
 2022-11-01,VKO,FOOD,Продовольственные товары,101.5,level
 2022-12-01,VKO,FOOD,Продовольственные товары,101.5,level
@@ -911,6 +929,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,VKO,FOOD,Продовольственные товары,100.5,level
 2026-08-01,VKO,FOOD,Продовольственные товары,100.1,level
 2026-09-01,VKO,FOOD,Продовольственные товары,100.4,level
+2026-10-01,VKO,FOOD,Продовольственные товары,100.2,level
 2022-10-01,ZHM,FOOD,Продовольственные товары,101.5,level
 2022-11-01,ZHM,FOOD,Продовольственные товары,102.1,level
 2022-12-01,ZHM,FOOD,Продовольственные товары,102.6,level
@@ -959,6 +978,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ZHM,FOOD,Продовольственные товары,100.4,level
 2026-08-01,ZHM,FOOD,Продовольственные товары,100.1,level
 2026-09-01,ZHM,FOOD,Продовольственные товары,100.1,level
+2026-10-01,ZHM,FOOD,Продовольственные товары,99.9,level
 2022-10-01,ZHT,FOOD,Продовольственные товары,101.1,level
 2022-11-01,ZHT,FOOD,Продовольственные товары,101.6,level
 2022-12-01,ZHT,FOOD,Продовольственные товары,101.3,level
@@ -1007,6 +1027,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ZHT,FOOD,Продовольственные товары,101.4,level
 2026-08-01,ZHT,FOOD,Продовольственные товары,99.8,level
 2026-09-01,ZHT,FOOD,Продовольственные товары,99.7,level
+2026-10-01,ZHT,FOOD,Продовольственные товары,100.9,level
 2022-10-01,ZKO,FOOD,Продовольственные товары,101.4,level
 2022-11-01,ZKO,FOOD,Продовольственные товары,101.1,level
 2022-12-01,ZKO,FOOD,Продовольственные товары,102.5,level
@@ -1055,6 +1076,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ZKO,FOOD,Продовольственные товары,100.7,level
 2026-08-01,ZKO,FOOD,Продовольственные товары,100.1,level
 2026-09-01,ZKO,FOOD,Продовольственные товары,100.7,level
+2026-10-01,ZKO,FOOD,Продовольственные товары,100.2,level
 2022-10-01,national,FOOD,Продовольственные товары,101.5,level
 2022-11-01,national,FOOD,Продовольственные товары,101.7,level
 2022-12-01,national,FOOD,Продовольственные товары,101.5,level
@@ -1103,6 +1125,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,FOOD,Продовольственные товары,100.6,level
 2026-08-01,national,FOOD,Продовольственные товары,100.2,level
 2026-09-01,national,FOOD,Продовольственные товары,100.0,level
+2026-10-01,national,FOOD,Продовольственные товары,100.2,level
 2022-10-01,ABY,GOODS,Товары,101.2,level
 2022-11-01,ABY,GOODS,Товары,100.9,level
 2022-12-01,ABY,GOODS,Товары,101.1,level
@@ -1151,6 +1174,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ABY,GOODS,Товары,100.4,level
 2026-08-01,ABY,GOODS,Товары,100.5,level
 2026-09-01,ABY,GOODS,Товары,100.3,level
+2026-10-01,ABY,GOODS,Товары,100.4,level
 2022-10-01,AKM,GOODS,Товары,101.2,level
 2022-11-01,AKM,GOODS,Товары,102.2,level
 2022-12-01,AKM,GOODS,Товары,100.8,level
@@ -1199,6 +1223,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,AKM,GOODS,Товары,100.7,level
 2026-08-01,AKM,GOODS,Товары,100.4,level
 2026-09-01,AKM,GOODS,Товары,100.6,level
+2026-10-01,AKM,GOODS,Товары,100.4,level
 2022-10-01,AKT,GOODS,Товары,101.2,level
 2022-11-01,AKT,GOODS,Товары,101.3,level
 2022-12-01,AKT,GOODS,Товары,101.4,level
@@ -1247,6 +1272,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,AKT,GOODS,Товары,100.6,level
 2026-08-01,AKT,GOODS,Товары,100.4,level
 2026-09-01,AKT,GOODS,Товары,100.5,level
+2026-10-01,AKT,GOODS,Товары,100.2,level
 2022-10-01,ALA,GOODS,Товары,101.7,level
 2022-11-01,ALA,GOODS,Товары,101.4,level
 2022-12-01,ALA,GOODS,Товары,101.8,level
@@ -1295,6 +1321,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ALA,GOODS,Товары,100.5,level
 2026-08-01,ALA,GOODS,Товары,100.6,level
 2026-09-01,ALA,GOODS,Товары,100.8,level
+2026-10-01,ALA,GOODS,Товары,100.3,level
 2022-10-01,ALM,GOODS,Товары,101.0,level
 2022-11-01,ALM,GOODS,Товары,101.3,level
 2022-12-01,ALM,GOODS,Товары,100.5,level
@@ -1343,6 +1370,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ALM,GOODS,Товары,101.0,level
 2026-08-01,ALM,GOODS,Товары,100.4,level
 2026-09-01,ALM,GOODS,Товары,100.7,level
+2026-10-01,ALM,GOODS,Товары,100.4,level
 2022-10-01,AST,GOODS,Товары,102.0,level
 2022-11-01,AST,GOODS,Товары,101.7,level
 2022-12-01,AST,GOODS,Товары,101.3,level
@@ -1391,6 +1419,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,AST,GOODS,Товары,100.5,level
 2026-08-01,AST,GOODS,Товары,100.7,level
 2026-09-01,AST,GOODS,Товары,101.0,level
+2026-10-01,AST,GOODS,Товары,100.2,level
 2022-10-01,ATY,GOODS,Товары,100.9,level
 2022-11-01,ATY,GOODS,Товары,101.6,level
 2022-12-01,ATY,GOODS,Товары,101.5,level
@@ -1439,6 +1468,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ATY,GOODS,Товары,100.6,level
 2026-08-01,ATY,GOODS,Товары,100.7,level
 2026-09-01,ATY,GOODS,Товары,100.8,level
+2026-10-01,ATY,GOODS,Товары,100.3,level
 2022-10-01,KRG,GOODS,Товары,100.9,level
 2022-11-01,KRG,GOODS,Товары,101.3,level
 2022-12-01,KRG,GOODS,Товары,100.8,level
@@ -1487,6 +1517,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,KRG,GOODS,Товары,100.3,level
 2026-08-01,KRG,GOODS,Товары,100.2,level
 2026-09-01,KRG,GOODS,Товары,101.0,level
+2026-10-01,KRG,GOODS,Товары,100.6,level
 2022-10-01,KST,GOODS,Товары,100.8,level
 2022-11-01,KST,GOODS,Товары,101.3,level
 2022-12-01,KST,GOODS,Товары,101.7,level
@@ -1535,6 +1566,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,KST,GOODS,Товары,100.5,level
 2026-08-01,KST,GOODS,Товары,100.7,level
 2026-09-01,KST,GOODS,Товары,100.7,level
+2026-10-01,KST,GOODS,Товары,100.2,level
 2022-10-01,KZL,GOODS,Товары,102.3,level
 2022-11-01,KZL,GOODS,Товары,101.1,level
 2022-12-01,KZL,GOODS,Товары,100.9,level
@@ -1583,6 +1615,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,KZL,GOODS,Товары,101.2,level
 2026-08-01,KZL,GOODS,Товары,100.4,level
 2026-09-01,KZL,GOODS,Товары,101.0,level
+2026-10-01,KZL,GOODS,Товары,100.3,level
 2022-10-01,MNG,GOODS,Товары,101.3,level
 2022-11-01,MNG,GOODS,Товары,100.9,level
 2022-12-01,MNG,GOODS,Товары,101.0,level
@@ -1631,6 +1664,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,MNG,GOODS,Товары,100.9,level
 2026-08-01,MNG,GOODS,Товары,100.1,level
 2026-09-01,MNG,GOODS,Товары,100.2,level
+2026-10-01,MNG,GOODS,Товары,100.3,level
 2022-10-01,PVL,GOODS,Товары,101.3,level
 2022-11-01,PVL,GOODS,Товары,101.5,level
 2022-12-01,PVL,GOODS,Товары,101.4,level
@@ -1679,6 +1713,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,PVL,GOODS,Товары,100.6,level
 2026-08-01,PVL,GOODS,Товары,100.3,level
 2026-09-01,PVL,GOODS,Товары,100.4,level
+2026-10-01,PVL,GOODS,Товары,100.5,level
 2022-10-01,SHM,GOODS,Товары,101.8,level
 2022-11-01,SHM,GOODS,Товары,101.3,level
 2022-12-01,SHM,GOODS,Товары,100.8,level
@@ -1727,6 +1762,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,SHM,GOODS,Товары,100.4,level
 2026-08-01,SHM,GOODS,Товары,100.7,level
 2026-09-01,SHM,GOODS,Товары,100.3,level
+2026-10-01,SHM,GOODS,Товары,100.5,level
 2022-10-01,SKO,GOODS,Товары,101.4,level
 2022-11-01,SKO,GOODS,Товары,101.8,level
 2022-12-01,SKO,GOODS,Товары,101.3,level
@@ -1775,6 +1811,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,SKO,GOODS,Товары,100.6,level
 2026-08-01,SKO,GOODS,Товары,100.2,level
 2026-09-01,SKO,GOODS,Товары,100.9,level
+2026-10-01,SKO,GOODS,Товары,100.4,level
 2022-10-01,TRK,GOODS,Товары,101.3,level
 2022-11-01,TRK,GOODS,Товары,101.3,level
 2022-12-01,TRK,GOODS,Товары,101.6,level
@@ -1823,6 +1860,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,TRK,GOODS,Товары,100.5,level
 2026-08-01,TRK,GOODS,Товары,100.6,level
 2026-09-01,TRK,GOODS,Товары,100.1,level
+2026-10-01,TRK,GOODS,Товары,100.8,level
 2022-10-01,ULT,GOODS,Товары,100.8,level
 2022-11-01,ULT,GOODS,Товары,101.0,level
 2022-12-01,ULT,GOODS,Товары,100.3,level
@@ -1871,6 +1909,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ULT,GOODS,Товары,100.5,level
 2026-08-01,ULT,GOODS,Товары,100.2,level
 2026-09-01,ULT,GOODS,Товары,100.4,level
+2026-10-01,ULT,GOODS,Товары,100.2,level
 2022-10-01,VKO,GOODS,Товары,101.1,level
 2022-11-01,VKO,GOODS,Товары,101.6,level
 2022-12-01,VKO,GOODS,Товары,100.8,level
@@ -1919,6 +1958,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,VKO,GOODS,Товары,100.7,level
 2026-08-01,VKO,GOODS,Товары,100.6,level
 2026-09-01,VKO,GOODS,Товары,100.8,level
+2026-10-01,VKO,GOODS,Товары,100.3,level
 2022-10-01,ZHM,GOODS,Товары,101.2,level
 2022-11-01,ZHM,GOODS,Товары,101.4,level
 2022-12-01,ZHM,GOODS,Товары,102.0,level
@@ -1967,6 +2007,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ZHM,GOODS,Товары,100.8,level
 2026-08-01,ZHM,GOODS,Товары,100.6,level
 2026-09-01,ZHM,GOODS,Товары,100.4,level
+2026-10-01,ZHM,GOODS,Товары,100.2,level
 2022-10-01,ZHT,GOODS,Товары,101.0,level
 2022-11-01,ZHT,GOODS,Товары,101.4,level
 2022-12-01,ZHT,GOODS,Товары,101.0,level
@@ -2015,6 +2056,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ZHT,GOODS,Товары,100.8,level
 2026-08-01,ZHT,GOODS,Товары,100.0,level
 2026-09-01,ZHT,GOODS,Товары,100.9,level
+2026-10-01,ZHT,GOODS,Товары,100.7,level
 2022-10-01,ZKO,GOODS,Товары,101.2,level
 2022-11-01,ZKO,GOODS,Товары,100.8,level
 2022-12-01,ZKO,GOODS,Товары,102.0,level
@@ -2063,6 +2105,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ZKO,GOODS,Товары,100.5,level
 2026-08-01,ZKO,GOODS,Товары,100.5,level
 2026-09-01,ZKO,GOODS,Товары,101.4,level
+2026-10-01,ZKO,GOODS,Товары,100.4,level
 2022-10-01,national,GOODS,Товары,101.4,level
 2022-11-01,national,GOODS,Товары,101.4,level
 2022-12-01,national,GOODS,Товары,101.3,level
@@ -2111,6 +2154,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,GOODS,Товары,100.6,level
 2026-08-01,national,GOODS,Товары,100.5,level
 2026-09-01,national,GOODS,Товары,100.7,level
+2026-10-01,national,GOODS,Товары,100.4,level
 2022-10-01,ABY,NONFOOD,Непродовольственные товары,101.0,level
 2022-11-01,ABY,NONFOOD,Непродовольственные товары,100.5,level
 2022-12-01,ABY,NONFOOD,Непродовольственные товары,100.9,level
@@ -2159,6 +2203,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ABY,NONFOOD,Непродовольственные товары,100.4,level
 2026-08-01,ABY,NONFOOD,Непродовольственные товары,100.6,level
 2026-09-01,ABY,NONFOOD,Непродовольственные товары,100.6,level
+2026-10-01,ABY,NONFOOD,Непродовольственные товары,100.6,level
 2022-10-01,AKM,NONFOOD,Непродовольственные товары,100.9,level
 2022-11-01,AKM,NONFOOD,Непродовольственные товары,102.4,level
 2022-12-01,AKM,NONFOOD,Непродовольственные товары,100.6,level
@@ -2207,6 +2252,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,AKM,NONFOOD,Непродовольственные товары,100.6,level
 2026-08-01,AKM,NONFOOD,Непродовольственные товары,100.7,level
 2026-09-01,AKM,NONFOOD,Непродовольственные товары,100.7,level
+2026-10-01,AKM,NONFOOD,Непродовольственные товары,100.6,level
 2022-10-01,AKT,NONFOOD,Непродовольственные товары,101.1,level
 2022-11-01,AKT,NONFOOD,Непродовольственные товары,101.1,level
 2022-12-01,AKT,NONFOOD,Непродовольственные товары,101.4,level
@@ -2255,6 +2301,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,AKT,NONFOOD,Непродовольственные товары,100.6,level
 2026-08-01,AKT,NONFOOD,Непродовольственные товары,100.4,level
 2026-09-01,AKT,NONFOOD,Непродовольственные товары,100.7,level
+2026-10-01,AKT,NONFOOD,Непродовольственные товары,100.4,level
 2022-10-01,ALA,NONFOOD,Непродовольственные товары,101.9,level
 2022-11-01,ALA,NONFOOD,Непродовольственные товары,101.3,level
 2022-12-01,ALA,NONFOOD,Непродовольственные товары,102.2,level
@@ -2303,6 +2350,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ALA,NONFOOD,Непродовольственные товары,100.6,level
 2026-08-01,ALA,NONFOOD,Непродовольственные товары,100.8,level
 2026-09-01,ALA,NONFOOD,Непродовольственные товары,101.4,level
+2026-10-01,ALA,NONFOOD,Непродовольственные товары,100.3,level
 2022-10-01,ALM,NONFOOD,Непродовольственные товары,101.2,level
 2022-11-01,ALM,NONFOOD,Непродовольственные товары,101.1,level
 2022-12-01,ALM,NONFOOD,Непродовольственные товары,100.3,level
@@ -2351,6 +2399,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ALM,NONFOOD,Непродовольственные товары,101.0,level
 2026-08-01,ALM,NONFOOD,Непродовольственные товары,100.7,level
 2026-09-01,ALM,NONFOOD,Непродовольственные товары,100.9,level
+2026-10-01,ALM,NONFOOD,Непродовольственные товары,100.2,level
 2022-10-01,AST,NONFOOD,Непродовольственные товары,101.9,level
 2022-11-01,AST,NONFOOD,Непродовольственные товары,101.4,level
 2022-12-01,AST,NONFOOD,Непродовольственные товары,101.1,level
@@ -2399,6 +2448,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,AST,NONFOOD,Непродовольственные товары,100.5,level
 2026-08-01,AST,NONFOOD,Непродовольственные товары,100.8,level
 2026-09-01,AST,NONFOOD,Непродовольственные товары,101.3,level
+2026-10-01,AST,NONFOOD,Непродовольственные товары,100.4,level
 2022-10-01,ATY,NONFOOD,Непродовольственные товары,100.9,level
 2022-11-01,ATY,NONFOOD,Непродовольственные товары,101.7,level
 2022-12-01,ATY,NONFOOD,Непродовольственные товары,101.5,level
@@ -2447,6 +2497,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ATY,NONFOOD,Непродовольственные товары,100.7,level
 2026-08-01,ATY,NONFOOD,Непродовольственные товары,100.8,level
 2026-09-01,ATY,NONFOOD,Непродовольственные товары,100.9,level
+2026-10-01,ATY,NONFOOD,Непродовольственные товары,100.6,level
 2022-10-01,KRG,NONFOOD,Непродовольственные товары,100.6,level
 2022-11-01,KRG,NONFOOD,Непродовольственные товары,101.2,level
 2022-12-01,KRG,NONFOOD,Непродовольственные товары,100.3,level
@@ -2495,6 +2546,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,KRG,NONFOOD,Непродовольственные товары,100.3,level
 2026-08-01,KRG,NONFOOD,Непродовольственные товары,100.2,level
 2026-09-01,KRG,NONFOOD,Непродовольственные товары,101.5,level
+2026-10-01,KRG,NONFOOD,Непродовольственные товары,100.6,level
 2022-10-01,KST,NONFOOD,Непродовольственные товары,100.8,level
 2022-11-01,KST,NONFOOD,Непродовольственные товары,101.3,level
 2022-12-01,KST,NONFOOD,Непродовольственные товары,101.5,level
@@ -2543,6 +2595,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,KST,NONFOOD,Непродовольственные товары,100.6,level
 2026-08-01,KST,NONFOOD,Непродовольственные товары,100.8,level
 2026-09-01,KST,NONFOOD,Непродовольственные товары,100.7,level
+2026-10-01,KST,NONFOOD,Непродовольственные товары,100.2,level
 2022-10-01,KZL,NONFOOD,Непродовольственные товары,102.6,level
 2022-11-01,KZL,NONFOOD,Непродовольственные товары,100.7,level
 2022-12-01,KZL,NONFOOD,Непродовольственные товары,100.5,level
@@ -2591,6 +2644,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,KZL,NONFOOD,Непродовольственные товары,100.8,level
 2026-08-01,KZL,NONFOOD,Непродовольственные товары,100.4,level
 2026-09-01,KZL,NONFOOD,Непродовольственные товары,101.0,level
+2026-10-01,KZL,NONFOOD,Непродовольственные товары,100.6,level
 2022-10-01,MNG,NONFOOD,Непродовольственные товары,101.1,level
 2022-11-01,MNG,NONFOOD,Непродовольственные товары,100.9,level
 2022-12-01,MNG,NONFOOD,Непродовольственные товары,101.1,level
@@ -2639,6 +2693,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,MNG,NONFOOD,Непродовольственные товары,100.7,level
 2026-08-01,MNG,NONFOOD,Непродовольственные товары,100.3,level
 2026-09-01,MNG,NONFOOD,Непродовольственные товары,100.4,level
+2026-10-01,MNG,NONFOOD,Непродовольственные товары,100.3,level
 2022-10-01,PVL,NONFOOD,Непродовольственные товары,101.4,level
 2022-11-01,PVL,NONFOOD,Непродовольственные товары,101.4,level
 2022-12-01,PVL,NONFOOD,Непродовольственные товары,100.9,level
@@ -2687,6 +2742,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,PVL,NONFOOD,Непродовольственные товары,100.6,level
 2026-08-01,PVL,NONFOOD,Непродовольственные товары,100.4,level
 2026-09-01,PVL,NONFOOD,Непродовольственные товары,100.9,level
+2026-10-01,PVL,NONFOOD,Непродовольственные товары,100.6,level
 2022-10-01,SHM,NONFOOD,Непродовольственные товары,101.2,level
 2022-11-01,SHM,NONFOOD,Непродовольственные товары,101.1,level
 2022-12-01,SHM,NONFOOD,Непродовольственные товары,100.7,level
@@ -2735,6 +2791,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,SHM,NONFOOD,Непродовольственные товары,100.5,level
 2026-08-01,SHM,NONFOOD,Непродовольственные товары,100.7,level
 2026-09-01,SHM,NONFOOD,Непродовольственные товары,100.7,level
+2026-10-01,SHM,NONFOOD,Непродовольственные товары,100.4,level
 2022-10-01,SKO,NONFOOD,Непродовольственные товары,101.3,level
 2022-11-01,SKO,NONFOOD,Непродовольственные товары,101.9,level
 2022-12-01,SKO,NONFOOD,Непродовольственные товары,101.0,level
@@ -2783,6 +2840,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,SKO,NONFOOD,Непродовольственные товары,100.4,level
 2026-08-01,SKO,NONFOOD,Непродовольственные товары,100.3,level
 2026-09-01,SKO,NONFOOD,Непродовольственные товары,101.3,level
+2026-10-01,SKO,NONFOOD,Непродовольственные товары,100.5,level
 2022-10-01,TRK,NONFOOD,Непродовольственные товары,101.5,level
 2022-11-01,TRK,NONFOOD,Непродовольственные товары,100.8,level
 2022-12-01,TRK,NONFOOD,Непродовольственные товары,101.0,level
@@ -2831,6 +2889,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,TRK,NONFOOD,Непродовольственные товары,100.6,level
 2026-08-01,TRK,NONFOOD,Непродовольственные товары,100.6,level
 2026-09-01,TRK,NONFOOD,Непродовольственные товары,100.1,level
+2026-10-01,TRK,NONFOOD,Непродовольственные товары,101.1,level
 2022-10-01,ULT,NONFOOD,Непродовольственные товары,100.5,level
 2022-11-01,ULT,NONFOOD,Непродовольственные товары,100.3,level
 2022-12-01,ULT,NONFOOD,Непродовольственные товары,100.0,level
@@ -2879,6 +2938,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ULT,NONFOOD,Непродовольственные товары,100.3,level
 2026-08-01,ULT,NONFOOD,Непродовольственные товары,100.3,level
 2026-09-01,ULT,NONFOOD,Непродовольственные товары,100.8,level
+2026-10-01,ULT,NONFOOD,Непродовольственные товары,100.1,level
 2022-10-01,VKO,NONFOOD,Непродовольственные товары,101.0,level
 2022-11-01,VKO,NONFOOD,Непродовольственные товары,101.7,level
 2022-12-01,VKO,NONFOOD,Непродовольственные товары,100.4,level
@@ -2927,6 +2987,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,VKO,NONFOOD,Непродовольственные товары,100.8,level
 2026-08-01,VKO,NONFOOD,Непродовольственные товары,100.8,level
 2026-09-01,VKO,NONFOOD,Непродовольственные товары,101.0,level
+2026-10-01,VKO,NONFOOD,Непродовольственные товары,100.4,level
 2022-10-01,ZHM,NONFOOD,Непродовольственные товары,101.0,level
 2022-11-01,ZHM,NONFOOD,Непродовольственные товары,101.1,level
 2022-12-01,ZHM,NONFOOD,Непродовольственные товары,101.6,level
@@ -2975,6 +3036,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ZHM,NONFOOD,Непродовольственные товары,101.0,level
 2026-08-01,ZHM,NONFOOD,Непродовольственные товары,100.9,level
 2026-09-01,ZHM,NONFOOD,Непродовольственные товары,100.6,level
+2026-10-01,ZHM,NONFOOD,Непродовольственные товары,100.3,level
 2022-10-01,ZHT,NONFOOD,Непродовольственные товары,100.9,level
 2022-11-01,ZHT,NONFOOD,Непродовольственные товары,101.3,level
 2022-12-01,ZHT,NONFOOD,Непродовольственные товары,100.8,level
@@ -3023,6 +3085,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ZHT,NONFOOD,Непродовольственные товары,100.6,level
 2026-08-01,ZHT,NONFOOD,Непродовольственные товары,100.1,level
 2026-09-01,ZHT,NONFOOD,Непродовольственные товары,101.4,level
+2026-10-01,ZHT,NONFOOD,Непродовольственные товары,100.7,level
 2022-10-01,ZKO,NONFOOD,Непродовольственные товары,101.0,level
 2022-11-01,ZKO,NONFOOD,Непродовольственные товары,100.7,level
 2022-12-01,ZKO,NONFOOD,Непродовольственные товары,101.7,level
@@ -3071,6 +3134,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ZKO,NONFOOD,Непродовольственные товары,100.3,level
 2026-08-01,ZKO,NONFOOD,Непродовольственные товары,100.7,level
 2026-09-01,ZKO,NONFOOD,Непродовольственные товары,101.7,level
+2026-10-01,ZKO,NONFOOD,Непродовольственные товары,100.5,level
 2022-10-01,national,NONFOOD,Непродовольственные товары,101.3,level
 2022-11-01,national,NONFOOD,Непродовольственные товары,101.2,level
 2022-12-01,national,NONFOOD,Непродовольственные товары,101.1,level
@@ -3119,6 +3183,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,NONFOOD,Непродовольственные товары,100.5,level
 2026-08-01,national,NONFOOD,Непродовольственные товары,100.6,level
 2026-09-01,national,NONFOOD,Непродовольственные товары,101.0,level
+2026-10-01,national,NONFOOD,Непродовольственные товары,100.4,level
 2022-10-01,national,alkogolnye_napitki,Алкогольные напитки,101.5,level
 2022-11-01,national,alkogolnye_napitki,Алкогольные напитки,100.7,level
 2022-12-01,national,alkogolnye_napitki,Алкогольные напитки,101.5,level
@@ -3284,6 +3349,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,bezalkogolnye_napitki,Безалкогольные напитки,101.2,level
 2026-08-01,national,bezalkogolnye_napitki,Безалкогольные напитки,100.2,level
 2026-09-01,national,bezalkogolnye_napitki,Безалкогольные напитки,100.0,level
+2026-10-01,national,bezalkogolnye_napitki,Безалкогольные напитки,100.7,level
 2022-10-01,national,botinki_tufli_i_prochaya_obuv,"Ботинки, туфли и прочая обувь",102.3,level
 2022-11-01,national,botinki_tufli_i_prochaya_obuv,"Ботинки, туфли и прочая обувь",101.5,level
 2022-12-01,national,botinki_tufli_i_prochaya_obuv,"Ботинки, туфли и прочая обувь",100.9,level
@@ -3332,6 +3398,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,botinki_tufli_i_prochaya_obuv,"Ботинки, туфли и прочая обувь",100.6,level
 2026-08-01,national,botinki_tufli_i_prochaya_obuv,"Ботинки, туфли и прочая обувь",100.6,level
 2026-09-01,national,botinki_tufli_i_prochaya_obuv,"Ботинки, туфли и прочая обувь",101.4,level
+2026-10-01,national,botinki_tufli_i_prochaya_obuv,"Ботинки, туфли и прочая обувь",100.9,level
 2022-10-01,national,bulochnye_i_muchnye_konditerskie_izdeliya,Булочные и мучные кондитерские изделия,102.2,level
 2022-11-01,national,bulochnye_i_muchnye_konditerskie_izdeliya,Булочные и мучные кондитерские изделия,101.4,level
 2022-12-01,national,bulochnye_i_muchnye_konditerskie_izdeliya,Булочные и мучные кондитерские изделия,101.8,level
@@ -3380,6 +3447,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,bytovye_tovary_kratkovremennogo_polzovaniya,Бытовые товары кратковременного пользования,100.5,level
 2026-08-01,national,bytovye_tovary_kratkovremennogo_polzovaniya,Бытовые товары кратковременного пользования,100.8,level
 2026-09-01,national,bytovye_tovary_kratkovremennogo_polzovaniya,Бытовые товары кратковременного пользования,100.9,level
+2026-10-01,national,bytovye_tovary_kratkovremennogo_polzovaniya,Бытовые товары кратковременного пользования,100.1,level
 2022-10-01,national,domashnie_zhivotnye_i_svyazannye_s_nimi_tovary,Домашние животные и связанные с ними товары,102.9,level
 2022-11-01,national,domashnie_zhivotnye_i_svyazannye_s_nimi_tovary,Домашние животные и связанные с ними товары,101.8,level
 2022-12-01,national,domashnie_zhivotnye_i_svyazannye_s_nimi_tovary,Домашние животные и связанные с ними товары,101.3,level
@@ -3428,6 +3496,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,drugie_predmety_odezhdy_i_aksessuary_odezhdy,Другие предметы одежды и аксессуары одежды,100.2,level
 2026-08-01,national,drugie_predmety_odezhdy_i_aksessuary_odezhdy,Другие предметы одежды и аксессуары одежды,100.4,level
 2026-09-01,national,drugie_predmety_odezhdy_i_aksessuary_odezhdy,Другие предметы одежды и аксессуары одежды,102.2,level
+2026-10-01,national,drugie_predmety_odezhdy_i_aksessuary_odezhdy,Другие предметы одежды и аксессуары одежды,101.8,level
 2022-10-01,national,dzhem_med,"Джем, мед",102.5,level
 2022-11-01,national,dzhem_med,"Джем, мед",101.8,level
 2022-12-01,national,dzhem_med,"Джем, мед",101.4,level
@@ -3515,6 +3584,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,elektricheskie_pribory_lichnogo_polzovaniya,Электрические приборы личного пользования,100.6,level
 2026-08-01,national,elektricheskie_pribory_lichnogo_polzovaniya,Электрические приборы личного пользования,104.6,level
 2026-09-01,national,elektricheskie_pribory_lichnogo_polzovaniya,Электрические приборы личного пользования,102.2,level
+2026-10-01,national,elektricheskie_pribory_lichnogo_polzovaniya,Электрические приборы личного пользования,102.5,level
 2022-10-01,national,farmatsevticheskaya_produktsiya,Фармацевтическая продукция,101.6,level
 2022-11-01,national,farmatsevticheskaya_produktsiya,Фармацевтическая продукция,100.6,level
 2022-12-01,national,farmatsevticheskaya_produktsiya,Фармацевтическая продукция,100.7,level
@@ -3641,6 +3711,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,frukty_i_ovoshchi,Фрукты и овощи,97.6,level
 2026-08-01,national,frukty_i_ovoshchi,Фрукты и овощи,96.4,level
 2026-09-01,national,frukty_i_ovoshchi,Фрукты и овощи,95.7,level
+2026-10-01,national,frukty_i_ovoshchi,Фрукты и овощи,100.3,level
 2022-10-01,national,frukty_i_ovoshchi_pererabotannye,Фрукты и овощи переработанные,101.3,level
 2022-11-01,national,frukty_i_ovoshchi_pererabotannye,Фрукты и овощи переработанные,101.0,level
 2022-12-01,national,frukty_i_ovoshchi_pererabotannye,Фрукты и овощи переработанные,101.5,level
@@ -3806,6 +3877,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,gaz_szhizhennyy_v_ballonakh,Газ сжиженный (в баллонах),100.9,level
 2026-08-01,national,gaz_szhizhennyy_v_ballonakh,Газ сжиженный (в баллонах),100.4,level
 2026-09-01,national,gaz_szhizhennyy_v_ballonakh,Газ сжиженный (в баллонах),100.0,level
+2026-10-01,national,gaz_szhizhennyy_v_ballonakh,Газ сжиженный (в баллонах),100.8,level
 2022-10-01,national,golovnye_ubory,Головные уборы,101.5,level
 2022-11-01,national,golovnye_ubory,Головные уборы,102.5,level
 2022-12-01,national,golovnye_ubory,Головные уборы,101.1,level
@@ -3893,6 +3965,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,goryuchesmazochnye_materialy_dlya_lichnykh_transportnykh_sredstv,Горюче-смазочные материалы для личных транспортных средств,101.3,level
 2026-08-01,national,goryuchesmazochnye_materialy_dlya_lichnykh_transportnykh_sredstv,Горюче-смазочные материалы для личных транспортных средств,100.2,level
 2026-09-01,national,goryuchesmazochnye_materialy_dlya_lichnykh_transportnykh_sredstv,Горюче-смазочные материалы для личных транспортных средств,101.1,level
+2026-10-01,national,goryuchesmazochnye_materialy_dlya_lichnykh_transportnykh_sredstv,Горюче-смазочные материалы для личных транспортных средств,101.3,level
 2026-01-01,national,gotovaya_eda_i_drugie_produkty_ne_otnesennye_k_drugim_kategoriyam,"Готовая еда и другие продукты, не отнесенные к другим категориям",101.3,level
 2026-02-01,national,gotovaya_eda_i_drugie_produkty_ne_otnesennye_k_drugim_kategoriyam,"Готовая еда и другие продукты, не отнесенные к другим категориям",102.5,level
 2026-03-01,national,gotovaya_eda_i_drugie_produkty_ne_otnesennye_k_drugim_kategoriyam,"Готовая еда и другие продукты, не отнесенные к другим категориям",100.4,level
@@ -3902,6 +3975,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,gotovaya_eda_i_drugie_produkty_ne_otnesennye_k_drugim_kategoriyam,"Готовая еда и другие продукты, не отнесенные к другим категориям",100.6,level
 2026-08-01,national,gotovaya_eda_i_drugie_produkty_ne_otnesennye_k_drugim_kategoriyam,"Готовая еда и другие продукты, не отнесенные к другим категориям",100.3,level
 2026-09-01,national,gotovaya_eda_i_drugie_produkty_ne_otnesennye_k_drugim_kategoriyam,"Готовая еда и другие продукты, не отнесенные к другим категориям",100.0,level
+2026-10-01,national,gotovaya_eda_i_drugie_produkty_ne_otnesennye_k_drugim_kategoriyam,"Готовая еда и другие продукты, не отнесенные к другим категориям",100.4,level
 2022-10-01,national,igry_igrushki,"Игры, игрушки",102.6,level
 2022-11-01,national,igry_igrushki,"Игры, игрушки",101.3,level
 2022-12-01,national,igry_igrushki,"Игры, игрушки",101.6,level
@@ -3950,6 +4024,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,informatsionnokommunikatsionnoe_oborudovanie,Информационно-коммуникационное оборудование,100.5,level
 2026-08-01,national,informatsionnokommunikatsionnoe_oborudovanie,Информационно-коммуникационное оборудование,103.8,level
 2026-09-01,national,informatsionnokommunikatsionnoe_oborudovanie,Информационно-коммуникационное оборудование,101.3,level
+2026-10-01,national,informatsionnokommunikatsionnoe_oborudovanie,Информационно-коммуникационное оборудование,100.4,level
 2026-01-01,national,instrumenty_i_prisposobleniya_ispolzuemye_v_bytu_i_sadovodstve,"Инструменты и приспособления, используемые в быту и садоводстве",101.7,level
 2026-02-01,national,instrumenty_i_prisposobleniya_ispolzuemye_v_bytu_i_sadovodstve,"Инструменты и приспособления, используемые в быту и садоводстве",103.4,level
 2026-03-01,national,instrumenty_i_prisposobleniya_ispolzuemye_v_bytu_i_sadovodstve,"Инструменты и приспособления, используемые в быту и садоводстве",99.0,level
@@ -3959,6 +4034,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,instrumenty_i_prisposobleniya_ispolzuemye_v_bytu_i_sadovodstve,"Инструменты и приспособления, используемые в быту и садоводстве",98.9,level
 2026-08-01,national,instrumenty_i_prisposobleniya_ispolzuemye_v_bytu_i_sadovodstve,"Инструменты и приспособления, используемые в быту и садоводстве",99.5,level
 2026-09-01,national,instrumenty_i_prisposobleniya_ispolzuemye_v_bytu_i_sadovodstve,"Инструменты и приспособления, используемые в быту и садоводстве",99.2,level
+2026-10-01,national,instrumenty_i_prisposobleniya_ispolzuemye_v_bytu_i_sadovodstve,"Инструменты и приспособления, используемые в быту и садоводстве",100.0,level
 2022-10-01,national,kantselyarskie_tovary,Канцелярские товары,101.3,level
 2022-11-01,national,kantselyarskie_tovary,Канцелярские товары,102.1,level
 2022-12-01,national,kantselyarskie_tovary,Канцелярские товары,101.3,level
@@ -4163,6 +4239,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,knigi_i_kantselyarskie_tovary,Книги и канцелярские товары,104.7,level
 2026-08-01,national,knigi_i_kantselyarskie_tovary,Книги и канцелярские товары,102.2,level
 2026-09-01,national,knigi_i_kantselyarskie_tovary,Книги и канцелярские товары,103.5,level
+2026-10-01,national,knigi_i_kantselyarskie_tovary,Книги и канцелярские товары,102.4,level
 2022-10-01,national,kofe_chay_i_kakao,"Кофе, чай и какао",101.0,level
 2022-11-01,national,kofe_chay_i_kakao,"Кофе, чай и какао",101.7,level
 2022-12-01,national,kofe_chay_i_kakao,"Кофе, чай и какао",101.7,level
@@ -4406,6 +4483,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,krupnye_bytovye_pribory_elektricheskie_i_neelektricheskie,"Крупные бытовые приборы, электрические и неэлектрические",101.1,level
 2026-08-01,national,krupnye_bytovye_pribory_elektricheskie_i_neelektricheskie,"Крупные бытовые приборы, электрические и неэлектрические",101.4,level
 2026-09-01,national,krupnye_bytovye_pribory_elektricheskie_i_neelektricheskie,"Крупные бытовые приборы, электрические и неэлектрические",99.6,level
+2026-10-01,national,krupnye_bytovye_pribory_elektricheskie_i_neelektricheskie,"Крупные бытовые приборы, электрические и неэлектрические",99.8,level
 2022-10-01,national,krupnye_instrumenty_i_prisposobleniya,Крупные инструменты и приспособления,101.2,level
 2022-11-01,national,krupnye_instrumenty_i_prisposobleniya,Крупные инструменты и приспособления,101.0,level
 2022-12-01,national,krupnye_instrumenty_i_prisposobleniya,Крупные инструменты и приспособления,101.8,level
@@ -4493,6 +4571,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,krupy_i_zernovye_produkty,Крупы и зерновые продукты,101.0,level
 2026-08-01,national,krupy_i_zernovye_produkty,Крупы и зерновые продукты,100.5,level
 2026-09-01,national,krupy_i_zernovye_produkty,Крупы и зерновые продукты,100.7,level
+2026-10-01,national,krupy_i_zernovye_produkty,Крупы и зерновые продукты,100.4,level
 2022-10-01,national,lechebnoe_oborudovanie_i_apparaty,Лечебное оборудование и аппараты,101.6,level
 2022-11-01,national,lechebnoe_oborudovanie_i_apparaty,Лечебное оборудование и аппараты,101.3,level
 2022-12-01,national,lechebnoe_oborudovanie_i_apparaty,Лечебное оборудование и аппараты,104.2,level
@@ -4658,6 +4737,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,masla_i_zhiry,Масла и жиры,101.4,level
 2026-08-01,national,masla_i_zhiry,Масла и жиры,100.3,level
 2026-09-01,national,masla_i_zhiry,Масла и жиры,100.2,level
+2026-10-01,national,masla_i_zhiry,Масла и жиры,100.1,level
 2022-10-01,national,maslo_rastitelnoe,Масло растительное,100.7,level
 2022-11-01,national,maslo_rastitelnoe,Масло растительное,100.0,level
 2022-12-01,national,maslo_rastitelnoe,Масло растительное,100.5,level
@@ -4823,6 +4903,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,mebel_predmety_domashnego_obikhoda_kovry_i_drugie_pokrytiya_dlya_pola_ikh_remont,"Мебель, предметы домашнего обихода, ковры и другие покрытия для пола, их ремонт",100.3,level
 2026-08-01,national,mebel_predmety_domashnego_obikhoda_kovry_i_drugie_pokrytiya_dlya_pola_ikh_remont,"Мебель, предметы домашнего обихода, ковры и другие покрытия для пола, их ремонт",100.9,level
 2026-09-01,national,mebel_predmety_domashnego_obikhoda_kovry_i_drugie_pokrytiya_dlya_pola_ikh_remont,"Мебель, предметы домашнего обихода, ковры и другие покрытия для пола, их ремонт",101.9,level
+2026-10-01,national,mebel_predmety_domashnego_obikhoda_kovry_i_drugie_pokrytiya_dlya_pola_ikh_remont,"Мебель, предметы домашнего обихода, ковры и другие покрытия для пола, их ремонт",100.2,level
 2026-01-01,national,medikamenty_lechebnoe_oborudovanie_i_apparatura,"Медикаменты, лечебное оборудование и аппаратура",102.2,level
 2026-02-01,national,medikamenty_lechebnoe_oborudovanie_i_apparatura,"Медикаменты, лечебное оборудование и аппаратура",100.6,level
 2026-03-01,national,medikamenty_lechebnoe_oborudovanie_i_apparatura,"Медикаменты, лечебное оборудование и аппаратура",101.1,level
@@ -4832,6 +4913,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,medikamenty_lechebnoe_oborudovanie_i_apparatura,"Медикаменты, лечебное оборудование и аппаратура",101.6,level
 2026-08-01,national,medikamenty_lechebnoe_oborudovanie_i_apparatura,"Медикаменты, лечебное оборудование и аппаратура",102.2,level
 2026-09-01,national,medikamenty_lechebnoe_oborudovanie_i_apparatura,"Медикаменты, лечебное оборудование и аппаратура",101.2,level
+2026-10-01,national,medikamenty_lechebnoe_oborudovanie_i_apparatura,"Медикаменты, лечебное оборудование и аппаратура",101.4,level
 2022-10-01,national,mekhovye_golovnye_ubory,Меховые головные уборы,105.0,level
 2022-11-01,national,mekhovye_golovnye_ubory,Меховые головные уборы,101.4,level
 2022-12-01,national,mekhovye_golovnye_ubory,Меховые головные уборы,100.4,level
@@ -4919,6 +5001,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,melkie_elektrobytovye_pribory,Мелкие электробытовые приборы,101.5,level
 2026-08-01,national,melkie_elektrobytovye_pribory,Мелкие электробытовые приборы,100.2,level
 2026-09-01,national,melkie_elektrobytovye_pribory,Мелкие электробытовые приборы,100.3,level
+2026-10-01,national,melkie_elektrobytovye_pribory,Мелкие электробытовые приборы,100.0,level
 2022-10-01,national,melkie_predmety_domashnego_obikhoda,Мелкие предметы домашнего обихода,102.9,level
 2022-11-01,national,melkie_predmety_domashnego_obikhoda,Мелкие предметы домашнего обихода,101.5,level
 2022-12-01,national,melkie_predmety_domashnego_obikhoda,Мелкие предметы домашнего обихода,100.9,level
@@ -5045,6 +5128,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,molochnye_izdeliya_syr_i_yaytsa,"Молочные изделия, сыр и яйца",100.1,level
 2026-08-01,national,molochnye_izdeliya_syr_i_yaytsa,"Молочные изделия, сыр и яйца",100.3,level
 2026-09-01,national,molochnye_izdeliya_syr_i_yaytsa,"Молочные изделия, сыр и яйца",100.9,level
+2026-10-01,national,molochnye_izdeliya_syr_i_yaytsa,"Молочные изделия, сыр и яйца",100.7,level
 2022-10-01,national,molochnye_produkty,Молочные продукты,101.7,level
 2022-11-01,national,molochnye_produkty,Молочные продукты,102.2,level
 2022-12-01,national,molochnye_produkty,Молочные продукты,101.4,level
@@ -5288,6 +5372,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,myaso,Мясо,100.7,level
 2026-08-01,national,myaso,Мясо,100.6,level
 2026-09-01,national,myaso,Мясо,100.7,level
+2026-10-01,national,myaso,Мясо,100.2,level
 2022-10-01,national,myaso_i_ptitsa,Мясо и птица,101.0,level
 2022-11-01,national,myaso_i_ptitsa,Мясо и птица,100.8,level
 2022-12-01,national,myaso_i_ptitsa,Мясо и птица,100.6,level
@@ -5375,6 +5460,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,oborudovanie_dlya_obespecheniya_bezopasnosti_i_materialy_dlya_obsluzhivaniya_i_r,Оборудование для обеспечения безопасности и материалы для обслуживания и ремонта жилых помещений,101.0,level
 2026-08-01,national,oborudovanie_dlya_obespecheniya_bezopasnosti_i_materialy_dlya_obsluzhivaniya_i_r,Оборудование для обеспечения безопасности и материалы для обслуживания и ремонта жилых помещений,100.6,level
 2026-09-01,national,oborudovanie_dlya_obespecheniya_bezopasnosti_i_materialy_dlya_obsluzhivaniya_i_r,Оборудование для обеспечения безопасности и материалы для обслуживания и ремонта жилых помещений,101.6,level
+2026-10-01,national,oborudovanie_dlya_obespecheniya_bezopasnosti_i_materialy_dlya_obsluzhivaniya_i_r,Оборудование для обеспечения безопасности и материалы для обслуживания и ремонта жилых помещений,100.4,level
 2022-10-01,national,oborudovanie_dlya_obrabotki_informatsii,Оборудование для обработки информации,100.4,level
 2022-11-01,national,oborudovanie_dlya_obrabotki_informatsii,Оборудование для обработки информации,98.1,level
 2022-12-01,national,oborudovanie_dlya_obrabotki_informatsii,Оборудование для обработки информации,104.5,level
@@ -5540,6 +5626,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,odezhda_bele,"Одежда, белье",100.7,level
 2026-08-01,national,odezhda_bele,"Одежда, белье",100.7,level
 2026-09-01,national,odezhda_bele,"Одежда, белье",101.4,level
+2026-10-01,national,odezhda_bele,"Одежда, белье",100.9,level
 2022-10-01,national,pivo,Пиво,102.1,level
 2022-11-01,national,pivo,Пиво,100.7,level
 2022-12-01,national,pivo,Пиво,102.2,level
@@ -5627,6 +5714,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,pokupka_avtotransportnykh_sredstv,Покупка автотранспортных средств,98.3,level
 2026-08-01,national,pokupka_avtotransportnykh_sredstv,Покупка автотранспортных средств,98.2,level
 2026-09-01,national,pokupka_avtotransportnykh_sredstv,Покупка автотранспортных средств,101.4,level
+2026-10-01,national,pokupka_avtotransportnykh_sredstv,Покупка автотранспортных средств,99.4,level
 2022-10-01,national,prochaya_produkiya_meditsinskogo_naznacheniya,Прочая продукия медицинского назначения,102.4,level
 2022-11-01,national,prochaya_produkiya_meditsinskogo_naznacheniya,Прочая продукия медицинского назначения,101.6,level
 2022-12-01,national,prochaya_produkiya_meditsinskogo_naznacheniya,Прочая продукия медицинского назначения,101.6,level
@@ -5753,6 +5841,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,prochie_predmety_pribory_i_tovary_lichnogo_polzovaniya,"Прочие предметы, приборы и товары личного пользования",100.5,level
 2026-08-01,national,prochie_predmety_pribory_i_tovary_lichnogo_polzovaniya,"Прочие предметы, приборы и товары личного пользования",100.7,level
 2026-09-01,national,prochie_predmety_pribory_i_tovary_lichnogo_polzovaniya,"Прочие предметы, приборы и товары личного пользования",99.8,level
+2026-10-01,national,prochie_predmety_pribory_i_tovary_lichnogo_polzovaniya,"Прочие предметы, приборы и товары личного пользования",100.5,level
 2026-01-01,national,prochie_tovary_dlya_otdykha,Прочие товары для отдыха,100.3,level
 2026-02-01,national,prochie_tovary_dlya_otdykha,Прочие товары для отдыха,102.6,level
 2026-03-01,national,prochie_tovary_dlya_otdykha,Прочие товары для отдыха,100.1,level
@@ -5762,6 +5851,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,prochie_tovary_dlya_otdykha,Прочие товары для отдыха,103.4,level
 2026-08-01,national,prochie_tovary_dlya_otdykha,Прочие товары для отдыха,100.1,level
 2026-09-01,national,prochie_tovary_dlya_otdykha,Прочие товары для отдыха,101.2,level
+2026-10-01,national,prochie_tovary_dlya_otdykha,Прочие товары для отдыха,99.9,level
 2026-01-01,national,prochie_tovary_lichnogo_polzovaniya,Прочие товары личного пользования,101.3,level
 2026-02-01,national,prochie_tovary_lichnogo_polzovaniya,Прочие товары личного пользования,101.6,level
 2026-03-01,national,prochie_tovary_lichnogo_polzovaniya,Прочие товары личного пользования,101.4,level
@@ -5771,6 +5861,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,prochie_tovary_lichnogo_polzovaniya,Прочие товары личного пользования,100.2,level
 2026-08-01,national,prochie_tovary_lichnogo_polzovaniya,Прочие товары личного пользования,100.2,level
 2026-09-01,national,prochie_tovary_lichnogo_polzovaniya,Прочие товары личного пользования,101.4,level
+2026-10-01,national,prochie_tovary_lichnogo_polzovaniya,Прочие товары личного пользования,101.0,level
 2022-10-01,national,produkty_pitaniya_ne_otnesennye_k_drugim_kategoriyam,"Продукты питания, не отнесенные к другим категориям",103.2,level
 2022-11-01,national,produkty_pitaniya_ne_otnesennye_k_drugim_kategoriyam,"Продукты питания, не отнесенные к другим категориям",101.5,level
 2022-12-01,national,produkty_pitaniya_ne_otnesennye_k_drugim_kategoriyam,"Продукты питания, не отнесенные к другим категориям",101.3,level
@@ -5975,6 +6066,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,ryba_i_moreprodukty,Рыба и морепродукты,101.0,level
 2026-08-01,national,ryba_i_moreprodukty,Рыба и морепродукты,99.8,level
 2026-09-01,national,ryba_i_moreprodukty,Рыба и морепродукты,100.6,level
+2026-10-01,national,ryba_i_moreprodukty,Рыба и морепродукты,100.7,level
 2022-10-01,national,sakhar,Сахар,98.0,level
 2022-11-01,national,sakhar,Сахар,98.3,level
 2022-12-01,national,sakhar,Сахар,96.5,level
@@ -6023,6 +6115,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,sakhar_dzhem_med_shokolad_i_konditerskie_izdeliya,"Сахар, джем, мед, шоколад и кондитерские изделия",102.2,level
 2026-08-01,national,sakhar_dzhem_med_shokolad_i_konditerskie_izdeliya,"Сахар, джем, мед, шоколад и кондитерские изделия",100.3,level
 2026-09-01,national,sakhar_dzhem_med_shokolad_i_konditerskie_izdeliya,"Сахар, джем, мед, шоколад и кондитерские изделия",99.7,level
+2026-10-01,national,sakhar_dzhem_med_shokolad_i_konditerskie_izdeliya,"Сахар, джем, мед, шоколад и кондитерские изделия",98.0,level
 2022-10-01,national,sakhar_dzhem_med_shokolad_konditerskie_izdeliya,"Сахар, джем, мед, шоколад, кондитерские изделия",100.1,level
 2022-11-01,national,sakhar_dzhem_med_shokolad_konditerskie_izdeliya,"Сахар, джем, мед, шоколад, кондитерские изделия",100.2,level
 2022-12-01,national,sakhar_dzhem_med_shokolad_konditerskie_izdeliya,"Сахар, джем, мед, шоколад, кондитерские изделия",99.5,level
@@ -6149,6 +6242,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,steklyannye_izdeliya_stolovye_pribory_i_domashnyaya_utvar,"Стеклянные изделия, столовые приборы и домашняя утварь",100.7,level
 2026-08-01,national,steklyannye_izdeliya_stolovye_pribory_i_domashnyaya_utvar,"Стеклянные изделия, столовые приборы и домашняя утварь",102.2,level
 2026-09-01,national,steklyannye_izdeliya_stolovye_pribory_i_domashnyaya_utvar,"Стеклянные изделия, столовые приборы и домашняя утварь",101.0,level
+2026-10-01,national,steklyannye_izdeliya_stolovye_pribory_i_domashnyaya_utvar,"Стеклянные изделия, столовые приборы и домашняя утварь",100.1,level
 2022-10-01,national,stolovye_pribory,Столовые приборы,101.1,level
 2022-11-01,national,stolovye_pribory,Столовые приборы,100.9,level
 2022-12-01,national,stolovye_pribory,Столовые приборы,101.1,level
@@ -6275,6 +6369,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,tekstilnye_izdeliya_ispolzuemye_v_domashnem_khozyaystve,"Текстильные изделия, используемые в домашнем хозяйстве",101.1,level
 2026-08-01,national,tekstilnye_izdeliya_ispolzuemye_v_domashnem_khozyaystve,"Текстильные изделия, используемые в домашнем хозяйстве",100.5,level
 2026-09-01,national,tekstilnye_izdeliya_ispolzuemye_v_domashnem_khozyaystve,"Текстильные изделия, используемые в домашнем хозяйстве",100.4,level
+2026-10-01,national,tekstilnye_izdeliya_ispolzuemye_v_domashnem_khozyaystve,"Текстильные изделия, используемые в домашнем хозяйстве",100.5,level
 2022-10-01,national,telefonnoe_i_faksimilnoe_oborudovanie,Телефонное и факсимильное оборудование,98.9,level
 2022-11-01,national,telefonnoe_i_faksimilnoe_oborudovanie,Телефонное и факсимильное оборудование,100.0,level
 2022-12-01,national,telefonnoe_i_faksimilnoe_oborudovanie,Телефонное и факсимильное оборудование,100.0,level
@@ -6323,6 +6418,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,tovary_dlitelnogo_polzovaniya_dlya_otdykha,Товары длительного пользования для отдыха,100.3,level
 2026-08-01,national,tovary_dlitelnogo_polzovaniya_dlya_otdykha,Товары длительного пользования для отдыха,99.3,level
 2026-09-01,national,tovary_dlitelnogo_polzovaniya_dlya_otdykha,Товары длительного пользования для отдыха,105.7,level
+2026-10-01,national,tovary_dlitelnogo_polzovaniya_dlya_otdykha,Товары длительного пользования для отдыха,100.8,level
 2026-01-01,national,tovary_dlya_dekorativnogo_sadovodstva_domashnikh_zhivotnykh,"Товары для декоративного садоводства, домашних животных",101.3,level
 2026-02-01,national,tovary_dlya_dekorativnogo_sadovodstva_domashnikh_zhivotnykh,"Товары для декоративного садоводства, домашних животных",102.4,level
 2026-03-01,national,tovary_dlya_dekorativnogo_sadovodstva_domashnikh_zhivotnykh,"Товары для декоративного садоводства, домашних животных",100.6,level
@@ -6332,6 +6428,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,tovary_dlya_dekorativnogo_sadovodstva_domashnikh_zhivotnykh,"Товары для декоративного садоводства, домашних животных",99.9,level
 2026-08-01,national,tovary_dlya_dekorativnogo_sadovodstva_domashnikh_zhivotnykh,"Товары для декоративного садоводства, домашних животных",100.6,level
 2026-09-01,national,tovary_dlya_dekorativnogo_sadovodstva_domashnikh_zhivotnykh,"Товары для декоративного садоводства, домашних животных",101.2,level
+2026-10-01,national,tovary_dlya_dekorativnogo_sadovodstva_domashnikh_zhivotnykh,"Товары для декоративного садоводства, домашних животных",99.9,level
 2022-10-01,national,trikotazhnye_i_chulochnonosochnye_izdeliya,Трикотажные и чулочно-носочные изделия,101.3,level
 2022-11-01,national,trikotazhnye_i_chulochnonosochnye_izdeliya,Трикотажные и чулочно-носочные изделия,101.4,level
 2022-12-01,national,trikotazhnye_i_chulochnonosochnye_izdeliya,Трикотажные и чулочно-носочные изделия,101.0,level
@@ -6419,6 +6516,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,tverdoe_toplivo,Твердое топливо,100.0,level
 2026-08-01,national,tverdoe_toplivo,Твердое топливо,100.1,level
 2026-09-01,national,tverdoe_toplivo,Твердое топливо,100.9,level
+2026-10-01,national,tverdoe_toplivo,Твердое топливо,102.0,level
 2022-10-01,national,velosipedy,Велосипеды,100.6,level
 2022-11-01,national,velosipedy,Велосипеды,100.7,level
 2022-12-01,national,velosipedy,Велосипеды,100.0,level
@@ -6623,6 +6721,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,zapasnye_chasti_i_prinadlezhnosti_dlya_lichnykh_transportnykh_sredstv,Запасные части и принадлежности для личных транспортных средств,99.9,level
 2026-08-01,national,zapasnye_chasti_i_prinadlezhnosti_dlya_lichnykh_transportnykh_sredstv,Запасные части и принадлежности для личных транспортных средств,100.2,level
 2026-09-01,national,zapasnye_chasti_i_prinadlezhnosti_dlya_lichnykh_transportnykh_sredstv,Запасные части и принадлежности для личных транспортных средств,100.0,level
+2026-10-01,national,zapasnye_chasti_i_prinadlezhnosti_dlya_lichnykh_transportnykh_sredstv,Запасные части и принадлежности для личных транспортных средств,99.9,level
 2022-10-01,national,zapisyvayushchie_ustroystva_i_materialy,Записывающие устройства и материалы,100.4,level
 2022-11-01,national,zapisyvayushchie_ustroystva_i_materialy,Записывающие устройства и материалы,102.3,level
 2022-12-01,national,zapisyvayushchie_ustroystva_i_materialy,Записывающие устройства и материалы,101.4,level
