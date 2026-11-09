@@ -1,51 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — IMF BOP, IIP and GFS, and every WDI series for Kazakhstan» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — history for the fiscal, core-inflation, retail and credit blocks» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-27 — history for the fiscal, core-inflation, retail and credit blocks
-
-Asked for: the budget monthly and quarterly before 2025, core inflation before 2023, retail
-volume by goods group, credit by type before 2022, and the CPI detail visible in the Project.
-
-**Budget.** The Minfin monthly Statistical Bulletins are online back to January 2019 (90 xlsx,
-found by title search; the budget direction's listing shows only the latest ~14). New
-`scripts/backfill_minfin_bulletins.py` read them all once (`minfin.BULLETIN_ARCHIVE`); every
-bulletin series now keeps that history and the daily run lays the listed editions over it
-(`_with_history`). Табл 3's January-to-month column and row labels are found by header text (the
-2019-2021 layout had them in other columns, with quarterly columns in between); a «YYYY ж. есеп»
-header over quarterly columns is no longer read as an annual figure. Result: STATE_BUDGET_*_YTD
-2019-01 … 2026-07 (80 months, was 14), the 20 other bulletin series from 2019, annual state and
-local budget from 2016; new quarterly STATE_BUDGET_REVENUE_Q / _EXPENDITURE_Q / _DEFICIT_Q,
-2019Q1 … 2026Q2, discrete quarters from the January-to-month figures and the annual report.
-Checks: on the 14 months stored before, every value is unchanged; the derived quarters equal the
-quarterly columns the 2020-21 bulletins printed (2019Q1-Q3, 2020Q1-Q4) to the unit; the four
-quarters add to the annual report; revenue − expenditure − lending − financial assets = deficit
-every month except 2021-09 (90 bn apart in the bulletin itself, source_issues). The general
-government quarterly cash operations 2008Q1 … 2025Q4 were added this morning (IMF_QGFS_KZT).
-
-**Core inflation.** CORE_CPI_YOY_EX3 / CORE_CPI_MOM_EX3 from 2011-01 (were 2023-01): Taldau 703082,
-the same «без фруктов и овощей, бензина и угля» basket under its pre-2023 index. Its Oct-Dec 2022
-equal the Т-15-02-М tables to the rounding; twelve chained m/m reproduce y/y within 0.6 in all 132
-months. The seven-component basket has no pre-2023 series on Taldau.
-
-**Retail.** RETAIL_TRADE_INDEX_MONTHLY from 2016-01 (Taldau 702041; April 2026: 104.96 there, 105.0 in
-the bulletin, which wins); new RETAIL_TRADE_INDEX_FOOD_MONTHLY, _NONFOOD_MONTHLY (y/y) and
-RETAIL_TRADE_INDEX_YTD (January-to-month), 2016-01 … 2026-04. October 2025 is missing on Taldau.
-
-**Credit.** New BANK_LOANS_STB_{TOTAL, KZT, FX, SHORT_TERM, LONG_TERM, LEGAL_ENTITIES, INDIVIDUALS,
-BUSINESS, HOUSEHOLDS}: NBK «Кредиты экономике от БВУ (исторические данные)», end of month, 1996-01 …
-2026-08 (business/households from 2003), dated as the money stock (end of month m = 1st of m+1). The
-currency, status and business/household splits add to the total every month; households equal form
-445's individuals in all 44 common months. Short-term 2000-08 carries an extra digit (source_issues).
-No official time series of subsidised («льготное») lending was found: NBK's open data has only the
-state agricultural lenders' portfolio (form 59, quarterly from 2025); Damu and Baiterek publish
-annual reports only.
-
-**Project.** `project_knowledge/latest/cpi_detail_latest.csv` (38 KB): the CPI publication's latest
-month, per item and region, indices and contributions.
-
-Tests: `tests/test_history_extensions.py` (9).
 
 ## 2026-09-27 — supply and use by product and region: production, trade, domestic use
 
@@ -660,3 +616,47 @@ quarterly/annual dating, `flat_regions` + `region_terms` (city lists) and `segme
 
 Big forms are fetched in full once and then from 6 months back (API startDate); their pages are archived gzipped.
 Tests: tests/test_new_sources_2026_11.py (12 + 2 cross-source), tests/test_dims.py config checks.
+
+## 2026-11-09 — the second batch of missing indicators: loan rates by purpose, securities market, vacancies, investment by source, KASE, KMG, FAO, UN population, transport by mode, consumer sentiment (the «сделай все» request)
+
+Item-level datasets 265 -> 282. New fetchers: fetchers/kase_dims.py (KASE indices from the TradingView feed, corporate
+bond volumes from the news API), fetchers/kmg.py (the KazMunayGas quarterly databook), fetchers/world_misc.py (FAO, UN WPP);
+nbk_cube gained "" codes (a field contributing nothing to the item), `distinct` rates datasets and `field_aliases`;
+bns_dims a `year_rows_months` layout; nbk_expectations derives the consumer sentiment index.
+
+1. **Oil by project**: KMG_OIL_PRODUCTION_AND_TRANSPORT (KMG databook, 2015 Q1 on): production by asset in KMG's share and
+   Tengiz / Kashagan / Karachaganak at 100 % from the shares (2025: 39.0 / 17.9 / 10.9 mln t); transport by КазТрансОйл,
+   the Kazakhstan-China pipeline, МунайТас and the CPC; export / transit / domestic shares. Field-level monthly output
+   (Ministry of Energy briefings, gov.kz answers 403 from the sandbox) and crude exports by route (KazTransOil press
+   texts, CPC annual releases) are not machine-readable and stay out.
+2. **Business tendency surveys**: BNS discontinued them after 2024 Q4 (last release 15.01.2025); not connected. The NBK
+   enterprise survey stays the live source.
+3. **Labour market, high frequency**: VACANCIES_BY_REGION_QUARTERLY (Taldau 703008 vacancies, 702998 hires),
+   EMPLOYEE_SEPARATIONS_BY_REGION_QUARTERLY (703003), REGISTERED_UNEMPLOYED_SHARE (monthly, national),
+   REGISTERED_UNEMPLOYED (annual). Wage arrears: no live BNS series since 2016.
+4. **Government securities**: GOV_SECURITIES_PRIMARY_AUCTIONS (form 17) and GOV_SECURITIES_SECONDARY_MARKET (form 16),
+   monthly volumes by instrument and term from 2022-12 (NBK notes 942 107 mln KZT placed in August 2026).
+5. **Loan rates**: LOAN_RATES_BY_PURPOSE (form 27, 2022 on; mortgage 10.69 %, consumer 22.29 % in August 2026; by
+   enterprise size and maturity), LOAN_RATES_BY_MATURITY (form 486, 1997 on, six maturity buckets).
+6. **KASE**: KASE_INDICES (INDEX_KASE from 2000, KASE_TR, KASE_BMY / KASE_BMC corporate bond indices from 2017, MM_INDEX,
+   CAPBILLS_KZT; monthly average and end of month), KASE_CORPORATE_BOND_VOLUMES (primary / secondary, 2019 on).
+7. **Trade in services**: by type already in IMF_BOP_QUARTERLY (CD_T.S*, DB_T.S*); NBK forms 447 / 448 (by country) are
+   empty on the API. Nothing added.
+8. **Tax arrears**: kgd.gov.kz is gone; the new portal has only a semi-annual xlsx with the national total (1.07 trn KZT at
+   01.01.2026, 1.18 trn at 01.07.2026) and no tax or regional split. Not connected; Minfin remains the source for receipts.
+9. **Investment by source of financing**: INVESTMENT_BY_SOURCE_BY_REGION_YTD (Taldau 701827, dictionary 459, 2018-01 on,
+   by region) and INVESTMENT_BY_SOURCE_BY_REGION (annual 2003-2025). The five sources add up to the total; the GDP model's
+   hand-entered budget investment (manual_inputs iok_budget_private_split) is the January first release, the annual
+   revised figures are 2.7 % (2024) and 1.5 % (2025) higher.
+10. **FAO_FOOD_PRICE_INDEX**: nominal FFPI and five sub-indices, 1990-01 on (September 2026 135.6).
+11. **UN_WPP_POPULATION**: WPP 2024 for Kazakhstan, every variant, sex, 0-14 / 15-64 / 65+, fertility, life expectancy,
+    net migration, 1950-2100 (medium 2050: 26.5 mln).
+12. **High-frequency activity**: FREIGHT_BY_MODE_MONTHLY and FREIGHT_TURNOVER_BY_MODE_MONTHLY (BNS 445258 / 3885, rail,
+    road, pipeline, air, sea, inland water, discrete months from 2007-01; rail from 2025 excludes empty wagons -- source
+    issue freight_rail_empty_wagons_2025). Electricity consumption (KEGOC map, a snapshot without history), rail loading
+    (КТЖ texts) and fiscal-receipt data (none published) stay out.
+13. **Consumer confidence**: the NBK's «Индекс потребительских настроений» is reproduced from the household survey the
+    pipeline already fetches (INFLATION_EXPECTATIONS_SURVEY items CSI, CSI.CURRENT, CSI.EXPECTATIONS, CSI.Q9 … Q25):
+    May 2022 104.1, December 2023 115.7, October 2025 99.1 as published; monthly 2016-2025, quarterly from 2026.
+
+Tests: tests/test_new_sources_2026_11b.py (11 + 1 cross-source).

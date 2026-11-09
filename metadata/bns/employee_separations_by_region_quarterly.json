@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703003",
+  "indicator_id": "EMPLOYEE_SEPARATIONS_BY_REGION_QUARTERLY",
+  "indicator_name": "Employees separated during the quarter, by region (form 1-Т, excluding small enterprises)",
+  "description": "Выбыло работников за квартал, по регионам (форма 1-Т, без малых предприятий)",
+  "frequency": "quarterly",
+  "unit": "persons",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Taldau 703003, 2016 Q1 onward (quarterly data were not compiled 2013-2015). National 2026 Q2: 278 717. With VACANCIES_BY_REGION_QUARTERLY's HIRED gives the hiring and separation rates of enterprises other than small.",
+  "publication_date": null,
+  "last_update_date": "2026-11-09",
+  "download_date": "2026-11-09",
+  "period_start": "2016-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

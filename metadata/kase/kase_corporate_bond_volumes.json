@@ -1,0 +1,21 @@
+{
+  "source": "kase",
+  "source_url": "https://kase.kz/api/news",
+  "dataset_id": "kase news: corporate bond volumes",
+  "indicator_id": "KASE_CORPORATE_BOND_VOLUMES",
+  "indicator_name": "KASE corporate bond trading volume during the month: primary and secondary market (repo excluded), billion KZT",
+  "description": "Объём торгов корпоративными облигациями на KASE за месяц: первичный и вторичный рынок (без репо), млрд тенге",
+  "frequency": "monthly",
+  "unit": "billion KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Parsed from KASE's monthly news items «За январь-<месяц> YYYY года объем торгов корпоративными облигациями на KASE составил …» (the fixed-width table by month; the «За YYYY год» item of each January carries the previous year's twelve months), 2017 onward. October 2026: primary 800.5, secondary 100.8, total 901.3 bn KZT; January-October 2026 6 420.5 bn (+44.4 % y/y). Volumes by issuer sector are published only as charts and are not kept.",
+  "publication_date": null,
+  "last_update_date": "2026-11-09",
+  "download_date": "2026-11-09",
+  "period_start": "2019-01-01",
+  "period_end": "2026-10-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

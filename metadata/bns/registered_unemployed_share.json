@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-702956",
+  "indicator_id": "REGISTERED_UNEMPLOYED_SHARE",
+  "indicator_name": "Registered unemployed as a share of the labour force, monthly",
+  "description": "Доля зарегистрированных безработных в численности рабочей силы, помесячно",
+  "frequency": "monthly",
+  "unit": "% of the labour force",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Taldau 702956, national only, 2015-02 onward with irregular missing months (2026-08: 3.6 %). The count is REGISTERED_UNEMPLOYED (annual); monthly counts by region are published only by the labour ministry on data.egov.kz (API key required). The survey-based UNEMPLOYMENT rate is a different concept (ILO).",
+  "publication_date": null,
+  "last_update_date": "2026-11-09",
+  "download_date": "2026-11-09",
+  "period_start": "2015-02-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

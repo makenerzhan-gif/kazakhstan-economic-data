@@ -1,0 +1,21 @@
+{
+  "source": "kmg",
+  "source_url": "https://www.kmg.kz/upload/iblock/671/l7j3q3rekhzw9t21kovq2csiu0zxkgia/Справочник_2кв2026_rus.xlsx",
+  "dataset_id": "KMG databook 2Q 2026",
+  "indicator_id": "KMG_OIL_PRODUCTION_AND_TRANSPORT",
+  "indicator_name": "Oil and condensate production by KMG asset (KMG share; Tengiz, Kashagan and Karachaganak also at 100 %) and crude transportation by pipeline operator, quarterly",
+  "description": "Добыча нефти и конденсата по активам КМГ (в доле КМГ; Тенгиз, Кашаган и Карачаганак также в 100 %) и транспортировка нефти по операторам трубопроводов, поквартально",
+  "frequency": "quarterly",
+  "unit": "thousand tonnes (production), million tonnes (transport), % (shares)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "KazMunayGas quarterly databook (sheets «стр. 6», «стр. 7»), 2015 Q1 onward. Production items are KMG's equity share; TCO_GROSS = TCO / 0.20, KPO_GROSS = KPO / 0.10, NCOC_GROSS = NCOC / 0.0844 (to 2022 Q2) or / 0.1688 (from 2022 Q4; 2022 Q3 skipped). 2025: Tengiz 39.0 mln t (KMG share 7 802.2 kt), Kashagan 17.9 mln t, Karachaganak 10.9 mln t. TRANSPORT_KTO / _KCP / _MUNAITAS / _CPC (CPC on the basis of KMG's share) / _BATUMI, million tonnes; SHARE_EXPORT / _TRANSIT / _DOMESTIC of pipeline transport, %. Field-level monthly output and crude exports by route (CPC, Atyrau-Samara, Atasu-Alashankou) are published only in Ministry of Energy and KazTransOil press texts and are not connected; oil output by region (Atyrau = Tengiz + Kashagan, West Kazakhstan = Karachaganak) is in INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY.",
+  "publication_date": "2Q 2026",
+  "last_update_date": "2026-11-09",
+  "download_date": "2026-11-09",
+  "period_start": "2015-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

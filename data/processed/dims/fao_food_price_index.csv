@@ -1,0 +1,2653 @@
+date,region,item_code,item_name,value,transformation
+1990-01-01,world,FFPI,Индекс продовольственных цен ФАО,64.4,level
+1990-01-01,world,MEAT,Мясо,74.3,level
+1990-01-01,world,DAIRY,Молочная продукция,53.5,level
+1990-01-01,world,CEREALS,Зерновые,64.1,level
+1990-01-01,world,OILS,Растительные масла,44.59,level
+1990-01-01,world,SUGAR,Сахар,87.9,level
+1990-02-01,world,FFPI,Индекс продовольственных цен ФАО,64.7,level
+1990-02-01,world,MEAT,Мясо,76.8,level
+1990-02-01,world,DAIRY,Молочная продукция,52.2,level
+1990-02-01,world,CEREALS,Зерновые,62.2,level
+1990-02-01,world,OILS,Растительные масла,44.5,level
+1990-02-01,world,SUGAR,Сахар,90.7,level
+1990-03-01,world,FFPI,Индекс продовольственных цен ФАО,64.0,level
+1990-03-01,world,MEAT,Мясо,78.5,level
+1990-03-01,world,DAIRY,Молочная продукция,41.4,level
+1990-03-01,world,CEREALS,Зерновые,61.3,level
+1990-03-01,world,OILS,Растительные масла,45.75,level
+1990-03-01,world,SUGAR,Сахар,95.1,level
+1990-04-01,world,FFPI,Индекс продовольственных цен ФАО,66.0,level
+1990-04-01,world,MEAT,Мясо,81.2,level
+1990-04-01,world,DAIRY,Молочная продукция,48.4,level
+1990-04-01,world,CEREALS,Зерновые,62.8,level
+1990-04-01,world,OILS,Растительные масла,44.02,level
+1990-04-01,world,SUGAR,Сахар,94.3,level
+1990-05-01,world,FFPI,Индекс продовольственных цен ФАО,64.6,level
+1990-05-01,world,MEAT,Мясо,81.8,level
+1990-05-01,world,DAIRY,Молочная продукция,39.2,level
+1990-05-01,world,CEREALS,Зерновые,62.0,level
+1990-05-01,world,OILS,Растительные масла,45.5,level
+1990-05-01,world,SUGAR,Сахар,90.4,level
+1990-06-01,world,FFPI,Индекс продовольственных цен ФАО,64.1,level
+1990-06-01,world,MEAT,Мясо,84.2,level
+1990-06-01,world,DAIRY,Молочная продукция,39.2,level
+1990-06-01,world,CEREALS,Зерновые,60.7,level
+1990-06-01,world,OILS,Растительные масла,43.8,level
+1990-06-01,world,SUGAR,Сахар,80.3,level
+1990-07-01,world,FFPI,Индекс продовольственных цен ФАО,62.9,level
+1990-07-01,world,MEAT,Мясо,84.5,level
+1990-07-01,world,DAIRY,Молочная продукция,39.2,level
+1990-07-01,world,CEREALS,Зерновые,57.9,level
+1990-07-01,world,OILS,Растительные масла,43.72,level
+1990-07-01,world,SUGAR,Сахар,74.2,level
+1990-08-01,world,FFPI,Индекс продовольственных цен ФАО,61.8,level
+1990-08-01,world,MEAT,Мясо,84.5,level
+1990-08-01,world,DAIRY,Молочная продукция,36.8,level
+1990-08-01,world,CEREALS,Зерновые,55.7,level
+1990-08-01,world,OILS,Растительные масла,45.37,level
+1990-08-01,world,SUGAR,Сахар,67.6,level
+1990-09-01,world,FFPI,Индекс продовольственных цен ФАО,61.3,level
+1990-09-01,world,MEAT,Мясо,85.5,level
+1990-09-01,world,DAIRY,Молочная продукция,38.1,level
+1990-09-01,world,CEREALS,Зерновые,52.5,level
+1990-09-01,world,OILS,Растительные масла,44.79,level
+1990-09-01,world,SUGAR,Сахар,68.5,level
+1990-10-01,world,FFPI,Индекс продовольственных цен ФАО,61.4,level
+1990-10-01,world,MEAT,Мясо,86.2,level
+1990-10-01,world,DAIRY,Молочная продукция,38.9,level
+1990-10-01,world,CEREALS,Зерновые,52.8,level
+1990-10-01,world,OILS,Растительные масла,45.72,level
+1990-10-01,world,SUGAR,Сахар,60.8,level
+1990-11-01,world,FFPI,Индекс продовольственных цен ФАО,62.3,level
+1990-11-01,world,MEAT,Мясо,87.6,level
+1990-11-01,world,DAIRY,Молочная продукция,39.4,level
+1990-11-01,world,CEREALS,Зерновые,52.4,level
+1990-11-01,world,OILS,Растительные масла,48.3,level
+1990-11-01,world,SUGAR,Сахар,62.3,level
+1990-12-01,world,FFPI,Индекс продовольственных цен ФАО,62.2,level
+1990-12-01,world,MEAT,Мясо,84.4,level
+1990-12-01,world,DAIRY,Молочная продукция,45.1,level
+1990-12-01,world,CEREALS,Зерновые,52.6,level
+1990-12-01,world,OILS,Растительные масла,49.6,level
+1990-12-01,world,SUGAR,Сахар,60.3,level
+1991-01-01,world,FFPI,Индекс продовольственных цен ФАО,61.0,level
+1991-01-01,world,MEAT,Мясо,80.5,level
+1991-01-01,world,DAIRY,Молочная продукция,46.9,level
+1991-01-01,world,CEREALS,Зерновые,53.7,level
+1991-01-01,world,OILS,Растительные масла,49.47,level
+1991-01-01,world,SUGAR,Сахар,54.5,level
+1991-02-01,world,FFPI,Индекс продовольственных цен ФАО,61.8,level
+1991-02-01,world,MEAT,Мясо,82.4,level
+1991-02-01,world,DAIRY,Молочная продукция,46.7,level
+1991-02-01,world,CEREALS,Зерновые,55.2,level
+1991-02-01,world,OILS,Растительные масла,48.42,level
+1991-02-01,world,SUGAR,Сахар,52.7,level
+1991-03-01,world,FFPI,Индекс продовольственных цен ФАО,62.3,level
+1991-03-01,world,MEAT,Мясо,81.6,level
+1991-03-01,world,DAIRY,Молочная продукция,45.8,level
+1991-03-01,world,CEREALS,Зерновые,57.3,level
+1991-03-01,world,OILS,Растительные масла,48.75,level
+1991-03-01,world,SUGAR,Сахар,56.6,level
+1991-04-01,world,FFPI,Индекс продовольственных цен ФАО,61.0,level
+1991-04-01,world,MEAT,Мясо,80.5,level
+1991-04-01,world,DAIRY,Молочная продукция,42.8,level
+1991-04-01,world,CEREALS,Зерновые,57.6,level
+1991-04-01,world,OILS,Растительные масла,47.0,level
+1991-04-01,world,SUGAR,Сахар,52.7,level
+1991-05-01,world,FFPI,Индекс продовольственных цен ФАО,60.8,level
+1991-05-01,world,MEAT,Мясо,82.0,level
+1991-05-01,world,DAIRY,Молочная продукция,42.1,level
+1991-05-01,world,CEREALS,Зерновые,57.2,level
+1991-05-01,world,OILS,Растительные масла,46.56,level
+1991-05-01,world,SUGAR,Сахар,46.9,level
+1991-06-01,world,FFPI,Индекс продовольственных цен ФАО,61.3,level
+1991-06-01,world,MEAT,Мясо,81.3,level
+1991-06-01,world,DAIRY,Молочная продукция,43.4,level
+1991-06-01,world,CEREALS,Зерновые,56.5,level
+1991-06-01,world,OILS,Растительные масла,46.73,level
+1991-06-01,world,SUGAR,Сахар,56.9,level
+1991-07-01,world,FFPI,Индекс продовольственных цен ФАО,62.2,level
+1991-07-01,world,MEAT,Мясо,83.6,level
+1991-07-01,world,DAIRY,Молочная продукция,40.4,level
+1991-07-01,world,CEREALS,Зерновые,55.7,level
+1991-07-01,world,OILS,Растительные масла,48.22,level
+1991-07-01,world,SUGAR,Сахар,63.8,level
+1991-08-01,world,FFPI,Индекс продовольственных цен ФАО,61.8,level
+1991-08-01,world,MEAT,Мясо,80.4,level
+1991-08-01,world,DAIRY,Молочная продукция,41.7,level
+1991-08-01,world,CEREALS,Зерновые,58.3,level
+1991-08-01,world,OILS,Растительные масла,48.81,level
+1991-08-01,world,SUGAR,Сахар,58.5,level
+1991-09-01,world,FFPI,Индекс продовольственных цен ФАО,62.4,level
+1991-09-01,world,MEAT,Мясо,80.6,level
+1991-09-01,world,DAIRY,Молочная продукция,45.4,level
+1991-09-01,world,CEREALS,Зерновые,58.8,level
+1991-09-01,world,OILS,Растительные масла,48.58,level
+1991-09-01,world,SUGAR,Сахар,57.5,level
+1991-10-01,world,FFPI,Индекс продовольственных цен ФАО,64.5,level
+1991-10-01,world,MEAT,Мясо,83.0,level
+1991-10-01,world,DAIRY,Молочная продукция,48.8,level
+1991-10-01,world,CEREALS,Зерновые,60.6,level
+1991-10-01,world,OILS,Растительные масла,51.13,level
+1991-10-01,world,SUGAR,Сахар,56.4,level
+1991-11-01,world,FFPI,Индекс продовольственных цен ФАО,64.6,level
+1991-11-01,world,MEAT,Мясо,82.6,level
+1991-11-01,world,DAIRY,Молочная продукция,50.8,level
+1991-11-01,world,CEREALS,Зерновые,60.8,level
+1991-11-01,world,OILS,Растительные масла,51.79,level
+1991-11-01,world,SUGAR,Сахар,53.6,level
+1991-12-01,world,FFPI,Индекс продовольственных цен ФАО,64.3,level
+1991-12-01,world,MEAT,Мясо,79.2,level
+1991-12-01,world,DAIRY,Молочная продукция,50.8,level
+1991-12-01,world,CEREALS,Зерновые,62.7,level
+1991-12-01,world,OILS,Растительные масла,52.63,level
+1991-12-01,world,SUGAR,Сахар,55.7,level
+1992-01-01,world,FFPI,Индекс продовольственных цен ФАО,65.1,level
+1992-01-01,world,MEAT,Мясо,80.2,level
+1992-01-01,world,DAIRY,Молочная продукция,52.9,level
+1992-01-01,world,CEREALS,Зерновые,63.9,level
+1992-01-01,world,OILS,Растительные масла,52.84,level
+1992-01-01,world,SUGAR,Сахар,51.5,level
+1992-02-01,world,FFPI,Индекс продовольственных цен ФАО,65.9,level
+1992-02-01,world,MEAT,Мясо,81.6,level
+1992-02-01,world,DAIRY,Молочная продукция,52.9,level
+1992-02-01,world,CEREALS,Зерновые,66.5,level
+1992-02-01,world,OILS,Растительные масла,51.96,level
+1992-02-01,world,SUGAR,Сахар,48.5,level
+1992-03-01,world,FFPI,Индекс продовольственных цен ФАО,66.5,level
+1992-03-01,world,MEAT,Мясо,82.4,level
+1992-03-01,world,DAIRY,Молочная продукция,52.4,level
+1992-03-01,world,CEREALS,Зерновые,65.9,level
+1992-03-01,world,OILS,Растительные масла,54.08,level
+1992-03-01,world,SUGAR,Сахар,50.9,level
+1992-04-01,world,FFPI,Индекс продовольственных цен ФАО,64.8,level
+1992-04-01,world,MEAT,Мясо,78.3,level
+1992-04-01,world,DAIRY,Молочная продукция,52.4,level
+1992-04-01,world,CEREALS,Зерновые,63.0,level
+1992-04-01,world,OILS,Растительные масла,53.95,level
+1992-04-01,world,SUGAR,Сахар,58.5,level
+1992-05-01,world,FFPI,Индекс продовольственных цен ФАО,65.1,level
+1992-05-01,world,MEAT,Мясо,78.9,level
+1992-05-01,world,DAIRY,Молочная продукция,54.6,level
+1992-05-01,world,CEREALS,Зерновые,62.0,level
+1992-05-01,world,OILS,Растительные масла,54.02,level
+1992-05-01,world,SUGAR,Сахар,59.3,level
+1992-06-01,world,FFPI,Индекс продовольственных цен ФАО,65.9,level
+1992-06-01,world,MEAT,Мясо,78.9,level
+1992-06-01,world,DAIRY,Молочная продукция,57.7,level
+1992-06-01,world,CEREALS,Зерновые,61.8,level
+1992-06-01,world,OILS,Растительные масла,54.82,level
+1992-06-01,world,SUGAR,Сахар,64.1,level
+1992-07-01,world,FFPI,Индекс продовольственных цен ФАО,64.7,level
+1992-07-01,world,MEAT,Мясо,79.5,level
+1992-07-01,world,DAIRY,Молочная продукция,58.1,level
+1992-07-01,world,CEREALS,Зерновые,58.5,level
+1992-07-01,world,OILS,Растительные масла,51.93,level
+1992-07-01,world,SUGAR,Сахар,63.8,level
+1992-08-01,world,FFPI,Индекс продовольственных цен ФАО,63.1,level
+1992-08-01,world,MEAT,Мясо,78.6,level
+1992-08-01,world,DAIRY,Молочная продукция,56.6,level
+1992-08-01,world,CEREALS,Зерновые,56.1,level
+1992-08-01,world,OILS,Растительные масла,51.02,level
+1992-08-01,world,SUGAR,Сахар,60.8,level
+1992-09-01,world,FFPI,Индекс продовольственных цен ФАО,63.8,level
+1992-09-01,world,MEAT,Мясо,78.1,level
+1992-09-01,world,DAIRY,Молочная продукция,58.1,level
+1992-09-01,world,CEREALS,Зерновые,58.3,level
+1992-09-01,world,OILS,Растительные масла,52.2,level
+1992-09-01,world,SUGAR,Сахар,57.6,level
+1992-10-01,world,FFPI,Индекс продовольственных цен ФАО,61.8,level
+1992-10-01,world,MEAT,Мясо,74.4,level
+1992-10-01,world,DAIRY,Молочная продукция,54.9,level
+1992-10-01,world,CEREALS,Зерновые,58.2,level
+1992-10-01,world,OILS,Растительные масла,52.22,level
+1992-10-01,world,SUGAR,Сахар,53.9,level
+1992-11-01,world,FFPI,Индекс продовольственных цен ФАО,62.7,level
+1992-11-01,world,MEAT,Мясо,76.2,level
+1992-11-01,world,DAIRY,Молочная продукция,53.8,level
+1992-11-01,world,CEREALS,Зерновые,58.8,level
+1992-11-01,world,OILS,Растительные масла,53.88,level
+1992-11-01,world,SUGAR,Сахар,53.0,level
+1992-12-01,world,FFPI,Индекс продовольственных цен ФАО,61.3,level
+1992-12-01,world,MEAT,Мясо,73.7,level
+1992-12-01,world,DAIRY,Молочная продукция,53.2,level
+1992-12-01,world,CEREALS,Зерновые,58.5,level
+1992-12-01,world,OILS,Растительные масла,53.0,level
+1992-12-01,world,SUGAR,Сахар,50.4,level
+1993-01-01,world,FFPI,Индекс продовольственных цен ФАО,61.6,level
+1993-01-01,world,MEAT,Мясо,73.4,level
+1993-01-01,world,DAIRY,Молочная продукция,53.3,level
+1993-01-01,world,CEREALS,Зерновые,59.1,level
+1993-01-01,world,OILS,Растительные масла,53.98,level
+1993-01-01,world,SUGAR,Сахар,51.0,level
+1993-02-01,world,FFPI,Индекс продовольственных цен ФАО,61.4,level
+1993-02-01,world,MEAT,Мясо,72.9,level
+1993-02-01,world,DAIRY,Молочная продукция,54.0,level
+1993-02-01,world,CEREALS,Зерновые,58.1,level
+1993-02-01,world,OILS,Растительные масла,54.24,level
+1993-02-01,world,SUGAR,Сахар,53.0,level
+1993-03-01,world,FFPI,Индекс продовольственных цен ФАО,63.2,level
+1993-03-01,world,MEAT,Мясо,76.5,level
+1993-03-01,world,DAIRY,Молочная продукция,53.3,level
+1993-03-01,world,CEREALS,Зерновые,57.8,level
+1993-03-01,world,OILS,Растительные масла,53.05,level
+1993-03-01,world,SUGAR,Сахар,65.7,level
+1993-04-01,world,FFPI,Индекс продовольственных цен ФАО,62.8,level
+1993-04-01,world,MEAT,Мясо,75.7,level
+1993-04-01,world,DAIRY,Молочная продукция,52.4,level
+1993-04-01,world,CEREALS,Зерновые,57.3,level
+1993-04-01,world,OILS,Растительные масла,52.83,level
+1993-04-01,world,SUGAR,Сахар,69.0,level
+1993-05-01,world,FFPI,Индекс продовольственных цен ФАО,62.4,level
+1993-05-01,world,MEAT,Мясо,76.0,level
+1993-05-01,world,DAIRY,Молочная продукция,51.7,level
+1993-05-01,world,CEREALS,Зерновые,55.4,level
+1993-05-01,world,OILS,Растительные масла,51.9,level
+1993-05-01,world,SUGAR,Сахар,73.2,level
+1993-06-01,world,FFPI,Индекс продовольственных цен ФАО,61.8,level
+1993-06-01,world,MEAT,Мясо,78.6,level
+1993-06-01,world,DAIRY,Молочная продукция,51.8,level
+1993-06-01,world,CEREALS,Зерновые,52.8,level
+1993-06-01,world,OILS,Растительные масла,51.24,level
+1993-06-01,world,SUGAR,Сахар,64.3,level
+1993-07-01,world,FFPI,Индекс продовольственных цен ФАО,62.2,level
+1993-07-01,world,MEAT,Мясо,78.1,level
+1993-07-01,world,DAIRY,Молочная продукция,49.7,level
+1993-07-01,world,CEREALS,Зерновые,55.8,level
+1993-07-01,world,OILS,Растительные масла,53.28,level
+1993-07-01,world,SUGAR,Сахар,59.9,level
+1993-08-01,world,FFPI,Индекс продовольственных цен ФАО,60.9,level
+1993-08-01,world,MEAT,Мясо,74.8,level
+1993-08-01,world,DAIRY,Молочная продукция,48.0,level
+1993-08-01,world,CEREALS,Зерновые,56.6,level
+1993-08-01,world,OILS,Растительные масла,52.61,level
+1993-08-01,world,SUGAR,Сахар,57.8,level
+1993-09-01,world,FFPI,Индекс продовольственных цен ФАО,61.2,level
+1993-09-01,world,MEAT,Мясо,75.1,level
+1993-09-01,world,DAIRY,Молочная продукция,45.1,level
+1993-09-01,world,CEREALS,Зерновые,58.4,level
+1993-09-01,world,OILS,Растительные масла,52.54,level
+1993-09-01,world,SUGAR,Сахар,59.0,level
+1993-10-01,world,FFPI,Индекс продовольственных цен ФАО,61.5,level
+1993-10-01,world,MEAT,Мясо,74.5,level
+1993-10-01,world,DAIRY,Молочная продукция,41.0,level
+1993-10-01,world,CEREALS,Зерновые,61.4,level
+1993-10-01,world,OILS,Растительные масла,52.12,level
+1993-10-01,world,SUGAR,Сахар,63.7,level
+1993-11-01,world,FFPI,Индекс продовольственных цен ФАО,63.4,level
+1993-11-01,world,MEAT,Мясо,73.6,level
+1993-11-01,world,DAIRY,Молочная продукция,41.2,level
+1993-11-01,world,CEREALS,Зерновые,66.7,level
+1993-11-01,world,OILS,Растительные масла,56.22,level
+1993-11-01,world,SUGAR,Сахар,62.6,level
+1993-12-01,world,FFPI,Индекс продовольственных цен ФАО,64.7,level
+1993-12-01,world,MEAT,Мясо,71.1,level
+1993-12-01,world,DAIRY,Молочная продукция,41.8,level
+1993-12-01,world,CEREALS,Зерновые,68.9,level
+1993-12-01,world,OILS,Растительные масла,63.58,level
+1993-12-01,world,SUGAR,Сахар,65.1,level
+1994-01-01,world,FFPI,Индекс продовольственных цен ФАО,64.8,level
+1994-01-01,world,MEAT,Мясо,70.2,level
+1994-01-01,world,DAIRY,Молочная продукция,45.5,level
+1994-01-01,world,CEREALS,Зерновые,68.6,level
+1994-01-01,world,OILS,Растительные масла,63.88,level
+1994-01-01,world,SUGAR,Сахар,63.7,level
+1994-02-01,world,FFPI,Индекс продовольственных цен ФАО,64.5,level
+1994-02-01,world,MEAT,Мясо,72.1,level
+1994-02-01,world,DAIRY,Молочная продукция,45.4,level
+1994-02-01,world,CEREALS,Зерновые,66.8,level
+1994-02-01,world,OILS,Растительные масла,60.4,level
+1994-02-01,world,SUGAR,Сахар,67.0,level
+1994-03-01,world,FFPI,Индекс продовольственных цен ФАО,64.8,level
+1994-03-01,world,MEAT,Мясо,73.4,level
+1994-03-01,world,DAIRY,Молочная продукция,46.0,level
+1994-03-01,world,CEREALS,Зерновые,64.1,level
+1994-03-01,world,OILS,Растительные масла,61.31,level
+1994-03-01,world,SUGAR,Сахар,72.7,level
+1994-04-01,world,FFPI,Индекс продовольственных цен ФАО,64.1,level
+1994-04-01,world,MEAT,Мясо,74.0,level
+1994-04-01,world,DAIRY,Молочная продукция,42.3,level
+1994-04-01,world,CEREALS,Зерновые,62.4,level
+1994-04-01,world,OILS,Растительные масла,63.66,level
+1994-04-01,world,SUGAR,Сахар,68.1,level
+1994-05-01,world,FFPI,Индекс продовольственных цен ФАО,65.9,level
+1994-05-01,world,MEAT,Мясо,77.0,level
+1994-05-01,world,DAIRY,Молочная продукция,42.3,level
+1994-05-01,world,CEREALS,Зерновые,62.0,level
+1994-05-01,world,OILS,Растительные масла,67.78,level
+1994-05-01,world,SUGAR,Сахар,71.7,level
+1994-06-01,world,FFPI,Индекс продовольственных цен ФАО,65.5,level
+1994-06-01,world,MEAT,Мясо,75.4,level
+1994-06-01,world,DAIRY,Молочная продукция,45.1,level
+1994-06-01,world,CEREALS,Зерновые,60.1,level
+1994-06-01,world,OILS,Растительные масла,68.47,level
+1994-06-01,world,SUGAR,Сахар,74.6,level
+1994-07-01,world,FFPI,Индекс продовольственных цен ФАО,64.2,level
+1994-07-01,world,MEAT,Мясо,75.9,level
+1994-07-01,world,DAIRY,Молочная продукция,45.6,level
+1994-07-01,world,CEREALS,Зерновые,56.0,level
+1994-07-01,world,OILS,Растительные масла,67.15,level
+1994-07-01,world,SUGAR,Сахар,72.8,level
+1994-08-01,world,FFPI,Индекс продовольственных цен ФАО,66.6,level
+1994-08-01,world,MEAT,Мясо,77.7,level
+1994-08-01,world,DAIRY,Молочная продукция,46.6,level
+1994-08-01,world,CEREALS,Зерновые,57.5,level
+1994-08-01,world,OILS,Растительные масла,73.33,level
+1994-08-01,world,SUGAR,Сахар,74.9,level
+1994-09-01,world,FFPI,Индекс продовольственных цен ФАО,69.6,level
+1994-09-01,world,MEAT,Мясо,78.8,level
+1994-09-01,world,DAIRY,Молочная продукция,49.9,level
+1994-09-01,world,CEREALS,Зерновые,60.2,level
+1994-09-01,world,OILS,Растительные масла,80.5,level
+1994-09-01,world,SUGAR,Сахар,77.9,level
+1994-10-01,world,FFPI,Индекс продовольственных цен ФАО,70.3,level
+1994-10-01,world,MEAT,Мясо,79.2,level
+1994-10-01,world,DAIRY,Молочная продукция,52.0,level
+1994-10-01,world,CEREALS,Зерновые,61.7,level
+1994-10-01,world,OILS,Растительные масла,79.0,level
+1994-10-01,world,SUGAR,Сахар,78.9,level
+1994-11-01,world,FFPI,Индекс продовольственных цен ФАО,73.6,level
+1994-11-01,world,MEAT,Мясо,83.0,level
+1994-11-01,world,DAIRY,Молочная продукция,53.2,level
+1994-11-01,world,CEREALS,Зерновые,61.1,level
+1994-11-01,world,OILS,Растительные масла,88.31,level
+1994-11-01,world,SUGAR,Сахар,86.3,level
+1994-12-01,world,FFPI,Индекс продовольственных цен ФАО,73.3,level
+1994-12-01,world,MEAT,Мясо,78.9,level
+1994-12-01,world,DAIRY,Молочная продукция,55.0,level
+1994-12-01,world,CEREALS,Зерновые,62.7,level
+1994-12-01,world,OILS,Растительные масла,88.62,level
+1994-12-01,world,SUGAR,Сахар,90.8,level
+1995-01-01,world,FFPI,Индекс продовольственных цен ФАО,73.0,level
+1995-01-01,world,MEAT,Мясо,79.1,level
+1995-01-01,world,DAIRY,Молочная продукция,58.9,level
+1995-01-01,world,CEREALS,Зерновые,62.9,level
+1995-01-01,world,OILS,Растительные масла,82.66,level
+1995-01-01,world,SUGAR,Сахар,91.3,level
+1995-02-01,world,FFPI,Индекс продовольственных цен ФАО,74.7,level
+1995-02-01,world,MEAT,Мясо,84.0,level
+1995-02-01,world,DAIRY,Молочная продукция,61.1,level
+1995-02-01,world,CEREALS,Зерновые,62.5,level
+1995-02-01,world,OILS,Растительные масла,82.67,level
+1995-02-01,world,SUGAR,Сахар,89.2,level
+1995-03-01,world,FFPI,Индекс продовольственных цен ФАО,75.5,level
+1995-03-01,world,MEAT,Мясо,85.1,level
+1995-03-01,world,DAIRY,Молочная продукция,61.8,level
+1995-03-01,world,CEREALS,Зерновые,62.2,level
+1995-03-01,world,OILS,Растительные масла,84.42,level
+1995-03-01,world,SUGAR,Сахар,90.3,level
+1995-04-01,world,FFPI,Индекс продовольственных цен ФАО,74.3,level
+1995-04-01,world,MEAT,Мясо,85.9,level
+1995-04-01,world,DAIRY,Молочная продукция,61.1,level
+1995-04-01,world,CEREALS,Зерновые,62.7,level
+1995-04-01,world,OILS,Растительные масла,77.94,level
+1995-04-01,world,SUGAR,Сахар,84.8,level
+1995-05-01,world,FFPI,Индекс продовольственных цен ФАО,74.1,level
+1995-05-01,world,MEAT,Мясо,84.1,level
+1995-05-01,world,DAIRY,Молочная продукция,61.2,level
+1995-05-01,world,CEREALS,Зерновые,64.9,level
+1995-05-01,world,OILS,Растительные масла,76.79,level
+1995-05-01,world,SUGAR,Сахар,83.7,level
+1995-06-01,world,FFPI,Индекс продовольственных цен ФАО,75.3,level
+1995-06-01,world,MEAT,Мясо,81.7,level
+1995-06-01,world,DAIRY,Молочная продукция,61.2,level
+1995-06-01,world,CEREALS,Зерновые,69.1,level
+1995-06-01,world,OILS,Растительные масла,80.33,level
+1995-06-01,world,SUGAR,Сахар,86.8,level
+1995-07-01,world,FFPI,Индекс продовольственных цен ФАО,79.6,level
+1995-07-01,world,MEAT,Мясо,87.8,level
+1995-07-01,world,DAIRY,Молочная продукция,64.6,level
+1995-07-01,world,CEREALS,Зерновые,74.0,level
+1995-07-01,world,OILS,Растительные масла,83.96,level
+1995-07-01,world,SUGAR,Сахар,84.1,level
+1995-08-01,world,FFPI,Индекс продовольственных цен ФАО,78.1,level
+1995-08-01,world,MEAT,Мясо,87.4,level
+1995-08-01,world,DAIRY,Молочная продукция,64.3,level
+1995-08-01,world,CEREALS,Зерновые,72.6,level
+1995-08-01,world,OILS,Растительные масла,79.95,level
+1995-08-01,world,SUGAR,Сахар,80.3,level
+1995-09-01,world,FFPI,Индекс продовольственных цен ФАО,78.5,level
+1995-09-01,world,MEAT,Мясо,89.0,level
+1995-09-01,world,DAIRY,Молочная продукция,64.3,level
+1995-09-01,world,CEREALS,Зерновые,75.9,level
+1995-09-01,world,OILS,Растительные масла,76.28,level
+1995-09-01,world,SUGAR,Сахар,72.3,level
+1995-10-01,world,FFPI,Индекс продовольственных цен ФАО,80.5,level
+1995-10-01,world,MEAT,Мясо,89.2,level
+1995-10-01,world,DAIRY,Молочная продукция,64.8,level
+1995-10-01,world,CEREALS,Зерновые,80.2,level
+1995-10-01,world,OILS,Растительные масла,79.95,level
+1995-10-01,world,SUGAR,Сахар,73.3,level
+1995-11-01,world,FFPI,Индекс продовольственных цен ФАО,80.0,level
+1995-11-01,world,MEAT,Мясо,87.9,level
+1995-11-01,world,DAIRY,Молочная продукция,64.8,level
+1995-11-01,world,CEREALS,Зерновые,80.5,level
+1995-11-01,world,OILS,Растительные масла,78.99,level
+1995-11-01,world,SUGAR,Сахар,74.1,level
+1995-12-01,world,FFPI,Индекс продовольственных цен ФАО,78.2,level
+1995-12-01,world,MEAT,Мясо,81.8,level
+1995-12-01,world,DAIRY,Молочная продукция,64.4,level
+1995-12-01,world,CEREALS,Зерновые,82.7,level
+1995-12-01,world,OILS,Растительные масла,75.58,level
+1995-12-01,world,SUGAR,Сахар,76.2,level
+1996-01-01,world,FFPI,Индекс продовольственных цен ФАО,77.1,level
+1996-01-01,world,MEAT,Мясо,80.3,level
+1996-01-01,world,DAIRY,Молочная продукция,64.3,level
+1996-01-01,world,CEREALS,Зерновые,83.3,level
+1996-01-01,world,OILS,Растительные масла,70.75,level
+1996-01-01,world,SUGAR,Сахар,77.5,level
+1996-02-01,world,FFPI,Индекс продовольственных цен ФАО,77.6,level
+1996-02-01,world,MEAT,Мясо,80.3,level
+1996-02-01,world,DAIRY,Молочная продукция,64.2,level
+1996-02-01,world,CEREALS,Зерновые,85.7,level
+1996-02-01,world,OILS,Растительные масла,68.63,level
+1996-02-01,world,SUGAR,Сахар,79.3,level
+1996-03-01,world,FFPI,Индекс продовольственных цен ФАО,78.7,level
+1996-03-01,world,MEAT,Мясо,83.2,level
+1996-03-01,world,DAIRY,Молочная продукция,63.0,level
+1996-03-01,world,CEREALS,Зерновые,86.9,level
+1996-03-01,world,OILS,Растительные масла,68.17,level
+1996-03-01,world,SUGAR,Сахар,79.9,level
+1996-04-01,world,FFPI,Индекс продовольственных цен ФАО,80.9,level
+1996-04-01,world,MEAT,Мясо,81.2,level
+1996-04-01,world,DAIRY,Молочная продукция,62.7,level
+1996-04-01,world,CEREALS,Зерновые,95.3,level
+1996-04-01,world,OILS,Растительные масла,73.56,level
+1996-04-01,world,SUGAR,Сахар,74.1,level
+1996-05-01,world,FFPI,Индекс продовольственных цен ФАО,82.5,level
+1996-05-01,world,MEAT,Мясо,83.6,level
+1996-05-01,world,DAIRY,Молочная продукция,61.0,level
+1996-05-01,world,CEREALS,Зерновые,100.0,level
+1996-05-01,world,OILS,Растительные масла,73.37,level
+1996-05-01,world,SUGAR,Сахар,70.5,level
+1996-06-01,world,FFPI,Индекс продовольственных цен ФАО,80.7,level
+1996-06-01,world,MEAT,Мясо,84.1,level
+1996-06-01,world,DAIRY,Молочная продукция,61.1,level
+1996-06-01,world,CEREALS,Зерновые,94.3,level
+1996-06-01,world,OILS,Растительные масла,68.85,level
+1996-06-01,world,SUGAR,Сахар,75.3,level
+1996-07-01,world,FFPI,Индекс продовольственных цен ФАО,80.5,level
+1996-07-01,world,MEAT,Мясо,87.1,level
+1996-07-01,world,DAIRY,Молочная продукция,61.3,level
+1996-07-01,world,CEREALS,Зерновые,91.1,level
+1996-07-01,world,OILS,Растительные масла,66.07,level
+1996-07-01,world,SUGAR,Сахар,79.3,level
+1996-08-01,world,FFPI,Индекс продовольственных цен ФАО,80.1,level
+1996-08-01,world,MEAT,Мясо,89.7,level
+1996-08-01,world,DAIRY,Молочная продукция,60.7,level
+1996-08-01,world,CEREALS,Зерновые,85.8,level
+1996-08-01,world,OILS,Растительные масла,69.1,level
+1996-08-01,world,SUGAR,Сахар,76.6,level
+1996-09-01,world,FFPI,Индекс продовольственных цен ФАО,77.1,level
+1996-09-01,world,MEAT,Мясо,89.3,level
+1996-09-01,world,DAIRY,Молочная продукция,60.1,level
+1996-09-01,world,CEREALS,Зерновые,75.3,level
+1996-09-01,world,OILS,Растительные масла,71.47,level
+1996-09-01,world,SUGAR,Сахар,73.8,level
+1996-10-01,world,FFPI,Индекс продовольственных цен ФАО,74.4,level
+1996-10-01,world,MEAT,Мясо,86.6,level
+1996-10-01,world,DAIRY,Молочная продукция,61.0,level
+1996-10-01,world,CEREALS,Зерновые,71.1,level
+1996-10-01,world,OILS,Растительные масла,69.08,level
+1996-10-01,world,SUGAR,Сахар,68.8,level
+1996-11-01,world,FFPI,Индекс продовольственных цен ФАО,72.7,level
+1996-11-01,world,MEAT,Мясо,85.4,level
+1996-11-01,world,DAIRY,Молочная продукция,59.9,level
+1996-11-01,world,CEREALS,Зерновые,67.4,level
+1996-11-01,world,OILS,Растительные масла,70.01,level
+1996-11-01,world,SUGAR,Сахар,66.3,level
+1996-12-01,world,FFPI,Индекс продовольственных цен ФАО,71.5,level
+1996-12-01,world,MEAT,Мясо,81.5,level
+1996-12-01,world,DAIRY,Молочная продукция,60.2,level
+1996-12-01,world,CEREALS,Зерновые,67.6,level
+1996-12-01,world,OILS,Растительные масла,70.17,level
+1996-12-01,world,SUGAR,Сахар,66.5,level
+1997-01-01,world,FFPI,Индекс продовольственных цен ФАО,71.0,level
+1997-01-01,world,MEAT,Мясо,79.1,level
+1997-01-01,world,DAIRY,Молочная продукция,60.3,level
+1997-01-01,world,CEREALS,Зерновые,68.1,level
+1997-01-01,world,OILS,Растительные масла,70.76,level
+1997-01-01,world,SUGAR,Сахар,66.2,level
+1997-02-01,world,FFPI,Индекс продовольственных цен ФАО,71.2,level
+1997-02-01,world,MEAT,Мясо,79.4,level
+1997-02-01,world,DAIRY,Молочная продукция,59.5,level
+1997-02-01,world,CEREALS,Зерновые,68.4,level
+1997-02-01,world,OILS,Растительные масла,71.49,level
+1997-02-01,world,SUGAR,Сахар,66.9,level
+1997-03-01,world,FFPI,Индекс продовольственных цен ФАО,73.0,level
+1997-03-01,world,MEAT,Мясо,83.1,level
+1997-03-01,world,DAIRY,Молочная продукция,59.3,level
+1997-03-01,world,CEREALS,Зерновые,70.6,level
+1997-03-01,world,OILS,Растительные масла,70.32,level
+1997-03-01,world,SUGAR,Сахар,68.8,level
+1997-04-01,world,FFPI,Индекс продовольственных цен ФАО,73.5,level
+1997-04-01,world,MEAT,Мясо,83.9,level
+1997-04-01,world,DAIRY,Молочная продукция,59.1,level
+1997-04-01,world,CEREALS,Зерновые,70.8,level
+1997-04-01,world,OILS,Растительные масла,71.11,level
+1997-04-01,world,SUGAR,Сахар,69.9,level
+1997-05-01,world,FFPI,Индекс продовольственных цен ФАО,72.9,level
+1997-05-01,world,MEAT,Мясо,83.8,level
+1997-05-01,world,DAIRY,Молочная продукция,58.8,level
+1997-05-01,world,CEREALS,Зерновые,68.8,level
+1997-05-01,world,OILS,Растительные масла,71.65,level
+1997-05-01,world,SUGAR,Сахар,68.9,level
+1997-06-01,world,FFPI,Индекс продовольственных цен ФАО,70.3,level
+1997-06-01,world,MEAT,Мясо,80.4,level
+1997-06-01,world,DAIRY,Молочная продукция,58.6,level
+1997-06-01,world,CEREALS,Зерновые,65.2,level
+1997-06-01,world,OILS,Растительные масла,68.96,level
+1997-06-01,world,SUGAR,Сахар,70.7,level
+1997-07-01,world,FFPI,Индекс продовольственных цен ФАО,68.6,level
+1997-07-01,world,MEAT,Мясо,79.7,level
+1997-07-01,world,DAIRY,Молочная продукция,58.1,level
+1997-07-01,world,CEREALS,Зерновые,62.4,level
+1997-07-01,world,OILS,Растительные масла,65.53,level
+1997-07-01,world,SUGAR,Сахар,69.4,level
+1997-08-01,world,FFPI,Индекс продовольственных цен ФАО,70.0,level
+1997-08-01,world,MEAT,Мясо,80.6,level
+1997-08-01,world,DAIRY,Молочная продукция,57.8,level
+1997-08-01,world,CEREALS,Зерновые,65.7,level
+1997-08-01,world,OILS,Растительные масла,65.4,level
+1997-08-01,world,SUGAR,Сахар,72.4,level
+1997-09-01,world,FFPI,Индекс продовольственных цен ФАО,70.1,level
+1997-09-01,world,MEAT,Мясо,80.2,level
+1997-09-01,world,DAIRY,Молочная продукция,59.0,level
+1997-09-01,world,CEREALS,Зерновые,65.1,level
+1997-09-01,world,OILS,Растительные масла,67.96,level
+1997-09-01,world,SUGAR,Сахар,70.1,level
+1997-10-01,world,FFPI,Индекс продовольственных цен ФАО,69.9,level
+1997-10-01,world,MEAT,Мясо,75.8,level
+1997-10-01,world,DAIRY,Молочная продукция,60.8,level
+1997-10-01,world,CEREALS,Зерновые,65.6,level
+1997-10-01,world,OILS,Растительные масла,72.78,level
+1997-10-01,world,SUGAR,Сахар,70.6,level
+1997-11-01,world,FFPI,Индекс продовольственных цен ФАО,70.5,level
+1997-11-01,world,MEAT,Мясо,76.0,level
+1997-11-01,world,DAIRY,Молочная продукция,61.0,level
+1997-11-01,world,CEREALS,Зерновые,64.2,level
+1997-11-01,world,OILS,Растительные масла,76.71,level
+1997-11-01,world,SUGAR,Сахар,74.3,level
+1997-12-01,world,FFPI,Индекс продовольственных цен ФАО,68.1,level
+1997-12-01,world,MEAT,Мясо,69.8,level
+1997-12-01,world,DAIRY,Молочная продукция,61.0,level
+1997-12-01,world,CEREALS,Зерновые,63.4,level
+1997-12-01,world,OILS,Растительные масла,75.55,level
+1997-12-01,world,SUGAR,Сахар,76.3,level
+1998-01-01,world,FFPI,Индекс продовольственных цен ФАО,67.5,level
+1998-01-01,world,MEAT,Мясо,67.7,level
+1998-01-01,world,DAIRY,Молочная продукция,60.9,level
+1998-01-01,world,CEREALS,Зерновые,62.7,level
+1998-01-01,world,OILS,Растительные масла,79.26,level
+1998-01-01,world,SUGAR,Сахар,71.5,level
+1998-02-01,world,FFPI,Индекс продовольственных цен ФАО,67.7,level
+1998-02-01,world,MEAT,Мясо,68.7,level
+1998-02-01,world,DAIRY,Молочная продукция,59.7,level
+1998-02-01,world,CEREALS,Зерновые,62.7,level
+1998-02-01,world,OILS,Растительные масла,81.88,level
+1998-02-01,world,SUGAR,Сахар,66.3,level
+1998-03-01,world,FFPI,Индекс продовольственных цен ФАО,67.6,level
+1998-03-01,world,MEAT,Мясо,68.4,level
+1998-03-01,world,DAIRY,Молочная продукция,57.8,level
+1998-03-01,world,CEREALS,Зерновые,63.2,level
+1998-03-01,world,OILS,Растительные масла,84.68,level
+1998-03-01,world,SUGAR,Сахар,60.9,level
+1998-04-01,world,FFPI,Индекс продовольственных цен ФАО,67.0,level
+1998-04-01,world,MEAT,Мясо,68.4,level
+1998-04-01,world,DAIRY,Молочная продукция,57.6,level
+1998-04-01,world,CEREALS,Зерновые,60.8,level
+1998-04-01,world,OILS,Растительные масла,86.01,level
+1998-04-01,world,SUGAR,Сахар,60.0,level
+1998-05-01,world,FFPI,Индекс продовольственных цен ФАО,66.6,level
+1998-05-01,world,MEAT,Мясо,66.8,level
+1998-05-01,world,DAIRY,Молочная продукция,56.5,level
+1998-05-01,world,CEREALS,Зерновые,60.2,level
+1998-05-01,world,OILS,Растительные масла,89.97,level
+1998-05-01,world,SUGAR,Сахар,57.1,level
+1998-06-01,world,FFPI,Индекс продовольственных цен ФАО,64.4,level
+1998-06-01,world,MEAT,Мясо,66.7,level
+1998-06-01,world,DAIRY,Молочная продукция,55.6,level
+1998-06-01,world,CEREALS,Зерновые,59.0,level
+1998-06-01,world,OILS,Растительные масла,82.76,level
+1998-06-01,world,SUGAR,Сахар,50.1,level
+1998-07-01,world,FFPI,Индекс продовольственных цен ФАО,64.4,level
+1998-07-01,world,MEAT,Мясо,67.0,level
+1998-07-01,world,DAIRY,Молочная продукция,55.3,level
+1998-07-01,world,CEREALS,Зерновые,57.5,level
+1998-07-01,world,OILS,Растительные масла,83.56,level
+1998-07-01,world,SUGAR,Сахар,53.5,level
+1998-08-01,world,FFPI,Индекс продовольственных цен ФАО,62.6,level
+1998-08-01,world,MEAT,Мясо,64.8,level
+1998-08-01,world,DAIRY,Молочная продукция,55.4,level
+1998-08-01,world,CEREALS,Зерновые,54.1,level
+1998-08-01,world,OILS,Растительные масла,83.17,level
+1998-08-01,world,SUGAR,Сахар,52.5,level
+1998-09-01,world,FFPI,Индекс продовольственных цен ФАО,62.1,level
+1998-09-01,world,MEAT,Мясо,65.1,level
+1998-09-01,world,DAIRY,Молочная продукция,53.9,level
+1998-09-01,world,CEREALS,Зерновые,53.9,level
+1998-09-01,world,OILS,Растительные масла,84.56,level
+1998-09-01,world,SUGAR,Сахар,44.7,level
+1998-10-01,world,FFPI,Индекс продовольственных цен ФАО,62.9,level
+1998-10-01,world,MEAT,Мясо,64.7,level
+1998-10-01,world,DAIRY,Молочная продукция,52.1,level
+1998-10-01,world,CEREALS,Зерновые,57.7,level
+1998-10-01,world,OILS,Растительные масла,84.44,level
+1998-10-01,world,SUGAR,Сахар,46.2,level
+1998-11-01,world,FFPI,Индекс продовольственных цен ФАО,62.8,level
+1998-11-01,world,MEAT,Мясо,63.2,level
+1998-11-01,world,DAIRY,Молочная продукция,52.1,level
+1998-11-01,world,CEREALS,Зерновые,58.2,level
+1998-11-01,world,OILS,Растительные масла,84.31,level
+1998-11-01,world,SUGAR,Сахар,49.9,level
+1998-12-01,world,FFPI,Индекс продовольственных цен ФАО,62.2,level
+1998-12-01,world,MEAT,Мясо,63.8,level
+1998-12-01,world,DAIRY,Молочная продукция,52.3,level
+1998-12-01,world,CEREALS,Зерновые,56.8,level
+1998-12-01,world,OILS,Растительные масла,82.04,level
+1998-12-01,world,SUGAR,Сахар,50.0,level
+1999-01-01,world,FFPI,Индекс продовольственных цен ФАО,61.2,level
+1999-01-01,world,MEAT,Мясо,62.7,level
+1999-01-01,world,DAIRY,Молочная продукция,52.4,level
+1999-01-01,world,CEREALS,Зерновые,57.1,level
+1999-01-01,world,OILS,Растительные масла,77.31,level
+1999-01-01,world,SUGAR,Сахар,50.2,level
+1999-02-01,world,FFPI,Индекс продовольственных цен ФАО,58.6,level
+1999-02-01,world,MEAT,Мясо,63.3,level
+1999-02-01,world,DAIRY,Молочная продукция,51.5,level
+1999-02-01,world,CEREALS,Зерновые,54.9,level
+1999-02-01,world,OILS,Растительные масла,68.4,level
+1999-02-01,world,SUGAR,Сахар,42.2,level
+1999-03-01,world,FFPI,Индекс продовольственных цен ФАО,57.2,level
+1999-03-01,world,MEAT,Мясо,63.4,level
+1999-03-01,world,DAIRY,Молочная продукция,50.7,level
+1999-03-01,world,CEREALS,Зерновые,55.2,level
+1999-03-01,world,OILS,Растительные масла,62.31,level
+1999-03-01,world,SUGAR,Сахар,37.3,level
+1999-04-01,world,FFPI,Индекс продовольственных цен ФАО,56.0,level
+1999-04-01,world,MEAT,Мясо,61.7,level
+1999-04-01,world,DAIRY,Молочная продукция,48.0,level
+1999-04-01,world,CEREALS,Зерновые,53.7,level
+1999-04-01,world,OILS,Растительные масла,64.88,level
+1999-04-01,world,SUGAR,Сахар,33.5,level
+1999-05-01,world,FFPI,Индекс продовольственных цен ФАО,55.6,level
+1999-05-01,world,MEAT,Мясо,62.2,level
+1999-05-01,world,DAIRY,Молочная продукция,47.4,level
+1999-05-01,world,CEREALS,Зерновые,52.8,level
+1999-05-01,world,OILS,Растительные масла,62.26,level
+1999-05-01,world,SUGAR,Сахар,35.6,level
+1999-06-01,world,FFPI,Индекс продовольственных цен ФАО,54.8,level
+1999-06-01,world,MEAT,Мясо,62.7,level
+1999-06-01,world,DAIRY,Молочная продукция,47.1,level
+1999-06-01,world,CEREALS,Зерновые,53.6,level
+1999-06-01,world,OILS,Растительные масла,54.79,level
+1999-06-01,world,SUGAR,Сахар,37.3,level
+1999-07-01,world,FFPI,Индекс продовольственных цен ФАО,52.8,level
+1999-07-01,world,MEAT,Мясо,62.9,level
+1999-07-01,world,DAIRY,Молочная продукция,46.4,level
+1999-07-01,world,CEREALS,Зерновые,51.4,level
+1999-07-01,world,OILS,Растительные масла,48.63,level
+1999-07-01,world,SUGAR,Сахар,33.3,level
+1999-08-01,world,FFPI,Индекс продовольственных цен ФАО,54.6,level
+1999-08-01,world,MEAT,Мясо,64.8,level
+1999-08-01,world,DAIRY,Молочная продукция,46.4,level
+1999-08-01,world,CEREALS,Зерновые,53.0,level
+1999-08-01,world,OILS,Растительные масла,52.29,level
+1999-08-01,world,SUGAR,Сахар,35.6,level
+1999-09-01,world,FFPI,Индекс продовольственных цен ФАО,54.8,level
+1999-09-01,world,MEAT,Мясо,63.4,level
+1999-09-01,world,DAIRY,Молочная продукция,46.8,level
+1999-09-01,world,CEREALS,Зерновые,52.6,level
+1999-09-01,world,OILS,Растительные масла,54.07,level
+1999-09-01,world,SUGAR,Сахар,41.3,level
+1999-10-01,world,FFPI,Индекс продовольственных цен ФАО,53.5,level
+1999-10-01,world,MEAT,Мясо,60.7,level
+1999-10-01,world,DAIRY,Молочная продукция,47.0,level
+1999-10-01,world,CEREALS,Зерновые,51.5,level
+1999-10-01,world,OILS,Растительные масла,52.96,level
+1999-10-01,world,SUGAR,Сахар,41.9,level
+1999-11-01,world,FFPI,Индекс продовольственных цен ФАО,53.5,level
+1999-11-01,world,MEAT,Мясо,61.8,level
+1999-11-01,world,DAIRY,Молочная продукция,47.5,level
+1999-11-01,world,CEREALS,Зерновые,51.3,level
+1999-11-01,world,OILS,Растительные масла,51.32,level
+1999-11-01,world,SUGAR,Сахар,40.2,level
+1999-12-01,world,FFPI,Индекс продовольственных цен ФАО,52.1,level
+1999-12-01,world,MEAT,Мясо,59.5,level
+1999-12-01,world,DAIRY,Молочная продукция,48.5,level
+1999-12-01,world,CEREALS,Зерновые,50.4,level
+1999-12-01,world,OILS,Растительные масла,49.49,level
+1999-12-01,world,SUGAR,Сахар,37.2,level
+2000-01-01,world,FFPI,Индекс продовольственных цен ФАО,52.8,level
+2000-01-01,world,MEAT,Мясо,60.6,level
+2000-01-01,world,DAIRY,Молочная продукция,50.2,level
+2000-01-01,world,CEREALS,Зерновые,52.1,level
+2000-01-01,world,OILS,Растительные масла,48.58,level
+2000-01-01,world,SUGAR,Сахар,34.7,level
+2000-02-01,world,FFPI,Индекс продовольственных цен ФАО,52.5,level
+2000-02-01,world,MEAT,Мясо,60.9,level
+2000-02-01,world,DAIRY,Молочная продукция,50.4,level
+2000-02-01,world,CEREALS,Зерновые,52.2,level
+2000-02-01,world,OILS,Растительные масла,46.37,level
+2000-02-01,world,SUGAR,Сахар,32.7,level
+2000-03-01,world,FFPI,Индекс продовольственных цен ФАО,53.1,level
+2000-03-01,world,MEAT,Мясо,62.8,level
+2000-03-01,world,DAIRY,Молочная продукция,50.1,level
+2000-03-01,world,CEREALS,Зерновые,51.7,level
+2000-03-01,world,OILS,Растительные масла,47.82,level
+2000-03-01,world,SUGAR,Сахар,31.8,level
+2000-04-01,world,FFPI,Индекс продовольственных цен ФАО,53.7,level
+2000-04-01,world,MEAT,Мясо,62.3,level
+2000-04-01,world,DAIRY,Молочная продукция,50.4,level
+2000-04-01,world,CEREALS,Зерновые,51.8,level
+2000-04-01,world,OILS,Растительные масла,49.5,level
+2000-04-01,world,SUGAR,Сахар,37.3,level
+2000-05-01,world,FFPI,Индекс продовольственных цен ФАО,54.0,level
+2000-05-01,world,MEAT,Мясо,63.3,level
+2000-05-01,world,DAIRY,Молочная продукция,50.9,level
+2000-05-01,world,CEREALS,Зерновые,52.8,level
+2000-05-01,world,OILS,Растительные масла,44.49,level
+2000-05-01,world,SUGAR,Сахар,42.8,level
+2000-06-01,world,FFPI,Индекс продовольственных цен ФАО,54.2,level
+2000-06-01,world,MEAT,Мясо,63.0,level
+2000-06-01,world,DAIRY,Молочная продукция,53.8,level
+2000-06-01,world,CEREALS,Зерновые,51.4,level
+2000-06-01,world,OILS,Растительные масла,42.93,level
+2000-06-01,world,SUGAR,Сахар,51.8,level
+2000-07-01,world,FFPI,Индекс продовольственных цен ФАО,54.4,level
+2000-07-01,world,MEAT,Мясо,62.7,level
+2000-07-01,world,DAIRY,Молочная продукция,55.6,level
+2000-07-01,world,CEREALS,Зерновые,49.8,level
+2000-07-01,world,OILS,Растительные масла,42.67,level
+2000-07-01,world,SUGAR,Сахар,59.6,level
+2000-08-01,world,FFPI,Индекс продовольственных цен ФАО,53.5,level
+2000-08-01,world,MEAT,Мясо,60.3,level
+2000-08-01,world,DAIRY,Молочная продукция,56.0,level
+2000-08-01,world,CEREALS,Зерновые,48.6,level
+2000-08-01,world,OILS,Растительные масла,41.7,level
+2000-08-01,world,SUGAR,Сахар,64.6,level
+2000-09-01,world,FFPI,Индекс продовольственных цен ФАО,52.9,level
+2000-09-01,world,MEAT,Мясо,59.4,level
+2000-09-01,world,DAIRY,Молочная продукция,57.4,level
+2000-09-01,world,CEREALS,Зерновые,49.4,level
+2000-09-01,world,OILS,Растительные масла,38.47,level
+2000-09-01,world,SUGAR,Сахар,62.1,level
+2000-10-01,world,FFPI,Индекс продовольственных цен ФАО,53.7,level
+2000-10-01,world,MEAT,Мясо,59.5,level
+2000-10-01,world,DAIRY,Молочная продукция,59.1,level
+2000-10-01,world,CEREALS,Зерновые,51.2,level
+2000-10-01,world,OILS,Растительные масла,36.38,level
+2000-10-01,world,SUGAR,Сахар,66.5,level
+2000-11-01,world,FFPI,Индекс продовольственных цен ФАО,54.2,level
+2000-11-01,world,MEAT,Мясо,60.4,level
+2000-11-01,world,DAIRY,Молочная продукция,59.6,level
+2000-11-01,world,CEREALS,Зерновые,52.1,level
+2000-11-01,world,OILS,Растительные масла,37.67,level
+2000-11-01,world,SUGAR,Сахар,61.5,level
+2000-12-01,world,FFPI,Индекс продовольственных цен ФАО,54.8,level
+2000-12-01,world,MEAT,Мясо,60.4,level
+2000-12-01,world,DAIRY,Молочная продукция,60.1,level
+2000-12-01,world,CEREALS,Зерновые,53.7,level
+2000-12-01,world,OILS,Растительные масла,38.14,level
+2000-12-01,world,SUGAR,Сахар,62.0,level
+2001-01-01,world,FFPI,Индекс продовольственных цен ФАО,54.1,level
+2001-01-01,world,MEAT,Мясо,58.3,level
+2001-01-01,world,DAIRY,Молочная продукция,59.7,level
+2001-01-01,world,CEREALS,Зерновые,53.9,level
+2001-01-01,world,OILS,Растительные масла,37.27,level
+2001-01-01,world,SUGAR,Сахар,63.9,level
+2001-02-01,world,FFPI,Индекс продовольственных цен ФАО,54.6,level
+2001-02-01,world,MEAT,Мясо,62.0,level
+2001-02-01,world,DAIRY,Молочная продукция,59.5,level
+2001-02-01,world,CEREALS,Зерновые,53.0,level
+2001-02-01,world,OILS,Растительные масла,35.83,level
+2001-02-01,world,SUGAR,Сахар,61.1,level
+2001-03-01,world,FFPI,Индекс продовольственных цен ФАО,55.5,level
+2001-03-01,world,MEAT,Мясо,64.9,level
+2001-03-01,world,DAIRY,Молочная продукция,59.7,level
+2001-03-01,world,CEREALS,Зерновые,52.2,level
+2001-03-01,world,OILS,Растительные масла,38.2,level
+2001-03-01,world,SUGAR,Сахар,57.4,level
+2001-04-01,world,FFPI,Индекс продовольственных цен ФАО,55.0,level
+2001-04-01,world,MEAT,Мясо,65.3,level
+2001-04-01,world,DAIRY,Молочная продукция,59.5,level
+2001-04-01,world,CEREALS,Зерновые,51.0,level
+2001-04-01,world,OILS,Растительные масла,38.03,level
+2001-04-01,world,SUGAR,Сахар,54.1,level
+2001-05-01,world,FFPI,Индекс продовольственных цен ФАО,55.8,level
+2001-05-01,world,MEAT,Мясо,65.6,level
+2001-05-01,world,DAIRY,Молочная продукция,62.0,level
+2001-05-01,world,CEREALS,Зерновые,51.7,level
+2001-05-01,world,OILS,Растительные масла,36.57,level
+2001-05-01,world,SUGAR,Сахар,59.3,level
+2001-06-01,world,FFPI,Индекс продовольственных цен ФАО,55.2,level
+2001-06-01,world,MEAT,Мясо,63.8,level
+2001-06-01,world,DAIRY,Молочная продукция,62.4,level
+2001-06-01,world,CEREALS,Зерновые,51.0,level
+2001-06-01,world,OILS,Растительные масла,38.85,level
+2001-06-01,world,SUGAR,Сахар,56.0,level
+2001-07-01,world,FFPI,Индекс продовольственных цен ФАО,56.9,level
+2001-07-01,world,MEAT,Мясо,64.1,level
+2001-07-01,world,DAIRY,Молочная продукция,62.9,level
+2001-07-01,world,CEREALS,Зерновые,51.7,level
+2001-07-01,world,OILS,Растительные масла,47.44,level
+2001-07-01,world,SUGAR,Сахар,54.4,level
+2001-08-01,world,FFPI,Индекс продовольственных цен ФАО,57.0,level
+2001-08-01,world,MEAT,Мясо,64.4,level
+2001-08-01,world,DAIRY,Молочная продукция,62.5,level
+2001-08-01,world,CEREALS,Зерновые,51.6,level
+2001-08-01,world,OILS,Растительные масла,50.02,level
+2001-08-01,world,SUGAR,Сахар,50.2,level
+2001-09-01,world,FFPI,Индекс продовольственных цен ФАО,55.8,level
+2001-09-01,world,MEAT,Мясо,64.3,level
+2001-09-01,world,DAIRY,Молочная продукция,62.1,level
+2001-09-01,world,CEREALS,Зерновые,51.2,level
+2001-09-01,world,OILS,Растительные масла,45.4,level
+2001-09-01,world,SUGAR,Сахар,47.3,level
+2001-10-01,world,FFPI,Индекс продовольственных цен ФАО,54.5,level
+2001-10-01,world,MEAT,Мясо,62.4,level
+2001-10-01,world,DAIRY,Молочная продукция,62.8,level
+2001-10-01,world,CEREALS,Зерновые,51.0,level
+2001-10-01,world,OILS,Растительные масла,43.3,level
+2001-10-01,world,SUGAR,Сахар,42.0,level
+2001-11-01,world,FFPI,Индекс продовольственных цен ФАО,55.1,level
+2001-11-01,world,MEAT,Мясо,60.6,level
+2001-11-01,world,DAIRY,Молочная продукция,60.6,level
+2001-11-01,world,CEREALS,Зерновые,51.9,level
+2001-11-01,world,OILS,Растительные масла,48.27,level
+2001-11-01,world,SUGAR,Сахар,47.5,level
+2001-12-01,world,FFPI,Индекс продовольственных цен ФАО,54.6,level
+2001-12-01,world,MEAT,Мясо,59.2,level
+2001-12-01,world,DAIRY,Молочная продукция,56.9,level
+2001-12-01,world,CEREALS,Зерновые,52.0,level
+2001-12-01,world,OILS,Растительные масла,50.61,level
+2001-12-01,world,SUGAR,Сахар,48.5,level
+2002-01-01,world,FFPI,Индекс продовольственных цен ФАО,53.8,level
+2002-01-01,world,MEAT,Мясо,59.4,level
+2002-01-01,world,DAIRY,Молочная продукция,53.0,level
+2002-01-01,world,CEREALS,Зерновые,51.7,level
+2002-01-01,world,OILS,Растительные масла,49.26,level
+2002-01-01,world,SUGAR,Сахар,48.2,level
+2002-02-01,world,FFPI,Индекс продовольственных цен ФАО,52.0,level
+2002-02-01,world,MEAT,Мясо,57.6,level
+2002-02-01,world,DAIRY,Молочная продукция,52.8,level
+2002-02-01,world,CEREALS,Зерновые,50.4,level
+2002-02-01,world,OILS,Растительные масла,47.79,level
+2002-02-01,world,SUGAR,Сахар,40.5,level
+2002-03-01,world,FFPI,Индекс продовольственных цен ФАО,52.3,level
+2002-03-01,world,MEAT,Мясо,60.1,level
+2002-03-01,world,DAIRY,Молочная продукция,50.7,level
+2002-03-01,world,CEREALS,Зерновые,49.6,level
+2002-03-01,world,OILS,Растительные масла,47.62,level
+2002-03-01,world,SUGAR,Сахар,41.4,level
+2002-04-01,world,FFPI,Индекс продовольственных цен ФАО,51.4,level
+2002-04-01,world,MEAT,Мясо,57.2,level
+2002-04-01,world,DAIRY,Молочная продукция,48.9,level
+2002-04-01,world,CEREALS,Зерновые,49.3,level
+2002-04-01,world,OILS,Растительные масла,48.97,level
+2002-04-01,world,SUGAR,Сахар,42.6,level
+2002-05-01,world,FFPI,Индекс продовольственных цен ФАО,50.8,level
+2002-05-01,world,MEAT,Мясо,56.2,level
+2002-05-01,world,DAIRY,Молочная продукция,44.8,level
+2002-05-01,world,CEREALS,Зерновые,50.2,level
+2002-05-01,world,OILS,Растительные масла,51.64,level
+2002-05-01,world,SUGAR,Сахар,37.6,level
+2002-06-01,world,FFPI,Индекс продовольственных цен ФАО,51.6,level
+2002-06-01,world,MEAT,Мясо,56.3,level
+2002-06-01,world,DAIRY,Молочная продукция,42.9,level
+2002-06-01,world,CEREALS,Зерновые,52.0,level
+2002-06-01,world,OILS,Растительные масла,55.8,level
+2002-06-01,world,SUGAR,Сахар,35.6,level
+2002-07-01,world,FFPI,Индекс продовольственных цен ФАО,52.3,level
+2002-07-01,world,MEAT,Мясо,55.9,level
+2002-07-01,world,DAIRY,Молочная продукция,40.6,level
+2002-07-01,world,CEREALS,Зерновые,54.6,level
+2002-07-01,world,OILS,Растительные масла,56.15,level
+2002-07-01,world,SUGAR,Сахар,39.5,level
+2002-08-01,world,FFPI,Индекс продовольственных цен ФАО,53.7,level
+2002-08-01,world,MEAT,Мясо,55.8,level
+2002-08-01,world,DAIRY,Молочная продукция,40.1,level
+2002-08-01,world,CEREALS,Зерновые,58.1,level
+2002-08-01,world,OILS,Растительные масла,59.65,level
+2002-08-01,world,SUGAR,Сахар,39.0,level
+2002-09-01,world,FFPI,Индекс продовольственных цен ФАО,55.1,level
+2002-09-01,world,MEAT,Мясо,55.1,level
+2002-09-01,world,DAIRY,Молочная продукция,41.6,level
+2002-09-01,world,CEREALS,Зерновые,63.8,level
+2002-09-01,world,OILS,Растительные масла,56.68,level
+2002-09-01,world,SUGAR,Сахар,43.1,level
+2002-10-01,world,FFPI,Индекс продовольственных цен ФАО,55.5,level
+2002-10-01,world,MEAT,Мясо,53.5,level
+2002-10-01,world,DAIRY,Молочная продукция,42.9,level
+2002-10-01,world,CEREALS,Зерновые,64.4,level
+2002-10-01,world,OILS,Растительные масла,58.76,level
+2002-10-01,world,SUGAR,Сахар,46.5,level
+2002-11-01,world,FFPI,Индекс продовольственных цен ФАО,56.6,level
+2002-11-01,world,MEAT,Мясо,53.9,level
+2002-11-01,world,DAIRY,Молочная продукция,45.5,level
+2002-11-01,world,CEREALS,Зерновые,63.0,level
+2002-11-01,world,OILS,Растительные масла,63.91,level
+2002-11-01,world,SUGAR,Сахар,48.5,level
+2002-12-01,world,FFPI,Индекс продовольственных цен ФАО,56.0,level
+2002-12-01,world,MEAT,Мясо,52.3,level
+2002-12-01,world,DAIRY,Молочная продукция,49.3,level
+2002-12-01,world,CEREALS,Зерновые,59.8,level
+2002-12-01,world,OILS,Растительные масла,65.51,level
+2002-12-01,world,SUGAR,Сахар,49.2,level
+2003-01-01,world,FFPI,Индекс продовольственных цен ФАО,56.2,level
+2003-01-01,world,MEAT,Мясо,53.9,level
+2003-01-01,world,DAIRY,Молочная продукция,51.3,level
+2003-01-01,world,CEREALS,Зерновые,58.0,level
+2003-01-01,world,OILS,Растительные масла,64.32,level
+2003-01-01,world,SUGAR,Сахар,50.7,level
+2003-02-01,world,FFPI,Индекс продовольственных цен ФАО,56.9,level
+2003-02-01,world,MEAT,Мясо,55.1,level
+2003-02-01,world,DAIRY,Молочная продукция,53.1,level
+2003-02-01,world,CEREALS,Зерновые,57.8,level
+2003-02-01,world,OILS,Растительные масла,62.35,level
+2003-02-01,world,SUGAR,Сахар,55.7,level
+2003-03-01,world,FFPI,Индекс продовольственных цен ФАО,55.9,level
+2003-03-01,world,MEAT,Мясо,55.7,level
+2003-03-01,world,DAIRY,Молочная продукция,53.7,level
+2003-03-01,world,CEREALS,Зерновые,56.5,level
+2003-03-01,world,OILS,Растительные масла,59.23,level
+2003-03-01,world,SUGAR,Сахар,50.9,level
+2003-04-01,world,FFPI,Индекс продовольственных цен ФАО,55.9,level
+2003-04-01,world,MEAT,Мясо,56.7,level
+2003-04-01,world,DAIRY,Молочная продукция,52.7,level
+2003-04-01,world,CEREALS,Зерновые,56.4,level
+2003-04-01,world,OILS,Растительные масла,59.57,level
+2003-04-01,world,SUGAR,Сахар,48.0,level
+2003-05-01,world,FFPI,Индекс продовольственных цен ФАО,56.7,level
+2003-05-01,world,MEAT,Мясо,57.4,level
+2003-05-01,world,DAIRY,Молочная продукция,52.6,level
+2003-05-01,world,CEREALS,Зерновые,58.2,level
+2003-05-01,world,OILS,Растительные масла,61.09,level
+2003-05-01,world,SUGAR,Сахар,44.4,level
+2003-06-01,world,FFPI,Индекс продовольственных цен ФАО,56.4,level
+2003-06-01,world,MEAT,Мясо,57.3,level
+2003-06-01,world,DAIRY,Молочная продукция,52.6,level
+2003-06-01,world,CEREALS,Зерновые,57.7,level
+2003-06-01,world,OILS,Растительные масла,61.96,level
+2003-06-01,world,SUGAR,Сахар,41.6,level
+2003-07-01,world,FFPI,Индекс продовольственных цен ФАО,57.1,level
+2003-07-01,world,MEAT,Мясо,61.5,level
+2003-07-01,world,DAIRY,Молочная продукция,53.2,level
+2003-07-01,world,CEREALS,Зерновые,56.5,level
+2003-07-01,world,OILS,Растительные масла,58.84,level
+2003-07-01,world,SUGAR,Сахар,42.3,level
+2003-08-01,world,FFPI,Индекс продовольственных цен ФАО,57.8,level
+2003-08-01,world,MEAT,Мясо,61.4,level
+2003-08-01,world,DAIRY,Молочная продукция,53.6,level
+2003-08-01,world,CEREALS,Зерновые,59.9,level
+2003-08-01,world,OILS,Растительные масла,57.09,level
+2003-08-01,world,SUGAR,Сахар,42.3,level
+2003-09-01,world,FFPI,Индекс продовольственных цен ФАО,59.0,level
+2003-09-01,world,MEAT,Мясо,63.7,level
+2003-09-01,world,DAIRY,Молочная продукция,55.2,level
+2003-09-01,world,CEREALS,Зерновые,60.5,level
+2003-09-01,world,OILS,Растительные масла,59.33,level
+2003-09-01,world,SUGAR,Сахар,37.0,level
+2003-10-01,world,FFPI,Индекс продовольственных цен ФАО,60.6,level
+2003-10-01,world,MEAT,Мясо,63.6,level
+2003-10-01,world,DAIRY,Молочная продукция,57.6,level
+2003-10-01,world,CEREALS,Зерновые,60.6,level
+2003-10-01,world,OILS,Растительные масла,67.39,level
+2003-10-01,world,SUGAR,Сахар,36.9,level
+2003-11-01,world,FFPI,Индекс продовольственных цен ФАО,62.0,level
+2003-11-01,world,MEAT,Мясо,62.9,level
+2003-11-01,world,DAIRY,Молочная продукция,58.6,level
+2003-11-01,world,CEREALS,Зерновые,64.8,level
+2003-11-01,world,OILS,Растительные масла,68.83,level
+2003-11-01,world,SUGAR,Сахар,37.6,level
+2003-12-01,world,FFPI,Индекс продовольственных цен ФАО,62.9,level
+2003-12-01,world,MEAT,Мясо,62.5,level
+2003-12-01,world,DAIRY,Молочная продукция,59.7,level
+2003-12-01,world,CEREALS,Зерновые,65.7,level
+2003-12-01,world,OILS,Растительные масла,71.56,level
+2003-12-01,world,SUGAR,Сахар,38.9,level
+2004-01-01,world,FFPI,Индекс продовольственных цен ФАО,64.7,level
+2004-01-01,world,MEAT,Мясо,67.2,level
+2004-01-01,world,DAIRY,Молочная продукция,60.9,level
+2004-01-01,world,CEREALS,Зерновые,66.9,level
+2004-01-01,world,OILS,Растительные масла,71.22,level
+2004-01-01,world,SUGAR,Сахар,35.9,level
+2004-02-01,world,FFPI,Индекс продовольственных цен ФАО,65.5,level
+2004-02-01,world,MEAT,Мясо,65.1,level
+2004-02-01,world,DAIRY,Молочная продукция,64.3,level
+2004-02-01,world,CEREALS,Зерновые,67.5,level
+2004-02-01,world,OILS,Растительные масла,76.06,level
+2004-02-01,world,SUGAR,Сахар,36.2,level
+2004-03-01,world,FFPI,Индекс продовольственных цен ФАО,67.1,level
+2004-03-01,world,MEAT,Мясо,67.6,level
+2004-03-01,world,DAIRY,Молочная продукция,65.2,level
+2004-03-01,world,CEREALS,Зерновые,68.5,level
+2004-03-01,world,OILS,Растительные масла,76.73,level
+2004-03-01,world,SUGAR,Сахар,40.0,level
+2004-04-01,world,FFPI,Индекс продовольственных цен ФАО,67.7,level
+2004-04-01,world,MEAT,Мясо,67.5,level
+2004-04-01,world,DAIRY,Молочная продукция,65.8,level
+2004-04-01,world,CEREALS,Зерновые,70.2,level
+2004-04-01,world,OILS,Растительные масла,76.45,level
+2004-04-01,world,SUGAR,Сахар,40.7,level
+2004-05-01,world,FFPI,Индекс продовольственных цен ФАО,66.8,level
+2004-05-01,world,MEAT,Мясо,67.0,level
+2004-05-01,world,DAIRY,Молочная продукция,67.8,level
+2004-05-01,world,CEREALS,Зерновые,68.8,level
+2004-05-01,world,OILS,Растительные масла,73.52,level
+2004-05-01,world,SUGAR,Сахар,39.2,level
+2004-06-01,world,FFPI,Индекс продовольственных цен ФАО,66.4,level
+2004-06-01,world,MEAT,Мясо,69.9,level
+2004-06-01,world,DAIRY,Молочная продукция,70.7,level
+2004-06-01,world,CEREALS,Зерновые,66.4,level
+2004-06-01,world,OILS,Растительные масла,66.06,level
+2004-06-01,world,SUGAR,Сахар,42.9,level
+2004-07-01,world,FFPI,Индекс продовольственных цен ФАО,65.8,level
+2004-07-01,world,MEAT,Мясо,71.6,level
+2004-07-01,world,DAIRY,Молочная продукция,72.6,level
+2004-07-01,world,CEREALS,Зерновые,60.7,level
+2004-07-01,world,OILS,Растительные масла,64.82,level
+2004-07-01,world,SUGAR,Сахар,49.0,level
+2004-08-01,world,FFPI,Индекс продовольственных цен ФАО,64.8,level
+2004-08-01,world,MEAT,Мясо,69.8,level
+2004-08-01,world,DAIRY,Молочная продукция,72.7,level
+2004-08-01,world,CEREALS,Зерновые,59.1,level
+2004-08-01,world,OILS,Растительные масла,65.44,level
+2004-08-01,world,SUGAR,Сахар,46.9,level
+2004-09-01,world,FFPI,Индекс продовольственных цен ФАО,65.4,level
+2004-09-01,world,MEAT,Мясо,70.2,level
+2004-09-01,world,DAIRY,Молочная продукция,73.3,level
+2004-09-01,world,CEREALS,Зерновые,60.0,level
+2004-09-01,world,OILS,Растительные масла,66.27,level
+2004-09-01,world,SUGAR,Сахар,47.6,level
+2004-10-01,world,FFPI,Индекс продовольственных цен ФАО,64.9,level
+2004-10-01,world,MEAT,Мясо,68.2,level
+2004-10-01,world,DAIRY,Молочная продукция,73.8,level
+2004-10-01,world,CEREALS,Зерновые,59.3,level
+2004-10-01,world,OILS,Растительные масла,65.8,level
+2004-10-01,world,SUGAR,Сахар,52.3,level
+2004-11-01,world,FFPI,Индекс продовольственных цен ФАО,65.7,level
+2004-11-01,world,MEAT,Мясо,69.2,level
+2004-11-01,world,DAIRY,Молочная продукция,75.1,level
+2004-11-01,world,CEREALS,Зерновые,60.0,level
+2004-11-01,world,OILS,Растительные масла,66.94,level
+2004-11-01,world,SUGAR,Сахар,50.5,level
+2004-12-01,world,FFPI,Индекс продовольственных цен ФАО,66.0,level
+2004-12-01,world,MEAT,Мясо,69.9,level
+2004-12-01,world,DAIRY,Молочная продукция,75.8,level
+2004-12-01,world,CEREALS,Зерновые,60.5,level
+2004-12-01,world,OILS,Растительные масла,66.02,level
+2004-12-01,world,SUGAR,Сахар,51.0,level
+2005-01-01,world,FFPI,Индекс продовольственных цен ФАО,65.8,level
+2005-01-01,world,MEAT,Мясо,69.9,level
+2005-01-01,world,DAIRY,Молочная продукция,76.2,level
+2005-01-01,world,CEREALS,Зерновые,60.5,level
+2005-01-01,world,OILS,Растительные масла,63.15,level
+2005-01-01,world,SUGAR,Сахар,54.0,level
+2005-02-01,world,FFPI,Индекс продовольственных цен ФАО,66.2,level
+2005-02-01,world,MEAT,Мясо,71.1,level
+2005-02-01,world,DAIRY,Молочная продукция,76.7,level
+2005-02-01,world,CEREALS,Зерновые,60.3,level
+2005-02-01,world,OILS,Растительные масла,62.27,level
+2005-02-01,world,SUGAR,Сахар,56.3,level
+2005-03-01,world,FFPI,Индекс продовольственных цен ФАО,67.5,level
+2005-03-01,world,MEAT,Мясо,71.7,level
+2005-03-01,world,DAIRY,Молочная продукция,77.0,level
+2005-03-01,world,CEREALS,Зерновые,61.5,level
+2005-03-01,world,OILS,Растительные масла,66.74,level
+2005-03-01,world,SUGAR,Сахар,55.0,level
+2005-04-01,world,FFPI,Индекс продовольственных цен ФАО,66.0,level
+2005-04-01,world,MEAT,Мясо,70.4,level
+2005-04-01,world,DAIRY,Молочная продукция,76.2,level
+2005-04-01,world,CEREALS,Зерновые,59.5,level
+2005-04-01,world,OILS,Растительные масла,65.07,level
+2005-04-01,world,SUGAR,Сахар,53.2,level
+2005-05-01,world,FFPI,Индекс продовольственных цен ФАО,66.5,level
+2005-05-01,world,MEAT,Мясо,72.6,level
+2005-05-01,world,DAIRY,Молочная продукция,76.5,level
+2005-05-01,world,CEREALS,Зерновые,59.4,level
+2005-05-01,world,OILS,Растительные масла,64.23,level
+2005-05-01,world,SUGAR,Сахар,53.1,level
+2005-06-01,world,FFPI,Индекс продовольственных цен ФАО,67.4,level
+2005-06-01,world,MEAT,Мясо,73.6,level
+2005-06-01,world,DAIRY,Молочная продукция,76.4,level
+2005-06-01,world,CEREALS,Зерновые,60.2,level
+2005-06-01,world,OILS,Растительные масла,64.64,level
+2005-06-01,world,SUGAR,Сахар,56.0,level
+2005-07-01,world,FFPI,Индекс продовольственных цен ФАО,67.7,level
+2005-07-01,world,MEAT,Мясо,72.6,level
+2005-07-01,world,DAIRY,Молочная продукция,77.1,level
+2005-07-01,world,CEREALS,Зерновые,61.2,level
+2005-07-01,world,OILS,Растительные масла,64.44,level
+2005-07-01,world,SUGAR,Сахар,59.7,level
+2005-08-01,world,FFPI,Индекс продовольственных цен ФАО,67.6,level
+2005-08-01,world,MEAT,Мясо,72.8,level
+2005-08-01,world,DAIRY,Молочная продукция,78.3,level
+2005-08-01,world,CEREALS,Зерновые,60.9,level
+2005-08-01,world,OILS,Растительные масла,62.51,level
+2005-08-01,world,SUGAR,Сахар,61.5,level
+2005-09-01,world,FFPI,Индекс продовольственных цен ФАО,68.6,level
+2005-09-01,world,MEAT,Мясо,73.9,level
+2005-09-01,world,DAIRY,Молочная продукция,78.7,level
+2005-09-01,world,CEREALS,Зерновые,61.5,level
+2005-09-01,world,OILS,Растительные масла,64.0,level
+2005-09-01,world,SUGAR,Сахар,63.8,level
+2005-10-01,world,FFPI,Индекс продовольственных цен ФАО,69.5,level
+2005-10-01,world,MEAT,Мясо,73.8,level
+2005-10-01,world,DAIRY,Молочная продукция,78.5,level
+2005-10-01,world,CEREALS,Зерновые,62.1,level
+2005-10-01,world,OILS,Растительные масла,66.81,level
+2005-10-01,world,SUGAR,Сахар,68.8,level
+2005-11-01,world,FFPI,Индекс продовольственных цен ФАО,69.0,level
+2005-11-01,world,MEAT,Мясо,74.1,level
+2005-11-01,world,DAIRY,Молочная продукция,78.0,level
+2005-11-01,world,CEREALS,Зерновые,60.6,level
+2005-11-01,world,OILS,Растительные масла,65.44,level
+2005-11-01,world,SUGAR,Сахар,70.4,level
+2005-12-01,world,FFPI,Индекс продовольственных цен ФАО,69.8,level
+2005-12-01,world,MEAT,Мясо,74.4,level
+2005-12-01,world,DAIRY,Молочная продукция,76.9,level
+2005-12-01,world,CEREALS,Зерновые,61.5,level
+2005-12-01,world,OILS,Растительные масла,63.49,level
+2005-12-01,world,SUGAR,Сахар,82.6,level
+2006-01-01,world,FFPI,Индекс продовольственных цен ФАО,69.8,level
+2006-01-01,world,MEAT,Мясо,71.2,level
+2006-01-01,world,DAIRY,Молочная продукция,74.3,level
+2006-01-01,world,CEREALS,Зерновые,62.7,level
+2006-01-01,world,OILS,Растительные масла,63.67,level
+2006-01-01,world,SUGAR,Сахар,97.5,level
+2006-02-01,world,FFPI,Индекс продовольственных цен ФАО,70.8,level
+2006-02-01,world,MEAT,Мясо,68.8,level
+2006-02-01,world,DAIRY,Молочная продукция,74.5,level
+2006-02-01,world,CEREALS,Зерновые,64.8,level
+2006-02-01,world,OILS,Растительные масла,64.99,level
+2006-02-01,world,SUGAR,Сахар,111.1,level
+2006-03-01,world,FFPI,Индекс продовольственных цен ФАО,69.8,level
+2006-03-01,world,MEAT,Мясо,68.0,level
+2006-03-01,world,DAIRY,Молочная продукция,73.1,level
+2006-03-01,world,CEREALS,Зерновые,63.9,level
+2006-03-01,world,OILS,Растительные масла,65.16,level
+2006-03-01,world,SUGAR,Сахар,106.7,level
+2006-04-01,world,FFPI,Индекс продовольственных цен ФАО,70.1,level
+2006-04-01,world,MEAT,Мясо,67.4,level
+2006-04-01,world,DAIRY,Молочная продукция,71.6,level
+2006-04-01,world,CEREALS,Зерновые,65.1,level
+2006-04-01,world,OILS,Растительные масла,66.76,level
+2006-04-01,world,SUGAR,Сахар,108.2,level
+2006-05-01,world,FFPI,Индекс продовольственных цен ФАО,71.3,level
+2006-05-01,world,MEAT,Мясо,69.0,level
+2006-05-01,world,DAIRY,Молочная продукция,71.3,level
+2006-05-01,world,CEREALS,Зерновые,67.8,level
+2006-05-01,world,OILS,Растительные масла,68.28,level
+2006-05-01,world,SUGAR,Сахар,104.1,level
+2006-06-01,world,FFPI,Индекс продовольственных цен ФАО,71.4,level
+2006-06-01,world,MEAT,Мясо,71.3,level
+2006-06-01,world,DAIRY,Молочная продукция,71.0,level
+2006-06-01,world,CEREALS,Зерновые,67.8,level
+2006-06-01,world,OILS,Растительные масла,67.94,level
+2006-06-01,world,SUGAR,Сахар,95.3,level
+2006-07-01,world,FFPI,Индекс продовольственных цен ФАО,73.2,level
+2006-07-01,world,MEAT,Мясо,72.7,level
+2006-07-01,world,DAIRY,Молочная продукция,71.3,level
+2006-07-01,world,CEREALS,Зерновые,69.9,level
+2006-07-01,world,OILS,Растительные масла,70.45,level
+2006-07-01,world,SUGAR,Сахар,99.3,level
+2006-08-01,world,FFPI,Индекс продовольственных цен ФАО,73.1,level
+2006-08-01,world,MEAT,Мясо,74.8,level
+2006-08-01,world,DAIRY,Молочная продукция,70.3,level
+2006-08-01,world,CEREALS,Зерновые,69.6,level
+2006-08-01,world,OILS,Растительные масла,73.55,level
+2006-08-01,world,SUGAR,Сахар,83.2,level
+2006-09-01,world,FFPI,Индекс продовольственных цен ФАО,73.2,level
+2006-09-01,world,MEAT,Мясо,75.3,level
+2006-09-01,world,DAIRY,Молочная продукция,70.3,level
+2006-09-01,world,CEREALS,Зерновые,72.5,level
+2006-09-01,world,OILS,Растительные масла,71.7,level
+2006-09-01,world,SUGAR,Сахар,74.8,level
+2006-10-01,world,FFPI,Индекс продовольственных цен ФАО,75.1,level
+2006-10-01,world,MEAT,Мясо,74.3,level
+2006-10-01,world,DAIRY,Молочная продукция,71.9,level
+2006-10-01,world,CEREALS,Зерновые,79.9,level
+2006-10-01,world,OILS,Растительные масла,72.7,level
+2006-10-01,world,SUGAR,Сахар,72.0,level
+2006-11-01,world,FFPI,Индекс продовольственных цен ФАО,77.7,level
+2006-11-01,world,MEAT,Мясо,72.6,level
+2006-11-01,world,DAIRY,Молочная продукция,75.4,level
+2006-11-01,world,CEREALS,Зерновые,85.3,level
+2006-11-01,world,OILS,Растительные масла,78.35,level
+2006-11-01,world,SUGAR,Сахар,72.9,level
+2006-12-01,world,FFPI,Индекс продовольственных цен ФАО,78.8,level
+2006-12-01,world,MEAT,Мясо,71.3,level
+2006-12-01,world,DAIRY,Молочная продукция,81.7,level
+2006-12-01,world,CEREALS,Зерновые,85.4,level
+2006-12-01,world,OILS,Растительные масла,83.01,level
+2006-12-01,world,SUGAR,Сахар,71.6,level
+2007-01-01,world,FFPI,Индекс продовольственных цен ФАО,78.5,level
+2007-01-01,world,MEAT,Мясо,70.7,level
+2007-01-01,world,DAIRY,Молочная продукция,84.2,level
+2007-01-01,world,CEREALS,Зерновые,85.1,level
+2007-01-01,world,OILS,Растительные масла,82.27,level
+2007-01-01,world,SUGAR,Сахар,67.8,level
+2007-02-01,world,FFPI,Индекс продовольственных цен ФАО,80.0,level
+2007-02-01,world,MEAT,Мясо,72.2,level
+2007-02-01,world,DAIRY,Молочная продукция,88.3,level
+2007-02-01,world,CEREALS,Зерновые,87.0,level
+2007-02-01,world,OILS,Растительные масла,82.87,level
+2007-02-01,world,SUGAR,Сахар,65.4,level
+2007-03-01,world,FFPI,Индекс продовольственных цен ФАО,81.1,level
+2007-03-01,world,MEAT,Мясо,73.9,level
+2007-03-01,world,DAIRY,Молочная продукция,91.8,level
+2007-03-01,world,CEREALS,Зерновые,86.4,level
+2007-03-01,world,OILS,Растительные масла,84.42,level
+2007-03-01,world,SUGAR,Сахар,64.6,level
+2007-04-01,world,FFPI,Индекс продовольственных цен ФАО,83.9,level
+2007-04-01,world,MEAT,Мясо,75.8,level
+2007-04-01,world,DAIRY,Молочная продукция,102.0,level
+2007-04-01,world,CEREALS,Зерновые,85.1,level
+2007-04-01,world,OILS,Растительные масла,92.76,level
+2007-04-01,world,SUGAR,Сахар,60.2,level
+2007-05-01,world,FFPI,Индекс продовольственных цен ФАО,86.5,level
+2007-05-01,world,MEAT,Мясо,77.5,level
+2007-05-01,world,DAIRY,Молочная продукция,105.3,level
+2007-05-01,world,CEREALS,Зерновые,86.6,level
+2007-05-01,world,OILS,Растительные масла,100.25,level
+2007-05-01,world,SUGAR,Сахар,58.4,level
+2007-06-01,world,FFPI,Индекс продовольственных цен ФАО,91.4,level
+2007-06-01,world,MEAT,Мясо,78.8,level
+2007-06-01,world,DAIRY,Молочная продукция,121.0,level
+2007-06-01,world,CEREALS,Зерновые,91.9,level
+2007-06-01,world,OILS,Растительные масла,104.92,level
+2007-06-01,world,SUGAR,Сахар,57.5,level
+2007-07-01,world,FFPI,Индекс продовольственных цен ФАО,95.5,level
+2007-07-01,world,MEAT,Мясо,79.9,level
+2007-07-01,world,DAIRY,Молочная продукция,135.0,level
+2007-07-01,world,CEREALS,Зерновые,94.9,level
+2007-07-01,world,OILS,Растительные масла,108.58,level
+2007-07-01,world,SUGAR,Сахар,62.9,level
+2007-08-01,world,FFPI,Индекс продовольственных цен ФАО,99.1,level
+2007-08-01,world,MEAT,Мясо,79.9,level
+2007-08-01,world,DAIRY,Молочная продукция,141.5,level
+2007-08-01,world,CEREALS,Зерновые,102.1,level
+2007-08-01,world,OILS,Растительные масла,112.8,level
+2007-08-01,world,SUGAR,Сахар,60.7,level
+2007-09-01,world,FFPI,Индекс продовольственных цен ФАО,105.3,level
+2007-09-01,world,MEAT,Мясо,81.4,level
+2007-09-01,world,DAIRY,Молочная продукция,145.1,level
+2007-09-01,world,CEREALS,Зерновые,117.2,level
+2007-09-01,world,OILS,Растительные масла,118.25,level
+2007-09-01,world,SUGAR,Сахар,60.4,level
+2007-10-01,world,FFPI,Индекс продовольственных цен ФАО,107.9,level
+2007-10-01,world,MEAT,Мясо,80.1,level
+2007-10-01,world,DAIRY,Молочная продукция,148.0,level
+2007-10-01,world,CEREALS,Зерновые,121.3,level
+2007-10-01,world,OILS,Растительные масла,125.85,level
+2007-10-01,world,SUGAR,Сахар,61.9,level
+2007-11-01,world,FFPI,Индекс продовольственных цен ФАО,110.8,level
+2007-11-01,world,MEAT,Мясо,81.1,level
+2007-11-01,world,DAIRY,Молочная продукция,154.0,level
+2007-11-01,world,CEREALS,Зерновые,121.0,level
+2007-11-01,world,OILS,Растительные масла,136.25,level
+2007-11-01,world,SUGAR,Сахар,62.5,level
+2007-12-01,world,FFPI,Индекс продовольственных цен ФАО,114.7,level
+2007-12-01,world,MEAT,Мясо,81.8,level
+2007-12-01,world,DAIRY,Молочная продукция,152.6,level
+2007-12-01,world,CEREALS,Зерновые,132.2,level
+2007-12-01,world,OILS,Растительные масла,138.56,level
+2007-12-01,world,SUGAR,Сахар,66.3,level
+2008-01-01,world,FFPI,Индекс продовольственных цен ФАО,120.4,level
+2008-01-01,world,MEAT,Мясо,82.8,level
+2008-01-01,world,DAIRY,Молочная продукция,150.6,level
+2008-01-01,world,CEREALS,Зерновые,141.0,level
+2008-01-01,world,OILS,Растительные масла,154.1,level
+2008-01-01,world,SUGAR,Сахар,74.1,level
+2008-02-01,world,FFPI,Индекс продовольственных цен ФАО,128.4,level
+2008-02-01,world,MEAT,Мясо,80.6,level
+2008-02-01,world,DAIRY,Молочная продукция,149.9,level
+2008-02-01,world,CEREALS,Зерновые,160.8,level
+2008-02-01,world,OILS,Растительные масла,168.63,level
+2008-02-01,world,SUGAR,Сахар,83.6,level
+2008-03-01,world,FFPI,Индекс продовольственных цен ФАО,132.4,level
+2008-03-01,world,MEAT,Мясо,85.6,level
+2008-03-01,world,DAIRY,Молочная продукция,152.6,level
+2008-03-01,world,CEREALS,Зерновые,163.3,level
+2008-03-01,world,OILS,Растительные масла,176.6,level
+2008-03-01,world,SUGAR,Сахар,81.7,level
+2008-04-01,world,FFPI,Индекс продовольственных цен ФАО,130.7,level
+2008-04-01,world,MEAT,Мясо,87.0,level
+2008-04-01,world,DAIRY,Молочная продукция,148.9,level
+2008-04-01,world,CEREALS,Зерновые,162.7,level
+2008-04-01,world,OILS,Растительные масла,169.41,level
+2008-04-01,world,SUGAR,Сахар,77.7,level
+2008-05-01,world,FFPI,Индекс продовольственных цен ФАО,130.3,level
+2008-05-01,world,MEAT,Мясо,91.8,level
+2008-05-01,world,DAIRY,Молочная продукция,144.3,level
+2008-05-01,world,CEREALS,Зерновые,157.4,level
+2008-05-01,world,OILS,Растительные масла,172.02,level
+2008-05-01,world,SUGAR,Сахар,74.7,level
+2008-06-01,world,FFPI,Индекс продовольственных цен ФАО,132.7,level
+2008-06-01,world,MEAT,Мясо,93.6,level
+2008-06-01,world,DAIRY,Молочная продукция,143.9,level
+2008-06-01,world,CEREALS,Зерновые,160.3,level
+2008-06-01,world,OILS,Растительные масла,178.32,level
+2008-06-01,world,SUGAR,Сахар,75.0,level
+2008-07-01,world,FFPI,Индекс продовольственных цен ФАО,130.2,level
+2008-07-01,world,MEAT,Мясо,100.4,level
+2008-07-01,world,DAIRY,Молочная продукция,144.1,level
+2008-07-01,world,CEREALS,Зерновые,148.2,level
+2008-07-01,world,OILS,Растительные масла,164.8,level
+2008-07-01,world,SUGAR,Сахар,88.1,level
+2008-08-01,world,FFPI,Индекс продовольственных цен ФАО,121.2,level
+2008-08-01,world,MEAT,Мясо,102.1,level
+2008-08-01,world,DAIRY,Молочная продукция,133.5,level
+2008-08-01,world,CEREALS,Зерновые,136.5,level
+2008-08-01,world,OILS,Растительные масла,135.62,level
+2008-08-01,world,SUGAR,Сахар,90.4,level
+2008-09-01,world,FFPI,Индекс продовольственных цен ФАО,112.8,level
+2008-09-01,world,MEAT,Мясо,100.9,level
+2008-09-01,world,DAIRY,Молочная продукция,120.5,level
+2008-09-01,world,CEREALS,Зерновые,125.3,level
+2008-09-01,world,OILS,Растительные масла,120.59,level
+2008-09-01,world,SUGAR,Сахар,83.7,level
+2008-10-01,world,FFPI,Индекс продовольственных цен ФАО,97.8,level
+2008-10-01,world,MEAT,Мясо,95.7,level
+2008-10-01,world,DAIRY,Молочная продукция,107.0,level
+2008-10-01,world,CEREALS,Зерновые,104.9,level
+2008-10-01,world,OILS,Растительные масла,92.21,level
+2008-10-01,world,SUGAR,Сахар,73.6,level
+2008-11-01,world,FFPI,Индекс продовольственных цен ФАО,89.7,level
+2008-11-01,world,MEAT,Мясо,87.9,level
+2008-11-01,world,DAIRY,Молочная продукция,97.8,level
+2008-11-01,world,CEREALS,Зерновые,96.0,level
+2008-11-01,world,OILS,Растительные масла,82.03,level
+2008-11-01,world,SUGAR,Сахар,74.9,level
+2008-12-01,world,FFPI,Индекс продовольственных цен ФАО,86.3,level
+2008-12-01,world,MEAT,Мясо,81.8,level
+2008-12-01,world,DAIRY,Молочная продукция,94.9,level
+2008-12-01,world,CEREALS,Зерновые,95.1,level
+2008-12-01,world,OILS,Растительные масла,78.55,level
+2008-12-01,world,SUGAR,Сахар,72.7,level
+2009-01-01,world,FFPI,Индекс продовольственных цен ФАО,86.7,level
+2009-01-01,world,MEAT,Мясо,78.1,level
+2009-01-01,world,DAIRY,Молочная продукция,88.2,level
+2009-01-01,world,CEREALS,Зерновые,100.4,level
+2009-01-01,world,OILS,Растительные масла,82.78,level
+2009-01-01,world,SUGAR,Сахар,77.4,level
+2009-02-01,world,FFPI,Индекс продовольственных цен ФАО,84.5,level
+2009-02-01,world,MEAT,Мясо,76.0,level
+2009-02-01,world,DAIRY,Молочная продукция,82.6,level
+2009-02-01,world,CEREALS,Зерновые,97.2,level
+2009-02-01,world,OILS,Растительные масла,82.24,level
+2009-02-01,world,SUGAR,Сахар,81.9,level
+2009-03-01,world,FFPI,Индекс продовольственных цен ФАО,84.3,level
+2009-03-01,world,MEAT,Мясо,76.1,level
+2009-03-01,world,DAIRY,Молочная продукция,80.9,level
+2009-03-01,world,CEREALS,Зерновые,97.2,level
+2009-03-01,world,OILS,Растительные масла,81.49,level
+2009-03-01,world,SUGAR,Сахар,82.9,level
+2009-04-01,world,FFPI,Индекс продовольственных цен ФАО,87.4,level
+2009-04-01,world,MEAT,Мясо,78.5,level
+2009-04-01,world,DAIRY,Молочная продукция,80.4,level
+2009-04-01,world,CEREALS,Зерновые,98.1,level
+2009-04-01,world,OILS,Растительные масла,93.8,level
+2009-04-01,world,SUGAR,Сахар,84.5,level
+2009-05-01,world,FFPI,Индекс продовольственных цен ФАО,93.5,level
+2009-05-01,world,MEAT,Мясо,81.3,level
+2009-05-01,world,DAIRY,Молочная продукция,83.5,level
+2009-05-01,world,CEREALS,Зерновые,103.3,level
+2009-05-01,world,OILS,Растительные масла,106.61,level
+2009-05-01,world,SUGAR,Сахар,99.4,level
+2009-06-01,world,FFPI,Индекс продовольственных цен ФАО,93.4,level
+2009-06-01,world,MEAT,Мясо,83.4,level
+2009-06-01,world,DAIRY,Молочная продукция,84.7,level
+2009-06-01,world,CEREALS,Зерновые,103.0,level
+2009-06-01,world,OILS,Растительные масла,100.72,level
+2009-06-01,world,SUGAR,Сахар,101.7,level
+2009-07-01,world,FFPI,Индекс продовольственных цен ФАО,90.7,level
+2009-07-01,world,MEAT,Мясо,85.2,level
+2009-07-01,world,DAIRY,Молочная продукция,85.1,level
+2009-07-01,world,CEREALS,Зерновые,94.5,level
+2009-07-01,world,OILS,Растительные масла,89.9,level
+2009-07-01,world,SUGAR,Сахар,114.0,level
+2009-08-01,world,FFPI,Индекс продовольственных цен ФАО,93.5,level
+2009-08-01,world,MEAT,Мясо,85.4,level
+2009-08-01,world,DAIRY,Молочная продукция,88.0,level
+2009-08-01,world,CEREALS,Зерновые,91.9,level
+2009-08-01,world,OILS,Растительные масла,97.85,level
+2009-08-01,world,SUGAR,Сахар,138.8,level
+2009-09-01,world,FFPI,Индекс продовольственных цен ФАО,93.1,level
+2009-09-01,world,MEAT,Мясо,84.5,level
+2009-09-01,world,DAIRY,Молочная продукция,95.1,level
+2009-09-01,world,CEREALS,Зерновые,89.8,level
+2009-09-01,world,OILS,Растительные масла,93.25,level
+2009-09-01,world,SUGAR,Сахар,142.6,level
+2009-10-01,world,FFPI,Индекс продовольственных цен ФАО,94.8,level
+2009-10-01,world,MEAT,Мясо,82.6,level
+2009-10-01,world,DAIRY,Молочная продукция,102.7,level
+2009-10-01,world,CEREALS,Зерновые,93.8,level
+2009-10-01,world,OILS,Растительные масла,95.17,level
+2009-10-01,world,SUGAR,Сахар,140.1,level
+2009-11-01,world,FFPI,Индекс продовольственных цен ФАО,98.9,level
+2009-11-01,world,MEAT,Мясо,83.9,level
+2009-11-01,world,DAIRY,Молочная продукция,113.1,level
+2009-11-01,world,CEREALS,Зерновые,98.0,level
+2009-11-01,world,OILS,Растительные масла,101.76,level
+2009-11-01,world,SUGAR,Сахар,137.8,level
+2009-12-01,world,FFPI,Индекс продовольственных цен ФАО,100.8,level
+2009-12-01,world,MEAT,Мясо,84.5,level
+2009-12-01,world,DAIRY,Молочная продукция,112.8,level
+2009-12-01,world,CEREALS,Зерновые,99.0,level
+2009-12-01,world,OILS,Растительные масла,107.56,level
+2009-12-01,world,SUGAR,Сахар,145.6,level
+2010-01-01,world,FFPI,Индекс продовольственных цен ФАО,101.8,level
+2010-01-01,world,MEAT,Мясо,86.0,level
+2010-01-01,world,DAIRY,Молочная продукция,109.0,level
+2010-01-01,world,CEREALS,Зерновые,98.4,level
+2010-01-01,world,OILS,Растительные масла,107.1,level
+2010-01-01,world,SUGAR,Сахар,163.8,level
+2010-02-01,world,FFPI,Индекс продовольственных цен ФАО,99.3,level
+2010-02-01,world,MEAT,Мясо,86.5,level
+2010-02-01,world,DAIRY,Молочная продукция,101.6,level
+2010-02-01,world,CEREALS,Зерновые,94.0,level
+2010-02-01,world,OILS,Растительные масла,107.31,level
+2010-02-01,world,SUGAR,Сахар,157.4,level
+2010-03-01,world,FFPI,Индекс продовольственных цен ФАО,96.5,level
+2010-03-01,world,MEAT,Мясо,87.5,level
+2010-03-01,world,DAIRY,Молочная продукция,101.6,level
+2010-03-01,world,CEREALS,Зерновые,91.8,level
+2010-03-01,world,OILS,Растительные масла,110.33,level
+2010-03-01,world,SUGAR,Сахар,115.5,level
+2010-04-01,world,FFPI,Индекс продовольственных цен ФАО,97.1,level
+2010-04-01,world,MEAT,Мясо,90.1,level
+2010-04-01,world,DAIRY,Молочная продукция,109.7,level
+2010-04-01,world,CEREALS,Зерновые,90.7,level
+2010-04-01,world,OILS,Растительные масла,109.36,level
+2010-04-01,world,SUGAR,Сахар,101.8,level
+2010-05-01,world,FFPI,Индекс продовольственных цен ФАО,96.4,level
+2010-05-01,world,MEAT,Мясо,90.1,level
+2010-05-01,world,DAIRY,Молочная продукция,111.8,level
+2010-05-01,world,CEREALS,Зерновые,90.6,level
+2010-05-01,world,OILS,Растительные масла,107.17,level
+2010-05-01,world,SUGAR,Сахар,94.1,level
+2010-06-01,world,FFPI,Индекс продовольственных цен ФАО,95.9,level
+2010-06-01,world,MEAT,Мясо,91.2,level
+2010-06-01,world,DAIRY,Молочная продукция,110.4,level
+2010-06-01,world,CEREALS,Зерновые,87.8,level
+2010-06-01,world,OILS,Растительные масла,106.03,level
+2010-06-01,world,SUGAR,Сахар,98.1,level
+2010-07-01,world,FFPI,Индекс продовольственных цен ФАО,100.0,level
+2010-07-01,world,MEAT,Мясо,92.0,level
+2010-07-01,world,DAIRY,Молочная продукция,112.8,level
+2010-07-01,world,CEREALS,Зерновые,95.3,level
+2010-07-01,world,OILS,Растительные масла,110.13,level
+2010-07-01,world,SUGAR,Сахар,107.9,level
+2010-08-01,world,FFPI,Индекс продовольственных цен ФАО,107.8,level
+2010-08-01,world,MEAT,Мясо,92.9,level
+2010-08-01,world,DAIRY,Молочная продукция,112.3,level
+2010-08-01,world,CEREALS,Зерновые,112.9,level
+2010-08-01,world,OILS,Растительные масла,121.81,level
+2010-08-01,world,SUGAR,Сахар,114.6,level
+2010-09-01,world,FFPI,Индекс продовольственных цен ФАО,114.1,level
+2010-09-01,world,MEAT,Мясо,92.5,level
+2010-09-01,world,DAIRY,Молочная продукция,116.0,level
+2010-09-01,world,CEREALS,Зерновые,125.9,level
+2010-09-01,world,OILS,Растительные масла,124.85,level
+2010-09-01,world,SUGAR,Сахар,138.7,level
+2010-10-01,world,FFPI,Индекс продовольственных цен ФАО,120.1,level
+2010-10-01,world,MEAT,Мясо,93.9,level
+2010-10-01,world,DAIRY,Молочная продукция,121.4,level
+2010-10-01,world,CEREALS,Зерновые,130.6,level
+2010-10-01,world,OILS,Растительные масла,139.18,level
+2010-10-01,world,SUGAR,Сахар,152.3,level
+2010-11-01,world,FFPI,Индекс продовольственных цен ФАО,124.2,level
+2010-11-01,world,MEAT,Мясо,96.4,level
+2010-11-01,world,DAIRY,Молочная продукция,118.7,level
+2010-11-01,world,CEREALS,Зерновые,132.4,level
+2010-11-01,world,OILS,Растительные масла,153.87,level
+2010-11-01,world,SUGAR,Сахар,162.8,level
+2010-12-01,world,FFPI,Индекс продовольственных цен ФАО,129.4,level
+2010-12-01,world,MEAT,Мясо,97.5,level
+2010-12-01,world,DAIRY,Молочная продукция,117.4,level
+2010-12-01,world,CEREALS,Зерновые,139.7,level
+2010-12-01,world,OILS,Растительные масла,166.26,level
+2010-12-01,world,SUGAR,Сахар,173.8,level
+2011-01-01,world,FFPI,Индекс продовольственных цен ФАО,133.8,level
+2011-01-01,world,MEAT,Мясо,97.9,level
+2011-01-01,world,DAIRY,Молочная продукция,122.8,level
+2011-01-01,world,CEREALS,Зерновые,144.9,level
+2011-01-01,world,OILS,Растительные масла,174.49,level
+2011-01-01,world,SUGAR,Сахар,183.2,level
+2011-02-01,world,FFPI,Индекс продовольственных цен ФАО,137.7,level
+2011-02-01,world,MEAT,Мясо,100.5,level
+2011-02-01,world,DAIRY,Молочная продукция,130.3,level
+2011-02-01,world,CEREALS,Зерновые,151.4,level
+2011-02-01,world,OILS,Растительные масла,175.43,level
+2011-02-01,world,SUGAR,Сахар,182.4,level
+2011-03-01,world,FFPI,Индекс продовольственных цен ФАО,134.3,level
+2011-03-01,world,MEAT,Мясо,103.6,level
+2011-03-01,world,DAIRY,Молочная продукция,135.8,level
+2011-03-01,world,CEREALS,Зерновые,145.5,level
+2011-03-01,world,OILS,Растительные масла,163.11,level
+2011-03-01,world,SUGAR,Сахар,162.4,level
+2011-04-01,world,FFPI,Индекс продовольственных цен ФАО,136.3,level
+2011-04-01,world,MEAT,Мясо,107.5,level
+2011-04-01,world,DAIRY,Молочная продукция,134.5,level
+2011-04-01,world,CEREALS,Зерновые,151.7,level
+2011-04-01,world,OILS,Растительные масла,162.79,level
+2011-04-01,world,SUGAR,Сахар,150.7,level
+2011-05-01,world,FFPI,Индекс продовольственных цен ФАО,135.1,level
+2011-05-01,world,MEAT,Мясо,108.0,level
+2011-05-01,world,DAIRY,Молочная продукция,134.2,level
+2011-05-01,world,CEREALS,Зерновые,150.9,level
+2011-05-01,world,OILS,Растительные масла,162.4,level
+2011-05-01,world,SUGAR,Сахар,136.2,level
+2011-06-01,world,FFPI,Индекс продовольственных цен ФАО,134.8,level
+2011-06-01,world,MEAT,Мясо,106.2,level
+2011-06-01,world,DAIRY,Молочная продукция,135.3,level
+2011-06-01,world,CEREALS,Зерновые,147.1,level
+2011-06-01,world,OILS,Растительные масла,160.78,level
+2011-06-01,world,SUGAR,Сахар,156.0,level
+2011-07-01,world,FFPI,Индекс продовольственных цен ФАО,133.0,level
+2011-07-01,world,MEAT,Мясо,105.8,level
+2011-07-01,world,DAIRY,Молочная продукция,133.6,level
+2011-07-01,world,CEREALS,Зерновые,140.5,level
+2011-07-01,world,OILS,Растительные масла,156.05,level
+2011-07-01,world,SUGAR,Сахар,174.6,level
+2011-08-01,world,FFPI,Индекс продовольственных цен ФАО,132.7,level
+2011-08-01,world,MEAT,Мясо,104.9,level
+2011-08-01,world,DAIRY,Молочная продукция,131.9,level
+2011-08-01,world,CEREALS,Зерновые,144.9,level
+2011-08-01,world,OILS,Растительные масла,151.48,level
+2011-08-01,world,SUGAR,Сахар,171.7,level
+2011-09-01,world,FFPI,Индекс продовольственных цен ФАО,130.1,level
+2011-09-01,world,MEAT,Мясо,106.1,level
+2011-09-01,world,DAIRY,Молочная продукция,127.1,level
+2011-09-01,world,CEREALS,Зерновые,140.5,level
+2011-09-01,world,OILS,Растительные масла,147.82,level
+2011-09-01,world,SUGAR,Сахар,165.3,level
+2011-10-01,world,FFPI,Индекс продовольственных цен ФАО,125.6,level
+2011-10-01,world,MEAT,Мясо,105.9,level
+2011-10-01,world,DAIRY,Молочная продукция,126.2,level
+2011-10-01,world,CEREALS,Зерновые,133.1,level
+2011-10-01,world,OILS,Растительные масла,137.99,level
+2011-10-01,world,SUGAR,Сахар,157.5,level
+2011-11-01,world,FFPI,Индекс продовольственных цен ФАО,125.9,level
+2011-11-01,world,MEAT,Мясо,107.8,level
+2011-11-01,world,DAIRY,Молочная продукция,125.1,level
+2011-11-01,world,CEREALS,Зерновые,130.9,level
+2011-11-01,world,OILS,Растительные масла,144.96,level
+2011-11-01,world,SUGAR,Сахар,148.2,level
+2011-12-01,world,FFPI,Индекс продовольственных цен ФАО,121.9,level
+2011-12-01,world,MEAT,Мясо,106.1,level
+2011-12-01,world,DAIRY,Молочная продукция,122.0,level
+2011-12-01,world,CEREALS,Зерновые,124.4,level
+2011-12-01,world,OILS,Растительные масла,140.45,level
+2011-12-01,world,SUGAR,Сахар,142.6,level
+2012-01-01,world,FFPI,Индекс продовольственных цен ФАО,122.2,level
+2012-01-01,world,MEAT,Мясо,102.6,level
+2012-01-01,world,DAIRY,Молочная продукция,120.3,level
+2012-01-01,world,CEREALS,Зерновые,127.2,level
+2012-01-01,world,OILS,Растительные масла,144.33,level
+2012-01-01,world,SUGAR,Сахар,145.8,level
+2012-02-01,world,FFPI,Индекс продовольственных цен ФАО,125.3,level
+2012-02-01,world,MEAT,Мясо,105.5,level
+2012-02-01,world,DAIRY,Молочная продукция,121.2,level
+2012-02-01,world,CEREALS,Зерновые,131.1,level
+2012-02-01,world,OILS,Растительные масла,148.34,level
+2012-02-01,world,SUGAR,Сахар,149.3,level
+2012-03-01,world,FFPI,Индекс продовольственных цен ФАО,125.7,level
+2012-03-01,world,MEAT,Мясо,106.2,level
+2012-03-01,world,DAIRY,Молочная продукция,118.1,level
+2012-03-01,world,CEREALS,Зерновые,130.6,level
+2012-03-01,world,OILS,Растительные масла,152.47,level
+2012-03-01,world,SUGAR,Сахар,149.1,level
+2012-04-01,world,FFPI,Индекс продовольственных цен ФАО,124.4,level
+2012-04-01,world,MEAT,Мясо,105.8,level
+2012-04-01,world,DAIRY,Молочная продукция,112.5,level
+2012-04-01,world,CEREALS,Зерновые,129.1,level
+2012-04-01,world,OILS,Растительные масла,156.29,level
+2012-04-01,world,SUGAR,Сахар,141.3,level
+2012-05-01,world,FFPI,Индекс продовольственных цен ФАО,119.0,level
+2012-05-01,world,MEAT,Мясо,103.7,level
+2012-05-01,world,DAIRY,Молочная продукция,105.5,level
+2012-05-01,world,CEREALS,Зерновые,126.3,level
+2012-05-01,world,OILS,Растительные масла,144.4,level
+2012-05-01,world,SUGAR,Сахар,128.5,level
+2012-06-01,world,FFPI,Индекс продовольственных цен ФАО,115.8,level
+2012-06-01,world,MEAT,Мясо,101.1,level
+2012-06-01,world,DAIRY,Молочная продукция,102.3,level
+2012-06-01,world,CEREALS,Зерновые,125.3,level
+2012-06-01,world,OILS,Растительные масла,135.26,level
+2012-06-01,world,SUGAR,Сахар,126.7,level
+2012-07-01,world,FFPI,Индекс продовольственных цен ФАО,122.0,level
+2012-07-01,world,MEAT,Мясо,99.8,level
+2012-07-01,world,DAIRY,Молочная продукция,99.7,level
+2012-07-01,world,CEREALS,Зерновые,143.9,level
+2012-07-01,world,OILS,Растительные масла,138.56,level
+2012-07-01,world,SUGAR,Сахар,141.4,level
+2012-08-01,world,FFPI,Индекс продовольственных цен ФАО,123.2,level
+2012-08-01,world,MEAT,Мясо,102.5,level
+2012-08-01,world,DAIRY,Молочная продукция,102.0,level
+2012-08-01,world,CEREALS,Зерновые,147.1,level
+2012-08-01,world,OILS,Растительные масла,138.31,level
+2012-08-01,world,SUGAR,Сахар,129.2,level
+2012-09-01,world,FFPI,Индекс продовольственных цен ФАО,125.1,level
+2012-09-01,world,MEAT,Мясо,106.7,level
+2012-09-01,world,DAIRY,Молочная продукция,111.0,level
+2012-09-01,world,CEREALS,Зерновые,146.8,level
+2012-09-01,world,OILS,Растительные масла,136.93,level
+2012-09-01,world,SUGAR,Сахар,123.7,level
+2012-10-01,world,FFPI,Индекс продовольственных цен ФАО,124.0,level
+2012-10-01,world,MEAT,Мясо,107.9,level
+2012-10-01,world,DAIRY,Молочная продукция,114.2,level
+2012-10-01,world,CEREALS,Зерновые,146.5,level
+2012-10-01,world,OILS,Растительные масла,124.9,level
+2012-10-01,world,SUGAR,Сахар,125.7,level
+2012-11-01,world,FFPI,Индекс продовольственных цен ФАО,123.5,level
+2012-11-01,world,MEAT,Мясо,107.4,level
+2012-11-01,world,DAIRY,Молочная продукция,114.9,level
+2012-11-01,world,CEREALS,Зерновые,148.5,level
+2012-11-01,world,OILS,Растительные масла,121.52,level
+2012-11-01,world,SUGAR,Сахар,119.7,level
+2012-12-01,world,FFPI,Индекс продовольственных цен ФАО,122.8,level
+2012-12-01,world,MEAT,Мясо,107.2,level
+2012-12-01,world,DAIRY,Молочная продукция,118.1,level
+2012-12-01,world,CEREALS,Зерновые,146.4,level
+2012-12-01,world,OILS,Растительные масла,118.38,level
+2012-12-01,world,SUGAR,Сахар,119.5,level
+2013-01-01,world,FFPI,Индекс продовольственных цен ФАО,123.4,level
+2013-01-01,world,MEAT,Мясо,106.6,level
+2013-01-01,world,DAIRY,Молочная продукция,121.0,level
+2013-01-01,world,CEREALS,Зерновые,145.2,level
+2013-01-01,world,OILS,Растительные масла,124.28,level
+2013-01-01,world,SUGAR,Сахар,116.8,level
+2013-02-01,world,FFPI,Индекс продовольственных цен ФАО,123.3,level
+2013-02-01,world,MEAT,Мясо,107.8,level
+2013-02-01,world,DAIRY,Молочная продукция,123.8,level
+2013-02-01,world,CEREALS,Зерновые,142.3,level
+2013-02-01,world,OILS,Растительные масла,125.55,level
+2013-02-01,world,SUGAR,Сахар,113.0,level
+2013-03-01,world,FFPI,Индекс продовольственных цен ФАО,122.9,level
+2013-03-01,world,MEAT,Мясо,108.2,level
+2013-03-01,world,DAIRY,Молочная продукция,128.0,level
+2013-03-01,world,CEREALS,Зерновые,139.9,level
+2013-03-01,world,OILS,Растительные масла,122.38,level
+2013-03-01,world,SUGAR,Сахар,114.3,level
+2013-04-01,world,FFPI,Индекс продовольственных цен ФАО,122.9,level
+2013-04-01,world,MEAT,Мясо,108.8,level
+2013-04-01,world,DAIRY,Молочная продукция,140.8,level
+2013-04-01,world,CEREALS,Зерновые,134.9,level
+2013-04-01,world,OILS,Растительные масла,120.64,level
+2013-04-01,world,SUGAR,Сахар,110.2,level
+2013-05-01,world,FFPI,Индекс продовольственных цен ФАО,122.2,level
+2013-05-01,world,MEAT,Мясо,105.7,level
+2013-05-01,world,DAIRY,Молочная продукция,140.0,level
+2013-05-01,world,CEREALS,Зерновые,136.4,level
+2013-05-01,world,OILS,Растительные масла,121.05,level
+2013-05-01,world,SUGAR,Сахар,109.1,level
+2013-06-01,world,FFPI,Индекс продовольственных цен ФАО,120.9,level
+2013-06-01,world,MEAT,Мясо,105.0,level
+2013-06-01,world,DAIRY,Молочная продукция,140.3,level
+2013-06-01,world,CEREALS,Зерновые,133.8,level
+2013-06-01,world,OILS,Растительные масла,120.68,level
+2013-06-01,world,SUGAR,Сахар,105.8,level
+2013-07-01,world,FFPI,Индекс продовольственных цен ФАО,118.0,level
+2013-07-01,world,MEAT,Мясо,104.7,level
+2013-07-01,world,DAIRY,Молочная продукция,141.0,level
+2013-07-01,world,CEREALS,Зерновые,126.4,level
+2013-07-01,world,OILS,Растительные масла,116.22,level
+2013-07-01,world,SUGAR,Сахар,104.2,level
+2013-08-01,world,FFPI,Индекс продовольственных цен ФАО,116.2,level
+2013-08-01,world,MEAT,Мясо,105.5,level
+2013-08-01,world,DAIRY,Молочная продукция,145.6,level
+2013-08-01,world,CEREALS,Зерновые,119.2,level
+2013-08-01,world,OILS,Растительные масла,111.89,level
+2013-08-01,world,SUGAR,Сахар,105.4,level
+2013-09-01,world,FFPI,Индекс продовольственных цен ФАО,116.4,level
+2013-09-01,world,MEAT,Мясо,106.0,level
+2013-09-01,world,DAIRY,Молочная продукция,149.0,level
+2013-09-01,world,CEREALS,Зерновые,116.7,level
+2013-09-01,world,OILS,Растительные масла,112.92,level
+2013-09-01,world,SUGAR,Сахар,107.5,level
+2013-10-01,world,FFPI,Индекс продовольственных цен ФАО,118.7,level
+2013-10-01,world,MEAT,Мясо,106.3,level
+2013-10-01,world,DAIRY,Молочная продукция,153.0,level
+2013-10-01,world,CEREALS,Зерновые,118.7,level
+2013-10-01,world,OILS,Растительные масла,116.04,level
+2013-10-01,world,SUGAR,Сахар,115.5,level
+2013-11-01,world,FFPI,Индекс продовольственных цен ФАО,118.6,level
+2013-11-01,world,MEAT,Мясо,105.4,level
+2013-11-01,world,DAIRY,Молочная продукция,151.9,level
+2013-11-01,world,CEREALS,Зерновые,118.0,level
+2013-11-01,world,OILS,Растительные масла,121.97,level
+2013-11-01,world,SUGAR,Сахар,109.3,level
+2013-12-01,world,FFPI,Индекс продовольственных цен ФАО,118.2,level
+2013-12-01,world,MEAT,Мясо,104.7,level
+2013-12-01,world,DAIRY,Молочная продукция,156.5,level
+2013-12-01,world,CEREALS,Зерновые,117.9,level
+2013-12-01,world,OILS,Растительные масла,120.38,level
+2013-12-01,world,SUGAR,Сахар,102.4,level
+2014-01-01,world,FFPI,Индекс продовольственных цен ФАО,116.2,level
+2014-01-01,world,MEAT,Мясо,103.2,level
+2014-01-01,world,DAIRY,Молочная продукция,156.2,level
+2014-01-01,world,CEREALS,Зерновые,117.0,level
+2014-01-01,world,OILS,Растительные масла,115.58,level
+2014-01-01,world,SUGAR,Сахар,96.7,level
+2014-02-01,world,FFPI,Индекс продовольственных цен ФАО,118.6,level
+2014-02-01,world,MEAT,Мясо,104.1,level
+2014-02-01,world,DAIRY,Молочная продукция,156.4,level
+2014-02-01,world,CEREALS,Зерновые,119.7,level
+2014-02-01,world,OILS,Растительные масла,120.84,level
+2014-02-01,world,SUGAR,Сахар,102.6,level
+2014-03-01,world,FFPI,Индекс продовольственных цен ФАО,122.1,level
+2014-03-01,world,MEAT,Мясо,106.3,level
+2014-03-01,world,DAIRY,Молочная продукция,154.8,level
+2014-03-01,world,CEREALS,Зерновые,125.4,level
+2014-03-01,world,OILS,Растительные масла,125.38,level
+2014-03-01,world,SUGAR,Сахар,110.8,level
+2014-04-01,world,FFPI,Индекс продовольственных цен ФАО,121.5,level
+2014-04-01,world,MEAT,Мясо,109.7,level
+2014-04-01,world,DAIRY,Молочная продукция,147.3,level
+2014-04-01,world,CEREALS,Зерновые,125.5,level
+2014-04-01,world,OILS,Растительные масла,121.53,level
+2014-04-01,world,SUGAR,Сахар,109.0,level
+2014-05-01,world,FFPI,Индекс продовольственных цен ФАО,121.2,level
+2014-05-01,world,MEAT,Мясо,111.7,level
+2014-05-01,world,DAIRY,Молочная продукция,141.8,level
+2014-05-01,world,CEREALS,Зерновые,125.2,level
+2014-05-01,world,OILS,Растительные масла,119.18,level
+2014-05-01,world,SUGAR,Сахар,113.1,level
+2014-06-01,world,FFPI,Индекс продовольственных цен ФАО,119.2,level
+2014-06-01,world,MEAT,Мясо,116.0,level
+2014-06-01,world,DAIRY,Молочная продукция,136.1,level
+2014-06-01,world,CEREALS,Зерновые,118.7,level
+2014-06-01,world,OILS,Растительные масла,115.22,level
+2014-06-01,world,SUGAR,Сахар,112.5,level
+2014-07-01,world,FFPI,Индекс продовольственных цен ФАО,116.3,level
+2014-07-01,world,MEAT,Мясо,117.4,level
+2014-07-01,world,DAIRY,Молочная продукция,130.2,level
+2014-07-01,world,CEREALS,Зерновые,112.2,level
+2014-07-01,world,OILS,Растительные масла,110.63,level
+2014-07-01,world,SUGAR,Сахар,113.0,level
+2014-08-01,world,FFPI,Индекс продовольственных цен ФАО,112.8,level
+2014-08-01,world,MEAT,Мясо,118.5,level
+2014-08-01,world,DAIRY,Молочная продукция,120.6,level
+2014-08-01,world,CEREALS,Зерновые,110.4,level
+2014-08-01,world,OILS,Растительные масла,101.65,level
+2014-08-01,world,SUGAR,Сахар,106.6,level
+2014-09-01,world,FFPI,Индекс продовольственных цен ФАО,109.2,level
+2014-09-01,world,MEAT,Мясо,117.5,level
+2014-09-01,world,DAIRY,Молочная продукция,110.8,level
+2014-09-01,world,CEREALS,Зерновые,107.4,level
+2014-09-01,world,OILS,Растительные масла,98.55,level
+2014-09-01,world,SUGAR,Сахар,99.5,level
+2014-10-01,world,FFPI,Индекс продовольственных цен ФАО,109.3,level
+2014-10-01,world,MEAT,Мясо,117.1,level
+2014-10-01,world,DAIRY,Молочная продукция,107.1,level
+2014-10-01,world,CEREALS,Зерновые,108.2,level
+2014-10-01,world,OILS,Растительные масла,100.09,level
+2014-10-01,world,SUGAR,Сахар,103.6,level
+2014-11-01,world,FFPI,Индекс продовольственных цен ФАО,108.1,level
+2014-11-01,world,MEAT,Мясо,114.8,level
+2014-11-01,world,DAIRY,Молочная продукция,102.6,level
+2014-11-01,world,CEREALS,Зерновые,109.3,level
+2014-11-01,world,OILS,Растительные масла,100.85,level
+2014-11-01,world,SUGAR,Сахар,100.2,level
+2014-12-01,world,FFPI,Индекс продовольственных цен ФАО,105.2,level
+2014-12-01,world,MEAT,Мясо,108.9,level
+2014-12-01,world,DAIRY,Молочная продукция,98.5,level
+2014-12-01,world,CEREALS,Зерновые,110.9,level
+2014-12-01,world,OILS,Растительные масла,97.89,level
+2014-12-01,world,SUGAR,Сахар,94.8,level
+2015-01-01,world,FFPI,Индекс продовольственных цен ФАО,101.0,level
+2015-01-01,world,MEAT,Мясо,104.6,level
+2015-01-01,world,DAIRY,Молочная продукция,92.4,level
+2015-01-01,world,CEREALS,Зерновые,105.9,level
+2015-01-01,world,OILS,Растительные масла,95.0,level
+2015-01-01,world,SUGAR,Сахар,95.0,level
+2015-02-01,world,FFPI,Индекс продовольственных цен ФАО,98.7,level
+2015-02-01,world,MEAT,Мясо,101.3,level
+2015-02-01,world,DAIRY,Молочная продукция,95.2,level
+2015-02-01,world,CEREALS,Зерновые,101.6,level
+2015-02-01,world,OILS,Растительные масла,95.18,level
+2015-02-01,world,SUGAR,Сахар,90.3,level
+2015-03-01,world,FFPI,Индекс продовольственных цен ФАО,95.7,level
+2015-03-01,world,MEAT,Мясо,97.1,level
+2015-03-01,world,DAIRY,Молочная продукция,95.1,level
+2015-03-01,world,CEREALS,Зерновые,99.5,level
+2015-03-01,world,OILS,Растительные масла,92.62,level
+2015-03-01,world,SUGAR,Сахар,82.0,level
+2015-04-01,world,FFPI,Индекс продовольственных цен ФАО,94.6,level
+2015-04-01,world,MEAT,Мясо,97.4,level
+2015-04-01,world,DAIRY,Молочная продукция,90.6,level
+2015-04-01,world,CEREALS,Зерновые,98.2,level
+2015-04-01,world,OILS,Растительные масла,91.87,level
+2015-04-01,world,SUGAR,Сахар,80.9,level
+2015-05-01,world,FFPI,Индекс продовольственных цен ФАО,95.0,level
+2015-05-01,world,MEAT,Мясо,99.6,level
+2015-05-01,world,DAIRY,Молочная продукция,89.9,level
+2015-05-01,world,CEREALS,Зерновые,95.7,level
+2015-05-01,world,OILS,Растительные масла,94.49,level
+2015-05-01,world,SUGAR,Сахар,82.6,level
+2015-06-01,world,FFPI,Индекс продовольственных цен ФАО,94.6,level
+2015-06-01,world,MEAT,Мясо,98.7,level
+2015-06-01,world,DAIRY,Молочная продукция,87.7,level
+2015-06-01,world,CEREALS,Зерновые,96.7,level
+2015-06-01,world,OILS,Растительные масла,95.89,level
+2015-06-01,world,SUGAR,Сахар,77.1,level
+2015-07-01,world,FFPI,Индекс продовольственных цен ФАО,93.8,level
+2015-07-01,world,MEAT,Мясо,99.0,level
+2015-07-01,world,DAIRY,Молочная продукция,82.2,level
+2015-07-01,world,CEREALS,Зерновые,98.9,level
+2015-07-01,world,OILS,Растительные масла,90.43,level
+2015-07-01,world,SUGAR,Сахар,79.0,level
+2015-08-01,world,FFPI,Индекс продовольственных цен ФАО,89.5,level
+2015-08-01,world,MEAT,Мясо,99.0,level
+2015-08-01,world,DAIRY,Молочная продукция,79.9,level
+2015-08-01,world,CEREALS,Зерновые,91.9,level
+2015-08-01,world,OILS,Растительные масла,82.29,level
+2015-08-01,world,SUGAR,Сахар,71.2,level
+2015-09-01,world,FFPI,Индекс продовольственных цен ФАО,88.9,level
+2015-09-01,world,MEAT,Мясо,96.7,level
+2015-09-01,world,DAIRY,Молочная продукция,83.2,level
+2015-09-01,world,CEREALS,Зерновые,90.5,level
+2015-09-01,world,OILS,Растительные масла,81.96,level
+2015-09-01,world,SUGAR,Сахар,73.4,level
+2015-10-01,world,FFPI,Индекс продовольственных цен ФАО,90.3,level
+2015-10-01,world,MEAT,Мясо,92.1,level
+2015-10-01,world,DAIRY,Молочная продукция,88.0,level
+2015-10-01,world,CEREALS,Зерновые,91.7,level
+2015-10-01,world,OILS,Растительные масла,87.76,level
+2015-10-01,world,SUGAR,Сахар,86.1,level
+2015-11-01,world,FFPI,Индекс продовольственных цен ФАО,87.7,level
+2015-11-01,world,MEAT,Мясо,89.2,level
+2015-11-01,world,DAIRY,Молочная продукция,80.5,level
+2015-11-01,world,CEREALS,Зерновые,90.5,level
+2015-11-01,world,OILS,Растительные масла,85.13,level
+2015-11-01,world,SUGAR,Сахар,90.0,level
+2015-12-01,world,FFPI,Индекс продовольственных цен ФАО,87.0,level
+2015-12-01,world,MEAT,Мясо,86.8,level
+2015-12-01,world,DAIRY,Молочная продукция,81.0,level
+2015-12-01,world,CEREALS,Зерновые,89.4,level
+2015-12-01,world,OILS,Растительные масла,86.68,level
+2015-12-01,world,SUGAR,Сахар,90.6,level
+2016-01-01,world,FFPI,Индекс продовольственных цен ФАО,84.9,level
+2016-01-01,world,MEAT,Мясо,84.4,level
+2016-01-01,world,DAIRY,Молочная продукция,79.4,level
+2016-01-01,world,CEREALS,Зерновые,87.6,level
+2016-01-01,world,OILS,Растительные масла,85.29,level
+2016-01-01,world,SUGAR,Сахар,86.9,level
+2016-02-01,world,FFPI,Индекс продовольственных цен ФАО,86.1,level
+2016-02-01,world,MEAT,Мясо,86.0,level
+2016-02-01,world,DAIRY,Молочная продукция,78.8,level
+2016-02-01,world,CEREALS,Зерновые,87.3,level
+2016-02-01,world,OILS,Растительные масла,92.15,level
+2016-02-01,world,SUGAR,Сахар,81.6,level
+2016-03-01,world,FFPI,Индекс продовольственных цен ФАО,87.4,level
+2016-03-01,world,MEAT,Мясо,86.1,level
+2016-03-01,world,DAIRY,Молочная продукция,76.7,level
+2016-03-01,world,CEREALS,Зерновые,86.5,level
+2016-03-01,world,OILS,Растительные масла,97.34,level
+2016-03-01,world,SUGAR,Сахар,95.5,level
+2016-04-01,world,FFPI,Индекс продовольственных цен ФАО,89.1,level
+2016-04-01,world,MEAT,Мясо,87.7,level
+2016-04-01,world,DAIRY,Молочная продукция,77.1,level
+2016-04-01,world,CEREALS,Зерновые,88.4,level
+2016-04-01,world,OILS,Растительные масла,101.17,level
+2016-04-01,world,SUGAR,Сахар,93.9,level
+2016-05-01,world,FFPI,Индекс продовольственных цен ФАО,90.6,level
+2016-05-01,world,MEAT,Мясо,90.2,level
+2016-05-01,world,DAIRY,Молочная продукция,72.7,level
+2016-05-01,world,CEREALS,Зерновые,91.1,level
+2016-05-01,world,OILS,Растительные масла,99.56,level
+2016-05-01,world,SUGAR,Сахар,104.8,level
+2016-06-01,world,FFPI,Индекс продовольственных цен ФАО,93.8,level
+2016-06-01,world,MEAT,Мясо,94.1,level
+2016-06-01,world,DAIRY,Молочная продукция,73.9,level
+2016-06-01,world,CEREALS,Зерновые,94.1,level
+2016-06-01,world,OILS,Растительные масла,97.93,level
+2016-06-01,world,SUGAR,Сахар,120.4,level
+2016-07-01,world,FFPI,Индекс продовольственных цен ФАО,93.0,level
+2016-07-01,world,MEAT,Мясо,95.3,level
+2016-07-01,world,DAIRY,Молочная продукция,76.0,level
+2016-07-01,world,CEREALS,Зерновые,90.4,level
+2016-07-01,world,OILS,Растительные масла,94.9,level
+2016-07-01,world,SUGAR,Сахар,121.6,level
+2016-08-01,world,FFPI,Индекс продовольственных цен ФАО,95.3,level
+2016-08-01,world,MEAT,Мясо,96.4,level
+2016-08-01,world,DAIRY,Молочная продукция,81.8,level
+2016-08-01,world,CEREALS,Зерновые,89.3,level
+2016-08-01,world,OILS,Растительные масла,102.39,level
+2016-08-01,world,SUGAR,Сахар,124.6,level
+2016-09-01,world,FFPI,Индекс продовольственных цен ФАО,96.1,level
+2016-09-01,world,MEAT,Мясо,94.9,level
+2016-09-01,world,DAIRY,Молочная продукция,90.9,level
+2016-09-01,world,CEREALS,Зерновые,86.3,level
+2016-09-01,world,OILS,Растительные масла,104.32,level
+2016-09-01,world,SUGAR,Сахар,132.9,level
+2016-10-01,world,FFPI,Индекс продовольственных цен ФАО,95.9,level
+2016-10-01,world,MEAT,Мясо,93.0,level
+2016-10-01,world,DAIRY,Молочная продукция,93.8,level
+2016-10-01,world,CEREALS,Зерновые,86.7,level
+2016-10-01,world,OILS,Растительные масла,101.85,level
+2016-10-01,world,SUGAR,Сахар,137.5,level
+2016-11-01,world,FFPI,Индекс продовольственных цен ФАО,96.0,level
+2016-11-01,world,MEAT,Мясо,93.9,level
+2016-11-01,world,DAIRY,Молочная продукция,94.5,level
+2016-11-01,world,CEREALS,Зерновые,86.0,level
+2016-11-01,world,OILS,Растительные масла,106.16,level
+2016-11-01,world,SUGAR,Сахар,125.2,level
+2016-12-01,world,FFPI,Индекс продовольственных цен ФАО,95.3,level
+2016-12-01,world,MEAT,Мясо,91.2,level
+2016-12-01,world,DAIRY,Молочная продукция,96.2,level
+2016-12-01,world,CEREALS,Зерновые,86.1,level
+2016-12-01,world,OILS,Растительные масла,110.26,level
+2016-12-01,world,SUGAR,Сахар,114.5,level
+2017-01-01,world,FFPI,Индекс продовольственных цен ФАО,97.8,level
+2017-01-01,world,MEAT,Мясо,92.2,level
+2017-01-01,world,DAIRY,Молочная продукция,98.6,level
+2017-01-01,world,CEREALS,Зерновые,88.7,level
+2017-01-01,world,OILS,Растительные масла,112.19,level
+2017-01-01,world,SUGAR,Сахар,125.8,level
+2017-02-01,world,FFPI,Индекс продовольственных цен ФАО,98.1,level
+2017-02-01,world,MEAT,Мясо,94.0,level
+2017-02-01,world,DAIRY,Молочная продукция,99.2,level
+2017-02-01,world,CEREALS,Зерновые,90.0,level
+2017-02-01,world,OILS,Растительные масла,107.97,level
+2017-02-01,world,SUGAR,Сахар,125.6,level
+2017-03-01,world,FFPI,Индекс продовольственных цен ФАО,96.2,level
+2017-03-01,world,MEAT,Мясо,95.4,level
+2017-03-01,world,DAIRY,Молочная продукция,100.6,level
+2017-03-01,world,CEREALS,Зерновые,87.9,level
+2017-03-01,world,OILS,Растительные масла,101.59,level
+2017-03-01,world,SUGAR,Сахар,111.9,level
+2017-04-01,world,FFPI,Индекс продовольственных цен ФАО,95.0,level
+2017-04-01,world,MEAT,Мясо,97.3,level
+2017-04-01,world,DAIRY,Молочная продукция,100.0,level
+2017-04-01,world,CEREALS,Зерновые,86.9,level
+2017-04-01,world,OILS,Растительные масла,97.58,level
+2017-04-01,world,SUGAR,Сахар,101.7,level
+2017-05-01,world,FFPI,Индекс продовольственных цен ФАО,97.3,level
+2017-05-01,world,MEAT,Мясо,99.3,level
+2017-05-01,world,DAIRY,Молочная продукция,104.8,level
+2017-05-01,world,CEREALS,Зерновые,88.3,level
+2017-05-01,world,OILS,Растительные масла,101.96,level
+2017-05-01,world,SUGAR,Сахар,99.4,level
+2017-06-01,world,FFPI,Индекс продовольственных цен ФАО,97.8,level
+2017-06-01,world,MEAT,Мясо,100.1,level
+2017-06-01,world,DAIRY,Молочная продукция,109.7,level
+2017-06-01,world,CEREALS,Зерновые,92.4,level
+2017-06-01,world,OILS,Растительные масла,97.47,level
+2017-06-01,world,SUGAR,Сахар,86.0,level
+2017-07-01,world,FFPI,Индекс продовольственных цен ФАО,100.0,level
+2017-07-01,world,MEAT,Мясо,100.6,level
+2017-07-01,world,DAIRY,Молочная продукция,113.9,level
+2017-07-01,world,CEREALS,Зерновые,96.9,level
+2017-07-01,world,OILS,Растительные масла,96.66,level
+2017-07-01,world,SUGAR,Сахар,90.5,level
+2017-08-01,world,FFPI,Индекс продовольственных цен ФАО,99.2,level
+2017-08-01,world,MEAT,Мясо,100.0,level
+2017-08-01,world,DAIRY,Молочная продукция,116.9,level
+2017-08-01,world,CEREALS,Зерновые,92.3,level
+2017-08-01,world,OILS,Растительные масла,99.16,level
+2017-08-01,world,SUGAR,Сахар,88.9,level
+2017-09-01,world,FFPI,Индекс продовольственных цен ФАО,99.7,level
+2017-09-01,world,MEAT,Мясо,98.6,level
+2017-09-01,world,DAIRY,Молочная продукция,118.4,level
+2017-09-01,world,CEREALS,Зерновые,92.1,level
+2017-09-01,world,OILS,Растительные масла,103.83,level
+2017-09-01,world,SUGAR,Сахар,89.0,level
+2017-10-01,world,FFPI,Индекс продовольственных цен ФАО,98.8,level
+2017-10-01,world,MEAT,Мясо,98.2,level
+2017-10-01,world,DAIRY,Молочная продукция,115.4,level
+2017-10-01,world,CEREALS,Зерновые,91.8,level
+2017-10-01,world,OILS,Растительные масла,102.68,level
+2017-10-01,world,SUGAR,Сахар,88.7,level
+2017-11-01,world,FFPI,Индекс продовольственных цен ФАО,98.8,level
+2017-11-01,world,MEAT,Мясо,98.0,level
+2017-11-01,world,DAIRY,Молочная продукция,111.4,level
+2017-11-01,world,CEREALS,Зерновые,92.1,level
+2017-11-01,world,OILS,Растительные масла,103.85,level
+2017-11-01,world,SUGAR,Сахар,92.7,level
+2017-12-01,world,FFPI,Индекс продовольственных цен ФАО,96.4,level
+2017-12-01,world,MEAT,Мясо,96.0,level
+2017-12-01,world,DAIRY,Молочная продукция,107.3,level
+2017-12-01,world,CEREALS,Зерновые,92.4,level
+2017-12-01,world,OILS,Растительные масла,97.96,level
+2017-12-01,world,SUGAR,Сахар,89.0,level
+2018-01-01,world,FFPI,Индекс продовольственных цен ФАО,96.7,level
+2018-01-01,world,MEAT,Мясо,95.3,level
+2018-01-01,world,DAIRY,Молочная продукция,106.0,level
+2018-01-01,world,CEREALS,Зерновые,95.2,level
+2018-01-01,world,OILS,Растительные масла,98.25,level
+2018-01-01,world,SUGAR,Сахар,87.2,level
+2018-02-01,world,FFPI,Индекс продовольственных цен ФАО,97.8,level
+2018-02-01,world,MEAT,Мясо,96.6,level
+2018-02-01,world,DAIRY,Молочная продукция,108.8,level
+2018-02-01,world,CEREALS,Зерновые,98.4,level
+2018-02-01,world,OILS,Растительные масла,95.6,level
+2018-02-01,world,SUGAR,Сахар,83.9,level
+2018-03-01,world,FFPI,Индекс продовольственных цен ФАО,98.8,level
+2018-03-01,world,MEAT,Мясо,96.6,level
+2018-03-01,world,DAIRY,Молочная продукция,111.3,level
+2018-03-01,world,CEREALS,Зерновые,101.8,level
+2018-03-01,world,OILS,Растительные масла,95.36,level
+2018-03-01,world,SUGAR,Сахар,80.9,level
+2018-04-01,world,FFPI,Индекс продовольственных цен ФАО,98.4,level
+2018-04-01,world,MEAT,Мясо,95.4,level
+2018-04-01,world,DAIRY,Молочная продукция,110.0,level
+2018-04-01,world,CEREALS,Зерновые,104.0,level
+2018-04-01,world,OILS,Растительные масла,94.02,level
+2018-04-01,world,SUGAR,Сахар,76.8,level
+2018-05-01,world,FFPI,Индекс продовольственных цен ФАО,98.5,level
+2018-05-01,world,MEAT,Мясо,94.9,level
+2018-05-01,world,DAIRY,Молочная продукция,111.4,level
+2018-05-01,world,CEREALS,Зерновые,105.5,level
+2018-05-01,world,OILS,Растительные масла,92.15,level
+2018-05-01,world,SUGAR,Сахар,76.4,level
+2018-06-01,world,FFPI,Индекс продовольственных цен ФАО,96.8,level
+2018-06-01,world,MEAT,Мясо,94.7,level
+2018-06-01,world,DAIRY,Молочная продукция,112.3,level
+2018-06-01,world,CEREALS,Зерновые,100.8,level
+2018-06-01,world,OILS,Растительные масла,89.33,level
+2018-06-01,world,SUGAR,Сахар,77.4,level
+2018-07-01,world,FFPI,Индекс продовольственных цен ФАО,95.0,level
+2018-07-01,world,MEAT,Мясо,94.3,level
+2018-07-01,world,DAIRY,Молочная продукция,110.1,level
+2018-07-01,world,CEREALS,Зерновые,98.7,level
+2018-07-01,world,OILS,Растительные масла,86.9,level
+2018-07-01,world,SUGAR,Сахар,72.5,level
+2018-08-01,world,FFPI,Индекс продовольственных цен ФАО,95.8,level
+2018-08-01,world,MEAT,Мясо,95.4,level
+2018-08-01,world,DAIRY,Молочная продукция,108.5,level
+2018-08-01,world,CEREALS,Зерновые,103.5,level
+2018-08-01,world,OILS,Растительные масла,84.43,level
+2018-08-01,world,SUGAR,Сахар,68.6,level
+2018-09-01,world,FFPI,Индекс продовольственных цен ФАО,94.0,level
+2018-09-01,world,MEAT,Мясо,93.4,level
+2018-09-01,world,DAIRY,Молочная продукция,108.3,level
+2018-09-01,world,CEREALS,Зерновые,100.3,level
+2018-09-01,world,OILS,Растительные масла,82.33,level
+2018-09-01,world,SUGAR,Сахар,70.4,level
+2018-10-01,world,FFPI,Индекс продовольственных цен ФАО,93.2,level
+2018-10-01,world,MEAT,Мясо,91.9,level
+2018-10-01,world,DAIRY,Молочная продукция,102.8,level
+2018-10-01,world,CEREALS,Зерновые,100.9,level
+2018-10-01,world,OILS,Растительные масла,81.33,level
+2018-10-01,world,SUGAR,Сахар,76.5,level
+2018-11-01,world,FFPI,Индекс продовольственных цен ФАО,91.9,level
+2018-11-01,world,MEAT,Мясо,92.1,level
+2018-11-01,world,DAIRY,Молочная продукция,100.0,level
+2018-11-01,world,CEREALS,Зерновые,99.6,level
+2018-11-01,world,OILS,Растительные масла,76.59,level
+2018-11-01,world,SUGAR,Сахар,79.9,level
+2018-12-01,world,FFPI,Индекс продовольственных цен ФАО,92.0,level
+2018-12-01,world,MEAT,Мясо,92.3,level
+2018-12-01,world,DAIRY,Молочная продукция,97.8,level
+2018-12-01,world,CEREALS,Зерновые,101.1,level
+2018-12-01,world,OILS,Растительные масла,76.84,level
+2018-12-01,world,SUGAR,Сахар,78.3,level
+2019-01-01,world,FFPI,Индекс продовольственных цен ФАО,93.1,level
+2019-01-01,world,MEAT,Мясо,91.6,level
+2019-01-01,world,DAIRY,Молочная продукция,100.9,level
+2019-01-01,world,CEREALS,Зерновые,101.8,level
+2019-01-01,world,OILS,Растительные масла,80.26,level
+2019-01-01,world,SUGAR,Сахар,79.3,level
+2019-02-01,world,FFPI,Индекс продовольственных цен ФАО,93.8,level
+2019-02-01,world,MEAT,Мясо,92.5,level
+2019-02-01,world,DAIRY,Молочная продукция,103.8,level
+2019-02-01,world,CEREALS,Зерновые,100.7,level
+2019-02-01,world,OILS,Растительные масла,81.78,level
+2019-02-01,world,SUGAR,Сахар,80.3,level
+2019-03-01,world,FFPI,Индекс продовольственных цен ФАО,93.0,level
+2019-03-01,world,MEAT,Мясо,94.0,level
+2019-03-01,world,DAIRY,Молочная продукция,105.6,level
+2019-03-01,world,CEREALS,Зерновые,97.5,level
+2019-03-01,world,OILS,Растительные масла,78.41,level
+2019-03-01,world,SUGAR,Сахар,78.7,level
+2019-04-01,world,FFPI,Индекс продовольственных цен ФАО,93.5,level
+2019-04-01,world,MEAT,Мясо,97.3,level
+2019-04-01,world,DAIRY,Молочная продукция,106.1,level
+2019-04-01,world,CEREALS,Зерновые,94.6,level
+2019-04-01,world,OILS,Растительные масла,79.11,level
+2019-04-01,world,SUGAR,Сахар,79.3,level
+2019-05-01,world,FFPI,Индекс продовольственных цен ФАО,94.2,level
+2019-05-01,world,MEAT,Мясо,100.2,level
+2019-05-01,world,DAIRY,Молочная продукция,106.6,level
+2019-05-01,world,CEREALS,Зерновые,94.4,level
+2019-05-01,world,OILS,Растительные масла,78.5,level
+2019-05-01,world,SUGAR,Сахар,76.7,level
+2019-06-01,world,FFPI,Индекс продовольственных цен ФАО,95.4,level
+2019-06-01,world,MEAT,Мясо,101.2,level
+2019-06-01,world,DAIRY,Молочная продукция,102.9,level
+2019-06-01,world,CEREALS,Зерновые,99.2,level
+2019-06-01,world,OILS,Растительные масла,77.46,level
+2019-06-01,world,SUGAR,Сахар,79.9,level
+2019-07-01,world,FFPI,Индекс продовольственных цен ФАО,95.1,level
+2019-07-01,world,MEAT,Мясо,102.3,level
+2019-07-01,world,DAIRY,Молочная продукция,101.1,level
+2019-07-01,world,CEREALS,Зерновые,97.6,level
+2019-07-01,world,OILS,Растительные масла,78.09,level
+2019-07-01,world,SUGAR,Сахар,79.4,level
+2019-08-01,world,FFPI,Индекс продовольственных цен ФАО,93.8,level
+2019-08-01,world,MEAT,Мясо,101.6,level
+2019-08-01,world,DAIRY,Молочная продукция,100.3,level
+2019-08-01,world,CEREALS,Зерновые,92.6,level
+2019-08-01,world,OILS,Растительные масла,82.59,level
+2019-08-01,world,SUGAR,Сахар,76.2,level
+2019-09-01,world,FFPI,Индекс продовольственных цен ФАО,93.2,level
+2019-09-01,world,MEAT,Мясо,100.6,level
+2019-09-01,world,DAIRY,Молочная продукция,99.6,level
+2019-09-01,world,CEREALS,Зерновые,91.8,level
+2019-09-01,world,OILS,Растительные масла,83.89,level
+2019-09-01,world,SUGAR,Сахар,73.5,level
+2019-10-01,world,FFPI,Индекс продовольственных цен ФАО,95.0,level
+2019-10-01,world,MEAT,Мясо,100.9,level
+2019-10-01,world,DAIRY,Молочная продукция,100.8,level
+2019-10-01,world,CEREALS,Зерновые,96.0,level
+2019-10-01,world,OILS,Растительные масла,84.11,level
+2019-10-01,world,SUGAR,Сахар,77.8,level
+2019-11-01,world,FFPI,Индекс продовольственных цен ФАО,98.2,level
+2019-11-01,world,MEAT,Мясо,105.4,level
+2019-11-01,world,DAIRY,Молочная продукция,102.5,level
+2019-11-01,world,CEREALS,Зерновые,95.6,level
+2019-11-01,world,OILS,Растительные масла,93.16,level
+2019-11-01,world,SUGAR,Сахар,79.2,level
+2019-12-01,world,FFPI,Индекс продовольственных цен ФАО,100.8,level
+2019-12-01,world,MEAT,Мясо,106.0,level
+2019-12-01,world,DAIRY,Молочная продукция,103.5,level
+2019-12-01,world,CEREALS,Зерновые,97.4,level
+2019-12-01,world,OILS,Растительные масла,101.5,level
+2019-12-01,world,SUGAR,Сахар,83.0,level
+2020-01-01,world,FFPI,Индекс продовольственных цен ФАО,102.5,level
+2020-01-01,world,MEAT,Мясо,103.5,level
+2020-01-01,world,DAIRY,Молочная продукция,103.8,level
+2020-01-01,world,CEREALS,Зерновые,100.7,level
+2020-01-01,world,OILS,Растительные масла,108.73,level
+2020-01-01,world,SUGAR,Сахар,87.5,level
+2020-02-01,world,FFPI,Индекс продовольственных цен ФАО,99.6,level
+2020-02-01,world,MEAT,Мясо,101.0,level
+2020-02-01,world,DAIRY,Молочная продукция,102.8,level
+2020-02-01,world,CEREALS,Зерновые,99.6,level
+2020-02-01,world,OILS,Растительные масла,97.55,level
+2020-02-01,world,SUGAR,Сахар,91.4,level
+2020-03-01,world,FFPI,Индекс продовольственных цен ФАО,95.2,level
+2020-03-01,world,MEAT,Мясо,99.5,level
+2020-03-01,world,DAIRY,Молочная продукция,101.6,level
+2020-03-01,world,CEREALS,Зерновые,98.0,level
+2020-03-01,world,OILS,Растительные масла,85.42,level
+2020-03-01,world,SUGAR,Сахар,73.9,level
+2020-04-01,world,FFPI,Индекс продовольственных цен ФАО,92.4,level
+2020-04-01,world,MEAT,Мясо,96.5,level
+2020-04-01,world,DAIRY,Молочная продукция,95.9,level
+2020-04-01,world,CEREALS,Зерновые,99.6,level
+2020-04-01,world,OILS,Растительные масла,81.18,level
+2020-04-01,world,SUGAR,Сахар,63.2,level
+2020-05-01,world,FFPI,Индекс продовольственных цен ФАО,91.2,level
+2020-05-01,world,MEAT,Мясо,95.4,level
+2020-05-01,world,DAIRY,Молочная продукция,94.5,level
+2020-05-01,world,CEREALS,Зерновые,98.0,level
+2020-05-01,world,OILS,Растительные масла,77.77,level
+2020-05-01,world,SUGAR,Сахар,67.8,level
+2020-06-01,world,FFPI,Индекс продовольственных цен ФАО,93.1,level
+2020-06-01,world,MEAT,Мясо,94.5,level
+2020-06-01,world,DAIRY,Молочная продукция,98.3,level
+2020-06-01,world,CEREALS,Зерновые,97.3,level
+2020-06-01,world,OILS,Растительные масла,86.61,level
+2020-06-01,world,SUGAR,Сахар,74.9,level
+2020-07-01,world,FFPI,Индекс продовольственных цен ФАО,93.8,level
+2020-07-01,world,MEAT,Мясо,91.4,level
+2020-07-01,world,DAIRY,Молочная продукция,101.8,level
+2020-07-01,world,CEREALS,Зерновые,97.3,level
+2020-07-01,world,OILS,Растительные масла,93.2,level
+2020-07-01,world,SUGAR,Сахар,76.0,level
+2020-08-01,world,FFPI,Индекс продовольственных цен ФАО,95.7,level
+2020-08-01,world,MEAT,Мясо,91.4,level
+2020-08-01,world,DAIRY,Молочная продукция,102.1,level
+2020-08-01,world,CEREALS,Зерновые,99.2,level
+2020-08-01,world,OILS,Растительные масла,98.7,level
+2020-08-01,world,SUGAR,Сахар,81.1,level
+2020-09-01,world,FFPI,Индекс продовольственных цен ФАО,97.9,level
+2020-09-01,world,MEAT,Мясо,91.2,level
+2020-09-01,world,DAIRY,Молочная продукция,102.3,level
+2020-09-01,world,CEREALS,Зерновые,104.3,level
+2020-09-01,world,OILS,Растительные масла,104.6,level
+2020-09-01,world,SUGAR,Сахар,79.0,level
+2020-10-01,world,FFPI,Индекс продовольственных цен ФАО,101.3,level
+2020-10-01,world,MEAT,Мясо,91.6,level
+2020-10-01,world,DAIRY,Молочная продукция,104.5,level
+2020-10-01,world,CEREALS,Зерновые,112.1,level
+2020-10-01,world,OILS,Растительные масла,106.45,level
+2020-10-01,world,SUGAR,Сахар,84.7,level
+2020-11-01,world,FFPI,Индекс продовольственных цен ФАО,105.5,level
+2020-11-01,world,MEAT,Мясо,93.1,level
+2020-11-01,world,DAIRY,Молочная продукция,105.4,level
+2020-11-01,world,CEREALS,Зерновые,114.8,level
+2020-11-01,world,OILS,Растительные масла,121.9,level
+2020-11-01,world,SUGAR,Сахар,87.5,level
+2020-12-01,world,FFPI,Индекс продовольственных цен ФАО,108.5,level
+2020-12-01,world,MEAT,Мясо,94.7,level
+2020-12-01,world,DAIRY,Молочная продукция,108.7,level
+2020-12-01,world,CEREALS,Зерновые,116.4,level
+2020-12-01,world,OILS,Растительные масла,131.2,level
+2020-12-01,world,SUGAR,Сахар,87.1,level
+2021-01-01,world,FFPI,Индекс продовольственных цен ФАО,113.5,level
+2021-01-01,world,MEAT,Мясо,95.9,level
+2021-01-01,world,DAIRY,Молочная продукция,111.1,level
+2021-01-01,world,CEREALS,Зерновые,125.0,level
+2021-01-01,world,OILS,Растительные масла,138.87,level
+2021-01-01,world,SUGAR,Сахар,94.2,level
+2021-02-01,world,FFPI,Индекс продовольственных цен ФАО,116.5,level
+2021-02-01,world,MEAT,Мясо,97.7,level
+2021-02-01,world,DAIRY,Молочная продукция,112.8,level
+2021-02-01,world,CEREALS,Зерновые,126.1,level
+2021-02-01,world,OILS,Растительные масла,147.46,level
+2021-02-01,world,SUGAR,Сахар,100.2,level
+2021-03-01,world,FFPI,Индекс продовольственных цен ФАО,119.1,level
+2021-03-01,world,MEAT,Мясо,100.5,level
+2021-03-01,world,DAIRY,Молочная продукция,117.2,level
+2021-03-01,world,CEREALS,Зерновые,123.9,level
+2021-03-01,world,OILS,Растительные масла,159.3,level
+2021-03-01,world,SUGAR,Сахар,96.2,level
+2021-04-01,world,FFPI,Индекс продовольственных цен ФАО,122.1,level
+2021-04-01,world,MEAT,Мясо,104.4,level
+2021-04-01,world,DAIRY,Молочная продукция,119.0,level
+2021-04-01,world,CEREALS,Зерновые,126.2,level
+2021-04-01,world,OILS,Растительные масла,162.19,level
+2021-04-01,world,SUGAR,Сахар,100.0,level
+2021-05-01,world,FFPI,Индекс продовольственных цен ФАО,128.4,level
+2021-05-01,world,MEAT,Мясо,108.1,level
+2021-05-01,world,DAIRY,Молочная продукция,121.2,level
+2021-05-01,world,CEREALS,Зерновые,133.7,level
+2021-05-01,world,OILS,Растительные масла,174.9,level
+2021-05-01,world,SUGAR,Сахар,106.8,level
+2021-06-01,world,FFPI,Индекс продовольственных цен ФАО,125.4,level
+2021-06-01,world,MEAT,Мясо,110.9,level
+2021-06-01,world,DAIRY,Молочная продукция,120.1,level
+2021-06-01,world,CEREALS,Зерновые,130.3,level
+2021-06-01,world,OILS,Растительные масла,157.7,level
+2021-06-01,world,SUGAR,Сахар,107.7,level
+2021-07-01,world,FFPI,Индекс продовольственных цен ФАО,124.4,level
+2021-07-01,world,MEAT,Мясо,113.3,level
+2021-07-01,world,DAIRY,Молочная продукция,117.2,level
+2021-07-01,world,CEREALS,Зерновые,126.3,level
+2021-07-01,world,OILS,Растительные масла,155.5,level
+2021-07-01,world,SUGAR,Сахар,109.6,level
+2021-08-01,world,FFPI,Индекс продовольственных цен ФАО,128.0,level
+2021-08-01,world,MEAT,Мясо,113.1,level
+2021-08-01,world,DAIRY,Молочная продукция,117.2,level
+2021-08-01,world,CEREALS,Зерновые,130.4,level
+2021-08-01,world,OILS,Растительные масла,165.9,level
+2021-08-01,world,SUGAR,Сахар,120.5,level
+2021-09-01,world,FFPI,Индекс продовольственных цен ФАО,129.1,level
+2021-09-01,world,MEAT,Мясо,112.1,level
+2021-09-01,world,DAIRY,Молочная продукция,119.2,level
+2021-09-01,world,CEREALS,Зерновые,132.8,level
+2021-09-01,world,OILS,Растительные масла,168.6,level
+2021-09-01,world,SUGAR,Сахар,121.2,level
+2021-10-01,world,FFPI,Индекс продовольственных цен ФАО,133.3,level
+2021-10-01,world,MEAT,Мясо,111.6,level
+2021-10-01,world,DAIRY,Молочная продукция,122.6,level
+2021-10-01,world,CEREALS,Зерновые,137.1,level
+2021-10-01,world,OILS,Растительные масла,184.8,level
+2021-10-01,world,SUGAR,Сахар,119.1,level
+2021-11-01,world,FFPI,Индекс продовольственных цен ФАО,135.4,level
+2021-11-01,world,MEAT,Мясо,112.4,level
+2021-11-01,world,DAIRY,Молочная продукция,127.2,level
+2021-11-01,world,CEREALS,Зерновые,141.4,level
+2021-11-01,world,OILS,Растительные масла,184.6,level
+2021-11-01,world,SUGAR,Сахар,120.2,level
+2021-12-01,world,FFPI,Индекс продовольственных цен ФАО,133.7,level
+2021-12-01,world,MEAT,Мясо,110.5,level
+2021-12-01,world,DAIRY,Молочная продукция,130.4,level
+2021-12-01,world,CEREALS,Зерновые,140.5,level
+2021-12-01,world,OILS,Растительные масла,178.5,level
+2021-12-01,world,SUGAR,Сахар,116.4,level
+2022-01-01,world,FFPI,Индекс продовольственных цен ФАО,135.7,level
+2022-01-01,world,MEAT,Мясо,111.7,level
+2022-01-01,world,DAIRY,Молочная продукция,134.3,level
+2022-01-01,world,CEREALS,Зерновые,140.6,level
+2022-01-01,world,OILS,Растительные масла,185.9,level
+2022-01-01,world,SUGAR,Сахар,112.7,level
+2022-02-01,world,FFPI,Индекс продовольственных цен ФАО,141.7,level
+2022-02-01,world,MEAT,Мясо,113.7,level
+2022-02-01,world,DAIRY,Молочная продукция,145.0,level
+2022-02-01,world,CEREALS,Зерновые,145.3,level
+2022-02-01,world,OILS,Растительные масла,201.7,level
+2022-02-01,world,SUGAR,Сахар,110.5,level
+2022-03-01,world,FFPI,Индекс продовольственных цен ФАО,160.2,level
+2022-03-01,world,MEAT,Мясо,119.3,level
+2022-03-01,world,DAIRY,Молочная продукция,149.6,level
+2022-03-01,world,CEREALS,Зерновые,170.1,level
+2022-03-01,world,OILS,Растительные масла,251.8,level
+2022-03-01,world,SUGAR,Сахар,117.9,level
+2022-04-01,world,FFPI,Индекс продовольственных цен ФАО,158.8,level
+2022-04-01,world,MEAT,Мясо,121.3,level
+2022-04-01,world,DAIRY,Молочная продукция,150.7,level
+2022-04-01,world,CEREALS,Зерновые,169.7,level
+2022-04-01,world,OILS,Растительные масла,237.5,level
+2022-04-01,world,SUGAR,Сахар,121.5,level
+2022-05-01,world,FFPI,Индекс продовольственных цен ФАО,158.7,level
+2022-05-01,world,MEAT,Мясо,122.5,level
+2022-05-01,world,DAIRY,Молочная продукция,149.7,level
+2022-05-01,world,CEREALS,Зерновые,173.5,level
+2022-05-01,world,OILS,Растительные масла,229.2,level
+2022-05-01,world,SUGAR,Сахар,120.4,level
+2022-06-01,world,FFPI,Индекс продовольственных цен ФАО,155.7,level
+2022-06-01,world,MEAT,Мясо,125.4,level
+2022-06-01,world,DAIRY,Молочная продукция,158.2,level
+2022-06-01,world,CEREALS,Зерновые,166.3,level
+2022-06-01,world,OILS,Растительные масла,211.8,level
+2022-06-01,world,SUGAR,Сахар,117.3,level
+2022-07-01,world,FFPI,Индекс продовольственных цен ФАО,141.6,level
+2022-07-01,world,MEAT,Мясо,123.3,level
+2022-07-01,world,DAIRY,Молочная продукция,155.6,level
+2022-07-01,world,CEREALS,Зерновые,147.3,level
+2022-07-01,world,OILS,Растительные масла,168.8,level
+2022-07-01,world,SUGAR,Сахар,112.8,level
+2022-08-01,world,FFPI,Индекс продовольственных цен ФАО,138.7,level
+2022-08-01,world,MEAT,Мясо,120.3,level
+2022-08-01,world,DAIRY,Молочная продукция,153.1,level
+2022-08-01,world,CEREALS,Зерновые,145.6,level
+2022-08-01,world,OILS,Растительные масла,163.3,level
+2022-08-01,world,SUGAR,Сахар,110.5,level
+2022-09-01,world,FFPI,Индекс продовольственных цен ФАО,137.3,level
+2022-09-01,world,MEAT,Мясо,119.9,level
+2022-09-01,world,DAIRY,Молочная продукция,152.8,level
+2022-09-01,world,CEREALS,Зерновые,147.9,level
+2022-09-01,world,OILS,Растительные масла,152.6,level
+2022-09-01,world,SUGAR,Сахар,109.7,level
+2022-10-01,world,FFPI,Индекс продовольственных цен ФАО,136.7,level
+2022-10-01,world,MEAT,Мясо,116.5,level
+2022-10-01,world,DAIRY,Молочная продукция,149.2,level
+2022-10-01,world,CEREALS,Зерновые,152.3,level
+2022-10-01,world,OILS,Растительные масла,151.3,level
+2022-10-01,world,SUGAR,Сахар,108.6,level
+2022-11-01,world,FFPI,Индекс продовольственных цен ФАО,136.0,level
+2022-11-01,world,MEAT,Мясо,114.1,level
+2022-11-01,world,DAIRY,Молочная продукция,147.4,level
+2022-11-01,world,CEREALS,Зерновые,150.1,level
+2022-11-01,world,OILS,Растительные масла,154.7,level
+2022-11-01,world,SUGAR,Сахар,114.4,level
+2022-12-01,world,FFPI,Индекс продовольственных цен ФАО,133.1,level
+2022-12-01,world,MEAT,Мясо,111.9,level
+2022-12-01,world,DAIRY,Молочная продукция,148.6,level
+2022-12-01,world,CEREALS,Зерновые,147.3,level
+2022-12-01,world,OILS,Растительные масла,144.6,level
+2022-12-01,world,SUGAR,Сахар,117.2,level
+2023-01-01,world,FFPI,Индекс продовольственных цен ФАО,131.4,level
+2023-01-01,world,MEAT,Мясо,110.5,level
+2023-01-01,world,DAIRY,Молочная продукция,144.7,level
+2023-01-01,world,CEREALS,Зерновые,147.5,level
+2023-01-01,world,OILS,Растительные масла,140.4,level
+2023-01-01,world,SUGAR,Сахар,116.8,level
+2023-02-01,world,FFPI,Индекс продовольственных цен ФАО,130.7,level
+2023-02-01,world,MEAT,Мясо,112.1,level
+2023-02-01,world,DAIRY,Молочная продукция,138.7,level
+2023-02-01,world,CEREALS,Зерновые,146.7,level
+2023-02-01,world,OILS,Растительные масла,135.9,level
+2023-02-01,world,SUGAR,Сахар,125.2,level
+2023-03-01,world,FFPI,Индекс продовольственных цен ФАО,128.0,level
+2023-03-01,world,MEAT,Мясо,114.1,level
+2023-03-01,world,DAIRY,Молочная продукция,135.3,level
+2023-03-01,world,CEREALS,Зерновые,138.6,level
+2023-03-01,world,OILS,Растительные масла,131.8,level
+2023-03-01,world,SUGAR,Сахар,127.0,level
+2023-04-01,world,FFPI,Индекс продовольственных цен ФАО,128.4,level
+2023-04-01,world,MEAT,Мясо,116.0,level
+2023-04-01,world,DAIRY,Молочная продукция,129.3,level
+2023-04-01,world,CEREALS,Зерновые,136.1,level
+2023-04-01,world,OILS,Растительные масла,130.0,level
+2023-04-01,world,SUGAR,Сахар,149.4,level
+2023-05-01,world,FFPI,Индекс продовольственных цен ФАО,124.5,level
+2023-05-01,world,MEAT,Мясо,117.4,level
+2023-05-01,world,DAIRY,Молочная продукция,121.7,level
+2023-05-01,world,CEREALS,Зерновые,129.3,level
+2023-05-01,world,OILS,Растительные масла,118.7,level
+2023-05-01,world,SUGAR,Сахар,157.2,level
+2023-06-01,world,FFPI,Индекс продовольственных цен ФАО,123.0,level
+2023-06-01,world,MEAT,Мясо,118.6,level
+2023-06-01,world,DAIRY,Молочная продукция,119.9,level
+2023-06-01,world,CEREALS,Зерновые,126.6,level
+2023-06-01,world,OILS,Растительные масла,115.8,level
+2023-06-01,world,SUGAR,Сахар,152.2,level
+2023-07-01,world,FFPI,Индекс продовольственных цен ФАО,124.4,level
+2023-07-01,world,MEAT,Мясо,117.9,level
+2023-07-01,world,DAIRY,Молочная продукция,119.1,level
+2023-07-01,world,CEREALS,Зерновые,125.9,level
+2023-07-01,world,OILS,Растительные масла,129.8,level
+2023-07-01,world,SUGAR,Сахар,146.3,level
+2023-08-01,world,FFPI,Индекс продовольственных цен ФАО,121.8,level
+2023-08-01,world,MEAT,Мясо,114.5,level
+2023-08-01,world,DAIRY,Молочная продукция,114.3,level
+2023-08-01,world,CEREALS,Зерновые,125.0,level
+2023-08-01,world,OILS,Растительные масла,125.8,level
+2023-08-01,world,SUGAR,Сахар,148.2,level
+2023-09-01,world,FFPI,Индекс продовольственных цен ФАО,121.7,level
+2023-09-01,world,MEAT,Мясо,113.4,level
+2023-09-01,world,DAIRY,Молочная продукция,112.0,level
+2023-09-01,world,CEREALS,Зерновые,126.3,level
+2023-09-01,world,OILS,Растительные масла,120.9,level
+2023-09-01,world,SUGAR,Сахар,162.7,level
+2023-10-01,world,FFPI,Индекс продовольственных цен ФАО,120.7,level
+2023-10-01,world,MEAT,Мясо,112.0,level
+2023-10-01,world,DAIRY,Молочная продукция,114.6,level
+2023-10-01,world,CEREALS,Зерновые,124.8,level
+2023-10-01,world,OILS,Растительные масла,120.0,level
+2023-10-01,world,SUGAR,Сахар,159.2,level
+2023-11-01,world,FFPI,Индекс продовольственных цен ФАО,120.6,level
+2023-11-01,world,MEAT,Мясо,111.6,level
+2023-11-01,world,DAIRY,Молочная продукция,116.5,level
+2023-11-01,world,CEREALS,Зерновые,121.0,level
+2023-11-01,world,OILS,Растительные масла,124.1,level
+2023-11-01,world,SUGAR,Сахар,161.4,level
+2023-12-01,world,FFPI,Индекс продовольственных цен ФАО,119.1,level
+2023-12-01,world,MEAT,Мясо,111.2,level
+2023-12-01,world,DAIRY,Молочная продукция,118.7,level
+2023-12-01,world,CEREALS,Зерновые,122.8,level
+2023-12-01,world,OILS,Растительные масла,122.3,level
+2023-12-01,world,SUGAR,Сахар,134.2,level
+2024-01-01,world,FFPI,Индекс продовольственных цен ФАО,117.6,level
+2024-01-01,world,MEAT,Мясо,108.9,level
+2024-01-01,world,DAIRY,Молочная продукция,118.7,level
+2024-01-01,world,CEREALS,Зерновые,119.9,level
+2024-01-01,world,OILS,Растительные масла,122.5,level
+2024-01-01,world,SUGAR,Сахар,136.4,level
+2024-02-01,world,FFPI,Индекс продовольственных цен ФАО,117.4,level
+2024-02-01,world,MEAT,Мясо,112.5,level
+2024-02-01,world,DAIRY,Молочная продукция,120.7,level
+2024-02-01,world,CEREALS,Зерновые,113.8,level
+2024-02-01,world,OILS,Растительные масла,120.9,level
+2024-02-01,world,SUGAR,Сахар,140.8,level
+2024-03-01,world,FFPI,Индекс продовольственных цен ФАО,118.9,level
+2024-03-01,world,MEAT,Мясо,114.9,level
+2024-03-01,world,DAIRY,Молочная продукция,124.0,level
+2024-03-01,world,CEREALS,Зерновые,110.9,level
+2024-03-01,world,OILS,Растительные масла,130.6,level
+2024-03-01,world,SUGAR,Сахар,133.4,level
+2024-04-01,world,FFPI,Индекс продовольственных цен ФАО,119.2,level
+2024-04-01,world,MEAT,Мясо,116.6,level
+2024-04-01,world,DAIRY,Молочная продукция,123.8,level
+2024-04-01,world,CEREALS,Зерновые,111.6,level
+2024-04-01,world,OILS,Растительные масла,130.9,level
+2024-04-01,world,SUGAR,Сахар,126.6,level
+2024-05-01,world,FFPI,Индекс продовольственных цен ФАО,120.5,level
+2024-05-01,world,MEAT,Мясо,116.7,level
+2024-05-01,world,DAIRY,Молочная продукция,126.3,level
+2024-05-01,world,CEREALS,Зерновые,118.7,level
+2024-05-01,world,OILS,Растительные масла,127.8,level
+2024-05-01,world,SUGAR,Сахар,117.1,level
+2024-06-01,world,FFPI,Индекс продовольственных цен ФАО,121.0,level
+2024-06-01,world,MEAT,Мясо,118.1,level
+2024-06-01,world,DAIRY,Молочная продукция,127.9,level
+2024-06-01,world,CEREALS,Зерновые,115.2,level
+2024-06-01,world,OILS,Растительные масла,131.8,level
+2024-06-01,world,SUGAR,Сахар,119.4,level
+2024-07-01,world,FFPI,Индекс продовольственных цен ФАО,120.9,level
+2024-07-01,world,MEAT,Мясо,120.0,level
+2024-07-01,world,DAIRY,Молочная продукция,127.8,level
+2024-07-01,world,CEREALS,Зерновые,110.7,level
+2024-07-01,world,OILS,Растительные масла,135.0,level
+2024-07-01,world,SUGAR,Сахар,119.5,level
+2024-08-01,world,FFPI,Индекс продовольственных цен ФАО,121.7,level
+2024-08-01,world,MEAT,Мясо,122.0,level
+2024-08-01,world,DAIRY,Молочная продукция,131.3,level
+2024-08-01,world,CEREALS,Зерновые,110.2,level
+2024-08-01,world,OILS,Растительные масла,136.1,level
+2024-08-01,world,SUGAR,Сахар,113.9,level
+2024-09-01,world,FFPI,Индекс продовольственных цен ФАО,124.6,level
+2024-09-01,world,MEAT,Мясо,119.9,level
+2024-09-01,world,DAIRY,Молочная продукция,136.5,level
+2024-09-01,world,CEREALS,Зерновые,113.6,level
+2024-09-01,world,OILS,Растительные масла,142.4,level
+2024-09-01,world,SUGAR,Сахар,126.3,level
+2024-10-01,world,FFPI,Индекс продовольственных цен ФАО,126.9,level
+2024-10-01,world,MEAT,Мясо,119.2,level
+2024-10-01,world,DAIRY,Молочная продукция,138.6,level
+2024-10-01,world,CEREALS,Зерновые,114.4,level
+2024-10-01,world,OILS,Растительные масла,152.7,level
+2024-10-01,world,SUGAR,Сахар,129.6,level
+2024-11-01,world,FFPI,Индекс продовольственных цен ФАО,127.7,level
+2024-11-01,world,MEAT,Мясо,118.7,level
+2024-11-01,world,DAIRY,Молочная продукция,139.8,level
+2024-11-01,world,CEREALS,Зерновые,111.4,level
+2024-11-01,world,OILS,Растительные масла,164.1,level
+2024-11-01,world,SUGAR,Сахар,126.4,level
+2024-12-01,world,FFPI,Индекс продовольственных цен ФАО,127.3,level
+2024-12-01,world,MEAT,Мясо,119.6,level
+2024-12-01,world,DAIRY,Молочная продукция,141.2,level
+2024-12-01,world,CEREALS,Зерновые,111.4,level
+2024-12-01,world,OILS,Растительные масла,162.1,level
+2024-12-01,world,SUGAR,Сахар,119.3,level
+2025-01-01,world,FFPI,Индекс продовольственных цен ФАО,124.6,level
+2025-01-01,world,MEAT,Мясо,116.6,level
+2025-01-01,world,DAIRY,Молочная продукция,143.1,level
+2025-01-01,world,CEREALS,Зерновые,111.8,level
+2025-01-01,world,OILS,Растительные масла,153.0,level
+2025-01-01,world,SUGAR,Сахар,111.2,level
+2025-02-01,world,FFPI,Индекс продовольственных цен ФАО,126.6,level
+2025-02-01,world,MEAT,Мясо,116.9,level
+2025-02-01,world,DAIRY,Молочная продукция,147.7,level
+2025-02-01,world,CEREALS,Зерновые,112.6,level
+2025-02-01,world,OILS,Растительные масла,156.0,level
+2025-02-01,world,SUGAR,Сахар,118.5,level
+2025-03-01,world,FFPI,Индекс продовольственных цен ФАО,127.2,level
+2025-03-01,world,MEAT,Мясо,118.3,level
+2025-03-01,world,DAIRY,Молочная продукция,148.7,level
+2025-03-01,world,CEREALS,Зерновые,109.7,level
+2025-03-01,world,OILS,Растительные масла,161.8,level
+2025-03-01,world,SUGAR,Сахар,116.9,level
+2025-04-01,world,FFPI,Индекс продовольственных цен ФАО,128.2,level
+2025-04-01,world,MEAT,Мясо,121.6,level
+2025-04-01,world,DAIRY,Молочная продукция,151.7,level
+2025-04-01,world,CEREALS,Зерновые,110.9,level
+2025-04-01,world,OILS,Растительные масла,158.0,level
+2025-04-01,world,SUGAR,Сахар,112.3,level
+2025-05-01,world,FFPI,Индекс продовольственных цен ФАО,127.1,level
+2025-05-01,world,MEAT,Мясо,122.8,level
+2025-05-01,world,DAIRY,Молочная продукция,153.6,level
+2025-05-01,world,CEREALS,Зерновые,109.0,level
+2025-05-01,world,OILS,Растительные масла,152.2,level
+2025-05-01,world,SUGAR,Сахар,109.4,level
+2025-06-01,world,FFPI,Индекс продовольственных цен ФАО,128.1,level
+2025-06-01,world,MEAT,Мясо,126.0,level
+2025-06-01,world,DAIRY,Молочная продукция,155.5,level
+2025-06-01,world,CEREALS,Зерновые,107.3,level
+2025-06-01,world,OILS,Растительные масла,155.7,level
+2025-06-01,world,SUGAR,Сахар,103.6,level
+2025-07-01,world,FFPI,Индекс продовольственных цен ФАО,129.8,level
+2025-07-01,world,MEAT,Мясо,126.6,level
+2025-07-01,world,DAIRY,Молочная продукция,154.6,level
+2025-07-01,world,CEREALS,Зерновые,106.5,level
+2025-07-01,world,OILS,Растительные масла,166.8,level
+2025-07-01,world,SUGAR,Сахар,103.3,level
+2025-08-01,world,FFPI,Индекс продовольственных цен ФАО,130.0,level
+2025-08-01,world,MEAT,Мясо,127.8,level
+2025-08-01,world,DAIRY,Молочная продукция,152.2,level
+2025-08-01,world,CEREALS,Зерновые,105.6,level
+2025-08-01,world,OILS,Растительные масла,169.1,level
+2025-08-01,world,SUGAR,Сахар,103.6,level
+2025-09-01,world,FFPI,Индекс продовольственных цен ФАО,128.6,level
+2025-09-01,world,MEAT,Мясо,127.9,level
+2025-09-01,world,DAIRY,Молочная продукция,147.2,level
+2025-09-01,world,CEREALS,Зерновые,104.8,level
+2025-09-01,world,OILS,Растительные масла,167.9,level
+2025-09-01,world,SUGAR,Сахар,99.4,level
+2025-10-01,world,FFPI,Индекс продовольственных цен ФАО,126.4,level
+2025-10-01,world,MEAT,Мясо,125.0,level
+2025-10-01,world,DAIRY,Молочная продукция,141.7,level
+2025-10-01,world,CEREALS,Зерновые,103.8,level
+2025-10-01,world,OILS,Растительные масла,169.4,level
+2025-10-01,world,SUGAR,Сахар,94.1,level
+2025-11-01,world,FFPI,Индекс продовольственных цен ФАО,125.2,level
+2025-11-01,world,MEAT,Мясо,125.5,level
+2025-11-01,world,DAIRY,Молочная продукция,136.2,level
+2025-11-01,world,CEREALS,Зерновые,105.6,level
+2025-11-01,world,OILS,Растительные масла,165.0,level
+2025-11-01,world,SUGAR,Сахар,88.6,level
+2025-12-01,world,FFPI,Индекс продовольственных цен ФАО,124.5,level
+2025-12-01,world,MEAT,Мясо,124.8,level
+2025-12-01,world,DAIRY,Молочная продукция,128.2,level
+2025-12-01,world,CEREALS,Зерновые,107.2,level
+2025-12-01,world,OILS,Растительные масла,165.2,level
+2025-12-01,world,SUGAR,Сахар,90.7,level
+2026-01-01,world,FFPI,Индекс продовольственных цен ФАО,124.1,level
+2026-01-01,world,MEAT,Мясо,124.9,level
+2026-01-01,world,DAIRY,Молочная продукция,120.9,level
+2026-01-01,world,CEREALS,Зерновые,107.5,level
+2026-01-01,world,OILS,Растительные масла,168.6,level
+2026-01-01,world,SUGAR,Сахар,89.8,level
+2026-02-01,world,FFPI,Индекс продовольственных цен ФАО,125.5,level
+2026-02-01,world,MEAT,Мясо,126.5,level
+2026-02-01,world,DAIRY,Молочная продукция,119.4,level
+2026-02-01,world,CEREALS,Зерновые,108.7,level
+2026-02-01,world,OILS,Растительные масла,174.2,level
+2026-02-01,world,SUGAR,Сахар,86.2,level
+2026-03-01,world,FFPI,Индекс продовольственных цен ФАО,128.7,level
+2026-03-01,world,MEAT,Мясо,128.0,level
+2026-03-01,world,DAIRY,Молочная продукция,121.2,level
+2026-03-01,world,CEREALS,Зерновые,110.4,level
+2026-03-01,world,OILS,Растительные масла,183.1,level
+2026-03-01,world,SUGAR,Сахар,92.8,level
+2026-04-01,world,FFPI,Индекс продовольственных цен ФАО,131.0,level
+2026-04-01,world,MEAT,Мясо,130.4,level
+2026-04-01,world,DAIRY,Молочная продукция,119.7,level
+2026-04-01,world,CEREALS,Зерновые,111.3,level
+2026-04-01,world,OILS,Растительные масла,193.9,level
+2026-04-01,world,SUGAR,Сахар,88.5,level
+2026-05-01,world,FFPI,Индекс продовольственных цен ФАО,131.0,level
+2026-05-01,world,MEAT,Мясо,131.3,level
+2026-05-01,world,DAIRY,Молочная продукция,119.1,level
+2026-05-01,world,CEREALS,Зерновые,114.2,level
+2026-05-01,world,OILS,Растительные масла,185.0,level
+2026-05-01,world,SUGAR,Сахар,95.1,level
+2026-06-01,world,FFPI,Индекс продовольственных цен ФАО,130.1,level
+2026-06-01,world,MEAT,Мясо,130.5,level
+2026-06-01,world,DAIRY,Молочная продукция,116.9,level
+2026-06-01,world,CEREALS,Зерновые,110.0,level
+2026-06-01,world,OILS,Растительные масла,192.0,level
+2026-06-01,world,SUGAR,Сахар,90.0,level
+2026-07-01,world,FFPI,Индекс продовольственных цен ФАО,131.7,level
+2026-07-01,world,MEAT,Мясо,129.4,level
+2026-07-01,world,DAIRY,Молочная продукция,116.6,level
+2026-07-01,world,CEREALS,Зерновые,113.8,level
+2026-07-01,world,OILS,Растительные масла,195.7,level
+2026-07-01,world,SUGAR,Сахар,95.0,level
+2026-08-01,world,FFPI,Индекс продовольственных цен ФАО,133.9,level
+2026-08-01,world,MEAT,Мясо,129.0,level
+2026-08-01,world,DAIRY,Молочная продукция,119.2,level
+2026-08-01,world,CEREALS,Зерновые,116.8,level
+2026-08-01,world,OILS,Растительные масла,196.9,level
+2026-08-01,world,SUGAR,Сахар,107.4,level
+2026-09-01,world,FFPI,Индекс продовольственных цен ФАО,135.6,level
+2026-09-01,world,MEAT,Мясо,127.1,level
+2026-09-01,world,DAIRY,Молочная продукция,119.1,level
+2026-09-01,world,CEREALS,Зерновые,122.3,level
+2026-09-01,world,OILS,Растительные масла,198.6,level
+2026-09-01,world,SUGAR,Сахар,113.7,level
+2026-10-01,world,FFPI,Индекс продовольственных цен ФАО,133.9,level
+2026-10-01,world,MEAT,Мясо,125.5,level
+2026-10-01,world,DAIRY,Молочная продукция,117.8,level
+2026-10-01,world,CEREALS,Зерновые,116.8,level
+2026-10-01,world,OILS,Растительные масла,199.2,level
+2026-10-01,world,SUGAR,Сахар,121.3,level

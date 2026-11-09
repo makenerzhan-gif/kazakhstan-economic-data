@@ -18,7 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib import dims, metadata, pipeline_logging, revisions, validation  # noqa: E402
-from fetchers import bns_balances, bns_cpi, cisstat, comtrade, cpi_weights, gdp_discrete, krem_tariffs, minfin_quasifiscal, nbk_balance_groups, nbk_records, tariff_jumps, damu, gfss, minfin_regions, neer_import, kase_ifrs, nbk_expectations, nbk_fx, bns_dims, bns_living, bns_resource_use, bns_trade, eia, gravity, imf_dims, kase_eurobonds, manual_vintages, nbk_cube, nbk_operations, nbk_dims, regional_balance, taldau_dims, wb  # noqa: E402
+from fetchers import bns_balances, bns_cpi, cisstat, comtrade, cpi_weights, gdp_discrete, krem_tariffs, minfin_quasifiscal, nbk_balance_groups, nbk_records, tariff_jumps, damu, gfss, minfin_regions, neer_import, kase_ifrs, nbk_expectations, nbk_fx, bns_dims, bns_living, bns_resource_use, bns_trade, eia, gravity, imf_dims, kase_dims, kase_eurobonds, kmg, manual_vintages, nbk_cube, nbk_operations, nbk_dims, regional_balance, taldau_dims, wb, world_misc  # noqa: E402
 
 # Keyed by a dataset's `fetcher` when it names one, else by its agency.
 AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb.fetch, "eia": eia.fetch,
@@ -27,6 +27,8 @@ AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb
                    "nbk_classified": nbk_dims.fetch_classified, "nbk_cube": nbk_cube.fetch, "manual_vintages": manual_vintages.fetch,
                    "nbk_interventions": nbk_operations.fetch_interventions, "nbk_open_position": nbk_operations.fetch_open_position,
                    "nbk_deposit_auctions": nbk_operations.fetch_deposit_auctions,
+                   "kase_indices": kase_dims.fetch_indices, "kase_bond_volumes": kase_dims.fetch_bond_volumes,
+                   "kmg": kmg.fetch, "fao": world_misc.fetch_fao, "un_wpp": world_misc.fetch_wpp,
                    "bns_living": bns_living.fetch, "kase_eurobonds": kase_eurobonds.fetch, "bns_cpi": bns_cpi.fetch,
                    "imf_sdmx": imf_dims.fetch, "bns_resource_use": bns_resource_use.fetch,
                    "bns_balances": bns_balances.fetch, "taldau_regional": taldau_dims.fetch_regional,
@@ -53,6 +55,9 @@ METHODOLOGY = {"bns": "Bureau of National Statistics official methodology",
                "comtrade": "UN Comtrade (reporter Kazakhstan), BEC rev.4 conversion by UN Statistics",
                "gfss": "State Social Insurance Fund (ГФСС), form 5-СО",
                "minfin": "Ministry of Finance, monthly Statistical Bulletin (budget execution)",
+               "fao": "FAO Food Price Index (nominal, 2014-2016 = 100), monthly",
+               "un": "United Nations, World Population Prospects 2024 (Population Division, DESA)",
+               "kmg": "KazMunayGas quarterly databook (investor reporting), KMG's equity share unless stated",
                "mne": "Ministry of National Economy, «Прогноз социально-экономического развития» (transcribed vintages, config/gov_forecast_vintages.yaml)",
                "damu": "Damu Entrepreneurship Development Fund, project-level subsidy report (sums of project rows)"}
 CONFIG = dims.load_config()

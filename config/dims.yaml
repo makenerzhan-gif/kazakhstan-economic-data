@@ -4791,3 +4791,214 @@ datasets:
     unit: "million KZT, traded during the month"
     category: monetary
     note: "NBK formId=16 «Secondary Market of the Government Securities», 2022-12 onward, items as GOV_SECURITIES_PRIMARY_AUCTIONS (plus EURONOTES). Dated by the month of trading."
+
+  # ---------------------------------------------------------------- Taldau: vacancies, registered unemployed, investment by source (added 2026-11-09)
+  - id: VACANCIES_BY_REGION_QUARTERLY
+    name_ru: "Вакантные рабочие места на конец квартала и принято работников за квартал, по регионам (форма 1-Т, без малых предприятий)"
+    name_en: "Vacant jobs at the end of the quarter and employees hired during the quarter, by region (form 1-Т, excluding small enterprises)"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "703008"
+    period_id: "5"
+    measure_id: "5"
+    dic_ids: "67,1212,2813"
+    terms: "741880,741885,3629946"
+    item_pos: 1
+    items:
+      - {code: VACANCIES, term: "741885", name: "Вакантные рабочие места на конец квартала"}
+      - {code: HIRED, term: "741885", index_id: "702998", name: "Принято работников за квартал"}
+    frequency: quarterly
+    unit: "persons (jobs)"
+    category: labor
+    note: "Taldau 703008 (vacancies: 2010 Q1 - 2012 Q4, then 2016 Q1 onward; 2025 Q4 is missing on Taldau) and 702998 (hires, 2016 Q1 onward). Enterprises other than small (form 1-Т). National 2026 Q2: 56 555 vacancies, 268 433 hired. Separations are EMPLOYEE_SEPARATIONS_BY_REGION_QUARTERLY (another dimension set). The BNS business-tendency surveys («Конъюнктурные обследования») were discontinued after 2024 Q4 and are not connected."
+
+  - id: EMPLOYEE_SEPARATIONS_BY_REGION_QUARTERLY
+    name_ru: "Выбыло работников за квартал, по регионам (форма 1-Т, без малых предприятий)"
+    name_en: "Employees separated during the quarter, by region (form 1-Т, excluding small enterprises)"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "703003"
+    period_id: "5"
+    measure_id: "23"
+    dic_ids: "68,859,2813,549"
+    terms: "741880,741885,3629946,2656780"
+    item_pos: 1
+    items:
+      - {code: SEPARATED, term: "741885", name: "Выбыло работников за квартал"}
+    frequency: quarterly
+    unit: "persons"
+    category: labor
+    note: "Taldau 703003, 2016 Q1 onward (quarterly data were not compiled 2013-2015). National 2026 Q2: 278 717. With VACANCIES_BY_REGION_QUARTERLY's HIRED gives the hiring and separation rates of enterprises other than small."
+
+  - id: REGISTERED_UNEMPLOYED_SHARE
+    name_ru: "Доля зарегистрированных безработных в численности рабочей силы, помесячно"
+    name_en: "Registered unemployed as a share of the labour force, monthly"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "702956"
+    period_id: "4"
+    measure_id: "7"
+    dic_ids: "67"
+    terms: "741880"
+    item_pos: 0
+    items:
+      - {code: SHARE, term: "741880", name: "Доля зарегистрированных безработных в рабочей силе"}
+    frequency: monthly
+    unit: "% of the labour force"
+    category: labor
+    note: "Taldau 702956, national only, 2015-02 onward with irregular missing months (2026-08: 3.6 %). The count is REGISTERED_UNEMPLOYED (annual); monthly counts by region are published only by the labour ministry on data.egov.kz (API key required). The survey-based UNEMPLOYMENT rate is a different concept (ILO)."
+
+  - id: REGISTERED_UNEMPLOYED
+    name_ru: "Число лиц, зарегистрированных в органах занятости в качестве безработных, на конец года"
+    name_en: "Persons registered as unemployed at employment centres, end of year"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "702955"
+    period_id: "7"
+    measure_id: "5"
+    dic_ids: "67"
+    terms: "741880"
+    item_pos: 0
+    items:
+      - {code: REGISTERED, term: "741880", name: "Зарегистрированные безработные на конец года"}
+    frequency: annual
+    unit: "persons"
+    category: labor
+    note: "Taldau 702955, 2000-2025 (2025: 219 146; 2022: 132 297). Wage arrears («задолженность по заработной плате») have no live BNS series (Taldau 702889/702890 ended in 2016) and are not connected."
+
+  - id: INVESTMENT_BY_SOURCE_BY_REGION_YTD
+    name_ru: "Инвестиции в основной капитал по источникам финансирования (собственные средства, республиканский и местный бюджет, кредиты банков, другие заёмные) по регионам, с начала года"
+    name_en: "Fixed capital investment by source of financing (own funds, republican and local budget, bank loans, other borrowed) by region, year to date"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "701827"
+    period_id: "8"
+    measure_id: "1"
+    dic_ids: "68,776,90,459"
+    terms: "741880,741917,741927,807855"
+    item_pos: 3
+    scale: 1000000
+    items: &investment_sources
+      - {code: TOTAL, term: "807855", name: "Инвестиции в основной капитал, всего"}
+      - {code: OWN, term: "451902", name: "Собственные средства"}
+      - {code: REP_BUDGET, term: "451911", name: "Республиканский бюджет"}
+      - {code: LOCAL_BUDGET, term: "451916", name: "Местный бюджет"}
+      - {code: BANK_LOANS, term: "3767696", name: "Кредиты банков"}
+      - {code: BANK_LOANS_FOREIGN, term: "3767697", name: "из них кредиты иностранных банков"}
+      - {code: OTHER_BORROWED, term: "3767702", name: "Другие заёмные средства"}
+      - {code: OTHER_BORROWED_NONRES, term: "3767703", name: "из них другие заёмные средства нерезидентов"}
+    cumulation: year_to_date
+    frequency: monthly
+    unit: "million KZT, cumulative from January"
+    category: investment
+    note: "Taldau 701827, dictionary 459 (source of financing), period 8 («месяц с накоплением»), 2018-01 onward, national and 21 regions. OWN + REP_BUDGET + LOCAL_BUDGET + BANK_LOANS + OTHER_BORROWED = TOTAL (January-September 2026: 10 587.3 + 664.7 + 1 631.7 + 893.5 + 2 304.2 = 16 081.4 bn KZT); the two «из них» items are memo lines. Budget investment (REP_BUDGET + LOCAL_BUDGET) in the January-December release is the first estimate the GDP model's manual_inputs iok_budget_private_split carried (2 936.6 / 4 098.4 / 4 984.0 bn for 2023-2025); the revised annual figures are INVESTMENT_BY_SOURCE_BY_REGION."
+
+  - id: INVESTMENT_BY_SOURCE_BY_REGION
+    name_ru: "Инвестиции в основной капитал по источникам финансирования по регионам, годовые уточнённые данные"
+    name_en: "Fixed capital investment by source of financing by region, annual revised data"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "701827"
+    period_id: "7"
+    measure_id: "1"
+    dic_ids: "68,1212,459"
+    terms: "741880,741885,807855"
+    item_pos: 2
+    scale: 1000000
+    items: *investment_sources
+    frequency: annual
+    unit: "million KZT"
+    category: investment
+    note: "Taldau 701827, period 7, 2003-2025 (bank loans and other borrowed from 2013; before that «заёмные средства» and «иностранные инвестиции», not kept). Budget investment 2023 2 936.6, 2024 4 209.5, 2025 5 060.5 bn KZT (the January first releases were 2 936.6 / 4 098.4 / 4 984.0)."
+
+  # ---------------------------------------------------------------- KASE, KMG, FAO, UN WPP, transport by mode (added 2026-11-09)
+  - id: KASE_INDICES
+    name_ru: "Индексы KASE: индекс акций KASE и KASE_TR, индексы корпоративных облигаций KASE_BMY (доходность) и KASE_BMC (цена), индикатор денежного рынка, капитализация ГЦБ; в среднем за месяц и на конец месяца"
+    name_en: "KASE indices: the KASE equity index and KASE_TR, corporate bond indices KASE_BMY (yield) and KASE_BMC (price), the money market indicator, government securities capitalisation; monthly average and end of month"
+    agency: kase
+    fetcher: kase_indices
+    min_items: 12
+    frequency: monthly
+    unit: "index points (KASE_BMY, MM_INDEX: % per annum; CAPBILLS_KZT: billion KZT)"
+    category: monetary
+    note: "Daily closes of KASE's TradingView feed kept as <SYMBOL>.AVG (mean of trading days) and .EOM (last trading day). INDEX_KASE from 2000-07-12 (= 100; 7 916.32 at 2026-10-30, all-time high 8 131.71 on 2026-08-28), KASE_TR from 2020-08, KASE_BMY / KASE_BMC from 2017-09 (BMY 15.50 % on 2026-11-09), MM_INDEX from 2010-01, CAPBILLS_KZT from 2016-10. KASE_BMY is the yield of the corporate bond basket. Equity capitalisation has no history endpoint (monthly figures only in KASE's «Обзор рынка акций» news) and is not kept."
+
+  - id: KASE_CORPORATE_BOND_VOLUMES
+    name_ru: "Объём торгов корпоративными облигациями на KASE за месяц: первичный и вторичный рынок (без репо), млрд тенге"
+    name_en: "KASE corporate bond trading volume during the month: primary and secondary market (repo excluded), billion KZT"
+    agency: kase
+    fetcher: kase_bond_volumes
+    refresh_days: 7
+    min_items: 3
+    frequency: monthly
+    unit: "billion KZT"
+    category: monetary
+    note: "Parsed from KASE's monthly news items «За январь-<месяц> YYYY года объем торгов корпоративными облигациями на KASE составил …» (the fixed-width table by month; the «За YYYY год» item of each January carries the previous year's twelve months), 2017 onward. October 2026: primary 800.5, secondary 100.8, total 901.3 bn KZT; January-October 2026 6 420.5 bn (+44.4 % y/y). Volumes by issuer sector are published only as charts and are not kept."
+
+  - id: KMG_OIL_PRODUCTION_AND_TRANSPORT
+    name_ru: "Добыча нефти и конденсата по активам КМГ (в доле КМГ; Тенгиз, Кашаган и Карачаганак также в 100 %) и транспортировка нефти по операторам трубопроводов, поквартально"
+    name_en: "Oil and condensate production by KMG asset (KMG share; Tengiz, Kashagan and Karachaganak also at 100 %) and crude transportation by pipeline operator, quarterly"
+    agency: kmg
+    fetcher: kmg
+    refresh_days: 7
+    min_items: 20
+    frequency: quarterly
+    unit: "thousand tonnes (production), million tonnes (transport), % (shares)"
+    category: production
+    note: "KazMunayGas quarterly databook (sheets «стр. 6», «стр. 7»), 2015 Q1 onward. Production items are KMG's equity share; TCO_GROSS = TCO / 0.20, KPO_GROSS = KPO / 0.10, NCOC_GROSS = NCOC / 0.0844 (to 2022 Q2) or / 0.1688 (from 2022 Q4; 2022 Q3 skipped). 2025: Tengiz 39.0 mln t (KMG share 7 802.2 kt), Kashagan 17.9 mln t, Karachaganak 10.9 mln t. TRANSPORT_KTO / _KCP / _MUNAITAS / _CPC (CPC on the basis of KMG's share) / _BATUMI, million tonnes; SHARE_EXPORT / _TRANSIT / _DOMESTIC of pipeline transport, %. Field-level monthly output and crude exports by route (CPC, Atyrau-Samara, Atasu-Alashankou) are published only in Ministry of Energy and KazTransOil press texts and are not connected; oil output by region (Atyrau = Tengiz + Kashagan, West Kazakhstan = Karachaganak) is in INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY."
+
+  - id: FAO_FOOD_PRICE_INDEX
+    name_ru: "Индекс продовольственных цен ФАО и его составляющие (мясо, молочная продукция, зерновые, растительные масла, сахар), 2014-2016 = 100, помесячно"
+    name_en: "FAO Food Price Index and its sub-indices (meat, dairy, cereals, vegetable oils, sugar), 2014-2016 = 100, monthly"
+    agency: fao
+    fetcher: fao
+    country: WLD
+    region: world
+    geography: "World (FAO export price basket)"
+    min_items: 6
+    frequency: monthly
+    unit: "index, 2014-2016 = 100, nominal"
+    category: prices
+    note: "FAO, nominal indices from 1990-01, released the first Friday of the month; the last two or three months are revised. September 2026: FFPI 135.6 (meat 127.1, dairy 119.1, cereals 122.3, oils 198.6, sugar 113.7); October 2026 133.9. The real (deflated) indices are in the xlsx on the FAO page and are not kept."
+
+  - id: UN_WPP_POPULATION
+    name_ru: "Население Казахстана по оценкам и прогнозу ООН (World Population Prospects 2024): варианты прогноза, пол, возрастные группы, демографические показатели, 1950-2100"
+    name_en: "Kazakhstan population, UN World Population Prospects 2024: projection variants, sex, broad age groups, demographic indicators, 1950-2100"
+    agency: un
+    fetcher: un_wpp
+    refresh_days: 30
+    min_items: 20
+    frequency: annual
+    unit: "thousand persons at 1 July (rates and ages as named)"
+    category: demographic
+    note: "TOTAL.<VARIANT> for every WPP variant (MEDIUM, HIGH, LOW, CONSTANT_FERTILITY, ZERO_MIGRATION, …, the 80 % and 95 % prediction intervals); MALE, FEMALE, AGE_0_14, AGE_15_64, AGE_65, POP_1JAN, BIRTHS, DEATHS, TFR, LIFE_EXPECTANCY, NET_MIGRATION, MEDIAN_AGE, GROWTH_RATE, INFANT_MORTALITY for the medium variant. Estimates to 2023, projections 2024-2100. Medium: 2024 20 592.6 thousand (15-64: 12 761.9), 2050 26 544.3, 2100 33 672.2. The UN's estimate for 2024 is about 400 thousand above BNS (POPULATION_BNS) -- different census adjustments."
+
+  - id: FREIGHT_BY_MODE_MONTHLY
+    name_ru: "Перевезено грузов по видам транспорта (железнодорожный, автомобильный, трубопроводный, воздушный, морской, внутренний водный), помесячно, тыс. тонн"
+    name_en: "Freight carried by mode of transport (rail, road, pipeline, air, sea, inland water), monthly, thousand tonnes"
+    agency: bns
+    element_id: 445258
+    layout: year_rows_months
+    sheets: ["По всем видам транспорта", "Железнодорожный", "Автомобильный", "Трубопроводный", "Воздушный", "Морской", "Внутренний водный"]
+    sheet_items: {"По всем видам транспорта": TOTAL, "Железнодорожный": RAIL, "Автомобильный": ROAD, "Трубопроводный": PIPELINE, "Воздушный": AIR, "Морской": SEA, "Внутренний водный": INLAND_WATER}
+    item_names: {TOTAL: "Все виды транспорта", RAIL: "Железнодорожный транспорт", ROAD: "Автомобильный транспорт", PIPELINE: "Трубопроводный транспорт", AIR: "Воздушный транспорт", SEA: "Морской транспорт", INLAND_WATER: "Внутренний водный транспорт"}
+    min_items: 6
+    frequency: monthly
+    unit: "thousand tonnes"
+    category: production
+    note: "BNS dynamic table 445258 «Перевезено грузов по месяцам», discrete months 2007-01 onward (the year-to-date twin is 444131, FREIGHT_CARRIED_MONTHLY's source). Rail tonnes from 2025 exclude empty wagons (BNS footnote), a level break against 2024 and earlier: 2024-12 46 516, 2026-09 29 674 thousand tonnes (source issue freight_rail_empty_wagons_2025). Road is the bulk of the total."
+
+  - id: FREIGHT_TURNOVER_BY_MODE_MONTHLY
+    name_ru: "Грузооборот по видам транспорта, помесячно, млн тонно-км"
+    name_en: "Freight turnover by mode of transport, monthly, million tonne-km"
+    agency: bns
+    element_id: 3885
+    layout: year_rows_months
+    sheets: ["По всем видам транспорта", "Железнодорожный", "Автомобильный", "Трубопроводный", "Воздушный", "Морской", "Внутренний водный"]
+    sheet_items: {"По всем видам транспорта": TOTAL, "Железнодорожный": RAIL, "Автомобильный": ROAD, "Трубопроводный": PIPELINE, "Воздушный": AIR, "Морской": SEA, "Внутренний водный": INLAND_WATER}
+    item_names: {TOTAL: "Все виды транспорта", RAIL: "Железнодорожный транспорт", ROAD: "Автомобильный транспорт", PIPELINE: "Трубопроводный транспорт", AIR: "Воздушный транспорт", SEA: "Морской транспорт", INLAND_WATER: "Внутренний водный транспорт"}
+    min_items: 6
+    frequency: monthly
+    unit: "million tonne-km"
+    category: production
+    note: "BNS dynamic table 3885 «Грузооборот по месяцам», discrete months 2007-01 onward. Rail 2024-12 31 483, 2025-12 42 735, 2026-09 25 185 mln t-km. Rail tonne-km from 2025 are also compiled without empty wagons (footnote)."

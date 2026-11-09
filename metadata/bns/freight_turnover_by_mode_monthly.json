@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/3885/file/ru/",
+  "dataset_id": "3885",
+  "indicator_id": "FREIGHT_TURNOVER_BY_MODE_MONTHLY",
+  "indicator_name": "Freight turnover by mode of transport, monthly, million tonne-km",
+  "description": "Грузооборот по видам транспорта, помесячно, млн тонно-км",
+  "frequency": "monthly",
+  "unit": "million tonne-km",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "BNS dynamic table 3885 «Грузооборот по месяцам», discrete months 2007-01 onward. Rail 2024-12 31 483, 2025-12 42 735, 2026-09 25 185 mln t-km. Rail tonne-km from 2025 are also compiled without empty wagons (footnote).",
+  "publication_date": "2026-04-14",
+  "last_update_date": "2026-11-09",
+  "download_date": "2026-11-09",
+  "period_start": "2007-01-01",
+  "period_end": "2026-09-01",
+  "next_update_date": "2026-05-12",
+  "transformation": "level",
+  "revision_status": "original"
+}

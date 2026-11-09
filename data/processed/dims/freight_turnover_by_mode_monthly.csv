@@ -1,0 +1,1528 @@
+date,region,item_code,item_name,value,transformation
+2007-01-01,national,AIR,Воздушный транспорт,3.543,level
+2007-02-01,national,AIR,Воздушный транспорт,5.245,level
+2007-03-01,national,AIR,Воздушный транспорт,5.317,level
+2007-04-01,national,AIR,Воздушный транспорт,7.68,level
+2007-05-01,national,AIR,Воздушный транспорт,6.931,level
+2007-06-01,national,AIR,Воздушный транспорт,6.524,level
+2007-07-01,national,AIR,Воздушный транспорт,5.049,level
+2007-08-01,national,AIR,Воздушный транспорт,8.987,level
+2007-09-01,national,AIR,Воздушный транспорт,9.693,level
+2007-10-01,national,AIR,Воздушный транспорт,8.56,level
+2007-11-01,national,AIR,Воздушный транспорт,9.451,level
+2007-12-01,national,AIR,Воздушный транспорт,8.763,level
+2008-01-01,national,AIR,Воздушный транспорт,3.597,level
+2008-02-01,national,AIR,Воздушный транспорт,5.073,level
+2008-03-01,national,AIR,Воздушный транспорт,5.682,level
+2008-04-01,national,AIR,Воздушный транспорт,5.741,level
+2008-05-01,national,AIR,Воздушный транспорт,5.392,level
+2008-06-01,national,AIR,Воздушный транспорт,5.1,level
+2008-07-01,national,AIR,Воздушный транспорт,5.185,level
+2008-08-01,national,AIR,Воздушный транспорт,6.132,level
+2008-09-01,national,AIR,Воздушный транспорт,7.554,level
+2008-10-01,national,AIR,Воздушный транспорт,7.357,level
+2008-11-01,national,AIR,Воздушный транспорт,7.046,level
+2008-12-01,national,AIR,Воздушный транспорт,5.59,level
+2009-01-01,national,AIR,Воздушный транспорт,3.3,level
+2009-02-01,national,AIR,Воздушный транспорт,3.5,level
+2009-03-01,national,AIR,Воздушный транспорт,5.5,level
+2009-04-01,national,AIR,Воздушный транспорт,5.6,level
+2009-05-01,national,AIR,Воздушный транспорт,3.88,level
+2009-06-01,national,AIR,Воздушный транспорт,4.06,level
+2009-07-01,national,AIR,Воздушный транспорт,4.08,level
+2009-08-01,national,AIR,Воздушный транспорт,7.5,level
+2009-09-01,national,AIR,Воздушный транспорт,5.7,level
+2009-10-01,national,AIR,Воздушный транспорт,7.7,level
+2009-11-01,national,AIR,Воздушный транспорт,8.26,level
+2009-12-01,national,AIR,Воздушный транспорт,8.988,level
+2010-01-01,national,AIR,Воздушный транспорт,3.236,level
+2010-02-01,national,AIR,Воздушный транспорт,6.496,level
+2010-03-01,national,AIR,Воздушный транспорт,6.8,level
+2010-04-01,national,AIR,Воздушный транспорт,7.159,level
+2010-05-01,national,AIR,Воздушный транспорт,8.756,level
+2010-06-01,national,AIR,Воздушный транспорт,6.59,level
+2010-07-01,national,AIR,Воздушный транспорт,5.7,level
+2010-08-01,national,AIR,Воздушный транспорт,7.63,level
+2010-09-01,national,AIR,Воздушный транспорт,7.88,level
+2010-10-01,national,AIR,Воздушный транспорт,9.8,level
+2010-11-01,national,AIR,Воздушный транспорт,13.6,level
+2010-12-01,national,AIR,Воздушный транспорт,10.2,level
+2011-01-01,national,AIR,Воздушный транспорт,5.44,level
+2011-02-01,national,AIR,Воздушный транспорт,7.8,level
+2011-03-01,national,AIR,Воздушный транспорт,8.2,level
+2011-04-01,national,AIR,Воздушный транспорт,7.5,level
+2011-05-01,national,AIR,Воздушный транспорт,8.972,level
+2011-06-01,national,AIR,Воздушный транспорт,7.1,level
+2011-07-01,national,AIR,Воздушный транспорт,6.897,level
+2011-08-01,national,AIR,Воздушный транспорт,6.1,level
+2011-09-01,national,AIR,Воздушный транспорт,6.5,level
+2011-10-01,national,AIR,Воздушный транспорт,5.6,level
+2011-11-01,national,AIR,Воздушный транспорт,9.9,level
+2011-12-01,national,AIR,Воздушный транспорт,8.96,level
+2012-01-01,national,AIR,Воздушный транспорт,3.1,level
+2012-02-01,national,AIR,Воздушный транспорт,3.85,level
+2012-03-01,national,AIR,Воздушный транспорт,4.76,level
+2012-04-01,national,AIR,Воздушный транспорт,4.1,level
+2012-05-01,national,AIR,Воздушный транспорт,3.7,level
+2012-06-01,national,AIR,Воздушный транспорт,3.7,level
+2012-07-01,national,AIR,Воздушный транспорт,4.19,level
+2012-08-01,national,AIR,Воздушный транспорт,5.01,level
+2012-09-01,national,AIR,Воздушный транспорт,4.71,level
+2012-10-01,national,AIR,Воздушный транспорт,5.1519,level
+2012-11-01,national,AIR,Воздушный транспорт,5.3401,level
+2012-12-01,national,AIR,Воздушный транспорт,7.2106,level
+2013-01-01,national,AIR,Воздушный транспорт,4.68,level
+2013-02-01,national,AIR,Воздушный транспорт,4.5216,level
+2013-03-01,national,AIR,Воздушный транспорт,5.0787,level
+2013-04-01,national,AIR,Воздушный транспорт,5.0238,level
+2013-05-01,national,AIR,Воздушный транспорт,5.7485,level
+2013-06-01,national,AIR,Воздушный транспорт,4.9,level
+2013-07-01,national,AIR,Воздушный транспорт,4.7,level
+2013-08-01,national,AIR,Воздушный транспорт,5.1243,level
+2013-09-01,national,AIR,Воздушный транспорт,5.2347,level
+2013-10-01,national,AIR,Воздушный транспорт,5.258,level
+2013-11-01,national,AIR,Воздушный транспорт,6.2389,level
+2013-12-01,national,AIR,Воздушный транспорт,6.7,level
+2014-01-01,national,AIR,Воздушный транспорт,3.836,level
+2014-02-01,national,AIR,Воздушный транспорт,4.605,level
+2014-03-01,national,AIR,Воздушный транспорт,4.236,level
+2014-04-01,national,AIR,Воздушный транспорт,3.688,level
+2014-05-01,national,AIR,Воздушный транспорт,4.0,level
+2014-06-01,national,AIR,Воздушный транспорт,3.0537,level
+2014-07-01,national,AIR,Воздушный транспорт,3.916,level
+2014-08-01,national,AIR,Воздушный транспорт,3.701,level
+2014-09-01,national,AIR,Воздушный транспорт,4.313,level
+2014-10-01,national,AIR,Воздушный транспорт,4.429,level
+2014-11-01,national,AIR,Воздушный транспорт,4.794,level
+2014-12-01,national,AIR,Воздушный транспорт,4.577,level
+2015-01-01,national,AIR,Воздушный транспорт,2.87,level
+2015-02-01,national,AIR,Воздушный транспорт,3.249,level
+2015-03-01,national,AIR,Воздушный транспорт,3.513,level
+2015-04-01,national,AIR,Воздушный транспорт,3.4807,level
+2015-05-01,national,AIR,Воздушный транспорт,3.4337,level
+2015-06-01,national,AIR,Воздушный транспорт,3.4522,level
+2015-07-01,national,AIR,Воздушный транспорт,3.0489,level
+2015-08-01,national,AIR,Воздушный транспорт,2.4648,level
+2015-09-01,national,AIR,Воздушный транспорт,4.1046,level
+2015-10-01,national,AIR,Воздушный транспорт,4.2937,level
+2015-11-01,national,AIR,Воздушный транспорт,4.351,level
+2015-12-01,national,AIR,Воздушный транспорт,4.181,level
+2016-01-01,national,AIR,Воздушный транспорт,2.2575,level
+2016-02-01,national,AIR,Воздушный транспорт,2.7251,level
+2016-03-01,national,AIR,Воздушный транспорт,3.1086,level
+2016-04-01,national,AIR,Воздушный транспорт,3.0392,level
+2016-05-01,national,AIR,Воздушный транспорт,2.8584,level
+2016-06-01,national,AIR,Воздушный транспорт,3.5944,level
+2016-07-01,national,AIR,Воздушный транспорт,3.6498,level
+2016-08-01,national,AIR,Воздушный транспорт,3.6837,level
+2016-09-01,national,AIR,Воздушный транспорт,4.0857,level
+2016-10-01,national,AIR,Воздушный транспорт,4.4434,level
+2016-11-01,national,AIR,Воздушный транспорт,4.3454,level
+2016-12-01,national,AIR,Воздушный транспорт,5.1995,level
+2017-01-01,national,AIR,Воздушный транспорт,3.3569,level
+2017-02-01,national,AIR,Воздушный транспорт,3.1853,level
+2017-03-01,national,AIR,Воздушный транспорт,3.9549,level
+2017-04-01,national,AIR,Воздушный транспорт,3.9695,level
+2017-05-01,national,AIR,Воздушный транспорт,4.2905,level
+2017-06-01,national,AIR,Воздушный транспорт,4.6266,level
+2017-07-01,national,AIR,Воздушный транспорт,4.2465,level
+2017-08-01,national,AIR,Воздушный транспорт,4.8078,level
+2017-09-01,national,AIR,Воздушный транспорт,4.9037,level
+2017-10-01,national,AIR,Воздушный транспорт,4.7896,level
+2017-11-01,national,AIR,Воздушный транспорт,5.3229,level
+2017-12-01,national,AIR,Воздушный транспорт,5.8739,level
+2018-01-01,national,AIR,Воздушный транспорт,3.9502,level
+2018-02-01,national,AIR,Воздушный транспорт,3.8792,level
+2018-03-01,national,AIR,Воздушный транспорт,4.3551,level
+2018-04-01,national,AIR,Воздушный транспорт,4.1425,level
+2018-05-01,national,AIR,Воздушный транспорт,4.3034,level
+2018-06-01,national,AIR,Воздушный транспорт,4.3795,level
+2018-07-01,national,AIR,Воздушный транспорт,4.3986,level
+2018-08-01,national,AIR,Воздушный транспорт,5.1774,level
+2018-09-01,national,AIR,Воздушный транспорт,5.11,level
+2018-10-01,national,AIR,Воздушный транспорт,5.08,level
+2018-11-01,national,AIR,Воздушный транспорт,5.2446,level
+2018-12-01,national,AIR,Воздушный транспорт,5.66,level
+2019-01-01,national,AIR,Воздушный транспорт,3.03,level
+2019-02-01,national,AIR,Воздушный транспорт,11.01,level
+2019-03-01,national,AIR,Воздушный транспорт,10.07,level
+2019-04-01,national,AIR,Воздушный транспорт,6.43,level
+2019-05-01,national,AIR,Воздушный транспорт,6.86,level
+2019-07-01,national,AIR,Воздушный транспорт,4.95,level
+2019-08-01,national,AIR,Воздушный транспорт,5.26,level
+2019-09-01,national,AIR,Воздушный транспорт,5.56,level
+2019-10-01,national,AIR,Воздушный транспорт,7.67,level
+2019-11-01,national,AIR,Воздушный транспорт,7.48,level
+2019-12-01,national,AIR,Воздушный транспорт,9.46,level
+2020-01-01,national,AIR,Воздушный транспорт,4.33,level
+2020-02-01,national,AIR,Воздушный транспорт,5.49,level
+2020-03-01,national,AIR,Воздушный транспорт,3.56,level
+2020-04-01,national,AIR,Воздушный транспорт,2.51,level
+2020-05-01,national,AIR,Воздушный транспорт,5.39,level
+2020-06-01,national,AIR,Воздушный транспорт,5.54,level
+2020-07-01,national,AIR,Воздушный транспорт,3.75,level
+2020-08-01,national,AIR,Воздушный транспорт,3.72,level
+2020-09-01,national,AIR,Воздушный транспорт,4.87,level
+2020-10-01,national,AIR,Воздушный транспорт,3.56,level
+2020-11-01,national,AIR,Воздушный транспорт,5.95,level
+2020-12-01,national,AIR,Воздушный транспорт,7.53,level
+2021-01-01,national,AIR,Воздушный транспорт,5.44,level
+2021-02-01,national,AIR,Воздушный транспорт,3.01,level
+2021-03-01,national,AIR,Воздушный транспорт,5.36,level
+2021-04-01,national,AIR,Воздушный транспорт,7.54,level
+2021-05-01,national,AIR,Воздушный транспорт,7.97,level
+2021-06-01,national,AIR,Воздушный транспорт,5.84,level
+2021-07-01,national,AIR,Воздушный транспорт,10.27,level
+2021-08-01,national,AIR,Воздушный транспорт,4.69,level
+2021-09-01,national,AIR,Воздушный транспорт,5.45,level
+2021-10-01,national,AIR,Воздушный транспорт,6.4,level
+2021-11-01,national,AIR,Воздушный транспорт,7.9,level
+2021-12-01,national,AIR,Воздушный транспорт,11.73,level
+2022-01-01,national,AIR,Воздушный транспорт,2.56,level
+2022-02-01,national,AIR,Воздушный транспорт,3.2,level
+2022-03-01,national,AIR,Воздушный транспорт,3.05,level
+2022-04-01,national,AIR,Воздушный транспорт,4.16,level
+2022-05-01,national,AIR,Воздушный транспорт,4.63,level
+2022-06-01,national,AIR,Воздушный транспорт,5.22,level
+2022-07-01,national,AIR,Воздушный транспорт,5.68,level
+2022-08-01,national,AIR,Воздушный транспорт,5.52,level
+2022-09-01,national,AIR,Воздушный транспорт,4.93,level
+2022-10-01,national,AIR,Воздушный транспорт,4.53,level
+2022-11-01,national,AIR,Воздушный транспорт,5.29,level
+2022-12-01,national,AIR,Воздушный транспорт,5.67,level
+2023-01-01,national,AIR,Воздушный транспорт,3.89,level
+2023-02-01,national,AIR,Воздушный транспорт,4.28,level
+2023-03-01,national,AIR,Воздушный транспорт,4.43,level
+2023-04-01,national,AIR,Воздушный транспорт,4.26,level
+2023-05-01,national,AIR,Воздушный транспорт,3.83,level
+2023-06-01,national,AIR,Воздушный транспорт,3.86,level
+2023-07-01,national,AIR,Воздушный транспорт,4.31,level
+2023-08-01,national,AIR,Воздушный транспорт,4.26,level
+2023-09-01,national,AIR,Воздушный транспорт,4.62,level
+2023-10-01,national,AIR,Воздушный транспорт,4.13,level
+2023-11-01,national,AIR,Воздушный транспорт,5.42,level
+2023-12-01,national,AIR,Воздушный транспорт,6.36,level
+2024-01-01,national,AIR,Воздушный транспорт,3.91,level
+2024-02-01,national,AIR,Воздушный транспорт,4.48,level
+2024-03-01,national,AIR,Воздушный транспорт,4.93,level
+2024-04-01,national,AIR,Воздушный транспорт,4.98,level
+2024-05-01,national,AIR,Воздушный транспорт,5.12,level
+2024-06-01,national,AIR,Воздушный транспорт,5.02,level
+2024-07-01,national,AIR,Воздушный транспорт,6.17,level
+2024-08-01,national,AIR,Воздушный транспорт,6.53,level
+2024-09-01,national,AIR,Воздушный транспорт,6.48,level
+2024-10-01,national,AIR,Воздушный транспорт,4.95,level
+2024-11-01,national,AIR,Воздушный транспорт,6.56,level
+2024-12-01,national,AIR,Воздушный транспорт,6.59,level
+2025-01-01,national,AIR,Воздушный транспорт,5.09,level
+2025-02-01,national,AIR,Воздушный транспорт,4.33,level
+2025-03-01,national,AIR,Воздушный транспорт,5.4,level
+2025-04-01,national,AIR,Воздушный транспорт,5.6,level
+2025-05-01,national,AIR,Воздушный транспорт,5.78,level
+2025-06-01,national,AIR,Воздушный транспорт,5.98,level
+2025-07-01,national,AIR,Воздушный транспорт,6.15,level
+2025-08-01,national,AIR,Воздушный транспорт,6.48,level
+2025-09-01,national,AIR,Воздушный транспорт,5.95,level
+2025-10-01,national,AIR,Воздушный транспорт,5.79,level
+2025-11-01,national,AIR,Воздушный транспорт,6.4,level
+2025-12-01,national,AIR,Воздушный транспорт,10.25,level
+2026-01-01,national,AIR,Воздушный транспорт,4.36,level
+2026-02-01,national,AIR,Воздушный транспорт,4.31,level
+2026-03-01,national,AIR,Воздушный транспорт,4.69,level
+2026-04-01,national,AIR,Воздушный транспорт,4.66,level
+2026-05-01,national,AIR,Воздушный транспорт,4.92,level
+2026-06-01,national,AIR,Воздушный транспорт,7.47,level
+2026-07-01,national,AIR,Воздушный транспорт,6.43,level
+2026-08-01,national,AIR,Воздушный транспорт,7.63,level
+2026-09-01,national,AIR,Воздушный транспорт,5.98,level
+2007-04-01,national,INLAND_WATER,Внутренний водный транспорт,0.095,level
+2007-05-01,national,INLAND_WATER,Внутренний водный транспорт,7.658,level
+2007-06-01,national,INLAND_WATER,Внутренний водный транспорт,12.996,level
+2007-07-01,national,INLAND_WATER,Внутренний водный транспорт,8.685,level
+2007-08-01,national,INLAND_WATER,Внутренний водный транспорт,8.181,level
+2007-09-01,national,INLAND_WATER,Внутренний водный транспорт,7.897,level
+2007-10-01,national,INLAND_WATER,Внутренний водный транспорт,4.308,level
+2007-11-01,national,INLAND_WATER,Внутренний водный транспорт,2.394,level
+2007-12-01,national,INLAND_WATER,Внутренний водный транспорт,0.082,level
+2008-04-01,national,INLAND_WATER,Внутренний водный транспорт,2.974,level
+2008-05-01,national,INLAND_WATER,Внутренний водный транспорт,10.516,level
+2008-06-01,national,INLAND_WATER,Внутренний водный транспорт,9.196,level
+2008-07-01,national,INLAND_WATER,Внутренний водный транспорт,7.165,level
+2008-08-01,national,INLAND_WATER,Внутренний водный транспорт,3.801,level
+2008-09-01,national,INLAND_WATER,Внутренний водный транспорт,5.686,level
+2008-10-01,national,INLAND_WATER,Внутренний водный транспорт,8.344,level
+2008-11-01,national,INLAND_WATER,Внутренний водный транспорт,7.571,level
+2008-12-01,national,INLAND_WATER,Внутренний водный транспорт,0.061,level
+2009-04-01,national,INLAND_WATER,Внутренний водный транспорт,0.7,level
+2009-05-01,national,INLAND_WATER,Внутренний водный транспорт,7.28,level
+2009-06-01,national,INLAND_WATER,Внутренний водный транспорт,11.7,level
+2009-07-01,national,INLAND_WATER,Внутренний водный транспорт,7.75,level
+2009-08-01,national,INLAND_WATER,Внутренний водный транспорт,10.9,level
+2009-09-01,national,INLAND_WATER,Внутренний водный транспорт,9.8,level
+2009-10-01,national,INLAND_WATER,Внутренний водный транспорт,8.0,level
+2009-11-01,national,INLAND_WATER,Внутренний водный транспорт,0.6,level
+2009-12-01,national,INLAND_WATER,Внутренний водный транспорт,0.06,level
+2010-04-01,national,INLAND_WATER,Внутренний водный транспорт,0.5,level
+2010-05-01,national,INLAND_WATER,Внутренний водный транспорт,18.9,level
+2010-06-01,national,INLAND_WATER,Внутренний водный транспорт,11.0,level
+2010-07-01,national,INLAND_WATER,Внутренний водный транспорт,9.0,level
+2010-08-01,national,INLAND_WATER,Внутренний водный транспорт,11.335,level
+2010-09-01,national,INLAND_WATER,Внутренний водный транспорт,12.57,level
+2010-10-01,national,INLAND_WATER,Внутренний водный транспорт,10.4,level
+2010-11-01,national,INLAND_WATER,Внутренний водный транспорт,5.55,level
+2010-12-01,national,INLAND_WATER,Внутренний водный транспорт,52.0,level
+2011-05-01,national,INLAND_WATER,Внутренний водный транспорт,8.26,level
+2011-06-01,national,INLAND_WATER,Внутренний водный транспорт,12.8,level
+2011-07-01,national,INLAND_WATER,Внутренний водный транспорт,13.386,level
+2011-08-01,national,INLAND_WATER,Внутренний водный транспорт,16.2,level
+2011-09-01,national,INLAND_WATER,Внутренний водный транспорт,12.6,level
+2011-10-01,national,INLAND_WATER,Внутренний водный транспорт,13.9,level
+2011-11-01,national,INLAND_WATER,Внутренний водный транспорт,1.35,level
+2012-04-01,national,INLAND_WATER,Внутренний водный транспорт,1.6,level
+2012-05-01,national,INLAND_WATER,Внутренний водный транспорт,7.7,level
+2012-06-01,national,INLAND_WATER,Внутренний водный транспорт,10.8,level
+2012-07-01,national,INLAND_WATER,Внутренний водный транспорт,10.52,level
+2012-08-01,national,INLAND_WATER,Внутренний водный транспорт,12.55,level
+2012-09-01,national,INLAND_WATER,Внутренний водный транспорт,9.5,level
+2012-10-01,national,INLAND_WATER,Внутренний водный транспорт,7.139,level
+2012-11-01,national,INLAND_WATER,Внутренний водный транспорт,1.9481,level
+2012-12-01,national,INLAND_WATER,Внутренний водный транспорт,0.0002,level
+2013-04-01,national,INLAND_WATER,Внутренний водный транспорт,0.5671,level
+2013-05-01,national,INLAND_WATER,Внутренний водный транспорт,2.9457,level
+2013-06-01,national,INLAND_WATER,Внутренний водный транспорт,4.6,level
+2013-07-01,national,INLAND_WATER,Внутренний водный транспорт,3.1,level
+2013-08-01,national,INLAND_WATER,Внутренний водный транспорт,5.4586,level
+2013-09-01,national,INLAND_WATER,Внутренний водный транспорт,5.026,level
+2013-10-01,national,INLAND_WATER,Внутренний водный транспорт,6.0429,level
+2013-11-01,national,INLAND_WATER,Внутренний водный транспорт,4.4957,level
+2013-12-01,national,INLAND_WATER,Внутренний водный транспорт,0.0001,level
+2014-01-01,national,INLAND_WATER,Внутренний водный транспорт,0.0055,level
+2014-04-01,national,INLAND_WATER,Внутренний водный транспорт,0.429,level
+2014-05-01,national,INLAND_WATER,Внутренний водный транспорт,1.2,level
+2014-06-01,national,INLAND_WATER,Внутренний водный транспорт,2.984,level
+2014-07-01,national,INLAND_WATER,Внутренний водный транспорт,5.316,level
+2014-08-01,national,INLAND_WATER,Внутренний водный транспорт,5.817,level
+2014-09-01,national,INLAND_WATER,Внутренний водный транспорт,8.242,level
+2014-10-01,national,INLAND_WATER,Внутренний водный транспорт,1.292,level
+2014-11-01,national,INLAND_WATER,Внутренний водный транспорт,0.849,level
+2014-12-01,national,INLAND_WATER,Внутренний водный транспорт,0.0986,level
+2015-04-01,national,INLAND_WATER,Внутренний водный транспорт,0.3656,level
+2015-05-01,national,INLAND_WATER,Внутренний водный транспорт,0.6332,level
+2015-06-01,national,INLAND_WATER,Внутренний водный транспорт,11.7899,level
+2015-07-01,national,INLAND_WATER,Внутренний водный транспорт,4.6192,level
+2015-08-01,national,INLAND_WATER,Внутренний водный транспорт,6.0104,level
+2015-09-01,national,INLAND_WATER,Внутренний водный транспорт,4.1161,level
+2015-10-01,national,INLAND_WATER,Внутренний водный транспорт,1.6076,level
+2015-11-01,national,INLAND_WATER,Внутренний водный транспорт,1.568,level
+2015-12-01,national,INLAND_WATER,Внутренний водный транспорт,0.186,level
+2016-01-01,national,INLAND_WATER,Внутренний водный транспорт,0.083,level
+2016-04-01,national,INLAND_WATER,Внутренний водный транспорт,0.488,level
+2016-05-01,national,INLAND_WATER,Внутренний водный транспорт,4.1652,level
+2016-06-01,national,INLAND_WATER,Внутренний водный транспорт,2.1324,level
+2016-07-01,national,INLAND_WATER,Внутренний водный транспорт,2.2442,level
+2016-08-01,national,INLAND_WATER,Внутренний водный транспорт,3.7453,level
+2016-09-01,national,INLAND_WATER,Внутренний водный транспорт,4.0989,level
+2016-10-01,national,INLAND_WATER,Внутренний водный транспорт,2.6684,level
+2016-11-01,national,INLAND_WATER,Внутренний водный транспорт,1.6312,level
+2016-12-01,national,INLAND_WATER,Внутренний водный транспорт,0.1691,level
+2017-04-01,national,INLAND_WATER,Внутренний водный транспорт,0.7395,level
+2017-05-01,national,INLAND_WATER,Внутренний водный транспорт,1.2839,level
+2017-06-01,national,INLAND_WATER,Внутренний водный транспорт,4.4572,level
+2017-07-01,national,INLAND_WATER,Внутренний водный транспорт,4.3033,level
+2017-08-01,national,INLAND_WATER,Внутренний водный транспорт,4.7749,level
+2017-09-01,national,INLAND_WATER,Внутренний водный транспорт,4.8074,level
+2017-10-01,national,INLAND_WATER,Внутренний водный транспорт,3.274,level
+2017-11-01,national,INLAND_WATER,Внутренний водный транспорт,2.205,level
+2017-12-01,national,INLAND_WATER,Внутренний водный транспорт,0.181,level
+2018-01-01,national,INLAND_WATER,Внутренний водный транспорт,0.0119,level
+2018-04-01,national,INLAND_WATER,Внутренний водный транспорт,0.0315,level
+2018-05-01,national,INLAND_WATER,Внутренний водный транспорт,0.5992,level
+2018-06-01,national,INLAND_WATER,Внутренний водный транспорт,15.0053,level
+2018-07-01,national,INLAND_WATER,Внутренний водный транспорт,4.1377,level
+2018-08-01,national,INLAND_WATER,Внутренний водный транспорт,7.9,level
+2018-09-01,national,INLAND_WATER,Внутренний водный транспорт,3.17,level
+2018-10-01,national,INLAND_WATER,Внутренний водный транспорт,4.5,level
+2018-11-01,national,INLAND_WATER,Внутренний водный транспорт,2.094,level
+2018-12-01,national,INLAND_WATER,Внутренний водный транспорт,0.0343,level
+2019-04-01,national,INLAND_WATER,Внутренний водный транспорт,0.39,level
+2019-05-01,national,INLAND_WATER,Внутренний водный транспорт,0.88,level
+2019-06-01,national,INLAND_WATER,Внутренний водный транспорт,1.8,level
+2019-07-01,national,INLAND_WATER,Внутренний водный транспорт,3.14,level
+2019-08-01,national,INLAND_WATER,Внутренний водный транспорт,2.43,level
+2019-09-01,national,INLAND_WATER,Внутренний водный транспорт,4.2,level
+2019-10-01,national,INLAND_WATER,Внутренний водный транспорт,1.23,level
+2019-11-01,national,INLAND_WATER,Внутренний водный транспорт,0.26,level
+2020-05-01,national,INLAND_WATER,Внутренний водный транспорт,8.33,level
+2020-06-01,national,INLAND_WATER,Внутренний водный транспорт,8.95,level
+2020-07-01,national,INLAND_WATER,Внутренний водный транспорт,7.76,level
+2020-08-01,national,INLAND_WATER,Внутренний водный транспорт,10.08,level
+2020-09-01,national,INLAND_WATER,Внутренний водный транспорт,15.02,level
+2020-10-01,national,INLAND_WATER,Внутренний водный транспорт,11.66,level
+2020-11-01,national,INLAND_WATER,Внутренний водный транспорт,0.3,level
+2021-04-01,national,INLAND_WATER,Внутренний водный транспорт,0.53,level
+2021-05-01,national,INLAND_WATER,Внутренний водный транспорт,15.99,level
+2021-06-01,national,INLAND_WATER,Внутренний водный транспорт,5.64,level
+2021-07-01,national,INLAND_WATER,Внутренний водный транспорт,10.14,level
+2021-08-01,national,INLAND_WATER,Внутренний водный транспорт,7.94,level
+2021-09-01,national,INLAND_WATER,Внутренний водный транспорт,5.3,level
+2021-10-01,national,INLAND_WATER,Внутренний водный транспорт,18.2,level
+2021-11-01,national,INLAND_WATER,Внутренний водный транспорт,2.62,level
+2021-12-01,national,INLAND_WATER,Внутренний водный транспорт,0.05,level
+2022-04-01,national,INLAND_WATER,Внутренний водный транспорт,3.16,level
+2022-05-01,national,INLAND_WATER,Внутренний водный транспорт,21.31,level
+2022-06-01,national,INLAND_WATER,Внутренний водный транспорт,20.45,level
+2022-07-01,national,INLAND_WATER,Внутренний водный транспорт,12.67,level
+2022-08-01,national,INLAND_WATER,Внутренний водный транспорт,12.5,level
+2022-09-01,national,INLAND_WATER,Внутренний водный транспорт,3.16,level
+2022-10-01,national,INLAND_WATER,Внутренний водный транспорт,21.79,level
+2022-11-01,national,INLAND_WATER,Внутренний водный транспорт,7.4,level
+2022-12-01,national,INLAND_WATER,Внутренний водный транспорт,0.1,level
+2023-04-01,national,INLAND_WATER,Внутренний водный транспорт,0.37,level
+2023-05-01,national,INLAND_WATER,Внутренний водный транспорт,6.01,level
+2023-06-01,national,INLAND_WATER,Внутренний водный транспорт,4.11,level
+2023-07-01,national,INLAND_WATER,Внутренний водный транспорт,13.43,level
+2023-08-01,national,INLAND_WATER,Внутренний водный транспорт,19.96,level
+2023-09-01,national,INLAND_WATER,Внутренний водный транспорт,5.48,level
+2023-10-01,national,INLAND_WATER,Внутренний водный транспорт,9.75,level
+2023-11-01,national,INLAND_WATER,Внутренний водный транспорт,0.35,level
+2023-12-01,national,INLAND_WATER,Внутренний водный транспорт,0.04,level
+2024-04-01,national,INLAND_WATER,Внутренний водный транспорт,0.04,level
+2024-05-01,national,INLAND_WATER,Внутренний водный транспорт,23.65,level
+2024-06-01,national,INLAND_WATER,Внутренний водный транспорт,29.61,level
+2024-07-01,national,INLAND_WATER,Внутренний водный транспорт,21.97,level
+2024-08-01,national,INLAND_WATER,Внутренний водный транспорт,2.01,level
+2024-09-01,national,INLAND_WATER,Внутренний водный транспорт,1.79,level
+2024-10-01,national,INLAND_WATER,Внутренний водный транспорт,0.94,level
+2025-05-01,national,INLAND_WATER,Внутренний водный транспорт,0.02,level
+2025-06-01,national,INLAND_WATER,Внутренний водный транспорт,15.9,level
+2025-07-01,national,INLAND_WATER,Внутренний водный транспорт,13.09,level
+2025-08-01,national,INLAND_WATER,Внутренний водный транспорт,16.65,level
+2025-09-01,national,INLAND_WATER,Внутренний водный транспорт,16.05,level
+2025-10-01,national,INLAND_WATER,Внутренний водный транспорт,10.99,level
+2025-11-01,national,INLAND_WATER,Внутренний водный транспорт,0.0,level
+2026-04-01,national,INLAND_WATER,Внутренний водный транспорт,4.41,level
+2026-05-01,national,INLAND_WATER,Внутренний водный транспорт,29.06,level
+2026-06-01,national,INLAND_WATER,Внутренний водный транспорт,14.75,level
+2026-07-01,national,INLAND_WATER,Внутренний водный транспорт,12.59,level
+2026-08-01,national,INLAND_WATER,Внутренний водный транспорт,12.42,level
+2026-09-01,national,INLAND_WATER,Внутренний водный транспорт,30.06,level
+2007-01-01,national,PIPELINE,Трубопроводный транспорт,7286.3,level
+2007-02-01,national,PIPELINE,Трубопроводный транспорт,6655.8,level
+2007-03-01,national,PIPELINE,Трубопроводный транспорт,7141.8,level
+2007-04-01,national,PIPELINE,Трубопроводный транспорт,6850.6,level
+2007-05-01,national,PIPELINE,Трубопроводный транспорт,7394.4,level
+2007-06-01,national,PIPELINE,Трубопроводный транспорт,7344.1,level
+2007-07-01,national,PIPELINE,Трубопроводный транспорт,7241.2,level
+2007-08-01,national,PIPELINE,Трубопроводный транспорт,7563.5,level
+2007-09-01,national,PIPELINE,Трубопроводный транспорт,7234.1,level
+2007-10-01,national,PIPELINE,Трубопроводный транспорт,7554.2,level
+2007-11-01,national,PIPELINE,Трубопроводный транспорт,7521.9,level
+2007-12-01,national,PIPELINE,Трубопроводный транспорт,7246.0,level
+2008-01-01,national,PIPELINE,Трубопроводный транспорт,7438.29,level
+2008-02-01,national,PIPELINE,Трубопроводный транспорт,6684.9,level
+2008-03-01,national,PIPELINE,Трубопроводный транспорт,7068.84,level
+2008-04-01,national,PIPELINE,Трубопроводный транспорт,8126.86,level
+2008-05-01,national,PIPELINE,Трубопроводный транспорт,7798.04,level
+2008-06-01,national,PIPELINE,Трубопроводный транспорт,7744.4,level
+2008-07-01,national,PIPELINE,Трубопроводный транспорт,7534.3,level
+2008-08-01,national,PIPELINE,Трубопроводный транспорт,7559.2,level
+2008-09-01,national,PIPELINE,Трубопроводный транспорт,7350.3,level
+2008-10-01,national,PIPELINE,Трубопроводный транспорт,7539.68,level
+2008-11-01,national,PIPELINE,Трубопроводный транспорт,7762.76,level
+2008-12-01,national,PIPELINE,Трубопроводный транспорт,7686.35,level
+2009-01-01,national,PIPELINE,Трубопроводный транспорт,7529.6,level
+2009-02-01,national,PIPELINE,Трубопроводный транспорт,7093.8,level
+2009-03-01,national,PIPELINE,Трубопроводный транспорт,7429.6,level
+2009-04-01,national,PIPELINE,Трубопроводный транспорт,8004.6,level
+2009-05-01,national,PIPELINE,Трубопроводный транспорт,5921.5,level
+2009-06-01,national,PIPELINE,Трубопроводный транспорт,5284.59,level
+2009-07-01,national,PIPELINE,Трубопроводный транспорт,5508.6,level
+2009-08-01,national,PIPELINE,Трубопроводный транспорт,5604.4,level
+2009-09-01,national,PIPELINE,Трубопроводный транспорт,5407.9,level
+2009-10-01,national,PIPELINE,Трубопроводный транспорт,5316.7,level
+2009-11-01,national,PIPELINE,Трубопроводный транспорт,5567.1,level
+2009-12-01,national,PIPELINE,Трубопроводный транспорт,5456.7,level
+2010-01-01,national,PIPELINE,Трубопроводный транспорт,6135.6,level
+2010-02-01,national,PIPELINE,Трубопроводный транспорт,6417.6,level
+2010-03-01,national,PIPELINE,Трубопроводный транспорт,6812.7,level
+2010-04-01,national,PIPELINE,Трубопроводный транспорт,7162.9,level
+2010-05-01,national,PIPELINE,Трубопроводный транспорт,7390.6,level
+2010-06-01,national,PIPELINE,Трубопроводный транспорт,7519.2,level
+2010-07-01,national,PIPELINE,Трубопроводный транспорт,6460.4,level
+2010-08-01,national,PIPELINE,Трубопроводный транспорт,8109.1,level
+2010-09-01,national,PIPELINE,Трубопроводный транспорт,7867.1,level
+2010-10-01,national,PIPELINE,Трубопроводный транспорт,7582.8,level
+2010-11-01,national,PIPELINE,Трубопроводный транспорт,7322.6,level
+2010-12-01,national,PIPELINE,Трубопроводный транспорт,8082.3,level
+2011-01-01,national,PIPELINE,Трубопроводный транспорт,8384.6,level
+2011-02-01,national,PIPELINE,Трубопроводный транспорт,7780.9,level
+2011-03-01,national,PIPELINE,Трубопроводный транспорт,7896.8,level
+2011-04-01,national,PIPELINE,Трубопроводный транспорт,8436.2,level
+2011-05-01,national,PIPELINE,Трубопроводный транспорт,8646.3,level
+2011-06-01,national,PIPELINE,Трубопроводный транспорт,8616.6,level
+2011-07-01,national,PIPELINE,Трубопроводный транспорт,8453.6,level
+2011-08-01,national,PIPELINE,Трубопроводный транспорт,8404.2,level
+2011-09-01,national,PIPELINE,Трубопроводный транспорт,8447.3,level
+2011-10-01,national,PIPELINE,Трубопроводный транспорт,8317.1,level
+2011-11-01,national,PIPELINE,Трубопроводный транспорт,8424.1,level
+2011-12-01,national,PIPELINE,Трубопроводный транспорт,8423.4,level
+2012-01-01,national,PIPELINE,Трубопроводный транспорт,8744.7,level
+2012-02-01,national,PIPELINE,Трубопроводный транспорт,8142.3,level
+2012-03-01,national,PIPELINE,Трубопроводный транспорт,8682.1,level
+2012-04-01,national,PIPELINE,Трубопроводный транспорт,8543.1,level
+2012-05-01,national,PIPELINE,Трубопроводный транспорт,8604.8,level
+2012-06-01,national,PIPELINE,Трубопроводный транспорт,8759.3,level
+2012-07-01,national,PIPELINE,Трубопроводный транспорт,9188.2,level
+2012-08-01,national,PIPELINE,Трубопроводный транспорт,9157.8,level
+2012-09-01,national,PIPELINE,Трубопроводный транспорт,9033.0,level
+2012-10-01,national,PIPELINE,Трубопроводный транспорт,9406.1,level
+2012-11-01,national,PIPELINE,Трубопроводный транспорт,9294.7,level
+2012-12-01,national,PIPELINE,Трубопроводный транспорт,9647.9,level
+2013-01-01,national,PIPELINE,Трубопроводный транспорт,9390.0,level
+2013-02-01,national,PIPELINE,Трубопроводный транспорт,8856.1,level
+2013-03-01,national,PIPELINE,Трубопроводный транспорт,10020.6,level
+2013-04-01,national,PIPELINE,Трубопроводный транспорт,9476.1,level
+2013-05-01,national,PIPELINE,Трубопроводный транспорт,9853.3,level
+2013-06-01,national,PIPELINE,Трубопроводный транспорт,9253.7,level
+2013-07-01,national,PIPELINE,Трубопроводный транспорт,9964.8,level
+2013-08-01,national,PIPELINE,Трубопроводный транспорт,10135.1,level
+2013-09-01,national,PIPELINE,Трубопроводный транспорт,9736.8,level
+2013-10-01,national,PIPELINE,Трубопроводный транспорт,9622.9,level
+2013-11-01,national,PIPELINE,Трубопроводный транспорт,9801.3,level
+2013-12-01,national,PIPELINE,Трубопроводный транспорт,9966.3,level
+2014-01-01,national,PIPELINE,Трубопроводный транспорт,9114.9,level
+2014-02-01,national,PIPELINE,Трубопроводный транспорт,7963.9,level
+2014-03-01,national,PIPELINE,Трубопроводный транспорт,8830.0,level
+2014-04-01,national,PIPELINE,Трубопроводный транспорт,9679.0,level
+2014-05-01,national,PIPELINE,Трубопроводный транспорт,9855.6,level
+2014-06-01,national,PIPELINE,Трубопроводный транспорт,9640.2,level
+2014-07-01,national,PIPELINE,Трубопроводный транспорт,10293.9,level
+2014-08-01,national,PIPELINE,Трубопроводный транспорт,9935.6,level
+2014-09-01,national,PIPELINE,Трубопроводный транспорт,8984.2,level
+2014-10-01,national,PIPELINE,Трубопроводный транспорт,9233.6,level
+2014-11-01,national,PIPELINE,Трубопроводный транспорт,10169.5,level
+2014-12-01,national,PIPELINE,Трубопроводный транспорт,11951.3,level
+2015-01-01,national,PIPELINE,Трубопроводный транспорт,10615.9,level
+2015-02-01,national,PIPELINE,Трубопроводный транспорт,8970.5,level
+2015-03-01,national,PIPELINE,Трубопроводный транспорт,9987.6,level
+2015-04-01,national,PIPELINE,Трубопроводный транспорт,9031.5,level
+2015-05-01,national,PIPELINE,Трубопроводный транспорт,9366.7,level
+2015-06-01,national,PIPELINE,Трубопроводный транспорт,8773.9,level
+2015-07-01,national,PIPELINE,Трубопроводный транспорт,9210.8,level
+2015-08-01,national,PIPELINE,Трубопроводный транспорт,9258.2,level
+2015-09-01,national,PIPELINE,Трубопроводный транспорт,9379.8,level
+2015-10-01,national,PIPELINE,Трубопроводный транспорт,8945.9,level
+2015-11-01,national,PIPELINE,Трубопроводный транспорт,10892.2,level
+2015-12-01,national,PIPELINE,Трубопроводный транспорт,11084.1,level
+2016-01-01,national,PIPELINE,Трубопроводный транспорт,11117.27,level
+2016-02-01,national,PIPELINE,Трубопроводный транспорт,10206.36,level
+2016-03-01,national,PIPELINE,Трубопроводный транспорт,10687.39,level
+2016-04-01,national,PIPELINE,Трубопроводный транспорт,9165.57,level
+2016-05-01,national,PIPELINE,Трубопроводный транспорт,9093.0,level
+2016-06-01,national,PIPELINE,Трубопроводный транспорт,9021.34,level
+2016-07-01,national,PIPELINE,Трубопроводный транспорт,8978.34,level
+2016-08-01,national,PIPELINE,Трубопроводный транспорт,8624.39,level
+2016-09-01,national,PIPELINE,Трубопроводный транспорт,8901.34,level
+2016-10-01,national,PIPELINE,Трубопроводный транспорт,9088.09,level
+2016-11-01,national,PIPELINE,Трубопроводный транспорт,9554.89,level
+2016-12-01,national,PIPELINE,Трубопроводный транспорт,10412.86,level
+2017-01-01,national,PIPELINE,Трубопроводный транспорт,10909.26,level
+2017-02-01,national,PIPELINE,Трубопроводный транспорт,9859.2,level
+2017-03-01,national,PIPELINE,Трубопроводный транспорт,11083.3,level
+2017-04-01,national,PIPELINE,Трубопроводный транспорт,10730.22,level
+2017-05-01,national,PIPELINE,Трубопроводный транспорт,10887.57,level
+2017-06-01,national,PIPELINE,Трубопроводный транспорт,10218.96,level
+2017-07-01,national,PIPELINE,Трубопроводный транспорт,10933.21,level
+2017-08-01,national,PIPELINE,Трубопроводный транспорт,11036.74,level
+2017-09-01,national,PIPELINE,Трубопроводный транспорт,10591.8,level
+2017-10-01,national,PIPELINE,Трубопроводный транспорт,10996.98,level
+2017-11-01,national,PIPELINE,Трубопроводный транспорт,11438.87,level
+2017-12-01,national,PIPELINE,Трубопроводный транспорт,11138.43,level
+2018-01-01,national,PIPELINE,Трубопроводный транспорт,11602.07,level
+2018-02-01,national,PIPELINE,Трубопроводный транспорт,10748.43,level
+2018-03-01,national,PIPELINE,Трубопроводный транспорт,11894.57,level
+2018-04-01,national,PIPELINE,Трубопроводный транспорт,11891.87,level
+2018-05-01,national,PIPELINE,Трубопроводный транспорт,11902.96,level
+2018-06-01,national,PIPELINE,Трубопроводный транспорт,11607.51,level
+2018-07-01,national,PIPELINE,Трубопроводный транспорт,11725.34,level
+2018-08-01,national,PIPELINE,Трубопроводный транспорт,11804.4,level
+2018-09-01,national,PIPELINE,Трубопроводный транспорт,11107.99,level
+2018-10-01,national,PIPELINE,Трубопроводный транспорт,11772.47,level
+2018-11-01,national,PIPELINE,Трубопроводный транспорт,10883.54,level
+2018-12-01,national,PIPELINE,Трубопроводный транспорт,11829.04,level
+2019-02-01,national,PIPELINE,Трубопроводный транспорт,10450.83,level
+2019-03-01,national,PIPELINE,Трубопроводный транспорт,11254.65,level
+2019-04-01,national,PIPELINE,Трубопроводный транспорт,11205.33,level
+2019-05-01,national,PIPELINE,Трубопроводный транспорт,11599.0,level
+2019-06-01,national,PIPELINE,Трубопроводный транспорт,11171.61,level
+2019-07-01,national,PIPELINE,Трубопроводный транспорт,11659.77,level
+2019-08-01,national,PIPELINE,Трубопроводный транспорт,11559.47,level
+2019-09-01,national,PIPELINE,Трубопроводный транспорт,10563.9,level
+2019-10-01,national,PIPELINE,Трубопроводный транспорт,11618.54,level
+2019-11-01,national,PIPELINE,Трубопроводный транспорт,11547.48,level
+2019-12-01,national,PIPELINE,Трубопроводный транспорт,11893.72,level
+2020-01-01,national,PIPELINE,Трубопроводный транспорт,11802.59,level
+2020-02-01,national,PIPELINE,Трубопроводный транспорт,11307.08,level
+2020-03-01,national,PIPELINE,Трубопроводный транспорт,10687.18,level
+2020-04-01,national,PIPELINE,Трубопроводный транспорт,10365.71,level
+2020-05-01,national,PIPELINE,Трубопроводный транспорт,10083.78,level
+2020-06-01,national,PIPELINE,Трубопроводный транспорт,9363.93,level
+2020-07-01,national,PIPELINE,Трубопроводный транспорт,9639.15,level
+2020-08-01,national,PIPELINE,Трубопроводный транспорт,9915.54,level
+2020-09-01,national,PIPELINE,Трубопроводный транспорт,9355.91,level
+2020-10-01,national,PIPELINE,Трубопроводный транспорт,9942.37,level
+2020-11-01,national,PIPELINE,Трубопроводный транспорт,10970.02,level
+2020-12-01,national,PIPELINE,Трубопроводный транспорт,11655.24,level
+2021-01-01,national,PIPELINE,Трубопроводный транспорт,11305.17,level
+2021-02-01,national,PIPELINE,Трубопроводный транспорт,10326.24,level
+2021-03-01,national,PIPELINE,Трубопроводный транспорт,10975.2,level
+2021-04-01,national,PIPELINE,Трубопроводный транспорт,10811.46,level
+2021-05-01,national,PIPELINE,Трубопроводный транспорт,11232.61,level
+2021-06-01,national,PIPELINE,Трубопроводный транспорт,11082.5,level
+2021-07-01,national,PIPELINE,Трубопроводный транспорт,11936.4,level
+2021-08-01,national,PIPELINE,Трубопроводный транспорт,11393.27,level
+2021-09-01,national,PIPELINE,Трубопроводный транспорт,10324.17,level
+2021-10-01,national,PIPELINE,Трубопроводный транспорт,12119.59,level
+2021-11-01,national,PIPELINE,Трубопроводный транспорт,13668.93,level
+2021-12-01,national,PIPELINE,Трубопроводный транспорт,13837.09,level
+2022-01-01,national,PIPELINE,Трубопроводный транспорт,13096.5,level
+2022-02-01,national,PIPELINE,Трубопроводный транспорт,11785.5,level
+2022-03-01,national,PIPELINE,Трубопроводный транспорт,12938.88,level
+2022-04-01,national,PIPELINE,Трубопроводный транспорт,12911.94,level
+2022-05-01,national,PIPELINE,Трубопроводный транспорт,12399.39,level
+2022-06-01,national,PIPELINE,Трубопроводный транспорт,11273.82,level
+2022-07-01,national,PIPELINE,Трубопроводный транспорт,11973.37,level
+2022-08-01,national,PIPELINE,Трубопроводный транспорт,11691.74,level
+2022-09-01,national,PIPELINE,Трубопроводный транспорт,10335.87,level
+2022-10-01,national,PIPELINE,Трубопроводный транспорт,11356.51,level
+2022-11-01,national,PIPELINE,Трубопроводный транспорт,12116.3,level
+2022-12-01,national,PIPELINE,Трубопроводный транспорт,12089.73,level
+2023-01-01,national,PIPELINE,Трубопроводный транспорт,11977.52,level
+2023-02-01,national,PIPELINE,Трубопроводный транспорт,11263.76,level
+2023-03-01,national,PIPELINE,Трубопроводный транспорт,12703.37,level
+2023-04-01,national,PIPELINE,Трубопроводный транспорт,12198.3,level
+2023-05-01,national,PIPELINE,Трубопроводный транспорт,12334.08,level
+2024-01-01,national,PIPELINE,Трубопроводный транспорт,12837.43,level
+2024-02-01,national,PIPELINE,Трубопроводный транспорт,11639.29,level
+2024-03-01,national,PIPELINE,Трубопроводный транспорт,12864.48,level
+2024-04-01,national,PIPELINE,Трубопроводный транспорт,12158.01,level
+2024-05-01,national,PIPELINE,Трубопроводный транспорт,12263.4,level
+2024-06-01,national,PIPELINE,Трубопроводный транспорт,12297.35,level
+2024-07-01,national,PIPELINE,Трубопроводный транспорт,12928.92,level
+2024-08-01,national,PIPELINE,Трубопроводный транспорт,13302.6,level
+2024-09-01,national,PIPELINE,Трубопроводный транспорт,11664.05,level
+2024-10-01,national,PIPELINE,Трубопроводный транспорт,12304.52,level
+2024-11-01,national,PIPELINE,Трубопроводный транспорт,12439.28,level
+2024-12-01,national,PIPELINE,Трубопроводный транспорт,12355.57,level
+2025-01-01,national,PIPELINE,Трубопроводный транспорт,14412.53,level
+2025-02-01,national,PIPELINE,Трубопроводный транспорт,13271.55,level
+2025-03-01,national,PIPELINE,Трубопроводный транспорт,15083.79,level
+2025-04-01,national,PIPELINE,Трубопроводный транспорт,14728.67,level
+2025-05-01,national,PIPELINE,Трубопроводный транспорт,14301.21,level
+2025-06-01,national,PIPELINE,Трубопроводный транспорт,14954.21,level
+2025-07-01,national,PIPELINE,Трубопроводный транспорт,15448.2,level
+2025-08-01,national,PIPELINE,Трубопроводный транспорт,15220.91,level
+2025-09-01,national,PIPELINE,Трубопроводный транспорт,13463.7,level
+2025-10-01,national,PIPELINE,Трубопроводный транспорт,14204.87,level
+2025-11-01,national,PIPELINE,Трубопроводный транспорт,14082.49,level
+2025-12-01,national,PIPELINE,Трубопроводный транспорт,14427.11,level
+2026-01-01,national,PIPELINE,Трубопроводный транспорт,13584.84,level
+2026-02-01,national,PIPELINE,Трубопроводный транспорт,12846.44,level
+2026-03-01,national,PIPELINE,Трубопроводный транспорт,14367.3,level
+2026-04-01,national,PIPELINE,Трубопроводный транспорт,14413.32,level
+2026-05-01,national,PIPELINE,Трубопроводный транспорт,14747.59,level
+2026-06-01,national,PIPELINE,Трубопроводный транспорт,14680.82,level
+2026-07-01,national,PIPELINE,Трубопроводный транспорт,14564.49,level
+2026-08-01,national,PIPELINE,Трубопроводный транспорт,15378.37,level
+2026-09-01,national,PIPELINE,Трубопроводный транспорт,13458.05,level
+2007-01-01,national,RAIL,Железнодорожный транспорт,15535.4,level
+2007-02-01,national,RAIL,Железнодорожный транспорт,14286.7,level
+2007-03-01,national,RAIL,Железнодорожный транспорт,16393.5,level
+2007-04-01,national,RAIL,Железнодорожный транспорт,16602.2,level
+2007-05-01,national,RAIL,Железнодорожный транспорт,15256.0,level
+2007-06-01,national,RAIL,Железнодорожный транспорт,16645.01,level
+2007-07-01,national,RAIL,Железнодорожный транспорт,15634.94,level
+2007-08-01,national,RAIL,Железнодорожный транспорт,17018.05,level
+2007-09-01,national,RAIL,Железнодорожный транспорт,17527.9,level
+2007-10-01,national,RAIL,Железнодорожный транспорт,18025.66,level
+2007-11-01,national,RAIL,Железнодорожный транспорт,18005.41,level
+2007-12-01,national,RAIL,Железнодорожный транспорт,19627.46,level
+2008-01-01,national,RAIL,Железнодорожный транспорт,17178.0,level
+2008-02-01,national,RAIL,Железнодорожный транспорт,17127.3,level
+2008-03-01,national,RAIL,Железнодорожный транспорт,17984.5,level
+2008-04-01,national,RAIL,Железнодорожный транспорт,17623.5,level
+2008-05-01,national,RAIL,Железнодорожный транспорт,18393.8,level
+2008-06-01,national,RAIL,Железнодорожный транспорт,17336.1,level
+2008-07-01,national,RAIL,Железнодорожный транспорт,17702.0,level
+2008-08-01,national,RAIL,Железнодорожный транспорт,18613.8,level
+2008-09-01,national,RAIL,Железнодорожный транспорт,18276.6,level
+2008-10-01,national,RAIL,Железнодорожный транспорт,19362.1,level
+2008-11-01,national,RAIL,Железнодорожный транспорт,18239.2,level
+2008-12-01,national,RAIL,Железнодорожный транспорт,17273.7,level
+2009-01-01,national,RAIL,Железнодорожный транспорт,13987.1,level
+2009-02-01,national,RAIL,Железнодорожный транспорт,14256.0,level
+2009-03-01,national,RAIL,Железнодорожный транспорт,15713.5,level
+2009-04-01,national,RAIL,Железнодорожный транспорт,14903.3,level
+2009-05-01,national,RAIL,Железнодорожный транспорт,16117.9,level
+2009-06-01,national,RAIL,Железнодорожный транспорт,14302.37,level
+2009-07-01,national,RAIL,Железнодорожный транспорт,16931.04,level
+2009-08-01,national,RAIL,Железнодорожный транспорт,17778.7,level
+2009-09-01,national,RAIL,Железнодорожный транспорт,17778.8,level
+2009-10-01,national,RAIL,Железнодорожный транспорт,18584.8,level
+2009-11-01,national,RAIL,Железнодорожный транспорт,17157.7,level
+2009-12-01,national,RAIL,Железнодорожный транспорт,17407.06,level
+2010-01-01,national,RAIL,Железнодорожный транспорт,14682.4,level
+2010-02-01,national,RAIL,Железнодорожный транспорт,15202.8,level
+2010-03-01,national,RAIL,Железнодорожный транспорт,16646.2,level
+2010-04-01,national,RAIL,Железнодорожный транспорт,17545.5,level
+2010-05-01,national,RAIL,Железнодорожный транспорт,18056.4,level
+2010-06-01,national,RAIL,Железнодорожный транспорт,17407.1,level
+2010-07-01,national,RAIL,Железнодорожный транспорт,17563.1,level
+2010-08-01,national,RAIL,Железнодорожный транспорт,17751.5,level
+2010-09-01,national,RAIL,Железнодорожный транспорт,17957.3,level
+2010-10-01,national,RAIL,Железнодорожный транспорт,19703.5,level
+2010-11-01,national,RAIL,Железнодорожный транспорт,19231.4,level
+2010-12-01,national,RAIL,Железнодорожный транспорт,18966.0,level
+2011-01-01,national,RAIL,Железнодорожный транспорт,17072.4,level
+2011-02-01,national,RAIL,Железнодорожный транспорт,16320.7,level
+2011-03-01,national,RAIL,Железнодорожный транспорт,17273.2,level
+2011-04-01,national,RAIL,Железнодорожный транспорт,17105.7,level
+2011-05-01,national,RAIL,Железнодорожный транспорт,17733.7,level
+2011-06-01,national,RAIL,Железнодорожный транспорт,17478.5,level
+2011-07-01,national,RAIL,Железнодорожный транспорт,18045.3,level
+2011-08-01,national,RAIL,Железнодорожный транспорт,18865.9,level
+2011-09-01,national,RAIL,Железнодорожный транспорт,18528.7,level
+2011-10-01,national,RAIL,Железнодорожный транспорт,20175.6,level
+2011-11-01,national,RAIL,Железнодорожный транспорт,20452.4,level
+2011-12-01,national,RAIL,Железнодорожный транспорт,20687.4,level
+2012-01-01,national,RAIL,Железнодорожный транспорт,19411.9,level
+2012-02-01,national,RAIL,Железнодорожный транспорт,18219.9,level
+2012-03-01,national,RAIL,Железнодорожный транспорт,19696.4,level
+2012-04-01,national,RAIL,Железнодорожный транспорт,18729.8,level
+2012-05-01,national,RAIL,Железнодорожный транспорт,19102.9,level
+2012-06-01,national,RAIL,Железнодорожный транспорт,19020.2,level
+2012-07-01,national,RAIL,Железнодорожный транспорт,19626.8,level
+2012-08-01,national,RAIL,Железнодорожный транспорт,19347.8,level
+2012-09-01,national,RAIL,Железнодорожный транспорт,19881.8,level
+2012-10-01,national,RAIL,Железнодорожный транспорт,20989.6,level
+2012-11-01,national,RAIL,Железнодорожный транспорт,19830.4,level
+2012-12-01,national,RAIL,Железнодорожный транспорт,19082.0,level
+2013-01-01,national,RAIL,Железнодорожный транспорт,14609.1,level
+2013-02-01,national,RAIL,Железнодорожный транспорт,16838.2,level
+2013-03-01,national,RAIL,Железнодорожный транспорт,18111.4,level
+2013-04-01,national,RAIL,Железнодорожный транспорт,17804.4,level
+2013-05-01,national,RAIL,Железнодорожный транспорт,18094.5,level
+2013-06-01,national,RAIL,Железнодорожный транспорт,19173.5,level
+2013-07-01,national,RAIL,Железнодорожный транспорт,19869.0,level
+2013-08-01,national,RAIL,Железнодорожный транспорт,19160.0,level
+2013-09-01,national,RAIL,Железнодорожный транспорт,19555.0,level
+2013-10-01,national,RAIL,Железнодорожный транспорт,21427.5,level
+2013-11-01,national,RAIL,Железнодорожный транспорт,21739.5,level
+2013-12-01,national,RAIL,Железнодорожный транспорт,22760.2,level
+2014-01-01,national,RAIL,Железнодорожный транспорт,19348.8,level
+2014-02-01,national,RAIL,Железнодорожный транспорт,20409.5,level
+2014-03-01,national,RAIL,Железнодорожный транспорт,22350.8,level
+2014-04-01,national,RAIL,Железнодорожный транспорт,22083.2,level
+2014-05-01,national,RAIL,Железнодорожный транспорт,23117.1,level
+2014-06-01,national,RAIL,Железнодорожный транспорт,22561.9,level
+2014-07-01,national,RAIL,Железнодорожный транспорт,24670.5,level
+2014-08-01,national,RAIL,Железнодорожный транспорт,25474.8,level
+2014-09-01,national,RAIL,Железнодорожный транспорт,24507.4,level
+2014-10-01,national,RAIL,Железнодорожный транспорт,26531.7,level
+2014-11-01,national,RAIL,Железнодорожный транспорт,24850.3,level
+2014-12-01,national,RAIL,Железнодорожный транспорт,24748.6,level
+2015-01-01,national,RAIL,Железнодорожный транспорт,18420.7,level
+2015-02-01,national,RAIL,Железнодорожный транспорт,17516.8,level
+2015-03-01,national,RAIL,Железнодорожный транспорт,18744.9,level
+2015-04-01,national,RAIL,Железнодорожный транспорт,18378.9,level
+2015-05-01,national,RAIL,Железнодорожный транспорт,19535.8,level
+2015-06-01,national,RAIL,Железнодорожный транспорт,18896.6,level
+2015-07-01,national,RAIL,Железнодорожный транспорт,20378.0,level
+2015-08-01,national,RAIL,Железнодорожный транспорт,20166.9,level
+2015-09-01,national,RAIL,Железнодорожный транспорт,20414.4,level
+2015-10-01,national,RAIL,Железнодорожный транспорт,21775.6,level
+2015-11-01,national,RAIL,Железнодорожный транспорт,20911.4,level
+2015-12-01,national,RAIL,Железнодорожный транспорт,20440.4,level
+2016-01-01,national,RAIL,Железнодорожный транспорт,17657.92,level
+2016-02-01,national,RAIL,Железнодорожный транспорт,17351.64,level
+2016-03-01,national,RAIL,Железнодорожный транспорт,18314.8,level
+2016-04-01,national,RAIL,Железнодорожный транспорт,18882.0,level
+2016-05-01,national,RAIL,Железнодорожный транспорт,19920.61,level
+2016-06-01,national,RAIL,Железнодорожный транспорт,19353.51,level
+2016-07-01,national,RAIL,Железнодорожный транспорт,18875.45,level
+2016-08-01,national,RAIL,Железнодорожный транспорт,19170.92,level
+2016-09-01,national,RAIL,Железнодорожный транспорт,20767.83,level
+2016-10-01,national,RAIL,Железнодорожный транспорт,22499.21,level
+2016-11-01,national,RAIL,Железнодорожный транспорт,21870.88,level
+2016-12-01,national,RAIL,Железнодорожный транспорт,22306.89,level
+2017-01-01,national,RAIL,Железнодорожный транспорт,19998.51,level
+2017-02-01,national,RAIL,Железнодорожный транспорт,18311.69,level
+2017-03-01,national,RAIL,Железнодорожный транспорт,21756.77,level
+2017-04-01,national,RAIL,Железнодорожный транспорт,19938.79,level
+2017-05-01,national,RAIL,Железнодорожный транспорт,21458.8,level
+2017-06-01,national,RAIL,Железнодорожный транспорт,21699.77,level
+2017-07-01,national,RAIL,Железнодорожный транспорт,21896.5,level
+2017-08-01,national,RAIL,Железнодорожный транспорт,22395.71,level
+2017-09-01,national,RAIL,Железнодорожный транспорт,22559.58,level
+2017-10-01,national,RAIL,Железнодорожный транспорт,23978.81,level
+2017-11-01,national,RAIL,Железнодорожный транспорт,23731.71,level
+2017-12-01,national,RAIL,Железнодорожный транспорт,24370.81,level
+2018-01-01,national,RAIL,Железнодорожный транспорт,22549.78,level
+2018-02-01,national,RAIL,Железнодорожный транспорт,21403.87,level
+2018-03-01,national,RAIL,Железнодорожный транспорт,24140.75,level
+2018-04-01,national,RAIL,Железнодорожный транспорт,22829.42,level
+2018-05-01,national,RAIL,Железнодорожный транспорт,23509.49,level
+2018-06-01,national,RAIL,Железнодорожный транспорт,22713.08,level
+2018-07-01,national,RAIL,Железнодорожный транспорт,23695.18,level
+2018-08-01,national,RAIL,Железнодорожный транспорт,24316.92,level
+2018-09-01,national,RAIL,Железнодорожный транспорт,24197.21,level
+2018-10-01,national,RAIL,Железнодорожный транспорт,25049.98,level
+2018-11-01,national,RAIL,Железнодорожный транспорт,23923.24,level
+2018-12-01,national,RAIL,Железнодорожный транспорт,24788.9,level
+2019-01-01,national,RAIL,Железнодорожный транспорт,23555.54,level
+2019-02-01,national,RAIL,Железнодорожный транспорт,21567.33,level
+2019-03-01,national,RAIL,Железнодорожный транспорт,23747.68,level
+2019-04-01,national,RAIL,Железнодорожный транспорт,22517.3,level
+2019-05-01,national,RAIL,Железнодорожный транспорт,23517.24,level
+2019-06-01,national,RAIL,Железнодорожный транспорт,22481.09,level
+2019-07-01,national,RAIL,Железнодорожный транспорт,24285.97,level
+2019-08-01,national,RAIL,Железнодорожный транспорт,24258.71,level
+2019-09-01,national,RAIL,Железнодорожный транспорт,24177.66,level
+2019-10-01,national,RAIL,Железнодорожный транспорт,26799.79,level
+2019-11-01,national,RAIL,Железнодорожный транспорт,26006.45,level
+2019-12-01,national,RAIL,Железнодорожный транспорт,26259.25,level
+2020-01-01,national,RAIL,Железнодорожный транспорт,22572.98,level
+2020-02-01,national,RAIL,Железнодорожный транспорт,22196.43,level
+2020-03-01,national,RAIL,Железнодорожный транспорт,25400.77,level
+2020-06-01,national,RAIL,Железнодорожный транспорт,24287.88,level
+2020-07-01,national,RAIL,Железнодорожный транспорт,25625.79,level
+2020-08-01,national,RAIL,Железнодорожный транспорт,25351.57,level
+2020-09-01,national,RAIL,Железнодорожный транспорт,25982.74,level
+2020-10-01,national,RAIL,Железнодорожный транспорт,27743.29,level
+2020-11-01,national,RAIL,Железнодорожный транспорт,26964.79,level
+2020-12-01,national,RAIL,Железнодорожный транспорт,27389.84,level
+2021-01-01,national,RAIL,Железнодорожный транспорт,23194.46,level
+2021-02-01,national,RAIL,Железнодорожный транспорт,20842.26,level
+2021-03-01,national,RAIL,Железнодорожный транспорт,24109.89,level
+2021-04-01,national,RAIL,Железнодорожный транспорт,25479.03,level
+2021-05-01,national,RAIL,Железнодорожный транспорт,26614.28,level
+2021-06-01,national,RAIL,Железнодорожный транспорт,25131.51,level
+2021-07-01,national,RAIL,Железнодорожный транспорт,25334.12,level
+2021-08-01,national,RAIL,Железнодорожный транспорт,24985.24,level
+2021-09-01,national,RAIL,Железнодорожный транспорт,23939.53,level
+2021-10-01,national,RAIL,Железнодорожный транспорт,26181.04,level
+2021-11-01,national,RAIL,Железнодорожный транспорт,25964.66,level
+2021-12-01,national,RAIL,Железнодорожный транспорт,27394.79,level
+2022-01-01,national,RAIL,Железнодорожный транспорт,27203.93,level
+2022-02-01,national,RAIL,Железнодорожный транспорт,24846.88,level
+2022-03-01,national,RAIL,Железнодорожный транспорт,26637.08,level
+2022-04-01,national,RAIL,Железнодорожный транспорт,24304.88,level
+2022-05-01,national,RAIL,Железнодорожный транспорт,26184.61,level
+2022-06-01,national,RAIL,Железнодорожный транспорт,24768.43,level
+2022-07-01,national,RAIL,Железнодорожный транспорт,26493.98,level
+2022-08-01,national,RAIL,Железнодорожный транспорт,25751.13,level
+2022-09-01,national,RAIL,Железнодорожный транспорт,25258.64,level
+2022-10-01,national,RAIL,Железнодорожный транспорт,27585.18,level
+2022-11-01,national,RAIL,Железнодорожный транспорт,26272.89,level
+2022-12-01,national,RAIL,Железнодорожный транспорт,26619.33,level
+2023-01-01,national,RAIL,Железнодорожный транспорт,27081.59,level
+2023-02-01,national,RAIL,Железнодорожный транспорт,26142.69,level
+2023-03-01,national,RAIL,Железнодорожный транспорт,28790.73,level
+2023-04-01,national,RAIL,Железнодорожный транспорт,27238.0,level
+2023-05-01,national,RAIL,Железнодорожный транспорт,27649.26,level
+2023-06-01,national,RAIL,Железнодорожный транспорт,26089.62,level
+2023-07-01,national,RAIL,Железнодорожный транспорт,26685.89,level
+2023-08-01,national,RAIL,Железнодорожный транспорт,26984.28,level
+2023-09-01,national,RAIL,Железнодорожный транспорт,26364.6,level
+2023-10-01,national,RAIL,Железнодорожный транспорт,28243.48,level
+2023-11-01,national,RAIL,Железнодорожный транспорт,28014.54,level
+2023-12-01,national,RAIL,Железнодорожный транспорт,27527.02,level
+2024-01-01,national,RAIL,Железнодорожный транспорт,25308.14,level
+2024-02-01,national,RAIL,Железнодорожный транспорт,23536.3,level
+2024-03-01,national,RAIL,Железнодорожный транспорт,27062.77,level
+2024-04-01,national,RAIL,Железнодорожный транспорт,24889.04,level
+2024-05-01,national,RAIL,Железнодорожный транспорт,26253.91,level
+2024-06-01,national,RAIL,Железнодорожный транспорт,26678.89,level
+2024-07-01,national,RAIL,Железнодорожный транспорт,27962.88,level
+2024-08-01,national,RAIL,Железнодорожный транспорт,27526.56,level
+2024-09-01,national,RAIL,Железнодорожный транспорт,27733.23,level
+2024-10-01,national,RAIL,Железнодорожный транспорт,30575.31,level
+2024-11-01,national,RAIL,Железнодорожный транспорт,28933.78,level
+2024-12-01,national,RAIL,Железнодорожный транспорт,31482.81,level
+2025-01-01,national,RAIL,Железнодорожный транспорт,27757.02,level
+2025-02-01,national,RAIL,Железнодорожный транспорт,26860.66,level
+2025-03-01,national,RAIL,Железнодорожный транспорт,29104.34,level
+2025-04-01,national,RAIL,Железнодорожный транспорт,27554.5,level
+2025-05-01,national,RAIL,Железнодорожный транспорт,27530.41,level
+2025-06-01,national,RAIL,Железнодорожный транспорт,27180.26,level
+2025-07-01,national,RAIL,Железнодорожный транспорт,29171.93,level
+2025-08-01,national,RAIL,Железнодорожный транспорт,29934.88,level
+2025-09-01,national,RAIL,Железнодорожный транспорт,29866.2,level
+2025-10-01,national,RAIL,Железнодорожный транспорт,31839.02,level
+2025-11-01,national,RAIL,Железнодорожный транспорт,31731.52,level
+2025-12-01,national,RAIL,Железнодорожный транспорт,42734.54,level
+2026-01-01,national,RAIL,Железнодорожный транспорт,24948.8,level
+2026-02-01,national,RAIL,Железнодорожный транспорт,23555.67,level
+2026-03-01,national,RAIL,Железнодорожный транспорт,26151.42,level
+2026-04-01,national,RAIL,Железнодорожный транспорт,24243.3,level
+2026-05-01,national,RAIL,Железнодорожный транспорт,24524.73,level
+2026-06-01,national,RAIL,Железнодорожный транспорт,23232.17,level
+2026-07-01,national,RAIL,Железнодорожный транспорт,23411.57,level
+2026-08-01,national,RAIL,Железнодорожный транспорт,24365.03,level
+2026-09-01,national,RAIL,Железнодорожный транспорт,25184.82,level
+2007-01-01,national,ROAD,Автомобильный транспорт,3930.8,level
+2007-02-01,national,ROAD,Автомобильный транспорт,3795.4,level
+2007-03-01,national,ROAD,Автомобильный транспорт,3892.0,level
+2007-04-01,national,ROAD,Автомобильный транспорт,4743.3,level
+2007-05-01,national,ROAD,Автомобильный транспорт,4748.98,level
+2007-06-01,national,ROAD,Автомобильный транспорт,5424.9,level
+2007-07-01,national,ROAD,Автомобильный транспорт,5997.4,level
+2007-08-01,national,ROAD,Автомобильный транспорт,6168.77,level
+2007-09-01,national,ROAD,Автомобильный транспорт,6292.75,level
+2007-10-01,national,ROAD,Автомобильный транспорт,5925.0,level
+2007-11-01,national,ROAD,Автомобильный транспорт,5910.28,level
+2007-12-01,national,ROAD,Автомобильный транспорт,5744.12,level
+2008-01-01,national,ROAD,Автомобильный транспорт,3971.72,level
+2008-02-01,national,ROAD,Автомобильный транспорт,3840.56,level
+2008-03-01,national,ROAD,Автомобильный транспорт,3997.22,level
+2008-04-01,national,ROAD,Автомобильный транспорт,4346.39,level
+2008-05-01,national,ROAD,Автомобильный транспорт,4595.25,level
+2008-06-01,national,ROAD,Автомобильный транспорт,4912.63,level
+2008-07-01,national,ROAD,Автомобильный транспорт,5846.6,level
+2008-08-01,national,ROAD,Автомобильный транспорт,6440.13,level
+2008-09-01,national,ROAD,Автомобильный транспорт,6781.2,level
+2008-10-01,national,ROAD,Автомобильный транспорт,6410.39,level
+2008-11-01,national,ROAD,Автомобильный транспорт,6392.64,level
+2008-12-01,national,ROAD,Автомобильный транспорт,5942.03,level
+2009-01-01,national,ROAD,Автомобильный транспорт,3873.1,level
+2009-02-01,national,ROAD,Автомобильный транспорт,3681.5,level
+2009-03-01,national,ROAD,Автомобильный транспорт,3807.6,level
+2009-04-01,national,ROAD,Автомобильный транспорт,3880.07,level
+2009-05-01,national,ROAD,Автомобильный транспорт,3874.93,level
+2009-06-01,national,ROAD,Автомобильный транспорт,4432.75,level
+2009-07-01,national,ROAD,Автомобильный транспорт,4979.15,level
+2009-08-01,national,ROAD,Автомобильный транспорт,5879.6,level
+2009-09-01,national,ROAD,Автомобильный транспорт,6768.8,level
+2009-10-01,national,ROAD,Автомобильный транспорт,7989.2,level
+2009-11-01,national,ROAD,Автомобильный транспорт,8306.01,level
+2009-12-01,national,ROAD,Автомобильный транспорт,8761.18,level
+2010-01-01,national,ROAD,Автомобильный транспорт,4805.38,level
+2010-02-01,national,ROAD,Автомобильный транспорт,4291.55,level
+2010-03-01,national,ROAD,Автомобильный транспорт,4033.52,level
+2010-04-01,national,ROAD,Автомобильный транспорт,4424.66,level
+2010-05-01,national,ROAD,Автомобильный транспорт,4784.0,level
+2010-06-01,national,ROAD,Автомобильный транспорт,5663.03,level
+2010-07-01,national,ROAD,Автомобильный транспорт,6719.58,level
+2010-08-01,national,ROAD,Автомобильный транспорт,7493.29,level
+2010-09-01,national,ROAD,Автомобильный транспорт,8713.11,level
+2010-10-01,national,ROAD,Автомобильный транспорт,9195.61,level
+2010-11-01,national,ROAD,Автомобильный транспорт,9725.03,level
+2010-12-01,national,ROAD,Автомобильный транспорт,10367.85,level
+2011-01-01,national,ROAD,Автомобильный транспорт,6032.85,level
+2011-02-01,national,ROAD,Автомобильный транспорт,5566.35,level
+2011-03-01,national,ROAD,Автомобильный транспорт,5671.62,level
+2011-04-01,national,ROAD,Автомобильный транспорт,6422.35,level
+2011-05-01,national,ROAD,Автомобильный транспорт,7339.94,level
+2011-06-01,national,ROAD,Автомобильный транспорт,8815.4,level
+2011-07-01,national,ROAD,Автомобильный транспорт,10489.03,level
+2011-08-01,national,ROAD,Автомобильный транспорт,11886.52,level
+2011-09-01,national,ROAD,Автомобильный транспорт,13375.87,level
+2011-10-01,national,ROAD,Автомобильный транспорт,14517.57,level
+2011-11-01,national,ROAD,Автомобильный транспорт,15111.78,level
+2011-12-01,national,ROAD,Автомобильный транспорт,15803.11,level
+2012-01-01,national,ROAD,Автомобильный транспорт,9447.8,level
+2012-02-01,national,ROAD,Автомобильный транспорт,8442.01,level
+2012-03-01,national,ROAD,Автомобильный транспорт,7999.54,level
+2012-04-01,national,ROAD,Автомобильный транспорт,8841.41,level
+2012-05-01,national,ROAD,Автомобильный транспорт,9452.92,level
+2012-06-01,national,ROAD,Автомобильный транспорт,10884.68,level
+2012-07-01,national,ROAD,Автомобильный транспорт,11821.5,level
+2012-08-01,national,ROAD,Автомобильный транспорт,12633.08,level
+2012-09-01,national,ROAD,Автомобильный транспорт,13208.64,level
+2012-10-01,national,ROAD,Автомобильный транспорт,13012.96,level
+2012-11-01,national,ROAD,Автомобильный транспорт,12732.99,level
+2012-12-01,national,ROAD,Автомобильный транспорт,13781.64,level
+2013-01-01,national,ROAD,Автомобильный транспорт,10512.8,level
+2013-02-01,national,ROAD,Автомобильный транспорт,10084.08,level
+2013-03-01,national,ROAD,Автомобильный транспорт,9525.13,level
+2013-04-01,national,ROAD,Автомобильный транспорт,9692.29,level
+2013-05-01,national,ROAD,Автомобильный транспорт,10265.74,level
+2013-06-01,national,ROAD,Автомобильный транспорт,11251.1,level
+2013-07-01,national,ROAD,Автомобильный транспорт,12818.1,level
+2013-08-01,national,ROAD,Автомобильный транспорт,13682.88,level
+2013-09-01,national,ROAD,Автомобильный транспорт,14226.06,level
+2013-10-01,national,ROAD,Автомобильный транспорт,14480.29,level
+2013-11-01,national,ROAD,Автомобильный транспорт,14636.41,level
+2013-12-01,national,ROAD,Автомобильный транспорт,14021.3,level
+2014-01-01,national,ROAD,Автомобильный транспорт,11306.49,level
+2014-02-01,national,ROAD,Автомобильный транспорт,10862.83,level
+2014-03-01,national,ROAD,Автомобильный транспорт,10402.92,level
+2014-04-01,national,ROAD,Автомобильный транспорт,10469.31,level
+2014-05-01,national,ROAD,Автомобильный транспорт,11217.77,level
+2014-06-01,national,ROAD,Автомобильный транспорт,12210.78,level
+2014-07-01,national,ROAD,Автомобильный транспорт,13636.23,level
+2014-08-01,national,ROAD,Автомобильный транспорт,14508.92,level
+2014-09-01,national,ROAD,Автомобильный транспорт,15116.53,level
+2014-10-01,national,ROAD,Автомобильный транспорт,15195.79,level
+2014-11-01,national,ROAD,Автомобильный транспорт,15088.55,level
+2014-12-01,national,ROAD,Автомобильный транспорт,15051.16,level
+2015-01-01,national,ROAD,Автомобильный транспорт,11461.96,level
+2015-02-01,national,ROAD,Автомобильный транспорт,11111.1,level
+2015-03-01,national,ROAD,Автомобильный транспорт,11035.34,level
+2015-04-01,national,ROAD,Автомобильный транспорт,10943.69,level
+2015-05-01,national,ROAD,Автомобильный транспорт,11797.6,level
+2015-06-01,national,ROAD,Автомобильный транспорт,12908.88,level
+2015-07-01,national,ROAD,Автомобильный транспорт,13946.56,level
+2015-08-01,national,ROAD,Автомобильный транспорт,14764.26,level
+2015-09-01,national,ROAD,Автомобильный транспорт,15350.47,level
+2015-10-01,national,ROAD,Автомобильный транспорт,15446.04,level
+2015-11-01,national,ROAD,Автомобильный транспорт,15121.7,level
+2015-12-01,national,ROAD,Автомобильный транспорт,15457.82,level
+2016-01-01,national,ROAD,Автомобильный транспорт,11301.5,level
+2016-02-01,national,ROAD,Автомобильный транспорт,10776.49,level
+2016-03-01,national,ROAD,Автомобильный транспорт,11044.68,level
+2016-04-01,national,ROAD,Автомобильный транспорт,10684.99,level
+2016-05-01,national,ROAD,Автомобильный транспорт,12128.83,level
+2016-06-01,national,ROAD,Автомобильный транспорт,13116.66,level
+2016-07-01,national,ROAD,Автомобильный транспорт,14828.47,level
+2016-08-01,national,ROAD,Автомобильный транспорт,15838.31,level
+2016-09-01,national,ROAD,Автомобильный транспорт,15208.21,level
+2016-10-01,national,ROAD,Автомобильный транспорт,14684.72,level
+2016-11-01,national,ROAD,Автомобильный транспорт,15236.86,level
+2016-12-01,national,ROAD,Автомобильный транспорт,15987.93,level
+2017-01-01,national,ROAD,Автомобильный транспорт,10926.95,level
+2017-02-01,national,ROAD,Автомобильный транспорт,10566.31,level
+2017-03-01,national,ROAD,Автомобильный транспорт,11281.11,level
+2017-04-01,national,ROAD,Автомобильный транспорт,11038.43,level
+2017-05-01,national,ROAD,Автомобильный транспорт,12395.09,level
+2017-06-01,national,ROAD,Автомобильный транспорт,13430.77,level
+2017-07-01,national,ROAD,Автомобильный транспорт,14797.38,level
+2017-08-01,national,ROAD,Автомобильный транспорт,15346.04,level
+2017-09-01,national,ROAD,Автомобильный транспорт,15234.37,level
+2017-10-01,national,ROAD,Автомобильный транспорт,14782.79,level
+2017-11-01,national,ROAD,Автомобильный транспорт,15034.63,level
+2017-12-01,national,ROAD,Автомобильный транспорт,17018.37,level
+2018-01-01,national,ROAD,Автомобильный транспорт,11045.77,level
+2018-02-01,national,ROAD,Автомобильный транспорт,10848.12,level
+2018-03-01,national,ROAD,Автомобильный транспорт,11813.82,level
+2018-04-01,national,ROAD,Автомобильный транспорт,11148.21,level
+2018-05-01,national,ROAD,Автомобильный транспорт,13714.38,level
+2018-06-01,national,ROAD,Автомобильный транспорт,15096.2,level
+2018-07-01,national,ROAD,Автомобильный транспорт,16214.02,level
+2018-08-01,national,ROAD,Автомобильный транспорт,16459.44,level
+2018-09-01,national,ROAD,Автомобильный транспорт,16452.74,level
+2018-10-01,national,ROAD,Автомобильный транспорт,16333.28,level
+2018-11-01,national,ROAD,Автомобильный транспорт,16148.08,level
+2018-12-01,national,ROAD,Автомобильный транспорт,17005.03,level
+2019-01-01,national,ROAD,Автомобильный транспорт,11420.39,level
+2019-02-01,national,ROAD,Автомобильный транспорт,11777.53,level
+2019-03-01,national,ROAD,Автомобильный транспорт,13182.12,level
+2019-06-01,national,ROAD,Автомобильный транспорт,16011.15,level
+2019-07-01,national,ROAD,Автомобильный транспорт,17107.37,level
+2019-08-01,national,ROAD,Автомобильный транспорт,17591.75,level
+2019-09-01,national,ROAD,Автомобильный транспорт,17387.08,level
+2019-10-01,national,ROAD,Автомобильный транспорт,17145.43,level
+2019-11-01,national,ROAD,Автомобильный транспорт,16825.66,level
+2020-01-01,national,ROAD,Автомобильный транспорт,12390.6,level
+2020-02-01,national,ROAD,Автомобильный транспорт,10663.45,level
+2020-03-01,national,ROAD,Автомобильный транспорт,10333.25,level
+2020-04-01,national,ROAD,Автомобильный транспорт,10006.77,level
+2020-05-01,national,ROAD,Автомобильный транспорт,12741.73,level
+2020-06-01,national,ROAD,Автомобильный транспорт,13334.41,level
+2020-07-01,national,ROAD,Автомобильный транспорт,14392.73,level
+2020-08-01,national,ROAD,Автомобильный транспорт,14876.01,level
+2020-09-01,national,ROAD,Автомобильный транспорт,15041.44,level
+2020-10-01,national,ROAD,Автомобильный транспорт,15351.44,level
+2020-11-01,national,ROAD,Автомобильный транспорт,15463.9,level
+2020-12-01,national,ROAD,Автомобильный транспорт,16089.74,level
+2021-01-01,national,ROAD,Автомобильный транспорт,10994.54,level
+2021-02-01,national,ROAD,Автомобильный транспорт,10763.47,level
+2021-03-01,national,ROAD,Автомобильный транспорт,10353.14,level
+2021-04-01,national,ROAD,Автомобильный транспорт,10130.91,level
+2021-05-01,national,ROAD,Автомобильный транспорт,11115.83,level
+2021-06-01,national,ROAD,Автомобильный транспорт,12510.25,level
+2021-07-01,national,ROAD,Автомобильный транспорт,13686.69,level
+2021-08-01,national,ROAD,Автомобильный транспорт,14881.28,level
+2021-09-01,national,ROAD,Автомобильный транспорт,14902.33,level
+2021-10-01,national,ROAD,Автомобильный транспорт,15538.49,level
+2021-11-01,national,ROAD,Автомобильный транспорт,16887.86,level
+2021-12-01,national,ROAD,Автомобильный транспорт,16547.09,level
+2022-01-01,national,ROAD,Автомобильный транспорт,2790.94,level
+2022-02-01,national,ROAD,Автомобильный транспорт,2118.4867999999997,level
+2022-03-01,national,ROAD,Автомобильный транспорт,2120.4832,level
+2022-04-01,national,ROAD,Автомобильный транспорт,1985.1119666666668,level
+2022-05-01,national,ROAD,Автомобильный транспорт,2329.3412666666673,level
+2022-06-01,national,ROAD,Автомобильный транспорт,2478.396666666667,level
+2022-07-01,national,ROAD,Автомобильный транспорт,2469.1566666666704,level
+2022-08-01,national,ROAD,Автомобильный транспорт,2429.56666666667,level
+2022-09-01,national,ROAD,Автомобильный транспорт,2272.9566666666697,level
+2022-10-01,national,ROAD,Автомобильный транспорт,2882.837777777778,level
+2022-11-01,national,ROAD,Автомобильный транспорт,2862.487777777778,level
+2022-12-01,national,ROAD,Автомобильный транспорт,2597.617777777778,level
+2023-01-01,national,ROAD,Автомобильный транспорт,1858.12,level
+2023-02-01,national,ROAD,Автомобильный транспорт,2007.38,level
+2023-03-01,national,ROAD,Автомобильный транспорт,2051.82,level
+2023-04-01,national,ROAD,Автомобильный транспорт,2180.11,level
+2023-05-01,national,ROAD,Автомобильный транспорт,2238.1,level
+2023-06-01,national,ROAD,Автомобильный транспорт,2638.55,level
+2023-07-01,national,ROAD,Автомобильный транспорт,2607.81,level
+2023-08-01,national,ROAD,Автомобильный транспорт,2696.72,level
+2023-09-01,national,ROAD,Автомобильный транспорт,3107.94,level
+2023-10-01,national,ROAD,Автомобильный транспорт,2834.79,level
+2023-11-01,national,ROAD,Автомобильный транспорт,2771.74,level
+2023-12-01,national,ROAD,Автомобильный транспорт,2848.12,level
+2024-01-01,national,ROAD,Автомобильный транспорт,2071.07,level
+2024-02-01,national,ROAD,Автомобильный транспорт,2174.52,level
+2024-03-01,national,ROAD,Автомобильный транспорт,2434.98,level
+2024-04-01,national,ROAD,Автомобильный транспорт,2838.06,level
+2024-05-01,national,ROAD,Автомобильный транспорт,2934.06,level
+2024-06-01,national,ROAD,Автомобильный транспорт,3159.96,level
+2024-07-01,national,ROAD,Автомобильный транспорт,4014.94,level
+2024-08-01,national,ROAD,Автомобильный транспорт,3171.26,level
+2024-09-01,national,ROAD,Автомобильный транспорт,3172.84,level
+2024-10-01,national,ROAD,Автомобильный транспорт,3376.35,level
+2024-11-01,national,ROAD,Автомобильный транспорт,3167.35,level
+2024-12-01,national,ROAD,Автомобильный транспорт,3214.55,level
+2025-01-01,national,ROAD,Автомобильный транспорт,3601.39,level
+2025-02-01,national,ROAD,Автомобильный транспорт,3563.8,level
+2025-03-01,national,ROAD,Автомобильный транспорт,3389.62,level
+2025-04-01,national,ROAD,Автомобильный транспорт,3273.65,level
+2025-05-01,national,ROAD,Автомобильный транспорт,4178.67,level
+2025-06-01,national,ROAD,Автомобильный транспорт,3981.3,level
+2025-07-01,national,ROAD,Автомобильный транспорт,4050.93,level
+2025-08-01,national,ROAD,Автомобильный транспорт,3934.56,level
+2025-09-01,national,ROAD,Автомобильный транспорт,4382.4,level
+2025-10-01,national,ROAD,Автомобильный транспорт,4271.79,level
+2025-11-01,national,ROAD,Автомобильный транспорт,4246.96,level
+2025-12-01,national,ROAD,Автомобильный транспорт,4566.7,level
+2026-01-01,national,ROAD,Автомобильный транспорт,3671.99,level
+2026-02-01,national,ROAD,Автомобильный транспорт,3663.94,level
+2026-03-01,national,ROAD,Автомобильный транспорт,3678.52,level
+2026-04-01,national,ROAD,Автомобильный транспорт,3952.2,level
+2026-05-01,national,ROAD,Автомобильный транспорт,4015.03,level
+2026-06-01,national,ROAD,Автомобильный транспорт,4405.49,level
+2026-07-01,national,ROAD,Автомобильный транспорт,4343.13,level
+2026-08-01,national,ROAD,Автомобильный транспорт,4296.16,level
+2026-09-01,national,ROAD,Автомобильный транспорт,4469.64,level
+2007-03-01,national,SEA,Морской транспорт,0.1,level
+2007-04-01,national,SEA,Морской транспорт,24.61,level
+2007-05-01,national,SEA,Морской транспорт,35.69,level
+2007-06-01,national,SEA,Морской транспорт,37.46,level
+2007-07-01,national,SEA,Морской транспорт,40.2,level
+2007-08-01,national,SEA,Морской транспорт,48.4,level
+2007-09-01,national,SEA,Морской транспорт,39.56,level
+2007-10-01,national,SEA,Морской транспорт,45.6,level
+2007-11-01,national,SEA,Морской транспорт,28.76,level
+2008-03-01,national,SEA,Морской транспорт,3.07,level
+2008-04-01,national,SEA,Морской транспорт,30.92,level
+2008-05-01,national,SEA,Морской транспорт,50.5,level
+2008-06-01,national,SEA,Морской транспорт,72.97,level
+2008-07-01,national,SEA,Морской транспорт,70.9,level
+2008-08-01,national,SEA,Морской транспорт,83.1,level
+2008-09-01,national,SEA,Морской транспорт,60.7,level
+2008-10-01,national,SEA,Морской транспорт,214.6,level
+2008-11-01,national,SEA,Морской транспорт,158.59,level
+2008-12-01,national,SEA,Морской транспорт,74.96,level
+2009-01-01,national,SEA,Морской транспорт,47.4,level
+2009-02-01,national,SEA,Морской транспорт,43.4,level
+2009-03-01,national,SEA,Морской транспорт,56.6,level
+2009-04-01,national,SEA,Морской транспорт,32.2,level
+2009-05-01,national,SEA,Морской транспорт,129.2,level
+2009-06-01,national,SEA,Морской транспорт,199.11,level
+2009-07-01,national,SEA,Морской транспорт,201.8,level
+2009-08-01,national,SEA,Морской транспорт,144.8,level
+2009-09-01,national,SEA,Морской транспорт,141.9,level
+2009-10-01,national,SEA,Морской транспорт,155.2,level
+2009-11-01,national,SEA,Морской транспорт,153.76,level
+2009-12-01,national,SEA,Морской транспорт,97.5,level
+2010-01-01,national,SEA,Морской транспорт,133.0,level
+2010-02-01,national,SEA,Морской транспорт,127.7,level
+2010-03-01,national,SEA,Морской транспорт,139.21,level
+2010-04-01,national,SEA,Морской транспорт,231.4,level
+2010-05-01,national,SEA,Морской транспорт,279.6,level
+2010-06-01,national,SEA,Морской транспорт,298.7,level
+2010-07-01,national,SEA,Морской транспорт,305.0,level
+2010-08-01,national,SEA,Морской транспорт,366.0,level
+2010-09-01,national,SEA,Морской транспорт,367.9,level
+2010-10-01,national,SEA,Морской транспорт,312.7,level
+2010-11-01,national,SEA,Морской транспорт,373.4,level
+2010-12-01,national,SEA,Морской транспорт,121.1,level
+2011-01-01,national,SEA,Морской транспорт,236.6,level
+2011-02-01,national,SEA,Морской транспорт,223.6,level
+2011-03-01,national,SEA,Морской транспорт,237.9,level
+2011-04-01,national,SEA,Морской транспорт,251.8,level
+2011-05-01,national,SEA,Морской транспорт,302.5,level
+2011-06-01,national,SEA,Морской транспорт,276.0,level
+2011-07-01,national,SEA,Морской транспорт,358.8,level
+2011-08-01,national,SEA,Морской транспорт,245.5,level
+2011-09-01,national,SEA,Морской транспорт,263.6,level
+2011-10-01,national,SEA,Морской транспорт,262.3,level
+2011-11-01,national,SEA,Морской транспорт,296.5,level
+2011-12-01,national,SEA,Морской транспорт,234.6,level
+2012-01-01,national,SEA,Морской транспорт,271.0,level
+2012-02-01,national,SEA,Морской транспорт,218.7,level
+2012-03-01,national,SEA,Морской транспорт,242.6,level
+2012-04-01,national,SEA,Морской транспорт,165.8,level
+2012-05-01,national,SEA,Морской транспорт,179.1,level
+2012-06-01,national,SEA,Морской транспорт,245.7,level
+2012-07-01,national,SEA,Морской транспорт,265.4,level
+2012-08-01,national,SEA,Морской транспорт,230.5,level
+2012-09-01,national,SEA,Морской транспорт,255.5,level
+2012-10-01,national,SEA,Морской транспорт,255.9,level
+2012-11-01,national,SEA,Морской транспорт,222.5,level
+2012-12-01,national,SEA,Морской транспорт,200.0,level
+2013-01-01,national,SEA,Морской транспорт,263.6,level
+2013-02-01,national,SEA,Морской транспорт,214.0,level
+2013-03-01,national,SEA,Морской транспорт,221.3,level
+2013-04-01,national,SEA,Морской транспорт,221.5,level
+2013-05-01,national,SEA,Морской транспорт,161.0,level
+2013-06-01,national,SEA,Морской транспорт,216.3,level
+2013-07-01,national,SEA,Морской транспорт,183.3,level
+2013-08-01,national,SEA,Морской транспорт,190.2,level
+2013-09-01,national,SEA,Морской транспорт,205.9,level
+2013-10-01,national,SEA,Морской транспорт,310.2,level
+2013-11-01,national,SEA,Морской транспорт,310.3,level
+2013-12-01,national,SEA,Морской транспорт,211.9,level
+2014-01-01,national,SEA,Морской транспорт,217.5,level
+2014-02-01,national,SEA,Морской транспорт,203.9,level
+2014-03-01,national,SEA,Морской транспорт,210.0,level
+2014-04-01,national,SEA,Морской транспорт,216.5,level
+2014-05-01,national,SEA,Морской транспорт,229.2,level
+2014-06-01,national,SEA,Морской транспорт,135.0,level
+2014-07-01,national,SEA,Морской транспорт,228.3,level
+2014-08-01,national,SEA,Морской транспорт,182.0,level
+2014-09-01,national,SEA,Морской транспорт,188.4,level
+2014-10-01,national,SEA,Морской транспорт,216.8,level
+2014-11-01,national,SEA,Морской транспорт,213.1,level
+2014-12-01,national,SEA,Морской транспорт,227.7,level
+2015-01-01,national,SEA,Морской транспорт,192.1,level
+2015-02-01,national,SEA,Морской транспорт,175.1,level
+2015-03-01,national,SEA,Морской транспорт,144.9,level
+2015-04-01,national,SEA,Морской транспорт,168.3,level
+2015-05-01,national,SEA,Морской транспорт,168.2,level
+2015-06-01,national,SEA,Морской транспорт,96.9,level
+2015-07-01,national,SEA,Морской транспорт,115.9,level
+2015-08-01,national,SEA,Морской транспорт,96.4,level
+2015-09-01,national,SEA,Морской транспорт,103.5,level
+2015-10-01,national,SEA,Морской транспорт,118.0,level
+2015-11-01,national,SEA,Морской транспорт,113.6,level
+2015-12-01,national,SEA,Морской транспорт,104.8,level
+2016-01-01,national,SEA,Морской транспорт,70.95,level
+2016-02-01,national,SEA,Морской транспорт,94.96,level
+2016-03-01,national,SEA,Морской транспорт,90.74,level
+2016-04-01,national,SEA,Морской транспорт,165.42,level
+2016-05-01,national,SEA,Морской транспорт,200.53,level
+2016-06-01,national,SEA,Морской транспорт,151.1,level
+2016-07-01,national,SEA,Морской транспорт,163.45,level
+2016-08-01,national,SEA,Морской транспорт,131.79,level
+2016-09-01,national,SEA,Морской транспорт,234.68,level
+2016-10-01,national,SEA,Морской транспорт,199.04,level
+2016-11-01,national,SEA,Морской транспорт,188.16,level
+2016-12-01,national,SEA,Морской транспорт,322.76,level
+2017-01-01,national,SEA,Морской транспорт,225.1,level
+2017-02-01,national,SEA,Морской транспорт,99.42,level
+2017-03-01,national,SEA,Морской транспорт,104.67,level
+2017-04-01,national,SEA,Морской транспорт,109.0,level
+2017-05-01,national,SEA,Морской транспорт,135.34,level
+2017-06-01,national,SEA,Морской транспорт,113.8,level
+2017-07-01,national,SEA,Морской транспорт,94.0,level
+2017-08-01,national,SEA,Морской транспорт,74.14,level
+2017-09-01,national,SEA,Морской транспорт,133.37,level
+2017-10-01,national,SEA,Морской транспорт,157.7,level
+2017-11-01,national,SEA,Морской транспорт,153.29,level
+2017-12-01,national,SEA,Морской транспорт,184.32,level
+2018-01-01,national,SEA,Морской транспорт,170.74,level
+2018-02-01,national,SEA,Морской транспорт,164.92,level
+2018-03-01,national,SEA,Морской транспорт,165.63,level
+2018-04-01,national,SEA,Морской транспорт,217.93,level
+2018-05-01,national,SEA,Морской транспорт,148.84,level
+2018-06-01,national,SEA,Морской транспорт,92.45,level
+2018-07-01,national,SEA,Морской транспорт,60.42,level
+2018-08-01,national,SEA,Морской транспорт,56.05,level
+2018-09-01,national,SEA,Морской транспорт,148.57,level
+2018-10-01,national,SEA,Морской транспорт,56.26,level
+2018-11-01,national,SEA,Морской транспорт,53.28,level
+2018-12-01,national,SEA,Морской транспорт,71.15,level
+2019-02-01,national,SEA,Морской транспорт,61.59,level
+2019-03-01,national,SEA,Морской транспорт,73.58,level
+2019-07-01,national,SEA,Морской транспорт,59.78,level
+2019-08-01,national,SEA,Морской транспорт,52.14,level
+2019-09-01,national,SEA,Морской транспорт,48.11,level
+2019-10-01,national,SEA,Морской транспорт,23.09,level
+2019-11-01,national,SEA,Морской транспорт,24.35,level
+2019-12-01,national,SEA,Морской транспорт,61.28,level
+2022-11-01,national,SEA,Морской транспорт,56.64,level
+2022-12-01,national,SEA,Морской транспорт,57.08,level
+2023-01-01,national,SEA,Морской транспорт,41.24,level
+2023-04-01,national,SEA,Морской транспорт,95.77,level
+2023-05-01,national,SEA,Морской транспорт,118.47,level
+2023-06-01,national,SEA,Морской транспорт,93.11,level
+2023-07-01,national,SEA,Морской транспорт,85.41,level
+2023-08-01,national,SEA,Морской транспорт,78.81,level
+2023-09-01,national,SEA,Морской транспорт,56.34,level
+2023-10-01,national,SEA,Морской транспорт,70.4,level
+2023-11-01,national,SEA,Морской транспорт,53.47,level
+2023-12-01,national,SEA,Морской транспорт,132.72,level
+2024-01-01,national,SEA,Морской транспорт,130.86,level
+2024-02-01,national,SEA,Морской транспорт,125.53,level
+2024-03-01,national,SEA,Морской транспорт,137.59,level
+2024-04-01,national,SEA,Морской транспорт,135.08,level
+2024-05-01,national,SEA,Морской транспорт,122.93,level
+2024-06-01,national,SEA,Морской транспорт,166.88,level
+2024-07-01,national,SEA,Морской транспорт,147.14,level
+2024-08-01,national,SEA,Морской транспорт,140.06,level
+2024-09-01,national,SEA,Морской транспорт,108.48,level
+2024-10-01,national,SEA,Морской транспорт,133.98,level
+2024-11-01,national,SEA,Морской транспорт,104.9,level
+2024-12-01,national,SEA,Морской транспорт,127.92,level
+2025-01-01,national,SEA,Морской транспорт,161.1,level
+2025-02-01,national,SEA,Морской транспорт,144.26,level
+2025-03-01,national,SEA,Морской транспорт,173.08,level
+2025-04-01,national,SEA,Морской транспорт,139.43,level
+2025-05-01,national,SEA,Морской транспорт,130.03,level
+2025-06-01,national,SEA,Морской транспорт,135.21,level
+2025-07-01,national,SEA,Морской транспорт,156.52,level
+2025-08-01,national,SEA,Морской транспорт,113.71,level
+2025-09-01,national,SEA,Морской транспорт,144.41,level
+2025-10-01,national,SEA,Морской транспорт,164.25,level
+2025-11-01,national,SEA,Морской транспорт,218.18,level
+2025-12-01,national,SEA,Морской транспорт,180.05,level
+2026-01-01,national,SEA,Морской транспорт,147.64,level
+2026-02-01,national,SEA,Морской транспорт,149.89,level
+2026-03-01,national,SEA,Морской транспорт,193.75,level
+2026-04-01,national,SEA,Морской транспорт,184.24,level
+2026-05-01,national,SEA,Морской транспорт,204.05,level
+2026-06-01,national,SEA,Морской транспорт,175.17,level
+2026-07-01,national,SEA,Морской транспорт,172.31,level
+2026-08-01,national,SEA,Морской транспорт,183.03,level
+2026-09-01,national,SEA,Морской транспорт,157.58,level
+2007-01-01,national,TOTAL,Все виды транспорта,26606.6,level
+2007-02-01,national,TOTAL,Все виды транспорта,24743.2,level
+2007-03-01,national,TOTAL,Все виды транспорта,27431.9,level
+2007-04-01,national,TOTAL,Все виды транспорта,28228.4,level
+2007-05-01,national,TOTAL,Все виды транспорта,27449.7,level
+2007-06-01,national,TOTAL,Все виды транспорта,29470.9,level
+2007-07-01,national,TOTAL,Все виды транспорта,28927.39,level
+2007-08-01,national,TOTAL,Все виды транспорта,30815.6,level
+2007-09-01,national,TOTAL,Все виды транспорта,31111.8,level
+2007-10-01,national,TOTAL,Все виды транспорта,31563.3,level
+2007-11-01,national,TOTAL,Все виды транспорта,31478.15,level
+2007-12-01,national,TOTAL,Все виды транспорта,32626.5,level
+2008-01-01,national,TOTAL,Все виды транспорта,28591.62,level
+2008-02-01,national,TOTAL,Все виды транспорта,27657.76,level
+2008-03-01,national,TOTAL,Все виды транспорта,29059.3,level
+2008-04-01,national,TOTAL,Все виды транспорта,30136.33,level
+2008-05-01,national,TOTAL,Все виды транспорта,30853.47,level
+2008-06-01,national,TOTAL,Все виды транспорта,30080.44,level
+2008-07-01,national,TOTAL,Все виды транспорта,31166.23,level
+2008-08-01,national,TOTAL,Все виды транспорта,32706.15,level
+2008-09-01,national,TOTAL,Все виды транспорта,32482.09,level
+2008-10-01,national,TOTAL,Все виды транспорта,33542.47,level
+2008-11-01,national,TOTAL,Все виды транспорта,32567.75,level
+2008-12-01,national,TOTAL,Все виды транспорта,30982.64,level
+2009-01-01,national,TOTAL,Все виды транспорта,25440.5,level
+2009-02-01,national,TOTAL,Все виды транспорта,25078.1,level
+2009-03-01,national,TOTAL,Все виды транспорта,27012.7,level
+2009-04-01,national,TOTAL,Все виды транспорта,26826.7,level
+2009-05-01,national,TOTAL,Все виды транспорта,26054.63,level
+2009-06-01,national,TOTAL,Все виды транспорта,24234.63,level
+2009-07-01,national,TOTAL,Все виды транспорта,27632.48,level
+2009-08-01,national,TOTAL,Все виды транспорта,29426.1,level
+2009-09-01,national,TOTAL,Все виды транспорта,30113.0,level
+2009-10-01,national,TOTAL,Все виды транспорта,32061.6,level
+2009-11-01,national,TOTAL,Все виды транспорта,31193.44,level
+2009-12-01,national,TOTAL,Все виды транспорта,31731.49,level
+2010-01-01,national,TOTAL,Все виды транспорта,25759.48,level
+2010-02-01,national,TOTAL,Все виды транспорта,26046.15,level
+2010-03-01,national,TOTAL,Все виды транспорта,27638.42,level
+2010-04-01,national,TOTAL,Все виды транспорта,29372.16,level
+2010-05-01,national,TOTAL,Все виды транспорта,30538.33,level
+2010-06-01,national,TOTAL,Все виды транспорта,30905.63,level
+2010-07-01,national,TOTAL,Все виды транспорта,31062.88,level
+2010-08-01,national,TOTAL,Все виды транспорта,33738.89,level
+2010-09-01,national,TOTAL,Все виды транспорта,34925.71,level
+2010-10-01,national,TOTAL,Все виды транспорта,36815.01,level
+2010-11-01,national,TOTAL,Все виды транспорта,36671.53,level
+2010-12-01,national,TOTAL,Все виды транспорта,37547.55,level
+2011-01-01,national,TOTAL,Все виды транспорта,31731.95,level
+2011-02-01,national,TOTAL,Все виды транспорта,29899.35,level
+2011-03-01,national,TOTAL,Все виды транспорта,31087.72,level
+2011-04-01,national,TOTAL,Все виды транспорта,32223.65,level
+2011-05-01,national,TOTAL,Все виды транспорта,34039.64,level
+2011-06-01,national,TOTAL,Все виды транспорта,35206.3,level
+2011-07-01,national,TOTAL,Все виды транспорта,37367.03,level
+2011-08-01,national,TOTAL,Все виды транспорта,39424.42,level
+2011-09-01,national,TOTAL,Все виды транспорта,40634.47,level
+2011-10-01,national,TOTAL,Все виды транспорта,43292.17,level
+2011-11-01,national,TOTAL,Все виды транспорта,44296.08,level
+2011-12-01,national,TOTAL,Все виды транспорта,45157.51,level
+2012-01-01,national,TOTAL,Все виды транспорта,37878.5,level
+2012-02-01,national,TOTAL,Все виды транспорта,35026.7,level
+2012-03-01,national,TOTAL,Все виды транспорта,36625.44,level
+2012-04-01,national,TOTAL,Все виды транспорта,36285.81,level
+2012-05-01,national,TOTAL,Все виды транспорта,37351.32,level
+2012-06-01,national,TOTAL,Все виды транспорта,38924.48,level
+2012-07-01,national,TOTAL,Все виды транспорта,40916.4,level
+2012-08-01,national,TOTAL,Все виды транспорта,41386.78,level
+2012-09-01,national,TOTAL,Все виды транспорта,42393.14,level
+2012-10-01,national,TOTAL,Все виды транспорта,43676.86,level
+2012-11-01,national,TOTAL,Все виды транспорта,42087.79,level
+2012-12-01,national,TOTAL,Все виды транспорта,42718.84,level
+2013-01-01,national,TOTAL,Все виды транспорта,34780.1,level
+2013-02-01,national,TOTAL,Все виды транспорта,35996.88,level
+2013-03-01,national,TOTAL,Все виды транспорта,37883.43,level
+2013-04-01,national,TOTAL,Все виды транспорта,37199.79,level
+2013-05-01,national,TOTAL,Все виды транспорта,38383.14,level
+2013-06-01,national,TOTAL,Все виды транспорта,39904.0,level
+2013-07-01,national,TOTAL,Все виды транспорта,42843.0,level
+2013-08-01,national,TOTAL,Все виды транспорта,43178.78,level
+2013-09-01,national,TOTAL,Все виды транспорта,43734.06,level
+2013-10-01,national,TOTAL,Все виды транспорта,45852.19,level
+2013-11-01,national,TOTAL,Все виды транспорта,46498.01,level
+2013-12-01,national,TOTAL,Все виды транспорта,46966.4,level
+2014-01-01,national,TOTAL,Все виды транспорта,39991.49,level
+2014-02-01,national,TOTAL,Все виды транспорта,39444.73,level
+2014-03-01,national,TOTAL,Все виды транспорта,41797.82,level
+2014-04-01,national,TOTAL,Все виды транспорта,42452.21,level
+2014-05-01,national,TOTAL,Все виды транспорта,44424.97,level
+2014-06-01,national,TOTAL,Все виды транспорта,44553.78,level
+2014-07-01,national,TOTAL,Все виды транспорта,48837.93,level
+2014-08-01,national,TOTAL,Все виды транспорта,50110.72,level
+2014-09-01,national,TOTAL,Все виды транспорта,48809.03,level
+2014-10-01,national,TOTAL,Все виды транспорта,51183.49,level
+2014-11-01,national,TOTAL,Все виды транспорта,50327.05,level
+2014-12-01,national,TOTAL,Все виды транспорта,51983.36,level
+2015-01-01,national,TOTAL,Все виды транспорта,40693.56,level
+2015-02-01,national,TOTAL,Все виды транспорта,37776.7,level
+2015-03-01,national,TOTAL,Все виды транспорта,39916.14,level
+2015-04-01,national,TOTAL,Все виды транспорта,38526.19,level
+2015-05-01,national,TOTAL,Все виды транспорта,40872.06,level
+2015-06-01,national,TOTAL,Все виды транспорта,40691.48,level
+2015-07-01,national,TOTAL,Все виды транспорта,43658.86,level
+2015-08-01,national,TOTAL,Все виды транспорта,44294.26,level
+2015-09-01,national,TOTAL,Все виды транспорта,45256.27,level
+2015-10-01,national,TOTAL,Все виды транспорта,46291.34,level
+2015-11-01,national,TOTAL,Все виды транспорта,47044.81,level
+2015-12-01,national,TOTAL,Все виды транспорта,47091.42,level
+2016-01-01,national,TOTAL,Все виды транспорта,40149.98,level
+2016-02-01,national,TOTAL,Все виды транспорта,38432.18,level
+2016-03-01,national,TOTAL,Все виды транспорта,40140.71,level
+2016-04-01,national,TOTAL,Все виды транспорта,38901.51,level
+2016-05-01,national,TOTAL,Все виды транспорта,41349.99,level
+2016-06-01,national,TOTAL,Все виды транспорта,41648.34,level
+2016-07-01,national,TOTAL,Все виды транспорта,42851.61,level
+2016-08-01,national,TOTAL,Все виды транспорта,43772.84,level
+2016-09-01,national,TOTAL,Все виды транспорта,45120.23,level
+2016-10-01,national,TOTAL,Все виды транспорта,46478.18,level
+2016-11-01,national,TOTAL,Все виды транспорта,46856.77,level
+2016-12-01,national,TOTAL,Все виды транспорта,49035.8,level
+2017-01-01,national,TOTAL,Все виды транспорта,42063.17,level
+2017-02-01,national,TOTAL,Все виды транспорта,38839.81,level
+2017-03-01,national,TOTAL,Все виды транспорта,44229.81,level
+2017-04-01,national,TOTAL,Все виды транспорта,41821.15,level
+2017-05-01,national,TOTAL,Все виды транспорта,44882.37,level
+2017-06-01,national,TOTAL,Все виды транспорта,45472.38,level
+2017-07-01,national,TOTAL,Все виды транспорта,47729.64,level
+2017-08-01,national,TOTAL,Все виды транспорта,48862.21,level
+2017-09-01,national,TOTAL,Все виды транспорта,48528.83,level
+2017-10-01,national,TOTAL,Все виды транспорта,49924.35,level
+2017-11-01,national,TOTAL,Все виды транспорта,50366.02,level
+2017-12-01,national,TOTAL,Все виды транспорта,52717.99,level
+2018-01-01,national,TOTAL,Все виды транспорта,45372.32,level
+2018-02-01,national,TOTAL,Все виды транспорта,43169.23,level
+2018-03-01,national,TOTAL,Все виды транспорта,48019.14,level
+2018-04-01,national,TOTAL,Все виды транспорта,46491.61,level
+2018-05-01,national,TOTAL,Все виды транспорта,49280.57,level
+2018-06-01,national,TOTAL,Все виды транспорта,49528.57,level
+2018-07-01,national,TOTAL,Все виды транспорта,51703.49,level
+2018-08-01,national,TOTAL,Все виды транспорта,52649.89,level
+2018-09-01,national,TOTAL,Все виды транспорта,51914.79,level
+2018-10-01,national,TOTAL,Все виды транспорта,53221.6,level
+2018-11-01,national,TOTAL,Все виды транспорта,51015.48,level
+2018-12-01,national,TOTAL,Все виды транспорта,53699.81,level
+2019-01-01,national,TOTAL,Все виды транспорта,47275.8,level
+2019-02-01,national,TOTAL,Все виды транспорта,43868.29,level
+2019-03-01,national,TOTAL,Все виды транспорта,48268.09,level
+2019-04-01,national,TOTAL,Все виды транспорта,47043.6,level
+2019-05-01,national,TOTAL,Все виды транспорта,49989.51,level
+2019-06-01,national,TOTAL,Все виды транспорта,49740.61,level
+2019-07-01,national,TOTAL,Все виды транспорта,53120.98,level
+2019-08-01,national,TOTAL,Все виды транспорта,53469.76,level
+2019-09-01,national,TOTAL,Все виды транспорта,52186.51,level
+2019-10-01,national,TOTAL,Все виды транспорта,55595.75,level
+2019-11-01,national,TOTAL,Все виды транспорта,54411.69,level
+2019-12-01,national,TOTAL,Все виды транспорта,54370.69,level
+2020-01-01,national,TOTAL,Все виды транспорта,46834.5,level
+2020-02-01,national,TOTAL,Все виды транспорта,44218.5,level
+2020-03-01,national,TOTAL,Все виды транспорта,46742.66,level
+2020-04-01,national,TOTAL,Все виды транспорта,44716.79,level
+2020-05-01,national,TOTAL,Все виды транспорта,47264.23,level
+2020-06-01,national,TOTAL,Все виды транспорта,47079.71,level
+2020-07-01,national,TOTAL,Все виды транспорта,49716.46,level
+2020-08-01,national,TOTAL,Все виды транспорта,50206.09,level
+2020-09-01,national,TOTAL,Все виды транспорта,50440.31,level
+2020-10-01,national,TOTAL,Все виды транспорта,53091.08,level
+2020-11-01,national,TOTAL,Все виды транспорта,53460.64,level
+2020-12-01,national,TOTAL,Все виды транспорта,55178.38,level
+2021-01-01,national,TOTAL,Все виды транспорта,45552.61,level
+2021-02-01,national,TOTAL,Все виды транспорта,41983.89,level
+2021-03-01,national,TOTAL,Все виды транспорта,45494.85,level
+2021-04-01,national,TOTAL,Все виды транспорта,46483.92,level
+2021-05-01,national,TOTAL,Все виды транспорта,49036.59,level
+2021-06-01,national,TOTAL,Все виды транспорта,48793.31,level
+2021-07-01,national,TOTAL,Все виды транспорта,51030.95,level
+2021-08-01,national,TOTAL,Все виды транспорта,51330.13,level
+2021-09-01,national,TOTAL,Все виды транспорта,49229.05,level
+2021-10-01,national,TOTAL,Все виды транспорта,53907.02,level
+2021-11-01,national,TOTAL,Все виды транспорта,56544.34,level
+2021-12-01,national,TOTAL,Все виды транспорта,57809.53,level
+2022-01-01,national,TOTAL,Все виды транспорта,43145.36,level
+2022-02-01,national,TOTAL,Все виды транспорта,38810.0349,level
+2022-03-01,national,TOTAL,Все виды транспорта,41759.054099999994,level
+2022-04-01,national,TOTAL,Все виды транспорта,39282.99026666667,level
+2022-05-01,national,TOTAL,Все виды транспорта,41006.30536666665,level
+2022-06-01,national,TOTAL,Все виды транспорта,38618.00456666667,level
+2022-07-01,national,TOTAL,Все виды транспорта,41029.73476666668,level
+2022-08-01,national,TOTAL,Все виды транспорта,39934.57076666667,level
+2022-09-01,national,TOTAL,Все виды транспорта,37916.995466666674,level
+2022-10-01,national,TOTAL,Все виды транспорта,41879.13967777777,level
+2022-11-01,national,TOTAL,Все виды транспорта,41320.98977777778,level
+2022-12-01,national,TOTAL,Все виды транспорта,41369.53647777778,level
+2023-01-01,national,TOTAL,Все виды транспорта,40962.36,level
+2023-02-01,national,TOTAL,Все виды транспорта,39441.98,level
+2023-03-01,national,TOTAL,Все виды транспорта,43559.69,level
+2023-04-01,national,TOTAL,Все виды транспорта,41716.81,level
+2023-05-01,national,TOTAL,Все виды транспорта,42349.75,level
+2024-01-01,national,TOTAL,Все виды транспорта,40351.41,level
+2024-02-01,national,TOTAL,Все виды транспорта,37480.11,level
+2024-03-01,national,TOTAL,Все виды транспорта,42504.75,level
+2024-04-01,national,TOTAL,Все виды транспорта,40025.19,level
+2024-05-01,national,TOTAL,Все виды транспорта,41603.06,level
+2024-06-01,national,TOTAL,Все виды транспорта,42337.71,level
+2024-07-01,national,TOTAL,Все виды транспорта,45082.01,level
+2024-08-01,national,TOTAL,Все виды транспорта,44149.02,level
+2024-09-01,national,TOTAL,Все виды транспорта,42686.87,level
+2024-10-01,national,TOTAL,Все виды транспорта,46396.05,level
+2024-11-01,national,TOTAL,Все виды транспорта,44651.86,level
+2024-12-01,national,TOTAL,Все виды транспорта,47187.43,level
+2025-01-01,national,TOTAL,Все виды транспорта,45937.13,level
+2025-02-01,national,TOTAL,Все виды транспорта,43844.6,level
+2025-03-01,national,TOTAL,Все виды транспорта,47756.23,level
+2025-04-01,national,TOTAL,Все виды транспорта,45701.85,level
+2025-05-01,national,TOTAL,Все виды транспорта,46146.12,level
+2025-06-01,national,TOTAL,Все виды транспорта,46272.86,level
+2025-07-01,national,TOTAL,Все виды транспорта,48846.8,level
+2025-08-01,national,TOTAL,Все виды транспорта,49227.19,level
+2025-09-01,national,TOTAL,Все виды транспорта,47878.64,level
+2025-10-01,national,TOTAL,Все виды транспорта,50496.71,level
+2025-11-01,national,TOTAL,Все виды транспорта,50285.54,level
+2025-12-01,national,TOTAL,Все виды транспорта,61918.65,level
+2026-01-01,national,TOTAL,Все виды транспорта,42357.7,level
+2026-02-01,national,TOTAL,Все виды транспорта,40220.26,level
+2026-03-01,national,TOTAL,Все виды транспорта,44395.68,level
+2026-04-01,national,TOTAL,Все виды транспорта,42802.2,level
+2026-05-01,national,TOTAL,Все виды транспорта,43525.37,level
+2026-06-01,national,TOTAL,Все виды транспорта,42515.87,level
+2026-07-01,national,TOTAL,Все виды транспорта,42510.5,level
+2026-08-01,national,TOTAL,Все виды транспорта,44242.64,level
+2026-09-01,national,TOTAL,Все виды транспорта,43306.14,level

@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-701827",
+  "indicator_id": "INVESTMENT_BY_SOURCE_BY_REGION",
+  "indicator_name": "Fixed capital investment by source of financing by region, annual revised data",
+  "description": "Инвестиции в основной капитал по источникам финансирования по регионам, годовые уточнённые данные",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Taldau 701827, period 7, 2003-2025 (bank loans and other borrowed from 2013; before that «заёмные средства» and «иностранные инвестиции», not kept). Budget investment 2023 2 936.6, 2024 4 209.5, 2025 5 060.5 bn KZT (the January first releases were 2 936.6 / 4 098.4 / 4 984.0).",
+  "publication_date": null,
+  "last_update_date": "2026-11-09",
+  "download_date": "2026-11-09",
+  "period_start": "2000-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
