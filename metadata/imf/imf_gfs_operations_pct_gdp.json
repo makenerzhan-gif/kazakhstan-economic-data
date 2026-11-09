@@ -1,7 +1,7 @@
 {
   "source": "imf",
-  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/GFS_SOO/+/KAZ.*.*.*.POGDP_PT.A",
-  "dataset_id": "IMF.STA/GFS_SOO/KAZ.*.*.*.POGDP_PT.A",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "IMF_GFS_OPERATIONS_PCT_GDP",
   "indicator_name": "IMF Government Finance Statistics: statement of operations, general government and subsectors, percent of GDP",
   "description": "Статистика госфинансов МВФ (GFS): отчёт об операциях сектора госуправления и подсекторов, % ВВП",

@@ -1,7 +1,7 @@
 {
   "source": "kase",
-  "source_url": "https://kase.kz/api/news",
-  "dataset_id": "kase news: corporate bond volumes",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "KASE_CORPORATE_BOND_VOLUMES",
   "indicator_name": "KASE corporate bond trading volume during the month: primary and secondary market (repo excluded), billion KZT",
   "description": "Объём торгов корпоративными облигациями на KASE за месяц: первичный и вторичный рынок (без репо), млрд тенге",

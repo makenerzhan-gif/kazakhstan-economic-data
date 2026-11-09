@@ -1,7 +1,7 @@
 {
   "source": "bns",
-  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
-  "dataset_id": "taldau-index-701622",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "INDUSTRY_SHIPMENTS_BY_REGION_MONTHLY",
   "indicator_name": "Shipments of own-produced industrial products, total and to the domestic market, by region, monthly, physical units",
   "description": "Отгружено продукции собственного производства: всего и на внутренний рынок, по регионам, помесячно",

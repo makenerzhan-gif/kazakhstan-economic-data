@@ -1,7 +1,7 @@
 {
   "source": "imf",
-  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/+/*.NGDP_RPCH+PCPIPCH+PCPIEPCH+NGDPD+NGDPDPC+PPPPC+LP+BCA_NGDPD+GGXWDG_NGDP+LUR+NGDP_D.A",
-  "dataset_id": "IMF.RES/WEO/*.NGDP_RPCH+PCPIPCH+PCPIEPCH+NGDPD+NGDPDPC+PPPPC+LP+BCA_NGDPD+GGXWDG_NGDP+LUR+NGDP_D.A",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "IMF_WEO_WORLD",
   "indicator_name": "IMF WEO for all economies: GDP growth, inflation, GDP in USD and PPP, population, current account, debt, unemployment",
   "description": "МВФ WEO по всем странам: рост ВВП, инфляция, ВВП в долларах и по ППС, население, счёт текущих операций, долг, безработица",

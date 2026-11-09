@@ -1,7 +1,7 @@
 {
   "source": "bns",
-  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
-  "dataset_id": "taldau-index-701592",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "INDUSTRY_OUTPUT_BY_REGION_MONTHLY",
   "indicator_name": "Industrial output (value) by region and ОКЭД section/division, monthly, current prices",
   "description": "Объем производства промышленной продукции (товаров, услуг) по регионам и видам деятельности, помесячно",

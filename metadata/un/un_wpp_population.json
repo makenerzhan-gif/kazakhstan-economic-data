@@ -1,7 +1,7 @@
 {
   "source": "un",
-  "source_url": "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/",
-  "dataset_id": "WPP2024 bulk csv, LocID 398",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "UN_WPP_POPULATION",
   "indicator_name": "Kazakhstan population, UN World Population Prospects 2024: projection variants, sex, broad age groups, demographic indicators, 1950-2100",
   "description": "Население Казахстана по оценкам и прогнозу ООН (World Population Prospects 2024): варианты прогноза, пол, возрастные группы, демографические показатели, 1950-2100",

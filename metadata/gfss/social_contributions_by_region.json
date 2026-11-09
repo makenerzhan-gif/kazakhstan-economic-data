@@ -1,7 +1,7 @@
 {
   "source": "gfss",
-  "source_url": "https://gfss.kz/ru/indicators-rus/financial-statements-rus/",
-  "dataset_id": "ГФСС форма 5-СО",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "SOCIAL_CONTRIBUTIONS_BY_REGION",
   "indicator_name": "Social contributions to the State Social Insurance Fund and insured participants by region, monthly (form 5-СО)",
   "description": "Социальные отчисления в ГФСС и число участников по регионам, помесячно (форма 5-СО)",

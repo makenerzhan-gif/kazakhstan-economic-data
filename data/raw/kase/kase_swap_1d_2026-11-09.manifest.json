@@ -1,11 +1,11 @@
 {
-  "downloaded_at": "2026-11-09T15:46:20.993601",
+  "downloaded_at": "2026-11-09T20:32:59.752923",
   "raw_file": "kase_swap_1d_2026-11-09.json",
   "source_url": "https://kase.kz/tv-charts/indicators/history",
   "params": {
     "symbol": "SWAP_1D",
     "resolution": "D",
     "from": 0,
-    "to": 1794325559
+    "to": 1794342776
   }
 }

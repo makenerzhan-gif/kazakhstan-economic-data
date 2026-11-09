@@ -1,7 +1,7 @@
 {
   "source": "imf",
-  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/IIP/+/KAZ.*.*.USD.Q",
-  "dataset_id": "IMF.STA/IIP/KAZ.*.*.USD.Q",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "IMF_IIP_QUARTERLY",
   "indicator_name": "Kazakhstan international investment position (IMF IIP), all components, end of quarter",
   "description": "Международная инвестиционная позиция Казахстана (МВФ), все компоненты, на конец квартала",
