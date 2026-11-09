@@ -4670,3 +4670,124 @@ datasets:
     unit: "VOLUME billion KZT; N auctions; YIELD %"
     category: monetary
     note: "Sum over the auctions of the month (by auction date) of the NBK's xlsx export, 2019-02 onward. YIELD is weighted by the volume placed. The stock outstanding is NBK_OPEN_POSITION's DEPOSIT_AUCTION."
+
+  # ---------------------------------------------------------------- NBK rates by purpose and maturity, government securities market (added 2026-11-09)
+  - id: LOAN_RATES_BY_PURPOSE
+    name_ru: "Средневзвешенные ставки по кредитам, выданным банками за месяц: всего, по заёмщикам, по целям (ипотечные, потребительские), по размеру предприятия и срочности, в тенге и в валюте"
+    name_en: "Weighted average rates on bank loans issued in the month: total, by borrower, by purpose (mortgage, consumer), by enterprise size and maturity, KZT and FX"
+    agency: nbk
+    fetcher: nbk_cube
+    form_id: "27"
+    filters: {type: "Weighted average rate", period: "Monthly"}
+    # two levels: businesses by size x maturity (purpose is always «Undefined» for them) and
+    # households by purpose x maturity; each level drops the other borrower's rows
+    levels: [[currency, subject_type, enterprise_type, maturity], [currency, hh, purpose, maturity]]
+    distinct: true
+    sum_check: false
+    codes:
+      currency: {"National currency": KZT, "Foreign currency": FX}
+      subject_type: {"": ALL, "Business entities": BUS, "Individuals (except for individual entrepreneurs)": null}
+      hh: {"": null, "Business entities": null, "Individuals (except for individual entrepreneurs)": HH}
+      purpose: {"": "", "Undefined": null, "Consumer loans": CONSUMER, "Mortgage loans": MORTGAGE, "Other": OTHER}
+      # two rows (2025-03, 2025-09) carry a business rate with neither size nor purpose; dropped
+      enterprise_type: {"": "", "Undefined": null, "Large business entities": LARGE, "Medium-sized business entities": MEDIUM, "Small business entities": SMALL}
+      maturity: {"": "", "Short-term": ST, "Long-term": LT}
+    field_aliases: {hh: subject_type}
+    names:
+      currency: {"National currency": "в тенге", "Foreign currency": "в иностранной валюте"}
+      subject_type: {"": "все заёмщики", "Business entities": "субъекты бизнеса"}
+      hh: {"Individuals (except for individual entrepreneurs)": "физические лица"}
+      purpose: {"Consumer loans": "потребительские займы", "Mortgage loans": "ипотечные займы", "Other": "прочие цели"}
+      enterprise_type: {"Large business entities": "крупный бизнес", "Medium-sized business entities": "средний бизнес", "Small business entities": "малый бизнес"}
+      maturity: {"Short-term": "краткосрочные", "Long-term": "долгосрочные"}
+    date_basis: next_period_start
+    min_items: 25
+    frequency: monthly
+    unit: "% per annum, weighted by the volume issued in the month"
+    category: monetary
+    note: "NBK formId=27 «Кредиты банковского сектора экономике - ставки», 2022-01 onward, one row per aggregation level (agg_level 1-4). Items <KZT|FX>[.<ALL|BUS|HH>[.<purpose or size>[.<ST|LT>]]]: KZT.ALL all loans in tenge; KZT.HH.MORTGAGE the mortgage rate (10.69 % in August 2026, subsidised programmes included), KZT.HH.CONSUMER 22.29 %, KZT.BUS.LARGE / .MEDIUM / .SMALL, and the same by maturity. Dated by the month the loans were issued: the NBK stamps a month's rate with the 1st of the next month (as form 486, LOAN_RATE_ISSUED_*). KZT.BUS (21.21 %) differs from LOAN_RATE_ISSUED_LEGAL_KZT (form 486, 19.35 %): form 27's business entities include individual entrepreneurs."
+
+  - id: LOAN_RATES_BY_MATURITY
+    name_ru: "Средневзвешенные ставки по кредитам, выданным банками за месяц, по срокам: юридические и физические лица, в тенге и в валюте, с 1997 г."
+    name_en: "Weighted average rates on bank loans issued in the month, by maturity: legal entities and individuals, KZT and FX, from 1997"
+    agency: nbk
+    fetcher: nbk_cube
+    form_id: "486"
+    filters: {type: "in units of percentage", period: "Month"}
+    levels: [[currency, subject_type_detailed, maturity_detailed]]
+    distinct: true
+    sum_check: false
+    codes:
+      currency: {"National currency": KZT, "Foreign currency": FX}
+      subject_type_detailed: {"Legal entity": LEGAL, "Individual": HH}
+      maturity_detailed:
+        "": ALL
+        "up to 1 month": M0_1
+        "from 1 to 3 month": M1_3
+        "from 3 month to 1 year": M3_12
+        "from 1 to 5 years": Y1_5
+        "over 5 years": Y5
+        "от 1 года до 3 лет***": Y1_3_OLD
+        "свыше 3 лет***": Y3_OLD
+    names:
+      currency: {"National currency": "в тенге", "Foreign currency": "в иностранной валюте"}
+      subject_type_detailed: {"Legal entity": "юридические лица", "Individual": "физические лица"}
+      maturity_detailed:
+        "": "все сроки"
+        "up to 1 month": "до 1 месяца"
+        "from 1 to 3 month": "от 1 до 3 месяцев"
+        "from 3 month to 1 year": "от 3 месяцев до 1 года"
+        "from 1 to 5 years": "от 1 года до 5 лет"
+        "over 5 years": "свыше 5 лет"
+        "от 1 года до 3 лет***": "от 1 года до 3 лет (до 2002 г.)"
+        "свыше 3 лет***": "свыше 3 лет (до 2002 г.)"
+    date_basis: next_period_start
+    min_items: 20
+    frequency: monthly
+    unit: "% per annum, weighted by the volume issued in the month"
+    category: monetary
+    note: "NBK formId=486, 1997-01 onward (the scalar LOAN_RATE_ISSUED_LEGAL_KZT / _INDIVIDUAL_KZT are KZT.LEGAL.ALL / KZT.HH.ALL). Items <KZT|FX>.<LEGAL|HH>.<maturity>. The 1997-2002 files split long maturities at 3 years (Y1_3_OLD, Y3_OLD), from 2002 at 5 years. Dated by the month of issue (report_date shifted back a month)."
+
+  - id: GOV_SECURITIES_PRIMARY_AUCTIONS
+    name_ru: "Первичные размещения государственных ценных бумаг и нот НБК за месяц, по видам бумаг и срокам, млн тенге"
+    name_en: "Primary placements of government securities and NBK notes during the month, by instrument and term, million KZT"
+    agency: nbk
+    fetcher: nbk_cube
+    form_id: "17"
+    filters: {type: "Transactions volume (mln. tenge)"}
+    levels: [[code], [code, month_period]]
+    codes:
+      code: &gs_codes {"MEUKAM": MEUKAM, "MEOKAM": MEOKAM, "MEKKAM": MEKKAM, "METIKAM": METIKAM, "metickam": METICKAM, "muikam": MUIKAM, "NBK Notes": NBK_NOTES, "Other": OTHER, "Euronotes": EURONOTES}
+      month_period: &gs_terms {"": null, "9": T9M, "12": T12M, "24": T24M, "36": T36M, "48": T48M, "60": T60M, "72": T72M, "84": T84M, "96": T96M, "108": T108M, "120": T120M, "132": T132M, "144": T144M, "156": T156M, "168": T168M, "180": T180M, "192": T192M, "216": T216M, "240": T240M, "300": T300M}
+    names:
+      code: &gs_names {"NBK Notes": "Ноты НБРК", "Other": "Прочие", "Euronotes": "Евроноты"}
+    total: TOTAL
+    total_name: "Первичные размещения, всего"
+    date_basis: next_period_start
+    min_items: 8
+    frequency: monthly
+    unit: "million KZT, placed during the month"
+    category: monetary
+    note: "NBK formId=17 «Government Securities Primary Auctions», 2022-12 onward; items by instrument (MEUKAM, MEOKAM, MEKKAM, METIKAM, METICKAM, MUIKAM, NBK_NOTES, OTHER) and <instrument>.T<months>M by term. Dated by the month of placement (report_date is the 1st of the next month, as the NBK's note auctions; the NBK notes of 2026-09-01 are 942 107 mln = the August 2026 auctions). The stock outstanding is GOV_SECURITIES_OUTSTANDING_BY_TYPE."
+
+  - id: GOV_SECURITIES_SECONDARY_MARKET
+    name_ru: "Вторичный рынок государственных ценных бумаг: объём сделок за месяц по видам бумаг и срокам, млн тенге"
+    name_en: "Secondary market of government securities: transaction volume during the month, by instrument and term, million KZT"
+    agency: nbk
+    fetcher: nbk_cube
+    form_id: "16"
+    filters: {type: "Transactions volume (mln. tenge)"}
+    levels: [[code], [code, month_period]]
+    codes:
+      code: *gs_codes
+      month_period: *gs_terms
+    names:
+      code: *gs_names
+    total: TOTAL
+    total_name: "Сделки на вторичном рынке, всего"
+    date_basis: next_period_start
+    min_items: 8
+    frequency: monthly
+    unit: "million KZT, traded during the month"
+    category: monetary
+    note: "NBK formId=16 «Secondary Market of the Government Securities», 2022-12 onward, items as GOV_SECURITIES_PRIMARY_AUCTIONS (plus EURONOTES). Dated by the month of trading."

@@ -15,7 +15,14 @@ A dataset (config/dims.yaml, `fetcher: nbk_cube`) gives
   codes       {field: {raw value: code}} or {field: "countries"} (dictionaries/partner_countries.csv
               by English name, plus COUNTRY_ALIASES); a raw value missing from its map stops the
               dataset; a value mapped to null is dropped from that level (still in the total);
-              an empty field drops the row from that level only;
+              a value mapped to "" (also the key "" for an empty field) contributes nothing to the
+              item code, so a form's aggregation levels (form 27: all borrowers / by borrower /
+              by purpose, each with its own empty fields) become items of different lengths;
+              an empty field with no "" key drops the row from that level only;
+  distinct    true: a rates form -- one value per item and date (a repeated row must carry the same
+              value; two different values stop the dataset);
+  sum_check   false: the levels are not checked against the total (rates, overlapping levels);
+  field_aliases {level field: row field}: the same row field read through a second code map;
   names       optional {field: {raw value: Russian name}} for item names;
   total       optional item code for the sum of all filtered rows;
   date_basis  optional, as in indicators.yaml (next_period_start: the NBK stamps a flow with the
@@ -119,6 +126,7 @@ def _code_maps(ds: dict) -> dict[str, dict[str, tuple[str | None, str]]]:
 def cube_records(rows: list[dict], ds: dict) -> list[dict]:
     filters = {k: _norm(v) for k, v in ds.get("filters", {}).items()}
     maps = _code_maps(ds)
+    aliases = ds.get("field_aliases", {})      # {level field: row field}: one row field under two code maps
     levels = ds["levels"]
     sums: dict[tuple[str, str], float] = defaultdict(float)
     names: dict[str, str] = {}
@@ -132,10 +140,10 @@ def cube_records(rows: list[dict], ds: dict) -> list[dict]:
         when, value = r["report_date"][:10], float(r["amount"])
         totals[when] += value
         for i, level in enumerate(levels):
-            codes, labels = [], []
+            codes, labels, done = [], [], 0
             for field in level:
-                raw = _norm(r.get(field))
-                if not raw:
+                raw = _norm(r.get(aliases.get(field, field)))
+                if not raw and "" not in maps[field]:
                     break
                 hit = maps[field].get(raw)
                 if hit is None:
@@ -143,19 +151,26 @@ def cube_records(rows: list[dict], ds: dict) -> list[dict]:
                     break
                 if hit[0] is None:
                     break
+                done += 1
+                if hit[0] == "":
+                    continue
                 codes.append(hit[0])
                 labels.append(hit[1])
-            if len(codes) < len(level):
+            if done < len(level):
                 complete[i] = False
                 continue
             code = ".".join(codes)
+            if ds.get("distinct") and (code, when) in sums:
+                if abs(sums[(code, when)] - value) > 1e-6 * max(1.0, abs(value)):
+                    _structural(ds, f"two different values for item {code} at {when}: {sums[(code, when)]} and {value}")
+                continue                                  # the form repeats a row (486 prints 1997-2002 twice)
             sums[(code, when)] += value
             names[code] = " | ".join(labels)
             level_sums[i][when] += value
     if unknown:
         _structural(ds, f"values not in the dataset's code maps (config/dims.yaml): {sorted(unknown)}")
     for i, level in enumerate(levels):
-        if not complete[i]:
+        if not complete[i] or ds.get("sum_check") is False:
             continue
         for when, total in totals.items():
             if abs(level_sums[i][when] - total) > 1e-6 * max(1.0, abs(total)):

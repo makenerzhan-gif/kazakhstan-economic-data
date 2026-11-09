@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=486",
+  "dataset_id": "formId=486",
+  "indicator_id": "LOAN_RATES_BY_MATURITY",
+  "indicator_name": "Weighted average rates on bank loans issued in the month, by maturity: legal entities and individuals, KZT and FX, from 1997",
+  "description": "Средневзвешенные ставки по кредитам, выданным банками за месяц, по срокам: юридические и физические лица, в тенге и в валюте, с 1997 г.",
+  "frequency": "monthly",
+  "unit": "% per annum, weighted by the volume issued in the month",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "NBK formId=486, 1997-01 onward (the scalar LOAN_RATE_ISSUED_LEGAL_KZT / _INDIVIDUAL_KZT are KZT.LEGAL.ALL / KZT.HH.ALL). Items <KZT|FX>.<LEGAL|HH>.<maturity>. The 1997-2002 files split long maturities at 3 years (Y1_3_OLD, Y3_OLD), from 2002 at 5 years. Dated by the month of issue (report_date shifted back a month).",
+  "publication_date": null,
+  "last_update_date": "2026-11-09",
+  "download_date": "2026-11-09",
+  "period_start": "1997-01-01",
+  "period_end": "2026-08-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}
