@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=350",
+  "dataset_id": "formId=350,class_type=Debt,ed_code=External Debt - ED of banks and organizations controlled by government,period=quarter,type=USD mln",
+  "indicator_id": "EXTERNAL_DEBT_STATE_CONTROLLED",
+  "indicator_name": "External Debt: Banks and Organisations Controlled by Government (quasi-state)",
+  "description": "Внешний долг банков и организаций, контролируемых государством (квазигосударственный сектор)",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million, end of quarter. External debt of banks and organisations CONTROLLED BY THE GOVERNMENT (over 50 % state ownership: Samruk-Kazyna, Baiterek, KMG, KTZ and their subsidiaries) -- the external part of quasi-state debt, the only machine-readable measure of it (Minfin publishes no quasi-state debt table; total quasi-state debt, external and internal, appears only in the Supreme Audit Chamber's annual report: 29.19 trn KZT at end-2025). Public ED (government and NBK) plus this = EXTERNAL_DEBT_PUBLIC_SECTOR. From 2014-04-01.",
+  "publication_date": null,
+  "last_update_date": "2026-11-10",
+  "download_date": "2026-11-10",
+  "period_start": "2014-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

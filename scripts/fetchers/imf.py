@@ -579,7 +579,8 @@ def fetch_oil_price() -> tuple[list[dict], dict]:
     Dubai Fateh and WTI. PCPS carries no standalone Brent series (checked: the
     indicator codelist has PCOIL for coconut oil, PHEATOIL, POLVOIL, PPOIL and so
     on, but the only crude entries are POILAPSP and POPEC, the OPEC basket), so
-    APSP is the reference crude price this source offers.
+    APSP is the reference crude price this source offers. (2026-11-10: PCPS has since
+    added POILBRE, POILDUB and POILWTI; Brent stays OIL_PRICE_BRENT, World Bank.)
 
     This closes the audit's largest single gap: Kazakhstan is an oil exporter and
     the dataset carried no oil price at all, so nothing linked world prices to
@@ -591,6 +592,32 @@ def fetch_oil_price() -> tuple[list[dict], dict]:
         "Dubai Fateh and West Texas Intermediate. A world price, not a Kazakhstan-specific "
         "export price: KEBCO sells at a differential to Brent that this series does not "
         "capture.")
+
+
+def fetch_uranium_price() -> tuple[list[dict], dict]:
+    """Uranium spot price, US dollars per pound U3O8, monthly (added 2026-11-10)."""
+    return _fetch_sdmx_monthly(
+        "URANIUM_PRICE", "PCPS", "9.0.0", "G001.PURAN.USD.M",
+        "US dollars per pound of U3O8. IMF PCPS PURAN: uranium, NUEXCO restricted price, spot "
+        "(monthly average). Kazakhstan is the largest producer (Kazatomprom); its export contracts "
+        "are partly long-term and mixed spot/term, so realised prices lag this spot series.")
+
+
+def fetch_chromium_price() -> tuple[list[dict], dict]:
+    """Chromium metal price, US dollars per tonne, monthly (added 2026-11-10)."""
+    return _fetch_sdmx_monthly(
+        "CHROMIUM_PRICE", "PCPS", "9.0.0", "G001.PCHROM.USD.M",
+        "US dollars per metric tonne. IMF PCPS PCHROM: chromium metal, 99.2 % -- NOT ferrochrome, "
+        "Kazakhstan's actual export (no ferrochrome price in PCPS); a proxy for the chrome cycle. "
+        "From 2012-06.")
+
+
+def fetch_manganese_price() -> tuple[list[dict], dict]:
+    """Electrolytic manganese price, US dollars per tonne, monthly (added 2026-11-10)."""
+    return _fetch_sdmx_monthly(
+        "MANGANESE_PRICE", "PCPS", "9.0.0", "G001.PMANGELE.USD.M",
+        "US dollars per metric tonne. IMF PCPS PMANGELE: electrolytic manganese metal (a proxy for "
+        "Kazakhstan's manganese ore and ferroalloys, which have no PCPS price).")
 
 
 def fetch_commodity_terms_of_trade() -> tuple[list[dict], dict]:

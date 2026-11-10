@@ -1,0 +1,21 @@
+{
+  "source": "ratings",
+  "source_url": "https://nationalbank.kz/ru/news/informacionnye-soobshcheniya",
+  "dataset_id": "config/sovereign_ratings.yaml",
+  "indicator_id": "SOVEREIGN_RATINGS",
+  "indicator_name": "Kazakhstan sovereign credit ratings (S&P, Moody's, Fitch): long-term foreign currency and outlook, monthly",
+  "description": "Суверенные кредитные рейтинги Казахстана (S&P, Moody's, Fitch): долгосрочный в иностранной валюте и прогноз, помесячно",
+  "frequency": "monthly",
+  "unit": "notches (1-21, BBB-/Baa3 = 12), outlook -1/0/+1",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Hand-kept action list (config/sovereign_ratings.yaml, 61 actions since 1996-11, each with a confidence mark) turned into the rating in force at the end of each month. Scale: AAA/Aaa = 21, BBB-/Baa3 = 12 (investment-grade floor), BB+/Ba1 = 11, C/D = 1. Outlook +1 positive or review for upgrade, -1 negative or review for downgrade. AVG.RATING_OUTLOOK = mean over the three of notch + outlook/3 (from 1996-11). Moody's before 2006 is the foreign-currency government bond rating (ceiling). 2026-11: S&P BBB stable (upgraded 2026-08-21), Moody's Baa1 stable (since 2024-09-09), Fitch BBB stable (since 2016-04-29). S&P Global Ratings, Moody's, Fitch Ratings: press releases as reported by the NBK, MNE, kase.kz; aggregators tradingeconomics.com/kazakhstan/rating, countryeconomy.com/ratings/kazakhstan",
+  "publication_date": null,
+  "last_update_date": "2026-11-10",
+  "download_date": "2026-11-10",
+  "period_start": "1996-11-01",
+  "period_end": "2026-11-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -5064,3 +5064,28 @@ datasets:
     unit: "bn KZT, % of GDP, % of non-oil GDP, percentage points"
     category: fiscal
     note: "GDP: sum of the four quarters of QNA_GDP_EXPENDITURE (complete years only); oil-gas sector: OIL_GAS_SECTOR_GVA item OIL_GAS (BNS, gross value added, from 2010); non-oil balance: STATE_NON_OIL_DEFICIT (Minfin, state budget, negative = deficit, from 2013); overall balance: STATE_BUDGET_DEFICIT. Fiscal impulse = minus the change in the non-oil balance ratio (positive = expansion). Not cyclically adjusted and not primary; state budget, not general government."
+
+  # ---------------------------------------------------------------- block B (added 2026-11-10)
+  - id: SOVEREIGN_RATINGS
+    name_ru: "Суверенные кредитные рейтинги Казахстана (S&P, Moody's, Fitch): долгосрочный в иностранной валюте и прогноз, помесячно"
+    name_en: "Kazakhstan sovereign credit ratings (S&P, Moody's, Fitch): long-term foreign currency and outlook, monthly"
+    agency: ratings
+    fetcher: sovereign_ratings
+    file: config/sovereign_ratings.yaml
+    min_items: 7
+    frequency: monthly
+    unit: "notches (1-21, BBB-/Baa3 = 12), outlook -1/0/+1"
+    category: international
+    note: "Hand-kept action list (config/sovereign_ratings.yaml, 61 actions since 1996-11, each with a confidence mark) turned into the rating in force at the end of each month. Scale: AAA/Aaa = 21, BBB-/Baa3 = 12 (investment-grade floor), BB+/Ba1 = 11, C/D = 1. Outlook +1 positive or review for upgrade, -1 negative or review for downgrade. AVG.RATING_OUTLOOK = mean over the three of notch + outlook/3 (from 1996-11). Moody's before 2006 is the foreign-currency government bond rating (ceiling). 2026-11: S&P BBB stable (upgraded 2026-08-21), Moody's Baa1 stable (since 2024-09-09), Fitch BBB stable (since 2016-04-29)."
+
+  - id: QUASI_STATE_DEBT_ANNUAL
+    name_ru: "Долг квазигосударственного сектора: всего по данным ВАП и займы «Самрук-Казыны», «Байтерека», «КазМунайГаза» (МСФО), на конец года"
+    name_en: "Quasi-state sector debt: Supreme Audit Chamber total and borrowings of Samruk-Kazyna, Baiterek, KazMunayGas (IFRS), end of year"
+    agency: quasi
+    fetcher: manual_table
+    file: config/quasi_state_debt.yaml
+    min_items: 6
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    note: "Hand-kept (config/quasi_state_debt.yaml): Minfin publishes no quasi-state debt table, so the annual totals come from the Supreme Audit Chamber (2019 13.95 trn, 2025 29.19 trn KZT = 18.3 % of GDP; external 13.27, internal 15.92) and the holdings' IFRS statements on kase.kz (Samruk-Kazyna borrowings 2011-2025, 8.09 trn in 2025, plus 1.20 trn of government loans; Baiterek 10.44 trn in 2025; KMG 3.52 trn, already inside Samruk-Kazyna -- items do not add up). The quarterly external part is EXTERNAL_DEBT_STATE_CONTROLLED (NBK). Update each June when the statements appear."

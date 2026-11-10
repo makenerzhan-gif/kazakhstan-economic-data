@@ -248,6 +248,20 @@ FRED_SERIES = {
                                       "(seasonal factors are revised every February)."),
     "US_GDP_REAL": ("GDPC1", "quarterly", "Billions of chained 2017 dollars, seasonally adjusted annual rate "
                                           "(rebased at comprehensive revisions)."),
+    # Global financial conditions (added 2026-11-10): daily or weekly at FRED, stored as the mean of
+    # the month's observations; the current, incomplete month is left out.
+    "VIX": ("VIXCLS", "monthly_mean", "Index, CBOE Volatility Index (VIX), close, monthly average of trading days."),
+    "USD_BROAD_INDEX": ("DTWEXBGS", "monthly_mean", "Index Jan 2006 = 100, Federal Reserve nominal broad U.S. dollar "
+                                                    "index (goods and services), monthly average; a rise = stronger dollar."),
+    "USD_EME_INDEX": ("DTWEXEMEGS", "monthly_mean", "Index Jan 2006 = 100, Federal Reserve nominal U.S. dollar index "
+                                                    "against emerging-market currencies, monthly average."),
+    "US_BAA_SPREAD": ("BAA10Y", "monthly_mean", "Percentage points, Moody's Baa corporate bond yield less the 10-year "
+                                                "Treasury yield, monthly average (a credit-risk premium; the ICE BofA "
+                                                "high-yield spread is licensed for internal use only and FRED serves "
+                                                "just its last three years)."),
+    "US_NFCI": ("NFCI", "monthly_mean", "Index (0 = average, positive = tighter than average), Chicago Fed National "
+                                        "Financial Conditions Index, weekly, monthly average of the weeks ending in "
+                                        "the month. The Chicago Fed revises the whole history every week."),
 }
 
 
@@ -268,6 +282,10 @@ def _fetch_fred(indicator_id: str) -> tuple[list[dict], dict]:
     values = parse_fred_csv(content, series)
     if len(values) < 100:
         _structural("fred", indicator_id, f"only {len(values)} observations of {series}", f"{FRED_CSV_URL}?id={series}")
+    if frequency == "monthly_mean":
+        current = date.today().strftime("%Y-%m-01")
+        values = {m: round(v, 4) for m, v in _monthly_mean(values).items() if m < current}
+        frequency = "monthly"
     return [{"date": d, "value": v} for d, v in sorted(values.items())], {
         "frequency": frequency, "source_url": f"{FRED_CSV_URL}?id={series}", "dataset_id": f"FRED/{series}",
         "note": f"{note} FRED series {series}."}
@@ -295,6 +313,26 @@ def fetch_us_cpi() -> tuple[list[dict], dict]:
 
 def fetch_us_gdp_real() -> tuple[list[dict], dict]:
     return _fetch_fred("US_GDP_REAL")
+
+
+def fetch_vix() -> tuple[list[dict], dict]:
+    return _fetch_fred("VIX")
+
+
+def fetch_usd_broad_index() -> tuple[list[dict], dict]:
+    return _fetch_fred("USD_BROAD_INDEX")
+
+
+def fetch_usd_eme_index() -> tuple[list[dict], dict]:
+    return _fetch_fred("USD_EME_INDEX")
+
+
+def fetch_us_baa_spread() -> tuple[list[dict], dict]:
+    return _fetch_fred("US_BAA_SPREAD")
+
+
+def fetch_us_nfci() -> tuple[list[dict], dict]:
+    return _fetch_fred("US_NFCI")
 
 
 # ---------------------------------------------------------------- other EAEU members (EEC)

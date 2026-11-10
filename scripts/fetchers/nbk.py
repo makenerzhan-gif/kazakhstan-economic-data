@@ -3045,6 +3045,30 @@ def fetch_external_debt_public_sector() -> tuple[list[dict], dict]:
     )
 
 
+def fetch_external_debt_state_controlled() -> tuple[list[dict], dict]:
+    """External debt of banks and organisations controlled by the government (USD million, quarterly). Added 2026-11-10."""
+    return _fetch_nbk_exact_row(
+        "350", {'class_type': 'Debt', 'ed_code': 'External Debt - ED of banks and organizations controlled by government', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_STATE_CONTROLLED",
+        "USD million, end of quarter. External debt of banks and organisations CONTROLLED BY THE GOVERNMENT (over 50 % state "
+        "ownership: Samruk-Kazyna, Baiterek, KMG, KTZ and their subsidiaries) -- the external part of quasi-state debt, the only "
+        "machine-readable measure of it (Minfin publishes no quasi-state debt table; total quasi-state debt, external and "
+        "internal, appears only in the Supreme Audit Chamber's annual report: 29.19 trn KZT at end-2025). Public ED (government "
+        "and NBK) plus this = EXTERNAL_DEBT_PUBLIC_SECTOR. From 2014-04-01.",
+        "quarterly",
+    )
+
+
+def fetch_external_debt_state_controlled_guaranteed() -> tuple[list[dict], dict]:
+    """Government-guaranteed part of the external debt of state-controlled entities (USD million, quarterly). Added 2026-11-10."""
+    return _fetch_nbk_exact_row(
+        "350", {'class_type': 'Debt', 'ed_code': 'External Debt - ED of banks and organizations controlled by government - inc. government guaranteed ED', 'period': 'quarter', 'type': 'USD mln'},
+        "EXTERNAL_DEBT_STATE_CONTROLLED_GUARANTEED",
+        "USD million, end of quarter. Of EXTERNAL_DEBT_STATE_CONTROLLED, the debt guaranteed by the government.",
+        "quarterly",
+    )
+
+
 def fetch_external_debt_private_sector() -> tuple[list[dict], dict]:
     """External Debt: Private Sector (USD million, quarterly)."""
     return _fetch_nbk_exact_row(

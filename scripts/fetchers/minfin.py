@@ -228,6 +228,21 @@ def fetch_gov_social_spending() -> tuple[list[dict], dict]:
 # ---------------------------------------------------------------------------
 DEBT_DIRECTION_ID = "261"
 DEBT_ACTIVITY_ID = "14610"
+# The 2026-10-01 edition (doc 1093789) is tagged with activity 565 only (2025-10 and 2026-01 carry both; checked
+# 2026-11-10), so the debt editions are the union of the two listings, kept by title.
+DEBT_ACTIVITY_IDS = ("14610", "565")
+DEBT_TITLE_RE = re.compile(r"State and State Guaranteed Debt|Государственный и гарантированный государством долг", re.IGNORECASE)
+
+
+def _debt_documents() -> list[dict]:
+    seen, out = set(), []
+    for activity in DEBT_ACTIVITY_IDS:
+        for d in _list_documents(directions=DEBT_DIRECTION_ID, activities=activity):
+            if d["id"] in seen or (activity != DEBT_ACTIVITY_ID and not DEBT_TITLE_RE.search(d.get("title") or "")):
+                continue
+            seen.add(d["id"])
+            out.append(d)
+    return sorted(out, key=lambda d: d.get("created_date") or "", reverse=True)
 DEBT_TOTAL_LABEL = "Total State and State Guaranteed debt"
 AS_OF_RE = re.compile(r"as of\s+([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})", re.IGNORECASE)
 EN_MONTHS = {
@@ -282,7 +297,7 @@ def _parse_debt_document(doc: dict) -> dict | None:
 
 
 def fetch_gov_debt() -> tuple[list[dict], dict]:
-    docs = _list_documents(directions=DEBT_DIRECTION_ID, activities=DEBT_ACTIVITY_ID)
+    docs = _debt_documents()
     today = date.today()
 
     records: list[dict] = []
@@ -395,7 +410,7 @@ def _parse_debt_component_document(doc: dict, label: str) -> dict | None:
 
 
 def _fetch_debt_component_series(label: str, indicator_id: str) -> tuple[list[dict], dict]:
-    docs = _list_documents(directions=DEBT_DIRECTION_ID, activities=DEBT_ACTIVITY_ID)
+    docs = _debt_documents()
     today = date.today()
 
     records: list[dict] = []
