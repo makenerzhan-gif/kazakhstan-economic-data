@@ -3051,6 +3051,28 @@ indicators:
     observation_type: point_in_time
     observation_evidence: "название формы: позиция/остаток — external debt"
 
+  - id: EXTERNAL_DEBT_STATE_CONTROLLED
+    name_ru: "Внешний долг банков и организаций, контролируемых государством (квазигосударственный сектор)"
+    name_en: "External Debt: Banks and Organisations Controlled by Government (quasi-state)"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "formId=350, ed_code «ED of banks and organizations controlled by government» — остаток на конец квартала"
+
+  - id: EXTERNAL_DEBT_STATE_CONTROLLED_GUARANTEED
+    name_ru: "Внешний долг организаций, контролируемых государством, гарантированный государством"
+    name_en: "External Debt of State-Controlled Entities, Government-Guaranteed"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "formId=350, ed_code «... - inc. government guaranteed ED» — остаток на конец квартала"
+
   - id: EXTERNAL_DEBT_PRIVATE_SECTOR
     name_ru: "Внешний долг частного сектора"
     name_en: "External Debt: Private Sector"
@@ -3743,6 +3765,39 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "APSP = 'Average Petroleum Spot Price' — простое среднее трёх эталонных сортов"
+
+  - id: URANIUM_PRICE
+    name_ru: "Цена урана (спот, NUEXCO), МВФ PCPS"
+    name_en: "Uranium spot price (NUEXCO), IMF PCPS"
+    agency: imf
+    frequency: monthly
+    unit: "USD per pound U3O8"
+    category: prices
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "IMF PCPS 9.0.0 G001.PURAN.USD.M — среднемесячная цена"
+
+  - id: CHROMIUM_PRICE
+    name_ru: "Цена металлического хрома 99,2 %, МВФ PCPS"
+    name_en: "Chromium metal price (99.2%), IMF PCPS"
+    agency: imf
+    frequency: monthly
+    unit: "USD per tonne"
+    category: prices
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "IMF PCPS 9.0.0 G001.PCHROM.USD.M — среднемесячная цена"
+
+  - id: MANGANESE_PRICE
+    name_ru: "Цена электролитического марганца, МВФ PCPS"
+    name_en: "Electrolytic manganese price, IMF PCPS"
+    agency: imf
+    frequency: monthly
+    unit: "USD per tonne"
+    category: prices
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "IMF PCPS 9.0.0 G001.PMANGELE.USD.M — среднемесячная цена"
 
   - id: OIL_PRICE_BRENT
     name_ru: "Цена нефти Brent (Всемирный банк, Pink Sheet)"
@@ -6298,6 +6353,66 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     observation_evidence: "FRED GDPC1 — поток за квартал в годовом выражении"
+
+  - id: VIX
+    name_ru: "Индекс волатильности VIX (CBOE), среднее за месяц"
+    name_en: "CBOE Volatility Index (VIX), monthly average"
+    agency: fred
+    frequency: monthly
+    unit: "index"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED VIXCLS — среднее дневных (недельных) значений за месяц, расчёт репозитория"
+
+  - id: USD_BROAD_INDEX
+    name_ru: "Широкий номинальный индекс доллара США (ФРС), среднее за месяц"
+    name_en: "Nominal broad U.S. dollar index (Federal Reserve), monthly average"
+    agency: fred
+    frequency: monthly
+    unit: "index Jan 2006 = 100"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED DTWEXBGS — среднее дневных (недельных) значений за месяц, расчёт репозитория"
+
+  - id: USD_EME_INDEX
+    name_ru: "Номинальный индекс доллара США к валютам стран с формирующимися рынками (ФРС), среднее за месяц"
+    name_en: "Nominal U.S. dollar index against emerging-market currencies (Federal Reserve), monthly average"
+    agency: fred
+    frequency: monthly
+    unit: "index Jan 2006 = 100"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED DTWEXEMEGS — среднее дневных (недельных) значений за месяц, расчёт репозитория"
+
+  - id: US_BAA_SPREAD
+    name_ru: "Спред доходности корпоративных облигаций Baa (Moody's) к 10-летним казначейским облигациям США, среднее за месяц"
+    name_en: "Moody's Baa corporate yield spread over 10-year Treasury, monthly average"
+    agency: fred
+    frequency: monthly
+    unit: "percentage points"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED BAA10Y — среднее дневных (недельных) значений за месяц, расчёт репозитория"
+
+  - id: US_NFCI
+    name_ru: "Индекс финансовых условий ФРБ Чикаго (NFCI), среднее за месяц"
+    name_en: "Chicago Fed National Financial Conditions Index (NFCI), monthly average"
+    agency: fred
+    frequency: monthly
+    unit: "index (0 = average)"
+    category: international
+    country: USA
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED NFCI — среднее дневных (недельных) значений за месяц, расчёт репозитория"
 
   - id: BY_CPI_YOY
     name_ru: "ИПЦ Беларуси, к соответствующему месяцу прошлого года"

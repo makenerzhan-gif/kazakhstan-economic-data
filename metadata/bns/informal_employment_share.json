@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-20612396",
+  "indicator_id": "INFORMAL_EMPLOYMENT_SHARE",
+  "indicator_name": "Informal employment share of total employment (total, urban, rural) by region, annual, %",
+  "description": "Доля неформально занятых в общей численности занятых (всего, город, село) по регионам, ежегодно, %",
+  "frequency": "annual",
+  "unit": "% of employed",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Taldau 20612396, labour force survey, annual 2012-2024 (no quarterly series is published). National 2012 26.0, 2015 21.2, 2020 14.0, 2024 12.0; 2024 urban 7.1, rural 20.2.",
+  "publication_date": null,
+  "last_update_date": "2026-11-10",
+  "download_date": "2026-11-10",
+  "period_start": "2012-12-31",
+  "period_end": "2024-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

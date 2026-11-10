@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-703196",
+  "indicator_id": "ENTERPRISE_PROFIT_LOSS_QUARTERLY",
+  "indicator_name": "Financial results of large and medium enterprises: profit of profit-makers and loss of loss-makers by NACE section and region, quarterly, million KZT",
+  "description": "Финансовые результаты крупных и средних предприятий: сумма прибыли и сумма убытка по видам деятельности (ОКЭД) и регионам, поквартально, млн тенге",
+  "frequency": "quarterly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Taldau 703196 (profit of the enterprises that made a profit) and 703199 (loss of the loss-makers, negative), large and medium enterprises (size term 3629963; NOT the segment Taldau offers first, which is medium-sized only), discrete quarters 2015 Q1 on (not year-to-date). Balance (сальдо) = PROFIT + LOSS. National 2026 Q2: profit 6 895.2 bn, loss -780.9 bn, balance 6 114.3 bn. Sections O, P, Q, T, U not published.",
+  "publication_date": null,
+  "last_update_date": "2026-11-10",
+  "download_date": "2026-11-10",
+  "period_start": "2015-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

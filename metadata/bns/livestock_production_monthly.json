@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-3055928",
+  "indicator_id": "LIVESTOCK_PRODUCTION_MONTHLY",
+  "indicator_name": "Livestock output per month: slaughter (live weight), milk, eggs, by region",
+  "description": "Производство продукции животноводства за месяц: реализация скота и птицы на убой (живой вес), молоко, яйца, по регионам",
+  "frequency": "monthly",
+  "unit": "thousand tonnes (meat, milk); million pieces (eggs)",
+  "currency": "",
+  "geography": "Kazakhstan (national and regions)",
+  "methodology": "Taldau 3055928 (slaughter, live weight; total from 2020-01, species from 2013), 701354 (milk, 2020-01 on), 2972848 (eggs, 2011-01 on), all farm categories, discrete months. National 2026-09: meat 203.754 thousand t, milk 361.409 thousand t; eggs 2026-08 426.181 million (= BNS file 8129).",
+  "publication_date": null,
+  "last_update_date": "2026-11-10",
+  "download_date": "2026-11-10",
+  "period_start": "2011-01-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

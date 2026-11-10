@@ -4024,6 +4024,22 @@ agencies:
           95,399.86), public + private (formId=350) sums exactly to the total, and the
           formId=351 instrument split also sums exactly to the total. 49 quarterly points,
           2014-Q2 to 2026-Q2. fetch_external_debt_ex_intercompany.
+      EXTERNAL_DEBT_STATE_CONTROLLED:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=350"
+        format: json
+        notes: >
+          2026-11-10. formId=350 (365 rows, 8 pages), ed_code 'External Debt - ED of banks and organizations
+          controlled by government', quarterly from 2014-04-01: 27 122 (2014-04), 19 055 (2020-01), 16 934
+          (2025-01), 29 331 (2026-07-01) USD mln. The external part of quasi-state debt; Minfin's debt editions
+          2019-2026 carry no quasi-state section. fetch_external_debt_state_controlled.
+      EXTERNAL_DEBT_STATE_CONTROLLED_GUARANTEED:
+        status: confirmed
+        download_url: "https://data.nationalbank.kz/api/v1/data?formId=350"
+        format: json
+        notes: >
+          2026-11-10. formId=350, ed_code '... - inc. government guaranteed ED'; 443 (2014-04) to 3 440 (2026-07)
+          USD mln. fetch_external_debt_state_controlled_guaranteed.
       EXTERNAL_DEBT_PUBLIC_SECTOR:
         status: confirmed
         download_url: "https://data.nationalbank.kz/api/v1/data?formId=350"
@@ -6334,6 +6350,27 @@ agencies:
           A world price, NOT a Kazakhstan export price -- KEBCO trades at a differential to
           Brent that this series does not capture. 415 monthly points, 1992-01 to 2026-07.
           fetch_oil_price.
+          Correction 2026-11-10: PCPS 9.0.0 now does carry POILBRE (Dated Brent), POILDUB and
+          POILWTI from 1992-M01 (G001.POILBRE.USD.M answered 102.02 for 2026-M09). The pipeline's
+          Brent series stays OIL_PRICE_BRENT (World Bank Pink Sheet).
+      URANIUM_PRICE:
+        status: confirmed
+        download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/PCPS/9.0.0/G001.PURAN.USD.M"
+        format: csv
+        notes: >
+          2026-11-10. Uranium, NUEXCO spot, USD/lb U3O8, 1992-M01 onward; 2007-06 136.22, 2024-01 80.36, 2026-09 72.47. fetch_uranium_price.
+      CHROMIUM_PRICE:
+        status: confirmed
+        download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/PCPS/9.0.0/G001.PCHROM.USD.M"
+        format: csv
+        notes: >
+          2026-11-10. Chromium metal 99.2 %, USD/t, from 2012-06 (2024-01 9 606); not ferrochrome (not in PCPS). fetch_chromium_price.
+      MANGANESE_PRICE:
+        status: confirmed
+        download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/PCPS/9.0.0/G001.PMANGELE.USD.M"
+        format: csv
+        notes: >
+          2026-11-10. Electrolytic manganese, USD/t. fetch_manganese_price.
       COMMODITY_TERMS_OF_TRADE:
         status: confirmed
         download_url: "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/CTOT/5.0.1/KAZ.CEMPI_CTOTNX_TT.R_RW_IX.M"
@@ -7387,6 +7424,41 @@ agencies:
         format: csv
         notes: >
           2026-09-25. FRED GDPC1, checked against known values. fetch_us_gdp_real.
+      VIX:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS"
+        format: csv
+        notes: >
+          2026-11-10. FRED VIXCLS (checked by WebFetch: the CSV has observation_date,VIXCLS); the
+          daily/weekly values are averaged by month, the current month left out. fetch_vix.
+      USD_BROAD_INDEX:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS"
+        format: csv
+        notes: >
+          2026-11-10. FRED DTWEXBGS (checked by WebFetch: the CSV has observation_date,DTWEXBGS); the
+          daily/weekly values are averaged by month, the current month left out. fetch_usd_broad_index.
+      USD_EME_INDEX:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXEMEGS"
+        format: csv
+        notes: >
+          2026-11-10. FRED DTWEXEMEGS (checked by WebFetch: the CSV has observation_date,DTWEXEMEGS); the
+          daily/weekly values are averaged by month, the current month left out. fetch_usd_eme_index.
+      US_BAA_SPREAD:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAA10Y"
+        format: csv
+        notes: >
+          2026-11-10. FRED BAA10Y (checked by WebFetch: the CSV has observation_date,BAA10Y); the
+          daily/weekly values are averaged by month, the current month left out. fetch_us_baa_spread.
+      US_NFCI:
+        status: confirmed
+        download_url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI"
+        format: csv
+        notes: >
+          2026-11-10. FRED NFCI (checked by WebFetch: the CSV has observation_date,NFCI); the
+          daily/weekly values are averaged by month, the current month left out. fetch_us_nfci.
   nbs:
     name: "National Bureau of Statistics of China — real GDP growth"
     website: "https://data.stats.gov.cn/dg/website/page.html"

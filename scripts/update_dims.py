@@ -18,13 +18,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib import dims, metadata, pipeline_logging, revisions, validation  # noqa: E402
-from fetchers import bns_balances, bns_cpi, cisstat, comtrade, cpi_weights, gdp_discrete, krem_tariffs, minfin_quasifiscal, nbk_balance_groups, nbk_records, tariff_jumps, damu, gfss, minfin_regions, neer_import, kase_ifrs, nbk_expectations, nbk_fx, bns_dims, bns_living, bns_resource_use, bns_trade, eia, gravity, imf_dims, kase_dims, kase_eurobonds, kmg, manual_vintages, nbk_cube, nbk_operations, nbk_dims, regional_balance, taldau_dims, wb, world_misc  # noqa: E402
+from fetchers import analytics, bns_balances, bns_cpi, cisstat, comtrade, cpi_weights, gdp_discrete, krem_tariffs, minfin_quasifiscal, nbk_balance_groups, nbk_records, tariff_jumps, damu, gfss, minfin_regions, neer_import, kase_ifrs, nbk_expectations, nbk_fx, bns_dims, bns_living, bns_resource_use, bns_trade, eia, gravity, imf_dims, kase_dims, kase_eurobonds, kmg, manual_vintages, nbk_cube, nbk_operations, nbk_dims, regional_balance, taldau_dims, wb, world_misc  # noqa: E402
 
 # Keyed by a dataset's `fetcher` when it names one, else by its agency.
 AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb.fetch, "eia": eia.fetch,
                    "gravity": gravity.fetch, "taldau": taldau_dims.fetch,
                    "nbk_survey": nbk_dims.fetch, "nbk_debt_schedule": nbk_dims.fetch_debt_schedule,
-                   "nbk_classified": nbk_dims.fetch_classified, "nbk_cube": nbk_cube.fetch, "manual_vintages": manual_vintages.fetch,
+                   "nbk_classified": nbk_dims.fetch_classified, "nbk_cube": nbk_cube.fetch, "manual_vintages": manual_vintages.fetch, "sovereign_ratings": manual_vintages.fetch_ratings, "manual_table": manual_vintages.fetch_table,
                    "nbk_interventions": nbk_operations.fetch_interventions, "nbk_open_position": nbk_operations.fetch_open_position,
                    "nbk_deposit_auctions": nbk_operations.fetch_deposit_auctions,
                    "kase_indices": kase_dims.fetch_indices, "kase_bond_volumes": kase_dims.fetch_bond_volumes,
@@ -42,7 +42,7 @@ AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb
                    "minfin_quasifiscal": minfin_quasifiscal.fetch,
                    "nbk_records": nbk_records.fetch, "nbk_balance_groups": nbk_balance_groups.fetch,
                    "krem_tariffs": krem_tariffs.fetch, "tariff_jumps": tariff_jumps.fetch,
-                   "cisstat": cisstat.fetch}
+                   "cisstat": cisstat.fetch, "analytics": analytics.fetch}
 METHODOLOGY = {"bns": "Bureau of National Statistics official methodology",
                "wb": "World Bank Commodity Markets (Pink Sheet / Commodity Markets Outlook), nominal US dollars",
                "eia": "U.S. EIA Short-Term Energy Outlook, monthly release",
@@ -59,6 +59,10 @@ METHODOLOGY = {"bns": "Bureau of National Statistics official methodology",
                "un": "United Nations, World Population Prospects 2024 (Population Division, DESA)",
                "kmg": "KazMunayGas quarterly databook (investor reporting), KMG's equity share unless stated",
                "mne": "Ministry of National Economy, «Прогноз социально-экономического развития» (transcribed vintages, config/gov_forecast_vintages.yaml)",
+               "ratings": "Sovereign credit ratings of S&P Global Ratings, Moody's and Fitch Ratings (long-term foreign currency), transcribed from the agencies' announcements",
+               "quasi": "Supreme Audit Chamber reports and national holdings' consolidated IFRS statements (hand-transcribed annual figures)",
+               "legal": "Republican budget laws (adilet.zan.kz) as tabulated by the Ministry of Labour (gov.kz); hand-transcribed",
+               "derived": "Derived by this repository from the pipeline's own series (scripts/fetchers/analytics.py); not published by any source",
                "damu": "Damu Entrepreneurship Development Fund, project-level subsidy report (sums of project rows)"}
 CONFIG = dims.load_config()
 DATASETS = {d["id"]: d for d in CONFIG["datasets"]}

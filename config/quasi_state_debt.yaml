@@ -1,0 +1,39 @@
+# Quasi-state sector debt: annual figures that are published only inside reports and financial statements.
+# Hand-maintained (read by scripts/fetchers/manual_vintages.py, fetch_table; dataset QUASI_STATE_DEBT_ANNUAL).
+# Minfin's quarterly debt editions (2019-2026) cover only state, guaranteed and поручительства debt; no quasi-state
+# table is published. The quarterly EXTERNAL part is the NBK series EXTERNAL_DEBT_STATE_CONTROLLED (formId=350).
+# Compiled 2026-11-10. Values in million KZT at 31 December. Definitions differ between items: do not add them up
+# (KMG is consolidated inside Samruk-Kazyna).
+source: "Supreme Audit Chamber (ВАП) conclusions on the republican budget execution report; Samruk-Kazyna, Baiterek and KazMunayGas consolidated IFRS statements (kase.kz/files/emitters/<SKKZ|BTRK|KMGZ>/<code>f6_<year>_cons_rus.pdf)"
+unit: "million KZT"
+items:
+  - code: TOTAL_VAP
+    name: "Долг субъектов квазигосударственного сектора, всего (по данным Высшей аудиторской палаты), млн тенге"
+    source: "ВАП, заключение к отчёту об исполнении республиканского бюджета (2025: 29,19 трлн тенге, 18,3 % ВВП)"
+    values: {2019: 13950000, 2025: 29190000}
+  - code: TOTAL_VAP_EXTERNAL
+    name: "Долг квазигосударственного сектора: внешний (ВАП), млн тенге"
+    source: "ВАП, заключение за 2025 год"
+    values: {2025: 13270000}
+  - code: TOTAL_VAP_INTERNAL
+    name: "Долг квазигосударственного сектора: внутренний (ВАП), млн тенге"
+    source: "ВАП, заключение за 2025 год"
+    values: {2025: 15920000}
+  - code: SK_BORROWINGS
+    name: "АО «ФНБ «Самрук-Казына»: займы (банковские кредиты и выпущенные долговые ценные бумаги), консолидированная МСФО, млн тенге"
+    source: "skkzf6_<year>_cons_rus.pdf, статья «Займы» (с начисленным вознаграждением); 2012 и 2017 -- как в отчётности следующего года не пересчитаны (2017 пересчитан)"
+    values: {2011: 4196776, 2012: 4196621, 2013: 3974366, 2014: 5642262, 2015: 6092711, 2016: 5750728, 2017: 7054267, 2018: 6852775,
+             2019: 6841393, 2020: 7459200, 2021: 7862692, 2022: 6667675, 2023: 6363902, 2024: 6668168, 2025: 8087121}
+  - code: SK_GOV_LOANS
+    name: "АО «ФНБ «Самрук-Казына»: займы Правительства РК, консолидированная МСФО, млн тенге"
+    source: "skkzf6_<year>_cons_rus.pdf, статья «Займы Правительства Республики Казахстан»"
+    values: {2011: 869715, 2012: 770641, 2013: 268558, 2014: 413744, 2015: 866437, 2016: 918411, 2017: 782048, 2018: 653406,
+             2019: 627560, 2020: 593222, 2021: 579369, 2022: 683604, 2023: 872846, 2024: 1087072, 2025: 1201076}
+  - code: BAITEREK_BORROWINGS
+    name: "АО «НУХ «Байтерек»: долговые ценные бумаги, займы банков и Правительства, субординированный долг (без средств клиентов), МСФО, млн тенге"
+    source: "btrkf6_2025_cons_rus.pdf: 7 499 768 + 2 081 082 + 850 516 + 9 960 (2025)"
+    values: {2024: 7016970, 2025: 10441326}
+  - code: KMG_BORROWINGS
+    name: "АО НК «КазМунайГаз»: займы, консолидированная МСФО (входит в «Самрук-Казыну»), млн тенге"
+    source: "kmgzf6_<year>_cons_rus.pdf, примечание «Управление капиталом»; 2022 пересчитан"
+    values: {2022: 4154386, 2023: 3757094, 2024: 3967401, 2025: 3521947}

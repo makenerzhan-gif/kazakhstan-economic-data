@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-701002",
+  "indicator_id": "NET_LENDING_BY_SECTOR",
+  "indicator_name": "Net lending (+) / net borrowing (-) by institutional sector, annual, million KZT",
+  "description": "Чистое кредитование (+) / чистое заимствование (-) по институциональным секторам, ежегодно, млн тенге",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Taldau 701002 (BNS integrated economic accounts, balancing item B9), 1993-2024 (general government from 1994). 2024: economy -3 891 934 (rest of the world +3 891 934), non-financial corporations +12 118 456, financial corporations +2 954 564, general government -4 791 309, households -10 329 009, NPISH -309 152 million KZT. Equals the bulletin «Национальные счета РК» (element 358455).",
+  "publication_date": null,
+  "last_update_date": "2026-11-10",
+  "download_date": "2026-11-10",
+  "period_start": "1993-12-31",
+  "period_end": "2024-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "imf",
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/PCPS/9.0.0/G001.PURAN.USD.M",
+  "dataset_id": "PCPS/9.0.0/G001.PURAN.USD.M",
+  "indicator_id": "URANIUM_PRICE",
+  "indicator_name": "Uranium spot price (NUEXCO), IMF PCPS",
+  "description": "Цена урана (спот, NUEXCO), МВФ PCPS",
+  "frequency": "monthly",
+  "unit": "USD per pound U3O8",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "IMF World Economic Outlook (WEO), biannual exercise (April/October vintages)",
+  "publication_date": null,
+  "last_update_date": "2026-11-10",
+  "download_date": "2026-11-10",
+  "period_start": "1992-01-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

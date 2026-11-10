@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://data.nationalbank.kz/api/v1/data?formId=350",
+  "dataset_id": "formId=350,class_type=Debt,ed_code=External Debt - ED of banks and organizations controlled by government - inc. government guaranteed ED,period=quarter,type=USD mln",
+  "indicator_id": "EXTERNAL_DEBT_STATE_CONTROLLED_GUARANTEED",
+  "indicator_name": "External Debt of State-Controlled Entities, Government-Guaranteed",
+  "description": "Внешний долг организаций, контролируемых государством, гарантированный государством",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million, end of quarter. Of EXTERNAL_DEBT_STATE_CONTROLLED, the debt guaranteed by the government.",
+  "publication_date": null,
+  "last_update_date": "2026-11-10",
+  "download_date": "2026-11-10",
+  "period_start": "2014-04-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

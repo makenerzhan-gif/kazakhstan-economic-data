@@ -1,57 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — history for the fiscal, core-inflation, retail and credit blocks» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — supply and use by product and region: production, trade, domestic use» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-27 — supply and use by product and region: production, trade, domestic use
-
-Asked for: production, exports, imports and domestic consumption in physical and value terms,
-by industry/product and by region. All new data are item-level datasets
-(config/dims.yaml → data/unified/macro_dims_long.csv.gz).
-
-**Trade by commodity and region** (the BNS customs workbooks 446905/446906, monthly 2015-01 …
-2026-07, both flows, thousand USD and tonnes). EXPORTS_/IMPORTS_{VALUE,VOLUME}_BY_HS_CHAPTER:
-the 96 HS chapters, national. EXPORTS_/IMPORTS_{VALUE,VOLUME}_BY_REGION_HS_SECTION: 21 HS
-sections × 20 regions. EXPORTS_/IMPORTS_VOLUME_BY_REGION_PRODUCT: 19 commodities (coal, crude,
-petroleum products, ores, cement, steel, ferroalloys, non-ferrous metals, flour, sugar,
-sunflower oil, fertilisers) by region. Each file is read once for all its datasets
-(fetchers/bns_trade.scan); every group is re-checked against the published national and
-regional totals. September 2022: the national rows are 1-4 % below their own regions
-(source_issues trade_national_row_2022_09); the Almaty-city import block misses its heading
-by ≤0.003 % in four 2023 months (tolerance now 0.01 %). Region = where the trader is registered.
-
-**Resources and use, national, physical units** (BNS publication 19065, archive 72035; 85
-editions read by scripts/backfill_resource_use.py). RESOURCE_USE_MONTHLY (the month),
-RESOURCE_USE_YTD (January to the month) 2018-03 … 2026-07, RESOURCE_USE_ANNUAL (final, 2021-24):
-~270 industrial products, grain and vegetables, socially important foods (315 in all) —
-resources, production, imports, use, exports, sales on the home market. Checked: coal
-January–July 2026 production 63 029 kt, exports 17 833 kt, wheat exports 4.95 Mt — the
-edition's own figures; resources = production + imports in 99 % of rows. BNS revises past
-months only inside the cumulative figures (wheat exports January–March 2026: 3.66 Mt first,
-~2.6 Mt implied by July), so for totals use the YTD dataset.
-
-**Annual balances.** AGRI_BALANCE (publication 19517, 2017-2025): grain, grain products, meat,
-milk, eggs, potatoes, fruit, sugar beet, sunflower seed, vegetable oil — stocks, production,
-imports, feed/seed/processing/losses, exports, personal consumption (total and per head),
-stocks; grain 2024: production 25.2 Mt, exports 8.25 Mt, feed 3.97 Mt. ENERGY_BALANCE_TJ /
-_NATURAL (publication 19275, 2021-2025): the fuel-energy balance, ~40 fuels × ~85 flows (supply,
-transformation by plant type, own use, final consumption by 20 sectors); production + imports
-+ exports + bunkers + stock change = total primary supply every year (2025: 3.35 million TJ).
-No regional energy balance is published after 2020.
-
-**Industry by region, monthly** (Taldau, 2020-01 onward). INDUSTRY_OUTPUT_BY_REGION_MONTHLY
-(701592): output in million KZT, 20 regions × ОКЭД sections and divisions (31 items); the
-regions add up to the national figure exactly. INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY
-(701608) and INDUSTRY_SHIPMENTS_BY_REGION_MONTHLY (701622, total and to the domestic market):
-69 products (BNS's main-products list and further КПВЭД products), unit in item_name.
-Re-downloaded weekly (refresh_days). REGIONAL_PRODUCT_BALANCE: derived production − exports +
-imports by region for the 19 commodities, with the domestic shipments beside it — a cross-check,
-not a statistic (BNS publishes no regional product balance).
-
-**Project.** `latest/resource_use_latest.csv` (78 KB): the resources-and-use table for the
-latest January–month against a year earlier.
-
-Tests: `tests/test_supply_use.py`.
 
 ## 2026-09-27 — the budget back to 2013, December, gaps, non-oil deficit before 2022
 
@@ -660,3 +610,45 @@ bns_dims a `year_rows_months` layout; nbk_expectations derives the consumer sent
     May 2022 104.1, December 2023 115.7, October 2025 99.1 as published; monthly 2016-2025, quarterly from 2026.
 
 Tests: tests/test_new_sources_2026_11b.py (11 + 1 cross-source).
+
+## 2026-11-10 — derived analytics (block A) and 17 new sources (block B)
+
+**A. Analytics derived by this repository** (scripts/fetchers/analytics.py, agency `derived`, computed in update_dims from the
+processed files of the same run; not published by any source -- every note says how):
+1. CORE_INFLATION_MEASURES: trimmed means (15 % / 30 %), weighted median, diffusion indices over 21 CPI components with the
+   2022 BNS weights held fixed; the components' weighted mean tracks the published CPI (correlation 0.982 m/m, 0.992 y/y).
+   October 2026: trimmed mean 9.0 %, median 8.5 %, CPI 9.2 % y/y.
+2. MONETARY_CONDITIONS: real ex-ante (household expectations) and ex-post base rate, real TONIA, MCI = real-rate gap
+   + 1/3 x REER gap (2016+ means). September 2026 real ex-ante rate 4.1 %.
+3. OUTPUT_GAP: HP, one-sided HP, Hamilton (h=8, p=4), unobserved components on SA real GDP; 2026 Q2 +2.2 … +7.3 % (mean
+   +4.2 %) -- the BNS SA series jumps 6.5 % q/q in 2026 Q2. Potential growth (HP) 5.2 % a year.
+4. CREDIT_GAP: credit-to-GDP 25.1 %, Basel gap (one-sided HP, lambda 400 000) +3.8 pp, credit impulse -0.35 pp (2026 Q2).
+5. FISCAL_STANCE: non-oil GDP, oil-gas share 15.5 %, non-oil balance -8.7 % of non-oil GDP, fiscal impulse -1.0 pp (2025).
+
+**B. New data**:
+6. FRED (monthly means): VIX, USD_BROAD_INDEX, USD_EME_INDEX, US_BAA_SPREAD (Moody's Baa less 10y; the ICE BofA HY spread
+   is licensed for internal use and FRED keeps only three years of it), US_NFCI.
+7. IMF PCPS: URANIUM_PRICE (1992 on, 72.47 USD/lb in 2026-09), CHROMIUM_PRICE, MANGANESE_PRICE. PCPS now also carries
+   Brent (POILBRE): sources.yaml corrected; OIL_PRICE_BRENT stays World Bank.
+8. SOVEREIGN_RATINGS: 61 actions of S&P, Moody's, Fitch since 1996 (config/sovereign_ratings.yaml), monthly notch and outlook.
+9. Social standards: SOCIAL_STANDARDS (MRP, MZP, legislated VPM, minimum and base pension by effective month, from 1999;
+   config/social_standards.yaml) and SUBSISTENCE_MINIMUM_BY_REGION (BNS price-based, Taldau 704492, 2011 on; from 2025 under
+   region dictionary 4843 -- taldau_regional segments now take national_term, region_pos, item_pos and items; items take
+   measure_id).
+10. Enterprises: ENTERPRISE_PROFIT_LOSS_QUARTERLY (profit and loss by NACE section and region, large and medium, 2015 Q1 on;
+    2026 Q2 balance 6 114 bn KZT) and ENTERPRISE_LOSS_MAKING_SHARE_QUARTERLY (31.1 %).
+11. Labour: INFORMAL_EMPLOYMENT_SHARE (annual 2012-2024, 12.0 % in 2024; no quarterly series exists) and
+    UNPRODUCTIVE_SELF_EMPLOYED_SHARE (quarterly 2020 on, 7.3 %).
+12. Sector accounts: SECTOR_ACCOUNTS (new bns_dims layout sector_accounts, bulletin 358455, 2010-2024: disposable income,
+    consumption, saving, GFCF, net lending by sector; household saving rate -10.2 % in 2024) and NET_LENDING_BY_SECTOR
+    (Taldau 701002, 1993-2024).
+13. Agriculture: LIVESTOCK_STOCK_MONTHLY and LIVESTOCK_PRODUCTION_MONTHLY (head, slaughter, milk, eggs by region).
+14. FUEL_PRICES_BY_CITY: AI-92/95/98, diesel, LPG in 21 cities, 2011 on (AI-92 240 KZT/l in 2026-06).
+15. Quasi-state debt: EXTERNAL_DEBT_STATE_CONTROLLED (+ guaranteed part; NBK form 350, quarterly 2014 on, 29.3 bn USD at
+    2026-07-01) and QUASI_STATE_DEBT_ANNUAL (Supreme Audit Chamber total 29.19 trn KZT in 2025; Samruk-Kazyna, Baiterek,
+    KMG borrowings from IFRS). Minfin publishes no quasi-state table.
+16. Tax expenditures: no published series (only officials' totals); not added.
+
+Fix: Minfin's 2026-10-01 debt edition is listed only under activity 565; the debt fetchers now take both listings.
+
+Tests: tests/test_analytics.py (6), tests/test_new_sources_2026_11c.py (11).
