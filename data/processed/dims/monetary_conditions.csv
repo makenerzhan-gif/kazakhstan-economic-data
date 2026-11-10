@@ -1,0 +1,1310 @@
+date,region,item_code,item_name,value,transformation
+2015-09-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",12.0,level
+2015-10-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",15.871,level
+2015-11-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.0,level
+2015-12-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.0,level
+2016-01-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.0,level
+2016-02-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.9655,level
+2016-03-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",17.0,level
+2016-04-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",17.0,level
+2016-05-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",15.3226,level
+2016-06-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",15.0,level
+2016-07-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",13.7097,level
+2016-08-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",13.0,level
+2016-09-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",13.0,level
+2016-10-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",12.5484,level
+2016-11-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",12.2333,level
+2016-12-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",12.0,level
+2017-01-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",12.0,level
+2017-02-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",11.7143,level
+2017-03-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",11.0,level
+2017-04-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",11.0,level
+2017-05-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",11.0,level
+2017-06-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",10.5833,level
+2017-07-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",10.5,level
+2017-08-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",10.4194,level
+2017-09-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",10.25,level
+2017-10-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",10.25,level
+2017-11-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",10.25,level
+2017-12-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",10.25,level
+2018-01-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.9919,level
+2018-02-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.75,level
+2018-03-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.5403,level
+2018-04-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.3833,level
+2018-05-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.25,level
+2018-06-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0333,level
+2018-07-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2018-08-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2018-09-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2018-10-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.129,level
+2018-11-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.25,level
+2018-12-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.25,level
+2019-01-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.25,level
+2019-02-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.25,level
+2019-03-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.25,level
+2019-04-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.125,level
+2019-05-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2019-06-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2019-07-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2019-08-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2019-09-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.175,level
+2019-10-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.25,level
+2019-11-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.25,level
+2019-12-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.25,level
+2020-01-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.25,level
+2020-02-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.25,level
+2020-03-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",11.2016,level
+2020-04-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.9167,level
+2020-05-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.5,level
+2020-06-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.5,level
+2020-07-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.3226,level
+2020-08-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2020-09-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2020-10-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2020-11-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2020-12-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2021-01-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2021-02-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2021-03-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2021-04-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2021-05-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2021-06-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0,level
+2021-07-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.0403,level
+2021-08-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.25,level
+2021-09-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.3917,level
+2021-10-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.5484,level
+2021-11-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.75,level
+2021-12-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.75,level
+2022-01-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",9.8629,level
+2022-02-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",10.8304,level
+2022-03-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",13.5,level
+2022-04-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",13.5833,level
+2022-05-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.0,level
+2022-06-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.0,level
+2022-07-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.0968,level
+2022-08-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.5,level
+2022-09-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.5,level
+2022-10-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.7419,level
+2022-11-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.0,level
+2022-12-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.629,level
+2023-01-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.75,level
+2023-02-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.75,level
+2023-03-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.75,level
+2023-04-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.75,level
+2023-05-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.75,level
+2023-06-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.75,level
+2023-07-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.75,level
+2023-08-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.7177,level
+2023-09-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.5,level
+2023-10-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.129,level
+2023-11-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",15.9667,level
+2023-12-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",15.75,level
+2024-01-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",15.5887,level
+2024-02-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",15.181,level
+2024-03-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.75,level
+2024-04-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.75,level
+2024-05-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.75,level
+2024-06-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.5167,level
+2024-07-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.3629,level
+2024-08-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.25,level
+2024-09-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.25,level
+2024-10-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.25,level
+2024-11-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",14.25,level
+2024-12-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",15.2177,level
+2025-01-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",15.25,level
+2025-02-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",15.25,level
+2025-03-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.0968,level
+2025-04-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.5,level
+2025-05-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.5,level
+2025-06-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.5,level
+2025-07-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.5,level
+2025-08-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.5,level
+2025-09-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.5,level
+2025-10-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",17.4194,level
+2025-11-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",18.0,level
+2025-12-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",18.0,level
+2026-01-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",18.0,level
+2026-02-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",18.0,level
+2026-03-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",18.0,level
+2026-04-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",18.0,level
+2026-05-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",18.0,level
+2026-06-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",17.2333,level
+2026-07-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.9597,level
+2026-08-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.75,level
+2026-09-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.35,level
+2026-10-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",16.1694,level
+2026-11-01,national,BASE_RATE,"Базовая ставка, среднее за месяц, %",15.75,level
+2015-09-01,national,TONIA,"TONIA, среднее за месяц, %",13.2767,level
+2015-10-01,national,TONIA,"TONIA, среднее за месяц, %",16.5768,level
+2015-11-01,national,TONIA,"TONIA, среднее за месяц, %",23.4262,level
+2015-12-01,national,TONIA,"TONIA, среднее за месяц, %",72.3765,level
+2016-01-01,national,TONIA,"TONIA, среднее за месяц, %",45.5183,level
+2016-02-01,national,TONIA,"TONIA, среднее за месяц, %",16.14,level
+2016-03-01,national,TONIA,"TONIA, среднее за месяц, %",14.9989,level
+2016-04-01,national,TONIA,"TONIA, среднее за месяц, %",15.0033,level
+2016-05-01,national,TONIA,"TONIA, среднее за месяц, %",14.1384,level
+2016-06-01,national,TONIA,"TONIA, среднее за месяц, %",14.0032,level
+2016-07-01,national,TONIA,"TONIA, среднее за месяц, %",12.658,level
+2016-08-01,national,TONIA,"TONIA, среднее за месяц, %",12.1455,level
+2016-09-01,national,TONIA,"TONIA, среднее за месяц, %",12.1581,level
+2016-10-01,national,TONIA,"TONIA, среднее за месяц, %",11.6305,level
+2016-11-01,national,TONIA,"TONIA, среднее за месяц, %",11.5391,level
+2016-12-01,national,TONIA,"TONIA, среднее за месяц, %",11.3826,level
+2017-01-01,national,TONIA,"TONIA, среднее за месяц, %",11.544,level
+2017-02-01,national,TONIA,"TONIA, среднее за месяц, %",10.9285,level
+2017-03-01,national,TONIA,"TONIA, среднее за месяц, %",10.2537,level
+2017-04-01,national,TONIA,"TONIA, среднее за месяц, %",10.4495,level
+2017-05-01,national,TONIA,"TONIA, среднее за месяц, %",10.0845,level
+2017-06-01,national,TONIA,"TONIA, среднее за месяц, %",9.5932,level
+2017-07-01,national,TONIA,"TONIA, среднее за месяц, %",9.603,level
+2017-08-01,national,TONIA,"TONIA, среднее за месяц, %",9.4277,level
+2017-09-01,national,TONIA,"TONIA, среднее за месяц, %",9.241,level
+2017-10-01,national,TONIA,"TONIA, среднее за месяц, %",9.2614,level
+2017-11-01,national,TONIA,"TONIA, среднее за месяц, %",9.43,level
+2017-12-01,national,TONIA,"TONIA, среднее за месяц, %",9.3189,level
+2018-01-01,national,TONIA,"TONIA, среднее за месяц, %",8.98,level
+2018-02-01,national,TONIA,"TONIA, среднее за месяц, %",8.7585,level
+2018-03-01,national,TONIA,"TONIA, среднее за месяц, %",8.5717,level
+2018-04-01,national,TONIA,"TONIA, среднее за месяц, %",8.5,level
+2018-05-01,national,TONIA,"TONIA, среднее за месяц, %",8.2855,level
+2018-06-01,national,TONIA,"TONIA, среднее за месяц, %",8.1262,level
+2018-07-01,national,TONIA,"TONIA, среднее за месяц, %",8.2062,level
+2018-08-01,national,TONIA,"TONIA, среднее за месяц, %",8.4867,level
+2018-09-01,national,TONIA,"TONIA, среднее за месяц, %",8.437,level
+2018-10-01,national,TONIA,"TONIA, среднее за месяц, %",8.1748,level
+2018-11-01,national,TONIA,"TONIA, среднее за месяц, %",8.2741,level
+2018-12-01,national,TONIA,"TONIA, среднее за месяц, %",8.3544,level
+2019-01-01,national,TONIA,"TONIA, среднее за месяц, %",8.2645,level
+2019-02-01,national,TONIA,"TONIA, среднее за месяц, %",8.2595,level
+2019-03-01,national,TONIA,"TONIA, среднее за месяц, %",8.2359,level
+2019-04-01,national,TONIA,"TONIA, среднее за месяц, %",8.1318,level
+2019-05-01,national,TONIA,"TONIA, среднее за месяц, %",8.0545,level
+2019-06-01,national,TONIA,"TONIA, среднее за месяц, %",8.3025,level
+2019-07-01,national,TONIA,"TONIA, среднее за месяц, %",8.1191,level
+2019-08-01,national,TONIA,"TONIA, среднее за месяц, %",8.6333,level
+2019-09-01,national,TONIA,"TONIA, среднее за месяц, %",8.8257,level
+2019-10-01,national,TONIA,"TONIA, среднее за месяц, %",8.4957,level
+2019-11-01,national,TONIA,"TONIA, среднее за месяц, %",8.9448,level
+2019-12-01,national,TONIA,"TONIA, среднее за месяц, %",8.8932,level
+2020-01-01,national,TONIA,"TONIA, среднее за месяц, %",8.63,level
+2020-02-01,national,TONIA,"TONIA, среднее за месяц, %",9.211,level
+2020-03-01,national,TONIA,"TONIA, среднее за месяц, %",12.3167,level
+2020-04-01,national,TONIA,"TONIA, среднее за месяц, %",9.3218,level
+2020-05-01,national,TONIA,"TONIA, среднее за месяц, %",8.4306,level
+2020-06-01,national,TONIA,"TONIA, среднее за месяц, %",8.4559,level
+2020-07-01,national,TONIA,"TONIA, среднее за месяц, %",8.479,level
+2020-08-01,national,TONIA,"TONIA, среднее за месяц, %",8.807,level
+2020-09-01,national,TONIA,"TONIA, среднее за месяц, %",8.5386,level
+2020-10-01,national,TONIA,"TONIA, среднее за месяц, %",8.9541,level
+2020-11-01,national,TONIA,"TONIA, среднее за месяц, %",8.8714,level
+2020-12-01,national,TONIA,"TONIA, среднее за месяц, %",8.388,level
+2021-01-01,national,TONIA,"TONIA, среднее за месяц, %",8.22,level
+2021-02-01,national,TONIA,"TONIA, среднее за месяц, %",8.711,level
+2021-03-01,national,TONIA,"TONIA, среднее за месяц, %",9.1742,level
+2021-04-01,national,TONIA,"TONIA, среднее за месяц, %",8.6968,level
+2021-05-01,national,TONIA,"TONIA, среднее за месяц, %",8.1172,level
+2021-06-01,national,TONIA,"TONIA, среднее за месяц, %",8.3414,level
+2021-07-01,national,TONIA,"TONIA, среднее за месяц, %",8.439,level
+2021-08-01,national,TONIA,"TONIA, среднее за месяц, %",9.0124,level
+2021-09-01,national,TONIA,"TONIA, среднее за месяц, %",8.9195,level
+2021-10-01,national,TONIA,"TONIA, среднее за месяц, %",9.0338,level
+2021-11-01,national,TONIA,"TONIA, среднее за месяц, %",9.3586,level
+2021-12-01,national,TONIA,"TONIA, среднее за месяц, %",10.4985,level
+2022-01-01,national,TONIA,"TONIA, среднее за месяц, %",10.2871,level
+2022-02-01,national,TONIA,"TONIA, среднее за месяц, %",11.0265,level
+2022-03-01,national,TONIA,"TONIA, среднее за месяц, %",14.0684,level
+2022-04-01,national,TONIA,"TONIA, среднее за месяц, %",13.7714,level
+2022-05-01,national,TONIA,"TONIA, среднее за месяц, %",14.3895,level
+2022-06-01,national,TONIA,"TONIA, среднее за месяц, %",13.5277,level
+2022-07-01,national,TONIA,"TONIA, среднее за месяц, %",13.0855,level
+2022-08-01,national,TONIA,"TONIA, среднее за месяц, %",13.8368,level
+2022-09-01,national,TONIA,"TONIA, среднее за месяц, %",14.4168,level
+2022-10-01,national,TONIA,"TONIA, среднее за месяц, %",14.6285,level
+2022-11-01,national,TONIA,"TONIA, среднее за месяц, %",15.4405,level
+2022-12-01,national,TONIA,"TONIA, среднее за месяц, %",16.2695,level
+2023-01-01,national,TONIA,"TONIA, среднее за месяц, %",15.8185,level
+2023-02-01,national,TONIA,"TONIA, среднее за месяц, %",16.1345,level
+2023-03-01,national,TONIA,"TONIA, среднее за месяц, %",16.5695,level
+2023-04-01,national,TONIA,"TONIA, среднее за месяц, %",16.92,level
+2023-05-01,national,TONIA,"TONIA, среднее за месяц, %",16.628,level
+2023-06-01,national,TONIA,"TONIA, среднее за месяц, %",16.1452,level
+2023-07-01,national,TONIA,"TONIA, среднее за месяц, %",16.8515,level
+2023-08-01,national,TONIA,"TONIA, среднее за месяц, %",17.075,level
+2023-09-01,national,TONIA,"TONIA, среднее за месяц, %",17.0062,level
+2023-10-01,national,TONIA,"TONIA, среднее за месяц, %",16.3729,level
+2023-11-01,national,TONIA,"TONIA, среднее за месяц, %",15.6855,level
+2023-12-01,national,TONIA,"TONIA, среднее за месяц, %",15.085,level
+2024-01-01,national,TONIA,"TONIA, среднее за месяц, %",14.8581,level
+2024-02-01,national,TONIA,"TONIA, среднее за месяц, %",14.5124,level
+2024-03-01,national,TONIA,"TONIA, среднее за месяц, %",13.6906,level
+2024-04-01,national,TONIA,"TONIA, среднее за месяц, %",13.7036,level
+2024-05-01,national,TONIA,"TONIA, среднее за месяц, %",13.557,level
+2024-06-01,national,TONIA,"TONIA, среднее за месяц, %",13.604,level
+2024-07-01,national,TONIA,"TONIA, среднее за месяц, %",13.2673,level
+2024-08-01,national,TONIA,"TONIA, среднее за месяц, %",13.1152,level
+2024-09-01,national,TONIA,"TONIA, среднее за месяц, %",13.4276,level
+2024-10-01,national,TONIA,"TONIA, среднее за месяц, %",13.7605,level
+2024-11-01,national,TONIA,"TONIA, среднее за месяц, %",13.7662,level
+2024-12-01,national,TONIA,"TONIA, среднее за месяц, %",14.8171,level
+2025-01-01,national,TONIA,"TONIA, среднее за месяц, %",14.764,level
+2025-02-01,national,TONIA,"TONIA, среднее за месяц, %",14.8855,level
+2025-03-01,national,TONIA,"TONIA, среднее за месяц, %",15.4894,level
+2025-04-01,national,TONIA,"TONIA, среднее за месяц, %",15.9486,level
+2025-05-01,national,TONIA,"TONIA, среднее за месяц, %",15.7058,level
+2025-06-01,national,TONIA,"TONIA, среднее за месяц, %",15.4445,level
+2025-07-01,national,TONIA,"TONIA, среднее за месяц, %",15.5814,level
+2025-08-01,national,TONIA,"TONIA, среднее за месяц, %",15.5443,level
+2025-09-01,national,TONIA,"TONIA, среднее за месяц, %",15.8495,level
+2025-10-01,national,TONIA,"TONIA, среднее за месяц, %",16.5941,level
+2025-11-01,national,TONIA,"TONIA, среднее за месяц, %",17.1135,level
+2025-12-01,national,TONIA,"TONIA, среднее за месяц, %",17.0505,level
+2026-01-01,national,TONIA,"TONIA, среднее за месяц, %",17.4137,level
+2026-02-01,national,TONIA,"TONIA, среднее за месяц, %",17.2645,level
+2026-03-01,national,TONIA,"TONIA, среднее за месяц, %",17.8006,level
+2026-04-01,national,TONIA,"TONIA, среднее за месяц, %",18.0036,level
+2026-05-01,national,TONIA,"TONIA, среднее за месяц, %",17.7441,level
+2026-06-01,national,TONIA,"TONIA, среднее за месяц, %",17.0491,level
+2026-07-01,national,TONIA,"TONIA, среднее за месяц, %",16.5264,level
+2026-08-01,national,TONIA,"TONIA, среднее за месяц, %",16.111,level
+2026-09-01,national,TONIA,"TONIA, среднее за месяц, %",15.9986,level
+2026-10-01,national,TONIA,"TONIA, среднее за месяц, %",15.7314,level
+2026-11-01,national,TONIA,"TONIA, среднее за месяц, %",15.3067,level
+2015-09-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",4.4,level
+2015-10-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",9.4,level
+2015-11-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",12.8,level
+2015-12-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",13.6,level
+2016-01-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",14.4,level
+2016-02-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",15.2,level
+2016-03-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",15.7,level
+2016-04-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",16.3,level
+2016-05-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",16.7,level
+2016-06-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",17.3,level
+2016-07-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",17.7,level
+2016-08-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",17.6,level
+2016-09-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",16.6,level
+2016-10-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",11.5,level
+2016-11-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.7,level
+2016-12-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.5,level
+2017-01-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.9,level
+2017-02-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.8,level
+2017-03-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.7,level
+2017-04-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.5,level
+2017-05-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.5,level
+2017-06-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.5,level
+2017-07-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.1,level
+2017-08-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.0,level
+2017-09-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.1,level
+2017-10-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.7,level
+2017-11-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.3,level
+2017-12-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.1,level
+2018-01-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",6.8,level
+2018-02-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",6.5,level
+2018-03-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",6.6,level
+2018-04-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",6.5,level
+2018-05-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",6.2,level
+2018-06-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.9,level
+2018-07-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.9,level
+2018-08-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",6.0,level
+2018-09-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",6.1,level
+2018-10-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.3,level
+2018-11-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.3,level
+2018-12-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.3,level
+2019-01-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.2,level
+2019-02-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",4.8,level
+2019-03-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",4.8,level
+2019-04-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",4.9,level
+2019-05-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.3,level
+2019-06-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.4,level
+2019-07-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.4,level
+2019-08-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.5,level
+2019-09-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.3,level
+2019-10-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.5,level
+2019-11-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.4,level
+2019-12-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.4,level
+2020-01-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",5.6,level
+2020-02-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",6.0,level
+2020-03-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",6.4,level
+2020-04-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",6.8,level
+2020-05-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",6.7,level
+2020-06-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.0,level
+2020-07-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.1,level
+2020-08-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.0,level
+2020-09-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.0,level
+2020-10-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.1,level
+2020-11-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.3,level
+2020-12-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.5,level
+2021-01-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.4,level
+2021-02-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.4,level
+2021-03-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.0,level
+2021-04-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.0,level
+2021-05-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.2,level
+2021-06-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",7.9,level
+2021-07-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.4,level
+2021-08-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.7,level
+2021-09-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.9,level
+2021-10-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.9,level
+2021-11-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.7,level
+2021-12-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.4,level
+2022-01-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.5,level
+2022-02-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.7,level
+2022-03-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",12.0,level
+2022-04-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",13.2,level
+2022-05-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",14.0,level
+2022-06-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",14.5,level
+2022-07-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",15.0,level
+2022-08-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",16.1,level
+2022-09-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",17.7,level
+2022-10-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",18.8,level
+2022-11-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",19.6,level
+2022-12-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",20.3,level
+2023-01-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",20.7,level
+2023-02-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",21.3,level
+2023-03-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",18.1,level
+2023-04-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",16.8,level
+2023-05-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",15.9,level
+2023-06-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",14.6,level
+2023-07-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",14.0,level
+2023-08-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",13.1,level
+2023-09-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",11.8,level
+2023-10-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",10.8,level
+2023-11-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",10.3,level
+2023-12-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",9.8,level
+2024-01-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",9.5,level
+2024-02-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",9.3,level
+2024-03-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",9.1,level
+2024-04-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.7,level
+2024-05-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.5,level
+2024-06-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.4,level
+2024-07-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.6,level
+2024-08-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.4,level
+2024-09-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.3,level
+2024-10-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.5,level
+2024-11-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.4,level
+2024-12-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.6,level
+2025-01-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",8.9,level
+2025-02-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",9.4,level
+2025-03-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",10.0,level
+2025-04-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",10.7,level
+2025-05-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",11.3,level
+2025-06-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",11.8,level
+2025-07-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",11.8,level
+2025-08-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",12.2,level
+2025-09-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",12.9,level
+2025-10-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",12.6,level
+2025-11-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",12.4,level
+2025-12-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",12.3,level
+2026-01-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",12.2,level
+2026-02-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",11.7,level
+2026-03-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",11.0,level
+2026-04-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",10.6,level
+2026-05-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",10.4,level
+2026-06-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",10.3,level
+2026-07-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",10.2,level
+2026-08-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",9.8,level
+2026-09-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",9.3,level
+2026-10-01,national,CPI_YOY,"Инфляция за 12 месяцев, %",9.2,level
+2016-01-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.8,level
+2016-02-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.9,level
+2016-03-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",10.0,level
+2016-04-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.2,level
+2016-05-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.4,level
+2016-06-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.1,level
+2016-07-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.7,level
+2016-08-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.6,level
+2016-09-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.0,level
+2016-10-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.2,level
+2016-11-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.4,level
+2016-12-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.5,level
+2017-01-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.1,level
+2017-02-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.1,level
+2017-03-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.7,level
+2017-04-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.0,level
+2017-05-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.6,level
+2017-06-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.7,level
+2017-07-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",10.0,level
+2017-08-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.3,level
+2017-09-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.2,level
+2017-10-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.8,level
+2017-11-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.4,level
+2017-12-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.0,level
+2018-01-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.4,level
+2018-02-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.4,level
+2018-03-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.4,level
+2018-04-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.1,level
+2018-05-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.1,level
+2018-06-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.7,level
+2018-07-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.2,level
+2018-08-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.6,level
+2018-09-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.4,level
+2018-10-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.7,level
+2018-11-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.7,level
+2018-12-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.8,level
+2019-01-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.7,level
+2019-02-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.8,level
+2019-03-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.6,level
+2019-04-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.4,level
+2019-05-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.5,level
+2019-06-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.2,level
+2019-07-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.2,level
+2019-08-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.0,level
+2019-09-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",10.0,level
+2019-10-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.8,level
+2019-11-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.8,level
+2019-12-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.9,level
+2020-01-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",8.9,level
+2020-02-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.3,level
+2020-03-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.8,level
+2020-04-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.3,level
+2020-05-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.3,level
+2020-06-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",8.8,level
+2020-07-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.5,level
+2020-08-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.9,level
+2020-09-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.3,level
+2020-10-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.9,level
+2020-11-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.6,level
+2020-12-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.3,level
+2021-01-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.7,level
+2021-02-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.5,level
+2021-03-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.4,level
+2021-04-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.7,level
+2021-05-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.3,level
+2021-06-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.6,level
+2021-07-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.4,level
+2021-08-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.0,level
+2021-09-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.5,level
+2021-10-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.8,level
+2021-11-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",16.3,level
+2021-12-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",16.6,level
+2022-02-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",9.6,level
+2022-03-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",18.2,level
+2022-04-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",16.2,level
+2022-05-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.8,level
+2022-06-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.9,level
+2022-07-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",16.5,level
+2022-08-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",16.5,level
+2022-09-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",16.9,level
+2022-10-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",18.3,level
+2022-11-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",18.2,level
+2022-12-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",21.3,level
+2023-01-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",17.3,level
+2023-02-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.2,level
+2023-03-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",16.5,level
+2023-04-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",16.7,level
+2023-05-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",17.0,level
+2023-06-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",17.2,level
+2023-07-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",16.9,level
+2023-08-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",16.4,level
+2023-09-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",17.0,level
+2023-10-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",18.0,level
+2023-11-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",16.8,level
+2023-12-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",16.4,level
+2024-01-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.4,level
+2024-02-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.6,level
+2024-03-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.2,level
+2024-04-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",16.1,level
+2024-05-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.7,level
+2024-06-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.3,level
+2024-07-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.4,level
+2024-08-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.1,level
+2024-09-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.1,level
+2024-10-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.5,level
+2024-11-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.1,level
+2024-12-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.6,level
+2025-01-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.4,level
+2025-02-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.7,level
+2025-03-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.6,level
+2025-04-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.2,level
+2025-05-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.1,level
+2025-06-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.6,level
+2025-07-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.2,level
+2025-08-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.6,level
+2025-09-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.2,level
+2025-10-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.6,level
+2025-11-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.6,level
+2025-12-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.7,level
+2026-01-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.2,level
+2026-02-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.7,level
+2026-03-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",14.6,level
+2026-04-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.4,level
+2026-05-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.7,level
+2026-06-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",13.4,level
+2026-07-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.1,level
+2026-08-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",12.1,level
+2026-09-01,national,EXPECTED_INFLATION,"Ожидаемая населением инфляция на 12 месяцев (медиана), %",11.8,level
+2016-01-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",1.9332,level
+2016-02-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",3.601,level
+2016-03-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",6.3636,level
+2016-04-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",7.1429,level
+2016-05-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",5.4137,level
+2016-06-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",5.4079,level
+2016-07-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",3.6551,level
+2016-08-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.3552,level
+2016-09-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.8929,level
+2016-10-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.3105,level
+2016-11-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.1483,level
+2016-12-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.4444,level
+2017-01-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.8101,level
+2017-02-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.5529,level
+2017-03-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",1.1851,level
+2017-04-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.0,level
+2017-05-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",1.2774,level
+2017-06-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.8052,level
+2017-07-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.4545,level
+2017-08-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.7912,level
+2017-09-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.738,level
+2017-10-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.2606,level
+2017-11-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.7778,level
+2017-12-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.4336,level
+2018-01-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.264,level
+2018-02-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.4811,level
+2018-03-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.6694,level
+2018-04-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.5452,level
+2018-05-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.1375,level
+2018-06-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.6077,level
+2018-07-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.9784,level
+2018-08-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.3297,level
+2018-09-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-3.0249,level
+2018-10-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.3017,level
+2018-11-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-3.0612,level
+2018-12-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.2809,level
+2019-01-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.4102,level
+2019-02-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.5009,level
+2019-03-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.3193,level
+2019-04-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.2514,level
+2019-05-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.4566,level
+2019-06-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.9784,level
+2019-07-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.9784,level
+2019-08-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.8018,level
+2019-09-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.75,level
+2019-10-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.2809,level
+2019-11-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.2809,level
+2019-12-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.3682,level
+2020-01-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.3214,level
+2020-02-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.0457,level
+2020-03-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",1.2765,level
+2020-04-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.2429,level
+2020-05-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.6173,level
+2020-06-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.6434,level
+2020-07-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.162,level
+2020-08-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.8189,level
+2020-09-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.0665,level
+2020-10-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.8189,level
+2020-11-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-3.1972,level
+2020-12-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.9386,level
+2021-01-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.6381,level
+2021-02-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.2422,level
+2021-03-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.1544,level
+2021-04-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.4172,level
+2021-05-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.9386,level
+2021-06-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-3.1972,level
+2021-07-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-3.8445,level
+2021-08-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-4.1667,level
+2021-09-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-3.6197,level
+2021-10-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-4.5746,level
+2021-11-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-5.632,level
+2021-12-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-5.8748,level
+2022-02-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",1.1226,level
+2022-03-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-3.9763,level
+2022-04-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.2519,level
+2022-05-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.1757,level
+2022-06-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.7833,level
+2022-07-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.0629,level
+2022-08-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.7167,level
+2022-09-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-2.053,level
+2022-10-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-3.0077,level
+2022-11-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.8613,level
+2022-12-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-3.8508,level
+2023-01-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.4689,level
+2023-02-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",2.2329,level
+2023-03-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.2146,level
+2023-04-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.0428,level
+2023-05-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.2137,level
+2023-06-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.384,level
+2023-07-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.1283,level
+2023-08-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.273,level
+2023-09-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.4274,level
+2023-10-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.5856,level
+2023-11-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.7135,level
+2023-12-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-0.5584,level
+2024-01-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",1.0391,level
+2024-02-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.507,level
+2024-03-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.4816,level
+2024-04-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",-1.1628,level
+2024-05-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",1.819,level
+2024-06-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",1.0738,level
+2024-07-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.8491,level
+2024-08-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",1.0168,level
+2024-09-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.1315,level
+2024-10-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",1.5556,level
+2024-11-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.1315,level
+2024-12-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",0.539,level
+2025-01-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",2.5356,level
+2025-02-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",1.3632,level
+2025-03-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",3.1055,level
+2025-04-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",3.8324,level
+2025-05-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",2.1034,level
+2025-06-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",3.4636,level
+2025-07-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",2.014,level
+2025-08-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",2.5528,level
+2025-09-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",2.9152,level
+2025-10-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",3.3621,level
+2025-11-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",3.8732,level
+2025-12-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",2.8771,level
+2026-01-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",3.3275,level
+2026-02-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",3.7819,level
+2026-03-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",2.9668,level
+2026-04-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",4.9822,level
+2026-05-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",4.7028,level
+2026-06-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",3.3804,level
+2026-07-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",4.3351,level
+2026-08-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",4.1481,level
+2026-09-01,national,REAL_BASE_EX_ANTE,"Реальная базовая ставка ex ante (по ожиданиям населения), %",4.0698,level
+2015-09-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",7.2797,level
+2015-10-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.915,level
+2015-11-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.8369,level
+2015-12-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.1127,level
+2016-01-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.3986,level
+2016-02-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.5326,level
+2016-03-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.1236,level
+2016-04-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",0.6019,level
+2016-05-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-1.1803,level
+2016-06-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-1.9608,level
+2016-07-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-3.3902,level
+2016-08-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-3.9116,level
+2016-09-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-3.0875,level
+2016-10-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",0.9403,level
+2016-11-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.2505,level
+2016-12-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.2258,level
+2017-01-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.7998,level
+2017-02-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.6311,level
+2017-03-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.0641,level
+2017-04-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.2558,level
+2017-05-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.2558,level
+2017-06-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.8682,level
+2017-07-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.1746,level
+2017-08-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.1957,level
+2017-09-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.9412,level
+2017-10-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.3677,level
+2017-11-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.7493,level
+2017-12-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.9412,level
+2018-01-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.9887,level
+2018-02-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.0516,level
+2018-03-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.7583,level
+2018-04-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.7074,level
+2018-05-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.8719,level
+2018-06-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.9588,level
+2018-07-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.9273,level
+2018-08-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.8302,level
+2018-09-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.7333,level
+2018-10-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.6363,level
+2018-11-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.7512,level
+2018-12-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.7512,level
+2019-01-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.8498,level
+2019-02-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",4.2462,level
+2019-03-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",4.2462,level
+2019-04-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",4.0276,level
+2019-05-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.5138,level
+2019-06-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.4156,level
+2019-07-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.4156,level
+2019-08-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.3175,level
+2019-09-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.68,level
+2019-10-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.5545,level
+2019-11-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.6528,level
+2019-12-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.6528,level
+2020-01-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.4564,level
+2020-02-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.066,level
+2020-03-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",4.5128,level
+2020-04-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.9182,level
+2020-05-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.6242,level
+2020-06-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.3364,level
+2020-07-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.0752,level
+2020-08-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.8692,level
+2020-09-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.8692,level
+2020-10-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.774,level
+2020-11-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.5843,level
+2020-12-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.3953,level
+2021-01-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.4898,level
+2021-02-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.4898,level
+2021-03-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.8692,level
+2021-04-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.8692,level
+2021-05-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.6791,level
+2021-06-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.0195,level
+2021-07-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",0.5907,level
+2021-08-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",0.506,level
+2021-09-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",0.4515,level
+2021-10-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",0.5954,level
+2021-11-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",0.966,level
+2021-12-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.2454,level
+2022-01-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.2561,level
+2022-02-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.9599,level
+2022-03-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.3393,level
+2022-04-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",0.3386,level
+2022-05-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",0.0,level
+2022-06-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-0.4367,level
+2022-07-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-0.7854,level
+2022-08-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-1.3781,level
+2022-09-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-2.7188,level
+2022-10-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-3.4159,level
+2022-11-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-3.01,level
+2022-12-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-3.0515,level
+2023-01-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-3.2726,level
+2023-02-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-3.751,level
+2023-03-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-1.1431,level
+2023-04-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",-0.0428,level
+2023-05-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",0.7334,level
+2023-06-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",1.8761,level
+2023-07-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",2.4123,level
+2023-08-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.1987,level
+2023-09-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",4.2039,level
+2023-10-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",4.8096,level
+2023-11-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.1375,level
+2023-12-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.4189,level
+2024-01-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.5605,level
+2024-02-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.3806,level
+2024-03-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.1787,level
+2024-04-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.5658,level
+2024-05-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.7604,level
+2024-06-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.6427,level
+2024-07-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.3065,level
+2024-08-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.3967,level
+2024-09-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.494,level
+2024-10-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.2995,level
+2024-11-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.3967,level
+2024-12-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",6.0937,level
+2025-01-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.831,level
+2025-02-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.3473,level
+2025-03-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.5425,level
+2025-04-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.2394,level
+2025-05-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",4.6721,level
+2025-06-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",4.2039,level
+2025-07-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",4.2039,level
+2025-08-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.8324,level
+2025-09-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",3.1887,level
+2025-10-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",4.2801,level
+2025-11-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",4.9822,level
+2025-12-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.0757,level
+2026-01-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.1693,level
+2026-02-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",5.6401,level
+2026-03-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",6.3063,level
+2026-04-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",6.6908,level
+2026-05-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",6.8841,level
+2026-06-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",6.2859,level
+2026-07-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",6.134,level
+2026-08-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",6.3297,level
+2026-09-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",6.4501,level
+2026-10-01,national,REAL_BASE_EX_POST,"Реальная базовая ставка ex post (по фактической инфляции за 12 месяцев), %",6.3822,level
+2016-01-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",27.872,level
+2016-02-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",2.8698,level
+2016-03-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",4.5445,level
+2016-04-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",5.3144,level
+2016-05-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",4.3313,level
+2016-06-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",4.4942,level
+2016-07-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",2.6964,level
+2016-08-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.4037,level
+2016-09-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.1412,level
+2016-10-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.5076,level
+2016-11-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.7659,level
+2016-12-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.9932,level
+2017-01-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.3996,level
+2017-02-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.1544,level
+2017-03-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.5047,level
+2017-04-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.4959,level
+2017-05-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.4421,level
+2017-06-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.0974,level
+2017-07-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.3609,level
+2017-08-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.6822,level
+2017-09-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.6373,level
+2017-10-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-3.1371,level
+2017-11-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-3.5009,level
+2017-12-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-3.2576,level
+2018-01-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.1724,level
+2018-02-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.3712,level
+2018-03-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.5389,level
+2018-04-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.3402,level
+2018-05-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.7466,level
+2018-06-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.4346,level
+2018-07-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.6923,level
+2018-08-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.7897,level
+2018-09-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-3.5258,level
+2018-10-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-3.156,level
+2018-11-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-3.9272,level
+2018-12-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-3.0819,level
+2019-01-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.3086,level
+2019-02-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.403,level
+2019-03-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.2446,level
+2019-04-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.1592,level
+2019-05-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.3201,level
+2019-06-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.6057,level
+2019-07-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.7706,level
+2019-08-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.1321,level
+2019-09-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.0675,level
+2019-10-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.9556,level
+2019-11-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.5539,level
+2019-12-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.6871,level
+2020-01-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.2479,level
+2020-02-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.0814,level
+2020-03-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",2.292,level
+2020-04-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.7773,level
+2020-05-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.5781,level
+2020-06-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.3163,level
+2020-07-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.9324,level
+2020-08-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.9945,level
+2020-09-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.481,level
+2020-10-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.8607,level
+2020-11-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-3.3113,level
+2020-12-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-3.4835,level
+2021-01-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.3491,level
+2021-02-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.5013,level
+2021-03-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.998,level
+2021-04-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.6886,level
+2021-05-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-3.7246,level
+2021-06-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-3.7821,level
+2021-07-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-4.3748,level
+2021-08-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-4.3751,level
+2021-09-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-4.0356,level
+2021-10-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-5.0228,level
+2021-11-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-5.9685,level
+2021-12-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-5.2328,level
+2022-02-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",1.3016,level
+2022-03-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-3.4954,level
+2022-04-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.09,level
+2022-05-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.518,level
+2022-06-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.1943,level
+2022-07-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.9309,level
+2022-08-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.286,level
+2022-09-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.1242,level
+2022-10-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-3.1036,level
+2022-11-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.3346,level
+2022-12-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-4.1471,level
+2023-01-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.263,level
+2023-02-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",1.694,level
+2023-03-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.0596,level
+2023-04-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.1885,level
+2023-05-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.3179,level
+2023-06-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.9,level
+2023-07-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.0415,level
+2023-08-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.5799,level
+2023-09-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.0053,level
+2023-10-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.3789,level
+2023-11-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.9542,level
+2023-12-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-1.1297,level
+2024-01-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.4004,level
+2024-02-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.0765,level
+2024-03-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.4461,level
+2024-04-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-2.0641,level
+2024-05-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.7604,level
+2024-06-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.2683,level
+2024-07-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.117,level
+2024-08-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.0135,level
+2024-09-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.5893,level
+2024-10-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",1.1204,level
+2024-11-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",-0.2926,level
+2024-12-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",0.1895,level
+2025-01-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",2.1032,level
+2025-02-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",1.0427,level
+2025-03-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",2.5661,level
+2025-04-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",3.341,level
+2025-05-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",1.4074,level
+2025-06-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",2.5262,level
+2025-07-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",1.2096,level
+2025-08-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",1.7115,level
+2025-09-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",2.3406,level
+2025-10-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",2.6356,level
+2025-11-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",3.0929,level
+2025-12-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",2.0492,level
+2026-01-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",2.8141,level
+2026-02-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",3.135,level
+2026-03-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",2.7928,level
+2026-04-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",4.9854,level
+2026-05-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",4.4757,level
+2026-06-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",3.2179,level
+2026-07-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",3.9486,level
+2026-08-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",3.578,level
+2026-09-01,national,REAL_TONIA_EX_ANTE,"Реальная TONIA ex ante, %",3.7555,level
+2016-01-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.3638,level
+2016-02-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-1.1789,level
+2016-03-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",2.0514,level
+2016-04-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",2.9073,level
+2016-05-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",1.7914,level
+2016-06-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",1.5571,level
+2016-07-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-0.2768,level
+2016-08-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.9387,level
+2016-09-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-2.8487,level
+2016-10-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-2.4941,level
+2016-11-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-2.5848,level
+2016-12-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-1.8592,level
+2017-01-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-0.5144,level
+2017-02-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",0.3731,level
+2017-03-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",1.3824,level
+2017-04-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",0.3901,level
+2017-05-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",1.1985,level
+2017-06-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",0.0994,level
+2017-07-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-1.1475,level
+2017-08-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.5972,level
+2017-09-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-5.0315,level
+2017-10-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.6316,level
+2017-11-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.2331,level
+2017-12-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.1491,level
+2018-01-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-2.9088,level
+2018-02-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-2.8173,level
+2018-03-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-2.7025,level
+2018-04-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-2.4578,level
+2018-05-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-0.1967,level
+2018-06-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-1.4769,level
+2018-07-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.3636,level
+2018-08-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.1826,level
+2018-09-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-5.683,level
+2018-10-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.8926,level
+2018-11-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-5.5067,level
+2018-12-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.6906,level
+2019-01-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.4061,level
+2019-02-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.4702,level
+2019-03-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.3438,level
+2019-04-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.2857,level
+2019-05-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.1582,level
+2019-06-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-5.0739,level
+2019-07-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-5.2418,level
+2019-08-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.7038,level
+2019-09-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.518,level
+2019-10-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-5.2953,level
+2019-11-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-5.0784,level
+2019-12-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.9338,level
+2020-01-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-1.6664,level
+2020-02-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-1.1839,level
+2020-03-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-1.95,level
+2020-04-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.7547,level
+2020-05-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.0539,level
+2020-06-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-1.2765,level
+2020-07-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-2.9138,level
+2020-08-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.3618,level
+2020-09-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-5.7109,level
+2020-10-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.5813,level
+2020-11-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-6.8839,level
+2020-12-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-6.6532,level
+2021-01-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.2277,level
+2021-02-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-5.571,level
+2021-03-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-5.169,level
+2021-04-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-5.8982,level
+2021-05-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-6.559,level
+2021-06-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-6.5213,level
+2021-07-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-6.5455,level
+2021-08-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-6.6763,level
+2021-09-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-6.169,level
+2021-10-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-7.1098,level
+2021-11-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-8.1058,level
+2021-12-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-8.3096,level
+2022-02-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-0.8579,level
+2022-03-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-6.993,level
+2022-04-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.6974,level
+2022-05-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-0.4904,level
+2022-06-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.1523,level
+2022-07-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-5.5674,level
+2022-08-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.3483,level
+2022-09-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.8057,level
+2022-10-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-3.7061,level
+2022-11-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-2.199,level
+2022-12-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-4.1323,level
+2023-01-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",-0.2223,level
+2023-02-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",4.1803,level
+2023-03-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",2.7045,level
+2023-04-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",2.9361,level
+2023-05-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",3.2695,level
+2023-06-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",3.7922,level
+2023-07-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",4.8976,level
+2023-08-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",5.4138,level
+2023-09-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",4.0113,level
+2023-10-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",2.7203,level
+2023-11-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",3.8833,level
+2023-12-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",4.3733,level
+2024-01-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",6.536,level
+2024-02-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",6.5906,level
+2024-03-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",6.7928,level
+2024-04-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",5.8135,level
+2024-05-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",8.7511,level
+2024-06-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",6.8346,level
+2024-07-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",5.15,level
+2024-08-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",4.97,level
+2024-09-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",4.0495,level
+2024-10-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",5.9052,level
+2024-11-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",4.7977,level
+2024-12-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",4.3171,level
+2025-01-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",6.2602,level
+2025-02-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",5.8352,level
+2025-03-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",7.3532,level
+2025-04-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",6.6408,level
+2025-05-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",4.9477,level
+2025-06-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",5.8627,level
+2025-07-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",3.4378,level
+2025-08-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",3.8267,level
+2025-09-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",4.4385,level
+2025-10-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",5.0651,level
+2025-11-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",6.9087,level
+2025-12-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",6.398,level
+2026-01-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",7.023,level
+2026-02-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",8.1276,level
+2026-03-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",8.616,level
+2026-04-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",11.3846,level
+2026-05-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",10.7912,level
+2026-06-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",8.8474,level
+2026-07-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",11.3898,level
+2026-08-01,national,MCI,"Индекс денежно-кредитных условий (рост = ужесточение), п.п.",12.0868,level
+2016-01-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",1.9605,level
+2016-02-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",3.6283,level
+2016-03-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",6.3909,level
+2016-04-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",7.1701,level
+2016-05-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",5.441,level
+2016-06-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",5.4352,level
+2016-07-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",3.6824,level
+2016-08-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.3825,level
+2016-09-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.9201,level
+2016-10-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.3378,level
+2016-11-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.121,level
+2016-12-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.4172,level
+2017-01-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.8374,level
+2017-02-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.5802,level
+2017-03-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",1.2123,level
+2017-04-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.0273,level
+2017-05-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",1.3046,level
+2017-06-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.8325,level
+2017-07-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.4818,level
+2017-08-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.764,level
+2017-09-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.7107,level
+2017-10-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.2334,level
+2017-11-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.7505,level
+2017-12-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.4064,level
+2018-01-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.2367,level
+2018-02-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.4539,level
+2018-03-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.6421,level
+2018-04-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.5179,level
+2018-05-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.1648,level
+2018-06-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.5804,level
+2018-07-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.9511,level
+2018-08-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.3025,level
+2018-09-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.9976,level
+2018-10-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.2744,level
+2018-11-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-3.034,level
+2018-12-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.2536,level
+2019-01-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.3829,level
+2019-02-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.4736,level
+2019-03-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.2921,level
+2019-04-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.2241,level
+2019-05-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.4293,level
+2019-06-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.9511,level
+2019-07-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.9511,level
+2019-08-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.7745,level
+2019-09-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.7227,level
+2019-10-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.2536,level
+2019-11-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.2536,level
+2019-12-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.3409,level
+2020-01-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.3487,level
+2020-02-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.0185,level
+2020-03-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",1.3038,level
+2020-04-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.2156,level
+2020-05-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.59,level
+2020-06-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.6707,level
+2020-07-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.1348,level
+2020-08-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.7917,level
+2020-09-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.0392,level
+2020-10-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.7917,level
+2020-11-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-3.1699,level
+2020-12-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.9113,level
+2021-01-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.6108,level
+2021-02-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.2149,level
+2021-03-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.1271,level
+2021-04-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.3899,level
+2021-05-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.9113,level
+2021-06-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-3.1699,level
+2021-07-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-3.8172,level
+2021-08-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-4.1394,level
+2021-09-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-3.5924,level
+2021-10-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-4.5473,level
+2021-11-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-5.6047,level
+2021-12-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-5.8475,level
+2022-02-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",1.1499,level
+2022-03-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-3.949,level
+2022-04-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.2246,level
+2022-05-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.203,level
+2022-06-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.756,level
+2022-07-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.0356,level
+2022-08-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.6895,level
+2022-09-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.0258,level
+2022-10-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-2.9804,level
+2022-11-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.834,level
+2022-12-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-3.8235,level
+2023-01-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.4416,level
+2023-02-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",2.2602,level
+2023-03-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.2419,level
+2023-04-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.0701,level
+2023-05-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.1864,level
+2023-06-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.3567,level
+2023-07-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.101,level
+2023-08-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.3002,level
+2023-09-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.4001,level
+2023-10-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.5583,level
+2023-11-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.6862,level
+2023-12-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-0.5311,level
+2024-01-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",1.0664,level
+2024-02-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.5343,level
+2024-03-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.5089,level
+2024-04-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",-1.1355,level
+2024-05-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",1.8463,level
+2024-06-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",1.1011,level
+2024-07-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.8764,level
+2024-08-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",1.0441,level
+2024-09-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.1587,level
+2024-10-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",1.5828,level
+2024-11-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.1587,level
+2024-12-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",0.5663,level
+2025-01-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",2.5629,level
+2025-02-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",1.3905,level
+2025-03-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",3.1328,level
+2025-04-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",3.8597,level
+2025-05-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",2.1307,level
+2025-06-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",3.4909,level
+2025-07-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",2.0413,level
+2025-08-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",2.5801,level
+2025-09-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",2.9425,level
+2025-10-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",3.3894,level
+2025-11-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",3.9005,level
+2025-12-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",2.9043,level
+2026-01-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",3.3548,level
+2026-02-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",3.8092,level
+2026-03-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",2.9941,level
+2026-04-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",5.0095,level
+2026-05-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",4.73,level
+2026-06-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",3.4076,level
+2026-07-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",4.3624,level
+2026-08-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",4.1754,level
+2026-09-01,national,MCI_RATE_PART,"Индекс ДКУ: вклад реальной ставки, п.п.",4.097,level
+2015-09-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",0.2404,level
+2015-10-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-0.2588,level
+2015-11-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.235,level
+2015-12-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.7669,level
+2016-01-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-5.3243,level
+2016-02-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-4.8071,level
+2016-03-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-4.3395,level
+2016-04-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-4.2628,level
+2016-05-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.6496,level
+2016-06-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.878,level
+2016-07-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.9592,level
+2016-08-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-4.3212,level
+2016-09-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.7688,level
+2016-10-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.8319,level
+2016-11-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.4638,level
+2016-12-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.4421,level
+2017-01-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.3518,level
+2017-02-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-0.207,level
+2017-03-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",0.1701,level
+2017-04-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",0.3629,level
+2017-05-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-0.1061,level
+2017-06-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-0.7331,level
+2017-07-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.6293,level
+2017-08-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.8333,level
+2017-09-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.3208,level
+2017-10-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.3983,level
+2017-11-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.4826,level
+2017-12-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.7428,level
+2018-01-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.6721,level
+2018-02-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.3635,level
+2018-03-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.0604,level
+2018-04-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-0.9399,level
+2018-05-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-0.3615,level
+2018-06-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-0.8965,level
+2018-07-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.4125,level
+2018-08-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.8802,level
+2018-09-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.6854,level
+2018-10-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.6182,level
+2018-11-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.4727,level
+2018-12-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.437,level
+2019-01-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.0232,level
+2019-02-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.9965,level
+2019-03-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.0517,level
+2019-04-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.0616,level
+2019-05-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.7288,level
+2019-06-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.1227,level
+2019-07-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.2906,level
+2019-08-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.9293,level
+2019-09-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.7953,level
+2019-10-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.0417,level
+2019-11-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.8248,level
+2019-12-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.5929,level
+2020-01-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.0151,level
+2020-02-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.1654,level
+2020-03-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.2538,level
+2020-04-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.5391,level
+2020-05-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.4639,level
+2020-06-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.9472,level
+2020-07-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.779,level
+2020-08-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.5701,level
+2020-09-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.6717,level
+2020-10-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.7897,level
+2020-11-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.7141,level
+2020-12-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.7419,level
+2021-01-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.6169,level
+2021-02-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.3561,level
+2021-03-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.0419,level
+2021-04-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.5082,level
+2021-05-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.6477,level
+2021-06-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.3514,level
+2021-07-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.7283,level
+2021-08-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.5369,level
+2021-09-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.5766,level
+2021-10-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.5625,level
+2021-11-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.5011,level
+2021-12-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.4621,level
+2022-01-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.054,level
+2022-02-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.0077,level
+2022-03-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.044,level
+2022-04-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.4728,level
+2022-05-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-0.6934,level
+2022-06-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.3963,level
+2022-07-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-3.5319,level
+2022-08-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-2.6588,level
+2022-09-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-1.78,level
+2022-10-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-0.7257,level
+2022-11-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-0.3651,level
+2022-12-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",-0.3088,level
+2023-01-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",0.2193,level
+2023-02-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",1.9201,level
+2023-03-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",2.4626,level
+2023-04-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",2.866,level
+2023-05-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",3.4559,level
+2023-06-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",4.1489,level
+2023-07-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",4.9986,level
+2023-08-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",5.1136,level
+2023-09-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",4.4114,level
+2023-10-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",4.2786,level
+2023-11-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",4.5695,level
+2023-12-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",4.9044,level
+2024-01-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",5.4697,level
+2024-02-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",6.0563,level
+2024-03-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",6.2839,level
+2024-04-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",6.949,level
+2024-05-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",6.9049,level
+2024-06-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",5.7335,level
+2024-07-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",4.2736,level
+2024-08-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",3.926,level
+2024-09-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",3.8908,level
+2024-10-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",4.3224,level
+2024-11-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",4.639,level
+2024-12-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",3.7508,level
+2025-01-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",3.6974,level
+2025-02-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",4.4446,level
+2025-03-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",4.2205,level
+2025-04-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",2.7811,level
+2025-05-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",2.817,level
+2025-06-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",2.3719,level
+2025-07-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",1.3965,level
+2025-08-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",1.2466,level
+2025-09-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",1.496,level
+2025-10-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",1.6758,level
+2025-11-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",3.0082,level
+2025-12-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",3.4937,level
+2026-01-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",3.6682,level
+2026-02-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",4.3185,level
+2026-03-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",5.6219,level
+2026-04-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",6.3751,level
+2026-05-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",6.0612,level
+2026-06-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",5.4398,level
+2026-07-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",7.0274,level
+2026-08-01,national,MCI_REER_PART,"Индекс ДКУ: вклад реального эффективного курса, п.п.",7.9115,level

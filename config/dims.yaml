@@ -5002,3 +5002,65 @@ datasets:
     unit: "million tonne-km"
     category: production
     note: "BNS dynamic table 3885 «Грузооборот по месяцам», discrete months 2007-01 onward. Rail 2024-12 31 483, 2025-12 42 735, 2026-09 25 185 mln t-km. Rail tonne-km from 2025 are also compiled without empty wagons (footnote)."
+
+  # ---------------------------------------------------------------- analytics derived by this repository (fetchers/analytics.py, added 2026-11-10)
+  # Computed from the processed files of the same run: keep these after their inputs.
+  - id: CORE_INFLATION_MEASURES
+    name_ru: "Альтернативные меры базовой инфляции: усечённое среднее, взвешенная медиана, индексы диффузии (расчёт репозитория по 21 компоненте ИПЦ)"
+    name_en: "Alternative core inflation measures: trimmed means, weighted median, diffusion indices (computed by this repository from 21 CPI components)"
+    agency: derived
+    fetcher: analytics
+    measure: core_inflation
+    min_items: 11
+    frequency: monthly
+    unit: "% (m/m, 12-month), % of CPI weight (diffusion)"
+    category: prices
+    note: "NOT an official BNS measure. Components (CPI_DETAIL_MOM, national): 9 food groups, non-alcoholic drinks, alcohol, tobacco, divisions 03-12, with the 2022 official BNS weights (CPI_WEIGHTS at 2022-12-31, renormalised over the components present, food n.e.c. excluded) held fixed -- BNS reweights every January, item weights are not published. Trimmed means cut 15 % / 30 % of the weight from each tail of the sorted m/m changes; the weighted median is the change at half the weight. COMPONENTS_MEAN is the plain weighted mean (against the published CPI 2004-07…2026-10: correlation 0.982 m/m, 0.992 for 12 months, mean absolute m/m gap 0.06 pp). Diffusion: weight share of components with m/m above 0 and above 0.4074 % (5 % a year). A food or drink group a release does not print (the 2026 COICOP-2018 basket lacks bread, eggs, sugar groups; September 2026 prints only divisions) takes its division's change (CP01 or CP02), counted in N_FILLED_BY_DIVISION; CP12 in 2026 is CP13_2018 (personal care and other goods and services). 12-month figures compound twelve monthly changes. Not seasonally adjusted."
+
+  - id: MONETARY_CONDITIONS
+    name_ru: "Реальные процентные ставки (ex ante, ex post) и индекс денежно-кредитных условий (расчёт репозитория)"
+    name_en: "Real interest rates (ex ante, ex post) and a monetary conditions index (computed by this repository)"
+    agency: derived
+    fetcher: analytics
+    measure: monetary_conditions
+    min_items: 8
+    frequency: monthly
+    unit: "%, percentage points (MCI)"
+    category: monetary
+    note: "Base rate (BASE_RATE, monthly mean of the daily step function), TONIA (monthly mean), CPI_YOY, household inflation expectations (INFLATION_EXPECTATIONS, median for 12 months ahead, from 2016). Real rate = (1+i)/(1+pi)-1 (Fisher). MCI = (real ex-ante base rate - its 2016+ mean) + 1/3 x 100 ln(REER / its 2016+ mean); the 1/3 weight is the conventional 3:1 rate/exchange-rate ratio, not an estimate for Kazakhstan. A higher MCI is tighter. From 2015-09 (inflation targeting)."
+
+  - id: OUTPUT_GAP
+    name_ru: "Разрыв выпуска четырьмя методами (HP, односторонний HP, фильтр Гамильтона, модель ненаблюдаемых компонент) и рост потенциального ВВП (расчёт репозитория)"
+    name_en: "Output gap by four methods (HP, one-sided HP, Hamilton filter, unobserved components) and potential growth (computed by this repository)"
+    agency: derived
+    fetcher: analytics
+    measure: output_gap
+    min_items: 6
+    frequency: quarterly
+    unit: "% of potential GDP; % a year (potential growth); bn KZT at 2010 prices (GDP)"
+    category: national_accounts
+    note: "Input: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010 item GDP (BNS seasonally adjusted real GDP, 2010 prices, from 2010 Q1), 100 x log. HP lambda 1600 two-sided (end-point bias in the last quarters) and one-sided (real-time); Hamilton (2018) h = 8, p = 4 (gap starts 2012 Q4); UC: local linear trend + AR(2) cycle (statsmodels UnobservedComponents, Kalman smoother; gap = log GDP - smoothed trend). MEAN averages the four where all exist. Revised every quarter as the sample grows; a production-function estimate is not included (no official capital stock series)."
+
+  - id: CREDIT_GAP
+    name_ru: "Кредиты к ВВП, разрыв кредит/ВВП по Базелю III, кредитный импульс, реальный рост кредитов (расчёт репозитория)"
+    name_en: "Credit-to-GDP, Basel III credit-to-GDP gap, credit impulse, real credit growth (computed by this repository)"
+    agency: derived
+    fetcher: analytics
+    measure: credit
+    min_items: 5
+    frequency: quarterly
+    unit: "% of GDP, percentage points, %"
+    category: monetary
+    note: "Credit: BANK_LOANS_STB_TOTAL (bank loans to the economy, stock as at the 1st, taken at the 1st of the next quarter = end of the quarter); GDP: QNA_GDP_EXPENDITURE item GDP, nominal, sum of the last four quarters. Gap: ratio less its one-sided HP trend, lambda 400 000 (BCBS 2010), from the 12th quarter. Impulse: (credit flow over four quarters - the same a year earlier) / four-quarter GDP (Biggs, Mayer, Pick 2010). Real growth deflates y/y growth by CPI_YOY of the quarter's last month. Bank credit only (no non-bank, no external borrowing): narrower than the BIS total-credit gap."
+
+  - id: FISCAL_STANCE
+    name_ru: "Ненефтяной ВВП, доля нефтегазового сектора, ненефтяной баланс бюджета к ненефтяному ВВП и фискальный импульс (расчёт репозитория)"
+    name_en: "Non-oil GDP, oil-gas sector share, non-oil budget balance to non-oil GDP and fiscal impulse (computed by this repository)"
+    agency: derived
+    fetcher: analytics
+    measure: fiscal
+    min_items: 5
+    frequency: annual
+    unit: "bn KZT, % of GDP, % of non-oil GDP, percentage points"
+    category: fiscal
+    note: "GDP: sum of the four quarters of QNA_GDP_EXPENDITURE (complete years only); oil-gas sector: OIL_GAS_SECTOR_GVA item OIL_GAS (BNS, gross value added, from 2010); non-oil balance: STATE_NON_OIL_DEFICIT (Minfin, state budget, negative = deficit, from 2013); overall balance: STATE_BUDGET_DEFICIT. Fiscal impulse = minus the change in the non-oil balance ratio (positive = expansion). Not cyclically adjusted and not primary; state budget, not general government."
