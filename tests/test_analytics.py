@@ -63,3 +63,12 @@ def test_core_inflation_tracks_published_cpi():
     y.index = y.index.strftime("%Y-%m-%d")
     j = pd.concat([s, y], axis=1).dropna()
     assert len(j) > 200 and j.corr().iloc[0, 1] > 0.98
+
+
+def test_no_jump_check_skips_gap_series():
+    rows = [{"date": f"2020-{m:02d}-01", "region": "national", "item_code": c, "item_name": c, "value": v}
+            for c in ("GAP", "LEVEL") for m, v in ((1, 0.1), (4, -0.9), (7, 0.5))]
+    plain = dims.validate(rows, "T", "quarterly")
+    skipped = dims.validate(rows, "T", "quarterly", no_jump_check=["GAP"])
+    assert any("[GAP]" in w for w in plain.warnings) and not any("[GAP]" in w for w in skipped.warnings)
+    assert any("[LEVEL]" in w for w in skipped.warnings)

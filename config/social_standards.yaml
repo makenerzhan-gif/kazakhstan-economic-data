@@ -3,8 +3,12 @@
 # Read by scripts/fetchers/manual_vintages.py, fetch_table with `step: monthly` (dataset SOCIAL_STANDARDS): each
 # value holds from its month until the next one. Compiled 2026-11-10 from the Ministry of Labour table
 # (https://www.gov.kz/article/17157?lang=ru, 2011-2026) and the prg.kz compilation (https://prg.kz/m/amp/document/1026672,
-# 1999-2010, with the law of each year). To check on adilet: the 2003 law (№ 362-II, dated 12.12.2001 by prg.kz,
-# likely 12.12.2002), the 2010 law number, and the 2005 MZP (7 000 from January, 9 200 from July).
+# 1999-2010, with the law of each year). Checked 2026-11-10 against the law texts (zakon.uchet.kz copies of adilet):
+#   2003: Закон от 12.12.2002 № 362-II, ст. 13 -- MZP 5 000, MRP 872 (prg.kz misdates it 12.12.2001);
+#   2005: Закон от 02.12.2004 № 3-III, ст. 8 -- MZP 7 000 from 01.01.2005, 9 200 from 01.07.2005 (the July level
+#         added by Закон от 16.05.2005 № 49-III);
+#   2010: Закон от 07.12.2009 № 219-IV «О республиканском бюджете на 2010-2012 годы», ст. 9 -- MZP 14 952, MRP 1 413,
+#         VPM 14 952 (prg.kz gives the number of the 2009-2011 law, 04.12.2008 № 96-IV, by mistake).
 # In 2022-04 the MRP for benefits rose to 3 180; for fines and taxes it stayed 3 063 (the series takes 3 180).
 source: "Законы о республиканском бюджете (adilet.zan.kz); Министерство труда и социальной защиты населения, gov.kz/article/17157; prg.kz/document/1026672"
 items:

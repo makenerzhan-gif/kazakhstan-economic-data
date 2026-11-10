@@ -170,12 +170,14 @@ def _key(r: dict) -> tuple[str, str, str]:
 # ---------------------------------------------------------------- validation and revisions
 
 def validate(records: list[dict], dataset_id: str, frequency: str,
-             cumulation: str | None = None) -> validation.ValidationResult:
+             cumulation: str | None = None, no_jump_check: list[str] | None = None) -> validation.ValidationResult:
     """The scalar checks, applied per (region, item): types on every row, duplicates on
     (date, region, item), frequency gaps and outliers within each series. Warnings are
     capped per dataset — a regional breakdown has hundreds of series. `cumulation`
     ("year_to_date" for the quarterly flow tables) makes the outlier check compare
-    own-period contributions, as it does for the scalar year-to-date series."""
+    own-period contributions, as it does for the scalar year-to-date series. `no_jump_check`: regexes
+    (fullmatch) of item codes left out of the outlier check -- gaps and balances that cross zero, where a
+    percentage change means nothing (OUTPUT_GAP, CREDIT_GAP; added 2026-11-10)."""
     result = validation.ValidationResult(indicator_id=dataset_id)
     if not records:
         result.add_error("No records to validate (empty dataset).")
@@ -200,8 +202,10 @@ def validate(records: list[dict], dataset_id: str, frequency: str,
     warnings: list[str] = []
     for (region, code), rows in by_series.items():
         tag = code if region == NATIONAL else f"{code}@{region}"
-        for sub in (validation.validate_frequency(rows, dataset_id, frequency),
-                    validation.validate_outliers(rows, dataset_id, cumulation=cumulation)):
+        checks = [validation.validate_frequency(rows, dataset_id, frequency)]
+        if not any(re.fullmatch(p, code) for p in no_jump_check or []):
+            checks.append(validation.validate_outliers(rows, dataset_id, cumulation=cumulation))
+        for sub in checks:
             warnings.extend(f"[{tag}] {w}" for w in sub.warnings)
     if len(warnings) > MAX_WARNINGS:
         warnings = warnings[:MAX_WARNINGS] + [f"... {len(warnings) - MAX_WARNINGS} more warnings not listed"]
