@@ -631,8 +631,8 @@ date,region,item_code,item_name,value,transformation
 2026-09-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7795.44,level
 2026-10-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7845.9424,level
 2026-10-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7916.32,level
-2026-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7870.1917,level
-2026-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7872.77,level
+2026-11-01,national,INDEX_KASE.AVG,"Индекс KASE, в среднем за месяц",7870.6514,level
+2026-11-01,national,INDEX_KASE.EOM,"Индекс KASE, на конец месяца",7873.41,level
 2024-12-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",5636.66,level
 2024-12-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",5636.66,level
 2025-01-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",5780.4205,level
@@ -679,8 +679,8 @@ date,region,item_code,item_name,value,transformation
 2026-09-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8616.07,level
 2026-10-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",8684.4614,level
 2026-10-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8771.82,level
-2026-11-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",8720.7083,level
-2026-11-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8723.56,level
+2026-11-01,national,KASE_TR.AVG,"Индекс KASE полной доходности (KASE_TR), в среднем за месяц",8721.2171,level
+2026-11-01,national,KASE_TR.EOM,"Индекс KASE полной доходности (KASE_TR), на конец месяца",8724.27,level
 2017-09-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.293,level
 2017-09-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",10.26,level
 2017-10-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",10.2018,level
@@ -901,8 +901,8 @@ date,region,item_code,item_name,value,transformation
 2026-09-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",16.31,level
 2026-10-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",16.0457,level
 2026-10-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",15.66,level
-2026-11-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",15.5183,level
-2026-11-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",15.5,level
+2026-11-01,national,KASE_BMY.AVG,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, в среднем за месяц",15.5071,level
+2026-11-01,national,KASE_BMY.EOM,"Индекс доходности корпоративных облигаций KASE_BMY, % годовых, на конец месяца",15.44,level
 2017-09-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.1165,level
 2017-09-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",100.16,level
 2017-10-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",100.1877,level
@@ -1123,8 +1123,8 @@ date,region,item_code,item_name,value,transformation
 2026-09-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",97.81,level
 2026-10-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",98.1771,level
 2026-10-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",98.92,level
-2026-11-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.21,level
-2026-11-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.19,level
+2026-11-01,national,KASE_BMC.AVG,"Ценовой индекс корпоративных облигаций KASE_BMC, в среднем за месяц",99.2214,level
+2026-11-01,national,KASE_BMC.EOM,"Ценовой индекс корпоративных облигаций KASE_BMC, на конец месяца",99.29,level
 2010-01-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",-0.2322,level
 2010-01-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",0.1074,level
 2010-02-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",0.0506,level
@@ -1529,8 +1529,8 @@ date,region,item_code,item_name,value,transformation
 2026-09-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.87,level
 2026-10-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.3233,level
 2026-10-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.01,level
-2026-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",14.015,level
-2026-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",14.07,level
+2026-11-01,national,MM_INDEX.AVG,"Индикатор денежного рынка MM_INDEX, % годовых, в среднем за месяц",13.9886,level
+2026-11-01,national,MM_INDEX.EOM,"Индикатор денежного рынка MM_INDEX, % годовых, на конец месяца",13.83,level
 2016-10-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",7652.1916,level
 2016-10-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",7793.8766,level
 2016-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",7734.3731,level
@@ -1773,5 +1773,5 @@ date,region,item_code,item_name,value,transformation
 2026-09-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",36586.4688,level
 2026-10-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",36982.6429,level
 2026-10-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",37469.8395,level
-2026-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",37555.5112,level
-2026-11-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",37602.6544,level
+2026-11-01,national,CAPBILLS_KZT.AVG,"Капитализация рынка ГЦБ, млрд тенге, в среднем за месяц",37655.673,level
+2026-11-01,national,CAPBILLS_KZT.EOM,"Капитализация рынка ГЦБ, млрд тенге, на конец месяца",38256.6439,level

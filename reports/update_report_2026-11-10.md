@@ -1,17 +1,9 @@
 # Update report — 2026-11-10
 
-Run timestamp: 2026-11-10T10:21:37.496413
+Run timestamp: 2026-11-10T13:53:32.574114
 Unified dataset updated: True
 Tests passed: True
 Cross-source checks failed: 0
-
-## Failed this run — previous data kept
-
-- **wb/WDI_GDP_PC_PPP**: 502 Server Error: Bad Gateway for url: https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.PP.KD?format=json&per_page=20000&date=1960:2026
-- **wb/WDI_NET_MIGRATION**: 502 Server Error: Bad Gateway for url: https://api.worldbank.org/v2/country/all/indicator/SM.POP.NETM?format=json&per_page=20000&date=1960:2026
-- **wb/WGI_GE**: 502 Server Error: Bad Gateway for url: https://api.worldbank.org/v2/country/all/indicator/GOV_WGI_GE.EST?format=json&per_page=20000&date=1996:2026&source=3
-- **wb/WGI_CC**: 502 Server Error: Bad Gateway for url: https://api.worldbank.org/v2/country/all/indicator/GOV_WGI_CC.EST?format=json&per_page=20000&date=1996:2026&source=3
-- **wb/WGI_PV**: 502 Server Error: Bad Gateway for url: https://api.worldbank.org/v2/country/all/indicator/GOV_WGI_PV.EST?format=json&per_page=20000&date=1996:2026&source=3
 
 ## Per-dataset results
 
@@ -395,7 +387,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 79.7% in value between 2025-01-01 (306.0) and 2025-02-01 (550.0).
   - warning: Unexpected jump of 54.8% in value between 2026-07-01 (460.0) and 2026-08-01 (208.0).
   - warning: Unexpected jump of 143.8% in value between 2026-08-01 (208.0) and 2026-09-01 (507.0).
-- **nbk/KASE_USD_VOLUME** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **nbk/KASE_USD_VOLUME** — fetch+validate+process: ok (downloaded=23, processed=23)
 - **nbk/REMITTANCES_SENT** — fetch+validate+process: ok (downloaded=61, processed=61)
   - warning: Unexpected jump of 50.4% in value between 2026-07-01 (56375.429860767) and 2026-08-01 (27938.922912448).
 - **nbk/REMITTANCES_RECEIVED** — fetch+validate+process: ok (downloaded=61, processed=61)
@@ -656,8 +648,8 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 80.7% in value between 2025-04-01 (-106.081023) and 2025-07-01 (-20.505007).
   - warning: Unexpected jump of 285.7% in value between 2025-07-01 (-20.505007) and 2025-10-01 (-79.09401).
   - warning: Unexpected jump of 224.5% in value between 2025-10-01 (-79.09401) and 2026-01-01 (98.504654).
-- **nbk/EXCHANGE_RATE_CNY_KASE** — fetch+validate+process: ok (downloaded=22, processed=22)
-- **nbk/KASE_CNY_VOLUME** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **nbk/EXCHANGE_RATE_CNY_KASE** — fetch+validate+process: ok (downloaded=23, processed=23)
+- **nbk/KASE_CNY_VOLUME** — fetch+validate+process: ok (downloaded=23, processed=23)
   - warning: Unexpected jump of 82.6% in value between 2025-05-01 (760677000.0) and 2025-06-01 (1388679877.0).
   - warning: Unexpected jump of 62.8% in value between 2025-11-01 (1697196914.0) and 2025-12-01 (2762728044.0).
   - warning: Unexpected jump of 55.7% in value between 2025-12-01 (2762728044.0) and 2026-01-01 (1223591921.0).
@@ -667,12 +659,13 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 90.5% in value between 2026-05-01 (1096257932.0) and 2026-06-01 (2088053344.0).
   - warning: Unexpected jump of 52.6% in value between 2026-07-01 (1930871767.0) and 2026-08-01 (2947241264.0).
   - warning: Unexpected jump of 52.9% in value between 2026-08-01 (2947241264.0) and 2026-09-01 (4507189863.0).
-- **nbk/KASE_EUR_VOLUME** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Unexpected jump of 58.8% in value between 2026-09-01 (4507189863.0) and 2026-10-01 (1858786074.0).
+- **nbk/KASE_EUR_VOLUME** — fetch+validate+process: ok (downloaded=23, processed=23)
   - warning: Unexpected jump of 59.1% in value between 2025-01-01 (93731688.0) and 2025-02-01 (149081157.0).
   - warning: Unexpected jump of 69.0% in value between 2025-02-01 (149081157.0) and 2025-03-01 (46255660.0).
   - warning: Unexpected jump of 81.8% in value between 2025-06-01 (30062975.0) and 2025-07-01 (54643625.0).
   - warning: Unexpected jump of 64.6% in value between 2026-08-01 (60651714.0) and 2026-09-01 (99857190.0).
-- **nbk/KASE_RUB_VOLUME** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **nbk/KASE_RUB_VOLUME** — fetch+validate+process: ok (downloaded=23, processed=23)
   - warning: Unexpected jump of 53.3% in value between 2025-12-01 (134560334406.0) and 2026-01-01 (62859414953.0).
   - warning: Unexpected jump of 63.8% in value between 2026-03-01 (70943760874.0) and 2026-04-01 (116228489175.0).
 - **nbk/PAYMENTS_TOTAL_COUNT** — fetch+validate+process: ok (downloaded=74, processed=74)
@@ -4793,10 +4786,10 @@ Cross-source checks failed: 0
 - **ardfm/BANK_PROVISIONS_IFRS** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_CAPITAL_ADEQUACY_K1** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_CAPITAL_ADEQUACY_K2** — fetch+validate+process: ok (downloaded=5, processed=5)
-- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=49, processed=49)
-- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=50, processed=50)
-- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=50, processed=50)
-  - warning: Unexpected jump of 100.0% in own-period contribution between 2022-07-01 (795.9) and 2022-08-01 (0.0).
+- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=50, processed=50)
+- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=51, processed=51)
+- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=51, processed=51)
+  - warning: Unexpected jump of 100.0% in own-period contribution between 2022-06-01 (795.9) and 2022-07-01 (0.0).
   - warning: Unexpected jump of 100.0% in own-period contribution between 2023-01-01 (795.9) and 2023-02-01 (0.0).
   - warning: Unexpected jump of 100.0% in own-period contribution between 2024-01-01 (795.9) and 2024-02-01 (0.0).
   - warning: Unexpected jump of 100.0% in own-period contribution between 2025-01-01 (795.9) and 2025-02-01 (0.0).
@@ -4808,7 +4801,7 @@ Cross-source checks failed: 0
 - **ardfm/BANK_DEPOSITS_LEGAL_ENTITIES** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_DEPOSITS_INDIVIDUALS** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_DEPOSITS_INDIVIDUALS_FX_SHARE** — fetch+validate+process: ok (downloaded=5, processed=5)
-- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=50, processed=50)
+- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=51, processed=51)
 - **ardfm/BANK_ASSETS_TO_GDP** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_LOANS_TO_GDP** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_DEPOSITS_TO_GDP** — fetch+validate+process: ok (downloaded=5, processed=5)
@@ -4826,7 +4819,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 51.9% in value between 1973-09-01 (2.7) and 1973-10-01 (4.1).
   - warning: Unexpected jump of 217.1% in value between 1973-12-01 (4.1) and 1974-01-01 (13.0).
   - warning: Unexpected jump of 54.0% in value between 1990-07-01 (17.6) and 1990-08-01 (27.1).
-- **kase/TONIA** — fetch+validate+process: ok (downloaded=6223, processed=6223)
+- **kase/TONIA** — fetch+validate+process: ok (downloaded=6224, processed=6224)
   - warning: Gap of 5 days between 2001-12-14 and 2001-12-19 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 5 days between 2001-12-21 and 2001-12-26 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 6 days between 2001-12-29 and 2002-01-04 is outside expected range for frequency=daily (1-4d).
@@ -6009,7 +6002,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 51.1% in value between 2020-03-01 (0.45) and 2020-04-01 (0.22).
   - warning: Unexpected jump of 62.5% in value between 2021-09-01 (0.24) and 2021-10-01 (0.39).
 - **fred/US_TREASURY_10Y** — fetch+validate+process: ok (downloaded=883, processed=883)
-- **fred/US_CPI** — fetch+validate+process: ok (downloaded=956, processed=956)
+- **fred/US_CPI** — fetch+validate+process: ok (downloaded=957, processed=957)
   - warning: Gap of 61 days between 2025-09-01 and 2025-11-01 is outside expected range for frequency=monthly (25-40d).
 - **fred/US_GDP_REAL** — fetch+validate+process: ok (downloaded=319, processed=319)
 - **fred/VIX** — fetch+validate+process: ok (downloaded=442, processed=442)
@@ -9931,8 +9924,20 @@ Cross-source checks failed: 0
   - warning: [ALB@world] Unexpected jump of 64.5% in value between 1998-12-31 (7.85515459177739) and 1999-12-31 (2.78507709416616).
   - warning: [ALB@world] Unexpected jump of 112.5% in value between 1999-12-31 (2.78507709416616) and 2000-12-31 (5.91957346525058).
   - warning: ... 5823 more warnings not listed
-- **wb/WDI_GDP_PC_PPP** — fetch: error (downloaded=0, processed=0)
-  - ERROR: 502 Server Error: Bad Gateway for url: https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.PP.KD?format=json&per_page=20000&date=1960:2026
+- **wb/WDI_GDP_PC_PPP** — fetch+validate+process: ok (downloaded=6977, processed=6977)
+  - warning: [GNQ@world] Unexpected jump of 60.3% in value between 1995-12-31 (1892.11653062527) and 1996-12-31 (3033.84031220306).
+  - warning: [GNQ@world] Unexpected jump of 140.5% in value between 1996-12-31 (3033.84031220306) and 1997-12-31 (7296.10009809843).
+  - warning: [GNQ@world] Unexpected jump of 53.2% in value between 2000-12-31 (11767.4708814313) and 2001-12-31 (18031.964975074).
+  - warning: [GUY@world] Unexpected jump of 62.1% in value between 2021-12-31 (22865.9270968882) and 2022-12-31 (37068.1993827588).
+  - warning: [IRQ@world] Unexpected jump of 64.4% in value between 1990-12-31 (10735.09411029) and 1991-12-31 (3819.16194826651).
+  - warning: [KWT@world] Unexpected jump of 51.1% in value between 1991-12-31 (28633.9695922465) and 1992-12-31 (43266.9328651676).
+  - warning: [LBR@world] Unexpected jump of 90.8% in value between 1996-12-31 (582.677982536092) and 1997-12-31 (1111.93760251371).
+  - warning: [LBY@world] Unexpected jump of 91.8% in value between 2011-12-31 (10741.9206751908) and 2012-12-31 (20601.0026641).
+  - warning: [MAC@world] Unexpected jump of 55.3% in value between 2019-12-31 (133453.896026037) and 2020-12-31 (59662.4855864551).
+  - warning: [MAC@world] Unexpected jump of 74.9% in value between 2022-12-31 (59921.441691873) and 2023-12-31 (104815.20003062).
+  - warning: [RWA@world] Unexpected jump of 61.9% in value between 1994-12-31 (597.262798593604) and 1995-12-31 (966.810405419343).
+  - warning: [TLS@world] Unexpected jump of 77.1% in value between 1999-12-31 (2136.6494518776) and 2000-12-31 (3783.78329545739).
+  - warning: [TCA@world] Unexpected jump of 67.6% in value between 2016-12-31 (17625.7202843515) and 2017-12-31 (29540.3537473151).
 - **wb/WDI_FX_OFFICIAL** — fetch+validate+process: ok (downloaded=12613, processed=12613)
   - warning: [AFG@world] Unexpected jump of 104.2% in value between 1962-12-31 (17.1965606878624) and 1963-12-31 (35.1096447377192).
   - warning: [DZA@world] Unexpected jump of 106.2% in value between 1990-12-31 (8.95750833333333) and 1991-12-31 (18.472875).
@@ -9965,8 +9970,38 @@ Cross-source checks failed: 0
   - warning: [ARG@world] Unexpected jump of 789.6% in value between 1984-12-31 (6.7649116666e-06) and 1985-12-31 (6.01809e-05).
   - warning: [ARG@world] Unexpected jump of 56.7% in value between 1985-12-31 (6.01809e-05) and 1986-12-31 (9.43031666666666e-05).
   - warning: ... 478 more warnings not listed
-- **wb/WDI_NET_MIGRATION** — fetch: error (downloaded=0, processed=0)
-  - ERROR: 502 Server Error: Bad Gateway for url: https://api.worldbank.org/v2/country/all/indicator/SM.POP.NETM?format=json&per_page=20000&date=1960:2026
+- **wb/WDI_NET_MIGRATION** — fetch+validate+process: ok (downloaded=14322, processed=14322)
+  - warning: [AFG@world] Unexpected jump of 134.4% in value between 1960-12-31 (2606.0) and 1961-12-31 (6109.0).
+  - warning: [AFG@world] Unexpected jump of 51.1% in value between 1964-12-31 (7079.0) and 1965-12-31 (10695.0).
+  - warning: [AFG@world] Unexpected jump of 66.7% in value between 1965-12-31 (10695.0) and 1966-12-31 (3563.0).
+  - warning: [AFG@world] Unexpected jump of 91.5% in value between 1966-12-31 (3563.0) and 1967-12-31 (6824.0).
+  - warning: [AFG@world] Unexpected jump of 51.2% in value between 1967-12-31 (6824.0) and 1968-12-31 (3333.0).
+  - warning: [AFG@world] Unexpected jump of 119.7% in value between 1969-12-31 (2029.0) and 1970-12-31 (4458.0).
+  - warning: [AFG@world] Unexpected jump of 387.1% in value between 1970-12-31 (4458.0) and 1971-12-31 (-12801.0).
+  - warning: [AFG@world] Unexpected jump of 68.4% in value between 1971-12-31 (-12801.0) and 1972-12-31 (-4050.0).
+  - warning: [AFG@world] Unexpected jump of 560.4% in value between 1973-12-31 (-3030.0) and 1974-12-31 (-20009.0).
+  - warning: [AFG@world] Unexpected jump of 122.0% in value between 1974-12-31 (-20009.0) and 1975-12-31 (-44418.0).
+  - warning: [AFG@world] Unexpected jump of 92.3% in value between 1975-12-31 (-44418.0) and 1976-12-31 (-85430.0).
+  - warning: [AFG@world] Unexpected jump of 348.4% in value between 1978-12-31 (-117186.0) and 1979-12-31 (-525413.0).
+  - warning: [AFG@world] Unexpected jump of 123.5% in value between 1979-12-31 (-525413.0) and 1980-12-31 (-1174239.0).
+  - warning: [AFG@world] Unexpected jump of 70.2% in value between 1980-12-31 (-1174239.0) and 1981-12-31 (-1998086.0).
+  - warning: [AFG@world] Unexpected jump of 74.9% in value between 1981-12-31 (-1998086.0) and 1982-12-31 (-500998.0).
+  - warning: [AFG@world] Unexpected jump of 65.5% in value between 1982-12-31 (-500998.0) and 1983-12-31 (-172797.0).
+  - warning: [AFG@world] Unexpected jump of 243.7% in value between 1983-12-31 (-172797.0) and 1984-12-31 (248224.0).
+  - warning: [AFG@world] Unexpected jump of 184.1% in value between 1984-12-31 (248224.0) and 1985-12-31 (-208685.0).
+  - warning: [AFG@world] Unexpected jump of 64.6% in value between 1985-12-31 (-208685.0) and 1986-12-31 (-343397.0).
+  - warning: [AFG@world] Unexpected jump of 83.7% in value between 1987-12-31 (-345535.0) and 1988-12-31 (-56263.0).
+  - warning: [AFG@world] Unexpected jump of 132.5% in value between 1988-12-31 (-56263.0) and 1989-12-31 (18296.0).
+  - warning: [AFG@world] Unexpected jump of 2607.3% in value between 1989-12-31 (18296.0) and 1990-12-31 (-458737.0).
+  - warning: [AFG@world] Unexpected jump of 107.1% in value between 1990-12-31 (-458737.0) and 1991-12-31 (32782.0).
+  - warning: [AFG@world] Unexpected jump of 3552.4% in value between 1991-12-31 (32782.0) and 1992-12-31 (1197329.0).
+  - warning: [AFG@world] Unexpected jump of 72.6% in value between 1993-12-31 (1149684.0) and 1994-12-31 (315206.0).
+  - warning: [AFG@world] Unexpected jump of 83.3% in value between 1994-12-31 (315206.0) and 1995-12-31 (52505.0).
+  - warning: [AFG@world] Unexpected jump of 92.2% in value between 1995-12-31 (52505.0) and 1996-12-31 (4072.0).
+  - warning: [AFG@world] Unexpected jump of 621.0% in value between 1996-12-31 (4072.0) and 1997-12-31 (-21215.0).
+  - warning: [AFG@world] Unexpected jump of 134.8% in value between 1997-12-31 (-21215.0) and 1998-12-31 (7380.0).
+  - warning: [AFG@world] Unexpected jump of 539.0% in value between 1998-12-31 (7380.0) and 1999-12-31 (-32400.0).
+  - warning: ... 3630 more warnings not listed
 - **bns/FIXED_ASSETS_GROSS_BY_SECTION** — fetch+validate+process: ok (downloaded=521, processed=521)
   - warning: [D] Unexpected jump of 50.5% in value between 2007-12-31 (634.61915) and 2008-12-31 (955.3322).
   - warning: [D] Unexpected jump of 190.0% in value between 2018-12-31 (4844.333011) and 2019-12-31 (14046.185625).
@@ -10080,8 +10115,38 @@ Cross-source checks failed: 0
   - warning: [U] Unexpected jump of 565.3% in value between 2009-12-31 (0.075) and 2012-12-31 (0.499).
   - warning: [U] Unexpected jump of 54.7% in value between 2014-12-31 (0.552) and 2015-12-31 (0.25).
 - **nbk/CAPACITY_UTILIZATION_BY_SECTOR** — fetch+validate+process: ok (downloaded=588, processed=588)
-- **wb/WGI_GE** — fetch: error (downloaded=0, processed=0)
-  - ERROR: 502 Server Error: Bad Gateway for url: https://api.worldbank.org/v2/country/all/indicator/GOV_WGI_GE.EST?format=json&per_page=20000&date=1996:2026&source=3
+- **wb/WGI_GE** — fetch+validate+process: ok (downloaded=5373, processed=5373)
+  - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Unexpected jump of 58.2% in value between 2011-12-31 (-0.1676611) and 2012-12-31 (-0.2653137).
+  - warning: [ALB@world] Unexpected jump of 126.5% in value between 2013-12-31 (-0.3092996) and 2014-12-31 (0.0820916).
+  - warning: [ALB@world] Unexpected jump of 127.7% in value between 2014-12-31 (0.0820916) and 2015-12-31 (0.1869501).
+  - warning: [ALB@world] Unexpected jump of 60.9% in value between 2018-12-31 (0.2962959) and 2019-12-31 (0.115817).
+  - warning: [ALB@world] Unexpected jump of 108.1% in value between 2019-12-31 (0.115817) and 2020-12-31 (-0.0093366).
+  - warning: [ALB@world] Unexpected jump of 1257.4% in value between 2020-12-31 (-0.0093366) and 2021-12-31 (0.1080629).
+  - warning: [ALB@world] Unexpected jump of 77.9% in value between 2021-12-31 (0.1080629) and 2022-12-31 (0.192283).
+  - warning: [DZA@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ASM@world] Unexpected jump of 234.0% in value between 2004-12-31 (-0.0987958) and 2005-12-31 (-0.3299803).
+  - warning: [ASM@world] Unexpected jump of 157.3% in value between 2006-12-31 (-0.331042) and 2007-12-31 (0.1896806).
+  - warning: [ASM@world] Unexpected jump of 250.1% in value between 2013-12-31 (0.215171) and 2014-12-31 (0.7532867).
+  - warning: [AND@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Unexpected jump of 73.1% in value between 2005-12-31 (0.7083444) and 2006-12-31 (1.2264451).
+  - warning: [AGO@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Unexpected jump of 70.6% in value between 1996-12-31 (-0.7507979) and 1998-12-31 (-1.280924).
+  - warning: [ATG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: ... 1179 more warnings not listed
 - **wb/WGI_RQ** — fetch+validate+process: ok (downloaded=5374, processed=5374)
   - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
@@ -10146,8 +10211,38 @@ Cross-source checks failed: 0
   - warning: [ARG@world] Unexpected jump of 3377.3% in value between 1998-12-31 (0.0050634) and 2000-12-31 (-0.1659412).
   - warning: [ARG@world] Unexpected jump of 370.2% in value between 2000-12-31 (-0.1659412) and 2002-12-31 (-0.7802321).
   - warning: ... 997 more warnings not listed
-- **wb/WGI_CC** — fetch: error (downloaded=0, processed=0)
-  - ERROR: 502 Server Error: Bad Gateway for url: https://api.worldbank.org/v2/country/all/indicator/GOV_WGI_CC.EST?format=json&per_page=20000&date=1996:2026&source=3
+- **wb/WGI_CC** — fetch+validate+process: ok (downloaded=5408, processed=5408)
+  - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Unexpected jump of 72.6% in value between 1998-12-31 (-0.5751921) and 2000-12-31 (-0.9926204).
+  - warning: [DZA@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Unexpected jump of 57.0% in value between 1996-12-31 (-0.6296815) and 1998-12-31 (-0.9887088).
+  - warning: [ASM@world] Unexpected jump of 53.5% in value between 2005-12-31 (0.8597633) and 2006-12-31 (0.3996434).
+  - warning: [ASM@world] Unexpected jump of 199.3% in value between 2013-12-31 (0.3894659) and 2014-12-31 (1.1655883).
+  - warning: [ASM@world] Unexpected jump of 53.1% in value between 2016-12-31 (1.1726624) and 2017-12-31 (1.7948029).
+  - warning: [AND@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ATG@world] Unexpected jump of 53.8% in value between 2005-12-31 (0.6820787) and 2006-12-31 (1.0491489).
+  - warning: [ATG@world] Unexpected jump of 59.2% in value between 2013-12-31 (1.3260472) and 2014-12-31 (0.541201).
+  - warning: [ATG@world] Unexpected jump of 68.7% in value between 2016-12-31 (0.6411076) and 2017-12-31 (0.2003638).
+  - warning: [ATG@world] Unexpected jump of 102.5% in value between 2024-12-31 (0.2903364) and 2025-12-31 (0.5879504).
+  - warning: [ARG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ARG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ARG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: ... 1040 more warnings not listed
 - **wb/WGI_VA** — fetch+validate+process: ok (downloaded=5488, processed=5488)
   - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
@@ -10180,8 +10275,38 @@ Cross-source checks failed: 0
   - warning: [AGO@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: [ATG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
   - warning: ... 1080 more warnings not listed
-- **wb/WGI_PV** — fetch: error (downloaded=0, processed=0)
-  - ERROR: 502 Server Error: Bad Gateway for url: https://api.worldbank.org/v2/country/all/indicator/GOV_WGI_PV.EST?format=json&per_page=20000&date=1996:2026&source=3
+- **wb/WGI_PV** — fetch+validate+process: ok (downloaded=5462, processed=5462)
+  - warning: [AFG@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AFG@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [ALB@world] Unexpected jump of 65.2% in value between 2006-12-31 (-0.5594093) and 2007-12-31 (-0.19483).
+  - warning: [ALB@world] Unexpected jump of 81.0% in value between 2007-12-31 (-0.19483) and 2008-12-31 (-0.0370673).
+  - warning: [ALB@world] Unexpected jump of 529.6% in value between 2009-12-31 (-0.0260663) and 2010-12-31 (-0.1641137).
+  - warning: [ALB@world] Unexpected jump of 107.1% in value between 2010-12-31 (-0.1641137) and 2011-12-31 (-0.3398349).
+  - warning: [ALB@world] Unexpected jump of 210.9% in value between 2013-12-31 (-0.2141054) and 2014-12-31 (0.2375165).
+  - warning: [ALB@world] Unexpected jump of 54.0% in value between 2014-12-31 (0.2375165) and 2015-12-31 (0.1093665).
+  - warning: [ALB@world] Unexpected jump of 96.9% in value between 2018-12-31 (0.1436695) and 2019-12-31 (0.0044825).
+  - warning: [ALB@world] Unexpected jump of 193.5% in value between 2019-12-31 (0.0044825) and 2020-12-31 (-0.0041906).
+  - warning: [ALB@world] Unexpected jump of 590.7% in value between 2020-12-31 (-0.0041906) and 2021-12-31 (0.0205626).
+  - warning: [ALB@world] Unexpected jump of 104.4% in value between 2022-12-31 (0.0106004) and 2023-12-31 (0.0216641).
+  - warning: [ALB@world] Unexpected jump of 312.1% in value between 2024-12-31 (0.0217875) and 2025-12-31 (0.0897767).
+  - warning: [DZA@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [DZA@world] Unexpected jump of 68.3% in value between 2018-12-31 (-0.6227951) and 2019-12-31 (-1.0481506).
+  - warning: [ASM@world] Unexpected jump of 74.8% in value between 2004-12-31 (0.4040119) and 2005-12-31 (0.7061931).
+  - warning: [AND@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AND@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 1996-12-31 and 1998-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 731 days between 1998-12-31 and 2000-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Gap of 730 days between 2000-12-31 and 2002-12-31 is outside expected range for frequency=annual (350-380d).
+  - warning: [AGO@world] Unexpected jump of 51.7% in value between 2009-12-31 (-0.5420286) and 2010-12-31 (-0.2617697).
+  - warning: [AGO@world] Unexpected jump of 83.6% in value between 2010-12-31 (-0.2617697) and 2011-12-31 (-0.4807365).
+  - warning: ... 1448 more warnings not listed
 - **nbk/EXTERNAL_DEBT_SERVICE_SCHEDULE** — fetch+validate+process: ok (downloaded=363, processed=363)
   - warning: [BANKS_PRINCIPAL_M01_03] Unexpected jump of 69.0% in value between 2026-01-01 (1823.493371) and 2026-04-01 (3081.595896).
   - warning: [BANKS_PRINCIPAL_M10_12] Unexpected jump of 86.6% in value between 2026-04-01 (1037.310433) and 2026-07-01 (1935.72456).
@@ -11779,9 +11904,7 @@ Cross-source checks failed: 0
   - warning: [T] Gap of 365 days between 2010-01-01 and 2011-01-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: ... 9 more warnings not listed
 - **krem/TARIFF_DECISIONS** — fetch+validate+process: ok (downloaded=3793, processed=3793)
-  - warning: records by source: {'documents': 3481, 'news': 90, 'electricity caps': 20, 'gas caps': 202}
-  - warning: documents skipped by reason: {'estimate_only': 3, 'kazakh': 71, 'no_date': 155, 'no_service': 10, 'not_a_decision': 690, 'out_of_scope': 56}
-  - warning: news clauses skipped by reason: {'no_region': 24, 'no_verb': 31, 'out_of_scope': 1, 'plan_or_unchanged': 28}
+  - warning: not re-downloaded: last download 2026-11-10, refreshed every 1 days
 - **derived/TARIFF_CHANGE_MONTHS** — fetch+validate+process: ok (downloaded=305, processed=305)
   - warning: [COLD_WATER] Gap of 485 days between 2005-01-01 and 2006-05-01 is outside expected range for frequency=monthly (25-40d).
   - warning: [COLD_WATER] Gap of 549 days between 2006-05-01 and 2007-11-01 is outside expected range for frequency=monthly (25-40d).
@@ -12302,36 +12425,36 @@ Cross-source checks failed: 0
   - warning: [NET] Unexpected jump of 477.5% in value between 1999-10-01 (16.9) and 1999-11-01 (97.6).
   - warning: ... 164 more warnings not listed
 - **nbk/NBK_OPEN_POSITION** — fetch+validate+process: ok (downloaded=1568, processed=1568)
-  - warning: [DEPOSIT_AUCTION.AVG] Unexpected jump of 99.2% in value between 2020-03-01 (-288.3511) and 2020-04-01 (-574.2615).
-  - warning: [DEPOSIT_AUCTION.AVG] Unexpected jump of 62.0% in value between 2020-12-01 (-833.5583) and 2021-01-01 (-1350.0942).
-  - warning: [DEPOSIT_AUCTION.AVG] Unexpected jump of 51.5% in value between 2021-11-01 (-2103.8307) and 2021-12-01 (-1021.08).
-  - warning: [DEPOSIT_AUCTION.AVG] Unexpected jump of 69.6% in value between 2023-09-01 (-746.5238) and 2023-10-01 (-1266.3333).
-  - warning: [DEPOSIT_AUCTION.AVG] Unexpected jump of 52.9% in value between 2023-10-01 (-1266.3333) and 2023-11-01 (-1935.6136).
-  - warning: [DEPOSIT_AUCTION.AVG] Unexpected jump of 57.8% in value between 2023-12-01 (-1968.65) and 2024-01-01 (-3105.7595).
-  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 205.4% in value between 2020-03-01 (-216.044) and 2020-04-01 (-659.788).
-  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 81.4% in value between 2020-11-01 (-622.64) and 2020-12-01 (-1129.665).
-  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 63.2% in value between 2021-08-01 (-1233.81) and 2021-09-01 (-2014.121).
-  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 95.2% in value between 2022-08-01 (-442.0) and 2022-09-01 (-863.0).
-  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 74.6% in value between 2023-03-01 (-1143.0) and 2023-04-01 (-290.0).
-  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 166.2% in value between 2023-04-01 (-290.0) and 2023-05-01 (-772.0).
-  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 74.2% in value between 2023-09-01 (-716.0) and 2023-10-01 (-1247.0).
-  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 59.8% in value between 2023-10-01 (-1247.0) and 2023-11-01 (-1993.0).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 7197.3% in value between 2020-01-01 (1.1325) and 2020-02-01 (82.6421).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 125.0% in value between 2020-02-01 (82.6421) and 2020-03-01 (185.9319).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 92.5% in value between 2020-03-01 (185.9319) and 2020-04-01 (13.9035).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 89.6% in value between 2020-04-01 (13.9035) and 2020-05-01 (1.4406).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 100.0% in value between 2020-05-01 (1.4406) and 2020-06-01 (0.0).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 68.7% in value between 2020-08-01 (26.1537) and 2020-09-01 (8.1793).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 215.3% in value between 2020-10-01 (7.4164) and 2020-11-01 (23.382).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 93.3% in value between 2020-11-01 (23.382) and 2020-12-01 (1.5667).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 2485.4% in value between 2021-01-01 (1.7779) and 2021-02-01 (45.9651).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 76.3% in value between 2021-02-01 (45.9651) and 2021-03-01 (10.9061).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 84.9% in value between 2021-03-01 (10.9061) and 2021-04-01 (1.6436).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 100.0% in value between 2021-06-01 (2.4189) and 2021-07-01 (0.0).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 298.1% in value between 2021-10-01 (10.5952) and 2021-11-01 (42.1842).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 448.7% in value between 2021-11-01 (42.1842) and 2021-12-01 (231.4624).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 86.5% in value between 2022-05-01 (158.4063) and 2022-06-01 (21.3913).
-  - warning: [REVERSE_REPO.AVG] Unexpected jump of 92.6% in value between 2022-06-01 (21.3913) and 2022-07-01 (1.5801).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 68.7% in value between 2020-02-01 (-77.191) and 2020-03-01 (-24.1649).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 73.3% in value between 2020-03-01 (-24.1649) and 2020-04-01 (-41.8831).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 167.7% in value between 2020-04-01 (-41.8831) and 2020-05-01 (-112.1123).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 54.6% in value between 2020-07-01 (-79.3351) and 2020-08-01 (-35.986).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 61.9% in value between 2020-10-01 (-16.3911) and 2020-11-01 (-26.5337).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 143.4% in value between 2020-11-01 (-26.5337) and 2020-12-01 (-64.5769).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 71.2% in value between 2021-01-01 (-82.6093) and 2021-02-01 (-23.7711).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 467.9% in value between 2021-04-01 (-21.9678) and 2021-05-01 (-124.7655).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 59.4% in value between 2021-05-01 (-124.7655) and 2021-06-01 (-50.6123).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 65.1% in value between 2021-06-01 (-50.6123) and 2021-07-01 (-17.6449).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 93.2% in value between 2021-07-01 (-17.6449) and 2021-08-01 (-34.0906).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 208.2% in value between 2021-10-01 (-19.4914) and 2021-11-01 (-60.0674).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 68.4% in value between 2021-11-01 (-60.0674) and 2021-12-01 (-18.987).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 54.6% in value between 2021-12-01 (-18.987) and 2022-01-01 (-29.3475).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 92.8% in value between 2022-01-01 (-29.3475) and 2022-02-01 (-2.1027).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 3196.5% in value between 2022-02-01 (-2.1027) and 2022-03-01 (-69.3148).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 111.0% in value between 2022-03-01 (-69.3148) and 2022-04-01 (-146.2521).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 55.2% in value between 2022-04-01 (-146.2521) and 2022-05-01 (-65.4879).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 88.7% in value between 2022-05-01 (-65.4879) and 2022-06-01 (-123.5985).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 87.8% in value between 2022-06-01 (-123.5985) and 2022-07-01 (-232.124).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 69.3% in value between 2022-08-01 (-211.7173) and 2022-09-01 (-65.0377).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 281.7% in value between 2022-10-01 (-52.1125) and 2022-11-01 (-198.9145).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 68.1% in value between 2022-12-01 (-148.2676) and 2023-01-01 (-249.286).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 74.5% in value between 2023-02-01 (-237.1575) and 2023-03-01 (-60.3921).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 138.9% in value between 2023-04-01 (-54.968) and 2023-05-01 (-131.2985).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 57.1% in value between 2023-07-01 (-224.663) and 2023-08-01 (-96.405).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 64.7% in value between 2023-11-01 (-147.9741) and 2023-12-01 (-243.7855).
+  - warning: [DIRECT_REPO.AVG] Unexpected jump of 100.0% in value between 2023-12-01 (-243.7855) and 2024-01-01 (0.0).
+  - warning: [DIRECT_REPO.EOM] Unexpected jump of 98.7% in value between 2020-02-01 (-40.3) and 2020-03-01 (-0.536).
+  - warning: [DIRECT_REPO.EOM] Unexpected jump of 16524.8% in value between 2020-03-01 (-0.536) and 2020-04-01 (-89.109).
   - warning: ... 210 more warnings not listed
 - **nbk/NBK_DEPOSIT_AUCTIONS** — fetch+validate+process: ok (downloaded=282, processed=282)
   - warning: [VOLUME] Unexpected jump of 120.9% in value between 2019-02-01 (687.24) and 2019-03-01 (1518.0).

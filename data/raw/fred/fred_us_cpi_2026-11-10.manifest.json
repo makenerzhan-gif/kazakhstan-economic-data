@@ -1,6 +1,6 @@
 {
-  "downloaded_at": "2026-11-10T11:18:33.369164",
-  "raw_file": "fred_us_cpi_2026-10-17.csv",
+  "downloaded_at": "2026-11-10T14:51:08.988344",
+  "raw_file": "fred_us_cpi_2026-11-10.csv",
   "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv",
   "series": "CPIAUCSL"
 }

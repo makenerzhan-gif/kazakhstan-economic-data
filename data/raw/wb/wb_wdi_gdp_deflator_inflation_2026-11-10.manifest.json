@@ -1,5 +1,5 @@
 {
-  "downloaded_at": "2026-11-10T11:24:04.692968",
+  "downloaded_at": "2026-11-10T14:57:42.546196",
   "raw_file": "wb_wdi_gdp_deflator_inflation_2026-10-10.json",
   "source_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.DEFL.KD.ZG?format=json&per_page=20000&date=1960:2026"
 }

@@ -76695,6 +76695,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-05-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,1865700.0,million KZT,minfin,2026-11-10,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-10
 2022-05-31,KZ,national,daily,SWAP_1D,15.82314435764772,% per annum,kase,2026-11-10,level,2026-11-10
 2022-05-31,KZ,national,daily,TONIA,14.89,% per annum,kase,2026-11-10,level,2026-11-10
+2022-06-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-10,level,2026-11-10
 2022-06-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8633050.39573248,million KZT,nbk,2026-11-10,level,2026-11-10
 2022-06-01,KZ,national,monthly,BANK_LOANS_STB_FX,1614561.8293493807,million KZT,nbk,2026-11-10,level,2026-11-10
 2022-06-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,10888319.314274454,million KZT,nbk,2026-11-10,level,2026-11-10
@@ -76704,6 +76705,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-06-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,16140450.197159426,million KZT,nbk,2026-11-10,level,2026-11-10
 2022-06-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3380919.512847509,million KZT,nbk,2026-11-10,level,2026-11-10
 2022-06-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,19521369.710006934,million KZT,nbk,2026-11-10,level,2026-11-10
+2022-06-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-10,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-10
+2022-06-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-10,level,2026-11-10
 2022-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.6,index,nbk,2026-11-10,level,2026-11-10
 2022-06-01,BLR,national,monthly,BY_CPI_YOY,117.55,"index, same month previous year = 100",eec,2026-11-10,level,2026-11-10
 2022-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,745611.922,thousand transactions,nbk,2026-11-10,level,2026-11-10
@@ -77022,6 +77025,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,20050802.573056906,million KZT,nbk,2026-11-10,level,2026-11-10
 2022-07-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-10,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-10
 2022-07-01,KZ,national,quarterly,BANK_ROA,3.59,%,nbk,2026-11-10,level,2026-11-10
+2022-07-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-10,level,2026-11-10
 2022-07-01,KZ,national,quarterly,BANK_ROE,25.74,%,nbk,2026-11-10,level,2026-11-10
 2022-07-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-10,level,2026-11-10
 2022-07-01,KZ,national,quarterly,BOP_GOODS_BALANCE,7887.212171,million USD,nbk,2026-11-10,level,2026-11-10
@@ -96599,6 +96603,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_FIXED_TERM_KZT,20030612.32000775,million KZT,nbk,2026-11-10,level,2026-11-10
 2026-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_FX,23356.35301788,million KZT,nbk,2026-11-10,level,2026-11-10
 2026-10-01,KZ,national,monthly,HOUSEHOLD_DEPOSITS_SAVING_KZT,2649241.49764673,million KZT,nbk,2026-11-10,level,2026-11-10
+2026-10-01,KZ,national,monthly,KASE_CNY_VOLUME,1858786074.0,CNY,nbk,2026-11-10,level,2026-11-10
+2026-10-01,KZ,national,monthly,KASE_EUR_VOLUME,140585752.0,EUR,nbk,2026-11-10,level,2026-11-10
+2026-10-01,KZ,national,monthly,KASE_RUB_VOLUME,89179621739.0,RUB,nbk,2026-11-10,level,2026-11-10
+2026-10-01,KZ,national,monthly,KASE_USD_VOLUME,8526070138.0,USD,nbk,2026-11-10,level,2026-11-10
 2026-10-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-26.6882,% per annum,derived,2026-11-10,level,2026-11-10
 2026-10-01,KZ,national,monthly,KZT_USD_RATE_DIFF_10Y,7.5748,percentage points,derived,2026-11-10,level,2026-11-10
 2026-10-01,KZ,national,monthly,KZT_USD_RATE_DIFF_1Y,9.9609,percentage points,derived,2026-11-10,level,2026-11-10
@@ -96621,6 +96629,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-10-01,USA,national,monthly,USD_BROAD_INDEX,121.4781,index Jan 2006 = 100,fred,2026-11-10,level,2026-11-10
 2026-10-01,USA,national,monthly,USD_EME_INDEX,129.9673,index Jan 2006 = 100,fred,2026-11-10,level,2026-11-10
 2026-10-01,USA,national,monthly,US_BAA_SPREAD,1.4614,percentage points,fred,2026-11-10,level,2026-11-10
+2026-10-01,USA,national,monthly,US_CPI,337.476,"index, 1982-84 = 100",fred,2026-11-10,level,2026-11-10
 2026-10-01,USA,national,monthly,US_FED_FUNDS,3.88,% per annum,fred,2026-11-10,level,2026-11-10
 2026-10-01,USA,national,monthly,US_NFCI,-0.4776,index (0 = average),fred,2026-11-10,level,2026-11-10
 2026-10-01,USA,national,monthly,US_TREASURY_10Y,5.13,% per annum,fred,2026-11-10,level,2026-11-10
@@ -96773,6 +96782,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-10-30,KZ,national,daily,SWAP_1D,10.356535634584548,% per annum,kase,2026-11-10,level,2026-11-10
 2026-10-30,KZ,national,daily,TONIA,14.87,% per annum,kase,2026-11-10,level,2026-11-10
 2026-10-31,RUS,national,daily,RUB_USD,80.5573,RUB per USD,cbr,2026-11-10,level,2026-11-10
+2026-11-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,68.229029893356,KZT per CNY,nbk,2026-11-10,level,2026-11-10
 2026-11-01,KZ,national,monthly,GS_YIELD_10Y,12.7242,% per annum,kase,2026-11-10,level,2026-11-10
 2026-11-01,KZ,national,monthly,GS_YIELD_1Y,13.9894,% per annum,kase,2026-11-10,level,2026-11-10
 2026-11-01,KZ,national,monthly,GS_YIELD_2Y,13.7485,% per annum,kase,2026-11-10,level,2026-11-10
@@ -96827,6 +96837,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-11-10,KZ,national,daily,EXCHANGE_RATE_RUB,5.45,KZT per RUB,nbk,2026-11-10,level,2026-11-10
 2026-11-10,RUS,national,daily,RUB_USD,82.7536,RUB per USD,cbr,2026-11-10,level,2026-11-10
 2026-11-10,KZ,national,daily,SWAP_1D,10.31169259382476,% per annum,kase,2026-11-10,level,2026-11-10
+2026-11-10,KZ,national,daily,TONIA,15.16,% per annum,kase,2026-11-10,level,2026-11-10
 2026-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,191.121841,index,imf,2026-11-10,IMF WEO estimate/projection (country update 9/24/2026),2026-11-10
 2026-12-31,KZ,national,annual,IMF_CPI_INDEX,183.924772,index,imf,2026-11-10,IMF WEO estimate/projection (country update 9/24/2026),2026-11-10
 2026-12-31,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.545133,% of GDP,imf,2026-11-10,IMF WEO estimate/projection (country update 9/24/2026),2026-11-10
