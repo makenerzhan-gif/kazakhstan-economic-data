@@ -1,7 +1,7 @@
 {
   "source": "bns",
-  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
-  "dataset_id": "taldau-index-703115",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "FUEL_PRICES_BY_CITY",
   "indicator_name": "Average retail prices of petrol, diesel and LPG by city, monthly, KZT",
   "description": "Средние цены на бензин, дизельное топливо и сжиженный газ по городам, помесячно, тенге",

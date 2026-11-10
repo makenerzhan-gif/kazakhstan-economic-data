@@ -249,3 +249,8 @@
 {"indicator_id": "EUROBOND_SPREAD_BY_ISSUE", "period": "2026-11-01 XS1263139856", "old_value": 95.6, "new_value": 97.6, "detected_date": "2026-11-09", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "EUROBOND_SPREAD_BY_ISSUE", "period": "2026-11-01 XS3093655341", "old_value": 72.4, "new_value": 73.5, "detected_date": "2026-11-09", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "EUROBOND_SPREAD_BY_ISSUE", "period": "2026-11-01 XS3093658014", "old_value": 87.2, "new_value": 88.2, "detected_date": "2026-11-09", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_SPREAD_BY_ISSUE", "period": "2026-11-01 XS1120709826", "old_value": 82.9, "new_value": 78.9, "detected_date": "2026-11-10", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_SPREAD_BY_ISSUE", "period": "2026-11-01 XS1263139856", "old_value": 97.6, "new_value": 93.6, "detected_date": "2026-11-10", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_SPREAD_BY_ISSUE", "period": "2026-11-01 XS2914770545", "old_value": 74.4, "new_value": 69.4, "detected_date": "2026-11-10", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_SPREAD_BY_ISSUE", "period": "2026-11-01 XS3093655341", "old_value": 73.5, "new_value": 66.8, "detected_date": "2026-11-10", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_SPREAD_BY_ISSUE", "period": "2026-11-01 XS3093658014", "old_value": 88.2, "new_value": 85.3, "detected_date": "2026-11-10", "source": "kase", "reason": "not stated by source"}

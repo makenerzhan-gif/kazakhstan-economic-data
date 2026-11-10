@@ -1,7 +1,7 @@
 {
   "source": "bns",
-  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
-  "dataset_id": "taldau-index-703196",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "ENTERPRISE_PROFIT_LOSS_QUARTERLY",
   "indicator_name": "Financial results of large and medium enterprises: profit of profit-makers and loss of loss-makers by NACE section and region, quarterly, million KZT",
   "description": "Финансовые результаты крупных и средних предприятий: сумма прибыли и сумма убытка по видам деятельности (ОКЭД) и регионам, поквартально, млн тенге",

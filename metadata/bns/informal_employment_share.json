@@ -1,7 +1,7 @@
 {
   "source": "bns",
-  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
-  "dataset_id": "taldau-index-20612396",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "INFORMAL_EMPLOYMENT_SHARE",
   "indicator_name": "Informal employment share of total employment (total, urban, rural) by region, annual, %",
   "description": "Доля неформально занятых в общей численности занятых (всего, город, село) по регионам, ежегодно, %",

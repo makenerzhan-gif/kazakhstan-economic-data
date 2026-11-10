@@ -1,0 +1,21 @@
+{
+  "source": "fred",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAA10Y",
+  "dataset_id": "FRED/BAA10Y",
+  "indicator_id": "US_BAA_SPREAD",
+  "indicator_name": "Moody's Baa corporate yield spread over 10-year Treasury, monthly average",
+  "description": "Спред доходности корпоративных облигаций Baa (Moody's) к 10-летним казначейским облигациям США, среднее за месяц",
+  "frequency": "monthly",
+  "unit": "percentage points",
+  "currency": "",
+  "geography": "United States",
+  "methodology": "Percentage points, Moody's Baa corporate bond yield less the 10-year Treasury yield, monthly average (a credit-risk premium; the ICE BofA high-yield spread is licensed for internal use only and FRED serves just its last three years). FRED series BAA10Y.",
+  "publication_date": null,
+  "last_update_date": "2026-11-10",
+  "download_date": "2026-11-10",
+  "period_start": "1986-01-01",
+  "period_end": "2026-10-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "fred",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS",
+  "dataset_id": "FRED/DTWEXBGS",
+  "indicator_id": "USD_BROAD_INDEX",
+  "indicator_name": "Nominal broad U.S. dollar index (Federal Reserve), monthly average",
+  "description": "Широкий номинальный индекс доллара США (ФРС), среднее за месяц",
+  "frequency": "monthly",
+  "unit": "index Jan 2006 = 100",
+  "currency": "",
+  "geography": "United States",
+  "methodology": "Index Jan 2006 = 100, Federal Reserve nominal broad U.S. dollar index (goods and services), monthly average; a rise = stronger dollar. FRED series DTWEXBGS.",
+  "publication_date": null,
+  "last_update_date": "2026-11-10",
+  "download_date": "2026-11-10",
+  "period_start": "2006-01-01",
+  "period_end": "2026-10-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

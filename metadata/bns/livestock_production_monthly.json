@@ -1,7 +1,7 @@
 {
   "source": "bns",
-  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
-  "dataset_id": "taldau-index-3055928",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "LIVESTOCK_PRODUCTION_MONTHLY",
   "indicator_name": "Livestock output per month: slaughter (live weight), milk, eggs, by region",
   "description": "Производство продукции животноводства за месяц: реализация скота и птицы на убой (живой вес), молоко, яйца, по регионам",

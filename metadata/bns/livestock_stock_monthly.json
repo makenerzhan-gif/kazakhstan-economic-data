@@ -1,7 +1,7 @@
 {
   "source": "bns",
-  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
-  "dataset_id": "taldau-index-701328",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "LIVESTOCK_STOCK_MONTHLY",
   "indicator_name": "Livestock and poultry stock (cattle, sheep and goats, horses, camels, pigs, poultry) at end of month by region, thousand head",
   "description": "Поголовье скота и птицы (КРС, овцы и козы, лошади, верблюды, свиньи, птица) на конец месяца по регионам, тыс. голов",

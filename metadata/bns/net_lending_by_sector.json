@@ -1,7 +1,7 @@
 {
   "source": "bns",
-  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
-  "dataset_id": "taldau-index-701002",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "NET_LENDING_BY_SECTOR",
   "indicator_name": "Net lending (+) / net borrowing (-) by institutional sector, annual, million KZT",
   "description": "Чистое кредитование (+) / чистое заимствование (-) по институциональным секторам, ежегодно, млн тенге",

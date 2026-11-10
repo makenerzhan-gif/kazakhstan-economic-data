@@ -1,7 +1,7 @@
 {
   "source": "bns",
-  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
-  "dataset_id": "taldau-index-20572743",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "UNPRODUCTIVE_SELF_EMPLOYED_SHARE",
   "indicator_name": "Unproductively self-employed as a share of the self-employed, by region, quarterly, %",
   "description": "Доля непродуктивно занятых в составе самостоятельно занятого населения по регионам, поквартально, %",

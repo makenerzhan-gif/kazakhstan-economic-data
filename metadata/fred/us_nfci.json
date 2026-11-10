@@ -1,0 +1,21 @@
+{
+  "source": "fred",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NFCI",
+  "dataset_id": "FRED/NFCI",
+  "indicator_id": "US_NFCI",
+  "indicator_name": "Chicago Fed National Financial Conditions Index (NFCI), monthly average",
+  "description": "Индекс финансовых условий ФРБ Чикаго (NFCI), среднее за месяц",
+  "frequency": "monthly",
+  "unit": "index (0 = average)",
+  "currency": "",
+  "geography": "United States",
+  "methodology": "Index (0 = average, positive = tighter than average), Chicago Fed National Financial Conditions Index, weekly, monthly average of the weeks ending in the month. The Chicago Fed revises the whole history every week. FRED series NFCI.",
+  "publication_date": null,
+  "last_update_date": "2026-11-10",
+  "download_date": "2026-11-10",
+  "period_start": "1971-01-01",
+  "period_end": "2026-10-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,2 +1,4 @@
 {"indicator_id": "NBK_DEPOSIT_AUCTIONS", "period": "2026-11-01 VOLUME", "old_value": 6438.02, "new_value": 7452.88, "detected_date": "2026-11-09", "source": "nbk", "reason": "not stated by source"}
 {"indicator_id": "NBK_DEPOSIT_AUCTIONS", "period": "2026-11-01 N", "old_value": 5.0, "new_value": 6.0, "detected_date": "2026-11-09", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_DEPOSIT_AUCTIONS", "period": "2026-11-01 VOLUME", "old_value": 7452.88, "new_value": 8830.62, "detected_date": "2026-11-10", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_DEPOSIT_AUCTIONS", "period": "2026-11-01 N", "old_value": 6.0, "new_value": 7.0, "detected_date": "2026-11-10", "source": "nbk", "reason": "not stated by source"}

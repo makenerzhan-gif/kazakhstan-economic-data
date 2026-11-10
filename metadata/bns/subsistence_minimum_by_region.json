@@ -1,7 +1,7 @@
 {
   "source": "bns",
-  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
-  "dataset_id": "taldau-index-704492",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "SUBSISTENCE_MINIMUM_BY_REGION",
   "indicator_name": "Subsistence minimum (BNS, price-based), total, pensioners, children 0-13, by region, monthly, KZT",
   "description": "Величина прожиточного минимума (расчёт БНС по ценам), всего, пенсионеры, дети 0-13 лет, по регионам, помесячно, тенге",
