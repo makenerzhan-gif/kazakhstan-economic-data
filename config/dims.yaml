@@ -5024,6 +5024,7 @@ datasets:
     fetcher: analytics
     measure: monetary_conditions
     min_items: 8
+    no_jump_check: ["REAL_.*", "MCI.*"]
     frequency: monthly
     unit: "%, percentage points (MCI)"
     category: monetary
@@ -5036,6 +5037,7 @@ datasets:
     fetcher: analytics
     measure: output_gap
     min_items: 6
+    no_jump_check: ["HP", "HP_ONESIDED", "HAMILTON", "UC", "MEAN"]
     frequency: quarterly
     unit: "% of potential GDP; % a year (potential growth); bn KZT at 2010 prices (GDP)"
     category: national_accounts
@@ -5048,6 +5050,7 @@ datasets:
     fetcher: analytics
     measure: credit
     min_items: 5
+    no_jump_check: ["CREDIT_GAP", "CREDIT_IMPULSE", "CREDIT_GROWTH_.*"]
     frequency: quarterly
     unit: "% of GDP, percentage points, %"
     category: monetary
@@ -5060,6 +5063,7 @@ datasets:
     fetcher: analytics
     measure: fiscal
     min_items: 5
+    no_jump_check: ["FISCAL_IMPULSE", ".*_BALANCE_PCT"]
     frequency: annual
     unit: "bn KZT, % of GDP, % of non-oil GDP, percentage points"
     category: fiscal
@@ -5264,6 +5268,7 @@ datasets:
       - {code: S14, term: "313861", name: "Домашние хозяйства"}
     min_items: 6
     refresh_days: 30
+    no_jump_check: [".*"]
     frequency: annual
     unit: "million KZT"
     category: national_accounts
@@ -5372,6 +5377,7 @@ datasets:
       - {code: P51g, side: uses, name: "Валовое накопление основного капитала"}
       - {code: B9, side: uses, name: "Чистое кредитование (+) / чистое заимствование (-)"}
     min_items: 50
+    no_jump_check: ["B8g\\..*", "B9\\..*", "HH_SAVING_RATE"]
     frequency: annual
     unit: "million KZT (HH_SAVING_RATE: %)"
     category: national_accounts
