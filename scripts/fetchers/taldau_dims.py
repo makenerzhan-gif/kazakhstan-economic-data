@@ -173,7 +173,11 @@ def fetch_regional(ds: dict) -> tuple[list[dict], dict]:
                        an unlisted term stops the dataset;
       `segments`       [{dic_ids, terms}]: the same items under several dimension sets, later
                        segments winning on a common date (freight tariffs, 703062, changed
-                       its classification in 2026).
+                       its classification in 2026); a segment may set its own `region_pos` and
+                       `national_term` (from 2025 some indices use region dictionary 4843, whose
+                       national node is 77397431, not 741880 -- added 2026-11-10), its own
+                       `item_pos`, and `items` (the item codes it carries);
+      item `measure_id` overrides the dataset's (items from indices with other units).
     """
     if ds.get("refresh_days"):
         from fetchers import imf_dims
@@ -191,21 +195,27 @@ def fetch_regional(ds: dict) -> tuple[list[dict], dict]:
     raw, unknown, missing = [], set(), []
     for seg in segments:
         base = seg["terms"].split(",")
+        nt = str(seg.get("national_term", ds.get("national_term", NATIONAL_TERM)))   # 77397431 under region dictionary 4843 (2025+)
+        rp = int(seg.get("region_pos", ds.get("region_pos", 0)))
+        ip = int(seg.get("item_pos", ds["item_pos"]))
         for item in ds["items"]:
-            ids = {**ds, "dic_ids": seg["dic_ids"], "index_id": item.get("index_id", ds["index_id"])}
+            if seg.get("items") and item["code"] not in seg["items"]:
+                continue                                  # a segment can carry only some of the items
+            ids = {**ds, "dic_ids": seg["dic_ids"], "index_id": item.get("index_id", ds["index_id"]),
+                   "measure_id": str(item.get("measure_id", ds.get("measure_id", "0")))}
             for var in variants:
                 terms = list(base)
-                terms[ip], terms[rp] = str(item["term"]), NATIONAL_TERM
+                terms[ip], terms[rp] = str(item["term"]), nt
                 for p, t in (var.get("fixed") or {}).items():
                     terms[int(p)] = str(t)
                 tstr = ",".join(terms)
                 code = f"{item['code']}{var['suffix']}"
-                root = _post(ids, tstr)
-                top = [n for n in root if str(n.get("id")) == NATIONAL_TERM]
+                root = _post(ids, tstr, term=nt)
+                top = [n for n in root if str(n.get("id")) == nt]
                 if ds.get("flat_regions"):
-                    regions = [n for n in root if str(n.get("id")) != NATIONAL_TERM]
+                    regions = [n for n in root if str(n.get("id")) != nt]
                 elif top and str(top[0].get("leaf")).lower() != "true":
-                    regions = _post(ids, tstr, parent=NATIONAL_TERM, pos=str(rp), term=NATIONAL_TERM)
+                    regions = _post(ids, tstr, parent=nt, pos=str(rp), term=nt)
                 else:
                     regions = []
                 raw.append({"code": code, "index_id": ids["index_id"], "terms": tstr, "national": top, "regions": regions})

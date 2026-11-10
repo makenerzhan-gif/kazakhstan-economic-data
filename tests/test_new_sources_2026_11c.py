@@ -93,3 +93,77 @@ def test_debt_listing_unions_activities(monkeypatch):
                         {"id": 2, "title": "State and State Guaranteed Debt (as of July 1, 2026)", "created_date": "2026-07-30"}]}
     monkeypatch.setattr(minfin, "_list_documents", lambda **kw: listings[kw["activities"]])
     assert [d["id"] for d in minfin._debt_documents()] == [3, 2]
+
+
+# ---------------------------------------------------------------- BNS block B (Taldau extensions, sector accounts, social standards)
+
+def test_fetch_regional_segment_national_term_item_pos_and_item_measure(monkeypatch):
+    from fetchers import taldau_dims
+    calls = []
+
+    def fake_post(ds, terms, parent="", pos="0", term="741880"):
+        calls.append((ds["dic_ids"], terms, term, ds["measure_id"]))
+        if ds["dic_ids"].startswith("4843"):
+            return [{"id": "77397431", "text": "РК", "leaf": "true", "y012025": "51548"}]
+        return [{"id": "741880", "text": "РК", "leaf": "true", "y122024": "50293"}]
+
+    monkeypatch.setattr(taldau_dims, "_post", fake_post)
+    monkeypatch.setattr(taldau_dims.raw_store, "save_raw_bytes", lambda *a, **k: Path("x"))
+    monkeypatch.setattr(taldau_dims.raw_store, "write_download_manifest", lambda *a, **k: None)
+    ds = {"id": "T", "index_id": "704492", "measure_id": "1", "frequency": "monthly", "item_pos": 2,
+          "segments": [{"dic_ids": "67,576,1450", "terms": "741880,741935,3768282"},
+                       {"dic_ids": "4843,576,1450", "terms": "77397431,741935,3768282", "national_term": "77397431"},
+                       {"dic_ids": "67,1450", "terms": "741880,3768282", "item_pos": 1, "items": ["EXTRA"]}],
+          "items": [{"code": "TOTAL", "term": "3768282", "name": "Все"}, {"code": "EXTRA", "term": "9", "name": "x", "measure_id": "7"}]}
+    recs, _ = taldau_dims.fetch_regional(ds)
+    by = {(r["item_code"], r["date"]): r["value"] for r in recs}
+    assert by[("TOTAL", "2024-12-01")] == 50293 and by[("TOTAL", "2025-01-01")] == 51548
+    assert ("67,576,1450", "741880,741935,9", "741880", "7") in calls            # EXTRA under its own measure
+    assert ("4843,576,1450", "77397431,741935,3768282", "77397431", "1") in calls
+    assert ("67,1450", "741880,9", "741880", "7") in calls and not any(c[1] == "741880,3768282" for c in calls)
+
+
+def test_sector_accounts_parser():
+    from fetchers import bns_dims
+    head = ["S11", "S12", "S13", "S14", "S15", "S1", "S2", None, None, None] + ["S11", "S12", "S13", "S14", "S15", "S1", "S2", None]
+
+    def row(code, label, uses=None, res=None):
+        return list(uses or [None] * 8) + [code, label] + list(res or [None] * 8)
+    grid = [["title"] + [None] * 17, head,
+            row("B6g", "Валовой располагаемый доход", [10, 2, 5, 100, 1, 118, None, 118]),
+            row("B5g", "Валовой располагаемый доход", res=[10, 2, 5, 100, 1, 118, None, 118]),   # mislabelled opening line
+            row("B5g", "Валовой национальный доход", res=[9, 9, 9, 9, 9, 45, None, 45]),
+            row("B5g", "Валовой национальный доход", [11, 3, 6, 90, 1, 111, None, 111]),
+            row("D8", "Корректировка", [None, 4, None, None, None, 4, None, 4], [None, None, None, 4, None, 4, None, 4]),
+            row("B8g", "Валовое сбережение", [10, 1, 1, -10.4, 0, 1.6, None, 1.6])]
+    ds = {"id": "SA", "element_id": 1, "min_years": 1,
+          "accounts": [{"code": "B5g", "side": "uses", "label": "национальный", "name": "ВНД"},
+                       {"code": "B6g", "side": "uses", "name": "РД"},
+                       {"code": "D8", "side": "resources", "item": "D8_RECEIVED", "name": "D8"},
+                       {"code": "B8g", "side": "uses", "name": "Сб"}]}
+    recs = bns_dims.parse_sector_accounts({"Обложка": [[None]], "2024": grid}, ds)
+    by = {r["item_code"]: r["value"] for r in recs}
+    assert by["B5g.S14"] == 90 and by["B6g.S14"] == 100 and by["D8_RECEIVED.S14"] == 4 and "D8_RECEIVED.S12" not in by
+    assert by["HH_SAVING_RATE"] == pytest.approx(-10.0) and recs[0]["date"] == "2024-12-31"
+
+
+def test_social_standards_step_series():
+    doc = yaml.safe_load((REPO / "config" / "social_standards.yaml").read_text(encoding="utf-8"))
+    recs = manual_vintages.step_records(doc, {"id": "S", "file": "x"}, today="2026-11-10")
+    v = {(r["item_code"], r["date"]): r["value"] for r in recs}
+    assert v[("MZP", "2018-12-01")] == 28284 and v[("MZP", "2019-01-01")] == 42500 and v[("MZP", "2021-12-01")] == 42500
+    assert v[("MRP", "2022-03-01")] == 3063 and v[("MRP", "2022-04-01")] == 3180 and v[("MRP", "2026-11-01")] == 4325
+    assert ("MIN_PENSION", "2010-12-01") not in v and ("MRP", "2026-12-01") not in v
+    for item in doc["items"]:
+        keys = list(item["values"])
+        assert keys == sorted(keys), item["code"]
+
+
+def test_block_b_bns_datasets_configured():
+    import update_dims
+    for ds_id in ("SUBSISTENCE_MINIMUM_BY_REGION", "SOCIAL_STANDARDS", "ENTERPRISE_PROFIT_LOSS_QUARTERLY", "ENTERPRISE_LOSS_MAKING_SHARE_QUARTERLY",
+                  "INFORMAL_EMPLOYMENT_SHARE", "UNPRODUCTIVE_SELF_EMPLOYED_SHARE", "NET_LENDING_BY_SECTOR", "SECTOR_ACCOUNTS",
+                  "LIVESTOCK_STOCK_MONTHLY", "LIVESTOCK_PRODUCTION_MONTHLY", "FUEL_PRICES_BY_CITY", "SOVEREIGN_RATINGS", "QUASI_STATE_DEBT_ANNUAL"):
+        ds = update_dims.DATASETS[ds_id]
+        assert ds.get("fetcher", ds["agency"]) in update_dims.AGENCY_FETCHERS, ds_id
+        assert ds["agency"] in update_dims.METHODOLOGY or ds["agency"] == "bns", ds_id

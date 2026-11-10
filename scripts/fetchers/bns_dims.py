@@ -1048,11 +1048,65 @@ def fetch(ds: dict) -> tuple[list[dict], dict]:
     return records, manifest
 
 
+SECTOR_COLS = ("S11", "S12", "S13", "S14", "S15", "S1", "S2")
+SECTOR_NAMES = {"S11": "нефинансовые корпорации", "S12": "финансовые корпорации", "S13": "государственное управление",
+                "S14": "домашние хозяйства", "S15": "НКОДХ", "S1": "экономика в целом", "S2": "остальной мир"}
+
+
+def parse_sector_accounts(grids: dict[str, list[list]], ds: dict) -> list[dict]:
+    """Layout sector_accounts (added 2026-11-10): the bulletin «Национальные счета РК» (358455), one sheet per year
+    «YYYY» holding the integrated economic accounts. Columns 0-6 uses of S11, S12, S13, S14, S15, S1, S2 (7 = total),
+    8 the SNA code, 9 the label, 10-16 resources of the same sectors. Every balancing item appears twice -- where it is
+    derived (uses side) and as the opening line of the next account (resources side, sometimes mislabelled) -- so each
+    `accounts` entry {code, side: uses|resources, label: regex} takes the FIRST row with that code, a number on that
+    side and a matching label. Item <code>.<sector> (B8g.S14); HH_SAVING_RATE = B8g / (B6g + D8 received), S14, %."""
+    specs = ds["accounts"]
+    out = []
+    years = [(name, grid) for name, grid in grids.items() if re.fullmatch(r"(19|20)\d\d", str(name).strip())]
+    if len(years) < ds.get("min_years", 1):
+        _structural(ds, "fewer year sheets than expected", f">= {ds.get('min_years')} sheets named YYYY", str(list(grids)))
+    for name, grid in years:
+        head = next((r for r in grid[:8] if r and len(r) > 16 and [str(c).strip() for c in r[:7]] == list(SECTOR_COLS)), None)
+        if head is None:
+            _structural(ds, f"sheet {name}: no sector-code header row", "S11 … S2 in columns 0-6", str(grid[:5])[:300])
+        date = f"{str(name).strip()}-12-31"
+        got = {}
+        for spec in specs:
+            code, side = spec["code"], spec.get("side", "uses")
+            off = 0 if side == "uses" else 10
+            lab = re.compile(spec["label"], re.IGNORECASE) if spec.get("label") else None
+            for r in grid:
+                if len(r) < 17 or str(r[8] or "").strip() != code:
+                    continue
+                if lab and not lab.search(" ".join(str(r[9] or "").split())):
+                    continue
+                vals = [_to_float(r[off + k]) for k in range(7)]
+                if all(v is None for v in vals):
+                    continue
+                for sector, v in zip(SECTOR_COLS, vals):
+                    if v is not None:
+                        item = f"{spec.get('item', code.replace('/', '_'))}.{sector}"
+                        got[item] = v
+                        out.append({"date": date, "region": dims.NATIONAL, "item_code": item,
+                                    "item_name": f"{spec['name']}: {SECTOR_NAMES[sector]}", "value": round(v, 1)})
+                break
+            else:
+                _structural(ds, f"sheet {name}: no {side} row for {code}", f"a row coded {code}", "none")
+        b6, b8, d8 = got.get("B6g.S14"), got.get("B8g.S14"), got.get("D8_RECEIVED.S14", 0.0)
+        if b6 and b8 is not None:
+            out.append({"date": date, "region": dims.NATIONAL, "item_code": "HH_SAVING_RATE",
+                        "item_name": "Норма валового сбережения домашних хозяйств, % (B8g / (B6g + D8))",
+                        "value": round(b8 / (b6 + d8) * 100, 3)})
+    return out
+
+
 def parse(content: bytes, ds: dict) -> list[dict]:
     grids = _sheets(content)
     year_regex = _year_regex(ds)
     dictionary = dims.load_dictionary(ds["dictionary"]) if ds.get("dictionary") not in (None, "from_table") else None
     records: list[dict] = []
+    if ds["layout"] == "sector_accounts":
+        return _finish(parse_sector_accounts(grids, ds), ds)
     if ds["layout"] == "year_sheets":                    # every «YYYY год» sheet, whatever their number
         return _finish(parse_year_sheets(list(grids.items()), dictionary, ds), ds)
     for sheet_name, grid in _pick_sheets(grids, ds):

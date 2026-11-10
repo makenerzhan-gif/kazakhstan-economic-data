@@ -61,6 +61,7 @@ METHODOLOGY = {"bns": "Bureau of National Statistics official methodology",
                "mne": "Ministry of National Economy, «Прогноз социально-экономического развития» (transcribed vintages, config/gov_forecast_vintages.yaml)",
                "ratings": "Sovereign credit ratings of S&P Global Ratings, Moody's and Fitch Ratings (long-term foreign currency), transcribed from the agencies' announcements",
                "quasi": "Supreme Audit Chamber reports and national holdings' consolidated IFRS statements (hand-transcribed annual figures)",
+               "legal": "Republican budget laws (adilet.zan.kz) as tabulated by the Ministry of Labour (gov.kz); hand-transcribed",
                "derived": "Derived by this repository from the pipeline's own series (scripts/fetchers/analytics.py); not published by any source",
                "damu": "Damu Entrepreneurship Development Fund, project-level subsidy report (sums of project rows)"}
 CONFIG = dims.load_config()

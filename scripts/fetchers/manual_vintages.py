@@ -136,7 +136,30 @@ def fetch_ratings(ds: dict) -> tuple[list[dict], dict]:
 
 
 # ---------------------------------------------------------------- hand-kept annual tables (added 2026-11-10)
+def step_records(doc: dict, ds: dict, today=None) -> list[dict]:
+    """Values keyed «YYYY-MM» (the month a level took effect), held until the next one, monthly to `today`."""
+    import pandas as pd
+    end = pd.Timestamp(today or pd.Timestamp.today()).to_period("M")
+    out = []
+    for item in doc["items"]:
+        changes = {}
+        for key, value in item["values"].items():
+            try:
+                changes[pd.Period(str(key), "M")] = float(value)
+            except ValueError:
+                _structural(ds, f"{item['code']}: bad month {key!r}")
+        month, level = min(changes), None
+        while month <= end:
+            level = changes.get(month, level)
+            out.append({"date": month.start_time.strftime("%Y-%m-%d"), "region": dims.NATIONAL, "item_code": item["code"],
+                        "item_name": item["name"], "value": level})
+            month += 1
+    return out
+
+
 def table_records(doc: dict, ds: dict) -> list[dict]:
+    if ds.get("step") == "monthly":
+        return step_records(doc, ds)
     out = []
     for item in doc["items"]:
         for year, value in item["values"].items():

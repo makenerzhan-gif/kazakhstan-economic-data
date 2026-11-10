@@ -21,17 +21,20 @@ def test_every_dataset_has_a_fetcher_and_a_known_layout():
         if key == "bns":
             assert ds["layout"] in ("periods_across", "region_blocks", "year_subcolumns", "group_blocks", "product_blocks", "year_quarters",
                                     "year_months", "year_rows_months", "year_sheets", "year_blocks_regions_items", "year_blocks_items_regions",
-                                    "year_blocks_items_regions_ytd", "month_rows", "region_blocks_months", "sector_columns")
+                                    "year_blocks_items_regions_ytd", "month_rows", "region_blocks_months", "sector_columns", "sector_accounts")
         elif key == "bns_trade":
             assert ds["measure"] in ("usd", "tonnes") and ds["frequency"] == "monthly"
             assert ds["dictionary"] in ("hs_export_groups", "hs_chapters", "hs_sections", "hs_balance_products")
             assert ds.get("flow", "exports") in ("exports", "imports")
         elif key == "taldau_regional":
-            assert ds["index_id"] and ds["dic_ids"].count(",") == ds["terms"].count(",") and ds["items"]
+            assert ds["index_id"] and ds["items"] and ("dic_ids" in ds or ds.get("segments")), ds["id"]
+            if "dic_ids" in ds:
+                assert ds["dic_ids"].count(",") == ds["terms"].count(","), ds["id"]
             assert len({i["code"] for i in ds["items"]}) == len(ds["items"]) and ds["frequency"] in ("monthly", "quarterly", "annual")
             assert all(i["name"] and i["term"] for i in ds["items"])
             for seg in ds.get("segments") or []:
                 assert seg["dic_ids"].count(",") == seg["terms"].count(","), ds["id"]
+                assert set(seg.get("items") or []) <= {i["code"] for i in ds["items"]}, ds["id"]
             if ds.get("flat_regions"):
                 assert ds["region_terms"] and set(ds["region_terms"].values()) - {None} <= {e["code"] for e in dims.load_dictionary("regions")}
         elif key == "nbk_cube":

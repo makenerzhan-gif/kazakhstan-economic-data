@@ -5089,3 +5089,290 @@ datasets:
     unit: "million KZT"
     category: fiscal
     note: "Hand-kept (config/quasi_state_debt.yaml): Minfin publishes no quasi-state debt table, so the annual totals come from the Supreme Audit Chamber (2019 13.95 trn, 2025 29.19 trn KZT = 18.3 % of GDP; external 13.27, internal 15.92) and the holdings' IFRS statements on kase.kz (Samruk-Kazyna borrowings 2011-2025, 8.09 trn in 2025, plus 1.20 trn of government loans; Baiterek 10.44 trn in 2025; KMG 3.52 trn, already inside Samruk-Kazyna -- items do not add up). The quarterly external part is EXTERNAL_DEBT_STATE_CONTROLLED (NBK). Update each June when the statements appear."
+
+  - id: SUBSISTENCE_MINIMUM_BY_REGION
+    name_ru: "Величина прожиточного минимума (расчёт БНС по ценам), всего, пенсионеры, дети 0-13 лет, по регионам, помесячно, тенге"
+    name_en: "Subsistence minimum (BNS, price-based), total, pensioners, children 0-13, by region, monthly, KZT"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "704492"
+    period_id: "4"
+    measure_id: "1"
+    item_pos: 2
+    segments:
+      - {dic_ids: "67,576,1450", terms: "741880,741935,3768282"}
+      - {dic_ids: "4843,576,1450", terms: "77397431,741935,3768282", national_term: "77397431"}
+    items:
+      - {code: TOTAL, term: "3768282", name: "Все группы населения"}
+      - {code: PENSIONERS, term: "3768297", name: "Пенсионеры и пожилые люди"}
+      - {code: CHILDREN_0_13, term: "19073708", name: "Дети 0-13 лет"}
+    min_items: 3
+    refresh_days: 20
+    frequency: monthly
+    unit: "KZT per month per person"
+    category: labour
+    note: "Taldau 704492, period 4: the BNS-computed subsistence minimum from current prices (seasonal, follows food prices) -- NOT the level fixed in the budget law for benefits (SOCIAL_STANDARDS VPM_LAW: 50 851 in 2026). Two dimension sets: 2011-01…2024-12 under region dictionary 67, 2025-01 on under dictionary 4843 (national node 77397431). National TOTAL 2024-12 50 293, 2025-01 51 548, 2026-09 73 563; Almaty city 2026-09 82 320. Children 0-13 from 2014-11 (older definition not carried)."
+
+  - id: SOCIAL_STANDARDS
+    name_ru: "Социальные стандарты по закону о бюджете: МРП, минимальная заработная плата, прожиточный минимум, минимальная и базовая пенсия, помесячно, тенге"
+    name_en: "Legislated social standards: MRP (monthly calculation index), minimum wage, subsistence minimum, minimum and base pension, monthly, KZT"
+    agency: legal
+    fetcher: manual_table
+    step: monthly
+    file: config/social_standards.yaml
+    min_items: 5
+    frequency: monthly
+    unit: "KZT"
+    category: labour
+    note: "Hand-kept (config/social_standards.yaml): the level in force in each month, from the budget law of each year and its mid-year amendments. MRP and MZP from 1999-01, VPM_LAW from 2010, pensions from 2011. 2026: MRP 4 325, MZP 85 000 (unchanged since 2024), VPM 50 851, minimum pension 69 049, base pension 35 596. Real MZP: divide by CPI."
+
+  - id: ENTERPRISE_PROFIT_LOSS_QUARTERLY
+    name_ru: "Финансовые результаты крупных и средних предприятий: сумма прибыли и сумма убытка по видам деятельности (ОКЭД) и регионам, поквартально, млн тенге"
+    name_en: "Financial results of large and medium enterprises: profit of profit-makers and loss of loss-makers by NACE section and region, quarterly, million KZT"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "703196"
+    period_id: "5"
+    measure_id: "1"
+    dic_ids: "67,915,749,2813"
+    terms: "741880,741885,741917,3629963"
+    item_pos: 1
+    scale: 1000000
+    items:
+      - {code: PROFIT.TOTAL, term: "741885", index_id: "703196", name: "Сумма прибыли: всего"}
+      - {code: PROFIT.A, term: "447173", index_id: "703196", name: "Сумма прибыли: Сельское, лесное и рыбное хозяйство"}
+      - {code: PROFIT.B, term: "447279", index_id: "703196", name: "Сумма прибыли: Горнодобывающая промышленность и разработка карьеров"}
+      - {code: PROFIT.C, term: "447346", index_id: "703196", name: "Сумма прибыли: Обрабатывающая промышленность"}
+      - {code: PROFIT.D, term: "448090", index_id: "703196", name: "Сумма прибыли: Электроснабжение, подача газа, пара и воздушное кондиционирование"}
+      - {code: PROFIT.E, term: "448117", index_id: "703196", name: "Сумма прибыли: Водоснабжение; канализационная система, контроль над сбором и распределением отходов"}
+      - {code: PROFIT.F, term: "448148", index_id: "703196", name: "Сумма прибыли: Строительство"}
+      - {code: PROFIT.G, term: "448215", index_id: "703196", name: "Сумма прибыли: Оптовая и розничная торговля; ремонт автомобилей и мотоциклов"}
+      - {code: PROFIT.H, term: "448475", index_id: "703196", name: "Сумма прибыли: Транспорт и складирование"}
+      - {code: PROFIT.I, term: "448558", index_id: "703196", name: "Сумма прибыли: Услуги по проживанию и питанию"}
+      - {code: PROFIT.J, term: "448585", index_id: "703196", name: "Сумма прибыли: Информация и связь"}
+      - {code: PROFIT.K, term: "448658", index_id: "703196", name: "Сумма прибыли: Финансовая и страховая деятельность"}
+      - {code: PROFIT.L, term: "448714", index_id: "703196", name: "Сумма прибыли: Операции с недвижимым имуществом"}
+      - {code: PROFIT.M, term: "448728", index_id: "703196", name: "Сумма прибыли: Профессиональная, научная и техническая деятельность"}
+      - {code: PROFIT.N, term: "448797", index_id: "703196", name: "Сумма прибыли: Деятельность в области административного и вспомогательного обслуживания"}
+      - {code: PROFIT.R, term: "448991", index_id: "703196", name: "Сумма прибыли: Искусство, развлечения и отдых"}
+      - {code: PROFIT.S, term: "449040", index_id: "703196", name: "Сумма прибыли: Предоставление прочих видов услуг"}
+      - {code: LOSS.TOTAL, term: "741885", index_id: "703199", name: "Сумма убытка (отрицательная): всего"}
+      - {code: LOSS.A, term: "447173", index_id: "703199", name: "Сумма убытка (отрицательная): Сельское, лесное и рыбное хозяйство"}
+      - {code: LOSS.B, term: "447279", index_id: "703199", name: "Сумма убытка (отрицательная): Горнодобывающая промышленность и разработка карьеров"}
+      - {code: LOSS.C, term: "447346", index_id: "703199", name: "Сумма убытка (отрицательная): Обрабатывающая промышленность"}
+      - {code: LOSS.D, term: "448090", index_id: "703199", name: "Сумма убытка (отрицательная): Электроснабжение, подача газа, пара и воздушное кондиционирование"}
+      - {code: LOSS.E, term: "448117", index_id: "703199", name: "Сумма убытка (отрицательная): Водоснабжение; канализационная система, контроль над сбором и распределением отходов"}
+      - {code: LOSS.F, term: "448148", index_id: "703199", name: "Сумма убытка (отрицательная): Строительство"}
+      - {code: LOSS.G, term: "448215", index_id: "703199", name: "Сумма убытка (отрицательная): Оптовая и розничная торговля; ремонт автомобилей и мотоциклов"}
+      - {code: LOSS.H, term: "448475", index_id: "703199", name: "Сумма убытка (отрицательная): Транспорт и складирование"}
+      - {code: LOSS.I, term: "448558", index_id: "703199", name: "Сумма убытка (отрицательная): Услуги по проживанию и питанию"}
+      - {code: LOSS.J, term: "448585", index_id: "703199", name: "Сумма убытка (отрицательная): Информация и связь"}
+      - {code: LOSS.K, term: "448658", index_id: "703199", name: "Сумма убытка (отрицательная): Финансовая и страховая деятельность"}
+      - {code: LOSS.L, term: "448714", index_id: "703199", name: "Сумма убытка (отрицательная): Операции с недвижимым имуществом"}
+      - {code: LOSS.M, term: "448728", index_id: "703199", name: "Сумма убытка (отрицательная): Профессиональная, научная и техническая деятельность"}
+      - {code: LOSS.N, term: "448797", index_id: "703199", name: "Сумма убытка (отрицательная): Деятельность в области административного и вспомогательного обслуживания"}
+      - {code: LOSS.R, term: "448991", index_id: "703199", name: "Сумма убытка (отрицательная): Искусство, развлечения и отдых"}
+      - {code: LOSS.S, term: "449040", index_id: "703199", name: "Сумма убытка (отрицательная): Предоставление прочих видов услуг"}
+    min_items: 30
+    refresh_days: 20
+    frequency: quarterly
+    unit: "million KZT"
+    category: national_accounts
+    note: "Taldau 703196 (profit of the enterprises that made a profit) and 703199 (loss of the loss-makers, negative), large and medium enterprises (size term 3629963; NOT the segment Taldau offers first, which is medium-sized only), discrete quarters 2015 Q1 on (not year-to-date). Balance (сальдо) = PROFIT + LOSS. National 2026 Q2: profit 6 895.2 bn, loss -780.9 bn, balance 6 114.3 bn. Sections O, P, Q, T, U not published."
+
+  - id: ENTERPRISE_LOSS_MAKING_SHARE_QUARTERLY
+    name_ru: "Доля убыточных и прибыльных крупных и средних предприятий по регионам, поквартально, %"
+    name_en: "Share of loss-making and profitable large and medium enterprises by region, quarterly, %"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "703198"
+    period_id: "5"
+    measure_id: "7"
+    dic_ids: "67,915,749,2813"
+    terms: "741880,741885,741917,3629963"
+    item_pos: 1
+    items:
+      - {code: LOSS_MAKING, term: "741885", index_id: "703198", name: "Доля предприятий, получивших убыток"}
+      - {code: PROFITABLE, term: "741885", index_id: "703195", name: "Доля предприятий, получивших прибыль"}
+    min_items: 2
+    refresh_days: 20
+    frequency: quarterly
+    unit: "% of reporting enterprises"
+    category: national_accounts
+    note: "Taldau 703198 and 703195, large and medium enterprises, all sections, 2015 Q1 on. National loss-making share 2025 Q4 30.72, 2026 Q1 38.12, 2026 Q2 31.13 %."
+
+  - id: INFORMAL_EMPLOYMENT_SHARE
+    name_ru: "Доля неформально занятых в общей численности занятых (всего, город, село) по регионам, ежегодно, %"
+    name_en: "Informal employment share of total employment (total, urban, rural) by region, annual, %"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "20612396"
+    period_id: "7"
+    measure_id: "7"
+    dic_ids: "67,749,576,1793"
+    terms: "741880,741917,741935,4197331"
+    item_pos: 1
+    items:
+      - {code: TOTAL, term: "741917", name: "Всего"}
+      - {code: URBAN, term: "533589", name: "Городская местность"}
+      - {code: RURAL, term: "533590", name: "Сельская местность"}
+    min_items: 3
+    refresh_days: 30
+    frequency: annual
+    unit: "% of employed"
+    category: labour
+    note: "Taldau 20612396, labour force survey, annual 2012-2024 (no quarterly series is published). National 2012 26.0, 2015 21.2, 2020 14.0, 2024 12.0; 2024 urban 7.1, rural 20.2."
+
+  - id: UNPRODUCTIVE_SELF_EMPLOYED_SHARE
+    name_ru: "Доля непродуктивно занятых в составе самостоятельно занятого населения по регионам, поквартально, %"
+    name_en: "Unproductively self-employed as a share of the self-employed, by region, quarterly, %"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "20572743"
+    period_id: "5"
+    measure_id: "7"
+    dic_ids: "67"
+    terms: "741880"
+    item_pos: 0
+    items:
+      - {code: TOTAL, term: "741880", name: "Доля непродуктивно занятых среди самостоятельно занятых"}
+    min_items: 1
+    refresh_days: 20
+    frequency: quarterly
+    unit: "% of the self-employed"
+    category: labour
+    note: "Taldau 20572743 (Social Code definition), national 2020 Q1 on, regions from 2023 Q1. 2026 Q1 7.7, 2026 Q2 7.3 %."
+
+  - id: NET_LENDING_BY_SECTOR
+    name_ru: "Чистое кредитование (+) / чистое заимствование (-) по институциональным секторам, ежегодно, млн тенге"
+    name_en: "Net lending (+) / net borrowing (-) by institutional sector, annual, million KZT"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "701002"
+    period_id: "7"
+    measure_id: "1"
+    dic_ids: "67,681"
+    terms: "741880,808076"
+    item_pos: 1
+    scale: 1000000
+    items:
+      - {code: S1, term: "808076", name: "Экономика в целом"}
+      - {code: S11, term: "313831", name: "Нефинансовые корпорации"}
+      - {code: S12, term: "313835", name: "Финансовые корпорации"}
+      - {code: S13, term: "313853", name: "Государственное управление"}
+      - {code: S15, term: "313858", name: "Некоммерческие организации, обслуживающие домашние хозяйства"}
+      - {code: S14, term: "313861", name: "Домашние хозяйства"}
+    min_items: 6
+    refresh_days: 30
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+    note: "Taldau 701002 (BNS integrated economic accounts, balancing item B9), 1993-2024 (general government from 1994). 2024: economy -3 891 934 (rest of the world +3 891 934), non-financial corporations +12 118 456, financial corporations +2 954 564, general government -4 791 309, households -10 329 009, NPISH -309 152 million KZT. Equals the bulletin «Национальные счета РК» (element 358455)."
+
+  - id: LIVESTOCK_STOCK_MONTHLY
+    name_ru: "Поголовье скота и птицы (КРС, овцы и козы, лошади, верблюды, свиньи, птица) на конец месяца по регионам, тыс. голов"
+    name_en: "Livestock and poultry stock (cattle, sheep and goats, horses, camels, pigs, poultry) at end of month by region, thousand head"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "701328"
+    period_id: "4"
+    measure_id: "748"
+    item_pos: 3
+    scale: 1000
+    segments:
+      - {dic_ids: "67,488,2946", terms: "741880,450122,17826311", item_pos: 2, items: [CATTLE, SHEEP_GOATS, POULTRY]}
+      - {dic_ids: "68,488,524,2946", terms: "741880,450122,679491,17826311", item_pos: 3}
+    items:
+      - {code: CATTLE, term: "17826311", name: "Крупный рогатый скот"}
+      - {code: SHEEP_GOATS, term: "17826314", name: "Овцы и козы"}
+      - {code: HORSES, term: "17825763", name: "Лошади"}
+      - {code: CAMELS, term: "17825828", name: "Верблюды"}
+      - {code: PIGS, term: "17826090", name: "Свиньи"}
+      - {code: POULTRY, term: "17826145", name: "Птица"}
+    min_items: 6
+    refresh_days: 20
+    frequency: monthly
+    unit: "thousand head"
+    category: agriculture
+    note: "Taldau 701328, all farm categories, end of month: 2011-01…2019-12 under dimensions 67,488,2946 (cattle, sheep and goats, poultry only; horses, camels and pigs from 2020), 2020-01 on under 68,488,524,2946 (the later wins on a common date). National 2026-09: cattle 8 778.481, sheep and goats 22 609.56, horses 4 787.063, camels 311.565, pigs 534.794, poultry 49 247.093 thousand (= BNS file 8131)."
+
+  - id: LIVESTOCK_PRODUCTION_MONTHLY
+    name_ru: "Производство продукции животноводства за месяц: реализация скота и птицы на убой (живой вес), молоко, яйца, по регионам"
+    name_en: "Livestock output per month: slaughter (live weight), milk, eggs, by region"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "3055928"
+    period_id: "4"
+    measure_id: "11"
+    dic_ids: "67,488,2946"
+    terms: "741880,450122,19774613"
+    item_pos: 2
+    scale: 1000000
+    items:
+      - {code: MEAT_LIVE, term: "19774613", index_id: "3055928", name: "Реализовано скота и птицы на убой в живом весе, всего, тыс. тонн"}
+      - {code: MEAT_LIVE.CATTLE, term: "17826311", index_id: "3055928", name: "Реализовано на убой в живом весе: крупный рогатый скот, тыс. тонн"}
+      - {code: MEAT_LIVE.SHEEP_GOATS, term: "17826314", index_id: "3055928", name: "Реализовано на убой в живом весе: овцы и козы, тыс. тонн"}
+      - {code: MEAT_LIVE.HORSES, term: "17825763", index_id: "3055928", name: "Реализовано на убой в живом весе: лошади, тыс. тонн"}
+      - {code: MEAT_LIVE.POULTRY, term: "17826145", index_id: "3055928", name: "Реализовано на убой в живом весе: птица, тыс. тонн"}
+      - {code: MILK, term: "17826325", index_id: "701354", name: "Молоко, тыс. тонн"}
+      - {code: EGGS, term: "17826193", index_id: "2972848", measure_id: "730", name: "Яйца куриные в скорлупе, млн штук"}
+    min_items: 7
+    refresh_days: 20
+    frequency: monthly
+    unit: "thousand tonnes (meat, milk); million pieces (eggs)"
+    category: agriculture
+    note: "Taldau 3055928 (slaughter, live weight; total from 2020-01, species from 2013), 701354 (milk, 2020-01 on), 2972848 (eggs, 2011-01 on), all farm categories, discrete months. National 2026-09: meat 203.754 thousand t, milk 361.409 thousand t; eggs 2026-08 426.181 million (= BNS file 8129)."
+
+  - id: FUEL_PRICES_BY_CITY
+    name_ru: "Средние цены на бензин, дизельное топливо и сжиженный газ по городам, помесячно, тенге"
+    name_en: "Average retail prices of petrol, diesel and LPG by city, monthly, KZT"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "703115"
+    period_id: "4"
+    measure_id: "1"
+    dic_ids: "67,82"
+    terms: "741880,699412"
+    item_pos: 1
+    flat_regions: true
+    region_terms: *housing_cities
+    items:
+      - {code: AI92, term: "699412", name: "Бензин АИ-92, тенге за литр"}
+      - {code: AI95, term: "699414", name: "Бензин АИ-95/АИ-96, тенге за литр"}
+      - {code: AI98, term: "699408", name: "Бензин АИ-98, тенге за литр"}
+      - {code: DIESEL_SUMMER, term: "653237", name: "Дизельное топливо летнее, тенге за литр"}
+      - {code: DIESEL_WINTER, term: "653238", name: "Дизельное топливо зимнее, тенге за литр"}
+      - {code: LPG_CYLINDER, term: "699154", index_id: "703114", name: "Газ сжиженный в баллонах, тенге за баллон 50 л"}
+      - {code: LPG_NETWORK, term: "653170", index_id: "703114", name: "Газ сжиженный по распределительным сетям, тенге за кг"}
+    min_items: 6
+    refresh_days: 20
+    frequency: monthly
+    unit: "KZT per litre (petrol, diesel), per 50-litre cylinder or per kg (LPG)"
+    category: prices
+    note: "Taldau 703115 «Цены на продукты нефтепереработки» and 703114 (LPG), BNS price registration in 21 cities (region column as HOUSING_PRICE_INDEX_BY_CITY). Petrol from 2011-01, diesel from 2014-01 (winter diesel seasonal and sparse). National AI-92: 2011-01 90, 2026-01 236, 2026-06 240; AI-95 2026-06 313; summer diesel 2026-06 336. Autogas per litre and weekly prices are not published."
+
+  - id: SECTOR_ACCOUNTS
+    name_ru: "Счета институциональных секторов: располагаемый доход, конечное потребление, сбережение, чистое кредитование по секторам; норма сбережения домашних хозяйств, ежегодно"
+    name_en: "Institutional sector accounts: disposable income, final consumption, saving, net lending by sector; household saving rate, annual"
+    agency: bns
+    element_id: 358455
+    layout: sector_accounts
+    min_years: 15
+    accounts:
+      - {code: B1g, side: uses, name: "Валовая добавленная стоимость"}
+      - {code: D1, side: resources, item: D1_RECEIVED, label: "Оплата труда", name: "Оплата труда, полученная"}
+      - {code: B5g, side: uses, label: "национальный", name: "Валовой национальный доход (сальдо первичных доходов)"}
+      - {code: D5, side: uses, name: "Текущие налоги на доходы и имущество, уплаченные"}
+      - {code: D62, side: resources, item: D62_RECEIVED, name: "Социальные пособия, полученные"}
+      - {code: B6g, side: uses, name: "Валовой располагаемый доход"}
+      - {code: B7g, side: uses, name: "Скорректированный валовой располагаемый доход"}
+      - {code: D8, side: resources, item: D8_RECEIVED, name: "Корректировка на изменение пенсионных прав, полученная"}
+      - {code: P3, side: uses, name: "Расходы на конечное потребление"}
+      - {code: B8g, side: uses, name: "Валовое сбережение"}
+      - {code: P51g, side: uses, name: "Валовое накопление основного капитала"}
+      - {code: B9, side: uses, name: "Чистое кредитование (+) / чистое заимствование (-)"}
+    min_items: 50
+    frequency: annual
+    unit: "million KZT (HH_SAVING_RATE: %)"
+    category: national_accounts
+    note: "BNS bulletin «Национальные счета Республики Казахстан (2010-2024гг.)», element 358455 (released 2025-12-22; the next edition will be a new element -- this one then stops updating and the element_id must be changed). One sheet per year, integrated economic accounts; each item is <SNA code>.<sector> (S11 non-financial corporations, S12 financial corporations, S13 general government, S14 households, S15 NPISH, S1 total economy, S2 rest of the world). 2024: household gross disposable income 61 823 778, household final consumption 73 171 015, household gross saving -6 778 304 million KZT; HH_SAVING_RATE (SNA definition, B8g / (B6g + D8)) -10.2 % in 2024, +7.0 % in 2015. B9 equals NET_LENDING_BY_SECTOR (Taldau 701002, from 1993)."
