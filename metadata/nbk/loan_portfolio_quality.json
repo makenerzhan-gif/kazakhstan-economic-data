@@ -11,10 +11,10 @@
   "geography": "Kazakhstan (national)",
   "methodology": "NBK formId=47, summed over IFRS risk stages. Items <DEBT|PROVISION>.<borrower>[.<days past due>], DEBT and PROVISION over all borrowers, <DEBT|PROVISION>.<days past due>. Dated by report_date (1st of the month after the stock date). Monthly from 2026-01; also 2025-07-01 and 2025-10-01. DEBT.HH at 2026-09-01 is 26 471.8 bn KZT, of which DPD90 1 220.0 (4.61 %) and DPD1_30 680.2 -- equal to the ARDFM bulletin's retail-loan table (checked 2026-11-07).",
   "publication_date": null,
-  "last_update_date": "2026-11-10",
-  "download_date": "2026-11-10",
+  "last_update_date": "2026-11-11",
+  "download_date": "2026-11-11",
   "period_start": "2025-07-01",
-  "period_end": "2026-09-01",
+  "period_end": "2026-10-01",
   "next_update_date": null,
   "transformation": "level",
   "revision_status": "original"

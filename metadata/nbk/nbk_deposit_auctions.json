@@ -11,11 +11,11 @@
   "geography": "Kazakhstan (national)",
   "methodology": "Sum over the auctions of the month (by auction date) of the NBK's xlsx export, 2019-02 onward. YIELD is weighted by the volume placed. The stock outstanding is NBK_OPEN_POSITION's DEPOSIT_AUCTION.",
   "publication_date": null,
-  "last_update_date": "2026-11-10",
-  "download_date": "2026-11-10",
+  "last_update_date": "2026-11-11",
+  "download_date": "2026-11-11",
   "period_start": "2019-02-01",
   "period_end": "2026-11-01",
   "next_update_date": null,
   "transformation": "level",
-  "revision_status": "original"
+  "revision_status": "revised"
 }

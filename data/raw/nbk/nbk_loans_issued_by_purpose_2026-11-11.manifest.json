@@ -1,0 +1,11 @@
+{
+  "downloaded_at": "2026-11-11T14:16:40.336636",
+  "source_url": "https://data.nationalbank.kz/api/v1/data",
+  "form_id": "493",
+  "start_date": "2026-05-01",
+  "n_pages": 4,
+  "total_rows": 15931,
+  "raw_file": "nbk_loans_issued_by_industry_2026-11-11.json.gz",
+  "raw_format": "nbk-open-data-form/canonical-v1 (gzip)",
+  "raw_normalisation": "all rows of all pages, unchanged and none dropped, sorted by report_date then full row content; page envelope fields common to all pages kept once; distinct column entries of all pages, sorted; keys sorted. Page boundaries and the API's row order are not kept (they vary between identical downloads)."
+}

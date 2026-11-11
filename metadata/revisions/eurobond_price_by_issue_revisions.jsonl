@@ -187,3 +187,11 @@
 {"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-11-01 XS3093655341", "old_value": 98.265, "new_value": 98.373, "detected_date": "2026-11-10", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-11-01 XS3093658014", "old_value": 97.996, "new_value": 98.128, "detected_date": "2026-11-10", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-11-01 XS3212533262", "old_value": 97.566, "new_value": 97.583, "detected_date": "2026-11-10", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-11-01 XS1120709826", "old_value": 87.847, "new_value": 87.65, "detected_date": "2026-11-11", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-11-01 XS1263139856", "old_value": 103.651, "new_value": 103.347, "detected_date": "2026-11-11", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-11-01 XS1901718335", "old_value": 98.152, "new_value": 98.216, "detected_date": "2026-11-11", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-11-01 XS2050933626", "old_value": 82.914, "new_value": 83.06, "detected_date": "2026-11-11", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-11-01 XS2914770545", "old_value": 94.797, "new_value": 94.948, "detected_date": "2026-11-11", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-11-01 XS3093655341", "old_value": 98.373, "new_value": 98.48, "detected_date": "2026-11-11", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-11-01 XS3093658014", "old_value": 98.128, "new_value": 98.352, "detected_date": "2026-11-11", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "EUROBOND_PRICE_BY_ISSUE", "period": "2026-11-01 XS3212533262", "old_value": 97.583, "new_value": 97.643, "detected_date": "2026-11-11", "source": "kase", "reason": "not stated by source"}

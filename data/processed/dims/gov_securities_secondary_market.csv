@@ -43,6 +43,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,EURONOTES,Евроноты,53256.98218521,level
 2026-08-01,national,EURONOTES,Евроноты,50078.068919,level
 2026-09-01,national,EURONOTES,Евроноты,523.4134888864,level
+2026-10-01,national,EURONOTES,Евроноты,1493.4075080431,level
 2022-12-01,national,MEKKAM,MEKKAM,38011.75565412,level
 2023-01-01,national,MEKKAM,MEKKAM,41886.45387245,level
 2023-02-01,national,MEKKAM,MEKKAM,3609.62041662,level
@@ -89,6 +90,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEKKAM,MEKKAM,14181.98397,level
 2026-08-01,national,MEKKAM,MEKKAM,7925.65902291,level
 2026-09-01,national,MEKKAM,MEKKAM,10075.77216555,level
+2026-10-01,national,MEKKAM,MEKKAM,1839.13374281,level
 2022-12-01,national,MEKKAM.T12M,MEKKAM | 12,38011.75565412,level
 2023-01-01,national,MEKKAM.T12M,MEKKAM | 12,41886.45387245,level
 2023-02-01,national,MEKKAM.T12M,MEKKAM | 12,3609.62041662,level
@@ -135,6 +137,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEKKAM.T12M,MEKKAM | 12,14181.98397,level
 2026-08-01,national,MEKKAM.T12M,MEKKAM | 12,7925.65902291,level
 2026-09-01,national,MEKKAM.T12M,MEKKAM | 12,10075.77216555,level
+2026-10-01,national,MEKKAM.T12M,MEKKAM | 12,1839.13374281,level
 2024-02-01,national,MEKKAM.T9M,MEKKAM | 9,276258.44080624,level
 2024-03-01,national,MEKKAM.T9M,MEKKAM | 9,49995.18249445,level
 2024-04-01,national,MEKKAM.T9M,MEKKAM | 9,184981.18847082,level
@@ -190,6 +193,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEOKAM,MEOKAM,110999.43403259001,level
 2026-08-01,national,MEOKAM,MEOKAM,393074.35673336,level
 2026-09-01,national,MEOKAM,MEOKAM,169681.34929416,level
+2026-10-01,national,MEOKAM,MEOKAM,362343.43400273996,level
 2023-01-01,national,MEOKAM.T24M,MEOKAM | 24,11859.21755273,level
 2023-02-01,national,MEOKAM.T24M,MEOKAM | 24,618.76781668,level
 2023-03-01,national,MEOKAM.T24M,MEOKAM | 24,7773.61230206,level
@@ -279,6 +283,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,MEOKAM.T48M,MEOKAM | 48,174610.55369876,level
 2026-08-01,national,MEOKAM.T48M,MEOKAM | 48,153620.6233352,level
 2026-09-01,national,MEOKAM.T48M,MEOKAM | 48,62258.7486466,level
+2026-10-01,national,MEOKAM.T48M,MEOKAM | 48,64892.71903039,level
 2022-12-01,national,MEOKAM.T60M,MEOKAM | 60,3394.47428383,level
 2023-01-01,national,MEOKAM.T60M,MEOKAM | 60,15083.8889439,level
 2023-02-01,national,MEOKAM.T60M,MEOKAM | 60,14266.70410794,level
@@ -325,14 +330,17 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEOKAM.T60M,MEOKAM | 60,38085.06035905,level
 2026-08-01,national,MEOKAM.T60M,MEOKAM | 60,239453.73339816,level
 2026-09-01,national,MEOKAM.T60M,MEOKAM | 60,107422.60064756,level
+2026-10-01,national,MEOKAM.T60M,MEOKAM | 60,297450.71497235,level
 2026-05-01,national,METICKAM,metickam,85402.7078767,level
 2026-06-01,national,METICKAM,metickam,25540.14342465,level
 2026-08-01,national,METICKAM,metickam,11202.44367253,level
 2026-09-01,national,METICKAM,metickam,5362.24767123,level
+2026-10-01,national,METICKAM,metickam,3403.4789712,level
 2026-05-01,national,METICKAM.T48M,metickam | 48,85402.7078767,level
 2026-06-01,national,METICKAM.T48M,metickam | 48,25540.14342465,level
 2026-08-01,national,METICKAM.T48M,metickam | 48,11202.44367253,level
 2026-09-01,national,METICKAM.T48M,metickam | 48,5362.24767123,level
+2026-10-01,national,METICKAM.T48M,metickam | 48,3403.4789712,level
 2022-12-01,national,METIKAM,METIKAM,1227.12869015,level
 2023-01-01,national,METIKAM,METIKAM,1601.24442717,level
 2023-02-01,national,METIKAM,METIKAM,10708.60536086,level
@@ -475,6 +483,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEUKAM,MEUKAM,749715.24344752,level
 2026-08-01,national,MEUKAM,MEUKAM,1100248.86561443,level
 2026-09-01,national,MEUKAM,MEUKAM,711687.2631334101,level
+2026-10-01,national,MEUKAM,MEUKAM,351141.09162053,level
 2022-12-01,national,MEUKAM.T108M,MEUKAM | 108,6004.30017842,level
 2023-01-01,national,MEUKAM.T108M,MEUKAM | 108,33652.6543291,level
 2023-02-01,national,MEUKAM.T108M,MEUKAM | 108,39520.78388816,level
@@ -562,6 +571,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEUKAM.T120M,MEUKAM | 120,332278.39241282,level
 2026-08-01,national,MEUKAM.T120M,MEUKAM | 120,307629.20417835,level
 2026-09-01,national,MEUKAM.T120M,MEUKAM | 120,312293.82679357,level
+2026-10-01,national,MEUKAM.T120M,MEUKAM | 120,61985.39392714,level
 2022-12-01,national,MEUKAM.T132M,MEUKAM | 132,24021.19496123,level
 2023-02-01,national,MEUKAM.T132M,MEUKAM | 132,23017.7938,level
 2023-03-01,national,MEUKAM.T132M,MEUKAM | 132,44352.17786625,level
@@ -619,6 +629,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEUKAM.T156M,MEUKAM | 156,38887.58365898,level
 2026-08-01,national,MEUKAM.T156M,MEUKAM | 156,128970.20201508,level
 2026-09-01,national,MEUKAM.T156M,MEUKAM | 156,71722.2546044,level
+2026-10-01,national,MEUKAM.T156M,MEUKAM | 156,61602.83380763,level
 2022-12-01,national,MEUKAM.T168M,MEUKAM | 168,604.64715719,level
 2023-02-01,national,MEUKAM.T168M,MEUKAM | 168,514.75754324,level
 2023-09-01,national,MEUKAM.T168M,MEUKAM | 168,4602.2772598,level
@@ -676,6 +687,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEUKAM.T180M,MEUKAM | 180,6228.57885732,level
 2026-08-01,national,MEUKAM.T180M,MEUKAM | 180,40868.96541337,level
 2026-09-01,national,MEUKAM.T180M,MEUKAM | 180,21088.61134215,level
+2026-10-01,national,MEUKAM.T180M,MEUKAM | 180,50053.8953704,level
 2023-12-01,national,MEUKAM.T192M,MEUKAM | 192,1500.2095773,level
 2024-01-01,national,MEUKAM.T192M,MEUKAM | 192,13023.64317176,level
 2024-02-01,national,MEUKAM.T192M,MEUKAM | 192,1044.99922484,level
@@ -709,6 +721,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEUKAM.T192M,MEUKAM | 192,97020.96233668,level
 2026-08-01,national,MEUKAM.T192M,MEUKAM | 192,55052.56274921,level
 2026-09-01,national,MEUKAM.T192M,MEUKAM | 192,24625.39380157,level
+2026-10-01,national,MEUKAM.T192M,MEUKAM | 192,5403.75072555,level
 2024-04-01,national,MEUKAM.T216M,MEUKAM | 216,2805.29970476,level
 2024-12-01,national,MEUKAM.T216M,MEUKAM | 216,472.46547335,level
 2025-10-01,national,MEUKAM.T216M,MEUKAM | 216,4332.90697045,level
@@ -799,6 +812,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEUKAM.T72M,MEUKAM | 72,64430.11902822,level
 2026-08-01,national,MEUKAM.T72M,MEUKAM | 72,70914.66165048,level
 2026-09-01,national,MEUKAM.T72M,MEUKAM | 72,73238.58717222,level
+2026-10-01,national,MEUKAM.T72M,MEUKAM | 72,51050.76761475,level
 2022-12-01,national,MEUKAM.T84M,MEUKAM | 84,107610.85846344,level
 2023-01-01,national,MEUKAM.T84M,MEUKAM | 84,57519.73621844,level
 2023-02-01,national,MEUKAM.T84M,MEUKAM | 84,79138.73169034,level
@@ -841,6 +855,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEUKAM.T84M,MEUKAM | 84,29578.15762064,level
 2026-08-01,national,MEUKAM.T84M,MEUKAM | 84,369260.46010811,level
 2026-09-01,national,MEUKAM.T84M,MEUKAM | 84,985.72881,level
+2026-10-01,national,MEUKAM.T84M,MEUKAM | 84,1002.09764261,level
 2023-02-01,national,MEUKAM.T96M,MEUKAM | 96,74105.39690378,level
 2023-03-01,national,MEUKAM.T96M,MEUKAM | 96,286520.01137366,level
 2023-04-01,national,MEUKAM.T96M,MEUKAM | 96,111091.935647,level
@@ -884,8 +899,11 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEUKAM.T96M,MEUKAM | 96,97685.71425364,level
 2026-08-01,national,MEUKAM.T96M,MEUKAM | 96,81738.9656631,level
 2026-09-01,national,MEUKAM.T96M,MEUKAM | 96,42165.07095247,level
+2026-10-01,national,MEUKAM.T96M,MEUKAM | 96,120042.35253245,level
 2026-09-01,national,MUIKAM,muikam,1001.02862156,level
+2026-10-01,national,MUIKAM,muikam,500.28503729,level
 2026-09-01,national,MUIKAM.T72M,muikam | 72,1001.02862156,level
+2026-10-01,national,MUIKAM.T72M,muikam | 72,500.28503729,level
 2022-12-01,national,NBK_NOTES,Ноты НБРК,380266.90341981,level
 2023-01-01,national,NBK_NOTES,Ноты НБРК,483985.26644412,level
 2023-02-01,national,NBK_NOTES,Ноты НБРК,525879.68003068,level
@@ -932,6 +950,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,NBK_NOTES,Ноты НБРК,194549.94580431,level
 2026-08-01,national,NBK_NOTES,Ноты НБРК,104458.59191936,level
 2026-09-01,national,NBK_NOTES,Ноты НБРК,504583.255701369,level
+2026-10-01,national,NBK_NOTES,Ноты НБРК,495042.37125586,level
 2022-12-01,national,TOTAL,"Сделки на вторичном рынке, всего",1932736.7829271092,level
 2023-01-01,national,TOTAL,"Сделки на вторичном рынке, всего",887734.3945193301,level
 2023-02-01,national,TOTAL,"Сделки на вторичном рынке, всего",1267147.6940705099,level
@@ -978,3 +997,4 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,TOTAL,"Сделки на вторичном рынке, всего",1122864.0406538663,level
 2026-08-01,national,TOTAL,"Сделки на вторичном рынке, всего",1666987.9858815898,level
 2026-09-01,national,TOTAL,"Сделки на вторичном рынке, всего",1402914.3300761653,level
+2026-10-01,national,TOTAL,"Сделки на вторичном рынке, всего",1215763.2021384733,level

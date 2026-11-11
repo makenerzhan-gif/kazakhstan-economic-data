@@ -1,1 +1,2 @@
 {"indicator_id": "OIL_PRICE", "period": "2026-08-01", "old_value": 86.4138333333333, "new_value": 86.67317460317457, "detected_date": "2026-10-08", "source": "imf", "reason": "not stated by source"}
+{"indicator_id": "OIL_PRICE", "period": "2026-09-01", "old_value": 103.645873015873, "new_value": 103.3859090909091, "detected_date": "2026-11-11", "source": "imf", "reason": "not stated by source"}

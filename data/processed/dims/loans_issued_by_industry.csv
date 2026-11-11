@@ -43,6 +43,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,AGRICULTURE,Сельское хозяйство,33814.09215000001,level
 2026-07-01,national,AGRICULTURE,Сельское хозяйство,26663.91712200001,level
 2026-08-01,national,AGRICULTURE,Сельское хозяйство,37337.79850499999,level
+2026-09-01,national,AGRICULTURE,Сельское хозяйство,40469.02381899999,level
 2023-01-01,national,COMMUNICATION,Связь,1560.6324209999998,level
 2023-02-01,national,COMMUNICATION,Связь,2583.124891000001,level
 2023-03-01,national,COMMUNICATION,Связь,2783.382752,level
@@ -87,6 +88,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,COMMUNICATION,Связь,145546.11766599998,level
 2026-07-01,national,COMMUNICATION,Связь,31088.183301999998,level
 2026-08-01,national,COMMUNICATION,Связь,21010.74623399998,level
+2026-09-01,national,COMMUNICATION,Связь,31525.976954,level
 2023-01-01,national,CONSTRUCTION,Строительство,58550.62966499998,level
 2023-02-01,national,CONSTRUCTION,Строительство,56660.10076099998,level
 2023-03-01,national,CONSTRUCTION,Строительство,56408.270624000004,level
@@ -131,6 +133,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,CONSTRUCTION,Строительство,182366.4520399999,level
 2026-07-01,national,CONSTRUCTION,Строительство,146958.55200099997,level
 2026-08-01,national,CONSTRUCTION,Строительство,195579.45974599992,level
+2026-09-01,national,CONSTRUCTION,Строительство,268696.32040799997,level
 2023-01-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),837364.8174559994,level
 2023-02-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),879827.9991990002,level
 2023-03-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),1050947.496397,level
@@ -175,6 +178,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),1848598.3667350023,level
 2026-07-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),1720541.705946,level
 2026-08-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),1689554.090763,level
+2026-09-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),1580336.0014829994,level
 2023-01-01,national,INDUSTRY,Промышленность,187098.97342899974,level
 2023-02-01,national,INDUSTRY,Промышленность,167309.39393599998,level
 2023-03-01,national,INDUSTRY,Промышленность,268166.89847400034,level
@@ -219,6 +223,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,INDUSTRY,Промышленность,768704.904541,level
 2026-07-01,national,INDUSTRY,Промышленность,693208.6352319998,level
 2026-08-01,national,INDUSTRY,Промышленность,643193.1557310001,level
+2026-09-01,national,INDUSTRY,Промышленность,476155.9161189998,level
 2023-01-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,159104.36829399972,level
 2023-02-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,132020.10044800007,level
 2023-03-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,234854.38183900015,level
@@ -263,6 +268,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,581850.9424209996,level
 2026-07-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,376696.735908,level
 2026-08-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,381139.5598709995,level
+2026-09-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,393859.43535099964,level
 2023-01-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,11878.205059999998,level
 2023-02-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,21664.907911999995,level
 2023-03-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,19838.521062000003,level
@@ -307,6 +313,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,56743.97846499998,level
 2026-07-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,214053.2888600001,level
 2026-08-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,178810.59322599988,level
+2026-09-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,47490.18236999998,level
 2023-01-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",16116.400075000001,level
 2023-02-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",13624.385576,level
 2023-03-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",13473.995573000002,level
@@ -351,6 +358,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",130109.98365499997,level
 2026-07-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",102458.61046400003,level
 2026-08-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",83243.00263399997,level
+2026-09-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",34806.29839799999,level
 2023-01-01,national,OTHER,Прочие отрасли,178272.79905399994,level
 2023-02-01,national,OTHER,Прочие отрасли,111701.55706299997,level
 2023-03-01,national,OTHER,Прочие отрасли,176896.15172899998,level
@@ -395,6 +403,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,OTHER,Прочие отрасли,249102.50965199998,level
 2026-07-01,national,OTHER,Прочие отрасли,240109.832139,level
 2026-08-01,national,OTHER,Прочие отрасли,251248.01176200013,level
+2026-09-01,national,OTHER,Прочие отрасли,186236.62446200015,level
 2023-01-01,national,TOTAL,"Кредиты экономике, выдано за месяц, всего",1744847.6642449999,level
 2023-02-01,national,TOTAL,"Кредиты экономике, выдано за месяц, всего",1810208.976794,level
 2023-03-01,national,TOTAL,"Кредиты экономике, выдано за месяц, всего",2201970.7586730025,level
@@ -439,6 +448,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,TOTAL,"Кредиты экономике, выдано за месяц, всего",4369683.404176999,level
 2026-07-01,national,TOTAL,"Кредиты экономике, выдано за месяц, всего",3902799.6626620004,level
 2026-08-01,national,TOTAL,"Кредиты экономике, выдано за месяц, всего",3859429.1786620053,level
+2026-09-01,national,TOTAL,"Кредиты экономике, выдано за месяц, всего",3777541.2451950037,level
 2023-01-01,national,TRADE,Торговля,447707.38273800013,level
 2023-02-01,national,TRADE,Торговля,550020.1443690001,level
 2023-03-01,national,TRADE,Торговля,574271.0410140002,level
@@ -483,6 +493,7 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,TRADE,Торговля,919393.6391010005,level
 2026-07-01,national,TRADE,Торговля,901674.1361249995,level
 2026-08-01,national,TRADE,Торговля,962350.9574559999,level
+2026-09-01,national,TRADE,Торговля,1015999.7344460003,level
 2023-01-01,national,TRANSPORT,Транспорт,15579.564847000003,level
 2023-02-01,national,TRANSPORT,Транспорт,21531.199511999996,level
 2023-03-01,national,TRANSPORT,Транспорт,29757.244097,level
@@ -527,3 +538,4 @@ date,region,item_code,item_name,value,transformation
 2026-06-01,national,TRANSPORT,Транспорт,222157.3222919999,level
 2026-07-01,national,TRANSPORT,Транспорт,142554.70079499995,level
 2026-08-01,national,TRANSPORT,Транспорт,59154.95846500003,level
+2026-09-01,national,TRANSPORT,Транспорт,178121.64750399988,level

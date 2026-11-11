@@ -43,6 +43,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,AGRICULTURE,Сельское хозяйство,609073.7469570002,level
 2026-08-01,national,AGRICULTURE,Сельское хозяйство,610389.944368,level
 2026-09-01,national,AGRICULTURE,Сельское хозяйство,626404.3346280002,level
+2026-10-01,national,AGRICULTURE,Сельское хозяйство,645663.7047180008,level
 2023-02-01,national,AGRICULTURE.OVERDUE,Сельское хозяйство | просроченный долг,10762.009770999992,level
 2023-03-01,national,AGRICULTURE.OVERDUE,Сельское хозяйство | просроченный долг,10256.984275000008,level
 2023-04-01,national,AGRICULTURE.OVERDUE,Сельское хозяйство | просроченный долг,10046.578616999997,level
@@ -87,6 +88,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,AGRICULTURE.OVERDUE,Сельское хозяйство | просроченный долг,20211.440410000003,level
 2026-08-01,national,AGRICULTURE.OVERDUE,Сельское хозяйство | просроченный долг,19815.884400999992,level
 2026-09-01,national,AGRICULTURE.OVERDUE,Сельское хозяйство | просроченный долг,19654.725782000016,level
+2026-10-01,national,AGRICULTURE.OVERDUE,Сельское хозяйство | просроченный долг,16129.916699000009,level
 2023-02-01,national,COMMUNICATION,Связь,199978.156624,level
 2023-03-01,national,COMMUNICATION,Связь,197637.6929019999,level
 2023-04-01,national,COMMUNICATION,Связь,194151.78385999997,level
@@ -131,6 +133,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,COMMUNICATION,Связь,436595.08045800007,level
 2026-08-01,national,COMMUNICATION,Связь,432257.37350900006,level
 2026-09-01,national,COMMUNICATION,Связь,444719.2986890001,level
+2026-10-01,national,COMMUNICATION,Связь,439927.5759099998,level
 2023-02-01,national,COMMUNICATION.OVERDUE,Связь | просроченный долг,1175.8015139999998,level
 2023-03-01,national,COMMUNICATION.OVERDUE,Связь | просроченный долг,909.5971,level
 2023-04-01,national,COMMUNICATION.OVERDUE,Связь | просроченный долг,815.728657,level
@@ -175,6 +178,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,COMMUNICATION.OVERDUE,Связь | просроченный долг,2085.0917010000016,level
 2026-08-01,national,COMMUNICATION.OVERDUE,Связь | просроченный долг,1926.5228000000009,level
 2026-09-01,national,COMMUNICATION.OVERDUE,Связь | просроченный долг,2388.1390049999995,level
+2026-10-01,national,COMMUNICATION.OVERDUE,Связь | просроченный долг,2021.0746419999998,level
 2023-02-01,national,CONSTRUCTION,Строительство,592900.5782460005,level
 2023-03-01,national,CONSTRUCTION,Строительство,589429.8214630001,level
 2023-04-01,national,CONSTRUCTION,Строительство,553165.0138900004,level
@@ -219,6 +223,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,CONSTRUCTION,Строительство,937398.2532719997,level
 2026-08-01,national,CONSTRUCTION,Строительство,1531474.3984020005,level
 2026-09-01,national,CONSTRUCTION,Строительство,1616470.441748999,level
+2026-10-01,national,CONSTRUCTION,Строительство,1745753.2553460002,level
 2023-02-01,national,CONSTRUCTION.OVERDUE,Строительство | просроченный долг,46780.31686699998,level
 2023-03-01,national,CONSTRUCTION.OVERDUE,Строительство | просроченный долг,50742.96887699996,level
 2023-04-01,national,CONSTRUCTION.OVERDUE,Строительство | просроченный долг,59765.274547,level
@@ -263,6 +268,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,CONSTRUCTION.OVERDUE,Строительство | просроченный долг,34497.58208700001,level
 2026-08-01,national,CONSTRUCTION.OVERDUE,Строительство | просроченный долг,36194.199253,level
 2026-09-01,national,CONSTRUCTION.OVERDUE,Строительство | просроченный долг,37505.08575,level
+2026-10-01,national,CONSTRUCTION.OVERDUE,Строительство | просроченный долг,37744.804219,level
 2023-02-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),13263668.248380987,level
 2023-03-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),13379147.831583006,level
 2023-04-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),13562355.105013002,level
@@ -307,6 +313,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),25846428.246438015,level
 2026-08-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),26147059.78422801,level
 2026-09-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),26469323.173437003,level
+2026-10-01,national,HOUSEHOLDS,Физические лица (отрасль не определяется),26665882.141133,level
 2023-02-01,national,HOUSEHOLDS.OVERDUE,Физические лица (отрасль не определяется) | просроченный долг,360064.9115679999,level
 2023-03-01,national,HOUSEHOLDS.OVERDUE,Физические лица (отрасль не определяется) | просроченный долг,370704.61940299993,level
 2023-04-01,national,HOUSEHOLDS.OVERDUE,Физические лица (отрасль не определяется) | просроченный долг,383453.09965400025,level
@@ -351,6 +358,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,HOUSEHOLDS.OVERDUE,Физические лица (отрасль не определяется) | просроченный долг,1148515.4376600005,level
 2026-08-01,national,HOUSEHOLDS.OVERDUE,Физические лица (отрасль не определяется) | просроченный долг,1144871.5097760006,level
 2026-09-01,national,HOUSEHOLDS.OVERDUE,Физические лица (отрасль не определяется) | просроченный долг,1122130.0097390006,level
+2026-10-01,national,HOUSEHOLDS.OVERDUE,Физические лица (отрасль не определяется) | просроченный долг,1127119.689374,level
 2023-02-01,national,INDUSTRY,Промышленность,4646396.571381992,level
 2023-03-01,national,INDUSTRY,Промышленность,4589517.217665016,level
 2023-04-01,national,INDUSTRY,Промышленность,4610776.862241999,level
@@ -395,6 +403,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,INDUSTRY,Промышленность,7681469.968942003,level
 2026-08-01,national,INDUSTRY,Промышленность,7529519.483218022,level
 2026-09-01,national,INDUSTRY,Промышленность,7520572.800244999,level
+2026-10-01,national,INDUSTRY,Промышленность,7384594.03756,level
 2023-02-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,3322018.6861829944,level
 2023-03-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,3302607.3307990097,level
 2023-04-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,3331808.5291200066,level
@@ -439,6 +448,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,5099671.184507996,level
 2026-08-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,4861266.528785003,level
 2026-09-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,4865332.910250993,level
+2026-10-01,national,INDUSTRY.MANUFACTURING,Промышленность | Обрабатывающая промышленность,4771100.924803003,level
 2023-02-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,688422.9964070003,level
 2023-03-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,656446.3958679998,level
 2023-04-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,648533.365333,level
@@ -483,6 +493,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,1197771.787964,level
 2026-08-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,1221068.994769,level
 2026-09-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,1187450.135511,level
+2026-10-01,national,INDUSTRY.MINING,Промышленность | Горнодобывающая промышленность,1149903.0433059994,level
 2023-02-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",635954.8887920004,level
 2023-03-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",630463.4909980003,level
 2023-04-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",630434.9677889999,level
@@ -527,6 +538,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",1384026.99647,level
 2026-08-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",1447183.9596639997,level
 2026-09-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",1467789.754483,level
+2026-10-01,national,INDUSTRY.OTHER_INDUSTRY,"Промышленность | Прочая промышленность (энергетика, водоснабжение)",1463590.0694510015,level
 2023-02-01,national,INDUSTRY.OVERDUE,Промышленность | просроченный долг,69918.05609900008,level
 2023-03-01,national,INDUSTRY.OVERDUE,Промышленность | просроченный долг,77036.29809600007,level
 2023-04-01,national,INDUSTRY.OVERDUE,Промышленность | просроченный долг,81154.96740799995,level
@@ -571,6 +583,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,INDUSTRY.OVERDUE,Промышленность | просроченный долг,107772.30722800005,level
 2026-08-01,national,INDUSTRY.OVERDUE,Промышленность | просроченный долг,116413.33645199983,level
 2026-09-01,national,INDUSTRY.OVERDUE,Промышленность | просроченный долг,111360.53057099992,level
+2026-10-01,national,INDUSTRY.OVERDUE,Промышленность | просроченный долг,110131.93559499986,level
 2023-02-01,national,NON_BANK,Небанковские организации банковского сектора,1922118.4647940001,level
 2023-03-01,national,NON_BANK,Небанковские организации банковского сектора,1892036.0009270003,level
 2023-04-01,national,NON_BANK,Небанковские организации банковского сектора,1897475.4871050003,level
@@ -615,6 +628,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,NON_BANK,Небанковские организации банковского сектора,3418755.7587660016,level
 2026-08-01,national,NON_BANK,Небанковские организации банковского сектора,3409225.6696260013,level
 2026-09-01,national,NON_BANK,Небанковские организации банковского сектора,3289605.4153490006,level
+2026-10-01,national,NON_BANK,Небанковские организации банковского сектора,3346982.8252350003,level
 2023-02-01,national,OTHER,Прочие отрасли,2527880.6991530005,level
 2023-03-01,national,OTHER,Прочие отрасли,2512355.146951005,level
 2023-04-01,national,OTHER,Прочие отрасли,2520752.793433005,level
@@ -659,6 +673,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,OTHER,Прочие отрасли,3990575.5245600045,level
 2026-08-01,national,OTHER,Прочие отрасли,3983833.076351003,level
 2026-09-01,national,OTHER,Прочие отрасли,4049786.451412003,level
+2026-10-01,national,OTHER,Прочие отрасли,4020412.1312149987,level
 2023-02-01,national,OTHER.OVERDUE,Прочие отрасли | просроченный долг,101982.70610099999,level
 2023-03-01,national,OTHER.OVERDUE,Прочие отрасли | просроченный долг,97949.50377200001,level
 2023-04-01,national,OTHER.OVERDUE,Прочие отрасли | просроченный долг,95491.23647700009,level
@@ -703,6 +718,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,OTHER.OVERDUE,Прочие отрасли | просроченный долг,165826.00427699994,level
 2026-08-01,national,OTHER.OVERDUE,Прочие отрасли | просроченный долг,166634.59056299995,level
 2026-09-01,national,OTHER.OVERDUE,Прочие отрасли | просроченный долг,167584.89356599984,level
+2026-10-01,national,OTHER.OVERDUE,Прочие отрасли | просроченный долг,159698.21423900005,level
 2023-02-01,national,OVERDUE,просроченный долг,706012.7153540001,level
 2023-03-01,national,OVERDUE,просроченный долг,723547.9838329995,level
 2023-04-01,national,OVERDUE,просроченный долг,746447.3771739999,level
@@ -747,6 +763,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,OVERDUE,просроченный долг,1737490.7408899993,level
 2026-08-01,national,OVERDUE,просроченный долг,1755804.006765001,level
 2026-09-01,national,OVERDUE,просроченный долг,1735330.4672070006,level
+2026-10-01,national,OVERDUE,просроченный долг,1733463.9965279994,level
 2023-02-01,national,STB,Банки второго уровня,22774136.691421982,level
 2023-03-01,national,STB,Банки второго уровня,22898274.96106096,level
 2023-04-01,national,STB,Банки второго уровня,23156065.351996,level
@@ -791,6 +808,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,STB,Банки второго уровня,41949068.80214498,level
 2026-08-01,national,STB,Банки второго уровня,42129987.476382,level
 2026-09-01,national,STB,Банки второго уровня,42825457.45641906,level
+2026-10-01,national,STB,Банки второго уровня,43088657.975106955,level
 2023-02-01,national,TOTAL,"Кредиты экономике, основной долг, всего",24696255.15621601,level
 2023-03-01,national,TOTAL,"Кредиты экономике, основной долг, всего",24790310.96198797,level
 2023-04-01,national,TOTAL,"Кредиты экономике, основной долг, всего",25053540.83910102,level
@@ -835,6 +853,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,TOTAL,"Кредиты экономике, основной долг, всего",45367824.56091093,level
 2026-08-01,national,TOTAL,"Кредиты экономике, основной долг, всего",45539213.146008,level
 2026-09-01,national,TOTAL,"Кредиты экономике, основной долг, всего",46115062.87176797,level
+2026-10-01,national,TOTAL,"Кредиты экономике, основной долг, всего",46435640.80034204,level
 2023-02-01,national,TRADE,Торговля,2306732.5888449987,level
 2023-03-01,national,TRADE,Торговля,2374756.9995089984,level
 2023-04-01,national,TRADE,Торговля,2446493.7375240047,level
@@ -879,6 +898,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,TRADE,Торговля,4226216.410768996,level
 2026-08-01,national,TRADE,Торговля,4203258.817014998,level
 2026-09-01,national,TRADE,Торговля,4293423.117505997,level
+2026-10-01,national,TRADE,Торговля,4345834.797566002,level
 2023-02-01,national,TRADE.OVERDUE,Торговля | просроченный долг,103882.71903299994,level
 2023-03-01,national,TRADE.OVERDUE,Торговля | просроченный долг,103793.23752499997,level
 2023-04-01,national,TRADE.OVERDUE,Торговля | просроченный долг,102811.73689100001,level
@@ -923,6 +943,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,TRADE.OVERDUE,Торговля | просроченный долг,238917.8858809997,level
 2026-08-01,national,TRADE.OVERDUE,Торговля | просроченный долг,249433.53579199995,level
 2026-09-01,national,TRADE.OVERDUE,Торговля | просроченный долг,253038.74086299998,level
+2026-10-01,national,TRADE.OVERDUE,Торговля | просроченный долг,258823.13775199986,level
 2023-02-01,national,TRANSPORT,Транспорт,769300.7272360009,level
 2023-03-01,national,TRANSPORT,Транспорт,764243.5598659995,level
 2023-04-01,national,TRANSPORT,Транспорт,768140.4676240005,level
@@ -967,6 +988,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,TRANSPORT,Транспорт,1640067.3295149994,level
 2026-08-01,national,TRANSPORT,Транспорт,1101420.2689169985,level
 2026-09-01,national,TRANSPORT,Транспорт,1094363.2541019989,level
+2026-10-01,national,TRANSPORT,Транспорт,1187573.1568940002,level
 2023-02-01,national,TRANSPORT.OVERDUE,Транспорт | просроченный долг,11446.194400999997,level
 2023-03-01,national,TRANSPORT.OVERDUE,Транспорт | просроченный долг,12154.774785000001,level
 2023-04-01,national,TRANSPORT.OVERDUE,Транспорт | просроченный долг,12908.75492299999,level
@@ -1011,3 +1033,4 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,TRANSPORT.OVERDUE,Транспорт | просроченный долг,19664.99164600001,level
 2026-08-01,national,TRANSPORT.OVERDUE,Транспорт | просроченный долг,20514.427728000006,level
 2026-09-01,national,TRANSPORT.OVERDUE,Транспорт | просроченный долг,21668.341931,level
+2026-10-01,national,TRANSPORT.OVERDUE,Транспорт | просроченный долг,21795.22400800002,level
