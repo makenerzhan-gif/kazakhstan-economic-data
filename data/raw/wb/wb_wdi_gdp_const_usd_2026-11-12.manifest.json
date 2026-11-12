@@ -1,0 +1,5 @@
+{
+  "downloaded_at": "2026-11-12T15:26:06.017220",
+  "raw_file": "wb_wdi_gdp_const_usd_2026-11-12.json",
+  "source_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.KD?format=json&per_page=20000&date=1960:2026"
+}

@@ -235,6 +235,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,AIR,Воздушный транспорт,2.26,level
 2026-08-01,national,AIR,Воздушный транспорт,2.65,level
 2026-09-01,national,AIR,Воздушный транспорт,2.23,level
+2026-10-01,national,AIR,Воздушный транспорт,2.63,level
 2007-04-01,national,INLAND_WATER,Внутренний водный транспорт,21.0,level
 2007-05-01,national,INLAND_WATER,Внутренний водный транспорт,211.6,level
 2007-06-01,national,INLAND_WATER,Внутренний водный транспорт,177.21,level
@@ -405,6 +406,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,INLAND_WATER,Внутренний водный транспорт,44.34,level
 2026-08-01,national,INLAND_WATER,Внутренний водный транспорт,38.39,level
 2026-09-01,national,INLAND_WATER,Внутренний водный транспорт,71.49,level
+2026-10-01,national,INLAND_WATER,Внутренний водный транспорт,48.45,level
 2007-01-01,national,PIPELINE,Трубопроводный транспорт,17018.2,level
 2007-02-01,national,PIPELINE,Трубопроводный транспорт,16677.1,level
 2007-03-01,national,PIPELINE,Трубопроводный транспорт,16455.1,level
@@ -634,6 +636,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,PIPELINE,Трубопроводный транспорт,20272.45,level
 2026-08-01,national,PIPELINE,Трубопроводный транспорт,21830.55,level
 2026-09-01,national,PIPELINE,Трубопроводный транспорт,19544.29,level
+2026-10-01,national,PIPELINE,Трубопроводный транспорт,21331.11,level
 2007-01-01,national,RAIL,Железнодорожный транспорт,20454.9,level
 2007-02-01,national,RAIL,Железнодорожный транспорт,18964.5,level
 2007-03-01,national,RAIL,Железнодорожный транспорт,21411.7,level
@@ -869,6 +872,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,RAIL,Железнодорожный транспорт,27669.85,level
 2026-08-01,national,RAIL,Железнодорожный транспорт,28696.93,level
 2026-09-01,national,RAIL,Железнодорожный транспорт,29673.55,level
+2026-10-01,national,RAIL,Железнодорожный транспорт,30698.53,level
 2007-01-01,national,ROAD,Автомобильный транспорт,107030.2,level
 2007-02-01,national,ROAD,Автомобильный транспорт,99123.2,level
 2007-03-01,national,ROAD,Автомобильный транспорт,106852.5,level
@@ -1103,6 +1107,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,ROAD,Автомобильный транспорт,29463.71,level
 2026-08-01,national,ROAD,Автомобильный транспорт,34324.31,level
 2026-09-01,national,ROAD,Автомобильный транспорт,36830.25,level
+2026-10-01,national,ROAD,Автомобильный транспорт,31717.89,level
 2007-03-01,national,SEA,Морской транспорт,32.0,level
 2007-04-01,national,SEA,Морской транспорт,85.0,level
 2007-05-01,national,SEA,Морской транспорт,124.0,level
@@ -1295,6 +1300,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,SEA,Морской транспорт,334.96,level
 2026-08-01,national,SEA,Морской транспорт,344.93,level
 2026-09-01,national,SEA,Морской транспорт,270.14,level
+2026-10-01,national,SEA,Морской транспорт,299.73,level
 2007-01-01,national,TOTAL,Все виды транспорта,144504.42,level
 2007-02-01,national,TOTAL,Все виды транспорта,134766.4,level
 2007-03-01,national,TOTAL,Все виды транспорта,144752.87,level
@@ -1513,3 +1519,4 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,TOTAL,Все виды транспорта,77787.56,level
 2026-08-01,national,TOTAL,Все виды транспорта,85237.77,level
 2026-09-01,national,TOTAL,Все виды транспорта,86391.95,level
+2026-10-01,national,TOTAL,Все виды транспорта,84098.34,level
