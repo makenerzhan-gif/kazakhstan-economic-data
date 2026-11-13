@@ -1,0 +1,21 @@
+{
+  "source": "kgd",
+  "source_url": "https://www.gov.kz/memleket/entities/kgd/activities/directions?lang=ru",
+  "dataset_id": "KGD: Динамика поступлений в Национальный фонд в разрезе КБК",
+  "indicator_id": "NF_RECEIPTS_BY_CODE_KGD_YTD",
+  "indicator_name": "Receipts of the National Fund by budget code (taxes of the oil sector and other receipts), State Revenue Committee, year-to-date, million KZT",
+  "description": "Поступления в Национальный фонд по кодам бюджетной классификации (налоги организаций нефтяного сектора и прочие поступления), данные КГД, с начала года, млн тенге",
+  "frequency": "monthly",
+  "unit": "million KZT, January to the month",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "KGD, gov.kz direction «Статистика»: «Динамика поступлений в Национальный фонд в разрезе КБК», one workbook per month, every edition restating its year (source figures are thousand tenge). Items: CIT (code 101105), EXCESS_PROFIT_TAX (105322), BONUSES (105325), MET (105326), RENT_TAX_EXPORT (105327), PSA_SHARE (105328), PSA_ADDITIONAL (105329), TAX_TOTAL = the seven; FINES_ADMIN (204201), FINES_OTHER (204202), SUBSOIL_DAMAGES (204203), OTHER_NONTAX (206111), LAND_SALES (303102); TOTAL = all twelve. Both sums are checked in every edition. 2021-01 on; posted two to five weeks after the month. WHY: the Ministry of Finance's National Fund statement behind the NF_*_YTD scalars stopped at 1 July 2026, and never covered 2026-04, 05 (nor 07-09). The two sources are equal in every December of 2021-2025 and in June 2026 for all seven taxes, but can differ inside a year by the timing of a payment (at most 0.5 % of the tax total in 2023-2026, 5 % in February 2021) -- they are NOT spliced; use one source for a decumulated month. NOT here: the fund's investment income, guaranteed and targeted transfers, privatisation (NF_INVESTMENT_INCOME_YTD etc. stay on the Minfin statement). Oil-sector taxes paid to the budget rather than the fund (export duties) are in RESOURCE_PAYMENTS_YTD.",
+  "publication_date": null,
+  "last_update_date": "2026-11-13",
+  "download_date": "2026-11-13",
+  "period_start": "2021-01-01",
+  "period_end": "2026-09-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

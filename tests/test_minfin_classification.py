@@ -110,7 +110,7 @@ def test_processed_economic_classification_adds_up():
         cats = sum(v for c, v in vals.items() if c.startswith("CAT"))
         assert cats == pytest.approx(vals["TOTAL"], rel=1e-4, abs=0.5), (budget, when)
         gfs = sum(v for c, v in vals.items() if c.startswith("GFS."))
-        assert gfs == pytest.approx(vals["TOTAL"] - vals.get("CAT6", 0.0), rel=1e-4, abs=0.5), (budget, when)   # all but PPP obligations
+        assert gfs == pytest.approx(vals["TOTAL"] - vals.get("CAT6", 0.0) - vals.get("CAT5", 0.0), rel=1e-4, abs=0.5), (budget, when)   # all but PPP obligations and (to 2021) debt repayment
 
 
 @pytest.mark.cross_source
@@ -210,11 +210,16 @@ def test_processed_receipts_add_up_at_every_level():
         budget, code = r["item_code"].split(".", 1)
         by.setdefault((budget, r["date"]), []).append((code, r["item_name"], float(r["value"])))
     assert len(by) >= 20
+    import re
     for key, lines in by.items():
-        assert mc.check_receipts(lines) == [], key
+        # Above the specifics every level must add up in every stored month. Two things the source itself
+        # does are allowed: specifics left out of the printed table (2015-2018) and a «ДОХОДЫ» cell printed
+        # as 0, which is not stored (republican budget, January-March 2021).
+        real = [b for b in mc.check_receipts(lines) if not re.match(r"\d{4}[: ]", b) and b != "no REVENUE row"]
+        assert real == [], key
         vals = {c: v for c, _, v in lines}
         if key[1] < "2026":
-            assert "4" not in vals and "5" in vals, key           # 2025 transfers sit under the 2026 number
+            assert "4" not in vals, key                           # before 2026 there is no category 4: transfers sit under the 2026 number 5
 
 
 @pytest.mark.cross_source
@@ -233,3 +238,44 @@ def test_receipts_by_code_equal_the_scalar_tax_series():
         assert len(common) >= 10, code
         for month, value in common:
             assert value == pytest.approx(scalar[month], rel=1e-4, abs=1.0), (code, month)
+
+
+def test_archive_mode_skips_a_broken_edition_and_says_which(monkeypatch):
+    """The backfill reads years of older editions: one that does not add up is skipped and named,
+    while the daily run still stops on it."""
+    from fetchers import minfin
+    good, bad = _receipts(), [list(r) for r in _receipts(year=2025)]
+    bad[5][5] = "700"                                               # the class 101 no longer equals its subclasses
+
+    class Book:
+        def __init__(self, rows):
+            self.rows, self.sheetnames = rows, ["табл 4", "табл 1"]
+    books = {"new.xlsx": Book(good), "old.xlsx": Book(bad)}
+    monkeypatch.setattr(minfin, "_bulletin_documents", lambda: [{"id": 2, "title": "new", "full_text": [{"document": "new.xlsx"}]},
+                                                                {"id": 1, "title": "old", "full_text": [{"document": "old.xlsx"}]}])
+    monkeypatch.setattr(minfin, "_download", lambda path: path.encode())
+    monkeypatch.setattr(minfin, "_open_workbook", lambda content, hint: ("sheets", books[content.decode()]))
+    monkeypatch.setattr(minfin, "_iter_rows", lambda kind, wb, name=None: iter(wb.rows if name == "табл 4" else []))
+    monkeypatch.setattr(dims, "load_processed", lambda ds_id: [])
+    ds = {"id": "BUDGET_RECEIPTS_BY_CODE_YTD"}
+    with pytest.raises(validation.StructuralChangeError):
+        mc.fetch_receipts(ds)
+    monkeypatch.setattr(minfin, "BULLETIN_ARCHIVE", True)
+    records, meta = mc.fetch_receipts(ds)
+    assert {r["date"] for r in records} == {"2026-05-01"}
+    skipped = [w for w in meta["warnings"] if "SKIPPED" in w]
+    assert len(skipped) == 1 and "«old»" in skipped[0] and "101:" in skipped[0]
+    assert any("sheets:" in w and "табл 1" in w for w in meta["warnings"])        # the missing republican sheet: what is there instead
+
+
+def test_archive_mode_keeps_an_edition_whose_table_omits_specifics(monkeypatch):
+    from fetchers import minfin
+    rows = [list(r) for r in _receipts()]
+    rows[7][5] = "250"                                              # the subclass 1011 is 400, its printed specifics now give 350
+    monkeypatch.setattr(minfin, "BULLETIN_ARCHIVE", True)
+    d, records, notes = mc.receipts_edition({"табл 4": rows}, {"id": "B"})
+    by = {r["item_code"]: r["value"] for r in records}
+    assert by["STATE.1011"] == 400 and by["STATE.101110"] == 250 and any("INCOMPLETE" in n and "1011" in n for n in notes)
+    rows[5][5] = "700"                                              # a class that does not add up is a real break
+    d, records, notes = mc.receipts_edition({"табл 4": rows}, {"id": "B"})
+    assert not records and any(n.startswith("SKIPPED STATE") for n in notes)
