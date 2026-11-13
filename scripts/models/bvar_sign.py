@@ -214,7 +214,8 @@ def hd_table(idn: dict) -> tuple[pd.DataFrame, pd.DataFrame]:
 
 
 def fevd_infl(idn: dict) -> pd.DataFrame:
-    f = np.median(idn["fevd"], axis=0)
+    """Posterior MEAN shares, %, so that a row adds up to 100 (share-by-share medians gave 70-81)."""
+    f = np.mean(idn["fevd"], axis=0)
     rows = []
     for h in (0, 4, 8, 20):
         r = {"h": h}

@@ -43,6 +43,52 @@ Choices made along the way, each argued in the script's docstring and the report
   weakly identified in 57 quarters — the report says so and gives the probability that
   policy is tighter than neutral rather than a precise number.
 
-Tests: `tests/test_models.py` (synthetic data: PPML recovers known elasticities, the BVAR
+## Inflation models: what was checked on 2026-11-13 and what to keep in mind
+
+All ten scripts of the inflation block (`svar_v2`, `bvar_sign*`, `bvar_market`, `shapiro_goods`, `erpt_*`,
+`fiscal_lp`, `regional_fiscal_lp`) were re-run and reviewed line by line; every output here is regenerated on the
+data of 2026-11-13, and `svar_v2.py` gives the same files on a second run.
+
+**Corrected**
+- Forecast-error variance shares are posterior means and add up to one (share-by-share medians summed to
+  0.83-0.89 and understated demand and monetary policy by about 40 %). SVAR v2, 8 quarters: external 37.6 %,
+  tenge 18.4 %, supply 16.8 %, demand 10.2 %, policy rate 8.1 %, tariffs 5.6 %, non-oil deficit 3.3 %.
+- The decomposition to quote is `svar_v2/mean_<variant>.csv` (posterior means): it adds up to inflation exactly.
+  Group-by-group medians (`changes_*`, `levels_*`) do not add up, and the median-target model
+  (`median_target_*`) is one draw that can sit far from the centre in the latest quarters.
+- `hd_v2.png` drew the non-oil deficit under the label of government consumption.
+- `erpt_border.csv`: the import price index is «December of the previous year = 100» and was read as a monthly
+  change; border pass-through for food from the NEER is 0.65, not 2.59.
+- `erpt_usd_vs_neer.csv`: «перенос 12м» is now the cumulative 12-month response including the AR terms (food
+  0.55, the lag sum alone 0.14); the lag sum and the long run are separate columns.
+- `shapiro_goods`: the price innovation comes from the month-on-month equation, the band is robust, the weights
+  are the official BNS ones (non-food 2019: 0.298, the estimated 0.410 was used before).
+- `fiscal_lp`, `bvar_sign*`, `bvar_market`: the files were from the STL vintage of the data and did not
+  reproduce; the industrial-production panel of `fiscal_lp` was built on a broken level (see `model_data`: `ip`).
+- A quarter of GDP not yet in BNS's adjusted series is added through X-13 of the unadjusted level, not by
+  applying a y/y index to the adjusted one.
+
+**Not errors, but they limit what the results mean**
+- *Tariff steps* are in effect the regulated CPI: 109 of 188 months are flagged and the correlation is 0.99.
+- *Fiscal shock*: a recursive ordering on a deficit-to-GDP ratio; revenue and the denominator respond to
+  activity within the quarter, so the shock is not a clean policy shock (its price response is negative).
+- *Levels versus changes*: the baseline drifts (half of the retained draws have a root slightly above one), so
+  level contributions are relative to a different baseline in each variant; changes are robust.
+- *`v2_ma4` and `v2_split`*: the innovation of a four-quarter average is not a structural shock in a VAR(2),
+  and the three separately adjusted pieces of the split do not add up (0.16 pp on average, up to 0.5).
+- *One rotation per reduced-form draw* is kept, so «accepted = 1000» is not an acceptance rate; the importance
+  weights of Arias et al. for zero restrictions are not applied.
+- *USD versus NEER*: the dollar's lead comes from 2022; without March 2022 - June 2023 its pass-through to the
+  headline CPI is near zero. No 12-month pass-through here is significant at 5 % (food: 0.55, t = 1.4).
+- *`fiscal_lp`*: the «shock» is the level of a persistent budgeted flow, scaled to 1 % of GDP in a month, about
+  7.6 standard deviations of what is observed.
+- *`regional_fiscal`*: 20 clusters; the one significant horizon is not significant without Turkestan oblast.
+- *Shapiro*: quantities exist only as y/y rates, so base effects still enter the quantity residual.
+- BNS's seasonally adjusted GDP itself moves +6.5 % q/q in 2026Q2; the models take it as published.
+
+**Not verified**: how `cpi_components/` (market core index, divisions, regional files) was built -- there is no
+script for it in the repository; the amount removed from the deficit for July 2017 (2 135.8 bn tenge).
+
+Tests: `tests/test_models_inflation.py` (the properties above), `tests/test_models.py` (synthetic data: PPML recovers known elasticities, the BVAR
 marginal likelihood equals the chain of Student-t predictives, block exogeneity is exact, the
 historical decomposition adds up, the Kalman filter tracks a simulated potential).

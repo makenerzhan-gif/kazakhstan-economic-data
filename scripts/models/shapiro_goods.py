@@ -17,14 +17,23 @@ Kazakhstan version (what the data allow):
   * quantities: BNS physical volume index of retail trade by commodity group, y/y
     (Taldau 702041, dictionary 3013 «Структура товаров для месячной формы»), 2016-01 on --
     fetched live from Taldau by this script;
-  * y/y rates only exist for the quantities, so the VAR is in 12-month log changes with 13
-    lags: given the lags, the innovation in a y/y change equals the innovation in the m/m
-    change (dlog_t - dlog_{t-12}; the second term is known at t-1), so the sign test is the
-    same as Shapiro's;
+  * the PRICE innovation is taken from the month-on-month change: the price equation has the
+    m/m log change on the left, 12 own lags, 13 lags of the quantity and month dummies;
+  * quantities exist only as y/y rates, so the QUANTITY equation is in the 12-month log change
+    (13 own lags, 12 lags of the m/m price, month dummies). In theory its innovation equals the
+    innovation in the m/m change (dlog_t - dlog_{t-12}; the second term is known at t-1), but the
+    regression does not see dlog_{t-12} separately, so base effects (COVID above all) leak into the
+    residual: this is the weak side of the decomposition and the reason for a robust band;
+  * the band for "ambiguous" is 0.25 of a ROBUST standard deviation (1.4826 x the median absolute
+    deviation), so that the 2020-2021 outliers do not widen it.
+    Until 2026-11-13 both equations were in y/y with 13 lags: the price residual then agreed in sign
+    with an m/m innovation in only 70-72 % of months and 46 % of months came out ambiguous;
   * services (~0.31) are left unclassified -- BNS has no monthly volume of paid services to
     households (index 702501 is quarterly and covers business services too).
-Weights: estimated each year from index arithmetic (headline m/m on the three groups,
-coefficients summing to 1); the fit error is <= 0.08 pp a month, i.e. rounding.
+Weights: the official BNS weights of food, non-food goods and paid services of each year
+(data/processed/dims/cpi_weights.csv). The weights estimated from index arithmetic, used before
+2026-11-13, are still written to cpi_group_weights_estimated.csv for comparison: twelve points a
+year identify them poorly (non-food 2019: 0.410 estimated, 0.298 official).
 """
 from __future__ import annotations
 
@@ -90,15 +99,30 @@ def weights(m: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows).set_index("year")
 
 
-def var_resid(Y: np.ndarray, p: int) -> np.ndarray:
-    T = len(Y)
-    X = np.hstack([Y[p - j:T - j] for j in range(1, p + 1)] + [np.ones((T - p, 1))])
-    B = np.linalg.lstsq(X, Y[p:], rcond=None)[0]
-    return Y[p:] - X @ B
+def official_weights() -> pd.DataFrame:
+    """Shares of food, non-food goods and services in the CPI basket by year (BNS)."""
+    w = pd.read_csv(common.REPO_ROOT / "data" / "processed" / "dims" / "cpi_weights.csv", parse_dates=["date"])
+    w = w[(w.region == "national") & w.item_code.isin(["FOOD", "NONFOOD", "SERVICES"])]
+    t = w.pivot_table(index=w.date.dt.year, columns="item_code", values="value")
+    t = t.div(t.sum(axis=1), axis=0)
+    return t.rename(columns={"FOOD": "food", "NONFOOD": "nonfood", "SERVICES": "services"})
+
+
+def innovations(price_mom: pd.Series, qty_yoy: pd.Series, lags: int) -> pd.DataFrame:
+    """Residuals of the two equations: price in m/m, quantity in y/y, both with the lags of both and month dummies."""
+    d = pd.concat([price_mom.rename("p"), qty_yoy.rename("q")], axis=1).dropna()
+    X = {f"p{k}": d.p.shift(k) for k in range(1, lags)}
+    X.update({f"q{k}": d.q.shift(k) for k in range(1, lags + 1)})
+    X = pd.DataFrame(X, index=d.index)
+    md = pd.get_dummies(pd.Series(d.index.month, index=d.index), prefix="m", drop_first=True, dtype=float)
+    X = pd.concat([X, md], axis=1).assign(const=1.0).dropna()
+    Y = d.loc[X.index]
+    B = np.linalg.lstsq(X.values, Y.values, rcond=None)[0]
+    return pd.DataFrame(Y.values - X.values @ B, index=X.index, columns=["p", "q"])
 
 
 def label(res: np.ndarray, band: float) -> np.ndarray:
-    sd = res.std(axis=0, ddof=1)
+    sd = 1.4826 * np.median(np.abs(res - np.median(res, axis=0)), axis=0)        # robust to the 2020-2021 outliers
     z = res / sd
     lab = np.where(np.sign(z[:, 0]) == np.sign(z[:, 1]), "demand", "supply").astype(object)
     if band > 0:
@@ -109,17 +133,15 @@ def label(res: np.ndarray, band: float) -> np.ndarray:
 def decompose(band: float = BAND, lags: int = LAGS) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     m = common.load_monthly()
     vol = fetch_retail_volume()
-    w = weights(m)
+    w = official_weights()
     out, labels = [], {}
     for g in ("food", "nonfood"):
-        price_yoy = 100 * np.log(1 + m[f"cpi_{g}_yoy"] / 100)
+        mom = 100 * np.log(m[f"cpi_{g}"]).diff()  # NSA m/m log change: the inflation that gets labelled, and the price equation
         qty_yoy = 100 * np.log(vol[g] / 100)
-        d = pd.concat([price_yoy.rename("p"), qty_yoy.rename("q")], axis=1).dropna()
-        res = var_resid(d.values, lags)
-        idx = d.index[lags:]
-        lab = pd.Series(label(res, band), index=idx)
+        res = innovations(mom, qty_yoy, lags)
+        idx = res.index
+        lab = pd.Series(label(res.values, band), index=idx)
         labels[g] = lab
-        mom = 100 * np.log(m[f"cpi_{g}"]).diff()  # NSA m/m log change, the inflation that gets labelled
         wt = pd.Series([w.loc[p.year, g] if p.year in w.index else np.nan for p in idx], index=idx)
         for cat in ("demand", "supply", "ambiguous"):
             x = (mom.reindex(idx) * (lab == cat) * wt)
@@ -131,7 +153,7 @@ def decompose(band: float = BAND, lags: int = LAGS) -> tuple[pd.DataFrame, pd.Da
     c["goods_total"] = c.food_total + c.nonfood_total
     c["headline_yoy_log"] = (100 * np.log(1 + m["cpi_yoy"] / 100)).reindex(c.index)
     lab = pd.DataFrame(labels)
-    return c, lab, w
+    return c, lab, weights(m)
 
 
 def chart(c: pd.DataFrame, path: Path) -> None:
@@ -172,6 +194,7 @@ def main() -> None:
     lab.index = lab.index.astype(str)
     lab.to_csv(OUT / "labels.csv")
     w.to_csv(OUT / "cpi_group_weights_estimated.csv", float_format="%.4f")
+    official_weights().to_csv(OUT / "cpi_group_weights_official.csv", float_format="%.4f")
     rob = {}
     for name, kw in {"band0": dict(band=0.0), "lags7": dict(lags=7), "band50": dict(band=0.5)}.items():
         r, _, _ = decompose(**kw)

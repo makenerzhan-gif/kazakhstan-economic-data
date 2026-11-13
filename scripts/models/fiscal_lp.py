@@ -13,7 +13,8 @@ total transfers net of their predictable part (regression on 12 own lags + month
 
 Local projections (Jorda 2005), h = 0..18 months:
     100 [ln X_{t+h} - ln X_{t-1}] = a_h + b_h shock_t + controls_t + e_{t+h}
-X = CPI (STL SA) or industrial production (SA); controls: 3 lags of the dependent monthly change,
+X = CPI or industrial production, both X-13 seasonally adjusted (model_data; industrial production is the level
+built from the y/y index); controls: 3 lags of the dependent monthly change,
 of USD/KZT, Brent and TONIA changes, and 3 lags of the shock. Newey-West s.e. with h+1 lags.
 Sample 2018-05..2026-06 (~98 months, fewer at long h). Everything here is small-sample.
 """

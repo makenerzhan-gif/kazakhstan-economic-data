@@ -3,10 +3,10 @@ get their own shocks, so "demand" and "tenge" no longer have to absorb them.
 
     python scripts/models/bvar_sign_ext.py     # writes models/bvar_sign_ext/
 
-Variables (quarterly, 2011Q2-2026Q1), in this order:
+Variables (quarterly; data from 2011Q2, estimation from 2011Q4 after two lags, to 2026Q1), in this order:
   external : 100 ln Brent, Fed funds, 100 ln RUB/USD                        (recursive, first)
   fiscal   : 100 ln real government final consumption (BNS SA, 2010 prices)  (recursive)
-  tariffs  : 400 dln CPI "regulated utility services" (STL SA, quarterly mean) (recursive)
+  tariffs  : 400 dln CPI "regulated utility services" (X-13 SA from model_data, quarterly mean) (recursive)
   rotated  : 100 ln GDP, 100 ln USD/KZT, CPI inflation SAAR, TONIA           (signs as bvar_sign)
 
 Why recursive for the first two domestic shocks:
@@ -216,7 +216,10 @@ AGG = {"Σ Спрос + бюджет + ДКП": ["fiscal", "demand", "monetary"]
        "Σ Предложение + курс + тарифы": ["supply", "tenge", "tariff"]}
 
 
-def chart(mt, path, title):
+def chart(mt, path, title, colour_of=None):
+    """`colour_of`: {column: the legend key whose colour it takes} -- a series with another name keeps its
+    own label in the legend (the non-oil deficit of svar_v2 was once drawn under the label of government
+    consumption to borrow its colour)."""
     import matplotlib.pyplot as plt
 
     d = mt.loc["2018Q1":]
@@ -225,6 +228,8 @@ def chart(mt, path, title):
     colors = {"Внешние шоки": "#898781", "Бюджет (госпотребление)": "#9b5de5", "Спрос (прочий внутренний)": "#eb6834",
               "ДКП (шок ставки)": "#1baf7a", "Регулируемые тарифы": "#d62839",
               "Предложение (внутреннее)": "#2a78d6", "Курс тенге (риск-премия)": "#eda100"}
+    for name, key in (colour_of or {}).items():
+        colors = {(name if g == key else g): c for g, c in colors.items()}
     pos, neg = np.zeros(len(d)), np.zeros(len(d))
     for g, c in colors.items():
         if g not in d:

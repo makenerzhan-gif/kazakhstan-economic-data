@@ -29,7 +29,13 @@ def main():
     ip = pd.read_csv(common.REPO_ROOT / "data/processed/dims/import_price_index_by_hs_section.csv", parse_dates=["date"])
     ip = ip.pivot_table(index="date", columns="item_code", values="value")
     ip.index = ip.index.to_period("M")
-    ipm = 100 * np.log(ip / 100)  # chain m/m, January = Jan/Dec by BNS convention
+    # The index is «December of the previous year = 100»: the month-on-month change is the ratio to the
+    # previous month's index inside a year and to 100 in January. (Until 2026-11-13 the index itself was
+    # read as month-on-month, which made every number of erpt_border.csv wrong.)
+    ip = ip.reindex(pd.period_range(ip.index.min(), ip.index.max(), freq="M"))      # a missing month stays a gap
+    prev = ip.shift(1)
+    prev.loc[ip.index.month == 1] = 100.0
+    ipm = 100 * np.log(ip / prev)
     rows = []
     for name, secs in PAIRS.items():
         x = ipm[secs].mean(axis=1)

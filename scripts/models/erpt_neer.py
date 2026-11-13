@@ -6,7 +6,9 @@
 Per division d (monthly, 2016-01..2026-08, HAC(6) errors):
     pi_d,t = c + sum_{k=0..12} b_k * e_{t-k} + r1 pi_d,t-1 + r2 pi_d,t-2 + g0 oil_t + g1 oil_t-1 + month FE
 e = 100 dln USD/KZT (depreciation +) or -100 dln NEER_CONSUMER (depreciation +).
-Reported: 12-month pass-through sum b_k (short run) and b/(1-r1-r2) (long run), t-stat, adjusted R2,
+Reported: the 12-MONTH PASS-THROUGH = the cumulative response of the price level 12 months after a 1 %
+depreciation, which includes the AR(2) dynamics (delta-method t-stat); sum b_k (the direct effect of the lags
+alone, which until 2026-11-13 was mislabelled as the 12-month pass-through); the long run sum b_k/(1-r1-r2);
 and a horse race with both rates (sum of each block). Inputs: models/cpi_components/division_mm.csv
 (BNS CPI by COICOP division, m/m), model_data/monthly.csv, dims NEER_CONSUMER.
 """
@@ -24,7 +26,7 @@ import common  # noqa: E402
 
 OUT = common.MODELS / "erpt_neer"
 L = 12
-W = {  # official BNS basket weights 2025, % (as in the accounting decomposition)
+W = {  # approximate basket weights, % (division 12 left out); used only for the printed weighted average
     "Продукты питания и безалкогольные напитки": 38.6, "Алкогольные напитки и табачные изделия": 1.7,
     "Одежда и обувь": 9.0, "Жилищные услуги, вода, электроэнергия, газ и другие виды топлива": 13.2,
     "Предметы домашнего обихода, бытовая техника и текущее обслуживание жилья": 5.2, "Здравоохранение": 8.8,
@@ -43,6 +45,32 @@ def load():
     return div, rates
 
 
+def cumulative(params: pd.Series, cols: list[str], horizon: int = L) -> float:
+    """Cumulative response of the level `horizon` months after a unit shock: c_h = b_h + r1 c_(h-1) + r2 c_(h-2)."""
+    b = [params[c] for c in cols]
+    r1, r2 = params["y1"], params["y2"]
+    c = []
+    for h in range(horizon + 1):
+        c.append((b[h] if h < len(b) else 0.0) + (r1 * c[h - 1] if h >= 1 else 0.0) + (r2 * c[h - 2] if h >= 2 else 0.0))
+    return float(sum(c))
+
+
+def cumulative_t(r, cols: list[str]) -> tuple[float, float]:
+    """The cumulative response and its t-statistic by the delta method (numerical gradient, full covariance)."""
+    names = cols + ["y1", "y2"]
+    p0 = r.params.copy()
+    value = cumulative(p0, cols)
+    grad = []
+    for n in names:
+        p = p0.copy()
+        step = 1e-6 * max(1.0, abs(p[n]))
+        p[n] += step
+        grad.append((cumulative(p, cols) - value) / step)
+    g = np.array(grad)
+    se = float(np.sqrt(g @ r.cov_params().loc[names, names].values @ g))
+    return value, value / se
+
+
 def fit(y, rates, blocks):
     df = pd.DataFrame({"y": y})
     for b in blocks:
@@ -59,7 +87,8 @@ def fit(y, rates, blocks):
         cols = [f"{b}{k}" for k in range(L + 1)]
         s = r.params[cols].sum()
         se = float(np.sqrt(np.ones(L + 1) @ r.cov_params().loc[cols, cols].values @ np.ones(L + 1)))
-        out.update({f"{b}_sr": s, f"{b}_t": s / se, f"{b}_lr": s / (1 - rho)})
+        c12, c12_t = cumulative_t(r, cols)
+        out.update({f"{b}_sr": s, f"{b}_t": s / se, f"{b}_lr": s / (1 - rho), f"{b}_c12": c12, f"{b}_c12_t": c12_t})
     return out
 
 
@@ -71,11 +100,15 @@ def main():
         y = 100 * np.log(div[name] / 100)
         a, b, c = fit(y, rates, ["usd"]), fit(y, rates, ["neer"]), fit(y, rates, ["usd", "neer"])
         rows.append({"раздел": name, "вес": w,
-                     "USD: перенос 12м": a["usd_sr"], "USD: t": a["usd_t"], "USD: adjR2": a["adj_r2"],
-                     "NEER: перенос 12м": b["neer_sr"], "NEER: t": b["neer_t"], "NEER: adjR2": b["adj_r2"],
+                     "USD: перенос 12м": a["usd_c12"], "USD: t": a["usd_c12_t"],
+                     "USD: сумма b": a["usd_sr"], "USD: t суммы b": a["usd_t"], "USD: долгосрочный": a["usd_lr"],
+                     "USD: adjR2": a["adj_r2"],
+                     "NEER: перенос 12м": b["neer_c12"], "NEER: t": b["neer_c12_t"],
+                     "NEER: сумма b": b["neer_sr"], "NEER: t суммы b": b["neer_t"], "NEER: долгосрочный": b["neer_lr"],
+                     "NEER: adjR2": b["adj_r2"],
                      "ΔAIC (NEER−USD)": b["aic"] - a["aic"],
-                     "вместе: USD": c["usd_sr"], "вместе: USD t": c["usd_t"],
-                     "вместе: NEER": c["neer_sr"], "вместе: NEER t": c["neer_t"]})
+                     "вместе: USD 12м": c["usd_c12"], "вместе: USD t": c["usd_c12_t"],
+                     "вместе: NEER 12м": c["neer_c12"], "вместе: NEER t": c["neer_c12_t"]})
     T = pd.DataFrame(rows)
     tot = {k: (T[k] * T["вес"]).sum() / T["вес"].sum() for k in ["USD: перенос 12м", "NEER: перенос 12м"]}
     T.to_csv(OUT / "erpt_usd_vs_neer.csv", index=False, float_format="%.3f")

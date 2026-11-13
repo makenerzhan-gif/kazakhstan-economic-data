@@ -10,6 +10,7 @@ reaction of discretionary fiscal policy and of regulator-approved tariffs); GDP,
 inflation, TONIA rotated with zero (tenge: no GDP impact) and sign restrictions.
 
 Variants
+  (dates below are where the data start; estimation starts two quarters later, after the lags)
   old_2011  : bvar_sign_ext spec (real G, regulated CPI) on today's X-13 data, 2011Q2-2026Q1
   old_2013  : the same spec from 2013Q1 (isolates the sample change)
   v2        : non-oil deficit % GDP + tariff steps, 2013Q1-2026Q2                      <- main
@@ -130,6 +131,21 @@ def median_target(o):
     return mt.dropna()
 
 
+def posterior_mean(o):
+    """Posterior MEAN contribution of every shock group and of the baseline, by quarter. Means add up exactly
+    to the data (medians taken group by group do not: for 2024Q4->2025Q4 they missed the actual change by
+    0.8 pp), and they do not hang on one draw as the median-target model does -- that draw can sit far from
+    the centre of the posterior in the latest quarters. This is the decomposition to quote and to chart."""
+    mt = pd.DataFrame({"actual": o["actual"], "baseline": np.nanmean(o["base_y"], axis=0)}, index=[str(q) for q in o["idx"]])
+    for g in o["grp_y"]:
+        mt[NAMES[g]] = np.nanmean(o["grp_y"][g], axis=0)
+    mt.index.name = "quarter"
+    mt = mt.dropna()
+    gap = (mt.drop(columns=["actual", "baseline"]).sum(axis=1) + mt.baseline - mt.actual).abs().max()
+    assert gap < 1e-6, gap
+    return mt
+
+
 def fiscal_irf(o, group):
     """Responses to a +1 pp of GDP shock to the fiscal variable of `group`."""
     s = o["groups"][group][0]
@@ -147,10 +163,14 @@ def fiscal_irf(o, group):
 
 
 def fevd_share(o, h=8):
-    """Share of the h-quarter-ahead forecast-error variance of inflation by shock group (median)."""
+    """Share of the h-quarter-ahead forecast-error variance of inflation by shock group: the POSTERIOR MEAN
+    of each share, so that the shares add up to one. (Medians taken share by share do not: until 2026-11-13
+    the rows of summary.csv summed to 0.83-0.89 and understated the small shares by up to 40 %.)"""
     irf = o["irfs"][:, :h + 1, o["INFL"], :] ** 2
     tot = irf.sum(axis=(1, 2))
-    return {NAMES[g]: float(np.median(irf[:, :, s].sum(axis=(1, 2)) / tot)) for g, s in o["groups"].items()}
+    share = {NAMES[g]: float(np.mean(irf[:, :, s].sum(axis=(1, 2)) / tot)) for g, s in o["groups"].items()}
+    assert abs(sum(share.values()) - 1) < 1e-9, share
+    return share
 
 
 def market_core_quarterly() -> pd.Series:
@@ -208,6 +228,8 @@ def main():
         levels(o).to_csv(OUT / f"levels_{name}.csv", index=False, float_format="%.3f")
         mt = median_target(o)
         mt.to_csv(OUT / f"median_target_{name}.csv", float_format="%.3f")
+        pm = posterior_mean(o)
+        pm.to_csv(OUT / f"mean_{name}.csv", float_format="%.3f")
         for g in ("fiscal", "quasi", "fiscal_core", "fiscal_g"):
             if g in o["groups"]:
                 fiscal_irf(o, g).to_csv(OUT / f"irf_{g}_{name}.csv", index=False)
@@ -218,8 +240,8 @@ def main():
         summary.append({"variant": name, "sample": f"{o['idx'][0]}-{o['idx'][-1]}", "T": len(o["idx"]),
                         "lambda": r["lambda"], "accepted": o["accepted"], **{f"FEVD8 {k}": v for k, v in fe.items()}})
         if name == "v2":
-            E.chart(mt.rename(columns={NAMES["fiscal"]: "Бюджет (госпотребление)"}), OUT / "hd_v2.png",
-                    "Инфляция: вклады шоков, модель 2026-09")
+            E.chart(pm, OUT / "hd_v2.png", "Инфляция: вклады шоков, SVAR v2 (апостериорные средние)",
+                    colour_of={NAMES["fiscal"]: "Бюджет (госпотребление)"})
     pd.DataFrame(summary).to_csv(OUT / "summary.csv", index=False, float_format="%.3f")
 
 

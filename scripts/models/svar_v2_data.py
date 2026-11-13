@@ -140,9 +140,21 @@ def build() -> tuple[pd.DataFrame, pd.DataFrame]:
     gv = pd.read_csv(R / "dims" / "gva_volume_index_by_section_discrete.csv", parse_dates=["date"])
     gv = gv[(gv.region == "national") & (gv.item_code == "GDP")].set_index("date")["value"]
     gv.index = pd.PeriodIndex(gv.index, freq="Q")
+    # Quarters BNS has not yet published in its seasonally adjusted series are added with the q/q growth of an
+    # X-13 adjustment of the UNADJUSTED real GDP extended by the discrete y/y index. (Until 2026-11-13 the y/y
+    # index was applied to gdp_sa itself, whose own y/y it does not track -- mean gap 1.4 pp -- which gave
+    # +2.7 % q/q for 2026Q2.)
     last = q["gdp_sa"].dropna().index[-1]
-    for p in gv.index[gv.index > last]:
-        q.loc[p, "gdp_sa"] = q.loc[p - 4, "gdp_sa"] * gv[p] / 100
+    ahead = list(gv.index[gv.index > last])
+    if ahead:
+        import x13
+        nsa = q["gdp_nsa"].dropna().copy()
+        for p in gv.index[gv.index > nsa.index[-1]]:
+            nsa.loc[p] = nsa.loc[p - 4] * gv[p] / 100
+        adj = x13.adjust(pd.Series(nsa.values, index=nsa.index.to_timestamp()), 4, transform="log", title="gdp_nsa_ext").sa
+        adj.index = pd.PeriodIndex(adj.index, freq="Q")
+        for p in ahead:
+            q.loc[p, "gdp_sa"] = q.loc[p - 1, "gdp_sa"] * adj[p] / adj[p - 1]
     f = fiscal(q)
     for c in f.columns:
         q[c] = f[c]
