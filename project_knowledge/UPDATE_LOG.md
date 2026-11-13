@@ -1,87 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — the budget back to 2013, December, gaps, non-oil deficit before 2022» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — seven gaps for policy analysis: quasi-fiscal lending, expectations, import prices, NEER, wages, regional budgets, budget 2011-2018» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-27 — seven gaps for policy analysis: quasi-fiscal lending, expectations, import prices, NEER, wages, regional budgets, budget 2011-2018
-
-**Why.** The user listed seven things missing for the SVAR and pass-through work (table «Чего нет /
-Зачем нужно / Где взять»). All seven are now in the pipeline, 22 new item-level datasets.
-
-**1. Quasi-fiscal lending.** LOANS_BY_CREDITOR_TYPE (NBK formId=445): loans by creditor —
-banks, «other public sector» (the development institutions), microfinance, mortgage companies —
-× currency × borrower, quarterly 2022-01…2023-07, monthly since. Other-public-sector lending to
-business: 1 486 bn KZT (2022-01) → 4 485 bn (2026-08), 12.4% → 18.8% of business loans (banks +
-OPS). NATIONAL_FUND_DOMESTIC_OPERATIONS (470): the National Fund's Kazakh bonds (3 378 bn at face)
-and equities, FX sales, transfers, monthly from 2024-02. NBK_MONETARY_SURVEY (50): the NBK balance
-sheet by line — the API now gives a mnemonic with each row code, and the identities (1 = 1.1 + 1.2 +
-1.3, 3 = 1 + 2 …) hold, so it is connected (sources.yaml had declined it for lack of labels);
-2.4 = claims on non-bank financial institutions, 5.2 trn. DAMU_SUBSIDISED_LOANS_ANNUAL / _MONTHLY:
-sums of the ~120 000 project rows of Damu's monthly subsidy report (region × programme × ОКЭД section
-× business size, by approval year since 2010, by month since 2024); region totals equal the file's
-summary sheet. Approved loans: 1 186 bn (2020), 1 583 (2021), ~1 000 a year 2022-2024, 366 (2025),
-26 (Jan-Aug 2026). DEVELOPMENT_INSTITUTIONS_BALANCE_SHEETS: balance-sheet lines of every IFRS
-statement Baiterek (consolidated), DBK, the Kazakhstan Sustainability Fund and the Agrarian Credit
-Corporation filed on KASE (fetchers/kase_ifrs.py; 104 xlsx; only columns with assets = liabilities +
-equity are kept; header typos resolved by the statement's own date). Baiterek: assets 4 719 bn
-(2018) → 19 048 (2025), loans to customers 2 399 → 8 033, finance leases 275 → 2 355, bonds issued
-1 440 → 7 500.
-
-**2. Budget 2011-2018** (checkpoint commit of this branch). STATE_TRANSFERS_RECEIVED_YTD (the
-bulletin's «Поступления трансфертов» row, equal to the NF transfers in every overlapping month) lets
-the non-oil deficit identity run before 2018: STATE_NON_OIL_DEFICIT_YTD from 2013-01 (plus four
-2011-2012 months found in xls), annual non-oil deficit from 2013; STATE_BUDGET_*_Q from 2010Q1 using
-the quarterly columns the bulletins print (the year carried across merged header cells). 2011-2012
-monthly editions are PDF only. Still missing: 2020-01, 2020-04, 2026-04 (editions not online).
-
-**3. Expectations.** INFLATION_EXPECTATIONS_SURVEY: the NBK household survey workbook — every
-question's answer shares since 2016-01 (≈30 questions, 247 items) and the medians (perceived,
-expected 12 m, expected 5 y from 2025). The long-standing February 2022 outlier (9.6) is explained:
-the workbook's Q6 shares for that month are a copy of Q5's — the only such copy in 2016-2026
-(source_issues updated, new entry inflation_expectations_survey_2022_02_q6). PROFESSIONAL_FORECASTS_SURVEY:
-the analysts' survey chronology since 2022-08, medians by round and target year (Aug 2026: CPI Dec/Dec
-2026 10.0, 2027 8.5; base rate 2026 16.0; CPI in 5 years 5.3; neutral rate 9.0). By sector (14 ОКЭД
-slots, quarterly since 2005/2016): finished-goods price expectations and actuals, raw-material and
-import-price expectations, demand expectations, and PRICE_FACTORS_BY_SECTOR (formId=384, share of
-firms citing demand, raw materials, wages, exchange rate … since 2020-Q2). «Other industries» of
-forms 362-366/384 is the N.R.S slot of the others.
-
-**4. Import prices.** IMPORT_PRICE_INDEX_BY_HS_SECTION / _EAEU_ / _NON_EAEU_ (Taldau 19073959/60/61):
-the 21 HS sections, month vs December of the previous year, 2020-01 on; IMPORT_PRICE_INDEX_YOY_BY_HS_SECTION
-bridges 2016-2019 (year on year). July 2026 vs December 2025: all imports 97.2 (EAEU 98.4, rest 96.7);
-footwear (XII) 98.0, textiles (XI) 98.8, cars (XVII) 97.3.
-
-**5. Import-weighted NEER.** EXCHANGE_RATES_OFFICIAL_MONTHLY: monthly means of 18 NBK official rates
-since 2010, one request per currency (a joint report shifts columns when a currency is missing),
-rates printed below 1 KZT dropped (UZS, BYR before 2014), the Belarusian rouble restated for its
-2016 redenomination. IMPORTS_BY_PARTNER_COMTRADE: imports by partner, consumer goods (BEC 112, 122,
-522, 61, 62, 63) and all goods, 2010-2025. NEER_IMPORT_WEIGHTED: geometric chain with the previous
-year's shares (euro members from adoption, dollarised partners to USD, 88-92% of imports covered),
-2020 = 100, up = appreciation; NEER_CONSUMER and NEER_TOTAL; weights in NEER_IMPORT_WEIGHTS (2026:
-RUB 39.3%, CNY 21.7%, EUR 16.9%, TRY 4.7%). Monthly log changes correlate 0.81 with the NBK NEER.
-
-**6-7. Regional budgets, wage bill.** REGIONAL_BUDGETS_YTD: bulletin tables 12, 12.1-12.20 and 18
-for every edition since 2013 (160 months to 2026-07; not online: 2020-04, 2025-12, 2026-04) —
-revenues (PIT, social tax, transfers), spending by the 15 functional groups, net lending, balance,
-subventions and withdrawals by region, January to the month. The edition's period is its latest
-«январь-… отчет» header (some sheets print last year's months first), December editions read the
-year's report column, «на 1 января 2023» = January-December 2022. Regions add up to table 12 within
-0.5% in every complete edition; three source problems registered (source_issues): Shymkent's February
-2020 sheet repeats January; table 12 of February/March 2021 is about half its regions; Abai, Zhetisu
-and Ulytau are printed only from the August 2024 edition (2022-09…2024-07 miss them). Subventions
-Jan-Jul 2026: 3 246.1 bn, Turkestan 656.4; withdrawal from Almaty city 319.3. SOCIAL_CONTRIBUTIONS_BY_REGION: ГФСС form 5-СО, social contributions
-and insured participants by region, monthly since 2016 (Aug 2026: 85.1 bn KZT, 5.254 mn persons;
-the rate rose from 3.5% to 5% in 2025 — a level break); seven months have no monthly file
-(2016-06, 2016-12, 2022-01…05). PENSION_FUND_FLOWS_YTD (NBK formId=25, since 2023): mandatory
-contributions 2 659 bn in 2025, 1 866 bn in Jan-Aug 2026.
-
-**Plumbing.** New fetchers nbk_dims.fetch_classified (any NBK form classified by text fields, with
-sum checks), damu, kase_ifrs, nbk_expectations, nbk_fx, comtrade, neer_import (derived), gfss,
-minfin_regions; taldau `term_codes` and first-of-month dates for monthly Taldau series;
-regions.csv learnt «Абайская», «Жетысуская», «Улытауская»; `backfill_minfin_bulletins.py --dims`;
-LFS for data/raw/damu and data/raw/kase xlsx. Slow sources refresh weekly (refresh_days).
-
-Tests: `tests/test_policy_gaps.py` (33); full suite 608 passed.
 
 ## 2026-09-27 — history back to 1991 and 1990s peers: GDP, population, WDI from 1960, IMF WEO for all economies, CPI weights, discrete quarterly GDP (user: «Чего в пайплайне нет …», «Что ещё не хватает …»)
 
@@ -638,3 +558,33 @@ Not done (need a decision): updaters in parallel, logs out of the repository.
    rate; real 10-year yield on household expectations. The sovereign USD spread already exists (KZ_EUROBOND_SPREAD).
 
 Tests: tests/test_run_speed.py (3), tests/test_analytics.py (+1).
+
+## 2026-11-13 — tax receipts by economic activity: no KGD table exists; the Audit Chamber's structure and BNS environmental taxes connected instead
+
+**Asked for**: annual tax receipts by ОКЭД from the State Revenue Committee (КГД), 2018-2025, with section B and its divisions 05-09.
+**Result: not published.** Points checked on 2026-11-13 (details in config/sources.yaml, TAX_RECEIPTS_BY_OKED):
+1. gov.kz, project kgd: title searches «ОКЭД», «видам экономической деятельности», «отрасл» return nothing; direction 655
+   «Статистика» holds receipts by budget code, by region and by month (activities 88070, 83555, 59629, 87705, 87371, 87372 …);
+   the files opened have no activity breakdown. «Среднеотраслевое значение КНН» has ОКЭД divisions 05-09 but ratios, not receipts.
+2. portal.kgd.gov.kz: 403 content pages read, nothing by ОКЭД; every old kgd.gov.kz URL redirects to the portal's home page.
+   web.archive.org was NOT reachable from the sandbox, so an archived file is not excluded.
+3. data.egov.kz: taxpayer registers and the tax calendar only.
+4. Minfin Statistical Bulletin (49 sheets): revenue by budget code only.
+
+**Connected** (scripts/fetchers/tax_by_industry.py):
+- TAX_STRUCTURE_BY_INDUSTRY: the Supreme Audit Chamber's chart «Структура налоговых поступлений бюджета (ГБ+НФ) в разрезе
+  отраслей экономики» (source Minfin), six groups, 2017-2025, transcribed from the PDFs' text into
+  config/tax_structure_by_industry.yaml. Mining: 40.9 (2017), 47.0, 43.1, 29.6, 35.7, 46.2, 36.3, 34.2, 31.2 % (2025).
+  The fetcher adds CONSOLIDATED_TAX = December of STATE_TAX_REVENUE_YTD + NF_OIL_DIRECT_TAXES_YTD -- equal to the Chamber's
+  totals for 2023-2025 (23 469.6, 23 509.5, 26 913.4 bn KZT) -- and <GROUP>.RECEIPTS = share x total, an estimate
+  (mining 5 213 bn in 2018, 9 814 in 2022, 8 397 in 2025; the Chamber's text says 9.8 and 8.5 trn for 2022 and 2023).
+- ENVIRONMENTAL_TAXES_BY_OKED: BNS environmental-tax account by ОКЭД section (element 478740), 2016-2025, four tax groups.
+  Mining 2 861.8 bn KZT in 2025 (68 % of all environmental taxes), 27-35 % of the mining receipts estimated above: it
+  covers the rent tax, excises and the mineral extraction tax, not income tax or VAT.
+Reconciliations: sections + other payers = total on every sheet and year (enforced, tolerance 0.1 %); the four groups = the
+total sheet; direct oil taxes to the National Fund are 44-65 % of the mining estimate (2018-2025).
+**Not available anywhere found**: the split of mining into oil and gas (06) and metal ores (07). The Chamber's 2024
+conclusion has a non-ОКЭД «oil sector / ore-mining sector» table (7 194.3 / 2 038.5 bn in 2023) that does not reconcile
+with the chart and is not connected.
+
+Tests: tests/test_tax_by_industry.py (5 + 1 cross-source).

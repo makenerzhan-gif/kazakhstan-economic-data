@@ -5119,6 +5119,33 @@ datasets:
     category: fiscal
     note: "Hand-kept (config/quasi_state_debt.yaml): Minfin publishes no quasi-state debt table, so the annual totals come from the Supreme Audit Chamber (2019 13.95 trn, 2025 29.19 trn KZT = 18.3 % of GDP; external 13.27, internal 15.92) and the holdings' IFRS statements on kase.kz (Samruk-Kazyna borrowings 2011-2025, 8.09 trn in 2025, plus 1.20 trn of government loans; Baiterek 10.44 trn in 2025; KMG 3.52 trn, already inside Samruk-Kazyna -- items do not add up). The quarterly external part is EXTERNAL_DEBT_STATE_CONTROLLED (NBK). Update each June when the statements appear."
 
+  # ---------------------------------------------------------------- taxes by economic activity (fetchers/tax_by_industry.py, added 2026-11-13)
+  # The State Revenue Committee publishes no receipts by ОКЭД (config/sources.yaml, TAX_RECEIPTS_BY_OKED); these two are the nearest official publications.
+  - id: ENVIRONMENTAL_TAXES_BY_OKED
+    name_ru: "Экологические налоги по видам экономической деятельности (счёт экологических налогов БНС): энергоносители, транспорт, загрязнение, использование ресурсов, ежегодно, млн тенге"
+    name_en: "Environmental taxes by economic activity (BNS environmental-tax account): energy, transport, pollution, resource use, annual, million KZT"
+    agency: bns
+    fetcher: bns_env_taxes
+    element_id: 478740
+    min_items: 100
+    min_years: 8
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    note: "BNS «Экологические налоги по видам экономической деятельности» (stat.gov.kz element 478740, SEEA account; the file is in thousand KZT), calendar years 2016-2025, state budget plus National Fund, 19 ОКЭД sections by name + OTHER_PAYERS + ALL; item <GROUP>.<section>, GROUP = TOTAL, ENERGY, TRANSPORT, POLLUTION, RESOURCE. ONLY ENVIRONMENTAL TAXES in the SEEA sense, NOT all taxes: corporate income tax, VAT and payroll taxes are outside, and the file does not list the budget codes it covers. No ОКЭД divisions (05-09). Mining (TOTAL.B): 1 730 657 (2018), 928 306 (2020), 2 670 393 (2022), 2 724 431 (2024), 2 861 781 (2025) mln KZT -- 68 % of all environmental taxes in 2025 and about a third of the mining tax receipts implied by TAX_STRUCTURE_BY_INDUSTRY; in 2024 2 023 461 of it is energy taxes and 654 722 resource-use taxes. Checked on every sheet and year: sections add up to «Всего», the four groups to the total."
+
+  - id: TAX_STRUCTURE_BY_INDUSTRY
+    name_ru: "Структура налоговых поступлений государственного бюджета и Национального фонда по отраслям (диаграмма ВАП, источник — Минфин), %; оценка поступлений по отраслям"
+    name_en: "Structure of tax receipts of the state budget and the National Fund by industry (Supreme Audit Chamber chart, source Minfin), %; implied receipts"
+    agency: vap
+    fetcher: tax_industry_structure
+    file: config/tax_structure_by_industry.yaml
+    min_items: 13
+    frequency: annual
+    unit: "% (SHARE); bn KZT (RECEIPTS, CONSOLIDATED_TAX)"
+    category: fiscal
+    note: "Hand-kept shares (config/tax_structure_by_industry.yaml) from the chart in the Supreme Audit Chamber's conclusions, 2017-2025: MINING, MANUFACTURING, CONSTRUCTION, TRADE, TRANSPORT, OTHER, % of tax receipts of the state budget plus the National Fund. Mining: 40.9 (2017), 47.0 (2018), 29.6 (2020), 46.2 (2022), 36.3 (2023), 34.2 (2024), 31.2 (2025). No split of mining into oil-gas and metal ores. CONSOLIDATED_TAX = December of STATE_TAX_REVENUE_YTD + NF_OIL_DIRECT_TAXES_YTD (2018 on), equal to the Chamber's own totals for 2023-2025 (23 469.6, 23 509.5, 26 913.4 bn; CONSOLIDATED_TAX.PUBLISHED). <GROUP>.RECEIPTS = share x CONSOLIDATED_TAX is this repository's ESTIMATE from a share rounded to 0.1 pp (mining 2025: 8 397 bn KZT, ±13 bn); the Chamber's text gives 9.8 trn for 2022 and 8.5 trn for 2023, as computed here. For comparison, direct oil taxes paid into the National Fund were 3 725 bn in 2025 (NF_OIL_DIRECT_TAXES_YTD), 44 % of the mining estimate."
+
   - id: SUBSISTENCE_MINIMUM_BY_REGION
     name_ru: "Величина прожиточного минимума (расчёт БНС по ценам), всего, пенсионеры, дети 0-13 лет, по регионам, помесячно, тенге"
     name_en: "Subsistence minimum (BNS, price-based), total, pensioners, children 0-13, by region, monthly, KZT"

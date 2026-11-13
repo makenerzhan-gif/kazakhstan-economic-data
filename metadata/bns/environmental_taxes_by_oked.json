@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/478740/file/ru/",
+  "dataset_id": "478740",
+  "indicator_id": "ENVIRONMENTAL_TAXES_BY_OKED",
+  "indicator_name": "Environmental taxes by economic activity (BNS environmental-tax account): energy, transport, pollution, resource use, annual, million KZT",
+  "description": "Экологические налоги по видам экономической деятельности (счёт экологических налогов БНС): энергоносители, транспорт, загрязнение, использование ресурсов, ежегодно, млн тенге",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "BNS «Экологические налоги по видам экономической деятельности» (stat.gov.kz element 478740, SEEA account; the file is in thousand KZT), calendar years 2016-2025, state budget plus National Fund, 19 ОКЭД sections by name + OTHER_PAYERS + ALL; item <GROUP>.<section>, GROUP = TOTAL, ENERGY, TRANSPORT, POLLUTION, RESOURCE. ONLY ENVIRONMENTAL TAXES in the SEEA sense, NOT all taxes: corporate income tax, VAT and payroll taxes are outside, and the file does not list the budget codes it covers. No ОКЭД divisions (05-09). Mining (TOTAL.B): 1 730 657 (2018), 928 306 (2020), 2 670 393 (2022), 2 724 431 (2024), 2 861 781 (2025) mln KZT -- 68 % of all environmental taxes in 2025 and about a third of the mining tax receipts implied by TAX_STRUCTURE_BY_INDUSTRY; in 2024 2 023 461 of it is energy taxes and 654 722 resource-use taxes. Checked on every sheet and year: sections add up to «Всего», the four groups to the total.",
+  "publication_date": null,
+  "last_update_date": "2026-11-13",
+  "download_date": "2026-11-13",
+  "period_start": "2016-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

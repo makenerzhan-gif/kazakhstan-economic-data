@@ -1,0 +1,21 @@
+{
+  "source": "vap",
+  "source_url": "https://www.gov.kz/uploads/2026/9/28/38ffd5139703ddf13a1214e6ef6c07faa16f378c57263f6c9508d0653571f7f9_original.12430847.pdf",
+  "dataset_id": "config/tax_structure_by_industry.yaml",
+  "indicator_id": "TAX_STRUCTURE_BY_INDUSTRY",
+  "indicator_name": "Structure of tax receipts of the state budget and the National Fund by industry (Supreme Audit Chamber chart, source Minfin), %; implied receipts",
+  "description": "Структура налоговых поступлений государственного бюджета и Национального фонда по отраслям (диаграмма ВАП, источник — Минфин), %; оценка поступлений по отраслям",
+  "frequency": "annual",
+  "unit": "% (SHARE); bn KZT (RECEIPTS, CONSOLIDATED_TAX)",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Hand-kept shares (config/tax_structure_by_industry.yaml) from the chart in the Supreme Audit Chamber's conclusions, 2017-2025: MINING, MANUFACTURING, CONSTRUCTION, TRADE, TRANSPORT, OTHER, % of tax receipts of the state budget plus the National Fund. Mining: 40.9 (2017), 47.0 (2018), 29.6 (2020), 46.2 (2022), 36.3 (2023), 34.2 (2024), 31.2 (2025). No split of mining into oil-gas and metal ores. CONSOLIDATED_TAX = December of STATE_TAX_REVENUE_YTD + NF_OIL_DIRECT_TAXES_YTD (2018 on), equal to the Chamber's own totals for 2023-2025 (23 469.6, 23 509.5, 26 913.4 bn; CONSOLIDATED_TAX.PUBLISHED). <GROUP>.RECEIPTS = share x CONSOLIDATED_TAX is this repository's ESTIMATE from a share rounded to 0.1 pp (mining 2025: 8 397 bn KZT, ±13 bn); the Chamber's text gives 9.8 trn for 2022 and 8.5 trn for 2023, as computed here. For comparison, direct oil taxes paid into the National Fund were 3 725 bn in 2025 (NF_OIL_DIRECT_TAXES_YTD), 44 % of the mining estimate. Высшая аудиторская палата РК, заключения к отчёту Правительства об исполнении республиканского бюджета за 2023, 2024 и 2025 годы (диаграмма «Структура налоговых поступлений бюджета (ГБ+НФ) в разрезе отраслей экономики», источник — МФ)",
+  "publication_date": null,
+  "last_update_date": "2026-11-13",
+  "download_date": "2026-11-13",
+  "period_start": "2017-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

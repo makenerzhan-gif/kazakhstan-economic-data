@@ -5390,3 +5390,83 @@ STATE_NON_OIL_DEFICIT for 2019-2021 was the financing row copied into the non-oi
 (+1.29, +2.81, +2.53 trn); replaced by the identity (−5.51, −8.16, −8.06 trn; source_issues).
 
 Tests: `tests/test_history_extensions.py` (15).
+
+## 2026-09-27 — seven gaps for policy analysis: quasi-fiscal lending, expectations, import prices, NEER, wages, regional budgets, budget 2011-2018
+
+**Why.** The user listed seven things missing for the SVAR and pass-through work (table «Чего нет /
+Зачем нужно / Где взять»). All seven are now in the pipeline, 22 new item-level datasets.
+
+**1. Quasi-fiscal lending.** LOANS_BY_CREDITOR_TYPE (NBK formId=445): loans by creditor —
+banks, «other public sector» (the development institutions), microfinance, mortgage companies —
+× currency × borrower, quarterly 2022-01…2023-07, monthly since. Other-public-sector lending to
+business: 1 486 bn KZT (2022-01) → 4 485 bn (2026-08), 12.4% → 18.8% of business loans (banks +
+OPS). NATIONAL_FUND_DOMESTIC_OPERATIONS (470): the National Fund's Kazakh bonds (3 378 bn at face)
+and equities, FX sales, transfers, monthly from 2024-02. NBK_MONETARY_SURVEY (50): the NBK balance
+sheet by line — the API now gives a mnemonic with each row code, and the identities (1 = 1.1 + 1.2 +
+1.3, 3 = 1 + 2 …) hold, so it is connected (sources.yaml had declined it for lack of labels);
+2.4 = claims on non-bank financial institutions, 5.2 trn. DAMU_SUBSIDISED_LOANS_ANNUAL / _MONTHLY:
+sums of the ~120 000 project rows of Damu's monthly subsidy report (region × programme × ОКЭД section
+× business size, by approval year since 2010, by month since 2024); region totals equal the file's
+summary sheet. Approved loans: 1 186 bn (2020), 1 583 (2021), ~1 000 a year 2022-2024, 366 (2025),
+26 (Jan-Aug 2026). DEVELOPMENT_INSTITUTIONS_BALANCE_SHEETS: balance-sheet lines of every IFRS
+statement Baiterek (consolidated), DBK, the Kazakhstan Sustainability Fund and the Agrarian Credit
+Corporation filed on KASE (fetchers/kase_ifrs.py; 104 xlsx; only columns with assets = liabilities +
+equity are kept; header typos resolved by the statement's own date). Baiterek: assets 4 719 bn
+(2018) → 19 048 (2025), loans to customers 2 399 → 8 033, finance leases 275 → 2 355, bonds issued
+1 440 → 7 500.
+
+**2. Budget 2011-2018** (checkpoint commit of this branch). STATE_TRANSFERS_RECEIVED_YTD (the
+bulletin's «Поступления трансфертов» row, equal to the NF transfers in every overlapping month) lets
+the non-oil deficit identity run before 2018: STATE_NON_OIL_DEFICIT_YTD from 2013-01 (plus four
+2011-2012 months found in xls), annual non-oil deficit from 2013; STATE_BUDGET_*_Q from 2010Q1 using
+the quarterly columns the bulletins print (the year carried across merged header cells). 2011-2012
+monthly editions are PDF only. Still missing: 2020-01, 2020-04, 2026-04 (editions not online).
+
+**3. Expectations.** INFLATION_EXPECTATIONS_SURVEY: the NBK household survey workbook — every
+question's answer shares since 2016-01 (≈30 questions, 247 items) and the medians (perceived,
+expected 12 m, expected 5 y from 2025). The long-standing February 2022 outlier (9.6) is explained:
+the workbook's Q6 shares for that month are a copy of Q5's — the only such copy in 2016-2026
+(source_issues updated, new entry inflation_expectations_survey_2022_02_q6). PROFESSIONAL_FORECASTS_SURVEY:
+the analysts' survey chronology since 2022-08, medians by round and target year (Aug 2026: CPI Dec/Dec
+2026 10.0, 2027 8.5; base rate 2026 16.0; CPI in 5 years 5.3; neutral rate 9.0). By sector (14 ОКЭД
+slots, quarterly since 2005/2016): finished-goods price expectations and actuals, raw-material and
+import-price expectations, demand expectations, and PRICE_FACTORS_BY_SECTOR (formId=384, share of
+firms citing demand, raw materials, wages, exchange rate … since 2020-Q2). «Other industries» of
+forms 362-366/384 is the N.R.S slot of the others.
+
+**4. Import prices.** IMPORT_PRICE_INDEX_BY_HS_SECTION / _EAEU_ / _NON_EAEU_ (Taldau 19073959/60/61):
+the 21 HS sections, month vs December of the previous year, 2020-01 on; IMPORT_PRICE_INDEX_YOY_BY_HS_SECTION
+bridges 2016-2019 (year on year). July 2026 vs December 2025: all imports 97.2 (EAEU 98.4, rest 96.7);
+footwear (XII) 98.0, textiles (XI) 98.8, cars (XVII) 97.3.
+
+**5. Import-weighted NEER.** EXCHANGE_RATES_OFFICIAL_MONTHLY: monthly means of 18 NBK official rates
+since 2010, one request per currency (a joint report shifts columns when a currency is missing),
+rates printed below 1 KZT dropped (UZS, BYR before 2014), the Belarusian rouble restated for its
+2016 redenomination. IMPORTS_BY_PARTNER_COMTRADE: imports by partner, consumer goods (BEC 112, 122,
+522, 61, 62, 63) and all goods, 2010-2025. NEER_IMPORT_WEIGHTED: geometric chain with the previous
+year's shares (euro members from adoption, dollarised partners to USD, 88-92% of imports covered),
+2020 = 100, up = appreciation; NEER_CONSUMER and NEER_TOTAL; weights in NEER_IMPORT_WEIGHTS (2026:
+RUB 39.3%, CNY 21.7%, EUR 16.9%, TRY 4.7%). Monthly log changes correlate 0.81 with the NBK NEER.
+
+**6-7. Regional budgets, wage bill.** REGIONAL_BUDGETS_YTD: bulletin tables 12, 12.1-12.20 and 18
+for every edition since 2013 (160 months to 2026-07; not online: 2020-04, 2025-12, 2026-04) —
+revenues (PIT, social tax, transfers), spending by the 15 functional groups, net lending, balance,
+subventions and withdrawals by region, January to the month. The edition's period is its latest
+«январь-… отчет» header (some sheets print last year's months first), December editions read the
+year's report column, «на 1 января 2023» = January-December 2022. Regions add up to table 12 within
+0.5% in every complete edition; three source problems registered (source_issues): Shymkent's February
+2020 sheet repeats January; table 12 of February/March 2021 is about half its regions; Abai, Zhetisu
+and Ulytau are printed only from the August 2024 edition (2022-09…2024-07 miss them). Subventions
+Jan-Jul 2026: 3 246.1 bn, Turkestan 656.4; withdrawal from Almaty city 319.3. SOCIAL_CONTRIBUTIONS_BY_REGION: ГФСС form 5-СО, social contributions
+and insured participants by region, monthly since 2016 (Aug 2026: 85.1 bn KZT, 5.254 mn persons;
+the rate rose from 3.5% to 5% in 2025 — a level break); seven months have no monthly file
+(2016-06, 2016-12, 2022-01…05). PENSION_FUND_FLOWS_YTD (NBK formId=25, since 2023): mandatory
+contributions 2 659 bn in 2025, 1 866 bn in Jan-Aug 2026.
+
+**Plumbing.** New fetchers nbk_dims.fetch_classified (any NBK form classified by text fields, with
+sum checks), damu, kase_ifrs, nbk_expectations, nbk_fx, comtrade, neer_import (derived), gfss,
+minfin_regions; taldau `term_codes` and first-of-month dates for monthly Taldau series;
+regions.csv learnt «Абайская», «Жетысуская», «Улытауская»; `backfill_minfin_bulletins.py --dims`;
+LFS for data/raw/damu and data/raw/kase xlsx. Slow sources refresh weekly (refresh_days).
+
+Tests: `tests/test_policy_gaps.py` (33); full suite 608 passed.
