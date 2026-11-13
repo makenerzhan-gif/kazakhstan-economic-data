@@ -5669,3 +5669,29 @@ CPI_UTILITIES and CPI_REGULATED_UTILITIES still start in 2011. Tests: tests/test
 The official quarterly accounts for 2026 Q2 (BNS, element 283161, due 28.10.2026) are picked up by the
 daily update_all run; a check is scheduled for 29.10.2026 to compare them with the discrete estimate
 (GVA_VOLUME_INDEX_BY_SECTION_DISCRETE: GDP 105.2) and rebuild model_data.
+
+## 2026-09-28 — partner-currency rates back to 1993, import-weighted NEER from 1995
+
+EXCHANGE_RATES_OFFICIAL_MONTHLY (18 currencies, KZT per one current unit, weekday means) now starts in
+1993-11 instead of 2010-01. 1999-11..2009-12 come from the NBK daily report (read once in 10-year windows,
+first usable day 1999-11-17, malformed October 1999 rows dropped); before the report, the NBK archive
+«Архив официальных курсов валют с 1993 по 1999» (rate in force on each weekday) for the 11 currencies it
+carries, equal to the report on every common weekday of 1999-11-17..12-31 for USD, EUR, CNY, RUB, GBP, CHF,
+JPY and KGS (enforced). Printed figures below 1.0 are dropped in both sources, so TRY runs 1994-05..1996-02
+then from 2005, UZS and BYN have 1990s fragments then start in 2014-02; KRW from 2000-05, AED 2001-07, PLN
+2004-09, CZK 2009-03, EUR 1999-01, CNY 1996-02; INR, TJS and AZN still from 2011-2014. Redenominations are
+listed in nbk_fx.REDENOMINATIONS and checked against the data: RUB 1998 (archive already per new rouble,
+13.00 on both sides), TRY 2005 (TRL x10^6), BYN 2000 and 2016 (BYB x10^7; BYR x10^4 up to Friday 1 July 2016
+inclusive -- the report's rate in force that day is still per 100 BYR, first BYN quote 2 July, step x10 162),
+UZS 1994 (archive per 1000 coupons = one sum); any other step above x8 within a month stops the fetcher.
+This corrects BYN 2016-07 (163.00 -> 171.00; NEER 2016-07 by -0.1, recorded in the revisions files); every
+other stored month since 2010 is unchanged. USD/EUR/CNY/RUB equal the monthly means of the daily
+EXCHANGE_RATE* series in every month. Monthly USD 1999-12 138.22, 2005-01 130.10, 2009-12 148.70; RUB 5.12,
+4.66, 4.97; EUR 143.15, 171.38, 217.64; TRY 2005-01 96.07, 2009-12 98.70. IMPORTS_BY_PARTNER_COMTRADE now
+starts in 1995 (Kazakhstan's first Comtrade year), so NEER_IMPORT_WEIGHTED starts in 1995-12 (NEER_TOTAL,
+2020 = 100: 93.9; 1998-09 158.8 after the rouble crash, 1999-03 266.4, 1999-06 179.1 after the float) and
+NEER_IMPORT_WEIGHTS in 1996; its monthly changes correlate 0.84 with the NBK's own NEER in 1996-2009. Before
+1999 the euro-area partners have no rate (coverage 59-77%; 80-92% from 2000); CONSUMER 2000 is a partial
+Comtrade conversion (36 mln USD) and is replaced by the 1999 structure; 1995-1999 CONSUMER includes passenger
+cars (H0 conversion). Three archive typos (CHF 17.04.1995, 09.11.1998; KGS 09.08.1999) are kept as printed and
+registered in source_issues. Tests: tests/test_fx_monthly_history.py (15).

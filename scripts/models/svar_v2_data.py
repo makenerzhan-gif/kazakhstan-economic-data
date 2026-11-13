@@ -75,14 +75,23 @@ def nominal_gdp(q: pd.DataFrame) -> pd.Series:
 
 
 def bank_rescue_2017() -> float:
-    """One-off July 2017 transfer to the Problem Loans Fund (Kazkommertsbank / Halyk deal), booked
-    as state-budget expenditure and financed by the National Fund: July expenditure minus the
-    average monthly expenditure of August-September 2017. A balance-sheet operation in the
-    financial sector, not a demand impulse, so it is removed from the non-oil deficit."""
-    e = pd.read_csv(R / "minfin" / "state_budget_expenditure_ytd.csv", index_col=0)["value"]
-    jul = e["2017-07-31"] - e["2017-06-30"]
-    normal = (e["2017-09-30"] - e["2017-07-31"]) / 2
-    return float(jul - normal)
+    """One-off July 2017 payment to the Problem Loans Fund (Kazkommertsbank / Halyk deal), booked as
+    republican-budget expenditure: a balance-sheet operation in the financial sector, not a demand impulse,
+    so it is removed from the non-oil deficit.
+
+    Read from the budget's economic classification (Statistical Bulletin, table 10): specific 169 «Прочие
+    текущие затраты» of the republican budget took 2 109.6 bn tenge in July 2017 against 4.0 in June and
+    14.4 in August; the one-off is July minus the mean of its neighbours, 2 100.4 bn. (Decree of the President
+    No. 421 of 14.02.2017 gives 1 092.9 bn of it as a targeted transfer from the National Fund «для
+    оздоровления банковского сектора»; the rest came from the budget.) Until 2026-11-13 the amount was taken
+    as total July expenditure minus the August-September average, 2 135.8 bn -- 35 bn too much, since other
+    lines also differ between those months."""
+    d = pd.read_csv(R / "dims" / "budget_expenditure_economic_ytd.csv")
+    y = d[d.item_code == "REP.169"].set_index("date")["value"]
+    flow = lambda a, b: float(y[b] - y[a])  # noqa: E731
+    jul = flow("2017-06-01", "2017-07-01")
+    neighbours = (flow("2017-05-01", "2017-06-01") + flow("2017-07-01", "2017-08-01")) / 2
+    return jul - neighbours
 
 
 def fiscal(q: pd.DataFrame) -> pd.DataFrame:

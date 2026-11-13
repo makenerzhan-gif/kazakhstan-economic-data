@@ -82,3 +82,26 @@ def test_shapiro_price_innovation_is_monthly():
     qty = pd.Series(rng.normal(size=180), index=idx).rolling(12).sum()              # a y/y-type series
     res = S.innovations(price, qty, 13)
     assert np.corrcoef(res["p"], shock.loc[res.index])[0, 1] > 0.85                 # the residual is the month's own shock
+
+
+def test_bank_rescue_of_2017_is_read_from_the_budget_line():
+    import svar_v2_data as V
+    assert V.bank_rescue_2017() == pytest.approx(2_100_398.2, abs=1.0)        # million tenge: specific 169, July 2017
+
+
+def test_market_core_is_consistent_with_headline_inflation():
+    """No builder script exists for the index; this is what can be checked: headline m/m = a weighted sum of the
+    market core and what it leaves out, year by year, within rounding."""
+    mk = pd.read_csv(M / "cpi_components" / "market_core_index.csv", index_col=0, parse_dates=True)
+    mm = pd.read_csv(REPO / "model_data" / "monthly.csv", index_col=0, parse_dates=True)
+    d = pd.read_csv(REPO / "data" / "processed" / "dims" / "cpi_detail_mom.csv", parse_dates=["date"])
+    p = d.pivot_table(index="date", columns="item_code", values="value")
+    g = lambda s: 100 * np.log(s).diff()                                       # noqa: E731
+    x = pd.DataFrame({"y": g(mm.cpi), "mkt": g(mk.mkt_base), "reg": g(mm.cpi_regulated),
+                      "fv": 100 * np.log(p["frukty_i_ovoshchi"] / 100), "petrol": 100 * np.log(p["benzin"] / 100),
+                      "diesel": 100 * np.log(p["dizelnoe_toplivo"] / 100)}).dropna()
+    for year in range(2012, 2026):
+        s = x[x.index.year == year]
+        b = np.linalg.lstsq(s.drop(columns="y").values, s.y.values, rcond=None)[0]
+        assert np.abs(s.drop(columns="y").values @ b - s.y.values).max() < 0.12, year
+        assert 0.75 < b[0] < 0.97 and 0.9 < b.sum() < 1.25, (year, b.round(3))

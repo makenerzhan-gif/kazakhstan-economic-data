@@ -52,7 +52,7 @@ data of 2026-11-13, and `svar_v2.py` gives the same files on a second run.
 **Corrected**
 - Forecast-error variance shares are posterior means and add up to one (share-by-share medians summed to
   0.83-0.89 and understated demand and monetary policy by about 40 %). SVAR v2, 8 quarters: external 37.6 %,
-  tenge 18.4 %, supply 16.8 %, demand 10.2 %, policy rate 8.1 %, tariffs 5.6 %, non-oil deficit 3.3 %.
+  tenge 18.4 %, supply 16.8 %, demand 10.0 %, policy rate 8.3 %, tariffs 5.6 %, non-oil deficit 3.3 %.
 - The decomposition to quote is `svar_v2/mean_<variant>.csv` (posterior means): it adds up to inflation exactly.
   Group-by-group medians (`changes_*`, `levels_*`) do not add up, and the median-target model
   (`median_target_*`) is one draw that can sit far from the centre in the latest quarters.
@@ -90,9 +90,21 @@ data of 2026-11-13, and `svar_v2.py` gives the same files on a second run.
 - *Shapiro*: quantities exist only as y/y rates, so base effects still enter the quantity residual.
 - BNS's seasonally adjusted GDP itself moves +6.5 % q/q in 2026Q2; the models take it as published.
 
-**Not verified**: how `cpi_components/` (market core index, divisions, regional files) was built -- there is no
-script for it in the repository; the amount removed from the deficit for July 2017 (2 135.8 bn tenge in the
-code) against a primary source.
+**Checked against primary sources afterwards**
+- *The July 2017 bank rescue removed from the deficit.* The republican budget's specific 169 «Прочие текущие
+  затраты» (Statistical Bulletin, table 10) took 2 109.6 bn tenge in July 2017 against 4.0 in June and 14.4 in
+  August; the one-off is 2 100.4 bn, and the script now reads it from there. Decree No. 421 of 14.02.2017
+  (adilet.zan.kz) gives 1 092.9 bn of it as a targeted transfer from the National Fund «для оздоровления
+  банковского сектора». The earlier estimate, 2 135.8 bn, was total July expenditure minus the August-September
+  average; the non-oil deficit of 2017Q3 is 9.24 % of GDP instead of 9.02, the variance shares move by at most
+  0.2 points.
+- *`cpi_components/market_core_index.csv`* has no builder script in the repository and cannot be rebuilt
+  exactly: the pipeline has no weights for petrol, diesel, coal and regulated utilities. What can be checked
+  holds: headline monthly inflation is reproduced within 0.1 pp in every year 2011-2025 as a weighted sum of
+  the market core, the regulated-utilities index, fruit and vegetables, petrol and diesel, with weights that sum
+  to about one (market core 0.79-0.94, regulated 0.05-0.11, fruit and vegetables 0.04-0.07). The index is
+  therefore a consistent exclusion index; its exact weights are not verified. `division_mm.csv` equals the
+  pipeline's CPI by division. The regional files were not compared with a source.
 
 Tests: `tests/test_models_inflation.py` (the properties above), `tests/test_models.py` (synthetic data: PPML recovers known elasticities, the BVAR
 marginal likelihood equals the chain of Student-t predictives, block exogeneity is exact, the
