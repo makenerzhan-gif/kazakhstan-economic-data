@@ -626,7 +626,10 @@ Tests: tests/test_analytics.py (6), tests/test_new_sources_2026_11c.py (11).
 2. `gravity._get` stops asking a host that timed out or answered 5xx in the same run (api.worldbank.org cost 5 x 120 s on
    2026-11-10 and 2026-11-12); a 4xx does not trip it. WDI / WGI datasets are refreshed every 30 days, not daily.
 3. update.yml: pip cache.
-Not done (need a decision): updaters in parallel, a light daily run plus a weekly full one, logs out of the repository.
+4. Schedule (owner's decision, 2026-11-13): the full run is twice a week, Wednesday and Saturday 06:00 UTC, not daily.
+   Daily series are downloaded with their history, so nothing is lost between runs; the accumulating sources keep several
+   editions online. A release reaches the repository up to four days late; workflow_dispatch runs it on demand.
+Not done (need a decision): updaters in parallel, logs out of the repository.
 
 **New derived datasets** (scripts/fetchers/analytics.py):
 4. DOLLARIZATION: FX share of bank loans (1996 on: 44.9 % in 2009-02, 10.0 % in 2026-10), of business loans (2022 on,
