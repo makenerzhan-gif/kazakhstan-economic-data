@@ -5470,3 +5470,115 @@ regions.csv learnt «Абайская», «Жетысуская», «Улыта�
 LFS for data/raw/damu and data/raw/kase xlsx. Slow sources refresh weekly (refresh_days).
 
 Tests: `tests/test_policy_gaps.py` (33); full suite 608 passed.
+
+## 2026-09-27 — history back to 1991 and 1990s peers: GDP, population, WDI from 1960, IMF WEO for all economies, CPI weights, discrete quarterly GDP (user: «Чего в пайплайне нет …», «Что ещё не хватает …»)
+
+**GDP from 1991.** The early sheets of BNS tables 4439-4441 («1990-1997 (ОКОНХ)», «1998-2006 (ОКЭД ГК РК 03-2003)»,
+«2007-2009 (ОКЭД ГК РК 03-2007)») are read as GDP_VOLUME_INDEX_AGGREGATES, GDP_DEFLATOR_AGGREGATES and
+GDP_PRODUCTION_AGGREGATES (dictionary `gdp_production_aggregates`). `gaps_filled_from` extends GDP_REAL and
+GDP_DEFLATOR to 1991 and GDP_INCOME_METHOD to 1993, only while the two sources agree on every shared year
+(2000-2009). Real GDP, % of the previous year: 1991 89.0, 1992 94.7, 1993 90.8; deflator 1991 201.5, 1992
+1 497.5; nominal GDP 1993 29 423.1 mln KZT. This closes the 1991-1992 gap of the IMF series (from 1993).
+
+**Population from 1991.** POPULATION_AVG_BY_REGION now reads both sheets of table 6576 (1991-2008, 2009-2025);
+new POPULATION_BOY_BY_REGION (table 6584, 1 January stocks, dated YYYY-01-01 via `as_at_start_of_year`) and the
+derived scalar POPULATION_BOY_BNS. POPULATION_BNS from 1991 (16 404 966.5). Source issues: the 2008 average is the
+post-census 1 January 2009 stock (population_avg_2008); the stocks jump by +204 869 at 2009 and +380 751 at 2022
+(census steps, not backcast).
+
+**Peers.** WDI panels from 1960 (GDP in USD, constant USD, population) plus GDP growth, CPI inflation, deflator
+inflation, GDP per capita PPP, the official exchange rate and net migration for every economy. IMF_WEO_WORLD: the
+WEO for 197 countries 1980-2024 (growth, inflation, GDP in USD and PPP per capita, population, current account,
+debt, unemployment; outturns only — years from each country's COUNTRY_UPDATE_DATE on are dropped; group codes
+dropped).
+
+**CPI weights before 2020.** CPI_WEIGHTS: the 12 COICOP divisions 2005-2019 as BNS reports them to the IMF
+(IMF.STA/CPI WGT_PT; 2005 CP01 43.061, 2019 36.976; CP01+CP02 equals BNS's published food share, and the weights
+reproduce the year-to-date CPI within 0.02-0.07 points), the 2022 scheme of the BNS brochure, and food / non-food
+/ services shares for 2014-2026 (data/reference/bns_cpi_weights.csv). CPI_WEIGHTS_ESTIMATED 2020-2026: division
+weights recovered from BNS's contributions to year-to-date CPI (2022 check: CP01 38.74 against 38.75).
+
+**Real GDP for 2026 Q2.** GVA_VOLUME_INDEX_BY_SECTION_DISCRETE derives discrete quarters from the year-to-date
+tables: GDP 105.2 in 2026 Q2 (manufacturing 111.1, construction 115.5). Its basis differs from the quarterly
+accounts (2025 Q2: 107.0 against 109.0 in QNA), so it is not spliced into QNA_*; BNS's own Q2 is due 28.10.2026.
+
+## 2026-09-27 — X-13ARIMA-SEATS replaces STL for seasonal adjustment
+
+model_data/ and the seasonal-decomposition report now use X-13ARIMA-SEATS, US Census Bureau v1.1 build 62
+(the official Linux ASCII build, vendored in tools/x13as/ via git LFS, sha256 72e4735d…; downloaded and
+checked on demand when absent), driven by a new scripts/lib/x13.py with a hand-written spec: automatic
+ARIMA (automdl), automatic AO/LS/TC outliers, log-vs-level by AICC (or forced by the spec), X-11
+decomposition (SEATS optional), and a Kazakhstan calendar — working days under the holiday law (weekend
+holidays moved to the next working day, Kurban Ait and Orthodox Christmas not moved, holiday list by year:
+Nauryz 21-23 March from 2010, 7 May from 2013, 17 Dec and 1 Dec until 2021, 25 Oct 1995-2008 and from 2022)
+plus a Kurban Ait regressor (dates 1990-2035, Kazakhstan observance) — kept only when AICC prefers it.
+STL (robust) remains an explicit option and the fallback when no binary is available, recorded in each
+variable card. Check: our X-13 on BNS's unadjusted real GDP reproduces BNS's own X13/JDemetra+ adjusted q/q
+growth 2010-Q2..2026-Q1 with correlation 0.999 and RMSE 0.13 pp (STL: 0.907 and 1.19 pp). Against STL on the
+24 variables we adjust, SA growth correlates 0.91 at the median (0.55 m0, 0.59 tax receipts, 0.67 imports:
+hyperinflation-era outliers, the 2022-01 tax break, and a working-day effect in imports with t = 7.3). PPI
+shows no identifiable seasonality (M7 2.11, Q 1.02). VARIABLES.md now lists model, calendar effects,
+outliers and M7/Q per variable. Seasonal strength in analysis/reports/seasonal_decomposition_2026-09-28.md:
+GDP_NOMINAL 0.996, IMPORTS 0.877, EXPORTS 0.463, CPI 0.131 (STL: 0.985, 0.688, 0.204, 0.174).
+
+## 2026-09-27 — utility tariff decisions and CPI tariff jumps (TARIFF_DECISIONS, TARIFF_CHANGE_MONTHS)
+
+**TARIFF_DECISIONS** (new, `scripts/fetchers/krem_tariffs.py`, agency `krem`) is an event dataset of
+utility-tariff decisions for inflation modelling: one record per decision and service, dated by the month the
+decision takes effect; item_code REGION.SERVICE.KIND.SOURCE_ID. (1) КРЕМ and its regional departments publish
+into one gov.kz project, «krem»; the tariff orders are read from their titles (the files are scans): heat,
+water, sewerage, electricity transmission and supply, gas distribution, transport and storage; value NaN; the
+effective date is stated, or estimated as the month after the order date (or after publication for
+Карагандинская and Шымкент). (2) КРЕМ press releases (gov.kz news; the endpoint needs a cookie ticket from
+/api/v1/public/_/c/k6) give the stated % change, e.g. ГКП «Семей Водоканал» water −11.78% from 2026-04.
+(3) Ministry of Energy electricity generation caps (order 514, order 508-н/қ and amendments, old.adilet.zan.kz):
+mean % change across producer groups, e.g. +16.34% from 2023-06 and +26.33% from 2025-02. (4) Wholesale gas caps
+by region 2015-2027, e.g. Almaty city 29 873 → 39 044 KZT/1000 m3 from 2025-07 (+30.7%); the 2027-07 period is
+marked forecast. Coverage is uneven: departments that put order dates in titles dominate (Карагандинская,
+Костанайская), and Атырауская, ВКО, СКО, Туркестанская and Павлодарская are sparse (their order files need OCR).
+
+**TARIFF_CHANGE_MONTHS** (new, derived, `scripts/fetchers/tariff_jumps.py`) lists the months from 2004 on in
+which a national CPI utility item (electricity, hot and cold water, heating, sewerage, network gas, LPG,
+garbage; BNS slugs chained across the re-bases) moved by at least 3% m/m, or by at least 1.5% with a robust
+z-score of at least 5: e.g. ELECTRICITY 2023-08 +6.7, HEATING 2023-11 +16.1, NETWORK_GAS 2025-08 +24.1. It dates
+when the CPI registered a change, not when it was decided; national only.
+
+## 2026-09-27 — the quasi-fiscal block before 2022: budget lending by recipient, holdings' balance sheets, NBK surveys from 1997
+
+**RB_QUASIFISCAL_YTD** (new, `fetchers/minfin_quasifiscal.py`): budget loans (LOAN) and acquisitions of
+financial assets (EQUITY) of the republican budget from the Statistical Bulletin «табл 8 (расх)», January to
+the month, 2013-01 … 2026-07 (2020-04 and 2026-04 not online; 2025-12 from the untitled gov.kz document 964016).
+The recipient is read from the programme label, not the codes: the first entity named is the direct
+counterparty, the last one before «через» the final recipient. Items: totals; SEC.DI (development institutions
+and holdings); 18 final recipients (DBK, IDF, Damu, ACC, Otbasy, Samruk-Kazyna, KTZ, the Problem Loans Fund …);
+six families; the three holdings as direct counterparties; the non-quasi-fiscal rest, so the parts add up.
+Checks: programmes = section header in every edition; headers = табл 7 (except its errors of 2021-02/03);
+LOAN.DI = табл 10 specifics 513+519. Loans to development institutions, bn KZT: 60.0 (2013), 58.9, 68.9,
+182.5, 194.1, 146.5, 246.5, 245.2, 284.7, 577.3 (2022, of which IDF 361.7), 410.3 (2023, Samruk 162.6), 274.0,
+235.5 (2025). Equity: 433.1 bn in 2014 (Problem Loans Fund 250.0). Not covered: current transfers booked as
+spending (2 092.9 bn to the Problem Loans Fund in 2017, Damu subsidies) and bond purchases by the National Fund,
+the NBK or UAPF.
+
+**DEVELOPMENT_INSTITUTIONS_BALANCE_SHEETS** extended (`fetchers/kase_ifrs.py`): FPKR, the Problem Loans Fund
+(consolidated, 2017-12 … 2021-06, left on the KASE server after its bonds were annulled; equity -716.3 bn and
+the reserve for conditional distribution -3 645.1 bn at 2019-12-31), KZAG (KazAgro consolidated, 2012-12 …
+2020-09), SKKZ (Samruk-Kazyna consolidated, from 2021-12) and SKKZ_SEP (its separate Minfin Form 1, 2012-12 …
+2016-03); KASE fin-data key indicators BTRK.FD_* (from 2015-12) and SKKZ.FD_* (from 2006-12). Discovery moved to
+the KASE documents API; .xls statements are read (BRKZ from 2012-12). Docstring corrected: KFUS is the
+Kazakhstan Sustainability Fund (2017), not the Problem Loans Fund. Fixed: BTRK.GOV_SUBSIDIES had taken the
+asset «субсидии к получению» at 2020-12-31 and 2021-09-30. Aggregation: BTRK + KZAG (to 2020) + FPKR + KFUS
+(+ SKKZ_SEP); never add a subsidiary to its parent.
+
+**NBK surveys from 1997** (`fetchers/nbk_records.py`, the JSON «records» behind the NBK monetary-statistics
+pages): NBK_SURVEY_HISTORY (CB), BANKS_SURVEY_HISTORY (ODC), BANKING_SYSTEM_SURVEY_HISTORY (BS) monthly from
+1998, OFC_SURVEY and FINANCIAL_SECTOR_SURVEY quarterly from 2015. Stocks are dated the first day of the next
+period, as form 50 (the year-month of `reporting_date` is the month-end). Enforced: the survey identities,
+BS = CB + ODC for claims on NBFIs and the rest of the economy from 2002-11, CB = form 50 on the 44 common dates,
+OFC = form 26. Quasi-fiscal lines: NBK claims on NBFIs (KSF, Problem Loans Fund, mostly equity) 146.2 bn at
+end-2011, 1 230.1 bn (end-2017), 3 044.0 (end-2019), 5 317.6 (end-2021), 5 137.7 (end-2026-08); banks' claims on
+public nonfinancial organisations; OFC claims on them (DBK among the OFCs). **BANKS_GOV_HOLDING_BORROWINGS**
+(`fetchers/nbk_balance_groups.py`): banks' borrowings from the government, local executive bodies and the
+national managing holding (account group 2030), IFIs (2040) and other banks (2050), monthly from 2010 (G2030
+58.4 bn at 2011-01-01, 399.8 at 2015-01-01, 712.0 at 2026-08-01; break 2023-02 when Damu joined group 2030).
+Source issues registered: the misdated 2003-04 banks' record, six NBK identity errors, the unpublished NDA line
+from 2009, the 2015-06 step in NBK claims on the rest of the economy, the 2023-02 Damu reclassification.

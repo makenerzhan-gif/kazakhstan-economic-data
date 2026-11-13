@@ -6027,6 +6027,37 @@ agencies:
           2026-11-13. Sheet «табл 2 », column 5 (republican budget, adjusted plan for the year). Parsed
           offline from the archived January-May 2026 edition; the gov.kz listing is not reachable from the
           development sandbox, so the first scheduled run is the live check. fetch_budget_plan.
+      TAX_RECEIPTS_BY_OKED (scope note):
+        status: not_found
+        notes: >
+          2026-11-13. Tax receipts by economic activity (ОКЭД) from the State Revenue Committee (КГД): NOT PUBLISHED.
+          Points checked:
+          (1) gov.kz, project kgd (documents API read through a browser-like client): title searches «ОКЭД»,
+          «видам экономической деятельности», «отрасл», «Среднеотраслев» return nothing; «поступлени» returns 13
+          documents -- by region, National Fund, monthly archives of 2021, legal acts. Direction 655 «Статистика»:
+          activities 88070 (2026), 83555 (2025), 59629 / 67999 / 68006 / 68007 (by region 2021-2023), 87705 (state
+          budget by month), 87371 / 85297 / 41910 (National Fund by region), 87372 / 85298 / 1533 (National Fund by
+          budget code), 1523 (foreign trade) -- none by ОКЭД. Files opened (by budget code 2024, by region 2025,
+          monthly dynamics 9 months 2026, the 2021 archives): budget code x state / republican / local budget,
+          months, regions only. The one КГД file with ОКЭД divisions 05-09, «Среднеотраслевое значение КНН» 2025
+          (doc 1035777), holds tax-burden RATIOS in per cent, not receipts.
+          (2) portal.kgd.gov.kz: sitemap of 476 URLs, 403 content pages read; «Статистика» has only foreign trade
+          and «Результаты налогового и таможенного администрирования»; no page by ОКЭД or industry. Every old
+          kgd.gov.kz URL (/ru/section/…, /sites/default/files/…) answers 301 to the portal's home page.
+          web.archive.org could not be reached from the development sandbox -- an archived kgd.gov.kz file by ОКЭД
+          is not excluded.
+          (3) data.egov.kz: eleven searches in Russian and Kazakh find taxpayer registers, the tax calendar and BNS
+          tables only (the API needs a key).
+          (4) Minfin Statistical Bulletin (edition of 1 July 2025, 49 sheets): revenue by budget code only.
+          (5) gov.kz, project minfin: the same title searches return legal acts and National Fund reports.
+          Connected instead (scripts/fetchers/tax_by_industry.py): TAX_STRUCTURE_BY_INDUSTRY -- the Supreme Audit
+          Chamber's chart of the structure of tax receipts (state budget + National Fund) by six industries,
+          2017-2025, source Minfin; and ENVIRONMENTAL_TAXES_BY_OKED -- BNS environmental taxes by ОКЭД section
+          (stat.gov.kz element 478740), which are a part of the taxes only. Neither splits mining into oil and
+          gas (06) and metal ores (07). The 2024 conclusion of the Chamber has a separate, non-ОКЭД split (Таблица
+          8: oil sector 7 194.3 / 6 625.2 and ore-mining sector 2 038.5 / 1 891.4 bn KZT in 2023 / 2024) whose sum
+          exceeds the chart's mining figure -- a different classification, not connected.
+
       STATE_BUDGET_REVENUE_YTD:
         status: confirmed
         listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"

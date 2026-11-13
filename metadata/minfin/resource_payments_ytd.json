@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents",
+  "dataset_id": "Statistical Bulletin table 4",
+  "indicator_id": "RESOURCE_PAYMENTS_YTD",
+  "indicator_name": "Subsoil-use payments to the state budget (other than the oil sector), export duties on oil, and the oil sector's direct taxes to the National Fund, year-to-date, million KZT",
+  "description": "Платежи за недропользование в государственный бюджет (кроме нефтяного сектора), вывозные пошлины на нефть и прямые налоги нефтяного сектора в Национальный фонд, с начала года, млн тенге",
+  "frequency": "monthly",
+  "unit": "million KZT, January to the month",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Minfin Statistical Bulletin «табл 4» (receipts of the state budget by budget code). MET_NON_OIL (mineral extraction tax), MET_COMMON_MINERALS (2026 on), EPT_NON_OIL, BONUS_NON_OIL, RENT_TAX_NON_OIL, PSA_SHARE_NON_OIL, PSA_ADDITIONAL, HISTORICAL_COSTS -- all «за исключением поступлений от организаций нефтяного сектора»; NON_OIL_SUBSOIL is their sum. EXPORT_DUTY_CRUDE and EXPORT_DUTY_OIL_PRODUCTS go to the budget. OIL_SECTOR_NF = NF_OIL_DIRECT_TAXES_YTD (the oil sector's income tax, MET, rent tax, bonuses, PSA share paid into the National Fund), OIL_TOTAL adds the two duties; both exist only for months the National Fund statement covers (none after 2026-06: Minfin stopped posting it). January-May 2026: MET of the non-oil sector 838 118, all non-oil subsoil payments 852 053, export duty on crude 625 499. January-September 2025: non-oil 858 441 against 4 061 200 for the oil sector. NOT ОКЭД: «oil sector» is the Government's list of crude-oil and condensate producers, the rest is metal ores, coal, uranium, gas and building materials together; corporate income tax and VAT of mining companies are not separable and are outside both. RESOURCE_USE_TOTAL is the whole subclass, which also holds water, forest, land, spectrum and mining-farm fees and can be smaller than the subsoil sum when a fee is refunded (January 2026). History starts with the editions archived in the repository (2025-02).",
+  "publication_date": null,
+  "last_update_date": "2026-11-13",
+  "download_date": "2026-11-13",
+  "period_start": "2025-02-01",
+  "period_end": "2026-05-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

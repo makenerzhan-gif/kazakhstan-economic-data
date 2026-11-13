@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents",
+  "dataset_id": "Statistical Bulletin tables 4 and 8",
+  "indicator_id": "BUDGET_RECEIPTS_BY_CODE_YTD",
+  "indicator_name": "Receipts of the state and republican budgets by budget classification code (category, class, subclass, specific), year-to-date, million KZT",
+  "description": "Поступления государственного и республиканского бюджетов по кодам бюджетной классификации (категория, класс, подкласс, специфика), с начала года, млн тенге",
+  "frequency": "monthly",
+  "unit": "million KZT, January to the month",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Minfin Statistical Bulletin «табл 4» (state budget, items STATE.*) and «табл 8 (дох)» (republican budget, REP.*): every row of the table. Item code = budget + the classification code: TOTAL («ПОСТУПЛЕНИЯ»), REVENUE («ДОХОДЫ»), one digit = category (1 tax, 2 non-tax, 3 sale of fixed capital, 4 special receipts, 5 transfers, 6 repayment of budget loans, 7 sale of financial assets), three digits = class (101 income tax, 103 social tax, 104 property, 105 domestic taxes on goods and services, 106 international trade, 107 other, 108 state duty), four = subclass (1011 corporate income tax, 1012 personal income tax, 1051 VAT, 1052 excises, 1053 natural-resource payments, 1061 customs payments), six = specific (the full budget code, e.g. 105101 VAT on domestic goods, 105306 mineral extraction tax of the non-oil sector, 106110 export duty on crude oil). Checked in every edition: specifics sum to the subclass, subclasses to the class, classes to the category, categories 1-5 to REVENUE and 1-7 to TOTAL; a break stops the load. CATEGORY NUMBERS ARE THE 2026 ONES IN EVERY YEAR: the 2026 Budget Code inserted «Специальные поступления» as category 4 and moved transfers 4 -> 5, repayment of loans 5 -> 6, sale of financial assets 6 -> 7; the loader recognises a category by its name and renumbers the 2025 rows, so STATE.5 is transfers throughout (in the 2025 files it is printed as 4). Specifics are NOT renumbered and a few were reused: 105316 is the fee for negative environmental impact in 2025 and the fee for plant resources from 2026 (the environmental fee moved to 401101); 201907 and 204110 changed meaning within 2025 -- read item_name of the row, it is the label of that edition. A line with no receipts in a period is absent from the table, not zero. Receipts of the oil sector to the National Fund are not here (NF_* scalars). LOCAL budgets = STATE minus REP only for taxes; transfers between levels are inside REP.5 and not inside STATE. History starts with the editions archived in the repository (2025-02; no 2025-04, 2025-05, 2025-12, 2026-04).",
+  "publication_date": null,
+  "last_update_date": "2026-11-13",
+  "download_date": "2026-11-13",
+  "period_start": "2025-02-01",
+  "period_end": "2026-05-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

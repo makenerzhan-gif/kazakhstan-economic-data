@@ -5107,6 +5107,82 @@ datasets:
     category: fiscal
     note: "Hand-kept (config/quasi_state_debt.yaml): Minfin publishes no quasi-state debt table, so the annual totals come from the Supreme Audit Chamber (2019 13.95 trn, 2025 29.19 trn KZT = 18.3 % of GDP; external 13.27, internal 15.92) and the holdings' IFRS statements on kase.kz (Samruk-Kazyna borrowings 2011-2025, 8.09 trn in 2025, plus 1.20 trn of government loans; Baiterek 10.44 trn in 2025; KMG 3.52 trn, already inside Samruk-Kazyna -- items do not add up). The quarterly external part is EXTERNAL_DEBT_STATE_CONTROLLED (NBK). Update each June when the statements appear."
 
+  # ---------------------------------------------------------------- taxes by economic activity (fetchers/tax_by_industry.py, added 2026-11-13)
+  # The State Revenue Committee publishes no receipts by ОКЭД (config/sources.yaml, TAX_RECEIPTS_BY_OKED); these two are the nearest official publications.
+  - id: BUDGET_EXPENDITURE_ECONOMIC_YTD
+    name_ru: "Исполнение государственного, республиканского и местных бюджетов по экономической классификации расходов (подклассы, специфики) и в группировке МВФ GFSM 2014, с начала года, млн тенге"
+    name_en: "Budget execution by the economic classification of expenditure (state, republican, local budgets; subclasses, specifics) and regrouped to the IMF's GFSM 2014 items, year-to-date, million KZT"
+    agency: minfin
+    fetcher: minfin_economic
+    min_items: 150
+    frequency: monthly
+    cumulation: year_to_date
+    unit: "million KZT, January to the month"
+    category: fiscal
+    note: "Minfin Statistical Bulletin, «табл 6» (state budget, subclasses), «табл 10» (republican budget) and «таб 11» (local budgets), both with specifics. Item <BUDGET>.<code>: STATE / REP / LOCAL; TOTAL, CAT1 current, CAT2 capital, CAT3 budget loans, CAT4 financial assets, CAT6 PPP obligations; subclasses 110 wages, 120 employers' contributions, 140 inventories, 150 services, 160 other current, 210 / 220 interest on domestic / external loans, 310 subsidies, 320 transfers to individuals (323 pensions), 330 transfers to other levels (not in the consolidated state budget), 410-430 capital, 510 loans, 610 / 620 financial assets. GFS.21 … GFS.32: the subclasses regrouped to GFSM 2014 (21 compensation = 110-130, 22 goods and services = 140-160, 24 interest, 25 subsidies, 26 grants, 27 social benefits = 320, 28 other = 170, 360-370, 31 nonfinancial assets = 410-430, 32 loans and financial assets -- not expense in GFS) -- a bridge by subclass, cash basis, budget only (no National Fund, no extra-budgetary funds), so it will not equal IMF_GFS_OPERATIONS_KZT. January-May 2026, state budget: total 14 519 417, wages (110) 1 865 904, interest (210 + 220) 1 929 721, transfers to individuals 3 157 278, capital 1 217 269. Categories and subclasses are checked to add up in every edition. The scalars STATE_GOV_WAGES_EXPENDITURE etc. are three of these lines with a longer history (2019 on); this dataset starts with the editions archived in the repository (2025-02) and grows with every run -- earlier years need scripts/backfill_minfin_bulletins.py --dims."
+
+  - id: RESOURCE_PAYMENTS_YTD
+    name_ru: "Платежи за недропользование в государственный бюджет (кроме нефтяного сектора), вывозные пошлины на нефть и прямые налоги нефтяного сектора в Национальный фонд, с начала года, млн тенге"
+    name_en: "Subsoil-use payments to the state budget (other than the oil sector), export duties on oil, and the oil sector's direct taxes to the National Fund, year-to-date, million KZT"
+    agency: minfin
+    fetcher: minfin_resource
+    min_items: 8
+    frequency: monthly
+    cumulation: year_to_date
+    unit: "million KZT, January to the month"
+    category: fiscal
+    note: "Minfin Statistical Bulletin «табл 4» (receipts of the state budget by budget code). MET_NON_OIL (mineral extraction tax), MET_COMMON_MINERALS (2026 on), EPT_NON_OIL, BONUS_NON_OIL, RENT_TAX_NON_OIL, PSA_SHARE_NON_OIL, PSA_ADDITIONAL, HISTORICAL_COSTS -- all «за исключением поступлений от организаций нефтяного сектора»; NON_OIL_SUBSOIL is their sum. EXPORT_DUTY_CRUDE and EXPORT_DUTY_OIL_PRODUCTS go to the budget. OIL_SECTOR_NF = NF_OIL_DIRECT_TAXES_YTD (the oil sector's income tax, MET, rent tax, bonuses, PSA share paid into the National Fund), OIL_TOTAL adds the two duties; both exist only for months the National Fund statement covers (none after 2026-06: Minfin stopped posting it). January-May 2026: MET of the non-oil sector 838 118, all non-oil subsoil payments 852 053, export duty on crude 625 499. January-September 2025: non-oil 858 441 against 4 061 200 for the oil sector. NOT ОКЭД: «oil sector» is the Government's list of crude-oil and condensate producers, the rest is metal ores, coal, uranium, gas and building materials together; corporate income tax and VAT of mining companies are not separable and are outside both. RESOURCE_USE_TOTAL is the whole subclass, which also holds water, forest, land, spectrum and mining-farm fees and can be smaller than the subsoil sum when a fee is refunded (January 2026). History starts with the editions archived in the repository (2025-02)."
+
+  - id: BUDGET_RECEIPTS_BY_CODE_YTD
+    name_ru: "Поступления государственного и республиканского бюджетов по кодам бюджетной классификации (категория, класс, подкласс, специфика), с начала года, млн тенге"
+    name_en: "Receipts of the state and republican budgets by budget classification code (category, class, subclass, specific), year-to-date, million KZT"
+    agency: minfin
+    fetcher: minfin_receipts
+    min_items: 300
+    frequency: monthly
+    cumulation: year_to_date
+    unit: "million KZT, January to the month"
+    category: fiscal
+    note: "Minfin Statistical Bulletin «табл 4» (state budget, items STATE.*) and «табл 8 (дох)» (republican budget, REP.*): every row of the table. Item code = budget + the classification code: TOTAL («ПОСТУПЛЕНИЯ»), REVENUE («ДОХОДЫ»), one digit = category (1 tax, 2 non-tax, 3 sale of fixed capital, 4 special receipts, 5 transfers, 6 repayment of budget loans, 7 sale of financial assets), three digits = class (101 income tax, 103 social tax, 104 property, 105 domestic taxes on goods and services, 106 international trade, 107 other, 108 state duty), four = subclass (1011 corporate income tax, 1012 personal income tax, 1051 VAT, 1052 excises, 1053 natural-resource payments, 1061 customs payments), six = specific (the full budget code, e.g. 105101 VAT on domestic goods, 105306 mineral extraction tax of the non-oil sector, 106110 export duty on crude oil). Checked in every edition: specifics sum to the subclass, subclasses to the class, classes to the category, categories 1-5 to REVENUE and 1-7 to TOTAL; a break stops the load. CATEGORY NUMBERS ARE THE 2026 ONES IN EVERY YEAR: the 2026 Budget Code inserted «Специальные поступления» as category 4 and moved transfers 4 -> 5, repayment of loans 5 -> 6, sale of financial assets 6 -> 7; the loader recognises a category by its name and renumbers the 2025 rows, so STATE.5 is transfers throughout (in the 2025 files it is printed as 4). Specifics are NOT renumbered and a few were reused: 105316 is the fee for negative environmental impact in 2025 and the fee for plant resources from 2026 (the environmental fee moved to 401101); 201907 and 204110 changed meaning within 2025 -- read item_name of the row, it is the label of that edition. A line with no receipts in a period is absent from the table, not zero. Receipts of the oil sector to the National Fund are not here (NF_* scalars). LOCAL budgets = STATE minus REP only for taxes; transfers between levels are inside REP.5 and not inside STATE. History starts with the editions archived in the repository (2025-02; no 2025-04, 2025-05, 2025-12, 2026-04)."
+
+  - id: TAX_RATES
+    name_ru: "Законодательные ставки налогов и обязательных взносов: НДС, КПН, ИПН, социальный налог, социальные отчисления, пенсионные взносы, ОСМС, НДПИ на металлы, акцизы, вывозная пошлина на нефть, помесячно"
+    name_en: "Statutory tax and contribution rates: VAT, corporate and personal income tax, social tax, social and pension contributions, medical insurance, mineral extraction tax on metals, excises, export duty on crude oil, monthly"
+    agency: legal
+    fetcher: manual_table
+    step: monthly
+    file: config/tax_rates.yaml
+    min_items: 22
+    frequency: monthly
+    unit: "% (excises: KZT per tonne or per 1 000 sticks; oil export duty: USD per tonne) -- see item_name"
+    category: fiscal
+    note: "Hand-kept (config/tax_rates.yaml): the rate in force in each month, read in the text of the act that set it (acts and articles are listed in the file; the three research notes with URLs and quotes are docs/research_tax_*_2026-11-13.md). Current editions were read on zakon.uchet.kz (mirror of adilet.zan.kz), earlier editions on prg.kz (a commercial database with dated editions), customs and excise resolutions on alta.ru. A month is ABSENT only when there was no single rate: gold and uranium MET from 2026 (scales by price and output), diesel excise 2016-10..2022-03 (seasonal 9 300 / 540), petrol and diesel excise from 2025-05 (38 134 and 35 726 became a base plus 50 %, from September 2026 95 %, of the wholesale price above a threshold), oil export duty from March 2016 (a table by price; from September 2023 USD/t equal to the price in USD/bbl for 25-105). VAT 20 from 1995-07, 16 from 2001-07, 15 from 2004, 14 from 2007, 13 from 2008, 12 from 2009, 16 from 2026-01. CIT 30 from 1995-07, 20 from 2009 (17.5 and 15 were legislated for 2010-2011 and never applied). PIT and PIT_TOP are the lowest and the highest bracket: 5 and 30 in 2002-2003, 5 and 20 in 2004-2006, flat 10 in 2007-2025, 10 and 15 (above 8 500 MRP a year) from 2026. SOCIAL_TAX: 21 flat to 2003, first bracket of a regressive scale in 2004-2007 (20) and 2008 (13), flat 11 from 2009, 9.5 from 2018, 11 from 2025, 6 from 2026 -- BUT until 2025 the amount payable was the tax minus social contributions (net 6 in 2018-2025), and the 2025 Code has no offset, so 6 in 2026 is not a cut. MET_URANIUM keeps 22 for 2009-2012, the rate in force then; Law 61-V of 2012 retroactively set 17.5 for those years; from 2023 the base differs. MET_OIL_TOP is the top step of the oil scale (18 in 2009-2026, domestic sales x 0.5). OIL_EXPORT_DUTY_RATE: a change inside a month is dated to the month it applied for most of; 139.79 USD/t applied for about a week in January 2009 and is not in the series. Not here: rent tax on export, reduced VAT rates (medicines 5 in 2026), special regimes, import excises."
+
+  - id: ENVIRONMENTAL_TAXES_BY_OKED
+    name_ru: "Экологические налоги по видам экономической деятельности (счёт экологических налогов БНС): энергоносители, транспорт, загрязнение, использование ресурсов, ежегодно, млн тенге"
+    name_en: "Environmental taxes by economic activity (BNS environmental-tax account): energy, transport, pollution, resource use, annual, million KZT"
+    agency: bns
+    fetcher: bns_env_taxes
+    element_id: 478740
+    min_items: 100
+    min_years: 8
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    note: "BNS «Экологические налоги по видам экономической деятельности» (stat.gov.kz element 478740, SEEA account; the file is in thousand KZT), calendar years 2016-2025, state budget plus National Fund, 19 ОКЭД sections by name + OTHER_PAYERS + ALL; item <GROUP>.<section>, GROUP = TOTAL, ENERGY, TRANSPORT, POLLUTION, RESOURCE. ONLY ENVIRONMENTAL TAXES in the SEEA sense, NOT all taxes: corporate income tax, VAT and payroll taxes are outside, and the file does not list the budget codes it covers. No ОКЭД divisions (05-09). Mining (TOTAL.B): 1 730 657 (2018), 928 306 (2020), 2 670 393 (2022), 2 724 431 (2024), 2 861 781 (2025) mln KZT -- 68 % of all environmental taxes in 2025 and about a third of the mining tax receipts implied by TAX_STRUCTURE_BY_INDUSTRY; in 2024 2 023 461 of it is energy taxes and 654 722 resource-use taxes. Checked on every sheet and year: sections add up to «Всего», the four groups to the total."
+
+  - id: TAX_STRUCTURE_BY_INDUSTRY
+    name_ru: "Структура налоговых поступлений государственного бюджета и Национального фонда по отраслям (диаграмма ВАП, источник — Минфин), %; оценка поступлений по отраслям"
+    name_en: "Structure of tax receipts of the state budget and the National Fund by industry (Supreme Audit Chamber chart, source Minfin), %; implied receipts"
+    agency: vap
+    fetcher: tax_industry_structure
+    file: config/tax_structure_by_industry.yaml
+    min_items: 13
+    frequency: annual
+    unit: "% (SHARE); bn KZT (RECEIPTS, CONSOLIDATED_TAX)"
+    category: fiscal
+    note: "Hand-kept shares (config/tax_structure_by_industry.yaml) from the chart in the Supreme Audit Chamber's conclusions, 2017-2025: MINING, MANUFACTURING, CONSTRUCTION, TRADE, TRANSPORT, OTHER, % of tax receipts of the state budget plus the National Fund. Mining: 40.9 (2017), 47.0 (2018), 29.6 (2020), 46.2 (2022), 36.3 (2023), 34.2 (2024), 31.2 (2025). No split of mining into oil-gas and metal ores. CONSOLIDATED_TAX = December of STATE_TAX_REVENUE_YTD + NF_OIL_DIRECT_TAXES_YTD (2018 on), equal to the Chamber's own totals for 2023-2025 (23 469.6, 23 509.5, 26 913.4 bn; CONSOLIDATED_TAX.PUBLISHED). <GROUP>.RECEIPTS = share x CONSOLIDATED_TAX is this repository's ESTIMATE from a share rounded to 0.1 pp (mining 2025: 8 397 bn KZT, ±13 bn); the Chamber's text gives 9.8 trn for 2022 and 8.5 trn for 2023, as computed here. For comparison, direct oil taxes paid into the National Fund were 3 725 bn in 2025 (NF_OIL_DIRECT_TAXES_YTD), 44 % of the mining estimate."
+
   - id: SUBSISTENCE_MINIMUM_BY_REGION
     name_ru: "Величина прожиточного минимума (расчёт БНС по ценам), всего, пенсионеры, дети 0-13 лет, по регионам, помесячно, тенге"
     name_en: "Subsistence minimum (BNS, price-based), total, pensioners, children 0-13, by region, monthly, KZT"

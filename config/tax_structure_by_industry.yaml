@@ -1,0 +1,27 @@
+# Structure of tax receipts by industry, per cent of the tax receipts of the state budget plus the National Fund
+# («Структура налоговых поступлений бюджета (ГБ+НФ) в разрезе отраслей экономики», source «МФ»): a stacked-bar chart
+# in the Supreme Audit Chamber's (ВАП) conclusion on the Government's report on the execution of the republican
+# budget. Hand-maintained: the chart is in a PDF, and neither Minfin nor the State Revenue Committee publishes the
+# table behind it (checked 2026-11-13, see config/sources.yaml TAX_RECEIPTS_BY_OKED). Six groups only -- no ОКЭД
+# divisions, so oil and gas (06) and metal ores (07) cannot be separated. That «Горнодобывающая промышленность» is
+# ОКЭД section B is inferred from the 2020 conclusion, which uses the section's name; the chart does not say.
+#
+# Transcribed 2026-11-13 from the text layer of the PDFs (pdftotext): 2017-2023 from the conclusion for 2023
+# (gov.kz doc 681592), 2024 from the conclusion for 2024 (doc 876183), 2025 from the conclusion for 2025 (doc
+# 1071435, Диаграмма 17). The editions agree on every year they share, except «Другие» 2020 (27,4 in the editions
+# for 2021-2023, 27,5 in the one for 2024; 27,4 kept). Each year's shares sum to 99,9-100,1 (rounding).
+# published_total_bn: «Налоговые поступления в КБ», Таблица 12 of the conclusion for 2025, bn KZT.
+# Add a year each autumn from the new conclusion (gov.kz, project esep).
+source: "Высшая аудиторская палата РК, заключения к отчёту Правительства об исполнении республиканского бюджета за 2023, 2024 и 2025 годы (диаграмма «Структура налоговых поступлений бюджета (ГБ+НФ) в разрезе отраслей экономики», источник — МФ)"
+latest_url: "https://www.gov.kz/uploads/2026/9/28/38ffd5139703ddf13a1214e6ef6c07faa16f378c57263f6c9508d0653571f7f9_original.12430847.pdf"
+shares:
+  2017: {MINING: 40.9, MANUFACTURING: 10.7, CONSTRUCTION: 6.3, TRADE: 13.5, TRANSPORT: 3.5, OTHER: 25.1}
+  2018: {MINING: 47.0, MANUFACTURING: 9.5, CONSTRUCTION: 4.7, TRADE: 13.6, TRANSPORT: 3.3, OTHER: 21.9}
+  2019: {MINING: 43.1, MANUFACTURING: 10.3, CONSTRUCTION: 5.1, TRADE: 14.1, TRANSPORT: 4.3, OTHER: 23.0}
+  2020: {MINING: 29.6, MANUFACTURING: 13.6, CONSTRUCTION: 6.3, TRADE: 17.3, TRANSPORT: 5.7, OTHER: 27.4}
+  2021: {MINING: 35.7, MANUFACTURING: 12.7, CONSTRUCTION: 5.1, TRADE: 17.0, TRANSPORT: 4.4, OTHER: 25.1}
+  2022: {MINING: 46.2, MANUFACTURING: 11.2, CONSTRUCTION: 4.1, TRADE: 14.8, TRANSPORT: 3.7, OTHER: 20.0}
+  2023: {MINING: 36.3, MANUFACTURING: 11.4, CONSTRUCTION: 4.7, TRADE: 17.2, TRANSPORT: 4.8, OTHER: 25.7}
+  2024: {MINING: 34.2, MANUFACTURING: 10.7, CONSTRUCTION: 5.2, TRADE: 18.2, TRANSPORT: 5.1, OTHER: 26.6}
+  2025: {MINING: 31.2, MANUFACTURING: 12.3, CONSTRUCTION: 5.4, TRADE: 18.0, TRANSPORT: 5.0, OTHER: 28.0}
+published_total_bn: {2023: 23469.6, 2024: 23509.5, 2025: 26913.4}
