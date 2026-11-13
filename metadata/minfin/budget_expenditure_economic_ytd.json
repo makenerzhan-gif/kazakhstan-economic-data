@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents",
+  "dataset_id": "Statistical Bulletin tables 6, 10, 11",
+  "indicator_id": "BUDGET_EXPENDITURE_ECONOMIC_YTD",
+  "indicator_name": "Budget execution by the economic classification of expenditure (state, republican, local budgets; subclasses, specifics) and regrouped to the IMF's GFSM 2014 items, year-to-date, million KZT",
+  "description": "Исполнение государственного, республиканского и местных бюджетов по экономической классификации расходов (подклассы, специфики) и в группировке МВФ GFSM 2014, с начала года, млн тенге",
+  "frequency": "monthly",
+  "unit": "million KZT, January to the month",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Minfin Statistical Bulletin, «табл 6» (state budget, subclasses), «табл 10» (republican budget) and «таб 11» (local budgets), both with specifics. Item <BUDGET>.<code>: STATE / REP / LOCAL; TOTAL, CAT1 current, CAT2 capital, CAT3 budget loans, CAT4 financial assets, CAT6 PPP obligations; subclasses 110 wages, 120 employers' contributions, 140 inventories, 150 services, 160 other current, 210 / 220 interest on domestic / external loans, 310 subsidies, 320 transfers to individuals (323 pensions), 330 transfers to other levels (not in the consolidated state budget), 410-430 capital, 510 loans, 610 / 620 financial assets. GFS.21 … GFS.32: the subclasses regrouped to GFSM 2014 (21 compensation = 110-130, 22 goods and services = 140-160, 24 interest, 25 subsidies, 26 grants, 27 social benefits = 320, 28 other = 170, 360-370, 31 nonfinancial assets = 410-430, 32 loans and financial assets -- not expense in GFS) -- a bridge by subclass, cash basis, budget only (no National Fund, no extra-budgetary funds), so it will not equal IMF_GFS_OPERATIONS_KZT. January-May 2026, state budget: total 14 519 417, wages (110) 1 865 904, interest (210 + 220) 1 929 721, transfers to individuals 3 157 278, capital 1 217 269. Categories and subclasses are checked to add up in every edition. The scalars STATE_GOV_WAGES_EXPENDITURE etc. are three of these lines with a longer history (2019 on); this dataset starts with the editions archived in the repository (2025-02) and grows with every run -- earlier years need scripts/backfill_minfin_bulletins.py --dims.",
+  "publication_date": null,
+  "last_update_date": "2026-11-13",
+  "download_date": "2026-11-13",
+  "period_start": "2025-02-01",
+  "period_end": "2026-05-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

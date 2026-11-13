@@ -588,3 +588,31 @@ conclusion has a non-ОКЭД «oil sector / ore-mining sector» table (7 194.3 
 with the chart and is not connected.
 
 Tests: tests/test_tax_by_industry.py (5 + 1 cross-source).
+
+## 2026-11-13 — the budget's economic classification in full, its GFSM bridge, and subsoil payments split oil / non-oil
+
+Follow-up to the ОКЭД search: the Minfin Statistical Bulletin classifies EXPENDITURE by type (the economic classification), not
+by industry, and so does the IMF's GFSM 2014 -- neither has an ОКЭД dimension. But the bulletin's RECEIPTS by budget code split
+subsoil payments into «организации нефтяного сектора» (paid into the National Fund) and everyone else (the budget).
+scripts/fetchers/minfin_classification.py, two datasets, January-to-month, million KZT:
+1. BUDGET_EXPENDITURE_ECONOMIC_YTD: «табл 6» (state budget, subclasses), «табл 10» (republican) and «таб 11» (local) with
+   specifics -- 254 items against the three lines the pipeline had (wages, capital, subsidies). Adds interest (210 / 220),
+   goods and services (140-160), employers' contributions (120), transfers to individuals (320, pensions 323), loans and
+   financial assets. GFS.21 … GFS.32 regroup the subclasses to GFSM 2014 (compensation, goods and services, interest,
+   subsidies, grants, social benefits, other, nonfinancial assets; loans and financial assets, which GFS keeps below the
+   line while the Kazakh budget counts them in the deficit). A bridge by subclass on a cash basis for the budget only: it
+   does not equal IMF_GFS_OPERATIONS_KZT (general government with the National Fund; IMF annual data end in 2023).
+   Checked in every edition: subclasses = category, categories = total. STATE.110 equals STATE_GOV_WAGES_EXPENDITURE on all
+   12 common months. January-May 2026, state budget: 14 519 bn in all, wages 1 866, interest 1 930, transfers to individuals 3 157.
+2. RESOURCE_PAYMENTS_YTD: «табл 4» -- mineral extraction tax, excess profit tax, bonuses, rent tax, PSA share, historical
+   costs of the non-oil sector (NON_OIL_SUBSOIL), export duties on crude and oil products; OIL_SECTOR_NF and OIL_TOTAL from
+   NF_OIL_DIRECT_TAXES_YTD for the months the National Fund statement covers. January-September 2025: non-oil subsoil
+   payments 858 bn against 4 061 bn for the oil sector; January-May 2026: non-oil MET 838 bn (386 bn by March). EXPORT_DUTY_CRUDE
+   equals the scalar OIL_EXPORT_DUTY on all 12 common months. NOT ОКЭД 06 / 07: «oil sector» is the Government's list of
+   producers, the rest lumps metal ores, coal, uranium and gas; income tax and VAT of mining companies are outside.
+Both start with the 12 editions archived in the repository (2025-02 … 2026-05) -- built offline, the gov.kz listing is not
+reachable from the development sandbox -- and grow with every run; earlier years need backfill_minfin_bulletins.py --dims.
+The order that defined the classification (Minfin order 403 of 18.09.2014) was replaced in April 2025 (order 180); the new
+text was not found on the Minfin site and the classification here is read from the bulletin's own tables.
+
+Tests: tests/test_minfin_classification.py (6 + 1 cross-source).

@@ -1,0 +1,291 @@
+"""Budget classifications from Minfin's monthly Statistical Bulletin (added 2026-11-13).
+
+Two item-level datasets, both January-to-month in million KZT, dated the first day of the
+period's last month (the dims convention for year-to-date flows), one edition per date, read
+through fetchers/minfin (so its listing, download cache and archive mode apply):
+
+BUDGET_EXPENDITURE_ECONOMIC_YTD (fetch_economic) -- the economic classification of expenditure:
+  «табл 6»  state budget (republican + local, consolidated), subclasses;
+  «табл 10» republican budget, subclasses and specifics;
+  «таб 11»  local budgets, subclasses and specifics.
+  Item <BUDGET>.<code>, BUDGET = STATE / REP / LOCAL; code = TOTAL, CAT1 … CAT6 (categories:
+  1 current, 2 capital, 3 budget loans, 4 acquisition of financial assets, 6 PPP obligations),
+  the three-digit subclass (110 wages, 210 interest on domestic loans, 320 transfers to
+  individuals …) or specific (111 pay, 323 pensions …), and GFS.<nn>: the subclasses regrouped
+  into the IMF's GFSM 2014 economic classification (GFS_MAP below) -- a bridge by SUBCLASS, so an
+  approximation: «другие текущие затраты» (160) holds «особые затраты», scholarships sit in 320,
+  and the budget is on a cash basis with no consumption of fixed capital (GFS 23).
+  The classification is the one the bulletin prints; the order that defined it (Minfin
+  order 403 of 18.09.2014) was replaced in April 2025 and the bulletin's rows changed little.
+  Checked in every edition (StructuralChangeError): subclasses add up to their category and
+  the categories to the total, within 0.5 mln KZT + 0.01 %.
+
+RESOURCE_PAYMENTS_YTD (fetch_resource) -- payments for the use of natural resources and
+  export duties on oil in the STATE budget, from «табл 4» (receipts by budget code), i.e. the
+  payments of everyone EXCEPT the organisations of the oil sector, whose direct taxes go to
+  the National Fund (the NF_*_YTD scalars). Items MET_NON_OIL (mineral extraction tax),
+  MET_COMMON_MINERALS (from the 2026 editions), EPT_NON_OIL, BONUS_NON_OIL, RENT_TAX_NON_OIL,
+  PSA_SHARE_NON_OIL, PSA_ADDITIONAL, HISTORICAL_COSTS, RESOURCE_USE_TOTAL (the subclass total, which
+  also holds water, forest, land and spectrum fees), EXPORT_DUTY_CRUDE, EXPORT_DUTY_OIL_PRODUCTS.
+  Derived: NON_OIL_SUBSOIL = the subsoil payments of the non-oil sector (MET + common minerals
+  + EPT + bonuses + rent tax + PSA + historical costs); OIL_SECTOR_NF = the oil sector's direct
+  taxes paid into the National Fund (NF_OIL_DIRECT_TAXES_YTD, when that month exists);
+  OIL_TOTAL = OIL_SECTOR_NF + the two export duties. «Oil sector» is the Government's list of
+  crude-oil and condensate producers, NOT ОКЭД division 06; «non-oil» is everyone else --
+  metal ores, coal, uranium, gas, building materials -- NOT division 07. Corporate income tax
+  and VAT of mining companies are not separable from other payers and are outside both.
+"""
+from __future__ import annotations
+
+import csv
+import re
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from fetchers import minfin  # noqa: E402
+from fetchers import minfin_regions as mr  # noqa: E402
+from lib import dims, validation  # noqa: E402
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+ECON_SHEETS = {"таб6": "STATE", "таб10": "REP", "таб11": "LOCAL"}
+BUDGET_NAMES = {"STATE": "Государственный бюджет", "REP": "Республиканский бюджет", "LOCAL": "Местные бюджеты"}
+CATEGORIES = [(1, r"^текущие затраты"), (2, r"^капитальные затраты"), (3, r"^бюджетные кредиты"),
+              (4, r"^приобретение финансовых активов"), (6, r"^выполнение государственных обязательств по проектам")]
+# GFSM 2014 item: (lowest, highest) subclass. 8xx (PPP obligations) is left out: it mixes
+# interest, investment compensation and operating payments.
+GFS_MAP = {"21": [(110, 139)], "22": [(140, 169)], "24": [(210, 229)], "25": [(310, 319)], "27": [(320, 329)],
+           "26": [(330, 349), (440, 449)], "28": [(170, 199), (350, 399)], "31": [(410, 439)], "32": [(510, 699)]}
+GFS_NAMES = {"21": "оплата труда работников (GFS 21: подклассы 110-130)", "22": "использование товаров и услуг (GFS 22: 140-160)",
+             "24": "проценты (GFS 24: 210-220)", "25": "субсидии (GFS 25: 310)", "27": "социальные пособия (GFS 27: 320)",
+             "26": "гранты другим уровням управления и за границу (GFS 26: 330-340, 440)", "28": "прочие расходы (GFS 28: 170, 360-370)",
+             "31": "приобретение нефинансовых активов (GFS 31: 410-430)",
+             "32": "бюджетные кредиты и приобретение финансовых активов (GFS 32, не расход: 510-620)"}
+
+
+def _structural(ds: dict, what: str) -> None:
+    raise validation.StructuralChangeError(f"minfin/{ds['id']}: {what}")
+
+
+def _code(cell) -> str | None:
+    """A three-digit classification code in a cell ('110', 110.0), else None («L01 Категория расходов»)."""
+    if isinstance(cell, float) and cell.is_integer():
+        cell = int(cell)
+    s = str(cell).strip() if cell is not None else ""
+    return s if re.fullmatch(r"\d{3}", s) else None
+
+
+def _label(row) -> str:
+    return " ".join(minfin._row_label(row).replace("_x000D_", " ").split())
+
+
+def economic_lines(rows: list[list], col: int, with_specifics: bool) -> list[tuple[str, str, float]]:
+    """[(code, Russian label, value)] of one sheet: TOTAL, CAT<n>, subclasses, specifics."""
+    out, category = [], None
+    for r in rows:
+        if col >= len(r):
+            continue
+        value, label = mr._value(r[col]), _label(r)
+        if value is None or not label:
+            continue
+        norm = mr._norm(label)
+        sub = _code(r[1]) if len(r) > 1 else None
+        spec = _code(r[2]) if with_specifics and len(r) > 2 else None
+        if norm.startswith("всего"):
+            out.append(("TOTAL", "Всего", value))
+        elif spec:
+            out.append((spec, label, value))
+        elif sub:
+            # the bulletin prints «370» with no name where the row is the educational grant
+            out.append((sub, label if not re.fullmatch(r"\d{3}", label) else f"Подкласс {sub}", value))
+        else:
+            hit = next((n for n, rx in CATEGORIES if re.search(rx, norm)), None)
+            if hit is not None and hit != category:          # «Приобретение финансовых активов» is category 4 and subclass 610
+                category = hit
+                out.append((f"CAT{hit}", label, value))
+    return out
+
+
+def check_sums(lines: list[tuple[str, str, float]], ds: dict, where: str) -> None:
+    vals, order = {}, []
+    for code, _, v in lines:
+        vals[code] = v
+        order.append(code)
+    cats = [c for c in order if c.startswith("CAT")]
+    tol = lambda x: 0.5 + 1e-4 * abs(x)                                  # noqa: E731
+    if "TOTAL" in vals and cats and abs(sum(vals[c] for c in cats) - vals["TOTAL"]) > tol(vals["TOTAL"]):
+        _structural(ds, f"{where}: categories sum to {sum(vals[c] for c in cats):.1f}, «Всего» is {vals['TOTAL']:.1f}")
+    current = None
+    parts: dict[str, float] = {}
+    for code in order:
+        if code.startswith("CAT"):
+            current = code
+        elif current and re.fullmatch(r"\d{2}0", code):                  # subclasses end in 0, specifics do not
+            parts[current] = parts.get(current, 0.0) + vals[code]
+    for cat, total in parts.items():
+        if abs(total - vals[cat]) > tol(vals[cat]):
+            _structural(ds, f"{where}: the subclasses of {cat} sum to {total:.1f}, the category is {vals[cat]:.1f}")
+
+
+def gfs_lines(lines: list[tuple[str, str, float]]) -> list[tuple[str, str, float]]:
+    subs = {int(c): v for c, _, v in lines if re.fullmatch(r"\d{2}0", c)}
+    out = []
+    for item, ranges in GFS_MAP.items():
+        hit = [v for c, v in subs.items() if any(lo <= c <= hi for lo, hi in ranges)]
+        if hit:
+            out.append((f"GFS.{item}", GFS_NAMES[item], round(sum(hit), 4)))
+    return out
+
+
+def _edition_period(sheets: dict[str, list[list]]) -> tuple[int, int] | None:
+    periods = [p[:2] for rows in sheets.values() for p in mr._period_cols(rows)]
+    if periods:
+        return max(periods)
+    years = [y for rows in sheets.values() for y, _ in mr._report_cols(rows)]
+    return (max(years), 12) if years else None
+
+
+def _column(rows: list[list], year: int, month: int) -> int | None:
+    col = next((c for y, m, c in mr._period_cols(rows) if (y, m) == (year, month)), None)
+    if col is None and month == 12:
+        col = min((c for y, c in mr._report_cols(rows) if y == year), default=None)
+    return col
+
+
+def economic_edition(sheets: dict[str, list[list]], ds: dict) -> tuple[str | None, list[dict], list[str]]:
+    wanted = {minfin._sheet_key(n): rows for n, rows in sheets.items() if minfin._sheet_key(n) in ECON_SHEETS}
+    period = _edition_period(wanted)
+    if period is None:
+        return None, [], []
+    year, month = period
+    d = f"{year}-{month:02d}-01"
+    records, notes = [], []
+    for key, budget in ECON_SHEETS.items():
+        rows = wanted.get(key)
+        col = _column(rows, year, month) if rows else None
+        if col is None:
+            notes.append(f"{d}: no {budget} sheet or period column")
+            continue
+        lines = economic_lines(rows, col, with_specifics=key != "таб6")
+        check_sums(lines, ds, f"{d} {budget}")
+        for code, label, v in lines + gfs_lines(lines):
+            records.append({"date": d, "region": dims.NATIONAL, "item_code": f"{budget}.{code}",
+                            "item_name": f"{BUDGET_NAMES[budget]}: {label}", "value": round(v, 4)})
+    return d, records, notes
+
+
+def _editions(wanted_keys) -> list[tuple[dict, dict[str, list[list]]]]:
+    docs = minfin._bulletin_documents()
+    if not docs:
+        raise validation.StructuralChangeError("minfin_classification: no Statistical Bulletin in the listing")
+    out = []
+    for doc in docs:                                   # newest first: an edition already read wins
+        path = doc["full_text"][0]["document"]
+        kind, wb = minfin._open_workbook(minfin._download(path), path)
+        names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
+        out.append((doc, {n: list(minfin._iter_rows(kind, wb, n)) for n in names if minfin._sheet_key(n) in wanted_keys}))
+    return out
+
+
+def _merge(ds: dict, got: dict[str, list[dict]]) -> list[dict]:
+    stored = [{"date": r["date"], "region": r["region"], "item_code": r["item_code"], "item_name": r["item_name"],
+               "value": float(r["value"])} for r in dims.load_processed(ds["id"]) if r["date"] not in got]
+    records = [r for recs in got.values() for r in recs] + stored
+    if not records:
+        _structural(ds, "nothing read from any bulletin")
+    return sorted(records, key=lambda r: (r["item_code"], r["date"]))
+
+
+def fetch_economic(ds: dict) -> tuple[list[dict], dict]:
+    got, warnings = {}, []
+    for doc, sheets in _editions(set(ECON_SHEETS)):
+        d, records, notes = economic_edition(sheets, ds)
+        warnings += [f"{doc.get('id')}: {n}" for n in notes]
+        if d and d not in got and records:
+            got[d] = records
+    return _merge(ds, got), {"frequency": "monthly", "source_url": minfin.LISTING_URL,
+                             "dataset_id": "Statistical Bulletin tables 6, 10, 11", "note": ds.get("note", ""), "warnings": warnings}
+
+
+# ---------------------------------------------------------------- resource payments
+
+RESOURCE_LINES = [  # (code, Russian name, regex on the normalised label); the first match of a row wins
+    ("RESOURCE_USE_TOTAL", "Поступления за использование природных и других ресурсов, всего", r"^поступления за использование природных и других ресурсов"),
+    ("EPT_NON_OIL", "Налог на сверхприбыль, кроме организаций нефтяного сектора", r"^налог на сверхприбыль"),
+    ("BONUS_NON_OIL", "Бонусы, кроме организаций нефтяного сектора", r"^бонусы"),
+    ("MET_COMMON_MINERALS", "НДПИ на общераспространённые полезные ископаемые, подземные воды и лечебные грязи", r"^налог на добычу полезных ископаемых на общераспространенные"),
+    ("MET_NON_OIL", "Налог на добычу полезных ископаемых, кроме организаций нефтяного сектора", r"^налог на добычу полезных ископаемых"),
+    ("RENT_TAX_NON_OIL", "Рентный налог на экспорт, кроме организаций нефтяного сектора", r"^рентный налог на экспорт"),
+    ("PSA_SHARE_NON_OIL", "Доля Республики Казахстан по разделу продукции, кроме организаций нефтяного сектора", r"^доля республики казахстан по разделу продукции"),
+    ("PSA_ADDITIONAL", "Дополнительный платёж недропользователя по контракту о разделе продукции", r"^дополнительный платеж недропользователя"),
+    ("HISTORICAL_COSTS", "Платёж по возмещению исторических затрат", r"^платеж по возмещению исторических затрат"),
+    ("EXPORT_DUTY_CRUDE", "Вывозные таможенные пошлины на сырую нефть", r"^вывозные таможенные пошлины на сырую нефть"),
+    ("EXPORT_DUTY_OIL_PRODUCTS", "Вывозные таможенные пошлины на товары, выработанные из нефти", r"^вывозные таможенные пошлины на товары, выработанные из нефти"),
+]
+_RESOURCE = [(c, n, re.compile(r)) for c, n, r in RESOURCE_LINES]
+SUBSOIL = ("MET_NON_OIL", "MET_COMMON_MINERALS", "EPT_NON_OIL", "BONUS_NON_OIL", "RENT_TAX_NON_OIL", "PSA_SHARE_NON_OIL",
+           "PSA_ADDITIONAL", "HISTORICAL_COSTS")
+REQUIRED = ("RESOURCE_USE_TOTAL", "MET_NON_OIL", "EXPORT_DUTY_CRUDE")
+
+
+def resource_lines(rows: list[list], col: int) -> dict[str, float]:
+    out = {}
+    for r in rows:
+        if col >= len(r):
+            continue
+        value, norm = mr._value(r[col]), mr._norm(_label(r)).replace("общераспространенныеполезные", "общераспространенные полезные")
+        if value is None or not norm:
+            continue
+        code = next((c for c, _, rx in _RESOURCE if rx.search(norm)), None)
+        if code and code not in out:                 # the same label lower down (arrears tables) is not read
+            out[code] = value
+    return out
+
+
+def _nf_oil_direct() -> dict[str, float]:
+    path = REPO_ROOT / "data" / "processed" / "minfin" / "nf_oil_direct_taxes_ytd.csv"
+    if not path.exists():
+        return {}
+    with path.open(encoding="utf-8") as f:
+        return {r["date"][:7] + "-01": float(r["value"]) for r in csv.DictReader(f) if r.get("value")}
+
+
+def resource_edition(sheets: dict[str, list[list]], ds: dict, nf: dict[str, float]) -> tuple[str | None, list[dict], list[str]]:
+    rows = next((rows for n, rows in sheets.items() if minfin._sheet_key(n) == "таб4"), None)
+    period = _edition_period({"таб4": rows}) if rows else None
+    if period is None:
+        return None, [], []
+    year, month = period
+    d = f"{year}-{month:02d}-01"
+    col = _column(rows, year, month)
+    if col is None:
+        return d, [], [f"{d}: no period column in «табл 4»"]
+    vals = resource_lines(rows, col)
+    missing = [c for c in REQUIRED if c not in vals]
+    if missing:
+        _structural(ds, f"{d}: «табл 4» has no row for {missing}")
+    # No «subsoil <= subclass total» check: the subclass also holds fees that can be negative in a
+    # month (refunds of the radio-spectrum fee: -5 362 mln in January 2026, when subsoil payments
+    # were 58 862 and the subclass total 54 876).
+    subsoil = sum(vals.get(c, 0.0) for c in SUBSOIL)
+    names = {c: n for c, n, _ in RESOURCE_LINES}
+    names["NON_OIL_SUBSOIL"] = "Платежи недропользователей, кроме нефтяного сектора (НДПИ, сверхприбыль, бонусы, рентный налог, СРП, исторические затраты), расчёт"
+    vals["NON_OIL_SUBSOIL"] = subsoil
+    duties = vals["EXPORT_DUTY_CRUDE"] + vals.get("EXPORT_DUTY_OIL_PRODUCTS", 0.0)
+    if d in nf:
+        names["OIL_SECTOR_NF"] = "Прямые налоги организаций нефтяного сектора в Национальный фонд (NF_OIL_DIRECT_TAXES_YTD)"
+        names["OIL_TOTAL"] = "Нефтяной сектор: прямые налоги в Национальный фонд и вывозные пошлины на нефть и нефтепродукты, расчёт"
+        vals["OIL_SECTOR_NF"], vals["OIL_TOTAL"] = nf[d], nf[d] + duties
+    return d, [{"date": d, "region": dims.NATIONAL, "item_code": c, "item_name": names[c], "value": round(v, 4)}
+               for c, v in vals.items()], []
+
+
+def fetch_resource(ds: dict) -> tuple[list[dict], dict]:
+    got, warnings, nf = {}, [], _nf_oil_direct()
+    for doc, sheets in _editions({"таб4"}):
+        d, records, notes = resource_edition(sheets, ds, nf)
+        warnings += [f"{doc.get('id')}: {n}" for n in notes]
+        if d and d not in got and records:
+            got[d] = records
+    return _merge(ds, got), {"frequency": "monthly", "source_url": minfin.LISTING_URL,
+                             "dataset_id": "Statistical Bulletin table 4", "note": ds.get("note", ""), "warnings": warnings}

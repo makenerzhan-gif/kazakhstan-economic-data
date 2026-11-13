@@ -5121,6 +5121,30 @@ datasets:
 
   # ---------------------------------------------------------------- taxes by economic activity (fetchers/tax_by_industry.py, added 2026-11-13)
   # The State Revenue Committee publishes no receipts by ОКЭД (config/sources.yaml, TAX_RECEIPTS_BY_OKED); these two are the nearest official publications.
+  - id: BUDGET_EXPENDITURE_ECONOMIC_YTD
+    name_ru: "Исполнение государственного, республиканского и местных бюджетов по экономической классификации расходов (подклассы, специфики) и в группировке МВФ GFSM 2014, с начала года, млн тенге"
+    name_en: "Budget execution by the economic classification of expenditure (state, republican, local budgets; subclasses, specifics) and regrouped to the IMF's GFSM 2014 items, year-to-date, million KZT"
+    agency: minfin
+    fetcher: minfin_economic
+    min_items: 150
+    frequency: monthly
+    cumulation: year_to_date
+    unit: "million KZT, January to the month"
+    category: fiscal
+    note: "Minfin Statistical Bulletin, «табл 6» (state budget, subclasses), «табл 10» (republican budget) and «таб 11» (local budgets), both with specifics. Item <BUDGET>.<code>: STATE / REP / LOCAL; TOTAL, CAT1 current, CAT2 capital, CAT3 budget loans, CAT4 financial assets, CAT6 PPP obligations; subclasses 110 wages, 120 employers' contributions, 140 inventories, 150 services, 160 other current, 210 / 220 interest on domestic / external loans, 310 subsidies, 320 transfers to individuals (323 pensions), 330 transfers to other levels (not in the consolidated state budget), 410-430 capital, 510 loans, 610 / 620 financial assets. GFS.21 … GFS.32: the subclasses regrouped to GFSM 2014 (21 compensation = 110-130, 22 goods and services = 140-160, 24 interest, 25 subsidies, 26 grants, 27 social benefits = 320, 28 other = 170, 360-370, 31 nonfinancial assets = 410-430, 32 loans and financial assets -- not expense in GFS) -- a bridge by subclass, cash basis, budget only (no National Fund, no extra-budgetary funds), so it will not equal IMF_GFS_OPERATIONS_KZT. January-May 2026, state budget: total 14 519 417, wages (110) 1 865 904, interest (210 + 220) 1 929 721, transfers to individuals 3 157 278, capital 1 217 269. Categories and subclasses are checked to add up in every edition. The scalars STATE_GOV_WAGES_EXPENDITURE etc. are three of these lines with a longer history (2019 on); this dataset starts with the editions archived in the repository (2025-02) and grows with every run -- earlier years need scripts/backfill_minfin_bulletins.py --dims."
+
+  - id: RESOURCE_PAYMENTS_YTD
+    name_ru: "Платежи за недропользование в государственный бюджет (кроме нефтяного сектора), вывозные пошлины на нефть и прямые налоги нефтяного сектора в Национальный фонд, с начала года, млн тенге"
+    name_en: "Subsoil-use payments to the state budget (other than the oil sector), export duties on oil, and the oil sector's direct taxes to the National Fund, year-to-date, million KZT"
+    agency: minfin
+    fetcher: minfin_resource
+    min_items: 8
+    frequency: monthly
+    cumulation: year_to_date
+    unit: "million KZT, January to the month"
+    category: fiscal
+    note: "Minfin Statistical Bulletin «табл 4» (receipts of the state budget by budget code). MET_NON_OIL (mineral extraction tax), MET_COMMON_MINERALS (2026 on), EPT_NON_OIL, BONUS_NON_OIL, RENT_TAX_NON_OIL, PSA_SHARE_NON_OIL, PSA_ADDITIONAL, HISTORICAL_COSTS -- all «за исключением поступлений от организаций нефтяного сектора»; NON_OIL_SUBSOIL is their sum. EXPORT_DUTY_CRUDE and EXPORT_DUTY_OIL_PRODUCTS go to the budget. OIL_SECTOR_NF = NF_OIL_DIRECT_TAXES_YTD (the oil sector's income tax, MET, rent tax, bonuses, PSA share paid into the National Fund), OIL_TOTAL adds the two duties; both exist only for months the National Fund statement covers (none after 2026-06: Minfin stopped posting it). January-May 2026: MET of the non-oil sector 838 118, all non-oil subsoil payments 852 053, export duty on crude 625 499. January-September 2025: non-oil 858 441 against 4 061 200 for the oil sector. NOT ОКЭД: «oil sector» is the Government's list of crude-oil and condensate producers, the rest is metal ores, coal, uranium, gas and building materials together; corporate income tax and VAT of mining companies are not separable and are outside both. RESOURCE_USE_TOTAL is the whole subclass, which also holds water, forest, land, spectrum and mining-farm fees and can be smaller than the subsoil sum when a fee is refunded (January 2026). History starts with the editions archived in the repository (2025-02)."
+
   - id: ENVIRONMENTAL_TAXES_BY_OKED
     name_ru: "Экологические налоги по видам экономической деятельности (счёт экологических налогов БНС): энергоносители, транспорт, загрязнение, использование ресурсов, ежегодно, млн тенге"
     name_en: "Environmental taxes by economic activity (BNS environmental-tax account): energy, transport, pollution, resource use, annual, million KZT"
