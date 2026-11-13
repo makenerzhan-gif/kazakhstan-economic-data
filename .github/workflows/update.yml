@@ -34,6 +34,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          # restore pip's download cache keyed on requirements.txt (about a minute a run)
+          cache: pip
+          cache-dependency-path: requirements.txt
 
       - name: Install dependencies
         run: pip install -r requirements.txt

@@ -30,6 +30,8 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
+from urllib.parse import urlsplit
+
 import pandas as pd
 import requests
 
@@ -41,10 +43,31 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; KZEconDataPipeline/1.0; +http
 _CACHE: dict[str, bytes] = {}
 
 
+_HOST_DOWN: dict[str, str] = {}     # host -> the failure that took it out of this run
+
+
+class HostDownError(RuntimeError):
+    """A host already failed in this run; the request was not sent."""
+
+
 def _get(url: str, timeout: int = 120) -> bytes:
+    """GET once per process. A host that times out, refuses the connection or answers 5xx is not
+    asked again in the same run (2026-11-13): on 2026-11-10 and 2026-11-12 api.worldbank.org was
+    down and five datasets each waited out the full 120-second timeout -- ten minutes for
+    nothing. The stored values stay as they are and the next run asks again. A 4xx is the
+    request's fault, not the host's, and does not trip the breaker."""
     if url not in _CACHE:
-        resp = requests.get(url, headers=HEADERS, timeout=timeout)
-        resp.raise_for_status()
+        host = urlsplit(url).netloc
+        if host in _HOST_DOWN:
+            raise HostDownError(f"{host} not asked again in this run: it failed earlier ({_HOST_DOWN[host]})")
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=timeout)
+            if resp.status_code >= 500:
+                _HOST_DOWN[host] = f"HTTP {resp.status_code}"
+            resp.raise_for_status()
+        except (requests.Timeout, requests.ConnectionError) as exc:
+            _HOST_DOWN[host] = type(exc).__name__
+            raise
         _CACHE[url] = resp.content
     return _CACHE[url]
 
@@ -281,7 +304,14 @@ WDI_URL = ("https://api.worldbank.org/v2/country/all/indicator/{indicator}?forma
 WDI_COUNTRIES_URL = "https://api.worldbank.org/v2/country?format=json&per_page=400"
 
 
+WDI_REFRESH_DAYS = 30    # annual series the World Bank revises a few times a year
+
+
 def fetch_wdi(ds: dict) -> tuple[list[dict], dict]:
+    from fetchers import imf_dims
+    fresh = imf_dims.stored_if_fresh({"refresh_days": WDI_REFRESH_DAYS, **ds}, "wb", ds["id"])
+    if fresh:
+        return fresh
     countries = json.loads(_get(WDI_COUNTRIES_URL))[1]
     economies = {c["id"]: c["name"] for c in countries if c.get("region", {}).get("value") != "Aggregates"}
     url = WDI_URL.format(indicator=ds["indicator"], first=ds.get("first_year", 2000), year=date.today().year)

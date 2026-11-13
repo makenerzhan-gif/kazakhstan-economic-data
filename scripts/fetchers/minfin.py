@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import calendar
 import csv
+import hashlib
 import io
 import json
 import re
@@ -63,24 +64,54 @@ def _download(path: str) -> bytes:
     return _DOWNLOAD_CACHE[url]
 
 
+class _Sheets:
+    """A workbook read once into plain rows: {sheet name: [[cell values]]}, with both libraries'
+    ways of listing the sheets (openpyxl's .sheetnames, xlrd's .sheet_names())."""
+
+    def __init__(self, sheets: dict[str, list[list]]):
+        self.sheets = sheets
+        self.sheetnames = list(sheets)
+
+    def sheet_names(self) -> list[str]:
+        return self.sheetnames
+
+
+_WORKBOOK_CACHE: dict[tuple[str, str], _Sheets] = {}
+
+
 def _open_workbook(content: bytes, filename_hint: str):
     """Returns (kind, workbook) where kind is 'openpyxl' or 'xlrd' -- Minfin
     serves both modern .xlsx and legacy .xls across its document history.
+
+    The workbook is parsed once per process and kept as plain rows (2026-11-13): 35 scalar
+    indicators and the item-level datasets each walk every edition of the same Statistical
+    Bulletin, and re-opening those 50-sheet files cost about 49 seconds per indicator -- 28 of a
+    run's 100 minutes. The rows are exactly what the libraries returned before (same loaders,
+    same options, same iteration); only the repeated parsing is gone.
     """
-    if filename_hint.lower().endswith(".xls"):
-        return "xlrd", xlrd.open_workbook(file_contents=content)
-    return "openpyxl", openpyxl.load_workbook(io.BytesIO(content), data_only=True)
+    kind = "xlrd" if filename_hint.lower().endswith(".xls") else "openpyxl"
+    key = (kind, hashlib.sha1(content).hexdigest())
+    if key not in _WORKBOOK_CACHE:
+        sheets: dict[str, list[list]] = {}
+        if kind == "xlrd":
+            book = xlrd.open_workbook(file_contents=content)
+            for name in book.sheet_names():
+                ws = book.sheet_by_name(name)
+                sheets[name] = [[ws.cell_value(r, c) for c in range(ws.ncols)] for r in range(ws.nrows)]
+        else:
+            book = openpyxl.load_workbook(io.BytesIO(content), data_only=True)
+            for name in book.sheetnames:
+                ws = book[name]
+                # chartsheets have no cells; the old code never iterated them either
+                sheets[name] = [list(row) for row in ws.iter_rows(values_only=True)] if hasattr(ws, "iter_rows") else []
+        _WORKBOOK_CACHE[key] = _Sheets(sheets)
+    return kind, _WORKBOOK_CACHE[key]
 
 
 def _iter_rows(kind: str, wb, sheet_name: str | None = None):
-    if kind == "xlrd":
-        ws = wb.sheet_by_index(0) if sheet_name is None else wb.sheet_by_name(sheet_name)
-        for r in range(ws.nrows):
-            yield [ws.cell_value(r, c) for c in range(ws.ncols)]
-    else:
-        ws = wb[wb.sheetnames[0]] if sheet_name is None else wb[sheet_name]
-        for row in ws.iter_rows(values_only=True):
-            yield list(row)
+    """Rows of a sheet (the first one by default) as fresh lists: callers may edit a row."""
+    for row in wb.sheets[wb.sheetnames[0] if sheet_name is None else sheet_name]:
+        yield list(row)
 
 
 # ---------------------------------------------------------------------------
