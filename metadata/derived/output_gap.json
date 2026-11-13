@@ -11,11 +11,11 @@
   "geography": "Kazakhstan (national)",
   "methodology": "Input: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010 item GDP (BNS seasonally adjusted real GDP, 2010 prices, from 2010 Q1), 100 x log. HP lambda 1600 two-sided (end-point bias in the last quarters) and one-sided (real-time); Hamilton (2018) h = 8, p = 4 (gap starts 2012 Q4); UC: local linear trend + AR(2) cycle (statsmodels UnobservedComponents, Kalman smoother; gap = log GDP - smoothed trend). MEAN averages the four where all exist. Revised every quarter as the sample grows; a production-function estimate is not included (no official capital stock series).",
   "publication_date": null,
-  "last_update_date": "2026-11-12",
-  "download_date": "2026-11-12",
+  "last_update_date": "2026-11-13",
+  "download_date": "2026-11-13",
   "period_start": "2010-01-01",
   "period_end": "2026-04-01",
   "next_update_date": null,
   "transformation": "derived (see the note)",
-  "revision_status": "original"
+  "revision_status": "revised"
 }
