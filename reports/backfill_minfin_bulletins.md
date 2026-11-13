@@ -1,0 +1,309 @@
+# Bulletin backfill, item-level datasets -- 2026-11-13 14:29
+
+166 editions listed, 2018-12-31 … 2026-11-05.
+
+## BUDGET_EXPENDITURE_ECONOMIC_YTD: ok, 18012 rows
+
+- 393341 «Статистический бюллетень на 1 ноября 2022 года»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2022-10-01 LOCAL: categories sum to 3883848.3, «Всего» is 8114841.9
+- 179160 «Statistical Bulletin for March 1, 2021»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2021-02-01 REP: categories sum to 2431321.4, «Всего» is 2509798.9
+- 7126 «Статистический бюллетень МФ РК на 1 декабря 2019 года»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2019-11-01 STATE: categories sum to 12358198.2, «Всего» is 13128116.6
+- 26676 «Статистический бюллетень на 1 декабря 2019 года»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2019-11-01 STATE: categories sum to 12358198.2, «Всего» is 13128116.6
+- 2699 «Статистический бюллетень»: no period found
+- 2699 «Статистический бюллетень»: sheets: ['табл 1', 'табл 2 ', 'табл 3', 'табл 4', 'табл 5', 'табл 6', 'табл 7', 'табл 8 (дох)', 'табл 8 (расх)', 'табл 9', 'табл 10', 'таб 11', 'табл 12', 'табл 12.1', 'табл 12.2', 'табл 12.3', 'табл 12.4', 'табл 12.5', 'табл 12.6', 'табл 12.7', 'табл 12.8', 'табл 12.9', 'табл 12.10', 'табл 12.11', 'табл 12.12', 'табл 12.13', 'табл 12.14', 'табл 12.15', 'табл 12.16', 'табл 12.17', 'табл 13', 'табл 14', 'табл 15', 'табл 16 кв', 'табл 17', 'табл 18кв', 'табл 19год', 'табл 20 полуго', 'табл 21 кв', 'табл 22 кв ', 'табл 23 кв', 'таб 24', 'табл 25 кв', 'табл 26 кв', 'табл 27 год', 'табл 28 год', 'табл 29 кв', 'табл 30']
+- 26687 «Статистический бюллетень на 1 ноября 2019 года»: no period found
+- 26687 «Статистический бюллетень на 1 ноября 2019 года»: sheets: ['табл 1', 'табл 2 ', 'табл 3', 'табл 4', 'табл 5', 'табл 6', 'табл 7', 'табл 8 (дох)', 'табл 8 (расх)', 'табл 9', 'табл 10', 'таб 11', 'табл 12', 'табл 12.1', 'табл 12.2', 'табл 12.3', 'табл 12.4', 'табл 12.5', 'табл 12.6', 'табл 12.7', 'табл 12.8', 'табл 12.9', 'табл 12.10', 'табл 12.11', 'табл 12.12', 'табл 12.13', 'табл 12.14', 'табл 12.15', 'табл 12.16', 'табл 12.17', 'табл 13', 'табл 14', 'табл 15', 'табл 16 кв', 'табл 17', 'табл 18кв', 'табл 19год', 'табл 20 полуго', 'табл 21 кв', 'табл 22 кв ', 'табл 23 кв', 'таб 24', 'табл 25 кв', 'табл 26 кв', 'табл 27 год', 'табл 28 год', 'табл 29 кв', 'табл 30']
+- 26686 «Статистический бюллетень на 1 октября 2019 года»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2019-09-01 STATE: categories sum to 9935801.8, «Всего» is 10571125.1
+- 26702 «Статистический бюллетень на 1 августа 2019 года»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2019-07-01 STATE: categories sum to 7690199.9, «Всего» is 8117716.1
+- 26698 «Статистический бюллетень на 1 июля 2019 года»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2019-06-01 REP: categories sum to 5485086.4, «Всего» is 5848246.5
+- 26693 «Статистический бюллетень на 1 сентября 2019 года»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2019-08-01 STATE: categories sum to 8909705.1, «Всего» is 9496536.5
+- 26705 «Statistical bulletin for June 1, 2019»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2019-05-01 STATE: categories sum to 5558222.7, «Всего» is 5888232.7
+- 26707 «Statistical bulletin for May 1, 2019»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2019-04-01 STATE: categories sum to 4127994.0, «Всего» is 4416816.7
+- 26728 «Статистический бюллетень на 1 апреля 2019 года»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2019-03-01 STATE: categories sum to 3038231.7, «Всего» is 3266334.1
+- 26733 «Statistical bulletin for March 1, 2019»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2019-02-01 STATE: categories sum to 2066293.0, «Всего» is 2197188.2
+- 26736 «Статистический бюллетень на 1 февраля 2019 года»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2019-01-01 STATE: categories sum to 998689.6, «Всего» is 1009054.4
+- yearly:2013:Стат.бюллетень_октябрь 2013.xls «yearly 2013 Стат.бюллетень_октябрь 2013.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2013-10-01 REP: categories sum to 4843448.0, «Всего» is 5153039.0
+- yearly:2013:Стат_бюлл_3_(171)_март 2013.xls «yearly 2013 Стат_бюлл_3_(171)_март 2013.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2013-03-01 STATE: categories sum to 1421587.4, «Всего» is 1471684.6
+- yearly:2013:Стат_бюлл_4_(172)_апрель_ 2013.xls «yearly 2013 Стат_бюлл_4_(172)_апрель_ 2013.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2013-04-01 STATE: categories sum to 1975057.6, «Всего» is 2113664.3
+- yearly:2013:Стат_бюлл_5_(173)_май_ 2013.xls «yearly 2013 Стат_бюлл_5_(173)_май_ 2013.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2013-05-01 STATE: categories sum to 2556317.3, «Всего» is 2702964.5
+- yearly:2013:Стат_бюлл_6_(174)_июнь 2013.xls «yearly 2013 Стат_бюлл_6_(174)_июнь 2013.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2013-06-01 STATE: categories sum to 3220755.2, «Всего» is 3409406.0
+- yearly:2013:Стат_бюлл_декабрь  2013_12(180).xls «yearly 2013 Стат_бюлл_декабрь  2013_12(180).xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2013-12-01 STATE: categories sum to 7160297.2, «Всего» is 7486491.2
+- yearly:2013:Стат_бюлл_за февраль 2013_2.xls «yearly 2013 Стат_бюлл_за февраль 2013_2.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2013-02-01 STATE: categories sum to 930509.7, «Всего» is 945390.1
+- yearly:2013:Стат_бюллетень_август  2013.xls «yearly 2013 Стат_бюллетень_август  2013.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2013-08-01 STATE: categories sum to 4409045.6, «Всего» is 4637280.2
+- yearly:2013:Стат_бюллетень_июль  2013.xls «yearly 2013 Стат_бюллетень_июль  2013.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2013-07-01 STATE: categories sum to 3816559.1, «Всего» is 4020138.4
+- yearly:2013:Стат_бюллетень_ноябрь 2013_11(179).xls «yearly 2013 Стат_бюллетень_ноябрь 2013_11(179).xls»: 2013-11-01: no STATE sheet or period column
+- yearly:2013:Стат_бюллетень_ноябрь 2013_11(179).xls «yearly 2013 Стат_бюллетень_ноябрь 2013_11(179).xls»: 2013-11-01: no REP sheet or period column
+- yearly:2013:Стат_бюллетень_ноябрь 2013_11(179).xls «yearly 2013 Стат_бюллетень_ноябрь 2013_11(179).xls»: sheets: ['табл 1', 'таб2', 'таб3', 'таб 4', 'таб 5', 'табл 6', 'таб7', 'табл 8 (дох)', 'табл 8(расх)', 'табл 9', 'табл 10', 'таб11', 'таб 12', 'табл 12.1', 'табл 12.2', 'табл 12.3', 'табл 12.4', 'табл 12.5', 'табл 12.6', 'табл 12.7', 'табл 12.8', 'табл 12.9', 'табл 12.10', 'табл 12.11', 'табл 12.12', 'табл 12.13', 'табл 12.14', 'табл 12.15', 'табл 12.16', 'таб13', 'табл 14', 'табл 15', 'табл 16', 'табл 17', 'Таб18', 'табл 24', 'табл 25', 'табл 26']
+- yearly:2013:Стат_бюллетень_сентябрь  2013-2.xls «yearly 2013 Стат_бюллетень_сентябрь  2013-2.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2013-09-01 STATE: categories sum to 5050532.6, «Всего» is 5305054.2
+- yearly:2013:Статистический бюллетень МФ РК за январь месяц 2013 года  № 1 (169).xls «yearly 2013 Статистический бюллетень МФ РК за январь месяц 2»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2013-01-01 STATE: categories sum to 307420.6, «Всего» is 320976.4
+- yearly:2014:СБ_август 2014-3.xls «yearly 2014 СБ_август 2014-3.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2014-08-01 STATE: categories sum to 5237084.4, «Всего» is 5508340.2
+- yearly:2014:СБ_июль 20142.xls «yearly 2014 СБ_июль 20142.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2014-07-01 STATE: categories sum to 4575813.1, «Всего» is 4832100.4
+- yearly:2014:СБ_июнь 20142.xls «yearly 2014 СБ_июнь 20142.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2014-06-01 STATE: categories sum to 3895676.7, «Всего» is 4113559.2
+- yearly:2014:СБ_сентябрь 2014.xls «yearly 2014 СБ_сентябрь 2014.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2014-09-01 STATE: categories sum to 5869702.9, «Всего» is 6159154.6
+- yearly:2014:Стат_Бюлл_декабрь 2014.xls «yearly 2014 Стат_Бюлл_декабрь 2014.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2014-12-01 STATE: categories sum to 8458899.4, «Всего» is 8820346.0
+- yearly:2014:Стат_бюл_март  2014.xls «yearly 2014 Стат_бюл_март  2014.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2014-03-01 STATE: categories sum to 1617666.5, «Всего» is 1767868.7
+- yearly:2014:Стат_бюл_февраль  2014.xls «yearly 2014 Стат_бюл_февраль  2014.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2014-02-01 STATE: categories sum to 1012835.2, «Всего» is 1090713.3
+- yearly:2014:Стат_бюл_январь  2014.xls «yearly 2014 Стат_бюл_январь  2014.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2014-01-01 STATE: categories sum to 258076.5, «Всего» is 287104.1
+- yearly:2014:Стат_бюлл_апрель_4 (184)_2014.xls «yearly 2014 Стат_бюлл_апрель_4 (184)_2014.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2014-04-01 STATE: categories sum to 2357189.9, «Всего» is 2529541.5
+- yearly:2014:Стат_бюлл_май 2014.xls «yearly 2014 Стат_бюлл_май 2014.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2014-05-01 STATE: categories sum to 3040418.9, «Всего» is 3247933.2
+- yearly:2014:Статбюл_ноябрь 2014.xls «yearly 2014 Статбюл_ноябрь 2014.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2014-11-01 STATE: categories sum to 7180649.1, «Всего» is 7516998.5
+- yearly:2014:Статбюл_октябрь 2014.xls «yearly 2014 Статбюл_октябрь 2014.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2014-10-01 STATE: categories sum to 6532671.1, «Всего» is 6837521.5
+- yearly:2015:2_Стат_бюллетень_сент_2015_№ 9 (179).xlsx «yearly 2015 2_Стат_бюллетень_сент_2015_№ 9 (179).xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2015-09-01 STATE: categories sum to 6095560.7, «Всего» is 6389989.3
+- yearly:2015:SB_июль 2015.xls «yearly 2015 SB_июль 2015.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2015-07-01 STATE: categories sum to 4731954.9, «Всего» is 4958980.4
+- yearly:2015:август 2015.xlsx «yearly 2015 август 2015.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2015-08-01 STATE: categories sum to 5406639.1, «Всего» is 5655554.1
+- yearly:2015:апрель  2015.xlsx «yearly 2015 апрель  2015.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2015-04-01 STATE: categories sum to 2593510.5, «Всего» is 2784700.0
+- yearly:2015:декабрь 2015.xlsx «yearly 2015 декабрь 2015.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2015-12-01 STATE: categories sum to 8626933.8, «Всего» is 8945844.4
+- yearly:2015:июнь 2015.xlsx «yearly 2015 июнь 2015.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2015-06-01 STATE: categories sum to 4015619.1, «Всего» is 4240820.3
+- yearly:2015:май 2015.xlsx «yearly 2015 май 2015.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2015-05-01 STATE: categories sum to 3289205.6, «Всего» is 3511186.6
+- yearly:2015:март  2015.xlsx «yearly 2015 март  2015.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2015-03-01 STATE: categories sum to 1779680.1, «Всего» is 1930663.2
+- yearly:2015:ноябрь 2015.xlsx «yearly 2015 ноябрь 2015.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2015-11-01 STATE: categories sum to 7455485.3, «Всего» is 7768812.5
+- yearly:2015:октябрь 2015.xls «yearly 2015 октябрь 2015.xls»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2015-10-01 STATE: categories sum to 6784698.1, «Всего» is 7084349.3
+- yearly:2015:февраль  2015.xlsx «yearly 2015 февраль  2015.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2015-02-01 STATE: categories sum to 1129224.3, «Всего» is 1250213.1
+- yearly:2015:январь  2015.xlsx «yearly 2015 январь  2015.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2015-01-01 STATE: categories sum to 441399.5, «Всего» is 525307.3
+- yearly:2016:август 2016.xlsx «yearly 2016 август 2016.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2016-08-01 STATE: categories sum to 6114004.0, «Всего» is 6383970.9
+- yearly:2016:апрель 2016.xlsx «yearly 2016 апрель 2016.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2016-04-01 STATE: categories sum to 3006212.7, «Всего» is 3104073.9
+- yearly:2016:декабрь 2016.xlsx «yearly 2016 декабрь 2016.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2016-12-01 STATE: categories sum to 10124971.6, «Всего» is 10506147.6
+- yearly:2016:июль 2016.xlsx «yearly 2016 июль 2016.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2016-07-01 STATE: categories sum to 5349960.8, «Всего» is 5575915.2
+- yearly:2016:июнь 2016.xlsx «yearly 2016 июнь 2016.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2016-06-01 STATE: categories sum to 4597711.4, «Всего» is 4784340.6
+- yearly:2016:май 2016.xlsx «yearly 2016 май 2016.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2016-05-01 STATE: categories sum to 3758169.8, «Всего» is 3929148.9
+- yearly:2016:март 2016.xlsx «yearly 2016 март 2016.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2016-03-01 STATE: categories sum to 2266310.0, «Всего» is 2357385.2
+- yearly:2016:ноябрь 2016.xlsx «yearly 2016 ноябрь 2016.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2016-11-01 STATE: categories sum to 8932948.3, «Всего» is 9307134.4
+- yearly:2016:октябрь 2016.xlsx «yearly 2016 октябрь 2016.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2016-10-01 STATE: categories sum to 7947076.7, «Всего» is 8279195.4
+- yearly:2016:сентябрь 2016.xlsx «yearly 2016 сентябрь 2016.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2016-09-01 STATE: categories sum to 6901747.3, «Всего» is 7189337.8
+- yearly:2016:февраль 2016.xlsx «yearly 2016 февраль 2016.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2016-02-01 STATE: categories sum to 1523742.8, «Всего» is 1571209.6
+- yearly:2016:январь 2016.xlsx «yearly 2016 январь 2016.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2016-01-01 STATE: categories sum to 736345.5, «Всего» is 756832.0
+- yearly:2017:на 1 августа 2017.xlsx «yearly 2017 на 1 августа 2017.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2017-07-01 STATE: categories sum to 8149976.1, «Всего» is 8354729.3
+- yearly:2017:на 1 апреля 2017.xlsx «yearly 2017 на 1 апреля 2017.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2017-03-01 STATE: categories sum to 2327405.7, «Всего» is 2424802.8
+- yearly:2017:на 1 декабря 2017.xlsx «yearly 2017 на 1 декабря 2017.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2017-11-01 STATE: categories sum to 11747662.3, «Всего» is 12134769.7
+- yearly:2017:на 1 июля 2017.xlsx «yearly 2017 на 1 июля 2017.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2017-06-01 STATE: categories sum to 5130257.3, «Всего» is 5320051.8
+- yearly:2017:на 1 июня 2017.xlsx «yearly 2017 на 1 июня 2017.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2017-05-01 STATE: categories sum to 4276095.5, «Всего» is 4406749.9
+- yearly:2017:на 1 марта 2017.xlsx «yearly 2017 на 1 марта 2017.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2017-02-01 STATE: categories sum to 1570161.5, «Всего» is 1580495.2
+- yearly:2017:на 1 мая 2017.xlsx «yearly 2017 на 1 мая 2017.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2017-04-01 STATE: categories sum to 3271252.7, «Всего» is 3386730.3
+- yearly:2017:на 1 ноября 2017.xlsx «yearly 2017 на 1 ноября 2017.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2017-10-01 STATE: categories sum to 10802408.7, «Всего» is 11172943.8
+- yearly:2017:на 1 октября 2017.xlsx «yearly 2017 на 1 октября 2017.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2017-09-01 STATE: categories sum to 9896419.4, «Всего» is 10207086.1
+- yearly:2017:на 1 сентября 2017.xlsx «yearly 2017 на 1 сентября 2017.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2017-08-01 STATE: categories sum to 9021659.6, «Всего» is 9273116.8
+- yearly:2017:на 1 февраля 2017.xlsx «yearly 2017 на 1 февраля 2017.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2017-01-01 STATE: categories sum to 652167.1, «Всего» is 656156.3
+- yearly:2017:на 1 января 2018.xlsx «yearly 2017 на 1 января 2018.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2017-12-01 STATE: categories sum to 13129478.9, «Всего» is 13523956.6
+- yearly:2018:на 1 августа 2018.xlsx «yearly 2018 на 1 августа 2018.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2018-07-01 STATE: categories sum to 6466289.7, «Всего» is 6697043.0
+- yearly:2018:на 1 апреля 2018 1 квартал.xlsx «yearly 2018 на 1 апреля 2018 1 квартал.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2018-03-01 STATE: categories sum to 2568942.8, «Всего» is 2600519.2
+- yearly:2018:на 1 декабря 2018.xlsx «yearly 2018 на 1 декабря 2018.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2018-11-01 STATE: categories sum to 10395738.8, «Всего» is 10919825.3
+- yearly:2018:на 1 июля 2018 2 квартал.xlsx «yearly 2018 на 1 июля 2018 2 квартал.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2018-06-01 STATE: categories sum to 5343938.6, «Всего» is 5551461.3
+- yearly:2018:на 1 июня 2018.xlsx «yearly 2018 на 1 июня 2018.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2018-05-01 REP: categories sum to 3684475.9, «Всего» is 3836722.7
+- yearly:2018:на 1 марта 2018.xlsx «yearly 2018 на 1 марта 2018.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2018-02-01 REP: categories sum to 1519349.0, «Всего» is 1536291.7
+- yearly:2018:на 1 мая 2018.xlsx «yearly 2018 на 1 мая 2018.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2018-04-01 STATE: categories sum to 3444141.5, «Всего» is 3485586.3
+- yearly:2018:на 1 ноября 2018.xlsx «yearly 2018 на 1 ноября 2018.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2018-10-01 STATE: categories sum to 9331849.1, «Всего» is 9752358.9
+- yearly:2018:на 1 октября 2018 3 квартал.xlsx «yearly 2018 на 1 октября 2018 3 квартал.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2018-09-01 STATE: categories sum to 8448390.9, «Всего» is 8827463.2
+- yearly:2018:на 1 сентября 2018.xlsx «yearly 2018 на 1 сентября 2018.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2018-08-01 STATE: categories sum to 7438848.7, «Всего» is 7785720.1
+- yearly:2018:на 1 февраля 2018.xlsx «yearly 2018 на 1 февраля 2018.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2018-01-01 STATE: categories sum to 889749.9, «Всего» is 894608.1
+- yearly:2018:на 1 января 2018.xlsx «yearly 2018 на 1 января 2018.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2017-12-01 STATE: categories sum to 13129478.9, «Всего» is 13523956.6
+- yearly:2018:на 1 января 2019 4 квартал.xlsx «yearly 2018 на 1 января 2019 4 квартал.xlsx»: SKIPPED -- minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD: 2018-12-01 STATE: categories sum to 11757739.5, «Всего» is 12286496.2
+- [LOCAL.110] Gap of 61 days between 2020-03-01 and 2020-05-01 is outside expected range for frequency=monthly (25-40d).
+- [LOCAL.110] Gap of 59 days between 2021-01-01 and 2021-03-01 is outside expected range for frequency=monthly (25-40d).
+- [LOCAL.110] Gap of 61 days between 2022-09-01 and 2022-11-01 is outside expected range for frequency=monthly (25-40d).
+- [LOCAL.110] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+- [LOCAL.110] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+- [LOCAL.110] Unexpected jump of 92.0% in own-period contribution between 2019-12-01 (1251489.9459) and 2020-01-01 (100680.0362).
+- [LOCAL.110] Unexpected jump of 130.0% in own-period contribution between 2020-03-01 (137717.6903) and 2020-05-01 (316716.9364).
+- [LOCAL.110] Unexpected jump of 68.6% in own-period contribution between 2020-06-01 (226655.1322) and 2020-07-01 (71155.47880000004).
+- [LOCAL.110] Unexpected jump of 56.8% in own-period contribution between 2020-07-01 (71155.47880000004) and 2020-08-01 (111571.66190000006).
+- [LOCAL.110] Unexpected jump of 333.5% in own-period contribution between 2021-01-01 (90426.1876) and 2021-03-01 (392008.4596).
+- [LOCAL.110] Unexpected jump of 57.4% in own-period contribution between 2021-03-01 (392008.4596) and 2021-04-01 (166904.30259999994).
+- [LOCAL.110] Unexpected jump of 54.8% in own-period contribution between 2021-05-01 (204064.75600000005) and 2021-06-01 (315867.0427).
+- [LOCAL.110] Unexpected jump of 67.6% in own-period contribution between 2021-06-01 (315867.0427) and 2021-07-01 (102419.45500000007).
+- [LOCAL.110] Unexpected jump of 73.4% in own-period contribution between 2022-05-01 (245145.5867000001) and 2022-06-01 (425175.41969999997).
+- [LOCAL.110] Unexpected jump of 69.0% in own-period contribution between 2022-06-01 (425175.41969999997) and 2022-07-01 (131724.07660000003).
+- [LOCAL.110] Unexpected jump of 123.9% in own-period contribution between 2022-09-01 (177653.85869999998) and 2022-11-01 (397699.0211).
+- [LOCAL.110] Unexpected jump of 83.6% in own-period contribution between 2023-05-01 (267067.90799999994) and 2023-06-01 (490368.79240000015).
+- [LOCAL.110] Unexpected jump of 74.7% in own-period contribution between 2023-06-01 (490368.79240000015) and 2023-07-01 (123905.36289999983).
+- [LOCAL.110] Unexpected jump of 74.9% in own-period contribution between 2024-05-01 (289139.70350000006) and 2024-06-01 (505628.2174999998).
+- [LOCAL.110] Unexpected jump of 70.8% in own-period contribution between 2024-06-01 (505628.2174999998) and 2024-07-01 (147741.26560000004).
+- [LOCAL.110] Unexpected jump of 80.1% in own-period contribution between 2025-05-01 (307029.1017) and 2025-06-01 (552883.1030000001).
+- [LOCAL.110] Unexpected jump of 69.6% in own-period contribution between 2025-06-01 (552883.1030000001) and 2025-07-01 (167977.79209999996).
+- [LOCAL.110] Unexpected jump of 111.2% in own-period contribution between 2026-03-01 (297021.01599999995) and 2026-05-01 (627282.1054000001).
+- [LOCAL.110] Unexpected jump of 68.3% in own-period contribution between 2026-06-01 (573586.5515999999) and 2026-07-01 (181731.89789999998).
+- [LOCAL.111] Gap of 61 days between 2020-03-01 and 2020-05-01 is outside expected range for frequency=monthly (25-40d).
+- [LOCAL.111] Gap of 59 days between 2021-01-01 and 2021-03-01 is outside expected range for frequency=monthly (25-40d).
+- [LOCAL.111] Gap of 61 days between 2022-09-01 and 2022-11-01 is outside expected range for frequency=monthly (25-40d).
+- [LOCAL.111] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+- [LOCAL.111] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+- [LOCAL.111] Unexpected jump of 91.3% in own-period contribution between 2019-12-01 (1139332.4138) and 2020-01-01 (98924.7931).
+- ... 9433 more warnings not listed
+
+## RESOURCE_PAYMENTS_YTD: ok, 1792 rows
+
+- 26698 «Статистический бюллетень на 1 июля 2019 года»: no period found
+- 26698 «Статистический бюллетень на 1 июля 2019 года»: sheets: ['табл 1', 'табл 2 ', 'табл 3', 'табл 4', 'табл 5', 'табл 6', 'табл 7', 'табл 8 (дох)', 'табл 8 (расх)', 'табл 9', 'табл 10', 'таб 11', 'табл 12', 'табл 12.1', 'табл 12.2', 'табл 12.3', 'табл 12.4', 'табл 12.5', 'табл 12.6', 'табл 12.7', 'табл 12.8', 'табл 12.9', 'табл 12.10', 'табл 12.11', 'табл 12.12', 'табл 12.13', 'табл 12.14', 'табл 12.15', 'табл 12.16', 'табл 12.17', 'табл 13', 'табл 14', 'табл 15', 'табл 16 кв', 'табл 17', 'табл 18кв', 'табл 19год', 'табл 20 полуго', 'табл 21 кв', 'табл 22 кв ', 'табл 23 кв', 'таб 24', 'табл 25 кв', 'табл 26 кв', 'табл 27 год', 'табл 28 год', 'табл 29 кв', 'табл 30']
+- yearly:2018:на 1 апреля 2018 1 квартал.xlsx «yearly 2018 на 1 апреля 2018 1 квартал.xlsx»: no period found
+- yearly:2018:на 1 апреля 2018 1 квартал.xlsx «yearly 2018 на 1 апреля 2018 1 квартал.xlsx»: sheets: ['табл 1', 'табл 2 ', 'табл 3', 'табл 4', 'табл 5', 'табл 6', 'табл 7', 'табл 8 (дох)', 'табл 8 (расх)', 'табл 9', 'табл 10', 'таб 11', 'табл 12', 'табл 12.1', 'табл 12.2', 'табл 12.3', 'табл 12.4', 'табл 12.5', 'табл 12.6', 'табл 12.7', 'табл 12.8', 'табл 12.9', 'табл 12.10', 'табл 12.11', 'табл 12.12', 'табл 12.13', 'табл 12.14', 'табл 12.15', 'табл 12.16', 'табл13', 'табл 14', 'табл 15', 'табл 16 кв', 'табл 17', 'табл 18кв', 'табл 19год', 'табл 20 полуго', 'табл 21 кв', 'табл 22 кв ', 'табл 23 кв', 'таб 24', 'табл 25 кв', 'табл 26 кв', 'табл 27 год', 'табл 28 год', 'табл 29 кв', 'табл 30']
+- [BONUS_NON_OIL] Gap of 59 days between 2018-02-01 and 2018-04-01 is outside expected range for frequency=monthly (25-40d).
+- [BONUS_NON_OIL] Gap of 61 days between 2019-05-01 and 2019-07-01 is outside expected range for frequency=monthly (25-40d).
+- [BONUS_NON_OIL] Gap of 61 days between 2020-03-01 and 2020-05-01 is outside expected range for frequency=monthly (25-40d).
+- [BONUS_NON_OIL] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+- [BONUS_NON_OIL] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+- [BONUS_NON_OIL] Unexpected jump of 91.2% in own-period contribution between 2013-01-01 (8.5091) and 2013-02-01 (16.2726).
+- [BONUS_NON_OIL] Unexpected jump of 186.5% in own-period contribution between 2013-02-01 (16.2726) and 2013-03-01 (46.617999999999995).
+- [BONUS_NON_OIL] Unexpected jump of 56.4% in own-period contribution between 2013-03-01 (46.617999999999995) and 2013-04-01 (20.3472).
+- [BONUS_NON_OIL] Unexpected jump of 4072.7% in own-period contribution between 2013-04-01 (20.3472) and 2013-05-01 (849.0211).
+- [BONUS_NON_OIL] Unexpected jump of 98.9% in own-period contribution between 2013-05-01 (849.0211) and 2013-06-01 (9.76019999999994).
+- [BONUS_NON_OIL] Unexpected jump of 592.4% in own-period contribution between 2013-06-01 (9.76019999999994) and 2013-07-01 (67.58280000000002).
+- [BONUS_NON_OIL] Unexpected jump of 64.1% in own-period contribution between 2013-07-01 (67.58280000000002) and 2013-08-01 (24.25139999999999).
+- [BONUS_NON_OIL] Unexpected jump of 2695.0% in own-period contribution between 2013-08-01 (24.25139999999999) and 2013-09-01 (677.8383000000001).
+- [BONUS_NON_OIL] Unexpected jump of 77.1% in own-period contribution between 2013-10-01 (748.6101999999998) and 2013-11-01 (171.79240000000027).
+- [BONUS_NON_OIL] Unexpected jump of 91.7% in own-period contribution between 2013-12-01 (232.97209999999995) and 2014-01-01 (446.5941).
+- [BONUS_NON_OIL] Unexpected jump of 52.0% in own-period contribution between 2014-02-01 (252.7568) and 2014-03-01 (384.1783999999999).
+- [BONUS_NON_OIL] Unexpected jump of 450.8% in own-period contribution between 2014-03-01 (384.1783999999999) and 2014-04-01 (2116.0533000000005).
+- [BONUS_NON_OIL] Unexpected jump of 98.3% in own-period contribution between 2014-05-01 (1137.6722999999997) and 2014-06-01 (19.682600000000093).
+- [BONUS_NON_OIL] Unexpected jump of 332.4% in own-period contribution between 2014-06-01 (19.682600000000093) and 2014-07-01 (85.11269999999968).
+- [BONUS_NON_OIL] Unexpected jump of 336.2% in own-period contribution between 2014-07-01 (85.11269999999968) and 2014-08-01 (371.22929999999997).
+- [BONUS_NON_OIL] Unexpected jump of 91.0% in own-period contribution between 2014-08-01 (371.22929999999997) and 2014-09-01 (33.327000000000226).
+- [BONUS_NON_OIL] Unexpected jump of 6161.7% in own-period contribution between 2014-09-01 (33.327000000000226) and 2014-10-01 (2086.8291).
+- [BONUS_NON_OIL] Unexpected jump of 89.7% in own-period contribution between 2014-10-01 (2086.8291) and 2014-11-01 (215.46590000000015).
+- [BONUS_NON_OIL] Unexpected jump of 397.9% in own-period contribution between 2014-11-01 (215.46590000000015) and 2014-12-01 (1072.8268000000007).
+- [BONUS_NON_OIL] Unexpected jump of 88.6% in own-period contribution between 2014-12-01 (1072.8268000000007) and 2015-01-01 (121.8524).
+- [BONUS_NON_OIL] Unexpected jump of 305.7% in own-period contribution between 2015-01-01 (121.8524) and 2015-02-01 (494.30960000000005).
+- [BONUS_NON_OIL] Unexpected jump of 94.7% in own-period contribution between 2015-02-01 (494.30960000000005) and 2015-03-01 (26.345100000000002).
+- [BONUS_NON_OIL] Unexpected jump of 317.0% in own-period contribution between 2015-03-01 (26.345100000000002) and 2015-04-01 (109.86009999999999).
+- [BONUS_NON_OIL] Unexpected jump of 66.4% in own-period contribution between 2015-04-01 (109.86009999999999) and 2015-05-01 (36.94819999999993).
+- [BONUS_NON_OIL] Unexpected jump of 7410.2% in own-period contribution between 2015-05-01 (36.94819999999993) and 2015-06-01 (2774.8830000000003).
+- ... 1316 more warnings not listed
+
+## BUDGET_RECEIPTS_BY_CODE_YTD: ok, 27376 rows
+
+- 249337 «Statistical Bulletin as of December 1, 2021»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2021-11-01 STATE: unknown receipt category «Используемые остатки бюджетных средств»
+- 297872 «Statistical Bulletin for November 1, 2021»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2021-10-01 STATE: unknown receipt category «Используемые остатки бюджетных средств»
+- 230257 «Statistical Bulletin as of October 1, 2021»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2021-09-01 STATE: unknown receipt category «Используемые остатки бюджетных средств»
+- 217313 «Statistical Bulletin as of September 1, 2021»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2021-08-01 STATE: unknown receipt category «Используемые остатки бюджетных средств»
+- 208922 «Statistical Bulletin as of August 1, 2021»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2021-07-01 STATE: unknown receipt category «Используемые остатки бюджетных средств»
+- 209222 «Statistical Bulletin for July 1, 2021»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2021-06-01 STATE: unknown receipt category «Используемые остатки бюджетных средств»
+- 186213 «Statistical Bulletin as of June 1, 2021»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2021-05-01 STATE: TOTAL: 5738803.5 against 6067183.9 in categories
+- 177230 «Statistical Bulletin for April 1, 2021»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2021-04-01 REP: unknown receipt category «Поступления займов»
+- 168873 «Statistical Bulletin as of April 1, 2021»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2021-03-01 STATE: category 7 on «Государственные долгосрочные казначейски» without a category row
+- 179160 «Statistical Bulletin for March 1, 2021»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2021-02-01 REP: REVENUE: 0.0 against 1732761.8 in categories
+- 143575 «Statistical Bulletin for February 1, 2021»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2021-01-01 REP: REVENUE: 0.0 against 692327.2 in categories
+- 84877 «Statistical Bulletin as of October 1, 2020»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2020-09-01 STATE: no TOTAL row
+- 72977 «Statistical Bulletin as of September 1, 2020»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2020-08-01 STATE: no TOTAL row
+- 63715 «Statistical Bulletin as of August 1, 2020»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2020-07-01 STATE: no TOTAL row
+- 54443 «Statistical Bulletin as of July 1, 2020»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2020-06-01 STATE: no TOTAL row
+- 47379 «Statistical Bulletin as of June 1, 2020»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2020-05-01 STATE: no TOTAL row
+- 37703 «Statistical Bulletin as of May 1, 2020»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2020-03-01 STATE: no TOTAL row
+- 129063 «Statistical Bulletin as of January 1, 2020»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-12-01 STATE: no TOTAL row
+- 31137 «Statistical Bulletin of the Ministry of Finance of the Repub»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2020-03-01 STATE: no TOTAL row
+- 27219 «Statistical Bulletin of the Ministry of Finance of the Repub»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2020-02-01 STATE: no TOTAL row
+- 20667 «Statistical Bulletin of the Ministry of Finance of the Repub»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2020-01-01 STATE: no TOTAL row
+- 7126 «Статистический бюллетень МФ РК на 1 декабря 2019 года»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-11-01 STATE: unknown receipt category «Поступления займов»
+- 26676 «Статистический бюллетень на 1 декабря 2019 года»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-11-01 STATE: unknown receipt category «Поступления займов»
+- 2699 «Статистический бюллетень»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-10-01 STATE: unknown receipt category «Поступления займов»
+- 26687 «Статистический бюллетень на 1 ноября 2019 года»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-10-01 STATE: unknown receipt category «Поступления займов»
+- 26686 «Статистический бюллетень на 1 октября 2019 года»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-09-01 STATE: unknown receipt category «Поступления займов»
+- 26702 «Статистический бюллетень на 1 августа 2019 года»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-07-01 STATE: unknown receipt category «Поступления займов»
+- 26698 «Статистический бюллетень на 1 июля 2019 года»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-06-01 REP: unknown receipt category «Поступления займов»
+- 26693 «Статистический бюллетень на 1 сентября 2019 года»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-08-01 STATE: unknown receipt category «Поступления займов»
+- 26705 «Statistical bulletin for June 1, 2019»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-05-01 STATE: unknown receipt category «Поступления займов»
+- 26707 «Statistical bulletin for May 1, 2019»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-04-01 STATE: unknown receipt category «Поступления займов»
+- 26728 «Статистический бюллетень на 1 апреля 2019 года»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-03-01 STATE: unknown receipt category «Поступления займов»
+- 26733 «Statistical bulletin for March 1, 2019»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-02-01 STATE: unknown receipt category «Поступления займов»
+- 26736 «Статистический бюллетень на 1 февраля 2019 года»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2019-01-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2013:Стат.бюллетень_октябрь 2013.xls «yearly 2013 Стат.бюллетень_октябрь 2013.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2013-10-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2013:Стат_бюлл_3_(171)_март 2013.xls «yearly 2013 Стат_бюлл_3_(171)_март 2013.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2013-03-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2013:Стат_бюлл_4_(172)_апрель_ 2013.xls «yearly 2013 Стат_бюлл_4_(172)_апрель_ 2013.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2013-04-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2013:Стат_бюлл_5_(173)_май_ 2013.xls «yearly 2013 Стат_бюлл_5_(173)_май_ 2013.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2013-05-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2013:Стат_бюлл_6_(174)_июнь 2013.xls «yearly 2013 Стат_бюлл_6_(174)_июнь 2013.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2013-06-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2013:Стат_бюлл_декабрь  2013_12(180).xls «yearly 2013 Стат_бюлл_декабрь  2013_12(180).xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2013-12-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2013:Стат_бюлл_за февраль 2013_2.xls «yearly 2013 Стат_бюлл_за февраль 2013_2.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2013-02-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2013:Стат_бюллетень_август  2013.xls «yearly 2013 Стат_бюллетень_август  2013.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2013-08-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2013:Стат_бюллетень_июль  2013.xls «yearly 2013 Стат_бюллетень_июль  2013.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2013-07-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2013:Стат_бюллетень_ноябрь 2013_11(179).xls «yearly 2013 Стат_бюллетень_ноябрь 2013_11(179).xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2013-11-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2013:Стат_бюллетень_сентябрь  2013-2.xls «yearly 2013 Стат_бюллетень_сентябрь  2013-2.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2013-09-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2013:Статистический бюллетень МФ РК за январь месяц 2013 года  № 1 (169).xls «yearly 2013 Статистический бюллетень МФ РК за январь месяц 2»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2013-01-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2014:СБ_август 2014-3.xls «yearly 2014 СБ_август 2014-3.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2014-08-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2014:СБ_июль 20142.xls «yearly 2014 СБ_июль 20142.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2014-07-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2014:СБ_июнь 20142.xls «yearly 2014 СБ_июнь 20142.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2014-06-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2014:СБ_сентябрь 2014.xls «yearly 2014 СБ_сентябрь 2014.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2014-09-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2014:Стат_Бюлл_декабрь 2014.xls «yearly 2014 Стат_Бюлл_декабрь 2014.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2014-12-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2014:Стат_бюл_март  2014.xls «yearly 2014 Стат_бюл_март  2014.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2014-03-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2014:Стат_бюл_февраль  2014.xls «yearly 2014 Стат_бюл_февраль  2014.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2014-02-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2014:Стат_бюл_январь  2014.xls «yearly 2014 Стат_бюл_январь  2014.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2014-01-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2014:Стат_бюлл_апрель_4 (184)_2014.xls «yearly 2014 Стат_бюлл_апрель_4 (184)_2014.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2014-04-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2014:Стат_бюлл_май 2014.xls «yearly 2014 Стат_бюлл_май 2014.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2014-05-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2014:Статбюл_ноябрь 2014.xls «yearly 2014 Статбюл_ноябрь 2014.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2014-11-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2014:Статбюл_октябрь 2014.xls «yearly 2014 Статбюл_октябрь 2014.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2014-10-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2015:2_Стат_бюллетень_сент_2015_№ 9 (179).xlsx «yearly 2015 2_Стат_бюллетень_сент_2015_№ 9 (179).xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2015-09-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2015:SB_июль 2015.xls «yearly 2015 SB_июль 2015.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2015-07-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2015:август 2015.xlsx «yearly 2015 август 2015.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2015-08-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2015:апрель  2015.xlsx «yearly 2015 апрель  2015.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2015-04-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2015:декабрь 2015.xlsx «yearly 2015 декабрь 2015.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2015-12-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2015:июнь 2015.xlsx «yearly 2015 июнь 2015.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2015-06-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2015:май 2015.xlsx «yearly 2015 май 2015.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2015-05-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2015:март  2015.xlsx «yearly 2015 март  2015.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2015-03-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2015:ноябрь 2015.xlsx «yearly 2015 ноябрь 2015.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2015-11-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2015:октябрь 2015.xls «yearly 2015 октябрь 2015.xls»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2015-10-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2015:февраль  2015.xlsx «yearly 2015 февраль  2015.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2015-02-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2015:январь  2015.xlsx «yearly 2015 январь  2015.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2015-01-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2016:август 2016.xlsx «yearly 2016 август 2016.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2016-08-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2016:апрель 2016.xlsx «yearly 2016 апрель 2016.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2016-04-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2016:декабрь 2016.xlsx «yearly 2016 декабрь 2016.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2016-12-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2016:июль 2016.xlsx «yearly 2016 июль 2016.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2016-07-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2016:июнь 2016.xlsx «yearly 2016 июнь 2016.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2016-06-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2016:май 2016.xlsx «yearly 2016 май 2016.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2016-05-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2016:март 2016.xlsx «yearly 2016 март 2016.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2016-03-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2016:ноябрь 2016.xlsx «yearly 2016 ноябрь 2016.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2016-11-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2016:октябрь 2016.xlsx «yearly 2016 октябрь 2016.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2016-10-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2016:сентябрь 2016.xlsx «yearly 2016 сентябрь 2016.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2016-09-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2016:февраль 2016.xlsx «yearly 2016 февраль 2016.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2016-02-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2016:январь 2016.xlsx «yearly 2016 январь 2016.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2016-01-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2017:на 1 августа 2017.xlsx «yearly 2017 на 1 августа 2017.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2017-07-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2017:на 1 апреля 2017.xlsx «yearly 2017 на 1 апреля 2017.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2017-03-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2017:на 1 декабря 2017.xlsx «yearly 2017 на 1 декабря 2017.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2017-11-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2017:на 1 июля 2017.xlsx «yearly 2017 на 1 июля 2017.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2017-06-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2017:на 1 июня 2017.xlsx «yearly 2017 на 1 июня 2017.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2017-05-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2017:на 1 марта 2017.xlsx «yearly 2017 на 1 марта 2017.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2017-02-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2017:на 1 мая 2017.xlsx «yearly 2017 на 1 мая 2017.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2017-04-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2017:на 1 ноября 2017.xlsx «yearly 2017 на 1 ноября 2017.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2017-10-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2017:на 1 октября 2017.xlsx «yearly 2017 на 1 октября 2017.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2017-09-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2017:на 1 сентября 2017.xlsx «yearly 2017 на 1 сентября 2017.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2017-08-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2017:на 1 февраля 2017.xlsx «yearly 2017 на 1 февраля 2017.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2017-01-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2017:на 1 января 2018.xlsx «yearly 2017 на 1 января 2018.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2017-12-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2018:на 1 августа 2018.xlsx «yearly 2018 на 1 августа 2018.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2018-07-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2018:на 1 апреля 2018 1 квартал.xlsx «yearly 2018 на 1 апреля 2018 1 квартал.xlsx»: no period found
+- yearly:2018:на 1 апреля 2018 1 квартал.xlsx «yearly 2018 на 1 апреля 2018 1 квартал.xlsx»: sheets: ['табл 1', 'табл 2 ', 'табл 3', 'табл 4', 'табл 5', 'табл 6', 'табл 7', 'табл 8 (дох)', 'табл 8 (расх)', 'табл 9', 'табл 10', 'таб 11', 'табл 12', 'табл 12.1', 'табл 12.2', 'табл 12.3', 'табл 12.4', 'табл 12.5', 'табл 12.6', 'табл 12.7', 'табл 12.8', 'табл 12.9', 'табл 12.10', 'табл 12.11', 'табл 12.12', 'табл 12.13', 'табл 12.14', 'табл 12.15', 'табл 12.16', 'табл13', 'табл 14', 'табл 15', 'табл 16 кв', 'табл 17', 'табл 18кв', 'табл 19год', 'табл 20 полуго', 'табл 21 кв', 'табл 22 кв ', 'табл 23 кв', 'таб 24', 'табл 25 кв', 'табл 26 кв', 'табл 27 год', 'табл 28 год', 'табл 29 кв', 'табл 30']
+- yearly:2018:на 1 декабря 2018.xlsx «yearly 2018 на 1 декабря 2018.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2018-11-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2018:на 1 июля 2018 2 квартал.xlsx «yearly 2018 на 1 июля 2018 2 квартал.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2018-06-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2018:на 1 июня 2018.xlsx «yearly 2018 на 1 июня 2018.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2018-05-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2018:на 1 марта 2018.xlsx «yearly 2018 на 1 марта 2018.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2018-02-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2018:на 1 мая 2018.xlsx «yearly 2018 на 1 мая 2018.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2018-04-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2018:на 1 ноября 2018.xlsx «yearly 2018 на 1 ноября 2018.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2018-10-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2018:на 1 октября 2018 3 квартал.xlsx «yearly 2018 на 1 октября 2018 3 квартал.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2018-09-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2018:на 1 сентября 2018.xlsx «yearly 2018 на 1 сентября 2018.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2018-08-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2018:на 1 февраля 2018.xlsx «yearly 2018 на 1 февраля 2018.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2018-01-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2018:на 1 января 2018.xlsx «yearly 2018 на 1 января 2018.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2017-12-01 STATE: unknown receipt category «Поступления займов»
+- yearly:2018:на 1 января 2019 4 квартал.xlsx «yearly 2018 на 1 января 2019 4 квартал.xlsx»: SKIPPED -- minfin/BUDGET_RECEIPTS_BY_CODE_YTD: 2018-12-01 STATE: unknown receipt category «Поступления займов»
+- [REP.1] Gap of 365 days between 2020-12-01 and 2021-12-01 is outside expected range for frequency=monthly (25-40d).
+- [REP.1] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+- [REP.1] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+- [REP.1] Unexpected jump of 79.6% in own-period contribution between 2020-10-01 (3996860.7909) and 2020-11-01 (816520.7015999998).
+- [REP.1] Unexpected jump of 825.7% in own-period contribution between 2020-12-01 (762481.2706000004) and 2021-12-01 (7057943.9291).
+- [REP.1] Unexpected jump of 88.4% in own-period contribution between 2021-12-01 (7057943.9291) and 2022-01-01 (818859.4828).
+- [REP.1] Unexpected jump of 76.3% in own-period contribution between 2022-07-01 (635618.3041000003) and 2022-08-01 (1120398.5097000003).
+- [REP.1] Unexpected jump of 86.0% in own-period contribution between 2022-10-01 (715835.6432999996) and 2022-11-01 (1331688.3481).
+- [REP.1] Unexpected jump of 79.6% in own-period contribution between 2023-04-01 (757481.6474000001) and 2023-05-01 (1360209.0656000003).
+- [REP.1] Unexpected jump of 119.8% in own-period contribution between 2023-07-01 (647986.4502999997) and 2023-08-01 (1424536.5651000002).
+- [REP.1] Unexpected jump of 102.0% in own-period contribution between 2023-10-01 (773534.7630000003) and 2023-11-01 (1562279.2915000003).
+- [REP.1] Unexpected jump of 70.6% in own-period contribution between 2023-12-01 (1668249.1801999994) and 2024-01-01 (490862.5805).
+- [REP.1] Unexpected jump of 176.8% in own-period contribution between 2024-01-01 (490862.5805) and 2024-02-01 (1358753.4061).
+- [REP.1] Unexpected jump of 84.1% in own-period contribution between 2024-04-01 (659903.5756999999) and 2024-05-01 (1214817.7397000003).
+- [REP.1] Unexpected jump of 98.4% in own-period contribution between 2024-10-01 (889279.0847999994) and 2024-11-01 (1764671.6164000016).
+- [REP.1] Unexpected jump of 95.8% in own-period contribution between 2025-01-01 (777978.9058) and 2025-02-01 (1523529.5720000002).
+- [REP.1] Unexpected jump of 130.1% in own-period contribution between 2025-07-01 (769813.5168000003) and 2025-08-01 (1771430.1584).
+- [REP.1] Unexpected jump of 133.6% in own-period contribution between 2025-10-01 (870575.1795000006) and 2025-11-01 (2033940.2049000002).
+- [REP.1] Unexpected jump of 53.7% in own-period contribution between 2025-11-01 (2033940.2049000002) and 2026-01-01 (941868.061).
+- [REP.1] Unexpected jump of 116.3% in own-period contribution between 2026-01-01 (941868.061) and 2026-02-01 (2037135.3476000002).
+- [REP.1] Unexpected jump of 187.5% in own-period contribution between 2026-03-01 (1098552.2703) and 2026-05-01 (3158039.4165).
+- [REP.1] Unexpected jump of 64.4% in own-period contribution between 2026-05-01 (3158039.4165) and 2026-06-01 (1124984.4907).
+- [REP.1] Unexpected jump of 132.3% in own-period contribution between 2026-07-01 (987451.027400001) and 2026-08-01 (2293561.4832999986).
+- [REP.101] Gap of 365 days between 2020-12-01 and 2021-12-01 is outside expected range for frequency=monthly (25-40d).
+- [REP.101] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+- [REP.101] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+- [REP.101] Unexpected jump of 86.0% in own-period contribution between 2020-10-01 (991724.4015) and 2020-11-01 (138613.62729999993).
+- [REP.101] Unexpected jump of 211.5% in own-period contribution between 2020-11-01 (138613.62729999993) and 2020-12-01 (431753.85899999994).
+- [REP.101] Unexpected jump of 385.4% in own-period contribution between 2020-12-01 (431753.85899999994) and 2021-12-01 (2095759.6154).
+- [REP.101] Unexpected jump of 79.2% in own-period contribution between 2021-12-01 (2095759.6154) and 2022-01-01 (435548.575).
+- ... 14116 more warnings not listed
