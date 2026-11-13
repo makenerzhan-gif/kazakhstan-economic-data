@@ -51,7 +51,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 ECON_SHEETS = {"таб6": "STATE", "таб10": "REP", "таб11": "LOCAL"}
 BUDGET_NAMES = {"STATE": "Государственный бюджет", "REP": "Республиканский бюджет", "LOCAL": "Местные бюджеты"}
 CATEGORIES = [(1, r"^текущие затраты"), (2, r"^капитальные затраты"), (3, r"^бюджетные кредиты"),
-              (4, r"^приобретение финансовых активов"), (6, r"^выполнение государственных обязательств по проектам")]
+              (4, r"^приобретение финансовых активов"), (5, r"^погашение займов"), (6, r"^выполнение государственных обязательств по проектам")]
 # GFSM 2014 item: (lowest, highest) subclass. 8xx (PPP obligations) is left out: it mixes
 # interest, investment compensation and operating payments.
 GFS_MAP = {"21": [(110, 139)], "22": [(140, 169)], "24": [(210, 229)], "25": [(310, 319)], "27": [(320, 329)],
@@ -169,7 +169,13 @@ def economic_edition(sheets: dict[str, list[list]], ds: dict) -> tuple[str | Non
             notes.append(f"{d}: no {budget} sheet or period column")
             continue
         lines = economic_lines(rows, col, with_specifics=key != "таб6")
-        check_sums(lines, ds, f"{d} {budget}")
+        try:
+            check_sums(lines, ds, f"{d} {budget}")
+        except validation.StructuralChangeError as exc:
+            if not minfin.BULLETIN_ARCHIVE:
+                raise
+            notes += [f"SKIPPED {budget} -- {str(exc)[:200]}"] + _top_rows({key: rows})   # the other budgets of the edition are kept
+            continue
         for code, label, v in lines + gfs_lines(lines):
             records.append({"date": d, "region": dims.NATIONAL, "item_code": f"{budget}.{code}",
                             "item_name": f"{BUDGET_NAMES[budget]}: {label}", "value": round(v, 4)})
@@ -229,9 +235,23 @@ def _read_editions(ds: dict, wanted_keys, edition) -> tuple[dict[str, list[dict]
             continue
         if d is None and minfin.BULLETIN_ARCHIVE:
             notes = notes + ["no period found"]
-        if notes and minfin.BULLETIN_ARCHIVE:            # which sheets the edition does have: the table may be numbered otherwise
-            notes = notes + [f"sheets: {[str(n)[:14] for n in names]}"]
-        warnings += [f"{tag}: {n}" for n in notes]
+        if minfin.BULLETIN_ARCHIVE:
+            kept, show = [], True
+            for n in notes:                              # a layout dump for the first few breaks of each kind only
+                if n.startswith("SKIPPED"):
+                    kind = re.sub(r"[\d.,-]+", "#", n)[:70]
+                    show = kind not in dumped and len(dumped) < 14
+                    dumped.add(kind)
+                    kept.append(n)
+                elif n.startswith("    "):
+                    if show:
+                        kept.append(n)
+                else:
+                    kept.append(n)
+            if any(not n.startswith(("SKIPPED", "    ")) for n in kept):   # a sheet was not found: say which the edition has
+                kept.append(f"sheets: {[str(n)[:14] for n in names]}")
+            notes = kept
+        warnings += [n if n.startswith("    ") else f"{tag}: {n}" for n in notes]
         if d and d not in got and records:
             got[d] = records
     EDITION_NOTES[ds["id"]] = warnings
@@ -336,7 +356,7 @@ def fetch_resource(ds: dict) -> tuple[list[dict], dict]:
 # ---------------------------------------------------------------- receipts by budget code
 
 RECEIPT_SHEETS = {"таб4": "STATE", "таб8(дох)": "REP"}
-RECEIPT_TOP = (("TOTAL", r"^поступления$"), ("REVENUE", r"^доходы$"))
+RECEIPT_TOP = (("TOTAL", r"^поступления\*?$"), ("REVENUE", r"^доходы\*?$"))    # «ПОСТУПЛЕНИЯ*» in the 2019-2020 editions
 REVENUE_CATEGORIES = ("1", "2", "3", "4", "5")      # «ДОХОДЫ»; «ПОСТУПЛЕНИЯ» adds 6 and 7
 # The 2026 Budget Code put «Специальные поступления» in as category 4 and moved the three after it
 # down by one (transfers 4 -> 5, repayment of budget loans 5 -> 6, sale of financial assets 6 -> 7).
@@ -345,7 +365,10 @@ REVENUE_CATEGORIES = ("1", "2", "3", "4", "5")      # «ДОХОДЫ»; «ПОС
 RECEIPT_CATEGORIES = (("1", r"^налоговые поступления"), ("2", r"^неналоговые поступления"),
                       ("3", r"^поступления от продажи основного капитала"), ("4", r"^специальные поступления"),
                       ("5", r"^поступления трансфертов"), ("6", r"^погашение бюджетных кредитов"),
-                      ("7", r"^поступления от продажи финансовых активов"))
+                      ("7", r"^поступления от продажи финансовых активов"),
+                      ("8", r"^поступления займов"), ("9", r"^используемые остатки бюджетных средств"))
+# 8 and 9 (borrowing and the use of balances) were printed in the table until 2021 under the old
+# numbers 7 and 8; «ПОСТУПЛЕНИЯ» of those editions includes them.
 
 
 def _digits(cell, width: int) -> str | None:
@@ -385,6 +408,10 @@ def receipt_lines(rows: list[list], col: int, off: int) -> list[tuple[str, str, 
             if top:
                 out.append((top, label, value))
                 started = True
+            elif started and re.search(RECEIPT_CATEGORIES[-1][1], mr._norm(label)):
+                # the republican table of 2019-2021 prints the use of balances with no code at all
+                cat, cls, sub = RECEIPT_CATEGORIES[-1][0], None, None
+                out.append((cat, label, value))
             continue
         started = True
         if c[0] and c[0] != printed and not any(c[1:]):          # a category row: its name decides the number
@@ -411,7 +438,7 @@ def receipt_lines(rows: list[list], col: int, off: int) -> list[tuple[str, str, 
     return out
 
 
-def check_receipts(lines: list[tuple[str, str, float]]) -> list[str]:
+def check_receipts(lines: list[tuple[str, str, float]], revenue_optional: bool = False) -> list[str]:
     """Every level must equal the sum of the one below it; returns the breaks (empty when all hold)."""
     vals, bad = {}, []
     for code, _, v in lines:
@@ -425,13 +452,15 @@ def check_receipts(lines: list[tuple[str, str, float]]) -> list[str]:
             continue
         kids = children(code, {1: 3, 3: 4, 4: 6}[len(code)])
         if not kids:
-            bad.append(f"{code} has no lines below it")
+            if code != "9":                              # the use of balances is one figure with nothing under it
+                bad.append(f"{code} has no lines below it")
         elif abs(sum(kids) - v) > max(1.0, 1e-6 * abs(v)):
             bad.append(f"{code}: {v:.1f} against {sum(kids):.1f} below it")
     cats = {k: v for k, v in vals.items() if k.isdigit() and len(k) == 1}
-    for top, keys in (("REVENUE", REVENUE_CATEGORIES), ("TOTAL", tuple("1234567"))):
+    for top, keys in (("REVENUE", REVENUE_CATEGORIES), ("TOTAL", tuple("123456789"))):
         if top not in vals:
-            bad.append(f"no {top} row")
+            if not (top == "REVENUE" and revenue_optional):
+                bad.append(f"no {top} row")
         elif abs(sum(cats.get(k, 0.0) for k in keys) - vals[top]) > max(2.0, 1e-6 * abs(vals[top])):
             bad.append(f"{top}: {vals[top]:.1f} against {sum(cats.get(k, 0.0) for k in keys):.1f} in categories")
     return bad
@@ -453,12 +482,22 @@ def receipts_edition(sheets: dict[str, list[list]], ds: dict) -> tuple[str | Non
             notes.append(f"{d}: no {budget} sheet, period column or code columns")
             continue
         try:
-            lines = receipt_lines(rows, col, off)
+            lines, bad = receipt_lines(rows, col, off), []
         except ValueError as exc:
-            _structural(ds, f"{d} {budget}: {exc}")
-        bad = check_receipts(lines)
+            lines, bad = [], [str(exc)]
+        cats = sum(v for c, _, v in lines if c in REVENUE_CATEGORIES)
+        if any(c == "REVENUE" and v == 0 for c, _, v in lines) and cats > 0:
+            # the republican table of January-March 2021 prints «ДОХОДЫ» as 0: the cell is left out, not replaced
+            lines = [x for x in lines if x[0] != "REVENUE"]
+            lines.insert(1, ("REVENUE_MISSING", "", cats))
+            notes.append(f"{d} {budget}: «ДОХОДЫ» is printed as 0 (categories 1-5 give {cats:.1f}); the row is omitted")
+        bad = bad or check_receipts([x for x in lines if x[0] != "REVENUE_MISSING"], revenue_optional=any(x[0] == "REVENUE_MISSING" for x in lines))
+        lines = [x for x in lines if x[0] != "REVENUE_MISSING"]
         if bad:
-            _structural(ds, f"{d} {budget}: " + "; ".join(bad[:5]))
+            if not minfin.BULLETIN_ARCHIVE:
+                _structural(ds, f"{d} {budget}: " + "; ".join(bad[:5]))
+            notes += [f"SKIPPED {budget} -- {d}: " + "; ".join(bad[:4])] + _top_rows({key: rows})
+            continue
         for code, label, v in lines:
             records.append({"date": d, "region": dims.NATIONAL, "item_code": f"{budget}.{code}",
                             "item_name": f"{BUDGET_NAMES[budget]}: {label}", "value": round(v, 4)})

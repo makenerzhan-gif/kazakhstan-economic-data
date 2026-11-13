@@ -19,7 +19,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib import dims, metadata, pipeline_logging, revisions, validation  # noqa: E402
 from fetchers import analytics, nbk_deposits, bns_balances, bns_cpi, cisstat, comtrade, cpi_weights, gdp_discrete, krem_tariffs, minfin_quasifiscal, nbk_balance_groups, nbk_records, tariff_jumps, damu, gfss, minfin_regions, neer_import, kase_ifrs, nbk_expectations, nbk_fx, bns_dims, bns_living, bns_resource_use, bns_trade, eia, gravity, imf_dims, kase_dims, kase_eurobonds, kmg, manual_vintages, nbk_cube, nbk_operations, nbk_dims, regional_balance, taldau_dims, wb, world_misc  # noqa: E402
-from fetchers import minfin_classification, tax_by_industry  # noqa: E402
+from fetchers import kgd_nf, minfin_classification, tax_by_industry  # noqa: E402
 
 # Keyed by a dataset's `fetcher` when it names one, else by its agency.
 AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb.fetch, "eia": eia.fetch,
@@ -29,7 +29,7 @@ AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb
                    "nbk_interventions": nbk_operations.fetch_interventions, "nbk_open_position": nbk_operations.fetch_open_position,
                    "nbk_deposit_auctions": nbk_operations.fetch_deposit_auctions,
                    "kase_indices": kase_dims.fetch_indices, "kase_bond_volumes": kase_dims.fetch_bond_volumes,
-                   "minfin_economic": minfin_classification.fetch_economic, "minfin_resource": minfin_classification.fetch_resource, "minfin_receipts": minfin_classification.fetch_receipts,
+                   "minfin_economic": minfin_classification.fetch_economic, "minfin_resource": minfin_classification.fetch_resource, "minfin_receipts": minfin_classification.fetch_receipts, "kgd_nf": kgd_nf.fetch,
                    "bns_env_taxes": tax_by_industry.fetch_env_taxes, "tax_industry_structure": tax_by_industry.fetch_industry_structure,
                    "kmg": kmg.fetch, "fao": world_misc.fetch_fao, "un_wpp": world_misc.fetch_wpp,
                    "bns_living": bns_living.fetch, "kase_eurobonds": kase_eurobonds.fetch, "bns_cpi": bns_cpi.fetch,
@@ -58,6 +58,7 @@ METHODOLOGY = {"bns": "Bureau of National Statistics official methodology",
                "comtrade": "UN Comtrade (reporter Kazakhstan), BEC rev.4 conversion by UN Statistics",
                "gfss": "State Social Insurance Fund (ГФСС), form 5-СО",
                "minfin": "Ministry of Finance, monthly Statistical Bulletin (budget execution)",
+               "kgd": "State Revenue Committee of the Ministry of Finance: receipts by budget code, cash basis",
                "vap": "Supreme Audit Chamber (ВАП) conclusions on the execution of the republican budget; the chart's source is the Ministry of Finance",
                "fao": "FAO Food Price Index (nominal, 2014-2016 = 100), monthly",
                "un": "United Nations, World Population Prospects 2024 (Population Division, DESA)",

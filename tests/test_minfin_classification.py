@@ -110,7 +110,7 @@ def test_processed_economic_classification_adds_up():
         cats = sum(v for c, v in vals.items() if c.startswith("CAT"))
         assert cats == pytest.approx(vals["TOTAL"], rel=1e-4, abs=0.5), (budget, when)
         gfs = sum(v for c, v in vals.items() if c.startswith("GFS."))
-        assert gfs == pytest.approx(vals["TOTAL"] - vals.get("CAT6", 0.0), rel=1e-4, abs=0.5), (budget, when)   # all but PPP obligations
+        assert gfs == pytest.approx(vals["TOTAL"] - vals.get("CAT6", 0.0) - vals.get("CAT5", 0.0), rel=1e-4, abs=0.5), (budget, when)   # all but PPP obligations and (to 2021) debt repayment
 
 
 @pytest.mark.cross_source
