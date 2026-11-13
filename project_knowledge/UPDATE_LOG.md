@@ -633,3 +633,16 @@ had one, and the 2001 Code art. 318 by July 2007). The nominal path 9.5 -> 11 ->
 **Remaining gaps are structural** (no single rate): gold and uranium MET from 2026, diesel excise 2016-10..2022-03
 (seasonal), oil export duty from 2016-03. Open: publication date of PP 805 (2008), PP 173 as signed, the 2017 Code
 before the 19.04.2019 edition, the first three weeks of July 1995 for VAT. 23 items.
+
+## 2026-11-13 — TAX_RATES re-verified independently (user: «Проверь ещё раз»)
+
+A second reader re-fetched the acts for all 95 keys of `config/tax_rates.yaml` (note:
+`docs/verify_tax_rates_2026-11-13.md`): 91 confirmed, no wrong number. Corrected: (1) EXCISE_PETROL and
+EXCISE_DIESEL end at 2025-04 — PP of 28.04.2025 N 280 (in force 11.05.2025) made 38 134 and 35 726 a base plus 50 %
+of the wholesale price above 214 584 / 284 350 tenge per tonne (95 % from 01.09.2026, PP 816), so there is no
+single rate; the first pass had read «rates unchanged»; (2) OIL_EXPORT_DUTY_RATE 20 starts 2010-08 and 60 starts
+2013-04 (the rate applied for most of those months); (3) PENSION_EMPLOYEE starts 2013-07 (Law 105-V): 10 % stood
+in the 1997 law too, but the month it began was not read. Still resting on press only: the start days of the oil
+duty in 2008-2009. Not re-read: PP 133 and PP 173 as signed, the 2017 Code before the 19.04.2019 edition.
+Merging with PR #33 will conflict in six files (sources.yaml, update_dims.py, the two logs, DATA_CATALOG, the
+unified file), not two.
