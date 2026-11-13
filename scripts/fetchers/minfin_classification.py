@@ -174,7 +174,7 @@ def economic_edition(sheets: dict[str, list[list]], ds: dict) -> tuple[str | Non
     return d, records, notes
 
 
-def _editions(wanted_keys) -> list[tuple[dict, dict[str, list[list]]]]:
+def _editions(wanted_keys) -> list[tuple[dict, dict[str, list[list]], list[str]]]:
     docs = minfin._bulletin_documents()
     if not docs:
         raise validation.StructuralChangeError("minfin_classification: no Statistical Bulletin in the listing")
@@ -183,8 +183,33 @@ def _editions(wanted_keys) -> list[tuple[dict, dict[str, list[list]]]]:
         path = doc["full_text"][0]["document"]
         kind, wb = minfin._open_workbook(minfin._download(path), path)
         names = wb.sheet_names() if kind == "xlrd" else wb.sheetnames
-        out.append((doc, {n: list(minfin._iter_rows(kind, wb, n)) for n in names if minfin._sheet_key(n) in wanted_keys}))
+        out.append((doc, {n: list(minfin._iter_rows(kind, wb, n)) for n in names if minfin._sheet_key(n) in wanted_keys}, list(names)))
     return out
+
+
+def _read_editions(ds: dict, wanted_keys, edition) -> tuple[dict[str, list[dict]], list[str]]:
+    """Every listed edition through `edition(sheets) -> (date, records, notes)`, newest first (an
+    edition already read wins). In the daily run a broken edition stops the dataset. In archive mode
+    (scripts/backfill_minfin_bulletins.py: years of older editions, whose layout may differ) it is
+    skipped and reported with the sheets it has, so that one odd year does not cost the rest."""
+    got, warnings = {}, []
+    for doc, sheets, names in _editions(wanted_keys):
+        tag = f"{doc.get('id')} «{(doc.get('title') or '')[:60]}»"
+        try:
+            d, records, notes = edition(sheets)
+        except validation.StructuralChangeError as exc:
+            if not minfin.BULLETIN_ARCHIVE:
+                raise
+            warnings.append(f"{tag}: SKIPPED -- {str(exc)[:300]}")
+            continue
+        if d is None and minfin.BULLETIN_ARCHIVE:
+            notes = notes + ["no period found"]
+        if notes and minfin.BULLETIN_ARCHIVE:            # which sheets the edition does have: the table may be numbered otherwise
+            notes = notes + [f"sheets: {[str(n)[:14] for n in names]}"]
+        warnings += [f"{tag}: {n}" for n in notes]
+        if d and d not in got and records:
+            got[d] = records
+    return got, warnings
 
 
 def _merge(ds: dict, got: dict[str, list[dict]]) -> list[dict]:
@@ -197,12 +222,7 @@ def _merge(ds: dict, got: dict[str, list[dict]]) -> list[dict]:
 
 
 def fetch_economic(ds: dict) -> tuple[list[dict], dict]:
-    got, warnings = {}, []
-    for doc, sheets in _editions(set(ECON_SHEETS)):
-        d, records, notes = economic_edition(sheets, ds)
-        warnings += [f"{doc.get('id')}: {n}" for n in notes]
-        if d and d not in got and records:
-            got[d] = records
+    got, warnings = _read_editions(ds, set(ECON_SHEETS), lambda sheets: economic_edition(sheets, ds))
     return _merge(ds, got), {"frequency": "monthly", "source_url": minfin.LISTING_URL,
                              "dataset_id": "Statistical Bulletin tables 6, 10, 11", "note": ds.get("note", ""), "warnings": warnings}
 
@@ -281,12 +301,8 @@ def resource_edition(sheets: dict[str, list[list]], ds: dict, nf: dict[str, floa
 
 
 def fetch_resource(ds: dict) -> tuple[list[dict], dict]:
-    got, warnings, nf = {}, [], _nf_oil_direct()
-    for doc, sheets in _editions({"таб4"}):
-        d, records, notes = resource_edition(sheets, ds, nf)
-        warnings += [f"{doc.get('id')}: {n}" for n in notes]
-        if d and d not in got and records:
-            got[d] = records
+    nf = _nf_oil_direct()
+    got, warnings = _read_editions(ds, {"таб4"}, lambda sheets: resource_edition(sheets, ds, nf))
     return _merge(ds, got), {"frequency": "monthly", "source_url": minfin.LISTING_URL,
                              "dataset_id": "Statistical Bulletin table 4", "note": ds.get("note", ""), "warnings": warnings}
 
@@ -424,11 +440,6 @@ def receipts_edition(sheets: dict[str, list[list]], ds: dict) -> tuple[str | Non
 
 
 def fetch_receipts(ds: dict) -> tuple[list[dict], dict]:
-    got, warnings = {}, []
-    for doc, sheets in _editions(set(RECEIPT_SHEETS)):
-        d, records, notes = receipts_edition(sheets, ds)
-        warnings += [f"{doc.get('id')}: {n}" for n in notes]
-        if d and d not in got and records:
-            got[d] = records
+    got, warnings = _read_editions(ds, set(RECEIPT_SHEETS), lambda sheets: receipts_edition(sheets, ds))
     return _merge(ds, got), {"frequency": "monthly", "source_url": minfin.LISTING_URL,
                              "dataset_id": "Statistical Bulletin tables 4 and 8", "note": ds.get("note", ""), "warnings": warnings}

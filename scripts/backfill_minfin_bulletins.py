@@ -169,6 +169,15 @@ def main() -> None:
         update_minfin.run(log)
     for e in log.entries:
         print(f"{e.dataset:40} {e.status:8} {e.records_processed or 0:4}", (e.errors or [""])[0][:120])
+    if args.dims:                      # what each edition gave: the older layouts are diagnosed from this
+        report = Path("reports") / "backfill_minfin_bulletins.md"
+        lines = [f"# Bulletin backfill, item-level datasets -- {datetime.now():%Y-%m-%d %H:%M}", "",
+                 f"{len(docs)} editions listed, {docs[-1].get('created_date', '')[:10]} … {docs[0].get('created_date', '')[:10]}.", ""]
+        for e in log.entries:
+            lines += [f"## {e.dataset}: {e.status}, {e.records_processed or 0} rows", ""]
+            lines += [f"- ERROR: {x}" for x in (e.errors or [])] + [f"- {w}" for w in (e.warnings or [])] + [""]
+        report.write_text("\n".join(lines), encoding="utf-8")
+        print("\n".join(lines)[:20000])
 
 
 if __name__ == "__main__":

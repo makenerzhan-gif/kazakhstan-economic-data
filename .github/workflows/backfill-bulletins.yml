@@ -1,0 +1,89 @@
+name: Backfill Minfin bulletin datasets
+
+# One-off history load for the item-level datasets read from the Minfin Statistical Bulletin
+# (economic classification of expenditure, subsoil payments, receipts by budget code). The
+# regular run sees only the latest ~14 editions; this reads every edition Minfin keeps online
+# (monthly from January 2019, yearly archives for 2013-2018). gov.kz answers GitHub's runners
+# but not the development sandbox, which is why this is a workflow.
+#
+# Started by hand, or by a push to a claude/** branch that touches the files below (so the
+# readers can be fixed against old layouts without a merge per attempt). The result is committed
+# to the branch the workflow ran on -- never straight to main unless it was started there.
+
+on:
+  workflow_dispatch:
+    inputs:
+      yearly:
+        description: "Yearly archives to read as well (FIRST-LAST), empty for none"
+        default: "2013-2018"
+      datasets:
+        description: "Datasets (space-separated)"
+        default: "BUDGET_EXPENDITURE_ECONOMIC_YTD RESOURCE_PAYMENTS_YTD BUDGET_RECEIPTS_BY_CODE_YTD"
+  push:
+    branches: ["claude/**"]
+    paths:
+      - ".github/workflows/backfill-bulletins.yml"
+      - "scripts/backfill_minfin_bulletins.py"
+      - "scripts/fetchers/minfin_classification.py"
+
+concurrency:
+  group: backfill-bulletins-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
+    env:
+      YEARLY: ${{ github.event.inputs.yearly || '2013-2018' }}
+      DATASETS: ${{ github.event.inputs.datasets || 'BUDGET_EXPENDITURE_ECONOMIC_YTD RESOURCE_PAYMENTS_YTD BUDGET_RECEIPTS_BY_CODE_YTD' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          sudo apt-get install -y -q p7zip-full unar > /dev/null
+
+      - name: Bulletin cache
+        uses: actions/cache@v4
+        with:
+          path: bulletin_cache
+          key: minfin-bulletins-${{ github.run_id }}
+          restore-keys: minfin-bulletins-
+
+      - name: Read every edition
+        run: |
+          args=(--cache bulletin_cache --dims $DATASETS)
+          if [ -n "$YEARLY" ]; then args+=(--yearly "$YEARLY"); fi
+          python scripts/backfill_minfin_bulletins.py "${args[@]}"
+
+      - name: Upload the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backfill-report-${{ github.run_id }}
+          path: reports/backfill_minfin_bulletins.md
+          if-no-files-found: ignore
+
+      - name: Commit the result to this branch
+        run: |
+          git config user.name "kz-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git config lfs.locksverify false
+          git add data/processed/dims/ data/unified/ metadata/ reports/backfill_minfin_bulletins.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Bulletin backfill: item-level datasets $(date -u +'%Y-%m-%d')"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi

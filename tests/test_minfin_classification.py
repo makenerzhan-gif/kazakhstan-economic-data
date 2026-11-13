@@ -233,3 +233,31 @@ def test_receipts_by_code_equal_the_scalar_tax_series():
         assert len(common) >= 10, code
         for month, value in common:
             assert value == pytest.approx(scalar[month], rel=1e-4, abs=1.0), (code, month)
+
+
+def test_archive_mode_skips_a_broken_edition_and_says_which(monkeypatch):
+    """The backfill reads years of older editions: one that does not add up is skipped and named,
+    while the daily run still stops on it."""
+    from fetchers import minfin
+    good, bad = _receipts(), [list(r) for r in _receipts(year=2025)]
+    bad[7][5] = "250"
+
+    class Book:
+        def __init__(self, rows):
+            self.rows, self.sheetnames = rows, ["табл 4", "табл 1"]
+    books = {"new.xlsx": Book(good), "old.xlsx": Book(bad)}
+    monkeypatch.setattr(minfin, "_bulletin_documents", lambda: [{"id": 2, "title": "new", "full_text": [{"document": "new.xlsx"}]},
+                                                                {"id": 1, "title": "old", "full_text": [{"document": "old.xlsx"}]}])
+    monkeypatch.setattr(minfin, "_download", lambda path: path.encode())
+    monkeypatch.setattr(minfin, "_open_workbook", lambda content, hint: ("sheets", books[content.decode()]))
+    monkeypatch.setattr(minfin, "_iter_rows", lambda kind, wb, name=None: iter(wb.rows if name == "табл 4" else []))
+    monkeypatch.setattr(dims, "load_processed", lambda ds_id: [])
+    ds = {"id": "BUDGET_RECEIPTS_BY_CODE_YTD"}
+    with pytest.raises(validation.StructuralChangeError):
+        mc.fetch_receipts(ds)
+    monkeypatch.setattr(minfin, "BULLETIN_ARCHIVE", True)
+    records, meta = mc.fetch_receipts(ds)
+    assert {r["date"] for r in records} == {"2026-05-01"}
+    skipped = [w for w in meta["warnings"] if "SKIPPED" in w]
+    assert len(skipped) == 1 and "«old»" in skipped[0] and "1011" in skipped[0]
+    assert any("sheets:" in w and "табл 1" in w for w in meta["warnings"])        # the missing republican sheet: what is there instead
