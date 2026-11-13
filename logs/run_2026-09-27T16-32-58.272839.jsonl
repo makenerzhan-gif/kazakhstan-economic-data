@@ -1,0 +1,1 @@
+{"timestamp": "2026-09-27T16:33:03.601405", "source": "nbk", "dataset": "PENSION_FUND_FLOWS_YTD", "action": "fetch", "status": "structural_change", "records_downloaded": 0, "records_processed": 0, "errors": ["nbk/PENSION_FUND_FLOWS_YTD: only 14 items in formId=25"], "warnings": []}
