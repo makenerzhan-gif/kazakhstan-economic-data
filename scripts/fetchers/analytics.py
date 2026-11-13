@@ -45,6 +45,10 @@ fiscal              Annual fiscal stance: NON_OIL_GDP (GDP less the oil-gas sect
       balance, STATE_BUDGET_DEFICIT, % of GDP). Not cyclically adjusted (no published
       elasticities); the non-oil balance is not primary (interest on the state budget is
       quarterly only from 2019, GG_INTEREST).
+dollarization       Foreign-currency shares of bank loans (from 1996), business loans (2022) and household
+    deposits (2023), % -- the stocks are the NBK's, as at the 1st of the month.
+yield_spreads       Slopes of the tenge government curve (GS_YIELD_*, from 2019-11), the 1-year yield
+    and TONIA against the base rate, the real 10-year yield on household expectations, pp.
 """
 from __future__ import annotations
 
@@ -335,7 +339,50 @@ def fiscal(ds: dict) -> list[dict]:
     return _records({c: df[c] for c in names}, names)
 
 
-MEASURES = {"core_inflation": core_inflation, "monetary_conditions": monetary_conditions, "output_gap": output_gap,
+# ---------------------------------------------------------------- dollarisation, yield-curve spreads (2026-11-13)
+
+def dollarization(ds: dict) -> list[dict]:
+    """Foreign-currency shares, %, from the NBK's stocks (as at the 1st of the month, million KZT)."""
+    def share(fx: pd.Series, total: pd.Series) -> pd.Series:
+        return (fx / total * 100).dropna()
+
+    loans_fx, loans = scalar("nbk", "BANK_LOANS_STB_FX"), scalar("nbk", "BANK_LOANS_STB_TOTAL")
+    biz_fx, biz_kzt = scalar("nbk", "LOANS_BUSINESS_FX"), scalar("nbk", "LOANS_BUSINESS_KZT")
+    hh = {k: scalar("nbk", f"HOUSEHOLD_DEPOSITS_{k}") for k in
+          ("FIXED_TERM_KZT", "FIXED_TERM_FX", "DEMAND_KZT", "DEMAND_FX", "SAVING_KZT", "SAVING_FX")}
+    hh_df = pd.DataFrame(hh).dropna()
+    hh_fx = hh_df[[c for c in hh_df if c.endswith("_FX")]].sum(axis=1)
+    out = {"LOANS_FX_SHARE": share(loans_fx, loans),
+           "BUSINESS_LOANS_FX_SHARE": share(biz_fx, biz_fx + biz_kzt),
+           "HOUSEHOLD_DEPOSITS_FX_SHARE": share(hh_fx, hh_df.sum(axis=1)),
+           "HOUSEHOLD_TERM_DEPOSITS_FX_SHARE": share(hh_df.FIXED_TERM_FX, hh_df.FIXED_TERM_FX + hh_df.FIXED_TERM_KZT)}
+    names = {"LOANS_FX_SHARE": "Доля кредитов банков экономике в иностранной валюте, %",
+             "BUSINESS_LOANS_FX_SHARE": "Доля кредитов бизнесу в иностранной валюте, %",
+             "HOUSEHOLD_DEPOSITS_FX_SHARE": "Доля вкладов населения в иностранной валюте, %",
+             "HOUSEHOLD_TERM_DEPOSITS_FX_SHARE": "Доля срочных вкладов населения в иностранной валюте, %"}
+    return _records(out, names)
+
+
+def yield_spreads(ds: dict) -> list[dict]:
+    """Slopes of the KZT government curve and the money-market spread to the policy rate, pp."""
+    y = {t: scalar("kase", f"GS_YIELD_{t}") for t in ("3M", "1Y", "2Y", "5Y", "10Y")}
+    tonia = scalar("kase", "TONIA").resample("MS").mean()
+    base = monthly_step_mean(scalar("nbk", "BASE_RATE"), tonia.index.max() + pd.offsets.MonthEnd(0))
+    expected = scalar("nbk", "INFLATION_EXPECTATIONS")
+    out = {"SLOPE_10Y_1Y": (y["10Y"] - y["1Y"]).dropna(), "SLOPE_10Y_3M": (y["10Y"] - y["3M"]).dropna(),
+           "SLOPE_5Y_2Y": (y["5Y"] - y["2Y"]).dropna(),
+           "GS_1Y_BASE_SPREAD": (y["1Y"] - base).dropna(), "TONIA_BASE_SPREAD": (tonia - base).dropna(),
+           "REAL_GS_10Y_EX_ANTE": (((1 + y["10Y"] / 100) / (1 + expected / 100) - 1) * 100).dropna()}
+    names = {"SLOPE_10Y_1Y": "Наклон кривой доходности ГЦБ: 10 лет минус 1 год, п.п.",
+             "SLOPE_10Y_3M": "Наклон кривой доходности ГЦБ: 10 лет минус 3 месяца, п.п.",
+             "SLOPE_5Y_2Y": "Наклон кривой доходности ГЦБ: 5 лет минус 2 года, п.п.",
+             "GS_1Y_BASE_SPREAD": "Доходность ГЦБ на 1 год минус базовая ставка (среднее за месяц), п.п.",
+             "TONIA_BASE_SPREAD": "TONIA минус базовая ставка (средние за месяц), п.п.",
+             "REAL_GS_10Y_EX_ANTE": "Реальная доходность ГЦБ на 10 лет ex ante (по ожиданиям населения), %"}
+    return _records(out, names)
+
+
+MEASURES = {"dollarization": dollarization, "yield_spreads": yield_spreads, "core_inflation": core_inflation, "monetary_conditions": monetary_conditions, "output_gap": output_gap,
             "credit": credit, "fiscal": fiscal}
 
 
