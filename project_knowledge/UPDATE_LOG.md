@@ -1,26 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — history back to 1991 and 1990s peers: GDP, population, WDI from 1960, IMF WEO for all economies, CPI weights, discrete quarterly GDP (user: «Чего в пайплайне нет …», «Что ещё не хватает …»)» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — X-13ARIMA-SEATS replaces STL for seasonal adjustment» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-27 — X-13ARIMA-SEATS replaces STL for seasonal adjustment
-
-model_data/ and the seasonal-decomposition report now use X-13ARIMA-SEATS, US Census Bureau v1.1 build 62
-(the official Linux ASCII build, vendored in tools/x13as/ via git LFS, sha256 72e4735d…; downloaded and
-checked on demand when absent), driven by a new scripts/lib/x13.py with a hand-written spec: automatic
-ARIMA (automdl), automatic AO/LS/TC outliers, log-vs-level by AICC (or forced by the spec), X-11
-decomposition (SEATS optional), and a Kazakhstan calendar — working days under the holiday law (weekend
-holidays moved to the next working day, Kurban Ait and Orthodox Christmas not moved, holiday list by year:
-Nauryz 21-23 March from 2010, 7 May from 2013, 17 Dec and 1 Dec until 2021, 25 Oct 1995-2008 and from 2022)
-plus a Kurban Ait regressor (dates 1990-2035, Kazakhstan observance) — kept only when AICC prefers it.
-STL (robust) remains an explicit option and the fallback when no binary is available, recorded in each
-variable card. Check: our X-13 on BNS's unadjusted real GDP reproduces BNS's own X13/JDemetra+ adjusted q/q
-growth 2010-Q2..2026-Q1 with correlation 0.999 and RMSE 0.13 pp (STL: 0.907 and 1.19 pp). Against STL on the
-24 variables we adjust, SA growth correlates 0.91 at the median (0.55 m0, 0.59 tax receipts, 0.67 imports:
-hyperinflation-era outliers, the 2022-01 tax break, and a working-day effect in imports with t = 7.3). PPI
-shows no identifiable seasonality (M7 2.11, Q 1.02). VARIABLES.md now lists model, calendar effects,
-outliers and M7/Q per variable. Seasonal strength in analysis/reports/seasonal_decomposition_2026-09-28.md:
-GDP_NOMINAL 0.996, IMPORTS 0.877, EXPORTS 0.463, CPI 0.131 (STL: 0.985, 0.688, 0.204, 0.174).
 
 ## 2026-09-27 — utility tariff decisions and CPI tariff jumps (TARIFF_DECISIONS, TARIFF_CHANGE_MONTHS)
 
@@ -619,3 +600,28 @@ VAT 1 001.4 against 544.6.
 run will read the live listing. No 2025-04, 2025-05, 2025-12, 2026-04; before 2025-02 needs
 `backfill_minfin_bulletins.py`. A line with no receipts is absent, not zero. Oil-sector taxes go to the National
 Fund and are not in these tables. Tests: 5 new in `tests/test_minfin_classification.py`.
+
+## 2026-11-13 — statutory tax and contribution rates (TAX_RATES) (user: «Поищи ещё ставки по налогам?»)
+
+**What.** `config/tax_rates.yaml` + dataset TAX_RATES (`manual_table`, `step: monthly`, agency `legal`): 22 items,
+the rate in force in each month. VAT, CIT (standard; banks from 2026), PIT (base, top bracket, dividends), social
+tax, social contributions, pension contributions of the employee and the employer, medical insurance (employer,
+employee), MET on copper, zinc, gold, iron ore, uranium, coal, excises on cigarettes, petrol, diesel, the fixed
+export duty on crude oil. Every value was read in the text of the act on zakon.uchet.kz (mirror of adilet.zan.kz,
+which now serves an empty JavaScript shell); acts and articles are listed in the head of the yaml.
+
+**Gaps instead of guesses.** `step_records` now takes `YYYY-MM: null`: the months after it are absent until the
+next value. Used where the level was not read or there is no single rate: CIT 2009-2010, social tax 2002-2008
+(regressive scales 2004-2008), dividends 2018-2022, metals MET 2018-2022, gold and uranium MET from 2026 (scales),
+petrol excise 2018-01..2019-05, cigarettes 2011-2013, oil export duty before 2012 and from 2016-03 (price-linked).
+
+**Numbers.** VAT 16 (2001-07), 15 (2004), 14 (2007), 13 (2008), 12 (2009), 16 (2026-01). Social tax 11 (2009), 9.5
+(2018), 11 (2025), 6 (2026); net of social contributions it was 6 in 2018-2025 already. Social contributions 1.5
+(2005), 2, 3, 4 (2009), 5 (2010), 3.5 (2018), 5 (2025). Employer pension contributions 1.5 / 2.5 / 3.5 (2024-2026).
+Medical insurance: employer 1 (2017-07), 1.5, 2 (2020), 3 (2022); employee 1 (2020), 2 (2021). MET from 2023:
+copper 8.55 (5.7 before), zinc 10.5 (7), iron ore 3.64 (2.8). Cigarettes 800 (2010-07) to 18 051 tenge per 1 000
+(2026). Petrol 10 500 (2017-04), 24 435 (2020), 38 134 tenge per tonne (2022-04).
+
+**Not found** (listed in the research note, not loaded): the month 20 % VAT began; the 2009-2010 CIT article; the
+2002-2003 PIT and social-tax wording; original 2017-Code MET table; fuel excises before 2017-04; the oil export
+duty acts of 2008-Q4 and of the 20 -> 40 step. Test: `test_tax_rates_step_series_and_gaps`.

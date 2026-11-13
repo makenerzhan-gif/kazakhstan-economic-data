@@ -5501,3 +5501,22 @@ weights recovered from BNS's contributions to year-to-date CPI (2022 check: CP01
 **Real GDP for 2026 Q2.** GVA_VOLUME_INDEX_BY_SECTION_DISCRETE derives discrete quarters from the year-to-date
 tables: GDP 105.2 in 2026 Q2 (manufacturing 111.1, construction 115.5). Its basis differs from the quarterly
 accounts (2025 Q2: 107.0 against 109.0 in QNA), so it is not spliced into QNA_*; BNS's own Q2 is due 28.10.2026.
+
+## 2026-09-27 — X-13ARIMA-SEATS replaces STL for seasonal adjustment
+
+model_data/ and the seasonal-decomposition report now use X-13ARIMA-SEATS, US Census Bureau v1.1 build 62
+(the official Linux ASCII build, vendored in tools/x13as/ via git LFS, sha256 72e4735d…; downloaded and
+checked on demand when absent), driven by a new scripts/lib/x13.py with a hand-written spec: automatic
+ARIMA (automdl), automatic AO/LS/TC outliers, log-vs-level by AICC (or forced by the spec), X-11
+decomposition (SEATS optional), and a Kazakhstan calendar — working days under the holiday law (weekend
+holidays moved to the next working day, Kurban Ait and Orthodox Christmas not moved, holiday list by year:
+Nauryz 21-23 March from 2010, 7 May from 2013, 17 Dec and 1 Dec until 2021, 25 Oct 1995-2008 and from 2022)
+plus a Kurban Ait regressor (dates 1990-2035, Kazakhstan observance) — kept only when AICC prefers it.
+STL (robust) remains an explicit option and the fallback when no binary is available, recorded in each
+variable card. Check: our X-13 on BNS's unadjusted real GDP reproduces BNS's own X13/JDemetra+ adjusted q/q
+growth 2010-Q2..2026-Q1 with correlation 0.999 and RMSE 0.13 pp (STL: 0.907 and 1.19 pp). Against STL on the
+24 variables we adjust, SA growth correlates 0.91 at the median (0.55 m0, 0.59 tax receipts, 0.67 imports:
+hyperinflation-era outliers, the 2022-01 tax break, and a working-day effect in imports with t = 7.3). PPI
+shows no identifiable seasonality (M7 2.11, Q 1.02). VARIABLES.md now lists model, calendar effects,
+outliers and M7/Q per variable. Seasonal strength in analysis/reports/seasonal_decomposition_2026-09-28.md:
+GDP_NOMINAL 0.996, IMPORTS 0.877, EXPORTS 0.463, CPI 0.131 (STL: 0.985, 0.688, 0.204, 0.174).

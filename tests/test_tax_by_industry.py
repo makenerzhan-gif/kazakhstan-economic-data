@@ -110,3 +110,25 @@ def test_consolidated_tax_equals_the_chamber_totals():
     assert len(published) >= 3
     for when, value in published.items():
         assert by[("CONSOLIDATED_TAX", when)] == pytest.approx(value, abs=0.5), when
+
+
+# ---------------------------------------------------------------- statutory rates (TAX_RATES)
+
+def test_tax_rates_step_series_and_gaps():
+    import yaml
+    from fetchers import manual_vintages
+    root = Path(__file__).resolve().parents[1]
+    doc = yaml.safe_load((root / "config" / "tax_rates.yaml").read_text(encoding="utf-8"))
+    records = manual_vintages.step_records(doc, {"id": "TAX_RATES"}, today="2026-11-13")
+    by = {(r["item_code"], r["date"][:7]): r["value"] for r in records}
+    assert by[("VAT", "2008-12")] == 13 and by[("VAT", "2009-01")] == 12 and by[("VAT", "2025-12")] == 12 and by[("VAT", "2026-01")] == 16
+    assert by[("SOCIAL_TAX", "2017-12")] == 11 and by[("SOCIAL_TAX", "2018-01")] == 9.5 and by[("SOCIAL_TAX", "2026-11")] == 6
+    assert by[("PENSION_EMPLOYER", "2026-03")] == 3.5 and by[("HEALTH_EMPLOYER", "2021-12")] == 2 and by[("SOCIAL_CONTRIBUTIONS", "2024-12")] == 3.5
+    assert by[("CIT", "2008-12")] == 30 and by[("CIT", "2011-01")] == 20
+    for gap in (("CIT", "2009-06"), ("SOCIAL_TAX", "2005-01"), ("MET_COPPER", "2020-01"), ("MET_URANIUM", "2026-01"),
+                ("OIL_EXPORT_DUTY_RATE", "2016-03"), ("PIT_DIVIDENDS", "2019-01")):
+        assert gap not in by                                   # a level that was not read in a legal text is absent, not carried
+    assert all(v is not None for v in by.values())
+    import update_dims
+    ds = update_dims.DATASETS["TAX_RATES"]
+    assert ds["fetcher"] == "manual_table" and ds["step"] == "monthly" and len(doc["items"]) >= ds["min_items"]

@@ -137,7 +137,7 @@ def fetch_ratings(ds: dict) -> tuple[list[dict], dict]:
 
 # ---------------------------------------------------------------- hand-kept annual tables (added 2026-11-10)
 def step_records(doc: dict, ds: dict, today=None) -> list[dict]:
-    """Values keyed «YYYY-MM» (the month a level took effect), held until the next one, monthly to `today`."""
+    """Values keyed «YYYY-MM» (the month a level took effect), held until the next one, monthly to `today`; a null value opens a gap."""
     import pandas as pd
     end = pd.Timestamp(today or pd.Timestamp.today()).to_period("M")
     out = []
@@ -145,12 +145,15 @@ def step_records(doc: dict, ds: dict, today=None) -> list[dict]:
         changes = {}
         for key, value in item["values"].items():
             try:
-                changes[pd.Period(str(key), "M")] = float(value)
+                changes[pd.Period(str(key), "M")] = None if value is None else float(value)
             except ValueError:
                 _structural(ds, f"{item['code']}: bad month {key!r}")
         month, level = min(changes), None
         while month <= end:
             level = changes.get(month, level)
+            if level is None:                    # «YYYY-MM: null» opens a gap: the level of those months was not read in a source
+                month += 1
+                continue
             out.append({"date": month.start_time.strftime("%Y-%m-%d"), "region": dims.NATIONAL, "item_code": item["code"],
                         "item_name": item["name"], "value": level})
             month += 1
