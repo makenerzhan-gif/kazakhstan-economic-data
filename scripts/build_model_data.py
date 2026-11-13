@@ -102,6 +102,25 @@ def chain(s: pd.Series) -> pd.Series:
     return 100 * (s / 100).cumprod() / (s.iloc[0] / 100)
 
 
+def chain_yoy(yoy: pd.Series, base: pd.Series, per_year: int) -> pd.Series:
+    """A level index from «same period of the previous year = 100» indices. The first year of
+    the level is the chain of `base` (previous period = 100); every later period is the level a
+    year earlier times its year-on-year index. A period whose predecessor is missing stays missing.
+
+    Why not chain the period-on-period index all the way: for industrial production BNS's monthly
+    m/m index is the first print and is not revised, while the y/y index is. Chained m/m gives
+    annual growth of 98.4 in 2021 and 114.6 in 2025 against the official 103.6 and 107.7; the
+    level built this way gives 103.7 and 107.5 (checked 2026-11-13)."""
+    start = chain(base.dropna()).iloc[:per_year]
+    level = dict(start.items())
+    for d, v in yoy.items():
+        if d in level:
+            continue
+        prev = d - pd.DateOffset(years=1)
+        level[d] = level[prev] * v / 100 if prev in level and pd.notna(level.get(prev)) and pd.notna(v) else np.nan
+    return pd.Series(level).sort_index()
+
+
 def decumulate_ytd(s: pd.Series, per_year: int) -> pd.Series:
     """Year-to-date -> own period; a period whose predecessor in the same year is missing
     stays missing (never differenced across a gap)."""
@@ -251,6 +270,12 @@ def build_variable(v: dict, long, dims, per_year: int, sa_cfg: dict | bool, mont
     if v.get("from"):                                     # sample start, before the ops: a chain is 100 there
         s = s[s.index >= pd.Timestamp(v["from"])]
     for op in v.get("ops", []):
+        if op == "chain_yoy":                             # y/y index -> level, the first year from the m/m index
+            base, _ = series_of(long, dims, {"series": src["base"]})
+            if v.get("from"):
+                base = base[base.index >= pd.Timestamp(v["from"])]
+            s = chain_yoy(s, base, per_year)
+            continue
         s = {"chain": chain, "decumulate_ytd": lambda x: decumulate_ytd(x, per_year),
              "asat_to_eop": lambda x: asat_to_eop(x, per_year)}[op](s)
     if per_year == 4:                                     # quarterly panel: quarter-start dates
