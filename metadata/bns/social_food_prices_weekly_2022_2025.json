@@ -1,7 +1,7 @@
 {
   "source": "bns",
-  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
-  "dataset_id": "taldau-index-703112",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "SOCIAL_FOOD_PRICES_WEEKLY_2022_2025",
   "indicator_name": "Weekly prices of socially significant food products (2022-2025 basket, 19 items), KZT",
   "description": "Еженедельные цены на социально значимые продовольственные товары (корзина 2022-2025 гг., 19 товаров), тенге",

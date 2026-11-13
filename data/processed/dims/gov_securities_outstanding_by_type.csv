@@ -199,6 +199,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MAOKAM,MAOKAM,0.0,level
 2026-08-01,national,MAOKAM,MAOKAM,0.0,level
 2026-09-01,national,MAOKAM,MAOKAM,0.0,level
+2026-10-01,national,MAOKAM,MAOKAM,0.0,level
+2026-11-01,national,MAOKAM,MAOKAM,0.0,level
 2010-02-01,national,MAOKO,MAOKO,0.0,level
 2010-03-01,national,MAOKO,MAOKO,0.0,level
 2010-04-01,national,MAOKO,MAOKO,0.0,level
@@ -399,6 +401,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MAOKO,MAOKO,0.0,level
 2026-08-01,national,MAOKO,MAOKO,0.0,level
 2026-09-01,national,MAOKO,MAOKO,0.0,level
+2026-10-01,national,MAOKO,MAOKO,0.0,level
+2026-11-01,national,MAOKO,MAOKO,0.0,level
 2010-02-01,national,MEAKAM,МЕАКАМ,0.0,level
 2010-03-01,national,MEAKAM,МЕАКАМ,0.0,level
 2010-04-01,national,MEAKAM,МЕАКАМ,0.0,level
@@ -599,6 +603,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEAKAM,МЕАКАМ,0.0,level
 2026-08-01,national,MEAKAM,МЕАКАМ,0.0,level
 2026-09-01,national,MEAKAM,МЕАКАМ,0.0,level
+2026-10-01,national,MEAKAM,МЕАКАМ,0.0,level
+2026-11-01,national,MEAKAM,МЕАКАМ,0.0,level
 2010-02-01,national,MEIKAM,МЕIКАМ,0.0,level
 2010-03-01,national,MEIKAM,МЕIКАМ,0.0,level
 2010-04-01,national,MEIKAM,МЕIКАМ,0.0,level
@@ -799,6 +805,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEIKAM,МЕIКАМ,0.0,level
 2026-08-01,national,MEIKAM,МЕIКАМ,0.0,level
 2026-09-01,national,MEIKAM,МЕIКАМ,0.0,level
+2026-10-01,national,MEIKAM,МЕIКАМ,0.0,level
+2026-11-01,national,MEIKAM,МЕIКАМ,0.0,level
 2010-02-01,national,MEKKAM,МЕККАМ,157791.0,level
 2010-03-01,national,MEKKAM,МЕККАМ,162013.0,level
 2010-04-01,national,MEKKAM,МЕККАМ,149563.0,level
@@ -999,6 +1007,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEKKAM,МЕККАМ,213641.0,level
 2026-08-01,national,MEKKAM,МЕККАМ,313672.0,level
 2026-09-01,national,MEKKAM,МЕККАМ,377939.0,level
+2026-10-01,national,MEKKAM,МЕККАМ,384178.0,level
+2026-11-01,national,MEKKAM,МЕККАМ,384178.0,level
 2010-02-01,national,MEOKAM,МЕОКАМ,428757.0,level
 2010-03-01,national,MEOKAM,МЕОКАМ,423625.0,level
 2010-04-01,national,MEOKAM,МЕОКАМ,438173.0,level
@@ -1199,6 +1209,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEOKAM,МЕОКАМ,1909551.0,level
 2026-08-01,national,MEOKAM,МЕОКАМ,2107226.0,level
 2026-09-01,national,MEOKAM,МЕОКАМ,1842193.0,level
+2026-10-01,national,MEOKAM,МЕОКАМ,1605576.0,level
+2026-11-01,national,MEOKAM,МЕОКАМ,1783073.0,level
 2010-02-01,national,METICKAM,METIСKAM,0.0,level
 2010-03-01,national,METICKAM,METIСKAM,0.0,level
 2010-04-01,national,METICKAM,METIСKAM,0.0,level
@@ -1399,6 +1411,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,METICKAM,METIСKAM,320729.0,level
 2026-08-01,national,METICKAM,METIСKAM,367702.0,level
 2026-09-01,national,METICKAM,METIСKAM,570737.0,level
+2026-10-01,national,METICKAM,METIСKAM,701646.0,level
+2026-11-01,national,METICKAM,METIСKAM,802437.0,level
 2010-02-01,national,METIKAM,METIKAM,0.0,level
 2010-03-01,national,METIKAM,METIKAM,0.0,level
 2010-04-01,national,METIKAM,METIKAM,0.0,level
@@ -1599,6 +1613,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,METIKAM,METIKAM,973590.0,level
 2026-08-01,national,METIKAM,METIKAM,1021314.0,level
 2026-09-01,national,METIKAM,METIKAM,1021314.0,level
+2026-10-01,national,METIKAM,METIKAM,759608.0,level
+2026-11-01,national,METIKAM,METIKAM,759608.0,level
 2010-02-01,national,MEUKAM,МЕUКАМ,290783.0,level
 2010-03-01,national,MEUKAM,МЕUКАМ,305783.0,level
 2010-04-01,national,MEUKAM,МЕUКАМ,317783.0,level
@@ -1799,6 +1815,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEUKAM,МЕUКАМ,22104699.0,level
 2026-08-01,national,MEUKAM,МЕUКАМ,22366214.0,level
 2026-09-01,national,MEUKAM,МЕUКАМ,22628644.0,level
+2026-10-01,national,MEUKAM,МЕUКАМ,23104560.0,level
+2026-11-01,national,MEUKAM,МЕUКАМ,23292365.0,level
 2010-02-01,national,MEUZKAM,МЕUZКАМ,381752.0,level
 2010-03-01,national,MEUZKAM,МЕUZКАМ,399752.0,level
 2010-04-01,national,MEUZKAM,МЕUZКАМ,404752.0,level
@@ -1999,6 +2017,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MEUZKAM,МЕUZКАМ,490883.0,level
 2026-08-01,national,MEUZKAM,МЕUZКАМ,475883.0,level
 2026-09-01,national,MEUZKAM,МЕUZКАМ,445883.0,level
+2026-10-01,national,MEUZKAM,МЕUZКАМ,365883.0,level
+2026-11-01,national,MEUZKAM,МЕUZКАМ,365883.0,level
 2010-02-01,national,MUIKAM,МUIКАМ,52909.0,level
 2010-03-01,national,MUIKAM,МUIКАМ,52909.0,level
 2010-04-01,national,MUIKAM,МUIКАМ,52909.0,level
@@ -2199,6 +2219,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MUIKAM,МUIКАМ,223021.0,level
 2026-08-01,national,MUIKAM,МUIКАМ,223021.0,level
 2026-09-01,national,MUIKAM,МUIКАМ,223021.0,level
+2026-10-01,national,MUIKAM,МUIКАМ,223021.0,level
+2026-11-01,national,MUIKAM,МUIКАМ,223021.0,level
 2010-02-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
 2010-03-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
 2010-04-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,0.0,level
@@ -2399,6 +2421,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1679620.0,level
 2026-08-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1727491.0,level
 2026-09-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1825649.0,level
+2026-10-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,1933406.0,level
+2026-11-01,national,MUNICIPAL,Государственные ценные бумаги местных исполнительных органов,2011086.0,level
 2010-02-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,681021.0,level
 2010-03-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,824066.0,level
 2010-04-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,963346.0,level
@@ -2599,6 +2623,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,928057.0,level
 2026-08-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,894530.0,level
 2026-09-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1144260.0,level
+2026-10-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1404060.0,level
+2026-11-01,national,NBK_NOTES,Краткосрочные ноты Национального Банка,1635198.0,level
 2010-02-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
 2010-03-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
 2010-04-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
@@ -2799,6 +2825,8 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
 2026-08-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
 2026-09-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2026-10-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
+2026-11-01,national,SAVINGS_BONDS,Национальные сберегательные облигации,0.0,level
 2010-02-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2002586.0,level
 2010-03-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2177663.0,level
 2010-04-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",2336019.0,level
@@ -2999,3 +3027,5 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",28843791.0,level
 2026-08-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",29497053.0,level
 2026-09-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",30079640.0,level
+2026-10-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",30481938.0,level
+2026-11-01,national,TOTAL,"Государственные ценные бумаги в обращении, всего (включая ноты НБК)",31256849.0,level

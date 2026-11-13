@@ -1,9 +1,42 @@
 # Update report — 2026-11-13
 
-Run timestamp: 2026-11-13T04:34:19.686570
+Run timestamp: 2026-11-13T10:43:32.108976
 Unified dataset updated: True
 Tests passed: True
 Cross-source checks failed: 0
+
+## Stopped series with a known reason
+
+- bns/PASSENGER_TURNOVER: last 2016-12-31 — superseded_not_spliceable, see PASSENGER_TURNOVER_MONTHLY
+- bns/DOCTORS_PER_10K: last 2023-12-31 — stale_source
+- bns/HOSPITAL_BEDS_PER_10K: last 2023-12-31 — stale_source
+- nbk/BANK_ROA: last 2024-01-01 — superseded, see FSI_ROA
+- nbk/BANK_ROE: last 2024-01-01 — superseded, see FSI_ROE
+- nbk/CAPITAL_ADEQUACY_RATIO: last 2024-04-01 — superseded, see FSI_CAPITAL_ADEQUACY
+- nbk/NPL_RATIO: last 2024-04-01 — superseded_not_spliceable, see BANK_NPL_90_SHARE
+- nbk/LOANS_TO_ECONOMY: last 2024-04-01 — superseded_not_spliceable, see BANK_LOANS_TOTAL
+- imf/FSI_ROA: last 2025-10-01 — Kazakhstan has reported no 2026 quarter to the IMF FSI yet (2025-Q4 is its newest; Georgia has 2026-Q2; checked 2026-11-13). A period return is dated at the quarter's start, so this series crosses the limit before the ot
+- imf/FSI_ROE: last 2025-10-01 — Kazakhstan has reported no 2026 quarter to the IMF FSI yet (2025-Q4 is its newest; checked 2026-11-13). Dated at the quarter's start.
+- minfin/NBK_DEBT: last 2025-10-01 — Zero at 2025-07-01 and 2025-10-01; from 2026-01-01 the Statistical Bulletin (табл 22 кв, row 2) leaves the cell blank, and the sheet's identity closes with it at zero. The blank is not written as a number.
+- bns/RETAIL_TRADE_INDEX_FOOD_MONTHLY: last 2026-04-01 — Taldau index 702041's monthly slice ends 2026-04 (117.41) and has not been loaded since (checked 2026-11-13); the BNS trade bulletin gives food / non-food only year-to-date (January-October 2026: 111.9 / 100.9).
+- bns/RETAIL_TRADE_INDEX_NONFOOD_MONTHLY: last 2026-04-01 — Taldau index 702041's monthly slice ends 2026-04 (100.20) and has not been loaded since (checked 2026-11-13); the BNS trade bulletin gives food / non-food only year-to-date.
+- imf/COMMODITY_TERMS_OF_TRADE: last 2026-05-01 — The IMF CTOT dataset (5.0.1) ends 2026-M05 for every country (the USA too; checked 2026-11-13): it is updated in irregular batches.
+- imf/COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS: last 2026-05-01 — The IMF CTOT dataset (5.0.1) ends 2026-M05 for every country (checked 2026-11-13): it is updated in irregular batches.
+- minfin/NF_OIL_CIT_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_EXCESS_PROFIT_TAX_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_BONUSES_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_MET_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_RENT_TAX_EXPORT_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_PSA_SHARE_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_PSA_ADDITIONAL_PAYMENT_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_OIL_DIRECT_TAXES_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_OIL_OTHER_RECEIPTS_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_OIL_RECEIPTS_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_PRIVATIZATION_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_INVESTMENT_INCOME_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_GUARANTEED_TRANSFER_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_TARGETED_TRANSFERS_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_TRANSFERS_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
 
 ## Per-dataset results
 
@@ -456,7 +489,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 454.9% in value between 2025-07-01 (716.250537) and 2025-10-01 (-2542.090277).
   - warning: Unexpected jump of 216.4% in value between 2025-10-01 (-2542.090277) and 2026-01-01 (2958.03374).
   - warning: Unexpected jump of 184.1% in value between 2026-01-01 (2958.03374) and 2026-04-01 (-2487.406931).
-- **nbk/GOV_SECURITIES_MEUKAM** — fetch+validate+process: ok (downloaded=200, processed=200)
+- **nbk/GOV_SECURITIES_MEUKAM** — fetch+validate+process: ok (downloaded=202, processed=202)
 - **nbk/IIP_NET** — fetch+validate+process: ok (downloaded=23, processed=23)
 - **nbk/IIP_ASSETS** — fetch+validate+process: ok (downloaded=23, processed=23)
 - **nbk/IIP_LIABILITIES** — fetch+validate+process: ok (downloaded=23, processed=23)
@@ -1364,7 +1397,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 65.9% in own-period contribution between 2019-12-01 (28193.177040209994) and 2020-01-01 (46771.62678444).
   - warning: Unexpected jump of 52.2% in own-period contribution between 2020-01-01 (46771.62678444) and 2020-02-01 (22343.103619300004).
   - warning: Unexpected jump of 98.9% in own-period contribution between 2026-03-01 (98662.69879880999) and 2026-05-01 (196214.89860574).
-- **minfin/CUSTOMS_DUTIES** — fetch+validate+process: ok (downloaded=158, processed=158)
+- **minfin/CUSTOMS_DUTIES** — fetch+validate+process: ok (downloaded=159, processed=159)
   - warning: Unexpected jump of 114.0% in own-period contribution between 2013-06-30 (71710.5514153) and 2013-08-31 (153427.17400150007).
   - warning: Unexpected jump of 52.5% in own-period contribution between 2013-08-31 (153427.17400150007) and 2013-09-30 (72869.9321027).
   - warning: Unexpected jump of 55.5% in own-period contribution between 2013-11-30 (68250.47349400003) and 2013-12-31 (106156.0496262).
@@ -1400,7 +1433,8 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 65.9% in own-period contribution between 2025-11-30 (193954.57880074997) and 2026-01-31 (66067.6032816).
   - warning: Unexpected jump of 219.3% in own-period contribution between 2026-02-28 (70290.29320559002) and 2026-03-31 (224403.42098376).
   - warning: Unexpected jump of 114.4% in own-period contribution between 2026-03-31 (224403.42098376) and 2026-05-31 (481205.45174267).
-- **minfin/GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=157, processed=157)
+  - warning: Unexpected jump of 86.5% in own-period contribution between 2026-08-31 (221660.20702394005) and 2026-09-30 (413417.4033538499).
+- **minfin/GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=158, processed=158)
   - warning: Unexpected jump of 58.9% in own-period contribution between 2014-11-30 (28936.83299306) and 2014-12-31 (45987.674280709994).
   - warning: Unexpected jump of 59.2% in own-period contribution between 2016-11-30 (28674.476676969964) and 2016-12-31 (45662.64734319999).
   - warning: Unexpected jump of 155.8% in own-period contribution between 2019-01-31 (34386.70166433) and 2019-03-31 (87961.27876688).
@@ -1417,7 +1451,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 94.4% in own-period contribution between 2024-11-30 (75012.36225332995) and 2024-12-31 (145806.52316441003).
   - warning: Unexpected jump of 51.5% in own-period contribution between 2026-01-31 (61529.58985924) and 2026-02-28 (93242.38302472001).
   - warning: Unexpected jump of 67.5% in own-period contribution between 2026-03-31 (91794.99336654) and 2026-05-31 (153751.21168333).
-- **minfin/GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=157, processed=157)
+- **minfin/GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=158, processed=158)
   - warning: Unexpected jump of 2162.8% in own-period contribution between 2013-01-31 (4646.768304200001) and 2013-02-28 (105147.05439774).
   - warning: Unexpected jump of 97.8% in own-period contribution between 2013-10-31 (72938.32483517996) and 2014-01-31 (1574.1644607100002).
   - warning: Unexpected jump of 3965.8% in own-period contribution between 2014-01-31 (1574.1644607100002) and 2014-02-28 (64002.80737611001).
@@ -1484,13 +1518,13 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 68.7% in own-period contribution between 2026-02-28 (63327.76409271) and 2026-03-31 (19852.408019149996).
   - warning: Unexpected jump of 1341.1% in own-period contribution between 2026-03-31 (19852.408019149996) and 2026-05-31 (286095.19733116).
   - warning: Unexpected jump of 75.5% in own-period contribution between 2026-05-31 (286095.19733116) and 2026-06-30 (70165.27093111997).
-- **minfin/GOV_PENSIONS_EXPENDITURE** — fetch+validate+process: ok (downloaded=157, processed=157)
+- **minfin/GOV_PENSIONS_EXPENDITURE** — fetch+validate+process: ok (downloaded=158, processed=158)
   - warning: Unexpected jump of 78.0% in own-period contribution between 2019-01-31 (212427.276) and 2019-03-31 (378042.90499999997).
   - warning: Unexpected jump of 103.2% in own-period contribution between 2019-09-30 (186186.05700000003) and 2019-11-30 (378278.62899999996).
   - warning: Unexpected jump of 56.0% in own-period contribution between 2019-11-30 (378278.62899999996) and 2019-12-31 (166538.20900000003).
   - warning: Unexpected jump of 108.9% in own-period contribution between 2020-03-31 (201763.52000000002) and 2020-05-31 (421569.31999999995).
   - warning: Unexpected jump of 100.5% in own-period contribution between 2026-03-31 (402843.7189999999) and 2026-05-31 (807846.9950000001).
-- **minfin/GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=143, processed=143)
+- **minfin/GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=144, processed=144)
   - warning: Unexpected jump of 74.1% in own-period contribution between 2014-05-31 (30358.43016146) and 2014-06-30 (7852.420524450001).
   - warning: Unexpected jump of 54.4% in own-period contribution between 2014-07-31 (5315.859259869998) and 2014-08-31 (2425.3013262099994).
   - warning: Unexpected jump of 107.0% in own-period contribution between 2014-08-31 (2425.3013262099994) and 2014-09-30 (5019.594550050002).
@@ -1581,9 +1615,10 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 20762.5% in own-period contribution between 2026-03-31 (814.6232999999993) and 2026-05-31 (169951.15417018).
   - warning: Unexpected jump of 68.3% in own-period contribution between 2026-05-31 (169951.15417018) and 2026-06-30 (53840.49819845002).
   - warning: Unexpected jump of 259.8% in own-period contribution between 2026-07-31 (34819.549359659984) and 2026-08-31 (125289.67304135999).
+  - warning: Unexpected jump of 85.2% in own-period contribution between 2026-08-31 (125289.67304135999) and 2026-09-30 (18523.384064540034).
 - **minfin/SUBVENTIONS_REPUBLICAN** — fetch+validate+process: ok (downloaded=5, processed=5)
   - warning: Unexpected jump of 135.1% in value between 2022-12-31 (2124711.058) and 2023-12-31 (4995054.752).
-- **minfin/LOCAL_GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=136, processed=136)
+- **minfin/LOCAL_GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=137, processed=137)
   - warning: Unexpected jump of 92.5% in own-period contribution between 2014-12-31 (670114.3539962) and 2015-01-31 (50299.7085889).
   - warning: Unexpected jump of 54.3% in own-period contribution between 2015-06-30 (96249.10481936001) and 2015-07-31 (44012.37119982997).
   - warning: Unexpected jump of 58.1% in own-period contribution between 2016-06-30 (124365.12587136001) and 2016-07-31 (52100.37804514996).
@@ -1610,7 +1645,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 69.6% in own-period contribution between 2025-06-30 (552883.10299055) and 2025-07-31 (167977.79210899002).
   - warning: Unexpected jump of 111.2% in own-period contribution between 2026-03-31 (297021.01593821996) and 2026-05-31 (627282.1053952599).
   - warning: Unexpected jump of 68.3% in own-period contribution between 2026-06-30 (573586.55167779) and 2026-07-31 (181731.89789270028).
-- **minfin/LOCAL_GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=136, processed=136)
+- **minfin/LOCAL_GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=137, processed=137)
   - warning: Unexpected jump of 99.4% in own-period contribution between 2014-12-31 (1215908.66077657) and 2015-01-31 (7683.73632632).
   - warning: Unexpected jump of 309.0% in own-period contribution between 2015-01-31 (7683.73632632) and 2015-02-28 (31430.301499939997).
   - warning: Unexpected jump of 140.2% in own-period contribution between 2015-03-31 (43502.984944380005) and 2015-04-30 (104481.37071855).
@@ -1661,7 +1696,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 115.5% in own-period contribution between 2026-03-31 (265641.88024702005) and 2026-05-31 (572358.6371081801).
   - warning: Unexpected jump of 61.4% in own-period contribution between 2026-05-31 (572358.6371081801) and 2026-06-30 (221049.0228089299).
   - warning: Unexpected jump of 63.0% in own-period contribution between 2026-06-30 (221049.0228089299) and 2026-07-31 (360340.42811658).
-- **minfin/LOCAL_GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=136, processed=136)
+- **minfin/LOCAL_GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=137, processed=137)
   - warning: Unexpected jump of 98.7% in own-period contribution between 2014-12-31 (223781.73151249) and 2015-01-31 (2807.217834).
   - warning: Unexpected jump of 493.8% in own-period contribution between 2015-01-31 (2807.217834) and 2015-02-28 (16670.646073070002).
   - warning: Unexpected jump of 99.9% in own-period contribution between 2015-06-30 (18330.436212459994) and 2015-07-31 (36641.03996451001).
@@ -1710,7 +1745,7 @@ Cross-source checks failed: 0
 - **minfin/GOV_ACCOUNTS_RECEIVABLE** — fetch+validate+process: ok (downloaded=11, processed=11)
   - warning: Unexpected jump of 989.7% in value between 2016-12-31 (37477.8621) and 2017-12-31 (408413.2304).
   - warning: Unexpected jump of 61.0% in value between 2021-12-31 (715812.4396) and 2022-12-31 (1152795.4069).
-- **minfin/GOV_FINANCIAL_ASSETS_SOLD** — fetch+validate+process: ok (downloaded=14, processed=14)
+- **minfin/GOV_FINANCIAL_ASSETS_SOLD** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Unexpected jump of 75.4% in own-period contribution between 2025-02-28 (192.41) and 2025-03-31 (47.30000000000001).
   - warning: Unexpected jump of 6703.8% in own-period contribution between 2025-03-31 (47.30000000000001) and 2025-06-30 (3218.2200000000003).
   - warning: Unexpected jump of 95.6% in own-period contribution between 2025-06-30 (3218.2200000000003) and 2025-07-31 (140.26999999999953).
@@ -1722,6 +1757,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 78.2% in own-period contribution between 2026-02-28 (552.4300000000001) and 2026-03-31 (120.18000000000006).
   - warning: Unexpected jump of 1036.2% in own-period contribution between 2026-03-31 (120.18000000000006) and 2026-04-30 (1365.5199999999998).
   - warning: Unexpected jump of 104.0% in own-period contribution between 2026-06-30 (1329.02) and 2026-07-31 (-53.32999999999993).
+  - warning: Unexpected jump of 799.9% in own-period contribution between 2026-07-31 (-53.32999999999993) and 2026-09-30 (373.2800000000002).
 - **minfin/GOV_AUDIT_VIOLATIONS_AMOUNT** — fetch+validate+process: ok (downloaded=14, processed=14)
   - warning: Unexpected jump of 982.7% in own-period contribution between 2025-03-31 (24708.31394) and 2025-06-30 (267506.13612000004).
   - warning: Unexpected jump of 94.6% in own-period contribution between 2025-06-30 (267506.13612000004) and 2025-07-31 (14436.548600000038).
@@ -1747,7 +1783,15 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 98.1% in value between 2016-12-31 (-734537.06016566) and 2017-12-31 (-1455319.77531737).
   - warning: Unexpected jump of 54.3% in value between 2018-12-31 (-833072.33680847) and 2019-12-31 (-1285306.7183763).
   - warning: Unexpected jump of 118.5% in value between 2019-12-31 (-1285306.7183763) and 2020-12-31 (-2808962.17986238).
-- **minfin/STATE_BUDGET_REVENUE_YTD** — fetch+validate+process: ok (downloaded=167, processed=167)
+- **minfin/STATE_BUDGET_REVENUE_PLAN** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **minfin/STATE_BUDGET_TAX_REVENUE_PLAN** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **minfin/STATE_BUDGET_EXPENDITURE_PLAN** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **minfin/STATE_BUDGET_DEFICIT_PLAN** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **minfin/REPUBLICAN_BUDGET_REVENUE_PLAN** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **minfin/REPUBLICAN_BUDGET_TAX_REVENUE_PLAN** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **minfin/REPUBLICAN_BUDGET_EXPENDITURE_PLAN** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **minfin/REPUBLICAN_BUDGET_DEFICIT_PLAN** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **minfin/STATE_BUDGET_REVENUE_YTD** — fetch+validate+process: ok (downloaded=168, processed=168)
   - warning: Unexpected jump of 81.4% in own-period contribution between 2011-12-31 (1860906.9111275002) and 2012-01-31 (346690.253126).
   - warning: Unexpected jump of 53.1% in own-period contribution between 2012-01-31 (346690.253126) and 2012-02-29 (530774.5973739).
   - warning: Unexpected jump of 409.7% in own-period contribution between 2012-02-29 (530774.5973739) and 2012-07-31 (2705305.9212062).
@@ -1781,7 +1825,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 156.1% in own-period contribution between 2026-03-31 (2188874.84540016) and 2026-05-31 (5605394.11743319).
   - warning: Unexpected jump of 61.0% in own-period contribution between 2026-05-31 (5605394.11743319) and 2026-06-30 (2186041.2551839).
   - warning: Unexpected jump of 60.4% in own-period contribution between 2026-07-31 (2089086.4869089015) and 2026-08-31 (3350693.3242152).
-- **minfin/STATE_BUDGET_EXPENDITURE_YTD** — fetch+validate+process: ok (downloaded=167, processed=167)
+- **minfin/STATE_BUDGET_EXPENDITURE_YTD** — fetch+validate+process: ok (downloaded=168, processed=168)
   - warning: Unexpected jump of 85.1% in own-period contribution between 2011-12-31 (2194757.6156069995) and 2012-01-31 (326215.3315647).
   - warning: Unexpected jump of 436.9% in own-period contribution between 2012-02-29 (477598.38725360006) and 2012-07-31 (2564014.0620508).
   - warning: Unexpected jump of 89.4% in own-period contribution between 2012-12-31 (2901144.2306874995) and 2013-01-31 (307079.6537916001).
@@ -1806,7 +1850,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 111.4% in own-period contribution between 2026-01-31 (1490668.35059184) and 2026-02-28 (3151528.2209214997).
   - warning: Unexpected jump of 111.5% in own-period contribution between 2026-03-31 (2982125.3225600105) and 2026-05-31 (6306914.0647625495).
   - warning: Unexpected jump of 56.5% in own-period contribution between 2026-05-31 (6306914.0647625495) and 2026-06-30 (2746404.5593228005).
-- **minfin/STATE_BUDGET_DEFICIT_YTD** — fetch+validate+process: ok (downloaded=167, processed=167)
+- **minfin/STATE_BUDGET_DEFICIT_YTD** — fetch+validate+process: ok (downloaded=168, processed=168)
   - warning: Unexpected jump of 362.7% in own-period contribution between 2011-08-31 (-101045.84452045045) and 2011-12-31 (-467552.1920424494).
   - warning: Unexpected jump of 96.0% in own-period contribution between 2011-12-31 (-467552.1920424494) and 2012-01-31 (-18633.723643700003).
   - warning: Unexpected jump of 274.9% in own-period contribution between 2012-01-31 (-18633.723643700003) and 2012-02-29 (32596.324652399886).
@@ -1943,7 +1987,8 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 90.6% in own-period contribution between 2026-01-31 (343183.04233588) and 2026-02-28 (32169.022484519985).
   - warning: Unexpected jump of 2485.8% in own-period contribution between 2026-02-28 (32169.022484519985) and 2026-03-31 (-767491.11289395).
   - warning: Unexpected jump of 134.2% in own-period contribution between 2026-07-31 (-852317.3953497503) and 2026-08-31 (291153.05276035005).
-- **minfin/STATE_NET_BUDGET_LENDING_YTD** — fetch+validate+process: ok (downloaded=164, processed=164)
+  - warning: Unexpected jump of 190.0% in own-period contribution between 2026-08-31 (291153.05276035005) and 2026-09-30 (-261907.4304565997).
+- **minfin/STATE_NET_BUDGET_LENDING_YTD** — fetch+validate+process: ok (downloaded=165, processed=165)
   - warning: Unexpected jump of 60.0% in own-period contribution between 2011-08-31 (95513.201964) and 2012-01-31 (38186.7709342).
   - warning: Unexpected jump of 128.3% in own-period contribution between 2012-02-29 (19692.949342400003) and 2012-07-31 (44954.48960360001).
   - warning: Unexpected jump of 102.5% in own-period contribution between 2012-07-31 (44954.48960360001) and 2013-01-31 (-1127.1782440000002).
@@ -2073,7 +2118,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 52.6% in own-period contribution between 2026-05-31 (119444.47101752) and 2026-06-30 (182276.14135581).
   - warning: Unexpected jump of 87.7% in own-period contribution between 2026-06-30 (182276.14135581) and 2026-07-31 (22466.694242520025).
   - warning: Unexpected jump of 418.4% in own-period contribution between 2026-07-31 (22466.694242520025) and 2026-08-31 (116470.85177099996).
-- **minfin/STATE_FINANCIAL_ASSETS_BALANCE_YTD** — fetch+validate+process: ok (downloaded=164, processed=164)
+- **minfin/STATE_FINANCIAL_ASSETS_BALANCE_YTD** — fetch+validate+process: ok (downloaded=165, processed=165)
   - warning: Unexpected jump of 99.7% in own-period contribution between 2011-08-31 (286974.70933965) and 2012-01-31 (921.8742708).
   - warning: Unexpected jump of 42161.4% in own-period contribution between 2012-02-29 (886.9361255000001) and 2012-07-31 (374832.0429091).
   - warning: Unexpected jump of 100.0% in own-period contribution between 2012-07-31 (374832.0429091) and 2013-01-31 (94.28794260000001).
@@ -2180,7 +2225,8 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 96.3% in own-period contribution between 2026-05-31 (308760.85156531003) and 2026-06-30 (11445.83908112999).
   - warning: Unexpected jump of 319.0% in own-period contribution between 2026-06-30 (11445.83908112999) and 2026-07-31 (47963.46082879999).
   - warning: Unexpected jump of 66.8% in own-period contribution between 2026-07-31 (47963.46082879999) and 2026-08-31 (15923.48438573).
-- **minfin/STATE_TRANSFERS_RECEIVED_YTD** — fetch+validate+process: ok (downloaded=164, processed=164)
+  - warning: Unexpected jump of 202.0% in own-period contribution between 2026-08-31 (15923.48438573) and 2026-09-30 (48083.664141000016).
+- **minfin/STATE_TRANSFERS_RECEIVED_YTD** — fetch+validate+process: ok (downloaded=165, processed=165)
   - warning: Unexpected jump of 93.1% in own-period contribution between 2011-08-31 (795000.0) and 2012-01-31 (55000.0).
   - warning: Unexpected jump of 72.7% in own-period contribution between 2012-01-31 (55000.0) and 2012-02-29 (95000.0).
   - warning: Unexpected jump of 873.7% in own-period contribution between 2012-02-29 (95000.0) and 2012-07-31 (925000.0).
@@ -2249,11 +2295,12 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 79.7% in own-period contribution between 2024-12-31 (306000.0) and 2025-01-31 (550000.0).
   - warning: Unexpected jump of 76.5% in own-period contribution between 2026-03-31 (340000.0) and 2026-05-31 (600000.0).
   - warning: Unexpected jump of 78.3% in own-period contribution between 2026-07-31 (460000.0) and 2026-08-31 (100000.0).
-- **minfin/STATE_BUDGET_REVENUE_Q** — fetch+validate+process: ok (downloaded=66, processed=66)
+  - warning: Unexpected jump of 250.0% in own-period contribution between 2026-08-31 (100000.0) and 2026-09-30 (350000.0).
+- **minfin/STATE_BUDGET_REVENUE_Q** — fetch+validate+process: ok (downloaded=67, processed=67)
   - warning: Unexpected jump of 65.8% in value between 2015-07-01 (1359214.4844842) and 2015-10-01 (2254087.40623975).
-- **minfin/STATE_BUDGET_EXPENDITURE_Q** — fetch+validate+process: ok (downloaded=66, processed=66)
+- **minfin/STATE_BUDGET_EXPENDITURE_Q** — fetch+validate+process: ok (downloaded=67, processed=67)
   - warning: Unexpected jump of 85.3% in value between 2017-04-01 (2538066.14370914) and 2017-07-01 (4704164.398143151).
-- **minfin/STATE_BUDGET_DEFICIT_Q** — fetch+validate+process: ok (downloaded=66, processed=66)
+- **minfin/STATE_BUDGET_DEFICIT_Q** — fetch+validate+process: ok (downloaded=67, processed=67)
   - warning: Unexpected jump of 701.4% in value between 2010-01-01 (-22690.806504200387) and 2010-04-01 (-181838.70411939942).
   - warning: Unexpected jump of 67.2% in value between 2010-07-01 (-242965.32112180017) and 2010-10-01 (-79769.34709449846).
   - warning: Unexpected jump of 85.1% in value between 2011-01-01 (-99615.9493908) and 2011-04-01 (-14834.565995900077).
@@ -2304,7 +2351,8 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 137.8% in value between 2025-07-01 (-1002304.01776157) and 2025-10-01 (-2383780.76376242).
   - warning: Unexpected jump of 83.5% in value between 2025-10-01 (-2383780.76376242) and 2026-01-01 (-392139.04807355).
   - warning: Unexpected jump of 380.4% in value between 2026-01-01 (-392139.04807355) and 2026-04-01 (-1883810.55448795).
-- **minfin/PROPERTY_TAX** — fetch+validate+process: ok (downloaded=151, processed=151)
+  - warning: Unexpected jump of 56.3% in value between 2026-04-01 (-1883810.55448795) and 2026-07-01 (-823071.7730459999).
+- **minfin/PROPERTY_TAX** — fetch+validate+process: ok (downloaded=152, processed=152)
   - warning: Unexpected jump of 2369.0% in own-period contribution between 2013-01-31 (1362.5981626) and 2013-02-28 (33642.4148612).
   - warning: Unexpected jump of 94.0% in own-period contribution between 2014-02-28 (36860.0281938) and 2014-03-31 (2204.012012210005).
   - warning: Unexpected jump of 51.1% in own-period contribution between 2014-03-31 (2204.012012210005) and 2014-04-30 (3330.9237148899992).
@@ -2421,7 +2469,8 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 1103.0% in own-period contribution between 2026-03-31 (9434.401593219984) and 2026-05-31 (113497.63454210002).
   - warning: Unexpected jump of 94.9% in own-period contribution between 2026-05-31 (113497.63454210002) and 2026-06-30 (5786.629913720011).
   - warning: Unexpected jump of 1682.7% in own-period contribution between 2026-07-31 (8066.832645029994) and 2026-08-31 (143808.53917553998).
-- **minfin/LAND_TAX** — fetch+validate+process: ok (downloaded=151, processed=151)
+  - warning: Unexpected jump of 90.0% in own-period contribution between 2026-08-31 (143808.53917553998) and 2026-09-30 (14434.33505219).
+- **minfin/LAND_TAX** — fetch+validate+process: ok (downloaded=152, processed=152)
   - warning: Unexpected jump of 862.7% in own-period contribution between 2013-01-31 (311.334969) and 2013-02-28 (2997.2871347).
   - warning: Unexpected jump of 88.5% in own-period contribution between 2014-02-28 (3301.1346395) and 2014-03-31 (379.1008786100001).
   - warning: Unexpected jump of 445.4% in own-period contribution between 2014-04-30 (464.69062888999997) and 2014-05-31 (2534.3218965999995).
@@ -2534,7 +2583,8 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 93.3% in own-period contribution between 2026-05-31 (2496.82919807) and 2026-06-30 (166.47895567999967).
   - warning: Unexpected jump of 201.1% in own-period contribution between 2026-06-30 (166.47895567999967) and 2026-07-31 (501.1912201900004).
   - warning: Unexpected jump of 58.6% in own-period contribution between 2026-07-31 (501.1912201900004) and 2026-08-31 (794.6559197799997).
-- **minfin/STATE_GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=87, processed=87)
+  - warning: Unexpected jump of 57.3% in own-period contribution between 2026-08-31 (794.6559197799997) and 2026-09-30 (339.3632464700004).
+- **minfin/STATE_GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=88, processed=88)
   - warning: Unexpected jump of 131.5% in own-period contribution between 2019-05-31 (150321.74600430997) and 2019-07-31 (347981.08443109004).
   - warning: Unexpected jump of 64.5% in own-period contribution between 2019-07-31 (347981.08443109004) and 2019-08-31 (123684.74059880001).
   - warning: Unexpected jump of 111.5% in own-period contribution between 2019-09-30 (143312.45220032008) and 2019-11-30 (303035.5960885).
@@ -2555,7 +2605,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 59.4% in own-period contribution between 2025-06-30 (650055.09304978) and 2025-07-31 (264152.73335818015).
   - warning: Unexpected jump of 100.9% in own-period contribution between 2026-03-31 (388816.00930476) and 2026-05-31 (781033.3170785899).
   - warning: Unexpected jump of 60.1% in own-period contribution between 2026-06-30 (662077.6398376902) and 2026-07-31 (264262.0260219197).
-- **minfin/STATE_GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=87, processed=87)
+- **minfin/STATE_GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=88, processed=88)
   - warning: Unexpected jump of 809.0% in own-period contribution between 2019-01-31 (17566.70116271) and 2019-02-28 (159688.06951516).
   - warning: Unexpected jump of 95.0% in own-period contribution between 2019-03-31 (92728.41145511999) and 2019-04-30 (4659.326631790027).
   - warning: Unexpected jump of 3085.8% in own-period contribution between 2019-04-30 (4659.326631790027) and 2019-05-31 (148437.34072618).
@@ -2589,7 +2639,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 670.6% in own-period contribution between 2026-01-31 (30976.35148767) and 2026-02-28 (238704.73305303).
   - warning: Unexpected jump of 143.0% in own-period contribution between 2026-03-31 (276256.90326617) and 2026-05-31 (671331.0724393401).
   - warning: Unexpected jump of 61.0% in own-period contribution between 2026-05-31 (671331.0724393401) and 2026-06-30 (261849.42174004996).
-- **minfin/STATE_GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=66, processed=66)
+- **minfin/STATE_GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=67, processed=67)
   - warning: Unexpected jump of 150.6% in own-period contribution between 2019-01-31 (27763.12341648) and 2019-02-28 (69569.64897439).
   - warning: Unexpected jump of 56.4% in own-period contribution between 2019-02-28 (69569.64897439) and 2019-03-31 (30343.026475670005).
   - warning: Unexpected jump of 163.0% in own-period contribution between 2019-05-31 (41553.19406997002) and 2019-07-31 (109287.88422028002).
@@ -2620,34 +2670,35 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 106.2% in own-period contribution between 2026-03-31 (212744.93307739007) and 2026-05-31 (438618.2016175799).
   - warning: Unexpected jump of 64.9% in own-period contribution between 2026-05-31 (438618.2016175799) and 2026-06-30 (154073.00423407997).
   - warning: Unexpected jump of 95.5% in own-period contribution between 2026-07-31 (125860.26375599997) and 2026-08-31 (246016.69794825).
-- **minfin/STATE_DEBT_TOTAL** — fetch+validate+process: ok (downloaded=22, processed=22)
+  - warning: Unexpected jump of 56.0% in own-period contribution between 2026-08-31 (246016.69794825) and 2026-09-30 (108361.0137564002).
+- **minfin/STATE_DEBT_TOTAL** — fetch+validate+process: ok (downloaded=23, processed=23)
   - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
-- **minfin/GOV_DEBT_EXTERNAL_USD** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **minfin/GOV_DEBT_EXTERNAL_USD** — fetch+validate+process: ok (downloaded=23, processed=23)
   - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
-- **minfin/LOCAL_GOV_DEBT** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **minfin/LOCAL_GOV_DEBT** — fetch+validate+process: ok (downloaded=23, processed=23)
   - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Unexpected jump of 105.7% in value between 2020-01-01 (846655.199871365) and 2021-01-01 (1741971.6845).
-- **minfin/STATE_GUARANTEED_DEBT** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **minfin/STATE_GUARANTEED_DEBT** — fetch+validate+process: ok (downloaded=23, processed=23)
   - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
-- **minfin/GOV_DEBT_EUROBONDS** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **minfin/GOV_DEBT_EUROBONDS** — fetch+validate+process: ok (downloaded=23, processed=23)
   - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Unexpected jump of 83.8% in value between 2022-07-01 (4098270.0) and 2022-10-01 (664800.0).
   - warning: Unexpected jump of 515.5% in value between 2022-10-01 (664800.0) and 2023-01-01 (4091516.9999999995).
-- **minfin/CENTRAL_GOV_DEBT** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **minfin/CENTRAL_GOV_DEBT** — fetch+validate+process: ok (downloaded=23, processed=23)
   - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
-- **minfin/CENTRAL_GOV_DEBT_EXTERNAL** — fetch+validate+process: ok (downloaded=22, processed=22)
+- **minfin/CENTRAL_GOV_DEBT_EXTERNAL** — fetch+validate+process: ok (downloaded=23, processed=23)
   - warning: Gap of 366 days between 2020-01-01 and 2021-01-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 181 days between 2021-01-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: Gap of 183 days between 2023-04-01 and 2023-10-01 is outside expected range for frequency=quarterly (80-100d).
@@ -2667,7 +2718,7 @@ Cross-source checks failed: 0
 - **minfin/LOCAL_EDUCATION_EXPENDITURE** — fetch+validate+process: ok (downloaded=10, processed=10)
 - **minfin/LOCAL_HOUSING_UTILITIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=10, processed=10)
   - warning: Unexpected jump of 53.9% in value between 2019-12-31 (908934.18300144) and 2020-12-31 (1398994.53519946).
-- **minfin/BUDGET_FINANCING_TOTAL** — fetch+validate+process: ok (downloaded=14, processed=14)
+- **minfin/BUDGET_FINANCING_TOTAL** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Unexpected jump of 226.9% in value between 2023-01-01 (382189.30892918) and 2023-04-01 (1249185.8589798997).
   - warning: Unexpected jump of 52.6% in value between 2023-04-01 (1249185.8589798997) and 2023-07-01 (592247.5682603805).
   - warning: Unexpected jump of 53.8% in value between 2023-10-01 (587477.8587479903) and 2024-01-01 (271312.85565738997).
@@ -2678,7 +2729,8 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 137.8% in value between 2025-07-01 (1002304.0176625791) and 2025-10-01 (2383780.764162641).
   - warning: Unexpected jump of 83.5% in value between 2025-10-01 (2383780.764162641) and 2026-01-01 (392139.04807354993).
   - warning: Unexpected jump of 380.4% in value between 2026-01-01 (392139.04807354993) and 2026-04-01 (1883810.5566879504).
-- **minfin/BUDGET_FINANCING_DOMESTIC** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 56.3% in value between 2026-04-01 (1883810.5566879504) and 2026-07-01 (823071.7362860115).
+- **minfin/BUDGET_FINANCING_DOMESTIC** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Unexpected jump of 165.9% in value between 2023-01-01 (418017.00788573) and 2023-04-01 (1111614.68020404).
   - warning: Unexpected jump of 57.8% in value between 2023-10-01 (903445.8565542502) and 2024-01-01 (381660.56728928).
   - warning: Unexpected jump of 91.9% in value between 2024-01-01 (381660.56728928) and 2024-04-01 (732485.5298125099).
@@ -2688,7 +2740,8 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 50.5% in value between 2025-07-01 (1083374.6466171192) and 2025-10-01 (1630278.8705836413).
   - warning: Unexpected jump of 70.4% in value between 2025-10-01 (1630278.8705836413) and 2026-01-01 (482264.72980344994).
   - warning: Unexpected jump of 270.8% in value between 2026-01-01 (482264.72980344994) and 2026-04-01 (1788131.8086110405).
-- **minfin/BUDGET_FINANCING_EXTERNAL** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 85.4% in value between 2026-04-01 (1788131.8086110405) and 2026-07-01 (260530.8725239914).
+- **minfin/BUDGET_FINANCING_EXTERNAL** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Unexpected jump of 484.0% in value between 2023-01-01 (-35827.698956550004) and 2023-04-01 (137571.17877586).
   - warning: Unexpected jump of 242.8% in value between 2023-04-01 (137571.17877586) and 2023-07-01 (-196505.5894).
   - warning: Unexpected jump of 60.8% in value between 2023-07-01 (-196505.5894) and 2023-10-01 (-315967.99780625995).
@@ -2700,14 +2753,16 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 1029.4% in value between 2025-07-01 (-81070.62895453998) and 2025-10-01 (753501.8935789998).
   - warning: Unexpected jump of 112.0% in value between 2025-10-01 (753501.8935789998) and 2026-01-01 (-90125.68172990001).
   - warning: Unexpected jump of 206.2% in value between 2026-01-01 (-90125.68172990001) and 2026-04-01 (95678.74807691004).
-- **minfin/BUDGET_FINANCING_LONG_TERM_BONDS** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 487.9% in value between 2026-04-01 (95678.74807691004) and 2026-07-01 (562540.8637620201).
+- **minfin/BUDGET_FINANCING_LONG_TERM_BONDS** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Unexpected jump of 418.4% in value between 2023-01-01 (241522.33122000005) and 2023-04-01 (1252048.2134678098).
   - warning: Unexpected jump of 70.4% in value between 2023-04-01 (1252048.2134678098) and 2023-07-01 (370774.6680679901).
   - warning: Unexpected jump of 56.7% in value between 2023-07-01 (370774.6680679901) and 2023-10-01 (160702.58095640037).
   - warning: Unexpected jump of 405.5% in value between 2023-10-01 (160702.58095640037) and 2024-01-01 (812385.61813387).
   - warning: Unexpected jump of 87.7% in value between 2024-07-01 (1019705.7262130701) and 2024-10-01 (124990.8274763599).
   - warning: Unexpected jump of 807.9% in value between 2024-10-01 (124990.8274763599) and 2025-01-01 (1134831.99426041).
-- **minfin/BUDGET_FINANCING_BANKS** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 72.4% in value between 2026-04-01 (1025861.1509587801) and 2026-07-01 (282925.0440612498).
+- **minfin/BUDGET_FINANCING_BANKS** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Unexpected jump of 91.9% in value between 2023-01-01 (895406.5905271001) and 2023-04-01 (1717939.86949314).
   - warning: Unexpected jump of 70.2% in value between 2023-04-01 (1717939.86949314) and 2023-07-01 (512191.7640182604).
   - warning: Unexpected jump of 70.2% in value between 2023-07-01 (512191.7640182604) and 2023-10-01 (152597.5937606995).
@@ -2716,7 +2771,8 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 204.1% in value between 2024-10-01 (214882.05279849004) and 2025-01-01 (653408.38420761).
   - warning: Unexpected jump of 63.8% in value between 2025-01-01 (653408.38420761) and 2025-04-01 (1070014.22437744).
   - warning: Unexpected jump of 88.2% in value between 2026-01-01 (776687.8649514401) and 2026-04-01 (1461605.8187005399).
-- **minfin/BUDGET_FINANCING_INTL_ORGANIZATIONS** — fetch+validate+process: ok (downloaded=14, processed=14)
+  - warning: Unexpected jump of 61.2% in value between 2026-04-01 (1461605.8187005399) and 2026-07-01 (567241.07905846).
+- **minfin/BUDGET_FINANCING_INTL_ORGANIZATIONS** — fetch+validate+process: ok (downloaded=15, processed=15)
   - warning: Unexpected jump of 422.4% in value between 2023-01-01 (-44337.9314908) and 2023-04-01 (142958.63756759).
   - warning: Unexpected jump of 170.0% in value between 2023-04-01 (142958.63756759) and 2023-07-01 (-100097.21039999998).
   - warning: Unexpected jump of 93.0% in value between 2023-10-01 (-56918.329300110054) and 2024-01-01 (-109871.14630338999).
@@ -2726,7 +2782,8 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 114.1% in value between 2024-10-01 (531140.07071926) and 2025-01-01 (-74988.84902248999).
   - warning: Unexpected jump of 57.7% in value between 2025-10-01 (-53103.99076799996) and 2026-01-01 (-83765.43717707001).
   - warning: Unexpected jump of 70.7% in value between 2026-01-01 (-83765.43717707001) and 2026-04-01 (-142951.75581631996).
-- **minfin/OIL_EXPORT_DUTY** — fetch+validate+process: ok (downloaded=165, processed=165)
+  - warning: Unexpected jump of 363.2% in value between 2026-04-01 (-142951.75581631996) and 2026-07-01 (376251.74470133).
+- **minfin/OIL_EXPORT_DUTY** — fetch+validate+process: ok (downloaded=166, processed=166)
   - warning: Unexpected jump of 89.8% in own-period contribution between 2011-08-31 (318382.73670664) and 2012-01-31 (32514.54049838).
   - warning: Unexpected jump of 311.2% in own-period contribution between 2012-02-29 (37647.83507721001) and 2012-07-31 (154810.54143426998).
   - warning: Unexpected jump of 83.9% in own-period contribution between 2012-07-31 (154810.54143426998) and 2013-01-31 (24986.38236468).
@@ -2766,7 +2823,8 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 83.0% in own-period contribution between 2025-11-30 (145327.53142230003) and 2026-01-31 (24693.1721991).
   - warning: Unexpected jump of 504.1% in own-period contribution between 2026-02-28 (29597.561680619998) and 2026-03-31 (178788.51887331).
   - warning: Unexpected jump of 119.5% in own-period contribution between 2026-03-31 (178788.51887331) and 2026-05-31 (392419.41382727993).
-- **minfin/OIL_PRODUCTS_EXPORT_DUTY** — fetch+validate+process: ok (downloaded=161, processed=161)
+  - warning: Unexpected jump of 105.5% in own-period contribution between 2026-08-31 (178258.24979411007) and 2026-09-30 (366352.61610974).
+- **minfin/OIL_PRODUCTS_EXPORT_DUTY** — fetch+validate+process: ok (downloaded=162, processed=162)
   - warning: Unexpected jump of 59.4% in own-period contribution between 2013-07-31 (1675.3212564700007) and 2013-08-31 (2670.6546562999974).
   - warning: Unexpected jump of 74.0% in own-period contribution between 2013-08-31 (2670.6546562999974) and 2013-09-30 (4647.567547000002).
   - warning: Unexpected jump of 65.4% in own-period contribution between 2013-10-31 (5152.613029999997) and 2013-11-30 (8523.765842640001).
@@ -2823,6 +2881,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 63.7% in own-period contribution between 2026-05-31 (5026.86259207) and 2026-06-30 (1822.499613).
   - warning: Unexpected jump of 78.9% in own-period contribution between 2026-06-30 (1822.499613) and 2026-07-31 (385.11558830000104).
   - warning: Unexpected jump of 80.8% in own-period contribution between 2026-07-31 (385.11558830000104) and 2026-08-31 (696.1895696800002).
+  - warning: Unexpected jump of 255.7% in own-period contribution between 2026-08-31 (696.1895696800002) and 2026-09-30 (2476.4237969999995).
 - **minfin/NF_OIL_CIT_YTD** — fetch+validate+process: ok (downloaded=252, processed=252)
   - warning: Gap of 243 days between 2002-12-01 and 2003-08-01 is outside expected range for frequency=monthly (25-40d).
   - warning: Gap of 244 days between 2003-12-01 and 2004-08-01 is outside expected range for frequency=monthly (25-40d).
@@ -4365,7 +4424,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 211.8% in own-period contribution between 2026-03-01 (340000.0) and 2026-06-01 (1060000.0).
 - **minfin/STATE_NON_OIL_DEFICIT** — fetch+validate+process: ok (downloaded=13, processed=13)
   - warning: Unexpected jump of 59.0% in value between 2016-12-31 (-4229087.935576) and 2017-12-31 (-6724167.500391).
-- **minfin/STATE_NON_OIL_DEFICIT_YTD** — fetch+validate+process: ok (downloaded=165, processed=165)
+- **minfin/STATE_NON_OIL_DEFICIT_YTD** — fetch+validate+process: ok (downloaded=166, processed=166)
   - warning: Unexpected jump of 91.3% in own-period contribution between 2011-08-31 (-1214428.581227) and 2012-01-31 (-106148.264142).
   - warning: Unexpected jump of 1257.6% in own-period contribution between 2012-02-29 (-100051.51042499999) and 2012-07-31 (-1358305.214791).
   - warning: Unexpected jump of 97.9% in own-period contribution between 2012-07-31 (-1358305.214791) and 2013-01-31 (-28868.162889).
@@ -4455,6 +4514,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 465.6% in own-period contribution between 2026-02-28 (-227428.5391961) and 2026-03-31 (-1286279.63176726).
   - warning: Unexpected jump of 65.0% in own-period contribution between 2026-03-31 (-1286279.63176726) and 2026-05-31 (-2122144.6837395).
   - warning: Unexpected jump of 100.9% in own-period contribution between 2026-07-31 (-1453274.9487149697) and 2026-08-31 (12894.802966239862).
+  - warning: Unexpected jump of 7686.5% in own-period contribution between 2026-08-31 (12894.802966239862) and 2026-09-30 (-978260.0465663401).
 - **imf/FSI_CAPITAL_ADEQUACY** — fetch+validate+process: ok (downloaded=72, processed=72)
   - warning: Unexpected jump of 79.6% in value between 2009-12-31 (9.519266702175827) and 2010-03-31 (17.10033929150852).
 - **imf/FSI_TIER1_CAPITAL** — fetch+validate+process: ok (downloaded=72, processed=72)
@@ -4786,10 +4846,10 @@ Cross-source checks failed: 0
 - **ardfm/BANK_PROVISIONS_IFRS** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_CAPITAL_ADEQUACY_K1** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_CAPITAL_ADEQUACY_K2** — fetch+validate+process: ok (downloaded=5, processed=5)
-- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=53, processed=53)
-- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=54, processed=54)
-- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=54, processed=54)
-  - warning: Unexpected jump of 100.0% in own-period contribution between 2022-03-01 (795.9) and 2022-04-01 (0.0).
+- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=54, processed=54)
+- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=55, processed=55)
+- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=55, processed=55)
+  - warning: Unexpected jump of 100.0% in own-period contribution between 2022-02-01 (795.9) and 2022-03-01 (0.0).
   - warning: Unexpected jump of 100.0% in own-period contribution between 2023-01-01 (795.9) and 2023-02-01 (0.0).
   - warning: Unexpected jump of 100.0% in own-period contribution between 2024-01-01 (795.9) and 2024-02-01 (0.0).
   - warning: Unexpected jump of 100.0% in own-period contribution between 2025-01-01 (795.9) and 2025-02-01 (0.0).
@@ -4801,7 +4861,7 @@ Cross-source checks failed: 0
 - **ardfm/BANK_DEPOSITS_LEGAL_ENTITIES** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_DEPOSITS_INDIVIDUALS** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_DEPOSITS_INDIVIDUALS_FX_SHARE** — fetch+validate+process: ok (downloaded=5, processed=5)
-- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=54, processed=54)
+- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=55, processed=55)
 - **ardfm/BANK_ASSETS_TO_GDP** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_LOANS_TO_GDP** — fetch+validate+process: ok (downloaded=5, processed=5)
 - **ardfm/BANK_DEPOSITS_TO_GDP** — fetch+validate+process: ok (downloaded=5, processed=5)
@@ -5711,7 +5771,7 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 78.8% in value between 2015-12-22 (161.1) and 2015-12-23 (34.2).
   - warning: Unexpected jump of 72.7% in value between 2015-12-23 (34.2) and 2015-12-24 (59.05).
   - warning: Unexpected jump of 54.6% in value between 2020-03-06 (8.68) and 2020-03-10 (13.42).
-- **kase/SWAP_1D** — fetch+validate+process: ok (downloaded=2839, processed=2839)
+- **kase/SWAP_1D** — fetch+validate+process: ok (downloaded=2840, processed=2840)
   - warning: Gap of 6 days between 2014-07-02 and 2014-07-08 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 5 days between 2014-10-09 and 2014-10-14 is outside expected range for frequency=daily (1-4d).
   - warning: Gap of 5 days between 2014-11-07 and 2014-11-12 is outside expected range for frequency=daily (1-4d).
@@ -11699,7 +11759,7 @@ Cross-source checks failed: 0
   - warning: [CONSUMER.KRW] Unexpected jump of 63.6% in value between 1998-12-31 (18.5326) and 1999-12-31 (6.7539).
   - warning: [CONSUMER.KRW] Unexpected jump of 76.8% in value between 1999-12-31 (6.7539) and 2000-12-31 (1.5675).
   - warning: ... 121 more warnings not listed
-- **minfin/REGIONAL_BUDGETS_YTD** — fetch+validate+process: ok (downloaded=81153, processed=81153)
+- **minfin/REGIONAL_BUDGETS_YTD** — fetch+validate+process: ok (downloaded=81762, processed=81762)
   - warning: 2015-12-01 EXP: regions sum to 3587789, all local budgets 3606789
   - warning: 2020-02-01 EXP: regions sum to 658731, all local budgets 682290
   - warning: 2020-02-01 REV: regions sum to 923153, all local budgets 952817
@@ -11770,6 +11830,7 @@ Cross-source checks failed: 0
   - warning: [BALANCE@ABY] Unexpected jump of 117.6% in value between 2026-03-01 (14642.96803023) and 2026-05-01 (-2578.49146372).
   - warning: [BALANCE@ABY] Unexpected jump of 112.1% in value between 2026-05-01 (-2578.49146372) and 2026-06-01 (-5468.79000676).
   - warning: [BALANCE@ABY] Unexpected jump of 224.8% in value between 2026-07-01 (-7894.70367436) and 2026-08-01 (9855.58059953).
+  - warning: [BALANCE@ABY] Unexpected jump of 88.7% in value between 2026-08-01 (9855.58059953) and 2026-09-01 (1111.44208477).
   - warning: [BALANCE@AKM] Gap of 61 days between 2020-03-01 and 2020-05-01 is outside expected range for frequency=monthly (25-40d).
   - warning: [BALANCE@AKM] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
   - warning: [BALANCE@AKM] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
@@ -11782,9 +11843,8 @@ Cross-source checks failed: 0
   - warning: [BALANCE@AKM] Unexpected jump of 128.4% in value between 2014-09-01 (1360.9977437799998) and 2014-10-01 (3109.05012875).
   - warning: [BALANCE@AKM] Unexpected jump of 187.9% in value between 2014-11-01 (3321.7764704200004) and 2014-12-01 (-2921.29721461).
   - warning: [BALANCE@AKM] Unexpected jump of 150.1% in value between 2014-12-01 (-2921.29721461) and 2015-01-01 (1464.71492665).
-  - warning: [BALANCE@AKM] Unexpected jump of 106.3% in value between 2015-03-01 (441.06782064) and 2015-04-01 (-27.94677311).
-  - warning: ... 26278 more warnings not listed
-- **minfin/RB_QUASIFISCAL_YTD** — fetch+validate+process: ok (downloaded=8262, processed=8262)
+  - warning: ... 26302 more warnings not listed
+- **minfin/RB_QUASIFISCAL_YTD** — fetch+validate+process: ok (downloaded=8313, processed=8313)
   - warning: EQUITY: year to date falls from 29861.0 (2020-02) to 25794.6 (2020-03)
   - warning: EQUITY: year to date falls from 82437.2 (2022-09) to 81428.9 (2022-10)
   - warning: EQUITY.OTHER_QUASI: year to date falls from 8780.2 (2020-02) to 4713.8 (2020-03)
@@ -11823,7 +11883,7 @@ Cross-source checks failed: 0
   - warning: [EQUITY] Unexpected jump of 84092.9% in own-period contribution between 2016-01-01 (57.607739) and 2016-02-01 (48501.62485).
   - warning: [EQUITY] Unexpected jump of 74.4% in own-period contribution between 2016-02-01 (48501.62485) and 2016-03-01 (12418.481119000004).
   - warning: [EQUITY] Unexpected jump of 100.0% in own-period contribution between 2016-04-01 (14004.623) and 2016-05-01 (0.0).
-  - warning: ... 1028 more warnings not listed
+  - warning: ... 1034 more warnings not listed
 - **imf/IMF_WEO_WORLD** — fetch+validate+process: ok (downloaded=82757, processed=82757)
   - warning: not re-downloaded: last download 2026-11-09, refreshed every 7 days
   - warning: [ABW.BCA_NGDPD@world] Unexpected jump of 144.9% in value between 1999-12-31 (-25.270688) and 2000-12-31 (11.344937).
@@ -11921,9 +11981,7 @@ Cross-source checks failed: 0
   - warning: [T] Gap of 365 days between 2010-01-01 and 2011-01-01 is outside expected range for frequency=quarterly (80-100d).
   - warning: ... 9 more warnings not listed
 - **krem/TARIFF_DECISIONS** — fetch+validate+process: ok (downloaded=3793, processed=3793)
-  - warning: records by source: {'documents': 3481, 'news': 90, 'electricity caps': 20, 'gas caps': 202}
-  - warning: documents skipped by reason: {'estimate_only': 3, 'kazakh': 73, 'no_date': 157, 'no_service': 11, 'not_a_decision': 696, 'out_of_scope': 56}
-  - warning: news clauses skipped by reason: {'no_region': 24, 'no_verb': 31, 'out_of_scope': 1, 'plan_or_unchanged': 28}
+  - warning: not re-downloaded: last download 2026-11-13, refreshed every 1 days
 - **derived/TARIFF_CHANGE_MONTHS** — fetch+validate+process: ok (downloaded=305, processed=305)
   - warning: [COLD_WATER] Gap of 485 days between 2005-01-01 and 2006-05-01 is outside expected range for frequency=monthly (25-40d).
   - warning: [COLD_WATER] Gap of 549 days between 2006-05-01 and 2007-11-01 is outside expected range for frequency=monthly (25-40d).
@@ -12369,7 +12427,7 @@ Cross-source checks failed: 0
   - warning: [DEBT.HH.DPD0] Gap of 92 days between 2025-10-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
   - warning: [DEBT.HH.DPD1_30] Gap of 92 days between 2025-07-01 and 2025-10-01 is outside expected range for frequency=monthly (25-40d).
   - warning: ... 80 more warnings not listed
-- **nbk/GOV_SECURITIES_OUTSTANDING_BY_TYPE** — fetch+validate+process: ok (downloaded=3000, processed=3000)
+- **nbk/GOV_SECURITIES_OUTSTANDING_BY_TYPE** — fetch+validate+process: ok (downloaded=3030, processed=3030)
   - warning: [MAOKAM] Unexpected jump of 100.0% in value between 2012-11-01 (9665.0) and 2012-12-01 (0.0).
   - warning: [MEKKAM] Unexpected jump of 50.6% in value between 2014-07-01 (28154.0) and 2014-08-01 (13911.0).
   - warning: [MEKKAM] Unexpected jump of 90.2% in value between 2014-10-01 (14151.0) and 2014-11-01 (1384.0).
@@ -12445,45 +12503,45 @@ Cross-source checks failed: 0
   - warning: [NET] Unexpected jump of 477.5% in value between 1999-10-01 (16.9) and 1999-11-01 (97.6).
   - warning: ... 164 more warnings not listed
 - **nbk/NBK_OPEN_POSITION** — fetch+validate+process: ok (downloaded=1568, processed=1568)
-  - warning: [DEPOSITS.AVG] Unexpected jump of 51.2% in value between 2020-04-01 (-150.5064) and 2020-05-01 (-227.5133).
-  - warning: [DEPOSITS.AVG] Unexpected jump of 116.0% in value between 2020-11-01 (-216.1724) and 2020-12-01 (-467.039).
-  - warning: [DEPOSITS.AVG] Unexpected jump of 50.6% in value between 2021-04-01 (-371.4877) and 2021-05-01 (-559.5004).
-  - warning: [DEPOSITS.AVG] Unexpected jump of 80.4% in value between 2022-06-01 (-350.1364) and 2022-07-01 (-631.5625).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 69.1% in value between 2020-02-01 (-135.12) and 2020-03-01 (-228.45).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 79.8% in value between 2020-09-01 (-145.15) and 2020-10-01 (-260.95).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 204.4% in value between 2020-11-01 (-236.67) and 2020-12-01 (-720.4).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 64.2% in value between 2020-12-01 (-720.4) and 2021-01-01 (-258.2).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 80.3% in value between 2021-04-01 (-255.0553) and 2021-05-01 (-459.8097).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 57.1% in value between 2021-05-01 (-459.8097) and 2021-06-01 (-197.3043).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 105.3% in value between 2021-07-01 (-249.456) and 2021-08-01 (-512.14).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 63.2% in value between 2021-11-01 (-349.991) and 2021-12-01 (-571.278).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 56.5% in value between 2022-04-01 (-257.85) and 2022-05-01 (-403.45).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 50.3% in value between 2022-12-01 (-894.8) and 2023-01-01 (-444.45).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 56.1% in value between 2023-02-01 (-366.15) and 2023-03-01 (-571.73).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 55.8% in value between 2024-04-01 (-753.7) and 2024-05-01 (-1174.6).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 113.3% in value between 2024-11-01 (-640.7) and 2024-12-01 (-1366.9).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 67.1% in value between 2025-11-01 (-848.86) and 2025-12-01 (-1418.3).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 68.9% in value between 2026-02-01 (-552.52) and 2026-03-01 (-933.38).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 81.0% in value between 2026-07-01 (-1096.11) and 2026-08-01 (-1984.47).
-  - warning: [DEPOSITS.EOM] Unexpected jump of 66.8% in value between 2026-08-01 (-1984.47) and 2026-09-01 (-659.12).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 64.9% in value between 2020-01-01 (-0.5695) and 2020-02-01 (-0.939).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 278.1% in value between 2020-02-01 (-0.939) and 2020-03-01 (1.6723).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 54.2% in value between 2020-03-01 (1.6723) and 2020-04-01 (0.7663).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 2142.0% in value between 2020-04-01 (0.7663) and 2020-05-01 (-15.6477).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 78.6% in value between 2020-05-01 (-15.6477) and 2020-06-01 (-3.3465).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 423.1% in value between 2020-06-01 (-3.3465) and 2020-07-01 (-17.5062).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 59.8% in value between 2020-07-01 (-17.5062) and 2020-08-01 (-7.0325).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 101.3% in value between 2020-08-01 (-7.0325) and 2020-09-01 (0.0896).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 429.0% in value between 2020-09-01 (0.0896) and 2020-10-01 (0.474).
+  - warning: [NOTES.AVG] Unexpected jump of 68.4% in value between 2026-01-01 (-485.7137) and 2026-02-01 (-818.044).
+  - warning: [NOTES.AVG] Unexpected jump of 81.3% in value between 2026-02-01 (-818.044) and 2026-03-01 (-1483.0106).
+  - warning: [NOTES.EOM] Unexpected jump of 97.7% in value between 2026-01-01 (-568.31) and 2026-02-01 (-1123.57).
+  - warning: [NOTES.EOM] Unexpected jump of 52.5% in value between 2026-02-01 (-1123.57) and 2026-03-01 (-1713.38).
+  - warning: [DEPOSIT_AUCTION.AVG] Unexpected jump of 99.2% in value between 2020-03-01 (-288.3511) and 2020-04-01 (-574.2615).
+  - warning: [DEPOSIT_AUCTION.AVG] Unexpected jump of 62.0% in value between 2020-12-01 (-833.5583) and 2021-01-01 (-1350.0942).
+  - warning: [DEPOSIT_AUCTION.AVG] Unexpected jump of 51.5% in value between 2021-11-01 (-2103.8307) and 2021-12-01 (-1021.08).
+  - warning: [DEPOSIT_AUCTION.AVG] Unexpected jump of 69.6% in value between 2023-09-01 (-746.5238) and 2023-10-01 (-1266.3333).
+  - warning: [DEPOSIT_AUCTION.AVG] Unexpected jump of 52.9% in value between 2023-10-01 (-1266.3333) and 2023-11-01 (-1935.6136).
+  - warning: [DEPOSIT_AUCTION.AVG] Unexpected jump of 57.8% in value between 2023-12-01 (-1968.65) and 2024-01-01 (-3105.7595).
+  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 205.4% in value between 2020-03-01 (-216.044) and 2020-04-01 (-659.788).
+  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 81.4% in value between 2020-11-01 (-622.64) and 2020-12-01 (-1129.665).
+  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 63.2% in value between 2021-08-01 (-1233.81) and 2021-09-01 (-2014.121).
+  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 95.2% in value between 2022-08-01 (-442.0) and 2022-09-01 (-863.0).
+  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 74.6% in value between 2023-03-01 (-1143.0) and 2023-04-01 (-290.0).
+  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 166.2% in value between 2023-04-01 (-290.0) and 2023-05-01 (-772.0).
+  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 74.2% in value between 2023-09-01 (-716.0) and 2023-10-01 (-1247.0).
+  - warning: [DEPOSIT_AUCTION.EOM] Unexpected jump of 59.8% in value between 2023-10-01 (-1247.0) and 2023-11-01 (-1993.0).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 7197.3% in value between 2020-01-01 (1.1325) and 2020-02-01 (82.6421).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 125.0% in value between 2020-02-01 (82.6421) and 2020-03-01 (185.9319).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 92.5% in value between 2020-03-01 (185.9319) and 2020-04-01 (13.9035).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 89.6% in value between 2020-04-01 (13.9035) and 2020-05-01 (1.4406).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 100.0% in value between 2020-05-01 (1.4406) and 2020-06-01 (0.0).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 68.7% in value between 2020-08-01 (26.1537) and 2020-09-01 (8.1793).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 215.3% in value between 2020-10-01 (7.4164) and 2020-11-01 (23.382).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 93.3% in value between 2020-11-01 (23.382) and 2020-12-01 (1.5667).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 2485.4% in value between 2021-01-01 (1.7779) and 2021-02-01 (45.9651).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 76.3% in value between 2021-02-01 (45.9651) and 2021-03-01 (10.9061).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 84.9% in value between 2021-03-01 (10.9061) and 2021-04-01 (1.6436).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 100.0% in value between 2021-06-01 (2.4189) and 2021-07-01 (0.0).
   - warning: ... 210 more warnings not listed
 - **nbk/NBK_DEPOSIT_AUCTIONS** — fetch+validate+process: ok (downloaded=282, processed=282)
   - warning: [VOLUME] Unexpected jump of 120.9% in value between 2019-02-01 (687.24) and 2019-03-01 (1518.0).
   - warning: [VOLUME] Unexpected jump of 77.4% in value between 2019-04-01 (1787.5) and 2019-05-01 (3171.0).
   - warning: [VOLUME] Unexpected jump of 179.8% in value between 2020-03-01 (1087.573) and 2020-04-01 (3042.614).
   - warning: [VOLUME] Unexpected jump of 102.2% in value between 2023-09-01 (3085.0) and 2023-10-01 (6238.0).
-  - warning: [VOLUME] Unexpected jump of 61.3% in value between 2026-10-01 (28198.008) and 2026-11-01 (10908.2).
+  - warning: [VOLUME] Unexpected jump of 54.6% in value between 2026-10-01 (28198.008) and 2026-11-01 (12790.778).
   - warning: [N] Unexpected jump of 88.9% in value between 2019-02-01 (9.0) and 2019-03-01 (17.0).
-  - warning: [N] Unexpected jump of 57.1% in value between 2026-10-01 (21.0) and 2026-11-01 (9.0).
+  - warning: [N] Unexpected jump of 52.4% in value between 2026-10-01 (21.0) and 2026-11-01 (10.0).
 - **nbk/LOAN_RATES_BY_PURPOSE** — fetch+validate+process: ok (downloaded=2167, processed=2167)
   - warning: [FX.ALL] Unexpected jump of 61.0% in value between 2022-02-01 (3.311896693488623) and 2022-03-01 (5.332982679886961).
   - warning: [FX.ALL] Unexpected jump of 54.0% in value between 2022-09-01 (3.5818298339463728) and 2022-10-01 (5.515927164081838).
@@ -12990,13 +13048,6 @@ Cross-source checks failed: 0
 - **derived/OUTPUT_GAP** — fetch+validate+process: ok (downloaded=428, processed=428)
 - **derived/CREDIT_GAP** — fetch+validate+process: ok (downloaded=288, processed=288)
 - **derived/FISCAL_STANCE** — fetch+validate+process: ok (downloaded=73, processed=73)
-- **derived/DOLLARIZATION** — fetch+validate+process: ok (downloaded=506, processed=506)
-  - warning: [BUSINESS_LOANS_FX_SHARE] Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: [BUSINESS_LOANS_FX_SHARE] Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: [BUSINESS_LOANS_FX_SHARE] Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: [BUSINESS_LOANS_FX_SHARE] Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: [BUSINESS_LOANS_FX_SHARE] Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
-  - warning: [BUSINESS_LOANS_FX_SHARE] Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
 - **derived/YIELD_CURVE_SPREADS** — fetch+validate+process: ok (downloaded=558, processed=558)
   - warning: [REAL_GS_10Y_EX_ANTE] Gap of 62 days between 2021-12-01 and 2022-02-01 is outside expected range for frequency=monthly (25-40d).
 - **ratings/SOVEREIGN_RATINGS** — fetch+validate+process: ok (downloaded=2527, processed=2527)
@@ -13024,6 +13075,155 @@ Cross-source checks failed: 0
   - warning: [SK_GOV_LOANS] Unexpected jump of 65.2% in value between 2012-12-31 (770641.0) and 2013-12-31 (268558.0).
   - warning: [SK_GOV_LOANS] Unexpected jump of 54.1% in value between 2013-12-31 (268558.0) and 2014-12-31 (413744.0).
   - warning: [SK_GOV_LOANS] Unexpected jump of 109.4% in value between 2014-12-31 (413744.0) and 2015-12-31 (866437.0).
+- **minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD** — fetch+validate+process: ok (downloaded=3797, processed=3797)
+  - warning: [LOCAL.110] Gap of 92 days between 2025-03-01 and 2025-06-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [LOCAL.110] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [LOCAL.110] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [LOCAL.110] Unexpected jump of 305.0% in own-period contribution between 2025-03-01 (279083.8523) and 2025-06-01 (1130261.0204).
+  - warning: [LOCAL.110] Unexpected jump of 85.1% in own-period contribution between 2025-06-01 (1130261.0204) and 2025-07-01 (167977.79209999996).
+  - warning: [LOCAL.110] Unexpected jump of 111.2% in own-period contribution between 2026-03-01 (297021.01599999995) and 2026-05-01 (627282.1054000001).
+  - warning: [LOCAL.110] Unexpected jump of 68.3% in own-period contribution between 2026-06-01 (573586.5515999999) and 2026-07-01 (181731.89789999998).
+  - warning: [LOCAL.111] Gap of 92 days between 2025-03-01 and 2025-06-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [LOCAL.111] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [LOCAL.111] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [LOCAL.111] Unexpected jump of 279.9% in own-period contribution between 2025-03-01 (255767.8863) and 2025-06-01 (971564.1157999999).
+  - warning: [LOCAL.111] Unexpected jump of 86.0% in own-period contribution between 2025-06-01 (971564.1157999999) and 2025-07-01 (135909.91470000008).
+  - warning: [LOCAL.111] Unexpected jump of 113.3% in own-period contribution between 2026-03-01 (267256.6874) and 2026-05-01 (569968.7545).
+  - warning: [LOCAL.111] Unexpected jump of 67.8% in own-period contribution between 2026-06-01 (450856.5223999999) and 2026-07-01 (145122.8994).
+  - warning: [LOCAL.112] Gap of 92 days between 2025-03-01 and 2025-06-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [LOCAL.112] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [LOCAL.112] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [LOCAL.112] Unexpected jump of 65.1% in own-period contribution between 2025-06-01 (20750.6742) and 2025-07-01 (7241.623899999999).
+  - warning: [LOCAL.112] Unexpected jump of 100.9% in own-period contribution between 2025-09-01 (5641.559599999993) and 2025-10-01 (11333.078000000009).
+  - warning: [LOCAL.112] Unexpected jump of 343.3% in own-period contribution between 2026-01-01 (3927.7961) and 2026-02-01 (17412.0921).
+  - warning: [LOCAL.112] Unexpected jump of 54.0% in own-period contribution between 2026-07-01 (9968.046799999996) and 2026-08-01 (4587.004199999996).
+  - warning: [LOCAL.113] Gap of 92 days between 2025-03-01 and 2025-06-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [LOCAL.113] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [LOCAL.113] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [LOCAL.113] Unexpected jump of 53.6% in own-period contribution between 2025-02-01 (10493.9316) and 2025-03-01 (4869.6641).
+  - warning: [LOCAL.113] Unexpected jump of 2427.4% in own-period contribution between 2025-03-01 (4869.6641) and 2025-06-01 (123073.85439999998).
+  - warning: [LOCAL.113] Unexpected jump of 82.2% in own-period contribution between 2025-06-01 (123073.85439999998) and 2025-07-01 (21915.271600000007).
+  - warning: [LOCAL.113] Unexpected jump of 59.0% in own-period contribution between 2025-07-01 (21915.271600000007) and 2025-08-01 (8993.306299999997).
+  - warning: [LOCAL.113] Unexpected jump of 54.5% in own-period contribution between 2025-08-01 (8993.306299999997) and 2025-09-01 (4091.268700000015).
+  - warning: [LOCAL.113] Unexpected jump of 74.3% in own-period contribution between 2025-11-01 (2834.886300000013) and 2026-01-01 (4942.291).
+  - warning: ... 2534 more warnings not listed
+- **minfin/RESOURCE_PAYMENTS_YTD** — fetch+validate+process: ok (downloaded=196, processed=196)
+  - warning: [BONUS_NON_OIL] Gap of 92 days between 2025-03-01 and 2025-06-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BONUS_NON_OIL] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BONUS_NON_OIL] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BONUS_NON_OIL] Unexpected jump of 99.3% in own-period contribution between 2025-02-01 (10154.9048) and 2025-03-01 (69.51360000000022).
+  - warning: [BONUS_NON_OIL] Unexpected jump of 5455.7% in own-period contribution between 2025-03-01 (69.51360000000022) and 2025-06-01 (3861.9449000000004).
+  - warning: [BONUS_NON_OIL] Unexpected jump of 98.3% in own-period contribution between 2025-07-01 (5460.318199999998) and 2025-08-01 (94.44580000000133).
+  - warning: [BONUS_NON_OIL] Unexpected jump of 345.1% in own-period contribution between 2025-08-01 (94.44580000000133) and 2025-09-01 (420.3852999999981).
+  - warning: [BONUS_NON_OIL] Unexpected jump of 1838.9% in own-period contribution between 2025-09-01 (420.3852999999981) and 2025-10-01 (8150.7343).
+  - warning: [BONUS_NON_OIL] Unexpected jump of 95.4% in own-period contribution between 2025-10-01 (8150.7343) and 2025-11-01 (376.77000000000044).
+  - warning: [BONUS_NON_OIL] Unexpected jump of 74.4% in own-period contribution between 2025-11-01 (376.77000000000044) and 2026-01-01 (96.2817).
+  - warning: [BONUS_NON_OIL] Unexpected jump of 84.5% in own-period contribution between 2026-02-01 (143.3933) and 2026-03-01 (264.6173).
+  - warning: [BONUS_NON_OIL] Unexpected jump of 608.0% in own-period contribution between 2026-03-01 (264.6173) and 2026-05-01 (1873.6169).
+  - warning: [BONUS_NON_OIL] Unexpected jump of 86.3% in own-period contribution between 2026-05-01 (1873.6169) and 2026-06-01 (256.55899999999974).
+  - warning: [BONUS_NON_OIL] Unexpected jump of 1405.4% in own-period contribution between 2026-06-01 (256.55899999999974) and 2026-07-01 (3862.2523000000006).
+  - warning: [BONUS_NON_OIL] Unexpected jump of 53.1% in own-period contribution between 2026-08-01 (2846.846199999999) and 2026-09-01 (1336.5761000000002).
+  - warning: [EPT_NON_OIL] Gap of 92 days between 2025-03-01 and 2025-06-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [EPT_NON_OIL] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [EPT_NON_OIL] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [EPT_NON_OIL] Unexpected jump of 5100.0% in own-period contribution between 2025-03-01 (0.0001) and 2025-06-01 (0.0052).
+  - warning: [EPT_NON_OIL] Unexpected jump of 2986798.1% in own-period contribution between 2025-06-01 (0.0052) and 2025-07-01 (155.3187).
+  - warning: [EPT_NON_OIL] Unexpected jump of 99.2% in own-period contribution between 2025-07-01 (155.3187) and 2025-08-01 (1.1988999999999805).
+  - warning: [EPT_NON_OIL] Unexpected jump of 4393.0% in own-period contribution between 2025-08-01 (1.1988999999999805) and 2025-09-01 (53.86700000000002).
+  - warning: [EPT_NON_OIL] Unexpected jump of 10973.8% in own-period contribution between 2025-09-01 (53.86700000000002) and 2025-10-01 (5965.1212).
+  - warning: [EPT_NON_OIL] Unexpected jump of 72.6% in own-period contribution between 2025-10-01 (5965.1212) and 2025-11-01 (1635.9123).
+  - warning: [EPT_NON_OIL] Unexpected jump of 92.1% in own-period contribution between 2025-11-01 (1635.9123) and 2026-01-01 (128.6134).
+  - warning: [EPT_NON_OIL] Unexpected jump of 71.8% in own-period contribution between 2026-01-01 (128.6134) and 2026-02-01 (36.30669999999998).
+  - warning: [EPT_NON_OIL] Unexpected jump of 99.7% in own-period contribution between 2026-02-01 (36.30669999999998) and 2026-03-01 (0.11190000000001987).
+  - warning: [EPT_NON_OIL] Unexpected jump of 100.0% in own-period contribution between 2026-03-01 (0.11190000000001987) and 2026-05-01 (0.0).
+  - warning: [EPT_NON_OIL] Unexpected jump of 375857.1% in own-period contribution between 2026-06-01 (0.0013999999999896318) and 2026-07-01 (-5.260600000000011).
+  - warning: [EPT_NON_OIL] Unexpected jump of 100.0% in own-period contribution between 2026-07-01 (-5.260600000000011) and 2026-08-01 (0.00010000000000331966).
+  - warning: ... 146 more warnings not listed
+- **minfin/BUDGET_RECEIPTS_BY_CODE_YTD** — fetch+validate+process: ok (downloaded=7184, processed=7184)
+  - warning: [REP.1] Gap of 92 days between 2025-03-01 and 2025-06-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [REP.1] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [REP.1] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [REP.1] Unexpected jump of 65.2% in own-period contribution between 2025-02-01 (2301508.4778) and 2025-03-01 (799901.3155999999).
+  - warning: [REP.1] Unexpected jump of 321.1% in own-period contribution between 2025-03-01 (799901.3155999999) and 2025-06-01 (3368319.3776000002).
+  - warning: [REP.1] Unexpected jump of 77.1% in own-period contribution between 2025-06-01 (3368319.3776000002) and 2025-07-01 (769813.5168000003).
+  - warning: [REP.1] Unexpected jump of 130.1% in own-period contribution between 2025-07-01 (769813.5168000003) and 2025-08-01 (1771430.1584).
+  - warning: [REP.1] Unexpected jump of 133.6% in own-period contribution between 2025-10-01 (870575.1795000006) and 2025-11-01 (2033940.2049000002).
+  - warning: [REP.1] Unexpected jump of 53.7% in own-period contribution between 2025-11-01 (2033940.2049000002) and 2026-01-01 (941868.061).
+  - warning: [REP.1] Unexpected jump of 116.3% in own-period contribution between 2026-01-01 (941868.061) and 2026-02-01 (2037135.3476000002).
+  - warning: [REP.1] Unexpected jump of 187.5% in own-period contribution between 2026-03-01 (1098552.2703) and 2026-05-01 (3158039.4165).
+  - warning: [REP.1] Unexpected jump of 64.4% in own-period contribution between 2026-05-01 (3158039.4165) and 2026-06-01 (1124984.4907).
+  - warning: [REP.1] Unexpected jump of 132.3% in own-period contribution between 2026-07-01 (987451.027400001) and 2026-08-01 (2293561.4832999986).
+  - warning: [REP.101] Gap of 92 days between 2025-03-01 and 2025-06-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [REP.101] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [REP.101] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [REP.101] Unexpected jump of 53.7% in own-period contribution between 2025-02-01 (696571.3494) and 2025-03-01 (322406.5993).
+  - warning: [REP.101] Unexpected jump of 219.1% in own-period contribution between 2025-03-01 (322406.5993) and 2025-06-01 (1028807.4748000001).
+  - warning: [REP.101] Unexpected jump of 81.5% in own-period contribution between 2025-06-01 (1028807.4748000001) and 2025-07-01 (189832.3171000001).
+  - warning: [REP.101] Unexpected jump of 60.5% in own-period contribution between 2025-08-01 (267558.6636999999) and 2025-09-01 (429557.3857999998).
+  - warning: [REP.101] Unexpected jump of 111.8% in own-period contribution between 2026-03-01 (376936.02009999997) and 2026-05-01 (798514.9539000001).
+  - warning: [REP.101] Unexpected jump of 52.5% in own-period contribution between 2026-05-01 (798514.9539000001) and 2026-06-01 (379098.27419999987).
+  - warning: [REP.1011] Gap of 92 days between 2025-03-01 and 2025-06-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [REP.1011] Gap of 61 days between 2025-11-01 and 2026-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [REP.1011] Gap of 61 days between 2026-03-01 and 2026-05-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [REP.1011] Unexpected jump of 53.7% in own-period contribution between 2025-02-01 (696571.3494) and 2025-03-01 (322406.5993).
+  - warning: [REP.1011] Unexpected jump of 219.1% in own-period contribution between 2025-03-01 (322406.5993) and 2025-06-01 (1028807.4748000001).
+  - warning: [REP.1011] Unexpected jump of 81.5% in own-period contribution between 2025-06-01 (1028807.4748000001) and 2025-07-01 (189832.3171000001).
+  - warning: [REP.1011] Unexpected jump of 60.5% in own-period contribution between 2025-08-01 (267558.6636999999) and 2025-09-01 (429557.3857999998).
+  - warning: [REP.1011] Unexpected jump of 111.8% in own-period contribution between 2026-03-01 (376936.02009999997) and 2026-05-01 (798514.9539000001).
+  - warning: ... 4853 more warnings not listed
+- **legal/TAX_RATES** — fetch+validate+process: ok (downloaded=4739, processed=4739)
+  - warning: [PIT] Unexpected jump of 100.0% in value between 2006-12-01 (5.0) and 2007-01-01 (10.0).
+  - warning: [PIT_DIVIDENDS] Unexpected jump of 66.7% in value between 2006-12-01 (15.0) and 2007-01-01 (5.0).
+  - warning: [PIT_DIVIDENDS] Unexpected jump of 100.0% in value between 2022-12-01 (5.0) and 2023-01-01 (10.0).
+  - warning: [PENSION_EMPLOYER] Unexpected jump of 66.7% in value between 2024-12-01 (1.5) and 2025-01-01 (2.5).
+  - warning: [HEALTH_EMPLOYEE] Unexpected jump of 100.0% in value between 2020-12-01 (1.0) and 2021-01-01 (2.0).
+  - warning: [MET_COPPER] Unexpected jump of 50.0% in value between 2022-12-01 (5.7) and 2023-01-01 (8.55).
+  - warning: [MET_URANIUM] Unexpected jump of 67.6% in value between 2022-12-01 (18.5) and 2023-01-01 (6.0).
+  - warning: [EXCISE_CIGARETTES] Unexpected jump of 93.5% in value between 2013-12-01 (1550.0) and 2014-01-01 (3000.0).
+  - warning: [EXCISE_PETROL] Unexpected jump of 133.3% in value between 2015-11-01 (4500.0) and 2015-12-01 (10500.0).
+  - warning: [EXCISE_PETROL] Unexpected jump of 132.7% in value between 2019-12-01 (10500.0) and 2020-01-01 (24435.0).
+  - warning: [EXCISE_PETROL] Unexpected jump of 56.1% in value between 2022-03-01 (24435.0) and 2022-04-01 (38134.0).
+  - warning: [EXCISE_DIESEL] Gap of 2038 days between 2016-09-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [EXCISE_DIESEL] Unexpected jump of 6515.9% in value between 2016-09-01 (540.0) and 2022-04-01 (35726.0).
+  - warning: [OIL_EXPORT_DUTY_RATE] Unexpected jump of 85.4% in value between 2008-09-01 (109.91) and 2008-10-01 (203.8).
+  - warning: [OIL_EXPORT_DUTY_RATE] Unexpected jump of 100.0% in value between 2009-01-01 (203.8) and 2009-02-01 (0.0).
+  - warning: [OIL_EXPORT_DUTY_RATE] Unexpected jump of 100.0% in value between 2010-12-01 (20.0) and 2011-01-01 (40.0).
+- **bns/ENVIRONMENTAL_TAXES_BY_OKED** — fetch+validate+process: ok (downloaded=1050, processed=1050)
+  - warning: [ENERGY.A] Unexpected jump of 81.4% in value between 2022-12-31 (7.2918) and 2023-12-31 (13.226).
+  - warning: [ENERGY.ALL] Unexpected jump of 80.6% in value between 2020-12-31 (881692.0717) and 2021-12-31 (1592128.2289).
+  - warning: [ENERGY.ALL] Unexpected jump of 72.2% in value between 2021-12-31 (1592128.2289) and 2022-12-31 (2742055.4735).
+  - warning: [ENERGY.B] Unexpected jump of 53.8% in value between 2019-12-31 (1509566.794) and 2020-12-31 (697371.8135).
+  - warning: [ENERGY.B] Unexpected jump of 91.2% in value between 2020-12-31 (697371.8135) and 2021-12-31 (1333321.391).
+  - warning: [ENERGY.B] Unexpected jump of 69.9% in value between 2021-12-31 (1333321.391) and 2022-12-31 (2265429.1008).
+  - warning: [ENERGY.C] Unexpected jump of 66.7% in value between 2018-12-31 (43413.491) and 2019-12-31 (72351.2492).
+  - warning: [ENERGY.C] Unexpected jump of 75.5% in value between 2019-12-31 (72351.2492) and 2020-12-31 (126953.3543).
+  - warning: [ENERGY.C] Unexpected jump of 127.2% in value between 2021-12-31 (140555.764) and 2022-12-31 (319312.0988).
+  - warning: [ENERGY.D] Unexpected jump of 180.8% in value between 2017-12-31 (134.9702) and 2018-12-31 (378.9645).
+  - warning: [ENERGY.D] Unexpected jump of 73.3% in value between 2020-12-31 (663.052) and 2021-12-31 (176.9594).
+  - warning: [ENERGY.D] Unexpected jump of 90.9% in value between 2021-12-31 (176.9594) and 2022-12-31 (16.1685).
+  - warning: [ENERGY.D] Unexpected jump of 100.0% in value between 2023-12-31 (13.903) and 2024-12-31 (0.0003).
+  - warning: [ENERGY.D] Unexpected jump of 81233.3% in value between 2024-12-31 (0.0003) and 2025-12-31 (0.244).
+  - warning: [ENERGY.E] Unexpected jump of 100.0% in value between 2016-12-31 (0.0095) and 2017-12-31 (0.0).
+  - warning: [ENERGY.E] Unexpected jump of 198.5% in value between 2018-12-31 (0.091) and 2019-12-31 (-0.0896).
+  - warning: [ENERGY.E] Unexpected jump of 879.5% in value between 2019-12-31 (-0.0896) and 2020-12-31 (0.6984).
+  - warning: [ENERGY.E] Unexpected jump of 99.1% in value between 2020-12-31 (0.6984) and 2021-12-31 (0.0064).
+  - warning: [ENERGY.E] Unexpected jump of 1643.8% in value between 2021-12-31 (0.0064) and 2022-12-31 (0.1116).
+  - warning: [ENERGY.E] Unexpected jump of 86.4% in value between 2022-12-31 (0.1116) and 2023-12-31 (0.208).
+  - warning: [ENERGY.E] Unexpected jump of 242.0% in value between 2024-12-31 (0.1162) and 2025-12-31 (-0.165).
+  - warning: [ENERGY.F] Unexpected jump of 99.6% in value between 2016-12-31 (1906.8395) and 2017-12-31 (8.359).
+  - warning: [ENERGY.F] Unexpected jump of 304.5% in value between 2017-12-31 (8.359) and 2018-12-31 (33.812).
+  - warning: [ENERGY.F] Unexpected jump of 457.0% in value between 2019-12-31 (27.2678) and 2020-12-31 (151.8733).
+  - warning: [ENERGY.F] Unexpected jump of 64.6% in value between 2020-12-31 (151.8733) and 2021-12-31 (53.799).
+  - warning: [ENERGY.F] Unexpected jump of 349.8% in value between 2021-12-31 (53.799) and 2022-12-31 (242.0062).
+  - warning: [ENERGY.F] Unexpected jump of 97.1% in value between 2022-12-31 (242.0062) and 2023-12-31 (7.014).
+  - warning: [ENERGY.F] Unexpected jump of 70.9% in value between 2023-12-31 (7.014) and 2024-12-31 (2.0427).
+  - warning: [ENERGY.F] Unexpected jump of 129.3% in value between 2024-12-31 (2.0427) and 2025-12-31 (4.683).
+  - warning: [ENERGY.G] Unexpected jump of 73.9% in value between 2019-12-31 (28668.5192) and 2020-12-31 (7486.9677).
+  - warning: ... 147 more warnings not listed
+- **vap/TAX_STRUCTURE_BY_INDUSTRY** — fetch+validate+process: ok (downloaded=113, processed=113)
+  - warning: [CONSOLIDATED_TAX] Unexpected jump of 59.4% in value between 2021-12-31 (13329.466) and 2022-12-31 (21241.677).
+  - warning: [MINING.RECEIPTS] Unexpected jump of 61.4% in value between 2020-12-31 (2948.8) and 2021-12-31 (4758.6).
+  - warning: [MINING.RECEIPTS] Unexpected jump of 106.2% in value between 2021-12-31 (4758.6) and 2022-12-31 (9813.7).
 - **bns/SUBSISTENCE_MINIMUM_BY_REGION** — fetch+validate+process: ok (downloaded=9625, processed=9625)
   - warning: not re-downloaded: last download 2026-11-10, refreshed every 20 days
 - **legal/SOCIAL_STANDARDS** — fetch+validate+process: ok (downloaded=1255, processed=1255)
@@ -13279,6 +13479,90 @@ Cross-source checks failed: 0
   - warning: [B7g.S11] Unexpected jump of 140.7% in value between 2015-12-31 (4414657.2) and 2016-12-31 (10624470.6).
   - warning: [B7g.S12] Unexpected jump of 102.8% in value between 2012-12-31 (569462.9) and 2013-12-31 (1155026.6).
   - warning: ... 56 more warnings not listed
+- **nbk/DEPOSITS_BY_CURRENCY** — fetch+validate+process: ok (downloaded=7266, processed=7266)
+  - warning: [FX.OTHER.LEGAL] Unexpected jump of 50.4% in value between 1999-05-01 (6699.0) and 1999-06-01 (10075.0).
+  - warning: [FX.OTHER.LEGAL] Unexpected jump of 87.0% in value between 2000-06-01 (21020.0) and 2000-07-01 (39317.0).
+  - warning: [FX.OTHER.LEGAL] Unexpected jump of 50.4% in value between 2001-07-01 (41267.0) and 2001-08-01 (62073.0).
+  - warning: [FX.OTHER.LEGAL] Unexpected jump of 65.2% in value between 2004-12-01 (183876.0) and 2005-01-01 (303802.0).
+  - warning: [FX.TRANSFERABLE] Unexpected jump of 119.7% in value between 2004-11-01 (91628.0) and 2004-12-01 (201264.0).
+  - warning: [FX.TRANSFERABLE] Unexpected jump of 62.9% in value between 2004-12-01 (201264.0) and 2005-01-01 (74758.0).
+  - warning: [FX.TRANSFERABLE] Unexpected jump of 56.1% in value between 2005-03-01 (81493.0) and 2005-04-01 (127213.0).
+  - warning: [FX.TRANSFERABLE] Unexpected jump of 70.3% in value between 2009-01-01 (269794.0) and 2009-02-01 (459409.0).
+  - warning: [FX.TRANSFERABLE.HOUSEHOLDS] Unexpected jump of 50.8% in value between 2001-06-01 (6896.0) and 2001-07-01 (10400.0).
+  - warning: [FX.TRANSFERABLE.HOUSEHOLDS] Unexpected jump of 123.1% in value between 2001-07-01 (10400.0) and 2001-08-01 (23203.0).
+  - warning: [FX.TRANSFERABLE.HOUSEHOLDS] Unexpected jump of 52.6% in value between 2001-10-01 (8736.0) and 2001-11-01 (13330.0).
+  - warning: [FX.TRANSFERABLE.HOUSEHOLDS] Unexpected jump of 88.3% in value between 2001-12-01 (7242.0) and 2002-01-01 (850.0).
+  - warning: [FX.TRANSFERABLE.HOUSEHOLDS] Unexpected jump of 118.5% in value between 2002-07-01 (1201.0) and 2002-08-01 (2624.0).
+  - warning: [FX.TRANSFERABLE.HOUSEHOLDS] Unexpected jump of 452.9% in value between 2002-11-01 (1935.0) and 2002-12-01 (10698.0).
+  - warning: [FX.TRANSFERABLE.HOUSEHOLDS] Unexpected jump of 75.8% in value between 2006-11-01 (21351.0) and 2006-12-01 (37545.0).
+  - warning: [FX.TRANSFERABLE.HOUSEHOLDS] Unexpected jump of 123.9% in value between 2009-08-01 (25079.0) and 2009-09-01 (56153.0).
+  - warning: [FX.TRANSFERABLE.HOUSEHOLDS] Unexpected jump of 61.4% in value between 2010-01-01 (65303.0) and 2010-02-01 (25185.0).
+  - warning: [FX.TRANSFERABLE.HOUSEHOLDS] Unexpected jump of 55.5% in value between 2011-06-01 (31054.0) and 2011-07-01 (48304.0).
+  - warning: [FX.TRANSFERABLE.HOUSEHOLDS] Unexpected jump of 91.0% in value between 2012-04-01 (38422.0) and 2012-05-01 (73370.0).
+  - warning: [FX.TRANSFERABLE.HOUSEHOLDS] Unexpected jump of 65.0% in value between 2021-11-01 (327860.0) and 2021-12-01 (540955.0).
+  - warning: [FX.TRANSFERABLE.LEGAL] Unexpected jump of 56.6% in value between 2002-12-01 (53484.0) and 2003-01-01 (83735.0).
+  - warning: [FX.TRANSFERABLE.LEGAL] Unexpected jump of 142.4% in value between 2004-11-01 (77373.0) and 2004-12-01 (187539.0).
+  - warning: [FX.TRANSFERABLE.LEGAL] Unexpected jump of 67.8% in value between 2004-12-01 (187539.0) and 2005-01-01 (60347.0).
+  - warning: [FX.TRANSFERABLE.LEGAL] Unexpected jump of 68.1% in value between 2005-03-01 (67052.0) and 2005-04-01 (112709.0).
+  - warning: [FX.TRANSFERABLE.LEGAL] Unexpected jump of 52.1% in value between 2007-08-01 (131956.0) and 2007-09-01 (200657.0).
+  - warning: [FX.TRANSFERABLE.LEGAL] Unexpected jump of 75.1% in value between 2009-01-01 (246223.0) and 2009-02-01 (431149.0).
+  - warning: [KZT.OTHER.HOUSEHOLDS] Unexpected jump of 61.1% in value between 2001-12-01 (29819.0) and 2002-01-01 (48026.0).
+  - warning: [KZT.OTHER.LEGAL] Unexpected jump of 53.8% in value between 1998-03-01 (4421.0) and 1998-04-01 (6801.0).
+  - warning: [KZT.OTHER.LEGAL] Unexpected jump of 57.1% in value between 2001-12-01 (44774.0) and 2002-01-01 (19194.0).
+  - warning: [KZT.TRANSFERABLE.HOUSEHOLDS] Unexpected jump of 88.3% in value between 2001-12-01 (16286.0) and 2002-01-01 (1912.0).
+  - warning: ... 2 more warnings not listed
+- **bns/SOCIAL_FOOD_PRICES_WEEKLY** — fetch+validate+process: ok (downloaded=1333, processed=1333)
+- **bns/SOCIAL_FOOD_PRICES_WEEKLY_2022_2025** — fetch+validate+process: ok (downloaded=3933, processed=3933)
+  - warning: not re-downloaded: last download 2026-11-13, refreshed every 365 days
+  - warning: [BUCKWHEAT] Unexpected jump of 52.3% in value between 2024-01-03 (203.82) and 2024-01-10 (310.33).
+- **bns/WAGE_ARREARS_QUARTERLY** — fetch+validate+process: ok (downloaded=1126, processed=1126)
+  - warning: not re-downloaded: last download 2026-11-13, refreshed every 20 days
+  - warning: [OVERDUE@ABY] Unexpected jump of 331.3% in value between 2022-04-01 (37.965) and 2022-07-01 (163.745).
+  - warning: [OVERDUE@ABY] Unexpected jump of 91.6% in value between 2022-07-01 (163.745) and 2022-10-01 (13.741).
+  - warning: [OVERDUE@AKM] Gap of 2008 days between 2016-10-01 and 2022-04-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [OVERDUE@AKM] Unexpected jump of 525.1% in value between 2015-01-01 (34.285) and 2015-04-01 (214.312).
+  - warning: [OVERDUE@AKM] Unexpected jump of 64.5% in value between 2015-07-01 (214.815) and 2015-10-01 (76.268).
+  - warning: [OVERDUE@AKM] Unexpected jump of 64.1% in value between 2016-07-01 (87.423) and 2016-10-01 (31.398).
+  - warning: [OVERDUE@AKM] Unexpected jump of 85.6% in value between 2016-10-01 (31.398) and 2022-04-01 (4.52).
+  - warning: [OVERDUE@AKT] Gap of 2739 days between 2016-10-01 and 2024-04-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [OVERDUE@AKT] Gap of 365 days between 2024-04-01 and 2025-04-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [OVERDUE@AKT] Gap of 365 days between 2025-04-01 and 2026-04-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [OVERDUE@AKT] Unexpected jump of 61.0% in value between 2015-01-01 (265.616) and 2015-04-01 (103.57).
+  - warning: [OVERDUE@AKT] Unexpected jump of 68.9% in value between 2015-04-01 (103.57) and 2015-07-01 (174.881).
+  - warning: [OVERDUE@AKT] Unexpected jump of 89.4% in value between 2016-10-01 (114.242) and 2024-04-01 (12.15).
+  - warning: [OVERDUE@AKT] Unexpected jump of 420.1% in value between 2024-04-01 (12.15) and 2025-04-01 (63.196).
+  - warning: [OVERDUE@ALA] Gap of 181 days between 2017-01-01 and 2017-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [OVERDUE@ALA] Gap of 182 days between 2017-10-01 and 2018-04-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [OVERDUE@ALA] Gap of 183 days between 2019-04-01 and 2019-10-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [OVERDUE@ALA] Gap of 273 days between 2020-10-01 and 2021-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [OVERDUE@ALA] Gap of 181 days between 2023-01-01 and 2023-07-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [OVERDUE@ALA] Gap of 915 days between 2023-07-01 and 2026-01-01 is outside expected range for frequency=quarterly (80-100d).
+  - warning: [OVERDUE@ALA] Unexpected jump of 77.8% in value between 2015-07-01 (247.469) and 2015-10-01 (54.864).
+  - warning: [OVERDUE@ALA] Unexpected jump of 507.5% in value between 2015-10-01 (54.864) and 2016-01-01 (333.303).
+  - warning: [OVERDUE@ALA] Unexpected jump of 72.5% in value between 2016-07-01 (234.078) and 2016-10-01 (403.858).
+  - warning: [OVERDUE@ALA] Unexpected jump of 86.3% in value between 2016-10-01 (403.858) and 2017-01-01 (55.286).
+  - warning: [OVERDUE@ALA] Unexpected jump of 51.1% in value between 2017-01-01 (55.286) and 2017-07-01 (27.037).
+  - warning: [OVERDUE@ALA] Unexpected jump of 68.5% in value between 2017-10-01 (40.201) and 2018-04-01 (67.729).
+  - warning: [OVERDUE@ALA] Unexpected jump of 82.7% in value between 2020-10-01 (80.733) and 2021-07-01 (13.927).
+  - warning: [OVERDUE@ALA] Unexpected jump of 77.4% in value between 2021-07-01 (13.927) and 2021-10-01 (3.147).
+  - warning: [OVERDUE@ALA] Unexpected jump of 6761.3% in value between 2022-01-01 (3.167) and 2022-04-01 (217.298).
+  - warning: [OVERDUE@ALA] Unexpected jump of 83.2% in value between 2022-07-01 (159.306) and 2022-10-01 (26.794).
+  - warning: ... 182 more warnings not listed
+- **derived/DOLLARIZATION** — fetch+validate+process: ok (downloaded=1544, processed=1544)
+  - warning: [BUSINESS_LOANS_FX_SHARE] Gap of 90 days between 2022-01-01 and 2022-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BUSINESS_LOANS_FX_SHARE] Gap of 91 days between 2022-04-01 and 2022-07-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BUSINESS_LOANS_FX_SHARE] Gap of 92 days between 2022-07-01 and 2022-10-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BUSINESS_LOANS_FX_SHARE] Gap of 92 days between 2022-10-01 and 2023-01-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BUSINESS_LOANS_FX_SHARE] Gap of 90 days between 2023-01-01 and 2023-04-01 is outside expected range for frequency=monthly (25-40d).
+  - warning: [BUSINESS_LOANS_FX_SHARE] Gap of 91 days between 2023-04-01 and 2023-07-01 is outside expected range for frequency=monthly (25-40d).
+- **derived/MONEY_MULTIPLIER** — fetch+validate+process: ok (downloaded=1572, processed=1572)
+  - warning: [CASH_SHARE_M3] Unexpected jump of 69.4% in value between 1994-03-01 (24.9043) and 1994-04-01 (7.6116).
+  - warning: [CASH_SHARE_M3] Unexpected jump of 79.2% in value between 1994-04-01 (7.6116) and 1994-05-01 (13.6415).
+  - warning: [CASH_SHARE_M3] Unexpected jump of 75.4% in value between 1994-07-01 (16.7957) and 1994-08-01 (29.4538).
+- **derived/MONEY_VELOCITY** — fetch+validate+process: ok (downloaded=252, processed=252)
+- **derived/LABOUR_COST_INDICATORS** — fetch+validate+process: ok (downloaded=356, processed=356)
+- **derived/REAL_SOCIAL_STANDARDS** — fetch+validate+process: ok (downloaded=1512, processed=1512)
+  - warning: [KAITZ_INDEX] Unexpected jump of 57.0% in value between 2018-12-01 (16.0659) and 2019-01-01 (25.2242).
 - **bns/GDP_NOMINAL** — derive+validate+process: ok (downloaded=0, processed=66)
   - warning: Unexpected jump of 54.0% in own-period contribution between 2019-07-01 (16389294000000.0) and 2019-10-01 (25234714400000.0).
   - warning: Unexpected jump of 50.4% in own-period contribution between 2022-07-01 (25453465300000.0) and 2022-10-01 (38277720300000.0).

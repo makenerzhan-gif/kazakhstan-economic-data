@@ -1,6 +1,6 @@
 {
   "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/PCPS/9.0.0/G001.PCHROM.USD.M",
-  "downloaded_at": "2026-11-13T05:19:51.695446",
+  "downloaded_at": "2026-11-13T10:44:32.359521",
   "dataflow": "PCPS",
   "version": "9.0.0",
   "series_key": "G001.PCHROM.USD.M"

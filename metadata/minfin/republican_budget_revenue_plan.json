@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448",
+  "dataset_id": "gov.kz-statistical-bulletin-listing,sheet=табл 2",
+  "indicator_id": "REPUBLICAN_BUDGET_REVENUE_PLAN",
+  "indicator_name": "Republican budget revenue: adjusted annual plan",
+  "description": "Доходы республиканского бюджета: годовой уточнённый план",
+  "frequency": "irregular (year-to-date cumulative, roughly monthly)",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Built from 15 of 15 listed 'Statistical bulletin' documents (0 skipped). Million KZT, republican budget: the ADJUSTED PLAN FOR THE WHOLE YEAR as printed in the edition for January-<month> (sheet «табл 2»), dated the last day of that month -- not a year-to-date flow. It changes when the budget is revised; compare with the year-to-date execution of the same date.",
+  "publication_date": null,
+  "last_update_date": "2026-11-13",
+  "download_date": "2026-11-13",
+  "period_start": "2025-03-31",
+  "period_end": "2026-09-30",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

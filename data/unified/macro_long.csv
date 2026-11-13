@@ -75378,6 +75378,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,302200.0,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2022-01-31,KZ,national,daily,SWAP_1D,10.77620882883261,% per annum,kase,2026-11-13,level,2026-11-13
 2022-01-31,KZ,national,daily,TONIA,11.02,% per annum,kase,2026-11-13,level,2026-11-13
+2022-02-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-13,level,2026-11-13
 2022-02-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8414322.852020279,million KZT,nbk,2026-11-13,level,2026-11-13
 2022-02-01,KZ,national,monthly,BANK_LOANS_STB_FX,1796865.9123645106,million KZT,nbk,2026-11-13,level,2026-11-13
 2022-02-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,10088480.224032307,million KZT,nbk,2026-11-13,level,2026-11-13
@@ -75387,6 +75388,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-02-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,15625705.6230532,million KZT,nbk,2026-11-13,level,2026-11-13
 2022-02-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2877097.452999385,million KZT,nbk,2026-11-13,level,2026-11-13
 2022-02-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,18502803.17605069,million KZT,nbk,2026-11-13,level,2026-11-13
+2022-02-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2022-02-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-13,level,2026-11-13
 2022-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.2,index,nbk,2026-11-13,level,2026-11-13
 2022-02-01,BLR,national,monthly,BY_CPI_YOY,109.99,"index, same month previous year = 100",eec,2026-11-13,level,2026-11-13
 2022-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,580878.423,thousand transactions,nbk,2026-11-13,level,2026-11-13
@@ -75684,6 +75687,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-03-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3163929.4448573105,million KZT,nbk,2026-11-13,level,2026-11-13
 2022-03-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,19105603.596508753,million KZT,nbk,2026-11-13,level,2026-11-13
 2022-03-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2022-03-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-13,level,2026-11-13
 2022-03-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-13,level,2026-11-13
 2022-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.2,index,nbk,2026-11-13,level,2026-11-13
 2022-03-01,BLR,national,monthly,BY_CPI_YOY,115.9,"index, same month previous year = 100",eec,2026-11-13,level,2026-11-13
@@ -89590,9 +89594,17 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-31,KZ,national,irregular,OIL_EXPORT_DUTY,255591.20797902,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-03-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,7831.71768985,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-03-31,KZ,national,irregular,PROPERTY_TAX,160273.84261717,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-03-31,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4100755.323,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-03-31,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,25193777.715,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-03-31,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,21392054.673,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-03-31,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,15193343.932,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-03-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-4423520.4496,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-03-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,77995.15431745,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-03-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,32346276.2062,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-03-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,6727770.30626463,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-03-31,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,28726301.8983,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-03-31,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,6964309.11420411,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-03-31,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,22629565.1605,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-03-31,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,134720.63545795,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-03-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,457333.44835328,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-03-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,452666.30614653,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -90725,9 +90737,17 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-30,KZ,national,irregular,OIL_EXPORT_DUTY,731047.76502143,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-06-30,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,15223.84902912,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-06-30,KZ,national,irregular,PROPERTY_TAX,293375.08792122,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-06-30,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4100755.323,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-06-30,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,25193777.715,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-06-30,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,21392054.673,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-06-30,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,15193343.932,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-06-30,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-5664103.3601,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-06-30,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,-997786.28420182,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-06-30,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,33999991.3303,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-06-30,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,15128804.6643416,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-06-30,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,29208248.5436,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-06-30,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,14516486.1516854,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-06-30,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,22981915.4333,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-06-30,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,248517.64359233,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-06-30,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,1642189.09507622,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-06-30,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,904475.65383855,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -91186,10 +91206,18 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-31,KZ,national,irregular,OIL_EXPORT_DUTY,880766.44298002,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-07-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,16337.42344263,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-07-31,KZ,national,irregular,PROPERTY_TAX,305262.2944347,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-07-31,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4100755.323,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-07-31,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,25193777.715,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-07-31,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,21392054.673,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-07-31,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,15193343.932,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-07-31,RUS,national,daily,RUB_USD,81.8347,RUB per USD,cbr,2026-11-13,level,2026-11-13
+2025-07-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-5382344.4341,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-07-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,-1525293.29248412,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-07-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,33857057.116,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-07-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,17461819.5555118,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-07-31,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,29363161.8554,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-07-31,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,16361107.7624958,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-07-31,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,23065569.037,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-07-31,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,285297.56425933,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-07-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,1985666.2271832,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-07-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1023959.67373709,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -91529,9 +91557,17 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-31,KZ,national,irregular,OIL_EXPORT_DUTY,1047172.25215907,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-08-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,17654.83451541,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-08-31,KZ,national,irregular,PROPERTY_TAX,455790.70602237,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-08-31,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4100755.323,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-08-31,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,25193777.715,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-08-31,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,21392054.673,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-08-31,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,15193343.932,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-08-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-5425263.2015,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-08-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,-1517671.03297056,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-08-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,33918311.4248,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-08-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,20489198.5409209,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-08-31,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,29393365.0703,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-08-31,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,19531080.7867331,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-08-31,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,23087662.1383,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-08-31,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,356959.29260306,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-08-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,2586588.7774999,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-08-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1164528.99610789,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -91873,10 +91909,18 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-30,KZ,national,irregular,OIL_EXPORT_DUTY,1213736.75535864,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-09-30,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,19489.08524946,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-09-30,KZ,national,irregular,PROPERTY_TAX,464832.57237733,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-09-30,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4100755.323,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-09-30,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,25193777.715,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-09-30,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,21392054.673,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-09-30,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,15193343.932,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-09-30,RUS,national,daily,RUB_USD,82.8676,RUB per USD,cbr,2026-11-13,level,2026-11-13
+2025-09-30,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-5456605.6814,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-09-30,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,-2000090.30196339,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-09-30,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,34143619.4452,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-09-30,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,22894265.169584,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-09-30,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,29599540.8899,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-09-30,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,21517355.8768469,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-09-30,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,23287340.4397,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-09-30,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,407117.86865934,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-09-30,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,3011034.84312081,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-09-30,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1251663.34601132,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -92321,10 +92365,18 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-31,KZ,national,irregular,OIL_EXPORT_DUTY,1347951.51199763,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-10-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,20334.84856546,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-10-31,KZ,national,irregular,PROPERTY_TAX,471662.6544135,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-10-31,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4100755.323,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-10-31,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,25193777.715,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-10-31,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,21392054.673,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-10-31,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,15193343.932,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-10-31,RUS,national,daily,RUB_USD,80.5037,RUB per USD,cbr,2026-11-13,level,2026-11-13
+2025-10-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-5505853.7822,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-10-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,-2906065.8659375,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-10-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,34270787.8622,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-10-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,25628891.2869736,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-10-31,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,29689899.9221,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-10-31,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,23368957.3028707,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-10-31,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,23363185.9627,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-10-31,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,428672.02606702,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-10-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,3447848.849362,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-10-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1410511.29167542,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -92645,9 +92697,17 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-30,KZ,national,irregular,OIL_EXPORT_DUTY,1493279.04341993,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-11-30,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,22235.69315283,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-11-30,KZ,national,irregular,PROPERTY_TAX,658288.76117229,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-11-30,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4100755.323,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-11-30,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,25193777.715,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-11-30,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,21392054.673,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-11-30,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,15193343.932,million KZT,minfin,2026-11-13,level,2026-11-13
+2025-11-30,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-5486423.1864,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-11-30,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,-2881710.631605,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-11-30,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,34298279.3027,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-11-30,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,28851164.1857247,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-11-30,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,29738640.1204,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-11-30,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,26775069.5717831,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2025-11-30,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,23402237.3742,million KZT,minfin,2026-11-13,level,2026-11-13
 2025-11-30,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,525110.05784876,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-11-30,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,4015906.95881689,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2025-11-30,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1644704.86453483,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -93581,10 +93641,18 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-31,KZ,national,irregular,OIL_EXPORT_DUTY,24693.1721991,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-01-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,582.519388,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-01-31,KZ,national,irregular,PROPERTY_TAX,3311.46366933,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-01-31,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4594705.157,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-01-31,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,26275333.382,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-01-31,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,22889278.204,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-01-31,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,18886018.913,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-01-31,RUS,national,daily,RUB_USD,75.7327,RUB per USD,cbr,2026-11-13,level,2026-11-13
+2026-01-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-4605773.4519,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-01-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,343183.04233588,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-01-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,35406019.7439,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-01-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,1490668.35059184,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-01-31,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,32359174.29,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-01-31,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,1831699.95288981,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-01-31,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,28686979.208,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-01-31,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,1709.47625514,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-01-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,30976.35148767,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-01-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,58102.22067779,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -93906,10 +93974,18 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-28,KZ,national,irregular,OIL_EXPORT_DUTY,54290.73387972,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-02-28,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,1504.13469795,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-02-28,KZ,national,irregular,PROPERTY_TAX,134519.20517135,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-02-28,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4594705.157,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-02-28,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,26275333.382,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-02-28,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,22889278.204,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-02-28,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,18886018.913,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-02-28,RUS,national,daily,RUB_USD,77.2736,RUB per USD,cbr,2026-11-13,level,2026-11-13
+2026-02-28,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-4654492.1426,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-02-28,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,375352.0648204,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-02-28,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,35473282.4074,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-02-28,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,4642196.57151334,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-02-28,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,32384706.3332,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-02-28,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,5055996.88902925,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-02-28,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,28699405.1038,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-02-28,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,49443.51726378,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-02-28,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,269681.0845407,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-02-28,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,332599.0810429,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -94242,10 +94318,18 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-31,KZ,national,irregular,OIL_EXPORT_DUTY,233079.25275303,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-03-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,3280.93408465,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-03-31,KZ,national,irregular,PROPERTY_TAX,143953.60676457,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-03-31,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4595050.126,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-03-31,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,26275678.351,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-03-31,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,22889278.204,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-03-31,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,18886018.913,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-03-31,RUS,national,daily,RUB_USD,81.2955,RUB per USD,cbr,2026-11-13,level,2026-11-13
+2026-03-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-4867553.5452,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-03-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,-392139.04807355,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-03-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,35810377.313,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-03-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,7624321.89407335,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-03-31,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,32504896.5351,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-03-31,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,7244871.73442941,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-03-31,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,28790353.3303,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-03-31,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,59247.78514462,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-03-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,545937.98780687,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-03-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,545344.01412029,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -95023,9 +95107,17 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-31,KZ,national,irregular,OIL_EXPORT_DUTY,625498.66658031,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-05-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,8307.79667672,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-05-31,KZ,national,irregular,PROPERTY_TAX,257451.24130667,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-05-31,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4595050.126,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-05-31,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,26229339.124,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-05-31,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,22889278.204,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-05-31,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,18886018.913,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-05-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-5207912.7459,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-05-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,-1521864.31798577,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-05-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,36127255.261,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-05-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,13931235.9588359,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-05-31,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,32595213.944,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-05-31,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,12850265.8518626,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-05-31,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,28803379.9428,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-05-31,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,368008.63670993,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-05-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,1217269.06024621,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-05-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,983962.21573787,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -95410,10 +95502,18 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-30,KZ,national,irregular,OIL_EXPORT_DUTY,901338.23939422,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-06-30,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,10130.29628972,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-06-30,KZ,national,irregular,PROPERTY_TAX,263237.87122039,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-06-30,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4595050.126,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-06-30,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,26229339.124,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-06-30,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,22889278.204,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-06-30,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,18886018.913,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-06-30,RUS,national,daily,RUB_USD,77.7539,RUB per USD,cbr,2026-11-13,level,2026-11-13
+2026-06-30,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-5418102.9923,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-06-30,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,-2275949.6025615,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-06-30,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,36349012.2356,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-06-30,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,16677640.5181587,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-06-30,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,32621111.9108,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-06-30,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,15036307.1070465,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-06-30,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,28743109.1563,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-06-30,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,379454.47579106,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-06-30,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,1479118.48198626,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-06-30,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1138035.21997195,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -95462,6 +95562,12 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,monthly,BANK_TOP5_ASSETS_SHARE,69.2,%,ardfm,2026-11-13,level,2026-11-13
 2026-07-01,KZ,national,monthly,BANK_TOP5_DEPOSITS_SHARE,72.7,%,ardfm,2026-11-13,level,2026-11-13
 2026-07-01,KZ,national,monthly,BANK_TOP5_LOANS_SHARE,75.8,%,ardfm,2026-11-13,level,2026-11-13
+2026-07-01,KZ,national,quarterly,BUDGET_FINANCING_BANKS,567241.07905846,"million KZT, flow during the quarter",minfin,2026-11-13,level,2026-11-13
+2026-07-01,KZ,national,quarterly,BUDGET_FINANCING_DOMESTIC,260530.8725239914,"million KZT, flow during the quarter",minfin,2026-11-13,level,2026-11-13
+2026-07-01,KZ,national,quarterly,BUDGET_FINANCING_EXTERNAL,562540.8637620201,"million KZT, flow during the quarter",minfin,2026-11-13,level,2026-11-13
+2026-07-01,KZ,national,quarterly,BUDGET_FINANCING_INTL_ORGANIZATIONS,376251.74470133,"million KZT, flow during the quarter",minfin,2026-11-13,level,2026-11-13
+2026-07-01,KZ,national,quarterly,BUDGET_FINANCING_LONG_TERM_BONDS,282925.0440612498,"million KZT, flow during the quarter",minfin,2026-11-13,level,2026-11-13
+2026-07-01,KZ,national,quarterly,BUDGET_FINANCING_TOTAL,823071.7362860115,"million KZT, flow during the quarter",minfin,2026-11-13,level,2026-11-13
 2026-07-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.771858,index,nbk,2026-11-13,level,2026-11-13
 2026-07-01,BLR,national,monthly,BY_CPI_YOY,104.4,"index, same month previous year = 100",eec,2026-11-13,level,2026-11-13
 2026-07-01,KZ,national,quarterly,CAPACITY_UTILIZATION,50.757057,percent,nbk,2026-11-13,level,2026-11-13
@@ -95674,6 +95780,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,RUS,national,daily,RUB_USD,78.2696,RUB per USD,cbr,2026-11-13,level,2026-11-13
 2026-07-01,RUS,national,monthly,RU_CPI_MOM,100.5,"index, previous month = 100",eec,2026-11-13,level,2026-11-13
 2026-07-01,RUS,national,monthly,RU_CPI_YOY,106.0,"index, same month previous year = 100",eec,2026-11-13,level,2026-11-13
+2026-07-01,KZ,national,quarterly,STATE_BUDGET_DEFICIT_Q,-823071.7730459999,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-07-01,KZ,national,quarterly,STATE_BUDGET_EXPENDITURE_Q,8325795.128794499,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-07-01,KZ,national,quarterly,STATE_BUDGET_REVENUE_Q,7899618.551562902,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-07-01,KZ,national,monthly,STATE_CIT_YTD,3649708.47550236,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-07-01,KZ,national,quarterly,STATE_DEBT_TOTAL,38495061.56442599,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-07-01,KZ,national,monthly,STATE_EXCISE_YTD,664004.80692648,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -95866,10 +95975,18 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-31,KZ,national,irregular,OIL_EXPORT_DUTY,1042295.79275944,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-07-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,10515.41187802,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-07-31,KZ,national,irregular,PROPERTY_TAX,271304.70386542,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-07-31,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4595050.126,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-07-31,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,26229339.124,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-07-31,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,22889278.204,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-07-31,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,18886018.913,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-07-31,RUS,national,daily,RUB_USD,79.8573,RUB per USD,cbr,2026-11-13,level,2026-11-13
+2026-07-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-5568807.3409,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-07-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,-3128266.99791125,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-07-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,36479616.7107,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-07-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,19548614.245346,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-07-31,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,32610453.1041,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-07-31,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,17125393.5939554,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-07-31,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,28728862.3359,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-07-31,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,427417.93661986,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-07-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,1856385.64266227,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-07-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1263895.48372795,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -96228,9 +96345,17 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-31,KZ,national,irregular,OIL_EXPORT_DUTY,1220554.04255355,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-08-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,11211.6014477,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-08-31,KZ,national,irregular,PROPERTY_TAX,415113.24304096,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-08-31,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4595050.126,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-08-31,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,26229339.124,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-08-31,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,22889278.204,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-08-31,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,18886018.913,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-08-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-5617782.8219,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-08-31,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,-2837113.9451509,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-08-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,36535040.2805,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-08-31,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,22475760.180644,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-08-31,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,32638494.6514,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-08-31,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,20476086.9181706,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-08-31,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,28736074.3026,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-08-31,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,443341.42100559,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-08-31,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,2232920.14156077,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-08-31,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1509912.1816762,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
@@ -96570,11 +96695,42 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-09-29,RUS,national,daily,RUB_USD,84.4075,RUB per USD,cbr,2026-11-13,level,2026-11-13
 2026-09-29,KZ,national,daily,SWAP_1D,10.704628399459036,% per annum,kase,2026-11-13,level,2026-11-13
 2026-09-29,KZ,national,daily,TONIA,16.12,% per annum,kase,2026-11-13,level,2026-11-13
+2026-09-30,KZ,national,irregular,CUSTOMS_DUTIES,1990334.29599317,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-09-30,KZ,national,daily,EXCHANGE_RATE,439.37,KZT per 1 USD,nbk,2026-11-13,level,2026-11-13
 2026-09-30,KZ,national,daily,EXCHANGE_RATE_CNY,65.55,KZT per CNY,nbk,2026-11-13,level,2026-11-13
 2026-09-30,KZ,national,daily,EXCHANGE_RATE_EUR,498.6,KZT per EUR,nbk,2026-11-13,level,2026-11-13
 2026-09-30,KZ,national,daily,EXCHANGE_RATE_RUB,5.22,KZT per RUB,nbk,2026-11-13,level,2026-11-13
+2026-09-30,KZ,national,irregular,GOV_CAPITAL_EXPENDITURE,636906.5141536,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,GOV_FINANCIAL_ASSETS_SOLD,3714.4,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,GOV_PENSIONS_EXPENDITURE,3672872.857,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,GOV_SUBSIDIES_EXPENDITURE,437735.09800419,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,GOV_WAGES_EXPENDITURE,711304.76979322,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,LAND_TAX,6673.91918667,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,LOCAL_GOV_CAPITAL_EXPENDITURE,2295290.79681762,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,LOCAL_GOV_SUBSIDIES_EXPENDITURE,1180538.09742841,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,LOCAL_GOV_WAGES_EXPENDITURE,2710285.60761551,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,OIL_EXPORT_DUTY,1586906.65866329,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,13688.0252447,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,PROPERTY_TAX,429547.57809315,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,REPUBLICAN_BUDGET_DEFICIT_PLAN,-4595050.126,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-09-30,KZ,national,irregular,REPUBLICAN_BUDGET_EXPENDITURE_PLAN,26229339.124,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-09-30,KZ,national,irregular,REPUBLICAN_BUDGET_REVENUE_PLAN,22889278.204,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-09-30,KZ,national,irregular,REPUBLICAN_BUDGET_TAX_REVENUE_PLAN,18886018.913,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-09-30,RUS,national,daily,RUB_USD,84.4283,RUB per USD,cbr,2026-11-13,level,2026-11-13
+2026-09-30,KZ,national,irregular,STATE_BUDGET_DEFICIT_PLAN,-5798511.9648,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-09-30,KZ,national,irregular,STATE_BUDGET_DEFICIT_YTD,-3099021.3756075,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_PLAN,36635673.1522,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-09-30,KZ,national,irregular,STATE_BUDGET_EXPENDITURE_YTD,25003435.6469532,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,STATE_BUDGET_REVENUE_PLAN,32582943.6814,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-09-30,KZ,national,irregular,STATE_BUDGET_REVENUE_YTD,22935925.6586094,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,STATE_BUDGET_TAX_REVENUE_PLAN,28636953.3658,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-09-30,KZ,national,irregular,STATE_FINANCIAL_ASSETS_BALANCE_YTD,491425.08514659,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,STATE_GOV_CAPITAL_EXPENDITURE,2555748.33139422,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,STATE_GOV_SUBSIDIES_EXPENDITURE,1618273.1954326,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,STATE_GOV_WAGES_EXPENDITURE,3421590.37740873,"million KZT, year-to-date cumulative",minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,540086.30211711,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-7455928.03427079,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
+2026-09-30,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,2770000.0,million KZT,minfin,2026-11-13,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-13
 2026-09-30,KZ,national,daily,SWAP_1D,9.469041326794596,% per annum,kase,2026-11-13,level,2026-11-13
 2026-09-30,KZ,national,daily,TONIA,16.06,% per annum,kase,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,16422775.834012,million KZT,nbk,2026-11-13,level,2026-11-13
@@ -96587,6 +96743,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-10-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5783052.66177181,million KZT,nbk,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,43088657.9751429,million KZT,nbk,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.113031,index,nbk,2026-11-13,level,2026-11-13
+2026-10-01,KZ,national,quarterly,CENTRAL_GOV_DEBT,36897007.860041164,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-10-01,KZ,national,quarterly,CENTRAL_GOV_DEBT_EXTERNAL,8082865.472941163,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,CHROMIUM_PRICE,10534.50309090909,USD per tonne,imf,2026-11-13,level,2026-11-13
 2026-10-01,CHN,national,monthly,CN_CPI_YOY,0.7,"% change, same month previous year",imf,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,CPI,100.5,"index, previous month = 100",bns,2026-11-13,level,2026-11-13
@@ -96621,7 +96779,10 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-10-01,KZ,national,quarterly,GOLD_BULLION_SALES,6928.0,pieces,nbk,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,quarterly,GOV_DEBT,41293495.50462157,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,quarterly,GOV_DEBT_DOMESTIC,28814142.3871,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-10-01,KZ,national,quarterly,GOV_DEBT_EUROBONDS,4100815.0000020457,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL,8082865.472941163,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-10-01,KZ,national,quarterly,GOV_DEBT_EXTERNAL_USD,18396.4892299,USD million,minfin,2026-11-13,level,2026-11-13
+2026-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,23104560.0,million KZT,nbk,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,GOV_SECURITIES_SECONDARY_NBK_NOTES,495042.37125586,million KZT,nbk,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,GS_YIELD_10Y,12.7048,% per annum,kase,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,GS_YIELD_1Y,14.4209,% per annum,kase,2026-11-13,level,2026-11-13
@@ -96646,6 +96807,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-10-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,11.8514,percentage points,derived,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,KZ_EUROBOND_SPREAD,96.1,basis points,kase,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,KZ_EUROBOND_YIELD,6.25,% per annum,kase,2026-11-13,level,2026-11-13
+2026-10-01,KZ,national,quarterly,LOCAL_GOV_DEBT,3045869.512648,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,M0,4790969.0,million KZT,nbk,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,M1,12080979.0,million KZT,nbk,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,M2,49737075.0,million KZT,nbk,2026-11-13,level,2026-11-13
@@ -96665,6 +96827,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-10-01,KZ,national,monthly,RETAIL_TRADE_INDEX_MONTHLY,105.9,index (same month previous year = 100),bns,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,RETAIL_TRADE_MONTHLY,2985667433.0,thousand KZT,bns,2026-11-13,level,2026-11-13
 2026-10-01,RUS,national,daily,RUB_USD,83.5588,RUB per USD,cbr,2026-11-13,level,2026-11-13
+2026-10-01,KZ,national,quarterly,STATE_DEBT_TOTAL,38817222.32154116,million KZT,minfin,2026-11-13,level,2026-11-13
+2026-10-01,KZ,national,quarterly,STATE_GUARANTEED_DEBT,2470273.183080413,million KZT,minfin,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,daily,SWAP_1D,10.796981039434389,% per annum,kase,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,daily,TONIA,16.04,% per annum,kase,2026-11-13,level,2026-11-13
 2026-10-01,KZ,national,monthly,URANIUM_PRICE,72.887620785,USD per pound U3O8,imf,2026-11-13,level,2026-11-13
@@ -96827,6 +96991,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-10-30,KZ,national,daily,TONIA,14.87,% per annum,kase,2026-11-13,level,2026-11-13
 2026-10-31,RUS,national,daily,RUB_USD,80.5573,RUB per USD,cbr,2026-11-13,level,2026-11-13
 2026-11-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,68.229029893356,KZT per CNY,nbk,2026-11-13,level,2026-11-13
+2026-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,23292365.0,million KZT,nbk,2026-11-13,level,2026-11-13
 2026-11-01,KZ,national,monthly,GS_YIELD_10Y,12.7144,% per annum,kase,2026-11-13,level,2026-11-13
 2026-11-01,KZ,national,monthly,GS_YIELD_1Y,14.002,% per annum,kase,2026-11-13,level,2026-11-13
 2026-11-01,KZ,national,monthly,GS_YIELD_2Y,13.7588,% per annum,kase,2026-11-13,level,2026-11-13
@@ -96900,6 +97065,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-11-13,KZ,national,daily,EXCHANGE_RATE_EUR,492.24,KZT per EUR,nbk,2026-11-13,level,2026-11-13
 2026-11-13,KZ,national,daily,EXCHANGE_RATE_RUB,5.36,KZT per RUB,nbk,2026-11-13,level,2026-11-13
 2026-11-13,RUS,national,daily,RUB_USD,82.9803,RUB per USD,cbr,2026-11-13,level,2026-11-13
+2026-11-13,KZ,national,daily,SWAP_1D,9.391081287656522,% per annum,kase,2026-11-13,level,2026-11-13
 2026-12-31,KZ,national,annual,IMF_CPI_EOP_INDEX,191.121841,index,imf,2026-11-13,IMF WEO estimate/projection (country update 9/24/2026),2026-11-13
 2026-12-31,KZ,national,annual,IMF_CPI_INDEX,183.924772,index,imf,2026-11-13,IMF WEO estimate/projection (country update 9/24/2026),2026-11-13
 2026-12-31,KZ,national,annual,IMF_CURRENT_ACCOUNT,0.545133,% of GDP,imf,2026-11-13,IMF WEO estimate/projection (country update 9/24/2026),2026-11-13

@@ -1,7 +1,7 @@
 {
   "source": "bns",
-  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
-  "dataset_id": "taldau-index-703173",
+  "source_url": "",
+  "dataset_id": "",
   "indicator_id": "WAGE_ARREARS_QUARTERLY",
   "indicator_name": "Wage payables of large and medium enterprises: total and overdue, by region, end of quarter, million KZT",
   "description": "Задолженность по оплате труда крупных и средних предприятий: всего и просроченная, по регионам, на конец квартала, млн тенге",

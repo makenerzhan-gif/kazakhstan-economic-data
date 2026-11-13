@@ -53,3 +53,14 @@
 {"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 NOTES.EOM", "old_value": -1902.19, "new_value": -1635.2, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
 {"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 BALANCE.AVG", "old_value": -8801.5025, "new_value": -8764.4857, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
 {"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 BALANCE.EOM", "old_value": -9060.62, "new_value": -8866.16, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 NOTES.AVG", "old_value": -1635.2, "new_value": -1694.5311, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 NOTES.EOM", "old_value": -1635.2, "new_value": -1902.19, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 DEPOSIT_AUCTION.AVG", "old_value": -6555.1129, "new_value": -6553.8333, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 DEPOSIT_AUCTION.EOM", "old_value": -6656.85, "new_value": -6530.02, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 REVERSE_REPO.AVG", "old_value": 2.9314, "new_value": 2.28, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 DEPOSITS.AVG", "old_value": -577.1043, "new_value": -570.1411, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 DEPOSITS.EOM", "old_value": -574.11, "new_value": -501.8, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 BALANCE.AVG", "old_value": -8764.4857, "new_value": -8816.2256, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 BALANCE.EOM", "old_value": -8866.16, "new_value": -8934.01, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 CORR_ACCOUNTS.AVG", "old_value": -4030.5914, "new_value": -4060.2, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "NBK_OPEN_POSITION", "period": "2026-11-01 CORR_ACCOUNTS.EOM", "old_value": -4193.82, "new_value": -4271.72, "detected_date": "2026-11-13", "source": "nbk", "reason": "not stated by source"}
