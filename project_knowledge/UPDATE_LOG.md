@@ -1,43 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — supply and use by product and region: production, trade, domestic use» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — the budget back to 2013, December, gaps, non-oil deficit before 2022» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-27 — the budget back to 2013, December, gaps, non-oil deficit before 2022
-
-**Pre-2019.** Minfin keeps the same monthly Statistical Bulletin for 2003-2018 as one RAR per year
-(«Статистический бюллетень за 2017 год (12 месяцев)»); 2013-2018 are xls/xlsx with the tables of the
-current editions. `scripts/backfill_minfin_bulletins.py --yearly 2013-2018` downloads and unpacks them
-(7z) and reads табл 3, 4, 8, 10 and 11 (not табл 6 and the higher tables, numbered differently before
-2019). STATE_BUDGET_{REVENUE,EXPENDITURE,DEFICIT}_YTD, net lending and financial assets now start in
-January 2013 (158 months); the quarterly STATE_BUDGET_*_Q in 2013Q1 (54 quarters); republican
-wages/capital/pensions from 2013, local economic-classification lines from late 2014, oil export
-duties, property and land tax from 2013. Checked: January-June 2017 revenue 5 010 193.2 as printed;
-January-December 2016-2018 equal the annual reports; revenue − expenditure − net lending − financial
-assets = deficit in all 70 months 2013-2018. 2008-2012 are PDF (number columns not separable from the
-text layer) and are not read.
-
-**December.** The «на 1 января» editions carry January-December but their табл 3 has annual columns
-only, and the period was read from табл 3 alone: every December was missing. The period now comes from
-any table of the edition, and the January-December column is the year's report column. Where that
-edition is not online (2025) the annual report stands in. December now equals the annual report in
-every year 2016-2025 (2020 expenditure: the report was later revised by 2.8 bn).
-
-**Gaps.** Rows padded with empty cells (2019-2021 editions) and the class code in another column hid
-the economic-classification lines and customs duties; a Kazakh-titled edition (May 2023) was not found
-by the title search; the September 2022 - May 2024 editions print subsidies as specific 311 only (equal
-to 310 in all 128 table-editions that print both). Republican/local wages, capital, pensions and
-subsidies went from 50-71 to 86 months 2019-2026, customs duties from 62 to 87. Still missing, because
-the editions are not online: April 2020, December 2025 (except табл 3 lines), April 2026; state
-subsidies (табл 6) 2022-09 … 2024-05, where the table printed no subsidies line (source_issues).
-
-**Non-oil deficit.** Minfin prints it from April 2022. In every printed month it equals deficit −
-transfers from the National Fund − export duty on crude oil (44 months, to 1 mln KZT), so
-STATE_NON_OIL_DEFICIT_YTD now starts in January 2018 by that identity. The annual
-STATE_NON_OIL_DEFICIT for 2019-2021 was the financing row copied into the non-oil line by Minfin
-(+1.29, +2.81, +2.53 trn); replaced by the identity (−5.51, −8.16, −8.06 trn; source_issues).
-
-Tests: `tests/test_history_extensions.py` (15).
 
 ## 2026-09-27 — seven gaps for policy analysis: quasi-fiscal lending, expectations, import prices, NEER, wages, regional budgets, budget 2011-2018
 
@@ -652,3 +616,22 @@ processed files of the same run; not published by any source -- every note says 
 Fix: Minfin's 2026-10-01 debt edition is listed only under activity 565; the debt fetchers now take both listings.
 
 Tests: tests/test_analytics.py (6), tests/test_new_sources_2026_11c.py (11).
+
+## 2026-11-13 — a faster daily run; dollarisation and yield-curve spreads
+
+**Run time** (the run of 2026-11-12 took 101 minutes: BNS 12, NBK 16, Minfin 38, other scalars 7, item-level datasets 28):
+1. Minfin workbooks are parsed once per process (`minfin._open_workbook` keeps plain rows keyed by content): 35 indicators
+   re-opened every edition of the 50-sheet Statistical Bulletin, about 49 s each -- some 28 minutes. Rows are identical to
+   the old parse (checked on archived bulletins).
+2. `gravity._get` stops asking a host that timed out or answered 5xx in the same run (api.worldbank.org cost 5 x 120 s on
+   2026-11-10 and 2026-11-12); a 4xx does not trip it. WDI / WGI datasets are refreshed every 30 days, not daily.
+3. update.yml: pip cache.
+Not done (need a decision): updaters in parallel, a light daily run plus a weekly full one, logs out of the repository.
+
+**New derived datasets** (scripts/fetchers/analytics.py):
+4. DOLLARIZATION: FX share of bank loans (1996 on: 44.9 % in 2009-02, 10.0 % in 2026-10), of business loans (2022 on,
+   31.8 %), of household deposits (2023 on, 17.9 %). All-deposit dollarisation needs corporate deposits by currency (not held).
+5. YIELD_CURVE_SPREADS: slopes 10y-1y (-1.26 pp in 2026-11, inverted), 10y-3m, 5y-2y; 1-year yield and TONIA less the base
+   rate; real 10-year yield on household expectations. The sovereign USD spread already exists (KZ_EUROBOND_SPREAD).
+
+Tests: tests/test_run_speed.py (3), tests/test_analytics.py (+1).

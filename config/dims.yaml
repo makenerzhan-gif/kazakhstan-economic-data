@@ -5069,6 +5069,31 @@ datasets:
     category: fiscal
     note: "GDP: sum of the four quarters of QNA_GDP_EXPENDITURE (complete years only); oil-gas sector: OIL_GAS_SECTOR_GVA item OIL_GAS (BNS, gross value added, from 2010); non-oil balance: STATE_NON_OIL_DEFICIT (Minfin, state budget, negative = deficit, from 2013); overall balance: STATE_BUDGET_DEFICIT. Fiscal impulse = minus the change in the non-oil balance ratio (positive = expansion). Not cyclically adjusted and not primary; state budget, not general government."
 
+  - id: DOLLARIZATION
+    name_ru: "Долларизация: доля кредитов банков, кредитов бизнесу и вкладов населения в иностранной валюте (расчёт репозитория)"
+    name_en: "Dollarisation: foreign-currency share of bank loans, business loans and household deposits (computed by this repository)"
+    agency: derived
+    fetcher: analytics
+    measure: dollarization
+    min_items: 4
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    note: "Shares of the NBK's stocks, as at the 1st of the month: LOANS_FX_SHARE = BANK_LOANS_STB_FX / BANK_LOANS_STB_TOTAL (from 1996); BUSINESS_LOANS_FX_SHARE = LOANS_BUSINESS_FX / (FX + KZT) (from 2022, banks and other lenders); HOUSEHOLD_DEPOSITS_FX_SHARE = the three HOUSEHOLD_DEPOSITS_*_FX over all six household deposit series (from 2023); the term-deposit share separately. The stocks are in tenge, so a depreciation raises the share without any conversion (valuation effect). Dollarisation of ALL deposits needs corporate deposits by currency, which the pipeline does not hold; the regulator's own household figure is BANK_DEPOSITS_INDIVIDUALS_FX_SHARE (ARDFM, from 2026-05)."
+
+  - id: YIELD_CURVE_SPREADS
+    name_ru: "Наклон кривой доходности ГЦБ, спреды к базовой ставке, реальная доходность на 10 лет (расчёт репозитория)"
+    name_en: "Government yield-curve slopes, spreads to the base rate, real 10-year yield (computed by this repository)"
+    agency: derived
+    fetcher: analytics
+    measure: yield_spreads
+    min_items: 6
+    no_jump_check: [".*"]
+    frequency: monthly
+    unit: "percentage points (REAL_GS_10Y_EX_ANTE: %)"
+    category: monetary
+    note: "From GS_YIELD_3M … GS_YIELD_10Y (KASE zero-coupon curve, monthly, from 2019-11), TONIA and BASE_RATE (monthly means) and INFLATION_EXPECTATIONS. A negative slope = an inverted curve (the market prices rate cuts). The sovereign US-dollar spread is KZ_EUROBOND_SPREAD (KASE), the tenge-dollar differentials are KZT_USD_RATE_DIFF_*."
+
   # ---------------------------------------------------------------- block B (added 2026-11-10)
   - id: SOVEREIGN_RATINGS
     name_ru: "Суверенные кредитные рейтинги Казахстана (S&P, Moody's, Fitch): долгосрочный в иностранной валюте и прогноз, помесячно"

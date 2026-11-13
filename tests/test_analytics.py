@@ -72,3 +72,23 @@ def test_no_jump_check_skips_gap_series():
     skipped = dims.validate(rows, "T", "quarterly", no_jump_check=["GAP"])
     assert any("[GAP]" in w for w in plain.warnings) and not any("[GAP]" in w for w in skipped.warnings)
     assert any("[LEVEL]" in w for w in skipped.warnings)
+
+
+def test_dollarization_and_yield_spreads_configured_and_plausible():
+    import update_dims
+    for ds_id, measure in (("DOLLARIZATION", "dollarization"), ("YIELD_CURVE_SPREADS", "yield_spreads")):
+        ds = update_dims.DATASETS[ds_id]
+        assert ds["fetcher"] == "analytics" and ds["measure"] == measure and measure in analytics.MEASURES
+    rows = dims.load_processed("DOLLARIZATION")
+    if rows:
+        assert all(0 <= float(r["value"]) <= 100 for r in rows)
+        by = {(r["item_code"], r["date"]): float(r["value"]) for r in rows}
+        fx, total = analytics.scalar("nbk", "BANK_LOANS_STB_FX"), analytics.scalar("nbk", "BANK_LOANS_STB_TOTAL")
+        d = fx.index[-1]
+        assert by[("LOANS_FX_SHARE", d.strftime("%Y-%m-%d"))] == pytest.approx(fx[d] / total[d] * 100, abs=1e-3)
+    rows = dims.load_processed("YIELD_CURVE_SPREADS")
+    if rows:
+        by = {(r["item_code"], r["date"]): float(r["value"]) for r in rows}
+        y10, y1 = analytics.scalar("kase", "GS_YIELD_10Y"), analytics.scalar("kase", "GS_YIELD_1Y")
+        d = y10.index[-1]
+        assert by[("SLOPE_10Y_1Y", d.strftime("%Y-%m-%d"))] == pytest.approx(y10[d] - y1[d], abs=1e-3)

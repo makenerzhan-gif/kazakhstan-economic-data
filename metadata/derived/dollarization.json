@@ -1,0 +1,21 @@
+{
+  "source": "derived",
+  "source_url": "derived by this repository (scripts/fetchers/analytics.py)",
+  "dataset_id": "analytics/dollarization",
+  "indicator_id": "DOLLARIZATION",
+  "indicator_name": "Dollarisation: foreign-currency share of bank loans, business loans and household deposits (computed by this repository)",
+  "description": "Долларизация: доля кредитов банков, кредитов бизнесу и вкладов населения в иностранной валюте (расчёт репозитория)",
+  "frequency": "monthly",
+  "unit": "%",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Shares of the NBK's stocks, as at the 1st of the month: LOANS_FX_SHARE = BANK_LOANS_STB_FX / BANK_LOANS_STB_TOTAL (from 1996); BUSINESS_LOANS_FX_SHARE = LOANS_BUSINESS_FX / (FX + KZT) (from 2022, banks and other lenders); HOUSEHOLD_DEPOSITS_FX_SHARE = the three HOUSEHOLD_DEPOSITS_*_FX over all six household deposit series (from 2023); the term-deposit share separately. The stocks are in tenge, so a depreciation raises the share without any conversion (valuation effect). Dollarisation of ALL deposits needs corporate deposits by currency, which the pipeline does not hold; the regulator's own household figure is BANK_DEPOSITS_INDIVIDUALS_FX_SHARE (ARDFM, from 2026-05).",
+  "publication_date": null,
+  "last_update_date": "2026-11-13",
+  "download_date": "2026-11-13",
+  "period_start": "1996-02-01",
+  "period_end": "2026-10-01",
+  "next_update_date": null,
+  "transformation": "derived (see the note)",
+  "revision_status": "original"
+}
