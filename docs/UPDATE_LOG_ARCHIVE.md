@@ -5470,3 +5470,34 @@ regions.csv learnt «Абайская», «Жетысуская», «Улыта�
 LFS for data/raw/damu and data/raw/kase xlsx. Slow sources refresh weekly (refresh_days).
 
 Tests: `tests/test_policy_gaps.py` (33); full suite 608 passed.
+
+## 2026-09-27 — history back to 1991 and 1990s peers: GDP, population, WDI from 1960, IMF WEO for all economies, CPI weights, discrete quarterly GDP (user: «Чего в пайплайне нет …», «Что ещё не хватает …»)
+
+**GDP from 1991.** The early sheets of BNS tables 4439-4441 («1990-1997 (ОКОНХ)», «1998-2006 (ОКЭД ГК РК 03-2003)»,
+«2007-2009 (ОКЭД ГК РК 03-2007)») are read as GDP_VOLUME_INDEX_AGGREGATES, GDP_DEFLATOR_AGGREGATES and
+GDP_PRODUCTION_AGGREGATES (dictionary `gdp_production_aggregates`). `gaps_filled_from` extends GDP_REAL and
+GDP_DEFLATOR to 1991 and GDP_INCOME_METHOD to 1993, only while the two sources agree on every shared year
+(2000-2009). Real GDP, % of the previous year: 1991 89.0, 1992 94.7, 1993 90.8; deflator 1991 201.5, 1992
+1 497.5; nominal GDP 1993 29 423.1 mln KZT. This closes the 1991-1992 gap of the IMF series (from 1993).
+
+**Population from 1991.** POPULATION_AVG_BY_REGION now reads both sheets of table 6576 (1991-2008, 2009-2025);
+new POPULATION_BOY_BY_REGION (table 6584, 1 January stocks, dated YYYY-01-01 via `as_at_start_of_year`) and the
+derived scalar POPULATION_BOY_BNS. POPULATION_BNS from 1991 (16 404 966.5). Source issues: the 2008 average is the
+post-census 1 January 2009 stock (population_avg_2008); the stocks jump by +204 869 at 2009 and +380 751 at 2022
+(census steps, not backcast).
+
+**Peers.** WDI panels from 1960 (GDP in USD, constant USD, population) plus GDP growth, CPI inflation, deflator
+inflation, GDP per capita PPP, the official exchange rate and net migration for every economy. IMF_WEO_WORLD: the
+WEO for 197 countries 1980-2024 (growth, inflation, GDP in USD and PPP per capita, population, current account,
+debt, unemployment; outturns only — years from each country's COUNTRY_UPDATE_DATE on are dropped; group codes
+dropped).
+
+**CPI weights before 2020.** CPI_WEIGHTS: the 12 COICOP divisions 2005-2019 as BNS reports them to the IMF
+(IMF.STA/CPI WGT_PT; 2005 CP01 43.061, 2019 36.976; CP01+CP02 equals BNS's published food share, and the weights
+reproduce the year-to-date CPI within 0.02-0.07 points), the 2022 scheme of the BNS brochure, and food / non-food
+/ services shares for 2014-2026 (data/reference/bns_cpi_weights.csv). CPI_WEIGHTS_ESTIMATED 2020-2026: division
+weights recovered from BNS's contributions to year-to-date CPI (2022 check: CP01 38.74 against 38.75).
+
+**Real GDP for 2026 Q2.** GVA_VOLUME_INDEX_BY_SECTION_DISCRETE derives discrete quarters from the year-to-date
+tables: GDP 105.2 in 2026 Q2 (manufacturing 111.1, construction 115.5). Its basis differs from the quarterly
+accounts (2025 Q2: 107.0 against 109.0 in QNA), so it is not spliced into QNA_*; BNS's own Q2 is due 28.10.2026.

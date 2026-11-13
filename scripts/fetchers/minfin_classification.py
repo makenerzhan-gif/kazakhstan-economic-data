@@ -289,3 +289,146 @@ def fetch_resource(ds: dict) -> tuple[list[dict], dict]:
             got[d] = records
     return _merge(ds, got), {"frequency": "monthly", "source_url": minfin.LISTING_URL,
                              "dataset_id": "Statistical Bulletin table 4", "note": ds.get("note", ""), "warnings": warnings}
+
+
+# ---------------------------------------------------------------- receipts by budget code
+
+RECEIPT_SHEETS = {"таб4": "STATE", "таб8(дох)": "REP"}
+RECEIPT_TOP = (("TOTAL", r"^поступления$"), ("REVENUE", r"^доходы$"))
+REVENUE_CATEGORIES = ("1", "2", "3", "4", "5")      # «ДОХОДЫ»; «ПОСТУПЛЕНИЯ» adds 6 and 7
+# The 2026 Budget Code put «Специальные поступления» in as category 4 and moved the three after it
+# down by one (transfers 4 -> 5, repayment of budget loans 5 -> 6, sale of financial assets 6 -> 7).
+# A category is therefore recognised by its name and always stored under its 2026 number, so that
+# one code is one thing in every year.
+RECEIPT_CATEGORIES = (("1", r"^налоговые поступления"), ("2", r"^неналоговые поступления"),
+                      ("3", r"^поступления от продажи основного капитала"), ("4", r"^специальные поступления"),
+                      ("5", r"^поступления трансфертов"), ("6", r"^погашение бюджетных кредитов"),
+                      ("7", r"^поступления от продажи финансовых активов"))
+
+
+def _digits(cell, width: int) -> str | None:
+    """A code cell: «1», «05», 5.0 -> the code padded to its width; blank or the «L01 ...» filler -> None."""
+    if cell is None:
+        return None
+    s = str(cell).strip()
+    if re.fullmatch(r"\d+\.0", s):
+        s = s[:-2]
+    return s.zfill(width) if re.fullmatch(r"\d{1,%d}" % width, s) else None
+
+
+def _code_offset(rows: list[list]) -> int | None:
+    """Column of the category code: the numbering row «1 2 3 4 ...» under the header marks it."""
+    for r in rows[:15]:
+        cells = [str(c).strip()[:-2] if re.fullmatch(r"\d+\.0", str(c).strip()) else str(c).strip() for c in r]
+        for i in range(len(cells) - 3):
+            if cells[i:i + 4] == ["1", "2", "3", "4"]:
+                return i
+    return None
+
+
+def receipt_lines(rows: list[list], col: int, off: int) -> list[tuple[str, str, float]]:
+    """(code, label, value): TOTAL, REVENUE, category «1», class «105», subclass «1053», specific «105306»."""
+    out, cat, cls, sub, started, printed = [], None, None, None, False, None
+    for r in rows:
+        if col >= len(r) or off + 4 > len(r):
+            continue
+        value, label = mr._value(r[col]), _label(r)
+        if value is None or not label:
+            continue
+        c = [_digits(r[off + i], w) for i, w in enumerate((1, 2, 1, 2))]
+        if c == ["1", "02", "3", "04"] and not started:          # the numbering row itself
+            continue
+        if not any(c):
+            top = next((code for code, rx in RECEIPT_TOP if re.search(rx, mr._norm(label))), None)
+            if top:
+                out.append((top, label, value))
+                started = True
+            continue
+        started = True
+        if c[0] and c[0] != printed and not any(c[1:]):          # a category row: its name decides the number
+            cat = next((code for code, rx in RECEIPT_CATEGORIES if re.search(rx, mr._norm(label))), None)
+            if cat is None:
+                raise ValueError(f"unknown receipt category «{label[:60]}»")
+            printed, cls, sub = c[0], None, None
+            out.append((cat, label, value))
+        elif c[0] and c[0] != printed:
+            raise ValueError(f"category {c[0]} on «{label[:40]}» without a category row")
+        elif c[3]:
+            cls, sub = c[1] or cls, c[2] or sub
+            if not (cat and cls and sub):
+                raise ValueError(f"specific «{label[:40]}» before its category, class or subclass")
+            out.append((cat + cls + sub + c[3], label, value))
+        elif c[2]:
+            sub = c[2]
+            out.append((cat + cls + sub, label, value))
+        elif c[1]:
+            cls, sub = c[1], None
+            out.append((cat + cls, label, value))
+        else:
+            raise ValueError(f"category row {c[0]} twice: «{label[:40]}»")
+    return out
+
+
+def check_receipts(lines: list[tuple[str, str, float]]) -> list[str]:
+    """Every level must equal the sum of the one below it; returns the breaks (empty when all hold)."""
+    vals, bad = {}, []
+    for code, _, v in lines:
+        if code in vals:
+            bad.append(f"code {code} twice")
+        vals[code] = v
+    def children(parent, n):
+        return [v for k, v in vals.items() if k.isdigit() and len(k) == n and k.startswith(parent)]
+    for code, v in vals.items():
+        if not code.isdigit() or len(code) == 6:
+            continue
+        kids = children(code, {1: 3, 3: 4, 4: 6}[len(code)])
+        if not kids:
+            bad.append(f"{code} has no lines below it")
+        elif abs(sum(kids) - v) > max(1.0, 1e-6 * abs(v)):
+            bad.append(f"{code}: {v:.1f} against {sum(kids):.1f} below it")
+    cats = {k: v for k, v in vals.items() if k.isdigit() and len(k) == 1}
+    for top, keys in (("REVENUE", REVENUE_CATEGORIES), ("TOTAL", tuple("1234567"))):
+        if top not in vals:
+            bad.append(f"no {top} row")
+        elif abs(sum(cats.get(k, 0.0) for k in keys) - vals[top]) > max(2.0, 1e-6 * abs(vals[top])):
+            bad.append(f"{top}: {vals[top]:.1f} against {sum(cats.get(k, 0.0) for k in keys):.1f} in categories")
+    return bad
+
+
+def receipts_edition(sheets: dict[str, list[list]], ds: dict) -> tuple[str | None, list[dict], list[str]]:
+    wanted = {minfin._sheet_key(n): rows for n, rows in sheets.items() if minfin._sheet_key(n) in RECEIPT_SHEETS}
+    period = _edition_period(wanted)
+    if period is None:
+        return None, [], []
+    year, month = period
+    d = f"{year}-{month:02d}-01"
+    records, notes = [], []
+    for key, budget in RECEIPT_SHEETS.items():
+        rows = wanted.get(key)
+        col = _column(rows, year, month) if rows else None
+        off = _code_offset(rows) if rows else None
+        if col is None or off is None:
+            notes.append(f"{d}: no {budget} sheet, period column or code columns")
+            continue
+        try:
+            lines = receipt_lines(rows, col, off)
+        except ValueError as exc:
+            _structural(ds, f"{d} {budget}: {exc}")
+        bad = check_receipts(lines)
+        if bad:
+            _structural(ds, f"{d} {budget}: " + "; ".join(bad[:5]))
+        for code, label, v in lines:
+            records.append({"date": d, "region": dims.NATIONAL, "item_code": f"{budget}.{code}",
+                            "item_name": f"{BUDGET_NAMES[budget]}: {label}", "value": round(v, 4)})
+    return d, records, notes
+
+
+def fetch_receipts(ds: dict) -> tuple[list[dict], dict]:
+    got, warnings = {}, []
+    for doc, sheets in _editions(set(RECEIPT_SHEETS)):
+        d, records, notes = receipts_edition(sheets, ds)
+        warnings += [f"{doc.get('id')}: {n}" for n in notes]
+        if d and d not in got and records:
+            got[d] = records
+    return _merge(ds, got), {"frequency": "monthly", "source_url": minfin.LISTING_URL,
+                             "dataset_id": "Statistical Bulletin tables 4 and 8", "note": ds.get("note", ""), "warnings": warnings}

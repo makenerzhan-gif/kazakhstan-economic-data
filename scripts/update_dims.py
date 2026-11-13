@@ -29,7 +29,7 @@ AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb
                    "nbk_interventions": nbk_operations.fetch_interventions, "nbk_open_position": nbk_operations.fetch_open_position,
                    "nbk_deposit_auctions": nbk_operations.fetch_deposit_auctions,
                    "kase_indices": kase_dims.fetch_indices, "kase_bond_volumes": kase_dims.fetch_bond_volumes,
-                   "minfin_economic": minfin_classification.fetch_economic, "minfin_resource": minfin_classification.fetch_resource,
+                   "minfin_economic": minfin_classification.fetch_economic, "minfin_resource": minfin_classification.fetch_resource, "minfin_receipts": minfin_classification.fetch_receipts,
                    "bns_env_taxes": tax_by_industry.fetch_env_taxes, "tax_industry_structure": tax_by_industry.fetch_industry_structure,
                    "kmg": kmg.fetch, "fao": world_misc.fetch_fao, "un_wpp": world_misc.fetch_wpp,
                    "bns_living": bns_living.fetch, "kase_eurobonds": kase_eurobonds.fetch, "bns_cpi": bns_cpi.fetch,

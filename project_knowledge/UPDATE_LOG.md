@@ -1,38 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — seven gaps for policy analysis: quasi-fiscal lending, expectations, import prices, NEER, wages, regional budgets, budget 2011-2018» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — history back to 1991 and 1990s peers: GDP, population, WDI from 1960, IMF WEO for all economies, CPI weights, discrete quarterly GDP (user: «Чего в пайплайне нет …», «Что ещё не хватает …»)» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-27 — history back to 1991 and 1990s peers: GDP, population, WDI from 1960, IMF WEO for all economies, CPI weights, discrete quarterly GDP (user: «Чего в пайплайне нет …», «Что ещё не хватает …»)
-
-**GDP from 1991.** The early sheets of BNS tables 4439-4441 («1990-1997 (ОКОНХ)», «1998-2006 (ОКЭД ГК РК 03-2003)»,
-«2007-2009 (ОКЭД ГК РК 03-2007)») are read as GDP_VOLUME_INDEX_AGGREGATES, GDP_DEFLATOR_AGGREGATES and
-GDP_PRODUCTION_AGGREGATES (dictionary `gdp_production_aggregates`). `gaps_filled_from` extends GDP_REAL and
-GDP_DEFLATOR to 1991 and GDP_INCOME_METHOD to 1993, only while the two sources agree on every shared year
-(2000-2009). Real GDP, % of the previous year: 1991 89.0, 1992 94.7, 1993 90.8; deflator 1991 201.5, 1992
-1 497.5; nominal GDP 1993 29 423.1 mln KZT. This closes the 1991-1992 gap of the IMF series (from 1993).
-
-**Population from 1991.** POPULATION_AVG_BY_REGION now reads both sheets of table 6576 (1991-2008, 2009-2025);
-new POPULATION_BOY_BY_REGION (table 6584, 1 January stocks, dated YYYY-01-01 via `as_at_start_of_year`) and the
-derived scalar POPULATION_BOY_BNS. POPULATION_BNS from 1991 (16 404 966.5). Source issues: the 2008 average is the
-post-census 1 January 2009 stock (population_avg_2008); the stocks jump by +204 869 at 2009 and +380 751 at 2022
-(census steps, not backcast).
-
-**Peers.** WDI panels from 1960 (GDP in USD, constant USD, population) plus GDP growth, CPI inflation, deflator
-inflation, GDP per capita PPP, the official exchange rate and net migration for every economy. IMF_WEO_WORLD: the
-WEO for 197 countries 1980-2024 (growth, inflation, GDP in USD and PPP per capita, population, current account,
-debt, unemployment; outturns only — years from each country's COUNTRY_UPDATE_DATE on are dropped; group codes
-dropped).
-
-**CPI weights before 2020.** CPI_WEIGHTS: the 12 COICOP divisions 2005-2019 as BNS reports them to the IMF
-(IMF.STA/CPI WGT_PT; 2005 CP01 43.061, 2019 36.976; CP01+CP02 equals BNS's published food share, and the weights
-reproduce the year-to-date CPI within 0.02-0.07 points), the 2022 scheme of the BNS brochure, and food / non-food
-/ services shares for 2014-2026 (data/reference/bns_cpi_weights.csv). CPI_WEIGHTS_ESTIMATED 2020-2026: division
-weights recovered from BNS's contributions to year-to-date CPI (2022 check: CP01 38.74 against 38.75).
-
-**Real GDP for 2026 Q2.** GVA_VOLUME_INDEX_BY_SECTION_DISCRETE derives discrete quarters from the year-to-date
-tables: GDP 105.2 in 2026 Q2 (manufacturing 111.1, construction 115.5). Its basis differs from the quarterly
-accounts (2025 Q2: 107.0 against 109.0 in QNA), so it is not spliced into QNA_*; BNS's own Q2 is due 28.10.2026.
 
 ## 2026-09-27 — X-13ARIMA-SEATS replaces STL for seasonal adjustment
 
@@ -616,3 +585,37 @@ The order that defined the classification (Minfin order 403 of 18.09.2014) was r
 text was not found on the Minfin site and the classification here is read from the bulletin's own tables.
 
 Tests: tests/test_minfin_classification.py (6 + 1 cross-source).
+
+## 2026-11-13 — budget receipts by every classification code (BUDGET_RECEIPTS_BY_CODE_YTD) (user: «Есть ли поступления в разрезе налогов?», «Да, подключи»)
+
+**What.** `minfin_classification.fetch_receipts` (fetcher `minfin_receipts`) reads every row of the Statistical
+Bulletin's «табл 4» (state budget, items `STATE.*`) and «табл 8 (дох)» (republican budget, `REP.*`): 518 items,
+5 434 rows, 12 editions (2025-02 .. 2026-05, the ones archived in `data/raw/minfin/`). Item code = budget + the
+classification code: `TOTAL`, `REVENUE`, category (1 digit), class (3), subclass (4), specific (6 = the full
+budget code). The code is assembled from merged cells: a row prints only the levels that change, the rest is
+inherited from the rows above; «L01 …» fillers and the numbering row are skipped; the republican sheet is one
+column to the right (found by the numbering row «1 2 3 4»).
+
+**Renumbering.** The 2026 Budget Code inserted «Специальные поступления» as category 4 and moved transfers 4 -> 5,
+repayment of budget loans 5 -> 6, sale of financial assets 6 -> 7. A category is recognised by its name and stored
+under its 2026 number in every year (`RECEIPT_CATEGORIES`); an unknown category name stops the load. Specifics
+are not renumbered; 105316 was reused (environmental fee in 2025, plant-resources fee from 2026; the environmental
+fee is 401101 now), 201907 and 204110 changed meaning inside 2025 — `item_name` is the label of the edition.
+
+**Checks.** In all 24 sheets: specifics = subclass, subclasses = class, classes = category, categories 1-5 =
+«ДОХОДЫ», 1-7 = «ПОСТУПЛЕНИЯ» (`check_receipts`; a break raises StructuralChangeError). Against the scalar layer,
+12 common months each, no difference: STATE.1 = STATE_TAX_REVENUE_YTD, 1011 = STATE_CIT_YTD, 1012 = STATE_PIT_YTD,
+1051 = STATE_VAT_YTD, 1052 = STATE_EXCISE_YTD, 103 = STATE_SOCIAL_TAX_YTD, REVENUE = STATE_BUDGET_REVENUE_YTD,
+5 = STATE_TRANSFERS_RECEIVED_YTD, 106110 = OIL_EXPORT_DUTY; 105306 = RESOURCE_PAYMENTS_YTD/MET_NON_OIL.
+
+**Numbers** (state budget, bn KZT, January-May 2026 / January-November 2025): receipts 12 997.6 / 26 978.4; taxes
+10 934.5 / 20 588.1; CIT 2 792.2 / 5 070.2 (large business 1 990.0 / 3 638.4); PIT 1 181.3 / 2 590.6; VAT
+3 478.3 / 5 809.5 (domestic 1 741.4 / 2 637.3, imports from third countries 902.7 / 1 775.5, from the EAEU
+650.0 / 1 116.6); excises 460.8 / 934.1; non-oil MET 838.1 / 1 092.8; export duty on crude 625.5 / 1 493.3.
+January-March, 2026 against 2025: VAT 1 962.5 against 1 320.6 (+48.6 %, the rate went from 12 to 16 %), domestic
+VAT 1 001.4 against 544.6.
+
+**Limits.** Built offline from the archived editions (gov.kz listing is 403 from the sandbox); the first workflow
+run will read the live listing. No 2025-04, 2025-05, 2025-12, 2026-04; before 2025-02 needs
+`backfill_minfin_bulletins.py`. A line with no receipts is absent, not zero. Oil-sector taxes go to the National
+Fund and are not in these tables. Tests: 5 new in `tests/test_minfin_classification.py`.
