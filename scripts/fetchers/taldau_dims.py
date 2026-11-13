@@ -62,7 +62,14 @@ def node_values(node: dict, frequency: str) -> dict[str, float]:
             value = float(v)
         except (TypeError, ValueError):
             continue
-        if frequency == "quarterly":
+        if frequency == "weekly":
+            # 'yWWYYYY', WW the ISO week (period_id 2): dated its Wednesday, the day BNS registers the
+            # weekly food prices (y442026 = the bulletin «на 28 октября 2026»). Added 2026-11-13.
+            try:
+                out[date.fromisocalendar(year, month, 3).isoformat()] = value
+            except ValueError:
+                continue
+        elif frequency == "quarterly":
             out[f"{year:04d}-{month - 2:02d}-01"] = value      # the quarter's first day, the dims convention
         elif frequency == "monthly":
             out[f"{year:04d}-{month:02d}-01"] = value          # the month's first day, as the CPI detail
@@ -177,7 +184,9 @@ def fetch_regional(ds: dict) -> tuple[list[dict], dict]:
                        `national_term` (from 2025 some indices use region dictionary 4843, whose
                        national node is 77397431, not 741880 -- added 2026-11-10), its own
                        `item_pos`, and `items` (the item codes it carries);
-      item `measure_id` overrides the dataset's (items from indices with other units).
+      item `measure_id` overrides the dataset's (items from indices with other units);
+      `frequency: weekly` (period_id 2) dates each ISO week at its Wednesday; `national_only: true`
+                       keeps the national node and does not expand the regions (2026-11-13).
     """
     if ds.get("refresh_days"):
         from fetchers import imf_dims
@@ -214,6 +223,8 @@ def fetch_regional(ds: dict) -> tuple[list[dict], dict]:
                 top = [n for n in root if str(n.get("id")) == nt]
                 if ds.get("flat_regions"):
                     regions = [n for n in root if str(n.get("id")) != nt]
+                elif ds.get("national_only"):
+                    regions = []                         # the regional nodes are not wanted (or not regions)
                 elif top and str(top[0].get("leaf")).lower() != "true":
                     regions = _post(ids, tstr, parent=nt, pos=str(rp), term=nt)
                 else:

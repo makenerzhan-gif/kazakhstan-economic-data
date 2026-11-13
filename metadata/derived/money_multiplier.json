@@ -1,0 +1,21 @@
+{
+  "source": "derived",
+  "source_url": "derived by this repository (scripts/fetchers/analytics.py)",
+  "dataset_id": "analytics/money_multiplier",
+  "indicator_id": "MONEY_MULTIPLIER",
+  "indicator_name": "Money multiplier (M2 and M3 over the monetary base), cash share of M3 (computed by this repository)",
+  "description": "Денежный мультипликатор (M2 и M3 к денежной базе), доля наличных в M3 (расчёт репозитория)",
+  "frequency": "monthly",
+  "unit": "ratio; %",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "From the NBK's M0, M2, M3 and MONETARY_BASE (stocks, monthly from 1994). M2_SHARE_M3: the rest of M3 is other deposits in foreign currency.",
+  "publication_date": null,
+  "last_update_date": "2026-11-13",
+  "download_date": "2026-11-13",
+  "period_start": "1994-02-01",
+  "period_end": "2026-10-01",
+  "next_update_date": null,
+  "transformation": "derived (see the note)",
+  "revision_status": "original"
+}

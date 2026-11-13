@@ -1,0 +1,21 @@
+{
+  "source": "derived",
+  "source_url": "derived by this repository (scripts/fetchers/analytics.py)",
+  "dataset_id": "analytics/labour_costs",
+  "indicator_id": "LABOUR_COST_INDICATORS",
+  "indicator_name": "Unit labour cost, productivity, real wage, enterprise profits to GDP, quarterly (computed by this repository)",
+  "description": "Удельные издержки на труд, производительность, реальная заработная плата, прибыль предприятий к ВВП, поквартально (расчёт репозитория)",
+  "frequency": "quarterly",
+  "unit": "index 2015 = 100; % y/y; % of GDP",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "ULC = average monthly wage (AVG_WAGE_1T_QUARTERLY, enterprises' survey, from 2015) over real output per employed person (QNA_GDP_EXPENDITURE_SA_CONSTANT_2010 / EMPLOYED_BY_SECTION_QUARTERLY TOTAL). The wage is not seasonally adjusted (Q4 bonuses), so read the y/y rates; the indices are 2015 = 100. Real wage: deflated by the CPI level (chained CPI m/m, quarter mean). WAGE_BILL_PROXY_TO_GDP applies the enterprises' wage to all employed persons, self-employed included -- an upper bound, not the national-accounts compensation of employees (INCOME_COMPENSATION_BY_SECTION). PROFIT_BALANCE_TO_GDP: ENTERPRISE_PROFIT_LOSS_QUARTERLY profit + loss (large and medium enterprises, before tax) over the quarter's nominal GDP.",
+  "publication_date": null,
+  "last_update_date": "2026-11-13",
+  "download_date": "2026-11-13",
+  "period_start": "2015-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "derived (see the note)",
+  "revision_status": "original"
+}

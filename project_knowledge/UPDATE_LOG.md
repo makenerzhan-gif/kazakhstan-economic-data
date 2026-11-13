@@ -1,47 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — utility tariff decisions and CPI tariff jumps (TARIFF_DECISIONS, TARIFF_CHANGE_MONTHS)» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — the quasi-fiscal block before 2022: budget lending by recipient, holdings' balance sheets, NBK surveys from 1997» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-27 — the quasi-fiscal block before 2022: budget lending by recipient, holdings' balance sheets, NBK surveys from 1997
-
-**RB_QUASIFISCAL_YTD** (new, `fetchers/minfin_quasifiscal.py`): budget loans (LOAN) and acquisitions of
-financial assets (EQUITY) of the republican budget from the Statistical Bulletin «табл 8 (расх)», January to
-the month, 2013-01 … 2026-07 (2020-04 and 2026-04 not online; 2025-12 from the untitled gov.kz document 964016).
-The recipient is read from the programme label, not the codes: the first entity named is the direct
-counterparty, the last one before «через» the final recipient. Items: totals; SEC.DI (development institutions
-and holdings); 18 final recipients (DBK, IDF, Damu, ACC, Otbasy, Samruk-Kazyna, KTZ, the Problem Loans Fund …);
-six families; the three holdings as direct counterparties; the non-quasi-fiscal rest, so the parts add up.
-Checks: programmes = section header in every edition; headers = табл 7 (except its errors of 2021-02/03);
-LOAN.DI = табл 10 specifics 513+519. Loans to development institutions, bn KZT: 60.0 (2013), 58.9, 68.9,
-182.5, 194.1, 146.5, 246.5, 245.2, 284.7, 577.3 (2022, of which IDF 361.7), 410.3 (2023, Samruk 162.6), 274.0,
-235.5 (2025). Equity: 433.1 bn in 2014 (Problem Loans Fund 250.0). Not covered: current transfers booked as
-spending (2 092.9 bn to the Problem Loans Fund in 2017, Damu subsidies) and bond purchases by the National Fund,
-the NBK or UAPF.
-
-**DEVELOPMENT_INSTITUTIONS_BALANCE_SHEETS** extended (`fetchers/kase_ifrs.py`): FPKR, the Problem Loans Fund
-(consolidated, 2017-12 … 2021-06, left on the KASE server after its bonds were annulled; equity -716.3 bn and
-the reserve for conditional distribution -3 645.1 bn at 2019-12-31), KZAG (KazAgro consolidated, 2012-12 …
-2020-09), SKKZ (Samruk-Kazyna consolidated, from 2021-12) and SKKZ_SEP (its separate Minfin Form 1, 2012-12 …
-2016-03); KASE fin-data key indicators BTRK.FD_* (from 2015-12) and SKKZ.FD_* (from 2006-12). Discovery moved to
-the KASE documents API; .xls statements are read (BRKZ from 2012-12). Docstring corrected: KFUS is the
-Kazakhstan Sustainability Fund (2017), not the Problem Loans Fund. Fixed: BTRK.GOV_SUBSIDIES had taken the
-asset «субсидии к получению» at 2020-12-31 and 2021-09-30. Aggregation: BTRK + KZAG (to 2020) + FPKR + KFUS
-(+ SKKZ_SEP); never add a subsidiary to its parent.
-
-**NBK surveys from 1997** (`fetchers/nbk_records.py`, the JSON «records» behind the NBK monetary-statistics
-pages): NBK_SURVEY_HISTORY (CB), BANKS_SURVEY_HISTORY (ODC), BANKING_SYSTEM_SURVEY_HISTORY (BS) monthly from
-1998, OFC_SURVEY and FINANCIAL_SECTOR_SURVEY quarterly from 2015. Stocks are dated the first day of the next
-period, as form 50 (the year-month of `reporting_date` is the month-end). Enforced: the survey identities,
-BS = CB + ODC for claims on NBFIs and the rest of the economy from 2002-11, CB = form 50 on the 44 common dates,
-OFC = form 26. Quasi-fiscal lines: NBK claims on NBFIs (KSF, Problem Loans Fund, mostly equity) 146.2 bn at
-end-2011, 1 230.1 bn (end-2017), 3 044.0 (end-2019), 5 317.6 (end-2021), 5 137.7 (end-2026-08); banks' claims on
-public nonfinancial organisations; OFC claims on them (DBK among the OFCs). **BANKS_GOV_HOLDING_BORROWINGS**
-(`fetchers/nbk_balance_groups.py`): banks' borrowings from the government, local executive bodies and the
-national managing holding (account group 2030), IFIs (2040) and other banks (2050), monthly from 2010 (G2030
-58.4 bn at 2011-01-01, 399.8 at 2015-01-01, 712.0 at 2026-08-01; break 2023-02 when Damu joined group 2030).
-Source issues registered: the misdated 2003-04 banks' record, six NBK identity errors, the unpublished NDA line
-from 2009, the 2015-06 step in NBK claims on the rest of the economy, the 2023-02 Damu reclassification.
 
 ## 2026-09-28 — official exchange rates back to the tenge's introduction (November 1993)
 
@@ -486,6 +446,42 @@ Not done (need a decision): updaters in parallel, logs out of the repository.
    rate; real 10-year yield on household expectations. The sovereign USD spread already exists (KZ_EUROBOND_SPREAD).
 
 Tests: tests/test_run_speed.py (3), tests/test_analytics.py (+1).
+
+## 2026-11-13 — stale series explained, a skipped bulletin, parallel updaters, PR tests, dashboard; eleven new datasets (the «сделай все» request)
+
+**Found and fixed**: the Statistical Bulletin posted 2026-11-05 is titled «Statistical Bulletin …» (capital B); nine
+case-sensitive title tests in minfin.py skipped it, so every bulletin series stood one edition behind.
+
+**Stale series** (scripts/lib/staleness.py): a report section and an Actions warning for series whose newest observation is
+older than the frequency allows (daily 20, monthly 150, quarterly 330, annual 700 days). The 30 found: in 29 the source has
+nothing newer (15 NF_*_YTD -- Minfin has posted no National Fund statement after 1 July 2026; five NBK form-314 bank ratios
+frozen since 2024-04 and already superseded; retail food / non-food on Taldau to 2026-04; IMF CTOT to 2026-05; FSI_ROA / ROE
+to 2025-Q4; passenger turnover, doctors, beds); NBK_DEBT is blank at the source from 2026-01. Each says why in
+config/indicators.yaml (`stale_ok`, or the `lifecycle` it had) and is listed quietly; a new unexplained one raises the warning.
+
+**Run**: BNS, NBK, Minfin and the small agencies in separate processes (update_all.PARALLEL_GROUPS; UPDATE_ALL_SERIAL=1 for
+the old order); model_data/ rebuilt and tested at the end of the run, the previous panel restored on any failure;
+docs/dashboard.html rebuilt (scripts/build_dashboard.py: ten charts, six tiles); logs/ no longer committed.
+**CI**: tests.yml runs pytest on every pull request; update.yml opens an issue (label pipeline-run) when a run or a dataset fails.
+
+**New derived datasets**: MONEY_MULTIPLIER, MONEY_VELOCITY, LABOUR_COST_INDICATORS (unit labour cost, productivity, real wage,
+profit balance to GDP), REAL_SOCIAL_STANDARDS (real MZP and minimum pension, Kaitz index); DOLLARIZATION gains all deposits,
+legal entities and individuals from 1998 (68.8 % of deposits in FX at 2016-01-01, 18.7 % at 2026-10-01).
+
+**New data**:
+1. DEPOSITS_BY_CURRENCY (fetchers/nbk_deposits.py): the NBK deposits page records, 346 months from 1997-12, by currency and
+   holder. Open-data form 62 is not used -- its legal-entity rows disagree with the page for 2022 and at the latest date.
+2. SOCIAL_FOOD_PRICES_WEEKLY (2026 basket, 31 items) and SOCIAL_FOOD_PRICES_WEEKLY_2022_2025 (19 items): Taldau 703112,
+   weekly period; taldau_regional now reads `frequency: weekly` (each ISO week dated its Wednesday) and `national_only`.
+3. WAGE_ARREARS_QUARTERLY: overdue and total wage payables of large and medium enterprises, 2015 Q1 on (Taldau 703173 / 703172).
+4. Annual budget plan, eight scalars (STATE_BUDGET_*_PLAN, REPUBLICAN_BUDGET_*_PLAN: revenue, tax revenue, expenditure,
+   deficit) from the bulletin's «табл 2»; parsed offline from 12 archived editions, the first run is the live check.
+Already in the pipeline: Government accounts with the NBK (NBK_SURVEY_HISTORY item CB.n_d_a_minus_obligation, 3.9 trn KZT at
+2026-11-01) and monthly physical output (INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY). Not found in machine-readable
+form: housing purchase-sale deals (only a monthly news text). Not connected: the period plan from Minfin's monthly budget
+execution report; the National Fund oil taxes from the cash-control-account report.
+
+Tests: tests/test_run_speed.py, tests/test_analytics.py, tests/test_new_sources_2026_11c.py (904 in all).
 
 ## 2026-11-13 — tax receipts by economic activity: no KGD table exists; the Audit Chamber's structure and BNS environmental taxes connected instead
 

@@ -38,6 +38,7 @@ class ValidationResult:
 EXPECTED_COLUMNS = {"date", "value"}
 FREQUENCY_DELTA_DAYS = {
     "daily": (1, 4),        # allow weekends/holidays gaps
+    "weekly": (5, 10),       # Taldau's weekly food prices; a missing week is worth a warning
     "monthly": (25, 40),
     "quarterly": (80, 100),
     "annual": (350, 380),

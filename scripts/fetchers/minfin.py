@@ -814,7 +814,15 @@ def fetch_gg_cash_surplus_deficit() -> tuple[list[dict], dict]:
 # available point for 2025 is Jan-Nov); this is a real gap, not fabricated/
 # interpolated into a fake annual figure.
 # ---------------------------------------------------------------------------
-STATISTICAL_BULLETIN_TITLE_MARKER = "Statistical bulletin"
+STATISTICAL_BULLETIN_TITLE_MARKER = "Statistical bulletin"      # the wording, for error messages
+
+
+def _is_bulletin_title(title) -> bool:
+    """Whether a document title names the Statistical Bulletin, whatever its capitals. The edition
+    posted 2026-11-05 is «Statistical Bulletin as of oktober 1, 2026» (capital B); the plain
+    `"Statistical bulletin" in title` test skipped it, so every bulletin series stood one edition
+    behind until 2026-11-13."""
+    return bool(re.search(r"statistical\s+bulletin", title or "", re.IGNORECASE))
 # THE ARCHIVE (added 2026-09-27). The budget direction's listing holds only its latest 100
 # documents, so the daily run sees about 14 bulletins (early 2025 onward). Minfin keeps the
 # monthly bulletins back to January 2019 online, reachable by title search («Статистический
@@ -831,7 +839,7 @@ def _bulletin_documents() -> list[dict]:
     """The monthly bulletins, newest first: the budget direction's listing, and in archive mode
     every bulletin a title search finds as well."""
     docs = [d for d in _list_documents(directions=BUDGET_DIRECTION_ID)
-            if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+            if _is_bulletin_title(d.get("title"))]
     if not BULLETIN_ARCHIVE:
         return docs
     found = {d.get("id"): d for d in docs}
@@ -1435,7 +1443,7 @@ def _fetch_nf_row(row_finder, indicator_id: str, description_note: str) -> tuple
     fetch_national_fund_savings_bonds for how that ambiguity is resolved.
     """
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -1709,7 +1717,7 @@ def fetch_gov_financial_assets_sold() -> tuple[list[dict], dict]:
     within each year (2025: 192.41 Mar to 4,545.42 Nov; 2026: 27.30 Jan to
     3,394.45 Jun)."""
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -1846,7 +1854,7 @@ def fetch_gov_audit_violations_amount() -> tuple[list[dict], dict]:
     live 2026-08-31: 13 documents parsed, monotonic within each year (2025:
     18,398 Feb to 395,858 Nov; 2026: 19,655 Jan to 455,695 Jun)."""
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -2074,7 +2082,7 @@ def _fetch_pension_row(column_half: str, indicator_id: str, note: str) -> tuple[
     and the first whose table 27 is dated 1 January is used -- the 1-July figures are not
     stored (a half-year variant would be a separate indicator, not this one)."""
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -2183,7 +2191,7 @@ def fetch_gov_procurement_total_value() -> tuple[list[dict], dict]:
     the 13 listed bulletins (this sheet is published once per closed year,
     not monthly) -- 2024: 7,296,933.87; 2025: 8,141,829.16 million KZT."""
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -2572,7 +2580,7 @@ def _fetch_debt_structure_row(section: str, row_code: str, russian_marker: str,
                               indicator_id: str, note: str,
                               currency: str = "KZT") -> tuple[list[dict], dict]:
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -2982,7 +2990,7 @@ REPUBLICAN_BUDGET_MARKER = "Республикалық бюджет"
 def _fetch_budget_financing_row(sheet_prefix: str, kazakh_label: str, russian_marker: str,
                                  indicator_id: str, note: str) -> tuple[list[dict], dict]:
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -3324,7 +3332,7 @@ def _verify_state_budget_identity(indicator_id: str) -> str:
     rather than one per component. Returns the period checked.
     """
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if STATISTICAL_BULLETIN_TITLE_MARKER in (d.get("title") or "")]
+    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -4359,3 +4367,45 @@ def fetch_state_budget_deficit_q() -> tuple[list[dict], dict]:
     return _fetch_state_budget_quarterly("STATE_BUDGET_DEFICIT_Q", _STATE_BUDGET_Q_COMMON +
                                          "Deficit (-) / surplus (+): revenue less expenditure, net budget lending "
                                          "and the balance on financial assets.")
+
+
+# ---------------------------------------------------------------------------
+# Annual budget plan (added 2026-11-13): Statistical Bulletin sheet «табл 2 » «Сравнительный анализ
+# исполнения государственного и республиканского бюджетов». Columns: 1 the state budget's adjusted plan
+# for the year («на год с учётом корректировки»), 2 its execution for January-<month>, 3 % of the annual
+# plan; 5 / 6 / 7 the same for the republican budget; the Russian label is the row's last text cell.
+# Each edition gives the plan AS IT STOOD at that edition, so a series shows the plan's revisions within
+# the year (state revenue 2026: 32 595 214 in the January-May edition, 32 638 495 in January-August).
+# The value is dated like the execution it stands beside (the last day of the period's last month); the
+# sheet's own header does not name the period in a form _find_period reads, so the period comes from the
+# edition's other tables (the helper's fallback). Execution against the plan: STATE_BUDGET_*_YTD and the
+# republican-budget series. The bulletin has no plan for the reporting period; that is in Minfin's monthly
+# «Отчет об исполнении бюджета» (not connected).
+# ---------------------------------------------------------------------------
+BUDGET_PLAN_SHEET = "табл 2"
+BUDGET_PLAN_SERIES = {  # indicator: (value column, the label's first words)
+    "STATE_BUDGET_REVENUE_PLAN": (1, "I. ДОХОДЫ"),
+    "STATE_BUDGET_TAX_REVENUE_PLAN": (1, "Налоговые поступления"),
+    "STATE_BUDGET_EXPENDITURE_PLAN": (1, "II. ЗАТРАТЫ"),
+    "STATE_BUDGET_DEFICIT_PLAN": (1, "V. ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА"),
+    "REPUBLICAN_BUDGET_REVENUE_PLAN": (5, "I. ДОХОДЫ"),
+    "REPUBLICAN_BUDGET_TAX_REVENUE_PLAN": (5, "Налоговые поступления"),
+    "REPUBLICAN_BUDGET_EXPENDITURE_PLAN": (5, "II. ЗАТРАТЫ"),
+    "REPUBLICAN_BUDGET_DEFICIT_PLAN": (5, "V. ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА"),
+}
+
+
+def _label_starts(prefix: str):
+    """Rows whose Russian label starts with `prefix` («Налоговые поступления,\n в том числе:»)."""
+    return lambda r: " ".join(_row_label(r).split()).startswith(prefix)
+
+
+def fetch_budget_plan(indicator_id: str) -> tuple[list[dict], dict]:
+    col, label = BUDGET_PLAN_SERIES[indicator_id]
+    scope = "state budget (republican plus local)" if col == 1 else "republican budget"
+    return _fetch_bulletin_row(
+        BUDGET_PLAN_SHEET, _label_starts(label), indicator_id, value_col=col,
+        note_override=(f"Million KZT, {scope}: the ADJUSTED PLAN FOR THE WHOLE YEAR as printed in the edition for "
+                       "January-<month> (sheet «табл 2»), dated the last day of that month -- not a year-to-date flow. "
+                       "It changes when the budget is revised; compare with the year-to-date execution of the same date."))
+

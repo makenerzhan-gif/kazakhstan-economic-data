@@ -24,6 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write      # the "Report problems" step opens an issue when datasets fail
     steps:
       - uses: actions/checkout@v4
 
@@ -36,6 +37,13 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Fetch the X-13 binary (the one LFS file the run needs)
+        # The checkout leaves LFS files as pointers (the archived workbooks are 1 GB). The
+        # model_data build needs tools/x13as/x13as_ascii; without it scripts/lib/x13.py downloads
+        # the same build from census.gov, so a failure here is not fatal.
+        continue-on-error: true
+        run: git lfs pull --include "tools/x13as/x13as_ascii"
 
       - name: Run pipeline
         env:
@@ -71,7 +79,9 @@ jobs:
           # fell into GitHub's 15:06-15:16 UTC outage ("Fatal error: Unable to verify
           # locks") and the whole run's output was lost. Skip the check.
           git config lfs.locksverify false
-          git add data/ metadata/ dictionaries/ project_knowledge/ reports/ logs/
+          # logs/ is not committed (2026-11-13): 1.5 MB a run, 79 MB by then, and the same files
+          # are in this run's diagnostics artifact. The report (reports/) carries what matters.
+          git add data/ metadata/ dictionaries/ project_knowledge/ reports/ model_data/ docs/dashboard.html
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
@@ -109,4 +119,27 @@ jobs:
             done
             echo "::error::Push still failing after 5 attempts."
             exit 1
+          fi
+
+      - name: Report problems in an issue
+        # Runs whatever happened above. Opens an issue (or comments on the open one) when the run
+        # failed or datasets kept their previous data -- before 2026-11-13 that was visible only
+        # to someone who opened the Actions page. A clean run posts nothing.
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set +e
+          python scripts/run_issue.py "${{ job.status }}" "$RUN_URL" > issue_body.md
+          code=$?
+          set -e
+          if [ "$code" -eq 3 ]; then echo "Nothing to report."; exit 0; fi
+          if [ "$code" -ne 0 ]; then echo "::warning::run_issue.py failed ($code)"; exit 0; fi
+          gh label create pipeline-run --color B60205 --description "Problems found by a data run" 2>/dev/null || true
+          open=$(gh issue list --label pipeline-run --state open --json number --jq '.[0].number')
+          if [ -n "$open" ]; then
+            gh issue comment "$open" --body-file issue_body.md
+          else
+            gh issue create --label pipeline-run --title "Прогон $(date -u +'%Y-%m-%d'): есть ошибки" --body-file issue_body.md
           fi

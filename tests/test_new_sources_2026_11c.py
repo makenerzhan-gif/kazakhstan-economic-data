@@ -167,3 +167,60 @@ def test_block_b_bns_datasets_configured():
         ds = update_dims.DATASETS[ds_id]
         assert ds.get("fetcher", ds["agency"]) in update_dims.AGENCY_FETCHERS, ds_id
         assert ds["agency"] in update_dims.METHODOLOGY or ds["agency"] == "bns", ds_id
+
+
+# ---------------------------------------------------------------- sources of 2026-11-13
+
+def test_deposits_by_currency_records_and_identities():
+    from fetchers import nbk_deposits
+    from lib import validation
+    ds = {"id": "DEPOSITS_BY_CURRENCY", "min_periods": 2}
+    rec = lambda rd, total, nc, fc: {"reporting_date": rd, "total_deposit": total, "total_deposit_nc": nc, "total_deposit_fc": fc,  # noqa: E731
+                                     "total_deposit_fc_nb_le": fc - 1, "total_deposit_fc_np": 1, "note_ru": None, "published_at": "x"}
+    out = nbk_deposits.deposit_records([rec("1997-12-08 00:00:00", 100, 70, 30), rec("2026-09-30 22:00:00", 200, 150, 50)], ds)
+    by = {(r["item_code"], r["date"]): r["value"] for r in out}
+    assert by[("TOTAL", "1998-01-01")] == 100 and by[("FX", "2026-10-01")] == 50 and by[("FX.LEGAL", "2026-10-01")] == 49
+    assert nbk_deposits.as_at("2025-12-31 22:00:00") == "2026-01-01"
+    with pytest.raises(validation.StructuralChangeError, match="TOTAL"):
+        nbk_deposits.deposit_records([rec("2026-08-31", 100, 70, 35), rec("2026-09-30", 1, 1, 0)], ds)
+    with pytest.raises(validation.StructuralChangeError, match="new_key"):
+        nbk_deposits.deposit_records([{**rec("2026-08-31", 100, 70, 30), "new_key": 1}, rec("2026-09-30", 1, 1, 0)], ds)
+    with pytest.raises(validation.StructuralChangeError, match="two records"):
+        nbk_deposits.deposit_records([rec("2026-09-01", 100, 70, 30), rec("2026-09-30", 100, 70, 30)], ds)
+
+
+def test_taldau_weekly_values_are_dated_the_iso_week_wednesday():
+    from fetchers import taldau_dims
+    vals = taldau_dims.node_values({"y442026": "231.91", "y382026": "444.3", "y022026": "222.75", "y992026": "1", "text": "x"}, "weekly")
+    assert vals == {"2026-10-28": 231.91, "2026-09-16": 444.3, "2026-01-07": 222.75}      # week 99 does not exist: dropped
+
+
+def test_fetch_regional_national_only_does_not_expand(monkeypatch):
+    from fetchers import taldau_dims
+    calls = []
+
+    def fake_post(ds, terms, parent="", pos="0", term="741880"):
+        calls.append(parent)
+        return [{"id": "741880", "text": "РК", "leaf": "false", "y442026": "10"}]
+    monkeypatch.setattr(taldau_dims, "_post", fake_post)
+    monkeypatch.setattr(taldau_dims.raw_store, "save_raw_bytes", lambda *a, **k: Path("x"))
+    monkeypatch.setattr(taldau_dims.raw_store, "write_download_manifest", lambda *a, **k: None)
+    recs, _ = taldau_dims.fetch_regional({"id": "T", "index_id": "1", "measure_id": "1", "frequency": "weekly", "item_pos": 1, "national_only": True,
+                                          "dic_ids": "67,4305", "terms": "741880,1", "items": [{"code": "BREAD", "term": "1", "name": "Хлеб"}]})
+    assert calls == [""] and recs == [{"date": "2026-10-28", "region": "national", "item_code": "BREAD", "item_name": "Хлеб", "value": 10.0}]
+
+
+def test_budget_plan_series_and_label_prefix():
+    import update_minfin
+    assert set(minfin.BUDGET_PLAN_SERIES) <= set(update_minfin.FETCHERS) and set(minfin.BUDGET_PLAN_SERIES) <= set(update_minfin.INDICATOR_IDS)
+    assert {c for c, _ in minfin.BUDGET_PLAN_SERIES.values()} == {1, 5}                   # state, republican
+    match = minfin._label_starts("Налоговые поступления")
+    assert match(["x", 1.0, 2.0, "  Налоговые поступления,\n   в том числе:", None]) and not match(["x", 1.0, "  корпоративный подоходный налог"])
+    assert minfin._label_starts("II. ЗАТРАТЫ")(["II. ШЫҒЫНДАР", "1", "II. ЗАТРАТЫ"]) and not minfin._label_starts("I. ДОХОДЫ")(["a", "II. ЗАТРАТЫ"])
+
+
+def test_weekly_frequency_is_validated():
+    from lib import dims as dims_lib
+    rows = [{"date": d, "region": "national", "item_code": "BREAD", "item_name": "x", "value": 1.0} for d in ("2026-10-14", "2026-10-21", "2026-11-11")]
+    res = dims_lib.validate(rows, "T", "weekly")
+    assert res.ok and any("Gap of 21 days" in w for w in res.warnings)

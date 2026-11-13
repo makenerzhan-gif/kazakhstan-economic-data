@@ -5931,6 +5931,102 @@ agencies:
         download_url: "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294"
         format: xls_table
         notes: "2026-09-26. Same Minfin National Fund report as NF_OIL_CIT_YTD (see there)."
+      STATE_BUDGET_REVENUE_PLAN:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 2"
+        target_row_label: "I. ДОХОДЫ"
+        format: xlsx
+        frequency: irregular (annual plan as at each monthly edition)
+        notes: >
+          2026-11-13. Sheet «табл 2 », column 1 (state budget, adjusted plan for the year). Parsed
+          offline from the archived January-May 2026 edition; the gov.kz listing is not reachable from the
+          development sandbox, so the first scheduled run is the live check. fetch_budget_plan.
+      STATE_BUDGET_TAX_REVENUE_PLAN:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 2"
+        target_row_label: "Налоговые поступления"
+        format: xlsx
+        frequency: irregular (annual plan as at each monthly edition)
+        notes: >
+          2026-11-13. Sheet «табл 2 », column 1 (state budget, adjusted plan for the year). Parsed
+          offline from the archived January-May 2026 edition; the gov.kz listing is not reachable from the
+          development sandbox, so the first scheduled run is the live check. fetch_budget_plan.
+      STATE_BUDGET_EXPENDITURE_PLAN:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 2"
+        target_row_label: "II. ЗАТРАТЫ"
+        format: xlsx
+        frequency: irregular (annual plan as at each monthly edition)
+        notes: >
+          2026-11-13. Sheet «табл 2 », column 1 (state budget, adjusted plan for the year). Parsed
+          offline from the archived January-May 2026 edition; the gov.kz listing is not reachable from the
+          development sandbox, so the first scheduled run is the live check. fetch_budget_plan.
+      STATE_BUDGET_DEFICIT_PLAN:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 2"
+        target_row_label: "V. ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА"
+        format: xlsx
+        frequency: irregular (annual plan as at each monthly edition)
+        notes: >
+          2026-11-13. Sheet «табл 2 », column 1 (state budget, adjusted plan for the year). Parsed
+          offline from the archived January-May 2026 edition; the gov.kz listing is not reachable from the
+          development sandbox, so the first scheduled run is the live check. fetch_budget_plan.
+      REPUBLICAN_BUDGET_REVENUE_PLAN:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 2"
+        target_row_label: "I. ДОХОДЫ"
+        format: xlsx
+        frequency: irregular (annual plan as at each monthly edition)
+        notes: >
+          2026-11-13. Sheet «табл 2 », column 5 (republican budget, adjusted plan for the year). Parsed
+          offline from the archived January-May 2026 edition; the gov.kz listing is not reachable from the
+          development sandbox, so the first scheduled run is the live check. fetch_budget_plan.
+      REPUBLICAN_BUDGET_TAX_REVENUE_PLAN:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 2"
+        target_row_label: "Налоговые поступления"
+        format: xlsx
+        frequency: irregular (annual plan as at each monthly edition)
+        notes: >
+          2026-11-13. Sheet «табл 2 », column 5 (republican budget, adjusted plan for the year). Parsed
+          offline from the archived January-May 2026 edition; the gov.kz listing is not reachable from the
+          development sandbox, so the first scheduled run is the live check. fetch_budget_plan.
+      REPUBLICAN_BUDGET_EXPENDITURE_PLAN:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 2"
+        target_row_label: "II. ЗАТРАТЫ"
+        format: xlsx
+        frequency: irregular (annual plan as at each monthly edition)
+        notes: >
+          2026-11-13. Sheet «табл 2 », column 5 (republican budget, adjusted plan for the year). Parsed
+          offline from the archived January-May 2026 edition; the gov.kz listing is not reachable from the
+          development sandbox, so the first scheduled run is the live check. fetch_budget_plan.
+      REPUBLICAN_BUDGET_DEFICIT_PLAN:
+        status: confirmed
+        listing_url: "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+        title_marker: "Statistical bulletin"
+        sheet: "табл 2"
+        target_row_label: "V. ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА"
+        format: xlsx
+        frequency: irregular (annual plan as at each monthly edition)
+        notes: >
+          2026-11-13. Sheet «табл 2 », column 5 (republican budget, adjusted plan for the year). Parsed
+          offline from the archived January-May 2026 edition; the gov.kz listing is not reachable from the
+          development sandbox, so the first scheduled run is the live check. fetch_budget_plan.
       TAX_RECEIPTS_BY_OKED (scope note):
         status: not_found
         notes: >
