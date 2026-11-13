@@ -429,9 +429,13 @@ def receipt_lines(rows: list[list], col: int, off: int) -> list[tuple[str, str, 
             out.append((cat + cls + sub + c[3], label, value))
         elif c[2]:
             sub = c[2]
+            if not (cat and cls):
+                raise ValueError(f"subclass «{label[:40]}» before its category or class")
             out.append((cat + cls + sub, label, value))
         elif c[1]:
             cls, sub = c[1], None
+            if not cat:
+                raise ValueError(f"class «{label[:40]}» before its category")
             out.append((cat + cls, label, value))
         else:
             raise ValueError(f"category row {c[0]} twice: «{label[:40]}»")

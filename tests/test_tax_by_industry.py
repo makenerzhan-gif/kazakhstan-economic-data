@@ -129,9 +129,38 @@ def test_tax_rates_step_series_and_gaps():
     assert by[("PIT_TOP", "2003-12")] == 30 and by[("PIT_DIVIDENDS", "2019-01")] == 5 and by[("MET_COPPER", "2020-01")] == 5.7
     assert by[("MET_COAL", "2020-12")] == 0 and by[("MET_COAL", "2021-01")] == 2.7 and by[("EXCISE_PETROL", "2015-12")] == 10500
     assert by[("OIL_EXPORT_DUTY_RATE", "2009-02")] == 0 and by[("OIL_EXPORT_DUTY_RATE", "2011-01")] == 40
-    for gap in (("MET_URANIUM", "2026-01"), ("MET_GOLD", "2026-01"), ("OIL_EXPORT_DUTY_RATE", "2016-03"), ("EXCISE_DIESEL", "2020-01")):
+    for gap in (("MET_URANIUM", "2026-01"), ("MET_GOLD", "2026-01"), ("OIL_EXPORT_DUTY_RATE", "2016-03"), ("EXCISE_DIESEL", "2025-05")):
         assert gap not in by                                   # no single rate in these months: absent, not carried
     assert all(v is not None for v in by.values())
     import update_dims
     ds = update_dims.DATASETS["TAX_RATES"]
     assert ds["fetcher"] == "manual_table" and ds["step"] == "monthly" and len(doc["items"]) >= ds["min_items"]
+
+
+def test_tax_schedules_brackets_and_seasonal_diesel():
+    import yaml
+    from fetchers import manual_vintages
+    root = Path(__file__).resolve().parents[1]
+    doc = yaml.safe_load((root / "config" / "tax_schedules.yaml").read_text(encoding="utf-8"))
+    by = {(r["item_code"], r["date"][:7]): r["value"] for r in manual_vintages.step_records(doc, {"id": "TAX_SCHEDULES"}, today="2026-11-13")}
+    oil = [by[(f"MET_OIL.B{i:02d}", "2026-06")] for i in range(1, 11)]
+    assert oil == [5, 7, 8, 9, 10, 11, 12, 13, 15, 18] and by[("MET_OIL.B09", "2010-12")] == 14          # the 7-10 mln t step rose in 2011
+    assert [by[(f"MET_GOLD.P{i}", "2026-01")] for i in range(1, 8)] == [7.5, 8, 8.5, 9, 9.5, 10, 11]
+    assert by[("RENT_TAX_OIL.P040", "2009-01")] == 0 and by[("RENT_TAX_OIL.P050", "2026-11")] == 7 and by[("RENT_TAX_OIL.P200", "2015-01")] == 32
+    assert by[("RENT_TAX_COAL", "2020-12")] == 4.7 and ("RENT_TAX_COAL", "2021-01") not in by
+    assert by[("OIL_EXPORT_DUTY.P040", "2023-08")] == 40 and ("OIL_EXPORT_DUTY.P040", "2023-09") not in by   # the formula replaces the 25-105 bands
+    assert by[("OIL_EXPORT_DUTY.PER_DOLLAR_25_105", "2023-09")] == 1 and by[("OIL_EXPORT_DUTY.P105", "2026-11")] == 115
+    assert by[("OIL_EXPORT_DUTY.ACTUAL_PRESS", "2024-01")] == 79 and ("OIL_EXPORT_DUTY.ACTUAL_PRESS", "2024-03") not in by
+    assert by[("EXCISE_PETROL.SHARE_OF_EXCESS", "2026-08")] == 50 and by[("EXCISE_PETROL.SHARE_OF_EXCESS", "2026-09")] == 95
+    assert by[("EXCISE_DIESEL.PRICE_DEDUCTED", "2026-01")] == pytest.approx(284350 / 1.12, abs=0.01)
+    assert not any(code.startswith("MET_OIL_2027") for code, _ in by)                                    # in the law, not yet in force
+    future = manual_vintages.step_records(doc, {"id": "TAX_SCHEDULES"}, today="2027-01-15")
+    f = {(r["item_code"], r["date"][:7]): r["value"] for r in future}
+    assert f[("MET_OIL_2027.BASE_B10", "2027-01")] + f[("MET_OIL_2027.ADD_P100", "2027-01")] == 51 and ("MET_OIL.B10", "2027-01") not in f
+    assert f[("VAT_MEDICINES", "2027-01")] == 10
+    rates = yaml.safe_load((root / "config" / "tax_rates.yaml").read_text(encoding="utf-8"))
+    d = {r["date"][:7]: r["value"] for r in manual_vintages.step_records(rates, {"id": "TAX_RATES"}, today="2026-11-13") if r["item_code"] == "EXCISE_DIESEL"}
+    assert [m for m in sorted(d) if d[m] == 9300] == ["2016-10"] + [f"{y}-{m:02d}" for y in (2017, 2018) for m in range(6, 11)] + \
+        [f"{y}-{m:02d}" for y in (2019, 2020, 2021) for m in range(7, 12)]
+    p = {r["date"][:7]: r["value"] for r in manual_vintages.step_records(rates, {"id": "TAX_RATES"}, today="2026-11-13") if r["item_code"] == "PENSION_EMPLOYEE"}
+    assert min(p) == "1998-01" and set(p.values()) == {10.0}
