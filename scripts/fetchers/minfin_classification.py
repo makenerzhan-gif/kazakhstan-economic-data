@@ -113,6 +113,8 @@ def check_sums(lines: list[tuple[str, str, float]], ds: dict, where: str) -> Non
         order.append(code)
     cats = [c for c in order if c.startswith("CAT")]
     tol = lambda x: 0.5 + 1e-4 * abs(x)                                  # noqa: E731
+    if "TOTAL" not in vals or not cats:                                  # nothing to check against: not this table
+        _structural(ds, f"{where}: no «Всего» row or no category rows")
     if "TOTAL" in vals and cats and abs(sum(vals[c] for c in cats) - vals["TOTAL"]) > tol(vals["TOTAL"]):
         _structural(ds, f"{where}: categories sum to {sum(vals[c] for c in cats):.1f}, «Всего» is {vals['TOTAL']:.1f}")
     current = None
@@ -187,12 +189,31 @@ def _editions(wanted_keys) -> list[tuple[dict, dict[str, list[list]], list[str]]
     return out
 
 
+EDITION_NOTES: dict[str, list[str]] = {}       # dataset id -> what every edition gave (the backfill script prints it in full)
+
+
+def _top_rows(sheets: dict[str, list[list]], limit: int = 40) -> list[str]:
+    """The rows of each sheet that carry no code below the first level (header, totals, categories):
+    enough to see how an unfamiliar edition is laid out."""
+    out = []
+    for name, rows in sheets.items():
+        out.append(f"    [{name}] {len(rows)} rows")
+        shown = 0
+        for i, r in enumerate(rows):
+            cells = [str(c).strip().replace("\n", " ")[:38] for c in r[:9] if c not in (None, "")]
+            low = [c for c in r[1:4] if re.fullmatch(r"\d{1,3}(\.0)?", str(c).strip() if c is not None else "")]
+            if cells and (i < 9 or not low) and shown < limit:
+                out.append(f"      {i}: {cells}")
+                shown += 1
+    return out
+
+
 def _read_editions(ds: dict, wanted_keys, edition) -> tuple[dict[str, list[dict]], list[str]]:
     """Every listed edition through `edition(sheets) -> (date, records, notes)`, newest first (an
     edition already read wins). In the daily run a broken edition stops the dataset. In archive mode
     (scripts/backfill_minfin_bulletins.py: years of older editions, whose layout may differ) it is
     skipped and reported with the sheets it has, so that one odd year does not cost the rest."""
-    got, warnings = {}, []
+    got, warnings, dumped = {}, [], set()
     for doc, sheets, names in _editions(wanted_keys):
         tag = f"{doc.get('id')} «{(doc.get('title') or '')[:60]}»"
         try:
@@ -201,6 +222,10 @@ def _read_editions(ds: dict, wanted_keys, edition) -> tuple[dict[str, list[dict]
             if not minfin.BULLETIN_ARCHIVE:
                 raise
             warnings.append(f"{tag}: SKIPPED -- {str(exc)[:300]}")
+            kind = re.sub(r"[\d.,-]+", "#", str(exc).split(":", 2)[-1])[:60]         # one layout dump per kind of break
+            if kind not in dumped and len(dumped) < 12:
+                dumped.add(kind)
+                warnings += _top_rows(sheets)
             continue
         if d is None and minfin.BULLETIN_ARCHIVE:
             notes = notes + ["no period found"]
@@ -209,6 +234,7 @@ def _read_editions(ds: dict, wanted_keys, edition) -> tuple[dict[str, list[dict]
         warnings += [f"{tag}: {n}" for n in notes]
         if d and d not in got and records:
             got[d] = records
+    EDITION_NOTES[ds["id"]] = warnings
     return got, warnings
 
 

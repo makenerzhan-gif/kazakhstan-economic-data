@@ -175,9 +175,13 @@ def main() -> None:
                  f"{len(docs)} editions listed, {docs[-1].get('created_date', '')[:10]} … {docs[0].get('created_date', '')[:10]}.", ""]
         for e in log.entries:
             lines += [f"## {e.dataset}: {e.status}, {e.records_processed or 0} rows", ""]
-            lines += [f"- ERROR: {x}" for x in (e.errors or [])] + [f"- {w}" for w in (e.warnings or [])] + [""]
+            from fetchers import minfin_classification
+            notes = minfin_classification.EDITION_NOTES.get(e.dataset)      # in full; the log entry keeps only the first few
+            if notes is None:
+                notes = [w for w in (e.warnings or []) if not w.startswith("[")]
+            lines += [f"- ERROR: {x}" for x in (e.errors or [])] + [w if w.startswith("    ") else f"- {w}" for w in notes] + [""]
         report.write_text("\n".join(lines), encoding="utf-8")
-        print("\n".join(lines)[:20000])
+        print("\n".join(lines)[:60000])
 
 
 if __name__ == "__main__":
