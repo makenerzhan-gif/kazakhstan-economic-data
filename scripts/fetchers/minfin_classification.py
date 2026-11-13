@@ -497,6 +497,14 @@ def receipts_edition(sheets: dict[str, list[list]], ds: dict) -> tuple[str | Non
             notes.append(f"{d} {budget}: «ДОХОДЫ» is printed as 0 (categories 1-5 give {cats:.1f}); the row is omitted")
         bad = bad or check_receipts([x for x in lines if x[0] != "REVENUE_MISSING"], revenue_optional=any(x[0] == "REVENUE_MISSING" for x in lines))
         lines = [x for x in lines if x[0] != "REVENUE_MISSING"]
+        if bad and minfin.BULLETIN_ARCHIVE:
+            # Editions of 2015-2018 leave some specifics out of the printed table, so a subclass can exceed the
+            # lines under it while every level above adds up. Such an edition is kept as printed and the
+            # subclasses concerned are reported; any other break still drops the budget.
+            incomplete = [b for b in bad if re.match(r"\d{4}[: ]", b)]
+            if len(incomplete) == len(bad):
+                notes.append(f"{d} {budget}: INCOMPLETE specifics, kept as printed -- " + "; ".join(bad[:6]))
+                bad = []
         if bad:
             if not minfin.BULLETIN_ARCHIVE:
                 _structural(ds, f"{d} {budget}: " + "; ".join(bad[:5]))

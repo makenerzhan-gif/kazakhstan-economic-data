@@ -261,3 +261,16 @@ def test_archive_mode_skips_a_broken_edition_and_says_which(monkeypatch):
     skipped = [w for w in meta["warnings"] if "SKIPPED" in w]
     assert len(skipped) == 1 and "«old»" in skipped[0] and "1011" in skipped[0]
     assert any("sheets:" in w and "табл 1" in w for w in meta["warnings"])        # the missing republican sheet: what is there instead
+
+
+def test_archive_mode_keeps_an_edition_whose_table_omits_specifics(monkeypatch):
+    from fetchers import minfin
+    rows = [list(r) for r in _receipts()]
+    rows[7][5] = "250"                                              # the subclass 1011 is 400, its printed specifics now give 350
+    monkeypatch.setattr(minfin, "BULLETIN_ARCHIVE", True)
+    d, records, notes = mc.receipts_edition({"табл 4": rows}, {"id": "B"})
+    by = {r["item_code"]: r["value"] for r in records}
+    assert by["STATE.1011"] == 400 and by["STATE.101110"] == 250 and any("INCOMPLETE" in n and "1011" in n for n in notes)
+    rows[5][5] = "700"                                              # a class that does not add up is a real break
+    d, records, notes = mc.receipts_edition({"табл 4": rows}, {"id": "B"})
+    assert not records and any(n.startswith("SKIPPED STATE") for n in notes)
