@@ -1,0 +1,21 @@
+{
+  "source": "derived",
+  "source_url": "derived by this repository (scripts/fetchers/analytics.py)",
+  "dataset_id": "analytics/money_velocity",
+  "indicator_id": "MONEY_VELOCITY",
+  "indicator_name": "Velocity of money and monetisation (M2, M3), quarterly (computed by this repository)",
+  "description": "Скорость обращения денег и монетизация экономики (M2, M3), поквартально (расчёт репозитория)",
+  "frequency": "quarterly",
+  "unit": "ratio; % of GDP",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Velocity = nominal GDP of the last four quarters (QNA_GDP_EXPENDITURE item GDP) over the mean of the end-of-quarter stock and the stock a year earlier; monetisation = the end-of-quarter stock over the same GDP. The NBK stock dated the 1st of a month is the end of the previous one. From 2011.",
+  "publication_date": null,
+  "last_update_date": "2026-11-13",
+  "download_date": "2026-11-13",
+  "period_start": "2010-10-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "derived (see the note)",
+  "revision_status": "original"
+}

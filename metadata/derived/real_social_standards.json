@@ -1,0 +1,21 @@
+{
+  "source": "derived",
+  "source_url": "derived by this repository (scripts/fetchers/analytics.py)",
+  "dataset_id": "analytics/real_standards",
+  "indicator_id": "REAL_SOCIAL_STANDARDS",
+  "indicator_name": "Real minimum wage, minimum pension and MRP; Kaitz index; minimum wage over the subsistence minimum, monthly (computed by this repository)",
+  "description": "Реальные МЗП, минимальная пенсия и МРП; индекс Кейтца; МЗП к прожиточному минимуму, помесячно (расчёт репозитория)",
+  "frequency": "monthly",
+  "unit": "KZT at 2015 prices; %",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "SOCIAL_STANDARDS deflated by the CPI level (chained CPI m/m, 2015 average = 1). KAITZ_INDEX = MZP over the average monthly wage of the quarter (AVG_WAGE_1T_QUARTERLY, each month of the quarter takes the quarter's wage; from 2015). MZP_TO_VPM_BNS and VPM_LAW_TO_VPM_BNS compare with the BNS price-based subsistence minimum (SUBSISTENCE_MINIMUM_BY_REGION, national, from 2011), which is seasonal.",
+  "publication_date": null,
+  "last_update_date": "2026-11-13",
+  "download_date": "2026-11-13",
+  "period_start": "1999-01-01",
+  "period_end": "2026-10-01",
+  "next_update_date": null,
+  "transformation": "derived (see the note)",
+  "revision_status": "original"
+}
