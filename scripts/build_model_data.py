@@ -111,7 +111,11 @@ def chain_yoy(yoy: pd.Series, base: pd.Series, per_year: int) -> pd.Series:
     m/m index is the first print and is not revised, while the y/y index is. Chained m/m gives
     annual growth of 98.4 in 2021 and 114.6 in 2025 against the official 103.6 and 107.7; the
     level built this way gives 103.7 and 107.5 (checked 2026-11-13)."""
-    start = chain(base.dropna()).iloc[:per_year]
+    first = base.dropna().iloc[:per_year]
+    step = pd.DateOffset(months=12 // per_year)
+    if len(first) < per_year or any(b != a + step for a, b in zip(first.index, first.index[1:])):
+        raise ValueError("chain_yoy: the base index has a gap in its first year")
+    start = chain(first)
     level = dict(start.items())
     for d, v in yoy.items():
         if d in level:

@@ -37,7 +37,12 @@ def test_cumulative_pass_through_includes_the_autoregressive_terms():
     params = pd.Series({**{c: 0.0 for c in cols}, "y1": 0.5, "y2": 0.0})
     params["usd0"] = 0.1
     assert N.cumulative(params, cols) == pytest.approx(0.1 * (1 - 0.5 ** 13) / 0.5)   # 0.2 against a lag sum of 0.1
-    params["y1"] = 0.0
+    params["y1"], params["y2"], params["usd3"] = 0.4, 0.2, 0.05                       # AR(2) and a second lag coefficient
+    c = []
+    for h in range(N.L + 1):
+        c.append((0.1 if h == 0 else 0.05 if h == 3 else 0.0) + (0.4 * c[-1] if h >= 1 else 0.0) + (0.2 * c[-2] if h >= 2 else 0.0))
+    assert N.cumulative(params, cols) == pytest.approx(sum(c))
+    params["y1"], params["y2"], params["usd3"] = 0.0, 0.0, 0.0
     assert N.cumulative(params, cols) == pytest.approx(0.1)                            # no AR terms: the lag sum itself
     t = pd.read_csv(M / "erpt_neer" / "erpt_usd_vs_neer.csv")
     food = t[t["раздел"].str.startswith("Продукты питания")].iloc[0]
@@ -48,13 +53,19 @@ def test_border_pass_through_is_within_reason():
     """Read as month-on-month, the «December = 100» import price index gave pass-through of 2.6 and 1.9."""
     t = pd.read_csv(M / "erpt_neer" / "erpt_border.csv")
     assert t[["граница←usd", "граница←neer"]].abs().max().max() < 1.2
-    src = (REPO / "scripts" / "models" / "erpt_border.py").read_text(encoding="utf-8")
-    assert "ip / prev" in src and "month == 1" in src
+    import erpt_border as B
+    idx = pd.period_range("2024-11", "2025-03", freq="M")
+    ip = pd.DataFrame({"IV": [110.0, 112.0, 101.0, 103.0, np.nan]}, index=idx)
+    mm = B.monthly_change(ip)["IV"]
+    assert mm["2024-12"] == pytest.approx(100 * np.log(112 / 110)) and mm["2025-01"] == pytest.approx(100 * np.log(1.01))   # January against 100
+    assert mm["2025-02"] == pytest.approx(100 * np.log(103 / 101)) and np.isnan(mm["2025-03"]) and np.isnan(mm["2024-11"])
 
 
 def test_shapiro_contributions_and_official_weights():
     c = pd.read_csv(M / "shapiro_goods" / "contributions.csv", index_col=0)
     assert (c.goods_demand + c.goods_supply + c.goods_ambiguous - c.goods_total).abs().max() < 0.005
+    months = pd.PeriodIndex(c.index, freq="M")
+    assert len(c) >= 100 and len(pd.period_range(months[0], months[-1], freq="M")) == len(c)   # no hole: 2018, 2021 weights are interpolated
     w = pd.read_csv(M / "shapiro_goods" / "cpi_group_weights_official.csv", index_col=0)
     assert (w.sum(axis=1) - 1).abs().max() < 1e-3 and abs(w.loc[2019, "nonfood"] - 0.298) < 0.005
     lab = pd.read_csv(M / "shapiro_goods" / "labels.csv", index_col=0)

@@ -9,6 +9,8 @@ e = 100 dln USD/KZT (depreciation +) or -100 dln NEER_CONSUMER (depreciation +).
 Reported: the 12-MONTH PASS-THROUGH = the cumulative response of the price level 12 months after a 1 %
 depreciation, which includes the AR(2) dynamics (delta-method t-stat); sum b_k (the direct effect of the lags
 alone, which until 2026-11-13 was mislabelled as the 12-month pass-through); the long run sum b_k/(1-r1-r2);
+the delta-method t is an UPPER bound for persistent divisions (simulated s.d. of the food response 0.58
+against 0.39 from the delta method);
 and a horse race with both rates (sum of each block). Inputs: models/cpi_components/division_mm.csv
 (BNS CPI by COICOP division, m/m), model_data/monthly.csv, dims NEER_CONSUMER.
 """

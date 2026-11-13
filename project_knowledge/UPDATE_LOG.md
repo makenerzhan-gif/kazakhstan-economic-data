@@ -1,35 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-28 — national CPI back to 1991» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-28 — CPI groups (food, non-food, paid services) back to 1991 (user: «Сделай все три пункта»)» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-28 — CPI groups (food, non-food, paid services) back to 1991 (user: «Сделай все три пункта»)
-
-CPI_FOOD, CPI_NONFOOD and CPI_SERVICES (m/m) now start in January 1991 and their _YOY in January
-1994, like the headline; before, all six started with Taldau in January 2011. The 240 (204) earlier
-months come from the same three BNS publications, now read per group: «Цены в Казахстане за
-1991-2021 годы» (element 17216, docx: tables 1.4-1.6 m/m 1992-2021 and the group columns of table
-1.1 Dec/Dec), «Цены в Казахстане в 1991-2000 гг.» (element 21933, pdf columns 2-4) and the 140
-monthly editions of publication 166775 (1999-05…2010-12; html rows «Продукты питания, напитки и
-табачные изделия» / «Непродовольственные товары» / «Платные услуги», xls through the CPI_DETAIL
-parser). `data/reference/bns_cpi_history.csv` gained an `item` column (TOTAL for the 838 headline
-rows, values unchanged; 3 352 rows). Per group 228 of 240 m/m months have a second source, and
-every month two sources print agrees except food June 2004: the docx and the edition's own m/m
-table print 100.0, its summary row «Продукты питания, напитки и табачные изделия» 99.9 — kept as
-100.0 and listed in the loader's PRINTED_DIFFERENCES (source issue cpi_food_2004_06_mom_two_prints).
-The xls editions equal CPI_DETAIL on all 936 values 2004-07…2010-12. The identities hold within
-rounding for every group with no slack (chain of m/m vs since-December at most 0.38 pp from 1995,
-y/y vs 12 m/m at most 0.40 pp from 1996). The fetcher stops if the file differs from Taldau on any
-of the 132 m/m months or 11 Decembers of 2011-2021 per group (all equal); no stored 2011-2026 value
-changed. December/December, food: 1992 2108.3, 1993 2297.1, 1994 1155.7, 1995 158.7, 1999 120.6;
-non-food: 1992 3897.8, 1993 1795.6, 1994 1159.9, 1995 133.5, 1999 119.8; paid services: 1992
-3019.7, 1993 4143.4, 1994 2522.6, 1995 258.0, 1996 239.3, 1999 109.9. model_data keeps cpi_food /
-cpi_nonfood / cpi_services from 2011 (`from: "2011-01-01"` in spec.yaml; the panels are unchanged).
-CPI_UTILITIES and CPI_REGULATED_UTILITIES still start in 2011. Tests: tests/test_cpi_history.py (54).
-
-The official quarterly accounts for 2026 Q2 (BNS, element 283161, due 28.10.2026) are picked up by the
-daily update_all run; a check is scheduled for 29.10.2026 to compare them with the discrete estimate
-(GVA_VOLUME_INDEX_BY_SECTION_DISCRETE: GDP 105.2) and rebuild model_data.
 
 ## 2026-09-28 — partner-currency rates back to 1993, import-weighted NEER from 1995
 
@@ -630,3 +602,35 @@ transfers). Nothing reached main.
 **Not done.** Monthly oil-duty rates 2016-2023 and the excise actually charged since May 2025 (the prices behind
 them are not published where they can be read); the three bulletin datasets before 2013 (PDF volumes).
 Tests: 930 passed.
+
+## 2026-11-13 — industrial production level rebuilt; inflation models reviewed, corrected, regenerated (user: «проверь все расчеты в этой ветке», «Исправь и проверь все»)
+
+**`ip` in model_data was wrong.** It was chained from IND_PROD_MONTHLY_MOM, which on Taldau is a first print that is
+not revised: chained, it gives 98.4 for 2021 and 114.6 for 2025 against the official 103.6 and 107.7, and +94 % y/y
+by September 2026. New op `chain_yoy` (build_model_data.py): the first year from the m/m chain (January 2014 = 100),
+every later month = the level a year earlier x the y/y index. `ip_yoy` equals the published index in all 141
+months; annual indices within 0.4 of official. Each calendar month is its own chain, so use `ip_yoy` / `ip_sa`,
+not the m/m of the unadjusted level. Registered as `ind_prod_mom_not_revised` in config/source_issues.yaml.
+
+**Inflation models** (branch `claude/inflation-svar-v2`, 100 files, merged into the working branch). All ten
+scripts re-run and read line by line by two independent reviewers, the fixes then checked by a third
+(docs/review_inflation_models_*_2026-11-13.md). Errors corrected:
+- FEVD shares were share-by-share medians (rows summed to 0.83-0.89): now posterior means. SVAR v2, 8 quarters:
+  external 37.6 %, tenge 18.4, supply 16.8, demand 10.2, policy rate 8.1, tariffs 5.6, non-oil deficit 3.3.
+- `svar_v2/mean_<variant>.csv`: posterior-mean decomposition, adds up to inflation exactly; the chart uses it
+  (group medians miss 2024Q4->2025Q4 by 0.78 pp; the median-target draw can sit far from the centre).
+- `hd_v2.png` labelled the non-oil deficit as government consumption.
+- `erpt_border`: the import price index is «December = 100», was read as m/m (food from the NEER 0.65, was 2.59).
+- `erpt_neer`: «перенос 12м» is the cumulative response with the AR(2) terms (food 0.55, t 1.4; the lag sum alone
+  0.14), delta-method t, an upper bound for persistent divisions.
+- `shapiro_goods`: price innovation from the m/m equation, robust band (ambiguous months 31 %, were 46 %),
+  official BNS weights. The first version of this fix lost 46 of 100 months because the BNS weight file has no
+  split for 2015, 2018, 2021 -- caught by the check of the fixes; those years are interpolated.
+- `bvar_sign`, `bvar_sign_ext`, `bvar_market`, `fiscal_lp`: committed files were from the STL data vintage and
+  did not reproduce; regenerated. All scripts now reproduce byte for byte.
+- GDP beyond BNS's adjusted series: X-13 of the extended unadjusted level (a nowcast, about 1.5 pp error).
+Not changed, listed in models/README.md as limitations: recursive fiscal shock on a deficit ratio, tariff steps
+that are in effect the regulated CPI (correlation 0.99), unit roots in 54 % of draws, `v2_ma4` and `v2_split`,
+the 2022 episode behind USD > NEER, 20 clusters in the regional panel, BNS's adjusted GDP +6.5 % q/q in 2026Q2.
+Not verified: how models/cpi_components/ was built (no script), the July 2017 amount against a primary source.
+Tests: tests/test_models_inflation.py (6), two in tests/test_model_data.py; 938 passed.

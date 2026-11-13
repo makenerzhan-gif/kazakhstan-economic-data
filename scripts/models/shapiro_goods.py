@@ -31,7 +31,7 @@ Kazakhstan version (what the data allow):
   * services (~0.31) are left unclassified -- BNS has no monthly volume of paid services to
     households (index 702501 is quarterly and covers business services too).
 Weights: the official BNS weights of food, non-food goods and paid services of each year
-(data/processed/dims/cpi_weights.csv). The weights estimated from index arithmetic, used before
+(data/processed/dims/cpi_weights.csv; 2015, 2018 and 2021 are missing there and interpolated). The weights estimated from index arithmetic, used before
 2026-11-13, are still written to cpi_group_weights_estimated.csv for comparison: twelve points a
 year identify them poorly (non-food 2019: 0.410 estimated, 0.298 official).
 """
@@ -104,6 +104,9 @@ def official_weights() -> pd.DataFrame:
     w = pd.read_csv(common.REPO_ROOT / "data" / "processed" / "dims" / "cpi_weights.csv", parse_dates=["date"])
     w = w[(w.region == "national") & w.item_code.isin(["FOOD", "NONFOOD", "SERVICES"])]
     t = w.pivot_table(index=w.date.dt.year, columns="item_code", values="value")
+    # BNS's weight file has no food / non-food / services split for 2015, 2018 and 2021: those years are
+    # interpolated between their neighbours (a missing year would otherwise drop every 12-month window touching it).
+    t = t.reindex(range(int(t.index.min()), int(t.index.max()) + 1)).interpolate()
     t = t.div(t.sum(axis=1), axis=0)
     return t.rename(columns={"FOOD": "food", "NONFOOD": "nonfood", "SERVICES": "services"})
 

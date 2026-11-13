@@ -5641,3 +5641,31 @@ targets of `scripts/analysis/seasonal_targets.py` / `forecast_targets.py` carry 
 diagnostics; 1991-1995 hold m/m values up to 312.3 (source issue cpi_1991_1995_hyperinflation).
 model_data's `usdkzt` now starts in 1994-01 (the NBK archive); 1999-11 is 139.63, the NBK's
 published average, instead of 138.80 from the report's last 11 weekdays.
+
+## 2026-09-28 — CPI groups (food, non-food, paid services) back to 1991 (user: «Сделай все три пункта»)
+
+CPI_FOOD, CPI_NONFOOD and CPI_SERVICES (m/m) now start in January 1991 and their _YOY in January
+1994, like the headline; before, all six started with Taldau in January 2011. The 240 (204) earlier
+months come from the same three BNS publications, now read per group: «Цены в Казахстане за
+1991-2021 годы» (element 17216, docx: tables 1.4-1.6 m/m 1992-2021 and the group columns of table
+1.1 Dec/Dec), «Цены в Казахстане в 1991-2000 гг.» (element 21933, pdf columns 2-4) and the 140
+monthly editions of publication 166775 (1999-05…2010-12; html rows «Продукты питания, напитки и
+табачные изделия» / «Непродовольственные товары» / «Платные услуги», xls through the CPI_DETAIL
+parser). `data/reference/bns_cpi_history.csv` gained an `item` column (TOTAL for the 838 headline
+rows, values unchanged; 3 352 rows). Per group 228 of 240 m/m months have a second source, and
+every month two sources print agrees except food June 2004: the docx and the edition's own m/m
+table print 100.0, its summary row «Продукты питания, напитки и табачные изделия» 99.9 — kept as
+100.0 and listed in the loader's PRINTED_DIFFERENCES (source issue cpi_food_2004_06_mom_two_prints).
+The xls editions equal CPI_DETAIL on all 936 values 2004-07…2010-12. The identities hold within
+rounding for every group with no slack (chain of m/m vs since-December at most 0.38 pp from 1995,
+y/y vs 12 m/m at most 0.40 pp from 1996). The fetcher stops if the file differs from Taldau on any
+of the 132 m/m months or 11 Decembers of 2011-2021 per group (all equal); no stored 2011-2026 value
+changed. December/December, food: 1992 2108.3, 1993 2297.1, 1994 1155.7, 1995 158.7, 1999 120.6;
+non-food: 1992 3897.8, 1993 1795.6, 1994 1159.9, 1995 133.5, 1999 119.8; paid services: 1992
+3019.7, 1993 4143.4, 1994 2522.6, 1995 258.0, 1996 239.3, 1999 109.9. model_data keeps cpi_food /
+cpi_nonfood / cpi_services from 2011 (`from: "2011-01-01"` in spec.yaml; the panels are unchanged).
+CPI_UTILITIES and CPI_REGULATED_UTILITIES still start in 2011. Tests: tests/test_cpi_history.py (54).
+
+The official quarterly accounts for 2026 Q2 (BNS, element 283161, due 28.10.2026) are picked up by the
+daily update_all run; a check is scheduled for 29.10.2026 to compare them with the discrete estimate
+(GVA_VOLUME_INDEX_BY_SECTION_DISCRETE: GDP 105.2) and rebuild model_data.

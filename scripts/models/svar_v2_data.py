@@ -13,8 +13,11 @@ New relative to bvar_sign_ext.py:
                    (BNS item-level jumps, TARIFF_CHANGE_MONTHS), zero otherwise; cumulated into an
                    index so that 400 dln gives quarterly SAAR step inflation. Drift between steps
                    stays in the other shocks.
-  * gdp_sa 2026Q2: extended with the BNS discrete-quarter volume index (105.184 y/y) applied to
-                   the SA level of 2025Q2 -- assumes an unchanged seasonal factor.
+  * gdp_sa        : a quarter BNS has not yet published in its adjusted series is nowcast -- the unadjusted
+                   real GDP is extended with the discrete-quarter y/y volume index, adjusted with X-13, and
+                   its q/q growth applied to gdp_sa. A nowcast only: the discrete index misses the y/y of
+                   either GDP series by about 1.5 pp on average. Not needed while gdp_sa reaches the last
+                   quarter of the sample (it did on 2026-11-13: 2026Q2).
 Nominal GDP for 2026Q2 (denominator only) is extrapolated with the 2026Q1 q/q SA growth.
 """
 from __future__ import annotations
@@ -142,8 +145,8 @@ def build() -> tuple[pd.DataFrame, pd.DataFrame]:
     gv.index = pd.PeriodIndex(gv.index, freq="Q")
     # Quarters BNS has not yet published in its seasonally adjusted series are added with the q/q growth of an
     # X-13 adjustment of the UNADJUSTED real GDP extended by the discrete y/y index. (Until 2026-11-13 the y/y
-    # index was applied to gdp_sa itself, whose own y/y it does not track -- mean gap 1.4 pp -- which gave
-    # +2.7 % q/q for 2026Q2.)
+    # index was applied to gdp_sa itself with last year's seasonal factor. Either way it is a nowcast: the
+    # discrete index misses the y/y of both GDP series by about 1.5 pp on average.)
     last = q["gdp_sa"].dropna().index[-1]
     ahead = list(gv.index[gv.index > last])
     if ahead:

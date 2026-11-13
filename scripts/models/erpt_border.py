@@ -24,6 +24,15 @@ def blocksum(r, cols):
     return s, s / se
 
 
+def monthly_change(ip: pd.DataFrame) -> pd.DataFrame:
+    """100 x log month-on-month change from an index «December of the previous year = 100»: the ratio to the
+    previous month's index inside a year and to 100 in January; a missing month leaves a gap after it too."""
+    ip = ip.reindex(pd.period_range(ip.index.min(), ip.index.max(), freq="M"))
+    prev = ip.shift(1)
+    prev.loc[ip.index.month == 1] = 100.0
+    return 100 * np.log(ip / prev)
+
+
 def main():
     div, rates = N.load()
     ip = pd.read_csv(common.REPO_ROOT / "data/processed/dims/import_price_index_by_hs_section.csv", parse_dates=["date"])
@@ -32,10 +41,7 @@ def main():
     # The index is «December of the previous year = 100»: the month-on-month change is the ratio to the
     # previous month's index inside a year and to 100 in January. (Until 2026-11-13 the index itself was
     # read as month-on-month, which made every number of erpt_border.csv wrong.)
-    ip = ip.reindex(pd.period_range(ip.index.min(), ip.index.max(), freq="M"))      # a missing month stays a gap
-    prev = ip.shift(1)
-    prev.loc[ip.index.month == 1] = 100.0
-    ipm = 100 * np.log(ip / prev)
+    ipm = monthly_change(ip)
     rows = []
     for name, secs in PAIRS.items():
         x = ipm[secs].mean(axis=1)

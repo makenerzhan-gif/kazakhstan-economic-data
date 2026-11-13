@@ -24,7 +24,7 @@ None of them is part of `update_all.py`: re-run them when the inputs change.
 | `bvar_sign/`, `bvar_sign_ext/` | Inflation decomposition into demand, supply, policy-rate, tenge (and real G, regulated tariffs); 2011Q2–2026Q1 | BVAR as `bvar/`, sign + zero restrictions (Rubio-Ramírez–Waggoner–Zha), Blanchard–Perotti recursive fiscal and tariff blocks, HD median target (Fry–Pagan) | `bands_*.csv`, `median_target_*.csv`, `fiscal_irf_*.csv` — **estimated on the STL-adjusted model_data of 2026-09-27; superseded by `svar_v2/`** |
 | `svar_v2/` | Same decomposition, fiscal block = non-oil deficit % GDP (quarterly, annual stance, quasi-fiscal split), tariffs = identified CPI tariff steps; 2013Q3–2026Q2 | as `bvar_sign_ext/`, X-13 data; variants `old_2011`, `old_2013`, `v2`, `v2_split`, `v2_ma4`, `v2_market`, `v2_ma4_market` | `changes_*.csv` (contribution changes over episodes), `levels_*.csv`, `median_target_*.csv`, `irf_*_*.csv`, `summary.csv` (FEVD at 8 quarters), `inputs_quarterly.csv` |
 | `bvar_market/` | The sign-restricted SVARs on the market core CPI (headline without fruit & veg, fuel, coal, regulated utilities) | as above; three weights for the utilities (±30 %) | `bands7_*.csv`, `bands9_*.csv` (STL vintage) |
-| `shapiro_goods/` | Demand- vs supply-driven goods inflation, 2016–2026 | Shapiro (2022): sign of price and quantity residuals per CPI goods group | `contributions.csv` |
+| `shapiro_goods/` | Demand- vs supply-driven goods inflation, contributions 2018-01 – 2026-04 | Shapiro (2022): sign of price and quantity residuals per CPI goods group | `contributions.csv` |
 | `fiscal_lp/` | Price response to fiscal shocks | Jordà local projections, HAC | `lp.csv`, `nf_transfers_pct_gdp.csv` |
 | `regional_fiscal/` | Regional price response to budget-financed investment, 2018–2026 | panel LP, month and region×calendar-month FE, clustered by region | `lp_shock*.csv` |
 | `erpt_neer/` | Exchange-rate pass-through by COICOP division: USD/KZT vs consumer-import NEER; border (import prices) vs retail | distributed lags, AR(2), month FE, HAC | `erpt_usd_vs_neer.csv`, `erpt_border.csv`, `rate_correlations.csv` |
@@ -62,32 +62,37 @@ data of 2026-11-13, and `svar_v2.py` gives the same files on a second run.
 - `erpt_usd_vs_neer.csv`: «перенос 12м» is now the cumulative 12-month response including the AR terms (food
   0.55, the lag sum alone 0.14); the lag sum and the long run are separate columns.
 - `shapiro_goods`: the price innovation comes from the month-on-month equation, the band is robust, the weights
-  are the official BNS ones (non-food 2019: 0.298, the estimated 0.410 was used before).
+  are the official BNS ones (non-food 2019: 0.298, the estimated 0.410 was used before; 2015, 2018 and 2021 are
+  not in the BNS file and are interpolated).
 - `fiscal_lp`, `bvar_sign*`, `bvar_market`: the files were from the STL vintage of the data and did not
   reproduce; the industrial-production panel of `fiscal_lp` was built on a broken level (see `model_data`: `ip`).
 - A quarter of GDP not yet in BNS's adjusted series is added through X-13 of the unadjusted level, not by
   applying a y/y index to the adjusted one.
 
 **Not errors, but they limit what the results mean**
-- *Tariff steps* are in effect the regulated CPI: 109 of 188 months are flagged and the correlation is 0.99.
+- *Tariff steps* are in effect the regulated CPI: 109 of 190 months are flagged and the correlation is 0.99.
 - *Fiscal shock*: a recursive ordering on a deficit-to-GDP ratio; revenue and the denominator respond to
-  activity within the quarter, so the shock is not a clean policy shock (its price response is negative).
-- *Levels versus changes*: the baseline drifts (half of the retained draws have a root slightly above one), so
+  activity within the quarter, so the shock is not a clean policy shock (the median price response is slightly negative, -0.07 to -0.10,
+  and every 68 % band includes zero).
+- *Levels versus changes*: the baseline drifts (54 % of the retained draws have a root slightly above one), so
   level contributions are relative to a different baseline in each variant; changes are robust.
 - *`v2_ma4` and `v2_split`*: the innovation of a four-quarter average is not a structural shock in a VAR(2),
-  and the three separately adjusted pieces of the split do not add up (0.16 pp on average, up to 0.5).
+  and the three separately adjusted pieces of the split do not add up (0.22 pp on average, up to 0.52).
 - *One rotation per reduced-form draw* is kept, so «accepted = 1000» is not an acceptance rate; the importance
   weights of Arias et al. for zero restrictions are not applied.
 - *USD versus NEER*: the dollar's lead comes from 2022; without March 2022 - June 2023 its pass-through to the
-  headline CPI is near zero. No 12-month pass-through here is significant at 5 % (food: 0.55, t = 1.4).
+  headline CPI is near zero. No positive 12-month pass-through here is significant at 5 % (food: 0.55, t = 1.4, and that t is an upper
+  bound); the only significant ones are negative (alcohol and tobacco from the NEER, -0.07, t = -2.0).
 - *`fiscal_lp`*: the «shock» is the level of a persistent budgeted flow, scaled to 1 % of GDP in a month, about
   7.6 standard deviations of what is observed.
-- *`regional_fiscal`*: 20 clusters; the one significant horizon is not significant without Turkestan oblast.
+- *`regional_fiscal`*: 20 clusters; two horizons are significant at the normal 5 % level (16 and 18 months, t = 2.0 and 2.2), one
+  with a t(19) critical value, none without Turkestan oblast (t = 1.3 at 18 months).
 - *Shapiro*: quantities exist only as y/y rates, so base effects still enter the quantity residual.
 - BNS's seasonally adjusted GDP itself moves +6.5 % q/q in 2026Q2; the models take it as published.
 
 **Not verified**: how `cpi_components/` (market core index, divisions, regional files) was built -- there is no
-script for it in the repository; the amount removed from the deficit for July 2017 (2 135.8 bn tenge).
+script for it in the repository; the amount removed from the deficit for July 2017 (2 135.8 bn tenge in the
+code) against a primary source.
 
 Tests: `tests/test_models_inflation.py` (the properties above), `tests/test_models.py` (synthetic data: PPML recovers known elasticities, the BVAR
 marginal likelihood equals the chain of Student-t predictives, block exogeneity is exact, the
