@@ -1,29 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — X-13ARIMA-SEATS replaces STL for seasonal adjustment» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — utility tariff decisions and CPI tariff jumps (TARIFF_DECISIONS, TARIFF_CHANGE_MONTHS)» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-27 — utility tariff decisions and CPI tariff jumps (TARIFF_DECISIONS, TARIFF_CHANGE_MONTHS)
-
-**TARIFF_DECISIONS** (new, `scripts/fetchers/krem_tariffs.py`, agency `krem`) is an event dataset of
-utility-tariff decisions for inflation modelling: one record per decision and service, dated by the month the
-decision takes effect; item_code REGION.SERVICE.KIND.SOURCE_ID. (1) КРЕМ and its regional departments publish
-into one gov.kz project, «krem»; the tariff orders are read from their titles (the files are scans): heat,
-water, sewerage, electricity transmission and supply, gas distribution, transport and storage; value NaN; the
-effective date is stated, or estimated as the month after the order date (or after publication for
-Карагандинская and Шымкент). (2) КРЕМ press releases (gov.kz news; the endpoint needs a cookie ticket from
-/api/v1/public/_/c/k6) give the stated % change, e.g. ГКП «Семей Водоканал» water −11.78% from 2026-04.
-(3) Ministry of Energy electricity generation caps (order 514, order 508-н/қ and amendments, old.adilet.zan.kz):
-mean % change across producer groups, e.g. +16.34% from 2023-06 and +26.33% from 2025-02. (4) Wholesale gas caps
-by region 2015-2027, e.g. Almaty city 29 873 → 39 044 KZT/1000 m3 from 2025-07 (+30.7%); the 2027-07 period is
-marked forecast. Coverage is uneven: departments that put order dates in titles dominate (Карагандинская,
-Костанайская), and Атырауская, ВКО, СКО, Туркестанская and Павлодарская are sparse (their order files need OCR).
-
-**TARIFF_CHANGE_MONTHS** (new, derived, `scripts/fetchers/tariff_jumps.py`) lists the months from 2004 on in
-which a national CPI utility item (electricity, hot and cold water, heating, sewerage, network gas, LPG,
-garbage; BNS slugs chained across the re-bases) moved by at least 3% m/m, or by at least 1.5% with a robust
-z-score of at least 5: e.g. ELECTRICITY 2023-08 +6.7, HEATING 2023-11 +16.1, NETWORK_GAS 2025-08 +24.1. It dates
-when the CPI registered a change, not when it was decided; national only.
 
 ## 2026-09-27 — the quasi-fiscal block before 2022: budget lending by recipient, holdings' balance sheets, NBK surveys from 1997
 
@@ -625,3 +603,33 @@ copper 8.55 (5.7 before), zinc 10.5 (7), iron ore 3.64 (2.8). Cigarettes 800 (20
 **Not found** (listed in the research note, not loaded): the month 20 % VAT began; the 2009-2010 CIT article; the
 2002-2003 PIT and social-tax wording; original 2017-Code MET table; fuel excises before 2017-04; the oil export
 duty acts of 2008-Q4 and of the 20 -> 40 step. Test: `test_tax_rates_step_series_and_gaps`.
+
+## 2026-11-13 — TAX_RATES: the gaps of the first pass are filled (user: «Найди пропуски»)
+
+**Source that unlocked it.** prg.kz keeps dated editions of each act (`prg.kz/m/amp/document/<edition id>/<page>/`,
+«Данная редакция действовала до внесения изменений от …»); alta.ru/tamdoc shows customs and excise resolutions with
+the superseded text. Both are commercial databases, not the official register; rate changes of 2002-2010 were
+cross-checked against amending laws on zakon.uchet.kz. Notes: `docs/research_tax_gaps_A_2026-11-13.md`, `…_B_…`.
+
+**Filled.** CIT 20 in 2009-2010 (Law 100-IV art. 4 suspended Code art. 147; 17.5 for 2010 and 15 from 2011 were
+legislated and never applied); CIT 30 and VAT 20 from 1995-07. PIT 2002-2003 scale 5/10/20/30 (PIT is now the lowest
+bracket, PIT_TOP the highest); dividends 15 in 2002-2006, 5 in 2018-2022. Social tax 21 in 2002-2003, first bracket
+20 in 2004-2007 and 13 in 2008. MET metals unchanged 2009-2022 (copper 5.7, zinc 7, gold 5, iron ore 2.8); coal 0
+to 2020, 2.7 from 2021; uranium 22 in 2009-2012 as in force (Law 61-V retroactively set 17.5 — not used), 18.5 in
+2013-2022. New item MET_OIL_TOP: 18 in 2009-2026 (the 19 and 20 scheduled in 2008 never applied). Cigarettes 600
+(2009), 800 (2010), 1 000, 1 250, 1 550 (2011-2013). Petrol 4 500 in 2009-2015, 10 500 from 25.11.2015 (PP 887,
+not April 2017 as the first pass had it); diesel 540 to 2016-09. Oil export duty: 109.91 (from 17.05.2008), 203.8
+(11.10.2008), 0 (26.01.2009), 20 (mid-August 2010), 40 (01.01.2011), 60 (mid-April 2013), 80 (12.03.2014), 60
+(19.03.2015), 40 (2016-01).
+
+**Corrections of the first pass.** EXCISE_CIGARETTES 800 starts 2010-01, not 2010-07; EXCISE_PETROL 10 500 starts
+2015-12; oil-duty months moved to the month the rate applied for most of (2013-05, 2015-04). Order N 81 of 2016
+was a step table; «duty = price» dates from Order 311-НҚ of 14.08.2023.
+
+**Finding.** Tax Code 2025 art. 558 has no offset of social contributions against social tax (the 2017 Code art. 486
+had one, and the 2001 Code art. 318 by July 2007). The nominal path 9.5 -> 11 -> 6 is therefore flat in net terms:
+6 net in 2018-2025, 6 paid on top of contributions in 2026.
+
+**Remaining gaps are structural** (no single rate): gold and uranium MET from 2026, diesel excise 2016-10..2022-03
+(seasonal), oil export duty from 2016-03. Open: publication date of PP 805 (2008), PP 173 as signed, the 2017 Code
+before the 19.04.2019 edition, the first three weeks of July 1995 for VAT. 23 items.

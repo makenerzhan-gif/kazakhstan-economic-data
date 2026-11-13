@@ -124,10 +124,13 @@ def test_tax_rates_step_series_and_gaps():
     assert by[("VAT", "2008-12")] == 13 and by[("VAT", "2009-01")] == 12 and by[("VAT", "2025-12")] == 12 and by[("VAT", "2026-01")] == 16
     assert by[("SOCIAL_TAX", "2017-12")] == 11 and by[("SOCIAL_TAX", "2018-01")] == 9.5 and by[("SOCIAL_TAX", "2026-11")] == 6
     assert by[("PENSION_EMPLOYER", "2026-03")] == 3.5 and by[("HEALTH_EMPLOYER", "2021-12")] == 2 and by[("SOCIAL_CONTRIBUTIONS", "2024-12")] == 3.5
-    assert by[("CIT", "2008-12")] == 30 and by[("CIT", "2011-01")] == 20
-    for gap in (("CIT", "2009-06"), ("SOCIAL_TAX", "2005-01"), ("MET_COPPER", "2020-01"), ("MET_URANIUM", "2026-01"),
-                ("OIL_EXPORT_DUTY_RATE", "2016-03"), ("PIT_DIVIDENDS", "2019-01")):
-        assert gap not in by                                   # a level that was not read in a legal text is absent, not carried
+    assert by[("CIT", "2008-12")] == 30 and by[("CIT", "2009-06")] == 20 and by[("VAT", "1995-07")] == 20
+    assert by[("SOCIAL_TAX", "2003-12")] == 21 and by[("SOCIAL_TAX", "2005-01")] == 20 and by[("SOCIAL_TAX", "2008-06")] == 13
+    assert by[("PIT_TOP", "2003-12")] == 30 and by[("PIT_DIVIDENDS", "2019-01")] == 5 and by[("MET_COPPER", "2020-01")] == 5.7
+    assert by[("MET_COAL", "2020-12")] == 0 and by[("MET_COAL", "2021-01")] == 2.7 and by[("EXCISE_PETROL", "2015-12")] == 10500
+    assert by[("OIL_EXPORT_DUTY_RATE", "2009-02")] == 0 and by[("OIL_EXPORT_DUTY_RATE", "2011-01")] == 40
+    for gap in (("MET_URANIUM", "2026-01"), ("MET_GOLD", "2026-01"), ("OIL_EXPORT_DUTY_RATE", "2016-03"), ("EXCISE_DIESEL", "2020-01")):
+        assert gap not in by                                   # no single rate in these months: absent, not carried
     assert all(v is not None for v in by.values())
     import update_dims
     ds = update_dims.DATASETS["TAX_RATES"]

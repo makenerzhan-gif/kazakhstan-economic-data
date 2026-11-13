@@ -5520,3 +5520,25 @@ hyperinflation-era outliers, the 2022-01 tax break, and a working-day effect in 
 shows no identifiable seasonality (M7 2.11, Q 1.02). VARIABLES.md now lists model, calendar effects,
 outliers and M7/Q per variable. Seasonal strength in analysis/reports/seasonal_decomposition_2026-09-28.md:
 GDP_NOMINAL 0.996, IMPORTS 0.877, EXPORTS 0.463, CPI 0.131 (STL: 0.985, 0.688, 0.204, 0.174).
+
+## 2026-09-27 — utility tariff decisions and CPI tariff jumps (TARIFF_DECISIONS, TARIFF_CHANGE_MONTHS)
+
+**TARIFF_DECISIONS** (new, `scripts/fetchers/krem_tariffs.py`, agency `krem`) is an event dataset of
+utility-tariff decisions for inflation modelling: one record per decision and service, dated by the month the
+decision takes effect; item_code REGION.SERVICE.KIND.SOURCE_ID. (1) КРЕМ and its regional departments publish
+into one gov.kz project, «krem»; the tariff orders are read from their titles (the files are scans): heat,
+water, sewerage, electricity transmission and supply, gas distribution, transport and storage; value NaN; the
+effective date is stated, or estimated as the month after the order date (or after publication for
+Карагандинская and Шымкент). (2) КРЕМ press releases (gov.kz news; the endpoint needs a cookie ticket from
+/api/v1/public/_/c/k6) give the stated % change, e.g. ГКП «Семей Водоканал» water −11.78% from 2026-04.
+(3) Ministry of Energy electricity generation caps (order 514, order 508-н/қ and amendments, old.adilet.zan.kz):
+mean % change across producer groups, e.g. +16.34% from 2023-06 and +26.33% from 2025-02. (4) Wholesale gas caps
+by region 2015-2027, e.g. Almaty city 29 873 → 39 044 KZT/1000 m3 from 2025-07 (+30.7%); the 2027-07 period is
+marked forecast. Coverage is uneven: departments that put order dates in titles dominate (Карагандинская,
+Костанайская), and Атырауская, ВКО, СКО, Туркестанская and Павлодарская are sparse (their order files need OCR).
+
+**TARIFF_CHANGE_MONTHS** (new, derived, `scripts/fetchers/tariff_jumps.py`) lists the months from 2004 on in
+which a national CPI utility item (electricity, hot and cold water, heating, sewerage, network gas, LPG,
+garbage; BNS slugs chained across the re-bases) moved by at least 3% m/m, or by at least 1.5% with a robust
+z-score of at least 5: e.g. ELECTRICITY 2023-08 +6.7, HEATING 2023-11 +16.1, NETWORK_GAS 2025-08 +24.1. It dates
+when the CPI registered a change, not when it was decided; national only.
