@@ -1,66 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-27 — the quasi-fiscal block before 2022: budget lending by recipient, holdings' balance sheets, NBK surveys from 1997» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-28 — national CPI back to 1991» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-28 — official exchange rates back to the tenge's introduction (November 1993)
-
-EXCHANGE_RATE, EXCHANGE_RATE_RUB (from 1993-11-18), EXCHANGE_RATE_CNY (from 1996-02-05) and
-EXCHANGE_RATE_EUR (from 1999-01-04) now reach back before the NBK daily report, whose first usable
-day is 1999-11-17. The history comes from the NBK archive workbook «Архив официальных курсов валют
-с 1993 по 1999» (nationalbank.kz/file/download/22756): effective-date rows turned into the rate in
-force on each weekday, the series' existing definition. The archive is re-read on every run and must
-equal the report on all 33 weekdays of 1999-11-17..12-31 (0 differences), or the fetcher stops. USD at
-year-end: 6.31 (1993), 54.26, 63.95, 73.30, 75.55, 83.80 (1998), 138.20 (1999), all equal to IMF IFS;
-the float of April 1999 runs 87.50 (2 April) -> 100.00 (5 April) -> 118.00 (7 April). Monthly means
-match the NBK's published averages within 0.05 except 1994-01, 1997-01 and 1998-01. The rouble is in
-new (post-1998) roubles throughout: the archive's quote per 1000 roubles before 1998 is one new rouble
-(13.00 on both sides of 1 January 1998). No euro before 1999: the archive's ECU and Deutsche mark are
-not spliced. Rates were set once or twice a week before April 1999, so the early daily series is a
-step function. Tests: tests/test_fx_history.py (14).
-
-## 2026-09-28 — CIS Stat: the CIS countries since 1991, Kazakhstan migration before 2000
-
-New fetcher `scripts/fetchers/cisstat.py` (agency `cisstat`) reads the JSON service of the CIS Stat
-database «Статистика СНГ» (new.cisstat.org/consstat, no key) into four item-level datasets whose
-`region` is the reporting country's ISO3 code: CIS_GDP_VOLUME_INDEX (fact 714662, real GDP % of the
-previous year, 11 countries 1991-2025), CIS_CPI (fact 43370, December on December and annual average
-as separate items, by consumer group), CIS_POPULATION (facts 44176/44177, 1 January and annual
-average) and CIS_MIGRATION (facts 4650866/4679599 by flow, 44243/44245 by partner country from 2016;
-net = arrivals - departures). Kazakhstan's GDP index equals BNS GDP_REAL in every year 1991-2025
-(1991 89.0, 1992 94.7, 1993 90.8) and its Dec/Dec CPI equals BNS CPI_YOY in 2011-2025; the 1990s CPI
-(1994: average 1 877%, Dec/Dec 1 158%) differs from the IMF's (1 402% / 855%). MIGRATION_ARRIVALS and
-MIGRATION_DEPARTURES now start in 1991 (1994: 70 389 arrived, 477 068 left) via `gaps_filled_from`
-CIS_MIGRATION; the sources agree on 2000-2025 except 2008 (CIS Stat 46 404 / 45 287, BNS 46 113 /
-44 813), which `fill_gaps` now skips through the new `known_differences` key, keeping BNS's value.
-Hard checks: header columns, every country/flow/group/base/sex/area label mapped, numeric values, no
-conflicting duplicates, Kazakhstan present 1991-1999, and for Kazakhstan the partner sums and the two
-migration facts' totals. Tests: tests/test_cisstat.py (19, no network).
-
-## 2026-09-28 — national CPI back to 1991
-
-CPI and CPI_YTD now start in January 1991 and CPI_YOY in January 1994 (BNS published no
-year-on-year index for 1991-1993); before, all three started with Taldau in January 2011. The
-240 (204) earlier months are BNS's own printed figures from three stat.gov.kz sources — «Цены в
-Казахстане за 1991-2021 годы» (element 17216, docx: Dec/Dec 1991-2021, m/m 1992-2021), «Цены в
-Казахстане в 1991-2000 гг.» (element 21933, pdf: m/m, since December and, from 1994, y/y) and the
-140 monthly editions of publication 166775 (May 1999 – December 2010) — loaded by
-`scripts/load_cpi_history.py` into `data/reference/bns_cpi_history.csv`. Every month two sources
-print is the same number in both (228 of 240 m/m months have a second source; the editions equal
-CPI_DETAIL on all 234 values 2004-07…2010-12), and the three measures satisfy the CPI identities
-within rounding (chain of m/m = since-December; y/y = product of 12 m/m = ytd(t)/ytd(t−12)·Dec/Dec).
-One printed inconsistency is kept as published: February 1993 m/m 131.9 where the since-December
-figures imply 131.7. The fetcher prepends only months before 2011 and stops if the file differs
-from Taldau on any of the 132 m/m months and 11 Decembers of 2011-2021 the docx repeats (all equal).
-December/December: 1991 247.1, 1992 3060.8, 1993 2265.0, 1994 1258.3, 1995 160.3, 1996 128.7,
-1997 111.2, 1998 101.9, 1999 117.8, 2000 109.8. Tests: tests/test_cpi_history.py (25).
-The analysis and model layers keep their CPI sample from 2011: `model_data/spec.yaml` `cpi` has
-`from: "2011-01-01"` (now applied before chaining, so the level is still 100 in 2011-01), and the CPI
-targets of `scripts/analysis/seasonal_targets.py` / `forecast_targets.py` carry `sample_start`
-(new, passed to `timeseries.prepare_level`). Move the start to 1996 only after checking the X-13
-diagnostics; 1991-1995 hold m/m values up to 312.3 (source issue cpi_1991_1995_hyperinflation).
-model_data's `usdkzt` now starts in 1994-01 (the NBK archive); 1999-11 is 139.63, the NBK's
-published average, instead of 138.80 from the report's last 11 weekdays.
 
 ## 2026-09-28 — CPI groups (food, non-food, paid services) back to 1991 (user: «Сделай все три пункта»)
 
@@ -642,3 +583,50 @@ in the 1997 law too, but the month it began was not read. Still resting on press
 duty in 2008-2009. Not re-read: PP 133 and PP 173 as signed, the 2017 Code before the 19.04.2019 edition.
 Merging with PR #33 will conflict in six files (sources.yaml, update_dims.py, the two logs, DATA_CATALOG, the
 unified file), not two.
+
+## 2026-11-13 — bulletin history from 2013, National Fund taxes from KGD, tax schedules, rates checked on adilet (user: «Ок, начинай историю бюллетеня»; «по ставкам на налоги нужно сверить их с адилет. найди Нефтяные налоги в Нацфонд … Оцифруй как ряды … Доведи до конца пенсионные взносы»)
+
+**Bulletin backfill.** `.github/workflows/backfill-bulletins.yml` (by hand, or on a push to a `claude/**` branch that
+touches the readers) runs `backfill_minfin_bulletins.py --dims …` over every edition online (166 documents: monthly
+from 2019, yearly archives 2013-2018) and commits to the branch it ran on; six minutes a run, five runs to get the
+older layouts right. Result, all from 2013-01: RESOURCE_PAYMENTS_YTD 160 months; BUDGET_EXPENDITURE_ECONOMIC_YTD state and
+republican budgets 155 months each, local 136;
+BUDGET_RECEIPTS_BY_CODE_YTD state budget 154 months, republican 159. Cross-checks on every common month, no
+difference: STATE.1 / 1011 / 1012 / 1051 / 1052 / 103 against the scalar tax series (98 months), REVENUE (153),
+transfers (152), oil export duty (154 and 160), wages (88).
+What the older editions do differently, now handled in `minfin_classification.py`: a fifth expenditure category
+«Погашение займов» until 2021 (CAT5, inside «Всего»); receipts carry «Поступления займов» and «Используемые остатки
+бюджетных средств» (stored as categories 8 and 9, inside «ПОСТУПЛЕНИЯ»), the latter without any code in the
+republican table; «ПОСТУПЛЕНИЯ*» with an asterisk; «ДОХОДЫ» printed as 0 in the republican table of 2021-01..03
+(row left out); 19 editions of 2015-2018 print fewer specifics than the subclass total (kept as printed, listed in
+`reports/backfill_minfin_bulletins.md`). In archive mode a budget that does not add up is skipped without costing
+the other budgets of its edition; the regular run still stops. A sheet with no «Всего» row is no longer accepted
+(the first backfill run had let such sheets through unchecked; its data was discarded).
+Useful: gov.kz `/uploads/…` files download from the sandbox with plain requests (only the listing API is 403), and
+WebFetch reads the listing — 45 old editions were debugged locally that way.
+
+**NF_RECEIPTS_BY_CODE_KGD_YTD** (`fetchers/kgd_nf.py`): KGD's monthly «Динамика поступлений в Национальный фонд в
+разрезе КБК», 2021-01 .. 2026-09, seven oil-sector taxes and five other codes, sums checked. Equal to the Minfin
+statement (NF_*_YTD) in every December of 2021-2025 and in June 2026; inside a year the two differ by payment
+timing, so they are not spliced. January-September 2026: taxes 3 409.2 bn KZT (CIT 1 381.8, MET 710.4, PSA share
+787.6, rent tax 360.4). Built from downloaded files; the document search on the live listing is unverified.
+
+**TAX_SCHEDULES** (`config/tax_schedules.yaml`, 127 items, 98 in force today): oil MET scale 2009-2026 and the 2027
+matrix, gas, gold, silver, uranium, rent tax on export (oil scale unchanged 2009-2026; coal 2.1, 4.7 from 2018,
+abolished 2021), the oil export-duty table of 2016 and the formula of 2023, the fuel-excise formula of 2025-2026,
+reduced VAT rates, and the duty rate of the month from agency reports (28 months, second-hand). Correction: the
+7-10 mln t step of the oil scale was 14 % in 2009-2010, not 15.
+
+**TAX_RATES against adilet.** adilet.zan.kz has an open JSON API with every dated edition
+(`/api/documents/by-ngr/<id>`, `/api/documents/<uuid>/versions`). All 97 keys were read there: 96 confirmed in
+value and month, none differs; the month of the 203.8 USD/t oil duty (2008-10) is not datable there. Changes:
+PENSION_EMPLOYEE from 1998-01 (Law of 20.06.1997 N 136-I, art. 4 and 69); EXCISE_DIESEL monthly through 2016-2022.
+Notes: `docs/verify_tax_rates_adilet_2026-11-13.md`, `docs/research_tax_scales_2026-11-13.md`.
+
+**A push with red tests.** Commit f72772f went out with two failing tests because the exit code checked was the
+pager's, not pytest's; fixed ten minutes later in fc3d972 (the tests encoded the old skip rule and a month without
+transfers). Nothing reached main.
+
+**Not done.** Monthly oil-duty rates 2016-2023 and the excise actually charged since May 2025 (the prices behind
+them are not published where they can be read); the three bulletin datasets before 2013 (PDF volumes).
+Tests: 930 passed.

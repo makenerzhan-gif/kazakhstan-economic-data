@@ -1,4 +1,4 @@
-# Update Log — archive (2026-08-30 .. 2026-09-27)
+# Update Log — archive (2026-08-30 .. 2026-09-28)
 
 Older entries of project_knowledge/UPDATE_LOG.md, moved here on 2026-09-26 and 2026-09-27 so the Claude Project's
 context holds only the recent log. Oldest first; nothing edited.
@@ -5582,3 +5582,62 @@ national managing holding (account group 2030), IFIs (2040) and other banks (205
 58.4 bn at 2011-01-01, 399.8 at 2015-01-01, 712.0 at 2026-08-01; break 2023-02 when Damu joined group 2030).
 Source issues registered: the misdated 2003-04 banks' record, six NBK identity errors, the unpublished NDA line
 from 2009, the 2015-06 step in NBK claims on the rest of the economy, the 2023-02 Damu reclassification.
+
+## 2026-09-28 — official exchange rates back to the tenge's introduction (November 1993)
+
+EXCHANGE_RATE, EXCHANGE_RATE_RUB (from 1993-11-18), EXCHANGE_RATE_CNY (from 1996-02-05) and
+EXCHANGE_RATE_EUR (from 1999-01-04) now reach back before the NBK daily report, whose first usable
+day is 1999-11-17. The history comes from the NBK archive workbook «Архив официальных курсов валют
+с 1993 по 1999» (nationalbank.kz/file/download/22756): effective-date rows turned into the rate in
+force on each weekday, the series' existing definition. The archive is re-read on every run and must
+equal the report on all 33 weekdays of 1999-11-17..12-31 (0 differences), or the fetcher stops. USD at
+year-end: 6.31 (1993), 54.26, 63.95, 73.30, 75.55, 83.80 (1998), 138.20 (1999), all equal to IMF IFS;
+the float of April 1999 runs 87.50 (2 April) -> 100.00 (5 April) -> 118.00 (7 April). Monthly means
+match the NBK's published averages within 0.05 except 1994-01, 1997-01 and 1998-01. The rouble is in
+new (post-1998) roubles throughout: the archive's quote per 1000 roubles before 1998 is one new rouble
+(13.00 on both sides of 1 January 1998). No euro before 1999: the archive's ECU and Deutsche mark are
+not spliced. Rates were set once or twice a week before April 1999, so the early daily series is a
+step function. Tests: tests/test_fx_history.py (14).
+
+## 2026-09-28 — CIS Stat: the CIS countries since 1991, Kazakhstan migration before 2000
+
+New fetcher `scripts/fetchers/cisstat.py` (agency `cisstat`) reads the JSON service of the CIS Stat
+database «Статистика СНГ» (new.cisstat.org/consstat, no key) into four item-level datasets whose
+`region` is the reporting country's ISO3 code: CIS_GDP_VOLUME_INDEX (fact 714662, real GDP % of the
+previous year, 11 countries 1991-2025), CIS_CPI (fact 43370, December on December and annual average
+as separate items, by consumer group), CIS_POPULATION (facts 44176/44177, 1 January and annual
+average) and CIS_MIGRATION (facts 4650866/4679599 by flow, 44243/44245 by partner country from 2016;
+net = arrivals - departures). Kazakhstan's GDP index equals BNS GDP_REAL in every year 1991-2025
+(1991 89.0, 1992 94.7, 1993 90.8) and its Dec/Dec CPI equals BNS CPI_YOY in 2011-2025; the 1990s CPI
+(1994: average 1 877%, Dec/Dec 1 158%) differs from the IMF's (1 402% / 855%). MIGRATION_ARRIVALS and
+MIGRATION_DEPARTURES now start in 1991 (1994: 70 389 arrived, 477 068 left) via `gaps_filled_from`
+CIS_MIGRATION; the sources agree on 2000-2025 except 2008 (CIS Stat 46 404 / 45 287, BNS 46 113 /
+44 813), which `fill_gaps` now skips through the new `known_differences` key, keeping BNS's value.
+Hard checks: header columns, every country/flow/group/base/sex/area label mapped, numeric values, no
+conflicting duplicates, Kazakhstan present 1991-1999, and for Kazakhstan the partner sums and the two
+migration facts' totals. Tests: tests/test_cisstat.py (19, no network).
+
+## 2026-09-28 — national CPI back to 1991
+
+CPI and CPI_YTD now start in January 1991 and CPI_YOY in January 1994 (BNS published no
+year-on-year index for 1991-1993); before, all three started with Taldau in January 2011. The
+240 (204) earlier months are BNS's own printed figures from three stat.gov.kz sources — «Цены в
+Казахстане за 1991-2021 годы» (element 17216, docx: Dec/Dec 1991-2021, m/m 1992-2021), «Цены в
+Казахстане в 1991-2000 гг.» (element 21933, pdf: m/m, since December and, from 1994, y/y) and the
+140 monthly editions of publication 166775 (May 1999 – December 2010) — loaded by
+`scripts/load_cpi_history.py` into `data/reference/bns_cpi_history.csv`. Every month two sources
+print is the same number in both (228 of 240 m/m months have a second source; the editions equal
+CPI_DETAIL on all 234 values 2004-07…2010-12), and the three measures satisfy the CPI identities
+within rounding (chain of m/m = since-December; y/y = product of 12 m/m = ytd(t)/ytd(t−12)·Dec/Dec).
+One printed inconsistency is kept as published: February 1993 m/m 131.9 where the since-December
+figures imply 131.7. The fetcher prepends only months before 2011 and stops if the file differs
+from Taldau on any of the 132 m/m months and 11 Decembers of 2011-2021 the docx repeats (all equal).
+December/December: 1991 247.1, 1992 3060.8, 1993 2265.0, 1994 1258.3, 1995 160.3, 1996 128.7,
+1997 111.2, 1998 101.9, 1999 117.8, 2000 109.8. Tests: tests/test_cpi_history.py (25).
+The analysis and model layers keep their CPI sample from 2011: `model_data/spec.yaml` `cpi` has
+`from: "2011-01-01"` (now applied before chaining, so the level is still 100 in 2011-01), and the CPI
+targets of `scripts/analysis/seasonal_targets.py` / `forecast_targets.py` carry `sample_start`
+(new, passed to `timeseries.prepare_level`). Move the start to 1996 only after checking the X-13
+diagnostics; 1991-1995 hold m/m values up to 312.3 (source issue cpi_1991_1995_hyperinflation).
+model_data's `usdkzt` now starts in 1994-01 (the NBK archive); 1999-11 is 139.63, the NBK's
+published average, instead of 138.80 from the report's last 11 weekdays.
