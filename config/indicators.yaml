@@ -5500,6 +5500,94 @@ indicators:
     observation_type: period_total
     observation_evidence: "квартал = разность нарастающих итогов бюллетеня (март, июнь, сентябрь) и годового отчёта"
 
+  - id: STATE_BUDGET_REVENUE_PLAN
+    name_ru: "Доходы государственного бюджета: годовой уточнённый план"
+    name_en: "State budget revenue: adjusted annual plan"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Статистический бюллетень, табл 2, графа «на год с учётом корректировки» — план на весь год по состоянию на выпуск, не поток"
+
+  - id: STATE_BUDGET_TAX_REVENUE_PLAN
+    name_ru: "Налоговые поступления государственного бюджета: годовой уточнённый план"
+    name_en: "State budget tax revenue: adjusted annual plan"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Статистический бюллетень, табл 2, графа «на год с учётом корректировки» — план на весь год по состоянию на выпуск, не поток"
+
+  - id: STATE_BUDGET_EXPENDITURE_PLAN
+    name_ru: "Затраты государственного бюджета: годовой уточнённый план"
+    name_en: "State budget expenditure: adjusted annual plan"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Статистический бюллетень, табл 2, графа «на год с учётом корректировки» — план на весь год по состоянию на выпуск, не поток"
+
+  - id: STATE_BUDGET_DEFICIT_PLAN
+    name_ru: "Дефицит (профицит) государственного бюджета: годовой уточнённый план"
+    name_en: "State budget deficit (surplus): adjusted annual plan"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Статистический бюллетень, табл 2, графа «на год с учётом корректировки» — план на весь год по состоянию на выпуск, не поток"
+
+  - id: REPUBLICAN_BUDGET_REVENUE_PLAN
+    name_ru: "Доходы республиканского бюджета: годовой уточнённый план"
+    name_en: "Republican budget revenue: adjusted annual plan"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Статистический бюллетень, табл 2, графа «на год с учётом корректировки» — план на весь год по состоянию на выпуск, не поток"
+
+  - id: REPUBLICAN_BUDGET_TAX_REVENUE_PLAN
+    name_ru: "Налоговые поступления республиканского бюджета: годовой уточнённый план"
+    name_en: "Republican budget tax revenue: adjusted annual plan"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Статистический бюллетень, табл 2, графа «на год с учётом корректировки» — план на весь год по состоянию на выпуск, не поток"
+
+  - id: REPUBLICAN_BUDGET_EXPENDITURE_PLAN
+    name_ru: "Затраты республиканского бюджета: годовой уточнённый план"
+    name_en: "Republican budget expenditure: adjusted annual plan"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Статистический бюллетень, табл 2, графа «на год с учётом корректировки» — план на весь год по состоянию на выпуск, не поток"
+
+  - id: REPUBLICAN_BUDGET_DEFICIT_PLAN
+    name_ru: "Дефицит (профицит) республиканского бюджета: годовой уточнённый план"
+    name_en: "Republican budget deficit (surplus): adjusted annual plan"
+    agency: minfin
+    frequency: irregular
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "Статистический бюллетень, табл 2, графа «на год с учётом корректировки» — план на весь год по состоянию на выпуск, не поток"
+
   - id: STATE_BUDGET_REVENUE_YTD
     name_ru: "Доходы государственного бюджета, нарастающим итогом"
     name_en: "State Budget Revenue, year-to-date"

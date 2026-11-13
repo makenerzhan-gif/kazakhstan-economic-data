@@ -5069,18 +5069,6 @@ datasets:
     category: fiscal
     note: "GDP: sum of the four quarters of QNA_GDP_EXPENDITURE (complete years only); oil-gas sector: OIL_GAS_SECTOR_GVA item OIL_GAS (BNS, gross value added, from 2010); non-oil balance: STATE_NON_OIL_DEFICIT (Minfin, state budget, negative = deficit, from 2013); overall balance: STATE_BUDGET_DEFICIT. Fiscal impulse = minus the change in the non-oil balance ratio (positive = expansion). Not cyclically adjusted and not primary; state budget, not general government."
 
-  - id: DOLLARIZATION
-    name_ru: "Долларизация: доля кредитов банков, кредитов бизнесу и вкладов населения в иностранной валюте (расчёт репозитория)"
-    name_en: "Dollarisation: foreign-currency share of bank loans, business loans and household deposits (computed by this repository)"
-    agency: derived
-    fetcher: analytics
-    measure: dollarization
-    min_items: 4
-    frequency: monthly
-    unit: "%"
-    category: monetary
-    note: "Shares of the NBK's stocks, as at the 1st of the month: LOANS_FX_SHARE = BANK_LOANS_STB_FX / BANK_LOANS_STB_TOTAL (from 1996); BUSINESS_LOANS_FX_SHARE = LOANS_BUSINESS_FX / (FX + KZT) (from 2022, banks and other lenders); HOUSEHOLD_DEPOSITS_FX_SHARE = the three HOUSEHOLD_DEPOSITS_*_FX over all six household deposit series (from 2023); the term-deposit share separately. The stocks are in tenge, so a depreciation raises the share without any conversion (valuation effect). Dollarisation of ALL deposits needs corporate deposits by currency, which the pipeline does not hold; the regulator's own household figure is BANK_DEPOSITS_INDIVIDUALS_FX_SHARE (ARDFM, from 2026-05)."
-
   - id: YIELD_CURVE_SPREADS
     name_ru: "Наклон кривой доходности ГЦБ, спреды к базовой ставке, реальная доходность на 10 лет (расчёт репозитория)"
     name_en: "Government yield-curve slopes, spreads to the base rate, real 10-year yield (computed by this repository)"
@@ -5408,7 +5396,142 @@ datasets:
     category: national_accounts
     note: "BNS bulletin «Национальные счета Республики Казахстан (2010-2024гг.)», element 358455 (released 2025-12-22; the next edition will be a new element -- this one then stops updating and the element_id must be changed). One sheet per year, integrated economic accounts; each item is <SNA code>.<sector> (S11 non-financial corporations, S12 financial corporations, S13 general government, S14 households, S15 NPISH, S1 total economy, S2 rest of the world). 2024: household gross disposable income 61 823 778, household final consumption 73 171 015, household gross saving -6 778 304 million KZT; HH_SAVING_RATE (SNA definition, B8g / (B6g + D8)) -10.2 % in 2024, +7.0 % in 2015. B9 equals NET_LENDING_BY_SECTOR (Taldau 701002, from 1993)."
 
+  # ---------------------------------------------------------------- new sources of 2026-11-13
+  - id: DEPOSITS_BY_CURRENCY
+    name_ru: "Депозиты в депозитных организациях по валютам и держателям (юридические и физические лица), помесячно с 1997 г., млн тенге"
+    name_en: "Deposits in depository organisations by currency and holder (legal entities, households), monthly from 1997, million KZT"
+    agency: nbk
+    fetcher: nbk_deposits
+    min_items: 21
+    frequency: monthly
+    unit: "million KZT, stock at the end of the previous month (as at the date)"
+    category: monetary
+    note: "NBK page «Депозиты в депозитных организациях» (records JSON), 346 month-end stocks from 1997-12, dated the first day of the next month. Items TOTAL, KZT, FX, each with .LEGAL (non-bank legal entities) and .HOUSEHOLDS, plus transferable / other deposits. TOTAL equals the scalar DEPOSITS_TOTAL. 2026-10-01: total 51 455 187, FX 9 609 118 (18.7 %), legal entities' FX 5 522 360 of 22 850 818 (24.2 %), households' FX 4 086 758 of 28 604 369 (14.3 %); FX share at 2016-01-01 68.8 %. Open-data form 62 is NOT used: its legal-entity rows and total disagree with this page for 2022 and at the latest date."
+
+  - id: SOCIAL_FOOD_PRICES_WEEKLY
+    name_ru: "Еженедельные цены на социально значимые продовольственные товары (корзина 2026 г., 31 товар), тенге"
+    name_en: "Weekly prices of socially significant food products (2026 basket, 31 items), KZT"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "703112"
+    period_id: "2"
+    measure_id: "1"
+    dic_ids: "67,4305"
+    terms: "741880,19767047"
+    item_pos: 1
+    national_only: true
+    items:
+      - {code: FLOUR, term: "19766892", name: "Мука пшеничная первого сорта, кг"}
+      - {code: BREAD, term: "19766906", name: "Хлеб пшеничный из муки первого сорта, кг"}
+      - {code: BUCKWHEAT, term: "77647100", name: "Крупа гречневая, кг"}
+      - {code: PASTA, term: "77647185", name: "Рожки, кг"}
+      - {code: RICE, term: "77647189", name: "Рис шлифованный, кг"}
+      - {code: CHICKEN_PARTS, term: "19767172", name: "Части курицы, кг"}
+      - {code: BEEF_BONE_IN, term: "77647449", name: "Говядина с костями, кг"}
+      - {code: MINCED_MEAT, term: "77647450", name: "Мясной фарш, кг"}
+      - {code: HORSE_MEAT, term: "77647451", name: "Конина, кг"}
+      - {code: CHICKEN, term: "77647452", name: "Куры, кг"}
+      - {code: MUTTON, term: "77647463", name: "Баранина, кг"}
+      - {code: BEEF_BONELESS, term: "77647465", name: "Говядина бескостная, кг"}
+      - {code: FISH, term: "77655612", name: "Рыба свежая или мороженая, кг"}
+      - {code: COTTAGE_CHEESE, term: "19767016", name: "Творог, кг"}
+      - {code: EGGS, term: "54976078", name: "Яйца I категории, десяток"}
+      - {code: CHEESE, term: "77647510", name: "Сыр твёрдый, кг"}
+      - {code: SOUR_CREAM, term: "77647518", name: "Сметана, кг"}
+      - {code: KEFIR, term: "77655601", name: "Кефир 2-3 %, литр"}
+      - {code: MILK, term: "77655606", name: "Молоко, литр"}
+      - {code: SUNFLOWER_OIL, term: "19767137", name: "Масло подсолнечное, литр"}
+      - {code: BUTTER, term: "77659457", name: "Масло сливочное, кг"}
+      - {code: CABBAGE, term: "19767047", name: "Капуста белокочанная, кг"}
+      - {code: ONION, term: "19767048", name: "Лук репчатый, кг"}
+      - {code: CARROT, term: "19767050", name: "Морковь, кг"}
+      - {code: POTATO, term: "19767067", name: "Картофель, кг"}
+      - {code: CUCUMBER, term: "77647433", name: "Огурцы, кг"}
+      - {code: TOMATO, term: "77647434", name: "Помидоры, кг"}
+      - {code: SUGAR, term: "19767097", name: "Сахар-песок, кг"}
+      - {code: SALT, term: "19767120", name: "Соль, кг"}
+      - {code: APPLES, term: "77647435", name: "Яблоки, кг"}
+      - {code: TEA, term: "77647525", name: "Чай чёрный, кг"}
+    min_items: 28
+    frequency: weekly
+    unit: "KZT per kg (per litre: milk, kefir, sunflower oil; per ten: eggs)"
+    category: prices
+    note: "Taldau 703112 «Цены на продовольственные товары», weekly period (period_id 2), national average; each ISO week is dated its Wednesday, the registration day (week 44 of 2026 = the BNS bulletin «на 28 октября 2026»). From 2026 week 2; Taldau trails the weekly bulletin by about a week. Bread 222.75 (2026-w02) to 231.91 (w44), beef with bones 3 608 to 3 811, sugar 413 to 405, potatoes 195 to 211. The only weekly inflation signal: the 2022-2025 basket is SOCIAL_FOOD_PRICES_WEEKLY_2022_2025, with other product specifications -- do not join the two."
+
+  - id: SOCIAL_FOOD_PRICES_WEEKLY_2022_2025
+    name_ru: "Еженедельные цены на социально значимые продовольственные товары (корзина 2022-2025 гг., 19 товаров), тенге"
+    name_en: "Weekly prices of socially significant food products (2022-2025 basket, 19 items), KZT"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "703112"
+    period_id: "2"
+    measure_id: "1"
+    dic_ids: "67,82"
+    terms: "741880,698569"
+    item_pos: 1
+    national_only: true
+    items:
+      - {code: FLOUR, term: "698556", name: "Мука пшеничная первого сорта, кг"}
+      - {code: PASTA, term: "20618877", name: "Рожки, кг"}
+      - {code: BREAD, term: "698569", name: "Хлеб пшеничный из муки первого сорта, кг"}
+      - {code: RICE, term: "20618874", name: "Рис, кг"}
+      - {code: BUCKWHEAT, term: "20618875", name: "Крупа гречневая, кг"}
+      - {code: BEEF_SHOULDER, term: "698607", name: "Говядина лопаточно-грудная часть, кг"}
+      - {code: CHICKEN_PARTS, term: "698625", name: "Части курицы, кг"}
+      - {code: MILK, term: "653355", name: "Молоко 2,5 %, литр"}
+      - {code: KEFIR, term: "653357", name: "Кефир 2,5 %, литр"}
+      - {code: COTTAGE_CHEESE, term: "653359", name: "Творог, кг"}
+      - {code: EGGS, term: "20650645", name: "Яйца (единица как в источнике; с 2026 г. — десяток)"}
+      - {code: BUTTER, term: "698720", name: "Масло сливочное, кг"}
+      - {code: SUNFLOWER_OIL, term: "698728", name: "Масло подсолнечное, литр"}
+      - {code: POTATO, term: "698798", name: "Картофель, кг"}
+      - {code: CABBAGE, term: "698780", name: "Капуста белокочанная, кг"}
+      - {code: ONION, term: "698781", name: "Лук репчатый, кг"}
+      - {code: CARROT, term: "698783", name: "Морковь, кг"}
+      - {code: SUGAR, term: "698827", name: "Сахар-песок, кг"}
+      - {code: SALT, term: "653377", name: "Соль, кг"}
+    min_items: 17
+    refresh_days: 365
+    frequency: weekly
+    unit: "KZT per kg (per litre: milk, kefir, sunflower oil; eggs as the source gives them)"
+    category: prices
+    note: "Taldau 703112, weekly period, the basket of 2022-2025: 207 weeks, 2022 week 2 to 2025 week 52, national average, dated each week's Wednesday. Closed history (refreshed once a year). Level breaks against the 2026 basket (SOCIAL_FOOD_PRICES_WEEKLY) from new product specifications: rice 384.54 to 552.69, buckwheat 251.36 to 409.11, eggs 5 594.60 to 560.43 (unit). Bread 160.58 (2022-w02) to 209.83 (2025-w52). No machine-readable weekly prices exist before 2022."
+
+  - id: WAGE_ARREARS_QUARTERLY
+    name_ru: "Задолженность по оплате труда крупных и средних предприятий: всего и просроченная, по регионам, на конец квартала, млн тенге"
+    name_en: "Wage payables of large and medium enterprises: total and overdue, by region, end of quarter, million KZT"
+    agency: bns
+    fetcher: taldau_regional
+    index_id: "703173"
+    period_id: "5"
+    measure_id: "1"
+    dic_ids: "67,915,749,2813,111"
+    terms: "741880,741885,741917,3629963,567797"
+    item_pos: 4
+    scale: 1000000
+    items:
+      - {code: OVERDUE, term: "567797", index_id: "703173", name: "Просроченная задолженность по оплате труда"}
+      - {code: PAYABLE, term: "567797", index_id: "703172", name: "Задолженность по оплате труда, всего"}
+    min_items: 2
+    refresh_days: 20
+    frequency: quarterly
+    unit: "million KZT"
+    category: labour
+    note: "Taldau 703173 (overdue payables at the end of the period) and 703172 (payables), item «задолженность по оплате труда», large and medium enterprises, all activities, 2015 Q1 on. Overdue: 1 350.4 (2015 Q1), 649.8 (2020 Q1), 440.8 (2025 Q4), 114.7 (2026 Q1), 413.6 (2026 Q2); 2024 Q3 is suppressed by BNS. Total payables 158 504.9 (2015 Q1), 551 603.1 (2026 Q2). Overdue is sparse by region (confidentiality), payables are complete."
+
   # ---------------------------------------------------------------- more derived analytics (added 2026-11-13); keep after their inputs
+  - id: DOLLARIZATION
+    name_ru: "Долларизация: доля кредитов банков, кредитов бизнесу и вкладов населения в иностранной валюте (расчёт репозитория)"
+    name_en: "Dollarisation: foreign-currency share of bank loans, business loans and household deposits (computed by this repository)"
+    agency: derived
+    fetcher: analytics
+    measure: dollarization
+    min_items: 7
+    frequency: monthly
+    unit: "%"
+    category: monetary
+    note: "Shares of the NBK's stocks, as at the 1st of the month: LOANS_FX_SHARE = BANK_LOANS_STB_FX / BANK_LOANS_STB_TOTAL (from 1996); BUSINESS_LOANS_FX_SHARE = LOANS_BUSINESS_FX / (FX + KZT) (from 2022, banks and other lenders); HOUSEHOLD_DEPOSITS_FX_SHARE = the three HOUSEHOLD_DEPOSITS_*_FX over all six household deposit series (from 2023); the term-deposit share separately. The stocks are in tenge, so a depreciation raises the share without any conversion (valuation effect). DEPOSITS_FX_SHARE, LEGAL_ENTITY_DEPOSITS_FX_SHARE and INDIVIDUALS_DEPOSITS_FX_SHARE are from DEPOSITS_BY_CURRENCY (the depository-organisations page, from 1998: 68.8 % of all deposits at 2016-01-01, 18.7 % at 2026-10-01); that page counts all deposits of individuals, the HOUSEHOLD_DEPOSITS_* scalars a narrower set, hence 14.3 % against 17.9 %. The regulator's own household figure is BANK_DEPOSITS_INDIVIDUALS_FX_SHARE (ARDFM, from 2026-05)."
+
   - id: MONEY_MULTIPLIER
     name_ru: "Денежный мультипликатор (M2 и M3 к денежной базе), доля наличных в M3 (расчёт репозитория)"
     name_en: "Money multiplier (M2 and M3 over the monetary base), cash share of M3 (computed by this repository)"

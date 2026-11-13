@@ -4367,3 +4367,45 @@ def fetch_state_budget_deficit_q() -> tuple[list[dict], dict]:
     return _fetch_state_budget_quarterly("STATE_BUDGET_DEFICIT_Q", _STATE_BUDGET_Q_COMMON +
                                          "Deficit (-) / surplus (+): revenue less expenditure, net budget lending "
                                          "and the balance on financial assets.")
+
+
+# ---------------------------------------------------------------------------
+# Annual budget plan (added 2026-11-13): Statistical Bulletin sheet «табл 2 » «Сравнительный анализ
+# исполнения государственного и республиканского бюджетов». Columns: 1 the state budget's adjusted plan
+# for the year («на год с учётом корректировки»), 2 its execution for January-<month>, 3 % of the annual
+# plan; 5 / 6 / 7 the same for the republican budget; the Russian label is the row's last text cell.
+# Each edition gives the plan AS IT STOOD at that edition, so a series shows the plan's revisions within
+# the year (state revenue 2026: 32 595 214 in the January-May edition, 32 638 495 in January-August).
+# The value is dated like the execution it stands beside (the last day of the period's last month); the
+# sheet's own header does not name the period in a form _find_period reads, so the period comes from the
+# edition's other tables (the helper's fallback). Execution against the plan: STATE_BUDGET_*_YTD and the
+# republican-budget series. The bulletin has no plan for the reporting period; that is in Minfin's monthly
+# «Отчет об исполнении бюджета» (not connected).
+# ---------------------------------------------------------------------------
+BUDGET_PLAN_SHEET = "табл 2"
+BUDGET_PLAN_SERIES = {  # indicator: (value column, the label's first words)
+    "STATE_BUDGET_REVENUE_PLAN": (1, "I. ДОХОДЫ"),
+    "STATE_BUDGET_TAX_REVENUE_PLAN": (1, "Налоговые поступления"),
+    "STATE_BUDGET_EXPENDITURE_PLAN": (1, "II. ЗАТРАТЫ"),
+    "STATE_BUDGET_DEFICIT_PLAN": (1, "V. ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА"),
+    "REPUBLICAN_BUDGET_REVENUE_PLAN": (5, "I. ДОХОДЫ"),
+    "REPUBLICAN_BUDGET_TAX_REVENUE_PLAN": (5, "Налоговые поступления"),
+    "REPUBLICAN_BUDGET_EXPENDITURE_PLAN": (5, "II. ЗАТРАТЫ"),
+    "REPUBLICAN_BUDGET_DEFICIT_PLAN": (5, "V. ДЕФИЦИТ (ПРОФИЦИТ) БЮДЖЕТА"),
+}
+
+
+def _label_starts(prefix: str):
+    """Rows whose Russian label starts with `prefix` («Налоговые поступления,\n в том числе:»)."""
+    return lambda r: " ".join(_row_label(r).split()).startswith(prefix)
+
+
+def fetch_budget_plan(indicator_id: str) -> tuple[list[dict], dict]:
+    col, label = BUDGET_PLAN_SERIES[indicator_id]
+    scope = "state budget (republican plus local)" if col == 1 else "republican budget"
+    return _fetch_bulletin_row(
+        BUDGET_PLAN_SHEET, _label_starts(label), indicator_id, value_col=col,
+        note_override=(f"Million KZT, {scope}: the ADJUSTED PLAN FOR THE WHOLE YEAR as printed in the edition for "
+                       "January-<month> (sheet «табл 2»), dated the last day of that month -- not a year-to-date flow. "
+                       "It changes when the budget is revised; compare with the year-to-date execution of the same date."))
+

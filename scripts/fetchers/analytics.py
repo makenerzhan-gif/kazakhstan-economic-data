@@ -356,7 +356,14 @@ def dollarization(ds: dict) -> list[dict]:
            "BUSINESS_LOANS_FX_SHARE": share(biz_fx, biz_fx + biz_kzt),
            "HOUSEHOLD_DEPOSITS_FX_SHARE": share(hh_fx, hh_df.sum(axis=1)),
            "HOUSEHOLD_TERM_DEPOSITS_FX_SHARE": share(hh_df.FIXED_TERM_FX, hh_df.FIXED_TERM_FX + hh_df.FIXED_TERM_KZT)}
-    names = {"LOANS_FX_SHARE": "Доля кредитов банков экономике в иностранной валюте, %",
+    dep = {c: dimser("DEPOSITS_BY_CURRENCY", c) for c in ("TOTAL", "FX", "TOTAL.LEGAL", "FX.LEGAL", "TOTAL.HOUSEHOLDS", "FX.HOUSEHOLDS")}
+    out.update({"DEPOSITS_FX_SHARE": share(dep["FX"], dep["TOTAL"]),
+                "LEGAL_ENTITY_DEPOSITS_FX_SHARE": share(dep["FX.LEGAL"], dep["TOTAL.LEGAL"]),
+                "INDIVIDUALS_DEPOSITS_FX_SHARE": share(dep["FX.HOUSEHOLDS"], dep["TOTAL.HOUSEHOLDS"])})
+    names = {"DEPOSITS_FX_SHARE": "Доля депозитов в иностранной валюте, все депозиты в депозитных организациях, %",
+             "LEGAL_ENTITY_DEPOSITS_FX_SHARE": "Доля депозитов небанковских юридических лиц в иностранной валюте, %",
+             "INDIVIDUALS_DEPOSITS_FX_SHARE": "Доля депозитов физических лиц в иностранной валюте (обзор депозитных организаций), %",
+             "LOANS_FX_SHARE": "Доля кредитов банков экономике в иностранной валюте, %",
              "BUSINESS_LOANS_FX_SHARE": "Доля кредитов бизнесу в иностранной валюте, %",
              "HOUSEHOLD_DEPOSITS_FX_SHARE": "Доля вкладов населения в иностранной валюте, %",
              "HOUSEHOLD_TERM_DEPOSITS_FX_SHARE": "Доля срочных вкладов населения в иностранной валюте, %"}

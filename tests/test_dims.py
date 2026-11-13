@@ -30,7 +30,7 @@ def test_every_dataset_has_a_fetcher_and_a_known_layout():
             assert ds["index_id"] and ds["items"] and ("dic_ids" in ds or ds.get("segments")), ds["id"]
             if "dic_ids" in ds:
                 assert ds["dic_ids"].count(",") == ds["terms"].count(","), ds["id"]
-            assert len({i["code"] for i in ds["items"]}) == len(ds["items"]) and ds["frequency"] in ("monthly", "quarterly", "annual")
+            assert len({i["code"] for i in ds["items"]}) == len(ds["items"]) and ds["frequency"] in ("weekly", "monthly", "quarterly", "annual")
             assert all(i["name"] and i["term"] for i in ds["items"])
             for seg in ds.get("segments") or []:
                 assert seg["dic_ids"].count(",") == seg["terms"].count(","), ds["id"]

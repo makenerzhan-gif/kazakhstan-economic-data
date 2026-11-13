@@ -1,0 +1,11 @@
+{
+  "downloaded_at": "2026-11-13T06:54:12.118817",
+  "source_url": "https://nationalbank.kz/ru/depositoryorganizationsdeposits/depozity-v-depozitnyh-organizaciyah-/records",
+  "params": {
+    "beginMount": 1,
+    "beginYear": 1990,
+    "endMount": 12,
+    "endYear": 2026
+  },
+  "raw_file": "nbk_deposits_by_currency_2026-11-13.json"
+}

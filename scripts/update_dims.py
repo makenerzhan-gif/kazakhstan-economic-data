@@ -18,7 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from lib import dims, metadata, pipeline_logging, revisions, validation  # noqa: E402
-from fetchers import analytics, bns_balances, bns_cpi, cisstat, comtrade, cpi_weights, gdp_discrete, krem_tariffs, minfin_quasifiscal, nbk_balance_groups, nbk_records, tariff_jumps, damu, gfss, minfin_regions, neer_import, kase_ifrs, nbk_expectations, nbk_fx, bns_dims, bns_living, bns_resource_use, bns_trade, eia, gravity, imf_dims, kase_dims, kase_eurobonds, kmg, manual_vintages, nbk_cube, nbk_operations, nbk_dims, regional_balance, taldau_dims, wb, world_misc  # noqa: E402
+from fetchers import analytics, nbk_deposits, bns_balances, bns_cpi, cisstat, comtrade, cpi_weights, gdp_discrete, krem_tariffs, minfin_quasifiscal, nbk_balance_groups, nbk_records, tariff_jumps, damu, gfss, minfin_regions, neer_import, kase_ifrs, nbk_expectations, nbk_fx, bns_dims, bns_living, bns_resource_use, bns_trade, eia, gravity, imf_dims, kase_dims, kase_eurobonds, kmg, manual_vintages, nbk_cube, nbk_operations, nbk_dims, regional_balance, taldau_dims, wb, world_misc  # noqa: E402
 
 # Keyed by a dataset's `fetcher` when it names one, else by its agency.
 AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb.fetch, "eia": eia.fetch,
@@ -42,7 +42,7 @@ AGENCY_FETCHERS = {"bns": bns_dims.fetch, "bns_trade": bns_trade.fetch, "wb": wb
                    "minfin_quasifiscal": minfin_quasifiscal.fetch,
                    "nbk_records": nbk_records.fetch, "nbk_balance_groups": nbk_balance_groups.fetch,
                    "krem_tariffs": krem_tariffs.fetch, "tariff_jumps": tariff_jumps.fetch,
-                   "cisstat": cisstat.fetch, "analytics": analytics.fetch}
+                   "cisstat": cisstat.fetch, "analytics": analytics.fetch, "nbk_deposits": nbk_deposits.fetch}
 METHODOLOGY = {"bns": "Bureau of National Statistics official methodology",
                "wb": "World Bank Commodity Markets (Pink Sheet / Commodity Markets Outlook), nominal US dollars",
                "eia": "U.S. EIA Short-Term Energy Outlook, monthly release",

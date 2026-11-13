@@ -53,7 +53,8 @@ PANELS = [
         ("TONIA минус базовая ставка", "d", "YIELD_CURVE_SPREADS", "TONIA_BASE_SPREAD")]},
     {"id": "dollar", "title": "Долларизация", "unit": "% в иностранной валюте", "digits": 1, "series": [
         ("Кредиты банков", "d", "DOLLARIZATION", "LOANS_FX_SHARE"),
-        ("Вклады населения", "d", "DOLLARIZATION", "HOUSEHOLD_DEPOSITS_FX_SHARE")]},
+        ("Все депозиты", "d", "DOLLARIZATION", "DEPOSITS_FX_SHARE"),
+        ("Депозиты физических лиц", "d", "DOLLARIZATION", "INDIVIDUALS_DEPOSITS_FX_SHARE")]},
     {"id": "fiscal", "title": "Баланс государственного бюджета", "unit": "% ВВП (ненефтяной — % ненефтяного ВВП), за год", "digits": 1,
      "zero": True, "series": [
         ("Общий баланс", "d", "FISCAL_STANCE", "OVERALL_BALANCE_PCT"),
