@@ -382,7 +382,98 @@ def yield_spreads(ds: dict) -> list[dict]:
     return _records(out, names)
 
 
-MEASURES = {"dollarization": dollarization, "yield_spreads": yield_spreads, "core_inflation": core_inflation, "monetary_conditions": monetary_conditions, "output_gap": output_gap,
+# ---------------------------------------------------------------- money, labour costs, minimum standards, profits (2026-11-13)
+
+def _end_of_quarter(stock: pd.Series) -> pd.Series:
+    """A stock «as at the 1st of the month» -> the quarter it closes (1 April -> Q1, dated 1 January)."""
+    eoq = stock[stock.index.month.isin([1, 4, 7, 10])]
+    eoq.index = eoq.index - pd.offsets.QuarterBegin(startingMonth=1)
+    return eoq
+
+
+def money_multiplier(ds: dict) -> list[dict]:
+    m0, m2, m3, base = (scalar("nbk", k) for k in ("M0", "M2", "M3", "MONETARY_BASE"))
+    out = {"MULTIPLIER_M2": (m2 / base).dropna(), "MULTIPLIER_M3": (m3 / base).dropna(),
+           "CASH_SHARE_M3": (m0 / m3 * 100).dropna(), "M2_SHARE_M3": (m2 / m3 * 100).dropna()}
+    names = {"MULTIPLIER_M2": "Денежный мультипликатор: M2 / денежная база", "MULTIPLIER_M3": "Денежный мультипликатор: M3 / денежная база",
+             "CASH_SHARE_M3": "Доля наличных денег в обращении (M0) в M3, %",
+             "M2_SHARE_M3": "Доля M2 в M3, % (остаток -- прочие депозиты в иностранной валюте)"}
+    return _records(out, names)
+
+
+def money_velocity(ds: dict) -> list[dict]:
+    gdp4 = dimser("QNA_GDP_EXPENDITURE", "GDP").rolling(4, min_periods=4).sum()
+    out = {}
+    for agg in ("M2", "M3"):
+        stock = _end_of_quarter(scalar("nbk", agg))
+        avg = (stock + stock.shift(4)) / 2                       # mean of the stocks a year apart
+        out[f"VELOCITY_{agg}"] = (gdp4 / avg).dropna()
+        out[f"{agg}_TO_GDP"] = (stock / gdp4 * 100).dropna()
+    names = {"VELOCITY_M2": "Скорость обращения M2: ВВП за 4 квартала / среднее M2", "VELOCITY_M3": "Скорость обращения M3: ВВП за 4 квартала / среднее M3",
+             "M2_TO_GDP": "Монетизация: M2 на конец квартала к ВВП за 4 квартала, %", "M3_TO_GDP": "Монетизация: M3 на конец квартала к ВВП за 4 квартала, %"}
+    return _records(out, names)
+
+
+def labour_costs(ds: dict) -> list[dict]:
+    """Quarterly unit labour cost, productivity, real wage and the profit balance of enterprises."""
+    wage = scalar("bns", "AVG_WAGE_1T_QUARTERLY")                               # KZT a month, discrete quarter
+    emp = dimser("EMPLOYED_BY_SECTION_QUARTERLY", "TOTAL")                     # thousand persons
+    real = dimser("QNA_GDP_EXPENDITURE_SA_CONSTANT_2010", "GDP")               # mln KZT, 2010 prices, SA
+    nominal = dimser("QNA_GDP_EXPENDITURE", "GDP")                             # mln KZT
+    cpi_m = scalar("bns", "CPI") / 100
+    cpi_level = cpi_m[cpi_m.index >= "2010-01-01"].cumprod()
+    cpi_q = cpi_level.resample("QS").mean()
+    df = pd.DataFrame({"wage": wage, "emp": emp, "real": real, "nominal": nominal, "cpi": cpi_q}).dropna(subset=["wage"])
+    prod = df.real / df.emp                                                      # real output per employed person
+    ulc = df.wage / prod
+    def index(x: pd.Series, base_year: int = 2015) -> pd.Series:
+        base = x[x.index.year == base_year].mean()
+        return x / base * 100
+    out = {"ULC_INDEX": index(ulc).dropna(), "ULC_YOY": (ulc.pct_change(4) * 100).dropna(),
+           "PRODUCTIVITY_INDEX": index(prod).dropna(), "PRODUCTIVITY_YOY": (prod.pct_change(4) * 100).dropna(),
+           "REAL_WAGE_INDEX": index(df.wage / df.cpi).dropna(), "REAL_WAGE_YOY": ((df.wage / df.cpi).pct_change(4) * 100).dropna(),
+           # 3 months of the average wage x employed persons (thousand) / 1000 = mln KZT; the survey wage covers
+           # employees of enterprises, so this is an upper bound for the wage bill
+           "WAGE_BILL_PROXY_TO_GDP": (df.wage * 3 * df.emp / 1000 / df.nominal * 100).dropna()}
+    profit = dimser("ENTERPRISE_PROFIT_LOSS_QUARTERLY", "PROFIT.TOTAL") + dimser("ENTERPRISE_PROFIT_LOSS_QUARTERLY", "LOSS.TOTAL")
+    out["PROFIT_BALANCE_TO_GDP"] = (profit / nominal * 100).dropna()
+    names = {"ULC_INDEX": "Удельные издержки на труд (зарплата / реальный выпуск на занятого), 2015 = 100",
+             "ULC_YOY": "Удельные издержки на труд, % к соответствующему кварталу прошлого года",
+             "PRODUCTIVITY_INDEX": "Производительность труда (реальный ВВП с сезонной корректировкой на занятого), 2015 = 100",
+             "PRODUCTIVITY_YOY": "Производительность труда, % к соответствующему кварталу прошлого года",
+             "REAL_WAGE_INDEX": "Реальная заработная плата (дефлятор ИПЦ), 2015 = 100",
+             "REAL_WAGE_YOY": "Реальная заработная плата, % к соответствующему кварталу прошлого года",
+             "WAGE_BILL_PROXY_TO_GDP": "Оценка фонда оплаты труда (средняя зарплата x занятые) к ВВП, %",
+             "PROFIT_BALANCE_TO_GDP": "Сальдо прибыли и убытка крупных и средних предприятий к ВВП квартала, %"}
+    return _records(out, names)
+
+
+def real_standards(ds: dict) -> list[dict]:
+    """Monthly: the legislated minimums in constant prices and against the average wage."""
+    std = {c: dimser("SOCIAL_STANDARDS", c) for c in ("MZP", "MIN_PENSION", "BASE_PENSION", "VPM_LAW", "MRP")}
+    vpm_bns = dimser("SUBSISTENCE_MINIMUM_BY_REGION", "TOTAL")
+    cpi_m = scalar("bns", "CPI") / 100
+    level = cpi_m.cumprod()
+    level = level / level[level.index.year == 2015].mean()                      # 2015 = 1
+    wage_q = scalar("bns", "AVG_WAGE_1T_QUARTERLY")
+    wage_m = wage_q.reindex(pd.date_range(wage_q.index.min(), wage_q.index.max() + pd.offsets.MonthBegin(2), freq="MS")).ffill(limit=2)
+    out = {"REAL_MZP": (std["MZP"] / level).dropna(), "REAL_MIN_PENSION": (std["MIN_PENSION"] / level).dropna(),
+           "REAL_MRP": (std["MRP"] / level).dropna(),
+           "KAITZ_INDEX": (std["MZP"] / wage_m * 100).dropna(),
+           "MIN_PENSION_TO_WAGE": (std["MIN_PENSION"] / wage_m * 100).dropna(),
+           "MZP_TO_VPM_BNS": (std["MZP"] / vpm_bns * 100).dropna(),
+           "VPM_LAW_TO_VPM_BNS": (std["VPM_LAW"] / vpm_bns * 100).dropna()}
+    names = {"REAL_MZP": "Минимальная заработная плата в ценах 2015 года, тенге", "REAL_MIN_PENSION": "Минимальная пенсия в ценах 2015 года, тенге",
+             "REAL_MRP": "МРП в ценах 2015 года, тенге",
+             "KAITZ_INDEX": "Индекс Кейтца: МЗП к средней заработной плате квартала, %",
+             "MIN_PENSION_TO_WAGE": "Минимальная пенсия к средней заработной плате квартала, %",
+             "MZP_TO_VPM_BNS": "МЗП к расчётному прожиточному минимуму БНС, %",
+             "VPM_LAW_TO_VPM_BNS": "Прожиточный минимум по закону к расчётному прожиточному минимуму БНС, %"}
+    return _records(out, names)
+
+
+MEASURES = {"dollarization": dollarization, "yield_spreads": yield_spreads, "money_multiplier": money_multiplier,
+            "money_velocity": money_velocity, "labour_costs": labour_costs, "real_standards": real_standards, "core_inflation": core_inflation, "monetary_conditions": monetary_conditions, "output_gap": output_gap,
             "credit": credit, "fiscal": fiscal}
 
 

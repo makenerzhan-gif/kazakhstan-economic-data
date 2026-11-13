@@ -5407,3 +5407,53 @@ datasets:
     unit: "million KZT (HH_SAVING_RATE: %)"
     category: national_accounts
     note: "BNS bulletin «Национальные счета Республики Казахстан (2010-2024гг.)», element 358455 (released 2025-12-22; the next edition will be a new element -- this one then stops updating and the element_id must be changed). One sheet per year, integrated economic accounts; each item is <SNA code>.<sector> (S11 non-financial corporations, S12 financial corporations, S13 general government, S14 households, S15 NPISH, S1 total economy, S2 rest of the world). 2024: household gross disposable income 61 823 778, household final consumption 73 171 015, household gross saving -6 778 304 million KZT; HH_SAVING_RATE (SNA definition, B8g / (B6g + D8)) -10.2 % in 2024, +7.0 % in 2015. B9 equals NET_LENDING_BY_SECTOR (Taldau 701002, from 1993)."
+
+  # ---------------------------------------------------------------- more derived analytics (added 2026-11-13); keep after their inputs
+  - id: MONEY_MULTIPLIER
+    name_ru: "Денежный мультипликатор (M2 и M3 к денежной базе), доля наличных в M3 (расчёт репозитория)"
+    name_en: "Money multiplier (M2 and M3 over the monetary base), cash share of M3 (computed by this repository)"
+    agency: derived
+    fetcher: analytics
+    measure: money_multiplier
+    min_items: 4
+    frequency: monthly
+    unit: "ratio; %"
+    category: monetary
+    note: "From the NBK's M0, M2, M3 and MONETARY_BASE (stocks, monthly from 1994). M2_SHARE_M3: the rest of M3 is other deposits in foreign currency."
+
+  - id: MONEY_VELOCITY
+    name_ru: "Скорость обращения денег и монетизация экономики (M2, M3), поквартально (расчёт репозитория)"
+    name_en: "Velocity of money and monetisation (M2, M3), quarterly (computed by this repository)"
+    agency: derived
+    fetcher: analytics
+    measure: money_velocity
+    min_items: 4
+    frequency: quarterly
+    unit: "ratio; % of GDP"
+    category: monetary
+    note: "Velocity = nominal GDP of the last four quarters (QNA_GDP_EXPENDITURE item GDP) over the mean of the end-of-quarter stock and the stock a year earlier; monetisation = the end-of-quarter stock over the same GDP. The NBK stock dated the 1st of a month is the end of the previous one. From 2011."
+
+  - id: LABOUR_COST_INDICATORS
+    name_ru: "Удельные издержки на труд, производительность, реальная заработная плата, прибыль предприятий к ВВП, поквартально (расчёт репозитория)"
+    name_en: "Unit labour cost, productivity, real wage, enterprise profits to GDP, quarterly (computed by this repository)"
+    agency: derived
+    fetcher: analytics
+    measure: labour_costs
+    min_items: 8
+    no_jump_check: ["ULC_YOY", "PRODUCTIVITY_YOY", "REAL_WAGE_YOY", "PROFIT_BALANCE_TO_GDP"]
+    frequency: quarterly
+    unit: "index 2015 = 100; % y/y; % of GDP"
+    category: labour
+    note: "ULC = average monthly wage (AVG_WAGE_1T_QUARTERLY, enterprises' survey, from 2015) over real output per employed person (QNA_GDP_EXPENDITURE_SA_CONSTANT_2010 / EMPLOYED_BY_SECTION_QUARTERLY TOTAL). The wage is not seasonally adjusted (Q4 bonuses), so read the y/y rates; the indices are 2015 = 100. Real wage: deflated by the CPI level (chained CPI m/m, quarter mean). WAGE_BILL_PROXY_TO_GDP applies the enterprises' wage to all employed persons, self-employed included -- an upper bound, not the national-accounts compensation of employees (INCOME_COMPENSATION_BY_SECTION). PROFIT_BALANCE_TO_GDP: ENTERPRISE_PROFIT_LOSS_QUARTERLY profit + loss (large and medium enterprises, before tax) over the quarter's nominal GDP."
+
+  - id: REAL_SOCIAL_STANDARDS
+    name_ru: "Реальные МЗП, минимальная пенсия и МРП; индекс Кейтца; МЗП к прожиточному минимуму, помесячно (расчёт репозитория)"
+    name_en: "Real minimum wage, minimum pension and MRP; Kaitz index; minimum wage over the subsistence minimum, monthly (computed by this repository)"
+    agency: derived
+    fetcher: analytics
+    measure: real_standards
+    min_items: 7
+    frequency: monthly
+    unit: "KZT at 2015 prices; %"
+    category: labour
+    note: "SOCIAL_STANDARDS deflated by the CPI level (chained CPI m/m, 2015 average = 1). KAITZ_INDEX = MZP over the average monthly wage of the quarter (AVG_WAGE_1T_QUARTERLY, each month of the quarter takes the quarter's wage; from 2015). MZP_TO_VPM_BNS and VPM_LAW_TO_VPM_BNS compare with the BNS price-based subsistence minimum (SUBSISTENCE_MINIMUM_BY_REGION, national, from 2011), which is seasonal."

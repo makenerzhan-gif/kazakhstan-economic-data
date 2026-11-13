@@ -1720,6 +1720,7 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "ROA FSI: чистый доход за период в годовом выражении к средним активам"
+    stale_ok: "Kazakhstan has reported no 2026 quarter to the IMF FSI yet (2025-Q4 is its newest; Georgia has 2026-Q2; checked 2026-11-13). A period return is dated at the quarter's start, so this series crosses the limit before the other FSI_* series (dated 2025-12-31)."
 
   - id: FSI_ROE
     name_ru: "Рентабельность капитала депозитных организаций, % годовых (МВФ FSI)"
@@ -1731,6 +1732,7 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "ROE FSI: чистый доход за период в годовом выражении к среднему капиталу"
+    stale_ok: "Kazakhstan has reported no 2026 quarter to the IMF FSI yet (2025-Q4 is its newest; checked 2026-11-13). Dated at the quarter's start."
 
   - id: FSI_LIQUID_ASSETS
     name_ru: "Ликвидные активы к совокупным активам депозитных организаций (МВФ FSI)"
@@ -3611,6 +3613,7 @@ indicators:
     source_status: confirmed
     observation_type: point_in_time
     observation_evidence: "примечание при чтении источника: остаток на дату"
+    stale_ok: "Zero at 2025-07-01 and 2025-10-01; from 2026-01-01 the Statistical Bulletin (табл 22 кв, row 2) leaves the cell blank, and the sheet's identity closes with it at zero. The blank is not written as a number."
 
   - id: LOCAL_BUDGET_REVENUE
     name_ru: "Доходы местных бюджетов"
@@ -3823,6 +3826,7 @@ indicators:
     observation_evidence: "кодлист CTOT: 'June 2012 = 100' — базисный индекс"
     comparison_basis: fixed_base
     comparison_basis_evidence: "June 2012 = 100 (кодлист МВФ CTOT)"
+    stale_ok: "The IMF CTOT dataset (5.0.1) ends 2026-M05 for every country (the USA too; checked 2026-11-13): it is updated in irregular batches."
 
   - id: COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS
     name_ru: "Условия торговли по сырью (фиксированные веса)"
@@ -3836,6 +3840,7 @@ indicators:
     observation_evidence: "кодлист CTOT: та же база 'June 2012 = 100'"
     comparison_basis: fixed_base
     comparison_basis_evidence: "June 2012 = 100 (кодлист МВФ CTOT)"
+    stale_ok: "The IMF CTOT dataset (5.0.1) ends 2026-M05 for every country (checked 2026-11-13): it is updated in irregular batches."
 
   - id: OIL_EXPORT_DUTY
     name_ru: "Вывозная таможенная пошлина на сырую нефть"
@@ -4460,6 +4465,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; КПН нефтяного сектора, КБК 101105 (до 2015 также 101106/101107)"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). The seven oil taxes could be continued from the cash-control-account report (activities=555, directions=2482; equal to this statement to 0.1 thousand KZT at 1 July 2026, one month compared) -- not connected."
 
   - id: NF_EXCESS_PROFIT_TAX_YTD
     name_ru: "Налог на сверхприбыль (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
@@ -4472,6 +4478,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; налог на сверхприбыль, КБК 105322"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). The seven oil taxes could be continued from the cash-control-account report (activities=555, directions=2482; equal to this statement to 0.1 thousand KZT at 1 July 2026, one month compared) -- not connected."
 
   - id: NF_BONUSES_YTD
     name_ru: "Бонусы организаций нефтяного сектора (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
@@ -4484,6 +4491,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; бонусы, КБК 105325"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). The seven oil taxes could be continued from the cash-control-account report (activities=555, directions=2482; equal to this statement to 0.1 thousand KZT at 1 July 2026, one month compared) -- not connected."
 
   - id: NF_MET_YTD
     name_ru: "Налог на добычу полезных ископаемых организаций нефтяного сектора (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
@@ -4496,6 +4504,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; НДПИ, КБК 105326 (с 2009 г.)"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). The seven oil taxes could be continued from the cash-control-account report (activities=555, directions=2482; equal to this statement to 0.1 thousand KZT at 1 July 2026, one month compared) -- not connected."
 
   - id: NF_RENT_TAX_EXPORT_YTD
     name_ru: "Рентный налог на экспорт (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
@@ -4508,6 +4517,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; рентный налог на экспорт, КБК 105327"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). The seven oil taxes could be continued from the cash-control-account report (activities=555, directions=2482; equal to this statement to 0.1 thousand KZT at 1 July 2026, one month compared) -- not connected."
 
   - id: NF_PSA_SHARE_YTD
     name_ru: "Доля Республики Казахстан по разделу продукции (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
@@ -4520,6 +4530,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; доля РК по СРП, КБК 105328"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). The seven oil taxes could be continued from the cash-control-account report (activities=555, directions=2482; equal to this statement to 0.1 thousand KZT at 1 July 2026, one month compared) -- not connected."
 
   - id: NF_PSA_ADDITIONAL_PAYMENT_YTD
     name_ru: "Дополнительный платёж недропользователя по СРП (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
@@ -4532,6 +4543,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; доп. платёж по СРП и альтернативный налог, КБК 105329 (с 2018 г.)"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). The seven oil taxes could be continued from the cash-control-account report (activities=555, directions=2482; equal to this statement to 0.1 thousand KZT at 1 July 2026, one month compared) -- not connected."
 
   - id: NF_OIL_DIRECT_TAXES_YTD
     name_ru: "Прямые налоги от организаций нефтяного сектора, всего (поступления в Национальный фонд), нарастающим итогом с начала года, помесячно"
@@ -4544,6 +4556,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; строка «прямые налоги от организаций нефтяного сектора» = сумма семи налогов (проверяется)"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). The seven oil taxes could be continued from the cash-control-account report (activities=555, directions=2482; equal to this statement to 0.1 thousand KZT at 1 July 2026, one month compared) -- not connected."
 
   - id: NF_OIL_OTHER_RECEIPTS_YTD
     name_ru: "Другие поступления от операций организаций нефтяного сектора (штрафы, иски, прочие неналоговые; Национальный фонд), нарастающим итогом с начала года, помесячно"
@@ -4556,6 +4569,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; строка «другие поступления от операций организаций нефтяного сектора» = сумма четырёх статей (проверяется)"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). No other published source carries this line monthly."
 
   - id: NF_OIL_RECEIPTS_YTD
     name_ru: "Поступления от организаций нефтяного сектора в Национальный фонд, всего (прямые налоги и другие поступления), нарастающим итогом с начала года, помесячно"
@@ -4568,6 +4582,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; сумма двух строк отчёта: прямые налоги + другие поступления нефтяного сектора"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). No other published source carries this line monthly."
 
   - id: NF_PRIVATIZATION_YTD
     name_ru: "Поступления в Национальный фонд от приватизации и передачи активов в конкурентную среду, нарастающим итогом с начала года, помесячно"
@@ -4580,6 +4595,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; строки «приватизация республиканской собственности» + «передача в конкурентную среду активов нацкомпаний»"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). No other published source carries this line monthly."
 
   - id: NF_INVESTMENT_INCOME_YTD
     name_ru: "Инвестиционный доход от управления Национальным фондом, зачисленный в поступления фонда (по отчёту Минфина), нарастающим итогом с начала года, помесячно"
@@ -4592,6 +4608,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; строка поступлений «инвестиционные доходы от управления Фондом» — доход последнего утверждённого НБК периода (лаг от квартала до трёх); декабрь = год только в 2018, 2020, 2021; за 2024–2025 декабря нет (в утверждённых годовых отчётах инвестдоход вне поступлений); итог «Инвестиционный доход, всего» с курсовой переоценкой не берётся"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). No other published source carries this line monthly."
 
   - id: NF_GUARANTEED_TRANSFER_YTD
     name_ru: "Гарантированный трансферт из Национального фонда в республиканский бюджет, нарастающим итогом с начала года, помесячно"
@@ -4604,6 +4621,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; раздел «Использование», строка «гарантированные трансферты»"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). Transfers from the Fund continue in STATE_TRANSFERS_RECEIVED_YTD (Statistical Bulletin; equal to NF_TRANSFERS_YTD in 2025-06, 2025-11, 2026-06)."
 
   - id: NF_TARGETED_TRANSFERS_YTD
     name_ru: "Целевые трансферты из Национального фонда в республиканский бюджет, нарастающим итогом с начала года, помесячно"
@@ -4616,6 +4634,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; раздел «Использование», строка «целевые трансферты»"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). Transfers from the Fund continue in STATE_TRANSFERS_RECEIVED_YTD (Statistical Bulletin; equal to NF_TRANSFERS_YTD in 2025-06, 2025-11, 2026-06)."
 
   - id: NF_TRANSFERS_YTD
     name_ru: "Трансферты из Национального фонда в республиканский бюджет, всего (гарантированный и целевые), нарастающим итогом с начала года, помесячно"
@@ -4628,6 +4647,7 @@ indicators:
     observation_type: period_total
     cumulation: year_to_date
     observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; гарантированный + целевые трансферты; помесячные потоки с 2024 г. — NATIONAL_FUND_TRANSFERS (НБК)"
+    stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). Transfers from the Fund continue in STATE_TRANSFERS_RECEIVED_YTD (Statistical Bulletin; equal to NF_TRANSFERS_YTD in 2025-06, 2025-11, 2026-06)."
 
   - id: GG_SOCIAL_CONTRIBUTIONS
     name_ru: "Социальные отчисления сектора государственного управления (МВФ методология)"
@@ -5124,6 +5144,7 @@ indicators:
     observation_evidence: "Taldau 702041, термин 2695732 «к соответствующему периоду прошлого года», товарная группа 18224345"
     comparison_basis: yoy
     comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года"
+    stale_ok: "Taldau index 702041's monthly slice ends 2026-04 (117.41) and has not been loaded since (checked 2026-11-13); the BNS trade bulletin gives food / non-food only year-to-date (January-October 2026: 111.9 / 100.9)."
 
   - id: RETAIL_TRADE_INDEX_NONFOOD_MONTHLY
     name_ru: "Индекс физического объёма розничной торговли непродовольственными товарами, помесячно"
@@ -5137,6 +5158,7 @@ indicators:
     observation_evidence: "Taldau 702041, термин 2695732, товарная группа 18224350"
     comparison_basis: yoy
     comparison_basis_evidence: "Taldau: сравнение 2695732 = к соответствующему периоду прошлого года"
+    stale_ok: "Taldau index 702041's monthly slice ends 2026-04 (100.20) and has not been loaded since (checked 2026-11-13); the BNS trade bulletin gives food / non-food only year-to-date."
 
   - id: RETAIL_TRADE_INDEX_YTD
     name_ru: "Индекс физического объёма розничной торговли, январь–месяц к январю–месяцу прошлого года"

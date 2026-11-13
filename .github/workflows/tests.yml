@@ -1,0 +1,47 @@
+name: Tests
+
+# The test suite on every pull request and on pushes to main that change code or configuration.
+# Until 2026-11-13 the tests ran only inside the data run (update.yml), so a pull request was
+# merged on the strength of a local run. Data-only commits (the run's own) are skipped: the run
+# has just tested them.
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - "config/**"
+      - "requirements.txt"
+      - ".github/workflows/tests.yml"
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Tests that block a merge
+        run: python -m pytest tests -q -m "not cross_source"
+
+      - name: Cross-source checks (two publications compared; informative)
+        # They fail when one publication has taken up a revision and the other has not yet --
+        # the data run reports them without blocking, and so does this job.
+        continue-on-error: true
+        run: python -m pytest tests -q -m cross_source

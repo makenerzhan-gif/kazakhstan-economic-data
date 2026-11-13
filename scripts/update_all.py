@@ -34,14 +34,111 @@ from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib import pipeline_logging, unified  # noqa: E402
+from lib import pipeline_logging, staleness, unified  # noqa: E402
 import update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_wb, update_kase, update_foreign  # noqa: E402
 import update_dims, update_derived  # noqa: E402
-import build_project_knowledge, build_calendar  # noqa: E402
+import build_project_knowledge, build_calendar, build_dashboard  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MAX_FAILED_SHARE = 0.20
 CROSS_SOURCE_MARKER = "cross_source"
+
+
+# Scalar updaters that touch nothing outside their own agency (data/raw/<agency>, data/processed/<agency>,
+# metadata/<agency>, one revisions file per indicator): one process per group. On 2026-11-13 they took
+# 23 (BNS), 20 (NBK), 16 (Minfin) and 8 minutes (the rest) one after another -- 67 minutes that now cost
+# the longest of them. update_foreign reads NBK and KASE files and update_dims reads everything, so they
+# stay after the groups. UPDATE_ALL_SERIAL=1 runs the groups one by one in this process, as before.
+PARALLEL_GROUPS = (("update_bns",), ("update_nbk",), ("update_minfin",),
+                   ("update_imf", "update_ardfm", "update_wb", "update_kase"))
+
+
+def _run_group(names: tuple[str, ...], run_ts: str) -> list[dict]:
+    """Worker: run the group's updaters with a logger of its own (a part file), return the entries."""
+    import importlib
+    from dataclasses import asdict
+    part = pipeline_logging.RunLogger(run_timestamp=f"{run_ts}.{names[0]}.part")
+    try:
+        for name in names:
+            importlib.import_module(name).run(part)
+        return [asdict(e) for e in part.entries]
+    finally:
+        part.path.unlink(missing_ok=True)       # the parent writes the entries into the run's one log
+
+
+def run_parallel(groups, logger: pipeline_logging.RunLogger) -> None:
+    """Run each group of updaters in its own process; log their entries in the groups' order, so
+    the run's log and report read as they did when the updaters ran in sequence. A worker that
+    raises stops the run, as an updater raising in this process always did."""
+    import os
+    if os.environ.get("UPDATE_ALL_SERIAL") == "1" or len(groups) < 2:
+        import importlib
+        for names in groups:
+            for name in names:
+                importlib.import_module(name).run(logger)
+        return
+    import multiprocessing
+    from concurrent.futures import ProcessPoolExecutor
+    with ProcessPoolExecutor(max_workers=len(groups), mp_context=multiprocessing.get_context("fork")) as pool:
+        futures = [pool.submit(_run_group, names, logger.run_timestamp) for names in groups]
+        results = [f.result() for f in futures]
+    for entries in results:
+        for e in entries:
+            logger.log(pipeline_logging.LogEntry(**e))
+
+
+def announce_stale(stale: list[dict]) -> None:
+    """The stale series in the job summary and one GitHub Actions warning with their number."""
+    import os
+    new = staleness.unexplained(stale)
+    if not new:
+        return
+    print(f"::warning title=Series without new observations::{len(new)} series are older than their "
+          f"frequency allows, e.g. {', '.join(r['id'] for r in new[:5])}; see the update report.")
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as f:
+            f.write("\n".join(staleness.report_lines(new)) + "\n")
+
+
+MODEL_DATA_FILES = ("monthly.csv", "quarterly.csv", "annual.csv", "VARIABLES.md")
+
+
+def build_model_data_safely() -> str | None:
+    """Rebuild model_data/ (the VAR/SVAR panel: transformations, X-13 seasonal adjustment) from the
+    data this run has just tested, and test the result. Until 2026-11-13 the panel was rebuilt
+    by hand and lagged the pipeline. It never blocks the data commit: if the build raises or
+    tests/test_model_data.py fails, the previous files are put back and the reason is returned
+    (None when the panel was rebuilt)."""
+    import os
+    import shutil
+    import tempfile
+    folder = REPO_ROOT / "model_data"
+    backup = Path(tempfile.mkdtemp(prefix="model_data_"))
+    kept = [f for f in MODEL_DATA_FILES if (folder / f).exists()]
+    for f in kept:
+        shutil.copy2(folder / f, backup / f)
+    reason = None
+    try:
+        import build_model_data
+        code = build_model_data.main()
+        if code not in (0, None):
+            reason = f"build_model_data exited {code}"
+        else:
+            test = subprocess.run([sys.executable, "-m", "pytest", str(REPO_ROOT / "tests" / "test_model_data.py"), "-q"],
+                                  cwd=REPO_ROOT, capture_output=True, text=True, env={**os.environ, "COLUMNS": "400"})
+            if test.returncode != 0:
+                reason = "tests/test_model_data.py failed on the rebuilt panel: " + "; ".join(failed_tests(test.stdout))[:400]
+    except BaseException as exc:  # noqa: BLE001 -- SystemExit from the build included
+        if isinstance(exc, KeyboardInterrupt):
+            raise
+        reason = f"{type(exc).__name__}: {str(exc)[:300]}"
+    if reason:
+        for f in kept:
+            shutil.copy2(backup / f, folder / f)
+        print(f"::warning title=model_data not rebuilt, previous panel kept::{reason}")
+    shutil.rmtree(backup, ignore_errors=True)
+    return reason
 
 
 def failure_gate(entries: list) -> tuple[bool, list]:
@@ -110,8 +207,11 @@ def main() -> int:
     run_ts = datetime.now().isoformat()
     logger = pipeline_logging.RunLogger(run_timestamp=run_ts)
 
-    # update_derived last: its scalar series are written from the item-level datasets
-    for module in (update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_wb, update_kase, update_foreign, update_dims, update_derived):
+    # The agencies' scalar updaters read and write only their own files, so they run side by side
+    # (PARALLEL_GROUPS); the rest follows in order. update_derived last: its scalar series are
+    # written from the item-level datasets.
+    run_parallel(PARALLEL_GROUPS, logger)
+    for module in (update_foreign, update_dims, update_derived):
         module.run(logger)
 
     proceed, failed = failure_gate(logger.entries)
@@ -155,15 +255,23 @@ def main() -> int:
     build_project_knowledge.main()
     build_calendar.main()          # project_knowledge/CALENDAR.md: what the model's sources update next
 
+    try:
+        build_dashboard.main()     # docs/dashboard.html: the headline indicators on one page
+    except Exception as exc:  # noqa: BLE001 -- a page, never a reason to lose the run
+        print(f"::warning title=Dashboard not rebuilt::{type(exc).__name__}: {str(exc)[:300]}")
+    model_problem = build_model_data_safely()
+    stale = staleness.stale_series(indicators)
+    announce_stale(stale)
     _write_report(run_ts, logger, unified_updated=True, tests_passed=True,
-                  cross_source_failed=cross_failed)
+                  cross_source_failed=cross_failed, stale=stale, model_problem=model_problem)
     print("update_all: completed successfully. Review changes and commit "
           "(this script does not push to GitHub itself outside of CI).")
     return 0
 
 
 def _write_report(run_ts: str, logger: pipeline_logging.RunLogger, unified_updated: bool,
-                   tests_passed: bool | None = None, cross_source_failed: list[str] | None = None) -> None:
+                   tests_passed: bool | None = None, cross_source_failed: list[str] | None = None,
+                   stale: list[dict] | None = None, model_problem: str | None = None) -> None:
     reports_dir = REPO_ROOT / "reports"
     reports_dir.mkdir(parents=True, exist_ok=True)
     today = datetime.now().date().isoformat()
@@ -189,6 +297,9 @@ def _write_report(run_ts: str, logger: pipeline_logging.RunLogger, unified_updat
         lines += [f"- **{e.source}/{e.dataset}**: {(e.errors[0].splitlines()[0] if e.errors else '')[:300]}"
                   for e in failed]
         lines.append("")
+    if model_problem:
+        lines += ["## model_data not rebuilt — previous panel kept", "", f"- {model_problem}", ""]
+    lines += staleness.report_lines(stale or [])
     lines += ["## Per-dataset results", ""]
     for e in logger.entries:
         lines.append(f"- **{e.source}/{e.dataset}** — {e.action}: {e.status} "

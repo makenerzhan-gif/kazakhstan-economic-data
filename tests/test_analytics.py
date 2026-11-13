@@ -92,3 +92,31 @@ def test_dollarization_and_yield_spreads_configured_and_plausible():
         y10, y1 = analytics.scalar("kase", "GS_YIELD_10Y"), analytics.scalar("kase", "GS_YIELD_1Y")
         d = y10.index[-1]
         assert by[("SLOPE_10Y_1Y", d.strftime("%Y-%m-%d"))] == pytest.approx(y10[d] - y1[d], abs=1e-3)
+
+
+def test_money_labour_and_standards_datasets():
+    import update_dims
+    ids = [d["id"] for d in dims.load_config()["datasets"]]
+    for ds_id, measure, after in (("MONEY_MULTIPLIER", "money_multiplier", None), ("MONEY_VELOCITY", "money_velocity", "QNA_GDP_EXPENDITURE"),
+                                  ("LABOUR_COST_INDICATORS", "labour_costs", "ENTERPRISE_PROFIT_LOSS_QUARTERLY"),
+                                  ("REAL_SOCIAL_STANDARDS", "real_standards", "SUBSISTENCE_MINIMUM_BY_REGION")):
+        ds = update_dims.DATASETS[ds_id]
+        assert ds["fetcher"] == "analytics" and ds["measure"] == measure and measure in analytics.MEASURES
+        assert after is None or ids.index(ds_id) > ids.index(after)          # inputs are fetched first
+    rows = dims.load_processed("MONEY_MULTIPLIER")
+    if rows:
+        by = {(r["item_code"], r["date"]): float(r["value"]) for r in rows}
+        m2, base = analytics.scalar("nbk", "M2"), analytics.scalar("nbk", "MONETARY_BASE")
+        d = m2.index[-1]
+        assert by[("MULTIPLIER_M2", d.strftime("%Y-%m-%d"))] == pytest.approx(m2[d] / base[d], abs=1e-3)
+    rows = dims.load_processed("REAL_SOCIAL_STANDARDS")
+    if rows:
+        by = {(r["item_code"], r["date"]): float(r["value"]) for r in rows}
+        assert 10 < by[("KAITZ_INDEX", "2019-01-01")] < 40                    # MZP 42 500 against a wage of about 170 000
+        assert by[("REAL_MZP", "2019-01-01")] > 1.4 * by[("REAL_MZP", "2018-12-01")]   # the rise from 28 284 to 42 500
+
+
+def test_end_of_quarter_dates_the_closing_stock_at_the_quarter_start():
+    s = pd.Series([1.0, 2.0, 3.0, 4.0], index=pd.to_datetime(["2026-03-01", "2026-04-01", "2026-07-01", "2026-08-01"]))
+    q = analytics._end_of_quarter(s)
+    assert list(q.index.strftime("%Y-%m-%d")) == ["2026-01-01", "2026-04-01"] and list(q.values) == [2.0, 3.0]
