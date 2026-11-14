@@ -19,7 +19,7 @@ on:
         default: "2005-2018"
       datasets:
         description: "Datasets (space-separated)"
-        default: "BUDGET_EXPENDITURE_ECONOMIC_YTD RESOURCE_PAYMENTS_YTD BUDGET_RECEIPTS_BY_CODE_YTD"
+        default: "BUDGET_EXPENDITURE_ECONOMIC_YTD BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD RESOURCE_PAYMENTS_YTD BUDGET_RECEIPTS_BY_CODE_YTD"
   push:
     branches: ["claude/**"]
     paths:
@@ -40,7 +40,7 @@ jobs:
       contents: write
     env:
       YEARLY: ${{ github.event.inputs.yearly || '2005-2018' }}
-      DATASETS: ${{ github.event.inputs.datasets || 'BUDGET_EXPENDITURE_ECONOMIC_YTD RESOURCE_PAYMENTS_YTD BUDGET_RECEIPTS_BY_CODE_YTD' }}
+      DATASETS: ${{ github.event.inputs.datasets || 'BUDGET_EXPENDITURE_ECONOMIC_YTD BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD RESOURCE_PAYMENTS_YTD BUDGET_RECEIPTS_BY_CODE_YTD' }}
     steps:
       - uses: actions/checkout@v4
 
