@@ -132,7 +132,10 @@ def _numbering(line: list[tuple]) -> list[float] | None:
     if len(texts) < 5 or texts[0] != "1" or not all(re.fullmatch(r"\d{1,2}", t) for t in texts):
         return None
     numbers = [int(t) for t in texts]
-    if any(b <= a for a, b in zip(numbers, numbers[1:])) or numbers[-1] > len(numbers) + 1:
+    if any(b <= a for a, b in zip(numbers, numbers[1:])):
+        # one edition numbers the columns «1 2 3 4 3 4 5 6 7»: the row is still one number per column
+        return [(w[0] + w[1]) / 2 for w in line] if len(numbers) >= 7 and numbers[:4] == [1, 2, 3, 4] else None
+    if numbers[-1] > len(numbers) + 1:
         return None
     centres = {n: (w[0] + w[1]) / 2 for n, w in zip(numbers, line)}
     for n in range(2, numbers[-1]):                              # one edition leaves a number out: its column is
@@ -167,12 +170,12 @@ def _value_edge(lines: list[list[tuple]], centre: float) -> float | None:
 def _value(line: list[tuple], edge: float, centre: float) -> float | None:
     """The number of the line that ends at `edge`; «-» in the column is zero."""
     # rows set in bold (the total, the categories) end a few points to the right of the others
-    at = [i for i, w in enumerate(line) if -3.0 <= w[1] - edge <= 5.0 and _INT.fullmatch(w[3])]
+    at = [i for i, w in enumerate(line) if -3.0 <= w[1] - edge <= 5.0 and re.fullmatch(r"-?\d+(,0)?", w[3])]
     idx = min(at, key=lambda i: abs(line[i][1] - edge)) if at else None
     if idx is None:
         dash = any(w[3] in ("-", "–", "—") and centre - 30 <= w[1] <= edge + 2 for w in line)
         return 0.0 if dash else None
-    take = [line[idx][3]]
+    take = [line[idx][3].removesuffix(",0")]                  # «5 303,0» is a whole number; «0,1» is left unread (see the docstring)
     if len(take[0]) == 3:
         i = idx
         while i > 0:
@@ -232,9 +235,15 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                 break
             value = _value(line, edge, centres[-2])
             codes = [None] * n_codes
+            cells: list[tuple] = []
             for w in line:
                 if w[1] > centres[n_codes]:
                     break
+                if cells and w[3].isdigit() and cells[-1][3].isdigit() and w[0] - cells[-1][1] <= 1.5:
+                    cells[-1] = (cells[-1][0], w[1], w[2], cells[-1][3] + w[3])      # «2 6»: a code set letter by letter
+                else:
+                    cells.append(w)
+            for w in cells:
                 if re.fullmatch(r"\d{1,3}", w[3]):
                     mid = (w[0] + w[1]) / 2
                     col = min(range(n_codes), key=lambda c: abs(centres[c] - mid))
