@@ -219,7 +219,7 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
         names = [line[0][2] for line in body if any(w[0] > edge + 1.0 for w in line)]
         steps = sorted(b - a for a, b in zip(names, names[1:]))
         pitch = steps[len(steps) // 2] if steps else 10.0             # the usual distance between two lines of names
-        for line in body:
+        for nth, line in enumerate(body):
             if _numbering(line):                                      # a second header on the page: another part of the table
                 if stop is not None:
                     break_all = True
@@ -251,22 +251,43 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                 break
             # The Kazakh and the Russian halves of a row are set separately, and where their names break
             # differently the codes (set with the Kazakh name) stand a line above or below the value (set
-            # with the Russian one). A line with codes, no value and no beginning of a name is therefore not
-            # a row. Its codes belong to the row just above when that one has a value and no code; otherwise
-            # they wait for the next row, which must begin within a line's distance, and that row's own
-            # codes wait in turn. Its text continues the name above.
+            # with the Russian one). Three rules put them together, each within a line's distance:
+            #  * a line with codes, no value and no beginning of a name is not a row when a value stands that
+            #    near: its codes belong to the row just above if that one has a value and no code, otherwise
+            #    they wait for the row that begins just below, and that row's own codes wait in turn. Its text
+            #    continues the name above. (With no value that near, it is a row whose cell is empty.)
+            #  * a line that is only a value and the beginning of a name -- no code, nothing of the Kazakh
+            #    half, not a heading in capitals -- is a row whose codes come with the next line; that line's
+            #    own value is then a row of the same kind.
             top = line[0][2]
-            if value is None and not re.match(r"[^а-яё]", label):
-                last = rows[-1] if len(rows) > page_start else None
-                if (last and not pending and not any(last["codes"]) and last["value"] is not None
-                        and top - last["top"] <= 1.25 * pitch):
-                    last["codes"] = codes
-                else:
-                    pending.append((top, codes))
-                if label:
+            near = 1.25 * pitch
+            last = rows[-1] if len(rows) > page_start else None
+            if last and last.get("wants") and any(codes) and not pending and top - last["top"] <= near:
+                last.update(codes=codes, wants=False)
+                codes = [None] * n_codes
+                if value is None:
                     held.append(label)
-                continue
-            pending = [p for p in pending if top - p[0] <= 1.25 * pitch]     # nothing began under them: empty rows
+                    continue
+                wants = True
+            else:
+                wants = (value is not None and not any(codes) and not pending and not _capitals(label)
+                         and bool(re.match(r"[^а-яё]", label))
+                         and all(_INT.fullmatch(w[3]) or w[3] in "-–—" for w in line if w[0] <= edge + 1.0)
+                         and line[0][0] > centres[n_codes])
+            if value is None and not re.match(r"[^а-яё]", label):
+                up = (top - last["top"] if last and not pending and not any(last["codes"]) and last["value"] is not None
+                      and not _capitals(last["label"]) else None)
+                down = next((x[0][2] - top for x in body[nth + 1:nth + 6] if _value(x, edge, centres[-2]) is not None), None)
+                above = up is not None and up <= near and (down is None or up <= down + 1.0)
+                if above or (down is not None and down <= near):
+                    if above:
+                        last.update(codes=codes, wants=False)
+                    else:
+                        pending.append((top, codes))
+                    if label:
+                        held.append(label)
+                    continue
+            pending = [p for p in pending if top - p[0] <= near]             # nothing began under them: empty rows
             if pending:
                 if any(codes):
                     pending.append((top, codes))
@@ -291,7 +312,7 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                 # that is not is a heading row with no code, as the 2005 editions print above every category)
                 rows[-1].update(value=value, label=_join(rows[-1]["label"], label), top=top)
                 continue
-            rows.append({"codes": codes, "value": value, "label": label, "top": top})
+            rows.append({"codes": codes, "value": value, "label": label, "top": top, "wants": wants})
         _drop_overlap(rows, page_start)
         if break_all:
             held = []
