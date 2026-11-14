@@ -1,4 +1,4 @@
-# Bulletin backfill, item-level datasets -- 2026-11-14 08:39
+# Bulletin backfill, item-level datasets -- 2026-11-14 08:47
 
 261 editions listed, 2018-12-31 … 2026-11-05.
 
@@ -149,6 +149,305 @@
 - yearly:2018:на 1 июня 2018.xlsx «yearly 2018 на 1 июня 2018.xlsx»: sheets: ['табл 1', 'табл 2 ', 'табл 3', 'табл 4', 'табл 5', 'табл 6', 'табл 7', 'табл 8 (дох)', 'табл 8 (расх)', 'табл 9', 'табл 10', 'таб 11', 'табл 12', 'табл 12.1', 'табл 12.2', 'табл 12.3', 'табл 12.4', 'табл 12.5', 'табл 12.6', 'табл 12.7', 'табл 12.8', 'табл 12.9', 'табл 12.10', 'табл 12.11', 'табл 12.12', 'табл 12.13', 'табл 12.14', 'табл 12.15', 'табл 12.16', 'табл 13', 'табл 14', 'табл 15', 'табл 16 кв', 'табл 17', 'табл 18кв', 'табл 19год', 'табл 20 полуго', 'табл 21 кв', 'табл 22 кв ', 'табл 23 кв', 'таб 24', 'табл 25 кв', 'табл 26 кв', 'табл 27 год', 'табл 28 год', 'табл 29 кв', 'табл 30']
 - yearly:2018:на 1 марта 2018.xlsx «yearly 2018 на 1 марта 2018.xlsx»: 2018-02-01: no STATE sheet or period column
 - yearly:2018:на 1 марта 2018.xlsx «yearly 2018 на 1 марта 2018.xlsx»: sheets: ['табл 1', 'табл 2 ', 'табл 3', 'табл 4', 'табл 5', 'табл 6', 'табл 7', 'табл 8 (дох)', 'табл 8 (расх)', 'табл 9', 'табл 10', 'таб 11', 'табл 12', 'табл 12.1', 'табл 12.2', 'табл 12.3', 'табл 12.4', 'табл 12.5', 'табл 12.6', 'табл 12.7', 'табл 12.8', 'табл 12.9', 'табл 12.10', 'табл 12.11', 'табл 12.12', 'табл 12.13', 'табл 12.14', 'табл 12.15', 'табл 12.16', 'табл13', 'табл 14', 'табл 15', 'табл 16 кв', 'табл 17', 'табл 18кв', 'табл 19год', 'табл 20 полуго', 'табл 21 кв', 'табл 22 кв ', 'табл 23 кв', 'таб 24', 'табл 25 кв', 'табл 26 кв', 'табл 27 год', 'табл 28 год', 'табл 29 кв', 'табл 30']
+
+## BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: ok, 10837 rows
+
+- 2699 «Статистический бюллетень»: no period found
+- 2699 «Статистический бюллетень»: sheets: ['табл 1', 'табл 2 ', 'табл 3', 'табл 4', 'табл 5', 'табл 6', 'табл 7', 'табл 8 (дох)', 'табл 8 (расх)', 'табл 9', 'табл 10', 'таб 11', 'табл 12', 'табл 12.1', 'табл 12.2', 'табл 12.3', 'табл 12.4', 'табл 12.5', 'табл 12.6', 'табл 12.7', 'табл 12.8', 'табл 12.9', 'табл 12.10', 'табл 12.11', 'табл 12.12', 'табл 12.13', 'табл 12.14', 'табл 12.15', 'табл 12.16', 'табл 12.17', 'табл 13', 'табл 14', 'табл 15', 'табл 16 кв', 'табл 17', 'табл 18кв', 'табл 19год', 'табл 20 полуго', 'табл 21 кв', 'табл 22 кв ', 'табл 23 кв', 'таб 24', 'табл 25 кв', 'табл 26 кв', 'табл 27 год', 'табл 28 год', 'табл 29 кв', 'табл 30']
+- 26687 «Статистический бюллетень на 1 ноября 2019 года»: no period found
+- 26687 «Статистический бюллетень на 1 ноября 2019 года»: sheets: ['табл 1', 'табл 2 ', 'табл 3', 'табл 4', 'табл 5', 'табл 6', 'табл 7', 'табл 8 (дох)', 'табл 8 (расх)', 'табл 9', 'табл 10', 'таб 11', 'табл 12', 'табл 12.1', 'табл 12.2', 'табл 12.3', 'табл 12.4', 'табл 12.5', 'табл 12.6', 'табл 12.7', 'табл 12.8', 'табл 12.9', 'табл 12.10', 'табл 12.11', 'табл 12.12', 'табл 12.13', 'табл 12.14', 'табл 12.15', 'табл 12.16', 'табл 12.17', 'табл 13', 'табл 14', 'табл 15', 'табл 16 кв', 'табл 17', 'табл 18кв', 'табл 19год', 'табл 20 полуго', 'табл 21 кв', 'табл 22 кв ', 'табл 23 кв', 'таб 24', 'табл 25 кв', 'табл 26 кв', 'табл 27 год', 'табл 28 год', 'табл 29 кв', 'табл 30']
+- yearly:2005:Stat_bull_1(73)_jan_2005.pdf «yearly 2005 Stat_bull_1(73)_jan_2005.pdf»: 2005-01-01: no LOCAL sheet or period column
+- yearly:2005:Stat_bull_1(73)_jan_2005.pdf «yearly 2005 Stat_bull_1(73)_jan_2005.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2005:Stat_bull_10(82)_oct_2005.pdf «yearly 2005 Stat_bull_10(82)_oct_2005.pdf»: 2005-10-01: no LOCAL sheet or period column
+- yearly:2005:Stat_bull_10(82)_oct_2005.pdf «yearly 2005 Stat_bull_10(82)_oct_2005.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2005:Stat_bull_11(83)_nov_2005.pdf «yearly 2005 Stat_bull_11(83)_nov_2005.pdf»: 2005-11-01: no LOCAL sheet or period column
+- yearly:2005:Stat_bull_11(83)_nov_2005.pdf «yearly 2005 Stat_bull_11(83)_nov_2005.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2005:Stat_bull_12(84)_dec_2005.pdf «yearly 2005 Stat_bull_12(84)_dec_2005.pdf»: 2005-12-01: no LOCAL sheet or period column
+- yearly:2005:Stat_bull_12(84)_dec_2005.pdf «yearly 2005 Stat_bull_12(84)_dec_2005.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2005:Stat_bull_2(74)_feb_2005.pdf «yearly 2005 Stat_bull_2(74)_feb_2005.pdf»: SKIPPED REP -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2005-02-01 REP: the subclasses of CAT1 sum to 98942.0, the category is 100942.0
+    [таб10] 94 rows
+      0: ['Cанаты/ Категория', 'Iшкi сыныбы/ Подкласс', 'Ерекшелiгi/ Специфика', 'Атауы', '2005 ж. есеп / январь-февраль отчет 20', 'Наименование']
+      1: ['1', '2', '3', '4', '5', '6']
+      2: ['215995.0', 'ВСЕГО']
+      3: ['1', '100942.0', 'Текущие затраты']
+      4: ['110', '8677.0', 'Заработная плата']
+      5: ['111', '7505.0', 'Основная заработная плата']
+      6: ['112', '22.0', 'Дополнительные денежные выплаты']
+      7: ['113', '758.0', 'Компенсационные выплаты']
+      8: ['114', '392.0', 'Обязательные пенсионные взносы военнос']
+      56: ['2', '23246.0', 'Капитальные затраты']
+      76: ['3', '31421.0', 'Бюджетные кредиты']
+      86: ['4', '55544.0', 'Приобретение финансовых активов']
+      89: ['5', '4841.0', 'Погашение займов']
+- yearly:2005:Stat_bull_2(74)_feb_2005.pdf «yearly 2005 Stat_bull_2(74)_feb_2005.pdf»: 2005-02-01: no LOCAL sheet or period column
+- yearly:2005:Stat_bull_2(74)_feb_2005.pdf «yearly 2005 Stat_bull_2(74)_feb_2005.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2005:Stat_bull_3(75)_mar_2005.pdf «yearly 2005 Stat_bull_3(75)_mar_2005.pdf»: SKIPPED STATE -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2005-03-01 STATE: the subclasses of CAT2 sum to 44131.0, the category is 44150.0
+    [таб6] 33 rows
+      0: ['Cанаты/ Категория', 'Iшкi сыныбы/ Подкласс', 'Атауы', '2005 ж. есеп / январь-март отчет 2005 ', 'Наименование']
+      1: ['1', '2', '3', '4', '5']
+      2: ['392262.0', 'Всего']
+      3: ['1', '228631.0', 'Текущие затраты']
+      4: ['110', '51585.0', 'Заработная плата']
+      5: ['120', '6442.0', 'Взносы работодателей']
+      6: ['130', '12066.0', 'Приобретение товаров']
+      7: ['140', '56019.0', 'Приобретение услуг и работ']
+      8: ['150', '13165.0', 'Другие текущие затраты']
+      17: ['2', '44150.0', 'Капитальные затраты']
+      24: ['3', '4899.0', 'Бюджетные кредиты']
+      28: ['4', '73074.0', 'Приобретение финансовых активов']
+      30: ['5', '41508.0', 'Погашение займов']
+- yearly:2005:Stat_bull_3(75)_mar_2005.pdf «yearly 2005 Stat_bull_3(75)_mar_2005.pdf»: 2005-03-01: no LOCAL sheet or period column
+- yearly:2005:Stat_bull_3(75)_mar_2005.pdf «yearly 2005 Stat_bull_3(75)_mar_2005.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2005:Stat_bull_4(76)_apr_2005.pdf «yearly 2005 Stat_bull_4(76)_apr_2005.pdf»: 2005-04-01: no LOCAL sheet or period column
+- yearly:2005:Stat_bull_4(76)_apr_2005.pdf «yearly 2005 Stat_bull_4(76)_apr_2005.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2005:Stat_bull_5(77)_may_2005.pdf «yearly 2005 Stat_bull_5(77)_may_2005.pdf»: 2005-05-01: no LOCAL sheet or period column
+- yearly:2005:Stat_bull_5(77)_may_2005.pdf «yearly 2005 Stat_bull_5(77)_may_2005.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2005:Stat_bull_6(78)_jun_2005.pdf «yearly 2005 Stat_bull_6(78)_jun_2005.pdf»: 2005-06-01: no LOCAL sheet or period column
+- yearly:2005:Stat_bull_6(78)_jun_2005.pdf «yearly 2005 Stat_bull_6(78)_jun_2005.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2005:Stat_bull_7(79)_jul_2005.pdf «yearly 2005 Stat_bull_7(79)_jul_2005.pdf»: 2005-07-01: no LOCAL sheet or period column
+- yearly:2005:Stat_bull_7(79)_jul_2005.pdf «yearly 2005 Stat_bull_7(79)_jul_2005.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2005:Stat_bull_8(80)_aug_2005.pdf «yearly 2005 Stat_bull_8(80)_aug_2005.pdf»: SKIPPED REP -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2005-08-01 REP: the subclasses of CAT1 sum to 958812.0, the category is 605089.0
+- yearly:2005:Stat_bull_8(80)_aug_2005.pdf «yearly 2005 Stat_bull_8(80)_aug_2005.pdf»: 2005-08-01: no LOCAL sheet or period column
+- yearly:2005:Stat_bull_8(80)_aug_2005.pdf «yearly 2005 Stat_bull_8(80)_aug_2005.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2005:Stat_bull_9(81)_sep_2005.pdf «yearly 2005 Stat_bull_9(81)_sep_2005.pdf»: 2005-09-01: no LOCAL sheet or period column
+- yearly:2005:Stat_bull_9(81)_sep_2005.pdf «yearly 2005 Stat_bull_9(81)_sep_2005.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2006:Stat_bull_1(85)_jan_2006.pdf «yearly 2006 Stat_bull_1(85)_jan_2006.pdf»: SKIPPED STATE -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2006-01-01 STATE: the subclasses of CAT2 sum to 18555.0, the category is 18623.0
+- yearly:2006:Stat_bull_1(85)_jan_2006.pdf «yearly 2006 Stat_bull_1(85)_jan_2006.pdf»: 2006-01-01: no LOCAL sheet or period column
+- yearly:2006:Stat_bull_1(85)_jan_2006.pdf «yearly 2006 Stat_bull_1(85)_jan_2006.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2006:Stat_bull_10(94)_oct_2006.pdf «yearly 2006 Stat_bull_10(94)_oct_2006.pdf»: 2006-10-01: no LOCAL sheet or period column
+- yearly:2006:Stat_bull_10(94)_oct_2006.pdf «yearly 2006 Stat_bull_10(94)_oct_2006.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2006:Stat_bull_12(96)_dec_2006.pdf «yearly 2006 Stat_bull_12(96)_dec_2006.pdf»: 2006-12-01: no LOCAL sheet or period column
+- yearly:2006:Stat_bull_12(96)_dec_2006.pdf «yearly 2006 Stat_bull_12(96)_dec_2006.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2006:Stat_bull_2(86)_feb_2006.pdf «yearly 2006 Stat_bull_2(86)_feb_2006.pdf»: 2006-02-01: no LOCAL sheet or period column
+- yearly:2006:Stat_bull_2(86)_feb_2006.pdf «yearly 2006 Stat_bull_2(86)_feb_2006.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2006:Stat_bull_3(87)_mar_2006.pdf «yearly 2006 Stat_bull_3(87)_mar_2006.pdf»: 2006-03-01: no LOCAL sheet or period column
+- yearly:2006:Stat_bull_3(87)_mar_2006.pdf «yearly 2006 Stat_bull_3(87)_mar_2006.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2006:Stat_bull_5(89)_may_2006.pdf «yearly 2006 Stat_bull_5(89)_may_2006.pdf»: 2006-05-01: no LOCAL sheet or period column
+- yearly:2006:Stat_bull_5(89)_may_2006.pdf «yearly 2006 Stat_bull_5(89)_may_2006.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2006:Stat_bull_6(90)_jun_2006.pdf «yearly 2006 Stat_bull_6(90)_jun_2006.pdf»: SKIPPED REP -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2006-06-01 REP: the subclasses of CAT4 sum to 79271.0, the category is 79174.0
+- yearly:2006:Stat_bull_6(90)_jun_2006.pdf «yearly 2006 Stat_bull_6(90)_jun_2006.pdf»: 2006-06-01: no LOCAL sheet or period column
+- yearly:2006:Stat_bull_6(90)_jun_2006.pdf «yearly 2006 Stat_bull_6(90)_jun_2006.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2006:Stat_bull_7(91)_jul_2006.pdf «yearly 2006 Stat_bull_7(91)_jul_2006.pdf»: SKIPPED REP -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2006-07-01 REP: categories sum to 1226243.0, «Всего» is 1226458.0
+    [таб10] 98 rows
+      0: ['Cанаты/ Категория', 'Iшкi сыныбы/ Подкласс', 'Ерекшелiгi/ Специфика', 'Атауы', '2006 ж. есеп / январь-июль отчет 2006 ', 'Наименование']
+      1: ['1', '2', '3', '4', '5', '6']
+      2: ['1226458.0', 'ВСЕГО']
+      3: ['1', '864200.0', 'Текущие затраты']
+      4: ['110', '64058.0', 'Заработная плата']
+      5: ['111', '48287.0', 'Основная заработная плата']
+      6: ['112', '4262.0', 'Дополнительные денежные выплаты']
+      7: ['113', '7492.0', 'Компенсационные выплаты']
+      8: ['114', '4018.0', 'Обязательные пенсионные взносы военнос']
+      57: ['2', '193918.0', 'Капитальные затраты']
+      77: ['3', '26100.0', 'Бюджетные кредиты']
+      87: ['4', '79574.0', 'Приобретение финансовых активов']
+      93: ['5', '62451.0', 'Погашение займов']
+- yearly:2006:Stat_bull_7(91)_jul_2006.pdf «yearly 2006 Stat_bull_7(91)_jul_2006.pdf»: 2006-07-01: no LOCAL sheet or period column
+- yearly:2006:Stat_bull_7(91)_jul_2006.pdf «yearly 2006 Stat_bull_7(91)_jul_2006.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2006:Stat_bull_8(92)_aug_2006.pdf «yearly 2006 Stat_bull_8(92)_aug_2006.pdf»: 2006-08-01: no LOCAL sheet or period column
+- yearly:2006:Stat_bull_8(92)_aug_2006.pdf «yearly 2006 Stat_bull_8(92)_aug_2006.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2006:Stat_bull_9(93)_sep_2006.pdf «yearly 2006 Stat_bull_9(93)_sep_2006.pdf»: 2006-09-01: no LOCAL sheet or period column
+- yearly:2006:Stat_bull_9(93)_sep_2006.pdf «yearly 2006 Stat_bull_9(93)_sep_2006.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2006:stat_bull_11(95)_nov_2006.pdf «yearly 2006 stat_bull_11(95)_nov_2006.pdf»: 2006-11-01: no LOCAL sheet or period column
+- yearly:2006:stat_bull_11(95)_nov_2006.pdf «yearly 2006 stat_bull_11(95)_nov_2006.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2007:Stat_bull_1(97)_jan_2007.pdf «yearly 2007 Stat_bull_1(97)_jan_2007.pdf»: 2007-01-01: no LOCAL sheet or period column
+- yearly:2007:Stat_bull_1(97)_jan_2007.pdf «yearly 2007 Stat_bull_1(97)_jan_2007.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2007:Stat_bull_10(106)_oct_2007.pdf «yearly 2007 Stat_bull_10(106)_oct_2007.pdf»: 2007-10-01: no LOCAL sheet or period column
+- yearly:2007:Stat_bull_10(106)_oct_2007.pdf «yearly 2007 Stat_bull_10(106)_oct_2007.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2007:Stat_bull_11(107)_nov_2007.pdf «yearly 2007 Stat_bull_11(107)_nov_2007.pdf»: 2007-11-01: no LOCAL sheet or period column
+- yearly:2007:Stat_bull_11(107)_nov_2007.pdf «yearly 2007 Stat_bull_11(107)_nov_2007.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2007:Stat_bull_12(108)_dec_2007.pdf «yearly 2007 Stat_bull_12(108)_dec_2007.pdf»: 2007-12-01: no LOCAL sheet or period column
+- yearly:2007:Stat_bull_12(108)_dec_2007.pdf «yearly 2007 Stat_bull_12(108)_dec_2007.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2007:Stat_bull_2(98)_feb_2007.pdf «yearly 2007 Stat_bull_2(98)_feb_2007.pdf»: 2007-02-01: no LOCAL sheet or period column
+- yearly:2007:Stat_bull_2(98)_feb_2007.pdf «yearly 2007 Stat_bull_2(98)_feb_2007.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2007:Stat_bull_3(99)_mar_2007.pdf «yearly 2007 Stat_bull_3(99)_mar_2007.pdf»: 2007-03-01: no LOCAL sheet or period column
+- yearly:2007:Stat_bull_3(99)_mar_2007.pdf «yearly 2007 Stat_bull_3(99)_mar_2007.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2007:Stat_bull_4(100)_apr_2007.pdf «yearly 2007 Stat_bull_4(100)_apr_2007.pdf»: 2007-04-01: no LOCAL sheet or period column
+- yearly:2007:Stat_bull_4(100)_apr_2007.pdf «yearly 2007 Stat_bull_4(100)_apr_2007.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2007:Stat_bull_5(101)_may_2007.pdf «yearly 2007 Stat_bull_5(101)_may_2007.pdf»: 2007-05-01: no LOCAL sheet or period column
+- yearly:2007:Stat_bull_5(101)_may_2007.pdf «yearly 2007 Stat_bull_5(101)_may_2007.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2007:Stat_bull_6(102)_jun_2007.pdf «yearly 2007 Stat_bull_6(102)_jun_2007.pdf»: 2007-06-01: no LOCAL sheet or period column
+- yearly:2007:Stat_bull_6(102)_jun_2007.pdf «yearly 2007 Stat_bull_6(102)_jun_2007.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2007:Stat_bull_7(103)_jul_2007.pdf «yearly 2007 Stat_bull_7(103)_jul_2007.pdf»: 2007-07-01: no LOCAL sheet or period column
+- yearly:2007:Stat_bull_7(103)_jul_2007.pdf «yearly 2007 Stat_bull_7(103)_jul_2007.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2007:Stat_bull_8(104)_aug_2007.pdf «yearly 2007 Stat_bull_8(104)_aug_2007.pdf»: 2007-08-01: no LOCAL sheet or period column
+- yearly:2007:Stat_bull_8(104)_aug_2007.pdf «yearly 2007 Stat_bull_8(104)_aug_2007.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2007:Stat_bull_9(105)_sep_2007.pdf «yearly 2007 Stat_bull_9(105)_sep_2007.pdf»: 2007-09-01: no LOCAL sheet or period column
+- yearly:2007:Stat_bull_9(105)_sep_2007.pdf «yearly 2007 Stat_bull_9(105)_sep_2007.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2008:Stat_bull_1(109)_jan_2008.pdf «yearly 2008 Stat_bull_1(109)_jan_2008.pdf»: SKIPPED STATE -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2008-01-01 STATE: categories sum to 126337.0, «Всего» is 126388.0
+    [таб6] 33 rows
+      0: ['Cанаты/ Категория', 'Iшкi сыныбы/ Подкласс', 'Атауы', '2008 ж. қаңтар есеп / январь отчет 200', 'Наименование']
+      1: ['1', '2', '3', '4', '5']
+      2: ['126388.0', 'Всего']
+      3: ['1', '102065.0', 'Текущие затраты']
+      4: ['110', '23159.0', 'Заработная плата']
+      5: ['120', '2063.0', 'Взносы работодателей']
+      6: ['130', '944.0', 'Приобретение товаров']
+      7: ['140', '16581.0', 'Приобретение услуг и работ']
+      8: ['150', '5722.0', 'Другие текущие затраты']
+      16: ['2', '15630.0', 'Капитальные затраты']
+      27: ['4', '8639.0', 'Приобретение финансовых активов']
+- yearly:2008:Stat_bull_1(109)_jan_2008.pdf «yearly 2008 Stat_bull_1(109)_jan_2008.pdf»: 2008-01-01: no LOCAL sheet or period column
+- yearly:2008:Stat_bull_1(109)_jan_2008.pdf «yearly 2008 Stat_bull_1(109)_jan_2008.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2008:Stat_bull_10(118)_oct_2008.pdf «yearly 2008 Stat_bull_10(118)_oct_2008.pdf»: 2008-10-01: no LOCAL sheet or period column
+- yearly:2008:Stat_bull_10(118)_oct_2008.pdf «yearly 2008 Stat_bull_10(118)_oct_2008.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2008:Stat_bull_11(119)_nov_2008.pdf «yearly 2008 Stat_bull_11(119)_nov_2008.pdf»: 2008-11-01: no LOCAL sheet or period column
+- yearly:2008:Stat_bull_11(119)_nov_2008.pdf «yearly 2008 Stat_bull_11(119)_nov_2008.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2008:Stat_bull_12(120)_dec_2008.pdf «yearly 2008 Stat_bull_12(120)_dec_2008.pdf»: 2008-12-01: no LOCAL sheet or period column
+- yearly:2008:Stat_bull_12(120)_dec_2008.pdf «yearly 2008 Stat_bull_12(120)_dec_2008.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2008:Stat_bull_2(110)_feb_2008.pdf «yearly 2008 Stat_bull_2(110)_feb_2008.pdf»: 2008-02-01: no LOCAL sheet or period column
+- yearly:2008:Stat_bull_2(110)_feb_2008.pdf «yearly 2008 Stat_bull_2(110)_feb_2008.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2008:Stat_bull_3(111)_mar_2008.pdf «yearly 2008 Stat_bull_3(111)_mar_2008.pdf»: 2008-03-01: no LOCAL sheet or period column
+- yearly:2008:Stat_bull_3(111)_mar_2008.pdf «yearly 2008 Stat_bull_3(111)_mar_2008.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2008:Stat_bull_4(112)_apr_2008.pdf «yearly 2008 Stat_bull_4(112)_apr_2008.pdf»: 2008-04-01: no LOCAL sheet or period column
+- yearly:2008:Stat_bull_4(112)_apr_2008.pdf «yearly 2008 Stat_bull_4(112)_apr_2008.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2008:Stat_bull_5(113)_may_2008.pdf «yearly 2008 Stat_bull_5(113)_may_2008.pdf»: 2008-05-01: no LOCAL sheet or period column
+- yearly:2008:Stat_bull_5(113)_may_2008.pdf «yearly 2008 Stat_bull_5(113)_may_2008.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2008:Stat_bull_6(114)_jun_2008.pdf «yearly 2008 Stat_bull_6(114)_jun_2008.pdf»: 2008-06-01: no LOCAL sheet or period column
+- yearly:2008:Stat_bull_6(114)_jun_2008.pdf «yearly 2008 Stat_bull_6(114)_jun_2008.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2008:Stat_bull_7(115)_jul_2008.pdf «yearly 2008 Stat_bull_7(115)_jul_2008.pdf»: 2008-07-01: no LOCAL sheet or period column
+- yearly:2008:Stat_bull_7(115)_jul_2008.pdf «yearly 2008 Stat_bull_7(115)_jul_2008.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2008:Stat_bull_8(116)_aug_2008.pdf «yearly 2008 Stat_bull_8(116)_aug_2008.pdf»: 2008-08-01: no LOCAL sheet or period column
+- yearly:2008:Stat_bull_8(116)_aug_2008.pdf «yearly 2008 Stat_bull_8(116)_aug_2008.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2008:Stat_bull_9(117)_sep_2008.pdf «yearly 2008 Stat_bull_9(117)_sep_2008.pdf»: 2008-09-01: no LOCAL sheet or period column
+- yearly:2008:Stat_bull_9(117)_sep_2008.pdf «yearly 2008 Stat_bull_9(117)_sep_2008.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2009:Stat_bull_1(121)_jan_2009.pdf «yearly 2009 Stat_bull_1(121)_jan_2009.pdf»: 2009-01-01: no LOCAL sheet or period column
+- yearly:2009:Stat_bull_1(121)_jan_2009.pdf «yearly 2009 Stat_bull_1(121)_jan_2009.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2009:Stat_bull_10(130)_oct_2009.pdf «yearly 2009 Stat_bull_10(130)_oct_2009.pdf»: 2009-10-01: no LOCAL sheet or period column
+- yearly:2009:Stat_bull_10(130)_oct_2009.pdf «yearly 2009 Stat_bull_10(130)_oct_2009.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2009:Stat_bull_11(131)_nov_2009.pdf «yearly 2009 Stat_bull_11(131)_nov_2009.pdf»: 2009-11-01: no LOCAL sheet or period column
+- yearly:2009:Stat_bull_11(131)_nov_2009.pdf «yearly 2009 Stat_bull_11(131)_nov_2009.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2009:Stat_bull_12(132)_dec_2009.pdf «yearly 2009 Stat_bull_12(132)_dec_2009.pdf»: 2009-12-01: no LOCAL sheet or period column
+- yearly:2009:Stat_bull_12(132)_dec_2009.pdf «yearly 2009 Stat_bull_12(132)_dec_2009.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2009:Stat_bull_2(122)_feb_2009.pdf «yearly 2009 Stat_bull_2(122)_feb_2009.pdf»: 2009-02-01: no LOCAL sheet or period column
+- yearly:2009:Stat_bull_2(122)_feb_2009.pdf «yearly 2009 Stat_bull_2(122)_feb_2009.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2009:Stat_bull_3(123)_mar_2009.pdf «yearly 2009 Stat_bull_3(123)_mar_2009.pdf»: 2009-03-01: no LOCAL sheet or period column
+- yearly:2009:Stat_bull_3(123)_mar_2009.pdf «yearly 2009 Stat_bull_3(123)_mar_2009.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2009:Stat_bull_4(124)_apr_2009.pdf «yearly 2009 Stat_bull_4(124)_apr_2009.pdf»: 2009-04-01: no LOCAL sheet or period column
+- yearly:2009:Stat_bull_4(124)_apr_2009.pdf «yearly 2009 Stat_bull_4(124)_apr_2009.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2009:Stat_bull_5(125)_may_2009.pdf «yearly 2009 Stat_bull_5(125)_may_2009.pdf»: 2009-05-01: no LOCAL sheet or period column
+- yearly:2009:Stat_bull_5(125)_may_2009.pdf «yearly 2009 Stat_bull_5(125)_may_2009.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2009:Stat_bull_6(126)_jun_2009.pdf «yearly 2009 Stat_bull_6(126)_jun_2009.pdf»: 2009-06-01: no LOCAL sheet or period column
+- yearly:2009:Stat_bull_6(126)_jun_2009.pdf «yearly 2009 Stat_bull_6(126)_jun_2009.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2009:Stat_bull_7(127)_jul_2009.pdf «yearly 2009 Stat_bull_7(127)_jul_2009.pdf»: 2009-07-01: no LOCAL sheet or period column
+- yearly:2009:Stat_bull_7(127)_jul_2009.pdf «yearly 2009 Stat_bull_7(127)_jul_2009.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2009:Stat_bull_8(128)_aug_2009.pdf «yearly 2009 Stat_bull_8(128)_aug_2009.pdf»: 2009-08-01: no LOCAL sheet or period column
+- yearly:2009:Stat_bull_8(128)_aug_2009.pdf «yearly 2009 Stat_bull_8(128)_aug_2009.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2009:Stat_bull_9(129)_sep_2009.pdf «yearly 2009 Stat_bull_9(129)_sep_2009.pdf»: 2009-09-01: no LOCAL sheet or period column
+- yearly:2009:Stat_bull_9(129)_sep_2009.pdf «yearly 2009 Stat_bull_9(129)_sep_2009.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2010:Stat_bull_1(133)_jan_2010.pdf «yearly 2010 Stat_bull_1(133)_jan_2010.pdf»: 2010-01-01: no LOCAL sheet or period column
+- yearly:2010:Stat_bull_1(133)_jan_2010.pdf «yearly 2010 Stat_bull_1(133)_jan_2010.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2010:Stat_bull_10(142)_oct_2010.pdf «yearly 2010 Stat_bull_10(142)_oct_2010.pdf»: SKIPPED REP -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2010-10-01 REP: categories sum to 3568501.0, «Всего» is 3663558.0
+- yearly:2010:Stat_bull_10(142)_oct_2010.pdf «yearly 2010 Stat_bull_10(142)_oct_2010.pdf»: 2010-10-01: no LOCAL sheet or period column
+- yearly:2010:Stat_bull_10(142)_oct_2010.pdf «yearly 2010 Stat_bull_10(142)_oct_2010.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2010:Stat_bull_11(143)_nov_2010.pdf «yearly 2010 Stat_bull_11(143)_nov_2010.pdf»: 2010-11-01: no LOCAL sheet or period column
+- yearly:2010:Stat_bull_11(143)_nov_2010.pdf «yearly 2010 Stat_bull_11(143)_nov_2010.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2010:Stat_bull_12(144)_dec_2010.pdf «yearly 2010 Stat_bull_12(144)_dec_2010.pdf»: 2010-12-01: no LOCAL sheet or period column
+- yearly:2010:Stat_bull_12(144)_dec_2010.pdf «yearly 2010 Stat_bull_12(144)_dec_2010.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2010:Stat_bull_2(134)_feb_2010.pdf «yearly 2010 Stat_bull_2(134)_feb_2010.pdf»: 2010-02-01: no LOCAL sheet or period column
+- yearly:2010:Stat_bull_2(134)_feb_2010.pdf «yearly 2010 Stat_bull_2(134)_feb_2010.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2010:Stat_bull_3(135)_mar_2010.pdf «yearly 2010 Stat_bull_3(135)_mar_2010.pdf»: 2010-03-01: no LOCAL sheet or period column
+- yearly:2010:Stat_bull_3(135)_mar_2010.pdf «yearly 2010 Stat_bull_3(135)_mar_2010.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2010:Stat_bull_4(136)_apr_2010.pdf «yearly 2010 Stat_bull_4(136)_apr_2010.pdf»: SKIPPED REP -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2010-04-01 REP: the subclasses of CAT2 sum to 215742.0, the category is 221574.0
+- yearly:2010:Stat_bull_4(136)_apr_2010.pdf «yearly 2010 Stat_bull_4(136)_apr_2010.pdf»: 2010-04-01: no LOCAL sheet or period column
+- yearly:2010:Stat_bull_4(136)_apr_2010.pdf «yearly 2010 Stat_bull_4(136)_apr_2010.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2010:Stat_bull_5(137)_may_2010.pdf «yearly 2010 Stat_bull_5(137)_may_2010.pdf»: 2010-05-01: no LOCAL sheet or period column
+- yearly:2010:Stat_bull_5(137)_may_2010.pdf «yearly 2010 Stat_bull_5(137)_may_2010.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2010:Stat_bull_6(138)_jun_2010.pdf «yearly 2010 Stat_bull_6(138)_jun_2010.pdf»: 2010-06-01: no LOCAL sheet or period column
+- yearly:2010:Stat_bull_6(138)_jun_2010.pdf «yearly 2010 Stat_bull_6(138)_jun_2010.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2010:Stat_bull_7(139)_jul_2010.pdf «yearly 2010 Stat_bull_7(139)_jul_2010.pdf»: 2010-07-01: no LOCAL sheet or period column
+- yearly:2010:Stat_bull_7(139)_jul_2010.pdf «yearly 2010 Stat_bull_7(139)_jul_2010.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2010:Stat_bull_8(140)_aug_2010.pdf «yearly 2010 Stat_bull_8(140)_aug_2010.pdf»: 2010-08-01: no LOCAL sheet or period column
+- yearly:2010:Stat_bull_8(140)_aug_2010.pdf «yearly 2010 Stat_bull_8(140)_aug_2010.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2010:Stat_bull_9(141)_sep_2010.pdf «yearly 2010 Stat_bull_9(141)_sep_2010.pdf»: 2010-09-01: no LOCAL sheet or period column
+- yearly:2010:Stat_bull_9(141)_sep_2010.pdf «yearly 2010 Stat_bull_9(141)_sep_2010.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2011:Stat_bull_8(152)_aug_2011.xls «yearly 2011 Stat_bull_8(152)_aug_2011.xls»: SKIPPED LOCAL -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2011-08-01 LOCAL: no «Всего» row or no category rows
+    [таб11] 47 rows
+      0: ['11-кесте']
+      2: ['ЖЕРГІЛІКТІ БЮДЖЕТТЕРДІҢ АТҚАРЫЛУЫ']
+      4: ['(млн.теңге)']
+      5: ['Атауы', '2008ж. есеп/ 2008г. отчет', '2009ж. есеп/ 2009г. отчет', '2010ж.  есеп/  2010г. отчет', '2011ж. қантар-тамыз есеп/ январь-авгус', '2010ж. есеп/ 2010г. отчет']
+      6: ['жылдық / годовой', 'жылдық / годовой', 'қантар-тамыз/ январь-август', 'жылдық / годовой', '1 - тоқсан/      1-й квартал', '2 - тоқсан/      2-й квартал', '3 - тоқсан/       3-й квартал']
+      7: ['1.0', '2.0', '3.0', '4.0', '5.0', '6.0', '7.0', '8.0', '9.0']
+      8: ['I. КІРІСТЕР', '1830138.3467143', '2119178.2933672', '2407436.9964161', '1632233.6363211', '1726764.8907644', '516635.8749999', '675076.5607339999', '612945.4437305003']
+      9: ['Салықтық түсiмдері,', '748102.4385456', '777674.3334493', '850526.0299631', '555164.1575052', '632598.8758536', '185976.3288563', '214178.43457969997', '217663.50769900007']
+      10: ['оның iшiнде:']
+      11: ['жеке табыс салығы', '267355.66237757', '268724.61409687', '312331.7297058', '201016.00180779002', '237745.19951431997', '67805.54093088', '80473.60720403999', '78791.63673472']
+      12: ['әлеуметтiк салық', '251221.9443942', '232839.68577329998', '253829.91280229', '157656.2701507', '184347.74516169', '53172.039480499996', '61717.27782', '65574.775172']
+      13: ['акциздер', '35401.309281049995', '38815.179688380005', '47809.48975619', '30495.07510123', '36874.923489529996', '10199.668707410001', '12551.45794643', '12620.522875429997']
+      14: ['Салықтан тыс түсiмдер', '13231.687878499999', '22390.5319025', '33440.8015435', '12904.9710277', '15566.0982247', '4523.3166533', '5321.2773327999985', '4796.7427161']
+      15: ['Негізгі капиталды сатудан түскен түсім', '48363.9000938', '31349.4370207', '36916.8193912', '20550.9258503', '18452.3495218', '6589.836163', '8003.355112200001', '8170.100417600001']
+      16: ['Трансферттердің түсімдері', '1020440.3201964', '1287763.9909947', '1486553.3455184', '1043613.5819378999', '1060147.5671643', '319546.39332730003', '447573.4937093', '382315.09289780015']
+      17: ['II. ШЫҒЫНДАР', '1798774.460523', '2021250.4145938999', '2330641.0251776', '1497255.444781', '1573531.2441973', '442093.5859738', '648129.7386747003', '607692.5640290997']
+      18: ['1. Жалпы сипаттағы мемлекеттiк қызметт', '78316.3857654', '45469.5019413', '66507.8787244', '40792.2387694', '48952.539798699996', '12884.6114224', '16124.9829258', '17446.9237221']
+      19: ['2. Қорғаныс', '12322.1082412', '6219.7170947', '9978.8085262', '4949.213467400001', '8153.580699900001', '1482.2382675000001', '1887.4469182999999', '2695.368069']
+      20: ['3. Қоғамдық тәртіп, қауiпсiздiк, құқық', '51598.219079099996', '56269.730463600004', '68734.0737872', '42082.321826700005', '50783.1353588', '12143.5435789', '17996.491844199998', '18302.985528299996']
+      21: ['4. Бiлiм беру', '475656.3284052', '553434.674947', '629716.5894179', '409203.7297731', '478829.29543949995', '113237.6023655', '202224.05109169998', '147796.6092374']
+      22: ['5. Денсаулық сақтау', '320762.2010747', '386553.3510665', '330351.9389431', '217609.6277749', '231804.8806342', '78402.7789718', '79762.11697179999', '87438.15313780002']
+      23: ['6. Әлеуметтiк көмек және әлеуметтік қа', '61874.3600077', '86122.9474155', '97380.92317309999', '64644.6259684', '59029.5269119', '17938.4676137', '31011.479918200006', '23976.484503899992']
+      24: ['7. Тұрғын үй-коммуналдық шаруашылық', '231925.4464623', '304048.8310759', '332944.8056153', '202626.2630793', '216765.1934584', '43472.2680307', '99863.628782', '87769.96384439999']
+      25: ['8. Мәдениет, спорт, туризм және ақпара', '108493.1899559', '108182.7258209', '129795.457936', '83881.92688510001', '90707.8600525', '22064.7502598', '37905.9561554', '33097.324055900004']
+      26: ['9. Отын-энергетика кешені және жер қой', '42104.3838828', '45570.1863779', '68521.9624496', '38153.0541484', '57142.4935446', '15564.9492431', '10340.559287', '20388.6002066']
+      27: ['10. Ауыл, су, орман, балық шаруашылығы', '72242.5921548', '78289.33385160001', '98090.050493', '64010.3139352', '83982.3315853', '9762.7321098', '30123.324784399996', '31586.448113800012']
+      28: ['11. Өнеркәсiп, сәулет, қала құрылысы ж', '39091.761322', '27355.9608485', '23930.4929227', '15706.1417042', '8628.988364', '1851.7069042', '7410.077195899999', '9168.443107500001']
+      29: ['12. Көлiк және коммуникация', '198158.7868419', '210351.84610280002', '206137.98879769997', '130471.1990924', '133307.8053655', '34606.7222458', '52570.6002269', '62496.20496849998']
+      30: ['13. Өзгелер', '11221.4245236', '8085.0180112', '19047.938852400002', '7497.451846800001', '21162.3873471', '1647.1067951', '2497.5845833', '6355.5590951']
+      31: ['14. Борышқа қызмет көрсету', '651.3482879', '510.2730638', '474.79980800000004', '433.9894043', '669.1439232', '289.1331639', '2.5819999999999936', '145.5659248']
+      32: ['15. Трансферттер', '94355.9245185', '104786.31651270001', '249027.3157314', '175193.3471054', '83612.0817137', '76744.9750016', '58408.855989799995', '59027.93051400001']
+      33: ['III. ТАЗА БЮДЖЕТТІК КРЕДИТ БЕРУ', '7455.171680400001', '1115.7155265000001', '7156.9121430000005', '-48.80569660000015', '-6767.4215085999995', '-475.7498416000001', '567.9725889000001', '101.11778029999982']
+      34: ['Бюджеттік кредиттер', '8106.941684', '2100.0', '9097.60253', '1508.093805', '941.381542', '250.0', '876.707942', '646.0432149999999']
+      35: ['Бюджеттік кредиттерді өтеу', '651.7700036000001', '984.2844735', '1940.6903869', '1556.8995016000001', '7708.8030506', '725.7498416000001', '308.7353530999999', '544.9254347000001']
+      36: ['IV. ҚАРЖЫЛЫҚ АКТИВТЕРМЕН БОЛАТЫН ОПЕРА', '36730.4939823', '77228.91767089999', '63031.612444', '33130.8391643', '37200.1244996', '24304.8707668', '5532.7881173999995', '3734.209901400005']
+      37: ['Қаржылық активтерді сатып алу', '37969.3380455', '77509.883345', '63360.7777115', '33186.4837275', '37506.854419', '24326.017107', '5554.718162499998', '3753.934735000006']
+      38: ['Мемлекеттің қаржылық активтерін сатуда', '1238.8440632', '280.9656741', '329.1652668', '55.6445632', '306.7299194', '21.146340199999997', '21.9300451', '19.724833600000004']
+      39: ['V. БЮДЖЕТ ТАПШЫЛЫҒЫ (ПРОФИЦИТІ)', '-12821.779471399888', '19583.24557590022', '6607.446650999999', '101896.1580723999', '122800.94357609996', '50713.16810090002', '20846.061352999735', '1417.5520197006408']
+      40: ['VI. БЮДЖЕТТІҢ ТАПШЫЛЫҒЫН ҚАРЖЫЛАНДЫРУ ', '12821.7794722', '-19583.245558000002', '-6607.446650999999', '-101896.158073', '-122800.943575', '-50713.168102', '-20846.061349999996', '-1417.5520200000028']
+      41: ['Ішкі', '12829.884254999999', '-19583.245558000002', '-6607.446651199994', '-101896.158073', '-122800.943575', '-50713.168102', '-20846.061350000004', '-1417.5520199999974']
+- yearly:2011:Stat_bull_1(145)_jan_2011.pdf «yearly 2011 Stat_bull_1(145)_jan_2011.pdf»: 2011-01-01: no LOCAL sheet or period column
+- yearly:2011:Stat_bull_1(145)_jan_2011.pdf «yearly 2011 Stat_bull_1(145)_jan_2011.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2011:Stat_bull_10(154)_oct_2011.pdf «yearly 2011 Stat_bull_10(154)_oct_2011.pdf»: SKIPPED REP -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2011-10-01 REP: the subclasses of CAT5 sum to 236486.0, the category is 246175.0
+- yearly:2011:Stat_bull_10(154)_oct_2011.pdf «yearly 2011 Stat_bull_10(154)_oct_2011.pdf»: 2011-10-01: no LOCAL sheet or period column
+- yearly:2011:Stat_bull_10(154)_oct_2011.pdf «yearly 2011 Stat_bull_10(154)_oct_2011.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2011:Stat_bull_11(155)_nov_2011.pdf «yearly 2011 Stat_bull_11(155)_nov_2011.pdf»: 2011-11-01: no LOCAL sheet or period column
+- yearly:2011:Stat_bull_11(155)_nov_2011.pdf «yearly 2011 Stat_bull_11(155)_nov_2011.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2011:Stat_bull_12(156)_dec_2011.pdf «yearly 2011 Stat_bull_12(156)_dec_2011.pdf»: 2011-12-01: no LOCAL sheet or period column
+- yearly:2011:Stat_bull_12(156)_dec_2011.pdf «yearly 2011 Stat_bull_12(156)_dec_2011.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2011:Stat_bull_2(146)_feb_2011.pdf «yearly 2011 Stat_bull_2(146)_feb_2011.pdf»: 2011-02-01: no LOCAL sheet or period column
+- yearly:2011:Stat_bull_2(146)_feb_2011.pdf «yearly 2011 Stat_bull_2(146)_feb_2011.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2011:Stat_bull_3(147)_mar_2011.pdf «yearly 2011 Stat_bull_3(147)_mar_2011.pdf»: 2011-03-01: no LOCAL sheet or period column
+- yearly:2011:Stat_bull_3(147)_mar_2011.pdf «yearly 2011 Stat_bull_3(147)_mar_2011.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2011:Stat_bull_4(148)_apr_2011.pdf «yearly 2011 Stat_bull_4(148)_apr_2011.pdf»: 2011-04-01: no LOCAL sheet or period column
+- yearly:2011:Stat_bull_4(148)_apr_2011.pdf «yearly 2011 Stat_bull_4(148)_apr_2011.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2011:Stat_bull_5(149)_may_2011.pdf «yearly 2011 Stat_bull_5(149)_may_2011.pdf»: 2011-05-01: no LOCAL sheet or period column
+- yearly:2011:Stat_bull_5(149)_may_2011.pdf «yearly 2011 Stat_bull_5(149)_may_2011.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2011:Stat_bull_6(150)_jun_2011.pdf «yearly 2011 Stat_bull_6(150)_jun_2011.pdf»: 2011-06-01: no LOCAL sheet or period column
+- yearly:2011:Stat_bull_6(150)_jun_2011.pdf «yearly 2011 Stat_bull_6(150)_jun_2011.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2011:Stat_bull_7(151)_jul_2011.pdf «yearly 2011 Stat_bull_7(151)_jul_2011.pdf»: 2011-07-01: no LOCAL sheet or period column
+- yearly:2011:Stat_bull_7(151)_jul_2011.pdf «yearly 2011 Stat_bull_7(151)_jul_2011.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2011:Stat_bull_9(153)_sep_2011.pdf «yearly 2011 Stat_bull_9(153)_sep_2011.pdf»: SKIPPED STATE -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2011-09-01 STATE: the subclasses of CAT5 sum to 221704.0, the category is 218289.0
+- yearly:2011:Stat_bull_9(153)_sep_2011.pdf «yearly 2011 Stat_bull_9(153)_sep_2011.pdf»: 2011-09-01: no LOCAL sheet or period column
+- yearly:2011:Stat_bull_9(153)_sep_2011.pdf «yearly 2011 Stat_bull_9(153)_sep_2011.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2012:Стат_Бюлл_1(157)_январь  2012.xls «yearly 2012 Стат_Бюлл_1(157)_январь  2012.xls»: SKIPPED LOCAL -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2012-01-01 LOCAL: no «Всего» row or no category rows
+- yearly:2012:Стат_бюлл_2(158)_февраль  2012.xls «yearly 2012 Стат_бюлл_2(158)_февраль  2012.xls»: SKIPPED LOCAL -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2012-02-01 LOCAL: no «Всего» row or no category rows
+- yearly:2012:Стат_бюлл_ИЮЛЬ_2012.xls «yearly 2012 Стат_бюлл_ИЮЛЬ_2012.xls»: SKIPPED LOCAL -- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: 2012-07-01 LOCAL: no «Всего» row or no category rows
+- yearly:2012:Стат_Бюлл_август_8_2012_164.pdf «yearly 2012 Стат_Бюлл_август_8_2012_164.pdf»: 2012-08-01: no LOCAL sheet or period column
+- yearly:2012:Стат_Бюлл_август_8_2012_164.pdf «yearly 2012 Стат_Бюлл_август_8_2012_164.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2012:Стат_Бюллетень апрель_2012_4_160.pdf «yearly 2012 Стат_Бюллетень апрель_2012_4_160.pdf»: 2012-04-01: no LOCAL sheet or period column
+- yearly:2012:Стат_Бюллетень апрель_2012_4_160.pdf «yearly 2012 Стат_Бюллетень апрель_2012_4_160.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2012:Стат_Бюллетень март_2012_3_159.pdf «yearly 2012 Стат_Бюллетень март_2012_3_159.pdf»: 2012-03-01: no LOCAL sheet or period column
+- yearly:2012:Стат_Бюллетень март_2012_3_159.pdf «yearly 2012 Стат_Бюллетень март_2012_3_159.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2012:Стат_бюлл_10_166_Октябрь_2012.pdf «yearly 2012 Стат_бюлл_10_166_Октябрь_2012.pdf»: 2012-10-01: no LOCAL sheet or period column
+- yearly:2012:Стат_бюлл_10_166_Октябрь_2012.pdf «yearly 2012 Стат_бюлл_10_166_Октябрь_2012.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2012:Стат_бюлл_12 (168)_дек_2012.pdf «yearly 2012 Стат_бюлл_12 (168)_дек_2012.pdf»: 2012-12-01: no LOCAL sheet or period column
+- yearly:2012:Стат_бюлл_12 (168)_дек_2012.pdf «yearly 2012 Стат_бюлл_12 (168)_дек_2012.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2012:Стат_бюлл_5_161_май_2012.pdf «yearly 2012 Стат_бюлл_5_161_май_2012.pdf»: 2012-05-01: no LOCAL sheet or period column
+- yearly:2012:Стат_бюлл_5_161_май_2012.pdf «yearly 2012 Стат_бюлл_5_161_май_2012.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2012:Стат_бюлл_6_(162)_2012.pdf «yearly 2012 Стат_бюлл_6_(162)_2012.pdf»: 2012-06-01: no LOCAL sheet or period column
+- yearly:2012:Стат_бюлл_6_(162)_2012.pdf «yearly 2012 Стат_бюлл_6_(162)_2012.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2012:Стат_бюлл_9_165_сент_2012.pdf «yearly 2012 Стат_бюлл_9_165_сент_2012.pdf»: 2012-09-01: no LOCAL sheet or period column
+- yearly:2012:Стат_бюлл_9_165_сент_2012.pdf «yearly 2012 Стат_бюлл_9_165_сент_2012.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
+- yearly:2012:Стат_бюлл_Ноябрь_2012_11.pdf «yearly 2012 Стат_бюлл_Ноябрь_2012_11.pdf»: 2012-11-01: no LOCAL sheet or period column
+- yearly:2012:Стат_бюлл_Ноябрь_2012_11.pdf «yearly 2012 Стат_бюлл_Ноябрь_2012_11.pdf»: sheets: ['табл 4', 'табл 6', 'табл 8 (дох)', 'табл 10']
 
 ## RESOURCE_PAYMENTS_YTD: ok, 1979 rows
 
