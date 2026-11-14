@@ -1,0 +1,188 @@
+sample 2011-01 .. 2026-10 (190 months)
+
+== cache against the repository
+  TOTAL                        mom: 190 common months, max |repo - Taldau| = 0.000
+  TOTAL                        ytd: 190 common months, max |repo - Taldau| = 0.000
+  frukty_i_ovoshchi            mom: 189 common months, max |repo - Taldau| = 0.000
+  frukty_i_ovoshchi            ytd: 190 common months, max |repo - Taldau| = 0.000
+  benzin                       mom: 180 common months, max |repo - Taldau| = 0.000
+  benzin                       ytd: 180 common months, max |repo - Taldau| = 0.000
+  dizelnoe_toplivo             mom: 180 common months, max |repo - Taldau| = 0.000
+  dizelnoe_toplivo             ytd: 180 common months, max |repo - Taldau| = 0.000
+  dizelnoe_toplivo_obshchiy    mom:  10 common months, max |repo - Taldau| = 0.000
+  dizelnoe_toplivo_obshchiy    ytd:  10 common months, max |repo - Taldau| = 0.000
+  tverdoe_toplivo              mom: 120 common months, max |repo - Taldau| = 0.000
+  tverdoe_toplivo              ytd: 120 common months, max |repo - Taldau| = 0.000
+  CP04                         mom: 190 common months, max |repo - Taldau| = 0.000
+  CP04                         ytd: 190 common months, max |repo - Taldau| = 0.000
+  CP07                         mom: 190 common months, max |repo - Taldau| = 0.000
+  CP07                         ytd: 190 common months, max |repo - Taldau| = 0.000
+  cpi_regulated_utilities      mom: 190 common months, max |repo - Taldau| = 0.000
+
+== weights, percent of the CPI basket (source letters in the order fv, petrol, diesel, solid, reg: O official, C implied by BNS contributions, R regression, D diesel/petrol ratio)
+component    fv  petrol  diesel  solid    reg  excluded  market core source
+year                                                                       
+2011       4.44    2.25    0.08   0.60  12.58     19.95        80.05  RRDRR
+2012       3.48    2.56    0.10   0.70  12.88     19.71        80.29  RRDRR
+2013       3.68    2.43    0.09   0.62  12.75     19.58        80.42  RRDRR
+2014       4.53    2.83    0.11   0.96  10.73     19.15        80.85  RRDRR
+2015       5.00    2.66    0.10   1.13  11.10     19.99        80.01  RRDRR
+2016       6.21    2.63    0.10   1.30  10.56     20.80        79.20  RRDRR
+2017       5.94    2.94    0.11   1.28   9.91     20.18        79.82  ORDRR
+2018       5.87    3.17    0.12   1.57   9.87     20.60        79.40  RRDRR
+2019       6.18    3.21    0.12   1.42   8.86     19.79        80.21  ORDRR
+2020       6.00    3.10    0.12   1.70   8.60     19.51        80.49  OCDCC
+2021       5.84    3.06    0.11   1.49   5.50     16.00        84.00  OCDCC
+2022       6.14    2.50    0.09   1.60   5.77     16.10        83.90  OCDCC
+2023       5.74    2.38    0.09   1.64   5.61     15.46        84.54  OCDCC
+2024       6.27    2.39    0.09   1.39   5.17     15.31        84.69  CCDCC
+2025       5.73    4.73    0.18   0.66   3.52     14.82        85.18  CCDCC
+2026       5.66    3.40    0.13   0.78   3.86     13.83        86.17  RCCCC
+
+== alternative estimates (percent)
+      fv used  fv regr  fv contrib  petrol used  petrol regr  petrol contrib  solid used  solid regr  solid contrib  reg used  reg tree  reg direct  reg contrib  reg contrib se  diesel contrib  diesel regr
+year                                                                                                                                                                                                         
+2011     4.44     4.44         NaN         2.25         2.25             NaN        0.60        0.60            NaN     12.58     13.46       11.70          NaN             NaN             NaN         0.00
+2012     3.48     3.48         NaN         2.56         2.56             NaN        0.70        0.70            NaN     12.88     13.00       12.76          NaN             NaN             NaN         0.00
+2013     3.68     3.68         NaN         2.43         2.43             NaN        0.62        0.62            NaN     12.75     13.37       12.14          NaN             NaN             NaN         0.19
+2014     4.53     4.53         NaN         2.83         2.83             NaN        0.96        0.96            NaN     10.73     10.74       10.71          NaN             NaN             NaN         0.08
+2015     5.00     5.00         NaN         2.66         2.66             NaN        1.13        1.13            NaN     11.10     11.10       10.39          NaN             NaN             NaN         0.00
+2016     6.21     6.21         NaN         2.63         2.63             NaN        1.30        1.30            NaN     10.56     10.56       10.16          NaN             NaN             NaN         0.00
+2017     5.94     5.76         NaN         2.94         2.94             NaN        1.28        1.28            NaN      9.91     10.22        9.61          NaN             NaN             NaN         0.00
+2018     5.87     5.87         NaN         3.17         3.17             NaN        1.57        1.57            NaN      9.87     10.11        9.63          NaN             NaN             NaN         0.51
+2019     6.18     5.95         NaN         3.21         3.21             NaN        1.42        1.42            NaN      8.86      8.90        8.83          NaN             NaN             NaN         0.00
+2020     6.00     6.21        6.02         3.10         2.92            3.10        1.70        1.93           1.70      8.60      7.53        7.02         8.60            0.11             NaN         0.00
+2021     5.84     5.69        5.83         3.06         3.08            3.06        1.49        1.77           1.49      5.50      5.81        4.50         5.50            0.02             NaN         0.00
+2022     6.14     6.29        6.13         2.50         2.66            2.50        1.60        1.83           1.60      5.77      5.96        8.03         5.77            0.02             NaN         0.00
+2023     5.74     6.00        5.74         2.38         2.38            2.38        1.64        1.70           1.64      5.61      6.04        5.74         5.61            0.00             NaN         0.00
+2024     6.27     5.98        6.27         2.39         2.30            2.39        1.39        1.29           1.39      5.17      5.30        4.83         5.17            0.00             NaN         0.00
+2025     5.73     5.41        5.73         4.73         4.82            4.73        0.66        0.65           0.66      3.52      3.89        3.85         3.52            0.00             NaN         0.04
+2026     5.66     5.66         NaN         3.40         2.49            3.40        0.78        0.77           0.78      3.86      3.94        4.05         3.86            0.01            0.13         0.07
+
+   max |residual| of the regressions used, index points (rounding of the data is 0.05):
+year    2011  2012  2013  2014  2015  2016  2017  2018  2019  2020  2021  2022  2023  2024  2025  2026
+fv      0.07  0.10  0.08  0.08  0.08  0.06  0.05  0.05  0.07  0.07  0.08  0.07  0.09  0.10  0.06  0.05
+petrol  0.09  0.07  0.07  0.08  0.07  0.10  0.07  0.07  0.07  0.08  0.06  0.07  0.07  0.08  0.07  0.17
+solid   0.06  0.08  0.07  0.08  0.09  0.05  0.08  0.04  0.08  0.05  0.05  0.06  0.06  0.07  0.09  0.04
+reg     0.07  0.08  0.07  0.08  0.09  0.06  0.08  0.05  0.08  0.05  0.05  0.06  0.06  0.07  0.09  0.06
+
+seasonal adjustment of the *_sa columns: X-13 ({'calendar': 'kz'})
+
+== validation (i): the identity
+  December = 100 form, headline - [(1-W) core + sum w_i I_i]: max |.| = 2.8e-14 index points (exact)
+  month-on-month form with the published m/m of headline and components (all rounded to 0.1): max |.| = 0.140 pp
+  by year: 2011 0.14, 2012 0.11, 2013 0.10, 2014 0.08, 2015 0.10, 2016 0.09, 2017 0.11, 2018 0.04, 2019 0.07, 2020 0.12, 2021 0.11, 2022 0.05, 2023 0.12, 2024 0.11, 2025 0.09, 2026 0.07
+  annual weights applied to m/m changes unchanged instead: 12-month inflation differs by mean +0.048, max |.| 0.476 pp
+
+== validation (ii): weights
+  fruit and vegetables, regression against the official weight (percent):
+    2017: official 5.94  regression 5.76  contributions nan
+    2019: official 6.18  regression 5.95  contributions nan
+    2020: official 6.00  regression 6.21  contributions 6.02
+    2021: official 5.84  regression 5.69  contributions 5.83
+    2022: official 6.14  regression 6.29  contributions 6.13
+    2023: official 5.74  regression 6.00  contributions 5.74
+  regression against the weights implied by BNS contributions, years where the latter are identified:
+    petrol  regression        : 7 years, mean error -0.13, mean |error| 0.21, max |error| 0.91 pp of the basket
+    solid   regression        : 7 years, mean error +0.10, mean |error| 0.13, max |error| 0.27 pp of the basket
+    reg     regression_tree   : 7 years, mean error +0.06, mean |error| 0.37, max |error| 1.07 pp of the basket
+    reg     regression_direct : 7 years, mean error -0.00, mean |error| 0.83, max |error| 2.26 pp of the basket
+    reg     regression        : 7 years, mean error -0.12, mean |error| 0.39, max |error| 1.33 pp of the basket
+  shares of the divisions (official division weights; the excluded part must be below them):
+      div 04  solid+reg  div 07  petrol+diesel  share of 04  share of 07
+year                                                                    
+2011   17.72      13.18    8.30           2.34         0.74         0.28
+2012   17.77      13.57    8.45           2.66         0.76         0.31
+2013   17.76      13.37    8.51           2.52         0.75         0.30
+2014   16.72      11.69    8.77           2.94         0.70         0.33
+2015   16.63      12.23    8.96           2.76         0.74         0.31
+2016   16.66      11.86    9.03           2.73         0.71         0.30
+2017   15.90      11.20    9.91           3.05         0.70         0.31
+2018   15.14      11.43    9.70           3.29         0.76         0.34
+2019   14.34      10.28    9.75           3.33         0.72         0.34
+2020   14.58      10.30    9.54           3.22         0.71         0.34
+2021   14.61       6.99    9.57           3.17         0.48         0.33
+2022   14.60       7.37    7.64           2.59         0.50         0.34
+2023   13.95       7.25    7.09           2.47         0.52         0.35
+2024   12.60       6.56    7.17           2.48         0.52         0.35
+2025   11.07       4.18    7.85           4.91         0.38         0.63
+2026    9.62       4.64    8.68           3.53         0.48         0.41
+  CPI without fruit and vegetables: mine against BNS (Taldau 4772554), m/m: mean +0.007, mean |.| 0.042, max |.| 0.12 pp
+  CPI without fruit and vegetables, petrol and solid fuel: mine against BNS core (ex F&V, petrol, coal), m/m, 2011-02..2026-09: mean +0.003, mean |.| 0.045, max |.| 0.21 pp
+    by year, mean |.|: 2011 0.054, 2012 0.048, 2013 0.049, 2014 0.019, 2015 0.047, 2016 0.056, 2017 0.049, 2018 0.019, 2019 0.038, 2020 0.066, 2021 0.043, 2022 0.031, 2023 0.053, 2024 0.042, 2025 0.062, 2026 0.050
+    12-month rates against BNS's published year-on-year core: mean +0.03, mean |.| 0.14, max |.| 0.61 pp (2012-01..2026-09)
+
+== validation (iii): 12-month market core inflation when one excluded weight is changed by -/+ 30 %, pp
+         market core  fv -30%  fv +30%  petrol -30%  petrol +30%  diesel -30%  diesel +30%  solid -30%  solid +30%  reg -30%  reg +30%
+2012-12         5.59    -0.01     0.01        -0.03         0.03        -0.00         0.00        0.01       -0.01      0.18     -0.20
+2013-12         4.34    -0.06     0.06        -0.02         0.03         0.00        -0.00        0.01       -0.01      0.23     -0.26
+2014-12         7.68     0.06    -0.06        -0.07         0.07         0.00        -0.00       -0.00        0.00     -0.09      0.10
+2015-12        14.16     0.06    -0.06        -0.09         0.10        -0.01         0.01       -0.02        0.02     -0.14      0.15
+2016-12         8.86    -0.07     0.08        -0.02         0.02         0.01        -0.01       -0.03        0.03     -0.02      0.02
+2017-12         6.31     0.05    -0.05         0.12        -0.13         0.01        -0.01        0.04       -0.04      0.07     -0.08
+2018-12         6.88    -0.29     0.30        -0.11         0.12         0.01        -0.01       -0.03        0.03     -0.17      0.18
+2019-12         7.16    -0.02     0.02        -0.14         0.14        -0.00         0.00       -0.03        0.03     -0.45      0.48
+2020-12         7.94     0.13    -0.14        -0.06         0.06        -0.01         0.01       -0.03        0.03     -0.20      0.21
+2021-12         8.05     0.05    -0.05         0.12        -0.13         0.02        -0.02        0.01       -0.01     -0.08      0.08
+2022-12        22.21    -0.03     0.03        -0.20         0.20        -0.00         0.00       -0.07        0.07     -0.38      0.39
+2023-12         9.02     0.01    -0.01         0.04        -0.04         0.00        -0.00        0.01       -0.01      0.22     -0.22
+2024-12         7.98     0.03    -0.03        -0.06         0.06        -0.00         0.00        0.01       -0.01      0.24     -0.24
+2025-12        12.72    -0.10     0.10         0.05        -0.05         0.00        -0.00       -0.01        0.01     -0.09      0.09
+2026-10         9.93    -0.21     0.21        -0.02         0.02        -0.00         0.00       -0.01        0.01      0.00     -0.00
+  all months: mean |change| / max |change|: fv 0.12/0.44; petrol 0.08/0.21; diesel 0.01/0.02; solid 0.02/0.07; reg 0.19/0.60
+
+== comparison with models/cpi_components/market_core_index.csv (old)
+  the old base reproduces as (BNS core ex F&V, petrol, coal - u * regulated utilities) / (1 - u), m/m;
+  u (share of the BNS core basket), median by year: 2011 0.0675, 2012 0.0671, 2013 0.0669, 2014 0.0674, 2015 0.0671, 2016 0.0674, 2017 0.0672, 2018 0.0675, 2019 0.0675, 2020 0.0675, 2021 0.0675, 2022 0.0678, 2023 0.0673, 2024 0.0607, 2025 0.0455, 2026 0.0450
+  max |old m/m - that formula| = 0.033 pp over 186 months
+  m/m, old - new, 2011-03..2026-08: mean -0.005, mean |.| 0.060, max |.| 0.29 pp (2013-01)
+       mean  mean abs  max abs month of max
+2011 -0.021     0.078    0.157      2011-05
+2012  0.018     0.070    0.261      2012-04
+2013  0.020     0.075    0.288      2013-01
+2014 -0.007     0.042    0.096      2014-02
+2015  0.013     0.083    0.189      2015-12
+2016 -0.006     0.060    0.123      2016-07
+2017 -0.006     0.061    0.156      2017-12
+2018 -0.016     0.032    0.089      2018-08
+2019 -0.026     0.055    0.156      2019-02
+2020 -0.041     0.085    0.164      2020-03
+2021 -0.001     0.042    0.101      2021-05
+2022  0.033     0.037    0.080      2022-07
+2023 -0.020     0.059    0.193      2023-08
+2024 -0.029     0.047    0.129      2024-10
+2025  0.014     0.077    0.270      2025-10
+2026 -0.018     0.058    0.158      2026-08
+  12-month inflation, percent:
+         headline  old mkt_base  new mkt_base  new low  new high  old low  old high  BNS CORE_EX3  BNS CORE_EX7  regulated  old - new
+2015-12     13.60         14.35         14.16    14.02     14.31    14.27     14.43          13.9           NaN      10.72       0.19
+2016-12      8.50          8.77          8.86     8.83      8.88     8.76      8.79           8.8           NaN       8.10      -0.08
+2017-12      7.10          6.24          6.31     6.38      6.23     6.28      6.19           6.5           NaN       8.35      -0.07
+2018-12      5.30          6.69          6.88     6.72      7.07     6.59      6.79           6.4           NaN       2.20      -0.20
+2019-12      5.40          6.84          7.16     6.71      7.64     6.52      7.16           5.9           NaN      -6.93      -0.33
+2020-12      7.50          7.42          7.94     7.75      8.15     7.29      7.55           7.2           NaN       1.62      -0.53
+2021-12      8.40          8.03          8.05     7.97      8.13     7.95      8.12           7.9           NaN       4.05      -0.01
+2022-12     20.30         22.68         22.21    21.84     22.60    22.25     23.14          21.2         22.44       3.74       0.47
+2023-12      9.80          8.76          9.02     9.24      8.79     8.99      8.53           9.4          8.80      20.06      -0.26
+2024-12      8.60          7.62          7.98     8.22      7.74     7.86      7.36           8.3          7.60      21.32      -0.37
+2025-12     12.30         12.91         12.72    12.63     12.81    12.80     13.02          12.4         12.70       5.57       0.19
+2026-08      9.82         11.39         11.02    10.84     11.21    11.17     11.62          10.7         11.20      -3.11       0.37
+2026-10      9.25           NaN          9.93     9.93      9.93      NaN       NaN          10.0         10.00       9.38        NaN
+  12-month rates, old - new, all months: mean -0.06, mean |.| 0.26, max |.| 0.74 pp (2013-03)
+  old - new in 12-month inflation = (1) + (2) + (3), pp:
+           old  (1) starting index  (2) utilities weight  (3) diesel    new  old utilities weight, % of CPI  new utilities weight, % of CPI
+2015-12  14.35                0.42                 -0.20       -0.03  14.16                            6.12                           11.10
+2016-12   8.77               -0.09                 -0.03        0.04   8.86                            6.06                           10.56
+2017-12   6.24               -0.20                  0.09        0.04   6.31                            6.04                            9.91
+2018-12   6.69               -0.01                 -0.22        0.03   6.88                            6.03                            9.87
+2019-12   6.84                0.16                 -0.48       -0.01   7.16                            6.02                            8.86
+2020-12   7.42               -0.31                 -0.20       -0.02   7.94                            6.02                            8.60
+2021-12   8.03               -0.09                  0.03        0.05   8.05                            6.05                            5.50
+2022-12  22.68                0.41                  0.07       -0.01  22.21                            6.09                            5.77
+2023-12   8.76               -0.20                 -0.06        0.01   9.02                            6.07                            5.61
+2024-12   7.62               -0.31                 -0.05       -0.01   7.98                            5.46                            5.17
+2025-12  12.91                0.14                  0.04        0.00  12.72                            4.05                            3.52
+2026-08  11.39                0.26                  0.11       -0.00  11.02                            4.06                            3.86
+  all months, mean |.|: (1) starting index 0.19 (max 0.59), (2) utilities weight 0.17 (max 0.81), (3) diesel 0.02 (max 0.05)
+  BNS core (ex F&V, petrol, coal): twelve chained m/m (0.1 rounding) minus BNS's own year-on-year, 2012-01..2026-09: mean -0.01, mean |.| 0.09, max |.| 0.32 pp (2020-05); Decembers: 2015 +0.20, 2016 -0.07, 2017 -0.12, 2018 -0.02, 2019 -0.05, 2020 -0.18, 2021 -0.14, 2022 +0.11, 2023 +0.09, 2024 +0.11, 2025 +0.17
+  level, old / new (both = 1 in 2011-02): 0.9902 in 2026-08
