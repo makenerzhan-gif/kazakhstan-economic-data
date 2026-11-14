@@ -11,11 +11,11 @@
   "geography": "Kazakhstan (national)",
   "methodology": "From GS_YIELD_3M … GS_YIELD_10Y (KASE zero-coupon curve, monthly, from 2019-11), TONIA and BASE_RATE (monthly means) and INFLATION_EXPECTATIONS. A negative slope = an inverted curve (the market prices rate cuts). The sovereign US-dollar spread is KZ_EUROBOND_SPREAD (KASE), the tenge-dollar differentials are KZT_USD_RATE_DIFF_*.",
   "publication_date": null,
-  "last_update_date": "2026-11-13",
-  "download_date": "2026-11-13",
+  "last_update_date": "2026-11-14",
+  "download_date": "2026-11-14",
   "period_start": "2015-09-01",
   "period_end": "2026-11-01",
   "next_update_date": null,
   "transformation": "derived (see the note)",
-  "revision_status": "original"
+  "revision_status": "revised"
 }

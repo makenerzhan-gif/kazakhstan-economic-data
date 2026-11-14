@@ -473,7 +473,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,TONIA_BASE_SPREAD,"TONIA минус базовая ставка (средние за месяц), п.п.",-0.639,level
 2026-09-01,national,TONIA_BASE_SPREAD,"TONIA минус базовая ставка (средние за месяц), п.п.",-0.3514,level
 2026-10-01,national,TONIA_BASE_SPREAD,"TONIA минус базовая ставка (средние за месяц), п.п.",-0.4379,level
-2026-11-01,national,TONIA_BASE_SPREAD,"TONIA минус базовая ставка (средние за месяц), п.п.",-0.45,level
+2026-11-01,national,TONIA_BASE_SPREAD,"TONIA минус базовая ставка (средние за месяц), п.п.",-0.47,level
 2019-11-01,national,REAL_GS_10Y_EX_ANTE,"Реальная доходность ГЦБ на 10 лет ex ante (по ожиданиям населения), %",-2.6581,level
 2019-12-01,national,REAL_GS_10Y_EX_ANTE,"Реальная доходность ГЦБ на 10 лет ex ante (по ожиданиям населения), %",-2.6484,level
 2020-01-01,national,REAL_GS_10Y_EX_ANTE,"Реальная доходность ГЦБ на 10 лет ex ante (по ожиданиям населения), %",0.1107,level
