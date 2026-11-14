@@ -3,7 +3,8 @@ name: Backfill Minfin bulletin datasets
 # One-off history load for the item-level datasets read from the Minfin Statistical Bulletin
 # (economic classification of expenditure, subsoil payments, receipts by budget code). The
 # regular run sees only the latest ~14 editions; this reads every edition Minfin keeps online
-# (monthly from January 2019, yearly archives for 2013-2018). gov.kz answers GitHub's runners
+# (monthly from January 2019, yearly archives for 2005-2018; the editions of 2005-2012 are PDF and
+# are read by scripts/fetchers/minfin_pdf.py). gov.kz answers GitHub's runners
 # but not the development sandbox, which is why this is a workflow.
 #
 # Started by hand, or by a push to a claude/** branch that touches the files below (so the
@@ -15,16 +16,17 @@ on:
     inputs:
       yearly:
         description: "Yearly archives to read as well (FIRST-LAST), empty for none"
-        default: "2013-2018"
+        default: "2005-2018"
       datasets:
         description: "Datasets (space-separated)"
-        default: "BUDGET_EXPENDITURE_ECONOMIC_YTD RESOURCE_PAYMENTS_YTD BUDGET_RECEIPTS_BY_CODE_YTD"
+        default: "BUDGET_EXPENDITURE_ECONOMIC_YTD BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD RESOURCE_PAYMENTS_YTD BUDGET_RECEIPTS_BY_CODE_YTD"
   push:
     branches: ["claude/**"]
     paths:
       - ".github/workflows/backfill-bulletins.yml"
       - "scripts/backfill_minfin_bulletins.py"
       - "scripts/fetchers/minfin_classification.py"
+      - "scripts/fetchers/minfin_pdf.py"
 
 concurrency:
   group: backfill-bulletins-${{ github.ref }}
@@ -33,12 +35,12 @@ concurrency:
 jobs:
   backfill:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     permissions:
       contents: write
     env:
-      YEARLY: ${{ github.event.inputs.yearly || '2013-2018' }}
-      DATASETS: ${{ github.event.inputs.datasets || 'BUDGET_EXPENDITURE_ECONOMIC_YTD RESOURCE_PAYMENTS_YTD BUDGET_RECEIPTS_BY_CODE_YTD' }}
+      YEARLY: ${{ github.event.inputs.yearly || '2005-2018' }}
+      DATASETS: ${{ github.event.inputs.datasets || 'BUDGET_EXPENDITURE_ECONOMIC_YTD BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD RESOURCE_PAYMENTS_YTD BUDGET_RECEIPTS_BY_CODE_YTD' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -51,7 +53,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          sudo apt-get install -y -q p7zip-full unar > /dev/null
+          sudo apt-get install -y -q p7zip-full p7zip-rar unar unrar poppler-utils > /dev/null
 
       - name: Bulletin cache
         uses: actions/cache@v4

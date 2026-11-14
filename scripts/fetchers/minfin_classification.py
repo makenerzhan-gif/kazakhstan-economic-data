@@ -112,20 +112,24 @@ def check_sums(lines: list[tuple[str, str, float]], ds: dict, where: str) -> Non
         vals[code] = v
         order.append(code)
     cats = [c for c in order if c.startswith("CAT")]
-    tol = lambda x: 0.5 + 1e-4 * abs(x)                                  # noqa: E731
+    # the PDF editions of 2005-2012 print whole millions: every term of a sum can be half a million off
+    whole = all(float(v).is_integer() for v in vals.values())
+    tol = lambda x, n=1: 0.5 + 1e-4 * abs(x) + (0.5 * n if whole else 0.0)   # noqa: E731
     if "TOTAL" not in vals or not cats:                                  # nothing to check against: not this table
         _structural(ds, f"{where}: no «Всего» row or no category rows")
-    if "TOTAL" in vals and cats and abs(sum(vals[c] for c in cats) - vals["TOTAL"]) > tol(vals["TOTAL"]):
+    if "TOTAL" in vals and cats and abs(sum(vals[c] for c in cats) - vals["TOTAL"]) > tol(vals["TOTAL"], len(cats)):
         _structural(ds, f"{where}: categories sum to {sum(vals[c] for c in cats):.1f}, «Всего» is {vals['TOTAL']:.1f}")
     current = None
     parts: dict[str, float] = {}
+    count: dict[str, int] = {}
     for code in order:
         if code.startswith("CAT"):
             current = code
         elif current and re.fullmatch(r"\d{2}0", code):                  # subclasses end in 0, specifics do not
             parts[current] = parts.get(current, 0.0) + vals[code]
+            count[current] = count.get(current, 0) + 1
     for cat, total in parts.items():
-        if abs(total - vals[cat]) > tol(vals[cat]):
+        if abs(total - vals[cat]) > tol(vals[cat], count[cat]):
             _structural(ds, f"{where}: the subclasses of {cat} sum to {total:.1f}, the category is {vals[cat]:.1f}")
 
 
@@ -154,7 +158,7 @@ def _column(rows: list[list], year: int, month: int) -> int | None:
     return col
 
 
-def economic_edition(sheets: dict[str, list[list]], ds: dict) -> tuple[str | None, list[dict], list[str]]:
+def economic_edition(sheets: dict[str, list[list]], ds: dict, gfs: bool = True) -> tuple[str | None, list[dict], list[str]]:
     wanted = {minfin._sheet_key(n): rows for n, rows in sheets.items() if minfin._sheet_key(n) in ECON_SHEETS}
     period = _edition_period(wanted)
     if period is None:
@@ -176,7 +180,7 @@ def economic_edition(sheets: dict[str, list[list]], ds: dict) -> tuple[str | Non
                 raise
             notes += [f"SKIPPED {budget} -- {str(exc)[:200]}"] + _top_rows({key: rows})   # the other budgets of the edition are kept
             continue
-        for code, label, v in lines + gfs_lines(lines):
+        for code, label, v in lines + (gfs_lines(lines) if gfs else []):
             records.append({"date": d, "region": dims.NATIONAL, "item_code": f"{budget}.{code}",
                             "item_name": f"{BUDGET_NAMES[budget]}: {label}", "value": round(v, 4)})
     return d, records, notes
@@ -267,10 +271,39 @@ def _merge(ds: dict, got: dict[str, list[dict]]) -> list[dict]:
     return sorted(records, key=lambda r: (r["item_code"], r["date"]))
 
 
+# The economic classification of expenditure was renumbered from 2013 (130 is «Приобретение товаров» in 2012 and
+# «Выплата заработной платы отдельным категориям граждан…» from 2013), so the editions of 2005-2012 are a dataset of
+# their own: the same code is not the same item across that line, and the GFS bridge is written for the new codes.
+OLD_CLASSIFICATION_BEFORE = "2013-01-01"
+
+
 def fetch_economic(ds: dict) -> tuple[list[dict], dict]:
-    got, warnings = _read_editions(ds, set(ECON_SHEETS), lambda sheets: economic_edition(sheets, ds))
+    def edition(sheets):
+        d, records, notes = economic_edition(sheets, ds)
+        if d and d < OLD_CLASSIFICATION_BEFORE:
+            return d, [], []
+        return d, records, notes
+    got, warnings = _read_editions(ds, set(ECON_SHEETS), edition)
     return _merge(ds, got), {"frequency": "monthly", "source_url": minfin.LISTING_URL,
                              "dataset_id": "Statistical Bulletin tables 6, 10, 11", "note": ds.get("note", ""), "warnings": warnings}
+
+
+def fetch_economic_old(ds: dict) -> tuple[list[dict], dict]:
+    """The editions of 2005-2012 (PDF, read through fetchers/minfin_pdf.py), under the classification of those
+    years. The daily run has none of them listed and returns the stored rows; the history is loaded by
+    scripts/backfill_minfin_bulletins.py --yearly 2005-2012."""
+    meta = {"frequency": "monthly", "source_url": minfin.LISTING_URL, "dataset_id": "Statistical Bulletin, economic classification of expenditure, 2005-2012",
+            "note": ds.get("note", ""), "warnings": []}
+    if not minfin.BULLETIN_ARCHIVE:
+        return _merge(ds, {}), meta
+
+    def edition(sheets):
+        d, records, notes = economic_edition(sheets, ds, gfs=False)
+        if d and d >= OLD_CLASSIFICATION_BEFORE:
+            return d, [], []
+        return d, records, notes
+    got, meta["warnings"] = _read_editions(ds, set(ECON_SHEETS), edition)
+    return _merge(ds, got), meta
 
 
 # ---------------------------------------------------------------- resource payments
@@ -348,7 +381,15 @@ def resource_edition(sheets: dict[str, list[list]], ds: dict, nf: dict[str, floa
 
 def fetch_resource(ds: dict) -> tuple[list[dict], dict]:
     nf = _nf_oil_direct()
-    got, warnings = _read_editions(ds, {"таб4"}, lambda sheets: resource_edition(sheets, ds, nf))
+    def edition(sheets):
+        d, records, notes = resource_edition(sheets, ds, nf)
+        if d and d < OLD_CLASSIFICATION_BEFORE and records:
+            # the PDF editions: the lines are found by name, so the table they stand in must first add up
+            _, receipts, _ = receipts_edition(sheets, {"id": ds["id"]})
+            if not any(r["item_code"] == "STATE.TOTAL" for r in receipts):
+                return d, [], [f"{d}: «табл 4» does not add up, its resource lines are not taken"]
+        return d, records, notes
+    got, warnings = _read_editions(ds, {"таб4"}, edition)
     return _merge(ds, got), {"frequency": "monthly", "source_url": minfin.LISTING_URL,
                              "dataset_id": "Statistical Bulletin table 4", "note": ds.get("note", ""), "warnings": warnings}
 
@@ -356,7 +397,8 @@ def fetch_resource(ds: dict) -> tuple[list[dict], dict]:
 # ---------------------------------------------------------------- receipts by budget code
 
 RECEIPT_SHEETS = {"таб4": "STATE", "таб8(дох)": "REP"}
-RECEIPT_TOP = (("TOTAL", r"^поступления\*?$"), ("REVENUE", r"^доходы\*?$"))    # «ПОСТУПЛЕНИЯ*» in the 2019-2020 editions
+# «ПОСТУПЛЕНИЯ*» in the 2019-2020 editions, «I. ДОХОДЫ» in the PDF of January 2008
+RECEIPT_TOP = (("TOTAL", r"^поступления\*?$"), ("REVENUE", r"^(i\.\s*)?доходы\*?$"))
 REVENUE_CATEGORIES = ("1", "2", "3", "4", "5")      # «ДОХОДЫ»; «ПОСТУПЛЕНИЯ» adds 6 and 7
 # The 2026 Budget Code put «Специальные поступления» in as category 4 and moved the three after it
 # down by one (transfers 4 -> 5, repayment of budget loans 5 -> 6, sale of financial assets 6 -> 7).
@@ -364,9 +406,10 @@ REVENUE_CATEGORIES = ("1", "2", "3", "4", "5")      # «ДОХОДЫ»; «ПОС
 # one code is one thing in every year.
 RECEIPT_CATEGORIES = (("1", r"^налоговые поступления"), ("2", r"^неналоговые поступления"),
                       ("3", r"^поступления от продажи основного капитала"), ("4", r"^специальные поступления"),
-                      ("5", r"^поступления трансфертов"), ("6", r"^погашение бюджетных кредитов"),
+                      ("5", r"^поступления (официальных )?трансфертов"), ("6", r"^погашение бюджетных кредитов"),
                       ("7", r"^поступления от продажи финансовых активов"),
-                      ("8", r"^поступления займов"), ("9", r"^используемые остатки бюджетных средств"))
+                      ("8", r"^поступлени[ея] займов"),
+                      ("9", r"^(используемые остатки|движение остатков) бюджетных средств"))
 # 8 and 9 (borrowing and the use of balances) were printed in the table until 2021 under the old
 # numbers 7 and 8; «ПОСТУПЛЕНИЯ» of those editions includes them.
 
@@ -449,6 +492,8 @@ def check_receipts(lines: list[tuple[str, str, float]], revenue_optional: bool =
         if code in vals:
             bad.append(f"code {code} twice")
         vals[code] = v
+    whole = all(float(v).is_integer() for v in vals.values())     # the PDF editions of 2005-2012 print whole millions
+    slack = lambda n: 0.5 * (n + 1) if whole else 0.0             # noqa: E731
     def children(parent, n):
         return [v for k, v in vals.items() if k.isdigit() and len(k) == n and k.startswith(parent)]
     for code, v in vals.items():
@@ -458,14 +503,14 @@ def check_receipts(lines: list[tuple[str, str, float]], revenue_optional: bool =
         if not kids:
             if code != "9":                              # the use of balances is one figure with nothing under it
                 bad.append(f"{code} has no lines below it")
-        elif abs(sum(kids) - v) > max(1.0, 1e-6 * abs(v)):
+        elif abs(sum(kids) - v) > max(1.0, 1e-6 * abs(v)) + slack(len(kids)):
             bad.append(f"{code}: {v:.1f} against {sum(kids):.1f} below it")
     cats = {k: v for k, v in vals.items() if k.isdigit() and len(k) == 1}
     for top, keys in (("REVENUE", REVENUE_CATEGORIES), ("TOTAL", tuple("123456789"))):
         if top not in vals:
             if not (top == "REVENUE" and revenue_optional):
                 bad.append(f"no {top} row")
-        elif abs(sum(cats.get(k, 0.0) for k in keys) - vals[top]) > max(2.0, 1e-6 * abs(vals[top])):
+        elif abs(sum(cats.get(k, 0.0) for k in keys) - vals[top]) > max(2.0, 1e-6 * abs(vals[top])) + slack(len(keys)):
             bad.append(f"{top}: {vals[top]:.1f} against {sum(cats.get(k, 0.0) for k in keys):.1f} in categories")
     return bad
 
@@ -501,8 +546,10 @@ def receipts_edition(sheets: dict[str, list[list]], ds: dict) -> tuple[str | Non
             # Editions of 2015-2018 leave some specifics out of the printed table, so a subclass can exceed the
             # lines under it while every level above adds up. Such an edition is kept as printed and the
             # subclasses concerned are reported; any other break still drops the budget.
+            # Not for the PDF editions (before 2013): there a subclass that does not add up is as likely a
+            # code read one row off, and the sum is the only guard.
             incomplete = [b for b in bad if re.match(r"\d{4}[: ]", b)]
-            if len(incomplete) == len(bad):
+            if len(incomplete) == len(bad) and d >= OLD_CLASSIFICATION_BEFORE:
                 notes.append(f"{d} {budget}: INCOMPLETE specifics, kept as printed -- " + "; ".join(bad[:6]))
                 bad = []
         if bad:

@@ -607,23 +607,37 @@ issues:
       Treat the positions from 1 April 2024 on as a superseded vintage; until form 309 is refreshed, take
       current net IIP from IMF_IIP_QUARTERLY (NETAL_P.NIIP), which equals the NBK workbook.
 
-  - id: qna_production_2026_withdrawn
-    kind: caveat
-    variable: QNA_GVA_BY_SECTION
-    also: [QNA_GVA_BY_SECTION_CONSTANT_2010, QNA_GVA_VOLUME_INDEX_BY_SECTION, QNA_GVA_VOLUME_INDEX_BY_SECTION_YTD,
-           QNA_GVA_DEFLATOR_BY_SECTION_YTD, QNA_GVA_BY_SECTION_SA, QNA_GVA_BY_SECTION_SA_CONSTANT_2010]
+  - id: qna_2026_first_estimate
+    kind: preliminary
+    variable: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010
+    also: [QNA_GDP_EXPENDITURE_CONSTANT_2010, QNA_GVA_BY_SECTION, QNA_GVA_BY_SECTION_CONSTANT_2010,
+           QNA_GVA_VOLUME_INDEX_BY_SECTION, QNA_GVA_VOLUME_INDEX_BY_SECTION_YTD, QNA_GVA_DEFLATOR_BY_SECTION_YTD,
+           QNA_GVA_BY_SECTION_SA, QNA_GVA_BY_SECTION_SA_CONSTANT_2010]
+    observations:
+      - {date: "2026-01-01", item: GDP, value: 10482201.6}
+      - {date: "2026-04-01", item: GDP, value: 11163843.2}
     evidence: >
-      BNS element 283162 «ВВП методом производства (на квартальной основе)» carried 2026 Q1-Q2 from 16-17.10.2026
-      (archived bns_qna_gva_by_section_2026-10-17.xlsx and _2026-10-19.xlsx) and was replaced on 20.10.2026 by a file
-      ending at 2025 Q4 (bns_qna_gva_by_section_2026-10-21.xlsx, still the live file on 29.10.2026), so the series
-      lost 2026 again in the run of 2026-10-21. The withdrawn release had GDP 2026 Q2 at 113.8 % of Q2 2025 in
-      2010 prices (11 623.7 against 10 217.4 bn KZT), H1 109.5 %, seasonally adjusted Q2/Q1 +7.6 %, while BNS's
-      own cumulative table 4439/4440 gives GDP Q1 103.0 %, H1 104.1 % (Q2 alone 105.2 %, GVA_VOLUME_INDEX_BY_SECTION_DISCRETE).
-      Its nominal Q2 growth (+18.9 %) matches table 4439's (+20.1 %), so the gap is in the deflator: about 104.5 %
-      against CPI 110.4 % and industrial producer prices 111-117 % y/y in Q2 2026.
+      The quarterly accounts (BNS elements 283161 expenditure, 283162 production) put real GDP of 2026 at 101.4 %
+      (Q1) and 108.2 % (Q2) of a year earlier, seasonally adjusted -1.2 % and +6.5 % quarter on quarter (-2.6 % and
+      +7.3 % on the production side); BNS's cumulative table 4439/4440 gives 103.0 % and 105.2 %
+      (GVA_VOLUME_INDEX_BY_SECTION_DISCRETE). The swing is in the unadjusted accounts, not in the seasonal
+      adjustment (our own X-13 of the unadjusted series gives -2.6 % and +7.9 %), and mostly in mining: the
+      accounts have section B at 82.2 % and 118.7 %, table 4439 at 88.5 % and 101.8 %, the mining production index
+      at 89.4 % and 103.3 %, oil and condensate tonnes at 80.1 % and 102.8 %. Oil output did fall in Q1 and recover
+      in Q2 (+31 % q/q), so about +2.6 % q/q of GDP is real on the table-4439 basis. History of the release: the
+      production file carried 2026 from 16.10.2026 with Q2 at 113.8 %, was replaced on 20.10.2026 by one ending at
+      2025 Q4 and republished on 11.11.2026 with the figures above; between the expenditure workbooks of 23.09 and
+      04.11.2026 the unadjusted 2026 Q1 was cut by 2.5 % (104.1 % -> 101.4 %). The 2026 columns carry no
+      «preliminary» mark. Two more properties of the adjusted expenditure table (sheet «6»): exports (and
+      inventories) are the UNADJUSTED values in every quarter from 2013, and the components do not add up to
+      adjusted GDP (each series is adjusted directly, no discrepancy row); the constant-price export row repeats
+      seven values across fifteen quarters (e.g. 2019 Q1 = 2023 Q1 = 2 573 728.5). Checked 2026-11-14, see
+      docs/check_gdp_sa_and_ip_2026-11-14.md.
     advice: >-
-      Do not use the 2026 columns of the archived 16-17.10.2026 files; until BNS republishes the quarterly accounts
-      for 2026, take quarterly growth from GVA_VOLUME_INDEX_BY_SECTION_DISCRETE (table 4439/4440 basis).
+      Treat 2026 Q1-Q2 of the quarterly accounts as a first estimate with a revision risk of 2-3 % of the level:
+      end estimation at 2025 Q4 or run a sensitivity with the 2025 levels extended by table-4439 growth
+      (GDP, SA: 10 604 260 and 10 884 058). Do not read the adjusted expenditure components as a decomposition
+      of adjusted GDP growth.
 
   - id: freight_rail_empty_wagons_2025
     kind: break
@@ -653,13 +667,23 @@ issues:
       - {date: "2025-12-01", value: 110.4}
     evidence: >
       Taldau index 701625, «к предыдущему месяцу». Chained, the month-on-month index disagrees with the same
-      index's «к соответствующему месяцу предыдущего года» series and with the official annual index
-      (IND_PROD): the chain gives annual growth of 98.4 in 2021, 107.5 in 2024 and 114.6 in 2025 against the
-      official 103.6, 103.2 and 107.7, and a y/y of 194.3 for September 2026 against the published 103.6. The
-      two agree to 0.1 point through 2015 and within about one point in 2022-2023; the gap is 6-7 points from
-      April 2024 and grows every month of 2026 (February 124.5, March 116.2, April 107.2, May 109.0, June 112.9).
-      The y/y index is revised with each release, the m/m index is evidently the first print left as it was.
-      Checked 2026-11-13; the values are exactly what Taldau serves.
+      index's «к соответствующему месяцу предыдущего года» series, with the cumulative index and with the
+      official annual index (IND_PROD): the chain gives annual growth of 98.4 in 2021, 107.5 in 2024 and 114.6 in
+      2025 against the official 103.6, 103.2 and 107.7; January-September 2026 on a year earlier is 152.6 from
+      chained m/m, 103.5 from chained y/y and 102.9 in the BNS bulletin and the Taldau cumulative series. The
+      two agree to 0.1 point through 2015 and within about one point in 2022-2023. The divergence is one step in
+      April 2024 (+6.3 %, in every section) and then every month of 2026 (+2 to +15 % a month: February 124.5,
+      March 116.2, April 107.2, May 109.0, June 112.9), in manufacturing and in water supply; the mining m/m
+      follows oil tonnes. Chained m/m puts manufacturing in September 2026 at 255 % of December 2025 while its
+      nominal output stands at 78 %. Revision is NOT the explanation (an earlier version of this entry said the
+      y/y is revised and the m/m is not): neither series changed between the downloads of 2026-09-25 and
+      2026-11-14, and the monthly y/y is itself a first print -- January and February 2026 (93.4, 103.2) imply
+      about 98.9 for January-February where the cumulative series has 96.9. The section m/m chains have not
+      matched their y/y since 2016. The cause is not stated by BNS (a month-on-month ratio taken on a
+      non-comparable set of enterprises or weights is a guess). The values are exactly what Taldau serves.
+      Checked 2026-11-14, see docs/check_gdp_sa_and_ip_2026-11-14.md.
     advice: >-
-      Do not chain IND_PROD_MONTHLY_MOM into a level. model_data builds `ip` from the y/y index
-      (IND_PROD_MONTHLY_YOY) on a 2014 base instead; use the m/m index only as the first print of a month.
+      Do not chain IND_PROD_MONTHLY_MOM into a level and do not use its 2026 values even as a first print.
+      model_data builds `ip` from the y/y index (IND_PROD_MONTHLY_YOY) on a 2014 base; the cumulative index
+      (January to the month on a year earlier) is the measure BNS revises, so for quarterly or annual growth
+      prefer it or the official annual index.

@@ -89,19 +89,22 @@ def test_bank_rescue_of_2017_is_read_from_the_budget_line():
     assert V.bank_rescue_2017() == pytest.approx(2_100_398.2, abs=1.0)        # million tenge: specific 169, July 2017
 
 
-def test_market_core_is_consistent_with_headline_inflation():
-    """No builder script exists for the index; this is what can be checked: headline m/m = a weighted sum of the
-    market core and what it leaves out, year by year, within rounding."""
+def test_market_core_is_the_exact_exclusion_index():
+    """scripts/models/build_market_core.py: on December = 100 indices the headline CPI is the weighted sum of its
+    parts, so the market core is (H - sum w_i I_i) / (1 - sum w_i), chained through December."""
     mk = pd.read_csv(M / "cpi_components" / "market_core_index.csv", index_col=0, parse_dates=True)
-    mm = pd.read_csv(REPO / "model_data" / "monthly.csv", index_col=0, parse_dates=True)
-    d = pd.read_csv(REPO / "data" / "processed" / "dims" / "cpi_detail_mom.csv", parse_dates=["date"])
-    p = d.pivot_table(index="date", columns="item_code", values="value")
-    g = lambda s: 100 * np.log(s).diff()                                       # noqa: E731
-    x = pd.DataFrame({"y": g(mm.cpi), "mkt": g(mk.mkt_base), "reg": g(mm.cpi_regulated),
-                      "fv": 100 * np.log(p["frukty_i_ovoshchi"] / 100), "petrol": 100 * np.log(p["benzin"] / 100),
-                      "diesel": 100 * np.log(p["dizelnoe_toplivo"] / 100)}).dropna()
-    for year in range(2012, 2026):
-        s = x[x.index.year == year]
-        b = np.linalg.lstsq(s.drop(columns="y").values, s.y.values, rcond=None)[0]
-        assert np.abs(s.drop(columns="y").values @ b - s.y.values).max() < 0.12, year
-        assert 0.75 < b[0] < 0.97 and 0.9 < b.sum() < 1.25, (year, b.round(3))
+    c = pd.read_csv(M / "cpi_components" / "market_core" / "market_core_components.csv", index_col=0, parse_dates=True)
+    parts = ["fv", "petrol", "diesel", "solid", "reg"]
+    excluded = sum(c[f"w_{k}"] for k in parts) / 100
+    assert excluded.between(0.12, 0.22).all()                                  # 13.8 % (2026) to 20.8 % (2016) of the basket
+    core_ytd = (c.cpi_ytd - sum(c[f"w_{k}"] / 100 * c[f"{k}_ytd"] for k in parts)) / (1 - excluded)
+    prev = core_ytd.shift(1).where(core_ytd.index.month != 1, 100.0)
+    mom = (100 * core_ytd / prev).iloc[1:]
+    assert np.abs(mom - c.mkt_base_mom.iloc[1:]).max() < 1e-3
+    chained = 100 * (c.mkt_base_mom.iloc[1:] / 100).cumprod()
+    assert np.abs(chained / mk.mkt_base.reindex(chained.index) - 1).max() < 1e-6
+    assert mk.index[0] == pd.Timestamp("2011-01-01") and mk.mkt_base.iloc[0] == 100.0
+    assert (mk.mkt_low.iloc[1:] != mk.mkt_high.iloc[1:]).all() and mk.notna().all().all()
+    # BNS's own index «без фруктов и овощей» is not an input: the same arithmetic must land on its Decembers
+    yoy = (mk.mkt_base / mk.mkt_base.shift(12) - 1) * 100
+    assert yoy["2022-12-01"] == pytest.approx(22.2, abs=0.1) and yoy["2025-12-01"] == pytest.approx(12.7, abs=0.1)

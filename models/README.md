@@ -28,7 +28,7 @@ None of them is part of `update_all.py`: re-run them when the inputs change.
 | `fiscal_lp/` | Price response to fiscal shocks | Jordà local projections, HAC | `lp.csv`, `nf_transfers_pct_gdp.csv` |
 | `regional_fiscal/` | Regional price response to budget-financed investment, 2018–2026 | panel LP, month and region×calendar-month FE, clustered by region | `lp_shock*.csv` |
 | `erpt_neer/` | Exchange-rate pass-through by COICOP division: USD/KZT vs consumer-import NEER; border (import prices) vs retail | distributed lags, AR(2), month FE, HAC | `erpt_usd_vs_neer.csv`, `erpt_border.csv`, `rate_correlations.csv` |
-| `cpi_components/` | Inputs built from BNS form Т-15-02-М and regional CPI (not in `data/`): market core index, CPI by division, regional CPI, regional budget investment | accounting with official BNS weights | `market_core_index.csv`, `division_mm.csv`, `regional_*.csv` |
+| `cpi_components/` | Inputs built from BNS form Т-15-02-М and regional CPI (not in `data/`): market core index (built by `scripts/models/build_market_core.py`), CPI by division, regional CPI, regional budget investment | accounting with BNS weights (official where published, estimated otherwise) | `market_core_index.csv`, `division_mm.csv`, `regional_*.csv` |
 
 Choices made along the way, each argued in the script's docstring and the report:
 - **gravity:** flows are WITS to 2019 and BNS from 2020 (WITS 2020–22 imports are
@@ -98,12 +98,23 @@ data of 2026-11-13, and `svar_v2.py` gives the same files on a second run.
   банковского сектора». The earlier estimate, 2 135.8 bn, was total July expenditure minus the August-September
   average; the non-oil deficit of 2017Q3 is 9.24 % of GDP instead of 9.02, the variance shares move by at most
   0.2 points.
-- *`cpi_components/market_core_index.csv`* has no builder script in the repository and cannot be rebuilt
-  exactly: the pipeline has no weights for petrol, diesel, coal and regulated utilities. What can be checked
-  holds: headline monthly inflation is reproduced within 0.1 pp in every year 2011-2025 as a weighted sum of
-  the market core, the regulated-utilities index, fruit and vegetables, petrol and diesel, with weights that sum
-  to about one (market core 0.79-0.94, regulated 0.05-0.11, fruit and vegetables 0.04-0.07). The index is
-  therefore a consistent exclusion index; its exact weights are not verified. `division_mm.csv` equals the
+- *`cpi_components/market_core_index.csv`* is built by `scripts/models/build_market_core.py` from 2026-11-14
+  (method, weights and limits: `cpi_components/market_core/README.md`). It is the exact exclusion index on BNS's
+  December = 100 indices, `(H − Σ w·I) / (1 − Σ w)`, without fruit and vegetables, petrol, diesel, solid fuel and
+  regulated utilities; the excluded weight is 19-21 % of the basket in 2011-2020 and 13.8-16.1 % from 2021. BNS
+  publishes no weight for petrol, diesel, solid fuel or regulated utilities: they come from BNS's contributions
+  to CPI growth (2020 on) and, before that, from regressions of published aggregates on their components --
+  the regulated-utilities weight before 2020 is the least certain cell (two estimates differ by up to 1.8 pp),
+  which is what `mkt_low` / `mkt_high` (weight × 0.7 / × 1.3) are for. The file used until then
+  (`cpi_components/market_core/market_core_index_until_2026-11.csv`) had no builder; it is reproduced within
+  0.03 pp a month as BNS's core index (without fruit and vegetables, petrol, coal) less regulated utilities at a
+  weight of about 6 % of the CPI held constant for 2011-2023 -- too low before 2021 (8.6-12.9 %). Twelve-month
+  market core inflation differs between the two by 0.26 pp on average, 0.74 at most (2013-03); December 2019 is
+  7.16 % new against 6.84 % old, December 2025 12.72 against 12.91. Re-estimated on the new index, the variance
+  shares of `svar_v2` (market variants) move by at most 1.7 points. Not verified against a published series:
+  no official index with this exclusion set exists; the nearest check is BNS's CPI without fruit and vegetables,
+  whose Decembers 2022-2025 the same arithmetic reproduces within 0.05 point.
+  `division_mm.csv` equals the
   pipeline's CPI by division. The regional files were not compared with a source.
 
 Tests: `tests/test_models_inflation.py` (the properties above), `tests/test_models.py` (synthetic data: PPML recovers known elasticities, the BVAR
