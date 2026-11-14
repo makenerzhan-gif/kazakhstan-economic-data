@@ -62,6 +62,18 @@ def test_fetch_takes_the_fullest_edition_of_a_year_and_skips_one_that_does_not_a
         kgd_nf.fetch({"id": "NF_RECEIPTS_BY_CODE_KGD_YTD"})
 
 
+def test_a_january_edition_does_not_replace_the_stored_months_of_its_year(monkeypatch):
+    # the live listing of 2026-11-14 returned only a January edition for 2021 and 2023: eleven stored months of each were dropped
+    books = {"d.xlsx": _workbook(year=2023, months=1)}
+    stored = [{"date": f"2023-{m:02d}-01", "region": "national", "item_code": "CIT", "item_name": "x", "value": str(1000.0 * m)} for m in range(1, 13)]
+    monkeypatch.setattr(kgd_nf, "_documents", lambda: [{"id": n, "title": "national fund by BCC", "full_text": [{"document": n}]} for n in books])
+    monkeypatch.setattr(minfin, "_download", lambda path: books[path])
+    monkeypatch.setattr(dims, "load_processed", lambda ds_id: stored)
+    records, _ = kgd_nf.fetch({"id": "NF_RECEIPTS_BY_CODE_KGD_YTD"})
+    cit = {r["date"]: r["value"] for r in records if r["item_code"] == "CIT"}
+    assert len(cit) == 12 and cit["2023-12-01"] == 12000.0 and cit["2023-01-01"] == 100.0      # January restated, the rest kept
+
+
 def test_title_filter_and_registration():
     assert kgd_nf.TITLE_RE.search("Dynamics of revenues to the national fund for 9 month 2026 year by BCC")
     assert kgd_nf.TITLE_RE.search("Динамика поступлений в Национальный фонд за 9 месяцев 2026 года в разрезе КБК")

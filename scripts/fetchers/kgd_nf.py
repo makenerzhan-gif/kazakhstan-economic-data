@@ -22,8 +22,9 @@ the tax total in 2023-2026, 5 % in February 2021), so the two are NOT spliced in
 
 Not in the file: the fund's investment income, the transfers out of it, privatisation proceeds.
 
-A year is taken from the edition that covers the most months (the newest among equals). Years
-no listed edition covers keep their stored rows.
+A year is taken from the edition that covers the most months (the newest among equals). Months
+no listed edition covers keep their stored rows -- month by month, not year by year: the listing can
+return only a January edition of an old year, which must not replace the twelve months stored.
 """
 from __future__ import annotations
 
@@ -180,9 +181,9 @@ def fetch(ds: dict) -> tuple[list[dict], dict]:
             for m in range(months):
                 records.append({"date": f"{year}-{m + 1:02d}-01", "region": dims.NATIONAL, "item_code": item,
                                 "item_name": names[item], "value": round(series[m] / 1000.0, 4)})
-    fresh = {r["date"][:4] for r in records}
+    fresh = {r["date"] for r in records}
     records += [{"date": r["date"], "region": r["region"], "item_code": r["item_code"], "item_name": r["item_name"],
-                 "value": float(r["value"])} for r in dims.load_processed(ds["id"]) if r["date"][:4] not in fresh]
+                 "value": float(r["value"])} for r in dims.load_processed(ds["id"]) if r["date"] not in fresh]
     return sorted(records, key=lambda r: (r["item_code"], r["date"])), {
         "frequency": "monthly", "source_url": "https://www.gov.kz/memleket/entities/kgd/activities/directions?lang=ru",
         "dataset_id": "KGD: Динамика поступлений в Национальный фонд в разрезе КБК", "note": ds.get("note", ""), "warnings": warnings}
