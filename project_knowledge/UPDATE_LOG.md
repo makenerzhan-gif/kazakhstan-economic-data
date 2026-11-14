@@ -1,17 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-28 — partner-currency rates back to 1993, import-weighted NEER from 1995» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-28 — weekend rows removed from the daily official USD rate (user: «Почисти записи за выходные в дневном ряде USD»)» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-09-28 — weekend rows removed from the daily official USD rate (user: «Почисти записи за выходные в дневном ряде USD»)
-
-EXCHANGE_RATE held four weekend rows (2026-08-22/23 at 456.88 and 2026-08-29/30 at 464.77, Friday's
-rate repeated) written by an earlier fetcher; the fetch kept them because only the fresh report rows
-were filtered to weekdays, not the stored history they were merged with. `nbk._fetch_official_rate`
-now keeps weekdays only after the merge, for all four official-rate series (EUR, CNY and RUB had no
-weekend rows). The August 2026 mean of the daily series moves from 463.96 to 464.55, equal to
-EXCHANGE_RATES_OFFICIAL_MONTHLY USD (464.551429); model_data usdkzt 2026-08 likewise (usdkzt_yoy
--13.91 -> -13.80). Test: tests/test_fx_history.py::test_fetcher_drops_weekend_rows_already_stored.
 
 ## 2026-10-08 — the daily run's push now survives a GitHub outage (user: «почему прогон сломался?»)
 
@@ -625,3 +615,27 @@ for petrol, diesel, coal and regulated utilities in the pipeline, so it cannot b
 check instead: headline m/m inflation is reproduced within 0.1 pp in every year 2011-2025 as a weighted sum of the
 market core, regulated utilities, fruit and vegetables, petrol and diesel, weights summing to about one (now a
 test). Exact weights and the regional files remain unverified against a source.
+## 2026-11-14 — Bulletin history 2005-2012 from the PDF editions; market core CPI with a builder; GDP SA and industrial production checked; KGD fetcher fix
+
+**Minfin Statistical Bulletin, 2005-2012.** The editions before 2013 are PDF. New `scripts/fetchers/minfin_pdf.py`
+(`pdftotext -tsv`: words with their place on the page; codes by column under the numbering row, values by the
+right edge of the column) produces the sheets the spreadsheet readers expect; the same sum checks decide what is
+loaded, with half a million of rounding per term for tables printed in whole millions and no «INCOMPLETE»
+allowance before 2013. Loaded: `BUDGET_RECEIPTS_BY_CODE_YTD` state 81 and republican 80 of 96 months;
+new dataset `BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD` (the classification was renumbered from 2013: separate
+dataset, no GFS bridge) state 91, republican 88; `RESOURCE_PAYMENTS_YTD` 20 months from 2010-12. State revenue
+equals `STATE_BUDGET_REVENUE` on all 20 common dates. What is missing and why: `docs/minfin_bulletin_pdf_2005_2012.md`
+(mostly tables that contradict themselves in the source). 2002-2004 use the pre-2005 classification and are not
+read. `scripts/backfill_minfin_bulletins.py`: PDF editions, `--offline`, unrar for the RAR5 archive of 2012.
+
+**Market core CPI.** `scripts/models/build_market_core.py` builds `models/cpi_components/market_core_index.csv`
+(2011-01 … 2026-10) as the exact exclusion index on December = 100 indices; weights from BNS contributions
+(2020 on) or regressions, inputs in `models/cpi_components/market_core/`. The old file (no builder) carried a
+regulated-utilities weight of about 6 % for 2011-2023. `bvar_market`, `svar_v2` market variants re-estimated.
+
+**GDP SA and industrial production** (`docs/check_gdp_sa_and_ip_2026-11-14.md`): both oddities are in the BNS
+sources. `source_issues`: `qna_2026_first_estimate` (replaces `qna_production_2026_withdrawn`),
+`ind_prod_mom_not_revised` rewritten (neither index is revised; the m/m is inconsistent from April 2024).
+
+**KGD National Fund receipts.** The run of 2026-11-14 dropped eleven months of 2021 and of 2023 (a January
+edition replaced the stored year); stored rows are now kept by month, the 308 rows are restored.

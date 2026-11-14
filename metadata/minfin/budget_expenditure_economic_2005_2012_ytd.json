@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents",
+  "dataset_id": "Statistical Bulletin, economic classification of expenditure, 2005-2012",
+  "indicator_id": "BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD",
+  "indicator_name": "Budget execution by the economic classification of expenditure in force until 2013 (state and republican budgets; subclasses, specifics), year-to-date, million KZT",
+  "description": "Исполнение государственного и республиканского бюджетов по экономической классификации расходов, действовавшей до 2013 года (подклассы, специфики), с начала года, млн тенге",
+  "frequency": "monthly",
+  "unit": "million KZT, January to the month",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "PLACEHOLDER",
+  "publication_date": null,
+  "last_update_date": "2026-11-14",
+  "download_date": "2026-11-14",
+  "period_start": "2005-01-01",
+  "period_end": "2012-12-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

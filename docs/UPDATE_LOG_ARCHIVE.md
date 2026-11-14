@@ -5695,3 +5695,13 @@ NEER_IMPORT_WEIGHTS in 1996; its monthly changes correlate 0.84 with the NBK's o
 Comtrade conversion (36 mln USD) and is replaced by the 1999 structure; 1995-1999 CONSUMER includes passenger
 cars (H0 conversion). Three archive typos (CHF 17.04.1995, 09.11.1998; KGS 09.08.1999) are kept as printed and
 registered in source_issues. Tests: tests/test_fx_monthly_history.py (15).
+
+## 2026-09-28 — weekend rows removed from the daily official USD rate (user: «Почисти записи за выходные в дневном ряде USD»)
+
+EXCHANGE_RATE held four weekend rows (2026-08-22/23 at 456.88 and 2026-08-29/30 at 464.77, Friday's
+rate repeated) written by an earlier fetcher; the fetch kept them because only the fresh report rows
+were filtered to weekdays, not the stored history they were merged with. `nbk._fetch_official_rate`
+now keeps weekdays only after the merge, for all four official-rate series (EUR, CNY and RUB had no
+weekend rows). The August 2026 mean of the daily series moves from 463.96 to 464.55, equal to
+EXCHANGE_RATES_OFFICIAL_MONTHLY USD (464.551429); model_data usdkzt 2026-08 likewise (usdkzt_yoy
+-13.91 -> -13.80). Test: tests/test_fx_history.py::test_fetcher_drops_weekend_rows_already_stored.

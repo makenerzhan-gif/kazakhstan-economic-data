@@ -158,7 +158,7 @@ def _column(rows: list[list], year: int, month: int) -> int | None:
     return col
 
 
-def economic_edition(sheets: dict[str, list[list]], ds: dict) -> tuple[str | None, list[dict], list[str]]:
+def economic_edition(sheets: dict[str, list[list]], ds: dict, gfs: bool = True) -> tuple[str | None, list[dict], list[str]]:
     wanted = {minfin._sheet_key(n): rows for n, rows in sheets.items() if minfin._sheet_key(n) in ECON_SHEETS}
     period = _edition_period(wanted)
     if period is None:
@@ -180,7 +180,7 @@ def economic_edition(sheets: dict[str, list[list]], ds: dict) -> tuple[str | Non
                 raise
             notes += [f"SKIPPED {budget} -- {str(exc)[:200]}"] + _top_rows({key: rows})   # the other budgets of the edition are kept
             continue
-        for code, label, v in lines + gfs_lines(lines):
+        for code, label, v in lines + (gfs_lines(lines) if gfs else []):
             records.append({"date": d, "region": dims.NATIONAL, "item_code": f"{budget}.{code}",
                             "item_name": f"{BUDGET_NAMES[budget]}: {label}", "value": round(v, 4)})
     return d, records, notes
@@ -271,10 +271,39 @@ def _merge(ds: dict, got: dict[str, list[dict]]) -> list[dict]:
     return sorted(records, key=lambda r: (r["item_code"], r["date"]))
 
 
+# The economic classification of expenditure was renumbered from 2013 (130 is «Приобретение товаров» in 2012 and
+# «Выплата заработной платы отдельным категориям граждан…» from 2013), so the editions of 2005-2012 are a dataset of
+# their own: the same code is not the same item across that line, and the GFS bridge is written for the new codes.
+OLD_CLASSIFICATION_BEFORE = "2013-01-01"
+
+
 def fetch_economic(ds: dict) -> tuple[list[dict], dict]:
-    got, warnings = _read_editions(ds, set(ECON_SHEETS), lambda sheets: economic_edition(sheets, ds))
+    def edition(sheets):
+        d, records, notes = economic_edition(sheets, ds)
+        if d and d < OLD_CLASSIFICATION_BEFORE:
+            return d, [], []
+        return d, records, notes
+    got, warnings = _read_editions(ds, set(ECON_SHEETS), edition)
     return _merge(ds, got), {"frequency": "monthly", "source_url": minfin.LISTING_URL,
                              "dataset_id": "Statistical Bulletin tables 6, 10, 11", "note": ds.get("note", ""), "warnings": warnings}
+
+
+def fetch_economic_old(ds: dict) -> tuple[list[dict], dict]:
+    """The editions of 2005-2012 (PDF, read through fetchers/minfin_pdf.py), under the classification of those
+    years. The daily run has none of them listed and returns the stored rows; the history is loaded by
+    scripts/backfill_minfin_bulletins.py --yearly 2005-2012."""
+    meta = {"frequency": "monthly", "source_url": minfin.LISTING_URL, "dataset_id": "Statistical Bulletin, economic classification of expenditure, 2005-2012",
+            "note": ds.get("note", ""), "warnings": []}
+    if not minfin.BULLETIN_ARCHIVE:
+        return _merge(ds, {}), meta
+
+    def edition(sheets):
+        d, records, notes = economic_edition(sheets, ds, gfs=False)
+        if d and d >= OLD_CLASSIFICATION_BEFORE:
+            return d, [], []
+        return d, records, notes
+    got, meta["warnings"] = _read_editions(ds, set(ECON_SHEETS), edition)
+    return _merge(ds, got), meta
 
 
 # ---------------------------------------------------------------- resource payments
@@ -352,7 +381,15 @@ def resource_edition(sheets: dict[str, list[list]], ds: dict, nf: dict[str, floa
 
 def fetch_resource(ds: dict) -> tuple[list[dict], dict]:
     nf = _nf_oil_direct()
-    got, warnings = _read_editions(ds, {"таб4"}, lambda sheets: resource_edition(sheets, ds, nf))
+    def edition(sheets):
+        d, records, notes = resource_edition(sheets, ds, nf)
+        if d and d < OLD_CLASSIFICATION_BEFORE and records:
+            # the PDF editions: the lines are found by name, so the table they stand in must first add up
+            _, receipts, _ = receipts_edition(sheets, {"id": ds["id"]})
+            if not any(r["item_code"] == "STATE.TOTAL" for r in receipts):
+                return d, [], [f"{d}: «табл 4» does not add up, its resource lines are not taken"]
+        return d, records, notes
+    got, warnings = _read_editions(ds, {"таб4"}, edition)
     return _merge(ds, got), {"frequency": "monthly", "source_url": minfin.LISTING_URL,
                              "dataset_id": "Statistical Bulletin table 4", "note": ds.get("note", ""), "warnings": warnings}
 
@@ -509,8 +546,10 @@ def receipts_edition(sheets: dict[str, list[list]], ds: dict) -> tuple[str | Non
             # Editions of 2015-2018 leave some specifics out of the printed table, so a subclass can exceed the
             # lines under it while every level above adds up. Such an edition is kept as printed and the
             # subclasses concerned are reported; any other break still drops the budget.
+            # Not for the PDF editions (before 2013): there a subclass that does not add up is as likely a
+            # code read one row off, and the sum is the only guard.
             incomplete = [b for b in bad if re.match(r"\d{4}[: ]", b)]
-            if len(incomplete) == len(bad):
+            if len(incomplete) == len(bad) and d >= OLD_CLASSIFICATION_BEFORE:
                 notes.append(f"{d} {budget}: INCOMPLETE specifics, kept as printed -- " + "; ".join(bad[:6]))
                 bad = []
         if bad:
