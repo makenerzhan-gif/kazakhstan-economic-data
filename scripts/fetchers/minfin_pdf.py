@@ -169,13 +169,15 @@ def _value_edge(lines: list[list[tuple]], centre: float) -> float | None:
 
 def _value(line: list[tuple], edge: float, centre: float) -> float | None:
     """The number of the line that ends at `edge`; «-» in the column is zero."""
-    # rows set in bold (the total, the categories) end a few points to the right of the others
-    at = [i for i, w in enumerate(line) if -3.0 <= w[1] - edge <= 5.0 and re.fullmatch(r"-?\d+(,0)?", w[3])]
+    # rows set in bold (the total, the categories) end a few points to the right of the others, and so does
+    # the odd row whose cells are set with another margin; names begin further away than that
+    at = [i for i, w in enumerate(line) if -3.0 <= w[1] - edge <= 8.0 and re.fullmatch(r"-?\d+|\d{3},0", w[3])]
     idx = min(at, key=lambda i: abs(line[i][1] - edge)) if at else None
     if idx is None:
         dash = any(w[3] in ("-", "–", "—") and centre - 30 <= w[1] <= edge + 2 for w in line)
         return 0.0 if dash else None
-    take = [line[idx][3].removesuffix(",0")]                  # «5 303,0» is a whole number; «0,1» is left unread (see the docstring)
+    # «5 303,0» is 5303; a number below a thousand with a decimal («0,2», «1,0») is left unread, see the docstring
+    take = [line[idx][3].removesuffix(",0")]
     if len(take[0]) == 3:
         i = idx
         while i > 0:
@@ -188,6 +190,8 @@ def _value(line: list[tuple], edge: float, centre: float) -> float | None:
                 break
         if i > 0 and line[i - 1][3] == "-" and line[i][0] - line[i - 1][1] <= 2.0 and not take[0].startswith("-"):
             take.insert(0, "-")
+    if line[idx][3].endswith(",0") and len(take) == 1:
+        return None
     try:
         return float("".join(take))
     except ValueError:
@@ -301,7 +305,7 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                     continue
             if (value is not None and not any(codes) and not held and not pending and last and last["value"] is not None
                     and last["value"].is_integer() and top - last["top"] <= near and not re.match(r"[^а-яё]", label)
-                    and any(len(w[3]) == 3 and float(w[3]) == value for w in line if _INT.fullmatch(w[3]) and -3.0 <= w[1] - edge <= 5.0)):
+                    and any(len(w[3]) == 3 and float(w[3]) == value for w in line if _INT.fullmatch(w[3]) and -3.0 <= w[1] - edge <= 8.0)):
                 # a number too long for its cell breaks like a name: «1 061» and, on the next line, «785»
                 last["value"] = last["value"] * 1000 + (value if last["value"] >= 0 else -value)
                 last["label"] = _join(last["label"], label) if label else last["label"]
@@ -408,8 +412,17 @@ def receipt_sheet(pages, header: str, republican: bool = False) -> list[list]:
            ["1", "2", "3", "4", "5", "6", "7"]]
     stop = (lambda label: bool(EXPENDITURE_RE.match(label))) if republican else None
     plain = lambda c: str(int(c)) if c else c                    # noqa: E731  (early 2008 prints category «01», subclass «01»)
+    cls = sub = None
     for r in _rows(pages, 4, stop):
-        c = r["codes"]
+        c = list(r["codes"])
+        if c[0] or c[1]:
+            cls, sub = c[1], c[2]
+        elif c[2]:
+            sub = c[2]
+        elif c[3]:
+            # A specific is written with its class and subclass: the rows of those may have no value this
+            # module can read (a blank cell, «0,2»), and the classification passes such rows over.
+            c[1], c[2] = cls, sub
         out.append([plain(c[0]), c[1], plain(c[2]), c[3], None, r["value"], r["label"]])
     return out
 
