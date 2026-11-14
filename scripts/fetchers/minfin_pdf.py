@@ -19,9 +19,24 @@ of the tables is regular:
     that row is the code of that column -- and a number inside a name is not;
   * numbers are right-aligned: the right edge shared by most numbers of the last value column (the
     earlier value columns are previous years) is found on each page, and the value of a line is the
-    digit groups that end exactly there. «-» is zero;
-  * the Russian name is everything to the right of that edge; a line with no code and no value
-    continues the name of the row above.
+    digit groups that end there -- up to a few points further right in the rows set in bold, never as
+    far as the names. «-» is zero. Only where nothing stands at the edge, a number that stands alone
+    inside the column (a cell set flush left, or a few points off) is taken (_value, _value_room);
+  * the tables print whole millions and show a sum under half a million with one decimal («0,2»).
+    Such a cell is left UNREAD, like an empty one (the sum checks allow half a million per term only
+    while every value is whole), and so is the rare unrounded cell («7 890,7»); «5 303,0» is 5303;
+  * a number too long for its cell breaks like a name («1 061» and «785» under it): the two are joined;
+  * the Russian name is everything from the left side the names of the page share; a line with no
+    code and no value continues the name of the row above -- or begins the name of the row below
+    where the cells are bottom-aligned or centred (the first line of a name stands a little further
+    from the line above it than the lines of one name stand from each other);
+  * the Kazakh and the Russian halves of a row are set separately, so the codes can stand a line
+    above or below the value: see the comments in _rows for how they are brought together;
+  * a specific is written out with its class and subclass, because the row of either may have no
+    value that is read, and the classification passes such rows over.
+Nothing is repaired: a table the source prints inconsistently (a category that is not the sum of its
+classes, a code twice with two values, a page without its code column, a number cut off by its cell)
+fails the checks of minfin_classification and is skipped there.
 The 2002-2004 editions follow the pre-2005 budget classification and garble Cyrillic (a legacy font
 encoding, repaired here); their tables are not mapped.
 
@@ -174,20 +189,41 @@ def _names_left(lines: list[list[tuple]], edge: float) -> float:
     return float(max(lefts, key=lambda x: lefts[x] + lefts.get(x - 1, 0) + lefts.get(x + 1, 0))) if lefts else edge + 2.0
 
 
-def _value(line: list[tuple], edge: float, centre: float, names: float) -> float | None:
-    """The number of the line that ends at `edge`; «-» in the column is zero."""
+def _value_room(lines: list[list[tuple]], edge: float, names: float, centres: list[float]) -> tuple[float, float, float]:
+    """Where a number of the value column may stand on this page when it is not at the edge: it ends to the
+    right of the left side of the widest number that is at the edge, or begins to the right of all the text
+    of the columns before it -- and in either case begins nearer to its own column than to the one before."""
+    lefts, texts = [edge], [0.0]
+    for line in lines:
+        i = next((k for k, w in enumerate(line) if abs(w[1] - edge) <= 1.5 and _INT.fullmatch(w[3])), None)
+        while i and len(line[i][3]) == 3 and _INT.fullmatch(line[i - 1][3]) and line[i][0] - line[i - 1][1] <= 4.5:
+            i -= 1
+        if i is not None:
+            lefts.append(line[i][0])
+        texts += [w[1] for w in line if w[0] < names - 1.5 and not re.fullmatch(r"[-–—\d,.]+", w[3])]
+    return min(lefts), max(texts), (centres[-3] + centres[-2]) / 2
+
+
+def _value(line: list[tuple], edge: float, centre: float, names: float, room: tuple | None = None) -> float | None:
+    """The number of the line that ends at `edge`; «-» in the column is zero. A few rows are set to the left
+    side of the cell, or a few points off: with nothing at the edge, a number that is the last thing before
+    the name, stands apart from the Kazakh text and is inside the column (`room`, see _value_room) is the value."""
     # Rows set in bold (the total, the categories) end a few points to the right of the others, and so does
     # the odd row whose cells are set with another margin -- but always before the names begin.
     at = [i for i, w in enumerate(line)
           if -3.0 <= w[1] - edge <= 8.0 and w[1] <= names - 1.0 and re.fullmatch(r"-?\d+|\d{3},0", w[3])]
     idx = min(at, key=lambda i: abs(line[i][1] - edge)) if at else None
-    if idx is None:
-        dash = any(w[3] in ("-", "–", "—") and centre - 30 <= w[1] <= edge + 2 for w in line)
-        return 0.0 if dash else None
+    aside = idx is None
+    if aside:
+        if any(w[3] in ("-", "–", "—") and centre - 30 <= w[1] <= edge + 2 for w in line):
+            return 0.0
+        idx = max((i for i, w in enumerate(line) if w[0] < names - 1.5), default=None)
+        if idx is None or room is None or not (_INT.fullmatch(line[idx][3]) and line[idx][1] < edge):
+            return None
     # «5 303,0» is 5303; a number below a thousand with a decimal («0,2», «1,0») is left unread, see the docstring
     take = [line[idx][3].removesuffix(",0")]
+    i = idx
     if len(take[0]) == 3:
-        i = idx
         while i > 0:
             prev, cur = line[i - 1], line[i]
             if not _INT.fullmatch(prev[3]) or len(prev[3].lstrip("-")) > 3 or cur[0] - prev[1] > 4.5:
@@ -200,6 +236,10 @@ def _value(line: list[tuple], edge: float, centre: float, names: float) -> float
             take.insert(0, "-")
     if line[idx][3].endswith(",0") and len(take) == 1:
         return None
+    if aside:                                                     # not a number of the Kazakh name or of another column
+        apart = i == 0 or line[i][0] - line[i - 1][1] >= 6.0
+        if not (line[i][0] > room[2] and (line[i][0] > room[1] + 1.0 or (apart and line[idx][1] > room[0]))):
+            return None
     try:
         return float("".join(take))
     except ValueError:
@@ -210,7 +250,7 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
     """Rows of one table: {"codes": [per code column], "value", "label"}. `stop(label)` ends the table."""
     rows: list[dict] = []
     centres = edge = None
-    held: list[str] = []
+    held: list[tuple[float, str]] = []                               # lines of names met since the last row: (top, text)
     for lines in pages:
         start = _head_end(lines)
         if start is not None:
@@ -230,11 +270,11 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
             continue
         gaps = [b - a for a, b in zip(centres[:n_codes], centres[1:n_codes + 1])]
         reach = max(4.5, 0.55 * min(gaps))                            # how far from its column's centre a code may stand
-        first_on_page = True
         break_all = False
         page_start = len(rows)
         pending: list[tuple[float, list]] = []                        # codes printed above the line of their row
         left = _names_left(body, edge)
+        span = _value_room(body, edge, left, centres)
         tops = [line[0][2] for line in body if any(w[0] >= left - 1.5 for w in line)]
         steps = sorted(b - a for a, b in zip(tops, tops[1:]))
         pitch = steps[len(steps) // 2] if steps else 10.0             # the usual distance between two lines of names
@@ -246,7 +286,7 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                 continue
             if re.search(r"Примечание\s*:|^Ескерту\b", _text(line)):          # footnotes close the page
                 break
-            value = _value(line, edge, centres[-2], left)
+            value = _value(line, edge, centres[-2], left, span)
             codes = [None] * n_codes
             cells: list[tuple] = []
             for w in line:
@@ -266,24 +306,23 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
             if value is None and not any(codes) and re.match(r"(в том числе|из них)\s*:?$", label.strip(), re.IGNORECASE):
                 continue
             if value is None and not any(codes):
-                # the second case is a name carried over the page break
-                if label and (not first_on_page or re.match(r"[а-яё(]", label) or not rows):
-                    held.append(label)
+                if label:
+                    held.append((line[0][2], label))
                 continue
-            first_on_page = False
             if stop is not None and stop(label):
                 break_all = True
                 break
             # The Kazakh and the Russian halves of a row are set separately, and where their names break
             # differently the codes (set with the Kazakh name) stand a line above or below the value (set
-            # with the Russian one). Three rules put them together, each within a line's distance:
-            #  * a line with codes, no value and no beginning of a name is not a row when a value stands that
-            #    near: its codes belong to the row just above if that one has a value and no code, otherwise
-            #    they wait for the row that begins just below, and that row's own codes wait in turn. Its text
-            #    continues the name above. (With no value that near, it is a row whose cell is empty.)
+            # with the Russian one). They are put together again, never further than a line's distance apart:
             #  * a line that is only a value and the beginning of a name -- no code, nothing of the Kazakh
             #    half, not a heading in capitals -- is a row whose codes come with the next line; that line's
-            #    own value is then a row of the same kind.
+            #    own value is then a row of the same kind (`wants`);
+            #  * a line with codes, no value and no beginning of a name is not a row when a value stands that
+            #    near: its codes belong to the row just above if that one has a value and no code, otherwise
+            #    they wait for the row that begins just below, and that row's own codes wait in turn
+            #    (`pending`). Its text continues the name above. With no value that near, it is a row whose
+            #    cell is empty.
             top = line[0][2]
             near = 1.25 * pitch
             last = rows[-1] if len(rows) > page_start else None
@@ -291,7 +330,8 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                 last.update(codes=codes, wants=False)
                 codes = [None] * n_codes
                 if value is None:
-                    held.append(label)
+                    if label:
+                        held.append((top, label))
                     continue
                 wants = True
             else:
@@ -299,10 +339,26 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                          and bool(re.match(r"[^а-яё]", label))
                          and all(_INT.fullmatch(w[3]) or w[3] in "-–—" for w in line if w[0] < left - 1.5)
                          and line[0][0] > centres[n_codes])
+            if value is None and not re.match(r"[^а-яё]", label) and not pending:
+                # the same displacement seen from its end: the rows just above, one line apart, begin with one that
+                # has a value and no code, so each of them has the codes of the row under it and these are the last's
+                chain = len(rows)
+                while (chain > max(page_start, len(rows) - 4) and any(rows[chain - 1]["codes"]) and rows[chain - 1]["value"] is not None
+                       and (rows[chain]["top"] if chain < len(rows) else top) - rows[chain - 1]["top"] <= near):
+                    chain -= 1
+                first = rows[chain - 1] if page_start < chain < len(rows) and chain > 1 else None
+                if (first and not any(first["codes"]) and first["value"] is not None and not _capitals(first["label"])
+                        and rows[chain]["top"] - first["top"] <= near):
+                    for k in range(chain - 1, len(rows) - 1):
+                        rows[k]["codes"] = rows[k + 1]["codes"]
+                    rows[-1]["codes"] = codes
+                    if label:
+                        held.append((top, label))
+                    continue
             if value is None and not re.match(r"[^а-яё]", label):
                 up = (top - last["top"] if last and not pending and not any(last["codes"]) and last["value"] is not None
                       and not _capitals(last["label"]) else None)
-                down = next((x[0][2] - top for x in body[nth + 1:nth + 6] if _value(x, edge, centres[-2], left) is not None), None)
+                down = next((x[0][2] - top for x in body[nth + 1:nth + 6] if _value(x, edge, centres[-2], left, span) is not None), None)
                 above = up is not None and up <= near and (down is None or up <= down + 1.0)
                 if above or (down is not None and down <= near):
                     if above:
@@ -310,7 +366,7 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                     else:
                         pending.append((top, codes))
                     if label:
-                        held.append(label)
+                        held.append((top, label))
                     continue
             if (value is not None and not any(codes) and not held and not pending and last and last["value"] is not None
                     and last["value"].is_integer() and top - last["top"] <= near and not re.match(r"[^а-яё]", label)
@@ -327,13 +383,20 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                 codes = pending.pop(0)[1]
             # Lines of names met since the last row. Some editions print the codes and the value on the LAST
             # line of a name: then the row's own text starts in lower case (or is empty) and its beginning is
-            # among the held lines, from the last one that starts with a capital.
+            # among the held lines. Cells are padded, so the first line of a name stands a little further from
+            # the line above it than the lines of one name stand from each other: the name begins after the one
+            # wider step; where no step stands out, at the last line that starts with a capital.
             mine: list[str] = []
+            names = [h[1] for h in held]
             if held and not re.match(r"[A-ZА-ЯЁ\"«]", label):
-                at = max((i for i, h in enumerate(held) if re.match(r"[A-ZА-ЯЁ\"«]", h)), default=None)
+                at = max((i for i, h in enumerate(names) if re.match(r"[A-ZА-ЯЁ\"«]", h)), default=None)
+                above = [last["top"] if last else None] + [h[0] for h in held]
+                steps = sorted(((b - a, i) for i, (a, b) in enumerate(zip(above, above[1:])) if a is not None and b > a), reverse=True)
+                if steps and steps[0][0] >= pitch + 0.35 and (len(steps) == 1 or steps[0][0] - steps[1][0] >= 0.25):
+                    at = steps[0][1]
                 if at is not None:
-                    held, mine = held[:at], held[at:]
-            for h in held:
+                    names, mine = names[:at], names[at:]
+            for h in names:
                 if rows:
                     rows[-1]["label"] = _join(rows[-1]["label"], h)
             held = []
@@ -349,7 +412,7 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
         _drop_overlap(rows, page_start)
         if break_all:                                                 # what is held is the end of the last name
             break
-    for h in held:
+    for _, h in held:
         if rows:
             rows[-1]["label"] = _join(rows[-1]["label"], h)
     return rows
