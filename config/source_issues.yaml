@@ -643,3 +643,23 @@ issues:
       previous-year values BNS gives in its monthly bulletins; do not read the January 2025 drop as a fall in
       traffic. Road and pipeline are unaffected.
 
+
+  - id: ind_prod_mom_not_revised
+    kind: inconsistent
+    variable: IND_PROD_MONTHLY_MOM
+    observations:
+      - {date: "2026-02-01", value: 124.5}
+      - {date: "2026-06-01", value: 112.9}
+      - {date: "2025-12-01", value: 110.4}
+    evidence: >
+      Taldau index 701625, «к предыдущему месяцу». Chained, the month-on-month index disagrees with the same
+      index's «к соответствующему месяцу предыдущего года» series and with the official annual index
+      (IND_PROD): the chain gives annual growth of 98.4 in 2021, 107.5 in 2024 and 114.6 in 2025 against the
+      official 103.6, 103.2 and 107.7, and a y/y of 194.3 for September 2026 against the published 103.6. The
+      two agree to 0.1 point through 2015 and within about one point in 2022-2023; the gap is 6-7 points from
+      April 2024 and grows every month of 2026 (February 124.5, March 116.2, April 107.2, May 109.0, June 112.9).
+      The y/y index is revised with each release, the m/m index is evidently the first print left as it was.
+      Checked 2026-11-13; the values are exactly what Taldau serves.
+    advice: >-
+      Do not chain IND_PROD_MONTHLY_MOM into a level. model_data builds `ip` from the y/y index
+      (IND_PROD_MONTHLY_YOY) on a 2014 base instead; use the m/m index only as the first print of a month.

@@ -1,0 +1,125 @@
+"""Exchange-rate pass-through by CPI division: USD/KZT against the NEER weighted by CONSUMER imports
+(BEC 112, 122, 522, 61-63; previous-year Comtrade weights; RUB and CNY carry most of the weight).
+
+    python scripts/models/erpt_neer.py      # writes models/erpt_neer/
+
+Per division d (monthly, 2016-01..2026-08, HAC(6) errors):
+    pi_d,t = c + sum_{k=0..12} b_k * e_{t-k} + r1 pi_d,t-1 + r2 pi_d,t-2 + g0 oil_t + g1 oil_t-1 + month FE
+e = 100 dln USD/KZT (depreciation +) or -100 dln NEER_CONSUMER (depreciation +).
+Reported: the 12-MONTH PASS-THROUGH = the cumulative response of the price level 12 months after a 1 %
+depreciation, which includes the AR(2) dynamics (delta-method t-stat); sum b_k (the direct effect of the lags
+alone, which until 2026-11-13 was mislabelled as the 12-month pass-through); the long run sum b_k/(1-r1-r2);
+the delta-method t is an UPPER bound for persistent divisions (simulated s.d. of the food response 0.58
+against 0.39 from the delta method);
+and a horse race with both rates (sum of each block). Inputs: models/cpi_components/division_mm.csv
+(BNS CPI by COICOP division, m/m), model_data/monthly.csv, dims NEER_CONSUMER.
+"""
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import statsmodels.api as sm
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import common  # noqa: E402
+
+OUT = common.MODELS / "erpt_neer"
+L = 12
+W = {  # approximate basket weights, % (division 12 left out); used only for the printed weighted average
+    "Продукты питания и безалкогольные напитки": 38.6, "Алкогольные напитки и табачные изделия": 1.7,
+    "Одежда и обувь": 9.0, "Жилищные услуги, вода, электроэнергия, газ и другие виды топлива": 13.2,
+    "Предметы домашнего обихода, бытовая техника и текущее обслуживание жилья": 5.2, "Здравоохранение": 8.8,
+    "Транспорт": 7.7, "Связь": 3.3, "Отдых и культура": 1.9, "Образование": 2.4, "Рестораны и гостиницы": 1.4}
+
+
+def load():
+    m = common.load_monthly()
+    div = pd.read_csv(common.MODELS / "cpi_components" / "division_mm.csv", index_col=0, parse_dates=True)
+    div.index = div.index.to_period("M")
+    n = pd.read_csv(common.REPO_ROOT / "data" / "processed" / "dims" / "neer_import_weighted.csv", parse_dates=["date"])
+    neer = n[n.item_code == "NEER_CONSUMER"].set_index("date")["value"]
+    neer.index = neer.index.to_period("M")
+    rates = pd.DataFrame({"usd": 100 * np.log(m.usdkzt).diff(), "neer": -100 * np.log(neer).diff(),
+                          "rub": 100 * np.log(m.usdkzt / m.rubusd).diff(), "oil": 100 * np.log(m.brent).diff()})
+    return div, rates
+
+
+def cumulative(params: pd.Series, cols: list[str], horizon: int = L) -> float:
+    """Cumulative response of the level `horizon` months after a unit shock: c_h = b_h + r1 c_(h-1) + r2 c_(h-2)."""
+    b = [params[c] for c in cols]
+    r1, r2 = params["y1"], params["y2"]
+    c = []
+    for h in range(horizon + 1):
+        c.append((b[h] if h < len(b) else 0.0) + (r1 * c[h - 1] if h >= 1 else 0.0) + (r2 * c[h - 2] if h >= 2 else 0.0))
+    return float(sum(c))
+
+
+def cumulative_t(r, cols: list[str]) -> tuple[float, float]:
+    """The cumulative response and its t-statistic by the delta method (numerical gradient, full covariance)."""
+    names = cols + ["y1", "y2"]
+    p0 = r.params.copy()
+    value = cumulative(p0, cols)
+    grad = []
+    for n in names:
+        p = p0.copy()
+        step = 1e-6 * max(1.0, abs(p[n]))
+        p[n] += step
+        grad.append((cumulative(p, cols) - value) / step)
+    g = np.array(grad)
+    se = float(np.sqrt(g @ r.cov_params().loc[names, names].values @ g))
+    return value, value / se
+
+
+def fit(y, rates, blocks):
+    df = pd.DataFrame({"y": y})
+    for b in blocks:
+        for k in range(L + 1):
+            df[f"{b}{k}"] = rates[b].shift(k)
+    df["y1"], df["y2"] = y.shift(1), y.shift(2)
+    df["oil"], df["oil1"] = rates.oil, rates.oil.shift(1)
+    md = pd.get_dummies(pd.Series(df.index.month, index=df.index), prefix="m", drop_first=True, dtype=float)
+    df = pd.concat([df, md], axis=1).loc["2016-01":"2026-08"].dropna()
+    r = sm.OLS(df.y, sm.add_constant(df.drop(columns="y"))).fit(cov_type="HAC", cov_kwds={"maxlags": 6})
+    out = {"adj_r2": r.rsquared_adj, "aic": r.aic, "nobs": int(r.nobs)}
+    rho = r.params["y1"] + r.params["y2"]
+    for b in blocks:
+        cols = [f"{b}{k}" for k in range(L + 1)]
+        s = r.params[cols].sum()
+        se = float(np.sqrt(np.ones(L + 1) @ r.cov_params().loc[cols, cols].values @ np.ones(L + 1)))
+        c12, c12_t = cumulative_t(r, cols)
+        out.update({f"{b}_sr": s, f"{b}_t": s / se, f"{b}_lr": s / (1 - rho), f"{b}_c12": c12, f"{b}_c12_t": c12_t})
+    return out
+
+
+def main():
+    OUT.mkdir(parents=True, exist_ok=True)
+    div, rates = load()
+    rows = []
+    for name, w in W.items():
+        y = 100 * np.log(div[name] / 100)
+        a, b, c = fit(y, rates, ["usd"]), fit(y, rates, ["neer"]), fit(y, rates, ["usd", "neer"])
+        rows.append({"раздел": name, "вес": w,
+                     "USD: перенос 12м": a["usd_c12"], "USD: t": a["usd_c12_t"],
+                     "USD: сумма b": a["usd_sr"], "USD: t суммы b": a["usd_t"], "USD: долгосрочный": a["usd_lr"],
+                     "USD: adjR2": a["adj_r2"],
+                     "NEER: перенос 12м": b["neer_c12"], "NEER: t": b["neer_c12_t"],
+                     "NEER: сумма b": b["neer_sr"], "NEER: t суммы b": b["neer_t"], "NEER: долгосрочный": b["neer_lr"],
+                     "NEER: adjR2": b["adj_r2"],
+                     "ΔAIC (NEER−USD)": b["aic"] - a["aic"],
+                     "вместе: USD 12м": c["usd_c12"], "вместе: USD t": c["usd_c12_t"],
+                     "вместе: NEER 12м": c["neer_c12"], "вместе: NEER t": c["neer_c12_t"]})
+    T = pd.DataFrame(rows)
+    tot = {k: (T[k] * T["вес"]).sum() / T["вес"].sum() for k in ["USD: перенос 12м", "NEER: перенос 12м"]}
+    T.to_csv(OUT / "erpt_usd_vs_neer.csv", index=False, float_format="%.3f")
+    corr = rates[["usd", "neer", "rub"]].loc["2016":].corr()
+    corr.to_csv(OUT / "rate_correlations.csv", float_format="%.3f")
+    print(T.round(2).to_string(index=False))
+    print("weighted 12m pass-through:", {k: round(v, 3) for k, v in tot.items()})
+    print(corr.round(2))
+
+
+if __name__ == "__main__":
+    main()

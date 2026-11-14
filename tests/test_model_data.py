@@ -89,3 +89,30 @@ def test_built_panels_are_consistent():
     cards = (REPO / "model_data" / "VARIABLES.md").read_text(encoding="utf-8")
     assert "## Seasonal adjustment by this repository" in cards
     assert "| `cpi` | `CPI` | chain | log · X-13" in cards or "log · STL (fallback)" in cards
+
+
+def test_chain_yoy_builds_the_level_from_the_year_on_year_index():
+    base = _m([100.0, 110.0, 90.0] + [100.0] * 9 + [300.0] * 12)          # a bad second year of m/m is ignored
+    yoy = _m([float("nan")] * 12 + [105.0] * 12 + [102.0] * 6)
+    level = B.chain_yoy(yoy, base, 12)
+    first = B.chain(base).iloc[:12]
+    assert list(level.iloc[:12].round(6)) == list(first.round(6))
+    assert level.iloc[12:24].round(6).tolist() == (first * 1.05).round(6).tolist()
+    assert level.iloc[24:30].round(6).tolist() == (first.iloc[:6] * 1.05 * 1.02).round(6).tolist()
+    gap = yoy.copy()
+    gap.iloc[13] = float("nan")                                           # a missing month stays missing a year on, too
+    out = B.chain_yoy(gap, base, 12)
+    assert np.isnan(out.iloc[13]) and np.isnan(out.iloc[25]) and not np.isnan(out.iloc[14])
+
+
+def test_industrial_production_level_reproduces_the_published_year_on_year_index():
+    """`ip` was chained from the m/m index until 2026-11-13 and showed +94 % y/y for September 2026."""
+    panel = pd.read_csv(REPO / "model_data" / "monthly.csv", parse_dates=["date"]).set_index("date")
+    path = REPO / "data" / "processed" / "bns" / "ind_prod_monthly_yoy.csv"
+    if "ip_yoy" not in panel or not path.exists():
+        pytest.skip("panel or source absent")
+    published = pd.read_csv(path, parse_dates=["date"]).set_index("date")["value"] - 100
+    both = pd.concat([panel["ip_yoy"], published], axis=1, keys=["panel", "published"]).dropna()
+    assert len(both) > 120 and (both["panel"] - both["published"]).abs().max() < 0.05
+    year = panel["ip"].groupby(panel.index.year).mean()
+    assert abs(year[2025] / year[2024] * 100 - 107.7) < 0.5              # the official annual index

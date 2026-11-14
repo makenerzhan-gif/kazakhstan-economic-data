@@ -69,7 +69,7 @@ monthly:
   - {name: ppi, source: {series: PPI_MONTHLY}, ops: [chain], sa: log, note: "Producer prices, dominated by oil; chained from m/m."}
   - {name: infl_expect, source: {series: INFLATION_EXPECTATIONS}, kind: rate, sa: none, note: "Household survey, expected inflation next 12 months, %."}
   # ---------------------------------------------------------------- activity
-  - {name: ip, source: {series: IND_PROD_MONTHLY_MOM}, ops: [chain], sa: log, note: "Industrial production volume, chained from m/m (from 2014)."}
+  - {name: ip, source: {series: IND_PROD_MONTHLY_YOY, base: IND_PROD_MONTHLY_MOM}, ops: [chain_yoy], sa: log, note: "Industrial production volume, 2014 = the chain of the m/m index, every later month = the level a year earlier times the y/y index. NOT chained from m/m: BNS's monthly m/m index is a first print that is not revised (chained, it gives +14.6 % for 2025 against the official +7.7 %, and +94 % y/y by September 2026); the y/y index is revised and reproduces the official annual indices. January 2014 = 100. Each calendar month is its own chain, so the month-to-month profile of the UNADJUSTED level is not the published one -- use ip_yoy and ip_sa. January 2026 is an outlier in the source (y/y 93.4), which shows in ip_sa and ip_saar."}
   - {name: retail_nominal, source: {series: RETAIL_TRADE_MONTHLY}, sa: log, note: "Retail turnover, thousand KZT, nominal."}
   - {name: freight, source: {series: FREIGHT_TURNOVER_MONTHLY}, ops: [decumulate_ytd], sa: log, note: "Freight turnover, million tonne-km, own month from YTD."}
   - {name: exports_usd, source: {series: EXPORTS}, sa: log, note: "Goods exports, thousand USD (BNS), from 2015."}

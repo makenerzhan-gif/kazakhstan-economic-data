@@ -9,3 +9,6 @@ logs/run_test-run-*.jsonl
 
 # run logs: uploaded as the workflow artifact, not committed (2026-11-13)
 logs/
+
+# model scratch files (rebuilt by the scripts)
+models/**/*.pkl
