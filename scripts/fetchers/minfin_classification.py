@@ -360,7 +360,8 @@ def fetch_resource(ds: dict) -> tuple[list[dict], dict]:
 # ---------------------------------------------------------------- receipts by budget code
 
 RECEIPT_SHEETS = {"таб4": "STATE", "таб8(дох)": "REP"}
-RECEIPT_TOP = (("TOTAL", r"^поступления\*?$"), ("REVENUE", r"^доходы\*?$"))    # «ПОСТУПЛЕНИЯ*» in the 2019-2020 editions
+# «ПОСТУПЛЕНИЯ*» in the 2019-2020 editions, «I. ДОХОДЫ» in the PDF of January 2008
+RECEIPT_TOP = (("TOTAL", r"^поступления\*?$"), ("REVENUE", r"^(i\.\s*)?доходы\*?$"))
 REVENUE_CATEGORIES = ("1", "2", "3", "4", "5")      # «ДОХОДЫ»; «ПОСТУПЛЕНИЯ» adds 6 and 7
 # The 2026 Budget Code put «Специальные поступления» in as category 4 and moved the three after it
 # down by one (transfers 4 -> 5, repayment of budget loans 5 -> 6, sale of financial assets 6 -> 7).

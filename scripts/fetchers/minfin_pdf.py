@@ -201,6 +201,9 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
         if start is not None:
             centres = _numbering(lines[start])
             body = lines[start + 1:]
+            if (len(centres) >= n_codes + 4 and str(len(centres) - 1) not in [w[3] for w in lines[start]]
+                    and _value_edge(body, centres[-2]) is None):
+                centres = centres[:-2] + centres[-1:]                 # numbered «… 7 9» and nothing between: no column 8
         else:
             body = lines
             if centres is not None and len(centres) >= n_codes + 3:
@@ -287,6 +290,14 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                     if label:
                         held.append(label)
                     continue
+            if (value is not None and not any(codes) and not held and not pending and last and last["value"] is not None
+                    and last["value"].is_integer() and top - last["top"] <= near and not re.match(r"[^а-яё]", label)
+                    and any(len(w[3]) == 3 and float(w[3]) == value for w in line if _INT.fullmatch(w[3]) and -3.0 <= w[1] - edge <= 5.0)):
+                # a number too long for its cell breaks like a name: «1 061» and, on the next line, «785»
+                last["value"] = last["value"] * 1000 + (value if last["value"] >= 0 else -value)
+                last["label"] = _join(last["label"], label) if label else last["label"]
+                last["top"] = top
+                continue
             pending = [p for p in pending if top - p[0] <= near]             # nothing began under them: empty rows
             if pending:
                 if any(codes):
@@ -314,8 +325,7 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                 continue
             rows.append({"codes": codes, "value": value, "label": label, "top": top, "wants": wants})
         _drop_overlap(rows, page_start)
-        if break_all:
-            held = []
+        if break_all:                                                 # what is held is the end of the last name
             break
     for h in held:
         if rows:
@@ -459,7 +469,7 @@ def period_of(header: str, year: int | None = None) -> tuple[int, int] | None:
 def classify(title: str, header: str) -> str | None:
     """Which sheet a table is, by its title; the receipts tables must also have the code columns."""
     flat = re.sub(r"\s+", " ", title).upper()
-    has_codes = "СПЕЦИФИКА" in header.upper() or "ПОДКЛАСС" in header.upper()
+    has_codes = any(word in header.upper() for word in ("СПЕЦИФИКА", "ПОДКЛАСС", "СЫНЫПШАСЫ"))   # one edition cuts the Russian half off
     if "ЭКОНОМИЧЕСК" in flat and "КЛАССИФИКАЦИИ" in flat and "СВОДНАЯ" not in flat:
         if "РЕСПУБЛИКАНСК" in flat:
             return "табл 10"
