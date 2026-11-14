@@ -112,20 +112,24 @@ def check_sums(lines: list[tuple[str, str, float]], ds: dict, where: str) -> Non
         vals[code] = v
         order.append(code)
     cats = [c for c in order if c.startswith("CAT")]
-    tol = lambda x: 0.5 + 1e-4 * abs(x)                                  # noqa: E731
+    # the PDF editions of 2005-2012 print whole millions: every term of a sum can be half a million off
+    whole = all(float(v).is_integer() for v in vals.values())
+    tol = lambda x, n=1: 0.5 + 1e-4 * abs(x) + (0.5 * n if whole else 0.0)   # noqa: E731
     if "TOTAL" not in vals or not cats:                                  # nothing to check against: not this table
         _structural(ds, f"{where}: no «Всего» row or no category rows")
-    if "TOTAL" in vals and cats and abs(sum(vals[c] for c in cats) - vals["TOTAL"]) > tol(vals["TOTAL"]):
+    if "TOTAL" in vals and cats and abs(sum(vals[c] for c in cats) - vals["TOTAL"]) > tol(vals["TOTAL"], len(cats)):
         _structural(ds, f"{where}: categories sum to {sum(vals[c] for c in cats):.1f}, «Всего» is {vals['TOTAL']:.1f}")
     current = None
     parts: dict[str, float] = {}
+    count: dict[str, int] = {}
     for code in order:
         if code.startswith("CAT"):
             current = code
         elif current and re.fullmatch(r"\d{2}0", code):                  # subclasses end in 0, specifics do not
             parts[current] = parts.get(current, 0.0) + vals[code]
+            count[current] = count.get(current, 0) + 1
     for cat, total in parts.items():
-        if abs(total - vals[cat]) > tol(vals[cat]):
+        if abs(total - vals[cat]) > tol(vals[cat], count[cat]):
             _structural(ds, f"{where}: the subclasses of {cat} sum to {total:.1f}, the category is {vals[cat]:.1f}")
 
 
@@ -364,9 +368,10 @@ REVENUE_CATEGORIES = ("1", "2", "3", "4", "5")      # «ДОХОДЫ»; «ПОС
 # one code is one thing in every year.
 RECEIPT_CATEGORIES = (("1", r"^налоговые поступления"), ("2", r"^неналоговые поступления"),
                       ("3", r"^поступления от продажи основного капитала"), ("4", r"^специальные поступления"),
-                      ("5", r"^поступления трансфертов"), ("6", r"^погашение бюджетных кредитов"),
+                      ("5", r"^поступления (официальных )?трансфертов"), ("6", r"^погашение бюджетных кредитов"),
                       ("7", r"^поступления от продажи финансовых активов"),
-                      ("8", r"^поступления займов"), ("9", r"^используемые остатки бюджетных средств"))
+                      ("8", r"^поступлени[ея] займов"),
+                      ("9", r"^(используемые остатки|движение остатков) бюджетных средств"))
 # 8 and 9 (borrowing and the use of balances) were printed in the table until 2021 under the old
 # numbers 7 and 8; «ПОСТУПЛЕНИЯ» of those editions includes them.
 
@@ -449,6 +454,8 @@ def check_receipts(lines: list[tuple[str, str, float]], revenue_optional: bool =
         if code in vals:
             bad.append(f"code {code} twice")
         vals[code] = v
+    whole = all(float(v).is_integer() for v in vals.values())     # the PDF editions of 2005-2012 print whole millions
+    slack = lambda n: 0.5 * (n + 1) if whole else 0.0             # noqa: E731
     def children(parent, n):
         return [v for k, v in vals.items() if k.isdigit() and len(k) == n and k.startswith(parent)]
     for code, v in vals.items():
@@ -458,14 +465,14 @@ def check_receipts(lines: list[tuple[str, str, float]], revenue_optional: bool =
         if not kids:
             if code != "9":                              # the use of balances is one figure with nothing under it
                 bad.append(f"{code} has no lines below it")
-        elif abs(sum(kids) - v) > max(1.0, 1e-6 * abs(v)):
+        elif abs(sum(kids) - v) > max(1.0, 1e-6 * abs(v)) + slack(len(kids)):
             bad.append(f"{code}: {v:.1f} against {sum(kids):.1f} below it")
     cats = {k: v for k, v in vals.items() if k.isdigit() and len(k) == 1}
     for top, keys in (("REVENUE", REVENUE_CATEGORIES), ("TOTAL", tuple("123456789"))):
         if top not in vals:
             if not (top == "REVENUE" and revenue_optional):
                 bad.append(f"no {top} row")
-        elif abs(sum(cats.get(k, 0.0) for k in keys) - vals[top]) > max(2.0, 1e-6 * abs(vals[top])):
+        elif abs(sum(cats.get(k, 0.0) for k in keys) - vals[top]) > max(2.0, 1e-6 * abs(vals[top])) + slack(len(keys)):
             bad.append(f"{top}: {vals[top]:.1f} against {sum(cats.get(k, 0.0) for k in keys):.1f} in categories")
     return bad
 
