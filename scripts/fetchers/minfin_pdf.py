@@ -167,11 +167,19 @@ def _value_edge(lines: list[list[tuple]], centre: float) -> float | None:
     return sum(exact) / len(exact)
 
 
-def _value(line: list[tuple], edge: float, centre: float) -> float | None:
+def _names_left(lines: list[list[tuple]], edge: float) -> float:
+    """Where the Russian names of a page begin: the left side most lines share to the right of the value column."""
+    lefts = collections.Counter(round(next(w[0] for w in line if w[0] > edge + 1.0)) for line in lines
+                                if any(w[0] > edge + 1.0 and not _INT.fullmatch(w[3]) for w in line))
+    return float(max(lefts, key=lambda x: lefts[x] + lefts.get(x - 1, 0) + lefts.get(x + 1, 0))) if lefts else edge + 2.0
+
+
+def _value(line: list[tuple], edge: float, centre: float, names: float) -> float | None:
     """The number of the line that ends at `edge`; «-» in the column is zero."""
-    # rows set in bold (the total, the categories) end a few points to the right of the others, and so does
-    # the odd row whose cells are set with another margin; names begin further away than that
-    at = [i for i, w in enumerate(line) if -3.0 <= w[1] - edge <= 8.0 and re.fullmatch(r"-?\d+|\d{3},0", w[3])]
+    # Rows set in bold (the total, the categories) end a few points to the right of the others, and so does
+    # the odd row whose cells are set with another margin -- but always before the names begin.
+    at = [i for i, w in enumerate(line)
+          if -3.0 <= w[1] - edge <= 8.0 and w[1] <= names - 1.0 and re.fullmatch(r"-?\d+|\d{3},0", w[3])]
     idx = min(at, key=lambda i: abs(line[i][1] - edge)) if at else None
     if idx is None:
         dash = any(w[3] in ("-", "–", "—") and centre - 30 <= w[1] <= edge + 2 for w in line)
@@ -226,8 +234,9 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
         break_all = False
         page_start = len(rows)
         pending: list[tuple[float, list]] = []                        # codes printed above the line of their row
-        names = [line[0][2] for line in body if any(w[0] > edge + 1.0 for w in line)]
-        steps = sorted(b - a for a, b in zip(names, names[1:]))
+        left = _names_left(body, edge)
+        tops = [line[0][2] for line in body if any(w[0] >= left - 1.5 for w in line)]
+        steps = sorted(b - a for a, b in zip(tops, tops[1:]))
         pitch = steps[len(steps) // 2] if steps else 10.0             # the usual distance between two lines of names
         for nth, line in enumerate(body):
             if _numbering(line):                                      # a second header on the page: another part of the table
@@ -237,7 +246,7 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                 continue
             if re.search(r"Примечание\s*:|^Ескерту\b", _text(line)):          # footnotes close the page
                 break
-            value = _value(line, edge, centres[-2])
+            value = _value(line, edge, centres[-2], left)
             codes = [None] * n_codes
             cells: list[tuple] = []
             for w in line:
@@ -253,7 +262,7 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                     col = min(range(n_codes), key=lambda c: abs(centres[c] - mid))
                     if abs(centres[col] - mid) <= reach:
                         codes[col] = w[3]
-            label = " ".join(w[3] for w in line if w[0] > edge + 1.0)
+            label = " ".join(w[3] for w in line if w[0] >= left - 1.5)
             if value is None and not any(codes) and re.match(r"(в том числе|из них)\s*:?$", label.strip(), re.IGNORECASE):
                 continue
             if value is None and not any(codes):
@@ -288,12 +297,12 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
             else:
                 wants = (value is not None and not any(codes) and not pending and not _capitals(label)
                          and bool(re.match(r"[^а-яё]", label))
-                         and all(_INT.fullmatch(w[3]) or w[3] in "-–—" for w in line if w[0] <= edge + 1.0)
+                         and all(_INT.fullmatch(w[3]) or w[3] in "-–—" for w in line if w[0] < left - 1.5)
                          and line[0][0] > centres[n_codes])
             if value is None and not re.match(r"[^а-яё]", label):
                 up = (top - last["top"] if last and not pending and not any(last["codes"]) and last["value"] is not None
                       and not _capitals(last["label"]) else None)
-                down = next((x[0][2] - top for x in body[nth + 1:nth + 6] if _value(x, edge, centres[-2]) is not None), None)
+                down = next((x[0][2] - top for x in body[nth + 1:nth + 6] if _value(x, edge, centres[-2], left) is not None), None)
                 above = up is not None and up <= near and (down is None or up <= down + 1.0)
                 if above or (down is not None and down <= near):
                     if above:
@@ -305,7 +314,7 @@ def _rows(pages: list[list[list[tuple]]], n_codes: int, stop=None) -> list[dict]
                     continue
             if (value is not None and not any(codes) and not held and not pending and last and last["value"] is not None
                     and last["value"].is_integer() and top - last["top"] <= near and not re.match(r"[^а-яё]", label)
-                    and any(len(w[3]) == 3 and float(w[3]) == value for w in line if _INT.fullmatch(w[3]) and -3.0 <= w[1] - edge <= 8.0)):
+                    and any(len(w[3]) == 3 and float(w[3]) == value for w in line if _INT.fullmatch(w[3]) and -3.0 <= w[1] - edge <= 8.0 and w[1] <= left - 1.0)):
                 # a number too long for its cell breaks like a name: «1 061» and, on the next line, «785»
                 last["value"] = last["value"] * 1000 + (value if last["value"] >= 0 else -value)
                 last["label"] = _join(last["label"], label) if label else last["label"]
