@@ -1,3 +1,5 @@
 {"indicator_id": "OUTPUT_GAP", "period": "2020-01-01 UC", "old_value": -1.1955, "new_value": -1.1954, "detected_date": "2026-11-10", "source": "derived", "reason": "not stated by source"}
 {"indicator_id": "OUTPUT_GAP", "period": "2020-01-01 UC", "old_value": -1.1954, "new_value": -1.1955, "detected_date": "2026-11-13", "source": "derived", "reason": "not stated by source"}
 {"indicator_id": "OUTPUT_GAP", "period": "2024-01-01 MEAN", "old_value": 0.8431, "new_value": 0.843, "detected_date": "2026-11-13", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "OUTPUT_GAP", "period": "2020-01-01 UC", "old_value": -1.1955, "new_value": -1.1954, "detected_date": "2026-11-14", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "OUTPUT_GAP", "period": "2024-01-01 MEAN", "old_value": 0.843, "new_value": 0.8431, "detected_date": "2026-11-14", "source": "derived", "reason": "not stated by source"}
